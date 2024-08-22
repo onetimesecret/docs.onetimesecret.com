@@ -9,7 +9,8 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/ui',
     '@nuxthq/studio',
-    'nuxt-og-image'
+    'nuxt-og-image',
+    '@nuxtjs/color-mode',
   ],
   uiPro: {
     license: process.env.NUXT_UI_PRO_LICENSE
