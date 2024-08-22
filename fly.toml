@@ -1,0 +1,25 @@
+# fly.toml app configuration file generated for onetime-docs on 2024-08-22T07:36:14-07:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'onetime-docs'
+primary_region = 'ams'
+
+[build]
+dockerfile = 'Dockerfile.production'
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = 'suspend'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
+
+[env]
