@@ -1,65 +1,61 @@
 title: Pricing
-description: Choose the plan that's right for you.
+description: Choose the plan that's right for your secure sharing needs.
 navigation.icon: i-heroicons-credit-card
 hero:
-  title: A plan for every need
-  description: Our plans are designed to meet the requirements of both beginners and players. Get the right plan that suits you.
+  title: Secure Links, Stronger Connections
+  description: Share confidential information with confidence, elevate your brand, and build trust.
   align: center
 plans:
   - title: Basic
-    description: A basic plan for individuals.
+    description: Secure, one-time sharing for everyone.
     price:
-      month: $9.9
-      year: $99.9
+      month: $0
+      year: $0
     align: top
     button:
       label: Get Started
       color: white
     features:
-      - 1 GB Storage
-      - 1 Email Account
-      - 1 Domain
-      - 1 Website
-      - 1 Database
-      - 1 SSL Certificate
-      - 1 Support Ticket
-  - title: Standard
-    description: A standard plan for small teams.
+      - One-time viewing of shared secrets
+      - Automatic deletion after viewing
+      - No account required for basic usage
+      - Account required to email recipients
+      - Customizable secret expiration times
+      - Simple, user-friendly interface
+      - Mobile-responsive design
+      - Basic API access
+  - title: Identity Plus
+    description: Secure sharing that elevates your brand and simplifies communication.
     price:
-      month: $19.9
-      year: $199.9
+      month: $35
+      year: $365
     highlight: true
     align: top
     button:
-      label: Get Started
-      color: black
-    features:
-      - 10 GB Storage
-      - 10 Email Accounts
-      - 10 Domains
-      - 10 Websites
-      - 10 Databases
-      - 10 SSL Certificates
-      - 10 Support Tickets
-  - title: Premium
-    description: A premium plan for large teams.
-    price:
-      month: $29.9
-      year: $299.9
-    align: top
-    button:
-      label: Get Started
+      label: Choose this plan
       color: white
     features:
-      - 100 GB Storage
-      - 100 Email Accounts
-      - 100 Domains
-      - 100 Websites
-      - 100 Databases
-      - 100 SSL Certificates
-      - 100 Support Tickets
+      - Branded custom domains
+      - Unlimited sharing capacity
+      - Enhanced privacy features
+      - Full API access
+  - title: Global Elite
+    description: Dedicated infrastructure with data-compliance controls and unlimited scalability.
+    price:
+      month: Coming Soon
+      year: Coming Soon
+    align: top
+    button:
+      label: Coming Soon
+      color: black
+    features:
+      - Private cloud environment
+      - Unlimited usage and scaling
+      - Advanced identity management
+      - Multiple data location choices (EU, US)
+      - Full regulatory compliance (including GDPR, CCPA, HIPAA)
 logos:
-  title: Trusted by the world's best
+  title: Trusted by professionals worldwide
   icons:
     - i-simple-icons-amazonaws
     - i-simple-icons-heroku
@@ -68,18 +64,18 @@ logos:
     - i-simple-icons-cloudflare
 faq:
   title: Frequently asked questions
-  description: Culpa consectetur dolor pariatur commodo aliqua amet tempor nisi enim deserunt elit cillum.
+  description: Learn more about our secure one-time sharing service.
   items:
-    - label: Is this a secure service?
-      content: Qui sunt nostrud aliquip reprehenderit enim proident veniam magna aliquip velit occaecat eiusmod nisi deserunt sunt.
+    - label: How does One-Time Secret work?
+      content: One-Time Secret allows you to share sensitive information securely. Each shared secret can only be viewed once before it's permanently deleted, ensuring your data remains confidential.
       defaultOpen: true
-    - label: How can I cancel my subscription?
-      content: Consectetur irure Lorem nostrud adipisicing aliqua mollit Lorem sit officia magna eiusmod cupidatat.
-    - label: How does the free trial work?
-      content: Quis officia commodo magna eu qui aliquip duis.
-    - label: Can I switch plans later?
-      content: Dolore irure ullamco dolore eu occaecat magna eiusmod dolor aliqua culpa labore.
-    - label: Do you offer refunds?
-      content: Duis mollit nostrud voluptate mollit Lorem dolore commodo veniam incididunt eiusmod.
-    - label: Do you offer support?
-      content: Aliqua sit nisi consequat pariatur Lorem minim irure qui.
+    - label: Do I need an account to use One-Time Secret?
+      content: No account is required for basic functionality. You can start sharing secrets immediately without complex setup.
+    - label: Is there a free option available?
+      content: Yes, One-Time Secret offers a free tier that allows you to use most features at no cost. For advanced features and branding options, consider our paid plans.
+    - label: Can I self-host One-Time Secret?
+      content: Yes, One-Time Secret offers a self-hosting option with our SimpleStack℠ guarantee, ensuring easy deployment and management.
+    - label: How secure is One-Time Secret?
+      content: One-Time Secret prioritizes security with features like one-time viewing and automatic deletion. For specific security measures, please refer to our official documentation or contact us directly.
+    - label: Do you offer customer support?
+      content: Yes, we provide customer support. The level of support may vary depending on your chosen plan. For detailed information, please check our website or contact our support team.

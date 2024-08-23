@@ -31,14 +31,14 @@ const links = [{
       <UButton
         label="Sign in"
         color="gray"
-        to="/signin"
+        to="https://onetimesecret.com/signin"
       />
       <UButton
         label="Sign up"
         icon="i-heroicons-arrow-right-20-solid"
         trailing
         color="black"
-        to="/signup"
+        to="https://onetimesecret.com/signup"
         class="hidden lg:flex"
       />
     </template>

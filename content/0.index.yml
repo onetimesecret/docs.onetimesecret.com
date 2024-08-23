@@ -26,6 +26,7 @@ sections:
     description: Onetime Secret provides a simple, secure way to share sensitive information. Our service ensures your data remains private and ephemeral in an increasingly permanent digital world.
     id: features
     align: left
+    image: '/socialcards/onetime-socialcard-20240823-3.png'
     features:
       - name: Self-destructing messages
         description: Share secrets that automatically delete after being viewed or after a set time.
@@ -47,6 +48,7 @@ sections:
   - title: The flexibility of our service
     description: Onetime Secret offers customizable options to meet your specific needs, whether you're an individual or a business looking for a branded solution.
     align: right
+    image: '/socialcards/onetime-socialcard-20240823-4.png'
     features:
       - name: Customizable expiration
         description: Set your secret to expire after a specific time, from minutes to days.

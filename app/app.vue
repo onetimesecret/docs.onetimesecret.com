@@ -18,10 +18,10 @@ useHead({
 })
 
 useSeoMeta({
-  titleTemplate: '%s - Nuxt UI Pro - SaaS template',
-  ogImage: 'https://saas-template.nuxt.dev/social-card.png',
-  twitterImage: 'https://saas-template.nuxt.dev/social-card.png',
-  twitterCard: 'summary_large_image'
+  titleTemplate: '%s - Onetime Secret - Share Secrets Securely',
+  ogImage: '/onetime-socialcard-20240823-2.png',
+  twitterImage: '/onetime-socialcard-20240823-2.png',
+  twitterCard: 'summary_large_image',
 })
 </script>
 
