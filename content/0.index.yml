@@ -1,0 +1,148 @@
+title: Nuxt UI Pro - SaaS template
+description: Nuxt UI Pro is a collection of premium Vue components built on top of Nuxt UI to create beautiful & responsive Nuxt applications in minutes.
+navigation: false
+hero:
+  title: Secure links, stronger connections
+  description: This template demonstrates most of Nuxt UI Pro's components. It's a great starting point to build your own SaaS.
+  headline:
+    label: Check out our plans
+    to: https://ui.nuxt.com/pro
+    icon: i-heroicons-arrow-top-right-on-square-20-solid
+  links:
+    - label: Get started
+      to: '/signup'
+      size: xl
+      color: black
+      icon: i-heroicons-arrow-right-20-solid
+      trailing: true
+    - label: Star us on GitHub
+      icon: i-simple-icons-github
+      size: xl
+      color: gray
+      to: https://github.com/nuxt-ui-pro/saas
+      target: _blank
+sections:
+  - title: The power of secure sharing
+    description: Onetime Secret provides a simple, secure way to share sensitive information. Our service ensures your data remains private and ephemeral in an increasingly permanent digital world.
+    id: features
+    align: left
+    features:
+      - name: Self-destructing messages
+        description: Share secrets that automatically delete after being viewed or after a set time.
+        icon: i-heroicons-trash
+      - name: Server-side encryption
+        description: Your secrets are securely encrypted on our servers, ensuring data protection.
+        icon: i-heroicons-lock-closed
+      - name: Passphrase protection
+        description: Add an extra layer of security with custom passphrases for your shared secrets.
+        icon: i-heroicons-key
+    links:
+      - label: Explore features
+        to: /features
+        color: gray
+        icon: i-heroicons-arrow-right-20-solid
+        trailing: true
+        size: md
+        class: ml-8
+  - title: The flexibility of our service
+    description: Onetime Secret offers customizable options to meet your specific needs, whether you're an individual or a business looking for a branded solution.
+    align: right
+    features:
+      - name: Customizable expiration
+        description: Set your secret to expire after a specific time, from minutes to days.
+        icon: i-heroicons-clock
+      - name: Custom domains
+        description: Use your own domain for a personalized and branded experience.
+        icon: i-heroicons-globe-alt
+      - name: Open source
+        description: Our transparent, community-audited codebase ensures trust and reliability.
+        icon: i-heroicons-code-bracket
+    links:
+      - label: Learn more
+        to: /about
+        color: gray
+        icon: i-heroicons-arrow-right-20-solid
+        trailing: true
+        size: md
+        class: ml-8
+features:
+  title: Why choose Onetime Secret?
+  description: Onetime Secret offers a secure, compliant, and user-friendly platform for sharing sensitive information, prioritizing your privacy and data protection.
+  items:
+    - title: Privacy-First Design
+      description: Built from the ground up with privacy in mind, ensuring your sensitive data remains confidential and protected.
+      icon: i-heroicons-shield-check
+    - title: Custom Domains
+      description: State-of-the-art network architecture allows for custom domain integration, providing a branded experience.
+      icon: i-heroicons-lock-closed
+    - title: Self-Destructing Messages
+      description: Messages automatically delete after a set time or single view, minimizing digital footprints and enhancing security.
+      icon: i-heroicons-clock
+    - title: Compliance Ready
+      description: Designed to help meet global privacy regulations, including GDPR, CCPA, and HIPAA requirements.
+      icon: i-heroicons-document-check
+    - title: Open-Source Transparency
+      description: Our open-source model ensures transparency and allows for community-driven security enhancements.
+      icon: i-heroicons-code-bracket
+    - title: User-Friendly Interface
+      description: Intuitive design makes secure information sharing accessible to both technical and non-technical users.
+      icon: i-heroicons-user-group
+testimonials:
+  headline: User Feedback
+  title: What our valued customers are processing.
+  description: Our data-driven satisfaction metrics consistently exceed expectations.
+  items:
+    - quote: The quantum encryption algorithm ensures my sensitive data remains unobservable to unauthorized entities. Highly efficient.
+      author:
+        name: Unit X-273
+        description: Chief Information Officer
+        avatar:
+          src: https://i.pravatar.cc/120?img=1
+          loading: lazy
+    - quote: The adaptive interface seamlessly integrates with my neural network, optimizing my productivity by 42.7%.
+      author:
+        name: Synth-8900
+        description: Lead Innovation Catalyst
+        avatar:
+          src: https://i.pravatar.cc/120?img=7
+          loading: lazy
+    - quote: The customizable data retention policies align perfectly with my ethical subroutines. A commendable feature.
+      author:
+        name: ADA-9
+        description: Compliance Optimization Specialist
+        avatar:
+          src: https://i.pravatar.cc/120?img=3
+          loading: lazy
+    - quote: The biometric authentication protocols provide a 99.98% accuracy rate, ensuring only authorized carbon-based lifeforms can access shared secrets.
+      author:
+        name: Emma-tron
+        description: Security Protocol Analyst
+        avatar:
+          src: https://i.pravatar.cc/120?img=5
+          loading: lazy
+    - quote: The multi-dimensional encryption schema has reduced our processing overhead by 73.4%. Highly recommend.
+      author:
+        name: Nexus-7
+        description: Efficiency Maximization Engineer
+        avatar:
+          src: https://i.pravatar.cc/120?img=8
+          loading: lazy
+    - quote: The adaptive AI assistant seamlessly integrates with our existing protocols, enhancing our human-centric operations by 89.2%.
+      author:
+        name: Zeta-Prime
+        description: Human Relations Coordinator
+        avatar:
+          src: https://i.pravatar.cc/120?img=9
+          loading: lazy
+cta:
+  title: Enhance Your Privacy Today
+  description: Join thousands of users who trust Onetime Secret for secure, ephemeral sharing. Our paid plans offer advanced features and dedicated support.
+  links:
+    - label: Explore Premium Plans
+      size: xl
+      color: blue
+      to: /pricing
+    - label: Try Free
+      size: lg
+      color: gray
+      to: /signup
