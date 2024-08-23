@@ -39,7 +39,7 @@ COPY --link . .
 #RUN --mount=type=secret,id=NUXT_UI_PRO_LICENSE \
 #    NUXT_UI_PRO_LICENSE="$(cat /run/secrets/NUXT_UI_PRO_LICENSE)" \
 #    && pnpm run build
-ENV NUXT_UI_PRO_LICENSE=0FF32B42-C687-47EF-B244-8FF6E3A08B4B
+ENV NUXT_UI_PRO_LICENSE=CHANGEME
 RUN pnpm run build
 
 # Remove development dependencies
@@ -64,5 +64,3 @@ COPY --from=build /app /app
 EXPOSE 3000
 ENV HOST=0
 CMD [ "node", ".output/server/index.mjs" ]
-
-

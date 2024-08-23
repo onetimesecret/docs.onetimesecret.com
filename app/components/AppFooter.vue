@@ -2,35 +2,44 @@
 const links = [{
   label: 'Resources',
   children: [{
-    label: 'Help center'
+    label: 'Docs',
+    to: '/docs',
   }, {
-    label: 'Docs'
-  }, {
-    label: 'Roadmap'
-  }, {
-    label: 'Changelog'
+    label: 'Issues',
+    to: 'https://github.com/onetimesecret/onetimesecret/issues',
+  },{
+    label: 'Sponsors',
+    to: 'https://github.com/sponsors/onetimesecret',
+  },{
+    label: 'Status',
+    to: 'https://status.onetimesecret.com/',
   }]
 }, {
   label: 'Features',
   children: [{
-    label: 'Affiliates'
+    label: 'Custom Domains',
+    to: '/',
   }, {
-    label: 'Portal'
-  }, {
-    label: 'Jobs'
-  }, {
-    label: 'Sponsors'
+    label: 'Single-use links',
+    to: '/',
+  },{
+    label: 'Packages',
+    to: 'https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret',
   }]
 }, {
   label: 'Company',
   children: [{
-    label: 'About'
+    label: 'About',
+    to: '/about',
   }, {
-    label: 'Pricing'
+    label: 'Pricing',
+    to: '/pricing',
   }, {
-    label: 'Careers'
+    label: 'Careers',
+    to: '/careers',
   }, {
-    label: 'Blog'
+    label: 'Blog',
+    to: '/blog',
   }]
 }]
 
