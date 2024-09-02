@@ -56,7 +56,7 @@ const isYearly = ref(false);
                 v-for="icon in page.logos.icons"
                 :icon="icon"
                 :name="icon"
-                class="w-12 h-12 flex-shrink-0 text-gray-400 dark:text-gray-500 opacity-50 mx-4"
+                class="w-12 h-12 flex-shrink-0 text-gray-400 dark:text-gray-500 opacity-50 mx-8"
               />
             </div>
           </div>

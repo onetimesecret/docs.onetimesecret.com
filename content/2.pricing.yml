@@ -65,22 +65,54 @@ plans:
 logos:
   title: Trusted by many professional icons
   icons:
+    - heroicons:globe-alt
+    - heroicons:shield-check
+    - heroicons:chat-bubble-left-ellipsis
+    - heroicons:flag
+    - heroicons:lock-closed
+    - heroicons:key
     - heroicons:beaker
-    - heroicons:lightning-bolt
-    - heroicons:puzzle
-    - heroicons:globe
     - heroicons:sparkles
     - heroicons:fire
     - heroicons:camera
-    - heroicons:music-note
-    - heroicons:rocket
+    - heroicons:user-group
     - heroicons:chart-bar
-    - heroicons:chip
+    - heroicons:cog
+    - heroicons:document-text
+    - heroicons:credit-card
+    - heroicons:cloud-arrow-up
     - heroicons:cloud
     - heroicons:cube
-    - heroicons:database
     - heroicons:gift
     - heroicons:light-bulb
+    - heroicons:heart
+    - heroicons:star
+    - heroicons:moon
+    - heroicons:sun
+    - heroicons:camera
+    - heroicons:lock-closed
+    - heroicons:sun
+    - heroicons:key
+    - heroicons:flag
+    - heroicons:cube
+    - heroicons:globe-alt
+    - heroicons:light-bulb
+    - heroicons:user-group
+    - heroicons:shield-check
+    - heroicons:gift
+    - heroicons:heart
+    - heroicons:star
+    - heroicons:fire
+    - heroicons:chart-bar
+    - heroicons:cloud
+    - heroicons:moon
+    - heroicons:cog
+    - heroicons:sparkles
+    - heroicons:credit-card
+    - heroicons:beaker
+    - heroicons:chat-bubble-left-ellipsis
+    - heroicons:cloud-arrow-up
+    - heroicons:document-text
 
 faq:
   title: Frequently asked questions

@@ -3,8 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "NODE_OPTIONS='--max-old-space-size=10000' npx nuxt build",
-    "dev": "nuxt dev --host",
+    "build": "NODE_OPTIONS='--max-old-space-size=10000 --trace-warnings' npx nuxt build",
+    "dev": "NODE_OPTIONS='--trace-warnings' npx nuxt dev --host",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
