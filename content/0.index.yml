@@ -14,7 +14,7 @@ hero:
       color: black
       icon: i-heroicons-arrow-right-20-solid
       trailing: true
-    - label: Our GitHub
+    - label: View our GitHub
       icon: i-simple-icons-github
       size: xl
       color: gray
