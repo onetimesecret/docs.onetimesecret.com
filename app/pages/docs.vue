@@ -7,7 +7,7 @@ const links = computed(() => navigation.value.find(item => item._path === '/docs
 </script>
 
 <template>
-<NuxtLayout>
+
   <UContainer>
     <UPage>
       <template #left>
@@ -26,5 +26,5 @@ const links = computed(() => navigation.value.find(item => item._path === '/docs
       <NuxtPage />
     </UPage>
   </UContainer>
-</NuxtLayout>
+
 </template>

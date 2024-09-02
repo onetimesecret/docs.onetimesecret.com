@@ -29,9 +29,11 @@ useSeoMeta({
   <div>
     <NuxtLoadingIndicator />
 
-
-    <NuxtPage />
-
+    <!-- Don't remove this from app.vue despite the warning in dev terminal -->
+    <!-- For whatever reason it messes up documentation left nev -->
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
 
     <UNotifications />
   </div>
