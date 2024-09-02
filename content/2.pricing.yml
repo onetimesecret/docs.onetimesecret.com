@@ -9,41 +9,50 @@ plans:
   - title: Basic
     description: Secure, one-time sharing for everyone.
     price:
-      month: $0
-      year: $0
+      month:
+        label: $0
+        to: 'https://onetimesecret.com/plans/basic'
+      year:
+        label: $0
+        to: 'https://onetimesecret.com/plans/basic'
     align: top
     button:
       label: Get Started
       color: white
     features:
-      - One-time viewing of shared secrets
+      - Onetime viewing of shared secrets
       - Automatic deletion after viewing
-      - No account required for basic usage
       - Account required to email recipients
-      - Customizable secret expiration times
-      - Simple, user-friendly interface
-      - Mobile-responsive design
       - Basic API access
   - title: Identity Plus
     description: Secure sharing that elevates your brand and simplifies communication.
     price:
-      month: $35
-      year: $365
+      month:
+        label: $35
+        to: 'https://onetimesecret.com/plans/identity/month'
+      year:
+        label: $365
+        to: 'https://onetimesecret.com/plans/identity/year'
     highlight: true
     align: top
     button:
       label: Choose this plan
       color: white
+      to: https://onetimesecret.com/plans/identity
     features:
-      - Branded custom domains
+      - Unlimited custom domains
       - Unlimited sharing capacity
       - Enhanced privacy features
       - Full API access
   - title: Global Elite
     description: Dedicated infrastructure with data-compliance controls and unlimited scalability.
     price:
-      month: Coming Soon
-      year: Coming Soon
+      month:
+        label: Coming Soon
+        to: '#'
+      year:
+        label: Coming Soon
+        to: '#'
     align: top
     button:
       label: Coming Soon
@@ -51,31 +60,111 @@ plans:
     features:
       - Private cloud environment
       - Unlimited usage and scaling
-      - Advanced identity management
       - Multiple data location choices (EU, US)
       - Full regulatory compliance (including GDPR, CCPA, HIPAA)
 logos:
-  title: Trusted by professionals worldwide
+  title: Trusted by many professional icons
   icons:
-    - i-simple-icons-amazonaws
-    - i-simple-icons-heroku
-    - i-simple-icons-netlify
-    - i-simple-icons-vercel
-    - i-simple-icons-cloudflare
+    - mdi:food-apple
+    - fa:solid-guitar
+    - ion:rocket-outline
+    - bi:emoji-sunglasses
+    - game-icons:pterodactyl
+    - ri:ancient-pavilion-line
+    - carbon:bat
+    - emojione:flag-for-japan
+    - noto-v1:dodo
+    - fluent-emoji-high-contrast:potted-plant
+    - emojione-v1:monorail
+    - fxemoji:rocketship
+    - noto-v1:flying-saucer
+    - emojione-v1:flexed-biceps
+    - noto-v1:diving-mask
+    - fxemoji:pickaxe
+    - noto:tornado
+    - emojione:monkey-face
+    - noto-v1:abacus
+    - fxemoji:rollercoaster
+    - noto-v1:comet
+    - twemoji:unicorn
+    - mdi:cloud-lock
+    - iconoir:database-backup
+    - emojione:football
+    - emojione-v1:water-wave
+    - mdi:server-network
+    - cil:cloud-download
+    - noto-v1:umbrella
+    - mdi:database-eye
+    - iconoir:cloud-sync
+    - noto:pizza
+    - ri:cloud-off-line
+    - twemoji:teddy-bear
+    - ri:cloud-line
+    - noto-v1:castle
+    - twemoji:artist-palette
+    - bi:hdd-rack
+    - emojione-v1:dancing-woman
+    - noto-v1:dragon
+    - ri:cloud-windy-line
+    - game-icons:trebuchet
+    - fxemoji:starsandstripes
+    - noto:musical-notes
+    - bi:cloud-arrow-up
+    - bx:cloud-lightning
+    - carbon:network-4
+    - lucide:database
+    - ph:cloud-fog
+    - noto:lotus
+    - carbon:network-enterprise
+    - akar-icons:cloud
+    - carbon:cloud-service-management
+    - emojione-v1:hot-beverage
+    - fxemoji:volcano
+    - bi:hdd-network
+    - jam:cloud-f
+    - clarity:cloud-network-line
+    - la:cloud-upload-alt
+    - fluent:data-treemap-20-regular
+    - tabler:server-cog
+    - noto-v1:motorcycle
+    - carbon:cloud-alerting
+    - tabler:cloud-computing
+    - cil:storage
+    - noto-v1:alien-monster
+    - fa:solid-server
+    - clarity:data-cluster-solid
+    - uil:cloud-database-tree
+    - mdi:cloud-braces
+    - fxemoji:videogame
+    - twemoji:unicorn
+    - noto:lizard
+    - carbon:cloud-satellite
+    - tabler:cloud-data-connection
+    - bi:clouds
+    - gg:database
+    - fluent:cloud-16-regular
+    - fxemoji:rocketship
+    - noto-v1:rainbow
+    - twemoji:flamingo
+
 faq:
   title: Frequently asked questions
   description: Learn more about our secure one-time sharing service.
   items:
-    - label: How does One-Time Secret work?
-      content: One-Time Secret allows you to share sensitive information securely. Each shared secret can only be viewed once before it's permanently deleted, ensuring your data remains confidential.
+    - label: How does Onetime Secret work?
+      content: Onetime Secret allows you to share sensitive information securely. Each shared secret can only be viewed once before it's permanently deleted, ensuring your data remains confidential.
       defaultOpen: true
-    - label: Do I need an account to use One-Time Secret?
+    - label: Do I need an account to use Onetime Secret?
       content: No account is required for basic functionality. You can start sharing secrets immediately without complex setup.
     - label: Is there a free option available?
-      content: Yes, One-Time Secret offers a free tier that allows you to use most features at no cost. For advanced features and branding options, consider our paid plans.
-    - label: Can I self-host One-Time Secret?
-      content: Yes, One-Time Secret offers a self-hosting option with our SimpleStack℠ guarantee, ensuring easy deployment and management.
-    - label: How secure is One-Time Secret?
-      content: One-Time Secret prioritizes security with features like one-time viewing and automatic deletion. For specific security measures, please refer to our official documentation or contact us directly.
+      content: Yes, Onetime Secret offers a free tier that allows you to use most features at no cost. For advanced features and branding options, consider our paid plans.
+    - label: Can I self-host Onetime Secret?
+      content: |-
+          Yes, Onetime Secret offers a self-hosting option with our SimpleStack℠ guarantee, ensuring easy deployment and management. [GitHub](https://poop)
+    - label: How secure is Onetime Secret?
+      content: >
+          We take security very seriously and employ multiple measures to protect users' information. As stated in our privacy policy, we use industry standard practices to safeguard all data from unauthorized access, alteration, or destruction. All data in transit is encrypted using HTTPS/TLS and stored securely in the European Union in compliance with data protection laws.
+
+          However, we are also transparent that no method of electronic transmission or storage is 100% secure. While we strive to use commercially acceptable means to protect personal information, we cannot guarantee its absolute security. We recommend users take precautions like using passphrases. Our commitment is to be diligent in securing data to the best of our abilities while being upfront about potential risks.
     - label: Do you offer customer support?
-      content: Yes, we provide customer support. The level of support may vary depending on your chosen plan. For detailed information, please check our website or contact our support team.
+      content: Yes, we provide customer support. The level of support may vary depending on your chosen plan.

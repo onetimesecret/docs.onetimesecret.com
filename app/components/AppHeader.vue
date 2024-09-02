@@ -3,16 +3,24 @@ import type { NavItem } from '@nuxt/content';
 
 const navigation = inject<Ref<NavItem[]>>('navigation', ref([]))
 
-const links = [{
-  label: 'Docs',
-  to: '/docs',
-}, {
-  label: 'Pricing',
-  to: '/pricing',
-}, {
-  label: 'Blog',
-  to: '/blog',
-}]
+const links = [
+  {
+    label: 'Docs',
+    to: '/docs',
+  },
+  {
+    label: 'Pricing',
+    to: '/pricing',
+  },
+  {
+    label: 'Back home',
+    to: 'https://onetimesecret.com',
+  },
+  //{
+  //  label: 'Blog',
+  //  to: '/blog',
+  //},
+];
 </script>
 
 <template>
@@ -22,8 +30,9 @@ const links = [{
       <span class="font-brand">Onetime Secret</span>
       <UBadge
         label="Docs"
+        color="brandcomp"
         variant="subtle"
-        class="mb-0.5"
+        class="mb-0.5 "
       />
     </template>
 
@@ -37,7 +46,7 @@ const links = [{
         label="Sign up"
         icon="i-heroicons-arrow-right-20-solid"
         trailing
-        color="black"
+        color="brandcomp"
         to="https://onetimesecret.com/signup"
         class="hidden lg:flex"
       />

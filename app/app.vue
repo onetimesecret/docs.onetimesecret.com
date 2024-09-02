@@ -29,9 +29,9 @@ useSeoMeta({
   <div>
     <NuxtLoadingIndicator />
 
-    <NuxtLayout>
-      <NuxtPage />
-    </NuxtLayout>
+
+    <NuxtPage />
+
 
     <UNotifications />
   </div>

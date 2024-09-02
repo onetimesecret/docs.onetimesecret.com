@@ -48,6 +48,7 @@ function onSubmit(data: any) {
 <!-- eslint-disable vue/multiline-html-element-content-newline -->
 <!-- eslint-disable vue/singleline-html-element-content-newline -->
 <template>
+  <NuxtLayout>
   <UCard class="max-w-sm w-full bg-white/75 dark:bg-white/5 backdrop-blur">
     <UAuthForm
       :fields="fields"
@@ -74,4 +75,5 @@ function onSubmit(data: any) {
       </template>
     </UAuthForm>
   </UCard>
+</NuxtLayout>
 </template>

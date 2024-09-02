@@ -6,6 +6,10 @@ if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
 }
 
+definePageMeta({
+  layout: 'default'
+})
+
 useSeoMeta({
   titleTemplate: '',
   title: page.value.title,
@@ -16,6 +20,7 @@ useSeoMeta({
 </script>
 
 <template>
+  <NuxtLayout>
   <div v-if="page">
     <ULandingHero :title="page.hero.title"
                   :description="page.hero.description"
@@ -110,6 +115,7 @@ useSeoMeta({
                    class="bg-gray-100/50 dark:bg-gray-800/50 border-red-400 " />
     </ULandingSection>
   </div>
+</NuxtLayout>
 </template>
 
 <style scoped>

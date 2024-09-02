@@ -1,10 +1,10 @@
 {
-  "name": "nuxt-ui-pro-template-saas",
+  "name": "Onetime Secret Docs",
   "private": true,
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev --host",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
@@ -20,13 +20,43 @@
     "@nuxt/ui-pro": "^1.4.1",
     "@vueuse/nuxt": "^10.11.1",
     "nuxt": "^3.12.4",
-    "nuxt-og-image": "^3.0.0-rc.65"
+    "nuxt-og-image": "^3.0.0-rc.65",
+    "nuxt-security": "2.0.0-rc.9"
   },
   "devDependencies": {
     "@flydotio/dockerfile": "^0.5.8",
+
+    "@iconify-json/akar-icons": "^1.2.0",
+    "@iconify-json/bi": "^1.2.0",
+    "@iconify-json/bx": "^1.2.0",
+    "@iconify-json/carbon": "^1.2.1",
+    "@iconify-json/cil": "^1.2.0",
+    "@iconify-json/clarity": "^1.2.0",
+    "@iconify-json/emojione": "^1.2.0",
+    "@iconify-json/emojione-v1": "^1.2.0",
+    "@iconify-json/fa-solid": "^1.2.0",
+    "@iconify-json/fluent": "^1.2.0",
+    "@iconify-json/fluent-emoji-high-contrast": "^1.2.0",
+    "@iconify-json/fxemoji": "^1.2.0",
+    "@iconify-json/game-icons": "^1.2.0",
+    "@iconify-json/gg": "^1.2.0",
+    "@iconify-json/iconoir": "^1.2.0",
+    "@iconify-json/ion": "^1.2.0",
+    "@iconify-json/jam": "^1.2.0",
+    "@iconify-json/la": "^1.2.0",
+    "@iconify-json/lucide": "^1.2.1",
+    "@iconify-json/mdi": "^1.2.0",
+    "@iconify-json/noto": "^1.2.0",
+    "@iconify-json/noto-v1": "^1.2.0",
+    "@iconify-json/ph": "^1.2.0",
+    "@iconify-json/ri": "^1.2.0",
+    "@iconify-json/tabler": "^1.2.0",
+    "@iconify-json/twemoji": "^1.2.0",
+    "@iconify-json/uil": "^1.2.0",
     "@nuxt/eslint": "^0.5.1",
     "@nuxthq/studio": "^2.0.3",
     "eslint": "^9.9.0",
+    "nuxt-content-assets": "^1.4.4",
     "vue-tsc": "^2.0.29"
   }
 }

@@ -2,16 +2,16 @@
 export default defineNuxtConfig({
   extends: ['@nuxt/ui-pro'],
 
-  modules: [
-    '@nuxt/content',
-    '@nuxt/eslint',
-    '@nuxt/image',
-    '@nuxt/ui',
-    '@vueuse/nuxt',
-    'nuxt-og-image',
-  ],
+  modules: ['nuxt-content-assets', '@nuxt/content', '@nuxt/eslint', '@nuxt/image', '@nuxt/ui', // make sure to add before content!
+   '@vueuse/nuxt', 'nuxt-og-image', 'nuxt-security'],
   ui: {
 
+  },
+  content: {
+    documentDriven: true
+  },
+  image: {
+  //  dir: 'assets/img'
   },
   uiPro: {
     license: process.env.NUXT_UI_PRO_LICENSE,

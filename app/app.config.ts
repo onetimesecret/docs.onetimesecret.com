@@ -34,6 +34,9 @@ export default defineAppConfig({
       hero: {
         wrapper: 'lg:py-24'
       }
-    }
+    },
+    font: {
+      default: 'font-serif'
+    },
   }
 })

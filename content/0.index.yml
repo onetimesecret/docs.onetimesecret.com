@@ -1,12 +1,12 @@
-title: Onetime Secret - Secure Sharing
-description: Onetime Secret provides a simple, secure way to share sensitive information. Our service ensures your data remains private and ephemeral in an increasingly permanent digital world.
+title: Onetime Secret - Secure Links, Stronger Connections
+description: Onetime Secret offers a secure, ephemeral way to share sensitive information in a digital world.
 navigation: false
 hero:
   title: Secure links, stronger connections
-  description: Onetime Secret provides a simple, secure way to share sensitive information. By sharing links only work once, your data remains private and ephemeral in an increasingly permanent digital world.
+  description: Onetime Secret offers a secure, ephemeral way to share sensitive information in a digital world.
   headline:
-    label: This site is a Work-In-Progress! (Some of the content is made up)
-    icon: i-streamline:food-drum-stick-1-cook-animal-drumsticks-products-chicken-cooking-nutrition-food
+    label: Hello there! My instructions say to write 'Beta' in this spot.
+    icon: i-clarity:beta-solid
   links:
     - label: Get started
       to: 'https://onetimesecret.com/signup'
@@ -14,7 +14,7 @@ hero:
       color: black
       icon: i-heroicons-arrow-right-20-solid
       trailing: true
-    - label: Star us on GitHub
+    - label: Our GitHub
       icon: i-simple-icons-github
       size: xl
       color: gray
@@ -74,7 +74,7 @@ features:
       description: Built from the ground up with privacy in mind, ensuring your sensitive data remains confidential and protected.
       icon: i-heroicons-shield-check
     - title: Custom Domains
-      description: State-of-the-art network architecture allows for custom domain integration, providing a branded experience.
+      description: State-of-the-art network architecture allows for data-locality and custom domain integration, providing a branded and compliant experience.
       icon: i-heroicons-lock-closed
     - title: Self-Destructing Messages
       description: Messages automatically delete after a set time or single view, minimizing digital footprints and enhancing security.
@@ -94,7 +94,7 @@ testimonials:
   description: These AI-created scenarios illustrate how Onetime Secret might be used, based on our core features. They are not actual user testimonials.
 
   items:
-    - quote: The quartz encryption utility ensures my sensitive data remains unobservable to unauthorized entities. Efficient.
+    - quote: The micro-quartz reduced our processing overhead by over -73.4%. Highly recommend.
       author:
         name: Unit X-273
         description: Chief Information Officer
@@ -108,9 +108,9 @@ testimonials:
         avatar:
           src: /avatars/image_7.jpg
           loading: lazy
-    - quote: The customizable data retention policies align perfectly with our ethical subroutines. Bravo from New Paris.
+    - quote: The customizable data retention policies align perfectly with our ethical subroutines.
       author:
-        name: ADA-9
+        name: Nexus
         description: Compliance Optimization Specialist
         avatar:
           src: /avatars/image_3.jpg
@@ -122,10 +122,10 @@ testimonials:
         avatar:
           src: /avatars/image_5.jpg
           loading: lazy
-    - quote: The multi-dimensional encryption schema has reduced our processing overhead by over -73.4%. Highly recommend.
+    - quote: The encryption schema guarantees my sensitive data remains unobserved. Excellent.
       author:
-        name: Nexus
-        description: Efficiency Maximization Engineer
+        name: ADA-9
+        description: Maximization Engineer
         avatar:
           src: /avatars/image_8.jpg
           loading: lazy
@@ -135,6 +135,13 @@ testimonials:
         description: Human Relations Coordinator
         avatar:
           src: /avatars/image_9.jpg
+          loading: lazy
+    - quote: Bravo from New Paris.
+      author:
+        name: Reggie
+        description: Professional Filmmaker
+        avatar:
+          src: /avatars/image_6.jpg
           loading: lazy
 cta:
   title: Enhance Your Privacy Today
