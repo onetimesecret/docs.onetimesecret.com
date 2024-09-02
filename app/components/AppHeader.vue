@@ -12,10 +12,10 @@ const links = [
     label: 'Pricing',
     to: '/pricing',
   },
-  //{
-  //  label: 'Blog',
-  //  to: '/blog',
-  //},
+  {
+    label: 'Blog',
+    to: '/blog',
+  },
 ];
 </script>
 
