@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { withoutTrailingSlash, joinURL } from 'ufo'
-import type { BlogPost } from '~/types'
+import { joinURL, withoutTrailingSlash } from 'ufo';
+import type { BlogPost } from '~/types';
 
 const route = useRoute()
 
@@ -44,58 +44,69 @@ if (post.value.image?.src) {
 </script>
 
 <template>
-  <UContainer v-if="post">
-    <UPageHeader
-      :title="post.title"
-      :description="post.description"
-    >
-      <template #headline>
+  <UContainer v-if="post" class="py-8 sm:py-16">
+    <div class="mb-8">
+      <NuxtLink to="/blog" class="text-sm font-medium text-primary-600 hover:text-primary-500">
+        <svg class="inline-block w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+        </svg>
+        Back to Blog
+      </NuxtLink>
+    </div>
+    <article class="max-w-3xl mx-auto">
+      <header class="mb-12">
         <UBadge
           v-bind="post.badge"
           variant="subtle"
+          class="mb-4"
         />
-        <span class="text-gray-500 dark:text-gray-400">&middot;</span>
-        <time class="text-gray-500 dark:text-gray-400">{{ new Date(post.date).toLocaleDateString('en', { year: 'numeric', month: 'short', day: 'numeric' }) }}</time>
-      </template>
+        <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          {{ post.title }}
+        </h1>
+        <div class="flex items-center space-x-4 text-sm text-gray-500 dark:text-gray-400">
+          <time>{{ new Date(post.date).toLocaleDateString('en', { year: 'numeric', month: 'long', day: 'numeric' }) }}</time>
+          <span>&middot;</span>
+          <span>{{ post.readingTime }} min read</span>
+        </div>
+        <div class="mt-6 flex flex-wrap items-center gap-4">
+          <UButton
+            v-for="(author, index) in post.authors"
+            :key="index"
+            :to="author.to"
+            color="white"
+            target="_blank"
+            size="sm"
+            class="inline-flex items-center px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition"
+          >
+            <UAvatar
+              v-bind="author.avatar"
+              :alt="author.name"
+              size="xs"
+              class="mr-2"
+            />
+            {{ author.name }}
+          </UButton>
+        </div>
+      </header>
 
-      <div class="flex flex-wrap items-center gap-3 mt-4">
-        <UButton
-          v-for="(author, index) in post.authors"
-          :key="index"
-          :to="author.to"
-          color="white"
-          target="_blank"
-          size="sm"
-        >
-          <UAvatar
-            v-bind="author.avatar"
-            :alt="author.name"
-            size="2xs"
+      <UPage class="relative">
+        <UPageBody prose class="dark:prose-invert max-w-none">
+          <ContentRenderer
+            v-if="post && post.body"
+            :value="post"
           />
 
-          {{ author.name }}
-        </UButton>
-      </div>
-    </UPageHeader>
+          <UContentSurround :surround="surround" class="mt-12" />
+        </UPageBody>
 
-    <UPage>
-      <UPageBody prose>
-        <ContentRenderer
-          v-if="post && post.body"
-          :value="post"
-        />
-
-        <hr v-if="surround?.length">
-
-        <UContentSurround :surround="surround" />
-      </UPageBody>
-
-      <template #right>
-        <UContentToc
-          v-if="post.body && post.body.toc"
-          :links="post.body.toc.links"
-        />
-      </template>
-    </UPage>
+        <aside class="hidden xl:block xl:pl-8 xl:w-64 xl:fixed xl:right-10 xl:top-24">
+          <UContentToc
+            v-if="post.body && post.body.toc"
+            :links="post.body.toc.links"
+            class="sticky top-24 max-h-(screen-24) overflow-y-auto text-sm text-gray-600 dark:text-gray-400"
+          />
+        </aside>
+      </UPage>
+    </article>
   </UContainer>
 </template>
