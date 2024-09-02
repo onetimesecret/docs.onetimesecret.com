@@ -58,7 +58,7 @@ const links = [{
       <UColorModeButton size="sm" />
 
       <UButton
-        to="https://github.com/onetimesecret/doc.onetimesecret.com"
+        to="https://github.com/onetimesecret/docs.onetimesecret.com"
         target="_blank"
         icon="i-simple-icons-github"
         aria-label="GitHub"

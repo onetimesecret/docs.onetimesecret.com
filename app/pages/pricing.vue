@@ -53,7 +53,7 @@ const isYearly = ref(false);
             <Icon v-for="icon in page.logos.icons"
                   :icon="icon"
                   :name="icon"
-                  class="w-12 h-12 flex-shrink-0 text-gray-400 dark:text-gray-400 opacity-50" />
+                  class="w-12 h-12 flex-shrink-0 text-gray-400 dark:text-gray-400 opacity-50" mx-4/>
           </div>
         </div>
       </ULandingLogos>
