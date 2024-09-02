@@ -2,26 +2,30 @@
 export default defineNuxtConfig({
   extends: ['@nuxt/ui-pro'],
 
-  modules: [
-    '@nuxt/content',
-    '@nuxt/eslint',
-    '@nuxt/fonts',
-    '@nuxt/image',
-    '@nuxt/ui',
-    '@nuxthq/studio',
-    'nuxt-og-image',
-    '@nuxtjs/color-mode',
-  ],
+  modules: ['nuxt-content-assets', '@nuxt/content', '@nuxt/eslint', '@nuxt/image', '@nuxt/ui', // make sure to add before content!
+   '@vueuse/nuxt', 'nuxt-og-image', 'nuxt-security'],
+  ui: {
+
+  },
+  nitro: {
+    prerender: {
+      concurrency: 250,
+      interval: 100,
+    }
+  },
+  image: {
+  //  dir: 'assets/img'
+  },
   uiPro: {
-    license: process.env.NUXT_UI_PRO_LICENSE
+    license: process.env.NUXT_UI_PRO_LICENSE,
   },
   css: [
-    '~/assets/css/main.css'
+    '~/assets/css/main.css',
   ],
   hooks: {
     // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)
     'components:extend': (components) => {
-      const globals = components.filter(c => ['UButton', 'UIcon'].includes(c.pascalName))
+      const globals = components.filter(c => ['UButton'].includes(c.pascalName))
 
       globals.forEach(c => c.global = true)
     }
@@ -34,7 +38,8 @@ export default defineNuxtConfig({
   routeRules: {
     // Temporary workaround for prerender regression. see https://github.com/nuxt/nuxt/issues/27490
     '/': { prerender: true },
-    '/api/search.json': { prerender: true }
+    '/api/search.json': { prerender: true },
+    '/docs': { redirect: '/docs/getting-started', prerender: false }
   },
 
   devtools: {
