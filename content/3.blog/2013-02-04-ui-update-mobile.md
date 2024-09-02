@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Major UI update (with mobile support)
+date: 2013-02-04
 authors:
   - name: Delano
     to: https://docs.onetimesecret.com/about
     avatar:
       src: /img/portait-profile-pic-delano-2024.jpeg
-date: 2013-02-04
 badge:
   label: Onetime
 ---
