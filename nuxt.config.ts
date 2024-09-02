@@ -2,8 +2,15 @@
 export default defineNuxtConfig({
   extends: ['@nuxt/ui-pro'],
 
-  modules: ['nuxt-content-assets', '@nuxt/content', '@nuxt/eslint', '@nuxt/image', '@nuxt/ui', // make sure to add before content!
-   '@vueuse/nuxt', 'nuxt-og-image', 'nuxt-security'],
+  modules: [
+    '@nuxt/content',
+    '@nuxt/eslint',
+    '@nuxt/image',
+    '@nuxt/ui',
+    '@vueuse/nuxt',
+    'nuxt-og-image',
+    'nuxt-security',
+  ],
   ui: {
 
   },
@@ -11,6 +18,13 @@ export default defineNuxtConfig({
     prerender: {
       concurrency: 250,
       interval: 100,
+    }
+  },
+  content: {
+    // or you might have 'mdc' instead of 'content' depending on your setup
+    highlight: {
+      theme: 'github-light',
+      langs: ['javascript', 'typescript', 'python', 'perl'] // Add 'perl' here
     }
   },
   image: {
