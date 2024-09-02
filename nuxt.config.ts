@@ -7,8 +7,11 @@ export default defineNuxtConfig({
   ui: {
 
   },
-  content: {
-    documentDriven: true
+  nitro: {
+    prerender: {
+      concurrency: 250,
+      interval: 100,
+    }
   },
   image: {
   //  dir: 'assets/img'
