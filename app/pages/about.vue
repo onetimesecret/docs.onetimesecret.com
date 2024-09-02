@@ -1,8 +1,8 @@
 <template>
   <NuxtLayout>
-    <div class="about-us-page">
+    <div class="about-us-page dark:bg-gray-900">
       <!-- Hero Section -->
-      <section class="hero bg-gradient-to-r from-brand-500 to-brand-400 text-white py-20">
+      <section class="hero bg-gradient-to-r from-brand-500 to-brand-400 dark:from-brandcomp-800 dark:to-brandcomp-700 text-white py-20">
         <div class="container mx-auto px-4">
           <h1 class="text-4xl md:text-6xl font-bold mb-4">About Onetime Secret</h1>
           <p class="text-xl md:text-2xl">Secure, ephemeral information sharing</p>
@@ -10,23 +10,23 @@
       </section>
 
       <!-- Mission Section -->
-      <section class="py-16 bg-brand-200">
+      <section class="py-16 bg-brand-200 dark:bg-brandcomp-800">
         <div class="container mx-auto px-4">
-          <h2 class="text-3xl font-bold mb-8 text-center">Our Mission</h2>
-          <p class="text-xl text-center max-w-3xl mx-auto">
+          <h2 class="text-3xl font-bold mb-8 text-center dark:text-white">Our Mission</h2>
+          <p class="text-xl text-center max-w-3xl mx-auto dark:text-gray-300">
             Onetime Secret provides a secure platform for sharing sensitive information.
             We offer simple, effective tools that prioritize user privacy and data protection.
           </p>
         </div>
       </section>
 
-            <!-- Notes from the Founder Section (New) -->
-      <section class="py-16">
+      <!-- Notes from the Founder Section -->
+      <section class="py-16 dark:bg-gray-800">
         <div class="container mx-auto px-4">
-          <h2 class="text-3xl font-bold mb-8 text-center">Notes from the Founder</h2>
-          <div class="max-w-3xl mx-auto">
+          <h2 class="text-3xl font-bold mb-8 text-center dark:text-white">Notes from the Founder</h2>
+          <div class="max-w-3xl mx-auto dark:text-gray-300">
             <p class="mb-4">
-              Hi, I'm <a href="https://delanotes.com/" class="text-brand-500 hover:underline">Delano</a>, the creator of Onetime Secret. What started in 2012 as a simple, secure way to share sensitive information has grown beyond our wildest expectations. Over a decade later, we're facilitating the secure sharing of millions of secrets monthly, with use cases we never imagined.
+              Hi, I'm <a href="https://delanotes.com/" class="text-brand-500 hover:underline dark:text-brand-400">Delano</a>, the creator of Onetime Secret. What started in 2012 as a simple, secure way to share sensitive information has grown beyond our wildest expectations. Over a decade later, we're facilitating the secure sharing of millions of secrets monthly, with use cases we never imagined.
             </p>
             <p class="mb-4">
               The first half of 2024 has been our busiest period yet. We're grateful that people have continued to use and share our product for more than a decade. We're currently working on improvements that we think will make the service even more useful — we'll share more details soon.
@@ -47,52 +47,52 @@
         </div>
       </section>
 
-      <!-- Values Section (Updated) -->
-      <section class="py-16 bg-brand-200">
+      <!-- Values Section -->
+      <section class="py-16 bg-brand-200 dark:bg-brandcomp-700">
         <div class="container mx-auto px-4">
-          <h2 class="text-3xl font-bold mb-12 text-center">Our Values</h2>
+          <h2 class="text-3xl font-bold mb-12 text-center dark:text-white">Our Values</h2>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div v-for="value in values" :key="value.title" class="text-center">
-              <Icon :icon="value.icon" class="w-16 h-16 mx-auto mb-4 text-brand-500" />
-              <h3 class="text-xl font-semibold mb-2">{{ value.title }}</h3>
-              <p>{{ value.description }}</p>
+              <Icon :icon="value.icon" class="w-16 h-16 mx-auto mb-4 text-brand-500 dark:text-brand-400" />
+              <h3 class="text-xl font-semibold mb-2 dark:text-white">{{ value.title }}</h3>
+              <p class="dark:text-gray-300">{{ value.description }}</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Team Section (Updated to focus on Delano) -->
-      <section class="py-16 ">
+      <!-- Team Section -->
+      <section class="py-16 dark:bg-gray-800">
         <div class="container mx-auto px-4">
-          <h2 class="text-3xl font-bold mb-12 text-center">Our Team</h2>
+          <h2 class="text-3xl font-bold mb-12 text-center dark:text-white">Our Team</h2>
           <div class="text-center">
             <NuxtImg src="/img/delano-g.png" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover"/>
-            <h3 class="text-lg font-semibold">Delano Mandelbaum</h3>
-            <p class="text-brandcomp-600">Founder & Developer</p>
+            <h3 class="text-lg font-semibold dark:text-white">Delano Mandelbaum</h3>
+            <p class="text-brandcomp-600 dark:text-brandcomp-400">Founder &amp; Developer</p>
           </div>
         </div>
       </section>
 
-      <!-- FAQ Section (New) -->
-      <section class="py-16 bg-brand-100" >
+      <!-- FAQ Section -->
+      <section class="py-16 bg-brand-100 dark:bg-brandcompdim-900">
         <div class="container mx-auto px-4">
-          <h2 class="text-3xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
+          <h2 class="text-3xl font-bold mb-12 text-center dark:text-white">Frequently Asked Questions</h2>
           <div class="max-w-3xl mx-auto">
             <div v-for="faq in faqs" :key="faq.question" class="mb-8">
-              <h3 class="text-xl font-semibold mb-2">{{ faq.question }}</h3>
-              <p v-html="faq.answer"></p>
+              <h3 class="text-xl font-semibold mb-2 dark:text-white">{{ faq.question }}</h3>
+              <p v-html="faq.answer" class="dark:text-gray-300"></p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- CTA Section -->
-      <section class="py-16 bg-brandcomp-600 text-white">
+      <section class="py-16 bg-brandcomp-600 dark:bg-brandcomp-800 text-white">
         <div class="container mx-auto px-4 text-center">
           <h2 class="text-3xl font-bold mb-4">Secure Communication Made Simple</h2>
           <p class="text-xl mb-8">A straightforward solution for sharing sensitive information.</p>
           <a href="https://onetimesecret.com/signup"
-             class="bg-white text-brandcomp-600 py-2 px-6 rounded-full text-lg font-semibold hover:bg-brandcomp-200 transition duration-300">
+             class="bg-white text-brandcomp-600 dark:bg-gray-200 dark:text-brandcomp-800 py-2 px-6 rounded-full text-lg font-semibold hover:bg-brandcomp-200 dark:hover:bg-gray-300 transition duration-300">
             Create Your Account
           </a>
         </div>
@@ -100,6 +100,7 @@
     </div>
   </NuxtLayout>
 </template>
+
 
 <script setup lang="ts">
 
@@ -128,9 +129,4 @@ const faqs = ref([
   // Add more FAQs as needed
 ]);
 
-
-
-if (error.value) {
-  console.error('Error fetching testimonials:', error.value)
-}
 </script>

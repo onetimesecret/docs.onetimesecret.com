@@ -24,52 +24,61 @@ const isYearly = ref(false);
 
 <template>
   <NuxtLayout>
-  <div v-if="page">
-    <UPageHero v-bind="page.hero">
-      <template #links>
-        <UPricingToggle v-model="isYearly"
-                        class="w-48" />
-      </template>
-    </UPageHero>
+    <div v-if="page" class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+      <UPageHero v-bind="page.hero" class="bg-sky-50 dark:bg-brandcomp-900">
+        <template #links>
+          <UPricingToggle v-model="isYearly" class="w-48" />
+        </template>
+      </UPageHero>
 
-    <UContainer>
-      <UPricingGrid>
-        <UPricingCard v-for="(plan, index) in page.plans"
-                      v-bind="plan"
-                      :key="index"
-                      :price="isYearly ? plan.price.year.label : plan.price.month.label"
-                      :cycle="isYearly ? '/year' : '/month'">
-          <template #title>
-            <span class="font-brand">{{ plan.title }}</span>
-          </template>
-        </UPricingCard>
-      </UPricingGrid>
-    </UContainer>
+      <UContainer class="py-12">
+        <UPricingGrid>
+          <UPricingCard
+            v-for="(plan, index) in page.plans"
+            v-bind="plan"
+            :key="index"
+            :price="isYearly ? plan.price.year.label : plan.price.month.label"
+            :cycle="isYearly ? '/year' : '/month'"
+            class="bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <template #title>
+              <span class="font-brand text-sky-600 dark:text-sky-400">{{ plan.title }}</span>
+            </template>
+          </UPricingCard>
+        </UPricingGrid>
+      </UContainer>
 
-    <ULandingSection>
-      <ULandingLogos :title="page.logos.title">
-        <div class="overflow-hidden">
-          <div class="flex animate-scroll">
-            <Icon v-for="icon in page.logos.icons"
-                  :icon="icon"
-                  :name="icon"
-                  class="w-12 h-12 flex-shrink-0 text-gray-400 dark:text-gray-400 opacity-50" mx-4/>
+      <ULandingSection class="bg-gray-50 dark:bg-gray-800">
+        <ULandingLogos :title="page.logos.title" class="text-gray-700 dark:text-gray-300">
+          <div class="overflow-hidden">
+            <div class="flex animate-scroll">
+              <Icon
+                v-for="icon in page.logos.icons"
+                :icon="icon"
+                :name="icon"
+                class="w-12 h-12 flex-shrink-0 text-gray-400 dark:text-gray-500 opacity-50 mx-4"
+              />
+            </div>
           </div>
-        </div>
-      </ULandingLogos>
-    </ULandingSection>
+        </ULandingLogos>
+      </ULandingSection>
 
-
-    <ULandingSection :title="page.faq.title"
-                     :description="page.faq.description">
-      <ULandingFAQ :items="page.faq.items"
-                   v-html="page.faq.content"
-                   multiple
-                   class="max-w-4xl mx-auto" />
-    </ULandingSection>
-  </div>
+      <ULandingSection
+        :title="page.faq.title"
+        :description="page.faq.description"
+        class="bg-white dark:bg-gray-900"
+      >
+        <ULandingFAQ
+          :items="page.faq.items"
+          v-html="page.faq.content"
+          multiple
+          class="max-w-4xl mx-auto text-gray-700 dark:text-gray-300"
+        />
+      </ULandingSection>
+    </div>
   </NuxtLayout>
 </template>
+
 
 <style lang="css" scoped>
 @keyframes scroll {

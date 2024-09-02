@@ -43,9 +43,9 @@ const links = [{
 </script>
 
 <template>
-  <UFooter>
+  <UFooter class="bg-white dark:bg-gray-900">
     <template #top>
-      <UFooterColumns :links="links" />
+      <UFooterColumns :links="links" class="dark:text-gray-300" />
     </template>
 
     <template #left>
@@ -55,7 +55,7 @@ const links = [{
     </template>
 
     <template #right>
-      <UColorModeButton size="sm" />
+      <UColorModeButton size="sm" class="mr-2" />
 
       <UButton
         to="https://github.com/onetimesecret/docs.onetimesecret.com"
@@ -64,6 +64,7 @@ const links = [{
         aria-label="GitHub"
         color="gray"
         variant="ghost"
+        class="hover:bg-gray-100 dark:hover:bg-gray-800"
       />
     </template>
   </UFooter>

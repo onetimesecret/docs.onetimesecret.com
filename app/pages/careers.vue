@@ -1,19 +1,19 @@
 <template>
   <NuxtLayout>
-    <div class="careers-page">
+    <div class="careers-page bg-white dark:bg-gray-900">
       <!-- Hero Section -->
-      <section class="hero bg-gradient-to-r from-brand-500 to-brand-400 text-white py-20">
+      <section class="hero bg-brandcomp text-white py-20">
         <div class="container mx-auto px-4">
-          <h1 class="text-4xl md:text-6xl font-bold mb-4">Careers</h1>
-          <p class="text-xl md:text-2xl">Join our team and help build a more secure and private internet.</p>
+          <h1 class="text-4xl md:text-6xl font-bold mb-4 dark:text-brand-600">Careers</h1>
+          <p class="text-xl md:text-2xl dark:text-branddim-200">Join our team and help build a more secure and private internet.</p>
         </div>
       </section>
 
       <!-- Equal Opportunities Section -->
-      <section class="py-16 bg-brand-200">
+      <section class="py-16 bg-brandcompdim-800">
         <div class="container mx-auto px-4">
-          <h2 class="text-3xl font-bold mb-8 text-center">Equal Opportunities</h2>
-          <p class="text-xl text-center max-w-3xl mx-auto">
+          <h2 class="text-3xl font-bold mb-8 text-center text-gray-900 dark:text-white">Equal Opportunities</h2>
+          <p class="text-xl text-center max-w-3xl mx-auto text-gray-800 dark:text-gray-300">
             We are proud to be an equal opportunity employer. We do not discriminate based on race, color, religion,
             sex, sexual orientation, gender identity, salad preference, national origin, disability, or any other legally protected
             status.
@@ -22,38 +22,38 @@
       </section>
 
       <!-- Our Commitment Section -->
-      <section class="py-16">
+      <section class="py-16 bg-white dark:bg-gray-800">
         <div class="container mx-auto px-4">
-          <h2 class="text-3xl font-bold mb-12 text-center">Our Commitment</h2>
+          <h2 class="text-3xl font-bold mb-12 text-center text-gray-900 dark:text-white">Our Commitment</h2>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div v-for="commitment in commitments"
                  :key="commitment.title"
                  class="text-center">
               <Icon :icon="commitment.icon"
-                    class="w-16 h-16 mx-auto mb-4 text-brand-500" />
-              <h3 class="text-xl font-semibold mb-2">{{ commitment.title }}</h3>
-              <p>{{ commitment.description }}</p>
+                    class="w-16 h-16 mx-auto mb-4 text-brandcomp" />
+              <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{{ commitment.title }}</h3>
+              <p class="text-gray-700 dark:text-gray-300">{{ commitment.description }}</p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Current Openings Section -->
-      <section class="py-16 bg-brand-100">
+      <section class="py-16 bg-brandcomp-900">
         <div class="container mx-auto px-4">
-          <h2 class="text-3xl font-bold mb-8 text-center">Current Openings</h2>
-          <p class="text-xl text-center max-w-3xl mx-auto mb-8">
+          <h2 class="text-3xl font-bold mb-8 text-center text-gray-900 dark:text-white">Current Openings</h2>
+          <p class="text-xl text-center max-w-3xl mx-auto mb-8 text-gray-800 dark:text-gray-300">
             Currently, we do not have any open roles. However, we are always looking for talented individuals to join
             our team. Please check back later for new opportunities.
           </p>
           <div class="text-center">
             <button @click="increaseHiringSpeed"
-                    class="bg-brand-500 text-white py-2 px-6 rounded-full text-lg font-semibold hover:bg-brand-600 transition duration-300">
+                    class="bg-brandcomp-700 text-white py-2 px-6 rounded-full text-lg font-semibold hover:bg-opacity-90 transition duration-300">
               Click to Increase Our Hiring Speed!
             </button>
             <p v-if="clickCount > 0"
-               class="mt-4 text-lg">
-              Thanks for your enthusiasm! You've clicked {{ clickCount }} {{ clickCount === 1 ? 'time' : 'times' }}.
+               class="mt-4 text-lg text-gray-800 dark:text-gray-300">
+              You've clicked {{ clickCount }} {{ clickCount === 1 ? 'time' : 'times' }}.
               {{ hiringMessage }}
             </p>
           </div>
@@ -61,11 +61,11 @@
       </section>
 
       <!-- Contact Us Section -->
-      <section v-if="showContactUs" class="py-16">
+      <section v-if="showContactUs" class="py-16 bg-white dark:bg-gray-800">
         <div class="container mx-auto px-4 text-center">
-          <h2 class="text-3xl font-bold mb-8">Contact Us</h2>
-          <p class="text-xl mb-8">If you have any questions or would like to learn more about our company, please reach out to us.</p>
-          <span class="text-brand-500 text-xl font-semibold hover:underline">
+          <h2 class="text-3xl font-bold mb-8 text-gray-900 dark:text-white">Contact Us</h2>
+          <p class="text-xl mb-8 text-gray-800 dark:text-gray-300">If you have any questions or would like to learn more about our company, please reach out to us.</p>
+          <span class="text-brandcomp text-xl font-semibold hover:underline">
             <span class="email" data-subject="Speedy Job Application Inquiry">careerspeed &#65;&#84; onetimesecret D0T com</span>
           </span>
         </div>
@@ -73,6 +73,7 @@
     </div>
   </NuxtLayout>
 </template>
+
 
 <script setup lang="ts">
 import { Icon } from '@iconify/vue';

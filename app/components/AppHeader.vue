@@ -24,15 +24,15 @@ const links = [
 </script>
 
 <template>
-  <UHeader :links="links">
+  <UHeader :links="links" class="dark:bg-gray-800">
     <template #logo>
-      <OnetimeLogo />
-      <span class="font-brand">Onetime Secret</span>
+      <OnetimeLogo class="dark:text-white" />
+      <span class="font-brand dark:text-white">Onetime Secret</span>
       <UBadge
         label="Docs"
         color="brandcomp"
         variant="subtle"
-        class="mb-0.5 "
+        class="mb-0.5 dark:bg-gray-700 dark:text-gray-300"
       />
     </template>
 
@@ -41,6 +41,7 @@ const links = [
         label="Sign in"
         color="gray"
         to="https://onetimesecret.com/signin"
+        class="dark:bg-brandcompdim-900 dark:text-gray-200 dark:hover:bg-brandcompdim-700"
       />
       <UButton
         label="Sign up"
@@ -48,7 +49,7 @@ const links = [
         trailing
         color="brandcomp"
         to="https://onetimesecret.com/signup"
-        class="hidden lg:flex"
+        class="hidden lg:flex dark:bg-brand-700 dark:text-gray-100 dark:hover:bg-brand-600"
       />
     </template>
 
@@ -56,6 +57,7 @@ const links = [
       <UNavigationTree
         :links="mapContentNavigation(navigation)"
         default-open
+        class="dark:bg-gray-800 dark:text-gray-300"
       />
     </template>
   </UHeader>
