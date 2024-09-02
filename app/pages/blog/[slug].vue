@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { withoutTrailingSlash, joinURL } from 'ufo'
-import type { BlogPost } from '~/types'
+import { joinURL, withoutTrailingSlash } from 'ufo';
+import type { BlogPost } from '~/types';
 
 const route = useRoute()
 
@@ -44,21 +44,32 @@ if (post.value.image?.src) {
 </script>
 
 <template>
-  <UContainer v-if="post">
-    <UPageHeader
-      :title="post.title"
-      :description="post.description"
-    >
-      <template #headline>
+  <UContainer v-if="post" class="py-16">
+    <div class="mb-8">
+      <NuxtLink to="/blog" class="text-sm font-medium text-primary-600 hover:text-primary-500">
+        <svg class="inline-block w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+        </svg>
+        Back to Blog
+      </NuxtLink>
+    </div>
+
+    <article class="max-w-4xl mx-auto">
+      <header class="mb-10">
         <UBadge
           v-bind="post.badge"
           variant="subtle"
+          class="mb-4"
         />
-        <span class="text-gray-500 dark:text-gray-400">&middot;</span>
-        <time class="text-gray-500 dark:text-gray-400">{{ new Date(post.date).toLocaleDateString('en', { year: 'numeric', month: 'short', day: 'numeric' }) }}</time>
-      </template>
+        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">{{ post.title }}</h1>
+        <div class="flex items-center space-x-4 text-sm text-gray-500 dark:text-gray-400">
+          <time>{{ new Date(post.date).toLocaleDateString('en', { year: 'numeric', month: 'long', day: 'numeric' }) }}</time>
+          <span>&middot;</span>
+          <span>{{ post.readingTime }} min read</span>
+        </div>
+      </header>
 
-      <div class="flex flex-wrap items-center gap-3 mt-4">
+      <div class="flex flex-wrap items-center gap-3 mb-8">
         <UButton
           v-for="(author, index) in post.authors"
           :key="index"
@@ -66,36 +77,35 @@ if (post.value.image?.src) {
           color="white"
           target="_blank"
           size="sm"
+          class="flex items-center space-x-2"
         >
           <UAvatar
             v-bind="author.avatar"
             :alt="author.name"
-            size="2xs"
+            size="xs"
           />
-
-          {{ author.name }}
+          <span>{{ author.name }}</span>
         </UButton>
       </div>
-    </UPageHeader>
 
-    <UPage>
-      <UPageBody prose>
+      <div class="prose dark:prose-invert max-w-none">
         <ContentRenderer
           v-if="post && post.body"
           :value="post"
         />
+      </div>
 
-        <hr v-if="surround?.length">
+      <hr v-if="surround?.length" class="my-12">
 
-        <UContentSurround :surround="surround" />
-      </UPageBody>
+      <UContentSurround :surround="surround" />
+    </article>
 
-      <template #right>
-        <UContentToc
-          v-if="post.body && post.body.toc"
-          :links="post.body.toc.links"
-        />
-      </template>
-    </UPage>
+    <aside class="mt-16">
+      <UContentToc
+        v-if="post.body && post.body.toc"
+        :links="post.body.toc.links"
+        class="sticky top-8"
+      />
+    </aside>
   </UContainer>
 </template>

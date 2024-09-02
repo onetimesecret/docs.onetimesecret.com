@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { BlogPost } from '~/types'
+import type { BlogPost } from '~/types';
 
 const { data: page } = await useAsyncData('blog', () => queryContent('/blog').findOne())
 if (!page.value) {
@@ -23,17 +23,21 @@ defineOgImage({
   title: page.value.title,
   description: page.value.description
 })
+
+const formatDate = (date) => {
+  return new Date(date).toLocaleDateString('en', { year: 'numeric', month: 'short', day: 'numeric' });
+};
 </script>
 
 <template>
-  <UContainer>
+  <UContainer class="py-12">
     <UPageHeader
       v-bind="page"
-      class="py-[50px]"
+      class="mb-12"
     />
 
     <UPageBody>
-      <UBlogList>
+      <UBlogList class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         <UBlogPost
           v-for="(post, index) in posts"
           :key="index"
@@ -41,13 +45,19 @@ defineOgImage({
           :title="post.title"
           :description="post.description"
           :image="post.image"
-          :date="new Date(post.date).toLocaleDateString('en', { year: 'numeric', month: 'short', day: 'numeric' })"
+          :date="formatDate(post.date)"
           :authors="post.authors"
           :badge="post.badge"
           :orientation="index === 0 ? 'horizontal' : 'vertical'"
-          :class="[index === 0 && 'col-span-full']"
+          :class="[
+            index === 0 ? 'col-span-full mb-12' : '',
+            'transition-shadow duration-300 hover:shadow-md'
+          ]"
           :ui="{
-            description: 'line-clamp-2'
+            description: 'line-clamp-2',
+            wrapper: index === 0 ? 'md:flex-row items-center' : '',
+            image: index === 0 ? 'md:w-1/2' : 'h-48 object-cover',
+            content: index === 0 ? 'md:w-1/2 md:pl-8' : 'p-4'
           }"
         />
       </UBlogList>
