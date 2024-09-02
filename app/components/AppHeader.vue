@@ -25,7 +25,7 @@ const links = [
     <template #logo>
       <OnetimeLogo class="dark:text-white" />
       <span class="font-brand dark:text-white">Onetime Secret</span>
-      <UBadge label="Docs"
+      <UBadge label="Bonus Content"
               color="brandcomp"
               variant="subtle"
               class="mb-0.5 dark:bg-gray-700 dark:text-gray-300" />
@@ -34,23 +34,26 @@ const links = [
     <template #right>
       <nav class="flex items-center space-x-4">
         <a href="https://onetimesecret.com/"
-           class="text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 transition-colors duration-150 ease-in-out">
-          Back to onetimesecret.com
-          <Icon name="heroicons:arrow-top-right-on-square"
-                class="w-4 h-4 ml-1" />
+          class="text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 transition-colors duration-150 ease-in-out">
+          <span class="hidden xl:inline">Back to </span>onetimesecret.com
+          <svg class="w-4 h-4 ml-1 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
         </a>
-        <UButton label="Sign in"
-                 color="white"
-                 to="https://onetimesecret.com/signin"
-                 class="text-sm font-medium px-4 py-2 rounded-md bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 transition-colors duration-150 ease-in-out" />
-        <UButton label="Sign up"
-                 icon="i-heroicons-arrow-right-20-solid"
-                 trailing
-                 color="white"
-                 to="https://onetimesecret.com/signup"
-                 class="hidden lg:flex text-sm font-medium px-4 py-2 rounded-md bg-brand-600 text-white hover:bg-brand-700 dark:bg-brand-700 dark:text-gray-100 dark:hover:bg-brand-600 transition-colors duration-150 ease-in-out" />
+        <a href="https://onetimesecret.com/signin"
+          class="hidden lg:inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-gray-700 bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-colors duration-150 ease-in-out">
+          Sign in
+        </a>
+        <a href="https://onetimesecret.com/signup"
+          class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-brand-600 hover:bg-brand-700 dark:bg-brand-700 dark:text-gray-100 dark:hover:bg-brand-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500 transition-colors duration-150 ease-in-out">
+          Sign up
+          <svg class="ml-2 -mr-1 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </a>
       </nav>
     </template>
+
 
 
     <template #panel>
