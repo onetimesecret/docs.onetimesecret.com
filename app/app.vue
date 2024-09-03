@@ -28,7 +28,7 @@ useSeoMeta({
 
 <template>
   <div>
-    <NuxtLoadingIndicator />
+    <NuxtLoadingIndicator color="repeating-linear-gradient(to right,#dc4a22 0%,#f7dec3 50%,#fcf8f2 100%)" :height="5" />
 
     <!-- Don't remove this from app.vue despite the warning in dev terminal -->
     <!-- For whatever reason it messes up documentation left nev -->
