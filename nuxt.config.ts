@@ -34,9 +34,19 @@ export default defineNuxtConfig({
   uiPro: {
     license: process.env.NUXT_UI_PRO_LICENSE,
   },
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
   css: [
-    '~/assets/css/main.css',
+    '@/assets/css/main.css',
+    '@/assets/css/font.css',
   ],
+  vite: {
+    assetsInclude: ['@/assets/css/fonts/**/*.woff', '@/**/**/*.woff2'],
+  },
   hooks: {
     // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)
     'components:extend': (components) => {
