@@ -33,9 +33,18 @@ importers:
       '@flydotio/dockerfile':
         specifier: ^0.5.8
         version: 0.5.8
+      '@iconify-json/heroicons':
+        specifier: ^1.1.0
+        version: 1.1.24
       '@iconify-json/ph':
         specifier: ^1.2.0
         version: 1.2.0
+      '@iconify-json/simple-icons':
+        specifier: ^1.1.0
+        version: 1.2.1
+      '@iconify-json/vscode-icons':
+        specifier: ^1.1.0
+        version: 1.1.37
       '@iconify/vue':
         specifier: 4.1.2
         version: 4.1.2(vue@3.4.38(typescript@5.5.3))
@@ -796,6 +805,9 @@ packages:
 
   '@iconify-json/ph@1.2.0':
     resolution: {integrity: sha512-013eLpgTmX1lACOuDnkuhC7gRHyYj9w/j8SyDmlyUYvsKQrwdRsv1otcXtwH3DevuDAzSkreeeRsCeez+gTyVA==}
+
+  '@iconify-json/simple-icons@1.2.1':
+    resolution: {integrity: sha512-eBXREU+jazfOBTl944Uq/ZpOJnbx1/IBw1MpLw0VmmNk0HSvmnvhdcz+3obja7uAp25yNtVcKo3I04ppnuv3NQ==}
 
   '@iconify-json/vscode-icons@1.1.37':
     resolution: {integrity: sha512-02+dR2/LdIZTqGfyQerla5snhdN4edwYgpDuFZpI2lK9w8OVm26WYbg8RR8TxXQrlCRs726NQYxl5W+7V1YM/Q==}
@@ -6153,6 +6165,10 @@ snapshots:
       '@iconify/types': 2.0.0
 
   '@iconify-json/ph@1.2.0':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/simple-icons@1.2.1':
     dependencies:
       '@iconify/types': 2.0.0
 

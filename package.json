@@ -23,6 +23,9 @@
   "devDependencies": {
     "@flydotio/dockerfile": "^0.5.8",
     "@iconify-json/ph": "^1.2.0",
+    "@iconify-json/heroicons": "^1.1.0",
+    "@iconify-json/simple-icons": "^1.1.0",
+    "@iconify-json/vscode-icons": "^1.1.0",
     "@iconify/vue": "4.1.2",
     "@nuxt/eslint": "^0.5.1",
     "@nuxthq/studio": "^2.0.3",
