@@ -23,8 +23,9 @@ export default defineNuxtConfig({
   content: {
     // or you might have 'mdc' instead of 'content' depending on your setup
     highlight: {
-      theme: 'github-light',
-      langs: ['javascript', 'typescript', 'python', 'perl'] // Add 'perl' here
+      theme: 'one-dark-pro',
+      themes: ['houston', 'aurora-x'],
+      langs: ['javascript', 'typescript', 'python', 'perl', 'ruby', 'go', 'powershell', 'csharp', 'bash', 'html', 'css', 'markdown']
     }
   },
   image: {
