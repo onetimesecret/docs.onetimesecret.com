@@ -1,4 +1,3 @@
-
 <template>
   <div>
     <NuxtImg
@@ -18,7 +17,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { onMounted, onUnmounted, ref } from 'vue';
 
 interface Props {
   src: string;
@@ -37,7 +36,22 @@ const openModal = () => {
 const closeModal = () => {
   isModalOpen.value = false;
 };
+
+const handleKeyDown = (event: KeyboardEvent) => {
+  if (event.key === 'Escape' && isModalOpen.value) {
+    closeModal();
+  }
+};
+
+onMounted(() => {
+  document.addEventListener('keydown', handleKeyDown);
+});
+
+onUnmounted(() => {
+  document.removeEventListener('keydown', handleKeyDown);
+});
 </script>
+
 
 <style scoped>
 .modal {
