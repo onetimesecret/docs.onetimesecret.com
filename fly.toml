@@ -21,8 +21,8 @@ dockerfile = 'Dockerfile.production'
   handlers = ["http", "ws"]
 
 [[vm]]
-  memory = '1gb'
+  memory = '2gb'
   cpu_kind = 'shared'
-  cpus = 1
+  cpus = 2
 
 [env]
