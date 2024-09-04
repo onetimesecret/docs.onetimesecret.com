@@ -1,22 +1,21 @@
 ---
 layout: post
-title: Improved One-Button Secret Sharing
-date: 2024-09-03
+title: "Data Privacy Regulations: A New Framework for UI Design"
+date: 2024-09-05
 authors:
   - name: Delano
     to: https://docs.onetimesecret.com/about
     avatar:
       src: /img/portait-profile-pic-delano-2024.jpeg
+image:
+  src: /img/blog/2024/2024-0905-data-privacy-framework-claude.svg
 badge:
   label: Privacy
 readingTime: 8
-draft: true
 ---
 
 
-# Data Privacy Regulations: A New Framework for UI Design
-
-The current landscape of user interface design faces challenges similar to those of the late 1990s. Dial-up speeds, small screens (desktop included),  Today's constraints, however, are not technical limitations but data privacy regulations like GDPR and CCPA. These regulations provide an opportunity to improve UI design.
+The current landscape of user interface design faces challenges similar to those of the late 1990s. Dial-up speeds, small screens (desktop included), and limited browser capabilities were the constraints of that era. Today's constraints, however, are not technical limitations but data privacy regulations like GDPR and CCPA. These regulations provide an opportunity to improve UI design.
 
 ## Constraints as Design Drivers
 
