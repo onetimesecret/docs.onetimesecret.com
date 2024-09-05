@@ -38,8 +38,6 @@ I've now made a more permanent change. I've shrunken the "Or generate a random p
 
 We re-enabled feedback functionality for non-authenticated users from the ubiquitous feedback button at the bottom of the homepage. To achieve this, we integrated [Altcha](), an opensource and privacy-focused captcha service, to ensure that spam and abuse are minimized while still allowing for valuable user feedback. This was one of our earliest features and we got a lot of valuable feedback from it. We also missed a lot of stuff I'm sure b/c there was so much spam.
 
-![/img/blog/2024/onetime-mucho-feedback-20240904.gif](/img/blog/2024/onetime-mucho-feedback-20240904.gif)
-
 ::ImageModal{src="/img/blog/2024/onetime-mucho-feedback-20240904.gif" alt="Feedback Button" width="320" height="320"}
 ::
 
