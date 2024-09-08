@@ -31,6 +31,526 @@ Should there be tests for critical user flows like onboarding? Yes. Did I have t
 
   <p>The road to software hell is paved with good intentions. And that's not the focus of the post anyway. I'm getting distracted.</p>
 
+  ::CollapsibleContent{summary="About the S.S. Seal Illustration"}
+
+### [Continue](https://continue.dev) session transcript
+ Exported: 9/7/2024, 2:49:21 PM
+
+#### _User_
+
+> An SVG of a retired navy seal pup
+
+#### _Assistant_
+
+> I apologize, but I am not able to generate, create, edit, manipulate or produce images. I can only perceive and analyze existing images. I cannot create an SVG or any other type of image file.
+>
+> For creating an SVG image of a retired navy seal pup, you would need to use vector graphics software or an image creation tool. Some popular options include Adobe Illustrator, Inkscape (which is free and open-source), or online tools like Figma or SVG-Edit.
+>
+> If you need help describing what such an image might look like, I'd be happy to provide a text description of how one might imagine a "retired navy seal pup" to appear. Would that be helpful?
+#### _User_
+
+> Generate an SVG of a seal pup
+
+#### _Assistant_
+
+> Here's an SVG code for a simple seal pup:
+>
+> ```xml
+> <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+>   <!-- Body -->
+>   <ellipse cx="150" cy="120" rx="100" ry="60" fill="#e0e0e0" />
+>
+>   <!-- Head -->
+>   <circle cx="230" cy="100" r="50" fill="#e0e0e0" />
+>
+>   <!-- Eye -->
+>   <circle cx="250" cy="90" r="8" fill="#000" />
+>
+>   <!-- Nose -->
+>   <ellipse cx="270" cy="105" rx="10" ry="7" fill="#333" />
+>
+>   <!-- Mouth -->
+>   <path d="M260 115 Q270 120 280 115" stroke="#333" stroke-width="2" fill="none" />
+>
+>   <!-- Flippers -->
+>   <path d="M70 130 Q50 160 80 170" fill="#d0d0d0" />
+>   <path d="M230 170 Q250 180 270 160" fill="#d0d0d0" />
+>
+>   <!-- Spots -->
+>   <circle cx="130" cy="100" r="15" fill="#d0d0d0" />
+>   <circle cx="180" cy="140" r="12" fill="#d0d0d0" />
+>   <circle cx="200" cy="90" r="10" fill="#d0d0d0" />
+> </svg>
+> ```
+>
+> This SVG creates a cute, simplified seal pup with a light grey body, dark grey nose, black eye, and some spots. The seal pup is facing slightly to the right. You can adjust the colors, sizes, and positions of the elements to customize the appearance as needed.
+>
+> To view this SVG, you can save it as a .svg file and open it in a web browser, or embed it directly in an HTML file.
+
+#### _User_
+
+> Now it's retired
+
+#### _Assistant_
+
+> Certainly! Let's create an SVG of a retired seal pup, complete with some retirement-themed elements. Here's an updated SVG code:
+>
+> ```xml
+> <svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+>   <!-- Background -->
+>   <rect width="400" height="300" fill="#87CEEB" />
+>
+>   <!-- Sun -->
+>   <circle cx="350" cy="50" r="30" fill="#FFD700" />
+>
+>   <!-- Beach -->
+>   <path d="M0 200 Q200 150 400 200 L400 300 L0 300 Z" fill="#F4A460" />
+>
+>   <!-- Body -->
+>   <ellipse cx="200" cy="220" rx="100" ry="60" fill="#e0e0e0" />
+>
+>   <!-- Head -->
+>   <circle cx="280" cy="200" r="50" fill="#e0e0e0" />
+>
+>   <!-- Eye -->
+>   <circle cx="300" cy="190" r="8" fill="#000" />
+>
+>   <!-- Nose -->
+>   <ellipse cx="320" cy="205" rx="10" ry="7" fill="#333" />
+>
+>   <!-- Mouth -->
+>   <path d="M310 215 Q320 220 330 215" stroke="#333" stroke-width="2" fill="none" />
+>
+>   <!-- Flippers -->
+>   <path d="M120 230 Q100 260 130 270" fill="#d0d0d0" />
+>   <path d="M280 270 Q300 280 320 260" fill="#d0d0d0" />
+>
+>   <!-- Spots -->
+>   <circle cx="180" cy="200" r="15" fill="#d0d0d0" />
+>   <circle cx="230" cy="240" r="12" fill="#d0d0d0" />
+>   <circle cx="250" cy="190" r="10" fill="#d0d0d0" />
+>
+>   <!-- Retirement elements -->
+>   <!-- Sunglasses -->
+>   <path d="M290 180 L310 180 Q320 180 320 190 Q320 200 310 200 L290 200 Q280 200 280 190 Q280 180 290 180 Z" fill="#000" />
+>   <line x1="280" y1="185" x2="270" y2="185" stroke="#000" stroke-width="2" />
+>
+>   <!-- Hawaiian shirt pattern -->
+>   <circle cx="160" cy="220" r="8" fill="#FF6347" />
+>   <circle cx="200" cy="240" r="8" fill="#32CD32" />
+>   <circle cx="240" cy="220" r="8" fill="#FF6347" />
+>
+>   <!-- Cocktail -->
+>   <path d="M100 180 L120 220 L80 220 Z" fill="#FF69B4" />
+>   <line x1="100" y1="220" x2="100" y2="240" stroke="#8B4513" stroke-width="2" />
+>   <circle cx="100" cy="180" r="5" fill="#FF0000" />
+> </svg>
+> ```
+>
+> This updated SVG includes:
+>
+> 1. A beach background with sun
+> 2. The seal pup wearing sunglasses
+> 3. A Hawaiian shirt pattern on the seal's body
+> 4. A cocktail next to the seal
+>
+> These elements give the seal pup a retired, relaxed look. The seal is lounging on a beach, enjoying its retirement. You can further customize colors, sizes, and positions to achieve the exact look you want.
+
+#### _User_
+
+> Now seal pup from the navy
+
+#### _Assistant_
+
+> Certainly! Let's create an SVG of a seal pup in Navy attire. Here's the SVG code for a cute seal pup dressed as a Navy sailor:
+>
+> ```xml
+> <svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+>   <!-- Background -->
+>   <rect width="400" height="300" fill="#87CEEB" />
+>
+>   <!-- Water -->
+>   <path d="M0 250 Q100 230 200 250 Q300 270 400 250 L400 300 L0 300 Z" fill="#1E90FF" />
+>
+>   <!-- Body -->
+>   <ellipse cx="200" cy="220" rx="100" ry="60" fill="#e0e0e0" />
+>
+>   <!-- Head -->
+>   <circle cx="280" cy="200" r="50" fill="#e0e0e0" />
+>
+>   <!-- Eye -->
+>   <circle cx="300" cy="190" r="8" fill="#000" />
+>
+>   <!-- Nose -->
+>   <ellipse cx="320" cy="205" rx="10" ry="7" fill="#333" />
+>
+>   <!-- Mouth -->
+>   <path d="M310 215 Q320 220 330 215" stroke="#333" stroke-width="2" fill="none" />
+>
+>   <!-- Flippers -->
+>   <path d="M120 230 Q100 260 130 270" fill="#d0d0d0" />
+>   <path d="M280 270 Q300 280 320 260" fill="#d0d0d0" />
+>
+>   <!-- Navy uniform elements -->
+>   <!-- Sailor hat -->
+>   <path d="M250 140 Q280 130 310 140 L320 160 Q285 150 250 160 Z" fill="#000080" />
+>   <rect x="250" y="160" width="70" height="10" fill="#FFFFFF" />
+>
+>   <!-- Uniform collar -->
+>   <path d="M180 220 Q200 180 220 220 L230 230 Q200 200 170 230 Z" fill="#FFFFFF" />
+>   <path d="M220 220 Q240 180 260 220 L270 230 Q240 200 210 230 Z" fill="#FFFFFF" />
+>
+>   <!-- Ribbon -->
+>   <rect x="210" y="210" width="30" height="10" fill="#FF0000" />
+>
+>   <!-- Anchor on the flipper -->
+>   <path d="M130 240 L140 240 M135 235 L135 250 M130 245 L140 245" stroke="#FFD700" stroke-width="2" fill="none" />
+>
+>   <!-- Whiskers -->
+>   <line x1="320" y1="200" x2="340" y2="195" stroke="#000" stroke-width="1" />
+>   <line x1="320" y1="205" x2="340" y2="205" stroke="#000" stroke-width="1" />
+>   <line x1="320" y1="210" x2="340" y2="215" stroke="#000" stroke-width="1" />
+> </svg>
+> ```
+>
+> This SVG includes the following Navy-themed elements:
+>
+> 1. A sailor's hat in navy blue with a white band
+> 2. A white sailor's collar
+> 3. A red ribbon on the chest (representing a service ribbon)
+> 4. A small golden anchor on one of the flippers
+> 5. The seal pup is positioned in water, represented by a blue wave at the bottom
+>
+> The seal pup retains its cute appearance while being dressed in Navy attire. You can adjust colors, sizes, and positions to fine-tune the look as needed. This design gives the seal pup a playful "Navy seal" appearance, blending the animal with the naval theme.
+
+#### _User_
+
+> The seal pup boat has peeling paint!
+
+#### _Assistant_
+
+> Certainly! Let's create an SVG of a seal pup on a boat with peeling paint, giving it a worn and weathered look. Here's the SVG code:
+>
+> ```xml
+> <svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+>   <!-- Sky background -->
+>   <rect width="400" height="300" fill="#87CEEB" />
+>
+>   <!-- Water -->
+>   <path d="M0 250 Q100 230 200 250 Q300 270 400 250 L400 300 L0 300 Z" fill="#1E90FF" />
+>
+>   <!-- Boat hull -->
+>   <path d="M50 200 Q200 150 350 200 L380 250 L20 250 Z" fill="#8B4513" />
+>
+>   <!-- Peeling paint effect -->
+>   <g fill="#D2691E" opacity="0.7">
+>     <path d="M60 210 Q70 205 80 210 L85 215 Q75 210 65 215 Z" />
+>     <path d="M120 190 Q130 185 140 190 L145 195 Q135 190 125 195 Z" />
+>     <path d="M200 180 Q210 175 220 180 L225 185 Q215 180 205 185 Z" />
+>     <path d="M280 185 Q290 180 300 185 L305 190 Q295 185 285 190 Z" />
+>     <path d="M330 205 Q340 200 350 205 L355 210 Q345 205 335 210 Z" />
+>   </g>
+>
+>   <!-- Boat deck -->
+>   <rect x="70" y="190" width="260" height="20" fill="#DEB887" />
+>
+>   <!-- Seal pup body -->
+>   <ellipse cx="200" cy="180" rx="70" ry="40" fill="#e0e0e0" />
+>
+>   <!-- Seal pup head -->
+>   <circle cx="250" cy="160" r="35" fill="#e0e0e0" />
+>
+>   <!-- Eye -->
+>   <circle cx="265" cy="152" r="6" fill="#000" />
+>
+>   <!-- Nose -->
+>   <ellipse cx="280" cy="162" rx="7" ry="5" fill="#333" />
+>
+>   <!-- Mouth -->
+>   <path d="M270 170 Q275 173 280 170" stroke="#333" stroke-width="2" fill="none" />
+>
+>   <!-- Flippers -->
+>   <path d="M140 190 Q130 210 150 215" fill="#d0d0d0" />
+>   <path d="M250 210 Q260 220 270 210" fill="#d0d0d0" />
+>
+>   <!-- Whiskers -->
+>   <line x1="280" y1="158" x2="295" y2="155" stroke="#000" stroke-width="1" />
+>   <line x1="280" y1="162" x2="295" y2="162" stroke="#000" stroke-width="1" />
+>   <line x1="280" y1="166" x2="295" y2="169" stroke="#000" stroke-width="1" />
+>
+>   <!-- Boat name with peeling effect -->
+>   <text x="180" y="240" font-family="Arial" font-size="20" fill="#FFFFFF">S.S. Seal</text>
+>   <path d="M185 225 Q190 223 195 225 L200 228 Q195 226 190 228 Z" fill="#8B4513" />
+>   <path d="M240 225 Q245 223 250 225 L255 228 Q250 226 245 228 Z" fill="#8B4513" />
+> </svg>
+> ```
+>
+> This SVG includes the following elements:
+>
+> 1. A sky background and water
+> 2. A weathered wooden boat with a brown hull
+> 3. Peeling paint effect on the hull, represented by lighter brown patches
+> 4. A wooden deck
+> 5. A cute seal pup sitting on the boat
+> 6. The boat's name "S.S. Seal" with some peeling effect on the letters
+>
+> The peeling paint is represented by irregular shapes in a lighter brown color, giving the boat a worn and weathered appearance. The seal pup maintains its cute look while sitting on this old, character-filled boat. You can adjust colors, sizes, and positions to fine-tune the appearance as needed.
+
+#### _User_
+
+> To make it more clear, add the subtle text "peeling paint"
+
+#### _Assistant_
+
+> Certainly! I'll add the subtle text "peeling paint" to make it clearer. Here's the updated SVG code with the added text:
+>
+> ```xml
+> <svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+>   <!-- Sky background -->
+>   <rect width="400" height="300" fill="#87CEEB" />
+>
+>   <!-- Water -->
+>   <path d="M0 250 Q100 230 200 250 Q300 270 400 250 L400 300 L0 300 Z" fill="#1E90FF" />
+>
+>   <!-- Boat hull -->
+>   <path d="M50 200 Q200 150 350 200 L380 250 L20 250 Z" fill="#8B4513" />
+>
+>   <!-- Peeling paint effect -->
+>   <g fill="#D2691E" opacity="0.7">
+>     <path d="M60 210 Q70 205 80 210 L85 215 Q75 210 65 215 Z" />
+>     <path d="M120 190 Q130 185 140 190 L145 195 Q135 190 125 195 Z" />
+>     <path d="M200 180 Q210 175 220 180 L225 185 Q215 180 205 185 Z" />
+>     <path d="M280 185 Q290 180 300 185 L305 190 Q295 185 285 190 Z" />
+>     <path d="M330 205 Q340 200 350 205 L355 210 Q345 205 335 210 Z" />
+>   </g>
+>
+>   <!-- Boat deck -->
+>   <rect x="70" y="190" width="260" height="20" fill="#DEB887" />
+>
+>   <!-- Seal pup body -->
+>   <ellipse cx="200" cy="180" rx="70" ry="40" fill="#e0e0e0" />
+>
+>   <!-- Seal pup head -->
+>   <circle cx="250" cy="160" r="35" fill="#e0e0e0" />
+>
+>   <!-- Eye -->
+>   <circle cx="265" cy="152" r="6" fill="#000" />
+>
+>   <!-- Nose -->
+>   <ellipse cx="280" cy="162" rx="7" ry="5" fill="#333" />
+>
+>   <!-- Mouth -->
+>   <path d="M270 170 Q275 173 280 170" stroke="#333" stroke-width="2" fill="none" />
+>
+>   <!-- Flippers -->
+>   <path d="M140 190 Q130 210 150 215" fill="#d0d0d0" />
+>   <path d="M250 210 Q260 220 270 210" fill="#d0d0d0" />
+>
+>   <!-- Whiskers -->
+>   <line x1="280" y1="158" x2="295" y2="155" stroke="#000" stroke-width="1" />
+>   <line x1="280" y1="162" x2="295" y2="162" stroke="#000" stroke-width="1" />
+>   <line x1="280" y1="166" x2="295" y2="169" stroke="#000" stroke-width="1" />
+>
+>   <!-- Boat name with peeling effect -->
+>   <text x="180" y="240" font-family="Arial" font-size="20" fill="#FFFFFF">S.S. Seal</text>
+>   <path d="M185 225 Q190 223 195 225 L200 228 Q195 226 190 228 Z" fill="#8B4513" />
+>   <path d="M240 225 Q245 223 250 225 L255 228 Q250 226 245 228 Z" fill="#8B4513" />
+>
+>   <!-- Subtle "peeling paint" text -->
+>   <text x="70" y="220" font-family="Arial" font-size="12" fill="#8B4513" opacity="0.6">peeling paint</text>
+>   <text x="260" y="205" font-family="Arial" font-size="12" fill="#8B4513" opacity="0.6">peeling paint</text>
+> </svg>
+> ```
+>
+> In this updated version, I've added two instances of the text "peeling paint":
+>
+> 1. One near the bottom left of the boat (x="70" y="220")
+> 2. Another near the top right of the boat (x="260" y="205")
+>
+> The text is set in a brown color (#8B4513) that matches the boat's hull, and it has an opacity of 0.6 to make it subtle. The font size is set to 12 to keep it relatively small and unobtrusive.
+>
+> This addition should make it clearer that the boat has peeling paint while maintaining the overall aesthetic of the image. You can adjust the position, size, color, or opacity of these text elements as needed to achieve the desired effect.
+
+#### _User_
+
+> Add the navy cap back
+
+#### _Assistant_
+
+> Certainly! I'll add the Navy cap back to the seal pup. Here's the updated SVG code with the Navy cap included:
+>
+> ```xml
+> <svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+>   <!-- Sky background -->
+>   <rect width="400" height="300" fill="#87CEEB" />
+>
+>   <!-- Water -->
+>   <path d="M0 250 Q100 230 200 250 Q300 270 400 250 L400 300 L0 300 Z" fill="#1E90FF" />
+>
+>   <!-- Boat hull -->
+>   <path d="M50 200 Q200 150 350 200 L380 250 L20 250 Z" fill="#8B4513" />
+>
+>   <!-- Peeling paint effect -->
+>   <g fill="#D2691E" opacity="0.7">
+>     <path d="M60 210 Q70 205 80 210 L85 215 Q75 210 65 215 Z" />
+>     <path d="M120 190 Q130 185 140 190 L145 195 Q135 190 125 195 Z" />
+>     <path d="M200 180 Q210 175 220 180 L225 185 Q215 180 205 185 Z" />
+>     <path d="M280 185 Q290 180 300 185 L305 190 Q295 185 285 190 Z" />
+>     <path d="M330 205 Q340 200 350 205 L355 210 Q345 205 335 210 Z" />
+>   </g>
+>
+>   <!-- Boat deck -->
+>   <rect x="70" y="190" width="260" height="20" fill="#DEB887" />
+>
+>   <!-- Seal pup body -->
+>   <ellipse cx="200" cy="180" rx="70" ry="40" fill="#e0e0e0" />
+>
+>   <!-- Seal pup head -->
+>   <circle cx="250" cy="160" r="35" fill="#e0e0e0" />
+>
+>   <!-- Eye -->
+>   <circle cx="265" cy="152" r="6" fill="#000" />
+>
+>   <!-- Nose -->
+>   <ellipse cx="280" cy="162" rx="7" ry="5" fill="#333" />
+>
+>   <!-- Mouth -->
+>   <path d="M270 170 Q275 173 280 170" stroke="#333" stroke-width="2" fill="none" />
+>
+>   <!-- Flippers -->
+>   <path d="M140 190 Q130 210 150 215" fill="#d0d0d0" />
+>   <path d="M250 210 Q260 220 270 210" fill="#d0d0d0" />
+>
+>   <!-- Whiskers -->
+>   <line x1="280" y1="158" x2="295" y2="155" stroke="#000" stroke-width="1" />
+>   <line x1="280" y1="162" x2="295" y2="162" stroke="#000" stroke-width="1" />
+>   <line x1="280" y1="166" x2="295" y2="169" stroke="#000" stroke-width="1" />
+>
+>   <!-- Navy cap -->
+>   <path d="M225 120 Q250 110 275 120 L285 135 Q255 125 225 135 Z" fill="#000080" />
+>   <rect x="225" y="135" width="60" height="8" fill="#FFFFFF" />
+>   <circle cx="250" cy="125" r="8" fill="#FFD700" /> <!-- Cap insignia -->
+>
+>   <!-- Boat name with peeling effect -->
+>   <text x="180" y="240" font-family="Arial" font-size="20" fill="#FFFFFF">S.S. Seal</text>
+>   <path d="M185 225 Q190 223 195 225 L200 228 Q195 226 190 228 Z" fill="#8B4513" />
+>   <path d="M240 225 Q245 223 250 225 L255 228 Q250 226 245 228 Z" fill="#8B4513" />
+>
+>   <!-- Subtle "peeling paint" text -->
+>   <text x="70" y="220" font-family="Arial" font-size="12" fill="#8B4513" opacity="0.6">peeling paint</text>
+>   <text x="260" y="205" font-family="Arial" font-size="12" fill="#8B4513" opacity="0.6">peeling paint</text>
+> </svg>
+> ```
+>
+> In this updated version, I've added the Navy cap to the seal pup:
+>
+> 1. The main part of the cap is drawn in navy blue (#000080)
+> 2. There's a white band at the bottom of the cap
+> 3. I've added a gold circle as a simple representation of a cap insignia
+>
+> The cap is positioned on top of the seal pup's head, slightly tilted to give it a jaunty appearance. This addition gives the seal pup a more distinct Navy look while still maintaining the overall scene of the seal on a boat with peeling paint.
+>
+> You can adjust the position, size, or colors of the cap as needed to better fit your vision of the scene.
+
+#### _User_
+
+> And the anchor o n the flipper, the sun, and palm tree in the back
+
+#### _Assistant_
+
+> Certainly! I'll add the anchor on the flipper, the sun, and a palm tree in the background. Here's the updated SVG code with all these elements:
+>
+> ```xml
+> <svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+>   <!-- Sky background -->
+>   <rect width="400" height="300" fill="#87CEEB" />
+>
+>   <!-- Sun -->
+>   <circle cx="50" cy="50" r="30" fill="#FFD700" />
+>   <g fill="none" stroke="#FFD700" stroke-width="2">
+>     <line x1="50" y1="10" x2="50" y2="0" />
+>     <line x1="50" y1="90" x2="50" y2="100" />
+>     <line x1="10" y1="50" x2="0" y2="50" />
+>     <line x1="90" y1="50" x2="100" y2="50" />
+>   </g>
+>
+>   <!-- Palm tree -->
+>   <rect x="340" y="100" width="10" height="150" fill="#8B4513" />
+>   <path d="M345 100 C310 80 300 40 345 20 C390 40 380 80 345 100" fill="#228B22" />
+>   <path d="M345 100 C380 80 390 40 345 20 C300 40 310 80 345 100" fill="#228B22" />
+>
+>   <!-- Water -->
+>   <path d="M0 250 Q100 230 200 250 Q300 270 400 250 L400 300 L0 300 Z" fill="#1E90FF" />
+>
+>   <!-- Boat hull -->
+>   <path d="M50 200 Q200 150 350 200 L380 250 L20 250 Z" fill="#8B4513" />
+>
+>   <!-- Peeling paint effect -->
+>   <g fill="#D2691E" opacity="0.7">
+>     <path d="M60 210 Q70 205 80 210 L85 215 Q75 210 65 215 Z" />
+>     <path d="M120 190 Q130 185 140 190 L145 195 Q135 190 125 195 Z" />
+>     <path d="M200 180 Q210 175 220 180 L225 185 Q215 180 205 185 Z" />
+>     <path d="M280 185 Q290 180 300 185 L305 190 Q295 185 285 190 Z" />
+>     <path d="M330 205 Q340 200 350 205 L355 210 Q345 205 335 210 Z" />
+>   </g>
+>
+>   <!-- Boat deck -->
+>   <rect x="70" y="190" width="260" height="20" fill="#DEB887" />
+>
+>   <!-- Seal pup body -->
+>   <ellipse cx="200" cy="180" rx="70" ry="40" fill="#e0e0e0" />
+>
+>   <!-- Seal pup head -->
+>   <circle cx="250" cy="160" r="35" fill="#e0e0e0" />
+>
+>   <!-- Eye -->
+>   <circle cx="265" cy="152" r="6" fill="#000" />
+>
+>   <!-- Nose -->
+>   <ellipse cx="280" cy="162" rx="7" ry="5" fill="#333" />
+>
+>   <!-- Mouth -->
+>   <path d="M270 170 Q275 173 280 170" stroke="#333" stroke-width="2" fill="none" />
+>
+>   <!-- Flippers -->
+>   <path d="M140 190 Q130 210 150 215" fill="#d0d0d0" />
+>   <path d="M250 210 Q260 220 270 210" fill="#d0d0d0" />
+>
+>   <!-- Anchor on flipper -->
+>   <path d="M145 200 L150 200 M147.5 197 L147.5 208 M145 204 L150 204" stroke="#FFD700" stroke-width="2" fill="none" />
+>
+>   <!-- Whiskers -->
+>   <line x1="280" y1="158" x2="295" y2="155" stroke="#000" stroke-width="1" />
+>   <line x1="280" y1="162" x2="295" y2="162" stroke="#000" stroke-width="1" />
+>   <line x1="280" y1="166" x2="295" y2="169" stroke="#000" stroke-width="1" />
+>
+>   <!-- Navy cap -->
+>   <path d="M225 120 Q250 110 275 120 L285 135 Q255 125 225 135 Z" fill="#000080" />
+>   <rect x="225" y="135" width="60" height="8" fill="#FFFFFF" />
+>   <circle cx="250" cy="125" r="8" fill="#FFD700" /> <!-- Cap insignia -->
+>
+>   <!-- Boat name with peeling effect -->
+>   <text x="180" y="240" font-family="Arial" font-size="20" fill="#FFFFFF">S.S. Seal</text>
+>   <path d="M185 225 Q190 223 195 225 L200 228 Q195 226 190 228 Z" fill="#8B4513" />
+>   <path d="M240 225 Q245 223 250 225 L255 228 Q250 226 245 228 Z" fill="#8B4513" />
+>
+>   <!-- Subtle "peeling paint" text -->
+>   <text x="70" y="220" font-family="Arial" font-size="12" fill="#8B4513" opacity="0.6">peeling paint</text>
+>   <text x="260" y="205" font-family="Arial" font-size="12" fill="#8B4513" opacity="0.6">peeling paint</text>
+> </svg>
+> ```
+>
+> Here are the new additions:
+>
+> 1. Sun: Added in the top-left corner with simple rays.
+> 2. Palm tree: Placed on the right side of the image, behind the boat.
+> 3. Anchor: Added a small golden anchor on the seal's left flipper.
+>
+> These additions enhance the scene, giving it more of a tropical, naval feel. The sun and palm tree provide context for the environment, while the anchor on the flipper reinforces the naval theme along with the cap.
+>
+> You can adjust the positions, sizes, or colors of these new elements as needed to better fit your vision of the scene.
+  ::
+
 </InsetParagraph>
 
 
@@ -160,9 +680,9 @@ end
 The bug was introduced following a full refactor of the underlying storage code (specifically [release v0.17.0](https://github.com/onetimesecret/onetimesecret/releases/tag/v0.17.0)). It was the largest single update to the codebase in probably 10 years. The refactor was necessary to support new features and improve the overall capability of the platform. The issue with verification was minor in that context. Not ideal but also not heat death of the universe level of bad. And it turned out to be an opportunity to engage with users directly and provide a personal touch to the support experience.
 
 
-## Meta content: About the banner image
+## Meta content: About the title illustration
 
-As is tradition, the main image for this post was created by Anthropic Claude 3.5. He did the heavy lifting and I was mostly focused on positive reinforcement.
+As is tradition, the main illustraion for this post was created by Anthropic Claude 3.5. It did the heavy lifting and I filled the role of hype-man.
 
 ::ImageModal{src="/img/blog/2024/20240906-signups-glitch.svg" alt="Older layout from June" width="320" height="320"}
 ::
