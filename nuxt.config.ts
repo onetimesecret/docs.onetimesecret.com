@@ -1,3 +1,5 @@
+
+// The rest of your Nuxt config...
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   extends: ['@nuxt/ui-pro'],
@@ -25,7 +27,7 @@ export default defineNuxtConfig({
     highlight: {
       theme: 'one-dark-pro',
       themes: ['houston', 'aurora-x'],
-      langs: ['javascript', 'typescript', 'python', 'perl', 'ruby', 'go', 'powershell', 'csharp', 'bash', 'html', 'css', 'markdown']
+      langs: ['javascript', 'typescript', 'python', 'perl', 'ruby', 'go', 'powershell', 'csharp', 'bash', 'html', 'css', 'markdown', 'xml']
     }
   },
   image: {

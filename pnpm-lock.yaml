@@ -29,6 +29,9 @@ importers:
       nuxt-security:
         specifier: 2.0.0-rc.9
         version: 2.0.0-rc.9(magicast@0.3.5)(rollup@4.21.2)(webpack-sources@3.2.3)
+      shiki:
+        specifier: ^1.16.2
+        version: 1.16.2
     devDependencies:
       '@flydotio/dockerfile':
         specifier: ^0.5.8

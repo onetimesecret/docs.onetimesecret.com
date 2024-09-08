@@ -18,7 +18,8 @@
     "@vueuse/nuxt": "^10.11.1",
     "nuxt": "^3.13.1",
     "nuxt-og-image": "3.0.0-rc.66",
-    "nuxt-security": "2.0.0-rc.9"
+    "nuxt-security": "2.0.0-rc.9",
+    "shiki": "^1.16.2"
   },
   "devDependencies": {
     "@flydotio/dockerfile": "^0.5.8",
