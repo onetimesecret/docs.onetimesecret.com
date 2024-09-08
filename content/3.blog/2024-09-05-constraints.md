@@ -11,7 +11,7 @@ image:
   src: /img/blog/2024/2024-0905-data-privacy-framework-claude.svg
 badge:
   label: Privacy
-readingTime: 8
+readingTime: 6
 ---
 
 

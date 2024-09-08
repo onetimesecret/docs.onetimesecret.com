@@ -11,7 +11,7 @@ image:
   src: /img/blog/2024/20240906-signups-glitch.svg
 badge:
   label: Mistakes were made
-readingTime: 8
+readingTime: 10
 description: "I introduced a bug that prevented new users from verifying their accounts. Verification emails went out fine but the link wasn't setting the `verified` flag on the account record."
 ---
 

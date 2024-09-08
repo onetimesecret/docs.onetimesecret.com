@@ -11,7 +11,7 @@ image:
   src: /img/blog/2024/onetime-one-button-20240902-after.jpeg
 badge:
   label: Product
-readingTime: 2
+readingTime: 4
 ---
 
 
