@@ -33,9 +33,9 @@ watchEffect(async () => {
       'bg-brandcomp-300 dark:bg-brandcomp-800': !isUser
     }"
   >
-    <div class="font-semibold mb-2 dark:text-gray-300">
+    <h3 class=" dark:text-gray-100">
       {{ isUser ? 'User' : 'Assistant' }}
-    </div>
-    <ContentRendererMarkdown :value="parsedContent" v-if="parsedContent" />
+    </h3>
+    <ContentRendererMarkdown :value="parsedContent" v-if="parsedContent" class="dark:text-white"/>
   </div>
 </template>

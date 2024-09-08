@@ -16,6 +16,6 @@ _draft: true
 ---
 
 
-::ConversationDisplay{ jsonUrl="/convos/convo.json" }
+::ConversationDisplay{ jsonUrl="convo2" }
 
 ::
