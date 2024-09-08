@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Icon from '@iconify/vue';
+import { Icon } from '@iconify/vue';
 import { ref } from 'vue';
 
 interface Props {
@@ -26,7 +26,7 @@ const toggleContent = () => {
       <span class="font-sm">{{ summary }}</span>
       <Icon :icon="isExpanded ? 'heroicons:chevron-down' : 'heroicons:chevron-right'"
             class="w-5 h-5 ml-2 transition-transform duration-200 ease-in-out"
-            :class="{ 'rotate-180': isExpanded }"
+
             aria-hidden="true" />
       <!--<svg class="w-5 h-5 ml-2 transition-transform duration-200 ease-in-out"
            :class="{ 'rotate-180': isExpanded }"
