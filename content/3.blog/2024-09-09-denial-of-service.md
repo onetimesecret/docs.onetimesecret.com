@@ -19,7 +19,11 @@ I wanted to give you a quick update on what's been happening with Onetime Secret
 
 ## What Happened
 
-We had a rough day yesterday. A significant DoS attack hit us, taking the site down for over 8 hours. It was intense - we're talking about 15,000 connection attempts per second at its peak. That's... a lot.
+_Edit @ 2024-09-09 18:00 PDT: the attack seems like it may not actually be done yet._
+
+_Edit 2 @ 2024-09-09 19:00 PDT: the attack is still ongoing. The network team at our hosting company (Hetzner) emailed earlier. I'm just catching up on emails now. They included some numbers. Around noon today (PDT), over a five minute period:  over 1 million packets per second, 311+ million packets total. That's a lot. And it's being going on and off for hours._
+
+We had a rough day today. A significant DoS attack hit us, taking the site down for over 8 hours. It was intense - we're talking about 15,000 connection attempts per second at its peak. That's... a lot.
 
 I know we were radio silent during this time, and that's not ideal. We were heads-down trying to get things back up and running. It was a long, stressful day, but we managed to restore service.
 
@@ -68,3 +72,39 @@ This one is from the web server's perspective. 12 hours of mostly normal traffic
 
 ::ImageModal{src="/img/blog/2024/web-server-logs-20240909-0730-example2.png" title="Hetzner Dashboard - DoS Attack Sept 9th, 2024" alt="Hetzner Dashboard - DoS Attack Sept 9th, 2024" width="320"}
 ::
+
+```plaintext
+> Direction IN
+> Internal 49.13.44.122 (this is us)
+> Threshold Packets 1,000,000 packets/s
+> Sum 311,775,000 packets/300s (1,039,250 packets/s), 62,354 flows/300s (207 flows/s), 13.169 GByte/300s (359 MBit/s)
+> External 50.205.0.0, 15,000 packets/300s (50 packets/s), 3 flows/300s (0 flows/s), 0.001 GByte/300s (0 MBit/s)
+> External 177.233.0.0, 10,000 packets/300s (33 packets/s), 1 flows/300s (0 flows/s), 0.002 GByte/300s (0 MBit/s)
+> External 77.182.0.0, 10,000 packets/300s (33 packets/s), 2 flows/300s (0 flows/s), 0.000 GByte/300s (0 MBit/s)
+> External 50.7.0.0, 10,000 packets/300s (33 packets/s), 2 flows/300s (0 flows/s), 0.000 GByte/300s (0 MBit/s)
+> External 125.82.0.0, 5,000 packets/300s (16 packets/s), 1 flows/300s (0 flows/s), 0.000 GByte/300s (0 MBit/s)
+> External 174.205.0.0, 5,000 packets/300s (16 packets/s), 1 flows/300s (0 flows/s), 0.000 GByte/300s (0 MBit/s)
+> External 18.195.0.0, 5,000 packets/300s (16 packets/s), 1 flows/300s (0 flows/s), 0.000 GByte/300s (0 MBit/s)
+> External 167.100.0.0, 5,000 packets/300s (16 packets/s), 1 flows/300s (0 flows/s), 0.000 GByte/300s (0 MBit/s)
+> External 185.160.0.0, 5,000 packets/300s (16 packets/s), 1 flows/300s (0 flows/s), 0.000 GByte/300s (0 MBit/s)
+> External 222.3.0.0, 5,000 packets/300s (16 packets/s), 1 flows/300s (0 flows/s), 0.000 GByte/300s (0 MBit/s)
+> External 32.229.0.0, 5,000 packets/300s (16 packets/s), 1 flows/300s (0 flows/s), 0.000 GByte/300s (0 MBit/s)
+> External 58.159.0.0, 5,000 packets/300s (16 packets/s), 1 flows/300s (0 flows/s), 0.000 GByte/300s (0 MBit/s)
+> External 83.219.0.0, 5,000 packets/300s (16 packets/s), 1 flows/300s (0 flows/s), 0.000 GByte/300s (0 MBit/s)
+> External 117.65.0.0, 5,000 packets/300s (16 packets/s), 1 flows/300s (0 flows/s), 0.000 GByte/300s (0 MBit/s)
+> External 209.26.0.0, 5,000 packets/300s (16 packets/s), 1 flows/300s (0 flows/s), 0.000 GByte/300s (0 MBit/s)
+> External 71.31.0.0, 5,000 packets/300s (16 packets/s), 1 flows/300s (0 flows/s), 0.000 GByte/300s (0 MBit/s)
+> External 123.168.0.0, 5,000 packets/300s (16 packets/s), 1 flows/300s (0 flows/s), 0.000 GByte/300s (0 MBit/s)
+> External 63.16.0.0, 5,000 packets/300s (16 packets/s), 1 flows/300s (0 flows/s), 0.000 GByte/300s (0 MBit/s)
+> External 31.20.0.0, 5,000 packets/300s (16 packets/s), 1 flows/300s (0 flows/s), 0.000 GByte/300s (0 MBit/s)
+> External 212.51.0.0, 5,000 packets/300s (16 packets/s), 1 flows/300s (0 flows/s), 0.000 GByte/300s (0 MBit/s)
+> External 169.234.0.0, 5,000 packets/300s (16 packets/s), 1 flows/300s (0 flows/s), 0.000 GByte/300s (0 MBit/s)
+> External 44.200.0.0, 5,000 packets/300s (16 packets/s), 1 flows/300s (0 flows/s), 0.000 GByte/300s (0 MBit/s)
+> External 38.126.0.0, 5,000 packets/300s (16 packets/s), 1 flows/300s (0 flows/s), 0.000 GByte/300s (0 MBit/s)
+> External 60.180.0.0, 5,000 packets/300s (16 packets/s), 1 flows/300s (0 flows/s), 0.000 GByte/300s (0 MBit/s)
+> External 99.37.0.0, 5,000 packets/300s (16 packets/s), 1 flows/300s (0 flows/s), 0.000 GByte/300s (0 MBit/s)
+> External 70.67.0.0, 5,000 packets/300s (16 packets/s), 1 flows/300s (0 flows/s), 0.000 GByte/300s (0 MBit/s)
+> External 186.70.0.0, 5,000 packets/300s (16 packets/s), 1 flows/300s (0 flows/s), 0.000 GByte/300s (0 MBit/s)
+> External 38.43.0.0, 5,000 packets/300s (16 packets/s), 1 flows/300s (0 flows/s), 0.000 GByte/300s (0 MBit/s)
+> External 170.46.0.0, 5,000 packets/300s (16 packets/s), 1 flows/300s (0 flows/s), 0.000 GByte/300s (0 MBit/s)
+```
