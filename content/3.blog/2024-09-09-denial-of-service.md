@@ -8,22 +8,37 @@ authors:
     avatar:
       src: /img/portait-profile-pic-delano-2024.jpeg
 image:
-  src: /img/blog/2024/hetzner-graphs-lb-1h-20240909-0922.png
+  src: /img/blog/2024/hetzner-lb1-30d-2024-09-10-1200.jpeg
 badge:
   label: Operations
 readingTime: 4
 ---
 
 
-I wanted to give you a quick update on what's been happening with Onetime Secret.
-
-## What Happened
 
 _Edit @ 2024-09-09 18:00 PDT: the attack seems like it may not actually be done yet._
 
 _Edit 2 @ 2024-09-09 19:00 PDT: the attack is still ongoing. The network team at our hosting company (Hetzner) emailed earlier. I'm just catching up on emails now. They included some numbers. Around noon today (PDT), over a five minute period:  over 1 million packets per second, 311+ million packets total. That's a lot. And it's being going on and off for hours._
 
-We had a rough day today. A significant DoS attack hit us, taking the site down for over 8 hours. It was intense - we're talking about 15,000 connection attempts per second at its peak. That's... a lot.
+_Edit 3 @ 2024-09-09 23:45 PDT: Some questionable traffic is still coming in, but we managed to wrangle almost all of it. We're still monitoring the situation. The solution for mow is everything bigger -- load balancer, web servers, etc -- and some carefully tuned network services._
+
+_Edit 4 @ 2024-09-10 07:00 PDT (Day 2): The attack has mostly tappered off. There's still a lot of junk traffic coming from about 1200+ IP addresses which we're managing now. We're still monitoring the situation. They change up the patterns so we need to make adjustments every so often. In general I get the sense that this is a copycat rather than the original perps that started this adventure off yesterday._
+
+_Edit 5 @ 2024-09-10 12:30 PDT: The junk traffic continues. There are around 1600 unique IP addresses generating a considerable number of requests. But the situation has settled down somewhat -- with all the infrastructure changes we've made, we're able to weather the bursts and recover quickly. I'll start working on another post after this update._
+
+Traffic from the past 30 days:
+
+::ImageModal{src="/img/blog/2024/hetzner-lb1-30d-2024-09-10-1200.jpeg" title="Hetzner Dashboard - The Past 30 days - Sept 10, 2024" alt="Hetzner Dashboard - The Past 30 days - Sept 10, 2024" width="320"}
+::
+---
+
+Original post:
+
+## What Happened
+
+I wanted to give you a quick update on what's been happening with Onetime Secret.
+
+We had a rough day today. A significant DoS attack hit us, taking the site down for over ~8 hours~ 12 hours. It was intense - we're talking about 15,000 connection attempts per second at its peak. That's... a lot.
 
 I know we were radio silent during this time, and that's not ideal. We were heads-down trying to get things back up and running. It was a long, stressful day, but we managed to restore service.
 
