@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A verifiable error in our signup flow"
-date: 2024-09-09
+date: 2024-09-06
 authors:
   - name: Delano
     to: https://docs.onetimesecret.com/about
