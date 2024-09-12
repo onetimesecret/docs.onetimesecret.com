@@ -20,7 +20,13 @@ export default defineNuxtConfig({
     prerender: {
       concurrency: 250,
       interval: 100,
-    }
+    },
+    publicAssets: [
+      {
+        dir: 'public',  // This will include the entire public directory
+        maxAge: 60 * 60 * 24 * 7  // Cache for 1 week (adjust as needed)
+      }
+    ]
   },
   content: {
     // or you might have 'mdc' instead of 'content' depending on your setup

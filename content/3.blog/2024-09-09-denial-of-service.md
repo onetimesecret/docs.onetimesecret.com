@@ -15,6 +15,9 @@ readingTime: 4
 ---
 
 
+_See the latest post for the most recent updates: [Denial of Service (DoS) Attack: Continued Adventure](/blog/2024-09-12-ddos-day-4)._
+
+---
 
 _Edit @ 2024-09-09 18:00 PDT: the attack seems like it may not actually be done yet._
 
@@ -30,6 +33,7 @@ Traffic from the past 30 days:
 
 ::ImageModal{src="/img/blog/2024/hetzner-lb1-30d-2024-09-10-1200.jpeg" title="Hetzner Dashboard - The Past 30 days - Sept 10, 2024" alt="Hetzner Dashboard - The Past 30 days - Sept 10, 2024" width="320"}
 ::
+
 ---
 
 Original post:
