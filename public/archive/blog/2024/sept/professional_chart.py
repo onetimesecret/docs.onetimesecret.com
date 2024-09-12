@@ -29,10 +29,10 @@ ax.set_title('Onetimesecret.com DDoS - Day 4', fontsize=20, fontweight='bold', p
 ax.set_xlabel('Time', fontsize=14, labelpad=10)
 ax.set_ylabel('Number of Requests', fontsize=14, labelpad=10)
 
-# Format x-axis with more frequent time labels
+# Format x-axis with less frequent time labels
 ax.xaxis.set_major_formatter(mdates.DateFormatter('%H:%M'))
-ax.xaxis.set_major_locator(mdates.MinuteLocator(interval=2))  # Show a label every 2 minutes
-ax.xaxis.set_minor_locator(mdates.MinuteLocator())  # Add minor ticks for every minute
+ax.xaxis.set_major_locator(mdates.MinuteLocator(interval=30))  # Show a label half hour
+ax.xaxis.set_minor_locator(mdates.MinuteLocator(interval=15))  # Add minor ticks every 15 minutes
 fig.autofmt_xdate(rotation=45, ha='right')
 
 # Customize grid
@@ -44,10 +44,10 @@ ax.set_facecolor('#f5f5f5')
 
 # Adjust layout
 plt.tight_layout()
-plt.subplots_adjust(bottom=0.30)  # Increase bottom margin even more
+plt.subplots_adjust(bottom=0.30)  # Increase bottom margin
 
 # Add description and metadata
-description = ("This chart shows the number of web requests per second over a 40 minute span.\n"
+description = ("This chart shows the number of web requests per second over several hours.\n"
                "Data collected on September 12, 2024.")
 plt.figtext(0.05, 0.22, description, fontsize=10, ha='left')
 
