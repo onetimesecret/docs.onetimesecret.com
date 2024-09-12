@@ -15,7 +15,7 @@ readingTime: 4
 ---
 
 
-_See the latest post for the most recent updates: [Denial of Service (DoS) Attack: Continued Adventure](/blog/2024-09-12-ddos-day-4)._
+_See the latest post for the most recent updates (Sept 12th, 2024): [Denial of Service (DoS) Attack: Continued Adventure](/blog/2024-09-12-ddos-day-4)._
 
 ---
 
