@@ -4,6 +4,12 @@ name: Deploy Nuxt Application to the Cloud Realm
 on:
   # Allows the workflow to be manually triggered from the Grand UI of Actions
   workflow_dispatch:
+    inputs:
+      debug_enabled:
+        type: boolean
+        description: 'Run the build with tmate debugging enabled (https://github.com/marketplace/actions/debugging-with-tmate)'
+        required: false
+        default: false
 
   # Triggers the workflow when a pull request to the main branch is closed
   pull_request:
@@ -29,19 +35,19 @@ jobs:
     steps:
       # Step 1: Check out the repository
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v2
 
       # Step 2: Set up Cloud Dimension CLI
       - name: Set up Cloud Dimension CLI
-        uses: superfly/flyctl-actions/setup-flyctl@1.5
-        #with:
+        uses: superfly/flyctl-actions@1.5
+        with:
           # Using version v0.3.14 of flyctl based on recommendation to pin the version
           # in the docs https://fly.io/docs/launch/continuous-deployment-with-github-actions/
-          # version: v0.3.14
+          version: v0.3.14
 
       # Step 3: Deploy to the Cloud Dimension
       - name: Deploy to the Cloud Dimension
-        run: flyctl deploy
+        run: flyctl deploy --remote-only
         env:
           # The FLY_API_TOKEN should be set as a secret in your GitHub repository
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
