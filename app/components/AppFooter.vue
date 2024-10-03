@@ -14,6 +14,7 @@ const links = [
     children: [
       { label: 'Custom Domains', to: '/docs/custom-links' },
       { label: 'Single-use links', to: '/docs/secret-links' },
+      { label: 'API', to: '/docs/rest-api' },
       { label: 'Docker', to: 'https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret' },
     ]
   },
