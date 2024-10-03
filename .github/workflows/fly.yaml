@@ -1,0 +1,31 @@
+name: Deploy Nuxt Application to Fly.io
+on:
+  # Allows the workflow to be manually triggered from the GitHub Actions UI
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    types:
+      - closed
+  push:
+    branches:
+      # Branches for multiple posts
+      - 'posts/*'
+      # Branches for single post
+      - 'post/*'
+      - 'feature/*'
+jobs:
+  deploy:
+    name: Deploy to Fly.io
+    runs-on: ubuntu-latest
+    steps:
+      # This step checks out a copy of your repository.
+      - uses: actions/checkout@v2
+      - uses: superfly/flyctl-actions@1.5
+        with:
+          # Using version v0.3.14 of flyctl based on recommendation to pin the version
+          # in the docs https://fly.io/docs/launch/continuous-deployment-with-github-actions/
+          version: v0.3.14
+      - run: flyctl deploy --remote-only
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
