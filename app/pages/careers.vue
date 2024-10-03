@@ -81,6 +81,7 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue';
 import { ref } from 'vue';
+import he from 'he';
 
 const commitments = ref([
   { title: 'Diversity', description: 'We value the unique perspectives and experiences that each individual brings to our team.', icon: 'lucide:users' },
@@ -128,7 +129,7 @@ function deobfuscateEmails(): void {
     const email = el.textContent?.replace(/ &#65;&#84; /g, "@").replace(/ AT /g, "@").replace(/ D0T /g, ".") || '';
     const subject = el.getAttribute('data-subject');
     const subjectParam = subject ? `?subject=${encodeURIComponent(subject)}` : '';
-    el.innerHTML = `<a class="dark:text-gray-300" href="mailto:${email}${subjectParam}">${email}</a>`;
+    el.innerHTML = `<a class="dark:text-gray-300" href="mailto:${he.encode(email)}${subjectParam}">${he.encode(email)}</a>`;
   });
 }
 
