@@ -1,31 +1,49 @@
-name: Deploy Nuxt Application to Fly.io
+
+name: Deploy Nuxt Application to the Cloud Realm
+
 on:
-  # Allows the workflow to be manually triggered from the GitHub Actions UI
+  # Allows the workflow to be manually triggered from the Grand UI of Actions
   workflow_dispatch:
+
+  # Triggers the workflow when a pull request to the main branch is closed
   pull_request:
     branches:
       - main
     types:
       - closed
+
+  # Triggers the workflow on push events to specific branches
   push:
     branches:
       # Branches for multiple posts
       - 'posts/*'
       # Branches for single post
       - 'post/*'
+      # Feature branches
       - 'feature/*'
+
 jobs:
   deploy:
-    name: Deploy to Fly.io
+    name: Deploy to the Cloud Realm
     runs-on: ubuntu-latest
     steps:
-      # This step checks out a copy of your repository.
-      - uses: actions/checkout@v2
-      - uses: superfly/flyctl-actions@1.5
+      # Step 1: Check out the repository
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Step 2: Set up Cloud Dimension CLI
+      - name: Set up Cloud Dimension CLI
+        uses: superfly/flyctl-actions@1.5
         with:
           # Using version v0.3.14 of flyctl based on recommendation to pin the version
           # in the docs https://fly.io/docs/launch/continuous-deployment-with-github-actions/
           version: v0.3.14
-      - run: flyctl deploy --remote-only
+
+      # Step 3: Deploy to the Cloud Dimension
+      - name: Deploy to the Cloud Dimension
+        run: flyctl deploy --remote-only
         env:
+          # The FLY_API_TOKEN should be set as a secret in your GitHub repository
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+
+# Fortune: Your next deployment will bring unexpected joy to users across the cosmos.
