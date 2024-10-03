@@ -6,10 +6,9 @@ on:
     types:
       - closed
   push:
-    branches-ignore:
-      - main
     branches:
       - 'posts/*'
+      - 'post/*'
       - 'feature/*'
       - 'wip/*'
 jobs:
