@@ -1,0 +1,13 @@
+# .github/dependabot.yml
+
+# Configuration for Dependabot updates
+version: 2
+updates:
+  # Update pnpm dependencies
+  - package-ecosystem: "npm" # See documentation for possible values
+    directory: "/" # Location of package manifests
+    schedule:
+      interval: "weekly" # Frequency of update checks
+
+    # Optional: Adjust XP gain for successful updates
+    # xp_reward: 50
