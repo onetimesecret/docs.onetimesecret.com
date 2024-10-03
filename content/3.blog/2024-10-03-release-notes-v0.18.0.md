@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Onetime Secret v0.18.0: Enjoying the Vue"
-date: 2024-10-03
+date: 2024-10-04
 authors:
   - name: Delano
     to: https://docs.onetimesecret.com/about
@@ -9,7 +9,7 @@ authors:
       src: /img/portait-profile-pic-delano-2024.jpeg
 badge:
   label: Release
-readingTime: 8
+readingTime: 2
 ---
 
 Onetime Secret v0.18.0 brings significant improvements to our secure, one-time sharing platform. This release focuses on enhancing performance, security, and user experience.
