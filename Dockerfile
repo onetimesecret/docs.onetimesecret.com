@@ -39,7 +39,7 @@ COPY --link . .
 #RUN --mount=type=secret,id=NUXT_UI_PRO_LICENSE \
 #    NUXT_UI_PRO_LICENSE="$(cat /run/secrets/NUXT_UI_PRO_LICENSE)" \
 #    && pnpm run build
-ENV NUXT_UI_PRO_LICENSE=CHANGEME
+# ENV NUXT_UI_PRO_LICENSE=CHANGEME
 RUN pnpm run build
 
 # Remove development dependencies
