@@ -51,5 +51,7 @@ jobs:
         env:
           # The FLY_API_TOKEN should be set as a secret in your GitHub repository
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+          # The NUXT_UI_PRO_LICENSE should be set as a secret in your GitHub repository
+          NUXT_UI_PRO_LICENSE: ${{ secrets.NUXT_UI_PRO_LICENSE }}
 
 # Fortune: Your next deployment will bring unexpected joy to users across the cosmos.
