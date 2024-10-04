@@ -39,8 +39,24 @@ export default defineNuxtConfig({
   image: {
   //  dir: 'assets/img'
   },
+
+  /**
+   * Configuration for Nuxt UI Pro.
+   *
+   * The `uiPro` object contains settings specific to the Nuxt UI Pro module.
+   *
+   * @property {string} license - The license key for Nuxt UI Pro.
+   *   This value is obtained from the environment variable `NUXT_UI_PRO_LICENSE`.
+   *   If the environment variable is not set, it falls back to a placeholder
+   *   `${NUXT_UI_PRO_LICENSE}` which can be replaced using `envsubst` during deployment.
+   *
+   *  e.g.
+   *
+   *    $ export NUXT_UI_PRO_LICENSE
+   *    $ envsubst < nuxt.config.ts > nuxt.config.ts.tmp && mv nuxt.config.ts.tmp nuxt.config.ts
+   */
   uiPro: {
-    license: process.env.NUXT_UI_PRO_LICENSE,
+    license: process.env.NUXT_UI_PRO_LICENSE || '${NUXT_UI_PRO_LICENSE}',
   },
   postcss: {
     plugins: {
