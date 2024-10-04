@@ -40,10 +40,6 @@ jobs:
       # Step 2: Set up Cloud Dimension CLI
       - name: Set up Cloud Dimension CLI
         uses: superfly/flyctl-actions/setup-flyctl@1.5
-        #with:
-          # Using version v0.3.14 of flyctl based on recommendation to pin the version
-          # in the docs https://fly.io/docs/launch/continuous-deployment-with-github-actions/
-          # version: v0.3.14
 
       # Step 3: Replace environment variables
       - name: Replace environment variables
