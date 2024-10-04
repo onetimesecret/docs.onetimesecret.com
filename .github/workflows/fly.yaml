@@ -35,17 +35,21 @@ jobs:
     steps:
       # Step 1: Check out the repository
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       # Step 2: Set up Cloud Dimension CLI
       - name: Set up Cloud Dimension CLI
-        uses: superfly/flyctl-actions@1.5
-        with:
-          # Using version v0.3.14 of flyctl based on recommendation to pin the version
-          # in the docs https://fly.io/docs/launch/continuous-deployment-with-github-actions/
-          version: v0.3.14
+        uses: superfly/flyctl-actions/setup-flyctl@1.5
 
-      # Step 3: Deploy to the Cloud Dimension
+      # Step 3: Replace environment variables
+      - name: Replace environment variables
+        run: |
+          envsubst < nuxt.config.ts > nuxt.config.ts.tmp && mv nuxt.config.ts.tmp nuxt.config.ts
+        env:
+          # The NUXT_UI_PRO_LICENSE should be set as a secret in your GitHub repository
+          NUXT_UI_PRO_LICENSE: ${{ secrets.NUXT_UI_PRO_LICENSE }}
+
+      # Step 4: Deploy to the Cloud Dimension
       - name: Deploy to the Cloud Dimension
         run: flyctl deploy --remote-only
         env:
