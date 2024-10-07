@@ -33,7 +33,7 @@
     "@iconify/vue": "4.1.2",
     "@nuxt/eslint": "^0.5.7",
     "@nuxthq/studio": "^2.1.1",
-    "eslint": "^9.11.1",
+    "eslint": "^9.12.0",
     "nuxt-content-assets": "^1.4.4",
     "vue-tsc": "^2.1.6"
   }
