@@ -7,6 +7,8 @@ authors:
     to: https://docs.onetimesecret.com/about
     avatar:
       src: /img/portait-profile-pic-delano-2024.jpeg
+image:
+  src: /img/blog/2024/install-guide/onetimesecret installation guide - 1 of 5 - Homepage (light).jpeg
 badge:
   label: Guide
 readingTime: 15
