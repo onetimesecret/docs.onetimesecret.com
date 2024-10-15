@@ -3,20 +3,71 @@ layout: post
 title: "Expanding Horizons: Introducing US Data Locality for Onetime Secret"
 date: 2024-10-14
 authors:
-  - name: Delano
+  - name: Onetime
     to: https://docs.onetimesecret.com/about
     avatar:
-      src: /img/portait-profile-pic-delano-2024.jpeg
+      src: /img/onetime-logo-v3-sm.png
 image:
   src: /img/blog/2024/20241014-us-data-center-launch.svg
 badge:
   label: Feature
-readingTime: 11
+readingTime: 5
 ---
+
 
 We're jazzed to announce the launch of our new US data center, marking a significant expansion in our commitment to data privacy and user choice. This new offering, accessible via [us.onetimesecret.com](https://us.onetimesecret.com/), complements our existing EU data center at [eu.onetimesecret.com](https://eu.onetimesecret.com/), providing more options for our users worldwide.
 
-![Onetime Secret Global Data Centers](/img/blog/2024/20241014-us-data-center-launch.svg)
+<div class="flex justify-center items-center my-10">
+  <a href="https://us.onetimesecret.com/" class="text-center inline-block">
+    <span class="font-brand text-3xl sm:text-4xl md:text-5xl
+                 bg-clip-text text-transparent bg-gradient-to-r
+                 from-purple-400 via-pink-500 to-red-500
+                 animate-pulse hover:animate-bounce
+                 transition-all duration-300 ease-in-out
+                 transform hover:scale-105
+                 rounded-xl
+                 dark:border-brand-600">
+      us.onetimesecret.com
+    </span>
+  </a>
+</div>
+
+<div class="flex justify-center items-center my-10">
+  <a href="https://us.onetimesecret.com/" class="text-center inline-block">
+    <span class="font-brand text-3xl sm:text-4xl md:text-5xl
+                 bg-clip-text text-transparent
+                 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500
+                 animate-flowing-colors
+                 hover:animate-bounce
+                 transition-all duration-300 ease-in-out
+                 transform hover:scale-105
+                 rounded-xl
+                 dark:border-brand-600">
+      us.onetimesecret.com
+    </span>
+  </a>
+</div>
+
+<style>
+  @keyframes flowingColors {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .animate-flowing-colors {
+    background-size: 200% 200%;
+    animation: flowingColors 3s ease infinite;
+  }
+</style>
+
+
 
 ## A Share-Nothing Architecture
 
@@ -54,7 +105,7 @@ Our commitment to data locality extends to our pricing model:
 We're not stopping here. Future plans include:
 
 - Additional data center locations: Brazil, Australia, UK, and Canada.
-- New features: Team accounts, custom logo/branding, and custom mail sender options.
+- New features: custom logo/branding, custom mail sender options, team accounts.
 
 ## Why This Matters
 
@@ -68,9 +119,9 @@ We believe this approach aligns with our core mission of providing secure, priva
 
 ## Get Started
 
-Ready to try out our new US data center? Head over to us.onetimesecret.com to create an account or start sharing secrets today!
+Our new US data center is operational at [us.onetimesecret.com](https://us.onetimesecret.com/). Users interested in US data locality can now utilize this option.
 
-For any questions or feedback about our new data locality options, please don't hesitate to reach out to our support team.
+For inquiries or feedback regarding data locality options, contact our support team through the established channels.
 
-Stay secure,
+Regards,
 The Onetime Secret Team
