@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 200 200">
+  <style>
+    @font-face {
+      font-family: 'Zilla Slab';
+      src: url('https://onetimesecret.com/dist/assets/ZillaSlab-Regular-CpTS5Ubm.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    text.release {
+      font-family: 'Zilla Slab', sans-serif !important;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .balloon {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes twinkle {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.5;
+      }
+    }
+
+    .star {
+      animation: twinkle 1.5s ease-in-out infinite;
+    }
+  </style>
+
+  <defs>
+    <radialGradient id="fountainFill"
+                    cx="50%"
+                    cy="50%"
+                    r="50%"
+                    fx="50%"
+                    fy="50%">
+      <stop offset="0%"
+            style="stop-color:#e68b5e; stop-opacity:1" />
+      <stop offset="100%"
+            style="stop-color:#dc4a22; stop-opacity:1" />
+    </radialGradient>
+  </defs>
+
+  <rect width="200"
+        height="200"
+        fill="url(#fountainFill)" />
+
+  <g class="main-content">
+    <text class="release"
+          x="100"
+          y="105"
+          font-size="120"
+          font-weight="bold"
+          text-anchor="middle"
+          dominant-baseline="middle"
+          fill="#fcf8f2">19</text>
+  </g>
+
+  <!-- Balloons -->
+  <g class="balloon"
+     transform="translate(30, 30)">
+    <path d="M0,15 Q7,0 15,15"
+          stroke="#ff6b6b"
+          stroke-width="2"
+          fill="none" />
+    <circle cx="7.5"
+            cy="15"
+            r="7"
+            fill="#ff6b6b" />
+  </g>
+
+  <g class="balloon"
+     transform="translate(170, 40)">
+    <path d="M0,15 Q7,0 15,15"
+          stroke="#4ecdc4"
+          stroke-width="2"
+          fill="none" />
+    <circle cx="7.5"
+            cy="15"
+            r="7"
+            fill="#4ecdc4" />
+  </g>
+
+  <!-- Stars -->
+  <path class="star"
+        d="M100,10 L102,16 108,16 103,20 105,26 100,22 95,26 97,20 92,16 98,16 Z"
+        fill="#ffe66d" />
+  <path class="star"
+        d="M30,50 L32,56 38,56 33,60 35,66 30,62 25,66 27,60 22,56 28,56 Z"
+        fill="#ffe66d" />
+  <path class="star"
+        d="M170,70 L172,76 178,76 173,80 175,86 170,82 165,86 167,80 162,76 168,76 Z"
+        fill="#ffe66d" />
+
+  <!-- Celebratory text -->
+  <!-- Prompt: /webdev put a personal unique touch on the celebration, not hidden -->
+  <text x="100"
+        y="180"
+        font-family="Arial"
+        font-size="14"
+        font-weight="bold"
+        text-anchor="middle"
+        fill="#fcf8f2">Cheers to v0.19.0!</text>
+
+  <text x="190"
+        y="195"
+        font-family="Arial"
+        font-size="8"
+        font-style="italic"
+        text-anchor="end"
+        fill="#fed">Celebration by Claude 3.5</text>
+</svg>

@@ -7,6 +7,8 @@ authors:
     to: https://docs.onetimesecret.com/about
     avatar:
       src: /img/portait-profile-pic-delano-2024.jpeg
+image:
+  src: /img/blog/2024/release-0.18.svg
 badge:
   label: Release
 readingTime: 2
