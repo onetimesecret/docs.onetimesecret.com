@@ -14,23 +14,9 @@ badge:
 readingTime: 5
 ---
 
+## Announcement
 
-We're jazzed to announce the launch of our new US data center, marking a significant expansion in our commitment to data privacy and user choice. This new offering, accessible via [us.onetimesecret.com](https://us.onetimesecret.com/), complements our existing EU data center at [eu.onetimesecret.com](https://eu.onetimesecret.com/), providing more options for our users worldwide.
-
-<div class="flex justify-center items-center my-10">
-  <a href="https://us.onetimesecret.com/" class="text-center inline-block">
-    <span class="font-brand text-3xl sm:text-4xl md:text-5xl
-                 bg-clip-text text-transparent bg-gradient-to-r
-                 from-purple-400 via-pink-500 to-red-500
-                 animate-pulse hover:animate-bounce
-                 transition-all duration-300 ease-in-out
-                 transform hover:scale-105
-                 rounded-xl
-                 dark:border-brand-600">
-      us.onetimesecret.com
-    </span>
-  </a>
-</div>
+We're jazzed to introduce our new US locality, enhancing our data privacy options and expanding user choice. The US instance is now available at [us.onetimesecret.com](https://us.onetimesecret.com/), complementing our existing EU site at [eu.onetimesecret.com](https://eu.onetimesecret.com).
 
 <div class="flex justify-center items-center my-10">
   <a href="https://us.onetimesecret.com/" class="text-center inline-block">
@@ -67,6 +53,7 @@ We're jazzed to announce the launch of our new US data center, marking a signifi
   }
 </style>
 
+---
 
 
 ## A Share-Nothing Architecture
