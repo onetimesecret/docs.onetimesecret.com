@@ -28,7 +28,7 @@
     "@flydotio/dockerfile": "^0.5.9",
     "@iconify-json/heroicons": "^1.2.1",
     "@iconify-json/ph": "^1.2.1",
-    "@iconify-json/simple-icons": "^1.2.8",
+    "@iconify-json/simple-icons": "^1.2.9",
     "@iconify-json/vscode-icons": "^1.2.2",
     "@iconify/vue": "4.1.2",
     "@nuxt/eslint": "^0.6.0",
