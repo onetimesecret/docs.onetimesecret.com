@@ -76,6 +76,6 @@ onUnmounted(() => {
 }
 
 .modal-image:hover {
-  transform: scale(1.5);
+  transform: scale(1);
 }
 </style>

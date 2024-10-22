@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "A Conversation Display"
+title: "Testing A Conversation Display Component"
 date: 2024-09-01
 authors:
   - name: Delano
@@ -8,7 +8,7 @@ authors:
     avatar:
       src: /img/portait-profile-pic-delano-2024.jpeg
 image:
-  src:
+  src: /img/blog/2024/20240901-conversation-display.png
 badge:
   label: LLMs
 readingTime: 8
