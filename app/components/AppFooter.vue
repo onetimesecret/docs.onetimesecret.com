@@ -51,6 +51,15 @@ const links = [
     </template>
 
     <template #right>
+      <UButton to="https://onetimesecret.com"
+               target="_blank"
+               aria-label="OneTimeSecret.com"
+               color="gray"
+               variant="ghost"
+               class="hover:bg-gray-100 dark:hover:bg-gray-800 mr-2 text-sm">
+        OnetimeSecret.com
+      </UButton>
+
       <UColorModeButton size="sm"
                         class="mr-2" />
 
