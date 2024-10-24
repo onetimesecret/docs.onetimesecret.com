@@ -18,7 +18,7 @@
     "@vueuse/nuxt": "^11.1.0",
     "axios": "^1.7.7",
     "nuxt": "^3.13.2",
-    "nuxt-og-image": "3.0.4",
+    "nuxt-og-image": "3.0.6",
     "nuxt-security": "2.0.0",
     "@nuxt/eslint": "^0.6.0",
     "shiki": "^1.22.0",
