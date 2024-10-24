@@ -7,7 +7,7 @@ app = 'onetime-blog'
 primary_region = 'ams'
 
 [build]
-  dockerfile = 'Dockerfile.production'
+  dockerfile = 'Dockerfile'
 
 [http_service]
   internal_port = 3000
