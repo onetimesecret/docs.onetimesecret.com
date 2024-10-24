@@ -14,7 +14,7 @@ badge:
 readingTime: 5
 ---
 
-## Announcement
+# Announcement
 
 We're jazzed to introduce our new US locality, enhancing our data privacy options and expanding user choice. The US instance is now available at [us.onetimesecret.com](https://us.onetimesecret.com/), complementing our existing EU site at [eu.onetimesecret.com](https://eu.onetimesecret.com).
 

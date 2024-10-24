@@ -1,8 +1,10 @@
 ---
-title: A Onetime Blog
-description: Discover best practices for secure information sharing, learn essential privacy tips, and stay up-to-date with the latest Onetime Secret features. Our blog is your trusted resource for mastering one-time, self-destructing message delivery.
-navigation.icon: i-heroicons-newspaper
+icon: i-heroicons-newspaper
+title: Product & Engineering Blog
+headline: Legit Official
+description: |
+  The official blog of Onetime Secret - Behind-the-scenes insights from the team building OneTime Secret.
+  Follow our journey as we share operational challenges, deployment stories, product updates, and technical
+  decisions. From UI improvements to infrastructure changes, we're documenting our experiences building and
+  maintaining a privacy-focused message sharing platform.
 ---
-
-
-Here's page content
