@@ -14,7 +14,7 @@ const links = [
   },
   {
     label: 'Blog',
-    to: '/posts',
+    to: '/',
   },
 ];
 </script>
