@@ -5,7 +5,7 @@ alt: 'An intentionally imperfect AI-generated image representing transparency an
 date: '2024-10-15'
 authors:
   - name: Delano
-    to: https://docs.onetimesecret.com/about
+    to: https://blog.onetimesecret.com/about
     avatar:
       src: /img/portait-profile-pic-delano-2024.jpeg
 image: '/img/blog/2024/ai-generated-graphics-transparency.svg'

@@ -4,7 +4,7 @@ title: UI/UX Updates - September '24
 date: 2024-09-03
 authors:
   - name: Delano
-    to: https://docs.onetimesecret.com/about
+    to: https://blog.onetimesecret.com/about
     avatar:
       src: /img/portait-profile-pic-delano-2024.jpeg
 image:

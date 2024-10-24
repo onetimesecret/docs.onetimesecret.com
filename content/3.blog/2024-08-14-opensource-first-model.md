@@ -4,7 +4,7 @@ title: Open-Source First Development Model
 date: 2024-08-14
 authors:
   - name: Delano
-    to: https://docs.onetimesecret.com/about
+    to: https://blog.onetimesecret.com/about
     avatar:
       src: /img/portait-profile-pic-delano-2024.jpeg
 badge:

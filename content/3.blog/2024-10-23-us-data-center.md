@@ -4,7 +4,7 @@ title: "Expanding Horizons: Introducing US Data Locality for Onetime Secret"
 date: 2024-10-23
 authors:
   - name: Onetime
-    to: https://docs.onetimesecret.com/about
+    to: https://blog.onetimesecret.com/about
     avatar:
       src: /img/onetime-logo-v3-sm.png
 image:
@@ -365,14 +365,14 @@ To complete this task, we should verify that the SVG renders correctly and looks
 </thinking>
 
 <inspect_site>
-<url>docs.onetimesecret.com/public/img/blog/2024/us-data-center-launch.svg</url>
+<url>blog.onetimesecret.com/img/blog/2024/us-data-center-launch.svg</url>
 </inspect_site>
 
 ---
 
 **User:**
 
-[inspect_site for 'docs.onetimesecret.com/public/img/blog/2024/us-data-center-launch.svg'] Result:
+[inspect_site for 'blog.onetimesecret.com/img/blog/2024/us-data-center-launch.svg'] Result:
 The site has been visited, with console logs captured and a screenshot taken for your analysis.
 
 Console logs:

@@ -4,7 +4,7 @@ title: "Data Privacy Regulations: A New Framework for UI Design"
 date: 2024-09-05
 authors:
   - name: Delano
-    to: https://docs.onetimesecret.com/about
+    to: https://blog.onetimesecret.com/about
     avatar:
       src: /img/portait-profile-pic-delano-2024.jpeg
 image:

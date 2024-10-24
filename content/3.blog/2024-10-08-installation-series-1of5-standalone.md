@@ -4,7 +4,7 @@ title: "Installing Onetime Secret: The Complete Guide (Part 1 of 5)"
 date: 2024-10-08
 authors:
   - name: Delano
-    to: https://docs.onetimesecret.com/about
+    to: https://blog.onetimesecret.com/about
     avatar:
       src: /img/portait-profile-pic-delano-2024.jpeg
 image:

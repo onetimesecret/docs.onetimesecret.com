@@ -4,7 +4,7 @@ title: Onetime Secret is Now Opensource
 date: 2013-02-04
 authors:
   - name: Delano
-    to: https://docs.onetimesecret.com/about
+    to: https://blog.onetimesecret.com/about
     avatar:
       src: /img/portait-profile-pic-delano-2024.jpeg
 badge:

@@ -4,7 +4,7 @@ title: "Onetime Secret v0.18.0: Enjoying the Vue"
 date: 2024-10-04
 authors:
   - name: Delano
-    to: https://docs.onetimesecret.com/about
+    to: https://blog.onetimesecret.com/about
     avatar:
       src: /img/portait-profile-pic-delano-2024.jpeg
 image:

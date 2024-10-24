@@ -4,7 +4,7 @@ title: Onetime Secret v0.16.0 Release - Modern UI and Enhanced Development
 date: 2024-07-29
 authors:
   - name: Delano
-    to: https://docs.onetimesecret.com/about
+    to: https://blog.onetimesecret.com/about
     avatar:
       src: /img/portait-profile-pic-delano-2024.jpeg
 image:

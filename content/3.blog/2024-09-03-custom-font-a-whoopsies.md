@@ -4,7 +4,7 @@ title: So the custom font was a whoopsies
 date: 2024-09-02
 authors:
   - name: Delano
-    to: https://docs.onetimesecret.com/about
+    to: https://blog.onetimesecret.com/about
     avatar:
       src: /img/portait-profile-pic-delano-2024.jpeg
 image:

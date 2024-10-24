@@ -4,7 +4,7 @@ title: "Denial of Service (DoS) Attack: A brief summary"
 date: 2024-09-10
 authors:
   - name: Delano
-    to: https://docs.onetimesecret.com/about
+    to: https://blog.onetimesecret.com/about
     avatar:
       src: /img/portait-profile-pic-delano-2024.jpeg
 image:

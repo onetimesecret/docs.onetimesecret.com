@@ -4,7 +4,7 @@ title: "Testing A Conversation Display Component"
 date: 2024-09-01
 authors:
   - name: Delano
-    to: https://docs.onetimesecret.com/about
+    to: https://blog.onetimesecret.com/about
     avatar:
       src: /img/portait-profile-pic-delano-2024.jpeg
 image:

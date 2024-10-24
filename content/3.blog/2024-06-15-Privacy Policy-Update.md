@@ -4,7 +4,7 @@ title: Privacy Policy Update (June 2024)
 date: 2024-06-15
 authors:
   - name: Delano
-    to: https://docs.onetimesecret.com/about
+    to: https://blog.onetimesecret.com/about
     avatar:
       src: /img/portait-profile-pic-delano-2024.jpeg
 badge:
