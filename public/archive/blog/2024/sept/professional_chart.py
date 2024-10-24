@@ -59,7 +59,7 @@ attribution = "chart.py written by Claude 3.5 Sonnet"
 plt.figtext(0.05, 0.17, libs_used, fontsize=8, ha='left', fontstyle='italic')
 plt.figtext(0.05, 0.14, attribution, fontsize=8, ha='left', fontstyle='italic', color='blue')
 
-url = "https://docs.onetimesecret.com/blog"
+url = "https://blog.onetimesecret.com/"
 plt.figtext(0.05, 0.11, f"Updates on our blog: {url}", fontsize=8, ha='left')
 
 # Save the figure
