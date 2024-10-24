@@ -6,15 +6,15 @@ const navigation = inject<Ref<NavItem[]>>('navigation', ref([]))
 const links = [
   {
     label: 'Docs',
-    to: '/docs',
+    to: 'https://docs.onetimesecret.com/',
   },
   {
     label: 'Pricing',
-    to: '/pricing',
+    to: 'https://onetimesecret.com/pricing',
   },
   {
     label: 'Blog',
-    to: '/blog',
+    to: '/',
   },
 ];
 </script>
@@ -25,7 +25,7 @@ const links = [
     <template #logo>
       <OnetimeLogo class="dark:text-white" />
       <span class="font-brand dark:text-white">Onetime Secret</span>
-      <UBadge label="Bonus Content"
+      <UBadge label="Blog"
               color="brandcomp"
               variant="subtle"
               class="mb-0.5 dark:bg-gray-700 dark:text-gray-300" />

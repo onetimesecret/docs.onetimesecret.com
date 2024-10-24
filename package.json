@@ -1,10 +1,10 @@
 {
-  "name": "OnetimeSecret-Docs",
+  "name": "onetimesecret-blog",
   "private": true,
   "type": "module",
   "scripts": {
     "build": "NODE_OPTIONS='--max-old-space-size=2048 ' npx nuxt build",
-    "dev": "NODE_OPTIONS='' npx nuxt dev --host",
+    "dev": "NODE_OPTIONS='' npx nuxt dev --host --port=8143",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",

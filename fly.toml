@@ -1,13 +1,13 @@
-# fly.toml app configuration file generated for onetime-docs on 2024-08-22T07:36:14-07:00
+# fly.toml app configuration file generated for onetime-blog on 2024-10-24T13:37:03-07:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'onetime-docs'
+app = 'onetime-blog'
 primary_region = 'ams'
 
 [build]
-dockerfile = 'Dockerfile'
+  dockerfile = 'Dockerfile.production'
 
 [http_service]
   internal_port = 3000
@@ -16,13 +16,8 @@ dockerfile = 'Dockerfile'
   auto_start_machines = true
   min_machines_running = 0
   processes = ['app']
-  # Ensure WebSocket connections are allowed
-  protocol = "tcp"
-  handlers = ["http", "ws"]
 
 [[vm]]
   memory = '2gb'
   cpu_kind = 'shared'
   cpus = 2
-
-[env]

@@ -3,8 +3,8 @@ const links = [
   {
     label: 'Resources',
     children: [
-      { label: 'Docs', to: '/docs' },
-      { label: 'Blog', to: '/blog' },
+      { label: 'Docs', to: 'https://docs.onetimesecret.com/docs' },
+      { label: 'Blog', to: '/' },
       { label: 'Issues', to: 'https://github.com/onetimesecret/onetimesecret/issues' },
       { label: 'Status', to: 'https://status.onetimesecret.com/' },
     ]
@@ -12,19 +12,19 @@ const links = [
   {
     label: 'Features',
     children: [
-      { label: 'Custom Domains', to: '/docs/custom-links' },
-      { label: 'Single-use links', to: '/docs/secret-links' },
-      { label: 'API', to: '/docs/rest-api' },
+      { label: 'Custom Domains', to: 'https://docs.onetimesecret.com/docs/custom-links' },
+      { label: 'Single-use links', to: 'https://docs.onetimesecret.com//docs/secret-links' },
+      { label: 'API', to: 'https://docs.onetimesecret.com//docs/rest-api' },
       { label: 'Docker', to: 'https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret' },
     ]
   },
   {
     label: 'Company',
     children: [
-      { label: 'About', to: '/about' },
-      { label: 'Pricing', to: '/pricing' },
+      { label: 'About', to: 'https://docs.onetimesecret.com/about' },
+      { label: 'Pricing', to: 'https://onetimesecret.com/pricing' },
       { label: 'Sponsors', to: 'https://github.com/sponsors/onetimesecret' },
-      { label: 'Careers', to: '/careers' },
+      { label: 'Careers', to: 'https://docs.onetimesecret.com/careers' },
     ]
   }
 ]
@@ -63,7 +63,7 @@ const links = [
       <UColorModeButton size="sm"
                         class="mr-2" />
 
-      <UButton to="https://github.com/onetimesecret/docs.onetimesecret.com"
+      <UButton to="https://github.com/onetimesecret/blog.onetimesecret.com"
                target="_blank"
                icon="i-simple-icons-github"
                aria-label="GitHub"

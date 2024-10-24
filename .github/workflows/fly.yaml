@@ -1,5 +1,5 @@
 
-name: Deploy Nuxt Application to the Cloud Realm
+name: Deploy to the Cloud Realm
 
 on:
   # Allows the workflow to be manually triggered from the Grand UI of Actions
