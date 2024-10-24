@@ -4,7 +4,7 @@ const links = [
     label: 'Resources',
     children: [
       { label: 'Docs', to: '/docs' },
-      { label: 'Blog', to: '/blog' },
+      { label: 'Blog', to: 'https://blog.onetimesecret.com' },
       { label: 'Issues', to: 'https://github.com/onetimesecret/onetimesecret/issues' },
       { label: 'Status', to: 'https://status.onetimesecret.com/' },
     ]
@@ -22,7 +22,7 @@ const links = [
     label: 'Company',
     children: [
       { label: 'About', to: '/about' },
-      { label: 'Pricing', to: '/pricing' },
+      { label: 'Pricing', to: 'https://onetimesecret.com/pricing' },
       { label: 'Sponsors', to: 'https://github.com/sponsors/onetimesecret' },
       { label: 'Careers', to: '/careers' },
     ]

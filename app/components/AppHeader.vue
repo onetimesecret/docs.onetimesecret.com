@@ -10,11 +10,11 @@ const links = [
   },
   {
     label: 'Pricing',
-    to: '/pricing',
+    to: 'https://onetimesecret.com/pricing',
   },
   {
     label: 'Blog',
-    to: '/blog',
+    to: 'https://blog.onetimesecret.com/',
   },
 ];
 </script>
