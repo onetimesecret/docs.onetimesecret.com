@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import type { BlogPost } from '~/types';
 
-const { data: page } = await useAsyncData('blog', () => queryContent('/blog').findOne())
+const { data: page } = await useAsyncData('posts', () => queryContent('/posts').findOne())
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
 }
 
-const { data: posts } = await useAsyncData('posts', () => queryContent<BlogPost>('/blog')
+const { data: posts } = await useAsyncData('posts', () => queryContent<BlogPost>('/posts')
   .where({ _extension: 'md' })
   .sort({ date: -1 })
   .find())

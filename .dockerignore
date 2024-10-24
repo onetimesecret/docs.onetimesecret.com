@@ -1,0 +1,44 @@
+# flyctl launch added from .gitignore
+# Nuxt dev/build outputs
+**/.output
+**/.data
+**/.nuxt
+**/.nitro
+**/.cache
+**/dist
+**/data
+
+# Node dependencies
+**/node_modules
+
+# Logs
+**/logs
+**/*.log
+
+# Misc
+**/.DS_Store
+**/.fleet
+**/.idea
+**/.prompts
+**/.crossnote
+**/tmp
+
+# Local env files
+**/.env
+**/.env.*
+!**/.env.example
+
+# VSC
+**/.history
+
+# Docker
+**/Dockerfile.*
+!**/Dockerfile.example
+
+# flyctl launch added from node_modules/.pnpm/nuxt-content-assets@1.4.4_@nuxt+content@2.13.4_ioredis@5.4.1_magicast@0.3.5_nuxt@3.13.2_@parc_txr7om7mqnwvz4grbloi3sid7u/node_modules/nuxt-content-assets/cache/public/.gitignore
+node_modules/.pnpm/nuxt-content-assets@1.4.4_@nuxt+content@2.13.4_ioredis@5.4.1_magicast@0.3.5_nuxt@3.13.2_@parc_txr7om7mqnwvz4grbloi3sid7u/node_modules/nuxt-content-assets/cache/public/**/*
+!node_modules/.pnpm/nuxt-content-assets@1.4.4_@nuxt+content@2.13.4_ioredis@5.4.1_magicast@0.3.5_nuxt@3.13.2_@parc_txr7om7mqnwvz4grbloi3sid7u/node_modules/nuxt-content-assets/cache/public/**/.gitignore
+
+# flyctl launch added from node_modules/.pnpm/tailwindcss@3.4.13/node_modules/tailwindcss/stubs/.gitignore
+!node_modules/.pnpm/tailwindcss@3.4.13/node_modules/tailwindcss/stubs/**/*
+fly.toml

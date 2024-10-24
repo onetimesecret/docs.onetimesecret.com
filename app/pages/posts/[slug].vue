@@ -9,7 +9,7 @@ if (!post.value) {
   throw createError({ statusCode: 404, statusMessage: 'Post not found', fatal: true })
 }
 
-const { data: surround } = await useAsyncData(`${route.path}-surround`, () => queryContent('/blog')
+const { data: surround } = await useAsyncData(`${route.path}-surround`, () => queryContent('/posts')
   .where({ _extension: 'md' })
   .without(['body', 'excerpt'])
   .sort({ date: -1 })
@@ -46,7 +46,7 @@ if (post.value.image?.src) {
 <template>
   <UContainer v-if="post" class="py-8 sm:py-16">
     <div class="mb-8">
-      <NuxtLink to="/blog" class="text-sm font-medium text-primary-600 hover:text-primary-500">
+      <NuxtLink to="/posts" class="text-sm font-medium text-primary-600 hover:text-primary-500">
         <svg class="inline-block w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
         </svg>
