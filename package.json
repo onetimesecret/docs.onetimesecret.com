@@ -21,7 +21,7 @@
     "nuxt-og-image": "3.0.6",
     "nuxt-security": "2.0.0",
     "@nuxt/eslint": "^0.6.0",
-    "shiki": "^1.22.0",
+    "shiki": "^1.22.2",
     "he": "^1.2.0"
   },
   "devDependencies": {
