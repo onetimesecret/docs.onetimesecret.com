@@ -20,7 +20,7 @@
     "nuxt": "^3.13.2",
     "nuxt-og-image": "3.0.6",
     "nuxt-security": "2.0.0",
-    "@nuxt/eslint": "^0.6.0",
+    "@nuxt/eslint": "^0.6.1",
     "shiki": "^1.22.0",
     "he": "^1.2.0"
   },
@@ -31,7 +31,7 @@
     "@iconify-json/simple-icons": "^1.2.9",
     "@iconify-json/vscode-icons": "^1.2.2",
     "@iconify/vue": "4.1.2",
-    "@nuxt/eslint": "^0.6.0",
+    "@nuxt/eslint": "^0.6.1",
     "@nuxthq/studio": "^2.1.1",
     "eslint": "^9.13.0",
     "nuxt-content-assets": "^1.4.4",
