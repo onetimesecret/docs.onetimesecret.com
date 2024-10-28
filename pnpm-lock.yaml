@@ -61,8 +61,8 @@ importers:
         specifier: 4.1.2
         version: 4.1.2(vue@3.5.12(typescript@5.6.3))
       '@nuxthq/studio':
-        specifier: ^2.1.1
-        version: 2.1.1(magicast@0.3.5)(rollup@4.24.0)
+        specifier: ^2.2.0
+        version: 2.2.0(magicast@0.3.5)(rollup@4.24.0)
       eslint:
         specifier: ^9.13.0
         version: 9.13.0(jiti@2.3.3)
@@ -965,8 +965,8 @@ packages:
     peerDependencies:
       vue: ^3.3.4
 
-  '@nuxthq/studio@2.1.1':
-    resolution: {integrity: sha512-NQMf1Howrr5D7fDRMSpYyjQSi3/RzUT91KfcLxGz3Q2iAq0y94GSlPCpYMqYId9CgcfG2OIIDm40/dFusQZIvQ==}
+  '@nuxthq/studio@2.2.0':
+    resolution: {integrity: sha512-i3yKDh/OpSGgYmSojErJ1e64quqtmsKbUqNlBcrdQkBDedSN6GGmNH0WfpjItqh8N3wiwZIuDC5+933jAMFttw==}
 
   '@nuxtjs/color-mode@3.5.1':
     resolution: {integrity: sha512-GRHF3WUwX6fXIiRVlngNq1nVDwrVuP6dWX1DRmox3QolzX0eH1oJEcFr/lAm1nkT71JVGb8mszho9w+yHJbePw==}
@@ -6580,7 +6580,7 @@ snapshots:
       - vue-tsc
       - webpack-sources
 
-  '@nuxthq/studio@2.1.1(magicast@0.3.5)(rollup@4.24.0)':
+  '@nuxthq/studio@2.2.0(magicast@0.3.5)(rollup@4.24.0)':
     dependencies:
       '@nuxt/kit': 3.13.2(magicast@0.3.5)(rollup@4.24.0)
       defu: 6.1.4
