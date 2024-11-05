@@ -1,22 +1,42 @@
 ---
 title: Minimal Data Collection
-description: Our commitment to collecting only what is absolutely necessary
-icon: minimize
+description: Our commitment to collecting only the essential data required to provide our service
 ---
 
-# Minimal Data Collection
+# Minimal Data: Less is More
 
-We believe that the best way to protect user data is to not collect it in the first place.
+In an era of data proliferation, we take a radical approach: collect only what is absolutely necessary. Our minimal data collection principle is a fundamental commitment to user privacy and digital minimalism.
+
+## Why Minimal Data Matters
+
+### 1. Reducing Risk
+Every piece of data collected is a potential vulnerability. By minimizing data collection, we dramatically reduce the risk of data breaches and unauthorized access.
+
+### 2. Respecting User Privacy
+We believe your data is yours. We don't collect, store, or process any information beyond what is essential to provide our secure secret-sharing service.
+
+### 3. Transparent Data Practices
+We document every data point we collect, why we collect it, and how long we retain it. No hidden data collection, no surprises.
 
 ## Our Data Minimization Strategy
 
-- Collect only the data absolutely required for service functionality
-- Automatically delete data as soon as it's no longer needed
-- Provide clear opt-out and data deletion mechanisms
+### Absolute Necessity
+- We only collect data directly required for the core functionality of our service
+- Temporary data is immediately deleted after its purpose is served
+- We never sell, rent, or monetize user data
 
-## Practical Implementation
+### Ephemeral by Design
+- Secrets are designed to be temporary
+- Metadata is kept to an absolute minimum
+- User interactions are not tracked beyond service requirements
 
-By adhering to strict data minimization principles, we ensure that:
-- We never store more information than absolutely necessary
-- User data is ephemeral and transient by design
-- Users have complete control over their data lifecycle
+### User Control
+- Users have complete visibility into what data is collected
+- Easy opt-out and data deletion mechanisms
+- No tracking, no profiling, no compromise
+
+## Continuous Improvement
+
+We continuously review and reduce our data collection practices. Our goal is to provide a robust service while maintaining the highest standards of privacy.
+
+**Explore our other principles to understand our holistic approach to privacy and security.**
