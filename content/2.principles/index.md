@@ -6,6 +6,7 @@ description: The core values and guiding principles that drive our approach to p
 # Principles
 
 Welcome to Onetime Secret's guiding principles. These foundational documents explain our approach to:
+
 - Privacy and data minimization
 - User communication and transparency
 - Service reliability and trust
@@ -13,13 +14,14 @@ Welcome to Onetime Secret's guiding principles. These foundational documents exp
 
 ## Core Documents
 
-- [Privacy First](/principles/privacy-first) - Our approach to protecting user privacy through deliberate design choices
-- [Communication Philosophy](/principles/communication) - Why we limit email communication to only what's necessary
-- [Building Trust](/principles/trust) - How we earn and maintain user trust through actions, not words
+- **[Privacy First](/principles/privacy-first)**: Our approach to protecting user privacy through deliberate design choices
+- **[Communication Philosophy](/principles/communication)**: Why we limit email communication to only what's necessary
+- **[Building Trust](/principles/trust)**: How we earn and maintain user trust through actions, not words
 
 ## Why Principles Matter
 
 At Onetime Secret, our principles guide every decision we make. They help us:
+
 - Stay focused on what matters
 - Make consistent choices
 - Build lasting trust
