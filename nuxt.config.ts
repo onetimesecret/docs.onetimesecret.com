@@ -4,13 +4,15 @@
 export default defineNuxtConfig({
   extends: ['@nuxt/ui-pro'],
 
+  builder: 'vite',
+
   modules: [
     '@nuxt/content',
     '@nuxt/eslint',
     '@nuxt/image',
     '@nuxt/ui',
     '@vueuse/nuxt',
-    'nuxt-og-image',
+    //'nuxt-og-image',
     'nuxt-security',
   ],
   ui: {
