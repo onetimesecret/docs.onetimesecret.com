@@ -24,6 +24,7 @@ const links = [
       { label: 'About', to: '/about' },
       { label: 'Pricing', to: 'https://onetimesecret.com/pricing' },
       { label: 'Sponsors', to: 'https://github.com/sponsors/onetimesecret' },
+      { label: 'Principles', to: '/principles' },
       { label: 'Careers', to: '/careers' },
     ]
   }
