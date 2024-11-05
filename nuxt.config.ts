@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/ui',
     '@vueuse/nuxt',
-    //'nuxt-og-image',
+    'nuxt-og-image',
     'nuxt-security',
   ],
   ui: {

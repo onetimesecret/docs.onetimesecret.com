@@ -1,41 +1,79 @@
 <template>
-  <div class="principles-page">
-    <div class="max-w-6xl mx-auto flex">
-      <!-- Sidebar Navigation -->
-      <div class="w-64 pr-8 sticky top-0 h-screen overflow-y-auto">
-        <nav>
-          <h2 class="text-xl font-bold mb-4">Our Principles</h2>
-          <ul class="space-y-2">
-            <li v-for="principle in principles" :key="principle._path">
-              <NuxtLink
-                :to="principle._path"
-                class="block py-2 px-3 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                :class="{ 'bg-blue-50 dark:bg-blue-900': currentPath === principle._path }"
-              >
-                {{ principle.title }}
-              </NuxtLink>
-            </li>
-          </ul>
-        </nav>
-      </div>
+  <div class="docs-page">
+    <UContainer class="max-w-8xl mx-auto">
+      <div class="flex">
+        <!-- Left Sidebar -->
+        <aside class="w-64 flex-none hidden lg:block pr-8">
+          <div class="sticky top-24 pt-6">
+            <nav class="space-y-2">
+              <h2 class="font-semibold text-lg mb-4">Our Principles</h2>
+              <!-- Replace UVerticalNavigation with simpler navigation -->
+              <ul class="space-y-2">
+                <li v-for="principle in principles" :key="principle._path">
+                  <NuxtLink
+                    :to="principle._path"
+                    class="block px-3 py-2 rounded-md text-sm"
+                    :class="{
+                      'bg-gray-100 dark:bg-gray-800 text-brand-500 dark:text-brand-400': currentPath === principle._path,
+                      'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800': currentPath !== principle._path
+                    }"
+                  >
+                    {{ principle.title }}
+                  </NuxtLink>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </aside>
 
-      <!-- Main Content -->
-      <div class="flex-1 pl-8 border-l dark:border-gray-700">
-        <div v-if="doc" class="prose dark:prose-invert max-w-4xl">
-          <h1 class="text-3xl font-bold mb-6">{{ doc.title }}</h1>
-          <ContentRenderer :value="doc" />
-        </div>
-        <div v-else class="text-center py-16">
-          <h1 class="text-2xl font-bold">Principle Not Found</h1>
-          <p class="mt-4">The requested principle could not be located.</p>
-          <NuxtLink to="/principles" class="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded">
-            Back to Principles
-          </NuxtLink>
-        </div>
+
+        <!-- Main Content -->
+        <main class="flex-1 min-w-0 pl-8 border-l border-gray-200 dark:border-gray-800">
+          <div v-if="doc" class="pt-6">
+            <!-- Page Header -->
+            <div class="mb-8">
+              <h1 class="text-3xl font-semibold">{{ doc.title }}</h1>
+              <p v-if="doc.description" class="mt-2 text-gray-500 dark:text-gray-400">
+                {{ doc.description }}
+              </p>
+            </div>
+
+            <!-- Page Content -->
+            <div class="prose dark:prose-invert max-w-none">
+              <ContentRenderer :value="doc" />
+            </div>
+          </div>
+          <UAlert
+            v-else
+            title="Principle Not Found"
+            description="The requested principle could not be located."
+            icon="i-heroicons-exclamation-triangle"
+            color="red"
+          >
+            <template #actions>
+              <UButton
+                to="/principles"
+                icon="i-heroicons-arrow-left"
+                color="white"
+                variant="solid"
+              >
+              Back to Principles
+              </UButton>
+            </template>
+
+          </UAlert>
+        </main>
       </div>
-    </div>
+    </UContainer>
   </div>
 </template>
+
+<style scoped>
+.docs-page {
+  padding-top: 1rem;
+  min-height: calc(100vh - var(--header-height));
+}
+</style>
 
 <script setup>
 definePageMeta({
@@ -45,10 +83,10 @@ definePageMeta({
 const route = useRoute()
 const currentPath = computed(() => route.path)
 
-// Normalize the slug to match content path
 const normalizedSlug = route.params.slug.toString().replace(/\/$/, '')
 
-// Fetch all principles for sidebar
+
+// Modify the principles query to include sorting if needed
 const { data: principles } = await useAsyncData('principles-list', () =>
   queryContent('/principles')
     .where({
@@ -58,11 +96,11 @@ const { data: principles } = await useAsyncData('principles-list', () =>
         $contains: '/principles/'
       }
     })
+    .sort({ title: 1 }) // Optional: Sort by title
     .without(['body', 'excerpt'])
     .find()
 )
 
-// Fetch the specific principle content
 const { data: doc } = await useAsyncData(`principle-${normalizedSlug}`, async () => {
   try {
     return await queryContent('/principles')
@@ -78,7 +116,14 @@ const { data: doc } = await useAsyncData(`principle-${normalizedSlug}`, async ()
   }
 })
 
-// If no document is found, throw a 404 error
+// SEO
+useSeoMeta({
+  title: doc.value?.title,
+  ogTitle: doc.value?.title,
+  description: doc.value?.description,
+  ogDescription: doc.value?.description
+})
+
 if (!doc.value) {
   throw createError({
     statusCode: 404,
