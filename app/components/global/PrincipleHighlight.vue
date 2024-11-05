@@ -3,7 +3,7 @@
     <div class="flex items-start space-x-4">
       <div class="mt-1">
         <slot name="icon">
-          <Shield class="w-6 h-6 text-orange-600" />
+          <Icon name="ph:shield-check-bold" class="w-6 h-6 text-orange-600" />
         </slot>
       </div>
 
@@ -25,8 +25,6 @@
 </template>
 
 <script setup lang="ts">
-import { Shield } from 'lucide-vue-next'
-
 defineProps<{
   title?: string
 }>()
