@@ -6,7 +6,7 @@
         <aside class="w-64 flex-none hidden lg:block pr-8">
           <div class="sticky top-24 pt-6">
             <nav class="space-y-2">
-              <h2 class="font-semibold text-lg mb-4">Our Principles</h2>
+              <h2 class="font-semibold text-lg mb-4">Our Commitments</h2>
               <!-- Replace UVerticalNavigation with simpler navigation -->
               <ul class="space-y-2">
                 <li v-for="principle in principles" :key="principle._path">
@@ -96,7 +96,7 @@ const { data: principles } = await useAsyncData('principles-list', () =>
         $contains: '/principles/'
       }
     })
-    .sort({ title: 1 }) // Optional: Sort by title
+    //.sort({ title: 1 }) // Optional: Sort by title
     .without(['body', 'excerpt'])
     .find()
 )

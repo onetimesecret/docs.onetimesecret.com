@@ -6,7 +6,7 @@
         <aside class="w-64 flex-none hidden lg:block pr-8">
           <div class="sticky top-24 pt-6">
             <nav class="space-y-2">
-              <h2 class="font-semibold text-lg mb-4">Our Principles</h2>
+              <h2 class="font-semibold text-lg mb-4">Our Commitments</h2>
               <!-- Replace UVerticalNavigation with simpler navigation -->
               <ul class="space-y-2">
                 <li v-for="principle in principles" :key="principle._path">
@@ -40,25 +40,6 @@
             <div class="prose dark:prose-invert max-w-none">
               <ContentRenderer :value="page" />
 
-              <!-- Core Documents Section -->
-              <div class="not-prose mt-12">
-                <UDivider class="my-8" />
-
-                <h2 class="text-xl font-semibold mb-6">Core Documents</h2>
-                <UCard
-                  v-for="principle in principles"
-                  :key="principle._path"
-                  :to="principle._path"
-                  class="mb-4 hover:shadow-lg transition-shadow duration-200"
-                >
-                  <template #header>
-                    <h3 class="text-lg font-medium">{{ principle.title }}</h3>
-                  </template>
-                  <p class="text-sm text-gray-500 dark:text-gray-400">
-                    {{ principle.description }}
-                  </p>
-                </UCard>
-              </div>
             </div>
           </div>
         </main>
@@ -86,7 +67,7 @@ const { data: principles } = await useAsyncData('principles-list', () =>
         $contains: '/principles/'
       }
     })
-    .sort({ title: 1 }) // Optional: Sort by title
+    //.sort({ title: 1 }) // Optional: Sort by title
     .without(['body', 'excerpt'])
     .find()
 )

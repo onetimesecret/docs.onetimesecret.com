@@ -13,11 +13,13 @@ Welcome to Onetime Secret's guiding principles. These foundational documents exp
 - Service reliability and trust
 - Operational practices
 
-## Core Documents
+## Our Commitments
 
 - **[Privacy First](/principles/privacy-first)**: Our approach to protecting user privacy through deliberate design choices
-- **[Communication Philosophy](/principles/communication)**: Why we limit email communication to only what's necessary
 - **[Building Trust](/principles/trust)**: How we earn and maintain user trust through actions, not words
+- **[Communication Philosophy](/principles/communication)**: Why we limit email communication to only what's necessary
+- **[Data Minimization](/principles/data-minimization)**: Our commitment to collecting and retaining only the most essential data
+
 
 ## Why Principles Matter
 
