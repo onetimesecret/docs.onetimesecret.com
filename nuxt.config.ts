@@ -4,6 +4,8 @@
 export default defineNuxtConfig({
   extends: ['@nuxt/ui-pro'],
 
+  builder: 'vite',
+
   modules: [
     '@nuxt/content',
     '@nuxt/eslint',

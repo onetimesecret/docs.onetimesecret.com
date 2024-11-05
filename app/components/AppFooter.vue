@@ -12,7 +12,7 @@ const links = [
   {
     label: 'Features',
     children: [
-      { label: 'Custom Domains', to: '/docs/custom-links' },
+      { label: 'Custom Domains', to: '/docs/custom-domains' },
       { label: 'Single-use links', to: '/docs/secret-links' },
       { label: 'API', to: '/docs/rest-api' },
       { label: 'Docker', to: 'https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret' },
@@ -24,6 +24,7 @@ const links = [
       { label: 'About', to: '/about' },
       { label: 'Pricing', to: 'https://onetimesecret.com/pricing' },
       { label: 'Sponsors', to: 'https://github.com/sponsors/onetimesecret' },
+      { label: 'Principles', to: '/principles' },
       { label: 'Careers', to: '/careers' },
     ]
   }
