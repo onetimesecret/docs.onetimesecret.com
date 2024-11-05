@@ -1,3 +1,5 @@
+
+---
 # Principles
 
 Welcome to Onetime Secret's guiding principles. These foundational documents explain our approach to privacy, transparency, and trust.
