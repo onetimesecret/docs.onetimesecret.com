@@ -6,10 +6,11 @@ hero:
   description: Onetime Secret offers a secure, ephemeral way to share sensitive information in a digital world.
   headline:
     label: Hello there! My instructions say to write 'Beta' in this spot.
+    to: https://blog.onetimesecret.com/posts/2024-10-15-ai-generated-graphics-transparency
     icon: i-clarity:beta-solid
   links:
     - label: Get started
-      to: 'https://onetimesecret.com/signup'
+      to: /docs/introduction
       size: xl
       color: black
       icon: i-heroicons-arrow-right-20-solid
