@@ -12,10 +12,7 @@ image:
 badge:
   label: Guide
 readingTime: 15
-_draft: false
 ---
-
-
 
 
 Welcome to our comprehensive series on setting up and installing Onetime Secret. In this first installment, we'll walk you through the process of installing Onetime Secret as a standalone web application using the latest methods and best practices. Whether you're a seasoned sysadmin or just getting started with self-hosting, this guide will help you get Onetime Secret up and running smoothly.
