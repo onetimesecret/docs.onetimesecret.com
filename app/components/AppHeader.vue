@@ -25,7 +25,7 @@ const links = [
     <template #logo>
       <OnetimeLogo class="dark:text-white" />
       <span class="font-brand dark:text-white">Onetime Secret</span>
-      <UBadge label="Bonus Content"
+      <UBadge label="Docs"
               color="brandcomp"
               variant="subtle"
               class="mb-0.5 dark:bg-gray-700 dark:text-gray-300" />
