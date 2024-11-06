@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import type { BlogPost } from '~/types';
+import { format } from 'date-fns'
+import { enUS } from 'date-fns/locale'
+
 
 const { data: page } = await useAsyncData('homepage', () => queryContent('/').findOne());
 if (!page.value) {
@@ -25,8 +28,15 @@ defineOgImage({
 });
 
 const formatDate = (date) => {
-  return new Date(date).toLocaleDateString('en', { year: 'numeric', month: 'short', day: 'numeric' });
+  const parsedDate = new Date(date);  //.toLocaleDateString('en', { year: 'numeric', month: 'short', day: 'numeric' });
+  const dateParts = date.split('-');
+  const year = parseInt(dateParts[0], 10);
+  const month = parseInt(dateParts[1], 10) - 1; // Months are 0-based in JavaScript
+  const day = parseInt(dateParts[2], 10);
+  const dateOut = new Date(year, month, day);
+  return format(dateOut, 'MMMM d, yyyy', { locale: enUS });
 };
+
 </script>
 
 <template>

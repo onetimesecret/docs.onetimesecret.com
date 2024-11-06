@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { joinURL, withoutTrailingSlash } from 'ufo';
 import type { BlogPost } from '~/types';
+import { format } from 'date-fns'
+import { enUS } from 'date-fns/locale'
+
+
 
 const route = useRoute()
 
@@ -19,6 +23,31 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => qu
 const title = post.value.head?.title || post.value.title
 const description = post.value.head?.description || post.value.description
 
+// Computed property for formatted date
+const formattedDate = computed(() => {
+  if (!post.value.date) {
+    return 'No date';
+  }
+  const dateParts = post.value.date.split('-');
+  const year = parseInt(dateParts[0], 10);
+  const month = parseInt(dateParts[1], 10) - 1; // Months are 0-based in JavaScript
+  const day = parseInt(dateParts[2], 10);
+  const date = new Date(year, month, day);
+
+  //if (isNaN(date.getTime())) {
+  //  return 'Invalid date';
+  //}
+
+  return format(date, 'MMMM d, yyyy', { locale: enUS });
+});
+
+// Alternative formats
+//const dateFormats = computed(() => ({
+//  short: format(parseISO(post.date), 'MMM d, yyyy'),
+//  iso: format(parseISO(post.date), 'yyyy-MM-dd'),
+//  full: format(parseISO(post.date), 'EEEE, MMMM d, yyyy')
+//}))
+
 useSeoMeta({
   title,
   ogTitle: title,
@@ -35,7 +64,7 @@ if (post.value.image?.src) {
   })
 } else {
   defineOgImage({
-    component: 'Saas',
+    component: 'Onetime Secret',
     title,
     description,
     headline: 'Blog'
@@ -64,7 +93,7 @@ if (post.value.image?.src) {
           {{ post.title }}
         </h1>
         <div class="flex items-center space-x-4 text-sm text-gray-500 dark:text-gray-400">
-          <time>{{ new Date(post.date).toLocaleDateString('en', { year: 'numeric', month: 'long', day: 'numeric' }) }}</time>
+          <time>{{ formattedDate }}</time>
           <span>&middot;</span>
           <span>{{ post.readingTime }} min read</span>
         </div>
