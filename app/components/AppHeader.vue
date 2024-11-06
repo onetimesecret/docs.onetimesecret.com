@@ -9,6 +9,10 @@ const links = [
     to: 'https://docs.onetimesecret.com/',
   },
   {
+    label: 'Principles',
+    to: 'https://docs.onetimesecret.com/principles/',
+  },
+  {
     label: 'Pricing',
     to: 'https://onetimesecret.com/pricing',
   },
@@ -23,7 +27,7 @@ const links = [
   <UHeader :links="links"
            class="dark:bg-gray-800">
     <template #logo>
-      <OnetimeLogo class="dark:text-white" />
+      <OnetimeLogo class="dark:text-white rounded-md" />
       <span class="font-brand dark:text-white">Onetime Secret</span>
       <UBadge label="Blog"
               color="brandcomp"
@@ -33,11 +37,6 @@ const links = [
 
     <template #right>
       <nav class="flex items-center space-x-4">
-        <a href="https://onetimesecret.com/"
-          class="text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 transition-colors duration-150 ease-in-out">
-          <span class="hidden xl:inline">Back to </span>onetimesecret.com
-          <NewWindowIcon />
-        </a>
         <a href="https://onetimesecret.com/signin"
           class="hidden lg:inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-gray-700 bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-colors duration-150 ease-in-out">
           Sign in
