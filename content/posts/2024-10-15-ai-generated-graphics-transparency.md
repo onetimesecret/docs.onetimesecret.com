@@ -67,7 +67,8 @@ At Onetime Secret, we're not just about providing a service; we're about fosteri
 
 ---
 
-How do you feel about our approach to AI-generated graphics? We'd love to hear your thoughts. Share your opinion in the comments below or reach out to us directly. Your feedback helps us continue to innovate and improve, not just in our graphics, but in everything we do at Onetime Secret.
+How do you feel about our approach to AI-generated graphics? [Send us feedback](https://onetimesecret.com/feedback). Your feedback helps us continue to innovate and improve, not just in our graphics, but in everything we do at Onetime Secret.
+
 
 ## Meta content: About the post image
 
