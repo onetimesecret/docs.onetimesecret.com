@@ -4,6 +4,14 @@
 export default defineNuxtConfig({
   extends: ['@nuxt/ui-pro'],
 
+  buildModules: [
+    ['@nuxtjs/date-fns', { /* module options */ }],
+  ],
+  experimental: {
+    // Possible fix for logging errors
+    // https://github.com/nuxt/nuxt/issues/20889
+    renderJsonPayloads: false
+  },
   modules: [
     '@nuxt/content',
     '@nuxt/eslint',
@@ -19,7 +27,7 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       concurrency: 250,
-      interval: 100,
+      interval: 1200,
     },
     publicAssets: [
       {
@@ -34,12 +42,21 @@ export default defineNuxtConfig({
       theme: 'one-dark-pro',
       themes: ['houston', 'aurora-x'],
       langs: ['javascript', 'typescript', 'python', 'perl', 'ruby', 'go', 'powershell', 'csharp', 'bash', 'html', 'css', 'markdown', 'xml']
-    }
+    },
+    timezone: 'UTC',
   },
   image: {
-  //  dir: 'assets/img'
+    // Add SVG to the format list if not already present
+    format: ['webp', 'jpg', 'png', 'svg'],
+    // Configure IPX to handle SVGs
+    provider: 'ipx',
+    ipx: {
+      // Optional: Add specific SVG optimization options
+      svgo: {
+        enable: true
+      }
+    }
   },
-
   /**
    * Configuration for Nuxt UI Pro.
    *
@@ -70,6 +87,10 @@ export default defineNuxtConfig({
   ],
   vite: {
     assetsInclude: ['@/assets/css/fonts/**/*.woff', '@/**/**/*.woff2'],
+
+  },
+  env: {
+    TZ: 'UTC' // or your desired time zone
   },
   hooks: {
     // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)
