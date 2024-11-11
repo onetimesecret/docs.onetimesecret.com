@@ -36,8 +36,8 @@ importers:
         specifier: ^3.14.0
         version: 3.14.0(@parcel/watcher@2.5.0)(@types/node@22.9.0)(eslint@9.14.0(jiti@2.4.0))(ioredis@5.4.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.24.4)(terser@5.36.0)(typescript@5.6.3)(vite@5.4.10(@types/node@22.9.0)(terser@5.36.0))(vue-tsc@2.1.10(typescript@5.6.3))(webpack-sources@3.2.3)
       nuxt-og-image:
-        specifier: 3.0.6
-        version: 3.0.6(magicast@0.3.5)(rollup@4.24.4)(vite@5.4.10(@types/node@22.9.0)(terser@5.36.0))(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)
+        specifier: 3.0.8
+        version: 3.0.8(magicast@0.3.5)(rollup@4.24.4)(vite@5.4.10(@types/node@22.9.0)(terser@5.36.0))(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)
       nuxt-security:
         specifier: 2.0.0
         version: 2.0.0(magicast@0.3.5)(rollup@4.24.4)(webpack-sources@3.2.3)
@@ -4309,8 +4309,8 @@ packages:
   nuxt-csurf@1.6.5:
     resolution: {integrity: sha512-/DMNTON8LIVhntamKbBmAuM879B0QnuSJa7ZAkmkZe+21m+1QGcjVUxtSkizaM48NUvkuAGYOG0ncn+kqEgrzw==}
 
-  nuxt-og-image@3.0.6:
-    resolution: {integrity: sha512-9Z/aTH7Sb6/BtpmhntH0VYeww5i96tq1rkKHRhIi2n1dIVfOTFYQHM/7hFkktvVsfrHPlZmB0ZdLTaQbbDDQSA==}
+  nuxt-og-image@3.0.8:
+    resolution: {integrity: sha512-eoxSqBylFQ8F77dzmietaUKR3w80JAG0dZtWjVA+eelIqfHSPA2fQ9pXhcICYPeh+kyH2n//P+TRkz1MSGl4Ug==}
     engines: {node: '>=18.0.0'}
 
   nuxt-security@2.0.0:
@@ -11461,7 +11461,7 @@ snapshots:
       - supports-color
       - webpack-sources
 
-  nuxt-og-image@3.0.6(magicast@0.3.5)(rollup@4.24.4)(vite@5.4.10(@types/node@22.9.0)(terser@5.36.0))(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3):
+  nuxt-og-image@3.0.8(magicast@0.3.5)(rollup@4.24.4)(vite@5.4.10(@types/node@22.9.0)(terser@5.36.0))(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3):
     dependencies:
       '@nuxt/devtools-kit': 1.6.0(magicast@0.3.5)(rollup@4.24.4)(vite@5.4.10(@types/node@22.9.0)(terser@5.36.0))(webpack-sources@3.2.3)
       '@nuxt/kit': 3.14.0(magicast@0.3.5)(rollup@4.24.4)(webpack-sources@3.2.3)
