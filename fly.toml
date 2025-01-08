@@ -10,19 +10,24 @@ primary_region = 'ams'
 dockerfile = 'Dockerfile'
 
 [http_service]
-  internal_port = 3000
-  force_https = true
-  auto_stop_machines = 'suspend'
-  auto_start_machines = true
-  min_machines_running = 0
-  processes = ['app']
-  # Ensure WebSocket connections are allowed
-  protocol = "tcp"
-  handlers = ["http", "ws"]
+internal_port = 3000
+force_https = true
+auto_stop_machines = 'suspend'
+auto_start_machines = true
+min_machines_running = 0
+processes = ['app']
+# Ensure WebSocket connections are allowed
+protocol = "tcp"
+handlers = ["http", "ws"]
+
+[[services.ports]]
+handlers = ["http"]
+port = 80
+force_https = true
 
 [[vm]]
-  memory = '2gb'
-  cpu_kind = 'shared'
-  cpus = 2
+memory = '2gb'
+cpu_kind = 'shared'
+cpus = 2
 
 [env]
