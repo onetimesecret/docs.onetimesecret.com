@@ -26,6 +26,7 @@ tmp
 .env
 .env.*
 !.env.example
+.ruby-version
 
 # VSC
 .history
@@ -33,3 +34,7 @@ tmp
 # Docker
 Dockerfile.*
 !Dockerfile.example
+
+# Jupyter
+.ipynb_checkpoints
+*.ipynb
