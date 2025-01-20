@@ -21,7 +21,7 @@
     "he": "^1.2.0",
     "lucide-vue-next": "^0.454.0",
     "nuxt": "^3.14.0",
-    "nuxt-og-image": "3.0.6",
+    "nuxt-og-image": "4.1.1",
     "nuxt-security": "2.0.0",
     "shiki": "^1.22.2"
   },
