@@ -1,4 +1,7 @@
 // The rest of your Nuxt config...
+
+import { resolve } from "path";
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   extends: ["@nuxt/ui-pro"],
@@ -14,6 +17,9 @@ export default defineNuxtConfig({
     "nuxt-og-image",
     "nuxt-security",
   ],
+
+  experimental: { appManifest: false },
+
   ui: {},
   nitro: {
     prerender: {
@@ -22,7 +28,7 @@ export default defineNuxtConfig({
     },
     publicAssets: [
       {
-        dir: "public", // This will include the entire public directory
+        dir: resolve(__dirname, "public"),
         maxAge: 60 * 60 * 24 * 7, // Cache for 1 week (adjust as needed)
       },
     ],
