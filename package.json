@@ -40,7 +40,7 @@
     "@nuxthq/studio": "^2.2.1",
     "eslint": "^9.18.0",
     "nuxt-content-assets": "^1.4.4",
-    "vitest": "^2.1.8",
+    "vitest": "^3.0.4",
     "vue-tsc": "^2.1.10"
   },
   "pnpm": {
