@@ -14,29 +14,33 @@
   "dependencies": {
     "@nuxt/content": "^2.13.4",
     "@nuxt/eslint": "^0.6.2",
+    "@nuxt/icon": "^1.10.3",
     "@nuxt/image": "^1.9.0",
     "@nuxt/ui-pro": "^1.7.0",
-    "@nuxtjs/date-fns": "^1.5.0",
-    "@vueuse/nuxt": "^11.3.0",
+    "@vueuse/nuxt": "^12.5.0",
     "axios": "^1.7.9",
-    "date-fns": "^4.1.0",
     "he": "^1.2.0",
+    "lucide-vue-next": "^0.454.0",
     "nuxt": "^3.15.2",
-    "nuxt-og-image": "3.0.6",
+    "nuxt-og-image": "4.1.2",
     "nuxt-security": "2.0.0",
-    "shiki": "^1.29.1"
+    "shiki": "^2.1.0"
   },
   "devDependencies": {
     "@flydotio/dockerfile": "^0.5.9",
+    "@iconify-json/clarity": "^1.2.2",
     "@iconify-json/heroicons": "^1.2.2",
     "@iconify-json/ph": "^1.2.2",
     "@iconify-json/simple-icons": "^1.2.21",
     "@iconify-json/vscode-icons": "^1.2.10",
     "@iconify/vue": "4.1.2",
     "@nuxt/eslint": "^0.6.0",
+    "@nuxt/rspack-builder": "^3.15.2",
+    "@nuxt/test-utils": "^3.15.4",
     "@nuxthq/studio": "^2.2.1",
-    "eslint": "^9.19.0",
+    "eslint": "^9.18.0",
     "nuxt-content-assets": "^1.4.4",
-    "vue-tsc": "^2.2.0"
+    "vitest": "^3.0.4",
+    "vue-tsc": "^2.1.10"
   }
 }
