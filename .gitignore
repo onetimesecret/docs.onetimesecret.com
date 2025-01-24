@@ -27,6 +27,7 @@ tmp
 .env.*
 !.env.example
 .ruby-version
+.commit_hash.txt
 
 # VSC
 .history
