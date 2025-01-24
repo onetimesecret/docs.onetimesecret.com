@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  '@iconify/vue': 4.3.0
+
 importers:
 
   .:
@@ -14,6 +17,9 @@ importers:
       '@nuxt/eslint':
         specifier: ^0.6.2
         version: 0.6.2(eslint@9.18.0(jiti@2.4.2))(magicast@0.3.5)(rollup@4.32.0)(typescript@5.7.3)(vite@6.0.11(@types/node@22.10.10)(jiti@2.4.2)(terser@5.37.0)(yaml@2.7.0))
+      '@nuxt/icon':
+        specifier: ^1.10.3
+        version: 1.10.3(magicast@0.3.5)(rollup@4.32.0)(vite@6.0.11(@types/node@22.10.10)(jiti@2.4.2)(terser@5.37.0)(yaml@2.7.0))(vue@3.5.13(typescript@5.7.3))
       '@nuxt/image':
         specifier: ^1.9.0
         version: 1.9.0(db0@0.2.1)(ioredis@5.4.2)(magicast@0.3.5)(rollup@4.32.0)
@@ -64,8 +70,8 @@ importers:
         specifier: ^1.2.10
         version: 1.2.10
       '@iconify/vue':
-        specifier: 4.1.2
-        version: 4.1.2(vue@3.5.13(typescript@5.7.3))
+        specifier: 4.3.0
+        version: 4.3.0(vue@3.5.13(typescript@5.7.3))
       '@nuxt/rspack-builder':
         specifier: ^3.15.2
         version: 3.15.2(esbuild@0.24.2)(magicast@0.3.5)(pug@3.0.3)(rollup@4.32.0)(typescript@5.7.3)(vue@3.5.13(typescript@5.7.3))(webpack@5.96.1(esbuild@0.24.2))
@@ -677,11 +683,6 @@ packages:
 
   '@iconify/utils@2.2.1':
     resolution: {integrity: sha512-0/7J7hk4PqXmxo5PDBDxmnecw5PxklZJfNjIVG9FM0mEfVrvfudS22rYWsqVk6gR3UJ/mSYS90X4R3znXnqfNA==}
-
-  '@iconify/vue@4.1.2':
-    resolution: {integrity: sha512-CQnYqLiQD5LOAaXhBrmj1mdL2/NCJvwcC4jtW2Z8ukhThiFkLDkutarTOV2trfc9EXqUqRs0KqXOL9pZ/IyysA==}
-    peerDependencies:
-      vue: '>=3'
 
   '@iconify/vue@4.3.0':
     resolution: {integrity: sha512-Xq0h6zMrHBbrW8jXJ9fISi+x8oDQllg5hTDkDuxnWiskJ63rpJu9CvJshj8VniHVTbsxCg9fVoPAaNp3RQI5OQ==}
@@ -6910,11 +6911,6 @@ snapshots:
       mlly: 1.7.4
     transitivePeerDependencies:
       - supports-color
-
-  '@iconify/vue@4.1.2(vue@3.5.13(typescript@5.7.3))':
-    dependencies:
-      '@iconify/types': 2.0.0
-      vue: 3.5.13(typescript@5.7.3)
 
   '@iconify/vue@4.3.0(vue@3.5.13(typescript@5.7.3))':
     dependencies:
