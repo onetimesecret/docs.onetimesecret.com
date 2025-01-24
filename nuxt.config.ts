@@ -72,6 +72,9 @@ export default defineNuxtConfig({
   ],
   vite: {
     assetsInclude: ['@/assets/css/fonts/**/*.woff', '@/**/**/*.woff2'],
+    server: {
+      allowedHosts: true,
+    },
   },
   hooks: {
     // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)
