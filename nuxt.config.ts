@@ -75,9 +75,7 @@ export default defineNuxtConfig({
     provider: "ipx",
     ipx: {
       // Optional: Add specific SVG optimization options
-      svgo: {
-        enable: true,
-      },
+      svgo: {},
     },
   },
   /**
@@ -107,6 +105,9 @@ export default defineNuxtConfig({
   css: ["@/assets/css/main.css", "@/assets/css/font.css"],
   vite: {
     assetsInclude: ["@/assets/css/fonts/**/*.woff", "@/**/**/*.woff2"],
+    server: {
+      allowedHosts: true,
+    },
   },
   env: {
     TZ: "UTC", // or your desired time zone
