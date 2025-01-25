@@ -1,29 +1,39 @@
+// nuxt.config.ts
 
-// The rest of your Nuxt config...
+import { resolve } from "path";
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  extends: ['@nuxt/ui-pro'],
+  extends: ["@nuxt/ui-pro"],
 
   buildModules: [
-    ['@nuxtjs/date-fns', { /* module options */ }],
+    [
+      "@nuxtjs/date-fns",
+      {
+        /* module options */
+      },
+    ],
   ],
+
+  modules: [
+    "@nuxt/content",
+    "@nuxt/eslint",
+    "@nuxt/image",
+    "@nuxt/ui",
+    "@vueuse/nuxt",
+    "nuxt-og-image",
+    "nuxt-security",
+  ],
+
   experimental: {
+    appManifest: false,
+
     // Possible fix for logging errors
     // https://github.com/nuxt/nuxt/issues/20889
-    renderJsonPayloads: false
+    renderJsonPayloads: false,
   },
-  modules: [
-    '@nuxt/content',
-    '@nuxt/eslint',
-    '@nuxt/image',
-    '@nuxt/ui',
-    '@vueuse/nuxt',
-    'nuxt-og-image',
-    'nuxt-security',
-  ],
-  ui: {
 
-  },
+  ui: {},
   nitro: {
     prerender: {
       concurrency: 250,
@@ -31,31 +41,42 @@ export default defineNuxtConfig({
     },
     publicAssets: [
       {
-        dir: 'public',  // This will include the entire public directory
-        maxAge: 60 * 60 * 24 * 7  // Cache for 1 week (adjust as needed)
-      }
-    ]
+        dir: resolve(__dirname, "public"),
+        maxAge: 60 * 60 * 24 * 7, // Cache for 1 week (adjust as needed)
+      },
+    ],
   },
   content: {
     // or you might have 'mdc' instead of 'content' depending on your setup
     highlight: {
-      theme: 'one-dark-pro',
-      themes: ['houston', 'aurora-x'],
-      langs: ['javascript', 'typescript', 'python', 'perl', 'ruby', 'go', 'powershell', 'csharp', 'bash', 'html', 'css', 'markdown', 'xml']
+      theme: "one-dark-pro",
+      themes: ["houston", "aurora-x"],
+      langs: [
+        "javascript",
+        "typescript",
+        "python",
+        "perl",
+        "ruby",
+        "go",
+        "powershell",
+        "csharp",
+        "bash",
+        "html",
+        "css",
+        "markdown",
+        "xml",
+      ],
     },
-    timezone: 'UTC',
   },
   image: {
     // Add SVG to the format list if not already present
-    format: ['webp', 'jpg', 'png', 'svg'],
+    format: ["webp", "jpg", "png", "svg"],
     // Configure IPX to handle SVGs
-    provider: 'ipx',
+    provider: "ipx",
     ipx: {
       // Optional: Add specific SVG optimization options
-      svgo: {
-        enable: true
-      }
-    }
+      svgo: {},
+    },
   },
   /**
    * Configuration for Nuxt UI Pro.
@@ -73,7 +94,7 @@ export default defineNuxtConfig({
    *    $ envsubst < nuxt.config.ts > nuxt.config.ts.tmp && mv nuxt.config.ts.tmp nuxt.config.ts
    */
   uiPro: {
-    license: process.env.NUXT_UI_PRO_LICENSE || '${NUXT_UI_PRO_LICENSE}',
+    license: process.env.NUXT_UI_PRO_LICENSE || "${NUXT_UI_PRO_LICENSE}",
   },
   postcss: {
     plugins: {
@@ -81,57 +102,58 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  css: [
-    '@/assets/css/main.css',
-    '@/assets/css/font.css',
-  ],
+  css: ["@/assets/css/main.css", "@/assets/css/font.css"],
   vite: {
-    assetsInclude: ['@/assets/css/fonts/**/*.woff', '@/**/**/*.woff2'],
-
+    assetsInclude: ["@/assets/css/fonts/**/*.woff", "@/**/**/*.woff2"],
+    server: {
+      allowedHosts: true,
+    },
   },
   env: {
-    TZ: 'UTC' // or your desired time zone
+    TZ: "UTC", // or your desired time zone
   },
   hooks: {
     // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)
-    'components:extend': (components) => {
-      const globals = components.filter(c => ['UButton'].includes(c.pascalName))
+    "components:extend": (components) => {
+      const globals = components.filter((c) =>
+        ["UButton"].includes(c.pascalName),
+      );
 
-      globals.forEach(c => c.global = true)
-    }
+      globals.forEach((c) => (c.global = true));
+    },
   },
 
   colorMode: {
-    disableTransition: true
+    disableTransition: true,
   },
 
   routeRules: {
     // Temporary workaround for prerender regression. see https://github.com/nuxt/nuxt/issues/27490
-    '/': { prerender: true },
-    '/api/search.json': { prerender: true },
-    '/docs': { redirect: '/docs/introduction', prerender: true }
+    "/": { prerender: true },
+    "/api/search.json": { prerender: true },
+    "/docs": { redirect: "/docs/introduction", prerender: true },
   },
 
   devtools: {
-    enabled: true
+    enabled: true,
   },
 
   typescript: {
-    strict: false
+    strict: false,
   },
 
   future: {
-    compatibilityVersion: 4
+    compatibilityVersion: 4,
   },
 
   eslint: {
     config: {
       stylistic: {
-        commaDangle: 'never',
-        braceStyle: '1tbs'
-      }
-    }
+        commaDangle: "never",
+        braceStyle: "1tbs",
+      },
+    },
   },
 
-  compatibilityDate: '2024-07-11'
-})
+  compatibilityDate: "2024-07-11",
+});

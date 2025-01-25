@@ -45,7 +45,7 @@
     }
 
     .celebration-text {
-      font-family: 'Arial', sans-serif;
+      font-family: 'Zilla Slab', Arial, sans-serif;
       font-weight: bold;
     }
   </style>
@@ -135,6 +135,7 @@
         y="20"
         font-size="14"
         text-anchor="middle"
+        font-family="'Zilla Slab', Arial, sans-serif"
         fill="#ffffff">
     Celebrating OnetimeSecret
   </text>
@@ -142,6 +143,7 @@
         x="100"
         y="40"
         font-size="18"
+        font-family="'Zilla Slab', Arial, sans-serif"
         text-anchor="middle"
         fill="#ffffff">
     Release 0.18!
@@ -150,7 +152,7 @@
   <!-- Signature -->
   <text x="190"
         y="195"
-        font-family="Arial"
+        font-family="'Zilla Slab', Arial, sans-serif"
         font-size="8"
         font-style="italic"
         text-anchor="end"
