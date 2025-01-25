@@ -19,6 +19,7 @@
     "@nuxt/ui-pro": "^1.7.0",
     "@vueuse/nuxt": "^12.5.0",
     "axios": "^1.7.9",
+    "date-fns": "^4.1.0",
     "he": "^1.2.0",
     "lucide-vue-next": "^0.454.0",
     "nuxt": "^3.15.2",
@@ -41,6 +42,12 @@
     "eslint": "^9.18.0",
     "nuxt-content-assets": "^1.4.4",
     "vitest": "^3.0.4",
-    "vue-tsc": "^2.1.10"
+    "vue-tsc": "^2.1.6"
+  },
+  "pnpm": {
+    "overrides": {
+      "@iconify/vue": "4.3.0",
+      "vue-tsc": "2.1.6"
+    }
   }
 }
