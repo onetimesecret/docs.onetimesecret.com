@@ -1,7 +1,10 @@
 <script setup lang="ts">
+import { useI18n } from '#app';
 import socialCard1 from '~/assets/img/socialcards/onetime-socialcard-20240823-1.png';
 
-const { data: page } = await useAsyncData('index', () => queryContent('/').findOne());
+const { locale: { value: localCode }} = useI18n()
+
+const { data: page } = await useAsyncData('index', () => queryContent('/en/').findOne());
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true });
 }
