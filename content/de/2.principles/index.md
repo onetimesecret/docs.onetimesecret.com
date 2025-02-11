@@ -1,33 +1,33 @@
 ---
-title: Our Principles
-description: The core values and guiding principles that drive our approach to privacy and security
-layout: page
+Titel: Unsere Grundsätze
+Beschreibung: Die Grundwerte und Leitprinzipien, die unseren Ansatz für Datenschutz und Sicherheit bestimmen
+Layout: Seite
 ---
 
-# Principles
+# Grundsätze
 
-Welcome to Onetime Secret's guiding principles. These foundational documents explain our approach to:
+Willkommen bei den Leitprinzipien von Onetime Secret. Diese grundlegenden Dokumente erklären unseren Ansatz zu:
 
-- Privacy and data minimization
-- User communication and transparency
-- Service reliability and trust
-- Operational practices
+- Datenschutz und Datensparsamkeit
+- Benutzerkommunikation und Transparenz
+- Zuverlässigkeit und Vertrauen in den Dienst
+- Betriebliche Praktiken
 
-## Our Commitments
+## Unsere Verpflichtungen
 
-- **[Privacy First](/principles/privacy-first)**: Our approach to protecting user privacy through deliberate design choices
-- **[Building Trust](/principles/trust)**: How we earn and maintain user trust through actions, not words
-- **[Communication Philosophy](/principles/communication)**: Why we limit email communication to only what's necessary
-- **[Data Minimization](/principles/data-minimization)**: Our commitment to collecting and retaining only the most essential data
+- **[Datenschutz zuerst](/Grundsätze/privacy-first)**: Unser Ansatz zum Schutz der Privatsphäre der Benutzer durch bewusste Designentscheidungen
+- **[Vertrauen aufbauen](/Grundsätze/Vertrauen)**: Wie wir das Vertrauen der Nutzer durch Taten, nicht durch Worte, gewinnen und erhalten
+- **[Kommunikationsphilosophie](/Grundsätze/Kommunikation)**: Warum wir die E-Mail-Kommunikation auf das Nötigste beschränken
+- **[Datenminimierung](/Grundsätze/Datenminimierung)**: Unsere Verpflichtung, nur die wichtigsten Daten zu sammeln und zu speichern
 
 
-## Why Principles Matter
+## Warum Prinzipien wichtig sind
 
-At Onetime Secret, our principles guide every decision we make. They help us:
+Bei Onetime Secret wird jede Entscheidung von unseren Prinzipien geleitet. Sie helfen uns:
 
-- Stay focused on what matters
-- Make consistent choices
-- Build lasting trust
-- Maintain transparency
+- uns auf das Wesentliche zu konzentrieren
+- Beständige Entscheidungen zu treffen
+- Dauerhaftes Vertrauen aufzubauen
+- Transparenz zu bewahren
 
-These aren't just guidelines - they're commitments to our users that shape how we operate.
+Dies sind nicht nur Richtlinien - es sind Verpflichtungen gegenüber unseren Nutzern, die unsere Arbeitsweise bestimmen.
