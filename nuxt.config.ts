@@ -9,6 +9,7 @@ export default defineNuxtConfig({
   builder: "vite",
 
   modules: [
+    "@nuxtjs/i18n",
     "@nuxt/content",
     "@nuxt/eslint",
     "@nuxt/image",
@@ -32,6 +33,12 @@ export default defineNuxtConfig({
         maxAge: 60 * 60 * 24 * 7, // Cache for 1 week (adjust as needed)
       },
     ],
+  },
+  // https://i18n.nuxtjs.org/docs/guide
+  i18n: {
+    vueI18n: './i18n.config.ts',
+    strategy: 'prefix_and_default',
+    defaultLocale: 'en',
   },
   content: {
     // or you might have 'mdc' instead of 'content' depending on your setup

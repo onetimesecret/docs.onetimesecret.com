@@ -3,8 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "NODE_OPTIONS='--max-old-space-size=2048 ' npx nuxt build",
-    "dev": "NODE_OPTIONS='' npx nuxt dev --host",
+    "build": "NODE_OPTIONS='--max-old-space-size=8192 ' npx nuxt build",
+    "dev": "NODE_OPTIONS='--max-old-space-size=4096' npx nuxt dev --host",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
@@ -17,6 +17,7 @@
     "@nuxt/icon": "^1.10.3",
     "@nuxt/image": "^1.9.0",
     "@nuxt/ui-pro": "^1.7.0",
+    "@nuxtjs/i18n": "^9.2.0",
     "@vueuse/nuxt": "^12.5.0",
     "axios": "^1.7.9",
     "date-fns": "^4.1.0",
