@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <style>
+    .hidden-message {
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    svg:hover .hidden-message {
+      opacity: 1;
+    }
+
+    .main-content {
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    svg:hover .main-content {
+      opacity: 0.3;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-3px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .floating {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .rotating {
+      animation: rotate 20s linear infinite;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+    }
+
+    .pulsing {
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @font-face {
+      font-family: 'Zilla Slab';
+      src: url('https://onetimesecret.com/dist/assets/ZillaSlab-Regular-CpTS5Ubm.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    text.release {
+      font-family: 'Zilla Slab', sans-serif !important;
+    }
+  </style>
+
+  <defs>
+    <radialGradient id="globeGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" style="stop-color:#3b82f6; stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1e40af; stop-opacity:1"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="200" height="200" fill="url(#globeGradient)"/>
+
+  <!-- Main content -->
+  <g class="main-content">
+    <!-- Version number -->
+    <text class="release" x="100" y="112" font-size="90" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="#fcf8f2">20</text>
+
+    <!-- Globe representation -->
+    <g class="rotating" transform="translate(100, 70)">
+      <circle cx="0" cy="0" r="25" fill="none" stroke="#fcf8f2" stroke-width="2" opacity="0.6"/>
+      <path d="M -25 0 C -25 -15 25 -15 25 0 C 25 15 -25 15 -25 0" fill="none" stroke="#fcf8f2" stroke-width="2" opacity="0.6"/>
+      <path d="M 0 -25 C 15 -25 15 25 0 25 C -15 25 -15 -25 0 -25" fill="none" stroke="#fcf8f2" stroke-width="2" opacity="0.6"/>
+    </g>
+
+    <!-- Language symbols -->
+    <g class="floating">
+      <text x="60" y="140" font-size="16" fill="#fcd34d" class="pulsing">あ</text>
+      <text x="140" y="140" font-size="16" fill="#22c55e" class="pulsing">文</text>
+      <text x="100" y="160" font-size="16" fill="#ef4444" class="pulsing">أ</text>
+      <text x="80" y="130" font-size="16" fill="#3b82f6" class="pulsing">é</text>
+      <text x="120" y="130" font-size="16" fill="#a855f7" class="pulsing">б</text>
+    </g>
+  </g>
+
+  <!-- Hidden message -->
+  <g class="hidden-message">
+    <rect x="20" y="70" width="160" height="60" fill="rgba(0,0,0,0.8)" rx="10" ry="10"/>
+    <text x="100" y="95" font-size="14" text-anchor="middle" fill="#fcf8f2">
+      Global Reach
+    </text>
+    <text x="100" y="115" font-size="14" text-anchor="middle" fill="#fcf8f2">
+      Local Trust
+    </text>
+  </g>
+
+  <!-- Title -->
+  <text x="100" y="30" font-size="16" font-weight="bold" text-anchor="middle" fill="#fcf8f2" font-family="'Zilla Slab', Arial, sans-serif">
+    OnetimeSecret v0.20.0
+  </text>
+
+  <!-- Signature -->
+  <text x="190" y="195" font-family="'Zilla Slab', Arial, sans-serif" font-size="8" font-style="italic" text-anchor="end" fill="#fcf8f2">Celebration by Claude 3.5</text>
+</svg>

@@ -6,7 +6,7 @@ authors:
   - name: Delano
     to: https://blog.onetimesecret.com/about
     avatar:
-      src: /img/portait-profile-pic-delano-2024.jpeg
+      src: /img/portrait-profile-pic-delano-2024.jpeg
 image:
   src: /img/blog/2024/font-364116997-3a83b03b-ef93-4c91-aede-1a3e0f1d66f2.png
 badge:
