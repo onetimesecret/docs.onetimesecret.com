@@ -105,5 +105,5 @@ Onetime Secret lets you share sensitive information that's automatically destroy
 Thank you to everyone who contributed to this release. We appreciate all your support and feedback.
 
 
-::ImageModal{src="/img/blog/2025/release-0.20.0.svg" alt="" width="600"}
+::ImageModal{src="/img/blog/2025/release-0.20.svg" alt="" width="600"}
 ::
