@@ -25,7 +25,7 @@
     "nuxt": "^3.15.2",
     "nuxt-og-image": "4.1.2",
     "nuxt-security": "2.0.0",
-    "shiki": "^2.1.0"
+    "shiki": "^3.2.1"
   },
   "devDependencies": {
     "@flydotio/dockerfile": "^0.5.9",
