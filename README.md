@@ -1,123 +1,77 @@
-![nuxt-ui-saas-social-card](https://github.com/nuxt-ui-pro/saas/assets/739984/50bf4ddd-c4d5-47e5-a09e-0f699513dfb5)
+# Onetime Secret Documentation Site
 
-# Nuxt UI Pro - SaaS template
+This is the documentation site for [Onetime Secret](https://onetimesecret.com/), a secure way to share sensitive information that's automatically destroyed after it's read.
 
-[![Nuxt UI Pro](https://img.shields.io/badge/Made%20with-Nuxt%20UI%20Pro-00DC82?logo=nuxt.js&labelColor=020420)](https://ui.nuxt.com/pro)
+[![Built with Starlight](https://astro.badgen.net/badge/built%20with/Starlight/purple)](https://starlight.astro.build)
 
-- [Live demo](https://saas-template.nuxt.dev/)
-- [Play on Stackblitz](https://stackblitz.com/github/nuxt-ui-pro/saas)
-- [Documentation](https://ui.nuxt.com/pro/getting-started)
+## Features
 
-## Quick Start
-
-```bash [Terminal]
-npx nuxi init -t github:nuxt-ui-pro/saas
-```
+- Full documentation for Onetime Secret
+- Multilingual support (currently English and German)
+- Custom components for card layouts
+- Responsive design
 
 ## Setup
 
 Make sure to install the dependencies:
 
 ```bash
-# npm
-npm install
-
-# pnpm
+# From the project root
 pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
 ## Development Server
 
-Start the development server on `http://localhost:3000`:
+Start the development server:
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+# From the project root
+pnpm dev
 ```
 
-## Production
+This will start Astro's development server, and you can view the site at `http://localhost:4321`.
+
+## Building for Production
 
 Build the application for production:
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+# From the project root
+pnpm build
 ```
 
-Locally preview production build:
+The built files will be in the `dist` directory.
 
-```bash
-# npm
-npm run preview
+## Project Structure
 
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
+```
+docs/                     # Project root
+├── src/                  # Source directory
+│   ├── assets/           # Assets including images
+│   ├── components/       # Astro components
+│   │   ├── CardGrid.astro        # Grid layout for cards
+│   │   ├── FeatureCard.astro     # Card components
+│   │   └── starlight/            # Starlight component customizations
+│   ├── content/          # Documentation content
+│   │   ├── docs/         # All documentation
+│   │   │   ├── en/       # English content
+│   │   │   └── de_AT/    # German content
+│   │   └── i18n/         # Translation files
+│   └── styles/           # CSS styles
+├── astro.config.mjs      # Astro/Starlight configuration
+├── markdoc.config.mjs    # Markdoc component configuration
+└── public/               # Static files
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Contributing
 
-## Nuxt Studio integration
+Contributions to documentation are welcome. Please follow these steps:
 
-Add `@nuxthq/studio` dependency to your package.json:
+1. Fork the repository
+2. Create a new branch
+3. Make your changes
+4. Submit a pull request
 
-```bash
-# npm
-npm install --save-dev @nuxthq/studio
+## License
 
-# pnpm
-pnpm add -D @nuxthq/studio
-
-# yarn
-yarn add -D @nuxthq/studio
-
-# bun
-bun add -d @nuxthq/studio
-```
-
-Add this module to your `nuxt.config.ts`:
-
-```ts
-export default defineNuxtConfig({
-  ...
-  modules: [
-    ...
-    '@nuxthq/studio'
-  ]
-})
-```
-
-Read more on [Nuxt Studio docs](https://nuxt.studio/docs/get-started/setup).
-
-## Renovate integration
-
-Install [Renovate GitHub app](https://github.com/apps/renovate/installations/select_target) on your repository and you are good to go.
+This documentation site is licensed under the MIT License.

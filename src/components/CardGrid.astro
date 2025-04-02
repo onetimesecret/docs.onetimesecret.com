@@ -1,0 +1,32 @@
+---
+// Custom card grid component for markdoc
+export interface Props {
+  stagger?: boolean;
+}
+
+const { stagger = false } = Astro.props;
+---
+
+<div class:list={["card-grid", { staggered: stagger }]}>
+  <slot />
+</div>
+
+<style>
+.card-grid {
+  display: grid;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 2rem 0;
+  list-style: none;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+}
+
+@media (min-width: 50rem) {
+  .staggered {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .staggered :global(> *:nth-child(odd)) {
+    transform: translateY(2rem);
+  }
+}
+</style>

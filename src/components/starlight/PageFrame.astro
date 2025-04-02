@@ -1,0 +1,32 @@
+---
+// Custom PageFrame component that adds the landing grid to splash pages
+import type { Props } from '@astrojs/starlight/props';
+---
+
+<div class="page-frame">
+  {Astro.props.entry.data.template === 'splash' && <div class="landing-grid"></div>}
+  <slot />
+</div>
+
+<style>
+.page-frame {
+  position: relative;
+}
+
+.landing-grid {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-size: 100px 100px;
+  background-image:
+    linear-gradient(to right, rgba(229, 231, 235, 0.5) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(229, 231, 235, 0.5) 1px, transparent 1px);
+  mask-image: radial-gradient(100% 100% at top right, white, transparent);
+}
+
+:global(.dark) .landing-grid {
+  background-image:
+    linear-gradient(to right, rgba(55, 65, 81, 0.5) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(55, 65, 81, 0.5) 1px, transparent 1px);
+}
+</style>

@@ -1,4 +1,4 @@
-# fly.toml app configuration file generated for onetime-docs on 2024-08-22T07:36:14-07:00
+# fly.toml app configuration file for onetime-docs
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
@@ -16,9 +16,8 @@ auto_stop_machines = 'stop'
 auto_start_machines = true
 min_machines_running = 0
 processes = ['app']
-# Ensure WebSocket connections are allowed
 protocol = "tcp"
-handlers = ["http", "ws"]
+handlers = ["http"]
 
 [[services.ports]]
 handlers = ["http"]
@@ -26,7 +25,7 @@ port = 80
 force_https = true
 
 [[vm]]
-memory = '2gb'
+memory = '1gb'
 cpu_kind = 'shared'
 cpus = 1
 

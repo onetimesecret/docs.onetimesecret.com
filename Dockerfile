@@ -4,9 +4,9 @@
 ARG NODE_VERSION=22.4.1
 FROM node:${NODE_VERSION}-slim as base
 
-LABEL fly_launch_runtime="Nuxt"
+LABEL fly_launch_runtime="Astro"
 
-# Nuxt app lives here
+# Astro app lives here
 WORKDIR /app
 
 # Set production environment
@@ -25,42 +25,25 @@ RUN apt-get update -qq && \
     apt-get install --no-install-recommends -y build-essential node-gyp pkg-config python-is-python3
 
 # Install node modules
-COPY --link .npmrc package.json pnpm-lock.yaml ./
+COPY --link package.json pnpm-lock.yaml ./
 RUN pnpm install --frozen-lockfile --prod=false
 
 # Copy application code
 COPY --link . .
 
-# Build application with build secret
-#
-#   $ echo -n $NUXT_UI_PRO_LICENSE > .mysecret.txt
-#   $ docker build --secret id=NUXT_UI_PRO_LICENSE,src=.mysecret.txt .
-#
-#RUN --mount=type=secret,id=NUXT_UI_PRO_LICENSE \
-#    NUXT_UI_PRO_LICENSE="$(cat /run/secrets/NUXT_UI_PRO_LICENSE)" \
-#    && pnpm run build
-# ENV NUXT_UI_PRO_LICENSE=CHANGEME
+# Build application
 RUN pnpm run build
-
-# Remove development dependencies
-# The `pnpm prune prod` command is regularly failing with
-# "Error: Cannot find module '@nuxt/eslint'": Add the offending package to regular dependencies.
-#
-# Alternate approach to manually delete and reinstall:
-#   -- https://github.com/pnpm/pnpm/issues/2160#issuecomment-1553095654
-#RUN rm -rf node_modules
-#RUN pnpm install --prod
-#
-# Or simply comment out and leave the dev deps installed.
-RUN pnpm prune prod
 
 # Final stage for app image
 FROM base
 
+# Install node-static or a similar lightweight server
+RUN npm install -g serve
+
 # Copy built application
-COPY --from=build /app /app
+COPY --from=build /app/dist /app/dist
 
 # Start the server by default, this can be overwritten at runtime
 EXPOSE 3000
 ENV HOST=0
-CMD [ "node", ".output/server/index.mjs" ]
+CMD [ "serve", "-s", "dist", "-l", "3000" ]
