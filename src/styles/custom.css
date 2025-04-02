@@ -1,5 +1,23 @@
 /* Custom styles for Onetime Secret Starlight site */
 
+@font-face {
+  font-family: "Zilla Slab";
+  src: url("/fonts/ZillaSlab-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* src/styles/custom.css */
+:root {
+  font-family: theme("fontFamily.brand");
+}
+
+/* Optional: Target specific Starlight components */
+.starlight-content {
+  font-family: theme("fontFamily.brand");
+}
+
 /* Landing page grid background */
 .landing-grid {
   position: absolute;

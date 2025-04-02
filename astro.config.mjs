@@ -2,6 +2,29 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import markdoc from "@astrojs/markdoc";
+import tailwind from "@astrojs/tailwind";
+
+import forms from "@tailwindcss/forms";
+import typography from "@tailwindcss/typography";
+import defaultTheme from "tailwindcss/defaultTheme";
+
+// Remember, for security reasons, only variables prefixed with VITE_ are
+// available here to prevent accidental exposure of sensitive
+// environment variables to the client-side code.
+const viteBaseUrl = process.env.VITE_BASE_URL;
+
+// According to the documentation, we should be able to set the allowed hosts
+// via __VITE_ADDITIONAL_SERVER_ALLOWED_HOSTS but as of 5.4.15m that is not
+// working as expected. So here we capture the value of that env var with
+// and without the __ prefix and if they're defined, add them to
+// server.allowedHosts below. -- Delano (2025-03-28)
+//
+// https://vite.dev/config/server-options.html#server-allowedhosts
+// https://github.com/vitejs/vite/security/advisories/GHSA-vg6x-rcgg-rjx6
+const viteAdditionalServerAllowedHosts =
+  process.env.VITE_ADDITIONAL_SERVER_ALLOWED_HOSTS;
+const __viteAdditionalServerAllowedHosts =
+  process.env.__VITE_ADDITIONAL_SERVER_ALLOWED_HOSTS;
 
 // https://astro.build/config
 export default defineConfig({
@@ -17,14 +40,15 @@ export default defineConfig({
     starlight({
       title: "Onetime Secret - Documentation",
       logo: {
-        src: "./src/assets/img/onetime-logo-v3-md.png",
+        src: "./src/assets/img/onetime-logo-v3-xs.png",
         alt: "Onetime Secret",
       },
       social: {
         github: "https://github.com/onetimesecret/onetimesecret",
       },
       customCss: [
-        // Relative path to your custom CSS file
+        // Relative path to your custom CSS files
+        "./src/styles/tailwind.css",
         "./src/styles/custom.css",
       ],
       // Set English as the default language for this site.
@@ -61,21 +85,7 @@ export default defineConfig({
         },
       },
       sidebar: [
-        {
-          label: "Home",
-          translations: {
-            de: "Startseite",
-          },
-          items: [
-            {
-              label: "Home Page",
-              translations: {
-                de: "Startseite",
-              },
-              link: "home",
-            },
-          ],
-        },
+        { label: "Home", link: "/" },
         {
           label: "Introduction",
           translations: {
@@ -325,5 +335,36 @@ export default defineConfig({
         },
       ],
     }),
+    tailwind({
+      // Disable the default base styles:
+      applyBaseStyles: false,
+      nesting: true,
+      configFile: "tailwind.config.ts",
+    }),
   ],
+  vite: {
+    server: {
+      origin: viteBaseUrl,
+      allowedHosts: (() => {
+        // NOTE: This is an Immediately Invoked Function Expression (IIFE)
+        // that executes exactly once during config load/parsing time.
+        // The returned array becomes the value of allowedHosts. We do
+        // this to avoid adding empty strings to the array.
+        //
+        // Start with default allowed hosts
+        const hosts = ["localhost", "127.0.0.1"];
+
+        // Add additional hosts from environment variables if defined
+        if (viteAdditionalServerAllowedHosts) {
+          hosts.push(viteAdditionalServerAllowedHosts);
+        }
+
+        if (__viteAdditionalServerAllowedHosts) {
+          hosts.push(__viteAdditionalServerAllowedHosts);
+        }
+
+        return hosts;
+      })(),
+    },
+  },
 });
