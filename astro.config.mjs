@@ -38,7 +38,13 @@ export default defineConfig({
   integrations: [
     markdoc(),
     starlight({
-      title: "Onetime Secret - Documentation",
+      title: "Onetime Secret - Docs",
+
+      // https://docs.astro.build/en/basics/astro-pages/#custom-404-error-page
+      //
+      // See src/pages/404.astro
+      disable404Route: true,
+      credits: true,
       logo: {
         src: "./src/assets/img/onetime-logo-v3-xs.png",
         alt: "Onetime Secret",
@@ -50,6 +56,7 @@ export default defineConfig({
         // Relative path to your custom CSS files
         "./src/styles/tailwind.css",
         "./src/styles/custom.css",
+        "./src/fonts/font-face.css",
       ],
       // Set English as the default language for this site.
       defaultLocale: "en",
