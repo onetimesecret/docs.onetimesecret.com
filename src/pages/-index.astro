@@ -59,7 +59,13 @@ const features = [
       </div>
     </div>
     <div class="relative mx-auto max-w-3xl rounded-lg overflow-hidden shadow-2xl">
-      <Image src={socialCard} alt="Onetime Secret Platform" class="w-full" />
+      <Image
+        src={socialCard}
+        alt="Onetime Secret Platform"
+        width={socialCard.width}
+        height={socialCard.height}
+        class="w-full h-auto object-contain"
+      />
       <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent"></div>
     </div>
   </div>

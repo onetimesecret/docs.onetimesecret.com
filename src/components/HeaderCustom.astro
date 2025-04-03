@@ -1,0 +1,41 @@
+---
+// src/components/CustomHeader.astro
+import type { Props } from '@astrojs/starlight/props';
+import Default from '@astrojs/starlight/components/Header.astro';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+---
+
+<Default {...Astro.props}>
+  <nav class="custom-nav" slot="after-title">
+    <a href={getRelativeLocaleUrl(Astro.props.locale || 'en', 'introduction')} class="nav-link">Docs</a>
+    <a href={getRelativeLocaleUrl(Astro.props.locale || 'en', 'custom-domains')} class="nav-link">Custom Domains</a>
+    <a href={getRelativeLocaleUrl(Astro.props.locale || 'en', 'rest-api')} class="nav-link">API</a>
+    <a href={getRelativeLocaleUrl(Astro.props.locale || 'en', 'principles')} class="nav-link">Principles</a>
+    <a href="https://github.com/onetimesecret/onetimesecret" class="nav-link">GitHub</a>
+  </nav>
+</Default>
+
+<style>
+  .custom-nav {
+    display: none;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .nav-link {
+    color: var(--sl-color-text);
+    text-decoration: none;
+    font-size: 0.9375rem;
+    font-weight: 500;
+  }
+
+  .nav-link:hover {
+    color: var(--sl-color-text-accent);
+  }
+
+  @media (min-width: 50rem) {
+    .custom-nav {
+      display: flex;
+    }
+  }
+</style>
