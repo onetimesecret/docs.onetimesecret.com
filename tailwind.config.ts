@@ -8,7 +8,7 @@ import defaultTheme from "tailwindcss/defaultTheme";
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue,mdoc}"],
 
   // Disable the default base styles:
   applyBaseStyles: false,
@@ -24,7 +24,7 @@ export default {
     extend: {
       colors: {
         // Your preferred accent color. Indigo is closest to Starlight’s defaults.
-        accent: colors.indigo,
+        accent: colors.red,
         // Your preferred gray scale. Zinc is closest to Starlight’s defaults.
         gray: colors.zinc,
         // https://javisperez.github.io/tailwindcolorshades/?flamingo=dc4a22&guardsman-red=23b5dd

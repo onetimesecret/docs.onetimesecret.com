@@ -3,6 +3,7 @@ import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import markdoc from "@astrojs/markdoc";
 import tailwind from "@astrojs/tailwind";
+import vue from "@astrojs/vue";
 
 import forms from "@tailwindcss/forms";
 import typography from "@tailwindcss/typography";
@@ -23,6 +24,7 @@ const viteBaseUrl = process.env.VITE_BASE_URL;
 // https://github.com/vitejs/vite/security/advisories/GHSA-vg6x-rcgg-rjx6
 const viteAdditionalServerAllowedHosts =
   process.env.VITE_ADDITIONAL_SERVER_ALLOWED_HOSTS;
+
 const __viteAdditionalServerAllowedHosts =
   process.env.__VITE_ADDITIONAL_SERVER_ALLOWED_HOSTS;
 
@@ -38,6 +40,7 @@ export default defineConfig({
   // },
   integrations: [
     markdoc(),
+    vue(),
     starlight({
       title: "Onetime Secret - Docs",
 

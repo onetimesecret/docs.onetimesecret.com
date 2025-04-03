@@ -72,13 +72,11 @@ h2 {
 
 /* Enhanced link styling */
 a:not(.action) {
-  color: var(--sl-color-text-accent);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 a:not(.action):hover {
-  color: var(--sl-color-accent-high);
   text-decoration: underline;
 }
 
