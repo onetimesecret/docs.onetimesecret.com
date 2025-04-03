@@ -1,15 +1,16 @@
 ---
 title: Onetime Secret - Secure Links, Stronger Connections
 description: Onetime Secret offers a secure, ephemeral way to share sensitive information in a digital world.
-template: splash
+tableOfContents:
+  minHeadingLevel: 3
 hero:
   title: Secure links, stronger connections
-  tagline: Onetime Secret offers a secure, ephemeral way to share sensitive information in a digital world.
+  tagline: Share sensitive information securely with self-destructing links that are only viewable once.
   actions:
     - text: Get started
       link: /en/introduction/
       icon: right-arrow
-    - text: View our GitHub
+    - text: View on GitHub
       link: https://github.com/onetimesecret/onetimesecret
       icon: external
       variant: minimal

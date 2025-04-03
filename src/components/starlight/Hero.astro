@@ -9,6 +9,7 @@ const { title, tagline } = data.hero || {};
 <div class="hero">
   {/* Add our landing grid background from Nuxt site */}
   <div class="landing-grid"></div>
+  <div class="hero-bg-overlay"></div>
 
   <div class="hero-content stack">
     <h1 id="_top" set:html={title} />
@@ -38,6 +39,17 @@ const { title, tagline } = data.hero || {};
 .hero {
   padding: 6rem 0 4rem;
   position: relative;
+  overflow: hidden;
+}
+
+.hero-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(220, 74, 34, 0.15), transparent 70%);
+  z-index: -1;
 }
 .hero-content {
   margin-inline: auto;
