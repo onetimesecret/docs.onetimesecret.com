@@ -5,6 +5,7 @@ import markdoc from "@astrojs/markdoc";
 import tailwind from "@astrojs/tailwind";
 import vue from "@astrojs/vue";
 
+// import ImageModal from "./src/components/vue/ImageModal.vue";
 import forms from "@tailwindcss/forms";
 import typography from "@tailwindcss/typography";
 import defaultTheme from "tailwindcss/defaultTheme";
@@ -65,7 +66,7 @@ export default defineConfig({
       },
       customCss: [
         // Relative path to your custom CSS files
-        // "./src/styles/tailwind.css",
+        "./src/styles/tailwind.css",
         "./src/styles/custom.css",
         "./src/fonts/font-face.css",
       ],

@@ -32,8 +32,9 @@ Berücksichtigen Sie bei dieser Entscheidung Ihre spezifischen Bedürfnisse und 
 2. Navigieren Sie zu Dashboard > Benutzerdefinierte Domains
 3. Klicken Sie auf "Domain hinzufügen"
 
-::ImageModal{src="/img/docs/custom-domains/3-Custom-domains.png" alt="Custom domains view" width="400" height="400"}
-::
+
+<img src="/img/docs/custom-domains/3-Custom-domains.png" alt="Custom domains view" width="400" />
+
 
 ## Schritt 2: Geben Sie Ihre Domain ein
 
@@ -65,8 +66,7 @@ Um Ihre Domain zu verbinden, müssen Sie Ihre DNS-Einstellungen aktualisieren. D
 
 Wichtig: Stellen Sie sicher, dass es keine konkurrierenden Einträge für die von Ihnen verwendete Domain gibt.
 
-::ImageModal{src="/img/docs/custom-domains/4-Custom-domain-settings.png" alt="Benutzerdefinierte Domaineinstellungen" width="400" height="400"}
-::
+<img src="/img/docs/custom-domains/4-Custom-domain-settings.png" alt="Custom domain settings" width="400" />
 
 ### Weitere Informationen
 

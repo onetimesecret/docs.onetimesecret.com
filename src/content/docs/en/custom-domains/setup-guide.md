@@ -32,8 +32,7 @@ Consider your specific needs and requirements when making this choice. For more 
 2. Navigate to Dashboard > Custom Domains
 3. Click "Add Domain"
 
-::ImageModal{src="/img/docs/custom-domains/3-Custom-domains.png" alt="Custom domains view" width="400" height="400"}
-::
+<img src="/img/docs/custom-domains/3-Custom-domains.png" alt="Custom domains view" width="400" />
 
 ## Step 2: Enter Your Domain
 
@@ -65,8 +64,7 @@ To connect your domain, you need to update your DNS settings. The process differ
 
 Important: Ensure there are no conflicting records for the domain you're using.
 
-::ImageModal{src="/img/docs/custom-domains/4-Custom-domain-settings.png" alt="Custom domain settings" width="400" height="400"}
-::
+<img src="/img/docs/custom-domains/4-Custom-domain-settings.png" alt="Custom domain settings" width="400" />
 
 ### More Info
 

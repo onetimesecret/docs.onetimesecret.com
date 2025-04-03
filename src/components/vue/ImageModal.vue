@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NuxtImg
+    <img
       :src="props.src"
       :alt="props.alt"
       :width="props.width"
@@ -10,14 +10,14 @@
     />
     <teleport to="body">
       <div v-if="isModalOpen" @click="closeModal" class="modal">
-        <NuxtImg :src="props.src" :alt="props.alt" class="modal-image" />
+        <img :src="props.src" :alt="props.alt" class="modal-image" />
       </div>
     </teleport>
   </div>
 </template>
 
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref } from 'vue';
+import { onMounted, onUnmounted, ref } from "vue";
 
 interface Props {
   src: string;
@@ -38,20 +38,19 @@ const closeModal = () => {
 };
 
 const handleKeyDown = (event: KeyboardEvent) => {
-  if (event.key === 'Escape' && isModalOpen.value) {
+  if (event.key === "Escape" && isModalOpen.value) {
     closeModal();
   }
 };
 
 onMounted(() => {
-  document.addEventListener('keydown', handleKeyDown);
+  document.addEventListener("keydown", handleKeyDown);
 });
 
 onUnmounted(() => {
-  document.removeEventListener('keydown', handleKeyDown);
+  document.removeEventListener("keydown", handleKeyDown);
 });
 </script>
-
 
 <style scoped>
 .modal {

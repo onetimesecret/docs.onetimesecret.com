@@ -26,28 +26,24 @@ Upload your brand logo through the admin interface. The system accepts PNG or JP
 
 ### Upload logo
 
-::ImageModal{src="/img/docs/custom-domains/guide-brand-admin-1.png" alt="Logo upload interface showing add button" width="400" height="400"}
-::
+<img src="/img/docs/custom-domains/guide-brand-admin-1.png" alt="Logo upload interface showing add button" width="400" />
 
 ### Remove or replace logo
 
 Remove or replace logos as needed through the logo management panel.
 
-::ImageModal{src="/img/docs/custom-domains/guide-brand-admin-2.png" alt="Logo management interface with remove option" width="400" height="400"}
-::
+<img src="/img/docs/custom-domains/guide-brand-admin-2.png" alt="Logo management interface with remove option" width="400" />
 
 
 ## Brand Customization
 Adjust colors, fonts, and styling through the brand settings interface. Review your changes in real-time through the preview panel.
 
-::ImageModal{src="/img/docs/custom-domains/guide-brand-admin-4.png" alt="Brand customization interface" width="400" height="400"}
-::
+<img src="/img/docs/custom-domains/guide-brand-admin-4.png" alt="Brand customization interface" width="400" />
 
 
 Verify your branding changes on the live site after saving.
 
-::ImageModal{src="/img/docs/custom-domains/guide-brand-admin-3.png" alt="Homepage configuration panel" width="400" height="400"}
-::
+<img src="/img/docs/custom-domains/guide-brand-admin-3.png" alt="Homepage configuration panel" width="400" />
 
 ## Homepage Settings
 
@@ -55,15 +51,13 @@ Verify your branding changes on the live site after saving.
 
 Back on your Domain Dashboard you can configure the visibility for your branded homepage. Enabling this feature allows your clients, customers, or team members to create and share secrets directly from your branded interface.
 
-::ImageModal{src="/img/docs/custom-domains/guide-brand-admin-5.png" alt="Preview panel showing branded interface" width="400" height="400"}
-::
+<img src="/img/docs/custom-domains/guide-brand-admin-5.png" alt="Preview panel showing branded interface" width="400" />
 
 ### Disable homepage
 
 
 
-::ImageModal{src="/img/docs/custom-domains/guide-brand-admin-6.png" alt="Live implementation view" width="400" height="400"}
-::
+<img src="/img/docs/custom-domains/guide-brand-admin-6.png" alt="Live implementation view" width="400" />
 
 ## Important Notes
 - Changes process immediately upon saving

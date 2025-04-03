@@ -7,8 +7,7 @@ description: Benutzerdefinierte Domains ermöglichen es Ihnen, geheime Freigaben
 ## Ihre Marke, unsere Sicherheit
 Durch die Nutzung von Custom Domains geben Sie nicht nur Geheimnisse weiter, sondern stärken auch Ihre Marke, erhöhen das Vertrauen und gewährleisten die Einhaltung der Datenlokalisierung bei jeder Interaktion. Erwerben Sie noch heute ein Upgrade auf den Identity-Plan, um diese leistungsstarke Funktion freizuschalten und den Austausch von Geheimnissen auf die nächste Stufe zu bringen.
 
-::ImageModal{src="/img/docs/custom-domains/branded-homepage-enabled.png" alt="Benutzerdefinierte Domaineinstellungen" width="400" height="400"}
-::
+<img src="/img/docs/custom-domains/branded-homepage-enabled.png" alt="Benutzerdefinierte Domaineinstellungen" width="400" />
 
 
 ## So funktionieren benutzerdefinierte Domains

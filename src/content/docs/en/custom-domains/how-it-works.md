@@ -3,12 +3,11 @@ title: How do they work?
 description: Custom Domains allow you to host secret sharing under your own domain name, with DNS configuration in EU or US data centers and optional brand customization features.
 ---
 
-
 ## Your Brand, Our Security
+
 By leveraging Custom Domains, you're not just sharing secrets; you're reinforcing your brand, enhancing trust, and ensuring data locality compliance with every interaction. Upgrade to the Identity plan today to unlock this powerful feature and take your secret sharing to the next level.
 
-::ImageModal{src="/img/docs/custom-domains/branded-homepage-enabled.png" alt="Custom domain settings" width="400" height="400"}
-::
+<img src="/img/docs/custom-domains/branded-homepage-enabled.png" alt="Custom domain settings" width="600" />
 
 
 ## How Custom Domains Work

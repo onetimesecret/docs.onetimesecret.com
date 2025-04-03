@@ -3,7 +3,6 @@ title: Why use Secret Links?
 description: Discover the compelling reasons to use Secret Links for secure, one-time sharing of sensitive information.
 ---
 
-# Why use Secret Links?
 
 In today's digital age, sharing sensitive information securely is more important than ever. Secret Links offer a robust solution to this challenge, providing a unique blend of security, simplicity, and peace of mind. Here's why you should consider using Secret Links:
 

@@ -26,28 +26,24 @@ Laden Sie Ihr Markenlogo über die Verwaltungsoberfläche hoch. Das System akzep
 
 ### Logo hochladen
 
-::ImageModal{src="/img/docs/custom-domains/guide-brand-admin-1.png" alt="Logo upload interface showing add button" width="400" height="400"}
-::
+<img src="/img/docs/custom-domains/guide-brand-admin-1.png" alt="Logo upload interface showing add button" width="400" />
 
 ### Logo entfernen oder ersetzen
 
 Entfernen oder ersetzen Sie Logos nach Bedarf über das Logo-Management-Panel.
 
-::ImageModal{src="/img/docs/custom-domains/guide-brand-admin-2.png" alt="Logo-Verwaltungsoberfläche mit Option zum Entfernen" width="400" height="400"}
-::
+<img src="/img/docs/custom-domains/guide-brand-admin-2.png" alt="Logo-Verwaltungsoberfläche mit Option zum Entfernen" width="400" />
 
 
 ## Markenanpassung
 Passen Sie Farben, Schriftarten und Styling über die Schnittstelle für Markeneinstellungen an. Überprüfen Sie Ihre Änderungen in Echtzeit über das Vorschaufenster.
 
-::ImageModal{src="/img/docs/custom-domains/guide-brand-admin-4.png" alt="Schnittstelle zur Anpassung der Marke" width="400" height="400"}
-::
+<img src="/img/docs/custom-domains/guide-brand-admin-4.png" alt="Schnittstelle zur Anpassung der Marke" width="400" />
 
 
 Überprüfen Sie Ihre Branding-Änderungen nach dem Speichern auf der Live-Site.
 
-::ImageModal{src="/img/docs/custom-domains/guide-brand-admin-3.png" alt="Homepage Konfigurationspanel" width="400" height="400"}
-::
+<img src="/img/docs/custom-domains/guide-brand-admin-3.png" alt="Homepage Konfigurationspanel" width="400" />
 
 ## Homepage-Einstellungen
 
@@ -55,15 +51,13 @@ Passen Sie Farben, Schriftarten und Styling über die Schnittstelle für Markene
 
 Zurück auf Ihrem Domain-Dashboard können Sie die Sichtbarkeit Ihrer gebrandeten Homepage konfigurieren. Wenn Sie diese Funktion aktivieren, können Ihre Klienten, Kunden oder Teammitglieder direkt von Ihrer gebrandeten Oberfläche aus Geheimnisse erstellen und teilen.
 
-::ImageModal{src="/img/docs/custom-domains/guide-brand-admin-5.png" alt="Vorschaupanel mit gebrandeter Oberfläche" width="400" height="400"}
-::
+<img src="/img/docs/custom-domains/guide-brand-admin-5.png" alt="Vorschaupanel mit gebrandeter Oberfläche" width="400" />
 
 ### Homepage deaktivieren
 
 
 
-::ImageModal{src="/img/docs/custom-domains/guide-brand-admin-6.png" alt="Live-Ansicht der Implementierung" width="400" height="400"}
-::
+<img src="/img/docs/custom-domains/guide-brand-admin-6.png" alt="Live-Ansicht der Implementierung" width="400" />
 
 ## Wichtige Hinweise
 - Änderungen werden sofort nach dem Speichern verarbeitet

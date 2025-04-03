@@ -3,7 +3,6 @@ title: Use Cases
 description: Explore various scenarios where Secret Links can enhance security and streamline sensitive information sharing.
 ---
 
-##  Use Cases for Secret Links
 
 Secret Links are versatile and can be applied in many situations where secure, one-time sharing of information is crucial. Here are some common use cases:
 
