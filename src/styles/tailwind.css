@@ -1,3 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Enhance typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Zilla Slab", serif;
+}
+
+/* Fix for Color Mode and Language dropdowns overlapping text and icons */
+starlight-theme-select select,
+starlight-lang-select select {
+  width: auto; /* Override the inline style */
+  padding-right: 2.5rem; /* Ensure enough space for the dropdown arrow */
+  padding-left: 2rem; /* Ensure enough space for the icon */
+  text-overflow: ellipsis;
+}
+
+/* Increase the width for language selector to fit longer text */
+starlight-lang-select select {
+  min-width: 8.5rem; /* Provide more space for language names */
+}
+
+/* Theme selector needs less space */
+starlight-theme-select select {
+  min-width: 7rem;
+}
+
+/* Fix icon positioning */
+starlight-theme-select .icon.label-icon,
+starlight-lang-select .icon.label-icon {
+  left: 0.5rem; /* Position icon correctly */
+}
+
+starlight-theme-select .icon.caret,
+starlight-lang-select .icon.caret {
+  right: 0.5rem; /* Position dropdown arrow correctly */
+}
+
+/* Add spacing between theme and language selectors */
+.right-group > :not(:last-child) {
+  margin-right: 0.75rem;
+}

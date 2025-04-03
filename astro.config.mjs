@@ -60,14 +60,17 @@ export default defineConfig({
         alt: "Onetime Secret",
         replacesTitle: true,
       },
-      components: {},
+      pagefind: false, // Disable search for landing page
+      components: {
+        // Header: "./src/components/HeaderCustom.astro",
+        // Footer: "./src/components/FooterCustom.astro",
+      },
       social: {
         github: "https://github.com/onetimesecret/onetimesecret",
       },
       customCss: [
         // Relative path to your custom CSS files
         "./src/styles/tailwind.css",
-        "./src/styles/custom.css",
         "./src/fonts/font-face.css",
       ],
       // Set English as the default language for this site.

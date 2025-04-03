@@ -1,10 +1,23 @@
 import starlightPlugin from "@astrojs/starlight-tailwind";
-import fontPlugin from "./src/styles/font-plugin.mjs";
 
 import colors from "tailwindcss/colors";
 import forms from "@tailwindcss/forms";
 import typography from "@tailwindcss/typography";
 import defaultTheme from "tailwindcss/defaultTheme";
+
+const brandColour = {
+  50: "#fcf8f2",
+  100: "#fcf4e8",
+  200: "#f7dec3",
+  300: "#f0c39e",
+  400: "#e68b5e",
+  500: "#dc4a22",
+  600: "#c43d1b",
+  700: "#a32d12",
+  800: "#85200c",
+  900: "#631507",
+  950: "#400b03",
+};
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -23,24 +36,10 @@ export default {
     },
     extend: {
       colors: {
-        // Your preferred accent color. Indigo is closest to Starlight’s defaults.
-        accent: colors.red,
-        // Your preferred gray scale. Zinc is closest to Starlight’s defaults.
-        gray: colors.zinc,
+        accent: brandColour,
+        gray: colors.neutral, // zine, neutral, stone, slate, gray
         // https://javisperez.github.io/tailwindcolorshades/?flamingo=dc4a22&guardsman-red=23b5dd
-        brand: {
-          50: "#fcf8f2",
-          100: "#fcf4e8",
-          200: "#f7dec3",
-          300: "#f0c39e",
-          400: "#e68b5e",
-          500: "#dc4a22",
-          600: "#c43d1b",
-          700: "#a32d12",
-          800: "#85200c",
-          900: "#631507",
-          950: "#400b03",
-        },
+        brand: brandColour,
         branddim: {
           50: "#fcf8f2",
           100: "#faf0e3",
@@ -84,5 +83,5 @@ export default {
     },
   },
 
-  plugins: [starlightPlugin(), forms(), typography(), fontPlugin()],
+  plugins: [starlightPlugin(), forms(), typography()],
 };
