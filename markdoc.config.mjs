@@ -1,34 +1,37 @@
-import { defineMarkdocConfig } from '@astrojs/markdoc/config';
-import starlightMarkdoc from '@astrojs/starlight-markdoc';
+import { defineMarkdocConfig } from "@astrojs/markdoc/config";
+import starlightMarkdoc from "@astrojs/starlight-markdoc";
 
 // https://docs.astro.build/en/guides/integrations-guide/markdoc/
 export default defineMarkdocConfig({
   extends: [starlightMarkdoc()],
+  variables: {
+    environment: process.env.IS_PROD ? "prod" : "dev",
+  },
   nodes: {
     // Add custom node types here
   },
   tags: {
     // Override and extend tags
     card: {
-      render: 'FeatureCard',
+      render: "FeatureCard",
       attributes: {
         title: { type: String, required: true },
         icon: { type: String },
       },
       slots: {
         default: {
-          render: 'CardContent',
+          render: "CardContent",
         },
       },
     },
     cardgrid: {
-      render: 'CardGrid',
+      render: "CardGrid",
       attributes: {
-        stagger: { type: Boolean, default: false }
+        stagger: { type: Boolean, default: false },
       },
       slots: {
         default: {
-          render: 'CardGridSlot',
+          render: "CardGridSlot",
         },
       },
     },

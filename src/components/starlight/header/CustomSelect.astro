@@ -1,0 +1,87 @@
+---
+// Custom Select component that fixes the dropdown width issues
+import Icon from '@astrojs/starlight/components/Icon.astro';
+
+interface Props {
+  label: string;
+  value: string;
+  icon: Parameters<typeof Icon>[0]['name'];
+  width?: string;
+  options: Array<{
+    label: string;
+    value: string;
+    selected: boolean;
+  }>;
+  className?: string;
+}
+
+const { className, label, value, icon, width, options } = Astro.props;
+---
+
+<label class={className} style={`--custom-select-width: ${width}`}>
+  <span class="sr-only">{label}</span>
+  <Icon name={icon} class="icon label-icon" />
+  <select value={value} autocomplete="off">
+    {
+      options.map(({ value, selected, label }) => (
+        <option value={value} selected={selected} set:html={label} />
+      ))
+    }
+  </select>
+  <Icon name="down-caret" class="icon caret" />
+</label>
+
+<style>
+  label {
+    --icon-size: 1rem;
+    --caret-size: 1rem;
+    --pad-x: 0.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: var(--sl-color-gray-1);
+  }
+
+  label:hover {
+    color: var(--sl-color-gray-2);
+  }
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  .label-icon {
+    font-size: var(--icon-size);
+    left: var(--pad-x);
+  }
+
+  .caret {
+    font-size: var(--caret-size);
+    right: var(--pad-x);
+  }
+
+  select {
+    border: 0;
+    padding: 0.625rem 2.5rem;
+    width: var(--custom-select-width);
+    background-color: transparent;
+    text-overflow: ellipsis;
+    color: inherit;
+    cursor: pointer;
+    appearance: none;
+  }
+
+  option {
+    background-color: var(--sl-color-bg-nav);
+    color: var(--sl-color-gray-1);
+  }
+
+  @media (min-width: 50rem) {
+    select {
+      font-size: var(--sl-text-sm);
+    }
+  }
+</style>

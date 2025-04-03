@@ -1,0 +1,7 @@
+---
+import PageTitle from "@astrojs/starlight/components/PageTitle.astro"
+const isPackagePage = Astro.props.id === 'packages' || "builder-issues";
+import type { Props } from "@astrojs/starlight/props";
+---
+plop
+ <PageTitle {...Astro.props} />

@@ -1,0 +1,58 @@
+---
+// src/content/docs/index.astro
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+import socialCard from '../assets/img/socialcards/onetime-socialcard-20240823-1.png';
+
+const title = "Onetime Secret - Secure Links, Stronger Connections";
+const description = "Onetime Secret offers a secure, ephemeral way to share sensitive information in a digital world.";
+---
+
+<div class="splash-page">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <h1>Secure links, stronger connections</h1>
+    <p>Share sensitive information securely with self-destructing links that are only viewable once.</p>
+    <div class="actions">
+      <a href="/en/introduction/" class="primary-button">Get started <span class="icon">→</span></a>
+      <a href="https://github.com/onetimesecret/onetimesecret" class="secondary-button">View on GitHub <span class="icon">↗</span></a>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>The power of secure sharing</h2>
+    <p>Onetime Secret provides a simple, secure way to share sensitive information. Our service ensures your data remains private and ephemeral in an increasingly permanent digital world.</p>
+
+    <Image src={socialCard} alt="Onetime Secret Social Card" />
+
+    <CardGrid>
+      <Card title="Self-destructing messages" icon="trash">
+        Share secrets that automatically delete after being viewed or after a set time.
+      </Card>
+      <Card title="Server-side encryption" icon="lock-closed">
+        Your secrets are securely encrypted on our servers, ensuring data protection.
+      </Card>
+      <Card title="Passphrase protection" icon="key">
+        Add an extra layer of security with custom passphrases for your shared secrets.
+      </Card>
+    </CardGrid>
+
+    <!-- Additional sections follow the same pattern -->
+  </section>
+</div>
+
+<style>
+  /* Basic styling - you'd use Tailwind classes in your actual implementation */
+  .splash-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .hero-section {
+    text-align: center;
+    padding: 4rem 0;
+  }
+
+  /* More styles... */
+</style>

@@ -28,6 +28,7 @@ const __viteAdditionalServerAllowedHosts =
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://docs.onetimesecret.com",
   // i18n: {
   //   locales: ["en", "nl", "de", "fr_FR", "fr_CA"],
   //   routing: {
@@ -40,6 +41,11 @@ export default defineConfig({
     starlight({
       title: "Onetime Secret - Docs",
 
+      editLink: {
+        baseUrl:
+          "https://github.com/onetimesecret/docs.onetimesecret.com/edit/migrate-to-starlight/",
+      },
+
       // https://docs.astro.build/en/basics/astro-pages/#custom-404-error-page
       //
       // See src/pages/404.astro
@@ -48,13 +54,15 @@ export default defineConfig({
       logo: {
         src: "./src/assets/img/onetime-logo-v3-xs.png",
         alt: "Onetime Secret",
+        replacesTitle: true,
       },
+      components: {},
       social: {
         github: "https://github.com/onetimesecret/onetimesecret",
       },
       customCss: [
         // Relative path to your custom CSS files
-        "./src/styles/tailwind.css",
+        // "./src/styles/tailwind.css",
         "./src/styles/custom.css",
         "./src/fonts/font-face.css",
       ],
@@ -293,21 +301,6 @@ export default defineConfig({
                 de: "Datenminimierung",
               },
               link: "principles/data-minimization",
-            },
-          ],
-        },
-        {
-          label: "Pricing",
-          translations: {
-            de: "Preise",
-          },
-          items: [
-            {
-              label: "Plans & Pricing",
-              translations: {
-                de: "Pläne & Preise",
-              },
-              link: "pricing",
             },
           ],
         },

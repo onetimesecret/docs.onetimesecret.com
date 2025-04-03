@@ -1,6 +1,7 @@
 import starlightPlugin from "@astrojs/starlight-tailwind";
 import fontPlugin from "./src/styles/font-plugin.mjs";
 
+import colors from "tailwindcss/colors";
 import forms from "@tailwindcss/forms";
 import typography from "@tailwindcss/typography";
 import defaultTheme from "tailwindcss/defaultTheme";
@@ -22,6 +23,10 @@ export default {
     },
     extend: {
       colors: {
+        // Your preferred accent color. Indigo is closest to Starlight’s defaults.
+        accent: colors.indigo,
+        // Your preferred gray scale. Zinc is closest to Starlight’s defaults.
+        gray: colors.zinc,
         // https://javisperez.github.io/tailwindcolorshades/?flamingo=dc4a22&guardsman-red=23b5dd
         brand: {
           50: "#fcf8f2",
@@ -76,42 +81,7 @@ export default {
           950: "#021e3b",
         },
       },
-      animation: {
-        "spin-slow": "spin 2s linear infinite",
-        "kitt-rider": "kitt-rider 3s linear infinite",
-        "gradient-x": "gradient-x 5s ease-in-out infinite",
-      },
-      keyframes: {
-        "kitt-rider": {
-          "0%": { transform: "translateX(-100%)" },
-          "100%": { transform: "translateX(100%)" },
-        },
-        "gradient-x": {
-          "0%, 100%": {
-            "background-size": "200% 100%",
-            "background-position": "left center",
-          },
-          "50%": {
-            "background-size": "200% 100%",
-            "background-position": "right center",
-          },
-        },
-      },
-      backgroundSize: {
-        "200%": "200% 100%",
-      },
     },
-    // Don't mess with the scaling. rem == root em (ie. <html>). Everything is relative to that.
-    //fontSize: {
-    //  'sm': '0.9rem',
-    //  'base': '1rem',
-    //  'lg': '1.25rem',
-    //  'xl': '1.30rem',
-    //  '2xl': '1.563rem',
-    //  '3xl': '1.953rem',
-    //  '4xl': '2.441rem',
-    //  '5xl': '3.052rem',
-    //}
   },
 
   plugins: [starlightPlugin(), forms(), typography(), fontPlugin()],
