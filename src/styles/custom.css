@@ -1,6 +1,6 @@
 /* Custom CSS for Onetime Secret Starlight site */
 
-/* Landing grid for hero section */
+/* Light/dark mode support for landing grid */
 .landing-grid {
   position: absolute;
   top: 0;
@@ -9,10 +9,16 @@
   bottom: 0;
   background-size: 40px 40px;
   background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
   z-index: -1;
   overflow: hidden;
+}
+
+.dark .landing-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
 }
 
 .landing-grid:before {
@@ -22,10 +28,43 @@
   height: 100%;
   background: radial-gradient(
     circle at 50% 0%,
-    rgba(220, 74, 34, 0.15),
+    rgba(220, 74, 34, 0.08),
     transparent 60%
   );
   z-index: -1;
+}
+
+.dark .landing-grid:before {
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgba(220, 74, 34, 0.15),
+    transparent 60%
+  );
+}
+
+/* Feature card light/dark mode */
+.feature-card {
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+  border-radius: 12px;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.dark .feature-card:hover {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* Transition effects for theme switching */
+html.transitioning * {
+  transition:
+    background-color 0.5s ease,
+    border-color 0.5s ease,
+    color 0.5s ease;
 }
 
 /* Enhance card grid appearance */

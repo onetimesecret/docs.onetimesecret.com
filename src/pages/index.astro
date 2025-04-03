@@ -33,14 +33,14 @@ const features = [
 <Layout title="Onetime Secret - Secure Sharing Platform">
 
 <!-- Hero Section -->
-<section class="relative py-20 overflow-hidden">
+<section class="relative py-20 overflow-hidden bg-gray-50 dark:bg-gray-900">
   <div class="landing-grid"></div>
   <div class="container mx-auto px-4 max-w-6xl">
     <div class="flex flex-col items-center text-center mb-16">
-      <h1 class="text-5xl md:text-6xl font-brand font-semibold mb-6 text-white">
+      <h1 class="text-5xl md:text-6xl font-brand font-semibold mb-6 text-gray-900 dark:text-white">
         Secure links, stronger connections
       </h1>
-      <p class="text-xl md:text-2xl max-w-3xl mb-10 text-gray-200">
+      <p class="text-xl md:text-2xl max-w-3xl mb-10 text-gray-600 dark:text-gray-200">
         Share sensitive information securely with self-destructing links that are only viewable once.
       </p>
       <div class="flex flex-col sm:flex-row gap-4">
@@ -50,7 +50,7 @@ const features = [
             <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
           </svg>
         </a>
-        <a href="https://github.com/onetimesecret/onetimesecret" class="border border-gray-600 hover:border-brand-400 text-gray-200 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all flex items-center justify-center">
+        <a href="https://github.com/onetimesecret/onetimesecret" class="border border-gray-400 dark:border-gray-600 hover:border-brand-400 dark:hover:border-brand-400 text-gray-700 dark:text-gray-200 hover:text-brand-600 dark:hover:text-white px-8 py-3 rounded-lg font-semibold transition-all flex items-center justify-center">
           <span>View on GitHub</span>
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -59,205 +59,205 @@ const features = [
       </div>
     </div>
     <div class="relative mx-auto max-w-3xl rounded-lg overflow-hidden shadow-2xl">
-    <Image src={socialCard} alt="Onetime Secret Platform" class="w-full" />
+      <Image src={socialCard} alt="Onetime Secret Platform" class="w-full" />
       <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent"></div>
     </div>
   </div>
 </section>
 
 <!-- Core Features Section -->
-<section class="py-16 bg-gray-900">
+<section class="py-16 bg-white dark:bg-gray-900">
   <div class="container mx-auto px-4 max-w-6xl">
-    <h2 class="text-3xl md:text-4xl font-brand font-semibold text-center mb-12 text-white">
+    <h2 class="text-3xl md:text-4xl font-brand font-semibold text-center mb-12 text-gray-900 dark:text-white">
       The power of secure sharing
     </h2>
-    <p class="text-lg text-center max-w-3xl mx-auto mb-12 text-gray-300">
+    <p class="text-lg text-center max-w-3xl mx-auto mb-12 text-gray-600 dark:text-gray-300">
       Onetime Secret provides a simple, secure way to share sensitive information. Our service ensures your data remains private and ephemeral in an increasingly permanent digital world.
     </p>
 
     <div class="grid md:grid-cols-3 gap-8">
       <!-- Card 1 -->
-      <div class="feature-card bg-gray-800 p-6 flex flex-col">
-        <div class="rounded-full bg-brand-500/20 p-3 w-fit mb-4">
+      <div class="feature-card bg-gray-50 dark:bg-gray-800 p-6 flex flex-col border border-gray-200 dark:border-gray-700">
+        <div class="rounded-full bg-brand-500/10 dark:bg-brand-500/20 p-3 w-fit mb-4">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
           </svg>
         </div>
-        <h3 class="text-xl font-brand font-semibold text-white">Self-destructing messages</h3>
-        <p class="text-gray-300 mt-2">Share secrets that automatically delete after being viewed or after a set time.</p>
+        <h3 class="text-xl font-brand font-semibold text-gray-900 dark:text-white">Self-destructing messages</h3>
+        <p class="text-gray-600 dark:text-gray-300 mt-2">Share secrets that automatically delete after being viewed or after a set time.</p>
       </div>
 
-      <!-- Card 2 -->
-      <div class="feature-card bg-gray-800 p-6 flex flex-col">
-        <div class="rounded-full bg-brand-500/20 p-3 w-fit mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-          </svg>
+        <!-- Card 2 -->
+        <div class="feature-card bg-gray-800 p-6 flex flex-col">
+          <div class="rounded-full bg-brand-500/20 p-3 w-fit mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-brand font-semibold text-white">Server-side encryption</h3>
+          <p class="text-gray-300 mt-2">Your secrets are securely encrypted on our servers, ensuring data protection.</p>
         </div>
-        <h3 class="text-xl font-brand font-semibold text-white">Server-side encryption</h3>
-        <p class="text-gray-300 mt-2">Your secrets are securely encrypted on our servers, ensuring data protection.</p>
-      </div>
 
-      <!-- Card 3 -->
-      <div class="feature-card bg-gray-800 p-6 flex flex-col">
-        <div class="rounded-full bg-brand-500/20 p-3 w-fit mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
-          </svg>
+        <!-- Card 3 -->
+        <div class="feature-card bg-gray-800 p-6 flex flex-col">
+          <div class="rounded-full bg-brand-500/20 p-3 w-fit mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-brand font-semibold text-white">Passphrase protection</h3>
+          <p class="text-gray-300 mt-2">Add an extra layer of security with custom passphrases for your shared secrets.</p>
         </div>
-        <h3 class="text-xl font-brand font-semibold text-white">Passphrase protection</h3>
-        <p class="text-gray-300 mt-2">Add an extra layer of security with custom passphrases for your shared secrets.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Flexibility Section -->
-<section class="py-16 bg-gray-800">
-  <div class="container mx-auto px-4 max-w-6xl">
-    <h2 class="text-3xl md:text-4xl font-brand font-semibold text-center mb-12 text-white">
-      The flexibility of our service
-    </h2>
-    <p class="text-lg text-center max-w-3xl mx-auto mb-12 text-gray-300">
-      Onetime Secret offers customizable options to meet your specific needs, whether you're an individual or a business looking for a branded solution.
-    </p>
+  <!-- Flexibility Section -->
+  <section class="py-16 bg-gray-800">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <h2 class="text-3xl md:text-4xl font-brand font-semibold text-center mb-12 text-white">
+        The flexibility of our service
+      </h2>
+      <p class="text-lg text-center max-w-3xl mx-auto mb-12 text-gray-300">
+        Onetime Secret offers customizable options to meet your specific needs, whether you're an individual or a business looking for a branded solution.
+      </p>
 
-    <div class="grid md:grid-cols-3 gap-8">
-      <!-- Card 1 -->
-      <div class="feature-card bg-gray-700 p-6 flex flex-col">
-        <div class="rounded-full bg-brandcomp-500/20 p-3 w-fit mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brandcomp-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="feature-card bg-gray-700 p-6 flex flex-col">
+          <div class="rounded-full bg-brandcomp-500/20 p-3 w-fit mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brandcomp-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-brand font-semibold text-white">Customizable expiration</h3>
+          <p class="text-gray-300 mt-2">Set your secret to expire after a specific time, from minutes to days.</p>
         </div>
-        <h3 class="text-xl font-brand font-semibold text-white">Customizable expiration</h3>
-        <p class="text-gray-300 mt-2">Set your secret to expire after a specific time, from minutes to days.</p>
-      </div>
 
-      <!-- Card 2 -->
-      <div class="feature-card bg-gray-700 p-6 flex flex-col">
-        <div class="rounded-full bg-brandcomp-500/20 p-3 w-fit mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brandcomp-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-          </svg>
+        <!-- Card 2 -->
+        <div class="feature-card bg-gray-700 p-6 flex flex-col">
+          <div class="rounded-full bg-brandcomp-500/20 p-3 w-fit mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brandcomp-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-brand font-semibold text-white">Custom domains</h3>
+          <p class="text-gray-300 mt-2">Use your own domain for a personalized and branded experience.</p>
         </div>
-        <h3 class="text-xl font-brand font-semibold text-white">Custom domains</h3>
-        <p class="text-gray-300 mt-2">Use your own domain for a personalized and branded experience.</p>
-      </div>
 
-      <!-- Card 3 -->
-      <div class="feature-card bg-gray-700 p-6 flex flex-col">
-        <div class="rounded-full bg-brandcomp-500/20 p-3 w-fit mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brandcomp-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-          </svg>
+        <!-- Card 3 -->
+        <div class="feature-card bg-gray-700 p-6 flex flex-col">
+          <div class="rounded-full bg-brandcomp-500/20 p-3 w-fit mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brandcomp-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-brand font-semibold text-white">Open source</h3>
+          <p class="text-gray-300 mt-2">Our transparent, community-audited codebase ensures trust and reliability.</p>
         </div>
-        <h3 class="text-xl font-brand font-semibold text-white">Open source</h3>
-        <p class="text-gray-300 mt-2">Our transparent, community-audited codebase ensures trust and reliability.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Value Proposition Section -->
-<section class="py-16 bg-gray-900">
-  <div class="container mx-auto px-4 max-w-6xl">
-    <h2 class="text-3xl md:text-4xl font-brand font-semibold text-center mb-12 text-white">
-      Why choose Onetime Secret?
-    </h2>
-    <p class="text-lg text-center max-w-3xl mx-auto mb-12 text-gray-300">
-      Onetime Secret offers a secure, compliant, and user-friendly platform for sharing sensitive information, prioritizing your privacy and data protection.
-    </p>
-
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Card 1 -->
-      <div class="feature-card bg-gray-800 p-6 flex flex-col">
-        <div class="rounded-full bg-brand-500/20 p-3 w-fit mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-          </svg>
-        </div>
-        <h3 class="text-xl font-brand font-semibold text-white">Privacy-First Design</h3>
-        <p class="text-gray-300 mt-2">Built from the ground up with privacy in mind, ensuring your sensitive data remains confidential and protected.</p>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="feature-card bg-gray-800 p-6 flex flex-col">
-        <div class="rounded-full bg-brand-500/20 p-3 w-fit mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-          </svg>
-        </div>
-        <h3 class="text-xl font-brand font-semibold text-white">Custom Domains</h3>
-        <p class="text-gray-300 mt-2">State-of-the-art network architecture allows for data-locality and custom domain integration, providing a branded and compliant experience.</p>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="feature-card bg-gray-800 p-6 flex flex-col">
-        <div class="rounded-full bg-brand-500/20 p-3 w-fit mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-        </div>
-        <h3 class="text-xl font-brand font-semibold text-white">Self-Destructing Messages</h3>
-        <p class="text-gray-300 mt-2">Messages automatically delete after a set time or single view, minimizing digital footprints and enhancing security.</p>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="feature-card bg-gray-800 p-6 flex flex-col">
-        <div class="rounded-full bg-brand-500/20 p-3 w-fit mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-          </svg>
-        </div>
-        <h3 class="text-xl font-brand font-semibold text-white">Compliance Ready</h3>
-        <p class="text-gray-300 mt-2">Designed to help meet global privacy regulations, including GDPR, CCPA, and HIPAA requirements.</p>
-      </div>
-
-      <!-- Card 5 -->
-      <div class="feature-card bg-gray-800 p-6 flex flex-col">
-        <div class="rounded-full bg-brand-500/20 p-3 w-fit mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-          </svg>
-        </div>
-        <h3 class="text-xl font-brand font-semibold text-white">Open-Source Transparency</h3>
-        <p class="text-gray-300 mt-2">Our open-source model ensures transparency and allows for community-driven security enhancements.</p>
-      </div>
-
-      <!-- Card 6 -->
-      <div class="feature-card bg-gray-800 p-6 flex flex-col">
-        <div class="rounded-full bg-brand-500/20 p-3 w-fit mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-          </svg>
-        </div>
-        <h3 class="text-xl font-brand font-semibold text-white">User-Friendly Interface</h3>
-        <p class="text-gray-300 mt-2">Intuitive design makes secure information sharing accessible to both technical and non-technical users.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CTA Section -->
-<section class="py-16 bg-gray-800 relative">
-  <div class="landing-grid"></div>
-  <div class="container mx-auto px-4 max-w-6xl text-center relative z-10">
-    <h2 class="text-3xl md:text-4xl font-brand font-semibold mb-6 text-white">
-      Enhance Your Privacy Today
-    </h2>
-    <p class="text-xl max-w-3xl mx-auto mb-10 text-gray-200">
-      Join the thousands of users who trust Onetime Secret for secure, ephemeral sharing. Family-operated since 2012.
-    </p>
-    <div class="flex flex-col sm:flex-row gap-6 justify-center">
-      <a href="/en/pricing/" class="bg-brandcomp-500 hover:bg-brandcomp-600 text-white px-8 py-3 rounded-lg font-semibold transition-all">
-        Explore Premium Plans
-      </a>
-      <a href="/en/introduction/" class="bg-transparent border border-gray-600 hover:border-white text-white px-8 py-3 rounded-lg font-semibold transition-all">
-        Try Free
-      </a>
+  <!-- Value Proposition Section -->
+  <section class="py-16 bg-gray-900">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <h2 class="text-3xl md:text-4xl font-brand font-semibold text-center mb-12 text-white">
+        Why choose Onetime Secret?
+      </h2>
+      <p class="text-lg text-center max-w-3xl mx-auto mb-12 text-gray-300">
+        Onetime Secret offers a secure, compliant, and user-friendly platform for sharing sensitive information, prioritizing your privacy and data protection.
+      </p>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <div class="feature-card bg-gray-800 p-6 flex flex-col">
+          <div class="rounded-full bg-brand-500/20 p-3 w-fit mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-brand font-semibold text-white">Privacy-First Design</h3>
+          <p class="text-gray-300 mt-2">Built from the ground up with privacy in mind, ensuring your sensitive data remains confidential and protected.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="feature-card bg-gray-800 p-6 flex flex-col">
+          <div class="rounded-full bg-brand-500/20 p-3 w-fit mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-brand font-semibold text-white">Custom Domains</h3>
+          <p class="text-gray-300 mt-2">State-of-the-art network architecture allows for data-locality and custom domain integration, providing a branded and compliant experience.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="feature-card bg-gray-800 p-6 flex flex-col">
+          <div class="rounded-full bg-brand-500/20 p-3 w-fit mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-brand font-semibold text-white">Self-Destructing Messages</h3>
+          <p class="text-gray-300 mt-2">Messages automatically delete after a set time or single view, minimizing digital footprints and enhancing security.</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="feature-card bg-gray-800 p-6 flex flex-col">
+          <div class="rounded-full bg-brand-500/20 p-3 w-fit mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-brand font-semibold text-white">Compliance Ready</h3>
+          <p class="text-gray-300 mt-2">Designed to help meet global privacy regulations, including GDPR, CCPA, and HIPAA requirements.</p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="feature-card bg-gray-800 p-6 flex flex-col">
+          <div class="rounded-full bg-brand-500/20 p-3 w-fit mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-brand font-semibold text-white">Open-Source Transparency</h3>
+          <p class="text-gray-300 mt-2">Our open-source model ensures transparency and allows for community-driven security enhancements.</p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="feature-card bg-gray-800 p-6 flex flex-col">
+          <div class="rounded-full bg-brand-500/20 p-3 w-fit mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-brand font-semibold text-white">User-Friendly Interface</h3>
+          <p class="text-gray-300 mt-2">Intuitive design makes secure information sharing accessible to both technical and non-technical users.</p>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-gray-800 relative">
+    <div class="landing-grid"></div>
+    <div class="container mx-auto px-4 max-w-6xl text-center relative z-10">
+      <h2 class="text-3xl md:text-4xl font-brand font-semibold mb-6 text-white">
+        Enhance Your Privacy Today
+      </h2>
+      <p class="text-xl max-w-3xl mx-auto mb-10 text-gray-200">
+        Join the thousands of users who trust Onetime Secret for secure, ephemeral sharing. Family-operated since 2012.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <a href="/en/pricing/" class="bg-brandcomp-500 hover:bg-brandcomp-600 text-white px-8 py-3 rounded-lg font-semibold transition-all">
+          Explore Premium Plans
+        </a>
+        <a href="/en/introduction/" class="bg-transparent border border-gray-600 hover:border-white text-white px-8 py-3 rounded-lg font-semibold transition-all">
+          Try Free
+        </a>
+      </div>
+    </div>
+  </section>
 
 </Layout>

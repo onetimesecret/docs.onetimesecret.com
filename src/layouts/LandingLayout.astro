@@ -1,5 +1,10 @@
 ---
 // src/layouts/LandingLayout.astro
+import '../styles/tailwind.css';
+import '../styles/custom.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
 const { title } = Astro.props;
 ---
 
@@ -9,10 +14,62 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+    <!-- Preload Starlight theme script to prevent FOUC (Flash of Unstyled Content) -->
+    <script is:inline>
+      // Get stored theme or default to auto
+      const theme = (() => {
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+          return localStorage.getItem('theme');
+        }
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          return 'dark';
+        }
+        return 'light';
+      })();
+
+      // Apply theme class to document
+      if (theme === 'light') {
+        document.documentElement.classList.remove('dark');
+      } else {
+        document.documentElement.classList.add('dark');
+      }
+
+      // Store theme in localStorage
+      if (typeof localStorage !== 'undefined') {
+        localStorage.setItem('theme', theme);
+      }
+    </script>
   </head>
-  <body class="bg-gray-900 text-white">
+  <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+    <Header />
     <main>
       <slot />
     </main>
+    <Footer />
+
+    <!-- Theme toggle script for Starlight compatibility -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const starlightThemeSelect = document.querySelector('starlight-theme-select select');
+        if (starlightThemeSelect) {
+          // Set initial value
+          const currentTheme = localStorage.getItem('theme') || 'auto';
+          starlightThemeSelect.value = currentTheme;
+
+          // Listen for changes
+          starlightThemeSelect.addEventListener('change', (e) => {
+            const newTheme = e.target.value;
+            localStorage.setItem('theme', newTheme);
+
+            if (newTheme === 'dark' || (newTheme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+              document.documentElement.classList.add('dark');
+            } else {
+              document.documentElement.classList.remove('dark');
+            }
+          });
+        }
+      });
+    </script>
   </body>
 </html>

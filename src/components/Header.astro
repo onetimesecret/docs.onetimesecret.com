@@ -1,174 +1,78 @@
+<!-- src/components/Header.astro -->
 ---
-import MobileMenuToggle from "virtual:starlight/components/MobileMenuToggle";
-import config from "virtual:starlight/user-config";
-import type { StarlightRouteData as Props } from "virtual:starlight/utils/route-data";
-
-import LanguageSelect from "virtual:starlight/components/LanguageSelect";
-import Search from "virtual:starlight/components/Search";
-import SiteTitle from "virtual:starlight/components/SiteTitle";
-import SocialIcons from "virtual:starlight/components/SocialIcons";
-import ThemeSelect from "virtual:starlight/components/ThemeSelect";
-import { Icon } from "@astrojs/starlight/components";
-
-let { pathname } = Astro.url;
-
-let showMobileMenu =
-  pathname === "/" ||
-  pathname.startsWith("/packages") ||
-  pathname.startsWith("/builder");
-
-/**
- * Render the `Search` component if Pagefind is enabled or the default search component has been overridden.
- */
-const shouldRenderSearch =
-  config.pagefind ||
-  config.components.Search !== "@astrojs/starlight/components/Search.astro";
+import { getRelativeLocaleUrl } from 'astro:i18n';
 ---
 
-<div class="header sl-flex">
-  <div class="title-wrapper sl-flex">
-    <SiteTitle {...Astro.props} />
-  </div>
-  <div class="sl-flex gap-2 items-center">
-    {shouldRenderSearch && <Search {...Astro.props} />}
-    {
-      showMobileMenu && (
-        <div class="md:hidden flex">
-          <div>
-            <button class="flex md:sl-hidden" id="menu-btn">
-              <Icon name="bars" />
-            </button>
-          </div>
-        </div>
-      )
-    }
+<header class="sticky top-0 z-40 w-full border-b dark:border-gray-800 border-gray-200 bg-white/90 dark:bg-gray-900/90 backdrop-blur">
+  <div class="container mx-auto px-4 max-w-6xl">
+    <div class="flex h-16 items-center justify-between">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <a href="/" class="flex items-center">
+          <img src="/src/assets/img/onetime-logo-v3-xs.png" alt="Onetime Secret" class="h-8">
+          <span class="ml-2 text-xl font-brand font-medium hidden sm:block dark:text-white text-gray-900">Onetime Secret</span>
+        </a>
+      </div>
 
-    <!-- Mobile Menu -->
-    <div
-      id="mobile-menu"
-      class="hidden md:hidden absolute top-14 right-0 left-0 bottom-0"
-    >
-      <div
-        class="bg-white dark:bg-[#17181C] backdrop-blur-lg h-screen flex flex-col gap-2 px-4 pt-4"
-      >
-        <a
-          class="text-sm text-gray-800 dark:text-white no-underline hover:opacity-80 py-4 px-2"
-          href="/en/getting-started/athenaos/">Docs</a
-        >
-        <a
-          class="text-sm text-gray-800 dark:text-white no-underline hover:opacity-80 py-4 px-2"
-          href="/packages">Packages</a
-        >
-        <a
-          class="text-sm text-gray-800 dark:text-white no-underline hover:opacity-80 py-4 px-2"
-          href="/builder">Builder</a
-        >
-        <div class="px-2 flex gap-3 pt-8">
-          <SocialIcons {...Astro.props} />
-        </div>
-        <div class="flex right-group p-2">
-          <ThemeSelect {...Astro.props} />
-          <LanguageSelect {...Astro.props} />
-        </div>
+      <!-- Navigation -->
+      <nav class="hidden md:flex items-center space-x-6">
+        <a href={getRelativeLocaleUrl('en', 'introduction')} class="text-gray-700 dark:text-gray-300 hover:text-brand-500 font-medium">Docs</a>
+        <a href={getRelativeLocaleUrl('en', 'custom-domains')} class="text-gray-700 dark:text-gray-300 hover:text-brand-500 font-medium">Custom Domains</a>
+        <a href={getRelativeLocaleUrl('en', 'rest-api')} class="text-gray-700 dark:text-gray-300 hover:text-brand-500 font-medium">API</a>
+        <a href="https://github.com/onetimesecret/onetimesecret" class="text-gray-700 dark:text-gray-300 hover:text-brand-500 font-medium">GitHub</a>
+      </nav>
+
+      <!-- Right controls -->
+      <div class="flex items-center space-x-4">
+        <!-- Language selector - use Starlight component -->
+        <starlight-lang-select>
+          <select>
+            <option value="en">English</option>
+            <option value="de">Deutsch</option>
+            <option value="fr_FR">Français</option>
+            <option value="nl">Nederlands</option>
+          </select>
+        </starlight-lang-select>
+
+        <!-- Theme toggle - use Starlight component -->
+        <starlight-theme-select>
+          <select>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+            <option value="auto">Auto</option>
+          </select>
+        </starlight-theme-select>
+
+        <!-- Mobile menu button - only shown on mobile -->
+        <button type="button" id="mobile-menu-button" class="md:hidden inline-flex items-center justify-center rounded-md p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">
+          <span class="sr-only">Open main menu</span>
+          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       </div>
     </div>
   </div>
 
-  <div class="sl-hidden md:sl-flex right-group">
-    <div class="sl-flex social-icons">
-      <a
-        href="/en/getting-started/athenaos/"
-        class="text-black hover:text-gray-700 dark:text-white dark:hover:text-gray-300 no-underline"
-        >Docs</a
-      >
-      <a
-        href="/packages"
-        class="text-black hover:text-gray-700 dark:text-white dark:hover:text-gray-300 no-underline"
-        >Packages</a
-      >
-      <a
-        style="border-inline-end:1px solid var(--sl-color-gray-5)"
-        href="/builder"
-        class="text-black hover:text-gray-700 dark:text-white dark:hover:text-gray-300 no-underline pe-4"
-        >Builder</a
-      >
-      <SocialIcons {...Astro.props} />
+  <!-- Mobile menu - hidden by default -->
+  <div class="md:hidden hidden" id="mobile-menu">
+    <div class="space-y-1 px-4 py-2 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+      <a href={getRelativeLocaleUrl('en', 'introduction')} class="block py-2 text-gray-700 dark:text-gray-300 hover:text-brand-500 font-medium">Docs</a>
+      <a href={getRelativeLocaleUrl('en', 'custom-domains')} class="block py-2 text-gray-700 dark:text-gray-300 hover:text-brand-500 font-medium">Custom Domains</a>
+      <a href={getRelativeLocaleUrl('en', 'rest-api')} class="block py-2 text-gray-700 dark:text-gray-300 hover:text-brand-500 font-medium">API</a>
+      <a href="https://github.com/onetimesecret/onetimesecret" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-brand-500 font-medium">GitHub</a>
     </div>
-    <ThemeSelect {...Astro.props} />
-    <LanguageSelect {...Astro.props} />
   </div>
-</div>
-
-<style>
-  .header {
-    gap: var(--sl-nav-gap);
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-  }
-
-  .title-wrapper {
-    /* Prevent long titles overflowing and covering the search and menu buttons on narrow viewports. */
-    overflow: hidden;
-  }
-
-  .right-group,
-  .social-icons {
-    gap: 1rem;
-    align-items: center;
-  }
-  .social-icons::after {
-    content: "";
-    height: 2rem;
-    border-inline-end: 1px solid var(--sl-color-gray-5);
-  }
-
-  @media (min-width: 50rem) {
-    :global(:root[data-has-sidebar]) {
-      --__sidebar-pad: calc(2 * var(--sl-nav-pad-x));
-    }
-    :global(:root:not([data-has-toc])) {
-      --__toc-width: 0rem;
-    }
-    .header {
-      --__sidebar-width: max(
-        0rem,
-        var(--sl-content-inline-start, 0rem) - var(--sl-nav-pad-x)
-      );
-      --__main-column-fr: calc(
-        (
-            100% + var(--__sidebar-pad, 0rem) -
-              var(--__toc-width, var(--sl-sidebar-width)) -
-              (2 * var(--__toc-width, var(--sl-nav-pad-x))) -
-              var(--sl-content-inline-start, 0rem) - var(--sl-content-width)
-          ) / 2
-      );
-      display: grid;
-      grid-template-columns:
-        /* 1 (site title): runs up until the main content column’s left edge or the width of the title, whichever is the largest  */
-        minmax(
-          calc(
-            var(--__sidebar-width) +
-              max(0rem, var(--__main-column-fr) - var(--sl-nav-gap))
-          ),
-          auto
-        )
-        /* 2 (search box): all free space that is available. */
-        1fr
-        /* 3 (right items): use the space that these need. */
-        auto;
-      align-content: center;
-    }
-  }
-</style>
+</header>
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const menuBtn = document.getElementById("menu-btn");
-    const mobileMenu = document.getElementById("mobile-menu");
-
-    menuBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
-    });
+  // Toggle mobile menu
+  document.getElementById('mobile-menu-button')?.addEventListener('click', () => {
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenu?.classList.contains('hidden')) {
+      mobileMenu.classList.remove('hidden');
+    } else {
+      mobileMenu?.classList.add('hidden');
+    }
   });
 </script>
