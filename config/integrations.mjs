@@ -2,10 +2,9 @@ import starlight from "@astrojs/starlight";
 import markdoc from "@astrojs/markdoc";
 import tailwind from "@astrojs/tailwind";
 import vue from "@astrojs/vue";
-import type { AstroIntegration } from "astro";
-import { starlightConfig } from "./starlight";
+import { starlightConfig } from "./starlight.mjs";
 
-export function createIntegrations(): AstroIntegration[] {
+export function createIntegrations() {
   return [
     markdoc(),
     vue(),
@@ -13,7 +12,7 @@ export function createIntegrations(): AstroIntegration[] {
     tailwind({
       applyBaseStyles: false,
       nesting: false,
-      configFile: "tailwind.config.ts",
+      configFile: "tailwind.config.mjs",
     }),
   ];
 }

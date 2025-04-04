@@ -1,1 +1,60 @@
-src/pages/404.astro
+---
+// src/pages/404.astro
+import { Image } from 'astro:assets';
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import '../styles/tailwind.css';
+import notFoundImage from '../assets/img/404-illustration.svg';
+---
+
+<StarlightPage frontmatter={{ title: 'Page Not Found', template: 'splash' }}>
+  <div class="container mx-auto px-4 py-16 max-w-4xl text-center">
+    <!-- Error Message -->
+    <h1 class="text-5xl font-bold mb-4 text-gray-900 dark:text-white">404</h1>
+    <h2 class="text-2xl font-semibold mb-6 text-gray-700 dark:text-gray-200">
+
+    </h2>
+    <p class="text-lg mb-8 text-gray-600 dark:text-gray-300">
+      The page you're looking for doesn't exist or has been moved.
+    </p>
+
+    <!-- Navigation Options -->
+    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12 not-content">
+      <a href="/" class="bg-brand-500 text-white hover:bg-brand-600 px-6 py-2 rounded-lg font-medium transition-colors">
+        Return Home
+      </a>
+      <a href="/en/introduction/" class="border border-gray-400 dark:border-gray-600 text-gray-700 dark:text-gray-200 hover:border-brand-500 px-6 py-2 rounded-lg font-medium transition-colors">
+        View Documentation
+      </a>
+    </div>
+
+    <!-- Illustration -->
+    <div class="max-w-md mx-auto">
+      <Image
+        src={notFoundImage}
+        alt="Page not found illustration"
+        width={400}
+        height={300}
+        class="w-full h-auto"
+      />
+    </div>
+
+    <!-- Helpful Links -->
+    <div class="pt-36 mt-10 border-t border-gray-200 dark:border-gray-700">
+      <h3 class="text-xl font-semibold mb-6 text-gray-900 dark:text-white">Looking for something?</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <a href="/en/introduction/" class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+          <h4 class="font-medium text-gray-900 dark:text-white mb-2">Documentation</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300">Learn how to use Onetime Secret</p>
+        </a>
+        <a href="https://onetimesecret.com" class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+          <h4 class="font-medium text-gray-900 dark:text-white mb-2">Create a Secret</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300">Use the application</p>
+        </a>
+        <a href="/en/support/" class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+          <h4 class="font-medium text-gray-900 dark:text-white mb-2">Support</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300">Get help with any issues</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</StarlightPage>

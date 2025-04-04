@@ -1,8 +1,12 @@
-import type { StarlightConfig } from "@astrojs/starlight/types";
-import { i18nConfig } from "./i18n";
-import { sidebar } from "./sidebar";
+// docs.onetimesecret.com/starlight/config/starlight.mjs
+import { i18nConfig } from "./i18n.mjs";
+import { sidebar } from "./sidebar.mjs";
 
-export const starlightConfig: StarlightConfig = {
+/**
+ * Starlight configuration object
+ * Defines the structure and behavior of the documentation site
+ */
+export const starlightConfig = {
   title: "Onetime Secret - Docs",
   // favicon: "./src/assets/img/favicon.ico",
   editLink: {
@@ -19,8 +23,8 @@ export const starlightConfig: StarlightConfig = {
   pagefind: false,
   plugins: [],
   components: {
-    Header: "./src/components/starlight/Header.astro",
-    SiteTitle: "./src/components/starlight/SiteTitle.astro",
+    // Header: "./src/components/starlight/Header.astro",
+    // SiteTitle: "./src/components/starlight/SiteTitle.astro",
   },
   social: {
     // Prioritize runtime validation errors over TypeScript errors when

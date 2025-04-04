@@ -1,16 +1,14 @@
-import type { StarlightUserConfig } from "@astrojs/starlight/types";
+// docs.onetimesecret.com/starlight/config/sidebar.mjs
 
-// Helper function to create sidebar link items with required attrs
-function createLink(
-  label: string,
-  link: string,
-  translations: Record<string, string> = {},
-  badge?: {
-    text: string;
-    variant: "note" | "danger" | "success" | "caution" | "tip";
-    class?: string;
-  },
-) {
+/**
+ * Helper function to create sidebar link items with required attrs
+ * @param {string} label - Display label for the link
+ * @param {string} link - URL path for the link
+ * @param {Object} translations - Localized versions of the label by language code
+ * @param {Object} [badge] - Optional badge configuration
+ * @returns {Object} Formatted sidebar link item
+ */
+function createLink(label, link, translations = {}, badge) {
   return {
     label,
     link,
@@ -20,13 +18,15 @@ function createLink(
   };
 }
 
-// Helper function to create sidebar group items
-function createGroup(
-  label: string,
-  translations: Record<string, string> = {},
-  items: any[] = [],
-  collapsed: boolean = false,
-) {
+/**
+ * Helper function to create sidebar group items
+ * @param {string} label - Display label for the group
+ * @param {Object} translations - Localized versions of the label by language code
+ * @param {Array} items - Child items (links or groups) within this group
+ * @param {boolean} collapsed - Whether the group should be collapsed by default
+ * @returns {Object} Formatted sidebar group item
+ */
+function createGroup(label, translations = {}, items = [], collapsed = false) {
   return {
     label,
     translations,
@@ -35,7 +35,8 @@ function createGroup(
   };
 }
 
-export const sidebar: StarlightUserConfig["sidebar"] = [
+// Sidebar configuration for Starlight
+export const sidebar = [
   createLink("Home", "/", { de: "Startseite" }),
 
   createGroup("Introduction", { de: "Einführung" }, [

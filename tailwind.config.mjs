@@ -1,7 +1,12 @@
+// docs.onetimesecret.com/starlight/tailwind.config.mjs
 import starlightPlugin from "@astrojs/starlight-tailwind";
 import colors from "tailwindcss/colors";
 import defaultTheme from "tailwindcss/defaultTheme";
 
+/**
+ * Brand color palette definition
+ * Used for primary UI elements and accent colors
+ */
 const brandColour = {
   50: "#fcf8f2",
   100: "#fcf4e8",
@@ -33,7 +38,7 @@ export default {
     extend: {
       colors: {
         accent: brandColour,
-        gray: colors.neutral, // zine, neutral, stone, slate, gray
+        gray: colors.neutral, // zinc, neutral, stone, slate, gray
         // https://javisperez.github.io/tailwindcolorshades/?flamingo=dc4a22&guardsman-red=23b5dd
         brand: brandColour,
         branddim: {
