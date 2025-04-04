@@ -19,6 +19,7 @@ starlight-lang-select select {
   padding-right: 2.5rem; /* Ensure enough space for the dropdown arrow */
   padding-left: 2rem; /* Ensure enough space for the icon */
   text-overflow: ellipsis;
+  background-image: none; /* Removes the double toggle */
 }
 
 /* Increase the width for language selector to fit longer text */
@@ -45,4 +46,32 @@ starlight-lang-select .icon.caret {
 /* Add spacing between theme and language selectors */
 .right-group > :not(:last-child) {
   margin-right: 0.75rem;
+}
+
+/* Fix theme selector dark mode styling */
+html[data-theme="dark"] starlight-theme-select select,
+html[data-theme="dark"] starlight-lang-select select {
+  background-color: var(--sl-color-black);
+  color: var(--sl-color-white);
+  border-color: var(--sl-color-gray-5);
+}
+
+/* Fix dropdown options in dark mode */
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] starlight-theme-select select,
+  html[data-theme="auto"] starlight-lang-select select {
+    background-color: var(--sl-color-black);
+    color: var(--sl-color-white);
+    border-color: var(--sl-color-gray-5);
+  }
+}
+
+/* Ensure hover states maintain proper contrast */
+html[data-theme="dark"] starlight-theme-select select:hover,
+html[data-theme="dark"] starlight-lang-select select:hover,
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] starlight-theme-select select:hover,
+  html[data-theme="auto"] starlight-lang-select select:hover {
+    background-color: var(--sl-color-gray-8);
+  }
 }

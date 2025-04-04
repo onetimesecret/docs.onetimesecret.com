@@ -16,7 +16,10 @@ export const starlightConfig: StarlightConfig = {
     replacesTitle: true,
   },
   pagefind: false,
-  components: {},
+  components: {
+    Header: "./src/components/starlight/Header.astro",
+    SiteTitle: "./src/components/starlight/SiteTitle.astro",
+  },
   social: {
     // Prioritize runtime validation errors over TypeScript errors when
     // they conflict so keep this a string rather than an object for now.
