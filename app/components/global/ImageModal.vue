@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NuxtImg
+    <img
       :src="props.src"
       :alt="props.alt"
       :width="props.width"
@@ -10,7 +10,7 @@
     />
     <teleport to="body">
       <div v-if="isModalOpen" @click="closeModal" class="modal">
-        <NuxtImg :src="props.src" :alt="props.alt" class="modal-image" />
+        <img :src="props.src" :alt="props.alt" class="modal-image" />
       </div>
     </teleport>
   </div>
@@ -25,6 +25,10 @@ interface Props {
   width?: number | string;
   height?: number | string;
 }
+
+const isSvg = computed(() => {
+  return props.src.toLowerCase().endsWith('.svg');
+});
 
 const props = defineProps<Props>();
 const isModalOpen = ref(false);

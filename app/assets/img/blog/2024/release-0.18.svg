@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 200 200">
+  <style>
+    .hidden-message {
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    svg:hover .hidden-message {
+      opacity: 1;
+    }
+
+    .main-content {
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    svg:hover .main-content {
+      opacity: 0.3;
+    }
+
+    /* Animation for confetti */
+    @keyframes confetti-fall {
+      0% {
+        transform: translateY(0) rotate(0deg);
+      }
+
+      100% {
+        transform: translateY(200px) rotate(360deg);
+      }
+    }
+
+    .confetti {
+      animation: confetti-fall 2s infinite;
+    }
+
+    @font-face {
+      font-family: 'Zilla Slab';
+      src: url('https://onetimesecret.com/dist/assets/ZillaSlab-Regular-CpTS5Ubm.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    text.release {
+      font-family: 'Zilla Slab', sans-serif !important;
+    }
+
+    .celebration-text {
+      font-family: 'Zilla Slab', Arial, sans-serif;
+      font-weight: bold;
+    }
+  </style>
+  <defs>
+    <radialGradient id="fountainFill"
+                    cx="50%"
+                    cy="50%"
+                    r="50%"
+                    fx="50%"
+                    fy="50%">
+      <stop offset="0%"
+            style="stop-color:#e68b5e; stop-opacity:1" />
+      <stop offset="100%"
+            style="stop-color:#dc4a22; stop-opacity:1" />
+    </radialGradient>
+  </defs>
+
+  <rect width="200"
+        height="200"
+        fill="url(#fountainFill)" />
+
+  <g class="main-content">
+    <text class="release"
+          x="100"
+          y="112"
+          font-size="120"
+          font-weight="bold"
+          text-anchor="middle"
+          dominant-baseline="middle"
+          fill="#fcf8f2">18</text>
+  </g>
+
+  <g class="hidden-message">
+    <rect x="10"
+          y="70"
+          width="180"
+          height="60"
+          fill="rgba(0,0,0,0.7)"
+          rx="10"
+          ry="10" />
+    <text x="100"
+          y="110"
+          font-size="24"
+          font-weight="bold"
+          text-anchor="middle"
+          fill="#ffffff">Shhh... It's a secret!</text>
+  </g>
+
+  <!-- Confetti elements (increased quantity and variety) -->
+  <circle class="confetti"
+          cx="50"
+          cy="0"
+          r="5"
+          fill="#ffcc00" />
+  <circle class="confetti"
+          cx="150"
+          cy="0"
+          r="5"
+          fill="#00ccff" />
+  <circle class="confetti"
+          cx="100"
+          cy="0"
+          r="5"
+          fill="#ff66cc" />
+  <rect class="confetti"
+        x="75"
+        y="0"
+        width="8"
+        height="8"
+        fill="#ff9900" />
+  <rect class="confetti"
+        x="125"
+        y="0"
+        width="8"
+        height="8"
+        fill="#66ff99" />
+  <polygon class="confetti"
+           points="25,0 30,5 35,0 30,-5"
+           fill="#ff33cc" />
+  <polygon class="confetti"
+           points="175,0 180,5 185,0 180,-5"
+           fill="#33ccff" />
+
+  <!-- Celebration text -->
+  <text class="celebration-text"
+        x="100"
+        y="20"
+        font-size="14"
+        text-anchor="middle"
+        font-family="'Zilla Slab', Arial, sans-serif"
+        fill="#ffffff">
+    Celebrating OnetimeSecret
+  </text>
+  <text class="celebration-text"
+        x="100"
+        y="40"
+        font-size="18"
+        font-family="'Zilla Slab', Arial, sans-serif"
+        text-anchor="middle"
+        fill="#ffffff">
+    Release 0.18!
+  </text>
+
+  <!-- Signature -->
+  <text x="190"
+        y="195"
+        font-family="'Zilla Slab', Arial, sans-serif"
+        font-size="8"
+        font-style="italic"
+        text-anchor="end"
+        fill="#fed">Celebration by Claude 3.5</text>
+</svg>

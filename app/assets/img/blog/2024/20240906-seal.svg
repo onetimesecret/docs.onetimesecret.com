@@ -1,0 +1,80 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sky background -->
+  <rect width="400" height="300" fill="#87CEEB" />
+
+  <!-- Sun -->
+  <circle cx="50" cy="50" r="30" fill="#FFD700" />
+  <g fill="none" stroke="#FFD700" stroke-width="2">
+    <line x1="50" y1="10" x2="50" y2="0" />
+    <line x1="50" y1="90" x2="50" y2="100" />
+    <line x1="10" y1="50" x2="0" y2="50" />
+    <line x1="90" y1="50" x2="100" y2="50" />
+  </g>
+
+  <!-- Palm tree -->
+  <rect x="340" y="100" width="10" height="150" fill="#8B4513" />
+  <path d="M345 100 C310 80 300 40 345 20 C390 40 380 80 345 100" fill="#228B22" />
+  <path d="M345 100 C380 80 390 40 345 20 C300 40 310 80 345 100" fill="#228B22" />
+
+  <!-- Water -->
+  <path d="M0 250 Q100 230 200 250 Q300 270 400 250 L400 300 L0 300 Z" fill="#1E90FF" />
+
+  <!-- Boat hull -->
+  <path d="M50 200 Q200 150 350 200 L380 250 L20 250 Z" fill="#8B4513" />
+
+  <!-- Peeling paint effect -->
+  <g fill="#D2691E" opacity="0.7">
+    <path d="M60 210 Q70 205 80 210 L85 215 Q75 210 65 215 Z" />
+    <path d="M120 190 Q130 185 140 190 L145 195 Q135 190 125 195 Z" />
+    <path d="M200 180 Q210 175 220 180 L225 185 Q215 180 205 185 Z" />
+    <path d="M280 185 Q290 180 300 185 L305 190 Q295 185 285 190 Z" />
+    <path d="M330 205 Q340 200 350 205 L355 210 Q345 205 335 210 Z" />
+  </g>
+
+  <!-- Boat deck -->
+  <rect x="70" y="190" width="260" height="20" fill="#DEB887" />
+
+  <!-- Seal pup body -->
+  <ellipse cx="200" cy="180" rx="70" ry="40" fill="#e0e0e0" />
+
+  <!-- Seal pup head -->
+  <circle cx="250" cy="160" r="35" fill="#e0e0e0" />
+
+  <!-- Eye -->
+  <circle cx="265" cy="152" r="6" fill="#000" />
+
+  <!-- Nose -->
+  <ellipse cx="280" cy="162" rx="7" ry="5" fill="#333" />
+
+  <!-- Mouth -->
+  <path d="M270 170 Q275 173 280 170" stroke="#333" stroke-width="2" fill="none" />
+
+  <!-- Flippers -->
+  <path d="M140 190 Q130 210 150 215" fill="#d0d0d0" />
+  <path d="M250 210 Q260 220 270 210" fill="#d0d0d0" />
+
+  <!-- Anchor on flipper -->
+  <path d="M145 200 L150 200 M147.5 197 L147.5 208 M145 204 L150 204" stroke="#FFD700" stroke-width="2" fill="none" />
+
+  <!-- Whiskers -->
+  <line x1="280" y1="158" x2="295" y2="155" stroke="#000" stroke-width="1" />
+  <line x1="280" y1="162" x2="295" y2="162" stroke="#000" stroke-width="1" />
+  <line x1="280" y1="166" x2="295" y2="169" stroke="#000" stroke-width="1" />
+
+  <!-- Navy cap -->
+  <path d="M225 120 Q250 110 275 120 L285 135 Q255 125 225 135 Z" fill="#000080" />
+  <rect x="225" y="135" width="60" height="8" fill="#FFFFFF" />
+  <circle cx="250" cy="125" r="8" fill="#FFD700" /> <!-- Cap insignia -->
+
+  <!-- Boat name with peeling effect -->
+  <text x="180" y="240" font-family="Arial" font-size="20" fill="#FFFFFF">S.S. Seal</text>
+  <path d="M185 225 Q190 223 195 225 L200 228 Q195 226 190 228 Z" fill="#8B4513" />
+  <path d="M240 225 Q245 223 250 225 L255 228 Q250 226 245 228 Z" fill="#8B4513" />
+
+  <!-- Subtle "peeling paint" text -->
+  <text x="70" y="220" font-family="Arial" font-size="12" fill="#8B4513" opacity="0.6">peeling paint</text>
+  <text x="260" y="205" font-family="Arial" font-size="12" fill="#8B4513" opacity="0.6">peeling paint</text>
+
+  <!-- Footnote -->
+  <text x="10" y="290" font-family="Arial" font-size="8" fill="#000000">Crafted by Claude 3.5 Sonnet with minimal supervision</text>
+</svg>

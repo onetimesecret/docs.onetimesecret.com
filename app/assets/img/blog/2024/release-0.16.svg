@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 200 200">
+  <style>
+    .hidden-message {
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    svg:hover .hidden-message {
+      opacity: 1;
+    }
+
+    .main-content {
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    svg:hover .main-content {
+      opacity: 0.3;
+    }
+
+    /* Animation for confetti */
+    @keyframes confetti-fall {
+      0% {
+        transform: translateY(0);
+      }
+
+      100% {
+        transform: translateY(200px);
+      }
+    }
+
+    .confetti {
+      animation: confetti-fall 2s infinite;
+    }
+
+    @font-face {
+      font-family: 'Zilla Slab';
+      src: url('https://onetimesecret.com/dist/assets/ZillaSlab-Regular-CpTS5Ubm.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    text.release {
+      font-family: 'Zilla Slab', sans-serif !important;
+    }
+
+    /* Style for the personalized message */
+    .personal-message {
+      font-family: 'Zilla Slab', sans-serif;
+      font-size: 20px;
+      fill: #ff6347;
+      /* Tomato color */
+      text-anchor: middle;
+    }
+  </style>
+  <defs>
+
+    <!-- Define the radial gradient for the background -->
+    <radialGradient id="fountainFill"
+                    cx="50%"
+                    cy="50%"
+                    r="50%"
+                    fx="50%"
+                    fy="50%">
+      <!-- Gradient start color and opacity -->
+      <stop offset="0%"
+            style="stop-color:#e68b5e; stop-opacity:1" />
+      <!-- Gradient end color and opacity -->
+      <stop offset="100%"
+            style="stop-color:#dc4a22; stop-opacity:1" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background rectangle with radial gradient fill -->
+  <rect width="200"
+        height="200"
+        fill="url(#fountainFill)" />
+
+  <!-- Personalized message always visible -->
+  <!-- This text will be displayed at the bottom center of the SVG -->
+  <circle class="confetti"
+          cx="100"
+          cy="0"
+          r="5"
+          fill="#ff66cc" />
+  <text x="100"
+        y="180"
+        class="personal-message">Congratulations on the Release!</text>
+  <circle class="confetti"
+          cx="50"
+          cy="0"
+          r="5"
+          fill="#ffcc00" />
+
+  <circle class="confetti"
+          cx="150"
+          cy="0"
+          r="5"
+          fill="#00ccff" />
+  <!-- Signature -->
+  <text x="190"
+        y="195"
+        font-family="Arial"
+        font-size="8"
+        font-style="italic"
+        text-anchor="end"
+        fill="#fed">Celebration by Copilot</text>
+  <!-- Main content group -->
+  <g class="main-content">
+    <!-- Centered text within the circle -->
+    <text class="release"
+          x="100"
+          y="112"
+          font-size="120"
+          font-weight="bold"
+          text-anchor="middle"
+          dominant-baseline="middle"
+          fill="#fcf8f2">16</text>
+  </g>
+
+  <!-- Hidden message group -->
+  <g class="hidden-message">
+    <!-- Hidden message background -->
+    <rect x="10"
+          y="70"
+          width="180"
+          height="60"
+          fill="rgba(0,0,0,0.7)"
+          rx="10"
+          ry="10" />
+
+    <!-- Hidden message text -->
+    <text x="100"
+          y="110"
+          font-size="24"
+          font-weight="bold"
+          text-anchor="middle"
+          fill="#ffffff">Shhh... It's a secret!</text>
+  </g>
+
+  <!-- Celebration -->
+
+
+  <!-- Personalized star element -->
+  <polygon points="100,10 110,40 140,40 115,60 125,90 100,70 75,90 85,60 60,40 90,40"
+           fill="#ff6347" />
+
+
+</svg>

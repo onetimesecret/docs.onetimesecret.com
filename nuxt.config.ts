@@ -32,13 +32,13 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       concurrency: 250,
-      interval: 1200,
+      interval: 250,
       failOnError: false,
       crawlLinks: false,
       routes: routes,
       ignore: [
-        // Don't filter out future content
-        (route) => false,
+        // Filter out routes for dot files
+        (route) => route.includes("/posts/."),
       ],
     },
     publicAssets: [
@@ -107,6 +107,7 @@ export default defineNuxtConfig({
   },
   css: ["@/assets/css/main.css", "@/assets/css/font.css"],
   vite: {
+    plugins: [require("vite-svg-loader")],
     assetsInclude: ["@/assets/css/fonts/**/*.woff", "@/**/**/*.woff2"],
     server: {
       allowedHosts: true,

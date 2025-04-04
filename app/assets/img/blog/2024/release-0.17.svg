@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 200 200">
+  <style>
+    .hidden-message {
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    svg:hover .hidden-message {
+      opacity: 1;
+    }
+
+    .main-content {
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    svg:hover .main-content {
+      opacity: 0.3;
+    }
+
+    /* Animation for confetti */
+    @keyframes confetti-fall {
+      0% {
+        transform: translateY(0);
+      }
+
+      100% {
+        transform: translateY(200px);
+      }
+    }
+
+    .confetti {
+      animation: confetti-fall 2s infinite;
+    }
+
+    @font-face {
+      font-family: 'Zilla Slab';
+      src: url('https://onetimesecret.com/dist/assets/ZillaSlab-Regular-CpTS5Ubm.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    text.release {
+      font-family: 'Zilla Slab', sans-serif !important;
+    }
+  </style>
+  <defs>
+
+    <!-- Define the radial gradient for the background -->
+    <radialGradient id="fountainFill" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <!-- Gradient start color and opacity -->
+      <stop offset="0%" style="stop-color:#e68b5e; stop-opacity:1" />
+      <!-- Gradient end color and opacity -->
+      <stop offset="100%" style="stop-color:#dc4a22; stop-opacity:1" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background rectangle with radial gradient fill -->
+  <rect width="200"
+        height="200"
+        fill="url(#fountainFill)" />
+
+  <!-- Main content group -->
+  <g class="main-content">
+    <!-- Centered text within the circle -->
+    <text class="release" x="100"
+          y="112"
+          font-size="120"
+          font-weight="bold"
+          text-anchor="middle"
+          dominant-baseline="middle"
+          fill="#fcf8f2">17</text>
+  </g>
+<!-- Personal touch: Heart shape -->
+<path d="M10 80 C10 75, 15 70, 20 70 C25 70, 30 75, 30 80 Q20 90, 20 100 Q10 90, 10 80 Z" fill="#fcf8f2" />
+
+  <!-- Hidden message group -->
+  <g class="hidden-message">
+    <!-- Hidden message background -->
+    <rect x="10"
+          y="70"
+          width="180"
+          height="60"
+          fill="rgba(0,0,0,0.7)"
+          rx="10"
+          ry="10" />
+
+    <!-- Hidden message text -->
+    <text x="100"
+          y="110"
+          font-size="24"
+          font-weight="bold"
+          text-anchor="middle"
+          fill="#ffffff">Shhh... It's a secret!</text>
+  </g>
+
+<!-- Personal touch: Confetti elements -->
+<polygon class="confetti"
+         points="10,0 20,10 10,20 0,10"
+         fill="#ffcc00" />
+<polygon class="confetti"
+         points="150,0 160,10 150,20 140,10"
+         fill="#00ccff" />
+<polygon class="confetti"
+         points="100,0 110,10 100,20 90,10"
+         fill="#ff66cc" />
+
+  <!-- Signature -->
+  <!-- Signature text placed at the bottom right, right-aligned -->
+  <text x="190"
+        y="195"
+        font-family="Arial"
+        font-size="8"
+        font-style="italic"
+        text-anchor="end"
+        fill="#fed">Celebration by Codestral</text>
+</svg>

@@ -44,6 +44,7 @@
     "@nuxthq/studio": "^2.2.1",
     "eslint": "^9.18.0",
     "nuxt-content-assets": "^1.4.4",
+    "vite-svg-loader": "^5.1.0",
     "vitest": "^3.0.4",
     "vue-tsc": "^2.1.6"
   },

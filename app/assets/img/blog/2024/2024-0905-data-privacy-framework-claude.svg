@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f0f0f0"/>
+
+  <!-- Divider -->
+  <line x1="400" y1="60" x2="400" y2="380" stroke="#ccc" stroke-width="2"/>
+
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#333">Web Design Evolution: Constraints and Regulations</text>
+
+  <!-- Headers -->
+  <text x="200" y="80" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#555">Late 1990s Constraints</text>
+  <text x="600" y="80" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#555">Modern Privacy Regulations</text>
+
+  <!-- Left side: 1990s -->
+  <g transform="translate(0, 20)">
+    <!-- Dial-up modem -->
+    <rect x="80" y="100" width="140" height="70" rx="10" ry="10" fill="#3498db"/>
+    <text x="150" y="140" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#fff">Dial-up Internet</text>
+
+    <!-- Small screen -->
+    <rect x="240" y="100" width="140" height="70" rx="10" ry="10" fill="#2ecc71"/>
+    <text x="310" y="140" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#fff">Small Screens</text>
+
+    <!-- Limited bandwidth icon -->
+    <path d="M130 220 L190 280 L70 280 Z" fill="#e74c3c"/>
+    <text x="130" y="310" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#333">Limited Bandwidth</text>
+
+    <!-- Limited color palette -->
+    <rect x="240" y="220" width="140" height="60" rx="10" ry="10" fill="#9b59b6"/>
+    <text x="310" y="255" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#fff">Limited Colors</text>
+  </g>
+
+  <!-- Right side: Modern constraints -->
+  <g transform="translate(0, 20)">
+    <!-- GDPR icon -->
+    <circle cx="520" cy="135" r="50" fill="#3498db"/>
+    <text x="520" y="143" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#fff">GDPR</text>
+
+    <!-- CCPA icon -->
+    <circle cx="680" cy="135" r="50" fill="#2ecc71"/>
+    <text x="680" y="143" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#fff">CCPA</text>
+
+    <!-- Data minimization -->
+    <rect x="460" y="220" width="140" height="60" rx="10" ry="10" fill="#e67e22"/>
+    <text x="530" y="255" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#fff">Data Minimization</text>
+
+    <!-- User consent -->
+    <rect x="620" y="220" width="140" height="60" rx="10" ry="10" fill="#e74c3c"/>
+    <text x="690" y="255" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#fff">User Consent</text>
+  </g>
+
+  <!-- Arrow pointing up -->
+  <path d="M580 340 L620 340 L600 300 Z" fill="#27ae60"/>
+  <text x="600" y="380" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#333">Improved UI/UX Design</text>
+
+  <!-- Signature -->
+  <text x="790" y="395" font-family="Arial, sans-serif" font-size="16" text-anchor="end" fill="#888">Crafted by Claude 3.5 Sonnet with minimal supervision</text>
+</svg>

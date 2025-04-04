@@ -26,6 +26,10 @@ interface Props {
   height?: number | string;
 }
 
+const isSvg = computed(() => {
+  return props.src.toLowerCase().endsWith('.svg');
+});
+
 const props = defineProps<Props>();
 const isModalOpen = ref(false);
 

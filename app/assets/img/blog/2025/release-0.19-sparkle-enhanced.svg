@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <style>
+    .hidden-message {
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    svg:hover .hidden-message {
+      opacity: 1;
+    }
+
+    .main-content {
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    svg:hover .main-content {
+      opacity: 0.3;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-3px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .floating {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes sparkle {
+      0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+      50% { opacity: 1; transform: scale(1) rotate(180deg); }
+    }
+
+    .sparkle {
+      transform-origin: center;
+      animation: sparkle 3s ease-in-out infinite;
+    }
+
+    .sparkle:nth-child(1) { animation-delay: 0.0s; }
+    .sparkle:nth-child(2) { animation-delay: 0.2s; }
+    .sparkle:nth-child(3) { animation-delay: 0.4s; }
+    .sparkle:nth-child(4) { animation-delay: 0.6s; }
+    .sparkle:nth-child(5) { animation-delay: 0.8s; }
+    .sparkle:nth-child(6) { animation-delay: 1.0s; }
+    .sparkle:nth-child(7) { animation-delay: 1.2s; }
+    .sparkle:nth-child(8) { animation-delay: 1.4s; }
+    .sparkle:nth-child(9) { animation-delay: 1.6s; }
+    .sparkle:nth-child(10) { animation-delay: 1.8s; }
+    .sparkle:nth-child(11) { animation-delay: 2.0s; }
+    .sparkle:nth-child(12) { animation-delay: 2.2s; }
+    .sparkle:nth-child(13) { animation-delay: 2.4s; }
+    .sparkle:nth-child(14) { animation-delay: 2.6s; }
+    .sparkle:nth-child(15) { animation-delay: 2.8s; }
+
+    @font-face {
+      font-family: 'Zilla Slab';
+      src: url('https://onetimesecret.com/dist/assets/ZillaSlab-Regular-CpTS5Ubm.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    text.release {
+      font-family: 'Zilla Slab', sans-serif !important;
+    }
+  </style>
+
+  <defs>
+    <radialGradient id="fountainFill" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" style="stop-color:#4338ca; stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#312e81; stop-opacity:1"/>
+    </radialGradient>
+
+    <!-- Lock shape -->
+    <path id="lockShape" d="M -8 0 h 16 v 12 h -16 z" />
+    <path id="lockLoop" d="M -6 0 a 6 6 0 0 1 12 0" fill="none" />
+
+    <!-- Star shape -->
+    <path id="star" d="M 0,-4 L 1,-1 4,-1 2,1 3,4 0,2 -3,4 -2,1 -4,-1 -1,-1 Z" />
+  </defs>
+
+  <!-- Background -->
+  <rect width="200" height="200" fill="url(#fountainFill)"/>
+
+  <!-- Sparkles -->
+  <g transform="translate(100, 100)">
+    <!-- Inner ring -->
+    <use href="#star" class="sparkle" fill="#fcd34d" transform="translate(-40, -30) scale(1.2)" />
+    <use href="#star" class="sparkle" fill="#22c55e" transform="translate(40, -20) scale(0.8)" />
+    <use href="#star" class="sparkle" fill="#3b82f6" transform="translate(-30, 30) scale(1.0)" />
+    <use href="#star" class="sparkle" fill="#ef4444" transform="translate(35, 25) scale(1.1)" />
+    <use href="#star" class="sparkle" fill="#ffffff" transform="translate(0, -40) scale(0.9)" />
+
+    <!-- Outer ring -->
+    <use href="#star" class="sparkle" fill="#fcd34d" transform="translate(-60, -40) scale(0.7)" />
+    <use href="#star" class="sparkle" fill="#22c55e" transform="translate(55, -45) scale(1.0)" />
+    <use href="#star" class="sparkle" fill="#3b82f6" transform="translate(-50, 45) scale(0.8)" />
+    <use href="#star" class="sparkle" fill="#ef4444" transform="translate(60, 35) scale(0.9)" />
+    <use href="#star" class="sparkle" fill="#ffffff" transform="translate(0, 50) scale(1.1)" />
+
+    <!-- Random scattered -->
+    <use href="#star" class="sparkle" fill="#fcd34d" transform="translate(-20, -50) scale(0.6)" />
+    <use href="#star" class="sparkle" fill="#22c55e" transform="translate(45, 0) scale(0.7)" />
+    <use href="#star" class="sparkle" fill="#3b82f6" transform="translate(-45, 0) scale(1.2)" />
+    <use href="#star" class="sparkle" fill="#ef4444" transform="translate(20, -40) scale(0.8)" />
+    <use href="#star" class="sparkle" fill="#ffffff" transform="translate(-10, 45) scale(0.9)" />
+  </g>
+
+  <!-- Main content -->
+  <g class="main-content">
+    <!-- Version number -->
+    <text class="release" x="100" y="112" font-size="90" font-weight="bold"
+          text-anchor="middle" dominant-baseline="middle" fill="#fcf8f2">19</text>
+
+    <!-- Feature symbols -->
+    <g class="floating">
+      <!-- Lock (Security) -->
+      <g transform="translate(100, 60) scale(1.5)">
+        <use href="#lockShape" fill="#fcd34d" opacity="0.9" />
+        <use href="#lockLoop" stroke="#fcd34d" stroke-width="3" opacity="0.9" />
+      </g>
+
+      <!-- Shield (CSP) -->
+      <path d="M 60 70 l 15 6 v 20 a 15 15 0 0 1 -15 15 a 15 15 0 0 1 -15 -15 v -20 z"
+            fill="#3b82f6" opacity="0.8" />
+      <text x="60" y="98" font-size="10" fill="#ffffff" text-anchor="middle">CSP</text>
+
+      <!-- Branding (Plus) -->
+      <g transform="translate(140, 70)">
+        <circle cx="0" cy="0" r="15" fill="#22c55e" opacity="0.8" />
+        <path d="M -8 0 h 16 M 0 -8 v 16"
+              stroke="#ffffff" stroke-width="3"
+              stroke-linecap="round" />
+      </g>
+
+      <!-- Database -->
+      <g transform="translate(140, 140)">
+        <rect x="-12" y="-12" width="24" height="24"
+              fill="#ef4444" opacity="0.8"
+              transform="rotate(45)" />
+        <text x="0" y="4" font-size="10" fill="#ffffff" text-anchor="middle">DB</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Hidden message -->
+  <g class="hidden-message">
+    <rect x="20" y="70" width="160" height="60" fill="rgba(0,0,0,0.8)" rx="10" ry="10"/>
+    <text x="100" y="95" font-size="14" text-anchor="middle" fill="#fcf8f2">
+      Type-Safe Secrets
+    </text>
+    <text x="100" y="115" font-size="14" text-anchor="middle" fill="#fcf8f2">
+      with Custom Branding
+    </text>
+  </g>
+
+  <!-- Title -->
+  <text x="100" y="30" font-size="16" font-weight="bold" text-anchor="middle" fill="#fcf8f2" font-family="'Zilla Slab', Arial, sans-serif">
+    OnetimeSecret v0.19
+  </text>
+
+  <!-- Signature -->
+  <text x="190" y="195" font-family="Arial" font-size="8" font-style="italic" font-family="'Zilla Slab', Arial, sans-serif"
+        text-anchor="end" fill="#fcf8f2">Celebration by Claude 3.5</text>
+</svg>
