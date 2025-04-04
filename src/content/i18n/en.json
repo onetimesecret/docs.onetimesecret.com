@@ -1,9 +1,11 @@
 {
   "nav": {
     "label": {
+      "blog": "Blog",
       "custom-domain": "Custom Domain",
       "principles": "Principles",
-      "rest-api": "API"
+      "rest-api": "API",
+      "home": "Back to onetimesecret.com"
     }
   },
   "skipLink.label": "Skip to content",
