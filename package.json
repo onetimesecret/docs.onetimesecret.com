@@ -4,9 +4,10 @@
   "type": "module",
   "packageManager": "pnpm@10.7.0",
   "scripts": {
+    "pregenerate": "echo 'Pregenerate this'",
     "build": "NODE_OPTIONS='--max-old-space-size=2048 ' npx nuxt build",
     "dev": "NODE_OPTIONS='' npx nuxt dev --host --port=5175",
-    "generate": "nuxt generate",
+    "generate": "NODE_OPTIONS='--max-old-space-size=4096 ' nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
