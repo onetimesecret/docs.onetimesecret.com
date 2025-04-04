@@ -4,12 +4,12 @@ import config from 'virtual:starlight/user-config';
 const { siteTitle, siteTitleHref } = Astro.locals.starlightRoute;
 ---
 
-<a href='/' class="site-title sl-flex">
+<a href={siteTitleHref} class="site-title sl-flex">
 	{
 		config.logo && logos.dark && (
 			<>
 				<img
-					class:list={{ 'light:sl-hidden print:hidden': !('src' in config.logo) }}
+					class:list={{ 'light:sl-hidden print:hidden rounded-md': !('src' in config.logo) }}
 					alt={config.logo.alt}
 					src={logos.dark.src}
 					width={logos.dark.width}
@@ -18,7 +18,7 @@ const { siteTitle, siteTitleHref } = Astro.locals.starlightRoute;
 				{/* Show light alternate if a user configure both light and dark logos. */}
 				{!('src' in config.logo) && (
 					<img
-						class="dark:sl-hidden print:block"
+						class="dark:sl-hidden print:block rounded-md"
 						alt={config.logo.alt}
 						src={logos.light?.src}
 						width={logos.light?.width}

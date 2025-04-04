@@ -24,8 +24,8 @@ export const starlightConfig: StarlightConfig = {
   social: {
     // Prioritize runtime validation errors over TypeScript errors when
     // they conflict so keep this a string rather than an object for now.
-    github: "https://github.com/onetimesecret/onetimesecret",
     blueSky: "https://bskyapp/profile/onetimesecretcom",
+    github: "https://github.com/onetimesecret/onetimesecret",
   },
   customCss: ["./src/styles/tailwind.css", "./src/fonts/font-face.css"],
   defaultLocale: i18nConfig.defaultLocale,

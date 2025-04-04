@@ -27,11 +27,11 @@ const restApiUrl = getRelativeLocaleUrl(currentLocale, 'rest-api');
 	</div>
 	<div class="sl-flex print:hidden">
 		{shouldRenderSearch && <Search />}
-  <nav class="nav-links">
-        <a href={customDomainUrl}>Custom Domains</a>
-        <a href={principlesUrl}>Principles</a>
-        <a href={restApiUrl}>API</a>
-      </nav>
+    <nav class="nav-links">
+      <a href={customDomainUrl}>{Astro.locals.t('nav.label.custom-domain')}</a>
+      <a href={principlesUrl}>{Astro.locals.t('nav.label.principles')}</a>
+      <a href={restApiUrl}>{Astro.locals.t('nav.label.rest-api')}</a>
+    </nav>
 	</div>
 	<div class="sl-hidden md:sl-flex print:hidden right-group">
 		<div class="sl-flex social-icons">

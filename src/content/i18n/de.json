@@ -1,4 +1,11 @@
 {
+  "nav": {
+    "label": {
+      "custom-domain": "Geheime Links",
+      "principles": "Prinzipien",
+      "rest-api": "API"
+    }
+  },
   "skipLink.label": "Zum Inhalt springen",
   "search.label": "Suche",
   "search.ctrlKey": "Strg",

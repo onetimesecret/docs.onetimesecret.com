@@ -1,4 +1,11 @@
 {
+  "nav": {
+    "label": {
+      "custom-domain": "Custom Domain",
+      "principles": "Principles",
+      "rest-api": "API"
+    }
+  },
   "skipLink.label": "Skip to content",
   "search.label": "Search",
   "search.ctrlKey": "Ctrl",
