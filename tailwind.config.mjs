@@ -84,5 +84,12 @@ export default {
     },
   },
 
-  plugins: [starlightPlugin()],
+  plugins: [
+    starlightPlugin({
+      theme: {
+        accent: brandColour[500], // Your main red (#dc4a22)
+        accentDark: brandColour[600], // Darker shade for dark mode
+      },
+    }),
+  ],
 };
