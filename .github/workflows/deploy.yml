@@ -39,9 +39,13 @@ jobs:
       - run: pnpm install
 
       # Set base URL for GitHub Pages
-      - name: Set base URL
+      - name: Set base URL for custom domain
         run: |
-          echo "VITE_BASE_URL=/" >> .env.production
+          if [ -f "./public/CNAME" ] || [ -f "./static/CNAME" ]; then
+            echo "VITE_BASE_URL=/" >> .env.production
+          else
+            echo "VITE_BASE_URL=/starlight/" >> .env.production
+          fi
 
       - name: Build
         run: pnpm run build
