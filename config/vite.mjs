@@ -1,8 +1,10 @@
+// starlight/config/vite.mjs
+
 export function createViteConfig() {
   // Remember, for security reasons, only variables prefixed with VITE_ are
   // available here to prevent accidental exposure of sensitive
   // environment variables to the client-side code.
-  const viteBaseUrl = process.env.VITE_BASE_URL || "/";
+  const viteBaseUrl = process.env.VITE_BASE_URL || "";
 
   // According to the documentation, we should be able to set the allowed hosts
   // via __VITE_ADDITIONAL_SERVER_ALLOWED_HOSTS but as of 5.4.15m that is not
@@ -19,9 +21,16 @@ export function createViteConfig() {
     process.env.__VITE_ADDITIONAL_SERVER_ALLOWED_HOSTS;
 
   return {
-    base: viteBaseUrl,
+    // esbuild: {
+    //   loader: "tsx",
+    //   // include: /src\/components\/.*\.ts.$/,
+    //   exclude: [],
+    //   target: "esnext",
+    // },
+    // moduleResolution: "bundler",
+    // base: viteBaseUrl || "/",
     server: {
-      origin: viteBaseUrl,
+      // origin: viteBaseUrl,
       allowedHosts: (() => {
         // NOTE: This is an Immediately Invoked Function Expression (IIFE)
         // that executes exactly once during config load/parsing time.

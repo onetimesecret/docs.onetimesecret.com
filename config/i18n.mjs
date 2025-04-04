@@ -1,11 +1,10 @@
-// starlight/config/i18n.ts
-import type { StarlightUserConfig } from "@astrojs/starlight/types";
+// docs.onetimesecret.com/starlight/config/i18n.mjs
 
-// Internationalization configuration
-export const i18nConfig: Pick<
-  StarlightUserConfig,
-  "defaultLocale" | "locales"
-> = {
+/**
+ * Internationalization configuration for Starlight
+ * Defines supported locales and their properties
+ */
+export const i18nConfig = {
   defaultLocale: "en",
   locales: {
     en: {
