@@ -1,8 +1,5 @@
 import starlightPlugin from "@astrojs/starlight-tailwind";
-
 import colors from "tailwindcss/colors";
-import forms from "@tailwindcss/forms";
-import typography from "@tailwindcss/typography";
 import defaultTheme from "tailwindcss/defaultTheme";
 
 const brandColour = {
@@ -19,7 +16,6 @@ const brandColour = {
   950: "#400b03",
 };
 
-/** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue,mdoc}"],
 
@@ -83,5 +79,5 @@ export default {
     },
   },
 
-  plugins: [starlightPlugin(), forms(), typography()],
+  plugins: [starlightPlugin()],
 };

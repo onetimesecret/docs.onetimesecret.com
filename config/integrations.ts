@@ -12,7 +12,7 @@ export function createIntegrations(): AstroIntegration[] {
     starlight(starlightConfig),
     tailwind({
       applyBaseStyles: false,
-      nesting: true,
+      nesting: false,
       configFile: "tailwind.config.ts",
     }),
   ];
