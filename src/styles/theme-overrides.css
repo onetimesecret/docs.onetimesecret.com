@@ -1,0 +1,37 @@
+/* src/styles/theme-overrides.css */
+
+/* Set ALL possible Starlight accent-related CSS custom properties */
+:root {
+  /* Core accent variables */
+  --sl-color-accent-low: #fcf4e8;
+  --sl-color-accent: #dc4a22;
+  --sl-color-accent-high: #a32d12;
+
+  /* Text accent variable - this is what the button is actually using */
+  --sl-color-text-accent: #dc4a22 !important;
+}
+
+:root[data-theme="dark"] {
+  --sl-color-accent-low: #85200c;
+  --sl-color-accent: #dc4a22;
+  --sl-color-accent-high: #f0c39e;
+  --sl-color-text-accent: #dc4a22 !important;
+}
+
+/* Target the exact selector from your build */
+.sl-link-button:where(.astro-w4zgqqgl).primary {
+  background: var(--sl-color-text-accent) !important;
+  border-color: var(--sl-color-text-accent) !important;
+  color: var(--sl-color-black) !important;
+}
+
+.sl-link-button:where(.astro-w4zgqqgl).primary:hover {
+  background: #a32d12 !important;
+  border-color: #a32d12 !important;
+}
+
+/* Additional fallback for any button that might use different classes */
+.sl-link-button.primary {
+  background: #dc4a22 !important;
+  border-color: #dc4a22 !important;
+}

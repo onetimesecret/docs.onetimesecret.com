@@ -32,7 +32,11 @@ export const starlightConfig = {
     blueSky: "https://bskyapp/profile/onetimesecretcom",
     github: "https://github.com/onetimesecret/onetimesecret",
   },
-  customCss: ["./src/styles/tailwind.css", "./src/fonts/font-face.css"],
+  customCss: [
+    "./src/styles/tailwind.css",
+    "./src/fonts/font-face.css",
+    "./src/styles/theme-overrides.css",
+  ],
   defaultLocale: i18nConfig.defaultLocale,
   locales: i18nConfig.locales,
   sidebar,
