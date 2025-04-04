@@ -48,7 +48,7 @@ jobs:
 
       # Configure Pages
       - name: Setup Pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v5
 
       # Upload Pages artifact for GitHub Pages deployment
       - name: Upload Pages artifact
