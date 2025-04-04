@@ -14,7 +14,7 @@ readingTime: 13
 
 </style>
 
-<p> In my <a href="/blog/2012-01-25-good-passwords">previous blog post</a>,
+<p> In my <a href="/posts/2012-01-25-good-passwords">previous blog post</a>,
 I wrote about choosing good passwords. However, most hack attempts don't involve password hacking/guessing
 at all. Even dictionary attacks — which are far more common that brute force attacks — are not the
 most common way that criminals get at your account information and private data. In this blog post,

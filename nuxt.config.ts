@@ -6,15 +6,6 @@ import { resolve } from "path";
 export default defineNuxtConfig({
   extends: ["@nuxt/ui-pro"],
 
-  buildModules: [
-    [
-      "@nuxtjs/date-fns",
-      {
-        /* module options */
-      },
-    ],
-  ],
-
   modules: [
     "@nuxt/content",
     "@nuxt/eslint",
