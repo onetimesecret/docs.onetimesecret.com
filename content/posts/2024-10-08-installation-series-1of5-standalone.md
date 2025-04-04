@@ -8,7 +8,7 @@ authors:
     avatar:
       src: /img/portrait-profile-pic-delano-2024.jpeg
 image:
-  src: /img/blog/2024/install-guide/onetimesecret installation guide - 1 of 5 - Homepage (light).jpeg
+  src: /img/blog/2024/install-guide/onetimesecret-installation-guide-1-of-5-homepage-light.jpeg
 badge:
   label: Guide
 readingTime: 15
@@ -277,11 +277,11 @@ Congratulations! You've successfully installed Onetime Secret. You can now acces
 In our next post, we'll explore the streamlined Onetime Secret Lite Docker image, offering an even simpler installation process with built-in ephemerality for enhanced security. Stay tuned for Part 2 of our series!
 
 
-::ImageModal{src="/img/blog/2024/install-guide/onetimesecret installation guide - 1 of 5 - Homepage (light).jpeg" alt="Homepage (light)" width="320"}
+::ImageModal{src="/img/blog/2024/install-guide/onetimesecret-installation-guide-1-of-5-homepage-light.jpeg" alt="Homepage (light)" width="320"}
 ::
 
 
-::ImageModal{src="/img/blog/2024/install-guide/onetimesecret installation guide - 1 of 5 - Homepage (dark).jpeg" alt="Homepage (light)" width="320"}
+::ImageModal{src="/img/blog/2024/install-guide/onetimesecret-installation-guide-1-of-5-homepage-dark.jpeg" alt="Homepage (light)" width="320"}
 ::
 
 ---

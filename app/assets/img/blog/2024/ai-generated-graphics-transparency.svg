@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#000033;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0066cc;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg-gradient)" />
+
+  <!-- Binary code background -->
+  <text x="10" y="20" fill="#ffffff20" font-family="monospace" font-size="14">
+    <tspan x="10" dy="20">10110011 01001010 11001100</tspan>
+    <tspan x="10" dy="20">01001010 11001100 10110011</tspan>
+    <tspan x="10" dy="20">11001100 10110011 01001010</tspan>
+    <!-- Add more lines of binary, some intentionally "glitchy" -->
+  </text>
+
+  <!-- Central cube -->
+  <g transform="translate(400,300)">
+    <path d="M-100,-100 L100,-100 L80,-80 L-80,-80 Z" fill="#ffffff60" stroke="#fff" stroke-width="2" />
+    <path d="M100,-100 L100,100 L80,80 L80,-80 Z" fill="#ffffff40" stroke="#fff" stroke-width="2" />
+    <path d="M-100,-100 L-100,100 L-80,80 L-80,-80 Z" fill="#ffffff50" stroke="#fff" stroke-width="2" />
+    <path d="M-100,100 L100,100 L80,80 L-80,80 Z" fill="#ffffff30" stroke="#fff" stroke-width="2" />
+  </g>
+
+  <!-- Icons inside the cube -->
+  <g transform="translate(400,300)">
+    <circle cx="-40" cy="-40" r="20" fill="#ffcc00" /> <!-- Lock -->
+    <path d="M-50,-40 L-30,-40 L-30,-50 A10,10 0 0,1 -50,-50 Z" fill="#000" />
+
+    <path d="M20,-50 C30,-60 50,-60 60,-50 C70,-40 70,-20 60,-10 C50,0 30,0 20,-10 C10,-20 10,-40 20,-50 Z" fill="#ff6600" /> <!-- Brain -->
+
+    <path d="M-50,20 Q-40,0 -30,20 Q-20,40 -10,20 Q0,0 10,20 Q20,40 30,20" fill="none" stroke="#3366cc" stroke-width="4" /> <!-- Cloud -->
+
+    <g transform="translate(20,20)"> <!-- Network -->
+      <circle cx="0" cy="0" r="5" fill="#33cc33" />
+      <circle cx="20" cy="20" r="5" fill="#33cc33" />
+      <circle cx="-20" cy="20" r="5" fill="#33cc33" />
+      <line x1="0" y1="0" x2="20" y2="20" stroke="#33cc33" stroke-width="2" />
+      <line x1="0" y1="0" x2="-20" y2="20" stroke="#33cc33" stroke-width="2" />
+    </g>
+  </g>
+
+  <!-- Light beams -->
+  <g stroke="#ffffff80" stroke-width="2">
+    <path d="M300,300 L100,100 M300,300 L100,500 M500,300 L700,100 M500,300 L700,500" stroke-dasharray="10,5" />
+  </g>
+
+  <!-- Anthropomorphized computer screens -->
+  <g>
+    <rect x="50" y="50" width="80" height="60" rx="10" fill="#cccccc" />
+    <circle cx="90" cy="80" r="15" fill="#ffffff" />
+    <circle cx="85" cy="75" r="3" fill="#000000" />
+    <circle cx="95" cy="75" r="3" fill="#000000" />
+    <path d="M80,90 Q90,100 100,90" fill="none" stroke="#000000" stroke-width="2" />
+  </g>
+  <g>
+    <rect x="670" y="490" width="80" height="60" rx="10" fill="#cccccc" />
+    <circle cx="710" cy="520" r="15" fill="#ffffff" />
+    <circle cx="705" cy="515" r="3" fill="#000000" />
+    <circle cx="715" cy="515" r="3" fill="#000000" />
+    <path d="M700,530 Q710,520 720,530" fill="none" stroke="#000000" stroke-width="2" />
+  </g>
+
+  <!-- Robot patching cube -->
+  <g transform="translate(600,100)">
+    <rect x="-20" y="-30" width="40" height="60" rx="5" fill="#999999" />
+    <circle cx="0" cy="-40" r="15" fill="#cccccc" />
+    <rect x="-30" y="30" width="20" height="10" fill="#999999" />
+    <rect x="10" y="30" width="20" height="10" fill="#999999" />
+    <rect x="-40" y="0" width="80" height="20" fill="#ffcc00" /> <!-- Band-aid -->
+  </g>
+
+  <!-- Title -->
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="24" fill="#ffffff" text-anchor="middle">
+    Transparency in Tech: Embracing the Imperfections
+  </text>
+</svg>

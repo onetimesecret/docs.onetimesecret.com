@@ -17,8 +17,8 @@ readingTime: 4
 
 _See the follow-up posts:_
 
-* (Sept 12th, 2024) _[Denial of Service (DoS) Attack: Continued Adventure](/blog/2024-09-12-ddos-day-4)._
-* (Sept 13th, 2024)  _[Denial of Service (DoS) Attack: Day 5](/blog/2024-09-13-ddos-day-5)._
+* (Sept 12th, 2024) _[Denial of Service (DoS) Attack: Continued Adventure](/posts/2024-09-12-ddos-day-4)._
+* (Sept 13th, 2024)  _[Denial of Service (DoS) Attack: Day 5](/posts/2024-09-13-ddos-day-5)._
 
 _And see the [updates to this post at the end](#updates)._
 

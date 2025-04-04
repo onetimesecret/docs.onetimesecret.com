@@ -64,7 +64,7 @@ if (post.value.image?.src) {
   })
 } else {
   defineOgImage({
-    component: 'Onetime Secret',
+    component: 'OgImageOnetimeSecretOg',
     title,
     description,
     headline: 'Blog'

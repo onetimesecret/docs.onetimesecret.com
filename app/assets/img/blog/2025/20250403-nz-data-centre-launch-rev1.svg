@@ -1,0 +1,99 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gradient background with Southern Cross stars -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a192f" />
+      <stop offset="100%" style="stop-color:#172a45" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background with gradient -->
+  <rect width="100%" height="100%" fill="url(#bg-gradient)"/>
+
+  <!-- Southern Cross stars -->
+  <circle cx="650" cy="50" r="4" fill="white" filter="url(#glow)"/>
+  <circle cx="670" cy="40" r="3" fill="white" filter="url(#glow)"/>
+  <circle cx="690" cy="65" r="5" fill="white" filter="url(#glow)"/>
+  <circle cx="660" cy="70" r="3" fill="white" filter="url(#glow)"/>
+
+  <!-- Title text with Aotearoa -->
+  <text x="50" y="60" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#ffffff">
+    Aotearoa New Zealand
+  </text>
+  <text x="50" y="100" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#ffffff">
+    Region Now Available
+  </text>
+
+  <!-- Decorative koru pattern line -->
+  <path d="M50,120 C100,110 150,130 200,120 C250,110 300,130 350,120 C400,110 450,130 500,120 C550,110 600,130 650,120 C700,110 750,130 800,120"
+        stroke="#c04757" stroke-width="3" fill="none"/>
+
+  <!-- Silver fern (koru) - more detailed -->
+  <path d="M160,160 C170,150 180,155 175,165 C170,175 180,180 190,170 C200,160 190,150 180,160"
+        stroke="#c04757" stroke-width="2" fill="none"/>
+  <path d="M160,180 C170,170 180,175 175,185 C170,195 180,200 190,190 C200,180 190,170 180,180"
+        stroke="#c04757" stroke-width="2" fill="none"/>
+  <path d="M160,200 C170,190 180,195 175,205 C170,215 180,220 190,210 C200,200 190,190 180,200"
+        stroke="#c04757" stroke-width="2" fill="none"/>
+
+  <!-- Mountain silhouette representing Southern Alps -->
+  <path d="M600,200 L650,150 L670,170 L700,130 L730,160 L760,140 L790,170 L800,170 L800,200 Z"
+        fill="#345180" opacity="0.7"/>
+
+  <!-- Kiwi bird silhouette -->
+  <path d="M700,230 C710,225 715,220 720,230 C725,240 730,235 735,230 C740,225 745,230 745,240 L750,250 C750,255 745,260 740,260 L730,255 L720,260 L710,255 L705,245 Z"
+        fill="#c04757"/>
+
+  <!-- Global data center network visualization -->
+  <circle cx="400" cy="240" r="80" fill="none" stroke="#ff6b9d" stroke-width="1" opacity="0.3"/>
+  <circle cx="400" cy="240" r="120" fill="none" stroke="#ff6b9d" stroke-width="1" opacity="0.2"/>
+
+  <!-- Data centers with connecting lines - positioned like a global network -->
+  <circle cx="350" cy="200" r="15" fill="#ff6b9d" opacity="0.7"/>
+  <text x="350" y="185" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">EU</text>
+
+  <circle cx="380" cy="180" r="15" fill="#ff6b9d" opacity="0.7"/>
+  <text x="380" y="165" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">US</text>
+
+  <circle cx="410" cy="190" r="15" fill="#ff6b9d" opacity="0.7"/>
+  <text x="410" y="175" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">CA</text>
+
+  <circle cx="460" cy="260" r="20" fill="#ff6b9d" opacity="0.9"/>
+  <text x="460" y="245" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">NZ</text>
+
+  <!-- Domain listings with modern styling -->
+  <rect x="270" y="300" width="260" height="40" rx="20" ry="20" fill="rgba(255,107,157,0.15)" stroke="#ff6b9d" stroke-width="1"/>
+  <text x="400" y="325" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ff6b9d" text-anchor="middle">
+    nz.onetimesecret.com
+  </text>
+
+  <!-- Lines connecting the network -->
+  <line x1="350" y1="210" x2="380" y2="190" stroke="#454d5d" stroke-width="1"/>
+  <line x1="380" y1="190" x2="410" y2="190" stroke="#454d5d" stroke-width="1"/>
+  <line x1="410" y1="200" x2="450" y2="250" stroke="#c04757" stroke-width="2" stroke-dasharray="5,5"/>
+
+  <!-- Share-nothing architecture label -->
+  <text x="300" y="260" font-family="Arial, sans-serif" font-size="14" font-style="italic" fill="#ffffff" text-anchor="middle">Share-Nothing Architecture</text>
+
+  <!-- Key features as scattered badges -->
+  <circle cx="220" cy="350" r="25" fill="rgba(255,107,157,0.2)" stroke="#ff6b9d" stroke-width="1"/>
+  <text x="220" y="355" font-family="Arial, sans-serif" font-size="9" fill="#ffffff" text-anchor="middle">Data Locality</text>
+
+  <circle cx="300" cy="360" r="25" fill="rgba(255,107,157,0.2)" stroke="#ff6b9d" stroke-width="1"/>
+  <text x="300" y="365" font-family="Arial, sans-serif" font-size="9" fill="#ffffff" text-anchor="middle">Enhanced Privacy</text>
+
+  <circle cx="500" cy="360" r="25" fill="rgba(255,107,157,0.2)" stroke="#ff6b9d" stroke-width="1"/>
+  <text x="500" y="365" font-family="Arial, sans-serif" font-size="9" fill="#ffffff" text-anchor="middle">Global Access</text>
+
+  <circle cx="580" cy="350" r="25" fill="rgba(255,107,157,0.2)" stroke="#ff6b9d" stroke-width="1"/>
+  <text x="580" y="355" font-family="Arial, sans-serif" font-size="9" fill="#ffffff" text-anchor="middle">Separate Accounts</text>
+
+  <!-- Byline -->
+  <text x="770" y="390" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="end">
+    Crafted by Claude 3.7 Sonnet with minimal supervision
+  </text>
+</svg>

@@ -34,3 +34,4 @@ tmp
 # Docker
 Dockerfile.*
 !Dockerfile.example
+.qodo

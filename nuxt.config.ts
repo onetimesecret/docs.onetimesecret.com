@@ -1,19 +1,14 @@
 // nuxt.config.ts
 
-import { resolve } from "path";
+import fs from "fs";
+import path from "path";
+
+// Get all content files directly in the config
+import { routes } from "./scripts/generate-routes";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   extends: ["@nuxt/ui-pro"],
-
-  buildModules: [
-    [
-      "@nuxtjs/date-fns",
-      {
-        /* module options */
-      },
-    ],
-  ],
 
   modules: [
     "@nuxt/content",
@@ -37,15 +32,22 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       concurrency: 250,
-      interval: 1200,
+      interval: 250,
       failOnError: false,
+      crawlLinks: false,
+      routes: routes,
+      ignore: [
+        // Filter out routes for dot files
+        (route) => route.includes("/posts/."),
+      ],
     },
     publicAssets: [
       {
-        dir: resolve(__dirname, "public"),
+        dir: path.resolve(__dirname, "public"),
         maxAge: 60 * 60 * 24 * 7, // Cache for 1 week (adjust as needed)
       },
     ],
+    hooks: {},
   },
   content: {
     // or you might have 'mdc' instead of 'content' depending on your setup
@@ -105,13 +107,11 @@ export default defineNuxtConfig({
   },
   css: ["@/assets/css/main.css", "@/assets/css/font.css"],
   vite: {
+    plugins: [require("vite-svg-loader")],
     assetsInclude: ["@/assets/css/fonts/**/*.woff", "@/**/**/*.woff2"],
     server: {
       allowedHosts: true,
     },
-  },
-  env: {
-    TZ: "UTC", // or your desired time zone
   },
   hooks: {
     // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)

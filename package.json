@@ -4,9 +4,10 @@
   "type": "module",
   "packageManager": "pnpm@10.7.0",
   "scripts": {
+    "pregenerate": "echo 'Pregenerate this'",
     "build": "NODE_OPTIONS='--max-old-space-size=2048 ' npx nuxt build",
     "dev": "NODE_OPTIONS='' npx nuxt dev --host --port=5175",
-    "generate": "nuxt generate",
+    "generate": "NODE_OPTIONS='--max-old-space-size=4096 ' nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
@@ -43,6 +44,7 @@
     "@nuxthq/studio": "^2.2.1",
     "eslint": "^9.18.0",
     "nuxt-content-assets": "^1.4.4",
+    "vite-svg-loader": "^5.1.0",
     "vitest": "^3.0.4",
     "vue-tsc": "^2.1.6"
   },

@@ -1,0 +1,53 @@
+
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark background -->
+  <rect width="100%" height="100%" fill="#0a192f"/>
+
+  <!-- Title text -->
+  <text x="50" y="80" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#ffffff">
+    Canada Region Now Available
+  </text>
+
+  <!-- Decorative line -->
+  <line x1="50" y1="100" x2="750" y2="100" stroke="#c04757" stroke-width="3"/>
+
+  <!-- Canadian maple leaf icon -->
+  <path d="M400,140 L420,140 L435,110 L450,140 L470,140 L455,160 L465,190 L435,175 L405,190 L415,160 Z" fill="#c04757"/>
+
+  <!-- Domain listings with different colors -->
+  <text x="400" y="230" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#ff6b9d" text-anchor="middle">
+    eu.onetimesecret.com
+  </text>
+  <text x="400" y="280" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#ff6b9d" text-anchor="middle">
+    us.onetimesecret.com
+  </text>
+  <text x="400" y="330" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#ff6b9d" text-anchor="middle">
+    ca.onetimesecret.com
+  </text>
+
+  <!-- Highlight for Canada domain -->
+  <rect x="290" y="310" width="220" height="30" fill="#0a192f" stroke="#c04757" stroke-width="2" rx="5"/>
+
+  <!-- Decorative elements representing data centers -->
+  <circle cx="120" cy="230" r="15" fill="#ff6b9d" opacity="0.7"/>
+  <circle cx="120" cy="280" r="15" fill="#ff6b9d" opacity="0.7"/>
+  <circle cx="120" cy="330" r="15" fill="#ff6b9d" opacity="0.7"/>
+
+  <!-- Lines connecting data centers to domain names -->
+  <line x1="135" y1="230" x2="250" y2="230" stroke="#454d5d" stroke-width="2"/>
+  <line x1="135" y1="280" x2="250" y2="280" stroke="#454d5d" stroke-width="2"/>
+  <line x1="135" y1="330" x2="250" y2="330" stroke="#454d5d" stroke-width="2" stroke-dasharray="5,5"/>
+
+  <!-- Share-nothing architecture representation -->
+  <rect x="650" y="215" width="30" height="30" fill="none" stroke="#ffffff" stroke-width="2"/>
+  <rect x="700" y="215" width="30" height="30" fill="none" stroke="#ffffff" stroke-width="2"/>
+  <rect x="650" y="265" width="30" height="30" fill="none" stroke="#ffffff" stroke-width="2"/>
+  <rect x="700" y="265" width="30" height="30" fill="none" stroke="#ffffff" stroke-width="2"/>
+  <rect x="650" y="315" width="30" height="30" fill="none" stroke="#ffffff" stroke-width="2"/>
+  <rect x="700" y="315" width="30" height="30" fill="none" stroke="#c04757" stroke-width="3"/>
+
+  <!-- Byline at bottom right -->
+  <text x="790" y="395" font-family="Arial, sans-serif" font-size="12" font-style="italic" text-anchor="end" fill="#888">
+    Crafted by Claude 3.7 Sonnet with minimal supervision
+  </text>
+</svg>
