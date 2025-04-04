@@ -4,6 +4,7 @@ import { sidebar } from "./sidebar";
 
 export const starlightConfig: StarlightConfig = {
   title: "Onetime Secret - Docs",
+  // favicon: "./src/assets/img/favicon.ico",
   editLink: {
     baseUrl:
       "https://github.com/onetimesecret/docs.onetimesecret.com/edit/migrate-to-starlight/",

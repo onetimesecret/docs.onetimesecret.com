@@ -3,14 +3,14 @@ title: Creating Secrets
 description: Learn how to create and retrieve secrets using the Onetime Secret REST API, with support for both authenticated and anonymous usage.
 ---
 
-_Updated 2024-11-06_
+_Updated 2025-04-02_
 
-::callout{icon="i-heroicons-globe-alt"}
+:::note
 **Data Locality and Region Selection**
 - Choose between US ([`us.onetimesecret.com`](https://us.onetimesecret.com/)) or EU ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) data centers
 - Consider factors like data sovereignty, latency, and compliance requirements
 - **NOTE:** Default `onetimesecret.com` remains operational and routes to an active data center, using a specific locality is recommended as this functionality may be deprecated in the future.
-::
+:::
 
 
 ## Create a Secret

@@ -3,9 +3,9 @@ title: Geheimnisse bergen
 description: Lernen Sie, wie Sie mit der Onetime Secret REST API Geheimnisse abrufen können, wobei sowohl der authentifizierte als auch der anonyme Zugriff unterstützt wird.
 ---
 
-_Aktualisiert 2024-11-06_
+_Aktualisiert 2025-04-02_
 
-::callout{icon="i-heroicons-globe-alt"}
+<!-- ::callout{icon="i-heroicons-globe-alt"} -->
 **Auswahl von Datenort und Region**
 - Wählen Sie zwischen US ([`us.onetimesecret.com`](https://us.onetimesecret.com/)) oder EU ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) Rechenzentren
 - Berücksichtigen Sie Faktoren wie Datenhoheit, Latenzzeit und Compliance-Anforderungen

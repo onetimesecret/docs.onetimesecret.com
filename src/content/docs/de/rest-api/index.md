@@ -13,7 +13,7 @@ https://REGION.onetimesecret.com/api
 
 Wobei `REGION` entweder `us` oder `eu` ist.
 
-::callout{icon="i-heroicons-globe-alt"}
+<!-- ::callout{icon="i-heroicons-globe-alt"} -->
 **Auswahl des Datenorts und der Region**
 - Wählen Sie zwischen US ([`us.onetimesecret.com`](https://us.onetimesecret.com/)) oder EU ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) Rechenzentren
 - Berücksichtigen Sie Faktoren wie Datenhoheit, Latenzzeit und Compliance-Anforderungen
@@ -58,7 +58,7 @@ Onetime Secret unterstützt benutzerdefinierte Domain-Konfigurationen für Unter
 - **Konsistente Benutzererfahrung:** Pflegen Sie die visuelle und vertrauenswürdige Identität Ihres Unternehmens bei Ihren Kunden und Partnern.
 - **Bei Mitarbeiterschulungen einbeziehen:** Verwenden Sie benutzerdefinierte Domains, um die Sicherheitspraktiken und Arbeitsabläufe Ihres Unternehmens zu verstärken.
 
-::callout{icon="i-heroicons-lock-closed"}
+<!-- ::callout{icon="i-heroicons-lock-closed"} -->
 **Premium-Funktion**
 Benutzerdefinierte Domains sind in unserem [Identity Plus](https://onetimesecret.com/pricing) Plan verfügbar. Mit unseren benutzerfreundlichen Konfigurationsoptionen ist die Einrichtung in wenigen Minuten erledigt. [Erfahren Sie mehr](/docs/custom-domains).
 ::

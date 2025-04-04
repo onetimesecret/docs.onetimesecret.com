@@ -13,7 +13,7 @@ All API access is over HTTPS and all responses are JSON.
 
 Where `REGION` is either `us` or `eu`.
 
-::callout{icon="i-heroicons-globe-alt"}
+<!-- ::callout{icon="i-heroicons-globe-alt"} -->
 **Data Locality and Region Selection**
 - Choose between US ([`us.onetimesecret.com`](https://us.onetimesecret.com/)) or EU ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) data centers
 - Consider factors like data sovereignty, latency, and compliance requirements
@@ -58,7 +58,7 @@ Onetime Secret supports custom domain configurations for organizations with spec
 - **Consistent User Experience:** Maintain your organization's visual and trust identity with your customers and partners.
 - **Include during employee training:** Use custom domains to reinforce your organization's security practices and workflows.
 
-::callout{icon="i-heroicons-lock-closed"}
+<!-- ::callout{icon="i-heroicons-lock-closed"} -->
 **Premium Feature**
 Custom domains are available on our [Identity Plus](https://onetimesecret.com/pricing) plan. Setup in minutes with our easy-to-use configuration options. [Learn more](/docs/custom-domains).
 ::

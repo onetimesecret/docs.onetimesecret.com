@@ -3,7 +3,6 @@ title: Data Center Regions
 description: Learn about Onetime Secret's data center regions and how to choose the right one for your needs.
 ---
 
-# Data Center Regions
 
 Onetime Secret offers two data center regions: European Union (EU) and United States (US). This guide will help you understand the importance of region selection and how to choose the right one for your needs.
 
