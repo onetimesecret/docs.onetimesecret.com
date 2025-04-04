@@ -38,6 +38,7 @@ export default defineNuxtConfig({
     prerender: {
       concurrency: 250,
       interval: 1200,
+      failOnError: false,
     },
     publicAssets: [
       {
