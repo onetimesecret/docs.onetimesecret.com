@@ -83,15 +83,19 @@ export const sidebar: StarlightUserConfig["sidebar"] = [
 
   createGroup("REST API", { de: "REST API" }, [
     createLink("Overview", "rest-api", { de: "Überblick" }),
-    createLink("Create Secrets", "rest-api/create-secrets", {
-      de: "Geheimnisse erstellen",
-    }),
-    createLink("Retrieve Secrets", "rest-api/retrieve-secrets", {
-      de: "Geheimnisse abrufen",
-    }),
-    createLink("Client Libraries", "rest-api/client-libraries", {
-      de: "Client-Bibliotheken",
-    }),
+
+    // Nested v1 group containing all API endpoint documentation
+    createGroup("v1", { de: "v1" }, [
+      createLink("Create Secrets", "rest-api/v1/create-secrets", {
+        de: "Geheimnisse erstellen",
+      }),
+      createLink("Retrieve Secrets", "rest-api/v1/retrieve-secrets", {
+        de: "Geheimnisse abrufen",
+      }),
+      createLink("Client Libraries", "rest-api/v1/client-libraries", {
+        de: "Client-Bibliotheken",
+      }),
+    ]),
   ]),
 
   createGroup("Security Best Practices", { de: "Sicherheits-Best-Practices" }, [

@@ -15,9 +15,10 @@ const shouldRenderSearch =
 	config.pagefind || config.components.Search !== '@astrojs/starlight/components/Search.astro';
 
 const currentLocale = Astro.currentLocale ?? 'en';
-const customDomainUrl = getRelativeLocaleUrl(currentLocale, 'custom-domains');
-const principlesUrl = getRelativeLocaleUrl(currentLocale, 'principles');
-const restApiUrl = getRelativeLocaleUrl(currentLocale, 'rest-api');
+const navLink1 = getRelativeLocaleUrl(currentLocale, 'custom-domains');
+const navLink2 = getRelativeLocaleUrl(currentLocale, 'rest-api');
+const navLink3 = 'https://blog.onetimesecret.com/';
+const homeLink = 'https://onetimesecret.com/';
 
 ---
 
@@ -28,9 +29,17 @@ const restApiUrl = getRelativeLocaleUrl(currentLocale, 'rest-api');
 	<div class="sl-flex print:hidden">
 		{shouldRenderSearch && <Search />}
     <nav class="nav-links">
-      <a href={customDomainUrl}>{Astro.locals.t('nav.label.custom-domain')}</a>
-      <a href={principlesUrl}>{Astro.locals.t('nav.label.principles')}</a>
-      <a href={restApiUrl}>{Astro.locals.t('nav.label.rest-api')}</a>
+    <nav class="nav-links">
+
+      <a href={navLink1}>{Astro.locals.t('nav.label.custom-domain')}</a>
+      <a href={navLink2}>{Astro.locals.t('nav.label.rest-api')}</a>
+      <a href={navLink3}>{Astro.locals.t('nav.label.blog')}</a>
+      <a href={homeLink} class="home-link" aria-label={Astro.locals.t('nav.label.home')}>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+      </a>
     </nav>
 	</div>
 	<div class="sl-hidden md:sl-flex print:hidden right-group">
@@ -85,6 +94,10 @@ const restApiUrl = getRelativeLocaleUrl(currentLocale, 'rest-api');
   .nav-links a:hover {
     color: var(--sl-color-text-accent);
   }
+  .home-link {
+    display: flex;
+    align-items: center;
+  }
   @media (min-width: 768px) {
     .nav-links {
       display: flex;
@@ -109,7 +122,7 @@ const restApiUrl = getRelativeLocaleUrl(currentLocale, 'rest-api');
 			);
 			display: grid;
 			grid-template-columns:
-        /* 1 (site title): runs up until the main content column’s left edge or the width of the title, whichever is the largest  */
+        /* 1 (site title): runs up until the main content column's left edge or the width of the title, whichever is the largest  */
 				minmax(
 					calc(var(--__sidebar-width) + max(0rem, var(--__main-column-fr) - var(--sl-nav-gap))),
 					auto
