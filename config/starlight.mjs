@@ -23,8 +23,8 @@ export const starlightConfig = {
   pagefind: false,
   plugins: [],
   components: {
-    // Header: "./src/components/starlight/Header.astro",
-    // SiteTitle: "./src/components/starlight/SiteTitle.astro",
+    Header: "./src/components/starlight/Header.astro",
+    SiteTitle: "./src/components/starlight/SiteTitle.astro",
   },
   social: {
     // Prioritize runtime validation errors over TypeScript errors when
