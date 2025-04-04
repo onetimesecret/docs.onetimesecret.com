@@ -16,6 +16,7 @@ export const starlightConfig: StarlightConfig = {
     replacesTitle: true,
   },
   pagefind: false,
+  plugins: [],
   components: {
     Header: "./src/components/starlight/Header.astro",
     SiteTitle: "./src/components/starlight/SiteTitle.astro",
@@ -24,6 +25,7 @@ export const starlightConfig: StarlightConfig = {
     // Prioritize runtime validation errors over TypeScript errors when
     // they conflict so keep this a string rather than an object for now.
     github: "https://github.com/onetimesecret/onetimesecret",
+    blueSky: "https://bskyapp/profile/onetimesecretcom",
   },
   customCss: ["./src/styles/tailwind.css", "./src/fonts/font-face.css"],
   defaultLocale: i18nConfig.defaultLocale,

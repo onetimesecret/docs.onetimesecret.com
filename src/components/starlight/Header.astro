@@ -1,17 +1,24 @@
 ---
 import config from 'virtual:starlight/user-config';
-const siteTitleHref = "/plop";
+
 import LanguageSelect from '@astrojs/starlight/components/LanguageSelect.astro';
 import Search from '@astrojs/starlight/components/Search.astro';
-import SiteTitle from '@astrojs/starlight/components/SiteTitle.astro';
+import SiteTitle from './SiteTitle.astro';
 import SocialIcons from '@astrojs/starlight/components/SocialIcons.astro';
 import ThemeSelect from '@astrojs/starlight/components/ThemeSelect.astro';
+import { getRelativeLocaleUrl } from 'astro:i18n';
 
 /**
  * Render the `Search` component if Pagefind is enabled or the default search component has been overridden.
  */
 const shouldRenderSearch =
 	config.pagefind || config.components.Search !== '@astrojs/starlight/components/Search.astro';
+
+const currentLocale = Astro.currentLocale ?? 'en';
+const customDomainUrl = getRelativeLocaleUrl(currentLocale, 'custom-domains');
+const principlesUrl = getRelativeLocaleUrl(currentLocale, 'principles');
+const restApiUrl = getRelativeLocaleUrl(currentLocale, 'rest-api');
+
 ---
 
 <div class="header sl-flex">
@@ -21,9 +28,9 @@ const shouldRenderSearch =
 	<div class="sl-flex print:hidden">
 		{shouldRenderSearch && <Search />}
   <nav class="nav-links">
-        <a href="/custom-domains">Custom Domains</a>
-        <a href="/principles">Principles</a>
-        <a href="/rest-api">REST API</a>
+        <a href={customDomainUrl}>Custom Domains</a>
+        <a href={principlesUrl}>Principles</a>
+        <a href={restApiUrl}>API</a>
       </nav>
 	</div>
 	<div class="sl-hidden md:sl-flex print:hidden right-group">
