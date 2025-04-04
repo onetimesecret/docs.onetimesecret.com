@@ -1,0 +1,108 @@
+/* ZillaSlab font declarations */
+@font-face {
+  font-family: 'Zilla Slab';
+  src: url('./zs/ZillaSlab-Regular.woff2') format('woff2'),
+       url('./zs/ZillaSlab-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Zilla Slab';
+  src: url('./zs/ZillaSlab-Bold.woff2') format('woff2'),
+       url('./zs/ZillaSlab-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Zilla Slab';
+  src: url('./zs/ZillaSlab-Italic.woff2') format('woff2'),
+       url('./zs/ZillaSlab-Italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Zilla Slab';
+  src: url('./zs/ZillaSlab-BoldItalic.woff2') format('woff2'),
+       url('./zs/ZillaSlab-BoldItalic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Zilla Slab';
+  src: url('./zs/ZillaSlab-Medium.woff2') format('woff2'),
+       url('./zs/ZillaSlab-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Zilla Slab';
+  src: url('./zs/ZillaSlab-MediumItalic.woff2') format('woff2'),
+       url('./zs/ZillaSlab-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Zilla Slab';
+  src: url('./zs/ZillaSlab-SemiBold.woff2') format('woff2'),
+       url('./zs/ZillaSlab-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Zilla Slab';
+  src: url('./zs/ZillaSlab-SemiBoldItalic.woff2') format('woff2'),
+       url('./zs/ZillaSlab-SemiBoldItalic.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Zilla Slab';
+  src: url('./zs/ZillaSlab-Light.woff2') format('woff2'),
+       url('./zs/ZillaSlab-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Zilla Slab';
+  src: url('./zs/ZillaSlab-LightItalic.woff2') format('woff2'),
+       url('./zs/ZillaSlab-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Zilla Slab Highlight';
+  src: url('./zs/ZillaSlabHighlight-Regular.woff2') format('woff2'),
+       url('./zs/ZillaSlabHighlight-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Zilla Slab Highlight';
+  src: url('./zs/ZillaSlabHighlight-Bold.woff2') format('woff2'),
+       url('./zs/ZillaSlabHighlight-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

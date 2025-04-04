@@ -1,0 +1,50 @@
+---
+# src/content/docs/index.mdx
+title: Onetime Secret - Documentation
+description: Share sensitive information with self-destructing, encrypted links that are viewable only once.
+template: splash
+siteTitleHref: '/plop'
+hero:
+  tagline: Share sensitive information securely with self-destructing links that are only viewable once.
+  image:
+    file: ../../assets/img/socialcards/onetime-socialcard-20240823-1.png
+  actions:
+    - text: Get started
+      link: /en/introduction/
+      icon: right-arrow
+      variant: primary
+    - text: View on GitHub
+      link: https://github.com/onetimesecret/onetimesecret
+      icon: external
+      variant: secondary
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+<CardGrid stagger>
+  <Card title="Self-destructing messages" icon="trash">
+    Share secrets that automatically delete after being viewed or after a set time.
+  </Card>
+  <Card title="Server-side encryption" icon="lock-closed">
+    Your secrets are securely encrypted on our servers, ensuring data protection.
+  </Card>
+  <Card title="Passphrase protection" icon="key">
+    Add an extra layer of security with custom passphrases for your shared secrets.
+  </Card>
+</CardGrid>
+
+## The power of secure sharing
+
+Onetime Secret provides a simple, secure way to share sensitive information. Our service ensures your data remains private and ephemeral in an increasingly permanent digital world.
+
+<CardGrid>
+  <Card title="Customizable expiration" icon="clock">
+    Set your secret to expire after a specific time, from minutes to days.
+  </Card>
+  <Card title="Custom domains" icon="globe">
+    Use your own domain for a personalized and branded experience.
+  </Card>
+  <Card title="Open source" icon="github">
+    Our transparent, community-audited codebase ensures trust and reliability.
+  </Card>
+</CardGrid>

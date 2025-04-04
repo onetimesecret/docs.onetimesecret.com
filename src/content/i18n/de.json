@@ -1,0 +1,51 @@
+{
+  "nav": {
+    "label": {
+      "custom-domain": "Geheime Links",
+      "principles": "Prinzipien",
+      "rest-api": "API"
+    }
+  },
+  "skipLink.label": "Zum Inhalt springen",
+  "search.label": "Suche",
+  "search.ctrlKey": "Strg",
+  "search.cancelLabel": "Abbrechen",
+  "search.devWarning": "Die Suche ist nur in Produktions-Builds verfügbar. \nVersuchen Sie, die Seite zu bauen und lokal zu testen.",
+  "themeSelect.accessibleLabel": "Theme auswählen",
+  "themeSelect.dark": "Dunkel",
+  "themeSelect.light": "Hell",
+  "themeSelect.auto": "Auto",
+  "languageSelect.accessibleLabel": "Sprache auswählen",
+  "menuButton.accessibleLabel": "Menü",
+  "sidebarNav.accessibleLabel": "Hauptnavigation",
+  "tableOfContents.onThisPage": "Auf dieser Seite",
+  "tableOfContents.overview": "Übersicht",
+  "i18n.untranslatedContent": "Dieser Inhalt ist in Ihrer Sprache noch nicht verfügbar.",
+  "page.editLink": "Seite bearbeiten",
+  "page.lastUpdated": "Zuletzt aktualisiert:",
+  "page.previousLink": "Zurück",
+  "page.nextLink": "Weiter",
+  "page.draft": "Dieser Inhalt ist ein Entwurf und wird nicht in Produktions-Builds enthalten sein.",
+  "404.text": "Seite nicht gefunden. Überprüfen Sie die URL oder verwenden Sie die Suchleiste.",
+  "aside.note": "Hinweis",
+  "aside.tip": "Tipp",
+  "aside.caution": "Vorsicht",
+  "aside.danger": "Gefahr",
+  "fileTree.directory": "Verzeichnis",
+  "builtWithStarlight.label": "Erstellt mit Starlight",
+
+  "expressiveCode.copyButtonCopied": "Kopiert!",
+  "expressiveCode.copyButtonTooltip": "In die Zwischenablage kopieren",
+  "expressiveCode.terminalWindowFallbackTitle": "Terminal-Fenster",
+
+  "pagefind.clear_search": "Löschen",
+  "pagefind.load_more": "Mehr Ergebnisse laden",
+  "pagefind.search_label": "Diese Seite durchsuchen",
+  "pagefind.filters_label": "Filter",
+  "pagefind.zero_results": "Keine Ergebnisse für [SEARCH_TERM]",
+  "pagefind.many_results": "[COUNT] Ergebnisse für [SEARCH_TERM]",
+  "pagefind.one_result": "[COUNT] Ergebnis für [SEARCH_TERM]",
+  "pagefind.alt_search": "Keine Ergebnisse für [SEARCH_TERM]. Zeige stattdessen Ergebnisse für [DIFFERENT_TERM]",
+  "pagefind.search_suggestion": "Keine Ergebnisse für [SEARCH_TERM]. Versuchen Sie eine der folgenden Suchen:",
+  "pagefind.searching": "Suche nach [SEARCH_TERM]..."
+}
