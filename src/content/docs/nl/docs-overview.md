@@ -1,19 +1,19 @@
 ---
-title: Welcome to the Documentation
-description: Use the navigation menu to explore the Onetime Secret documentation. You'll find everything you need to know about creating, sharing, and managing secure, self-destructing messages.
+title: Welkom bij de documentatie
+description: Gebruik het navigatiemenu om de Onetime Secret documentatie te verkennen. U vindt hier alles wat u moet weten over het maken, delen en beheren van beveiligde, zelfvernietigende berichten.
 ---
 
-# Onetime Secret Documentation
+# Eenmalige Geheime Documentatie
 
-Use the navigation menu to explore the Onetime Secret documentation. You'll find everything you need to know about creating, sharing, and managing secure, self-destructing messages.
+Gebruik het navigatiemenu om de Onetime Secret documentatie te verkennen. Je vindt hier alles wat je moet weten over het maken, delen en beheren van beveiligde, zelfvernietigende berichten.
 
-## Getting Started
+## Aan de slag
 
-Start with our [Introduction](/en/introduction/) section to learn the basics of Onetime Secret.
+Begin met onze [Introductie](/nl/introductie/) sectie om de basis van Onetime Secret te leren.
 
-## Key Sections
+## Belangrijkste secties
 
-- [Secret Links](/en/secret-links/) - Learn how to create and share one-time secrets
-- [Custom Domains](/en/custom-domains/) - Set up your own branded secret sharing experience
-- [REST API](/en/rest-api/) - Integrate Onetime Secret with your applications
-- [Security Best Practices](/en/security-best-practices/) - Ensure maximum security when sharing sensitive information
+- Geheime koppelingen](/en/secret-links/) - Leer hoe je eenmalige geheimen kunt maken en delen
+- Aangepaste domeinen](/nl/custom-domains/) - Stel uw eigen ervaring in voor het delen van geheimen onder uw eigen merknaam
+- REST API](/nl/rest-api/) - Integreer Onetime Secret met uw applicaties
+- Security Best Practices](/nl/security-best-practices/) - Zorg voor maximale veiligheid bij het delen van gevoelige informatie

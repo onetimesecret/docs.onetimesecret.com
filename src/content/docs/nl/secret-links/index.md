@@ -1,55 +1,55 @@
 ---
-title: Intro to Secret Links
-description: Welcome to Onetime Secret's guide on Secret Links, a core feature of our secure, one-time sharing service.
+title: Inleiding tot geheime koppelingen
+description: Welkom bij de handleiding van Onetime Secret over Secret Links, een kernfunctie van onze beveiligde service voor eenmalig delen.
 ---
 
 
 
-## What are Secret Links?
+## Wat zijn geheime links?
 
-Secret Links are unique, self-destructing URLs that allow you to share sensitive information securely. Each link can only be accessed once before it disappears forever, ensuring your shared data remains confidential and doesn't linger online.
+Geheime koppelingen zijn unieke, zelfvernietigende URL's waarmee je gevoelige informatie veilig kunt delen. Elke link kan maar één keer worden geopend voordat hij voor altijd verdwijnt, zodat je zeker weet dat je gedeelde gegevens vertrouwelijk blijven en niet online blijven hangen.
 
-## How Secret Links Work
+## Hoe geheime links werken
 
-1. You create a secret message on our platform.
-2. We generate a unique, encrypted link for that message.
-3. You share this link with your intended recipient.
-4. The recipient opens the link to view the message.
-5. After viewing, the link and its content are permanently destroyed.
+1. Je maakt een geheim bericht aan op ons platform.
+2. Wij genereren een unieke, versleutelde link voor dat bericht.
+3. Je deelt deze link met de beoogde ontvanger.
+4. De ontvanger opent de link om het bericht te bekijken.
+5. Na het bekijken worden de link en de inhoud ervan permanent vernietigd.
 
-## Key Benefits
+## Belangrijkste voordelen
 
-- **Onetime Use**: Each link works only once, preventing unauthorized access.
-- **Automatic Destruction**: Content is deleted after viewing, leaving no digital trace.
-- **Secure Sharing**: Ideal for passwords, private messages, and other sensitive data.
-- **Simple and User-Friendly**: No account required for basic use.
+- Eenmalig gebruik**: Elke link werkt maar één keer, waardoor onbevoegde toegang wordt voorkomen.
+- **Automatische vernietiging**: Inhoud wordt verwijderd na het bekijken, zonder digitaal spoor achter te laten.
+- Veilig delen**: Ideaal voor wachtwoorden, privéberichten en andere gevoelige gegevens.
+- Eenvoudig en gebruiksvriendelijk**: Geen account nodig voor basisgebruik.
 
-## Use Cases
+## Gebruikscases
 
-Secret Links are perfect for:
+Secret Links zijn perfect voor:
 
-- Sharing login credentials securely
-- Sending confidential information to colleagues
-- Transmitting sensitive personal data
+- Veilig inloggegevens delen
+- Vertrouwelijke informatie naar collega's sturen
+- Gevoelige persoonlijke gegevens verzenden
 
-## Getting Started
+## Aan de slag
 
-To create your first Secret Link, visit [https://onetimesecret.com](onetimesecret.com) and follow the simple steps on our homepage.
+Om je eerste Secret Link aan te maken, ga je naar [https://onetimesecret.com](onetimesecret.com) en volg je de eenvoudige stappen op onze homepage.
 
-For more detailed information on using Secret Links, please refer to our [User Guide] (link to user guide).
+Raadpleeg voor meer gedetailleerde informatie over het gebruik van Geheime koppelingen onze [Gebruikershandleiding] (link naar gebruikershandleiding).
 
 
 <!--
-Communication Advice:
-1. This content introduces Secret Links in a clear, straightforward manner suitable for both technical and non-technical audiences.
-2. It emphasizes the core service and unique value proposition of Onetime Secret.
-3. The information provided is based on verifiable facts from the onetimesecret.com website.
-4. The tone is professional and user-focused, highlighting the problem-solution aspect of the service.
-5. For further development of this page, consider adding:
-   - A simple visual diagram of how Secret Links work
-   - FAQ section addressing common user queries
-   - Links to related documentation pages (e.g., advanced features, API usage)
-   - A callout box highlighting any recent updates or enhancements to the Secret Links feature
+Communicatieadvies:
+1. Deze inhoud introduceert Secret Links op een duidelijke, heldere manier die geschikt is voor zowel technisch als niet-technisch publiek.
+2. Het benadrukt de kernservice en unieke waardepropositie van Onetime Secret.
+3. De verstrekte informatie is gebaseerd op verifieerbare feiten van de onetimesecret.com website.
+4. De toon is professioneel en gebruikersgericht, waarbij het probleemoplossende aspect van de service wordt benadrukt.
+5. Overweeg voor de verdere ontwikkeling van deze pagina om toe te voegen:
+   - Een eenvoudig visueel diagram van hoe Secret Links werken
+   - FAQ-sectie voor veelgestelde vragen van gebruikers
+   - Links naar gerelateerde documentatiepagina's (bijv. geavanceerde functies, API-gebruik)
+   - Een vak met recente updates of verbeteringen aan de functie Geheime koppelingen
 
-Remember to verify all information with the latest data from Onetime Secret before publishing, and consider seeking user feedback to ensure the documentation meets their needs effectively.
+Vergeet niet om alle informatie te verifiëren met de meest recente gegevens van Onetime Secret voordat u deze publiceert, en overweeg om feedback van gebruikers te vragen om ervoor te zorgen dat de documentatie effectief aan hun behoeften voldoet.
 -->

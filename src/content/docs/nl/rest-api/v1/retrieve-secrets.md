@@ -1,114 +1,114 @@
 ---
-title: Retrieving Secrets
-description: Learn how to retrieve secrets using the Onetime Secret REST API, with support for both authenticated and anonymous access.
+title: Geheimen ophalen
+description: Leer hoe je geheimen kunt ophalen met de Onetime Secret REST API, met ondersteuning voor zowel geauthenticeerde als anonieme toegang.
 ---
 
-_Updated 2025-04-02_
+bijgewerkt op 2025-04-02
 
-:::note
-**Data Locality and Region Selection**
-- Choose a [region]({getRelativeLocaleUrl(Astro.currentLocale ?? 'en', 'regions')}) (e.g. [`us.onetimesecret.com`](https://us.onetimesecret.com/), [`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) data centers
-- Consider factors like data sovereignty, latency, and compliance requirements
-- **NOTE:** Default `onetimesecret.com` remains operational and routes to an active data center, using a specific locality is recommended as this functionality may be deprecated in the future.
+:::opmerking
+**Selectie van gegevenslocatie en regio**
+- Kies een [regio]({getRelativeLocaleUrl(Astro.currentLocale ?? 'en', 'regions')}) (bijv. [`us.onetimesecret.com`](https://us.onetimesecret.com/), [`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) datacenters
+- Houd rekening met factoren zoals gegevenssoevereiniteit, latentie en nalevingsvereisten
+- **NOOT:** Standaard blijft `onetimesecret.com` operationeel en routeert naar een actief datacenter. Het gebruik van een specifieke locatie wordt aanbevolen omdat deze functionaliteit in de toekomst mogelijk wordt afgeschaft.
 :::
 
-## Retrieve a Secret
+## Een geheim ophalen
 
 `POST https://REGION.onetimesecret.com/api/v1/secret/SECRET_KEY`
 
-### Authenticated Request
+### Geauthenticeerd verzoek
 
-```bash
+``bash
 $ curl -X POST -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/secret/SECRET_KEY
 ```
 
-### Anonymous Request
+### Anoniem verzoek
 
-```bash
+``bash
 $ curl -X POST https://eu.onetimesecret.com/api/v1/secret/SECRET_KEY
 ```
 
-### Query Params
+### Query-parameters
 
-- **SECRET_KEY**: the unique key for this secret.
-- **passphrase** (if required): the passphrase is required only if the secret was created with one.
+- **SECRET_KEY**: de unieke sleutel voor deze geheime sleutel.
+- **passphrase** (indien vereist): de passphrase is alleen vereist als de secret is aangemaakt met een passphrase.
 
-### Attributes
+### Attributen
 
-- **secret_key**: the unique key for the secret you create. This is key that you can share.
-- **value**: The actual secret. It should go without saying, but this will only be available one time.
+- **secret_key**: de unieke sleutel voor het geheim dat je aanmaakt. Deze sleutel kun je delen.
+- **waarde**: Het eigenlijke geheim. Het spreekt voor zich, maar dit is maar één keer beschikbaar.
 
-## Retrieve Metadata
+## Metagegevens ophalen
 
 `POST https://REGION.onetimesecret.com/api/v1/private/METADATA_KEY`
 
-Every secret also has associated metadata. The metadata is intended to be used by the creator of the secret (i.e. not the recipient) and should generally be kept private. You can safely use the metadata key to retrieve basic information about the secret itself (e.g. if or when it was viewed) since the metadata key is different from the secret key.
+Elk geheim heeft ook geassocieerde metadata. De metadata zijn bedoeld voor de maker van de secret (dus niet de ontvanger) en moeten over het algemeen privé blijven. Je kunt de metadata sleutel veilig gebruiken om basisinformatie over het geheim zelf op te vragen (bijv. of en wanneer het is bekeken) omdat de metadata sleutel anders is dan de geheime sleutel.
 
-### Authenticated Request
+### Geauthenticeerd verzoek
 
-```bash
+``bash
 $ curl -X POST -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/private/METADATA_KEY
 ```
 
-### Query Params
+### Query-parameters
 
-- **METADATA_KEY**: the unique key for this metadata.
+- **METADATA_KEY**: de unieke sleutel voor deze metagegevens.
 
-### Attributes
+### Attributen
 
-- **custid**: the username of the account that created the secret. This value will be `anon` for anonymous requests.
-- **metadata\_key**: the unique key for the metadata. DO NOT share this.
-- **secret\_key**: the unique key for the secret you created. This is key that you can share.
-- **ttl**: The time-to-live that was specified (i.e. not the time remaining)
-- **metadata\_ttl**: The remaining time (in seconds) that the metadata has left to live.
-- **secret\_ttl**: The remaining time (in seconds) that the secret has left to live.
-- **recipient**: if a recipient was specified, this is an obfuscated version of the email address.
-- **created**: Time the metadata was created in unix time (UTC)
-- **updated**: ditto, but the time it was last updated.
-- **received**: Time the secret was received.
-- **passphrase\_required**: If a passphrase was provided when the secret was created, this will be true. Otherwise false, obviously.
+- **custid**: de gebruikersnaam van de account die het geheim heeft aangemaakt. Deze waarde zal `anon` zijn voor anonieme verzoeken.
+- **metadata_key**: de unieke sleutel voor de metadata. Deel deze NIET.
+- Secret_key**: de unieke sleutel voor het geheim dat je hebt aangemaakt. Deze sleutel kun je delen.
+- **ttl**: De time-to-live die is opgegeven (dus niet de resterende tijd).
+- **metadata_ttl**: De resterende tijd (in seconden) dat de metadata nog te leven heeft.
+- **secret_ttl**: De resterende tijd (in seconden) dat het geheim nog te leven heeft.
+- **recipient**: als er een ontvanger is opgegeven, is dit een versleutelde versie van het e-mailadres.
+- **created**: Tijd waarop de metagegevens zijn aangemaakt in unix-tijd (UTC).
+- **updated**: idem, maar dan de tijd waarop het voor het laatst is bijgewerkt.
+- **received**: Tijdstip waarop het geheim is ontvangen.
+- **passphrase_required**: Als er een passphrase is opgegeven bij het aanmaken van het geheim, dan is dit waar. Anders uiteraard false.
 
 
-## Burn a Secret
+## Een geheim verbranden
 
 `POST https://REGION.onetimesecret.com/api/v1/private/METADATA_KEY/burn`
 
-Burn a secret that has not been read yet.
+Verbrand een geheim dat nog niet is gelezen.
 
-### Authenticated Request
+### Geauthenticeerd verzoek
 
-```bash
+``bash
 $ curl -X POST -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/private/METADATA_KEY/burn
 ```
 
-### Query Params
+### Query-parameters
 
-- None
+- Geen
 
-### Attributes
+### Attributen
 
-- Same as metadata attributes with a status of burned.
+- Hetzelfde als metagegevensattributen met een status van verbrand.
 
-## Retrieve Recent Metadata
+## Recente metagegevens ophalen
 
 **GET https://onetimesecret.com/api/v1/private/recent**
 
-Retrieve a list of recent metadata.
+Een lijst met recente metagegevens ophalen.
 
-### Authenticated Request
+### Geauthenticeerd verzoek
 
-```bash
+``bash
 $ curl -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/private/recent
 ```
 
-### Query Params
+### Query-parameters
 
-- None
+- Geen
 
-### Attributes
+### Attributen
 
-- Same as metadata attributes, although as a list and the secret key value will always be null.
+- Hetzelfde als metagegevensattributen, maar dan als lijst en de geheime sleutelwaarde is altijd nul.
 
-::: warning Authentication Required
-Note: Metadata and management operations (retrieve metadata, burn secret, recent metadata) are only available for authenticated users.
+::: waarschuwing Authenticatie vereist
+Opmerking: Metagegevens en beheeroperaties (metagegevens ophalen, geheim branden, recente metagegevens) zijn alleen beschikbaar voor geauthenticeerde gebruikers.
 :::

@@ -1,26 +1,26 @@
 ---
-title: Minimal Data Collection
-description: Our commitment to collecting only the essential data required to provide our service
+title: Minimale gegevensverzameling
+description: Onze belofte om alleen de essentiële gegevens te verzamelen die nodig zijn om onze service te leveren
 ---
 
-# We Only Collect What's Needed
+# We verzamelen alleen wat nodig is
 
-**Description:** At Onetime Secret, we collect only the data required to deliver our service: temporary secrets and the minimum account information needed for paid subscriptions. This keeps things simple and secure.
+**Beschrijving:** Bij Onetime Secret verzamelen we alleen de gegevens die nodig zijn om onze service te leveren: tijdelijke geheimen en de minimale accountgegevens die nodig zijn voor betaalde abonnementen. Dit houdt het simpel en veilig.
 
-**Why This Matters:**
+**Waarom dit belangrijk is:**
 
-1. **Less Risk:** The less data we store, the less there is to protect. By collecting only what's necessary, we reduce potential security risks.
+1. **Minder risico:** Hoe minder gegevens we opslaan, hoe minder we hoeven te beschermen. Door alleen het noodzakelijke te verzamelen, verminderen we potentiële beveiligingsrisico's.
 
-2. **Clear Purpose:** Every piece of information we collect has a specific purpose in delivering our service. No tracking, no analytics, no extras.
+2. **Een duidelijk doel:** Elk stukje informatie dat we verzamelen heeft een specifiek doel voor het leveren van onze service. Geen tracking, geen analytics, geen extra's.
 
-3. **Zero-Knowledge Design**: We can't access your secrets and don't want to. Each secret is encrypted, accessible only once, and automatically deleted after viewing or expiration.
+3. **Zero-Knowledge Design**: We hebben geen toegang tot je geheimen en willen dat ook niet. Elk geheim is versleuteld, slechts één keer toegankelijk en wordt automatisch verwijderd nadat het is bekeken of verlopen.
 
-**How It Works:**
+**Hoe het werkt:**
 
-1. **For Single Secrets:** We only store the encrypted secret until it's viewed or expires. After that, it's permanently deleted. (Other than the minimal encrypted backups we keep in case of emergency. We discuss this more in our [Privacy Policy](https://onetimesecret.com/info/privacy).)
+1. **Voor afzonderlijke geheimen:** We slaan het versleutelde geheim alleen op totdat het wordt bekeken of verloopt. Daarna wordt het permanent verwijderd. (Afgezien van de minimale versleutelde back-ups die we bewaren in geval van nood. We bespreken dit meer in ons [Privacybeleid] (https://onetimesecret.com/info/privacy).
 
-2. **For Registered Users:** We keep just enough information to manage your account and provide the service you've paid for. That's why we only collect an email address. We don't collect name or profile details because you don't need those features.
+2. **Voor geregistreerde gebruikers:** We bewaren net genoeg informatie om je account te beheren en de service te bieden waarvoor je hebt betaald. Daarom verzamelen we alleen een e-mailadres. We verzamelen geen naam- of profielgegevens omdat je die functies niet nodig hebt.
 
-3. **No Tracking:** We don't use cookies for tracking, analytics, or advertising. The only cookie we use is for keeping you logged in if you choose to create an account.
+3. **Geen tracking:** We gebruiken geen cookies voor tracking, analyse of reclame. De enige cookie die we gebruiken is om je ingelogd te houden als je ervoor kiest om een account aan te maken.
 
-This approach has served us and our users well since 2012. It's simple, effective, and respects your privacy.
+Deze aanpak heeft ons en onze gebruikers sinds 2012 goede diensten bewezen. Het is eenvoudig, effectief en respecteert je privacy.

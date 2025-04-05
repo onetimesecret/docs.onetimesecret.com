@@ -1,39 +1,39 @@
 ---
-title: Communication
-description: Why we limit email communication to only what's necessary
+title: Communicatie
+description: Waarom we e-mailcommunicatie beperken tot alleen het noodzakelijke
 ---
 
-# Our Communication Philosophy
+# Onze communicatiefilosofie
 
-We take a deliberately minimal approach to user communication, respecting your time and inbox.
+We benaderen communicatie met gebruikers bewust minimaal, met respect voor je tijd en inbox.
 
-## Our No-Email Philosophy
+## Onze geen-mail-filosofie
 
-Most services flood your inbox with:
-- Marketing newsletters
+De meeste diensten overspoelen je inbox met:
+- Marketingnieuwsbrieven
 - Product updates
-- Usage statistics
-- Feature announcements
-- Promotional offers
-- Re-engagement campaigns
+- Gebruiksstatistieken
+- Aankondigingen
+- Promotionele aanbiedingen
+- Campagnes voor hernieuwde betrokkenheid
 
-In our entire history, we've never sent a marketing email. The only emails you'll receive from us are the ones you specifically request: secret link deliveries. No newsletters, no updates, no promotions. We believe your inbox belongs to you.
+In onze hele geschiedenis hebben we nog nooit een marketinge-mail verstuurd. De enige e-mails die je van ons ontvangt, zijn de e-mails waar je specifiek om vraagt: geheime linkleveringen. Geen nieuwsbrieven, geen updates, geen promoties. Wij geloven dat je inbox van jou is.
 
-## Why This Matters
+## Waarom dit belangrijk is
 
-By avoiding standard marketing and communication practices, we:
-- Maintain a cleaner, simpler service
-- Reduce potential security risks
-- Keep focused on our core purpose
-- Respect your time and attention
+Door standaard marketing- en communicatiepraktijken te vermijden, kunnen we:
+- Een schonere, eenvoudigere service onderhouden
+- Verminderen we potentiële veiligheidsrisico's
+- Blijven we gefocust op ons hoofddoel
+- Uw tijd en aandacht respecteren
 
-## Our Focus Instead
+## Onze focus in plaats daarvan
 
-We invest our time and resources in:
-- Improving core functionality
-- Strengthening privacy protections
-- Ensuring reliable service
-- Addressing jurisdictional compliance
-- Maintaining transparent operations
+We investeren onze tijd en middelen in:
+- Het verbeteren van de kernfunctionaliteit
+- Het versterken van privacybescherming
+- Zorgen voor betrouwbare service
+- Naleving van jurisdicties
+- Het onderhouden van transparante activiteiten
 
-Have thoughts about our communication approach? [Contact us](https://onetimesecret.com/feedback).
+Hebt u ideeën over onze communicatieaanpak? [Neem contact met ons op](https://onetimesecret.com/feedback).

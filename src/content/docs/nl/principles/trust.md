@@ -1,42 +1,42 @@
 ---
-title: Trust
-description: Our commitment to being open and honest about our practices
-icon: eye
+title: Vertrouwen
+description: Onze toewijding om open en eerlijk te zijn over onze praktijken
+pictogram: oog
 ---
 
-# Transparency and Trust
+# Transparantie en vertrouwen
 
-We believe that trust is earned through radical transparency about our practices, technologies, and commitments.
+Wij geloven dat vertrouwen wordt verdiend door radicale transparantie over onze praktijken, technologieën en verplichtingen.
 
-## Our Transparency Commitments
+## Onze transparantieverplichtingen
 
-- Open-source our core technologies
-- Publish clear, understandable privacy policies
-- Provide detailed security and infrastructure reports
-- Maintain an ongoing dialogue with our user community
-- Avoid standard tracking and marketing practices
-- Keep your data under direct control
+- Open-source onze kerntechnologieën
+- Een duidelijk, begrijpelijk privacybeleid publiceren
+- Gedetailleerd rapporteren over beveiliging en infrastructuur
+- Een voortdurende dialoog onderhouden met onze gebruikersgemeenschap
+- Standaard tracking- en marketingpraktijken vermijden
+- Uw gegevens onder directe controle houden
 
-## Why Transparency Matters
+## Waarom transparantie belangrijk is
 
-In an era of complex digital services, we stand out by being completely clear about how we handle data, what we do, and why we do it. Our approach centers on three core principles:
+In een tijdperk van complexe digitale services onderscheiden we ons door volledig duidelijk te zijn over hoe we met gegevens omgaan, wat we doen en waarom we het doen. Onze aanpak is gebaseerd op drie kernprincipes:
 
-1. Respect privacy: Your data is yours, period
-2. Focus on reliability: The tool should simply work when you need it
-3. Build trust through action: We prove our commitment through what we avoid
+1. Respecteer privacy: Jouw gegevens zijn van jou, punt
+2. Focus op betrouwbaarheid: De tool moet gewoon werken wanneer je hem nodig hebt
+3. Vertrouwen opbouwen door actie: We bewijzen onze betrokkenheid door wat we vermijden
 
-## Our Privacy-First Approach
+## Onze privacy-eerst benadering
 
-We deliberately avoid common industry practices that could compromise privacy:
+We vermijden bewust gangbare praktijken in de sector die de privacy in gevaar kunnen brengen:
 
-- Analytics packages that track user behavior
-- Social media integration buttons
-- Advertising networks
-- Marketing automation tools
-- Third-party tracking pixels
+- Analytics-pakketten die het gedrag van gebruikers bijhouden
+- Integratieknoppen voor sociale media
+- Advertentienetwerken
+- Tools voor marketingautomatisering
+- Tracking pixels van derden
 
-## Looking Forward
+## Vooruitkijken
 
-We'll continue prioritizing transparency and privacy over marketing reach. While this means we might grow more slowly than services that aggressively market themselves, we believe it's the right choice for building lasting trust with our users.
+We blijven prioriteit geven aan transparantie en privacy boven marketingbereik. Hoewel dit betekent dat we misschien langzamer groeien dan diensten die zichzelf agressief vermarkten, geloven we dat het de juiste keuze is om blijvend vertrouwen op te bouwen met onze gebruikers.
 
-Have thoughts about our approach? [Contact us](https://onetimesecret.com/feedback).
+Hebt u ideeën over onze aanpak? [Neem contact met ons op](https://onetimesecret.com/feedback).

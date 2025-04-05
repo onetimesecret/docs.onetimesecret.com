@@ -1,29 +1,29 @@
 ---
-title: Getting Started
-description: Your hub for Onetime Secret resources, documentation, and insights.
+title: Aan de slag
+description: Uw hub voor Onetime Secret resources, documentatie en inzichten.
 ---
 
-Welcome to Onetime Secret Docs, your central resource for maximizing the value of our privacy-focused, ephemeral secret sharing service.
+Welkom bij Onetime Secret Docs, uw centrale bron voor het maximaliseren van de waarde van onze privacy-gerichte, efemere geheime deeldienst.
 
-## What's Here
+## Wat is hier
 
-- Documentation: Clear, concise guides for using Onetime Secret effectively
-- Blog: Insights on privacy, security, and product updates
-- Use Cases: Practical applications of Onetime Secret in various scenarios (coming soon)
+- Documentatie: Duidelijke, beknopte handleidingen om Onetime Secret effectief te gebruiken
+- Blog: Inzichten in privacy, beveiliging en productupdates
+- Use Cases: Praktische toepassingen van Onetime Secret in verschillende scenario's (binnenkort beschikbaar)
 
-## Core Functionality
+## Kernfunctionaliteit
 
-Onetime Secret provides a straightforward solution for sharing sensitive information securely:
+Onetime Secret biedt een eenvoudige oplossing voor het veilig delen van gevoelige informatie:
 
-1. One-time access: View shared secrets once, then they're permanently deleted
-2. No registration required: Use basic features without an account
-3. Customizable expiration: Control secret availability with automatic deletion
-4. Intuitive interface: Share secrets easily with our user-friendly design
-5. Optional passphrase: Add an extra security layer to shared secrets
-6. Open-source: Review our codebase for enhanced transparency
+1. Eenmalige toegang: Bekijk gedeelde geheimen eenmalig, daarna worden ze permanent verwijderd
+2. Geen registratie nodig: Basisfuncties gebruiken zonder account
+3. Aanpasbare afloop: Controleer de beschikbaarheid van geheimen met automatische verwijdering
+4. Intuïtieve interface: Deel eenvoudig geheimen met ons gebruiksvriendelijke ontwerp
+5. Optionele wachtwoordzin: Voeg een extra beveiligingslaag toe aan gedeelde geheimen
+6. Open-source: Bekijk onze codebase voor meer transparantie
 
-Explore our Bonus Content to learn how Onetime Secret can address your secure communication needs efficiently and discreetly.
+Bekijk onze Bonus Content om te ontdekken hoe Onetime Secret efficiënt en discreet kan voorzien in uw behoefte aan beveiligde communicatie.
 
-## Get Started
+## Aan de slag
 
-Ready to dive in? Check out our [documentation](/docs) for detailed instructions on using Onetime Secret effectively. If you have any questions or feedback, feel free to [contact us](/contact) directly.
+Klaar om erin te duiken? Bekijk onze [documentatie](/docs) voor gedetailleerde instructies over het effectief gebruik van Onetime Secret. Als je vragen of feedback hebt, voel je dan vrij om direct [contact](/contact) met ons op te nemen.

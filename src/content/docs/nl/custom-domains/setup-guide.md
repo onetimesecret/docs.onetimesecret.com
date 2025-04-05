@@ -1,130 +1,130 @@
 ---
-title: Setup Guide
-description: This guide will walk you through the process of setting up a custom domain for your Onetime Secret account, including the differences between subdomains and apex domains, and choosing your preferred data center region.
+title: Installatiegids
+description: Deze handleiding leidt u door het proces van het instellen van een aangepast domein voor uw Onetime Secret account, inclusief de verschillen tussen subdomeinen en apex domeinen, en het kiezen van uw gewenste datacenter regio.
 ---
 
-# Custom Domain Setup Guide
+# Handleiding voor aangepaste domeininstellingen
 
-## Prerequisites
+## Vereisten
 
-- An active Onetime Secret account with custom domain feature enabled
-- A domain you own and can manage DNS settings for
+- Een actief Onetime Secret account met aangepaste domeinfunctie ingeschakeld
+- Een domein waarvan u de eigenaar bent en waarvoor u DNS-instellingen kunt beheren
 
-## Understanding Domain Types
+## Domein Types begrijpen
 
-Before setting up your custom domain, it's important to understand the difference between subdomains and apex domains:
+Voordat je je aangepaste domein instelt, is het belangrijk om het verschil tussen subdomeinen en apex-domeinen te begrijpen:
 
-1. **Subdomain**: A subdivision of your main domain (e.g., secrets.yourdomain.com)
-2. **Apex Domain**: The root domain itself (e.g., yourdomain.com)
+1. **Subdomein**: Een onderverdeling van uw hoofddomein (bijv. secrets.uwdomein.com)
+2. **Apex-domein**: Het hoofddomein zelf (bijv. uwdomein.nl)
 
-## Choose Your Region
+## Kies uw regio
 
-Onetime Secret offers two data center regions: EU and US. When setting up your custom domain, you'll need to choose which region you prefer for storing your data. This choice is important for several reasons:
+Onetime Secret biedt twee datacenterregio's: EU en VS. Bij het instellen van je eigen domein, moet je kiezen welke regio je verkiest voor het opslaan van je gegevens. Deze keuze is om verschillende redenen belangrijk:
 
-- **For Individuals**: You can choose based on your personal preference, such as proximity for potentially faster access or personal data sovereignty concerns.
-- **For Businesses**: Your choice may depend on your data locality obligations, such as compliance with GDPR, state, or provincial guidelines. Ensure you select the region that best aligns with your regulatory requirements.
+- **Voor particulieren**: U kunt kiezen op basis van uw persoonlijke voorkeur, zoals nabijheid voor mogelijk snellere toegang of zorgen over de soevereiniteit van persoonlijke gegevens.
+- Voor bedrijven**: Uw keuze kan afhangen van uw verplichtingen met betrekking tot datalocatie, zoals naleving van GDPR-, staats- of provinciale richtlijnen. Zorg ervoor dat u de regio selecteert die het beste overeenkomt met uw wettelijke vereisten.
 
-Consider your specific needs and requirements when making this choice. For more detailed information about our data center regions and how to choose the right one for your needs, please refer to our [Data Center Regions](/docs/regions) guide.
+Houd bij het maken van deze keuze rekening met uw specifieke wensen en eisen. Voor meer gedetailleerde informatie over onze datacenterregio's en hoe u de juiste regio voor uw behoeften kunt kiezen, raadpleegt u onze gids [Datacenterregio's](/docs/regio's).
 
-## Step 1: Access Domains Dashboard
+## Stap 1: Toegang tot Domein-dashboard
 
-1. Log in to your Onetime Secret account
-2. Navigate to Dashboard > Custom Domains
-3. Click "Add Domain"
+1. Log in op uw Onetime Secret account
+2. Navigeer naar Dashboard > Aangepaste domeinen
+3. Klik op "Domein toevoegen
 
-<img src="/img/docs/custom-domains/3-Custom-domains.png" alt="Custom domains view" width="400" />
+<img src="/img/docs/custom-domains/3-Custom-domains.png" alt="Weergave aangepaste domeinen" width="400" />
 
-## Step 2: Enter Your Domain
+## Stap 2: Voer uw domein in
 
-1. In the custom domain settings, enter your desired domain (e.g., secrets.yourdomain.com or yourdomain.com)
-2. Click "Add Domain" or equivalent button to proceed
+1. Voer in de aangepaste domeininstellingen het gewenste domein in (bijv. secrets.yourdomain.com of yourdomain.com)
+2. Klik op "Domein toevoegen" of een vergelijkbare knop om verder te gaan
 
-## Step 3: Configure DNS Settings
+## Stap 3: DNS-instellingen configureren
 
-To connect your domain, you need to update your DNS settings. The process differs slightly depending on whether you're using a subdomain or an apex domain, and which data center region you choose.
+Om uw domein te verbinden, moet u uw DNS-instellingen bijwerken. Het proces verschilt enigszins, afhankelijk van of u een subdomein of een apex-domein gebruikt en welke datacenterregio u kiest.
 
-### For Subdomains (Recommended)
+### Voor subdomeinen (aanbevolen)
 
-1. Access your domain's DNS management panel (through your domain registrar or DNS provider)
-2. Create a CNAME record with the following details:
-   - Host: Your chosen subdomain (e.g., secrets)
-   - Points to / Value:
-     - For EU region: identity.eu.onetime.co
-     - For US region: identity.us.onetime.co
-3. Remove any existing A, AAAA, or CNAME records for the same subdomain
+1. Ga naar het DNS-beheerpaneel van uw domein (via uw domeinregistrar of DNS-provider)
+2. Maak een CNAME-record aan met de volgende gegevens:
+   - Host: Uw gekozen subdomein (bijv. geheimen)
+   - Wijst naar / Waarde:
+     - Voor EU-regio: identity.eu.onetime.co
+     - Voor VS-regio: identity.us.onetime.co
+3. Verwijder alle bestaande A, AAAA of CNAME records voor hetzelfde subdomein.
 
-### For Apex Domains
+### Voor Apex-domeinen
 
-1. Access your domain's DNS management panel
-2. Create or modify an A record with the following details:
-   - Host: @ (or leave blank, depending on your DNS provider)
-   - Points to / Value:
-     - For EU region: 109.105.217.207
-     - For US region: 66.51.126.41
+1. Ga naar het DNS-beheerpaneel van uw domein
+2. Maak of wijzig een A-record met de volgende gegevens:
+   - Host: @ (of laat leeg, afhankelijk van uw DNS-provider)
+   - Wijst naar / Waarde:
+     - Voor EU-regio: 109.105.217.207
+     - Voor VS-regio: 66.51.126.41
 
-Important: Ensure there are no conflicting records for the domain you're using.
+Belangrijk: zorg ervoor dat er geen conflicterende records zijn voor het domein dat je gebruikt.
 
-<img src="/img/docs/custom-domains/4-Custom-domain-settings.png" alt="Custom domain settings" width="400" />
+<img src="/img/docs/custom-domains/4-Custom-domain-settings.png" alt="Aangepaste domeininstellingen" width="400" />
 
-### More Info
+### Meer info
 
-#### Why CNAME for Subdomains?
+#### Waarom CNAME voor subdomeinen?
 
-We recommend using CNAME records for subdomains because:
+We raden het gebruik van CNAME-records voor subdomeinen aan omdat:
 
-1. They're more flexible and allow us to change our server IP addresses without requiring you to update your DNS settings.
-2. They automatically adapt to any changes we make to our infrastructure.
+1. Ze zijn flexibeler en stellen ons in staat om onze IP-serveradressen te wijzigen zonder dat jij je DNS-instellingen hoeft bij te werken.
+2. Ze passen zich automatisch aan aan alle wijzigingen die we in onze infrastructuur aanbrengen.
 
-#### Why A Records for Apex Domains?
+#### Waarom A-records voor Apex-domeinen?
 
-Apex domains cannot use CNAME records due to DNS standards. Therefore, we must use A records, which have some limitations:
+Apex-domeinen kunnen geen CNAME-records gebruiken vanwege DNS-standaarden. Daarom moeten we A-records gebruiken, die enkele beperkingen hebben:
 
-1. If we change our IP address (which is rare), you'll need to update your DNS settings manually.
-2. They don't automatically adapt to changes in our infrastructure.
+1. Als we ons IP-adres veranderen (wat zelden voorkomt), moet je je DNS-instellingen handmatig bijwerken.
+2. Ze passen zich niet automatisch aan aan veranderingen in onze infrastructuur.
 
-## Step 4: Verify Domain and Wait for SSL
+## Stap 4: Domein verifiëren en wachten op SSL
 
-1. After updating DNS settings, return to the Onetime Secret custom domain page
-2. The system will automatically attempt to verify your domain
-3. SSL certificate generation will begin once verification is successful
-4. This process may take a few minutes to complete
+1. Ga na het bijwerken van de DNS-instellingen terug naar de pagina Onetime Secret aangepast domein
+2. Het systeem zal automatisch proberen uw domein te verifiëren
+3. SSL-certificaat zal beginnen zodra de verificatie succesvol is
+4. Dit proces kan enkele minuten duren
 
-## Step 5: Confirm Setup
+## Stap 5: Setup bevestigen
 
-Once setup is complete, you should see the following information:
+Zodra de installatie is voltooid, zou je de volgende informatie moeten zien:
 
-- Domain Status: Active with SSL
-- Target Address: identity.eu.onetime.co or identity.us.onetime.co (depending on your chosen region)
-- SSL Status: Active
-- SSL Renewal Date: (Will be displayed, typically about a year from setup)
+- Domeinstatus: Actief met SSL
+- Doeladres: identity.eu.onetime.co of identity.us.onetime.co (afhankelijk van de door u gekozen regio)
+- SSL Status: Actief
+- SSL Vernieuwingsdatum: (wordt weergegeven, meestal ongeveer een jaar na installatie)
 
-## Troubleshooting
+## Problemen oplossen
 
-- If verification fails, double-check your DNS settings
-- Ensure you've removed any conflicting records
-- DNS propagation can take up to 24 hours, though it's usually much faster
+- Als verificatie mislukt, controleer dan je DNS-instellingen dubbel
+- Zorg ervoor dat u alle conflicterende records hebt verwijderd
+- DNS-propagatie kan tot 24 uur duren, maar is meestal veel sneller
 
-## Using Your Custom Domain
+## Uw aangepaste domein gebruiken
 
-Once active, your secret links will use your custom domain. For example:
+Zodra ze actief zijn, zullen je geheime links je aangepaste domein gebruiken. Bijvoorbeeld:
 `https://secrets-example.onetime.dev/secret/abc123`
 
 ## We've Got You Covered
 
-We handle the rest of the technical details so you don't have to.
+Wij zorgen voor de rest van de technische details zodat jij dat niet hoeft te doen.
 
-- We continuously monitor your domain's status
-- SSL certificates are automatically renewed without any action required on your part
+- Wij bewaken continu de status van uw domein
+- SSL-certificaten worden automatisch verlengd zonder dat u daar iets voor hoeft te doen
 
-For those who like to stay informed, you can easily check the health of your domain:
+Voor degenen die graag op de hoogte blijven, kun je eenvoudig de gezondheid van je domein controleren:
 
-- Simply look at the "Last Monitored" timestamp in your dashboard to confirm ongoing connectivity
+- Kijk gewoon naar de "Last Monitored" tijdstempel in je dashboard om de lopende connectiviteit te bevestigen.
 
-## Questions or Need Support?
+## Vragen of ondersteuning nodig?
 
-We're here to help. If you have any questions or need assistance:
+We zijn er om je te helpen. Als je vragen hebt of hulp nodig hebt:
 
-- Email us directly at support@onetimesecret.com
-- Use our feedback form at https://onetimesecret.com/feedback
+- Stuur een e-mail naar support@onetimesecret.com
+- Gebruik ons feedbackformulier op https://onetimesecret.com/feedback
 
-Our team is committed to providing you with the best possible support for your custom domain setup and usage, including guidance on choosing the right data center region for your needs.
+Ons team doet er alles aan om u de best mogelijke ondersteuning te bieden voor het instellen en gebruiken van uw aangepaste domein, inclusief begeleiding bij het kiezen van de juiste datacenterregio voor uw behoeften.

@@ -1,124 +1,124 @@
 ---
-title: Glossary
-description: A reference guide for translating Onetime Secret's key terms, interface elements, and technical vocabulary across multiple languages to maintain consistency
+title: Woordenlijst
+description: Een referentiegids voor het vertalen van de belangrijkste termen, interface-elementen en technische woordenschat van Onetime Secret in meerdere talen om de consistentie te behouden.
 ---
 
-# Onetime Secret Translation Glossary
+# Verklarende woordenlijst voor eenmalige geheime vertalingen
 
-This glossary provides standardized translations for key terms across languages to ensure consistency in the Onetime Secret application. It is based on analysis of the existing translations in German (Austria), French (France), and French (Canada).
+Deze verklarende woordenlijst biedt gestandaardiseerde vertalingen voor belangrijke termen in verschillende talen om consistentie in de Onetime Secret toepassing te garanderen. Het is gebaseerd op een analyse van de bestaande vertalingen in het Duits (Oostenrijk), Frans (Frankrijk) en Frans (Canada).
 
-## Core Terminology
+## Kernbegrippen
 
-| English | German (AT) | French (FR) | French (CA) | Notes |
+| Engels | Duits (AT) | Frans (FR) | Frans (CA) | Aantekeningen |
 |---------|-------------|-------------|-------------|-------|
-| secret (noun) | Geheimnis | secret | secret | Central concept of the application |
-| secret (adj) | geheim | secret/sécurisé | secret/sécurisé | |
-| passphrase | Sicherheitsphrase | phrase secrète | mot de passe | Authentication method for secrets |
-| burn | verbrennen | supprimer | supprimer | Action to delete a secret before viewing |
-| view/reveal | ansehen/anzeigen | consulter/afficher | consulter/afficher | Action to access a secret |
-| link | Link/Verbindung | lien | lien | The URL that provides access to a secret |
-| encrypt/encrypted | verschlüsseln/verschlüsselt | chiffrer/chiffré | chiffrer/chiffré | Security method |
-| secure | sicher | sécurisé | sécurisé | State of protection |
+| Geheim (zelfstandig naamwoord) Geheim | geheim | centraal concept van de toepassing
+| geheim | geheim/sécurisé | geheim/sécurisé |
+| Paswoord | Sicherheitsphrase | phrase secrète | mot de passe | Authenticatiemethode voor geheimen.
+| Action to delete a secret before viewing |
+| view/reveal | ansehen/anzeigen | consulter/afficher | consulter/afficher | Actie om toegang te krijgen tot een geheim |
+| link | Link/Verbindung | lien | lien | De URL die toegang geeft tot een geheim |
+| encrypt/encrypted | verschlüsseln/verschlüsselt | chiffrer/chiffré | chiffrer/chiffré | Beveiligingsmethode |
+| secure | sicher | sécurisé | sécurisé | beschermingsstatus |
 
-## User Interface Elements
+## Gebruikersinterface-elementen
 
-| English | German (AT) | French (FR) | French (CA) | Notes |
+| Engels | Duits (AT) | Frans (FR) | Frans (CA) | Aantekeningen |
 |---------|-------------|-------------|-------------|-------|
-| Share a secret | Ein Geheimnis teilen | Partager un secret | Partager un secret | Main action |
-| Create Account | Konto erstellen | Créer un compte | Créer un compte | Registration |
-| Sign In | Eintragen | Se connecter | Se connecter | Authentication |
-| Dashboard | Konto | Tableau de bord | Compte | User's main page |
-| Settings | Einstellungen | Paramètres | Paramètres | Configuration page |
-| Privacy Options | Datenschutz-Optionen | Options de confidentialité | Options de confidentialité | Secret settings |
-| Feedback | Rückmeldung | Retour d'information | Retour d'information | User comments |
+| Deel een geheim | Deel een geheim | Belangrijkste actie |
+| Account aanmaken | Konto erstellen | Créer un compte | Créer un compte | Registratie |
+| Aanmelden | Eintragen | Verbinden | Authenticatie |
+| Dashboard | Konto | Tableau de bord | Compte | Hoofdpagina van de gebruiker |
+| Instellingen | Instellingen | Parameters | Configuratiepagina |
+| Privacyopties | Datenschutz-Optionen | Options de confidentialité | Geheime instellingen |
+| Feedback | Rückmeldung | Retourzendingen | Retourzendingen | Gebruikersopmerkingen |
 
-## Status Terms
+## Statusvoorwaarden
 
-| English | German (AT) | French (FR) | French (CA) | Notes |
+| Engels | Duits (AT) | Frans (FR) | Frans (CA) | Aantekeningen |
 |---------|-------------|-------------|-------------|-------|
-| received | empfangen | reçu | reçu | Secret has been viewed |
-| burned | verbrannt | supprimé | supprimé | Secret was deleted before viewing |
-| expired | abgelaufen | expiré | expiré | Secret is no longer available due to time |
-| created | erstellt | créé | créé | Secret has been generated |
-| active | aktiv | actif | actif | Secret is available |
-| inactive | inaktiv | inactif | inactif | Secret is not available |
+| Geheim is bekeken.
+| verbrannt | supprimé | supprimé | Geheim is gewist voordat het werd bekeken |
+| abgelaufen | expiré | expiré | Geheim is door de tijd niet langer beschikbaar |
+| Geheim is aangemaakt.
+| active | aktiv | actif | actif | Geheim is beschikbaar |
+| inactief | inaktiv | inactif | inactif | Geheim is niet beschikbaar |
 
-## Time-Related Terms
+## Tijdgerelateerde termen
 
-| English | German (AT) | French (FR) | French (CA) | Notes |
+| Engels | Duits (AT) | Frans (FR) | Frans (CA) | Aantekeningen |
 |---------|-------------|-------------|-------------|-------|
-| expires in | läuft ab in | expire dans | expire dans | Time until secret is no longer available |
-| day/days | Tag/Tage | jour/jours | jour/jours | Time unit |
-| hour/hours | Stunde/Stunden | heure/heures | heure/heures | Time unit |
-| minute/minutes | Minute/Minuten | minute/minutes | minute/minutes | Time unit |
-| second/seconds | Sekunde/Sekunden | seconde/secondes | seconde/secondes | Time unit |
+| expires in | läuft ab in | expire dans | expire dans | Tijd tot het geheim niet langer beschikbaar is |
+| Day/Days | Tag/Tage | Jour/jours | Jour/jours | Tijdseenheid |
+| uur/uren | Stunde/Stunden | heure/heures | heure/heures | Tijdseenheid |
+| Minuten Minuten Minuten Minuten Tijdseenheid
+| seconde/seconden | sekunde/ekunden | seconde/seconden | seconde/seconden | tijdseenheid |
 
-## Security Features
+## Beveiligingsfuncties
 
-| English | German (AT) | French (FR) | French (CA) | Notes |
+| Engels | Duits (AT) | Frans (FR) | Frans (CA) | Aantekeningen |
 |---------|-------------|-------------|-------------|-------|
-| one-time access | einmaliger Zugang | accès unique | accès unique | Core security feature |
-| passphrase protection | Schutz durch Sicherheitsphrase | protection par phrase secrète | protection par phrase d'authentification | Additional security |
-| encrypted in transit | verschlüsselt bei der Übertragung | chiffré en transit | chiffré en transit | Data protection method |
-| encrypted at rest | verschlüsselt im Ruhezustand | chiffré au repos | chiffré au repos | Storage protection |
+| Eenmalige toegang Unieke toegang Kernbeveiliging
+| Bescherming door wachtwoordzin | Schutz durch Sicherheitsphrase | Beveiliging door wachtwoordzin | Beveiliging door wachtwoordzin | Extra beveiliging |
+| gecodeerd in doorvoer | verschlüsselt bei der Übertragung | chiffré en transit | chiffré en transit | Gegevensbeschermingsmethode |
+| In rust versleuteld | verschlüsselt im Ruhezustand | chiffré au repos | chiffré au repos | Opslagbeveiliging |
 
-## Account-Related Terms
+## Accountgerelateerde termen
 
-| English | German (AT) | French (FR) | French (CA) | Notes |
+| Engels | Duits (AT) | Frans (FR) | Frans (CA) | Aantekeningen |
 |---------|-------------|-------------|-------------|-------|
-| email | E-Mail | courriel/e-mail | courriel | User identifier |
-| password | Passwort | mot de passe | mot de passe | Authentication |
-| account | Konto | compte | compte | User profile |
-| subscription | Abonnement | abonnement | abonnement | Paid service |
-| customer | Kunde | client | client | Paying user |
+| e-mail | courriel/e-mail | courriel | gebruikersidentificatie |
+| Wachtwoord | Paswoord | Paswoord | Authenticatie |
+| Gebruikersprofiel.
+| Abonnement Betaalde dienst.
+| Klant | Kunde | client | betalende gebruiker |
 
-## Domain-Related Terms
+## Domein-gerelateerde termen
 
-| English | German (AT) | French (FR) | French (CA) | Notes |
+| Engels | Duits (AT) | Frans (FR) | Frans (CA) | Aantekeningen |
 |---------|-------------|-------------|-------------|-------|
-| custom domain | benutzerdefinierter Bereich | domaine personnalisé | domaine personnalisé | Premium feature |
-| domain verification | Domänenüberprüfung | vérification du domaine | vérification du domaine | Setup process |
-| DNS record | Namensserver-Eintrag | enregistrement DNS | enregistrement DNS | Configuration |
+| Domein verificatie | Domänenüberprüfung | Domänenüberprüfung | domaine personnalisé | Premium functie |
+| Domeinverificatie | Domänenüberprüfung | Vérification du domaine | Vérification du domaine | Setup proces |
+| DNS record | Namensserver-Eintrag | DNS enregistrement | DNS enregistrement | Configuratie |
 | CNAME record | CNAME-Eintrag | enregistrement CNAME | enregistrement CNAME | DNS setup |
 
-## Error Messages
+## Foutmeldingen
 
-| English | German (AT) | French (FR) | French (CA) | Notes |
+| Engels | Duits (AT) | Frans (FR) | Frans (CA) | Aantekeningen |
 |---------|-------------|-------------|-------------|-------|
-| error | Fehler | erreur | bug | Problem notification |
-| warning | Warnung | avertissement | attention | Caution notification |
-| oops | Huch | oups | oups | Friendly error intro |
+| Fout | Fehler | erreur | bug | Probleemmelding |
+| waarschuwing | waarschuwing | afleiding | aandacht | waarschuwing kennisgeving |
+| Vriendelijke foutmelding.
 
-## Buttons and Actions
+## Knoppen en acties
 
-| English | German (AT) | French (FR) | French (CA) | Notes |
+| Engels | Duits (AT) | Frans (FR) | Frans (CA) | Aantekeningen |
 |---------|-------------|-------------|-------------|-------|
-| submit | einreichen | soumettre | soumettre | Form action |
-| cancel | abbrechen | annuler | annuler | Negative action |
-| confirm | bestätigen | confirmer | confirmer | Positive action |
-| copy to clipboard | in die Zwischenablage kopieren | copier dans le presse-papiers | copier dans le presse-papiers | Utility action |
-| continue | weiter | continuer | continuer | Navigation |
-| back | zurück | retour | retour | Navigation |
+| submit | einreichen | soumettre | soumettre | Form actie |
+| Annuleer | abbrechen | annuler | annuler | Negatieve actie |
+| Bevestigen | Bestätigen | Bevestigen | Positieve actie |
+| Kopieer naar klembord | In die Zwischenablage kopieren | Kopiëren in de presse-papiers | Kopiëren in de presse-papiers | Nuttige actie |
+| Doorgaan | verdergaan | Navigatie |
+| terug | zurück | retour | navigatie |
 
-## Marketing Terms
+## Marketingvoorwaarden
 
-| English | German (AT) | French (FR) | French (CA) | Notes |
+| Engels | Duits (AT) | Frans (FR) | Frans (CA) | Aantekeningen |
 |---------|-------------|-------------|-------------|-------|
-| secure links | sichere Links | liens sécurisés | liens sécurisés | Product feature |
-| privacy-first design | Datenschutz als oberstes Gebot | conception privilégiant la protection de la vie privée | conception privilégiant la protection de la vie privée | Design philosophy |
-| custom branding | benutzerdefiniertes Branding | image de marque personnalisée | image de marque personnalisée | Premium feature |
+| Beveiligde links | Geheime links | Beveiligde links | Producteigenschap |
+| Privacyprivacy design | Datenschutz als oberstes Gebot | privilégiant la protection de la vie privée | privilégiant la protection de la vie privée | Design filosofie |
+| Image de marque personnalisée Image de marque personnalisée Premium functie
 
-## Translation Guidelines
+## Vertaalrichtlijnen
 
-1. **Consistency**: Use the same translation for a term throughout the application
-2. **Context**: Consider how the term is used in the application
-3. **Cultural Adaptation**: Adapt terms to local conventions when necessary
-4. **Technical Accuracy**: Ensure security terms are translated accurately
-5. **Tone**: Maintain a professional but straightforward tone
+1. **Consistentie**: Gebruik dezelfde vertaling voor een term in de hele toepassing.
+2. **Context**: Overweeg hoe de term wordt gebruikt in de toepassing
+3. **Culturele aanpassing**: Pas termen waar nodig aan aan lokale conventies
+4. **Technische nauwkeurigheid**: Ervoor zorgen dat beveiligingstermen nauwkeurig worden vertaald
+5. **Toon**: Handhaaf een professionele maar ongecompliceerde toon
 
-## Special Considerations
+## Speciale overwegingen
 
-- The term "secret" is central to the application and should be translated consistently
-- Regional variations (e.g., "courriel" in Canadian French vs "e-mail" in European French) should be respected
-- Technical terms related to security should prioritize accuracy over localization
-- UI elements should follow platform conventions for the target language
+- De term "geheim" staat centraal in de toepassing en moet consequent worden vertaald.
+- Regionale verschillen (bijv. "courriel" in Canadees Frans vs. "e-mail" in Europees Frans) moeten worden gerespecteerd.
+- Technische termen met betrekking tot beveiliging moeten prioriteit geven aan nauwkeurigheid boven lokalisatie
+- UI-elementen moeten de platformconventies voor de doeltaal volgen

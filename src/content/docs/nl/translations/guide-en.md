@@ -1,274 +1,274 @@
 ---
-title: Translation style guide
-description: A comprehensive guide for translators working on Onetime Secret localization, covering brand voice, terminology standards, and language-specific requirements to ensure high-quality and consistent translations
+title: Vertaalstijlgids
+description: Een uitgebreide gids voor vertalers die werken aan de lokalisatie van Onetime Secret, met informatie over de stem van het merk, terminologienormen en taalspecifieke vereisten om hoogwaardige en consistente vertalingen te garanderen.
 ---
 
-## Translation Style Guide English, Canada (en-CA)
+## Vertaalstijlgids Engels, Canada (en-CA)
 
-![Translation Style Guide](/socialcards/onetime-socialcard-20250226-1.png)
+Vertaling Stijlgids](/socialcards/onetime-socialcard-20250226-1.png)
 
-This style guide provides instruction for translating to the Canadian English locale.
+Deze stijlgids geeft instructies voor het vertalen naar de Canadese Engelse locale.
 
-| *This Style Guide is based on content from [Mozilla L10N Styleguides](https://github.com/mozilla-l10n/styleguides/) by Mozilla Contributors, licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).*  |
-|  |
+| Deze stijlgids is gebaseerd op inhoud uit [Mozilla L10N Styleguides](https://github.com/mozilla-l10n/styleguides/) door Mozilla Contributors, gelicentieerd onder [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).* |
+| |
 
-## Target Audience
+## Doelgroep
 
-Our English-speaking audience includes:
+Ons Engelstalige publiek bestaat uit:
 
-### Customers
+### Klanten
 
-- Professional background: IT professionals, agency teams (design, development, marketing), and corporate support teams (HR, provisioning, logistics, finance)
-- Audience: Professionals ages 20-50 with some tech proficiency. These individuals have chosen or work for a company that has chosen to incorporate Onetime Secret into their workflow.
-- Location: North America, UK, Ireland, New Zealand, Australia, Netherlands, Germany
-- Writing approach: Use clear, accessible language with professional tone
+- Professionele achtergrond: IT-professionals, agentschapsteams (ontwerp, ontwikkeling, marketing) en bedrijfsondersteuningsteams (HR, provisioning, logistiek, financiën)
+- Doelgroep: Professionals tussen de 20-50 jaar met enige technische kennis. Deze mensen hebben gekozen voor of werken voor een bedrijf dat Onetime Secret in hun workflow heeft opgenomen.
+- Locatie: Noord-Amerika, VK, Ierland, Nieuw-Zeeland, Australië, Nederland, Duitsland
+- Schrijfstijl: Gebruik duidelijke, toegankelijke taal met een professionele toon
 
-### Recipients
+### Ontvangers
 
-- Audience: Diverse age range (18-80) including students, seniors, parents, clients, coworkers. These individuals may have never heard of Onetime Secret and generally have less context around how it works/
-- Writing approach: Clear, accessible language with an empathetic tone
+- Doelgroep: Diverse leeftijdsgroepen (18-80) waaronder studenten, senioren, ouders, klanten, collega's. Deze mensen hebben misschien nog nooit gehoord van Onetime Secret en hebben over het algemeen minder context over hoe het werkt/
+- Schrijfstijl: Duidelijke, toegankelijke taal met een empathische toon
 
 
-**Translation Note:** These audience descriptions provide context about how the product is used by different groups and should inform translation tone and style. They are not intended to define or limit how we view our customers.
+**Vertalingsaantekening:** Deze doelgroepomschrijvingen bieden context over hoe het product door verschillende groepen wordt gebruikt en moeten de toon en stijl van de vertaling bepalen. Ze zijn niet bedoeld om te definiëren of te beperken hoe wij onze klanten zien.
 
-## Brand Voice
+## Merkstem
 
-About the brand voice and tone.
+Over de stem en toon van het merk.
 
-### Core Values
+### Kernwaarden
 
-- Authentic and transparent
+- Authentiek en transparant
 
-- Patient and focused
+- Geduldig en gefocust
 
-- Efficient without sacrificing quality
+- Efficiënt zonder aan kwaliteit in te boeten
 
-- Professional yet approachable
+- Professioneel en toch toegankelijk
 
-### Communication Principles
+### Communicatieprincipes
 
-- Adapt tone to match user expertise, from beginners to security professionals
+- De toon aanpassen aan de deskundigheid van gebruikers, van beginners tot beveiligingsprofessionals
 
-- Balance friendliness with reliability
+- Evenwicht tussen vriendelijkheid en betrouwbaarheid
 
-- Prioritize clarity over casual language
+- Geef de voorkeur aan duidelijkheid boven nonchalant taalgebruik
 
-- Provide delightful experiences through thoughtful interactions
+- Heerlijke ervaringen bieden door doordachte interacties
 
-### Writing Guidelines
+### Schrijfrichtlijnen
 
-- Use clear, direct language that respects users' time
+- Gebruik duidelijke, directe taal die de tijd van gebruikers respecteert
 
-- Maintain a helpful, patient tone even when explaining complex concepts
+- Een behulpzame, geduldige toon aanslaan, zelfs wanneer je complexe concepten uitlegt
 
-- Write with warmth while keeping focus on the task
+- Schrijf met warmte terwijl je gefocust blijft op de taak
 
-- Scale technical detail based on user context
+- Technische details aanpassen aan de context van de gebruiker
 
-- Casual language should not be used at the expense of clarity, regardless of the context.
+- Ongedwongen taalgebruik mag niet ten koste gaan van de duidelijkheid, ongeacht de context.
 
-## Language preferences
+## Taalvoorkeuren
 
-*Guidance: This involves determining language-specific preferences, such as spelling variations, punctuation rules, and date and time formats, which resonate with your target audience. — Remember, adhering closely to your audience's language preferences can significantly reduce barriers to communication and enhance their experience with the brand.*
+*Begeleiding: Dit omvat het bepalen van taalspecifieke voorkeuren, zoals spellingsvariaties, interpunctieregels en datum- en tijdnotaties, die aanslaan bij je doelpubliek. - Onthoud dat het nauwgezet volgen van de taalvoorkeuren van je publiek de communicatiebarrières aanzienlijk kan verminderen en hun ervaring met het merk kan verbeteren.*
 
-- Use American English. However for date formats use yyyy-mm-dd and times use 24h. Distances in km, weights in lbs.
-- Translations should sound as natural as possible. Borrowed words should never be used (with the exception of branded names).
-- Our english speaking audience is 50% english as a first language and 50% as a second/third/professional language. We need to keep this in mind when choosing terms and phrases to avoid inappropriate or confusing translations.
-- The word "secret" is central to our brand, product, and communication strategy. We protect secrets. We also provide a secret service.
+- Gebruik Amerikaans Engels. Voor datumnotaties gebruik je echter jjjj-mm-dd en voor tijden 24u. Afstanden in km, gewichten in lbs.
+- Vertalingen moeten zo natuurlijk mogelijk klinken. Gebruik nooit geleende woorden (met uitzondering van merknamen).
+- Ons Engelstalige publiek bestaat voor 50% uit Engels als eerste taal en voor 50% uit Engels als tweede/derde/beroepstaal. We moeten dit in gedachten houden bij het kiezen van termen en zinnen om ongepaste of verwarrende vertalingen te voorkomen.
+- Het woord "geheim" staat centraal in onze merk-, product- en communicatiestrategie. We beschermen geheimen. We bieden ook een geheime dienst aan.
 
-### Translating the word "secret"
+### Het woord "geheim" vertalen
 
-The word secret can take a number of meanings with subtle but important differences. Our canonical example comes from an update to our Danish translation by [jetdk](https://github.com/onetimesecret/onetimesecret/pull/956#issue-2782747525):
+Het woord geheim kan een aantal betekenissen hebben met subtiele maar belangrijke verschillen. Ons canonieke voorbeeld komt van een update van onze Deense vertaling door [jetdk](https://github.com/onetimesecret/onetimesecret/pull/956#issue-2782747525):
 
-#### Word Choice: "Beskeder" vs "Hemmeligheder"
+#### Woordkeuze: "Beskeder" vs "Hemmeligheder".
 
-CORRECT:   **Beskeder** (messages)
-INCORRECT: Hemmeligheder (secrets)
+CORRECT:   **Beskeder** (berichten)
+INCORRECT: Hemmeligheder (geheimen)
 
-The term "Beskeder" should be used when referring to a secret (e.g. a secret message or secret link that is generated by Onetime Secret). While "Hemmeligheder" is a literal translation of "Secrets", it carries connotations of personal or hidden information in everyday Danish usage that don't match the intended meaning.
+De term "Beskeder" moet worden gebruikt als het gaat om een geheim (bijv. een geheim bericht of een geheime link die wordt gegenereerd door Onetime Secret). Hoewel "Hemmeligheder" een letterlijke vertaling is van "Geheimen", draagt het in het dagelijkse Deense gebruik connotaties van persoonlijke of verborgen informatie die niet overeenkomen met de bedoelde betekenis.
 
-Example usage:
+Voorbeeldgebruik:
 
-✅ Du har 3 nye beskeder (You have 3 new messages)
-❌ Du har 3 nye hemmeligheder (You have 3 new secrets)
+✅ Du har 3 nye beskeder (Je hebt 3 nieuwe berichten)
+❌ Du har 3 nye hemmeligheder (Je hebt 3 nieuwe geheimen)
 
-## Grammar and style guidelines
+## Grammatica- en stijlrichtlijnen
 
-*Guidance: Pinpoint rules for grammar, style, and punctuation to maintain consistency throughout all your translated content.*
+*Richtlijnen: Duidelijke regels voor grammatica, stijl en interpunctie om consistentie te behouden in al je vertaalde content.*
 
-- Use oxford commas, periods, and question marks. Avoid exclamations, contractions, and semi-colons.
-- Use active, imperative voice where users take action. Use passive or declarative voice when informing users.
-- Sentence fragments are ok on their own. Otherwise full sentences with proper business grammar.
-- Divide lengthy information into multiple sentences, if needed.
-- In general, use the second person (`you`) to address the user.
-- Avoid using the first person (`my`, `I`) as it can create confusion about who is being addressed.
+- Gebruik oxford komma's, punten en vraagtekens. Vermijd uitroeptekens, samentrekkingen en puntkomma's.
+- Gebruik een actieve, gebiedende stem wanneer gebruikers actie ondernemen. Gebruik een passieve of declaratieve stem als je gebruikers informeert.
+- Zinsfragmenten zijn op zichzelf goed. Anders volledige zinnen met correcte zakelijke grammatica.
+- Verdeel lange informatie in meerdere zinnen, indien nodig.
+- Gebruik over het algemeen de tweede persoon (`jij`) om de gebruiker aan te spreken.
+- Vermijd het gebruik van de eerste persoon (`mijn`, `ik`) omdat dit verwarring kan scheppen over wie er wordt aangesproken.
 
-### UI Text: When to Use Active vs Passive Voice
+### UI-tekst: Wanneer actieve vs. passieve stem gebruiken
 
-#### Active, Imperative Voice ("Do something")
+#### Actief, gebiedende wijs ("Doe iets")
 
-Buttons
-✓ Save changes
-✓ Delete file
-✓ Send message
+Knoppen
+✓ Wijzigingen opslaan
+✓ Bestand verwijderen
+✓ Bericht verzenden
 
-Menu items
-✓ View settings
-✓ Create new folder
+Menu-items
+✓ Instellingen weergeven
+✓ Nieuwe map maken
 
-#### Passive or Declarative Voice ("Something happened")
+#### Passieve of declaratieve stem ("Er is iets gebeurd")
 
-Status messages
-✓ Changes saved
-✓ File deleted
-✓ Payment declined
+Statusberichten
+✓ Opgeslagen wijzigingen
+✓ Bestand verwijderd
+✓ Betaling geweigerd
 
-Notifications
-✓ 3 new messages
-✓ Download complete
-✓ Server unavailable
+Meldingen
+✓ 3 nieuwe berichten
+✓ Download voltooid
+Server niet beschikbaar
 
-System states
-✓ Upload in progress
-✓ Connection lost
-✓ Email address not found
+Systeemstatussen
+✓ Uploaden bezig
+✓ Verbinding verloren
+✓ E-mailadres niet gevonden
 
-#### Examples in Context
+#### Voorbeelden in context
 
-Form submission
-✓ Save changes (button->active)
-✓ Changes saved successfully (status->passive)
+Formulier indienen
+Wijzigingen opslaan (knop->actief)
+✓ Wijzigingen succesvol opgeslagen (status->passief)
 
-File upload
-✓ Upload file (button)
-✓ Upload complete (status)
+Bestand uploaden
+✓ Bestand uploaden (knop)
+✓ Upload voltooid (status)
 
 
-## Terminology consistency
+## Terminologie consistentie
 
-*Create a glossary of key terms, along with their approved translations, to ensure consistent usage across all content.*
+*Creëer een verklarende woordenlijst van belangrijke termen, samen met hun goedgekeurde vertalingen, om een consistent gebruik in alle inhoud te garanderen*.
 
-### Brand Terms (Do Not Translate)
+### Merktermen (niet vertalen)
 
-- Onetime Secret
-- OTS (when used as product abbreviation)
-- Identity Plus (product name)
-- Global Elite (product name)
-- Custom Install (product name)
+- Eenmalig geheim
+- OTS (indien gebruikt als productafkorting)
+- Identity Plus (productnaam)
+- Global Elite (productnaam)
+- Custom Install (productnaam)
 
-### About the Brand Name
+### Over de merknaam
 
-In "Onetime Secret", "Onetime" functions as a compound adjective (also called a attributive adjective) that modifies the noun "Secret". It describes a key characteristic of the secret - that it can only be accessed once. Note the spelling choice. There are actually three common variants of this term:
+In "Onetime Secret" functioneert "Onetime" als een samengesteld bijvoeglijk naamwoord (ook wel attributief bijvoeglijk naamwoord genoemd) dat het zelfstandig naamwoord "Secret" wijzigt. Het beschrijft een belangrijk kenmerk van het geheim - dat het maar één keer toegankelijk is. Let op de spellingskeuze. Er zijn eigenlijk drie varianten van deze term:
 
-- "one-time" (hyphenated)
-- "one time" (two words)
-- "onetime" (compound)
+- eenmalig
+- "eenmalig" (twee woorden)
+- "eenmalig" (samenstelling)
 
-The hyphenated form "one-time" is considered the standard spelling when the term functions as an adjective before a noun, as in "one-time password" or "one-time code". This follows the general English rule that compound modifiers before nouns are often hyphenated.
+De afgebroken vorm "eenmalig" wordt beschouwd als de standaardspelling wanneer de term fungeert als een bijvoeglijk naamwoord voor een zelfstandig naamwoord, zoals in "eenmalig wachtwoord" of "eenmalige code". Dit volgt de algemene Engelse regel dat samengestelde modifiers voor zelfstandige naamwoorden vaak worden afgebroken.
 
-The compound form is the canonical spelling for the brand and company name: Onetime Secret.
+De samengestelde vorm is de canonieke spelling voor de merk- en bedrijfsnaam: Onetime Secret.
 
-### Core Concepts
+### Kernbegrippen
 
-#### Secret Management
+#### Geheimhouding
 
-- **secret** (n.) - The confidential information being shared
-    - Translations must maintain the context of confidentiality
-    - Preferred over terms like "message" or "content"
-    - Example: "Create a new secret" not "Create a new message"
-- **one-time** (adj.) - Describing the single-use nature of the service
-    - Must emphasize the temporary, single-use aspect
-    - Hyphenated when used as adjective
-    - Example: "This is a one-time secret" not "This is a single secret"
-- **Onetime** (compound adj.) - Part of the brand name Onetime Secret.
-    - Must not be used on its own; always paired with "Secret"
-    - Example: "Onetime Secret"
-- **burn** (v.) - The act of destroying a secret before it's viewed
-    - Technical term for destruction of a secret message
-    - Translations should maintain the permanence implied
-    - Example: "The secret was burned and no longer available"
+- **secret** (n.) - De vertrouwelijke informatie die wordt gedeeld
+    - Vertalingen moeten de context van vertrouwelijkheid behouden
+    - Te verkiezen boven termen als "bericht" of "inhoud".
+    - Voorbeeld: "Maak een nieuw geheim" niet "Maak een nieuw bericht"
+- **eenmalig** (adj.) - Beschrijft de eenmalige aard van de dienst
+    - Moet het tijdelijke, eenmalige aspect benadrukken
+    - Afgebroken wanneer gebruikt als bijvoeglijk naamwoord
+    - Voorbeeld: "Dit is een eenmalig geheim" niet "Dit is een eenmalig geheim"
+- **Onetime** (samengestelde adj.) - Onderdeel van de merknaam Onetime Secret.
+    - Mag niet alleen worden gebruikt; altijd in combinatie met "Secret".
+    - Voorbeeld: "Onetime Secret"
+- **branden** (v.) - De handeling van het vernietigen van een geheim voordat het wordt bekeken
+    - Technische term voor het vernietigen van een geheim bericht
+    - Vertalingen moeten de geïmpliceerde duurzaamheid behouden
+    - Voorbeeld: "Het geheim werd verbrand en is niet langer beschikbaar"
 
-#### Security Terms
+#### Beveiligingstermen
 
-- **encryption** (n.) - The process of encoding secrets
-    - Technical term that should remain consistent
-    - Distinguish from "encoding" or "hashing"
-    - Example: "All secrets use end-to-end encryption"
-- **rate limiting** (n.) - System to prevent abuse
-    - Technical term for request restriction
-    - Keep hyphenation in English
-    - Example: "Rate limiting prevents abuse"
+- **encryptie** (n.) - Het proces van het coderen van geheimen
+    - Technische term die consistent moet blijven
+    - Onderscheid van "coderen" of "hashing".
+    - Voorbeeld: "Alle geheimen gebruiken end-to-end encryptie"
+- **rate limiting** (n.) - Systeem om misbruik te voorkomen
+    - Technische term voor aanvraagbeperking
+    - Koppelteken in het Engels behouden
+    - Voorbeeld: "Rate limiting voorkomt misbruik"
 - **secure**
 - **private**
-- **password / passphrase**
-- **expiration / expiry / time-to-live**
+- **wachtwoord / wachtwoordzin**
+- **expiration / vervaldatum / time-to-live**
 
-#### User Management
+#### Gebruikersbeheer
 
-- **colonel** (n.) - Administrator role
-    - Project-specific term, rhymes with "kernel" which is a technical term and central component of an operating system. No other project uses this term in this way. It can be confusing even in North America.
-    - Translate to the common term for an "administrator" in the context of software permissions. The account with the highest level of privileges.
-    - Example: "Only colonels can access this feature" (i.e. "Only admins can access this feature").
-- **plan** (n.) - Subscription level
-    - Use consistently for service tiers
-    - Prefer over "tier" or "level"
-    - Example: "Upgrade to a premium plan"
+- **kolonel** (n.) - Beheerdersrol
+    - Projectspecifieke term, rijmt op "kernel" wat een technische term is en centraal onderdeel van een besturingssysteem. Geen enkel ander project gebruikt deze term op deze manier. Het kan verwarrend zijn, zelfs in Noord-Amerika.
+    - Vertaal naar de algemene term voor een "administrator" in de context van software rechten. De account met het hoogste niveau van privileges.
+    - Voorbeeld: "Alleen kolonels hebben toegang tot deze functie" (d.w.z. "Alleen admins hebben toegang tot deze functie").
+- **plan** (n.) - abonnementsniveau
+    - Consequent gebruiken voor serviceniveaus
+    - Te verkiezen boven "niveau" of "level".
+    - Voorbeeld: "Upgrade naar een premium plan"
 
-## Formatting and layout
+## Opmaak en lay-out
 
-*Set standards for formatting, layout, and typography to maintain visual and design consistency across different languages.*
+*Stelt standaarden op voor opmaak, lay-out en typografie om de visuele en ontwerpconsistentie in verschillende talen te behouden*.
 
-- Use consistent header styles to improve readability and content flow. For example H1 for main headings, H2, H3, etc for sub-headings
-- Write headings in sentence case unless the heading is a punctuated sentence:
-    - Good example: How localization drives growth for fintech firms
-    - Good example: Localization made easy. Why wait?
-    - Bad example: How Localization Drives Growth for Fintech Firms
-    - Bad example: Localization made easy. why wait?
+- Gebruik consistente stijlen voor kopteksten om de leesbaarheid en het vloeien van de inhoud te verbeteren. Bijvoorbeeld H1 voor hoofdkoppen, H2, H3, etc voor subkoppen.
+- Schrijf koppen in hoofdletters, tenzij de kop een zin met leestekens is:
+    - Goed voorbeeld: Hoe lokalisatie groei voor fintechbedrijven stimuleert
+    - Goed voorbeeld: Lokalisatie gemakkelijk gemaakt. Waarom wachten?
+    - Slecht voorbeeld: Hoe lokalisatie de groei van fintechbedrijven stimuleert
+    - Slecht voorbeeld: Lokalisatie gemakkelijk gemaakt. Waarom wachten?
 
-### Time format
+### Tijdformaat
 
-Generally, a 12-hour clock is used in the United States. 24-hour clocks are used in aviation and other logistical contexts.
+Over het algemeen wordt in de Verenigde Staten een 12-uursklok gebruikt. In de luchtvaart en andere logistieke contexten worden 24-uursklokken gebruikt.
 
-### Numerals
+### Cijfers
 
-|  Symbol Purpose  |  Character Name  |  Symbol  |  Example  |
+| Symbool doel | Tekennaam | Symbool | Voorbeeld |
 | --- | --- | --- | --- |
-|  Decimal  |  Period  |  `.`  |  1.23  |
-|  Thousands  |  Comma  |  `,`  |  1,234  |
-|  Percentage  |  Percent sign  |  `%`  |  99.95%  |
+| Decimaal | Punt | `` | 1,23 |
+| Duizendtallen | Komma | `,` | 1.234 |
+| Percentage | Procentteken | `%` | 99,95% |
 
-### Currency
+### Valuta
 
-The currency of the Canada is the Canadian Dollar (CAD). The monetary symbols are `$` and rarely `¢`.
+De munteenheid van Canada is de Canadese Dollar (CAD). De monetaire symbolen zijn `$` en zelden `¢`.
 
-### Units of measurement
+### Meeteenheden
 
-The imperial system is used for everyday weights in Canada. Everything else including distances, quantities, are in metric. Primarily m, Km, cm, mm ("deci" is used rarely).
+In Canada wordt het imperiale stelsel gebruikt voor alledaagse gewichten. Al het andere, inclusief afstanden en hoeveelheden, is metrisch. Voornamelijk m, Km, cm, mm ("deci" wordt zelden gebruikt).
 
-### Address and postal code format
+### Adres- en postcodeformaat
 
-    [addressee]
-    [street number and name][building and suite numbers]
-    [district][city][state/province][postal code]
-    [Country]
+    [geadresseerde]
+    [straatnaam en huisnummer][gebouw- en kamernummers]]
+    [district][stad][staat/provincie][postcode]]
+    [Land].
 
-    British Columbia Sugar Refinery Ltd.
+    Suikerraffinaderij British Columbia Ltd.
 	123 Rogers Street
     Vancouver, BC. V6A 3N2
     CANADA
 
-## Clear, Respectful Communication
+## Duidelijke, respectvolle communicatie
 
-Our goal: We want our writing to connect effectively with all readers while being clear, accurate, and respectful.
+Ons doel: We willen dat ons schrijven effectief contact maakt met alle lezers en tegelijkertijd duidelijk, nauwkeurig en respectvol is.
 
-To verify your writing achieves these goals, ask:
+Om te controleren of je schrijven deze doelen bereikt, kun je het volgende vragen:
 
-- Is my language clear and specific?
-- Am I addressing my readers directly and respectfully?
-- Have I avoided assumptions about my readers?
+- Is mijn taal duidelijk en specifiek?
+- Spreek ik mijn lezers rechtstreeks en respectvol aan?
+- Vermijd ik veronderstellingen over mijn lezers?
 
-## Translation style
+## Vertaalstijl
 
-- Use literal translation for legal or technical texts
-- Translate with cultural context when translating content for marketing or advertising
-- Use transcreation where you adapt the message so it resonates culturally and emotively with the audience, for creative content including blog posts and marketing copy.
+- Gebruik een letterlijke vertaling voor juridische of technische teksten
+- Vertaal met culturele context bij het vertalen van content voor marketing of reclame
+- Gebruik transcreatie waarbij je de boodschap aanpast zodat deze cultureel en emotioneel aanslaat bij het publiek, voor creatieve content zoals blog posts en marketingteksten.

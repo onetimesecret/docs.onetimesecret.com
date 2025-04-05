@@ -1,71 +1,71 @@
 ---
 title: Use Cases
-description: Explore various scenarios where Secret Links can enhance security and streamline sensitive information sharing.
+description: Verken verschillende scenario's waarin Secret Links de beveiliging kan verbeteren en het delen van gevoelige informatie kan stroomlijnen.
 ---
 
 
-Secret Links are versatile and can be applied in many situations where secure, one-time sharing of information is crucial. Here are some common use cases:
+Secret Links zijn veelzijdig en kunnen worden toegepast in veel situaties waarin het veilig en eenmalig delen van informatie cruciaal is. Hier zijn enkele veelvoorkomende gebruikssituaties:
 
 
-### 1. Basic Password Sharing at work
+### 1. Basis wachtwoorddeling op het werk
 
-When you need a quick, secure way to share a password or API key, secret links offer a simple solution. While password managers are the best choice for long-term credential management and team sharing, secret links provide a lightweight alternative that anyone can use without special software or accounts. The self-destructing nature of these links ensures that sensitive credentials aren't lingering in email inboxes or chat histories where they could be compromised.
+Als je een snelle, veilige manier nodig hebt om een wachtwoord of API-sleutel te delen, bieden geheime koppelingen een eenvoudige oplossing. Hoewel wachtwoordmanagers de beste keuze zijn voor het beheer van referenties op lange termijn en het delen van teams, bieden geheime koppelingen een lichtgewicht alternatief dat iedereen kan gebruiken zonder speciale software of accounts. De zelfvernietigende aard van deze koppelingen zorgt ervoor dat gevoelige gegevens niet in e-mail inboxen of chathistories blijven hangen waar ze gecompromitteerd kunnen worden.
 
-**Benefit**: This approach provides a fast, no-setup way to share credentials securely when you need it. It eliminates risky practices like storing passwords in plaintext emails, while keeping the sharing process simple and friction-free for everyone involved.
+**Voordeel**: Deze aanpak biedt een snelle manier om veilig referenties te delen wanneer dat nodig is. Risicovolle praktijken zoals het opslaan van wachtwoorden in e-mails met platte tekst worden overbodig, terwijl het uitwisselingsproces voor alle betrokkenen eenvoudig en probleemloos blijft.
 
-### 2. Netflix and WiFi Passwords
+### 2. Netflix- en WiFi-wachtwoorden
 
-When sharing streaming service credentials or home WiFi passwords with family members and houseguests, use secret links to securely transmit the information. Simply create the link and send it through your usual messaging apps. Once they've viewed the password, the link becomes inactive, keeping your accounts secure even if someone later gains access to the message history.
+Als je de gegevens van streamingdiensten of WiFi-wachtwoorden voor thuis met familieleden en huisgasten wilt delen, gebruik dan geheime links om de informatie veilig te versturen. Maak gewoon de link en stuur deze via je gebruikelijke berichtenapps. Zodra ze het wachtwoord hebben bekeken, wordt de link inactief en blijven je accounts veilig, zelfs als iemand later toegang krijgt tot de berichtgeschiedenis.
 
-**Benefit**: This provides a convenient way to share access without compromising long-term security. Even if a phone is lost or messaging account is compromised months later, the sensitive information won't be exposed since it was never stored in the message history.
+**Voordeel**: Dit biedt een handige manier om toegang te delen zonder de beveiliging op lange termijn in gevaar te brengen. Zelfs als een telefoon verloren raakt of een berichtenaccount maanden later wordt gecompromitteerd, zal de gevoelige informatie niet worden blootgesteld omdat deze nooit is opgeslagen in de berichtgeschiedenis.
 
-### 3. Payment Information
+### 3. Betalingsinformatie
 
-When you need to share payment details like credit card information or digital wallet addresses with service providers or trusted contacts, use secret links instead of typing sensitive information directly into messages or emails. Create a secure link containing your payment details, share it with the recipient, and once they've accessed the information, it's automatically removed – ensuring your financial data doesn't remain exposed in communication threads.
+Als je betalingsgegevens zoals creditcardgegevens of adressen van digitale portemonnees moet delen met serviceproviders of vertrouwde contactpersonen, gebruik dan geheime koppelingen in plaats van gevoelige informatie rechtstreeks in berichten of e-mails te typen. Maak een beveiligde link met je betalingsgegevens, deel deze met de ontvanger en zodra zij de informatie hebben geopend, wordt deze automatisch verwijderd - zodat je financiële gegevens niet zichtbaar blijven in communicatie threads.
 
-**Benefit**: This method protects your financial security by ensuring sensitive payment information doesn't accumulate in email threads, chat histories, or text messages. It gives you peace of mind knowing that your account details won't be vulnerable if any of these communication channels are ever compromised.
+**Voordeel**: Deze methode beschermt je financiële veiligheid door ervoor te zorgen dat gevoelige betalingsinformatie zich niet ophoopt in e-mail threads, chatgeschiedenissen of sms-berichten. Het geeft je gemoedsrust te weten dat je accountgegevens niet kwetsbaar zijn als een van deze communicatiekanalen ooit in gevaar komt.
 
-### 4. Software License Keys
-When distributing purchased software licenses to employees or clients, use secret links to share the activation keys. This ensures that valuable license keys can't be accidentally reused or shared beyond their intended recipient, and helps prevent the keys from being archived in email systems where they might be vulnerable to unauthorized access.
+### 4. Softwarelicentiecodes
+Wanneer u gekochte softwarelicenties verspreidt onder werknemers of klanten, gebruik dan geheime koppelingen om de activeringssleutels te delen. Dit zorgt ervoor dat waardevolle licentiesleutels niet per ongeluk opnieuw kunnen worden gebruikt of gedeeld buiten de beoogde ontvanger en helpt voorkomen dat de sleutels worden gearchiveerd in e-mailsystemen waar ze kwetsbaar zouden kunnen zijn voor onbevoegde toegang.
 
-**Benefit**: This method maintains control over software asset distribution while making it easy for recipients to access their license keys when needed for installation or reactivation.
+**Voordeel**: Deze methode behoudt de controle over de distributie van softwaremiddelen en maakt het tegelijkertijd eenvoudig voor ontvangers om toegang te krijgen tot hun licentiesleutels wanneer die nodig zijn voor installatie of heractivering.
 
-### 5. Two-Factor Recovery Codes
-When setting up 2FA on important accounts, securely store your backup/recovery codes using a secret link. If you need to access these codes later due to a lost device, you can be confident they haven't been sitting exposed in your email or notes. Create a new secret link once you've used the codes to maintain security.
+### 5. Twee-factor herstelcodes
+Als je 2FA instelt op belangrijke accounts, sla dan je back-up/herstelcodes veilig op via een geheime link. Als je deze codes later nodig hebt omdat je je apparaat kwijt bent, kun je erop vertrouwen dat ze niet onbedekt in je e-mail of notities staan. Maak een nieuwe geheime link zodra je de codes hebt gebruikt om de beveiliging te handhaven.
 
-**Benefit**: Provides a more secure alternative to storing recovery codes in plaintext while ensuring they remain accessible when truly needed for account recovery.
+**Voordeel**: Biedt een veiliger alternatief voor het opslaan van herstelcodes in platte tekst en zorgt er tegelijkertijd voor dat ze toegankelijk blijven als ze echt nodig zijn voor accountherstel.
 
-### 6. Interview Assignments
-When sending coding challenges or technical assessments to job candidates, use secret links to share the requirements. This ensures each candidate gets a fresh copy of the assignment and can't access it again after viewing, helping maintain the integrity of your hiring process.
+### 6. Opdrachten voor sollicitatiegesprekken
+Wanneer u coderingsuitdagingen of technische beoordelingen naar kandidaten stuurt, gebruik dan geheime koppelingen om de vereisten te delen. Dit zorgt ervoor dat elke kandidaat een nieuw exemplaar van de opdracht krijgt en er niet meer bij kan na het bekijken ervan, waardoor de integriteit van uw aanwervingsproces behouden blijft.
 
-**Benefit**: Simplifies assignment distribution while helping ensure candidates complete their assessments independently and can't share the exact requirements with others.
+**Voordeel**: Vereenvoudigt de verdeling van opdrachten en zorgt er tegelijkertijd voor dat kandidaten hun assessments onafhankelijk afronden en de exacte vereisten niet met anderen kunnen delen.
 
 
-## Summary
+## Samenvatting
 
-These use cases demonstrate the flexibility and security benefits of Secret Links across various industries and scenarios. By leveraging Secret Links, organizations and individuals can significantly enhance their information security practices and reduce the risks associated with sharing sensitive data.
+Deze use cases tonen de flexibiliteit en beveiligingsvoordelen van Secret Links in verschillende branches en scenario's. Door gebruik te maken van Secret Links kunnen organisaties en individuen hun informatiebeveiligingspraktijken aanzienlijk verbeteren en de risico's verminderen die gepaard gaan met het delen van gevoelige gegevens.
 
-## Note About Anonymous Tips
+## Opmerking over anonieme tips
 
-Secret Links can be suitable for basic anonymous tips with some important caveats:
+Geheime koppelingen kunnen geschikt zijn voor anonieme basistips met enkele belangrijke voorbehouden:
 
-### Advantages of Onetime Secret for Anonymous Tips
-- No account required
-- Accessible via Tor network
-- Content is encrypted in transit and at rest
-- Limited log retention period (about 2 weeks)
-- Cannot be retrieved once viewed
+### Voordelen van Onetime Secret voor anonieme tips
+- Geen account nodig
+- Toegankelijk via Tor-netwerk
+- Inhoud is onderweg en in rust versleuteld
+- Beperkte logbewaarperiode (ongeveer 2 weken)
+- Kan niet teruggehaald worden als het eenmaal bekeken is
 
-### Limitations
-- Consider organizational/legal requirements
-- No built-in anonymous communication channel
-- Basic metadata may be logged temporarily
-- Network-level anonymity depends on user OPSEC
+### Beperkingen
+- Houd rekening met organisatorische/wettelijke vereisten
+- Geen ingebouwd anoniem communicatiekanaal
+- Basismetagegevens kunnen tijdelijk worden gelogd
+- Anonimiteit op netwerkniveau is afhankelijk van OPSEC van gebruiker
 
-## Whistleblowers and Personal Risk Scenarios
+## Klokkenluiders en persoonlijke risicoscenario's
 
-For whistleblowing involving sensitive organizational or legal matters, dedicated whistleblowing platforms with additional protections are strongly recommended. When handling sensitive disclosures:
+Voor klokkenluiders die gevoelige organisatorische of juridische zaken aan de orde stellen, worden speciale klokkenluidersplatforms met extra bescherming sterk aanbevolen. Bij de behandeling van gevoelige meldingen:
 
-- Use dedicated whistleblowing platforms that provide comprehensive security protections and anonymity features
-- Be aware that IP addresses and access times may be logged by various systems
-- Consider consulting trusted organizations like the Freedom of the Press Foundation (freedom.press) or the Electronic Frontier Foundation (eff.org) for detailed guidance on secure whistleblowing practices and tools
+- Gebruik speciale klokkenluidersplatforms die uitgebreide veiligheidsbescherming en anonimiteitsfuncties bieden
+- Wees ervan bewust dat IP-adressen en toegangstijden kunnen worden geregistreerd door verschillende systemen
+- Overweeg het raadplegen van betrouwbare organisaties zoals de Freedom of the Press Foundation (freedom.press) of de Electronic Frontier Foundation (eff.org) voor gedetailleerde richtlijnen over veilige klokkenluiderspraktijken en -tools.

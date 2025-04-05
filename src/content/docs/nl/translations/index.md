@@ -1,43 +1,43 @@
 ---
-title: Translations & Localization
-description: Information about available language translations and how to contribute to localizing Onetime Secret
+title: Vertalingen en lokalisatie
+description: Informatie over beschikbare vertalingen en hoe u kunt bijdragen aan de lokalisatie van Onetime Secret.
 ---
 
-# Translations & Localization
+# Vertalingen en lokalisatie
 
-Onetime Secret documentation is available in multiple languages to serve our diverse global community. We're continuously working to expand our language offerings and improve existing translations.
+De documentatie van Onetime Secret is beschikbaar in meerdere talen om onze diverse wereldwijde community van dienst te zijn. We werken er voortdurend aan om ons taalaanbod uit te breiden en bestaande vertalingen te verbeteren.
 
-## Available Languages
+## Beschikbare talen
 
-- **English (en)**: Our default and most complete version
-- **German (de)**: Partial translation in progress
+- **Engelstalig (en)**: Onze standaard en meest complete versie
+- Duits (de)**: Gedeeltelijke vertaling in uitvoering
 
-You can switch between languages using the language selector in the top-right corner of any page.
+Je kunt tussen talen schakelen met de taalkiezer in de rechterbovenhoek van elke pagina.
 
-## Translation Status
+## Vertaalstatus
 
-To view the current status of our translation efforts, visit the [Translation Status](/en/translations/status) page.
+Ga naar de pagina [Vertaalstatus](/nl/vertalingen/status) om de huidige status van onze vertaalinspanningen te bekijken.
 
-## Contributing Translations
+## Bijdragende vertalingen
 
-We welcome contributions to our translation efforts. If you'd like to help translate Onetime Secret documentation to your language, please follow these guidelines:
+Bijdragen aan onze vertalingen zijn van harte welkom. Als je wilt helpen de documentatie van Onetime Secret te vertalen naar jouw taal, volg dan deze richtlijnen:
 
-### Translation Workflow
+### Vertaalworkflow
 
-1. **Locate content**: Original English content is stored in the `/content/docs/en/` directory
-2. **Create corresponding files**: Create matching files in your language's directory (e.g., `/content/docs/de/`)
-3. **Keep structure**: Maintain the same directory structure and file naming conventions
-4. **Preserve frontmatter**: Copy all frontmatter fields, translating only the values
-5. **Submit your work**: Use [GitHub Pull Requests](https://github.com/onetimesecret/onetimesecret) for submissions
+1. **Inhoud lokaliseren**: Originele Engelse inhoud is opgeslagen in de map `/content/docs/en/`.
+2. **Aanbehorende bestanden maken**: Maak overeenkomstige bestanden in de map van uw taal (bijv. `/content/docs/de/`)
+3. **Behoud structuur**: Handhaaf dezelfde mapstructuur en bestandsnaamconventies
+4. **Bewaar frontmatter**: Kopieer alle frontmatter velden en vertaal alleen de waarden
+5. **Stuur uw werk in**: Gebruik [GitHub Pull Requests](https://github.com/onetimesecret/onetimesecret) voor inzendingen.
 
-### Translation Standards
+### Vertaalnormen
 
-For consistent, high-quality translations, follow our [Translation Style Guide](/en/translations/guide-en) and refer to our [Terminology Glossary](/en/translations/glossary) for standardized translations of key terms.
+Voor consistente vertalingen van hoge kwaliteit volg je onze [Vertaalstijlgids](/nl/vertalingen/gids-en) en raadpleeg je onze [Woordenlijst terminologie](/nl/vertalingen/glossarium) voor gestandaardiseerde vertalingen van belangrijke termen.
 
-## Handling Missing Translations
+## Omgaan met ontbrekende vertalingen
 
-When content is not available in a selected language, you'll automatically see the English version with a notification indicating the content hasn't been translated yet.
+Wanneer inhoud niet beschikbaar is in een geselecteerde taal, zie je automatisch de Engelse versie met een melding dat de inhoud nog niet vertaald is.
 
-## Need Help?
+## Hulp nodig?
 
-If you have questions about translations or need assistance contributing, please [contact our team](https://onetimesecret.com/contact) or open an issue on our [GitHub repository](https://github.com/onetimesecret/onetimesecret).
+Als je vragen hebt over vertalingen of hulp nodig hebt bij het bijdragen, neem dan [contact op met ons team](https://onetimesecret.com/contact) of open een probleem op onze [GitHub repository](https://github.com/onetimesecret/onetimesecret).

@@ -1,87 +1,87 @@
 ---
-title: Getting Started
-description: Onetime Secret's REST API provides flexible secret sharing capabilities, supporting both authenticated and anonymous usage. Authenticated users gain advanced features and higher usage limits, while unauthenticated users can quickly share secrets with basic functionality.
+title: Aan de slag
+description: Onetime Secret's REST API biedt flexibele mogelijkheden voor het delen van geheimen en ondersteunt zowel geauthenticeerd als anoniem gebruik. Geauthenticeerde gebruikers krijgen geavanceerde functies en hogere gebruikslimieten, terwijl niet-geauthenticeerde gebruikers snel geheimen kunnen delen met basisfunctionaliteit.
 ---
 
-_Updated 2024-11-06_
+bijgewerkt op 2024-11-06
 
-All API access is over HTTPS and all responses are JSON.
+Alle API-toegang verloopt via HTTPS en alle antwoorden zijn JSON.
 
-## Base URI
+## Basis URI
 
 `https://REGION.onetimesecret.com/api`
 
-Where `REGION` is either `us` or `eu`.
+Waar `REGIO` ofwel `us` of `eu` is.
 
 <!-- ::callout{icon="i-heroicons-globe-alt"} -->
-**Data Locality and Region Selection**
-- Choose between US ([`us.onetimesecret.com`](https://us.onetimesecret.com/)) or EU ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) data centers
-- Consider factors like data sovereignty, latency, and compliance requirements
-- **NOTE:** Default `onetimesecret.com` remains operational and routes to an active data center, using a specific locality is recommended as this functionality may be deprecated in the future.
+**Selectie van gegevenslocatie en regio**
+- Kies tussen VS ([`us.onetimesecret.com`](https://us.onetimesecret.com/)) of EU ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) datacenters
+- Houd rekening met factoren zoals gegevenssoevereiniteit, latentie en nalevingsvereisten
+- **NOOT:** Standaard blijft `onetimesecret.com` operationeel en routeert naar een actief datacenter. Het gebruik van een specifieke locatie wordt aanbevolen omdat deze functionaliteit in de toekomst mogelijk wordt afgeschaft.
 ::
 
-## Authentication
-We support two modes of API usage:
+## Authenticatie
+We ondersteunen twee manieren om de API te gebruiken:
 
-### Authenticated Access
+### Geauthenticeerde toegang
 
 `https://USERNAME:APITOKEN@REGION.onetimesecret.com/api`
 
-- Use HTTP Basic Authentication for full API capabilities
-- The username is your account login
-- The password is the API token from your account page
+- Gebruik HTTP Basic Authentication voor volledige API mogelijkheden
+- De gebruikersnaam is de login van je account
+- Het wachtwoord is het API token van je account pagina
 
-### Anonymous Access
+### Anonieme toegang
 
 `https://REGION.onetimesecret.com/api`
 
-- Limited functionality available without authentication
-- Ideal for quick, one-time secret sharing
-- Can be used for both creating and retrieving secrets
+- Beperkte functionaliteit beschikbaar zonder authenticatie
+- Ideaal voor het snel en eenmalig delen van geheimen
+- Kan worden gebruikt voor het maken en ophalen van geheimen
 
-## Data Locality
-Onetime Secret supports multiple geographic data centers. We follow a zero data sharing policy between regions, ensuring complete data isolation. Choose the right data center for your needs:
+## Gegevenslocatie
+Onetime Secret ondersteunt meerdere geografische datacenters. We hanteren een nulbeleid voor het delen van gegevens tussen regio's, waardoor we volledige gegevensisolatie garanderen. Kies het juiste datacenter voor uw behoeften:
 
-- **EU Data Center:** [eu.onetimesecret.com](https://eu.onetimesecret.com/)
-- **US Data Center:** [us.onetimesecret.com](https://us.onetimesecret.com/)
+- **EU Datacentrum:** [eu.onetimesecret.com](https://eu.onetimesecret.com/)
+- **VS datacentrum:** [us.onetimesecret.com](https://us.onetimesecret.com/)
 
-### Important Considerations:
-- You can choose a specific data locality by navigating directly to the desired domain
-- The location of your secret is always clear from the generated link (e.g., `us.onetimesecret.com/secret/abcd1234`)
-- **NOTE:** Currently, access via `onetimesecret.com/api` is still operational but using a specific locality is recommended as this functionality may be deprecated in the future.
+### Belangrijke overwegingen:
+- U kunt een specifieke gegevenslocatie kiezen door direct naar het gewenste domein te navigeren.
+- De locatie van uw geheim is altijd duidelijk uit de gegenereerde link (bijv. `us.onetimesecret.com/secret/abcd1234`)
+- **NOOT:** Momenteel is toegang via `onetimesecret.com/api` nog steeds operationeel, maar het gebruik van een specifieke locatie wordt aanbevolen omdat deze functionaliteit in de toekomst mogelijk wordt afgeschaft.
 
-## Custom Domains
-Onetime Secret supports custom domain configurations for organizations with specific networking or branding requirements via our [Identity Plus](https://onetimesecret.com/pricing) plan.
+## Aangepaste domeinen
+Onetime Secret ondersteunt aangepaste domeinconfiguraties voor organisaties met specifieke netwerk- of merkvereisten via ons [Identity Plus](https://onetimesecret.com/pricing) plan.
 
-### Custom Domain Benefits
-- **Private Branding:** Use your own domain (e.g., `secrets.example.com`) for API access and secret sharing
-- **Consistent User Experience:** Maintain your organization's visual and trust identity with your customers and partners.
-- **Include during employee training:** Use custom domains to reinforce your organization's security practices and workflows.
+### Voordelen aangepast domein
+- **Private Branding:** Gebruik uw eigen domein (bijv. `secrets.example.com`) voor API-toegang en het delen van geheimen.
+- **Consistente gebruikerservaring:** Behoud de visuele en vertrouwensidentiteit van uw organisatie met uw klanten en partners.
+- Gebruik aangepaste domeinen om de beveiligingspraktijken en workflows van uw organisatie te versterken.
 
-<!-- ::callout{icon="i-heroicons-lock-closed"} -->
-**Premium Feature**
-Custom domains are available on our [Identity Plus](https://onetimesecret.com/pricing) plan. Setup in minutes with our easy-to-use configuration options. [Learn more](/docs/custom-domains).
+<!-- ::callout{icon="i-heroicons-lock-gesloten"} -->
+**Premium Functie**
+Aangepaste domeinen zijn beschikbaar op ons [Identity Plus](https://onetimesecret.com/pricing) plan. Binnen enkele minuten in te stellen met onze gebruiksvriendelijke configuratieopties. [Meer informatie](/docs/custom-domains).
 ::
 
-### API Usage with Custom Domains
-When using a custom domain, all API endpoints follow the same structure:
+### API-gebruik met aangepaste domeinen
+Wanneer u een aangepast domein gebruikt, volgen alle API eindpunten dezelfde structuur:
 
 `https://secrets.example.com/api`
 
 
-## System Status
+## Systeemstatus
 
-`GET https://REGION.onetimesecret.com/api/v1/status`
-Current status of the system.
+https://REGION.onetimesecret.com/api/v1/status
+Huidige status van het systeem.
 
-**Parameters:** None
+**Parameters:** Geen
 
-```bash
+``bash
 $ curl -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/status
-{"status":"nominal"}
+{"status":"nominaal"}
 ```
 
-```bash
+``bash
 $ curl -u 'USERNAME:APITOKEN' https://us.onetimesecret.com/api/v1/status
-{"status":"nominal"}
+{"status":"nominaal"}
 ```

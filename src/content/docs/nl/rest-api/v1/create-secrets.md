@@ -1,63 +1,63 @@
 ---
-title: Creating Secrets
-description: Learn how to create and retrieve secrets using the Onetime Secret REST API, with support for both authenticated and anonymous usage.
+title: Geheimen creëren
+description: Leer hoe je geheimen aanmaakt en ophaalt met de Onetime Secret REST API, met ondersteuning voor zowel geauthenticeerd als anoniem gebruik.
 ---
 
-_Updated 2025-04-02_
+bijgewerkt op 2025-04-02
 
-:::note
-**Data Locality and Region Selection**
-- Choose between US ([`us.onetimesecret.com`](https://us.onetimesecret.com/)) or EU ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) data centers
-- Consider factors like data sovereignty, latency, and compliance requirements
-- **NOTE:** Default `onetimesecret.com` remains operational and routes to an active data center, using a specific locality is recommended as this functionality may be deprecated in the future.
+:::opmerking
+**Selectie van datalocatie en regio**
+- Kies tussen VS ([`us.onetimesecret.com`](https://us.onetimesecret.com/)) of EU ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) datacenters
+- Houd rekening met factoren zoals gegevenssoevereiniteit, latentie en nalevingsvereisten
+- **NOOT:** Standaard blijft `onetimesecret.com` operationeel en routeert naar een actief datacenter. Het gebruik van een specifieke locatie wordt aanbevolen omdat deze functionaliteit in de toekomst mogelijk wordt afgeschaft.
 :::
 
 
-## Create a Secret
+## Maak een geheim
 
 `POST https://REGION.onetimesecret.com/api/v1/share`
 
-Use this endpoint to store a secret value and create a onetime use link.
+Gebruik dit eindpunt om een geheime waarde op te slaan en een eenmalige link te maken.
 
 
-### Authenticated Request
+### Geauthenticeerd verzoek
 
-```bash
+``bash
 $ curl -X POST -u 'USERNAME:APITOKEN' -d 'secret=SECRET&ttl=NUMBER_IN_SECONDS' https://us.onetimesecret.com/api/v1/share
 ```
 
-### Anonymous Request
+### Anoniem verzoek
 
-```bash
+``bash
 $ curl -X POST -d 'secret=SECRET&ttl=3600' https://us.onetimesecret.com/api/v1/share
 ```
 
-### Query Params
+### Query-parameters
 
-- **secret**: the secret value which is encrypted before being stored. There is a maximum length based on your plan that is enforced (1k-10k).
-- **passphrase**: a string that the recipient must know to view the secret. This value is also used to encrypt the secret and is bcrypted before being stored so we only have this value in transit.
-- **ttl**: the maximum amount of time, in seconds, that the secret should survive (i.e. time-to-live). Once this time expires, the secret will be deleted and not recoverable.
-- **recipient**: an email address. We will send a friendly email containing the secret link (NOT the secret itself).
-- **share_domain**: the custom domain to use when generating the secret link. If not provided, the default domain is used (e.g. eu.onetimesecret.com).
+- **secret**: de geheime waarde die wordt versleuteld voordat deze wordt opgeslagen. Er is een maximale lengte op basis van je plan dat wordt afgedwongen (1k-10k).
+- **passphrase**: een string die de ontvanger moet kennen om het geheim te kunnen zien. Deze waarde wordt ook gebruikt om het geheim te versleutelen en wordt versleuteld voordat het wordt opgeslagen, zodat we deze waarde alleen tijdens het verzenden hebben.
+- **ttl**: de maximale tijd, in seconden, dat het geheim moet overleven (d.w.z. time-to-live). Als deze tijd verstreken is, wordt het geheim gewist en is het niet meer terug te halen.
+- **ontvanger**: een e-mailadres. We sturen een vriendelijke e-mail met de link naar het geheim (NIET het geheim zelf).
+- **share_domain**: het aangepaste domein om te gebruiken bij het genereren van de geheime link. Als dit niet is opgegeven, wordt het standaarddomein gebruikt (bijv. eu.onetimesecret.com).
 
-### Attributes
+### Attributen
 
-- **custid**: the username of the account that created the secret. This value will be `anon` for anonymous requests.
-- **metadata\_key**: the unique key for the metadata. DO NOT share this.
-- **secret\_key**: the unique key for the secret you create. This is key that you can share.
-- **ttl**: The time-to-live (in seconds) that was specified (i.e. not the time remaining)
-- **metadata\_ttl**: The remaining time (in seconds) that the metadata has left to live.
-- **secret\_ttl**: The remaining time (in seconds) that the secret has left to live.
-- **recipient**: if a recipient was specified, this is an obfuscated version of the email address.
-- **created**: Time the secret was created in unix time (UTC)
-- **updated**: ditto, but the time it was last updated.
-- **passphrase\_required**: If a passphrase was provided when the secret was created, this will be true. Otherwise false, obviously.
-- **share_domain** : the custom domain to use when generating the secret link. Otherwise "".
+- **custid**: de gebruikersnaam van de account die het geheim heeft aangemaakt. Deze waarde is `anon` voor anonieme verzoeken.
+- **metadata_key**: de unieke sleutel voor de metadata. Deel deze NIET.
+- Secret_key**: de unieke sleutel voor het geheim dat je aanmaakt. Deze sleutel kun je delen.
+- **ttl**: De time-to-live (in seconden) die is opgegeven (dus niet de resterende tijd).
+- **metadata_ttl**: De resterende tijd (in seconden) dat de metadata nog te leven heeft.
+- **secret_ttl**: De resterende tijd (in seconden) dat het geheim nog te leven heeft.
+- **recipient**: als er een ontvanger is opgegeven, is dit een versleutelde versie van het e-mailadres.
+- **created**: Tijd waarop de secret is aangemaakt in unix-tijd (UTC).
+- **updated**: idem, maar dan de tijd waarop het voor het laatst is bijgewerkt.
+- **passphrase_required**: Als er een passphrase is opgegeven bij het aanmaken van het geheim, dan is dit waar. Anders uiteraard false.
+- **share_domain**: het aangepaste domein dat moet worden gebruikt bij het genereren van de geheime link. Anders "".
 
 
-### Example Response:
+### Voorbeeld Response:
 
-```json
+``json
 {
   "custid":"USERNAME",
   "metadata_key":"qjpjroeit8wra0ojeyhcw5pjsgwtuq7",
@@ -69,26 +69,26 @@ $ curl -X POST -d 'secret=SECRET&ttl=3600' https://us.onetimesecret.com/api/v1/s
 }
 ```
 
-## Generate a Secret
+## Genereer een geheim
 
 `POST https://REGION.onetimesecret.com/api/v1/generate`
 
-Generate a short, unique secret. This is useful for temporary passwords, Onetime pads, salts, etc.
+Genereer een kort, uniek geheim. Dit is handig voor tijdelijke wachtwoorden, Onetime pads, salts, enz.
 
-### Authenticated Request
+### Geauthenticeerd verzoek
 
-```bash
+``bash
 $ curl -X POST -u 'USERNAME:APITOKEN' -d 'ttl=NUMBER_IN_SECONDS' https://us.onetimesecret.com/api/v1/generate
 ```
 
-### Anonymous Request
+### Anoniem verzoek
 
-```bash
+``bash
 $ curl -X POST -d 'ttl=3600' https://us.onetimesecret.com/api/v1/generate
 ```
 
 
-```json
+``json
 {
   "custid":"USERNAME",
   "value":"3Rg8R2sfD3?a",
@@ -101,6 +101,6 @@ $ curl -X POST -d 'ttl=3600' https://us.onetimesecret.com/api/v1/generate
 }
 ```
 
-### Attributes
+### Attributen
 
-Same as "Share A Secret" above, with the addition of the `value` field.
+Hetzelfde als "Een geheim delen" hierboven, met de toevoeging van het veld `waarde`.

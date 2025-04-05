@@ -1,64 +1,64 @@
 ---
 title: Privacy
-description: Our approach to protecting user privacy through deliberate design choices
+description: Onze aanpak om de privacy van gebruikers te beschermen door bewuste ontwerpkeuzes
 ---
 
-# Privacy First Practices
+# Privacy Eerste Praktijken
 
-At Onetime Secret, we take a deliberately minimal approach to user privacy. Here's what we deliberately choose not to do, and more importantly, why.
+Bij Onetime Secret benaderen we privacy bewust minimaal. Dit is wat we bewust niet doen, en nog belangrijker, waarom.
 
-## Our No-Email Philosophy
+## Onze geen-mail-filosofie
 
-Most services flood your inbox with:
+De meeste diensten overspoelen je inbox met:
 
-- Marketing newsletters
+- Marketingnieuwsbrieven
 - Product updates
-- Usage statistics
-- Feature announcements
-- Promotional offers
-- Re-engagement campaigns
+- Gebruiksstatistieken
+- Aankondigingen van functies
+- Promotionele aanbiedingen
+- Campagnes voor hernieuwde betrokkenheid
 
-We limit our email communications to only the most essential communications: secret link deliveries and critical account notifications. We'll never send marketing emails or unsolicited updates. We believe your inbox belongs to you.
+We beperken onze e-mailcommunicatie tot de meest essentiële mededelingen: geheime linkleveringen en kritieke accountmeldingen. We sturen nooit marketinge-mails of ongevraagde updates. Wij vinden dat je inbox van jou is.
 
-## Industry Standards We Skip
+## Industriestandaarden die we overslaan
 
-We deliberately avoid common tracking and marketing tools:
+We vermijden bewust gebruikelijke tracking- en marketingtools:
 
-- Analytics packages that track user behavior
-- Social media integration buttons
-- Advertising networks
-- A/B testing frameworks
-- Marketing automation tools
-- Third-party tracking pixels
+- Analytics-pakketten die het gedrag van gebruikers bijhouden
+- Integratieknoppen voor sociale media
+- Advertentienetwerken
+- A/B-testkaders
+- Tools voor marketingautomatisering
+- Tracking pixels van derden
 
-## Why This Matters
+## Waarom dit belangrijk is
 
-Our approach centers on three core principles:
+Onze aanpak is gebaseerd op drie kernprincipes:
 
-1. **Respect privacy**: Your data is yours, period
-2. **Focus on reliability**: The tool should simply work when you need it
-3. **Build trust through action**: We prove our commitment through what we don't do
+1. **Respecteer privacy**: Jouw gegevens zijn van jou, punt
+2. **Focus op betrouwbaarheid**: De tool moet gewoon werken wanneer je hem nodig hebt
+3. **Bouw vertrouwen door actie**: We bewijzen onze betrokkenheid door wat we niet doen
 
-## The Real Impact
+## De echte impact
 
-By avoiding standard marketing and tracking practices, we:
+Door standaard marketing- en traceerpraktijken te vermijden:
 
-- Maintain a cleaner, faster service
-- Reduce potential security vulnerabilities
-- Keep your data under direct control
-- Stay focused on our core purpose
+- Een schonere, snellere service onderhouden
+- Potentiële kwetsbaarheden in de beveiliging verminderen
+- Uw gegevens onder directe controle houden
+- Gefocust blijven op ons hoofddoel
 
-We invest our time in:
+We investeren onze tijd in:
 
-- **Core Functionality**: Improving the essential features that matter to users
-- **Privacy Protection**: Strengthening safeguards for user data
-- **Service Reliability**: Ensuring the service is there when you need it
-- **Compliance**: Meeting legal and regulatory requirements
+- **Kernfunctionaliteit**: De essentiële functies verbeteren die belangrijk zijn voor gebruikers
+- Privacybescherming**: Betere beveiliging van gebruikersgegevens
+- Betrouwbaarheid van de service**: Ervoor zorgen dat de service er is wanneer u hem nodig hebt
+- Conformiteit**: Voldoen aan wet- en regelgeving
 
-## Looking Forward
+## Vooruitkijken
 
-We'll continue prioritizing simplicity and privacy over marketing reach. While this means we might grow more slowly than services that aggressively market themselves, we believe it's the right choice for a privacy-focused tool.
+We blijven prioriteit geven aan eenvoud en privacy boven marketingbereik. Hoewel dit betekent dat we misschien langzamer groeien dan diensten die zichzelf agressief vermarkten, geloven we dat dit de juiste keuze is voor een privacy-gerichte tool.
 
-You can trust Onetime Secret to be there when you need it, without the constant reminders that you have an account with us.
+Je kunt erop vertrouwen dat Onetime Secret er is wanneer je het nodig hebt, zonder de constante herinneringen dat je een account bij ons hebt.
 
-**Questions about our approach?** [Contact us](https://onetimesecret.com/feedback).
+**Vragen over onze aanpak?** [Neem contact met ons op](https://onetimesecret.com/feedback).

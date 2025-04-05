@@ -1,79 +1,79 @@
 ---
-title: Security Best Practices
-description: Enhance your secret sharing security with these best practices specific to Onetime Secret, including the security benefits of Custom Domains.
+title: Beste praktijken voor beveiliging
+description: Verbeter de beveiliging van het delen van geheimen met deze best practices die specifiek zijn voor Onetime Secret, inclusief de beveiligingsvoordelen van aangepaste domeinen.
 ---
 
-# Security Best Practices for Onetime Secret
+# Beste beveiligingspraktijken voor Onetime Secret
 
-While Onetime Secret is designed with security in mind, following these best practices can further enhance the protection of your sensitive information, especially when using features like Custom Domains.
+Hoewel Onetime Secret is ontworpen met beveiliging in het achterhoofd, kan het volgen van deze best practices de bescherming van uw gevoelige informatie verder verbeteren, vooral bij het gebruik van functies zoals Custom Domains.
 
-## Best Practices for Secret Sharing
+## Beste praktijken voor het delen van geheimen
 
-1. **Set Appropriate Expiration Times**: Choose the shortest practical expiration time for your secrets. This minimizes the window of opportunity for unauthorized access.
+1. **Stel geschikte verlooptijden in**: Kies de kortste praktische verlooptijd voor je geheimen. Dit minimaliseert de kans op ongeautoriseerde toegang.
 
-2. **Use Passphrase Protection**: For highly sensitive information, use the passphrase protection feature. This adds an extra layer of security, requiring the recipient to enter a passphrase to view the secret.
+2. **Gebruik wachtwoordbeveiliging**: Gebruik voor zeer gevoelige informatie de wachtwoordzinbeveiliging. Dit voegt een extra beveiligingslaag toe, waarbij de ontvanger een wachtwoordzin moet invoeren om het geheim te kunnen bekijken.
 
-3. **Compartmentalize Sensitive Information**: When dealing with highly sensitive data, consider splitting it across multiple secrets. This way, if one secret is compromised, the entire set of information remains protected.
+3. **Versdeel gevoelige informatie**: Als je te maken hebt met zeer gevoelige gegevens, overweeg dan om deze te verdelen over meerdere geheimen. Op deze manier blijft de hele set informatie beschermd als één geheim wordt gecompromitteerd.
 
-4. **Use Secure Channels for Sharing Metadata**: While Onetime Secret secures the content of your secret, be mindful of how you share the link and any associated metadata (like passphrases). Use secure, encrypted channels for this communication.
+4. **Gebruik veilige kanalen voor het delen van metadata**: Onetime Secret beveiligt de inhoud van uw geheim, maar let op hoe u de link en de bijbehorende metadata (zoals wachtzinnen) deelt. Gebruik veilige, versleutelde kanalen voor deze communicatie.
 
-5. **Verify Recipient**: Ensure you're sharing secrets with the intended recipient. Double-check email addresses or usernames before sending.
+5. **Verifieer ontvanger**: Zorg ervoor dat je geheimen deelt met de beoogde ontvanger. Controleer e-mailadressen of gebruikersnamen dubbel voordat je ze verzendt.
 
-6. **Educate Users**: If using Onetime Secret within an organization, educate your team about proper usage and security practices specific to secret sharing.
+6. **Gebruikers onderwijzen**: Als u Onetime Secret binnen een organisatie gebruikt, informeer uw team dan over het juiste gebruik en de beveiligingspraktijken die specifiek zijn voor het delen van geheimen.
 
-## Security Benefits of Custom Domains
+## Beveiligingsvoordelen van aangepaste domeinen
 
-Using Custom Domains with Onetime Secret offers several security advantages:
+Het gebruik van aangepaste domeinen met Onetime Secret biedt verschillende beveiligingsvoordelen:
 
-1. **Enhanced Phishing Protection**: With a custom domain, your users become accustomed to a specific URL for secret sharing. This makes it easier to identify potential phishing attempts that might use similar-looking domains.
+1. **Verbeterde bescherming tegen phishing**: Met een aangepast domein raken uw gebruikers gewend aan een specifieke URL voor het delen van geheimen. Dit maakt het eenvoudiger om potentiële phishingpogingen te identificeren die mogelijk gebruikmaken van domeinen die er hetzelfde uitzien.
 
-2. **Improved Trust and Legitimacy**: When recipients see a familiar domain, they're more likely to trust the source of the secret. This is particularly important for businesses sharing sensitive information with clients or partners.
+2. **Verbeterd vertrouwen en legitimiteit**: Als ontvangers een bekend domein zien, is de kans groter dat ze de bron van het geheim vertrouwen. Dit is vooral belangrijk voor bedrijven die gevoelige informatie delen met klanten of partners.
 
-3. **Seamless Integration with Existing Security Infrastructure**: A custom domain can be more easily integrated with your existing security tools and monitoring systems, providing a more comprehensive view of your organization's secret sharing activities.
+3. **Naadloze integratie met bestaande beveiligingsinfrastructuur**: Een aangepast domein kan eenvoudiger worden geïntegreerd met uw bestaande beveiligingstools en monitoringsystemen, waardoor u een uitgebreider beeld krijgt van de activiteiten van uw organisatie op het gebied van het delen van geheimen.
 
-4. **Compliance and Auditing**: For organizations in regulated industries, using a custom domain can help in maintaining compliance by keeping secret sharing activities under your organization's direct control and making auditing processes more straightforward.
+4. **Naleving en controle**: Voor organisaties in gereguleerde sectoren kan het gebruik van een aangepast domein helpen bij het naleven van de regelgeving door activiteiten voor het delen van geheimen onder de directe controle van uw organisatie te houden en controleprocessen eenvoudiger te maken.
 
-Onetime Secret handles the technical aspects of securing your custom domain, including SSL/TLS configuration and domain activity monitoring, allowing you to focus on these strategic security benefits.
+Onetime Secret verzorgt de technische aspecten van de beveiliging van uw aangepaste domein, inclusief SSL/TLS-configuratie en monitoring van domeinactiviteiten, zodat u zich kunt richten op deze strategische beveiligingsvoordelen.
 
-## API Usage Security
+## API Beveiliging Gebruik
 
-If you're using the Onetime Secret API:
+Als je de Onetime Secret API gebruikt:
 
-1. **Secure API Keys**: Store API keys securely and never expose them in client-side code or public repositories.
+1. **Veilige API-sleutels**: Sla API-sleutels veilig op en geef ze nooit vrij in client-side code of openbare repositories.
 
-2. **Rotate API Keys**: Regularly rotate your API keys, especially if you suspect they've been compromised.
+2. **Draai API-sleutels**: Draai uw API-sleutels regelmatig, vooral als u vermoedt dat ze gecompromitteerd zijn.
 
-3. **Limit API Access**: Use the principle of least privilege when setting up API access. Only grant the permissions necessary for each specific use case.
+3. **Beperk API-toegang**: Gebruik het principe van de minste privileges bij het instellen van API-toegang. Verleen alleen de benodigde rechten voor elk specifiek gebruik.
 
-## Advanced Self-Hosted Security
+## Geavanceerde Zelf Gehoste Beveiliging
 
-This section covers advanced security considerations for organizations running their own instance of Onetime Secret. You can find the open source project on [GitHub](https://github.com/onetimesecret/onetimesecret) and official Docker images at [Docker Hub](https://hub.docker.com/r/onetimesecret/onetimesecret).
+Deze sectie behandelt geavanceerde beveiligingsoverwegingen voor organisaties die hun eigen instantie van Onetime Secret draaien. U kunt het open source project vinden op [GitHub](https://github.com/onetimesecret/onetimesecret) en officiële Docker images op [Docker Hub](https://hub.docker.com/r/onetimesecret/onetimesecret).
 
-The recommendations below can be implemented at your infrastructure level when self-hosting Onetime Secret:
+De onderstaande aanbevelingen kunnen worden geïmplementeerd op uw infrastructuurniveau bij het zelf hosten van Onetime Secret:
 
-1. **Use Ephemeral Environments**: When possible, create and destroy environments for each secret sharing session. This can be particularly useful for highly sensitive operations. Our [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/blob/v0.18.5/docs/DOCKER-lite.md) Docker image is designed for ephemeral use cases.
+1. **Gebruik kortstondige omgevingen**: Creëer en vernietig waar mogelijk omgevingen voor elke sessie voor het delen van geheimen. Dit kan vooral nuttig zijn voor zeer gevoelige operaties. Onze [Onetime Secret Lite] (https://github.com/onetimesecret/onetimesecret/blob/v0.18.5/docs/DOCKER-lite.md) Docker image is ontworpen voor kortstondig gebruik.
 
-2. **Implement Time-Based Restrictions**: If your use case allows, consider implementing time-based restrictions for accessing secrets, such as only during business hours.
+2. **Implementeer op tijd gebaseerde beperkingen**: Als je use case het toelaat, overweeg dan om tijdsgebaseerde beperkingen te implementeren voor toegang tot geheimen, zoals alleen tijdens kantooruren.
 
-3. **Geo-Fencing**: For highly sensitive operations, consider implementing geo-fencing to restrict access to secrets from specific geographic locations.
+3. **Geo-fencing**: Overweeg voor zeer gevoelige operaties de implementatie van geo-fencing om de toegang tot geheimen vanaf specifieke geografische locaties te beperken.
 
-4. **Audit Trails**: Maintain detailed audit trails of secret creation and access attempts. This can be crucial for incident response and compliance requirements.
+4. **Audittrails**: Gedetailleerde audit trails bijhouden van het aanmaken van geheimen en toegangspogingen. Dit kan cruciaal zijn voor het reageren op incidenten en nalevingseisen.
 
-5. **Encryption at Rest**: While Onetime Secret handles encryption, for highly sensitive data, consider encrypting the content before creating the secret for an additional layer of protection.
+5. **Encryptie in rust**: Hoewel Onetime Secret de versleuteling uitvoert, kun je voor zeer gevoelige gegevens overwegen om de inhoud te versleutelen voordat je de secret aanmaakt voor een extra beschermingslaag.
 
 
-## Incident Response
+## Reactie op incidenten
 
-This section outlines general security recommendations that may be helpful for your organization. These recommendations are not specific features of our service.
+In dit gedeelte vindt u algemene beveiligingsaanbevelingen die nuttig kunnen zijn voor uw organisatie. Deze aanbevelingen zijn geen specifieke kenmerken van onze service.
 
-1. **Have a Plan**: Develop an incident response plan specific to your secret sharing processes. This should include steps for revoking access, notifying affected parties, and mitigating potential damage.
+1. **Zorg voor een plan**: Ontwikkel een plan om te reageren op incidenten, specifiek voor uw processen voor het delen van geheimen. Dit plan moet stappen bevatten voor het intrekken van toegang, het op de hoogte stellen van betrokken partijen en het beperken van mogelijke schade.
 
-2. **Quick Action**: If you suspect a secret has been compromised, use Onetime Secret's burn feature immediately if the secret hasn't been viewed yet. If it has been viewed, take appropriate actions to mitigate any potential damage.
+2. **Snelle actie**: Als je vermoedt dat een geheim is gecompromitteerd, gebruik dan onmiddellijk de Onetime Secret brandfunctie als het geheim nog niet is bekeken. Als het wel is bekeken, neem dan de juiste maatregelen om mogelijke schade te beperken.
 
-3. **Regular Security Reviews**: Periodically review your secret sharing practices and adjust your security measures as needed.
+3. **Regelmatige beveiligingsbeoordelingen**: Bekijk regelmatig je praktijken voor het delen van geheimen en pas je beveiligingsmaatregelen zo nodig aan.
 
 ---
 
-By following these best practices, you can significantly enhance the security of your secret sharing activities on Onetime Secret. Remember, security is an ongoing process, and staying vigilant is key to protecting your sensitive information.
+Door deze best practices te volgen, kunt u de veiligheid van uw activiteiten voor het delen van geheimen op Onetime Secret aanzienlijk verbeteren. Onthoud dat beveiliging een continu proces is en dat waakzaam blijven de sleutel is tot het beschermen van uw gevoelige informatie.
 
-For any security concerns or to report potential vulnerabilities, please contact our security team immediately at security@onetimesecret.com.
+Als u zich zorgen maakt over de beveiliging of potentiële kwetsbaarheden wilt melden, neem dan onmiddellijk contact op met ons beveiligingsteam via security@onetimesecret.com.

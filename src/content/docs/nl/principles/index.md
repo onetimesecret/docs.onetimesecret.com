@@ -1,33 +1,33 @@
 ---
-title: Our Principles
-description: The core values and guiding principles that drive our approach to privacy and security
-layout: page
+title: Onze principes
+description: De kernwaarden en leidende principes die onze benadering van privacy en beveiliging bepalen
+layout: pagina
 ---
 
-# Principles
+# Principes
 
-Welcome to Onetime Secret's guiding principles. These foundational documents explain our approach to:
+Welkom bij de richtlijnen van Onetime Secret. Deze basisdocumenten verklaren onze benadering van:
 
-- Privacy and data minimization
-- User communication and transparency
-- Service reliability and trust
-- Operational practices
+- Privacy en gegevensminimalisatie
+- Gebruikerscommunicatie en transparantie
+- Betrouwbaarheid en vertrouwen van de service
+- Operationele praktijken
 
-## Our Commitments
+## Onze beloften
 
-- **[Privacy First](/principles/privacy-first)**: Our approach to protecting user privacy through deliberate design choices
-- **[Building Trust](/principles/trust)**: How we earn and maintain user trust through actions, not words
-- **[Communication Philosophy](/principles/communication)**: Why we limit email communication to only what's necessary
-- **[Data Minimization](/principles/data-minimization)**: Our commitment to collecting and retaining only the most essential data
+- **[Privacy-first](/nl/principles/privacy-first)**: Onze benadering van het beschermen van de privacy van gebruikers door middel van bewuste ontwerpkeuzes
+- **[Vertrouwen opbouwen](/nl/principles/trust)**: Hoe we het vertrouwen van de gebruiker verdienen en behouden door middel van acties, niet door woorden
+- **[Communicatiefilosofie](/nl/principles/communication)**: Waarom we e-mailcommunicatie beperken tot het hoognodige
+- **[Gegevensminimalisatie](/nl/principles/data-minimization)**: Ons streven om alleen de meest essentiële gegevens te verzamelen en te bewaren
 
 
-## Why Principles Matter
+## Waarom principes belangrijk zijn
 
-At Onetime Secret, our principles guide every decision we make. They help us:
+Bij Onetime Secret laten we ons leiden door onze principes bij elke beslissing die we nemen. Ze helpen ons:
 
-- Stay focused on what matters
-- Make consistent choices
-- Build lasting trust
-- Maintain transparency
+- Blijf gefocust op wat belangrijk is
+- Maak consistente keuzes
+- Duurzaam vertrouwen opbouwen
+- Transparant blijven
 
-These aren't just guidelines - they're commitments to our users that shape how we operate.
+Dit zijn niet zomaar richtlijnen - het zijn verplichtingen aan onze gebruikers die vorm geven aan onze manier van werken.
