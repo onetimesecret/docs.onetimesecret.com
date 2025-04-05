@@ -1,0 +1,162 @@
+#!/usr/bin/env python3
+import os
+import json
+import shutil
+import sys
+from optparse import OptionParser
+
+"""
+File Translation Utility
+
+A tool for preparing files for translation and restoring them afterward.
+This utility preserves original paths and file extensions during the translation process.
+
+Examples:
+    Prepare files for translation:
+        $ ./bin/translation-util prepare -s ./src/content/docs/nl -t ./translation_files
+
+    Restore translated files:
+        $ ./bin/translation-util restore -s ./src/content/docs/nl -t ./translation_files
+
+Features:
+    - Maintains path information in temporary filenames
+    - Preserves original file extensions
+    - Handles filename collisions with counter suffixes
+    - JSON mapping for accurate file restoration
+    - Support for custom file extensions
+"""
+
+def prepare_files_for_translation(
+    source_dir,
+    output_dir,
+    extensions=(".md", ".mdoc", ".mdx", ".astro")
+):
+    """
+    Prepares files for translation by converting to .txt format with path-based naming.
+
+    Args:
+        source_dir: Directory containing original files
+        output_dir: Directory to place temporary .txt files
+        extensions: File extensions to process
+
+    Returns:
+        Path to the generated mapping file
+    """
+    os.makedirs(output_dir, exist_ok=True)
+    file_mapping = {}
+
+    for root, _, files in os.walk(source_dir):
+        for filename in files:
+            if filename.endswith(extensions):
+                original_path = os.path.join(root, filename)
+                relative_path = os.path.relpath(original_path, start=source_dir)
+
+                # Generate unique name preserving path information
+                path_parts = os.path.split(relative_path)
+                directory = os.path.dirname(relative_path).replace(os.path.sep, '-')
+                base_name, original_extension = os.path.splitext(path_parts[1])
+
+                # Create a temp name with path info
+                if directory:
+                    temp_name = f"{directory}-{base_name}.txt"
+                else:
+                    temp_name = f"{base_name}.txt"
+
+                # Ensure uniqueness
+                counter = 1
+                final_temp_name = temp_name
+                while final_temp_name in file_mapping:
+                    final_temp_name = f"{os.path.splitext(temp_name)[0]}_{counter}.txt"
+                    counter += 1
+
+                translation_path = os.path.join(output_dir, final_temp_name)
+
+                # Copy content
+                shutil.copy2(original_path, translation_path)
+
+                # Store mapping with original path and extension
+                file_mapping[final_temp_name] = {
+                    "path": relative_path,
+                    "extension": original_extension,
+                    "original_full_path": original_path
+                }
+
+    mapping_file = os.path.join(output_dir, "file_mapping.json")
+    with open(mapping_file, 'w') as f:
+        json.dump(file_mapping, f, indent=2)
+
+    print(f"Created {len(file_mapping)} files in {output_dir}")
+    print(f"Mapping saved to {mapping_file}")
+    return mapping_file
+
+def restore_translated_files(
+    source_dir,
+    translation_dir,
+    mapping_file
+):
+    """
+    Restores translated files to their original locations and formats.
+
+    Args:
+        source_dir: Original source directory where files were found
+        translation_dir: Directory containing translated .txt files
+        mapping_file: JSON file mapping temp names to original paths
+    """
+    with open(mapping_file, 'r') as f:
+        file_mapping = json.load(f)
+
+    restored_count = 0
+    for temp_name, file_info in file_mapping.items():
+        translated_file = os.path.join(translation_dir, temp_name)
+        if not os.path.exists(translated_file):
+            print(f"Warning: {translated_file} not found")
+            continue
+
+        original_relative_path = file_info["path"]
+        dest_path = os.path.join(source_dir, original_relative_path)
+
+        # Ensure directory exists
+        os.makedirs(os.path.dirname(dest_path), exist_ok=True)
+
+        # Copy the translated file back to its original location
+        shutil.copy2(translated_file, dest_path)
+        restored_count += 1
+
+    print(f"Restored {restored_count} files to their original locations")
+
+def main():
+    parser = OptionParser(usage="usage: %prog [options] prepare|restore")
+    parser.add_option("-s", "--source", dest="source_dir", default="./starlight/src/content/docs",
+                      help="Source directory for documents")
+    parser.add_option("-t", "--translation-dir", dest="translation_dir", default="./translation_files",
+                      help="Directory for translation files")
+    parser.add_option("-m", "--mapping", dest="mapping_file",
+                      help="JSON mapping file (defaults to translation_dir/file_mapping.json)")
+    parser.add_option("-e", "--extensions", dest="extensions", default=".md,.mdoc,.mdx,.astro",
+                      help="Comma-separated list of file extensions to process")
+
+    (options, args) = parser.parse_args()
+
+    if len(args) != 1 or args[0] not in ["prepare", "restore"]:
+        parser.print_help()
+        sys.exit(1)
+
+    # Convert extension string to tuple
+    extensions = tuple(options.extensions.split(','))
+
+    if args[0] == "prepare":
+        prepare_files_for_translation(
+            options.source_dir,
+            options.translation_dir,
+            extensions
+        )
+    elif args[0] == "restore":
+        mapping_file = options.mapping_file or os.path.join(options.translation_dir, "file_mapping.json")
+        restore_translated_files(
+            options.source_dir,
+            options.translation_dir,
+            mapping_file
+        )
+
+if __name__ == "__main__":
+    main()
