@@ -163,7 +163,7 @@ They should only include [elements allowed inside `<head>`](https://developer.mo
 **Default component:** [`Head.astro`](https://github.com/withastro/starlight/blob/main/packages/starlight/components/Head.astro)
 
 Component rendered inside the `<head>` element of each page.
-Includes important tags like `<title>` and `<meta charset=“utf-8”>`.
+Includes important tags like `<title>` and `<meta charset="utf-8”>`.
 
 Replace this component as a last resort.
 If possible, prefer the [`head`](/es/reference/configuration/#head) option in the Starlight configuration.
@@ -337,7 +337,7 @@ Template component used to wrap sections of the main content column.
 
 Component containing the <h1> element of the current page.
 
-Implementations should make sure to set `id=“_top”` on the `<h1>` element as in the default implementation.
+Implementations should make sure to set `id="_top”` on the `<h1>` element as in the default implementation.
 
 #### `DraftContentNotice`
 

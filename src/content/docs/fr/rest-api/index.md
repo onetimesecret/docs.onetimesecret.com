@@ -1,0 +1,89 @@
+---
+title: Mise en route
+description: L'API REST de Onetime Secret offre des capacités flexibles de partage de secrets, prenant en charge à la fois l'utilisation authentifiée et anonyme. Les utilisateurs authentifiés bénéficient de fonctionnalités avancées et de limites d'utilisation plus élevées, tandis que les utilisateurs non authentifiés peuvent rapidement partager des secrets avec des fonctionnalités de base.
+---
+
+_Mise à jour 2024-11-06_
+
+Tous les accès à l'API se font via HTTPS et toutes les réponses sont au format JSON.
+
+## URI de base
+
+`https://REGION.onetimesecret.com/api`
+
+Où `REGION` est soit `us` soit `eu`.
+
+<!-- ::callout{icon="i-heroicons-globe-alt"} -->
+**Sélection de la localisation des données et de la région**
+- Choisissez entre les centres de données des États-Unis ([`us.onetimesecret.com`](https://us.onetimesecret.com/)) ou de l'Union européenne ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)).
+- Tenir compte de facteurs tels que la souveraineté des données, la latence et les exigences de conformité.
+- NOTE:** Par défaut, `onetimesecret.com` reste opérationnel et dirige vers un centre de données actif, l'utilisation d'une localité spécifique est recommandée car cette fonctionnalité pourrait être obsolète à l'avenir.
+: :
+
+## Authentification
+Nous prenons en charge deux modes d'utilisation de l'API :
+
+### Accès authentifié
+
+`https://USERNAME:APITOKEN@REGION.onetimesecret.com/api`
+
+- Utilisez l'authentification de base HTTP pour bénéficier de toutes les fonctionnalités de l'API.
+- Le nom d'utilisateur est l'identifiant de votre compte
+- Le mot de passe est le jeton API de votre page de compte
+
+### Accès anonyme
+
+`https://REGION.onetimesecret.com/api`
+
+- Fonctionnalité limitée disponible sans authentification
+- Idéal pour un partage rapide et unique des secrets
+- Peut être utilisé à la fois pour créer et récupérer des secrets
+
+## Localisation des données
+Onetime Secret dispose de plusieurs centres de données géographiques. Nous appliquons une politique de partage de données nul entre les régions, ce qui garantit une isolation totale des données. Choisissez le centre de données qui correspond à vos besoins :
+
+- **EU Data Center:** [eu.onetimesecret.com](https://eu.onetimesecret.com/)
+- **CA Data Center:** [ca.onetimesecret.com](https://ca.onetimesecret.com/)
+- **NZ Data Center:** [nz.onetimesecret.com](https://nz.onetimesecret.com/)
+- **US Data Center:** [us.onetimesecret.com](https://us.onetimesecret.com/)
+
+### Considérations importantes :
+- Vous pouvez choisir une localisation spécifique des données en naviguant directement vers le domaine souhaité
+- L'emplacement de votre secret est toujours clair dans le lien généré (par exemple, `us.onetimesecret.com/secret/abcd1234`).
+- NOTE:** Actuellement, l'accès via `onetimesecret.com/api` est toujours opérationnel mais l'utilisation d'une localité spécifique est recommandée car cette fonctionnalité pourrait être supprimée à l'avenir.
+
+## Domaines personnalisés
+Onetime Secret prend en charge les configurations de domaines personnalisés pour les organisations ayant des exigences spécifiques en matière de réseau ou de marque via notre plan [Identity Plus] (https://onetimesecret.com/pricing).
+
+### Avantages d'un domaine personnalisé
+- Utilisez votre propre domaine (par exemple, `secrets.example.com`) pour l'accès à l'API et le partage des secrets.
+- Expérience utilisateur cohérente:** Maintenez l'identité visuelle et de confiance de votre organisation auprès de vos clients et partenaires.
+- Inclure dans la formation des employés:** Utilisez des domaines personnalisés pour renforcer les pratiques de sécurité et les flux de travail de votre organisation.
+
+<!-- ::callout{icon="i-heroicons-lock-closed"} -->
+**Fonctionnalité premium**
+Les domaines personnalisés sont disponibles sur notre plan [Identity Plus] (https://onetimesecret.com/pricing). L'installation se fait en quelques minutes grâce à nos options de configuration faciles à utiliser. [En savoir plus](/docs/custom-domains).
+: :
+
+### Utilisation de l'API avec des domaines personnalisés
+Lors de l'utilisation d'un domaine personnalisé, tous les points de terminaison de l'API suivent la même structure :
+
+`https://secrets.example.com/api`
+
+
+## État du système
+
+`GET https://REGION.onetimesecret.com/api/v1/status`
+État actuel du système.
+
+**Paramètres:** Aucun
+
+``bash
+$ curl -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/status
+{"status" : "nominal"}
+```
+
+``bash
+$ curl -u 'USERNAME:APITOKEN' https://ca.onetimesecret.com/api/v1/status
+{"status" : "nominal"}
+```

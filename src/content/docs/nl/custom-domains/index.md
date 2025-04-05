@@ -7,8 +7,8 @@ description: Verhoog uw merk en verbeter uw professionele ervaring met het delen
 
 Met aangepaste domeinen kunt u uw eigen domeinnaam gebruiken voor Onetime Secret links, in plaats van het standaard _onetimesecret.com_ domein. Deze functie voegt uw merkidentiteit toe aan de ervaring van het delen van geheimen, waardoor het vertrouwen en de professionaliteit toenemen.
 
-<div class=“flex justify-center items-center my-10”>
-<a href=“https://onetimesecret.com/pricing” class=“text-center inline-block”>
+<div class="flex justify-center items-center my-10">
+<a href="https://onetimesecret.com/pricing" class="text-center inline-block">
   <span class="font-brand text-3xl sm:text-4xl md:text-5xl
                bg-clip-text text-transparent
                bg-gradient-to-r from-purple-400 via-pink-500 to-red-500

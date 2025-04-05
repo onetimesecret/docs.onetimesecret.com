@@ -7,7 +7,7 @@ description: Met aangepaste domeinen kunt u geheime uitwisseling onder uw eigen 
 
 Door gebruik te maken van aangepaste domeinen deelt u niet alleen geheimen, maar versterkt u uw merk, vergroot u het vertrouwen en zorgt u ervoor dat bij elke interactie de gegevenslocatie wordt nageleefd. Upgrade vandaag nog naar het Identity-plan om deze krachtige functie te ontgrendelen en het delen van geheimen naar een hoger niveau te tillen.
 
-<img src=“/img/docs/custom-domains/branded-homepage-enabled.png” alt=“Aangepaste domeininstellingen” width=“600” />
+<img src="/img/docs/custom-domains/branded-homepage-enabled.png" alt="Aangepaste domeininstellingen" width="600" />
 
 
 ## Hoe aangepaste domeinen werken

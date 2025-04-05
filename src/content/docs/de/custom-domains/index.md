@@ -8,18 +8,18 @@ locale: de
 
 Benutzerdefinierte Domains ermöglichen es Ihnen, Ihren eigenen Domainnamen für Onetime-Secret-Links zu verwenden, anstelle der Standarddomain _onetimesecret.com_. Diese Funktion integriert Ihre Markenidentität in die Erfahrung des geheimen Teilens und erhöht so das Vertrauen und die Professionalität.
 
-<div class=„flex justify-center items-center my-10“>
-<a href=„https://onetimesecret.com/pricing“ class=„text-center inline-block“>
-<span class="font-brand text-3xl sm:text-4xl md:text-5xl
-bg-clip-text text-transparent
-bg-gradient-to-r from-purple-400 via-pink-500 to-red-500
-animate-flowing-colors
-hover:animate-bounce
-transition-all duration-300 ease-in-out
-transform hover:scale-105
-rounded-xl
-dark:border-brand-600">
-secrets.yourbrand.com
+<div class="flex justify-center items-center my-10">
+<a href="https://onetimesecret.com/pricing" class="text-center inline-block">
+  <span class="font-brand text-3xl sm:text-4xl md:text-5xl
+               bg-clip-text text-transparent
+               bg-gradient-to-r from-purple-400 via-pink-500 to-red-500
+               animate-flowing-colors
+               hover:animate-bounce
+               transition-all duration-300 ease-in-out
+               transform hover:scale-105
+               rounded-xl
+               dark:border-brand-600">
+geheimnisse.musterfirma.de
 </span>
 </a>
 </div>
