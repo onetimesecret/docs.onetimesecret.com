@@ -27,8 +27,8 @@ Examples:
 """
 
 # Delimiter pattern used to separate files in the combined document
-FILE_DELIMITER = "===== FILE: {filename} ====="
-DELIMITER_PATTERN = r"===== FILE: (.*?) ====="
+FILE_DELIMITER = "===== 0101010101010: {filename} ====="
+DELIMITER_PATTERN = r"===== 0101010101010: (.*?) ====="
 
 def prepare_files_for_translation(
     source_dir,
