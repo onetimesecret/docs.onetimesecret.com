@@ -1,0 +1,87 @@
+---
+title: Aan de slag
+description: Onetime Secret's REST API biedt flexibele mogelijkheden voor het delen van geheimen en ondersteunt zowel geauthenticeerd als anoniem gebruik. Geauthenticeerde gebruikers krijgen geavanceerde functies en hogere gebruikslimieten, terwijl niet-geauthenticeerde gebruikers snel geheimen kunnen delen met basisfunctionaliteit.
+---
+
+bijgewerkt op 2024-11-06
+
+Alle API-toegang verloopt via HTTPS en alle antwoorden zijn JSON.
+
+## Basis URI
+
+`https://REGION.onetimesecret.com/api`
+
+Waar `REGIO` ofwel `us` of `eu` is.
+
+<!-- ::callout{icon="i-heroicons-globe-alt"} -->
+**Selectie van gegevenslocatie en regio**
+- Kies tussen VS ([`us.onetimesecret.com`](https://us.onetimesecret.com/)) of EU ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) datacenters
+- Houd rekening met factoren zoals gegevenssoevereiniteit, latentie en nalevingsvereisten
+- **NOOT:** Standaard blijft `onetimesecret.com` operationeel en routeert naar een actief datacenter. Het gebruik van een specifieke locatie wordt aanbevolen omdat deze functionaliteit in de toekomst mogelijk wordt afgeschaft.
+::
+
+## Authenticatie
+We ondersteunen twee manieren om de API te gebruiken:
+
+### Geauthenticeerde toegang
+
+`https://USERNAME:APITOKEN@REGION.onetimesecret.com/api`
+
+- Gebruik HTTP Basic Authentication voor volledige API mogelijkheden
+- De gebruikersnaam is de login van je account
+- Het wachtwoord is het API token van je account pagina
+
+### Anonieme toegang
+
+`https://REGION.onetimesecret.com/api`
+
+- Beperkte functionaliteit beschikbaar zonder authenticatie
+- Ideaal voor het snel en eenmalig delen van geheimen
+- Kan worden gebruikt voor het maken en ophalen van geheimen
+
+## Gegevenslocatie
+Onetime Secret ondersteunt meerdere geografische datacenters. We hanteren een nulbeleid voor het delen van gegevens tussen regio's, waardoor we volledige gegevensisolatie garanderen. Kies het juiste datacenter voor uw behoeften:
+
+- **EU Datacentrum:** [eu.onetimesecret.com](https://eu.onetimesecret.com/)
+- **VS datacentrum:** [us.onetimesecret.com](https://us.onetimesecret.com/)
+
+### Belangrijke overwegingen:
+- U kunt een specifieke gegevenslocatie kiezen door direct naar het gewenste domein te navigeren.
+- De locatie van uw geheim is altijd duidelijk uit de gegenereerde link (bijv. `us.onetimesecret.com/secret/abcd1234`)
+- **NOOT:** Momenteel is toegang via `onetimesecret.com/api` nog steeds operationeel, maar het gebruik van een specifieke locatie wordt aanbevolen omdat deze functionaliteit in de toekomst mogelijk wordt afgeschaft.
+
+## Aangepaste domeinen
+Onetime Secret ondersteunt aangepaste domeinconfiguraties voor organisaties met specifieke netwerk- of merkvereisten via ons [Identity Plus](https://onetimesecret.com/pricing) plan.
+
+### Voordelen aangepast domein
+- **Private Branding:** Gebruik uw eigen domein (bijv. `secrets.example.com`) voor API-toegang en het delen van geheimen.
+- **Consistente gebruikerservaring:** Behoud de visuele en vertrouwensidentiteit van uw organisatie met uw klanten en partners.
+- Gebruik aangepaste domeinen om de beveiligingspraktijken en workflows van uw organisatie te versterken.
+
+<!-- ::callout{icon="i-heroicons-lock-gesloten"} -->
+**Premium Functie**
+Aangepaste domeinen zijn beschikbaar op ons [Identity Plus](https://onetimesecret.com/pricing) plan. Binnen enkele minuten in te stellen met onze gebruiksvriendelijke configuratieopties. [Meer informatie](/docs/custom-domains).
+::
+
+### API-gebruik met aangepaste domeinen
+Wanneer u een aangepast domein gebruikt, volgen alle API eindpunten dezelfde structuur:
+
+`https://secrets.example.com/api`
+
+
+## Systeemstatus
+
+https://REGION.onetimesecret.com/api/v1/status
+Huidige status van het systeem.
+
+**Parameters:** Geen
+
+``bash
+$ curl -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/status
+{"status":"nominaal"}
+```
+
+``bash
+$ curl -u 'USERNAME:APITOKEN' https://us.onetimesecret.com/api/v1/status
+{"status":"nominaal"}
+```

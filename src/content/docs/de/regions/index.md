@@ -24,6 +24,22 @@ Die Wahl der richtigen Rechenzentrumsregion ist aus mehreren Gründen entscheide
 - Konform mit GDPR und anderen EU-Datenschutzbestimmungen
 - Ideal für europäische Nutzer oder solche, die hauptsächlich europäische Kunden bedienen
 
+### Kanada (CA)
+
+- **Standort**: In Kanada (Toronto)
+- **URL**: [https://ca.onetimesecret.com](https://ca.onetimesecret.com)
+- **Hauptmerkmale**:
+  - Konform mit PIPEDA und kanadischen Datenschutzgesetzen
+  - Geeignet für kanadische Nutzer oder diejenigen, die hauptsächlich kanadische Kunden bedienen
+
+### Aotearoa Neuseeland (NZ)
+
+- **Standort**: In Neuseeland (Porirua)
+- **URL**: [https://nz.onetimesecret.com](https://nz.onetimesecret.com)
+- **Hauptmerkmale**:
+  - Konform mit dem neuseeländischen Datenschutzgesetz und lokalen Vorschriften
+  - Geeignet für neuseeländische Nutzer oder diejenigen, die Kunden in Ozeanien bedienen
+
 ### United States (US)
 
 - **Standort**: Innerhalb der Vereinigten Staaten (Hillsboro, Oregon)

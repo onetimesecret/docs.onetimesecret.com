@@ -1,18 +1,41 @@
-// docs.onetimesecret.com/starlight/config/sidebar.mjs
+// config/sidebar.mjs
+import { readFileSync } from "fs";
+import { join, dirname } from "path";
+import { fileURLToPath } from "url";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+// Load translations from JSON files
+function loadTranslations(locale) {
+  const filePath = join(__dirname, "../src/content/i18n", `${locale}.json`);
+  try {
+    const content = readFileSync(filePath, "utf8");
+    return JSON.parse(content);
+  } catch (error) {
+    console.error(`Error loading translations for ${locale}:`, error);
+    return {};
+  }
+}
+
+const enTranslations = loadTranslations("en");
+const deTranslations = loadTranslations("de");
+const nlTranslations = loadTranslations("nl");
 
 /**
  * Helper function to create sidebar link items with required attrs
- * @param {string} label - Display label for the link
+ * @param {string} key - Translation key for the label
  * @param {string} link - URL path for the link
- * @param {Object} translations - Localized versions of the label by language code
  * @param {Object} [badge] - Optional badge configuration
  * @returns {Object} Formatted sidebar link item
  */
-function createLink(label, link, translations = {}, badge) {
+function createLink(key, link, badge) {
   return {
-    label,
+    label: enTranslations.sidebar[key],
     link,
-    translations,
+    translations: {
+      de: deTranslations.sidebar[key],
+      nl: nlTranslations.sidebar[key],
+    },
     attrs: {},
     ...(badge ? { badge } : {}),
   };
@@ -20,121 +43,82 @@ function createLink(label, link, translations = {}, badge) {
 
 /**
  * Helper function to create sidebar group items
- * @param {string} label - Display label for the group
- * @param {Object} translations - Localized versions of the label by language code
+ * @param {string} key - Translation key for the group label
  * @param {Array} items - Child items (links or groups) within this group
  * @param {boolean} collapsed - Whether the group should be collapsed by default
  * @returns {Object} Formatted sidebar group item
  */
-function createGroup(label, translations = {}, items = [], collapsed = false) {
+function createGroup(key, items = [], collapsed = false) {
   return {
-    label,
-    translations,
+    label: enTranslations.sidebar[key],
+    translations: {
+      de: deTranslations.sidebar[key],
+      nl: nlTranslations.sidebar[key],
+    },
     items,
     collapsed,
   };
 }
 
-// Sidebar configuration for Starlight
+// Sidebar configuration using translation keys
 export const sidebar = [
-  createLink("Home", "/", { de: "Startseite" }),
+  createLink("home", "/"),
 
-  createGroup("Introduction", { de: "Einführung" }, [
-    createLink("Getting Started", "introduction", { de: "Erste Schritte" }),
+  createGroup("introduction", [createLink("gettingStarted", "introduction")]),
+
+  createGroup("secretLinks", [
+    createLink("overview", "secret-links"),
+    createLink("whyUseSecretLinks", "secret-links/why-use-secret-links"),
+    createLink("useCases", "secret-links/use-cases"),
   ]),
 
-  createGroup("Secret Links", { de: "Geheime Links" }, [
-    createLink("Overview", "secret-links", { de: "Überblick" }),
-    createLink("Why Use Secret Links", "secret-links/why-use-secret-links", {
-      de: "Warum geheime Links verwenden",
+  createGroup("customDomains", [
+    createLink("overview", "custom-domains"),
+    createLink("howItWorks", "custom-domains/how-it-works"),
+    createLink("setupGuide", "custom-domains/setup-guide"),
+    createLink("brandGuide", "custom-domains/brand-guide", {
+      text: "Helpful!",
+      variant: "tip",
+      class: "small",
     }),
-    createLink("Use Cases", "secret-links/use-cases", {
-      de: "Anwendungsfälle",
-    }),
+    createLink("comparePlans", "custom-domains/compare-plans"),
+    createLink("useCases", "custom-domains/use-cases"),
   ]),
 
-  // Additional groups follow the same pattern
-  createGroup("Custom Domains", { de: "Benutzerdefinierte Domains" }, [
-    createLink("Overview", "custom-domains", { de: "Überblick" }),
-    createLink("How It Works", "custom-domains/how-it-works", {
-      de: "Wie es funktioniert",
-    }),
-    createLink("Setup Guide", "custom-domains/setup-guide", {
-      de: "Einrichtungsanleitung",
-    }),
-    createLink(
-      "Brand Guide",
-      "custom-domains/brand-guide",
-      {
-        de: "Markenrichtlinie",
-      },
-      { text: "Helpful!", variant: "tip", class: "small" },
-    ),
-    createLink("Compare Plans", "custom-domains/compare-plans", {
-      de: "Pläne vergleichen",
-    }),
-    createLink("Use Cases", "custom-domains/use-cases", {
-      de: "Anwendungsfälle",
-    }),
-  ]),
+  createGroup("regions", [createLink("overview", "regions")]),
 
-  createGroup("Regions", { de: "Regionen" }, [
-    createLink("Overview", "regions", { de: "Überblick" }),
-  ]),
+  createGroup("restApi", [
+    createLink("overview", "rest-api"),
 
-  createGroup("REST API", { de: "REST API" }, [
-    createLink("Overview", "rest-api", { de: "Überblick" }),
-
-    // Nested v1 group containing all API endpoint documentation
-    createGroup("v1", { de: "v1" }, [
-      createLink("Create Secrets", "rest-api/v1/create-secrets", {
-        de: "Geheimnisse erstellen",
-      }),
-      createLink("Retrieve Secrets", "rest-api/v1/retrieve-secrets", {
-        de: "Geheimnisse abrufen",
-      }),
-      createLink("Client Libraries", "rest-api/v1/client-libraries", {
-        de: "Client-Bibliotheken",
-      }),
+    createGroup("v1", [
+      createLink("createSecrets", "rest-api/v1/create-secrets"),
+      createLink("retrieveSecrets", "rest-api/v1/retrieve-secrets"),
+      createLink("clientLibraries", "rest-api/v1/client-libraries"),
     ]),
   ]),
 
-  createGroup("Security Best Practices", { de: "Sicherheits-Best-Practices" }, [
-    createLink("Overview", "security-best-practices", { de: "Überblick" }),
+  createGroup("securityBestPractices", [
+    createLink("overview", "security-best-practices"),
   ]),
 
   createGroup(
-    "Our Principles",
-    { de: "Unsere Prinzipien" },
+    "ourPrinciples",
     [
-      createLink("Overview", "principles", { de: "Überblick" }),
-      createLink("Privacy First", "principles/privacy-first", {
-        de: "Datenschutz zuerst",
-      }),
-      createLink("Trust", "principles/trust", {
-        de: "Vertrauen",
-      }),
-      createLink("Communication", "principles/communication", {
-        de: "Kommunikation",
-      }),
-      createLink("Data Minimization", "principles/data-minimization", {
-        de: "Datenminimierung",
-      }),
+      createLink("overview", "principles"),
+      createLink("privacyFirst", "principles/privacy-first"),
+      createLink("trust", "principles/trust"),
+      createLink("communication", "principles/communication"),
+      createLink("dataMinimization", "principles/data-minimization"),
     ],
     true,
   ),
 
   createGroup(
-    "Translations",
-    { de: "Übersetzungen" },
+    "translations",
     [
-      createLink("Overview", "translations", { de: "Überblick" }),
-      createLink("Style Guide", "translations/guide-en", {
-        de: "Stilrichtlinien",
-      }),
-      createLink("Glossary", "translations/glossary", {
-        de: "Glossar",
-      }),
+      createLink("overview", "translations"),
+      createLink("styleGuide", "translations/guide-en"),
+      createLink("glossary", "translations/glossary"),
     ],
     true,
   ),
