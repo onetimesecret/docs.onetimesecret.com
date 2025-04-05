@@ -1,130 +1,130 @@
 ---
-title: Setup Guide
-description: This guide will walk you through the process of setting up a custom domain for your Onetime Secret account, including the differences between subdomains and apex domains, and choosing your preferred data center region.
+title: 설정 가이드
+description: 이 가이드에서는 하위 도메인과 에이펙스 도메인의 차이점, 선호하는 데이터 센터 지역 선택 등 Onetime Secret 계정에 대한 사용자 지정 도메인을 설정하는 과정을 안내합니다.
 ---
 
-# Custom Domain Setup Guide
+# 사용자 지정 도메인 설정 가이드
 
-## Prerequisites
+## 전제 조건
 
-- An active Onetime Secret account with custom domain feature enabled
-- A domain you own and can manage DNS settings for
+- 사용자 지정 도메인 기능을 사용하도록 설정한 활성 원타임 시크릿 계정
+- 소유하고 있으며 DNS 설정을 관리할 수 있는 도메인
 
-## Understanding Domain Types
+## 도메인 유형 이해
 
-Before setting up your custom domain, it's important to understand the difference between subdomains and apex domains:
+사용자 정의 도메인을 설정하기 전에 하위 도메인과 에이펙스 도메인의 차이점을 이해하는 것이 중요합니다:
 
-1. **Subdomain**: A subdivision of your main domain (e.g., secrets.yourdomain.com)
-2. **Apex Domain**: The root domain itself (e.g., yourdomain.com)
+1. **하위 도메인**: 기본 도메인의 하위 도메인(예: secrets.yourdomain.com)
+2. **에이펙스 도메인**: 루트 도메인 자체(예: yourdomain.com)
 
-## Choose Your Region
+## 지역 선택
 
-Onetime Secret offers two data center regions: EU and US. When setting up your custom domain, you'll need to choose which region you prefer for storing your data. This choice is important for several reasons:
+원타임 시크릿은 두 개의 데이터 센터 지역을 제공합니다: EU와 미국. 사용자 정의 도메인을 설정할 때 데이터를 저장할 지역을 선택해야 합니다. 이 선택은 여러 가지 이유로 중요합니다:
 
-- **For Individuals**: You can choose based on your personal preference, such as proximity for potentially faster access or personal data sovereignty concerns.
-- **For Businesses**: Your choice may depend on your data locality obligations, such as compliance with GDPR, state, or provincial guidelines. Ensure you select the region that best aligns with your regulatory requirements.
+- 개인용**: 잠재적으로 더 빠른 액세스를 위한 근접성 또는 개인 데이터 주권 문제와 같은 개인적 선호도에 따라 선택할 수 있습니다.
+- 기업용**: GDPR, 주 또는 지방 지침 준수와 같은 데이터 지역 의무에 따라 선택할 수 있습니다. 규제 요건에 가장 부합하는 지역을 선택해야 합니다.
 
-Consider your specific needs and requirements when making this choice. For more detailed information about our data center regions and how to choose the right one for your needs, please refer to our [Data Center Regions](/docs/regions) guide.
+데이터 센터 지역을 선택할 때는 회원님의 구체적인 필요와 요구사항을 고려하세요. 데이터 센터 지역에 대한 자세한 정보와 필요에 맞는 데이터 센터 지역을 선택하는 방법은 [데이터 센터 지역](/docs/regions) 가이드를 참조하세요.
 
-## Step 1: Access Domains Dashboard
+## 1단계: 도메인 대시보드에 액세스하기
 
-1. Log in to your Onetime Secret account
-2. Navigate to Dashboard > Custom Domains
-3. Click "Add Domain"
+1. 원타임 시크릿 계정에 로그인합니다.
+2. 대시보드 > 사용자 정의 도메인으로 이동합니다.
+3. "도메인 추가"를 클릭합니다.
 
-<img src="/img/docs/custom-domains/3-Custom-domains.png" alt="Custom domains view" width="400" />
+<img src="/img/docs/custom-domains/3-Custom-domains.png" alt="사용자 지정 도메인 보기" width="400" />
 
-## Step 2: Enter Your Domain
+## 2단계: 도메인 입력
 
-1. In the custom domain settings, enter your desired domain (e.g., secrets.yourdomain.com or yourdomain.com)
-2. Click "Add Domain" or equivalent button to proceed
+1. 사용자 정의 도메인 설정에서 원하는 도메인을 입력합니다(예: secrets.yourdomain.com 또는 yourdomain.com).
+2. '도메인 추가' 또는 이와 동등한 버튼을 클릭하여 계속 진행합니다.
 
-## Step 3: Configure DNS Settings
+## 3단계: DNS 설정 구성
 
-To connect your domain, you need to update your DNS settings. The process differs slightly depending on whether you're using a subdomain or an apex domain, and which data center region you choose.
+도메인을 연결하려면 DNS 설정을 업데이트해야 합니다. 이 과정은 하위 도메인을 사용하는지 또는 에이펙스 도메인을 사용하는지, 어떤 데이터 센터 지역을 선택하는지에 따라 약간씩 다릅니다.
 
-### For Subdomains (Recommended)
+하위 도메인의 경우 ###(권장)
 
-1. Access your domain's DNS management panel (through your domain registrar or DNS provider)
-2. Create a CNAME record with the following details:
-   - Host: Your chosen subdomain (e.g., secrets)
-   - Points to / Value:
-     - For EU region: identity.eu.onetime.co
-     - For US region: identity.us.onetime.co
-3. Remove any existing A, AAAA, or CNAME records for the same subdomain
+1. 도메인 등록기관 또는 DNS 공급업체를 통해 도메인의 DNS 관리 패널에 액세스합니다.
+2. 2. 다음 세부 정보로 CNAME 레코드를 만듭니다:
+   - 호스트: 선택한 하위 도메인(예: 시크릿)
+   - 포인트/값:
+     - EU 지역의 경우: identity.eu.onetime.co
+     - 미국 지역의 경우: identity.us.onetime.co
+3. 동일한 하위 도메인에 대한 기존 A, AAAA 또는 CNAME 레코드를 모두 제거합니다.
 
-### For Apex Domains
+Apex 도메인의 경우 ###
 
-1. Access your domain's DNS management panel
-2. Create or modify an A record with the following details:
-   - Host: @ (or leave blank, depending on your DNS provider)
-   - Points to / Value:
-     - For EU region: 109.105.217.207
-     - For US region: 66.51.126.41
+1. 도메인의 DNS 관리 패널에 액세스합니다.
+2. 다음 세부 정보로 A 레코드를 만들거나 수정합니다:
+   - 호스트: (또는 DNS 공급업체에 따라 비워 두세요.)
+   - 포인터/값:
+     - EU 지역의 경우: 109.105.217.207
+     - 미국 지역의 경우: 66.51.126.41
 
-Important: Ensure there are no conflicting records for the domain you're using.
+중요: 사용 중인 도메인에 충돌하는 레코드가 없는지 확인하세요.
 
-<img src="/img/docs/custom-domains/4-Custom-domain-settings.png" alt="Custom domain settings" width="400" />
+<img src="/img/docs/custom-domains/4-Custom-domain-settings.png" alt="사용자 지정 도메인 설정" width="400" />
 
-### More Info
+### 추가 정보
 
-#### Why CNAME for Subdomains?
+#### 왜 하위 도메인에 CNAME을 사용해야 하나요?
 
-We recommend using CNAME records for subdomains because:
+다음과 같은 이유로 하위 도메인에 CNAME 레코드를 사용하는 것이 좋습니다:
 
-1. They're more flexible and allow us to change our server IP addresses without requiring you to update your DNS settings.
-2. They automatically adapt to any changes we make to our infrastructure.
+1. 더 유연하며 DNS 설정을 업데이트하지 않고도 서버 IP 주소를 변경할 수 있습니다.
+2. 인프라에 대한 모든 변경 사항에 자동으로 적응합니다.
 
-#### Why A Records for Apex Domains?
+#### 왜 에이펙스 도메인에 레코드가 필요한가요?
 
-Apex domains cannot use CNAME records due to DNS standards. Therefore, we must use A records, which have some limitations:
+Apex 도메인은 DNS 표준으로 인해 CNAME 레코드를 사용할 수 없습니다. 따라서 몇 가지 제한이 있는 A 레코드를 사용해야 합니다:
 
-1. If we change our IP address (which is rare), you'll need to update your DNS settings manually.
-2. They don't automatically adapt to changes in our infrastructure.
+1. (드물지만) IP 주소를 변경하는 경우 DNS 설정을 수동으로 업데이트해야 합니다.
+2. 인프라 변경에 자동으로 적응하지 않습니다.
 
-## Step 4: Verify Domain and Wait for SSL
+## 4단계: 도메인 확인 및 SSL 대기
 
-1. After updating DNS settings, return to the Onetime Secret custom domain page
-2. The system will automatically attempt to verify your domain
-3. SSL certificate generation will begin once verification is successful
-4. This process may take a few minutes to complete
+1. DNS 설정을 업데이트한 후 Onetime Secret 사용자 지정 도메인 페이지로 돌아갑니다.
+2. 시스템이 자동으로 도메인 확인을 시도합니다.
+3. 확인에 성공하면 SSL 인증서 생성이 시작됩니다.
+4. 이 과정은 완료하는 데 몇 분 정도 걸릴 수 있습니다.
 
-## Step 5: Confirm Setup
+## 5단계: 설정 확인
 
-Once setup is complete, you should see the following information:
+설정이 완료되면 다음 정보가 표시됩니다:
 
-- Domain Status: Active with SSL
-- Target Address: identity.eu.onetime.co or identity.us.onetime.co (depending on your chosen region)
-- SSL Status: Active
-- SSL Renewal Date: (Will be displayed, typically about a year from setup)
+- 도메인 상태: SSL로 활성화됨
+- 대상 주소: identity.eu.onetime.co 또는 identity.us.onetime.co(선택한 지역에 따라 다름)
+- SSL 상태: 활성
+- SSL 갱신 날짜: (일반적으로 설정 후 약 1년 후에 표시됨)
 
-## Troubleshooting
+## 문제 해결
 
-- If verification fails, double-check your DNS settings
-- Ensure you've removed any conflicting records
-- DNS propagation can take up to 24 hours, though it's usually much faster
+- 확인에 실패하면 DNS 설정을 다시 확인하세요.
+- 충돌하는 레코드를 모두 제거했는지 확인합니다.
+- DNS 전파에는 최대 24시간이 소요될 수 있지만 일반적으로는 훨씬 빠릅니다.
 
-## Using Your Custom Domain
+## 사용자 지정 도메인 사용
 
-Once active, your secret links will use your custom domain. For example:
+활성화되면 비밀 링크는 사용자 지정 도메인을 사용합니다. 예를 들어
 `https://secrets-example.onetime.dev/secret/abc123`
 
-## We've Got You Covered
+## 저희가 도와드리겠습니다
 
-We handle the rest of the technical details so you don't have to.
+나머지 기술적 세부 사항은 저희가 처리해 드리므로 걱정하실 필요가 없습니다.
 
-- We continuously monitor your domain's status
-- SSL certificates are automatically renewed without any action required on your part
+- 당사는 도메인 상태를 지속적으로 모니터링합니다.
+- SSL 인증서는 별도의 조치 없이 자동으로 갱신됩니다.
 
-For those who like to stay informed, you can easily check the health of your domain:
+최신 정보를 원하는 분들을 위해 도메인의 상태를 쉽게 확인할 수 있습니다:
 
-- Simply look at the "Last Monitored" timestamp in your dashboard to confirm ongoing connectivity
+- 대시보드에서 '마지막으로 모니터링된' 타임스탬프를 확인하여 지속적인 연결 상태를 확인하세요.
 
-## Questions or Need Support?
+## 질문이 있거나 지원이 필요하신가요?
 
-We're here to help. If you have any questions or need assistance:
+도와드리겠습니다. 궁금한 점이 있거나 도움이 필요하시면 언제든지 문의하세요:
 
-- Email us directly at support@onetimesecret.com
-- Use our feedback form at https://onetimesecret.com/feedback
+- 이메일(support@onetimesecret.com)로 직접 문의하세요.
+- 피드백 양식(https://onetimesecret.com/feedback)을 이용하세요.
 
-Our team is committed to providing you with the best possible support for your custom domain setup and usage, including guidance on choosing the right data center region for your needs.
+워드프레스닷컴 팀은 필요에 맞는 데이터센터 지역 선택에 대한 안내를 비롯하여 사용자 지정 도메인 설정 및 사용에 대한 최상의 지원을 제공하기 위해 최선을 다하고 있습니다.

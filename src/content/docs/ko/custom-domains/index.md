@@ -1,22 +1,22 @@
 ---
-title: Overview
-description: Elevate your brand and enhance your professional secret sharing experience with Custom Domains, an advanced feature for agencies, businesses, and power users.
+title: 개요
+description: 대행사, 기업 및 파워 유저를 위한 고급 기능인 사용자 지정 도메인을 사용하여 브랜드를 높이고 전문적인 비밀 공유 환경을 개선하세요.
 ---
 
-## What are Custom Domains?
+## 사용자 정의 도메인이란 무엇인가요?
 
-Custom Domains allow you to use your own domain name for Onetime Secret links, instead of the default _onetimesecret.com_ domain. This feature incorporates your brand identity into the secret sharing experience, enhancing trust and professionalism.
+사용자 지정 도메인을 사용하면 원타임 시크릿 링크에 기본 _onetimesecret.com_ 도메인 대신 자신만의 도메인 이름을 사용할 수 있습니다. 이 기능은 브랜드 아이덴티티를 비밀 공유 경험에 통합하여 신뢰도와 전문성을 높여줍니다.
 
 <div class="flex justify-center items-center my-10">
   <a href="https://onetimesecret.com/pricing" class="text-center inline-block">
     <span class="font-brand text-3xl sm:text-4xl md:text-5xl
                  bg-clip-text text-transparent
                  bg-gradient-to-r from-purple-400 via-pink-500 to-red-500
-                 animate-flowing-colors
-                 hover:animate-bounce
-                 transition-all duration-300 ease-in-out
-                 transform hover:scale-105
-                 rounded-xl
+                 애니메이션-흐르는-색상
+                 호버:애니메이션-바운스
+                 전환-모든 지속 시간-300 이지-인-아웃
+                 변형 호버:스케일-105
+                 둥근-xl
                  dark:border-brand-600">
       secrets.yourbrand.com
     </span>
@@ -24,47 +24,47 @@ Custom Domains allow you to use your own domain name for Onetime Secret links, i
 </div>
 
 
-## Key Benefits
+주요 혜택 ## 주요 혜택
 
-1. **Brand Identity**: Share secrets using your own domain name, reinforcing security and professionalism.
-2. **Increased Trust**: Recipients see a familiar domain, boosting their confidence in the shared information.
-3. **Professional Appearance**: Demonstrate a higher level of sophistication and commitment to security.
-4. **Brand Customization**: Upload custom logos and set brand colors to match your visual identity.
-5. **Seamless Integration**: Create a cohesive experience that aligns with your existing digital presence.
-6. **Regional Flexibility**: Choose between EU and US data center regions to meet your data locality needs.
+1. **브랜드 아이덴티티**: 고유한 도메인 이름을 사용하여 비밀을 공유하여 보안과 전문성을 강화하세요.
+2. **신뢰도 향상**: 수신자는 익숙한 도메인을 보게 되므로 공유 정보에 대한 신뢰도가 높아집니다.
+3. **전문적 외관**: 더 높은 수준의 정교함과 보안에 대한 헌신을 보여줍니다.
+4. **브랜드 사용자 지정**: 사용자 지정 로고를 업로드하고 시각적 아이덴티티에 맞게 브랜드 색상을 설정하세요.
+5. **원활한 통합**: 기존 디지털 존재와 일치하는 일관된 환경을 구축하세요.
+6. **지역적 유연성**: 데이터 위치 요구 사항을 충족하기 위해 EU와 미국 데이터 센터 리전 중에서 선택할 수 있습니다.
 
-## Getting Started
+시작하기 ## 시작하기
 
-To set up a Custom Domain:
+사용자 정의 도메인을 설정하려면
 
-1. Log in to your Onetime Secret account.
-2. Navigate to Account Settings > Custom Domains.
-3. Enter the domain you wish to use and click "Add Domain".
-4. Select your preferred data center region (EU or US).
-5. Follow the step-by-step instructions provided for DNS configuration.
-6. Wait for the domain to be verified. If available, click the "Verify" button to expedite the process. You may need to refresh the page.
+1. 원타임 시크릿 계정에 로그인합니다.
+2. 2. 계정 설정 > 사용자 지정 도메인으로 이동합니다.
+3. 3. 사용하려는 도메인을 입력하고 "도메인 추가"를 클릭합니다.
+4. 4. 원하는 데이터 센터 지역(EU 또는 미국)을 선택합니다.
+5. DNS 구성을 위해 제공된 단계별 지침을 따릅니다.
+6. 6. 도메인이 확인될 때까지 기다립니다. 가능한 경우 '확인' 버튼을 클릭하여 프로세스를 신속하게 진행합니다. 페이지를 새로 고쳐야 할 수도 있습니다.
 
-For detailed instructions, including how to choose between EU and US regions, please refer to our [Custom Domain Setup Guide](/docs/custom-domains/setup-guide).
+EU와 미국 지역 중 선택하는 방법을 비롯한 자세한 지침은 [사용자 정의 도메인 설정 가이드](/docs/custom-domains/setup-guide)를 참조하세요.
 
-## Brand Customization
+## 브랜드 사용자 지정
 
-Custom Domain users can personalize their secret sharing interface:
+사용자 지정 도메인 사용자는 비밀 공유 인터페이스를 개인화할 수 있습니다:
 
-1. Upload company logo (PNG/JPG, max 1MB)
-2. Set custom brand colors using hex codes
-3. Configure homepage visibility settings
-4. Preview changes in real-time
-5. Enable/disable public secret creation
+1. 회사 로고 업로드(PNG/JPG, 최대 1MB)
+2. 16진수 코드를 사용하여 사용자 지정 브랜드 색상 설정
+3. 홈페이지 가시성 설정 구성
+4. 실시간 변경 사항 미리보기
+5. 공개 비밀 생성 활성화/비활성화
 
-For detailed branding instructions, see our [Brand Guide](/docs/custom-domains/brand-guide).
+자세한 브랜딩 지침은 [브랜드 가이드](/docs/custom-domains/brand-guide)를 참조하세요.
 
 
-## Important Considerations
+## 중요 고려 사항
 
-- Custom Domains are a premium feature available with the Identity plan.
-- You are responsible for maintaining and renewing your domain registration.
-- Proper SSL/TLS configuration is crucial for security (handled automatically by Onetime Secret).
-- Ensure your chosen domain complies with your organization's branding guidelines.
-- Consider data protection regulations when choosing between [EU and US regions](/docs/regions).
+- 사용자 정의 도메인은 Identity 요금제에서 사용할 수 있는 프리미엄 기능입니다.
+- 도메인 등록을 유지 관리하고 갱신할 책임은 회원님에게 있습니다.
+- 보안을 위해서는 적절한 SSL/TLS 구성이 중요합니다(Onetime Secret에서 자동으로 처리됨).
+- 선택한 도메인이 조직의 브랜딩 가이드라인을 준수하는지 확인하세요.
+- EU 및 미국 지역]을 선택할 때는 데이터 보호 규정을 고려하세요(/docs/regions).
 
-To learn about best practices for using Custom Domains securely, check out our [Security Best Practices](/docs/security-best-practices) guide.
+사용자 정의 도메인을 안전하게 사용하기 위한 모범 사례에 대해 알아보려면 [보안 모범 사례](/docs/security-best-practices) 가이드를 참조하세요.

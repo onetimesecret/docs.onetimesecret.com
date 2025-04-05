@@ -1,138 +1,148 @@
 ---
-title: Data Center Regions
-description: Learn about Onetime Secret's data center regions and how to choose the right one for your needs.
+title: 데이터 센터 지역
+description: 원타임 시크릿의 데이터 센터 지역과 필요에 맞는 데이터 센터를 선택하는 방법에 대해 알아보세요.
 ---
 
-Onetime Secret offers four data center regions: European Union (EU), United States (US), Canada (CA), and Aotearoa New Zealand (NZ). This guide will help you understand the importance of region selection and how to choose the right one for your needs.
+원타임시크릿은 4개의 데이터 센터 지역을 제공합니다: 유럽 연합(EU), 미국(US), 캐나다(CA), 아오테아로아 뉴질랜드(NZ)입니다. 이 가이드는 지역 선택의 중요성과 필요에 맞는 지역을 선택하는 방법을 이해하는 데 도움이 될 것입니다.
 
-## Why Region Selection Matters
+지역 선택이 중요한 이유 ## 지역 선택이 중요한 이유
 
-Choosing the right data center region is crucial for several reasons:
+적합한 데이터 센터 지역을 선택하는 것은 여러 가지 이유로 중요합니다:
 
-1. **Data Sovereignty**: Different regions have different data protection laws and regulations.
-2. **Latency**: Choosing a region closer to your primary user base can reduce latency.
-3. **Compliance**: Some organizations have specific requirements about where their data can be stored.
+1. **데이터 주권**: 지역마다 데이터 보호 법률 및 규정이 다릅니다.
+2. **지연 시간**: 주요 사용자 기반에 가까운 지역을 선택하면 지연 시간을 줄일 수 있습니다.
+3. **규정 준수**: 일부 조직은 데이터를 저장할 수 있는 위치에 대한 특정 요구 사항이 있습니다.
 
-## Available Regions
+사용 가능한 지역 ##
 
-### European Union (EU)
+유럽 연합(EU) ###
 
-- **Location**: Within the European Union (Nuremberg)
+- 위치**: 유럽 연합 내(뉘른베르크)
 - **URL**: [https://eu.onetimesecret.com](https://eu.onetimesecret.com)
-- **Key Features**:
-  - Compliant with GDPR and other EU data protection regulations
-  - Ideal for European users or those serving primarily European customers
+- **주요 특징**:
+  - GDPR 및 기타 EU 데이터 보호 규정 준수
+  - 유럽 사용자 또는 주로 유럽 고객에게 서비스를 제공하는 사용자에게 이상적
 
-### Canada (CA)
+### 캐나다(CA)
 
-- **Location**: Within Canada (Toronto)
+- 위치**: 캐나다 내(토론토)
 - **URL**: [https://ca.onetimesecret.com](https://ca.onetimesecret.com)
-- **Key Features**:
-  - Compliant with PIPEDA and Canadian data protection laws
-  - Suitable for Canadian users or those primarily serving Canadian customers
+- **주요 특징**:
+  - PIPEDA 및 캐나다 데이터 보호법 준수
+  - 캐나다 사용자 또는 주로 캐나다 고객에게 서비스를 제공하는 사용자에게 적합
 
-### Aotearoa New Zealand (NZ)
+### 아오테아로아 뉴질랜드(NZ)
 
-- **Location**: Within New Zealand (Porirua)
+- 위치**: 뉴질랜드 내(포리루아)
 - **URL**: [https://nz.onetimesecret.com](https://nz.onetimesecret.com)
-- **Key Features**:
-  - Compliant with New Zealand Privacy Act and local regulations
-  - Suitable for New Zealand users or those serving Oceania customers
+- **주요 특징**:
+  - 뉴질랜드 개인정보 보호법 및 현지 규정 준수
+  - 뉴질랜드 사용자 또는 오세아니아 고객에게 서비스를 제공하는 사용자에게 적합
 
-### United States (US)
+### 미국(US)
 
-- **Location**: Within the United States (Hillsboro, Oregon)
+- 위치**: 미국 내(오리건주 힐스버러)
 - **URL**: [https://us.onetimesecret.com](https://us.onetimesecret.com)
-- **Key Features**:
-  - Compliant with US data protection laws
-  - Suitable for US-based users or those primarily serving US customers
+- **주요 특징**:
+  - 미국 데이터 보호법 준수
+  - 미국 기반 사용자 또는 주로 미국 고객에게 서비스를 제공하는 사용자에게 적합
 
-## Share-Nothing Architecture
+## 공유-무공유 아키텍처
 
-Onetime Secret employs a share-nothing architecture, ensuring complete data isolation between regions:
+Onetime Secret은 공유하지 않는 아키텍처를 채택하여 지역 간 완벽한 데이터 격리를 보장합니다:
 
-- **Separate Accounts**: Creating an account on any regional domain is entirely separate from accounts on other domains, even if you use the same email address.
-- **No Cross-Center Operations**: You can't perform operations (like burning a secret) across data centers. Each center maintains its own set of secrets and user data.
-- **Consistent Billing for Paid Users**: For paid accounts, while no user data is shared between centers, your subscription status is recognized across regions through our payment provider, Stripe.
+- 별도의 계정**: 동일한 이메일 주소를 사용하더라도 지역 도메인에서 계정을 만드는 것은 다른 도메인의 계정과 완전히 분리됩니다.
+- 센터 간 작업 금지**: 데이터 센터를 넘나들며 작업(예: 비밀 굽기)을 수행할 수 없습니다. 각 센터는 자체적인 비밀 및 사용자 데이터 세트를 유지합니다.
+- 유료 사용자에 대한 일관된 청구**: 유료 계정의 경우 사용자 데이터는 센터 간에 공유되지 않지만, 결제 제공업체인 Stripe를 통해 여러 지역에 걸쳐 구독 상태가 인식됩니다.
 
-## How to Choose Your Region
+## 지역 선택 방법
 
-Consider the following factors when selecting your data center region:
+데이터 센터 지역을 선택할 때 다음 요소를 고려하세요:
 
-### For Anonymous Users
+익명 사용자의 경우 ###
 
-- Requests to onetimesecret.com may be routed to any active data center.
-- The location of your secret is always clear from the generated link (e.g., `us.onetimesecret.com/secret/abcd1234`).
-- You can choose a specific data locality by navigating directly to any regional domain (e.g., [ca.onetimesecret.com](https://ca.onetimesecret.com/)).
+- onetimesecret.com에 대한 요청은 활성 데이터 센터로 라우팅될 수 있습니다.
+- 비밀의 위치는 생성된 링크(예: `us.onetimesecret.com/secret/abcd1234`)에서 항상 명확하게 알 수 있습니다.
+- 지역 도메인으로 직접 이동하여 특정 데이터 로케이션을 선택할 수 있습니다(예: [ca.onetimesecret.com](https://ca.onetimesecret.com/)).
 
-### For Authenticated Users
+인증된 사용자의 경우 ###
 
-- When creating a new account, you must choose a data center location.
-- You'll need to return to the same location to log in.
-- Existing accounts and secrets remain in their original data center.
+- 새 계정을 만들 때는 데이터 센터 위치를 선택해야 합니다.
+- 로그인하려면 같은 위치로 돌아가야 합니다.
+- 기존 계정과 비밀번호는 원래 데이터 센터에 그대로 유지됩니다.
 
-### For All Users
+모든 사용자 대상 ###
 
-- Secrets created without a subdomain jurisdiction (e.g., onetimesecret.com/secret/efgh5678) will continue to default to our EU data center.
-- All users, both paid and free, can choose their preferred data center when creating an account.
+- 하위 도메인 관할권 없이 만든 비밀번호(예: onetimesecret.com/secret/efgh5678)는 계속 기본적으로 EU 데이터 센터로 사용됩니다.
+- 유료 및 무료 사용자 모두 계정을 만들 때 선호하는 데이터 센터를 선택할 수 있습니다.
 
-### Additional Considerations
+### 추가 고려 사항
 
-1. **For Individuals**:
-   - Personal preference
-   - Proximity to your location for potentially faster access
-   - Personal data sovereignty concerns
+1. **개인용**:
+   - 개인 취향
+   - 잠재적으로 더 빠른 액세스를 위한 사용자 위치와의 근접성
+   - 개인 데이터 주권 문제
 
-2. **For Businesses**:
-   - Legal and regulatory requirements
-   - Location of your primary customer base
-   - Industry-specific compliance needs
+2. **기업용**:
+   - 법률 및 규제 요건
+   - 주요 고객 기반 위치
+   - 산업별 규정 준수 요구 사항
 
-3. **Technical Considerations**:
-   - Latency requirements for your application
-   - Integration with other services or systems
+3. **기술적 고려 사항**:
+   - 애플리케이션의 지연 시간 요구 사항
+   - 다른 서비스 또는 시스템과의 통합
 
-## Pricing and Plans
+## 가격 및 요금제
 
-Our commitment to data locality extends to our pricing model:
+데이터 로컬리티에 대한 Atlassian의 노력은 가격 모델에도 적용됩니다:
 
-- Charges are based on where you're paying from, not where your account is created.
-- Identity Plus plans include unlimited custom domains across all data centers under a single subscription.
+- 요금은 계정이 생성된 곳이 아니라 결제하는 곳을 기준으로 부과됩니다.
+- Identity Plus 요금제에는 단일 구독으로 모든 데이터 센터에서 무제한 사용자 지정 도메인이 포함됩니다.
 
-## Future Plans
+## 향후 계획
 
-We're continuously working to expand our data center options. Future plans include additional data center locations in:
+저희는 데이터 센터 옵션을 확장하기 위해 지속적으로 노력하고 있습니다. 향후 계획에는 추가 데이터 센터 위치가 포함됩니다:
 
-- Brazil
-- Spain
-- UK
+- 브라질
+- 스페인
+- 영국
 
-These expansions will provide even more options for data locality, improving performance and compliance capabilities for users in different regions.
+이러한 확장을 통해 데이터 로컬리티에 대한 더 많은 옵션을 제공하여 다양한 지역의 사용자에게 성능 및 규정 준수 기능을 개선할 수 있습니다.
 
-## Setting Up Your Region
+## 지역 설정하기
 
-When setting up your Onetime Secret account or configuring a custom domain, you'll have the option to choose your preferred region. Here's how:
+원타임 시크릿 계정을 설정하거나 사용자 지정 도메인을 구성할 때 원하는 지역을 선택할 수 있는 옵션이 제공됩니다. 방법은 다음과 같습니다:
 
-1. For new accounts: Select your preferred region during the sign-up process.
-2. For existing accounts: Contact our support team to discuss region migration options.
-3. For custom domains: Specify your chosen region when configuring your DNS settings (refer to our [Custom Domain Setup Guide](/docs/custom-domains/setup-guide) for detailed instructions).
+1. 새 계정의 경우: 가입 절차에서 원하는 지역을 선택합니다.
+2. 기존 계정의 경우: 지원팀에 문의하여 지역 이전 옵션에 대해 문의하세요.
+3. 사용자 정의 도메인의 경우: DNS 설정을 구성할 때 선택한 지역을 지정합니다(자세한 지침은 [사용자 정의 도메인 설정 가이드](/docs/custom-domains/setup-guide)를 참조하세요).
 
-## Frequently Asked Questions
+자주 묻는 질문 ## 자주 묻는 질문
 
-**Q: Can I change my region after setting up my account?**
-A: Contact our support team to discuss region migration options. Note that migration may involve some downtime and data transfer.
+**Q: 계정 설정 후 지역을 변경할 수 있나요?**
 
-**Q: Does my choice of region affect the security of my secrets?**
-A: No, all regions offer the same high level of security. The choice primarily affects data residency and potential latency.
+A: 네, 동일한 이메일 주소로 새 계정을 만들고 계정 화면으로 이동하여 지역을 변경할 수 있습니다. 구독 중이라면 계정이 자동으로 업데이트됩니다(페이지를 새로 고쳐야 할 수도 있습니다).
 
-**Q: Are there price differences between regions?**
-A: Currently, our pricing is consistent across all regions. Check our [pricing page](https://onetimesecret.com/pricing) for the most up-to-date information.
+참고 사항:
+- 기존 데이터는 지역 간에 전송되지 않습니다
+- 생성한 비밀 링크는 조회되거나 만료될 때까지 계속 작동합니다
+- 사용자 정의 도메인이 있는 링크의 경우 다음을 수행해야 합니다:
+  1. 새 지역 계정에 도메인을 다시 추가
+  2. 관련 DNS 레코드 업데이트
+  3. 도메인을 다시 추가할 때 기존 링크와의 충돌을 방지하기 위해 고유한 서브도메인 사용
+  4. 나중에 원하는 도메인을 추가하여(필요한 경우) 선호하는 도메인으로 새 링크를 보낼 수 있습니다
 
-## Need Help?
+**Q: 제가 선택한 지역이 제 비밀의 보안에 영향을 주나요?
+A: 아니요, 모든 지역에서 동일한 수준의 높은 보안을 제공합니다. 선택은 주로 데이터 보존과 잠재적 지연 시간에 영향을 미칩니다.
 
-If you're unsure about which region to choose or have any questions, don't hesitate to reach out to our support team. We're here to help you make the best decision for your specific needs.
+**Q: 지역마다 가격 차이가 있나요?
+A: 현재 가격은 모든 지역에서 동일합니다. 최신 정보는 [가격 페이지](https://onetimesecret.com/pricing)에서 확인하세요.
 
-- Email: support@onetimesecret.com
-- Feedback form: [https://onetimesecret.com/feedback](https://onetimesecret.com/feedback)
+## 도움이 필요하세요?
 
-Remember, choosing the right region ensures that you get the best performance and comply with any relevant data regulations while using Onetime Secret.
+어느 지역을 선택해야 할지 잘 모르거나 궁금한 점이 있으면 주저하지 말고 지원팀에 문의하세요. 구체적인 요구 사항에 맞는 최적의 결정을 내릴 수 있도록 도와드리겠습니다.
+
+- 이메일: support@onetimesecret.com
+- 피드백 양식: [https://onetimesecret.com/feedback](https://onetimesecret.com/feedback)
+
+올바른 지역을 선택하면 원타임 시크릿을 사용하는 동안 최상의 성능을 얻고 관련 데이터 규정을 준수할 수 있다는 점을 기억하세요.

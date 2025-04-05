@@ -1,72 +1,72 @@
 ---
-title: Pricing
-description: Choose the plan that's right for your secure sharing needs.
+title: 가격 책정
+description: 보안 공유 요구 사항에 적합한 요금제를 선택하세요.
 ---
 
-# Secure Links, Stronger Connections
+# 안전한 링크, 더 강력한 연결
 
-Share confidential information with confidence, elevate your brand, and build trust.
+기밀 정보를 안심하고 공유하여 브랜드를 높이고 신뢰를 구축하세요.
 
-## Plans
+요금제 ## 요금제
 
-### Basic
+### 기본
 
-**$0/month**
+**$0/월**
 
-Secure, one-time sharing for everyone.
+모든 사용자를 위한 안전한 일회성 공유.
 
-**Features:**
-- Onetime viewing of shared secrets
-- Automatic deletion after viewing
-- Account required to email recipients
-- Basic API access
+**기능:**
+- 공유된 비밀을 한 번만 보기
+- 보기 후 자동 삭제
+- 수신자에게 이메일을 보내기 위해 계정 필요
+- 기본 API 액세스
 
-[Get Started](https://onetimesecret.com/plans/basic)
+[시작하기](https://onetimesecret.com/plans/basic)
 
-### Identity Plus
+### 아이덴티티 플러스
 
-**$35/month or $365/year**
+**$35/월 또는 $365/년**
 
-Secure sharing that elevates your brand and simplifies communication.
+브랜드를 높이고 커뮤니케이션을 간소화하는 안전한 공유.
 
-**Features:**
-- Unlimited custom domains
-- Unlimited sharing capacity
-- Enhanced privacy features
-- Full API access
+**기능:**
+- 무제한 사용자 지정 도메인
+- 무제한 공유 용량
+- 강화된 개인정보 보호 기능
+- 전체 API 액세스
 
-[Choose this plan](https://onetimesecret.com/plans/identity)
+[이 요금제 선택](https://onetimesecret.com/plans/identity)
 
-### Global Elite
+### 글로벌 엘리트
 
-**Coming Soon**
+**곧 출시 예정**
 
-Dedicated infrastructure with data-compliance controls and unlimited scalability.
+데이터 규정 준수 제어 및 무제한 확장성을 갖춘 전용 인프라를 제공합니다.
 
-**Features:**
-- Private cloud environment
-- Unlimited usage and scaling
-- Multiple data location choices (EU, US)
-- Full regulatory compliance (including GDPR, CCPA, HIPAA)
+**특징:**
+- 프라이빗 클라우드 환경
+- 무제한 사용 및 확장
+- 다양한 데이터 위치 선택(EU, 미국)
+- 완벽한 규정 준수(GDPR, CCPA, HIPAA 포함)
 
-## Frequently Asked Questions
+자주 묻는 질문 ## 자주 묻는 질문
 
-### How does Onetime Secret work?
-Onetime Secret allows you to share sensitive information securely. Each shared secret can only be viewed once before it's permanently deleted, ensuring your data remains confidential.
+### 원타임 시크릿은 어떻게 작동하나요?
+원타임 시크릿을 사용하면 민감한 정보를 안전하게 공유할 수 있습니다. 공유된 각 비밀은 영구 삭제되기 전에 한 번만 볼 수 있으므로 데이터를 기밀로 유지할 수 있습니다.
 
-### Do I need an account to use Onetime Secret?
-No account is required for basic functionality. You can start sharing secrets immediately without complex setup.
+### 원타임 시크릿을 사용하려면 계정이 필요한가요?
+기본 기능에는 계정이 필요하지 않습니다. 복잡한 설정 없이 바로 시크릿 공유를 시작할 수 있습니다.
 
-### Is there a free option available?
-Yes, Onetime Secret offers a free tier that allows you to use most features at no cost. For advanced features and branding options, consider our paid plans.
+### 무료 옵션이 있나요?
+네, 원타임시크릿은 대부분의 기능을 무료로 사용할 수 있는 무료 티어를 제공합니다. 고급 기능 및 브랜딩 옵션을 사용하려면 유료 요금제를 사용하세요.
 
-### Can I self-host Onetime Secret?
-Yes, Onetime Secret offers a self-hosting option with our SimpleStack℠ guarantee, ensuring easy deployment and management. [GitHub](https://github.com/onetimesecret/onetimesecret)
+### Onetime Secret을 셀프 호스팅할 수 있나요?
+예. Onetime Secret은 SimpleStack℠ 보증을 통해 셀프 호스팅 옵션을 제공하여 배포 및 관리가 용이합니다. [GitHub](https://github.com/onetimesecret/onetimesecret)
 
-### How secure is Onetime Secret?
-We take security very seriously and employ multiple measures to protect users' information. As stated in our privacy policy, we use industry standard practices to safeguard all data from unauthorized access, alteration, or destruction. All data in transit is encrypted using HTTPS/TLS and stored securely in the European Union in compliance with data protection laws.
+### 원타임시크릿은 얼마나 안전한가요?
+당사는 보안을 매우 중요하게 생각하며 사용자 정보를 보호하기 위해 여러 가지 조치를 취하고 있습니다. 개인정보 보호정책에 명시된 바와 같이, 당사는 모든 데이터를 무단 액세스, 변경 또는 파기로부터 보호하기 위해 업계 표준 관행을 사용합니다. 전송 중인 모든 데이터는 HTTPS/TLS를 사용하여 암호화되며 데이터 보호법에 따라 유럽 연합에 안전하게 저장됩니다.
 
-However, we are also transparent that no method of electronic transmission or storage is 100% secure. While we strive to use commercially acceptable means to protect personal information, we cannot guarantee its absolute security. We recommend users take precautions like using passphrases. Our commitment is to be diligent in securing data to the best of our abilities while being upfront about potential risks.
+하지만 100% 안전한 전자 전송 또는 저장 방법은 없다는 점도 투명하게 알려드립니다. 당사는 개인정보를 보호하기 위해 상업적으로 허용되는 수단을 사용하기 위해 노력하지만, 절대적인 보안을 보장할 수는 없습니다. 따라서 사용자는 비밀번호를 사용하는 등의 예방 조치를 취할 것을 권장합니다. 당사는 최선을 다해 데이터를 안전하게 보호하는 동시에 잠재적인 위험에 대해 미리 알려드리기 위해 최선을 다하고 있습니다.
 
-### Do you offer customer support?
-Yes, we provide customer support. The level of support may vary depending on your chosen plan.
+### 고객 지원을 제공하나요?
+예, 고객 지원을 제공합니다. 지원 수준은 선택한 요금제에 따라 다를 수 있습니다.

@@ -1,31 +1,31 @@
 ---
-title: How do they work?
-description: Custom Domains allow you to host secret sharing under your own domain name, with DNS configuration in EU or US data centers and optional brand customization features.
+title: 어떻게 작동하나요?
+description: 사용자 지정 도메인을 사용하면 EU 또는 미국 데이터 센터의 DNS 구성과 선택적 브랜드 사용자 지정 기능을 통해 자신의 도메인 이름으로 비밀 공유를 호스팅할 수 있습니다.
 ---
 
-## Your Brand, Our Security
+## 고객의 브랜드, 우리의 보안
 
-By leveraging Custom Domains, you're not just sharing secrets; you're reinforcing your brand, enhancing trust, and ensuring data locality compliance with every interaction. Upgrade to the Identity plan today to unlock this powerful feature and take your secret sharing to the next level.
+사용자 지정 도메인을 활용하면 단순히 비밀을 공유하는 것뿐만 아니라 브랜드를 강화하고 신뢰를 높이며 모든 상호 작용에서 데이터 지역 규정 준수를 보장할 수 있습니다. 지금 바로 Identity 요금제로 업그레이드하여 이 강력한 기능을 활용하고 비밀 공유를 한 단계 더 발전시키세요.
 
-<img src="/img/docs/custom-domains/branded-homepage-enabled.png" alt="Custom domain settings" width="600" />
-
-
-## How Custom Domains Work
-
-1. You register a domain or use one you already own.
-2. Choose your preferred data center region (EU or US).
-3. [Configure your domain's DNS settings](/docs/custom-domains/setup-guide) to point to Onetime Secret's servers in your chosen region.
-4. Set up the custom domain in your Onetime Secret account settings.
-5. Once verified, your secret links will use your custom domain.
-6. [Customize your domain's appearance](/docs/custom-domains/brand-guide) with logos and brand colors through the admin interface.
+<img src="/img/docs/custom-domains/branded-homepage-enabled.png" alt="사용자 지정 도메인 설정" width="600" />
 
 
-## Troubleshooting Common Setup Issues
+## 사용자 정의 도메인의 작동 방식
 
-- **DNS Propagation**: Changes may take up to 48 hours to fully propagate. Be patient and try again later if verification fails initially.
-- **Incorrect DNS Records**: Double-check your DNS settings against the provided instructions for your chosen region.
-- **SSL Certificate Issues**: Contact our support team if you encounter any SSL-related problems.
-- **Domain Ownership Verification**: Ensure you have full control over the domain you're trying to set up.
-- **Region Selection**: If you're unsure about which region to choose, consult our [Data Center Regions](/docs/regions) guide or contact our support team.
+1. 도메인을 등록하거나 이미 소유하고 있는 도메인을 사용합니다.
+2. 선호하는 데이터 센터 지역(EU 또는 미국)을 선택합니다.
+3. [도메인의 DNS 설정 구성](/docs/custom-domains/setup-guide)에서 선택한 지역에 있는 원타임시크릿의 서버를 가리키도록 설정합니다.
+4. 원타임시크릿 계정 설정에서 사용자 지정 도메인을 설정합니다.
+5. 인증이 완료되면 시크릿 링크에 사용자 지정 도메인이 사용됩니다.
+6. 관리자 인터페이스에서 로고와 브랜드 색상을 사용하여 [도메인 모양 사용자 지정](/docs/custom-domains/brand-guide)을 설정합니다.
 
-To learn about best practices for using Custom Domains securely, check out our [Security Best Practices](/docs/security-best-practices) guide.
+
+## 일반적인 설정 문제 해결하기
+
+- DNS 전파**: 변경 사항이 완전히 전파되려면 최대 48시간이 걸릴 수 있습니다. 처음에 확인에 실패하면 잠시 기다렸다가 다시 시도하세요.
+- 잘못된 DNS 레코드**: 선택한 지역에 대해 제공된 지침에 따라 DNS 설정을 다시 확인하세요.
+- **SSL 인증서 문제**: SSL 관련 문제가 발생하면 지원팀에 문의하세요.
+- 도메인 소유권 확인**: 설정하려는 도메인을 완전히 제어할 수 있는지 확인하세요.
+- 지역 선택**: 어떤 지역을 선택해야 할지 잘 모르겠다면 [데이터 센터 지역](/docs/regions) 가이드를 참조하거나 지원팀에 문의하세요.
+
+사용자 정의 도메인을 안전하게 사용하기 위한 모범 사례에 대해 알아보려면 [보안 모범 사례](/docs/security-best-practices) 가이드를 참조하세요.

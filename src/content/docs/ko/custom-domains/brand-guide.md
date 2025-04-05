@@ -1,76 +1,76 @@
 ---
-title: Brand Guide
-description: Customize the presentation of your domain with your brand's logo, colors, and styling.
+title: 브랜드 가이드
+description: 브랜드의 로고, 색상 및 스타일로 도메인의 표시를 사용자 정의하세요.
 ---
 
-# Customize Domain Branding
+# 도메인 브랜딩 사용자 지정
 
-## Prerequisites
+## 전제 조건
 
-- An active, verified custom domain in your Onetime Secret account
-- A logo image file in PNG or JPG format, under 1MB in size
-- Hex code for your brand's color (e.g. `#DC4A22`) if using custom colors
+- 원타임 시크릿 계정에 있는 활성 상태의 확인된 사용자 지정 도메인
+- 1MB 미만의 PNG 또는 JPG 형식의 로고 이미지 파일
+- 사용자 지정 색상을 사용하는 경우 브랜드 색상의 16진수 코드(예: `#DC4A22`)
 
-## In a nutshell
-1. Navigate to Domain Dashboard
-2. Upload logo file
-3. Set brand colors
-4. Review preview
-5. Save changes
-6. Verify live implementation
+## 요약하자면
+1. 도메인 대시보드로 이동합니다.
+2. 로고 파일 업로드
+3. 브랜드 색상 설정
+4. 미리보기 검토
+5. 변경 사항 저장
+6. 실시간 구현 확인
 
-Back on the Domain Dashboard, you can enable or disable your public homepage and manage your brand settings anytime.
+도메인 대시보드로 돌아가면 언제든지 공개 홈페이지를 사용하거나 사용하지 않도록 설정하고 브랜드 설정을 관리할 수 있습니다.
 
-## Logo Management
-Upload your brand logo through the admin interface. The system accepts PNG or JPG files under 1MB.
+## 로고 관리
+관리자 인터페이스를 통해 브랜드 로고를 업로드하세요. 시스템에서는 1MB 미만의 PNG 또는 JPG 파일을 허용합니다.
 
-### Upload logo
+### 로고 업로드
 
-<img src="/img/docs/custom-domains/guide-brand-admin-1.png" alt="Logo upload interface showing add button" width="400" />
+<img src="/img/docs/custom-domains/guide-brand-admin-1.png" alt="로고 업로드 인터페이스에 추가 버튼이 표시됨" width="400" />
 
-### Remove or replace logo
+### 로고 제거 또는 교체
 
-Remove or replace logos as needed through the logo management panel.
+로고 관리 패널을 통해 필요에 따라 로고를 제거하거나 교체합니다.
 
-<img src="/img/docs/custom-domains/guide-brand-admin-2.png" alt="Logo management interface with remove option" width="400" />
-
-
-## Brand Customization
-Adjust colors, fonts, and styling through the brand settings interface. Review your changes in real-time through the preview panel.
-
-<img src="/img/docs/custom-domains/guide-brand-admin-4.png" alt="Brand customization interface" width="400" />
+<img src="/img/docs/custom-domains/guide-brand-admin-2.png" alt="제거 옵션이 있는 로고 관리 인터페이스" width="400" />
 
 
-Verify your branding changes on the live site after saving.
+## 브랜드 사용자 지정
+브랜드 설정 인터페이스를 통해 색상, 글꼴, 스타일을 조정할 수 있습니다. 미리보기 패널을 통해 변경 사항을 실시간으로 검토할 수 있습니다.
 
-<img src="/img/docs/custom-domains/guide-brand-admin-3.png" alt="Homepage configuration panel" width="400" />
-
-## Homepage Settings
-
-### Allow public secrets
-
-Back on your Domain Dashboard you can configure the visibility for your branded homepage. Enabling this feature allows your clients, customers, or team members to create and share secrets directly from your branded interface.
-
-<img src="/img/docs/custom-domains/guide-brand-admin-5.png" alt="Preview panel showing branded interface" width="400" />
-
-### Disable homepage
+<img src="/img/docs/custom-domains/guide-brand-admin-4.png" alt="브랜드 사용자 지정 인터페이스" width="400" />
 
 
+저장 후 라이브 사이트에서 브랜딩 변경 사항을 확인합니다.
 
-<img src="/img/docs/custom-domains/guide-brand-admin-6.png" alt="Live implementation view" width="400" />
+<img src="/img/docs/custom-domains/guide-brand-admin-3.png" alt="홈페이지 구성 패널" width="400" />
 
-## Important Notes
-- Changes process immediately upon saving
-- Allow up to 5 minutes for CDN cache refresh
-- Preview panel shows real-time rendering
-- Settings are domain-specific
+## 홈페이지 설정
 
-## Questions or Need Support?
+### 공개 비밀 허용
 
-We're here to help.
+도메인 대시보드로 돌아가서 브랜드 홈페이지의 공개 여부를 구성할 수 있습니다. 이 기능을 사용 설정하면 클라이언트, 고객 또는 팀원들이 브랜드 인터페이스에서 직접 비밀글로 작성하고 공유할 수 있습니다.
 
-Contact us:
-- Email: support@onetimesecret.com
-- Feedback form: https://onetimesecret.com/feedback
+<img src="/img/docs/custom-domains/guide-brand-admin-5.png" alt="브랜드 인터페이스가 표시된 미리보기 패널" width="400" />
 
-Our team is committed to providing you with the best possible support for your custom domain setup and usage.
+### 홈페이지 비활성화
+
+
+
+<img src="/img/docs/custom-domains/guide-brand-admin-6.png" alt="실시간 구현 보기" width="400" />
+
+## 중요 참고 사항
+- 저장 즉시 변경 프로세스 진행
+- CDN 캐시 새로 고침에 최대 5분 허용
+- 미리보기 패널에 실시간 렌더링 표시
+- 설정은 도메인별로 다릅니다.
+
+## 질문이 있거나 지원이 필요하신가요?
+
+저희가 도와드리겠습니다.
+
+문의하기:
+- 이메일: support@onetimesecret.com
+- 피드백 양식: https://onetimesecret.com/feedback
+
+워드프레스닷컴 팀은 사용자 정의 도메인 설정 및 사용에 대한 최상의 지원을 제공하기 위해 최선을 다하고 있습니다.

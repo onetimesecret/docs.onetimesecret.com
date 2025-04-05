@@ -1,87 +1,87 @@
 ---
-title: Getting Started
-description: Onetime Secret's REST API provides flexible secret sharing capabilities, supporting both authenticated and anonymous usage. Authenticated users gain advanced features and higher usage limits, while unauthenticated users can quickly share secrets with basic functionality.
+title: 시작하기
+description: Onetime Secret의 REST API는 인증 및 익명 사용을 모두 지원하는 유연한 비밀 공유 기능을 제공합니다. 인증된 사용자는 고급 기능과 더 높은 사용 한도를 이용할 수 있으며, 인증되지 않은 사용자는 기본 기능으로 빠르게 비밀을 공유할 수 있습니다.
 ---
 
-_Updated 2024-11-06_
+_업데이트 2024-11-06_
 
-All API access is over HTTPS and all responses are JSON.
+모든 API 액세스는 HTTPS를 통해 이루어지며 모든 응답은 JSON입니다.
 
-## Base URI
+## 기본 URI
 
 `https://REGION.onetimesecret.com/api`
 
-Where `REGION` is either `us` or `eu`.
+여기서 `REGION`은 `미국` 또는 `유럽`입니다.
 
 <!-- ::callout{icon="i-heroicons-globe-alt"} -->
-**Data Locality and Region Selection**
-- Choose between US ([`us.onetimesecret.com`](https://us.onetimesecret.com/)) or EU ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) data centers
-- Consider factors like data sovereignty, latency, and compliance requirements
-- **NOTE:** Default `onetimesecret.com` remains operational and routes to an active data center, using a specific locality is recommended as this functionality may be deprecated in the future.
+**데이터 위치 및 지역 선택**
+- 미국([`us.onetimesecret.com`](https://us.onetimesecret.com/)) 또는 유럽([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) 데이터 센터 중에서 선택합니다.
+- 데이터 주권, 지연 시간 및 규정 준수 요구 사항과 같은 요소를 고려합니다.
+- 참고: 기본 `onetimesecret.com`은 계속 작동하며 활성 데이터 센터로 라우팅되며, 이 기능은 향후 사용되지 않을 수 있으므로 특정 로캘을 사용하는 것이 좋습니다.
 ::
 
-## Authentication
-We support two modes of API usage:
+인증 ## 인증
+두 가지 API 사용 모드를 지원합니다:
 
-### Authenticated Access
+### 인증된 액세스
 
 `https://USERNAME:APITOKEN@REGION.onetimesecret.com/api`
 
-- Use HTTP Basic Authentication for full API capabilities
-- The username is your account login
-- The password is the API token from your account page
+- 전체 API 기능을 사용하려면 HTTP 기본 인증을 사용하세요.
+- 사용자 아이디는 계정 로그인입니다.
+- 비밀번호는 계정 페이지의 API 토큰입니다.
 
-### Anonymous Access
+### 익명 액세스
 
 `https://REGION.onetimesecret.com/api`
 
-- Limited functionality available without authentication
-- Ideal for quick, one-time secret sharing
-- Can be used for both creating and retrieving secrets
+- 인증 없이 제한된 기능만 사용 가능
+- 빠른 일회성 비밀 공유에 이상적
+- 비밀 생성 및 검색에 모두 사용 가능
 
-## Data Locality
-Onetime Secret supports multiple geographic data centers. We follow a zero data sharing policy between regions, ensuring complete data isolation. Choose the right data center for your needs:
+## 데이터 로캘리티
+Onetime Secret은 여러 지리적 데이터 센터를 지원합니다. 지역 간 데이터 공유 제로 정책을 준수하여 완벽한 데이터 격리를 보장합니다. 필요에 따라 적합한 데이터 센터를 선택하세요:
 
-- **EU Data Center:** [eu.onetimesecret.com](https://eu.onetimesecret.com/)
-- **US Data Center:** [us.onetimesecret.com](https://us.onetimesecret.com/)
+- **EU 데이터 센터:** [eu.onetimesecret.com](https://eu.onetimesecret.com/)
+- **미국 데이터 센터:** [us.onetimesecret.com](https://us.onetimesecret.com/)
 
-### Important Considerations:
-- You can choose a specific data locality by navigating directly to the desired domain
-- The location of your secret is always clear from the generated link (e.g., `us.onetimesecret.com/secret/abcd1234`)
-- **NOTE:** Currently, access via `onetimesecret.com/api` is still operational but using a specific locality is recommended as this functionality may be deprecated in the future.
+### 중요 고려 사항:
+- 원하는 도메인으로 직접 이동하여 특정 데이터 로케이션을 선택할 수 있습니다.
+- 생성된 링크에서 시크릿의 위치는 항상 명확하게 알 수 있습니다(예: `us.onetimesecret.com/secret/abcd1234`).
+- 참고: 현재 `onetimesecret.com/api`를 통한 액세스는 계속 작동하지만, 이 기능은 향후 더 이상 사용되지 않을 수 있으므로 특정 로캘을 사용하는 것이 좋습니다.
 
-## Custom Domains
-Onetime Secret supports custom domain configurations for organizations with specific networking or branding requirements via our [Identity Plus](https://onetimesecret.com/pricing) plan.
+## 사용자 지정 도메인
+Onetime Secret은 [Identity Plus](https://onetimesecret.com/pricing) 요금제를 통해 특정 네트워킹 또는 브랜딩 요구 사항이 있는 조직을 위한 사용자 지정 도메인 구성을 지원합니다.
 
-### Custom Domain Benefits
-- **Private Branding:** Use your own domain (e.g., `secrets.example.com`) for API access and secret sharing
-- **Consistent User Experience:** Maintain your organization's visual and trust identity with your customers and partners.
-- **Include during employee training:** Use custom domains to reinforce your organization's security practices and workflows.
+### 맞춤 도메인 혜택
+- **개인 브랜딩:** API 액세스 및 비밀 공유를 위해 고유한 도메인(예: `secrets.example.com`)을 사용하세요.
+- **일관된 사용자 경험:** 고객 및 파트너에게 조직의 시각적 정체성과 신뢰감을 유지하세요.
+- 직원 교육 시 포함:** 사용자 지정 도메인을 사용하여 조직의 보안 관행과 워크플로우를 강화하세요.
 
 <!-- ::callout{icon="i-heroicons-lock-closed"} -->
-**Premium Feature**
-Custom domains are available on our [Identity Plus](https://onetimesecret.com/pricing) plan. Setup in minutes with our easy-to-use configuration options. [Learn more](/docs/custom-domains).
+**프리미엄 기능**
+사용자 정의 도메인은 [Identity Plus](https://onetimesecret.com/pricing) 요금제에서 사용할 수 있습니다. 사용하기 쉬운 구성 옵션으로 몇 분 안에 설정할 수 있습니다. [자세히 알아보기](/docs/custom-domains).
 ::
 
-### API Usage with Custom Domains
-When using a custom domain, all API endpoints follow the same structure:
+사용자 정의 도메인을 사용한 ### API 사용
+사용자 정의 도메인을 사용할 때 모든 API 엔드포인트는 동일한 구조를 따릅니다:
 
 `https://secrets.example.com/api`
 
 
-## System Status
+## 시스템 상태
 
 `GET https://REGION.onetimesecret.com/api/v1/status`
-Current status of the system.
+시스템의 현재 상태입니다.
 
-**Parameters:** None
+**매개변수:** 없음
 
 ```bash
-$ curl -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/status
+curl -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/status
 {"status":"nominal"}
 ```
 
 ```bash
-$ curl -u 'USERNAME:APITOKEN' https://us.onetimesecret.com/api/v1/status
+curl -u 'USERNAME:APITOKEN' https://us.onetimesecret.com/api/v1/status
 {"status":"nominal"}
 ```

@@ -1,19 +1,19 @@
 ---
-title: Welcome to the Documentation
-description: Use the navigation menu to explore the Onetime Secret documentation. You'll find everything you need to know about creating, sharing, and managing secure, self-destructing messages.
+title: 문서에 오신 것을 환영합니다.
+description: 탐색 메뉴를 사용하여 원타임 시크릿 문서를 살펴보세요. 안전한 자동 삭제 메시지 작성, 공유 및 관리에 대해 알아야 할 모든 것을 찾을 수 있습니다.
 ---
 
-# Onetime Secret Documentation
+# 일회성 비밀 문서
 
-Use the navigation menu to explore the Onetime Secret documentation. You'll find everything you need to know about creating, sharing, and managing secure, self-destructing messages.
+탐색 메뉴를 사용하여 원타임 시크릿 설명서를 살펴보세요. 안전한 자동 삭제 메시지를 만들고, 공유하고, 관리하는 데 필요한 모든 정보를 찾을 수 있습니다.
 
-## Getting Started
+시작하기 ## 시작하기
 
-Start with our [Introduction](/en/introduction/) section to learn the basics of Onetime Secret.
+소개](/ko/소개/) 섹션에서 원타임 시크릿의 기본 사항을 알아보세요.
 
-## Key Sections
+## 주요 섹션
 
-- [Secret Links](/en/secret-links/) - Learn how to create and share one-time secrets
-- [Custom Domains](/en/custom-domains/) - Set up your own branded secret sharing experience
-- [REST API](/en/rest-api/) - Integrate Onetime Secret with your applications
-- [Security Best Practices](/en/security-best-practices/) - Ensure maximum security when sharing sensitive information
+- 시크릿 링크](/ko/secret-links/) - 일회성 시크릿을 만들고 공유하는 방법을 알아보세요.
+- 사용자 지정 도메인](/ko/custom-domains/) - 나만의 브랜드화된 비밀 공유 환경을 설정하세요.
+- REST API](/ko/rest-api/) - 애플리케이션과 일회용 시크릿 통합하기
+- 보안 모범 사례](/en/security-best-practices/) - 민감한 정보를 공유할 때 최대한의 보안을 보장합니다.

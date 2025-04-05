@@ -1,29 +1,29 @@
 ---
-title: Getting Started
-description: Your hub for Onetime Secret resources, documentation, and insights.
+title: 시작하기
+description: 원타임 시크릿 리소스, 문서 및 인사이트를 위한 허브입니다.
 ---
 
-Welcome to Onetime Secret Docs, your central resource for maximizing the value of our privacy-focused, ephemeral secret sharing service.
+개인 정보 보호에 중점을 둔 일시적인 비밀 공유 서비스의 가치를 극대화하는 핵심 리소스인 원타임 시크릿 문서에 오신 것을 환영합니다.
 
-## What's Here
+## 내용 보기
 
-- Documentation: Clear, concise guides for using Onetime Secret effectively
-- Blog: Insights on privacy, security, and product updates
-- Use Cases: Practical applications of Onetime Secret in various scenarios (coming soon)
+- 문서: 원타임 시크릿을 효과적으로 사용하기 위한 명확하고 간결한 가이드
+- 블로그 개인정보 보호, 보안 및 제품 업데이트에 대한 인사이트
+- 사용 사례: 다양한 시나리오에서 Onetime Secret의 실제 적용 사례(곧 제공 예정)
 
-## Core Functionality
+## 핵심 기능
 
-Onetime Secret provides a straightforward solution for sharing sensitive information securely:
+원타임 시크릿은 민감한 정보를 안전하게 공유할 수 있는 간단한 솔루션을 제공합니다:
 
-1. One-time access: View shared secrets once, then they're permanently deleted
-2. No registration required: Use basic features without an account
-3. Customizable expiration: Control secret availability with automatic deletion
-4. Intuitive interface: Share secrets easily with our user-friendly design
-5. Optional passphrase: Add an extra security layer to shared secrets
-6. Open-source: Review our codebase for enhanced transparency
+1. 일회성 액세스: 공유된 비밀을 한 번만 보고 영구적으로 삭제합니다.
+2. 등록할 필요가 없습니다: 계정 없이 기본 기능 사용
+3. 사용자 지정 가능한 만료: 자동 삭제를 통해 비밀 사용 가능 여부 제어
+4. 직관적인 인터페이스: 사용자 친화적인 디자인으로 쉽게 비밀을 공유하세요
+5. 선택적 암호: 공유 비밀에 추가 보안 계층 추가
+6. 오픈 소스: 투명성 강화를 위한 코드베이스 검토
 
-Explore our Bonus Content to learn how Onetime Secret can address your secure communication needs efficiently and discreetly.
+보너스 콘텐츠를 살펴보고 원타임 시크릿이 보안 커뮤니케이션 요구 사항을 효율적이고 신중하게 해결하는 방법을 알아보세요.
 
-## Get Started
+시작하기 ## 시작하기
 
-Ready to dive in? Check out our [documentation](/docs) for detailed instructions on using Onetime Secret effectively. If you have any questions or feedback, feel free to [contact us](/contact) directly.
+시작할 준비가 되셨나요? 원타임 시크릿을 효과적으로 사용하는 방법에 대한 자세한 지침은 [문서](/docs)를 참조하세요. 질문이나 피드백이 있으시면 언제든지 [문의하기](/contact)로 직접 문의해 주세요.

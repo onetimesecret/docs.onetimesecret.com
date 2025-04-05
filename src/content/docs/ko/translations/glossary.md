@@ -1,113 +1,113 @@
 ---
 title: 용어집
-description: 일관성을 유지하기 위해 여러 언어에 걸쳐 Onetime Secret의 주요 용어, 인터페이스 요소 및 기술 어휘를 번역하기 위한 참조 가이드
+description: 일관성을 유지하기 위해 여러 언어에 걸쳐 원타임 시크릿의 주요 용어, 인터페이스 요소 및 기술 어휘를 번역하기 위한 참조 가이드
 ---
 
-# Onetime Secret 번역 용어집
+# 원타임 시크릿 번역 용어집
 
-이 용어집은 Onetime Secret 애플리케이션에서 일관성을 보장하기 위해 여러 언어에 걸쳐 주요 용어의 표준화된 번역을 제공합니다. 이는 독일어(오스트리아), 프랑스어(프랑스) 및 프랑스어(캐나다)의 기존 번역 분석을 기반으로 합니다.
+이 용어집은 원타임시크릿 애플리케이션에서 일관성을 보장하기 위해 여러 언어에 걸쳐 주요 용어의 표준화된 번역을 제공합니다. 이는 독일어(오스트리아), 프랑스어(프랑스) 및 프랑스어(캐나다)의 기존 번역 분석을 기반으로 합니다.
 
 ## 핵심 용어
 
-| English | German (AT) | French (FR) | French (CA) | Korean (KO) | Notes |
+| 영어 | 독일어(AT) | 프랑스어(FR) | 프랑스어(CA) | 한국어(KO) | 참고 사항 |
 |---------|-------------|-------------|-------------|------------|-------|
-| secret (noun) | Geheimnis | secret | secret | 비밀 | Central concept of the application |
-| secret (adj) | geheim | secret/sécurisé | secret/sécurisé | 비밀스러운 | |
-| passphrase | Sicherheitsphrase | phrase secrète | mot de passe | 암호문구 | Authentication method for secrets |
-| burn | verbrennen | supprimer | supprimer | 소각하다 | Action to delete a secret before viewing |
-| view/reveal | ansehen/anzeigen | consulter/afficher | consulter/afficher | 보기/표시하다 | Action to access a secret |
-| link | Link/Verbindung | lien | lien | 링크 | The URL that provides access to a secret |
-| encrypt/encrypted | verschlüsseln/verschlüsselt | chiffrer/chiffré | chiffrer/chiffré | 암호화하다/암호화된 | Security method |
-| secure | sicher | sécurisé | sécurisé | 안전한 | State of protection |
+| 비밀(명사) | 게하임니스 | 비밀 | 비밀스러운 | 비밀 | 애플리케이션의 중심 개념 | 비밀스러운
+| 비밀(부사) | 게하임 | 비밀/보안 | 비밀/보안 | 비밀스러운 | | 비밀스러운
+| 패스프레이즈 | 보안 문구 | 비밀 문구 | 암호 문구 | 암호 인증 방법 | 비밀 인증 방법
+| burn | 소각하다, 소각하다 | 보기 전에 비밀을 삭제하는 작업 |
+| 보기/공개하다 | 보기/표시하다 | 비밀에 접근하는 동작 | 컨설턴트/아피셔 | 컨설턴트/아피셔 | 보기/표시하다.
+| 링크 | 링크/연결하다 | 유치권 | 유치권 | 링크 | 비밀에 대한 액세스를 제공하는 URL |
+| encrypt/암호화하다 | verschlüsseln/변환하다 | chiffrer/치프러/치프레 | 암호화하다/암호화하다 | 보안 방법 |
+<보안하다/보안하다/보안하다/보안하다/보안하다/보안하다/보안하다/보안하다/보안하다/보안하다/보안하다/보안하다/보안하다/보안하다/보안하다/보안하다/보안하다/보안하다/보안하다/보안하다 ⧏34⧐
 
 ## 사용자 인터페이스 요소
 
-| English | German (AT) | French (FR) | French (CA) | Korean (KO) | Notes |
+| 영어 | 독일어(AT) | 프랑스어(FR) | 프랑스어(CA) | 한국어(KO) | 참고 사항 |
 |---------|-------------|-------------|-------------|------------|-------|
-| Share a secret | Ein Geheimnis teilen | Partager un secret | Partager un secret | 비밀 공유하기 | Main action |
-| Create Account | Konto erstellen | Créer un compte | Créer un compte | 계정 만들기 | Registration |
-| Sign In | Eintragen | Se connecter | Se connecter | 로그인 | Authentication |
-| Dashboard | Konto | Tableau de bord | Compte | 대시보드 | User's main page |
-| Settings | Einstellungen | Paramètres | Paramètres | 설정 | Configuration page |
-| Privacy Options | Datenschutz-Optionen | Options de confidentialité | Options de confidentialité | 개인정보 옵션 | Secret settings |
-| Feedback | Rückmeldung | Retour d'information | Retour d'information | 피드백 | User comments |
+| 비밀 공유 | 비밀 공유하기 | 비밀 공유하기 | 비밀 공유하기 | 주요 작업 | 주요 작업
+| 계정 만들기 | 계정 만들기 | 계정 만들기 | 계정 만들기 | 등록하기
+| 로그인하기 | 로그인하기 | 연결하기 | 연결하기 | 로그인하기 | 인증하기
+| 대시보드 > 계정 > 계정 만들기 > 대시보드 > 사용자 기본 페이지 > 로그인
+| 설정 | 설정 | 매개 변수 | 매개 변수 | 설정 | 구성 페이지 |
+| 개인정보 옵션 | 데이터 보호 옵션 | 개인정보 옵션 | 개인정보 옵션 | 비밀 설정 | 비밀 설정
+| 피드백 > 피드백 > 정보 다시 보기 > 정보 다시 보기 > 피드백 > 사용자 의견 >
 
 ## 상태 용어
 
-| English | German (AT) | French (FR) | French (CA) | Korean (KO) | Notes |
+| 영어 | 독일어(AT) | 프랑스어(FR) | 프랑스어(CA) | 한국어(KO) | 참고 사항 |
 |---------|-------------|-------------|-------------|------------|-------|
-| received | empfangen | reçu | reçu | 수신됨 | Secret has been viewed |
-| burned | verbrannt | supprimé | supprimé | 소각됨 | Secret was deleted before viewing |
-| expired | abgelaufen | expiré | expiré | 만료됨 | Secret is no longer available due to time |
-| created | erstellt | créé | créé | 생성됨 | Secret has been generated |
-| active | aktiv | actif | actif | 활성 | Secret is available |
-| inactive | inaktiv | inactif | inactif | 비활성 | Secret is not available |
+| 수신됨 | 수신됨 | 비밀이 조회됨 | 확인됨
+| 소각됨 | 소각됨 | 보기 전에 비밀이 삭제됨 | 삭제됨
+| 만료됨 | 만료됨 | 만료됨 | 시간 초과로 인해 더 이상 비밀을 사용할 수 없음 |
+| 생성됨 | 생성됨 | 생성됨 | 비밀이 생성됨
+| 활성화됨 | 활성 상태 | 활성 상태 | 활성 상태 | 비밀을 사용할 수 있음 |
+| 비활성 상태 | 비활성 상태 | 비활성 상태 | 비활성 상태 | 시크릿을 사용할 수 없음 |
 
 
 ## 시간 관련 용어
 
-| English | German (AT) | French (FR) | French (CA) | Korean (KO) | Notes |
+| 영어 | 독일어(AT) | 프랑스어(FR) | 프랑스어(CA) | 한국어(KO) | 참고 사항 |
 |---------|-------------|-------------|-------------|------------|-------|
-| expires in | läuft ab in | expire dans | expire dans | 만료 시간 | Time until secret is no longer available |
-| day/days | Tag/Tage | jour/jours | jour/jours | 일/일 | Time unit |
-| hour/hours | Stunde/Stunden | heure/heures | heure/heures | 시간/시간 | Time unit |
-| minute/minutes | Minute/Minuten | minute/minutes | minute/minutes | 분/분 | Time unit |
-| second/seconds | Sekunde/Sekunden | seconde/secondes | seconde/secondes | 초/초 | Time unit |
+| 만료 시간 | 만료 시간 | 비밀을 더 이상 사용할 수 없는 시간 | 만료 시간 | 만료 시간
+| 일/일 | 태그/일 | 주/주 | 주/주 | 일/일 | 시간 단위 |
+| 시간/시간 | 스툰데/스툰덴 | 시간/시간 | 시간 단위 | 시간/시간
+| 분/분 | 분/분수 | 분/분수 | 분/분수 | 분/분 | 시간 단위 |
+| 초/초 | 세쿤데/세쿤덴 | 세컨드/세컨드 | 세컨드/초 | 초/초 | 시간 단위 |
 
 ## 보안 기능
 
-| English | German (AT) | French (FR) | French (CA) | Korean (KO) | Notes |
+| 영어 | 독일어(AT) | 프랑스어(FR) | 프랑스어(CA) | 한국어(KO) | 참고 사항 |
 |---------|-------------|-------------|-------------|------------|-------|
-| one-time access | einmaliger Zugang | accès unique | accès unique | 일회성 접근 | Core security feature |
-| passphrase protection | Schutz durch Sicherheitsphrase | protection par phrase secrète | protection par phrase d'authentification | 암호문구 보호 | Additional security |
-| encrypted in transit | verschlüsselt bei der Übertragung | chiffré en transit | chiffré en transit | 전송 중 암호화 | Data protection method |
-| encrypted at rest | verschlüsselt im Ruhezustand | chiffré au repos | chiffré au repos | 저장 시 암호화 | Storage protection |
+| 일회성 액세스 | 단일 계정 | 고유 액세스 | 일회성 접근 | 핵심 보안 기능 | 핵심 보안 기능
+| 비밀번호 보호 | 보안 문구로 보호 | 비밀 문구 보호 | 인증 문구 보호 | 암호문구 보호 | 추가 보안 |
+| 전송 중 암호화됨 | 전송 중 암호화됨 | 전송 중 암호화됨 | 데이터 보호 방법 | 전송 중 암호화됨
+| 저장 시 암호화 | 미사용 시 암호화 | 저장소 내 암호화 | 저장소 내 암호화 | 저장소 보호 | 저장 시 암호화
 
 ## 계정 관련 용어
 
-| English | German (AT) | French (FR) | French (CA) | Korean (KO) | Notes |
+| 영어 | 독일어(AT) | 프랑스어(FR) | 프랑스어(CA) | 한국어(KO) | 참고 사항 |
 |---------|-------------|-------------|-------------|------------|-------|
-| email | E-Mail | courriel/e-mail | courriel | 이메일 | User identifier |
-| password | Passwort | mot de passe | mot de passe | 비밀번호 | Authentication |
-| account | Konto | compte | compte | 계정 | User profile |
-| subscription | Abonnement | abonnement | abonnement | 구독 | Paid service |
-| customer | Kunde | client | client | 고객 | Paying user |
+| 이메일 | 이메일 | 이메일 | 사용자 식별자
+| 비밀번호 | 패스워드 | 인증 비밀번호 | 인증 수단
+| 계정 | 계정 | 계정 | 계좌 | 계좌 | 사용자 프로필
+| 구독 | Abonnement | 구독 | 유료 서비스 | 구독
+고객 | 고객 | 쿤데 | 고객 | 클라이언트 | 고객 | 유료 사용자 |
 
 ## 도메인 관련 용어
 
-| English | German (AT) | French (FR) | French (CA) | Korean (KO) | Notes |
+| 영어 | 독일어(AT) | 프랑스어(FR) | 프랑스어(CA) | 한국어(KO) | 참고 사항 |
 |---------|-------------|-------------|-------------|------------|-------|
-| custom domain | benutzerdefinierter Bereich | domaine personnalisé | domaine personnalisé | 커스텀 도메인 | Premium feature |
-| domain verification | Domänenüberprüfung | vérification du domaine | vérification du domaine | 도메인 인증 | Setup process |
-| DNS record | Namensserver-Eintrag | enregistrement DNS | enregistrement DNS | DNS 레코드 | Configuration |
-| CNAME record | CNAME-Eintrag | enregistrement CNAME | enregistrement CNAME | CNAME 레코드 | DNS setup |
+| 사용자 정의 도메인 | 사용자 정의 영역 | 맞춤 도메인 | 커스텀 도메인 | 프리미엄 기능 |
+| 도메인 확인 | 도메인 확인 | 도메인 확인 | 도메인 인증 | 설정 프로세스 | 도메인 인증
+| DNS 레코드 | 네임서버 이입 | DNS 등록 | DNS 레코드 | 구성 | 설정
+| CNAME 레코드 | CNAME 레코드 | CNAME-Eintrag | CNAME 등록 | CNAME 레코드 등록 | DNS 설정
 
 ## 오류 메시지
 
-| English | German (AT) | French (FR) | French (CA) | Korean (KO) | Notes |
+| 영어 | 독일어(AT) | 프랑스어(FR) | 프랑스어(CA) | 한국어(KO) | 참고 사항 |
 |---------|-------------|-------------|-------------|------------|-------|
-| error | Fehler | erreur | bug | 오류 | Problem notification |
-| warning | Warnung | avertissement | attention | 경고 | Caution notification |
-| oops | Huch | oups | oups | 이런 | Friendly error intro |
+| 오류 | Fehler | 에러 | 버그 | 오류 | 문제 알림 |
+| 경고, 경고, 주의, 주의 알림, 주의, 경고, 주의 알림
+| 죄송합니다 | 죄송합니다 | 이런 | 친절한 오류 소개
 
 ## 버튼 및 작업
 
-| English | German (AT) | French (FR) | French (CA) | Korean (KO) | Notes |
+| 영어 | 독일어(AT) | 프랑스어(FR) | 프랑스어(CA) | 한국어(KO) | 참고 사항 |
 |---------|-------------|-------------|-------------|------------|-------|
-| submit | einreichen | soumettre | soumettre | 제출하기 | Form action |
-| cancel | abbrechen | annuler | annuler | 취소 | Negative action |
-| confirm | bestätigen | confirmer | confirmer | 확인 | Positive action |
-| copy to clipboard | in die Zwischenablage kopieren | copier dans le presse-papiers | copier dans le presse-papiers | 클립보드에 복사 | Utility action |
-| continue | weiter | continuer | continuer | 계속 | Navigation |
-| back | zurück | retour | retour | 뒤로 | Navigation |
+| 제출하다 | 제출하기 | 양식 작업 | 제출하기 | 제출하기
+| 취소 | 취소하기 | 취소하기 | 부정적 조치 | 부정적 조치
+| 확인하다, 확인하다, 확인하다, 확인하다, 확인하다, 확인하다, 긍정 동작
+| 클립보드에 복사하기 | 양쪽으로 복사하기 | 종이 문서에 복사하기 | 종이 문서에 복사하기 | 클립보드에 복사하기 | 유틸리티 작업 |
+| 계속하기 | 뒤로 가기 | 계속하기 | 계속하기 | 탐색하기
+| 뒤로 | 뒤로 가기 | 돌아가기 | 뒤로 가기 | 탐색 | 탐색
 
 ## 마케팅 용어
 
-| English | German (AT) | French (FR) | French (CA) | Korean (KO) | Notes |
+| 영어 | 독일어(AT) | 프랑스어(FR) | 프랑스어(CA) | 한국어(KO) | 참고 사항 |
 |---------|-------------|-------------|-------------|------------|-------|
-| secure links | sichere Links | liens sécurisés | liens sécurisés | 안전한 링크 | Product feature |
-| privacy-first design | Datenschutz als oberstes Gebot | conception privilégiant la protection de la vie privée | conception privilégiant la protection de la vie privée | 개인정보 우선 설계 | Design philosophy |
-| custom branding | benutzerdefiniertes Branding | image de marque personnalisée | image de marque personnalisée | 맞춤형 브랜딩 | Premium feature |
+| 보안 링크 | 보안 링크 | 보안 링크 | 보안 링크 | 안전한 링크 | 제품 기능 | 제품 기능 |
+| 개인정보 보호 우선 설계 | 개인정보 보호 최우선 설계 | 개인정보 보호 최우선 설계 | 개인정보 보호 최우선 설계 | 디자인 철학 | 디자인 철학
+| 맞춤형 브랜딩 | 사용자 정의 브랜딩 | 개인 브랜드 이미지 | 개인 브랜드 이미지 | 맞춤형 브랜딩 | 프리미엄 기능 | 프리미엄 기능
 
 ## 번역 지침
 
@@ -119,7 +119,7 @@ description: 일관성을 유지하기 위해 여러 언어에 걸쳐 Onetime Se
 
 ## 특별 고려사항
 
-- "secret" 용어는 애플리케이션의 핵심이며 일관되게 번역되어야 함
-- 지역적 변형(예: 캐나다 프랑스어의 "courriel" vs 유럽 프랑스어의 "e-mail")을 존중해야 함
+- "비밀" 용어는 애플리케이션의 핵심이며 일관되게 번역되어야 함.
+- 지역적 변형(예: 캐나다 프랑스어의 "courriel" 대 유럽 프랑스어의 "e-mail")을 존중해야 함.
 - 보안 관련 기술 용어는 지역화보다 정확성을 우선시해야 함
 - UI 요소는 대상 언어의 플랫폼 관행을 따라야 함

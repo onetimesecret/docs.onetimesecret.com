@@ -1,29 +1,29 @@
 ---
-title: Compare plans
-description: Compare our feature-rich plans offering secure secret sharing with expiring links, custom domains, and flexible storage options for individuals and businesses.
+title: 요금제 비교
+description: 만료되는 링크, 사용자 지정 도메인, 개인 및 기업을 위한 유연한 저장소 옵션으로 안전한 비밀 공유를 제공하는 풍부한 기능의 요금제를 비교해 보세요.
 ---
 
 
-## Feature Matrix
+## 기능 매트릭스
 
-| Feature/Plan | Identity Plus | Basic | Anonymous |
+| 기능/플랜 | 아이덴티티 플러스 | 기본형 | 익명 |
 |---------|----------------|-------------------------|------------|
-| Custom Domains | Unlimited | ❌ | ❌ |
-| Branded Homepage | ✅ | ❌ | ❌ |
-| Custom logo, color | ✅ | ❌ | ❌ |
-| Number of Accounts | 1 | 1 | ❌ |
-| Link Expiration | Up to 30 days | 14 days | Limited to 7 days |
-| API Access | ✅ | ✅ | Limited |
-| Setup Required | Yes (DNS configuration) | No | No |
-| Paid | Yes (part of Identity plan) | No | No |
-| SSL/TLS Security | ✅ | ✅ | ✅ |
-| Data Locality | ✅ (EU or US) | ✅ (EU or US) | ✅ (EU or US) |
+| 사용자 정의 도메인 | 무제한 | ❌ | ❌ |
+| 브랜드 홈페이지 | ✅ | ❌ | ❌ |
+| 사용자 지정 로고, 색상 | ✅ | ❌ | ❌ |
+| 계정 수 | 1 | 1 | ❌ |
+| 링크 만료일 | 최대 30일 | 14일 | 7일로 제한 |
+| API 액세스 | ✅ | ✅ | 제한적 |
+| 설정 필요 | 예(DNS 구성) | 아니요 | 아니요
+| 유료 | 예(Identity 요금제의 일부) | 아니요 | 아니요 | 유료
+SSL/TLS 보안 | ✅ | ✅ | ✅ | ✅ |
+데이터 로캘리티 | ✅ (EU 또는 미국) | ✅ (EU 또는 미국) | ✅ (EU 또는 미국) | ✅ (EU 또는 미국) |
 
 
-For more information on account upgrades and pricing, please visit our [Pricing Page](https://onetimesecret.com/pricing).
+계정 업그레이드 및 가격에 대한 자세한 내용은 [가격 페이지](https://onetimesecret.com/pricing)를 참조하세요.
 
 
-## Coming Soon
+## 출시 예정
 
-* Custom email from details with SPF and DKIM support
-* Team plans for multiple users
+* SPF 및 DKIM 지원으로 세부 정보에서 사용자 지정 이메일 보내기
+* 여러 사용자를 위한 팀 요금제

@@ -1,41 +1,41 @@
 ---
-title: Use Cases
-description: Common scenarios where Custom Domains enhance security for sensitive information sharing.
+title: 사용 사례
+description: 사용자 지정 도메인으로 민감한 정보 공유에 대한 보안을 강화하는 일반적인 시나리오.
 ---
 
-##  Use Cases for Custom Domains
+사용자 정의 도메인의 ## 사용 사례
 
-Secret Links with Custom Domains provide a high-degree of security for sensitive data sharing while maintaining brand consistency and continuity. Here are some ways that our customers use our service.
+사용자 지정 도메인을 사용한 비밀 링크는 브랜드 일관성과 연속성을 유지하면서 민감한 데이터를 공유할 수 있는 높은 수준의 보안을 제공합니다. 다음은 고객이 서비스를 사용하는 몇 가지 방법입니다.
 
-### 1. Onboarding or invoicing clients
+### 1. 고객 온보딩 또는 송장 발행
 
-When requesting sensitive information from a client, such as financial details or credit card information, ask them to share it by creating a secret link at secrets.example.com. This ensures that the information is shared securely and is only accessible to the intended recipient.
+고객에게 금융 정보나 신용카드 정보 등 민감한 정보를 요청할 때는 secrets.example.com에서 비밀 링크를 만들어 공유하도록 요청하세요. 이렇게 하면 정보가 안전하게 공유되고 의도한 수신자만 액세스할 수 있습니다.
 
-**Benefit**: By using a custom domain, you can reinforce your brand identity and build trust with your clients. The client will recognize the domain and feel more confident sharing sensitive information.
+**혜택**: 사용자 지정 도메인을 사용하면 브랜드 아이덴티티를 강화하고 고객과 신뢰를 쌓을 수 있습니다. 고객은 도메인을 인식하고 민감한 정보를 더욱 자신 있게 공유할 수 있습니다.
 
-### 2. DevOps Credentials
+### 2. DevOps 자격 증명
 
-When managing deployments across multiple environments and teams, share temporary access credentials through secure.example.com. Development teams can safely exchange database passwords, API tokens, and configuration files that automatically expire after first use, preventing these sensitive details from being exposed in code repositories, chat logs, or email threads.
+여러 환경과 팀에서 배포를 관리할 때는 secure.example.com을 통해 임시 액세스 자격 증명을 공유하세요. 개발팀은 최초 사용 후 자동으로 만료되는 데이터베이스 비밀번호, API 토큰 및 구성 파일을 안전하게 교환하여 코드 저장소, 채팅 로그 또는 이메일 스레드에 이러한 민감한 세부 정보가 노출되는 것을 방지할 수 있습니다.
 
-**Benefit**: By integrating your custom domain with automated CI/CD pipelines, you maintain security best practices while keeping credential management seamless within your development workflow. Devs can trust that credentials come from an authorized source, and automated rotation ensures that exposed credentials cannot be reused.
+**혜택**: 사용자 지정 도메인을 자동화된 CI/CD 파이프라인과 통합하면 개발 워크플로 내에서 자격증명 관리를 원활하게 유지하면서 보안 모범 사례를 유지할 수 있습니다. 개발자는 자격 증명이 인증된 출처에서 제공된다는 것을 신뢰할 수 있으며, 자동화된 로테이션을 통해 노출된 자격 증명이 재사용되지 않도록 보장합니다.
 
-### 3. Employee Onboarding
+### 3. 직원 온보딩
 
-When bringing new team members aboard, streamline their first-day access by sending temporary login credentials through access.example.com. HR and IT teams can prepare individualized welcome packages containing initial passwords, VPN configurations, and sensitive documentation links that expire once accessed, ensuring that credentials don't linger in email inboxes or get accidentally forwarded.
+새로운 팀원을 영입할 때는 access.example.com을 통해 임시 로그인 자격 증명을 전송하여 첫날 액세스를 간소화하세요. HR 및 IT 팀은 초기 비밀번호, VPN 구성, 액세스 후 만료되는 중요한 문서 링크가 포함된 개별화된 환영 패키지를 준비하여 자격 증명이 이메일 받은 편지함에 남아 있거나 실수로 전달되는 일이 없도록 할 수 있습니다.
 
-**Benefit**: By using your branded domain for credential distribution, you create a professional onboarding experience while establishing healthy security practices. New employees can confidently access resources knowing they're coming from a trusted company source.
+**혜택**: 자격증명 배포에 브랜드 도메인을 사용하면 전문적인 온보딩 환경을 구축하는 동시에 건전한 보안 관행을 확립할 수 있습니다. 신입 직원은 신뢰할 수 있는 회사 출처에서 제공된다는 사실을 알고 안심하고 리소스에 액세스할 수 있습니다.
 
-### 4. Private HR Communications
+### 4. 비공개 HR 커뮤니케이션
 
-When handling sensitive employee information such as salary details, tax identification numbers, or benefits enrollment codes, share confidential data through hrinfo.example.com. HR teams can send time-sensitive links to individual employees containing their personal information as secure text, ensuring that sensitive details expire after access and remain protected in compliance with data privacy regulations.
+급여 세부 정보, 납세자 식별 번호, 혜택 등록 코드 등 민감한 직원 정보를 처리할 때는 hrinfo.example.com을 통해 기밀 데이터를 공유하세요. HR 팀은 개인 정보가 포함된 링크를 보안 텍스트로 개별 직원에게 전송하여 민감한 정보가 액세스 후 만료되고 데이터 개인정보 보호 규정을 준수하여 보호되도록 할 수 있습니다.
 
-**Benefit**: By utilizing your company's branded domain for confidential HR communications, you maintain professional standards while meeting compliance requirements for handling personally identifiable information. Employees can securely access their sensitive information through a trusted channel that reinforces your commitment to data protection.
+**혜택**: 기밀 HR 커뮤니케이션에 회사의 브랜드 도메인을 활용하면 개인 식별 정보 취급에 대한 규정 준수 요건을 충족하면서 전문적인 표준을 유지할 수 있습니다. 직원들은 데이터 보호에 대한 기업의 의지를 강화하는 신뢰할 수 있는 채널을 통해 자신의 민감한 정보에 안전하게 액세스할 수 있습니다.
 
-### 5. Temporary Staff Access
-When managing rotating clinical staff, residents, or temporary personnel, securely communicate initial login credentials through tempaccess.example.com. Administrative teams can create time-sensitive links containing system usernames and temporary passwords, where the secure message containing these credentials expires after first viewing.
+### 5. 임시 직원 액세스
+순환 근무하는 임상 직원, 레지던트 또는 임시 직원을 관리할 때는 tempaccess.example.com을 통해 초기 로그인 자격 증명을 안전하게 전달하세요. 관리팀은 시스템 사용자명과 임시 비밀번호가 포함된 시간에 민감한 링크를 생성할 수 있으며, 이러한 자격 증명이 포함된 보안 메시지는 처음 본 후 만료됩니다.
 
-Note: When implementing this solution, ensure your complete security stack maintains compliance with relevant healthcare regulations such as HIPAA or GDPR. OneTimeSecret should be used only for the secure communication of initial access credentials, while actual system access durations and permissions should be managed through your organization's access control systems. While the service provides more security than email for sharing sensitive information like PHI, it should be used as a stopgap rather than a permanent solution for such data - consider implementing dedicated HIPAA-compliant secure messaging systems for regular PHI communication.
+참고: 이 솔루션을 구현할 때는 전체 보안 스택이 HIPAA 또는 GDPR과 같은 관련 의료 규정을 준수하는지 확인하세요. 원타임시크릿은 초기 액세스 자격 증명의 안전한 통신에만 사용해야 하며, 실제 시스템 액세스 기간과 권한은 조직의 액세스 제어 시스템을 통해 관리해야 합니다. 이 서비스는 PHI와 같은 민감한 정보를 공유할 때 이메일보다 더 강력한 보안을 제공하지만, 이러한 데이터에 대한 영구적인 솔루션이 아닌 임시방편으로 사용해야 하며, 정기적인 PHI 통신을 위해 HIPAA를 준수하는 전용 보안 메시징 시스템을 구현하는 것을 고려하세요.
 
-## Summary
+## 요약
 
-The ability to generate secure, time-bound links through your branded domain provides additional security without compromising efficiency. Each use case demonstrates how Custom Domains enhance both security posture and professional presence.
+브랜드 도메인을 통해 안전한 시간 제한 링크를 생성하는 기능은 효율성을 저하시키지 않으면서도 추가적인 보안을 제공합니다. 각 사용 사례는 사용자 정의 도메인이 보안 태세와 전문적인 존재감을 모두 향상시키는 방법을 보여줍니다.

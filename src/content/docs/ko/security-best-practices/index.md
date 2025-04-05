@@ -1,79 +1,79 @@
 ---
-title: Security Best Practices
-description: Enhance your secret sharing security with these best practices specific to Onetime Secret, including the security benefits of Custom Domains.
+title: 보안 모범 사례
+description: 사용자 지정 도메인의 보안 이점을 포함하여 원타임 시크릿과 관련된 이러한 모범 사례를 통해 비밀 공유 보안을 강화하세요.
 ---
 
-# Security Best Practices for Onetime Secret
+# 원타임 시크릿을 위한 보안 모범 사례
 
-While Onetime Secret is designed with security in mind, following these best practices can further enhance the protection of your sensitive information, especially when using features like Custom Domains.
+원타임 시크릿은 보안을 염두에 두고 설계되었지만, 특히 사용자 지정 도메인과 같은 기능을 사용할 때 이러한 모범 사례를 따르면 민감한 정보를 더욱 안전하게 보호할 수 있습니다.
 
-## Best Practices for Secret Sharing
+비밀 공유를 위한 ## 모범 사례
 
-1. **Set Appropriate Expiration Times**: Choose the shortest practical expiration time for your secrets. This minimizes the window of opportunity for unauthorized access.
+1. **적절한 만료 시간 설정**: 비밀의 실제 만료 시간을 가장 짧게 설정하세요. 이렇게 하면 무단 액세스의 기회를 최소화할 수 있습니다.
 
-2. **Use Passphrase Protection**: For highly sensitive information, use the passphrase protection feature. This adds an extra layer of security, requiring the recipient to enter a passphrase to view the secret.
+2. **암호 보호 사용**: 매우 민감한 정보의 경우, 비밀번호 보호 기능을 사용하세요. 이렇게 하면 보안이 한층 더 강화되어 수신자가 비밀을 보려면 비밀번호를 입력해야 합니다.
 
-3. **Compartmentalize Sensitive Information**: When dealing with highly sensitive data, consider splitting it across multiple secrets. This way, if one secret is compromised, the entire set of information remains protected.
+3. **민감한 정보 분리**: 매우 민감한 데이터를 다룰 때는 여러 개의 비밀로 분할하는 것을 고려하세요. 이렇게 하면 하나의 비밀이 유출되더라도 전체 정보 집합이 보호됩니다.
 
-4. **Use Secure Channels for Sharing Metadata**: While Onetime Secret secures the content of your secret, be mindful of how you share the link and any associated metadata (like passphrases). Use secure, encrypted channels for this communication.
+4. **메타데이터 공유 시 보안 채널 사용**: 원타임 시크릿은 시크릿의 콘텐츠를 보호하지만, 링크 및 관련 메타데이터(암호 등)를 공유하는 방식에 유의하세요. 이 통신에는 안전한 암호화된 채널을 사용하세요.
 
-5. **Verify Recipient**: Ensure you're sharing secrets with the intended recipient. Double-check email addresses or usernames before sending.
+5. **수신자 확인**을 클릭합니다: 의도한 수신자와 비밀을 공유하고 있는지 확인하세요. 보내기 전에 이메일 주소나 사용자 아이디를 다시 확인하세요.
 
-6. **Educate Users**: If using Onetime Secret within an organization, educate your team about proper usage and security practices specific to secret sharing.
+6. **사용자 교육**: 조직 내에서 원타임 시크릿을 사용하는 경우, 팀원들에게 적절한 사용법과 비밀 공유와 관련된 보안 관행에 대해 교육하세요.
 
-## Security Benefits of Custom Domains
+사용자 정의 도메인의 ## 보안 이점
 
-Using Custom Domains with Onetime Secret offers several security advantages:
+사용자 정의 도메인을 원타임 시크릿과 함께 사용하면 몇 가지 보안상의 이점이 있습니다:
 
-1. **Enhanced Phishing Protection**: With a custom domain, your users become accustomed to a specific URL for secret sharing. This makes it easier to identify potential phishing attempts that might use similar-looking domains.
+1. **향상된 피싱 방지**: 사용자 지정 도메인을 사용하면 사용자는 비밀 공유를 위한 특정 URL에 익숙해집니다. 따라서 유사한 도메인을 사용하는 잠재적인 피싱 시도를 더 쉽게 식별할 수 있습니다.
 
-2. **Improved Trust and Legitimacy**: When recipients see a familiar domain, they're more likely to trust the source of the secret. This is particularly important for businesses sharing sensitive information with clients or partners.
+2. **신뢰도 및 합법성 향상**: 수신자가 익숙한 도메인을 보게 되면 비밀의 출처를 신뢰할 가능성이 높아집니다. 이는 고객 또는 파트너와 민감한 정보를 공유하는 기업에게 특히 중요합니다.
 
-3. **Seamless Integration with Existing Security Infrastructure**: A custom domain can be more easily integrated with your existing security tools and monitoring systems, providing a more comprehensive view of your organization's secret sharing activities.
+3. **기존 보안 인프라와의 원활한 통합**: 사용자 지정 도메인을 기존 보안 도구 및 모니터링 시스템과 보다 쉽게 통합하여 조직의 비밀 공유 활동을 보다 포괄적으로 파악할 수 있습니다.
 
-4. **Compliance and Auditing**: For organizations in regulated industries, using a custom domain can help in maintaining compliance by keeping secret sharing activities under your organization's direct control and making auditing processes more straightforward.
+4. **규정 준수 및 감사**: 규제 대상 산업에 속한 조직의 경우 사용자 지정 도메인을 사용하면 조직의 직접적인 통제 하에 비밀 공유 활동을 유지하고 감사 프로세스를 보다 간단하게 만들어 규정 준수를 유지하는 데 도움이 될 수 있습니다.
 
-Onetime Secret handles the technical aspects of securing your custom domain, including SSL/TLS configuration and domain activity monitoring, allowing you to focus on these strategic security benefits.
+Onetime Secret은 SSL/TLS 구성 및 도메인 활동 모니터링 등 사용자 지정 도메인 보안의 기술적 측면을 처리하므로 이러한 전략적 보안 혜택에 집중할 수 있습니다.
 
-## API Usage Security
+## API 사용 보안
 
-If you're using the Onetime Secret API:
+원타임 시크릿 API를 사용하는 경우:
 
-1. **Secure API Keys**: Store API keys securely and never expose them in client-side code or public repositories.
+1. **API 키 보안**: API 키를 안전하게 보관하고 클라이언트 측 코드나 공용 리포지토리에 노출하지 마세요.
 
-2. **Rotate API Keys**: Regularly rotate your API keys, especially if you suspect they've been compromised.
+2. **API 키 교체**: 특히 API 키가 유출된 것으로 의심되는 경우 정기적으로 키를 교체하세요.
 
-3. **Limit API Access**: Use the principle of least privilege when setting up API access. Only grant the permissions necessary for each specific use case.
+3. **API 액세스 제한**: API 액세스를 설정할 때 최소 권한 원칙을 사용하세요. 각 특정 사용 사례에 필요한 권한만 부여하세요.
 
-## Advanced Self-Hosted Security
+## 고급 셀프 호스팅 보안
 
-This section covers advanced security considerations for organizations running their own instance of Onetime Secret. You can find the open source project on [GitHub](https://github.com/onetimesecret/onetimesecret) and official Docker images at [Docker Hub](https://hub.docker.com/r/onetimesecret/onetimesecret).
+이 섹션에서는 Onetime Secret의 자체 인스턴스를 실행하는 조직을 위한 고급 보안 고려 사항을 다룹니다. 오픈 소스 프로젝트는 [GitHub](https://github.com/onetimesecret/onetimesecret)에서, 공식 Docker 이미지는 [Docker Hub](https://hub.docker.com/r/onetimesecret/onetimesecret)에서 찾을 수 있습니다.
 
-The recommendations below can be implemented at your infrastructure level when self-hosting Onetime Secret:
+원타임 시크릿을 셀프 호스팅할 때 인프라 수준에서 아래 권장 사항을 구현할 수 있습니다:
 
-1. **Use Ephemeral Environments**: When possible, create and destroy environments for each secret sharing session. This can be particularly useful for highly sensitive operations. Our [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/blob/v0.18.5/docs/DOCKER-lite.md) Docker image is designed for ephemeral use cases.
+1. **임시 환경 사용**: 가능하면 각 비밀 공유 세션에 대해 환경을 만들고 삭제하세요. 이는 매우 민감한 작업에 특히 유용할 수 있습니다. 온타임 시크릿 라이트](https://github.com/onetimesecret/onetimesecret/blob/v0.18.5/docs/DOCKER-lite.md) 도커 이미지는 임시 사용 사례를 위해 설계되었습니다.
 
-2. **Implement Time-Based Restrictions**: If your use case allows, consider implementing time-based restrictions for accessing secrets, such as only during business hours.
+2. **시간 기반 제한 구현**: 사용 사례에서 허용하는 경우, 업무 시간에만 비밀 정보에 액세스하도록 하는 등 시간 기반 제한을 구현하는 것을 고려하세요.
 
-3. **Geo-Fencing**: For highly sensitive operations, consider implementing geo-fencing to restrict access to secrets from specific geographic locations.
+3. **지리적 펜싱**: 매우 민감한 작업의 경우 특정 지리적 위치에서 비밀에 대한 액세스를 제한하는 지리적 펜싱을 구현하는 것이 좋습니다.
 
-4. **Audit Trails**: Maintain detailed audit trails of secret creation and access attempts. This can be crucial for incident response and compliance requirements.
+4. **감사 추적**: 비밀 생성 및 액세스 시도에 대한 자세한 감사 추적을 유지하세요. 이는 사고 대응 및 규정 준수 요건에 매우 중요할 수 있습니다.
 
-5. **Encryption at Rest**: While Onetime Secret handles encryption, for highly sensitive data, consider encrypting the content before creating the secret for an additional layer of protection.
+5. **미사용 암호화**: Onetime Secret은 암호화를 처리하지만, 매우 민감한 데이터의 경우 추가적인 보호 계층을 위해 비밀을 만들기 전에 콘텐츠를 암호화하는 것을 고려하세요.
 
 
-## Incident Response
+## 인시던트 대응
 
-This section outlines general security recommendations that may be helpful for your organization. These recommendations are not specific features of our service.
+이 섹션에서는 조직에 도움이 될 수 있는 일반적인 보안 권장 사항을 간략하게 설명합니다. 이러한 권장 사항은 Dropbox 서비스의 특정 기능이 아닙니다.
 
-1. **Have a Plan**: Develop an incident response plan specific to your secret sharing processes. This should include steps for revoking access, notifying affected parties, and mitigating potential damage.
+1. **계획을 세우세요**: 비밀 공유 프로세스에 맞는 사고 대응 계획을 수립하세요. 여기에는 액세스 권한 취소, 영향을 받는 당사자에게 알림, 잠재적 피해 완화 등의 단계가 포함되어야 합니다.
 
-2. **Quick Action**: If you suspect a secret has been compromised, use Onetime Secret's burn feature immediately if the secret hasn't been viewed yet. If it has been viewed, take appropriate actions to mitigate any potential damage.
+2. **빠른 조치**: 비밀이 유출된 것으로 의심되는 경우, 아직 비밀이 열람되지 않았다면 즉시 Onetime Secret의 삭제 기능을 사용하세요. 이미 열람된 경우에는 잠재적인 피해를 줄이기 위해 적절한 조치를 취하세요.
 
-3. **Regular Security Reviews**: Periodically review your secret sharing practices and adjust your security measures as needed.
+3. **정기적인 보안 검토**: 비밀 공유 관행을 주기적으로 검토하고 필요에 따라 보안 조치를 조정하세요.
 
 ---
 
-By following these best practices, you can significantly enhance the security of your secret sharing activities on Onetime Secret. Remember, security is an ongoing process, and staying vigilant is key to protecting your sensitive information.
+이러한 모범 사례를 따르면 원타임 시크릿에서 비밀 공유 활동의 보안을 크게 강화할 수 있습니다. 보안은 지속적인 프로세스이며, 민감한 정보를 보호하기 위해서는 경계를 늦추지 않는 것이 중요합니다.
 
-For any security concerns or to report potential vulnerabilities, please contact our security team immediately at security@onetimesecret.com.
+보안 문제가 있거나 잠재적인 취약점을 신고하려면 즉시 보안팀(security@onetimesecret.com)으로 문의하시기 바랍니다.
