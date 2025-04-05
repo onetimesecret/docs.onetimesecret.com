@@ -2,9 +2,8 @@
 import os
 import json
 import shutil
-import sys
 import re
-from optparse import OptionParser
+import argparse
 
 """
 File Translation Utility
@@ -217,54 +216,75 @@ def restore_translated_files(
     print(f"Restored {restored_count} files to their original locations")
 
 def main():
-    parser = OptionParser(usage="usage: %prog [options] prepare|combine|split|restore")
-    parser.add_option("-s", "--source", dest="source_dir", default="./starlight/src/content/docs",
-                      help="Source directory for documents (prepare/restore mode)")
-    parser.add_option("-t", "--translation-dir", dest="translation_dir", default="./translation_files",
-                      help="Directory for translation files")
-    parser.add_option("-c", "--combined-file", dest="combined_file",
-                      help="Path for combined file (combine/split mode)")
-    parser.add_option("-m", "--mapping", dest="mapping_file",
-                      help="JSON mapping file (defaults to translation_dir/file_mapping.json)")
-    parser.add_option("-e", "--extensions", dest="extensions", default=".md,.mdoc,.mdx,.astro",
-                      help="Comma-separated list of file extensions to process")
+    parser = argparse.ArgumentParser(
+        description="Translation utility for documentation file management",
+        epilog="""
+Examples:
+  Prepare files:     ./translation-util prepare -s ./src/content/docs/nl -t ./translation_files
+  Combine files:     ./translation-util combine -t ./translation_files -o ./combined.txt
+  Split translated:  ./translation-util split -c ./translated_combined.txt -t ./translation_files
+  Restore files:     ./translation-util restore -t ./translation_files -s ./src/content/docs/nl
+        """
+    )
 
-    (options, args) = parser.parse_args()
+    subparsers = parser.add_subparsers(dest="command", help="Command to execute", required=True)
 
-    if len(args) != 1 or args[0] not in ["prepare", "combine", "split", "restore"]:
-        parser.print_help()
-        sys.exit(1)
+    # Prepare command
+    prepare_parser = subparsers.add_parser("prepare", help="Prepare files for translation")
+    prepare_parser.add_argument("-s", "--source", dest="source_dir", required=True,
+                        help="Source directory for documents")
+    prepare_parser.add_argument("-t", "--translation-dir", dest="translation_dir", required=True,
+                        help="Directory for translation files")
+    prepare_parser.add_argument("-e", "--extensions", dest="extensions", default=".md,.mdoc,.mdx,.astro",
+                        help="Comma-separated list of file extensions to process")
 
-    # Convert extension string to tuple
-    extensions = tuple(options.extensions.split(','))
+    # Combine command
+    combine_parser = subparsers.add_parser("combine", help="Combine files for translation")
+    combine_parser.add_argument("-t", "--translation-dir", dest="translation_dir", required=True,
+                        help="Directory containing translation files")
+    combine_parser.add_argument("-o", "--output", dest="combined_file", required=True,
+                        help="Path for combined output file")
 
-    if args[0] == "prepare":
+    # Split command
+    split_parser = subparsers.add_parser("split", help="Split combined translated file")
+    split_parser.add_argument("-c", "--combined-file", dest="combined_file", required=True,
+                        help="Path to the combined translated file")
+    split_parser.add_argument("-t", "--translation-dir", dest="translation_dir", required=True,
+                        help="Directory to place split files")
+
+    # Restore command
+    restore_parser = subparsers.add_parser("restore", help="Restore translated files")
+    restore_parser.add_argument("-t", "--translation-dir", dest="translation_dir", required=True,
+                        help="Directory containing translated files")
+    restore_parser.add_argument("-s", "--source", dest="source_dir", required=True,
+                        help="Source directory to restore files to")
+    restore_parser.add_argument("-m", "--mapping", dest="mapping_file",
+                        help="JSON mapping file (defaults to translation_dir/file_mapping.json)")
+
+    args = parser.parse_args()
+
+    if args.command == "prepare":
+        extensions = tuple(args.extensions.split(','))
         prepare_files_for_translation(
-            options.source_dir,
-            options.translation_dir,
+            args.source_dir,
+            args.translation_dir,
             extensions
         )
-    elif args[0] == "combine":
-        if not options.combined_file:
-            options.combined_file = os.path.join(os.path.dirname(options.translation_dir), "combined.txt")
+    elif args.command == "combine":
         combine_txt_files(
-            options.translation_dir,
-            options.combined_file
+            args.translation_dir,
+            args.combined_file
         )
-    elif args[0] == "split":
-        if not options.combined_file:
-            print("Error: Combined file path is required")
-            parser.print_help()
-            sys.exit(1)
+    elif args.command == "split":
         split_combined_file(
-            options.combined_file,
-            options.translation_dir
+            args.combined_file,
+            args.translation_dir
         )
-    elif args[0] == "restore":
-        mapping_file = options.mapping_file or os.path.join(options.translation_dir, "file_mapping.json")
+    elif args.command == "restore":
+        mapping_file = args.mapping_file or os.path.join(args.translation_dir, "file_mapping.json")
         restore_translated_files(
-            options.translation_dir,
-            options.source_dir,
+            args.translation_dir,
+            args.source_dir,
             mapping_file
         )
 
