@@ -1,124 +1,124 @@
 ---
-title: Glossary
-description: A reference guide for translating Onetime Secret's key terms, interface elements, and technical vocabulary across multiple languages to maintain consistency
+title: Glosario
+description: Una guía de referencia para traducir los términos clave de Onetime Secret, los elementos de la interfaz y el vocabulario técnico en varios idiomas para mantener la coherencia.
 ---
 
-# Onetime Secret Translation Glossary
+# Glosario de traducción de Onetime Secret
 
-This glossary provides standardized translations for key terms across languages to ensure consistency in the Onetime Secret application. It is based on analysis of the existing translations in German (Austria), French (France), and French (Canada).
+Este glosario proporciona traducciones estandarizadas de términos clave en todos los idiomas para garantizar la coherencia en la aplicación Onetime Secret. Se basa en el análisis de las traducciones existentes en alemán (Austria), francés (Francia) y francés (Canadá).
 
-## Core Terminology
+## Terminología básica
 
-| English | German (AT) | French (FR) | French (CA) | Notes |
+| Inglés | Alemán (AT) | Francés (FR) | Francés (CA) | Notas |
 |---------|-------------|-------------|-------------|-------|
-| secret (noun) | Geheimnis | secret | secret | Central concept of the application |
-| secret (adj) | geheim | secret/sécurisé | secret/sécurisé | |
-| passphrase | Sicherheitsphrase | phrase secrète | mot de passe | Authentication method for secrets |
-| burn | verbrennen | supprimer | supprimer | Action to delete a secret before viewing |
-| view/reveal | ansehen/anzeigen | consulter/afficher | consulter/afficher | Action to access a secret |
-| link | Link/Verbindung | lien | lien | The URL that provides access to a secret |
-| encrypt/encrypted | verschlüsseln/verschlüsselt | chiffrer/chiffré | chiffrer/chiffré | Security method |
-| secure | sicher | sécurisé | sécurisé | State of protection |
+| secreto (sustantivo) | Geheimnis | secreto | concepto central de la aplicación | secreto
+| secreto (adj) | geheim | secreto/sécurisé | secreto/sécurisé |
+| passphrase | Sicherheitsphrase | phrase secrète | mot de passe | Método de autenticación para secretos | | | secreto (adj)
+| Acción para borrar un secreto antes de verlo.
+| view/reveal | ansehen/anzeigen | consulter/afficher | consulter/afficher | Acción para acceder a un secreto |
+| enlace | Link/Verbindung | lien | lien | La URL que da acceso a un secreto | | encriptar/encriptar
+| encriptar/encriptar | verschlüsseln/verschlüsselt | chiffrer/chiffré | Método de seguridad | | seguro | sicher
+| secure | sicher | sécurisé | sécurisé | Estado de protección |
 
-## User Interface Elements
+## Elementos de la interfaz de usuario
 
-| English | German (AT) | French (FR) | French (CA) | Notes |
+| Inglés | Alemán (AT) | Francés (FR) | Francés (CA) | Notas |
 |---------|-------------|-------------|-------------|-------|
-| Share a secret | Ein Geheimnis teilen | Partager un secret | Partager un secret | Main action |
-| Create Account | Konto erstellen | Créer un compte | Créer un compte | Registration |
-| Sign In | Eintragen | Se connecter | Se connecter | Authentication |
-| Dashboard | Konto | Tableau de bord | Compte | User's main page |
-| Settings | Einstellungen | Paramètres | Paramètres | Configuration page |
-| Privacy Options | Datenschutz-Optionen | Options de confidentialité | Options de confidentialité | Secret settings |
-| Feedback | Rückmeldung | Retour d'information | Retour d'information | User comments |
+| Compartir un secreto | Compartir un secreto | Acción principal | Compartir un secreto | Compartir un secreto | Compartir un secreto | Compartir un secreto | Compartir un secreto | Compartir un secreto | Compartir un secreto | Compartir un secreto | Compartir un secreto | Compartir un secreto | Compartir un secreto | Compartir un secreto
+| Crear una cuenta | Crear una cuenta | Registrarse | Registrar | Registrarse
+| Iniciar sesión | Conectarse | Autenticación | Dashboard | Konto erstellen
+| Dashboard | Konto | Tableau de bord | Compte | Página principal del usuario | Configuración | Einstellen
+| Configuración | Parámetros | Página de configuración | Parámetros
+| Opciones de confidencialidad | Datenschutz-Optionen | Options de confidentialité | Opciones de confidencialidad | Configuración secreta | Configuración confidencial
+| Feedback | Rückmeldung | Retour d'information | Retour d'information | User comments | Comentarios de usuarios | Comentarios de usuarios
 
 ## Status Terms
 
-| English | German (AT) | French (FR) | French (CA) | Notes |
+| Inglés | Alemán (AT) | Francés (FR) | Francés (CA) | Notas |
 |---------|-------------|-------------|-------------|-------|
-| received | empfangen | reçu | reçu | Secret has been viewed |
-| burned | verbrannt | supprimé | supprimé | Secret was deleted before viewing |
-| expired | abgelaufen | expiré | expiré | Secret is no longer available due to time |
-| created | erstellt | créé | créé | Secret has been generated |
-| active | aktiv | actif | actif | Secret is available |
-| inactive | inaktiv | inactif | inactif | Secret is not available |
+| recibido | empfangen | reçu | reçu | El secreto ha sido visto |
+| El secreto fue borrado antes de ser visto.
+| expirado | abgelaufen | expiré | expiré | El secreto ya no está disponible debido al tiempo | | creado | erstart
+| creado | erstellt | créé | créé | Se ha generado el secreto |
+| El secreto está disponible.
+| El secreto no está disponible.
 
-## Time-Related Terms
+## Términos relacionados con el tiempo
 
-| English | German (AT) | French (FR) | French (CA) | Notes |
+| Inglés | Alemán (AT) | Francés (FR) | Francés (CA) | Notas |
 |---------|-------------|-------------|-------------|-------|
-| expires in | läuft ab in | expire dans | expire dans | Time until secret is no longer available |
-| day/days | Tag/Tage | jour/jours | jour/jours | Time unit |
-| hour/hours | Stunde/Stunden | heure/heures | heure/heures | Time unit |
-| minute/minutes | Minute/Minuten | minute/minutes | minute/minutes | Time unit |
-| second/seconds | Sekunde/Sekunden | seconde/secondes | seconde/secondes | Time unit |
+| Tiempo hasta que el secreto deje de estar disponible.
+| day/days | Tag/Tage | jour/jours | jour/jours | Unidad de tiempo |
+| hora/horas | Stunde/Stunden | heure/heures | heure/heures | Unidad de tiempo | minutos/minutos
+| minute/minutes | Minute/Minuten | minute/minutes | minute/minutes | Unidad de tiempo | second/seconds | second/seconds
+| segundos/segundos Sekunde/Sekunden seconde/secondes seconde/secondes Unidad de tiempo
 
-## Security Features
+## Características de seguridad
 
-| English | German (AT) | French (FR) | French (CA) | Notes |
+| Inglés | Alemán (AT) | Francés (FR) | Francés (CA) | Notas |
 |---------|-------------|-------------|-------------|-------|
-| one-time access | einmaliger Zugang | accès unique | accès unique | Core security feature |
-| passphrase protection | Schutz durch Sicherheitsphrase | protection par phrase secrète | protection par phrase d'authentification | Additional security |
-| encrypted in transit | verschlüsselt bei der Übertragung | chiffré en transit | chiffré en transit | Data protection method |
-| encrypted at rest | verschlüsselt im Ruhezustand | chiffré au repos | chiffré au repos | Storage protection |
+| Acceso de una sola vez | einmaliger Zugang | accès unique | accès unique | Característica de seguridad central |
+Protección mediante frase de contraseña | Schutz durch Sicherheitsphrase | protection par phrase secrète | protection par phrase d'authentification | Seguridad adicional | | encriptado en tránsito | encriptado en tránsito | encriptado en tránsito | encriptado en tránsito | encriptado en tránsito
+| encriptado en tránsito | verschlüsselt bei der Übertragung | chiffré en transit | chiffré en transit | Método de protección de datos | cifrado en reposo
+| cifrado en reposo | cifrado en reposo | cifrado en reposo | cifrado en reposo | cifrado en reposo | cifrado en reposo | cifrado en reposo | cifrado en reposo | cifrado en reposo | cifrado en reposo | cifrado en reposo | cifrado en reposo
 
-## Account-Related Terms
+## Términos relacionados con la cuenta
 
-| English | German (AT) | French (FR) | French (CA) | Notes |
+| Inglés | Alemán (AT) | Francés (FR) | Francés (CA) | Notas |
 |---------|-------------|-------------|-------------|-------|
-| email | E-Mail | courriel/e-mail | courriel | User identifier |
-| password | Passwort | mot de passe | mot de passe | Authentication |
-| account | Konto | compte | compte | User profile |
-| subscription | Abonnement | abonnement | abonnement | Paid service |
-| customer | Kunde | client | client | Paying user |
+| Correo electrónico Correo electrónico Correo electrónico Identificador de usuario
+| contraseña | Passwort | mot de passe | autenticación | cuenta | Konto | autenticación
+| Cuenta Cuenta Cuenta Perfil de usuario
+| Suscripción Suscripción Suscripción Suscripción Servicio de pago
+| cliente | Kunde | client | client | Paying user |
 
-## Domain-Related Terms
+## Términos relacionados con el dominio
 
-| English | German (AT) | French (FR) | French (CA) | Notes |
+| Inglés | Alemán (AT) | Francés (FR) | Francés (CA) | Notas |
 |---------|-------------|-------------|-------------|-------|
-| custom domain | benutzerdefinierter Bereich | domaine personnalisé | domaine personnalisé | Premium feature |
-| domain verification | Domänenüberprüfung | vérification du domaine | vérification du domaine | Setup process |
-| DNS record | Namensserver-Eintrag | enregistrement DNS | enregistrement DNS | Configuration |
-| CNAME record | CNAME-Eintrag | enregistrement CNAME | enregistrement CNAME | DNS setup |
+| dominio personalizado | benutzerdefinierter Bereich | domaine personnalisé | domaine personnalisé | característica Premium |
+| Comprobación de dominio Comprobación de dominio Comprobación de dominio Comprobación de dominio Proceso de configuración
+| Registro DNS Registro DNS Registro DNS Registro DNS Registro DNS Configuración
+| Registro CNAME Registro CNAME Registro CNAME Registro CNAME Registro CNAME Configuración DNS
 
-## Error Messages
+## Mensajes de error
 
-| English | German (AT) | French (FR) | French (CA) | Notes |
+| Inglés | Alemán (AT) | Francés (FR) | Francés (CA) | Notas |
 |---------|-------------|-------------|-------------|-------|
-| error | Fehler | erreur | bug | Problem notification |
-| warning | Warnung | avertissement | attention | Caution notification |
-| oops | Huch | oups | oups | Friendly error intro |
+| error | Fehler | erreur | bug | Notificación de problemas | | Warnung | Warnung
+| warning | Warnung | avertissement | attention | Notificación de precaución | oops | Huch
+| oops | Huch | oups | oups | Introducción amistosa de error |
 
-## Buttons and Actions
+## Botones y acciones
 
-| English | German (AT) | French (FR) | French (CA) | Notes |
+| Inglés | Alemán (AT) | Francés (FR) | Francés (CA) | Notas |
 |---------|-------------|-------------|-------------|-------|
 | submit | einreichen | soumettre | soumettre | Form action |
-| cancel | abbrechen | annuler | annuler | Negative action |
-| confirm | bestätigen | confirmer | confirmer | Positive action |
-| copy to clipboard | in die Zwischenablage kopieren | copier dans le presse-papiers | copier dans le presse-papiers | Utility action |
-| continue | weiter | continuer | continuer | Navigation |
-| back | zurück | retour | retour | Navigation |
+| Cancelar Cancelar Cancelar Cancelar Acción negativa
+| confirmar confirmar acción positiva
+| Copiar al portapapeles Copiar al portapapeles Copiar al portapapeles Copiar al portapapeles Copiar al portapapeles Utilidad
+| continuar | weiter | continuer | continuer | Navegación | atrás | zurück
+| Volver atrás Volver atrás Navegación
 
-## Marketing Terms
+## Términos de marketing
 
-| English | German (AT) | French (FR) | French (CA) | Notes |
+| Inglés | Alemán (AT) | Francés (FR) | Francés (CA) | Notas |
 |---------|-------------|-------------|-------------|-------|
-| secure links | sichere Links | liens sécurisés | liens sécurisés | Product feature |
-| privacy-first design | Datenschutz als oberstes Gebot | conception privilégiant la protection de la vie privée | conception privilégiant la protection de la vie privée | Design philosophy |
-| custom branding | benutzerdefiniertes Branding | image de marque personnalisée | image de marque personnalisée | Premium feature |
+| Enlaces seguros | Enlaces seguros | Enlaces seguros | Característica del producto | Diseño que da prioridad a la privacidad | Privacidad.
+| privacy-first design | Datenschutz als oberstes Gebot | conception privilégiant la protection de la vie privée | conception privilégiant la protection de la vie privée | Design philosophy | | Filosofía de diseño
+| branding personalizado | benutzerdefiniertes Branding | image de marque personnalisée | image de marque personnalisée | Característica Premium |
 
-## Translation Guidelines
+## Directrices de traducción
 
-1. **Consistency**: Use the same translation for a term throughout the application
-2. **Context**: Consider how the term is used in the application
-3. **Cultural Adaptation**: Adapt terms to local conventions when necessary
-4. **Technical Accuracy**: Ensure security terms are translated accurately
-5. **Tone**: Maintain a professional but straightforward tone
+1. **Coherencia**: Utilizar la misma traducción para un término en toda la aplicación.
+2. **Contexto**: Tener en cuenta cómo se utiliza el término en la aplicación
+3. **Adaptación cultural**: Adaptar los términos a las convenciones locales cuando sea necesario
+4. **Precisión técnica**: Garantizar que los términos de seguridad se traducen con precisión
+5. **Tono**: Mantener un tono profesional pero directo
 
-## Special Considerations
+## Consideraciones especiales
 
-- The term "secret" is central to the application and should be translated consistently
-- Regional variations (e.g., "courriel" in Canadian French vs "e-mail" in European French) should be respected
-- Technical terms related to security should prioritize accuracy over localization
-- UI elements should follow platform conventions for the target language
+- El término "secreto" es fundamental para la aplicación y debe traducirse de forma coherente.
+- Deben respetarse las variaciones regionales (por ejemplo, "courriel" en francés canadiense frente a "e-mail" en francés europeo).
+- Los términos técnicos relacionados con la seguridad deben priorizar la precisión sobre la localización.
+- Los elementos de la interfaz de usuario deben seguir las convenciones de la plataforma para el idioma de destino.

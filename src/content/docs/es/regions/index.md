@@ -1,138 +1,138 @@
 ---
-title: Data Center Regions
-description: Learn about Onetime Secret's data center regions and how to choose the right one for your needs.
+title: Regiones del centro de datos
+description: Conoce las regiones de los centros de datos de Onetime Secret y cómo elegir la adecuada para tus necesidades.
 ---
 
-Onetime Secret offers four data center regions: European Union (EU), United States (US), Canada (CA), and Aotearoa New Zealand (NZ). This guide will help you understand the importance of region selection and how to choose the right one for your needs.
+Onetime Secret ofrece cuatro regiones de centros de datos: Unión Europea (UE), Estados Unidos (EE.UU.), Canadá (CA) y Aotearoa Nueva Zelanda (NZ). Esta guía te ayudará a entender la importancia de la selección de la región y cómo elegir la adecuada para tus necesidades.
 
-## Why Region Selection Matters
+## Por qué es importante elegir región
 
-Choosing the right data center region is crucial for several reasons:
+Elegir la región adecuada para el centro de datos es crucial por varias razones:
 
-1. **Data Sovereignty**: Different regions have different data protection laws and regulations.
-2. **Latency**: Choosing a region closer to your primary user base can reduce latency.
-3. **Compliance**: Some organizations have specific requirements about where their data can be stored.
+1. **Soberanía de los datos Diferentes regiones tienen diferentes leyes y reglamentos de protección de datos.
+2. **Latencia**: Elegir una región más cercana a su base de usuarios principal puede reducir la latencia.
+3. **Cumplimiento**: Algunas organizaciones tienen requisitos específicos sobre dónde pueden almacenarse sus datos.
 
-## Available Regions
+## Regiones disponibles
 
-### European Union (EU)
+### Unión Europea (UE)
 
-- **Location**: Within the European Union (Nuremberg)
+- Ubicación**: Dentro de la Unión Europea (Nuremberg)
 - **URL**: [https://eu.onetimesecret.com](https://eu.onetimesecret.com)
-- **Key Features**:
-  - Compliant with GDPR and other EU data protection regulations
-  - Ideal for European users or those serving primarily European customers
+- Características principales**:
+  - Cumple con GDPR y otras normativas de protección de datos de la UE
+  - Ideal para usuarios europeos o que atienden principalmente a clientes europeos
 
 ### Canada (CA)
 
-- **Location**: Within Canada (Toronto)
+- Ubicación**: Dentro de Canadá (Toronto)
 - **URL**: [https://ca.onetimesecret.com](https://ca.onetimesecret.com)
-- **Key Features**:
-  - Compliant with PIPEDA and Canadian data protection laws
-  - Suitable for Canadian users or those primarily serving Canadian customers
+- Características principales
+  - Conforme a la LPRPDE y a las leyes canadienses de protección de datos
+  - Adecuado para usuarios canadienses o que atienden principalmente a clientes canadienses
 
-### Aotearoa New Zealand (NZ)
+### Aotearoa Nueva Zelanda (NZ)
 
-- **Location**: Within New Zealand (Porirua)
+- Ubicación**: Dentro de Nueva Zelanda (Porirua)
 - **URL**: [https://nz.onetimesecret.com](https://nz.onetimesecret.com)
-- **Key Features**:
-  - Compliant with New Zealand Privacy Act and local regulations
-  - Suitable for New Zealand users or those serving Oceania customers
+- Características principales
+  - Cumple con la Ley de Privacidad de Nueva Zelanda y la normativa local
+  - Adecuado para usuarios de Nueva Zelanda o para clientes de Oceanía
 
-### United States (US)
+### Estados Unidos (US)
 
-- **Location**: Within the United States (Hillsboro, Oregon)
+- Ubicación**: Dentro de los Estados Unidos (Hillsboro, Oregon)
 - **URL**: [https://us.onetimesecret.com](https://us.onetimesecret.com)
-- **Key Features**:
-  - Compliant with US data protection laws
-  - Suitable for US-based users or those primarily serving US customers
+- Características principales
+  - Cumple la legislación estadounidense sobre protección de datos
+  - Adecuado para usuarios establecidos en EE.UU. o que atienden principalmente a clientes de EE.UU.
 
-## Share-Nothing Architecture
+## Arquitectura Share-Nothing
 
-Onetime Secret employs a share-nothing architecture, ensuring complete data isolation between regions:
+Onetime Secret emplea una arquitectura de no compartir nada, lo que garantiza el aislamiento total de los datos entre regiones:
 
-- **Separate Accounts**: Creating an account on any regional domain is entirely separate from accounts on other domains, even if you use the same email address.
-- **No Cross-Center Operations**: You can't perform operations (like burning a secret) across data centers. Each center maintains its own set of secrets and user data.
-- **Consistent Billing for Paid Users**: For paid accounts, while no user data is shared between centers, your subscription status is recognized across regions through our payment provider, Stripe.
+- Cuentas separadas**: La creación de una cuenta en cualquier dominio regional es totalmente independiente de las cuentas de otros dominios, incluso si utiliza la misma dirección de correo electrónico.
+- **No hay operaciones entre centros de datos**: No se pueden realizar operaciones (como quemar un secreto) entre centros de datos. Cada centro mantiene su propio conjunto de secretos y datos de usuario.
+- **Facturación coherente para usuarios de pago**: Para las cuentas de pago, aunque no se comparten datos de usuario entre centros, su estado de suscripción se reconoce en todas las regiones a través de nuestro proveedor de pagos, Stripe.
 
-## How to Choose Your Region
+## Cómo elegir su región
 
-Consider the following factors when selecting your data center region:
+Tenga en cuenta los siguientes factores a la hora de seleccionar la región de su centro de datos:
 
-### For Anonymous Users
+### Para usuarios anónimos
 
-- Requests to onetimesecret.com may be routed to any active data center.
-- The location of your secret is always clear from the generated link (e.g., `us.onetimesecret.com/secret/abcd1234`).
-- You can choose a specific data locality by navigating directly to any regional domain (e.g., [ca.onetimesecret.com](https://ca.onetimesecret.com/)).
+- Las solicitudes a onetimesecret.com pueden dirigirse a cualquier centro de datos activo.
+- La ubicación de tu secreto siempre está clara en el enlace generado (por ejemplo, `us.onetimesecret.com/secret/abcd1234`).
+- Puedes elegir una localidad de datos específica navegando directamente a cualquier dominio regional (por ejemplo, [ca.onetimesecret.com](https://ca.onetimesecret.com/)).
 
-### For Authenticated Users
+### Para usuarios autentificados
 
-- When creating a new account, you must choose a data center location.
-- You'll need to return to the same location to log in.
-- Existing accounts and secrets remain in their original data center.
+- Al crear una cuenta nueva, debe elegir una ubicación del centro de datos.
+- Deberá volver a la misma ubicación para iniciar sesión.
+- Las cuentas y secretos existentes permanecen en su centro de datos original.
 
-### For All Users
+### Para todos los usuarios
 
-- Secrets created without a subdomain jurisdiction (e.g., onetimesecret.com/secret/efgh5678) will continue to default to our EU data center.
-- All users, both paid and free, can choose their preferred data center when creating an account.
+- Los secretos creados sin una jurisdicción de subdominio (por ejemplo, onetimesecret.com/secret/efgh5678) seguirán enviándose por defecto a nuestro centro de datos de la UE.
+- Todos los usuarios, tanto de pago como gratuitos, pueden elegir su centro de datos preferido al crear una cuenta.
 
-### Additional Considerations
+### Consideraciones adicionales
 
-1. **For Individuals**:
-   - Personal preference
-   - Proximity to your location for potentially faster access
-   - Personal data sovereignty concerns
+1. **Para particulares**:
+   - Preferencia personal
+   - Proximidad a su ubicación para un acceso potencialmente más rápido
+   - Preocupación por la soberanía de los datos personales
 
-2. **For Businesses**:
-   - Legal and regulatory requirements
-   - Location of your primary customer base
-   - Industry-specific compliance needs
+2. **Para las empresas**:
+   - Requisitos legales y reglamentarios
+   - Ubicación de su base de clientes principal
+   - Necesidades de cumplimiento específicas del sector
 
-3. **Technical Considerations**:
-   - Latency requirements for your application
-   - Integration with other services or systems
+3. **Consideraciones técnicas**:
+   - Requisitos de latencia para su aplicación
+   - Integración con otros servicios o sistemas
 
-## Pricing and Plans
+## Precios y planes
 
-Our commitment to data locality extends to our pricing model:
+Nuestro compromiso con la localización de datos se extiende a nuestro modelo de precios:
 
-- Charges are based on where you're paying from, not where your account is created.
-- Identity Plus plans include unlimited custom domains across all data centers under a single subscription.
+- Los cargos se basan en el lugar desde el que se paga, no en el lugar donde se crea la cuenta.
+- Los planes Identity Plus incluyen dominios personalizados ilimitados en todos los centros de datos con una única suscripción.
 
-## Future Plans
+## Planes de futuro
 
-We're continuously working to expand our data center options. Future plans include additional data center locations in:
+Trabajamos continuamente para ampliar nuestras opciones de centros de datos. Los planes futuros incluyen ubicaciones adicionales de centros de datos en:
 
-- Brazil
-- Spain
-- UK
+- España
+- España
+- REINO UNIDO
 
-These expansions will provide even more options for data locality, improving performance and compliance capabilities for users in different regions.
+Estas ampliaciones ofrecerán aún más opciones para la localización de datos, mejorando el rendimiento y las capacidades de cumplimiento para usuarios de distintas regiones.
 
-## Setting Up Your Region
+## Configurar su región
 
-When setting up your Onetime Secret account or configuring a custom domain, you'll have the option to choose your preferred region. Here's how:
+Cuando configures tu cuenta Onetime Secret o configures un dominio personalizado, tendrás la opción de elegir la región que prefieras. Aquí te explicamos cómo:
 
-1. For new accounts: Select your preferred region during the sign-up process.
-2. For existing accounts: Contact our support team to discuss region migration options.
-3. For custom domains: Specify your chosen region when configuring your DNS settings (refer to our [Custom Domain Setup Guide](/docs/custom-domains/setup-guide) for detailed instructions).
+1. Para cuentas nuevas: Seleccione su región preferida durante el proceso de registro.
+2. Para cuentas existentes: Póngase en contacto con nuestro equipo de asistencia para analizar las opciones de migración de región.
+3. Para dominios personalizados: Especifique la región elegida al configurar los ajustes de DNS (consulte nuestra [Guía de configuración de dominios personalizados](/docs/custom-domains/setup-guide) para obtener instrucciones detalladas).
 
-## Frequently Asked Questions
+## Preguntas frecuentes
 
-**Q: Can I change my region after setting up my account?**
-A: Contact our support team to discuss region migration options. Note that migration may involve some downtime and data transfer.
+**P: ¿Puedo cambiar de región después de configurar mi cuenta?
+R: Póngase en contacto con nuestro equipo de asistencia para estudiar las opciones de migración de región. Tenga en cuenta que la migración puede implicar cierto tiempo de inactividad y transferencia de datos.
 
-**Q: Does my choice of region affect the security of my secrets?**
-A: No, all regions offer the same high level of security. The choice primarily affects data residency and potential latency.
+**P: ¿Afecta mi elección de región a la seguridad de mis secretos?
+R: No, todas las regiones ofrecen el mismo nivel de seguridad. La elección afecta principalmente a la residencia de los datos y a la latencia potencial.
 
-**Q: Are there price differences between regions?**
-A: Currently, our pricing is consistent across all regions. Check our [pricing page](https://onetimesecret.com/pricing) for the most up-to-date information.
+**P: ¿Existen diferencias de precio entre regiones?
+R: Actualmente, nuestros precios son los mismos en todas las regiones. Consulte nuestra [página de precios](https://onetimesecret.com/pricing) para obtener la información más actualizada.
 
-## Need Help?
+## ¿Necesitas ayuda?
 
-If you're unsure about which region to choose or have any questions, don't hesitate to reach out to our support team. We're here to help you make the best decision for your specific needs.
+Si no está seguro de qué región elegir o tiene alguna pregunta, no dude en ponerse en contacto con nuestro equipo de asistencia. Estamos aquí para ayudarle a tomar la mejor decisión para sus necesidades específicas.
 
-- Email: support@onetimesecret.com
-- Feedback form: [https://onetimesecret.com/feedback](https://onetimesecret.com/feedback)
+- Correo electrónico: support@onetimesecret.com
+- Formulario de comentarios: [https://onetimesecret.com/feedback](https://onetimesecret.com/feedback)
 
-Remember, choosing the right region ensures that you get the best performance and comply with any relevant data regulations while using Onetime Secret.
+Recuerda que elegir la región adecuada te garantiza el mejor rendimiento y el cumplimiento de cualquier normativa de datos relevante mientras utilizas Onetime Secret.

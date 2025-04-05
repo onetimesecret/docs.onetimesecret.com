@@ -1,26 +1,26 @@
 ---
-title: Minimal Data Collection
-description: Our commitment to collecting only the essential data required to provide our service
+title: Recogida mínima de datos
+description: Nuestro compromiso de recopilar sólo los datos esenciales necesarios para prestar nuestro servicio
 ---
 
-# We Only Collect What's Needed
+# Sólo recaudamos lo necesario
 
-**Description:** At Onetime Secret, we collect only the data required to deliver our service: temporary secrets and the minimum account information needed for paid subscriptions. This keeps things simple and secure.
+**Descripción:** En Onetime Secret, sólo recopilamos los datos necesarios para prestar nuestro servicio: secretos temporales y la información de cuenta mínima necesaria para las suscripciones de pago. Esto mantiene las cosas simples y seguras.
 
-**Why This Matters:**
+**Por qué es importante
 
-1. **Less Risk:** The less data we store, the less there is to protect. By collecting only what's necessary, we reduce potential security risks.
+1. **Menos riesgo:** Cuantos menos datos almacenamos, menos hay que proteger. Al recopilar solo lo necesario, reducimos los posibles riesgos de seguridad.
 
-2. **Clear Purpose:** Every piece of information we collect has a specific purpose in delivering our service. No tracking, no analytics, no extras.
+2. **Cada dato que recopilamos tiene una finalidad específica en la prestación de nuestro servicio. Sin seguimiento, sin análisis, sin extras.
 
-3. **Zero-Knowledge Design**: We can't access your secrets and don't want to. Each secret is encrypted, accessible only once, and automatically deleted after viewing or expiration.
+3. **Diseño de conocimiento cero**: No podemos acceder a tus secretos y no queremos hacerlo. Cada secreto está encriptado, sólo se puede acceder a él una vez y se elimina automáticamente después de su visualización o caducidad.
 
-**How It Works:**
+**Cómo funciona
 
-1. **For Single Secrets:** We only store the encrypted secret until it's viewed or expires. After that, it's permanently deleted. (Other than the minimal encrypted backups we keep in case of emergency. We discuss this more in our [Privacy Policy](https://onetimesecret.com/info/privacy).)
+1. **Para Secretos Únicos:** Sólo almacenamos el secreto encriptado hasta que es visto o expira. Después, se borra permanentemente. (Aparte de las copias de seguridad cifradas mínimas que guardamos en caso de emergencia. Hablamos más de esto en nuestra [Política de privacidad](https://onetimesecret.com/info/privacy).)
 
-2. **For Registered Users:** We keep just enough information to manage your account and provide the service you've paid for. That's why we only collect an email address. We don't collect name or profile details because you don't need those features.
+2. **Para usuarios registrados:** Sólo guardamos la información necesaria para gestionar su cuenta y prestarle el servicio por el que ha pagado. Por eso sólo recogemos una dirección de correo electrónico. No recopilamos datos sobre tu nombre o perfil porque no los necesitas.
 
-3. **No Tracking:** We don't use cookies for tracking, analytics, or advertising. The only cookie we use is for keeping you logged in if you choose to create an account.
+3. **No utilizamos cookies de seguimiento, análisis ni publicidad. La única cookie que utilizamos es para mantenerte conectado si decides crear una cuenta.
 
-This approach has served us and our users well since 2012. It's simple, effective, and respects your privacy.
+Este enfoque nos ha servido bien a nosotros y a nuestros usuarios desde 2012. Es sencillo, eficaz y respeta tu privacidad.

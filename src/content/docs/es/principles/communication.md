@@ -1,39 +1,39 @@
 ---
-title: Communication
-description: Why we limit email communication to only what's necessary
+title: Comunicación
+description: Por qué limitamos la comunicación por correo electrónico a lo estrictamente necesario
 ---
 
-# Our Communication Philosophy
+# Nuestra filosofía de comunicación
 
-We take a deliberately minimal approach to user communication, respecting your time and inbox.
+Adoptamos un enfoque deliberadamente minimalista de la comunicación con el usuario, respetando su tiempo y su bandeja de entrada.
 
-## Our No-Email Philosophy
+## Nuestra filosofía de no enviar correos electrónicos
 
-Most services flood your inbox with:
-- Marketing newsletters
-- Product updates
-- Usage statistics
-- Feature announcements
-- Promotional offers
-- Re-engagement campaigns
+La mayoría de los servicios inundan su bandeja de entrada con:
+- Boletines de marketing
+- Actualizaciones de productos
+- Estadísticas de uso
+- Anuncios de funciones
+- Ofertas promocionales
+- Campañas de reenganche
 
-In our entire history, we've never sent a marketing email. The only emails you'll receive from us are the ones you specifically request: secret link deliveries. No newsletters, no updates, no promotions. We believe your inbox belongs to you.
+En toda nuestra historia, nunca hemos enviado un correo electrónico de marketing. Los únicos correos electrónicos que recibirá de nosotros son los que solicite específicamente: envíos de enlaces secretos. Ni boletines, ni actualizaciones, ni promociones. Creemos que tu bandeja de entrada te pertenece.
 
 ## Why This Matters
 
-By avoiding standard marketing and communication practices, we:
-- Maintain a cleaner, simpler service
-- Reduce potential security risks
-- Keep focused on our core purpose
-- Respect your time and attention
+Al evitar las prácticas habituales de marketing y comunicación, nosotros
+- Mantenemos un servicio más limpio y sencillo
+- Reducimos los posibles riesgos de seguridad
+- Nos centramos en nuestro objetivo principal
+- Respetamos su tiempo y atención
 
 ## Our Focus Instead
 
-We invest our time and resources in:
-- Improving core functionality
-- Strengthening privacy protections
-- Ensuring reliable service
-- Addressing jurisdictional compliance
-- Maintaining transparent operations
+Invertimos nuestro tiempo y recursos en
+- Mejorar la funcionalidad básica
+- Reforzar la protección de la privacidad
+- Garantizar un servicio fiable
+- Cumplimiento de las normas jurisdiccionales
+- Mantener la transparencia de las operaciones
 
-Have thoughts about our communication approach? [Contact us](https://onetimesecret.com/feedback).
+¿Tiene alguna opinión sobre nuestro enfoque de la comunicación? [Póngase en contacto con nosotros](https://onetimesecret.com/feedback).

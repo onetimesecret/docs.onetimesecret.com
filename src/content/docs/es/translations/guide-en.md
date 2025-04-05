@@ -1,274 +1,274 @@
 ---
-title: Translation style guide
-description: A comprehensive guide for translators working on Onetime Secret localization, covering brand voice, terminology standards, and language-specific requirements to ensure high-quality and consistent translations
+title: Libro de estilo de la traducción
+description: Una guía completa para los traductores que trabajan en la localización de Onetime Secret, que abarca la voz de la marca, las normas terminológicas y los requisitos específicos de cada idioma para garantizar traducciones coherentes y de alta calidad.
 ---
 
-## Translation Style Guide English, Canada (en-CA)
+## Guía de estilo de traducción Inglés, Canadá (en-CA)
 
-![Translation Style Guide](/socialcards/onetime-socialcard-20250226-1.png)
+Guía de estilo de traducción](/socialcards/onetime-socialcard-20250226-1.png)
 
-This style guide provides instruction for translating to the Canadian English locale.
+Esta guía de estilo ofrece instrucciones para traducir al inglés canadiense.
 
-| *This Style Guide is based on content from [Mozilla L10N Styleguides](https://github.com/mozilla-l10n/styleguides/) by Mozilla Contributors, licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).*  |
-|  |
+| *Esta Guía de Estilo está basada en el contenido de [Mozilla L10N Styleguides](https://github.com/mozilla-l10n/styleguides/) por Mozilla Contributors, licenciado bajo [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).* | |
+| |
 
-## Target Audience
+## Público destinatario
 
-Our English-speaking audience includes:
+Nuestro público anglófono incluye:
 
-### Customers
+### Clientes
 
-- Professional background: IT professionals, agency teams (design, development, marketing), and corporate support teams (HR, provisioning, logistics, finance)
-- Audience: Professionals ages 20-50 with some tech proficiency. These individuals have chosen or work for a company that has chosen to incorporate Onetime Secret into their workflow.
-- Location: North America, UK, Ireland, New Zealand, Australia, Netherlands, Germany
-- Writing approach: Use clear, accessible language with professional tone
+- Experiencia profesional: Profesionales de TI, equipos de agencias (diseño, desarrollo, marketing) y equipos de apoyo corporativo (RRHH, aprovisionamiento, logística, finanzas).
+- Público: Profesionales de entre 20 y 50 años con cierto dominio de la tecnología. Estas personas han elegido o trabajan para una empresa que ha decidido incorporar Onetime Secret a su flujo de trabajo.
+- Localización: Norteamérica, Reino Unido, Irlanda, Nueva Zelanda, Australia, Países Bajos, Alemania.
+- Enfoque de redacción: Utilizar un lenguaje claro y accesible con un tono profesional
 
-### Recipients
+### Destinatarios
 
-- Audience: Diverse age range (18-80) including students, seniors, parents, clients, coworkers. These individuals may have never heard of Onetime Secret and generally have less context around how it works/
-- Writing approach: Clear, accessible language with an empathetic tone
+- Público: Diverso rango de edad (18-80) incluyendo estudiantes, mayores, padres, clientes, compañeros de trabajo. Es posible que estas personas nunca hayan oído hablar de Onetime Secret y, por lo general, tienen menos información sobre su funcionamiento.
+- Enfoque de la redacción: Lenguaje claro y accesible con un tono empático.
 
 
-**Translation Note:** These audience descriptions provide context about how the product is used by different groups and should inform translation tone and style. They are not intended to define or limit how we view our customers.
+**Nota sobre la traducción:** Estas descripciones del público proporcionan un contexto sobre cómo utilizan el producto los distintos grupos y deben informar el tono y el estilo de la traducción. No pretenden definir o limitar cómo vemos a nuestros clientes.
 
 ## Brand Voice
 
-About the brand voice and tone.
+Sobre la voz y el tono de la marca.
 
-### Core Values
+### Valores fundamentales
 
-- Authentic and transparent
+- Auténtico y transparente
 
-- Patient and focused
+- Paciente y centrado
 
-- Efficient without sacrificing quality
+- Eficacia sin sacrificar la calidad
 
-- Professional yet approachable
+- Profesional pero accesible
 
-### Communication Principles
+### Principios de comunicación
 
-- Adapt tone to match user expertise, from beginners to security professionals
+- Adapte el tono a los conocimientos de los usuarios, desde principiantes a profesionales de la seguridad.
 
-- Balance friendliness with reliability
+- Equilibrio entre amabilidad y fiabilidad
 
-- Prioritize clarity over casual language
+- Priorizar la claridad sobre el lenguaje informal
 
-- Provide delightful experiences through thoughtful interactions
+- Ofrecer experiencias agradables a través de interacciones bien pensadas
 
-### Writing Guidelines
+### Directrices de redacción
 
-- Use clear, direct language that respects users' time
+- Utilizar un lenguaje claro y directo que respete el tiempo de los usuarios.
 
-- Maintain a helpful, patient tone even when explaining complex concepts
+- Mantener un tono servicial y paciente incluso al explicar conceptos complejos.
 
-- Write with warmth while keeping focus on the task
+- Escribir con calidez sin perder de vista la tarea
 
-- Scale technical detail based on user context
+- Escala los detalles técnicos en función del contexto del usuario
 
-- Casual language should not be used at the expense of clarity, regardless of the context.
+- El lenguaje informal no debe utilizarse en detrimento de la claridad, independientemente del contexto.
 
-## Language preferences
+## Preferencias lingüísticas
 
-*Guidance: This involves determining language-specific preferences, such as spelling variations, punctuation rules, and date and time formats, which resonate with your target audience. — Remember, adhering closely to your audience's language preferences can significantly reduce barriers to communication and enhance their experience with the brand.*
+*Orientación: Se trata de determinar las preferencias lingüísticas específicas, como las variaciones ortográficas, las reglas de puntuación y los formatos de fecha y hora, que tienen resonancia entre el público objetivo. - Recuerde que atenerse a las preferencias lingüísticas de su público puede reducir significativamente las barreras a la comunicación y mejorar su experiencia con la marca.
 
-- Use American English. However for date formats use yyyy-mm-dd and times use 24h. Distances in km, weights in lbs.
-- Translations should sound as natural as possible. Borrowed words should never be used (with the exception of branded names).
-- Our english speaking audience is 50% english as a first language and 50% as a second/third/professional language. We need to keep this in mind when choosing terms and phrases to avoid inappropriate or confusing translations.
-- The word "secret" is central to our brand, product, and communication strategy. We protect secrets. We also provide a secret service.
+- Utilice el inglés americano. Sin embargo, para los formatos de fecha utiliza aaaa-mm-dd y las horas 24h. Distancias en km, pesos en lbs.
+- Las traducciones deben sonar lo más naturales posible. Nunca deben utilizarse palabras prestadas (a excepción de los nombres de marca).
+- Nuestro público angloparlante es en un 50% inglés como primera lengua y en un 50% como segunda/tercera/lengua profesional. Debemos tener esto en cuenta a la hora de elegir términos y frases para evitar traducciones inadecuadas o confusas.
+- La palabra "secreto" es fundamental para nuestra marca, producto y estrategia de comunicación. Protegemos secretos. También ofrecemos un servicio secreto.
 
-### Translating the word "secret"
+### Traduciendo la palabra "secreto"
 
-The word secret can take a number of meanings with subtle but important differences. Our canonical example comes from an update to our Danish translation by [jetdk](https://github.com/onetimesecret/onetimesecret/pull/956#issue-2782747525):
+La palabra secreto puede tener varios significados con diferencias sutiles pero importantes. Nuestro ejemplo canónico procede de una actualización de nuestra traducción al danés realizada por [jetdk](https://github.com/onetimesecret/onetimesecret/pull/956#issue-2782747525):
 
-#### Word Choice: "Beskeder" vs "Hemmeligheder"
+#### Elección de palabras: "Beskeder" frente a "Hemmeligheder"
 
-CORRECT:   **Beskeder** (messages)
-INCORRECT: Hemmeligheder (secrets)
+CORRECTO:   **Beskeder** (mensajes)
+INCORRECTO: Hemmeligheder (secretos)
 
-The term "Beskeder" should be used when referring to a secret (e.g. a secret message or secret link that is generated by Onetime Secret). While "Hemmeligheder" is a literal translation of "Secrets", it carries connotations of personal or hidden information in everyday Danish usage that don't match the intended meaning.
+El término "Beskeder" debe utilizarse para referirse a un secreto (por ejemplo, un mensaje secreto o un enlace secreto generado por Onetime Secret). Aunque "Hemmeligheder" es una traducción literal de "Secretos", en el uso cotidiano del danés tiene connotaciones de información personal u oculta que no coinciden con el significado pretendido.
 
-Example usage:
+Ejemplo de uso:
 
-✅ Du har 3 nye beskeder (You have 3 new messages)
-❌ Du har 3 nye hemmeligheder (You have 3 new secrets)
+✅ Du har 3 nye beskeder (Tienes 3 mensajes nuevos)
+❌ Du har 3 nye hemmeligheder (Tienes 3 nuevos secretos)
 
-## Grammar and style guidelines
+## Normas gramaticales y de estilo
 
-*Guidance: Pinpoint rules for grammar, style, and punctuation to maintain consistency throughout all your translated content.*
+*Orientación: Reglas precisas de gramática, estilo y puntuación para mantener la coherencia en todo el contenido traducido.
 
-- Use oxford commas, periods, and question marks. Avoid exclamations, contractions, and semi-colons.
-- Use active, imperative voice where users take action. Use passive or declarative voice when informing users.
-- Sentence fragments are ok on their own. Otherwise full sentences with proper business grammar.
-- Divide lengthy information into multiple sentences, if needed.
-- In general, use the second person (`you`) to address the user.
-- Avoid using the first person (`my`, `I`) as it can create confusion about who is being addressed.
+- Utilice comas oxford, puntos y signos de interrogación. Evite exclamaciones, contracciones y puntos y comas.
+- Utilice la voz activa e imperativa cuando los usuarios actúen. Utilice la voz pasiva o declarativa cuando informe a los usuarios.
+- Los fragmentos de frases están bien por sí solos. En caso contrario, utilice frases completas con una gramática empresarial adecuada.
+- Divida la información larga en varias frases, si es necesario.
+- En general, utilice la segunda persona (`usted`) para dirigirse al usuario.
+- Evite utilizar la primera persona (`mi`, `yo`), ya que puede crear confusión sobre a quién se dirige.
 
-### UI Text: When to Use Active vs Passive Voice
+### Texto de interfaz de usuario: Cuándo usar voz activa y cuándo voz pasiva
 
-#### Active, Imperative Voice ("Do something")
+#### Voz activa, imperativa ("Haz algo")
 
-Buttons
-✓ Save changes
-✓ Delete file
-✓ Send message
+Botones
+✓ Guardar cambios
+Borrar archivo
+✓ Enviar mensaje
 
-Menu items
-✓ View settings
-✓ Create new folder
+Elementos del menú
+✓ Ver configuración
+✓ Crear nueva carpeta
 
-#### Passive or Declarative Voice ("Something happened")
+#### Voz pasiva o declarativa ("Sucedió algo")
 
-Status messages
-✓ Changes saved
-✓ File deleted
-✓ Payment declined
+Mensajes de estado
+✓ Cambios guardados
+Archivo eliminado
+✓ Pago rechazado
 
-Notifications
-✓ 3 new messages
-✓ Download complete
-✓ Server unavailable
+Notificaciones
+✓ 3 mensajes nuevos
+✓ Descarga completada
+Servidor no disponible
 
-System states
-✓ Upload in progress
-✓ Connection lost
-✓ Email address not found
+Estados del sistema
+Carga en curso
+✓ Conexión perdida
+Dirección de correo electrónico no encontrada
 
-#### Examples in Context
+#### Ejemplos en contexto
 
-Form submission
-✓ Save changes (button->active)
-✓ Changes saved successfully (status->passive)
+Envío del formulario
+✓ Guardar cambios (botón->activo)
+✓ Cambios guardados correctamente (estado->pasivo)
 
-File upload
-✓ Upload file (button)
-✓ Upload complete (status)
+Carga de archivos
+✓ Subir archivo (botón)
+✓ Carga completa (estado)
 
 
-## Terminology consistency
+## Consistencia terminológica
 
-*Create a glossary of key terms, along with their approved translations, to ensure consistent usage across all content.*
+*Crear un glosario de términos clave, junto con sus traducciones aprobadas, para garantizar un uso coherente en todos los contenidos.
 
-### Brand Terms (Do Not Translate)
+### Términos de marca (No traducir)
 
-- Onetime Secret
-- OTS (when used as product abbreviation)
-- Identity Plus (product name)
-- Global Elite (product name)
-- Custom Install (product name)
+- Secreto de una sola vez
+- OTS (cuando se utiliza como abreviatura del producto)
+- Identity Plus (nombre del producto)
+- Global Elite (nombre del producto)
+- Custom Install (nombre del producto)
 
-### About the Brand Name
+### Acerca de la marca
 
-In "Onetime Secret", "Onetime" functions as a compound adjective (also called a attributive adjective) that modifies the noun "Secret". It describes a key characteristic of the secret - that it can only be accessed once. Note the spelling choice. There are actually three common variants of this term:
+En "Onetime Secret", "Onetime" funciona como adjetivo compuesto (también llamado adjetivo atributivo) que modifica al sustantivo "Secret". Describe una característica clave del secreto: que sólo se puede acceder a él una vez. Fíjese en la elección ortográfica. En realidad hay tres variantes comunes de este término:
 
-- "one-time" (hyphenated)
-- "one time" (two words)
-- "onetime" (compound)
+- "una vez" (con guión)
+- "one time" (dos palabras)
+- "onetime" (compuesto)
 
-The hyphenated form "one-time" is considered the standard spelling when the term functions as an adjective before a noun, as in "one-time password" or "one-time code". This follows the general English rule that compound modifiers before nouns are often hyphenated.
+La forma separada por guiones "one-time" se considera la ortografía estándar cuando el término funciona como adjetivo delante de un sustantivo, como en "one-time password" o "one-time code". Esto sigue la regla general inglesa de que los modificadores compuestos ante sustantivos suelen llevar guión.
 
-The compound form is the canonical spelling for the brand and company name: Onetime Secret.
+La forma compuesta es la grafía canónica de la marca y el nombre de la empresa: Onetime Secret.
 
-### Core Concepts
+### Conceptos básicos
 
-#### Secret Management
+#### Gestión de secretos
 
-- **secret** (n.) - The confidential information being shared
-    - Translations must maintain the context of confidentiality
-    - Preferred over terms like "message" or "content"
-    - Example: "Create a new secret" not "Create a new message"
-- **one-time** (adj.) - Describing the single-use nature of the service
-    - Must emphasize the temporary, single-use aspect
-    - Hyphenated when used as adjective
-    - Example: "This is a one-time secret" not "This is a single secret"
-- **Onetime** (compound adj.) - Part of the brand name Onetime Secret.
-    - Must not be used on its own; always paired with "Secret"
-    - Example: "Onetime Secret"
-- **burn** (v.) - The act of destroying a secret before it's viewed
-    - Technical term for destruction of a secret message
-    - Translations should maintain the permanence implied
-    - Example: "The secret was burned and no longer available"
+- Secreto** (n. f.) - La información confidencial que se comparte.
+    - Las traducciones deben mantener el contexto de confidencialidad
+    - Preferible a términos como "mensaje" o "contenido".
+    - Ejemplo: "Crear un nuevo secreto" no "Crear un nuevo mensaje"
+- Único** (adj.) - Describe la naturaleza de uso único del servicio.
+    - Debe enfatizar el aspecto temporal, de un solo uso
+    - Se escribe con guión cuando se utiliza como adjetivo
+    - Ejemplo: "Este es un secreto de un solo uso" no "Este es un secreto de un solo uso"
+- **Onetime** (adj. compuesto) - Parte de la marca Onetime Secret.
+    - No debe utilizarse solo; siempre debe ir emparejado con "Secreto"
+    - Ejemplo: "Onetime Secret"
+- **Quemar** (v.) - Acto de destruir un secreto antes de que sea visto.
+    - Término técnico para la destrucción de un mensaje secreto
+    - Las traducciones deben mantener la permanencia implícita
+    - Ejemplo: "El secreto se quemó y ya no está disponible"
 
-#### Security Terms
+#### Términos de seguridad
 
-- **encryption** (n.) - The process of encoding secrets
-    - Technical term that should remain consistent
-    - Distinguish from "encoding" or "hashing"
-    - Example: "All secrets use end-to-end encryption"
-- **rate limiting** (n.) - System to prevent abuse
-    - Technical term for request restriction
-    - Keep hyphenation in English
-    - Example: "Rate limiting prevents abuse"
-- **secure**
-- **private**
-- **password / passphrase**
-- **expiration / expiry / time-to-live**
+- Encriptación** (n. m.) - Proceso de codificación de secretos.
+    - Término técnico que debe ser coherente
+    - Distíngase de "codificación" o "hashing".
+    - Ejemplo: "Todos los secretos utilizan cifrado de extremo a extremo"
+- Limitación de velocidad** (n. m.) - Sistema para evitar abusos
+    - Término técnico para restricción de solicitudes
+    - Mantener el guión en inglés
+    - Ejemplo: "La limitación de velocidad evita abusos"
+- **seguro**
+- Privado
+- contraseña / frase de contraseña
+- caducidad / expiración / tiempo de vida**
 
-#### User Management
+#### Gestión de usuarios
 
-- **colonel** (n.) - Administrator role
-    - Project-specific term, rhymes with "kernel" which is a technical term and central component of an operating system. No other project uses this term in this way. It can be confusing even in North America.
-    - Translate to the common term for an "administrator" in the context of software permissions. The account with the highest level of privileges.
-    - Example: "Only colonels can access this feature" (i.e. "Only admins can access this feature").
-- **plan** (n.) - Subscription level
-    - Use consistently for service tiers
-    - Prefer over "tier" or "level"
-    - Example: "Upgrade to a premium plan"
+- **colonel** (n. f.) - Función de administrador
+    - Término específico del proyecto, rima con "kernel" que es un término técnico y componente central de un sistema operativo. Ningún otro proyecto utiliza este término de esta manera. Puede resultar confuso incluso en Norteamérica.
+    - Se traduce como "administrador" en el contexto de los permisos de software. La cuenta con el nivel más alto de privilegios.
+    - Ejemplo: "Only colonels can access this feature" (es decir, "Sólo los administradores pueden acceder a esta función").
+- **plan** (n. f.) - Nivel de suscripción
+    - Se utiliza de forma coherente para los niveles de servicio
+    - Preferible a "tier" o "level
+    - Ejemplo: "Actualizar a un plan premium"
 
-## Formatting and layout
+## Formato y presentación
 
-*Set standards for formatting, layout, and typography to maintain visual and design consistency across different languages.*
+*Establecer normas de formato, maquetación y tipografía para mantener la coherencia visual y de diseño en los distintos idiomas.
 
-- Use consistent header styles to improve readability and content flow. For example H1 for main headings, H2, H3, etc for sub-headings
-- Write headings in sentence case unless the heading is a punctuated sentence:
-    - Good example: How localization drives growth for fintech firms
-    - Good example: Localization made easy. Why wait?
-    - Bad example: How Localization Drives Growth for Fintech Firms
-    - Bad example: Localization made easy. why wait?
+- Utilice estilos de encabezado coherentes para mejorar la legibilidad y la fluidez del contenido. Por ejemplo, H1 para los títulos principales, H2, H3, etc. para los subtítulos.
+- Escriba los encabezamientos en mayúsculas y minúsculas a menos que el encabezamiento sea una frase puntuada:
+    - Buen ejemplo: Cómo la localización impulsa el crecimiento de las empresas de tecnología financiera
+    - Buen ejemplo: La localización hecha fácil. ¿Por qué esperar?
+    - Mal ejemplo: Cómo la localización impulsa el crecimiento de las empresas fintech
+    - Mal ejemplo: Localizar es fácil. ¿Por qué esperar?
 
-### Time format
+### Formato de hora
 
-Generally, a 12-hour clock is used in the United States. 24-hour clocks are used in aviation and other logistical contexts.
+En general, en Estados Unidos se utiliza un reloj de 12 horas. Los relojes de 24 horas se utilizan en la aviación y otros contextos logísticos.
 
-### Numerals
+### Numerales
 
-|  Symbol Purpose  |  Character Name  |  Symbol  |  Example  |
+| Propósito del símbolo | Nombre del carácter | Símbolo | Ejemplo | Símbolo
 | --- | --- | --- | --- |
-|  Decimal  |  Period  |  `.`  |  1.23  |
-|  Thousands  |  Comma  |  `,`  |  1,234  |
-|  Percentage  |  Percent sign  |  `%`  |  99.95%  |
+| Decimal Punto `.` 1.23
+| Miles Coma `,` 1,234
+| Porcentaje: Signo de porcentaje: `%`.
 
-### Currency
+### Moneda
 
-The currency of the Canada is the Canadian Dollar (CAD). The monetary symbols are `$` and rarely `¢`.
+La moneda de Canadá es el dólar canadiense (CAD). Los símbolos monetarios son `$` y raramente `¢`.
 
-### Units of measurement
+### Unidades de medida
 
-The imperial system is used for everyday weights in Canada. Everything else including distances, quantities, are in metric. Primarily m, Km, cm, mm ("deci" is used rarely).
+En Canadá se utiliza el sistema imperial para los pesos cotidianos. Todo lo demás, incluidas distancias y cantidades, se utiliza el sistema métrico. Principalmente m, Km, cm, mm ("deci" se usa poco).
 
-### Address and postal code format
+### Formato de dirección y código postal
 
-    [addressee]
-    [street number and name][building and suite numbers]
-    [district][city][state/province][postal code]
-    [Country]
+    [destinatario]
+    [número y nombre de la calle][número del edificio y de la suite] [distrito][ciudad][estado/provincia][código postal
+    [distrito][ciudad][estado/provincia][código postal]
+    [País]
 
     British Columbia Sugar Refinery Ltd.
 	123 Rogers Street
     Vancouver, BC. V6A 3N2
-    CANADA
+    CANADÁ
 
-## Clear, Respectful Communication
+## Comunicación clara y respetuosa
 
-Our goal: We want our writing to connect effectively with all readers while being clear, accurate, and respectful.
+Nuestro objetivo: queremos que nuestros escritos conecten eficazmente con todos los lectores, siendo claros, precisos y respetuosos.
 
-To verify your writing achieves these goals, ask:
+Para comprobar que tu escrito alcanza estos objetivos, pregunta:
 
-- Is my language clear and specific?
-- Am I addressing my readers directly and respectfully?
-- Have I avoided assumptions about my readers?
+- ¿Mi lenguaje es claro y específico?
+- ¿Me dirijo a mis lectores de forma directa y respetuosa?
+- ¿He evitado hacer suposiciones sobre mis lectores?
 
-## Translation style
+## Estilo de traducción
 
-- Use literal translation for legal or technical texts
-- Translate with cultural context when translating content for marketing or advertising
-- Use transcreation where you adapt the message so it resonates culturally and emotively with the audience, for creative content including blog posts and marketing copy.
+- Utilice la traducción literal para textos jurídicos o técnicos
+- Traduce teniendo en cuenta el contexto cultural cuando traduzcas contenidos de marketing o publicidad.
+- Utiliza la transcreación para adaptar el mensaje de forma que resuene cultural y emocionalmente con la audiencia, para contenidos creativos como entradas de blog y textos de marketing.

@@ -1,42 +1,42 @@
 ---
-title: Trust
-description: Our commitment to being open and honest about our practices
-icon: eye
+title: Confianza
+description: Nuestro compromiso de ser abiertos y honestos sobre nuestras prácticas
+icono: ojo
 ---
 
-# Transparency and Trust
+# Transparencia y confianza
 
-We believe that trust is earned through radical transparency about our practices, technologies, and commitments.
+Creemos que la confianza se gana con una transparencia radical sobre nuestras prácticas, tecnologías y compromisos.
 
-## Our Transparency Commitments
+## Nuestros compromisos de transparencia
 
-- Open-source our core technologies
-- Publish clear, understandable privacy policies
-- Provide detailed security and infrastructure reports
-- Maintain an ongoing dialogue with our user community
-- Avoid standard tracking and marketing practices
-- Keep your data under direct control
+- Open-source de nuestras principales tecnologías
+- Publicar políticas de privacidad claras y comprensibles
+- Proporcionar informes detallados sobre seguridad e infraestructura
+- Mantener un diálogo permanente con nuestra comunidad de usuarios
+- Evitar las prácticas habituales de seguimiento y marketing
+- Mantener sus datos bajo control directo
 
-## Why Transparency Matters
+## Por qué es importante la transparencia
 
-In an era of complex digital services, we stand out by being completely clear about how we handle data, what we do, and why we do it. Our approach centers on three core principles:
+En una era de servicios digitales complejos, destacamos por ser completamente claros sobre cómo tratamos los datos, qué hacemos y por qué lo hacemos. Nuestro enfoque se centra en tres principios fundamentales:
 
-1. Respect privacy: Your data is yours, period
-2. Focus on reliability: The tool should simply work when you need it
-3. Build trust through action: We prove our commitment through what we avoid
+1. Respeta la privacidad: Tus datos son tuyos y punto
+2. Centrarse en la fiabilidad: La herramienta simplemente debe funcionar cuando la necesites
+3. Generar confianza a través de la acción: Demostramos nuestro compromiso a través de lo que evitamos
 
-## Our Privacy-First Approach
+## Nuestro enfoque de la privacidad como prioridad
 
-We deliberately avoid common industry practices that could compromise privacy:
+Evitamos deliberadamente las prácticas habituales del sector que podrían comprometer la privacidad:
 
-- Analytics packages that track user behavior
-- Social media integration buttons
-- Advertising networks
-- Marketing automation tools
-- Third-party tracking pixels
+- Paquetes analíticos que rastrean el comportamiento de los usuarios
+- Botones de integración en redes sociales
+- Redes publicitarias
+- Herramientas de automatización de marketing
+- Píxeles de seguimiento de terceros
 
 ## Looking Forward
 
-We'll continue prioritizing transparency and privacy over marketing reach. While this means we might grow more slowly than services that aggressively market themselves, we believe it's the right choice for building lasting trust with our users.
+Seguiremos priorizando la transparencia y la privacidad sobre el alcance comercial. Aunque esto significa que podemos crecer más lentamente que los servicios que se comercializan agresivamente, creemos que es la elección correcta para construir una confianza duradera con nuestros usuarios.
 
-Have thoughts about our approach? [Contact us](https://onetimesecret.com/feedback).
+¿Tiene alguna opinión sobre nuestro enfoque? [Póngase en contacto con nosotros](https://onetimesecret.com/feedback).

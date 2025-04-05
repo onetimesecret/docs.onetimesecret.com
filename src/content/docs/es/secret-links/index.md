@@ -1,55 +1,55 @@
 ---
-title: Intro to Secret Links
-description: Welcome to Onetime Secret's guide on Secret Links, a core feature of our secure, one-time sharing service.
+title: Introducción a los enlaces secretos
+description: Bienvenido a la guía de Onetime Secret sobre Enlaces Secretos, una de las principales características de nuestro servicio seguro de intercambio único.
 ---
 
 
 
-## What are Secret Links?
+## ¿Qué son los enlaces secretos?
 
-Secret Links are unique, self-destructing URLs that allow you to share sensitive information securely. Each link can only be accessed once before it disappears forever, ensuring your shared data remains confidential and doesn't linger online.
+Los enlaces secretos son URL únicas que se autodestruyen y permiten compartir información confidencial de forma segura. Solo se puede acceder a cada enlace una vez antes de que desaparezca para siempre, lo que garantiza que los datos compartidos sigan siendo confidenciales y no permanezcan en línea.
 
-## How Secret Links Work
+## Cómo funcionan los enlaces secretos
 
-1. You create a secret message on our platform.
-2. We generate a unique, encrypted link for that message.
-3. You share this link with your intended recipient.
-4. The recipient opens the link to view the message.
-5. After viewing, the link and its content are permanently destroyed.
+1. Creas un mensaje secreto en nuestra plataforma.
+2. Nosotros generamos un enlace único y encriptado para ese mensaje.
+3. Usted comparte este enlace con su destinatario.
+4. El destinatario abre el enlace para ver el mensaje.
+5. Después de verlo, el enlace y su contenido se destruyen permanentemente.
 
-## Key Benefits
+## Principales ventajas
 
-- **Onetime Use**: Each link works only once, preventing unauthorized access.
-- **Automatic Destruction**: Content is deleted after viewing, leaving no digital trace.
-- **Secure Sharing**: Ideal for passwords, private messages, and other sensitive data.
-- **Simple and User-Friendly**: No account required for basic use.
+- Uso único**: Cada enlace funciona una sola vez, evitando accesos no autorizados.
+- Destrucción automática**: El contenido se elimina después de verlo, sin dejar rastro digital.
+- Uso compartido seguro**: Ideal para contraseñas, mensajes privados y otros datos confidenciales.
+- Sencillo y fácil de usar**: No se requiere una cuenta para el uso básico.
 
-## Use Cases
+## Casos de uso
 
-Secret Links are perfect for:
+Los enlaces secretos son perfectos para:
 
-- Sharing login credentials securely
-- Sending confidential information to colleagues
-- Transmitting sensitive personal data
+- Compartir credenciales de acceso de forma segura
+- Envío de información confidencial a los compañeros
+- Transmisión de datos personales sensibles
 
-## Getting Started
+## Cómo empezar
 
-To create your first Secret Link, visit [https://onetimesecret.com](onetimesecret.com) and follow the simple steps on our homepage.
+Para crear su primer Enlace Secreto, visite [https://onetimesecret.com](onetimesecret.com) y siga los sencillos pasos de nuestra página de inicio.
 
-For more detailed information on using Secret Links, please refer to our [User Guide] (link to user guide).
+Para obtener información más detallada sobre el uso de los Enlaces Secretos, consulte nuestra [Guía del usuario] (enlace a la guía del usuario).
 
 
 <!--
-Communication Advice:
-1. This content introduces Secret Links in a clear, straightforward manner suitable for both technical and non-technical audiences.
-2. It emphasizes the core service and unique value proposition of Onetime Secret.
-3. The information provided is based on verifiable facts from the onetimesecret.com website.
-4. The tone is professional and user-focused, highlighting the problem-solution aspect of the service.
-5. For further development of this page, consider adding:
-   - A simple visual diagram of how Secret Links work
-   - FAQ section addressing common user queries
-   - Links to related documentation pages (e.g., advanced features, API usage)
-   - A callout box highlighting any recent updates or enhancements to the Secret Links feature
+Consejos de comunicación:
+1. Este contenido presenta los Enlaces Secretos de forma clara y directa, adecuada tanto para el público técnico como para el no técnico.
+2. Enfatiza el servicio principal y la propuesta de valor única de Onetime Secret.
+3. La información proporcionada se basa en hechos verificables del sitio web onetimesecret.com.
+4. El tono es profesional y centrado en el usuario, destacando el aspecto de solución de problemas del servicio.
+5. Para un mayor desarrollo de esta página, considere añadir:
+   - Un sencillo diagrama visual de cómo funcionan los Enlaces Secretos
+   - Una sección de preguntas frecuentes sobre las dudas más comunes de los usuarios
+   - Enlaces a páginas de documentación relacionadas (por ejemplo, funciones avanzadas, uso de la API)
+   - Un recuadro en el que se destaquen las actualizaciones o mejoras recientes de la función Enlaces secretos.
 
-Remember to verify all information with the latest data from Onetime Secret before publishing, and consider seeking user feedback to ensure the documentation meets their needs effectively.
+Recuerde verificar toda la información con los datos más recientes de Onetime Secret antes de publicarla, y considere la posibilidad de solicitar la opinión de los usuarios para asegurarse de que la documentación satisface sus necesidades de forma eficaz.
 -->

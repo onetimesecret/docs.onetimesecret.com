@@ -1,11 +1,11 @@
 ---
-title: Overview
-description: Elevate your brand and enhance your professional secret sharing experience with Custom Domains, an advanced feature for agencies, businesses, and power users.
+title: Visión general
+description: Eleva tu marca y mejora tu experiencia de compartir secretos profesionales con los dominios personalizados, una función avanzada para agencias, empresas y usuarios avanzados.
 ---
 
-## What are Custom Domains?
+## ¿Qué son los dominios personalizados?
 
-Custom Domains allow you to use your own domain name for Onetime Secret links, instead of the default _onetimesecret.com_ domain. This feature incorporates your brand identity into the secret sharing experience, enhancing trust and professionalism.
+Los dominios personalizados te permiten utilizar tu propio nombre de dominio para los enlaces de Onetime Secret, en lugar del dominio predeterminado _onetimesecret.com_. Esta función incorpora la identidad de tu marca a la experiencia de compartir secretos, aumentando la confianza y la profesionalidad.
 
 <div class="flex justify-center items-center my-10">
   <a href="https://onetimesecret.com/pricing" class="text-center inline-block">
@@ -13,58 +13,58 @@ Custom Domains allow you to use your own domain name for Onetime Secret links, i
                  bg-clip-text text-transparent
                  bg-gradient-to-r from-purple-400 via-pink-500 to-red-500
                  animate-flowing-colors
-                 hover:animate-bounce
+                 hover:animar-rebote
                  transition-all duration-300 ease-in-out
-                 transform hover:scale-105
+                 transformar hover:escala-105
                  rounded-xl
-                 dark:border-brand-600">
-      secrets.yourbrand.com
+                 dark:borde-marca-600">
+      secretos.yourbrand.com
     </span>
   </a>
 </div>
 
 
-## Key Benefits
+## Principales ventajas
 
-1. **Brand Identity**: Share secrets using your own domain name, reinforcing security and professionalism.
-2. **Increased Trust**: Recipients see a familiar domain, boosting their confidence in the shared information.
-3. **Professional Appearance**: Demonstrate a higher level of sophistication and commitment to security.
-4. **Brand Customization**: Upload custom logos and set brand colors to match your visual identity.
-5. **Seamless Integration**: Create a cohesive experience that aligns with your existing digital presence.
-6. **Regional Flexibility**: Choose between EU and US data center regions to meet your data locality needs.
+1. **Identidad de marca**: Comparte secretos utilizando tu propio nombre de dominio, reforzando la seguridad y la profesionalidad.
+2. **Aumento de la confianza**: Los destinatarios ven un dominio familiar, lo que aumenta su confianza en la información compartida.
+3. **Apariencia profesional**: Demuestra un mayor nivel de sofisticación y compromiso con la seguridad.
+4. **Personalización de la marca**: Cargue logotipos personalizados y establezca los colores de la marca para que coincidan con su identidad visual.
+5. **Integración perfecta**: Cree una experiencia cohesiva que se alinee con su presencia digital existente.
+6. **Flexibilidad regional**: Elija entre regiones de centros de datos de la UE y de EE. UU. para satisfacer sus necesidades de localización de datos.
 
-## Getting Started
+## Cómo empezar
 
-To set up a Custom Domain:
+Para configurar un dominio personalizado:
 
-1. Log in to your Onetime Secret account.
-2. Navigate to Account Settings > Custom Domains.
-3. Enter the domain you wish to use and click "Add Domain".
-4. Select your preferred data center region (EU or US).
-5. Follow the step-by-step instructions provided for DNS configuration.
-6. Wait for the domain to be verified. If available, click the "Verify" button to expedite the process. You may need to refresh the page.
+1. Inicia sesión en tu cuenta de Onetime Secret.
+2. Navega hasta Configuración de la cuenta > Dominios personalizados.
+3. Introduce el dominio que deseas utilizar y haz clic en "Añadir dominio".
+4. Seleccione la región del centro de datos que prefiera (EU o US).
+5. Siga paso a paso las instrucciones proporcionadas para la configuración de DNS.
+6. Espere a que se verifique el dominio. Si está disponible, haga clic en el botón "Verificar" para acelerar el proceso. Es posible que tenga que actualizar la página.
 
-For detailed instructions, including how to choose between EU and US regions, please refer to our [Custom Domain Setup Guide](/docs/custom-domains/setup-guide).
+Para obtener instrucciones detalladas, incluido cómo elegir entre las regiones de la UE y EE.UU., consulte nuestra [Guía de configuración de dominios personalizados](/docs/custom-domains/setup-guide).
 
-## Brand Customization
+## Personalización de la marca
 
-Custom Domain users can personalize their secret sharing interface:
+Los usuarios de dominios personalizados pueden personalizar su interfaz para compartir secretos:
 
-1. Upload company logo (PNG/JPG, max 1MB)
-2. Set custom brand colors using hex codes
-3. Configure homepage visibility settings
-4. Preview changes in real-time
-5. Enable/disable public secret creation
+1. Cargue el logotipo de la empresa (PNG/JPG, 1 MB como máximo)
+2. Establezca colores de marca personalizados mediante códigos hexadecimales
+3. Configurar los ajustes de visibilidad de la página de inicio
+4. Previsualizar los cambios en tiempo real
+5. Activar/desactivar la creación de secretos públicos
 
-For detailed branding instructions, see our [Brand Guide](/docs/custom-domains/brand-guide).
+Para obtener instrucciones detalladas sobre la marca, consulte nuestra [Guía de marca](/docs/custom-domains/brand-guide).
 
 
-## Important Considerations
+## Consideraciones importantes
 
-- Custom Domains are a premium feature available with the Identity plan.
-- You are responsible for maintaining and renewing your domain registration.
-- Proper SSL/TLS configuration is crucial for security (handled automatically by Onetime Secret).
-- Ensure your chosen domain complies with your organization's branding guidelines.
-- Consider data protection regulations when choosing between [EU and US regions](/docs/regions).
+- Los dominios personalizados son una característica premium disponible con el plan Identity.
+- Eres responsable de mantener y renovar el registro de tu dominio.
+- La configuración adecuada de SSL/TLS es crucial para la seguridad (manejada automáticamente por Onetime Secret).
+- Asegúrate de que el dominio elegido cumple con las directrices de marca de tu organización.
+- Considera las regulaciones de protección de datos cuando elijas entre [regiones de la UE y EE.UU.](/docs/regions).
 
-To learn about best practices for using Custom Domains securely, check out our [Security Best Practices](/docs/security-best-practices) guide.
+Si desea conocer las mejores prácticas para utilizar dominios personalizados de forma segura, consulte nuestra guía [Prácticas recomendadas de seguridad](/docs/security-best-practices).

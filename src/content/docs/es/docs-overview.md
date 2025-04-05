@@ -1,19 +1,19 @@
 ---
-title: Welcome to the Documentation
-description: Use the navigation menu to explore the Onetime Secret documentation. You'll find everything you need to know about creating, sharing, and managing secure, self-destructing messages.
+title: Bienvenido a la Documentación
+description: Utiliza el menú de navegación para explorar la documentación de Onetime Secret. Encontrarás todo lo que necesitas saber sobre cómo crear, compartir y gestionar mensajes seguros y autodestruibles.
 ---
 
 # Onetime Secret Documentation
 
-Use the navigation menu to explore the Onetime Secret documentation. You'll find everything you need to know about creating, sharing, and managing secure, self-destructing messages.
+Utiliza el menú de navegación para explorar la documentación de Onetime Secret. Encontrarás todo lo que necesitas saber sobre cómo crear, compartir y gestionar mensajes seguros que se autodestruyen.
 
-## Getting Started
+## Cómo empezar
 
-Start with our [Introduction](/en/introduction/) section to learn the basics of Onetime Secret.
+Empieza con nuestra sección [Introducción](/es/introduction/) para aprender lo básico de Onetime Secret.
 
-## Key Sections
+## Secciones clave
 
-- [Secret Links](/en/secret-links/) - Learn how to create and share one-time secrets
-- [Custom Domains](/en/custom-domains/) - Set up your own branded secret sharing experience
-- [REST API](/en/rest-api/) - Integrate Onetime Secret with your applications
-- [Security Best Practices](/en/security-best-practices/) - Ensure maximum security when sharing sensitive information
+- Enlaces secretos](/es/secret-links/) - Aprende a crear y compartir secretos de un solo uso.
+- Custom Domains](/es/custom-domains/) - Configure su propia experiencia de compartir secretos de marca
+- REST API](/es/rest-api/) - Integre Onetime Secret con sus aplicaciones
+- Security Best Practices](/es/security-best-practices/) - Garantice la máxima seguridad al compartir información confidencial

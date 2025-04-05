@@ -1,71 +1,71 @@
 ---
-title: Use Cases
-description: Explore various scenarios where Secret Links can enhance security and streamline sensitive information sharing.
+title: Casos de uso
+description: Explora varios escenarios en los que Secret Links puede mejorar la seguridad y agilizar el intercambio de información sensible.
 ---
 
 
-Secret Links are versatile and can be applied in many situations where secure, one-time sharing of information is crucial. Here are some common use cases:
+Los enlaces secretos son versátiles y pueden aplicarse en muchas situaciones en las que es crucial compartir información de forma segura y una sola vez. He aquí algunos casos de uso común:
 
 
-### 1. Basic Password Sharing at work
+### 1. Uso compartido básico de contraseñas en el trabajo
 
-When you need a quick, secure way to share a password or API key, secret links offer a simple solution. While password managers are the best choice for long-term credential management and team sharing, secret links provide a lightweight alternative that anyone can use without special software or accounts. The self-destructing nature of these links ensures that sensitive credentials aren't lingering in email inboxes or chat histories where they could be compromised.
+Cuando necesite una forma rápida y segura de compartir una contraseña o clave API, los enlaces secretos ofrecen una solución sencilla. Mientras que los gestores de contraseñas son la mejor opción para la gestión de credenciales a largo plazo y para compartir en equipo, los enlaces secretos ofrecen una alternativa ligera que cualquiera puede utilizar sin necesidad de software o cuentas especiales. La naturaleza autodestructiva de estos enlaces garantiza que las credenciales confidenciales no permanezcan en bandejas de entrada de correo electrónico o historiales de chat donde podrían verse comprometidas.
 
-**Benefit**: This approach provides a fast, no-setup way to share credentials securely when you need it. It eliminates risky practices like storing passwords in plaintext emails, while keeping the sharing process simple and friction-free for everyone involved.
+**Ventaja**: Este enfoque proporciona una forma rápida y sin configuración de compartir credenciales de forma segura cuando lo necesites. Elimina prácticas de riesgo como el almacenamiento de contraseñas en mensajes de correo electrónico en texto plano, al tiempo que mantiene el proceso de intercambio sencillo y sin fricciones para todos los implicados.
 
-### 2. Netflix and WiFi Passwords
+### 2. Contraseñas de Netflix y WiFi
 
-When sharing streaming service credentials or home WiFi passwords with family members and houseguests, use secret links to securely transmit the information. Simply create the link and send it through your usual messaging apps. Once they've viewed the password, the link becomes inactive, keeping your accounts secure even if someone later gains access to the message history.
+Cuando compartas credenciales de servicios de streaming o contraseñas del WiFi doméstico con familiares e invitados, utiliza enlaces secretos para transmitir la información de forma segura. Sólo tienes que crear el enlace y enviarlo a través de tus aplicaciones de mensajería habituales. Una vez que hayan visto la contraseña, el enlace quedará inactivo, manteniendo tus cuentas seguras aunque alguien acceda más tarde al historial de mensajes.
 
-**Benefit**: This provides a convenient way to share access without compromising long-term security. Even if a phone is lost or messaging account is compromised months later, the sensitive information won't be exposed since it was never stored in the message history.
+**Beneficio**: Esto proporciona una forma cómoda de compartir el acceso sin comprometer la seguridad a largo plazo. Aunque un teléfono se pierda o una cuenta de mensajería se vea comprometida meses después, la información sensible no quedará expuesta, ya que nunca se almacenó en el historial de mensajes.
 
-### 3. Payment Information
+### 3. 3. Información sobre el pago
 
-When you need to share payment details like credit card information or digital wallet addresses with service providers or trusted contacts, use secret links instead of typing sensitive information directly into messages or emails. Create a secure link containing your payment details, share it with the recipient, and once they've accessed the information, it's automatically removed – ensuring your financial data doesn't remain exposed in communication threads.
+Cuando necesites compartir datos de pago, como información de tarjetas de crédito o direcciones de monederos digitales, con proveedores de servicios o contactos de confianza, utiliza enlaces secretos en lugar de escribir información confidencial directamente en mensajes o correos electrónicos. Crea un enlace seguro que contenga tus datos de pago, compártelo con el destinatario y, una vez que este haya accedido a la información, se eliminará automáticamente, garantizando así que tus datos financieros no queden expuestos en los hilos de comunicación.
 
-**Benefit**: This method protects your financial security by ensuring sensitive payment information doesn't accumulate in email threads, chat histories, or text messages. It gives you peace of mind knowing that your account details won't be vulnerable if any of these communication channels are ever compromised.
+**Ventaja**: Este método protege su seguridad financiera garantizando que la información confidencial de pago no se acumule en hilos de correo electrónico, historiales de chat o mensajes de texto. Te da la tranquilidad de saber que los datos de tu cuenta no serán vulnerables si alguno de estos canales de comunicación se ve comprometido.
 
-### 4. Software License Keys
-When distributing purchased software licenses to employees or clients, use secret links to share the activation keys. This ensures that valuable license keys can't be accidentally reused or shared beyond their intended recipient, and helps prevent the keys from being archived in email systems where they might be vulnerable to unauthorized access.
+### 4. Claves de licencia de software
+Cuando distribuya licencias de software adquiridas a empleados o clientes, utilice enlaces secretos para compartir las claves de activación. Esto garantiza que las valiosas claves de licencia no puedan reutilizarse accidentalmente o compartirse más allá de su destinatario previsto, y ayuda a evitar que las claves se archiven en sistemas de correo electrónico donde podrían ser vulnerables a accesos no autorizados.
 
-**Benefit**: This method maintains control over software asset distribution while making it easy for recipients to access their license keys when needed for installation or reactivation.
+**Ventajas**: Este método mantiene el control sobre la distribución de activos de software a la vez que facilita a los destinatarios el acceso a sus claves de licencia cuando sea necesario para su instalación o reactivación.
 
-### 5. Two-Factor Recovery Codes
-When setting up 2FA on important accounts, securely store your backup/recovery codes using a secret link. If you need to access these codes later due to a lost device, you can be confident they haven't been sitting exposed in your email or notes. Create a new secret link once you've used the codes to maintain security.
+### 5. Códigos de recuperación de dos factores
+Cuando configures 2FA en cuentas importantes, guarda de forma segura tus códigos de copia de seguridad/recuperación utilizando un enlace secreto. Si necesita acceder a estos códigos más tarde debido a la pérdida de un dispositivo, puede estar seguro de que no han quedado expuestos en su correo electrónico o en sus notas. Crea un nuevo enlace secreto una vez que hayas utilizado los códigos para mantener la seguridad.
 
-**Benefit**: Provides a more secure alternative to storing recovery codes in plaintext while ensuring they remain accessible when truly needed for account recovery.
+**Ventajas**: Proporciona una alternativa más segura al almacenamiento de códigos de recuperación en texto plano, al tiempo que garantiza que permanezcan accesibles cuando realmente se necesiten para la recuperación de cuentas.
 
-### 6. Interview Assignments
-When sending coding challenges or technical assessments to job candidates, use secret links to share the requirements. This ensures each candidate gets a fresh copy of the assignment and can't access it again after viewing, helping maintain the integrity of your hiring process.
+### 6. Asignación de entrevistas
+Cuando envíe retos de codificación o evaluaciones técnicas a los candidatos, utilice enlaces secretos para compartir los requisitos. Esto garantiza que cada candidato reciba una copia nueva de la tarea y no pueda acceder a ella después de verla, lo que ayuda a mantener la integridad del proceso de contratación.
 
-**Benefit**: Simplifies assignment distribution while helping ensure candidates complete their assessments independently and can't share the exact requirements with others.
+**Ventajas**: Simplifica la distribución de asignaciones al tiempo que ayuda a garantizar que los candidatos completen sus evaluaciones de forma independiente y no puedan compartir los requisitos exactos con los demás.
 
 
-## Summary
+## Resumen
 
-These use cases demonstrate the flexibility and security benefits of Secret Links across various industries and scenarios. By leveraging Secret Links, organizations and individuals can significantly enhance their information security practices and reduce the risks associated with sharing sensitive data.
+Estos casos de uso demuestran la flexibilidad y las ventajas de seguridad de Secret Links en diversos sectores y escenarios. Gracias a Secret Links, las organizaciones y los particulares pueden mejorar significativamente sus prácticas de seguridad de la información y reducir los riesgos asociados al intercambio de datos confidenciales.
 
-## Note About Anonymous Tips
+## Nota sobre los consejos anónimos
 
-Secret Links can be suitable for basic anonymous tips with some important caveats:
+Los enlaces secretos pueden ser adecuados para las propinas anónimas básicas, con algunas salvedades importantes:
 
-### Advantages of Onetime Secret for Anonymous Tips
-- No account required
-- Accessible via Tor network
-- Content is encrypted in transit and at rest
-- Limited log retention period (about 2 weeks)
-- Cannot be retrieved once viewed
+### Ventajas de Onetime Secret para propinas anónimas
+- No requiere cuenta
+- Accesible a través de la red Tor
+- El contenido está encriptado en tránsito y en reposo
+- Periodo de retención de registros limitado (unas 2 semanas)
+- No se puede recuperar una vez visto
 
-### Limitations
-- Consider organizational/legal requirements
-- No built-in anonymous communication channel
-- Basic metadata may be logged temporarily
-- Network-level anonymity depends on user OPSEC
+### Limitaciones
+- Tener en cuenta los requisitos organizativos/legales
+- No incorpora un canal de comunicación anónimo
+- Los metadatos básicos pueden registrarse temporalmente
+- El anonimato a nivel de red depende de la OPSEC del usuario
 
-## Whistleblowers and Personal Risk Scenarios
+## Denunciantes y escenarios de riesgo personal
 
-For whistleblowing involving sensitive organizational or legal matters, dedicated whistleblowing platforms with additional protections are strongly recommended. When handling sensitive disclosures:
+Para las denuncias relacionadas con asuntos organizativos o jurídicos delicados, se recomienda encarecidamente el uso de plataformas de denuncia específicas con protecciones adicionales. Cuando se trate de denuncias sensibles:
 
-- Use dedicated whistleblowing platforms that provide comprehensive security protections and anonymity features
-- Be aware that IP addresses and access times may be logged by various systems
-- Consider consulting trusted organizations like the Freedom of the Press Foundation (freedom.press) or the Electronic Frontier Foundation (eff.org) for detailed guidance on secure whistleblowing practices and tools
+- Utilice plataformas específicas de denuncia de irregularidades que ofrezcan amplias protecciones de seguridad y funciones de anonimato.
+- Tenga en cuenta que las direcciones IP y las horas de acceso pueden quedar registradas en varios sistemas.
+- Considere la posibilidad de consultar a organizaciones de confianza como la Freedom of the Press Foundation (freedom.press) o la Electronic Frontier Foundation (eff.org) para obtener información detallada sobre prácticas y herramientas seguras de denuncia.

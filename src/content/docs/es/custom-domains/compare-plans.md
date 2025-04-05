@@ -1,29 +1,29 @@
 ---
-title: Compare plans
-description: Compare our feature-rich plans offering secure secret sharing with expiring links, custom domains, and flexible storage options for individuals and businesses.
+title: Comparar planes
+description: Compara nuestros planes repletos de funciones que ofrecen compartir secretos de forma segura con enlaces que caducan, dominios personalizados y opciones de almacenamiento flexibles para particulares y empresas.
 ---
 
 
 ## Feature Matrix
 
-| Feature/Plan | Identity Plus | Basic | Anonymous |
+| Características/Plan Identidad Plus Básico Anónimo
 |---------|----------------|-------------------------|------------|
-| Custom Domains | Unlimited | ❌ | ❌ |
-| Branded Homepage | ✅ | ❌ | ❌ |
-| Custom logo, color | ✅ | ❌ | ❌ |
-| Number of Accounts | 1 | 1 | ❌ |
-| Link Expiration | Up to 30 days | 14 days | Limited to 7 days |
-| API Access | ✅ | ✅ | Limited |
-| Setup Required | Yes (DNS configuration) | No | No |
-| Paid | Yes (part of Identity plan) | No | No |
-| SSL/TLS Security | ✅ | ✅ | ✅ |
-| Data Locality | ✅ (EU or US) | ✅ (EU or US) | ✅ (EU or US) |
+| Dominios personalizados Ilimitados
+| Página de inicio de marca.
+| Logotipo y color personalizados.
+| Número de cuentas | 1 | 1 | ❌ ❌❌❌❌❌❌❌❌.
+| Caducidad del enlace Hasta 30 días 14 días Limitado a 7 días
+| Acceso a la API: Limitado.
+| Configuración requerida Sí (configuración DNS) No No
+| Pago Sí (parte del plan de identidad) No No
+| Seguridad SSL/TLS
+| Localidad de los datos | ✅ (UE o EE.UU.) | ✅ (UE o EE.UU.) | ✅ (UE o EE.UU.) | ✅ (UE o EE.UU.) | ✅ (EE.UU.)
 
 
-For more information on account upgrades and pricing, please visit our [Pricing Page](https://onetimesecret.com/pricing).
+Para más información sobre actualizaciones de cuenta y precios, visite nuestra [Página de precios](https://onetimesecret.com/pricing).
 
 
-## Coming Soon
+## Próximamente
 
-* Custom email from details with SPF and DKIM support
-* Team plans for multiple users
+* Correo electrónico personalizado desde detalles con soporte SPF y DKIM
+* Planes de equipo para varios usuarios

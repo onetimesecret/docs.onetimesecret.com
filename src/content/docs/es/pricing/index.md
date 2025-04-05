@@ -1,72 +1,72 @@
 ---
-title: Pricing
-description: Choose the plan that's right for your secure sharing needs.
+title: Precios
+description: Elige el plan que mejor se adapte a tus necesidades de compartición segura.
 ---
 
-# Secure Links, Stronger Connections
+# Enlaces seguros, conexiones más fuertes
 
-Share confidential information with confidence, elevate your brand, and build trust.
+Comparta información confidencial con confianza, eleve su marca y genere confianza.
 
-## Plans
+## Planes
 
 ### Basic
 
-**$0/month**
+**0$/mes
 
-Secure, one-time sharing for everyone.
+Compartir de forma segura y una sola vez para todos.
 
-**Features:**
-- Onetime viewing of shared secrets
-- Automatic deletion after viewing
-- Account required to email recipients
-- Basic API access
+**Características
+- Visualización única de secretos compartidos
+- Eliminación automática tras la visualización
+- Cuenta necesaria para enviar correos electrónicos a los destinatarios
+- Acceso básico a la API
 
-[Get Started](https://onetimesecret.com/plans/basic)
+[Inicio](https://onetimesecret.com/plans/basic)
 
-### Identity Plus
+### Identidad Plus
 
-**$35/month or $365/year**
+**35 $/mes o 365 $/año**.
 
-Secure sharing that elevates your brand and simplifies communication.
+Compartición segura que eleva su marca y simplifica la comunicación.
 
-**Features:**
-- Unlimited custom domains
-- Unlimited sharing capacity
-- Enhanced privacy features
-- Full API access
+**Características
+- Dominios personalizados ilimitados
+- Capacidad ilimitada para compartir
+- Funciones de privacidad mejoradas
+- Acceso completo a la API
 
-[Choose this plan](https://onetimesecret.com/plans/identity)
+[Elija este plan](https://onetimesecret.com/plans/identity)
 
 ### Global Elite
 
-**Coming Soon**
+**Próximamente
 
-Dedicated infrastructure with data-compliance controls and unlimited scalability.
+Infraestructura dedicada con controles de cumplimiento de datos y escalabilidad ilimitada.
 
-**Features:**
-- Private cloud environment
-- Unlimited usage and scaling
-- Multiple data location choices (EU, US)
-- Full regulatory compliance (including GDPR, CCPA, HIPAA)
+**Características
+- Entorno de nube privada
+- Uso y escalado ilimitados
+- Múltiples opciones de ubicación de datos (UE, EE.UU.)
+- Cumplimiento total de la normativa (incluidas GDPR, CCPA, HIPAA)
 
-## Frequently Asked Questions
+## Preguntas frecuentes
 
-### How does Onetime Secret work?
-Onetime Secret allows you to share sensitive information securely. Each shared secret can only be viewed once before it's permanently deleted, ensuring your data remains confidential.
+### ¿Cómo funciona Onetime Secret?
+Onetime Secret te permite compartir información confidencial de forma segura. Cada secreto compartido solo puede verse una vez antes de ser eliminado permanentemente, lo que garantiza la confidencialidad de tus datos.
 
-### Do I need an account to use Onetime Secret?
-No account is required for basic functionality. You can start sharing secrets immediately without complex setup.
+### ¿Necesito una cuenta para utilizar Onetime Secret?
+No se necesita una cuenta para la funcionalidad básica. Puedes empezar a compartir secretos inmediatamente sin configuraciones complejas.
 
-### Is there a free option available?
-Yes, Onetime Secret offers a free tier that allows you to use most features at no cost. For advanced features and branding options, consider our paid plans.
+### ¿Existe una opción gratuita?
+Sí, Onetime Secret ofrece un nivel gratuito que le permite utilizar la mayoría de las funciones sin coste alguno. Para funciones avanzadas y opciones de marca, considere nuestros planes de pago.
 
-### Can I self-host Onetime Secret?
-Yes, Onetime Secret offers a self-hosting option with our SimpleStack℠ guarantee, ensuring easy deployment and management. [GitHub](https://github.com/onetimesecret/onetimesecret)
+### ¿Puedo autoalojar Onetime Secret?
+Sí, Onetime Secret ofrece una opción de autoalojamiento con nuestra garantía SimpleStack℠, asegurando un fácil despliegue y gestión. [GitHub](https://github.com/onetimesecret/onetimesecret)
 
-### How secure is Onetime Secret?
-We take security very seriously and employ multiple measures to protect users' information. As stated in our privacy policy, we use industry standard practices to safeguard all data from unauthorized access, alteration, or destruction. All data in transit is encrypted using HTTPS/TLS and stored securely in the European Union in compliance with data protection laws.
+### ¿Qué tan seguro es Onetime Secret?
+Nos tomamos la seguridad muy en serio y empleamos múltiples medidas para proteger la información de los usuarios. Como se indica en nuestra política de privacidad, utilizamos prácticas estándar de la industria para salvaguardar todos los datos del acceso no autorizado, alteración o destrucción. Todos los datos en tránsito se cifran mediante HTTPS/TLS y se almacenan de forma segura en la Unión Europea en cumplimiento de las leyes de protección de datos.
 
-However, we are also transparent that no method of electronic transmission or storage is 100% secure. While we strive to use commercially acceptable means to protect personal information, we cannot guarantee its absolute security. We recommend users take precautions like using passphrases. Our commitment is to be diligent in securing data to the best of our abilities while being upfront about potential risks.
+Sin embargo, también somos conscientes de que ningún método de transmisión o almacenamiento electrónico es seguro al 100%. Aunque nos esforzamos por utilizar medios comercialmente aceptables para proteger la información personal, no podemos garantizar su seguridad absoluta. Recomendamos a los usuarios que tomen precauciones como el uso de contraseñas. Nuestro compromiso es ser diligentes en la protección de los datos en la medida de nuestras posibilidades y, al mismo tiempo, ser francos sobre los riesgos potenciales.
 
-### Do you offer customer support?
-Yes, we provide customer support. The level of support may vary depending on your chosen plan.
+### ¿Ofrecen asistencia al cliente?
+Sí, ofrecemos asistencia al cliente. El nivel de asistencia puede variar en función del plan elegido.

@@ -1,18 +1,18 @@
 ---
-title: Retrieving Secrets
-description: Learn how to retrieve secrets using the Onetime Secret REST API, with support for both authenticated and anonymous access.
+title: Recuperar secretos
+description: Aprende a recuperar secretos utilizando la API REST de Onetime Secret, con soporte para acceso autenticado y anónimo.
 ---
 
-_Updated 2025-04-02_
+Actualizado 2025-04-02_
 
-:::note
-**Data Locality and Region Selection**
-- Choose a [region]({getRelativeLocaleUrl(Astro.currentLocale ?? 'en', 'regions')}) (e.g. [`us.onetimesecret.com`](https://us.onetimesecret.com/), [`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) data centers
-- Consider factors like data sovereignty, latency, and compliance requirements
-- **NOTE:** Default `onetimesecret.com` remains operational and routes to an active data center, using a specific locality is recommended as this functionality may be deprecated in the future.
+:::nota
+**Selección de localidad y región de los datos**
+- Elija un centro de datos [region]({getRelativeLocaleUrl(Astro.currentLocale ?? 'en', 'regions')}) (por ejemplo, [`us.onetimesecret.com`](https://us.onetimesecret.com/), [`eu.onetimesecret.com`](https://eu.onetimesecret.com/))
+- Tenga en cuenta factores como la soberanía de los datos, la latencia y los requisitos de cumplimiento.
+- **NOTA:** Por defecto `onetimesecret.com` permanece operativo y dirige a un centro de datos activo, se recomienda utilizar una localidad específica ya que esta funcionalidad puede quedar obsoleta en el futuro.
 :::
 
-## Retrieve a Secret
+## Recuperar un Secreto
 
 `POST https://REGION.onetimesecret.com/api/v1/secret/SECRET_KEY`
 
@@ -28,21 +28,21 @@ $ curl -X POST -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/secret
 $ curl -X POST https://eu.onetimesecret.com/api/v1/secret/SECRET_KEY
 ```
 
-### Query Params
+### Parámetros de consulta
 
-- **SECRET_KEY**: the unique key for this secret.
-- **passphrase** (if required): the passphrase is required only if the secret was created with one.
+- Clave**: la clave única para este secreto.
+- Frase de contraseña** (si es necesaria): la frase de contraseña sólo es necesaria si el secreto se creó con una.
 
-### Attributes
+### Atributos
 
-- **secret_key**: the unique key for the secret you create. This is key that you can share.
-- **value**: The actual secret. It should go without saying, but this will only be available one time.
+- **clave_secreta**: la clave única para el secreto que crees. Esta es la clave que puedes compartir.
+- Valor**: El secreto real. No hace falta decirlo, pero sólo estará disponible una vez.
 
-## Retrieve Metadata
+## Recuperar metadatos
 
 `POST https://REGION.onetimesecret.com/api/v1/private/METADATA_KEY`
 
-Every secret also has associated metadata. The metadata is intended to be used by the creator of the secret (i.e. not the recipient) and should generally be kept private. You can safely use the metadata key to retrieve basic information about the secret itself (e.g. if or when it was viewed) since the metadata key is different from the secret key.
+Cada secreto tiene también metadatos asociados. Los metadatos están destinados a ser utilizados por el creador del secreto (es decir, no por el destinatario) y, por lo general, deben mantenerse en privado. Puedes utilizar la clave de metadatos para obtener información básica sobre el propio secreto (por ejemplo, si fue visto o cuándo), ya que la clave de metadatos es diferente de la clave secreta.
 
 ### Authenticated Request
 
@@ -50,30 +50,30 @@ Every secret also has associated metadata. The metadata is intended to be used b
 $ curl -X POST -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/private/METADATA_KEY
 ```
 
-### Query Params
+### Parámetros de consulta
 
-- **METADATA_KEY**: the unique key for this metadata.
+- **METADATA_KEY**: la clave única para estos metadatos.
 
-### Attributes
+### Atributos
 
-- **custid**: the username of the account that created the secret. This value will be `anon` for anonymous requests.
-- **metadata\_key**: the unique key for the metadata. DO NOT share this.
-- **secret\_key**: the unique key for the secret you created. This is key that you can share.
-- **ttl**: The time-to-live that was specified (i.e. not the time remaining)
-- **metadata\_ttl**: The remaining time (in seconds) that the metadata has left to live.
-- **secret\_ttl**: The remaining time (in seconds) that the secret has left to live.
-- **recipient**: if a recipient was specified, this is an obfuscated version of the email address.
-- **created**: Time the metadata was created in unix time (UTC)
-- **updated**: ditto, but the time it was last updated.
-- **received**: Time the secret was received.
-- **passphrase\_required**: If a passphrase was provided when the secret was created, this will be true. Otherwise false, obviously.
+- **custid**: el nombre de usuario de la cuenta que creó el secreto. Este valor será `anon` para peticiones anónimas.
+- **clave_metadatos**: la clave única para los metadatos. NO la comparta.
+- **clave_secreto**: la clave única para el secreto creado. Esta es la clave que puedes compartir.
+- **ttl**: El tiempo de vida especificado (es decir, no el tiempo restante).
+- metadatos_ttl**: El tiempo restante (en segundos) que le queda de vida a los metadatos.
+- **secret_ttl**: El tiempo de vida restante (en segundos) del secreto.
+- Destinatario**: si se ha especificado un destinatario, se trata de una versión ofuscada de la dirección de correo electrónico.
+- **creado**: Hora de creación de los metadatos en tiempo unix (UTC).
+- actualizado**: ídem, pero la hora de la última actualización.
+- Recibido**: Hora en que se recibió el secreto.
+- frase_de_pass_requerida**: Si se proporcionó una frase de contraseña cuando se creó el secreto, será verdadero. En caso contrario será false, obviamente.
 
 
 ## Burn a Secret
 
 `POST https://REGION.onetimesecret.com/api/v1/private/METADATA_KEY/burn`
 
-Burn a secret that has not been read yet.
+Quema un secreto que aún no ha sido leído.
 
 ### Authenticated Request
 
@@ -81,19 +81,19 @@ Burn a secret that has not been read yet.
 $ curl -X POST -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/private/METADATA_KEY/burn
 ```
 
-### Query Params
+### Parámetros de consulta
 
-- None
+- Ninguno
 
-### Attributes
+### Atributos
 
-- Same as metadata attributes with a status of burned.
+- Igual que los atributos de metadatos con un estado de quemado.
 
-## Retrieve Recent Metadata
+## Recuperar metadatos recientes
 
 **GET https://onetimesecret.com/api/v1/private/recent**
 
-Retrieve a list of recent metadata.
+Recuperar una lista de metadatos recientes.
 
 ### Authenticated Request
 
@@ -101,14 +101,14 @@ Retrieve a list of recent metadata.
 $ curl -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/private/recent
 ```
 
-### Query Params
+### Parámetros de consulta
 
-- None
+- Ninguno
 
-### Attributes
+### Atributos
 
-- Same as metadata attributes, although as a list and the secret key value will always be null.
+- Igual que los atributos de metadatos, aunque como lista y el valor de la clave secreta siempre será nulo.
 
-::: warning Authentication Required
-Note: Metadata and management operations (retrieve metadata, burn secret, recent metadata) are only available for authenticated users.
+::: advertencia Se requiere autenticación
+Nota: Las operaciones de metadatos y gestión (recuperar metadatos, quemar secreto, metadatos recientes) sólo están disponibles para usuarios autenticados.
 :::

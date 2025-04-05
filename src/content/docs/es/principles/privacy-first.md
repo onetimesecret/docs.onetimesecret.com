@@ -1,64 +1,65 @@
+
 ---
-title: Privacy
-description: Our approach to protecting user privacy through deliberate design choices
+title: Privacidad
+description: Nuestro enfoque para proteger la privacidad del usuario a través de opciones de diseño deliberadas
 ---
 
 # Privacy First Practices
 
-At Onetime Secret, we take a deliberately minimal approach to user privacy. Here's what we deliberately choose not to do, and more importantly, why.
+En Onetime Secret, adoptamos un enfoque deliberadamente mínimo respecto a la privacidad del usuario. Esto es lo que deliberadamente decidimos no hacer y, lo que es más importante, por qué.
 
-## Our No-Email Philosophy
+## Nuestra filosofía de no enviar correos electrónicos
 
-Most services flood your inbox with:
+La mayoría de los servicios inundan tu bandeja de entrada con:
 
-- Marketing newsletters
-- Product updates
-- Usage statistics
-- Feature announcements
-- Promotional offers
-- Re-engagement campaigns
+- Boletines de marketing
+- Actualizaciones de productos
+- Estadísticas de uso
+- Anuncios de funciones
+- Ofertas promocionales
+- Campañas de reenganche
 
-We limit our email communications to only the most essential communications: secret link deliveries and critical account notifications. We'll never send marketing emails or unsolicited updates. We believe your inbox belongs to you.
+Limitamos nuestras comunicaciones por correo electrónico a las comunicaciones más esenciales: envíos de enlaces secretos y notificaciones críticas de cuentas. Nunca enviaremos correos electrónicos de marketing ni actualizaciones no solicitadas. Creemos que tu bandeja de entrada te pertenece.
 
-## Industry Standards We Skip
+## Nos saltamos las normas del sector
 
-We deliberately avoid common tracking and marketing tools:
+Evitamos deliberadamente las herramientas habituales de seguimiento y marketing:
 
-- Analytics packages that track user behavior
-- Social media integration buttons
-- Advertising networks
-- A/B testing frameworks
-- Marketing automation tools
-- Third-party tracking pixels
+- Paquetes analíticos que rastrean el comportamiento de los usuarios
+- Botones de integración en redes sociales
+- Redes publicitarias
+- Marcos de pruebas A/B
+- Herramientas de automatización del marketing
+- Píxeles de seguimiento de terceros
 
 ## Why This Matters
 
-Our approach centers on three core principles:
+Nuestro planteamiento se basa en tres principios fundamentales:
 
-1. **Respect privacy**: Your data is yours, period
-2. **Focus on reliability**: The tool should simply work when you need it
-3. **Build trust through action**: We prove our commitment through what we don't do
+1. **Respete la privacidad**: Tus datos son tuyos y punto
+2. **Centrarse en la fiabilidad**: La herramienta debe funcionar simplemente cuando la necesites
+3. **Construir confianza a través de la acción**: Demostramos nuestro compromiso a través de lo que no hacemos
 
-## The Real Impact
+## El impacto real
 
-By avoiding standard marketing and tracking practices, we:
+Evitamos las prácticas habituales de marketing y seguimiento:
 
-- Maintain a cleaner, faster service
-- Reduce potential security vulnerabilities
-- Keep your data under direct control
-- Stay focused on our core purpose
+- Mantener un servicio más limpio y rápido
+- Reducir las posibles vulnerabilidades de seguridad
+- Mantener sus datos bajo control directo
+- Mantenernos centrados en nuestro objetivo principal
 
-We invest our time in:
+Invertimos nuestro tiempo en:
 
-- **Core Functionality**: Improving the essential features that matter to users
-- **Privacy Protection**: Strengthening safeguards for user data
-- **Service Reliability**: Ensuring the service is there when you need it
-- **Compliance**: Meeting legal and regulatory requirements
+- Funcionalidad básica**: Mejora de las funciones esenciales que importan a los usuarios
+- Protección de la privacidad**: Reforzar la protección de los datos de los usuarios
+- Fiabilidad del servicio**: Garantizar que el servicio esté disponible cuando lo necesite.
+- Cumplimiento**: Cumplir los requisitos legales y reglamentarios
 
 ## Looking Forward
 
-We'll continue prioritizing simplicity and privacy over marketing reach. While this means we might grow more slowly than services that aggressively market themselves, we believe it's the right choice for a privacy-focused tool.
+Seguiremos dando prioridad a la sencillez y la privacidad frente al alcance comercial. Aunque esto significa que podemos crecer más lentamente que los servicios que se comercializan agresivamente, creemos que es la elección correcta para una herramienta centrada en la privacidad.
 
-You can trust Onetime Secret to be there when you need it, without the constant reminders that you have an account with us.
+Puedes confiar en que Onetime Secret estará ahí cuando lo necesites, sin los constantes recordatorios de que tienes una cuenta con nosotros.
 
-**Questions about our approach?** [Contact us](https://onetimesecret.com/feedback).
+**¿Preguntas sobre nuestro enfoque?** [Contacte con nosotros](https://onetimesecret.com/feedback).

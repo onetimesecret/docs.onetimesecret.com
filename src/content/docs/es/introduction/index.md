@@ -1,29 +1,29 @@
 ---
-title: Getting Started
-description: Your hub for Onetime Secret resources, documentation, and insights.
+title: Primeros pasos
+description: Tu centro de recursos, documentación e información sobre Onetime Secret.
 ---
 
-Welcome to Onetime Secret Docs, your central resource for maximizing the value of our privacy-focused, ephemeral secret sharing service.
+Bienvenido a Onetime Secret Docs, su recurso central para maximizar el valor de nuestro servicio de intercambio de secretos efímeros centrado en la privacidad.
 
 ## What's Here
 
-- Documentation: Clear, concise guides for using Onetime Secret effectively
-- Blog: Insights on privacy, security, and product updates
-- Use Cases: Practical applications of Onetime Secret in various scenarios (coming soon)
+- Documentación: Guías claras y concisas para utilizar Onetime Secret con eficacia
+- Blog: Perspectivas sobre privacidad, seguridad y actualizaciones del producto
+- Casos de uso: Aplicaciones prácticas de Onetime Secret en varios escenarios (próximamente)
 
-## Core Functionality
+## Funciones básicas
 
-Onetime Secret provides a straightforward solution for sharing sensitive information securely:
+Onetime Secret ofrece una solución sencilla para compartir información confidencial de forma segura:
 
-1. One-time access: View shared secrets once, then they're permanently deleted
-2. No registration required: Use basic features without an account
-3. Customizable expiration: Control secret availability with automatic deletion
-4. Intuitive interface: Share secrets easily with our user-friendly design
-5. Optional passphrase: Add an extra security layer to shared secrets
-6. Open-source: Review our codebase for enhanced transparency
+1. Acceso único: Ver los secretos compartidos una vez, luego se eliminan permanentemente.
+2. No es necesario registrarse: Utiliza las funciones básicas sin necesidad de tener una cuenta
+3. Expiración personalizable: Controla la disponibilidad de los secretos con borrado automático
+4. Interfaz intuitiva: Comparta secretos fácilmente con nuestro diseño fácil de usar
+5. Frase de contraseña opcional: Añade una capa de seguridad adicional a los secretos compartidos
+6. Código abierto: Revise nuestro código base para una mayor transparencia
 
-Explore our Bonus Content to learn how Onetime Secret can address your secure communication needs efficiently and discreetly.
+Explore nuestro Contenido adicional para saber cómo Onetime Secret puede satisfacer sus necesidades de comunicación segura de forma eficaz y discreta.
 
-## Get Started
+## Empezar
 
-Ready to dive in? Check out our [documentation](/docs) for detailed instructions on using Onetime Secret effectively. If you have any questions or feedback, feel free to [contact us](/contact) directly.
+¿Listo para sumergirte? Consulta nuestra [documentación](/docs) para obtener instrucciones detalladas sobre el uso eficaz de Onetime Secret. Si tienes alguna pregunta o comentario, no dudes en [contactar con nosotros](/contacto) directamente.
