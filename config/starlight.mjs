@@ -11,7 +11,7 @@ export const starlightConfig = {
   // favicon: "./src/assets/img/favicon.ico",
   editLink: {
     baseUrl:
-      "https://github.com/onetimesecret/docs.onetimesecret.com/edit/migrate-to-starlight/",
+      "https://github.com/onetimesecret/docs.onetimesecret.com/edit/main/",
   },
   disable404Route: true,
   credits: true,
