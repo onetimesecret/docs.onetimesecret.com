@@ -57,5 +57,10 @@ export const i18nConfig = {
       lang: "nl",
       dir: "ltr",
     },
+    uk: {
+      label: "Українська",
+      lang: "uk",
+      dir: "ltr",
+    },
   },
 };
