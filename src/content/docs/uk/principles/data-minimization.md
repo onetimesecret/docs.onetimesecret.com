@@ -1,26 +1,26 @@
 ---
-title: Minimal Data Collection
-description: Our commitment to collecting only the essential data required to provide our service
+title: Мінімальний збір даних
+description: Ми зобов'язуємося збирати лише основні дані, необхідні для надання наших послуг
 ---
 
-# We Only Collect What's Needed
+# Ми збираємо тільки те, що потрібно
 
-**Description:** At Onetime Secret, we collect only the data required to deliver our service: temporary secrets and the minimum account information needed for paid subscriptions. This keeps things simple and secure.
+**Опис:** В Onetime Secret ми збираємо лише дані, необхідні для надання наших послуг: тимчасові секрети та мінімальну інформацію про обліковий запис, необхідну для платних підписок. Це робить все простим і безпечним.
 
-**Why This Matters:**
+**Чому це важливо: **Чому це важливо?
 
-1. **Less Risk:** The less data we store, the less there is to protect. By collecting only what's necessary, we reduce potential security risks.
+1. **Менший ризик:** Чим менше даних ми зберігаємо, тим менше їх потрібно захищати. Збираючи лише необхідну інформацію, ми зменшуємо потенційні ризики для безпеки.
 
-2. **Clear Purpose:** Every piece of information we collect has a specific purpose in delivering our service. No tracking, no analytics, no extras.
+2. **Чітке призначення:** Кожна інформація, яку ми збираємо, має конкретну мету для надання наших послуг. Ніякого відстеження, ніякої аналітики, ніяких додаткових даних.
 
-3. **Zero-Knowledge Design**: We can't access your secrets and don't want to. Each secret is encrypted, accessible only once, and automatically deleted after viewing or expiration.
+3. **Дизайн з нульовими знаннями: Ми не можемо отримати доступ до ваших секретів і не хочемо. Кожен секрет зашифрований, доступний лише один раз і автоматично видаляється після перегляду або закінчення терміну дії.
 
-**How It Works:**
+**Як це працює
 
-1. **For Single Secrets:** We only store the encrypted secret until it's viewed or expires. After that, it's permanently deleted. (Other than the minimal encrypted backups we keep in case of emergency. We discuss this more in our [Privacy Policy](https://onetimesecret.com/info/privacy).)
+1. **Для окремих секретів:** Ми зберігаємо зашифрований секрет лише доти, доки його не переглянуть або доки не закінчиться термін його дії. Після цього він назавжди видаляється. (За винятком мінімальних зашифрованих резервних копій, які ми зберігаємо на випадок надзвичайних ситуацій. Ми обговорюємо це детальніше в нашій [Політиці конфіденційності] (https://onetimesecret.com/info/privacy)).
 
-2. **For Registered Users:** We keep just enough information to manage your account and provide the service you've paid for. That's why we only collect an email address. We don't collect name or profile details because you don't need those features.
+2. **Для зареєстрованих користувачів:** Ми зберігаємо лише ту інформацію, яка необхідна для управління вашим обліковим записом і надання послуг, за які ви заплатили. Тому ми збираємо лише адресу електронної пошти. Ми не збираємо ім'я або дані профілю, оскільки вони вам не потрібні.
 
-3. **No Tracking:** We don't use cookies for tracking, analytics, or advertising. The only cookie we use is for keeping you logged in if you choose to create an account.
+3. **Не відстежувати:** Ми не використовуємо файли cookie для відстеження, аналітики або реклами. Єдиний файл cookie, який ми використовуємо, - це для того, щоб ви могли увійти в систему, якщо ви вирішите створити обліковий запис.
 
-This approach has served us and our users well since 2012. It's simple, effective, and respects your privacy.
+Цей підхід добре служить нам і нашим користувачам з 2012 року. Він простий, ефективний і поважає вашу конфіденційність.

@@ -1,87 +1,87 @@
 ---
-title: Getting Started
-description: Onetime Secret's REST API provides flexible secret sharing capabilities, supporting both authenticated and anonymous usage. Authenticated users gain advanced features and higher usage limits, while unauthenticated users can quickly share secrets with basic functionality.
+title: Початок роботи
+description: REST API Onetime Secret надає гнучкі можливості для обміну секретами, підтримуючи як автентифіковане, так і анонімне використання. Авторизовані користувачі отримують розширені можливості і більш високі ліміти використання, в той час як неавторизовані користувачі можуть швидко ділитися секретами з базовою функціональністю.
 ---
 
-_Updated 2024-11-06_
+_Оновлено 2024-11-06_.
 
-All API access is over HTTPS and all responses are JSON.
+Весь доступ до API здійснюється через HTTPS, а всі відповіді - у форматі JSON.
 
 ## Base URI
 
-`https://REGION.onetimesecret.com/api`
+https://REGION.onetimesecret.com/api
 
-Where `REGION` is either `us` or `eu`.
+Де "РЕГІОН" - це або "ми", або "ЄС".
 
 <!-- ::callout{icon="i-heroicons-globe-alt"} -->
-**Data Locality and Region Selection**
-- Choose between US ([`us.onetimesecret.com`](https://us.onetimesecret.com/)) or EU ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) data centers
-- Consider factors like data sovereignty, latency, and compliance requirements
-- **NOTE:** Default `onetimesecret.com` remains operational and routes to an active data center, using a specific locality is recommended as this functionality may be deprecated in the future.
+**Вибір населеного пункту та регіону даних**
+- Виберіть між центрами обробки даних у США ([`us.onetimesecret.com`](https://us.onetimesecret.com/)) або ЄС ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/))
+- Враховуйте такі фактори, як суверенітет даних, затримка та вимоги до відповідності
+- За замовчуванням `onetimesecret.com` залишається робочим і спрямовує до активного центру обробки даних, рекомендується використовувати конкретну локацію, оскільки ця функціональність може бути застарілою в майбутньому.
 ::
 
-## Authentication
-We support two modes of API usage:
+## Аутентифікація
+Ми підтримуємо два режими використання API:
 
-### Authenticated Access
+### Автентифікований доступ
 
-`https://USERNAME:APITOKEN@REGION.onetimesecret.com/api`
+https://USERNAME:APITOKEN@REGION.onetimesecret.com/api
 
-- Use HTTP Basic Authentication for full API capabilities
-- The username is your account login
-- The password is the API token from your account page
+- Використовуйте базову автентифікацію HTTP для повних можливостей API
+- Ім'я користувача - це логін вашого облікового запису
+- Пароль - токен API зі сторінки вашого облікового запису
 
-### Anonymous Access
+### Анонімний доступ
 
-`https://REGION.onetimesecret.com/api`
+https://REGION.onetimesecret.com/api
 
-- Limited functionality available without authentication
-- Ideal for quick, one-time secret sharing
-- Can be used for both creating and retrieving secrets
+- Обмежена функціональність доступна без автентифікації
+- Ідеально підходить для швидкого, одноразового обміну секретами
+- Можна використовувати як для створення, так і для отримання секретів
 
-## Data Locality
-Onetime Secret supports multiple geographic data centers. We follow a zero data sharing policy between regions, ensuring complete data isolation. Choose the right data center for your needs:
+## Місцезнаходження даних
+Onetime Secret підтримує декілька географічних центрів обробки даних. Ми дотримуємося політики нульового обміну даними між регіонами, забезпечуючи повну ізоляцію даних. Виберіть правильний дата-центр для ваших потреб:
 
-- **EU Data Center:** [eu.onetimesecret.com](https://eu.onetimesecret.com/)
-- **US Data Center:** [us.onetimesecret.com](https://us.onetimesecret.com/)
+- **Центр обробки даних ЄС:** [eu.onetimesecret.com](https://eu.onetimesecret.com/)
+- **Центр обробки даних США:** [us.onetimesecret.com](https://us.onetimesecret.com/)
 
-### Important Considerations:
-- You can choose a specific data locality by navigating directly to the desired domain
-- The location of your secret is always clear from the generated link (e.g., `us.onetimesecret.com/secret/abcd1234`)
-- **NOTE:** Currently, access via `onetimesecret.com/api` is still operational but using a specific locality is recommended as this functionality may be deprecated in the future.
+### Важливі зауваження:
+- Ви можете вибрати конкретне місце розташування даних, перейшовши безпосередньо до потрібного домену
+- Місцезнаходження вашого секрету завжди видно зі згенерованого посилання (наприклад, `us.onetimesecret.com/secret/abcd1234`)
+- ПРИМІТКА:** Наразі доступ через `onetimesecret.com/api` все ще працює, але рекомендується використовувати певну локалізацію, оскільки ця функція може бути застарілою в майбутньому.
 
-## Custom Domains
-Onetime Secret supports custom domain configurations for organizations with specific networking or branding requirements via our [Identity Plus](https://onetimesecret.com/pricing) plan.
+## Спеціальні домени
+Onetime Secret підтримує індивідуальні конфігурації доменів для організацій зі специфічними мережевими вимогами або вимогами до брендингу за допомогою нашого плану [Identity Plus](https://onetimesecret.com/pricing).
 
-### Custom Domain Benefits
-- **Private Branding:** Use your own domain (e.g., `secrets.example.com`) for API access and secret sharing
-- **Consistent User Experience:** Maintain your organization's visual and trust identity with your customers and partners.
-- **Include during employee training:** Use custom domains to reinforce your organization's security practices and workflows.
+### Переваги власного домену
+- Приватний брендинг:** Використовуйте власний домен (наприклад, secrets.example.com) для доступу до API та обміну секретами
+- Послідовний користувацький досвід:** Підтримуйте візуальну ідентичність вашої організації та довіру до неї у ваших клієнтів та партнерів.
+- Включайте під час навчання співробітників:** Використовуйте власні домени для посилення практик безпеки та робочих процесів у вашій організації.
 
 <!-- ::callout{icon="i-heroicons-lock-closed"} -->
-**Premium Feature**
-Custom domains are available on our [Identity Plus](https://onetimesecret.com/pricing) plan. Setup in minutes with our easy-to-use configuration options. [Learn more](/docs/custom-domains).
+**Преміум-функція
+Кастомні домени доступні в нашому плані [Identity Plus](https://onetimesecret.com/pricing). Налаштування за лічені хвилини за допомогою наших простих у використанні опцій конфігурації. [Докладніше](/docs/custom-domains).
 ::
 
-### API Usage with Custom Domains
-When using a custom domain, all API endpoints follow the same structure:
+### Використання API з власними доменами
+При використанні користувацького домену всі кінцеві точки API мають однакову структуру:
 
-`https://secrets.example.com/api`
+https://secrets.example.com/api
 
 
-## System Status
+## Стан системи
 
 `GET https://REGION.onetimesecret.com/api/v1/status`
-Current status of the system.
+Поточний стан системи.
 
-**Parameters:** None
+**Параметри:** Немає
 
 ```bash
 $ curl -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/status
-{"status":"nominal"}
+{"status": "nominal"}
 ```
 
 ```bash
 $ curl -u 'USERNAME:APITOKEN' https://us.onetimesecret.com/api/v1/status
-{"status":"nominal"}
+{"status": "nominal"}
 ```

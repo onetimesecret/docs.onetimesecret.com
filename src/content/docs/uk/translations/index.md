@@ -1,43 +1,43 @@
 ---
-title: Translations & Localization
-description: Information about available language translations and how to contribute to localizing Onetime Secret
+title: Переклади та локалізація
+description: Інформація про доступні мовні переклади та про те, як зробити свій внесок у локалізацію Onetime Secret
 ---
 
-# Translations & Localization
+# Переклади та локалізація
 
-Onetime Secret documentation is available in multiple languages to serve our diverse global community. We're continuously working to expand our language offerings and improve existing translations.
+Документація програми "Цілком таємно" доступна багатьма мовами, щоб служити нашій різноманітній світовій спільноті. Ми постійно працюємо над розширенням нашої мовної пропозиції та вдосконаленням існуючих перекладів.
 
-## Available Languages
+## Доступні мови
 
-- **English (en)**: Our default and most complete version
-- **German (de)**: Partial translation in progress
+- **Англійська (en)**: Наша найповніша версія за замовчуванням
+- **Німецька (de)**: Виконується частковий переклад
 
-You can switch between languages using the language selector in the top-right corner of any page.
+Ви можете перемикатися між мовами за допомогою перемикача мов у верхньому правому куті будь-якої сторінки.
 
-## Translation Status
+## Статус перекладу
 
-To view the current status of our translation efforts, visit the [Translation Status](/en/translations/status) page.
+Щоб переглянути поточний стан наших перекладів, відвідайте сторінку [Статус перекладу](/uk/translations/status).
 
-## Contributing Translations
+## Допомагаємо перекладати
 
-We welcome contributions to our translation efforts. If you'd like to help translate Onetime Secret documentation to your language, please follow these guidelines:
+Ми вітаємо внесок у наші перекладацькі зусилля. Якщо ви хочете допомогти перекласти документацію Onetime Secret вашою мовою, будь ласка, дотримуйтесь цих інструкцій:
 
-### Translation Workflow
+### Робочий процес перекладу
 
-1. **Locate content**: Original English content is stored in the `/content/docs/en/` directory
-2. **Create corresponding files**: Create matching files in your language's directory (e.g., `/content/docs/de/`)
-3. **Keep structure**: Maintain the same directory structure and file naming conventions
-4. **Preserve frontmatter**: Copy all frontmatter fields, translating only the values
-5. **Submit your work**: Use [GitHub Pull Requests](https://github.com/onetimesecret/onetimesecret) for submissions
+1. **Встановити місцезнаходження вмісту**: Оригінальний англомовний контент зберігається в каталозі `/content/docs/uk/`.
+2. **Створити відповідні файли**: Створіть відповідні файли в каталозі вашої мови (наприклад, `/content/docs/de/`)
+3. **Зберегти структуру**: Зберігати ту саму структуру каталогів і домовленості щодо імен файлів
+4. **Зберегти основний текст**: Копіювати всі поля основного тексту, перекладаючи лише значення
+5. **Надішліть свою роботу: Використовуйте [GitHub Pull Requests](https://github.com/onetimesecret/onetimesecret) для відправки
 
-### Translation Standards
+### Стандарти перекладу
 
-For consistent, high-quality translations, follow our [Translation Style Guide](/en/translations/guide-en) and refer to our [Terminology Glossary](/en/translations/glossary) for standardized translations of key terms.
+Для послідовного та якісного перекладу дотримуйтесь нашого [Посібника зі стилю перекладу] (/uk/translations/guide-en) та зверніться до нашого [Термінологічного словника] (/uk/translations/glossary) для стандартизованого перекладу ключових термінів.
 
-## Handling Missing Translations
+## Робота з відсутніми перекладами
 
-When content is not available in a selected language, you'll automatically see the English version with a notification indicating the content hasn't been translated yet.
+Якщо контент недоступний вибраною мовою, ви автоматично побачите англійську версію з повідомленням про те, що контент ще не перекладено.
 
-## Need Help?
+## Потрібна допомога?
 
-If you have questions about translations or need assistance contributing, please [contact our team](https://onetimesecret.com/contact) or open an issue on our [GitHub repository](https://github.com/onetimesecret/onetimesecret).
+Якщо у вас виникли запитання щодо перекладів або вам потрібна допомога у створенні перекладу, будь ласка, [зв'яжіться з нашою командою] (https://onetimesecret.com/contact) або створіть випуск у нашому [GitHub репозиторії] (https://github.com/onetimesecret/onetimesecret).

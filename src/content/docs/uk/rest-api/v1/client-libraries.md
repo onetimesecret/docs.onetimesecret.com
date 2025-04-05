@@ -1,28 +1,28 @@
 ---
-title: Client Libraries
-description: Explore the client libraries available for the Onetime Secret API, including Ruby, Python, Perl, Java, C#, Go, and more.
+title: Клієнтські бібліотеки
+description: Вивчіть клієнтські бібліотеки, доступні для Onetime Secret API, включаючи Ruby, Python, Perl, Java, C#, Go та інші.
 ---
 
-## Ruby
+## Рубі.
 
 
-[Github page onetime-ruby](https://github.com/onetimesecret/onetime-ruby)
-by [Delano](https://delanotes.com/) (updated 2024-06-09)
+[Github-сторінка onetime-ruby](https://github.com/onetimesecret/onetime-ruby)
+автором [Delano](https://delanotes.com/) (оновлено 2024-06-09)
 
-### Usage Example
+### Приклад використання
 
-```ruby
+```ruby``
 require 'onetime/api'
 
 api = Onetime::API.new('YOUR_EMAIL', 'YOUR_OTS_APIKEY')
 options = {
-  secret: 'Jazz, jazz and more jazz.',
+  secret: 'Джаз, джаз і ще раз джаз',
   recipient: 'example@onetimesecret.com',
   ttl: 7200
 }
 
 ret = api.post('/share', options)
-puts ret['secret_key']
+підставляє ret['secret_key']
 ```
 
 ---
@@ -30,28 +30,28 @@ puts ret['secret_key']
 ## Python
 
 
-[Github page - onetimesecret-cli](https://github.com/slashpass/onetimesecret-cli)
-by [slashpass](https://github.com/slashpass) (added 2021-07-08)
+[сторінка Github - onetimesecret-cli](https://github.com/slashpass/onetimesecret-cli)
+за [slashpass](https://github.com/slashpass) (додано 2021-07-08)
 
-### Usage Example
+### Приклад використання
 
 ```python
 from onetimesecret import OneTimeSecretCli
 
 cli = OneTimeSecretCli(ONETIMESECRET_USER, ONETIMESECRET_KEY)
-cli.create_link("secret") # return a link like https://onetimesecret.com/secret/xxxxxxxxxxx
+cli.create_link("secret") # повернути посилання на зразок https://onetimesecret.com/secret/xxxxxxxxxxx
 ```
 
-[Github page - py\_onetimesecret](https://github.com/utter-step/py_onetimesecret)
-by [Vladislav Stepanov](https://github.com/utter-step/) (added 2012-06-26)
+[Сторінка на Github - py\_onetimesecret](https://github.com/utter-step/py_onetimesecret)
+[Владислав Степанов](https://github.com/utter-step/) (додано 2012-06-26)
 
-### Usage Example
+### Приклад використання
 
 ```python
 from onetimesecret import OneTimeSecret
 
 o = OneTimeSecret("YOUR_EMAIL", "YOUR_OTS_APIKEY")
-secret = o.share(u"test")
+secret = o.share(u "test")
 
 print o.retrieve_secret(secret["secret_key"])
 # {u'secret_key': u'dtr7ixukiolpx1i4i87kahmhyoy2q65',
@@ -63,22 +63,22 @@ print o.retrieve_secret(secret["secret_key"])
 ## Perl
 
 
-[Net::OneTimeSecret on CPAN](http://search.cpan.org/~kyled/Net-OneTimeSecret/lib/Net/OneTimeSecret.pm)
-by [Kyle Dawkins](http://www.shoffle.com/) (added 2012-01-06)
+[Net::OneTimeSecret на CPAN](http://search.cpan.org/~kyled/Net-OneTimeSecret/lib/Net/OneTimeSecret.pm)
+[Кайл Докінз](http://www.shoffle.com/) (додано 2012-01-06)
 
-### Usage Example
+### Приклад використання
 
-```perl
+```perl``.
 #!/usr/bin/env perl
 
-use Net::OneTimeSecret;
+використовувати Net::OneTimeSecret;
 
-# Note: replace these with yours in order for this to work!
-my $customerId  = 'YOUR_EMAIL';
-my $testApiKey  = 'YOUR_OTS_APIKEY';
+# Примітка: замініть ці дані на ваші, щоб це працювало!
+my $customerId = 'YOUR_EMAIL';
+my $testApiKey = 'YOUR_OTS_APIKEY';
 
 my $api = Net::OneTimeSecret->new( $customerId, $testApiKey );
-my $result = $api->shareSecret( 'Jazz, jazz and more jazz.',
+my $result = $api->shareSecret( 'Джаз, джаз і ще раз джаз,
                    passphrase => 'thepassword',
                    recipient => 'kyle@shoffle.com',
                    ttl => 7200,
@@ -94,10 +94,10 @@ printf( "%s\n", $secret->{value} );
 ## Java
 
 
-[Github page - onetime-java](https://github.com/mpawlowski/onetime-java)
-by [Marcin Pawlowski](https://github.com/mpawlowski) (added 2014-05-22)
+[Сторінка на Github - onetime-java](https://github.com/mpawlowski/onetime-java)
+[Марцін Павловський](https://github.com/mpawlowski) (додано 2014-05-22)
 
-### Usage Example
+### Приклад використання
 
 ```java
 OneTimeSecret ots = new OneTimeSecretRestImpl(
@@ -105,7 +105,7 @@ OneTimeSecret ots = new OneTimeSecretRestImpl(
     "ots-username",
     "ots-apikey");
 
-GenerateResponse generateResponse = ots.generate(
+Згенерувати відповідь generateResponse = ots.generate(
                 new GenerateRequest.Builder()
                         .withPassphrase("supersecret")
                         .build());
@@ -124,14 +124,14 @@ assertEquals(generateResponse.getValue(), retrieveResponse.getValue());
 ## C#
 
 
-[Github page - OneTimeSharp](https://github.com/utter-step/OneTimeSharp)
-by [Vladislav Stepanov](https://github.com/utter-step/) (added 2014-05-29)
+[Сторінка на Github - OneTimeSharp](https://github.com/utter-step/OneTimeSharp)
+[Владислав Степанов](https://github.com/utter-step/) (додано 2014-05-29)
 
-### Usage Example
+### Приклад використання
 
 ```csharp
-# You can use OneTimeSharp in any of your projects which are compatible with .NET (4.0+) or Mono (2.10.8+).
-using VStepanov.OneTimeSharp;
+# Ви можете використовувати OneTimeSharp у будь-якому вашому проекті, сумісному з .NET (4.0+) або Mono (2.10.8+).
+використовуючи VStepanov.OneTimeSharp;
 
 class Test
 {
@@ -141,12 +141,12 @@ class Test
 
         var generated = ots.GenerateSecret();
 
-        Console.WriteLine(generated.Value); // LR*?us*A(UT*
+        Console.WriteLine(generated.Value); // LR*?us*A(UT*)
 
         Console.WriteLine(generated.SecretKey); // ikzx3m77j5by8411cg5lk5fvfylvl0i
         Console.WriteLine(ots.GetSecretLink(generated)); // https://onetimesecret.com/secret/ikzx3m77j5by8411cg5lk5fvfylvl0i
 
-        var shared = ots.ShareSecret("Hello, OTS!");
+        var shared = ots.ShareSecret("Привіт, OTS!");
 
         Console.WriteLine(shared.MetadataKey); // kd6rgsucl98qbgu9eavjq4k5sdxsom0
         Console.WriteLine(ots.GetMetadataLink(shared)); // https://onetimesecret.com/private/kd6rgsucl98qbgu9eavjq4k5sdxsom0
@@ -156,46 +156,46 @@ class Test
 
 ---
 
-## Go
+## Іди.
 
 
-[Github page - onetimesecret](https://github.com/corbaltcode/go-onetimesecret)
-by [Corbalt](https://github.com/corbaltcode/) (added 2021-12-10)
+[Сторінка на Github - onetimesecret](https://github.com/corbaltcode/go-onetimesecret)
+[Corbalt](https://github.com/corbaltcode/) (додано 2021-12-10)
 
-### Usage Example
+### Приклад використання
 
 ```go
 import ots "github.com/corbaltcode/go-onetimesecret"
 
 client := ots.Client{
-  Username: "user@example.com",
+  Ім'я користувача: "user@example.com",
   Key: "my api key",
 }
 
 metadata, err := client.Put("the launch codes", "passphrase", 0, "")
 if err != nil {
-  // handle error
+  // обробити помилку
 }
 
 secret, err := client.Get(metadata.SecretKey, "passphrase")
 if err != nil {
-  // handle error
+  // обробити помилку
 }
 
-// prints "the launch codes"
+// виводить "коди запуску"
 print(secret)
 ```
 
-### Usage Example as CLI
+### Приклад використання як CLI
 
 ```bash
 $ go install github.com/corbaltcode/go-onetimesecret/cmd/ots@latest
 
-$ ots put 'what is essential is invisible to the eye'
+$ ots put 'те, що є важливим, невидиме для ока'
 hdjk6p0ozf61o7n6pbaxy4in8zuq7sm ifipvdpeo8oy6r8ryjbu8y7rhm9kty9
 
 $ ots get hdjk6p0ozf61o7n6pbaxy4in8zuq7sm
-what is essential is invisible to the eye
+те, що є важливим, невидиме для ока
 
 $ ots gen
 rVjbS$twCJkS 4nwhy7v4fnabayqc5auv4ogh0nfr20 flsdlaun6hwczqu9utmc0vts5xj9xu1
@@ -207,24 +207,24 @@ flsdlaun6hwczqu9utmc0vts5xj9xu1
 ---
 
 
-## Go (lib)
+## Вперед (ліб)
 
 
-[Github page](https://github.com/emdneto/otsgo)
-by [Emídio Neto](https://github.com/emdneto) (added 2024-06-09)
+[Сторінка на Github](https://github.com/emdneto/otsgo)
+[Emídio Neto](https://github.com/emdneto) (додано 2024-06-09)
 
-### Usage Example
+### Приклад використання
 
-```go
-// Build a new client
+Давай.
+// Створити нового клієнта
 client := ots.NewClient(
       WithUsername("otsuser@domain.com"),
       WithApiKey("xxxxxxxx"),
 )
 
-// Send a request with context
+// Надіслати запит з контекстом
 ctx := context.Background()
-response, err := client.GetStatus(ctx)
+відповідь, err := client.GetStatus(ctx)
 if err != nil {
       panic(err)
 }
@@ -237,104 +237,104 @@ fmt.Println(response.Status)
 ## PowerShell
 
 
-[Github page - OneTimeSecret](https://github.com/chelnak/OneTimeSecret)
-by [Craig Gumbley](https://www.helloitscraig.co.uk) (updated 2017-04-28)
+[Сторінка на Github - OneTimeSecret](https://github.com/chelnak/OneTimeSecret)
+від [Craig Gumbley](https://www.helloitscraig.co.uk) (оновлено 2017-04-28)
 
-### Usage Example
+### Приклад використання
 
-```powershell
-# Install from the PowerShell gallery
+``powershell
+# Встановлення з галереї PowerShell
 Install-Module -Name OneTimeSecret -Scope CurrentUser
 
-# Set connection information
-Set-OTSAuthorizationToken -Username user@mail.com -APIKey xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Встановити інформацію про з'єднання
+Set-OTSAuthorizationToken -Username user@mail.com -APIKey xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-# Generate a new shared secret
-New-OTSSharedSecret -Secret "Very Secret" -Passphrase 1234 -Recipient user@mail.com
+# Створіть новий спільний секрет
+New-OTSSharedSecret -Секрет "Дуже секретний" -Парольна фраза 1234 -Одержувач user@mail.com
 
-# Retrieve a secret
-Get-OTSSecret -SecretKey qqevnp70b4uoiax4knzhwlhros6ne7x -Passphrase 1234
+# Отримати секретний ключ
+Get-OTSSecret -SecretKey qqevnp70b4uoiax4knzhwlhros6ne7x -Password 1234
 
-# View all functions that are available
+# Переглянути всі доступні функції
 Get-Command -Module OneTimeSecret | Select Name
 ```
 
 ---
 
-## Bash
+## Баш!
 
 
-[Github page - OneTimeSecret-bash](https://github.com/eengstrom/onetimesecret-bash)
-by [Eric Engstrom](https://eengstrom.github.io/) (updated 2018-12-19)
+[Сторінка на Github - OneTimeSecret-bash](https://github.com/eengstrom/onetimesecret-bash)
+автор [Eric Engstrom](https://eengstrom.github.io/) (оновлено 2018-12-19)
 
-### Usage Example as Scripting API
+### Приклад використання як API для написання сценаріїв
 
 ```bash
-# source for use anonymously (secrets created anonymously)
-source ots.bash
+# джерело для анонімного використання (секрети створюються анонімно)
+джерело ots.bash
 
-# or, source with specific auth credentials
-APIUSER="USERNAME"
+# або, джерело з певними обліковими даними
+APIUSER="ІМ'Я КОРИСТУВАЧА"
 APIKEY="APIKEY"
 source ots.bash -u $APIUSER -k $APIKEY
 
-# check status of server
+# перевірити статус сервера
 ots_status
 
-# create a secret and get back the URL
+# створюємо секрет і повертаємо URL-адресу
 URL=$(echo "secret" | ots_share)
 
-# share a multi line secret via HEREDOC.
+# поділитися багаторядковим секретом через HEREDOC.
 URL=$(ots_share <<-EOF
-      This is a Secret
-      ... on multiple lines
+      Це секрет
+      ... на декілька рядків
 EOF
 )
 
-# pass options to share or generate.
+# передайте опції для обміну або генерації.
 URL=$(ots_share ttl=600 \
                   passphrase="shared-secret" \
                   recipient="someone@somewhere.com" <<< "SECRET")
 
-# fetch the secret data
+# отримуємо секретні дані
 local DATA="$(ots_retrieve "$URL")"
 
-# share/generate a new secret, and get back the private metadata key
+# ділимося/генеруємо новий секрет і повертаємо приватний ключ метаданих
 local KEY=$(ots_metashare <<< "SECRET")
 local KEY=$(ots_metagenerate)
 
-# get a list of private metadata keys recently created.
-# note that this requires valid autnentication credentials
+# отримати список нещодавно створених приватних ключів метаданих.
+# зауважте, що для цього потрібні дійсні облікові дані для автентифікації
 local -a RECENT=( $(ots_recent) )
 
-# check on the current state of a secret, given the private key
+# перевірка поточного стану секрету, враховуючи приватний ключ
 ots_state $KEY
 
-# burn a secret, given the private key
+# записати секрет, враховуючи приватний ключ
 ots_burn $KEY
 ```
 
-### Usage Example as CLI
+### Приклад використання як CLI
 
 ```bash
-# Share a secret (from stdin
+# Поділіться секретом (з stdin
 ./ots share
 SECRET
 ^D
 
-# Share a secret (via HEREDOC)
+# Поділися секретом (через HEREDOC)
 ./ots share <<-EOF
-      This is a mulit-line secret via HEREDOC.
-      Somthing else goes here.
+      Це багаторядковий секрет через HEREDOC.
+      Тут має бути щось інше.
 EOF
 
-# Get/Retrieve a secret:
-./ots get <key|url>
-./ots retrieve <key|url>
+# Отримати/відновити секрет:
+./ots get <key|url>.
+./ots retrieve <key|url>.
 
-### Usage Example as CLI
+### Приклад використання як CLI
 
-```bash
+``bash``
 $ ots burn flsdlaun6hwczqu9utmc0vts5xj9xu1
 flsdlaun6hwczqu9utmc0vts5xj9xu1
 ```

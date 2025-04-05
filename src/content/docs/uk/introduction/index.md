@@ -1,29 +1,29 @@
 ---
-title: Getting Started
-description: Your hub for Onetime Secret resources, documentation, and insights.
+title: Початок роботи
+description: Ваш центр ресурсів, документації та ідей Onetime Secret.
 ---
 
-Welcome to Onetime Secret Docs, your central resource for maximizing the value of our privacy-focused, ephemeral secret sharing service.
+Ласкаво просимо до Onetime Secret Docs, вашого центрального ресурсу для отримання максимальної користі від нашого ефемерного сервісу обміну секретними даними, орієнтованого на конфіденційність.
 
-## What's Here
+## Що тут?
 
-- Documentation: Clear, concise guides for using Onetime Secret effectively
-- Blog: Insights on privacy, security, and product updates
-- Use Cases: Practical applications of Onetime Secret in various scenarios (coming soon)
+- Документація: Чіткі, стислі інструкції для ефективного використання Onetime Secret
+- Блог: Інформація про конфіденційність, безпеку та оновлення продукту
+- Кейси використання: Практичне застосування Onetime Secret в різних сценаріях (незабаром)
 
-## Core Functionality
+## Основний функціонал
 
-Onetime Secret provides a straightforward solution for sharing sensitive information securely:
+Onetime Secret - це просте рішення для безпечного обміну конфіденційною інформацією:
 
-1. One-time access: View shared secrets once, then they're permanently deleted
-2. No registration required: Use basic features without an account
-3. Customizable expiration: Control secret availability with automatic deletion
-4. Intuitive interface: Share secrets easily with our user-friendly design
-5. Optional passphrase: Add an extra security layer to shared secrets
-6. Open-source: Review our codebase for enhanced transparency
+1. Одноразовий доступ: Перегляньте спільні секрети один раз, після чого вони будуть видалені назавжди
+2. Реєстрація не потрібна: Використовуйте основні функції без облікового запису
+3. Налаштовуваний термін дії: Контролюйте доступність секрету за допомогою автоматичного видалення
+4. Інтуїтивно зрозумілий інтерфейс: Легко діліться секретами за допомогою нашого зручного дизайну
+5. Додатковий пароль: Додайте додатковий рівень безпеки до спільних секретів
+6. Відкритий код: Перегляньте нашу кодову базу для більшої прозорості
 
-Explore our Bonus Content to learn how Onetime Secret can address your secure communication needs efficiently and discreetly.
+Ознайомтеся з нашим бонусним контентом, щоб дізнатися, як Onetime Secret може ефективно і непомітно задовольнити ваші потреби в безпечному спілкуванні.
 
-## Get Started
+## Почнімо.
 
-Ready to dive in? Check out our [documentation](/docs) for detailed instructions on using Onetime Secret effectively. If you have any questions or feedback, feel free to [contact us](/contact) directly.
+Готові зануритися в роботу? Ознайомтеся з нашою [документацією](/docs) для отримання детальних інструкцій щодо ефективного використання Onetime Secret. Якщо у вас виникли запитання або побажання, не соромтеся звертатися безпосередньо до нас [зв'язатися з нами](/contact).

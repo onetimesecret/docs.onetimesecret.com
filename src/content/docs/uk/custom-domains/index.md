@@ -1,11 +1,11 @@
 ---
-title: Overview
-description: Elevate your brand and enhance your professional secret sharing experience with Custom Domains, an advanced feature for agencies, businesses, and power users.
+title: Огляд
+description: Підніміть свій бренд та покращіть свій професійний досвід обміну секретною інформацією за допомогою Користувацьких доменів, розширеної функції для агентств, підприємств та досвідчених користувачів.
 ---
 
-## What are Custom Domains?
+## Що таке користувацькі домени?
 
-Custom Domains allow you to use your own domain name for Onetime Secret links, instead of the default _onetimesecret.com_ domain. This feature incorporates your brand identity into the secret sharing experience, enhancing trust and professionalism.
+Користувацькі домени дозволяють вам використовувати власне доменне ім'я для посилань Onetime Secret замість стандартного домену _onetimesecret.com_. Ця функція дозволяє використовувати ваш бренд у процесі обміну секретними посиланнями, підвищуючи довіру та професіоналізм.
 
 <div class="flex justify-center items-center my-10">
   <a href="https://onetimesecret.com/pricing" class="text-center inline-block">
@@ -24,47 +24,47 @@ Custom Domains allow you to use your own domain name for Onetime Secret links, i
 </div>
 
 
-## Key Benefits
+## Основні переваги
 
-1. **Brand Identity**: Share secrets using your own domain name, reinforcing security and professionalism.
-2. **Increased Trust**: Recipients see a familiar domain, boosting their confidence in the shared information.
-3. **Professional Appearance**: Demonstrate a higher level of sophistication and commitment to security.
-4. **Brand Customization**: Upload custom logos and set brand colors to match your visual identity.
-5. **Seamless Integration**: Create a cohesive experience that aligns with your existing digital presence.
-6. **Regional Flexibility**: Choose between EU and US data center regions to meet your data locality needs.
+1. **Ідентифікація бренду**: Діліться секретами, використовуючи власне доменне ім'я, посилюючи безпеку та професіоналізм.
+2. **Підвищення довіри**: Одержувачі бачать знайомий домен, що підвищує їхню довіру до інформації, якою вони діляться.
+3. **Професійний зовнішній вигляд**: Демонструє вищий рівень досконалості та прихильності до безпеки.
+4. **Налаштування бренду**: Завантажуйте власні логотипи та налаштовуйте кольори бренду відповідно до вашої візуальної ідентичності.
+5. **Безшовна інтеграція**: Створіть цілісний досвід, який узгоджується з вашою існуючою цифровою присутністю.
+6. **Регіональна гнучкість**: Обирайте між регіонами центрів обробки даних в ЄС та США, щоб задовольнити свої потреби в розташуванні даних.
 
-## Getting Started
+## Початок роботи
 
-To set up a Custom Domain:
+Налаштування власного домену:
 
-1. Log in to your Onetime Secret account.
-2. Navigate to Account Settings > Custom Domains.
-3. Enter the domain you wish to use and click "Add Domain".
-4. Select your preferred data center region (EU or US).
-5. Follow the step-by-step instructions provided for DNS configuration.
-6. Wait for the domain to be verified. If available, click the "Verify" button to expedite the process. You may need to refresh the page.
+1. Увійдіть до свого облікового запису Onetime Secret.
+2. Перейдіть до Налаштування облікового запису > Користувацькі домени.
+3. Введіть домен, який ви хочете використовувати, і натисніть "Додати домен".
+4. Виберіть бажаний регіон розташування дата-центру (ЄС або США).
+5. Дотримуйтесь покрокових інструкцій, наданих для налаштування DNS.
+6. Дочекайтеся перевірки домену. Якщо це можливо, натисніть кнопку "Підтвердити", щоб прискорити процес. Можливо, вам доведеться оновити сторінку.
 
-For detailed instructions, including how to choose between EU and US regions, please refer to our [Custom Domain Setup Guide](/docs/custom-domains/setup-guide).
+Докладні інструкції, зокрема про те, як вибрати між регіонами ЄС і США, можна знайти в нашому [Посібнику з налаштування користувацьких доменів] (/docs/custom-domains/setup-guide).
 
-## Brand Customization
+## Налаштування бренду
 
-Custom Domain users can personalize their secret sharing interface:
+Користувачі спеціальних доменів можуть персоналізувати свій інтерфейс секретного доступу:
 
-1. Upload company logo (PNG/JPG, max 1MB)
-2. Set custom brand colors using hex codes
-3. Configure homepage visibility settings
-4. Preview changes in real-time
-5. Enable/disable public secret creation
+1. Завантажити логотип компанії (PNG/JPG, макс. 1 МБ)
+2. Встановіть власні фірмові кольори за допомогою шістнадцяткових кодів
+3. Налаштуйте параметри видимості головної сторінки
+4. Перегляд змін в режимі реального часу
+5. Увімкнути/вимкнути створення публічної таємниці
 
-For detailed branding instructions, see our [Brand Guide](/docs/custom-domains/brand-guide).
+Детальні інструкції з брендингу див. у нашому [Посібнику з брендингу] (/docs/custom-domains/brand-guide).
 
 
-## Important Considerations
+## Важливі міркування
 
-- Custom Domains are a premium feature available with the Identity plan.
-- You are responsible for maintaining and renewing your domain registration.
-- Proper SSL/TLS configuration is crucial for security (handled automatically by Onetime Secret).
-- Ensure your chosen domain complies with your organization's branding guidelines.
-- Consider data protection regulations when choosing between [EU and US regions](/docs/regions).
+- Індивідуальні домени - це преміум-функція, доступна в плані Identity.
+- Ви несете відповідальність за підтримку та поновлення реєстрації вашого домену.
+- Належна конфігурація SSL/TLS має вирішальне значення для безпеки (обробляється автоматично за допомогою Onetime Secret).
+- Переконайтеся, що обраний вами домен відповідає правилам брендингу вашої організації.
+- Враховуйте правила захисту даних при виборі між [регіонами ЄС і США] (/docs/regions).
 
-To learn about best practices for using Custom Domains securely, check out our [Security Best Practices](/docs/security-best-practices) guide.
+Щоб дізнатися про найкращі практики безпечного використання власних доменів, перегляньте наш посібник [Найкращі практики безпеки] (/docs/security-best-practices).

@@ -1,64 +1,64 @@
 ---
-title: Privacy
-description: Our approach to protecting user privacy through deliberate design choices
+title: Конфіденційність
+description: Наш підхід до захисту конфіденційності користувачів за допомогою продуманого вибору дизайну
 ---
 
-# Privacy First Practices
+# Першочергові практики конфіденційності
 
-At Onetime Secret, we take a deliberately minimal approach to user privacy. Here's what we deliberately choose not to do, and more importantly, why.
+В Onetime Secret ми застосовуємо навмисно мінімальний підхід до конфіденційності користувачів. Ось що ми свідомо вирішили не робити, і, що важливіше, чому.
 
-## Our No-Email Philosophy
+## Наша філософія без електронної пошти
 
-Most services flood your inbox with:
+Більшість сервісів переповнюють вашу поштову скриньку:
 
-- Marketing newsletters
-- Product updates
-- Usage statistics
-- Feature announcements
-- Promotional offers
-- Re-engagement campaigns
+- Маркетингові розсилки
+- Оновлення продуктів
+- Статистика використання
+- Анонси новинок
+- Рекламні пропозиції
+- Кампанії з повторного залучення
 
-We limit our email communications to only the most essential communications: secret link deliveries and critical account notifications. We'll never send marketing emails or unsolicited updates. We believe your inbox belongs to you.
+Ми обмежуємо наші електронні повідомлення лише найнеобхіднішими повідомленнями: секретними посиланнями та сповіщеннями про важливі акаунти. Ми ніколи не надсилаємо маркетингових листів або небажаних оновлень. Ми вважаємо, що ваша поштова скринька належить вам.
 
-## Industry Standards We Skip
+## Галузеві стандарти, які ми пропускаємо
 
-We deliberately avoid common tracking and marketing tools:
+Ми свідомо уникаємо поширених інструментів відстеження та маркетингу:
 
-- Analytics packages that track user behavior
-- Social media integration buttons
-- Advertising networks
-- A/B testing frameworks
-- Marketing automation tools
-- Third-party tracking pixels
+- Пакети аналітики, які відстежують поведінку користувачів
+- Кнопки інтеграції з соціальними мережами
+- Рекламні мережі
+- Фреймворки для A/B тестування
+- Інструменти автоматизації маркетингу
+- Сторонні пікселі відстеження
 
-## Why This Matters
+## Чому це важливо?
 
-Our approach centers on three core principles:
+Наш підхід базується на трьох основних принципах:
 
-1. **Respect privacy**: Your data is yours, period
-2. **Focus on reliability**: The tool should simply work when you need it
-3. **Build trust through action**: We prove our commitment through what we don't do
+1. **Поважати конфіденційність: Ваші дані належать вам, крапка
+2. **Зосередьтеся на надійності: Інструмент повинен просто працювати, коли він вам потрібен
+3. **Будуємо довіру через дії: Ми доводимо свою відданість тим, чого не робимо
 
-## The Real Impact
+## Реальний вплив
 
-By avoiding standard marketing and tracking practices, we:
+Уникаючи стандартних практик маркетингу та відстеження, ми:
 
-- Maintain a cleaner, faster service
-- Reduce potential security vulnerabilities
-- Keep your data under direct control
-- Stay focused on our core purpose
+- Підтримуйте чистіший, швидший сервіс
+- Зменшуйте потенційні вразливості безпеки
+- Тримайте свої дані під прямим контролем
+- Зосередьтеся на нашій основній меті
 
-We invest our time in:
+Ми вкладаємо свій час:
 
-- **Core Functionality**: Improving the essential features that matter to users
-- **Privacy Protection**: Strengthening safeguards for user data
-- **Service Reliability**: Ensuring the service is there when you need it
-- **Compliance**: Meeting legal and regulatory requirements
+- **Основна функціональність**: Покращення основних функцій, важливих для користувачів
+- **Захист конфіденційності**: Посилення захисту даних користувачів
+- Надійність сервісу: Забезпечення доступності сервісу, коли він вам потрібен
+- **Відповідність**: Відповідність законодавчим та нормативним вимогам
 
-## Looking Forward
+## З нетерпінням чекаю
 
-We'll continue prioritizing simplicity and privacy over marketing reach. While this means we might grow more slowly than services that aggressively market themselves, we believe it's the right choice for a privacy-focused tool.
+Ми й надалі надаватимемо перевагу простоті та конфіденційності перед маркетинговим охопленням. Хоча це означає, що ми можемо рости повільніше, ніж сервіси, які агресивно просувають себе на ринку, ми вважаємо, що це правильний вибір для інструменту, орієнтованого на конфіденційність.
 
-You can trust Onetime Secret to be there when you need it, without the constant reminders that you have an account with us.
+Ви можете довіряти Onetime Secret, що він буде поруч, коли вам це потрібно, без постійних нагадувань про те, що у вас є обліковий запис у нас.
 
-**Questions about our approach?** [Contact us](https://onetimesecret.com/feedback).
+**Виникли запитання щодо нашого підходу? [Зв'яжіться з нами] (https://onetimesecret.com/feedback).

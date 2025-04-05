@@ -1,42 +1,42 @@
 ---
-title: Trust
-description: Our commitment to being open and honest about our practices
-icon: eye
+title: Довіра
+description: Наше зобов'язання бути відкритими та чесними щодо наших практик
+icon: око
 ---
 
-# Transparency and Trust
+# Прозорість і довіра
 
-We believe that trust is earned through radical transparency about our practices, technologies, and commitments.
+Ми віримо, що довіра заслуговує на радикальну прозорість щодо наших практик, технологій та зобов'язань.
 
-## Our Transparency Commitments
+## Наші зобов'язання щодо прозорості
 
-- Open-source our core technologies
-- Publish clear, understandable privacy policies
-- Provide detailed security and infrastructure reports
-- Maintain an ongoing dialogue with our user community
-- Avoid standard tracking and marketing practices
-- Keep your data under direct control
+- Відкрийте наші основні технології з відкритим вихідним кодом
+- Публікуйте чітку та зрозумілу політику конфіденційності
+- Надавати детальні звіти про безпеку та інфраструктуру
+- Підтримувати постійний діалог з нашою спільнотою користувачів
+- Уникати стандартних методів відстеження та маркетингу
+- Тримати ваші дані під прямим контролем
 
-## Why Transparency Matters
+## Чому прозорість важлива
 
-In an era of complex digital services, we stand out by being completely clear about how we handle data, what we do, and why we do it. Our approach centers on three core principles:
+В епоху складних цифрових послуг ми вирізняємося тим, що абсолютно чітко розуміємо, як ми обробляємо дані, що ми робимо і чому ми це робимо. Наш підхід базується на трьох основних принципах:
 
-1. Respect privacy: Your data is yours, period
-2. Focus on reliability: The tool should simply work when you need it
-3. Build trust through action: We prove our commitment through what we avoid
+1. Поважайте конфіденційність: Ваші дані належать вам, і крапка
+2. Зосередьтеся на надійності: Інструмент повинен просто працювати, коли він вам потрібен
+3. Будуйте довіру через дії: Ми доводимо свою відданість тим, чого уникаємо
 
-## Our Privacy-First Approach
+## Наш підхід, орієнтований на конфіденційність
 
-We deliberately avoid common industry practices that could compromise privacy:
+Ми свідомо уникаємо загальноприйнятих галузевих практик, які можуть поставити під загрозу конфіденційність:
 
-- Analytics packages that track user behavior
-- Social media integration buttons
-- Advertising networks
-- Marketing automation tools
-- Third-party tracking pixels
+- Пакети аналітики, які відстежують поведінку користувачів
+- Кнопки інтеграції з соціальними мережами
+- Рекламні мережі
+- Інструменти автоматизації маркетингу
+- Сторонні пікселі відстеження
 
-## Looking Forward
+## З нетерпінням чекаю
 
-We'll continue prioritizing transparency and privacy over marketing reach. While this means we might grow more slowly than services that aggressively market themselves, we believe it's the right choice for building lasting trust with our users.
+Ми й надалі надаватимемо пріоритет прозорості та конфіденційності над маркетинговим охопленням. Хоча це означає, що ми можемо рости повільніше, ніж сервіси, які агресивно просувають себе на ринку, ми вважаємо, що це правильний вибір для побудови довготривалої довіри з нашими користувачами.
 
-Have thoughts about our approach? [Contact us](https://onetimesecret.com/feedback).
+Маєте думки щодо нашого підходу? [Зв'яжіться з нами (https://onetimesecret.com/feedback).

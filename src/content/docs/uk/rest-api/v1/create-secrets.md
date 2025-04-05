@@ -1,87 +1,87 @@
 ---
-title: Creating Secrets
-description: Learn how to create and retrieve secrets using the Onetime Secret REST API, with support for both authenticated and anonymous usage.
+title: Створення секретів
+description: Дізнайтеся, як створювати та отримувати секрети за допомогою Onetime Secret REST API, з підтримкою як авторизованого, так і анонімного використання.
 ---
 
-_Updated 2025-04-02_
+_Оновлено 2025-04-02_
 
-:::note
-**Data Locality and Region Selection**
-- Choose between US ([`us.onetimesecret.com`](https://us.onetimesecret.com/)) or EU ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) data centers
-- Consider factors like data sovereignty, latency, and compliance requirements
-- **NOTE:** Default `onetimesecret.com` remains operational and routes to an active data center, using a specific locality is recommended as this functionality may be deprecated in the future.
+:::примітка
+**Вибір міста та регіону зберігання даних
+- Обирайте між центрами обробки даних у США ([`us.onetimesecret.com`](https://us.onetimesecret.com/)) або ЄС ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/))
+- Враховуйте такі фактори, як суверенітет даних, затримка та вимоги до відповідності
+- За замовчуванням `onetimesecret.com` залишається робочим і спрямовує до активного центру обробки даних, рекомендується використовувати конкретну локацію, оскільки ця функціональність може бути застарілою в майбутньому.
 :::
 
 
-## Create a Secret
+## Створити секрет
 
 `POST https://REGION.onetimesecret.com/api/v1/share`
 
-Use this endpoint to store a secret value and create a onetime use link.
+Використовуйте цю кінцеву точку для зберігання секретного значення і створення одноразового посилання.
 
 
-### Authenticated Request
+### Аутентифікований запит
 
 ```bash
 $ curl -X POST -u 'USERNAME:APITOKEN' -d 'secret=SECRET&ttl=NUMBER_IN_SECONDS' https://us.onetimesecret.com/api/v1/share
 ```
 
-### Anonymous Request
+### Анонімний запит
 
 ```bash
 $ curl -X POST -d 'secret=SECRET&ttl=3600' https://us.onetimesecret.com/api/v1/share
 ```
 
-### Query Params
+### Параметри запиту
 
-- **secret**: the secret value which is encrypted before being stored. There is a maximum length based on your plan that is enforced (1k-10k).
-- **passphrase**: a string that the recipient must know to view the secret. This value is also used to encrypt the secret and is bcrypted before being stored so we only have this value in transit.
-- **ttl**: the maximum amount of time, in seconds, that the secret should survive (i.e. time-to-live). Once this time expires, the secret will be deleted and not recoverable.
-- **recipient**: an email address. We will send a friendly email containing the secret link (NOT the secret itself).
-- **share_domain**: the custom domain to use when generating the secret link. If not provided, the default domain is used (e.g. eu.onetimesecret.com).
+- **secret**: секретне значення, яке шифрується перед збереженням. Існує максимальна довжина, яка залежить від вашого плану і є обов'язковою (1k-10k).
+- **парольна фраза**: рядок, який одержувач повинен знати, щоб переглянути секрет. Це значення також використовується для шифрування секрету і шифрується перед збереженням, тому ми маємо це значення лише під час передачі.
+- **ttl**: максимальний час у секундах, протягом якого секрет повинен зберігатися (тобто час життя). Після закінчення цього часу секрет буде видалений і не підлягатиме відновленню.
+- **одержувач**: адреса електронної пошти. Ми надішлемо вам дружній лист, що містить посилання на секрет (НЕ сам секрет).
+- **домен_посилання**: власний домен, який буде використано для створення секретного посилання. Якщо не вказано, використовується домен за замовчуванням (наприклад, eu.onetimesecret.com).
 
-### Attributes
+### Атрибути
 
-- **custid**: the username of the account that created the secret. This value will be `anon` for anonymous requests.
-- **metadata\_key**: the unique key for the metadata. DO NOT share this.
-- **secret\_key**: the unique key for the secret you create. This is key that you can share.
-- **ttl**: The time-to-live (in seconds) that was specified (i.e. not the time remaining)
-- **metadata\_ttl**: The remaining time (in seconds) that the metadata has left to live.
-- **secret\_ttl**: The remaining time (in seconds) that the secret has left to live.
-- **recipient**: if a recipient was specified, this is an obfuscated version of the email address.
-- **created**: Time the secret was created in unix time (UTC)
-- **updated**: ditto, but the time it was last updated.
-- **passphrase\_required**: If a passphrase was provided when the secret was created, this will be true. Otherwise false, obviously.
-- **share_domain** : the custom domain to use when generating the secret link. Otherwise "".
+- **custid**: ім'я користувача облікового запису, який створив секрет. Це значення буде `anon` для анонімних запитів.
+- **metadata\_key**: унікальний ключ для метаданих. НЕ повідомляйте його нікому.
+- **secret\_key**: унікальний ключ для створеного вами секрету. Це ключ, яким ви можете поділитися.
+- **ttl**: Час життя (в секундах), який було вказано (тобто не час, що залишився).
+- **metadata\_ttl**: Час, що залишився (у секундах), який залишився для метаданих.
+- **secret\_ttl**: Час (у секундах), що залишився до кінця життя секрету.
+- **recipient**: якщо було вказано одержувача, це завуальована версія адреси електронної пошти.
+- **created**: Час створення секрету в юнікс-часі (UTC)
+- **updated**: те саме, але час останнього оновлення.
+- **парольна фраза\_обов'язкова**: Якщо при створенні секрету було вказано парольну фразу, це буде істина. В іншому випадку, очевидно, буде хибним.
+- **share_domain** : користувацький домен для використання при створенні секретного посилання. Інакше "".
 
 
-### Example Response:
+### Приклад відповіді:
 
 ```json
 {
-  "custid":"USERNAME",
-  "metadata_key":"qjpjroeit8wra0ojeyhcw5pjsgwtuq7",
+  "custid": "USERNAME",
+  "metadata_key": "qjpjroeit8wra0ojeyhcw5pjsgwtuq7",
   "secret_key":"153l8vbwqx5taskp92pf05uvgjefvu9",
-  "ttl":"3600",
+  "ttl": "3600",
   "share_domain": "",
   "updated":"1324174006",
   "created":"1324174006"
 }
 ```
 
-## Generate a Secret
+## Згенерувати секрет
 
 `POST https://REGION.onetimesecret.com/api/v1/generate`
 
-Generate a short, unique secret. This is useful for temporary passwords, Onetime pads, salts, etc.
+Згенеруйте короткий, унікальний секрет. Це корисно для тимчасових паролів, одноразових прокладок, солей тощо.
 
-### Authenticated Request
+### Аутентифікований запит
 
 ```bash
 $ curl -X POST -u 'USERNAME:APITOKEN' -d 'ttl=NUMBER_IN_SECONDS' https://us.onetimesecret.com/api/v1/generate
 ```
 
-### Anonymous Request
+### Анонімний запит
 
 ```bash
 $ curl -X POST -d 'ttl=3600' https://us.onetimesecret.com/api/v1/generate
@@ -90,17 +90,17 @@ $ curl -X POST -d 'ttl=3600' https://us.onetimesecret.com/api/v1/generate
 
 ```json
 {
-  "custid":"USERNAME",
+  "custid": "USERNAME",
   "value":"3Rg8R2sfD3?a",
-  "metadata_key":"2b6bjmudhmtiqjn2qmdaqjkqxp323gi",
-  "secret_key":"pgcdv7org3vtdurif809sygnt0mstw6",
-  "ttl":"3600",
+  "metadata_key": "2b6bjmudhmtiqjn2qmdaqjkqxp323gi",
+  "secret_key": "pgcdv7org3vtdurif809sygnt0mstw6",
+  "ttl": "3600",
   "share_domain": "",
   "updated":"1324174095",
   "created":"1324174095"
 }
 ```
 
-### Attributes
+### Атрибути
 
-Same as "Share A Secret" above, with the addition of the `value` field.
+Те ж саме, що і "Поділитися секретом" вище, з додаванням поля "значення".

@@ -1,41 +1,41 @@
 ---
-title: Use Cases
-description: Common scenarios where Custom Domains enhance security for sensitive information sharing.
+title: Приклади використання
+description: Поширені сценарії, в яких користувацькі домени підвищують безпеку обміну конфіденційною інформацією.
 ---
 
-##  Use Cases for Custom Domains
+## Варіанти використання для користувацьких доменів
 
-Secret Links with Custom Domains provide a high-degree of security for sensitive data sharing while maintaining brand consistency and continuity. Here are some ways that our customers use our service.
+Секретні посилання з власними доменами забезпечують високий рівень безпеки для обміну конфіденційними даними, зберігаючи при цьому цілісність і безперервність бренду. Ось кілька способів, як наші клієнти використовують нашу послугу.
 
-### 1. Onboarding or invoicing clients
+### 1. Реєстрація або виставлення рахунків клієнтам
 
-When requesting sensitive information from a client, such as financial details or credit card information, ask them to share it by creating a secret link at secrets.example.com. This ensures that the information is shared securely and is only accessible to the intended recipient.
+Запитуючи у клієнта конфіденційну інформацію, наприклад, фінансові дані або інформацію про кредитну картку, попросіть його поділитися нею, створивши секретне посилання на secrets.example.com. Це гарантує, що інформація буде передана безпечно і буде доступна лише тому, кому вона призначена.
 
-**Benefit**: By using a custom domain, you can reinforce your brand identity and build trust with your clients. The client will recognize the domain and feel more confident sharing sensitive information.
+**Перевага**: Використовуючи власний домен, ви можете посилити ідентичність свого бренду та побудувати довіру з клієнтами. Клієнт впізнає домен і почуватиметься впевненіше, коли ділитиметься конфіденційною інформацією.
 
-### 2. DevOps Credentials
+### 2. Облікові дані DevOps
 
-When managing deployments across multiple environments and teams, share temporary access credentials through secure.example.com. Development teams can safely exchange database passwords, API tokens, and configuration files that automatically expire after first use, preventing these sensitive details from being exposed in code repositories, chat logs, or email threads.
+Керуючи розгортанням у різних середовищах і командах, діліться тимчасовими обліковими даними доступу через secure.example.com. Команди розробників можуть безпечно обмінюватися паролями до баз даних, токенами API і файлами конфігурації, термін дії яких автоматично закінчується після першого використання, запобігаючи потраплянню цих конфіденційних даних до сховищ коду, журналів чату або потоків електронної пошти.
 
-**Benefit**: By integrating your custom domain with automated CI/CD pipelines, you maintain security best practices while keeping credential management seamless within your development workflow. Devs can trust that credentials come from an authorized source, and automated rotation ensures that exposed credentials cannot be reused.
+**Перевага**: Інтегруючи ваш власний домен з автоматизованими конвеєрами CI/CD, ви підтримуєте найкращі практики безпеки, зберігаючи при цьому безперебійне управління обліковими даними в робочому процесі розробки. Розробники можуть бути впевнені, що облікові дані надходять з авторизованого джерела, а автоматизована ротація гарантує, що відкриті облікові дані не можуть бути використані повторно.
 
-### 3. Employee Onboarding
+### 3. Прийом на роботу
 
-When bringing new team members aboard, streamline their first-day access by sending temporary login credentials through access.example.com. HR and IT teams can prepare individualized welcome packages containing initial passwords, VPN configurations, and sensitive documentation links that expire once accessed, ensuring that credentials don't linger in email inboxes or get accidentally forwarded.
+Приєднуючи нових членів команди, спростіть їхній доступ у перший день роботи, надіславши тимчасові облікові дані для входу через сайт access.example.com. HR- та ІТ-команди можуть підготувати індивідуальні вітальні пакети, що містять початкові паролі, конфігурації VPN та посилання на конфіденційну документацію, термін дії яких закінчується одразу після отримання доступу, що гарантує, що облікові дані не затримуватимуться у поштових скриньках та не будуть випадково переадресовані.
 
-**Benefit**: By using your branded domain for credential distribution, you create a professional onboarding experience while establishing healthy security practices. New employees can confidently access resources knowing they're coming from a trusted company source.
+**Перевага**: Використовуючи свій фірмовий домен для розповсюдження облікових даних, ви створюєте професійний досвід адаптації, одночасно впроваджуючи здорові практики безпеки. Нові співробітники можуть впевнено отримувати доступ до ресурсів, знаючи, що вони походять з надійного джерела компанії.
 
-### 4. Private HR Communications
+### 4. Приватні комунікації з персоналом
 
-When handling sensitive employee information such as salary details, tax identification numbers, or benefits enrollment codes, share confidential data through hrinfo.example.com. HR teams can send time-sensitive links to individual employees containing their personal information as secure text, ensuring that sensitive details expire after access and remain protected in compliance with data privacy regulations.
+При роботі з конфіденційною інформацією про співробітників, такою як дані про заробітну плату, податкові ідентифікаційні номери або коди реєстрації для отримання пільг, діліться конфіденційними даними через hrinfo.example.com. HR-команди можуть надсилати окремим працівникам посилання, що містять їхню особисту інформацію у вигляді захищеного тексту, гарантуючи, що термін дії конфіденційної інформації закінчується після доступу до неї і вона залишається захищеною відповідно до законодавства про конфіденційність даних.
 
-**Benefit**: By utilizing your company's branded domain for confidential HR communications, you maintain professional standards while meeting compliance requirements for handling personally identifiable information. Employees can securely access their sensitive information through a trusted channel that reinforces your commitment to data protection.
+**Перевага**: Використовуючи фірмовий домен вашої компанії для конфіденційного спілкування з персоналом, ви підтримуєте професійні стандарти, водночас виконуючи вимоги щодо обробки персональних даних. Співробітники можуть отримати безпечний доступ до своєї конфіденційної інформації через надійний канал, що посилює вашу прихильність до захисту даних.
 
-### 5. Temporary Staff Access
-When managing rotating clinical staff, residents, or temporary personnel, securely communicate initial login credentials through tempaccess.example.com. Administrative teams can create time-sensitive links containing system usernames and temporary passwords, where the secure message containing these credentials expires after first viewing.
+### 5. Доступ тимчасового персоналу
+При управлінні ротаційними клінічними працівниками, резидентами або тимчасовим персоналом, безпечно передавайте початкові облікові дані для входу через tempaccess.example.com. Адміністративні команди можуть створювати чутливі до часу посилання, що містять системні імена користувачів і тимчасові паролі, де захищене повідомлення, що містить ці облікові дані, втрачає чинність після першого перегляду.
 
-Note: When implementing this solution, ensure your complete security stack maintains compliance with relevant healthcare regulations such as HIPAA or GDPR. OneTimeSecret should be used only for the secure communication of initial access credentials, while actual system access durations and permissions should be managed through your organization's access control systems. While the service provides more security than email for sharing sensitive information like PHI, it should be used as a stopgap rather than a permanent solution for such data - consider implementing dedicated HIPAA-compliant secure messaging systems for regular PHI communication.
+Примітка: Впроваджуючи це рішення, переконайтеся, що ваш повний стек безпеки відповідає відповідним нормам у сфері охорони здоров'я, таким як HIPAA або GDPR. OneTimeSecret слід використовувати лише для безпечної передачі початкових облікових даних доступу, тоді як фактичною тривалістю доступу до системи та дозволами слід керувати за допомогою систем контролю доступу вашої організації. Хоча сервіс забезпечує більший рівень безпеки, ніж електронна пошта, для обміну конфіденційною інформацією, такою як PHI, його слід використовувати як тимчасове, а не постійне рішення для таких даних - розгляньте можливість впровадження спеціальних HIPAA-сумісних систем безпечного обміну повідомленнями для регулярного обміну PHI.
 
-## Summary
+## Підсумок
 
-The ability to generate secure, time-bound links through your branded domain provides additional security without compromising efficiency. Each use case demonstrates how Custom Domains enhance both security posture and professional presence.
+Можливість генерувати безпечні, обмежені в часі посилання через ваш фірмовий домен забезпечує додаткову безпеку без шкоди для ефективності. Кожен приклад використання демонструє, як власні домени підвищують рівень безпеки та професійної присутності.

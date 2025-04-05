@@ -1,33 +1,33 @@
 ---
-title: Our Principles
-description: The core values and guiding principles that drive our approach to privacy and security
+title: Наші принципи
+description: Основні цінності та керівні принципи, які визначають наш підхід до конфіденційності та безпеки
 layout: page
 ---
 
-# Principles
+# Принципи
 
-Welcome to Onetime Secret's guiding principles. These foundational documents explain our approach to:
+Ласкаво просимо до керівних принципів Onetime Secret. Ці основоположні документи пояснюють наш підхід до:
 
-- Privacy and data minimization
-- User communication and transparency
-- Service reliability and trust
-- Operational practices
+- Конфіденційність та мінімізація даних
+- Спілкування з користувачами та прозорість
+- Надійність та довіра до послуг
+- Операційні практики
 
-## Our Commitments
+## Наші зобов'язання
 
-- **[Privacy First](/principles/privacy-first)**: Our approach to protecting user privacy through deliberate design choices
-- **[Building Trust](/principles/trust)**: How we earn and maintain user trust through actions, not words
-- **[Communication Philosophy](/principles/communication)**: Why we limit email communication to only what's necessary
-- **[Data Minimization](/principles/data-minimization)**: Our commitment to collecting and retaining only the most essential data
+- **[Конфіденційність понад усе](/uk/principles/privacy-first)**: Наш підхід до захисту приватності користувачів за допомогою продуманого вибору дизайну
+- **[Побудова довіри](/uk/principles/trust)**: Як ми завойовуємо та підтримуємо довіру користувачів діями, а не словами
+- **[Філософія спілкування](/uk/principles/communication)**: Чому ми обмежуємо спілкування електронною поштою лише необхідним
+- **[Мінімізація даних](/uk/principles/data-minimization)**: Наше зобов'язання збирати та зберігати лише найнеобхідніші дані
 
 
-## Why Principles Matter
+## Чому принципи мають значення
 
-At Onetime Secret, our principles guide every decision we make. They help us:
+В Onetime Secret наші принципи керують кожним рішенням, яке ми приймаємо. Вони допомагають нам:
 
-- Stay focused on what matters
-- Make consistent choices
-- Build lasting trust
-- Maintain transparency
+- Зосередьтеся на головному
+- Робіть послідовний вибір
+- Створюйте довготривалу довіру
+- Підтримуйте прозорість
 
-These aren't just guidelines - they're commitments to our users that shape how we operate.
+Це не просто рекомендації - це зобов'язання перед нашими користувачами, які визначають те, як ми працюємо.

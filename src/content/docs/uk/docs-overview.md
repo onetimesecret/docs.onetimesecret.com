@@ -1,19 +1,19 @@
 ---
-title: Welcome to the Documentation
-description: Use the navigation menu to explore the Onetime Secret documentation. You'll find everything you need to know about creating, sharing, and managing secure, self-destructing messages.
+title: Ласкаво просимо до документації
+description: Використовуйте меню навігації для вивчення документації Onetime Secret. Ви знайдете все, що вам потрібно знати про створення, обмін та керування безпечними повідомленнями, що самознищуються.
 ---
 
-# Onetime Secret Documentation
+# Одноразова таємна документація
 
-Use the navigation menu to explore the Onetime Secret documentation. You'll find everything you need to know about creating, sharing, and managing secure, self-destructing messages.
+Використовуйте меню навігації, щоб ознайомитися з документацією Onetime Secret. Ви знайдете все, що вам потрібно знати про створення, обмін і керування безпечними самознищуваними повідомленнями.
 
-## Getting Started
+## Початок роботи
 
-Start with our [Introduction](/en/introduction/) section to learn the basics of Onetime Secret.
+Почніть з нашого розділу [Вступ](/uk/introduction/), щоб дізнатися основи Onetime Secret.
 
-## Key Sections
+## Ключові розділи
 
-- [Secret Links](/en/secret-links/) - Learn how to create and share one-time secrets
-- [Custom Domains](/en/custom-domains/) - Set up your own branded secret sharing experience
-- [REST API](/en/rest-api/) - Integrate Onetime Secret with your applications
-- [Security Best Practices](/en/security-best-practices/) - Ensure maximum security when sharing sensitive information
+- [Секретні посилання](/uk/secret-links/) - Дізнайтеся, як створювати та ділитися одноразовими секретами
+- [Користувацькі домени](/uk/custom-domains/) - створіть свій власний бренд для обміну секретами
+- [REST API](/uk/rest-api/) - інтегруйте Onetime Secret з вашими програмами
+- [Кращі практики безпеки](/uk/security-best-practices/) - Забезпечте максимальну безпеку під час обміну конфіденційною інформацією

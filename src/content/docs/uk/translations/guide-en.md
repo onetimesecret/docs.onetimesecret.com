@@ -1,274 +1,295 @@
 ---
-title: Translation style guide
-description: A comprehensive guide for translators working on Onetime Secret localization, covering brand voice, terminology standards, and language-specific requirements to ensure high-quality and consistent translations
+title: Посібник зі стилю перекладу
+description: Вичерпний посібник для перекладачів, які працюють над локалізацією Onetime Secret, що охоплює стилістику бренду, стандарти термінології та специфічні мовні вимоги для забезпечення якісного та послідовного перекладу.
 ---
 
-## Translation Style Guide English, Canada (en-CA)
+## Посібник зі стилю перекладу Англійська, Канада (en-CA)
 
-![Translation Style Guide](/socialcards/onetime-socialcard-20250226-1.png)
+![Посібник зі стилю перекладу](/socialcards/onetime-socialcard-20250226-1.png)
 
-This style guide provides instruction for translating to the Canadian English locale.
+Цей посібник зі стилю містить інструкції щодо перекладу на канадський варіант англійської мови.
 
-| *This Style Guide is based on content from [Mozilla L10N Styleguides](https://github.com/mozilla-l10n/styleguides/) by Mozilla Contributors, licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).*  |
-|  |
+| Цей посібник зі стилів створено на основі вмісту [Mozilla L10N Styleguides](https://github.com/mozilla-l10n/styleguides/) від Mozilla Contributors, ліцензованого під [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).*
+| |
 
-## Target Audience
+## Цільова аудиторія
 
-Our English-speaking audience includes:
+Наша англомовна аудиторія в тому числі:
 
-### Customers
+### Клієнти
 
-- Professional background: IT professionals, agency teams (design, development, marketing), and corporate support teams (HR, provisioning, logistics, finance)
-- Audience: Professionals ages 20-50 with some tech proficiency. These individuals have chosen or work for a company that has chosen to incorporate Onetime Secret into their workflow.
-- Location: North America, UK, Ireland, New Zealand, Australia, Netherlands, Germany
-- Writing approach: Use clear, accessible language with professional tone
+- Професійний досвід: ІТ-фахівці, команди агентств (дизайн, розробка, маркетинг) та команди корпоративної підтримки (HR, забезпечення, логістика, фінанси)
+- Аудиторія: Фахівці віком 20-50 років з певними технічними навичками. Ці люди обрали або працюють у компанії, яка вирішила впровадити Onetime Secret у свій робочий процес.
+- Місце проведення: Північна Америка, Великобританія, Ірландія, Нова Зеландія: Північна Америка, Великобританія, Ірландія, Нова Зеландія, Австралія, Нідерланди, Німеччина
+- Підхід до написання: Використовуйте чітку, доступну мову з професійним тоном
 
-### Recipients
+### Одержувачі
 
-- Audience: Diverse age range (18-80) including students, seniors, parents, clients, coworkers. These individuals may have never heard of Onetime Secret and generally have less context around how it works/
-- Writing approach: Clear, accessible language with an empathetic tone
+- Аудиторія: Різноманітний віковий діапазон (18-80), включаючи студентів, пенсіонерів, батьків, клієнтів, колег. Ці люди можуть ніколи не чути про Onetime Secret і, як правило, мають менше інформації про те, як він працює.
+- Підхід до написання: Ясна, доступна мова з емпатичним тоном
 
 
-**Translation Note:** These audience descriptions provide context about how the product is used by different groups and should inform translation tone and style. They are not intended to define or limit how we view our customers.
+**Примітка перекладача:** Ці описи аудиторії дають уявлення про те, як продукт використовується різними групами, і мають впливати на тон і стиль перекладу. Вони не призначені для визначення або обмеження того, як ми бачимо наших клієнтів.
 
-## Brand Voice
+## Голос бренду
 
-About the brand voice and tone.
+Про голос і тон бренду.
 
-### Core Values
+### Основні цінності
 
-- Authentic and transparent
+- Автентичність і прозорість
 
-- Patient and focused
+- Терплячі та зосереджені
 
-- Efficient without sacrificing quality
+- Ефективність без втрати якості
 
-- Professional yet approachable
+- Професійно, але доступно
 
-### Communication Principles
+### Принципи комунікації
 
-- Adapt tone to match user expertise, from beginners to security professionals
+- Адаптуйте тон відповідно до досвіду користувачів, від новачків до професіоналів у сфері безпеки
 
-- Balance friendliness with reliability
+- Баланс між дружелюбністю та надійністю
 
-- Prioritize clarity over casual language
+- Надавайте перевагу чіткості, а не невимушеній мові
 
-- Provide delightful experiences through thoughtful interactions
+- Забезпечуйте чудові враження завдяки продуманій взаємодії
 
-### Writing Guidelines
+### Поради щодо написання статті
 
-- Use clear, direct language that respects users' time
+- Використовуйте чітку, пряму мову, яка поважає час користувачів
 
-- Maintain a helpful, patient tone even when explaining complex concepts
+- Підтримуйте доброзичливий, терплячий тон, навіть коли пояснюєте складні поняття
 
-- Write with warmth while keeping focus on the task
+- Пишіть з теплом, зберігаючи фокус на завданні
 
-- Scale technical detail based on user context
+- Масштабуйте технічні деталі на основі контексту користувача
 
-- Casual language should not be used at the expense of clarity, regardless of the context.
+- Не слід використовувати невимушену мову на шкоду ясності, незалежно від контексту.
 
-## Language preferences
+## Мовні уподобання
 
-*Guidance: This involves determining language-specific preferences, such as spelling variations, punctuation rules, and date and time formats, which resonate with your target audience. — Remember, adhering closely to your audience's language preferences can significantly reduce barriers to communication and enhance their experience with the brand.*
+*Настанови: Це передбачає визначення мовних уподобань, таких як варіанти написання, правила пунктуації та формати дати і часу, які резонують з вашою цільовою аудиторією. - Пам'ятайте, що точне дотримання мовних уподобань вашої аудиторії може значно зменшити бар'єри у спілкуванні та покращити її досвід роботи з брендом.*.
 
-- Use American English. However for date formats use yyyy-mm-dd and times use 24h. Distances in km, weights in lbs.
-- Translations should sound as natural as possible. Borrowed words should never be used (with the exception of branded names).
-- Our english speaking audience is 50% english as a first language and 50% as a second/third/professional language. We need to keep this in mind when choosing terms and phrases to avoid inappropriate or confusing translations.
-- The word "secret" is central to our brand, product, and communication strategy. We protect secrets. We also provide a secret service.
+- Використовуйте американську англійську. Однак для дат використовуйте формат рррр-мм-дд, а для часу - 24 години. Відстані в км, вагу в фунтах.
+- Переклади повинні звучати якомога природніше. Не слід використовувати запозичені слова (за винятком фірмових назв).
+- Наша англомовна аудиторія на 50% володіє англійською як першою мовою і на 50% - як другою/третьою/професійною. Ми повинні пам'ятати про це при виборі термінів і фраз, щоб уникнути недоречних або заплутаних перекладів.
+- Слово "секрет" є центральним для нашого бренду, продукту та комунікаційної стратегії. Ми захищаємо секрети. Ми також надаємо секретні послуги.
 
-### Translating the word "secret"
+### Переклад слова "секрет"
 
-The word secret can take a number of meanings with subtle but important differences. Our canonical example comes from an update to our Danish translation by [jetdk](https://github.com/onetimesecret/onetimesecret/pull/956#issue-2782747525):
+Слово "секрет" може мати кілька значень з тонкими, але важливими відмінностями. Наш канонічний приклад походить з оновлення перекладу данською мовою від [jetdk] (https://github.com/onetimesecret/onetimesecret/pull/956#issue-2782747525):
 
-#### Word Choice: "Beskeder" vs "Hemmeligheder"
+#### Вибір слів: "Beskeder" vs "Hemmeligheder"
 
-CORRECT:   **Beskeder** (messages)
-INCORRECT: Hemmeligheder (secrets)
+ПРАВИЛЬНО:   **Beskeder** (повідомлення)
+НЕПРАВИЛЬНО: Hemmeligheder (секрети)
 
-The term "Beskeder" should be used when referring to a secret (e.g. a secret message or secret link that is generated by Onetime Secret). While "Hemmeligheder" is a literal translation of "Secrets", it carries connotations of personal or hidden information in everyday Danish usage that don't match the intended meaning.
+Термін "Beskeder" слід використовувати, коли йдеться про секрет (наприклад, секретне повідомлення або секретне посилання, яке генерує Onetime Secret). Хоча "Hemmeligheder" є дослівним перекладом слова "секрети", у повсякденному данському вжитку він має конотації особистої або прихованої інформації, які не відповідають його прямому значенню.
 
-Example usage:
+Приклад використання:
 
-✅ Du har 3 nye beskeder (You have 3 new messages)
-❌ Du har 3 nye hemmeligheder (You have 3 new secrets)
+✅ Du har 3 nye beskeder (У вас 3 нових повідомлення)
+❌ Ви маєте 3 нові секрети (Ви маєте 3 нові секрети)
 
-## Grammar and style guidelines
+### Переклад слова "секрет" українською мовою
 
-*Guidance: Pinpoint rules for grammar, style, and punctuation to maintain consistency throughout all your translated content.*
+В українській мові є кілька варіантів перекладу слова "secret":
 
-- Use oxford commas, periods, and question marks. Avoid exclamations, contractions, and semi-colons.
-- Use active, imperative voice where users take action. Use passive or declarative voice when informing users.
-- Sentence fragments are ok on their own. Otherwise full sentences with proper business grammar.
-- Divide lengthy information into multiple sentences, if needed.
-- In general, use the second person (`you`) to address the user.
-- Avoid using the first person (`my`, `I`) as it can create confusion about who is being addressed.
+- **секрет** (sekret) - пряме запозичення, має особисту конотацію
+- **таємниця** (tayemnytsya) - більш формальний термін для секретної інформації
+- **повідомлення** (povidomlennya) - нейтральний термін, що означає "message"
 
-### UI Text: When to Use Active vs Passive Voice
+Рекомендовані варіанти перекладу:
+- Для загальних функцій продукту використовуйте "таємне повідомлення"
+- В технічних контекстах використовуйте "повідомлення"
+- Для функцій безпеки використовуйте "таємниця" або "таємний вміст"
+- Уникайте "секрет" через надто особисту конотацію
 
-#### Active, Imperative Voice ("Do something")
+Приклади:
+✅ "Створити таємне повідомлення" (Create a secret)
+✅ "Ваші повідомлення захищені" (Your secrets are protected)
+✅ "Обмін таємним вмістом" (Secret sharing)
+❌ "У вас 3 нових секрети" (You have 3 new secrets)
 
-Buttons
-✓ Save changes
-✓ Delete file
-✓ Send message
 
-Menu items
-✓ View settings
-✓ Create new folder
+## Граматичні та стилістичні рекомендації
 
-#### Passive or Declarative Voice ("Something happened")
+*Поради: Точні правила граматики, стилю та пунктуації, щоб підтримувати узгодженість у всьому перекладеному контенті.*
 
-Status messages
-✓ Changes saved
-✓ File deleted
-✓ Payment declined
+- Використовуйте оксфордські коми, крапки та знаки питання. Уникайте вигуків, скорочень і крапок з комою.
+- Використовуйте активний, наказовий спосіб, коли користувачі вживають дії. Використовуйте пасивний або декларативний наказовий спосіб, коли інформуєте користувачів.
+- Фрагменти речень можуть бути використані самі по собі. В іншому випадку - повні речення з правильною діловою граматикою.
+- Розділіть довгу інформацію на кілька речень, якщо це необхідно.
+- Загалом, використовуйте другу особу ("ви") для звернення до користувача.
+- Уникайте використання першої особи ("мій", "я"), оскільки це може створити плутанину щодо того, до кого звертаються.
 
-Notifications
-✓ 3 new messages
-✓ Download complete
-✓ Server unavailable
+### Текст інтерфейсу користувача: Коли використовувати активний чи пасивний стан
 
-System states
-✓ Upload in progress
-✓ Connection lost
-✓ Email address not found
+#### Активний, наказовий спосіб ("Зроби щось")
 
-#### Examples in Context
+Кнопки
+✓ Зберегти зміни
+✓ Видалити файл
+✓ Надіслати повідомлення
 
-Form submission
-✓ Save changes (button->active)
-✓ Changes saved successfully (status->passive)
+Пункти меню
+✓ Перегляд налаштувань
+✓ Створити нову папку
 
-File upload
-✓ Upload file (button)
-✓ Upload complete (status)
+#### Пасивний або декларативний стан ("Щось сталося")
 
+Повідомлення про стан
+✓ Зміни збережено
+✓ Файл видалено
+✓ Платіж відхилено
 
-## Terminology consistency
+Сповіщення
+✓ 3 нових повідомлення
+✓ Завантаження завершено
+✓ Сервер недоступний
 
-*Create a glossary of key terms, along with their approved translations, to ensure consistent usage across all content.*
+Стани системи
+✓ Виконується завантаження
+✓ Втрачено зв'язок
+✓ Адреса електронної пошти не знайдена
 
-### Brand Terms (Do Not Translate)
+#### Приклади в контексті
 
-- Onetime Secret
-- OTS (when used as product abbreviation)
-- Identity Plus (product name)
-- Global Elite (product name)
-- Custom Install (product name)
+Відправка форми
+✓ Зберегти зміни (кнопка->активна)
+✓ Зміни успішно збережені (статус->пасивний)
 
-### About the Brand Name
+Завантажити файл
+✓ Завантажити файл (кнопка)
+✓ Завантаження завершено (статус)
 
-In "Onetime Secret", "Onetime" functions as a compound adjective (also called a attributive adjective) that modifies the noun "Secret". It describes a key characteristic of the secret - that it can only be accessed once. Note the spelling choice. There are actually three common variants of this term:
 
-- "one-time" (hyphenated)
-- "one time" (two words)
-- "onetime" (compound)
+## Узгодженість термінології
 
-The hyphenated form "one-time" is considered the standard spelling when the term functions as an adjective before a noun, as in "one-time password" or "one-time code". This follows the general English rule that compound modifiers before nouns are often hyphenated.
+*Створіть глосарій ключових термінів разом із затвердженими перекладами, щоб забезпечити узгоджене використання в усьому контенті.*
 
-The compound form is the canonical spelling for the brand and company name: Onetime Secret.
+### Терміни бренду (не перекладати)
 
-### Core Concepts
+- Одноразовий секрет
+- OTS (коли використовується як абревіатура продукту)
+- Identity Plus (назва продукту)
+- Global Elite (назва продукту)
+- Custom Install (назва продукту)
 
-#### Secret Management
+### Про назву бренду
 
-- **secret** (n.) - The confidential information being shared
-    - Translations must maintain the context of confidentiality
-    - Preferred over terms like "message" or "content"
-    - Example: "Create a new secret" not "Create a new message"
-- **one-time** (adj.) - Describing the single-use nature of the service
-    - Must emphasize the temporary, single-use aspect
-    - Hyphenated when used as adjective
-    - Example: "This is a one-time secret" not "This is a single secret"
-- **Onetime** (compound adj.) - Part of the brand name Onetime Secret.
-    - Must not be used on its own; always paired with "Secret"
-    - Example: "Onetime Secret"
-- **burn** (v.) - The act of destroying a secret before it's viewed
-    - Technical term for destruction of a secret message
-    - Translations should maintain the permanence implied
-    - Example: "The secret was burned and no longer available"
+У "Onetime Secret" "Onetime" функціонує як складний прикметник (також званий атрибутивним прикметником), який модифікує іменник "Secret". Він описує ключову характеристику секрету - те, що до нього можна отримати доступ лише один раз. Зверніть увагу на вибір написання. Насправді існує три загальноприйняті варіанти цього терміну:
 
-#### Security Terms
+- "одноразово" (через дефіс)
+- "одноразовий" (два слова)
+- "одноразово" (складне)
 
-- **encryption** (n.) - The process of encoding secrets
-    - Technical term that should remain consistent
-    - Distinguish from "encoding" or "hashing"
-    - Example: "All secrets use end-to-end encryption"
-- **rate limiting** (n.) - System to prevent abuse
-    - Technical term for request restriction
-    - Keep hyphenation in English
-    - Example: "Rate limiting prevents abuse"
-- **secure**
-- **private**
-- **password / passphrase**
-- **expiration / expiry / time-to-live**
+Форма "одноразовий" через дефіс вважається стандартним написанням, коли термін функціонує як прикметник перед іменником, як-от "одноразовий пароль" або "одноразовий код". Це відповідає загальному правилу англійської мови, згідно з яким складні модифікатори перед іменниками часто пишуться через дефіс.
 
-#### User Management
+Складена форма є канонічним написанням бренду та назви компанії: Onetime Secret.
 
-- **colonel** (n.) - Administrator role
-    - Project-specific term, rhymes with "kernel" which is a technical term and central component of an operating system. No other project uses this term in this way. It can be confusing even in North America.
-    - Translate to the common term for an "administrator" in the context of software permissions. The account with the highest level of privileges.
-    - Example: "Only colonels can access this feature" (i.e. "Only admins can access this feature").
-- **plan** (n.) - Subscription level
-    - Use consistently for service tiers
-    - Prefer over "tier" or "level"
-    - Example: "Upgrade to a premium plan"
+### Основні поняття
 
-## Formatting and layout
+#### Управління таємними повідомленнями
 
-*Set standards for formatting, layout, and typography to maintain visual and design consistency across different languages.*
+- **таємне повідомлення** (н.) - Конфіденційна інформація, що передається
+    - Переклади повинні зберігати контекст конфіденційності
+    - Перевага надається "таємне повідомлення" або "таємний вміст"
+    - Приклад: "Створити таємне повідомлення", а не "Створити новий секрет"
+- **одноразовий** (прикм.) - описує одноразовий характер послуги
+    - Має підкреслювати тимчасовий, одноразовий аспект
+    - Пишеться через дефіс, коли використовується як прикметник
+    - Приклад: "Це одноразове таємне повідомлення", а не "Це єдиний секрет"
+- **Onetime** (складний прикметник) - частина назви бренду Onetime Secret.
+    - Не повинен використовуватися самостійно; завжди в парі з "Секрет"
+    - Приклад: "Onetime Secret"
+- **спалити** (v.) - акт знищення секрету до того, як він стане відомим.
+    - Технічний термін для знищення секретного повідомлення
+    - Переклади повинні зберігати постійність, що мається на увазі
+    - Приклад: "Таємне повідомлення було знищене і більше не доступний"
 
-- Use consistent header styles to improve readability and content flow. For example H1 for main headings, H2, H3, etc for sub-headings
-- Write headings in sentence case unless the heading is a punctuated sentence:
-    - Good example: How localization drives growth for fintech firms
-    - Good example: Localization made easy. Why wait?
-    - Bad example: How Localization Drives Growth for Fintech Firms
-    - Bad example: Localization made easy. why wait?
+#### Умови безпеки
 
-### Time format
+- **шифрування** (n.) - Процес кодування секретів
+    - Технічний термін, який повинен залишатися незмінним
+    - Слід відрізняти від "кодування" або "хешування"
+    - Приклад: "Усі секрети використовують наскрізне шифрування"
+- **обмеження швидкості** (n.) - Система для запобігання зловживанню
+    - Технічний термін для обмеження запитів
+    - Зберігати переноси англійською мовою
+    - Приклад: "Обмеження швидкості запобігає зловживанням"
+- **безпечний**
+- приватний
+- пароль / кодова фраза
+- **закінчення терміну дії / термін дії / термін дії**
 
-Generally, a 12-hour clock is used in the United States. 24-hour clocks are used in aviation and other logistical contexts.
+#### Керування користувачами
 
-### Numerals
+- **полковник** (мн.) - роль адміністратора
+    - Специфічний для проекту термін, римується з "ядром", що є технічним терміном і центральним компонентом операційної системи. Жоден інший проект не використовує цей термін у такому значенні. Це може заплутати навіть у Північній Америці.
+    - Перекладіть на загальноприйнятий термін "адміністратор" в контексті дозволів на програмне забезпечення. Обліковий запис з найвищим рівнем привілеїв.
+    - Приклад: "Тільки полковники можуть мати доступ до цієї функції" (тобто "Тільки адміністратори можуть мати доступ до цієї функції").
+- **plan** (n.) - рівень підписки
+    - Послідовно використовуйте для рівнів обслуговування
+    - Перевага над "tier" або "level"
+    - Приклад: "Перейти на преміум-план"
 
-|  Symbol Purpose  |  Character Name  |  Symbol  |  Example  |
+## Форматування та верстка
+
+*Встановлення стандартів форматування, макетування та типографіки для підтримки візуальної та дизайнерської узгодженості між різними мовами.
+
+- Використовуйте узгоджені стилі заголовків, щоб покращити читабельність та потік контенту. Наприклад, H1 для основних заголовків, H2, H3 і т.д. для підзаголовків
+- Пишіть заголовки в регістрі речення, якщо заголовок не є реченням з розділовими знаками:
+    - Хороший приклад: Як локалізація сприяє зростанню фінтех-компаній
+    - Чудовий приклад: Локалізація стала легкою. Навіщо чекати?
+    - Поганий приклад: Як локалізація сприяє зростанню фінтех-компаній
+    - Поганий приклад: Локалізація стала простою. Навіщо чекати?
+
+### Формат часу
+
+У Сполучених Штатах, як правило, використовується 12-годинний час. 24-годинний годинник використовується в авіації та інших логістичних контекстах.
+
+### Числа
+
+| Призначення символу | Назва символу | Символ | Приклад
 | --- | --- | --- | --- |
-|  Decimal  |  Period  |  `.`  |  1.23  |
-|  Thousands  |  Comma  |  `,`  |  1,234  |
-|  Percentage  |  Percent sign  |  `%`  |  99.95%  |
+| Десяткова крапка з комою 1.23
+| Тисячі Кома 1,234
+| Відсотки | Знак відсотка |% | 99.95%
 
-### Currency
+### Валюта
 
-The currency of the Canada is the Canadian Dollar (CAD). The monetary symbols are `$` and rarely `¢`.
+Грошовою одиницею Канади є канадський долар (CAD). Грошові символи - `$` і рідко `¢`.
 
-### Units of measurement
+### Одиниці виміру
 
-The imperial system is used for everyday weights in Canada. Everything else including distances, quantities, are in metric. Primarily m, Km, cm, mm ("deci" is used rarely).
+Імперська система використовується для повсякденних ваг у Канаді. Все інше, включаючи відстані, величини, вимірюється в метричній системі. Переважно м, км, см, мм ("деци" використовується рідко).
 
-### Address and postal code format
+### Формат адреси та поштового індексу
 
-    [addressee]
-    [street number and name][building and suite numbers]
-    [district][city][state/province][postal code]
-    [Country]
+    [адресат]
+    [номер та назва вулиці] [номери будинку та квартири] [район] [місто] [індекс] [район] [місто] [індекс
+    [район] [місто] [штат/область] [поштовий індекс]
+    [країна]
 
-    British Columbia Sugar Refinery Ltd.
+    Цукровий завод Британської Колумбії
 	123 Rogers Street
-    Vancouver, BC. V6A 3N2
-    CANADA
+    Ванкувер, Британська Колумбія. V6A 3N2
+    КАНАДА
 
-## Clear, Respectful Communication
+## Чітке, шанобливе спілкування
 
-Our goal: We want our writing to connect effectively with all readers while being clear, accurate, and respectful.
+Наша мета: ми хочемо, щоб наші тексти були зрозумілими, точними і шанобливими для всіх читачів, але при цьому були чіткими, точними і поважними.
 
-To verify your writing achieves these goals, ask:
+Щоб перевірити, чи досягає ваш текст цих цілей, запитайте:
 
-- Is my language clear and specific?
-- Am I addressing my readers directly and respectfully?
-- Have I avoided assumptions about my readers?
+- Чи моя мова чітка і конкретна?
+- Чи звертаюся я до читачів прямо і з повагою?
+- Чи уникаю я припущень щодо своїх читачів?
 
-## Translation style
+## Стиль перекладу
 
-- Use literal translation for legal or technical texts
-- Translate with cultural context when translating content for marketing or advertising
-- Use transcreation where you adapt the message so it resonates culturally and emotively with the audience, for creative content including blog posts and marketing copy.
+- Використовуйте дослівний переклад для юридичних або технічних текстів
+- Перекладайте з урахуванням культурного контексту, коли перекладаєте контент для маркетингу чи реклами
+- Використовуйте транскреацію, коли ви адаптуєте повідомлення так, щоб воно резонувало з аудиторією в культурному та емоційному плані, для творчого контенту, зокрема для блогів і маркетингових текстів.

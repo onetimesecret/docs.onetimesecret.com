@@ -1,71 +1,71 @@
 ---
-title: Use Cases
-description: Explore various scenarios where Secret Links can enhance security and streamline sensitive information sharing.
+title: Приклади використання
+description: Дослідіть різні сценарії, в яких Secret Links може підвищити безпеку і спростити обмін конфіденційною інформацією.
 ---
 
 
-Secret Links are versatile and can be applied in many situations where secure, one-time sharing of information is crucial. Here are some common use cases:
+Секретні посилання є універсальними і можуть застосовуватися в багатьох ситуаціях, коли безпечний одноразовий обмін інформацією має вирішальне значення. Ось кілька поширених випадків використання:
 
 
-### 1. Basic Password Sharing at work
+### 1. Базовий обмін паролями на роботі
 
-When you need a quick, secure way to share a password or API key, secret links offer a simple solution. While password managers are the best choice for long-term credential management and team sharing, secret links provide a lightweight alternative that anyone can use without special software or accounts. The self-destructing nature of these links ensures that sensitive credentials aren't lingering in email inboxes or chat histories where they could be compromised.
+Якщо вам потрібен швидкий і безпечний спосіб поділитися паролем або ключем API, секретні посилання - це просте рішення. У той час як менеджери паролів є найкращим вибором для довгострокового управління обліковими даними та спільного використання командою, секретні посилання є легкою альтернативою, яку може використовувати будь-хто без спеціального програмного забезпечення або облікових записів. Самознищувана природа цих посилань гарантує, що конфіденційні облікові дані не залишаться у поштових скриньках або історіях чату, де їх можуть скомпрометувати.
 
-**Benefit**: This approach provides a fast, no-setup way to share credentials securely when you need it. It eliminates risky practices like storing passwords in plaintext emails, while keeping the sharing process simple and friction-free for everyone involved.
+**Перевага**: Цей підхід забезпечує швидкий і простий у налаштуванні спосіб безпечного обміну обліковими даними, коли вам це потрібно. Він усуває ризиковані практики, такі як зберігання паролів у звичайних електронних листах, зберігаючи при цьому процес обміну простим і безконфліктним для всіх учасників.
 
-### 2. Netflix and WiFi Passwords
+### 2. Паролі Netflix та WiFi
 
-When sharing streaming service credentials or home WiFi passwords with family members and houseguests, use secret links to securely transmit the information. Simply create the link and send it through your usual messaging apps. Once they've viewed the password, the link becomes inactive, keeping your accounts secure even if someone later gains access to the message history.
+Ділячись обліковими даними потокового сервісу або паролями до домашнього Wi-Fi з членами сім'ї та гостями, використовуйте секретні посилання для безпечної передачі інформації. Просто створіть посилання та надішліть його за допомогою звичайної програми для обміну повідомленнями. Після того, як вони побачать пароль, посилання стане неактивним, зберігаючи ваші акаунти в безпеці, навіть якщо хтось пізніше отримає доступ до історії повідомлень.
 
-**Benefit**: This provides a convenient way to share access without compromising long-term security. Even if a phone is lost or messaging account is compromised months later, the sensitive information won't be exposed since it was never stored in the message history.
+**Перевага**: Це зручний спосіб поділитися доступом без шкоди для довгострокової безпеки. Навіть якщо телефон буде втрачено або акаунт буде зламано через кілька місяців, конфіденційна інформація не буде викрита, оскільки вона ніколи не зберігалася в історії повідомлень.
 
-### 3. Payment Information
+### 3. Платіжна інформація
 
-When you need to share payment details like credit card information or digital wallet addresses with service providers or trusted contacts, use secret links instead of typing sensitive information directly into messages or emails. Create a secure link containing your payment details, share it with the recipient, and once they've accessed the information, it's automatically removed – ensuring your financial data doesn't remain exposed in communication threads.
+Коли вам потрібно поділитися платіжними реквізитами, такими як дані кредитної картки або адреси цифрових гаманців, з постачальниками послуг або довіреними особами, використовуйте секретні посилання замість того, щоб вводити конфіденційну інформацію безпосередньо в повідомлення або електронні листи. Створіть захищене посилання з платіжними реквізитами, надішліть його одержувачу, і після того, як він отримає доступ до інформації, воно автоматично видалиться - таким чином, ваші фінансові дані не залишаться відкритими в комунікаційних потоках.
 
-**Benefit**: This method protects your financial security by ensuring sensitive payment information doesn't accumulate in email threads, chat histories, or text messages. It gives you peace of mind knowing that your account details won't be vulnerable if any of these communication channels are ever compromised.
+**Перевага**: Цей метод захищає вашу фінансову безпеку, гарантуючи, що конфіденційна платіжна інформація не накопичується в повідомленнях електронної пошти, історіях чатів або текстових повідомленнях. Це дає вам спокій, знаючи, що дані вашого облікового запису не будуть вразливими, якщо будь-який з цих каналів зв'язку буде скомпрометований.
 
-### 4. Software License Keys
-When distributing purchased software licenses to employees or clients, use secret links to share the activation keys. This ensures that valuable license keys can't be accidentally reused or shared beyond their intended recipient, and helps prevent the keys from being archived in email systems where they might be vulnerable to unauthorized access.
+### 4. Ліцензійні ключі на програмне забезпечення
+Розповсюджуючи придбані ліцензії на програмне забезпечення серед співробітників або клієнтів, використовуйте секретні посилання для поширення ключів активації. Це гарантує, що цінні ліцензійні ключі не можуть бути випадково повторно використані або передані не тому, кому вони призначені, а також допомагає запобігти архівуванню ключів в системах електронної пошти, де вони можуть бути вразливими до несанкціонованого доступу.
 
-**Benefit**: This method maintains control over software asset distribution while making it easy for recipients to access their license keys when needed for installation or reactivation.
+**Перевага**: Цей метод зберігає контроль над розповсюдженням програмних активів, водночас полегшуючи одержувачам доступ до ліцензійних ключів, коли це необхідно для встановлення або повторної активації.
 
-### 5. Two-Factor Recovery Codes
-When setting up 2FA on important accounts, securely store your backup/recovery codes using a secret link. If you need to access these codes later due to a lost device, you can be confident they haven't been sitting exposed in your email or notes. Create a new secret link once you've used the codes to maintain security.
+### 5. Коди двофакторного відновлення
+Налаштовуючи 2FA для важливих акаунтів, надійно зберігайте резервні коди відновлення за допомогою секретного посилання. Якщо вам знадобиться доступ до цих кодів пізніше через втрату пристрою, ви можете бути впевнені, що вони не лежали у вашій електронній пошті або нотатках у відкритому доступі. Створіть нове секретне посилання після того, як ви використали коди для підтримки безпеки.
 
-**Benefit**: Provides a more secure alternative to storing recovery codes in plaintext while ensuring they remain accessible when truly needed for account recovery.
+**Перевага**: Забезпечує безпечнішу альтернативу збереженню кодів відновлення у відкритому тексті, гарантуючи при цьому, що вони залишаться доступними, коли це дійсно необхідно для відновлення облікового запису.
 
-### 6. Interview Assignments
-When sending coding challenges or technical assessments to job candidates, use secret links to share the requirements. This ensures each candidate gets a fresh copy of the assignment and can't access it again after viewing, helping maintain the integrity of your hiring process.
+### 6. Завдання для співбесіди
+Надсилаючи завдання на кодування або технічні оцінки кандидатам, використовуйте секретні посилання, щоб поділитися вимогами. Це гарантує, що кожен кандидат отримає свіжу копію завдання і не зможе отримати до нього доступ після перегляду, що допоможе зберегти цілісність вашого процесу найму.
 
-**Benefit**: Simplifies assignment distribution while helping ensure candidates complete their assessments independently and can't share the exact requirements with others.
+**Перевага**: Спрощує розподіл завдань, допомагаючи гарантувати, що кандидати заповнюють свої оцінки самостійно і не можуть ділитися точними вимогами з іншими.
 
 
-## Summary
+## Підсумок
 
-These use cases demonstrate the flexibility and security benefits of Secret Links across various industries and scenarios. By leveraging Secret Links, organizations and individuals can significantly enhance their information security practices and reduce the risks associated with sharing sensitive data.
+Ці приклади використання демонструють гнучкість і переваги безпеки Secret Links у різних галузях і сценаріях. Використовуючи Secret Links, організації та приватні особи можуть значно покращити свої практики інформаційної безпеки та зменшити ризики, пов'язані з передачею конфіденційних даних.
 
-## Note About Anonymous Tips
+## Примітка про анонімні підказки
 
-Secret Links can be suitable for basic anonymous tips with some important caveats:
+Secret Links може підійти для базових анонімних підказок з деякими важливими застереженнями:
 
-### Advantages of Onetime Secret for Anonymous Tips
-- No account required
-- Accessible via Tor network
-- Content is encrypted in transit and at rest
-- Limited log retention period (about 2 weeks)
-- Cannot be retrieved once viewed
+### Переваги One-time Secret для анонімних підказок
+- Не потребує облікового запису
+- Доступний через мережу Tor
+- Вміст шифрується під час передачі та в стані спокою
+- Обмежений період зберігання журналу (близько 2 тижнів)
+- Неможливо отримати після перегляду
 
-### Limitations
-- Consider organizational/legal requirements
-- No built-in anonymous communication channel
-- Basic metadata may be logged temporarily
-- Network-level anonymity depends on user OPSEC
+### Обмеження
+- Враховуйте організаційні/правові вимоги
+- Немає вбудованого анонімного каналу зв'язку
+- Основні метадані можуть тимчасово реєструватися
+- Анонімність на рівні мережі залежить від OPSEC користувача
 
-## Whistleblowers and Personal Risk Scenarios
+## Викривачі та сценарії особистого ризику
 
-For whistleblowing involving sensitive organizational or legal matters, dedicated whistleblowing platforms with additional protections are strongly recommended. When handling sensitive disclosures:
+Для викриттів, що стосуються чутливих організаційних або юридичних питань, наполегливо рекомендується використовувати спеціальні платформи для викриттів з додатковим захистом. При роботі з чутливими розкриттями:
 
-- Use dedicated whistleblowing platforms that provide comprehensive security protections and anonymity features
-- Be aware that IP addresses and access times may be logged by various systems
-- Consider consulting trusted organizations like the Freedom of the Press Foundation (freedom.press) or the Electronic Frontier Foundation (eff.org) for detailed guidance on secure whistleblowing practices and tools
+- Використовуйте спеціальні платформи для викривачів, які забезпечують комплексний захист та анонімність.
+- Пам'ятайте, що IP-адреси та час доступу можуть реєструватися різними системами
+- Зверніться до перевірених організацій, таких як Фонд свободи преси (freedom.press) або Фонд "Електронний кордон" (eff.org), для отримання детальних рекомендацій щодо безпечних методів та інструментів викривання.

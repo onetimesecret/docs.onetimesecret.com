@@ -1,124 +1,124 @@
 ---
-title: Glossary
-description: A reference guide for translating Onetime Secret's key terms, interface elements, and technical vocabulary across multiple languages to maintain consistency
+title: Глосарій
+description: Довідник для перекладу ключових термінів, елементів інтерфейсу та технічної лексики Onetime Secret різними мовами для забезпечення узгодженості.
 ---
 
-# Onetime Secret Translation Glossary
+# Одноразовий секретний глосарій перекладу
 
-This glossary provides standardized translations for key terms across languages to ensure consistency in the Onetime Secret application. It is based on analysis of the existing translations in German (Austria), French (France), and French (Canada).
+Цей глосарій містить стандартизовані переклади ключових термінів різними мовами для забезпечення узгодженості у застосуванні системи "Одноразовий доступ до інформації". Він базується на аналізі існуючих перекладів німецькою (Австрія), французькою (Франція) та канадською (Канада) мовами.
 
-## Core Terminology
+## Основна термінологія
 
-| English | German (AT) | French (FR) | French (CA) | Notes |
+| Англійська | Німецька (AT) | Французька (FR) | Французька (CA) | Примітки
 |---------|-------------|-------------|-------------|-------|
-| secret (noun) | Geheimnis | secret | secret | Central concept of the application |
-| secret (adj) | geheim | secret/sécurisé | secret/sécurisé | |
-| passphrase | Sicherheitsphrase | phrase secrète | mot de passe | Authentication method for secrets |
-| burn | verbrennen | supprimer | supprimer | Action to delete a secret before viewing |
-| view/reveal | ansehen/anzeigen | consulter/afficher | consulter/afficher | Action to access a secret |
-| link | Link/Verbindung | lien | lien | The URL that provides access to a secret |
-| encrypt/encrypted | verschlüsseln/verschlüsselt | chiffrer/chiffré | chiffrer/chiffré | Security method |
-| secure | sicher | sécurisé | sécurisé | State of protection |
+| секрет (іменник) | Geheimnis | секрет | секретний | секрет | Центральне поняття програми
+| таємний (прикметник) | Geheim | секрет/секрет | секрет/секрет | секрет/секрет | ¦ ¦ ¦ ¦ ¦ ¦ ¦ ¦ ¦ ¦ ¦ ¦
+passphrase | Sicherheitsphrase | phrase secrète | mot de passe | Метод аутентифікації для секретів | | passphrase | Sicherheitsphrase | phrase secrète | mot de passe | Метод аутентифікації для секретів
+| спалити | verbrennen | supprimer | supprimer | Дія для видалення секрету перед переглядом
+| переглянути/відкрити | ansehen/anzeigen | consulter/afficher | consulter/afficher | Дія для доступу до секрету
+| link/зв'язок | Link/Verbindung | lien/застава | lien/застава | URL-адреса, за якою надається доступ до секрету
+| зашифрувати/зашифрований | verschlüsseln/verschlüsselt | chiffrer/chiffré | chiffrer/chiffré | Спосіб захисту
+| sicher/безпечний | sicher/безпечний | sécurisé/секретний | sécurisé/секретний | Стан захищеності
 
-## User Interface Elements
+## Елементи інтерфейсу користувача
 
-| English | German (AT) | French (FR) | French (CA) | Notes |
+| Англійська | Німецька (AT) | Французька (FR) | Французька (CA) | Примітки
 |---------|-------------|-------------|-------------|-------|
-| Share a secret | Ein Geheimnis teilen | Partager un secret | Partager un secret | Main action |
-| Create Account | Konto erstellen | Créer un compte | Créer un compte | Registration |
-| Sign In | Eintragen | Se connecter | Se connecter | Authentication |
-| Dashboard | Konto | Tableau de bord | Compte | User's main page |
-| Settings | Einstellungen | Paramètres | Paramètres | Configuration page |
-| Privacy Options | Datenschutz-Optionen | Options de confidentialité | Options de confidentialité | Secret settings |
-| Feedback | Rückmeldung | Retour d'information | Retour d'information | User comments |
+| Поділіться секретом | Ein Geheimnis teilen | Поділіться секретом | Partager un secret | Partager un secret | Основна дія
+Створити обліковий запис | Konto erstellen | Створити обліковий запис | Créer un compte | Créer un compte | Реєстрація | Registration
+Вхід в систему | Eintragen | Eintragen | Se connector | Se connector | Аутентифікація | Authentication | Панель керування | Konto
+| Інформаційна панель | Konto | Tableau de bord | Compte | Головна сторінка користувача
+Налаштування | Налаштування | Einstellungen | Параметри | Paramètres | Параметри | Сторінка конфігурації
+| Параметри конфіденційності | Datenschutz-Optionen | Options de confidentialité | Options de confidentialité | Параметри конфіденційності | Секретні налаштування
+| Зворотній зв'язок | Rückmeldung | Retour d'information | Retour d'information | Коментарі користувачів | Коментарі користувачів
 
-## Status Terms
+## Умови статусу
 
-| English | German (AT) | French (FR) | French (CA) | Notes |
+| Англійська | Німецька (AT) | Французька (FR) | Французька (CA) | Примітки
 |---------|-------------|-------------|-------------|-------|
-| received | empfangen | reçu | reçu | Secret has been viewed |
-| burned | verbrannt | supprimé | supprimé | Secret was deleted before viewing |
-| expired | abgelaufen | expiré | expiré | Secret is no longer available due to time |
-| created | erstellt | créé | créé | Secret has been generated |
-| active | aktiv | actif | actif | Secret is available |
-| inactive | inaktiv | inactif | inactif | Secret is not available |
+| отримано - empfangen - reçu - reçu - секрет переглянуто - reçu - секрет переглянуто - reçu
+| спалено | verbrannt | verbrannt | supprimé | supprimé | Секрет було видалено перед переглядом
+| закінчився термін дії | abgelaufen | expiré | expiré | Секрет більше не доступний через закінчення терміну дії
+| створено | erstellt | erstellt | créé | créé | Секрет згенеровано
+| активний | aktiv | aktiv | actif | actif | Секрет доступний
+| неактивний | inaktiv | inaktiv | inaktif | inaktif | Секрет недоступний
 
-## Time-Related Terms
+## Терміни, пов'язані з часом
 
-| English | German (AT) | French (FR) | French (CA) | Notes |
+| Англійська | Німецька (AT) | Французька (FR) | Французька (CA) | Примітки
 |---------|-------------|-------------|-------------|-------|
-| expires in | läuft ab in | expire dans | expire dans | Time until secret is no longer available |
-| day/days | Tag/Tage | jour/jours | jour/jours | Time unit |
-| hour/hours | Stunde/Stunden | heure/heures | heure/heures | Time unit |
-| minute/minutes | Minute/Minuten | minute/minutes | minute/minutes | Time unit |
-| second/seconds | Sekunde/Sekunden | seconde/secondes | seconde/secondes | Time unit |
+Термін дії закінчується через | läuft ab in | expire dans | закінчується через | expire dans | Час, доки секрет не буде більше доступним | Час, доки секрет не буде більше доступним
+| день/дні | Tag/Tage | jour/jours | jour/jours | Одиниця виміру часу
+hour/hours/годин | Stunde/Stunden | heure/heures/годин | heure/heures | Одиниця виміру часу | ¦ hour/heures/годин | hour/heures/heures | Одиниця виміру часу
+хвилина/хвилини | Minute/Minuten | хвилина/хвилини | minute/minutes | хвилина/хвилини | Одиниця виміру часу ¦ ¦ секунда/секунди | секунда/секунди
+| секунда/секунда | Sekunde/Sekunden | секунда/секунда | секунда/секунди | секунда/секунди | Одиниця виміру часу
 
-## Security Features
+## Функції безпеки
 
-| English | German (AT) | French (FR) | French (CA) | Notes |
+| Англійська | Німецька (AT) | Французька (FR) | Французька (CA) | Примітки
 |---------|-------------|-------------|-------------|-------|
-| one-time access | einmaliger Zugang | accès unique | accès unique | Core security feature |
-| passphrase protection | Schutz durch Sicherheitsphrase | protection par phrase secrète | protection par phrase d'authentification | Additional security |
-| encrypted in transit | verschlüsselt bei der Übertragung | chiffré en transit | chiffré en transit | Data protection method |
-| encrypted at rest | verschlüsselt im Ruhezustand | chiffré au repos | chiffré au repos | Storage protection |
+| одноразовий доступ | einmaliger Zugang | accès унікальний | accès унікальний | Основна функція безпеки
+захист парольною фразою | Schutz durch Sicherheitsphrase | захист секретною фразою | protection par phrase secrète | protection par phrase d'authentification | Додатковий захист | Additional security
+| шифрується під час передачі | шифрується під час передачі | шифрується під час передачі | шифрується під час передачі | метод захисту даних | Метод захисту даних
+| шифрується в стані спокою | шифрується в стані спокою | шифрується в репозиторії | шифрується в репозиторії | Захист при зберіганні
 
-## Account-Related Terms
+## Умови, пов'язані з обліковим записом
 
-| English | German (AT) | French (FR) | French (CA) | Notes |
+| Англійська | Німецька (AT) | Французька (FR) | Французька (CA) | Примітки
 |---------|-------------|-------------|-------------|-------|
-| email | E-Mail | courriel/e-mail | courriel | User identifier |
-| password | Passwort | mot de passe | mot de passe | Authentication |
-| account | Konto | compte | compte | User profile |
-| subscription | Abonnement | abonnement | abonnement | Paid service |
-| customer | Kunde | client | client | Paying user |
+адреса електронної пошти | Email | E-Mail | courriel/e-mail | courriel | Ідентифікатор користувача | User identifier (Ідентифікатор користувача)
+пароль | Password | Passwort | mot de passe | mot de passe | Аутентифікація | Authentication
+Рахунок | Konto | Konto | рахунок | compte | compte | Профіль користувача | User profile | Профіль користувача
+Підписка | Підписка | Відмова | Відмова | Відмова | Відмова | Платна послуга | Платна послуга
+| клієнт | Kunde | клієнт | клієнт | клієнт | Користувач, що платить
 
-## Domain-Related Terms
+## Терміни, пов'язані з доменом
 
-| English | German (AT) | French (FR) | French (CA) | Notes |
+| Англійська | Німецька (AT) | Французька (FR) | Французька (CA) | Примітки
 |---------|-------------|-------------|-------------|-------|
-| custom domain | benutzerdefinierter Bereich | domaine personnalisé | domaine personnalisé | Premium feature |
-| domain verification | Domänenüberprüfung | vérification du domaine | vérification du domaine | Setup process |
-| DNS record | Namensserver-Eintrag | enregistrement DNS | enregistrement DNS | Configuration |
-| CNAME record | CNAME-Eintrag | enregistrement CNAME | enregistrement CNAME | DNS setup |
+| користувацький домен | benutzerdefinierter Bereich | домен персоналізований | домен персоналізований | преміум-функція
+| Перевірка домену | Domänenüberprüfung | vérification du domaine | vérification du domaine | Процес налаштування
+Запис DNS | Namensserver-Entrag | enregistrement DNS | enregistrement DNS | Конфігурація ¦ ¦ ¦Запис DNS | Namensserver-Entrag | enregistrement DNS | Конфігурація ¦ ¦ ¦ ¦ ¦
+| Запис CNAME | CNAME-Eintrag | реєстрація CNAME | реєстрація CNAME | реєстрація CNAME | налаштування DNS
 
-## Error Messages
+## Повідомлення про помилки
 
-| English | German (AT) | French (FR) | French (CA) | Notes |
+| Англійська | Німецька (AT) | Французька (FR) | Французька (CA) | Примітки
 |---------|-------------|-------------|-------------|-------|
-| error | Fehler | erreur | bug | Problem notification |
-| warning | Warnung | avertissement | attention | Caution notification |
-| oops | Huch | oups | oups | Friendly error intro |
+| помилка | Fehler | erreur | помилка | повідомлення про помилку
+попередження | Warnung | Warnung | avertissement | увага | Увага | Застереження | повідомлення про небезпеку
+| ой, ой, ой, ой, ой, дружелюбне повідомлення про помилку.
 
-## Buttons and Actions
+## Кнопки та дії
 
-| English | German (AT) | French (FR) | French (CA) | Notes |
+| Англійська | Німецька (AT) | Французька (FR) | Французька (CA) | Примітки
 |---------|-------------|-------------|-------------|-------|
-| submit | einreichen | soumettre | soumettre | Form action |
-| cancel | abbrechen | annuler | annuler | Negative action |
-| confirm | bestätigen | confirmer | confirmer | Positive action |
-| copy to clipboard | in die Zwischenablage kopieren | copier dans le presse-papiers | copier dans le presse-papiers | Utility action |
-| continue | weiter | continuer | continuer | Navigation |
-| back | zurück | retour | retour | Navigation |
+| подавати | einreichen | einreichen | soumettre | soumettre | формувати дію
+| анулювати | abbrechen | анулювати | annuler | анулювати | Негативна дія
+| підтверджувати | bestätigen | підтверджувати | підтверджувати | Позитивна дія | Позитивна дія
+скопіювати в буфер обміну | in die Zwischenablage kopieren | скопіювати в пресу | скопіювати в пресу | скопіювати в пресу | Дія утиліти | Дія утиліти
+продовжити | далі | weiter | продовжити | продовжити | продовжити | Навігація
+назад | zurück | zurück | retour | retour | Navigation | Навігація
 
-## Marketing Terms
+## Маркетингові терміни
 
-| English | German (AT) | French (FR) | French (CA) | Notes |
+| Англійська | Німецька (AT) | Французька (FR) | Французька (CA) | Примітки
 |---------|-------------|-------------|-------------|-------|
-| secure links | sichere Links | liens sécurisés | liens sécurisés | Product feature |
-| privacy-first design | Datenschutz als oberstes Gebot | conception privilégiant la protection de la vie privée | conception privilégiant la protection de la vie privée | Design philosophy |
-| custom branding | benutzerdefiniertes Branding | image de marque personnalisée | image de marque personnalisée | Premium feature |
+| безпечні посилання | sichere Links | liens sécurisés | liens sécurisés | Особливість продукту
+| privacy-first design | Захист даних як основний принцип роботи | Conception privilégiant la protection de la vie privée | Концепція приватного захисту приватного життя | Філософія дизайну | Design philosophy
+| індивідуальний брендинг | benutzerdefiniertes Branding | image de marque personnalisée | image de marque personnalisée | Premium feature | Преміум функція
 
-## Translation Guidelines
+## Вказівки щодо перекладу
 
-1. **Consistency**: Use the same translation for a term throughout the application
-2. **Context**: Consider how the term is used in the application
-3. **Cultural Adaptation**: Adapt terms to local conventions when necessary
-4. **Technical Accuracy**: Ensure security terms are translated accurately
-5. **Tone**: Maintain a professional but straightforward tone
+1. **Узгодженість**: Використовуйте один і той самий переклад терміна в усій заявці
+2. **Контекст: Враховуйте, як термін використовується в заявці
+3. **Культурна адаптація**: Адаптуйте терміни до місцевих умов, якщо це необхідно
+4. **Технічна точність**: Забезпечити точний переклад термінів безпеки
+5. **Тон**: Підтримувати професійний, але прямий тон
 
-## Special Considerations
+## Особливі міркування
 
-- The term "secret" is central to the application and should be translated consistently
-- Regional variations (e.g., "courriel" in Canadian French vs "e-mail" in European French) should be respected
-- Technical terms related to security should prioritize accuracy over localization
-- UI elements should follow platform conventions for the target language
+- Термін "таємниця" є центральним у заявці і повинен перекладатися послідовно
+- Слід враховувати регіональні відмінності (наприклад, "courriel" у канадській французькій мові проти "e-mail" у європейській французькій мові)
+- Технічні терміни, пов'язані з безпекою, повинні мати пріоритет точності над локалізацією
+- Елементи інтерфейсу повинні відповідати конвенціям платформи для цільової мови

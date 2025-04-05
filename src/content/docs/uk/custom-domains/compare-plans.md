@@ -1,29 +1,29 @@
 ---
-title: Compare plans
-description: Compare our feature-rich plans offering secure secret sharing with expiring links, custom domains, and flexible storage options for individuals and businesses.
+title: Порівняйте плани
+description: Порівняйте наші багатофункціональні плани, що пропонують безпечний обмін секретними даними з посиланнями, термін дії яких закінчується, користувацькі домени та гнучкі варіанти зберігання для приватних осіб і компаній.
 ---
 
 
-## Feature Matrix
+## Матриця функцій
 
-| Feature/Plan | Identity Plus | Basic | Anonymous |
+| Особливості/план | Identity Plus | Базовий | Анонімний | Анонімний
 |---------|----------------|-------------------------|------------|
-| Custom Domains | Unlimited | ❌ | ❌ |
-| Branded Homepage | ✅ | ❌ | ❌ |
-| Custom logo, color | ✅ | ❌ | ❌ |
-| Number of Accounts | 1 | 1 | ❌ |
-| Link Expiration | Up to 30 days | 14 days | Limited to 7 days |
-| API Access | ✅ | ✅ | Limited |
-| Setup Required | Yes (DNS configuration) | No | No |
-| Paid | Yes (part of Identity plan) | No | No |
-| SSL/TLS Security | ✅ | ✅ | ✅ |
-| Data Locality | ✅ (EU or US) | ✅ (EU or US) | ✅ (EU or US) |
+| Користувацькі домени - необмежена кількість
+| Фірмова домашня сторінка ✅ | ❌ | ❌ | ❌ ¦ ¦ ❌ ¦ ¦ ❌ ¦ ¦ ❌
+| Логотип на замовлення, колір | ✅ | ❌ | ❌ | ❌
+| Кількість облікових записів | 1 | 1 | ❌ | ¦ ¦ ¦ ¦ ¦ ¦ ¦ ¦ ¦ ¦ ¦1
+| Термін дії посилання | До 30 днів | 14 днів | Обмежено до 7 днів
+| Доступ до API ✅ | ✅ | ✅ | Обмежений
+| Потрібна установка | Так (конфігурація DNS) | Ні | Ні
+| Платно | Так (частина тарифного плану Identity) | Ні | Ні
+Безпека SSL/TLS | ✅ | ✅ | ✅ | ✅ | ✅
+Місцезнаходження даних | ✅ (ЄС або США) | ✅ (ЄС або США) | ✅ (ЄС або США) | ✅ (ЄС або США) | ✅ (ЄС або США) | ✅ (ЄС або США)
 
 
-For more information on account upgrades and pricing, please visit our [Pricing Page](https://onetimesecret.com/pricing).
+Для отримання додаткової інформації про оновлення облікового запису та ціни, будь ласка, відвідайте нашу [Сторінку з цінами] (https://onetimesecret.com/pricing).
 
 
-## Coming Soon
+## Скоро буде.
 
-* Custom email from details with SPF and DKIM support
-* Team plans for multiple users
+* Спеціальна електронна пошта з реквізитами з підтримкою SPF та DKIM
+* Командні плани для кількох користувачів

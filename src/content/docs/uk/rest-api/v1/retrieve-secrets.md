@@ -1,114 +1,114 @@
 ---
-title: Retrieving Secrets
-description: Learn how to retrieve secrets using the Onetime Secret REST API, with support for both authenticated and anonymous access.
+title: Віднайдення секретів
+description: Дізнайтеся, як отримувати секрети за допомогою Onetime Secret REST API з підтримкою як автентифікованого, так і анонімного доступу.
 ---
 
-_Updated 2025-04-02_
+_Оновлено 2025-04-02_
 
-:::note
-**Data Locality and Region Selection**
-- Choose a [region]({getRelativeLocaleUrl(Astro.currentLocale ?? 'en', 'regions')}) (e.g. [`us.onetimesecret.com`](https://us.onetimesecret.com/), [`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) data centers
-- Consider factors like data sovereignty, latency, and compliance requirements
-- **NOTE:** Default `onetimesecret.com` remains operational and routes to an active data center, using a specific locality is recommended as this functionality may be deprecated in the future.
+:::примітка
+**Вибір місцевості та регіону даних
+- Виберіть [регіон]({getRelativeLocaleUrl(Astro.currentLocale ?? 'en', 'regions')}) (наприклад [`us.onetimesecret.com`](https://us.onetimesecret.com/), [`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) центри обробки даних
+- Враховуйте такі фактори, як суверенітет даних, затримка та вимоги до відповідності
+- За замовчуванням `onetimesecret.com` залишається робочим і спрямовує до активного центру обробки даних, рекомендується використовувати конкретну локацію, оскільки ця функціональність може бути застарілою в майбутньому.
 :::
 
-## Retrieve a Secret
+## Витягти секрет
 
 `POST https://REGION.onetimesecret.com/api/v1/secret/SECRET_KEY`
 
-### Authenticated Request
+### Аутентифікований запит
 
 ```bash
 $ curl -X POST -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/secret/SECRET_KEY
 ```
 
-### Anonymous Request
+### Анонімний запит
 
 ```bash
 $ curl -X POST https://eu.onetimesecret.com/api/v1/secret/SECRET_KEY
 ```
 
-### Query Params
+### Параметри запиту
 
-- **SECRET_KEY**: the unique key for this secret.
-- **passphrase** (if required): the passphrase is required only if the secret was created with one.
+- **SECRET_KEY**: унікальний ключ для цього секрету.
+- **парольна_фраза** (якщо потрібно): ключова фраза потрібна лише у тому випадку, якщо секрет було створено з нею.
 
-### Attributes
+### Атрибути
 
-- **secret_key**: the unique key for the secret you create. This is key that you can share.
-- **value**: The actual secret. It should go without saying, but this will only be available one time.
+- **secret_key**: унікальний ключ для створеного вами секрету. Це ключ, яким ви можете поділитися.
+- **значення**: Власне сам секрет. Зрозуміло, що він буде доступний лише один раз.
 
-## Retrieve Metadata
+## Отримати метадані
 
 `POST https://REGION.onetimesecret.com/api/v1/private/METADATA_KEY`
 
-Every secret also has associated metadata. The metadata is intended to be used by the creator of the secret (i.e. not the recipient) and should generally be kept private. You can safely use the metadata key to retrieve basic information about the secret itself (e.g. if or when it was viewed) since the metadata key is different from the secret key.
+Кожна таємниця також має пов'язані з нею метадані. Метадані призначені для використання творцем секрету (тобто не одержувачем) і, як правило, повинні залишатися приватними. Ви можете безпечно використовувати ключ метаданих для отримання основної інформації про сам секрет (наприклад, якщо і коли його переглядали), оскільки ключ метаданих відрізняється від ключа секрету.
 
-### Authenticated Request
+### Аутентифікований запит
 
 ```bash
 $ curl -X POST -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/private/METADATA_KEY
 ```
 
-### Query Params
+### Параметри запиту
 
-- **METADATA_KEY**: the unique key for this metadata.
+- **METADATA_KEY**: унікальний ключ для цих метаданих.
 
-### Attributes
+### Атрибути
 
-- **custid**: the username of the account that created the secret. This value will be `anon` for anonymous requests.
-- **metadata\_key**: the unique key for the metadata. DO NOT share this.
-- **secret\_key**: the unique key for the secret you created. This is key that you can share.
-- **ttl**: The time-to-live that was specified (i.e. not the time remaining)
-- **metadata\_ttl**: The remaining time (in seconds) that the metadata has left to live.
-- **secret\_ttl**: The remaining time (in seconds) that the secret has left to live.
-- **recipient**: if a recipient was specified, this is an obfuscated version of the email address.
-- **created**: Time the metadata was created in unix time (UTC)
-- **updated**: ditto, but the time it was last updated.
-- **received**: Time the secret was received.
-- **passphrase\_required**: If a passphrase was provided when the secret was created, this will be true. Otherwise false, obviously.
+- **custid**: ім'я користувача облікового запису, який створив секрет. Це значення буде `anon` для анонімних запитів.
+- **metadata\_key**: унікальний ключ для метаданих. НЕ повідомляйте його нікому.
+- **secret\_key**: унікальний ключ для створеного вами секрету. Цим ключем можна ділитися.
+- **ttl**: Час життя, який було вказано (тобто не час, що залишився).
+- **metadata\_ttl**: Час, що залишився (у секундах), який залишився для метаданих.
+- **secret\_ttl**: Час (у секундах), що залишився до кінця життя секрету.
+- **recipient**: якщо було вказано одержувача, це завуальована версія адреси електронної пошти.
+- **created**: Час створення метаданих в юнікс-часі (UTC)
+- **updated**: те саме, але час останнього оновлення.
+- **received**: Час, коли секрет було отримано.
+- **парольна фраза\_необхідна**: Якщо при створенні секрету було вказано парольну фразу, то це буде істина. В іншому випадку, очевидно, буде хибним.
 
 
-## Burn a Secret
+## Спалити секрет
 
 `POST https://REGION.onetimesecret.com/api/v1/private/METADATA_KEY/burn`
 
-Burn a secret that has not been read yet.
+Спаліть таємницю, яку ще не прочитали.
 
-### Authenticated Request
+### Аутентифікований запит
 
 ```bash
 $ curl -X POST -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/private/METADATA_KEY/burn
 ```
 
-### Query Params
+### Параметри запиту
 
-- None
+- Ні.
 
-### Attributes
+### Атрибути
 
-- Same as metadata attributes with a status of burned.
+- Так само, як і атрибути метаданих зі статусом "спалений".
 
-## Retrieve Recent Metadata
+## Отримати останні метадані
 
 **GET https://onetimesecret.com/api/v1/private/recent**
 
-Retrieve a list of recent metadata.
+Отримати список останніх метаданих.
 
-### Authenticated Request
+### Аутентифікований запит
 
 ```bash
 $ curl -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/private/recent
 ```
 
-### Query Params
+### Параметри запиту
 
-- None
+- Ні.
 
-### Attributes
+### Атрибути
 
-- Same as metadata attributes, although as a list and the secret key value will always be null.
+- Те саме, що й атрибути метаданих, але у вигляді списку, а значення секретного ключа завжди буде нульовим.
 
-::: warning Authentication Required
-Note: Metadata and management operations (retrieve metadata, burn secret, recent metadata) are only available for authenticated users.
+::: попередження Потрібна автентифікація
+Примітка: Метадані та операції керування (отримати метадані, записати таємницю, останні метадані) доступні лише для авторизованих користувачів.
 :::

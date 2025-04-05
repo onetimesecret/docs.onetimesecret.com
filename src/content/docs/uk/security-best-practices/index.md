@@ -1,79 +1,79 @@
 ---
-title: Security Best Practices
-description: Enhance your secret sharing security with these best practices specific to Onetime Secret, including the security benefits of Custom Domains.
+title: Найкращі практики безпеки
+description: Підвищіть безпеку обміну секретними даними за допомогою цих найкращих практик, специфічних для Onetime Secret, включаючи переваги безпеки користувацьких доменів.
 ---
 
-# Security Best Practices for Onetime Secret
+# Найкращі практики безпеки для одноразового секрету
 
-While Onetime Secret is designed with security in mind, following these best practices can further enhance the protection of your sensitive information, especially when using features like Custom Domains.
+Хоча Onetime Secret розроблено з урахуванням вимог безпеки, дотримання цих рекомендацій може ще більше посилити захист вашої конфіденційної інформації, особливо при використанні таких функцій, як користувацькі домени.
 
-## Best Practices for Secret Sharing
+## Найкращі практики для обміну секретними даними
 
-1. **Set Appropriate Expiration Times**: Choose the shortest practical expiration time for your secrets. This minimizes the window of opportunity for unauthorized access.
+1. **Встановіть відповідний термін придатності**: Виберіть найкоротший практичний термін дії для ваших секретів. Це мінімізує вікно можливостей для несанкціонованого доступу.
 
-2. **Use Passphrase Protection**: For highly sensitive information, use the passphrase protection feature. This adds an extra layer of security, requiring the recipient to enter a passphrase to view the secret.
+2. **Використовуйте захист парольної фрази**: Для дуже чутливої інформації використовуйте функцію захисту за допомогою парольної фрази. Це додає додатковий рівень безпеки, вимагаючи від одержувача ввести парольну фразу, щоб переглянути секрет.
 
-3. **Compartmentalize Sensitive Information**: When dealing with highly sensitive data, consider splitting it across multiple secrets. This way, if one secret is compromised, the entire set of information remains protected.
+3. **Розділіть конфіденційну інформацію**: Коли ви працюєте з дуже чутливими даними, подумайте про те, щоб розділити їх на кілька секретів. Таким чином, якщо один секрет буде скомпрометований, весь набір інформації залишиться захищеним.
 
-4. **Use Secure Channels for Sharing Metadata**: While Onetime Secret secures the content of your secret, be mindful of how you share the link and any associated metadata (like passphrases). Use secure, encrypted channels for this communication.
+4. **Використовуйте безпечні канали для обміну метаданими**: Хоча Onetime Secret захищає вміст вашого секрету, пам'ятайте про те, як ви ділитеся посиланням і будь-якими пов'язаними з ним метаданими (наприклад, парольними фразами). Використовуйте для цього безпечні, зашифровані канали.
 
-5. **Verify Recipient**: Ensure you're sharing secrets with the intended recipient. Double-check email addresses or usernames before sending.
+5. **Перевірте одержувача: Переконайтеся, що ви ділитеся секретами з одержувачем. Перевірте адреси електронної пошти або імена користувачів перед надсиланням.
 
-6. **Educate Users**: If using Onetime Secret within an organization, educate your team about proper usage and security practices specific to secret sharing.
+6. **Навчіть користувачів: Якщо ви використовуєте Onetime Secret в організації, навчіть свою команду правильному використанню та методам безпеки, характерним для спільного використання секретів.
 
-## Security Benefits of Custom Domains
+## Переваги безпеки користувацьких доменів
 
-Using Custom Domains with Onetime Secret offers several security advantages:
+Використання користувацьких доменів з одноразовим секретом має кілька переваг у плані безпеки:
 
-1. **Enhanced Phishing Protection**: With a custom domain, your users become accustomed to a specific URL for secret sharing. This makes it easier to identify potential phishing attempts that might use similar-looking domains.
+1. **Покращений захист від фішингу: Завдяки власному домену ваші користувачі звикають до певної URL-адреси для обміну секретними даними. Це полегшує виявлення потенційних спроб фішингу, які можуть використовувати схожі на них домени.
 
-2. **Improved Trust and Legitimacy**: When recipients see a familiar domain, they're more likely to trust the source of the secret. This is particularly important for businesses sharing sensitive information with clients or partners.
+2. **Підвищення довіри та легітимності: Коли одержувачі бачать знайомий домен, вони з більшою ймовірністю довірятимуть джерелу секрету. Це особливо важливо для компаній, які діляться конфіденційною інформацією з клієнтами або партнерами.
 
-3. **Seamless Integration with Existing Security Infrastructure**: A custom domain can be more easily integrated with your existing security tools and monitoring systems, providing a more comprehensive view of your organization's secret sharing activities.
+3. **Безперешкодна інтеграція з існуючою інфраструктурою безпеки**: Власний домен легше інтегрувати з існуючими інструментами безпеки та системами моніторингу, що дає змогу отримати більш повне уявлення про діяльність вашої організації з обміну секретною інформацією.
 
-4. **Compliance and Auditing**: For organizations in regulated industries, using a custom domain can help in maintaining compliance by keeping secret sharing activities under your organization's direct control and making auditing processes more straightforward.
+4. **Відповідність та аудит**: Для організацій, що працюють у регульованих галузях, використання власного домену може допомогти у дотриманні нормативних вимог, оскільки діяльність з обміну секретною інформацією перебуває під прямим контролем вашої організації, а процеси аудиту стають простішими.
 
-Onetime Secret handles the technical aspects of securing your custom domain, including SSL/TLS configuration and domain activity monitoring, allowing you to focus on these strategic security benefits.
+Onetime Secret займається технічними аспектами захисту вашого власного домену, включаючи налаштування SSL/TLS і моніторинг активності домену, що дозволяє вам зосередитися на цих стратегічних перевагах безпеки.
 
-## API Usage Security
+## Безпека використання API
 
-If you're using the Onetime Secret API:
+Якщо ви використовуєте Onetime Secret API:
 
-1. **Secure API Keys**: Store API keys securely and never expose them in client-side code or public repositories.
+1. **Захищайте ключі API**: Зберігайте ключі API надійно і ніколи не виставляйте їх у клієнтському коді або публічних сховищах.
 
-2. **Rotate API Keys**: Regularly rotate your API keys, especially if you suspect they've been compromised.
+2. **Змінюйте ключі API**: Регулярно змінюйте ключі API, особливо якщо ви підозрюєте, що вони були скомпрометовані.
 
-3. **Limit API Access**: Use the principle of least privilege when setting up API access. Only grant the permissions necessary for each specific use case.
+3. **Обмеження доступу до API: Використовуйте принцип найменших привілеїв при налаштуванні доступу до API. Надавайте лише ті дозволи, які необхідні для кожного конкретного випадку використання.
 
-## Advanced Self-Hosted Security
+## Розширена безпека на власному хостингу
 
-This section covers advanced security considerations for organizations running their own instance of Onetime Secret. You can find the open source project on [GitHub](https://github.com/onetimesecret/onetimesecret) and official Docker images at [Docker Hub](https://hub.docker.com/r/onetimesecret/onetimesecret).
+У цьому розділі розглядаються додаткові міркування щодо безпеки для організацій, які використовують власний екземпляр Onetime Secret. Ви можете знайти проект з відкритим вихідним кодом на [GitHub](https://github.com/onetimesecret/onetimesecret) та офіційні образи Docker на [Docker Hub](https://hub.docker.com/r/onetimesecret/onetimesecret).
 
-The recommendations below can be implemented at your infrastructure level when self-hosting Onetime Secret:
+Наведені нижче рекомендації можуть бути реалізовані на рівні вашої інфраструктури при самостійному розміщенні Onetime Secret:
 
-1. **Use Ephemeral Environments**: When possible, create and destroy environments for each secret sharing session. This can be particularly useful for highly sensitive operations. Our [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/blob/v0.18.5/docs/DOCKER-lite.md) Docker image is designed for ephemeral use cases.
+1. **Використовуйте ефемерні середовища: Коли це можливо, створюйте і знищуйте середовища для кожного сеансу секретного обміну. Це може бути особливо корисно для дуже чутливих операцій. Наш [Onetime Secret Lite] (https://github.com/onetimesecret/onetimesecret/blob/v0.18.5/docs/DOCKER-lite.md) Образ Docker призначений для ефемерних випадків використання.
 
-2. **Implement Time-Based Restrictions**: If your use case allows, consider implementing time-based restrictions for accessing secrets, such as only during business hours.
+2. **Впровадьте часові обмеження**: Якщо ваш сценарій використання дозволяє, розгляньте можливість впровадження обмежень на основі часу для доступу до секретів, наприклад, тільки в робочий час.
 
-3. **Geo-Fencing**: For highly sensitive operations, consider implementing geo-fencing to restrict access to secrets from specific geographic locations.
+3. **Географічне огородження: Для особливо чутливих операцій розгляньте можливість впровадження географічної огорожі, щоб обмежити доступ до секретів з певних географічних точок.
 
-4. **Audit Trails**: Maintain detailed audit trails of secret creation and access attempts. This can be crucial for incident response and compliance requirements.
+4. **Аудиторські сліди**: Зберігайте детальні аудиторські сліди створення секретів і спроб доступу до них. Це може мати вирішальне значення для реагування на інциденти та дотримання нормативних вимог.
 
-5. **Encryption at Rest**: While Onetime Secret handles encryption, for highly sensitive data, consider encrypting the content before creating the secret for an additional layer of protection.
+5. **Шифрування у стані спокою: Хоча Onetime Secret обробляє шифрування, для особливо чутливих даних варто зашифрувати вміст перед створенням секрету для додаткового рівня захисту.
 
 
-## Incident Response
+## Реагування на інциденти
 
-This section outlines general security recommendations that may be helpful for your organization. These recommendations are not specific features of our service.
+У цьому розділі викладено загальні рекомендації щодо безпеки, які можуть бути корисними для вашої організації. Ці рекомендації не є специфічними особливостями нашого сервісу.
 
-1. **Have a Plan**: Develop an incident response plan specific to your secret sharing processes. This should include steps for revoking access, notifying affected parties, and mitigating potential damage.
+1. **Майте план**: Розробіть план реагування на інциденти для ваших процесів обміну секретною інформацією. Він має включати кроки для відкликання доступу, повідомлення постраждалих сторін та зменшення потенційної шкоди.
 
-2. **Quick Action**: If you suspect a secret has been compromised, use Onetime Secret's burn feature immediately if the secret hasn't been viewed yet. If it has been viewed, take appropriate actions to mitigate any potential damage.
+2. **Швидка дія: Якщо ви підозрюєте, що секрет було скомпрометовано, негайно скористайтеся функцією запису Onetime Secret, якщо секрет ще не був переглянутий. Якщо секрет був переглянутий, вживіть відповідних заходів, щоб зменшити потенційну шкоду.
 
-3. **Regular Security Reviews**: Periodically review your secret sharing practices and adjust your security measures as needed.
+3. **Регулярні перевірки безпеки**: Періодично переглядайте свої практики обміну секретною інформацією та за потреби коригуйте заходи безпеки.
 
 ---
 
-By following these best practices, you can significantly enhance the security of your secret sharing activities on Onetime Secret. Remember, security is an ongoing process, and staying vigilant is key to protecting your sensitive information.
+Дотримуючись цих найкращих практик, ви можете значно підвищити безпеку вашого обміну секретною інформацією на Onetime Secret. Пам'ятайте, що безпека - це безперервний процес, і збереження пильності є ключем до захисту вашої конфіденційної інформації.
 
-For any security concerns or to report potential vulnerabilities, please contact our security team immediately at security@onetimesecret.com.
+Якщо у вас виникли проблеми з безпекою або ви хочете повідомити про потенційні вразливості, будь ласка, негайно зв'яжіться з нашою командою безпеки за адресою security@onetimesecret.com.

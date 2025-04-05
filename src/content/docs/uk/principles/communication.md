@@ -1,39 +1,39 @@
 ---
-title: Communication
-description: Why we limit email communication to only what's necessary
+title: Спілкування
+description: Чому ми обмежуємо спілкування електронною поштою лише необхідним
 ---
 
-# Our Communication Philosophy
+# Наша комунікаційна філософія
 
-We take a deliberately minimal approach to user communication, respecting your time and inbox.
+Ми застосовуємо навмисно мінімальний підхід до спілкування з користувачами, поважаючи ваш час і поштову скриньку.
 
-## Our No-Email Philosophy
+## Наша філософія без електронної пошти
 
-Most services flood your inbox with:
-- Marketing newsletters
-- Product updates
-- Usage statistics
-- Feature announcements
-- Promotional offers
-- Re-engagement campaigns
+Більшість сервісів переповнюють вашу поштову скриньку:
+- Маркетингові розсилки
+- Оновлення продуктів
+- Статистика використання
+- Анонси новинок
+- Рекламні пропозиції
+- Кампанії з повторного залучення
 
-In our entire history, we've never sent a marketing email. The only emails you'll receive from us are the ones you specifically request: secret link deliveries. No newsletters, no updates, no promotions. We believe your inbox belongs to you.
+За всю нашу історію ми ніколи не надсилали маркетингових листів. Єдині листи, які ви отримаєте від нас, - це ті, які ви спеціально запросите: секретні розсилки посилань. Ніяких розсилок, ніяких оновлень, ніяких рекламних акцій. Ми вважаємо, що ваша поштова скринька належить вам.
 
-## Why This Matters
+## Чому це важливо?
 
-By avoiding standard marketing and communication practices, we:
-- Maintain a cleaner, simpler service
-- Reduce potential security risks
-- Keep focused on our core purpose
-- Respect your time and attention
+Уникаючи стандартних маркетингових та комунікаційних практик, ми:
+- Підтримуємо більш чистий і простий сервіс
+- Зменшуємо потенційні ризики безпеки
+- Зосереджуємося на нашій основній меті
+- Поважаємо ваш час і увагу
 
-## Our Focus Instead
+## Натомість ми зосереджуємось на тому.
 
-We invest our time and resources in:
-- Improving core functionality
-- Strengthening privacy protections
-- Ensuring reliable service
-- Addressing jurisdictional compliance
-- Maintaining transparent operations
+У що ми вкладаємо свій час і ресурси:
+- Покращення основної функціональності
+- Посилення захисту конфіденційності
+- Забезпечення надійного обслуговування
+- Дотримання юрисдикційних норм
+- Підтримання прозорості операцій
 
-Have thoughts about our communication approach? [Contact us](https://onetimesecret.com/feedback).
+Маєте думки щодо нашого підходу до комунікації? [Зв'яжіться з нами (https://onetimesecret.com/feedback).

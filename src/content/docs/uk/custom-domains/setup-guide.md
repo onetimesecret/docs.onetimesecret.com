@@ -1,130 +1,130 @@
 ---
-title: Setup Guide
-description: This guide will walk you through the process of setting up a custom domain for your Onetime Secret account, including the differences between subdomains and apex domains, and choosing your preferred data center region.
+title: Посібник з налаштування
+description: Цей посібник проведе вас через процес налаштування спеціального домену для вашого облікового запису Onetime Secret, включаючи відмінності між піддоменами та апекс-доменами, а також вибір бажаного регіону центру обробки даних.
 ---
 
-# Custom Domain Setup Guide
+# Посібник з налаштування користувацького домену
 
-## Prerequisites
+## Передумови
 
-- An active Onetime Secret account with custom domain feature enabled
-- A domain you own and can manage DNS settings for
+- Активний обліковий запис Onetime Secret з увімкненою функцією кастомного домену
+- Домен, яким ви володієте і можете керувати налаштуваннями DNS для
 
-## Understanding Domain Types
+## Розуміння типів доменів
 
-Before setting up your custom domain, it's important to understand the difference between subdomains and apex domains:
+Перш ніж створювати власний домен, важливо зрозуміти різницю між субдоменами та апекс-доменами:
 
-1. **Subdomain**: A subdivision of your main domain (e.g., secrets.yourdomain.com)
-2. **Apex Domain**: The root domain itself (e.g., yourdomain.com)
+1. **Субдомен**: Підрозділ вашого основного домену (наприклад, secrets.yourdomain.com)
+2. **Верхівковий домен**: Власне кореневий домен (наприклад, yourdomain.com)
 
-## Choose Your Region
+## Оберіть свій регіон
 
-Onetime Secret offers two data center regions: EU and US. When setting up your custom domain, you'll need to choose which region you prefer for storing your data. This choice is important for several reasons:
+Onetime Secret пропонує два регіони розташування дата-центрів: ЄС та США. Під час налаштування власного домену вам потрібно буде вибрати, якому регіону ви віддаєте перевагу для зберігання даних. Цей вибір важливий з кількох причин:
 
-- **For Individuals**: You can choose based on your personal preference, such as proximity for potentially faster access or personal data sovereignty concerns.
-- **For Businesses**: Your choice may depend on your data locality obligations, such as compliance with GDPR, state, or provincial guidelines. Ensure you select the region that best aligns with your regulatory requirements.
+- **Для фізичних осіб**: Ви можете вибрати, виходячи з ваших особистих уподобань, таких як близькість для потенційно швидшого доступу або занепокоєння щодо суверенітету персональних даних.
+- **Для підприємств**: Ваш вибір може залежати від зобов'язань щодо місцезнаходження даних, таких як дотримання GDPR, правил штату або провінції. Переконайтеся, що ви вибрали регіон, який найкраще відповідає вашим нормативним вимогам.
 
-Consider your specific needs and requirements when making this choice. For more detailed information about our data center regions and how to choose the right one for your needs, please refer to our [Data Center Regions](/docs/regions) guide.
+При виборі враховуйте ваші конкретні потреби та вимоги. Для отримання більш детальної інформації про регіони розташування наших дата-центрів і про те, як вибрати відповідний для ваших потреб, зверніться до нашого посібника [Регіони розташування дата-центрів] (/docs/regions).
 
-## Step 1: Access Domains Dashboard
+## Крок 1: Доступ до панелі керування доменами
 
-1. Log in to your Onetime Secret account
-2. Navigate to Dashboard > Custom Domains
-3. Click "Add Domain"
+1. Увійдіть до свого облікового запису Onetime Secret
+2. Перейдіть до Панелі керування > Користувацькі домени
+3. Натисніть "Додати домен"
 
-<img src="/img/docs/custom-domains/3-Custom-domains.png" alt="Custom domains view" width="400" />
+<img src="/img/docs/custom-domains/3-Custom-domains.png" alt="Перегляд користувацьких доменів" width="400" />
 
-## Step 2: Enter Your Domain
+## Крок 2: Введіть свій домен
 
-1. In the custom domain settings, enter your desired domain (e.g., secrets.yourdomain.com or yourdomain.com)
-2. Click "Add Domain" or equivalent button to proceed
+1. У налаштуваннях користувацького домену введіть бажаний домен (наприклад, secrets.yourdomain.com або yourdomain.com)
+2. Натисніть "Додати домен" або еквівалентну кнопку, щоб продовжити
 
-## Step 3: Configure DNS Settings
+## Крок 3: Налаштування параметрів DNS
 
-To connect your domain, you need to update your DNS settings. The process differs slightly depending on whether you're using a subdomain or an apex domain, and which data center region you choose.
+Щоб підключити домен, потрібно оновити налаштування DNS. Процес дещо відрізняється залежно від того, чи використовуєте ви субдомен або апекс-домен, а також від того, який регіон дата-центру ви обрали.
 
-### For Subdomains (Recommended)
+### Для субдоменів (рекомендовано)
 
-1. Access your domain's DNS management panel (through your domain registrar or DNS provider)
-2. Create a CNAME record with the following details:
-   - Host: Your chosen subdomain (e.g., secrets)
-   - Points to / Value:
-     - For EU region: identity.eu.onetime.co
-     - For US region: identity.us.onetime.co
-3. Remove any existing A, AAAA, or CNAME records for the same subdomain
+1. Отримайте доступ до панелі керування DNS вашого домену (через реєстратора домену або DNS-провайдера)
+2. Створіть запис CNAME з такими даними:
+   - Хост: Обраний вами субдомен (наприклад, secrets)
+   - Вказує на / Значення:
+     - Для регіону ЄС: identity.eu.onetime.co
+     - Для регіону США: identity.us.onetime.co
+3. Видаліть усі наявні записи A, AAAA або CNAME для того самого субдомену
 
-### For Apex Domains
+### Для доменів Apex
 
-1. Access your domain's DNS management panel
-2. Create or modify an A record with the following details:
-   - Host: @ (or leave blank, depending on your DNS provider)
-   - Points to / Value:
-     - For EU region: 109.105.217.207
-     - For US region: 66.51.126.41
+1. Увійдіть до панелі керування DNS вашого домену
+2. Створіть або змініть запис A з такими даними:
+   - Хост: @ (або залиште порожнім, залежно від вашого DNS-провайдера)
+   - Вказує на / Значення:
+     - Для регіону ЄС: 109.105.217.207
+     - Для регіону США: 66.51.126.41
 
-Important: Ensure there are no conflicting records for the domain you're using.
+Важливо: Переконайтеся, що для домену, який ви використовуєте, немає конфліктуючих записів.
 
-<img src="/img/docs/custom-domains/4-Custom-domain-settings.png" alt="Custom domain settings" width="400" />
+<img src="/img/docs/custom-domains/4-Custom-domain-settings.png" alt="Налаштування користувацького домену" width="400" />
 
-### More Info
+### Більше інформації
 
-#### Why CNAME for Subdomains?
+#### Чому CNAME для субдоменів?
 
-We recommend using CNAME records for subdomains because:
+Ми рекомендуємо використовувати записи CNAME для піддоменів, тому що
 
-1. They're more flexible and allow us to change our server IP addresses without requiring you to update your DNS settings.
-2. They automatically adapt to any changes we make to our infrastructure.
+1. Вони більш гнучкі і дозволяють нам змінювати IP-адреси наших серверів, не вимагаючи від вас оновлення налаштувань DNS.
+2. Вони автоматично адаптуються до будь-яких змін, які ми вносимо в нашу інфраструктуру.
 
-#### Why A Records for Apex Domains?
+#### Навіщо потрібні записи для верхніх доменів?
 
-Apex domains cannot use CNAME records due to DNS standards. Therefore, we must use A records, which have some limitations:
+Вершинні домени не можуть використовувати записи CNAME через стандарти DNS. Тому ми повинні використовувати A-записи, які мають деякі обмеження:
 
-1. If we change our IP address (which is rare), you'll need to update your DNS settings manually.
-2. They don't automatically adapt to changes in our infrastructure.
+1. Якщо ми змінимо нашу IP-адресу (що трапляється рідко), вам потрібно буде оновити налаштування DNS вручну.
+2. Вони не адаптуються автоматично до змін у нашій інфраструктурі.
 
-## Step 4: Verify Domain and Wait for SSL
+## Крок 4: Підтвердження домену та очікування SSL
 
-1. After updating DNS settings, return to the Onetime Secret custom domain page
-2. The system will automatically attempt to verify your domain
-3. SSL certificate generation will begin once verification is successful
-4. This process may take a few minutes to complete
+1. Після оновлення налаштувань DNS поверніться на сторінку користувацького домену Onetime Secret
+2. Система автоматично спробує підтвердити ваш домен
+3. Після успішної перевірки почнеться генерація SSL-сертифіката
+4. Цей процес може зайняти кілька хвилин
 
-## Step 5: Confirm Setup
+## Крок 5: Підтвердіть налаштування
 
-Once setup is complete, you should see the following information:
+Після завершення налаштування ви побачите наступну інформацію:
 
-- Domain Status: Active with SSL
-- Target Address: identity.eu.onetime.co or identity.us.onetime.co (depending on your chosen region)
-- SSL Status: Active
-- SSL Renewal Date: (Will be displayed, typically about a year from setup)
+- Статус домену: Активний з SSL
+- Цільова адреса: identity.eu.onetime.co або identity.us.onetime.co (залежно від обраного вами регіону)
+- Статус SSL: Активний
+- Дата поновлення SSL: (Відображається, зазвичай приблизно через рік після налаштування)
 
-## Troubleshooting
+## Усунення несправностей
 
-- If verification fails, double-check your DNS settings
-- Ensure you've removed any conflicting records
-- DNS propagation can take up to 24 hours, though it's usually much faster
+- Якщо перевірка не пройшла, перевірте налаштування DNS
+- Переконайтеся, що ви видалили всі конфліктуючі записи
+- Поширення DNS може зайняти до 24 годин, хоча зазвичай це відбувається набагато швидше
 
-## Using Your Custom Domain
+## Використання власного домену
 
-Once active, your secret links will use your custom domain. For example:
+Після активації ваші секретні посилання будуть використовувати ваш власний домен. Наприклад:
 `https://secrets-example.onetime.dev/secret/abc123`
 
-## We've Got You Covered
+## Ми тебе прикриємо
 
-We handle the rest of the technical details so you don't have to.
+Ми подбаємо про решту технічних деталей, щоб вам не довелося цього робити.
 
-- We continuously monitor your domain's status
-- SSL certificates are automatically renewed without any action required on your part
+- Ми постійно відстежуємо статус вашого домену
+- SSL-сертифікати автоматично поновлюються без будь-яких дій з вашого боку
 
-For those who like to stay informed, you can easily check the health of your domain:
+Для тих, хто любить бути в курсі подій, ви можете легко перевірити стан свого домену:
 
-- Simply look at the "Last Monitored" timestamp in your dashboard to confirm ongoing connectivity
+- Просто подивіться на позначку часу "Останній моніторинг" на інформаційній панелі, щоб підтвердити постійне з'єднання
 
-## Questions or Need Support?
+## Питання чи потрібна підтримка?
 
-We're here to help. If you have any questions or need assistance:
+Ми тут, щоб допомогти. Якщо у вас виникли питання або вам потрібна допомога:
 
-- Email us directly at support@onetimesecret.com
-- Use our feedback form at https://onetimesecret.com/feedback
+- Напишіть нам безпосередньо на support@onetimesecret.com
+- Скористайтеся формою зворотного зв'язку на https://onetimesecret.com/feedback
 
-Our team is committed to providing you with the best possible support for your custom domain setup and usage, including guidance on choosing the right data center region for your needs.
+Наша команда прагне надати вам найкращу можливу підтримку в налаштуванні та використанні вашого індивідуального домену, включно з рекомендаціями щодо вибору правильного регіону для центру обробки даних відповідно до ваших потреб.

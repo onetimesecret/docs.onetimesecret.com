@@ -1,72 +1,72 @@
 ---
-title: Pricing
-description: Choose the plan that's right for your secure sharing needs.
+title: Ціноутворення
+description: Виберіть тарифний план, який відповідає вашим потребам у безпечному спільному доступі.
 ---
 
-# Secure Links, Stronger Connections
+# Безпечні посилання, міцніші зв'язки
 
-Share confidential information with confidence, elevate your brand, and build trust.
+Діліться конфіденційною інформацією з упевненістю, піднімайте свій бренд і зміцнюйте довіру.
 
-## Plans
+## Плани
 
-### Basic
+### Базовий
 
-**$0/month**
+**$0/місяць**
 
-Secure, one-time sharing for everyone.
+Безпечний, одноразовий обмін для всіх.
 
-**Features:**
-- Onetime viewing of shared secrets
-- Automatic deletion after viewing
-- Account required to email recipients
-- Basic API access
+**Особливості:**
+- Одноразовий перегляд спільних секретів
+- Автоматичне видалення після перегляду
+- Потрібен обліковий запис для надсилання імейлів одержувачам
+- Базовий доступ до API
 
-[Get Started](https://onetimesecret.com/plans/basic)
+[Початок роботи] (https://onetimesecret.com/plans/basic)
 
-### Identity Plus
+### Ідентичність Плюс
 
-**$35/month or $365/year**
+**35$/місяць або 365$/рік***.
 
-Secure sharing that elevates your brand and simplifies communication.
+Безпечний обмін, який підвищує популярність вашого бренду та спрощує комунікацію.
 
-**Features:**
-- Unlimited custom domains
-- Unlimited sharing capacity
-- Enhanced privacy features
-- Full API access
+**Особливості:**
+- Необмежена кількість власних доменів
+- Необмежений ресурс для спільного використання
+- Покращені функції конфіденційності
+- Повний доступ до API
 
-[Choose this plan](https://onetimesecret.com/plans/identity)
+[Виберіть цей тарифний план] (https://onetimesecret.com/plans/identity)
 
-### Global Elite
+### Глобальна еліта
 
-**Coming Soon**
+**Скоро буде.
 
-Dedicated infrastructure with data-compliance controls and unlimited scalability.
+Виділена інфраструктура з контролем відповідності даних і необмеженою масштабованістю.
 
-**Features:**
-- Private cloud environment
-- Unlimited usage and scaling
-- Multiple data location choices (EU, US)
-- Full regulatory compliance (including GDPR, CCPA, HIPAA)
+**Особливості:**
+- Приватне хмарне середовище
+- Необмежене використання та масштабування
+- Кілька варіантів розташування даних (ЄС, США)
+- Повна відповідність нормативним вимогам (включаючи GDPR, CCPA, HIPAA)
 
-## Frequently Asked Questions
+## Часті запитання
 
-### How does Onetime Secret work?
-Onetime Secret allows you to share sensitive information securely. Each shared secret can only be viewed once before it's permanently deleted, ensuring your data remains confidential.
+### Як працює Onetime Secret?
+Onetime Secret дозволяє вам безпечно ділитися конфіденційною інформацією. Кожен спільний секрет можна переглянути лише один раз, після чого він буде видалений назавжди, гарантуючи, що ваші дані залишаться конфіденційними.
 
-### Do I need an account to use Onetime Secret?
-No account is required for basic functionality. You can start sharing secrets immediately without complex setup.
+### Чи потрібен мені обліковий запис для використання Onetime Secret?
+Для базової функціональності обліковий запис не потрібен. Ви можете почати ділитися секретами одразу без складних налаштувань.
 
-### Is there a free option available?
-Yes, Onetime Secret offers a free tier that allows you to use most features at no cost. For advanced features and branding options, consider our paid plans.
+### Чи є безкоштовна опція?
+Так, Onetime Secret пропонує безкоштовний рівень, який дозволяє використовувати більшість функцій безкоштовно. Для розширених функцій та можливостей брендингу, розгляньте наші платні плани.
 
-### Can I self-host Onetime Secret?
-Yes, Onetime Secret offers a self-hosting option with our SimpleStack℠ guarantee, ensuring easy deployment and management. [GitHub](https://github.com/onetimesecret/onetimesecret)
+### Чи можу я самостійно розмістити Onetime Secret?
+Так, Onetime Secret пропонує можливість самостійного хостингу з нашою гарантією SimpleStack℠, що забезпечує легке розгортання та управління. [GitHub] (https://github.com/onetimesecret/onetimesecret)
 
-### How secure is Onetime Secret?
-We take security very seriously and employ multiple measures to protect users' information. As stated in our privacy policy, we use industry standard practices to safeguard all data from unauthorized access, alteration, or destruction. All data in transit is encrypted using HTTPS/TLS and stored securely in the European Union in compliance with data protection laws.
+### Наскільки безпечний Onetime Secret?
+Ми дуже серйозно ставимося до безпеки і застосовуємо численні заходи для захисту інформації користувачів. Як зазначено в нашій політиці конфіденційності, ми використовуємо стандартні галузеві практики для захисту всіх даних від несанкціонованого доступу, зміни або знищення. Усі дані, що передаються, шифруються за допомогою HTTPS/TLS і надійно зберігаються в Європейському Союзі відповідно до законів про захист даних.
 
-However, we are also transparent that no method of electronic transmission or storage is 100% secure. While we strive to use commercially acceptable means to protect personal information, we cannot guarantee its absolute security. We recommend users take precautions like using passphrases. Our commitment is to be diligent in securing data to the best of our abilities while being upfront about potential risks.
+Однак ми також усвідомлюємо, що жоден метод електронної передачі або зберігання не є на 100% безпечним. Хоча ми прагнемо використовувати комерційно прийнятні засоби для захисту особистої інформації, ми не можемо гарантувати її абсолютну безпеку. Ми рекомендуємо користувачам вживати заходів обережності, наприклад, використовувати парольні фрази. Ми зобов'язуємося старанно захищати дані в міру наших можливостей, але при цьому відверто заявляємо про потенційні ризики.
 
-### Do you offer customer support?
-Yes, we provide customer support. The level of support may vary depending on your chosen plan.
+### Ви надаєте підтримку клієнтам?
+Так, ми надаємо клієнтську підтримку. Рівень підтримки може відрізнятися залежно від обраного вами тарифного плану.
