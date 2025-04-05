@@ -3,7 +3,7 @@ title: Libro de estilo de la traducción
 description: Una guía completa para los traductores que trabajan en la localización de Onetime Secret, que abarca la voz de la marca, las normas terminológicas y los requisitos específicos de cada idioma para garantizar traducciones coherentes y de alta calidad.
 ---
 
-## Guía de estilo de traducción Inglés, Canadá (en-CA)
+## Guía de estilo de traducción Español, basado en el Inglés de Canadá (en-CA)
 
 Guía de estilo de traducción](/socialcards/onetime-socialcard-20250226-1.png)
 
@@ -91,6 +91,27 @@ Ejemplo de uso:
 
 ✅ Du har 3 nye beskeder (Tienes 3 mensajes nuevos)
 ❌ Du har 3 nye hemmeligheder (Tienes 3 nuevos secretos)
+
+### Traduciendo la palabra "secret" al español
+
+En español, es importante considerar cuidadosamente la traducción más adecuada para la palabra "secret" en el contexto de Onetime Secret:
+
+#### Elección de palabras: "mensaje seguro" vs "secreto"
+
+Recomendado: **mensaje seguro** o **mensaje**
+Menos adecuado: secreto
+
+El término "mensaje seguro" comunica con mayor claridad la función del servicio - compartir información de manera segura. Aunque "secreto" es la traducción literal de "secret", en español esta palabra tiene fuertes connotaciones de información personal reservada o confidencial que pueden resultar confusas para el usuario.
+
+Ejemplos de uso:
+
+✅ "Tienes 3 mensajes seguros nuevos" (You have 3 new secure messages)
+❌ "Tienes 3 secretos nuevos" (You have 3 new secrets)
+
+✅ "Compartir un mensaje seguro" (Share a secure message)
+❌ "Compartir un secreto" (Share a secret)
+
+Esta distinción ayuda a los usuarios a entender mejor que están utilizando una herramienta de comunicación para compartir información de forma segura, no una plataforma para almacenar secretos personales.
 
 ## Normas gramaticales y de estilo
 

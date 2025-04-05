@@ -23,6 +23,7 @@ const nlTranslations = loadTranslations("nl");
 const frTranslations = loadTranslations("fr");
 const esTranslations = loadTranslations("es");
 const ukTranslations = loadTranslations("uk");
+const koTranslations = loadTranslations("ko");
 
 /**
  * Helper function to create sidebar link items with required attrs
@@ -41,6 +42,7 @@ function createLink(key, link, badge) {
       fr: frTranslations.sidebar[key],
       es: esTranslations.sidebar[key],
       uk: ukTranslations.sidebar[key],
+      ko: koTranslations.sidebar[key],
     },
     attrs: {},
     ...(badge ? { badge } : {}),
@@ -63,6 +65,7 @@ function createGroup(key, items = [], collapsed = false) {
       fr: frTranslations.sidebar[key],
       es: esTranslations.sidebar[key],
       uk: ukTranslations.sidebar[key],
+      ko: koTranslations.sidebar[key],
     },
     items,
     collapsed,
@@ -126,7 +129,7 @@ export const sidebar = [
     "translations",
     [
       createLink("overview", "translations"),
-      createLink("styleGuide", "translations/guide-en"),
+      createLink("styleGuide", "translations/guide"),
       createLink("glossary", "translations/glossary"),
     ],
     true,

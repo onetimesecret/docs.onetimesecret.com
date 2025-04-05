@@ -1,4 +1,4 @@
-// docs.onetimesecret.com/starlight/config/i18n.mjs
+// config/i18n.mjs
 
 /**
  * Internationalization configuration for Starlight
@@ -29,6 +29,7 @@
  * 4. Restore files to target language directory:
  *    python3 ./bin/translation-util restore -t ./translation_files -s ./src/content/docs/{code}
  */
+
 export const i18nConfig = {
   defaultLocale: "en",
   locales: {
@@ -37,19 +38,24 @@ export const i18nConfig = {
       lang: "en",
       dir: "ltr",
     },
-    de: {
-      label: "Deutsch",
-      lang: "de",
-      dir: "ltr",
-    },
     es: {
       label: "Español",
       lang: "es",
       dir: "ltr",
     },
+    de: {
+      label: "Deutsch",
+      lang: "de",
+      dir: "ltr",
+    },
     fr: {
       label: "Français",
       lang: "fr",
+      dir: "ltr",
+    },
+    ko: {
+      label: "한국어",
+      lang: "ko",
       dir: "ltr",
     },
     nl: {
