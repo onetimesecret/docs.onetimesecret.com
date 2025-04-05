@@ -24,11 +24,27 @@ Het kiezen van de juiste datacenterregio is om verschillende redenen cruciaal:
   - Voldoet aan GDPR en andere EU-voorschriften voor gegevensbescherming
   - Ideaal voor Europese gebruikers of gebruikers die voornamelijk Europese klanten bedienen
 
-### Verenigde Staten (VS)
+### Canada (CA)
+
+- **Locatie**: In Canada (Toronto)
+- **URL**: [https://ca.onetimesecret.com](https://ca.onetimesecret.com)
+- **Belangrijkste kenmerken**:
+  - Voldoet aan PIPEDA en Canadese wetgeving voor gegevensbescherming
+  - Geschikt voor Canadese gebruikers of degenen die voornamelijk Canadese klanten bedienen
+
+### Aotearoa Nieuw-Zeeland (NZ)
+
+- **Locatie**: In Nieuw-Zeeland (Porirua)
+- **URL**: [https://nz.onetimesecret.com](https://nz.onetimesecret.com)
+- **Belangrijkste kenmerken**:
+  - Voldoet aan de Nieuw-Zeelandse Privacy Act en lokale regelgeving
+  - Geschikt voor Nieuw-Zeelandse gebruikers of degenen die klanten in Oceanië bedienen
+
+### Verenigde Staten (US)
 
 - **Locatie**: Binnen de Verenigde Staten (Hillsboro, Oregon)
 - **URL**: [https://us.onetimesecret.com](https://us.onetimesecret.com)
-- Belangrijkste kenmerken**:
+- **Belangrijkste kenmerken**:
   - Voldoet aan de Amerikaanse wetgeving inzake gegevensbescherming
   - Geschikt voor gebruikers die in de VS zijn gevestigd of voornamelijk Amerikaanse klanten bedienen
 
@@ -38,7 +54,7 @@ Onetime Secret maakt gebruik van een 'share-nothing' architectuur, waardoor voll
 
 - **Separate Accounts**: Het aanmaken van een account op `us.onetimesecret.com` is volledig gescheiden van een account op `eu.onetimesecret.com`, zelfs als u hetzelfde e-mailadres gebruikt.
 - **Geen centrumoverschrijdende bewerkingen**: U kunt geen bewerkingen uitvoeren (zoals het verbranden van een geheim) tussen datacenters. Elk centrum onderhoudt zijn eigen set geheimen en gebruikersgegevens.
-- Consistente facturering voor betaalde gebruikers**: Voor betaalde accounts worden geen gebruikersgegevens tussen centra gedeeld, maar wordt uw abonnementsstatus in alle regio's herkend via onze betalingsprovider Stripe.
+- **Consistente facturering voor betaalde gebruikers**: Voor betaalde accounts worden geen gebruikersgegevens tussen centra gedeeld, maar wordt uw abonnementsstatus in alle regio's herkend via onze betalingsprovider Stripe.
 
 ## Hoe kies ik mijn regio
 
@@ -89,9 +105,8 @@ Onze toewijding aan datalokalisatie strekt zich uit tot ons prijsmodel:
 We werken voortdurend aan de uitbreiding van onze datacenteropties. Toekomstige plannen omvatten extra datacenterlocaties in:
 
 - Brazilië
-- Australië
+- Spanje
 - VERENIGD KONINKRIJK
-- Canada
 
 Deze uitbreidingen bieden nog meer opties voor datalokalisatie, waardoor de prestaties en compliancemogelijkheden voor gebruikers in verschillende regio's worden verbeterd.
 
@@ -112,7 +127,7 @@ A: Neem contact op met ons ondersteuningsteam om de opties voor regiomigratie te
 A: Nee, beide regio's bieden hetzelfde hoge beveiligingsniveau. De keuze heeft vooral invloed op het verblijf van gegevens en de potentiële latentie.
 
 **Q: Zijn er prijsverschillen tussen regio's?
-A: Momenteel zijn onze prijzen consistent in beide regio's. Bekijk onze [prijspagina](/prijzen) voor de meest actuele informatie.
+A: Momenteel zijn onze prijzen consistent in beide regio's. Bekijk onze [prijspagina](https://onetimesecret.com/pricing) voor de meest actuele informatie.
 
 ## Hulp nodig?
 
