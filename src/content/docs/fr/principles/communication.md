@@ -1,39 +1,39 @@
 ---
 title: Communication
-description: Why we limit email communication to only what's necessary
+description: Pourquoi nous limitons la communication par courrier électronique au strict nécessaire
 ---
 
-# Our Communication Philosophy
+# Notre philosophie de la communication
 
-We take a deliberately minimal approach to user communication, respecting your time and inbox.
+Nous adoptons une approche délibérément minimale de la communication avec les utilisateurs, en respectant votre temps et votre boîte de réception.
 
-## Our No-Email Philosophy
+## Notre philosophie de l'absence de courrier électronique
 
-Most services flood your inbox with:
-- Marketing newsletters
-- Product updates
-- Usage statistics
-- Feature announcements
-- Promotional offers
-- Re-engagement campaigns
+La plupart des services inondent votre boîte de réception de :
+- des bulletins d'information marketing
+- Mises à jour des produits
+- Statistiques d'utilisation
+- Annonces de nouveautés
+- Offres promotionnelles
+- Campagnes de réengagement
 
-In our entire history, we've never sent a marketing email. The only emails you'll receive from us are the ones you specifically request: secret link deliveries. No newsletters, no updates, no promotions. We believe your inbox belongs to you.
+De toute notre histoire, nous n'avons jamais envoyé de courrier électronique à des fins de marketing. Les seuls courriels que vous recevrez de notre part sont ceux que vous demandez expressément : les livraisons de liens secrets. Pas de bulletins d'information, pas de mises à jour, pas de promotions. Nous pensons que votre boîte de réception vous appartient.
 
-## Why This Matters
+## Pourquoi c'est important
 
-By avoiding standard marketing and communication practices, we:
-- Maintain a cleaner, simpler service
-- Reduce potential security risks
-- Keep focused on our core purpose
-- Respect your time and attention
+En évitant les pratiques habituelles de marketing et de communication, nous :
+- maintenons un service plus propre et plus simple
+- réduisons les risques potentiels en matière de sécurité
+- restons concentrés sur notre objectif principal
+- respectons votre temps et votre attention
 
-## Our Focus Instead
+## Notre objectif plutôt
 
-We invest our time and resources in:
-- Improving core functionality
-- Strengthening privacy protections
-- Ensuring reliable service
-- Addressing jurisdictional compliance
-- Maintaining transparent operations
+Nous investissons notre temps et nos ressources dans
+- l'amélioration des fonctionnalités de base
+- Renforcer la protection de la vie privée
+- Garantir un service fiable
+- Assurer la conformité juridictionnelle
+- Maintenir des opérations transparentes
 
-Have thoughts about our communication approach? [Contact us](https://onetimesecret.com/feedback).
+Vous avez des commentaires sur notre approche de la communication ? [Contactez-nous](https://onetimesecret.com/feedback).
