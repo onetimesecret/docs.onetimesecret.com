@@ -15,9 +15,9 @@ Bienvenido a los principios rectores de Onetime Secret. Estos documentos fundaci
 
 ## Nuestros compromisos
 
-- Privacidad ante todo](/principles/privacy-first)**: Nuestro enfoque para proteger la privacidad del usuario mediante elecciones de diseño deliberadas.
-- Creación de confianza](/principles/trust)**: Cómo nos ganamos y mantenemos la confianza de los usuarios con acciones, no con palabras.
-- **[Filosofía de comunicación](/principios/comunicación)**: Por qué limitamos la comunicación por correo electrónico a lo estrictamente necesario.
+- **[Privacidad ante todo](/principles/privacy-first)**: Nuestro enfoque para proteger la privacidad del usuario mediante elecciones de diseño deliberadas.
+- **[Creación de confianza](/principles/trust)**: Cómo nos ganamos y mantenemos la confianza de los usuarios con acciones, no con palabras.
+- **[Filosofía de comunicación](/principles/communication)**: Por qué limitamos la comunicación por correo electrónico a lo estrictamente necesario.
 - **[Minimización de datos](/principles/data-minimization)**: Nuestro compromiso de recopilar y conservar sólo los datos más esenciales.
 
 
