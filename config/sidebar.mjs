@@ -20,6 +20,7 @@ function loadTranslations(locale) {
 const enTranslations = loadTranslations("en");
 const deTranslations = loadTranslations("de");
 const nlTranslations = loadTranslations("nl");
+const fr_CATranslations = loadTranslations("fr_CA");
 
 /**
  * Helper function to create sidebar link items with required attrs
@@ -35,6 +36,7 @@ function createLink(key, link, badge) {
     translations: {
       de: deTranslations.sidebar[key],
       nl: nlTranslations.sidebar[key],
+      fr_CA: fr_CATranslations.sidebar[key],
     },
     attrs: {},
     ...(badge ? { badge } : {}),
@@ -54,6 +56,7 @@ function createGroup(key, items = [], collapsed = false) {
     translations: {
       de: deTranslations.sidebar[key],
       nl: nlTranslations.sidebar[key],
+      fr_CA: fr_CATranslations.sidebar[key],
     },
     items,
     collapsed,
