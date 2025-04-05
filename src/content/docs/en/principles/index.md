@@ -1,7 +1,6 @@
 ---
 title: Our Principles
 description: The core values and guiding principles that drive our approach to privacy and security
-layout: page
 ---
 
 # Principles

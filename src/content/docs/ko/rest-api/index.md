@@ -1,0 +1,87 @@
+---
+title: 시작하기
+description: Onetime Secret의 REST API는 인증 및 익명 사용을 모두 지원하는 유연한 비밀 공유 기능을 제공합니다. 인증된 사용자는 고급 기능과 더 높은 사용 한도를 이용할 수 있으며, 인증되지 않은 사용자는 기본 기능으로 빠르게 비밀을 공유할 수 있습니다.
+---
+
+_업데이트 2024-11-06_
+
+모든 API 액세스는 HTTPS를 통해 이루어지며 모든 응답은 JSON입니다.
+
+## 기본 URI
+
+`https://REGION.onetimesecret.com/api`
+
+여기서 `REGION`은 `미국` 또는 `유럽`입니다.
+
+<!-- ::callout{icon="i-heroicons-globe-alt"} -->
+**데이터 위치 및 지역 선택**
+- 미국([`us.onetimesecret.com`](https://us.onetimesecret.com/)) 또는 유럽([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) 데이터 센터 중에서 선택합니다.
+- 데이터 주권, 지연 시간 및 규정 준수 요구 사항과 같은 요소를 고려합니다.
+- 참고: 기본 `onetimesecret.com`은 계속 작동하며 활성 데이터 센터로 라우팅되며, 이 기능은 향후 사용되지 않을 수 있으므로 특정 로캘을 사용하는 것이 좋습니다.
+::
+
+인증 ## 인증
+두 가지 API 사용 모드를 지원합니다:
+
+### 인증된 액세스
+
+`https://USERNAME:APITOKEN@REGION.onetimesecret.com/api`
+
+- 전체 API 기능을 사용하려면 HTTP 기본 인증을 사용하세요.
+- 사용자 아이디는 계정 로그인입니다.
+- 비밀번호는 계정 페이지의 API 토큰입니다.
+
+### 익명 액세스
+
+`https://REGION.onetimesecret.com/api`
+
+- 인증 없이 제한된 기능만 사용 가능
+- 빠른 일회성 비밀 공유에 이상적
+- 비밀 생성 및 검색에 모두 사용 가능
+
+## 데이터 로캘리티
+Onetime Secret은 여러 지리적 데이터 센터를 지원합니다. 지역 간 데이터 공유 제로 정책을 준수하여 완벽한 데이터 격리를 보장합니다. 필요에 따라 적합한 데이터 센터를 선택하세요:
+
+- **EU 데이터 센터:** [eu.onetimesecret.com](https://eu.onetimesecret.com/)
+- **미국 데이터 센터:** [us.onetimesecret.com](https://us.onetimesecret.com/)
+
+### 중요 고려 사항:
+- 원하는 도메인으로 직접 이동하여 특정 데이터 로케이션을 선택할 수 있습니다.
+- 생성된 링크에서 시크릿의 위치는 항상 명확하게 알 수 있습니다(예: `us.onetimesecret.com/secret/abcd1234`).
+- 참고: 현재 `onetimesecret.com/api`를 통한 액세스는 계속 작동하지만, 이 기능은 향후 더 이상 사용되지 않을 수 있으므로 특정 로캘을 사용하는 것이 좋습니다.
+
+## 사용자 지정 도메인
+Onetime Secret은 [Identity Plus](https://onetimesecret.com/pricing) 요금제를 통해 특정 네트워킹 또는 브랜딩 요구 사항이 있는 조직을 위한 사용자 지정 도메인 구성을 지원합니다.
+
+### 맞춤 도메인 혜택
+- **개인 브랜딩:** API 액세스 및 비밀 공유를 위해 고유한 도메인(예: `secrets.example.com`)을 사용하세요.
+- **일관된 사용자 경험:** 고객 및 파트너에게 조직의 시각적 정체성과 신뢰감을 유지하세요.
+- 직원 교육 시 포함:** 사용자 지정 도메인을 사용하여 조직의 보안 관행과 워크플로우를 강화하세요.
+
+<!-- ::callout{icon="i-heroicons-lock-closed"} -->
+**프리미엄 기능**
+사용자 정의 도메인은 [Identity Plus](https://onetimesecret.com/pricing) 요금제에서 사용할 수 있습니다. 사용하기 쉬운 구성 옵션으로 몇 분 안에 설정할 수 있습니다. [자세히 알아보기](/docs/custom-domains).
+::
+
+사용자 정의 도메인을 사용한 ### API 사용
+사용자 정의 도메인을 사용할 때 모든 API 엔드포인트는 동일한 구조를 따릅니다:
+
+`https://secrets.example.com/api`
+
+
+## 시스템 상태
+
+`GET https://REGION.onetimesecret.com/api/v1/status`
+시스템의 현재 상태입니다.
+
+**매개변수:** 없음
+
+```bash
+curl -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/status
+{"status":"nominal"}
+```
+
+```bash
+curl -u 'USERNAME:APITOKEN' https://us.onetimesecret.com/api/v1/status
+{"status":"nominal"}
+```

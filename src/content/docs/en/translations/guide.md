@@ -19,7 +19,7 @@ Our English-speaking audience includes:
 ### Customers
 
 - Professional background: IT professionals, agency teams (design, development, marketing), and corporate support teams (HR, provisioning, logistics, finance)
-- Audience: Professionals ages 20-50 with some tech proficiency. These individuals have chosen or work for a company that has chosen to incorporate Onetime Secret into their workflow.
+- Audience: Professionals ages 20-60 with some tech proficiency. These individuals have chosen or work for a company that has chosen to incorporate Onetime Secret into their workflow.
 - Location: North America, UK, Ireland, New Zealand, Australia, Netherlands, Germany
 - Writing approach: Use clear, accessible language with professional tone
 

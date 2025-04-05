@@ -119,8 +119,18 @@ Cuando configures tu cuenta Onetime Secret o configures un dominio personalizado
 
 ## Preguntas frecuentes
 
-**P: ¿Puedo cambiar de región después de configurar mi cuenta?
-R: Póngase en contacto con nuestro equipo de asistencia para estudiar las opciones de migración de región. Tenga en cuenta que la migración puede implicar cierto tiempo de inactividad y transferencia de datos.
+**P: ¿Puedo cambiar mi región después de configurar mi cuenta?**
+R: Sí, puede cambiar su región creando una nueva cuenta con la misma dirección de correo electrónico y navegando a la pantalla de la cuenta. Si tiene una suscripción activa, su cuenta se actualizará automáticamente (es posible que deba actualizar la página).
+
+Tenga en cuenta:
+- Los datos existentes no se transfieren entre regiones
+- Los enlaces secretos que haya creado seguirán funcionando hasta que se vean o caduquen
+- Para enlaces con dominios personalizados, deberá:
+  1. Volver a añadir el dominio a su nueva cuenta regional
+  2. Actualizar los registros DNS asociados
+  3. Utilizar un subdominio único al volver a añadir el dominio para evitar conflictos con enlaces existentes
+  4. Más adelante, puede añadir su dominio preferido (si es necesario) para comenzar a enviar nuevos enlaces con su dominio preferido
+
 
 **P: ¿Afecta mi elección de región a la seguridad de mis secretos?
 R: No, todas las regiones ofrecen el mismo nivel de seguridad. La elección afecta principalmente a la residencia de los datos y a la latencia potencial.

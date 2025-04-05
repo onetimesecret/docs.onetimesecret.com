@@ -11,75 +11,76 @@ Ce glossaire fournit des traductions normalisées pour les termes clés dans les
 
 | anglais | allemand (AT) | français (FR) | français (CA) | Notes |
 |---------|-------------|-------------|-------------|-------|
-| secret (nom) | Geheimnis | secret | secret | concept central de l'application | secret (nom) | Geheimnis | secret | secret | concept central de l'application | secret
-| secret (adj) | geheim | secret/sécurisé | secret/sécurisé | | secret/sécurisé | | secret/sécurisé | | secret/sécurisé | secret/sécurisé | secret/sécurisé | secret/sécurisé
-| phrase secrète | mot de passe | méthode d'authentification pour les secrets |
-| action pour supprimer un secret avant de le voir | view/reveal | anse
-| consulter/afficher | consulter/afficher | action d'accéder à un secret
-| lien | Link/Verbindung | lien | lien | L'URL qui permet d'accéder à un secret |
-| encrypt/encrypted | verschlüsseln/verschlüsselt | chiffrer/chiffré | chiffrer/chiffré | méthode de sécurité | secure | sicher | sécurisé | s'assurer que le secret est bien protégé.
-| secure | sicher | sécurisé | sécurisé | état de protection |
+| secret (noun) | Geheimnis | secret | secret | Central concept of the application |
+| secret (adj) | geheim | secret/sécurisé | secret/sécurisé | |
+| passphrase | Sicherheitsphrase | phrase secrète | mot de passe | Authentication method for secrets |
+| burn | verbrennen | supprimer | supprimer | Action to delete a secret before viewing |
+| view/reveal | ansehen/anzeigen | consulter/afficher | consulter/afficher | Action to access a secret |
+| link | Link/Verbindung | lien | lien | The URL that provides access to a secret |
+| encrypt/encrypted | verschlüsseln/verschlüsselt | chiffrer/chiffré | chiffrer/chiffré | Security method |
+| secure | sicher | sécurisé | sécurisé | State of protection |
+
 
 ## Éléments de l'interface utilisateur
 
 | anglais | allemand (AT) | français (FR) | français (CA) | Notes |
 |---------|-------------|-------------|-------------|-------|
-| Partager un secret | Ein Geheimnis teilen | Partager un secret | Partager un secret | Action principale |
-| Créer un compte | Créer un compte | Créer un compte | Inscription
+| Share a secret | Ein Geheimnis teilen | Partager un secret | Partager un secret | Main action |
+| Create Account | Konto erstellen | Créer un compte | Créer un compte | Registration |
 | Sign In | Eintragen | Se connecter | Se connecter | Authentication |
-| Créer un compte - Créer un compte - Créer un compte - Créer un compte - Créer un compte - Créer un compte - Créer un compte - Créer un compte - Créer un compte - Créer un compte - Créer un compte - Créer un compte - Créer un compte
+| Dashboard | Konto | Tableau de bord | Compte | User's main page |
 | Settings | Einstellungen | Paramètres | Paramètres | Configuration page |
-| Options de confidentialité | Datenschutz-Optionen | Options de confidentialité | Options de confidentialité | Secret settings | (Paramètres de confidentialité)
-| Feedback | Rückmeldung | Retour d'information | Retour d'information | User comments | Feedback | Rückmeldung | Feedback | Rückmeldung | Retour d'information | Retour d'information | User comments
+| Privacy Options | Datenschutz-Optionen | Options de confidentialité | Options de confidentialité | Secret settings |
+| Feedback | Rückmeldung | Retour d'information | Retour d'information | User comments |
 
 ## Conditions d'état
 
 | anglais | allemand (AT) | français (FR) | français (CA) | Notes |
 |---------|-------------|-------------|-------------|-------|
-| reçu | empfangen | reçu | reçu | Secret has been viewed |
+| received | empfangen | reçu | reçu | Secret has been viewed |
 | burned | verbrannt | supprimé | supprimé | Secret was deleted before viewing |
-| expiré | abgelaufen | expiré | expiré | Le secret n'est plus disponible en raison du temps écoulé.
-| créé | erstellt | créé | créé | Le secret a été généré
-| actif | aktiv | actif | actif | Le secret est disponible |
-| inactif | inaktiv | inactif | inactif | Le secret n'est pas disponible.
+| expired | abgelaufen | expiré | expiré | Secret is no longer available due to time |
+| created | erstellt | créé | créé | Secret has been generated |
+| active | aktiv | actif | actif | Secret is available |
+| inactive | inaktiv | inactif | inactif | Secret is not available |
 
 ## Termes liés au temps
 
 | anglais | allemand (AT) | français (FR) | français (CA) | Notes |
 |---------|-------------|-------------|-------------|-------|
-| expire dans | läuft ab in | expire dans | expire dans | Temps jusqu'à ce que le secret ne soit plus disponible |
-| jour/jours | Tag/Tage | jour/jours | jour/jours | Unité de temps | heure/heures | Stundee | Stundee | Stundee | Stundee | Stundee
-| heure/hours | Stunde/Stunden | heure/heures | heure/heures | Unité de temps |
-Heure/heure | heure/heures | heure/heures | heure/heures | heure/heures | unité de temps | minute/minute | Minute/Minuten | minute/minute | unité de temps
-heure/heures | heure/heures | heure/heures | heure/heures | unité de temps | seconde/secondes | Sekunde/Sekunden | seconde/secondes | seconde/secondes | unité de temps | unité de temps
+| expires in | läuft ab in | expire dans | expire dans | Time until secret is no longer available |
+| day/days | Tag/Tage | jour/jours | jour/jours | Time unit |
+| hour/hours | Stunde/Stunden | heure/heures | heure/heures | Time unit |
+| minute/minutes | Minute/Minuten | minute/minutes | minute/minutes | Time unit |
+| second/seconds | Sekunde/Sekunden | seconde/secondes | seconde/secondes | Time unit |
 
 ## Caractéristiques de sécurité
 
 | anglais | allemand (AT) | français (FR) | français (CA) | Notes |
 |---------|-------------|-------------|-------------|-------|
-Accès unique | Accès unique | Accès unique | Fonctionnalité de sécurité de base | Protection de la phrase de passe | Protection du mot de passe | Protection du mot de passe | Protection du mot de passe | Protection des données personnelles
-| protection par phrase secrète | protection par phrase d'authentification | Sécurité supplémentaire |
-| encrypted in transit | verschlüsselt bei der Übertragung | chiffré en transit | chiffré en transit | méthode de protection des données | encrypted at rest | verschlüsselt bei der Übertragung | chiffré en transit | chiffré en transit | méthode de protection des données
-| chiffré au repos | verschlüsselt im Ruhezustand | chiffré au repos | chiffré au repos | Protection du stockage |
+| one-time access | einmaliger Zugang | accès unique | accès unique | Core security feature |
+| passphrase protection | Schutz durch Sicherheitsphrase | protection par phrase secrète | protection par phrase d'authentification | Additional security |
+| encrypted in transit | verschlüsselt bei der Übertragung | chiffré en transit | chiffré en transit | Data protection method |
+| encrypted at rest | verschlüsselt im Ruhezustand | chiffré au repos | chiffré au repos | Storage protection |
 
 ## Termes relatifs au compte
 
 | anglais | allemand (AT) | français (FR) | français (CA) | Notes |
 |---------|-------------|-------------|-------------|-------|
-| email | E-Mail | courriel/e-mail | courriel | Identifiant de l'utilisateur | mot de passe | mot de passe
-| mot de passe | mot de passe | mot de passe | mot de passe | mot de passe | mot de passe | mot de passe | mot de passe | mot de passe | mot de passe | mot de passe | mot de passe
-| compte | Konto | compte | compte | profil d'utilisateur | abonnement | abonnement | abonnement | abonnement | profil d'utilisateur | profil d'utilisateur
-| Abonnement | Abonnement | Abonnement | Abonnement | Service payé
-| client | client | client | utilisateur payant | client | client | utilisateur payant | client | client | client | client | client | client | client | client | client | client | client | utilisateur payant
+| email | E-Mail | courriel/e-mail | courriel | User identifier |
+| password | Passwort | mot de passe | mot de passe | Authentication |
+| account | Konto | compte | compte | User profile |
+| subscription | Abonnement | abonnement | abonnement | Paid service |
+| customer | Kunde | client | client | Paying user |
 
 ## Termes liés au domaine
 
 | anglais | allemand (AT) | français (FR) | français (CA) | Notes |
 |---------|-------------|-------------|-------------|-------|
-| domaine personnalisé | domaine personnalisé | domaine personnalisé | Premium feature | domaine personnalisé | domaine personnalisé | domaine personnalisé | Premium feature | domaine personnalisé | domaine personnalisé | domaine personnalisé
-| vérification du domaine | vérification du domaine | vérification du domaine | vérification du domaine | Processus d'installation
-enregistrement DNS | enregistrement DNS | enregistrement DNS | enregistrement DNS | configuration | enregistrement CNAME | enregistrement CNAME | enregistrement CNAME | enregistrement DNS | enregistrement DNS | enregistrement DNS | enregistrement DNS | enregistrement DNS | enregistrement DNS
-Enregistrement CNAME | Enregistrement CNAME | Enregistrement CNAME | Enregistrement CNAME | Configuration DNS | Enregistrement CNAME | Enregistrement DNS | Enregistrement CNAME | Enregistrement CNAME | Enregistrement CNAME | Enregistrement CNAME | Enregistrement CNAME | Enregistrement DNS
+| custom domain | benutzerdefinierter Bereich | domaine personnalisé | domaine personnalisé | Premium feature |
+| domain verification | Domänenüberprüfung | vérification du domaine | vérification du domaine | Setup process |
+| DNS record | Namensserver-Eintrag | enregistrement DNS | enregistrement DNS | Configuration |
+| CNAME record | CNAME-Eintrag | enregistrement CNAME | enregistrement CNAME | DNS setup |
 
 ## Messages d'erreur
 
@@ -104,9 +105,9 @@ Enregistrement CNAME | Enregistrement CNAME | Enregistrement CNAME | Enregistrem
 
 | anglais | allemand (AT) | français (FR) | français (CA) | Notes |
 |---------|-------------|-------------|-------------|-------|
-| liens sécurisés | liens sichere Links | liens sécurisés | liens sécurisés | caractéristiques du produit |
-| conception privilégiant la protection de la vie privée | conception privilégiant la protection de la vie privée | conception privilégiant la protection de la vie privée | philosophie du design |
-| conception privilégiant la protection de la vie privée | conception privilégiant la protection de la vie privée | philosophie du design | Custom Branding | benutzerdefiniertes Branding | image de marque personnalisée | image de marque personnalisée | Premium feature |
+| secure links | sichere Links | liens sécurisés | liens sécurisés | Product feature |
+| privacy-first design | Datenschutz als oberstes Gebot | conception privilégiant la protection de la vie privée | conception privilégiant la protection de la vie privée | Design philosophy |
+| custom branding | benutzerdefiniertes Branding | image de marque personnalisée | image de marque personnalisée | Premium feature |
 
 ## Lignes directrices pour la traduction
 

@@ -1,7 +1,6 @@
 ---
 title: Onze principes
 description: De kernwaarden en leidende principes die onze benadering van privacy en beveiliging bepalen
-layout: pagina
 ---
 
 # Principes

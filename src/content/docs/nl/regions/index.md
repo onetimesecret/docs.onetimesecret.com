@@ -120,13 +120,23 @@ Bij het instellen van je Onetime Secret account of het configureren van een aang
 
 ## Veelgestelde vragen
 
-**Q: Kan ik mijn regio wijzigen nadat ik mijn account heb ingesteld?
-A: Neem contact op met ons ondersteuningsteam om de opties voor regiomigratie te bespreken. Houd er rekening mee dat de migratie enige downtime en gegevensoverdracht met zich mee kan brengen.
+**V: Kan ik mijn regio wijzigen na het instellen van mijn account?**
 
-**Q: Heeft de keuze van mijn regio invloed op de veiligheid van mijn geheimen?
+A: Ja, u kunt uw regio wijzigen door een nieuw account aan te maken met hetzelfde e-mailadres en naar het accountscherm te navigeren. Als u een actief abonnement heeft, wordt uw account automatisch bijgewerkt (mogelijk moet u de pagina vernieuwen).
+
+Let op:
+- Bestaande gegevens worden niet overgedragen tussen regio's
+- Eerder gemaakte geheime links blijven werken totdat ze worden bekeken of verlopen
+- Voor links met aangepaste domeinen moet u:
+  1. Het domein opnieuw toevoegen aan uw nieuwe regionale account
+  2. De bijbehorende DNS-records bijwerken
+  3. Een uniek subdomein gebruiken bij het opnieuw toevoegen van het domein om conflicten met bestaande links te voorkomen
+  4. Later kunt u uw voorkeurdomein toevoegen (indien nodig) om nieuwe links met uw voorkeurdomein te versturen
+
+**V: Heeft de keuze van mijn regio invloed op de veiligheid van mijn geheimen?
 A: Nee, beide regio's bieden hetzelfde hoge beveiligingsniveau. De keuze heeft vooral invloed op het verblijf van gegevens en de potentiële latentie.
 
-**Q: Zijn er prijsverschillen tussen regio's?
+**V: Zijn er prijsverschillen tussen regio's?
 A: Momenteel zijn onze prijzen consistent in beide regio's. Bekijk onze [prijspagina](https://onetimesecret.com/pricing) voor de meest actuele informatie.
 
 ## Hulp nodig?

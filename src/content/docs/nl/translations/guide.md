@@ -3,7 +3,7 @@ title: Vertaalstijlgids
 description: Een uitgebreide gids voor vertalers die werken aan de lokalisatie van Onetime Secret, met informatie over de stem van het merk, terminologienormen en taalspecifieke vereisten om hoogwaardige en consistente vertalingen te garanderen.
 ---
 
-## Vertaalstijlgids Engels, Canada (en-CA)
+## Vertaalstijlgids Nederlands, gebaseerd op Engels, Canada (en-CA)
 
 Vertaling Stijlgids](/socialcards/onetime-socialcard-20250226-1.png)
 
@@ -19,7 +19,7 @@ Ons Engelstalige publiek bestaat uit:
 ### Klanten
 
 - Professionele achtergrond: IT-professionals, agentschapsteams (ontwerp, ontwikkeling, marketing) en bedrijfsondersteuningsteams (HR, provisioning, logistiek, financiën)
-- Doelgroep: Professionals tussen de 20-50 jaar met enige technische kennis. Deze mensen hebben gekozen voor of werken voor een bedrijf dat Onetime Secret in hun workflow heeft opgenomen.
+- Doelgroep: Professionals tussen de 20-60 jaar met enige technische kennis. Deze mensen hebben gekozen voor of werken voor een bedrijf dat Onetime Secret in hun workflow heeft opgenomen.
 - Locatie: Noord-Amerika, VK, Ierland, Nieuw-Zeeland, Australië, Nederland, Duitsland
 - Schrijfstijl: Gebruik duidelijke, toegankelijke taal met een professionele toon
 
@@ -91,6 +91,27 @@ Voorbeeldgebruik:
 
 ✅ Du har 3 nye beskeder (Je hebt 3 nieuwe berichten)
 ❌ Du har 3 nye hemmeligheder (Je hebt 3 nieuwe geheimen)
+
+### Het woord "secret" vertalen naar het Nederlands
+
+In het Nederlands moeten we zorgvuldig nadenken over de vertaling van "secret" in de context van Onetime Secret:
+
+#### Woordkeuze: "bericht" vs "geheim"
+
+Aanbevolen: **beveiligd bericht** of **bericht**
+Minder geschikt: geheim
+
+De term "beveiligd bericht" of eenvoudig "bericht" communiceert duidelijker wat de dienst doet - het veilig delen van informatie. Hoewel "geheim" de letterlijke vertaling is van "secret", draagt deze term in het Nederlands connotaties van persoonlijke of vertrouwelijke informatie die mogelijk verwarrend zijn voor gebruikers.
+
+Voorbeelden:
+
+✅ "Je hebt 3 nieuwe berichten" (You have 3 new messages)
+❌ "Je hebt 3 nieuwe geheimen" (You have 3 new secrets)
+
+✅ "Deel een beveiligd bericht" (Share a secure message)
+❌ "Deel een geheim" (Share a secret)
+
+Dit onderscheid helpt gebruikers beter te begrijpen dat ze een communicatiemiddel gebruiken voor het veilig delen van informatie, in plaats van een platform voor het opslaan van persoonlijke geheimen.
 
 ## Grammatica- en stijlrichtlijnen
 
