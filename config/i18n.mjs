@@ -9,7 +9,10 @@
  * 2. Create a matching translation file at src/content/i18n/{code}.json
  * 3. Create content directory at src/content/docs/{code}/
  * 4. Translate required content files from the English source
- * 5. Verify with build and preview commands: pnpm run build && pnpm run preview
+ * 5. Update sidebar.mjs to load and use translations for the new language:
+ *    - Import the new language's translations
+ *    - Add the new language to the 'translations' property in createLink/createGroup functions
+ * 6. Verify with build and preview commands: pnpm run build && pnpm run preview
  *
  * Translation Utility:
  * For large translation projects, use the translation-util script:
