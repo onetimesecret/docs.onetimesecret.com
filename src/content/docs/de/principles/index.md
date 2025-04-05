@@ -15,10 +15,10 @@ Willkommen bei den Leitprinzipien von Onetime Secret. Diese grundlegenden Dokume
 
 ## Unsere Verpflichtungen
 
-- **[Datenschutz zuerst](/Grundsätze/privacy-first)**: Unser Ansatz zum Schutz der Privatsphäre der Benutzer durch bewusste Designentscheidungen
-- **[Vertrauen aufbauen](/Grundsätze/Vertrauen)**: Wie wir das Vertrauen der Nutzer durch Taten, nicht durch Worte, gewinnen und erhalten
-- **[Kommunikationsphilosophie](/Grundsätze/Kommunikation)**: Warum wir die E-Mail-Kommunikation auf das Nötigste beschränken
-- **[Datenminimierung](/Grundsätze/Datenminimierung)**: Unsere Verpflichtung, nur die wichtigsten Daten zu sammeln und zu speichern
+- **[Datenschutz zuerst](/principles/privacy-first)**: Unser Ansatz zum Schutz der Privatsphäre der Benutzer durch bewusste Designentscheidungen
+- **[Vertrauen aufbauen](/principles/trust)**: Wie wir das Vertrauen der Nutzer durch Taten, nicht durch Worte, gewinnen und erhalten
+- **[Kommunikationsphilosophie](/principles/communication)**: Warum wir die E-Mail-Kommunikation auf das Nötigste beschränken
+- **[Datenminimierung](/principles/data-minimization)**: Unsere Verpflichtung, nur die wichtigsten Daten zu sammeln und zu speichern
 
 
 ## Warum Prinzipien wichtig sind

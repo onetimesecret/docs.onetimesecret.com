@@ -1,33 +1,33 @@
 ---
-title: Our Principles
-description: The core values and guiding principles that drive our approach to privacy and security
-layout: page
+title: Nos principes
+description: Les valeurs fondamentales et les principes directeurs qui guident notre approche de la protection de la vie privée et de la sécurité.
+mise en page : page
 ---
 
-# Principles
+# Principes
 
-Welcome to Onetime Secret's guiding principles. These foundational documents explain our approach to:
+Bienvenue dans les principes directeurs de Onetime Secret. Ces documents fondamentaux expliquent notre approche :
 
-- Privacy and data minimization
-- User communication and transparency
-- Service reliability and trust
-- Operational practices
+- Protection de la vie privée et minimisation des données
+- Communication avec les utilisateurs et transparence
+- Fiabilité du service et confiance
+- Pratiques opérationnelles
 
-## Our Commitments
+## Nos engagements
 
-- **[Privacy First](/principles/privacy-first)**: Our approach to protecting user privacy through deliberate design choices
-- **[Building Trust](/principles/trust)**: How we earn and maintain user trust through actions, not words
-- **[Communication Philosophy](/principles/communication)**: Why we limit email communication to only what's necessary
-- **[Data Minimization](/principles/data-minimization)**: Our commitment to collecting and retaining only the most essential data
+- **[Privacy First](/principles/privacy-first)** : Notre approche de la protection de la vie privée des utilisateurs par des choix de conception délibérés
+- **[Construire la confiance](/principles/trust)** : Comment nous gagnons et maintenons la confiance des utilisateurs par des actions et non par des mots.
+- **[Philosophie de la communication](/principles/communication)** : Pourquoi nous limitons la communication par courrier électronique au strict nécessaire
+- **[Minimisation des données](/principles/data-minimization)** : Notre engagement à ne collecter et à ne conserver que les données les plus essentielles
 
 
-## Why Principles Matter
+## Pourquoi les principes sont importants
 
-At Onetime Secret, our principles guide every decision we make. They help us:
+Chez Onetime Secret, nos principes guident chacune de nos décisions. Ils nous aident :
 
-- Stay focused on what matters
-- Make consistent choices
-- Build lasting trust
-- Maintain transparency
+- Rester concentré sur ce qui compte
+- Faire des choix cohérents
+- Instaurer une confiance durable
+- Maintenir la transparence
 
-These aren't just guidelines - they're commitments to our users that shape how we operate.
+Il ne s'agit pas de simples lignes directrices, mais d'engagements envers nos utilisateurs qui déterminent notre mode de fonctionnement.
