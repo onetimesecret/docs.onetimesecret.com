@@ -4,47 +4,25 @@ import json
 import shutil
 import re
 import argparse
+import uuid
 
 """
 File Translation Utility
 
 A tool for preparing files for translation, combining them for batch processing,
 and restoring them afterward to their original locations.
-
-Examples:
-    Prepare files for translation:
-        $ ./translation-util prepare -s ./src/content/docs/nl -t ./translation_files
-
-    Combine prepared files into a single file:
-        $ ./translation-util combine -t ./translation_files -o ./combined.txt
-
-    Split combined translated file:
-        $ ./translation-util split -c ./translated_combined.txt -t ./translation_files
-
-    Restore translated files:
-        $ ./translation-util restore -t ./translation_files -s ./src/content/docs/nl
 """
 
-# Delimiter pattern used to separate files in the combined document
-FILE_DELIMITER = "===== 0101010101010: {filename} ====="
-DELIMITER_PATTERN = r"===== 0101010101010: (.*?) ====="
+# Updated delimiter pattern with unique ID that won't be translated
+FILE_DELIMITER = "###FILEID:{file_id}###FILENAME:{filename}###"
+DELIMITER_PATTERN = r"###FILEID:([a-zA-Z0-9\-]+)###FILENAME:(.*?)###"
 
 def prepare_files_for_translation(
     source_dir,
     output_dir,
     extensions=(".md", ".mdoc", ".mdx", ".astro")
 ):
-    """
-    Prepares files for translation by converting to .txt format with path-based naming.
-
-    Args:
-        source_dir: Directory containing original files
-        output_dir: Directory to place temporary .txt files
-        extensions: File extensions to process
-
-    Returns:
-        Path to the generated mapping file
-    """
+    """Prepares files for translation by converting to .txt format with unique identifiers."""
     os.makedirs(output_dir, exist_ok=True)
     file_mapping = {}
 
@@ -71,16 +49,20 @@ def prepare_files_for_translation(
                     final_temp_name = f"{os.path.splitext(temp_name)[0]}_{counter}.txt"
                     counter += 1
 
+                # Generate unique ID for this file
+                file_id = str(uuid.uuid4())[:8]
+
                 translation_path = os.path.join(output_dir, final_temp_name)
 
                 # Copy content
                 shutil.copy2(original_path, translation_path)
 
-                # Store mapping with original path and extension
+                # Store mapping with original path, extension and ID
                 file_mapping[final_temp_name] = {
                     "path": relative_path,
                     "extension": original_extension,
-                    "original_full_path": original_path
+                    "original_full_path": original_path,
+                    "file_id": file_id
                 }
 
     mapping_file = os.path.join(output_dir, "file_mapping.json")
@@ -95,31 +77,23 @@ def combine_txt_files(
     translation_dir,
     output_file
 ):
-    """
-    Combines all .txt files in the translation directory into a single file.
-
-    Args:
-        translation_dir: Directory containing .txt files to combine
-        output_file: Path to the output combined file
-
-    Returns:
-        Number of files combined
-    """
-    # Get the mapping first to ensure we process only our translation files
+    """Combines all .txt files using unique IDs in delimiters."""
     mapping_file = os.path.join(translation_dir, "file_mapping.json")
     with open(mapping_file, 'r') as f:
         file_mapping = json.load(f)
 
     combined_count = 0
     with open(output_file, 'w', encoding='utf-8') as outfile:
-        for filename in file_mapping.keys():
+        for filename, file_info in file_mapping.items():
             file_path = os.path.join(translation_dir, filename)
             if not os.path.exists(file_path):
                 print(f"Warning: {file_path} not found, skipping")
                 continue
 
-            # Write file delimiter with filename
-            outfile.write(f"{FILE_DELIMITER.format(filename=filename)}\n\n")
+            # Write file delimiter with ID and filename
+            file_id = file_info.get("file_id")
+            delimiter = FILE_DELIMITER.format(file_id=file_id, filename=filename)
+            outfile.write(f"{delimiter}\n\n")
 
             # Write file content
             with open(file_path, 'r', encoding='utf-8') as infile:
@@ -136,40 +110,51 @@ def split_combined_file(
     combined_file,
     translation_dir
 ):
-    """
-    Splits a combined translated file back into individual .txt files.
-
-    Args:
-        combined_file: Path to the combined translated file
-        translation_dir: Directory to place the split files
-
-    Returns:
-        Number of files split
-    """
+    """Splits a combined file using unique IDs from delimiters."""
     os.makedirs(translation_dir, exist_ok=True)
+
+    # First load the mapping to get file_id to filename correlations
+    mapping_file = os.path.join(translation_dir, "file_mapping.json")
+    with open(mapping_file, 'r') as f:
+        file_mapping = json.load(f)
+
+    # Build ID to filename mapping
+    id_to_filename = {info["file_id"]: filename for filename, info in file_mapping.items()}
 
     with open(combined_file, 'r', encoding='utf-8') as infile:
         content = infile.read()
 
     # Split the content based on file delimiters
-    parts = re.split(DELIMITER_PATTERN, content)
+    matches = re.finditer(DELIMITER_PATTERN, content)
 
-    # First part is empty if file starts with a delimiter
-    parts = parts[1:] if parts[0].strip() == "" else parts
-
-    # Process parts in pairs (filename, content)
     split_count = 0
-    for i in range(0, len(parts), 2):
-        if i+1 < len(parts):
-            filename = parts[i].strip()
-            file_content = parts[i+1].strip()
 
+    for match in matches:
+        file_id = match.group(1)
+        # We use the stored filename from our mapping rather than the one in the delimiter
+        # which might have been translated
+        if file_id in id_to_filename:
+            filename = id_to_filename[file_id]
+            start_content = match.end()
+
+            # Find the next delimiter or end of file
+            next_match = re.search(DELIMITER_PATTERN, content[start_content:])
+            if next_match:
+                end_content = start_content + next_match.start()
+            else:
+                end_content = len(content)
+
+            # Extract content between delimiters
+            file_content = content[start_content:end_content].strip()
+
+            # Write to file
             output_path = os.path.join(translation_dir, filename)
-
             with open(output_path, 'w', encoding='utf-8') as outfile:
                 outfile.write(file_content)
 
             split_count += 1
+        else:
+            print(f"Warning: File ID {file_id} not found in mapping")
 
     print(f"Split {split_count} files from {combined_file}")
     return split_count
@@ -179,14 +164,7 @@ def restore_translated_files(
     source_dir,
     mapping_file=None
 ):
-    """
-    Restores translated files to their original locations and formats.
-
-    Args:
-        translation_dir: Directory containing translated .txt files
-        source_dir: Original source directory to restore files to
-        mapping_file: JSON file mapping temp names to original paths
-    """
+    """Restores translated files to their original locations using the mapping file."""
     if mapping_file is None:
         mapping_file = os.path.join(translation_dir, "file_mapping.json")
 
