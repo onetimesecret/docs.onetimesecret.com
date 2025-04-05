@@ -8,6 +8,8 @@ export default defineConfig({
   redirects: {
     "/docs": "/en/",
     "/blog": "https://blog.onetimesecret.com/",
+    "/contact": "https://onetimesecret.com/feedback",
+    "/pricing": "https://onetimesecret.com/pricing",
   },
   // base: process.env.VITE_BASE_URL || "/",
   integrations: createIntegrations(),
