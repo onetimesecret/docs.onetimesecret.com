@@ -1,16 +1,41 @@
+// config/sidebar.mjs
+import { readFileSync } from "fs";
+import { join, dirname } from "path";
+import { fileURLToPath } from "url";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+// Load translations from JSON files
+function loadTranslations(locale) {
+  const filePath = join(__dirname, "../src/content/i18n", `${locale}.json`);
+  try {
+    const content = readFileSync(filePath, "utf8");
+    return JSON.parse(content);
+  } catch (error) {
+    console.error(`Error loading translations for ${locale}:`, error);
+    return {};
+  }
+}
+
+const enTranslations = loadTranslations("en");
+const deTranslations = loadTranslations("de");
+const nlTranslations = loadTranslations("nl");
+
 /**
  * Helper function to create sidebar link items with required attrs
- * @param {string} label - Display label for the link
+ * @param {string} key - Translation key for the label
  * @param {string} link - URL path for the link
- * @param {Object} translations - Localized versions of the label by language code
  * @param {Object} [badge] - Optional badge configuration
  * @returns {Object} Formatted sidebar link item
  */
-function createLink(label, link, translations = {}, badge) {
+function createLink(key, link, badge) {
   return {
-    label,
+    label: enTranslations.sidebar[key],
     link,
-    translations,
+    translations: {
+      de: deTranslations.sidebar[key],
+      nl: nlTranslations.sidebar[key],
+    },
     attrs: {},
     ...(badge ? { badge } : {}),
   };
@@ -18,161 +43,82 @@ function createLink(label, link, translations = {}, badge) {
 
 /**
  * Helper function to create sidebar group items
- * @param {string} label - Display label for the group
- * @param {Object} translations - Localized versions of the label by language code
+ * @param {string} key - Translation key for the group label
  * @param {Array} items - Child items (links or groups) within this group
  * @param {boolean} collapsed - Whether the group should be collapsed by default
  * @returns {Object} Formatted sidebar group item
  */
-function createGroup(label, translations = {}, items = [], collapsed = false) {
+function createGroup(key, items = [], collapsed = false) {
   return {
-    label,
-    translations,
+    label: enTranslations.sidebar[key],
+    translations: {
+      de: deTranslations.sidebar[key],
+      nl: nlTranslations.sidebar[key],
+    },
     items,
     collapsed,
   };
 }
 
-// Sidebar configuration for Starlight
+// Sidebar configuration using translation keys
 export const sidebar = [
-  createLink("Home", "/", { de: "Startseite", nl: "Home" }),
+  createLink("home", "/"),
 
-  createGroup("Introduction", { de: "Einführung", nl: "Introductie" }, [
-    createLink("Getting Started", "introduction", {
-      de: "Erste Schritte",
-      nl: "Aan de slag",
-    }),
+  createGroup("introduction", [createLink("gettingStarted", "introduction")]),
+
+  createGroup("secretLinks", [
+    createLink("overview", "secret-links"),
+    createLink("whyUseSecretLinks", "secret-links/why-use-secret-links"),
+    createLink("useCases", "secret-links/use-cases"),
   ]),
 
-  createGroup("Secret Links", { de: "Geheime Links", nl: "Geheime links" }, [
-    createLink("Overview", "secret-links", {
-      de: "Überblick",
-      nl: "Overzicht",
+  createGroup("customDomains", [
+    createLink("overview", "custom-domains"),
+    createLink("howItWorks", "custom-domains/how-it-works"),
+    createLink("setupGuide", "custom-domains/setup-guide"),
+    createLink("brandGuide", "custom-domains/brand-guide", {
+      text: "Helpful!",
+      variant: "tip",
+      class: "small",
     }),
-    createLink("Why Use Secret Links", "secret-links/why-use-secret-links", {
-      de: "Warum geheime Links verwenden",
-      nl: "Waarom geheime links gebruiken",
-    }),
-    createLink("Use Cases", "secret-links/use-cases", {
-      de: "Anwendungsfälle",
-      nl: "Gebruikscasussen",
-    }),
+    createLink("comparePlans", "custom-domains/compare-plans"),
+    createLink("useCases", "custom-domains/use-cases"),
   ]),
 
-  createGroup(
-    "Custom Domains",
-    { de: "Benutzerdefinierte Domains", nl: "Aangepaste domeinen" },
-    [
-      createLink("Overview", "custom-domains", {
-        de: "Überblick",
-        nl: "Overzicht",
-      }),
-      createLink("How It Works", "custom-domains/how-it-works", {
-        de: "Wie es funktioniert",
-        nl: "Hoe werken ze?",
-      }),
-      createLink("Setup Guide", "custom-domains/setup-guide", {
-        de: "Einrichtungsanleitung",
-        nl: "Installatiegids",
-      }),
-      createLink(
-        "Brand Guide",
-        "custom-domains/brand-guide",
-        {
-          de: "Markenrichtlinie",
-          nl: "Merkgids",
-        },
-        { text: "Helpful!", variant: "tip", class: "small" },
-      ),
-      createLink("Compare Plans", "custom-domains/compare-plans", {
-        de: "Pläne vergleichen",
-        nl: "Plannen vergelijken",
-      }),
-      createLink("Use Cases", "custom-domains/use-cases", {
-        de: "Anwendungsfälle",
-        nl: "Gebruikscasussen",
-      }),
-    ],
-  ),
+  createGroup("regions", [createLink("overview", "regions")]),
 
-  createGroup("Regions", { de: "Regionen", nl: "Regio's" }, [
-    createLink("Overview", "regions", { de: "Überblick", nl: "Overzicht" }),
-  ]),
+  createGroup("restApi", [
+    createLink("overview", "rest-api"),
 
-  createGroup("REST API", { de: "REST API", nl: "REST API" }, [
-    createLink("Overview", "rest-api", { de: "Überblick", nl: "Overzicht" }),
-
-    createGroup("v1", { de: "v1", nl: "v1" }, [
-      createLink("Create Secrets", "rest-api/v1/create-secrets", {
-        de: "Geheimnisse erstellen",
-        nl: "Geheimen aanmaken",
-      }),
-      createLink("Retrieve Secrets", "rest-api/v1/retrieve-secrets", {
-        de: "Geheimnisse abrufen",
-        nl: "Geheimen ophalen",
-      }),
-      createLink("Client Libraries", "rest-api/v1/client-libraries", {
-        de: "Client-Bibliotheken",
-        nl: "Client bibliotheken",
-      }),
+    createGroup("v1", [
+      createLink("createSecrets", "rest-api/v1/create-secrets"),
+      createLink("retrieveSecrets", "rest-api/v1/retrieve-secrets"),
+      createLink("clientLibraries", "rest-api/v1/client-libraries"),
     ]),
   ]),
 
-  createGroup(
-    "Security Best Practices",
-    { de: "Sicherheits-Best-Practices", nl: "Beveiligingsbest practices" },
-    [
-      createLink("Overview", "security-best-practices", {
-        de: "Überblick",
-        nl: "Overzicht",
-      }),
-    ],
-  ),
+  createGroup("securityBestPractices", [
+    createLink("overview", "security-best-practices"),
+  ]),
 
   createGroup(
-    "Our Principles",
-    { de: "Unsere Prinzipien", nl: "Onze principes" },
+    "ourPrinciples",
     [
-      createLink("Overview", "principles", {
-        de: "Überblick",
-        nl: "Overzicht",
-      }),
-      createLink("Privacy First", "principles/privacy-first", {
-        de: "Datenschutz zuerst",
-        nl: "Privacy eerst",
-      }),
-      createLink("Trust", "principles/trust", {
-        de: "Vertrauen",
-        nl: "Vertrouwen",
-      }),
-      createLink("Communication", "principles/communication", {
-        de: "Kommunikation",
-        nl: "Communicatie",
-      }),
-      createLink("Data Minimization", "principles/data-minimization", {
-        de: "Datenminimierung",
-        nl: "Gegevensminimalisatie",
-      }),
+      createLink("overview", "principles"),
+      createLink("privacyFirst", "principles/privacy-first"),
+      createLink("trust", "principles/trust"),
+      createLink("communication", "principles/communication"),
+      createLink("dataMinimization", "principles/data-minimization"),
     ],
     true,
   ),
 
   createGroup(
-    "Translations",
-    { de: "Übersetzungen", nl: "Vertalingen" },
+    "translations",
     [
-      createLink("Overview", "translations", {
-        de: "Überblick",
-        nl: "Overzicht",
-      }),
-      createLink("Style Guide", "translations/guide-en", {
-        de: "Stilrichtlinien",
-        nl: "Stijlgids",
-      }),
-      createLink("Glossary", "translations/glossary", {
-        de: "Glossar",
-        nl: "Woordenlijst",
-      }),
+      createLink("overview", "translations"),
+      createLink("styleGuide", "translations/guide-en"),
+      createLink("glossary", "translations/glossary"),
     ],
     true,
   ),
