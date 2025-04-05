@@ -120,7 +120,16 @@ When setting up your Onetime Secret account or configuring a custom domain, you'
 ## Frequently Asked Questions
 
 **Q: Can I change my region after setting up my account?**
-A: Contact our support team to discuss region migration options. Note that migration may involve some downtime and data transfer.
+A: Yes, you can change your region by creating a new account with the same email address and navigating to the account screen. If you have an active subscription, your account will update automatically (you may need to refresh the page).
+
+Please note:
+- Existing data is not transferred between regions
+- Any secret links you've created will continue to function until they are viewed or expire
+- For links with custom domains, you'll need to:
+  1. Re-add the domain to your new region account
+  2. Update the associated DNS records
+  3. Use a unique subdomain when re-adding the domain to avoid conflicts with existing links
+  4. Later on, you can add your preferred domain (if necessary) so you can start sending new links with your preferred domain
 
 **Q: Does my choice of region affect the security of my secrets?**
 A: No, all regions offer the same high level of security. The choice primarily affects data residency and potential latency.

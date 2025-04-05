@@ -119,8 +119,18 @@ Lors de la création de votre compte Onetime Secret ou de la configuration d'un 
 
 ## Questions fréquemment posées
 
-**Q : Puis-je changer de région après avoir créé mon compte ?
-R : Contactez notre équipe d'assistance pour discuter des options de migration de région. Notez que la migration peut impliquer un certain temps d'arrêt et un transfert de données.
+**Q : Puis-je changer ma région après avoir configuré mon compte ?**
+
+R : Oui, vous pouvez changer votre région en créant un nouveau compte avec la même adresse e-mail et en accédant à l'écran du compte. Si vous avez un abonnement actif, votre compte sera mis à jour automatiquement (vous devrez peut-être actualiser la page).
+
+Veuillez noter :
+- Les données existantes ne sont pas transférées entre les régions
+- Les liens secrets que vous avez créés continueront à fonctionner jusqu'à ce qu'ils soient consultés ou qu'ils expirent
+- Pour les liens avec des domaines personnalisés, vous devrez :
+  1. Rajouter le domaine à votre nouveau compte régional
+  2. Mettre à jour les enregistrements DNS associés
+  3. Utiliser un sous-domaine unique lors de l'ajout du domaine pour éviter les conflits avec les liens existants
+  4. Plus tard, vous pourrez ajouter votre domaine préféré (si nécessaire) pour commencer à envoyer de nouveaux liens avec votre domaine préféré
 
 **Q : Mon choix de région a-t-il une incidence sur la sécurité de mes secrets ?
 R : Non, toutes les régions offrent le même niveau élevé de sécurité. Le choix affecte principalement la résidence des données et la latence potentielle.

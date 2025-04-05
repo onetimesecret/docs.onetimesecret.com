@@ -1,8 +1,7 @@
 ---
-title: Data Center Regions
+title: Rechenzentrumsregionen
 description: Erfahren Sie mehr über die Rechenzentrumsregionen von Onetime Secret und wie Sie die richtige Region für Ihre Bedürfnisse auswählen.
 ---
-
 
 Onetime Secret bietet zwei Data Center Regions an: Europäische Union (EU) und Vereinigte Staaten (US). In diesem Leitfaden erfahren Sie, wie wichtig die Auswahl der Region ist und wie Sie die richtige Region für Ihre Bedürfnisse auswählen.
 
@@ -111,7 +110,7 @@ Wir arbeiten kontinuierlich an der Erweiterung unserer Rechenzentrumsoptionen. Z
 
 Diese Erweiterungen bieten noch mehr Optionen für die Datenlokalisierung und verbessern die Leistung und die Compliance-Funktionen für Benutzer in verschiedenen Regionen.
 
-##
+## Ihre Region konfigurieren
 
 Wenn Sie Ihr Onetime Secret Konto einrichten oder eine benutzerdefinierte Domain konfigurieren, haben Sie die Möglichkeit, Ihre bevorzugte Region zu wählen. Und so geht's:
 
@@ -121,13 +120,23 @@ Wenn Sie Ihr Onetime Secret Konto einrichten oder eine benutzerdefinierte Domain
 
 ## Häufig gestellte Fragen
 
-**Q: Kann ich meine Region nach der Einrichtung meines Kontos ändern?**
-A: Wenden Sie sich an unser Support-Team, um die Optionen für die Migration der Region zu besprechen. Beachten Sie, dass die Migration mit einer gewissen Ausfallzeit und Datenübertragung verbunden sein kann.
+**F: Kann ich meine Region nach der Kontoerstellung ändern?**
+A: Ja, Sie können Ihre Region ändern, indem Sie ein neues Konto mit derselben E-Mail-Adresse erstellen und zum Kontobildschirm navigieren. Wenn Sie ein aktives Abonnement haben, wird Ihr Konto automatisch aktualisiert (möglicherweise müssen Sie die Seite neu laden).
 
-**Q: Beeinflusst die Wahl der Region die Sicherheit meiner Geheimnisse?**
+Bitte beachten Sie:
+- Bestehende Daten werden nicht zwischen Regionen übertragen
+- Bereits erstellte geheime Links funktionieren weiterhin, bis sie angesehen werden oder ablaufen
+- Für Links mit benutzerdefinierten Domains müssen Sie:
+  1. Die Domain in Ihrem neuen regionalen Konto erneut hinzufügen
+  2. Die zugehörigen DNS-Einträge aktualisieren
+  3. Eine eindeutige Subdomain beim erneuten Hinzufügen der Domain verwenden, um Konflikte mit bestehenden Links zu vermeiden
+  4. Später können Sie Ihre bevorzugte Domain hinzufügen (falls erforderlich), um neue Links mit Ihrer bevorzugten Domain zu versenden
+
+
+**F: Beeinflusst die Wahl der Region die Sicherheit meiner Geheimnisse?**
 A: Nein, beide Regionen bieten das gleiche hohe Maß an Sicherheit. Die Wahl wirkt sich in erster Linie auf den Aufenthaltsort der Daten und die mögliche Latenzzeit aus.
 
-**Q: Gibt es Preisunterschiede zwischen den Regionen?**
+**F: Gibt es Preisunterschiede zwischen den Regionen?**
 A: Derzeit sind unsere Preise in beiden Regionen gleich. Auf unserer [Preisseite](/Preise) finden Sie die aktuellsten Informationen.
 
 ## Brauchen Sie Hilfe?
