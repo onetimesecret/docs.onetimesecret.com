@@ -17,7 +17,7 @@ export const i18nConfig = {
       lang: "de",
       dir: "ltr",
     },
-    fr_CA: {
+    fr: {
       label: "Français",
       lang: "fr",
       dir: "ltr",
@@ -25,11 +25,6 @@ export const i18nConfig = {
     nl: {
       label: "Nederlands",
       lang: "nl",
-      dir: "ltr",
-    },
-    fr_FR: {
-      label: "Français",
-      lang: "fr",
       dir: "ltr",
     },
   },

@@ -26,24 +26,24 @@ Upload uw merklogo via de beheerinterface. Het systeem accepteert PNG- of JPG-be
 
 ### Logo uploaden
 
-<img src=“/img/docs/custom-domains/guide-brand-admin-1.png” alt=“Logo upload interface met knop toevoegen” width=“400” />
+<img src="/img/docs/custom-domains/guide-brand-admin-1.png" alt="Logo upload interface met knop toevoegen" width="400" />
 
 ### Logo verwijderen of vervangen
 
 Verwijder of vervang logo's indien nodig via het paneel voor logo-beheer.
 
-<img src=“/img/docs/custom-domains/guide-brand-admin-2.png” alt=“Logobeheerinterface met verwijderoptie” width=“400” />
+<img src="/img/docs/custom-domains/guide-brand-admin-2.png" alt="Logobeheerinterface met verwijderoptie" width="400" />
 
 
 ## Merkaanpassing
 Pas kleuren, lettertypes en styling aan via de interface voor merkinstellingen. Bekijk uw wijzigingen in real-time via het voorbeeldvenster.
 
-<img src=“/img/docs/custom-domains/guide-brand-admin-4.png” alt=“Merkaanpassingsinterface” width=“400” />
+<img src="/img/docs/custom-domains/guide-brand-admin-4.png" alt="Merkaanpassingsinterface" width="400" />
 
 
 Controleer uw merkwijzigingen op de live site nadat u ze hebt opgeslagen.
 
-<img src=“/img/docs/custom-domains/guide-brand-admin-3.png” alt=“Homepage configuratiepaneel” width=“400” />
+<img src="/img/docs/custom-domains/guide-brand-admin-3.png" alt="Homepage configuratiepaneel" width="400" />
 
 ## Homepage-instellingen
 
@@ -51,13 +51,13 @@ Controleer uw merkwijzigingen op de live site nadat u ze hebt opgeslagen.
 
 Terug op uw Domain Dashboard kunt u de zichtbaarheid voor uw merkhomepage configureren. Als u deze functie inschakelt, kunnen uw klanten, klanten of teamleden direct vanaf uw merkinterface geheimen aanmaken en delen.
 
-<img src=“/img/docs/custom-domains/guide-brand-admin-5.png” alt=“Voorbeeldvenster met de merkinterface” width=“400” />
+<img src="/img/docs/custom-domains/guide-brand-admin-5.png" alt="Voorbeeldvenster met de merkinterface" width="400" />
 
 ### Homepage uitschakelen
 
 
 
-<img src=“/img/docs/custom-domains/guide-brand-admin-6.png” alt=“Live implementatieweergave” width=“400” />
+<img src="/img/docs/custom-domains/guide-brand-admin-6.png" alt="Live implementatieweergave" width="400" />
 
 ## Belangrijke opmerkingen
 - Wijzigingen worden onmiddellijk verwerkt na het opslaan
