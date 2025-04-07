@@ -1,4 +1,4 @@
-// starlight/config/vite.mjs
+// config/vite.mjs
 
 export function createViteConfig() {
   // Remember, for security reasons, only variables prefixed with VITE_ are
@@ -21,14 +21,6 @@ export function createViteConfig() {
     process.env.__VITE_ADDITIONAL_SERVER_ALLOWED_HOSTS;
 
   return {
-    // esbuild: {
-    //   loader: "tsx",
-    //   // include: /src\/components\/.*\.ts.$/,
-    //   exclude: [],
-    //   target: "esnext",
-    // },
-    // moduleResolution: "bundler",
-    // base: viteBaseUrl || "/",
     server: {
       // origin: viteBaseUrl,
       allowedHosts: (() => {
