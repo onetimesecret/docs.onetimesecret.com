@@ -27,15 +27,9 @@ export const starlightConfig = {
     SiteTitle: "./src/components/starlight/SiteTitle.astro",
   },
   social: [
-    {
-      name: "blueSky",
-      url: "https://bskyapp/profile/onetimesecretcom",
-    },
-    {
-      name: "github",
-      url: "https://github.com/onetimesecret/onetimesecret",
-    },
-  ],
+  { icon: 'github', label: 'GitHub', href: 'https://github.com/onetimesecret/onetimesecret' },
+  { icon: 'blueSky', label: 'BlueSky', href: 'https://bskyapp/profile/onetimesecretcom' },
+],
   customCss: [
     "./src/styles/tailwind.css",
     "./src/fonts/font-face.css",
