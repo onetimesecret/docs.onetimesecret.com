@@ -26,12 +26,16 @@ export const starlightConfig = {
     Header: "./src/components/starlight/Header.astro",
     SiteTitle: "./src/components/starlight/SiteTitle.astro",
   },
-  social: {
-    // Prioritize runtime validation errors over TypeScript errors when
-    // they conflict so keep this a string rather than an object for now.
-    blueSky: "https://bskyapp/profile/onetimesecretcom",
-    github: "https://github.com/onetimesecret/onetimesecret",
-  },
+  social: [
+    {
+      name: "blueSky",
+      url: "https://bskyapp/profile/onetimesecretcom",
+    },
+    {
+      name: "github",
+      url: "https://github.com/onetimesecret/onetimesecret",
+    },
+  ],
   customCss: [
     "./src/styles/tailwind.css",
     "./src/fonts/font-face.css",
