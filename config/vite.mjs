@@ -1,5 +1,7 @@
 // config/vite.mjs
 
+import tailwindcss from "@tailwindcss/vite";
+
 export function createViteConfig() {
   // Remember, for security reasons, only variables prefixed with VITE_ are
   // available here to prevent accidental exposure of sensitive
@@ -44,5 +46,6 @@ export function createViteConfig() {
         return hosts;
       })(),
     },
+    plugins: [tailwindcss()],
   };
 }
