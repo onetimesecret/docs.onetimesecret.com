@@ -1,0 +1,48 @@
+---
+title: REST API v2 Overview
+description: Onetime Secret's REST API v2 provides enhanced capabilities for secure secret management and sharing via a robust, RESTful JSON interface.
+---
+
+{% aside type="note" %}
+See our [Postman Collection](https://docs.onetimesecret.dev/) for full v2 documentation.
+{% /aside %}
+
+
+## Introduction
+
+Onetime Secret's REST API v2 offers a comprehensive and secure interface for programmatic interaction with the secret sharing platform. Built as a RESTful service utilizing JSON for data exchange, API v2 provides enhanced functionality and greater robustness compared to the previous version (v1).
+
+## Key Features
+
+- **All JSON:** Uses JSON for request bodies and responses.
+- **Enhanced Functionality:** Includes endpoints for detailed secret metadata retrieval, explicit secret burning, and improved state management.
+- **Improved Robustness:** Offers a more stable and feature-rich foundation for integrations.
+- **Authentication:** Supports both Basic Authentication for full access and anonymous usage for limited operations, consistent with the overall API structure.
+
+## Base URI and Authentication
+
+API v2 endpoints follow the standard base URI structure:
+
+`https://REGION.onetimesecret.com/api/v2`
+
+Authentication methods (Basic Auth with `USERNAME:APITOKEN` or anonymous access) remain the same as described in the [Getting Started](/en/rest-api/) guide.
+
+## Available Endpoints
+
+The following endpoints are available in API v2:
+
+*   `POST /v2/secret/conceal` - Create a new secret.
+*   `POST /v2/secret/generate` - Generate a new secret with random value.
+*   `GET /v2/private/recent` - Retrieve recent metadata records for the authenticated user.
+*   `GET /v2/private/:key` - Retrieve metadata for a specific secret.
+*   `POST /v2/private/:key/burn` - Manually destroy (burn) a secret.
+*   `GET /v2/secret/:key` - Retrieve information about a secret (requires passphrase if set).
+*   `POST /v2/secret/:key/reveal` - Retrieve the secret value (requires passphrase if set, consumes the secret).
+*   `GET /v2/supported-locales` - List supported language locales.
+*   `GET /v2/version` - Get the current API version information.
+*   `GET /v2/status` - Check the operational status of the API.
+*   `HEAD /v2/status` - Check the operational status of the API (headers only).
+
+## Interactive Documentation
+
+Explore the specific endpoints, request parameters, and response structures of API v2 using our interactive [Postman Collection](https://docs.onetimesecret.dev/). This provides detailed examples for each available operation.
