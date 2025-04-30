@@ -108,6 +108,8 @@ export const sidebar = [
   createGroup("restApi", [
     createLink("overview", "rest-api"),
 
+    createGroup("v2", [createLink("overview", "rest-api/v2")]),
+
     createGroup("v1", [
       createLink("createSecrets", "rest-api/v1/create-secrets"),
       createLink("retrieveSecrets", "rest-api/v1/retrieve-secrets"),
