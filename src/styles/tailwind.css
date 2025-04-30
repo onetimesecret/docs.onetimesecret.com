@@ -1,13 +1,104 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* src/tailwind.css */
+@layer base, starlight, theme, components, utilities;
 
-/* Enhance typography */
+@import "@astrojs/starlight-tailwind";
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@theme {
+  /* Custom accent colors (using brandColour). */
+  --color-accent-50: #fcf8f2;
+  --color-accent-100: #fcf4e8;
+  --color-accent-200: #f7dec3;
+  --color-accent-300: #f0c39e;
+  --color-accent-400: #e68b5e;
+  --color-accent-500: #dc4a22;
+  --color-accent-600: #c43d1b;
+  --color-accent-700: #a32d12;
+  --color-accent-800: #85200c;
+  --color-accent-900: #631507;
+  --color-accent-950: #400b03;
+
+  /* Custom gray scale (using neutral). */
+  --color-gray-50: var(--color-neutral-50);
+  --color-gray-100: var(--color-neutral-100);
+  --color-gray-200: var(--color-neutral-200);
+  --color-gray-300: var(--color-neutral-300);
+  --color-gray-400: var(--color-neutral-400);
+  --color-gray-500: var(--color-neutral-500);
+  --color-gray-600: var(--color-neutral-600);
+  --color-gray-700: var(--color-neutral-700);
+  --color-gray-800: var(--color-neutral-800);
+  --color-gray-900: var(--color-neutral-900);
+  --color-gray-950: var(--color-neutral-950);
+
+  /* Custom brand font family. */
+  --font-brand: "Zilla Slab", var(--font-serif);
+
+  /* Custom brand color palette. */
+  --color-brand-50: #fcf8f2;
+  --color-brand-100: #fcf4e8;
+  --color-brand-200: #f7dec3;
+  --color-brand-300: #f0c39e;
+  --color-brand-400: #e68b5e;
+  --color-brand-500: #dc4a22;
+  --color-brand-600: #c43d1b;
+  --color-brand-700: #a32d12;
+  --color-brand-800: #85200c;
+  --color-brand-900: #631507;
+  --color-brand-950: #400b03;
+
+  /* Custom branddim color palette. */
+  --color-branddim-50: #fcf8f2;
+  --color-branddim-100: #faf0e3;
+  --color-branddim-200: #f0d7bd;
+  --color-branddim-300: #e8bb99;
+  --color-branddim-400: #d67e56;
+  --color-branddim-500: #c43d1b;
+  --color-branddim-600: #b03317;
+  --color-branddim-700: #94270f;
+  --color-branddim-800: #751b09;
+  --color-branddim-900: #591205;
+  --color-branddim-950: #380902;
+
+  /* Custom brandcomp color palette. */
+  --color-brandcomp-50: #f2fbfc;
+  --color-brandcomp-100: #e8fafc;
+  --color-brandcomp-200: #c3f0f7;
+  --color-brandcomp-300: #a0e6f2;
+  --color-brandcomp-400: #5fcfe8;
+  --color-brandcomp-500: #23b5dd;
+  --color-brandcomp-600: #1c9cc7;
+  --color-brandcomp-700: #1478a6;
+  --color-brandcomp-800: #0d5985;
+  --color-brandcomp-900: #073b63;
+  --color-brandcomp-950: #032140;
+
+  /* Custom brandcompdim color palette. */
+  --color-brandcompdim-50: #f2fbfc;
+  --color-brandcompdim-100: #e3f7fa;
+  --color-brandcompdim-200: #bfebf2;
+  --color-brandcompdim-300: #99dae8;
+  --color-brandcompdim-400: #57bdd9;
+  --color-brandcompdim-500: #1c9cc7;
+  --color-brandcompdim-600: #1786b3;
+  --color-brandcompdim-700: #0f6594;
+  --color-brandcompdim-800: #0a4c78;
+  --color-brandcompdim-900: #053359;
+  --color-brandcompdim-950: #021e3b;
+}
+
+/*
+Add additional Tailwind styles to this file:
+https://tailwindcss.com/docs/adding-custom-styles#using-custom-css
+*/
+
+/* Enhance typography - Apply custom brand font to headings */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Zilla Slab", serif;
+  font-family: var(--font-brand);
 }

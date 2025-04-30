@@ -10,16 +10,18 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/markdoc": "^0.14.0",
-    "@astrojs/starlight": "^0.34.0",
+    "@astrojs/markdoc": "^0.14.1",
+    "@astrojs/starlight": "^0.34.1",
     "@astrojs/starlight-markdoc": "^0.4.0",
-    "@astrojs/starlight-tailwind": "^3.0.1",
-    "@astrojs/vue": "^5.0.10",
+    "@astrojs/starlight-tailwind": "^4.0.1",
+    "@astrojs/vue": "^5.0.12",
     "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/typography": "^0.5.16",
+    "@tailwindcss/vite": "^4.1.4",
     "accessible-astro-components": "^4.1.0",
-    "astro": "^5.7.4",
+    "astro": "^5.7.9",
     "sharp": "^0.34.1",
+    "tailwindcss": "^4.1.4",
     "vue": "^3.5.13"
   }
 }
