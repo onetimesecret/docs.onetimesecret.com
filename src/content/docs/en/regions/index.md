@@ -17,7 +17,7 @@ Choosing the right data center region is crucial for several reasons:
 
 ### European Union (EU)
 
-- **Location**: Within the European Union (Nuremberg)
+- **Location**: The European Union (Nuremberg)
 - **URL**: [https://eu.onetimesecret.com](https://eu.onetimesecret.com)
 - **Key Features**:
   - Compliant with GDPR and other EU data protection regulations
@@ -25,7 +25,7 @@ Choosing the right data center region is crucial for several reasons:
 
 ### Canada (CA)
 
-- **Location**: Within Canada (Toronto)
+- **Location**: Canada (Toronto)
 - **URL**: [https://ca.onetimesecret.com](https://ca.onetimesecret.com)
 - **Key Features**:
   - Compliant with PIPEDA and Canadian data protection laws
@@ -33,7 +33,7 @@ Choosing the right data center region is crucial for several reasons:
 
 ### Aotearoa New Zealand (NZ)
 
-- **Location**: Within New Zealand (Porirua)
+- **Location**: Aotearoa New Zealand (Porirua)
 - **URL**: [https://nz.onetimesecret.com](https://nz.onetimesecret.com)
 - **Key Features**:
   - Compliant with New Zealand Privacy Act and local regulations
@@ -41,7 +41,7 @@ Choosing the right data center region is crucial for several reasons:
 
 ### United States (US)
 
-- **Location**: Within the United States (Hillsboro, Oregon)
+- **Location**: The United States (Hillsboro, Oregon)
 - **URL**: [https://us.onetimesecret.com](https://us.onetimesecret.com)
 - **Key Features**:
   - Compliant with US data protection laws

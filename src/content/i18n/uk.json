@@ -24,6 +24,7 @@
     "regions": "Регіони",
     "restApi": "REST API",
     "v1": "v1",
+    "v2": "v2",
     "createSecrets": "Створення повідомлень",
     "retrieveSecrets": "Отримання повідомлень",
     "clientLibraries": "Клієнтські бібліотеки",

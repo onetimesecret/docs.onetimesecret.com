@@ -24,6 +24,7 @@
     "regions": "リージョン",
     "restApi": "REST API",
     "v1": "v1",
+    "v2": "v2",
     "createSecrets": "シークレットの作成",
     "retrieveSecrets": "シークレットの取得",
     "clientLibraries": "クライアントライブラリ",

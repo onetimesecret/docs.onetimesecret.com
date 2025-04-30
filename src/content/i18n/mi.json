@@ -24,6 +24,7 @@
     "regions": "Rohe",
     "restApi": "REST API",
     "v1": "v1",
+    "v2": "v2",
     "createSecrets": "Waihanga Karere Muna",
     "retrieveSecrets": "Tiki Karere Muna",
     "clientLibraries": "Pātaka Kiritaki",
