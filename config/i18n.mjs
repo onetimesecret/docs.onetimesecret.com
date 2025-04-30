@@ -34,47 +34,47 @@ export const i18nConfig = {
   defaultLocale: "en",
   locales: {
     en: {
-      label: "English",
+      label: "English (en)",
       lang: "en",
       dir: "ltr",
     },
     es: {
-      label: "Español",
+      label: "Español (es)",
       lang: "es",
       dir: "ltr",
     },
     de: {
-      label: "Deutsch",
+      label: "Deutsch (de)",
       lang: "de",
       dir: "ltr",
     },
     fr: {
-      label: "Français",
+      label: "Français (fr)",
       lang: "fr",
       dir: "ltr",
     },
     ja: {
-      label: "日本語",
+      label: "日本語 (ja)",
       lang: "ja",
       dir: "ltr",
     },
     ko: {
-      label: "한국어",
+      label: "한국어 (ko)",
       lang: "ko",
       dir: "ltr",
     },
     mi: {
-      label: "Māori",
+      label: "Māori (mi)",
       lang: "mi",
       dir: "ltr",
     },
     nl: {
-      label: "Nederlands",
+      label: "Nederlands (nl)",
       lang: "nl",
       dir: "ltr",
     },
     uk: {
-      label: "Українська",
+      label: "Українська (uk)",
       lang: "uk",
       dir: "ltr",
     },
