@@ -1,0 +1,87 @@
+---
+title: タイトルはじめに
+description: Onetime SecretのREST APIは、認証ユーザと匿名ユーザの両方をサポートし、柔軟なシークレット共有機能を提供します。認証されたユーザーは、高度な機能と高い利用制限を得ることができ、認証されていないユーザーは、基本的な機能で素早く秘密を共有することができます。
+---
+
+2024-11-06_更新
+
+すべてのAPIアクセスはHTTPSで行われ、すべてのレスポンスはJSONです。
+
+## ベースURI
+
+`https://REGION.onetimesecret.com/api`
+
+ここで `REGION` は `us` または `eu` のいずれかである。
+
+<!-- ::callout{icon="i-heroicons-globe-alt"}。-->
+**データ地域と地域の選択**
+- 米国（[`us.onetimesecret.com`](https://us.onetimesecret.com/)）またはEU（[`eu.onetimesecret.com`](https://eu.onetimesecret.com/)）のデータセンターから選択する。
+- データ主権、レイテンシー、コンプライアンス要件などの要因を考慮する。
+- **NOTE:** デフォルトの `onetimesecret.com` は引き続き運用可能で、アクティブなデータセンターにルーティングされる。
+::
+
+## 認証
+APIは2つの利用モードをサポートしています：
+
+### 認証アクセス
+
+`https://USERNAME:APITOKEN@REGION.onetimesecret.com/api`
+
+- APIの全機能を使用するには、HTTPベーシック認証を使用してください。
+- ユーザー名はアカウントログイン名
+- パスワードはアカウントページのAPIトークンです。
+
+### 匿名アクセス
+
+`https://REGION.onetimesecret.com/api`
+
+- 認証なしで利用できる機能は限定的
+- 迅速で一回限りの秘密共有に最適
+- 秘密の作成と取得の両方に使用可能
+
+## データロカリティ
+Onetime Secretは複数のデータセンターをサポートしています。地域間のデータ共有ゼロポリシーに従い、データの完全な分離を保証します。お客様のニーズに合ったデータセンターをお選びください：
+
+- EUデータセンター:** [eu.onetimesecret.com](https://eu.onetimesecret.com/)
+- 米国データセンター:** [us.onetimesecret.com](https://us.onetimesecret.com/)
+
+### 重要な考慮事項
+- 希望するドメインに直接移動することで、特定のデータロカリティを選択することができる。
+- あなたの秘密の場所は、生成されたリンク（例：`us.onetimesecret.com/secret/abcd1234`）から常に明らかです。
+- **NOTE:** 現在、`onetimesecret.com/api`経由でのアクセスはまだ可能ですが、この機能は将来廃止される可能性があるため、特定のロケールを使用することをお勧めします。
+
+## カスタムドメイン
+Onetime Secretは、[Identity Plus](https://onetimesecret.com/pricing)プランにより、特定のネットワークやブランディングを必要とする組織向けのカスタムドメイン設定をサポートしています。
+
+### カスタムドメインの利点
+- **Private Branding:** APIアクセスや秘密の共有に独自のドメイン（例：`secrets.example.com`）を使用する。
+- **一貫したユーザーエクスペリエンス：**顧客やパートナーとの組織のビジュアルと信頼のアイデンティティを維持します。
+- **従業員トレーニングに組み込む:** カスタムドメインを使用して、組織のセキュリティ慣行とワークフローを強化します。
+
+<!-- ::callout{icon="i-heroicons-lock-closed"}。-->
+**プレミアム機能**
+カスタムドメインは[Identity Plus](https://onetimesecret.com/pricing)プランでご利用いただけます。使いやすい設定オプションで数分でセットアップが完了します。[詳細はこちら](/docs/custom-domains)。
+::
+
+### カスタムドメインでのAPI使用
+カスタム・ドメインを使用する場合、すべての API エンドポイントは同じ構造に従います：
+
+`https://secrets.example.com/api`
+
+
+## システムステータス
+
+GET https://REGION.onetimesecret.com/api/v1/status`
+システムの現在の状態。
+
+**パラメーター：**なし
+
+バッシュ
+$ curl -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/status
+{"status": "nominal" }.
+```
+
+バッシュ
+$ curl -u 'USERNAME:APITOKEN' https://us.onetimesecret.com/api/v1/status
+{"status": "nominal" }.
+```

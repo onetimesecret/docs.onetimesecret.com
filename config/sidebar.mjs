@@ -24,6 +24,7 @@ const frTranslations = loadTranslations("fr");
 const esTranslations = loadTranslations("es");
 const ukTranslations = loadTranslations("uk");
 const koTranslations = loadTranslations("ko");
+const jaTranslations = loadTranslations("ja");
 const miTranslations = loadTranslations("mi");
 
 /**
@@ -44,6 +45,7 @@ function createLink(key, link, badge) {
       es: esTranslations.sidebar[key],
       uk: ukTranslations.sidebar[key],
       ko: koTranslations.sidebar[key],
+      ja: jaTranslations.sidebar[key],
       mi: miTranslations.sidebar[key],
     },
     attrs: {},
@@ -68,6 +70,7 @@ function createGroup(key, items = [], collapsed = false) {
       es: esTranslations.sidebar[key],
       uk: ukTranslations.sidebar[key],
       ko: koTranslations.sidebar[key],
+      ja: jaTranslations.sidebar[key],
       mi: miTranslations.sidebar[key],
     },
     items,
