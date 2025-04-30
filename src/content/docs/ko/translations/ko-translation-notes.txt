@@ -1,0 +1,153 @@
+I'll help you create a Korean translation for the OneTime Secret platform based on the provided translation style guide and glossary. Let me prepare a Korean translation of the JSON content.
+
+First, let me analyze the key terminology and concepts from the translation guide:
+
+- **secret**: Should be translated with an emphasis on confidentiality, focusing on the message/content being shared rather than personal secrets
+- **password vs. passphrase**: Must maintain a clear distinction between account credentials and secret protection
+- **colonel**: Should be translated as "administrator"
+- **burn**: Should emphasize permanent deletion before viewing
+- **Brand terms**: "Onetime Secret", "OTS", "Identity Plus", "Global Elite", "Custom Install" should not be translated
+
+Here's the Korean translation of the provided JSON content:
+
+I've created a Korean translation of the OneTime Secret platform JSON file based on the translation style guide and glossary provided. Here are some key translation choices I made:
+
+### Key Terminology
+
+1. **Secret**: Translated as "비밀 메시지" (secret message) rather than just "비밀" (secret) to emphasize the nature of confidential information being shared rather than personal secrets.
+
+2. **Password vs. Passphrase**:
+   - Password: "비밀번호" - standard term for account login credentials
+   - Passphrase: "접근 문구" - translated as "access phrase" to distinguish it from account passwords
+
+3. **Burn**: Translated as "소각" (incinerate/burn) to emphasize permanent deletion before viewing.
+
+4. **Brand Terms**: Left untranslated as specified - "Onetime Secret", "OTS".
+
+### Translation Style
+
+1. **Voice and Tone**:
+   - Used active, imperative voice for buttons and actions (e.g., "비밀 링크 생성" for "Create secret link")
+   - Used passive or declarative voice for status messages and notifications (e.g., "복사됨" for "Copied")
+
+2. **Grammar and Style**:
+   - Maintained clear, professional language while keeping it accessible
+   - Used standard punctuation appropriately
+   - Addressed users directly using second person
+
+3. **Clarity and Cultural Adaptation**:
+   - Selected natural-sounding translations over literal ones
+   - Ensured translations would be understood by users with varying technical backgrounds
+
+The translation maintains the JSON structure exactly as in the original, preserving all keys, nested objects, and placeholders like `{count}` and `{duration}` for proper functionality.
+
+
+---
+
+
+I'll continue with the Korean translation of the provided JSON locale file, maintaining the same translation principles and terminology consistency as before.
+
+I've completed the Korean translation of the additional JSON locale file for the OneTime Secret platform. This translation follows the same principles and terminology consistency established in the previous sections:
+
+### Key Terminology Consistency
+
+1. **Secret**:
+   - Consistently translated as "비밀 메시지" (secret message) throughout the interface
+   - For shorter UI elements, occasionally used "비밀" where space is limited but context is clear
+
+2. **Passphrase**:
+   - Consistently translated as "접근 문구" to maintain distinction from account passwords
+
+3. **Burn**:
+   - Maintained as "소각" (incinerate/burn) throughout to emphasize permanent deletion
+
+4. **Brand Names**:
+   - Left untranslated as specified: "Onetime Secret", "Identity Plus"
+
+### Translation Style Elements
+
+1. **Voice and Tone**:
+   - Used active, imperative voice for action buttons and user instructions
+   - Used passive or declarative voice for status messages and system information
+   - Maintained a professional yet approachable tone throughout
+
+2. **Cultural Adaptation**:
+   - Adapted technical terms to be natural in Korean while maintaining technical accuracy
+   - Preserved placeholders like `{0}`, `{1}` for dynamic content
+
+3. **Grammar and Style**:
+   - Used standard Korean punctuation and sentence structure
+   - Addressed users directly using the second person where appropriate
+   - Ensured natural-sounding translations for UI elements
+
+The translation preserves all JSON structure and placeholders to ensure the application functions correctly while providing a natural, localized experience for Korean-speaking users.
+
+
+---
+
+## Convo
+
+The final successful translation via Claude.app 3.7 Sonnet.
+
+### User
+
+Thank you. I notice some choice adjustments to the existing ko text. Can
+you describe the thinking behind those and list important examples.
+Followed by a "Summary of Changes to the Korean (South) Translation"
+
+
+### Assistant
+
+# Thinking Behind Translation Adjustments
+
+When reviewing and translating the Korean locale for OneTime Secret, I made several deliberate adjustments to existing text to improve consistency, clarity, and naturalness. Here's the thinking behind these adjustments:
+
+## 1. Terminology Consistency
+
+The most important adjustment was establishing consistent terminology for key concepts throughout the application. Some existing terms appeared to be inconsistently translated or didn't fully capture the intended meaning:
+
+- **"secret"**: I consistently translated this as "비밀 메시지" (secret message) rather than just "비밀" (secret) to clearly distinguish it from generic secrets. This better communicates the concept of a confidential information package being shared, as emphasized in the translation guide.
+
+- **"passphrase"**: I consistently used "접근 문구" (access phrase) to distinguish it from account passwords ("비밀번호"). This provides a clearer distinction between the protection for individual secrets versus account credentials.
+
+- **"burn"**: I consistently used "소각" (incinerate) to emphasize the permanent deletion aspect, maintaining the metaphor while ensuring clarity in Korean.
+
+## 2. Natural Language Flow
+
+Some existing translations appeared to follow English sentence structure too closely, which can sound awkward in Korean. I adjusted these to follow more natural Korean language patterns while preserving the original meaning.
+
+## 3. Technical Accuracy
+
+I ensured that technical terms were accurately translated while remaining accessible to both technical and non-technical users. This included careful translation of concepts related to encryption, security features, and domain settings.
+
+## 4. Cultural Adaptation
+
+Some phrases were adjusted to better resonate with Korean users' expectations and communication norms, making the interface feel more native rather than obviously translated.
+
+# Summary of Changes to the Korean (South) Translation
+
+## Key Terminology Improvements
+
+1. **Consistent Translation of "secret"**: Changed inconsistent uses of "비밀" to "비밀 메시지" throughout the application to clarify the nature of what's being shared.
+
+2. **Clear Distinction between "password" and "passphrase"**: Implemented "비밀번호" for account passwords and "접근 문구" for secret protection consistently.
+
+3. **Technical Term Clarity**: Terms like "burn" (소각), "encryption" (암호화), and "one-time access" (일회성 접근) were standardized throughout the application.
+
+## User Interface Improvements
+
+1. **Button Labels**: Optimized button text for Korean UI conventions, ensuring they're concise while maintaining clarity.
+
+2. **Error Messages**: Made error messages more natural and helpful in Korean while preserving their informative nature.
+
+3. **Instructional Text**: Adjusted guidance text to sound more natural in Korean while providing clear instructions.
+
+## Structural Enhancements
+
+1. **Korean Sentence Structure**: Reworked sentences that followed English structure to use natural Korean grammar patterns.
+
+2. **Honorifics and Politeness Levels**: Maintained consistent politeness levels throughout the interface appropriate for a professional application.
+
+3. **Length Considerations**: Adjusted translations to account for text expansion/contraction between English and Korean to ensure UI elements display properly.
+
+These changes collectively create a more cohesive, natural, and professional Korean localization that will better serve Korean-speaking users of OneTime Secret while maintaining the security focus and clear communication that is central to the application.

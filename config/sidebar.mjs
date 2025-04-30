@@ -24,6 +24,8 @@ const frTranslations = loadTranslations("fr");
 const esTranslations = loadTranslations("es");
 const ukTranslations = loadTranslations("uk");
 const koTranslations = loadTranslations("ko");
+const jaTranslations = loadTranslations("ja");
+const miTranslations = loadTranslations("mi");
 
 /**
  * Helper function to create sidebar link items with required attrs
@@ -43,6 +45,8 @@ function createLink(key, link, badge) {
       es: esTranslations.sidebar[key],
       uk: ukTranslations.sidebar[key],
       ko: koTranslations.sidebar[key],
+      ja: jaTranslations.sidebar[key],
+      mi: miTranslations.sidebar[key],
     },
     attrs: {},
     ...(badge ? { badge } : {}),
@@ -66,6 +70,8 @@ function createGroup(key, items = [], collapsed = false) {
       es: esTranslations.sidebar[key],
       uk: ukTranslations.sidebar[key],
       ko: koTranslations.sidebar[key],
+      ja: jaTranslations.sidebar[key],
+      mi: miTranslations.sidebar[key],
     },
     items,
     collapsed,
@@ -101,6 +107,8 @@ export const sidebar = [
 
   createGroup("restApi", [
     createLink("overview", "rest-api"),
+
+    createGroup("v2", [createLink("overview", "rest-api/v2")]),
 
     createGroup("v1", [
       createLink("createSecrets", "rest-api/v1/create-secrets"),

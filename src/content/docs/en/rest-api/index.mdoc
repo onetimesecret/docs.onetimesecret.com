@@ -3,9 +3,11 @@ title: Getting Started
 description: Onetime Secret's REST API provides flexible secret sharing capabilities, supporting both authenticated and anonymous usage. Authenticated users gain advanced features and higher usage limits, while unauthenticated users can quickly share secrets with basic functionality.
 ---
 
-_Updated 2024-11-06_
+_Updated 2025-04-29_
 
-All API access is over HTTPS and all responses are JSON.
+{% aside type="tip" %}
+Test and explore the API endpoints with our interactive [Postman Collection](https://docs.onetimesecret.dev/).
+{% /aside %}
 
 ## Base URI
 
@@ -15,7 +17,7 @@ Where `REGION` is either `us` or `eu`.
 
 <!-- ::callout{icon="i-heroicons-globe-alt"} -->
 **Data Locality and Region Selection**
-- Choose between US ([`us.onetimesecret.com`](https://us.onetimesecret.com/)) or EU ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) data centers
+- Choose a region (e.g. US [`us.onetimesecret.com`](https://us.onetimesecret.com/)) or EU ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)). See [Regions](/en/regions) for all options.
 - Consider factors like data sovereignty, latency, and compliance requirements
 - **NOTE:** Default `onetimesecret.com` remains operational and routes to an active data center, using a specific locality is recommended as this functionality may be deprecated in the future.
 ::

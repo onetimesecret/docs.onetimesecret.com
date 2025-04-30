@@ -1,0 +1,211 @@
+Let me continue with the translation of the JSON file into Maori:
+
+Let me complete the translation by adding the email section:
+
+Based on the translation style guide and glossary I've created, here's a summary of the key considerations for translating Onetime Secret content to Maori (mi-NZ):
+
+## Key Translation Points for Maori (mi-NZ)
+
+1. **Central Term "Secret"**:
+   - Translated to "karere huna" (hidden message) rather than a direct translation of "secret" as "mea huna" (secret thing)
+   - This captures the concept better in Maori context
+
+2. **Brand Voice in Maori**:
+   - Maintains a clear, professional yet approachable tone
+   - Uses authentic Maori expressions while keeping technical concepts clear
+   - Prioritizes clarity over literal translations
+
+3. **Key Technical Terms**:
+   - "passphrase" → "kupu karapa" (distinct from password/kupuhipa)
+   - "burn" → "whakawareware" (permanently delete before viewing)
+   - "encrypt/encrypted" → "whakamuhumuhu/muhumuhu"
+   - "colonel" → "kaiwhakahaere" (administrator)
+
+4. **Grammar Structure**:
+   - Uses active, imperative voice for buttons and actions
+   - Uses passive voice for status messages and notifications
+   - Addresses users in second person ("koe")
+   - Maintains consistent punctuation and avoids contractions
+
+5. **Cultural Adaptation**:
+   - Incorporates Maori conventions for time, dates, and measurements
+   - Uses Maori greeting styles and sentence structures where appropriate
+   - Ensures translations sound natural to Maori speakers
+
+This translation approach would make Onetime Secret accessible and culturally appropriate for Maori-speaking users while maintaining the technical precision and security focus of the application.
+
+
+
+---
+
+
+## Convo
+
+Claude.app 3.7 Sonnet (in the i18n project)
+
+### User
+
+Thank you. I notice some choice adjustments to the existing es text. Can
+you describe the thinking behind those and list important examples. Followed by a "Summary of Changes to the Germany Translation"
+
+### Assistant
+
+Translation Approach for Maori (mi-NZ) - Key Decisions
+
+I made several strategic choices in translating Onetime Secret to Maori that reflect both linguistic considerations and cultural context. Here are the most important translation decisions and the reasoning behind them:
+
+## Key Translation Decisions
+
+### 1. "Secret" → "Karere Huna" rather than "Mea Huna"
+
+**Reasoning:** The direct translation of "secret" would be "mea huna" (hidden thing), but I chose "karere huna" (hidden message) because:
+- It better captures the nature of what's being shared through the platform (messages, information)
+- Avoids connotations of personal secrets/private affairs that "mea huna" might suggest
+- Creates consistency with how other platforms translate similar concepts in Maori
+- Follows the guidance in the style guide about translating "secret" in context
+
+**Examples:**
+- "Create a secret" → "Waihanga karere huna" (not "Waihanga mea huna")
+- "Your secret was viewed" → "I tirohia tō karere huna" (not "I tirohia tō mea huna")
+- "Secret content" → "Ihirangi karere huna"
+
+### 2. Verb Forms for UI Elements
+
+**Reasoning:** I implemented a clear distinction between active/imperative voice for actions and passive/declarative voice for status messages, following Maori grammar conventions:
+
+**Examples:**
+- Action button: "Create Secret" → "Waihanga Karere Huna" (imperative)
+- Status message: "Secret created" → "Kua hangaia te karere huna" (passive)
+- Button: "Copy to clipboard" → "Tārua ki te papatopenga" (imperative)
+- Status: "Copied to clipboard" → "Kua tāruatia ki te papatopenga" (passive)
+
+### 3. Technical Terms
+
+**Reasoning:** For technical terms, I balanced authenticity with accessibility:
+- Created Maori terms for common concepts that users would understand
+- Maintained technical precision while using terms that sound natural in Maori
+- For newer technical concepts, created terms based on function rather than English name
+
+**Examples:**
+- "encryption/encrypted" → "whakamuhumuhu/muhumuhu" (relates to making something secret/whispered)
+- "passphrase" → "kupu karapa" (a phrase that grants access)
+- "domain" → "rohe" (territory/region, captures the concept well in Maori)
+- "dashboard" → "papatohu" (guidance board)
+
+### 4. Cultural Adaptations
+
+**Reasoning:** Made adjustments to ensure the translation respects Maori cultural context:
+
+**Examples:**
+- Greetings like "Welcome Back" → "Nau Mai Anō" (traditional Maori welcome expression)
+- "You've got (secret) mail" → "He īmēra (huna) tāu" (using Maori possession structure)
+- Time expressions follow Maori conventions rather than direct translations
+
+### 5. Brand and Product Names
+
+**Reasoning:** Following the style guide, I maintained brand names but translated descriptions:
+
+**Examples:**
+- "Identity Plus" remains "Identity Plus" (untranslated)
+- "Onetime Secret" remains "Onetime Secret" (untranslated)
+- But "Custom Install" description → "Tāutatanga Ritenga" (customized installation)
+
+## Summary of Changes to the Maori (New Zealand) Translation
+
+1. **Terminology Standardization**
+   - Established consistent translations for all core terms used throughout the platform
+   - Created a comprehensive glossary for future translators to maintain consistency
+   - Ensured security and technical terms maintain precision while being natural in Maori
+
+2. **UI Flow Improvements**
+   - Aligned button text with Maori action verb conventions
+   - Used proper passive forms for status messages and notifications
+   - Created natural-sounding instructions and error messages
+
+3. **Cultural Context**
+   - Incorporated traditional Maori greeting patterns where appropriate
+   - Adapted metaphors and idioms to resonate with Maori speakers
+   - Used Maori-specific linguistic structures rather than English patterns
+
+4. **Technical Precision**
+   - Created accurate translations for security concepts that maintain their precise meaning
+   - Preserved all placeholders and formatting variables
+   - Maintained distinctions between similar terms (password vs passphrase)
+
+5. **Accessibility Enhancements**
+   - Focused on clear, direct language that's accessible to all Maori speakers
+   - Used consistent terminology across the platform for a better user experience
+   - Avoided overly academic or formal language where simpler terms would work
+
+These changes collectively create a translation that feels native to Maori speakers while maintaining the technical accuracy and security focus that's essential to Onetime Secret's function.
+
+
+---
+
+I'll translate this Markdown content about Translations & Localization into Māori, maintaining the style and cultural considerations from the provided style guide and glossary.
+
+I've translated the Translations & Localization page into Māori, maintaining the professional tone and clarity specified in the style guide. Here are some notes on key translation decisions:
+
+## Translation Highlights
+
+1. **Title and Heading**: "Translations & Localization" → "Ngā Whakamāoritanga me te Whakatauritenga"
+   - "Whakamāoritanga" specifically means "translation" in Māori
+   - "Whakatauritenga" captures the concept of localization (making something suitable for local use)
+
+2. **Technical Terms**: I've maintained the structure of technical elements like paths and code references:
+   - `/content/docs/en/` remains unchanged
+   - GitHub links remain in English as specified in the style guide for brand terms
+
+3. **Cultural Context**:
+   - The translation uses Māori language structures that would feel natural to native speakers
+   - I've maintained formal but accessible language throughout, following the brand voice guidelines
+
+4. **Core Concepts**: Following the glossary guidance, I've ensured consistent translations:
+   - "Translation" → "Whakamāoritanga"
+   - "Language" → "Reo"
+   - "Content" → "Ihirangi"
+
+5. **Preserving Document Structure**:
+   - The frontmatter format is maintained with translated values
+   - Heading levels and document structure match the original exactly
+   - Links maintain their original paths with the appropriate formatting
+
+This translation maintains all the technical accuracy of the original while making the content accessible and culturally appropriate for Māori speakers. The professional yet approachable tone specified in the style guide has been preserved throughout.
+
+---
+
+I'll translate this homepage content into Māori, maintaining consistent branding and terminology while adapting it to be culturally appropriate according to the style guide and glossary.
+
+I've translated the Onetime Secret homepage into Māori, carefully adapting the content while maintaining the core brand values and terminology. Here are some key aspects of my translation approach:
+
+## Translation Considerations
+
+1. **Brand Integrity**
+   - I kept "Onetime Secret" as the brand name without translation, following the style guide
+   - Technical terms like "GitHub" and URLs remain unchanged
+   - The core concept of "secret" is translated consistently as "karere muna" (secret message) throughout
+
+2. **Cultural Adaptation**
+   - I adapted phrases like "Self-destructing messages" to "Ngā karere whakakorehia-anō" which better conveys the concept in Māori
+   - The translation respects Māori language structure and conventions while maintaining technical accuracy
+
+3. **Maintaining Key Terminology**
+   - "Secure links" → "Hononga haumaru"
+   - "Privacy-First Design" → "Hoahoa Tūmataitinga-i-te-Tuatahi"
+   - "Custom domains" → "Ngā rohe whakaritengia"
+
+4. **Preserving Document Structure**
+   - I've maintained all markdown formatting, including cardgrid components
+   - The frontmatter structure remains intact with translated values
+   - Icons and links remain in their original format
+
+5. **Tone and Voice**
+   - The translation maintains the professional yet approachable tone specified in the style guide
+   - I've used clear, direct language that respects users' time while keeping technical accuracy
+
+## Special Translation Notes
+
+- For "Self-destructing messages," I used "Ngā karere whakakorehia-anō" which literally translates to "messages that destroy themselves" as this conveys the meaning more naturally in Māori
+- The phrase "Family-operated since 2012" is translated as "E whakahaerehia ana e te whānau mai i te tau 2012" which preserves both the meaning and the warm, personal tone of the original
+
+The translation maintains all the key brand messaging and technical information while making it accessible and culturally appropriate for Māori speakers.

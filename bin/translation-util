@@ -135,6 +135,7 @@ def split_combined_file(
         # which might have been translated
         if file_id in id_to_filename:
             filename = id_to_filename[file_id]
+            print(f"Processing file: {file_id} {filename}")
             start_content = match.end()
 
             # Find the next delimiter or end of file

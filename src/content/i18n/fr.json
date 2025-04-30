@@ -24,6 +24,7 @@
     "regions": "Régions",
     "restApi": "API REST",
     "v1": "v1",
+    "v2": "v2",
     "createSecrets": "Créer des secrets",
     "retrieveSecrets": "Récupérer des secrets",
     "clientLibraries": "Bibliothèques client",

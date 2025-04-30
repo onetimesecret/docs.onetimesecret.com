@@ -21,9 +21,9 @@
  *    python3 ./bin/translation-util prepare -s ./src/content/docs/{code} -t ./translation_files
  *
  * 2. Combine into single file (for translation services):
- *    python3 ./bin/translation-util combine -t ./translation_files -c ./combined-source.txt
+ *    python3 ./bin/translation-util combine -t ./translation_files -o ./combined-source.txt
  *
- * 3. After translation, split the combined file:
+ * 3. After translation, split the combined file (NOTE: typically requires manually fixing the delimiters):
  *    python3 ./bin/translation-util split -c ./combined-{code}.txt -t ./translation_files
  *
  * 4. Restore files to target language directory:
@@ -34,37 +34,47 @@ export const i18nConfig = {
   defaultLocale: "en",
   locales: {
     en: {
-      label: "English",
+      label: "English (en)",
       lang: "en",
       dir: "ltr",
     },
     es: {
-      label: "Español",
+      label: "Español (es)",
       lang: "es",
       dir: "ltr",
     },
     de: {
-      label: "Deutsch",
+      label: "Deutsch (de)",
       lang: "de",
       dir: "ltr",
     },
     fr: {
-      label: "Français",
+      label: "Français (fr)",
       lang: "fr",
       dir: "ltr",
     },
+    ja: {
+      label: "日本語 (ja)",
+      lang: "ja",
+      dir: "ltr",
+    },
     ko: {
-      label: "한국어",
+      label: "한국어 (ko)",
       lang: "ko",
       dir: "ltr",
     },
+    mi: {
+      label: "Māori (mi)",
+      lang: "mi",
+      dir: "ltr",
+    },
     nl: {
-      label: "Nederlands",
+      label: "Nederlands (nl)",
       lang: "nl",
       dir: "ltr",
     },
     uk: {
-      label: "Українська",
+      label: "Українська (uk)",
       lang: "uk",
       dir: "ltr",
     },

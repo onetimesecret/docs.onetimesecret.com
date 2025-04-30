@@ -1,0 +1,87 @@
+
+## Convo
+
+### User
+
+Great job. Please report on the translation choices you made specifically for de locales, including distinctions for the words "secret", "password", "passphrase" within the de locale as well as how they may be distinct (or not) from de_AT
+
+### Assistant
+
+Okay, here is a report on the translation choices for the German (`de`) locale, specifically focusing on the terms `secret`, `password`, and `passphrase`, and potential distinctions from Austrian German (`de_AT`).
+
+1.  **`secret` -> `Geheimnis`**
+    *   **Choice:** The term `secret` was consistently translated as `Geheimnis`. Examples include `web.COMMON.secret`, `web.COMMON.button_create_secret`, `web.private.created_success`.
+    *   **Rationale:** `Geheimnis` is the direct German equivalent of `secret`. While the guidelines suggest emphasizing "confidential information or message" (like the Danish "besked"), `Geheimnis` is commonly understood in German technical contexts to refer to sensitive data or credentials. Using `Nachricht` (message) might lose the implication of confidentiality, and longer phrases like `vertrauliche Information` are unsuitable for UI elements. `Geheimnis` maintains consistency with the previous state of the file and is broadly understood.
+    *   **Distinction from `de_AT`:** Usage is expected to be identical in Austrian German. `Geheimnis` is standard German and used similarly in Austria in this context.
+
+2.  **`password` -> `Passwort`**
+    *   **Choice:** The term `password`, referring specifically to *account login credentials*, was translated as `Passwort`. Examples: `web.COMMON.password_placeholder`, `web.login.button_sign_in`, `web.account.changePassword.currentPassword`.
+    *   **Rationale:** This aligns perfectly with the guidelines. `Passwort` is the standard, universally understood term for website/account login credentials in German-speaking regions. The alternative `Kennwort` is sometimes seen but `Passwort` is dominant for digital contexts.
+    *   **Distinction from `de_AT`:** Usage is identical in Austrian German. `Passwort` is the standard term.
+
+3.  **`passphrase` -> `Passphrase`**
+    *   **Choice:** The term `passphrase`, referring to the protection for an *individual secret*, was translated directly as `Passphrase`. Examples: `web.COMMON.secret_passphrase`, `web.COMMON.incorrect_passphrase`, `web.secrets.enterPassphrase`.
+    *   **Rationale:** This follows the guideline to maintain a clear distinction from the account `Passwort`. While `Passphrase` is an adopted English term, it is widely recognized in German technical and security contexts precisely for this distinct meaning (a potentially longer, phrase-based secret protector, different from a standard password). Native German compound alternatives like `Kennwortphrase` or `Zugangsphrase` are less common and might be less clear to users familiar with the established term `Passphrase`. It effectively distinguishes from `Passwort`.
+    *   **Distinction from `de_AT`:** Usage is expected to be very similar in Austrian German. While minor regional preferences might exist for neologisms, `Passphrase` is understood and used in technical contexts across German-speaking areas, including Austria. There isn't a distinctly Austrian term that would be a clear replacement here.
+
+In summary, the translations aim for clarity and adherence to standard German usage in technical contexts, while respecting the specific distinctions required by the translation guidelines, particularly between `Passwort` (for accounts) and `Passphrase` (for secrets). The chosen terms are expected to be well-understood in both Germany (`de`) and Austria (`de_AT`).
+
+### User
+
+Thank you. I notice some choice adjustments to the existing es text. Can
+you describe the thinking behind those and list important examples. Followed by a "Summary of Changes to the Germany Translation"
+
+### Assistant
+
+Okay, let's break down the adjustments made to the existing German (`de`) translations. The goal was to ensure accuracy, consistency, natural phrasing for German spoken in Germany, and adherence to the provided translation guidelines.
+
+**Thinking Behind Changes & Important Examples:**
+
+1.  **Consistency of Core Terms:**
+    *   **Rationale:** The initial file sometimes used English terms or less precise German words. The guidelines emphasize consistent terminology.
+    *   **Examples:**
+        *   `web.COMMON.secret`: Changed from `Geheim` (adjective: secret/confidential) to `Geheimnis` (noun: the secret itself), aligning with the concept of the shared item.
+        *   `web.COMMON.header_dashboard`: Changed from `Account` to `Konto` (the more standard German noun).
+        *   `web.COMMON.header_sign_in`: Changed from `Einloggen` to `Anmelden` (often preferred for website login vs. system login).
+        *   `web.COMMON.burn`, `web.COMMON.burned`, `web.STATUS.burned`, `web.STATUS.destroyed`: Standardized to `Zerstören` (verb) / `Zerstört` (past participle/status) as per the guideline for "burn".
+        *   `web.COMMON.received`, `web.STATUS.received`: Changed from `Erhalten` to `Empfangen`. While similar, `empfangen` often fits better for the digital receipt of a message/data.
+
+2.  **Appropriate Voice (Imperative vs. Declarative/Passive):**
+    *   **Rationale:** Guidelines specify imperative for user actions (buttons, links) and passive/declarative for informational text (status, descriptions, help).
+    *   **Examples:**
+        *   `web.help.learn_more`: Changed from "Learn more" to `Mehr erfahren` (Common imperative/infinitive for links).
+        *   `web.COMMON.button_generate_secret_short`: Changed from "Generate Password" to `Passwort generieren` (Imperative/Infinitive action).
+        *   `web.COMMON.share_link_securely`: Changed from "For security, share..." to `Teile diesen Link aus Sicherheitsgründen...` (Clear imperative).
+        *   `web.help.secret_view_faq.*.description`: Descriptions translated using declarative sentences (e.g., "Du siehst...", "Dieser Inhalt wird...").
+        *   `web.STATUS.*_description`: Status descriptions translated using declarative/passive voice (e.g., "Geheimer Link wurde erstellt...", "Geheimnis wurde manuell zerstört...").
+        *   `web.shared.post_reveal_default`: Changed from "Your secure message is shown..." to `Deine sichere Nachricht wird unten angezeigt.` (Passive voice).
+
+3.  **Clarity and Natural Phrasing:**
+    *   **Rationale:** Some existing translations were literal or slightly awkward. The aim was for natural-sounding German.
+    *   **Examples:**
+        *   `web.COMMON.copied_to_clipboard`, `web.LABELS.copy_to_clipboard`: Changed to the standard German phrase `In die Zwischenablage kopiert` / `In die Zwischenablage kopieren`.
+        *   `web.COMMON.faq_title`: Changed from `F.A.Q.` to `Häufig gestellte Fragen` (Clearer, full phrase).
+        *   `web.LABELS.loading`: Changed from `Loading...` to `Lädt...` (More concise and common).
+        *   `web.login.remember_me`: Changed from "Remember me" to `Angemeldet bleiben` (Standard phrase for this function).
+        *   `web.shared.viewed_own_secret`: Changed `angeschaut` to `angesehen` (`ansehen` is slightly more formal/standard for viewing information).
+
+4.  **Direct Address (Du vs. Sie):**
+    *   **Rationale:** The existing partial translations predominantly used the informal "Du". This was made consistent across user-facing instructions and questions where appropriate.
+    *   **Examples:**
+        *   `web.COMMON.careful_only_see_once`: Changed "Wir werden es..." to `Du wirst es...`.
+        *   `web.LABELS.need_help`: Changed from "Need help?" to `Brauchst du Hilfe?`.
+        *   `web.homepage.cta_title`: Changed from formal "Verwenden Sie..." to informal `Verwende...`.
+        *   `web.login.login_to_your_account`: Changed from "In deinen Account einloggen" to `Melde dich bei deinem Konto an`.
+
+5.  **Completeness:**
+    *   **Rationale:** Many keys contained only the English source text. These were translated according to the guidelines.
+    *   **Examples:** `web.help.*`, `web.FEATURES.*`, `web.UNITS.*`, `web.INSTRUCTION.*`, `web.meta.*`, `email.*`, and many others.
+
+## Summary of Changes to the Germany (`de`) Translation
+
+*   **Terminology:** Standardized key terms like `Geheimnis`, `Passwort`, `Passphrase`, `Konto`, `Anmelden`, `Zerstören` for consistency.
+*   **Voice:** Consistently applied imperative voice for actions and passive/declarative voice for informational text and descriptions.
+*   **Phrasing:** Improved clarity and naturalness using standard German expressions (e.g., `In die Zwischenablage kopieren`, `Häufig gestellte Fragen`, `Angemeldet bleiben`).
+*   **Direct Address:** Consistently used the informal "Du" form when addressing the user directly, matching the existing tone.
+*   **Completeness:** Translated numerous previously untranslated English strings.
+*   **Corrections:** Addressed minor grammatical issues and suboptimal word choices from the initial file.

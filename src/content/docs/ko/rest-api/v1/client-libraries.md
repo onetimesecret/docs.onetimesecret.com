@@ -11,13 +11,13 @@ description: 루비, 파이썬, 펄, 자바, C#, Go 등을 포함하여 Onetime 
 
 ### 사용 예
 
-```루비
-'onetime/api' 필요
+```ruby
+require 'onetime/api'
 
 api = Onetime::API.new('YOUR_EMAIL', 'YOUR_OTS_APIKEY')
 options = {
   secret: '재즈, 재즈 그리고 더 많은 재즈',
-  수신자: 'example@onetimesecret.com',
+  recipient: 'example@onetimesecret.com',
   ttl: 7200
 }
 
@@ -215,7 +215,7 @@ FLSDLAUN6HWCQU9UTMC0VTS5XJ9XU1
 
 ### 사용 예
 
-```가
+```go
 // 새 클라이언트 빌드
 client := ots.NewClient(
       WithUsername("otsuser@domain.com"),
