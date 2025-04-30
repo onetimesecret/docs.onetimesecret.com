@@ -21,7 +21,7 @@
  *    python3 ./bin/translation-util prepare -s ./src/content/docs/{code} -t ./translation_files
  *
  * 2. Combine into single file (for translation services):
- *    python3 ./bin/translation-util combine -t ./translation_files -c ./combined-source.txt
+ *    python3 ./bin/translation-util combine -t ./translation_files -o ./combined-source.txt
  *
  * 3. After translation, split the combined file:
  *    python3 ./bin/translation-util split -c ./combined-{code}.txt -t ./translation_files
@@ -56,6 +56,11 @@ export const i18nConfig = {
     ko: {
       label: "한국어",
       lang: "ko",
+      dir: "ltr",
+    },
+    mi: {
+      label: "Māori",
+      lang: "mi",
       dir: "ltr",
     },
     nl: {
