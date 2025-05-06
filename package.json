@@ -52,6 +52,9 @@
     "overrides": {
       "@iconify/vue": "4.3.0",
       "vue-tsc": "2.1.6"
-    }
+    },
+    "onlyBuiltDependencies": [
+      "sharp"
+    ]
   }
 }
