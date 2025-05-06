@@ -35,7 +35,7 @@ Our approach balances security with familiarity:
 1. **Functionality Preserved:** The main site will still create secrets while prominently featuring regional options.
 2. **Clear Guidance:** We're adding straightforward information about why regional domains matter for your security.
 
-::ImageModal{src="/img/blog/2025/20250505-onetime-homepage-preview.png" title="A mockup of the upcoming homepage for onetimesecret.com" width="500"}
+::ImageModal{src="/img/blog/2025/20250505-onetime-homepage-preview.png" title="A mockup of the upcoming homepage for onetimesecret.com" alt="A mockup of the upcoming homepage for onetimesecret.com" width="500"}
 ::
 
 _An early mockup ^_
