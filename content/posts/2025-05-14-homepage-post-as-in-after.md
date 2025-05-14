@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Homepage update: Strengthening Security with a Clearer Domain Strategy"
+title: "Domain Strategy Reengineered: Building Verification into Our Architecture"
 date: 2025-05-14
 authors:
   - name: Delano
@@ -12,7 +12,6 @@ image:
 badge:
   label: Engineering
 readingTime: 5
-draft: true
 ---
 
 A recent phishing attempt exposed users to an impostor site that mirrored our interface but actually exposed secrets. While Cloudflare helped shut down this particular site, the incident highlighted a broader concern: user can struggle to distinguish legitimate from fraudulent services (see [Which one of these is the real onetimesecret?](https://github.com/onetimesecret/onetimesecret/issues/1233)).
@@ -21,12 +20,27 @@ Following our [recent homepage update](/content/posts/2025-05-05-homepage-update
 
 ## Our `.com` Domain: Separation of Concerns
 
-**Strategic Change:** We've moved from having our apex domain (onetimesecret.com) function as an alias for eu.onetimesecret.com to making it a completely separate codebase with static content. This is not revolutionary and is how most products, it's just new for us since the site launched over 10 years ago and has always maintained a productive homepage.
+<div class="flex justify-center items-center my-10">
+  <a href="https://onetimesecret.com/" class="text-center inline-block">
+    <span class="font-brand text-3xl sm:text-4xl md:text-5xl
+                 bg-clip-text text-transparent
+                 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500
+                 animate-flowing-colors
+                 hover:animate-bounce
+                 transition-all duration-300 ease-in-out
+                 transform hover:scale-105
+                 rounded-xl
+                 dark:border-brand-600">
+      onetimesecret.com
+    </span>
+  </a>
+</div>
 
-![Domain Strategy Diagram](/img/blog/2025/20250514-homepage-update-post-as-in-after.svg)
+
+**Strategic Change:** We've moved our apex domain (onetimesecret.com) from functioning as an alias for eu.onetimesecret.com to a completely separate codebase with static content. While standard practice for most products, this is new for our service which has maintained a functional homepage since launch over 10 years ago.
 
 
-* **Technical Benefits:**
+**Technical Benefits:**
   * **Distinctive User Experience:** Creates a clear visual and functional difference from impostor sites
   * **Streamlined Application Codebase:** Removing marketing content makes our open-source project simpler for self-hosted installations
   * **Independent Release Cycles:** Marketing site changes no longer require application deployments
@@ -37,14 +51,29 @@ Following our [recent homepage update](/content/posts/2025-05-05-homepage-update
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
   <figure class="mb-6">
+    <strong>New Homepage</strong>
     <img src="/img/blog/2025/20250514-onetime-homepage-new.jpeg" alt="New Onetime Secret marketing homepage" class="rounded-lg shadow-md w-full">
     <figcaption class="text-sm text-gray-600 mt-2 text-center">Our new marketing homepage at onetimesecret.com</figcaption>
   </figure>
   <figure class="mb-6">
+    <strong>Application Interface</strong>
     <img src="/img/blog/2025/20250514-onetime-homepage-project.jpeg" alt="Onetime Secret application interface" class="rounded-lg shadow-md w-full">
     <figcaption class="text-sm text-gray-600 mt-2 text-center">Application interface at regional domains (e.g., eu.onetimesecret.com)</figcaption>
   </figure>
 </div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+  <figure class="mb-6">
+
+  
+**After Our Update:**
+- Apex domain (`onetimesecret.com`) is now a separate, static marketing site with distinct visual design
+- All legitimate secret-creation services use consistent regional subdomains (e.g., `nz.onetimesecret.com`)
+- Clear visual distinction between marketing site and application interface
+- All official subdomains follow consistent naming patterns (docs, blog, status)
+  </figure>
+  <figure class="mb-6">
+
 
 **Before Our Update:**
 - Our apex domain (`onetimesecret.com`) functioned as an alias to `eu.onetimesecret.com`
@@ -52,13 +81,8 @@ Following our [recent homepage update](/content/posts/2025-05-05-homepage-update
 - Regional instances were available but not emphasized
 - Users had difficulty distinguishing legitimate sites from impostor sites
 
-**After Our Update:**
-- Apex domain (`onetimesecret.com`) is now a separate, static marketing site with distinct visual design
-- All legitimate secret-creation services use consistent regional subdomains (e.g., `nz.onetimesecret.com`)
-- Clear visual distinction between marketing site and application interface
-- All official subdomains follow consistent naming patterns (docs, blog, status)
-
-This evolution creates multiple visual and functional "trust markers" that make legitimate Onetime Secret services immediately recognizable to users and more difficult for impostors to replicate convincingly.
+  </figure>
+</div>
 
 
 ## How This Protects Our Users
@@ -75,18 +99,21 @@ Our domain strategy creates clear verification markers to help users identify au
 
 
 
-## Conclusion: Security Through Clarity
+## Conclusion: Engineering Security Through Domain Architecture
 
-Beyond user verification benefits, our domain strategy delivers key technical and business advantages:
+Our domain restructuring delivers concrete security improvements while enhancing our development workflow:
 
-1. **Security by Design**: Protection is built directly into our infrastructure rather than added as an afterthought
-2. **Legal Compliance**: Domain structure ensures compliance and data sovereignty requirements are met
-3. **Technical Separation**: Distinct codebases improve development velocity and maintainability
-4. **Brand Protection**: Consistent identity strengthens our position against imitators
+1. **Clear User Verification**: Consistent domain patterns provide intuitive verification markers
+2. **Infrastructure Protection**: Domain separation creates technical barriers against impersonation
+3. **Development Efficiency**: Decoupled codebases enable independent release cycles
+4. **Compliance Enhancement**: Regional structure supports data sovereignty requirements
 
-This strategic approach significantly raises the barrier for potential phishing attempts while improving our development workflow and compliance posture.
+This architectural approach transforms our domain strategy from a potential security vulnerability into a defensive asset.
 
-Our next post will provide a detailed verification guide to help users ensure they're always using an authentic Onetime Secret service.
+Our next post will provide a detailed verification guide for users to validate authentic Onetime Secret services.
+
+
+![Domain Strategy Diagram](/img/blog/2025/20250514-homepage-update-post-as-in-after.svg)
 
 
 ---

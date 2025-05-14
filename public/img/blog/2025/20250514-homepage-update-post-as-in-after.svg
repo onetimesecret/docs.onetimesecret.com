@@ -54,7 +54,7 @@
   <text x="420" y="280" font-size="12" fill="#6c757d">Separation of Concerns</text>
 
   <!-- Byline at bottom right -->
-  <text x="790" y="490" font-family="Arial, sans-serif" font-size="12" font-style="italic" text-anchor="end" fill="#888">
+  <text x="750" y="490" font-family="Arial, sans-serif" font-size="12" font-style="italic" text-anchor="end" fill="#888">
     Designed for OnetimeSecret Blog by Claude Sonnet 3.7
   </text>
 </svg>
