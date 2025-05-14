@@ -1,16 +1,16 @@
 ---
 layout: post
 title: "Verifying Authentic OnetimeSecret Services"
-date: 2025-05-14
+date: 2025-05-15
 authors:
   - name: Delano
     to: https://blog.onetimesecret.com/about
     avatar:
       src: /img/portrait-profile-pic-delano-2024.jpeg
 image:
-  src: /img/blog/2025/ots-verifying-onetimesecret.svg
+  src: /img/blog/2025/20250515-verifying-onetimesecret.svg
 badge:
-  label: Engineering
+  label: Security
 readingTime: 5
 draft: true
 ---
@@ -36,3 +36,6 @@ Link to Archive.org
 
 
 Visual Verification Chain: A Powerful Security Canary
+
+
+Links from accounts: Github, Docker Hub, BlueSky
