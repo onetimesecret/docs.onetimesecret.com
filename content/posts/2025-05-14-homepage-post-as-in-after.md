@@ -35,37 +35,68 @@ This post details how our domain structure is designed to bolster security throu
 
 This unified approach minimizes ambiguity, making it harder for malicious actors to create convincing imitations on other TLDs.
 
-## Our `.dev`: A True Non-Production Mirror
 
-Our `.dev` TLD serves exclusively for non-production environments, providing clear separation from production systems:
+## Domain Strategy Evolution: Before vs. After
 
-* **Clear Prod/Non-Prod Distinction:** `.onetimesecret.dev` creates an unmistakable boundary between our production environment (`*.onetimesecret.com`) and all non-production activities.
+[include 2 screenshots]
 
-* **Apex Domain Mirroring:** We mirror our production domain structure (e.g., `us.onetimesecret.dev` corresponding to `us.onetimesecret.com`). This allows development environments to replicate production DNS configurations with high fidelity, reducing "works on my machine" issues.
+**Before Our Update:**
+- Our apex domain (`onetimesecret.com`) functioned as an alias to `eu.onetimesecret.com`
+- The same application codebase served both marketing and application content
+- Regional instances were available but not emphasized
+- Users had difficulty distinguishing legitimate sites from impostor sites
 
-* **Technical Advantages:** This approach provides strict origin separation (HSTS preload), clean cookie jars, and clear visual distinction for developers and testers.
+**After Our Update:**
+- Apex domain (`onetimesecret.com`) is now a separate, static marketing site with distinct visual design
+- All legitimate secret-creation services use consistent regional subdomains (e.g., `nz.onetimesecret.com`)
+- Clear visual distinction between marketing site and application interface
+- All official subdomains follow consistent naming patterns (docs, blog, status)
 
-This avoids subtle problems that arise when non-production environments are subdomains of the production TLD, ensuring cleaner separation of concerns.
+This evolution creates multiple visual and functional "trust markers" that make legitimate Onetime Secret services immediately recognizable to users and more difficult for impostors to replicate convincingly.
 
-## Our Domain Structure
 
-* **`onetimesecret.com`**: Marketing site and portal to regional applications
-* **Regional domains** (`eu.onetimesecret.com`, `us.onetimesecret.com`, etc): Main application instances with share-nothing architecture, providing data sovereignty and operational scalability
-* **Supporting domains**:
-  * **`docs.onetimesecret.com`**: Comprehensive documentation
-  * **`blog.onetimesecret.com`**: Product updates and engineering insights
-  * **`status.onetimesecret.com`**: Service status and incident reporting
-* **`*.onetimesecret.dev`**: Exclusively for non-production environments, clearly separated from production
+## How This Protects Our Users
+
+Our domain strategy directly helps users verify they're using an authentic Onetime Secret service:
+
+* **Consistent Domain Pattern**: All legitimate Onetime Secret services use the `*.onetimesecret.com` domain pattern - if you see a service on `onetimesecret.org`, `1timesecret.com`, or similar variations, it's not our legitimate service
+  
+* **Visual Distinction**: Our marketing site now has a distinctly different appearance from our application interface - impostors typically copy just one look, making inconsistencies easier to spot
+
+* **Regional Clarity**: Users can confirm they're connected to their chosen regional instance (e.g., `eu.onetimesecret.com`) - phishing sites rarely implement the complete regional architecture
+
+* **Official Subdomain Consistency**: All legitimate services follow the same subdomain pattern (docs, blog, status) - be suspicious of unusual subdomains that don't match our established pattern
+
+We've also added subtle but important "canaries" in our interface that are difficult for impostors to replicate properly (more on those in our upcoming verification post).
+
+
+## Part of Our Broader Security Posture
+
+This domain strategy is one component of our comprehensive security approach. While we'll detail specific verification steps in an upcoming post, these architectural changes provide a foundation for security that's "baked in" rather than bolted on. By creating inherent, recognizable patterns across our services, we're making authentication more intuitive for users while raising the bar for potential attackers.
 
 ## Conclusion: Security Through Clarity
 
 Our domain strategy serves multiple purposes:
 
-1. **Security Reinforcement:** Clear domain patterns make it harder for malicious actors to create convincing imitations
-2. **Data Sovereignty:** Regional domains ensure data stays in the chosen jurisdiction
-3. **Technical Robustness:** Separate codebases for marketing and application improve development velocity and maintainability
-4. **Development Quality:** Our .dev environment mirrors production structure, ensuring higher reliability
+1. **Security Reinforcement:** Clear domain patterns and visual distinctions make it harder for malicious actors to create convincing imitations
+2. **User Confidence:** Consistent patterns make it easier for users to verify they're on legitimate sites
+4. **Technical Robustness:** Separate codebases for marketing and application improve development velocity and maintainability
+3. **Data Sovereignty:** Regional domains ensure data stays in the chosen jurisdiction
+5. **Development Quality:** Our .dev environment mirrors production structure, ensuring higher reliability
 
-By consolidating all legitimate services under *.onetimesecret.com and creating distinct experiences between our marketing site and application interface, we're making it significantly harder for bad actors to create convincing phishing sites.
+This approach represents security by design - building protection directly into our infrastructure rather than as an afterthought. By consolidating all legitimate services under *.onetimesecret.com and creating distinct experiences between our marketing site and application interface, we're significantly raising the bar for potential phishing attempts.
 
-A separate post will detail specific verification steps to ensure you're always using an authentic OnetimeSecret service.
+Our next post will provide a detailed verification guide to help users ensure they're always using an authentic Onetime Secret service.
+
+
+
+
+## Quick Reference: Technical Terms
+
+For readers who may be unfamiliar with some technical terms in this post:
+
+* **Apex domain**: The "root" domain of a website (e.g., `onetimesecret.com` without any prefixes)
+* **TLD**: Top-Level Domain - the last segment of a domain name (e.g., .com, .dev, .org)
+* **HSTS preload**: A security feature that forces browsers to always use secure HTTPS connections
+* **Origin separation**: Technical isolation between different website domains for security purposes
+* **Cookie jars**: Storage areas in browsers where websites store small bits of data
