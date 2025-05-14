@@ -12,6 +12,7 @@ image:
 badge:
   label: Engineering
 readingTime: 5
+draft: true
 ---
 
 

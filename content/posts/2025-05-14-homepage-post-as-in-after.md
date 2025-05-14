@@ -8,15 +8,16 @@ authors:
     avatar:
       src: /img/portrait-profile-pic-delano-2024.jpeg
 image:
-  src: /img/blog/2025/ots-domain-strategy.svg
+  src: /img/blog/2025/20250514-homepage-update-post-as-in-after.svg
 badge:
   label: Engineering
 readingTime: 5
+draft: true
 ---
 
 ![Domain Strategy Diagram](/img/blog/2025/ots-domain-strategy.svg)
 
-Recently, we encountered a sophisticated phishing attempt where an impostor site mirrored our interface but actually exposed all created secrets. Despite getting the site shut down through Cloudflare, many users were confused about legitimacy (e.g. see [Which one of these is the real onetimesecret?](https://github.com/onetimesecret/onetimesecret/issues/1233)). This incident reinforced the importance of having unmistakable markers of authenticity in our domain strategy.
+A recent phishing attempt where an impostor site mirrored our interface but actually exposed all created secrets. Despite getting the site shut down through Cloudflare, many users were confused about legitimacy (e.g. see [Which one of these is the real onetimesecret?](https://github.com/onetimesecret/onetimesecret/issues/1233)). This incident reinforced the importance of having unmistakable markers of authenticity in our domain strategy.
 
 So following our [recent homepage update](/content/posts/2025-05-05-homepage-update-going-regional) that emphasized our regional domains (e.g., `eu.onetimesecret.com`, `us.onetimesecret.com`), we want to elaborate on a crucial aspect of our online presence: our domain strategy. While regionalization supports data sovereignty and compliance, an equally vital goal of our domain structure is to provide unambiguous markers of authenticity.
 
@@ -33,7 +34,6 @@ This post details how our domain structure is designed to bolster security throu
   * **Independent Release Cycles:** Marketing site changes no longer require application deployments
   * **SEO Protection:** Consolidates domain authority to maintain search ranking visibility against sites using similar keywords and paid advertisements
 
-This unified approach minimizes ambiguity, making it harder for malicious actors to create convincing imitations on other TLDs.
 
 
 ## Domain Strategy Evolution: Before vs. After
@@ -70,10 +70,6 @@ Our domain strategy directly helps users verify they're using an authentic Oneti
 We've also added subtle but important "canaries" in our interface that are difficult for impostors to replicate properly (more on those in our upcoming verification post).
 
 
-## Part of Our Broader Security Posture
-
-This domain strategy is one component of our comprehensive security approach. While we'll detail specific verification steps in an upcoming post, these architectural changes provide a foundation for security that's "baked in" rather than bolted on. By creating inherent, recognizable patterns across our services, we're making authentication more intuitive for users while raising the bar for potential attackers.
-
 ## Conclusion: Security Through Clarity
 
 Our domain strategy serves multiple purposes:
@@ -89,14 +85,20 @@ This approach represents security by design - building protection directly into 
 Our next post will provide a detailed verification guide to help users ensure they're always using an authentic Onetime Secret service.
 
 
+---
 
 
-## Quick Reference: Technical Terms
+## Addendum: Quick Reference
 
 For readers who may be unfamiliar with some technical terms in this post:
 
-* **Apex domain**: The "root" domain of a website (e.g., `onetimesecret.com` without any prefixes)
-* **TLD**: Top-Level Domain - the last segment of a domain name (e.g., .com, .dev, .org)
-* **HSTS preload**: A security feature that forces browsers to always use secure HTTPS connections
-* **Origin separation**: Technical isolation between different website domains for security purposes
-* **Cookie jars**: Storage areas in browsers where websites store small bits of data
+
+::callout{type="info" icon="i" title="Quick Reference: Technical Terms"}
+For readers who may be unfamiliar with some technical terms in this post:
+
+* **Apex domain**: The "root" domain of a website (e.g., `example.com` without any prefixes).
+* **Top-Level Domain** (TLD): - the last segment of a domain name (e.g., .com, .dev, .org).
+* **HSTS preload**: A security feature that forces browsers to always use secure HTTPS connections. See [hstspreload.org](https://hstspreload.org/?domain=onetimesecret.com).
+* **Origin separation**: Technical isolation between different website domains for security purposes.
+* **Cookie jars**: Storage areas in browsers where websites store small bits of data.
+::
