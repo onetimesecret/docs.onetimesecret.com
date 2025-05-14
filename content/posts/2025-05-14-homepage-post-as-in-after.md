@@ -16,9 +16,12 @@ readingTime: 5
 
 ![Domain Strategy Diagram](/img/blog/2025/ots-domain-strategy.svg)
 
-Following our [recent homepage update](/content/posts/2025-05-05-homepage-update-going-regional) that emphasized our regional domains (e.g., `eu.onetimesecret.com`, `us.onetimesecret.com`), we want to elaborate on a crucial aspect of our online presence: our domain strategy. While regionalization supports data sovereignty and compliance, an equally vital goal of our domain structure is to provide unambiguous markers of authenticity.
+Recently, we encountered a sophisticated phishing attempt where an impostor site mirrored our interface but actually exposed all created secrets. Despite getting the site shut down through Cloudflare, many users were confused about legitimacy (e.g. see [Which one of these is the real onetimesecret?](https://github.com/onetimesecret/onetimesecret/issues/1233)). This incident reinforced the importance of having unmistakable markers of authenticity in our domain strategy.
 
-Recently, we encountered a sophisticated phishing attempt where an impostor site mirrored our interface but actually exposed all created secrets. Despite getting the site shut down through Cloudflare, many users were confused about legitimacy. This incident reinforced the importance of having unmistakable markers of authenticity in our domain strategy.
+So following our [recent homepage update](/content/posts/2025-05-05-homepage-update-going-regional) that emphasized our regional domains (e.g., `eu.onetimesecret.com`, `us.onetimesecret.com`), we want to elaborate on a crucial aspect of our online presence: our domain strategy. While regionalization supports data sovereignty and compliance, an equally vital goal of our domain structure is to provide unambiguous markers of authenticity.
+
+This post details how our domain structure is designed to bolster security through clarity and consistency - especially important for a tool frequently used for sensitive information exchange.
+
 
 ## Our `.com` Domain: Separation of Concerns
 
