@@ -18,7 +18,6 @@ A recent phishing attempt exposed users to an impostor site that mirrored our in
 
 Following our [recent homepage update](/content/posts/2025-05-05-homepage-update-going-regional) emphasizing regional domains, this post details how our domain structure bolsters security through clarity and consistency—a vital consideration for a service handling sensitive information.
 
-## Our `.com` Domain: Separation of Concerns
 
 <div class="flex justify-center items-center my-10">
   <a href="https://onetimesecret.com/" class="text-center inline-block">
@@ -36,6 +35,7 @@ Following our [recent homepage update](/content/posts/2025-05-05-homepage-update
   </a>
 </div>
 
+## Our `.com` Domain: Separation of Concerns
 
 **Strategic Change:** We've moved our apex domain (onetimesecret.com) from functioning as an alias for eu.onetimesecret.com to a completely separate codebase with static content. While standard practice for most products, this is new for our service which has maintained a functional homepage since launch over 10 years ago.
 
@@ -121,7 +121,8 @@ Our next post will provide a detailed verification guide for users to validate a
 
 ## Addendum: Quick Reference
 
-::callout{type="info" icon="i" title="Quick Reference: Technical Terms"}
+::callout{color="secondary" icon="ph:info"}
+_The more you know™️_
 * **Apex domain**: The "root" domain of a website (e.g., `example.com` without any prefixes).
 * **Top-Level Domain** (TLD): - the last segment of a domain name (e.g., .com, .dev, .org).
 * **HSTS preload**: A security feature that forces browsers to always use secure HTTPS connections. See [hstspreload.org](https://hstspreload.org/?domain=onetimesecret.com).
