@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Homepage update: Security Through Consistency"
+title: "Homepage update: Strengthening Security with a Clearer Domain Strategy"
 date: 2025-05-14
 authors:
   - name: Delano
@@ -15,16 +15,15 @@ readingTime: 5
 draft: true
 ---
 
-![Domain Strategy Diagram](/img/blog/2025/ots-domain-strategy.svg)
 
-A recent phishing attempt where an impostor site mirrored our interface but actually exposed all created secrets. Despite getting the site shut down through Cloudflare, many users were confused about legitimacy (e.g. see [Which one of these is the real onetimesecret?](https://github.com/onetimesecret/onetimesecret/issues/1233)). This incident reinforced the importance of having unmistakable markers of authenticity in our domain strategy.
 
-So following our [recent homepage update](/content/posts/2025-05-05-homepage-update-going-regional) that emphasized our regional domains (e.g., `eu.onetimesecret.com`, `us.onetimesecret.com`), we want to elaborate on a crucial aspect of our online presence: our domain strategy. While regionalization supports data sovereignty and compliance, an equally vital goal of our domain structure is to provide unambiguous markers of authenticity.
+A recent phishing attempt exposed users to an impostor site that mirrored our interface but actually exposed the created secrets. While we were able to get this particular site shut down through Cloudflare's efforts, the incident highlighted a broader concern: users can struggle to distinguish legitimate from fraudulent services (see [Which one of these is the real onetimesecret?](https://github.com/onetimesecret/onetimesecret/issues/1233)). This reinforced the importance of having unmistakable markers of authenticity in our domain strategy, regardless of whether a specific threat is currently active.
 
-This post details how our domain structure is designed to bolster security through clarity and consistency - especially important for a tool frequently used for sensitive information exchange.
-
+Sollowing our [recent homepage update](/content/posts/2025-05-05-homepage-update-going-regional) emphasizing regional domains, this post details how our domain structure bolsters security through clarity and consistency—a vital consideration for a service handling sensitive information. While regionalization supports data sovereignty and compliance, our domain strategy equally focuses on providing unambiguous markers of authenticity.
 
 ## Our `.com` Domain: Separation of Concerns
+
+![Domain Strategy Diagram](/img/blog/2025/ots-domain-strategy.svg)
 
 * **Strategic Change:** We've moved from having our apex domain (onetimesecret.com) function as an alias for eu.onetimesecret.com to making it a completely separate codebase with static content.
 
@@ -33,7 +32,6 @@ This post details how our domain structure is designed to bolster security throu
   * **Streamlined Application Codebase:** Removing marketing content makes our open-source project simpler for self-hosted installations
   * **Independent Release Cycles:** Marketing site changes no longer require application deployments
   * **SEO Protection:** Consolidates domain authority to maintain search ranking visibility against sites using similar keywords and paid advertisements
-
 
 
 ## Domain Strategy Evolution: Before vs. After
@@ -74,8 +72,8 @@ Our domain strategy serves multiple purposes:
 
 1. **Security Reinforcement:** Clear domain patterns and visual distinctions make it harder for malicious actors to create convincing imitations
 2. **User Confidence:** Consistent patterns make it easier for users to verify they're on legitimate sites
-4. **Technical Robustness:** Separate codebases for marketing and application improve development velocity and maintainability
-3. **Data Sovereignty:** Regional domains ensure data stays in the chosen jurisdiction
+3. **Technical Robustness:** Separate codebases for marketing and application improve development velocity and maintainability
+4. **Data Sovereignty:** Regional domains ensure data stays in the chosen jurisdiction
 5. **Development Quality:** Our .dev environment mirrors production structure, ensuring higher reliability
 
 This approach represents security by design - building protection directly into our infrastructure rather than as an afterthought. By consolidating all legitimate services under *.onetimesecret.com and creating distinct experiences between our marketing site and application interface, we're significantly raising the bar for potential phishing attempts.
@@ -88,12 +86,7 @@ Our next post will provide a detailed verification guide to help users ensure th
 
 ## Addendum: Quick Reference
 
-For readers who may be unfamiliar with some technical terms in this post:
-
-
 ::callout{type="info" icon="i" title="Quick Reference: Technical Terms"}
-For readers who may be unfamiliar with some technical terms in this post:
-
 * **Apex domain**: The "root" domain of a website (e.g., `example.com` without any prefixes).
 * **Top-Level Domain** (TLD): - the last segment of a domain name (e.g., .com, .dev, .org).
 * **HSTS preload**: A security feature that forces browsers to always use secure HTTPS connections. See [hstspreload.org](https://hstspreload.org/?domain=onetimesecret.com).
