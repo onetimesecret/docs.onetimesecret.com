@@ -1,0 +1,43 @@
+---
+layout: post
+title: "Domain strategy cont'd: 1-800-Dot-Dev"
+date: 2025-05-14
+authors:
+  - name: Delano
+    to: https://blog.onetimesecret.com/about
+    avatar:
+      src: /img/portrait-profile-pic-delano-2024.jpeg
+image:
+  src: /img/blog/2025/ots-domain-strategy.svg
+badge:
+  label: Engineering
+readingTime: 5
+draft: true
+---
+
+
+Can refer to previous posts re: homepage update, domain clarity. 
+
+
+## Our Domain Structure
+
+* **`onetimesecret.com`**: Marketing site and portal to regional applications
+* **Regional domains** (`eu.onetimesecret.com`, `us.onetimesecret.com`, etc): Main application instances with share-nothing architecture, providing data sovereignty and operational scalability
+* **Supporting domains**:
+  * **`docs.onetimesecret.com`**: Comprehensive documentation
+  * **`blog.onetimesecret.com`**: Product updates and engineering insights
+  * **`status.onetimesecret.com`**: Service status and incident reporting
+* **`*.onetimesecret.dev`**: Exclusively for non-production environments, clearly separated from production
+
+
+## Our `.dev`: A True Non-Production Mirror
+
+Our `.dev` TLD serves exclusively for non-production environments, providing clear separation from production systems:
+
+* **Clear Prod/Non-Prod Distinction:** `.onetimesecret.dev` creates an unmistakable boundary between our production environment (`*.onetimesecret.com`) and all non-production activities.
+
+* **Apex Domain Mirroring:** We mirror our production domain structure (e.g., `us.onetimesecret.dev` corresponding to `us.onetimesecret.com`). This allows development environments to replicate production DNS configurations with high fidelity, reducing "works on my machine" issues.
+
+* **Technical Advantages:** This approach provides strict origin separation (HSTS preload), clean cookie jars, and clear visual distinction for developers and testers.
+
+This avoids subtle problems that arise when non-production environments are subdomains of the production TLD, ensuring cleaner separation of concerns.
