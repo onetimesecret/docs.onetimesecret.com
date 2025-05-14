@@ -15,17 +15,16 @@ readingTime: 5
 draft: true
 ---
 
+A recent phishing attempt exposed users to an impostor site that mirrored our interface but actually exposed secrets. While Cloudflare helped shut down this particular site, the incident highlighted a broader concern: user can struggle to distinguish legitimate from fraudulent services (see [Which one of these is the real onetimesecret?](https://github.com/onetimesecret/onetimesecret/issues/1233)).
 
-
-A recent phishing attempt exposed users to an impostor site that mirrored our interface but actually exposed the created secrets. While we were able to get this particular site shut down through Cloudflare's efforts, the incident highlighted a broader concern: users can struggle to distinguish legitimate from fraudulent services (see [Which one of these is the real onetimesecret?](https://github.com/onetimesecret/onetimesecret/issues/1233)). This reinforced the importance of having unmistakable markers of authenticity in our domain strategy, regardless of whether a specific threat is currently active.
-
-Sollowing our [recent homepage update](/content/posts/2025-05-05-homepage-update-going-regional) emphasizing regional domains, this post details how our domain structure bolsters security through clarity and consistency—a vital consideration for a service handling sensitive information. While regionalization supports data sovereignty and compliance, our domain strategy equally focuses on providing unambiguous markers of authenticity.
+Following our [recent homepage update](/content/posts/2025-05-05-homepage-update-going-regional) emphasizing regional domains, this post details how our domain structure bolsters security through clarity and consistency—a vital consideration for a service handling sensitive information.
 
 ## Our `.com` Domain: Separation of Concerns
 
-![Domain Strategy Diagram](/img/blog/2025/ots-domain-strategy.svg)
+**Strategic Change:** We've moved from having our apex domain (onetimesecret.com) function as an alias for eu.onetimesecret.com to making it a completely separate codebase with static content. This is not revolutionary and is how most products, it's just new for us since the site launched over 10 years ago and has always maintained a productive homepage.
 
-* **Strategic Change:** We've moved from having our apex domain (onetimesecret.com) function as an alias for eu.onetimesecret.com to making it a completely separate codebase with static content.
+![Domain Strategy Diagram](/img/blog/2025/20250514-homepage-update-post-as-in-after.svg)
+
 
 * **Technical Benefits:**
   * **Distinctive User Experience:** Creates a clear visual and functional difference from impostor sites
@@ -36,7 +35,16 @@ Sollowing our [recent homepage update](/content/posts/2025-05-05-homepage-update
 
 ## Domain Strategy Evolution: Before vs. After
 
-[include 2 screenshots]
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+  <figure class="mb-6">
+    <img src="/img/blog/2025/20250514-onetime-homepage-new.jpeg" alt="New Onetime Secret marketing homepage" class="rounded-lg shadow-md w-full">
+    <figcaption class="text-sm text-gray-600 mt-2 text-center">Our new marketing homepage at onetimesecret.com</figcaption>
+  </figure>
+  <figure class="mb-6">
+    <img src="/img/blog/2025/20250514-onetime-homepage-project.jpeg" alt="Onetime Secret application interface" class="rounded-lg shadow-md w-full">
+    <figcaption class="text-sm text-gray-600 mt-2 text-center">Application interface at regional domains (e.g., eu.onetimesecret.com)</figcaption>
+  </figure>
+</div>
 
 **Before Our Update:**
 - Our apex domain (`onetimesecret.com`) functioned as an alias to `eu.onetimesecret.com`
@@ -55,28 +63,28 @@ This evolution creates multiple visual and functional "trust markers" that make 
 
 ## How This Protects Our Users
 
-Our domain strategy directly helps users verify they're using an authentic Onetime Secret service:
+Our domain strategy creates clear verification markers to help users identify authentic Onetime Secret services:
 
-* **Consistent Domain Pattern**: All legitimate Onetime Secret services use the `*.onetimesecret.com` domain pattern - if you see a service on `onetimesecret.org`, `1timesecret.com`, or similar variations, it's not our legitimate service
+* **Consistent Domain Pattern**: All legitimate services use the `*.onetimesecret.com` pattern - if you see `onetímesecret.org`, `1timesecret.com`, or similar variations, it's not our service.
   
-* **Visual Distinction**: Our marketing site now has a distinctly different appearance from our application interface - impostors typically copy just one look, making inconsistencies easier to spot
+* **Visual Distinction**: Our marketing site now has a distinctly different appearance from our application interface - impostors typically copy just one look.
 
-* **Regional Clarity**: Users can confirm they're connected to their chosen regional instance (e.g., `eu.onetimesecret.com`) - phishing sites rarely implement the complete regional architecture
+* **Regional Subdomains**: Legitimate services always use regional identifiers (e.g., `eu.onetimesecret.com`) - phishing sites rarely implement complete regional architecture
 
-* **Official Subdomain Consistency**: All legitimate services follow the same subdomain pattern (docs, blog, status) - be suspicious of unusual subdomains that don't match our established pattern
+* **Official Naming Conventions**: All legitimate subdomains follow consistent patterns (docs, blog, status).
+
 
 
 ## Conclusion: Security Through Clarity
 
-Our domain strategy serves multiple purposes:
+Beyond user verification benefits, our domain strategy delivers key technical and business advantages:
 
-1. **Security Reinforcement:** Clear domain patterns and visual distinctions make it harder for malicious actors to create convincing imitations
-2. **User Confidence:** Consistent patterns make it easier for users to verify they're on legitimate sites
-3. **Technical Robustness:** Separate codebases for marketing and application improve development velocity and maintainability
-4. **Data Sovereignty:** Regional domains ensure data stays in the chosen jurisdiction
-5. **Development Quality:** Our .dev environment mirrors production structure, ensuring higher reliability
+1. **Security by Design**: Protection is built directly into our infrastructure rather than added as an afterthought
+2. **Legal Compliance**: Domain structure ensures compliance and data sovereignty requirements are met
+3. **Technical Separation**: Distinct codebases improve development velocity and maintainability
+4. **Brand Protection**: Consistent identity strengthens our position against imitators
 
-This approach represents security by design - building protection directly into our infrastructure rather than as an afterthought. By consolidating all legitimate services under *.onetimesecret.com and creating distinct experiences between our marketing site and application interface, we're significantly raising the bar for potential phishing attempts.
+This strategic approach significantly raises the barrier for potential phishing attempts while improving our development workflow and compliance posture.
 
 Our next post will provide a detailed verification guide to help users ensure they're always using an authentic Onetime Secret service.
 
