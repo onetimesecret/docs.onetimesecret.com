@@ -24,3 +24,15 @@ draft: true
 5. How to report potential impostors
 
 This separation allows your current post to focus on the engineering and strategic aspects of your domain architecture while still addressing the security concerns that prompted the changes.
+
+
+[One-time Secret: Share passwords etc with URIs that work only once (](https://news.ycombinator.com/item?id=3207489) -- 219 points by delano on Nov 7, 2011 | hide | past | favorite | 104 comments
+
+
+https://whois.gandi.net/en/results?search=onetimesecret.com
+Creation Date: 2011-06-16T22:29:36Z
+
+Link to Archive.org
+
+
+Visual Verification Chain: A Powerful Security Canary

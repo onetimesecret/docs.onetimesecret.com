@@ -67,8 +67,6 @@ Our domain strategy directly helps users verify they're using an authentic Oneti
 
 * **Official Subdomain Consistency**: All legitimate services follow the same subdomain pattern (docs, blog, status) - be suspicious of unusual subdomains that don't match our established pattern
 
-We've also added subtle but important "canaries" in our interface that are difficult for impostors to replicate properly (more on those in our upcoming verification post).
-
 
 ## Conclusion: Security Through Clarity
 
