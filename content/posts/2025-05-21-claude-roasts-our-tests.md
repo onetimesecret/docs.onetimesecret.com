@@ -8,7 +8,7 @@ authors:
     avatar:
       src: /img/portrait-profile-pic-delano-2024.jpeg
 image:
-  src: /img/blog/2025/20250515-verifying-onetimesecret.svg
+  src: /img/blog/2025/20250521-roast-our-test-suit.svg
 badge:
   label: LLMs
 readingTime: 4
@@ -19,9 +19,11 @@ readingTime: 4
 
 Please roast the way our tests are organized in our opensource project onetime secret. 
 
+
+::CollapsibleContent{summary="Click to expand the full prompt"}
+
 Here's a list of the directories, followed by a directory tree with all the files:
 
-::CollapsibleContent{summary="Click to expand"}
 
 ```
 ./tests
@@ -374,18 +376,6 @@ Now I'll create a focused roast based on these observations.
 ::
 
 
-### Test Organization Roast for OneTimeSecret Project
-
-
-#### Use Tool: now (toolu_01AaEJAS5qvrLoSsCuuz2D3G)
-```json
-{
-  "timezone": "utc"
-}
-
-The current datetime is 2025-05-11T00:58:53.390027+00:00.
-```
-
 
 ### Backend Testing: A Journey Through Time and Space
 
@@ -427,7 +417,7 @@ In conclusion, this test organization demonstrates a commitment to keeping new d
 
 Okay, but do you have any negative feedback?
 
----
+
 
 ## Agent
 
@@ -471,7 +461,7 @@ In short, this isn't just bad test organization - it's a test structure that act
 
 Don't cry for me argentina
 
----
+
 
 ## Agent
 
@@ -511,4 +501,7 @@ No tears needed. Just ruthless execution of a logical test reorganization plan. 
 
 ---
 
-FIN.
+
+## Epilogue
+
+I actually do feel pretty roasted, lol. 😮‍💨

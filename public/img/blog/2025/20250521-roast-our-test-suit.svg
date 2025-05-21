@@ -1,0 +1,85 @@
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg" font-family="Zilla Slab, Arial, sans-serif">
+  <style>
+    @keyframes fadeInOut1 {
+      0%, 100% { opacity: 1; }
+      45%, 55% { opacity: 0; }
+    }
+
+    @keyframes fadeInOut2 {
+      0%, 100% { opacity: 0; }
+      45%, 55% { opacity: 1; }
+    }
+
+    #speech1 {
+      animation: fadeInOut1 8s infinite;
+    }
+
+    #speech2 {
+      animation: fadeInOut2 8s infinite;
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#f9f9f9"/>
+
+  <!-- Test Report Sheet -->
+  <rect x="120" y="100" width="340" height="300" rx="16" fill="#fff" stroke="#dc4a22" stroke-width="3"/>
+  <text x="290" y="140" font-size="28" font-weight="bold" text-anchor="middle" fill="#dc4a22">Test Suite</text>
+  <!-- Test lines -->
+  <rect x="160" y="170" width="260" height="18" rx="4" fill="#f0c39e"/>
+  <rect x="160" y="200" width="220" height="18" rx="4" fill="#f7dec3"/>
+  <rect x="160" y="230" width="180" height="18" rx="4" fill="#e68b5e"/>
+  <rect x="160" y="260" width="240" height="18" rx="4" fill="#f0c39e"/>
+  <rect x="160" y="290" width="200" height="18" rx="4" fill="#f7dec3"/>
+  <!-- "FAIL" stamp -->
+  <text x="290" y="340" font-size="48" font-weight="bold" fill="#dc4a22" opacity="0.18" transform="rotate(-10 290,340)">FAIL</text>
+
+  <!-- Claude AI character (simple robot) -->
+  <g>
+    <ellipse cx="570" cy="250" rx="60" ry="80" fill="#e8fafc" stroke="#23b5dd" stroke-width="3"/>
+    <ellipse cx="570" cy="230" rx="38" ry="38" fill="#fff" stroke="#23b5dd" stroke-width="2"/>
+    <ellipse cx="555" cy="225" rx="6" ry="8" fill="#23b5dd"/>
+    <ellipse cx="585" cy="225" rx="6" ry="8" fill="#23b5dd"/>
+    <rect x="555" y="250" width="30" height="8" rx="4" fill="#23b5dd"/>
+    <!-- Antenna -->
+    <rect x="568" y="180" width="4" height="18" rx="2" fill="#23b5dd"/>
+    <circle cx="570" cy="178" r="4" fill="#dc4a22"/>
+  </g>
+
+  <!-- Speech bubble 1 -->
+  <g id="speech1">
+    <rect x="610" y="120" width="160" height="80" rx="16" fill="#fff" stroke="#dc4a22" stroke-width="2"/>
+    <polygon points="610,180 600,200 630,185" fill="#fff" stroke="#dc4a22" stroke-width="2"/>
+    <text x="690" y="150" font-size="16" font-weight="bold" text-anchor="middle" fill="#dc4a22">Roast Mode: ON</text>
+    <text x="690" y="170" font-size="13" text-anchor="middle" fill="#333">
+      "Your tests are as organized as a
+    </text>
+    <text x="690" y="185" font-size="13" text-anchor="middle" fill="#333">
+      spaghetti code convention!"
+    </text>
+  </g>
+
+  <!-- Speech bubble 2 -->
+  <g id="speech2">
+    <rect x="610" y="110" width="170" height="110" rx="16" fill="#fff" stroke="#dc4a22" stroke-width="2"/>
+    <polygon points="610,200 600,220 635,205" fill="#fff" stroke="#dc4a22" stroke-width="2"/>
+    <text x="695" y="135" font-size="16" font-weight="bold" text-anchor="middle" fill="#dc4a22">Roast Mode: MAX</text>
+    <text x="695" y="155" font-size="13" text-anchor="middle" fill="#333">
+      "I've seen TODO comments
+    </text>
+    <text x="695" y="170" font-size="13" text-anchor="middle" fill="#333">
+      with more structure than
+    </text>
+    <text x="695" y="185" font-size="13" text-anchor="middle" fill="#333">
+      this test suite."
+    </text>
+    <text x="695" y="205" font-size="13" text-anchor="middle" fill="#333">
+      Even your mocks are crying.
+    </text>
+  </g>
+
+  <!-- Byline -->
+  <text x="790" y="490" font-size="12" font-style="italic" text-anchor="end" fill="#888">
+    Illustration by Copilot GPT-4.1 for Onetime Secret Blog
+  </text>
+</svg>
