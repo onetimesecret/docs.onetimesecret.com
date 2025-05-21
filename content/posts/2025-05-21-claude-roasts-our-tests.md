@@ -14,8 +14,12 @@ badge:
 readingTime: 4
 ---
 
+On a whim while working with Claude on reorganizing our tests, I thought I'd ask how it really feels.
 
-## User - Delano
+
+---
+
+### User
 
 Please roast the way our tests are organized in our opensource project onetime secret. 
 
@@ -287,8 +291,8 @@ tests
 
 ::
 
----
-## Agent - Claude 3.7 Sonnet Thinking
+
+### Agent
 
 
 ::CollapsibleContent{summary="Click to expand"}
@@ -377,7 +381,7 @@ Now I'll create a focused roast based on these observations.
 
 
 
-### Backend Testing: A Journey Through Time and Space
+## Backend Testing: A Journey Through Time and Space
 
 1. **Three Testing Frameworks Walk Into a Bar**: RSpec, Tryouts, and Postman tests coexist without clear boundaries or integration strategy.
 
@@ -389,7 +393,7 @@ Now I'll create a focused roast based on these observations.
 
 5. **Unnumbered Tests That Should Be Numbered**: Random test files scattered in the tryouts directory while others are neatly numbered and categorized. Perfect for developers who enjoy treasure hunts.
 
-#### Frontend Testing: The Forgotten Child
+### Frontend Testing: The Forgotten Child
 
 1. **One Component Test to Rule Them All**: Entire component library tested by a single `ThemeToggle.spec.ts`. Comprehensive.
 
@@ -399,7 +403,7 @@ Now I'll create a focused roast based on these observations.
 
 4. **Store Tests Over Component Tests**: Stores are thoroughly tested while components are virtually ignored. Apparently UI isn't important.
 
-#### The Grand Unified Theory of Testing
+### The Grand Unified Theory of Testing
 
 1. **Directory-to-Test-File Ratio**: Approaching infinity. Many directories contain only 1-2 test files, creating a labyrinth of empty folders.
 
@@ -412,14 +416,13 @@ Now I'll create a focused roast based on these observations.
 In conclusion, this test organization demonstrates a commitment to keeping new developers confused and ensuring that test maintenance remains a perpetual challenge. The archeological layers of testing approaches suggest an evolutionary process that never reached natural selection.
 
 ---
-
-## User
+### User
 
 Okay, but do you have any negative feedback?
 
 
 
-## Agent
+### Agent
 
 
 ::CollapsibleContent{summary="Click to expand"}
@@ -433,9 +436,9 @@ I see what the user is doing here - they're using humor to suggest my roast wasn
 ::
 
 
-### Even Harsher Test Organization Critique
+## Even Harsher Test Organization Critique
 
-#### Critical Issues
+### Critical Issues
 
 1. **Zero Test Strategy**: No apparent central testing philosophy or strategy. Different approaches compete without cohesion, making maintenance impossible and coverage unpredictable.
 
@@ -456,14 +459,13 @@ I see what the user is doing here - they're using humor to suggest my roast wasn
 In short, this isn't just bad test organization - it's a test structure that actively harms code quality by discouraging testing, preventing effective test coverage, and ensuring that maintaining tests is so painful that developers will avoid it entirely.
 
 ---
-
-## User
+### User
 
 Don't cry for me argentina
 
 
 
-## Agent
+### Agent
 
 ::CollapsibleContent{summary="Click to expand"}
 
@@ -477,9 +479,9 @@ I'll respond with a direct, factual assessment of what needs to be done to impro
 
 ::
 
-### Cold Hard Test Reorganization Facts
+## Cold Hard Test Reorganization Facts
 
-#### The Path Forward
+### The Path Forward
 
 1. **Consolidate or Die**: Pick one testing framework per language. RSpec for Ruby, Vitest for Vue. Eliminate Tryouts entirely.
 
