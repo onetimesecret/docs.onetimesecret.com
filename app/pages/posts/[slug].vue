@@ -82,7 +82,8 @@ if (post.value.image?.src) {
         Back to Blog
       </NuxtLink>
     </div>
-    <article class="max-w-3xl mx-auto">
+
+    <article class="max-w-3xl mx-auto prose">
       <header class="mb-12">
         <UBadge
           v-bind="post.badge"
@@ -137,5 +138,6 @@ if (post.value.image?.src) {
         </aside>
       </UPage>
     </article>
+
   </UContainer>
 </template>

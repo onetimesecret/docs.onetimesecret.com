@@ -1,5 +1,5 @@
-import typography from "@tailwindcss/typography";
 import forms from "@tailwindcss/forms";
+import typography from "@tailwindcss/typography";
 import type { Config } from "tailwindcss";
 import defaultTheme from "tailwindcss/defaultTheme";
 
@@ -18,6 +18,44 @@ export default <Partial<Config>>{
     "i-heroicons-outline-moon",
     "i-heroicons-solid-sun",
     "i-heroicons-solid-moon",
+    // Prose and typography classes
+    "prose",
+    "text-4xl",
+    "text-3xl",
+    "text-2xl",
+    "text-xl",
+    "text-lg",
+    "text-base",
+    "font-bold",
+    "font-semibold",
+    "font-medium",
+    "font-normal",
+    "mb-6",
+    "mb-4",
+    "mb-3",
+    "mb-2",
+    "mt-0",
+    "mt-8",
+    "mt-6",
+    "mt-5",
+    "mt-4",
+    "my-4",
+    "my-6",
+    "pl-6",
+    "pl-4",
+    "text-brand-600",
+    "hover:text-brand-800",
+    "underline",
+    "border-l-4",
+    "border-gray-300",
+    "italic",
+    "bg-gray-100",
+    "rounded",
+    "px-1",
+    "py-0.5",
+    "text-gray-800",
+    "p-4",
+    "overflow-auto",
   ],
   theme: {
     fontFamily: {
@@ -26,6 +64,51 @@ export default <Partial<Config>>{
       /* In CSS: font-family: theme('fontFamily.brand'); */
       brand: ["Zilla Slab", ...defaultTheme.fontFamily.serif],
       mono: defaultTheme.fontFamily.mono,
+    },
+    typography: {
+      DEFAULT: {
+        css: {
+          "h1, h2, h3, h4, h5, h6": {
+            fontFamily: "Zilla Slab, serif",
+          },
+          h1: {
+            fontSize: "2.25rem", // text-4xl
+            fontWeight: "700",
+            marginTop: "0",
+            marginBottom: "1rem",
+          },
+          h2: {
+            fontSize: "1.875rem", // text-3xl
+            fontWeight: "700",
+            marginTop: "1.5rem",
+            marginBottom: "0.75rem",
+          },
+          h3: {
+            fontSize: "1.5rem", // text-2xl
+            fontWeight: "600",
+            marginTop: "1.25rem",
+            marginBottom: "0.5rem",
+          },
+          h4: {
+            fontSize: "1.25rem", // text-xl
+            fontWeight: "600",
+            marginTop: "1rem",
+            marginBottom: "0.5rem",
+          },
+          h5: {
+            fontSize: "1.125rem", // text-lg
+            fontWeight: "500",
+            marginTop: "1rem",
+            marginBottom: "0.5rem",
+          },
+          h6: {
+            fontSize: "1rem", // text-base
+            fontWeight: "500",
+            marginTop: "1rem",
+            marginBottom: "0.5rem",
+          },
+        },
+      },
     },
     extend: {
       colors: {
@@ -98,5 +181,10 @@ export default <Partial<Config>>{
       },
     },
   },
-  plugins: [forms(), typography()],
+  plugins: [
+    forms(),
+    typography({
+      className: "prose",
+    }),
+  ],
 };
