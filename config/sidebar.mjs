@@ -35,18 +35,19 @@ const miTranslations = loadTranslations("mi");
  * @returns {Object} Formatted sidebar link item
  */
 function createLink(key, link, badge) {
+  const enLabel = enTranslations.sidebar?.[key] || key;
   return {
-    label: enTranslations.sidebar[key],
+    label: enLabel,
     link,
     translations: {
-      de: deTranslations.sidebar[key],
-      nl: nlTranslations.sidebar[key],
-      fr: frTranslations.sidebar[key],
-      es: esTranslations.sidebar[key],
-      uk: ukTranslations.sidebar[key],
-      ko: koTranslations.sidebar[key],
-      ja: jaTranslations.sidebar[key],
-      mi: miTranslations.sidebar[key],
+      de: deTranslations.sidebar?.[key] || enLabel,
+      nl: nlTranslations.sidebar?.[key] || enLabel,
+      fr: frTranslations.sidebar?.[key] || enLabel,
+      es: esTranslations.sidebar?.[key] || enLabel,
+      uk: ukTranslations.sidebar?.[key] || enLabel,
+      ko: koTranslations.sidebar?.[key] || enLabel,
+      ja: jaTranslations.sidebar?.[key] || enLabel,
+      mi: miTranslations.sidebar?.[key] || enLabel,
     },
     attrs: {},
     ...(badge ? { badge } : {}),
@@ -61,17 +62,18 @@ function createLink(key, link, badge) {
  * @returns {Object} Formatted sidebar group item
  */
 function createGroup(key, items = [], collapsed = false) {
+  const enLabel = enTranslations.sidebar?.[key] || key;
   return {
-    label: enTranslations.sidebar[key],
+    label: enLabel,
     translations: {
-      de: deTranslations.sidebar[key],
-      nl: nlTranslations.sidebar[key],
-      fr: frTranslations.sidebar[key],
-      es: esTranslations.sidebar[key],
-      uk: ukTranslations.sidebar[key],
-      ko: koTranslations.sidebar[key],
-      ja: jaTranslations.sidebar[key],
-      mi: miTranslations.sidebar[key],
+      de: deTranslations.sidebar?.[key] || enLabel,
+      nl: nlTranslations.sidebar?.[key] || enLabel,
+      fr: frTranslations.sidebar?.[key] || enLabel,
+      es: esTranslations.sidebar?.[key] || enLabel,
+      uk: ukTranslations.sidebar?.[key] || enLabel,
+      ko: koTranslations.sidebar?.[key] || enLabel,
+      ja: jaTranslations.sidebar?.[key] || enLabel,
+      mi: miTranslations.sidebar?.[key] || enLabel,
     },
     items,
     collapsed,
