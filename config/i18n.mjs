@@ -38,6 +38,11 @@ export const i18nConfig = {
       lang: "en",
       dir: "ltr",
     },
+    bg: {
+      label: "Български (bg)",
+      lang: "bg",
+      dir: "ltr",
+    },
     es: {
       label: "Español (es)",
       lang: "es",
