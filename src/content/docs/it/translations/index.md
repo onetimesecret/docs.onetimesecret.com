@@ -1,43 +1,43 @@
 ---
-title: Translations & Localization
-description: Information about available language translations and how to contribute to localizing Onetime Secret
+title: Traduzioni e localizzazione
+description: Informazioni sulle traduzioni disponibili e su come contribuire alla localizzazione di Onetime Secret.
 ---
 
-# Translations & Localization
+# Traduzioni e localizzazione
 
-Onetime Secret documentation is available in multiple languages to serve our diverse global community. We're continuously working to expand our language offerings and improve existing translations.
+La documentazione di Onetime Secret è disponibile in diverse lingue per servire la nostra comunità globale. Lavoriamo continuamente per ampliare la nostra offerta linguistica e migliorare le traduzioni esistenti.
 
-## Available Languages
+## Lingue disponibili
 
-- **English (en)**: Our default and most complete version
-- **German (de)**: Partial translation in progress
+- **Inglese (en)**: La nostra versione predefinita e più completa
+- **Tedesco (de)**: Traduzione parziale in corso
 
-You can switch between languages using the language selector in the top-right corner of any page.
+È possibile passare da una lingua all'altra utilizzando il selettore di lingua nell'angolo in alto a destra di qualsiasi pagina.
 
-## Translation Status
+## Stato della traduzione
 
-To view the current status of our translation efforts, visit the [Translation Status](/en/translations/status) page.
+Per visualizzare lo stato attuale delle nostre traduzioni, visitate la pagina [Stato delle traduzioni](/it/translations/status).
 
-## Contributing Translations
+## Traduzioni che contribuiscono
 
-We welcome contributions to our translation efforts. If you'd like to help translate Onetime Secret documentation to your language, please follow these guidelines:
+Siamo lieti di contribuire ai nostri sforzi di traduzione. Se volete contribuire a tradurre la documentazione di Onetime Secret nella vostra lingua, seguite queste linee guida:
 
-### Translation Workflow
+### Flusso di lavoro della traduzione
 
-1. **Locate content**: Original English content is stored in the `/content/docs/en/` directory
-2. **Create corresponding files**: Create matching files in your language's directory (e.g., `/content/docs/de/`)
-3. **Keep structure**: Maintain the same directory structure and file naming conventions
-4. **Preserve frontmatter**: Copy all frontmatter fields, translating only the values
-5. **Submit your work**: Use [GitHub Pull Requests](https://github.com/onetimesecret/onetimesecret) for submissions
+1. **Localizzazione del contenuto**: Il contenuto originale in inglese è memorizzato nella directory `/content/docs/en/`.
+2. **Creare i file corrispondenti**: Creare i file corrispondenti nella directory della propria lingua (ad esempio, `/content/docs/de/`).
+3. **Mantenere la struttura**: Mantenere la stessa struttura di directory e le stesse convenzioni di denominazione dei file.
+4. **Conservare il frontmatter**: Copiare tutti i campi del frontmatter, traducendo solo i valori.
+5. **Invia il tuo lavoro**: Utilizzare [GitHub Pull Requests](https://github.com/onetimesecret/onetimesecret) per l'invio del lavoro.
 
-### Translation Standards
+### Standard di traduzione
 
-For consistent, high-quality translations, follow our [Translation Style Guide](/en/translations/guide-en) and refer to our [Terminology Glossary](/en/translations/glossary) for standardized translations of key terms.
+Per ottenere traduzioni coerenti e di alta qualità, seguite la nostra [Translation Style Guide](/it/translations/guide-en) e fate riferimento al nostro [Terminology Glossary](/it/translations/glossary) per le traduzioni standardizzate dei termini chiave.
 
-## Handling Missing Translations
+## Gestione delle traduzioni mancanti
 
-When content is not available in a selected language, you'll automatically see the English version with a notification indicating the content hasn't been translated yet.
+Quando il contenuto non è disponibile in una lingua selezionata, viene visualizzata automaticamente la versione inglese con una notifica che indica che il contenuto non è ancora stato tradotto.
 
-## Need Help?
+## Hai bisogno di aiuto?
 
-If you have questions about translations or need assistance contributing, please [contact our team](https://onetimesecret.com/contact) or open an issue on our [GitHub repository](https://github.com/onetimesecret/onetimesecret).
+Se avete domande sulle traduzioni o avete bisogno di assistenza per contribuire, [contattate il nostro team](https://onetimesecret.com/contact) o aprite un problema sul nostro [repository GitHub](https://github.com/onetimesecret/onetimesecret).

@@ -1,79 +1,79 @@
 ---
-title: Security Best Practices
-description: Enhance your secret sharing security with these best practices specific to Onetime Secret, including the security benefits of Custom Domains.
+title: Migliori pratiche di sicurezza
+description: Migliorate la sicurezza della condivisione dei segreti con queste best practice specifiche per Onetime Secret, compresi i vantaggi della sicurezza dei domini personalizzati.
 ---
 
-# Security Best Practices for Onetime Secret
+# Migliori pratiche di sicurezza per Onetime Secret
 
-While Onetime Secret is designed with security in mind, following these best practices can further enhance the protection of your sensitive information, especially when using features like Custom Domains.
+Sebbene Onetime Secret sia stato progettato con un occhio di riguardo alla sicurezza, seguire queste best practice può migliorare ulteriormente la protezione delle informazioni sensibili, soprattutto quando si utilizzano funzioni come i domini personalizzati.
 
-## Best Practices for Secret Sharing
+## Migliori pratiche per la condivisione dei segreti
 
-1. **Set Appropriate Expiration Times**: Choose the shortest practical expiration time for your secrets. This minimizes the window of opportunity for unauthorized access.
+1. **Impostare tempi di scadenza adeguati**: Scegliete il tempo di scadenza più breve possibile per i vostri segreti. In questo modo si riduce al minimo la possibilità di accesso non autorizzato.
 
-2. **Use Passphrase Protection**: For highly sensitive information, use the passphrase protection feature. This adds an extra layer of security, requiring the recipient to enter a passphrase to view the secret.
+2. **Utilizzare la protezione della passphrase**: Per le informazioni altamente sensibili, utilizzate la funzione di protezione con passphrase. Questa funzione aggiunge un ulteriore livello di sicurezza, richiedendo al destinatario di inserire una passphrase per visualizzare il segreto.
 
-3. **Compartmentalize Sensitive Information**: When dealing with highly sensitive data, consider splitting it across multiple secrets. This way, if one secret is compromised, the entire set of information remains protected.
+3. **Compartimentare le informazioni sensibili**: Quando si ha a che fare con dati altamente sensibili, si consiglia di suddividerli in più segreti. In questo modo, se un segreto viene compromesso, l'intero insieme di informazioni rimane protetto.
 
-4. **Use Secure Channels for Sharing Metadata**: While Onetime Secret secures the content of your secret, be mindful of how you share the link and any associated metadata (like passphrases). Use secure, encrypted channels for this communication.
+4. **Utilizzare canali sicuri per la condivisione dei metadati**: Mentre Onetime Secret protegge il contenuto del vostro segreto, fate attenzione a come condividete il link e tutti i metadati associati (come le passphrase). Utilizzate canali sicuri e criptati per questa comunicazione.
 
-5. **Verify Recipient**: Ensure you're sharing secrets with the intended recipient. Double-check email addresses or usernames before sending.
+5. **Verifica del destinatario**: Assicuratevi di condividere i segreti con il destinatario previsto. Controllate due volte gli indirizzi e-mail o i nomi utente prima di inviarli.
 
-6. **Educate Users**: If using Onetime Secret within an organization, educate your team about proper usage and security practices specific to secret sharing.
+6. **Educare gli utenti**: Se si utilizza Onetime Secret all'interno di un'organizzazione, è necessario educare il team all'uso corretto e alle pratiche di sicurezza specifiche per la condivisione dei segreti.
 
-## Security Benefits of Custom Domains
+## Vantaggi per la sicurezza dei domini personalizzati
 
-Using Custom Domains with Onetime Secret offers several security advantages:
+L'utilizzo di domini personalizzati con Onetime Secret offre diversi vantaggi in termini di sicurezza:
 
-1. **Enhanced Phishing Protection**: With a custom domain, your users become accustomed to a specific URL for secret sharing. This makes it easier to identify potential phishing attempts that might use similar-looking domains.
+1. **Protezione dal phishing migliorata**: Con un dominio personalizzato, gli utenti si abituano a un URL specifico per la condivisione dei segreti. In questo modo è più facile identificare potenziali tentativi di phishing che potrebbero utilizzare domini dall'aspetto simile.
 
-2. **Improved Trust and Legitimacy**: When recipients see a familiar domain, they're more likely to trust the source of the secret. This is particularly important for businesses sharing sensitive information with clients or partners.
+2. **Miglioramento della fiducia e della legittimità**: Quando i destinatari vedono un dominio familiare, è più probabile che si fidino della fonte del segreto. Ciò è particolarmente importante per le aziende che condividono informazioni sensibili con clienti o partner.
 
-3. **Seamless Integration with Existing Security Infrastructure**: A custom domain can be more easily integrated with your existing security tools and monitoring systems, providing a more comprehensive view of your organization's secret sharing activities.
+3. **Integrazione perfetta con l'infrastruttura di sicurezza esistente**: Un dominio personalizzato può essere integrato più facilmente con gli strumenti di sicurezza e i sistemi di monitoraggio esistenti, fornendo una visione più completa delle attività di condivisione dei segreti dell'organizzazione.
 
-4. **Compliance and Auditing**: For organizations in regulated industries, using a custom domain can help in maintaining compliance by keeping secret sharing activities under your organization's direct control and making auditing processes more straightforward.
+4. **Conformità e audit**: Per le organizzazioni che operano in settori regolamentati, l'uso di un dominio personalizzato può aiutare a mantenere la conformità, mantenendo le attività di condivisione dei segreti sotto il controllo diretto dell'organizzazione e rendendo più semplici i processi di audit.
 
-Onetime Secret handles the technical aspects of securing your custom domain, including SSL/TLS configuration and domain activity monitoring, allowing you to focus on these strategic security benefits.
+Onetime Secret gestisce gli aspetti tecnici della protezione del vostro dominio personalizzato, compresa la configurazione SSL/TLS e il monitoraggio delle attività del dominio, consentendovi di concentrarvi su questi vantaggi strategici per la sicurezza.
 
-## API Usage Security
+## Sicurezza dell'uso dell'API
 
-If you're using the Onetime Secret API:
+Se si utilizza l'API Onetime Secret:
 
-1. **Secure API Keys**: Store API keys securely and never expose them in client-side code or public repositories.
+1. **Chiavi API sicure**: Conservare le chiavi API in modo sicuro e non esporle mai nel codice lato client o in repository pubblici.
 
-2. **Rotate API Keys**: Regularly rotate your API keys, especially if you suspect they've been compromised.
+2. **Rotazione delle chiavi API**: Ruotare regolarmente le chiavi API, soprattutto se si sospetta che siano state compromesse.
 
-3. **Limit API Access**: Use the principle of least privilege when setting up API access. Only grant the permissions necessary for each specific use case.
+3. **Limitare l'accesso all'API**: Usare il principio del minimo privilegio quando si imposta l'accesso all'API. Concedete solo le autorizzazioni necessarie per ogni caso d'uso specifico.
 
-## Advanced Self-Hosted Security
+## Sicurezza avanzata in self-hosting
 
-This section covers advanced security considerations for organizations running their own instance of Onetime Secret. You can find the open source project on [GitHub](https://github.com/onetimesecret/onetimesecret) and official Docker images at [Docker Hub](https://hub.docker.com/r/onetimesecret/onetimesecret).
+Questa sezione tratta le considerazioni avanzate sulla sicurezza per le organizzazioni che gestiscono la propria istanza di Onetime Secret. Il progetto open source è disponibile su [GitHub](https://github.com/onetimesecret/onetimesecret) e le immagini Docker ufficiali su [Docker Hub](https://hub.docker.com/r/onetimesecret/onetimesecret).
 
-The recommendations below can be implemented at your infrastructure level when self-hosting Onetime Secret:
+Le raccomandazioni riportate di seguito possono essere implementate a livello di infrastruttura quando si ospita Onetime Secret in modo autonomo:
 
-1. **Use Ephemeral Environments**: When possible, create and destroy environments for each secret sharing session. This can be particularly useful for highly sensitive operations. Our [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/blob/v0.18.5/docs/DOCKER-lite.md) Docker image is designed for ephemeral use cases.
+1. **Utilizzare ambienti effimeri**: Quando è possibile, creare e distruggere ambienti per ogni sessione di condivisione dei segreti. Questo può essere particolarmente utile per le operazioni altamente sensibili. La nostra immagine [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/blob/v0.18.5/docs/DOCKER-lite.md) Docker è stata progettata per casi d'uso effimeri.
 
-2. **Implement Time-Based Restrictions**: If your use case allows, consider implementing time-based restrictions for accessing secrets, such as only during business hours.
+2. **Implement Time-Based Restrictions**: Se il vostro caso d'uso lo consente, prendete in considerazione l'implementazione di restrizioni temporali per l'accesso ai segreti, ad esempio solo durante l'orario di lavoro.
 
-3. **Geo-Fencing**: For highly sensitive operations, consider implementing geo-fencing to restrict access to secrets from specific geographic locations.
+3. **Geo-Fencing**: Per le operazioni altamente sensibili, considerate l'implementazione del geo-fencing per limitare l'accesso ai segreti da posizioni geografiche specifiche.
 
-4. **Audit Trails**: Maintain detailed audit trails of secret creation and access attempts. This can be crucial for incident response and compliance requirements.
+4. **Tracce di audit**: Mantenere tracce di audit dettagliate della creazione di segreti e dei tentativi di accesso. Questo può essere fondamentale per la risposta agli incidenti e per i requisiti di conformità.
 
-5. **Encryption at Rest**: While Onetime Secret handles encryption, for highly sensitive data, consider encrypting the content before creating the secret for an additional layer of protection.
+5. **Cifratura a riposo**: Sebbene Onetime Secret gestisca la crittografia, per i dati altamente sensibili si consiglia di crittografare il contenuto prima di creare il segreto per ottenere un ulteriore livello di protezione.
 
 
-## Incident Response
+## Risposta all'incidente
 
-This section outlines general security recommendations that may be helpful for your organization. These recommendations are not specific features of our service.
+Questa sezione illustra le raccomandazioni generali sulla sicurezza che possono essere utili per la vostra organizzazione. Queste raccomandazioni non sono caratteristiche specifiche del nostro servizio.
 
-1. **Have a Plan**: Develop an incident response plan specific to your secret sharing processes. This should include steps for revoking access, notifying affected parties, and mitigating potential damage.
+1. **Avere un piano**: Sviluppate un piano di risposta agli incidenti specifico per i vostri processi di condivisione dei segreti. Questo dovrebbe includere le fasi di revoca dell'accesso, di notifica alle parti interessate e di mitigazione dei danni potenziali.
 
-2. **Quick Action**: If you suspect a secret has been compromised, use Onetime Secret's burn feature immediately if the secret hasn't been viewed yet. If it has been viewed, take appropriate actions to mitigate any potential damage.
+2. **Azione rapida**: Se si sospetta che un segreto sia stato compromesso, utilizzare immediatamente la funzione di masterizzazione di Onetime Secret se il segreto non è ancora stato visualizzato. Se è stato visualizzato, adottare le misure appropriate per ridurre i danni potenziali.
 
-3. **Regular Security Reviews**: Periodically review your secret sharing practices and adjust your security measures as needed.
+3. **Riprese di sicurezza periodiche**: Rivedete periodicamente le vostre pratiche di condivisione dei segreti e modificate le misure di sicurezza se necessario.
 
 ---
 
-By following these best practices, you can significantly enhance the security of your secret sharing activities on Onetime Secret. Remember, security is an ongoing process, and staying vigilant is key to protecting your sensitive information.
+Seguendo queste best practice, è possibile migliorare notevolmente la sicurezza delle attività di condivisione dei segreti su Onetime Secret. Ricordate che la sicurezza è un processo continuo e che rimanere vigili è fondamentale per proteggere le vostre informazioni sensibili.
 
-For any security concerns or to report potential vulnerabilities, please contact our security team immediately at security@onetimesecret.com.
+Per qualsiasi problema di sicurezza o per segnalare potenziali vulnerabilità, contattare immediatamente il nostro team di sicurezza all'indirizzo security@onetimesecret.com.

@@ -1,130 +1,130 @@
 ---
-title: Setup Guide
-description: This guide will walk you through the process of setting up a custom domain for your Onetime Secret account, including the differences between subdomains and apex domains, and choosing your preferred data center region.
+title: Guida all'installazione
+description: Questa guida vi guiderà attraverso il processo di impostazione di un dominio personalizzato per il vostro account Onetime Secret, comprese le differenze tra i sottodomini e i domini apex, e la scelta della regione del data center preferita.
 ---
 
-# Custom Domain Setup Guide
+# Guida all'impostazione del dominio personalizzato
 
-## Prerequisites
+## Prerequisiti
 
-- An active Onetime Secret account with custom domain feature enabled
-- A domain you own and can manage DNS settings for
+- Un account Onetime Secret attivo con funzione di dominio personalizzato abilitata
+- Un dominio di cui si è proprietari e per il quale si possono gestire le impostazioni DNS
 
-## Understanding Domain Types
+## Comprendere i tipi di dominio
 
-Before setting up your custom domain, it's important to understand the difference between subdomains and apex domains:
+Prima di impostare il dominio personalizzato, è importante capire la differenza tra sottodomini e domini apex:
 
-1. **Subdomain**: A subdivision of your main domain (e.g., secrets.yourdomain.com)
-2. **Apex Domain**: The root domain itself (e.g., yourdomain.com)
+1. **Sottodominio**: Una suddivisione del dominio principale (ad esempio, secrets.yourdomain.com).
+2. **Dominio apicale**: Il dominio principale stesso (ad esempio, yourdomain.com).
 
-## Choose Your Region
+## Scegli la tua regione
 
-Onetime Secret offers two data center regions: EU and US. When setting up your custom domain, you'll need to choose which region you prefer for storing your data. This choice is important for several reasons:
+Onetime Secret offre due regioni di data center: UE e USA. Quando si configura un dominio personalizzato, è necessario scegliere la regione preferita per l'archiviazione dei dati. Questa scelta è importante per diversi motivi:
 
-- **For Individuals**: You can choose based on your personal preference, such as proximity for potentially faster access or personal data sovereignty concerns.
-- **For Businesses**: Your choice may depend on your data locality obligations, such as compliance with GDPR, state, or provincial guidelines. Ensure you select the region that best aligns with your regulatory requirements.
+- Per gli individui**: Potete scegliere in base alle vostre preferenze personali, come la vicinanza per un accesso potenzialmente più rapido o le preoccupazioni relative alla sovranità dei dati personali.
+- Per le aziende**: La scelta può dipendere dagli obblighi di localizzazione dei dati, come la conformità al GDPR, alle linee guida statali o provinciali. Assicuratevi di selezionare la regione che meglio si allinea ai vostri requisiti normativi.
 
-Consider your specific needs and requirements when making this choice. For more detailed information about our data center regions and how to choose the right one for your needs, please refer to our [Data Center Regions](/docs/regions) guide.
+Nel fare questa scelta, tenete conto delle vostre esigenze e dei vostri requisiti specifici. Per informazioni più dettagliate sulle regioni dei nostri data center e su come scegliere quella giusta per le vostre esigenze, consultate la nostra guida [Data Center Regions](/docs/regions).
 
-## Step 1: Access Domains Dashboard
+## Passo 1: accedere al cruscotto dei domini
 
-1. Log in to your Onetime Secret account
-2. Navigate to Dashboard > Custom Domains
-3. Click "Add Domain"
+1. Accedere al proprio account Onetime Secret
+2. Navigare in Dashboard > Domini personalizzati
+3. Fare clic su "Aggiungi dominio".
 
-<img src="/img/docs/custom-domains/3-Custom-domains.png" alt="Custom domains view" width="400" />
+<img src="/img/docs/custom-domains/3-Custom-domains.png" alt="Vista dei domini personalizzati" width="400" />
 
-## Step 2: Enter Your Domain
+## Passo 2: Inserire il proprio dominio
 
-1. In the custom domain settings, enter your desired domain (e.g., secrets.yourdomain.com or yourdomain.com)
-2. Click "Add Domain" or equivalent button to proceed
+1. Nelle impostazioni del dominio personalizzato, inserire il dominio desiderato (ad esempio, secrets.yourdomain.com o yourdomain.com).
+2. Fare clic su "Aggiungi dominio" o su un pulsante equivalente per procedere.
 
-## Step 3: Configure DNS Settings
+## Passo 3: Configurare le impostazioni DNS
 
-To connect your domain, you need to update your DNS settings. The process differs slightly depending on whether you're using a subdomain or an apex domain, and which data center region you choose.
+Per collegare il dominio, è necessario aggiornare le impostazioni DNS. La procedura varia leggermente a seconda che si utilizzi un sottodominio o un dominio apex e della regione del data center scelta.
 
-### For Subdomains (Recommended)
+### Per i sottodomini (consigliato)
 
-1. Access your domain's DNS management panel (through your domain registrar or DNS provider)
-2. Create a CNAME record with the following details:
-   - Host: Your chosen subdomain (e.g., secrets)
-   - Points to / Value:
-     - For EU region: identity.eu.onetime.co
-     - For US region: identity.us.onetime.co
-3. Remove any existing A, AAAA, or CNAME records for the same subdomain
+1. Accedere al pannello di gestione DNS del proprio dominio (tramite la società di registrazione del dominio o il provider DNS).
+2. Create un record CNAME con i seguenti dettagli:
+   - Host: Il sottodominio scelto (ad es., secrets)
+   - Punta a / Valore:
+     - Per la regione UE: identity.eu.onetime.co
+     - Per la regione USA: identity.us.onetime.co
+3. Rimuovere tutti i record A, AAAA o CNAME esistenti per lo stesso sottodominio.
 
-### For Apex Domains
+### Per i domini Apex
 
-1. Access your domain's DNS management panel
-2. Create or modify an A record with the following details:
-   - Host: @ (or leave blank, depending on your DNS provider)
-   - Points to / Value:
-     - For EU region: 109.105.217.207
-     - For US region: 66.51.126.41
+1. Accedere al pannello di gestione DNS del proprio dominio
+2. Create o modificate un record A con i seguenti dettagli:
+   - Host: @ (o lasciare vuoto, a seconda del vostro provider DNS)
+   - Punti a / Valore:
+     - Per la regione UE: 109.105.217.207
+     - Per la regione USA: 66.51.126.41
 
-Important: Ensure there are no conflicting records for the domain you're using.
+Importante: assicurarsi che non vi siano record in conflitto per il dominio in uso.
 
-<img src="/img/docs/custom-domains/4-Custom-domain-settings.png" alt="Custom domain settings" width="400" />
+<img src="/img/docs/custom-domains/4-Custom-domain-settings.png" alt="Impostazioni di dominio personalizzate" width="400" />
 
-### More Info
+### Maggiori informazioni
 
-#### Why CNAME for Subdomains?
+#### Perché CNAME per i sottodomini?
 
-We recommend using CNAME records for subdomains because:
+Si consiglia di utilizzare i record CNAME per i sottodomini perché:
 
-1. They're more flexible and allow us to change our server IP addresses without requiring you to update your DNS settings.
-2. They automatically adapt to any changes we make to our infrastructure.
+1. Sono più flessibili e ci permettono di cambiare gli indirizzi IP dei nostri server senza richiedere l'aggiornamento delle impostazioni DNS.
+2. Si adattano automaticamente a qualsiasi modifica apportata alla nostra infrastruttura.
 
-#### Why A Records for Apex Domains?
+#### Perché i record A di Apex Domains?
 
-Apex domains cannot use CNAME records due to DNS standards. Therefore, we must use A records, which have some limitations:
+I domini Apex non possono utilizzare i record CNAME a causa degli standard DNS. Pertanto, è necessario utilizzare i record A, che presentano alcune limitazioni:
 
-1. If we change our IP address (which is rare), you'll need to update your DNS settings manually.
-2. They don't automatically adapt to changes in our infrastructure.
+1. Se cambiamo il nostro indirizzo IP (cosa rara), dovrete aggiornare manualmente le impostazioni DNS.
+2. Non si adattano automaticamente ai cambiamenti della nostra infrastruttura.
 
-## Step 4: Verify Domain and Wait for SSL
+## Passo 4: verificare il dominio e attendere l'SSL
 
-1. After updating DNS settings, return to the Onetime Secret custom domain page
-2. The system will automatically attempt to verify your domain
-3. SSL certificate generation will begin once verification is successful
-4. This process may take a few minutes to complete
+1. Dopo aver aggiornato le impostazioni DNS, tornate alla pagina del dominio personalizzato Onetime Secret.
+2. Il sistema tenterà automaticamente di verificare il dominio
+3. La generazione del certificato SSL inizierà una volta che la verifica avrà avuto esito positivo.
+4. Il processo potrebbe richiedere alcuni minuti per essere completato
 
-## Step 5: Confirm Setup
+## Passo 5: Confermare l'impostazione
 
-Once setup is complete, you should see the following information:
+Una volta completata l'impostazione, dovrebbero essere visualizzate le seguenti informazioni:
 
-- Domain Status: Active with SSL
-- Target Address: identity.eu.onetime.co or identity.us.onetime.co (depending on your chosen region)
-- SSL Status: Active
-- SSL Renewal Date: (Will be displayed, typically about a year from setup)
+- Stato del dominio: Attivo con SSL
+- Indirizzo di destinazione: identity.eu.onetime.co o identity.us.onetime.co (a seconda della regione scelta)
+- Stato SSL: Attivo
+- Data di rinnovo SSL: (verrà visualizzata, in genere a circa un anno dalla configurazione)
 
-## Troubleshooting
+## Risoluzione dei problemi
 
-- If verification fails, double-check your DNS settings
-- Ensure you've removed any conflicting records
-- DNS propagation can take up to 24 hours, though it's usually much faster
+- Se la verifica non riesce, ricontrollare le impostazioni DNS.
+- Assicuratevi di aver rimosso tutti i record in conflitto.
+- La propagazione DNS può richiedere fino a 24 ore, anche se di solito è molto più rapida.
 
-## Using Your Custom Domain
+## Utilizzo del dominio personalizzato
 
-Once active, your secret links will use your custom domain. For example:
+Una volta attivi, i link segreti utilizzeranno il dominio personalizzato. Ad esempio:
 `https://secrets-example.onetime.dev/secret/abc123`
 
-## We've Got You Covered
+## Ti abbiamo coperto
 
-We handle the rest of the technical details so you don't have to.
+Noi ci occupiamo del resto dei dettagli tecnici in modo che non dobbiate farlo voi.
 
-- We continuously monitor your domain's status
-- SSL certificates are automatically renewed without any action required on your part
+- Monitoriamo costantemente lo stato del vostro dominio
+- I certificati SSL vengono rinnovati automaticamente senza che sia necessaria alcuna azione da parte vostra
 
-For those who like to stay informed, you can easily check the health of your domain:
+Per coloro che amano tenersi informati, è possibile controllare facilmente lo stato di salute del proprio dominio:
 
-- Simply look at the "Last Monitored" timestamp in your dashboard to confirm ongoing connectivity
+- Basta guardare il timestamp "Last Monitored" nel dashboard per confermare la connettività in corso.
 
-## Questions or Need Support?
+## Domande o bisogno di assistenza?
 
-We're here to help. If you have any questions or need assistance:
+Siamo qui per aiutarvi. Se avete domande o bisogno di assistenza:
 
-- Email us directly at support@onetimesecret.com
-- Use our feedback form at https://onetimesecret.com/feedback
+- Inviateci un'e-mail direttamente a support@onetimesecret.com
+- Utilizzate il nostro modulo di feedback all'indirizzo https://onetimesecret.com/feedback
 
-Our team is committed to providing you with the best possible support for your custom domain setup and usage, including guidance on choosing the right data center region for your needs.
+Il nostro team si impegna a fornirvi il miglior supporto possibile per la configurazione e l'utilizzo del vostro dominio personalizzato, compresa la guida alla scelta della regione del data center più adatta alle vostre esigenze.

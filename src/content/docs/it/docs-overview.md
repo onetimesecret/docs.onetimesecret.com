@@ -1,19 +1,19 @@
 ---
-title: Welcome to the Documentation
-description: Use the navigation menu to explore the Onetime Secret documentation. You'll find everything you need to know about creating, sharing, and managing secure, self-destructing messages.
+title: Benvenuti nella documentazione
+description: Utilizzate il menu di navigazione per esplorare la documentazione di Onetime Secret. Troverete tutto quello che c'è da sapere sulla creazione, la condivisione e la gestione di messaggi sicuri e autodistruttivi.
 ---
 
-# Onetime Secret Documentation
+# Documentazione segreta di una volta
 
-Use the navigation menu to explore the Onetime Secret documentation. You'll find everything you need to know about creating, sharing, and managing secure, self-destructing messages.
+Utilizzate il menu di navigazione per esplorare la documentazione di Onetime Secret. Troverete tutto quello che c'è da sapere sulla creazione, la condivisione e la gestione di messaggi sicuri e autodistruttivi.
 
-## Getting Started
+## Iniziare
 
-Start with our [Introduction](/en/introduction/) section to learn the basics of Onetime Secret.
+Iniziate con la nostra sezione [Introduzione](/it/introduzione/) per imparare le basi di Onetime Secret.
 
-## Key Sections
+## Sezioni chiave
 
-- [Secret Links](/en/secret-links/) - Learn how to create and share one-time secrets
-- [Custom Domains](/en/custom-domains/) - Set up your own branded secret sharing experience
-- [REST API](/en/rest-api/) - Integrate Onetime Secret with your applications
-- [Security Best Practices](/en/security-best-practices/) - Ensure maximum security when sharing sensitive information
+- [Link segreti](/it/secret-links/) - Imparare a creare e condividere segreti una tantum
+- Domini personalizzati](/it/custom-domains/) - Impostare l'esperienza di condivisione dei segreti con il proprio marchio.
+- REST API](/it/rest-api/) - Integrare Onetime Secret con le proprie applicazioni.
+- [Migliori pratiche di sicurezza](/it/security-best-practices/) - Garantire la massima sicurezza nella condivisione di informazioni sensibili.
