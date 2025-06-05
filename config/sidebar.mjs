@@ -105,6 +105,15 @@ export const sidebar = [
 
   createGroup("regions", [createLink("overview", "regions")]),
 
+  createGroup("configuration", [
+    createLink("overview", "configuration"),
+    createLink("coreConfig", "configuration/core-config"),
+    createLink("systemSettings", "configuration/system-settings"),
+    createLink("environmentVariables", "configuration/environment-variables"),
+    createLink("security", "configuration/security"),
+    createLink("migration", "configuration/migration"),
+  ]),
+
   createGroup("restApi", [
     createLink("overview", "rest-api"),
 
