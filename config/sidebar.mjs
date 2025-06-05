@@ -38,8 +38,9 @@ const zhCnTranslations = loadTranslations("zh-cn");
  * @returns {Object} Formatted sidebar link item
  */
 function createLink(key, link, badge) {
+  const enLabel = enTranslations.sidebar?.[key] || key;
   return {
-    label: enTranslations.sidebar[key],
+    label: enLabel,
     link,
     translations: {
       de: deTranslations.sidebar[key],
@@ -67,8 +68,9 @@ function createLink(key, link, badge) {
  * @returns {Object} Formatted sidebar group item
  */
 function createGroup(key, items = [], collapsed = false) {
+  const enLabel = enTranslations.sidebar?.[key] || key;
   return {
-    label: enTranslations.sidebar[key],
+    label: enLabel,
     translations: {
       de: deTranslations.sidebar[key],
       nl: nlTranslations.sidebar[key],
