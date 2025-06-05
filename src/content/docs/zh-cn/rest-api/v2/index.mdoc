@@ -1,0 +1,48 @@
+---
+title：REST API v2 概述
+描述Onetime Secret 的 REST API v2 通过一个强大的 RESTful JSON 接口，为安全的秘密管理和共享提供了更强大的功能。
+---
+
+{% aside type="note" %}
+请参阅我们的 [Postman Collection](https://docs.onetimesecret.dev/) 以获取完整的 v2 文档。
+{% /aside %}
+
+
+## 简介
+
+Onetime Secret的REST API v2为与秘密共享平台进行编程交互提供了一个全面、安全的接口。API v2以RESTful服务形式构建，利用JSON进行数据交换，与前一版本（v1）相比，功能更强大，稳定性更高。
+
+## 关键功能
+
+- 全 JSON：** 对请求体和响应使用 JSON。
+- 增强功能：** 包括用于详细的秘密元数据检索、明确的秘密刻录和改进的状态管理的端点。
+- 增强稳健性：** 为集成提供更稳定、功能更丰富的基础。
+- 身份验证：** 支持用于完全访问的基本身份验证和用于有限操作的匿名使用，与整个应用程序接口结构保持一致。
+
+## 基本 URI 和验证
+
+API v2 端点遵循标准基础 URI 结构：
+
+`https://REGION.onetimesecret.com/api/v2`
+
+身份验证方法（使用 `USERNAME:APITOKEN` 的基本身份验证或匿名访问）与 [Getting Started](/en/rest-api/) 指南中所述的相同。
+
+## 可用端点
+
+以下端点在 API v2 中可用：
+
+* `POST /v2/secret/conceal` - 创建一个新的秘密。
+* `POST /v2/secret/generate` - 用随机值生成新的秘密。
+* `GET /v2/private/recent` - 为已通过身份验证的用户读取最近的元数据记录。
+* `GET /v2/private/:key` - 读取特定密文的元数据。
+* `POST /v2/private/:key/burn` - 手动销毁（烧毁）一个密文。
+* `GET /v2/secret/:key` - 读取密文信息（如果设置了口令，则需要口令）。
+* `POST /v2/secret/:key/reveal` - 读取密文值（如果设置了口令，则需要口令，消耗密文）。
+* `GET /v2/supported-locales` - 列出支持的本地语言。
+* `GET /v2/version` - 获取当前的 API 版本信息。
+* `GET /v2/status` - 检查 API 的运行状态。
+* `HEAD /v2/status` - 检查 API 的运行状态（仅头信息）。
+
+## 交互式文档
+
+使用我们的交互式 [Postman Collection](https://docs.onetimesecret.dev/)，探索 API v2 的特定端点、请求参数和响应结构。它提供了每个可用操作的详细示例。
