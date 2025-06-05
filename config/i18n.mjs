@@ -89,5 +89,10 @@ export const i18nConfig = {
       lang: "uk",
       dir: "ltr",
     },
+    "zh-cn": {
+      label: "简体中文 (zh-CN)",
+      lang: "zh-CN",
+      dir: "ltr",
+    },
   },
 };

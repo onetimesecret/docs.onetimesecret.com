@@ -28,6 +28,7 @@ const jaTranslations = loadTranslations("ja");
 const miTranslations = loadTranslations("mi");
 const bgTranslations = loadTranslations("bg");
 const itTranslations = loadTranslations("it");
+const zhCnTranslations = loadTranslations("zh-cn");
 
 /**
  * Helper function to create sidebar link items with required attrs
@@ -51,6 +52,7 @@ function createLink(key, link, badge) {
       mi: miTranslations.sidebar[key],
       bg: bgTranslations.sidebar[key],
       it: itTranslations.sidebar[key],
+      "zh-cn": zhCnTranslations.sidebar[key],
     },
     attrs: {},
     ...(badge ? { badge } : {}),
@@ -78,6 +80,7 @@ function createGroup(key, items = [], collapsed = false) {
       mi: miTranslations.sidebar[key],
       bg: bgTranslations.sidebar[key],
       it: itTranslations.sidebar[key],
+      "zh-cn": zhCnTranslations.sidebar[key],
     },
     items,
     collapsed,

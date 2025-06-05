@@ -1,0 +1,89 @@
+---
+title: 入门
+description: Onetime Secret 的 REST API 提供灵活的秘密共享功能，同时支持身份验证和匿名使用。通过身份验证的用户可以获得高级功能和更高的使用限制，而未通过身份验证的用户则可以通过基本功能快速共享秘密。
+---
+
+_更新日期 2025-04-29_
+
+{% aside type="tip" %}
+使用我们的交互式 [Postman Collection](https://docs.onetimesecret.dev/) 测试和探索 API 端点。
+{% /aside %}
+
+## 基本 URI
+
+`https://REGION.onetimesecret.com/api`
+
+其中，"REGION "可以是 "US "或 "EU"。
+
+<!-- ::callout{icon="i-heroicons-globe-alt"}-->
+**数据位置和区域选择***
+- 选择一个地区（例如美国 [`us.onetimesecret.com`](https://us.onetimesecret.com/)) 或欧盟 ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) 。所有选项请参见 [区域](/en/regions)。
+- 考虑数据主权、延迟和合规要求等因素
+- ** 注意：** 默认情况下，`onetimesecret.com` 仍可运行并路由至活动数据中心，建议使用特定区域，因为该功能将来可能会被淘汰。
+::
+
+## 验证
+我们支持两种 API 使用模式：
+
+### 验证访问
+
+`https://USERNAME:APITOKEN@REGION.onetimesecret.com/api`
+
+- 使用 HTTP 基本身份验证以获得完整的 API 功能
+- 用户名是您的账户登录名
+- 密码是您账户页面上的 API 令牌
+
+### 匿名访问
+
+`https://REGION.onetimesecret.com/api`
+
+- 无需验证即可使用有限的功能
+- 一次性快速共享秘密的理想选择
+- 可用于创建和检索秘密
+
+## 数据位置
+Onetime Secret 支持多个地理数据中心。我们遵循地区间零数据共享政策，确保数据完全隔离。根据您的需求选择合适的数据中心：
+
+- **欧盟数据中心：** [eu.onetimesecret.com](https://eu.onetimesecret.com/)
+- **美国数据中心：** [us.onetimesecret.com](https://us.onetimesecret.com/)
+
+#### 重要注意事项：
+- 您可以通过直接导航到所需的域来选择特定的数据位置
+- 从生成的链接（例如，`us.onetimesecret.com/secret/abcd1234`）中，您的秘密位置始终一目了然。
+- **注意：** 目前，通过 `onetimesecret.com/api` 访问仍然有效，但建议使用特定的数据域，因为该功能将来可能会被淘汰。
+
+##自定义域名
+Onetime Secret通过我们的[Identity Plus](https://onetimesecret.com/pricing)计划，为有特定网络或品牌要求的组织支持自定义域配置。
+
+#### 自定义域优势
+- 私人品牌：** 使用您自己的域（例如，`secrets.example.com`）进行应用程序接口访问和秘密共享
+- 一致的用户体验：** 与客户和合作伙伴保持组织的视觉形象和信任身份。
+- 在员工培训中使用：** 使用自定义域来强化组织的安全实践和工作流程。
+
+<!-- ::callout{icon="i-heroicons-lock-closed"}-->
+**高级功能**
+我们的[Identity Plus](https://onetimesecret.com/pricing)计划提供自定义域名。使用我们易于使用的配置选项，只需几分钟即可完成设置。[了解更多](/docs/custom-domains)。
+::
+
+### 使用自定义域的 API 使用方法
+使用自定义域时，所有 API 端点都遵循相同的结构：
+
+`https://secrets.example.com/api`
+
+
+## 系统状态
+
+`GET https://REGION.onetimesecret.com/api/v1/status`
+系统当前状态。
+
+**参数：** 无
+
+```bash
+$ curl -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/status
+{"status": "nominal"}
+```
+
+```bash
+$ curl -u 'USERNAME:APITOKEN' https://us.onetimesecret.com/api/v1/status
+{"status": "nominal"}
+```
