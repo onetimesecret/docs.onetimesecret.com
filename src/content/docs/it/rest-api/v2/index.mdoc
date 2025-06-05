@@ -1,0 +1,48 @@
+---
+title: Panoramica sulle API REST v2
+description: L'API REST v2 di Onetime Secret fornisce funzionalità migliorate per la gestione e la condivisione sicura dei segreti attraverso una robusta interfaccia RESTful JSON.
+---
+
+{% aside type="note" %}
+Vedere la nostra [Postman Collection](https://docs.onetimesecret.dev/) per la documentazione completa della v2.
+{% /aside %}
+
+
+## Introduzione
+
+L'API REST v2 di Onetime Secret offre un'interfaccia completa e sicura per l'interazione programmatica con la piattaforma di condivisione dei segreti. Costruita come servizio RESTful che utilizza JSON per lo scambio di dati, l'API v2 offre funzionalità migliorate e maggiore robustezza rispetto alla versione precedente (v1).
+
+## Caratteristiche principali
+
+- **Tutto JSON:** Utilizza JSON per i corpi delle richieste e le risposte.
+- Funzionalità migliorate:** Include endpoint per il recupero di metadati segreti dettagliati, la masterizzazione di segreti espliciti e una migliore gestione dello stato.
+- Robustezza migliorata:** Offre una base più stabile e ricca di funzionalità per le integrazioni.
+- Autenticazione:** Supporta sia l'autenticazione di base per l'accesso completo sia l'uso anonimo per operazioni limitate, coerentemente con la struttura generale dell'API.
+
+## URI di base e autenticazione
+
+Gli endpoint API v2 seguono la struttura standard dell'URI di base:
+
+`https://REGION.onetimesecret.com/api/v2`
+
+I metodi di autenticazione (Basic Auth con `USERNAME:APITOKEN` o accesso anonimo) rimangono gli stessi descritti nella guida [Getting Started](/it/rest-api/).
+
+## Endpoint disponibili
+
+Nell'API v2 sono disponibili i seguenti endpoint:
+
+* `POST /v2/secret/conceal` - Crea un nuovo segreto.
+* `POST /v2/secret/generate` - Genera un nuovo segreto con un valore casuale.
+* `GET /v2/private/recent` - Recupera i record di metadati recenti per l'utente autenticato.
+* `GET /v2/private/:key` - Recupera i metadati per un segreto specifico.
+* `POST /v2/private/:key/burn` - Distrugge manualmente (burn) un segreto.
+* `GET /v2/secret/:key` - Recupera informazioni su un segreto (richiede la passphrase, se impostata).
+* `POST /v2/secret/:key/reveal` - Recupera il valore del segreto (richiede la passphrase se impostata, consuma il segreto).
+* `GET /v2/supported-locales` - Elenca le lingue locali supportate.
+* `GET /v2/version` - Ottiene le informazioni sulla versione corrente dell'API.
+* `GET /v2/status` - Controlla lo stato operativo dell'API.
+* `HEAD /v2/status` - Controlla lo stato operativo dell'API (solo intestazioni).
+
+## Documentazione interattiva
+
+Esplorate gli endpoint specifici, i parametri di richiesta e le strutture di risposta dell'API v2 utilizzando la nostra [Postman Collection] interattiva (https://docs.onetimesecret.dev/). Questa fornisce esempi dettagliati per ogni operazione disponibile.
