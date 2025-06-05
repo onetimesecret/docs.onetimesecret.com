@@ -27,6 +27,7 @@ const koTranslations = loadTranslations("ko");
 const jaTranslations = loadTranslations("ja");
 const miTranslations = loadTranslations("mi");
 const bgTranslations = loadTranslations("bg");
+const itTranslations = loadTranslations("it");
 
 /**
  * Helper function to create sidebar link items with required attrs
@@ -49,6 +50,7 @@ function createLink(key, link, badge) {
       ja: jaTranslations.sidebar[key],
       mi: miTranslations.sidebar[key],
       bg: bgTranslations.sidebar[key],
+      it: itTranslations.sidebar[key],
     },
     attrs: {},
     ...(badge ? { badge } : {}),
@@ -75,6 +77,7 @@ function createGroup(key, items = [], collapsed = false) {
       ja: jaTranslations.sidebar[key],
       mi: miTranslations.sidebar[key],
       bg: bgTranslations.sidebar[key],
+      it: itTranslations.sidebar[key],
     },
     items,
     collapsed,
