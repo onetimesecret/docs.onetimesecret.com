@@ -1,6 +1,6 @@
 ---
-title：定价
-description：选择适合您的安全共享需求的计划。
+title: 定价
+description: 选择适合您的安全共享需求的计划。
 ---
 
 # 安全链接，更强连接

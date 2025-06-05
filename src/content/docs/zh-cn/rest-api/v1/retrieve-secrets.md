@@ -1,8 +1,6 @@
-#
-
 ---
-title：找回秘密
-description：了解如何使用 Onetime Secret REST API 检索秘密，支持身份验证和匿名访问。
+title: 找回秘密
+description: 了解如何使用 Onetime Secret REST API 检索秘密，支持身份验证和匿名访问。
 ---
 
 _更新日期 2025-04-02_

@@ -1,6 +1,6 @@
 ---
-title：创造秘密
-描述了解如何使用 Onetime Secret REST API 创建和检索秘密，支持认证和匿名使用。
+title: 创造秘密
+description: 了解如何使用 Onetime Secret REST API 创建和检索秘密，支持认证和匿名使用。
 ---
 
 _更新日期 2025-04-02_

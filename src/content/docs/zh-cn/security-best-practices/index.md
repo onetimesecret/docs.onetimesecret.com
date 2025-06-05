@@ -1,6 +1,6 @@
 ---
-title：安全最佳做法
-description：通过这些针对 Onetime Secret 的最佳实践来提高秘密共享的安全性，包括自定义域的安全优势。
+title: 安全最佳做法
+description: 通过这些针对 Onetime Secret 的最佳实践来提高秘密共享的安全性，包括自定义域的安全优势。
 ---
 
 # 一次性密文的最佳安全实践

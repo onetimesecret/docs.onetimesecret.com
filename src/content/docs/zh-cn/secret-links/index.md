@@ -1,6 +1,6 @@
 ---
-title：秘密链接介绍
-description：欢迎访问 Onetime Secret 的秘密链接指南，这是我们安全的一次性共享服务的核心功能。
+title: 秘密链接介绍
+description: 欢迎访问 Onetime Secret 的秘密链接指南，这是我们安全的一次性共享服务的核心功能。
 ---
 
 

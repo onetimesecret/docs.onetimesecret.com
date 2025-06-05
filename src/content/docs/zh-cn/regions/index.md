@@ -1,6 +1,6 @@
 ---
-title：数据中心区域
-description：了解 Onetime Secret 的数据中心区域，以及如何根据您的需求选择合适的区域。
+title: 数据中心区域
+description: 了解 Onetime Secret 的数据中心区域，以及如何根据您的需求选择合适的区域。
 ---
 
 Onetime Secret提供四个数据中心区域：欧盟（EU）、美国（US）、加拿大（CA）和新西兰（NZ）。本指南将帮助您了解地区选择的重要性，以及如何根据您的需求选择合适的地区。

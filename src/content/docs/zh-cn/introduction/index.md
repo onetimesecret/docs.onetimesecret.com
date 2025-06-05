@@ -1,6 +1,6 @@
 ---
-title：入门
-描述：您获取 Onetime Secret 资源、文档和见解的中心。
+title: 入门
+description: 您获取 Onetime Secret 资源、文档和见解的中心。
 ---
 
 欢迎访问 Onetime Secret Docs，这是您最大限度利用我们以隐私为重点的短暂秘密共享服务的核心资源。

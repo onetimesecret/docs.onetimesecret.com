@@ -1,6 +1,6 @@
 ---
-title：翻译和本地化
-description：有关可用语言翻译的信息，以及如何为 Onetime Secret 本地化做出贡献。
+title: 翻译和本地化
+description: 有关可用语言翻译的信息，以及如何为 Onetime Secret 本地化做出贡献。
 ---
 
 # 翻译和本地化

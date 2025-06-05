@@ -1,6 +1,6 @@
 ---
-标题客户图书馆
-description：探索可用于 Onetime Secret API 的客户端库，包括 Ruby、Python、Perl、Java、C#、Go 等。
+title: 客户端库
+description: 探索可用于 Onetime Secret API 的客户端库，包括 Ruby、Python、Perl、Java、C#、Go 等。
 ---
 
 ## Ruby

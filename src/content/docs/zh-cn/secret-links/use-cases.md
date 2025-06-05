@@ -1,6 +1,6 @@
 ---
-title：用例
-描述：探索 Secret Links 可以增强安全性和简化敏感信息共享的各种场景。
+title: 用例
+description: 探索 Secret Links 可以增强安全性和简化敏感信息共享的各种场景。
 ---
 
 
