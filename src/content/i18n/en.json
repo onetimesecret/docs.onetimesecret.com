@@ -28,6 +28,7 @@
     "environmentVariables": "Environment Variables",
     "security": "Security Guide",
     "migration": "Migration Guide",
+    "quickReference": "Quick Reference",
     "restApi": "REST API",
     "v1": "v1",
     "v2": "v2",

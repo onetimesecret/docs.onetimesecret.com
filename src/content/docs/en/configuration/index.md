@@ -7,6 +7,34 @@ OneTimeSecret uses a dual-layer configuration system designed to separate infras
 
 ## Configuration Architecture
 
+```
+┌─────────────────────────────────────────────────────┐
+│                 Application Startup                 │
+└─────────────────────┬───────────────────────────────┘
+                     │
+         ┌───────────┴────────────┐
+         ▼                        ▼
+┌─────────────────┐    ┌─────────────────────┐
+│  Core Config    │    │  System Settings    │
+│  (config.yaml)  │    │  (system_settings.  │
+│                 │    │   defaults.yaml)    │
+│ • Infrastructure│    │ • Operational       │
+│ • Database      │    │ • Features          │
+│ • Security      │    │ • UI/UX             │
+│ • Mail Setup    │    │ • Rate Limits       │
+│                 │    │                     │
+│ Restart Required│    │ Runtime Adjustable  │
+└─────────────────┘    └─────────────────────┘
+         │                        │
+         └───────────┬────────────┘
+                     ▼
+         ┌─────────────────────┐
+         │  Environment        │
+         │  Variables          │
+         │  (Override Both)    │
+         └─────────────────────┘
+```
+
 ### Two-Layer System
 
 1. **Core Configuration** (`etc/config.yaml`)
