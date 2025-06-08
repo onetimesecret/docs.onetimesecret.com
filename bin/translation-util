@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-import os
-import json
-import shutil
-import re
+
 import argparse
+import json
+import os
+import re
+import shutil
 import uuid
 
 """
@@ -17,10 +18,9 @@ and restoring them afterward to their original locations.
 FILE_DELIMITER = "###FILEID:{file_id}###FILENAME:{filename}###"
 DELIMITER_PATTERN = r"###FILEID:([a-zA-Z0-9\-]+)###FILENAME:(.*?)###"
 
+
 def prepare_files_for_translation(
-    source_dir,
-    output_dir,
-    extensions=(".md", ".mdoc", ".mdx", ".astro")
+    source_dir, output_dir, extensions=(".md", ".mdoc", ".mdx", ".astro")
 ):
     """Prepares files for translation by converting to .txt format with unique identifiers."""
     os.makedirs(output_dir, exist_ok=True)
@@ -33,8 +33,12 @@ def prepare_files_for_translation(
                 relative_path = os.path.relpath(original_path, start=source_dir)
 
                 # Generate unique name preserving path information
-                directory = os.path.dirname(relative_path).replace(os.path.sep, '-')
-                base_name, original_extension = os.path.splitext(os.path.basename(relative_path))
+                directory = os.path.dirname(relative_path).replace(
+                    os.path.sep, "-"
+                )
+                base_name, original_extension = os.path.splitext(
+                    os.path.basename(relative_path)
+                )
 
                 # Create a temp name with path info
                 if directory:
@@ -46,7 +50,9 @@ def prepare_files_for_translation(
                 counter = 1
                 final_temp_name = temp_name
                 while final_temp_name in file_mapping:
-                    final_temp_name = f"{os.path.splitext(temp_name)[0]}_{counter}.txt"
+                    final_temp_name = (
+                        f"{os.path.splitext(temp_name)[0]}_{counter}.txt"
+                    )
                     counter += 1
 
                 # Generate unique ID for this file
@@ -62,28 +68,26 @@ def prepare_files_for_translation(
                     "path": relative_path,
                     "extension": original_extension,
                     "original_full_path": original_path,
-                    "file_id": file_id
+                    "file_id": file_id,
                 }
 
     mapping_file = os.path.join(output_dir, "file_mapping.json")
-    with open(mapping_file, 'w') as f:
+    with open(mapping_file, "w") as f:
         json.dump(file_mapping, f, indent=2)
 
     print(f"Created {len(file_mapping)} files in {output_dir}")
     print(f"Mapping saved to {mapping_file}")
     return mapping_file
 
-def combine_txt_files(
-    translation_dir,
-    output_file
-):
+
+def combine_txt_files(translation_dir, output_file):
     """Combines all .txt files using unique IDs in delimiters."""
     mapping_file = os.path.join(translation_dir, "file_mapping.json")
-    with open(mapping_file, 'r') as f:
+    with open(mapping_file, "r") as f:
         file_mapping = json.load(f)
 
     combined_count = 0
-    with open(output_file, 'w', encoding='utf-8') as outfile:
+    with open(output_file, "w", encoding="utf-8") as outfile:
         for filename, file_info in file_mapping.items():
             file_path = os.path.join(translation_dir, filename)
             if not os.path.exists(file_path):
@@ -92,11 +96,13 @@ def combine_txt_files(
 
             # Write file delimiter with ID and filename
             file_id = file_info.get("file_id")
-            delimiter = FILE_DELIMITER.format(file_id=file_id, filename=filename)
+            delimiter = FILE_DELIMITER.format(
+                file_id=file_id, filename=filename
+            )
             outfile.write(f"{delimiter}\n\n")
 
             # Write file content
-            with open(file_path, 'r', encoding='utf-8') as infile:
+            with open(file_path, "r", encoding="utf-8") as infile:
                 outfile.write(infile.read())
 
             # Add spacing between files
@@ -106,22 +112,22 @@ def combine_txt_files(
     print(f"Combined {combined_count} files into {output_file}")
     return combined_count
 
-def split_combined_file(
-    combined_file,
-    translation_dir
-):
+
+def split_combined_file(combined_file, translation_dir):
     """Splits a combined file using unique IDs from delimiters."""
     os.makedirs(translation_dir, exist_ok=True)
 
     # First load the mapping to get file_id to filename correlations
     mapping_file = os.path.join(translation_dir, "file_mapping.json")
-    with open(mapping_file, 'r') as f:
+    with open(mapping_file, "r") as f:
         file_mapping = json.load(f)
 
     # Build ID to filename mapping
-    id_to_filename = {info["file_id"]: filename for filename, info in file_mapping.items()}
+    id_to_filename = {
+        info["file_id"]: filename for filename, info in file_mapping.items()
+    }
 
-    with open(combined_file, 'r', encoding='utf-8') as infile:
+    with open(combined_file, "r", encoding="utf-8") as infile:
         content = infile.read()
 
     # Split the content based on file delimiters
@@ -150,7 +156,7 @@ def split_combined_file(
 
             # Write to file
             output_path = os.path.join(translation_dir, filename)
-            with open(output_path, 'w', encoding='utf-8') as outfile:
+            with open(output_path, "w", encoding="utf-8") as outfile:
                 outfile.write(file_content)
 
             split_count += 1
@@ -160,16 +166,13 @@ def split_combined_file(
     print(f"Split {split_count} files from {combined_file}")
     return split_count
 
-def restore_translated_files(
-    translation_dir,
-    source_dir,
-    mapping_file=None
-):
+
+def restore_translated_files(translation_dir, source_dir, mapping_file=None):
     """Restores translated files to their original locations using the mapping file."""
     if mapping_file is None:
         mapping_file = os.path.join(translation_dir, "file_mapping.json")
 
-    with open(mapping_file, 'r') as f:
+    with open(mapping_file, "r") as f:
         file_mapping = json.load(f)
 
     restored_count = 0
@@ -194,6 +197,7 @@ def restore_translated_files(
 
     print(f"Restored {restored_count} files to their original locations")
 
+
 def main():
     parser = argparse.ArgumentParser(
         description="Translation utility for documentation file management",
@@ -203,69 +207,121 @@ Examples:
   Combine files:     ./translation-util combine -t ./translation_files -o ./combined.txt
   Split translated:  ./translation-util split -c ./translated_combined.txt -t ./translation_files
   Restore files:     ./translation-util restore -t ./translation_files -s ./src/content/docs/nl
-        """
+        """,
     )
 
-    subparsers = parser.add_subparsers(dest="command", help="Command to execute", required=True)
+    subparsers = parser.add_subparsers(
+        dest="command", help="Command to execute", required=True
+    )
 
     # Prepare command
-    prepare_parser = subparsers.add_parser("prepare", help="Prepare files for translation")
-    prepare_parser.add_argument("-s", "--source", dest="source_dir", required=True,
-                        help="Source directory for documents")
-    prepare_parser.add_argument("-t", "--translation-dir", dest="translation_dir", required=True,
-                        help="Directory for translation files")
-    prepare_parser.add_argument("-e", "--extensions", dest="extensions", default=".md,.mdoc,.mdx,.astro",
-                        help="Comma-separated list of file extensions to process")
+    prepare_parser = subparsers.add_parser(
+        "prepare", help="Prepare files for translation"
+    )
+    prepare_parser.add_argument(
+        "-s",
+        "--source",
+        dest="source_dir",
+        required=True,
+        help="Source directory for documents",
+    )
+    prepare_parser.add_argument(
+        "-t",
+        "--translation-dir",
+        dest="translation_dir",
+        required=True,
+        help="Directory for translation files",
+    )
+    prepare_parser.add_argument(
+        "-e",
+        "--extensions",
+        dest="extensions",
+        default=".md,.mdoc,.mdx,.astro",
+        help="Comma-separated list of file extensions to process",
+    )
 
     # Combine command
-    combine_parser = subparsers.add_parser("combine", help="Combine files for translation")
-    combine_parser.add_argument("-t", "--translation-dir", dest="translation_dir", required=True,
-                        help="Directory containing translation files")
-    combine_parser.add_argument("-o", "--output", dest="combined_file", required=True,
-                        help="Path for combined output file")
+    combine_parser = subparsers.add_parser(
+        "combine", help="Combine files for translation"
+    )
+    combine_parser.add_argument(
+        "-t",
+        "--translation-dir",
+        dest="translation_dir",
+        required=True,
+        help="Directory containing translation files",
+    )
+    combine_parser.add_argument(
+        "-o",
+        "--output",
+        dest="combined_file",
+        required=True,
+        help="Path for combined output file",
+    )
 
     # Split command
-    split_parser = subparsers.add_parser("split", help="Split combined translated file")
-    split_parser.add_argument("-c", "--combined-file", dest="combined_file", required=True,
-                        help="Path to the combined translated file")
-    split_parser.add_argument("-t", "--translation-dir", dest="translation_dir", required=True,
-                        help="Directory to place split files")
+    split_parser = subparsers.add_parser(
+        "split", help="Split combined translated file"
+    )
+    split_parser.add_argument(
+        "-c",
+        "--combined-file",
+        dest="combined_file",
+        required=True,
+        help="Path to the combined translated file",
+    )
+    split_parser.add_argument(
+        "-t",
+        "--translation-dir",
+        dest="translation_dir",
+        required=True,
+        help="Directory to place split files",
+    )
 
     # Restore command
-    restore_parser = subparsers.add_parser("restore", help="Restore translated files")
-    restore_parser.add_argument("-t", "--translation-dir", dest="translation_dir", required=True,
-                        help="Directory containing translated files")
-    restore_parser.add_argument("-s", "--source", dest="source_dir", required=True,
-                        help="Source directory to restore files to")
-    restore_parser.add_argument("-m", "--mapping", dest="mapping_file",
-                        help="JSON mapping file (defaults to translation_dir/file_mapping.json)")
+    restore_parser = subparsers.add_parser(
+        "restore", help="Restore translated files"
+    )
+    restore_parser.add_argument(
+        "-t",
+        "--translation-dir",
+        dest="translation_dir",
+        required=True,
+        help="Directory containing translated files",
+    )
+    restore_parser.add_argument(
+        "-s",
+        "--source",
+        dest="source_dir",
+        required=True,
+        help="Source directory to restore files to",
+    )
+    restore_parser.add_argument(
+        "-m",
+        "--mapping",
+        dest="mapping_file",
+        help="JSON mapping file (defaults to translation_dir/file_mapping.json)",
+    )
 
     args = parser.parse_args()
 
     if args.command == "prepare":
-        extensions = tuple(args.extensions.split(','))
+        extensions = tuple(args.extensions.split(","))
         prepare_files_for_translation(
-            args.source_dir,
-            args.translation_dir,
-            extensions
+            args.source_dir, args.translation_dir, extensions
         )
     elif args.command == "combine":
-        combine_txt_files(
-            args.translation_dir,
-            args.combined_file
-        )
+        combine_txt_files(args.translation_dir, args.combined_file)
     elif args.command == "split":
-        split_combined_file(
-            args.combined_file,
-            args.translation_dir
-        )
+        split_combined_file(args.combined_file, args.translation_dir)
     elif args.command == "restore":
-        mapping_file = args.mapping_file or os.path.join(args.translation_dir, "file_mapping.json")
-        restore_translated_files(
-            args.translation_dir,
-            args.source_dir,
-            mapping_file
+        mapping_file = args.mapping_file or os.path.join(
+            args.translation_dir, "file_mapping.json"
         )
+        restore_translated_files(
+            args.translation_dir, args.source_dir, mapping_file
+        )
+
 
 if __name__ == "__main__":
     main()
