@@ -8,10 +8,10 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "translate:prepare": "./bin/translation-util prepare -s ./src/content/docs/$CODE -t ./translation_files",
-    "translate:combine": "./bin/translation-util combine -t ./translation_files -o ./combined-source.txt",
-    "translate:split": "./bin/translation-util split -c ./combined-$CODE.txt -t ./translation_files",
-    "translate:restore": "./bin/translation-util restore -t ./translation_files -s ./src/content/docs/$CODE"
+    "translate:prepare": "./bin/translation-util prepare -s ./src/content/docs/$CODE",
+    "translate:combine": "./bin/translation-util combine",
+    "translate:split": "./bin/translation-util split",
+    "translate:restore": "./bin/translation-util restore"
   },
   "dependencies": {
     "@astrojs/markdoc": "^0.14.1",
