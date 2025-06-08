@@ -7,7 +7,11 @@
     "start": "astro dev --host",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "translate:prepare": "echo 'e.g. ./src/content/docs/$CODE' && ./bin/translation-util prepare",
+    "translate:combine": "./bin/translation-util combine",
+    "translate:split": "./bin/translation-util split",
+    "translate:restore": "./bin/translation-util restore"
   },
   "dependencies": {
     "@astrojs/markdoc": "^0.14.1",
