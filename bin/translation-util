@@ -210,19 +210,19 @@ def main():
 Workflow Examples:
 
   1. Prepare files (outputs a mapping file path):
-     ./translation-util prepare -s ./src/content/docs/en
+     ./translation-util prepare ./src/content/docs/en
      => Prepared X files in temporary directory: /tmp/ots_translation_xxxx
      => Process complete. Mapping file is at: /tmp/ots_translation_xxxx/file_mapping.json
      (Use the printed mapping file path for subsequent commands)
 
   2. Combine files (using the mapping file path from step 1):
-     ./translation-util combine -m /tmp/ots_translation_xxxx/file_mapping.json -o ./combined_en.txt
+     ./translation-util combine /tmp/ots_translation_xxxx/file_mapping.json ./combined_en.txt
 
   3. Split translated file (after translation, using the same mapping file path):
-     ./translation-util split -c ./translated_combined_en.txt -m /tmp/ots_translation_xxxx/file_mapping.json
+     ./translation-util split ./translated_combined_en.txt /tmp/ots_translation_xxxx/file_mapping.json
 
   4. Restore files (using the same mapping file path):
-     ./translation-util restore -m /tmp/ots_translation_xxxx/file_mapping.json -s ./src/content/docs/en
+     ./translation-util restore /tmp/ots_translation_xxxx/file_mapping.json ./src/content/docs/en
         """,
     )
 
@@ -235,11 +235,8 @@ Workflow Examples:
         "prepare", help="Prepare files for translation"
     )
     prepare_parser.add_argument(
-        "-s",
-        "--source",
-        dest="source_dir",
-        required=True,
-        help="Source directory for documents",
+        "source_dir",
+        help="Source directory for documents (e.g., ./src/content/docs/en)",
     )
     # Removed translation_dir argument, will use a temporary directory
     prepare_parser.add_argument(
@@ -255,18 +252,12 @@ Workflow Examples:
         "combine", help="Combine files for translation"
     )
     combine_parser.add_argument(
-        "-m",
-        "--mapping-file",
-        dest="mapping_file_path",
-        required=True,
-        help="Path to the file_mapping.json file (prepared .txt files should be in its directory)",
+        "mapping_file_path",
+        help="Path to the file_mapping.json file",
     )
     combine_parser.add_argument(
-        "-o",
-        "--output",
-        dest="combined_file",
-        required=True,
-        help="Path for combined output file",
+        "combined_file",
+        help="Path for combined output file (e.g., ./combined_en.txt)",
     )
 
     # Split command
@@ -274,18 +265,12 @@ Workflow Examples:
         "split", help="Split combined translated file"
     )
     split_parser.add_argument(
-        "-c",
-        "--combined-file",
-        dest="combined_file",
-        required=True,
-        help="Path to the combined translated file",
+        "combined_file",
+        help="Path to the combined translated file (e.g., ./translated_combined_en.txt)",
     )
     split_parser.add_argument(
-        "-m",
-        "--mapping-file",
-        dest="mapping_file_path",
-        required=True,
-        help="Path to the file_mapping.json file (split files will be placed in its directory)",
+        "mapping_file_path",
+        help="Path to the file_mapping.json file",
     )
 
     # Restore command
@@ -293,18 +278,12 @@ Workflow Examples:
         "restore", help="Restore translated files"
     )
     restore_parser.add_argument(
-        "-m",
-        "--mapping-file",
-        dest="mapping_file_path",
-        required=True,
-        help="Path to the file_mapping.json file (translated .txt files should be in its directory)",
+        "mapping_file_path",
+        help="Path to the file_mapping.json file",
     )
     restore_parser.add_argument(
-        "-s",
-        "--source",
-        dest="source_dir",
-        required=True,
-        help="Source directory to restore files to",
+        "source_dir",
+        help="Source directory to restore files to (e.g., ./src/content/docs/en)",
     )
     # The old optional --mapping argument is now replaced by the required --mapping-file
 
