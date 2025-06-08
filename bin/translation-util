@@ -84,9 +84,12 @@ def prepare_files_for_translation(
     return mapping_file
 
 
-def combine_txt_files(mapping_file_path, output_file):
+def combine_txt_files(mapping_file_path, output_file=None):
     """Combines all .txt files using unique IDs in delimiters, based on a mapping file."""
     translation_dir = os.path.dirname(mapping_file_path)
+    if output_file is None:
+        output_file = os.path.join(translation_dir, "combined.txt")
+
     with open(mapping_file_path, "r") as f:
         file_mapping = json.load(f)
 
@@ -117,9 +120,12 @@ def combine_txt_files(mapping_file_path, output_file):
     return combined_count
 
 
-def split_combined_file(combined_file, mapping_file_path):
+def split_combined_file(mapping_file_path, combined_file=None):
     """Splits a combined file using unique IDs from delimiters, based on a mapping file."""
     translation_dir = os.path.dirname(mapping_file_path)
+    if combined_file is None:
+        combined_file = os.path.join(translation_dir, "combined.txt")
+
     os.makedirs(
         translation_dir, exist_ok=True
     )  # Ensures the directory for split files exists
@@ -173,7 +179,7 @@ def split_combined_file(combined_file, mapping_file_path):
     return split_count
 
 
-def restore_translated_files(mapping_file_path, source_dir):
+def restore_translated_files(mapping_file_path):
     """Restores translated files to their original locations using the mapping file."""
     translation_dir = os.path.dirname(mapping_file_path)
     with open(mapping_file_path, "r") as f:
@@ -190,7 +196,12 @@ def restore_translated_files(mapping_file_path, source_dir):
         if "original_full_path" in file_info:
             dest_path = file_info["original_full_path"]
         else:
-            dest_path = os.path.join(source_dir, file_info["path"])
+            # This case should not happen if original_full_path is always populated.
+            # If it does, it's an issue with the mapping file generation.
+            print(
+                f"Warning: 'original_full_path' not found for {temp_name}. Skipping."
+            )
+            continue
 
         # Ensure directory exists
         os.makedirs(os.path.dirname(dest_path), exist_ok=True)
@@ -210,20 +221,24 @@ def main():
 Workflow Examples:
 
   1. Prepare files (outputs a mapping file path):
-     ./translation-util prepare ./src/content/docs/en
-     => Prepared X files in temporary directory: /tmp/ots_translation_xxxx
-     => Process complete. Mapping file is at: /tmp/ots_translation_xxxx/file_mapping.json
-     (Use the printed mapping file path for subsequent commands)
+    ./translation-util prepare ./src/content/docs/en
+    => Prepared X files in temporary directory: /tmp/ots_translation_xxxx
+    => Process complete. Mapping file is at: /tmp/ots_translation_xxxx/file_mapping.json
+    (Use the printed mapping file path for subsequent commands)
 
-  2. Combine files (using the mapping file path from step 1):
-     ./translation-util combine /tmp/ots_translation_xxxx/file_mapping.json ./combined_en.txt
+2. Combine files (using the mapping file path from step 1):
+    ./translation-util combine /tmp/ots_translation_xxxx/file_mapping.json [./path/to/combined_output.txt]
+    (If output file is omitted, defaults to 'combined.txt' in the same directory as the mapping file)
 
-  3. Split translated file (after translation, using the same mapping file path):
-     ./translation-util split ./translated_combined_en.txt /tmp/ots_translation_xxxx/file_mapping.json
+3. Split translated file (after translation, using the same mapping file path):
+    ./translation-util split /tmp/ots_translation_xxxx/file_mapping.json [./path/to/translated_combined.txt]
+    (If combined file is omitted, defaults to 'combined.txt' in the same directory as the mapping file)
 
-  4. Restore files (using the same mapping file path):
-     ./translation-util restore /tmp/ots_translation_xxxx/file_mapping.json ./src/content/docs/en
-        """,
+4. Restore files (using the same mapping file path):
+    ./translation-util restore /tmp/ots_translation_xxxx/file_mapping.json
+      ""\",
+  )
+""",
     )
 
     subparsers = parser.add_subparsers(
@@ -257,7 +272,9 @@ Workflow Examples:
     )
     combine_parser.add_argument(
         "combined_file",
-        help="Path for combined output file (e.g., ./combined_en.txt)",
+        nargs="?",
+        default=None,
+        help="Path for combined output file (e.g., ./combined_en.txt). Defaults to 'combined.txt' in mapping file's directory.",
     )
 
     # Split command
@@ -265,12 +282,14 @@ Workflow Examples:
         "split", help="Split combined translated file"
     )
     split_parser.add_argument(
-        "combined_file",
-        help="Path to the combined translated file (e.g., ./translated_combined_en.txt)",
+        "mapping_file_path",  # mapping_file_path is now the first positional argument
+        help="Path to the file_mapping.json file",
     )
     split_parser.add_argument(
-        "mapping_file_path",
-        help="Path to the file_mapping.json file",
+        "combined_file",
+        nargs="?",
+        default=None,
+        help="Path to the combined translated file (e.g., ./translated_combined_en.txt). Defaults to 'combined.txt' in mapping file's directory.",
     )
 
     # Restore command
@@ -281,11 +300,7 @@ Workflow Examples:
         "mapping_file_path",
         help="Path to the file_mapping.json file",
     )
-    restore_parser.add_argument(
-        "source_dir",
-        help="Source directory to restore files to (e.g., ./src/content/docs/en)",
-    )
-    # The old optional --mapping argument is now replaced by the required --mapping-file
+    # source_dir argument removed, as original_full_path from mapping file is used
 
     args = parser.parse_args()
 
@@ -295,15 +310,18 @@ Workflow Examples:
             args.source_dir, extensions
         )
         print(f"Process complete. Mapping file is at: {mapping_file_path}")
-        print(
-            "Use this path for subsequent combine, split, or restore commands."
-        )
+        print(f"""
+Use this path for subsequent combine, split, or restore commands.
+
+i.e. pnpm run translate:combine {mapping_file_path}
+        """)
     elif args.command == "combine":
         combine_txt_files(args.mapping_file_path, args.combined_file)
     elif args.command == "split":
-        split_combined_file(args.combined_file, args.mapping_file_path)
+        # For split, mapping_file_path is first, then optional combined_file
+        split_combined_file(args.mapping_file_path, args.combined_file)
     elif args.command == "restore":
-        restore_translated_files(args.mapping_file_path, args.source_dir)
+        restore_translated_files(args.mapping_file_path)
 
 
 if __name__ == "__main__":
