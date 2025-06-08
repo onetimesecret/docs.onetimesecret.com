@@ -8,7 +8,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "translate:prepare": "./bin/translation-util prepare -s ./src/content/docs/$CODE",
+    "translate:prepare": "echo 'e.g. ./src/content/docs/$CODE' && ./bin/translation-util prepare",
     "translate:combine": "./bin/translation-util combine",
     "translate:split": "./bin/translation-util split",
     "translate:restore": "./bin/translation-util restore"
