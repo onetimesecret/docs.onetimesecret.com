@@ -12,6 +12,8 @@
 export function createRedirectsConfig() {
   return {
     "/api": "/en/rest-api/",
+    "/rest-api": "/en/rest-api/",
+    "/docs/rest-api": "/en/rest-api/",
     "/blog": "https://blog.onetimesecret.com/",
     "/contact": "https://onetimesecret.com/feedback",
     "/docs": "/en/",
