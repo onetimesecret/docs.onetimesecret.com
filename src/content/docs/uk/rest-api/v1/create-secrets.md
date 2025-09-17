@@ -7,7 +7,7 @@ _Оновлено 2025-04-02_
 
 :::примітка
 **Вибір міста та регіону зберігання даних
-- Обирайте між центрами обробки даних у США ([`us.onetimesecret.com`](https://us.onetimesecret.com/)) або ЄС ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/))
+- Обирайте між центрами обробки даних у США ([`us.onetimesecret.com`](https://us.onetimesecret.com/)), ЄС ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)), Канаді ([`ca.onetimesecret.com`](https://ca.onetimesecret.com/)) або Новій Зеландії ([`nz.onetimesecret.com`](https://nz.onetimesecret.com/))
 - Враховуйте такі фактори, як суверенітет даних, затримка та вимоги до відповідності
 - За замовчуванням `onetimesecret.com` залишається робочим і спрямовує до активного центру обробки даних, рекомендується використовувати конкретну локацію, оскільки ця функціональність може бути застарілою в майбутньому.
 :::

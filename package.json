@@ -7,11 +7,15 @@
     "start": "astro dev --host",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "translate:prepare": "echo 'e.g. ./src/content/docs/$CODE' && ./bin/translation-util prepare",
+    "translate:combine": "./bin/translation-util combine",
+    "translate:split": "./bin/translation-util split",
+    "translate:restore": "./bin/translation-util restore"
   },
   "dependencies": {
-    "@astrojs/markdoc": "^0.14.1",
-    "@astrojs/starlight": "^0.34.1",
+    "@astrojs/markdoc": "^0.14.2",
+    "@astrojs/starlight": "^0.35.3",
     "@astrojs/starlight-markdoc": "^0.4.0",
     "@astrojs/starlight-tailwind": "^4.0.1",
     "@astrojs/vue": "^5.0.12",
@@ -19,7 +23,7 @@
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.1.4",
     "accessible-astro-components": "^4.1.0",
-    "astro": "^5.7.9",
+    "astro": "^5.13.7",
     "sharp": "^0.34.1",
     "tailwindcss": "^4.1.4",
     "vue": "^3.5.13"

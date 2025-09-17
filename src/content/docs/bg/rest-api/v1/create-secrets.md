@@ -7,7 +7,7 @@ _Актуализирано 2025-04-02_
 
 :::бележка
 **Избор на местоположение на данните и регион**
-- Изберете между центрове за данни в САЩ ([`us.onetimesecret.com`](https://us.onetimesecret.com/)) или ЕС ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/))
+- Изберете между центрове за данни в САЩ ([`us.onetimesecret.com`](https://us.onetimesecret.com/)), ЕС ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)), Канада ([`ca.onetimesecret.com`](https://ca.onetimesecret.com/)), или Нова Зеландия ([`nz.onetimesecret.com`](https://nz.onetimesecret.com/))
 - Вземете предвид фактори като суверенитет на данните, латентност и изисквания за съответствие
 - **ЗАБЕЛЕЖКА:** По подразбиране `onetimesecret.com` продължава да функционира и да насочва към активен център за данни, като се препоръчва използването на конкретно местоположение, тъй като тази функционалност може да бъде премахната в бъдеще.
 :::

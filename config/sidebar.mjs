@@ -38,21 +38,22 @@ const zhCnTranslations = loadTranslations("zh-cn");
  * @returns {Object} Formatted sidebar link item
  */
 function createLink(key, link, badge) {
+  const enLabel = enTranslations.sidebar?.[key] || key;
   return {
-    label: enTranslations.sidebar[key],
+    label: enLabel,
     link,
     translations: {
-      de: deTranslations.sidebar[key],
-      nl: nlTranslations.sidebar[key],
-      fr: frTranslations.sidebar[key],
-      es: esTranslations.sidebar[key],
-      uk: ukTranslations.sidebar[key],
-      ko: koTranslations.sidebar[key],
-      ja: jaTranslations.sidebar[key],
-      mi: miTranslations.sidebar[key],
-      bg: bgTranslations.sidebar[key],
-      it: itTranslations.sidebar[key],
-      "zh-cn": zhCnTranslations.sidebar[key],
+      de: deTranslations.sidebar?.[key],
+      nl: nlTranslations.sidebar?.[key],
+      fr: frTranslations.sidebar?.[key],
+      es: esTranslations.sidebar?.[key],
+      uk: ukTranslations.sidebar?.[key],
+      ko: koTranslations.sidebar?.[key],
+      ja: jaTranslations.sidebar?.[key],
+      mi: miTranslations.sidebar?.[key],
+      bg: bgTranslations.sidebar?.[key],
+      it: itTranslations.sidebar?.[key],
+      "zh-cn": zhCnTranslations.sidebar?.[key],
     },
     attrs: {},
     ...(badge ? { badge } : {}),
@@ -67,20 +68,21 @@ function createLink(key, link, badge) {
  * @returns {Object} Formatted sidebar group item
  */
 function createGroup(key, items = [], collapsed = false) {
+  const enLabel = enTranslations.sidebar?.[key] || key;
   return {
-    label: enTranslations.sidebar[key],
+    label: enLabel,
     translations: {
-      de: deTranslations.sidebar[key],
-      nl: nlTranslations.sidebar[key],
-      fr: frTranslations.sidebar[key],
-      es: esTranslations.sidebar[key],
-      uk: ukTranslations.sidebar[key],
-      ko: koTranslations.sidebar[key],
-      ja: jaTranslations.sidebar[key],
-      mi: miTranslations.sidebar[key],
-      bg: bgTranslations.sidebar[key],
-      it: itTranslations.sidebar[key],
-      "zh-cn": zhCnTranslations.sidebar[key],
+      de: deTranslations.sidebar?.[key],
+      nl: nlTranslations.sidebar?.[key],
+      fr: frTranslations.sidebar?.[key],
+      es: esTranslations.sidebar?.[key],
+      uk: ukTranslations.sidebar?.[key],
+      ko: koTranslations.sidebar?.[key],
+      ja: jaTranslations.sidebar?.[key],
+      mi: miTranslations.sidebar?.[key],
+      bg: bgTranslations.sidebar?.[key],
+      it: itTranslations.sidebar?.[key],
+      "zh-cn": zhCnTranslations.sidebar?.[key],
     },
     items,
     collapsed,
@@ -113,6 +115,17 @@ export const sidebar = [
   ]),
 
   createGroup("regions", [createLink("overview", "regions")]),
+
+  // ARCHIVED: Configuration section temporarily hidden
+  // createGroup("configuration", [
+  //   createLink("overview", "configuration"),
+  //   createLink("coreConfig", "configuration/core-config"),
+  //   createLink("systemSettings", "configuration/system-settings"),
+  //   createLink("environmentVariables", "configuration/environment-variables"),
+  //   createLink("security", "configuration/security"),
+  //   createLink("migration", "configuration/migration"),
+  //   createLink("quickReference", "configuration/quick-reference"),
+  // ]),
 
   createGroup("restApi", [
     createLink("overview", "rest-api"),

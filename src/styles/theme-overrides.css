@@ -35,3 +35,20 @@
   background: #dc4a22 !important;
   border-color: #dc4a22 !important;
 }
+
+/* Card icon customization */
+.sl-card .icon {
+  background: var(--sl-color-accent) !important;
+  color: white !important;
+}
+
+/* Alternative: target specific card icons by their container */
+.sl-card .icon svg {
+  color: white !important;
+}
+
+/* Dark theme card icons */
+:root[data-theme="dark"] .sl-card .icon {
+  background: var(--sl-color-accent-high) !important;
+  color: var(--sl-color-black) !important;
+}

@@ -1,5 +1,7 @@
 # Astro dev/build outputs
 .astro
+.serena
+.claude
 dist
 data
 
