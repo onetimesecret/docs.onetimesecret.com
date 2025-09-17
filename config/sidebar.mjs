@@ -116,16 +116,12 @@ export const sidebar = [
 
   createGroup("regions", [createLink("overview", "regions")]),
 
-  // ARCHIVED: Configuration section temporarily hidden
-  // createGroup("configuration", [
-  //   createLink("overview", "configuration"),
-  //   createLink("coreConfig", "configuration/core-config"),
-  //   createLink("systemSettings", "configuration/system-settings"),
-  //   createLink("environmentVariables", "configuration/environment-variables"),
-  //   createLink("security", "configuration/security"),
-  //   createLink("migration", "configuration/migration"),
-  //   createLink("quickReference", "configuration/quick-reference"),
-  // ]),
+  createGroup("selfHosting", [
+    createLink("overview", "self-hosting"),
+    createLink("gettingStarted", "self-hosting/getting-started"),
+    createLink("installationDeployment", "self-hosting/installation"),
+    createLink("configurationReference", "self-hosting/configuration"),
+  ]),
 
   createGroup("restApi", [
     createLink("overview", "rest-api"),
