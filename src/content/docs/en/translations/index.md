@@ -3,7 +3,6 @@ title: Translations & Localization
 description: Information about available language translations and how to contribute to localizing Onetime Secret
 ---
 
-# Translations & Localization
 
 Onetime Secret documentation is available in multiple languages to serve our diverse global community. We're continuously working to expand our language offerings and improve existing translations.
 
