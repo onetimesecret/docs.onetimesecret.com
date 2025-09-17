@@ -14,8 +14,8 @@
     "translate:restore": "./bin/translation-util restore"
   },
   "dependencies": {
-    "@astrojs/markdoc": "^0.14.1",
-    "@astrojs/starlight": "^0.34.1",
+    "@astrojs/markdoc": "^0.14.2",
+    "@astrojs/starlight": "^0.35.3",
     "@astrojs/starlight-markdoc": "^0.4.0",
     "@astrojs/starlight-tailwind": "^4.0.1",
     "@astrojs/vue": "^5.0.12",
