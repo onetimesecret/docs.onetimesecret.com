@@ -87,7 +87,7 @@ sudo apt install -y redis-server
 sudo systemctl enable redis-server
 sudo systemctl start redis-server
 
-# Install Node.js (for development)
+# Install Node.js (for development and building frontend assets)
 curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
 sudo apt install -y nodejs
 sudo npm install -g pnpm@latest

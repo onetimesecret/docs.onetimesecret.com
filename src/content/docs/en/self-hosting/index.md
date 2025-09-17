@@ -5,8 +5,6 @@ sidebar:
   order: 1
 ---
 
-# Self-Hosting Onetime Secret
-
 Run your own private instance of Onetime Secret with full control over your data, security, and deployment.
 
 ## Why Self-Host?

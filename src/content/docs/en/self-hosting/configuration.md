@@ -5,7 +5,6 @@ sidebar:
   order: 4
 ---
 
-# Configuration Reference
 
 This comprehensive guide covers all configuration options for self-hosted Onetime Secret instances.
 
@@ -13,604 +12,462 @@ This comprehensive guide covers all configuration options for self-hosted Onetim
 
 Onetime Secret uses multiple configuration files:
 
-- **`.env`** - Environment variables for basic settings
-- **`config/config.yaml`** - Main application configuration
-- **`docker-compose.yml`** - Docker deployment settings (if using Docker)
 
-## Environment Variables
+- **`.env`** - Environment variables for common settings. Use for simple configuration and Docker deployments without modifying YAML files. (Copy from `.env.example`)
+- **`config/config.yaml`** - Main application configuration using ERB templates. Environment variables are integrated here, making it easy to see how each setting is applied. (Copy from `etc/config.example.yaml`)
 
-Set these in your `.env` file or environment:
 
-### Core Application Settings
+## Main Configuration
 
-| Variable | Default | Description |
-|----------|---------|-------------|
-| `RACK_ENV` | `development` | Application environment: `development`, `production`, `test` |
-| `PORT` | `7143` | Port for the web server to listen on |
-| `HOST` | `0.0.0.0` | Interface to bind the web server to |
-| `WORKERS` | `1` | Number of worker processes (Puma) |
-| `THREADS` | `5` | Number of threads per worker |
+The main configuration file is `config/config.yaml`, which uses ERB templates to integrate environment variables.
 
-### Database & Storage
+**Getting started:**
+1. Copy the example: `cp etc/config.example.yaml config/config.yaml`
+2. Edit values as needed for your deployment
+3. Most common settings can be overridden with environment variables
 
-| Variable | Default | Description |
-|----------|---------|-------------|
-| `REDIS_URL` | `redis://localhost:6379/0` | Redis connection string for sessions and cache |
-| `DATABASE_URL` | - | PostgreSQL connection string (optional, Redis is default) |
-| `REDIS_POOL_SIZE` | `10` | Redis connection pool size |
-| `REDIS_TIMEOUT` | `5` | Redis connection timeout in seconds |
+**View the complete configuration file:**
+[config.example.yaml](https://raw.githubusercontent.com/onetimesecret/onetimesecret/refs/tags/v0.22.4/etc/config.example.yaml)
 
-### Security & Authentication
+### Key Configuration Sections
 
-| Variable | Default | Description |
-|----------|---------|-------------|
-| `SECRET_KEY_BASE` | - | Secret key for sessions and encryption (required in production) |
-| `AUTHENTICATION_MODE` | `optional` | Authentication requirement: `optional`, `required`, `disabled` |
-| `PASSPHRASE_MIN_LENGTH` | `8` | Minimum length for secret passphrases |
-| `PASSPHRASE_ENFORCE_COMPLEXITY` | `false` | Require complex passphrases (numbers, symbols, etc.) |
-| `SESSION_TIMEOUT` | `3600` | Session timeout in seconds |
-| `MAX_SECRET_SIZE` | `1048576` | Maximum secret size in bytes (1MB default) |
-
-### User Interface & Features
-
-| Variable | Default | Description |
-|----------|---------|-------------|
-| `UI_ENABLED` | `true` | Enable web user interface |
-| `HOMEPAGE_ACCESS` | `public` | Homepage access level: `public`, `authenticated`, `disabled` |
-| `SIGNUP_ENABLED` | `true` | Allow new user registration |
-| `CONTACT_EMAIL` | - | Contact email displayed in footer |
-| `BRAND_NAME` | `Onetime Secret` | Custom brand name for your instance |
-
-### Password Generation
-
-| Variable | Default | Description |
-|----------|---------|-------------|
-| `PASSWORD_GEN_ENABLED` | `true` | Enable password generation feature |
-| `PASSWORD_GEN_LENGTH` | `12` | Default generated password length |
-| `PASSWORD_GEN_SYMBOLS` | `true` | Include symbols in generated passwords |
-| `PASSWORD_GEN_NUMBERS` | `true` | Include numbers in generated passwords |
-| `PASSWORD_GEN_UPPERCASE` | `true` | Include uppercase letters |
-| `PASSWORD_GEN_LOWERCASE` | `true` | Include lowercase letters |
-| `PASSWORD_GEN_EXCLUDE_AMBIGUOUS` | `true` | Exclude ambiguous characters (0, O, l, I) |
-
-### Email Configuration
-
-| Variable | Default | Description |
-|----------|---------|-------------|
-| `SMTP_HOST` | - | SMTP server hostname |
-| `SMTP_PORT` | `587` | SMTP server port |
-| `SMTP_USERNAME` | - | SMTP authentication username |
-| `SMTP_PASSWORD` | - | SMTP authentication password |
-| `SMTP_TLS` | `true` | Use TLS encryption for SMTP |
-| `EMAIL_FROM` | `noreply@localhost` | Default sender email address |
-
-### Rate Limiting & Security
-
-| Variable | Default | Description |
-|----------|---------|-------------|
-| `RATE_LIMIT_ENABLED` | `true` | Enable rate limiting |
-| `RATE_LIMIT_REQUESTS` | `100` | Requests per time window |
-| `RATE_LIMIT_WINDOW` | `3600` | Rate limit window in seconds |
-| `IP_WHITELIST` | - | Comma-separated IP addresses to whitelist |
-| `IP_BLACKLIST` | - | Comma-separated IP addresses to blacklist |
-
-### Logging & Monitoring
-
-| Variable | Default | Description |
-|----------|---------|-------------|
-| `LOG_LEVEL` | `info` | Log level: `debug`, `info`, `warn`, `error` |
-| `LOG_FORMAT` | `text` | Log format: `text`, `json` |
-| `METRICS_ENABLED` | `false` | Enable Prometheus metrics endpoint |
-| `HEALTH_CHECK_ENABLED` | `true` | Enable health check endpoint |
-
-## Main Configuration File (config.yaml)
-
-The main configuration file provides detailed control over all aspects of your instance.
-
-### Site Configuration
+Here are the most important sections you'll likely need to customize:
 
 ```yaml
+---
 :site:
-  # Basic site settings
-  :host: your-domain.com
-  :port: 7143
-  :ssl: true
-  :protocol: https
-
-  # Branding
-  :name: "Your Organization's Secret Sharing"
-  :tagline: "Secure secret sharing for your team"
-  :company: "Your Company Name"
-
-  # Contact information
-  :contact:
-    :email: admin@your-domain.com
-    :support_url: https://your-domain.com/support
-```
-
-### Authentication & Security
-
-```yaml
-:authentication:
-  # Authentication requirements
-  :required: true
-  :signup_enabled: true
-  :guest_access: false
-
-  # Password policies
-  :passphrase:
-    :min_length: 12
-    :enforce_complexity: true
-    :require_numbers: true
-    :require_symbols: true
-    :require_mixed_case: true
-
-  # Session settings
-  :session:
-    :timeout: 3600
-    :secure_cookies: true
-    :same_site: "Strict"
-
-  # Account lockout
-  :lockout:
-    :enabled: true
-    :max_attempts: 5
-    :lockout_duration: 300
-```
-
-### Secret Management
-
-```yaml
-:secrets:
-  # Default settings for new secrets
-  :default_ttl: 3600
-  :max_ttl: 86400
-  :max_size: 1048576
-
-  # View limitations
-  :max_views: 1
-  :allow_multiple_views: false
-
-  # Encryption settings
-  :encryption:
-    :algorithm: "aes-256-gcm"
-    :key_derivation: "pbkdf2"
-    :iterations: 100000
-```
-
-### User Interface
-
-```yaml
-:ui:
-  # Interface availability
-  :enabled: true
-  :theme: "default"
-  :dark_mode: true
-
-  # Homepage settings
-  :homepage:
-    :access_level: "public"
-    :show_recent_activity: false
-    :max_recent_secrets: 10
-
-  # Feature toggles
-  :features:
-    :password_generator: true
-    :file_uploads: false
-    :api_access: true
-    :bulk_operations: false
-```
-
-### Database Configuration
-
-```yaml
-:database:
-  # Redis settings (default storage)
-  :redis:
-    :url: "redis://localhost:6379/0"
-    :pool_size: 10
-    :timeout: 5
-    :ttl: 86400
-
-  # PostgreSQL settings (optional)
-  :postgresql:
-    :enabled: false
-    :host: localhost
-    :port: 5432
-    :database: onetime_production
-    :username: onetime
-    :password: secure_password
-    :pool: 5
-    :timeout: 5000
-```
-
-### Email Configuration
-
-```yaml
-:email:
-  # Email features
-  :enabled: true
-  :notifications: true
-
-  # SMTP settings
-  :smtp:
-    :host: smtp.your-provider.com
-    :port: 587
-    :username: your-username
-    :password: your-password
-    :tls: true
-    :authentication: "plain"
-
-  # Email templates
-  :from: "noreply@your-domain.com"
-  :reply_to: "support@your-domain.com"
-  :templates:
-    :secret_created: "templates/secret_created.erb"
-    :secret_viewed: "templates/secret_viewed.erb"
-```
-
-### Rate Limiting & Security
-
-```yaml
-:security:
-  # Rate limiting
-  :rate_limiting:
-    :enabled: true
-    :requests_per_hour: 100
-    :burst_size: 10
-    :track_by: "ip"
-
-  # IP filtering
-  :ip_filtering:
-    :whitelist: []
-    :blacklist: []
-    :block_tor: false
-    :block_vpn: false
-
-  # Security headers
-  :headers:
-    :hsts: true
-    :frame_options: "DENY"
-    :content_type_options: "nosniff"
-    :xss_protection: true
-```
-
-### API Configuration
-
-```yaml
-:api:
-  # API availability
-  :enabled: true
-  :versioning: "header"
-  :default_version: "v1"
-
-  # Authentication
+  :host: <%= ENV['HOST'] || 'localhost:3000' %>
+  # Turns https/http on or off when generating links
+  :ssl: <%= ENV['SSL'] == 'true' || false %>
+  # IMPORTANT: After setting the secret, it should not be changed.
+  # Be sure to create and store a backup in a secure offsite
+  # location. Changing the secret can lead to unforeseen issues
+  # like not being able to decrypt existing secrets.
+  :secret: <%= ENV['SECRET'] || nil %>
+  # API and UI Configuration
+  :interface:
+    :ui:
+      # Controls whether the web interface is enabled
+      # When false, only a basic explanation page is shown
+      :enabled: <%= ENV['UI_ENABLED'] != 'false' %>
+      # Header configuration
+      # Controls branding and navigation in the site header
+      :header:
+        # Control switch to enable/disable header customization
+        :enabled: <%= ENV['HEADER_ENABLED'] != 'false' %>
+        # Branding configuration for logo and company name
+        :branding:
+          # Logo configuration
+          :logo:
+            # URL to logo image file
+            :url: <%= ENV['LOGO_URL'] || 'DefaultLogo.vue' %>
+            # Alt text for logo image
+            :alt: <%= ENV['LOGO_ALT'] || 'Share a Secret One-Time' %>
+            # Where the logo links to when clicked
+            :href: <%= ENV['LOGO_LINK'] || '/' %>
+          # Company name override (falls back to i18n if not set)
+          :site_name: <%= ENV['SITE_NAME'] || 'One-Time Secret' %>
+        # Navigation configuration
+        :navigation:
+          # Enable/disable header navigation entirely
+          :enabled: <%= ENV['HEADER_NAV_ENABLED'] != 'false' %>
+      # Footer link configuration
+      # These links appear in the footer of each page
+      :footer_links:
+        # Master switch to enable/disable all footer links
+        :enabled: <%= ENV['FOOTER_LINKS'] == 'true' || false %>
+        # Organized groups of links
+        :groups:
+          - :name: legal
+            :i18n_key: web.footer.legals
+            :links:
+              - :text: Terms of Service
+                :i18n_key: terms-of-service
+                # Replace with your own terms URL or use relative path like /terms
+                :url: <%= ENV['TERMS_URL']  %>
+                :external: <%= ENV['TERMS_EXTERNAL'] || false %>
+              - :text: Privacy Policy
+                :i18n_key: privacy-policy
+                # Replace with your own privacy URL or use relative path like /privacy
+                :url: <%= ENV['PRIVACY_URL']  %>
+                :external: <%= ENV['PRIVACY_EXTERNAL'] || false %>
+          - :name: resources
+            :i18n_key: web.footer.resources
+            :links:
+              - :text: Status
+                :i18n_key: status
+                # Replace with your status page URL if you have one
+                :url: <%= ENV['STATUS_URL'] %>
+                :external: <%= ENV['STATUS_EXTERNAL'] || true %>
+                :icon: signal
+              - :text: About
+                :i18n_key: web.COMMON.about
+                # Replace with your about page URL
+                :url: <%= ENV['ABOUT_URL'] %>
+                :external: <%= ENV['ABOUT_EXTERNAL'] || false %>
+          - :name: support
+            :i18n_key: web.footer.support
+            :links:
+              - :text: Contact
+                :i18n_key: web.footer.contact
+                :url: <%= ENV['CONTACT_URL'] %>
+                :external: false
+    # Controls whether the API endpoints are available. When disabled, the API
+    # is completely disabled. Requests to /api/* will return 404.
+    :api:
+      :enabled: <%= ENV['API_ENABLED'] != 'false' %>
+  # Configuration options for secret management
+  :secret_options:
+    # Default Time-To-Live (TTL) for secrets in seconds
+    # This value is used if no specific TTL is provided when creating a secret
+    :default_ttl: <%= ENV['DEFAULT_TTL'] || nil %>
+    # Available TTL options for secret creation (in seconds)
+    # These options will be presented to users when they create a new secret
+    # Format: String of integers representing seconds
+    :ttl_options: <%= (ENV['TTL_OPTIONS'] || nil) %>
+    # Settings for the passphrase field that protects access to secrets
+    :passphrase:
+      # Require users to enter a passphrase when creating secrets
+      :required: <%= ENV['PASSPHRASE_REQUIRED'] == 'true' || false %>
+      # Minimum number of characters required for passphrases
+      :minimum_length: <%= ENV['PASSPHRASE_MIN_LENGTH'] || 8 %>
+      # Maximum number of characters allowed for passphrases
+      :maximum_length: <%= ENV['PASSPHRASE_MAX_LENGTH'] || 128 %>
+      # Enforce complexity requirements (uppercase, lowercase, numbers, symbols)
+      :enforce_complexity: <%= ENV['PASSPHRASE_ENFORCE_COMPLEXITY'] == 'true' || false %>
+    # Settings for password generation (when users click "Generate Password")
+    :password_generation:
+      # Default length for generated passwords
+      :default_length: <%= ENV['PASSWORD_GEN_LENGTH'] || 12 %>
+      # Character sets to include in generated passwords
+      :character_sets:
+        # Include uppercase letters (A-Z)
+        :uppercase: <%= ENV['PASSWORD_GEN_UPPERCASE'] != 'false' %>
+        # Include lowercase letters (a-z)
+        :lowercase: <%= ENV['PASSWORD_GEN_LOWERCASE'] != 'false' %>
+        # Include numbers (0-9)
+        :numbers: <%= ENV['PASSWORD_GEN_NUMBERS'] != 'false' %>
+        # Include symbols (!@#$%^&*()_+-=[]{}|;:,.<>?)
+        :symbols: <%= ENV['PASSWORD_GEN_SYMBOLS'] == 'true' || false %>
+        # Exclude ambiguous characters (0, O, l, 1, I) to prevent confusion
+        :exclude_ambiguous: <%= ENV['PASSWORD_GEN_EXCLUDE_AMBIGUOUS'] != 'false' %>
+  # Registration and Authentication settings
   :authentication:
-    :required: true
-    :methods: ["api_key", "bearer_token"]
-    :key_header: "X-API-Key"
-
-  # Rate limiting (separate from web UI)
-  :rate_limiting:
-    :requests_per_hour: 1000
-    :burst_size: 50
-
-  # Response format
-  :response:
-    :format: "json"
-    :include_metadata: true
-    :pagination: true
-```
-
-### Logging & Monitoring
-
-```yaml
-:logging:
-  # Log levels and destinations
-  :level: "info"
-  :format: "json"
-  :destination: "stdout"
-  :file: "/var/log/onetime/application.log"
-
-  # Log rotation
-  :rotation:
-    :enabled: true
-    :max_size: "100MB"
-    :max_files: 10
-
-  # Audit logging
-  :audit:
-    :enabled: true
-    :events: ["secret_created", "secret_viewed", "user_login"]
-    :destination: "/var/log/onetime/audit.log"
-
-:monitoring:
-  # Health checks
-  :health_checks:
-    :enabled: true
-    :endpoint: "/health"
-    :checks: ["database", "redis", "disk_space"]
-
-  # Metrics
-  :metrics:
+    # Can be disabled altogether, including API authentication.
+    :enabled: <%= ENV['AUTH_ENABLED'] != 'false' %>
+    # Allow users to create accounts. This can be disabled if you plan
+    # to create accounts manually or enable during setup when accounts
+    # can be created and then disabled to prevent any new users from
+    # creating accounts.
+    :signup: <%= ENV['AUTH_SIGNUP'] != 'false' %>
+    # Generally if you allow registration, you allow signin. But there
+    # are circumstances where it's helpful to turn off authentication
+    # temporarily.
+    :signin: <%= ENV['AUTH_SIGNIN'] != 'false' %>
+    # By default, new accounts need to verify their email address before
+    # they can sign in. This is a security measure to prevent spamming
+    # and abuse of the system. If you're running a private instance or
+    # an instance for your team or company, you can disable this feature
+    # to make it easier for users to sign in.
+    :autoverify: <%= ENV['AUTH_AUTOVERIFY'] == 'true' || false %>
+    # When enabled, the homepage secret form is not available unless
+    # the user is logged in. Similar to a disabled homepage, but still
+    # shows the header with logo and navigation links. This allows for
+    # a more restrictive mode where only authenticated users can create
+    # secrets while maintaining site navigation and branding.
+    :required: <%= ENV['AUTH_REQUIRED'] == 'true' %>
+    # Email addresses listed below will be granted automatic
+    # administrative privileges upon account creation. These
+    # accounts have access to a page that show basic system stats.
+    # The term "colonel" is used instead of "admin". "Colonel" (which
+    # is pronounced "kernel") references both the protected core of a
+    # Linux system and a military rank, symbolizing high-level access
+    # permissions. This naming helps avoid basic, automated attacks
+    # that target common admin URLs or role names.
+    :colonels:
+      - <%= ENV['COLONEL'] || 'CHANGEME@example.com' %>
+  # A captcha-like feature that protects the feedback form
+  # from bots and other tomfoolery.
+  :authenticity:
+    :type: <%= ENV['AUTHENTICITY_TYPE'] || 'altcha' %>
+    :secret_key: <%= ENV['AUTHENTICITY_SECRET_KEY'] || '<REPLACE_WITH_STRONG_HMAC_KEY>' %>
+  # Links to documentation. For onetimesecret.com, this is
+  # docs.onetimesecret.com.
+  :support:
+    :host: <%= ENV['SUPPORT_HOST'] || nil %>
+  :plans:
+    :enabled: <%= ENV['PLANS_ENABLED'] == 'true' || false %>
+    :stripe_key: <%= ENV['STRIPE_KEY'] || nil %>
+  :regions:
+    :enabled: <%= ENV['REGIONS_ENABLED'] == 'true' || false %>
+    :current_jurisdiction: <%= ENV['JURISDICTION'] || nil %>
+  :domains:
+    :enabled: <%= ENV['DOMAINS_ENABLED'] == 'true' || false %>
+    # The default domain used for link URLs. When not set or empty,
+    # site.host is used.
+    :default: <%= ENV['DEFAULT_DOMAIN'] || nil %>
+    # The cluster type determines how the application will support
+    # multiple domains. The default is nil which means that the
+    # application itself is responsible for handling multiple domains.
+    :cluster:
+      :type: <%= ENV['CLUSTER_TYPE'] || nil %>
+      :api_key: <%= ENV['APPROXIMATED_API_KEY'] || nil %>
+      :cluster_ip: <%= ENV['APPROXIMATED_PROXY_CLUSTER_IP'] || '<CLUSTER_IP>' %>
+      :cluster_host: <%= ENV['APPROXIMATED_PROXY_CLUSTER_HOST'] || '<CLUSTER_HOST>' %>
+      :cluster_name: <%= ENV['APPROXIMATED_PROXY_CLUSTER_NAME'] || '<CLUSTER_NAME>' %>
+      :vhost_target: <%= ENV['APPROXIMATED_PROXY_VHOST_TARGET'] || '<VHOST_TARGET>' %>
+:features:
+  :incoming:
     :enabled: false
-    :provider: "prometheus"
-    :endpoint: "/metrics"
-    :namespace: "onetime"
-```
+    :email: CHANGEME@example.com
+    :passphrase: abacus
+# Redis Configuration
+:redis:
+  # Main Redis connection URI - Specify full connection string including auth
+  # Format: redis://[:password@]host[:port]/[db-number]
+  # Examples:
+  #   - redis://mypassword@localhost:6379/0        # Simple password auth
+  #   - redis://user:pass@localhost:6379/0         # Username/password auth
+  #   - redis://redis.example.com:6379/0          # No auth (development only)
+  :uri: <%= ENV['REDIS_URL'] || 'redis://CHANGEME@127.0.0.1:6379/0' %>
 
-## Configuration Examples
-
-### High Security Configuration
-
-For environments requiring maximum security:
-
-```yaml
-:authentication:
-  :required: true
-  :signup_enabled: false
-  :passphrase:
-    :min_length: 16
-    :enforce_complexity: true
-
-:secrets:
-  :max_ttl: 3600
-  :max_views: 1
-  :allow_multiple_views: false
-
-:security:
-  :rate_limiting:
-    :requests_per_hour: 50
-  :headers:
-    :hsts: true
-    :frame_options: "DENY"
-
-:ui:
-  :homepage:
-    :access_level: "authenticated"
-    :show_recent_activity: false
-```
-
-### Public Service Configuration
-
-For public-facing instances:
-
-```yaml
-:authentication:
-  :required: false
-  :signup_enabled: true
-  :guest_access: true
-
-:secrets:
-  :default_ttl: 86400
-  :max_ttl: 604800
-
-:ui:
-  :homepage:
-    :access_level: "public"
-    :show_recent_activity: true
-
-:security:
-  :rate_limiting:
-    :requests_per_hour: 200
-```
-
-### Enterprise Configuration
-
-For large organizations:
-
-```yaml
-:authentication:
-  :required: true
-  :signup_enabled: false
-
-:database:
-  :postgresql:
-    :enabled: true
-    :pool: 20
-
-:email:
-  :enabled: true
-  :notifications: true
-
-:api:
-  :rate_limiting:
-    :requests_per_hour: 5000
-
-:monitoring:
-  :metrics:
-    :enabled: true
-    :provider: "prometheus"
-```
-
-## Environment-Specific Settings
-
-### Development
-
-```yaml
-:site:
-  :ssl: false
-  :protocol: http
-
+# Logging Configuration
 :logging:
-  :level: "debug"
-  :format: "text"
+  # HTTP request logs (Rack::CommonLogger)
+  :http_requests: <%= ENV['LOG_HTTP_REQUESTS'] != 'false' %>
 
-:authentication:
-  :required: false
+# Sending Emails
+:emailer:
+  # Local Development with Mailpit
+  # -----------------------------
+  # Mailpit is a dev SMTP server that captures emails for testing
+  # Install: brew install mailpit
+  # Start: mailpit
+  # Web UI: http://localhost:8025
+  #
+  #  :mode: smtp                      # Use SMTP mode for local testing
+  #  :from: secure@onetimesecret.com # Sender address
+  #  :fromname: OTS Support          # Sender name
+  #  :host: 127.0.0.1                # Mailpit host
+  #  :port: 1025                     # Mailpit default SMTP port
+  #  :user: ~                        # No auth needed for Mailpit
+  #  :pass: ~                        # No auth needed for Mailpit
+  #  :auth: false                    # Disable SMTP auth for Mailpit
+  #  :tls: false                     # Disable TLS for local testing
+
+  # Production Settings (for reference)
+  # ----------------------------------
+  :mode: <%= ENV['EMAILER_MODE'] || 'smtp' %>
+  :from: <%= ENV['FROM_EMAIL'] || ENV['FROM'] || 'CHANGEME@example.com' %>
+  :fromname: <%= ENV['FROMNAME'] || 'Support' %>
+  :host: <%= ENV['SMTP_HOST'] || 'smtp.provider.com' %>
+  :port: <%= ENV['SMTP_PORT'] || 587 %>
+  :user: <%= ENV['SMTP_USERNAME'] %>
+  :pass: <%= ENV['SMTP_PASSWORD'] %>
+  :auth: <%= ENV['SMTP_AUTH'] || 'login' %>
+  :tls: <%= ENV['SMTP_TLS'] %>
+
+:mail:
+  :truemail:
+    # Available validation types: :regex, :mx, :mx_blacklist, :smtp
+    :default_validation_type: :regex
+    # Required for :smtp validation
+    :verifier_email: <%= ENV['VERIFIER_EMAIL'] || 'CHANGEME@example.com' %>
+    #:verifier_domain: <%= ENV['VERIFIER_DOMAIN'] || 'example.com' %>
+    #:connection_timeout: 2
+    #:response_timeout: 2
+    #:connection_attempts: 3
+    #:validation_type_for:
+    #  'example.com': :regex
+    #
+    # Truemail will only validate email addresses that match the
+    # domains listed in :allowed_domains. If the domain is not
+    # listed, the email address will always be considered invalid.
+    :allowed_domains_only: false
+    #
+    # Email addresses in this list will always be valid.
+    #:allowed_emails: []
+    #
+    # Email addresses in this list will always be invalid.
+    #:blocked_emails: []
+    #
+    # Addresses with these domains will always be valid
+    #:allowed_domains: []
+    #
+    # Addresses with these domains will always be invalid
+    #:blocked_domains: []
+    #
+    # Exclude these IP addresses from the MX lookup process.
+    #:blocked_mx_ip_addresses: []
+    #
+    # Name servers to use for MX et al record lookup.
+    # Default is CloudFlare, Google, Oracle/OpenDNS servers.
+    :dns:
+      - 1.1.1.1
+      - 8.8.4.4
+      - 208.67.220.220
+    #:smtp_port: 25
+    #
+    # End smtp validation after the first invalid response rather than
+    # retrying, followed by trying the next server. Can reduce the time
+    # time to validate an email address, but may not catch all issues.
+    :smtp_fail_fast: false
+    #
+    # Parse the content of the SMTP error message to determine if the
+    # email address is valid. This can be useful for some SMTP servers
+    # that don't return exact answers.
+    :smtp_safe_check: true
+    #
+    # Whether to disable the RFC MX lookup flow. When true, only DNS
+    # validation will be performed on MX and Null MX records.
+    :not_rfc_mx_lookup_flow: false
+    #
+    # Override default regular expression pattern for email addresses
+    # and/or the content in SMTP error messages.
+    #:email_pattern: /regex_pattern/
+    #:smtp_error_body_pattern: /regex_pattern/
+    #
+    # Log to the console, a file, or both. The ruby process must have
+    # write access to the log file. The log file will be created if it
+    # does not exist. Log file rotation is not handled by the app.
+    :logger:
+      # One of: :error (default), :unrecognized_error, :recognized_error, :all.
+      :tracking_event: :error
+      :stdout: true
+      # log_absolute_path: '/home/app/log/truemail.log'
+
+:internationalization:
+  :enabled: <%= ENV['I18N_ENABLED'] == 'true' || false %>
+  :default_locale: <%= ENV['I18N_DEFAULT_LOCALE'] || 'en' %>
+  :fallback_locale:
+    fr-CA: [fr_CA, fr_FR, en]
+    fr: [fr_FR, fr_CA, en]
+    de-AT: [de_AT, de, en]
+    de: [de, de_AT, en]
+    it: [it_IT, en]
+    pt: [pt_BR, en]
+    default: [en]
+  # A list of ISO language codes (e.g., 'en' for English, 'es'
+  # for Spanish, etc.). There is a corresponding file in src/locales
+  # with the same name containing the translated text. If it's not
+  # selected automatically, users are able to select their preferred
+  # language by using the toggle in the footer or in the settings
+  # modal if they're logged in.
+  :locales:
+    - bg
+    - da_DK
+    - de
+    - de_AT
+    - el_GR
+    - en
+    - es
+    - fr_CA
+    - fr_FR
+    - it_IT
+    - ja
+    - ko
+    - mi_NZ
+    - nl
+    - tr
+    - uk
+    - pl
+    - pt_BR
+    - sv_SE
+
+:experimental:
+  # SECURITY FEATURE: Controls whether the application can run without a
+  # site.secret (either in this file or via the SECRET env var).
+  #
+  # DEFAULT: false (application will fail to start if site.secret is nil)
+  #
+  # WARNING: Setting to true presents significant security risks:
+  # - Secrets may be stored without proper encryption
+  # - Unauthorized access to sensitive data becomes possible
+  # - Secret link integrity cannot be guaranteed
+  #
+  # VALID USE CASES (temporary only):
+  # 1. RECOVERY: You accidentally ran with nil secret and need to recover
+  #    existing secrets created during that time. Enable temporarily until
+  #    all affected secrets expire (max TTL period).
+  # 2. MIGRATION: During a controlled migration between encryption schemes,
+  #    with proper security measures in place.
+  #
+  # BEHAVIOR WHEN TRUE:
+  # - Application starts without failing
+  # - Warning logs appear at startup
+  # - When decrypting, CipherErrors with the real secret will cause
+  #   automatic retry with nil secret
+  #
+  :allow_nil_global_secret: <%= ENV['ALLOW_NIL_GLOBAL_SECRET'] == 'true' || false %>
+  # SECURITY FEATURE: Support for rotating global secret
+  #
+  # FORMAT: Array of strings containing previous secret values
+  # ["old_secret_1", "old_secret_2", "oldest_secret"]
+  #
+  # USAGE: When rotating secrets, add old values here while setting new primary
+  # secret in site.secret or SECRET env var. The application will:
+  # 1. Use current primary secret for all new encryptions
+  # 2. Try each rotated secret (in order) for decryption when primary fails
+  #
+  # MAINTENANCE: Remove secrets from this list after the relevant secrets
+  # have expired or has been successfully re-encrypted with the current
+  # primary secret. An easy guideline is the maximum TTL in `ttl_options`.
+  :rotated_secrets: []
+  # When set to true, the Rack::Builder#freeze_app freezes the middleware stack
+  # after initialization to prevent any runtime modifications to the app
+  # middleware chain. This is a security measure that prevents malicious
+  # code from injecting new middleware.
+  #
+  # Effects:
+  # - Freezes the middleware stack, preventing adding/removing after boot
+  # - Freezes the app object passed to Rack::Builder
+  # - Does not affect request/response object mutability
+  #
+  # Note: This setting can help make your application more secure by preventing
+  # middleware chain manipulation at runtime. For most applications, this
+  # should be enabled in production environments.
+  :freeze_app: false
+  # Middleware Configuration
+  # Controls which security and performance middleware components are enabled
+  :middleware:
+    # Serve static files for frontend vue application
+    :static_files: true
+    # Sanitizes request parameters to ensure proper UTF-8 encoding
+    # Prevents encoding-based attacks and malformed input
+    :utf8_sanitizer: true
+    # Protects against Cross-Site Request Forgery (CSRF) attacks
+    # Validates that requests originate from the same site
+    :http_origin: false
+    # Escapes HTML entities in request parameters
+    # Helps prevent XSS attacks via request parameters
+    :escaped_params: false
+    # Sets X-XSS-Protection header to enable browser XSS filtering
+    # Modern browsers rely less on this as CSP becomes standard
+    :xss_header: false
+    # Prevents your site from being embedded in frames (clickjacking protection)
+    # Sets X-Frame-Options header to SAMEORIGIN or DENY
+    :frame_options: false
+    # Blocks directory traversal attacks using "../" in paths
+    # Critical for preventing unauthorized file access
+    :path_traversal: false
+    # Protects against cookie tossing attacks
+    # Prevents session fixation via manipulated cookies
+    :cookie_tossing: false
+    # Prevents IP spoofing attacks by validating IP addresses
+    # Useful when IP-based access controls are implemented
+    :ip_spoofing: false
+    # Forces all connections to use HTTPS via HSTS headers
+    # Disable only for development or when behind a secure proxy
+    :strict_transport: false
+  # When enabled, adds Content-Security-Policy headers to the response. When
+  # `development.enabled=true`, the headers will be less restrictive but still
+  # prevent any content loading from other origins. In regular production mode,
+  # a secure nonce will be included with the headers and unsafe-inline content
+  # is completely blocked. The nonce can be accessed via the rack request object
+  # `req.env['ots.nonce']`. The backend views grab it from there to add it to
+  # all front-end script and style assets automatically. You'd only need to use
+  # the none if you're adding new script or style dependencies.
+  # When disabled, no csp headers are included in any environment.
+  :csp:
+    :enabled: <%= ENV['CSP_ENABLED'] == 'true' || false %>
 ```
-
-### Staging
-
-```yaml
-:site:
-  :ssl: true
-  :protocol: https
-
-:logging:
-  :level: "info"
-  :format: "json"
-
-:authentication:
-  :required: true
-
-:secrets:
-  :max_ttl: 3600
-```
-
-### Production
-
-```yaml
-:site:
-  :ssl: true
-  :protocol: https
-
-:logging:
-  :level: "warn"
-  :format: "json"
-  :audit:
-    :enabled: true
-
-:authentication:
-  :required: true
-  :lockout:
-    :enabled: true
-
-:security:
-  :rate_limiting:
-    :enabled: true
-  :headers:
-    :hsts: true
-
-:monitoring:
-  :health_checks:
-    :enabled: true
-  :metrics:
-    :enabled: true
-```
-
-## Configuration Validation
-
-### Syntax Validation
-
-```bash
-# Validate YAML syntax
-ruby -ryaml -e "YAML.load_file('config/config.yaml')"
-
-# Validate environment variables
-bundle exec ruby -e "
-  require './config/environment'
-  puts 'Configuration valid!'
-"
-```
-
-### Security Checklist
-
-Before deploying to production:
-
-- [ ] `SECRET_KEY_BASE` is set and secure
-- [ ] SSL/TLS is enabled (`ssl: true`)
-- [ ] Authentication is configured appropriately
-- [ ] Rate limiting is enabled
-- [ ] Security headers are configured
-- [ ] Logging and monitoring are enabled
-- [ ] Database credentials are secure
-- [ ] Email configuration is tested
-
-## Troubleshooting Configuration Issues
-
-### Common Problems
-
-**Configuration not loading:**
-```bash
-# Check file permissions
-ls -la config/config.yaml
-
-# Validate YAML syntax
-ruby -ryaml -e "puts YAML.load_file('config/config.yaml')"
-```
-
-**Database connection errors:**
-```bash
-# Test Redis connection
-redis-cli -u $REDIS_URL ping
-
-# Test PostgreSQL connection
-psql $DATABASE_URL -c "SELECT 1;"
-```
-
-**Email not working:**
-```bash
-# Test SMTP settings
-bundle exec ruby -e "
-  require 'net/smtp'
-  Net::SMTP.start('$SMTP_HOST', $SMTP_PORT, 'localhost', '$SMTP_USERNAME', '$SMTP_PASSWORD', :auto)
-  puts 'SMTP connection successful'
-"
-```
-
-### Debug Mode
-
-Enable debug logging for troubleshooting:
-
-```yaml
-:logging:
-  :level: "debug"
-  :format: "text"
-```
-
-Or via environment variable:
-```bash
-LOG_LEVEL=debug bundle exec ruby bin/onetime
-```
-
-## Advanced Configuration Topics
-
-### Custom Encryption
-
-For specialized encryption requirements:
-
-```yaml
-:secrets:
-  :encryption:
-    :algorithm: "aes-256-gcm"
-    :key_derivation: "argon2"
-    :memory_cost: 65536
-    :time_cost: 3
-    :parallelism: 4
-```
-
-### Multi-tenancy
-
-Basic multi-tenant configuration:
-
-```yaml
-:multi_tenancy:
-  :enabled: true
-  :domain_based: true
-  :default_tenant: "default"
-  :tenant_isolation: "database"
-```
-
-### Integration Settings
-
-For external service integrations:
-
-```yaml
-:integrations:
-  :slack:
-    :enabled: false
-    :webhook_url: ""
-
-  :teams:
-    :enabled: false
-    :webhook_url: ""
-
-  :ldap:
-    :enabled: false
-    :host: "ldap.your-domain.com"
-    :port: 389
-    :base_dn: "dc=your-domain,dc=com"
-```
-
-This configuration reference provides comprehensive control over your Onetime Secret instance. Adjust settings based on your security requirements, infrastructure, and organizational needs.

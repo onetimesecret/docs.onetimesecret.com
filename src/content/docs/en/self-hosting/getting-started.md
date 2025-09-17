@@ -54,9 +54,9 @@ Open your browser to:
 
 For those who prefer manual setup, you'll need:
 
-- **Ruby 3.1+** (may not be available in default system packages)
+- **Ruby 3.2+** (may not be available in default system packages)
 - **Redis 5+** or **Valkey** (Redis alternative)
-- **Node.js 22+** and **pnpm** for the frontend Vue application
+- **Node.js 22+** and **pnpm** (only required for development and building frontend assets)
 
 You'll need to build the frontend assets with `pnpm install && pnpm run build:local` before running the application.
 
