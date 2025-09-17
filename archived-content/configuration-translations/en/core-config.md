@@ -13,10 +13,10 @@ Core configuration manages OneTimeSecret's foundational infrastructure settings 
 site:
   # Primary hostname and port
   host: localhost:3000
-  
+
   # Enable HTTPS enforcement
   ssl: false
-  
+
   # Application secret key for cryptographic operations
   # CRITICAL: Must change from default before production
   secret: CHANGEME
@@ -29,7 +29,7 @@ site:
   authentication:
     # Toggle authentication system
     enabled: true
-    
+
     # Administrator email addresses with elevated privileges
     # The term "colonel" references protected system core access
     colonels:
@@ -43,7 +43,7 @@ site:
   authenticity:
     # Protection method (currently supports 'altcha')
     type: altcha
-    
+
     # HMAC key for authenticity challenges
     # CRITICAL: Replace default value
     secret_key: <REPLACE_WITH_STRONG_HMAC_KEY>
@@ -57,31 +57,31 @@ Individually toggleable security protections from rack-contrib and rack-protecti
 middleware:
   # Serve frontend Vue application assets
   static_files: true
-  
+
   # Sanitize request parameters for proper UTF-8 encoding
   utf8_sanitizer: true
-  
+
   # CSRF protection via origin validation
   http_origin: true
-  
+
   # HTML entity escaping in request parameters
   escaped_params: true
-  
+
   # X-XSS-Protection browser header
   xss_header: true
-  
+
   # Clickjacking protection via X-Frame-Options
   frame_options: true
-  
+
   # Block directory traversal attacks
   path_traversal: true
-  
+
   # Prevent session fixation via cookie manipulation
   cookie_tossing: true
-  
+
   # Validate IP addresses against spoofing
   ip_spoofing: true
-  
+
   # Force HTTPS via HSTS headers
   strict_transport: true
 ```
@@ -129,15 +129,15 @@ mail:
   connection:
     # Delivery method: 'ses', 'smtp', etc.
     mode: smtp
-    
+
     # AWS SES region (for 'ses' mode)
     region: us-east-1
-    
+
     # Sender configuration
     # CRITICAL: Change from default
     from: CHANGEME@example.com
     fromname: Onetime Secret
-    
+
     # SMTP configuration
     host: smtp.example.com
     port: 587
@@ -171,7 +171,7 @@ mail:
 i18n:
   # Toggle internationalization features
   enabled: true
-  
+
   # Default language code
   default_locale: en
 ```
@@ -213,14 +213,14 @@ i18n:
     - sv_SE
     - tr
     - uk
-    
+
     # Asian
     - ja
     - ko
-    
+
     # Pacific
     - mi_NZ
-    
+
     # Americas
     - pt_BR
 ```
@@ -250,10 +250,10 @@ i18n:
 development:
   # Auto-detect from RACK_ENV
   enabled: <%= ['development', 'dev'].include?(ENV['RACK_ENV']) %>
-  
+
   # Enable debug logging
   debug: false
-  
+
   # Frontend development server
   # Use 'http://localhost:5173' for built-in Vite proxy
   # Leave empty when using external reverse proxy
@@ -269,11 +269,11 @@ experimental:
   # Allow running without site.secret (DANGEROUS)
   # Only for recovery or migration scenarios
   allow_nil_global_secret: false
-  
+
   # Previous secret keys for rotation
   # Remove after all secrets expire or re-encrypt
   rotated_secrets: []
-  
+
   # Freeze middleware stack after initialization
   freeze_app: false
 ```

@@ -78,10 +78,10 @@ experimental:
     utf8_sanitizer: true      # Prevent encoding attacks
     path_traversal: true      # Block directory traversal
     ip_spoofing: true        # Validate client IPs
-    
+
     # HTTPS enforcement
     strict_transport: true    # HSTS headers
-    
+
     # Additional protections
     http_origin: true        # CSRF protection
     escaped_params: true     # XSS prevention
@@ -101,7 +101,7 @@ experimental:
     strict_transport: false  # Proxy adds HSTS
     xss_header: false       # Proxy adds X-XSS-Protection
     frame_options: false    # Proxy adds X-Frame-Options
-    
+
     # Application must handle these
     utf8_sanitizer: true
     path_traversal: true
@@ -121,7 +121,7 @@ storage:
     connection:
       # Use password authentication
       url: redis://:<password>@localhost:6379/0
-      
+
       # For Redis 6+ with ACL
       url: redis://username:password@localhost:6379/0
 ```
@@ -156,11 +156,11 @@ mail:
     tls: true
     port: 587
     auth: login
-    
+
     # Secure credentials
     user: <%= ENV['SMTP_USERNAME'] %>
     pass: <%= ENV['SMTP_PASSWORD'] %>
-    
+
     # Valid sender address
     from: <%= ENV['FROM_EMAIL'] || 'noreply@company.com' %>
 ```
@@ -175,11 +175,11 @@ mail:
     recipients:
       # Full SMTP validation
       default_validation_type: :smtp
-      
+
       # Increase security
       connection_attempts: 1
       smtp_fail_fast: true
-      
+
       # Restrict to known domains
       allowed_domains_only: true
       allowed_domains:
@@ -199,12 +199,12 @@ limits:
   create_secret: 100      # Per 20 minutes
   show_secret: 200
   burn_secret: 200
-  
+
   # Authentication
   create_account: 2
   authenticate_session: 10
   failed_passphrase: 5
-  
+
   # Recovery
   forgot_password_request: 2
   forgot_password_reset: 3
@@ -238,21 +238,21 @@ site:
 server {
     listen 443 ssl http2;
     server_name secrets.company.com;
-    
+
     # Modern SSL configuration
     ssl_certificate /path/to/cert.pem;
     ssl_certificate_key /path/to/key.pem;
     ssl_protocols TLSv1.2 TLSv1.3;
     ssl_ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384;
     ssl_prefer_server_ciphers off;
-    
+
     # Security headers
     add_header Strict-Transport-Security "max-age=63072000" always;
     add_header X-Frame-Options "SAMEORIGIN" always;
     add_header X-Content-Type-Options "nosniff" always;
     add_header X-XSS-Protection "1; mode=block" always;
     add_header Referrer-Policy "strict-origin-when-cross-origin" always;
-    
+
     location / {
         proxy_pass http://localhost:3000;
         proxy_set_header X-Real-IP $remote_addr;

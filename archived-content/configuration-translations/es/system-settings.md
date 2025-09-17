@@ -14,17 +14,17 @@ user_interface:
   header:
     # Toggle header customization
     enabled: true
-    
+
     branding:
       logo:
         # Logo image path or Vue component name
         url: DefaultLogo.vue
         alt: Share a Secret One-Time
         href: /
-      
+
       # Override site name (falls back to i18n)
       site_name: ~
-    
+
     navigation:
       # Toggle header navigation
       enabled: true
@@ -37,7 +37,7 @@ user_interface:
   footer_links:
     # Master switch for footer links
     enabled: false
-    
+
     groups:
       - name: legal
         i18n_key: web.footer.legals
@@ -46,7 +46,7 @@ user_interface:
             i18n_key: terms-of-service
             url: /terms
             external: false
-          
+
           - text: Privacy Policy
             i18n_key: privacy-policy
             url: /privacy
@@ -59,10 +59,10 @@ user_interface:
 user_interface:
   # Enable user registration
   signup: true
-  
+
   # Enable user login
   signin: true
-  
+
   # Auto-verify email addresses
   autoverify: false
 ```
@@ -81,7 +81,7 @@ api:
 secret_options:
   # Default TTL in seconds when none specified
   default_ttl: 604800  # 7 days
-  
+
   # Available TTL options (in seconds)
   ttl_options:
     - 300     # 5 minutes
@@ -152,7 +152,7 @@ features:
     enabled: false
     # Default domain for link generation
     default: ~
-    
+
     cluster:
       type: ~
       api_key: ~
@@ -178,11 +178,11 @@ diagnostics:
       maxBreadcrumbs: 5
       # Log errors to console
       logErrors: true
-    
+
     backend:
       # Ruby-specific DSN
       dsn: ~
-    
+
     frontend:
       # Vue-specific DSN
       dsn: ~
@@ -213,7 +213,7 @@ limits:
   create_account: 10
   authenticate_session: 50
   failed_passphrase: 15
-  
+
   # Password recovery
   forgot_password_request: 20
   forgot_password_reset: 30
@@ -249,27 +249,27 @@ mail:
     recipients:
       # Validation method: :regex, :mx, :mx_blacklist, :smtp
       default_validation_type: :mx
-      
+
       # SMTP verification settings
       verifier_email: verify@example.com
       verifier_domain: example.com
       connection_timeout: 1
       response_timeout: 1
       connection_attempts: 2
-      
+
       # Domain restrictions
       allowed_domains_only: false
-      
+
       # DNS servers for MX lookup
       dns:
         - 1.1.1.1
         - 8.8.4.4
         - 208.67.220.220
-      
+
       # SMTP settings
       smtp_port: 25
       smtp_fail_fast: true
-      
+
       # Logging configuration
       logger:
         tracking_event: :error

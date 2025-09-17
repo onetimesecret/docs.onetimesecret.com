@@ -207,10 +207,10 @@ stringData:
    # === Core Settings ===
    HOST=onetimesecret.com
    SECRET=...
-   
+
    # === Redis ===
    REDIS_URL=...
-   
+
    # === Mail ===
    FROM_EMAIL=...
    ```
@@ -219,7 +219,7 @@ stringData:
    ```bash
    # Required: Application secret (generate with: openssl rand -hex 32)
    SECRET=
-   
+
    # Optional: Custom domain (defaults to HOST)
    DEFAULT_DOMAIN=
    ```
@@ -323,7 +323,7 @@ erb config.yaml | grep -A5 "site:"
    # Correct
    SSL=true
    AUTH_ENABLED=false
-   
+
    # Incorrect (evaluates as true)
    SSL=1
    AUTH_ENABLED=no
@@ -333,7 +333,7 @@ erb config.yaml | grep -A5 "site:"
    ```bash
    # Problematic
    REDIS_URL=redis://pass@host:6379
-   
+
    # Safe
    REDIS_URL="redis://pass@host:6379"
    ```
@@ -348,7 +348,7 @@ erb config.yaml | grep -A5 "site:"
    ```yaml
    # Wrong - missing quotes
    value: <%= ENV[HOST] %>
-   
+
    # Correct
    value: <%= ENV['HOST'] %>
    ```

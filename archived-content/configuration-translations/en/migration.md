@@ -55,12 +55,12 @@ site:
   host: <%= ENV['HOST'] || 'localhost:3000' %>
   ssl: <%= ENV['SSL'] == 'true' || false %>
   secret: <%= ENV['SECRET'] || nil %>
-  
+
   authentication:
     enabled: <%= ENV['AUTH_ENABLED'] != 'false' %>
     colonels:
       - <%= ENV['COLONEL'] || 'CHANGEME@example.com' %>
-  
+
   authenticity:
     type: <%= ENV['AUTHENTICITY_TYPE'] || 'altcha' %>
     secret_key: <%= ENV['AUTHENTICITY_SECRET_KEY'] || '<REPLACE_WITH_STRONG_HMAC_KEY>' %>
@@ -110,11 +110,11 @@ user_interface:
         url: <%= ENV['LOGO_URL'] || 'DefaultLogo.vue' %>
         alt: <%= ENV['LOGO_ALT'] || 'Share a Secret One-Time' %>
       site_name: <%= ENV['SITE_NAME'] %>
-  
+
   footer_links:
     enabled: <%= ENV['FOOTER_LINKS'] == 'true' || false %>
     # ... link configuration
-  
+
   signup: <%= ENV['AUTH_SIGNUP'] != 'false' %>
   signin: <%= ENV['AUTH_SIGNIN'] != 'false' %>
   autoverify: <%= ENV['AUTH_AUTOVERIFY'] == 'true' || false %>
@@ -130,11 +130,11 @@ features:
   domains:
     enabled: <%= ENV['DOMAINS_ENABLED'] == 'true' || false %>
     default: <%= ENV['DEFAULT_DOMAIN'] || nil %>
-  
+
   plans:
     enabled: <%= ENV['PLANS_ENABLED'] == 'true' || false %>
     stripe_key: <%= ENV['STRIPE_KEY'] || nil %>
-  
+
   regions:
     enabled: <%= ENV['REGIONS_ENABLED'] == 'true' || false %>
     current_jurisdiction: <%= ENV['JURISDICTION'] || nil %>

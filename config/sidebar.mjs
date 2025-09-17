@@ -116,15 +116,16 @@ export const sidebar = [
 
   createGroup("regions", [createLink("overview", "regions")]),
 
-  createGroup("configuration", [
-    createLink("overview", "configuration"),
-    createLink("coreConfig", "configuration/core-config"),
-    createLink("systemSettings", "configuration/system-settings"),
-    createLink("environmentVariables", "configuration/environment-variables"),
-    createLink("security", "configuration/security"),
-    createLink("migration", "configuration/migration"),
-    createLink("quickReference", "configuration/quick-reference"),
-  ]),
+  // ARCHIVED: Configuration section temporarily hidden
+  // createGroup("configuration", [
+  //   createLink("overview", "configuration"),
+  //   createLink("coreConfig", "configuration/core-config"),
+  //   createLink("systemSettings", "configuration/system-settings"),
+  //   createLink("environmentVariables", "configuration/environment-variables"),
+  //   createLink("security", "configuration/security"),
+  //   createLink("migration", "configuration/migration"),
+  //   createLink("quickReference", "configuration/quick-reference"),
+  // ]),
 
   createGroup("restApi", [
     createLink("overview", "rest-api"),
