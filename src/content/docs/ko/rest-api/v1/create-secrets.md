@@ -7,7 +7,7 @@ _업데이트 2025-04-02_
 
 :::참고
 **데이터 로캘 및 지역 선택**
-- 미국([`us.onetimesecret.com`](https://us.onetimesecret.com/)) 또는 유럽([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) 데이터 센터 중에서 선택합니다.
+- 미국([`us.onetimesecret.com`](https://us.onetimesecret.com/)), 유럽([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)), 캐나다([`ca.onetimesecret.com`](https://ca.onetimesecret.com/)), 또는 뉴질랜드([`nz.onetimesecret.com`](https://nz.onetimesecret.com/)) 데이터 센터 중에서 선택합니다.
 - 데이터 주권, 지연 시간 및 규정 준수 요구 사항과 같은 요소를 고려합니다.
 - 참고: 기본 `onetimesecret.com`은 계속 작동하며 활성 데이터 센터로 라우팅되며, 이 기능은 향후 사용되지 않을 수 있으므로 특정 로케이션을 사용하는 것이 좋습니다.
 :::

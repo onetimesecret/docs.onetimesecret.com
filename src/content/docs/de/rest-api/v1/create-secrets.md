@@ -7,7 +7,7 @@ _Aktualisiert 2025-04-02_
 
 <!-- ::callout{icon="i-heroicons-globe-alt"} -->
 **Auswahl von Datenort und Region**
-- Wählen Sie zwischen US ([`us.onetimesecret.com`](https://us.onetimesecret.com/)) oder EU ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) Rechenzentren
+- Wählen Sie zwischen US ([`us.onetimesecret.com`](https://us.onetimesecret.com/)), EU ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)), Kanada ([`ca.onetimesecret.com`](https://ca.onetimesecret.com/)), oder Neuseeland ([`nz.onetimesecret.com`](https://nz.onetimesecret.com/)) Rechenzentren
 - Berücksichtigen Sie Faktoren wie Datenhoheit, Latenzzeit und Compliance-Anforderungen
 - **HINWEIS:** Standardmäßig bleibt `onetimesecret.com` in Betrieb und leitet zu einem aktiven Rechenzentrum weiter. Es wird empfohlen, eine bestimmte Lokalität zu verwenden, da diese Funktion in Zukunft möglicherweise veraltet sein wird.
 ::

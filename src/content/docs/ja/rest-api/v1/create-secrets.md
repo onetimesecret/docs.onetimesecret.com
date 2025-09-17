@@ -7,7 +7,7 @@ description: Onetime Secret REST API を使用したシークレットの作成�
 
 :::note
 **データロケーションと地域の選択**
-- 米国（[`us.onetimesecret.com`](https://us.onetimesecret.com/)）またはEU（[`eu.onetimesecret.com`](https://eu.onetimesecret.com/)）のデータセンターから選択する。
+- 米国（[`us.onetimesecret.com`](https://us.onetimesecret.com/)）、EU（[`eu.onetimesecret.com`](https://eu.onetimesecret.com/)）、カナダ（[`ca.onetimesecret.com`](https://ca.onetimesecret.com/)）、またはニュージーランド（[`nz.onetimesecret.com`](https://nz.onetimesecret.com/)）のデータセンターから選択する。
 - データ主権、レイテンシー、コンプライアンス要件などの要因を考慮する。
 - **NOTE:** デフォルトの `onetimesecret.com` は引き続き運用可能で、アクティブなデータセンターへのルーティングを行うが、この機能は将来廃止される可能性があるため、特定のロケールを使用することを推奨する。
 :::

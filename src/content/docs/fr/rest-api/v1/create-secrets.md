@@ -7,7 +7,7 @@ Mis à jour le 2025-04-02_
 
 :::note
 **Sélection de la localisation des données et de la région**
-- Choisissez entre les centres de données des États-Unis ([`us.onetimesecret.com`](https://us.onetimesecret.com/)) ou de l'Union européenne ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)).
+- Choisissez entre les centres de données des États-Unis ([`us.onetimesecret.com`](https://us.onetimesecret.com/)), de l'Union européenne ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)), du Canada ([`ca.onetimesecret.com`](https://ca.onetimesecret.com/)), ou de la Nouvelle-Zélande ([`nz.onetimesecret.com`](https://nz.onetimesecret.com/)).
 - Tenir compte de facteurs tels que la souveraineté des données, la latence et les exigences de conformité.
 - REMARQUE:** Par défaut, `onetimesecret.com` reste opérationnel et dirige vers un centre de données actif, l'utilisation d'une localité spécifique est recommandée car cette fonctionnalité pourrait être obsolète à l'avenir.
 :: :

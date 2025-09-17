@@ -7,7 +7,7 @@ bijgewerkt op 2025-04-02
 
 :::opmerking
 **Selectie van datalocatie en regio**
-- Kies tussen VS ([`us.onetimesecret.com`](https://us.onetimesecret.com/)) of EU ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) datacenters
+- Kies tussen VS ([`us.onetimesecret.com`](https://us.onetimesecret.com/)), EU ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)), Canada ([`ca.onetimesecret.com`](https://ca.onetimesecret.com/)), of Nieuw-Zeeland ([`nz.onetimesecret.com`](https://nz.onetimesecret.com/)) datacenters
 - Houd rekening met factoren zoals gegevenssoevereiniteit, latentie en nalevingsvereisten
 - **NOOT:** Standaard blijft `onetimesecret.com` operationeel en routeert naar een actief datacenter. Het gebruik van een specifieke locatie wordt aanbevolen omdat deze functionaliteit in de toekomst mogelijk wordt afgeschaft.
 :::
