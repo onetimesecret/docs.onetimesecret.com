@@ -1,6 +1,6 @@
 ---
-Titel: Referenz der Systemeinstellungen
-Beschreibung: Vollständige Referenz für die Betriebseinstellungen von OneTimeSecret (system_settings.defaults.yaml)
+title: Referenz der Systemeinstellungen
+description: Vollständige Referenz für die Betriebseinstellungen von OneTimeSecret (system_settings.defaults.yaml)
 ---
 
 Systemeinstellungen definieren Betriebsparameter, die zur Laufzeit über `etc/system_settings.defaults.yaml` geändert werden können. Im Gegensatz zur Kernkonfiguration konzentrieren sich diese Einstellungen auf benutzerseitige Funktionen und Betriebsgrenzen.

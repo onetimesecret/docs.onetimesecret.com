@@ -1,6 +1,6 @@
 ---
-Titel: Leitfaden zur Sicherheitskonfiguration
-Beschreibung: Härtung von OneTimeSecret für den Produktionseinsatz
+title: Leitfaden zur Sicherheitskonfiguration
+description: Härtung von OneTimeSecret für den Produktionseinsatz
 ---
 
 Dieser Leitfaden behandelt sicherheitskritische Konfigurationseinstellungen und bewährte Verfahren für die Bereitstellung von OneTimeSecret in Produktionsumgebungen.

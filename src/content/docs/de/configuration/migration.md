@@ -1,6 +1,6 @@
 ---
-Titel: Leitfaden zur Konfigurationsmigration
-Beschreibung: Migration von einer monolithischen zu einer geteilten Konfigurationsarchitektur
+title: Leitfaden zur Konfigurationsmigration
+description: Migration von einer monolithischen zu einer geteilten Konfigurationsarchitektur
 ---
 
 Dieser Leitfaden hilft Ihnen bei der Migration von der monolithischen Konfigurationsdatei von OneTimeSecret auf die neue geteilte Konfigurationsarchitektur, die die zentralen Infrastruktureinstellungen von den zur Laufzeit anpassbaren Systemeinstellungen trennt.

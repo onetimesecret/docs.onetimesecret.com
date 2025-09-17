@@ -1,8 +1,6 @@
-#
-
 ---
-título: Referencia rápida
-descripción: Hoja de trucos de configuración y guía de solución de problemas
+title: Referencia rápida
+description: Hoja de trucos de configuración y guía de solución de problemas
 barra lateral:
   pedido: 7
 ---

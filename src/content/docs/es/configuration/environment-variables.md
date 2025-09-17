@@ -1,8 +1,6 @@
-#
-
 ---
-título: Guía de variables de entorno
-descripción: Uso de variables de entorno para configurar OneTimeSecret
+title: Guía de variables de entorno
+description: Uso de variables de entorno para configurar OneTimeSecret
 ---
 
 OneTimeSecret admite anulaciones de variables de entorno para todos los valores de configuración, lo que permite un despliegue flexible en diferentes entornos sin modificar los archivos de configuración.

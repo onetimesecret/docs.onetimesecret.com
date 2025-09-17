@@ -1,6 +1,6 @@
 ---
-Titel: Kernkonfigurations-Referenz
-Beschreibung: Vollständige Referenz für die Infrastrukturkonfiguration von OneTimeSecret (config.yaml)
+title: Kernkonfigurations-Referenz
+description: Vollständige Referenz für die Infrastrukturkonfiguration von OneTimeSecret (config.yaml)
 ---
 
 Die Kernkonfiguration verwaltet die grundlegenden Infrastruktureinstellungen von OneTimeSecret über `etc/config.yaml`. Diese Parameter erfordern einen Neustart der Anwendung, um sie zu ändern, und bilden die Grundlage für den Systembetrieb.

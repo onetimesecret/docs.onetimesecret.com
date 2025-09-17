@@ -1,6 +1,6 @@
 ---
-título: Referencia de configuración del núcleo
-descripción: Referencia completa para la configuración de la infraestructura de OneTimeSecret (config.yaml)
+title: Referencia de configuración del núcleo
+description: Referencia completa para la configuración de la infraestructura de OneTimeSecret (config.yaml)
 ---
 
 La configuración del núcleo gestiona los parámetros fundamentales de la infraestructura de OneTimeSecret a través de `etc/config.yaml`. Estos parámetros requieren el reinicio de la aplicación para modificarlos y forman la base de las operaciones del sistema.

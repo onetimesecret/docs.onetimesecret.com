@@ -1,6 +1,6 @@
 ---
-título: Guía de configuración de seguridad
-descripción: Endurecimiento de OneTimeSecret para su despliegue en producción
+title: Guía de configuración de seguridad
+description: Endurecimiento de OneTimeSecret para su despliegue en producción
 ---
 
 Esta guía cubre los parámetros de configuración críticos para la seguridad y las mejores prácticas para implementar OneTimeSecret en entornos de producción.

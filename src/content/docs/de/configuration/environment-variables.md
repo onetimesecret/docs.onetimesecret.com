@@ -1,6 +1,6 @@
 ---
-Titel: Handbuch der Umgebungsvariablen
-Beschreibung: Verwendung von Umgebungsvariablen zur Konfiguration von OneTimeSecret
+title: Handbuch der Umgebungsvariablen
+description: Verwendung von Umgebungsvariablen zur Konfiguration von OneTimeSecret
 ---
 
 OneTimeSecret unterstützt die Überschreibung von Umgebungsvariablen für alle Konfigurationswerte und ermöglicht so eine flexible Bereitstellung in verschiedenen Umgebungen ohne Änderung der Konfigurationsdateien.

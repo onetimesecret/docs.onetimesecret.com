@@ -1,6 +1,6 @@
 ---
-Titel: Konfigurationsübersicht
-Beschreibung: Verständnis der zweischichtigen Konfigurationsarchitektur von OneTimeSecret
+title: Konfigurationsübersicht
+description: Verständnis der zweischichtigen Konfigurationsarchitektur von OneTimeSecret
 ---
 
 OneTimeSecret verwendet ein zweischichtiges Konfigurationssystem, das darauf ausgelegt ist, Infrastrukturbelange von betrieblichen Einstellungen zu trennen. Diese Architektur bietet Flexibilität bei gleichzeitiger Wahrung von Sicherheit und Stabilität.

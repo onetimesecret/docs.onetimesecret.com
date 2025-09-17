@@ -1,6 +1,6 @@
 ---
-Titel: Kurzreferenz
-Beschreibung: Spickzettel zur Konfiguration und Anleitung zur Fehlerbehebung
+title: Kurzreferenz
+description: Spickzettel zur Konfiguration und Anleitung zur Fehlerbehebung
 Seitenleiste:
   Bestellung: 7
 ---
