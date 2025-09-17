@@ -1,0 +1,97 @@
+{
+  "secret": {
+    "description": "The core concept - confidential information being shared, not personal secrets",
+    "translations": {
+      "de": "Geheimnis",
+      "es": "secreto",
+      "fr": "secret",
+      "it": "messaggio",
+      "ja": "シークレット",
+      "ko": "비밀 메시지",
+      "mi": "karere huna",
+      "nl": "geheim",
+      "bg": "тайна",
+      "uk": "секрет",
+      "zh-cn": "内容"
+    },
+    "notes": "Emphasize the message/content being shared rather than personal secrets. See terminology/secret-concept.md for detailed guidance."
+  },
+  "passphrase": {
+    "description": "Authentication for individual secrets (distinct from account passwords)",
+    "translations": {
+      "de": "Passphrase",
+      "es": "frase de contraseña",
+      "fr": "phrase secrète",
+      "it": "passphrase",
+      "ja": "パスフレーズ",
+      "ko": "접근 문구",
+      "mi": "kupu karapa",
+      "nl": "wachtwoordzin",
+      "bg": "ключова фраза",
+      "uk": "парольна фраза",
+      "zh-cn": "密码短语"
+    },
+    "notes": "Must distinguish from account passwords. See terminology/password-passphrase.md"
+  },
+  "password": {
+    "description": "Account login credentials (distinct from secret passphrases)",
+    "translations": {
+      "de": "Passwort",
+      "es": "contraseña",
+      "fr": "mot de passe",
+      "it": "password",
+      "ja": "パスワード",
+      "ko": "비밀번호",
+      "mi": "kupuhipa",
+      "nl": "wachtwoord",
+      "bg": "парола",
+      "uk": "пароль",
+      "zh-cn": "密码"
+    },
+    "notes": "For account authentication only, not secret protection"
+  },
+  "burn": {
+    "description": "Permanently delete a secret before viewing",
+    "translations": {
+      "de": "zerstören",
+      "es": "destruir",
+      "fr": "supprimer",
+      "it": "distruggere",
+      "ja": "削除",
+      "ko": "소각",
+      "mi": "whakawareware",
+      "nl": "vernietigen",
+      "bg": "изтрива",
+      "uk": "знищити",
+      "zh-cn": "销毁"
+    },
+    "notes": "Emphasize permanent deletion aspect"
+  },
+  "colonel": {
+    "description": "Administrator role (technical term specific to Onetime Secret)",
+    "translations": {
+      "de": "Administrator",
+      "es": "administrador",
+      "fr": "administrateur",
+      "it": "amministratore",
+      "ja": "管理者",
+      "ko": "관리자",
+      "mi": "kaiwhakahaere",
+      "nl": "beheerder",
+      "bg": "администратор",
+      "uk": "адміністратор",
+      "zh-cn": "管理员"
+    },
+    "notes": "Translate as 'administrator' - the English term 'colonel' is project-specific and confusing"
+  },
+  "self-hosted": {
+    "description": "Running the software on your own infrastructure",
+    "translations": {
+      "de": ["Selbst-gehostet", "Eigenhosting", "On-Premise"],
+      "es": ["Auto-alojado", "Auto-hospedado", "Alojamiento propio"],
+      "fr": ["Auto-hébergé", "Hébergement autonome"],
+      "nl": ["Zelf-gehost", "Eigen hosting"]
+    },
+    "notes": "See reference/self-hosted-terms.md for regional preferences and context"
+  }
+}
