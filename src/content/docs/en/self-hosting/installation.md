@@ -17,7 +17,18 @@ Docker provides the most reliable and portable deployment method.
 
 #### Using Docker Compose
 
-**Full Stack (Application + Redis + PostgreSQL):**
+For complete infrastructure management, use the dedicated Docker Compose repository:
+
+**Repository**: https://github.com/onetimesecret/docker-compose/
+
+**Quick setup:**
+```bash
+git clone https://github.com/onetimesecret/docker-compose.git
+cd docker-compose
+docker-compose up -d
+```
+
+**Manual Docker Compose setup:**
 
 ```yaml
 # docker-compose.yml
@@ -25,55 +36,37 @@ version: '3.8'
 
 services:
   onetime:
-    image: onetimesecret/onetime:latest
+    image: onetimesecret/onetimesecret:latest
     ports:
-      - "7143:7143"
+      - "3000:3000"
     environment:
       - REDIS_URL=redis://redis:6379/0
-      - DATABASE_URL=postgres://onetime:password@postgres:5432/onetime
+      - SECRET=${SECRET}
+      - HOST=${HOST:-localhost:3000}
+      - SSL=${SSL:-false}
+      - RACK_ENV=production
     depends_on:
       - redis
-      - postgres
     volumes:
-      - ./config:/app/config
+      - ./etc:/app/etc
       - ./logs:/app/logs
 
   redis:
-    image: redis:7-alpine
+    image: redis:bookworm
     volumes:
       - redis_data:/data
-
-  postgres:
-    image: postgres:15-alpine
-    environment:
-      - POSTGRES_DB=onetime
-      - POSTGRES_USER=onetime
-      - POSTGRES_PASSWORD=password
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
+    command: redis-server --requirepass ${REDIS_PASSWORD}
 
 volumes:
   redis_data:
-  postgres_data:
 ```
 
-**Application Only (External Services):**
-
-```yaml
-# docker-compose.minimal.yml
-version: '3.8'
-
-services:
-  onetime:
-    image: onetimesecret/onetime:latest
-    ports:
-      - "7143:7143"
-    environment:
-      - REDIS_URL=redis://your-redis-host:6379/0
-      - DATABASE_URL=postgres://user:pass@your-db-host:5432/onetime
-    volumes:
-      - ./config:/app/config
-      - ./logs:/app/logs
+**Environment file (.env):**
+```bash
+SECRET=your-secure-32-character-hex-key
+REDIS_PASSWORD=your-redis-password
+HOST=your-domain.com
+SSL=true
 ```
 
 #### Custom Docker Build
@@ -114,11 +107,11 @@ For environments requiring custom configurations or existing infrastructure.
 
 **Minimum Production Requirements:**
 - 2 CPU cores
-- 4GB RAM
-- 20GB disk space
-- Ruby 3.2+
-- Redis 6.0+
-- PostgreSQL 12+ (optional, Redis is default)
+- 1GB RAM
+- 4GB disk space
+- Ruby 3.1+
+- Redis 5.0+
+- Node.js 22+ (for development)
 
 #### Installing Dependencies
 
@@ -136,8 +129,10 @@ sudo apt install -y redis-server
 sudo systemctl enable redis-server
 sudo systemctl start redis-server
 
-# Install PostgreSQL (optional)
-sudo apt install -y postgresql postgresql-contrib
+# Install Node.js (for development)
+curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
+sudo apt install -y nodejs
+sudo npm install -g pnpm@latest
 ```
 
 **CentOS/RHEL 8:**
@@ -175,7 +170,10 @@ bundle install --deployment --without development test
 
 # Copy and configure environment
 cp .env.example .env
-cp config/config.example.yaml config/config.yaml
+cp ./etc/config.example.yaml ./etc/config.yaml
+
+# Create commit hash for version tracking
+git rev-parse --short HEAD > .commit_hash.txt
 ```
 
 ## Reverse Proxy Configuration

@@ -25,6 +25,8 @@
     "selfHosting": "Self-Hosting",
     "installationDeployment": "Installation & Deployment",
     "configurationReference": "Configuration Reference",
+    "environmentVariables": "Environment Variables",
+    "installationDeployment": "Installation & Deployment",
     "configuration": "Configuration",
     "coreConfig": "Core Configuration",
     "systemSettings": "System Settings",

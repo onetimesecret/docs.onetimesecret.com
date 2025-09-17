@@ -121,6 +121,7 @@ export const sidebar = [
     createLink("gettingStarted", "self-hosting/getting-started"),
     createLink("installationDeployment", "self-hosting/installation"),
     createLink("configurationReference", "self-hosting/configuration"),
+    createLink("environmentVariables", "self-hosting/configuration-reference"),
   ]),
 
   createGroup("restApi", [

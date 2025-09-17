@@ -14,45 +14,47 @@ This guide will get you up and running with a self-hosted Onetime Secret instanc
 Before you begin, ensure you have:
 
 - **Docker and Docker Compose** (recommended path)
-- OR **Ruby 3.2+** with Bundler (manual installation)
+- OR **Ruby 3.1+** with Bundler (manual installation)
 - **Git** for cloning the repository
-- **2GB+ RAM** for optimal performance
+- **1GB+ RAM** for optimal performance
 
-## Method 1: Docker Compose (Recommended)
+## Method 1: Docker Quick Start (Recommended)
 
-The fastest way to get started uses Docker Compose with our pre-configured stack.
+The fastest way to get started uses Docker with minimal configuration.
 
-### 1. Clone the Repository
+### 1. Start Redis
 
 ```bash
-git clone https://github.com/onetimesecret/onetimesecret.git
-cd onetimesecret
+docker run -p 6379:6379 -d redis:bookworm
 ```
 
-### 2. Configure Environment
-
-Copy the example configuration and customize for your needs:
+### 2. Generate Secret Key
 
 ```bash
-cp .env.example .env
-cp config/config.example.yaml config/config.yaml
+# Generate and store a persistent secret key
+openssl rand -hex 32 > .ots_secret
+chmod 600 .ots_secret
+echo "Secret key saved to .ots_secret (keep this file secure!)"
 ```
 
-### 3. Start the Services
+### 3. Run Onetime Secret
 
 ```bash
-# Start all services in the background
-docker-compose up -d
-
-# Check that services are running
-docker-compose ps
+# Run the container using the secret key
+docker run -p 3000:3000 -d \
+  -e REDIS_URL=redis://host.docker.internal:6379/0 \
+  -e SECRET="$(cat .ots_secret)" \
+  -e HOST=localhost:3000 \
+  -e SSL=false \
+  -e RACK_ENV=production \
+  onetimesecret/onetimesecret:latest
 ```
 
 ### 4. Access Your Instance
 
 Open your browser to:
-- **Web Interface**: http://localhost:7143
-- **API Endpoint**: http://localhost:7143/api
+- **Web Interface**: http://localhost:3000
+- **API Endpoint**: http://localhost:3000/api
 
 ## Method 2: Manual Installation
 
