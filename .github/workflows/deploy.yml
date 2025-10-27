@@ -62,7 +62,7 @@ jobs:
 
       # Upload build artifact for workflow records (optional)
       - name: Upload build artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: dist-files
           path: ./dist
