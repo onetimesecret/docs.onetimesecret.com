@@ -36,7 +36,7 @@ I link segreti sono perfetti per:
 
 Per creare il vostro primo Link segreto, visitate il sito [https://onetimesecret.com](onetimesecret.com) e seguite i semplici passaggi sulla nostra homepage.
 
-Per informazioni più dettagliate sull'uso dei Link segreti, consultare la nostra [Guida utente] (link alla guida utente).
+Per informazioni più dettagliate sull'uso dei Link segreti, consultare la nostra [Guida utente](/it/introduction/).
 
 
 <!--

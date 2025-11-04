@@ -36,7 +36,7 @@ Geheime Links sind ideal für:
 
 Um Ihren ersten Secret Link zu erstellen, besuchen Sie [https://onetimesecret.com](onetimesecret.com) und folgen Sie den einfachen Schritten auf unserer Homepage.
 
-Ausführlichere Informationen zur Verwendung von Secret Links finden Sie in unserem [Benutzerhandbuch] (Link zum Benutzerhandbuch).
+Ausführlichere Informationen zur Verwendung von Secret Links finden Sie in unserem [Benutzerhandbuch](/de/introduction/).
 
 
 <!--
