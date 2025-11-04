@@ -36,7 +36,7 @@ Les liens secrets sont parfaits pour :
 
 Pour créer votre premier lien secret, visitez [https://onetimesecret.com](onetimesecret.com) et suivez les étapes simples de notre page d'accueil.
 
-Pour plus d'informations sur l'utilisation des liens secrets, veuillez consulter notre [Guide de l'utilisateur] (lien vers le guide de l'utilisateur).
+Pour plus d'informations sur l'utilisation des liens secrets, veuillez consulter notre [Guide de l'utilisateur](/fr/introduction/).
 
 
 <!--
