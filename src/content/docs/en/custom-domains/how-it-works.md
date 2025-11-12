@@ -14,10 +14,10 @@ By leveraging Custom Domains, you're not just sharing secrets; you're reinforcin
 
 1. You register a domain or use one you already own.
 2. Choose your preferred data center region (EU or US).
-3. [Configure your domain's DNS settings](/docs/custom-domains/setup-guide) to point to Onetime Secret's servers in your chosen region.
+3. [Configure your domain's DNS settings](/en/custom-domains/setup-guide) to point to Onetime Secret's servers in your chosen region.
 4. Set up the custom domain in your Onetime Secret account settings.
 5. Once verified, your secret links will use your custom domain.
-6. [Customize your domain's appearance](/docs/custom-domains/brand-guide) with logos and brand colors through the admin interface.
+6. [Customize your domain's appearance](/en/custom-domains/brand-guide) with logos and brand colors through the admin interface.
 
 
 ## Troubleshooting Common Setup Issues
@@ -26,6 +26,6 @@ By leveraging Custom Domains, you're not just sharing secrets; you're reinforcin
 - **Incorrect DNS Records**: Double-check your DNS settings against the provided instructions for your chosen region.
 - **SSL Certificate Issues**: Contact our support team if you encounter any SSL-related problems.
 - **Domain Ownership Verification**: Ensure you have full control over the domain you're trying to set up.
-- **Region Selection**: If you're unsure about which region to choose, consult our [Data Center Regions](/docs/regions) guide or contact our support team.
+- **Region Selection**: If you're unsure about which region to choose, consult our [Data Center Regions](/en/regions/) guide or contact our support team.
 
-To learn about best practices for using Custom Domains securely, check out our [Security Best Practices](/docs/security-best-practices) guide.
+To learn about best practices for using Custom Domains securely, check out our [Security Best Practices](/en/security-best-practices) guide.
