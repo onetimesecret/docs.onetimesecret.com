@@ -1,0 +1,43 @@
+# Lychee Configuration File
+# https://github.com/lycheeverse/lychee
+
+# Maximum number of concurrent network requests
+max_concurrency = 8
+
+# Maximum number of allowed redirects
+max_redirects = 5
+
+# Maximum number of retries per request
+max_retries = 3
+
+# Wait time between retries (in seconds)
+retry_wait_time = 2
+
+# Request timeout (in seconds)
+timeout = 20
+
+# User agent to use for requests
+user_agent = "Mozilla/5.0 (compatible; LinkChecker/1.0; +https://docs.onetimesecret.com)"
+
+# HTTP status codes to accept as valid
+accept = [200, 204, 206, 301, 302, 429]
+
+# Include verbosity for debugging (off by default)
+# verbose = true
+
+# Cache responses to avoid repeat checks (useful for development)
+cache = true
+
+# Methods to check links (supports HEAD, GET)
+method = "head"
+
+# Exclude all private IPs
+exclude_all_private = true
+
+# Don't check email addresses
+exclude_mail = true
+
+# Remap certain URLs (useful for local development or redirects)
+# Format: "pattern" = "replacement"
+# [remap]
+# "https://example.com" = "https://docs.onetimesecret.com"

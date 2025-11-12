@@ -1,0 +1,107 @@
+name: Check Links
+
+on:
+  # Run on PRs to catch issues before merge
+  pull_request:
+    branches: [main]
+  # Run on push to main to catch any issues
+  push:
+    branches: [main]
+  # Run weekly to catch external link rot
+  schedule:
+    - cron: '0 0 * * 0'  # Every Sunday at midnight UTC
+  # Allow manual trigger
+  workflow_dispatch:
+    inputs:
+      check_external:
+        description: 'Check external links (slower)'
+        required: false
+        default: 'true'
+        type: boolean
+
+jobs:
+  check-internal-links:
+    name: Check Internal Links
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Check internal links with Lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # Only check markdown files for internal links
+          args: >-
+            --base .
+            --no-progress
+            --offline
+            --exclude-mail
+            './src/**/*.md'
+            './src/**/*.mdoc'
+        fail: true
+
+      - name: Create Issue if internal links are broken
+        if: failure() && github.event_name == 'schedule'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: '🔗 Broken Internal Links Detected',
+              body: 'Automated link checking found broken internal links. Please check the workflow run for details:\n\n' +
+                    `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+              labels: ['documentation', 'bug', 'automated']
+            })
+
+  check-external-links:
+    name: Check External Links
+    runs-on: ubuntu-latest
+    # Only run external checks on schedule or manual trigger
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Check external links with Lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --base .
+            --no-progress
+            --max-concurrency 8
+            --timeout 20
+            --max-retries 3
+            --exclude-mail
+            --exclude-path ./CHANGELOG.md
+            --accept 200,204,206,301,302,429
+            './src/**/*.md'
+            './src/**/*.mdoc'
+        # Don't fail on external links (too flaky), just report
+        fail: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate link check report
+        if: always()
+        run: |
+          if [ -f lychee-out.md ]; then
+            echo "## Link Check Report" >> $GITHUB_STEP_SUMMARY
+            cat lychee-out.md >> $GITHUB_STEP_SUMMARY
+          fi
+
+      - name: Create Issue if external links are broken
+        if: failure() && github.event_name == 'schedule'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: '🔗 Broken External Links Detected',
+              body: 'Automated weekly link checking found broken external links. Please review:\n\n' +
+                    `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}\n\n` +
+                    '**Note:** Some external link failures may be temporary (rate limiting, timeouts, etc.). ' +
+                    'Please verify before fixing.',
+              labels: ['documentation', 'external-links', 'automated']
+            })
