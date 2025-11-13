@@ -1,0 +1,31 @@
+# Lychee Link Checker Ignore Patterns
+# Patterns in this file will be ignored by the link checker
+
+# Exclude local/private URLs
+http://localhost*
+http://127.0.0.1*
+http://0.0.0.0*
+
+# Exclude URLs that require authentication
+https://github.com/*/settings/*
+https://github.com/*/new/*
+
+# Exclude URLs that commonly rate limit or block bots
+# (These can be manually checked periodically)
+https://www.linkedin.com/*
+https://twitter.com/*
+https://x.com/*
+
+# Exclude placeholder/example URLs
+https://example.com/*
+https://yourdomain.com/*
+https://yourbrand.com/*
+secrets.yourdomain.com
+*.yourdomain.com
+
+# Exclude URLs that might be in code examples but not real
+file:///
+mailto:*
+
+# Exclude specific patterns that are known to be problematic
+# Add site-specific exclusions below as needed

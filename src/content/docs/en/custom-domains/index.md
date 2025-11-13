@@ -44,7 +44,7 @@ To set up a Custom Domain:
 5. Follow the step-by-step instructions provided for DNS configuration.
 6. Wait for the domain to be verified. If available, click the "Verify" button to expedite the process. You may need to refresh the page.
 
-For detailed instructions, including how to choose between EU and US regions, please refer to our [Custom Domain Setup Guide](/docs/custom-domains/setup-guide).
+For detailed instructions, including how to choose between EU and US regions, please refer to our [Custom Domain Setup Guide](/en/custom-domains/setup-guide).
 
 ## Brand Customization
 
@@ -56,7 +56,7 @@ Custom Domain users can personalize their secret sharing interface:
 4. Preview changes in real-time
 5. Enable/disable public secret creation
 
-For detailed branding instructions, see our [Brand Guide](/docs/custom-domains/brand-guide).
+For detailed branding instructions, see our [Brand Guide](/en/custom-domains/brand-guide).
 
 
 ## Important Considerations
@@ -65,6 +65,6 @@ For detailed branding instructions, see our [Brand Guide](/docs/custom-domains/b
 - You are responsible for maintaining and renewing your domain registration.
 - Proper SSL/TLS configuration is crucial for security (handled automatically by Onetime Secret).
 - Ensure your chosen domain complies with your organization's branding guidelines.
-- Consider data protection regulations when choosing between [EU and US regions](/docs/regions).
+- Consider data protection regulations when choosing between [EU and US regions](/en/regions).
 
-To learn about best practices for using Custom Domains securely, check out our [Security Best Practices](/docs/security-best-practices) guide.
+To learn about best practices for using Custom Domains securely, check out our [Security Best Practices](/en/security-best-practices) guide.
