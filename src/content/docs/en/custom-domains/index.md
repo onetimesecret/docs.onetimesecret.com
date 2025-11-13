@@ -65,6 +65,6 @@ For detailed branding instructions, see our [Brand Guide](/en/custom-domains/bra
 - You are responsible for maintaining and renewing your domain registration.
 - Proper SSL/TLS configuration is crucial for security (handled automatically by Onetime Secret).
 - Ensure your chosen domain complies with your organization's branding guidelines.
-- Consider data protection regulations when choosing between [EU and US regions](/en/regions/).
+- Consider data protection regulations when choosing between [EU and US regions](/en/regions).
 
 To learn about best practices for using Custom Domains securely, check out our [Security Best Practices](/en/security-best-practices) guide.

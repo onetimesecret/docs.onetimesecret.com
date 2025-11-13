@@ -19,6 +19,10 @@ on:
         default: 'true'
         type: boolean
 
+permissions:
+  contents: read
+  issues: write
+
 jobs:
   check-internal-links:
     name: Check Internal Links

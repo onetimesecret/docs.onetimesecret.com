@@ -26,6 +26,6 @@ By leveraging Custom Domains, you're not just sharing secrets; you're reinforcin
 - **Incorrect DNS Records**: Double-check your DNS settings against the provided instructions for your chosen region.
 - **SSL Certificate Issues**: Contact our support team if you encounter any SSL-related problems.
 - **Domain Ownership Verification**: Ensure you have full control over the domain you're trying to set up.
-- **Region Selection**: If you're unsure about which region to choose, consult our [Data Center Regions](/en/regions/) guide or contact our support team.
+- **Region Selection**: If you're unsure about which region to choose, consult our [Data Center Regions](/en/regions) guide or contact our support team.
 
 To learn about best practices for using Custom Domains securely, check out our [Security Best Practices](/en/security-best-practices) guide.
