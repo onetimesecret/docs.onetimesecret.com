@@ -11,14 +11,14 @@ description: 일관성을 유지하기 위해 여러 언어에 걸쳐 원타임 
 
 | 영어 | 독일어(AT) | 프랑스어(FR) | 프랑스어(CA) | 한국어(KO) | 참고 사항 |
 |---------|-------------|-------------|-------------|------------|-------|
-| 비밀(명사) | 게하임니스 | 비밀 | 비밀스러운 | 비밀 | 애플리케이션의 중심 개념 | 비밀스러운
-| 비밀(부사) | 게하임 | 비밀/보안 | 비밀/보안 | 비밀스러운 | | 비밀스러운
-| 패스프레이즈 | 보안 문구 | 비밀 문구 | 암호 문구 | 암호 인증 방법 | 비밀 인증 방법
-| burn | 소각하다, 소각하다 | 보기 전에 비밀을 삭제하는 작업 |
-| 보기/공개하다 | 보기/표시하다 | 비밀에 접근하는 동작 | 컨설턴트/아피셔 | 컨설턴트/아피셔 | 보기/표시하다.
-| 링크 | 링크/연결하다 | 유치권 | 유치권 | 링크 | 비밀에 대한 액세스를 제공하는 URL |
-| encrypt/암호화하다 | verschlüsseln/변환하다 | chiffrer/치프러/치프레 | 암호화하다/암호화하다 | 보안 방법 |
-<보안하다/보안하다/보안하다/보안하다/보안하다/보안하다/보안하다/보안하다/보안하다/보안하다/보안하다/보안하다/보안하다/보안하다/보안하다/보안하다/보안하다/보안하다/보안하다/보안하다 ⧏34⧐
+| secret (명사) | Geheimnis | secret | secret | 비밀 메시지 | 애플리케이션의 중심 개념 |
+| secret (형용사) | geheim | secret/sécurisé | secret/sécurisé | 비밀의 | |
+| passphrase | Sicherheitsphrase | phrase secrète | mot de passe | 접근 문구 | 비밀 보호를 위한 인증 방법 |
+| burn | zerstören | supprimer | supprimer | 소각 | 보기 전에 비밀을 삭제하는 작업 |
+| view/reveal | ansehen/anzeigen | consulter/afficher | consulter/afficher | 보기/공개 | 비밀에 접근하는 동작 |
+| link | Link | lien | lien | 링크 | 비밀에 대한 액세스를 제공하는 URL |
+| encrypt/encrypted | verschlüsseln/verschlüsselt | chiffrer/chiffré | chiffrer/chiffré | 암호화/암호화됨 | 보안 방법 |
+| secure | sicher | sécurisé | sécurisé | 안전한 | 보호 상태 |
 
 ## 사용자 인터페이스 요소
 
@@ -58,20 +58,20 @@ description: 일관성을 유지하기 위해 여러 언어에 걸쳐 원타임 
 
 | 영어 | 독일어(AT) | 프랑스어(FR) | 프랑스어(CA) | 한국어(KO) | 참고 사항 |
 |---------|-------------|-------------|-------------|------------|-------|
-| 일회성 액세스 | 단일 계정 | 고유 액세스 | 일회성 접근 | 핵심 보안 기능 | 핵심 보안 기능
-| 비밀번호 보호 | 보안 문구로 보호 | 비밀 문구 보호 | 인증 문구 보호 | 암호문구 보호 | 추가 보안 |
-| 전송 중 암호화됨 | 전송 중 암호화됨 | 전송 중 암호화됨 | 데이터 보호 방법 | 전송 중 암호화됨
-| 저장 시 암호화 | 미사용 시 암호화 | 저장소 내 암호화 | 저장소 내 암호화 | 저장소 보호 | 저장 시 암호화
+| one-time access | einmaliger Zugang | accès unique | accès unique | 일회성 접근 | 핵심 보안 기능 |
+| passphrase protection | Schutz durch Sicherheitsphrase | protection par phrase secrète | protection par phrase d'authentification | 접근 문구 보호 | 추가 보안 |
+| encrypted in transit | verschlüsselt bei der Übertragung | chiffré en transit | chiffré en transit | 전송 중 암호화 | 데이터 보호 방법 |
+| encrypted at rest | verschlüsselt im Ruhezustand | chiffré au repos | chiffré au repos | 저장 시 암호화 | 저장소 보호 |
 
 ## 계정 관련 용어
 
 | 영어 | 독일어(AT) | 프랑스어(FR) | 프랑스어(CA) | 한국어(KO) | 참고 사항 |
 |---------|-------------|-------------|-------------|------------|-------|
-| 이메일 | 이메일 | 이메일 | 사용자 식별자
-| 비밀번호 | 패스워드 | 인증 비밀번호 | 인증 수단
-| 계정 | 계정 | 계정 | 계좌 | 계좌 | 사용자 프로필
-| 구독 | Abonnement | 구독 | 유료 서비스 | 구독
-고객 | 고객 | 쿤데 | 고객 | 클라이언트 | 고객 | 유료 사용자 |
+| email | E-Mail | courriel/e-mail | courriel | 이메일 | 사용자 식별자 |
+| password | Passwort | mot de passe | mot de passe | 비밀번호 | 계정 로그인 인증 수단 |
+| account | Konto | compte | compte | 계정 | 사용자 프로필 |
+| subscription | Abonnement | abonnement | abonnement | 구독 | 유료 서비스 |
+| customer | Kunde | client | client | 고객 | 유료 사용자 |
 
 ## 도메인 관련 용어
 
