@@ -13,10 +13,10 @@
     "check:links:verbose": "./bin/check-links.sh --verbose",
     "fix:links": "./bin/fix-links.sh",
     "fix:links:apply": "./bin/fix-links.sh --apply",
-    "translate:prepare": "echo 'e.g. ./src/content/docs/$CODE' && ./bin/translation-util prepare",
-    "translate:combine": "./bin/translation-util combine",
-    "translate:split": "./bin/translation-util split",
-    "translate:restore": "./bin/translation-util restore"
+    "translate:prepare": "echo 'e.g. ./src/content/docs/$CODE' && ./bin/translation-pluribus-util prepare",
+    "translate:combine": "./bin/translation-pluribus-util combine",
+    "translate:split": "./bin/translation-pluribus-util split",
+    "translate:restore": "./bin/translation-pluribus-util restore"
   },
   "dependencies": {
     "@astrojs/markdoc": "^0.15.8",

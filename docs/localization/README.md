@@ -72,5 +72,5 @@ When updating translations:
 
 ## Tools
 
-- **Translation utility**: `bin/translation-util` for batch processing
+- **Translation utility**: `bin/translation-pluribus-util` for batch processing
 - **Build commands**: See main project README for testing translations
