@@ -16,7 +16,7 @@
  * 6. Verify with build and preview commands: pnpm run build && pnpm run preview
  *
  * Translation Utility:
- * For large translation projects, use the translation-util script:
+ * For large translation projects, use the translation-pluribus-util script:
  *
  * 1. Prepare files for translation:
  *    pnpm run translate:prepare # (Assumes CODE is set in your environment, e.g., export CODE=nl)

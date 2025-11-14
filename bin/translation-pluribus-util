@@ -221,21 +221,21 @@ def main():
 Workflow Examples:
 
   1. Prepare files (outputs a mapping file path):
-    ./translation-util prepare ./src/content/docs/en
+    ./translation-pluribus-util prepare ./src/content/docs/en
     => Prepared X files in temporary directory: /tmp/ots_translation_xxxx
     => Process complete. Mapping file is at: /tmp/ots_translation_xxxx/file_mapping.json
     (Use the printed mapping file path for subsequent commands)
 
 2. Combine files (using the mapping file path from step 1):
-    ./translation-util combine /tmp/ots_translation_xxxx/file_mapping.json [./path/to/combined_output.txt]
+    ./translation-pluribus-util combine /tmp/ots_translation_xxxx/file_mapping.json [./path/to/combined_output.txt]
     (If output file is omitted, defaults to 'combined.txt' in the same directory as the mapping file)
 
 3. Split translated file (after translation, using the same mapping file path):
-    ./translation-util split /tmp/ots_translation_xxxx/file_mapping.json [./path/to/translated_combined.txt]
+    ./translation-pluribus-util split /tmp/ots_translation_xxxx/file_mapping.json [./path/to/translated_combined.txt]
     (If combined file is omitted, defaults to 'combined.txt' in the same directory as the mapping file)
 
 4. Restore files (using the same mapping file path):
-    ./translation-util restore /tmp/ots_translation_xxxx/file_mapping.json
+    ./translation-pluribus-util restore /tmp/ots_translation_xxxx/file_mapping.json
       ""\",
   )
 """,
