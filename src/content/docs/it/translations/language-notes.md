@@ -1,3 +1,8 @@
+---
+title: Italian Translation Notes
+description: Translation guidelines and terminology for Italian (it) locale
+---
+
 # Italian (it) Translation Notes
 
 ## Thinking Behind Translation Adjustments

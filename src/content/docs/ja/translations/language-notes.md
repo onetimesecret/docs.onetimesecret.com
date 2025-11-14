@@ -1,3 +1,8 @@
+---
+title: Japanese Translation Notes
+description: Translation guidelines and terminology for Japanese (ja) locale
+---
+
 # Japanese (ja) Translation Notes
 
 ## Key Terminology

@@ -1,3 +1,8 @@
+---
+title: Portuguese (Brazil) Translation Notes
+description: Translation guidelines and terminology for Portuguese Brazil (pt-BR) locale
+---
+
 # Portuguese (Brazil, pt-BR) Translation Notes
 
 ## Translation Goals

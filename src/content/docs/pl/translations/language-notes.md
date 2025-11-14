@@ -1,3 +1,8 @@
+---
+title: Polish Translation Notes
+description: Translation guidelines and terminology for Polish (pl) locale
+---
+
 # Polish (pl) Translation Notes
 
 ## Core Reasoning

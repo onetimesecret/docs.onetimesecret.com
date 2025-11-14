@@ -1,3 +1,8 @@
+---
+title: Korean Translation Notes
+description: Translation guidelines and terminology for Korean (ko) locale
+---
+
 # Korean (ko) Translation Notes
 
 ## Key Terminology

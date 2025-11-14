@@ -1,3 +1,8 @@
+---
+title: Spanish Translation Notes
+description: Translation guidelines and terminology for Spanish (es) locale
+---
+
 # Spanish (es) Translation Notes
 
 ## Thinking Behind Translation Adjustments

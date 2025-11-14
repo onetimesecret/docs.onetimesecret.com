@@ -1,3 +1,8 @@
+---
+title: Bulgarian Translation Notes
+description: Translation guidelines and terminology for Bulgarian (bg) locale
+---
+
 # Bulgarian (bg) Translation Notes
 
 ## Thinking Behind Translation Adjustments

@@ -1,3 +1,8 @@
+---
+title: Chinese (Simplified) Translation Notes
+description: Translation guidelines and terminology for Chinese Simplified (zh-CN) locale
+---
+
 # Chinese (Simplified, zh-CN) Translation Notes
 
 ## Thinking Behind Translation Adjustments

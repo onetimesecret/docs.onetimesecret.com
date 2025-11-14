@@ -1,3 +1,8 @@
+---
+title: Turkish Translation Notes
+description: Translation guidelines and terminology for Turkish (tr) locale
+---
+
 # Turkish (tr) Translation Notes
 
 ## Translation Choices and Adjustments

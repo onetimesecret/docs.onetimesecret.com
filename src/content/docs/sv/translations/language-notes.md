@@ -1,3 +1,8 @@
+---
+title: Swedish Translation Notes
+description: Translation guidelines and terminology for Swedish (sv-SE) locale
+---
+
 # Swedish (sv-SE) Translation Notes
 
 ## Rationale for Adjustments

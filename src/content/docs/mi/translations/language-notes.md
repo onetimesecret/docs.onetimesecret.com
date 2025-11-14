@@ -1,3 +1,8 @@
+---
+title: Māori Translation Notes
+description: Translation guidelines and terminology for Māori (mi-NZ) locale
+---
+
 # Māori (mi-NZ) Translation Notes
 
 ## Key Translation Points
