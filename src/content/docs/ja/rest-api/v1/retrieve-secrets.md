@@ -1,6 +1,6 @@
 ---
-title: タイトル秘密を取り戻す
-description: Onetime Secret REST API を使用して秘密を取得する方法についてします。
+title: シークレットを取得する
+description: Onetime Secret REST API を使用してシークレットを取得する方法について説明します。
 ---
 
 2025-04-02_更新
@@ -69,7 +69,7 @@ $ curl -X POST -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/privat
 - passphrase_required**：秘密の作成時にパスフレーズが提供された場合、これはtrueになる。そうでなければ当然 false。
 
 
-## ♪秘密を燃やせ
+## シークレットを削除
 
 POST https://REGION.onetimesecret.com/api/v1/private/METADATA_KEY/burn`
 

@@ -1,13 +1,13 @@
 ---
-title: タイトル翻訳スタイルガイド
+title: 翻訳スタイルガイド
 description: Onetime Secretのローカリゼーションに携わる翻訳者のための包括的なガイドで、ブランドボイス、用語基準、言語固有の要件を網羅し、高品質で一貫性のある翻訳を実現します。
 ---
 
-## 翻訳スタイルガイド カナダ英語 (ja-CA)
+## 翻訳スタイルガイド 日本語 (ja)
 
-翻訳スタイルガイド](/socialcards/onetime-socialcard-20250226-1.png)
+![翻訳スタイルガイド](/socialcards/onetime-socialcard-20250226-1.png)
 
-このスタイルガイドでは、カナダ英語のロケールへの翻訳についてしています。
+このスタイルガイドでは、日本語のロケールへの翻訳について説明しています。
 
 | *このスタイルガイドはMozilla Contributorsによる[Mozilla L10N Styleguides](https://github.com/mozilla-l10n/styleguides/)の内容に基づいており、ライセンスは[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)*です。
 | |
@@ -127,17 +127,17 @@ description: Onetime Secretのローカリゼーションに携わる翻訳者�
 アップロード完了（ステータス）
 
 
-#用語の一貫性
+## 用語の一貫性
 
-*すべてのcontent.*に一貫した使用を保障するために承認された翻訳と共に主要な言葉の語集を、作成しなさい。
+*すべてのコンテンツで一貫した使用を保障するために、承認された翻訳と共に主要な用語の用語集を作成してください。
 
 ### ブランド用語（翻訳しないでください）
 
-- オンタイム・シークレット
+- Onetime Secret
 - OTS（製品略称として使用する場合）
-- アイデンティティ・プラス（製品名）
-- グローバルエリート（製品名）
-- カスタムインストール（製品名）
+- Identity Plus（製品名）
+- Global Elite（製品名）
+- Custom Install（製品名）
 
 ### ブランド名について
 

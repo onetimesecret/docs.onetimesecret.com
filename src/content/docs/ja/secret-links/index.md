@@ -1,5 +1,5 @@
 ---
-title: タイトルシークレットリンク入門
+title: シークレットリンク入門
 description: Onetime Secretのシークレットリンクガイドへようこそ。
 ---
 
@@ -32,9 +32,9 @@ description: Onetime Secretのシークレットリンクガイドへようこ�
 - 同僚への機密情報の送信
 - 機密性の高い個人データの送信
 
-## ♪ はじめに
+## はじめに
 
-シークレットリンクを作成するには、[https://onetimesecret.com](onetimesecret.com)にアクセスし、ホームページの簡単な手順に従ってください。
+シークレットリンクを作成するには、[https://onetimesecret.com](https://onetimesecret.com)にアクセスし、ホームページの簡単な手順に従ってください。
 
 シークレットリンクの詳しい使い方については、[ユーザーガイド](/ja/introduction/)をご参照ください。
 

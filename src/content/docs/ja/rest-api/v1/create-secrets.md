@@ -1,6 +1,6 @@
 ---
-title: タイトル秘密を作る
-description: Onetime Secret REST API を使用したシークレットの作成と取得方法についてします。
+title: シークレットを作る
+description: Onetime Secret REST API を使用したシークレットの作成と取得方法について説明します。
 ---
 
 2025-04-02_更新

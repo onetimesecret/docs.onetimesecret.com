@@ -1,5 +1,5 @@
 ---
-title: タイトルクライアントライブラリ
+title: クライアントライブラリ
 description: Ruby、Python、Perl、Java、C#、Goなど、Onetime Secret APIで利用可能なクライアントライブラリを紹介します。
 ---
 
@@ -156,7 +156,7 @@ VStepanov.OneTimeSharpを使用しています；
 
 ---
 
-## ♪ Go
+## Go
 
 
 [Githubページ - onetimesecret](https://github.com/corbaltcode/go-onetimesecret)
@@ -207,7 +207,7 @@ flsdlaun6hwczqu9utmc0vts5xj9xu1
 ---
 
 
-## ♪ Go (lib)
+## Go (lib)
 
 
 [Githubページ](https://github.com/emdneto/otsgo)
