@@ -77,24 +77,58 @@ Some phrases were adjusted to better resonate with Korean users' expectations an
 ```
 "burn_this_secret": "이 비밀 메시지 소각"
 "view_secret": "비밀 메시지 보기"
+"share_a_secret": "비밀 메시지 공유"
+"secret_link": "비밀 링크"
 ```
 
-### 2. UI Actions
+### 2. Password vs Passphrase Examples (CRITICAL DISTINCTION)
+```
+# Account authentication (비밀번호)
+"account_password": "계정 비밀번호"
+"login_password": "로그인 비밀번호"
+"reset_password": "비밀번호 재설정"
+"enter_your_password": "비밀번호를 입력하세요"
+
+# Secret protection (접근 문구)
+"passphrase_protection": "접근 문구 보호"
+"enter_passphrase": "접근 문구를 입력하세요"
+"passphrase_required": "접근 문구 필요"
+"protect_with_passphrase": "접근 문구로 보호"
+```
+
+### 3. UI Actions (Active Voice)
 ```
 "create_secret": "비밀 링크 생성"
 "copy_to_clipboard": "클립보드에 복사"
+"share_secret": "비밀 메시지 공유"
+"burn_secret": "비밀 메시지 소각"
+"delete_account": "계정 삭제"
 ```
 
-### 3. Status Messages
+### 4. Status Messages (Passive Voice)
 ```
 "copied": "복사됨"
 "created": "생성되었습니다"
+"burned": "소각되었습니다"
+"secret_viewed": "비밀 메시지가 열람되었습니다"
+"account_deleted": "계정이 삭제되었습니다"
 ```
 
-### 4. Instructions
+### 5. Instructions and Warnings
 ```
 "enter_passphrase": "접근 문구를 입력하세요"
 "careful_only_see_once": "주의: 한 번만 볼 수 있습니다"
+"secret_will_be_deleted": "비밀 메시지는 열람 후 삭제됩니다"
+"use_passphrase_for_security": "보안을 위해 접근 문구를 사용하세요"
+```
+
+### 6. Common Mistakes to Avoid
+```
+❌ "비밀" (bare) → ✅ "비밀 메시지" (for the secret being shared)
+❌ "보안 메시지" → ✅ "비밀 메시지" (consistent terminology)
+❌ "비밀번호 보호" (when protecting secrets) → ✅ "접근 문구 보호"
+❌ "암호" (generic) → ✅ "비밀번호" (account) or "접근 문구" (secret protection)
+❌ "임시 비밀번호" → ✅ "임시 비밀 메시지" (temporary secrets, not passwords)
 ```
 
 ## Summary of Changes to the Korean Translation
