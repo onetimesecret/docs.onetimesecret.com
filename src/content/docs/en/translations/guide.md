@@ -206,6 +206,40 @@ Example usage:
 ✅ Du har 3 nye beskeder (You have 3 new messages)
 ❌ Du har 3 nye hemmeligheder (You have 3 new secrets)
 
+#### When to Apply the "Message" Exception
+
+The Danish exception (using "message" instead of "secret") should ONLY be applied when ALL of the following conditions are met:
+
+1. **The literal translation of "secret" carries inappropriate connotations** in the target language
+2. **These connotations specifically undermine the professional/security context**, such as:
+   - Personal or private secrets (gossip, hidden information)
+   - Childish or trivial usage
+   - Meanings that sound unprofessional in a business context
+3. **Native speakers confirm the security framing is lost** when using the literal translation
+
+**Examples:**
+
+✅ **Danish "Hemmeligheder"** - Has childish/personal connotations (exception justified)
+- Using "Beskeder" (messages) maintains professional tone
+
+❌ **Polish "Sekret"** - Works perfectly across all contexts (no exception needed)
+- Appropriate from "sekret państwowy" (state secret) to business usage
+- Maintains security context naturally
+
+❌ **German "Geheimnis"** - Appropriate for security contexts (no exception needed)
+- Standard term for confidential information
+
+**Decision Process:**
+
+When translating "secret" to a new language:
+
+1. **Test the literal translation** with native speakers unfamiliar with the product
+2. **Ask:** Does "[Create a secret]" sound professional and security-focused?
+3. **If YES:** Use the literal translation (like German "Geheimnis", Polish "Sekret")
+4. **If NO:** Consider the "message" exception (like Danish "Beskeder")
+
+**Important:** The default should always be to use the literal translation of "secret" unless there is clear evidence of problematic connotations that undermine the security context.
+
 ### Translating "password" vs "passphrase"
 
 Onetime Secret makes an important distinction between two security concepts that must be consistently maintained across all translations:
