@@ -16,9 +16,9 @@ nécessite 'onetime/api'
 
 api = Onetime::API.new('YOUR_EMAIL', 'YOUR_OTS_APIKEY')
 options = {
-  secret : 'Jazz, jazz et encore du jazz',
-  recipient : 'example@onetimesecret.com',
-  ttl : 7200
+  secret : 'Jazz, jazz et encore du jazz',
+  recipient : 'example@onetimesecret.com',
+  ttl : 7200
 }
 
 ret = api.post('/share', options)
@@ -54,8 +54,8 @@ o = OneTimeSecret("YOUR_EMAIL", "YOUR_OTS_APIKEY")
 secret = o.share(u "test")
 
 print o.retrieve_secret(secret["secret_key"])
-# {u'secret_key' : u'dtr7ixukiolpx1i4i87kahmhyoy2q65',
-# u'value' : u'test'}
+# {u'secret_key' : u'dtr7ixukiolpx1i4i87kahmhyoy2q65',
+# u'value' : u'test'}
 ```
 
 ---
@@ -71,22 +71,22 @@ par [Kyle Dawkins](http://www.shoffle.com/) (ajouté le 2012-01-06)
 ```perl
 #!/usr/bin/env perl
 
-use Net::OneTimeSecret ;
+use Net::OneTimeSecret ;
 
-# Note : remplacez-les par les vôtres pour que cela fonctionne !
-my $customerId = 'YOUR_EMAIL' ;
-my $testApiKey = 'YOUR_OTS_APIKEY' ;
+# Note : remplacez-les par les vôtres pour que cela fonctionne !
+my $customerId = 'YOUR_EMAIL' ;
+my $testApiKey = 'YOUR_OTS_APIKEY' ;
 
-my $api = Net::OneTimeSecret->new( $customerId, $testApiKey ) ;
+my $api = Net::OneTimeSecret->new( $customerId, $testApiKey ) ;
 my $result = $api->shareSecret('Jazz, jazz et encore jazz.',
                    passphrase => 'thepassword',
                    recipient => 'kyle@shoffle.com',
                    ttl => 7200,
-                 ) ;
-printf("%s\n", $result->{secret_key} ) ;
+                 ) ;
+printf("%s\n", $result->{secret_key} ) ;
 
-my $secret = $api->retrieveSecret( $result->{secret_key}, passphrase => "thepassword" ) ;
-printf("%s\n", $secret->{valeur} ) ;
+my $secret = $api->retrieveSecret( $result->{secret_key}, passphrase => "thepassword" ) ;
+printf("%s\n", $secret->{valeur} ) ;
 ```
 
 ---
@@ -103,20 +103,20 @@ par [Marcin Pawlowski](https://github.com/mpawlowski) (ajouté 2014-05-22)
 OneTimeSecret ots = new OneTimeSecretRestImpl(
     "https://path/to/ots/instance",
     "ots-username",
-    "ots-apikey") ;
+    "ots-apikey") ;
 
 GenerateResponse generateResponse = ots.generate(
                 nouveau GenerateRequest.Builder()
                         .withPassphrase("supersecret")
-                        .build()) ;
+                        .build()) ;
 
 RetrieveResponse retrieveResponse = ots.retrieve(
                 new RetrieveRequest.Builder()
                         .withSecretKey(shareResponse.getSecretKey())
                         .withPassphrase("supersecret")
-                        .build()) ;
+                        .build()) ;
 
-assertEquals(generateResponse.getValue(), retrieveResponse.getValue()) ;
+assertEquals(generateResponse.getValue(), retrieveResponse.getValue()) ;
 ```
 
 ---
@@ -131,24 +131,24 @@ par [Vladislav Stepanov](https://github.com/utter-step/) (ajouté 2014-05-29)
 
 ```csharp
 # Vous pouvez utiliser OneTimeSharp dans tous vos projets compatibles avec .NET (4.0+) ou Mono (2.10.8+).
-using VStepanov.OneTimeSharp ;
+using VStepanov.OneTimeSharp ;
 
 classe Test
 {
     static void Main(string[] args)
     {
-        var ots = new OneTimeSecret("YOUR_EMAIL", "YOUR_OTS_APIKEY") ;
+        var ots = new OneTimeSecret("YOUR_EMAIL", "YOUR_OTS_APIKEY") ;
 
-        var generated = ots.GenerateSecret() ;
+        var generated = ots.GenerateSecret() ;
 
-        Console.WriteLine(generated.Value) ; // LR*?us*A(UT*
+        Console.WriteLine(generated.Value) ; // LR*?us*A(UT*
 
-        Console.WriteLine(generated.SecretKey) ; // ikzx3m77j5by8411cg5lk5fvfylvl0i
+        Console.WriteLine(generated.SecretKey) ; // ikzx3m77j5by8411cg5lk5fvfylvl0i
         Console.WriteLine(ots.GetSecretLink(generated)) ; // https://onetimesecret.com/secret/ikzx3m77j5by8411cg5lk5fvfylvl0i
 
-        var shared = ots.ShareSecret("Hello, OTS !") ;
+        var shared = ots.ShareSecret("Hello, OTS !") ;
 
-        Console.WriteLine(shared.MetadataKey) ; // kd6rgsucl98qbgu9eavjq4k5sdxsom0
+        Console.WriteLine(shared.MetadataKey) ; // kd6rgsucl98qbgu9eavjq4k5sdxsom0
         Console.WriteLine(ots.GetMetadataLink(shared)) ; // https://onetimesecret.com/private/kd6rgsucl98qbgu9eavjq4k5sdxsom0
     }
 }
@@ -167,18 +167,18 @@ par [Corbalt](https://github.com/corbaltcode/) (ajouté le 2021-12-10)
 ```go
 import ots "github.com/corbaltcode/go-onetimesecret"
 
-client := ots.Client{
-  Nom d'utilisateur : "user@example.com",
-  Clé : "my api key",
+client := ots.Client{
+  Nom d'utilisateur : "user@example.com",
+  Clé : "my api key",
 }
 
-metadata, err := client.Put("the launch codes", "passphrase", 0, "")
-if err != nil {
+metadata, err := client.Put("the launch codes", "passphrase", 0, "")
+if err != nil {
   // traiter l'erreur
 }
 
-secret, err := client.Get(metadata.SecretKey, "passphrase")
-if err != nil {
+secret, err := client.Get(metadata.SecretKey, "passphrase")
+if err != nil {
   // traiter l'erreur
 }
 
@@ -217,15 +217,15 @@ par [Emídio Neto](https://github.com/emdneto) (ajouté le 2024-06-09)
 
 ```go
 // Construire un nouveau client
-client := ots.NewClient(
+client := ots.NewClient(
       AvecUsername("otsuser@domain.com"),
       WithApiKey("xxxxxxxx"),
 )
 
 // Envoi d'une requête avec le contexte
-ctx := context.Background()
-response, err := client.GetStatus(ctx)
-if err != nil {
+ctx := context.Background()
+response, err := client.GetStatus(ctx)
+if err != nil {
       panic(err)
 }
 
@@ -328,7 +328,7 @@ SECRET
       Quelque chose d'autre va ici.
 EOF
 
-# Obtenir/récupérer un secret :
+# Obtenir/récupérer un secret :
 ./ots get <key|url> (en anglais)
 ./ots retrieve <key|url> (récupérer la clé)
 

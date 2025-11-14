@@ -12,7 +12,7 @@ description: Comparez nos plans riches en fonctionnalités offrant un partage s�
 | Page d'accueil de la marque ✅ ❌ ❌ ❌
 | Logo personnalisé, couleur | | ✅ | ❌ | ❌ | ❌ | ❌ | ❌
 | Nombre de comptes | 1 | 1 | ❌ ❌
-| Expiration du lien : jusqu'à 30 jours, 14 jours, limité à 7 jours.
+| Expiration du lien : jusqu'à 30 jours, 14 jours, limité à 7 jours.
 | Accès à l'API ✅ | ✅ | Limité
 | Configuration requise - Oui (configuration DNS) - Non - Non
 | Payant | Oui (dans le cadre du plan d'identité) | Non | Non

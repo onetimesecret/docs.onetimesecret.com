@@ -65,12 +65,12 @@ Dans le tableau de bord de votre domaine, vous pouvez configurer la visibilité 
 - Le panneau de prévisualisation montre le rendu en temps réel
 - Les paramètres sont spécifiques au domaine
 
-## Questions ou besoin d'aide ?
+## Questions ou besoin d'aide ?
 
 Nous sommes là pour vous aider.
 
-Contactez nous :
-- Courriel : support@onetimesecret.com
+Contactez nous :
+- Courriel : support@onetimesecret.com
 - Formulaire de retour d'information : https://onetimesecret.com/feedback
 
 Notre équipe s'engage à vous fournir la meilleure assistance possible pour l'installation et l'utilisation de votre domaine personnalisé.

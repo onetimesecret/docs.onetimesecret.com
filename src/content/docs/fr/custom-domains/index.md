@@ -3,7 +3,7 @@ title: Vue d'ensemble
 description: Rehaussez votre marque et améliorez votre expérience de partage de secrets professionnels avec les Domaines personnalisés, une fonctionnalité avancée pour les agences, les entreprises et les utilisateurs chevronnés.
 ---
 
-## Qu'est-ce qu'un domaine personnalisé ?
+## Qu'est-ce qu'un domaine personnalisé ?
 
 Les domaines personnalisés vous permettent d'utiliser votre propre nom de domaine pour les liens Onetime Secret, au lieu du domaine par défaut _onetimesecret.com_. Cette fonction intègre l'identité de votre marque dans l'expérience de partage de secrets, renforçant ainsi la confiance et le professionnalisme.
 
@@ -26,16 +26,16 @@ Les domaines personnalisés vous permettent d'utiliser votre propre nom de domai
 
 ## Principaux avantages
 
-1. **Identité de la marque** : Partagez vos secrets en utilisant votre propre nom de domaine, renforçant ainsi la sécurité et le professionnalisme.
-2. **Confiance accrue** : Les destinataires voient un domaine familier, ce qui renforce leur confiance dans les informations partagées.
-3. **Apparence professionnelle** : Démontrer un niveau plus élevé de sophistication et d'engagement en matière de sécurité.
-4. **Personnalisation de la marque** : Téléchargez des logos personnalisés et définissez les couleurs de la marque pour qu'elle corresponde à votre identité visuelle.
-5. **Intégration transparente** : Créez une expérience cohérente qui s'aligne sur votre présence numérique existante.
-6. **Flexibilité régionale** : Choisissez entre les centres de données de l'UE et des États-Unis pour répondre à vos besoins en matière de localisation des données.
+1. **Identité de la marque** : Partagez vos secrets en utilisant votre propre nom de domaine, renforçant ainsi la sécurité et le professionnalisme.
+2. **Confiance accrue** : Les destinataires voient un domaine familier, ce qui renforce leur confiance dans les informations partagées.
+3. **Apparence professionnelle** : Démontrer un niveau plus élevé de sophistication et d'engagement en matière de sécurité.
+4. **Personnalisation de la marque** : Téléchargez des logos personnalisés et définissez les couleurs de la marque pour qu'elle corresponde à votre identité visuelle.
+5. **Intégration transparente** : Créez une expérience cohérente qui s'aligne sur votre présence numérique existante.
+6. **Flexibilité régionale** : Choisissez entre les centres de données de l'UE et des États-Unis pour répondre à vos besoins en matière de localisation des données.
 
 ## Démarrage
 
-Pour configurer un domaine personnalisé :
+Pour configurer un domaine personnalisé :
 
 1. Connectez-vous à votre compte Onetime Secret.
 2. Naviguez vers Paramètres du compte > Domaines personnalisés.
@@ -48,7 +48,7 @@ Pour des instructions détaillées, y compris comment choisir entre les régions
 
 ## Personnalisation de la marque
 
-Les utilisateurs du domaine personnalisé peuvent personnaliser leur interface de partage de secrets :
+Les utilisateurs du domaine personnalisé peuvent personnaliser leur interface de partage de secrets :
 
 1. Télécharger le logo de l'entreprise (PNG/JPG, max 1MB)
 2. Définir des couleurs de marque personnalisées à l'aide de codes hexagonaux
