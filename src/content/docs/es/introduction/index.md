@@ -5,7 +5,7 @@ description: Tu centro de recursos, documentación e información sobre Onetime 
 
 Bienvenido a Onetime Secret Docs, su recurso central para maximizar el valor de nuestro servicio de intercambio de secretos efímeros centrado en la privacidad.
 
-## What's Here
+## Qué encontrarás aquí
 
 - Documentación: Guías claras y concisas para utilizar Onetime Secret con eficacia
 - Blog: Perspectivas sobre privacidad, seguridad y actualizaciones del producto
