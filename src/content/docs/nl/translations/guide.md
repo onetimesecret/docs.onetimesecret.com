@@ -3,18 +3,18 @@ title: Vertaalstijlgids
 description: Een uitgebreide gids voor vertalers die werken aan de lokalisatie van Onetime Secret, met informatie over de stem van het merk, terminologienormen en taalspecifieke vereisten om hoogwaardige en consistente vertalingen te garanderen.
 ---
 
-## Vertaalstijlgids Nederlands, gebaseerd op Engels, Canada (en-CA)
+## Vertaalstijlgids Nederlands (nl)
 
-Vertaling Stijlgids](/socialcards/onetime-socialcard-20250226-1.png)
+![Vertaling Stijlgids](/socialcards/onetime-socialcard-20250226-1.png)
 
-Deze stijlgids geeft instructies voor het vertalen naar de Canadese Engelse locale.
+Deze stijlgids geeft instructies voor het vertalen naar het Nederlands.
 
-| Deze stijlgids is gebaseerd op inhoud uit [Mozilla L10N Styleguides](https://github.com/mozilla-l10n/styleguides/) door Mozilla Contributors, gelicentieerd onder [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).* |
-| |
+| *Deze stijlgids is gebaseerd op inhoud uit [Mozilla L10N Styleguides](https://github.com/mozilla-l10n/styleguides/) door Mozilla Contributors, gelicentieerd onder [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).* |
+|  |
 
 ## Doelgroep
 
-Ons Engelstalige publiek bestaat uit:
+Ons Nederlandstalige publiek bestaat uit:
 
 ### Klanten
 
@@ -71,9 +71,9 @@ Over de stem en toon van het merk.
 
 *Begeleiding: Dit omvat het bepalen van taalspecifieke voorkeuren, zoals spellingsvariaties, interpunctieregels en datum- en tijdnotaties, die aanslaan bij je doelpubliek. - Onthoud dat het nauwgezet volgen van de taalvoorkeuren van je publiek de communicatiebarrières aanzienlijk kan verminderen en hun ervaring met het merk kan verbeteren.*
 
-- Gebruik Amerikaans Engels. Voor datumnotaties gebruik je echter jjjj-mm-dd en voor tijden 24u. Afstanden in km, gewichten in lbs.
-- Vertalingen moeten zo natuurlijk mogelijk klinken. Gebruik nooit geleende woorden (met uitzondering van merknamen).
-- Ons Engelstalige publiek bestaat voor 50% uit Engels als eerste taal en voor 50% uit Engels als tweede/derde/beroepstaal. We moeten dit in gedachten houden bij het kiezen van termen en zinnen om ongepaste of verwarrende vertalingen te voorkomen.
+- Gebruik Nederlands zoals gesproken in Nederland. Voor datumnotaties gebruik dd-mm-jjjj of jjjj-mm-dd (ISO 8601), en voor tijden 24-uursnotatie. Afstanden in km, gewichten in kg.
+- Vertalingen moeten zo natuurlijk mogelijk klinken. Geleende Engelse woorden kunnen gebruikt worden waar ze gangbaar zijn in de Nederlandse taal (bijvoorbeeld "e-mail", "link"), maar forceer geen Anglicismen.
+- Nederlands gebruikers hebben verschillende achtergronden en technische niveaus. Gebruik heldere, toegankelijke taal die zowel voor technische als niet-technische gebruikers begrijpelijk is.
 - Het woord "geheim" staat centraal in onze merk-, product- en communicatiestrategie. We beschermen geheimen. We bieden ook een geheime dienst aan.
 
 ### Het woord "geheim" vertalen
@@ -171,7 +171,7 @@ Bestand uploaden
 
 ### Merktermen (niet vertalen)
 
-- Eenmalig geheim
+- Onetime Secret
 - OTS (indien gebruikt als productafkorting)
 - Identity Plus (productnaam)
 - Global Elite (productnaam)
@@ -248,35 +248,35 @@ De samengestelde vorm is de canonieke spelling voor de merk- en bedrijfsnaam: On
 
 ### Tijdformaat
 
-Over het algemeen wordt in de Verenigde Staten een 12-uursklok gebruikt. In de luchtvaart en andere logistieke contexten worden 24-uursklokken gebruikt.
+In Nederland wordt standaard de 24-uursnotatie gebruikt. Tijden worden weergegeven als 14:30 (niet 2:30 PM).
 
 ### Cijfers
 
 | Symbool doel | Tekennaam | Symbool | Voorbeeld |
 | --- | --- | --- | --- |
-| Decimaal | Punt | `` | 1,23 |
-| Duizendtallen | Komma | `,` | 1.234 |
+| Decimaal | Komma | `,` | 1,23 |
+| Duizendtallen | Punt of spatie | `.` of ` ` | 1.234 of 1 234 |
 | Percentage | Procentteken | `%` | 99,95% |
 
 ### Valuta
 
-De munteenheid van Canada is de Canadese Dollar (CAD). De monetaire symbolen zijn `$` en zelden `¢`.
+De munteenheid van Nederland is de Euro (EUR). Het monetaire symbool is `€`. Het symbool wordt meestal na het bedrag geplaatst met een spatie: € 19,99 of €19,99 (beide acceptabel).
 
 ### Meeteenheden
 
-In Canada wordt het imperiale stelsel gebruikt voor alledaagse gewichten. Al het andere, inclusief afstanden en hoeveelheden, is metrisch. Voornamelijk m, Km, cm, mm ("deci" wordt zelden gebruikt).
+In Nederland wordt het metrieke stelsel gebruikt voor alle metingen. Veelgebruikte eenheden zijn: m (meter), km (kilometer), cm (centimeter), mm (millimeter), kg (kilogram), g (gram), l (liter), ml (milliliter).
 
 ### Adres- en postcodeformaat
 
     [geadresseerde]
-    [straatnaam en huisnummer][gebouw- en kamernummers]]
-    [district][stad][staat/provincie][postcode]]
-    [Land].
+    [straatnaam] [huisnummer][toevoeging]
+    [postcode] [plaats]
+    [Land]
 
-    Suikerraffinaderij British Columbia Ltd.
-	123 Rogers Street
-    Vancouver, BC. V6A 3N2
-    CANADA
+    Voorbeeld B.V.
+    Keizersgracht 123A
+    1015 CJ Amsterdam
+    NEDERLAND
 
 ## Duidelijke, respectvolle communicatie
 
