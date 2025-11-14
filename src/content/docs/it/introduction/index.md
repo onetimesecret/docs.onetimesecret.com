@@ -19,7 +19,7 @@ Onetime Secret offre una soluzione semplice per condividere informazioni sensibi
 2. Non è richiesta la registrazione: Utilizzare le funzioni di base senza un account
 3. Scadenza personalizzabile: Controllo della disponibilità dei segreti con cancellazione automatica
 4. Interfaccia intuitiva: Condividete facilmente i segreti con il nostro design facile da usare
-5. Passphrase opzionale: Aggiungere un ulteriore livello di sicurezza ai segreti condivisi
+5. Frase di sicurezza opzionale: Aggiungere un ulteriore livello di sicurezza ai segreti condivisi
 6. Open-source: Esaminate la nostra base di codice per una maggiore trasparenza
 
 Esplorate i nostri contenuti bonus per scoprire come Onetime Secret può soddisfare le vostre esigenze di comunicazione sicura in modo efficiente e discreto.

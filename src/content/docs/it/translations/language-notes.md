@@ -7,17 +7,30 @@ description: Translation guidelines and terminology for Italian (it) locale
 
 ## Thinking Behind Translation Adjustments
 
-### 1. Terminology Shift: Moving Away from "Segreto"
+### 1. Terminology Decision: Using "Segreto" Correctly
 
-**Reasoning:** The style guide's Danish example shows that literal translations of "secret" can carry unintended connotations. In Italian, "segreto" implies personal, hidden, or confidential information with emotional weight.
+**Reasoning:** The translation guide emphasizes that "secret" is central to the brand and should be translated to maintain the context of confidentiality. Unlike the Danish example where "hemmeligheder" carried problematic personal/hidden connotations, Italian "segreto" appropriately conveys confidential information without those issues.
 
-**Key Examples:**
-- `"secretLinks": "Link Segreti"` → `"Link Monouso"`
-- `"createSecrets": "Crea Segreti"` → `"Crea Messaggio"`
-- `"retrieveSecrets": "Recupera Segreti"` → `"Recupera Messaggio"`
-- `"whyUseSecretLinks": "Perché Usare Link Segreti"` → `"Perché Usare Link Monouso"`
+**Core Principle from Guide:**
+> "secret (n.) - The confidential information being shared. Translations must maintain the context of confidentiality. Preferred over terms like 'message' or 'content'."
 
-**Alternative considered:** "Link Temporanei" (temporary links) - also functionally accurate but "monouso" (single-use) better captures the core product feature.
+**Correct Italian Usage:**
+- `"secretLinks"` → `"Link Segreti"` (maintains confidentiality context)
+- `"createSecrets"` → `"Crea Segreti"` (not "Crea Messaggio")
+- `"retrieveSecrets"` → `"Recupera Segreti"` (not "Recupera Messaggio")
+- `"secret"` → `"segreto"` (noun, maintaining confidentiality)
+
+**Why "Segreto" Works for Italian:**
+Unlike Danish "hemmeligheder" which implies deeply personal secrets, Italian "segreto" naturally encompasses:
+- Confidential business information
+- Professional secrets
+- Protected data
+- Secure communications
+
+**Alternatives Rejected:**
+- "Messaggio" (message) - too generic, loses security context
+- "Monouso" (single-use) - describes the mechanism, not the content
+- "Temporaneo" (temporary) - describes duration, not confidentiality
 
 ### 2. UI Text Simplification for Professional Tone
 
@@ -46,10 +59,11 @@ description: Translation guidelines and terminology for Italian (it) locale
 - `"search.devWarning"`: Simplified technical explanation
 - `"sidebarNav.accessibleLabel": "Main"` → `"Navigazione principale"` (more descriptive for screen readers)
 
-## Summary of Changes to the Italian Translation
+## Summary of Italian Translation Standards
 
-### Core Terminology Changes
-- **"Segreto" → Functional alternatives**: Replaced "secret" with "messaggio" (message) or "monouso" (single-use) to avoid personal/hidden connotations
+### Core Terminology Standards
+- **"Segreto" maintained**: "Secret" translated as "segreto" to preserve confidentiality context, aligning with guide requirements
+- **Passphrase distinction**: "Passphrase" → "frase di sicurezza" (for secret protection), distinct from "password" (account authentication)
 - **Maintained technical terms**: API, REST, v1, v2 kept unchanged
 - **Brand names preserved**: Starlight, Onetime Secret untranslated
 

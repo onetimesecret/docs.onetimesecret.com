@@ -34,14 +34,14 @@ I link segreti sono perfetti per:
 
 ## Iniziare
 
-Per creare il vostro primo Link segreto, visitate il sito [https://onetimesecret.com](onetimesecret.com) e seguite i semplici passaggi sulla nostra homepage.
+Per creare il vostro primo link segreto, visitate il sito [https://onetimesecret.com](onetimesecret.com) e seguite i semplici passaggi sulla nostra homepage.
 
-Per informazioni più dettagliate sull'uso dei Link segreti, consultare la nostra [Guida utente](/it/introduction/).
+Per informazioni più dettagliate sull'uso dei link segreti, consultare la nostra [Guida utente](/it/introduction/).
 
 
 <!--
 Consigli per la comunicazione:
-1. Questo contenuto introduce i Link segreti in modo chiaro e diretto, adatto a un pubblico sia tecnico che non tecnico.
+1. Questo contenuto introduce i link segreti in modo chiaro e diretto, adatto a un pubblico sia tecnico che non tecnico.
 2. Enfatizza il servizio principale e la proposta di valore unica di Onetime Secret.
 3. Le informazioni fornite si basano su fatti verificabili tratti dal sito web onetimesecret.com.
 4. Il tono è professionale e incentrato sull'utente, evidenziando l'aspetto risolutivo del servizio.
@@ -49,7 +49,7 @@ Consigli per la comunicazione:
    - Un semplice diagramma visivo di come funzionano i link segreti.
    - Una sezione di FAQ per rispondere alle domande più comuni degli utenti
    - Collegamenti a pagine di documentazione correlate (ad esempio, funzioni avanzate, utilizzo dell'API)
-   - Un riquadro di richiamo che evidenzi eventuali aggiornamenti o miglioramenti recenti della funzione Link segreti
+   - Un riquadro di richiamo che evidenzi eventuali aggiornamenti o miglioramenti recenti della funzione link segreti
 
 Ricordate di verificare tutte le informazioni con i dati più recenti di Onetime Secret prima di pubblicarle e di chiedere il feedback degli utenti per garantire che la documentazione risponda efficacemente alle loro esigenze.
 -->

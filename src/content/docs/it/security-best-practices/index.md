@@ -11,11 +11,11 @@ Sebbene Onetime Secret sia stato progettato con un occhio di riguardo alla sicur
 
 1. **Impostare tempi di scadenza adeguati**: Scegliete il tempo di scadenza più breve possibile per i vostri segreti. In questo modo si riduce al minimo la possibilità di accesso non autorizzato.
 
-2. **Utilizzare la protezione della passphrase**: Per le informazioni altamente sensibili, utilizzate la funzione di protezione con passphrase. Questa funzione aggiunge un ulteriore livello di sicurezza, richiedendo al destinatario di inserire una passphrase per visualizzare il segreto.
+2. **Utilizzare la protezione con frase di sicurezza**: Per le informazioni altamente sensibili, utilizzate la funzione di protezione con frase di sicurezza. Questa funzione aggiunge un ulteriore livello di sicurezza, richiedendo al destinatario di inserire una frase di sicurezza per visualizzare il segreto.
 
 3. **Compartimentare le informazioni sensibili**: Quando si ha a che fare con dati altamente sensibili, si consiglia di suddividerli in più segreti. In questo modo, se un segreto viene compromesso, l'intero insieme di informazioni rimane protetto.
 
-4. **Utilizzare canali sicuri per la condivisione dei metadati**: Mentre Onetime Secret protegge il contenuto del vostro segreto, fate attenzione a come condividete il link e tutti i metadati associati (come le passphrase). Utilizzate canali sicuri e criptati per questa comunicazione.
+4. **Utilizzare canali sicuri per la condivisione dei metadati**: Mentre Onetime Secret protegge il contenuto del vostro segreto, fate attenzione a come condividete il link e tutti i metadati associati (come le frasi di sicurezza). Utilizzate canali sicuri e criptati per questa comunicazione.
 
 5. **Verifica del destinatario**: Assicuratevi di condividere i segreti con il destinatario previsto. Controllate due volte gli indirizzi e-mail o i nomi utente prima di inviarli.
 

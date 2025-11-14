@@ -35,7 +35,7 @@ $ curl -X POST -d 'secret=SECRET&ttl=3600' https://us.onetimesecret.com/api/v1/s
 ### Parametri della query
 
 - **secret**: il valore segreto che viene crittografato prima di essere memorizzato. In base al piano, viene applicata una lunghezza massima (1k-10k).
-- **passphrase**: una stringa che il destinatario deve conoscere per visualizzare il segreto. Questo valore è usato anche per criptare il segreto e viene crittografato prima di essere memorizzato, in modo da avere questo valore solo in transito.
+- **passphrase** (frase di sicurezza): una stringa che il destinatario deve conoscere per visualizzare il segreto. Questo valore è usato anche per crittografare il segreto e viene crittografato prima di essere memorizzato, in modo da avere questo valore solo in transito.
 - **ttl**: il tempo massimo, in secondi, in cui il segreto deve sopravvivere (cioè il time-to-live). Una volta scaduto questo tempo, il segreto verrà cancellato e non sarà più recuperabile.
 - **destinatario**: un indirizzo e-mail. Verrà inviata un'e-mail amichevole contenente il link al segreto (NON il segreto stesso).
 - **dominio_di_condivisione**: il dominio personalizzato da utilizzare per generare il link segreto. Se non viene fornito, viene utilizzato il dominio predefinito (ad esempio, eu.onetimesecret.com).
@@ -51,8 +51,8 @@ $ curl -X POST -d 'secret=SECRET&ttl=3600' https://us.onetimesecret.com/api/v1/s
 - **recipient**: se è stato specificato un destinatario, questa è una versione offuscata dell'indirizzo e-mail.
 - **created**: Ora di creazione del segreto in tempo unix (UTC).
 - **updated**: idem, ma l'ora dell'ultimo aggiornamento.
-- **passphrase\_required**: Se è stata fornita una passphrase quando è stato creato il segreto, questo sarà vero. Altrimenti falso, ovviamente.
-- **share_domain** : il dominio personalizzato da usare quando si genera il link al segreto. Altrimenti "".
+- **passphrase\_required**: Se è stata fornita una frase di sicurezza quando è stato creato il segreto, questo sarà vero. Altrimenti falso, ovviamente.
+- **share_domain**: il dominio personalizzato da usare quando si genera il link al segreto. Altrimenti "".
 
 
 ### Esempio di risposta:

@@ -31,7 +31,7 @@ $ curl -X POST https://eu.onetimesecret.com/api/v1/secret/SECRET_KEY
 ### Parametri della query
 
 - **SECRET_KEY**: la chiave univoca per questo segreto.
-- **passphrase** (se richiesta): la passphrase è necessaria solo se il segreto è stato creato con una passphrase.
+- **passphrase** (frase di sicurezza, se richiesta): la frase di sicurezza è necessaria solo se il segreto è stato creato con una frase di sicurezza.
 
 ### Attributi
 
@@ -66,7 +66,7 @@ $ curl -X POST -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/privat
 - **created**: Ora di creazione dei metadati in tempo unix (UTC).
 - **updated**: idem, ma l'ora dell'ultimo aggiornamento.
 - **ricevuto**: Ora in cui è stato ricevuto il segreto.
-- **passphrase\_required**: Se è stata fornita una passphrase quando è stato creato il segreto, questo sarà vero. Altrimenti false, ovviamente.
+- **passphrase\_required**: Se è stata fornita una frase di sicurezza quando è stato creato il segreto, questo sarà vero. Altrimenti false, ovviamente.
 
 
 ## Brucia un segreto
