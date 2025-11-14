@@ -10,9 +10,13 @@ The primary goal was to ensure consistency, clarity, and adherence to the transl
 
 **Observation:** The original file used multiple Bulgarian terms for "passphrase", including "фраза" (phrase), "тайна фраза" (secret phrase), and sometimes "парола" (password).
 
-**Change:** Standardized the translation to distinguish between:
+**Initial Approach:** An initial standardization used "парола" (password) in most user-facing instances, with "Парола за тайната" for the label specifically defining it. While "passphrase" implies potentially longer input, "парола" is the most common and widely understood term in Bulgarian software interfaces. Using a single, familiar term reduces confusion.
+
+**Final Change:** After further review, the translation was updated to distinguish clearly between:
 - **"парола" (password)** - for user authentication (account login credentials, password fields in registration forms)
 - **"ключова фраза" (key phrase)** - for secret protection (secret creation/viewing, protection mechanism for shared secrets)
+
+This distinction better serves users by making clear the different security contexts.
 
 **Examples:**
 - `web.COMMON.incorrect_passphrase`: "Грешна фраза" → "Грешна ключова фраза"
