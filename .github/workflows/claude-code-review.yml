@@ -5,11 +5,12 @@ name: Claude Code Review
 on:
   pull_request:
     branches:
-      - 'feature/*'
-      - 'fix/*'
-      - 'wip/*'
-      - 'rel/*'
-      - 'develop'
+      - "feature/*"
+      - "claude/*"
+      - "fix/*"
+      - "delano/*"
+      - "rel/*"
+      - "develop"
     types: [opened, synchronize, labeled]
   workflow_dispatch:
 
