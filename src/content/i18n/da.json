@@ -86,8 +86,7 @@
   "pagefind.search_label": "Søg på denne side",
   "pagefind.filters_label": "Filtre",
   "pagefind.zero_results": "Ingen resultater for [SEARCH_TERM]",
-  "pagefind.many_results": "[COUNT] resultater for [SEARCH_
-TERM]",
+  "pagefind.many_results": "[COUNT] resultater for [SEARCH_TERM]",
   "pagefind.one_result": "[COUNT] resultat for [SEARCH_TERM]",
   "pagefind.alt_search": "Ingen resultater for [SEARCH_TERM]. Viser resultater for [DIFFERENT_TERM] i stedet",
   "pagefind.search_suggestion": "Ingen resultater for [SEARCH_TERM]. Prøv en af følgende søgninger:",
