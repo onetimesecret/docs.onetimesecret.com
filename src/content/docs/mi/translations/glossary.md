@@ -72,6 +72,7 @@ Ko tēnei papakupu ka whakarato i ngā whakamaoritanga paerewa mō ngā kupu mat
 | account | pūkete | User profile |
 | subscription | ohaurunga | Paid service |
 | customer | kiritaki | Paying user |
+| colonel | kaiwhakahaere | Administrator with highest privileges |
 
 ## Ngā Kupu e Pā Ana ki te Rohe
 

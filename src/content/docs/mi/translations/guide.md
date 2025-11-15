@@ -174,7 +174,7 @@ Ko te wāhanga huinga ko te whakatakotoranga tino tika mo te waitohu me te ingoa
 
 #### Te Whakahaere Mea Huna
 
-- **secret** (ingoa) - Ko ngā kōrero muna e tohatohahia ana
+- **secret** (ingoa) - Ko ngā kōrero huna e tohatohahia ana
     - Me pupuri nga whakamaoritanga i te horopaki o te noho matatapu
     - Me mātāmua i mua i ngā kupu penei i te "karere" me te "ihirangi"
     - Tauira: "Create a new secret" ehara i te "Create a new message"
