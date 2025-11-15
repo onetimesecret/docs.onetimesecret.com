@@ -26,6 +26,6 @@ Door gebruik te maken van aangepaste domeinen deelt u niet alleen geheimen, maar
 - Onjuiste DNS-records**: Controleer uw DNS-instellingen nogmaals aan de hand van de instructies voor de door u gekozen regio.
 - Problemen met hetSSL-certificaat**: Neem contact op met ons ondersteuningsteam als u SSL-gerelateerde problemen ondervindt.
 - **Verificatie van domeineigendom**: Controleer of u de volledige controle heeft over het domein dat u probeert in te stellen.
-- **Regio selectie**: Als u niet zeker weet welke regio u moet kiezen, raadpleeg dan onze gids [Datacenterregio's](regio's) of neem contact op met ons ondersteuningsteam.
+- **Regio selectie**: Als u niet zeker weet welke regio u moet kiezen, raadpleeg dan onze gids [Datacenterregio's](/nl/regions) of neem contact op met ons ondersteuningsteam.
 
 Raadpleeg onze gids [Best practices beveiliging](security-best-practices) voor meer informatie over best practices voor het veilig gebruiken van aangepaste domeinen.

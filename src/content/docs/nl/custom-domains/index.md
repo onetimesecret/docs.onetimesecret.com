@@ -65,6 +65,6 @@ Voor gedetailleerde brandinginstructies, zie onze [Brand Guide] (/docs/custom-do
 - U bent verantwoordelijk voor het onderhouden en vernieuwen van uw domeinregistratie.
 - Een juiste SSL/TLS-configuratie is cruciaal voor de veiligheid (wordt automatisch door Onetime Secret afgehandeld).
 - Zorg ervoor dat het door u gekozen domein voldoet aan de merkrichtlijnen van uw organisatie.
-- Houd rekening met de regelgeving voor gegevensbescherming bij het kiezen tussen [EU- en VS-regio's](regio's).
+- Houd rekening met de regelgeving voor gegevensbescherming bij het kiezen tussen [EU- en VS-regio's](/nl/regions).
 
 Voor meer informatie over best practices voor het veilig gebruik van aangepaste domeinen, kunt u onze gids [Best practices beveiliging](security-best-practices) raadplegen.

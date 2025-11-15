@@ -15,5 +15,5 @@ Börja med vår sektion [Introduktion](/sv/introduction/) för att lära dig gru
 
 - [Hemliga länkar](/sv/secret-links/) - Lär dig hur du skapar och delar engångshemligheter
 - [Anpassade domäner](/sv/custom-domains/) - Konfigurera din egen varumärkta hemlighetsdelningstjänst
-- [REST API](/sv/docs-overview) - Integrera Onetime Secret med dina applikationer
+- [REST API](/sv/rest-api/) - Integrera Onetime Secret med dina applikationer
 - [Säkerhetsbästa praxis](/sv/security-best-practices/) - Säkerställ maximal säkerhet när du delar känslig information
