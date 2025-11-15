@@ -18,7 +18,7 @@ description: Ajanslar, işletmeler ve profesyonel kullanıcılar için gelişmi�
                  transform hover:scale-105
                  rounded-xl
                  dark:border-brand-600">
-      secrets.yourrbrand.com
+      secrets.yourbrand.com
     </span>
   </a>
 </div>

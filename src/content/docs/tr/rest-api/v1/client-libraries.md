@@ -324,8 +324,8 @@ SECRET
 
 # Bir gizli mesaj paylaş (HEREDOC aracılığıyla)
 ./ots share <<-EOF
-      This is a mulit-line secret via HEREDOC.
-      Somthing else goes here.
+      This is a multi-line secret via HEREDOC.
+      Something else goes here.
 EOF
 
 # Bir gizli mesaj al/al:
