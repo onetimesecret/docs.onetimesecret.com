@@ -7,7 +7,7 @@ sidebar:
 
 Denne side indeholder referencer til miljøvariabler til konfiguration af Onetime Secret.
 
-**Note:** For den komplette liste over miljøvariabler med beskrivelser og eksempler, se venligst den [engelske version af denne side](/en/self-hosting/environment-variables) eller [konfigurationsreferenceanden](/en/self-hosting/configuration).
+**Note:** For den komplette liste over miljøvariabler med beskrivelser og eksempler, se venligst den [engelske version af denne side](/en/self-hosting/environment-variables) eller [konfigurationsreferencen](/en/self-hosting/configuration).
 
 ## Vigtige miljøvariabler
 

@@ -40,7 +40,7 @@ Ingen godkendelse påkrævet.
 
 `POST https://REGION.onetimesecret.com/api/v1/private/METADATA_KEY`
 
-Hver besked har også tilknyttet metadata. Metadata er beregnet til at blive brugt af beskabelsens skaber (dvs. ikke modtageren).
+Hver besked har også tilknyttet metadata. Metadata er beregnet til at blive brugt af beskedens skaber (dvs. ikke modtageren).
 
 For komplette detaljer og kodeeksempler, se den [engelske dokumentation](/en/rest-api/v1/retrieve-secrets).
 

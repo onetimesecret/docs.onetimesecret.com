@@ -32,6 +32,6 @@ Hemmelige links er perfekte til:
 
 ## Kom i gang
 
-For at oprette dit første hemmelige link, besøg [https://onetimesecret.com](onetimesecret.com) og følg de enkle trin på vores hjemmeside.
+For at oprette dit første hemmelige link, besøg [onetimesecret.com](https://onetimesecret.com) og følg de enkle trin på vores hjemmeside.
 
 For mere detaljeret information om brug af hemmelige links, se venligst vores [Brugervejledning](/da/introduction/).
