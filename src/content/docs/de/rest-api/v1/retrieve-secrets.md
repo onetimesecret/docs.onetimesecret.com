@@ -1,14 +1,14 @@
 ---
 title: Geheimnisse bergen
-description: Lernen Sie, wie Sie mit der Onetime Secret REST API Geheimnisse abrufen können, wobei sowohl der authentifizierte als auch der anonyme Zugriff unterstützt wird.
+description: Lernen du, wie du mit der Onetime Secret REST API Geheimnisse abrufen können, wobei sowohl der authentifizierte als auch der anonyme Zugriff unterstützt wird.
 ---
 
 _Aktualisiert 2025-04-02_
 
 <!-- ::callout{icon="i-heroicons-globe-alt"} -->
 **Auswahl von Datenort und Region**
-- Wählen Sie zwischen US ([`us.onetimesecret.com`](https://us.onetimesecret.com/)) oder EU ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) Rechenzentren
-- Berücksichtigen Sie Faktoren wie Datenhoheit, Latenzzeit und Compliance-Anforderungen
+- Wählen du zwischen US ([`us.onetimesecret.com`](https://us.onetimesecret.com/)) oder EU ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) Rechenzentren
+- Berücksichtigen du? Faktoren wie Datenhoheit, Latenzzeit und Compliance-Anforderungen
 - **HINWEIS:** Standardmäßig bleibt `onetimesecret.com` in Betrieb und leitet zu einem aktiven Rechenzentrum weiter. Es wird empfohlen, eine bestimmte Lokalität zu verwenden, da diese Funktion in Zukunft möglicherweise veraltet sein wird.
 ::
 
@@ -35,14 +35,14 @@ $ curl -X POST https://eu.onetimesecret.com/api/v1/secret/SECRET_KEY
 
 ### Attribute
 
-- **secret_key**: der eindeutige Schlüssel für das von Ihnen erstellte Geheimnis. Dies ist der Schlüssel, den Sie weitergeben können.
+- **secret_key**: der eindeutige Schlüssel für das von dir erstellte Geheimnis. Dies ist der Schlüssel, den du weitergeben können.
 - **Wert**: Das eigentliche Geheimnis. Es sollte sich von selbst verstehen, dass dieser Wert nur einmal verfügbar ist.
 
 ## Abrufen von Metadaten
 
 POST https://REGION.onetimesecret.com/api/v1/private/METADATA_KEY".
 
-Jedes Geheimnis hat auch zugehörige Metadaten. Die Metadaten sind für den Ersteller des Geheimnisses bestimmt (d.h. nicht für den Empfänger) und sollten im Allgemeinen geheim gehalten werden. Sie können den Schlüssel für die Metadaten verwenden, um grundlegende Informationen über das Geheimnis selbst abzurufen (z.B. ob oder wann es eingesehen wurde), da der Schlüssel für die Metadaten ein anderer ist als der Schlüssel für das Geheimnis.
+Jedes Geheimnis hat auch zugehörige Metadaten. Die Metadaten sind für den Ersteller des Geheimnisses bestimmt (d.h. nicht für den Empfänger) und sollten im Allgemeinen geheim gehalten werden. du können den Schlüssel für die Metadaten verwenden, um grundlegende Informationen über das Geheimnis selbst abzurufen (z.B. ob oder wann es eingesehen wurde), da der Schlüssel für die Metadaten ein anderer ist als der Schlüssel für das Geheimnis.
 
 ### Authentifizierte Anfrage
 
@@ -57,8 +57,8 @@ $ curl -X POST -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/privat
 ### Attribute
 
 - **custid**: der Benutzername des Kontos, das das Geheimnis erstellt hat. Dieser Wert ist `anon` für anonyme Anfragen.
-- **metadata\_key**: der eindeutige Schlüssel für die Metadaten. Geben Sie diesen NICHT weiter.
-- **secret\_key**: der eindeutige Schlüssel für das Geheimnis, das Sie erstellt haben. Diesen Schlüssel können Sie weitergeben.
+- **metadata\_key**: der eindeutige Schlüssel für die Metadaten. Geben du diesen NICHT weiter.
+- **secret\_key**: der eindeutige Schlüssel für das Geheimnis, das du erstellt haben. Diesen Schlüssel können du weitergeben.
 - **ttl**: Die angegebene Time-to-Live (d.h. nicht die verbleibende Zeit)
 - **metadata\_ttl**: Die verbleibende Zeit (in Sekunden), die die Metadaten noch zu leben haben.
 - **secret\_ttl**: Die verbleibende Zeit (in Sekunden), die das Geheimnis noch zu leben hat.

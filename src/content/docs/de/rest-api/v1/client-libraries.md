@@ -1,6 +1,6 @@
 ---
 title: Client-Bibliotheken
-description: Entdecken Sie die Client-Bibliotheken, die für die Onetime Secret API verfügbar sind, darunter Ruby, Python, Perl, Java, C#, Go und mehr.
+description: Entdecken du die Client-Bibliotheken, die für die Onetime Secret API verfügbar sind, darunter Ruby, Python, Perl, Java, C#, Go und mehr.
 ---
 
 ## Ruby
@@ -73,7 +73,7 @@ by [Kyle Dawkins](http://www.shoffle.com/) (added 2012-01-06)
 
 use Net::OneTimeSecret;
 
-# Hinweis: Ersetzen Sie diese Angaben durch Ihre, damit es funktioniert!
+# Hinweis: Ersetzen du diese Angaben durch deine, damit es funktioniert!
 my $customerId = 'YOUR_EMAIL';
 my $testApiKey = 'YOUR_OTS_APIKEY';
 
@@ -130,7 +130,7 @@ by [Vladislav Stepanov](https://github.com/utter-step/) (added 2014-05-29)
 ### Usage Example
 
 ```csharp
-# Sie können OneTimeSharp in jedem Ihrer Projekte verwenden, das mit .NET (4.0+) oder Mono (2.10.8+) kompatibel ist.
+# du können OneTimeSharp in jedem deiner Projekte verwenden, das mit .NET (4.0+) oder Mono (2.10.8+) kompatibel ist.
 using VStepanov. OneTimeSharp;
 
 class Test
@@ -222,7 +222,7 @@ WithUsername("otsuser@domain.com"),
 WithApiKey("xxxxxxxx"),
 )
 
-// Senden Sie eine Anfrage mit Kontext
+// Senden du eine Anfrage mit Kontext
 ctx := context.Background()
 response, err := client.GetStatus(ctx)
 if err != nil {
@@ -291,20 +291,20 @@ Dies ist ein Geheimnis
 EOF
 )
 
-# Übergeben Sie Optionen zum Teilen oder Erzeugen.
+# Übergeben du? Optionen zum Teilen oder Erzeugen.
 URL=$(ots_share ttl=600 \
 passphrase="shared-secret" \
 recipient="someone@somewhere.com" <<< "SECRET")
 
-# holen Sie die geheimen Daten
+# holen du die geheimen Daten
 local DATA="$(ots_retrieve ‚$URL‘)"
 
-# teilen/erzeugen Sie ein neues Geheimnis und erhalten Sie den privaten Metadatenschlüssel zurück
+# teilen/erzeugen du ein neues Geheimnis und erhalten du den privaten Metadatenschlüssel zurück
 local KEY=$(ots_metashare <<< "SECRET")
 local KEY=$(ots_metagenerate)
 
-# erhalten Sie eine Liste der kürzlich erstellten privaten Metadatenschlüssel.
-# beachten Sie, dass dies gültige Anmeldedaten erfordert
+# erhalten du eine Liste der kürzlich erstellten privaten Metadatenschlüssel.
+# beachten du, dass dies gültige Anmeldedaten erfordert
 local -a RECENT=( $(ots_recent) )
 
 #
