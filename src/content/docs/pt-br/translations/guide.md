@@ -7,7 +7,7 @@ description: Um guia abrangente para tradutores trabalhando na localização do 
 
 ![Guia de Estilo de Tradução](/socialcards/onetime-socialcard-20250226-1.png)
 
-Este guia de estilo fornece instruções para tradução para o locale português do Brasil.
+Este guia de estilo fornece instruções para tradução para o idioma português do Brasil.
 
 | *Este Guia de Estilo é baseado em conteúdo dos [Guias de Estilo L10N da Mozilla](https://github.com/mozilla-l10n/styleguides/) pelos Colaboradores da Mozilla, licenciado sob [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).* |
 |  |
@@ -20,7 +20,7 @@ Nosso público de língua portuguesa inclui:
 
 - Contexto profissional: Profissionais de TI, equipes de agências (design, desenvolvimento, marketing) e equipes de suporte corporativo (RH, provisionamento, logística, finanças)
 - Público: Profissionais de 20 a 60 anos com alguma proficiência técnica. Esses indivíduos escolheram ou trabalham para uma empresa que optou por incorporar o Onetime Secret em seu fluxo de trabalho.
-- Localização: Brasil, Portugal, países de língua portuguesa na África
+- Localização: América do Sul (especialmente Brasil), Portugal, países de língua portuguesa na África
 - Abordagem de escrita: Use linguagem clara e acessível com tom profissional
 
 ### Destinatários
