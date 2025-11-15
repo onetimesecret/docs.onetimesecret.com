@@ -11,4 +11,4 @@ description: Kritiske regler for dansk oversættelse
 | Password vs. Passphrase | adgangskode (login), adgangssætning (secret) | Mixed usage | ✓ Indtast din adgangskode (login); ✗ Indtast din adgangssætning (login) |
 | Knapper: Imperativ | Opret, Del, Gem | Substantiv forms | ✓ Opret besked (button); ✗ Oprettelse af besked (button) |
 | Status: Passiv form | Oprettet, Gemt | Imperativ in status | ✓ Besked oprettet (status); ✗ Opret besked (status) |
-| Sammensatte ord med engelske låneord | besked-apps, API-nøgle | besked apps (separate words) | ✓ besked-apps (hyphenated); ✗ besked apps (separate words) |
+| Sammensatte ord med engelske låneord | besked-apps, API-nøgle | besked apps, API nøgle | ✓ besked-apps (hyphenated); ✗ besked apps (separate words) |
