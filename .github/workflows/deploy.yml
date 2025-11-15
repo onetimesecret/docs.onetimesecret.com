@@ -48,6 +48,10 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
