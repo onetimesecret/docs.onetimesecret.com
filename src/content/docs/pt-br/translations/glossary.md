@@ -5,7 +5,7 @@ description: Um guia de referência para traduzir os termos-chave, elementos de 
 
 # Glossário de Tradução do Onetime Secret
 
-Este glossário fornece traduções padronizadas para termos-chave para garantir consistência na aplicação Onetime Secret em português do Brasil (pt-BR).
+Este glossário fornece traduções padronizadas para termos-chave no idioma português do Brasil (pt-BR) para garantir consistência na aplicação Onetime Secret.
 
 ## Terminologia Principal
 
