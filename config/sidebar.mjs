@@ -29,6 +29,11 @@ const miTranslations = loadTranslations("mi");
 const bgTranslations = loadTranslations("bg");
 const itTranslations = loadTranslations("it");
 const zhCnTranslations = loadTranslations("zh-cn");
+const daTranslations = loadTranslations("da");
+const plTranslations = loadTranslations("pl");
+const ptBrTranslations = loadTranslations("pt-br");
+const svTranslations = loadTranslations("sv");
+const trTranslations = loadTranslations("tr");
 
 /**
  * Helper function to create sidebar link items with required attrs
@@ -54,6 +59,11 @@ function createLink(key, link, badge) {
       bg: bgTranslations.sidebar?.[key],
       it: itTranslations.sidebar?.[key],
       "zh-cn": zhCnTranslations.sidebar?.[key],
+      da: daTranslations.sidebar?.[key],
+      pl: plTranslations.sidebar?.[key],
+      "pt-br": ptBrTranslations.sidebar?.[key],
+      sv: svTranslations.sidebar?.[key],
+      tr: trTranslations.sidebar?.[key],
     },
     attrs: {},
     ...(badge ? { badge } : {}),
@@ -83,6 +93,11 @@ function createGroup(key, items = [], collapsed = false) {
       bg: bgTranslations.sidebar?.[key],
       it: itTranslations.sidebar?.[key],
       "zh-cn": zhCnTranslations.sidebar?.[key],
+      da: daTranslations.sidebar?.[key],
+      pl: plTranslations.sidebar?.[key],
+      "pt-br": ptBrTranslations.sidebar?.[key],
+      sv: svTranslations.sidebar?.[key],
+      tr: trTranslations.sidebar?.[key],
     },
     items,
     collapsed,
