@@ -9,10 +9,9 @@ icon: book
 ::ImageModal{src="/socialcards/onetime-socialcard-20250226-1.png" title="" width="320"}
 ::
 
-Ko tēnei aratohu whakamaori ka whakarato tohutohu mo te whakamaori ki te reo Māori.
+Ko tēnei aratohu whakamaori ka whakarato tohutohu mō te whakamaori ki te reo Māori.
 
-| *Ko tēnei Aratohu Whakamaori e hāngai ana ki nga korero o [Mozilla L10N Styleguides](https://github.com/mozilla-l10n/styleguides/) nā ngā Kaikoha Mozilla, raihana ana i raro i [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).*  |
-
+| *Ko tēnei Aratohu Whakamaori e hāngai ana ki ngā kōrero o [Mozilla L10N Styleguides](https://github.com/mozilla-l10n/styleguides/) nā ngā Kaikoha Mozilla, raihana ana i raro i [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).*  |
 |  |
 
 ## Hunga Whakamahi
@@ -153,10 +152,10 @@ Tukuake kōnae
 ### Ngā Kupu Waitohu (Kaua e Whakamaori)
 
 - Onetime Secret
-- OTS (ina whakamahia hei whakapotonga papatupu)
-- Identity Plus (ingoa papatupu)
-- Global Elite (ingoa papatupu)
-- Custom Install (ingoa papatupu)
+- OTS (ina whakamahia hei whakapotonga papatono)
+- Identity Plus (ingoa papatono)
+- Global Elite (ingoa papatono)
+- Custom Install (ingoa papatono)
 
 ### Mo te Ingoa Waitohu
 
@@ -205,14 +204,63 @@ Ko te wāhanga huinga ko te whakatakotoranga tino tika mo te waitohu me te ingoa
 - **password / passphrase**
 - **expiration / expiry / time-to-live**
 
+### Te Whakamaori i te "password" me te "passphrase"
+
+Ka wehe a Onetime Secret i ngā ariā haumaru e rua me noho pūmau puta noa i ngā whakamaoritanga katoa:
+
+#### Kupuhipa (Password)
+- **Whakamāramatanga**: He taunaha whakamōhio paerewa ka whakamahia mō te urunga pūkete
+- **Horopaki**: Ka whakamahia anake mō te takiuru ki ngā pūkete kaiwhakamahi i runga i te papatohu Onetime Secret
+- **Tauira**: "Kupuhipa pūkete", "Kupuhipa takiuru", "Tautuhi anō i te kupuhipa"
+- **Arataki whakamaori**:
+  - Whakamahia te kupu noa rawa atu, te paerewa i tō reo mō ngā taunaha whakamōhio
+  - Ko tēnei te kupu ka tūmanakohia e ngā kaiwhakamahi i te wā e takiuru ana ki tētahi paetukutuku
+  - He poto ake, he māori ake ki ngā kaiwhakamahi katoa
+
+#### Kupu Karapa (Passphrase)
+- **Whakamāramatanga**: He ārai haumaru motuhake mō te tiaki i ngā karere huna takitahi
+- **Horopaki**: Ka whakamahia i te wā e waihanga ana, e uru atu ana rānei ki ngā karere huna kua tiakina (ehara mō te urunga pūkete)
+- **Tauira**: "Tiakina ki te kupu karapa", "Whakauru kupu karapa ki te tiro", "Karere huna kua tiakina ki te kupu karapa"
+- **Arataki whakamaori**:
+  - Me wehe mārama i ngā kupuhipa pūkete noa
+  - Me kawe i te ariā o tētahi tikanga tiaki roa ake, e hāngai ana ki te rerenga kupu
+  - Mēnā kāore i tō reo tētahi kupu taurite tōtika, hangaia he kupu huinga pūmau e kawe ana i tēnei ariā haumaru motuhake
+  - Whakaarohia ngā kupu taurite ki te "kupu kī", "kupu urunga", "kupu haumaru" rānei mēnā e hiahiatia ana
+
+#### Te Pupuri i te Wehenga
+
+Ka whakahaere ngā reo rerekē i tēnei wehenga i ngā huarahi rerekē:
+
+| Reo | Kupuhipa (Pūkete) | Kupu Karapa (Tiaki Karere Huna) | Tuhipoka |
+|----------|-------------------|------------------------------|-------|
+| Ingarihi  | password          | passphrase                   | He wehenga mārama ki te kupu huinga |
+| Pukare| парола (parola)   | ключова фраза (klyuchova fraza) | "Kupu kī" |
+| Teina   | adgangskode       | adgangssætning               | "Waehere urunga" vs "Rerenga urunga" |
+| Pāniora  | contraseña        | frase de seguridad           | "Tohu-kaunihera" vs "Rerenga haumaru" |
+| Māori | kupuhipa | kupu karapa | "Kupu hipa" vs "Kupu karapa" (rerenga kī) |
+
+I te wā e whakamaori ana i ēnei kupu:
+
+1. Pupuritia tonu te wehenga pūmau i waenganui i ngā ariā e rua
+2. Whakamātauria ō kupu kua whiriwhiria ki ngā kaikōrero taketake kāore e mōhio ana ki te papatono
+3. Whakaūngia ka kawe te kupu karapa i te haumaru/uauatanga tāpiri i te taha o te kupuhipa
+4. Whakamahia te kupu kotahi anake mō ia ariā puta noa i te whakamaoritanga katoa
+
+✅ Huarahi tika:
+Wāhanga pūkete: "Whakauru tō [KUPUHIPA] ki te takiuru"
+Wāhanga karere huna: "Kua tiakina tēnei karere huna ki tētahi [KUPU KARAPA]"
+
+❌ Huarahi hē:
+Te whakamahi i te kupu kotahi mō ngā ariā e rua, te whakawhiti rerekē rānei i waenganui i ngā kupu
+
 #### Whakahaere Kaiwhakamahi
 
 - **colonel** (ingoa) - Tūranga kaiwhakahaere
-    - He kupu motuhake o te kaupapa, e rite ana ki te "kernel" he kupu hangarau, he wāhanga matua o te pūnaha whakahaere. Kaore he kaupapa ke atu e whakamahi ana i tenei kupu i tenei huarahi. Ka whakapōrearea pea i Aotearoa.
-    - Whakamaoritia ki te kupu noa mo tetahi "kaiwhakahaere" i roto i te horopaki o nga whakaaetanga rorohiko. Ko te pūkete me te taumata teitei rawa atu o nga mana.
-    - Tauira: "Only colonels can access this feature" (i.e. "Only admins can access this feature").
-- **plan** (ingoa) - Taumata ohaurunga
-    - Me whakamahi pūmau mo ngā taumata ratonga
+    - He kupu motuhake o te kaupapa, e rite ana ki te "kernel" he kupu hangarau, he wāhanga matua o te pūnaha whakahaere. Kāore he kaupapa kē atu e whakamahi ana i tēnei kupu i tēnei huarahi. Ka māharahara pea i Aotearoa.
+    - Whakamaoritia ki te kupu noa mō tētahi "kaiwhakahaere" i roto i te horopaki o ngā whakaaetanga rorohiko. Ko te pūkete me te taumata teitei rawa atu o ngā mana.
+    - Tauira: "Only colonels can access this feature" (arā, "Only admins can access this feature").
+- **plan** (ingoa) - Mahere ohaurunga
+    - Me whakamahi pūmau mō ngā taumata ratonga
     - Me mātāmua i mua i "tier" me "level"
     - Tauira: "Upgrade to a premium plan"
 
