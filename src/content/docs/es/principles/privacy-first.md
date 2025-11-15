@@ -4,7 +4,7 @@ title: Privacidad
 description: Nuestro enfoque para proteger la privacidad del usuario a través de opciones de diseño deliberadas
 ---
 
-# Privacy First Practices
+# Prácticas de privacidad prioritaria
 
 En Onetime Secret, adoptamos un enfoque deliberadamente mínimo respecto a la privacidad del usuario. Esto es lo que deliberadamente decidimos no hacer y, lo que es más importante, por qué.
 
@@ -32,7 +32,7 @@ Evitamos deliberadamente las herramientas habituales de seguimiento y marketing:
 - Herramientas de automatización del marketing
 - Píxeles de seguimiento de terceros
 
-## Why This Matters
+## Por qué esto importa
 
 Nuestro planteamiento se basa en tres principios fundamentales:
 
@@ -56,7 +56,7 @@ Invertimos nuestro tiempo en:
 - Fiabilidad del servicio**: Garantizar que el servicio esté disponible cuando lo necesite.
 - Cumplimiento**: Cumplir los requisitos legales y reglamentarios
 
-## Looking Forward
+## Mirando hacia el futuro
 
 Seguiremos dando prioridad a la sencillez y la privacidad frente al alcance comercial. Aunque esto significa que podemos crecer más lentamente que los servicios que se comercializan agresivamente, creemos que es la elección correcta para una herramienta centrada en la privacidad.
 

@@ -5,9 +5,9 @@ description: Una guía completa para los traductores que trabajan en la localiza
 
 ## Guía de estilo de traducción Español, basado en el Inglés de Canadá (en-CA)
 
-Guía de estilo de traducción](/socialcards/onetime-socialcard-20250226-1.png)
+![Guía de estilo de traducción](/socialcards/onetime-socialcard-20250226-1.png)
 
-Esta guía de estilo ofrece instrucciones para traducir al inglés canadiense.
+Esta guía de estilo ofrece instrucciones para traducir al español.
 
 | *Esta Guía de Estilo está basada en el contenido de [Mozilla L10N Styleguides](https://github.com/mozilla-l10n/styleguides/) por Mozilla Contributors, licenciado bajo [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).* | |
 | |
@@ -96,22 +96,20 @@ Ejemplo de uso:
 
 En español, es importante considerar cuidadosamente la traducción más adecuada para la palabra "secret" en el contexto de Onetime Secret:
 
-#### Elección de palabras: "mensaje seguro" vs "secreto"
+#### Elección de palabras: "secreto"
 
-Recomendado: **mensaje seguro** o **mensaje**
-Menos adecuado: secreto
+Recomendado: **secreto**
 
-El término "mensaje seguro" comunica con mayor claridad la función del servicio - compartir información de manera segura. Aunque "secreto" es la traducción literal de "secret", en español esta palabra tiene fuertes connotaciones de información personal reservada o confidencial que pueden resultar confusas para el usuario.
+El término "secreto" se utiliza de forma consistente cuando se refiere al elemento confidencial que se comparte (el contenido que se protege). Esta traducción mantiene la coherencia con el nombre de la marca y enfatiza el aspecto de confidencialidad inherente a la plataforma. Aunque "mensaje" podría utilizarse, "secreto" conserva mejor el concepto central de confidencialidad.
 
 Ejemplos de uso:
 
-✅ "Tienes 3 mensajes seguros nuevos" (You have 3 new secure messages)
-❌ "Tienes 3 secretos nuevos" (You have 3 new secrets)
+✅ "Tienes 3 secretos nuevos" (You have 3 new secrets)
+✅ "Crear un secreto" (Create a secret)
+✅ "Compartir un secreto" (Share a secret)
+✅ "El secreto fue destruido" (The secret was destroyed)
 
-✅ "Compartir un mensaje seguro" (Share a secure message)
-❌ "Compartir un secreto" (Share a secret)
-
-Esta distinción ayuda a los usuarios a entender mejor que están utilizando una herramienta de comunicación para compartir información de forma segura, no una plataforma para almacenar secretos personales.
+Esta elección ayuda a los usuarios a entender que están utilizando una herramienta especializada para compartir información confidencial de forma segura, manteniendo la coherencia con el nombre del servicio "Onetime Secret".
 
 ## Normas gramaticales y de estilo
 
@@ -171,7 +169,7 @@ Carga de archivos
 
 ### Términos de marca (No traducir)
 
-- Secreto de una sola vez
+- Onetime Secret
 - OTS (cuando se utiliza como abreviatura del producto)
 - Identity Plus (nombre del producto)
 - Global Elite (nombre del producto)
