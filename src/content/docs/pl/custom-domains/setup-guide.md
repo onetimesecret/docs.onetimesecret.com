@@ -14,7 +14,7 @@ description: Ten przewodnik przeprowadzi Cię przez proces konfiguracji niestand
 
 Przed skonfigurowaniem niestandardowej domeny ważne jest zrozumienie różnicy między subdomenami a domenami apex:
 
-1. **Subdomena**: Podział Twojej głównej domeny (np. secrets.twojadomеna.com)
+1. **Subdomena**: Podział Twojej głównej domeny (np. secrets.twojadomena.com)
 2. **Domena apex**: Sama domena główna (np. twojadomena.com)
 
 ## Wybierz swój region

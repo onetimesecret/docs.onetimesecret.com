@@ -18,7 +18,7 @@ Niestandardowe domeny pozwalają używać własnej nazwy domeny dla linków Onet
                  transform hover:scale-105
                  rounded-xl
                  dark:border-brand-600">
-      secrets.twojamarkа.com
+      secrets.twojamarka.com
     </span>
   </a>
 </div>

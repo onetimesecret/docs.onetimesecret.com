@@ -304,7 +304,7 @@ local KEY=$(ots_metashare <<< "SECRET")
 local KEY=$(ots_metagenerate)
 
 # get a list of private metadata keys recently created.
-# note that this requires valid autnentication credentials
+# note that this requires valid authentication credentials
 local -a RECENT=( $(ots_recent) )
 
 # check on the current state of a secret, given the private key
@@ -324,17 +324,11 @@ SECRET
 
 # Share a secret (via HEREDOC)
 ./ots share <<-EOF
-      This is a mulit-line secret via HEREDOC.
-      Somthing else goes here.
+      This is a multi-line secret via HEREDOC.
+      Something else goes here.
 EOF
 
 # Get/Retrieve a secret:
 ./ots get <key|url>
 ./ots retrieve <key|url>
-
-### Przykład użycia jako CLI
-
-```bash
-$ ots burn flsdlaun6hwczqu9utmc0vts5xj9xu1
-flsdlaun6hwczqu9utmc0vts5xj9xu1
 ```
