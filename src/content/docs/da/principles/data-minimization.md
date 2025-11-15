@@ -13,7 +13,7 @@ description: Vores forpligtelse til kun at indsamle de essentielle data, der kr�
 
 2. **Klart formål:** Hvert stykke information, vi indsamler, har et specifikt formål med at levere vores service. Ingen sporing, ingen analyser, ingen ekstra.
 
-3. **Nul-viden-design**: Vi kan ikke få adgang til dine beskeder og ønsker det heller ikke. Hver besked er krypteret, kun tilgængelig én gang og slettes automatisk efter visning eller udløb.
+3. **nul-viden-design**: Vi kan ikke få adgang til dine beskeder og ønsker det heller ikke. Hver besked er krypteret, kun tilgængelig én gang og slettes automatisk efter visning eller udløb.
 
 **Sådan fungerer det:**
 

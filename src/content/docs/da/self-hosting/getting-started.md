@@ -9,7 +9,7 @@ Denne vejledning vil få dig op at køre med en selv-hostet Onetime Secret-insta
 
 ## Forudsætninger
 
-- **1GB+ RAM** for optimal ydeevne
+- **1GB+ RAM** til optimal ydeevne
 - **Redis-lagringsnotat**: Afhængigt af din Redis-konfiguration kan beskeder gemmes helt i hukommelsen uden nogensinde at blive skrevet til disk for forbedret sikkerhed
 
 ## Metode 1: Docker (anbefalet)

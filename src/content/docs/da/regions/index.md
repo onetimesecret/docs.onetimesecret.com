@@ -47,9 +47,9 @@ Valg af den rigtige datacenterregion er afgørende af flere årsager:
   - Overholder amerikanske databeskyttelseslove
   - Velegnet til USA-baserede brugere eller dem, der primært betjener amerikanske kunder
 
-## Del-ingenting-arkitektur
+## Del-ingenting-arkitektur (share-nothing architecture)
 
-Onetime Secret anvender en del-ingenting-arkitektur, der sikrer fuldstændig dataisolation mellem regioner:
+Onetime Secret anvender en del-ingenting-arkitektur (share-nothing architecture), der sikrer fuldstændig dataisolation mellem regioner:
 
 - **Separate konti**: Oprettelse af en konto på et hvilket som helst regionalt domæne er helt adskilt fra konti på andre domæner, selvom du bruger den samme e-mailadresse.
 - **Ingen tværgående operationer**: Du kan ikke udføre operationer (som at ødelægge en besked) på tværs af datacentre. Hvert center vedligeholder sit eget sæt af beskeder og brugerdata.

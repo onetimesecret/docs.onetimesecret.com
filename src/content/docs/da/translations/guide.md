@@ -270,7 +270,7 @@ Forskellige sprog håndterer denne distinktion på forskellige måder:
 | Engelsk  | password          | passphrase                   | Klar skelnen med sammensat ord |
 | Bulgarsk| парола (parola)   | ключова фраза (klyuchova fraza) | "Nøglefrase" |
 | Dansk   | adgangskode       | adgangssætning               | "Adgangskode" vs "Adgangssætning" |
-| Spansk  | contraseña        | frase de seguridad           | "Modsignal" vs "Sikkerhedsfrase" |
+| Spansk  | contraseña        | frase de seguridad           | "Modtegn" vs "Sikkerhedsfrase" |
 
 Når du oversætter disse termer:
 
