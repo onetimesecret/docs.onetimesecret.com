@@ -32,6 +32,6 @@ He pai ngā Hononga Karere Huna mō:
 
 ## Te Tīmatanga
 
-Hei waihanga i tō Hononga Karere Huna tuatahi, haere ki [https://onetimesecret.com](onetimesecret.com), ā, whai i ngā huarahi māmā i tō mātou whārangi kāinga.
+Hei waihanga i tō Hononga Karere Huna tuatahi, haere ki [onetimesecret.com](https://onetimesecret.com), ā, whai i ngā huarahi māmā i tō mātou whārangi kāinga.
 
 Mō ngā kōrero taipitopito atu mō te whakamahi i ngā Hononga Karere Huna, tirohia tō mātou [Aratohu Kaiwhakamahi](/mi/introduction/).
