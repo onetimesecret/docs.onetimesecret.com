@@ -1,124 +1,135 @@
 ---
 title: Woordenlijst
-description: Een referentiegids voor het vertalen van de belangrijkste termen, interface-elementen en technische woordenschat van Onetime Secret in meerdere talen om de consistentie te behouden.
+description: Een referentiegids voor het vertalen van de belangrijkste termen, interface-elementen en technische woordenschat van Onetime Secret naar het Nederlands om consistentie te behouden.
 ---
 
-# Verklarende woordenlijst voor eenmalige geheime vertalingen
+# Onetime Secret Vertaalwoordenlijst
 
-Deze verklarende woordenlijst biedt gestandaardiseerde vertalingen voor belangrijke termen in verschillende talen om consistentie in de Onetime Secret toepassing te garanderen. Het is gebaseerd op een analyse van de bestaande vertalingen in het Duits (Oostenrijk), Frans (Frankrijk) en Frans (Canada).
+Deze woordenlijst biedt gestandaardiseerde Nederlandse vertalingen voor belangrijke termen om consistentie in de Onetime Secret-applicatie te garanderen.
 
-## Kernbegrippen
+## Kernterminologie
 
-| Engels | Duits (AT) | Frans (FR) | Frans (CA) | Aantekeningen |
-|---------|-------------|-------------|-------------|-------|
-| Geheim (zelfstandig naamwoord) Geheim | geheim | centraal concept van de toepassing
-| geheim | geheim/sécurisé | geheim/sécurisé |
-| Paswoord | Sicherheitsphrase | phrase secrète | mot de passe | Authenticatiemethode voor geheimen.
-| Action to delete a secret before viewing |
-| view/reveal | ansehen/anzeigen | consulter/afficher | consulter/afficher | Actie om toegang te krijgen tot een geheim |
-| link | Link/Verbindung | lien | lien | De URL die toegang geeft tot een geheim |
-| encrypt/encrypted | verschlüsseln/verschlüsselt | chiffrer/chiffré | chiffrer/chiffré | Beveiligingsmethode |
-| secure | sicher | sécurisé | sécurisé | beschermingsstatus |
+| Engels | Nederlands (NL) | Context |
+|---------|-----------------|---------|
+| secret (zelfstandig naamwoord) | geheim | Centraal concept van de applicatie |
+| secret (bijvoeglijk naamwoord) | geheim/beveiligd | Beschrijvend bijvoeglijk naamwoord |
+| passphrase | wachtwoordzin | Authenticatiemethode voor geheimen |
+| password | wachtwoord | Authenticatie voor accounttoegang |
+| burn | verbranden | Actie om een geheim te verwijderen voor het bekijken |
+| view/reveal | bekijken/weergeven | Actie om toegang te krijgen tot een geheim |
+| link | link/koppeling | De URL die toegang geeft tot een geheim |
+| encrypt/encrypted | versleutelen/versleuteld | Beveiligingsmethode |
+| encryption | versleuteling/encryptie | Het proces van versleutelen |
+| secure | beveiligd/veilig | Status van bescherming |
+| private | privé | Privacystatus |
 
 ## Gebruikersinterface-elementen
 
-| Engels | Duits (AT) | Frans (FR) | Frans (CA) | Aantekeningen |
-|---------|-------------|-------------|-------------|-------|
-| Deel een geheim | Deel een geheim | Belangrijkste actie |
-| Account aanmaken | Konto erstellen | Créer un compte | Créer un compte | Registratie |
-| Aanmelden | Eintragen | Verbinden | Authenticatie |
-| Dashboard | Konto | Tableau de bord | Compte | Hoofdpagina van de gebruiker |
-| Instellingen | Instellingen | Parameters | Configuratiepagina |
-| Privacyopties | Datenschutz-Optionen | Options de confidentialité | Geheime instellingen |
-| Feedback | Rückmeldung | Retourzendingen | Retourzendingen | Gebruikersopmerkingen |
+| Engels | Nederlands (NL) | Context |
+|---------|-----------------|---------|
+| Share a secret | Een geheim delen | Hoofdactie |
+| Create Account | Account aanmaken | Registratie |
+| Sign In | Inloggen/Aanmelden | Authenticatie |
+| Dashboard | Dashboard | Hoofdpagina van gebruiker |
+| Settings | Instellingen | Configuratiepagina |
+| Privacy Options | Privacyopties | Geheime instellingen |
+| Feedback | Feedback | Opmerkingen van gebruikers |
 
-## Statusvoorwaarden
+## Statustermen
 
-| Engels | Duits (AT) | Frans (FR) | Frans (CA) | Aantekeningen |
-|---------|-------------|-------------|-------------|-------|
-| Geheim is bekeken.
-| verbrannt | supprimé | supprimé | Geheim is gewist voordat het werd bekeken |
-| abgelaufen | expiré | expiré | Geheim is door de tijd niet langer beschikbaar |
-| Geheim is aangemaakt.
-| active | aktiv | actif | actif | Geheim is beschikbaar |
-| inactief | inaktiv | inactif | inactif | Geheim is niet beschikbaar |
+| Engels | Nederlands (NL) | Context |
+|---------|-----------------|---------|
+| received | ontvangen | Geheim is bekeken |
+| burned | verbrand | Geheim is verwijderd voor het bekijken |
+| expired | verlopen | Geheim is niet langer beschikbaar door tijd |
+| created | aangemaakt | Geheim is gegenereerd |
+| active | actief | Geheim is beschikbaar |
+| inactive | inactief | Geheim is niet beschikbaar |
 
 ## Tijdgerelateerde termen
 
-| Engels | Duits (AT) | Frans (FR) | Frans (CA) | Aantekeningen |
-|---------|-------------|-------------|-------------|-------|
-| expires in | läuft ab in | expire dans | expire dans | Tijd tot het geheim niet langer beschikbaar is |
-| Day/Days | Tag/Tage | Jour/jours | Jour/jours | Tijdseenheid |
-| uur/uren | Stunde/Stunden | heure/heures | heure/heures | Tijdseenheid |
-| Minuten Minuten Minuten Minuten Tijdseenheid
-| seconde/seconden | sekunde/ekunden | seconde/seconden | seconde/seconden | tijdseenheid |
+| Engels | Nederlands (NL) | Context |
+|---------|-----------------|---------|
+| expires in | verloopt over | Tijd tot geheim niet langer beschikbaar is |
+| day/days | dag/dagen | Tijdseenheid |
+| hour/hours | uur/uren | Tijdseenheid |
+| minute/minutes | minuut/minuten | Tijdseenheid |
+| second/seconds | seconde/seconden | Tijdseenheid |
 
 ## Beveiligingsfuncties
 
-| Engels | Duits (AT) | Frans (FR) | Frans (CA) | Aantekeningen |
-|---------|-------------|-------------|-------------|-------|
-| Eenmalige toegang Unieke toegang Kernbeveiliging
-| Bescherming door wachtwoordzin | Schutz durch Sicherheitsphrase | Beveiliging door wachtwoordzin | Beveiliging door wachtwoordzin | Extra beveiliging |
-| gecodeerd in doorvoer | verschlüsselt bei der Übertragung | chiffré en transit | chiffré en transit | Gegevensbeschermingsmethode |
-| In rust versleuteld | verschlüsselt im Ruhezustand | chiffré au repos | chiffré au repos | Opslagbeveiliging |
+| Engels | Nederlands (NL) | Context |
+|---------|-----------------|---------|
+| one-time access | eenmalige toegang | Kernbeveiligingsfunctie |
+| passphrase protection | bescherming door wachtwoordzin | Extra beveiliging |
+| encrypted in transit | versleuteld tijdens transport | Gegevensbeschermingsmethode |
+| encrypted at rest | versleuteld in rust | Opslagbescherming |
+| self-destructing | zelfvernietigend | Automatisch verwijderen na gebruik |
 
 ## Accountgerelateerde termen
 
-| Engels | Duits (AT) | Frans (FR) | Frans (CA) | Aantekeningen |
-|---------|-------------|-------------|-------------|-------|
-| e-mail | courriel/e-mail | courriel | gebruikersidentificatie |
-| Wachtwoord | Paswoord | Paswoord | Authenticatie |
-| Gebruikersprofiel.
-| Abonnement Betaalde dienst.
-| Klant | Kunde | client | betalende gebruiker |
+| Engels | Nederlands (NL) | Context |
+|---------|-----------------|---------|
+| email | e-mail | Gebruikersidentificatie |
+| password | wachtwoord | Authenticatie voor account |
+| account | account | Gebruikersprofiel |
+| subscription | abonnement | Betaalde dienst |
+| customer | klant | Betalende gebruiker |
+| plan | plan/abonnement | Serviceniveau |
 
 ## Domein-gerelateerde termen
 
-| Engels | Duits (AT) | Frans (FR) | Frans (CA) | Aantekeningen |
-|---------|-------------|-------------|-------------|-------|
-| Domein verificatie | Domänenüberprüfung | Domänenüberprüfung | domaine personnalisé | Premium functie |
-| Domeinverificatie | Domänenüberprüfung | Vérification du domaine | Vérification du domaine | Setup proces |
-| DNS record | Namensserver-Eintrag | DNS enregistrement | DNS enregistrement | Configuratie |
-| CNAME record | CNAME-Eintrag | enregistrement CNAME | enregistrement CNAME | DNS setup |
+| Engels | Nederlands (NL) | Context |
+|---------|-----------------|---------|
+| custom domain | aangepast domein | Premiumfunctie |
+| domain verification | domeinverificatie | Installatieproces |
+| DNS record | DNS-record | Configuratie |
+| CNAME record | CNAME-record | DNS-installatie |
 
 ## Foutmeldingen
 
-| Engels | Duits (AT) | Frans (FR) | Frans (CA) | Aantekeningen |
-|---------|-------------|-------------|-------------|-------|
-| Fout | Fehler | erreur | bug | Probleemmelding |
-| waarschuwing | waarschuwing | afleiding | aandacht | waarschuwing kennisgeving |
-| Vriendelijke foutmelding.
+| Engels | Nederlands (NL) | Context |
+|---------|-----------------|---------|
+| error | fout | Probleemmelding |
+| warning | waarschuwing | Waarschuwingsmelding |
+| oops | oeps | Vriendelijke foutinleiding |
 
 ## Knoppen en acties
 
-| Engels | Duits (AT) | Frans (FR) | Frans (CA) | Aantekeningen |
-|---------|-------------|-------------|-------------|-------|
-| submit | einreichen | soumettre | soumettre | Form actie |
-| Annuleer | abbrechen | annuler | annuler | Negatieve actie |
-| Bevestigen | Bestätigen | Bevestigen | Positieve actie |
-| Kopieer naar klembord | In die Zwischenablage kopieren | Kopiëren in de presse-papiers | Kopiëren in de presse-papiers | Nuttige actie |
-| Doorgaan | verdergaan | Navigatie |
-| terug | zurück | retour | navigatie |
+| Engels | Nederlands (NL) | Context |
+|---------|-----------------|---------|
+| submit | verzenden/versturen | Formulieractie |
+| cancel | annuleren | Negatieve actie |
+| confirm | bevestigen | Positieve actie |
+| copy to clipboard | kopiëren naar klembord | Hulpactie |
+| continue | doorgaan | Navigatie |
+| back | terug | Navigatie |
+| delete | verwijderen | Verwijderactie |
+| save | opslaan | Opslagactie |
+| create | aanmaken | Aanmaakactie |
 
-## Marketingvoorwaarden
+## Marketingtermen
 
-| Engels | Duits (AT) | Frans (FR) | Frans (CA) | Aantekeningen |
-|---------|-------------|-------------|-------------|-------|
-| Beveiligde links | Geheime links | Beveiligde links | Producteigenschap |
-| Privacyprivacy design | Datenschutz als oberstes Gebot | privilégiant la protection de la vie privée | privilégiant la protection de la vie privée | Design filosofie |
-| Image de marque personnalisée Image de marque personnalisée Premium functie
+| Engels | Nederlands (NL) | Context |
+|---------|-----------------|---------|
+| secure links | beveiligde links | Productfunctie |
+| privacy-first design | privacy-eerst ontwerp | Ontwerpfilosofie |
+| custom branding | aangepaste branding | Premiumfunctie |
+| ephemeral | efemeer/tijdelijk | Tijdelijke aard van geheimen |
 
 ## Vertaalrichtlijnen
 
-1. **Consistentie**: Gebruik dezelfde vertaling voor een term in de hele toepassing.
-2. **Context**: Overweeg hoe de term wordt gebruikt in de toepassing
-3. **Culturele aanpassing**: Pas termen waar nodig aan aan lokale conventies
-4. **Technische nauwkeurigheid**: Ervoor zorgen dat beveiligingstermen nauwkeurig worden vertaald
+1. **Consistentie**: Gebruik dezelfde vertaling voor een term door de hele applicatie
+2. **Context**: Overweeg hoe de term wordt gebruikt in de applicatie
+3. **Culturele aanpassing**: Pas termen aan aan lokale conventies waar nodig
+4. **Technische nauwkeurigheid**: Zorg ervoor dat beveiligingstermen nauwkeurig worden vertaald
 5. **Toon**: Handhaaf een professionele maar ongecompliceerde toon
 
 ## Speciale overwegingen
 
-- De term "geheim" staat centraal in de toepassing en moet consequent worden vertaald.
-- Regionale verschillen (bijv. "courriel" in Canadees Frans vs. "e-mail" in Europees Frans) moeten worden gerespecteerd.
+- De term "geheim" is centraal in de applicatie en moet consequent worden vertaald
 - Technische termen met betrekking tot beveiliging moeten prioriteit geven aan nauwkeurigheid boven lokalisatie
-- UI-elementen moeten de platformconventies voor de doeltaal volgen
+- UI-elementen moeten de platformconventies voor Nederlands volgen
+- Gebruik "je" (informeel) in plaats van "u" (formeel) voor een toegankelijkere toon, tenzij anders aangegeven
+- Geleende Engelse woorden zoals "link", "e-mail" en "feedback" zijn acceptabel waar ze gangbaar zijn in het Nederlands
+- Let op het onderscheid tussen "wachtwoord" (voor accounttoegang) en "wachtwoordzin" (voor geheimbescherming)
