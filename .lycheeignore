@@ -20,8 +20,9 @@ https://x.com/*
 https://example.com/*
 https://yourdomain.com/*
 https://yourbrand.com/*
-secrets.yourdomain.com
-*.yourdomain.com
+https://secrets.yourdomain.com
+https://*.yourdomain.com
+http://*.yourdomain.com
 
 # Exclude URLs that might be in code examples but not real
 file:///
