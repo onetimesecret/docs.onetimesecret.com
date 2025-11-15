@@ -25,7 +25,6 @@
     "selfHosting": "Самостоятелен хостинг",
     "installationDeployment": "Инсталиране и внедряване",
     "configurationReference": "Справка за конфигурация",
-    "environmentVariables": "Променливи на средата",
     "configuration": "Конфигурация",
     "coreConfig": "Основна конфигурация",
     "systemSettings": "Системни настройки",

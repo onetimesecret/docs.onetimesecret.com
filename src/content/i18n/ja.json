@@ -25,7 +25,6 @@
     "selfHosting": "セルフホスティング",
     "installationDeployment": "インストールとデプロイ",
     "configurationReference": "設定リファレンス",
-    "environmentVariables": "環境変数",
     "configuration": "設定",
     "coreConfig": "基本設定",
     "systemSettings": "システム設定",
