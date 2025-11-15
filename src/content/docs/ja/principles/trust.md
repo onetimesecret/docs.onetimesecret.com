@@ -1,5 +1,5 @@
 ---
-title: タイトル信頼
+title: 信頼
 description: 私たちの実践についてオープンで正直であることへのコミットメント
 icon: eye
 ---
