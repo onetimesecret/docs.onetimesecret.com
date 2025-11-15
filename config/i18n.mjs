@@ -44,6 +44,11 @@ export const i18nConfig = {
       lang: "bg",
       dir: "ltr",
     },
+    da: {
+      label: "Dansk (da)",
+      lang: "da",
+      dir: "ltr",
+    },
     de: {
       label: "Deutsch (de)",
       lang: "de",
@@ -84,29 +89,14 @@ export const i18nConfig = {
       lang: "nl",
       dir: "ltr",
     },
-    "pt-br": {
-      label: "Português (pt-BR)",
-      lang: "pt-BR",
-      dir: "ltr",
-    },
-    uk: {
-      label: "Українська (uk)",
-      lang: "uk",
-      dir: "ltr",
-    },
-    "zh-cn": {
-      label: "简体中文 (zh-CN)",
-      lang: "zh-CN",
-      dir: "ltr",
-    },
-    da: {
-      label: "Dansk (da)",
-      lang: "da",
-      dir: "ltr",
-    },
     pl: {
       label: "Polski (pl)",
       lang: "pl",
+      dir: "ltr",
+    },
+    "pt-br": {
+      label: "Português (pt-BR)",
+      lang: "pt-BR",
       dir: "ltr",
     },
     sv: {
@@ -117,6 +107,16 @@ export const i18nConfig = {
     tr: {
       label: "Türkçe (tr)",
       lang: "tr",
+      dir: "ltr",
+    },
+    uk: {
+      label: "Українська (uk)",
+      lang: "uk",
+      dir: "ltr",
+    },
+    "zh-cn": {
+      label: "简体中文 (zh-CN)",
+      lang: "zh-CN",
       dir: "ltr",
     },
   },
