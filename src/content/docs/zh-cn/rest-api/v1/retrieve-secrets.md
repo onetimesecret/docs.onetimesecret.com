@@ -7,7 +7,7 @@ _更新日期 2025-04-02_
 
 注
 **数据位置和区域选择***
-- 选择一个 [区域]({getRelativeLocaleUrl(Astro.currentLocale ??'en', 'regions')}) （例如 [`us.onetimesecret.com`](https://us.onetimesecret.com/), [`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) 数据中心
+- 选择一个 [区域](/zh-cn/regions/) （例如 [`us.onetimesecret.com`](https://us.onetimesecret.com/), [`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) 数据中心
 - 考虑数据主权、延迟和合规要求等因素
 - ** 注：** 默认情况下，`onetimesecret.com` 仍可运行并路由至活动数据中心，建议使用特定位置，因为此功能将来可能会过时。
 :::

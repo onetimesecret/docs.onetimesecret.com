@@ -15,7 +15,7 @@ Você pode alternar entre idiomas usando o seletor de idioma no canto superior d
 
 ## Status da Tradução
 
-Para visualizar o status atual de nossos esforços de tradução, visite a página [Status da Tradução](/pt-br/translations/status).
+Para visualizar o status atual de nossos esforços de tradução, visite a página [Status da Tradução](/pt-br/translations/).
 
 ## Contribuindo com Traduções
 

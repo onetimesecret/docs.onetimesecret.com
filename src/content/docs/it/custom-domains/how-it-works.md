@@ -17,7 +17,7 @@ Sfruttando i domini personalizzati, non vi limitate a condividere i segreti, ma 
 3. [Configurate le impostazioni DNS del vostro dominio] (/docs/custom-domains/setup-guide) per puntare ai server di Onetime Secret nella regione prescelta.
 4. Configurare il dominio personalizzato nelle impostazioni dell'account Onetime Secret.
 5. Una volta verificati, i link segreti utilizzeranno il dominio personalizzato.
-6. [Personalizzate l'aspetto del vostro dominio](/docs/custom-domains/brand-guide) con loghi e colori del marchio attraverso l'interfaccia di amministrazione.
+6. [Personalizzate l'aspetto del vostro dominio](custom-domains/brand-guide) con loghi e colori del marchio attraverso l'interfaccia di amministrazione.
 
 
 ## Risoluzione dei problemi di configurazione più comuni
@@ -26,6 +26,6 @@ Sfruttando i domini personalizzati, non vi limitate a condividere i segreti, ma 
 - **Registri DNS errati**: Ricontrollare le impostazioni DNS in base alle istruzioni fornite per la regione scelta.
 - Problemi con il certificato SSL**: Contattare il nostro team di assistenza se si riscontrano problemi relativi all'SSL.
 - Verifica della proprietà del dominio**: Assicurarsi di avere il pieno controllo del dominio che si sta cercando di configurare.
-- Selezione della regione**: Se non siete sicuri di quale regione scegliere, consultate la nostra guida [Data Center Regions](/docs/regions) o contattate il nostro team di assistenza.
+- Selezione della regione**: Se non siete sicuri di quale regione scegliere, consultate la nostra guida [Data Center Regions](regions) o contattate il nostro team di assistenza.
 
-Per conoscere le migliori pratiche per l'utilizzo sicuro dei domini personalizzati, consultate la nostra guida [Security Best Practices](/docs/security-best-practices).
+Per conoscere le migliori pratiche per l'utilizzo sicuro dei domini personalizzati, consultate la nostra guida [Security Best Practices](security-best-practices).

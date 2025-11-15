@@ -26,4 +26,4 @@ Explore our Bonus Content to learn how Onetime Secret can address your secure co
 
 ## Get Started
 
-Ready to dive in? Check out our [documentation](/docs) for detailed instructions on using Onetime Secret effectively. If you have any questions or feedback, feel free to [contact us](/contact) directly.
+Ready to dive in? Check out our [documentation](/en/docs-overview) for detailed instructions on using Onetime Secret effectively. If you have any questions or feedback, feel free to [contact us](https://onetimesecret.com/feedback) directly.

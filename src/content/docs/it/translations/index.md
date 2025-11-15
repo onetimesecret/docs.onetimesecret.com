@@ -16,7 +16,7 @@ La documentazione di Onetime Secret è disponibile in diverse lingue per servire
 
 ## Stato della traduzione
 
-Per visualizzare lo stato attuale delle nostre traduzioni, visitate la pagina [Stato delle traduzioni](/it/translations/status).
+Per visualizzare lo stato attuale delle nostre traduzioni, visitate la pagina [Stato delle traduzioni](/it/translations/).
 
 ## Traduzioni che contribuiscono
 
@@ -32,7 +32,7 @@ Siamo lieti di contribuire ai nostri sforzi di traduzione. Se volete contribuire
 
 ### Standard di traduzione
 
-Per ottenere traduzioni coerenti e di alta qualità, seguite la nostra [Translation Style Guide](/it/translations/guide-en) e fate riferimento al nostro [Terminology Glossary](/it/translations/glossary) per le traduzioni standardizzate dei termini chiave.
+Per ottenere traduzioni coerenti e di alta qualità, seguite la nostra [Translation Style Guide](/it/translations/guide) e fate riferimento al nostro [Terminology Glossary](/it/translations/glossary) per le traduzioni standardizzate dei termini chiave.
 
 ## Gestione delle traduzioni mancanti
 

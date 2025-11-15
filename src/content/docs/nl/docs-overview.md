@@ -9,7 +9,7 @@ Gebruik het navigatiemenu om de Onetime Secret documentatie te verkennen. Je vin
 
 ## Aan de slag
 
-Begin met onze [Introductie](/nl/introductie/) sectie om de basis van Onetime Secret te leren.
+Begin met onze [Introductie](/nl/introduction/) sectie om de basis van Onetime Secret te leren.
 
 ## Belangrijkste secties
 

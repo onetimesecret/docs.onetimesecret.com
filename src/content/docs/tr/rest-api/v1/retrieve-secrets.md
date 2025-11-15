@@ -7,7 +7,7 @@ _Güncelleme 2025-04-02_
 
 :::note
 **Veri Yerelliği ve Bölge Seçimi**
-- Bir [bölge]({getRelativeLocaleUrl(Astro.currentLocale ?? 'en', 'regions')}) seçin (örneğin [`us.onetimesecret.com`](https://us.onetimesecret.com/), [`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) veri merkezleri
+- Bir [bölge](/tr/regions/) seçin (örneğin [`us.onetimesecret.com`](https://us.onetimesecret.com/), [`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) veri merkezleri
 - Veri egemenliği, gecikme ve uyumluluk gereksinimleri gibi faktörleri göz önünde bulundurun
 - **NOT:** Varsayılan `onetimesecret.com` çalışmaya devam eder ve aktif bir veri merkezine yönlendirir, belirli bir yerellik kullanılması önerilir çünkü bu işlevsellik gelecekte kullanımdan kaldırılabilir.
 :::

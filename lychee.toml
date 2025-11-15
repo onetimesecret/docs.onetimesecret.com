@@ -34,8 +34,8 @@ method = "head"
 # Exclude all private IPs
 exclude_all_private = true
 
-# Don't check email addresses
-exclude_mail = true
+# Note: Email addresses are excluded by default in lychee v0.21.0+
+# No need to specify exclude_mail (deprecated flag)
 
 # Remap certain URLs (useful for local development or redirects)
 # Format: "pattern" = "replacement"

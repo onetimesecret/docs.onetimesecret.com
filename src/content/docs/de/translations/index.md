@@ -16,7 +16,7 @@ Sie können zwischen den Sprachen mit dem Sprachauswahl-Menü in der oberen rech
 
 ## Übersetzungsstatus
 
-Um den aktuellen Status unserer Übersetzungsbemühungen einzusehen, besuchen Sie die [Übersetzungsstatus](/de/translations/status) Seite.
+Um den aktuellen Status unserer Übersetzungsbemühungen einzusehen, besuchen Sie die [Übersetzungsstatus](/de/translations/) Seite.
 
 ## Beitrag zu Übersetzungen
 
@@ -32,7 +32,7 @@ Wir begrüßen Beiträge zu unseren Übersetzungsbemühungen. Wenn Sie helfen m�
 
 ### Übersetzungsstandards
 
-Für konsistente, hochwertige Übersetzungen folgen Sie unserem [Übersetzungs-Styleguide](/de/translations/guide-en) und beziehen Sie sich auf unser [Terminologie-Glossar](/de/translations/glossary) für standardisierte Übersetzungen von Schlüsselbegriffen.
+Für konsistente, hochwertige Übersetzungen folgen Sie unserem [Übersetzungs-Styleguide](/de/translations/guide) und beziehen Sie sich auf unser [Terminologie-Glossar](/de/translations/glossary) für standardisierte Übersetzungen von Schlüsselbegriffen.
 
 ## Umgang mit fehlenden Übersetzungen
 

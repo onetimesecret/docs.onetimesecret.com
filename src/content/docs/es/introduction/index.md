@@ -26,4 +26,4 @@ Explore nuestro Contenido adicional para saber cómo Onetime Secret puede satisf
 
 ## Empezar
 
-¿Listo para sumergirte? Consulta nuestra [documentación](/docs) para obtener instrucciones detalladas sobre el uso eficaz de Onetime Secret. Si tienes alguna pregunta o comentario, no dudes en [contactar con nosotros](/contacto) directamente.
+¿Listo para sumergirte? Consulta nuestra [documentación](/es/docs-overview) para obtener instrucciones detalladas sobre el uso eficaz de Onetime Secret. Si tienes alguna pregunta o comentario, no dudes en [contactar con nosotros](https://onetimesecret.com/feedback) directamente.

@@ -26,4 +26,4 @@ Udforsk vores bonusindhold for at lære, hvordan Onetime Secret kan imødekomme 
 
 ## Kom i gang
 
-Klar til at dykke ned i det? Tjek vores [dokumentation](/docs) for detaljerede instruktioner om effektiv brug af Onetime Secret. Hvis du har spørgsmål eller feedback, er du velkommen til at [kontakte os](/contact) direkte.
+Klar til at dykke ned i det? Tjek vores [dokumentation](/da/docs-overview) for detaljerede instruktioner om effektiv brug af Onetime Secret. Hvis du har spørgsmål eller feedback, er du velkommen til at [kontakte os](https://onetimesecret.com/feedback) direkte.

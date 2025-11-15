@@ -14,10 +14,10 @@ Al aprovechar los dominios personalizados, no sólo comparte secretos, sino que 
 
 1. Registra un dominio o utiliza uno que ya posea.
 2. Elige la región del centro de datos que prefieras (UE o EE.UU.).
-3. [Configura los ajustes DNS de tu dominio](/docs/custom-domains/setup-guide) para que apunten a los servidores de Onetime Secret en la región elegida.
+3. [Configura los ajustes DNS de tu dominio](custom-domains/setup-guide) para que apunten a los servidores de Onetime Secret en la región elegida.
 4. Configura el dominio personalizado en la configuración de tu cuenta de Onetime Secret.
 5. Una vez verificados, tus enlaces secretos utilizarán tu dominio personalizado.
-6. [Personaliza la apariencia de tu dominio](/docs/custom-domains/brand-guide) con logotipos y colores de marca a través de la interfaz de administración.
+6. [Personaliza la apariencia de tu dominio](custom-domains/brand-guide) con logotipos y colores de marca a través de la interfaz de administración.
 
 
 ## Solución de problemas comunes de configuración
@@ -26,6 +26,6 @@ Al aprovechar los dominios personalizados, no sólo comparte secretos, sino que 
 - Registros DNS incorrectos**: Compruebe su configuración DNS con las instrucciones proporcionadas para la región elegida.
 - Problemas con certificados SSL**: Póngase en contacto con nuestro equipo de soporte si tiene algún problema relacionado con SSL.
 - Verificación de la propiedad del dominio**: Asegúrese de que tiene pleno control sobre el dominio que está intentando configurar.
-- Selección de región**: Si no está seguro de qué región elegir, consulte nuestra guía [Regiones del centro de datos](/docs/regions) o póngase en contacto con nuestro equipo de asistencia.
+- Selección de región**: Si no está seguro de qué región elegir, consulte nuestra guía [Regiones del centro de datos](regions) o póngase en contacto con nuestro equipo de asistencia.
 
-Si desea conocer las mejores prácticas para utilizar dominios personalizados de forma segura, consulte nuestra guía [Prácticas recomendadas de seguridad](/docs/security-best-practices).
+Si desea conocer las mejores prácticas para utilizar dominios personalizados de forma segura, consulte nuestra guía [Prácticas recomendadas de seguridad](security-best-practices).

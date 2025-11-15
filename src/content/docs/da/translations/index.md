@@ -29,7 +29,7 @@ Du kan skifte mellem sprog ved hjælp af sprogvælgeren i øverste højre hjørn
 
 ## Oversættelsesstatus
 
-For at se den aktuelle status for vores oversættelsesarbejde, besøg siden [Oversættelsesstatus](/en/translations/status).
+For at se den aktuelle status for vores oversættelsesarbejde, besøg siden [Oversættelsesstatus](/da/translations/).
 
 ## Bidrag med oversættelser
 

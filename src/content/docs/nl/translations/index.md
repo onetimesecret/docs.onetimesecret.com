@@ -16,7 +16,7 @@ Je kunt tussen talen schakelen met de taalkiezer in de rechterbovenhoek van elke
 
 ## Vertaalstatus
 
-Ga naar de pagina [Vertaalstatus](/nl/vertalingen/status) om de huidige status van onze vertaalinspanningen te bekijken.
+Ga naar de pagina [Vertaalstatus](/nl/translations/) om de huidige status van onze vertaalinspanningen te bekijken.
 
 ## Bijdragende vertalingen
 
@@ -32,7 +32,7 @@ Bijdragen aan onze vertalingen zijn van harte welkom. Als je wilt helpen de docu
 
 ### Vertaalnormen
 
-Voor consistente vertalingen van hoge kwaliteit volg je onze [Vertaalstijlgids](/nl/vertalingen/gids-en) en raadpleeg je onze [Woordenlijst terminologie](/nl/vertalingen/glossarium) voor gestandaardiseerde vertalingen van belangrijke termen.
+Voor consistente vertalingen van hoge kwaliteit volg je onze [Vertaalstijlgids](/nl/translations/guide) en raadpleeg je onze [Woordenlijst terminologie](/nl/translations/glossary) voor gestandaardiseerde vertalingen van belangrijke termen.
 
 ## Omgaan met ontbrekende vertalingen
 

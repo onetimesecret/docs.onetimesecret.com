@@ -26,4 +26,4 @@ Utforska vårt bonusinnehåll för att lära dig hur Onetime Secret kan adresser
 
 ## Kom igång
 
-Redo att börja? Kolla in vår [dokumentation](/docs) för detaljerade instruktioner om hur du använder Onetime Secret effektivt. Om du har några frågor eller feedback, tveka inte att [kontakta oss](/contact) direkt.
+Redo att börja? Kolla in vår [dokumentation](/sv/docs-overview) för detaljerade instruktioner om hur du använder Onetime Secret effektivt. Om du har några frågor eller feedback, tveka inte att [kontakta oss](https://onetimesecret.com/feedback) direkt.

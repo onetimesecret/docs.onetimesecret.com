@@ -26,4 +26,4 @@ Zapoznaj się z naszymi dodatkowymi treściami, aby dowiedzieć się, jak Onetim
 
 ## Rozpocznij
 
-Gotowy do działania? Sprawdź naszą [dokumentację](/docs), aby uzyskać szczegółowe instrukcje dotyczące efektywnego korzystania z Onetime Secret. Jeśli masz jakieś pytania lub opinie, skontaktuj się z nami bezpośrednio [kontakt](/contact).
+Gotowy do działania? Sprawdź naszą [dokumentację](/pl/docs-overview), aby uzyskać szczegółowe instrukcje dotyczące efektywnego korzystania z Onetime Secret. Jeśli masz jakieś pytania lub opinie, skontaktuj się z nami bezpośrednio [kontakt](https://onetimesecret.com/feedback).

@@ -7,7 +7,7 @@ _Оновлено 2025-04-02_
 
 :::примітка
 **Вибір місцевості та регіону даних
-- Виберіть [регіон]({getRelativeLocaleUrl(Astro.currentLocale ?? 'en', 'regions')}) (наприклад [`us.onetimesecret.com`](https://us.onetimesecret.com/), [`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) центри обробки даних
+- Виберіть [регіон](/uk/regions/) (наприклад [`us.onetimesecret.com`](https://us.onetimesecret.com/), [`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) центри обробки даних
 - Враховуйте такі фактори, як суверенітет даних, затримка та вимоги до відповідності
 - За замовчуванням `onetimesecret.com` залишається робочим і спрямовує до активного центру обробки даних, рекомендується використовувати конкретну локацію, оскільки ця функціональність може бути застарілою в майбутньому.
 :::

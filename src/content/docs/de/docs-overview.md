@@ -15,5 +15,5 @@ Beginnen du mit unserer [Einführung](/de/introduction/), um die Grundlagen von 
 
 - [Geheime Links](/de/secret-links/) - Erfahren du, wie du einmalige Geheimnisse erstellen und teilen
 - [Benutzerdefinierte Domains](/de/custom-domains/) - Richten du? dein eigenes markenbezogenes Geheimnis-Sharing-Erlebnis ein
-- [REST API](/de/rest-api/) - Integrieren du? Onetime Secret in deine Anwendungen
+- [REST API](/de/rest-api) - Integrieren du? Onetime Secret in deine Anwendungen
 - [du?cherheits-Best-Practices](/de/security-best-practices/) - Gewährleisten du maximale du?cherheit beim Teilen sensibler Informationen

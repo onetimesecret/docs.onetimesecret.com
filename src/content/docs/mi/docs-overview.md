@@ -9,11 +9,11 @@ Whakamahia te tahua whakatere hei tūhura i ngā tuhinga tohutoro o Onetime Secr
 
 ## Tīmatanga
 
-Tīmataria ki tā mātou wāhanga [Kupu Whakataki](/en/introduction/) kia ako ai i ngā mātāpono o Onetime Secret.
+Tīmataria ki tā mātou wāhanga [Kupu Whakataki](/mi/introduction/) kia ako ai i ngā mātāpono o Onetime Secret.
 
 ## Ngā Wāhanga Matua
 
-- [Ngā Hononga Huna](/en/secret-links/) - Ako me pēhea te waihanga me te tiritiri i ngā karere huna kotahi noa
-- [Ngā Rohe Whakaritea](/en/custom-domains/) - Whakatūria tō wheako tiritiri karere huna me tō tohu
+- [Ngā Hononga Huna](/mi/secret-links/) - Ako me pēhea te waihanga me te tiritiri i ngā karere huna kotahi noa
+- [Ngā Rohe Whakaritea](/mi/custom-domains/) - Whakatūria tō wheako tiritiri karere huna me tō tohu
 - [REST API](/en/rest-api/) - Whakakaongia a Onetime Secret ki ō taupānga
-- [Tikanga Pai mō te Haumaru](/en/security-best-practices/) - Whakaritea te haumaru tino teitei ina tiritiri mōhiohio matatapu
+- [Tikanga Pai mō te Haumaru](/mi/security-best-practices/) - Whakaritea te haumaru tino teitei ina tiritiri mōhiohio matatapu
