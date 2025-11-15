@@ -7,7 +7,7 @@ description: Um guia abrangente para tradutores trabalhando na localização do 
 
 ![Guia de Estilo de Tradução](/socialcards/onetime-socialcard-20250226-1.png)
 
-Este guia de estilo fornece instruções para tradução para o português do Brasil.
+Este guia de estilo fornece instruções para tradução para o idioma português do Brasil.
 
 | *Este Guia de Estilo é baseado em conteúdo dos [Guias de Estilo L10N da Mozilla](https://github.com/mozilla-l10n/styleguides/) pelos Colaboradores da Mozilla, licenciado sob [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).* |
 |  |
