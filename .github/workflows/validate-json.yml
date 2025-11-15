@@ -1,0 +1,142 @@
+name: Validate JSON Files
+
+on:
+  push:
+    branches: [main, develop]
+    paths:
+      - "**/*.json"
+  pull_request:
+    branches: [main, develop]
+    paths:
+      - "**/*.json"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-json:
+    runs-on: ubuntu-latest
+    name: Validate JSON Files
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Validate JSON files
+        run: |
+          echo "🔍 Finding JSON files..."
+          json_files=$(find . -name "*.json" -not -path "./node_modules/*" -not -path "./.git/*" -not -path "./dist/*" -not -path "./.astro/*")
+
+          if [ -z "$json_files" ]; then
+            echo "ℹ️ No JSON files found to validate"
+            exit 0
+          fi
+
+          echo "📋 Found JSON files:"
+          echo "$json_files" | sed 's/^/  /'
+          echo
+
+          failed_files=()
+
+          while IFS= read -r file; do
+            echo "🔎 Validating: $file"
+            if node -e "
+              try {
+                const fs = require('fs');
+                const content = fs.readFileSync('$file', 'utf8');
+                JSON.parse(content);
+                console.log('✅ Valid JSON');
+              } catch (error) {
+                console.error('❌ Invalid JSON:', error.message);
+                process.exit(1);
+              }
+            "; then
+              echo "  ✅ $file is valid"
+            else
+              echo "  ❌ $file is invalid"
+              failed_files+=("$file")
+            fi
+          done <<< "$json_files"
+
+          if [ ${#failed_files[@]} -gt 0 ]; then
+            echo
+            echo "💥 Validation failed for the following files:"
+            printf '  %s\n' "${failed_files[@]}"
+            exit 1
+          else
+            echo
+            echo "🎉 All JSON files are valid!"
+          fi
+
+      - name: Validate translation files specifically
+        run: |
+          echo "🌍 Validating translation files..."
+
+          if [ ! -d "src/content/i18n" ]; then
+            echo "ℹ️ No translation directory found"
+            exit 0
+          fi
+
+          translation_files=$(find src/content/i18n -name "*.json" 2>/dev/null || true)
+
+          if [ -z "$translation_files" ]; then
+            echo "ℹ️ No translation files found"
+            exit 0
+          fi
+
+          echo "📋 Found translation files:"
+          echo "$translation_files" | sed 's/^/  /'
+          echo
+
+          failed_translations=()
+
+          while IFS= read -r file; do
+            echo "🔎 Validating translation: $file"
+            if node -e "
+              try {
+                const fs = require('fs');
+                const content = fs.readFileSync('$file', 'utf8');
+                const parsed = JSON.parse(content);
+
+                // Additional checks for translation files
+                if (typeof parsed !== 'object' || parsed === null || Array.isArray(parsed)) {
+                  throw new Error('Translation file must be a JSON object');
+                }
+
+                // Check for empty translations
+                const emptyKeys = Object.entries(parsed)
+                  .filter(([key, value]) => typeof value === 'string' && value.trim() === '')
+                  .map(([key]) => key);
+
+                if (emptyKeys.length > 0) {
+                  console.warn('⚠️ Found empty translations:', emptyKeys.join(', '));
+                }
+
+                console.log('✅ Valid translation file with', Object.keys(parsed).length, 'entries');
+              } catch (error) {
+                console.error('❌ Invalid translation file:', error.message);
+                process.exit(1);
+              }
+            "; then
+              echo "  ✅ $file is valid"
+            else
+              echo "  ❌ $file is invalid"
+              failed_translations+=("$file")
+            fi
+          done <<< "$translation_files"
+
+          if [ ${#failed_translations[@]} -gt 0 ]; then
+            echo
+            echo "💥 Translation validation failed for:"
+            printf '  %s\n' "${failed_translations[@]}"
+            exit 1
+          else
+            echo
+            echo "🎉 All translation files are valid!"
+          fi

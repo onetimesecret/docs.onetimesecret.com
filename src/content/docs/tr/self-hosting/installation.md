@@ -209,7 +209,7 @@ sudo systemctl reload nginx
 
 Caddy otomatik HTTPS ve daha basit yapılandırma sağlar:
 
-```caddyfile
+```nginx
 # /etc/caddy/Caddyfile
 your-domain.com {
     # Oluşturulmuş ön uçtan statik dosyaları işle
@@ -318,7 +318,7 @@ sudo chmod 644 /etc/ssl/certs/your-domain.com.crt
 
 **Seçenek 1: Yalnızca bellek (maksimum güvenlik için asla diske kaydetme):**
 
-```conf
+```properties
 # /etc/redis/redis.conf
 
 # Bellek optimizasyonu
@@ -340,7 +340,7 @@ timeout 300
 
 **Seçenek 2: Disk kalıcılığı (yedeklemeleri etkinleştirir ancak gizli mesajları diske yazar):**
 
-```conf
+```properties
 # /etc/redis/redis.conf
 
 # Bellek optimizasyonu

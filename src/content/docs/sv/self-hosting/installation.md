@@ -209,7 +209,7 @@ sudo systemctl reload nginx
 
 Caddy tillhandahåller automatisk HTTPS och enklare konfiguration:
 
-```caddyfile
+```nginx
 # /etc/caddy/Caddyfile
 your-domain.com {
     # Hantera statiska filer från byggd frontend
@@ -317,7 +317,7 @@ sudo chmod 644 /etc/ssl/certs/your-domain.com.crt
 
 **Alternativ 1: Endast minne (aldrig spara till disk för maximal säkerhet):**
 
-```conf
+```properties
 # /etc/redis/redis.conf
 
 # Minnesoptimering
@@ -339,7 +339,7 @@ timeout 300
 
 **Alternativ 2: Diskpersistens (möjliggör säkerhetskopior men skriver hemligheter till disk):**
 
-```conf
+```properties
 # /etc/redis/redis.conf
 
 # Minnesoptimering

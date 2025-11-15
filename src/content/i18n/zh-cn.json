@@ -25,7 +25,6 @@
     "selfHosting": "自托管",
     "installationDeployment": "安装和部署",
     "configurationReference": "配置参考",
-    "environmentVariables": "环境变量",
     "configuration": "配置",
     "coreConfig": "核心配置",
     "systemSettings": "系统设置",

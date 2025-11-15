@@ -25,7 +25,6 @@
     "selfHosting": "Auto-hospedaje",
     "installationDeployment": "Instalación y Despliegue",
     "configurationReference": "Referencia de Configuración",
-    "environmentVariables": "Variables de Entorno",
     "configuration": "Configuración",
     "coreConfig": "Configuración básica",
     "systemSettings": "Configuración del sistema",

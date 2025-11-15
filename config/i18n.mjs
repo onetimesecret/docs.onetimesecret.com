@@ -44,14 +44,19 @@ export const i18nConfig = {
       lang: "bg",
       dir: "ltr",
     },
-    es: {
-      label: "Español (es)",
-      lang: "es",
+    da: {
+      label: "Dansk (da)",
+      lang: "da",
       dir: "ltr",
     },
     de: {
       label: "Deutsch (de)",
       lang: "de",
+      dir: "ltr",
+    },
+    es: {
+      label: "Español (es)",
+      lang: "es",
       dir: "ltr",
     },
     fr: {
@@ -84,9 +89,24 @@ export const i18nConfig = {
       lang: "nl",
       dir: "ltr",
     },
+    pl: {
+      label: "Polski (pl)",
+      lang: "pl",
+      dir: "ltr",
+    },
     "pt-br": {
       label: "Português (pt-BR)",
       lang: "pt-BR",
+      dir: "ltr",
+    },
+    sv: {
+      label: "Svenska (sv)",
+      lang: "sv",
+      dir: "ltr",
+    },
+    tr: {
+      label: "Türkçe (tr)",
+      lang: "tr",
       dir: "ltr",
     },
     uk: {

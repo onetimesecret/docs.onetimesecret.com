@@ -25,7 +25,6 @@
     "selfHosting": "Zelf-hosting",
     "installationDeployment": "Installatie en Implementatie",
     "configurationReference": "Configuratie Referentie",
-    "environmentVariables": "Omgevingsvariabelen",
     "configuration": "Configuratie",
     "coreConfig": "Basisconfiguratie",
     "systemSettings": "Systeeminstellingen",

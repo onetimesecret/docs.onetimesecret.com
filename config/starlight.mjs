@@ -22,6 +22,7 @@ export const starlightConfig = {
   },
   pagefind: false,
   plugins: [],
+
   components: {
     Header: "./src/components/starlight/Header.astro",
     SiteTitle: "./src/components/starlight/SiteTitle.astro",
