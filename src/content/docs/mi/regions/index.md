@@ -115,7 +115,7 @@ I te wā e whakatū ana i tō pūkete Onetime Secret, e whirihora ana rānei i t
 
 1. Mō ngā pūkete hou: Kōwhiria tō rohe i hiahia ai i te wā o te tukanga rēhita.
 2. Mō ngā pūkete kei te ora: Whakapā ki tō mātou tīma tautoko ki te kōrero mō ngā kōwhiringa hekenga rohe.
-3. Mō ngā rohe ritenga: Tautuhia tō rohe kua kōwhiria i te wā e whirihora ana i ō tautuhinga DNS (tirohia tō mātou [Aratohu Whakatū Rohe Ritenga](/mi/custom-domains/setup-guide) mō ngā tohutohu taipitopito).
+3. Mō ngā rohe ritenga: Tautuhia tō rohe kua kōwhiria i te wā e whirihora ana i ō tautuhinga DNS (tirohia tō mātou [Aratohu Whakatū Rohe Ritenga](/en/custom-domains/setup-guide) mō ngā tohutohu taipitopito).
 
 ## Ngā Pātai Auau
 

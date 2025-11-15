@@ -16,7 +16,7 @@ Ka taea e koe te huri i waenga i ngā reo mā te kaitīpako reo kei runga rawa m
 
 ## Te Tūnga o te Whakamāoritanga
 
-Hei mātakitaki i te tūnga o nāianei o ā mātou mahi whakamāori, toro atu ki te whārangi [Tūnga Whakamāoritanga](/en/translations/status).
+Hei mātakitaki i te tūnga o nāianei o ā mātou mahi whakamāori, toro atu ki te whārangi [Tūnga Whakamāoritanga](/mi/translations/).
 
 ## Te Tautoko i ngā Whakamāoritanga
 
@@ -32,7 +32,7 @@ Ka poipoi mātou i ngā takoha ki ā mātou mahi whakamāori. Mēnā e hiahia an
 
 ### Ngā Paerewa Whakamāori
 
-Mō ngā whakamāoritanga kounga teitei, rite, whaiwhakaaro ki tā mātou [Aratohu Kāhua Whakamāori](/en/translations/guide-en) me tā mātou [Papakupu Kupu](/en/translations/glossary) mō ngā whakamāoritanga paerewa o ngā kupu matua.
+Mō ngā whakamāoritanga kounga teitei, rite, whaiwhakaaro ki tā mātou [Aratohu Kāhua Whakamāori](/mi/translations/guide) me tā mātou [Papakupu Kupu](/en/translations/glossary) mō ngā whakamāoritanga paerewa o ngā kupu matua.
 
 ## Te Whakahaere i ngā Whakamāoritanga Ngaro
 

@@ -16,7 +16,7 @@ Vous pouvez passer d'une langue à l'autre en utilisant le sélecteur de langue 
 
 ## État de la traduction
 
-Pour connaître l'état actuel de nos efforts de traduction, consultez la page [Translation Status](/fr/translations/status).
+Pour connaître l'état actuel de nos efforts de traduction, consultez la page [Translation Status](/fr/translations/).
 
 ## Contribuer aux traductions
 
@@ -32,7 +32,7 @@ Les contributions à nos efforts de traduction sont les bienvenues. Si vous souh
 
 ### Normes de traduction
 
-Pour des traductions cohérentes et de qualité, suivez notre [Guide de style de traduction](/fr/translations/guide-fr) et consultez notre [Glossaire terminologique](/fr/translations/glossary) pour des traductions normalisées de termes clés.
+Pour des traductions cohérentes et de qualité, suivez notre [Guide de style de traduction](/fr/translations/guide) et consultez notre [Glossaire terminologique](/fr/translations/glossary) pour des traductions normalisées de termes clés.
 
 ## Gestion des traductions manquantes
 

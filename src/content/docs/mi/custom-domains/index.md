@@ -43,7 +43,7 @@ Hei whakatū i tētahi Rohe Ritenga:
 5. Whai i ngā tohutohu tukutuku kua whakaratohia mō te whirihorahanga DNS.
 6. Tatari kia manatokohia te rohe. Mēnā kei te wātea, pāwhiria te pātene "Manatoko" ki te tere i te tukanga. Me whakahōu pea koe i te whārangi.
 
-Mō ngā tohutohu taipitopito, tae atu ki te āhua o te kōwhiri i waenganui i ngā rohe EU me US, tirohia tō mātou [Aratohu Whakatū Rohe Ritenga](/mi/custom-domains/setup-guide).
+Mō ngā tohutohu taipitopito, tae atu ki te āhua o te kōwhiri i waenganui i ngā rohe EU me US, tirohia tō mātou [Aratohu Whakatū Rohe Ritenga](/en/custom-domains/setup-guide).
 
 ## Te Ritenga Waitohu
 
@@ -55,7 +55,7 @@ Ka taea e ngā kaiwhakamahi Rohe Ritenga te whakamāori i tō rātou atanga toha
 4. Tiro matakite i ngā whakarerekētanga i te wā-tūturu
 5. Whakahohe/whakakore i te waihanga karere huna tūmatanui
 
-Mō ngā tohutohu waitohu taipitopito, tirohia tō mātou [Aratohu Waitohu](/mi/custom-domains/brand-guide).
+Mō ngā tohutohu waitohu taipitopito, tirohia tō mātou [Aratohu Waitohu](/en/custom-domains/brand-guide).
 
 ## Ngā Whakaarohanga Nui
 

@@ -45,7 +45,7 @@ So richtest du eine benutzerdefinierte Domain ein:
 5. Folge den schrittweisen Anweisungen für die DNS-Konfiguration.
 6. Warte, bis die Domain verifiziert wurde. Klicke, falls verfügbar, auf die Schaltfläche „Verifizieren", um den Vorgang zu beschleunigen. Möglicherweise musst du die Seite aktualisieren.
 
-Detaillierte Anweisungen, einschließlich der Auswahl zwischen EU- und US-Regionen, findest du in unserem [Leitfaden zur Einrichtung benutzerdefinierter Domains](/docs/custom-domains/setup-guide).
+Detaillierte Anweisungen, einschließlich der Auswahl zwischen EU- und US-Regionen, findest du in unserem [Leitfaden zur Einrichtung benutzerdefinierter Domains](custom-domains/setup-guide).
 
 ## Anpassung der Marke
 
@@ -57,7 +57,7 @@ Benutzer von benutzerdefinierten Domains können ihre geheime Freigabeoberfläch
 4. Änderungen in Echtzeit in der Vorschau anzeigen
 5. Erstellung öffentlicher Geheimnisse aktivieren/deaktivieren
 
-Detaillierte Anweisungen zum Branding findest du in unserem [Markenleitfaden](/docs/custom-domains/brand-guide).
+Detaillierte Anweisungen zum Branding findest du in unserem [Markenleitfaden](custom-domains/brand-guide).
 
 
 ## Wichtige Hinweise
@@ -66,6 +66,6 @@ Detaillierte Anweisungen zum Branding findest du in unserem [Markenleitfaden](/d
 - Du bist für die Pflege und Verlängerung deiner Domainregistrierung verantwortlich.
 - Eine ordnungsgemäße SSL/TLS-Konfiguration ist für die du?cherheit von entscheidender Bedeutung (wird automatisch von Onetime Secret übernommen).
 - Stelle sicher, dass die von dir gewählte Domain den Markenrichtlinien deiner Organisation entspricht.
-- Berücksichtige bei der Wahl zwischen [EU- und US-Regionen](/docs/regions) die Datenschutzbestimmungen.
+- Berücksichtige bei der Wahl zwischen [EU- und US-Regionen](regions) die Datenschutzbestimmungen.
 
-Informationen zu bewährten Verfahren für die sichere Verwendung benutzerdefinierter Domains findest du in unserem Leitfaden [Bewährte du?cherheitsverfahren](/docs/security-best-practices).
+Informationen zu bewährten Verfahren für die sichere Verwendung benutzerdefinierter Domains findest du in unserem Leitfaden [Bewährte du?cherheitsverfahren](security-best-practices).

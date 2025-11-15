@@ -26,4 +26,4 @@ Tirotirohia ō mātou Ihirangi Pōnaki hei ako i te āhua ka whakatau a Onetime 
 
 ## Tīmata
 
-Kei te rite ki te ruku? Tirohia ō mātou [tohutohu](/docs) mō ngā tohutohu taipitopito mō te whakamahi i Onetime Secret. Mēnā he pātai, he urupare rānei ōu, kaua e whakamā ki te [whakapā mai](/contact) tōtika.
+Kei te rite ki te ruku? Tirohia ō mātou [tohutohu](/mi/docs-overview) mō ngā tohutohu taipitopito mō te whakamahi i Onetime Secret. Mēnā he pātai, he urupare rānei ōu, kaua e whakamā ki te [whakapā mai](https://onetimesecret.com/feedback) tōtika.

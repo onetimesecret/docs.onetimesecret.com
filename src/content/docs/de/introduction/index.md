@@ -26,4 +26,4 @@ Entdecke unseren Bonus-Inhalt und erfahre, wie Onetime Secret deine Anforderunge
 
 ## Los geht's
 
-Bist du bereit, loszulegen? In unserer [Dokumentation](/de/docs-overview) findest du ausführliche Anleitungen zur effektiven Nutzung von Onetime Secret. Wenn du Fragen oder Anregungen hast, kannst du dich direkt an [Kontakt](/de/contact) wenden.
+Bist du bereit, loszulegen? In unserer [Dokumentation](/de/docs-overview) findest du ausführliche Anleitungen zur effektiven Nutzung von Onetime Secret. Wenn du Fragen oder Anregungen hast, kannst du dich direkt an [Kontakt](https://onetimesecret.com/feedback) wenden.

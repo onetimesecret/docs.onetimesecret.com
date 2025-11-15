@@ -26,4 +26,4 @@ Onetime Secret'ın güvenli iletişim ihtiyaçlarınızı verimli ve gizli bir �
 
 ## Başlayın
 
-Dalmaya hazır mısınız? Onetime Secret'ı etkili bir şekilde kullanma hakkında ayrıntılı talimatlar için [belgelerimize](/docs) göz atın. Herhangi bir sorunuz veya geri bildiriminiz varsa, doğrudan [bizimle iletişime geçmekten](/contact) çekinmeyin.
+Dalmaya hazır mısınız? Onetime Secret'ı etkili bir şekilde kullanma hakkında ayrıntılı talimatlar için [belgelerimize](/tr/docs-overview) göz atın. Herhangi bir sorunuz veya geri bildiriminiz varsa, doğrudan [bizimle iletişime geçmekten](https://onetimesecret.com/feedback) çekinmeyin.

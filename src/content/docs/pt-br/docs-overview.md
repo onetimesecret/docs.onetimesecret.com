@@ -15,5 +15,5 @@ Comece com nossa seção [Introdução](/pt-br/introduction/) para aprender o b�
 
 - [Links de Mensagens Confidenciais](/pt-br/secret-links/) - Aprenda como criar e compartilhar mensagens de uso único
 - [Domínios Personalizados](/pt-br/custom-domains/) - Configure sua própria experiência de compartilhamento de mensagens com sua marca
-- [API REST](/pt-br/rest-api/) - Integre o Onetime Secret com suas aplicações
+- [API REST](/pt-br/docs-overview) - Integre o Onetime Secret com suas aplicações
 - [Melhores Práticas de Segurança](/pt-br/security-best-practices/) - Garanta segurança máxima ao compartilhar informações sensíveis

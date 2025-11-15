@@ -15,5 +15,5 @@ Start med vores [Introduktion](/da/introduction/) sektion for at lære det grund
 
 - [Hemmelige links](/da/secret-links/) - Lær hvordan du opretter og deler engangsbeskeder
 - [Brugerdefinerede domæner](/da/custom-domains/) - Opsæt din egen brandede beskeddelingsoplevelse
-- [REST API](/da/rest-api/) - Integrer Onetime Secret med dine applikationer
+- [REST API](/da/docs-overview) - Integrer Onetime Secret med dine applikationer
 - [Bedste sikkerhedspraksis](/da/security-best-practices/) - Sikr maksimal sikkerhed ved deling af følsom information

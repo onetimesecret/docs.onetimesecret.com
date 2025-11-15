@@ -15,10 +15,10 @@ Bienvenue dans les principes directeurs de Onetime Secret. Ces documents fondame
 
 ## Nos engagements
 
-- **[Privacy First](/principles/privacy-first)** : Notre approche de la protection de la vie privée des utilisateurs par des choix de conception délibérés
-- **[Construire la confiance](/principles/trust)** : Comment nous gagnons et maintenons la confiance des utilisateurs par des actions et non par des mots.
-- **[Philosophie de la communication](/principles/communication)** : Pourquoi nous limitons la communication par courrier électronique au strict nécessaire
-- **[Minimisation des données](/principles/data-minimization)** : Notre engagement à ne collecter et à ne conserver que les données les plus essentielles
+- **[Privacy First](/fr/principles/privacy-first)** : Notre approche de la protection de la vie privée des utilisateurs par des choix de conception délibérés
+- **[Construire la confiance](/fr/principles/trust)** : Comment nous gagnons et maintenons la confiance des utilisateurs par des actions et non par des mots.
+- **[Philosophie de la communication](/fr/principles/communication)** : Pourquoi nous limitons la communication par courrier électronique au strict nécessaire
+- **[Minimisation des données](/fr/principles/data-minimization)** : Notre engagement à ne collecter et à ne conserver que les données les plus essentielles
 
 
 ## Pourquoi les principes sont importants

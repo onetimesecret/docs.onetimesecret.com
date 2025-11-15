@@ -15,7 +15,7 @@ You can switch between languages using the language selector in the top-right co
 
 ## Translation Status
 
-To view the current status of our translation efforts, visit the [Translation Status](/en/translations/status) page.
+To view the current status of our translation efforts, visit the [Translation Status](/en/translations/) page.
 
 ## Contributing Translations
 
@@ -31,7 +31,7 @@ We welcome contributions to our translation efforts. If you'd like to help trans
 
 ### Translation Standards
 
-For consistent, high-quality translations, follow our [Translation Style Guide](/en/translations/guide-en) and refer to our [Terminology Glossary](/en/translations/glossary) for standardized translations of key terms.
+For consistent, high-quality translations, follow our [Translation Style Guide](/en/translations/guide) and refer to our [Terminology Glossary](/en/translations/glossary) for standardized translations of key terms.
 
 ## Handling Missing Translations
 

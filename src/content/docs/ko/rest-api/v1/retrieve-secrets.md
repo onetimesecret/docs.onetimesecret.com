@@ -7,7 +7,7 @@ _업데이트 2025-04-02_
 
 :::참고
 **데이터 로캘 및 지역 선택**
-- 지역]({getRelativeLocaleUrl(Astro.currentLocale ?? 'en', 'regions')}) 선택(예: [`us.onetimesecret.com`](https://us.onetimesecret.com/), [`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) 데이터 센터.
+- 지역](/ko/regions/) 선택(예: [`us.onetimesecret.com`](https://us.onetimesecret.com/), [`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) 데이터 센터.
 - 데이터 주권, 지연 시간 및 규정 준수 요구 사항과 같은 요소를 고려합니다.
 - 참고: 기본 `onetimesecret.com`은 계속 운영되며 이 기능은 향후 사용되지 않을 수 있으므로 특정 로케이션을 사용하여 활성 데이터 센터로 라우팅하는 것이 좋습니다.
 :::

@@ -7,7 +7,7 @@ _Uppdaterad 2025-04-02_
 
 :::note
 **Datalokalisering och regionval**
-- Välj en [region]({getRelativeLocaleUrl(Astro.currentLocale ?? 'en', 'regions')}) (t.ex. [`us.onetimesecret.com`](https://us.onetimesecret.com/), [`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) datacenter
+- Välj en [region](/sv/regions/) (t.ex. [`us.onetimesecret.com`](https://us.onetimesecret.com/), [`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) datacenter
 - Överväg faktorer som datasuveränitet, latens och efterlevnadskrav
 - **NOTERA:** Standard `onetimesecret.com` förblir operativ och dirigerar till ett aktivt datacenter, användning av en specifik lokalitet rekommenderas eftersom denna funktionalitet kan bli föråldrad i framtiden.
 :::

@@ -44,7 +44,7 @@ Een aangepast domein instellen
 5. Volg de stap-voor-stap instructies voor DNS-configuratie.
 6. Wacht tot het domein is geverifieerd. Klik, indien beschikbaar, op de knop “Verifiëren” om het proces te versnellen. Mogelijk moet u de pagina verversen.
 
-Raadpleeg onze [Handleiding voor aangepaste domeininstellingen](/docs/custom-domains/setup-guide) voor gedetailleerde instructies, inclusief hoe u kunt kiezen tussen EU- en VS-regio's.
+Raadpleeg onze [Handleiding voor aangepaste domeininstellingen](custom-domains/setup-guide) voor gedetailleerde instructies, inclusief hoe u kunt kiezen tussen EU- en VS-regio's.
 
 ## Merkaanpassing
 
@@ -65,6 +65,6 @@ Voor gedetailleerde brandinginstructies, zie onze [Brand Guide] (/docs/custom-do
 - U bent verantwoordelijk voor het onderhouden en vernieuwen van uw domeinregistratie.
 - Een juiste SSL/TLS-configuratie is cruciaal voor de veiligheid (wordt automatisch door Onetime Secret afgehandeld).
 - Zorg ervoor dat het door u gekozen domein voldoet aan de merkrichtlijnen van uw organisatie.
-- Houd rekening met de regelgeving voor gegevensbescherming bij het kiezen tussen [EU- en VS-regio's](/docs/regio's).
+- Houd rekening met de regelgeving voor gegevensbescherming bij het kiezen tussen [EU- en VS-regio's](regio's).
 
-Voor meer informatie over best practices voor het veilig gebruik van aangepaste domeinen, kunt u onze gids [Best practices beveiliging](/docs/security-best-practices) raadplegen.
+Voor meer informatie over best practices voor het veilig gebruik van aangepaste domeinen, kunt u onze gids [Best practices beveiliging](security-best-practices) raadplegen.

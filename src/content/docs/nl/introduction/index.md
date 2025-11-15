@@ -26,4 +26,4 @@ Bekijk onze Bonus Content om te ontdekken hoe Onetime Secret efficiënt en discr
 
 ## Aan de slag
 
-Klaar om erin te duiken? Bekijk onze [documentatie](/docs) voor gedetailleerde instructies over het effectief gebruik van Onetime Secret. Als je vragen of feedback hebt, voel je dan vrij om direct [contact](/contact) met ons op te nemen.
+Klaar om erin te duiken? Bekijk onze [documentatie](/nl/docs-overview) voor gedetailleerde instructies over het effectief gebruik van Onetime Secret. Als je vragen of feedback hebt, voel je dan vrij om direct [contact](https://onetimesecret.com/feedback) met ons op te nemen.

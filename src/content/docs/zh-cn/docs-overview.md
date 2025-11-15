@@ -19,7 +19,7 @@ description: 使用导航菜单浏览 Onetime Secret 文档。您将找到创建
 ### [自定义域名](/zh-cn/custom-domains/)
 建立自己的品牌消息共享体验，提升专业形象和用户信任。
 
-### [REST API](/zh-cn/rest-api/)
+### [REST API](/zh-cn/rest-api)
 将 Onetime Secret 与您的应用程序集成，实现程序化的安全信息共享。
 
 ### [安全最佳实践](/zh-cn/security-best-practices/)

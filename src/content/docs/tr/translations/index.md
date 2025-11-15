@@ -20,7 +20,7 @@ Her sayfanın sağ üst köşesindeki dil seçimi menüsü ile diller arasında 
 
 ## Çeviri Durumu
 
-Çeviri çabalarımızın güncel durumunu görmek için [Çeviri Durumu](/tr/translations/status) sayfasını ziyaret edin.
+Çeviri çabalarımızın güncel durumunu görmek için [Çeviri Durumu](/tr/translations/) sayfasını ziyaret edin.
 
 ## Çevirilere Katkıda Bulunma
 

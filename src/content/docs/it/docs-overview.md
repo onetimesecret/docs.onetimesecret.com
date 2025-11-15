@@ -9,7 +9,7 @@ Utilizzate il menu di navigazione per esplorare la documentazione di Onetime Sec
 
 ## Iniziare
 
-Iniziate con la nostra sezione [Introduzione](/it/introduzione/) per imparare le basi di Onetime Secret.
+Iniziate con la nostra sezione [Introduzione](/it/introduction/) per imparare le basi di Onetime Secret.
 
 ## Sezioni chiave
 

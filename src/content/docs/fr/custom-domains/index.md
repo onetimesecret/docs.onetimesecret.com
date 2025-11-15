@@ -65,6 +65,6 @@ Pour des instructions détaillées sur le branding, voir notre [Guide du brandin
 - Vous êtes responsable de la maintenance et du renouvellement de l'enregistrement de votre domaine.
 - Une configuration SSL/TLS appropriée est cruciale pour la sécurité (gérée automatiquement par Onetime Secret).
 - Veillez à ce que le domaine choisi soit conforme aux directives de votre organisation en matière d'image de marque.
-- Tenez compte des réglementations en matière de protection des données lorsque vous choisissez entre [régions UE et US](/docs/regions).
+- Tenez compte des réglementations en matière de protection des données lorsque vous choisissez entre [régions UE et US](regions).
 
-Pour en savoir plus sur les meilleures pratiques en matière d'utilisation sécurisée des domaines personnalisés, consultez notre guide [Security Best Practices](/docs/security-best-practices).
+Pour en savoir plus sur les meilleures pratiques en matière d'utilisation sécurisée des domaines personnalisés, consultez notre guide [Security Best Practices](security-best-practices).
