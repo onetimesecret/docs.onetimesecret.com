@@ -13,8 +13,8 @@ Ce glossaire fournit des traductions normalisées pour les termes clés dans les
 |---------|-------------|-------------|-------------|-------|
 | secret (noun) | Geheimnis | secret | secret | Central concept of the application |
 | secret (adj) | geheim | secret/sécurisé | secret/sécurisé | |
-| passphrase | Sicherheitsphrase | phrase secrète | mot de passe | Authentication method for secrets |
-| burn | verbrennen | supprimer | supprimer | Action to delete a secret before viewing |
+| passphrase | Sicherheitsphrase | phrase secrète | phrase secrète | Authentication method for secrets |
+| burn | verbrennen | brûler | brûler | Action to delete a secret before viewing |
 | view/reveal | ansehen/anzeigen | consulter/afficher | consulter/afficher | Action to access a secret |
 | link | Link/Verbindung | lien | lien | The URL that provides access to a secret |
 | encrypt/encrypted | verschlüsseln/verschlüsselt | chiffrer/chiffré | chiffrer/chiffré | Security method |
@@ -38,7 +38,7 @@ Ce glossaire fournit des traductions normalisées pour les termes clés dans les
 | anglais | allemand (AT) | français (FR) | français (CA) | Notes |
 |---------|-------------|-------------|-------------|-------|
 | received | empfangen | reçu | reçu | Secret has been viewed |
-| burned | verbrannt | supprimé | supprimé | Secret was deleted before viewing |
+| burned | verbrannt | brûlé | brûlé | Secret was deleted before viewing |
 | expired | abgelaufen | expiré | expiré | Secret is no longer available due to time |
 | created | erstellt | créé | créé | Secret has been generated |
 | active | aktiv | actif | actif | Secret is available |
@@ -59,7 +59,7 @@ Ce glossaire fournit des traductions normalisées pour les termes clés dans les
 | anglais | allemand (AT) | français (FR) | français (CA) | Notes |
 |---------|-------------|-------------|-------------|-------|
 | one-time access | einmaliger Zugang | accès unique | accès unique | Core security feature |
-| passphrase protection | Schutz durch Sicherheitsphrase | protection par phrase secrète | protection par phrase d'authentification | Additional security |
+| passphrase protection | Schutz durch Sicherheitsphrase | protection par phrase secrète | protection par phrase secrète | Additional security |
 | encrypted in transit | verschlüsselt bei der Übertragung | chiffré en transit | chiffré en transit | Data protection method |
 | encrypted at rest | verschlüsselt im Ruhezustand | chiffré au repos | chiffré au repos | Storage protection |
 
@@ -111,11 +111,11 @@ Ce glossaire fournit des traductions normalisées pour les termes clés dans les
 
 ## Lignes directrices pour la traduction
 
-1. **Consistance** : Utiliser la même traduction pour un terme dans l'ensemble de l'application.
-2. **Contexte** : Tenir compte de la façon dont le terme est utilisé dans l'application
-3. **Adaptation culturelle** : Adapter les termes aux conventions locales si nécessaire
-4. **Exactitude technique** : Veiller à ce que les termes relatifs à la sécurité soient traduits avec précision
-5. **Ton** : Maintenir un ton professionnel mais direct
+1. **Consistance** : Utiliser la même traduction pour un terme dans l'ensemble de l'application.
+2. **Contexte** : Tenir compte de la façon dont le terme est utilisé dans l'application
+3. **Adaptation culturelle** : Adapter les termes aux conventions locales si nécessaire
+4. **Exactitude technique** : Veiller à ce que les termes relatifs à la sécurité soient traduits avec précision
+5. **Ton** : Maintenir un ton professionnel mais direct
 
 ## Considérations particulières
 

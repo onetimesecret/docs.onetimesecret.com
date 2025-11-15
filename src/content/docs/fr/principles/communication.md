@@ -9,7 +9,7 @@ Nous adoptons une approche délibérément minimale de la communication avec les
 
 ## Notre philosophie de l'absence de courrier électronique
 
-La plupart des services inondent votre boîte de réception de :
+La plupart des services inondent votre boîte de réception de :
 - des bulletins d'information marketing
 - Mises à jour des produits
 - Statistiques d'utilisation
@@ -17,11 +17,11 @@ La plupart des services inondent votre boîte de réception de :
 - Offres promotionnelles
 - Campagnes de réengagement
 
-De toute notre histoire, nous n'avons jamais envoyé de courrier électronique à des fins de marketing. Les seuls courriels que vous recevrez de notre part sont ceux que vous demandez expressément : les livraisons de liens secrets. Pas de bulletins d'information, pas de mises à jour, pas de promotions. Nous pensons que votre boîte de réception vous appartient.
+De toute notre histoire, nous n'avons jamais envoyé de courrier électronique à des fins de marketing. Les seuls courriels que vous recevrez de notre part sont ceux que vous demandez expressément : les livraisons de liens secrets. Pas de bulletins d'information, pas de mises à jour, pas de promotions. Nous pensons que votre boîte de réception vous appartient.
 
 ## Pourquoi c'est important
 
-En évitant les pratiques habituelles de marketing et de communication, nous :
+En évitant les pratiques habituelles de marketing et de communication, nous :
 - maintenons un service plus propre et plus simple
 - réduisons les risques potentiels en matière de sécurité
 - restons concentrés sur notre objectif principal

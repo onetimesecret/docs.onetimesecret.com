@@ -9,8 +9,8 @@ La documentation de Onetime Secret est disponible en plusieurs langues pour rép
 
 ## Langues disponibles
 
-- **English (en)** : Notre version par défaut et la plus complète
-- **Allemand (de)** : Traduction partielle en cours
+- **English (en)** : Notre version par défaut et la plus complète
+- **Allemand (de)** : Traduction partielle en cours
 
 Vous pouvez passer d'une langue à l'autre en utilisant le sélecteur de langue situé dans le coin supérieur droit de chaque page.
 
@@ -20,14 +20,14 @@ Pour connaître l'état actuel de nos efforts de traduction, consultez la page [
 
 ## Contribuer aux traductions
 
-Les contributions à nos efforts de traduction sont les bienvenues. Si vous souhaitez contribuer à la traduction de la documentation de Onetime Secret dans votre langue, veuillez suivre les instructions suivantes :
+Les contributions à nos efforts de traduction sont les bienvenues. Si vous souhaitez contribuer à la traduction de la documentation de Onetime Secret dans votre langue, veuillez suivre les instructions suivantes :
 
 ### Workflow de la traduction
 
-1. **Localiser le contenu** : Le contenu original en anglais est stocké dans le répertoire `/content/docs/fr/`.
-2. **Créer les fichiers correspondants** : Créez les fichiers correspondants dans le répertoire de votre langue (par exemple, `/content/docs/de/`).
-3. **Maintenir la structure** : Conservez la même structure de répertoire et les mêmes conventions de dénomination des fichiers.
-4. **Conserver la matière première** : Copier tous les champs de la matière première, en ne traduisant que les valeurs.
+1. **Localiser le contenu** : Le contenu original en anglais est stocké dans le répertoire `/content/docs/fr/`.
+2. **Créer les fichiers correspondants** : Créez les fichiers correspondants dans le répertoire de votre langue (par exemple, `/content/docs/de/`).
+3. **Maintenir la structure** : Conservez la même structure de répertoire et les mêmes conventions de dénomination des fichiers.
+4. **Conserver la matière première** : Copier tous les champs de la matière première, en ne traduisant que les valeurs.
 5. **Soumettez votre travail** : Utilisez [GitHub Pull Requests] (https://github.com/onetimesecret/onetimesecret) pour les soumissions.
 
 ### Normes de traduction
@@ -38,6 +38,6 @@ Pour des traductions cohérentes et de qualité, suivez notre [Guide de style de
 
 Lorsque le contenu n'est pas disponible dans une langue sélectionnée, vous verrez automatiquement la version anglaise avec une notification indiquant que le contenu n'a pas encore été traduit.
 
-## Besoin d'aide ?
+## Besoin d'aide ?
 
 Si vous avez des questions sur les traductions ou si vous avez besoin d'aide pour contribuer, veuillez [contacter notre équipe] (https://onetimesecret.com/contact) ou ouvrir un problème sur notre [dépôt GitHub] (https://github.com/onetimesecret/onetimesecret).

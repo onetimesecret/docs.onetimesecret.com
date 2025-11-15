@@ -5,7 +5,7 @@ description: Bienvenue dans le guide de Onetime Secret sur les liens secrets, un
 
 
 
-## Qu'est-ce qu'un lien secret ?
+## Qu'est-ce qu'un lien secret ?
 
 Les liens secrets sont des URL uniques et autodestructifs qui vous permettent de partager des informations sensibles en toute sécurité. Chaque lien ne peut être consulté qu'une seule fois avant de disparaître à jamais, ce qui garantit que les données partagées restent confidentielles et ne traînent pas en ligne.
 
@@ -19,14 +19,14 @@ Les liens secrets sont des URL uniques et autodestructifs qui vous permettent de
 
 ## Principaux avantages
 
-- **Utilisation unique** : Chaque lien ne fonctionne qu'une seule fois, ce qui empêche tout accès non autorisé.
-- Destruction automatique** : Le contenu est supprimé après avoir été visionné, sans laisser de trace numérique.
-- Partage sécurisé** : Idéal pour les mots de passe, les messages privés et autres données sensibles.
-- Simplicité et convivialité** : Aucun compte n'est nécessaire pour l'utilisation de base.
+- **Utilisation unique** : Chaque lien ne fonctionne qu'une seule fois, ce qui empêche tout accès non autorisé.
+- Destruction automatique** : Le contenu est supprimé après avoir été visionné, sans laisser de trace numérique.
+- Partage sécurisé** : Idéal pour les mots de passe, les messages privés et autres données sensibles.
+- Simplicité et convivialité** : Aucun compte n'est nécessaire pour l'utilisation de base.
 
 ## Cas d'utilisation
 
-Les liens secrets sont parfaits pour :
+Les liens secrets sont parfaits pour :
 
 - Partager des identifiants de connexion en toute sécurité
 - Envoi d'informations confidentielles à des collègues
@@ -40,12 +40,12 @@ Pour plus d'informations sur l'utilisation des liens secrets, veuillez consulter
 
 
 <!--
-Conseils en matière de communication :
+Conseils en matière de communication :
 1. Ce contenu présente les liens secrets d'une manière claire et directe, adaptée à un public technique et non technique.
 2. Il met l'accent sur le service de base et la proposition de valeur unique de Onetime Secret.
 3. Les informations fournies sont basées sur des faits vérifiables provenant du site onetimesecret.com.
 4. Le ton est professionnel et axé sur l'utilisateur, soulignant l'aspect de résolution de problèmes du service.
-5. Pour développer davantage cette page, envisagez d'ajouter :
+5. Pour développer davantage cette page, envisagez d'ajouter :
    - Un diagramme visuel simple du fonctionnement des liens secrets
    - Une section FAQ répondant aux questions les plus courantes des utilisateurs
    - des liens vers des pages de documentation connexes (par exemple, fonctions avancées, utilisation de l'API)

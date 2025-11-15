@@ -6,7 +6,7 @@ mise en page : page
 
 # Principes
 
-Bienvenue dans les principes directeurs de Onetime Secret. Ces documents fondamentaux expliquent notre approche :
+Bienvenue dans les principes directeurs de Onetime Secret. Ces documents fondamentaux expliquent notre approche :
 
 - Protection de la vie privée et minimisation des données
 - Communication avec les utilisateurs et transparence
@@ -15,15 +15,15 @@ Bienvenue dans les principes directeurs de Onetime Secret. Ces documents fondame
 
 ## Nos engagements
 
-- **[Privacy First](/principles/privacy-first)** : Notre approche de la protection de la vie privée des utilisateurs par des choix de conception délibérés
-- **[Construire la confiance](/principles/trust)** : Comment nous gagnons et maintenons la confiance des utilisateurs par des actions et non par des mots.
-- **[Philosophie de la communication](/principles/communication)** : Pourquoi nous limitons la communication par courrier électronique au strict nécessaire
-- **[Minimisation des données](/principles/data-minimization)** : Notre engagement à ne collecter et à ne conserver que les données les plus essentielles
+- **[Privacy First](/principles/privacy-first)** : Notre approche de la protection de la vie privée des utilisateurs par des choix de conception délibérés
+- **[Construire la confiance](/principles/trust)** : Comment nous gagnons et maintenons la confiance des utilisateurs par des actions et non par des mots.
+- **[Philosophie de la communication](/principles/communication)** : Pourquoi nous limitons la communication par courrier électronique au strict nécessaire
+- **[Minimisation des données](/principles/data-minimization)** : Notre engagement à ne collecter et à ne conserver que les données les plus essentielles
 
 
 ## Pourquoi les principes sont importants
 
-Chez Onetime Secret, nos principes guident chacune de nos décisions. Ils nous aident :
+Chez Onetime Secret, nos principes guident chacune de nos décisions. Ils nous aident :
 
 - Rester concentré sur ce qui compte
 - Faire des choix cohérents

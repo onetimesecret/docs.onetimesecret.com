@@ -5,7 +5,7 @@ description: Les domaines personnalisés vous permettent d'héberger le partage 
 
 ## Votre marque, notre sécurité
 
-En exploitant les domaines personnalisés, vous ne vous contentez pas de partager des secrets ; vous renforcez votre marque, vous augmentez la confiance et vous garantissez la conformité de la localisation des données à chaque interaction. Passez à l'offre Identité dès aujourd'hui pour débloquer cette puissante fonctionnalité et faire passer votre partage de secrets à la vitesse supérieure.
+En exploitant les domaines personnalisés, vous ne vous contentez pas de partager des secrets ; vous renforcez votre marque, vous augmentez la confiance et vous garantissez la conformité de la localisation des données à chaque interaction. Passez à l'offre Identité dès aujourd'hui pour débloquer cette puissante fonctionnalité et faire passer votre partage de secrets à la vitesse supérieure.
 
 <img src="/img/docs/custom-domains/branded-homepage-enabled.png" alt="Custom domain settings" width="600" />
 
@@ -22,10 +22,10 @@ En exploitant les domaines personnalisés, vous ne vous contentez pas de partage
 
 ## Dépannage des problèmes d'installation courants
 
-- Propagation du DNS** : Les changements peuvent prendre jusqu'à 48 heures pour se propager complètement. Soyez patient et réessayez plus tard si la vérification échoue initialement.
-- Enregistrements DNS incorrects** : Vérifiez vos paramètres DNS en vous référant aux instructions fournies pour la région que vous avez choisie.
-- Problèmes de certificat SSL** : Contactez notre équipe d'assistance si vous rencontrez des problèmes liés à SSL.
-- Vérification de la propriété du domaine** : Assurez-vous que vous avez le contrôle total du domaine que vous essayez de configurer.
-- Sélection de la région** : Si vous n'êtes pas sûr de la région à choisir, consultez notre guide [Data Center Regions](/docs/regions) ou contactez notre équipe de support.
+- Propagation du DNS** : Les changements peuvent prendre jusqu'à 48 heures pour se propager complètement. Soyez patient et réessayez plus tard si la vérification échoue initialement.
+- Enregistrements DNS incorrects** : Vérifiez vos paramètres DNS en vous référant aux instructions fournies pour la région que vous avez choisie.
+- Problèmes de certificat SSL** : Contactez notre équipe d'assistance si vous rencontrez des problèmes liés à SSL.
+- Vérification de la propriété du domaine** : Assurez-vous que vous avez le contrôle total du domaine que vous essayez de configurer.
+- Sélection de la région** : Si vous n'êtes pas sûr de la région à choisir, consultez notre guide [Data Center Regions](/docs/regions) ou contactez notre équipe de support.
 
 Pour en savoir plus sur les meilleures pratiques en matière d'utilisation sécurisée des domaines personnalisés, consultez notre guide [Security Best Practices](/docs/security-best-practices).

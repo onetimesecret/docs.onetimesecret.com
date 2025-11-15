@@ -5,7 +5,7 @@ description: Notre engagement à ne collecter que les données essentielles à l
 
 # Nous ne collectons que ce qui est nécessaire
 
-**Description:** Chez Onetime Secret, nous ne collectons que les données nécessaires à la fourniture de notre service : des secrets temporaires et les informations de compte minimales requises pour les abonnements payants. Cela permet de garder les choses simples et sécurisées.
+**Description:** Chez Onetime Secret, nous ne collectons que les données nécessaires à la fourniture de notre service : des secrets temporaires et les informations de compte minimales requises pour les abonnements payants. Cela permet de garder les choses simples et sécurisées.
 
 **Pourquoi c'est important:**
 
@@ -13,7 +13,7 @@ description: Notre engagement à ne collecter que les données essentielles à l
 
 2. **Chaque élément d'information que nous recueillons a une finalité spécifique dans le cadre de notre service. Pas de suivi, pas d'analyse, pas d'extra.
 
-3. **Conception zéro connaissance** : Nous ne pouvons pas accéder à vos secrets et nous ne le voulons pas. Chaque secret est crypté, n'est accessible qu'une seule fois et est automatiquement supprimé après consultation ou expiration.
+3. **Conception zéro connaissance** : Nous ne pouvons pas accéder à vos secrets et nous ne le voulons pas. Chaque secret est crypté, n'est accessible qu'une seule fois et est automatiquement supprimé après consultation ou expiration.
 
 **Comment ça marche:**
 

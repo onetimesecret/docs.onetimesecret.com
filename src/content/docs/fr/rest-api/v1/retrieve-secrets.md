@@ -10,7 +10,7 @@ Mis à jour le 2025-04-02_
 - Choisissez une [région]({getRelativeLocaleUrl(Astro.currentLocale ? ? 'en', 'regions')}) (par exemple, [`us.onetimesecret.com`](https://us.onetimesecret.com/), [`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) pour les centres de données.
 - Tenir compte de facteurs tels que la souveraineté des données, la latence et les exigences de conformité.
 - REMARQUE:** Par défaut, `onetimesecret.com` reste opérationnel et dirige vers un centre de données actif, l'utilisation d'une localité spécifique est recommandée car cette fonctionnalité pourrait être obsolète à l'avenir.
-:: :
+:: :
 
 ## Récupérer un secret
 
@@ -31,7 +31,7 @@ $ curl -X POST https://eu.onetimesecret.com/api/v1/secret/SECRET_KEY
 ### Params de la requête
 
 - **SECRET_KEY** : la clé unique de ce secret.
-- **passphrase** (si nécessaire) : la phrase de passe n'est requise que si le secret a été créé avec une phrase de passe.
+- **passphrase** (si nécessaire) : la phrase secrète n'est requise que si le secret a été créé avec une phrase secrète.
 
 ### Attributs
 
@@ -52,21 +52,21 @@ $ curl -X POST -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/privat
 
 ### Params de la requête
 
-- **METADATA_KEY** : la clé unique de cette métadonnée.
+- **METADATA_KEY** : la clé unique de cette métadonnée.
 
 ### Attributs
 
-- **custid** : le nom d'utilisateur du compte qui a créé le secret. Cette valeur sera `anon` pour les requêtes anonymes.
-- **metadata\_key** : la clé unique pour les métadonnées. Ne la partagez pas.
-- **secret\_key** : la clé unique pour le secret que vous avez créé. Il s'agit d'une clé que vous pouvez partager.
-- **ttl** : Le temps de vie qui a été spécifié (c'est-à-dire pas le temps restant).
-- **metadata\_ttl** : Le temps restant (en secondes) pour les métadonnées.
-- **secret\_ttl** : Le temps restant (en secondes) pour le secret.
-- **recipient** : si un destinataire a été spécifié, il s'agit d'une version obscurcie de l'adresse électronique.
-- **created** : Heure de création des métadonnées en heure Unix (UTC).
-- updated** : idem, mais l'heure de la dernière mise à jour.
-- **received** : Heure à laquelle le secret a été reçu.
-- **passphrase\_required** : Si une phrase de passe a été fournie lors de la création du secret, ceci sera vrai. Dans le cas contraire, cette valeur est évidemment fausse.
+- **custid** : le nom d'utilisateur du compte qui a créé le secret. Cette valeur sera `anon` pour les requêtes anonymes.
+- **metadata\_key** : la clé unique pour les métadonnées. Ne la partagez pas.
+- **secret\_key** : la clé unique pour le secret que vous avez créé. Il s'agit d'une clé que vous pouvez partager.
+- **ttl** : Le temps de vie qui a été spécifié (c'est-à-dire pas le temps restant).
+- **metadata\_ttl** : Le temps restant (en secondes) pour les métadonnées.
+- **secret\_ttl** : Le temps restant (en secondes) pour le secret.
+- **recipient** : si un destinataire a été spécifié, il s'agit d'une version obscurcie de l'adresse électronique.
+- **created** : Heure de création des métadonnées en heure Unix (UTC).
+- updated** : idem, mais l'heure de la dernière mise à jour.
+- **received** : Heure à laquelle le secret a été reçu.
+- **passphrase\_required** : Si une phrase secrète a été fournie lors de la création du secret, ceci sera vrai. Dans le cas contraire, cette valeur est évidemment fausse.
 
 
 ## Brûler un secret
@@ -109,6 +109,6 @@ $ curl -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/private/recent
 
 - Identique aux attributs de métadonnées, mais sous forme de liste et la valeur de la clé secrète sera toujours nulle.
 
-:: : avertissement Authentification requise
-Note : Les métadonnées et les opérations de gestion (récupérer les métadonnées, brûler le secret, métadonnées récentes) ne sont disponibles que pour les utilisateurs authentifiés.
-:: :
+:: : avertissement Authentification requise
+Note : Les métadonnées et les opérations de gestion (récupérer les métadonnées, brûler le secret, métadonnées récentes) ne sont disponibles que pour les utilisateurs authentifiés.
+:: :
