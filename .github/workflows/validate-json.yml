@@ -2,14 +2,17 @@ name: Validate JSON Files
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [main, develop]
     paths:
-      - '**/*.json'
+      - "**/*.json"
   pull_request:
-    branches: [ main, develop ]
+    branches: [main, develop]
     paths:
-      - '**/*.json'
+      - "**/*.json"
   workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   validate-json:
@@ -23,7 +26,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
 
       - name: Validate JSON files
         run: |
