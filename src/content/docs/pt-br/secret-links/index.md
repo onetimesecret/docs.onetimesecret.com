@@ -32,6 +32,6 @@ Links de Mensagens Confidenciais são perfeitos para:
 
 ## Primeiros Passos
 
-Para criar seu primeiro Link de Mensagem Confidencial, visite [https://onetimesecret.com](onetimesecret.com) e siga os passos simples em nossa página inicial.
+Para criar seu primeiro Link de Mensagem Confidencial, visite [onetimesecret.com](https://onetimesecret.com) e siga os passos simples em nossa página inicial.
 
 Para informações mais detalhadas sobre o uso de Links de Mensagens Confidenciais, consulte nosso [Guia do Usuário](/pt-br/introduction/).

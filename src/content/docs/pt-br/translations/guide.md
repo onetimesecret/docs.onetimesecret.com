@@ -3,7 +3,7 @@ title: Guia de estilo de tradução
 description: Um guia abrangente para tradutores trabalhando na localização do Onetime Secret, cobrindo voz da marca, padrões de terminologia e requisitos específicos do idioma para garantir traduções consistentes e de alta qualidade
 ---
 
-## Guia de Estilo de Tradução Português do Brasil (pt-BR)
+## Guia de Estilo de Tradução para Português do Brasil (pt-BR)
 
 ![Guia de Estilo de Tradução](/socialcards/onetime-socialcard-20250226-1.png)
 

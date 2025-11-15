@@ -35,7 +35,7 @@ Acesse em `http://localhost:3000`.
 ### Instalação Manual
 Para ambientes de produção que requerem configurações personalizadas.
 
-Consulte nosso guia [Instalação e Implantação](./self-hosting/installation) para etapas detalhadas.
+Consulte nosso guia [Instalação e Implantação](./installation) para etapas detalhadas.
 
 ## O Que Está Incluído
 
@@ -57,10 +57,10 @@ Sua instância auto-hospedada inclui:
 
 ## Próximos Passos
 
-1. **[Primeiros Passos](./self-hosting/getting-started)** - Guia de configuração passo a passo
-2. **[Instalação e Implantação](./self-hosting/installation)** - Opções detalhadas de implantação
-3. **[Referência de Configuração](./self-hosting/configuration)** - Documentação completa de configurações
+1. **[Primeiros Passos](./getting-started)** - Guia de configuração passo a passo
+2. **[Instalação e Implantação](./installation)** - Opções detalhadas de implantação
+3. **[Referência de Configuração](./configuration)** - Documentação completa de configurações
 
 ---
 
-_Pronto para começar? Siga nosso guia [Primeiros Passos](./self-hosting/getting-started)._
+_Pronto para começar? Siga nosso guia [Primeiros Passos](./getting-started)._
