@@ -209,7 +209,7 @@ sudo systemctl reload nginx
 
 Caddy provides automatic HTTPS and simpler configuration:
 
-```caddyfile
+```nginx
 # /etc/caddy/Caddyfile
 your-domain.com {
     # Handle static files from built frontend
@@ -318,7 +318,7 @@ sudo chmod 644 /etc/ssl/certs/your-domain.com.crt
 
 **Option 1: Memory-only (never save to disk for maximum security):**
 
-```conf
+```properties
 # /etc/redis/redis.conf
 
 # Memory optimization
@@ -340,7 +340,7 @@ timeout 300
 
 **Option 2: Disk persistence (enables backups but writes secrets to disk):**
 
-```conf
+```properties
 # /etc/redis/redis.conf
 
 # Memory optimization
