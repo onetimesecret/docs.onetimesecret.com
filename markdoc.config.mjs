@@ -13,26 +13,16 @@ export default defineMarkdocConfig({
   tags: {
     // Override and extend tags
     card: {
-      render: "FeatureCard",
+      render: "Card",
       attributes: {
         title: { type: String, required: true },
         icon: { type: String },
-      },
-      slots: {
-        default: {
-          render: "CardContent",
-        },
       },
     },
     cardgrid: {
       render: "CardGrid",
       attributes: {
         stagger: { type: Boolean, default: false },
-      },
-      slots: {
-        default: {
-          render: "CardGridSlot",
-        },
       },
     },
   },
