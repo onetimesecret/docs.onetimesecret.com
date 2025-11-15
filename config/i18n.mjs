@@ -84,6 +84,11 @@ export const i18nConfig = {
       lang: "nl",
       dir: "ltr",
     },
+    "pt-br": {
+      label: "Português (pt-BR)",
+      lang: "pt-BR",
+      dir: "ltr",
+    },
     uk: {
       label: "Українська (uk)",
       lang: "uk",
