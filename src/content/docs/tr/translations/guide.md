@@ -77,14 +77,14 @@ Marka sesi ve tonu hakkında.
 
 ### "Secret" Kelimesinin Çevirisi
 
-"Secret" kelimesi ince ama önemli farklılıklarla çeşitli anlamlar alabilir. Kanonik örneğimiz [jetdk](https://github.com/onetimesecret/onetimesecret/pull/956#issue-2782747525) tarafından Danimarkaca çevirimize yapılan bir güncellemeden gelir:
+"Secret" kelimesi ince ama önemli farklılıklarla çeşitli anlamlar alabilir. Kanonik örneğimiz [jetdk](https://github.com/onetimesecret/onetimesecret/pull/956#issue-2782747525) tarafından Danca çevirimize yapılan bir güncellemeden gelir:
 
 #### Kelime Seçimi: "Beskeder" vs "Hemmeligheder"
 
 DOĞRU:   **Beskeder** (mesajlar)
 YANLIŞ: Hemmeligheder (sırlar)
 
-"Beskeder" terimi bir gizli mesaja atıfta bulunulurken kullanılmalıdır (örneğin Onetime Secret tarafından oluşturulan gizli bir mesaj veya gizli bir bağlantı). "Hemmeligheder" "Secrets"ın tam bir çevirisi olsa da, günlük Danimarkaca kullanımında amaçlanan anlamla eşleşmeyen kişisel veya gizli bilgi çağrışımları taşır.
+"Beskeder" terimi bir gizli mesaja atıfta bulunulurken kullanılmalıdır (örneğin Onetime Secret tarafından oluşturulan gizli bir mesaj veya gizli bir bağlantı). "Hemmeligheder" "Secrets"ın tam bir çevirisi olsa da, günlük Danca kullanımında amaçlanan anlamla eşleşmeyen kişisel veya gizli bilgi çağrışımları taşır.
 
 Örnek kullanım:
 
@@ -250,7 +250,7 @@ Farklı diller bu ayrımı çeşitli şekillerde ele alır:
 |----------|-------------------|------------------------------|-------|
 | İngilizce  | password          | passphrase                   | Bileşik kelime ile net ayrım |
 | Bulgarca| парола (parola)   | ключова фраза (klyuchova fraza) | "Anahtar ifade" |
-| Danimarkaca   | adgangskode       | adgangssætning               | "Erişim kodu" vs "Erişim cümlesi" |
+| Danca   | adgangskode       | adgangssætning               | "Erişim kodu" vs "Erişim cümlesi" |
 | İspanyolca  | contraseña        | frase de seguridad           | "Karşı işaret" vs "Güvenlik ifadesi" |
 | **Türkçe** | **parola / şifre** | **güvenlik ifadesi** | "Parola" vs "Güvenlik ifadesi" |
 
@@ -312,10 +312,10 @@ Türkiye'de metrik sistem kullanılır. Ağırlıklı olarak m, km, cm, mm, kg, 
 
 ### Adres ve Posta Kodu Biçimi
 
-    [Alıcı]
-    [Sokak adı ve numarası]
-    [İlçe/Semt][İl][Posta kodu]
-    [Ülke]
+    [alıcı]
+    [sokak adı ve numarası]
+    [ilçe/semt][il][posta kodu]
+    [ülke]
 
     Örnek Şirket Ltd. Şti.
     Örnek Sokak No: 123

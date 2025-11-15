@@ -32,6 +32,6 @@ Gizli Mesaj Bağlantıları şunlar için mükemmeldir:
 
 ## Başlayın
 
-İlk Gizli Mesaj Bağlantınızı oluşturmak için [https://onetimesecret.com](onetimesecret.com) adresini ziyaret edin ve ana sayfamızdaki basit adımları izleyin.
+İlk Gizli Mesaj Bağlantınızı oluşturmak için [onetimesecret.com](https://onetimesecret.com) adresini ziyaret edin ve ana sayfamızdaki basit adımları izleyin.
 
 Gizli Mesaj Bağlantılarını kullanma hakkında daha detaylı bilgi için lütfen [Kullanıcı Kılavuzumuza](/tr/introduction/) bakın.

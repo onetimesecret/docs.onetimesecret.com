@@ -147,7 +147,7 @@ Bu ayrım güvenlik netliği için **kritik** öneme sahiptir:
 
 - **Türkçe seçimi**: "gizli mesaj" (sır değil)
 - **Neden**: "Sır" kelimesi Türkçe'de kişisel, mahrem veya gizlenmiş bilgi çağrışımları taşır
-- **Precedent**: Danimarkaca çeviride benzer karar ("beskeder" tercih edilir, "hemmeligheder" değil)
+- **Precedent**: Danca çeviride benzer karar ("beskeder" tercih edilir, "hemmeligheder" değil)
 
 ### Diğer Hususlar
 
