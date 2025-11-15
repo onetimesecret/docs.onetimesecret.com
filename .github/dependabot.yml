@@ -8,6 +8,13 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "weekly" # Frequency of update checks
+    # Use deps/ prefix for branch names
+    pull-request-branch-name:
+      separator: "/"
+    # Prefix all dependency update branches with deps/
+    commit-message:
+      prefix: "deps"
+      include: "scope"
 
     # Optional: Adjust XP gain for successful updates
     # xp_reward: 50

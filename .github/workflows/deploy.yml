@@ -1,7 +1,9 @@
 # .github/workflows/deploy.yml
 #
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code, run tests across different versions of node, and deploy to GitHub Pages
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+# This workflow will do a clean installation of node dependencies,
+# cache/restore them, build the source code, run tests across different versions
+# of node, and deploy to GitHub Pages. For more information see:
+# https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
 ---
 name: Node.js CI and Deploy
 
@@ -81,8 +83,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     runs-on: ubuntu-latest
-    # Only deploy on push to main branch
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    # Only deploy on push to main branch, skip dependency update commits
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, 'deps:')
 
     steps:
       - name: Deploy to GitHub Pages
