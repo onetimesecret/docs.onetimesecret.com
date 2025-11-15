@@ -40,7 +40,6 @@ jobs:
           args: >-
             --no-progress
             --offline
-            --exclude-mail
             './src/**/*.md'
             './src/**/*.mdoc'
           fail: true
@@ -76,7 +75,6 @@ jobs:
             --max-concurrency 8
             --timeout 20
             --max-retries 3
-            --exclude-mail
             --exclude-path ./CHANGELOG.md
             --accept 200,204,206,301,302,429
             './src/**/*.md'
