@@ -4,6 +4,28 @@
 # cache/restore them, build the source code, run tests across different versions
 # of node, and deploy to GitHub Pages. For more information see:
 # https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+#
+# DEPENDENCY UPDATE BEHAVIOR:
+# - Dependabot and Renovate PRs use 'deps/' branch prefix and 'deps:' commit prefix
+# - Deploy is skipped for dependency updates to avoid unnecessary deployments
+# - Use the batch merge process below to efficiently handle multiple dependency PRs
+#
+# BATCH DEPENDENCY UPDATE PROCESS:
+# 1. Create batch branch and merge all dependency PRs into it:
+#    git checkout -b batch/deps-$(date +%Y%m%d)
+#    gh pr list --author app/dependabot --json number,headRefName | jq -r '.[] | .headRefName' | while read branch; do
+#      git fetch origin "$branch:$branch" && git merge "$branch" --no-edit
+#    done
+#    gh pr list --author app/renovate --json number,headRefName | jq -r '.[] | .headRefName' | while read branch; do
+#      git fetch origin "$branch:$branch" && git merge "$branch" --no-edit
+#    done
+# 2. Push batch branch and create PR for review:
+#    git push origin batch/deps-$(date +%Y%m%d)
+#    gh pr create --title "Batch dependency updates $(date +%Y-%m-%d)" --body "Combined dependency updates"
+# 3. After review, merge the batch PR (triggers single deployment)
+# 4. Close individual dependency PRs:
+#    gh pr list --author app/dependabot --json number | jq -r '.[].number' | xargs -I {} gh pr close {}
+#    gh pr list --author app/renovate --json number | jq -r '.[].number' | xargs -I {} gh pr close {}
 ---
 name: Node.js CI and Deploy
 
@@ -84,6 +106,8 @@ jobs:
 
     runs-on: ubuntu-latest
     # Only deploy on push to main branch, skip dependency update commits
+    # This condition skips deployment when commits contain 'deps:' prefix (from dependabot/renovate)
+    # allowing dependency updates to merge without triggering unnecessary deployments
     if: github.event_name == 'push' && github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, 'deps:')
 
     steps:
