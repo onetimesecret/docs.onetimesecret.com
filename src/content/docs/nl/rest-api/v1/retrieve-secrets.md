@@ -7,7 +7,7 @@ bijgewerkt op 2025-04-02
 
 :::opmerking
 **Selectie van gegevenslocatie en regio**
-- Kies een [regio]({getRelativeLocaleUrl(Astro.currentLocale ?? 'en', 'regions')}) (bijv. [`us.onetimesecret.com`](https://us.onetimesecret.com/), [`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) datacenters
+- Kies een [regio](/nl/regions/) (bijv. [`us.onetimesecret.com`](https://us.onetimesecret.com/), [`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) datacenters
 - Houd rekening met factoren zoals gegevenssoevereiniteit, latentie en nalevingsvereisten
 - **NOOT:** Standaard blijft `onetimesecret.com` operationeel en routeert naar een actief datacenter. Het gebruik van een specifieke locatie wordt aanbevolen omdat deze functionaliteit in de toekomst mogelijk wordt afgeschaft.
 :::

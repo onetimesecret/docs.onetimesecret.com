@@ -115,7 +115,7 @@ Onetime Secret hesabınızı kurarken veya özel bir alan adı yapılandırırke
 
 1. Yeni hesaplar için: Kayıt işlemi sırasında tercih ettiğiniz bölgeyi seçin.
 2. Mevcut hesaplar için: Bölge geçiş seçeneklerini görüşmek için destek ekibimizle iletişime geçin.
-3. Özel alan adları için: DNS ayarlarınızı yapılandırırken seçtiğiniz bölgeyi belirtin (ayrıntılı talimatlar için [Özel Alan Adı Kurulum Kılavuzumuza](/docs/custom-domains/setup-guide) bakın).
+3. Özel alan adları için: DNS ayarlarınızı yapılandırırken seçtiğiniz bölgeyi belirtin (ayrıntılı talimatlar için [Özel Alan Adı Kurulum Kılavuzumuza](custom-domains/setup-guide) bakın).
 
 ## Sıkça Sorulan Sorular
 

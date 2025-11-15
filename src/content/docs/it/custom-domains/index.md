@@ -65,6 +65,6 @@ Per istruzioni dettagliate sul marchio, consultare la nostra [Guida al marchio] 
 - L'utente è responsabile della manutenzione e del rinnovo della registrazione del dominio.
 - Una corretta configurazione SSL/TLS è fondamentale per la sicurezza (gestita automaticamente da Onetime Secret).
 - Assicurarsi che il dominio scelto sia conforme alle linee guida del branding della propria organizzazione.
-- Considerare le normative sulla protezione dei dati quando si sceglie tra [regioni UE e USA](/docs/regioni).
+- Considerare le normative sulla protezione dei dati quando si sceglie tra [regioni UE e USA](/it/regions).
 
-Per conoscere le migliori pratiche per l'utilizzo sicuro dei domini personalizzati, consultate la nostra guida [Security Best Practices](/docs/security-best-practices).
+Per conoscere le migliori pratiche per l'utilizzo sicuro dei domini personalizzati, consultate la nostra guida [Security Best Practices](security-best-practices).

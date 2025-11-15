@@ -26,6 +26,6 @@ En exploitant les domaines personnalisés, vous ne vous contentez pas de partage
 - Enregistrements DNS incorrects** : Vérifiez vos paramètres DNS en vous référant aux instructions fournies pour la région que vous avez choisie.
 - Problèmes de certificat SSL** : Contactez notre équipe d'assistance si vous rencontrez des problèmes liés à SSL.
 - Vérification de la propriété du domaine** : Assurez-vous que vous avez le contrôle total du domaine que vous essayez de configurer.
-- Sélection de la région** : Si vous n'êtes pas sûr de la région à choisir, consultez notre guide [Data Center Regions](/docs/regions) ou contactez notre équipe de support.
+- Sélection de la région** : Si vous n'êtes pas sûr de la région à choisir, consultez notre guide [Data Center Regions](regions) ou contactez notre équipe de support.
 
-Pour en savoir plus sur les meilleures pratiques en matière d'utilisation sécurisée des domaines personnalisés, consultez notre guide [Security Best Practices](/docs/security-best-practices).
+Pour en savoir plus sur les meilleures pratiques en matière d'utilisation sécurisée des domaines personnalisés, consultez notre guide [Security Best Practices](security-best-practices).

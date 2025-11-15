@@ -116,7 +116,7 @@ Wenn du? dein Onetime Secret Konto einrichten oder eine benutzerdefinierte Domai
 
 1. Für neue Konten: Wählen du? deine bevorzugte Region während des Anmeldevorgangs.
 2. Für bestehende Konten: Setzen du sich mit unserem Support-Team in Verbindung, um die Optionen für die Migration der Region zu besprechen.
-3. Für benutzerdefinierte Domains: Geben du die von dir gewählte Region bei der Konfiguration deiner DNS-Einstellungen an (detaillierte Anweisungen finden du in unserem [Custom Domain Setup Guide](/docs/custom-domains/setup-guide)).
+3. Für benutzerdefinierte Domains: Geben du die von dir gewählte Region bei der Konfiguration deiner DNS-Einstellungen an (detaillierte Anweisungen finden du in unserem [Custom Domain Setup Guide](custom-domains/setup-guide)).
 
 ## Häufig gestellte Fragen
 
@@ -137,7 +137,7 @@ Bitte beachten du?:
 A: Nein, beide Regionen bieten das gleiche hohe Maß an du?cherheit. Die Wahl wirkt sich in erster Linie auf den Aufenthaltsort der Daten und die mögliche Latenzzeit aus.
 
 **F: Gibt es Preisunterschiede zwischen den Regionen?**
-A: Derzeit sind unsere Preise in beiden Regionen gleich. Auf unserer [Preisseite](/Preise) finden du die aktuellsten Informationen.
+A: Derzeit sind unsere Preise in beiden Regionen gleich. Auf unserer [Preisseite](/de/pricing) finden du die aktuellsten Informationen.
 
 ## Brauchen du? Hilfe?
 

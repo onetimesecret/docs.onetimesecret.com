@@ -14,9 +14,9 @@ Benvenuti nei principi guida di Onetime Secret. Questi documenti fondamentali sp
 
 ## I nostri impegni
 
-- **[Privacy First](/it/principi/privacy-first)**: Il nostro approccio alla protezione della privacy degli utenti attraverso scelte progettuali mirate.
+- **[Privacy First](/it/principles/privacy-first)**: Il nostro approccio alla protezione della privacy degli utenti attraverso scelte progettuali mirate.
 - **[Building Trust](/it/principles/trust)**: Come guadagniamo e manteniamo la fiducia degli utenti attraverso le azioni, non le parole.
-- **[Filosofia della comunicazione](/it/principi/comunicazione)**: Perché limitiamo la comunicazione via e-mail solo a ciò che è necessario
+- **[Filosofia della comunicazione](/it/principles/communication)**: Perché limitiamo la comunicazione via e-mail solo a ciò che è necessario
 - **[Minimizzazione dei dati](/it/principles/data-minimization)**: Il nostro impegno a raccogliere e conservare solo i dati più essenziali
 
 

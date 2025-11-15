@@ -20,8 +20,9 @@ https://x.com/*
 https://example.com/*
 https://yourdomain.com/*
 https://yourbrand.com/*
-secrets.yourdomain.com
-*.yourdomain.com
+https://secrets.yourdomain.com
+https://*.yourdomain.com
+http://*.yourdomain.com
 
 # Exclude URLs that might be in code examples but not real
 file:///
@@ -29,3 +30,9 @@ mailto:*
 
 # Exclude specific patterns that are known to be problematic
 # Add site-specific exclusions below as needed
+
+# Note: In offline mode, lychee will produce warnings for paths starting with /
+# (like /en/introduction/ or /img/...) because it can't convert them to URIs.
+# These warnings are expected and can be ignored - the paths work correctly in
+# production when served by Astro. The important thing is that lychee exits with
+# code 0 (no broken links), not that there are zero warnings.

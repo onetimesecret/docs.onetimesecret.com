@@ -14,10 +14,10 @@ Durch die Nutzung von Custom Domains geben du nicht nur Geheimnisse weiter, sond
 
 1. du registrieren eine Domain oder verwenden eine, die du bereits besitzen.
 2. Wählen du? deine bevorzugte Rechenzentrumsregion (EU oder USA).
-3. [Konfigurieren du die DNS-Einstellungen deiner Domain](/docs/custom-domains/setup-guide) so, dass sie auf die Server von Onetime Secret in der von dir gewählten Region zeigen.
+3. [Konfigurieren du die DNS-Einstellungen deiner Domain](custom-domains/setup-guide) so, dass sie auf die Server von Onetime Secret in der von dir gewählten Region zeigen.
 4. Richten du die benutzerdefinierte Domain in den Einstellungen Ihres Onetime Secret-Kontos ein.
 5. Nach der Überprüfung werden deine geheimen Links deine benutzerdefinierte Domain verwenden.
-6. [Passen du das Erscheinungsbild deiner Domain](/docs/custom-domains/brand-guide) mit Logos und Markenfarben über die Verwaltungsoberfläche an.
+6. [Passen du das Erscheinungsbild deiner Domain](custom-domains/brand-guide) mit Logos und Markenfarben über die Verwaltungsoberfläche an.
 
 
 ## Fehlerbehebung bei häufigen Problemen bei der Einrichtung
@@ -26,6 +26,6 @@ Durch die Nutzung von Custom Domains geben du nicht nur Geheimnisse weiter, sond
 - **Falsche DNS-Einträge**: Überprüfen du? deine DNS-Einstellungen anhand der Anweisungen für die von dir gewählte Region.
 - **TLS-Zertifikatsprobleme**: Wenden du sich an unser Support-Team, wenn du? Probleme mit SSL haben.
 - **Überprüfung der Domain-Eigentümerschaft**: Stellen du sicher, dass du die volle Kontrolle über die Domain haben, die du einrichten möchten.
-- **Regionenauswahl**: Wenn du sich nicht sicher sind, welche Region du wählen sollen, lesen du unseren Leitfaden [Data Center Regions](/docs/regions) oder wenden du sich an unser Support-Team.
+- **Regionenauswahl**: Wenn du sich nicht sicher sind, welche Region du wählen sollen, lesen du unseren Leitfaden [Data Center Regions](regions) oder wenden du sich an unser Support-Team.
 
-Informationen zu den besten Praktiken für die sichere Verwendung von benutzerdefinierten Domänen finden du in unserem Leitfaden [Security Best Practices](/docs/security-best-practices).
+Informationen zu den besten Praktiken für die sichere Verwendung von benutzerdefinierten Domänen finden du in unserem Leitfaden [Security Best Practices](security-best-practices).

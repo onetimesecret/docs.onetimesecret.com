@@ -24,7 +24,7 @@ Onetime Secret bietet zwei Rechenzentrumsregionen an: EU und US. Wenn du? deine 
 - **Für Privatpersonen**: du können die Region nach deinen persönlichen Vorlieben auswählen, z. B. nach der Nähe für einen möglicherweise schnelleren Zugriff oder nach den Bedenken hinsichtlich der persönlichen Datensouveränität.
 - **Für Unternehmen**: deine Wahl kann von deinen Verpflichtungen in Bezug auf die Datenlokalisierung abhängen, wie z.B. die Einhaltung von GDPR, staatlichen oder provinziellen Richtlinien. Stellen du sicher, dass du die Region auswählen, die am besten mit deinen gesetzlichen Anforderungen übereinstimmt.
 
-Berücksichtigen du bei dieser Entscheidung deine spezifischen Bedürfnisse und Anforderungen. Ausführlichere Informationen über unsere Rechenzentrumsregionen und wie du die richtige Region für deine Bedürfnisse auswählen, finden du in unserem Leitfaden [Rechenzentrumsregionen](/docs/regions).
+Berücksichtigen du bei dieser Entscheidung deine spezifischen Bedürfnisse und Anforderungen. Ausführlichere Informationen über unsere Rechenzentrumsregionen und wie du die richtige Region für deine Bedürfnisse auswählen, finden du in unserem Leitfaden [Rechenzentrumsregionen](regions).
 
 ## Schritt 1: Zugriff auf das Domains Dashboard
 

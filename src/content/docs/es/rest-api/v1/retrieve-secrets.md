@@ -7,7 +7,7 @@ Actualizado 2025-04-02_
 
 :::nota
 **Selección de localidad y región de los datos**
-- Elija un centro de datos [region]({getRelativeLocaleUrl(Astro.currentLocale ?? 'en', 'regions')}) (por ejemplo, [`us.onetimesecret.com`](https://us.onetimesecret.com/), [`eu.onetimesecret.com`](https://eu.onetimesecret.com/))
+- Elija un centro de datos [region](/es/regions/) (por ejemplo, [`us.onetimesecret.com`](https://us.onetimesecret.com/), [`eu.onetimesecret.com`](https://eu.onetimesecret.com/))
 - Tenga en cuenta factores como la soberanía de los datos, la latencia y los requisitos de cumplimiento.
 - **NOTA:** Por defecto `onetimesecret.com` permanece operativo y dirige a un centro de datos activo, se recomienda utilizar una localidad específica ya que esta funcionalidad puede quedar obsoleta en el futuro.
 :::

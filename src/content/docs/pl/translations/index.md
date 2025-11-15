@@ -16,7 +16,7 @@ Możesz przełączać się między językami za pomocą selektora języka w praw
 
 ## Status tłumaczeń
 
-Aby zobaczyć aktualny status naszych działań translatorskich, odwiedź stronę [Status tłumaczeń](/en/translations/status).
+Aby zobaczyć aktualny status naszych działań translatorskich, odwiedź stronę [Status tłumaczeń](/pl/translations/).
 
 ## Współtworzenie tłumaczeń
 

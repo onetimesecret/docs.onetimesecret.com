@@ -26,4 +26,4 @@ Explorez notre contenu bonus pour découvrir comment Onetime Secret peut répond
 
 ## Démarrer
 
-Prêt à vous lancer ? Consultez notre [documentation](/docs) pour obtenir des instructions détaillées sur l'utilisation efficace de Onetime Secret. Si vous avez des questions ou des commentaires, n'hésitez pas à [nous contacter](/contact) directement.
+Prêt à vous lancer ? Consultez notre [documentation](/fr/docs-overview) pour obtenir des instructions détaillées sur l'utilisation efficace de Onetime Secret. Si vous avez des questions ou des commentaires, n'hésitez pas à [nous contacter](https://onetimesecret.com/feedback) directement.

@@ -16,7 +16,7 @@ Onetime Secret 文档有多种语言版本，为我们多样化的全球社区�
 
 ## 翻译状态
 
-要查看我们翻译工作的当前状态，请访问 [翻译状态](/en/translations/status) 页面。
+要查看我们翻译工作的当前状态，请访问 [翻译状态](/zh-cn/translations/) 页面。
 
 ## 贡献翻译
 
@@ -32,7 +32,7 @@ Onetime Secret 文档有多种语言版本，为我们多样化的全球社区�
 
 ### 翻译标准
 
-要获得一致、高质量的翻译，请遵循我们的[翻译风格指南](/en/translations/guide-en)，并参考我们的[术语词汇表](/en/translations/glossary)，以获得关键术语的标准化翻译。
+要获得一致、高质量的翻译，请遵循我们的[翻译风格指南](/zh-cn/translations/guide)，并参考我们的[术语词汇表](/en/translations/glossary)，以获得关键术语的标准化翻译。
 
 ## 处理翻译缺失
 

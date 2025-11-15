@@ -26,4 +26,4 @@ Onetime Secret 提供了安全共享敏感信息的直接解决方案：
 
 ## 开始
 
-准备好了吗？请查看我们的[文档](/docs)，了解有效使用Onetime Secret的详细说明。如果您有任何问题或反馈，请直接[联系我们](/contact)。
+准备好了吗？请查看我们的[文档](/zh-cn/docs-overview)，了解有效使用Onetime Secret的详细说明。如果您有任何问题或反馈，请直接[联系我们](https://onetimesecret.com/feedback)。

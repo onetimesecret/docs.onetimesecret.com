@@ -26,4 +26,4 @@ Explore nosso Conteúdo Adicional para aprender como o Onetime Secret pode atend
 
 ## Comece Agora
 
-Pronto para mergulhar? Confira nossa [documentação](/docs) para instruções detalhadas sobre como usar o Onetime Secret efetivamente. Se você tiver alguma dúvida ou feedback, sinta-se à vontade para [entrar em contato](/contact) diretamente.
+Pronto para mergulhar? Confira nossa [documentação](/pt-br/docs-overview) para instruções detalhadas sobre como usar o Onetime Secret efetivamente. Se você tiver alguma dúvida ou feedback, sinta-se à vontade para [entrar em contato](https://onetimesecret.com/feedback) diretamente.

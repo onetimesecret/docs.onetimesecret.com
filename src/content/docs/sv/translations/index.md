@@ -15,7 +15,7 @@ Du kan växla mellan språk med språkväljaren i övre högra hörnet på vilke
 
 ## Översättningsstatus
 
-För att se aktuell status för våra översättningsinsatser, besök sidan [Översättningsstatus](/sv/translations/status).
+För att se aktuell status för våra översättningsinsatser, besök sidan [Översättningsstatus](/sv/translations/).
 
 ## Bidra med översättningar
 

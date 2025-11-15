@@ -2,6 +2,22 @@
 ---
 name: Check Links
 
+# Manual testing commands (requires lychee installed):
+#
+# Internal links check:
+#   lychee --no-progress --offline './src/**/*.md' './src/**/*.mdoc'
+#
+# External links check:
+#   lychee --no-progress --max-concurrency 8 --timeout 20 --max-retries 3 \
+#     --exclude-path ./CHANGELOG.md --accept 200,204,206,301,302,429 \
+#     './src/**/*.md' './src/**/*.mdoc'
+#
+# Note: In offline mode, warnings like "InvalidPathToUri" for paths starting
+# with / (e.g., /en/introduction/, /img/...) are expected. These paths work
+# correctly in production when served by Astro. Check the exit code (0 = success).
+#
+# Install lychee: https://github.com/lycheeverse/lychee#installation
+
 on:
   # Run on PRs to catch issues before merge
   pull_request:
@@ -40,7 +56,6 @@ jobs:
           args: >-
             --no-progress
             --offline
-            --exclude-mail
             './src/**/*.md'
             './src/**/*.mdoc'
           fail: true
@@ -76,7 +91,6 @@ jobs:
             --max-concurrency 8
             --timeout 20
             --max-retries 3
-            --exclude-mail
             --exclude-path ./CHANGELOG.md
             --accept 200,204,206,301,302,429
             './src/**/*.md'

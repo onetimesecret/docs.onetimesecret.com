@@ -7,7 +7,7 @@ description: Onetime Secret REST API を使用してシークレットを取得�
 
 :::note
 **データのロケールと地域の選択
-- リージョン]({getRelativeLocaleUrl(Astro.currentLocale ??'en', 'regions')})を選択する (例: [`us.onetimesecret.com`](https://us.onetimesecret.com/)、[`eu.onetimesecret.com`](https://eu.onetimesecret.com/))。
+- リージョン](/ja/regions/)を選択する (例: [`us.onetimesecret.com`](https://us.onetimesecret.com/)、[`eu.onetimesecret.com`](https://eu.onetimesecret.com/))。
 - データ主権、レイテンシー、コンプライアンス要件などの要因を考慮する。
 - **NOTE:** デフォルトの `onetimesecret.com` は引き続き運用可能で、アクティブなデータセンターにルーティングされる。
 :::
