@@ -12,6 +12,10 @@ name: Check Links
 #     --exclude-path ./CHANGELOG.md --accept 200,204,206,301,302,429 \
 #     './src/**/*.md' './src/**/*.mdoc'
 #
+# Note: In offline mode, warnings like "InvalidPathToUri" for paths starting
+# with / (e.g., /en/introduction/, /img/...) are expected. These paths work
+# correctly in production when served by Astro. Check the exit code (0 = success).
+#
 # Install lychee: https://github.com/lycheeverse/lychee#installation
 
 on:
