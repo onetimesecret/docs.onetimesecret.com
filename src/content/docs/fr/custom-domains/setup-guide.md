@@ -24,7 +24,7 @@ Onetime Secret propose deux régions de centres de données : UE et USA. Lors d
 - Pour les particuliers** : Vous pouvez choisir en fonction de vos préférences personnelles, telles que la proximité pour un accès potentiellement plus rapide ou les préoccupations relatives à la souveraineté des données personnelles.
 - Pour les entreprises** : Votre choix peut dépendre de vos obligations en matière de localisation des données, telles que la conformité au GDPR, aux directives de l'État ou de la province. Assurez-vous de sélectionner la région qui correspond le mieux à vos exigences réglementaires.
 
-Tenez compte de vos besoins et exigences spécifiques lorsque vous faites ce choix. Pour obtenir des informations plus détaillées sur les régions de nos centres de données et sur la manière de choisir celle qui correspond le mieux à vos besoins, veuillez consulter notre guide [Régions de centres de données](regions).
+Tenez compte de vos besoins et exigences spécifiques lorsque vous faites ce choix. Pour obtenir des informations plus détaillées sur les régions de nos centres de données et sur la manière de choisir celle qui correspond le mieux à vos besoins, veuillez consulter notre guide [Régions de centres de données](/fr/regions).
 
 ## Étape 1 : Accéder au tableau de bord des domaines
 
@@ -64,7 +64,7 @@ Pour connecter votre domaine, vous devez mettre à jour vos paramètres DNS. La 
 
 Important : Assurez-vous qu'il n'y a pas d'enregistrements contradictoires pour le domaine que vous utilisez.
 
-<img src="/img/docs/custom-domains/4-Custom-domain-settings.png" alt="Custom domain settings" width="400" />
+<img src="/img/docs/custom-domains/4-Custom-domain-settings.png" alt="Paramètres de domaine personnalisé" width="400" />
 
 ### Plus d'informations
 
