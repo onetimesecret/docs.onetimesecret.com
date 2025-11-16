@@ -87,3 +87,113 @@ These adjustments aim to enhance the accuracy, consistency, and clarity of the u
 | view | visualizar | Imperative form for buttons |
 | hide | ocultar | Imperative form for buttons |
 | documentation | documentação | Technical documentation |
+| search | buscar | Brazilian preference (not "pesquisar") |
+| clipboard | área de transferência | Brazilian term |
+| custom domains | domínios personalizados | Standard translation |
+| dashboard | painel | Translated (not loanword) |
+| settings | configurações | Standard translation |
+
+## Brazilian vs European Portuguese
+
+**CRITICAL:** This translation uses Brazilian Portuguese conventions, not European Portuguese.
+
+### Key Differences
+
+| Aspect | Brazilian (pt-br) ✅ | European (pt-pt) ❌ |
+|--------|---------------------|-------------------|
+| Search verb | buscar | pesquisar |
+| You (informal) | você | tu/vós |
+| Application | aplicativo/aplicação | aplicação |
+| Train | treinar | formar |
+
+### Gerund Usage
+
+Brazilian Portuguese uses the gerund (-ndo) more frequently than European Portuguese:
+
+- ✅ **Brazilian:** "Mostrando resultados" (Showing results)
+- ❌ **European:** "A mostrar resultados"
+
+- ✅ **Brazilian:** "Buscando" (Searching)
+- ❌ **European:** "A buscar"
+
+Use the Brazilian gerund style throughout documentation.
+
+## Formality and Tone
+
+### Use "Você" (Informal You)
+
+Modern Brazilian Portuguese tech documentation uses **"você"** (informal you), not overly formal "o senhor/a senhora":
+
+**Examples:**
+- "Seu recurso central" (Your central resource)
+- "Confira nossa documentação" (Check our documentation)
+- "Se você tiver dúvidas" (If you have questions)
+
+This creates a professional but approachable tone, standard for tech documentation in Brazil.
+
+## Link Localization
+
+**CRITICAL:** All internal links must use the `/pt-br/` prefix.
+
+### Correct Format
+
+```markdown
+✅ CORRECT: [documentação](/pt-br/docs-overview)
+✅ CORRECT: [primeiros passos](/pt-br/introduction)
+✅ CORRECT: [segurança](/pt-br/security/best-practices)
+
+❌ WRONG: [documentação](/pt/docs-overview)  # Wrong locale code
+❌ WRONG: [documentação](docs-overview)      # Missing locale prefix
+```
+
+**Note:** The locale code uses a hyphen: `pt-br` (not `pt_br` or `ptbr`)
+
+### External Links
+
+External links to onetimesecret.com should remain as-is:
+
+```markdown
+✅ CORRECT: [entrar em contato](https://onetimesecret.com/feedback)
+```
+
+## Technical Terms
+
+### Keep in English
+
+These terms should remain in English:
+- API
+- URL
+- DNS
+- SSL/TLS
+- HTTP/HTTPS
+- JSON
+- YAML
+
+### Translate to Portuguese
+
+Technical concepts should be translated for clarity:
+- secrets → mensagens confidenciais
+- passphrase → frase secreta
+- custom domains → domínios personalizados
+- settings → configurações
+- dashboard → painel
+- clipboard → área de transferência
+
+## Natural Language Flow
+
+### Write for Brazilian Portuguese Speakers
+
+Translations should sound natural in Brazilian Portuguese, not like literal English translations:
+
+**Good example:**
+```markdown
+"Bem-vindo ao Onetime Secret Docs, seu recurso central para
+maximizar o valor do nosso serviço de compartilhamento de
+mensagens confidenciais efêmeras e focado em privacidade."
+```
+
+This uses:
+- Natural Brazilian Portuguese sentence structure
+- Professional tone with "você/seu"
+- Appropriate vocabulary choices
+- Natural gerund usage (-ndo verbs)
