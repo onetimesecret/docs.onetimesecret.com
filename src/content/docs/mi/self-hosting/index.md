@@ -35,7 +35,7 @@ Uru mai i `http://localhost:3000`.
 ### Whakatōnga ā-Ringaringa
 Mō ngā taiao whakaputa e hiahia ana i ngā whirihoranga ritenga.
 
-Tirohia tō mātou aratohu [Whakatōnga me te Whakatakoto](./self-hosting/installation) mō ngā tukanga taipitopito.
+Tirohia tō mātou aratohu [Whakatōnga me te Whakatakoto](./installation) mō ngā tukanga taipitopito.
 
 ## Ngā Mea Kei Roto
 
@@ -57,10 +57,10 @@ He aha ngā mea e whāki ana i tō tauira whakatū-rānei:
 
 ## Ngā Mahi e Whai Ake Nei
 
-1. **[Tīmatanga](./self-hosting/getting-started)** - Aratohu whakatū taipitopito
-2. **[Whakatōnga me te Whakatakoto](./self-hosting/installation)** - Ngā kōwhiringa whakatakoto taipitopito
-3. **[Tohutoro Whirihoranga](./self-hosting/configuration)** - Tuhinga tautuhinga katoa
+1. **[Tīmatanga](./getting-started)** - Aratohu whakatū taipitopito
+2. **[Whakatōnga me te Whakatakoto](./installation)** - Ngā kōwhiringa whakatakoto taipitopito
+3. **[Tohutoro Whirihoranga](./configuration)** - Tuhinga tautuhinga katoa
 
 ---
 
-_Kua rite ki te tīmata? Whai i tō mātou aratohu [Tīmatanga](./self-hosting/getting-started)._
+_Kua rite ki te tīmata? Whai i tō mātou aratohu [Tīmatanga](./getting-started)._
