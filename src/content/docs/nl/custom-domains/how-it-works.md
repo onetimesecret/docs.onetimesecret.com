@@ -14,10 +14,10 @@ Door gebruik te maken van aangepaste domeinen deelt u niet alleen geheimen, maar
 
 1. U registreert een domein of gebruikt een domein dat u al bezit.
 2. Kies de datacenterregio van uw voorkeur (EU of VS).
-3. [Configureer de DNS-instellingen van uw domein](custom-domains/setup-guide) om naar de servers van Onetime Secret in de door u gekozen regio te wijzen.
+3. [Configureer de DNS-instellingen van uw domein](/nl/custom-domains/setup-guide) om naar de servers van Onetime Secret in de door u gekozen regio te wijzen.
 4. Stel het aangepaste domein in uw Onetime Secret accountinstellingen in.
 5. Eenmaal geverifieerd, zullen uw geheime links uw aangepaste domein gebruiken.
-6. [Pas het uiterlijk van uw domein aan](custom-domains/brand-guide) met logo's en merkkleuren via de beheerinterface.
+6. [Pas het uiterlijk van uw domein aan](/nl/custom-domains/brand-guide) met logo's en merkkleuren via de beheerinterface.
 
 
 ## Problemen oplossen bij veelvoorkomende installatieproblemen
@@ -28,4 +28,4 @@ Door gebruik te maken van aangepaste domeinen deelt u niet alleen geheimen, maar
 - **Verificatie van domeineigendom**: Controleer of u de volledige controle heeft over het domein dat u probeert in te stellen.
 - **Regio selectie**: Als u niet zeker weet welke regio u moet kiezen, raadpleeg dan onze gids [Datacenterregio's](/nl/regions) of neem contact op met ons ondersteuningsteam.
 
-Raadpleeg onze gids [Best practices beveiliging](security-best-practices) voor meer informatie over best practices voor het veilig gebruiken van aangepaste domeinen.
+Raadpleeg onze gids [Best practices beveiliging](/nl/security-best-practices) voor meer informatie over best practices voor het veilig gebruiken van aangepaste domeinen.
