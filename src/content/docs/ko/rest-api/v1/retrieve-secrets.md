@@ -69,7 +69,7 @@ curl -X POST -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/private/
 - 암호문구\_필요**: 시크릿을 만들 때 비밀번호를 제공했다면 이 값은 참입니다. 그렇지 않으면 거짓입니다.
 
 
-비밀을 태우다 ## 비밀
+## 비밀을 태우다
 
 `POST https://REGION.onetimesecret.com/api/v1/private/METADATA_KEY/burn`
 
