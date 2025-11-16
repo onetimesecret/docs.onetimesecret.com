@@ -1,0 +1,48 @@
+---
+title: Tirohanga Whānui REST API v2
+description: Ka whakarato te REST API v2 o Onetime Secret i ngā āhuatanga whakanui mō te whakahaere haumaru me te tohatoha karere muna mā tētahi atanga JSON RESTful pakari.
+---
+
+{% aside type="note" %}
+Tirohia tā mātou [Kohinga Postman](https://docs.onetimesecret.dev/) mō ngā tuhinga v2 katoa.
+{% /aside %}
+
+
+## Kupu Whakataki
+
+Ka whakarato te REST API v2 o Onetime Secret i tētahi atanga whānui, haumaru mō te taunekeneke papatono ki te paparere tohatoha karere muna. I hangaia hei ratonga RESTful e whakamahi ana i JSON mō te whakawhitinga raraunga, ka whakarato te API v2 i te āhuatanga whakanui me te pakari nui ake i te putanga o mua (v1).
+
+## Ngā Āhuatanga Matua
+
+- **JSON Katoa:** Ka whakamahi i JSON mō ngā tinana tono me ngā whakahoki.
+- **Āhuatanga Whakanui:** E whai ana i ngā poutoko mō te tiki raraunga karere muna taipitopito, te whakawareware karere muna tino tika, me te whakahaere tūnga pai ake.
+- **Pakari Pai Ake:** Ka whakarato i tētahi tūāpapa ūnga, whai āhuatanga ake mō ngā whakaurunga.
+- **Motuhēhēnga:** E tautoko ana i te Motuhēhēnga Taketake mō te urunga katoa me te whakamahi ingoa-kore mō ngā mahi iti, e ōrite ana ki te hanganga API katoa.
+
+## URI Tūāpapa me te Motuhēhēnga
+
+Ka whai ngā poutoko API v2 i te hanganga URI tūāpapa:
+
+`https://REGION.onetimesecret.com/api/v2`
+
+Ka noho tonu ngā tikanga motuhēhēnga (Motuhēhēnga Taketake ki `USERNAME:APITOKEN`, urunga ingoa-kore rānei) e pērā ana ki te kōrerotia i te aratohu [Tīmatanga](/mi/rest-api).
+
+## Ngā Poutoko e Wātea ana
+
+E wātea ana ngā poutoko e whai ake nei i roto i te API v2:
+
+*   `POST /v2/secret/conceal` - Waihangahia tētahi karere muna hou.
+*   `POST /v2/secret/generate` - Whakaputahia tētahi karere muna hou me te uara tupurangi.
+*   `GET /v2/private/recent` - Tikina ngā rekoata raraunga tata nei mō te kaiwhakamahi motuhēhēnga.
+*   `GET /v2/private/:key` - Tikina ngā raraunga mō tētahi karere muna motuhake.
+*   `POST /v2/private/:key/burn` - Whakangaro mā te ringaringa (whakawareware) i tētahi karere muna.
+*   `GET /v2/secret/:key` - Tikina ngā mōhiohio mō tētahi karere muna (ka hiahiatia te kupu karapa mēnā kua whakaritea).
+*   `POST /v2/secret/:key/reveal` - Tikina te uara karere muna (ka hiahiatia te kupu karapa mēnā kua whakaritea, ka pau te karere muna).
+*   `GET /v2/supported-locales` - Rārangitia ngā reo rohe e tautokohia ana.
+*   `GET /v2/version` - Tikina ngā mōhiohio putanga API o nāianei.
+*   `GET /v2/status` - Tirohia te tūnga mahi o te API.
+*   `HEAD /v2/status` - Tirohia te tūnga mahi o te API (ngā pane anake).
+
+## Tuhinga Tauwhitinga
+
+Tūhura i ngā poutoko motuhake, ngā tawhā tono, me ngā hanganga whakahoki o te API v2 mā tā mātou [Kohinga Postman](https://docs.onetimesecret.dev/) tauwhitinga. Ka whakarato tēnei i ngā tauira taipitopito mō ia mahi e wātea ana.
