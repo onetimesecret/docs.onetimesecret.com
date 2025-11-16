@@ -115,7 +115,7 @@ Lors de la création de votre compte Onetime Secret ou de la configuration d'un 
 
 1. Pour les nouveaux comptes : Sélectionnez votre région préférée lors de la procédure d'inscription.
 2. Pour les comptes existants : Contactez notre équipe d'assistance pour discuter des options de migration de région.
-3. Pour les domaines personnalisés : Spécifiez la région choisie lors de la configuration de vos paramètres DNS (voir notre [Custom Domain Setup Guide](custom-domains/setup-guide) pour des instructions détaillées).
+3. Pour les domaines personnalisés : Spécifiez la région choisie lors de la configuration de vos paramètres DNS (voir notre [Guide de configuration de domaine personnalisé](/fr/custom-domains/setup-guide) pour des instructions détaillées).
 
 ## Questions fréquemment posées
 

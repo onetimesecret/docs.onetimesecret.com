@@ -57,7 +57,7 @@ Dans le tableau de bord de votre domaine, vous pouvez configurer la visibilité 
 
 
 
-<img src="/img/docs/custom-domains/guide-brand-admin-6.png" alt="Live implementation view" width="400" />
+<img src="/img/docs/custom-domains/guide-brand-admin-6.png" alt="Vue de l'implémentation en direct" width="400" />
 
 ## Notes importantes
 - Les modifications sont traitées immédiatement après l'enregistrement
