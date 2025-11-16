@@ -289,5 +289,5 @@ Para comprobar que su escrito alcanza estos objetivos, pregunta:
 ## Estilo de traducción
 
 - Utilice la traducción literal para textos jurídicos o técnicos
-- Traduce teniendo en cuenta el contexto cultural cuando traduzcas contenidos de marketing o publicidad.
-- Utiliza la transcreación para adaptar el mensaje de forma que resuene cultural y emocionalmente con la audiencia, para contenidos creativos como entradas de blog y textos de marketing.
+- Traduzca teniendo en cuenta el contexto cultural cuando traduzca contenidos de marketing o publicidad.
+- Utilice la transcreación para adaptar el mensaje de forma que resuene cultural y emocionalmente con la audiencia, para contenidos creativos como entradas de blog y textos de marketing.

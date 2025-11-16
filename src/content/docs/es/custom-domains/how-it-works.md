@@ -5,7 +5,7 @@ description: Los dominios personalizados le permiten alojar la compartición de 
 
 ## Su marca, nuestra seguridad
 
-Al aprovechar los dominios personalizados, no sólo comparte secretos, sino que refuerza su marca, aumenta la confianza y garantiza el cumplimiento de la localización de datos en cada interacción. Actualiza al plan Identity hoy mismo para desbloquear esta potente función y llevar el intercambio de secretos al siguiente nivel.
+Al aprovechar los dominios personalizados, no sólo comparte secretos, sino que refuerza su marca, aumenta la confianza y garantiza el cumplimiento de la localización de datos en cada interacción. Actualice al plan Identity hoy mismo para desbloquear esta potente función y llevar el intercambio de secretos al siguiente nivel.
 
 <img src="/img/docs/custom-domains/branded-homepage-enabled.png" alt="Configuración personalizada del dominio" width="600" />
 

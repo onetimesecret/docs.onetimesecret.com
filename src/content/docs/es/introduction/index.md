@@ -15,11 +15,11 @@ Bienvenido a Onetime Secret Docs, su recurso central para maximizar el valor de 
 
 Onetime Secret ofrece una solución sencilla para compartir información confidencial de forma segura:
 
-1. Acceso único: Ver los secretos compartidos una vez, luego se eliminan permanentemente.
-2. No es necesario registrarse: Utiliza las funciones básicas sin necesidad de tener una cuenta
-3. Expiración personalizable: Controla la disponibilidad de los secretos con borrado automático
+1. Acceso único: Los secretos compartidos se pueden ver una vez, luego se eliminan permanentemente.
+2. No es necesario registrarse: Utilice las funciones básicas sin necesidad de tener una cuenta
+3. Expiración personalizable: Controle la disponibilidad de los secretos con borrado automático
 4. Interfaz intuitiva: Comparta secretos fácilmente con nuestro diseño fácil de usar
-5. Frase de contraseña opcional: Añade una capa de seguridad adicional a los secretos compartidos
+5. Frase de contraseña opcional: Añada una capa de seguridad adicional a los secretos compartidos
 6. Código abierto: Revise nuestro código base para una mayor transparencia
 
 Explore nuestro Contenido adicional para saber cómo Onetime Secret puede satisfacer sus necesidades de comunicación segura de forma eficaz y discreta.

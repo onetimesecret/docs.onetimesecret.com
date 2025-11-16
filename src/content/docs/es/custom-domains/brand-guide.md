@@ -65,7 +65,7 @@ En el panel de control de su dominio puede configurar la visibilidad de la pági
 - El panel de vista previa muestra el renderizado en tiempo real
 - Los ajustes son específicos del dominio
 
-## ¿Preguntas o necesitas ayuda?
+## ¿Preguntas o necesita ayuda?
 
 Estamos aquí para ayudarle.
 

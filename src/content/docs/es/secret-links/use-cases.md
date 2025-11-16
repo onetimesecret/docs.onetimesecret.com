@@ -19,11 +19,11 @@ Cuando comparta credenciales de servicios de streaming o contraseñas del WiFi d
 
 **Beneficio**: Esto proporciona una forma cómoda de compartir el acceso sin comprometer la seguridad a largo plazo. Aunque un teléfono se pierda o una cuenta de mensajería se vea comprometida meses después, la información sensible no quedará expuesta, ya que nunca se almacenó en el historial de mensajes.
 
-### 3. 3. Información sobre el pago
+### 3. Información sobre el pago
 
-Cuando necesites compartir datos de pago, como información de tarjetas de crédito o direcciones de monederos digitales, con proveedores de servicios o contactos de confianza, utiliza enlaces secretos en lugar de escribir información confidencial directamente en mensajes o correos electrónicos. Crea un enlace seguro que contenga sus datos de pago, compártelo con el destinatario y, una vez que este haya accedido a la información, se eliminará automáticamente, garantizando así que sus datos financieros no queden expuestos en los hilos de comunicación.
+Cuando necesite compartir datos de pago, como información de tarjetas de crédito o direcciones de monederos digitales, con proveedores de servicios o contactos de confianza, utilice enlaces secretos en lugar de escribir información confidencial directamente en mensajes o correos electrónicos. Cree un enlace seguro que contenga sus datos de pago, compártalo con el destinatario y, una vez que este haya accedido a la información, se eliminará automáticamente, garantizando así que sus datos financieros no queden expuestos en los hilos de comunicación.
 
-**Ventaja**: Este métodoprotege su seguridad financiera garantizando que la información confidencial de pago no se acumule en hilos de correo electrónico, historiales de chat o mensajes de texto. Le da la tranquilidad de saber que los datos de su cuenta no serán vulnerables si alguno de estos canales de comunicación se ve comprometido.
+**Ventaja**: Este método protege su seguridad financiera garantizando que la información confidencial de pago no se acumule en hilos de correo electrónico, historiales de chat o mensajes de texto. Le da la tranquilidad de saber que los datos de su cuenta no serán vulnerables si alguno de estos canales de comunicación se ve comprometido.
 
 ### 4. Claves de licencia de software
 Cuando distribuya licencias de software adquiridas a empleados o clientes, utilice enlaces secretos para compartir las claves de activación. Esto garantiza que las valiosas claves de licencia no puedan reutilizarse accidentalmente o compartirse más allá de su destinatario previsto, y ayuda a evitar que las claves se archiven en sistemas de correo electrónico donde podrían ser vulnerables a accesos no autorizados.

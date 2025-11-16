@@ -120,7 +120,7 @@ Para aquellos a los que les gusta estar informados, pueden comprobar fácilmente
 
 - Sólo tiene que consultar la fecha y hora de "Última supervisión" en el panel de control para confirmar la conectividad en curso.
 
-## ¿Preguntas o necesitas ayuda?
+## ¿Preguntas o necesita ayuda?
 
 Estamos aquí para ayudarle. Si tiene alguna pregunta o necesita ayuda:
 
