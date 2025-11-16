@@ -1,6 +1,6 @@
 ---
 title: Unsere Grundsätze
-description: Die Grundwerte und Leitprinzipien, die unseren Ansatz für Datenschutz und du?cherheit bestimmen
+description: Die Grundwerte und Leitprinzipien, die unseren Ansatz für Datenschutz und Sicherheit bestimmen
 ---
 
 # Grundsätze
@@ -22,7 +22,7 @@ Willkommen bei den Leitprinzipien von Onetime Secret. Diese grundlegenden Dokume
 
 ## Warum Prinzipien wichtig sind
 
-Bei Onetime Secret wird jede Entscheidung von unseren Prinzipien geleitet. du helfen uns:
+Bei Onetime Secret wird jede Entscheidung von unseren Prinzipien geleitet. Sie helfen uns:
 
 - uns auf das Wesentliche zu konzentrieren
 - Beständige Entscheidungen zu treffen
