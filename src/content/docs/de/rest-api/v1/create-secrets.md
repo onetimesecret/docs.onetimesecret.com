@@ -1,23 +1,23 @@
 ---
 title: Geheimnisse schaffen
-description: Lernen du, wie du mit der Onetime Secret REST API Geheimnisse erstellen und abrufen können, wobei sowohl die authentifizierte als auch die anonyme Nutzung unterstützt wird.
+description: Lernen Sie, wie Sie mit der Onetime Secret REST API Geheimnisse erstellen und abrufen können, wobei sowohl die authentifizierte als auch die anonyme Nutzung unterstützt wird.
 ---
 
 _Aktualisiert 2025-04-02_
 
 <!-- ::callout{icon="i-heroicons-globe-alt"} -->
 **Auswahl von Datenort und Region**
-- Wählen du zwischen US ([`us.onetimesecret.com`](https://us.onetimesecret.com/)), EU ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)), Kanada ([`ca.onetimesecret.com`](https://ca.onetimesecret.com/)), oder Neuseeland ([`nz.onetimesecret.com`](https://nz.onetimesecret.com/)) Rechenzentren
-- Berücksichtigen du? Faktoren wie Datenhoheit, Latenzzeit und Compliance-Anforderungen
+- Wählen Sie zwischen US ([`us.onetimesecret.com`](https://us.onetimesecret.com/)), EU ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)), Kanada ([`ca.onetimesecret.com`](https://ca.onetimesecret.com/)), oder Neuseeland ([`nz.onetimesecret.com`](https://nz.onetimesecret.com/)) Rechenzentren
+- Berücksichtigen Sie Faktoren wie Datenhoheit, Latenzzeit und Compliance-Anforderungen
 - **HINWEIS:** Standardmäßig bleibt `onetimesecret.com` in Betrieb und leitet zu einem aktiven Rechenzentrum weiter. Es wird empfohlen, eine bestimmte Lokalität zu verwenden, da diese Funktion in Zukunft möglicherweise veraltet sein wird.
 ::
 
 
-## Erstellen du ein Geheimnis
+## Erstellen Sie ein Geheimnis
 
-'POST https://REGION.onetimesecret.com/api/v1/share'
+`POST https://REGION.onetimesecret.com/api/v1/share`
 
-Verwenden du diesen Endpunkt, um einen geheimen Wert zu speichern und einen Link zur einmaligen Verwendung zu erstellen.
+Verwenden Sie diesen Endpunkt, um einen geheimen Wert zu speichern und einen Link zur einmaligen Verwendung zu erstellen.
 
 
 ### Authentifizierte Anfrage
@@ -34,7 +34,7 @@ $ curl -X POST -d 'secret=SECRET&ttl=3600' https://us.onetimesecret.com/api/v1/s
 
 ### Abfrage-Parameter
 
-- **secret**: der geheime Wert, der verschlüsselt wird, bevor er gespeichert wird. Es gibt eine maximale Länge, die von deinem Plan abhängt und erzwungen wird (1k-10k).
+- **secret**: der geheime Wert, der verschlüsselt wird, bevor er gespeichert wird. Es gibt eine maximale Länge, die von Ihrem Plan abhängt und erzwungen wird (1k-10k).
 - **Passphrase**: eine Zeichenfolge, die der Empfänger kennen muss, um das Geheimnis einzusehen. Dieser Wert wird auch zur Verschlüsselung des Geheimnisses verwendet und wird vor der Speicherung verschlüsselt, so dass wir diesen Wert nur bei der Übertragung haben.
 - **ttl**: die maximale Zeitspanne in Sekunden, die das Geheimnis überleben soll (d.h. time-to-live). Nach Ablauf dieser Zeit wird das Geheimnis gelöscht und kann nicht mehr wiederhergestellt werden.
 - **Empfänger**: eine E-Mail-Adresse. Wir senden eine freundliche E-Mail, die den Link zum Geheimnis enthält (NICHT das Geheimnis selbst).
@@ -43,8 +43,8 @@ $ curl -X POST -d 'secret=SECRET&ttl=3600' https://us.onetimesecret.com/api/v1/s
 ### Attribute
 
 - **custid**: der Benutzername des Kontos, das das Geheimnis erstellt hat. Dieser Wert ist `anon` für anonyme Anfragen.
-- **metadata\_key**: der eindeutige Schlüssel für die Metadaten. Geben du diesen NICHT weiter.
-- **secret\_key**: der eindeutige Schlüssel für das Geheimnis, das du erstellen. Diesen Schlüssel können du weitergeben.
+- **metadata\_key**: der eindeutige Schlüssel für die Metadaten. Geben Sie diesen NICHT weiter.
+- **secret\_key**: der eindeutige Schlüssel für das Geheimnis, das Sie erstellen. Diesen Schlüssel können Sie weitergeben.
 - **ttl**: Die angegebene Time-to-Live (in Sekunden) (d.h. nicht die verbleibende Zeit)
 - **metadata\_ttl**: Die verbleibende Zeit (in Sekunden), die die Metadaten noch zu leben haben.
 - **secret\_ttl**: Die verbleibende Zeit (in Sekunden), die das Geheimnis noch zu leben hat.
@@ -73,7 +73,7 @@ $ curl -X POST -d 'secret=SECRET&ttl=3600' https://us.onetimesecret.com/api/v1/s
 
 `POST https://REGION.onetimesecret.com/api/v1/generate`
 
-Erzeugen du ein kurzes, eindeutiges Geheimnis. Dies ist nützlich für temporäre Passwörter, Onetime-Pads, Salts usw.
+Erzeugen Sie ein kurzes, eindeutiges Geheimnis. Dies ist nützlich für temporäre Passwörter, Onetime-Pads, Salts usw.
 
 ### Authentifizierte Anfrage
 

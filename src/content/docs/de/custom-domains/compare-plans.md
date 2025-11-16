@@ -1,6 +1,6 @@
 ---
 title: Pläne vergleichen
-description: Vergleichen du unsere funktionsreichen Tarife, die eine sichere Freigabe von Geheimnissen mit ablaufenden Links, benutzerdefinierte Domains und flexible Speicheroptionen für Privatpersonen und Unternehmen bieten.
+description: Vergleichen Sie unsere funktionsreichen Tarife, die eine sichere Freigabe von Geheimnissen mit ablaufenden Links, benutzerdefinierte Domains und flexible Speicheroptionen für Privatpersonen und Unternehmen bieten.
 ---
 
 
@@ -16,11 +16,11 @@ description: Vergleichen du unsere funktionsreichen Tarife, die eine sichere Fre
 | API-Zugang | ✅ | ✅ | Begrenzt |
 | Einrichtung erforderlich | Ja (DNS-Konfiguration) | Nein | Nein |
 | Bezahlt | Ja (Teil des Identitätsplans) | Nein | Nein |
-| SSL/TLS-du?cherheit | ✅ | ✅ | ✅ | ✅
+| SSL/TLS-Sicherheit | ✅ | ✅ | ✅ | ✅
 | Datenlokalisierung | ✅ (EU oder US) | ✅ (EU oder US) | ✅ (EU oder US) |
 
 
-Weitere Informationen über Konto-Upgrades und Preise finden du auf unserer [Preisseite](https://onetimesecret.com/pricing).
+Weitere Informationen über Konto-Upgrades und Preise finden Sie auf unserer [Preisseite](https://onetimesecret.com/pricing).
 
 
 ## Demnächst erhältlich

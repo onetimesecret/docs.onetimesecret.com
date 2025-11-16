@@ -7,13 +7,13 @@ description: Willkommen zum Leitfaden von Onetime Secret zu Secret Links, einer 
 
 ## Was sind Geheime Links?
 
-Geheime Links sind einzigartige, sich selbst zerstörende URLs, mit denen du vertrauliche Informationen sicher weitergeben kannst. Auf jeden Link kann nur einmal zugegriffen werden, bevor er für immer verschwindet. So wird sichergestellt, dass deine freigegebenen Daten vertraulich bleiben und nicht online bleiben.
+Geheime Links sind einzigartige, sich selbst zerstörende URLs, mit denen Sie vertrauliche Informationen sicher weitergeben können. Auf jeden Link kann nur einmal zugegriffen werden, bevor er für immer verschwindet. So wird sichergestellt, dass Ihre freigegebenen Daten vertraulich bleiben und nicht online bleiben.
 
 ## Wie funktionieren geheime Links?
 
-1. Du erstellst eine geheime Nachricht auf unserer Plattform.
+1. Sie erstellen eine geheime Nachricht auf unserer Plattform.
 2. Wir generieren einen einzigartigen, verschlüsselten Link für diese Nachricht.
-3. Du teilst diesen Link mit dem gewünschten Empfänger.
+3. Sie teilen diesen Link mit dem gewünschten Empfänger.
 4. Der Empfänger öffnet den Link, um die Nachricht zu lesen.
 5. Nach der Anzeige werden der Link und sein Inhalt dauerhaft zerstört.
 
@@ -21,22 +21,22 @@ Geheime Links sind einzigartige, sich selbst zerstörende URLs, mit denen du ver
 
 - **Einmalige Verwendung**: Jeder Link funktioniert nur einmal und verhindert den unbefugten Zugriff.
 - **Automatische Vernichtung**: Der Inhalt wird nach der Betrachtung gelöscht und hinterlässt keine digitalen Spuren.
-- **du?chere Freigabe**: Ideal für Passwörter, private Nachrichten und andere sensible Daten.
+- **Sichere Freigabe**: Ideal für Passwörter, private Nachrichten und andere sensible Daten.
 - **Einfach und benutzerfreundlich**: Für die grundlegende Nutzung ist kein Konto erforderlich.
 
 ## Anwendungsfälle
 
 Geheime Links sind ideal für:
 
-- du?chere Weitergabe von Anmeldedaten
+- Sichere Weitergabe von Anmeldedaten
 - Versenden vertraulicher Informationen an Kollegen
 - Übermittlung sensibler persönlicher Daten
 
 ## Erste Schritte
 
-Um deinen ersten geheimen Link zu erstellen, besuche [https://onetimesecret.com](onetimesecret.com) und folge den einfachen Schritten auf unserer Homepage.
+Um Ihren ersten geheimen Link zu erstellen, besuchen Sie [https://onetimesecret.com](https://onetimesecret.com) und folgen Sie den einfachen Schritten auf unserer Homepage.
 
-Ausführlichere Informationen zur Verwendung von geheimen Links findest du in unserem [Benutzerhandbuch](/de/introduction/).
+Ausführlichere Informationen zur Verwendung von geheimen Links finden Sie in unserem [Benutzerhandbuch](/de/introduction/).
 
 
 <!--
@@ -51,5 +51,5 @@ Hinweise zur Kommunikation:
 - Links zu verwandten Dokumentationsseiten (z.B. erweiterte Funktionen, API-Nutzung)
 - Eine Callout-Box mit Hinweisen auf aktuelle Aktualisierungen oder Erweiterungen der Funktion für geheime Links
 
-Denke daran, alle Informationen mit den neuesten Daten von Onetime Secret zu überprüfen, bevor du sie veröffentlichst, und hole das Feedback der Benutzer ein, um sicherzustellen, dass die Dokumentation ihren Bedürfnissen entspricht.
+Denken Sie daran, alle Informationen mit den neuesten Daten von Onetime Secret zu überprüfen, bevor Sie sie veröffentlichen, und holen Sie das Feedback der Benutzer ein, um sicherzustellen, dass die Dokumentation ihren Bedürfnissen entspricht.
 -->

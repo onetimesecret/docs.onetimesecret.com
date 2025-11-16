@@ -1,6 +1,6 @@
 ---
 title: Client-Bibliotheken
-description: Entdecken du die Client-Bibliotheken, die für die Onetime Secret API verfügbar sind, darunter Ruby, Python, Perl, Java, C#, Go und mehr.
+description: Entdecken Sie die Client-Bibliotheken, die für die Onetime Secret API verfügbar sind, darunter Ruby, Python, Perl, Java, C#, Go und mehr.
 ---
 
 ## Ruby
@@ -73,7 +73,7 @@ by [Kyle Dawkins](http://www.shoffle.com/) (added 2012-01-06)
 
 use Net::OneTimeSecret;
 
-# Hinweis: Ersetzen du diese Angaben durch deine, damit es funktioniert!
+# Hinweis: Ersetzen Sie diese Angaben durch Ihre, damit es funktioniert!
 my $customerId = 'YOUR_EMAIL';
 my $testApiKey = 'YOUR_OTS_APIKEY';
 
@@ -130,8 +130,8 @@ by [Vladislav Stepanov](https://github.com/utter-step/) (added 2014-05-29)
 ### Usage Example
 
 ```csharp
-# du können OneTimeSharp in jedem deiner Projekte verwenden, das mit .NET (4.0+) oder Mono (2.10.8+) kompatibel ist.
-using VStepanov. OneTimeSharp;
+# Sie können OneTimeSharp in jedem Ihrer Projekte verwenden, das mit .NET (4.0+) oder Mono (2.10.8+) kompatibel ist.
+using VStepanov.OneTimeSharp;
 
 class Test
 {
@@ -211,7 +211,7 @@ flsdlaun6hwczqu9utmc0vts5xj9xu1
 
 
 [Github-Seite](https://github.com/emdneto/otsgo)
-von [Emídio Neto](https://github. com/emdneto) (added 2024-06-09)
+von [Emídio Neto](https://github.com/emdneto) (added 2024-06-09)
 
 ### Usage Example
 
@@ -222,7 +222,7 @@ WithUsername("otsuser@domain.com"),
 WithApiKey("xxxxxxxx"),
 )
 
-// Senden du eine Anfrage mit Kontext
+// Senden Sie eine Anfrage mit Kontext
 ctx := context.Background()
 response, err := client.GetStatus(ctx)
 if err != nil {
@@ -238,7 +238,7 @@ fmt.Println(response.Status)
 
 
 [Github-Seite - OneTimeSecret](https://github.com/chelnak/OneTimeSecret)
-von [Craig Gumbley](https://www.helloitscraig.co. uk) (updated 2017-04-28)
+von [Craig Gumbley](https://www.helloitscraig.co.uk) (updated 2017-04-28)
 
 ### Usage Example
 
@@ -264,14 +264,14 @@ Get-Command -Module OneTimeSecret | Select Name
 ## Bash
 
 
-[Github-Seite - OneTimeSecret-bash](https: //github. com/eengstrom/onetimesecret-bash)
+[Github-Seite - OneTimeSecret-bash](https://github.com/eengstrom/onetimesecret-bash)
 by [Eric Engstrom](https://eengstrom.github.io/) (updated 2018-12-19)
 
 ### Verwendungsbeispiel als Scripting-API
 
 ```bash
-# Quelle zur anonymen Verwendung (Geheimnisse werden anonym erstellt)
-Quelle ots. bash
+# Quelle für anonyme Verwendung (Geheimnisse werden anonym erstellt)
+source ots.bash
 
 # oder Quelle mit bestimmten Zugangsdaten
 APIUSER="USERNAME"
@@ -291,20 +291,20 @@ Dies ist ein Geheimnis
 EOF
 )
 
-# Übergeben du? Optionen zum Teilen oder Erzeugen.
+# Übergeben Sie Optionen zum Teilen oder Erzeugen.
 URL=$(ots_share ttl=600 \
 passphrase="shared-secret" \
 recipient="someone@somewhere.com" <<< "SECRET")
 
-# holen du die geheimen Daten
-local DATA="$(ots_retrieve ‚$URL‘)"
+# Holen Sie die geheimen Daten
+local DATA="$(ots_retrieve '$URL')"
 
-# teilen/erzeugen du ein neues Geheimnis und erhalten du den privaten Metadatenschlüssel zurück
+# Teilen/erzeugen Sie ein neues Geheimnis und erhalten Sie den privaten Metadatenschlüssel zurück
 local KEY=$(ots_metashare <<< "SECRET")
 local KEY=$(ots_metagenerate)
 
-# erhalten du eine Liste der kürzlich erstellten privaten Metadatenschlüssel.
-# beachten du, dass dies gültige Anmeldedaten erfordert
+# Erhalten Sie eine Liste der kürzlich erstellten privaten Metadatenschlüssel.
+# Beachten Sie, dass dies gültige Anmeldedaten erfordert
 local -a RECENT=( $(ots_recent) )
 
 #
