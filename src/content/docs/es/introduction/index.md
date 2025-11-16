@@ -1,6 +1,6 @@
 ---
 title: Primeros pasos
-description: Tu centro de recursos, documentación e información sobre Onetime Secret.
+description: Su centro de recursos, documentación e información sobre Onetime Secret.
 ---
 
 Bienvenido a Onetime Secret Docs, su recurso central para maximizar el valor de nuestro servicio de intercambio de secretos efímeros centrado en la privacidad.
@@ -26,4 +26,4 @@ Explore nuestro Contenido adicional para saber cómo Onetime Secret puede satisf
 
 ## Empezar
 
-¿Listo para sumergirte? Consulta nuestra [documentación](/es/docs-overview) para obtener instrucciones detalladas sobre el uso eficaz de Onetime Secret. Si tienes alguna pregunta o comentario, no dudes en [contactar con nosotros](https://onetimesecret.com/feedback) directamente.
+¿Listo para sumergirse? Consulte nuestra [documentación](/es/docs-overview) para obtener instrucciones detalladas sobre el uso eficaz de Onetime Secret. Si tiene alguna pregunta o comentario, no dude en [contactar con nosotros](https://onetimesecret.com/feedback) directamente.

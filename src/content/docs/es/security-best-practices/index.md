@@ -1,31 +1,31 @@
 ---
 title: Buenas prácticas de seguridad
-description: Mejora la seguridad de tus secretos compartidos con estas mejores prácticas específicas para Onetime Secret, incluyendo los beneficios de seguridad de los Dominios Personalizados.
+description: Mejore la seguridad de sus secretos compartidos con estas mejores prácticas específicas para Onetime Secret, incluyendo los beneficios de seguridad de los Dominios Personalizados.
 ---
 
 # Prácticas recomendadas de seguridad para Onetime Secret
 
-Aunque Onetime Secret está diseñado pensando en la seguridad, seguir estas buenas prácticas puede mejorar aún más la protección de tu información confidencial, especialmente cuando se utilizan funciones como los dominios personalizados.
+Aunque Onetime Secret está diseñado pensando en la seguridad, seguir estas buenas prácticas puede mejorar aún más la protección de su información confidencial, especialmente cuando se utilizan funciones como los dominios personalizados.
 
 ## Buenas prácticas para compartir secretos
 
-1. **Establezca tiempos de expiración apropiados**: Elige el tiempo de expiración más corto posible para tus secretos. Así se minimiza la posibilidad de acceso no autorizado.
+1. **Establezca tiempos de expiración apropiados**: Elija el tiempo de expiración más corto posible para sus secretos. Así se minimiza la posibilidad de acceso no autorizado.
 
-2. **Utiliza la protección con frase de contraseña**: Para información muy sensible, utiliza la función de protección con frase de contraseña. Esto añade una capa extra de seguridad, requiriendo que el destinatario introduzca una frase de contraseña para ver el secreto.
+2. **Utilice la protección con frase de contraseña**: Para información muy sensible, utilice la función de protección con frase de contraseña. Esto añade una capa extra de seguridad, requiriendo que el destinatario introduzca una frase de contraseña para ver el secreto.
 
 3. **Compartimentar la información sensible**: Cuando se trate de datos muy sensibles, considere la posibilidad de dividirlos en varios secretos. De este modo, si un secreto se ve comprometido, todo el conjunto de información permanece protegido.
 
-4. **Utiliza canales seguros para compartir metadatos**: Aunque Onetime Secret asegura el contenido de tu secreto, ten en cuenta cómo compartes el enlace y cualquier metadato asociado (como contraseñas). Utiliza canales seguros y encriptados para esta comunicación.
+4. **Utilice canales seguros para compartir metadatos**: Aunque Onetime Secret asegura el contenido de su secreto, tenga en cuenta cómo comparte el enlace y cualquier metadato asociado (como contraseñas). Utilice canales seguros y encriptados para esta comunicación.
 
-5. **Verificar el destinatario**: Asegúrate de que estás compartiendo secretos con el destinatario previsto. Comprueba dos veces las direcciones de correo electrónico o los nombres de usuario antes de enviarlos.
+5. **Verificar el destinatario**: Asegúrese de que está compartiendo secretos con el destinatario previsto. Compruebe dos veces las direcciones de correo electrónico o los nombres de usuario antes de enviarlos.
 
-6. **Educa a los usuarios**: Si utilizas Onetime Secret dentro de una organización, educa a tu equipo sobre el uso adecuado y las prácticas de seguridad específicas para compartir secretos.
+6. **Eduque a los usuarios**: Si utiliza Onetime Secret dentro de una organización, eduque a su equipo sobre el uso adecuado y las prácticas de seguridad específicas para compartir secretos.
 
 ## Ventajas de seguridad de los dominios personalizados
 
 El uso de dominios personalizados con Onetime Secret ofrece varias ventajas de seguridad:
 
-1. **Protección contra phishing mejorada**: Con un dominio personalizado, tus usuarios se acostumbran a una URL específica para compartir secretos. Esto hace que sea más fácil identificar posibles intentos de phishing que podrían utilizar dominios de aspecto similar.
+1. **Protección contra phishing mejorada**: Con un dominio personalizado, sus usuarios se acostumbran a una URL específica para compartir secretos. Esto hace que sea más fácil identificar posibles intentos de phishing que podrían utilizar dominios de aspecto similar.
 
 2. **Mayor confianza y legitimidad**: Cuando los destinatarios ven un dominio conocido, es más probable que confíen en la fuente del secreto. Esto es especialmente importante para las empresas que comparten información sensible con clientes o socios.
 
@@ -37,11 +37,11 @@ Onetime Secret se encarga de los aspectos técnicos de la seguridad de su domini
 
 ## Seguridad en el uso de la API
 
-Si utilizas la API Onetime Secret:
+Si utiliza la API Onetime Secret:
 
-1. **Claves de API seguras**: Almacena las claves API de forma segura y nunca las expongas en código del lado del cliente o repositorios públicos.
+1. **Claves de API seguras**: Almacene las claves API de forma segura y nunca las exponga en código del lado del cliente o repositorios públicos.
 
-2. **Rota las claves API**: Rota regularmente tus claves API, especialmente si sospechas que han sido comprometidas.
+2. **Rote las claves API**: Rote regularmente sus claves API, especialmente si sospecha que han sido comprometidas.
 
 3. **Limitar el acceso a la API**: Utilice el principio del menor privilegio al configurar el acceso a la API. Conceda únicamente los permisos necesarios para cada caso de uso específico.
 
@@ -68,12 +68,12 @@ Esta sección presenta recomendaciones generales de seguridad que pueden ser út
 
 1. **Tenga un plan**: Desarrolle un plan de respuesta a incidentes específico para sus procesos de intercambio de secretos. Debe incluir pasos para revocar el acceso, notificar a las partes afectadas y mitigar los posibles daños.
 
-2. **Acción rápida**: Si sospechas que un secreto ha sido comprometido, utiliza la función de grabación de Onetime Secret inmediatamente si el secreto no ha sido visto todavía. Si ha sido visto, toma las medidas apropiadas para mitigar cualquier daño potencial.
+2. **Acción rápida**: Si sospecha que un secreto ha sido comprometido, utilice la función de grabación de Onetime Secret inmediatamente si el secreto no ha sido visto todavía. Si ha sido visto, tome las medidas apropiadas para mitigar cualquier daño potencial.
 
 3. **Revisiones periódicas de seguridad**: Revise periódicamente sus prácticas de intercambio de secretos y ajuste sus medidas de seguridad según sea necesario.
 
 ---
 
-Siguiendo estas buenas prácticas, puedes mejorar significativamente la seguridad de tus actividades de intercambio de secretos en Onetime Secret. Recuerda, la seguridad es un proceso continuo, y mantenerse alerta es clave para proteger tu información sensible.
+Siguiendo estas buenas prácticas, puede mejorar significativamente la seguridad de sus actividades de intercambio de secretos en Onetime Secret. Recuerde, la seguridad es un proceso continuo, y mantenerse alerta es clave para proteger su información sensible.
 
 Para cualquier problema de seguridad o para informar de posibles vulnerabilidades, póngase en contacto inmediatamente con nuestro equipo de seguridad en security@onetimesecret.com.

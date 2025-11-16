@@ -11,19 +11,19 @@ Los enlaces secretos son versátiles y pueden aplicarse en muchas situaciones en
 
 Cuando necesite una forma rápida y segura de compartir una contraseña o clave API, los enlaces secretos ofrecen una solución sencilla. Mientras que los gestores de contraseñas son la mejor opción para la gestión de credenciales a largo plazo y para compartir en equipo, los enlaces secretos ofrecen una alternativa ligera que cualquiera puede utilizar sin necesidad de software o cuentas especiales. La naturaleza autodestructiva de estos enlaces garantiza que las credenciales confidenciales no permanezcan en bandejas de entrada de correo electrónico o historiales de chat donde podrían verse comprometidas.
 
-**Ventaja**: Este enfoque proporciona una forma rápida y sin configuración de compartir credenciales de forma segura cuando lo necesites. Elimina prácticas de riesgo como el almacenamiento de contraseñas en mensajes de correo electrónico en texto plano, al tiempo que mantiene el proceso de intercambio sencillo y sin fricciones para todos los implicados.
+**Ventaja**: Este enfoque proporciona una forma rápida y sin configuración de compartir credenciales de forma segura cuando lo necesite. Elimina prácticas de riesgo como el almacenamiento de contraseñas en mensajes de correo electrónico en texto plano, al tiempo que mantiene el proceso de intercambio sencillo y sin fricciones para todos los implicados.
 
 ### 2. Contraseñas de Netflix y WiFi
 
-Cuando compartas credenciales de servicios de streaming o contraseñas del WiFi doméstico con familiares e invitados, utiliza enlaces secretos para transmitir la información de forma segura. Sólo tienes que crear el enlace y enviarlo a través de tus aplicaciones de mensajería habituales. Una vez que hayan visto la contraseña, el enlace quedará inactivo, manteniendo tus cuentas seguras aunque alguien acceda más tarde al historial de mensajes.
+Cuando comparta credenciales de servicios de streaming o contraseñas del WiFi doméstico con familiares e invitados, utilice enlaces secretos para transmitir la información de forma segura. Sólo tiene que crear el enlace y enviarlo a través de sus aplicaciones de mensajería habituales. Una vez que hayan visto la contraseña, el enlace quedará inactivo, manteniendo sus cuentas seguras aunque alguien acceda más tarde al historial de mensajes.
 
 **Beneficio**: Esto proporciona una forma cómoda de compartir el acceso sin comprometer la seguridad a largo plazo. Aunque un teléfono se pierda o una cuenta de mensajería se vea comprometida meses después, la información sensible no quedará expuesta, ya que nunca se almacenó en el historial de mensajes.
 
 ### 3. 3. Información sobre el pago
 
-Cuando necesites compartir datos de pago, como información de tarjetas de crédito o direcciones de monederos digitales, con proveedores de servicios o contactos de confianza, utiliza enlaces secretos en lugar de escribir información confidencial directamente en mensajes o correos electrónicos. Crea un enlace seguro que contenga tus datos de pago, compártelo con el destinatario y, una vez que este haya accedido a la información, se eliminará automáticamente, garantizando así que tus datos financieros no queden expuestos en los hilos de comunicación.
+Cuando necesites compartir datos de pago, como información de tarjetas de crédito o direcciones de monederos digitales, con proveedores de servicios o contactos de confianza, utiliza enlaces secretos en lugar de escribir información confidencial directamente en mensajes o correos electrónicos. Crea un enlace seguro que contenga sus datos de pago, compártelo con el destinatario y, una vez que este haya accedido a la información, se eliminará automáticamente, garantizando así que sus datos financieros no queden expuestos en los hilos de comunicación.
 
-**Ventaja**: Este método protege su seguridad financiera garantizando que la información confidencial de pago no se acumule en hilos de correo electrónico, historiales de chat o mensajes de texto. Te da la tranquilidad de saber que los datos de tu cuenta no serán vulnerables si alguno de estos canales de comunicación se ve comprometido.
+**Ventaja**: Este métodoprotege su seguridad financiera garantizando que la información confidencial de pago no se acumule en hilos de correo electrónico, historiales de chat o mensajes de texto. Le da la tranquilidad de saber que los datos de su cuenta no serán vulnerables si alguno de estos canales de comunicación se ve comprometido.
 
 ### 4. Claves de licencia de software
 Cuando distribuya licencias de software adquiridas a empleados o clientes, utilice enlaces secretos para compartir las claves de activación. Esto garantiza que las valiosas claves de licencia no puedan reutilizarse accidentalmente o compartirse más allá de su destinatario previsto, y ayuda a evitar que las claves se archiven en sistemas de correo electrónico donde podrían ser vulnerables a accesos no autorizados.
@@ -31,7 +31,7 @@ Cuando distribuya licencias de software adquiridas a empleados o clientes, utili
 **Ventajas**: Este método mantiene el control sobre la distribución de activos de software a la vez que facilita a los destinatarios el acceso a sus claves de licencia cuando sea necesario para su instalación o reactivación.
 
 ### 5. Códigos de recuperación de dos factores
-Cuando configures 2FA en cuentas importantes, guarda de forma segura tus códigos de copia de seguridad/recuperación utilizando un enlace secreto. Si necesita acceder a estos códigos más tarde debido a la pérdida de un dispositivo, puede estar seguro de que no han quedado expuestos en su correo electrónico o en sus notas. Crea un nuevo enlace secreto una vez que hayas utilizado los códigos para mantener la seguridad.
+Cuando configure 2FA en cuentas importantes, guarde de forma segura sus códigos de copia de seguridad/recuperación utilizando un enlace secreto. Si necesita acceder a estos códigos más tarde debido a la pérdida de un dispositivo, puede estar seguro de que no han quedado expuestos en su correo electrónico o en sus notas. Cree un nuevo enlace secreto una vez que haya utilizado los códigos para mantener la seguridad.
 
 **Ventajas**: Proporciona una alternativa más segura al almacenamiento de códigos de recuperación en texto plano, al tiempo que garantiza que permanezcan accesibles cuando realmente se necesiten para la recuperación de cuentas.
 

@@ -1,9 +1,9 @@
 ---
 title: Regiones del centro de datos
-description: Conoce las regiones de los centros de datos de Onetime Secret y cómo elegir la adecuada para tus necesidades.
+description: Conozca las regiones de los centros de datos de Onetime Secret y cómo elegir la adecuada para sus necesidades.
 ---
 
-Onetime Secret ofrece cuatro regiones de centros de datos: Unión Europea (UE), Estados Unidos (EE.UU.), Canadá (CA) y Aotearoa Nueva Zelanda (NZ). Esta guía te ayudará a entender la importancia de la selección de la región y cómo elegir la adecuada para tus necesidades.
+Onetime Secret ofrece cuatro regiones de centros de datos: Unión Europea (UE), Estados Unidos (EE.UU.), Canadá (CA) y Aotearoa Nueva Zelanda (NZ). Esta guía le ayudará a entender la importancia de la selección de la región y cómo elegir la adecuada para sus necesidades.
 
 ## Por qué es importante elegir región
 
@@ -62,8 +62,8 @@ Tenga en cuenta los siguientes factores a la hora de seleccionar la región de s
 ### Para usuarios anónimos
 
 - Las solicitudes a onetimesecret.com pueden dirigirse a cualquier centro de datos activo.
-- La ubicación de tu secreto siempre está clara en el enlace generado (por ejemplo, `us.onetimesecret.com/secret/abcd1234`).
-- Puedes elegir una localidad de datos específica navegando directamente a cualquier dominio regional (por ejemplo, [ca.onetimesecret.com](https://ca.onetimesecret.com/)).
+- La ubicación de su secreto siempre está clara en el enlace generado (por ejemplo, `us.onetimesecret.com/secret/abcd1234`).
+- Puede elegir una localidad de datos específica navegando directamente a cualquier dominio regional (por ejemplo, [ca.onetimesecret.com](https://ca.onetimesecret.com/)).
 
 ### Para usuarios autentificados
 
@@ -111,11 +111,11 @@ Estas ampliaciones ofrecerán aún más opciones para la localización de datos,
 
 ## Configurar su región
 
-Cuando configures tu cuenta Onetime Secret o configures un dominio personalizado, tendrás la opción de elegir la región que prefieras. Aquí te explicamos cómo:
+Cuando configure su cuenta Onetime Secret o configure un dominio personalizado, tendrá la opción de elegir la región que prefiera. Aquí le explicamos cómo:
 
 1. Para cuentas nuevas: Seleccione su región preferida durante el proceso de registro.
 2. Para cuentas existentes: Póngase en contacto con nuestro equipo de asistencia para analizar las opciones de migración de región.
-3. Para dominios personalizados: Especifique la región elegida al configurar los ajustes de DNS (consulte nuestra [Guía de configuración de dominios personalizados](custom-domains/setup-guide) para obtener instrucciones detalladas).
+3. Para dominios personalizados: Especifique la región elegida al configurar los ajustes de DNS (consulte nuestra [Guía de configuración de dominios personalizados](/es/custom-domains/setup-guide) para obtener instrucciones detalladas).
 
 ## Preguntas frecuentes
 
@@ -145,4 +145,4 @@ Si no está seguro de qué región elegir o tiene alguna pregunta, no dude en po
 - Correo electrónico: support@onetimesecret.com
 - Formulario de comentarios: [https://onetimesecret.com/feedback](https://onetimesecret.com/feedback)
 
-Recuerda que elegir la región adecuada te garantiza el mejor rendimiento y el cumplimiento de cualquier normativa de datos relevante mientras utilizas Onetime Secret.
+Recuerde que elegir la región adecuada le garantiza el mejor rendimiento y el cumplimiento de cualquier normativa de datos relevante mientras utiliza Onetime Secret.

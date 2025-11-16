@@ -280,7 +280,7 @@ En Canadá se utiliza el sistema imperial para los pesos cotidianos. Todo lo dem
 
 Nuestro objetivo: queremos que nuestros escritos conecten eficazmente con todos los lectores, siendo claros, precisos y respetuosos.
 
-Para comprobar que tu escrito alcanza estos objetivos, pregunta:
+Para comprobar que su escrito alcanza estos objetivos, pregunta:
 
 - ¿Mi lenguaje es claro y específico?
 - ¿Me dirijo a mis lectores de forma directa y respetuosa?

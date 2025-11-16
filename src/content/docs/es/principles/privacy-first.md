@@ -10,7 +10,7 @@ En Onetime Secret, adoptamos un enfoque deliberadamente mínimo respecto a la pr
 
 ## Nuestra filosofía de no enviar correos electrónicos
 
-La mayoría de los servicios inundan tu bandeja de entrada con:
+La mayoría de los servicios inundan su bandeja de entrada con:
 
 - Boletines de marketing
 - Actualizaciones de productos
@@ -19,7 +19,7 @@ La mayoría de los servicios inundan tu bandeja de entrada con:
 - Ofertas promocionales
 - Campañas de reenganche
 
-Limitamos nuestras comunicaciones por correo electrónico a las comunicaciones más esenciales: envíos de enlaces secretos y notificaciones críticas de cuentas. Nunca enviaremos correos electrónicos de marketing ni actualizaciones no solicitadas. Creemos que tu bandeja de entrada te pertenece.
+Limitamos nuestras comunicaciones por correo electrónico a las comunicaciones más esenciales: envíos de enlaces secretos y notificaciones críticas de cuentas. Nunca enviaremos correos electrónicos de marketing ni actualizaciones no solicitadas. Creemos que su bandeja de entrada le pertenece.
 
 ## Nos saltamos las normas del sector
 
@@ -60,6 +60,6 @@ Invertimos nuestro tiempo en:
 
 Seguiremos dando prioridad a la sencillez y la privacidad frente al alcance comercial. Aunque esto significa que podemos crecer más lentamente que los servicios que se comercializan agresivamente, creemos que es la elección correcta para una herramienta centrada en la privacidad.
 
-Puedes confiar en que Onetime Secret estará ahí cuando lo necesites, sin los constantes recordatorios de que tienes una cuenta con nosotros.
+Puede confiar en que Onetime Secret estará ahí cuando lo necesite, sin los constantes recordatorios de que tiene una cuenta con nosotros.
 
 **¿Preguntas sobre nuestro enfoque?** [Contacte con nosotros](https://onetimesecret.com/feedback).

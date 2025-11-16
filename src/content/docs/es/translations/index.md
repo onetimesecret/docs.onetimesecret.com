@@ -20,7 +20,7 @@ Para conocer el estado actual de nuestras traducciones, visite la página [Estad
 
 ## Traducciones que contribuyen
 
-Agradecemos cualquier contribución a nuestros esfuerzos de traducción. Si quieres ayudarnos a traducir la documentación de Onetime Secret a tu idioma, sigue estas directrices:
+Agradecemos cualquier contribución a nuestros esfuerzos de traducción. Si quiere ayudarnos a traducir la documentación de Onetime Secret a su idioma, sigue estas directrices:
 
 ### Flujo de trabajo de traducción
 
