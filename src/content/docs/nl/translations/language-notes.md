@@ -9,21 +9,35 @@ description: Kritische regels voor de Nederlandse vertaling
 
 ### Key Terminology
 
-### 1. `secret` → `geheim`
+### 1. `secret` → `bericht` / `beveiligd bericht` (zelfstandig naamwoord) en `beveiligd` (bijvoeglijk naamwoord)
 
-**Keuze:** De term `secret` wordt consequent vertaald als `geheim` (zelfstandig naamwoord).
+**Keuze:**
+- Als zelfstandig naamwoord: `bericht` of `beveiligd bericht`
+- Als bijvoeglijk naamwoord voor algemene communicatie: `beveiligd`
+- Vermijd `geheim` en `vertrouwelijk` in algemene UI-tekst
 
-**Rationale:** Hoewel de richtlijnen suggereren dat "bericht" (message) mogelijk duidelijker communiceert wat de dienst doet (zie het Deense voorbeeld met "besked"), is `geheim` de directe en meest natuurlijke Nederlandse vertaling. `Geheim` wordt in Nederlandse technische contexten algemeen begrepen als het verwijzen naar gevoelige gegevens of vertrouwelijke informatie. Het gebruik van alleen "bericht" zou de nadruk op vertrouwelijkheid kunnen verliezen.
+**Rationale:** Native speaker feedback wijst uit dat de keuze tussen deze termen cruciaal is voor professionaliteit en vertrouwen:
+
+- **`bericht` / `beveiligd bericht`** communiceert duidelijk wat de dienst doet - het veilig delen van informatie. Dit is de voorkeurterm voor het zelfstandig naamwoord
+- **`beveiligd`** klinkt zakelijker en professioneler voor algemene communicatie over het beschermen van informatie. Het wekt vertrouwen
+- **`geheim`** roept in het Nederlands associaties op met de criminele onderwereld in plaats van zakelijke beveiliging - VERMIJD
+- **`vertrouwelijk`** klinkt alsof je de gebruiker moet overtuigen dat je betrouwbaar bent - VERMIJD in algemene UI-tekst
+
+**Native speaker perspectief:** "Voor algemene communicatie over het beschermen van informatie, leest 'beveiligd' zakelijker en professioneler. 'Beveiligd' maakt me eerder geneigd je te vertrouwen. 'Vertrouwelijk' maakt me denken dat je me moet overtuigen dat je betrouwbaar bent. 'Geheim' doet denken aan de Duitse onderwereld."
 
 **Context-specifiek gebruik:**
-- **UI-elementen en algemeen gebruik:** `geheim` (bijv. "Je hebt 3 nieuwe geheimen")
-- **Beschrijvende context:** `beveiligd bericht` of `geheim bericht` wanneer extra duidelijkheid nodig is
-- **Technische documentatie:** `geheim` voor consistentie met beveiligingsterminologie
+- **UI-elementen (zelfstandig naamwoord):** `bericht` of `beveiligd bericht` (bijv. "Je hebt 3 nieuwe berichten", "Maak een nieuw beveiligd bericht")
+- **Beschrijvende context (bijvoeglijk naamwoord):** `beveiligd` (bijv. "beveiligde links", "beveiligd delen")
+- **Formele juridische/zakelijke context:** `vertrouwelijk` (alleen waar "confidential" expliciet bedoeld is)
 
 **Voorbeelden:**
-- ✓ "Maak een nieuw geheim" (Create a new secret)
-- ✓ "Je hebt 3 nieuwe geheimen" (You have 3 new secrets)
-- ✓ "Deel een beveiligd bericht" (Share a secure message - wanneer extra context helpt)
+- ✓ "Je hebt 3 nieuwe berichten" (You have 3 new secrets - zelfstandig naamwoord)
+- ✓ "Maak een nieuw beveiligd bericht" (Create a new secret - zelfstandig naamwoord)
+- ✓ "Beveiligd bericht delen" (Share a secure message)
+- ✓ "Beveiligde links" (Secure links - bijvoeglijk naamwoord)
+- ✓ "Deel beveiligde informatie" (Share secure information - bijvoeglijk naamwoord)
+- ✗ "Je hebt 3 nieuwe geheimen" (roept verkeerde associaties op)
+- ✗ "Vertrouwelijke links" (te formeel, klinkt alsof je moet overtuigen)
 
 ### 2. `password` → `wachtwoord`
 
@@ -132,7 +146,10 @@ Alle teksten moeten volledig vertaald zijn naar natuurlijk Nederlands, met behou
 
 | Regel | Correct | Incorrect | Voorbeeld |
 |-------|---------|-----------|---------|
-| Secret vertaling | geheim | gemengd gebruik van geheim/bericht | ✓ Je hebt 3 nieuwe geheimen; ✗ Je hebt 3 nieuwe berichten (tenzij context vereist) |
+| Secret vertaling (zelfstandig naamwoord) | bericht / beveiligd bericht | geheim | ✓ Je hebt 3 nieuwe berichten; ✓ Beveiligd bericht delen; ✗ Je hebt 3 nieuwe geheimen |
+| Secret vertaling (bijvoeglijk naamwoord) | beveiligd | vertrouwelijk/geheim | ✓ Beveiligde links; ✗ Vertrouwelijke links; ✗ Geheime links |
+| Geheim | VERMIJD ALTIJD | In algemene UI-tekst | ✗ Geheime berichten; ✗ Maak een geheim (roept criminele associaties op) |
+| Vertrouwelijk | Alleen in formele juridische context | In algemene UI-tekst | ✓ Vertrouwelijk document (juridisch); ✗ Vertrouwelijke gegevens delen (UI) |
 | Wachtwoord vs. wachtwoordzin | wachtwoord (account), wachtwoordzin (geheim) | Beide als "wachtwoord" | ✓ Voer je wachtwoord in (login); ✓ Voeg een wachtwoordzin toe (secret) |
 | Actief vs. passief | Actief (knoppen/acties), passief (status/meldingen) | Gemengde vormen | ✓ Opslaan (knop); ✓ Opgeslagen (status) |
 | Informele aanspraak | je (informeel) | u (formeel) tenzij vereist | ✓ Je kunt je geheim aanmaken; ✗ U kunt uw geheim aanmaken |
