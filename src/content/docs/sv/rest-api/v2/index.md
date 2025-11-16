@@ -1,0 +1,48 @@
+---
+title: REST API v2 Översikt
+description: Onetime Secrets REST API v2 tillhandahåller förbättrade funktioner för säker hemlighetshanterin och delning via ett robust, RESTful JSON-gränssnitt.
+---
+
+{% aside type="note" %}
+Se vår [Postman Collection](https://docs.onetimesecret.dev/) för fullständig v2-dokumentation.
+{% /aside %}
+
+
+## Introduktion
+
+Onetime Secrets REST API v2 erbjuder ett omfattande och säkert gränssnitt för programmatisk interaktion med plattformen för hemlighetsdelnin. Byggd som en RESTful-tjänst som använder JSON för datautbyte, tillhandahåller API v2 förbättrad funktionalitet och större robusthet jämfört med den tidigare versionen (v1).
+
+## Nyckelfunktioner
+
+- **Allt i JSON:** Använder JSON för förfrågningskroppar och svar.
+- **Förbättrad funktionalitet:** Inkluderar slutpunkter för detaljerad hämtning av hemlighetmetadata, explicit hemlighetsbränning och förbättrad tillståndshantering.
+- **Förbättrad robusthet:** Erbjuder en mer stabil och funktionsrik grund för integrationer.
+- **Autentisering:** Stöder både Basic Authentication för fullständig åtkomst och anonym användning för begränsade operationer, konsekvent med den övergripande API-strukturen.
+
+## Bas-URI och autentisering
+
+API v2-slutpunkter följer den standardiserade bas-URI-strukturen:
+
+`https://REGION.onetimesecret.com/api/v2`
+
+Autentiseringsmetoder (Basic Auth med `USERNAME:APITOKEN` eller anonym åtkomst) förblir desamma som beskrivs i guiden [Komma igång](/sv/rest-api).
+
+## Tillgängliga slutpunkter
+
+Följande slutpunkter är tillgängliga i API v2:
+
+*   `POST /v2/secret/conceal` - Skapa en ny hemlighet.
+*   `POST /v2/secret/generate` - Generera en ny hemlighet med slumpmässigt värde.
+*   `GET /v2/private/recent` - Hämta senaste metadataposter för den autentiserade användaren.
+*   `GET /v2/private/:key` - Hämta metadata för en specifik hemlighet.
+*   `POST /v2/private/:key/burn` - Förstör (bränn) manuellt en hemlighet.
+*   `GET /v2/secret/:key` - Hämta information om en hemlighet (kräver lösenfras om angiven).
+*   `POST /v2/secret/:key/reveal` - Hämta hemlighetsvärdet (kräver lösenfras om angiven, konsumerar hemligheten).
+*   `GET /v2/supported-locales` - Lista språklokaler som stöds.
+*   `GET /v2/version` - Få den aktuella API-versionsinformationen.
+*   `GET /v2/status` - Kontrollera API:ets operativa status.
+*   `HEAD /v2/status` - Kontrollera API:ets operativa status (endast rubriker).
+
+## Interaktiv dokumentation
+
+Utforska de specifika slutpunkterna, förfrågningsparametrarna och svarsstrukturerna för API v2 med vår interaktiva [Postman Collection](https://docs.onetimesecret.dev/). Detta ger detaljerade exempel för varje tillgänglig operation.
