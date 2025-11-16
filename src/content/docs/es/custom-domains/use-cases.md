@@ -9,7 +9,7 @@ Los enlaces secretos con dominios personalizados proporcionan un alto grado de s
 
 ### 1. Incorporación o facturación de clientes
 
-Cuando solicites información confidencial a un cliente, como datos financieros o información sobre su tarjeta de crédito, pídele que la comparta creando un enlace secreto en secrets.example.com. Esto garantiza que la información se comparte de forma segura y solo es accesible para el destinatario previsto.
+Cuando solicite información confidencial a un cliente, como datos financieros o información sobre su tarjeta de crédito, pídale que la comparta creando un enlace secreto en secrets.example.com. Esto garantiza que la información se comparte de forma segura y solo es accesible para el destinatario previsto.
 
 **Ventajas**: Al utilizar un dominio personalizado, puede reforzar la identidad de su marca y generar confianza con sus clientes. El cliente reconocerá el dominio y se sentirá más seguro compartiendo información sensible.
 

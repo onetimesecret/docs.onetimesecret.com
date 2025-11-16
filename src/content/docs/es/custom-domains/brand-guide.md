@@ -7,9 +7,9 @@ description: Personalice la presentación de su dominio con el logotipo, los col
 
 ## Requisitos previos
 
-- Un dominio personalizado activo y verificado en tu cuenta Onetime Secret
+- Un dominio personalizado activo y verificado en su cuenta Onetime Secret
 - Un archivo de imagen del logotipo en formato PNG o JPG, de menos de 1 MB de tamaño
-- Código hexadecimal del color de tu marca (por ejemplo, `#DC4A22`) si utilizas colores personalizados
+- Código hexadecimal del color de su marca (por ejemplo, `#DC4A22`) si utiliza colores personalizados
 
 ## En pocas palabras
 1. 1. Vaya al panel de control del dominio
@@ -19,7 +19,7 @@ description: Personalice la presentación de su dominio con el logotipo, los col
 5. Guardar cambios
 6. Verificar la aplicación en directo
 
-De vuelta al panel de control del dominio, puedes activar o desactivar tu página de inicio pública y gestionar la configuración de tu marca en cualquier momento.
+De vuelta al panel de control del dominio, puede activar o desactivar su página de inicio pública y gestionar la configuración de su marca en cualquier momento.
 
 ## Gestión de logotipos
 Cargue el logotipo de su marca a través de la interfaz de administración. El sistema acepta archivos PNG o JPG de menos de 1 MB.
@@ -49,7 +49,7 @@ Compruebe los cambios de marca en el sitio activo después de guardarlos.
 
 ### Permitir secretos públicos
 
-En el panel de control de tu dominio puedes configurar la visibilidad de la página de inicio de tu marca. Activar esta función permite a tus clientes o miembros del equipo crear y compartir secretos directamente desde la interfaz de tu marca.
+En el panel de control de su dominio puede configurar la visibilidad de la página de inicio de su marca. Activar esta función permite a sus clientes o miembros del equipo crear y compartir secretos directamente desde la interfaz de su marca.
 
 <img src="/img/docs/custom-domains/guide-brand-admin-5.png" alt="Panel de vista previa que muestra la interfaz de la marca" width="400" />
 
@@ -65,7 +65,7 @@ En el panel de control de tu dominio puedes configurar la visibilidad de la pág
 - El panel de vista previa muestra el renderizado en tiempo real
 - Los ajustes son específicos del dominio
 
-## ¿Preguntas o necesitas ayuda?
+## ¿Preguntas o necesita ayuda?
 
 Estamos aquí para ayudarle.
 

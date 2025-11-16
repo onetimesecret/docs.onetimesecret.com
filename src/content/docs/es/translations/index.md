@@ -20,7 +20,7 @@ Para conocer el estado actual de nuestras traducciones, visite la página [Estad
 
 ## Traducciones que contribuyen
 
-Agradecemos cualquier contribución a nuestros esfuerzos de traducción. Si quieres ayudarnos a traducir la documentación de Onetime Secret a tu idioma, sigue estas directrices:
+Agradecemos cualquier contribución a nuestros esfuerzos de traducción. Si quiere ayudarnos a traducir la documentación de Onetime Secret a su idioma, siga estas directrices:
 
 ### Flujo de trabajo de traducción
 
@@ -28,7 +28,7 @@ Agradecemos cualquier contribución a nuestros esfuerzos de traducción. Si quie
 2. **Crear los archivos correspondientes**: Cree los archivos correspondientes en el directorio de su idioma (por ejemplo, `/content/docs/de/`)
 3. **Mantener la estructura**: Mantenga la misma estructura de directorios y las mismas convenciones de nomenclatura de archivos
 4. 4. **Conservar el frontmatter**: Copiar todos los campos frontmatter, traduciendo sólo los valores.
-5. **Envíe su trabajo**: Utiliza [GitHub Pull Requests](https://github.com/onetimesecret/onetimesecret) para los envíos.
+5. **Envíe su trabajo**: Utilice [GitHub Pull Requests](https://github.com/onetimesecret/onetimesecret) para los envíos.
 
 ### Normas de traducción
 

@@ -24,7 +24,7 @@ Los Enlaces Secretos están diseñados con la seguridad como máxima prioridad:
 
 - Opciones de caducidad**: Establezca tiempos de caducidad personalizados para sus enlaces, dándole el control sobre el tiempo que la información está disponible.
 - Quemar después de leer**: Una vez que el destinatario ve el secreto, se ha ido para siempre, asegurando que la información no persiste.
-- Notificaciones de acceso**: (Para usuarios Premium) Recibe notificaciones cuando tu secreto haya sido visto.
+- **Notificaciones de acceso**: (Para usuarios Premium) Reciba notificaciones cuando su secreto haya sido visto.
 
 ## 4. Cumplimiento y buenas prácticas
 

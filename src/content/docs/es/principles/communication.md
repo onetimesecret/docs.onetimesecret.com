@@ -17,7 +17,7 @@ La mayoría de los servicios inundan su bandeja de entrada con:
 - Ofertas promocionales
 - Campañas de reenganche
 
-En toda nuestra historia, nunca hemos enviado un correo electrónico de marketing. Los únicos correos electrónicos que recibirá de nosotros son los que solicite específicamente: envíos de enlaces secretos. Ni boletines, ni actualizaciones, ni promociones. Creemos que tu bandeja de entrada te pertenece.
+En toda nuestra historia, nunca hemos enviado un correo electrónico de marketing. Los únicos correos electrónicos que recibirá de nosotros son los que solicite específicamente: envíos de enlaces secretos. Ni boletines, ni actualizaciones, ni promociones. Creemos que su bandeja de entrada le pertenece.
 
 ## Why This Matters
 

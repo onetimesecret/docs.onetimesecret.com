@@ -13,14 +13,14 @@ description: Nuestro compromiso de recopilar sólo los datos esenciales necesari
 
 2. **Cada dato que recopilamos tiene una finalidad específica en la prestación de nuestro servicio. Sin seguimiento, sin análisis, sin extras.
 
-3. **Diseño de conocimiento cero**: No podemos acceder a tus secretos y no queremos hacerlo. Cada secreto está encriptado, sólo se puede acceder a él una vez y se elimina automáticamente después de su visualización o caducidad.
+3. **Diseño de conocimiento cero**: No podemos acceder a sus secretos y no queremos hacerlo. Cada secreto está encriptado, sólo se puede acceder a él una vez y se elimina automáticamente después de su visualización o caducidad.
 
 **Cómo funciona
 
 1. **Para Secretos Únicos:** Sólo almacenamos el secreto encriptado hasta que es visto o expira. Después, se borra permanentemente. (Aparte de las copias de seguridad cifradas mínimas que guardamos en caso de emergencia. Hablamos más de esto en nuestra [Política de privacidad](https://onetimesecret.com/info/privacy).)
 
-2. **Para usuarios registrados:** Sólo guardamos la información necesaria para gestionar su cuenta y prestarle el servicio por el que ha pagado. Por eso sólo recogemos una dirección de correo electrónico. No recopilamos datos sobre tu nombre o perfil porque no los necesitas.
+2. **Para usuarios registrados:** Sólo guardamos la información necesaria para gestionar su cuenta y prestarle el servicio por el que ha pagado. Por eso sólo recogemos una dirección de correo electrónico. No recopilamos datos sobre su nombre o perfil porque no los necesita.
 
 3. **No utilizamos cookies de seguimiento, análisis ni publicidad. La única cookie que utilizamos es para mantenerte conectado si decides crear una cuenta.
 
-Este enfoque nos ha servido bien a nosotros y a nuestros usuarios desde 2012. Es sencillo, eficaz y respeta tu privacidad.
+Este enfoque nos ha servido bien a nosotros y a nuestros usuarios desde 2012. Es sencillo, eficaz y respeta su privacidad.

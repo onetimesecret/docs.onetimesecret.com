@@ -1,6 +1,6 @@
 ---
 title: Guía de instalación
-description: Esta guía te guiará a través del proceso de configuración de un dominio personalizado para tu cuenta Onetime Secret, incluyendo las diferencias entre subdominios y dominios apex, y la elección de tu región de centro de datos preferida.
+description: Esta guía le guiará a través del proceso de configuración de un dominio personalizado para su cuenta Onetime Secret, incluyendo las diferencias entre subdominios y dominios apex, y la elección de su región de centro de datos preferida.
 ---
 
 # Guía de configuración de dominios personalizados
@@ -12,36 +12,36 @@ description: Esta guía te guiará a través del proceso de configuración de un
 
 ## Comprender los tipos de dominio
 
-Antes de configurar tu dominio personalizado, es importante que entiendas la diferencia entre subdominios y dominios apex:
+Antes de configurar su dominio personalizado, es importante que entienda la diferencia entre subdominios y dominios apex:
 
 1. **Subdominio**: Una subdivisión de su dominio principal (por ejemplo, secretos.sudominio.com).
 2. **Dominio raíz**: El propio dominio raíz (por ejemplo, sudominio.com).
 
 ## Elija su región
 
-Onetime Secret ofrece dos regiones de centros de datos: EU y US. Cuando configures tu dominio personalizado, tendrás que elegir qué región prefieres para almacenar tus datos. Esta elección es importante por varias razones:
+Onetime Secret ofrece dos regiones de centros de datos: EU y US. Cuando configure su dominio personalizado, tendrá que elegir qué región prefiere para almacenar sus datos. Esta elección es importante por varias razones:
 
 - Para particulares**: Puede elegir en función de sus preferencias personales, como la proximidad para un acceso potencialmente más rápido o la preocupación por la soberanía de los datos personales.
 - Para empresas**: Su elección puede depender de sus obligaciones de localización de datos, como el cumplimiento del GDPR, las directrices estatales o provinciales. Asegúrese de seleccionar la región que mejor se adapte a sus requisitos normativos.
 
-Tenga en cuenta sus necesidades y requisitos específicos a la hora de tomar esta decisión. Si desea información más detallada sobre las regiones de nuestros centros de datos y cómo elegir la que mejor se adapte a sus necesidades, consulte nuestra guía [Regiones de los centros de datos](regions).
+Tenga en cuenta sus necesidades y requisitos específicos a la hora de tomar esta decisión. Si desea información más detallada sobre las regiones de nuestros centros de datos y cómo elegir la que mejor se adapte a sus necesidades, consulte nuestra guía [Regiones de los centros de datos](/es/regions).
 
 ## Paso 1: Acceder al Panel de Dominios
 
-1. Accede a tu cuenta Onetime Secret
-2. Navega a Panel > Dominios personalizados
-3. Haz clic en "Añadir dominio"
+1. Acceda a su cuenta Onetime Secret
+2. Navegue a Panel > Dominios personalizados
+3. Haga clic en "Añadir dominio"
 
 <img src="/img/docs/custom-domains/3-Custom-domains.png" alt="Vista de dominios personalizados" width="400" />
 
 ## Paso 2: Introduzca su dominio
 
-1. En la configuración del dominio personalizado, introduce el dominio que desees (por ejemplo, secretos.tudominio.com o tudominio.com)
+1. En la configuración del dominio personalizado, introduzca el dominio que desee (por ejemplo, secretos.sudominio.com o sudominio.com)
 2. Haga clic en "Añadir dominio" o en el botón equivalente para continuar.
 
 ## Paso 3: Configurar DNS
 
-Para conectar tu dominio, tienes que actualizar la configuración DNS. El proceso difiere ligeramente en función de si utilizas un subdominio o un dominio ápex, y de la región del centro de datos que elijas.
+Para conectar su dominio, tiene que actualizar la configuración DNS. El proceso difiere ligeramente en función de si utiliza un subdominio o un dominio ápex, y de la región del centro de datos que elija.
 
 ### Para subdominios (recomendado)
 
@@ -79,13 +79,13 @@ Recomendamos utilizar registros CNAME para subdominios porque:
 
 Los dominios Apex no pueden utilizar registros CNAME debido a las normas DNS. Por lo tanto, debemos utilizar registros A, que tienen algunas limitaciones:
 
-1. Si cambiamos nuestra dirección IP (lo que es poco frecuente), tendrás que actualizar manualmente la configuración DNS.
+1. Si cambiamos nuestra dirección IP (lo que es poco frecuente), tendrá que actualizar manualmente la configuración DNS.
 2. No se adaptan automáticamente a los cambios en nuestra infraestructura.
 
 ## Paso 4: Verificar dominio y esperar SSL
 
-1. Después de actualizar la configuración DNS, vuelve a la página del dominio personalizado Onetime Secret
-2. El sistema intentará verificar automáticamente tu dominio
+1. Después de actualizar la configuración DNS, vuelva a la página del dominio personalizado Onetime Secret
+2. El sistema intentará verificar automáticamente su dominio
 3. La generación del certificado SSL comenzará una vez que la verificación sea exitosa
 4. Este proceso puede tardar unos minutos en completarse
 
@@ -101,10 +101,10 @@ Una vez finalizada la configuración, debería ver la siguiente información:
 ## Solución de problemas
 
 - Si la verificación falla, vuelva a comprobar la configuración DNS.
-- Asegúrate de haber eliminado cualquier registro conflictivo.
+- Asegúrese de haber eliminado cualquier registro conflictivo.
 - La propagación de DNS puede tardar hasta 24 horas, aunque suele ser mucho más rápida.
 
-## Usar tu dominio personalizado
+## Usar su dominio personalizado
 
 Una vez activos, sus enlaces secretos utilizarán su dominio personalizado. Por ejemplo
 `https://secrets-example.onetime.dev/secret/abc123`
@@ -120,7 +120,7 @@ Para aquellos a los que les gusta estar informados, pueden comprobar fácilmente
 
 - Sólo tiene que consultar la fecha y hora de "Última supervisión" en el panel de control para confirmar la conectividad en curso.
 
-## ¿Preguntas o necesitas ayuda?
+## ¿Preguntas o necesita ayuda?
 
 Estamos aquí para ayudarle. Si tiene alguna pregunta o necesita ayuda:
 

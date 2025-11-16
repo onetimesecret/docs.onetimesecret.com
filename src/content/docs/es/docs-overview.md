@@ -1,11 +1,11 @@
 ---
 title: Bienvenido a la Documentación
-description: Utiliza el menú de navegación para explorar la documentación de Onetime Secret. Encontrarás todo lo que necesitas saber sobre cómo crear, compartir y gestionar mensajes seguros y autodestruibles.
+description: Utilice el menú de navegación para explorar la documentación de Onetime Secret. Encontrará todo lo que necesita saber sobre cómo crear, compartir y gestionar mensajes seguros y autodestruibles.
 ---
 
 # Onetime Secret Documentation
 
-Utiliza el menú de navegación para explorar la documentación de Onetime Secret. Encontrarás todo lo que necesitas saber sobre cómo crear, compartir y gestionar mensajes seguros que se autodestruyen.
+Utilice el menú de navegación para explorar la documentación de Onetime Secret. Encontrará todo lo que necesita saber sobre cómo crear, compartir y gestionar mensajes seguros que se autodestruyen.
 
 ## Cómo empezar
 

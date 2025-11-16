@@ -1,6 +1,6 @@
 ---
 title: Precios
-description: Elige el plan que mejor se adapte a tus necesidades de compartición segura.
+description: Elija el plan que mejor se adapte a sus necesidades de compartición segura.
 ---
 
 # Enlaces seguros, conexiones más fuertes
@@ -52,10 +52,10 @@ Infraestructura dedicada con controles de cumplimiento de datos y escalabilidad 
 ## Preguntas frecuentes
 
 ### ¿Cómo funciona Onetime Secret?
-Onetime Secret te permite compartir información confidencial de forma segura. Cada secreto compartido solo puede verse una vez antes de ser eliminado permanentemente, lo que garantiza la confidencialidad de tus datos.
+Onetime Secret le permite compartir información confidencial de forma segura. Cada secreto compartido solo puede verse una vez antes de ser eliminado permanentemente, lo que garantiza la confidencialidad de sus datos.
 
 ### ¿Necesito una cuenta para utilizar Onetime Secret?
-No se necesita una cuenta para la funcionalidad básica. Puedes empezar a compartir secretos inmediatamente sin configuraciones complejas.
+No se necesita una cuenta para la funcionalidad básica. Puede empezar a compartir secretos inmediatamente sin configuraciones complejas.
 
 ### ¿Existe una opción gratuita?
 Sí, Onetime Secret ofrece un nivel gratuito que le permite utilizar la mayoría de las funciones sin coste alguno. Para funciones avanzadas y opciones de marca, considere nuestros planes de pago.

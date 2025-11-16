@@ -130,7 +130,7 @@ de [Vladislav Stepanov](https://github.com/utter-step/) (añadido 2014-05-29)
 ### Ejemplo de uso
 
 ```csharp
-# Puedes usar OneTimeSharp en cualquiera de tus proyectos que sean compatibles con .NET (4.0+) o Mono (2.10.8+).
+# Puedes usar OneTimeSharp en cualquiera de sus proyectos que sean compatibles con .NET (4.0+) o Mono (2.10.8+).
 usando VStepanov.OneTimeSharp;
 
 clase Test

@@ -280,7 +280,7 @@ En Canadá se utiliza el sistema imperial para los pesos cotidianos. Todo lo dem
 
 Nuestro objetivo: queremos que nuestros escritos conecten eficazmente con todos los lectores, siendo claros, precisos y respetuosos.
 
-Para comprobar que tu escrito alcanza estos objetivos, pregunta:
+Para comprobar que su escrito alcanza estos objetivos, pregunta:
 
 - ¿Mi lenguaje es claro y específico?
 - ¿Me dirijo a mis lectores de forma directa y respetuosa?
@@ -289,5 +289,5 @@ Para comprobar que tu escrito alcanza estos objetivos, pregunta:
 ## Estilo de traducción
 
 - Utilice la traducción literal para textos jurídicos o técnicos
-- Traduce teniendo en cuenta el contexto cultural cuando traduzcas contenidos de marketing o publicidad.
-- Utiliza la transcreación para adaptar el mensaje de forma que resuene cultural y emocionalmente con la audiencia, para contenidos creativos como entradas de blog y textos de marketing.
+- Traduzca teniendo en cuenta el contexto cultural cuando traduzca contenidos de marketing o publicidad.
+- Utilice la transcreación para adaptar el mensaje de forma que resuene cultural y emocionalmente con la audiencia, para contenidos creativos como entradas de blog y textos de marketing.
