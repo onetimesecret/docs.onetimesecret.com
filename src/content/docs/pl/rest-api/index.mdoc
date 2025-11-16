@@ -1,0 +1,89 @@
+---
+title: Pierwsze kroki
+description: REST API Onetime Secret zapewnia elastyczne możliwości udostępniania sekretów, obsługując zarówno uwierzytelnione, jak i anonimowe użycie. Uwierzytelnieni użytkownicy zyskują zaawansowane funkcje i wyższe limity użytkowania, podczas gdy nieuwierzytelnieni użytkownicy mogą szybko udostępniać sekrety z podstawową funkcjonalnością.
+---
+
+_Zaktualizowano 2025-04-29_
+
+{% aside type="tip" %}
+Testuj i eksploruj punkty końcowe API za pomocą naszej interaktywnej [kolekcji Postman](https://docs.onetimesecret.dev/).
+{% /aside %}
+
+## Bazowy URI
+
+`https://REGION.onetimesecret.com/api`
+
+Gdzie `REGION` to `us` lub `eu`.
+
+<!-- ::callout{icon="i-heroicons-globe-alt"} -->
+**Lokalizacja danych i wybór regionu**
+- Wybierz region (np. US [`us.onetimesecret.com`](https://us.onetimesecret.com/)) lub EU ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)). Zobacz [Regiony](/pl/regions) dla wszystkich opcji.
+- Rozważ czynniki takie jak suwerenność danych, opóźnienia i wymagania zgodności
+- **UWAGA:** Domyślny `onetimesecret.com` pozostaje operacyjny i przekierowuje do aktywnego centrum danych, jednak zalecane jest używanie konkretnej lokalizacji, ponieważ ta funkcjonalność może zostać wycofana w przyszłości.
+::
+
+## Uwierzytelnianie
+Obsługujemy dwa tryby użytkowania API:
+
+### Dostęp uwierzytelniony
+
+`https://USERNAME:APITOKEN@REGION.onetimesecret.com/api`
+
+- Użyj uwierzytelniania HTTP Basic dla pełnych możliwości API
+- Nazwa użytkownika to login do Twojego konta
+- Hasło to token API ze strony Twojego konta
+
+### Dostęp anonimowy
+
+`https://REGION.onetimesecret.com/api`
+
+- Ograniczona funkcjonalność dostępna bez uwierzytelniania
+- Idealne do szybkiego, jednorazowego udostępniania sekretów
+- Może być używane zarówno do tworzenia, jak i pobierania sekretów
+
+## Lokalizacja danych
+Onetime Secret obsługuje wiele geograficznych centrów danych. Stosujemy politykę zerowego udostępniania danych między regionami, zapewniając całkowitą izolację danych. Wybierz odpowiednie centrum danych dla swoich potrzeb:
+
+- **Centrum danych EU:** [eu.onetimesecret.com](https://eu.onetimesecret.com/)
+- **Centrum danych US:** [us.onetimesecret.com](https://us.onetimesecret.com/)
+
+### Ważne uwagi:
+- Możesz wybrać konkretną lokalizację danych, przechodząc bezpośrednio do żądanej domeny
+- Lokalizacja Twojego sekretu jest zawsze wyraźna z wygenerowanego linku (np. `us.onetimesecret.com/secret/abcd1234`)
+- **UWAGA:** Obecnie dostęp przez `onetimesecret.com/api` jest nadal operacyjny, ale zalecane jest używanie konkretnej lokalizacji, ponieważ ta funkcjonalność może zostać wycofana w przyszłości.
+
+## Domeny niestandardowe
+Onetime Secret obsługuje konfiguracje niestandardowych domen dla organizacji o specyficznych wymaganiach sieciowych lub brandingowych przez nasz plan [Identity Plus](https://onetimesecret.com/pricing).
+
+### Korzyści z niestandardowych domen
+- **Prywatny branding:** Używaj własnej domeny (np. `secrets.example.com`) do dostępu API i udostępniania sekretów
+- **Spójne doświadczenie użytkownika:** Zachowaj wizualną i zaufaną tożsamość swojej organizacji z klientami i partnerami.
+- **Uwzględnij w szkoleniu pracowników:** Używaj niestandardowych domen, aby wzmocnić praktyki bezpieczeństwa i przepływy pracy swojej organizacji.
+
+<!-- ::callout{icon="i-heroicons-lock-closed"} -->
+**Funkcja premium**
+Domeny niestandardowe są dostępne w naszym planie [Identity Plus](https://onetimesecret.com/pricing). Konfiguracja w kilka minut dzięki naszym łatwym w użyciu opcjom konfiguracyjnym. [Dowiedz się więcej](custom-domains).
+::
+
+### Użycie API z domenami niestandardowymi
+Używając niestandardowej domeny, wszystkie punkty końcowe API mają tę samą strukturę:
+
+`https://secrets.example.com/api`
+
+
+## Status systemu
+
+`GET https://REGION.onetimesecret.com/api/v1/status`
+Aktualny status systemu.
+
+**Parametry:** Brak
+
+```bash
+$ curl -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/status
+{"status":"nominal"}
+```
+
+```bash
+$ curl -u 'USERNAME:APITOKEN' https://us.onetimesecret.com/api/v1/status
+{"status":"nominal"}
+```

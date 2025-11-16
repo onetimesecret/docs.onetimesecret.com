@@ -1,0 +1,48 @@
+---
+title: Przegląd REST API v2
+description: REST API v2 Onetime Secret zapewnia rozszerzone możliwości zarządzania i udostępniania sekretów za pomocą solidnego, RESTful interfejsu JSON.
+---
+
+{% aside type="note" %}
+Zobacz naszą [kolekcję Postman](https://docs.onetimesecret.dev/) dla pełnej dokumentacji v2.
+{% /aside %}
+
+
+## Wprowadzenie
+
+REST API v2 Onetime Secret oferuje kompleksowy i bezpieczny interfejs do programowej interakcji z platformą udostępniania sekretów. Zbudowany jako usługa RESTful wykorzystująca JSON do wymiany danych, API v2 zapewnia rozszerzoną funkcjonalność i większą solidność w porównaniu do poprzedniej wersji (v1).
+
+## Kluczowe funkcje
+
+- **Tylko JSON:** Używa JSON dla ciał żądań i odpowiedzi.
+- **Rozszerzona funkcjonalność:** Zawiera punkty końcowe do szczegółowego pobierania metadanych sekretów, jawnego niszczenia sekretów i ulepszonego zarządzania stanem.
+- **Ulepszona solidność:** Oferuje bardziej stabilną i bogatą w funkcje podstawę dla integracji.
+- **Uwierzytelnianie:** Obsługuje zarówno uwierzytelnianie podstawowe dla pełnego dostępu, jak i użycie anonimowe dla ograniczonych operacji, zgodnie z ogólną strukturą API.
+
+## Bazowy URI i uwierzytelnianie
+
+Punkty końcowe API v2 podążają za standardową strukturą bazowego URI:
+
+`https://REGION.onetimesecret.com/api/v2`
+
+Metody uwierzytelniania (uwierzytelnianie podstawowe z `USERNAME:APITOKEN` lub dostęp anonimowy) pozostają takie same jak opisano w przewodniku [Pierwsze kroki](/pl/rest-api).
+
+## Dostępne punkty końcowe
+
+Następujące punkty końcowe są dostępne w API v2:
+
+*   `POST /v2/secret/conceal` - Utwórz nowy sekret.
+*   `POST /v2/secret/generate` - Wygeneruj nowy sekret z losową wartością.
+*   `GET /v2/private/recent` - Pobierz najnowsze rekordy metadanych dla uwierzytelnionego użytkownika.
+*   `GET /v2/private/:key` - Pobierz metadane dla konkretnego sekretu.
+*   `POST /v2/private/:key/burn` - Ręcznie zniszcz (spal) sekret.
+*   `GET /v2/secret/:key` - Pobierz informacje o sekrecie (wymaga frazy dostępowej, jeśli została ustawiona).
+*   `POST /v2/secret/:key/reveal` - Pobierz wartość sekretu (wymaga frazy dostępowej, jeśli została ustawiona, konsumuje sekret).
+*   `GET /v2/supported-locales` - Wyświetl obsługiwane lokalizacje językowe.
+*   `GET /v2/version` - Pobierz informacje o bieżącej wersji API.
+*   `GET /v2/status` - Sprawdź status operacyjny API.
+*   `HEAD /v2/status` - Sprawdź status operacyjny API (tylko nagłówki).
+
+## Interaktywna dokumentacja
+
+Eksploruj konkretne punkty końcowe, parametry żądań i struktury odpowiedzi API v2 za pomocą naszej interaktywnej [kolekcji Postman](https://docs.onetimesecret.dev/). Zapewnia to szczegółowe przykłady dla każdej dostępnej operacji.
