@@ -92,32 +92,6 @@ Voorbeeldgebruik:
 ✅ Du har 3 nye beskeder (Je hebt 3 nieuwe berichten)
 ❌ Du har 3 nye hemmeligheder (Je hebt 3 nieuwe geheimen)
 
-### Het woord "secret" vertalen naar het Nederlands
-
-In het Nederlands moeten we zorgvuldig nadenken over de vertaling van "secret" in de context van Onetime Secret:
-
-#### Woordkeuze: "geheim" (zelfstandig naamwoord) en "beveiligd" (bijvoeglijk naamwoord)
-
-**AANBEVOLEN:** **beveiligd bericht** (secured message) of **bericht** (message)
-**MINDER GESCHIKT:** geheim (secret)
-
-De term "beveiligd bericht" moet worden gebruikt bij het verwijzen naar een geheim (bijv. een geheim bericht of geheime link gegenereerd door Onetime Secret). Hoewel "geheim" een letterlijke vertaling is van "secret", draagt het in het Nederlands connotaties die niet passen bij de beoogde professionele context - het roept associaties op met criminele onderwereld activiteiten in plaats van zakelijke beveiliging.
-
-Voor algemene communicatie over het beschermen van informatie heeft "beveiligd" (secured) de voorkeur omdat het zakelijker en professioneler klinkt en vertrouwen wekt in een zakelijke omgeving.
-
-**Native speaker perspectief:** "Voor algemene communicatie over het beschermen van informatie, leest 'beveiligd' zakelijker en professioneler. 'Beveiligd' maakt me eerder geneigd je te vertrouwen. 'Vertrouwelijk' maakt me denken dat je me moet overtuigen dat je betrouwbaar bent. 'Geheim' doet denken aan de Duitse onderwereld."
-
-**Voorbeeldgebruik:**
-
-✅ "Je hebt 3 nieuwe berichten" (You have 3 new messages)
-✅ "Beveiligd bericht delen" (Share a secured message)
-✅ "Beveiligde links" (Secure links)
-❌ "Je hebt 3 nieuwe geheimen" (You have 3 new secrets)
-❌ "Geheime links" (Secret links)
-❌ "Vertrouwelijke links" (Confidential links - te formeel)
-
-Dit onderscheid helpt gebruikers beter te begrijpen dat ze een communicatiemiddel gebruiken voor het veilig delen van informatie, in plaats van een platform voor het opslaan van persoonlijke geheimen.
-
 ## Grammatica- en stijlrichtlijnen
 
 *Richtlijnen: Duidelijke regels voor grammatica, stijl en interpunctie om consistentie te behouden in al je vertaalde content.*

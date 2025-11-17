@@ -91,61 +91,6 @@ YANLIŞ: Hemmeligheder (sırlar)
 ✅ Du har 3 nye beskeder (3 yeni mesajınız var)
 ❌ Du har 3 nye hemmeligheder (3 yeni sırrınız var)
 
-### Türkçe'de "Secret" Kelimesinin Çevirisi
-
-"Secret" kelimesi Türkçe'de "sır" veya "gizli mesaj" olarak çevrilebilir, dikkate alınması gereken önemli nüanslar vardır:
-
-#### Kelime Seçimi: "Gizli Mesaj" vs "Sır"
-
-DOĞRU:   **Gizli Mesaj** (nötr, teknik anlam)
-YANLIŞ: Sır (çok kişisel çağrışım)
-
-Onetime Secret tarafından oluşturulan içeriklere atıfta bulunulurken "gizli mesaj" terimi tercih edilmelidir. "Sır", "Secret"ın tam bir çevirisi olsa da, Türkçe'de kişisel veya mahrem bir şeyin güçlü çağrışımlarını taşır, bu da amaçlanan nötr, teknik anlamla uyuşmaz.
-
-Örnek kullanım:
-
-✅ 3 yeni gizli mesajınız var (nötr, teknik)
-❌ 3 yeni sırrınız var (çok kişisel/mahrem görünür)
-
-Bu seçim, içeriğin derinden kişisel bir sır olmaktan ziyade gizli bilgi içeren bir mesaj olduğunu vurgular.
-
-#### "Mesaj" İstisnası Ne Zaman Uygulanmalı
-
-Danca istisnası ("secret" yerine "message" kullanımı) YALNIZCA aşağıdaki koşulların TÜMÜ karşılandığında uygulanmalıdır:
-
-1. **"Secret"ın tam çevirisi hedef dilde uygunsuz çağrışımlar taşır**
-2. **Bu çağrışımlar özellikle profesyonel/güvenlik bağlamını zayıflatır**, örneğin:
-   - Kişisel veya özel sırlar (dedikodu, gizlenmiş bilgi)
-   - Çocuksu veya önemsiz kullanım
-   - İş bağlamında profesyonelce görünmeyen anlamlar
-3. **Ana dil konuşmacıları, tam çeviri kullanıldığında güvenlik çerçevesinin kaybolduğunu doğrular**
-
-**Örnekler:**
-
-✅ **Danca "Hemmeligheder"** - Çocuksu/kişisel çağrışımlara sahip (istisna haklı)
-- "Beskeder" (mesajlar) kullanımı profesyonel tonu korur
-
-✅ **Türkçe "Sır"** - Çok kişisel/mahrem çağrışımlara sahip (istisna haklı)
-- "Gizli mesaj" kullanımı profesyonel, teknik tonu korur
-
-❌ **Lehçe "Sekret"** - Tüm bağlamlarda mükemmel çalışır (istisna gerekmez)
-- "Sekret państwowy" (devlet sırrı) ile iş kullanımına kadar uygun
-- Güvenlik bağlamını doğal olarak korur
-
-❌ **Almanca "Geheimnis"** - Güvenlik bağlamları için uygun (istisna gerekmez)
-- Gizli bilgi için standart terim
-
-**Karar Süreci:**
-
-"Secret" kelimesini yeni bir dile çevirirken:
-
-1. **Tam çeviriyi test edin** ürüne aşina olmayan ana dil konuşmacıları ile
-2. **Sorun:** "[Gizli mesaj oluştur]" profesyonelce ve güvenlik odaklı mı görünüyor?
-3. **EVET ise:** Tam çeviriyi kullanın (Almanca "Geheimnis", Lehçe "Sekret" gibi)
-4. **HAYIR ise:** "Mesaj" istisnasını düşünün (Danca "Beskeder", Türkçe "Gizli mesaj" gibi)
-
-**Önemli:** Varsayılan her zaman "secret"ın tam çevirisi olmalıdır, güvenlik bağlamını zayıflatan sorunlu çağrışımların açık kanıtı olmadıkça.
-
 ## Dilbilgisi ve Stil Kuralları
 
 *Rehber: Çevrilmiş tüm içeriğiniz boyunca tutarlılığı korumak için dilbilgisi, stil ve noktalama kurallarını belirleyin.*

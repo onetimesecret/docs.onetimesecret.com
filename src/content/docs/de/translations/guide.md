@@ -92,32 +92,6 @@ Beispielverwendung:
 ✅ Du har 3 nye beskeder (Sie haben 3 neue Nachrichten)
 ❌ Du har 3 nye hemmeligheder (Sie haben 3 neue Geheimnisse)
 
-### Übersetzung des Wortes "secret" im Deutschen
-
-Das Wort "secret" kann im Deutschen durch "Geheimnis" oder "Nachricht" übersetzt werden, wobei wichtige Nuancen zu beachten sind:
-
-#### Wortwahl: "Nachricht" vs "Geheimnis"
-
-RICHTIG:   **Nachricht** (neutrale Bedeutung)
-FALSCH: Geheimnis (zu persönliche Konnotation)
-
-Der Begriff "Nachricht" sollte bevorzugt werden, wenn auf die von Onetime Secret generierten Inhalte verwiesen wird. Während "Geheimnis" die wörtliche Übersetzung von "Secret" ist, trägt es im Deutschen starke Konnotationen von etwas Persönlichem oder Intimem, was nicht der beabsichtigten neutralen, technischen Bedeutung entspricht.
-
-Beispielverwendung:
-
-✅ Sie haben 3 neue Nachrichten (neutral, technisch)
-❌ Sie haben 3 neue Geheimnisse (klingt zu persönlich/intim)
-
-#### Regionale Unterschiede
-
-In den verschiedenen deutschsprachigen Regionen gibt es bei dieser Terminologie kaum Unterschiede:
-
-- **Deutschland (de_DE)**: "Nachricht" wird als neutraler Begriff bevorzugt
-- **Österreich (de_AT)**: Gleiche Verwendung wie in Deutschland
-- **Schweiz (de_CH)**: Im Schriftdeutsch identisch; dialektale Variationen existieren nur in der gesprochenen Sprache
-
-Bei technischen Beschreibungen und in der Dokumentation kann "Geheimnis" durchaus verwendet werden (z.B. "Ende-zu-Ende-Verschlüsselung schützt Ihre Geheimnisse"), aber in der Benutzeroberfläche und bei direkter Ansprache ist "Nachricht" oft die natürlichere Wahl.
-
 ## Grammatik- und Stilrichtlinien
 
 *Leitfaden: Legen Sie Regeln für Grammatik, Stil und Zeichensetzung fest, um die Konsistenz in allen Ihren übersetzten Inhalten zu gewährleisten.*
