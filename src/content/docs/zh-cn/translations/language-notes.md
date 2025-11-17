@@ -29,6 +29,22 @@ description: Translation guidelines and terminology for Chinese Simplified (zh-C
 - `"expressiveCode.copyButtonCopied": "Copied!"` → `"已复制"` (copied - removed exclamation)
 - `"pagefind.load_more": "Load more results"` → `"加载更多"` (load more - simplified)
 
+#### Ellipsis Usage in UI Text
+
+**Formal Standard:** In Chinese punctuation, the ellipsis (省略号) consists of six dots (……) occupying the space of two full-width characters【0】. This is the typographically correct form for printed materials.
+
+**UI Implementation:** For digital interfaces, practical constraints often lead to using three dots instead. When implementing ellipses in UI text:
+
+- **Preferred:** Use the Unicode horizontal ellipsis character (U+2026) "…" for three-dot ellipses
+- **Alternative:** For the formal six-dot standard, use two U+2026 characters "……"
+- **Avoid:** Three separate period characters "..." which may render inconsistently
+
+**Examples:**
+- `"Loading..."` → `"加载中…"` (using U+2026)
+- For formal contexts: `"加载中……"` (using double U+2026)
+
+**Typing:** In Chinese IMEs, the 6-dot ellipsis is typed using Shift+6 (in Pinyin mode); or 3-dot on macos using option+;
+
 ### 3. Cultural and Linguistic Adaptations
 
 **Reasoning:** Natural Chinese phrasing while maintaining professional tone for both technical and general users.
@@ -69,6 +85,7 @@ description: Translation guidelines and terminology for Chinese Simplified (zh-C
 - **Shortened action text**: `"编辑页面"` → `"编辑"` for button efficiency
 - **Simplified tooltips**: `"复制到剪贴板"` → `"复制"` for clarity
 - **Natural Chinese flow**: Restructured phrases to follow Chinese language patterns
+- **Ellipsis handling**: Use U+2026 for three-dot ellipses in UI contexts
 
 ### Voice and Tone Consistency
 - **Action-oriented for user tasks**: `"开始使用"` instead of `"开始入门"`
@@ -79,6 +96,7 @@ description: Translation guidelines and terminology for Chinese Simplified (zh-C
 - **Better accessibility labels**: `"主导航"` (main navigation) more descriptive than direct translation
 - **Natural sentence structure**: Adapted error messages and descriptions to Chinese writing patterns
 - **Appropriate formality level**: Professional tone suitable for both technical and general Chinese users
+- **Punctuation standards**: Followed Chinese ellipsis conventions while adapting for UI constraints
 
 ### Configuration Integration
 - **Added zh-cn support**: Updated sidebar configuration to load and integrate Chinese translations
