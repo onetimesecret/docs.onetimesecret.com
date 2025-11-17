@@ -9,13 +9,33 @@ description: Kritische Regeln für die deutsche Übersetzung
 
 ### Key Terminology
 
-### 1. `secret` → `Geheimnis`
+### 1. `secret` → `Nachricht` (UI) / `Geheimnis` (technical documentation)
 
-**Choice:** The term `secret` was consistently translated as `Geheimnis`.
+**Choice:** Context-specific translation:
+- **UI elements and direct user communication:** `Nachricht` (message)
+- **Technical documentation and security descriptions:** `Geheimnis` (secret)
 
-**Rationale:** `Geheimnis` is the direct German equivalent of `secret`. While the guidelines suggest emphasizing "confidential information or message" (like the Danish "besked"), `Geheimnis` is commonly understood in German technical contexts to refer to sensitive data or credentials. Using `Nachricht` (message) might lose the implication of confidentiality, and longer phrases like `vertrauliche Information` are unsuitable for UI elements.
+**Rationale:**
 
-**Distinction from `de_AT`:** Usage is expected to be identical in Austrian German. `Geheimnis` is standard German and used similarly in Austria.
+The word "secret" can be translated to German as either "Geheimnis" or "Nachricht", with important nuances:
+
+**Prefer "Nachricht" for UI contexts:**
+- **"Nachricht"** (neutral meaning) should be preferred when referring to Onetime Secret generated content in the user interface
+- While "Geheimnis" is the literal translation of "Secret", it carries strong connotations of something personal or intimate in German, which doesn't match the intended neutral, technical meaning
+- **Examples:**
+  - ✅ "Sie haben 3 neue Nachrichten" (neutral, technical - You have 3 new secrets)
+  - ❌ "Sie haben 3 neue Geheimnisse" (sounds too personal/intimate)
+
+**"Geheimnis" acceptable in technical contexts:**
+- In technical descriptions and documentation, "Geheimnis" can be used (e.g., "Ende-zu-Ende-Verschlüsselung schützt Ihre Geheimnisse" - End-to-end encryption protects your secrets)
+- For UI and direct user address, "Nachricht" is often the more natural choice
+
+**Regional Differences:**
+- **Deutschland (de_DE)**: "Nachricht" preferred as neutral term for UI
+- **Österreich (de_AT)**: Same usage as Germany
+- **Schweiz (de_CH)**: Identical in written German; dialectal variations exist only in spoken language
+
+**Distinction from `de_AT`:** Usage is expected to be identical in Austrian German.
 
 ### 2. `password` → `Passwort`
 
