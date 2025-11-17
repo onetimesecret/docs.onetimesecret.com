@@ -222,6 +222,14 @@ The Danish exception (using "message" instead of "secret") should ONLY be applie
 ✅ **Danish "Hemmeligheder"** - Has childish/personal connotations (exception justified)
 - Using "Beskeder" (messages) maintains professional tone
 
+✅ **Dutch "Geheim"** - Inappropriate connotations (exception justified)
+- Use "bericht" (message) or "beveiligd bericht" (secured message) instead of "geheim" (secret)
+- While "geheim" is a literal translation, it evokes associations with criminal underworld rather than business security
+- Use "beveiligd" (secured) as adjective for describing protection: "Beveiligde links" (Secure links)
+- Avoid "vertrouwelijk" (confidential) in general UI - sounds like you're trying to convince users you're trustworthy
+- Native speaker feedback: "'Beveiligd' makes me more likely to trust you. 'Vertrouwelijk' makes me think you have to convince me that you're trustworthy. 'Geheim' makes me think of the German underworld."
+- Example usage: "Je hebt 3 nieuwe berichten" (You have 3 new messages) ✓ vs "Je hebt 3 nieuwe geheimen" (You have 3 new secrets) ✗
+
 ❌ **Polish "Sekret"** - Works perfectly across all contexts (no exception needed)
 - Appropriate from "sekret państwowy" (state secret) to business usage
 - Maintains security context naturally

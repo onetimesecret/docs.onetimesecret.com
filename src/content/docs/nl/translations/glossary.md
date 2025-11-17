@@ -11,8 +11,12 @@ Deze woordenlijst biedt gestandaardiseerde Nederlandse vertalingen voor belangri
 
 | Engels | Nederlands (NL) | Context |
 |---------|-----------------|---------|
-| secret (zelfstandig naamwoord) | geheim | Centraal concept van de applicatie |
-| secret (bijvoeglijk naamwoord) | geheim/beveiligd | Beschrijvend bijvoeglijk naamwoord |
+| secret (zelfstandig naamwoord) | bericht / beveiligd bericht | Centraal concept - het ding dat wordt gedeeld. "Beveiligd bericht" voor extra nadruk op beveiliging |
+| secret (bijvoeglijk naamwoord) | beveiligd | Voor algemene communicatie over bescherming van informatie |
+| message | bericht | Algemene term voor berichten |
+| secure/secured | beveiligd | Status van bescherming - klinkt zakelijk en professioneel |
+| confidential/trustworthy | vertrouwelijk | Alleen gebruiken in formele juridische/zakelijke contexten waar "confidential" expliciet bedoeld is |
+| geheim | VERMIJD | Roept associaties op met criminele onderwereld; niet geschikt voor zakelijke context |
 | passphrase | wachtwoordzin | Authenticatiemethode voor geheimen |
 | password | wachtwoord | Authenticatie voor accounttoegang |
 | burn | verbranden | Actie om een geheim te verwijderen voor het bekijken |
@@ -127,7 +131,20 @@ Deze woordenlijst biedt gestandaardiseerde Nederlandse vertalingen voor belangri
 
 ## Speciale overwegingen
 
-- De term "geheim" is centraal in de applicatie en moet consequent worden vertaald
+### Kernterminologie: "bericht" vs "geheim" vs "beveiligd" vs "vertrouwelijk"
+
+Uit native speaker feedback blijkt dat de keuze tussen deze termen cruciaal is voor professionaliteit en vertrouwen:
+
+- **bericht / beveiligd bericht** - AANBEVOLEN voor het zelfstandig naamwoord (het ding dat wordt gedeeld). Communiceert duidelijk wat de dienst doet: veilig informatie delen. Bijvoorbeeld: "Je hebt 3 nieuwe berichten", "Maak een nieuw beveiligd bericht"
+- **beveiligd** - AANBEVOLEN voor bijvoeglijk naamwoord. Klinkt zakelijk en professioneel. Wekt vertrouwen. Bijvoorbeeld: "beveiligde links", "beveiligd delen"
+- **vertrouwelijk** - VERMIJD in algemene UI-tekst; klinkt alsof je moet overtuigen dat je betrouwbaar bent. Reserveer alleen voor formele juridische/zakelijke contexten waar "confidential" expliciet bedoeld is
+- **geheim** - VERMIJD; roept associaties op met de criminele onderwereld in plaats van zakelijke beveiliging
+
+**Native speaker perspectief:** "Voor algemene communicatie over het beschermen van informatie, leest 'beveiligd' zakelijker en professioneler. 'Beveiligd' maakt me eerder geneigd je te vertrouwen. 'Vertrouwelijk' maakt me denken dat je me moet overtuigen dat je betrouwbaar bent. 'Geheim' doet denken aan de Duitse onderwereld."
+
+### Andere overwegingen
+
+- De term "bericht" of "beveiligd bericht" is centraal in de applicatie als zelfstandig naamwoord en moet consequent worden vertaald
 - Technische termen met betrekking tot beveiliging moeten prioriteit geven aan nauwkeurigheid boven lokalisatie
 - UI-elementen moeten de platformconventies voor Nederlands volgen
 - Gebruik "je" (informeel) in plaats van "u" (formeel) voor een toegankelijkere toon, tenzij anders aangegeven
