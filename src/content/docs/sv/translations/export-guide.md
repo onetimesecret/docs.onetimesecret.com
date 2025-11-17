@@ -1,3 +1,8 @@
+---
+title: Översättningsguide för svenska
+description: Omfattande guide för att översätta Onetime Secret till svenska, som kombinerar ordlista och språkliga anteckningar
+---
+
 # Translation Guidance for Swedish (Svenska)
 
 This document combines the glossary of standardized terms and language-specific translation notes for Swedish translations of Onetime Secret. It serves as a comprehensive reference for translators working on the Swedish locale to ensure consistency, accuracy, and natural phrasing.
