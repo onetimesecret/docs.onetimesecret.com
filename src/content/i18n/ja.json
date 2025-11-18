@@ -46,7 +46,8 @@
     "dataMinimization": "データ最小化",
     "translations": "翻訳",
     "styleGuide": "スタイルガイド",
-    "glossary": "用語集"
+    "glossary": "用語集",
+    "qualityChecklist": "品質チェックリスト"
   },
   "skipLink.label": "コンテンツにスキップ",
   "search.label": "検索",

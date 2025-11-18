@@ -46,7 +46,8 @@
     "dataMinimization": "Veri Minimalizasyonu",
     "translations": "Çeviriler",
     "styleGuide": "Stil Kılavuzu",
-    "glossary": "Sözlük"
+    "glossary": "Sözlük",
+    "qualityChecklist": "Kalite Kontrol Listesi"
   },
   "skipLink.label": "İçeriğe atla",
   "search.label": "Ara",
@@ -75,11 +76,9 @@
   "aside.danger": "Tehlike",
   "fileTree.directory": "Dizin",
   "builtWithStarlight.label": "Starlight ile oluşturuldu",
-
   "expressiveCode.copyButtonCopied": "Kopyalandı!",
   "expressiveCode.copyButtonTooltip": "Panoya kopyala",
   "expressiveCode.terminalWindowFallbackTitle": "Terminal penceresi",
-
   "pagefind.clear_search": "Temizle",
   "pagefind.load_more": "Daha fazla sonuç yükle",
   "pagefind.search_label": "Bu sitede ara",

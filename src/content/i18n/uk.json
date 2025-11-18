@@ -46,7 +46,8 @@
     "dataMinimization": "Мінімізація даних",
     "translations": "Переклади",
     "styleGuide": "Стильовий гайд",
-    "glossary": "Глосарій"
+    "glossary": "Глосарій",
+    "qualityChecklist": "Контрольний список якості"
   },
   "skipLink.label": "Перейти до вмісту",
   "search.label": "Пошук",
@@ -75,11 +76,9 @@
   "aside.danger": "Небезпека",
   "fileTree.directory": "Директорія",
   "builtWithStarlight.label": "Створено з Starlight",
-
   "expressiveCode.copyButtonCopied": "Скопійовано!",
   "expressiveCode.copyButtonTooltip": "Копіювати в буфер обміну",
   "expressiveCode.terminalWindowFallbackTitle": "Термінал",
-
   "pagefind.clear_search": "Очистити",
   "pagefind.load_more": "Завантажити більше результатів",
   "pagefind.search_label": "Пошук на сайті",

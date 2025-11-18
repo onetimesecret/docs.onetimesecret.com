@@ -46,7 +46,8 @@
     "dataMinimization": "데이터 최소화",
     "translations": "번역",
     "styleGuide": "스타일 가이드",
-    "glossary": "용어집"
+    "glossary": "용어집",
+    "qualityChecklist": "품질 체크리스트"
   },
   "skipLink.label": "콘텐츠로 건너뛰기",
   "search.label": "검색",
@@ -75,11 +76,9 @@
   "aside.danger": "위험",
   "fileTree.directory": "디렉토리",
   "builtWithStarlight.label": "Starlight으로 구축됨",
-
   "expressiveCode.copyButtonCopied": "복사됨!",
   "expressiveCode.copyButtonTooltip": "클립보드에 복사하기",
   "expressiveCode.terminalWindowFallbackTitle": "터미널 창",
-
   "pagefind.clear_search": "지우기",
   "pagefind.load_more": "더 많은 결과 로드",
   "pagefind.search_label": "이 사이트 검색",

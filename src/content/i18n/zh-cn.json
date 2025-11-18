@@ -46,7 +46,8 @@
     "dataMinimization": "数据最小化",
     "translations": "翻译",
     "styleGuide": "样式指南",
-    "glossary": "词汇表"
+    "glossary": "词汇表",
+    "qualityChecklist": "质量检查清单"
   },
   "skipLink.label": "跳转到内容",
   "search.label": "搜索",

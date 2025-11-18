@@ -181,6 +181,7 @@ export const sidebar = [
       createLink("overview", "translations"),
       createLink("styleGuide", "translations/guide"),
       createLink("glossary", "translations/glossary"),
+      createLink("qualityChecklist", "translations/quality-checklist"),
     ],
     true,
   ),
