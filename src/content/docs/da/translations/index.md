@@ -7,29 +7,27 @@ Onetime Secret-dokumentationen er tilgængelig på flere sprog for at betjene vo
 
 ## Tilgængelige sprog
 
-- **Engelsk (en)**: Vores standard og mest komplette version
-- **Bulgarsk (bg)**: Delvis oversættelse tilgængelig
-- **Dansk (da)**: Fuld oversættelse tilgængelig
-- **Tysk (de)**: Delvis oversættelse tilgængelig
-- **Spansk (es)**: Delvis oversættelse tilgængelig
-- **Fransk (fr)**: Delvis oversættelse tilgængelig
-- **Italiensk (it)**: Delvis oversættelse tilgængelig
-- **Japansk (ja)**: Delvis oversættelse tilgængelig
-- **Koreansk (ko)**: Delvis oversættelse tilgængelig
-- **Māori (mi)**: Delvis oversættelse tilgængelig
-- **Hollandsk (nl)**: Delvis oversættelse tilgængelig
-- **Polsk (pl)**: Grundlæggende struktur (engelsk tekst som pladsholder)
-- **Portugisisk (pt-BR)**: Delvis oversættelse tilgængelig
-- **Svensk (sv)**: Grundlæggende struktur (engelsk tekst som pladsholder)
-- **Tyrkisk (tr)**: Grundlæggende struktur (engelsk tekst som pladsholder)
-- **Ukrainsk (uk)**: Delvis oversættelse tilgængelig
-- **Kinesisk (zh-CN)**: Delvis oversættelse tilgængelig
+Onetime Secret-dokumentationen er i øjeblikket tilgængelig på følgende sprog:
+
+- [**English (en)**](/en/) - Standard og referenceversion
+- [**Български (bg)**](/bg/) - Bulgarsk
+- [**Dansk (da)**](/da/) - Dansk
+- [**Deutsch (de)**](/de/) - Tysk
+- [**Español (es)**](/es/) - Spansk
+- [**Français (fr)**](/fr/) - Fransk
+- [**Italiano (it)**](/it/) - Italiensk
+- [**日本語 (ja)**](/ja/) - Japansk
+- [**한국어 (ko)**](/ko/) - Koreansk
+- [**Māori (mi)**](/mi/) - Māori
+- [**Nederlands (nl)**](/nl/) - Hollandsk
+- [**Polski (pl)**](/pl/) - Polsk
+- [**Português (pt-BR)**](/pt-br/) - Portugisisk (Brasilien)
+- [**Svenska (sv)**](/sv/) - Svensk
+- [**Türkçe (tr)**](/tr/) - Tyrkisk
+- [**Українська (uk)**](/uk/) - Ukrainsk
+- [**简体中文 (zh-CN)**](/zh-cn/) - Forenklet kinesisk
 
 Du kan skifte mellem sprog ved hjælp af sprogvælgeren i øverste højre hjørne på enhver side.
-
-## Oversættelsesstatus
-
-For at se den aktuelle status for vores oversættelsesarbejde, besøg siden [Oversættelsesstatus](/da/translations/).
 
 ## Bidrag med oversættelser
 
@@ -47,7 +45,7 @@ Vi hilser bidrag til vores oversættelsesarbejde velkommen. Hvis du gerne vil hj
 
 For konsekvente, kvalitetsoversættelser, følg vores [Oversættelsesstilvejledning](/da/translations/guide) og se vores [Terminologiordliste](/da/translations/glossary) for standardiserede oversættelser af nøgletermer.
 
-## Håndtering af manglende oversættelser
+## Automatisk fallback
 
 Når indhold ikke er tilgængeligt på et valgt sprog, vil du automatisk se den engelske version med en notifikation, der angiver, at indholdet endnu ikke er blevet oversat.
 

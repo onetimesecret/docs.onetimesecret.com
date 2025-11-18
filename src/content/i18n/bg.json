@@ -46,7 +46,8 @@
     "dataMinimization": "Минимизиране на данните",
     "translations": "Преводи",
     "styleGuide": "Стилово ръководство",
-    "glossary": "Речник"
+    "glossary": "Речник",
+    "qualityChecklist": "Контролен списък за качество"
   },
   "skipLink.label": "Преминаване към съдържанието",
   "search.label": "Търсене",
@@ -75,11 +76,9 @@
   "aside.danger": "Опасност",
   "fileTree.directory": "Директория",
   "builtWithStarlight.label": "Създадено със Starlight",
-
   "expressiveCode.copyButtonCopied": "Копирано!",
   "expressiveCode.copyButtonTooltip": "Копиране в буфера",
   "expressiveCode.terminalWindowFallbackTitle": "Терминален прозорец",
-
   "pagefind.clear_search": "Изчистване",
   "pagefind.load_more": "Зареждане на още резултати",
   "pagefind.search_label": "Търсене в този сайт",

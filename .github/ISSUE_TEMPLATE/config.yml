@@ -1,0 +1,14 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Translation Documentation
+    url: https://docs.onetimesecret.com/en/translations/
+    about: Read our translation guides, glossary, and style guide
+  - name: Translation Style Guide
+    url: https://docs.onetimesecret.com/en/translations/guide
+    about: Comprehensive guide for translators
+  - name: Quality Checklist
+    url: https://docs.onetimesecret.com/en/translations/quality-checklist
+    about: Quality checklist for translations
+  - name: Community Discussions
+    url: https://github.com/onetimesecret/docs.onetimesecret.com/discussions
+    about: Discuss translations with the community

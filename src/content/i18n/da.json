@@ -23,7 +23,6 @@
     "comparePlans": "Sammenlign Planer",
     "regions": "Regioner",
     "selfHosting": "Selvhosting",
-
     "installationDeployment": "Installation og Implementering",
     "configurationReference": "Konfigurationsreference",
     "configuration": "Konfiguration",
@@ -47,7 +46,8 @@
     "dataMinimization": "Dataminimering",
     "translations": "Oversættelser",
     "styleGuide": "Stilvejledning",
-    "glossary": "Ordliste"
+    "glossary": "Ordliste",
+    "qualityChecklist": "Kvalitetskontrolliste"
   },
   "skipLink.label": "Spring til indhold",
   "search.label": "Søg",
@@ -76,11 +76,9 @@
   "aside.danger": "Fare",
   "fileTree.directory": "Mappe",
   "builtWithStarlight.label": "Bygget med Starlight",
-
   "expressiveCode.copyButtonCopied": "Kopieret!",
   "expressiveCode.copyButtonTooltip": "Kopier til udklipsholder",
   "expressiveCode.terminalWindowFallbackTitle": "Terminalvindue",
-
   "pagefind.clear_search": "Ryd",
   "pagefind.load_more": "Indlæs flere resultater",
   "pagefind.search_label": "Søg på denne side",

@@ -46,7 +46,8 @@
     "dataMinimization": "Whakaiti Raraunga",
     "translations": "Whakamāoritanga",
     "styleGuide": "Aratohu Kāhua",
-    "glossary": "Papakupu"
+    "glossary": "Papakupu",
+    "qualityChecklist": "Rārangi Tirotiro Kounga"
   },
   "skipLink.label": "Peke ki te ihirangi",
   "search.label": "Rapu",
@@ -75,11 +76,9 @@
   "aside.danger": "Mōrearea",
   "fileTree.directory": "Rārangi",
   "builtWithStarlight.label": "Hangaia ki te Starlight",
-
   "expressiveCode.copyButtonCopied": "Kua tāruatia!",
   "expressiveCode.copyButtonTooltip": "Tārua ki te papatopenga",
   "expressiveCode.terminalWindowFallbackTitle": "Matapihi pūmanawa",
-
   "pagefind.clear_search": "Ūkui",
   "pagefind.load_more": "Uta ētahi atu hua",
   "pagefind.search_label": "Rapua tēnei pae",

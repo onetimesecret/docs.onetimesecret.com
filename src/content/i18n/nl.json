@@ -46,7 +46,8 @@
     "dataMinimization": "Gegevensminimalisatie",
     "translations": "Vertalingen",
     "styleGuide": "Stijlgids",
-    "glossary": "Woordenlijst"
+    "glossary": "Woordenlijst",
+    "qualityChecklist": "Kwaliteitscontrolelijst"
   },
   "skipLink.label": "Ga naar inhoud",
   "search.label": "Zoeken",
@@ -75,11 +76,9 @@
   "aside.danger": "Gevaar",
   "fileTree.directory": "Map",
   "builtWithStarlight.label": "Gebouwd met Starlight",
-
   "expressiveCode.copyButtonCopied": "Gekopieerd!",
   "expressiveCode.copyButtonTooltip": "Kopieer naar klembord",
   "expressiveCode.terminalWindowFallbackTitle": "Terminalvenster",
-
   "pagefind.clear_search": "Wissen",
   "pagefind.load_more": "Meer resultaten laden",
   "pagefind.search_label": "Zoek op deze site",

@@ -9,14 +9,27 @@ Die Onetime Secret Dokumentation ist in mehreren Sprachen verfügbar, um unserer
 
 ## Verfügbare Sprachen
 
-- **Englisch (en)**: Unsere Standard- und vollständigste Version
-- **Deutsch (de)**: Teilweise Übersetzung in Arbeit
+Die Onetime Secret Dokumentation ist derzeit in folgenden Sprachen verfügbar:
+
+- [**English (en)**](/en/) - Standard und Referenzversion
+- [**Български (bg)**](/bg/) - Bulgarisch
+- [**Dansk (da)**](/da/) - Dänisch
+- [**Deutsch (de)**](/de/) - Deutsch
+- [**Español (es)**](/es/) - Spanisch
+- [**Français (fr)**](/fr/) - Französisch
+- [**Italiano (it)**](/it/) - Italienisch
+- [**日本語 (ja)**](/ja/) - Japanisch
+- [**한국어 (ko)**](/ko/) - Koreanisch
+- [**Māori (mi)**](/mi/) - Māori
+- [**Nederlands (nl)**](/nl/) - Niederländisch
+- [**Polski (pl)**](/pl/) - Polnisch
+- [**Português (pt-BR)**](/pt-br/) - Portugiesisch (Brasilien)
+- [**Svenska (sv)**](/sv/) - Schwedisch
+- [**Türkçe (tr)**](/tr/) - Türkisch
+- [**Українська (uk)**](/uk/) - Ukrainisch
+- [**简体中文 (zh-CN)**](/zh-cn/) - Vereinfachtes Chinesisch
 
 Sie können zwischen den Sprachen mit dem Sprachauswahl-Menü in der oberen rechten Ecke jeder Seite wechseln.
-
-## Übersetzungsstatus
-
-Um den aktuellen Status unserer Übersetzungsbemühungen einzusehen, besuchen Sie die [Übersetzungsstatus](/de/translations/) Seite.
 
 ## Beitrag zu Übersetzungen
 
@@ -34,7 +47,7 @@ Wir begrüßen Beiträge zu unseren Übersetzungsbemühungen. Wenn Sie helfen m�
 
 Für konsistente, hochwertige Übersetzungen folgen Sie unserem [Übersetzungs-Styleguide](/de/translations/guide) und beziehen Sie sich auf unser [Terminologie-Glossar](/de/translations/glossary) für standardisierte Übersetzungen von Schlüsselbegriffen.
 
-## Umgang mit fehlenden Übersetzungen
+## Automatischer Fallback
 
 Wenn Inhalte in einer ausgewählten Sprache nicht verfügbar sind, sehen Sie automatisch die englische Version mit einer Benachrichtigung, die darauf hinweist, dass der Inhalt noch nicht übersetzt wurde.
 

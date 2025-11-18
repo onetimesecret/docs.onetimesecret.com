@@ -8,14 +8,27 @@ Onetime Secret documentation is available in multiple languages to serve our div
 
 ## Available Languages
 
-- **English (en)**: Our default and most complete version
-- **German (de)**: Partial translation in progress
+Onetime Secret documentation is currently available in the following languages:
+
+- [**English (en)**](/en/) - Default and reference version
+- [**Български (bg)**](/bg/) - Bulgarian
+- [**Dansk (da)**](/da/) - Danish
+- [**Deutsch (de)**](/de/) - German
+- [**Español (es)**](/es/) - Spanish
+- [**Français (fr)**](/fr/) - French
+- [**Italiano (it)**](/it/) - Italian
+- [**日本語 (ja)**](/ja/) - Japanese
+- [**한국어 (ko)**](/ko/) - Korean
+- [**Māori (mi)**](/mi/) - Māori
+- [**Nederlands (nl)**](/nl/) - Dutch
+- [**Polski (pl)**](/pl/) - Polish
+- [**Português (pt-BR)**](/pt-br/) - Portuguese (Brazil)
+- [**Svenska (sv)**](/sv/) - Swedish
+- [**Türkçe (tr)**](/tr/) - Turkish
+- [**Українська (uk)**](/uk/) - Ukrainian
+- [**简体中文 (zh-CN)**](/zh-cn/) - Simplified Chinese
 
 You can switch between languages using the language selector in the top-right corner of any page.
-
-## Translation Status
-
-To view the current status of our translation efforts, visit the [Translation Status](/en/translations/) page.
 
 ## Contributing Translations
 
@@ -31,11 +44,15 @@ We welcome contributions to our translation efforts. If you'd like to help trans
 
 ### Translation Standards
 
-For consistent, high-quality translations, follow our [Translation Style Guide](/en/translations/guide) and refer to our [Terminology Glossary](/en/translations/glossary) for standardized translations of key terms.
+For consistent, high-quality translations:
 
-## Handling Missing Translations
+- Follow our [Translation Style Guide](/en/translations/guide) for comprehensive guidelines on tone, voice, and formatting
+- Refer to our [Terminology Glossary](/en/translations/glossary) for standardized translations of key terms
+- Use the [Quality Checklist](/en/translations/quality-checklist) to verify your translation meets all requirements before submission
 
-When content is not available in a selected language, you'll automatically see the English version with a notification indicating the content hasn't been translated yet.
+## Automatic Fallback
+
+When content is not available in your selected language, you'll automatically see the English version with a notification indicating the content hasn't been translated yet.
 
 ## Need Help?
 

@@ -126,3 +126,10 @@ This glossary provides standardized translations for key terms across languages 
   - German: "zerstören" standardized across both variants for "burn"
 - Technical terms related to security should prioritize accuracy over localization
 - UI elements should follow platform conventions for the target language
+
+## Related Resources
+
+- **[Translation Style Guide](/en/translations/guide)** - Comprehensive guidelines for translators
+- **[Quality Checklist](/en/translations/quality-checklist)** - Verify your translation meets all standards
+- **[Translation Overview](/en/translations/)** - Getting started with translations
+- **[Language-Specific Notes](/en/translations/language-notes)** - Special considerations by language

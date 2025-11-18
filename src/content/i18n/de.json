@@ -46,7 +46,8 @@
     "dataMinimization": "Datenminimierung",
     "translations": "Übersetzungen",
     "styleGuide": "Stilrichtlinien",
-    "glossary": "Glossar"
+    "glossary": "Glossar",
+    "qualityChecklist": "Qualitätsprüfliste"
   },
   "skipLink.label": "Zum Inhalt springen",
   "search.label": "Suche",
@@ -75,11 +76,9 @@
   "aside.danger": "Gefahr",
   "fileTree.directory": "Verzeichnis",
   "builtWithStarlight.label": "Erstellt mit Starlight",
-
   "expressiveCode.copyButtonCopied": "Kopiert!",
   "expressiveCode.copyButtonTooltip": "In die Zwischenablage kopieren",
   "expressiveCode.terminalWindowFallbackTitle": "Terminal-Fenster",
-
   "pagefind.clear_search": "Löschen",
   "pagefind.load_more": "Mehr Ergebnisse laden",
   "pagefind.search_label": "Diese Seite durchsuchen",

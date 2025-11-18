@@ -365,3 +365,24 @@ To verify your writing achieves these goals, ask:
 - Use literal translation for legal or technical texts
 - Translate with cultural context when translating content for marketing or advertising
 - Use transcreation where you adapt the message so it resonates culturally and emotively with the audience, for creative content including blog posts and marketing copy.
+
+## Related Resources
+
+### For Translators
+
+- **[Translation Overview](/en/translations/)** - Introduction and available languages
+- **[Terminology Glossary](/en/translations/glossary)** - Standardized translations for key terms across languages
+- **[Quality Checklist](/en/translations/quality-checklist)** - Comprehensive checklist to verify translation quality
+- **[Language-Specific Notes](/en/translations/language-notes)** - Special considerations for specific languages
+
+### Submission Guidelines
+
+- Use the [Translation PR Template](https://github.com/onetimesecret/docs.onetimesecret.com/blob/main/.github/PULL_REQUEST_TEMPLATE/translation.md) when submitting translations
+- Review the [Quality Checklist](/en/translations/quality-checklist) before creating your pull request
+- Tag language-specific reviewers if known
+
+### Getting Help
+
+- Open a [Translation Request Issue](https://github.com/onetimesecret/docs.onetimesecret.com/issues/new?template=translation-request.md) for questions or coordination
+- Join [GitHub Discussions](https://github.com/onetimesecret/docs.onetimesecret.com/discussions) for translator community
+- [Contact the team](https://onetimesecret.com/contact) for translation support

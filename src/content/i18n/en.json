@@ -46,7 +46,8 @@
     "dataMinimization": "Data Minimization",
     "translations": "Translations",
     "styleGuide": "Style Guide",
-    "glossary": "Glossary"
+    "glossary": "Glossary",
+    "qualityChecklist": "Quality Checklist"
   },
   "skipLink.label": "Skip to content",
   "search.label": "Search",

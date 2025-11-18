@@ -9,14 +9,27 @@ Kei te wātea ngā tuhinga tohutoro o Onetime Secret ki ngā reo maha hei āwhin
 
 ## Ngā Reo e Wātea Ana
 
-- **Ingarihi (en)**: Tō mātou putanga taunoa me te putanga tino oti
-- **Tiamana (de)**: Kei te haere tonu tētahi whakamāoritanga wāhanga
+Kei te wātea ngā tuhinga tohutoro o Onetime Secret i ēnei reo:
+
+- [**English (en)**](/en/) - Putanga taunoa me te putanga tohutoro
+- [**Български (bg)**](/bg/) - Purukāria
+- [**Dansk (da)**](/da/) - Tenihi
+- [**Deutsch (de)**](/de/) - Tiamana
+- [**Español (es)**](/es/) - Pāniora
+- [**Français (fr)**](/fr/) - Wīwī
+- [**Italiano (it)**](/it/) - Ītariana
+- [**日本語 (ja)**](/ja/) - Hapanihi
+- [**한국어 (ko)**](/ko/) - Kōrea
+- [**Māori (mi)**](/mi/) - Māori
+- [**Nederlands (nl)**](/nl/) - Tatimana
+- [**Polski (pl)**](/pl/) - Pōrana
+- [**Português (pt-BR)**](/pt-br/) - Pōtikī (Parahi)
+- [**Svenska (sv)**](/sv/) - Huitene
+- [**Türkçe (tr)**](/tr/) - Tākei
+- [**Українська (uk)**](/uk/) - Ukarēnia
+- [**简体中文 (zh-CN)**](/zh-cn/) - Hainamana Māmā
 
 Ka taea e koe te huri i waenga i ngā reo mā te kaitīpako reo kei runga rawa mātau o ia whārangi.
-
-## Te Tūnga o te Whakamāoritanga
-
-Hei mātakitaki i te tūnga o nāianei o ā mātou mahi whakamāori, toro atu ki te whārangi [Tūnga Whakamāoritanga](/mi/translations/).
 
 ## Te Tautoko i ngā Whakamāoritanga
 
@@ -32,9 +45,9 @@ Ka poipoi mātou i ngā takoha ki ā mātou mahi whakamāori. Mēnā e hiahia an
 
 ### Ngā Paerewa Whakamāori
 
-Mō ngā whakamāoritanga kounga teitei, rite, whaiwhakaaro ki tā mātou [Aratohu Kāhua Whakamāori](/mi/translations/guide) me tā mātou [Papakupu Kupu](/en/translations/glossary) mō ngā whakamāoritanga paerewa o ngā kupu matua.
+Mō ngā whakamāoritanga kounga teitei, rite, whaiwhakaaro ki tā mātou [Aratohu Kāhua Whakamāori](/mi/translations/guide) me tā mātou [Papakupu Kupu](/mi/translations/glossary) mō ngā whakamāoritanga paerewa o ngā kupu matua.
 
-## Te Whakahaere i ngā Whakamāoritanga Ngaro
+## Te Whakahoki Aunoa
 
 Ina kāore e wātea te ihirangi i te reo kua tīpakohia, ka kite aunoa koe i te putanga Ingarihi me tētahi pānui e tohu ana kāore anō te ihirangi kia whakamāoritia.
 

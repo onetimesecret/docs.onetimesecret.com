@@ -46,7 +46,8 @@
     "dataMinimization": "Dataminimering",
     "translations": "Översättningar",
     "styleGuide": "Stilguide",
-    "glossary": "Ordlista"
+    "glossary": "Ordlista",
+    "qualityChecklist": "Kvalitetschecklista"
   },
   "skipLink.label": "Hoppa till innehåll",
   "search.label": "Sök",
@@ -75,11 +76,9 @@
   "aside.danger": "Fara",
   "fileTree.directory": "Katalog",
   "builtWithStarlight.label": "Byggd med Starlight",
-
   "expressiveCode.copyButtonCopied": "Kopierad!",
   "expressiveCode.copyButtonTooltip": "Kopiera till urklipp",
   "expressiveCode.terminalWindowFallbackTitle": "Terminalfönster",
-
   "pagefind.clear_search": "Rensa",
   "pagefind.load_more": "Ladda fler resultat",
   "pagefind.search_label": "Sök på denna webbplats",

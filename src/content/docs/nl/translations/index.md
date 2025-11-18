@@ -9,14 +9,27 @@ De documentatie van Onetime Secret is beschikbaar in meerdere talen om onze dive
 
 ## Beschikbare talen
 
-- **Engelstalig (en)**: Onze standaard en meest complete versie
-- Duits (de)**: Gedeeltelijke vertaling in uitvoering
+De documentatie van Onetime Secret is momenteel beschikbaar in de volgende talen:
+
+- [**English (en)**](/en/) - Standaard en referentieversie
+- [**Български (bg)**](/bg/) - Bulgaars
+- [**Dansk (da)**](/da/) - Deens
+- [**Deutsch (de)**](/de/) - Duits
+- [**Español (es)**](/es/) - Spaans
+- [**Français (fr)**](/fr/) - Frans
+- [**Italiano (it)**](/it/) - Italiaans
+- [**日本語 (ja)**](/ja/) - Japans
+- [**한국어 (ko)**](/ko/) - Koreaans
+- [**Māori (mi)**](/mi/) - Maori
+- [**Nederlands (nl)**](/nl/) - Nederlands
+- [**Polski (pl)**](/pl/) - Pools
+- [**Português (pt-BR)**](/pt-br/) - Portugees (Brazilië)
+- [**Svenska (sv)**](/sv/) - Zweeds
+- [**Türkçe (tr)**](/tr/) - Turks
+- [**Українська (uk)**](/uk/) - Oekraïens
+- [**简体中文 (zh-CN)**](/zh-cn/) - Vereenvoudigd Chinees
 
 Je kunt tussen talen schakelen met de taalkiezer in de rechterbovenhoek van elke pagina.
-
-## Vertaalstatus
-
-Ga naar de pagina [Vertaalstatus](/nl/translations/) om de huidige status van onze vertaalinspanningen te bekijken.
 
 ## Bijdragende vertalingen
 
@@ -34,7 +47,7 @@ Bijdragen aan onze vertalingen zijn van harte welkom. Als je wilt helpen de docu
 
 Voor consistente vertalingen van hoge kwaliteit volg je onze [Vertaalstijlgids](/nl/translations/guide) en raadpleeg je onze [Woordenlijst terminologie](/nl/translations/glossary) voor gestandaardiseerde vertalingen van belangrijke termen.
 
-## Omgaan met ontbrekende vertalingen
+## Automatische terugval
 
 Wanneer inhoud niet beschikbaar is in een geselecteerde taal, zie je automatisch de Engelse versie met een melding dat de inhoud nog niet vertaald is.
 
