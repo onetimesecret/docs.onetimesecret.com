@@ -8,14 +8,27 @@ Onetime Secret documentation is available in multiple languages to serve our div
 
 ## Available Languages
 
-- **English (en)**: Our default and most complete version
-- **German (de)**: Partial translation in progress
+Onetime Secret documentation is currently available in the following languages:
+
+- **English (en)** - Default and reference version
+- **Български (bg)** - Bulgarian
+- **Dansk (da)** - Danish
+- **Deutsch (de)** - German
+- **Español (es)** - Spanish
+- **Français (fr)** - French
+- **Italiano (it)** - Italian
+- **日本語 (ja)** - Japanese
+- **한국어 (ko)** - Korean
+- **Māori (mi)** - Māori
+- **Nederlands (nl)** - Dutch
+- **Polski (pl)** - Polish
+- **Português (pt-BR)** - Portuguese (Brazil)
+- **Svenska (sv)** - Swedish
+- **Türkçe (tr)** - Turkish
+- **Українська (uk)** - Ukrainian
+- **简体中文 (zh-CN)** - Simplified Chinese
 
 You can switch between languages using the language selector in the top-right corner of any page.
-
-## Translation Status
-
-To view the current status of our translation efforts, visit the [Translation Status](/en/translations/) page.
 
 ## Contributing Translations
 
@@ -33,9 +46,9 @@ We welcome contributions to our translation efforts. If you'd like to help trans
 
 For consistent, high-quality translations, follow our [Translation Style Guide](/en/translations/guide) and refer to our [Terminology Glossary](/en/translations/glossary) for standardized translations of key terms.
 
-## Handling Missing Translations
+## Automatic Fallback
 
-When content is not available in a selected language, you'll automatically see the English version with a notification indicating the content hasn't been translated yet.
+When content is not available in your selected language, you'll automatically see the English version with a notification indicating the content hasn't been translated yet.
 
 ## Need Help?
 
