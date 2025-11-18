@@ -41,6 +41,10 @@ const trTranslations = loadTranslations("tr");
  * @param {string} link - URL path for the link
  * @param {Object} [badge] - Optional badge configuration
  * @returns {Object} Formatted sidebar link item
+ *
+ * Note: Translation keys must use BCP-47 format (e.g., "zh-CN", "pt-BR")
+ * to match Starlight's internal locale processing, even though locale keys
+ * in i18n.mjs and directory names use lowercase (e.g., "zh-cn", "pt-br").
  */
 function createLink(key, link, badge) {
   const enLabel = enTranslations.sidebar?.[key] || key;
@@ -58,10 +62,10 @@ function createLink(key, link, badge) {
       mi: miTranslations.sidebar?.[key],
       bg: bgTranslations.sidebar?.[key],
       it: itTranslations.sidebar?.[key],
-      "zh-cn": zhCnTranslations.sidebar?.[key],
+      "zh-CN": zhCnTranslations.sidebar?.[key],
       da: daTranslations.sidebar?.[key],
       pl: plTranslations.sidebar?.[key],
-      "pt-br": ptBrTranslations.sidebar?.[key],
+      "pt-BR": ptBrTranslations.sidebar?.[key],
       sv: svTranslations.sidebar?.[key],
       tr: trTranslations.sidebar?.[key],
     },
@@ -76,6 +80,10 @@ function createLink(key, link, badge) {
  * @param {Array} items - Child items (links or groups) within this group
  * @param {boolean} collapsed - Whether the group should be collapsed by default
  * @returns {Object} Formatted sidebar group item
+ *
+ * Note: Translation keys must use BCP-47 format (e.g., "zh-CN", "pt-BR")
+ * to match Starlight's internal locale processing, even though locale keys
+ * in i18n.mjs and directory names use lowercase (e.g., "zh-cn", "pt-br").
  */
 function createGroup(key, items = [], collapsed = false) {
   const enLabel = enTranslations.sidebar?.[key] || key;
@@ -92,10 +100,10 @@ function createGroup(key, items = [], collapsed = false) {
       mi: miTranslations.sidebar?.[key],
       bg: bgTranslations.sidebar?.[key],
       it: itTranslations.sidebar?.[key],
-      "zh-cn": zhCnTranslations.sidebar?.[key],
+      "zh-CN": zhCnTranslations.sidebar?.[key],
       da: daTranslations.sidebar?.[key],
       pl: plTranslations.sidebar?.[key],
-      "pt-br": ptBrTranslations.sidebar?.[key],
+      "pt-BR": ptBrTranslations.sidebar?.[key],
       sv: svTranslations.sidebar?.[key],
       tr: trTranslations.sidebar?.[key],
     },
