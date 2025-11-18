@@ -9,18 +9,27 @@ Onetime Secret belgeleri, çeşitli küresel topluluğumuza hizmet etmek için b
 
 ## Mevcut Diller
 
-- **İngilizce (en)**: Standart ve en eksiksiz sürümümüz
-- **Türkçe (tr)**: Kısmi çeviri devam ediyor
-- **Almanca (de)**: Kısmi çeviri
-- **Fransızca (fr)**: Kısmi çeviri
-- **İspanyolca (es)**: Kısmi çeviri
-- Ve daha fazlası...
+Onetime Secret belgeleri şu anda aşağıdaki dillerde mevcuttur:
+
+- [**English (en)**](/en/) - Standart ve referans sürüm
+- [**Български (bg)**](/bg/) - Bulgarca
+- [**Dansk (da)**](/da/) - Danca
+- [**Deutsch (de)**](/de/) - Almanca
+- [**Español (es)**](/es/) - İspanyolca
+- [**Français (fr)**](/fr/) - Fransızca
+- [**Italiano (it)**](/it/) - İtalyanca
+- [**日本語 (ja)**](/ja/) - Japonca
+- [**한국어 (ko)**](/ko/) - Korece
+- [**Māori (mi)**](/mi/) - Maori
+- [**Nederlands (nl)**](/nl/) - Felemenkçe
+- [**Polski (pl)**](/pl/) - Lehçe
+- [**Português (pt-BR)**](/pt-br/) - Portekizce (Brezilya)
+- [**Svenska (sv)**](/sv/) - İsveççe
+- [**Türkçe (tr)**](/tr/) - Türkçe
+- [**Українська (uk)**](/uk/) - Ukraynaca
+- [**简体中文 (zh-CN)**](/zh-cn/) - Basitleştirilmiş Çince
 
 Her sayfanın sağ üst köşesindeki dil seçimi menüsü ile diller arasında geçiş yapabilirsiniz.
-
-## Çeviri Durumu
-
-Çeviri çabalarımızın güncel durumunu görmek için [Çeviri Durumu](/tr/translations/) sayfasını ziyaret edin.
 
 ## Çevirilere Katkıda Bulunma
 
@@ -48,7 +57,7 @@ Türkçe çeviriye özgü önemli kararlar ve yaklaşımlar için [Türkçe Dil 
 - **Arayüz metni kuralları** - Aktif ve pasif ses ne zaman kullanılır
 - **Kapsamlı terminoloji referansı** - Tüm temel terimler için hızlı referans
 
-## Eksik Çevirilerle Başa Çıkma
+## Otomatik Yedek
 
 Seçilen bir dilde içerik mevcut değilse, içeriğin henüz çevrilmediğini belirten bir bildirimle birlikte otomatik olarak İngilizce sürümü görürsünüz.
 

@@ -7,15 +7,27 @@ Onetime Secret-dokumentation är tillgänglig på flera språk för att tjäna v
 
 ## Tillgängliga språk
 
-- **Engelska (en)**: Vår standard och mest kompletta version
-- **Tyska (de)**: Delvis översättning pågår
-- **Svenska (sv)**: Översättning pågår
+Onetime Secret-dokumentation är för närvarande tillgänglig på följande språk:
+
+- [**English (en)**](/en/) - Standard och referensversion
+- [**Български (bg)**](/bg/) - Bulgariska
+- [**Dansk (da)**](/da/) - Danska
+- [**Deutsch (de)**](/de/) - Tyska
+- [**Español (es)**](/es/) - Spanska
+- [**Français (fr)**](/fr/) - Franska
+- [**Italiano (it)**](/it/) - Italienska
+- [**日本語 (ja)**](/ja/) - Japanska
+- [**한국어 (ko)**](/ko/) - Koreanska
+- [**Māori (mi)**](/mi/) - Maori
+- [**Nederlands (nl)**](/nl/) - Nederländska
+- [**Polski (pl)**](/pl/) - Polska
+- [**Português (pt-BR)**](/pt-br/) - Portugisiska (Brasilien)
+- [**Svenska (sv)**](/sv/) - Svenska
+- [**Türkçe (tr)**](/tr/) - Turkiska
+- [**Українська (uk)**](/uk/) - Ukrainska
+- [**简体中文 (zh-CN)**](/zh-cn/) - Förenklad kinesiska
 
 Du kan växla mellan språk med språkväljaren i övre högra hörnet på vilken sida som helst.
-
-## Översättningsstatus
-
-För att se aktuell status för våra översättningsinsatser, besök sidan [Översättningsstatus](/sv/translations/).
 
 ## Bidra med översättningar
 
@@ -33,7 +45,7 @@ Vi välkomnar bidrag till våra översättningsinsatser. Om du vill hjälpa till
 
 För konsekventa, högkvalitativa översättningar, följ vår [Översättningsguide](/sv/translations/guide) och hänvisa till vår [Terminologiordlista](/sv/translations/glossary) för standardiserade översättningar av nyckeltermer.
 
-## Hantera saknade översättningar
+## Automatisk återgång
 
 När innehåll inte är tillgängligt på ett valt språk ser du automatiskt den engelska versionen med en notifikation som indikerar att innehållet inte har översatts ännu.
 

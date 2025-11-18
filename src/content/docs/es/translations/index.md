@@ -9,14 +9,27 @@ La documentación de Onetime Secret está disponible en varios idiomas para serv
 
 ## Idiomas disponibles
 
-- Español (es)**: Nuestra versión predeterminada y más completa
-- Alemán (de)**: Traducción parcial en curso
+La documentación de Onetime Secret está actualmente disponible en los siguientes idiomas:
+
+- [**English (en)**](/en/) - Versión estándar y de referencia
+- [**Български (bg)**](/bg/) - Búlgaro
+- [**Dansk (da)**](/da/) - Danés
+- [**Deutsch (de)**](/de/) - Alemán
+- [**Español (es)**](/es/) - Español
+- [**Français (fr)**](/fr/) - Francés
+- [**Italiano (it)**](/it/) - Italiano
+- [**日本語 (ja)**](/ja/) - Japonés
+- [**한국어 (ko)**](/ko/) - Coreano
+- [**Māori (mi)**](/mi/) - Maorí
+- [**Nederlands (nl)**](/nl/) - Neerlandés
+- [**Polski (pl)**](/pl/) - Polaco
+- [**Português (pt-BR)**](/pt-br/) - Portugués (Brasil)
+- [**Svenska (sv)**](/sv/) - Sueco
+- [**Türkçe (tr)**](/tr/) - Turco
+- [**Українська (uk)**](/uk/) - Ucraniano
+- [**简体中文 (zh-CN)**](/zh-cn/) - Chino simplificado
 
 Puede cambiar de idioma con el selector situado en la esquina superior derecha de cualquier página.
-
-## Estado de la traducción
-
-Para conocer el estado actual de nuestras traducciones, visite la página [Estado de las traducciones](/es/translations/).
 
 ## Traducciones que contribuyen
 
@@ -34,7 +47,7 @@ Agradecemos cualquier contribución a nuestros esfuerzos de traducción. Si quie
 
 Para obtener traducciones coherentes y de calidad, siga nuestro [Manual de estilo de traducción](/es/translations/guide) y consulte nuestro [Glosario terminológico](/es/translations/glossary) para obtener traducciones normalizadas de los términos clave.
 
-## Tratamiento de las traducciones que faltan
+## Respaldo automático
 
 Cuando el contenido no esté disponible en un idioma seleccionado, verás automáticamente la versión en inglés con una notificación que indica que el contenido aún no se ha traducido.
 

@@ -8,15 +8,27 @@ Dokumentacja Onetime Secret jest dostępna w wielu językach, aby służyć nasz
 
 ## Dostępne języki
 
-- **Angielski (en)**: Nasza domyślna i najbardziej kompletna wersja
-- **Niemiecki (de)**: Częściowe tłumaczenie w toku
-- **Polski (pl)**: Tłumaczenie w toku
+Dokumentacja Onetime Secret jest obecnie dostępna w następujących językach:
+
+- [**English (en)**](/en/) - Wersja standardowa i referencyjna
+- [**Български (bg)**](/bg/) - Bułgarski
+- [**Dansk (da)**](/da/) - Duński
+- [**Deutsch (de)**](/de/) - Niemiecki
+- [**Español (es)**](/es/) - Hiszpański
+- [**Français (fr)**](/fr/) - Francuski
+- [**Italiano (it)**](/it/) - Włoski
+- [**日本語 (ja)**](/ja/) - Japoński
+- [**한국어 (ko)**](/ko/) - Koreański
+- [**Māori (mi)**](/mi/) - Maoryski
+- [**Nederlands (nl)**](/nl/) - Niderlandzki
+- [**Polski (pl)**](/pl/) - Polski
+- [**Português (pt-BR)**](/pt-br/) - Portugalski (Brazylia)
+- [**Svenska (sv)**](/sv/) - Szwedzki
+- [**Türkçe (tr)**](/tr/) - Turecki
+- [**Українська (uk)**](/uk/) - Ukraiński
+- [**简体中文 (zh-CN)**](/zh-cn/) - Chiński uproszczony
 
 Możesz przełączać się między językami za pomocą selektora języka w prawym górnym rogu każdej strony.
-
-## Status tłumaczeń
-
-Aby zobaczyć aktualny status naszych działań translatorskich, odwiedź stronę [Status tłumaczeń](/pl/translations/).
 
 ## Współtworzenie tłumaczeń
 
@@ -34,7 +46,7 @@ Zapraszamy do współpracy przy naszych działaniach translatorskich. Jeśli chc
 
 Aby zapewnić spójne, wysokiej jakości tłumaczenia, postępuj zgodnie z naszym [Przewodnikiem stylistycznym tłumaczenia](/pl/translations/guide) i odwołuj się do naszego [Glosariusza terminologii](/pl/translations/glossary) w celu uzyskania ustandaryzowanych tłumaczeń kluczowych terminów.
 
-## Obsługa brakujących tłumaczeń
+## Automatyczne zastępowanie
 
 Gdy treść nie jest dostępna w wybranym języku, automatycznie zobaczysz wersję angielską z powiadomieniem wskazującym, że treść nie została jeszcze przetłumaczona.
 

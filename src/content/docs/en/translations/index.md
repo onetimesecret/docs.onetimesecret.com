@@ -10,23 +10,23 @@ Onetime Secret documentation is available in multiple languages to serve our div
 
 Onetime Secret documentation is currently available in the following languages:
 
-- **English (en)** - Default and reference version
-- **Български (bg)** - Bulgarian
-- **Dansk (da)** - Danish
-- **Deutsch (de)** - German
-- **Español (es)** - Spanish
-- **Français (fr)** - French
-- **Italiano (it)** - Italian
-- **日本語 (ja)** - Japanese
-- **한국어 (ko)** - Korean
-- **Māori (mi)** - Māori
-- **Nederlands (nl)** - Dutch
-- **Polski (pl)** - Polish
-- **Português (pt-BR)** - Portuguese (Brazil)
-- **Svenska (sv)** - Swedish
-- **Türkçe (tr)** - Turkish
-- **Українська (uk)** - Ukrainian
-- **简体中文 (zh-CN)** - Simplified Chinese
+- [**English (en)**](/en/) - Default and reference version
+- [**Български (bg)**](/bg/) - Bulgarian
+- [**Dansk (da)**](/da/) - Danish
+- [**Deutsch (de)**](/de/) - German
+- [**Español (es)**](/es/) - Spanish
+- [**Français (fr)**](/fr/) - French
+- [**Italiano (it)**](/it/) - Italian
+- [**日本語 (ja)**](/ja/) - Japanese
+- [**한국어 (ko)**](/ko/) - Korean
+- [**Māori (mi)**](/mi/) - Māori
+- [**Nederlands (nl)**](/nl/) - Dutch
+- [**Polski (pl)**](/pl/) - Polish
+- [**Português (pt-BR)**](/pt-br/) - Portuguese (Brazil)
+- [**Svenska (sv)**](/sv/) - Swedish
+- [**Türkçe (tr)**](/tr/) - Turkish
+- [**Українська (uk)**](/uk/) - Ukrainian
+- [**简体中文 (zh-CN)**](/zh-cn/) - Simplified Chinese
 
 You can switch between languages using the language selector in the top-right corner of any page.
 
