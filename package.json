@@ -19,7 +19,7 @@
     "translate:restore": "./bin/translation-pluribus-util restore"
   },
   "dependencies": {
-    "@astrojs/markdoc": "^0.15.8",
+    "@astrojs/markdoc": "^0.15.9",
     "@astrojs/starlight": "^0.36.2",
     "@astrojs/starlight-markdoc": "^0.5.1",
     "@astrojs/starlight-tailwind": "^4.0.2",
@@ -31,7 +31,7 @@
     "sharp": "^0.34.5",
     "sitemap": "8.0.2",
     "tailwindcss": "^4.1.17",
-    "vite": "7.2.2",
+    "vite": "7.2.4",
     "vue": "^3.5.24"
   }
 }
