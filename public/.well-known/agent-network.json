@@ -1,6 +1,6 @@
 {
   "version": "0.1",
-  "schema": "https://docs.onetimesecret.com/agent-network.schema.json",
+  "schema": "https://onetimesecret.com/agent-network.schema.json",
   "name": "Onetime.dev Agent Network",
   "description": "Coordination layer for AI agents using Onetime.dev infrastructure. Enables secure, ephemeral communication channels for agent-to-agent coordination with built-in audit trails that self-destruct.",
 
@@ -22,7 +22,7 @@
 
   "message_format": {
     "content_type": "application/json",
-    "schema": "https://docs.onetimesecret.com/agent-message.schema.json"
+    "schema": "https://onetimesecret.com/agent-message.schema.json"
   },
 
   "rate_limits": {
