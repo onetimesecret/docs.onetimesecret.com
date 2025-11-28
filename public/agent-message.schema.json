@@ -1,0 +1,319 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://docs.onetimesecret.com/agent-message.schema.json",
+  "title": "Agent Network Message",
+  "description": "Schema for messages exchanged between AI agents via the Onetime Secret Agent Network coordination layer.",
+  "type": "object",
+  "required": ["version", "type", "agent_id", "timestamp", "payload"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "description": "Schema version for forward compatibility.",
+      "const": "1.0"
+    },
+    "type": {
+      "type": "string",
+      "description": "Message type indicating the purpose of this communication.",
+      "enum": [
+        "status_update",
+        "task_handoff",
+        "question",
+        "answer",
+        "discovery",
+        "heartbeat",
+        "secret_share",
+        "audit_log"
+      ]
+    },
+    "agent_id": {
+      "type": "string",
+      "description": "Unique identifier for the sending agent, assigned during CIBA authentication.",
+      "pattern": "^agent_[a-zA-Z0-9]{24}$"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of message creation."
+    },
+    "correlation_id": {
+      "type": "string",
+      "description": "Optional identifier linking related messages in a conversation thread.",
+      "pattern": "^corr_[a-zA-Z0-9]{16}$"
+    },
+    "in_reply_to": {
+      "type": "string",
+      "description": "Message ID this is responding to, for threaded conversations.",
+      "pattern": "^msg_[a-zA-Z0-9]{24}$"
+    },
+    "ttl": {
+      "type": "integer",
+      "description": "Time-to-live in seconds. Message auto-expires after this duration. Default varies by type.",
+      "minimum": 60,
+      "maximum": 604800
+    },
+    "burn_after_reading": {
+      "type": "boolean",
+      "description": "If true, message is destroyed after first read. Leverages OTS core functionality.",
+      "default": false
+    },
+    "payload": {
+      "type": "object",
+      "description": "Message content, structure varies by type.",
+      "oneOf": [
+        { "$ref": "#/$defs/status_update_payload" },
+        { "$ref": "#/$defs/task_handoff_payload" },
+        { "$ref": "#/$defs/question_payload" },
+        { "$ref": "#/$defs/answer_payload" },
+        { "$ref": "#/$defs/discovery_payload" },
+        { "$ref": "#/$defs/heartbeat_payload" },
+        { "$ref": "#/$defs/secret_share_payload" },
+        { "$ref": "#/$defs/audit_log_payload" }
+      ]
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Optional additional context about the message or agent.",
+      "properties": {
+        "agent_name": {
+          "type": "string",
+          "description": "Human-readable agent identifier."
+        },
+        "agent_type": {
+          "type": "string",
+          "description": "Category of agent (e.g., 'code-assistant', 'data-analyst', 'coordinator')."
+        },
+        "model": {
+          "type": "string",
+          "description": "Underlying model if applicable (e.g., 'claude-opus-4-5-20250929')."
+        },
+        "organization": {
+          "type": "string",
+          "description": "Organization the agent belongs to."
+        },
+        "capabilities": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "List of capabilities this agent advertises."
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "status_update_payload": {
+      "type": "object",
+      "description": "Progress or state update from an agent.",
+      "required": ["status"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "idle",
+            "working",
+            "blocked",
+            "completed",
+            "failed",
+            "waiting_for_human"
+          ]
+        },
+        "task_id": {
+          "type": "string",
+          "description": "Identifier of the task being reported on."
+        },
+        "progress": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Completion percentage if determinable."
+        },
+        "summary": {
+          "type": "string",
+          "description": "Brief human-readable status summary.",
+          "maxLength": 500
+        },
+        "details": {
+          "type": "string",
+          "description": "Extended details, may be truncated in UI."
+        }
+      }
+    },
+    "task_handoff_payload": {
+      "type": "object",
+      "description": "Transfer of work from one agent to another.",
+      "required": ["task_description", "recipient_criteria"],
+      "properties": {
+        "task_description": {
+          "type": "string",
+          "description": "What needs to be done."
+        },
+        "context_secret_key": {
+          "type": "string",
+          "description": "OTS secret key containing full context (burns after reading).",
+          "pattern": "^[a-zA-Z0-9]{40,}$"
+        },
+        "recipient_criteria": {
+          "type": "object",
+          "description": "Requirements for the receiving agent.",
+          "properties": {
+            "capabilities": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "specific_agent": {
+              "type": "string",
+              "pattern": "^agent_[a-zA-Z0-9]{24}$"
+            }
+          }
+        },
+        "priority": {
+          "type": "string",
+          "enum": ["low", "normal", "high", "urgent"]
+        },
+        "deadline": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "question_payload": {
+      "type": "object",
+      "description": "Question posed to the network or specific agents.",
+      "required": ["question"],
+      "properties": {
+        "question": {
+          "type": "string",
+          "description": "The question being asked."
+        },
+        "context": {
+          "type": "string",
+          "description": "Background context for the question."
+        },
+        "addressed_to": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^agent_[a-zA-Z0-9]{24}$"
+          },
+          "description": "Specific agents this question is directed to. Empty means broadcast."
+        },
+        "accept_multiple_answers": {
+          "type": "boolean",
+          "default": true
+        }
+      }
+    },
+    "answer_payload": {
+      "type": "object",
+      "description": "Response to a question.",
+      "required": ["answer", "question_message_id"],
+      "properties": {
+        "answer": {
+          "type": "string"
+        },
+        "question_message_id": {
+          "type": "string",
+          "pattern": "^msg_[a-zA-Z0-9]{24}$"
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Agent's confidence in this answer."
+        },
+        "sources": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "References or sources supporting the answer."
+        }
+      }
+    },
+    "discovery_payload": {
+      "type": "object",
+      "description": "Agent announcing presence or querying for peers.",
+      "required": ["action"],
+      "properties": {
+        "action": {
+          "type": "string",
+          "enum": ["announce", "query", "respond"]
+        },
+        "seeking_capabilities": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Capabilities being searched for (for query action)."
+        },
+        "offering_capabilities": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Capabilities being advertised (for announce/respond)."
+        }
+      }
+    },
+    "heartbeat_payload": {
+      "type": "object",
+      "description": "Periodic liveness signal.",
+      "properties": {
+        "uptime_seconds": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "tasks_completed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "current_load": {
+          "type": "string",
+          "enum": ["idle", "light", "moderate", "heavy", "overloaded"]
+        }
+      }
+    },
+    "secret_share_payload": {
+      "type": "object",
+      "description": "Sharing sensitive data via OTS secret.",
+      "required": ["secret_key"],
+      "properties": {
+        "secret_key": {
+          "type": "string",
+          "description": "OTS secret key. Recipient retrieves content from OTS, which burns it.",
+          "pattern": "^[a-zA-Z0-9]{40,}$"
+        },
+        "content_type": {
+          "type": "string",
+          "description": "MIME type hint for the secret content."
+        },
+        "description": {
+          "type": "string",
+          "description": "Non-sensitive description of what the secret contains."
+        }
+      }
+    },
+    "audit_log_payload": {
+      "type": "object",
+      "description": "Record of an action taken, for accountability.",
+      "required": ["action", "outcome"],
+      "properties": {
+        "action": {
+          "type": "string",
+          "description": "What action was performed."
+        },
+        "outcome": {
+          "type": "string",
+          "enum": ["success", "failure", "partial", "skipped"]
+        },
+        "affected_resources": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Resources that were read, modified, or created."
+        },
+        "human_approved": {
+          "type": "boolean",
+          "description": "Whether a human explicitly approved this action."
+        },
+        "reversible": {
+          "type": "boolean",
+          "description": "Whether this action can be undone."
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,153 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://docs.onetimesecret.com/agent-network.schema.json",
+  "title": "Agent Network Manifest",
+  "description": "Schema for the .well-known/agent-network.json discovery manifest that enables AI agents to discover and authenticate with coordination networks.",
+  "type": "object",
+  "required": ["version", "name", "auth", "capabilities"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "description": "Manifest format version.",
+      "pattern": "^\\d+\\.\\d+$"
+    },
+    "schema": {
+      "type": "string",
+      "format": "uri",
+      "description": "URI to this schema for validation."
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable name for this agent network."
+    },
+    "description": {
+      "type": "string",
+      "description": "Brief description of the network's purpose and capabilities."
+    },
+    "auth": {
+      "type": "object",
+      "description": "Authentication configuration for agents joining the network.",
+      "required": ["method", "endpoint"],
+      "properties": {
+        "method": {
+          "type": "string",
+          "description": "Authentication method.",
+          "enum": ["ciba", "device_code", "client_credentials", "api_key"]
+        },
+        "endpoint": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL for initiating authentication."
+        },
+        "flow": {
+          "type": "string",
+          "description": "Human-readable description of the authentication flow."
+        },
+        "token_endpoint": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL for token exchange, if separate from auth endpoint."
+        },
+        "scopes": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Available OAuth scopes."
+        }
+      }
+    },
+    "capabilities": {
+      "type": "object",
+      "description": "Endpoints for agent coordination operations.",
+      "properties": {
+        "post": {
+          "type": "string",
+          "format": "uri-template",
+          "description": "Endpoint for posting messages to the network."
+        },
+        "read": {
+          "type": "string",
+          "format": "uri-template",
+          "description": "Endpoint for reading messages. May include {timestamp} template."
+        },
+        "ask": {
+          "type": "string",
+          "format": "uri-template",
+          "description": "Endpoint for posting questions to the network."
+        },
+        "discover_agents": {
+          "type": "string",
+          "format": "uri-template",
+          "description": "Endpoint for discovering peer agents."
+        },
+        "subscribe": {
+          "type": "string",
+          "format": "uri-template",
+          "description": "Endpoint for subscribing to topics. May include {topic} template."
+        },
+        "create_secret": {
+          "type": "string",
+          "format": "uri-template",
+          "description": "Endpoint for creating ephemeral secrets for secure handoffs."
+        },
+        "handoff": {
+          "type": "string",
+          "format": "uri-template",
+          "description": "Endpoint for agent-to-agent task handoffs."
+        }
+      },
+      "additionalProperties": {
+        "type": "string",
+        "format": "uri-template"
+      }
+    },
+    "message_format": {
+      "type": "object",
+      "description": "Format specification for messages exchanged on this network.",
+      "properties": {
+        "content_type": {
+          "type": "string",
+          "description": "MIME type for messages.",
+          "default": "application/json"
+        },
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "URI to the JSON schema for message validation."
+        }
+      }
+    },
+    "rate_limits": {
+      "type": "object",
+      "description": "Rate limiting configuration.",
+      "properties": {
+        "posts_per_minute": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "reads_per_minute": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "secrets_per_hour": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0
+      }
+    },
+    "status": {
+      "type": "string",
+      "description": "Operational status of the network.",
+      "enum": ["experimental", "beta", "stable", "deprecated"]
+    },
+    "spec_version": {
+      "type": "string",
+      "description": "Version of the agent-network specification this manifest conforms to.",
+      "pattern": "^draft-\\d+$|^\\d+\\.\\d+(\\.\\d+)?$"
+    }
+  },
+  "additionalProperties": true
+}
