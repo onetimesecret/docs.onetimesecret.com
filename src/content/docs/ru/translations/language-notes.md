@@ -5,6 +5,38 @@ description: Translation guidelines and terminology for Russian (ru) locale
 
 # Russian (ru) Translation Notes
 
+## Audience
+
+Russian is an official or widely-used language across multiple regions:
+
+| Region | Russian Speakers | Notes |
+|--------|-----------------|-------|
+| Russia | ~145 million | Standard reference |
+| Belarus | ~7 million | Official language alongside Belarusian |
+| Kazakhstan | ~10 million | Official language |
+| Kyrgyzstan | ~3 million | Official language |
+| Baltic States | ~2 million | Significant minority |
+| Diaspora (US, DE, IL) | ~5 million | Mixed usage patterns |
+
+Our translations should be accessible to **all Russian speakers** regardless of location.
+
+### Standard Written Russian
+
+Use **standard written Russian** (литературный язык) as found in major Russian-language tech products with standard vocabulary, established IT terminology, and natural phrasing.
+
+- Standard vocabulary recognized across all regions
+- Established IT terminology
+- Natural phrasing without regional colloquialisms
+
+**What this means in practice:**
+- IT terminology has no regional variants — "шифрование", "аутентификация", "сервер" are universal
+- UI vocabulary is neutral — "Войти", "Настройки", "Отправить" work everywhere
+- Avoid informal regional expressions in professional contexts
+
+### Quality Benchmark
+
+PR #2130 (December 2025), submitted by a contributor from Minsk, Belarus, demonstrates the expected quality standard: **neutral literary Russian** without regional markers, appropriate for a global audience. This serves as a reference for future contributions.
+
 ## Thinking Behind Translation Adjustments
 
 The goal is to ensure accuracy, consistency, natural phrasing for Russian speakers, and adherence to the provided translation guidelines while properly handling Russian grammatical complexity.
@@ -25,7 +57,18 @@ The goal is to ensure accuracy, consistency, natural phrasing for Russian speake
 
 - **`Sign In`**: Translated as `Войти` (infinitive form used as imperative) - the standard, concise term for authentication in Russian interfaces.
 
-- **`burn`**: Translated as `окончательное удаление` (permanent deletion) rather than literal `сжечь` (to burn). The literal translation would sound awkward in digital context. For status: `окончательно удалено`.
+- **`burn`**: Translated as `уничтожить` (to destroy) rather than literal `сжечь` (to burn). The literal translation would sound awkward in digital context. For status: `уничтожен`. Alternative: `удалить` (delete) is acceptable but less emphatic about permanence.
+
+### Why "секрет" not "тайна"
+
+The word "secret" in English maps to two Russian words with different connotations:
+
+| Word | Connotation | IT Usage | Recommendation |
+|------|-------------|----------|----------------|
+| **секрет** | Technical, neutral | Common ("API secret", "секретный ключ") | **Use this** |
+| **тайна** | Personal, emotional | Rare | Avoid |
+
+Unlike the Danish case (where "Hemmeligheder" carries childish connotations requiring "Beskeder"), Russian **"секрет"** works perfectly in professional/security contexts. No exception needed.
 
 ### 2. Appropriate Voice (Imperative vs. Declarative/Passive)
 
@@ -248,6 +291,68 @@ getRussianPluralForm(21, ['день', 'дня', 'дней'])   // день
 - **Natural Phrasing**: Idiomatic Russian expressions that sound natural to native speakers
 
 The translations aim for clarity and adherence to standard Russian usage in technical contexts, while respecting the specific grammatical requirements of the Russian language, including gender agreement, plural forms, verb aspects, and case declension.
+
+## Common Pitfalls for Russian Translations
+
+### 1. Key Naming (Technical)
+
+**CRITICAL:** Never change JSON key names when translating. Only translate values.
+
+```json
+// WRONG - key was renamed
+- "have-more-questions-visit-our": "Have more questions?"
++ "have_more_questions_visit_our": "Есть вопросы?"  // BREAKS APPLICATION!
+
+// CORRECT - only value changed
+  "have-more-questions-visit-our": "Есть ещё вопросы? Посетите наш"
+```
+
+### 2. Unicode Encoding
+
+Ensure proper UTF-8 encoding. Watch for corruption:
+- `Это��` should be `Этот`
+- Check for mojibake (garbled characters)
+
+### 3. Vue-i18n Pluralization
+
+Russian requires 3 plural forms, but Vue-i18n pipe format varies by version:
+
+```json
+// Vue-i18n format (check project version)
+"day": "день | дня | дней"
+
+// Verify with test values:
+// 1, 21, 31, 101 → день (singular)
+// 2, 3, 4, 22, 23, 24 → дня (few)
+// 5-20, 25-30, 100 → дней (many)
+```
+
+### 4. Informal Register Inconsistency
+
+Maintain consistent formal "вы" register throughout:
+- ✓ `Вы можете безопасно закрыть эту вкладку`
+- ✓ `С возвращением` (appropriate for "Welcome Back")
+- ✗ `Ну что ж, вперёд` (too informal for professional context)
+
+### 5. Good Translation Examples (from PR #2130)
+
+These translations demonstrate the expected quality:
+
+| English | Russian | Why It Works |
+|---------|---------|--------------|
+| "What am I looking at?" | "Что я вижу?" | Natural simplification, not literal |
+| "Copy to clipboard" | "Копировать в буфер обмена" | Standard UI term |
+| "Account deleted successfully" | "Аккаунт успешно удалён" | Modern, natural |
+| "Permanently delete account" | "Безвозвратно удалить аккаунт" | Conveys finality |
+| "Welcome Back" | "С возвращением" | Idiomatic, warm but professional |
+| "This action cannot be undone" | "Это действие нельзя отменить" | Clear, direct |
+
+### 6. Character Expansion
+
+Russian typically expands 10-25% from English. Check UI constraints:
+- Button text: May need shorter alternatives
+- Navigation labels: Test for wrapping
+- Form labels: May need multi-line support
 
 ## Key Differences from Other Languages
 
