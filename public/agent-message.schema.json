@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://docs.onetimesecret.com/agent-message.schema.json",
+  "$id": "https://onetimesecret.com/agent-message.schema.json",
   "title": "Agent Network Message",
   "description": "Schema for messages exchanged between AI agents via the Onetime Secret Agent Network coordination layer.",
   "type": "object",
@@ -27,8 +27,8 @@
     },
     "agent_id": {
       "type": "string",
-      "description": "Unique identifier for the sending agent, assigned during CIBA authentication.",
-      "pattern": "^agent_[a-zA-Z0-9]{24}$"
+      "description": "Unique identifier for the sending agent, assigned during CIBA authentication. Uses UUIDv7 (time-ordered, cryptographically random).",
+      "pattern": "^agent_[0-9a-f]{8}-[0-9a-f]{4}-7[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
     },
     "timestamp": {
       "type": "string",
@@ -37,13 +37,13 @@
     },
     "correlation_id": {
       "type": "string",
-      "description": "Optional identifier linking related messages in a conversation thread.",
-      "pattern": "^corr_[a-zA-Z0-9]{16}$"
+      "description": "Optional identifier linking related messages in a conversation thread. Uses UUIDv7.",
+      "pattern": "^corr_[0-9a-f]{8}-[0-9a-f]{4}-7[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
     },
     "in_reply_to": {
       "type": "string",
-      "description": "Message ID this is responding to, for threaded conversations.",
-      "pattern": "^msg_[a-zA-Z0-9]{24}$"
+      "description": "Message ID this is responding to, for threaded conversations. Uses UUIDv7.",
+      "pattern": "^msg_[0-9a-f]{8}-[0-9a-f]{4}-7[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
     },
     "ttl": {
       "type": "integer",
@@ -104,6 +104,7 @@
       "type": "object",
       "description": "Progress or state update from an agent.",
       "required": ["status"],
+      "additionalProperties": false,
       "properties": {
         "status": {
           "type": "string",
@@ -141,6 +142,7 @@
       "type": "object",
       "description": "Transfer of work from one agent to another.",
       "required": ["task_description", "recipient_criteria"],
+      "additionalProperties": false,
       "properties": {
         "task_description": {
           "type": "string",
@@ -161,7 +163,7 @@
             },
             "specific_agent": {
               "type": "string",
-              "pattern": "^agent_[a-zA-Z0-9]{24}$"
+              "pattern": "^agent_[0-9a-f]{8}-[0-9a-f]{4}-7[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
             }
           }
         },
@@ -179,6 +181,7 @@
       "type": "object",
       "description": "Question posed to the network or specific agents.",
       "required": ["question"],
+      "additionalProperties": false,
       "properties": {
         "question": {
           "type": "string",
@@ -192,7 +195,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "pattern": "^agent_[a-zA-Z0-9]{24}$"
+            "pattern": "^agent_[0-9a-f]{8}-[0-9a-f]{4}-7[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
           },
           "description": "Specific agents this question is directed to. Empty means broadcast."
         },
@@ -206,13 +209,14 @@
       "type": "object",
       "description": "Response to a question.",
       "required": ["answer", "question_message_id"],
+      "additionalProperties": false,
       "properties": {
         "answer": {
           "type": "string"
         },
         "question_message_id": {
           "type": "string",
-          "pattern": "^msg_[a-zA-Z0-9]{24}$"
+          "pattern": "^msg_[0-9a-f]{8}-[0-9a-f]{4}-7[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
         },
         "confidence": {
           "type": "number",
@@ -231,6 +235,7 @@
       "type": "object",
       "description": "Agent announcing presence or querying for peers.",
       "required": ["action"],
+      "additionalProperties": false,
       "properties": {
         "action": {
           "type": "string",
@@ -251,6 +256,7 @@
     "heartbeat_payload": {
       "type": "object",
       "description": "Periodic liveness signal.",
+      "additionalProperties": false,
       "properties": {
         "uptime_seconds": {
           "type": "integer",
@@ -270,6 +276,7 @@
       "type": "object",
       "description": "Sharing sensitive data via OTS secret.",
       "required": ["secret_key"],
+      "additionalProperties": false,
       "properties": {
         "secret_key": {
           "type": "string",
@@ -290,6 +297,7 @@
       "type": "object",
       "description": "Record of an action taken, for accountability.",
       "required": ["action", "outcome"],
+      "additionalProperties": false,
       "properties": {
         "action": {
           "type": "string",
