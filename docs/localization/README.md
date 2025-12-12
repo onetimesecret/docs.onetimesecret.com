@@ -11,6 +11,7 @@ This directory contains centralized localization guidelines that complement the 
 ```
 /docs/localization/
 ├── README.md                         # This file
+├── management-approach.md            # When to adopt a TMS vs. current pattern
 ├── glossary/
 │   └── core-terms.json               # Essential terms in JSON format
 ├── terminology/
@@ -45,6 +46,10 @@ This directory contains centralized localization guidelines that complement the 
 1. **General principles**: [`style-guides/general.md`](style-guides/general.md)
 2. **Voice guidelines**: [`style-guides/voice-and-tone.md`](style-guides/voice-and-tone.md)
 3. **Reference translations**: [`reference/`](reference/)
+
+### For Project Maintainers
+
+1. **Management approach**: [`management-approach.md`](management-approach.md) - TMS vs. documentation-driven localization
 
 ## Language-Specific Resources
 
