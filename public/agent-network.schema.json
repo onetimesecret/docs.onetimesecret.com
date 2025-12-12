@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://docs.onetimesecret.com/agent-network.schema.json",
+  "$id": "https://onetimesecret.com/agent-network.schema.json",
   "title": "Agent Network Manifest",
   "description": "Schema for the .well-known/agent-network.json discovery manifest that enables AI agents to discover and authenticate with coordination networks.",
   "type": "object",
