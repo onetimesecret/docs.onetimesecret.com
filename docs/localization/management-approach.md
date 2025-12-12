@@ -8,7 +8,7 @@
 |--------------------|-------------------------------|
 | Locales            | 30                            |
 | JSON files         | 510 (17 per locale)           |
-| Tooling            | vue-i18n 11.1.12 + @intlify   |
+| Tooling            | Astro Starlight built-in i18n |
 | Documentation      | Per-language glossary + notes |
 | Contribution model | Sporadic community PRs        |
 
@@ -24,7 +24,7 @@
 
 ## Recommended: Documentation-Driven Localization (Current Pattern)
 
-This is the same pattern used by Mozilla, Django, and Vue.js documentation projects. It scales well for:
+This is the same pattern used by [Mozilla](https://mozilla-l10n.github.io/localizer-documentation/), [Django](https://docs.djangoproject.com/en/dev/internals/contributing/localizing/), and [Vue.js](https://github.com/vuejs/docs/blob/main/CONTRIBUTING.md#translation) documentation projects. It scales well for:
 
 - Open source projects with community contributions
 - 10-50 active locales
