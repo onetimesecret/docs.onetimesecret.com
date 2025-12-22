@@ -15,6 +15,7 @@ interface HttpEntryProps {
  */
 export function HttpEntry({ entry }: HttpEntryProps) {
   const [expanded, setExpanded] = useState(false);
+  const uniqueId = React.useId();
 
   const typeStyles: Record<HttpMessage["type"], string> = {
     request: "border-l-4 border-blue-500 bg-blue-950/40",
@@ -79,6 +80,8 @@ export function HttpEntry({ entry }: HttpEntryProps) {
         {entry.expandedPayload && (
           <button
             onClick={() => setExpanded(!expanded)}
+            aria-expanded={expanded}
+            aria-controls={`payload-${uniqueId}`}
             className="flex-shrink-0 rounded bg-gray-700 px-2 py-1 text-xs hover:bg-gray-600"
           >
             {expanded ? "Hide decoded" : "Show decoded"}
@@ -86,7 +89,7 @@ export function HttpEntry({ entry }: HttpEntryProps) {
         )}
       </div>
       {expanded && entry.expandedPayload && (
-        <div className="mt-3 border-t border-gray-700 pt-3">
+        <div id={`payload-${uniqueId}`} className="mt-3 border-t border-gray-700 pt-3">
           <div className="mb-1 text-xs text-gray-400">
             {entry.expandedPayload.label}
           </div>
