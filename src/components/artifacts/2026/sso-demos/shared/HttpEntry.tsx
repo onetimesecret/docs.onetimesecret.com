@@ -1,7 +1,16 @@
-import React, { useState } from "react";
-import type { HttpMessage } from './types';
+// src/components/artifacts/2026/sso-demos/shared/HttpEntry.tsx
 
-export function HttpEntry({ entry }: { entry: HttpMessage }) {
+import React, { useState } from "react";
+
+/**
+ * Renders a single HTTP message in the authentication flow.
+ * Supports requests, responses, internal processes, and server-to-server communication.
+ * Includes expandable payload sections for decoded SAML/JWT content.
+ *
+ * @param {Object} props
+ * @param {import('./types').HttpMessage} props.entry - The HTTP message to display
+ */
+export function HttpEntry({ entry }) {
   const [expanded, setExpanded] = useState(false);
 
   const typeStyles = {

@@ -1,6 +1,6 @@
 // src/components/artifacts/2026/sso-demos/oidc-saml-bridge/steps.ts
 
-import type { Step } from "./types";
+import type { Step } from "../shared";
 
 const STEPS: Step[] = [
   {
