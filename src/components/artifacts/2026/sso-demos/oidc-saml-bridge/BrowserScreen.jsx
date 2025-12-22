@@ -1,4 +1,123 @@
-import React from "react";
+import React, { useState } from "react";
+
+function DashboardScreen() {
+  const [secretText, setSecretText] = useState("");
+  const [generatedLink, setGeneratedLink] = useState(null);
+  const [recentSecrets, setRecentSecrets] = useState([]);
+
+  const handleCreateSecret = () => {
+    if (!secretText.trim()) {
+      setSecretText("This is my confidential message...");
+      return;
+    }
+    const fakeId = Math.random().toString(36).substring(2, 10);
+    const link = `https://secrets.example.com/s/${fakeId}`;
+    setGeneratedLink(link);
+    setRecentSecrets(prev => [
+      { id: fakeId, preview: secretText.substring(0, 20) + "...", created: "Just now" },
+      ...prev.slice(0, 2)
+    ]);
+    setSecretText("");
+  };
+
+  const handleDismissLink = () => {
+    setGeneratedLink(null);
+  };
+
+  return (
+    <div className="h-full bg-gray-100">
+      <nav className="flex items-center justify-between bg-slate-800 px-4 py-3 text-white">
+        <div className="flex items-center gap-4">
+          <span className="text-lg font-bold">🔐 OTS</span>
+          <span className="text-sm text-slate-300">Dashboard</span>
+        </div>
+        <div className="flex items-center gap-3">
+          <span className="text-sm">alice@contoso.com</span>
+          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-500 font-medium">
+            A
+          </div>
+        </div>
+      </nav>
+      <div className="p-6">
+        <div className="mb-4 rounded-lg bg-white p-6 shadow">
+          <h2 className="mb-4 text-lg font-semibold text-gray-800">
+            Create a Secret
+          </h2>
+          {generatedLink ? (
+            <div className="space-y-3">
+              <div className="rounded-lg border-2 border-emerald-200 bg-emerald-50 p-4">
+                <div className="mb-2 flex items-center gap-2 text-sm font-medium text-emerald-700">
+                  <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  Secret link created!
+                </div>
+                <div className="flex items-center gap-2">
+                  <input
+                    type="text"
+                    value={generatedLink}
+                    readOnly
+                    className="flex-1 rounded border bg-white px-3 py-2 font-mono text-sm text-gray-800"
+                  />
+                  <button
+                    onClick={() => navigator.clipboard?.writeText(generatedLink)}
+                    className="rounded bg-emerald-600 px-3 py-2 text-sm text-white hover:bg-emerald-700"
+                  >
+                    Copy
+                  </button>
+                </div>
+                <p className="mt-2 text-xs text-emerald-600">
+                  This link will expire after being viewed once
+                </p>
+              </div>
+              <button
+                onClick={handleDismissLink}
+                className="text-sm text-gray-500 hover:text-gray-700"
+              >
+                Create another secret →
+              </button>
+            </div>
+          ) : (
+            <>
+              <textarea
+                className="h-20 w-full resize-none rounded-lg border p-3 text-gray-800 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                placeholder="Enter your secret..."
+                value={secretText}
+                onChange={(e) => setSecretText(e.target.value)}
+              />
+              <button
+                onClick={handleCreateSecret}
+                className="mt-3 rounded-lg bg-emerald-600 px-4 py-2 text-white transition-colors hover:bg-emerald-700 active:bg-emerald-800"
+              >
+                Create Secret Link
+              </button>
+            </>
+          )}
+        </div>
+        <div className="rounded-lg bg-white p-6 shadow">
+          <h2 className="mb-4 text-lg font-semibold text-gray-800">
+            Recent Secrets
+          </h2>
+          {recentSecrets.length > 0 ? (
+            <div className="space-y-2">
+              {recentSecrets.map((secret) => (
+                <div key={secret.id} className="flex items-center justify-between rounded border p-3 text-sm">
+                  <div className="flex items-center gap-3">
+                    <span className="font-mono text-xs text-gray-400">{secret.id}</span>
+                    <span className="text-gray-600">{secret.preview}</span>
+                  </div>
+                  <span className="text-xs text-gray-400">{secret.created}</span>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="text-sm text-gray-500">No secrets created yet</div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export function BrowserScreen({ type }) {
   const screens = {
@@ -129,43 +248,7 @@ export function BrowserScreen({ type }) {
         </div>
       </div>
     ),
-    dashboard: (
-      <div className="h-full bg-gray-100">
-        <nav className="flex items-center justify-between bg-slate-800 px-4 py-3 text-white">
-          <div className="flex items-center gap-4">
-            <span className="text-lg font-bold">🔐 OTS</span>
-            <span className="text-sm text-slate-300">Dashboard</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <span className="text-sm">alice@contoso.com</span>
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-500 font-medium">
-              A
-            </div>
-          </div>
-        </nav>
-        <div className="p-6">
-          <div className="mb-4 rounded-lg bg-white p-6 shadow">
-            <h2 className="mb-4 text-lg font-semibold text-gray-800">
-              Create a Secret
-            </h2>
-            <textarea
-              className="h-20 w-full resize-none rounded-lg border p-3 text-gray-800"
-              placeholder="Enter your secret..."
-              readOnly
-            />
-            <button className="mt-3 rounded-lg bg-emerald-600 px-4 py-2 text-white">
-              Create Secret Link
-            </button>
-          </div>
-          <div className="rounded-lg bg-white p-6 shadow">
-            <h2 className="mb-4 text-lg font-semibold text-gray-800">
-              Recent Secrets
-            </h2>
-            <div className="text-sm text-gray-500">No secrets created yet</div>
-          </div>
-        </div>
-      </div>
-    ),
+    dashboard: <DashboardScreen />,
   };
   return screens[type] || screens.blank;
 }

@@ -9,9 +9,9 @@ const demos = [
   {
     id: "oidc-saml-bridge",
     title: "OIDC→SAML Bridge via Forward Auth",
-    subtitle: "Caddy + Logto + Entra ID",
-    description: "SP-initiated flow with external auth gateway and protocol bridging. Shows OIDC-to-SAML translation for enterprise SSO where the application uses OIDC but the IdP uses SAML.",
-    tags: ["OIDC", "SAML", "Forward Auth", "Protocol Bridging"],
+    subtitle: "Caddy + OAuth2Proxy + Logto + Entra ID",
+    description: "SP-initiated flow with external auth gateway and protocol bridging. OAuth2Proxy handles OIDC with Logto, which bridges to enterprise SAML IdPs. Your app stays simple while supporting complex enterprise SSO.",
+    tags: ["OIDC", "SAML", "OAuth2Proxy", "Protocol Bridging"],
     icon: "🔐",
     path: "/artifacts/2026/sso-demos/oidc-saml-bridge/",
   }

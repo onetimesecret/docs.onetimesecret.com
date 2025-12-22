@@ -22,6 +22,8 @@ import { BrowserScreen } from "./BrowserScreen.jsx";
 import { HttpEntry } from "./HttpEntry.jsx";
 import { ActorDiagram } from "./ActorDiagram.jsx";
 
+const DEMO_VERSION = "0.2.0";
+
 export default function OIDCSAMLBridge() {
   const [currentStep, setCurrentStep] = useState(0);
   const [autoPlay, setAutoPlay] = useState(false);
@@ -48,7 +50,7 @@ export default function OIDCSAMLBridge() {
             OIDC→SAML Bridge via Forward Auth
           </h1>
           <p className="text-base text-gray-400">
-            Caddy + Logto + Entra ID: SP-initiated flow with protocol bridging
+            Caddy + OAuth2Proxy + Logto + Entra ID: SP-initiated flow with protocol bridging
           </p>
         </div>
 
@@ -198,60 +200,93 @@ export default function OIDCSAMLBridge() {
         </div>
 
         {/* Architecture visual */}
-        <div className="rounded-lg border border-gray-700/50 bg-gray-800 p-6">
-          <div className="flex items-center justify-center gap-6">
+        <div className="rounded-lg border border-gray-700/50 bg-gray-800 p-5">
+          <h3 className="mb-4 text-center text-xs font-semibold uppercase tracking-wider text-gray-500">
+            Protocol Stack
+          </h3>
+          <div className="flex items-center justify-center gap-4">
             {/* OTS Application */}
             <div
-              className={`flex min-w-[100px] flex-col items-center rounded-xl p-5 transition-all duration-300 ${
+              className={`flex min-w-[90px] flex-col items-center rounded-xl p-4 transition-all duration-300 ${
                 step.actors.ots
                   ? "bg-gradient-to-br from-emerald-600 to-emerald-700 shadow-lg shadow-emerald-500/30 ring-2 ring-emerald-400/50"
                   : "bg-gray-700/80"
               }`}
             >
-              <div className="mb-2 text-3xl">🔐</div>
-              <div className="font-bold">OTS</div>
-              <div className="text-xs text-gray-200/80">Application</div>
+              <div className="mb-1.5 text-2xl">🔐</div>
+              <div className="text-sm font-bold">OTS</div>
+              <div className="text-[10px] text-gray-200/80">Application</div>
             </div>
 
-            {/* Connector: OTS → Logto */}
+            {/* Connector: OTS → Caddy */}
             <div className="flex flex-col items-center gap-1">
               <div className="flex items-center">
                 <div
-                  className={`h-1 w-16 rounded-full transition-all duration-300 ${
+                  className={`h-0.5 w-8 transition-all duration-300 ${
                     step.actors.ots || step.actors.caddy
-                      ? "bg-gradient-to-r from-emerald-500 to-purple-500"
+                      ? "bg-emerald-500"
                       : "bg-gray-600"
                   }`}
                 />
                 <div
-                  className={`h-0 w-0 border-y-[6px] border-l-[8px] border-y-transparent transition-colors duration-300 ${
-                    step.actors.ots || step.actors.caddy ? "border-l-purple-500" : "border-l-gray-600"
+                  className={`h-0 w-0 border-y-4 border-l-[6px] border-y-transparent transition-colors duration-300 ${
+                    step.actors.ots || step.actors.caddy ? "border-l-emerald-500" : "border-l-gray-600"
                   }`}
                 />
               </div>
-              <div className="rounded bg-gray-700/50 px-2 py-0.5 text-xs font-medium text-gray-400">
-                Caddy
+              <div className="text-[10px] text-gray-500">HTTP</div>
+            </div>
+
+            {/* Caddy + OAuth2Proxy */}
+            <div
+              className={`flex min-w-[90px] flex-col items-center rounded-xl p-4 transition-all duration-300 ${
+                step.actors.caddy
+                  ? "bg-gradient-to-br from-amber-600 to-amber-700 shadow-lg shadow-amber-500/30 ring-2 ring-amber-400/50"
+                  : "bg-gray-700/80"
+              }`}
+            >
+              <div className="mb-1.5 text-2xl">🛡️</div>
+              <div className="text-sm font-bold">Caddy</div>
+              <div className="text-[10px] text-gray-200/80">+ OAuth2Proxy</div>
+            </div>
+
+            {/* Connector: Caddy → Logto */}
+            <div className="flex flex-col items-center gap-1">
+              <div className="flex items-center">
+                <div
+                  className={`h-0.5 w-8 transition-all duration-300 ${
+                    step.actors.caddy || step.actors.logto
+                      ? "bg-gradient-to-r from-amber-500 to-purple-500"
+                      : "bg-gray-600"
+                  }`}
+                />
+                <div
+                  className={`h-0 w-0 border-y-4 border-l-[6px] border-y-transparent transition-colors duration-300 ${
+                    step.actors.caddy || step.actors.logto ? "border-l-purple-500" : "border-l-gray-600"
+                  }`}
+                />
               </div>
+              <div className="text-[10px] text-gray-500">OIDC</div>
             </div>
 
             {/* Logto */}
             <div
-              className={`flex min-w-[100px] flex-col items-center rounded-xl p-5 transition-all duration-300 ${
+              className={`flex min-w-[90px] flex-col items-center rounded-xl p-4 transition-all duration-300 ${
                 step.actors.logto
                   ? "bg-gradient-to-br from-purple-600 to-purple-700 shadow-lg shadow-purple-500/30 ring-2 ring-purple-400/50"
                   : "bg-gray-700/80"
               }`}
             >
-              <div className="mb-2 text-3xl">🔑</div>
-              <div className="font-bold">Logto</div>
-              <div className="text-xs text-gray-200/80">OIDC + SAML SP</div>
+              <div className="mb-1.5 text-2xl">🔑</div>
+              <div className="text-sm font-bold">Logto</div>
+              <div className="text-[10px] text-gray-200/80">OIDC + SAML SP</div>
             </div>
 
             {/* Connector: Logto → Entra */}
             <div className="flex flex-col items-center gap-1">
               <div className="flex items-center">
                 <div
-                  className={`h-1 w-16 rounded-full transition-all duration-300 ${
+                  className={`h-0.5 w-8 transition-all duration-300 ${
                     step.actors.logto && step.actors.entra
                       ? "bg-gradient-to-r from-purple-500 to-cyan-500"
                       : step.actors.entra
@@ -260,28 +295,42 @@ export default function OIDCSAMLBridge() {
                   }`}
                 />
                 <div
-                  className={`h-0 w-0 border-y-[6px] border-l-[8px] border-y-transparent transition-colors duration-300 ${
+                  className={`h-0 w-0 border-y-4 border-l-[6px] border-y-transparent transition-colors duration-300 ${
                     step.actors.entra ? "border-l-cyan-500" : "border-l-gray-600"
                   }`}
                 />
               </div>
-              <div className="rounded bg-gray-700/50 px-2 py-0.5 text-xs font-medium text-gray-400">
-                SAML
-              </div>
+              <div className="text-[10px] text-gray-500">SAML</div>
             </div>
 
             {/* Entra */}
             <div
-              className={`flex min-w-[100px] flex-col items-center rounded-xl p-5 transition-all duration-300 ${
+              className={`flex min-w-[90px] flex-col items-center rounded-xl p-4 transition-all duration-300 ${
                 step.actors.entra
                   ? "bg-gradient-to-br from-cyan-600 to-cyan-700 shadow-lg shadow-cyan-500/30 ring-2 ring-cyan-400/50"
                   : "bg-gray-700/80"
               }`}
             >
-              <div className="mb-2 text-3xl">🏢</div>
-              <div className="font-bold">Entra</div>
-              <div className="text-xs text-gray-200/80">Identity Provider</div>
+              <div className="mb-1.5 text-2xl">🏢</div>
+              <div className="text-sm font-bold">Entra</div>
+              <div className="text-[10px] text-gray-200/80">Identity Provider</div>
             </div>
+          </div>
+        </div>
+
+        {/* Footer with version */}
+        <div className="flex items-center justify-between pt-4 text-xs text-gray-600">
+          <a
+            href="/artifacts/2026/sso-demos/"
+            className="flex items-center gap-1 transition-colors hover:text-gray-400"
+          >
+            ← All demos
+          </a>
+          <div className="flex items-center gap-2">
+            <span>OIDC→SAML Bridge Demo</span>
+            <span className="rounded bg-gray-800 px-1.5 py-0.5 font-mono text-gray-500">
+              v{DEMO_VERSION}
+            </span>
           </div>
         </div>
       </div>
