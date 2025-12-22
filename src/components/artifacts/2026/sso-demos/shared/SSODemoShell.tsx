@@ -257,7 +257,7 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
         <div className="flex items-center justify-between pt-4 text-xs text-gray-600">
           <a
             href={config.backLink.href}
-            className="flex items-center gap-1 transition-colors hover:text-gray-400"
+            className="flex items-center gap-1 text-gray-500 transition-colors hover:text-gray-300"
           >
             ← {config.backLink.label}
           </a>
