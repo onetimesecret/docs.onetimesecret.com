@@ -1,20 +1,31 @@
 // src/components/artifacts/2026/sso-demos/shared/ProtocolStack.tsx
 
 import React from "react";
+import type { Actors, ProtocolStackConfig, ProtocolStackConnection } from "./types.ts";
+
+interface ProtocolStackProps {
+  /** Current active state of each component */
+  actors: Actors;
+  /** Stack configuration with components and connections */
+  config: ProtocolStackConfig;
+}
+
+interface ConnectorProps {
+  /** Connection configuration */
+  connection: ProtocolStackConnection;
+  /** Whether the connector should be highlighted */
+  isActive: boolean;
+}
 
 /**
  * Protocol stack visualization showing the authentication architecture.
  * Components light up when active, with protocol labels on connections.
- *
- * @param {Object} props
- * @param {import('./types').Actors} props.actors - Current active state of each component
- * @param {import('./types').ProtocolStackConfig} props.config - Stack configuration
  */
-export function ProtocolStack({ actors, config }) {
+export function ProtocolStack({ actors, config }: ProtocolStackProps) {
   const { components, connections } = config;
 
   // Build a map for quick lookup of connection info
-  const connectionMap = new Map();
+  const connectionMap = new Map<string, ProtocolStackConnection>();
   connections.forEach((conn) => {
     connectionMap.set(`${conn.from}-${conn.to}`, conn);
   });
@@ -67,7 +78,7 @@ export function ProtocolStack({ actors, config }) {
 /**
  * Connector component between protocol stack components.
  */
-function Connector({ connection, isActive }) {
+function Connector({ connection, isActive }: ConnectorProps) {
   const activeColor = isActive ? connection.activeColor : "bg-gray-600";
   const activeBorderLeft = isActive
     ? connection.activeColor.replace("bg-", "border-l-")

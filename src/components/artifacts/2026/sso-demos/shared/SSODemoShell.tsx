@@ -1,23 +1,28 @@
 // src/components/artifacts/2026/sso-demos/shared/SSODemoShell.tsx
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, type ComponentType } from "react";
 import { useHotkeys } from "react-hotkeys-hook";
 import { BrowserMockup } from "./BrowserMockup.tsx";
 import { HttpEntry } from "./HttpEntry.tsx";
 import { ActorDiagram } from "./ActorDiagram.tsx";
 import { ProtocolStack } from "./ProtocolStack.tsx";
+import type { Step, DemoConfig } from "./types.ts";
+
+interface SSODemoShellProps {
+  /** Array of demo steps */
+  steps: Step[];
+  /** Map of screen keys to screen components */
+  screens: Record<string, ComponentType>;
+  /** Demo configuration */
+  config: DemoConfig;
+}
 
 /**
  * Main shell component for SSO demos.
  * Handles navigation, keyboard controls, autoplay, and layout.
  * Demos provide their steps, screens, and configuration.
- *
- * @param {Object} props
- * @param {import('./types').Step[]} props.steps - Array of demo steps
- * @param {Record<string, React.ComponentType>} props.screens - Map of screen keys to components
- * @param {import('./types').DemoConfig} props.config - Demo configuration
  */
-export function SSODemoShell({ steps, screens, config }) {
+export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
   const [currentStep, setCurrentStep] = useState(0);
   const [autoPlay, setAutoPlay] = useState(false);
   const step = steps[currentStep];

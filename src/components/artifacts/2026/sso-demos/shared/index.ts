@@ -37,4 +37,8 @@ export {
   LogtoSignIn,
   EntraLogin,
   EntraAutoSubmit,
+  OktaLogin,
+  Auth0Universal,
+  GoogleOAuth,
+  KeycloakLogin,
 } from "./screens/idp/index.ts";

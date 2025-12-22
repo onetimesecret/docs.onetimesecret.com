@@ -1,16 +1,20 @@
 // src/components/artifacts/2026/sso-demos/shared/ActorDiagram.tsx
 
 import React, { Fragment } from "react";
+import type { Actors, ActorConfig } from "./types.ts";
+
+interface ActorDiagramProps {
+  /** Current active state of each actor */
+  actors: Actors;
+  /** Configuration for actors to display */
+  actorConfig: ActorConfig[];
+}
 
 /**
  * Horizontal strip showing which actors/components are active in the current step.
  * Actors light up when active, providing visual context for the HTTP flow.
- *
- * @param {Object} props
- * @param {import('./types').Actors} props.actors - Current active state of each actor
- * @param {import('./types').ActorConfig[]} props.actorConfig - Configuration for actors to display
  */
-export function ActorDiagram({ actors, actorConfig }) {
+export function ActorDiagram({ actors, actorConfig }: ActorDiagramProps) {
   return (
     <div className="mb-4 flex flex-wrap items-center gap-1">
       {actorConfig.map((item, i) => (

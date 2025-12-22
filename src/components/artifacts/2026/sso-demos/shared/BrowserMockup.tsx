@@ -1,16 +1,19 @@
 // src/components/artifacts/2026/sso-demos/shared/BrowserMockup.tsx
 
-import React from "react";
+import React, { type ReactNode } from "react";
+
+interface BrowserMockupProps {
+  /** URL to display in the address bar */
+  urlBar: string;
+  /** Screen content to render inside the browser */
+  children: ReactNode;
+}
 
 /**
  * Browser chrome wrapper component.
  * Provides the macOS-style browser window frame with traffic lights and URL bar.
- *
- * @param {Object} props
- * @param {string} props.urlBar - URL to display in the address bar
- * @param {React.ReactNode} props.children - Screen content to render inside
  */
-export function BrowserMockup({ urlBar, children }) {
+export function BrowserMockup({ urlBar, children }: BrowserMockupProps) {
   return (
     <div className="flex flex-1 flex-col overflow-hidden rounded-lg border border-gray-700 shadow-2xl">
       {/* Browser chrome */}
