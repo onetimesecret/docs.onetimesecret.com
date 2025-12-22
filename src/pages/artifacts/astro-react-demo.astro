@@ -1,0 +1,161 @@
+---
+// src/pages/artifacts/astro-react-demo.astro
+import ExampleReactDemo from '../../components/artifacts/ExampleReactDemo.jsx';
+
+const pageTitle = "Astro + React Integration Demo";
+const pageDescription = "Reference implementation demonstrating React component integration in Astro using Islands architecture";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content={pageDescription}>
+  <title>{pageTitle}</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+      line-height: 1.6;
+      color: #1e293b;
+      background: linear-gradient(to bottom, #f8fafc, #e2e8f0);
+      min-height: 100vh;
+    }
+
+    h1 {
+      color: #0f172a;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      color: #64748b;
+      font-size: 1.125rem;
+      margin-bottom: 2rem;
+    }
+
+    .section {
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background: white;
+      border-radius: 0.5rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .section h2 {
+      margin-top: 0;
+      color: #334155;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 0.5rem;
+    }
+
+    .info-box {
+      background: #dbeafe;
+      border-left: 4px solid #3b82f6;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0.25rem;
+    }
+
+    .info-box code {
+      background: #1e293b;
+      color: #f1f5f9;
+      padding: 0.125rem 0.375rem;
+      border-radius: 0.25rem;
+      font-size: 0.875rem;
+    }
+
+    .warning-box {
+      background: #fef3c7;
+      border-left: 4px solid #f59e0b;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0.25rem;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid #e2e8f0;
+      color: #64748b;
+      font-size: 0.875rem;
+    }
+
+    footer a {
+      color: #3b82f6;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>{pageTitle}</h1>
+  <p class="subtitle">{pageDescription}</p>
+
+  <div class="section">
+    <h2>1. client:load - Immediate Hydration</h2>
+    <p>Component hydrates immediately on page load. Best for critical interactive elements.</p>
+    <div class="info-box">
+      <code>{"<ExampleReactDemo client:load />"}</code>
+    </div>
+    <ExampleReactDemo client:load />
+  </div>
+
+  <div class="section">
+    <h2>2. client:idle - Idle Hydration</h2>
+    <p>Component hydrates when the browser is idle (after initial page load completes). Best for non-critical UI elements.</p>
+    <div class="info-box">
+      <code>{"<ExampleReactDemo client:idle />"}</code>
+    </div>
+    <ExampleReactDemo client:idle />
+  </div>
+
+  <div class="section">
+    <h2>3. client:visible - Viewport Hydration</h2>
+    <p>Component hydrates when it enters the viewport. Best for below-the-fold content.</p>
+    <div class="info-box">
+      <code>{"<ExampleReactDemo client:visible />"}</code>
+    </div>
+    <ExampleReactDemo client:visible />
+  </div>
+
+  <div class="section">
+    <h2>4. client:only - Client-Side Only</h2>
+    <p>Component is not server-rendered and only runs in the browser. Use when component requires browser APIs.</p>
+    <div class="info-box">
+      <code>{"<ExampleReactDemo client:only=\"react\" />"}</code>
+    </div>
+    <ExampleReactDemo client:only="react" />
+  </div>
+
+  <div class="section">
+    <h2>5. No Directive - Static HTML</h2>
+    <p>Component is rendered to static HTML without JavaScript hydration. No interactivity.</p>
+    <div class="warning-box">
+      <strong>Note:</strong> The button below will not work because the component is not hydrated.
+    </div>
+    <div class="info-box">
+      <code>{"<ExampleReactDemo />"}</code>
+    </div>
+    <ExampleReactDemo />
+  </div>
+
+  <footer>
+    <p>
+      <strong>Reference Implementation:</strong>
+      <code>src/components/artifacts/ExampleReactDemo.jsx</code>
+    </p>
+    <p>
+      Learn more about Astro Islands:
+      <a href="https://docs.astro.build/en/concepts/islands/" target="_blank" rel="noopener">
+        Astro Documentation
+      </a>
+    </p>
+  </footer>
+</body>
+</html>

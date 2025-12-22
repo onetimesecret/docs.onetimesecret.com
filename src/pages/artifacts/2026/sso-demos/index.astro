@@ -1,0 +1,128 @@
+---
+// src/pages/artifacts/2026/sso-demos/index.astro
+import DemoLayout from '../../../../layouts/DemoLayout.astro';
+
+const pageTitle = "SSO Authentication Flow Demos";
+const pageDescription = "Interactive visualizations of enterprise SSO authentication patterns and protocol bridging";
+
+/**
+ * Demo Naming Rationale
+ * ---------------------
+ * These demos are educational tools for technical analysts evaluating SSO patterns.
+ * Copy priorities (in order):
+ *   1. Outcome/use-case first — what problem does this solve?
+ *   2. Architecture pattern — how is it structured?
+ *   3. Protocol details — what's the technical mechanism?
+ *
+ * Avoid:
+ *   - Leading with acronym soup (OIDC, SAML, SP-initiated)
+ *   - Passive voice in descriptions
+ *   - Component lists without context
+ *
+ * The key insight for readers: "My app doesn't touch SAML — the gateway does."
+ */
+const demos = [
+  {
+    id: "oidc-saml-bridge",
+    title: "Enterprise SAML for Modern Apps",
+    subtitle: "Caddy + Logto bridge OIDC↔SAML to Entra",
+    description: "The gateway handles enterprise SSO; the application just receives authenticated requests. Step through every redirect, cookie, and token exchange in the complete flow.",
+    tags: ["OIDC", "SAML", "Forward Auth", "Protocol Bridging"],
+    icon: "🔐",
+    path: "/artifacts/2026/sso-demos/oidc-saml-bridge/",
+  }
+];
+---
+
+<DemoLayout title={pageTitle} description={pageDescription}>
+<div class="font-sans text-gray-100">
+  <div class="flex min-h-screen flex-col p-8">
+    <div class="mx-auto w-full max-w-4xl flex-1">
+      {/* Header */}
+      <header class="mb-16 text-center">
+        <h1 class="mb-4 text-4xl font-bold tracking-tight text-amber-200">
+          SSO Authentication Flow Demos
+        </h1>
+        <p class="text-xl text-gray-300">
+          Interactive visualizations of popular SSO patterns
+        </p>
+      </header>
+
+      {/* Featured Demo */}
+      <div class="mb-10">
+        {demos.map((demo) => (
+          <a
+            href={demo.path}
+            class="group relative block overflow-hidden rounded-xl border border-gray-600 bg-gradient-to-br from-gray-800 to-gray-900 p-8 shadow-lg transition-all hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/20"
+          >
+            {/* Subtle gradient overlay */}
+            <div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-blue-600/5 to-purple-600/5" />
+
+            {/* Icon and Title */}
+            <div class="relative mb-6 flex items-start gap-5">
+              <div class="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 text-3xl shadow-lg shadow-purple-500/20">
+                {demo.icon}
+              </div>
+              <div class="flex-1">
+                <h2 class="text-2xl font-bold text-gray-100 group-hover:text-blue-400 transition-colors">
+                  {demo.title}
+                </h2>
+                <p class="mt-1.5 text-sm font-medium text-gray-400">
+                  {demo.subtitle}
+                </p>
+              </div>
+            </div>
+
+            {/* Description */}
+            <p class="relative mb-6 text-base leading-relaxed text-gray-300">
+              {demo.description}
+            </p>
+
+            {/* Tags */}
+            <div class="relative flex flex-wrap gap-2">
+              {demo.tags.map((tag) => (
+                <span class="rounded-md border border-gray-600 bg-gray-700/50 px-3 py-1.5 text-xs font-medium text-gray-200">
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            {/* Arrow indicator */}
+            <div class="relative mt-6 flex items-center text-sm font-semibold text-blue-400 transition-transform group-hover:translate-x-2">
+              View Demo
+              <svg class="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      {/* Coming Soon Section */}
+      <div class="rounded-xl border border-gray-700/50 bg-gray-800/30 p-6">
+        <div class="flex items-center gap-3">
+          <div class="h-px flex-1 bg-gradient-to-r from-transparent via-gray-600 to-transparent" />
+          <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-400">
+            More Coming Soon
+          </h3>
+          <div class="h-px flex-1 bg-gradient-to-r from-transparent via-gray-600 to-transparent" />
+        </div>
+      </div>
+
+      {/* Footer */}
+      <footer class="mt-auto pt-16 text-center">
+        <div class="border-t border-gray-800 pt-8">
+          <p class="text-sm text-gray-500">
+            These demonstrations are designed for technical analysts evaluating SSO integration patterns.
+          </p>
+          <p class="mt-3">
+            <a href="https://docs.onetimesecret.com" class="text-sm text-gray-400 hover:text-gray-200 transition-colors">
+              ← Back to Documentation
+            </a>
+          </p>
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>
+</DemoLayout>

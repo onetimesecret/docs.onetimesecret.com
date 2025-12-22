@@ -9,6 +9,7 @@ on:
       - "claude/*"
       - "fix/*"
       - "delano/*"
+      - "content/*"
       - "rel/*"
       - "develop"
   issue_comment:

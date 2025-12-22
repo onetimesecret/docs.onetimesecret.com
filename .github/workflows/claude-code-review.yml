@@ -9,6 +9,7 @@ on:
       - "claude/*"
       - "fix/*"
       - "delano/*"
+      - "content/*"
       - "rel/*"
       - "develop"
     types: [opened, synchronize, labeled]
