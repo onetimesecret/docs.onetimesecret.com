@@ -50,9 +50,11 @@ export default function OIDCSAMLBridge() {
             OIDC→SAML Bridge via Forward Auth
           </h1>
           <p className="text-base text-gray-400">
-            <span className="font-medium text-gray-300">Caddy + OAuth2Proxy + Logto + Entra ID</span>
-            <span className="mx-2 text-gray-600">·</span>
-            SP-initiated flow with protocol bridging
+            <span className="font-medium text-gray-300">
+              Caddy + OAuth2Proxy + Logto + Entra ID
+            </span>
+            <span className="mx-2 text-gray-600">·</span>A service
+            Provider-initiated flow with protocol bridging
           </p>
         </div>
 
@@ -117,7 +119,9 @@ export default function OIDCSAMLBridge() {
               {step.id}
             </div>
             <div className="flex-1">
-              <h3 className="text-lg font-semibold text-gray-100">{step.title}</h3>
+              <h3 className="text-lg font-semibold text-gray-100">
+                {step.title}
+              </h3>
               <p className="mt-1 text-sm leading-relaxed text-gray-400">
                 {step.description}
               </p>
@@ -130,16 +134,29 @@ export default function OIDCSAMLBridge() {
           {/* Left: User view */}
           <div className="flex flex-col gap-3">
             <h2 className="flex items-center gap-2.5 text-base font-semibold">
-              <svg className="h-5 w-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              <svg
+                className="h-5 w-5 text-blue-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                />
               </svg>
               What the user sees
             </h2>
             {/* Browser mockup */}
-            <div
-              className="flex flex-1 flex-col overflow-hidden rounded-lg border border-gray-700 shadow-2xl"
-            >
+            <div className="flex flex-1 flex-col overflow-hidden rounded-lg border border-gray-700 shadow-2xl">
               <div className="flex flex-shrink-0 items-center gap-2 bg-gradient-to-b from-gray-300 to-gray-400 px-3 py-2">
                 <div className="flex gap-1.5">
                   <div className="h-3 w-3 rounded-full bg-red-500" />
@@ -161,14 +178,22 @@ export default function OIDCSAMLBridge() {
           {/* Right: Technical view */}
           <div className="flex flex-col gap-3">
             <h2 className="flex items-center gap-2.5 text-base font-semibold">
-              <svg className="h-5 w-5 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              <svg
+                className="h-5 w-5 text-emerald-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                />
               </svg>
               What's happening (HTTP)
             </h2>
-            <div
-              className="flex flex-1 flex-col rounded-lg border border-gray-700/50 bg-gray-800 p-4"
-            >
+            <div className="flex flex-1 flex-col rounded-lg border border-gray-700/50 bg-gray-800 p-4">
               <ActorDiagram actors={step.actors} />
               <div className="mb-4 flex-1 space-y-3 overflow-y-auto">
                 {step.http.map((entry, i) => (
@@ -177,7 +202,9 @@ export default function OIDCSAMLBridge() {
               </div>
               {/* Legend */}
               <div className="mt-auto border-t border-gray-700 pt-4">
-                <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider text-gray-500">Legend</h3>
+                <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider text-gray-500">
+                  Legend
+                </h3>
                 <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-xs">
                   <div className="flex items-center gap-2">
                     <div className="h-3 w-3 rounded-sm border-l-4 border-blue-500 bg-blue-950/50" />
@@ -232,7 +259,9 @@ export default function OIDCSAMLBridge() {
                 />
                 <div
                   className={`h-0 w-0 border-y-4 border-l-[6px] border-y-transparent transition-colors duration-300 ${
-                    step.actors.ots || step.actors.caddy ? "border-l-emerald-500" : "border-l-gray-600"
+                    step.actors.ots || step.actors.caddy
+                      ? "border-l-emerald-500"
+                      : "border-l-gray-600"
                   }`}
                 />
               </div>
@@ -264,7 +293,9 @@ export default function OIDCSAMLBridge() {
                 />
                 <div
                   className={`h-0 w-0 border-y-4 border-l-[6px] border-y-transparent transition-colors duration-300 ${
-                    step.actors.caddy || step.actors.logto ? "border-l-purple-500" : "border-l-gray-600"
+                    step.actors.caddy || step.actors.logto
+                      ? "border-l-purple-500"
+                      : "border-l-gray-600"
                   }`}
                 />
               </div>
@@ -298,7 +329,9 @@ export default function OIDCSAMLBridge() {
                 />
                 <div
                   className={`h-0 w-0 border-y-4 border-l-[6px] border-y-transparent transition-colors duration-300 ${
-                    step.actors.entra ? "border-l-cyan-500" : "border-l-gray-600"
+                    step.actors.entra
+                      ? "border-l-cyan-500"
+                      : "border-l-gray-600"
                   }`}
                 />
               </div>
@@ -315,7 +348,9 @@ export default function OIDCSAMLBridge() {
             >
               <div className="mb-1.5 text-2xl">🏢</div>
               <div className="text-sm font-bold">Entra</div>
-              <div className="text-[10px] text-gray-200/80">Identity Provider</div>
+              <div className="text-[10px] text-gray-200/80">
+                Identity Provider
+              </div>
             </div>
           </div>
         </div>
