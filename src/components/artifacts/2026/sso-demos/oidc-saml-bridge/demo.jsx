@@ -17,17 +17,23 @@
  */
 
 import React, { useState, useEffect } from "react";
+import { useHotkeys } from "react-hotkeys-hook";
 import { STEPS } from "./steps.ts";
 import { BrowserScreen } from "./BrowserScreen.jsx";
 import { HttpEntry } from "./HttpEntry.jsx";
 import { ActorDiagram } from "./ActorDiagram.jsx";
 
-const DEMO_VERSION = "0.2.0";
+const DEMO_VERSION = "0.3.0";
 
 export default function OIDCSAMLBridge() {
   const [currentStep, setCurrentStep] = useState(0);
   const [autoPlay, setAutoPlay] = useState(false);
   const step = STEPS[currentStep];
+
+  // Keyboard navigation: ← → arrows and space for autoplay
+  useHotkeys("left", () => setCurrentStep((s) => Math.max(0, s - 1)), []);
+  useHotkeys("right", () => setCurrentStep((s) => Math.min(STEPS.length - 1, s + 1)), []);
+  useHotkeys("space", (e) => { e.preventDefault(); setAutoPlay((a) => !a); }, []);
 
   useEffect(() => {
     if (!autoPlay) return;
