@@ -1,0 +1,181 @@
+---
+// src/pages/artifacts/2026/sso-demos/index.astro
+import '../../../../styles/tailwind.css';
+
+const pageTitle = "SSO Authentication Flow Demos";
+const pageDescription = "Interactive visualizations of enterprise SSO authentication patterns and protocol bridging";
+
+const demos = [
+  {
+    id: "oidc-saml-bridge",
+    title: "OIDC→SAML Bridge via Forward Auth",
+    subtitle: "Caddy + Logto + Entra ID",
+    description: "SP-initiated flow with external auth gateway and protocol bridging. Shows OIDC-to-SAML translation for enterprise SSO where the application uses OIDC but the IdP uses SAML.",
+    tags: ["OIDC", "SAML", "Forward Auth", "Protocol Bridging"],
+    icon: "🔐",
+    path: "/artifacts/2026/sso-demos/oidc-saml-bridge/",
+  }
+];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content={pageDescription}>
+  <meta name="author" content="Onetime Secret">
+  <meta name="theme-color" content="#111827">
+  <title>{pageTitle}</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 font-sans text-gray-100">
+  <div class="min-h-screen p-8">
+    <div class="mx-auto max-w-5xl">
+      {/* Header */}
+      <header class="mb-12 text-center">
+        <h1 class="mb-3 text-4xl font-bold tracking-tight">
+          SSO Authentication Flow Demos
+        </h1>
+        <p class="text-lg text-gray-400">
+          Interactive visualizations of popular SSO patterns
+        </p>
+        <p class="mt-2 text-sm text-gray-500">
+          We explore different authentication architectures, protocol combinations, and integration patterns.
+        </p>
+      </header>
+
+      {/* Demo Grid */}
+      <div class="grid gap-6 md:grid-cols-1 lg:grid-cols-2">
+        {demos.map((demo) => (
+          <a
+            href={demo.path}
+            class="group block rounded-lg border border-gray-700 bg-gray-800 p-6 transition-all hover:border-blue-500 hover:shadow-xl hover:shadow-blue-500/10"
+          >
+            {/* Icon and Title */}
+            <div class="mb-4 flex items-start gap-4">
+              <div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-purple-600 text-2xl">
+                {demo.icon}
+              </div>
+              <div class="flex-1">
+                <h2 class="text-xl font-semibold text-gray-100 group-hover:text-blue-400">
+                  {demo.title}
+                </h2>
+                <p class="mt-1 text-sm text-gray-400">
+                  {demo.subtitle}
+                </p>
+              </div>
+            </div>
+
+            {/* Description */}
+            <p class="mb-4 text-sm leading-relaxed text-gray-300">
+              {demo.description}
+            </p>
+
+            {/* Tags */}
+            <div class="flex flex-wrap gap-2">
+              {demo.tags.map((tag) => (
+                <span class="rounded bg-gray-700 px-2 py-1 text-xs text-gray-300">
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            {/* Arrow indicator */}
+            <div class="mt-4 flex items-center text-sm font-medium text-blue-400 transition-transform group-hover:translate-x-1">
+              View Demo →
+            </div>
+          </a>
+        ))}
+      </div>
+
+      {/* Coming Soon Section */}
+      <div class="mt-12 rounded-lg border border-gray-700 bg-gray-800/50 p-6">
+        <h3 class="mb-4 text-lg font-semibold text-gray-300">
+          Coming Soon
+        </h3>
+        <div class="grid gap-4 md:grid-cols-2">
+          <div class="rounded-lg border border-gray-700/50 bg-gray-800/30 p-4 opacity-60">
+            <div class="mb-2 flex items-center gap-2">
+              <span class="text-xl">🌐</span>
+              <h4 class="font-semibold text-gray-400">Pure OIDC via Forward Auth</h4>
+            </div>
+            <p class="text-sm text-gray-500">
+              Caddy + OAuth2 Proxy + Auth0
+            </p>
+            <div class="mt-2 flex flex-wrap gap-1">
+              <span class="rounded bg-gray-700/50 px-2 py-0.5 text-xs text-gray-500">OIDC</span>
+              <span class="rounded bg-gray-700/50 px-2 py-0.5 text-xs text-gray-500">Forward Auth</span>
+            </div>
+          </div>
+
+          <div class="rounded-lg border border-gray-700/50 bg-gray-800/30 p-4 opacity-60">
+            <div class="mb-2 flex items-center gap-2">
+              <span class="text-xl">⚡</span>
+              <h4 class="font-semibold text-gray-400">Pure OIDC via Application SDK</h4>
+            </div>
+            <p class="text-sm text-gray-500">
+              Next.js + NextAuth.js + Okta
+            </p>
+            <div class="mt-2 flex flex-wrap gap-1">
+              <span class="rounded bg-gray-700/50 px-2 py-0.5 text-xs text-gray-500">OIDC</span>
+              <span class="rounded bg-gray-700/50 px-2 py-0.5 text-xs text-gray-500">SDK Integration</span>
+            </div>
+          </div>
+
+          <div class="rounded-lg border border-gray-700/50 bg-gray-800/30 p-4 opacity-60">
+            <div class="mb-2 flex items-center gap-2">
+              <span class="text-xl">☁️</span>
+              <h4 class="font-semibold text-gray-400">OAuth2 via Cloud Gateway</h4>
+            </div>
+            <p class="text-sm text-gray-500">
+              AWS ALB + Cognito
+            </p>
+            <div class="mt-2 flex flex-wrap gap-1">
+              <span class="rounded bg-gray-700/50 px-2 py-0.5 text-xs text-gray-500">OAuth2</span>
+              <span class="rounded bg-gray-700/50 px-2 py-0.5 text-xs text-gray-500">Cloud Gateway</span>
+            </div>
+          </div>
+
+          <div class="rounded-lg border border-gray-700/50 bg-gray-800/30 p-4 opacity-60">
+            <div class="mb-2 flex items-center gap-2">
+              <span class="text-xl">🔄</span>
+              <h4 class="font-semibold text-gray-400">OIDC via BFF Pattern</h4>
+            </div>
+            <p class="text-sm text-gray-500">
+              React SPA + Express BFF + Keycloak
+            </p>
+            <div class="mt-2 flex flex-wrap gap-1">
+              <span class="rounded bg-gray-700/50 px-2 py-0.5 text-xs text-gray-500">OIDC</span>
+              <span class="rounded bg-gray-700/50 px-2 py-0.5 text-xs text-gray-500">BFF Pattern</span>
+            </div>
+          </div>
+        </div>
+        <p class="mt-4 text-xs text-gray-500">
+          Additional authentication flow demonstrations are in development
+        </p>
+      </div>
+
+      {/* Footer */}
+      <footer class="mt-12 border-t border-gray-800 pt-8 text-center">
+        <p class="text-sm text-gray-500">
+          These demonstrations are designed for technical analysts evaluating SSO integration patterns.
+        </p>
+        <p class="mt-2 text-xs text-gray-600">
+          <a href="https://docs.onetimesecret.com" class="hover:text-gray-400">
+            Onetime Secret Documentation
+          </a>
+        </p>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
