@@ -64,7 +64,11 @@ export function Auth0Universal() {
 
             {/* Email/password */}
             <div>
+              <label htmlFor="auth0-email" className="sr-only">
+                Email
+              </label>
               <input
+                id="auth0-email"
                 type="email"
                 value="alice@contoso.com"
                 readOnly
@@ -72,7 +76,11 @@ export function Auth0Universal() {
               />
             </div>
             <div>
+              <label htmlFor="auth0-password" className="sr-only">
+                Password
+              </label>
               <input
+                id="auth0-password"
                 type="password"
                 placeholder="Password"
                 readOnly

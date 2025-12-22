@@ -46,7 +46,7 @@ export function GoogleOAuth() {
 
         {/* Account option */}
         <div className="space-y-2">
-          <button className="flex w-full items-center gap-4 rounded-lg border border-gray-200 p-4 text-left hover:bg-gray-50">
+          <button className="flex w-full items-center gap-4 rounded-lg border border-gray-200 p-4 text-left hover:bg-gray-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-500 text-lg font-medium text-white">
               A
             </div>
@@ -56,7 +56,7 @@ export function GoogleOAuth() {
             </div>
           </button>
 
-          <button className="flex w-full items-center gap-4 rounded-lg border border-gray-200 p-4 text-left hover:bg-gray-50">
+          <button className="flex w-full items-center gap-4 rounded-lg border border-gray-200 p-4 text-left hover:bg-gray-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-200">
               <svg className="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />

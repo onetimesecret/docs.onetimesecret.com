@@ -19,7 +19,7 @@ export function BrowserMockup({ urlBar, children }: BrowserMockupProps) {
       {/* Browser chrome */}
       <div className="flex flex-shrink-0 items-center gap-2 bg-gradient-to-b from-gray-300 to-gray-400 px-3 py-2">
         {/* Traffic lights */}
-        <div className="flex gap-1.5">
+        <div className="flex gap-1.5" aria-hidden="true">
           <div className="h-3 w-3 rounded-full bg-red-500" />
           <div className="h-3 w-3 rounded-full bg-yellow-500" />
           <div className="h-3 w-3 rounded-full bg-green-500" />

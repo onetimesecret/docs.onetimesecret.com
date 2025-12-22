@@ -29,13 +29,21 @@ export function EntraLogin() {
             </svg>
           </div>
           <h1 className="mb-2 text-2xl text-slate-100">Sign in</h1>
+          <label htmlFor="entra-email" className="sr-only">
+            Email
+          </label>
           <input
+            id="entra-email"
             type="email"
             value="alice@contoso.com"
             readOnly
             className="mb-4 w-full border-0 border-b-2 border-blue-500 bg-transparent px-0 py-2 text-slate-200 focus:outline-none"
           />
+          <label htmlFor="entra-password" className="sr-only">
+            Password
+          </label>
           <input
+            id="entra-password"
             type="password"
             placeholder="Password"
             readOnly

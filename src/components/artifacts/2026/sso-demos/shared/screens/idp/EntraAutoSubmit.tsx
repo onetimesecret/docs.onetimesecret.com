@@ -9,8 +9,8 @@ import React from "react";
 export function EntraAutoSubmit() {
   return (
     <div className="flex h-full items-center justify-center bg-slate-900">
-      <div className="text-center text-slate-400">
-        <div className="mx-auto mb-4 h-8 w-8 animate-spin rounded-full border-4 border-blue-500 border-t-transparent" />
+      <div className="text-center text-slate-400" role="status" aria-live="polite">
+        <div className="mx-auto mb-4 h-8 w-8 animate-spin motion-reduce:animate-none rounded-full border-4 border-blue-500 border-t-transparent" />
         <p>Signing you in...</p>
       </div>
     </div>

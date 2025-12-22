@@ -51,10 +51,12 @@ export function Dashboard() {
       </nav>
       <div className="p-6">
         <div className="mb-4 rounded-lg border border-slate-700 bg-slate-800 p-6">
-          <h2 className="mb-4 text-lg font-semibold text-slate-100">
+          <h2 id="create-secret-heading" className="mb-4 text-lg font-semibold text-slate-100">
             Create a Secret
           </h2>
           <textarea
+            id="secret-text"
+            aria-labelledby="create-secret-heading"
             className="h-20 w-full resize-none rounded-lg border border-slate-600 bg-slate-700 p-3 text-slate-100 placeholder-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
             placeholder="Enter your secret..."
             value={secretText}
