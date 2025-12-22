@@ -1,6 +1,6 @@
 ---
 // src/pages/artifacts/2026/sso-demos/index.astro
-import '../../../../styles/tailwind.css';
+import DemoLayout from '../../../../layouts/DemoLayout.astro';
 
 const pageTitle = "SSO Authentication Flow Demos";
 const pageDescription = "Interactive visualizations of enterprise SSO authentication patterns and protocol bridging";
@@ -18,31 +18,13 @@ const demos = [
 ];
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content={pageDescription}>
-  <meta name="author" content="Onetime Secret">
-  <meta name="theme-color" content="#111827">
-  <title>{pageTitle}</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      text-rendering: optimizeLegibility;
-    }
-  </style>
-</head>
-<body class="bg-gray-900 font-sans text-gray-100">
+<DemoLayout title={pageTitle} description={pageDescription}>
+<div class="font-sans text-gray-100">
   <div class="flex min-h-screen flex-col p-8">
     <div class="mx-auto w-full max-w-4xl flex-1">
       {/* Header */}
       <header class="mb-16 text-center">
-        <h1 class="mb-4 bg-gradient-to-r from-amber-200 via-yellow-300 to-amber-200 bg-clip-text text-4xl font-bold tracking-tight text-transparent">
+        <h1 class="mb-4 text-4xl font-bold tracking-tight text-amber-200">
           SSO Authentication Flow Demos
         </h1>
         <p class="text-xl text-gray-300">
@@ -189,5 +171,5 @@ const demos = [
       </footer>
     </div>
   </div>
-</body>
-</html>
+</div>
+</DemoLayout>
