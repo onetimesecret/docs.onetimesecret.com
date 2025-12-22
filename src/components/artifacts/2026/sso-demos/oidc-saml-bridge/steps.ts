@@ -1,6 +1,8 @@
 // src/components/artifacts/2026/sso-demos/oidc-saml-bridge/steps.ts
 
-const STEPS = [
+import type { Step } from "./types";
+
+const STEPS: Step[] = [
   {
     id: 1,
     title: "User requests protected resource",

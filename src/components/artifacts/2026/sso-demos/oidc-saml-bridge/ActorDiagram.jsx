@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
+import type { Actors } from './types';
 
-export function ActorDiagram({ actors }) {
+export function ActorDiagram({ actors }: { actors: Actors }) {
   const items = [
     { key: "browser", label: "Browser", color: "bg-blue-500" },
     { key: "caddy", label: "Caddy", color: "bg-orange-500" },

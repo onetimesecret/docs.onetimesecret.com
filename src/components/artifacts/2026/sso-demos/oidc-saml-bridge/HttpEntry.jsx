@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import type { HttpMessage } from './types';
 
-export function HttpEntry({ entry }) {
+export function HttpEntry({ entry }: { entry: HttpMessage }) {
   const [expanded, setExpanded] = useState(false);
 
   const typeStyles = {
