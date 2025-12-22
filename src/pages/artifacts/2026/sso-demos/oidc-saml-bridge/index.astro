@@ -1,0 +1,21 @@
+---
+// src/pages/artifacts/2026/sso-demos/oidc-saml-bridge/index.astro
+import OIDCSAMLBridge from '../../../../../components/artifacts/2026/sso-demos/oidc-saml-bridge/oidc-saml-bridge.jsx';
+import '../../../../../styles/tailwind.css';
+
+const pageTitle = "OIDC→SAML Bridge via Forward Auth";
+const pageDescription = "Interactive visualization of OIDC→SAML protocol bridging with forward auth: Caddy + Logto + Entra ID";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content={pageDescription}>
+  <title>{pageTitle}</title>
+</head>
+<body>
+  <OIDCSAMLBridge client:load />
+</body>
+</html>

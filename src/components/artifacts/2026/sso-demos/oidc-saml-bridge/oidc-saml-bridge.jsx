@@ -289,7 +289,7 @@ function ActorDiagram({ actors }) {
   );
 }
 
-export default function App() {
+export default function OIDCSAMLBridge() {
   const [currentStep, setCurrentStep] = useState(0);
   const [autoPlay, setAutoPlay] = useState(false);
   const step = STEPS[currentStep];
