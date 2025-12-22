@@ -1,15 +1,15 @@
 // src/components/artifacts/2026/sso-demos/shared/_template/demo.tsx
 //
-// Template: Copy this file to your new demo directory and customize.
+// Template: Copy this directory to create a new demo (e.g., sso-demos/my-demo/).
+// The import path below is already correct for the copied location.
 //
 // Steps to create a new demo:
 // 1. Copy this entire _template directory to a new location:
 //    e.g., src/components/artifacts/2026/sso-demos/my-new-demo/
-// 2. Update the imports below to use "../shared" instead of ".."
-// 3. Customize config.ts with your actors and protocol stack
-// 4. Customize steps.ts with your authentication flow
-// 5. Update the screens map below with the screens your demo uses
-// 6. Create an Astro page to host the demo (see existing demos for examples)
+// 2. Customize config.ts with your actors and protocol stack
+// 3. Customize steps.ts with your authentication flow
+// 4. Update the screens map below with the screens your demo uses
+// 5. Create an Astro page to host the demo (see existing demos for examples)
 
 import React from "react";
 import {
@@ -26,7 +26,7 @@ import {
   // Auth0Universal,
   // GoogleOAuth,
   // KeycloakLogin,
-} from ".."; // Change to "../shared" when you copy this to a new demo
+} from "../shared";
 import { STEPS } from "./steps.ts";
 import { demoConfig } from "./config.ts";
 

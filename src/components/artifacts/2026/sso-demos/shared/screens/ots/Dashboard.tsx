@@ -2,6 +2,12 @@
 
 import React, { useState } from "react";
 
+interface Secret {
+  id: string;
+  preview: string;
+  created: string;
+}
+
 /**
  * OTS Dashboard screen - the authenticated state of the application.
  * This is the "constant" across all SSO demos - the SaaS app being protected.
@@ -9,7 +15,7 @@ import React, { useState } from "react";
  */
 export function Dashboard() {
   const [secretText, setSecretText] = useState("");
-  const [recentSecrets, setRecentSecrets] = useState([]);
+  const [recentSecrets, setRecentSecrets] = useState<Secret[]>([]);
 
   const handleCreateSecret = () => {
     const fakeId = Math.random().toString(36).substring(2, 10);

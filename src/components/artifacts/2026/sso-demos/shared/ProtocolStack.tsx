@@ -80,11 +80,13 @@ export function ProtocolStack({ actors, config }: ProtocolStackProps) {
  */
 function Connector({ connection, isActive }: ConnectorProps) {
   const activeColor = isActive ? connection.activeColor : "bg-gray-600";
+  // Use explicit border colors if provided, otherwise derive from activeColor
+  // This avoids brittle string manipulation for complex Tailwind classes
   const activeBorderLeft = isActive
-    ? connection.activeColor.replace("bg-", "border-l-")
+    ? (connection.activeBorderLeft ?? connection.activeColor.replace("bg-", "border-l-"))
     : "border-l-gray-600";
   const activeBorderRight = isActive
-    ? connection.activeColor.replace("bg-", "border-r-")
+    ? (connection.activeBorderRight ?? connection.activeColor.replace("bg-", "border-r-"))
     : "border-r-gray-600";
 
   return (

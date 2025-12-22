@@ -1,8 +1,9 @@
 // src/components/artifacts/2026/sso-demos/shared/_template/config.ts
 //
-// Template: Copy this file to your new demo directory and customize.
+// Template: Copy this directory to create a new demo (e.g., sso-demos/my-demo/).
+// The import path below is already correct for the copied location.
 
-import type { DemoConfig, ActorConfig, ProtocolStackConfig } from "../types.ts";
+import type { DemoConfig, ActorConfig, ProtocolStackConfig } from "../shared";
 
 /**
  * Actor configuration for the demo.

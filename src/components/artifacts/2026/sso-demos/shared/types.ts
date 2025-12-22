@@ -95,8 +95,12 @@ export interface ProtocolStackConnection {
   protocol: string;
   /** Optional secondary protocol info */
   subProtocol?: string;
-  /** Tailwind color class for the connector when active */
+  /** Tailwind background color class for the connector line when active */
   activeColor: string;
+  /** Tailwind border-left color class for left arrow when active (defaults to derived from activeColor) */
+  activeBorderLeft?: string;
+  /** Tailwind border-right color class for right arrow when active (defaults to derived from activeColor) */
+  activeBorderRight?: string;
 }
 
 /**

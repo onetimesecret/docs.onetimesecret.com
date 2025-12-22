@@ -1,8 +1,9 @@
 // src/components/artifacts/2026/sso-demos/shared/_template/steps.ts
 //
-// Template: Copy this file to your new demo directory and customize.
+// Template: Copy this directory to create a new demo (e.g., sso-demos/my-demo/).
+// The import path below is already correct for the copied location.
 
-import type { Step } from "../types.ts";
+import type { Step } from "../shared";
 
 /**
  * Define the steps of your authentication flow.
