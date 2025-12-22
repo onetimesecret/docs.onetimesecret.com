@@ -1,4 +1,4 @@
-// src/components/artifacts/2026/sso-demos/sso-flow-demo-steps.ts
+// src/components/artifacts/2026/sso-demos/oidc-saml-bridge/steps.ts
 
 const STEPS = [
   {

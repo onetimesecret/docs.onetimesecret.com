@@ -1,3 +1,5 @@
+// src/components/artifacts/2026/sso-demos/oidc-saml-bridge/demo.jsx
+
 /**
  * OIDC→SAML Bridge via Forward Auth
  * Caddy + Logto + Entra ID
@@ -15,7 +17,7 @@
  */
 
 import React, { useState, useEffect } from "react";
-import { STEPS } from "./oidc-saml-bridge-steps.ts";
+import { STEPS } from "./steps.ts";
 import { BrowserScreen } from "./BrowserScreen.jsx";
 import { HttpEntry } from "./HttpEntry.jsx";
 import { ActorDiagram } from "./ActorDiagram.jsx";
