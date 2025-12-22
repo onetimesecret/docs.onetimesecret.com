@@ -13,9 +13,21 @@ const pageDescription = "Interactive visualization of OIDC→SAML protocol bridg
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content={pageDescription}>
+  <meta name="author" content="Onetime Secret">
+  <meta name="theme-color" content="#111827">
   <title>{pageTitle}</title>
+  <style>
+    /* Ensure consistent font rendering across browsers */
+    body {
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+  </style>
 </head>
-<body>
+<body class="bg-gray-900">
   <OIDCSAMLBridge client:load />
 </body>
 </html>
