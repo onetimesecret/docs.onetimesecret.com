@@ -122,9 +122,9 @@ export default function OIDCSAMLBridge() {
         </div>
 
         {/* Main content */}
-        <div className="grid grid-cols-2 gap-5">
+        <div className="grid min-h-[36rem] grid-cols-2 gap-5">
           {/* Left: User view */}
-          <div className="space-y-3">
+          <div className="flex flex-col gap-3">
             <h2 className="flex items-center gap-2.5 text-base font-semibold">
               <svg className="h-5 w-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -134,8 +134,7 @@ export default function OIDCSAMLBridge() {
             </h2>
             {/* Browser mockup */}
             <div
-              className="flex flex-col overflow-hidden rounded-lg border border-gray-700 shadow-2xl"
-              style={{ height: "calc(40rem + 2.5rem)" }}
+              className="flex flex-1 flex-col overflow-hidden rounded-lg border border-gray-700 shadow-2xl"
             >
               <div className="flex flex-shrink-0 items-center gap-2 bg-gradient-to-b from-gray-300 to-gray-400 px-3 py-2">
                 <div className="flex gap-1.5">
@@ -156,7 +155,7 @@ export default function OIDCSAMLBridge() {
           </div>
 
           {/* Right: Technical view */}
-          <div className="space-y-3">
+          <div className="flex flex-col gap-3">
             <h2 className="flex items-center gap-2.5 text-base font-semibold">
               <svg className="h-5 w-5 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -164,8 +163,7 @@ export default function OIDCSAMLBridge() {
               What's happening (HTTP)
             </h2>
             <div
-              className="flex flex-col rounded-lg border border-gray-700/50 bg-gray-800 p-4"
-              style={{ height: "calc(40rem + 2.5rem)" }}
+              className="flex flex-1 flex-col rounded-lg border border-gray-700/50 bg-gray-800 p-4"
             >
               <ActorDiagram actors={step.actors} />
               <div className="mb-4 flex-1 space-y-3 overflow-y-auto">
