@@ -32,8 +32,19 @@ export default function OIDCSAMLBridge() {
 
   // Keyboard navigation: ← → arrows and space for autoplay
   useHotkeys("left", () => setCurrentStep((s) => Math.max(0, s - 1)), []);
-  useHotkeys("right", () => setCurrentStep((s) => Math.min(STEPS.length - 1, s + 1)), []);
-  useHotkeys("space", (e) => { e.preventDefault(); setAutoPlay((a) => !a); }, []);
+  useHotkeys(
+    "right",
+    () => setCurrentStep((s) => Math.min(STEPS.length - 1, s + 1)),
+    [],
+  );
+  useHotkeys(
+    "space",
+    (e) => {
+      e.preventDefault();
+      setAutoPlay((a) => !a);
+    },
+    [],
+  );
 
   useEffect(() => {
     if (!autoPlay) return;
@@ -60,7 +71,7 @@ export default function OIDCSAMLBridge() {
               Caddy + OAuth2Proxy + Logto + Entra ID
             </span>
             <span className="mx-2 text-gray-600">·</span>A service
-            Provider-initiated flow with protocol bridging
+            provider-initiated flow with protocol bridging
           </p>
         </div>
 
