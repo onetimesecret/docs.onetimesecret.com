@@ -28,12 +28,13 @@ export function createAllowedHosts() {
   const hosts = ["localhost", "127.0.0.1"];
 
   // Add additional hosts from environment variables if defined
+  // Supports comma-separated lists (e.g., "host1.com,host2.com")
   if (viteAdditionalServerAllowedHosts) {
-    hosts.push(viteAdditionalServerAllowedHosts);
+    hosts.push(...viteAdditionalServerAllowedHosts.split(',').map(h => h.trim()));
   }
 
   if (__viteAdditionalServerAllowedHosts) {
-    hosts.push(__viteAdditionalServerAllowedHosts);
+    hosts.push(...__viteAdditionalServerAllowedHosts.split(',').map(h => h.trim()));
   }
 
   return hosts;
