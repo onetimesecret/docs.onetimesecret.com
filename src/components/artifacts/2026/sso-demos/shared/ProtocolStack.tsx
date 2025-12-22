@@ -91,7 +91,7 @@ function Connector({ connection, isActive }: ConnectorProps) {
 
   return (
     <div className="flex flex-col items-center gap-1">
-      <div className="flex items-center">
+      <div className="flex items-center" aria-hidden="true">
         {/* Left arrow */}
         <div
           className={`h-0 w-0 border-y-4 border-r-[6px] border-y-transparent transition-colors duration-300 ${activeBorderRight}`}
@@ -111,7 +111,7 @@ function Connector({ connection, isActive }: ConnectorProps) {
         {connection.subProtocol && (
           <>
             <br />
-            <span className="text-gray-600">{connection.subProtocol}</span>
+            <span className="text-gray-400">{connection.subProtocol}</span>
           </>
         )}
       </div>

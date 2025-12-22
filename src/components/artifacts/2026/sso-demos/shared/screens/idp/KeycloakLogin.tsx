@@ -19,10 +19,11 @@ export function KeycloakLogin() {
         <div className="rounded-b-lg bg-white p-6 shadow">
           <div className="space-y-4">
             <div>
-              <label className="mb-1 block text-sm font-medium text-gray-700">
+              <label htmlFor="keycloak-username" className="mb-1 block text-sm font-medium text-gray-700">
                 Username or email
               </label>
               <input
+                id="keycloak-username"
                 type="text"
                 value="alice@contoso.com"
                 readOnly
@@ -31,10 +32,11 @@ export function KeycloakLogin() {
             </div>
 
             <div>
-              <label className="mb-1 block text-sm font-medium text-gray-700">
+              <label htmlFor="keycloak-password" className="mb-1 block text-sm font-medium text-gray-700">
                 Password
               </label>
               <input
+                id="keycloak-password"
                 type="password"
                 placeholder="Password"
                 readOnly
@@ -43,8 +45,8 @@ export function KeycloakLogin() {
             </div>
 
             <div className="flex items-center justify-between">
-              <label className="flex items-center gap-2 text-sm text-gray-600">
-                <input type="checkbox" className="rounded border-gray-300" />
+              <label htmlFor="keycloak-remember" className="flex items-center gap-2 text-sm text-gray-600">
+                <input id="keycloak-remember" type="checkbox" className="rounded border-gray-300" />
                 Remember me
               </label>
               <a href="#" className="text-sm text-blue-600 hover:underline">

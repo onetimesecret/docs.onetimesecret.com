@@ -9,7 +9,7 @@ import React from "react";
 export function Blank() {
   return (
     <div className="flex h-full items-center justify-center bg-slate-900 text-slate-500">
-      <div className="animate-pulse">Redirecting to login...</div>
+      <div className="animate-pulse motion-reduce:animate-none" role="status" aria-live="polite">Redirecting to login...</div>
     </div>
   );
 }

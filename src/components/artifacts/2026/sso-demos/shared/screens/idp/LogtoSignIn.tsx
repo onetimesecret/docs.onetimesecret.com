@@ -55,7 +55,11 @@ export function LogtoSignIn() {
               <span className="bg-slate-800 px-2 text-slate-500">or</span>
             </div>
           </div>
+          <label htmlFor="logto-email" className="sr-only">
+            Email
+          </label>
           <input
+            id="logto-email"
             type="email"
             placeholder="Email"
             className="box-border w-full appearance-none border border-slate-600 bg-slate-700 px-4 py-3 text-slate-200 placeholder-slate-400 outline-none"

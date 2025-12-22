@@ -60,6 +60,14 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
 
   return (
     <div className="min-h-screen bg-gray-900 p-4 font-sans text-gray-100">
+      {/* Skip link for keyboard users */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-blue-600 focus:px-4 focus:py-2 focus:text-white focus:rounded"
+      >
+        Skip to demo content
+      </a>
+
       <div className="mx-auto max-w-6xl space-y-5">
         {/* Header */}
         <div className="text-center">
@@ -70,12 +78,12 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
         </div>
 
         {/* Controls and Progress */}
-        <div className="flex flex-wrap items-center justify-between gap-4 rounded-lg bg-gray-800/50 p-3">
+        <nav aria-label="Demo navigation" className="flex flex-wrap items-center justify-between gap-4 rounded-lg bg-gray-800/50 p-3">
           <div className="flex items-center gap-2">
             <button
               onClick={() => setCurrentStep((s) => Math.max(0, s - 1))}
               disabled={currentStep === 0}
-              className="rounded-md border border-gray-600 bg-transparent px-4 py-2 text-sm font-medium text-gray-300 transition-colors hover:border-gray-500 hover:bg-gray-700 hover:text-gray-100 disabled:cursor-not-allowed disabled:border-gray-700 disabled:text-gray-600"
+              className="rounded-md border border-gray-600 bg-transparent px-4 py-2 text-sm font-medium text-gray-300 transition-colors motion-reduce:transition-none hover:border-gray-500 hover:bg-gray-700 hover:text-gray-100 disabled:cursor-not-allowed disabled:border-gray-700 disabled:text-gray-600"
             >
               ← Previous
             </button>
@@ -84,13 +92,15 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
                 setCurrentStep((s) => Math.min(steps.length - 1, s + 1))
               }
               disabled={currentStep === steps.length - 1}
-              className="rounded-md bg-blue-600 px-5 py-2 text-sm font-semibold text-white shadow-md shadow-blue-500/20 transition-colors hover:bg-blue-500 disabled:cursor-not-allowed disabled:bg-gray-700 disabled:text-gray-500 disabled:shadow-none"
+              className="rounded-md bg-blue-600 px-5 py-2 text-sm font-semibold text-white shadow-md shadow-blue-500/20 transition-colors motion-reduce:transition-none hover:bg-blue-500 disabled:cursor-not-allowed disabled:bg-gray-700 disabled:text-gray-500 disabled:shadow-none"
             >
               Next →
             </button>
             <button
               onClick={() => setAutoPlay(!autoPlay)}
-              className={`rounded-md border px-3 py-2 text-xs font-medium transition-colors ${
+              aria-pressed={autoPlay}
+              aria-label={autoPlay ? "Stop autoplay" : "Start autoplay"}
+              className={`rounded-md border px-3 py-2 text-xs font-medium transition-colors motion-reduce:transition-none ${
                 autoPlay
                   ? "border-red-500/50 bg-red-900/30 text-red-400 hover:bg-red-900/50"
                   : "border-gray-600 bg-transparent text-gray-400 hover:border-gray-500 hover:text-gray-300"
@@ -106,8 +116,8 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
                 <button
                   key={s.id}
                   onClick={() => setCurrentStep(i)}
-                  title={`Step ${i + 1}: ${s.title}`}
-                  className={`h-2 w-4 rounded-full transition-all hover:opacity-80 ${
+                  aria-label={`Go to step ${i + 1}: ${s.title}`}
+                  className={`h-2 w-4 rounded-full p-1 transition-all motion-reduce:transition-none hover:opacity-80 ${
                     i === currentStep
                       ? "w-6 bg-blue-500"
                       : i < currentStep
@@ -121,6 +131,21 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
               Step {currentStep + 1} of {steps.length}
             </span>
           </div>
+        </nav>
+
+        {/* Live region for screen reader announcements */}
+        <div role="status" aria-live="polite" aria-atomic="true" className="sr-only">
+          Step {currentStep + 1} of {steps.length}: {step.title}
+        </div>
+
+        {/* Keyboard shortcuts help */}
+        <div className="rounded-lg border border-gray-700/50 bg-gray-800/50 p-3 text-xs text-gray-400">
+          <span className="font-semibold text-gray-300">Keyboard shortcuts: </span>
+          <span className="inline-flex gap-4">
+            <span><kbd className="rounded bg-gray-700 px-1.5 py-0.5 font-mono">←</kbd> Previous</span>
+            <span><kbd className="rounded bg-gray-700 px-1.5 py-0.5 font-mono">→</kbd> Next</span>
+            <span><kbd className="rounded bg-gray-700 px-1.5 py-0.5 font-mono">Space</kbd> Toggle autoplay</span>
+          </span>
         </div>
 
         {/* Step description */}
@@ -148,6 +173,7 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
+                aria-hidden="true"
               >
                 <path
                   strokeLinecap="round"
@@ -164,7 +190,7 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
         </div>
 
         {/* Main content */}
-        <div className="grid min-h-[50rem] grid-cols-2 gap-5">
+        <main id="main-content" className="grid min-h-[50rem] grid-cols-2 gap-5">
           {/* Left: User view */}
           <div className="flex flex-col gap-3">
             <h2 className="flex items-center gap-2.5 text-base font-semibold">
@@ -173,6 +199,7 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
+                aria-hidden="true"
               >
                 <path
                   strokeLinecap="round"
@@ -202,6 +229,7 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
+                aria-hidden="true"
               >
                 <path
                   strokeLinecap="round"
@@ -248,7 +276,7 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
               </div>
             </div>
           </div>
-        </div>
+        </main>
 
         {/* Protocol Stack */}
         <ProtocolStack actors={step.actors} config={config.protocolStack} />

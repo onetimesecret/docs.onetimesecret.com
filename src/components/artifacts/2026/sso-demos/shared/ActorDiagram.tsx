@@ -15,8 +15,10 @@ interface ActorDiagramProps {
  * Actors light up when active, providing visual context for the HTTP flow.
  */
 export function ActorDiagram({ actors, actorConfig }: ActorDiagramProps) {
+  const ariaLabel = `Flow diagram showing: ${actorConfig.map(item => item.label).join(" arrow ")}`;
+
   return (
-    <div className="mb-4 flex flex-wrap items-center gap-1">
+    <div className="mb-4 flex flex-wrap items-center gap-1" role="img" aria-label={ariaLabel}>
       {actorConfig.map((item, i) => (
         <Fragment key={item.key}>
           <div
@@ -28,7 +30,7 @@ export function ActorDiagram({ actors, actorConfig }: ActorDiagramProps) {
           >
             {item.label}
           </div>
-          {i < actorConfig.length - 1 && <div className="text-gray-600">→</div>}
+          {i < actorConfig.length - 1 && <div className="text-gray-400" aria-hidden="true">→</div>}
         </Fragment>
       ))}
     </div>

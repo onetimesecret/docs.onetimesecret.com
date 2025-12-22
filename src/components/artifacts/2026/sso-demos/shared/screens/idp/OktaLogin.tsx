@@ -21,10 +21,11 @@ export function OktaLogin() {
         </div>
         <div className="space-y-4">
           <div>
-            <label className="mb-1 block text-sm font-medium text-gray-700">
+            <label htmlFor="okta-email" className="mb-1 block text-sm font-medium text-gray-700">
               Username
             </label>
             <input
+              id="okta-email"
               type="text"
               value="alice@contoso.com"
               readOnly
@@ -32,10 +33,11 @@ export function OktaLogin() {
             />
           </div>
           <div>
-            <label className="mb-1 block text-sm font-medium text-gray-700">
+            <label htmlFor="okta-password" className="mb-1 block text-sm font-medium text-gray-700">
               Password
             </label>
             <input
+              id="okta-password"
               type="password"
               placeholder="Password"
               readOnly
@@ -43,8 +45,8 @@ export function OktaLogin() {
             />
           </div>
           <div className="flex items-center justify-between text-sm">
-            <label className="flex items-center gap-2 text-gray-600">
-              <input type="checkbox" className="rounded border-gray-300" />
+            <label htmlFor="okta-remember" className="flex items-center gap-2 text-gray-600">
+              <input id="okta-remember" type="checkbox" className="rounded border-gray-300" />
               Remember me
             </label>
             <a href="#" className="text-blue-600 hover:text-blue-500">
