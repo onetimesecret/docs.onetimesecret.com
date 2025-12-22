@@ -54,9 +54,10 @@ export function Dashboard() {
           <h2 id="create-secret-heading" className="mb-4 text-lg font-semibold text-slate-100">
             Create a Secret
           </h2>
+          <label htmlFor="secret-text" className="sr-only">Secret content</label>
           <textarea
             id="secret-text"
-            aria-labelledby="create-secret-heading"
+            aria-describedby="create-secret-heading"
             className="h-20 w-full resize-none rounded-lg border border-slate-600 bg-slate-700 p-3 text-slate-100 placeholder-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
             placeholder="Enter your secret..."
             value={secretText}

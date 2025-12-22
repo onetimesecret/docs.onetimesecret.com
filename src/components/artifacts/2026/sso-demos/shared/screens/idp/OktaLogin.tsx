@@ -45,8 +45,8 @@ export function OktaLogin() {
             />
           </div>
           <div className="flex items-center justify-between text-sm">
-            <label className="flex items-center gap-2 text-gray-600">
-              <input type="checkbox" className="rounded border-gray-300" />
+            <label htmlFor="okta-remember" className="flex items-center gap-2 text-gray-600">
+              <input id="okta-remember" type="checkbox" className="rounded border-gray-300" />
               Remember me
             </label>
             <a href="#" className="text-blue-600 hover:text-blue-500">
