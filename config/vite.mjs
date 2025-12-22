@@ -41,16 +41,10 @@ export function createAllowedHosts() {
 }
 
 export function createViteConfig() {
-  // Remember, for security reasons, only variables prefixed with VITE_ are
-  // available here to prevent accidental exposure of sensitive
-  // environment variables to the client-side code.
-  const viteBaseUrl = process.env.VITE_BASE_URL || "";
-
   const allowedHosts = createAllowedHosts();
 
   return {
     server: {
-      // origin: viteBaseUrl,
       allowedHosts,
     },
     preview: {
