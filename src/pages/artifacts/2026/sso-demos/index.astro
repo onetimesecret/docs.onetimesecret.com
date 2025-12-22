@@ -5,13 +5,29 @@ import DemoLayout from '../../../../layouts/DemoLayout.astro';
 const pageTitle = "SSO Authentication Flow Demos";
 const pageDescription = "Interactive visualizations of enterprise SSO authentication patterns and protocol bridging";
 
+/**
+ * Demo Naming Rationale
+ * ---------------------
+ * These demos are educational tools for technical analysts evaluating SSO patterns.
+ * Copy priorities (in order):
+ *   1. Outcome/use-case first — what problem does this solve?
+ *   2. Architecture pattern — how is it structured?
+ *   3. Protocol details — what's the technical mechanism?
+ *
+ * Avoid:
+ *   - Leading with acronym soup (OIDC, SAML, SP-initiated)
+ *   - Passive voice in descriptions
+ *   - Component lists without context
+ *
+ * The key insight for readers: "My app doesn't touch SAML — the gateway does."
+ */
 const demos = [
   {
     id: "oidc-saml-bridge",
-    title: "OIDC→SAML Bridge via Forward Auth",
-    subtitle: "Caddy + OAuth2Proxy + Logto + Entra ID",
-    description: "SP-initiated flow with external auth gateway and protocol bridging. OAuth2Proxy handles OIDC with Logto, which bridges to enterprise SAML IdPs. Your app stays simple while supporting complex enterprise SSO.",
-    tags: ["OIDC", "SAML", "OAuth2Proxy", "Protocol Bridging"],
+    title: "Enterprise SAML for Modern Apps",
+    subtitle: "Caddy + Logto bridge OIDC↔SAML to Entra",
+    description: "The gateway handles enterprise SSO; the application just receives authenticated requests. Step through every redirect, cookie, and token exchange in the complete flow.",
+    tags: ["OIDC", "SAML", "Forward Auth", "Protocol Bridging"],
     icon: "🔐",
     path: "/artifacts/2026/sso-demos/oidc-saml-bridge/",
   }
@@ -31,7 +47,7 @@ const demos = [
           Interactive visualizations of popular SSO patterns
         </p>
         <p class="mx-auto mt-3 max-w-2xl text-sm text-gray-500">
-          Explore different authentication architectures, protocol combinations, and integration patterns
+
         </p>
       </header>
 
@@ -87,73 +103,13 @@ const demos = [
 
       {/* Coming Soon Section */}
       <div class="rounded-xl border border-gray-700/50 bg-gray-800/30 p-6">
-        <div class="mb-5 flex items-center gap-3">
+        <div class="flex items-center gap-3">
           <div class="h-px flex-1 bg-gradient-to-r from-transparent via-gray-600 to-transparent" />
           <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-400">
-            Coming Soon
+            More Coming Soon
           </h3>
           <div class="h-px flex-1 bg-gradient-to-r from-transparent via-gray-600 to-transparent" />
         </div>
-        <div class="grid gap-4 sm:grid-cols-2">
-          <div class="group rounded-lg border border-gray-700/60 bg-gray-800/40 p-4 transition-colors hover:border-gray-600 hover:bg-gray-800/60">
-            <div class="mb-2 flex items-center gap-3">
-              <span class="text-xl opacity-70">🌐</span>
-              <h4 class="font-semibold text-gray-300">Pure OIDC via Forward Auth</h4>
-            </div>
-            <p class="text-sm text-gray-400">
-              Caddy + OAuth2 Proxy + Auth0
-            </p>
-            <div class="mt-3 flex flex-wrap gap-1.5">
-              <span class="rounded border border-gray-600/50 bg-gray-700/30 px-2 py-0.5 text-xs text-gray-400">OIDC</span>
-              <span class="rounded border border-gray-600/50 bg-gray-700/30 px-2 py-0.5 text-xs text-gray-400">Forward Auth</span>
-            </div>
-          </div>
-
-          <div class="group rounded-lg border border-gray-700/60 bg-gray-800/40 p-4 transition-colors hover:border-gray-600 hover:bg-gray-800/60">
-            <div class="mb-2 flex items-center gap-3">
-              <span class="text-xl opacity-70">⚡</span>
-              <h4 class="font-semibold text-gray-300">Pure OIDC via Application SDK</h4>
-            </div>
-            <p class="text-sm text-gray-400">
-              Next.js + NextAuth.js + Okta
-            </p>
-            <div class="mt-3 flex flex-wrap gap-1.5">
-              <span class="rounded border border-gray-600/50 bg-gray-700/30 px-2 py-0.5 text-xs text-gray-400">OIDC</span>
-              <span class="rounded border border-gray-600/50 bg-gray-700/30 px-2 py-0.5 text-xs text-gray-400">SDK Integration</span>
-            </div>
-          </div>
-
-          <div class="group rounded-lg border border-gray-700/60 bg-gray-800/40 p-4 transition-colors hover:border-gray-600 hover:bg-gray-800/60">
-            <div class="mb-2 flex items-center gap-3">
-              <span class="text-xl opacity-70">☁️</span>
-              <h4 class="font-semibold text-gray-300">OAuth2 via Cloud Gateway</h4>
-            </div>
-            <p class="text-sm text-gray-400">
-              AWS ALB + Cognito
-            </p>
-            <div class="mt-3 flex flex-wrap gap-1.5">
-              <span class="rounded border border-gray-600/50 bg-gray-700/30 px-2 py-0.5 text-xs text-gray-400">OAuth2</span>
-              <span class="rounded border border-gray-600/50 bg-gray-700/30 px-2 py-0.5 text-xs text-gray-400">Cloud Gateway</span>
-            </div>
-          </div>
-
-          <div class="group rounded-lg border border-gray-700/60 bg-gray-800/40 p-4 transition-colors hover:border-gray-600 hover:bg-gray-800/60">
-            <div class="mb-2 flex items-center gap-3">
-              <span class="text-xl opacity-70">🔄</span>
-              <h4 class="font-semibold text-gray-300">OIDC via BFF Pattern</h4>
-            </div>
-            <p class="text-sm text-gray-400">
-              React SPA + Express BFF + Keycloak
-            </p>
-            <div class="mt-3 flex flex-wrap gap-1.5">
-              <span class="rounded border border-gray-600/50 bg-gray-700/30 px-2 py-0.5 text-xs text-gray-400">OIDC</span>
-              <span class="rounded border border-gray-600/50 bg-gray-700/30 px-2 py-0.5 text-xs text-gray-400">BFF Pattern</span>
-            </div>
-          </div>
-        </div>
-        <p class="mt-5 text-center text-xs text-gray-500">
-          Additional authentication flow demonstrations are in development
-        </p>
       </div>
 
       {/* Footer */}

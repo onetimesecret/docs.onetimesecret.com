@@ -61,17 +61,13 @@ export default function OIDCSAMLBridge() {
   return (
     <div className="min-h-screen bg-gray-900 p-4 font-sans text-gray-100">
       <div className="mx-auto max-w-6xl space-y-5">
-        {/* Header */}
+        {/* Header - See index.astro for naming rationale */}
         <div className="text-center">
           <h1 className="mb-2 text-3xl font-bold tracking-tight text-amber-200">
-            OIDC→SAML Bridge via Forward Auth
+            Enterprise SAML for Modern Apps
           </h1>
           <p className="text-base text-gray-400">
-            <span className="font-medium text-gray-300">
-              Caddy + OAuth2Proxy + Logto + Entra ID
-            </span>
-            <span className="mx-2 text-gray-600">·</span>A service
-            provider-initiated flow with protocol bridging
+            Caddy + Logto bridge OIDC↔SAML to Entra
           </p>
         </div>
 
