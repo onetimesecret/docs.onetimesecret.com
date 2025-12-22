@@ -536,7 +536,7 @@ const STEPS = [
     id: 11,
     title: "Subsequent requests",
     userSees: "dashboard",
-    urlBar: "https://secrets.example.com/api/secrets",
+    urlBar: "https://secrets.example.com/dashboard",
     description:
       "All future requests follow the same pattern: session cookie → forward_auth → identity headers → OTS.",
     http: [
@@ -545,7 +545,7 @@ const STEPS = [
         from: "Browser",
         to: "Caddy",
         method: "GET",
-        url: "https://secrets.example.com/api/secrets",
+        url: "https://secrets.example.com/dashboard",
         headers: ["Cookie: _oauth2_proxy=encrypted-session-data"],
       },
       {
@@ -560,7 +560,7 @@ const STEPS = [
         from: "Caddy",
         to: "OTS",
         method: "GET",
-        url: "/api/secrets",
+        url: "/dashboard",
         headers: [
           "X-Auth-Request-User: alice@contoso.com",
           "X-Auth-Request-Email: alice@contoso.com",

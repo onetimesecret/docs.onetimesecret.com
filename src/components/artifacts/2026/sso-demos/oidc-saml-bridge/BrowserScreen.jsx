@@ -6,9 +6,16 @@ function DashboardScreen() {
 
   const handleCreateSecret = () => {
     const fakeId = Math.random().toString(36).substring(2, 10);
-    setRecentSecrets(prev => [
-      { id: fakeId, preview: secretText.length > 24 ? secretText.substring(0, 24) + "..." : secretText, created: "Just now" },
-      ...prev.slice(0, 2).map(s => ({ ...s, created: "Earlier" }))
+    setRecentSecrets((prev) => [
+      {
+        id: fakeId,
+        preview:
+          secretText.length > 24
+            ? secretText.substring(0, 24) + "..."
+            : secretText,
+        created: "Just now",
+      },
+      ...prev.slice(0, 2).map((s) => ({ ...s, created: "Earlier" })),
     ]);
     setSecretText("");
   };
@@ -55,12 +62,19 @@ function DashboardScreen() {
           {recentSecrets.length > 0 ? (
             <div className="space-y-2">
               {recentSecrets.map((secret) => (
-                <div key={secret.id} className="flex items-center justify-between rounded-lg border border-slate-600 bg-slate-700/50 p-3 text-sm">
+                <div
+                  key={secret.id}
+                  className="flex items-center justify-between rounded-lg border border-slate-600 bg-slate-700/50 p-3 text-sm"
+                >
                   <div className="flex items-center gap-3">
-                    <span className="rounded bg-slate-600 px-2 py-0.5 font-mono text-xs text-slate-300">{secret.id}</span>
+                    <span className="rounded bg-slate-600 px-2 py-0.5 font-mono text-xs text-slate-300">
+                      {secret.id}
+                    </span>
                     <span className="text-slate-300">{secret.preview}</span>
                   </div>
-                  <span className="text-xs text-slate-500">{secret.created}</span>
+                  <span className="text-xs text-slate-500">
+                    {secret.created}
+                  </span>
                 </div>
               ))}
             </div>
@@ -77,7 +91,7 @@ export function BrowserScreen({ type }) {
   const screens = {
     blank: (
       <div className="flex h-full items-center justify-center bg-slate-900 text-slate-500">
-        <div className="animate-pulse">Loading...</div>
+        <div className="animate-pulse">Redirecting to login...</div>
       </div>
     ),
     loading: (

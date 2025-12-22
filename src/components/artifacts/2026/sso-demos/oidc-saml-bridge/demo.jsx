@@ -130,8 +130,8 @@ export default function OIDCSAMLBridge() {
         </div>
 
         {/* Step description */}
-        <div className="rounded-lg border border-gray-700/50 bg-gray-800 p-4">
-          <div className="flex items-start gap-4">
+        <div className="flex h-32 items-center rounded-lg border border-gray-700/50 bg-gray-800 px-5">
+          <div className="flex items-center gap-4">
             <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-blue-700 text-lg font-bold shadow-lg shadow-blue-500/20">
               {step.id}
             </div>
@@ -147,7 +147,7 @@ export default function OIDCSAMLBridge() {
         </div>
 
         {/* Main content */}
-        <div className="grid min-h-[36rem] grid-cols-2 gap-5">
+        <div className="grid min-h-[50rem] grid-cols-2 gap-5">
           {/* Left: User view */}
           <div className="flex flex-col gap-3">
             <h2 className="flex items-center gap-2.5 text-base font-semibold">
@@ -264,11 +264,18 @@ export default function OIDCSAMLBridge() {
               <div className="text-[10px] text-gray-200/80">Application</div>
             </div>
 
-            {/* Connector: OTS → Caddy */}
+            {/* Connector: OTS ↔ Caddy */}
             <div className="flex flex-col items-center gap-1">
               <div className="flex items-center">
                 <div
-                  className={`h-0.5 w-8 transition-all duration-300 ${
+                  className={`h-0 w-0 border-y-4 border-r-[6px] border-y-transparent transition-colors duration-300 ${
+                    step.actors.ots || step.actors.caddy
+                      ? "border-r-emerald-500"
+                      : "border-r-gray-600"
+                  }`}
+                />
+                <div
+                  className={`h-0.5 w-6 transition-all duration-300 ${
                     step.actors.ots || step.actors.caddy
                       ? "bg-emerald-500"
                       : "bg-gray-600"
@@ -298,11 +305,18 @@ export default function OIDCSAMLBridge() {
               <div className="text-[10px] text-gray-200/80">+ OAuth2Proxy</div>
             </div>
 
-            {/* Connector: Caddy → Logto */}
+            {/* Connector: Caddy ↔ Logto */}
             <div className="flex flex-col items-center gap-1">
               <div className="flex items-center">
                 <div
-                  className={`h-0.5 w-8 transition-all duration-300 ${
+                  className={`h-0 w-0 border-y-4 border-r-[6px] border-y-transparent transition-colors duration-300 ${
+                    step.actors.caddy || step.actors.logto
+                      ? "border-r-amber-500"
+                      : "border-r-gray-600"
+                  }`}
+                />
+                <div
+                  className={`h-0.5 w-6 transition-all duration-300 ${
                     step.actors.caddy || step.actors.logto
                       ? "bg-gradient-to-r from-amber-500 to-purple-500"
                       : "bg-gray-600"
@@ -332,11 +346,18 @@ export default function OIDCSAMLBridge() {
               <div className="text-[10px] text-gray-200/80">OIDC + SAML SP</div>
             </div>
 
-            {/* Connector: Logto → Entra */}
+            {/* Connector: Logto ↔ Entra */}
             <div className="flex flex-col items-center gap-1">
               <div className="flex items-center">
                 <div
-                  className={`h-0.5 w-8 transition-all duration-300 ${
+                  className={`h-0 w-0 border-y-4 border-r-[6px] border-y-transparent transition-colors duration-300 ${
+                    step.actors.logto || step.actors.entra
+                      ? "border-r-purple-500"
+                      : "border-r-gray-600"
+                  }`}
+                />
+                <div
+                  className={`h-0.5 w-6 transition-all duration-300 ${
                     step.actors.logto && step.actors.entra
                       ? "bg-gradient-to-r from-purple-500 to-cyan-500"
                       : step.actors.entra
