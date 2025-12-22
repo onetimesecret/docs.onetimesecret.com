@@ -1,9 +1,22 @@
-import React, { useState } from "react";
+// src/components/artifacts/2026/sso-demos/shared/HttpEntry.tsx
 
-export function HttpEntry({ entry }) {
+import React, { useState } from "react";
+import type { HttpMessage } from "./types.ts";
+
+interface HttpEntryProps {
+  /** The HTTP message to display */
+  entry: HttpMessage;
+}
+
+/**
+ * Renders a single HTTP message in the authentication flow.
+ * Supports requests, responses, internal processes, and server-to-server communication.
+ * Includes expandable payload sections for decoded SAML/JWT content.
+ */
+export function HttpEntry({ entry }: HttpEntryProps) {
   const [expanded, setExpanded] = useState(false);
 
-  const typeStyles = {
+  const typeStyles: Record<HttpMessage["type"], string> = {
     request: "border-l-4 border-blue-500 bg-blue-950/40",
     response: "border-l-4 border-emerald-500 bg-emerald-950/40",
     internal: "border-l-4 border-gray-500 bg-gray-800",
@@ -11,7 +24,7 @@ export function HttpEntry({ entry }) {
     "server-response": "border-l-4 border-purple-500 bg-purple-950/40",
   };
 
-  const labels = {
+  const labels: Record<HttpMessage["type"], string> = {
     request: "→ REQUEST",
     response: "← RESPONSE",
     internal: "⚙ INTERNAL",
