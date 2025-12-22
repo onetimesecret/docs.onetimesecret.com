@@ -126,7 +126,8 @@ export default function OIDCSAMLBridge() {
         </div>
 
         {/* Step description */}
-        <div className="flex h-32 items-center rounded-lg border border-gray-700/50 bg-gray-800 px-5">
+        <div className="grid h-32 grid-cols-[1fr_auto] items-center gap-6 rounded-lg border border-gray-700/50 bg-gray-800 px-5">
+          {/* Left: Step info */}
           <div className="flex items-center gap-4">
             <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-blue-700 text-lg font-bold shadow-lg shadow-blue-500/20">
               {step.id}
@@ -140,6 +141,28 @@ export default function OIDCSAMLBridge() {
               </p>
             </div>
           </div>
+
+          {/* Right: Security note (if available) */}
+          {step.securityNote && (
+            <div className="flex max-w-md items-start gap-3 self-center border-l border-gray-700 pl-6">
+              <svg
+                className="mt-0.5 h-5 w-5 flex-shrink-0 text-amber-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                />
+              </svg>
+              <p className="text-xs leading-relaxed text-gray-500">
+                {step.securityNote}
+              </p>
+            </div>
+          )}
         </div>
 
         {/* Main content */}
@@ -298,7 +321,7 @@ export default function OIDCSAMLBridge() {
             >
               <div className="mb-1.5 text-2xl">🛡️</div>
               <div className="text-sm font-bold">Caddy</div>
-              <div className="text-[10px] text-gray-200/80">+ OAuth2Proxy</div>
+              <div className="text-[10px] text-gray-200/80">Reverse Proxy</div>
             </div>
 
             {/* Connector: Caddy ↔ Logto */}
@@ -326,7 +349,11 @@ export default function OIDCSAMLBridge() {
                   }`}
                 />
               </div>
-              <div className="text-[10px] text-gray-500">OIDC</div>
+              <div className="text-center text-[10px] text-gray-500">
+                OIDC
+                <br />
+                <span className="text-gray-600">(via OAuth2Proxy)</span>
+              </div>
             </div>
 
             {/* Logto */}
@@ -339,7 +366,9 @@ export default function OIDCSAMLBridge() {
             >
               <div className="mb-1.5 text-2xl">🔑</div>
               <div className="text-sm font-bold">Logto</div>
-              <div className="text-[10px] text-gray-200/80">OIDC + SAML SP</div>
+              <div className="text-[10px] text-gray-200/80">
+                Service Provider
+              </div>
             </div>
 
             {/* Connector: Logto ↔ Entra */}
@@ -398,7 +427,7 @@ export default function OIDCSAMLBridge() {
             ← All demos
           </a>
           <div className="flex items-center gap-2">
-            <span>OIDC→SAML Bridge Demo</span>
+            <span>An Authentication Flow Demo</span>
             <span className="rounded bg-gray-800 px-1.5 py-0.5 font-mono text-gray-500">
               v{DEMO_VERSION}
             </span>

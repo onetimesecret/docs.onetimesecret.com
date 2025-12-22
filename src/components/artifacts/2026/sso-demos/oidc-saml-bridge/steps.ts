@@ -8,6 +8,8 @@ const STEPS = [
     urlBar: "https://secrets.example.com/dashboard",
     description:
       "User navigates to the dashboard. Caddy intercepts and checks auth.",
+    securityNote:
+      "Confidential clients (like this Caddy setup) must validate the `state` parameter on callback to prevent CSRF attacks. Public clients (like SPAs with React/Vue) should additionally implement PKCE.",
     http: [
       {
         type: "request",
@@ -57,6 +59,8 @@ const STEPS = [
       "https://logto.example.com/sign-in?first_screen=signIn&interaction_id=abc123",
     description:
       "Browser lands on Logto's sign-in page. User sees login options.",
+    securityNote:
+      "Session cookies must use HttpOnly and Secure flags. SameSite policy should be configured based on whether components share the same domain.",
     http: [
       {
         type: "request",
@@ -149,6 +153,8 @@ const STEPS = [
     urlBar: "https://login.microsoftonline.com/contoso.com/saml2",
     description:
       "Browser follows redirect to customer's Entra. The SAMLRequest is a base64-encoded (and optionally signed) XML document. RelayState preserves application state.",
+    securityNote:
+      "SAML AuthnRequest signing is recommended for high-security environments to prevent tampering. Always validate the decoded structure. The RelayState parameter preserves application state across the SAML roundtrip.",
     http: [
       {
         type: "request",
@@ -267,6 +273,8 @@ const STEPS = [
     urlBar: "https://logto.example.com/api/authn/saml/entra-connector",
     description:
       "Browser auto-submits the SAML Response to Logto's assertion consumer service.",
+    securityNote:
+      "The SAML assertion contains the signed proof of identity from Entra. Production must validate signature, timestamps, InResponseTo field, and prevent replay attacks.",
     http: [
       {
         type: "request",
@@ -384,7 +392,7 @@ const STEPS = [
     ],
     actors: {
       browser: true,
-      caddy: false,
+      caddy: true,
       logto: true,
       entra: false,
       ots: false,
@@ -398,6 +406,8 @@ const STEPS = [
       "https://secrets.example.com/oauth2/callback?code=authz_code_xyz&state=random-csrf-token",
     description:
       "Auth layer receives the code and exchanges it server-to-server with Logto for tokens.",
+    securityNote:
+      "This is the Authorization Code Flow with Client Secret. The browser never sees this request since the token exchange happens server-to-server (between Caddy and Logto).",
     http: [
       {
         type: "request",
@@ -483,6 +493,8 @@ const STEPS = [
     urlBar: "https://secrets.example.com/dashboard",
     description:
       "Finally! The user reaches their dashboard. OTS receives identity headers from Caddy.",
+    securityNote:
+      "After authentication, your app only receives identity headers from the reverse proxy and never validates tokens directly. Restrict OTS to only accept traffic from Caddy. OTS must set appropriate security headers (Content-Security-Policy, CORS) for browser protection—reverse proxy authentication doesn't replace application-level security headers.",
     http: [
       {
         type: "request",
@@ -539,6 +551,8 @@ const STEPS = [
     urlBar: "https://secrets.example.com/dashboard",
     description:
       "All future requests follow the same pattern: session cookie → forward_auth → identity headers → OTS.",
+    securityNote:
+      "Session timeouts must be configured consistently across browser cookies, OAuth2 proxy sessions, and application sessions to prevent security gaps.",
     http: [
       {
         type: "request",
