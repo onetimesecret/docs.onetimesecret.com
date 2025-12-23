@@ -152,6 +152,19 @@ function StepArticle({
   actorConfig: ActorConfig[];
 }) {
   const [highlightedActor, setHighlightedActor] = useState<string | null>(null);
+  const [copied, setCopied] = useState(false);
+
+  // Copy this step to clipboard
+  const handleCopyStep = useCallback(async () => {
+    const text = generateStepText(step);
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error("Failed to copy step:", err);
+    }
+  }, [step]);
 
   // Build a map from actor labels to keys for matching HTTP from/to fields
   const labelToKeyMap = useMemo(() => {
@@ -169,7 +182,7 @@ function StepArticle({
       const normalized = str.toLowerCase().trim();
       // Try direct match first
       if (labelToKeyMap[normalized]) return labelToKeyMap[normalized];
-      // Try partial match (e.g., "Caddy (Auth Layer)" should match "caddy")
+      // Try partial match (e.g., "Caddy (OAuth2Proxy)" should match "caddy")
       for (const [label, key] of Object.entries(labelToKeyMap)) {
         if (normalized.includes(label) || label.includes(normalized)) {
           return key;
@@ -180,16 +193,23 @@ function StepArticle({
     [labelToKeyMap],
   );
 
-  // Check if an HTTP entry involves the highlighted actor
+  // Check if an HTTP entry is FROM the highlighted actor (not just involves)
   const isHttpEntryHighlighted = useCallback(
     (entry: HttpMessage): boolean => {
       if (!highlightedActor) return false;
       const fromKey = entry.from ? getActorKeyFromString(entry.from) : null;
-      const toKey = entry.to ? getActorKeyFromString(entry.to) : null;
-      return fromKey === highlightedActor || toKey === highlightedActor;
+      // Only highlight if this actor is the SENDER (from), not receiver
+      return fromKey === highlightedActor;
     },
     [highlightedActor, getActorKeyFromString],
   );
+
+  // Get the color info for the currently highlighted actor
+  const highlightedActorColor = useMemo(() => {
+    if (!highlightedActor) return null;
+    const actor = actorConfig.find((a) => a.key === highlightedActor);
+    return actor ? getActorColorInfo(actor.activeColor) : null;
+  }, [highlightedActor, actorConfig]);
 
   // Get actors involved in an HTTP entry
   const getActorsInEntry = useCallback(
@@ -217,16 +237,25 @@ function StepArticle({
     >
       {/* Step header */}
       <header className="mb-4">
-        <div className="mb-2 flex items-center gap-3">
-          <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-blue-700 text-base font-bold shadow-lg print:bg-blue-600">
-            {step.id}
-          </span>
-          <h2
-            id={`step-${step.id}-title`}
-            className="text-xl font-bold text-gray-100 print:text-black"
+        <div className="mb-2 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-blue-700 text-base font-bold shadow-lg print:bg-blue-600">
+              {step.id}
+            </span>
+            <h2
+              id={`step-${step.id}-title`}
+              className="text-xl font-bold text-gray-100 print:text-black"
+            >
+              {step.title}
+            </h2>
+          </div>
+          <button
+            onClick={handleCopyStep}
+            className="rounded-md bg-gray-700 px-3 py-1.5 text-xs font-medium text-gray-300 transition-colors hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-400 print:hidden"
+            aria-label={`Copy step ${step.id} to clipboard`}
           >
-            {step.title}
-          </h2>
+            {copied ? "✓ Copied" : "Copy Step"}
+          </button>
         </div>
         <p className="mt-2 text-sm leading-relaxed text-gray-300 print:text-gray-800">
           {step.description}
@@ -305,6 +334,7 @@ function StepArticle({
               entry={entry}
               index={i}
               isHighlighted={isHttpEntryHighlighted(entry)}
+              highlightColor={highlightedActorColor}
               involvedActors={getActorsInEntry(entry)}
               onHoverActors={(actors) => {
                 if (actors.length > 0) {
@@ -365,6 +395,7 @@ function HttpTranscriptEntry({
   entry,
   index,
   isHighlighted,
+  highlightColor,
   involvedActors,
   onHoverActors,
   actorConfig,
@@ -372,6 +403,7 @@ function HttpTranscriptEntry({
   entry: HttpMessage;
   index: number;
   isHighlighted: boolean;
+  highlightColor: ReturnType<typeof getActorColorInfo> | null;
   involvedActors: string[];
   onHoverActors: (actors: string[]) => void;
   actorConfig: ActorConfig[];
@@ -395,11 +427,16 @@ function HttpTranscriptEntry({
     }
   };
 
+  // Build dynamic ring class based on highlighted actor's color
+  const highlightRingClass = isHighlighted && highlightColor
+    ? `${highlightColor.bgClass} ring-2 ${highlightColor.borderClass.replace('border-', 'ring-')}/60 ring-offset-1 ring-offset-gray-900`
+    : "";
+
   return (
     <div
       className={`group relative rounded-md border-l-4 p-4 transition-all print:break-inside-avoid print:bg-gray-50 ${
         isHighlighted
-          ? "bg-gray-800 ring-2 ring-blue-400/50 ring-offset-1 ring-offset-gray-900"
+          ? highlightRingClass || "bg-gray-800 ring-2 ring-blue-400/50 ring-offset-1 ring-offset-gray-900"
           : "bg-gray-900/50 hover:bg-gray-800/70"
       }`}
       style={{ borderLeftColor: typeConfig.borderColor }}
@@ -652,6 +689,76 @@ function formatHttpEntryAsText(entry: HttpMessage): string {
     entry.expandedPayload.content
       .split("\n")
       .forEach((line) => lines.push(`  ${line}`));
+  }
+
+  return lines.join("\n");
+}
+
+/**
+ * Generates plain text for a single step (for step-level copy).
+ */
+function generateStepText(step: Step): string {
+  const lines: string[] = [];
+
+  lines.push(`STEP ${step.id}: ${step.title}`);
+  lines.push("-".repeat(80));
+  lines.push("");
+  lines.push(`Description: ${step.description}`);
+  lines.push("");
+  lines.push(`What the User Sees:`);
+  lines.push(`  Browser URL: ${step.urlBar}`);
+  lines.push(`  Screen: ${step.userSees}`);
+  lines.push("");
+
+  // HTTP exchanges
+  lines.push(`HTTP Exchanges:`);
+  step.http.forEach((entry, i) => {
+    lines.push("");
+    lines.push(`  [${i + 1}] ${getHttpMessageTypeConfig(entry.type).label}`);
+    if (entry.from && entry.to) {
+      lines.push(`      ${entry.from} → ${entry.to}`);
+    }
+    if (entry.label) {
+      lines.push(`      ${entry.label}`);
+    }
+    if (entry.method && entry.url) {
+      lines.push(`      ${entry.method} ${entry.url}`);
+    }
+    if (entry.status) {
+      lines.push(`      ${entry.status}`);
+    }
+    if (entry.headers && entry.headers.length > 0) {
+      lines.push(`      Headers:`);
+      entry.headers.forEach((h) => lines.push(`        ${h}`));
+    }
+    if (entry.body) {
+      lines.push(`      Body:`);
+      entry.body.split("\n").forEach((line) => lines.push(`        ${line}`));
+    }
+    if (entry.note) {
+      lines.push(`      Note: ${entry.note}`);
+    }
+    if (entry.expandedPayload) {
+      lines.push(`      ${entry.expandedPayload.label}:`);
+      entry.expandedPayload.content
+        .split("\n")
+        .forEach((line) => lines.push(`        ${line}`));
+    }
+  });
+
+  // Active components
+  lines.push("");
+  lines.push(`Active Components:`);
+  const activeActors = Object.entries(step.actors)
+    .filter(([_, active]) => active)
+    .map(([key]) => key);
+  lines.push(`  ${activeActors.join(", ")}`);
+
+  // Security note
+  if (step.securityNote) {
+    lines.push("");
+    lines.push(`Security Note:`);
+    lines.push(`  ${step.securityNote}`);
   }
 
   return lines.join("\n");
