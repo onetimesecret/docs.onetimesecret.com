@@ -25,7 +25,7 @@ const STEPS: Step[] = [
       {
         type: "internal",
         from: "Caddy",
-        to: "Auth Layer",
+        to: "OAuth2Proxy",
         label: "forward_auth subrequest",
         note: "Caddy asks auth layer: is this user authenticated?",
       },
@@ -421,7 +421,7 @@ const STEPS: Step[] = [
       },
       {
         type: "server",
-        from: "Caddy (Auth Layer)",
+        from: "Caddy (OAuth2Proxy)",
         to: "Logto",
         label: "Server-to-server token exchange",
         method: "POST",
@@ -436,7 +436,7 @@ const STEPS: Step[] = [
       {
         type: "server-response",
         from: "Logto",
-        to: "Caddy (Auth Layer)",
+        to: "Caddy (OAuth2Proxy)",
         status: "200 OK",
         body: `{
   "access_token": "at_xyz...",
@@ -509,7 +509,7 @@ const STEPS: Step[] = [
       {
         type: "internal",
         from: "Caddy",
-        to: "Auth Layer",
+        to: "OAuth2Proxy",
         label: "forward_auth validation",
         note: "Decrypt session cookie, validate not expired",
       },
@@ -567,7 +567,7 @@ const STEPS: Step[] = [
       {
         type: "internal",
         from: "Caddy",
-        to: "Auth Layer",
+        to: "OAuth2Proxy",
         label: "forward_auth (fast path)",
         note: "Session valid → 200 + headers (no redirects)",
       },

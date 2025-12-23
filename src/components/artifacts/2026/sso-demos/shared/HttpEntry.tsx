@@ -3,13 +3,17 @@
 import React, { useState } from "react";
 import type { HttpMessage } from "./types.ts";
 
-/** Styling for each HTTP message type */
+/**
+ * Styling for each HTTP message type.
+ * Colors are defined in sso-demo-theme.css using @theme block.
+ * To customize, modify the --color-http-* values in that file.
+ */
 const TYPE_STYLES: Record<HttpMessage["type"], string> = {
-  request: "border-l-4 border-blue-500 bg-blue-950/40",
-  response: "border-l-4 border-emerald-500 bg-emerald-950/40",
-  internal: "border-l-4 border-gray-500 bg-gray-800",
-  server: "border-l-4 border-purple-500 bg-purple-950/40",
-  "server-response": "border-l-4 border-purple-500 bg-purple-950/40",
+  request: "border-l-4 border-http-request bg-http-request-dim",
+  response: "border-l-4 border-http-response bg-http-response-dim",
+  internal: "border-l-4 border-http-internal bg-gray-800",
+  server: "border-l-4 border-http-server bg-http-server-dim",
+  "server-response": "border-l-4 border-http-server bg-http-server-dim",
 };
 
 /** Labels for each HTTP message type */

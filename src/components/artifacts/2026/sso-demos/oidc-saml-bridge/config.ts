@@ -5,17 +5,21 @@ import type { DemoConfig, ActorConfig, ProtocolStackConfig } from "../shared";
 /**
  * Actor configuration for the OIDC→SAML Bridge demo.
  * Defines the components in the auth flow and their visual styling.
+ *
+ * Colors use semantic classes from sso-demo-theme.css (bg-actor-*).
+ * To customize actor colors, modify the theme file.
  */
 export const actorConfig: ActorConfig[] = [
-  { key: "browser", label: "Browser", activeColor: "bg-blue-500" },
-  { key: "caddy", label: "Caddy", activeColor: "bg-orange-500" },
-  { key: "logto", label: "Logto", activeColor: "bg-purple-500" },
-  { key: "entra", label: "Entra", activeColor: "bg-cyan-500" },
-  { key: "ots", label: "OTS", activeColor: "bg-emerald-500" },
+  { key: "browser", label: "Browser", activeColor: "bg-actor-browser" },
+  { key: "caddy", label: "Caddy", activeColor: "bg-actor-caddy" },
+  { key: "logto", label: "Logto", activeColor: "bg-actor-logto" },
+  { key: "entra", label: "Entra", activeColor: "bg-actor-entra" },
+  { key: "ots", label: "OTS", activeColor: "bg-actor-ots" },
 ];
 
 /**
  * Protocol stack configuration showing the architecture.
+ * Colors use semantic classes from sso-demo-theme.css.
  */
 export const protocolStack: ProtocolStackConfig = {
   components: [
@@ -24,36 +28,36 @@ export const protocolStack: ProtocolStackConfig = {
       label: "OTS",
       subLabel: "Application",
       emoji: "🔐",
-      activeGradient: "bg-gradient-to-br from-emerald-600 to-emerald-700",
-      activeShadow: "shadow-lg shadow-emerald-500/30",
-      activeRing: "ring-2 ring-emerald-400/50",
+      activeGradient: "bg-gradient-to-br from-actor-ots-600 to-actor-ots-700",
+      activeShadow: "shadow-lg shadow-actor-ots/30",
+      activeRing: "ring-2 ring-actor-ots/50",
     },
     {
       key: "caddy",
       label: "Caddy",
       subLabel: "Reverse Proxy",
       emoji: "🛡️",
-      activeGradient: "bg-gradient-to-br from-amber-600 to-amber-700",
-      activeShadow: "shadow-lg shadow-amber-500/30",
-      activeRing: "ring-2 ring-amber-400/50",
+      activeGradient: "bg-gradient-to-br from-actor-caddy-600 to-actor-caddy-700",
+      activeShadow: "shadow-lg shadow-actor-caddy/30",
+      activeRing: "ring-2 ring-actor-caddy/50",
     },
     {
       key: "logto",
       label: "Logto",
       subLabel: "Service Provider",
       emoji: "🔑",
-      activeGradient: "bg-gradient-to-br from-purple-600 to-purple-700",
-      activeShadow: "shadow-lg shadow-purple-500/30",
-      activeRing: "ring-2 ring-purple-400/50",
+      activeGradient: "bg-gradient-to-br from-actor-logto-600 to-actor-logto-700",
+      activeShadow: "shadow-lg shadow-actor-logto/30",
+      activeRing: "ring-2 ring-actor-logto/50",
     },
     {
       key: "entra",
       label: "Entra",
       subLabel: "Identity Provider",
       emoji: "🏢",
-      activeGradient: "bg-gradient-to-br from-cyan-600 to-cyan-700",
-      activeShadow: "shadow-lg shadow-cyan-500/30",
-      activeRing: "ring-2 ring-cyan-400/50",
+      activeGradient: "bg-gradient-to-br from-actor-entra-600 to-actor-entra-700",
+      activeShadow: "shadow-lg shadow-actor-entra/30",
+      activeRing: "ring-2 ring-actor-entra/50",
     },
   ],
   connections: [
@@ -61,20 +65,20 @@ export const protocolStack: ProtocolStackConfig = {
       from: "ots",
       to: "caddy",
       protocol: "HTTP",
-      activeColor: "bg-emerald-500",
+      activeColor: "bg-actor-ots",
     },
     {
       from: "caddy",
       to: "logto",
       protocol: "OIDC",
       subProtocol: "(via OAuth2Proxy)",
-      activeColor: "bg-amber-500",
+      activeColor: "bg-actor-caddy",
     },
     {
       from: "logto",
       to: "entra",
       protocol: "SAML",
-      activeColor: "bg-purple-500",
+      activeColor: "bg-actor-logto",
     },
   ],
 };
