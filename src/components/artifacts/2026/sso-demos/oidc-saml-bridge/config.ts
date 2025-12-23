@@ -7,7 +7,7 @@ import type { DemoConfig, ActorConfig, ProtocolStackConfig } from "../shared";
  * Defines the components in the auth flow and their visual styling.
  */
 export const actorConfig: ActorConfig[] = [
-  { key: "browser", label: "Browser", activeColor: "bg-blue-500" },
+  { key: "browser", label: "Browser", activeColor: "bg-amber-500" },
   { key: "caddy", label: "Caddy", activeColor: "bg-orange-500" },
   { key: "logto", label: "Logto", activeColor: "bg-purple-500" },
   { key: "entra", label: "Entra", activeColor: "bg-cyan-500" },

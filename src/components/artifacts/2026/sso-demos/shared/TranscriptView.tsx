@@ -35,7 +35,7 @@ export function TranscriptView({ steps, config }: TranscriptViewProps) {
       {/* Skip link for keyboard users */}
       <a
         href="#transcript-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:rounded focus:bg-amber-600 focus:px-4 focus:py-2 focus:text-white"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:rounded focus:bg-blue-600 focus:px-4 focus:py-2 focus:text-white"
       >
         Skip to transcript content
       </a>
@@ -45,7 +45,7 @@ export function TranscriptView({ steps, config }: TranscriptViewProps) {
         <header className="mb-8 border-b border-gray-700 pb-6 print:border-black">
           <div className="mb-4 flex items-start justify-between print:block">
             <div className="flex-1">
-              <h1 className="mb-2 text-3xl font-bold tracking-tight text-amber-200 print:text-black">
+              <h1 className="mb-2 text-3xl font-bold tracking-tight text-blue-200 print:text-black">
                 {config.title}
               </h1>
               <p className="text-base text-gray-400 print:text-gray-800">
@@ -92,7 +92,7 @@ export function TranscriptView({ steps, config }: TranscriptViewProps) {
                 <li key={step.id}>
                   <a
                     href={`#step-${step.id}`}
-                    className="text-amber-400 hover:text-amber-300 hover:underline print:text-amber-700"
+                    className="text-blue-400 hover:text-blue-300 hover:underline print:text-blue-700"
                   >
                     Step {step.id}: {step.title}
                   </a>
@@ -121,7 +121,7 @@ export function TranscriptView({ steps, config }: TranscriptViewProps) {
           <p>
             <a
               href={config.backLink.href}
-              className="text-amber-400 hover:underline print:text-amber-700"
+              className="text-blue-400 hover:underline print:text-blue-700"
             >
               ← {config.backLink.label}
             </a>
@@ -213,12 +213,12 @@ function StepArticle({
       id={`step-${step.id}`}
       role="article"
       aria-labelledby={`step-${step.id}-title`}
-      className="scroll-mt-4 border-l-4 border-amber-500 bg-gray-800/50 p-6 print:break-inside-avoid print:border-amber-600 print:bg-white print:shadow-sm"
+      className="scroll-mt-4 border-l-4 border-blue-500 bg-gray-800/50 p-6 print:break-inside-avoid print:border-blue-600 print:bg-white print:shadow-sm"
     >
       {/* Step header */}
       <header className="mb-4">
         <div className="mb-2 flex items-center gap-3">
-          <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-amber-500 to-amber-700 text-base font-bold shadow-lg print:bg-amber-600">
+          <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-blue-700 text-base font-bold shadow-lg print:bg-blue-600">
             {step.id}
           </span>
           <h2
@@ -242,7 +242,7 @@ function StepArticle({
           <p className="mb-1 text-xs text-gray-500 print:text-gray-600">
             Browser URL:
           </p>
-          <code className="block break-all font-mono text-sm text-amber-300 print:text-amber-800">
+          <code className="block break-all font-mono text-sm text-blue-300 print:text-blue-800">
             {step.urlBar}
           </code>
           <p className="mt-2 text-xs text-gray-400 print:text-gray-700">
@@ -349,7 +349,7 @@ function StepArticle({
       {index < totalSteps - 1 && nextStepId && (
         <a
           href={`#step-${nextStepId}`}
-          className="mt-4 inline-block text-xs text-amber-400 hover:underline print:hidden"
+          className="mt-4 inline-block text-xs text-blue-400 hover:underline print:hidden"
         >
           Skip to next step →
         </a>
@@ -399,7 +399,7 @@ function HttpTranscriptEntry({
     <div
       className={`group relative rounded-md border-l-4 p-4 transition-all print:break-inside-avoid print:bg-gray-50 ${
         isHighlighted
-          ? "bg-gray-800 ring-2 ring-amber-400/50 ring-offset-1 ring-offset-gray-900"
+          ? "bg-gray-800 ring-2 ring-blue-400/50 ring-offset-1 ring-offset-gray-900"
           : "bg-gray-900/50 hover:bg-gray-800/70"
       }`}
       style={{ borderLeftColor: typeConfig.borderColor }}
