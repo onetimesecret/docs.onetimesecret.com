@@ -29,29 +29,32 @@ export function EntraLogin() {
             </svg>
           </div>
           <h1 className="mb-2 text-2xl text-slate-100">Sign in</h1>
-          <label htmlFor="entra-email" className="sr-only">
-            Email
-          </label>
-          <input
-            id="entra-email"
-            type="email"
-            value="alice@contoso.com"
-            readOnly
-            className="mb-4 w-full border-0 border-b-2 border-blue-500 bg-transparent px-0 py-2 text-slate-200 focus:outline-none"
-          />
-          <label htmlFor="entra-password" className="sr-only">
-            Password
-          </label>
-          <input
-            id="entra-password"
-            type="password"
-            placeholder="Password"
-            readOnly
-            className="mb-6 w-full border-0 border-b border-slate-600 bg-transparent px-0 py-2 text-slate-200 placeholder-slate-500 focus:outline-none"
-          />
-          <button className="w-full bg-blue-600 py-2 font-medium text-white hover:bg-blue-500">
-            Sign in
-          </button>
+          <form onSubmit={(e) => e.preventDefault()}>
+            <label htmlFor="entra-email" className="sr-only">
+              Email
+            </label>
+            <input
+              id="entra-email"
+              type="email"
+              value="alice@contoso.com"
+              readOnly
+              className="mb-4 w-full border-0 border-b-2 border-blue-500 bg-transparent px-0 py-2 text-slate-200 focus:outline-none"
+            />
+            <label htmlFor="entra-password" className="sr-only">
+              Password
+            </label>
+            <input
+              id="entra-password"
+              type="password"
+              autoComplete="current-password"
+              placeholder="Password"
+              readOnly
+              className="mb-6 w-full border-0 border-b border-slate-600 bg-transparent px-0 py-2 text-slate-200 placeholder-slate-500 focus:outline-none"
+            />
+            <button type="submit" className="w-full bg-blue-600 py-2 font-medium text-white hover:bg-blue-500">
+              Sign in
+            </button>
+          </form>
           <div className="mt-4 text-sm text-slate-400">
             <span className="cursor-pointer text-blue-400 hover:text-blue-300">
               Can't access your account?

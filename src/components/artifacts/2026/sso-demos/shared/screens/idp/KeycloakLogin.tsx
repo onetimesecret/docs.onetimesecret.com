@@ -17,7 +17,7 @@ export function KeycloakLogin() {
 
         {/* Form */}
         <div className="rounded-b-lg bg-white p-6 shadow">
-          <div className="space-y-4">
+          <form onSubmit={(e) => e.preventDefault()} className="space-y-4">
             <div>
               <label htmlFor="keycloak-username" className="mb-1 block text-sm font-medium text-gray-700">
                 Username or email
@@ -38,6 +38,7 @@ export function KeycloakLogin() {
               <input
                 id="keycloak-password"
                 type="password"
+                autoComplete="current-password"
                 placeholder="Password"
                 readOnly
                 className="w-full rounded border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
@@ -54,10 +55,10 @@ export function KeycloakLogin() {
               </a>
             </div>
 
-            <button className="w-full rounded bg-blue-600 py-2.5 font-medium text-white hover:bg-blue-700">
+            <button type="submit" className="w-full rounded bg-blue-600 py-2.5 font-medium text-white hover:bg-blue-700">
               Sign In
             </button>
-          </div>
+          </form>
 
           {/* Social providers */}
           <div className="mt-6 border-t border-gray-200 pt-6">

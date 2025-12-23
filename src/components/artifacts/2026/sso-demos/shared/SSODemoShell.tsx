@@ -8,6 +8,9 @@ import { ActorDiagram } from "./ActorDiagram.tsx";
 import { ProtocolStack } from "./ProtocolStack.tsx";
 import type { Step, DemoConfig } from "./types.ts";
 
+/** Duration in ms for each step during autoplay */
+const AUTOPLAY_INTERVAL = 3000;
+
 interface SSODemoShellProps {
   /** Array of demo steps */
   steps: Step[];
@@ -25,6 +28,7 @@ interface SSODemoShellProps {
 export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
   const [currentStep, setCurrentStep] = useState(0);
   const [autoPlay, setAutoPlay] = useState(false);
+  const [loadingProgress, setLoadingProgress] = useState(0);
   const step = steps[currentStep];
 
   // Keyboard navigation: ← → arrows and space for autoplay
@@ -43,6 +47,7 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
     []
   );
 
+  // Autoplay: advance to next step after interval
   useEffect(() => {
     if (!autoPlay) return;
     const timer = setTimeout(() => {
@@ -51,9 +56,23 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
       } else {
         setAutoPlay(false);
       }
-    }, 3000);
+    }, AUTOPLAY_INTERVAL);
     return () => clearTimeout(timer);
   }, [autoPlay, currentStep, steps.length]);
+
+  // Progress bar animation for autoplay
+  useEffect(() => {
+    if (!autoPlay) {
+      setLoadingProgress(0);
+      return;
+    }
+    // Reset to 0, then animate to 100 after brief delay for render
+    setLoadingProgress(0);
+    const timer = setTimeout(() => {
+      setLoadingProgress(100);
+    }, 50);
+    return () => clearTimeout(timer);
+  }, [autoPlay, currentStep]);
 
   // Get the screen component for the current step
   const ScreenComponent = screens[step.userSees];
@@ -112,20 +131,37 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
           {/* Step counter with progress */}
           <div className="flex items-center gap-3">
             <div className="flex items-center gap-1.5">
-              {steps.map((s, i) => (
-                <button
-                  key={s.id}
-                  onClick={() => setCurrentStep(i)}
-                  aria-label={`Go to step ${i + 1}: ${s.title}`}
-                  className={`h-2 w-4 rounded-full p-1 transition-all motion-reduce:transition-none hover:opacity-80 ${
-                    i === currentStep
-                      ? "w-6 bg-blue-500"
-                      : i < currentStep
-                        ? "bg-emerald-500"
-                        : "bg-gray-600"
-                  }`}
-                />
-              ))}
+              {steps.map((s, i) => {
+                const isCompleted = i < currentStep;
+                const isCurrent = i === currentStep;
+                const isPending = i > currentStep;
+
+                return (
+                  <button
+                    key={s.id}
+                    onClick={() => setCurrentStep(i)}
+                    aria-label={`${isCompleted ? "Completed" : isCurrent ? "Current" : "Pending"} step ${i + 1}: ${s.title}`}
+                    className={`flex h-6 items-center justify-center rounded-full p-1 transition-all motion-reduce:transition-none hover:opacity-80 focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 ${
+                      isCurrent
+                        ? "w-8 bg-blue-500 ring-2 ring-blue-300 ring-offset-2 ring-offset-gray-800"
+                        : isCompleted
+                          ? "w-6 bg-emerald-500"
+                          : "w-6 border-2 border-dashed border-gray-500 bg-gray-700"
+                    }`}
+                  >
+                    {isCompleted && (
+                      <svg className="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                      </svg>
+                    )}
+                    {isPending && (
+                      <svg className="h-2 w-2 text-gray-400" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="12" r="3" />
+                      </svg>
+                    )}
+                  </button>
+                );
+              })}
             </div>
             <span className="text-sm font-medium text-gray-300">
               Step {currentStep + 1} of {steps.length}
@@ -149,7 +185,7 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
         </div>
 
         {/* Step description */}
-        <div className="grid h-32 grid-cols-[1fr_auto] items-center gap-6 rounded-lg border border-gray-700/50 bg-gray-800 px-5">
+        <div className="grid min-h-32 grid-cols-[1fr_auto] items-center gap-6 rounded-lg border border-gray-700/50 bg-gray-800 px-5 py-4">
           {/* Left: Step info */}
           <div className="flex items-center gap-4">
             <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-blue-700 text-lg font-bold shadow-lg shadow-blue-500/20">
@@ -216,7 +252,11 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
               </svg>
               What the user sees
             </h2>
-            <BrowserMockup urlBar={step.urlBar}>
+            <BrowserMockup
+              urlBar={step.urlBar}
+              loadingProgress={loadingProgress}
+              loadingDuration={AUTOPLAY_INTERVAL}
+            >
               {ScreenComponent ? <ScreenComponent /> : null}
             </BrowserMockup>
           </div>

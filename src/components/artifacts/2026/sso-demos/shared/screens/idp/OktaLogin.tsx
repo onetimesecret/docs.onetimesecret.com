@@ -19,7 +19,7 @@ export function OktaLogin() {
             Sign In
           </h2>
         </div>
-        <div className="space-y-4">
+        <form onSubmit={(e) => e.preventDefault()} className="space-y-4">
           <div>
             <label htmlFor="okta-email" className="mb-1 block text-sm font-medium text-gray-700">
               Username
@@ -39,6 +39,7 @@ export function OktaLogin() {
             <input
               id="okta-password"
               type="password"
+              autoComplete="current-password"
               placeholder="Password"
               readOnly
               className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
@@ -53,10 +54,10 @@ export function OktaLogin() {
               Need help signing in?
             </a>
           </div>
-          <button className="w-full rounded-md bg-blue-600 py-2.5 font-medium text-white hover:bg-blue-700">
+          <button type="submit" className="w-full rounded-md bg-blue-600 py-2.5 font-medium text-white hover:bg-blue-700">
             Sign In
           </button>
-        </div>
+        </form>
       </div>
     </div>
   );
