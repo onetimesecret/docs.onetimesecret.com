@@ -1,24 +1,39 @@
 /**
  * SSO Demo Theme
  *
- * Demo-scoped CSS variables for HTTP message type colors and actor styling.
+ * Demo-scoped Tailwind theme extension for HTTP message and actor colors.
  * Import this file in Astro pages that render SSO demos to enable the theme.
  *
- * These semantic names reference Tailwind v4's native color variables,
- * providing a single source of truth while allowing demo-specific customization.
+ * This uses Tailwind v4's @theme block to define semantic color tokens that
+ * generate utility classes like `bg-http-request`, `border-actor-browser`, etc.
+ *
+ * To customize colors, modify the values below. Changes will automatically
+ * apply to all components using these semantic class names.
  */
 
-:root {
-  /* HTTP Message Type Colors */
+@import "tailwindcss";
+
+@theme {
+  /* HTTP Message Type Colors
+   * These generate utilities: bg-http-*, border-http-*, text-http-*, ring-http-*
+   */
   --color-http-request: var(--color-amber-500);
   --color-http-response: var(--color-emerald-500);
   --color-http-internal: var(--color-gray-500);
   --color-http-server: var(--color-purple-500);
 
-  /* Actor Colors (for transcript view highlighting) */
+  /* Actor Colors
+   * These generate utilities: bg-actor-*, border-actor-*, text-actor-*, ring-actor-*
+   */
   --color-actor-browser: var(--color-rose-500);
   --color-actor-caddy: var(--color-orange-500);
   --color-actor-logto: var(--color-purple-500);
   --color-actor-entra: var(--color-cyan-500);
   --color-actor-ots: var(--color-emerald-500);
+
+  /* Dimmed variants for backgrounds (50% opacity approximation) */
+  --color-http-request-dim: color-mix(in srgb, var(--color-amber-500) 40%, transparent);
+  --color-http-response-dim: color-mix(in srgb, var(--color-emerald-500) 40%, transparent);
+  --color-http-internal-dim: color-mix(in srgb, var(--color-gray-500) 40%, transparent);
+  --color-http-server-dim: color-mix(in srgb, var(--color-purple-500) 40%, transparent);
 }

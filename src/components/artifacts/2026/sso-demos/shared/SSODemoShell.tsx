@@ -328,26 +328,26 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
                   <HttpEntry key={i} entry={entry} />
                 ))}
               </div>
-              {/* Legend */}
+              {/* Legend - colors from sso-demo-theme.css */}
               <div className="mt-auto border-t border-gray-700 pt-4">
                 <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider text-gray-500">
                   Legend
                 </h3>
                 <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-xs">
                   <div className="flex items-center gap-2">
-                    <div className="h-3 w-3 rounded-sm border-l-4 border-amber-500 bg-amber-950/50" />
+                    <div className="h-3 w-3 rounded-sm border-l-4 border-http-request bg-http-request-dim" />
                     <span className="text-gray-400">Browser request</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="h-3 w-3 rounded-sm border-l-4 border-emerald-500 bg-emerald-950/50" />
+                    <div className="h-3 w-3 rounded-sm border-l-4 border-http-response bg-http-response-dim" />
                     <span className="text-gray-400">Server response</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="h-3 w-3 rounded-sm border-l-4 border-purple-500 bg-purple-950/50" />
+                    <div className="h-3 w-3 rounded-sm border-l-4 border-http-server bg-http-server-dim" />
                     <span className="text-gray-400">Server-to-server</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="h-3 w-3 rounded-sm border-l-4 border-gray-500 bg-gray-700/50" />
+                    <div className="h-3 w-3 rounded-sm border-l-4 border-http-internal bg-gray-700/50" />
                     <span className="text-gray-400">Internal process</span>
                   </div>
                 </div>
