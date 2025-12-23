@@ -782,28 +782,29 @@ function generateStepText(step: Step): string {
 
 /**
  * Returns configuration for each HTTP message type.
+ * Colors reference CSS variables defined in sso-demo-theme.css
  */
 function getHttpMessageTypeConfig(type: HttpMessage["type"]) {
   const configs = {
     request: {
       label: "REQUEST",
-      borderColor: "#f59e0b", // amber-500
+      borderColor: "var(--color-http-request)",
     },
     response: {
       label: "RESPONSE",
-      borderColor: "#10b981", // emerald-500
+      borderColor: "var(--color-http-response)",
     },
     internal: {
       label: "INTERNAL",
-      borderColor: "#6b7280", // gray-500
+      borderColor: "var(--color-http-internal)",
     },
     server: {
       label: "SERVER→SERVER",
-      borderColor: "#a855f7", // purple-500
+      borderColor: "var(--color-http-server)",
     },
     "server-response": {
       label: "SERVER RESPONSE",
-      borderColor: "#a855f7", // purple-500
+      borderColor: "var(--color-http-server)",
     },
   };
 
