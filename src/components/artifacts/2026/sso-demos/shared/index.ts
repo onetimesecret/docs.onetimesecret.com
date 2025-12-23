@@ -24,6 +24,7 @@ export type {
 
 // Core components
 export { SSODemoShell } from "./SSODemoShell.tsx";
+export { TranscriptView } from "./TranscriptView.tsx";
 export { HttpEntry } from "./HttpEntry.tsx";
 export { ActorDiagram } from "./ActorDiagram.tsx";
 export { ProtocolStack } from "./ProtocolStack.tsx";
