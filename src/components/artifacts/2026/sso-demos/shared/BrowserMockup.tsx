@@ -59,6 +59,28 @@ export function BrowserMockup({
           }}
         />
       </div>
+      {/* Demo warning banner - clarifies this is not a real login */}
+      <div
+        className="flex items-center justify-center gap-1.5 bg-amber-900/40 px-3 py-1 text-xs text-amber-200"
+        role="note"
+        aria-label="This is a demo simulation. Do not enter real credentials."
+      >
+        <svg
+          className="h-3.5 w-3.5 flex-shrink-0"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+        <span>Demo simulation — do not enter real credentials</span>
+      </div>
       {/* Screen content */}
       <div className="flex-1 overflow-hidden">{children}</div>
     </div>
