@@ -3,6 +3,41 @@
 import React, { useCallback, useState, useMemo } from "react";
 import type { Step, DemoConfig, HttpMessage, ActorConfig } from "./types.ts";
 
+/**
+ * TranscriptView Component
+ *
+ * A read-only, printable transcript of the SSO authentication flow.
+ *
+ * ## Color Customization
+ *
+ * HTTP message colors and actor colors are defined in `sso-demo-theme.css`.
+ * To customize colors for this demo:
+ *
+ * 1. Edit `sso-demo-theme.css` in this directory
+ * 2. Modify the CSS variables:
+ *    - `--color-http-request` - Browser request color (default: amber)
+ *    - `--color-http-response` - Server response color (default: emerald)
+ *    - `--color-http-internal` - Internal process color (default: gray)
+ *    - `--color-http-server` - Server-to-server color (default: purple)
+ *    - `--color-actor-*` - Individual actor colors (browser, caddy, logto, entra, ots)
+ *
+ * The theme CSS is imported in the Astro page that renders this demo,
+ * keeping the color definitions scoped to SSO demo pages only.
+ *
+ * ## Actor Colors
+ *
+ * Actor colors must match the `activeColor` values in the demo's `config.ts` file.
+ * The mapping uses Tailwind color classes (e.g., `bg-purple-500` in config.ts
+ * corresponds to `var(--color-purple-500)` in the CSS theme).
+ *
+ * Current actor color mapping:
+ * - Browser: rose-500
+ * - Caddy: orange-500
+ * - Logto: purple-500
+ * - Entra: cyan-500
+ * - OTS: emerald-500
+ */
+
 interface TranscriptViewProps {
   /** Array of demo steps to render as transcript */
   steps: Step[];

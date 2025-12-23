@@ -18,7 +18,7 @@
   /* Actor Colors (for transcript view highlighting) */
   --color-actor-browser: var(--color-rose-500);
   --color-actor-caddy: var(--color-orange-500);
-  --color-actor-logto: var(--color-violet-500);
-  --color-actor-entra: var(--color-sky-500);
+  --color-actor-logto: var(--color-purple-500);
+  --color-actor-entra: var(--color-cyan-500);
   --color-actor-ots: var(--color-emerald-500);
 }
