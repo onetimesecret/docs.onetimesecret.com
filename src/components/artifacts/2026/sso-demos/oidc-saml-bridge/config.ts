@@ -19,6 +19,7 @@ export const actorConfig: ActorConfig[] = [
 
 /**
  * Protocol stack configuration showing the architecture.
+ * Colors use semantic classes from sso-demo-theme.css.
  */
 export const protocolStack: ProtocolStackConfig = {
   components: [
@@ -27,36 +28,36 @@ export const protocolStack: ProtocolStackConfig = {
       label: "OTS",
       subLabel: "Application",
       emoji: "🔐",
-      activeGradient: "bg-gradient-to-br from-emerald-600 to-emerald-700",
-      activeShadow: "shadow-lg shadow-emerald-500/30",
-      activeRing: "ring-2 ring-emerald-400/50",
+      activeGradient: "bg-gradient-to-br from-actor-ots-600 to-actor-ots-700",
+      activeShadow: "shadow-lg shadow-actor-ots/30",
+      activeRing: "ring-2 ring-actor-ots/50",
     },
     {
       key: "caddy",
       label: "Caddy",
       subLabel: "Reverse Proxy",
       emoji: "🛡️",
-      activeGradient: "bg-gradient-to-br from-amber-600 to-amber-700",
-      activeShadow: "shadow-lg shadow-amber-500/30",
-      activeRing: "ring-2 ring-amber-400/50",
+      activeGradient: "bg-gradient-to-br from-actor-caddy-600 to-actor-caddy-700",
+      activeShadow: "shadow-lg shadow-actor-caddy/30",
+      activeRing: "ring-2 ring-actor-caddy/50",
     },
     {
       key: "logto",
       label: "Logto",
       subLabel: "Service Provider",
       emoji: "🔑",
-      activeGradient: "bg-gradient-to-br from-purple-600 to-purple-700",
-      activeShadow: "shadow-lg shadow-purple-500/30",
-      activeRing: "ring-2 ring-purple-400/50",
+      activeGradient: "bg-gradient-to-br from-actor-logto-600 to-actor-logto-700",
+      activeShadow: "shadow-lg shadow-actor-logto/30",
+      activeRing: "ring-2 ring-actor-logto/50",
     },
     {
       key: "entra",
       label: "Entra",
       subLabel: "Identity Provider",
       emoji: "🏢",
-      activeGradient: "bg-gradient-to-br from-cyan-600 to-cyan-700",
-      activeShadow: "shadow-lg shadow-cyan-500/30",
-      activeRing: "ring-2 ring-cyan-400/50",
+      activeGradient: "bg-gradient-to-br from-actor-entra-600 to-actor-entra-700",
+      activeShadow: "shadow-lg shadow-actor-entra/30",
+      activeRing: "ring-2 ring-actor-entra/50",
     },
   ],
   connections: [
