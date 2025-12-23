@@ -19,11 +19,11 @@ const exampleConfig: DemoConfig = {
     label: "Back to SSO Demos",
   },
   actorConfig: [
-    { key: "browser", label: "Browser", activeColor: "bg-blue-500" },
+    { key: "browser", label: "Browser", activeColor: "bg-rose-500" },
     { key: "caddy", label: "Caddy", activeColor: "bg-purple-500" },
     { key: "logto", label: "Logto", activeColor: "bg-emerald-500" },
     { key: "entra", label: "Entra", activeColor: "bg-amber-500" },
-    { key: "ots", label: "OTS", activeColor: "bg-red-500" },
+    { key: "ots", label: "OTS", activeColor: "bg-cyan-500" },
   ],
   protocolStack: {
     components: [],

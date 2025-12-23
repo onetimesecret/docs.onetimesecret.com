@@ -16,6 +16,8 @@ interface TranscriptViewProps {
  * over interactive demos. Print-friendly, accessible, and exportable.
  */
 export function TranscriptView({ steps, config }: TranscriptViewProps) {
+  const [copiedAll, setCopiedAll] = useState(false);
+
   /**
    * Copies entire transcript as plain text to clipboard
    */
@@ -23,10 +25,10 @@ export function TranscriptView({ steps, config }: TranscriptViewProps) {
     const transcript = generatePlainTextTranscript(steps, config);
     try {
       await navigator.clipboard.writeText(transcript);
-      alert("Transcript copied to clipboard!");
+      setCopiedAll(true);
+      setTimeout(() => setCopiedAll(false), 2000);
     } catch (err) {
       console.error("Failed to copy transcript:", err);
-      alert("Failed to copy transcript. Please try again.");
     }
   }, [steps, config]);
 
@@ -58,7 +60,7 @@ export function TranscriptView({ steps, config }: TranscriptViewProps) {
                 className="rounded-md bg-emerald-600 px-4 py-2 text-sm font-medium text-white shadow-md transition-colors hover:bg-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-gray-900"
                 aria-label="Copy entire transcript to clipboard"
               >
-                Copy All
+                {copiedAll ? "✓ Copied" : "Copy All"}
               </button>
               <button
                 onClick={() => window.print()}
@@ -176,21 +178,27 @@ function StepArticle({
     return map;
   }, [actorConfig]);
 
+  // Sorted labels by length descending for partial matching
+  const sortedLabels = useMemo(
+    () => Object.entries(labelToKeyMap).sort((a, b) => b[0].length - a[0].length),
+    [labelToKeyMap]
+  );
+
   // Get actor key from a from/to string
   const getActorKeyFromString = useCallback(
     (str: string): string | null => {
       const normalized = str.toLowerCase().trim();
       // Try direct match first
       if (labelToKeyMap[normalized]) return labelToKeyMap[normalized];
-      // Try partial match (e.g., "Caddy (OAuth2Proxy)" should match "caddy")
-      for (const [label, key] of Object.entries(labelToKeyMap)) {
-        if (normalized.includes(label) || label.includes(normalized)) {
+      // Try partial match with longest labels first (e.g., "Caddy (OAuth2Proxy)" should match "caddy")
+      for (const [label, key] of sortedLabels) {
+        if (normalized.includes(label)) {
           return key;
         }
       }
       return null;
     },
-    [labelToKeyMap],
+    [labelToKeyMap, sortedLabels],
   );
 
   // Check if an HTTP entry is FROM the highlighted actor (not just involves)
@@ -429,7 +437,7 @@ function HttpTranscriptEntry({
 
   // Build dynamic ring class based on highlighted actor's color
   const highlightRingClass = isHighlighted && highlightColor
-    ? `${highlightColor.bgClass} ring-2 ${highlightColor.borderClass.replace('border-', 'ring-')}/60 ring-offset-1 ring-offset-gray-900`
+    ? `${highlightColor.bgClass} ring-2 ${highlightColor.ringClass}/60 ring-offset-1 ring-offset-gray-900`
     : "";
 
   return (
@@ -545,22 +553,20 @@ function HttpTranscriptEntry({
           >
             {showPayload ? "Hide" : "Show"} {entry.expandedPayload.label}
           </button>
-          {(showPayload || typeof window !== "undefined") && (
-            <div
-              id={`payload-${uniqueId}`}
-              className={`${showPayload ? "block" : "hidden"} print:block`}
+          <div
+            id={`payload-${uniqueId}`}
+            className={`${showPayload ? "block" : "hidden"} print:block`}
+          >
+            <h4 className="mb-1 text-xs font-semibold text-gray-400 print:text-gray-700">
+              {entry.expandedPayload.label}:
+            </h4>
+            <pre
+              className="overflow-x-auto rounded bg-black/40 p-3 font-mono text-xs text-green-300 print:bg-gray-100 print:text-gray-900"
+              aria-label={entry.expandedPayload.label}
             >
-              <h4 className="mb-1 text-xs font-semibold text-gray-400 print:text-gray-700">
-                {entry.expandedPayload.label}:
-              </h4>
-              <pre
-                className="overflow-x-auto rounded bg-black/40 p-3 font-mono text-xs text-green-300 print:bg-gray-100 print:text-gray-900"
-                aria-label={entry.expandedPayload.label}
-              >
-                {entry.expandedPayload.content}
-              </pre>
-            </div>
-          )}
+              {entry.expandedPayload.content}
+            </pre>
+          </div>
         </div>
       )}
     </div>
@@ -574,6 +580,7 @@ function getActorColorInfo(activeColor?: string): {
   bgClass: string;
   bgMutedClass: string;
   borderClass: string;
+  ringClass: string;
   textClass: string;
   dotClass: string;
 } {
@@ -584,6 +591,7 @@ function getActorColorInfo(activeColor?: string): {
       bgClass: string;
       bgMutedClass: string;
       borderClass: string;
+      ringClass: string;
       textClass: string;
       dotClass: string;
     }
@@ -592,6 +600,7 @@ function getActorColorInfo(activeColor?: string): {
       bgClass: "bg-blue-500/30",
       bgMutedClass: "bg-blue-950/50",
       borderClass: "border-blue-500",
+      ringClass: "ring-blue-500",
       textClass: "text-blue-200",
       dotClass: "bg-blue-500",
     },
@@ -599,6 +608,7 @@ function getActorColorInfo(activeColor?: string): {
       bgClass: "bg-orange-500/30",
       bgMutedClass: "bg-orange-950/50",
       borderClass: "border-orange-500",
+      ringClass: "ring-orange-500",
       textClass: "text-orange-200",
       dotClass: "bg-orange-500",
     },
@@ -606,6 +616,7 @@ function getActorColorInfo(activeColor?: string): {
       bgClass: "bg-purple-500/30",
       bgMutedClass: "bg-purple-950/50",
       borderClass: "border-purple-500",
+      ringClass: "ring-purple-500",
       textClass: "text-purple-200",
       dotClass: "bg-purple-500",
     },
@@ -613,6 +624,7 @@ function getActorColorInfo(activeColor?: string): {
       bgClass: "bg-cyan-500/30",
       bgMutedClass: "bg-cyan-950/50",
       borderClass: "border-cyan-500",
+      ringClass: "ring-cyan-500",
       textClass: "text-cyan-200",
       dotClass: "bg-cyan-500",
     },
@@ -620,6 +632,7 @@ function getActorColorInfo(activeColor?: string): {
       bgClass: "bg-emerald-500/30",
       bgMutedClass: "bg-emerald-950/50",
       borderClass: "border-emerald-500",
+      ringClass: "ring-emerald-500",
       textClass: "text-emerald-200",
       dotClass: "bg-emerald-500",
     },
@@ -627,6 +640,7 @@ function getActorColorInfo(activeColor?: string): {
       bgClass: "bg-rose-500/30",
       bgMutedClass: "bg-rose-950/50",
       borderClass: "border-rose-500",
+      ringClass: "ring-rose-500",
       textClass: "text-rose-200",
       dotClass: "bg-rose-500",
     },
@@ -634,6 +648,7 @@ function getActorColorInfo(activeColor?: string): {
       bgClass: "bg-amber-500/30",
       bgMutedClass: "bg-amber-950/50",
       borderClass: "border-amber-500",
+      ringClass: "ring-amber-500",
       textClass: "text-amber-200",
       dotClass: "bg-amber-500",
     },
@@ -644,6 +659,7 @@ function getActorColorInfo(activeColor?: string): {
     bgClass: "bg-gray-500/30",
     bgMutedClass: "bg-gray-800/50",
     borderClass: "border-gray-500",
+    ringClass: "ring-gray-500",
     textClass: "text-gray-200",
     dotClass: "bg-gray-500",
   };

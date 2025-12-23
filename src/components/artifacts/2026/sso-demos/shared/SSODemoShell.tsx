@@ -33,6 +33,11 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
   const [viewMode, setViewMode] = useState<"interactive" | "transcript">("interactive");
   const step = steps[currentStep];
 
+  // Toggle between interactive and transcript view
+  const toggleViewMode = React.useCallback(() => {
+    setViewMode((v) => (v === "interactive" ? "transcript" : "interactive"));
+  }, []);
+
   // Keyboard navigation: ← → arrows and space for autoplay
   useHotkeys("left", () => setCurrentStep((s) => Math.max(0, s - 1)), []);
   useHotkeys(
@@ -54,9 +59,9 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
     "t",
     (e) => {
       e.preventDefault();
-      setViewMode((v) => (v === "interactive" ? "transcript" : "interactive"));
+      toggleViewMode();
     },
-    []
+    [toggleViewMode]
   );
 
   // Autoplay: advance to next step after interval
@@ -141,7 +146,7 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
             </button>
             <span className="mx-1 text-gray-600">|</span>
             <button
-              onClick={() => setViewMode(viewMode === "interactive" ? "transcript" : "interactive")}
+              onClick={toggleViewMode}
               aria-pressed={viewMode === "transcript"}
               aria-label={viewMode === "interactive" ? "Switch to transcript view" : "Switch to interactive view"}
               className={`rounded-md border px-3 py-2 text-xs font-medium transition-colors motion-reduce:transition-none ${

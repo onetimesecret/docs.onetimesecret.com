@@ -148,7 +148,7 @@ All styling uses existing Tailwind utility classes matching the `SSODemoShell.ts
 The component renders different HTTP message types with distinct visual styling:
 
 ### Message Types
-1. **REQUEST** (blue) - Browser requests
+1. **REQUEST** (amber) - Browser requests
 2. **RESPONSE** (emerald) - Server responses
 3. **INTERNAL** (gray) - Internal processes
 4. **SERVER→SERVER** (purple) - Backend communication
