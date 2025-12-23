@@ -330,7 +330,7 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
                 </h3>
                 <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-xs">
                   <div className="flex items-center gap-2">
-                    <div className="h-3 w-3 rounded-sm border-l-4 border-blue-500 bg-blue-950/50" />
+                    <div className="h-3 w-3 rounded-sm border-l-4 border-amber-500 bg-amber-950/50" />
                     <span className="text-gray-400">Browser request</span>
                   </div>
                   <div className="flex items-center gap-2">
