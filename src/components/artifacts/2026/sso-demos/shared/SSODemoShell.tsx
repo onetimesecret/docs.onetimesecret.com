@@ -9,8 +9,14 @@ import { ProtocolStack } from "./ProtocolStack.tsx";
 import { TranscriptView } from "./TranscriptView.tsx";
 import type { Step, DemoConfig } from "./types.ts";
 
-/** Duration in ms for each step during autoplay */
-const AUTOPLAY_INTERVAL = 3000;
+/** Duration in ms for each step during autoplay by speed */
+const SPEED_INTERVALS = {
+  slow: 5000,
+  normal: 3000,
+  fast: 1500,
+} as const;
+
+type PlaybackSpeed = keyof typeof SPEED_INTERVALS;
 
 interface SSODemoShellProps {
   /** Array of demo steps */
@@ -31,11 +37,29 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
   const [autoPlay, setAutoPlay] = useState(false);
   const [loadingProgress, setLoadingProgress] = useState(0);
   const [viewMode, setViewMode] = useState<"interactive" | "transcript">("interactive");
+  const [playbackSpeed, setPlaybackSpeed] = useState<PlaybackSpeed>("normal");
+  const [announcement, setAnnouncement] = useState("");
   const step = steps[currentStep];
+
+  // Get current speed interval
+  const autoplayInterval = SPEED_INTERVALS[playbackSpeed];
 
   // Toggle between interactive and transcript view
   const toggleViewMode = React.useCallback(() => {
     setViewMode((v) => (v === "interactive" ? "transcript" : "interactive"));
+  }, []);
+
+  // Restart demo - jump to step 0
+  const restartDemo = React.useCallback(() => {
+    setCurrentStep(0);
+    setAutoPlay(true);
+    setAnnouncement("Demo restarted from beginning");
+  }, []);
+
+  // Change playback speed
+  const changeSpeed = React.useCallback((speed: PlaybackSpeed) => {
+    setPlaybackSpeed(speed);
+    setAnnouncement(`Playback speed set to ${speed}`);
   }, []);
 
   // Keyboard navigation: ← → arrows and space for autoplay
@@ -64,6 +88,14 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
     [toggleViewMode]
   );
 
+  // Restart demo (R key)
+  useHotkeys("r", restartDemo, [restartDemo]);
+
+  // Speed controls (1, 2, 3 keys)
+  useHotkeys("1", () => changeSpeed("slow"), [changeSpeed]);
+  useHotkeys("2", () => changeSpeed("normal"), [changeSpeed]);
+  useHotkeys("3", () => changeSpeed("fast"), [changeSpeed]);
+
   // Autoplay: advance to next step after interval
   useEffect(() => {
     if (!autoPlay) return;
@@ -73,9 +105,9 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
       } else {
         setAutoPlay(false);
       }
-    }, AUTOPLAY_INTERVAL);
+    }, autoplayInterval);
     return () => clearTimeout(timer);
-  }, [autoPlay, currentStep, steps.length]);
+  }, [autoPlay, currentStep, steps.length, autoplayInterval]);
 
   // Progress bar animation for autoplay
   useEffect(() => {
@@ -148,6 +180,57 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
                   {autoPlay ? "⏹ Stop" : "▶ Auto"}
                 </button>
                 <span className="mx-1 text-gray-600">|</span>
+
+                {/* Replay controls */}
+                <button
+                  onClick={restartDemo}
+                  aria-label="Restart demo from beginning"
+                  className="rounded-md border border-gray-600 bg-transparent px-3 py-2 text-xs font-medium text-gray-400 transition-colors motion-reduce:transition-none hover:border-gray-500 hover:bg-gray-700 hover:text-gray-300"
+                >
+                  ⏮ Restart
+                </button>
+                <span className="mx-1 text-gray-600">|</span>
+
+                {/* Speed controls */}
+                <div className="flex items-center gap-1" role="group" aria-label="Playback speed">
+                  <button
+                    onClick={() => changeSpeed("slow")}
+                    aria-pressed={playbackSpeed === "slow"}
+                    aria-label="Slow speed (5 seconds per step)"
+                    className={`rounded-md border px-2 py-2 text-xs font-medium transition-colors motion-reduce:transition-none ${
+                      playbackSpeed === "slow"
+                        ? "border-blue-500/50 bg-blue-900/30 text-blue-400"
+                        : "border-gray-600 bg-transparent text-gray-400 hover:border-gray-500 hover:text-gray-300"
+                    }`}
+                  >
+                    🐢
+                  </button>
+                  <button
+                    onClick={() => changeSpeed("normal")}
+                    aria-pressed={playbackSpeed === "normal"}
+                    aria-label="Normal speed (3 seconds per step)"
+                    className={`rounded-md border px-2 py-2 text-xs font-medium transition-colors motion-reduce:transition-none ${
+                      playbackSpeed === "normal"
+                        ? "border-blue-500/50 bg-blue-900/30 text-blue-400"
+                        : "border-gray-600 bg-transparent text-gray-400 hover:border-gray-500 hover:text-gray-300"
+                    }`}
+                  >
+                    ▶️
+                  </button>
+                  <button
+                    onClick={() => changeSpeed("fast")}
+                    aria-pressed={playbackSpeed === "fast"}
+                    aria-label="Fast speed (1.5 seconds per step)"
+                    className={`rounded-md border px-2 py-2 text-xs font-medium transition-colors motion-reduce:transition-none ${
+                      playbackSpeed === "fast"
+                        ? "border-blue-500/50 bg-blue-900/30 text-blue-400"
+                        : "border-gray-600 bg-transparent text-gray-400 hover:border-gray-500 hover:text-gray-300"
+                    }`}
+                  >
+                    🐇
+                  </button>
+                </div>
+                <span className="mx-1 text-gray-600">|</span>
               </>
             )}
             {/* View mode toggle - always visible */}
@@ -209,19 +292,20 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
 
         {/* Live region for screen reader announcements */}
         <div role="status" aria-live="polite" aria-atomic="true" className="sr-only">
-          Step {currentStep + 1} of {steps.length}: {step.title}
+          {announcement || `Step ${currentStep + 1} of ${steps.length}: ${step.title}`}
         </div>
 
         {/* Keyboard shortcuts help */}
         {viewMode === "interactive" && (
           <div className="rounded-lg border border-gray-700/50 bg-gray-800/50 p-3 text-xs text-gray-400">
-            <span className="font-semibold text-gray-300">Keyboard shortcuts: </span>
-            <span className="inline-flex gap-4">
-              <span><kbd className="rounded bg-gray-700 px-1.5 py-0.5 font-mono">←</kbd> Previous</span>
-              <span><kbd className="rounded bg-gray-700 px-1.5 py-0.5 font-mono">→</kbd> Next</span>
-              <span><kbd className="rounded bg-gray-700 px-1.5 py-0.5 font-mono">Space</kbd> Toggle autoplay</span>
-              <span><kbd className="rounded bg-gray-700 px-1.5 py-0.5 font-mono">T</kbd> Transcript view</span>
-            </span>
+            <div className="font-semibold text-gray-300 mb-2 sm:mb-0 sm:inline">Keyboard: </div>
+            <div className="grid grid-cols-2 gap-x-4 gap-y-1.5 sm:inline-flex sm:flex-wrap sm:gap-x-4 sm:gap-y-2">
+              <span><kbd className="rounded bg-gray-700 px-1.5 py-0.5 font-mono">←</kbd><kbd className="rounded bg-gray-700 px-1.5 py-0.5 font-mono ml-0.5">→</kbd> Navigate</span>
+              <span><kbd className="rounded bg-gray-700 px-1.5 py-0.5 font-mono">Space</kbd> Autoplay</span>
+              <span><kbd className="rounded bg-gray-700 px-1.5 py-0.5 font-mono">R</kbd> Restart</span>
+              <span><kbd className="rounded bg-gray-700 px-1.5 py-0.5 font-mono">1</kbd><kbd className="rounded bg-gray-700 px-1.5 py-0.5 font-mono ml-0.5">2</kbd><kbd className="rounded bg-gray-700 px-1.5 py-0.5 font-mono ml-0.5">3</kbd> Speed</span>
+              <span><kbd className="rounded bg-gray-700 px-1.5 py-0.5 font-mono">T</kbd> Transcript</span>
+            </div>
           </div>
         )}
 
@@ -301,7 +385,7 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
             <BrowserMockup
               urlBar={step.urlBar}
               loadingProgress={loadingProgress}
-              loadingDuration={AUTOPLAY_INTERVAL}
+              loadingDuration={autoplayInterval}
             >
               {ScreenComponent ? <ScreenComponent /> : null}
             </BrowserMockup>
