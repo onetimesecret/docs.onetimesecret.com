@@ -377,14 +377,27 @@ function HttpTranscriptEntry({
   actorConfig: ActorConfig[];
 }) {
   const [showPayload, setShowPayload] = React.useState(false);
+  const [copied, setCopied] = React.useState(false);
   const uniqueId = React.useId();
 
   // Determine message type label and styling
   const typeConfig = getHttpMessageTypeConfig(entry.type);
 
+  // Copy single entry to clipboard
+  const handleCopyEntry = async () => {
+    const text = formatHttpEntryAsText(entry);
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error("Failed to copy:", err);
+    }
+  };
+
   return (
     <div
-      className={`rounded-md border-l-4 p-4 transition-all print:break-inside-avoid print:bg-gray-50 ${
+      className={`group relative rounded-md border-l-4 p-4 transition-all print:break-inside-avoid print:bg-gray-50 ${
         isHighlighted
           ? "bg-gray-800 ring-2 ring-amber-400/50 ring-offset-1 ring-offset-gray-900"
           : "bg-gray-900/50 hover:bg-gray-800/70"
@@ -393,6 +406,15 @@ function HttpTranscriptEntry({
       onMouseEnter={() => onHoverActors(involvedActors)}
       onMouseLeave={() => onHoverActors([])}
     >
+      {/* Copy button - appears on hover */}
+      <button
+        onClick={handleCopyEntry}
+        className="absolute right-2 top-2 rounded bg-gray-700 px-2 py-1 text-xs text-gray-300 opacity-0 transition-opacity hover:bg-gray-600 group-hover:opacity-100 print:hidden"
+        aria-label="Copy this HTTP entry"
+      >
+        {copied ? "✓ Copied" : "Copy"}
+      </button>
+
       {/* Message header */}
       <div className="mb-2">
         <div className="mb-1 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-gray-400 print:text-gray-700">
@@ -591,6 +613,48 @@ function getActorColorInfo(activeColor?: string): {
 
   if (!activeColor) return defaultColors;
   return colorMap[activeColor] || defaultColors;
+}
+
+/**
+ * Formats a single HTTP entry as plain text for clipboard.
+ */
+function formatHttpEntryAsText(entry: HttpMessage): string {
+  const lines: string[] = [];
+  const typeConfig = getHttpMessageTypeConfig(entry.type);
+
+  lines.push(`[${typeConfig.label}]`);
+  if (entry.from && entry.to) {
+    lines.push(`${entry.from} → ${entry.to}`);
+  }
+  if (entry.label) {
+    lines.push(entry.label);
+  }
+  if (entry.method && entry.url) {
+    lines.push(`${entry.method} ${entry.url}`);
+  }
+  if (entry.status) {
+    lines.push(entry.status);
+  }
+  if (entry.headers && entry.headers.length > 0) {
+    lines.push("Headers:");
+    entry.headers.forEach((h) => lines.push(`  ${h}`));
+  }
+  if (entry.body) {
+    lines.push("Body:");
+    entry.body.split("\n").forEach((line) => lines.push(`  ${line}`));
+  }
+  if (entry.note) {
+    lines.push(`Note: ${entry.note}`);
+  }
+  if (entry.expandedPayload) {
+    lines.push("");
+    lines.push(`${entry.expandedPayload.label}:`);
+    entry.expandedPayload.content
+      .split("\n")
+      .forEach((line) => lines.push(`  ${line}`));
+  }
+
+  return lines.join("\n");
 }
 
 /**
