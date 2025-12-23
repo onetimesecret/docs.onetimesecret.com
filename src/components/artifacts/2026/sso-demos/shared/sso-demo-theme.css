@@ -26,13 +26,13 @@
    * These generate utilities: bg-actor-*, border-actor-*, text-actor-*, ring-actor-*
    * Each actor has base, -600, and -700 shades for gradients and shadows
    */
-  --color-actor-browser: var(--color-rose-500);
-  --color-actor-browser-600: var(--color-rose-600);
-  --color-actor-browser-700: var(--color-rose-700);
+  --color-actor-browser: var(--color-slate-600);
+  --color-actor-browser-600: var(--color-slate-700);
+  --color-actor-browser-700: var(--color-slate-800);
 
-  --color-actor-caddy: var(--color-orange-500);
-  --color-actor-caddy-600: var(--color-orange-600);
-  --color-actor-caddy-700: var(--color-orange-700);
+  --color-actor-caddy: var(--color-lime-500);
+  --color-actor-caddy-600: var(--color-lime-600);
+  --color-actor-caddy-700: var(--color-lime-700);
 
   --color-actor-logto: var(--color-purple-500);
   --color-actor-logto-600: var(--color-purple-600);
@@ -42,9 +42,9 @@
   --color-actor-entra-600: var(--color-cyan-600);
   --color-actor-entra-700: var(--color-cyan-700);
 
-  --color-actor-ots: var(--color-emerald-500);
-  --color-actor-ots-600: var(--color-emerald-600);
-  --color-actor-ots-700: var(--color-emerald-700);
+  --color-actor-ots: var(--color-red-500);
+  --color-actor-ots-600: var(--color-red-600);
+  --color-actor-ots-700: var(--color-red-700);
 
   /* Dimmed variants for backgrounds (40% opacity approximation) */
   --color-http-request-dim: color-mix(
