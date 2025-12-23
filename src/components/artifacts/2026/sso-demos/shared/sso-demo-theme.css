@@ -32,8 +32,24 @@
   --color-actor-ots: var(--color-emerald-500);
 
   /* Dimmed variants for backgrounds (50% opacity approximation) */
-  --color-http-request-dim: color-mix(in srgb, var(--color-amber-500) 40%, transparent);
-  --color-http-response-dim: color-mix(in srgb, var(--color-emerald-500) 40%, transparent);
-  --color-http-internal-dim: color-mix(in srgb, var(--color-gray-500) 40%, transparent);
-  --color-http-server-dim: color-mix(in srgb, var(--color-purple-500) 40%, transparent);
+  --color-http-request-dim: color-mix(
+    in srgb,
+    var(--color-amber-500) 40%,
+    transparent
+  );
+  --color-http-response-dim: color-mix(
+    in srgb,
+    var(--color-emerald-500) 40%,
+    transparent
+  );
+  --color-http-internal-dim: color-mix(
+    in srgb,
+    var(--color-gray-500) 40%,
+    transparent
+  );
+  --color-http-server-dim: color-mix(
+    in srgb,
+    var(--color-purple-500) 40%,
+    transparent
+  );
 }

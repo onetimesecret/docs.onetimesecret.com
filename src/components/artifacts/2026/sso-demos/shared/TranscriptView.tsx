@@ -687,6 +687,47 @@ function getActorColorInfo(activeColor?: string): {
       textClass: "text-amber-200",
       dotClass: "bg-amber-500",
     },
+    // Semantic actor colors from sso-demo-theme.css
+    "bg-actor-browser": {
+      bgClass: "bg-actor-browser/30",
+      bgMutedClass: "bg-rose-950/50",
+      borderClass: "border-actor-browser",
+      ringClass: "ring-actor-browser",
+      textClass: "text-rose-200",
+      dotClass: "bg-actor-browser",
+    },
+    "bg-actor-caddy": {
+      bgClass: "bg-actor-caddy/30",
+      bgMutedClass: "bg-orange-950/50",
+      borderClass: "border-actor-caddy",
+      ringClass: "ring-actor-caddy",
+      textClass: "text-orange-200",
+      dotClass: "bg-actor-caddy",
+    },
+    "bg-actor-logto": {
+      bgClass: "bg-actor-logto/30",
+      bgMutedClass: "bg-purple-950/50",
+      borderClass: "border-actor-logto",
+      ringClass: "ring-actor-logto",
+      textClass: "text-purple-200",
+      dotClass: "bg-actor-logto",
+    },
+    "bg-actor-entra": {
+      bgClass: "bg-actor-entra/30",
+      bgMutedClass: "bg-cyan-950/50",
+      borderClass: "border-actor-entra",
+      ringClass: "ring-actor-entra",
+      textClass: "text-cyan-200",
+      dotClass: "bg-actor-entra",
+    },
+    "bg-actor-ots": {
+      bgClass: "bg-actor-ots/30",
+      bgMutedClass: "bg-emerald-950/50",
+      borderClass: "border-actor-ots",
+      ringClass: "ring-actor-ots",
+      textClass: "text-emerald-200",
+      dotClass: "bg-actor-ots",
+    },
   };
 
   // Default to gray if no color or unknown color

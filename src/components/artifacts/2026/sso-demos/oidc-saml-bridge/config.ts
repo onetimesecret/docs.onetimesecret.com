@@ -5,13 +5,16 @@ import type { DemoConfig, ActorConfig, ProtocolStackConfig } from "../shared";
 /**
  * Actor configuration for the OIDC→SAML Bridge demo.
  * Defines the components in the auth flow and their visual styling.
+ *
+ * Colors use semantic classes from sso-demo-theme.css (bg-actor-*).
+ * To customize actor colors, modify the theme file.
  */
 export const actorConfig: ActorConfig[] = [
-  { key: "browser", label: "Browser", activeColor: "bg-rose-500" },
-  { key: "caddy", label: "Caddy", activeColor: "bg-orange-500" },
-  { key: "logto", label: "Logto", activeColor: "bg-purple-500" },
-  { key: "entra", label: "Entra", activeColor: "bg-cyan-500" },
-  { key: "ots", label: "OTS", activeColor: "bg-emerald-500" },
+  { key: "browser", label: "Browser", activeColor: "bg-actor-browser" },
+  { key: "caddy", label: "Caddy", activeColor: "bg-actor-caddy" },
+  { key: "logto", label: "Logto", activeColor: "bg-actor-logto" },
+  { key: "entra", label: "Entra", activeColor: "bg-actor-entra" },
+  { key: "ots", label: "OTS", activeColor: "bg-actor-ots" },
 ];
 
 /**
@@ -61,20 +64,20 @@ export const protocolStack: ProtocolStackConfig = {
       from: "ots",
       to: "caddy",
       protocol: "HTTP",
-      activeColor: "bg-emerald-500",
+      activeColor: "bg-actor-ots",
     },
     {
       from: "caddy",
       to: "logto",
       protocol: "OIDC",
       subProtocol: "(via OAuth2Proxy)",
-      activeColor: "bg-amber-500",
+      activeColor: "bg-actor-caddy",
     },
     {
       from: "logto",
       to: "entra",
       protocol: "SAML",
-      activeColor: "bg-purple-500",
+      activeColor: "bg-actor-logto",
     },
   ],
 };
