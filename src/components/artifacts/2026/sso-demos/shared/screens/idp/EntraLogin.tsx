@@ -46,6 +46,7 @@ export function EntraLogin() {
             <input
               id="entra-password"
               type="password"
+              autoComplete="current-password"
               placeholder="Password"
               readOnly
               className="mb-6 w-full border-0 border-b border-slate-600 bg-transparent px-0 py-2 text-slate-200 placeholder-slate-500 focus:outline-none"

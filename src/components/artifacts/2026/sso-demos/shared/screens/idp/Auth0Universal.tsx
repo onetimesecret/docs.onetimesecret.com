@@ -83,6 +83,7 @@ export function Auth0Universal() {
                 <input
                   id="auth0-password"
                   type="password"
+                  autoComplete="current-password"
                   placeholder="Password"
                   readOnly
                   className="w-full rounded border border-gray-300 px-3 py-2.5 text-gray-900 placeholder-gray-400 focus:border-orange-500 focus:outline-none focus:ring-1 focus:ring-orange-500"
