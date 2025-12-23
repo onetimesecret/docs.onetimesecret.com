@@ -5,7 +5,7 @@ import type { HttpMessage } from "./types.ts";
 
 /** Styling for each HTTP message type */
 const TYPE_STYLES: Record<HttpMessage["type"], string> = {
-  request: "border-l-4 border-blue-500 bg-blue-950/40",
+  request: "border-l-4 border-amber-500 bg-amber-950/40",
   response: "border-l-4 border-emerald-500 bg-emerald-950/40",
   internal: "border-l-4 border-gray-500 bg-gray-800",
   server: "border-l-4 border-purple-500 bg-purple-950/40",
