@@ -7,13 +7,24 @@ interface BrowserMockupProps {
   urlBar: string;
   /** Screen content to render inside the browser */
   children: ReactNode;
+  /** Progress percentage (0-100) for loading indicator. Only shown when > 0. */
+  loadingProgress?: number;
+  /** Duration in ms for the progress animation */
+  loadingDuration?: number;
 }
 
 /**
  * Browser chrome wrapper component.
  * Provides the macOS-style browser window frame with traffic lights and URL bar.
  */
-export function BrowserMockup({ urlBar, children }: BrowserMockupProps) {
+export function BrowserMockup({
+  urlBar,
+  children,
+  loadingProgress = 0,
+  loadingDuration = 3500,
+}: BrowserMockupProps) {
+  const showProgress = loadingProgress > 0;
+
   return (
     <div className="flex flex-1 flex-col overflow-hidden rounded-lg border border-gray-700 shadow-2xl">
       {/* Browser chrome */}
@@ -30,6 +41,23 @@ export function BrowserMockup({ urlBar, children }: BrowserMockupProps) {
             {urlBar}
           </div>
         </div>
+      </div>
+      {/* Loading progress bar - like browser page load indicator */}
+      <div
+        className="h-1 w-full bg-gray-600"
+        role="progressbar"
+        aria-valuenow={loadingProgress}
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-label="Step progress"
+      >
+        <div
+          className="h-full bg-gradient-to-r from-blue-400 via-blue-500 to-cyan-400 shadow-sm shadow-blue-500/50 motion-reduce:transition-none"
+          style={{
+            width: `${loadingProgress}%`,
+            transition: showProgress ? `width ${loadingDuration}ms linear` : 'none',
+          }}
+        />
       </div>
       {/* Screen content */}
       <div className="flex-1 overflow-hidden">{children}</div>

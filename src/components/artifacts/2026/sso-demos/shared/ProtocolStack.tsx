@@ -47,10 +47,10 @@ export function ProtocolStack({ actors, config }: ProtocolStackProps) {
             <React.Fragment key={component.key}>
               {/* Component box */}
               <div
-                className={`flex min-w-[90px] flex-col items-center rounded-xl p-4 transition-all duration-300 ${
+                className={`flex min-w-[90px] flex-col items-center rounded-xl p-4 transition-all duration-300 motion-reduce:transition-none ${
                   isActive
-                    ? `${component.activeGradient} ${component.activeShadow} ${component.activeRing}`
-                    : "bg-gray-700/80"
+                    ? `${component.activeGradient} ${component.activeShadow} ${component.activeRing} border-2 border-white/30`
+                    : "border-2 border-dashed border-gray-500 bg-gray-700/80"
                 }`}
               >
                 <div className="mb-1.5 text-2xl">{component.emoji}</div>
@@ -91,18 +91,28 @@ function Connector({ connection, isActive }: ConnectorProps) {
 
   return (
     <div className="flex flex-col items-center gap-1">
-      <div className="flex items-center" aria-hidden="true">
+      <div className="flex items-center gap-1" aria-hidden="true">
+        {/* Connection status icon */}
+        {isActive ? (
+          <svg className="h-3 w-3 text-emerald-400" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        ) : (
+          <svg className="h-3 w-3 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <circle cx="12" cy="12" r="9" strokeDasharray="4 2" />
+          </svg>
+        )}
         {/* Left arrow */}
         <div
-          className={`h-0 w-0 border-y-4 border-r-[6px] border-y-transparent transition-colors duration-300 ${activeBorderRight}`}
+          className={`h-0 w-0 border-y-4 border-r-[6px] border-y-transparent transition-colors duration-300 motion-reduce:transition-none ${activeBorderRight}`}
         />
-        {/* Line */}
+        {/* Line - solid when active, dashed when inactive */}
         <div
-          className={`h-0.5 w-6 transition-all duration-300 ${activeColor}`}
+          className={`h-0.5 w-6 transition-all duration-300 motion-reduce:transition-none ${activeColor} ${!isActive ? "border-t-2 border-dashed border-gray-500 bg-transparent" : ""}`}
         />
         {/* Right arrow */}
         <div
-          className={`h-0 w-0 border-y-4 border-l-[6px] border-y-transparent transition-colors duration-300 ${activeBorderLeft}`}
+          className={`h-0 w-0 border-y-4 border-l-[6px] border-y-transparent transition-colors duration-300 motion-reduce:transition-none ${activeBorderLeft}`}
         />
       </div>
       {/* Protocol label */}

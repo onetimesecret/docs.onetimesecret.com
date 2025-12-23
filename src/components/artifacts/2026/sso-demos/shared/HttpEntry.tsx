@@ -26,11 +26,40 @@ export function HttpEntry({ entry }: HttpEntryProps) {
   };
 
   const labels: Record<HttpMessage["type"], string> = {
-    request: "→ REQUEST",
-    response: "← RESPONSE",
-    internal: "⚙ INTERNAL",
-    server: "🔒 SERVER→SERVER",
-    "server-response": "🔒 SERVER RESPONSE",
+    request: "REQUEST",
+    response: "RESPONSE",
+    internal: "INTERNAL",
+    server: "SERVER→SERVER",
+    "server-response": "SERVER RESPONSE",
+  };
+
+  const icons: Record<HttpMessage["type"], JSX.Element> = {
+    request: (
+      <svg className="h-4 w-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+      </svg>
+    ),
+    response: (
+      <svg className="h-4 w-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+      </svg>
+    ),
+    internal: (
+      <svg className="h-4 w-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+    ),
+    server: (
+      <svg className="h-4 w-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+      </svg>
+    ),
+    "server-response": (
+      <svg className="h-4 w-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M16 17l-4 4m0 0l-4-4m4 4V3" />
+      </svg>
+    ),
   };
 
   return (
@@ -38,7 +67,8 @@ export function HttpEntry({ entry }: HttpEntryProps) {
       <div className="flex items-start justify-between gap-2">
         <div className="min-w-0 flex-1">
           <div className="mb-1 flex items-center gap-2 text-xs text-gray-400">
-            <span className="font-mono">{labels[entry.type]}</span>
+            {icons[entry.type]}
+            <span className="font-mono font-semibold">{labels[entry.type]}</span>
             {entry.from && entry.to && (
               <span>
                 {entry.from} → {entry.to}

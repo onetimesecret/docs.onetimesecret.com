@@ -63,33 +63,35 @@ export function Auth0Universal() {
             </div>
 
             {/* Email/password */}
-            <div>
-              <label htmlFor="auth0-email" className="sr-only">
-                Email
-              </label>
-              <input
-                id="auth0-email"
-                type="email"
-                value="alice@contoso.com"
-                readOnly
-                className="w-full rounded border border-gray-300 px-3 py-2.5 text-gray-900 focus:border-orange-500 focus:outline-none focus:ring-1 focus:ring-orange-500"
-              />
-            </div>
-            <div>
-              <label htmlFor="auth0-password" className="sr-only">
-                Password
-              </label>
-              <input
-                id="auth0-password"
-                type="password"
-                placeholder="Password"
-                readOnly
-                className="w-full rounded border border-gray-300 px-3 py-2.5 text-gray-900 placeholder-gray-400 focus:border-orange-500 focus:outline-none focus:ring-1 focus:ring-orange-500"
-              />
-            </div>
-            <button className="w-full rounded bg-orange-500 py-2.5 font-medium text-white hover:bg-orange-600">
-              Continue
-            </button>
+            <form onSubmit={(e) => e.preventDefault()} className="space-y-4">
+              <div>
+                <label htmlFor="auth0-email" className="sr-only">
+                  Email
+                </label>
+                <input
+                  id="auth0-email"
+                  type="email"
+                  value="alice@contoso.com"
+                  readOnly
+                  className="w-full rounded border border-gray-300 px-3 py-2.5 text-gray-900 focus:border-orange-500 focus:outline-none focus:ring-1 focus:ring-orange-500"
+                />
+              </div>
+              <div>
+                <label htmlFor="auth0-password" className="sr-only">
+                  Password
+                </label>
+                <input
+                  id="auth0-password"
+                  type="password"
+                  placeholder="Password"
+                  readOnly
+                  className="w-full rounded border border-gray-300 px-3 py-2.5 text-gray-900 placeholder-gray-400 focus:border-orange-500 focus:outline-none focus:ring-1 focus:ring-orange-500"
+                />
+              </div>
+              <button type="submit" className="w-full rounded bg-orange-500 py-2.5 font-medium text-white hover:bg-orange-600">
+                Continue
+              </button>
+            </form>
           </div>
 
           <div className="mt-4 text-center text-sm text-gray-500">
