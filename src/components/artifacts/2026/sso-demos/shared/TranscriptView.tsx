@@ -664,7 +664,7 @@ function getHttpMessageTypeConfig(type: HttpMessage["type"]) {
   const configs = {
     request: {
       label: "REQUEST",
-      borderColor: "#3b82f6", // blue-500
+      borderColor: "#f59e0b", // amber-500
     },
     response: {
       label: "RESPONSE",
