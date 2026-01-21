@@ -1,3 +1,8 @@
+---
+title: Password vs. Passphrase
+description: Cross-language guidance on maintaining the critical distinction between account passwords and secret passphrases
+---
+
 # Password vs. Passphrase Distinction
 
 Onetime Secret uses two distinct authentication concepts that must be clearly differentiated in translations.
