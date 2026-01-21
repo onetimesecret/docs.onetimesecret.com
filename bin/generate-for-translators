@@ -13,7 +13,7 @@ Usage:
 """
 
 import argparse
-import os
+import difflib
 import re
 import sys
 from datetime import datetime
@@ -76,40 +76,50 @@ def read_file_content(file_path: Path) -> str | None:
     return file_path.read_text(encoding="utf-8")
 
 
+def _parse_frontmatter_and_body(content: str) -> tuple[str | None, str]:
+    """Split markdown content into frontmatter and body.
+
+    Returns:
+        A tuple of (frontmatter_with_delimiters, body).
+        frontmatter_with_delimiters includes the --- delimiters, or None if no frontmatter.
+    """
+    if not content.startswith("---"):
+        return None, content.strip()
+
+    end_match = re.search(r"\n---\n", content[3:])
+    if not end_match:
+        return None, content.strip()
+
+    frontmatter_section = content[:3 + end_match.end()].strip()
+    body_section = content[3 + end_match.end():].strip()
+    return frontmatter_section, body_section
+
+
 def extract_content_after_frontmatter(content: str) -> str:
     """Remove YAML frontmatter from markdown content."""
-    if content.startswith("---"):
-        # Find the closing ---
-        end_match = re.search(r"\n---\n", content[3:])
-        if end_match:
-            return content[3 + end_match.end():].strip()
-    return content.strip()
+    _, body = _parse_frontmatter_and_body(content)
+    return body
 
 
 def extract_title_from_frontmatter(content: str) -> str | None:
     """Extract title from YAML frontmatter."""
-    if content.startswith("---"):
-        end_match = re.search(r"\n---\n", content[3:])
-        if end_match:
-            frontmatter = content[3:3 + end_match.start()]
-            title_match = re.search(r"^title:\s*(.+)$", frontmatter, re.MULTILINE)
-            if title_match:
-                title = title_match.group(1).strip()
-                # Remove quotes if present
-                if (title.startswith('"') and title.endswith('"')) or \
-                   (title.startswith("'") and title.endswith("'")):
-                    title = title[1:-1]
-                return title
+    frontmatter, _ = _parse_frontmatter_and_body(content)
+    if not frontmatter:
+        return None
+
+    # Extract just the YAML content (between delimiters)
+    yaml_content = frontmatter[3:].rsplit("---", 1)[0]
+    title_match = re.search(r"^title:\s*(.+)$", yaml_content, re.MULTILINE)
+    if title_match:
+        title = title_match.group(1).strip().strip("'\"")
+        return title
     return None
 
 
 def extract_frontmatter(content: str) -> str | None:
     """Extract YAML frontmatter including delimiters."""
-    if content.startswith("---"):
-        end_match = re.search(r"\n---\n", content[3:])
-        if end_match:
-            return content[:3 + end_match.end()].strip()
-    return None
+    frontmatter, _ = _parse_frontmatter_and_body(content)
+    return frontmatter
 
 
 def generate_for_translators(locale: str) -> str:
@@ -246,13 +256,18 @@ def show_diff(locale: str) -> None:
             print(f"[{locale}] No changes")
         else:
             print(f"[{locale}] Would change {output_path}")
-            # Simple line-by-line diff indication
-            current_lines = current_content.splitlines()
-            new_lines = new_content.splitlines()
-            print(f"  Current: {len(current_lines)} lines")
-            print(f"  New: {len(new_lines)} lines")
+            diff = difflib.unified_diff(
+                current_content.splitlines(keepends=True),
+                new_content.splitlines(keepends=True),
+                fromfile=str(output_path),
+                tofile=f"{output_path} (generated)",
+            )
+            sys.stdout.writelines(diff)
     else:
         print(f"[{locale}] Would create {output_path}")
+        # Show full content as addition
+        for line in new_content.splitlines():
+            print(f"+ {line}")
 
 
 def main():

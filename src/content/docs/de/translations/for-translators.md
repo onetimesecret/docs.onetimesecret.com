@@ -1,6 +1,6 @@
 ---
-title: Translation Guidance for German
-description: Comprehensive translation guidance for German including universal resources, glossary, and language-specific rules
+title: Übersetzungsanleitung für Deutsch
+description: Umfassende Anleitung zur Übersetzung von Onetime Secret ins Deutsche mit Glossar und Sprachhinweisen
 ---
 
 # Translation Guidance for German
