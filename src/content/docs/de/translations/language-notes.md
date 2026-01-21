@@ -89,6 +89,24 @@ The word "secret" can be translated to German as either "Geheimnis" or "Nachrich
 - `web.login.remember_me`: `Angemeldet bleiben` (Standard phrase)
 - `web.shared.viewed_own_secret`: Changed `angeschaut` to `angesehen`
 
+### Voice Usage for Status Messages
+
+**Rationale:** Guidelines specify imperative for user actions (buttons, links) and passive/declarative for informational text.
+
+**Examples:**
+- `web.STATUS.*_description`: Declarative/passive voice (e.g., "Geheimer Link wurde erstellt...")
+- `web.shared.post_reveal_default`: `Deine sichere Nachricht wird unten angezeigt.` (Passive voice)
+
+### Voice Usage for Actions
+
+**Rationale:** Imperative for user actions (buttons, links).
+
+**Examples:**
+- `web.help.learn_more`: `Mehr erfahren` (Imperative/infinitive for links)
+- `web.COMMON.button_generate_secret_short`: `Passwort generieren` (Imperative action)
+- `web.COMMON.share_link_securely`: `Teile diesen Link aus Sicherheitsgründen...` (Clear imperative)
+- `web.help.secret_view_faq.*.description`: Declarative sentences (e.g., "Du siehst...", "Dieser Inhalt wird...")
+
 ### 4. Direct Address (Du vs. Sie)
 
 **Rationale:** The existing partial translations predominantly used the informal "Du". This was made consistent across user-facing instructions and questions.
@@ -211,6 +229,29 @@ Before finalizing translations:
 2. **Context Check:** Ensure formality matches brand positioning
 3. **Consistency Audit:** Verify no formality mixing within locale
 4. **Competitor Benchmark:** Check how similar products address users in target market
+
+## Translation Guidelines
+
+### Voice and Formality
+- **Imperative for Actions**: Use imperative voice for buttons and user actions
+- **Passive for Status**: Use passive/declarative voice for informational text and status messages
+- **Consistent Address Form**: Never mix "du" and "Sie" within the same locale
+- **Regional Consistency**: Maintain formality appropriate to the target region (DE vs AT)
+
+### Number Formatting
+- Use comma for decimal separator: `1.234,56`
+- Use period for thousands separator
+- Never use English number formatting
+
+### Technical Terms
+- Prioritize accuracy over localization for security terms
+- Use established German technical terminology
+- Maintain clear distinction between `Passwort` (account password) and `Passphrase` (secret protection)
+
+### UI and Platform Conventions
+- Follow platform conventions for the target language
+- Ensure UI elements are clear and actionable
+- Keep button text concise and in imperative form
 
 ### Related Guide Sections
 

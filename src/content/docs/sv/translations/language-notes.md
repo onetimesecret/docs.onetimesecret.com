@@ -5,6 +5,15 @@ description: Translation guidelines and terminology for Swedish (sv-SE) locale
 
 # Swedish (sv-SE) Translation Notes
 
+## Translation Goals
+
+The Swedish translation aims to:
+- Maintain consistency across all application interfaces
+- Use clear, natural phrasing for Swedish-speaking audiences
+- Follow technical accuracy for security-related terminology
+- Apply appropriate voice and tone for different contexts
+- Provide clarity while maintaining professional tone
+
 ## Rationale for Adjustments
 
 The primary goal was to align the existing Swedish text more closely with the specific terminology and tone guidelines. This involved:
@@ -80,3 +89,89 @@ The term **"hemlighet"** was generally used for `secret`, but **"meddelande"** w
 | saved | sparad | Past participle for status |
 | view | visa | Display/show content |
 | share | dela | Share/distribute |
+
+## Voice and Tone
+
+### Direct Address
+
+Use informal "du" form consistently when addressing users:
+- `Ange ditt lösenord` (Enter your password)
+- `Ditt hemliga meddelande` (Your secret message)
+- `Du visar...` (You are viewing...)
+
+Swedish naturally flows with direct "du" address in most contexts.
+
+### Imperative Voice (for Actions)
+
+Use imperative voice for buttons, links, and user actions:
+- `Skapa hemlig länk` (Create secret link)
+- `Kopiera till urklipp` (Copy to clipboard)
+- `Skapa konto` (Create account)
+- `Spara` (Save)
+- `Bränn denna hemlighet` (Burn this secret)
+
+### Passive/Declarative Voice (for Information)
+
+Use passive or declarative voice for informational text, status messages, and descriptions:
+- `Hemlighet skapad!` (Secret created!)
+- `Din hemliga länk visas nedan.` (Your secret link is shown below.)
+- `Hemligheten förstördes manuellt...` (The secret was manually destroyed...)
+- `Sparad` (Saved - status message)
+
+## Common Translation Patterns
+
+### User Instructions
+
+Use imperative forms:
+- `Ange ditt lösenord` (Enter your password)
+- `Kopiera till urklipp` (Copy to clipboard)
+- `Ange lösenfrasen här` (Enter the passphrase here)
+
+### Status Descriptions
+
+Use passive voice or past participles:
+- `Kopierad till urklipp` (Copied to clipboard)
+- `Hemlighet skapad` (Secret created)
+- `Sparad` (Saved)
+
+### Help Text and Descriptions
+
+Use declarative sentences in 2nd person informal:
+- `Du visar det hemliga innehållet` (You are viewing the secret content)
+- `Detta innehåll visas endast en gång` (This content is shown only once)
+
+### Error Messages
+
+Use clear, direct language:
+- `Felaktig lösenfras` (Incorrect passphrase)
+- `Ett fel har uppstått` (An error has occurred)
+
+## Special Considerations
+
+### The Term "Secret"
+
+Fundamental to the application - translate as `hemlighet` or `meddelande` depending on context:
+- `hemlighet` emphasizes the confidential item/concept
+- `meddelande` clarifies it's a message when context requires
+
+Examples:
+- `Hemlighet skapad!` (Secret created! - the item)
+- `Ditt hemliga meddelande:` (Your secret message: - the content)
+
+### The Term "Burn"
+
+Consistently translated as **`bränn`** (verb) / **`bränd`** (past participle):
+- Conveys the permanent, irreversible nature of deletion
+- Metaphor works well in Swedish
+
+Examples:
+- `Bränn denna hemlighet` (Burn this secret - button)
+- `Hemligheten är bränd` (The secret is burned - status)
+
+### Technical Security Terms
+
+Prioritize accuracy over casual localization. Use established Swedish technical vocabulary:
+- `krypterad` (encrypted)
+- `kryptera` (to encrypt)
+- `verifiering` (verification)
+- `autentisering` (authentication)

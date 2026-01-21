@@ -45,9 +45,9 @@
     "communication": "Communication",
     "dataMinimization": "Data Minimization",
     "translations": "Translations",
+    "universalGuidance": "Universal Guidance",
     "styleGuide": "Style Guide",
-    "glossary": "Glossary",
-    "qualityChecklist": "Quality Checklist"
+    "glossary": "Glossary"
   },
   "skipLink.label": "Skip to content",
   "search.label": "Search",

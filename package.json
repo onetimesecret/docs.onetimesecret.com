@@ -16,7 +16,8 @@
     "translate:prepare": "echo 'e.g. ./src/content/docs/$CODE' && ./bin/translation-pluribus-util prepare",
     "translate:combine": "./bin/translation-pluribus-util combine",
     "translate:split": "./bin/translation-pluribus-util split",
-    "translate:restore": "./bin/translation-pluribus-util restore"
+    "translate:restore": "./bin/translation-pluribus-util restore",
+    "generate:for-translators": "./bin/generate-for-translators all"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.6",

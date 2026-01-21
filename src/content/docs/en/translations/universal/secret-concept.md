@@ -1,3 +1,8 @@
+---
+title: Translating "Secret"
+description: Cross-language guidance on translating the word "secret" while maintaining professional context and brand consistency
+---
+
 # Translating the Word "Secret"
 
 The word "secret" is central to Onetime Secret's brand and functionality, but translating it effectively requires understanding the nuances across languages and cultures.

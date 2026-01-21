@@ -103,3 +103,48 @@ This distinction better serves users by making clear the different security cont
    - Updated `enter-a-passphrase` and `Double check that passphrase` to use "ключова фраза"
 
 This consistent terminology distinction helps Bulgarian users better understand the different security contexts - regular account passwords versus the special protection mechanism (passphrase) used for securing shared secrets.
+
+## Special Considerations
+
+### The Term "Secret"
+- The term "secret" is central to the application and must be translated consistently
+- "Тайна" is preferred over "секрет" for natural Bulgarian
+- Context determines whether to use "съобщение" (message) as an alternative
+
+### Deletion and Destruction
+- Use "изтрито" (deleted) for clarity
+- Add "перманентно" (permanently) for emphasis when the action is irreversible
+- "Burned" secrets are "изгорени" but explanation text should clarify permanent deletion
+
+### Natural Placeholders
+- Input placeholder text should feel natural: "...се въвежда тук..." not "...отива тук..."
+- Guide the user with clear, helpful text
+- Avoid overly literal translations of English placeholders
+
+### Password Strength Levels
+- Use standard Bulgarian equivalents for strength indicators
+- "Отлична" (Excellent) not "Great"
+- "Задоволителна" (Satisfactory) not "Meh"
+- Maintain professional tone even for informal English terms
+
+## Translation Workflow Recommendations
+
+1. **Initial Translation:**
+   - Start with the glossary
+   - Use standardized terms from the tables
+   - Apply the password/passphrase distinction immediately
+
+2. **Review Phase:**
+   - Check for consistency across all strings
+   - Verify natural phrasing in Bulgarian
+   - Ensure technical accuracy is maintained
+
+3. **Context Verification:**
+   - Test translations in the actual UI
+   - Verify button text feels actionable
+   - Ensure status messages are clear
+
+4. **Final Polish:**
+   - Remove any overly literal translations
+   - Verify tone consistency
+   - Check that all special considerations are addressed

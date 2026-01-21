@@ -9,16 +9,17 @@ Bảng thuật ngữ này cung cấp các bản dịch chuẩn hóa cho các thu
 
 ## Thuật ngữ cơ bản
 
-| English | Tiếng Việt (VI) | Context |
-|---------|-----------------|---------|
-| secret (noun) | bí mật | Khái niệm trung tâm của ứng dụng |
-| secret (adj) | bí mật/an toàn | |
-| passphrase | cụm mật khẩu | Phương thức xác thực cho bí mật |
-| burn | xóa vĩnh viễn | Hành động xóa bí mật trước khi xem |
-| view/reveal | xem/hiển thị | Hành động truy cập bí mật |
-| link | liên kết | URL cho phép truy cập bí mật |
-| encrypt/encrypted | mã hóa/đã mã hóa | Phương pháp bảo mật |
-| secure | an toàn | Trạng thái bảo vệ |
+| English | Tiếng Việt (VI) | Context | Notes |
+|---------|-----------------|---------|-------|
+| secret (noun) | bí mật | Khái niệm trung tâm của ứng dụng | Phù hợp cho ngữ cảnh chuyên nghiệp |
+| secret (adj) | bí mật/an toàn | | |
+| passphrase | cụm mật khẩu | Phương thức xác thực cho bí mật | Thuật ngữ ghép phân biệt với mật khẩu tài khoản |
+| password | mật khẩu | Thông tin đăng nhập tài khoản | Thuật ngữ chuẩn cho mật khẩu tài khoản |
+| burn | xóa vĩnh viễn | Hành động xóa bí mật trước khi xem | Xóa vĩnh viễn |
+| view/reveal | xem/hiển thị | Hành động truy cập bí mật | |
+| link | liên kết | URL cho phép truy cập bí mật | |
+| encrypt/encrypted | mã hóa/đã mã hóa | Phương pháp bảo mật | |
+| secure | an toàn | Trạng thái bảo vệ | |
 
 ## Các thành phần giao diện người dùng
 

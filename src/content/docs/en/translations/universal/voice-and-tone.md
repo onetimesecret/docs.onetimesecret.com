@@ -1,3 +1,8 @@
+---
+title: Voice and Tone
+description: Universal guidelines for voice patterns, formality levels, and tone consistency across all translations
+---
+
 # Voice and Tone Guidelines
 
 Detailed guidance on when to use different voices in interface elements.

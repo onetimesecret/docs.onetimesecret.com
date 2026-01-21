@@ -118,7 +118,10 @@ Ein Referenzleitfaden für die Übersetzung der Schlüsselbegriffe, Oberflächen
 
 ## Besondere Überlegungen
 
-- Der Begriff "secret" ist für die Anwendung zentral und sollte einheitlich übersetzt werden
-- Regionale Variationen sollten respektiert werden
+- Der Begriff "secret" ist für die Anwendung zentral und sollte einheitlich als `Geheimnis` übersetzt werden
+- Regionale Variationen zwischen Deutsch (DE) und österreichischem Deutsch (AT) sollten respektiert werden, insbesondere hinsichtlich der Formalität
 - Bei technischen Begriffen zur Sicherheit sollte die Genauigkeit Vorrang vor der Lokalisierung haben
 - UI-Elemente sollten den Plattformkonventionen für die Zielsprache folgen
+- Halten Sie eine klare Unterscheidung zwischen `Passwort` (Kontopasswort) und `Passphrase` (Schutz einzelner Geheimnisse) aufrecht
+- Die Zahlenformatierung muss immer den deutschen Konventionen folgen (Komma für Dezimalstellen, Punkt für Tausender)
+- Rollennamen wie "Colonel" sollten in ihr funktionales Äquivalent (`Administrator`) übersetzt werden, nicht wörtlich

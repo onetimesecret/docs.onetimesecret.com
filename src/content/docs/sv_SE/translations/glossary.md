@@ -9,16 +9,17 @@ Denna ordlista tillhandahåller standardiserade översättningar av nyckeltermer
 
 ## Grundläggande terminologi
 
-| English | Svenska (SV) | Context |
-|---------|--------------|---------|
-| secret (noun) | hemlighet | Applikationens centrala koncept |
-| secret (adj) | hemlig/säker | |
-| passphrase | lösenfras | Autentiseringsmetod för hemligheter |
-| burn | radera permanent | Åtgärd att radera en hemlighet före visning |
-| view/reveal | visa/avslöja | Åtgärd för att komma åt en hemlighet |
-| link | länk | URL som ger tillgång till en hemlighet |
-| encrypt/encrypted | kryptering/krypterad | Säkerhetsmetod |
-| secure | säker | Skyddstillstånd |
+| English | Svenska (SV) | Context | Notes |
+|---------|--------------|---------|-------|
+| secret (noun) | hemlighet | Applikationens centrala koncept | Utrum (en hemlighet); lämpligt för professionella sammanhang |
+| secret (adj) | hemlig/säker | | |
+| passphrase | lösenfras | Autentiseringsmetod för hemligheter | Sammansatt term som skiljer från kontolösenord |
+| password | lösenord | Inloggningsuppgift för konto | Standardterm för kontolösenord; sammansatt ord |
+| burn | radera permanent | Åtgärd att radera en hemlighet före visning | Radera permanent |
+| view/reveal | visa/avslöja | Åtgärd för att komma åt en hemlighet | |
+| link | länk | URL som ger tillgång till en hemlighet | Utrum |
+| encrypt/encrypted | kryptering/krypterad | Säkerhetsmetod | |
+| secure | säker | Skyddstillstånd | |
 
 ## Användargränssnittselement
 
