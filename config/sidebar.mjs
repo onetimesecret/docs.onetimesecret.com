@@ -179,9 +179,9 @@ export const sidebar = [
     "translations",
     [
       createLink("overview", "translations"),
+      createLink("universalGuidance", "translations/universal"),
       createLink("styleGuide", "translations/guide"),
       createLink("glossary", "translations/glossary"),
-      createLink("qualityChecklist", "translations/quality-checklist"),
     ],
     true,
   ),
