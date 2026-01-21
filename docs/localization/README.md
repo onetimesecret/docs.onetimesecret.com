@@ -1,10 +1,15 @@
 # Localization Resources
 
-Quick reference for translators and developers working on Onetime Secret's multi-language support.
+Internal process documentation for Onetime Secret localization. For translator-facing content, see the universal translation guidance at `src/content/docs/en/translations/universal/`.
 
 ## Overview
 
-This directory contains centralized localization guidelines that complement the per-language translation resources. Use these references to maintain consistency across all language versions.
+This directory contains:
+- Internal process documentation (management approach, tooling)
+- Machine-readable reference data (core-terms.json)
+- Specialized reference content not suitable for the docs site
+
+Translator-facing content has been consolidated into the documentation site under `/en/translations/universal/`.
 
 ## Directory Structure
 
@@ -13,69 +18,53 @@ This directory contains centralized localization guidelines that complement the 
 ├── README.md                         # This file
 ├── management-approach.md            # When to adopt a TMS vs. current pattern
 ├── glossary/
-│   └── core-terms.json               # Essential terms in JSON format
-├── terminology/
-│   ├── secret-concept.md             # Translating "secret" across languages
-│   └── password-passphrase.md        # Distinguishing authentication terms
+│   └── core-terms.json               # Essential terms in JSON format (machine-readable)
 ├── style-guides/
-│   ├── general.md                    # Universal principles
-│   └── voice-and-tone.md             # Active/passive voice guidelines
+│   └── general.md                    # Universal principles (internal reference)
 └── reference/
     ├── self-hosted-terms.md          # "Self-hosted" translations
     └── language-specific-notes.md    # Key insights from translation work
 ```
 
-## Quick References
+## What Moved to the Docs Site
 
-### For Translators
+The following content was relocated to `src/content/docs/en/translations/universal/` for better discoverability and consistent documentation structure:
 
-1. **Start with language-specific resources**: `src/content/docs/{lang}/translations/`
-   - Existing glossaries and style guides
-   - Language-specific translation notes
+| Former Location | New Location |
+|----------------|--------------|
+| `terminology/secret-concept.md` | `/en/translations/universal/secret-concept` |
+| `terminology/password-passphrase.md` | `/en/translations/universal/password-passphrase` |
+| `style-guides/voice-and-tone.md` | `/en/translations/universal/voice-and-tone` |
 
-2. **Check core terminology**: [`glossary/core-terms.json`](glossary/core-terms.json)
-   - Essential terms that must be consistent
-   - Terms that have proven challenging across languages
+## For Translators
 
-3. **Understand nuanced concepts**: [`terminology/`](terminology/)
-   - Why "secret" translation matters
+Start with the documentation site resources:
+
+1. **Universal guidance**: `/en/translations/universal/`
+   - Translating "secret" across languages
    - Password vs. passphrase distinctions
+   - Voice and tone guidelines
+   - Brand terms (do not translate)
+   - Quality checklist
 
-### For Developers
+2. **Language-specific resources**: `/{lang}/translations/`
+   - Glossary with standardized terms
+   - Language-specific notes and rules
+   - Export guide (generated reference)
 
-1. **General principles**: [`style-guides/general.md`](style-guides/general.md)
-2. **Voice guidelines**: [`style-guides/voice-and-tone.md`](style-guides/voice-and-tone.md)
-3. **Reference translations**: [`reference/`](reference/)
+## For Developers
 
-### For Project Maintainers
+- **Core terminology data**: [`glossary/core-terms.json`](glossary/core-terms.json)
+- **General principles**: [`style-guides/general.md`](style-guides/general.md)
+- **Specialized references**: [`reference/`](reference/)
 
-1. **Management approach**: [`management-approach.md`](management-approach.md) - TMS vs. documentation-driven localization
+## For Project Maintainers
 
-## Language-Specific Resources
-
-Each language has its own detailed resources in the content directory:
-- **German**: [`src/content/docs/de/translations/`](../../../src/content/docs/de/translations/)
-- **Spanish**: [`src/content/docs/es/translations/`](../../../src/content/docs/es/translations/)
-- **French**: [`src/content/docs/fr/translations/`](../../../src/content/docs/fr/translations/)
-- **Italian**: [`src/content/docs/it/translations/`](../../../src/content/docs/it/translations/)
-- **Japanese**: [`src/content/docs/ja/translations/`](../../../src/content/docs/ja/translations/)
-- **Korean**: [`src/content/docs/ko/translations/`](../../../src/content/docs/ko/translations/)
-- **Māori**: [`src/content/docs/mi/translations/`](../../../src/content/docs/mi/translations/)
-- **Dutch**: [`src/content/docs/nl/translations/`](../../../src/content/docs/nl/translations/)
-- **Bulgarian**: [`src/content/docs/bg/translations/`](../../../src/content/docs/bg/translations/)
-- **Ukrainian**: [`src/content/docs/uk/translations/`](../../../src/content/docs/uk/translations/)
-- **Chinese (Simplified)**: [`src/content/docs/zh-cn/translations/`](../../../src/content/docs/zh-cn/translations/)
-
-## Contributing
-
-When updating translations:
-
-1. Check existing terminology in this directory first
-2. Update central resources if establishing new patterns
-3. Keep language-specific details in their respective directories
-4. Focus on insights that help other languages, not repetitive details
+- **Management approach**: [`management-approach.md`](management-approach.md) - TMS vs. documentation-driven localization
+- **Export guide generation**: `bin/generate-export-guide` - Generate locale-specific export guides
 
 ## Tools
 
 - **Translation utility**: `bin/translation-pluribus-util` for batch processing
+- **Export guide generator**: `bin/generate-export-guide` for generating export-guide.md files
 - **Build commands**: See main project README for testing translations

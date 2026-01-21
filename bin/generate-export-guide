@@ -1,0 +1,304 @@
+#!/usr/bin/env python3
+"""
+Generate export-guide.md files for each locale by combining:
+1. Links to universal content from en/translations/universal/
+2. Locale-specific glossary.md content
+3. Locale-specific language-notes.md content
+
+Usage:
+    ./bin/generate-export-guide <locale>     # Generate for specific locale
+    ./bin/generate-export-guide all          # Generate for all locales
+    ./bin/generate-export-guide --list       # List available locales
+    ./bin/generate-export-guide --diff <locale>  # Show diff without writing
+"""
+
+import argparse
+import os
+import re
+import sys
+from datetime import datetime
+from pathlib import Path
+
+# Project paths
+SCRIPT_DIR = Path(__file__).parent.resolve()
+PROJECT_ROOT = SCRIPT_DIR.parent
+DOCS_DIR = PROJECT_ROOT / "src" / "content" / "docs"
+
+
+def get_language_name(locale_code: str) -> str:
+    """Map locale code to language name."""
+    language_names = {
+        "ar": "Arabic",
+        "bg": "Bulgarian",
+        "ca_ES": "Catalan",
+        "cs": "Czech",
+        "da": "Danish",
+        "de": "German",
+        "el_GR": "Greek",
+        "es": "Spanish",
+        "fr": "French",
+        "he": "Hebrew",
+        "hu": "Hungarian",
+        "it": "Italian",
+        "ja": "Japanese",
+        "ko": "Korean",
+        "mi": "Māori",
+        "nl": "Dutch",
+        "pl": "Polish",
+        "pt-br": "Portuguese (Brazil)",
+        "ru": "Russian",
+        "sl_SI": "Slovenian",
+        "sv": "Swedish",
+        "sv_SE": "Swedish (Sweden)",
+        "tr": "Turkish",
+        "uk": "Ukrainian",
+        "vi": "Vietnamese",
+        "zh-cn": "Chinese (Simplified)",
+    }
+    return language_names.get(locale_code, locale_code.upper())
+
+
+def get_available_locales() -> list[str]:
+    """Find all locales that have a translations directory (excluding 'en')."""
+    locales = []
+    for item in DOCS_DIR.iterdir():
+        if item.is_dir() and item.name != "en":
+            translations_dir = item / "translations"
+            if translations_dir.exists():
+                locales.append(item.name)
+    return sorted(locales)
+
+
+def read_file_content(file_path: Path) -> str | None:
+    """Read file content, returning None if file doesn't exist."""
+    if not file_path.exists():
+        return None
+    return file_path.read_text(encoding="utf-8")
+
+
+def extract_content_after_frontmatter(content: str) -> str:
+    """Remove YAML frontmatter from markdown content."""
+    if content.startswith("---"):
+        # Find the closing ---
+        end_match = re.search(r"\n---\n", content[3:])
+        if end_match:
+            return content[3 + end_match.end():].strip()
+    return content.strip()
+
+
+def extract_title_from_frontmatter(content: str) -> str | None:
+    """Extract title from YAML frontmatter."""
+    if content.startswith("---"):
+        end_match = re.search(r"\n---\n", content[3:])
+        if end_match:
+            frontmatter = content[3:3 + end_match.start()]
+            title_match = re.search(r"^title:\s*(.+)$", frontmatter, re.MULTILINE)
+            if title_match:
+                title = title_match.group(1).strip()
+                # Remove quotes if present
+                if (title.startswith('"') and title.endswith('"')) or \
+                   (title.startswith("'") and title.endswith("'")):
+                    title = title[1:-1]
+                return title
+    return None
+
+
+def generate_export_guide(locale: str) -> str:
+    """Generate export-guide.md content for a given locale."""
+    language_name = get_language_name(locale)
+    locale_dir = DOCS_DIR / locale / "translations"
+
+    # Read locale-specific files
+    glossary_path = locale_dir / "glossary.md"
+    language_notes_path = locale_dir / "language-notes.md"
+
+    glossary_content = read_file_content(glossary_path)
+    language_notes_content = read_file_content(language_notes_path)
+
+    # Extract content without frontmatter
+    glossary_body = extract_content_after_frontmatter(glossary_content) if glossary_content else None
+    language_notes_body = extract_content_after_frontmatter(language_notes_content) if language_notes_content else None
+
+    # Get titles from frontmatter or use defaults
+    glossary_title = extract_title_from_frontmatter(glossary_content) if glossary_content else "Glossary"
+    language_notes_title = extract_title_from_frontmatter(language_notes_content) if language_notes_content else "Language Notes"
+
+    # Build the document
+    lines = [
+        "---",
+        f"title: Translation Guidance for {language_name}",
+        f"description: Comprehensive translation guidance for {language_name} including universal resources, glossary, and language-specific rules",
+        "---",
+        "",
+        f"# Translation Guidance for {language_name}",
+        "",
+        "This document provides comprehensive guidance for translating Onetime Secret content. It combines universal translation resources with locale-specific terminology and rules.",
+        "",
+        "## Universal Translation Resources",
+        "",
+        "Before translating, review these cross-language guidelines that apply to all locales:",
+        "",
+        "- **[Translating \"Secret\"](/en/translations/universal/secret-concept)** - How to handle the word \"secret\" across different language contexts",
+        "- **[Password vs. Passphrase](/en/translations/universal/password-passphrase)** - Maintaining the critical distinction between account passwords and secret passphrases",
+        "- **[Voice and Tone](/en/translations/universal/voice-and-tone)** - Patterns for active vs. passive voice, formality levels, and cultural adaptations",
+        "- **[Brand Terms](/en/translations/universal/brand-terms)** - Terms that should not be translated (product names, tier names)",
+        "- **[Quality Checklist](/en/translations/universal/quality-checklist)** - Comprehensive checklist for pre-submission review",
+        "",
+        "---",
+        "",
+    ]
+
+    # Add glossary section
+    if glossary_body:
+        lines.extend([
+            f"## {glossary_title}",
+            "",
+            glossary_body,
+            "",
+            "---",
+            "",
+        ])
+    else:
+        lines.extend([
+            "## Terminology",
+            "",
+            f"*No glossary file found for {language_name}. Please create `{locale}/translations/glossary.md`.*",
+            "",
+            "---",
+            "",
+        ])
+
+    # Add language notes section
+    if language_notes_body:
+        lines.extend([
+            f"## {language_notes_title}",
+            "",
+            language_notes_body,
+            "",
+            "---",
+            "",
+        ])
+    else:
+        lines.extend([
+            "## Language-Specific Rules",
+            "",
+            f"*No language notes file found for {language_name}. Please create `{locale}/translations/language-notes.md`.*",
+            "",
+            "---",
+            "",
+        ])
+
+    # Add document footer
+    today = datetime.now().strftime("%Y-%m-%d")
+    lines.extend([
+        "## Document Information",
+        "",
+        "This export guide was generated from the following source files:",
+        "",
+        f"- Universal resources: `/en/translations/universal/`",
+        f"- Glossary: `/{locale}/translations/glossary.md`",
+        f"- Language notes: `/{locale}/translations/language-notes.md`",
+        "",
+        f"Generated: {today}",
+        "",
+    ])
+
+    return "\n".join(lines)
+
+
+def write_export_guide(locale: str, content: str) -> Path:
+    """Write export-guide.md for a given locale."""
+    output_path = DOCS_DIR / locale / "translations" / "export-guide.md"
+    output_path.write_text(content, encoding="utf-8")
+    return output_path
+
+
+def show_diff(locale: str) -> None:
+    """Show diff between current and would-be-generated export-guide."""
+    output_path = DOCS_DIR / locale / "translations" / "export-guide.md"
+    new_content = generate_export_guide(locale)
+
+    if output_path.exists():
+        current_content = output_path.read_text(encoding="utf-8")
+        if current_content == new_content:
+            print(f"[{locale}] No changes")
+        else:
+            print(f"[{locale}] Would change {output_path}")
+            # Simple line-by-line diff indication
+            current_lines = current_content.splitlines()
+            new_lines = new_content.splitlines()
+            print(f"  Current: {len(current_lines)} lines")
+            print(f"  New: {len(new_lines)} lines")
+    else:
+        print(f"[{locale}] Would create {output_path}")
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Generate export-guide.md files for translation locales"
+    )
+    parser.add_argument(
+        "locale",
+        nargs="?",
+        help="Locale code (e.g., 'de', 'fr') or 'all' for all locales",
+    )
+    parser.add_argument(
+        "--list",
+        action="store_true",
+        help="List available locales",
+    )
+    parser.add_argument(
+        "--diff",
+        metavar="LOCALE",
+        help="Show diff for locale without writing",
+    )
+
+    args = parser.parse_args()
+
+    # Handle --list
+    if args.list:
+        locales = get_available_locales()
+        print("Available locales:")
+        for loc in locales:
+            print(f"  {loc} - {get_language_name(loc)}")
+        return 0
+
+    # Handle --diff
+    if args.diff:
+        locale = args.diff
+        if locale == "all":
+            for loc in get_available_locales():
+                show_diff(loc)
+        else:
+            show_diff(locale)
+        return 0
+
+    # Handle generation
+    if not args.locale:
+        parser.print_help()
+        return 1
+
+    if args.locale == "all":
+        locales = get_available_locales()
+        print(f"Generating export guides for {len(locales)} locales...")
+        for locale in locales:
+            content = generate_export_guide(locale)
+            output_path = write_export_guide(locale, content)
+            print(f"  [{locale}] Generated {output_path.relative_to(PROJECT_ROOT)}")
+        print("Done.")
+    else:
+        locale = args.locale
+        locale_dir = DOCS_DIR / locale / "translations"
+        if not locale_dir.exists():
+            print(f"Error: Locale '{locale}' not found at {locale_dir}", file=sys.stderr)
+            return 1
+
+        content = generate_export_guide(locale)
+        output_path = write_export_guide(locale, content)
+        print(f"Generated {output_path.relative_to(PROJECT_ROOT)}")
+
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
