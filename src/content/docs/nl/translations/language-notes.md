@@ -94,7 +94,7 @@ description: Kritische regels voor de Nederlandse vertaling
 **Rationale:** De richtlijnen benadrukken consistente terminologie om verwarring te voorkomen.
 
 **Voorbeelden:**
-- `secret`: Altijd `geheim` (niet wisselen met `bericht` tenzij context het vereist)
+- `secret` (zelfstandig naamwoord): Altijd `bericht` of `beveiligd bericht` (VERMIJD `geheim` - criminele associaties)
 - `dashboard`: `Dashboard` (ingeburgerd Engels woord)
 - `settings`: `Instellingen`
 - `account`: `Account` (ingeburgerd Engels woord)
