@@ -26,16 +26,6 @@ Translator-facing content has been consolidated into the documentation site unde
     └── language-specific-notes.md    # Key insights from translation work
 ```
 
-## What Moved to the Docs Site
-
-The following content was relocated to `src/content/docs/en/translations/universal/` for better discoverability and consistent documentation structure:
-
-| Former Location | New Location |
-|----------------|--------------|
-| `terminology/secret-concept.md` | `/en/translations/universal/secret-concept` |
-| `terminology/password-passphrase.md` | `/en/translations/universal/password-passphrase` |
-| `style-guides/voice-and-tone.md` | `/en/translations/universal/voice-and-tone` |
-
 ## For Translators
 
 Start with the documentation site resources:
