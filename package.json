@@ -17,7 +17,7 @@
     "translate:combine": "./bin/translation-pluribus-util combine",
     "translate:split": "./bin/translation-pluribus-util split",
     "translate:restore": "./bin/translation-pluribus-util restore",
-    "generate:export-guides": "./bin/generate-export-guide all"
+    "generate:for-translators": "./bin/generate-for-translators all"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.6",

@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """
-Generate export-guide.md files for each locale by combining:
+Generate for-translators.md files for each locale by combining:
 1. Links to universal content from en/translations/universal/
 2. Locale-specific glossary.md content
 3. Locale-specific language-notes.md content
 
 Usage:
-    ./bin/generate-export-guide <locale>     # Generate for specific locale
-    ./bin/generate-export-guide all          # Generate for all locales
-    ./bin/generate-export-guide --list       # List available locales
-    ./bin/generate-export-guide --diff <locale>  # Show diff without writing
+    ./bin/generate-for-translators <locale>     # Generate for specific locale
+    ./bin/generate-for-translators all          # Generate for all locales
+    ./bin/generate-for-translators --list       # List available locales
+    ./bin/generate-for-translators --diff <locale>  # Show diff without writing
 """
 
 import argparse
@@ -103,8 +103,8 @@ def extract_title_from_frontmatter(content: str) -> str | None:
     return None
 
 
-def generate_export_guide(locale: str) -> str:
-    """Generate export-guide.md content for a given locale."""
+def generate_for_translators(locale: str) -> str:
+    """Generate for-translators.md content for a given locale."""
     language_name = get_language_name(locale)
     locale_dir = DOCS_DIR / locale / "translations"
 
@@ -193,7 +193,7 @@ def generate_export_guide(locale: str) -> str:
     lines.extend([
         "## Document Information",
         "",
-        "This export guide was generated from the following source files:",
+        "This guide was generated from the following source files:",
         "",
         f"- Universal resources: `/en/translations/universal/`",
         f"- Glossary: `/{locale}/translations/glossary.md`",
@@ -206,17 +206,17 @@ def generate_export_guide(locale: str) -> str:
     return "\n".join(lines)
 
 
-def write_export_guide(locale: str, content: str) -> Path:
-    """Write export-guide.md for a given locale."""
-    output_path = DOCS_DIR / locale / "translations" / "export-guide.md"
+def write_for_translators(locale: str, content: str) -> Path:
+    """Write for-translators.md for a given locale."""
+    output_path = DOCS_DIR / locale / "translations" / "for-translators.md"
     output_path.write_text(content, encoding="utf-8")
     return output_path
 
 
 def show_diff(locale: str) -> None:
-    """Show diff between current and would-be-generated export-guide."""
-    output_path = DOCS_DIR / locale / "translations" / "export-guide.md"
-    new_content = generate_export_guide(locale)
+    """Show diff between current and would-be-generated for-translators.md."""
+    output_path = DOCS_DIR / locale / "translations" / "for-translators.md"
+    new_content = generate_for_translators(locale)
 
     if output_path.exists():
         current_content = output_path.read_text(encoding="utf-8")
@@ -235,7 +235,7 @@ def show_diff(locale: str) -> None:
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Generate export-guide.md files for translation locales"
+        description="Generate for-translators.md files for translation locales"
     )
     parser.add_argument(
         "locale",
@@ -280,10 +280,10 @@ def main():
 
     if args.locale == "all":
         locales = get_available_locales()
-        print(f"Generating export guides for {len(locales)} locales...")
+        print(f"Generating for-translators guides for {len(locales)} locales...")
         for locale in locales:
-            content = generate_export_guide(locale)
-            output_path = write_export_guide(locale, content)
+            content = generate_for_translators(locale)
+            output_path = write_for_translators(locale, content)
             print(f"  [{locale}] Generated {output_path.relative_to(PROJECT_ROOT)}")
         print("Done.")
     else:
@@ -293,8 +293,8 @@ def main():
             print(f"Error: Locale '{locale}' not found at {locale_dir}", file=sys.stderr)
             return 1
 
-        content = generate_export_guide(locale)
-        output_path = write_export_guide(locale, content)
+        content = generate_for_translators(locale)
+        output_path = write_for_translators(locale, content)
         print(f"Generated {output_path.relative_to(PROJECT_ROOT)}")
 
     return 0

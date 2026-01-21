@@ -50,7 +50,7 @@ Start with the documentation site resources:
 2. **Language-specific resources**: `/{lang}/translations/`
    - Glossary with standardized terms
    - Language-specific notes and rules
-   - Export guide (generated reference)
+   - For-translators guide (generated reference)
 
 ## For Developers
 
@@ -61,10 +61,10 @@ Start with the documentation site resources:
 ## For Project Maintainers
 
 - **Management approach**: [`management-approach.md`](management-approach.md) - TMS vs. documentation-driven localization
-- **Export guide generation**: `bin/generate-export-guide` - Generate locale-specific export guides
+- **For-translators generation**: `bin/generate-for-translators` - Generate locale-specific translator guides
 
 ## Tools
 
 - **Translation utility**: `bin/translation-pluribus-util` for batch processing
-- **Export guide generator**: `bin/generate-export-guide` for generating export-guide.md files
+- **For-translators generator**: `bin/generate-for-translators` for generating for-translators.md files
 - **Build commands**: See main project README for testing translations
