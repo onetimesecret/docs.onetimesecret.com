@@ -9,39 +9,40 @@ Este glosario proporciona traducciones estandarizadas de términos clave en todo
 
 ## Terminología básica
 
-| Inglés | Español (ES) | Contexto |
-|---------|-------------|---------|
-| secret (sustantivo) | secreto | Concepto central de la aplicación |
-| secret (adj) | secreto/seguro | |
-| passphrase | frase de contraseña | Método de autenticación para secretos |
-| burn | destruir | Acción para borrar un secreto antes de verlo |
-| view/reveal | ver/mostrar | Acción para acceder a un secreto |
-| link | enlace | La URL que da acceso a un secreto |
-| encrypt/encrypted | cifrar/cifrado | Método de seguridad |
-| secure | seguro | Estado de protección |
+| Inglés | Español (ES) | Contexto | Notas |
+|---------|-------------|---------|-------|
+| secret (sustantivo) | secreto | Concepto central de la aplicación | Enfatiza el elemento confidencial que se comparte |
+| secret (adj) | secreto/seguro | Uso descriptivo | |
+| passphrase | frase de contraseña | Método de autenticación para secretos | Término compuesto que lo distingue de la contraseña de cuenta |
+| password | contraseña | Credencial de inicio de sesión de cuenta | Término estándar para contraseñas de cuenta |
+| burn | destruir | Acción para borrar un secreto antes de verlo | Usar formas de verbo/participio pasado de manera consistente |
+| view/reveal | ver/mostrar | Acción para acceder a un secreto | |
+| link | enlace | La URL que da acceso a un secreto | |
+| encrypt/encrypted | cifrar/cifrado | Método de seguridad | |
+| secure | seguro | Estado de protección | |
 
 ## Elementos de la interfaz de usuario
 
-| Inglés | Español (ES) | Contexto |
-|---------|-------------|---------|
-| Share a secret | Compartir un secreto | Acción principal |
-| Create Account | Crear una cuenta | Registro |
-| Sign In | Iniciar sesión | Autenticación |
-| Dashboard | Panel | Página principal del usuario |
-| Settings | Configuración | Página de configuración |
-| Privacy Options | Opciones de privacidad | Configuración de secretos |
-| Feedback | Comentarios | Comentarios de usuarios |
+| Inglés | Español (ES) | Contexto | Notas |
+|---------|-------------|---------|-------|
+| Share a secret | Compartir un secreto | Acción principal | |
+| Create Account | Crear una cuenta | Registro | |
+| Sign In | Iniciar sesión | Autenticación | Término muy común para iniciar sesión |
+| Dashboard | Panel | Página principal del usuario | Más preciso que "Cuenta" para este contexto |
+| Settings | Configuración | Página de configuración | |
+| Privacy Options | Opciones de privacidad | Configuración de secretos | |
+| Feedback | Comentarios | Comentarios de usuarios | |
 
 ## Términos de estado
 
-| Inglés | Español (ES) | Contexto |
-|---------|-------------|---------|
-| received | recibido | El secreto ha sido visto |
-| burned | destruido | El secreto fue borrado antes de ser visto |
-| expired | expirado | El secreto ya no está disponible debido al tiempo |
-| created | creado | Se ha generado el secreto |
-| active | activo | El secreto está disponible |
-| inactive | inactivo | El secreto no está disponible |
+| Inglés | Español (ES) | Contexto | Notas |
+|---------|-------------|---------|-------|
+| received | recibido | El secreto ha sido visto | |
+| burned | destruido | El secreto fue borrado antes de ser visto | Forma estandarizada |
+| expired | expirado | El secreto ya no está disponible debido al tiempo | |
+| created | creado | Se ha generado el secreto | |
+| active | activo | El secreto está disponible | |
+| inactive | inactivo | El secreto no está disponible | |
 
 ## Términos relacionados con el tiempo
 
@@ -91,14 +92,14 @@ Este glosario proporciona traducciones estandarizadas de términos clave en todo
 
 ## Botones y acciones
 
-| Inglés | Español (ES) | Contexto |
-|---------|-------------|---------|
-| submit | enviar | Acción de formulario |
-| cancel | cancelar | Acción negativa |
-| confirm | confirmar | Acción positiva |
-| copy to clipboard | copiar al portapapeles | Acción de utilidad |
-| continue | continuar | Navegación |
-| back | atrás | Navegación |
+| Inglés | Español (ES) | Contexto | Notas |
+|---------|-------------|---------|-------|
+| submit | enviar | Acción de formulario | |
+| cancel | cancelar | Acción negativa | |
+| confirm | confirmar | Acción positiva | |
+| copy to clipboard | copiar al portapapeles | Acción de utilidad | Frase estándar en español |
+| continue | continuar | Navegación | |
+| back | atrás | Navegación | |
 
 ## Términos de marketing
 
