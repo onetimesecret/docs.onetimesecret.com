@@ -55,15 +55,7 @@ This document combines the translation glossary and language-specific notes to p
 
 ## Key Translation Decisions
 
-### 1. `secret` → `Geheimnis`
-
-**Choice:** The term `secret` was consistently translated as `Geheimnis`.
-
-**Rationale:** `Geheimnis` is the direct German equivalent of `secret`. While the guidelines suggest emphasizing "confidential information or message" (like the Danish "besked"), `Geheimnis` is commonly understood in German technical contexts to refer to sensitive data or credentials. Using `Nachricht` (message) might lose the implication of confidentiality, and longer phrases like `vertrauliche Information` are unsuitable for UI elements.
-
-**Distinction from `de_AT`:** Usage is expected to be identical in Austrian German. `Geheimnis` is standard German and used similarly in Austria.
-
-### 2. `password` → `Passwort`
+### 1. `password` → `Passwort`
 
 **Choice:** The term `password`, referring specifically to account login credentials, was translated as `Passwort`.
 
@@ -71,7 +63,7 @@ This document combines the translation glossary and language-specific notes to p
 
 **Distinction from `de_AT`:** Usage is identical in Austrian German. `Passwort` is the standard term.
 
-### 3. `passphrase` → `Passphrase`
+### 2. `passphrase` → `Passphrase`
 
 **Choice:** The term `passphrase`, referring to the protection for an individual secret, was translated directly as `Passphrase`.
 
