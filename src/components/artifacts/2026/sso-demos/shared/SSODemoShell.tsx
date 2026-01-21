@@ -18,6 +18,13 @@ const SPEED_INTERVALS = {
 
 type PlaybackSpeed = keyof typeof SPEED_INTERVALS;
 
+/** Speed control button configuration for rendering */
+const SPEED_CONTROLS = [
+  { speed: "slow", label: "Slow speed (5 seconds per step)", emoji: "🐢" },
+  { speed: "normal", label: "Normal speed (3 seconds per step)", emoji: "▶️" },
+  { speed: "fast", label: "Fast speed (1.5 seconds per step)", emoji: "🐇" },
+] as const;
+
 interface SSODemoShellProps {
   /** Array of demo steps */
   steps: Step[];
@@ -123,6 +130,15 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
     return () => clearTimeout(timer);
   }, [autoPlay, currentStep]);
 
+  // Clear announcement after timeout so step changes can be announced again
+  useEffect(() => {
+    if (!announcement) return;
+    const timer = setTimeout(() => {
+      setAnnouncement("");
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, [announcement]);
+
   // Get the screen component for the current step
   const ScreenComponent = screens[step.userSees];
 
@@ -193,42 +209,21 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
 
                 {/* Speed controls */}
                 <div className="flex items-center gap-1" role="group" aria-label="Playback speed">
-                  <button
-                    onClick={() => changeSpeed("slow")}
-                    aria-pressed={playbackSpeed === "slow"}
-                    aria-label="Slow speed (5 seconds per step)"
-                    className={`rounded-md border px-2 py-2 text-xs font-medium transition-colors motion-reduce:transition-none ${
-                      playbackSpeed === "slow"
-                        ? "border-blue-500/50 bg-blue-900/30 text-blue-400"
-                        : "border-gray-600 bg-transparent text-gray-400 hover:border-gray-500 hover:text-gray-300"
-                    }`}
-                  >
-                    🐢
-                  </button>
-                  <button
-                    onClick={() => changeSpeed("normal")}
-                    aria-pressed={playbackSpeed === "normal"}
-                    aria-label="Normal speed (3 seconds per step)"
-                    className={`rounded-md border px-2 py-2 text-xs font-medium transition-colors motion-reduce:transition-none ${
-                      playbackSpeed === "normal"
-                        ? "border-blue-500/50 bg-blue-900/30 text-blue-400"
-                        : "border-gray-600 bg-transparent text-gray-400 hover:border-gray-500 hover:text-gray-300"
-                    }`}
-                  >
-                    ▶️
-                  </button>
-                  <button
-                    onClick={() => changeSpeed("fast")}
-                    aria-pressed={playbackSpeed === "fast"}
-                    aria-label="Fast speed (1.5 seconds per step)"
-                    className={`rounded-md border px-2 py-2 text-xs font-medium transition-colors motion-reduce:transition-none ${
-                      playbackSpeed === "fast"
-                        ? "border-blue-500/50 bg-blue-900/30 text-blue-400"
-                        : "border-gray-600 bg-transparent text-gray-400 hover:border-gray-500 hover:text-gray-300"
-                    }`}
-                  >
-                    🐇
-                  </button>
+                  {SPEED_CONTROLS.map(({ speed, label, emoji }) => (
+                    <button
+                      key={speed}
+                      onClick={() => changeSpeed(speed)}
+                      aria-pressed={playbackSpeed === speed}
+                      aria-label={label}
+                      className={`rounded-md border px-2 py-2 text-xs font-medium transition-colors motion-reduce:transition-none ${
+                        playbackSpeed === speed
+                          ? "border-blue-500/50 bg-blue-900/30 text-blue-400"
+                          : "border-gray-600 bg-transparent text-gray-400 hover:border-gray-500 hover:text-gray-300"
+                      }`}
+                    >
+                      {emoji}
+                    </button>
+                  ))}
                 </div>
                 <span className="mx-1 text-gray-600">|</span>
               </>
