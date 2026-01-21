@@ -23,7 +23,7 @@
     "@astrojs/check": "^0.9.6",
     "@astrojs/markdoc": "^0.15.10",
     "@astrojs/react": "^4.4.2",
-    "@astrojs/starlight": "^0.37.1",
+    "@astrojs/starlight": "^0.37.2",
     "@astrojs/starlight-markdoc": "^0.5.1",
     "@astrojs/starlight-tailwind": "^4.0.2",
     "@astrojs/vue": "^5.1.3",
