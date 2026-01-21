@@ -3,282 +3,324 @@ title: Oversættelsesvejledning til dansk
 description: Omfattende vejledning til oversættelse af Onetime Secret til dansk, der kombinerer ordliste og sproglige noter
 ---
 
-# Translation Guidance for Danish (Dansk)
+# Translation Guidance for Danish
 
-This document combines the glossary of standardized terms and language-specific translation notes for Danish translations of Onetime Secret. It serves as a comprehensive reference for translators working on the Danish locale to ensure consistency, accuracy, and natural phrasing.
+This document provides comprehensive guidance for translating Onetime Secret content. It combines universal translation resources with locale-specific terminology and rules.
 
-## Overview
+## Universal Translation Resources
 
-The Danish translation aims to:
-- Maintain consistency across all application interfaces
-- Use clear, natural phrasing for Danish-speaking audiences
-- Follow technical accuracy for security-related terminology
-- Apply appropriate voice and tone for different contexts
-- Avoid inappropriate connotations through careful word choice
+Before translating, review these cross-language guidelines that apply to all locales:
 
----
-
-## Core Terminology
-
-### Basic Terms
-
-| English | Dansk (DA) | Context | Notes |
-|---------|------------|---------|-------|
-| secret (noun) | besked | Central application concept | Use "besked" (message) instead of "hemmelighed" to avoid childish/personal connotations |
-| secret (adj) | hemmelig/sikker | Descriptive use | |
-| passphrase | adgangssætning | Authentication method for secrets | Distinct compound term for secret protection |
-| password | adgangskode | Account login credential | Standard term for account passwords only |
-| burn | ødelæg | Action to delete a secret before viewing | Permanent deletion action |
-| view/reveal | vis/åben | Action to access a secret | Display/show content |
-| link | link | URL providing access to a secret | |
-| encrypt/encrypted | krypter/krypteret | Security method | |
-| secure | sikker | Protection state | |
-
-### User Interface Elements
-
-| English | Dansk (DA) | Context | Notes |
-|---------|------------|---------|-------|
-| Share a secret | Del en besked | Primary action | |
-| Create Account | Opret konto | Registration | |
-| Sign In | Log ind | Authentication | |
-| Dashboard | Oversigt | User's main page | |
-| Settings | Indstillinger | Configuration page | |
-| Privacy Options | Privatlivsindstillinger | Secret configuration | |
-| Feedback | Feedback | User feedback | |
-
-### Status Terms
-
-| English | Dansk (DA) | Context | Notes |
-|---------|------------|---------|-------|
-| received | modtaget | Secret has been viewed | Past participle for status |
-| burned | ødelagt | Secret was deleted before viewing | Past participle for status |
-| expired | udløbet | Secret no longer available due to time | Past participle for status |
-| created | oprettet | Secret has been generated | Past participle for status |
-| active | aktiv | Secret is available | |
-| inactive | inaktiv | Secret is not available | |
-
-### Time-Related Terms
-
-| English | Dansk (DA) | Context |
-|---------|------------|---------|
-| expires in | udløber om | Time until secret becomes unavailable |
-| day/days | dag/dage | Time unit |
-| hour/hours | time/timer | Time unit |
-| minute/minutes | minut/minutter | Time unit |
-| second/seconds | sekund/sekunder | Time unit |
-
-### Security Features
-
-| English | Dansk (DA) | Context |
-|---------|------------|---------|
-| one-time access | engangsadgang | Core security feature |
-| passphrase protection | adgangssætningsbeskyttelse | Additional security |
-| encrypted in transit | krypteret under overførsel | Data protection method |
-| encrypted at rest | krypteret under lagring | Storage protection |
-
-### Account-Related Terms
-
-| English | Dansk (DA) | Context |
-|---------|------------|---------|
-| email | e-mail | User identifier |
-| password | adgangskode | Account authentication |
-| account | konto | User profile |
-| subscription | abonnement | Paid service |
-| customer | kunde | Paying user |
-
-### Domain-Related Terms
-
-| English | Dansk (DA) | Context |
-|---------|------------|---------|
-| custom domain | brugerdefineret domæne | Premium feature |
-| domain verification | domænebekræftelse | Setup process |
-| DNS record | DNS-post | Configuration |
-| CNAME record | CNAME-post | DNS configuration |
-
-### Error Messages
-
-| English | Dansk (DA) | Context |
-|---------|------------|---------|
-| error | fejl | Problem notification |
-| warning | advarsel | Caution notification |
-| oops | ups | Friendly error introduction |
-
-### Buttons and Actions
-
-| English | Dansk (DA) | Context | Notes |
-|---------|------------|---------|-------|
-| submit | send | Form action | Imperative form |
-| cancel | annuller | Negative action | Imperative form |
-| confirm | bekræft | Positive action | Imperative form |
-| copy to clipboard | kopier til udklipsholder | Utility action | Imperative form |
-| continue | fortsæt | Navigation | Imperative form |
-| back | tilbage | Navigation | |
-| create | opret | Imperative form for buttons | |
-| save | gem | Imperative form for buttons | |
-| saved | gemt | Past participle for status | |
-| share | del | Share/distribute | Imperative form |
-
-### Marketing Terms
-
-| English | Dansk (DA) | Context |
-|---------|------------|---------|
-| secure links | sikre links | Product feature |
-| privacy-first design | privatlivs-først design | Design philosophy |
-| custom branding | brugerdefineret branding | Premium feature |
+- **[Translating "Secret"](/en/translations/universal/secret-concept)** - How to handle the word "secret" across different language contexts
+- **[Password vs. Passphrase](/en/translations/universal/password-passphrase)** - Maintaining the critical distinction between account passwords and secret passphrases
+- **[Voice and Tone](/en/translations/universal/voice-and-tone)** - Patterns for active vs. passive voice, formality levels, and cultural adaptations
+- **[Brand Terms](/en/translations/universal/brand-terms)** - Terms that should not be translated (product names, tier names)
+- **[Quality Checklist](/en/translations/universal/quality-checklist)** - Comprehensive checklist for pre-submission review
 
 ---
 
-## Translation Guidelines
+## Ordliste
 
-### 1. Consistency
+# Onetime Secret oversættelses ordliste
 
-- Use the same translation for a term throughout the application
-- Maintain standardized terminology from the glossary above
-- Key distinctions to preserve:
-  - `adgangskode` for account passwords
-  - `adgangssætning` for secret protection
-  - `besked` as the core concept (not "hemmelighed")
+Denne ordliste giver standardiserede oversættelser for nøgletermer på tværs af sprog for at sikre konsistens i Onetime Secret-applikationen. Den er baseret på analyse af de eksisterende oversættelser på tysk (Tyskland og Østrig), fransk (Frankrig og Canada) og polsk.
 
-### 2. Context Awareness
+## Kerneterminologi
 
-- Consider how the term is used in the application
-- Account for surrounding UI elements and user flow
-- Ensure translations make sense in their specific context
+| Engelsk | Tysk (DE) | Tysk (AT) | Fransk (FR) | Fransk (CA) | Polsk (PL) | Dansk (DA) | Kontekst |
+|---------|-------------|-------------|-------------|-------------|------------|------------|-------|
+| secret (substantiv) | Geheimnis | Geheimnis | secret | secret | Sekret | Besked | Centralt koncept i applikationen |
+| secret (adj) | geheim | geheim | secret/sécurisé | secret/sécurisé | sekretny/poufny | hemmelig/sikker | |
+| passphrase | Passphrase | Sicherheitsphrase | phrase secrète | mot de passe | Fraza dostępowa | Adgangssætning | Godkendelsesmetode for beskeder  |
+| burn | zerstören | zerstören | supprimer | supprimer | zniszczyć/spalić | ødelæg | Handling til at slette en besked før visning |
+| view/reveal | ansehen/anzeigen | ansehen/anzeigen | consulter/afficher | consulter/afficher | wyświetlić/pokazać | vis/åben | Handling til at få adgang til en besked |
+| link | Link | Link/Verbindung | lien | lien | link/łącze | Link | URL'en, der giver adgang til en besked |
+| encrypt/encrypted | verschlüsseln/verschlüsselt | verschlüsseln/verschlüsselt | chiffrer/chiffré | chiffrer/chiffré | szyfrować/zaszyfrowany | krypter/krypteret | Sikkerhedsmetode |
+| secure | sicher | sicher | sécurisé | sécurisé | bezpieczny | Sikker | Beskyttelsestilstand |
 
-### 3. Cultural Adaptation
+## Brugergrænsefladelementer
 
-- Adapt terms to local conventions when necessary
-- Use standard Danish that works across regions
-- Use standard technical terms familiar to Danish-speaking users
+| Engelsk | Tysk (DE) | Tysk (AT) | Fransk (FR) | Fransk (CA) | Polsk (PL) | Dansk (DA) | Kontekst |
+|---------|-------------|-------------|-------------|-------------|------------|------------|-------|
+| Share a secret | Geheimen Link erstellen | Ein Geheimnis teilen | Partager un secret | Partager un secret | Udostępnij sekret | Del en besked | Hovedhandling |
+| Create Account | Konto erstellen | Konto erstellen | Créer un compte | Créer un compte | Utwórz konto | Opret konto | Registrering |
+| Sign In | Anmelden | Eintragen | Se connecter | Se connecter | Zaloguj się | Log ind | Godkendelse |
+| Dashboard | Konto | Konto | Tableau de bord | Compte | Panel/Konto | Oversigt | Brugerens hovedside |
+| Settings | Einstellungen | Einstellungen | Paramètres | Paramètres | Ustawienia | Indstillinger | Konfigurationsside |
+| Privacy Options | Datenschutzeinstellungen | Datenschutz-Optionen | Options de confidentialité | Options de confidentialité | Opcje prywatności | Privatlivsindstillinger | Beskedindstillinger |
+| Feedback | Feedback | Rückmeldung | Retour d'information | Retour d'information | Opinia | Feedback | Brugerkommentarer |
 
-### 4. Technical Accuracy
+## Statustermer
 
-- Security-related terms must be translated accurately
-- Prioritize precision over localization for technical terminology
-- Use established Danish technical vocabulary
+| Engelsk | Tysk (DE) | Tysk (AT) | Fransk (FR) | Fransk (CA) | Polsk (PL) | Dansk (DA) | Kontekst |
+|---------|-------------|-------------|-------------|-------------|------------|------------|-------|
+| received | empfangen | empfangen | reçu | reçu | otrzymany | Modtaget | Beskeden er blevet set |
+| burned | zerstört | zerstört | supprimé | supprimé | zniszczony | Ødelagt | Beskeden blev slettet før visning |
+| expired | abgelaufen | abgelaufen | expiré | expiré | wygasły | Udløbet | Beskeden er ikke længere tilgængelig på grund af tid |
+| created | erstellt | erstellt | créé | créé | utworzony | Oprettet | Beskeden er blevet genereret |
+| active | aktiv | aktiv | actif | actif | aktywny | Aktiv | Beskeden er tilgængelig |
+| inactive | inaktiv | inaktiv | inactif | inactif | nieaktywny | Inaktiv | Beskeden er ikke tilgængelig |
 
-### 5. Voice and Tone
+## Tidsrelaterede termer
 
-#### Imperative Voice (for Actions)
-Use imperative voice for buttons, links, and user actions:
+| Engelsk | Tysk (DE) | Tysk (AT) | Fransk (FR) | Fransk (CA) | Polsk (PL) | Dansk (DA) | Kontekst |
+|---------|-------------|-------------|-------------|-------------|------------|------------|-------|
+| expires in | läuft ab in | läuft ab in | expire dans | expire dans | wygasa za | Udløber om | Tid indtil beskeden ikke længere er tilgængelig |
+| day/days | Tag/Tage | Tag/Tage | jour/jours | jour/jours | dzień/dni | dag/dage | Tidsenhed |
+| hour/hours | Stunde/Stunden | Stunde/Stunden | heure/heures | heure/heures | godzina/godziny | time/timer | Tidsenhed |
+| minute/minutes | Minute/Minuten | Minute/Minuten | minute/minutes | minute/minutes | minuta/minuty | minut/minutter | Tidsenhed |
+| second/seconds | Sekunde/Sekunden | Sekunde/Sekunden | seconde/secondes | seconde/secondes | sekunda/sekundy | sekund/sekunder | Tidsenhed |
+
+## Sikkerhedsfunktioner
+
+| Engelsk | Tysk (DE) | Tysk (AT) | Fransk (FR) | Fransk (CA) | Polsk (PL) | Dansk (DA) | Kontekst |
+|---------|-------------|-------------|-------------|-------------|------------|------------|-------|
+| one-time access | einmaliger Zugang | einmaliger Zugang | accès unique | accès unique | jednorazowy dostęp | Engangsadgang | Kernefunktion for sikkerhed |
+| passphrase protection | Schutz durch Passphrase | Schutz durch Sicherheitsphrase | protection par phrase secrète | protection par phrase d'authentification | ochrona frazą dostępową | Adgangssætningsbeskyttelse | Yderligere sikkerhed |
+| encrypted in transit | verschlüsselt bei der Übertragung | verschlüsselt bei der Übertragung | chiffré en transit | chiffré en transit | zaszyfrowany w trakcie przesyłania | Krypteret under overførsel | Databeskyttelsesmetode |
+| encrypted at rest | verschlüsselt im Ruhezustand | verschlüsselt im Ruhezustand | chiffré au repos | chiffré au repos | zaszyfrowany w spoczynku | Krypteret under lagring | Lagringsbeskyttelse |
+
+## Kontorelaterede termer
+
+| Engelsk | Tysk (DE) | Tysk (AT) | Fransk (FR) | Fransk (CA) | Polsk (PL) | Dansk (DA) | Kontekst |
+|---------|-------------|-------------|-------------|-------------|------------|------------|-------|
+| email | E-Mail | E-Mail | courriel/e-mail | courriel | e-mail | E-mail | Brugeridentifikator |
+| password | Passwort | Passwort | mot de passe | mot de passe | Hasło | Adgangskode | Godkendelse |
+| account | Konto | Konto | compte | compte | Konto | Konto | Brugerprofil |
+| subscription | Abonnement | Abonnement | abonnement | abonnement | Subskrypcja | Abonnement | Betalt tjeneste |
+| customer | Kunde | Kunde | client | client | Klient | Kunde | Betalende bruger |
+
+## Domænerelaterede termer
+
+| Engelsk | Tysk (DE) | Tysk (AT) | Fransk (FR) | Fransk (CA) | Polsk (PL) | Dansk (DA) | Kontekst |
+|---------|-------------|-------------|-------------|-------------|------------|------------|-------|
+| custom domain | benutzerdefinierter Bereich | benutzerdefinierter Bereich | domaine personnalisé | domaine personnalisé | domena niestandardowa | Brugerdefineret domæne | Premiumfunktion |
+| domain verification | Domänenüberprüfung | Domänenüberprüfung | vérification du domaine | vérification du domaine | weryfikacja domeny | Domænebekræftelse | Opsætningsproces |
+| DNS record | Namensserver-Eintrag | Namensserver-Eintrag | enregistrement DNS | enregistrement DNS | rekord DNS | DNS-post | Konfiguration |
+| CNAME record | CNAME-Eintrag | CNAME-Eintrag | enregistrement CNAME | enregistrement CNAME | rekord CNAME | CNAME-post | DNS-opsætning |
+
+## Fejlmeddelelser
+
+| Engelsk | Tysk (DE) | Tysk (AT) | Fransk (FR) | Fransk (CA) | Polsk (PL) | Dansk (DA) | Kontekst |
+|---------|-------------|-------------|-------------|-------------|------------|------------|-------|
+| error | Fehler | Fehler | erreur | bug | błąd | Fejl | Problemnotifikation |
+| warning | Warnung | Warnung | avertissement | attention | ostrzeżenie | Advarsel | Advarselsnotifikation |
+| oops | Ups | Huch | oups | oups | ups | Ups | Venlig fejlintro |
+
+## Knapper og handlinger
+
+| Engelsk | Tysk (DE) | Tysk (AT) | Fransk (FR) | Fransk (CA) | Polsk (PL) | Dansk (DA) | Kontekst |
+|---------|-------------|-------------|-------------|-------------|------------|------------|-------|
+| submit | senden | einreichen | soumettre | soumettre | Wyślij | Send | DE: uformel; AT: formel |
+| cancel | abbrechen | abbrechen | annuler | annuler | Anuluj | Annuller | Negativ handling |
+| confirm | bestätigen | bestätigen | confirmer | confirmer | Potwierdź | Bekræft | Positiv handling |
+| copy to clipboard | in die Zwischenablage kopieren | in die Zwischenablage kopieren | copier dans le presse-papiers | copier dans le presse-papiers | Kopiuj do schowka | Kopier til udklipsholder | Hjælpehandling |
+| continue | weiter | weiter | continuer | continuer | Kontynuuj | Fortsæt | Navigation |
+| back | zurück | zurück | retour | retour | Wstecz | Tilbage | Navigation |
+| create | erstellen | erstellen | créer | créer | Utwórz | Opret | Imperativform for knapper |
+| save | speichern | speichern | enregistrer | enregistrer | Zapisz | Gem | Imperativform for knapper |
+| saved | gespeichert | gespeichert | enregistré | enregistré | Zapisano | Gemt | Datidsform for status |
+| share | teilen | teilen | partager | partager | Udostępnij | Del | Del/distribuer |
+
+## Marketingtermer
+
+| Engelsk | Tysk (DE) | Tysk (AT) | Fransk (FR) | Fransk (CA) | Polsk (PL) | Dansk (DA) | Kontekst |
+|---------|-------------|-------------|-------------|-------------|------------|------------|-------|
+| secure links | sichere Links | sichere Links | liens sécurisés | liens sécurisés | bezpieczne linki | Sikre links | Produktfunktion |
+| privacy-first design | Datenschutz als oberstes Gebot | Datenschutz als oberstes Gebot | conception privilégiant la protection de la vie privée | conception privilégiant la protection de la vie privée | projekt z priorytetem prywatności | Privatlivs-først design | Designfilosofi |
+| custom branding | benutzerdefiniertes Branding | benutzerdefiniertes Branding | image de marque personnalisée | image de marque personnalisée | niestandardowy branding | Brugerdefineret branding | Premiumfunktion |
+
+## Oversættelsesvejledning
+
+1. **Konsistens**: Brug samme oversættelse for et begreb gennem hele applikationen
+2. **Kontekst**: Overvej hvordan begrebet bruges i applikationen
+3. **Kulturel tilpasning**: Tilpas termer til lokale konventioner når det er nødvendigt
+4. **Teknisk nøjagtighed**: Sørg for at sikkerhedstermer oversættes nøjagtigt
+5. **Tone**: Bevar en professionel, men ligefrem tone
+
+## Særlige overvejelser
+
+- Begrebet "besked" er centralt i applikationen og skal oversættes konsekvent
+- Regionale variationer skal respekteres:
+  - Fransk: "courriel" (CA) vs "e-mail" (FR)
+  - Tysk: Uformel "du" (DE) vs Formel "Sie" (AT)
+  - Tysk: "Passphrase" (DE, anglicisme) vs "Sicherheitsphrase" (AT, indfødt sammensat)
+  - Tysk: "zerstören" standardiseret på tværs af begge varianter for "burn"
+  - Dansk: "Beskeder" foretrækkes frem for "Hemmeligheder" for "secrets"
+- Tekniske termer relateret til sikkerhed skal prioritere nøjagtighed frem for lokalisering
+- UI-elementer skal følge platformkonventioner for målsproget
+
+---
+
+## Dansk oversættelse
+
+# Sprognoter for dansk
+
+Dette dokument indeholder sprog-specifikke oversættelsesregler og retningslinjer for den danske version af Onetime Secret.
+
+## Kritiske oversættelsesregler
+
+| Regel | Korrekt | Forkert | Eksempel |
+|-------|---------|---------|----------|
+| "Secret" → "Besked" (ikke "Hemmelighed") | besked | hemmelighed | ✓ Du har 3 nye beskeder; ✗ Du har 3 nye hemmeligheder |
+| Password vs. Passphrase | adgangskode (login), adgangssætning (secret) | Blandet brug | ✓ Indtast din adgangskode (login); ✗ Indtast din adgangssætning (login) |
+| Knapper: Imperativ | Opret, Del, Gem | Substantivformer | ✓ Opret besked (knap); ✗ Oprettelse af besked (knap) |
+| Status: Passiv form | Oprettet, Gemt | Imperativ i status | ✓ Besked oprettet (status); ✗ Opret besked (status) |
+| Sammensatte ord med engelske låneord | besked-apps, API-nøgle | besked apps, API nøgle | ✓ besked-apps (bindestreg); ✗ besked apps (adskilte ord) |
+
+---
+
+## Oversættelsesretningslinjer
+
+### 1. Konsistens
+
+- Brug samme oversættelse for et begreb gennem hele applikationen
+- Overhold standardiseret terminologi fra ordlisten
+- Vigtige distinktioner:
+  - `adgangskode` for konto-passwords
+  - `adgangssætning` for beskedbeskyttelse
+  - `besked` som kernekoncept (ikke "hemmelighed")
+
+### 2. Kontekstbevidsthed
+
+- Overvej hvordan begrebet bruges i applikationen
+- Tag hensyn til omgivende UI-elementer og brugerflow
+- Sørg for at oversættelser giver mening i deres specifikke kontekst
+
+### 3. Kulturel tilpasning
+
+- Tilpas termer til lokale konventioner når det er nødvendigt
+- Brug standarddansk der fungerer på tværs af regioner
+- Brug standard tekniske termer velkendte for dansktalende brugere
+
+### 4. Teknisk nøjagtighed
+
+- Sikkerhedsrelaterede termer skal oversættes nøjagtigt
+- Prioritér præcision frem for lokalisering for teknisk terminologi
+- Brug etableret dansk teknisk vokabular
+
+### 5. Stemme og tone
+
+#### Imperativ (for handlinger)
+Brug imperativ for knapper, links og brugerhandlinger:
 - `Opret besked` (Create secret)
 - `Kopier til udklipsholder` (Copy to clipboard)
 - `Opret konto` (Create account)
 - `Gem` (Save)
 - `Del` (Share)
 
-#### Passive/Declarative Voice (for Information)
-Use passive voice or past participles for informational text, status messages, and descriptions:
+#### Passiv/deklarativ (for information)
+Brug passiv eller datidsformer for informationstekst, statusmeddelelser og beskrivelser:
 - `Besked oprettet` (Secret created - status)
 - `Din sikre besked vises nedenfor.` (Your secure message is shown below.)
 - `Beskeden blev ødelagt manuelt...` (The secret was manually destroyed...)
-- `Gemt` (Saved - status message)
+- `Gemt` (Saved - statusmeddelelse)
 
-### 6. Direct Address
+### 6. Direkte tiltale
 
-- Use informal address consistently when addressing users
-- Examples:
+- Brug uformel tiltale konsekvent når du henvender dig til brugere
+- Eksempler:
   - `Indtast din adgangskode` (Enter your password)
   - `Din sikre besked` (Your secure message)
-- Danish naturally flows with direct address in most contexts
+- Dansk flyder naturligt med direkte tiltale i de fleste kontekster
 
-### 7. Clarity and Natural Phrasing
+### 7. Klarhed og naturlig sprogbrug
 
-- Prioritize natural Danish expressions over literal translations
-- Use standard phrases familiar to Danish speakers
-- Avoid literal translations that sound awkward in Danish
+- Prioritér naturlige danske udtryk frem for ordret oversættelse
+- Brug standardfraser velkendte for dansktalende
+- Undgå ordret oversættelser der lyder akavet på dansk
 
-### 8. Completeness
+### 8. Fuldstændighed
 
-- Ensure all user-facing strings are translated
-- Avoid leaving English text in the interface
-- Translate help text, descriptions, and metadata
+- Sørg for at alle brugervendte strenge er oversat
+- Undgå at efterlade engelsk tekst i grænsefladen
+- Oversæt hjælpetekst, beskrivelser og metadata
 
-### 9. Compound Words with English Loanwords
+### 9. Sammensatte ord med engelske låneord
 
-When creating compound words that include English loanwords, use hyphens:
-- ✓ `besked-apps` (hyphenated)
-- ✗ `besked apps` (separate words)
-- ✓ `API-nøgle` (hyphenated)
-- ✗ `API nøgle` (separate words)
+Når du danner sammensatte ord med engelske låneord, brug bindestreger:
+- ✓ `besked-apps` (med bindestreg)
+- ✗ `besked apps` (adskilte ord)
+- ✓ `API-nøgle` (med bindestreg)
+- ✗ `API nøgle` (adskilte ord)
 
 ---
 
-## Common Translation Patterns
+## Almindelige oversættelsesmønstre
 
-### User Instructions
-Use imperative forms:
+### Brugerinstruktioner
+Brug imperativformer:
 - `Indtast din adgangskode` (Enter your password)
 - `Kopier til udklipsholder` (Copy to clipboard)
 - `Indtast adgangssætningen her` (Enter the passphrase here)
 
-### Status Descriptions
-Use passive voice or past participles:
+### Statusbeskrivelser
+Brug passiv eller datidsformer:
 - `Kopieret til udklipsholder` (Copied to clipboard)
 - `Besked oprettet` (Secret created)
 - `Gemt` (Saved)
 - `Oprettet` (Created)
 
-### Help Text and Descriptions
-Use declarative sentences:
+### Hjælpetekst og beskrivelser
+Brug deklarative sætninger:
 - `Du ser det sikre indhold` (You are viewing the secure content)
 - `Dette indhold vises kun én gang` (This content is shown only once)
 
-### Error Messages
-Use clear, direct language:
+### Fejlmeddelelser
+Brug klart, direkte sprog:
 - `Forkert adgangssætning` (Incorrect passphrase)
 - `Der opstod en fejl` (An error occurred)
 
 ---
 
-## Special Considerations
+## Særlige overvejelser
 
-### The Term "Secret" - Critical Rule
+### Begrebet "Secret" - Kritisk regel
 
-**ALWAYS use "besked" (message), NEVER use "hemmelighed" (secret)**
+**BRUG ALTID "besked" (meddelelse), BRUG ALDRIG "hemmelighed"**
 
-The Danish word "hemmelighed" carries inappropriate connotations:
-- Personal or private secrets (gossip, hidden information)
-- Childish or trivial usage
-- Meanings that sound unprofessional in a business context
+Det danske ord "hemmelighed" har upassende konnotationer:
+- Personlige eller private hemmeligheder (sladder, skjult information)
+- Barnlig eller triviel brug
+- Betydninger der lyder uprofessionelle i en forretningsmæssig kontekst
 
-Native speaker feedback confirms that "hemmelighed" evokes associations with personal secrets rather than business security.
+Feedback fra indfødte talere bekræfter at "hemmelighed" fremkalder associationer med personlige hemmeligheder snarere end forretningssikkerhed.
 
-Examples:
+Eksempler:
 - ✓ `Du har 3 nye beskeder` (You have 3 new messages)
 - ✗ `Du har 3 nye hemmeligheder` (You have 3 new secrets)
 - ✓ `Opret en besked` (Create a secret)
 - ✗ `Opret en hemmelighed` (Create a secret)
 
 ### Password vs. Passphrase
-**Critical distinction that must be maintained:**
-- **`adgangskode`** - for user account login credentials ONLY
-- **`adgangssætning`** - for protecting individual secrets
+**Kritisk distinktion der skal opretholdes:**
+- **`adgangskode`** - KUN for brugerkonto-login
+- **`adgangssætning`** - for beskyttelse af individuelle beskeder
 
-This distinction must be maintained throughout the application to avoid confusion.
+Denne distinktion skal opretholdes gennem hele applikationen for at undgå forvirring.
 
-Examples:
-- ✓ `Indtast din adgangskode` (Enter your password - account login)
-- ✗ `Indtast din adgangssætning` (Enter your passphrase - account login)
-- ✓ `Beskyt med adgangssætning` (Protect with passphrase - secret protection)
-- ✗ `Beskyt med adgangskode` (Protect with password - secret protection)
+Eksempler:
+- ✓ `Indtast din adgangskode` (Enter your password - konto-login)
+- ✗ `Indtast din adgangssætning` (Enter your passphrase - konto-login)
+- ✓ `Beskyt med adgangssætning` (Protect with passphrase - beskedbeskyttelse)
+- ✗ `Beskyt med adgangskode` (Protect with password - beskedbeskyttelse)
 
-### The Term "Burn"
-Consistently translated as **`ødelæg`** (verb) / **`ødelagt`** (past participle):
-- Conveys the permanent, irreversible nature of deletion
-- Examples:
-  - `Ødelæg denne besked` (Burn this secret - button)
+### Begrebet "Burn"
+Oversættes konsekvent som **`ødelæg`** (verbum) / **`ødelagt`** (datid):
+- Formidler den permanente, irreversible karakter af sletning
+- Eksempler:
+  - `Ødelæg denne besked` (Burn this secret - knap)
   - `Beskeden er ødelagt` (The secret is burned - status)
 
-### UI Element Conventions
-- Follow platform conventions for the target language
-- Use standard Danish terminology for common UI elements
-- Maintain consistency with other Danish applications
+### UI-element konventioner
+- Følg platformkonventioner for målsproget
+- Brug standard dansk terminologi for almindelige UI-elementer
+- Oprethold konsistens med andre danske applikationer
 
-### Technical Security Terms
-- Prioritize accuracy over casual localization
-- Use established Danish technical vocabulary
-- Examples:
+### Tekniske sikkerhedstermer
+- Prioritér nøjagtighed frem for uformel lokalisering
+- Brug etableret dansk teknisk vokabular
+- Eksempler:
   - `krypteret` (encrypted)
   - `krypter` (to encrypt)
   - `bekræftelse` (verification)
@@ -286,46 +328,44 @@ Consistently translated as **`ødelæg`** (verb) / **`ødelagt`** (past particip
 
 ---
 
-## Critical Translation Rules
+## Begrundelse for dansk-specifikke tilpasninger
 
-| Rule | Correct | Incorrect | Example |
-|------|---------|-----------|---------|
-| "Secret" → "Besked" (NOT "Hemmelighed") | besked | hemmelighed | ✓ Du har 3 nye beskeder; ✗ Du har 3 nye hemmeligheder |
-| Password vs. Passphrase | adgangskode (login), adgangssætning (secret) | Mixed usage | ✓ Indtast din adgangskode (login); ✗ Indtast din adgangssætning (login) |
-| Buttons: Imperative | Opret, Del, Gem | Noun forms | ✓ Opret besked (button); ✗ Oprettelse af besked (button) |
-| Status: Passive form | Oprettet, Gemt | Imperative in status | ✓ Besked oprettet (status); ✗ Opret besked (status) |
-| Compound words with English loanwords | besked-apps, API-nøgle | besked apps, API nøgle | ✓ besked-apps (hyphenated); ✗ besked apps (separate words) |
+Den danske oversættelse kræver særlig opmærksomhed på:
 
----
+1. **"Besked" i stedet for "Hemmelighed"**: Ordet "hemmelighed" har barnlige/personlige konnotationer i daglig dansk der underminerer den professionelle/sikkerhedsmæssige kontekst. Brug af "besked" opretholder en forretningspassende tone.
 
-## Rationale for Danish-Specific Adjustments
+2. **Klar Password/Passphrase distinktion**: Brug af "adgangskode" for konto-login og "adgangssætning" for beskedbeskyttelse sikrer at brugere forstår de forskellige sikkerhedskontekster.
 
-The Danish translation requires special attention to:
+3. **Imperativ for handlinger, passiv for status**: Danske UI-konventioner foretrækker stærkt imperativformer for knapper og passiv/datidsformer for statusmeddelelser.
 
-1. **"Besked" instead of "Hemmelighed"**: The word "hemmelighed" has childish/personal connotations in everyday Danish that undermine the professional/security context. Using "besked" maintains a business-appropriate tone.
-
-2. **Clear Password/Passphrase Distinction**: Using "adgangskode" for account login and "adgangssætning" for secret protection ensures users understand the different security contexts.
-
-3. **Imperative for Actions, Passive for Status**: Danish UI conventions strongly favor imperative forms for buttons and passive/past participle forms for status messages.
-
-4. **Compound Word Hyphenation**: When combining Danish words with English loanwords, hyphens are necessary for proper Danish orthography.
+4. **Bindestreger i sammensatte ord**: Når danske ord kombineres med engelske låneord, er bindestreger nødvendige for korrekt dansk retskrivning.
 
 ---
 
-## Summary of Translation Principles
+## Opsummering af oversættelsesprincipperne
 
-The Danish translation maintains:
+Den danske oversættelse opretholder:
 
-1. **Terminology Consistency** - Standardized key terms throughout the application
-2. **Appropriate Voice** - Imperative for actions, passive/past participles for information
-3. **Natural Phrasing** - Standard Danish expressions and sentence structures
-4. **Consistent Address** - Direct address when addressing users
-5. **Complete Coverage** - All user-facing strings translated
-6. **Technical Accuracy** - Precise terminology for security concepts
-7. **Clear Distinctions** - Especially:
-   - Account passwords (`adgangskode`) and secret passphrases (`adgangssætning`)
-   - Using `besked` (message) instead of `hemmelighed` (secret)
-   - Action verbs (imperative) and status messages (passive/past participle)
-8. **Proper Orthography** - Hyphenated compound words with English loanwords
+1. **Terminologisk konsistens** - Standardiserede nøgletermer gennem hele applikationen
+2. **Passende stemme** - Imperativ for handlinger, passiv/datid for information
+3. **Naturlig sprogbrug** - Standard danske udtryk og sætningsstrukturer
+4. **Konsistent tiltale** - Direkte tiltale når der henvendes til brugere
+5. **Fuld dækning** - Alle brugervendte strenge oversat
+6. **Teknisk nøjagtighed** - Præcis terminologi for sikkerhedskoncepter
+7. **Klare distinktioner** - Især:
+   - Konto-passwords (`adgangskode`) og besked-adgangssætninger (`adgangssætning`)
+   - Brug af `besked` (meddelelse) i stedet for `hemmelighed` (hemmelighed)
+   - Handlingsverber (imperativ) og statusmeddelelser (passiv/datid)
+8. **Korrekt retskrivning** - Sammensatte ord med bindestreger ved engelske låneord
 
-By following these guidelines, translators can ensure that the Danish version of Onetime Secret is accurate, consistent, professional, and provides a natural user experience for Danish-speaking audiences.
+---
+
+## Document Information
+
+This guide was generated from the following source files:
+
+- Universal resources: `/en/translations/universal/`
+- Glossary: `/da/translations/glossary.md`
+- Language notes: `/da/translations/language-notes.md`
+
+Generated: 2026-01-20

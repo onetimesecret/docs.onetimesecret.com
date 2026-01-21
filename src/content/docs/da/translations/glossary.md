@@ -99,6 +99,10 @@ Denne ordliste giver standardiserede oversættelser for nøgletermer på tværs 
 | copy to clipboard | in die Zwischenablage kopieren | in die Zwischenablage kopieren | copier dans le presse-papiers | copier dans le presse-papiers | Kopiuj do schowka | Kopier til udklipsholder | Hjælpehandling |
 | continue | weiter | weiter | continuer | continuer | Kontynuuj | Fortsæt | Navigation |
 | back | zurück | zurück | retour | retour | Wstecz | Tilbage | Navigation |
+| create | erstellen | erstellen | créer | créer | Utwórz | Opret | Imperativform for knapper |
+| save | speichern | speichern | enregistrer | enregistrer | Zapisz | Gem | Imperativform for knapper |
+| saved | gespeichert | gespeichert | enregistré | enregistré | Zapisano | Gemt | Datidsform for status |
+| share | teilen | teilen | partager | partager | Udostępnij | Del | Del/distribuer |
 
 ## Marketingtermer
 
