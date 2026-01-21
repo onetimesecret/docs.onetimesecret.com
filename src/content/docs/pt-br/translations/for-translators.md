@@ -3,141 +3,170 @@ title: Guia de tradução para português brasileiro
 description: Guia completo para traduzir o Onetime Secret para português brasileiro, combinando glossário e notas linguísticas
 ---
 
-# Translation Guidance for Portuguese (Português Brasileiro)
+# Translation Guidance for Portuguese (Brazil)
 
-This document combines the complete glossary and language-specific translation notes for Portuguese (Brazilian) translations of Onetime Secret. It serves as the authoritative reference for maintaining consistency, accuracy, and natural language flow across all Portuguese (Brazilian) content.
+This document provides comprehensive guidance for translating Onetime Secret content. It combines universal translation resources with locale-specific terminology and rules.
 
-## Overview
+## Universal Translation Resources
 
-This guide provides comprehensive translation standards for the Onetime Secret platform, combining:
-- **Standardized terminology glossary** for consistent term usage
-- **Language-specific guidelines** for Brazilian Portuguese conventions
-- **Translation examples** demonstrating proper application
-- **Cultural and technical considerations** specific to the pt-BR locale
+Before translating, review these cross-language guidelines that apply to all locales:
 
-## Core Translation Principles
-
-1. **Consistency**: Use the same translation for each term throughout the application
-2. **Clarity**: Prioritize clear, unambiguous language over literal translations
-3. **Context**: Consider how terms are used within the application
-4. **Cultural Adaptation**: Apply Brazilian Portuguese conventions and preferences
-5. **Technical Precision**: Ensure security and technical terms are accurately translated
-6. **Professional Tone**: Maintain a professional yet approachable voice using "você"
-7. **Natural Flow**: Write translations that sound natural to Brazilian Portuguese speakers
+- **[Translating "Secret"](/en/translations/universal/secret-concept)** - How to handle the word "secret" across different language contexts
+- **[Password vs. Passphrase](/en/translations/universal/password-passphrase)** - Maintaining the critical distinction between account passwords and secret passphrases
+- **[Voice and Tone](/en/translations/universal/voice-and-tone)** - Patterns for active vs. passive voice, formality levels, and cultural adaptations
+- **[Brand Terms](/en/translations/universal/brand-terms)** - Terms that should not be translated (product names, tier names)
+- **[Quality Checklist](/en/translations/universal/quality-checklist)** - Comprehensive checklist for pre-submission review
 
 ---
 
-# Standardized Terminology Glossary
+## Glossário
 
-## Main Application Concepts
+# Glossário de Tradução do Onetime Secret
 
-| English | Portuguese (BR) | Context | Notes |
-|---------|----------------|----------|-------|
-| secret (noun) | mensagem confidencial / conteúdo confidencial | Core application concept | NOT "segredo" - emphasizes shared information |
-| secret (adjective) | confidencial / secreto | Descriptor | |
-| passphrase | frase secreta | Secret protection mechanism | Distinct from account password |
-| password | senha | Account login credential | Only for account authentication |
-| burn | queimar | Delete secret before viewing | Permanent deletion metaphor |
-| view/reveal | visualizar/exibir | Access a secret | Imperative form for buttons |
-| hide | ocultar | Conceal content | Imperative form for buttons |
-| link | link | URL providing access | |
-| encrypt/encrypted | criptografar/criptografado | Security method | NOT "encriptar" |
-| secure | seguro | Protection state | |
+Este glossário fornece traduções padronizadas para termos-chave para garantir consistência na aplicação Onetime Secret.
 
-## User Interface Elements
+## Terminologia Principal
 
-| English | Portuguese (BR) | Context | Notes |
-|---------|----------------|----------|-------|
-| Share a secret | Compartilhar mensagem confidencial | Primary action | |
-| Create Account | Criar conta | Registration | |
-| Sign In | Entrar | Authentication | NOT "Login" or "Logar" |
-| Sign Out | Sair | Logout action | NOT "Logout" |
-| Dashboard | Painel | User main page | Translated, not loanword |
-| Settings | Configurações | Configuration page | NOT "Ajustes" or "Opções" |
-| Privacy Options | Opções de privacidade | Secret settings | |
-| Feedback | Feedback | User comments | Keep English term |
-| Search | Buscar | Search action | Brazilian preference, NOT "pesquisar" |
-| Documentation | Documentação | Technical docs | NOT "Documentos" |
-
-## Status Terms
-
-| English | Portuguese (BR) | Context |
+| Inglês | Português (BR) | Contexto |
 |---------|----------------|----------|
-| received | recebido | Secret was viewed |
-| burned | queimado | Secret deleted before viewing |
-| expired | expirado | Secret no longer available due to time |
-| created | criado | Secret was generated |
-| active | ativo | Secret is available |
-| inactive | inativo | Secret not available |
+| secret (substantivo) | mensagem confidencial / conteúdo confidencial | Conceito central da aplicação |
+| secret (adjetivo) | confidencial / secreto | |
+| passphrase | frase secreta | Método de autenticação para segredos. NÃO "senha" |
+| hide | ocultar | Ação para ocultar conteúdo |
+| password | senha | Credencial de login da conta |
+| burn | queimar | Ação para excluir um segredo antes de visualizar |
+| view/reveal | visualizar/exibir | Ação para acessar um segredo |
+| link | link | O URL que fornece acesso a um segredo |
+| encrypt/encrypted | criptografar/criptografado | Método de segurança |
+| secure | seguro | Estado de proteção |
 
-## Time-Related Terms
+## Elementos da Interface do Usuário
 
-| English | Portuguese (BR) | Context |
+| Inglês | Português (BR) | Contexto |
 |---------|----------------|----------|
-| expires in | expira em | Time until secret unavailable |
-| day/days | dia/dias | Time unit |
-| hour/hours | hora/horas | Time unit |
-| minute/minutes | minuto/minutos | Time unit |
-| second/seconds | segundo/segundos | Time unit |
+| Share a secret | Compartilhar mensagem confidencial | Ação principal |
+| Create Account | Criar conta | Registro |
+| Sign In | Entrar | Autenticação |
+| Dashboard | Painel | Página principal do usuário |
+| Settings | Configurações | Página de configuração |
+| Privacy Options | Opções de privacidade | Configurações de segredo |
+| Feedback | Feedback | Comentários do usuário |
 
-## Security Features
+## Termos de Status
 
-| English | Portuguese (BR) | Context |
+| Inglês | Português (BR) | Contexto |
 |---------|----------------|----------|
-| one-time access | acesso único | Core security feature |
-| passphrase protection | proteção por frase secreta | Additional security |
-| encrypted in transit | criptografado em trânsito | Data protection method |
-| encrypted at rest | criptografado em repouso | Storage protection |
+| received | recebido | Segredo foi visualizado |
+| burned | queimado | Segredo foi excluído antes da visualização |
+| expired | expirado | Segredo não está mais disponível devido ao tempo |
+| created | criado | Segredo foi gerado |
+| active | ativo | Segredo está disponível |
+| inactive | inativo | Segredo não está disponível |
 
-## Account-Related Terms
+## Termos Relacionados ao Tempo
 
-| English | Portuguese (BR) | Context |
+| Inglês | Português (BR) | Contexto |
 |---------|----------------|----------|
-| email | e-mail | User identifier |
-| password | senha | Authentication |
-| account | conta | User profile |
-| subscription | assinatura | Paid service |
-| customer | cliente | Paying user |
+| expires in | expira em | Tempo até o segredo não estar mais disponível |
+| day/days | dia/dias | Unidade de tempo |
+| hour/hours | hora/horas | Unidade de tempo |
+| minute/minutes | minuto/minutos | Unidade de tempo |
+| second/seconds | segundo/segundos | Unidade de tempo |
 
-## Domain-Related Terms
+## Recursos de Segurança
 
-| English | Portuguese (BR) | Context |
+| Inglês | Português (BR) | Contexto |
 |---------|----------------|----------|
-| custom domain | domínio personalizado | Premium feature |
-| domain verification | verificação de domínio | Setup process |
-| DNS record | registro DNS | Configuration |
-| CNAME record | registro CNAME | DNS configuration |
+| one-time access | acesso único | Recurso de segurança principal |
+| passphrase protection | proteção por frase secreta | Segurança adicional |
+| encrypted in transit | criptografado em trânsito | Método de proteção de dados |
+| encrypted at rest | criptografado em repouso | Proteção de armazenamento |
 
-## Error Messages
+## Termos Relacionados à Conta
 
-| English | Portuguese (BR) | Context |
+| Inglês | Português (BR) | Contexto |
 |---------|----------------|----------|
-| error | erro | Problem notification |
-| warning | aviso | Caution notification |
-| oops | ops | Friendly error introduction |
+| email | e-mail | Identificador do usuário |
+| password | senha | Autenticação |
+| account | conta | Perfil do usuário |
+| subscription | assinatura | Serviço pago |
+| customer | cliente | Usuário pagante |
 
-## Buttons and Actions
+## Termos Relacionados ao Domínio
 
-| English | Portuguese (BR) | Context | Notes |
-|---------|----------------|----------|-------|
-| submit | enviar | Submit action | Imperative voice |
-| cancel | cancelar | Negative action | Imperative voice |
-| confirm | confirmar | Positive action | Imperative voice |
-| copy to clipboard | copiar para área de transferência | Utility action | Brazilian term for clipboard |
-| continue | continuar | Navigation | Imperative voice |
-| back | voltar | Navigation | Imperative voice |
-
-## Marketing Terms
-
-| English | Portuguese (BR) | Context |
+| Inglês | Português (BR) | Contexto |
 |---------|----------------|----------|
-| secure links | links seguros | Product feature |
-| privacy-first design | design com privacidade em primeiro lugar | Design philosophy |
-| custom branding | marca personalizada | Premium feature |
+| custom domain | domínio personalizado | Recurso premium |
+| domain verification | verificação de domínio | Processo de configuração |
+| DNS record | registro DNS | Configuração |
+| CNAME record | registro CNAME | Configuração de DNS |
 
-## Technical Terms to Keep in English
+## Mensagens de Erro
 
-Maintain these terms in English for technical precision:
+| Inglês | Português (BR) | Contexto |
+|---------|----------------|----------|
+| error | erro | Notificação de problema |
+| warning | aviso | Notificação de cuidado |
+| oops | ops | Introdução de erro amigável |
+
+## Botões e Ações
+
+| Inglês | Português (BR) | Contexto |
+|---------|----------------|----------|
+| submit | enviar | Ação de submissão |
+| cancel | cancelar | Ação negativa |
+| confirm | confirmar | Ação positiva |
+| copy to clipboard | copiar para área de transferência | Ação utilitária |
+| continue | continuar | Navegação |
+| back | voltar | Navegação |
+
+## Termos de Marketing
+
+| Inglês | Português (BR) | Contexto |
+|---------|----------------|----------|
+| secure links | links seguros | Recurso do produto |
+| privacy-first design | design com privacidade em primeiro lugar | Filosofia de design |
+| custom branding | marca personalizada | Recurso premium |
+
+## Diretrizes de Tradução
+
+1. **Consistência**: Use a mesma tradução para um termo em toda a aplicação
+2. **Contexto**: Considere como o termo é usado na aplicação
+3. **Adaptação Cultural**: Adapte termos às convenções locais quando necessário
+4. **Precisão Técnica**: Certifique-se de que os termos de segurança sejam traduzidos com precisão
+5. **Tom**: Mantenha um tom profissional, mas direto
+
+## Considerações Especiais
+
+### Distinção Crucial: "Secret" vs "Segredo"
+
+O termo "secret" é central para a aplicação e deve ser traduzido consistentemente como **"mensagem confidencial"** ou **"conteúdo confidencial"** em vez de simplesmente "segredo", para evitar conotações de informações pessoais.
+
+✅ Correto:
+- "Criar mensagem confidencial"
+- "Visualizar conteúdo confidencial"
+- "3 novas mensagens confidenciais"
+
+❌ Incorreto:
+- "Criar segredo" (implica segredo pessoal)
+- "Visualizar segredo"
+- "3 novos segredos"
+
+### Distinção Password vs Passphrase
+
+- **Senha**: Apenas para login de conta
+- **Frase secreta**: Apenas para proteção de mensagens individuais
+
+✅ Correto:
+- "Digite sua senha para entrar na conta"
+- "Proteja com uma frase secreta"
+
+❌ Incorreto:
+- Usar "senha" para ambos os conceitos
+
+### Termos Técnicos a Manter em Inglês
+
+Manter estes termos em inglês para precisão técnica:
 - API
 - URL
 - DNS
@@ -147,111 +176,241 @@ Maintain these terms in English for technical precision:
 - YAML
 - hash
 
+### Termos Técnicos a Traduzir
+
+Termos técnicos relacionados à segurança devem priorizar precisão sobre localização:
+- encryption → criptografia (não "encriptação")
+- secrets → mensagens confidenciais
+- passphrase → frase secreta
+- custom domains → domínios personalizados
+- settings → configurações
+- dashboard → painel
+- clipboard → área de transferência
+
+### Elementos de Interface
+
+Elementos de interface devem seguir convenções da plataforma para português do Brasil:
+- Use "Entrar" em vez de "Login" ou "Logar"
+- Use "Sair" em vez de "Logout"
+- Use "Configurações" em vez de "Ajustes" ou "Opções"
+
 ---
 
-# Language-Specific Guidelines
+## Portuguese (Brazil) Translation Notes
 
-## Critical Terminology Distinctions
+# Portuguese (Brazil, pt-BR) Translation Notes
 
-### 1. Secret vs Segredo
+## Translation Goals
 
-**CRITICAL:** The term "secret" is central to the application and must be translated consistently.
+The primary goal was to ensure the translation aligns precisely with the guidelines, focusing on:
 
-Use **"mensagem confidencial"** (confidential message) or **"conteúdo confidencial"** (confidential content) instead of "segredo" to avoid implications of personal secrets.
+1. **Consistency and Clarity of Core Concepts:** Ensuring terms like `secret` and `passphrase` are translated consistently and accurately according to their specific meanings within the Onetime Secret platform
+2. **Brand Voice and Tone:** Refining the language to be professional, clear, and efficient, while remaining approachable
+3. **Grammar and Style:** Applying rules regarding active/imperative voice for actions (buttons) and passive/declarative voice for informational text (status messages or descriptions)
+4. **Natural Language:** Selecting translations that sound natural in Brazilian Portuguese, rather than overly literal translations from English
 
-✅ **CORRECT:**
-- "Criar mensagem confidencial"
-- "Visualizar conteúdo confidencial"
-- "3 novas mensagens confidenciais"
+## Important Translation Examples
 
-❌ **INCORRECT:**
-- "Criar segredo" (implies personal secret)
-- "Visualizar segredo"
-- "3 novos segredos"
+### 1. `secret` Translation
 
-**Examples from actual translations:**
+**Guideline:** Translate `secret` as the confidential information/message, not personal secrets.
+
+**Changes:** Keys like `create-a-secret`, `recent-secrets-count`, `hide-secret-message`, `view-secret-message`, `secret-content`, `secrets-details-counts-secret_count` were updated.
+
+**Reasoning:** The previous translations might have used "segredo," which could imply a personal secret. The updated translations consistently use variations like **"mensagem confidencial"** (confidential message) or **"conteúdo confidencial"** (confidential content) to more accurately reflect the nature of the shared item.
+
+**Examples:**
 - `create-a-secret`: "Criar um Segredo" → **"Criar Mensagem Confidencial"**
 - `secret-content`: "Conteúdo secreto" → **"Conteúdo confidencial"**
-- `recent-secrets-count`: Use **"mensagens confidenciais"**
 
-### 2. Password vs Passphrase
+### 2. `passphrase` Translation
 
-**CRITICAL:** Distinguish clearly between these two concepts.
+**Guideline:** Distinguish clearly between account `password` and secret `passphrase`. Use a term implying a phrase-based security measure for the latter.
 
-- **Senha**: ONLY for account login
-- **Frase secreta**: ONLY for protecting individual secrets
+**Change:** Keys like `enter-a-passphrase` and the new `Double check that passphrase` use **"frase secreta"**.
 
-✅ **CORRECT:**
-- "Digite sua senha para entrar na conta" (Enter your password to log in)
-- "Proteja com uma frase secreta" (Protect with a passphrase)
-- `enter-a-passphrase`: **"Insira uma frase secreta"**
+**Reasoning:** To avoid ambiguity with the account `password` (typically "senha"), the distinct term **"frase secreta"** (secret phrase) was consistently applied for protecting individual secrets, directly following the guideline.
 
-❌ **INCORRECT:**
-- Using "senha" for both concepts
-- Using ambiguous terms
+**Examples:**
+- `enter-a-passphrase`: Potentially ambiguous term → **"Insira uma frase secreta"**
+
+### 3. Clarity and Conciseness
+
+**Guideline:** Prioritize clarity, avoid redundancy.
+
+**Changes:**
+- `e-g-example`: Changed from "p. ex. exemplo" to **"ex."**
+  - Reasoning: "ex." is the standard and more concise abbreviation for "for example" in Portuguese, making the UI cleaner
+
+- `docs`: Changed from "Documentos" to **"Documentação"**
+  - Reasoning: "Documentação" is the more common and precise term for technical documentation in this context
+
+### 4. Voice Consistency (Imperative for Actions)
+
+**Guideline:** Use active, imperative voice for user actions (buttons, etc.).
+
+**Changes:** `hide-secret-message` and `view-secret-message` verbs were refined.
+
+**Reasoning:** Ensured the verbs used (**"Ocultar"**, **"Visualizar"**) are clear commands appropriate for button labels, alongside the updated term for `secret`.
+
+## Summary of Changes to the Portuguese (Brazil) Translation
+
+The Portuguese (Brazil) translation was updated to align more closely with the specific terminology and style guidelines. Key changes involved:
+
+### Standardizing `secret`
+Consistently translating `secret` as **"mensagem confidencial"** or **"conteúdo confidencial"** to emphasize the nature of the shared information rather than personal secrets.
+
+### Clarifying `passphrase`
+Using the distinct term **"frase secreta"** for secret protection to differentiate it clearly from the account `password` (**"senha"**).
+
+### Improving Clarity and Conciseness
+Refining phrasing for better natural language flow and using standard abbreviations (e.g., **"ex."** for "e.g.").
+
+### Ensuring Voice Consistency
+Applying imperative verbs for user actions (buttons) and declarative/passive voice for informational text where appropriate.
+
+These adjustments aim to enhance the accuracy, consistency, and clarity of the user interface for Brazilian Portuguese speakers using Onetime Secret.
+
+## Key Terminology
+
+| English | Portuguese (Brazil) | Notes |
+|---------|-------------------|-------|
+| secret (noun) | mensagem confidencial / conteúdo confidencial | Emphasizes the information being shared |
+| password | senha | Account login credential only |
+| passphrase | frase secreta | Secret protection mechanism |
+| burn | queimar | Permanent deletion metaphor |
+| view | visualizar | Imperative form for buttons |
+| hide | ocultar | Imperative form for buttons |
+| documentation | documentação | Technical documentation |
+| search | buscar | Brazilian preference (not "pesquisar") |
+| clipboard | área de transferência | Brazilian term |
+| custom domains | domínios personalizados | Standard translation |
+| dashboard | painel | Translated (not loanword) |
+| settings | configurações | Standard translation |
 
 ## Brazilian vs European Portuguese
 
-**CRITICAL:** This translation uses Brazilian Portuguese (pt-BR) conventions, NOT European Portuguese (pt-PT).
+**CRITICAL:** This translation uses Brazilian Portuguese conventions, not European Portuguese.
 
 ### Key Differences
 
-| Aspect | Brazilian (pt-BR) ✅ | European (pt-PT) ❌ |
+| Aspect | Brazilian (pt-br) ✅ | European (pt-pt) ❌ |
 |--------|---------------------|-------------------|
 | Search verb | buscar | pesquisar |
-| Informal you | você | tu/vós |
+| You (informal) | você | tu/vós |
 | Application | aplicativo/aplicação | aplicação |
-| Training | treinar | formar |
-| Clipboard | área de transferência | prancheta |
+| Train | treinar | formar |
 
 ### Gerund Usage
 
-Brazilian Portuguese uses the gerund (-ndo) more frequently than European Portuguese.
+Brazilian Portuguese uses the gerund (-ndo) more frequently than European Portuguese:
 
-✅ **Brazilian (CORRECT):**
-- "Mostrando resultados" (Showing results)
-- "Buscando" (Searching)
-- "Carregando" (Loading)
+- ✅ **Brazilian:** "Mostrando resultados" (Showing results)
+- ❌ **European:** "A mostrar resultados"
 
-❌ **European (INCORRECT for pt-BR):**
-- "A mostrar resultados"
-- "A buscar"
-- "A carregar"
+- ✅ **Brazilian:** "Buscando" (Searching)
+- ❌ **European:** "A buscar"
 
-**Use the Brazilian gerund style throughout all documentation and UI text.**
+Use the Brazilian gerund style throughout documentation.
 
 ## Formality and Tone
 
 ### Use "Você" (Informal You)
 
-Modern Brazilian Portuguese tech documentation uses **"você"** (informal you), not overly formal "o senhor/a senhora".
+Modern Brazilian Portuguese tech documentation uses **"você"** (informal you), not overly formal "o senhor/a senhora":
 
 **Examples:**
 - "Seu recurso central" (Your central resource)
 - "Confira nossa documentação" (Check our documentation)
 - "Se você tiver dúvidas" (If you have questions)
-- "Bem-vindo ao painel" (Welcome to your dashboard)
 
-This creates a professional but approachable tone, which is standard for tech documentation in Brazil.
+This creates a professional but approachable tone, standard for tech documentation in Brazil.
 
-### Voice Consistency
+## Link Localization
 
-**For Actions (Buttons, Commands):**
+**CRITICAL:** All internal links must use the `/pt-br/` prefix.
+
+### Correct Format
+
+```markdown
+✅ CORRECT: [documentação](/pt-br/docs-overview)
+✅ CORRECT: [primeiros passos](/pt-br/introduction)
+✅ CORRECT: [segurança](/pt-br/security/best-practices)
+
+❌ WRONG: [documentação](/pt/docs-overview)  # Wrong locale code
+❌ WRONG: [documentação](docs-overview)      # Missing locale prefix
+```
+
+**Note:** The locale code uses a hyphen: `pt-br` (not `pt_br` or `ptbr`)
+
+### External Links
+
+External links to onetimesecret.com should remain as-is:
+
+```markdown
+✅ CORRECT: [entrar em contato](https://onetimesecret.com/feedback)
+```
+
+## Technical Terms
+
+### Keep in English
+
+These terms should remain in English:
+- API
+- URL
+- DNS
+- SSL/TLS
+- HTTP/HTTPS
+- JSON
+- YAML
+
+### Translate to Portuguese
+
+Technical concepts should be translated for clarity:
+- secrets → mensagens confidenciais
+- passphrase → frase secreta
+- custom domains → domínios personalizados
+- settings → configurações
+- dashboard → painel
+- clipboard → área de transferência
+
+## Natural Language Flow
+
+### Write for Brazilian Portuguese Speakers
+
+Translations should sound natural in Brazilian Portuguese, not like literal English translations:
+
+**Good example:**
+```markdown
+"Bem-vindo ao Onetime Secret Docs, seu recurso central para
+maximizar o valor do nosso serviço de compartilhamento de
+mensagens confidenciais efêmeras e focado em privacidade."
+```
+
+This uses:
+- Natural Brazilian Portuguese sentence structure
+- Professional tone with "você/seu"
+- Appropriate vocabulary choices
+- Natural gerund usage (-ndo verbs)
+
+## Voice Consistency
+
+### For Actions (Buttons, Commands)
+
 Use active, imperative voice:
 - **"Ocultar"** (Hide)
 - **"Visualizar"** (View)
 - **"Enviar"** (Submit)
 - **"Cancelar"** (Cancel)
 
-**For Informational Text (Status, Descriptions):**
+### For Informational Text (Status, Descriptions)
+
 Use declarative/passive voice:
 - "A mensagem foi visualizada" (The message was viewed)
 - "Conteúdo criptografado em repouso" (Content encrypted at rest)
 - "Proteção por frase secreta aplicada" (Passphrase protection applied)
 
-## Clarity and Conciseness
-
-### Standard Abbreviations
+## Standard Abbreviations
 
 Use standard Brazilian Portuguese abbreviations:
 
@@ -261,163 +420,14 @@ Use standard Brazilian Portuguese abbreviations:
 | i.e. | isto é / ou seja | Spelled out for clarity |
 | etc. | etc. | Same as English |
 
-**Example:**
-- `e-g-example`: Changed from "p. ex. exemplo" to **"ex."**
-
-### Natural Language Flow
-
-Write for Brazilian Portuguese speakers, not literal English translations.
-
-✅ **GOOD (Natural Brazilian Portuguese):**
-```
-"Bem-vindo ao Onetime Secret Docs, seu recurso central para
-maximizar o valor do nosso serviço de compartilhamento de
-mensagens confidenciais efêmeras e focado em privacidade."
-```
-
-This uses:
-- Natural sentence structure
-- Professional tone with "você/seu"
-- Appropriate vocabulary
-- Natural gerund usage
-
-❌ **BAD (Literal translation):**
-```
-"Bem-vindo para Documentos de Onetime Secret, o recurso central
-de você para maximizando valor de nosso serviço..."
-```
-
-## Link Localization
-
-**CRITICAL:** All internal documentation links must use the `/pt-br/` prefix.
-
-### Correct Link Format
-
-```markdown
-✅ CORRECT: [documentação](/pt-br/docs-overview)
-✅ CORRECT: [primeiros passos](/pt-br/introduction)
-✅ CORRECT: [segurança](/pt-br/security/best-practices)
-
-❌ WRONG: [documentação](/pt/docs-overview)     # Wrong locale code
-❌ WRONG: [documentação](/pt-pt/docs-overview)  # Wrong variant
-❌ WRONG: [documentação](docs-overview)         # Missing locale prefix
-```
-
-**Note:** The locale code uses a hyphen: `pt-br` (NOT `pt_br` or `ptbr`)
-
-### External Links
-
-External links to onetimesecret.com should remain as-is:
-
-```markdown
-✅ CORRECT: [entrar em contato](https://onetimesecret.com/feedback)
-✅ CORRECT: [criar conta](https://onetimesecret.com/signup)
-```
-
 ---
 
-# Translation Examples and Best Practices
+## Document Information
 
-## Example Transformations
+This guide was generated from the following source files:
 
-### Creating Secrets
+- Universal resources: `/en/translations/universal/`
+- Glossary: `/pt-br/translations/glossary.md`
+- Language notes: `/pt-br/translations/language-notes.md`
 
-**Before:** "Criar um Segredo"
-**After:** **"Criar Mensagem Confidencial"**
-**Reasoning:** Emphasizes the nature of shared information, not personal secrets
-
-### Viewing Content
-
-**Before:** "Ver conteúdo secreto"
-**After:** **"Visualizar conteúdo confidencial"**
-**Reasoning:** Uses imperative verb appropriate for buttons + correct terminology
-
-### Passphrase Protection
-
-**Before:** "Digite uma senha" (ambiguous)
-**After:** **"Insira uma frase secreta"**
-**Reasoning:** Clearly distinguishes from account password
-
-### Documentation Reference
-
-**Before:** "Documentos"
-**After:** **"Documentação"**
-**Reasoning:** More precise term for technical documentation
-
-### Example Abbreviation
-
-**Before:** "p. ex. exemplo"
-**After:** **"ex."**
-**Reasoning:** Standard Brazilian abbreviation, more concise
-
-## Complete UI Example
-
-**Welcome Screen (Good Translation):**
-```
-Bem-vindo ao Onetime Secret
-
-Compartilhe mensagens confidenciais de forma segura com links de acesso único.
-
-[Criar Mensagem Confidencial]
-[Entrar na Conta]
-[Ver Documentação]
-
-Seus dados são criptografados em trânsito e em repouso.
-```
-
-This demonstrates:
-- Correct use of "mensagem confidencial"
-- Imperative verbs on buttons
-- "você" tone ("Seus dados")
-- Proper technical terms
-- Natural Brazilian Portuguese flow
-
----
-
-# Summary of Translation Goals
-
-The Portuguese (Brazilian) translation aims to:
-
-1. **Ensure Consistency:** Use standardized terminology for core concepts like `secret` → `mensagem confidencial` and `passphrase` → `frase secreta`
-
-2. **Maintain Clarity:** Distinguish clearly between similar concepts (password vs passphrase, secret vs personal secret)
-
-3. **Follow Brazilian Conventions:** Use Brazilian Portuguese vocabulary, gerund forms, and "você" tone
-
-4. **Apply Correct Voice:** Imperative for actions, declarative for information
-
-5. **Achieve Natural Flow:** Write translations that sound natural to Brazilian Portuguese speakers
-
-6. **Ensure Technical Accuracy:** Translate security and technical terms precisely
-
-7. **Maintain Professional Approachability:** Professional tone while remaining accessible and user-friendly
-
----
-
-# Quick Reference Checklist
-
-When translating Onetime Secret content to Brazilian Portuguese:
-
-- [ ] Use "mensagem confidencial" or "conteúdo confidencial" for "secret" (noun)
-- [ ] Use "frase secreta" for "passphrase"
-- [ ] Use "senha" ONLY for account passwords
-- [ ] Use "você" tone (informal you), not overly formal language
-- [ ] Use Brazilian Portuguese vocabulary (buscar, não pesquisar)
-- [ ] Use gerund forms (-ndo) for progressive actions
-- [ ] Use imperative voice for buttons and commands
-- [ ] Use declarative voice for status and informational text
-- [ ] Keep technical terms (API, DNS, SSL) in English
-- [ ] Use `/pt-br/` prefix for all internal documentation links
-- [ ] Use "ex." for "e.g."
-- [ ] Use "Entrar" for "Sign In" (not "Login")
-- [ ] Use "Sair" for "Sign Out" (not "Logout")
-- [ ] Use "Configurações" for "Settings"
-- [ ] Use "Documentação" for technical documentation
-- [ ] Write for natural Brazilian Portuguese flow, not literal translations
-
----
-
-**Document Version:** 1.0
-**Created:** 2025
-**For Use With:** Onetime Secret translation projects
-**Locale:** pt-BR (Portuguese - Brazil)
+Generated: 2026-01-20

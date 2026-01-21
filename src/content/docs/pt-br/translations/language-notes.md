@@ -197,3 +197,30 @@ This uses:
 - Professional tone with "você/seu"
 - Appropriate vocabulary choices
 - Natural gerund usage (-ndo verbs)
+
+## Voice Consistency
+
+### For Actions (Buttons, Commands)
+
+Use active, imperative voice:
+- **"Ocultar"** (Hide)
+- **"Visualizar"** (View)
+- **"Enviar"** (Submit)
+- **"Cancelar"** (Cancel)
+
+### For Informational Text (Status, Descriptions)
+
+Use declarative/passive voice:
+- "A mensagem foi visualizada" (The message was viewed)
+- "Conteúdo criptografado em repouso" (Content encrypted at rest)
+- "Proteção por frase secreta aplicada" (Passphrase protection applied)
+
+## Standard Abbreviations
+
+Use standard Brazilian Portuguese abbreviations:
+
+| English | Portuguese (BR) | Notes |
+|---------|----------------|-------|
+| e.g. | ex. | NOT "p. ex. exemplo" |
+| i.e. | isto é / ou seja | Spelled out for clarity |
+| etc. | etc. | Same as English |

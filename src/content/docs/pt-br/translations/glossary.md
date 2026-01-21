@@ -13,7 +13,8 @@ Este glossário fornece traduções padronizadas para termos-chave para garantir
 |---------|----------------|----------|
 | secret (substantivo) | mensagem confidencial / conteúdo confidencial | Conceito central da aplicação |
 | secret (adjetivo) | confidencial / secreto | |
-| passphrase | frase secreta | Método de autenticação para segredos |
+| passphrase | frase secreta | Método de autenticação para segredos. NÃO "senha" |
+| hide | ocultar | Ação para ocultar conteúdo |
 | password | senha | Credencial de login da conta |
 | burn | queimar | Ação para excluir um segredo antes de visualizar |
 | view/reveal | visualizar/exibir | Ação para acessar um segredo |
@@ -145,13 +146,28 @@ O termo "secret" é central para a aplicação e deve ser traduzido consistentem
 ❌ Incorreto:
 - Usar "senha" para ambos os conceitos
 
-### Termos Técnicos
+### Termos Técnicos a Manter em Inglês
+
+Manter estes termos em inglês para precisão técnica:
+- API
+- URL
+- DNS
+- SSL/TLS
+- HTTP/HTTPS
+- JSON
+- YAML
+- hash
+
+### Termos Técnicos a Traduzir
 
 Termos técnicos relacionados à segurança devem priorizar precisão sobre localização:
 - encryption → criptografia (não "encriptação")
-- hash → hash (manter em inglês)
-- API → API (manter em inglês)
-- DNS → DNS (manter em inglês)
+- secrets → mensagens confidenciais
+- passphrase → frase secreta
+- custom domains → domínios personalizados
+- settings → configurações
+- dashboard → painel
+- clipboard → área de transferência
 
 ### Elementos de Interface
 
