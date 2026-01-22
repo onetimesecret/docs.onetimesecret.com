@@ -224,3 +224,23 @@ Use standard Brazilian Portuguese abbreviations:
 | e.g. | ex. | NOT "p. ex. exemplo" |
 | i.e. | isto é / ou seja | Spelled out for clarity |
 | etc. | etc. | Same as English |
+
+---
+
+
+**Strong pt_BR indicators in the updates:**
+- `"isto"` → `"isso"` — "isto" is a pt_PT marker; Brazilians overwhelmingly use "isso"
+- `"eis o que"` → `"aqui está o que"` — "eis" is archaic/literary in Brazil, common in Portugal
+- `"Insira"` → `"Digite"` — "Digite" is the standard Brazilian verb for entering text; "Insira" is more formal/European
+- `"não mais disponível"` → `"não está mais disponível"` — the added copula verb matches Brazilian syntax patterns
+
+**Terminology alignment:**
+- Consistent shift to "mensagem confidencial" (confidential message) for the core "secret" concept, which parallels the Danish solution in the style guide where literal "secret" carries wrong connotations
+- "senha" → "frase secreta" reflects the password/passphrase distinction, though "senha" itself is correct pt_BR for password
+
+**Other naturalness improvements:**
+- Adding indefinite article "uma" in "Criar uma Mensagem Confidencial"
+- "Ver" instead of "Visualizar" (less bureaucratic)
+- Gender agreement fixes ("elas/las" for feminine "mensagens")
+
+The first set reads like it was either translated from pt_PT, translated by a non-native speaker using formal registers, or machine-translated without pt_BR tuning. The updates normalize toward contemporary Brazilian usage.
