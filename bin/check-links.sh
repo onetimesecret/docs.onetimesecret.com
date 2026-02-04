@@ -4,9 +4,10 @@
 # Checks for broken links in documentation using lychee
 #
 # Usage:
-#   ./bin/check-links.sh                 # Check internal links only
+#   ./bin/check-links.sh                 # Check internal links only (requires build)
 #   ./bin/check-links.sh --external      # Check all links (including external)
 #   ./bin/check-links.sh --verbose       # Show detailed output
+#   ./bin/check-links.sh --skip-build    # Skip build step (use existing dist/)
 #
 
 set -e
@@ -20,6 +21,7 @@ NC='\033[0m' # No Color
 # Default options
 CHECK_EXTERNAL=false
 VERBOSE=""
+SKIP_BUILD=false
 LYCHEE_ARGS=""
 
 # Parse arguments
@@ -33,12 +35,17 @@ while [[ $# -gt 0 ]]; do
       VERBOSE="--verbose"
       shift
       ;;
+    --skip-build|-s)
+      SKIP_BUILD=true
+      shift
+      ;;
     --help|-h)
       echo "Usage: $0 [OPTIONS]"
       echo ""
       echo "Options:"
       echo "  --external, -e    Check external links (slower)"
       echo "  --verbose, -v     Show detailed output"
+      echo "  --skip-build, -s  Skip build step (use existing dist/)"
       echo "  --help, -h        Show this help message"
       exit 0
       ;;
@@ -70,8 +77,24 @@ fi
 echo -e "${GREEN}🔍 Checking links in documentation...${NC}"
 echo ""
 
-# Build base arguments
-LYCHEE_ARGS="--config lychee.toml --no-progress $VERBOSE"
+# Build the site first to check internal links properly
+if [ "$SKIP_BUILD" = false ]; then
+    echo -e "${YELLOW}Building site to check internal links...${NC}"
+    pnpm run build > /dev/null 2>&1
+    echo -e "${GREEN}Build complete.${NC}"
+    echo ""
+fi
+
+# Verify dist directory exists
+if [ ! -d "dist" ]; then
+    echo -e "${RED}Error: dist/ directory not found. Run 'pnpm run build' first or remove --skip-build flag.${NC}"
+    exit 1
+fi
+
+# Build base arguments - check built HTML files in dist/
+# --root-dir resolves root-relative links (like /en/intro) against the dist folder
+DIST_DIR="$(pwd)/dist"
+LYCHEE_ARGS="--config lychee.toml --no-progress --root-dir $DIST_DIR $VERBOSE"
 
 # Add offline mode for internal-only checks
 if [ "$CHECK_EXTERNAL" = false ]; then
@@ -83,8 +106,8 @@ fi
 
 echo ""
 
-# Run lychee
-if lychee $LYCHEE_ARGS './src/**/*.md' './src/**/*.mdoc'; then
+# Run lychee on built HTML files
+if lychee $LYCHEE_ARGS 'dist/**/*.html'; then
     echo ""
     echo -e "${GREEN}✓ All links are valid!${NC}"
     exit 0
