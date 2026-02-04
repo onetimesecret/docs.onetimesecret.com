@@ -16,8 +16,8 @@ retry_wait_time = 2
 # Request timeout (in seconds)
 timeout = 20
 
-# User agent to use for requests
-user_agent = "Mozilla/5.0 (compatible; LinkChecker/1.0; +https://docs.onetimesecret.com)"
+# Be honest about what we are
+user_agent = "Mozilla/5.0 (compatible; lychee/0.14; +https://docs.onetimesecret.com)"
 
 # HTTP status codes to accept as valid
 accept = [200, 204, 206, 301, 302, 429]
@@ -28,8 +28,14 @@ accept = [200, 204, 206, 301, 302, 429]
 # Cache responses to avoid repeat checks (useful for development)
 cache = true
 
-# Methods to check links (supports HEAD, GET)
+# HEAD is more polite - only use GET as fallback
 method = "head"
+fallback_extensions = ["get"]  # If HEAD fails, try GET
+
+# URLs to exclude (sites with aggressive bot detection)
+# exclude = [
+#     "https://bsky\\.app/.*",
+# ]
 
 # Exclude all private IPs
 exclude_all_private = true
