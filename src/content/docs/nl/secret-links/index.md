@@ -34,7 +34,7 @@ Secret Links zijn perfect voor:
 
 ## Aan de slag
 
-Om je eerste Secret Link aan te maken, ga je naar [https://onetimesecret.com](onetimesecret.com) en volg je de eenvoudige stappen op onze homepage.
+Om je eerste Secret Link aan te maken, ga je naar [onetimesecret.com](https://onetimesecret.com) en volg je de eenvoudige stappen op onze homepage.
 
 Raadpleeg voor meer gedetailleerde informatie over het gebruik van Geheime koppelingen onze [Gebruikershandleiding](/nl/introduction/).
 

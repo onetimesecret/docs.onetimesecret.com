@@ -34,7 +34,7 @@ Secret Links are perfect for:
 
 ## Getting Started
 
-To create your first Secret Link, visit [https://onetimesecret.com](onetimesecret.com) and follow the simple steps on our homepage.
+To create your first Secret Link, visit [onetimesecret.com](https://onetimesecret.com) and follow the simple steps on our homepage.
 
 For more detailed information on using Secret Links, please refer to our [User Guide](/en/introduction/).
 

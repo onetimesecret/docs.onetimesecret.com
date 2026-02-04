@@ -34,7 +34,7 @@ description: 欢迎访问 Onetime Secret 的一次性链接指南，这是我们
 
 ## 开始
 
-要创建您的第一个一次性链接，请访问 [https://onetimesecret.com](onetimesecret.com)，并按照我们主页上的简单步骤操作。
+要创建您的第一个一次性链接，请访问 [onetimesecret.com](https://onetimesecret.com)，并按照我们主页上的简单步骤操作。
 
 有关使用一次性链接的更多详细信息，请参阅我们的[用户指南](/zh-cn/introduction/)。
 

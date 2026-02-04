@@ -116,7 +116,7 @@ Bij het instellen van je Onetime Secret account of het configureren van een aang
 
 1. Voor nieuwe accounts: Selecteer je voorkeursregio tijdens het aanmeldingsproces.
 2. Voor bestaande accounts: Neem contact op met ons ondersteuningsteam om de opties voor regiomigratie te bespreken.
-3. Voor aangepaste domeinen: Geef de door u gekozen regio op bij het configureren van uw DNS-instellingen (raadpleeg onze [Handleiding voor aangepaste domeininstellingen](custom-domains/setup-guide) voor gedetailleerde instructies).
+3. Voor aangepaste domeinen: Geef de door u gekozen regio op bij het configureren van uw DNS-instellingen (raadpleeg onze [Handleiding voor aangepaste domeininstellingen](/nl/custom-domains/setup-guide) voor gedetailleerde instructies).
 
 ## Veelgestelde vragen
 

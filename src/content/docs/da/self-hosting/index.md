@@ -57,10 +57,10 @@ Din selv-hostede instans inkluderer:
 
 ## Næste trin
 
-1. **[Kom i gang](./self-hosting/getting-started)** - Trinvis opsætningsvejledning
-2. **[Installation & implementering](./self-hosting/installation)** - Detaljerede implementeringsmuligheder
-3. **[Konfigurationsreference](./self-hosting/configuration)** - Komplet indstillingsdokumentation
+1. **[Kom i gang](./getting-started)** - Trinvis opsætningsvejledning
+2. **[Installation & implementering](./installation)** - Detaljerede implementeringsmuligheder
+3. **[Konfigurationsreference](./configuration)** - Komplet indstillingsdokumentation
 
 ---
 
-_Klar til at komme i gang? Følg vores [Kom i gang](./self-hosting/getting-started)-vejledning._
+_Klar til at komme i gang? Følg vores [Kom i gang](./getting-started)-vejledning._

@@ -130,6 +130,6 @@ This glossary provides standardized translations for key terms across languages 
 ## Related Resources
 
 - **[Translation Style Guide](/en/translations/guide)** - Comprehensive guidelines for translators
-- **[Quality Checklist](/en/translations/quality-checklist)** - Verify your translation meets all standards
+- **[Quality Checklist](/en/translations/universal/quality-checklist)** - Verify your translation meets all standards
 - **[Translation Overview](/en/translations/)** - Getting started with translations
 - **[Language-Specific Notes](/en/translations/language-notes)** - Special considerations by language

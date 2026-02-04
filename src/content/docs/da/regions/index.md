@@ -115,7 +115,7 @@ Når du opsætter din Onetime Secret-konto eller konfigurerer et brugerdefineret
 
 1. For nye konti: Vælg din foretrukne region under tilmeldingsprocessen.
 2. For eksisterende konti: Kontakt vores supportteam for at diskutere muligheder for regionsmigrering.
-3. For brugerdefinerede domæner: Angiv din valgte region, når du konfigurerer dine DNS-indstillinger (se vores [Brugerdefineret domæneopsætningsvejledning](custom-domains/setup-guide) for detaljerede instruktioner).
+3. For brugerdefinerede domæner: Angiv din valgte region, når du konfigurerer dine DNS-indstillinger (se vores [Brugerdefineret domæneopsætningsvejledning](/da/custom-domains/setup-guide) for detaljerede instruktioner).
 
 ## Ofte stillede spørgsmål
 

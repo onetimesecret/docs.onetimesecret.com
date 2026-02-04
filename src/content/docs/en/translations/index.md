@@ -48,7 +48,7 @@ For consistent, high-quality translations:
 
 - Follow our [Translation Style Guide](/en/translations/guide) for comprehensive guidelines on tone, voice, and formatting
 - Refer to our [Terminology Glossary](/en/translations/glossary) for standardized translations of key terms
-- Use the [Quality Checklist](/en/translations/quality-checklist) to verify your translation meets all requirements before submission
+- Use the [Quality Checklist](/en/translations/universal/quality-checklist) to verify your translation meets all requirements before submission
 
 ## Automatic Fallback
 

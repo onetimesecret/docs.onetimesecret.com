@@ -56,7 +56,7 @@ Se den engelske dokumentation for komplette konfigurationseksempler.
 
 Efter vellykket implementering:
 
-1. **[Konfigurer din instans](./configuration)** med brugerdefinerede indstillinger
+1. **[Konfigurer din instans](/da/self-hosting/configuration)** med brugerdefinerede indstillinger
 2. **Opsæt overvågning og alerting** til produktionsoperationer
 3. **Gennemgå sikkerhedsindstillinger** og aktiver yderligere beskyttelse
 4. **Konfigurer sikkerhedskopieringsautomation** og test gendannelsesprocedurer

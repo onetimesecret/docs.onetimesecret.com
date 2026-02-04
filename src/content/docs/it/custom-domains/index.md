@@ -67,4 +67,4 @@ Per istruzioni dettagliate sul marchio, consultare la nostra [Guida al marchio] 
 - Assicurarsi che il dominio scelto sia conforme alle linee guida del branding della propria organizzazione.
 - Considerare le normative sulla protezione dei dati quando si sceglie tra [regioni UE e USA](/it/regions).
 
-Per conoscere le migliori pratiche per l'utilizzo sicuro dei domini personalizzati, consultate la nostra guida [Security Best Practices](security-best-practices).
+Per conoscere le migliori pratiche per l'utilizzo sicuro dei domini personalizzati, consultate la nostra guida [Security Best Practices](/it/security-best-practices).

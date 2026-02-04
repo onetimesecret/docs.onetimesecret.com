@@ -34,7 +34,7 @@ Los enlaces secretos son perfectos para:
 
 ## Cómo empezar
 
-Para crear su primer Enlace Secreto, visite [https://onetimesecret.com](onetimesecret.com) y siga los sencillos pasos de nuestra página de inicio.
+Para crear su primer Enlace Secreto, visite [onetimesecret.com](https://onetimesecret.com) y siga los sencillos pasos de nuestra página de inicio.
 
 Para obtener información más detallada sobre el uso de los Enlaces Secretos, consulte nuestra [Guía del usuario](/es/introduction/).
 
