@@ -83,7 +83,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Check external links with Lychee
+      - name: Check external links with HEAD method
+        id: lychee-head
         uses: lycheeverse/lychee-action@v2
         with:
           args: >-
@@ -91,11 +92,32 @@ jobs:
             --max-concurrency 8
             --timeout 20
             --max-retries 3
+            --method head
             --exclude-path ./CHANGELOG.md
             --accept 200,204,206,301,302,429
             './src/**/*.md'
             './src/**/*.mdoc'
-          # Don't fail on external links (too flaky), just report
+          output: ./lychee-head.md
+          fail: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Retry failures with GET method
+        id: lychee-get
+        if: steps.lychee-head.outputs.exit_code != 0
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --no-progress
+            --max-concurrency 8
+            --timeout 20
+            --max-retries 3
+            --method get
+            --exclude-path ./CHANGELOG.md
+            --accept 200,204,206,301,302,429
+            './src/**/*.md'
+            './src/**/*.mdoc'
+          output: ./lychee-get.md
           fail: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -103,9 +125,15 @@ jobs:
       - name: Generate link check report
         if: always()
         run: |
-          if [ -f lychee-out.md ]; then
-            echo "## Link Check Report" >> $GITHUB_STEP_SUMMARY
-            cat lychee-out.md >> $GITHUB_STEP_SUMMARY
+          echo "## Link Check Report" >> $GITHUB_STEP_SUMMARY
+          if [ -f lychee-head.md ]; then
+            echo "### HEAD Method Results" >> $GITHUB_STEP_SUMMARY
+            cat lychee-head.md >> $GITHUB_STEP_SUMMARY
+          fi
+          if [ -f lychee-get.md ]; then
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "### GET Method Retry Results" >> $GITHUB_STEP_SUMMARY
+            cat lychee-get.md >> $GITHUB_STEP_SUMMARY
           fi
 
       - name: Create Issue if external links are broken
