@@ -39,8 +39,8 @@ importers:
         specifier: ^19.2.3
         version: 19.2.3(@types/react@19.2.7)
       accessible-astro-components:
-        specifier: ^5.0.3
-        version: 5.0.3
+        specifier: ^5.1.2
+        version: 5.1.2
       astro:
         specifier: ^5.17.1
         version: 5.17.1(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.2)
@@ -1187,8 +1187,8 @@ packages:
   '@vue/shared@3.5.27':
     resolution: {integrity: sha512-dXr/3CgqXsJkZ0n9F3I4elY8wM9jMJpP3pvRG52r6m0tu/MsAFIe6JpXVGeNMd/D9F4hQynWT8Rfuj0bdm9kFQ==}
 
-  accessible-astro-components@5.0.3:
-    resolution: {integrity: sha512-RxtlI5JT5we65XMPDEsDui71sUFpgEQEcKTyuLQnc5VYSum2C3S7TXCsLI3m/TEvOcxvR4BY+s/x7ixmIVHwCQ==}
+  accessible-astro-components@5.1.2:
+    resolution: {integrity: sha512-JjTBtXQAVwPuSA3yBW+bcdIlQ1SSiyv1zSy8lq1StznQZhczofMMiG+gBDHUI1TSY1YQq58UwMpGEXfyNpKpzA==}
 
   acorn-jsx@5.3.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
@@ -4227,7 +4227,7 @@ snapshots:
 
   '@vue/shared@3.5.27': {}
 
-  accessible-astro-components@5.0.3: {}
+  accessible-astro-components@5.1.2: {}
 
   acorn-jsx@5.3.2(acorn@8.15.0):
     dependencies:
