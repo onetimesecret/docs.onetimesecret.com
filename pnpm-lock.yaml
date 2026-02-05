@@ -45,8 +45,8 @@ importers:
         specifier: ^5.17.1
         version: 5.17.1(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.2)
       devalue:
-        specifier: '>=5.6.1'
-        version: 5.6.1
+        specifier: '>=5.6.2'
+        version: 5.6.2
       react:
         specifier: ^19.2.3
         version: 19.2.3
@@ -1462,9 +1462,6 @@ packages:
   deterministic-object-hash@2.0.2:
     resolution: {integrity: sha512-KxektNH63SrbfUyDiwXqRb1rLwKt33AmMv+5Nhsw1kqZ13SJBRTgZHtGbE+hH3a1mVW1cz+4pqSWVPAtLVXTzQ==}
     engines: {node: '>=18'}
-
-  devalue@5.6.1:
-    resolution: {integrity: sha512-jDwizj+IlEZBunHcOuuFVBnIMPAEHvTsJj0BcIp94xYguLRVBcXO853px/MyIJvbVzWdsGvrRweIUWJw8hBP7A==}
 
   devalue@5.6.2:
     resolution: {integrity: sha512-nPRkjWzzDQlsejL1WVifk5rvcFi/y1onBRxjaFMjZeR9mFpqu2gmAZ9xUB9/IEanEP/vBtGeGganC/GO1fmufg==}
@@ -4553,8 +4550,6 @@ snapshots:
   deterministic-object-hash@2.0.2:
     dependencies:
       base-64: 1.0.0
-
-  devalue@5.6.1: {}
 
   devalue@5.6.2: {}
 
