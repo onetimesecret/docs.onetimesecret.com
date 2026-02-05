@@ -9,6 +9,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "check:links": "./bin/check-links.sh",
+    "check:links:get": "./bin/check-links.sh --get --external",
     "check:links:external": "./bin/check-links.sh --external",
     "check:links:verbose": "./bin/check-links.sh --verbose",
     "fix:links": "./bin/fix-links.sh",

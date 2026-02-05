@@ -22,6 +22,7 @@ NC='\033[0m' # No Color
 CHECK_EXTERNAL=false
 VERBOSE=""
 SKIP_BUILD=false
+USE_GET=false
 LYCHEE_ARGS=""
 
 # Parse arguments
@@ -39,6 +40,10 @@ while [[ $# -gt 0 ]]; do
       SKIP_BUILD=true
       shift
       ;;
+    --get|-g)
+      USE_GET=true
+      shift
+      ;;
     --help|-h)
       echo "Usage: $0 [OPTIONS]"
       echo ""
@@ -46,6 +51,7 @@ while [[ $# -gt 0 ]]; do
       echo "  --external, -e    Check external links (slower)"
       echo "  --verbose, -v     Show detailed output"
       echo "  --skip-build, -s  Skip build step (use existing dist/)"
+      echo "  --get, -g         Use GET method instead of HEAD (more compatible)"
       echo "  --help, -h        Show this help message"
       exit 0
       ;;
@@ -102,6 +108,12 @@ if [ "$CHECK_EXTERNAL" = false ]; then
     LYCHEE_ARGS="$LYCHEE_ARGS --offline"
 else
     echo -e "${YELLOW}Checking all links (internal and external)${NC}"
+fi
+
+# Use GET method if requested (more compatible but slower)
+if [ "$USE_GET" = true ]; then
+    echo -e "${YELLOW}Using GET method (more compatible)${NC}"
+    LYCHEE_ARGS="$LYCHEE_ARGS --method get"
 fi
 
 echo ""

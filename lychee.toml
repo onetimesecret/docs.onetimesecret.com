@@ -28,8 +28,8 @@ accept = [200, 204, 206, 301, 302, 429]
 # Cache responses to avoid repeat checks (useful for development)
 cache = true
 
-# Use GET method (more reliable than HEAD for compatibility)
-method = "get"
+# HEAD is more polite and efficient (default)
+method = "head"
 
 # URLs to exclude (sites with aggressive bot detection)
 # exclude = [
