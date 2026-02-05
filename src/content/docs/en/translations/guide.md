@@ -290,11 +290,11 @@ These resources apply across all languages:
 ### Submission Guidelines
 
 - Use the [Translation PR Template](https://github.com/onetimesecret/docs.onetimesecret.com/blob/main/.github/PULL_REQUEST_TEMPLATE/translation.md) when submitting translations
-- Review the [Quality Checklist](/en/translations/quality-checklist) before creating your pull request
+- Review the [Quality Checklist](/en/translations/universal/quality-checklist) before creating your pull request
 - Tag language-specific reviewers if known
 
 ### Getting Help
 
 - Open a [Translation Request Issue](https://github.com/onetimesecret/docs.onetimesecret.com/issues/new?template=translation-request.md) for questions or coordination
 - Join [GitHub Discussions](https://github.com/onetimesecret/docs.onetimesecret.com/discussions) for translator community
-- [Contact the team](https://onetimesecret.com/contact) for translation support
+- [Contact the team](https://onetimesecret.com/feedback) for translation support

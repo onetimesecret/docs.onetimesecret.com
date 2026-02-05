@@ -24,7 +24,7 @@ Onetime Secret offre due regioni di data center: UE e USA. Quando si configura u
 - Per gli individui**: Potete scegliere in base alle vostre preferenze personali, come la vicinanza per un accesso potenzialmente più rapido o le preoccupazioni relative alla sovranità dei dati personali.
 - Per le aziende**: La scelta può dipendere dagli obblighi di localizzazione dei dati, come la conformità al GDPR, alle linee guida statali o provinciali. Assicuratevi di selezionare la regione che meglio si allinea ai vostri requisiti normativi.
 
-Nel fare questa scelta, tenete conto delle vostre esigenze e dei vostri requisiti specifici. Per informazioni più dettagliate sulle regioni dei nostri data center e su come scegliere quella giusta per le vostre esigenze, consultate la nostra guida [Data Center Regions](regions).
+Nel fare questa scelta, tenete conto delle vostre esigenze e dei vostri requisiti specifici. Per informazioni più dettagliate sulle regioni dei nostri data center e su come scegliere quella giusta per le vostre esigenze, consultate la nostra guida [Data Center Regions](/it/regions).
 
 ## Passo 1: accedere al cruscotto dei domini
 

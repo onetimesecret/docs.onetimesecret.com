@@ -16,7 +16,7 @@ Para instruções detalhadas de instalação e implantação, consulte a documen
 
 ### Docker (Recomendado)
 
-A maneira mais simples de implantar o Onetime Secret é usando Docker. Consulte o guia [Primeiros Passos](./getting-started) para instruções básicas do Docker.
+A maneira mais simples de implantar o Onetime Secret é usando Docker. Consulte o guia [Primeiros Passos](/pt-br/self-hosting/getting-started) para instruções básicas do Docker.
 
 ### Manual
 

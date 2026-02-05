@@ -175,3 +175,49 @@ Prioritize accuracy over casual localization. Use established Swedish technical 
 - `kryptera` (to encrypt)
 - `verifiering` (verification)
 - `autentisering` (authentication)
+
+## Swedish Grammar Essentials
+
+### Compound Words
+
+Swedish compound words are written as one word without spaces or hyphens:
+- lösenord (password) — NOT "lösen ord"
+- lösenfras (passphrase) — NOT "lösen fras"
+- användargränssnitt (user interface) — NOT "användare gränssnitt"
+- säkerhetskopia (backup) — NOT "säkerhets kopia"
+- användarnamn (username) — NOT "användar namn"
+
+This is essential for proper Swedish orthography. Incorrect spacing looks unprofessional and is grammatically wrong.
+
+### Two Genders
+
+Swedish has two grammatical genders:
+- Common gender (utrum): **en** — masculine and feminine merged
+- Neuter gender (neutrum): **ett**
+
+Important gender assignments:
+- en hemlighet (common — the secret)
+- ett lösenord (neuter — the password)
+- en länk (common — the link)
+- ett konto (neuter — the account)
+
+### Gender Agreement for Adjectives
+
+Adjectives must agree with noun gender:
+- Common gender definite: -en ending (den skapade hemligheten)
+- Neuter gender definite: -et ending (det skapade lösenordet)
+- Indefinite common: -ad ending (en skapad hemlighet)
+- Indefinite neuter: -at ending (ett skapat lösenord)
+
+### Swedish Letters å, ä, ö
+
+These are distinct letters in the Swedish alphabet, not variants of a and o:
+- Alphabetically they come after z
+- Never substitute with a, a, o or ae, oe
+- Essential for proper Swedish spelling
+
+### V2 Rule (Verb Second)
+
+In declarative sentences, the verb comes second. When the sentence doesn't start with the subject, word order changes:
+- Subject first: "Hemligheten skapas här" (The secret is created here)
+- Other element first: "Här skapas hemligheten" (Here is created the secret)

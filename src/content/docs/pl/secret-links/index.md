@@ -34,6 +34,6 @@ Linki do sekretów są idealne do:
 
 ## Pierwsze kroki
 
-Aby utworzyć swój pierwszy link do sekretu, odwiedź [https://onetimesecret.com](onetimesecret.com) i postępuj zgodnie z prostymi krokami na naszej stronie głównej.
+Aby utworzyć swój pierwszy link do sekretu, odwiedź [onetimesecret.com](https://onetimesecret.com) i postępuj zgodnie z prostymi krokami na naszej stronie głównej.
 
 Aby uzyskać bardziej szczegółowe informacje na temat korzystania z linków do sekretów, zapoznaj się z naszym [Przewodnikiem użytkownika](/pl/introduction/).

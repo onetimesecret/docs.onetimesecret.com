@@ -48,7 +48,7 @@ For consistent, high-quality translations:
 
 - Follow our [Translation Style Guide](/en/translations/guide) for comprehensive guidelines on tone, voice, and formatting
 - Refer to our [Terminology Glossary](/en/translations/glossary) for standardized translations of key terms
-- Use the [Quality Checklist](/en/translations/quality-checklist) to verify your translation meets all requirements before submission
+- Use the [Quality Checklist](/en/translations/universal/quality-checklist) to verify your translation meets all requirements before submission
 
 ## Automatic Fallback
 
@@ -56,4 +56,4 @@ When content is not available in your selected language, you'll automatically se
 
 ## Need Help?
 
-If you have questions about translations or need assistance contributing, please [contact our team](https://onetimesecret.com/contact) or open an issue on our [GitHub repository](https://github.com/onetimesecret/onetimesecret).
+If you have questions about translations or need assistance contributing, please [contact our team](https://onetimesecret.com/feedback) or open an issue on our [GitHub repository](https://github.com/onetimesecret/onetimesecret).

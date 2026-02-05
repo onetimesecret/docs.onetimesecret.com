@@ -53,4 +53,4 @@ Onetime Secretのドキュメントは現在、以下の言語で利用可能で
 
 ## ヘルプが必要ですか？
 
-翻訳について質問がある場合、または貢献についてサポートが必要な場合は、[チームに連絡する](https://onetimesecret.com/contact) か、[GitHub リポジトリ](https://github.com/onetimesecret/onetimesecret) に課題を登録してください。
+翻訳について質問がある場合、または貢献についてサポートが必要な場合は、[チームに連絡する](https://onetimesecret.com/feedback) か、[GitHub リポジトリ](https://github.com/onetimesecret/onetimesecret) に課題を登録してください。

@@ -53,4 +53,4 @@ Wanneer inhoud niet beschikbaar is in een geselecteerde taal, zie je automatisch
 
 ## Hulp nodig?
 
-Als je vragen hebt over vertalingen of hulp nodig hebt bij het bijdragen, neem dan [contact op met ons team](https://onetimesecret.com/contact) of open een probleem op onze [GitHub repository](https://github.com/onetimesecret/onetimesecret).
+Als je vragen hebt over vertalingen of hulp nodig hebt bij het bijdragen, neem dan [contact op met ons team](https://onetimesecret.com/feedback) of open een probleem op onze [GitHub repository](https://github.com/onetimesecret/onetimesecret).

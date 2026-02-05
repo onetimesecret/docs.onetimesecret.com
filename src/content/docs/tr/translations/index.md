@@ -63,7 +63,7 @@ Seçilen bir dilde içerik mevcut değilse, içeriğin henüz çevrilmediğini b
 
 ## Yardıma mı İhtiyacınız Var?
 
-Çeviriler hakkında sorularınız varsa veya katkıda bulunmak için desteğe ihtiyacınız varsa, lütfen [ekibimizle iletişime geçin](https://onetimesecret.com/contact) veya [GitHub Repository](https://github.com/onetimesecret/onetimesecret)'mizde bir sorun açın.
+Çeviriler hakkında sorularınız varsa veya katkıda bulunmak için desteğe ihtiyacınız varsa, lütfen [ekibimizle iletişime geçin](https://onetimesecret.com/feedback) veya [GitHub Repository](https://github.com/onetimesecret/onetimesecret)'mizde bir sorun açın.
 
 ## Çeviri Kaynakları
 
@@ -77,4 +77,4 @@ Seçilen bir dilde içerik mevcut değilse, içeriğin henüz çevrilmediğini b
 
 - [Mozilla L10N Stil Kılavuzları](https://github.com/mozilla-l10n/styleguides/) - Topluluk tarafından yönetilen çeviri kaynakları
 - [Onetime Secret GitHub](https://github.com/onetimesecret/onetimesecret) - Kaynak kod ve sorunlar
-- [Çeviri Topluluğu](https://onetimesecret.com/contact) - Diğer çevirmenlerle bağlantı kurun
+- [Çeviri Topluluğu](https://onetimesecret.com/feedback) - Diğer çevirmenlerle bağlantı kurun

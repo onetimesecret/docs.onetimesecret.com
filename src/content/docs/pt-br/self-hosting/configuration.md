@@ -10,7 +10,7 @@ sidebar:
 Para documentação completa de configuração, consulte:
 
 - [Arquivos de configuração de exemplo](https://github.com/onetimesecret/onetimesecret/tree/main/etc)
-- [Documentação de variáveis de ambiente](./environment-variables)
+- [Documentação de variáveis de ambiente](/pt-br/self-hosting/environment-variables)
 
 ## Configuração Básica
 
@@ -21,7 +21,7 @@ O Onetime Secret pode ser configurado através de:
 
 ## Variáveis Principais
 
-Consulte a página [Variáveis de Ambiente](./environment-variables) para uma lista completa de variáveis de configuração disponíveis.
+Consulte a página [Variáveis de Ambiente](/pt-br/self-hosting/environment-variables) para uma lista completa de variáveis de configuração disponíveis.
 
 ## Exemplos de Configuração
 

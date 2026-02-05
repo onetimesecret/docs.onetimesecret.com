@@ -32,6 +32,6 @@ Hemliga länkar är perfekta för:
 
 ## Komma igång
 
-För att skapa din första hemliga länk, besök [https://onetimesecret.com](onetimesecret.com) och följ de enkla stegen på vår startsida.
+För att skapa din första hemliga länk, besök [onetimesecret.com](https://onetimesecret.com) och följ de enkla stegen på vår startsida.
 
 För mer detaljerad information om att använda hemliga länkar, vänligen se vår [Användarguide](/sv/introduction/).

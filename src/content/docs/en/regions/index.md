@@ -115,7 +115,7 @@ When setting up your Onetime Secret account or configuring a custom domain, you'
 
 1. For new accounts: Select your preferred region during the sign-up process.
 2. For existing accounts: Contact our support team to discuss region migration options.
-3. For custom domains: Specify your chosen region when configuring your DNS settings (refer to our [Custom Domain Setup Guide](custom-domains/setup-guide) for detailed instructions).
+3. For custom domains: Specify your chosen region when configuring your DNS settings (refer to our [Custom Domain Setup Guide](/en/custom-domains/setup-guide) for detailed instructions).
 
 ## Frequently Asked Questions
 

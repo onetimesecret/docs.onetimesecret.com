@@ -51,4 +51,4 @@ Når indhold ikke er tilgængeligt på et valgt sprog, vil du automatisk se den 
 
 ## Brug for hjælp?
 
-Hvis du har spørgsmål om oversættelser eller brug for hjælp til at bidrage, bedes du [kontakte vores team](https://onetimesecret.com/contact) eller åbne et issue på vores [GitHub-repository](https://github.com/onetimesecret/onetimesecret).
+Hvis du har spørgsmål om oversættelser eller brug for hjælp til at bidrage, bedes du [kontakte vores team](https://onetimesecret.com/feedback) eller åbne et issue på vores [GitHub-repository](https://github.com/onetimesecret/onetimesecret).

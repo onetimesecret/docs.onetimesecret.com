@@ -115,7 +115,7 @@ Podczas konfigurowania konta Onetime Secret lub konfigurowania niestandardowej d
 
 1. Dla nowych kont: Wybierz preferowany region podczas procesu rejestracji.
 2. Dla istniejących kont: Skontaktuj się z naszym zespołem wsparcia, aby omówić opcje migracji regionu.
-3. Dla niestandardowych domen: Określ wybrany region podczas konfigurowania ustawień DNS (zapoznaj się z naszym [Przewodnikiem konfiguracji niestandardowej domeny](custom-domains/setup-guide) po szczegółowe instrukcje).
+3. Dla niestandardowych domen: Określ wybrany region podczas konfigurowania ustawień DNS (zapoznaj się z naszym [Przewodnikiem konfiguracji niestandardowej domeny](/pl/custom-domains/setup-guide) po szczegółowe instrukcje).
 
 ## Często zadawane pytania
 
