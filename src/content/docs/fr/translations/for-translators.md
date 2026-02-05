@@ -112,12 +112,12 @@ Ce glossaire fournit des traductions normalisées pour les termes clés dans les
 
 | anglais | allemand (AT) | français (FR) | français (CA) | Notes |
 |---------|-------------|-------------|-------------|-------|
-| soumettre | einreichen | soumettre | action de formulaire | annuler | abréger | annuler | annuler
-| annuler | abbrechen | annuler | annuler | action négative |
-| confirmer | bestätigen | confirmer | confirmer | action positive
-| copier dans le presse-papiers | copier dans le presse-papiers | copier dans le presse-papiers | copier dans le presse-papiers | action utilitaire |
-| continuer | weiter | continuer | continuer | Navigation |
-| retour | zurück | retour | retour | Navigation |
+| submit | einreichen | soumettre | soumettre | Form action |
+| cancel | abbrechen | annuler | annuler | Negative action |
+| confirm | bestätigen | confirmer | confirmer | Positive action |
+| copy to clipboard | in die Zwischenablage kopieren | copier dans le presse-papiers | copier dans le presse-papiers | Utility action |
+| continue | weiter | continuer | continuer | Navigation |
+| back | zurück | retour | retour | Navigation |
 
 ## Conditions de commercialisation
 

@@ -53,4 +53,4 @@ Ina kāore e wātea te ihirangi i te reo kua tīpakohia, ka kite aunoa koe i te 
 
 ## Me Āwhina?
 
-Mēnā he pātai āu mō ngā whakamāoritanga, me hiahia āwhina rānei mō te tāpae, tēnā whakapā mai ki [tō mātou rōpū](https://onetimesecret.com/contact), whakatuwherahia rānei he take ki tā mātou [pūtahi GitHub](https://github.com/onetimesecret/onetimesecret).
+Mēnā he pātai āu mō ngā whakamāoritanga, me hiahia āwhina rānei mō te tāpae, tēnā whakapā mai ki [tō mātou rōpū](https://onetimesecret.com/feedback), whakatuwherahia rānei he take ki tā mātou [pūtahi GitHub](https://github.com/onetimesecret/onetimesecret).

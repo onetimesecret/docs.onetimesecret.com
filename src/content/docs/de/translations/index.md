@@ -53,4 +53,4 @@ Wenn Inhalte in einer ausgewählten Sprache nicht verfügbar sind, sehen Sie aut
 
 ## Benötigen Sie Hilfe?
 
-Wenn Sie Fragen zu Übersetzungen haben oder Unterstützung beim Beitragen benötigen, [kontaktieren Sie bitte unser Team](https://onetimesecret.com/contact) oder eröffnen Sie ein Issue in unserem [GitHub Repository](https://github.com/onetimesecret/onetimesecret).
+Wenn Sie Fragen zu Übersetzungen haben oder Unterstützung beim Beitragen benötigen, [kontaktieren Sie bitte unser Team](https://onetimesecret.com/feedback) oder eröffnen Sie ein Issue in unserem [GitHub Repository](https://github.com/onetimesecret/onetimesecret).

@@ -94,7 +94,7 @@ fi
 # Build base arguments - check built HTML files in dist/
 # --root-dir resolves root-relative links (like /en/intro) against the dist folder
 DIST_DIR="$(pwd)/dist"
-LYCHEE_ARGS="--config lychee.toml --no-progress --root-dir $DIST_DIR $VERBOSE"
+LYCHEE_ARGS="--config lychee.toml --no-progress --root-dir \"$DIST_DIR\" $VERBOSE"
 
 # Add offline mode for internal-only checks
 if [ "$CHECK_EXTERNAL" = false ]; then

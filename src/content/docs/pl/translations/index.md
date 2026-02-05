@@ -52,4 +52,4 @@ Gdy treść nie jest dostępna w wybranym języku, automatycznie zobaczysz wersj
 
 ## Potrzebujesz pomocy?
 
-Jeśli masz pytania dotyczące tłumaczeń lub potrzebujesz pomocy w współtworzeniu, [skontaktuj się z naszym zespołem](https://onetimesecret.com/contact) lub otwórz zgłoszenie w naszym [repozytorium GitHub](https://github.com/onetimesecret/onetimesecret).
+Jeśli masz pytania dotyczące tłumaczeń lub potrzebujesz pomocy w współtworzeniu, [skontaktuj się z naszym zespołem](https://onetimesecret.com/feedback) lub otwórz zgłoszenie w naszym [repozytorium GitHub](https://github.com/onetimesecret/onetimesecret).

@@ -53,4 +53,4 @@ Onetime Secret 文档目前有以下语言版本：
 
 ## 需要帮助？
 
-如果您对翻译有疑问或需要帮助，请 [联系我们的团队](https://onetimesecret.com/contact) 或在我们的 [GitHub 仓库](https://github.com/onetimesecret/onetimesecret) 上打开一个问题。
+如果您对翻译有疑问或需要帮助，请 [联系我们的团队](https://onetimesecret.com/feedback) 或在我们的 [GitHub 仓库](https://github.com/onetimesecret/onetimesecret) 上打开一个问题。

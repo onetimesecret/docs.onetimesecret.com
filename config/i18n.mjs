@@ -39,24 +39,9 @@ export const i18nConfig = {
       lang: "en",
       dir: "ltr",
     },
-    ar: {
-      label: "العربية (ar)",
-      lang: "ar",
-      dir: "rtl",
-    },
     bg: {
       label: "Български (bg)",
       lang: "bg",
-      dir: "ltr",
-    },
-    "ca_ES": {
-      label: "Català (ca-ES)",
-      lang: "ca-ES",
-      dir: "ltr",
-    },
-    cs: {
-      label: "Čeština (cs)",
-      lang: "cs",
       dir: "ltr",
     },
     da: {
@@ -69,11 +54,6 @@ export const i18nConfig = {
       lang: "de",
       dir: "ltr",
     },
-    "el_GR": {
-      label: "Ελληνικά (el-GR)",
-      lang: "el-GR",
-      dir: "ltr",
-    },
     es: {
       label: "Español (es)",
       lang: "es",
@@ -82,16 +62,6 @@ export const i18nConfig = {
     fr: {
       label: "Français (fr)",
       lang: "fr",
-      dir: "ltr",
-    },
-    he: {
-      label: "עברית (he)",
-      lang: "he",
-      dir: "rtl",
-    },
-    hu: {
-      label: "Magyar (hu)",
-      lang: "hu",
       dir: "ltr",
     },
     it: {
@@ -129,24 +99,9 @@ export const i18nConfig = {
       lang: "pt-BR",
       dir: "ltr",
     },
-    ru: {
-      label: "Русский (ru)",
-      lang: "ru",
-      dir: "ltr",
-    },
-    "sl_SI": {
-      label: "Slovenščina (sl-SI)",
-      lang: "sl-SI",
-      dir: "ltr",
-    },
     sv: {
       label: "Svenska (sv)",
       lang: "sv",
-      dir: "ltr",
-    },
-    "sv_SE": {
-      label: "Svenska (sv-SE)",
-      lang: "sv-SE",
       dir: "ltr",
     },
     tr: {
@@ -157,11 +112,6 @@ export const i18nConfig = {
     uk: {
       label: "Українська (uk)",
       lang: "uk",
-      dir: "ltr",
-    },
-    vi: {
-      label: "Tiếng Việt (vi)",
-      lang: "vi",
       dir: "ltr",
     },
     "zh-cn": {

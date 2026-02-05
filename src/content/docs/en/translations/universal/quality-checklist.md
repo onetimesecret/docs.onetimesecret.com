@@ -183,7 +183,7 @@ If you're unsure about any aspect of translation:
 3. Look at existing translations in your language for examples
 4. Ask in GitHub issues or discussions
 5. Tag language-specific reviewers if known
-6. [Contact the team](https://onetimesecret.com/contact) for clarification
+6. [Contact the team](https://onetimesecret.com/feedback) for clarification
 
 ## Quality Grading (Internal Reference)
 

@@ -297,4 +297,4 @@ These resources apply across all languages:
 
 - Open a [Translation Request Issue](https://github.com/onetimesecret/docs.onetimesecret.com/issues/new?template=translation-request.md) for questions or coordination
 - Join [GitHub Discussions](https://github.com/onetimesecret/docs.onetimesecret.com/discussions) for translator community
-- [Contact the team](https://onetimesecret.com/contact) for translation support
+- [Contact the team](https://onetimesecret.com/feedback) for translation support

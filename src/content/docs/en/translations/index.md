@@ -56,4 +56,4 @@ When content is not available in your selected language, you'll automatically se
 
 ## Need Help?
 
-If you have questions about translations or need assistance contributing, please [contact our team](https://onetimesecret.com/contact) or open an issue on our [GitHub repository](https://github.com/onetimesecret/onetimesecret).
+If you have questions about translations or need assistance contributing, please [contact our team](https://onetimesecret.com/feedback) or open an issue on our [GitHub repository](https://github.com/onetimesecret/onetimesecret).
