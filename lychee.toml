@@ -28,9 +28,8 @@ accept = [200, 204, 206, 301, 302, 429]
 # Cache responses to avoid repeat checks (useful for development)
 cache = true
 
-# HEAD is more polite - only use GET as fallback
-method = "head"
-fallback_extensions = ["get"]  # If HEAD fails, try GET
+# Use GET method (more reliable than HEAD for compatibility)
+method = "get"
 
 # URLs to exclude (sites with aggressive bot detection)
 # exclude = [
