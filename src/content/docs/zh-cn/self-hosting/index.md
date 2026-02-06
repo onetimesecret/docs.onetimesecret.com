@@ -35,7 +35,7 @@ docker run -p 3000:3000 -d \
 ### 手动安装
 适用于需要自定义配置的生产环境。
 
-请参阅我们的[安装和部署](./self-hosting/installation)指南以获取详细步骤。
+请参阅我们的[安装和部署](./installation)指南以获取详细步骤。
 
 ## 包含的功能
 
@@ -58,10 +58,10 @@ docker run -p 3000:3000 -d \
 
 ## 后续步骤
 
-1. **[入门指南](./self-hosting/getting-started)** - 分步设置指南
-2. **[安装和部署](./self-hosting/installation)** - 详细的部署选项
-3. **[配置参考](./self-hosting/configuration)** - 完整的设置文档
+1. **[入门指南](./getting-started)** - 分步设置指南
+2. **[安装和部署](./installation)** - 详细的部署选项
+3. **[配置参考](./configuration)** - 完整的设置文档
 
 ---
 
-_准备好开始了吗？请遵循我们的[入门指南](./self-hosting/getting-started)。_
+_准备好开始了吗？请遵循我们的[入门指南](./getting-started)。_

@@ -70,7 +70,7 @@ description: ブランドのロゴ、カラー、スタイリングでドメイ�
 私たちがお手伝いします。
 
 お問い合わせ
-- 電子メール：support@onetimesecret.com
+- 電子メール：[support@onetimesecret.com](mailto:support@onetimesecret.com)
 - フィードバックフォーム: https://onetimesecret.com/feedback
 
 私たちのチームは、カスタムドメインの設定と使用について、可能な限り最高のサポートを提供することをお約束します。

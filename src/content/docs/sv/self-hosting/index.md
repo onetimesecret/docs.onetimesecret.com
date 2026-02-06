@@ -35,7 +35,7 @@ docker run -p 3000:3000 -d \
 ### Manuell installation
 För produktionsmiljöer som kräver anpassade konfigurationer.
 
-Se vår guide för [Installation & distribution](./self-hosting/installation) för detaljerade steg.
+Se vår guide för [Installation & distribution](./installation) för detaljerade steg.
 
 ## Vad ingår
 
@@ -57,10 +57,10 @@ Din självhostade instans inkluderar:
 
 ## Nästa steg
 
-1. **[Komma igång](./self-hosting/getting-started)** - Steg-för-steg-installationsguide
-2. **[Installation & distribution](./self-hosting/installation)** - Detaljerade distributionsalternativ
-3. **[Konfigurationsreferens](./self-hosting/configuration)** - Komplett inställningsdokumentation
+1. **[Komma igång](./getting-started)** - Steg-för-steg-installationsguide
+2. **[Installation & distribution](./installation)** - Detaljerade distributionsalternativ
+3. **[Konfigurationsreferens](./configuration)** - Komplett inställningsdokumentation
 
 ---
 
-_Redo att börja? Följ vår guide för [Komma igång](./self-hosting/getting-started)._
+_Redo att börja? Följ vår guide för [Komma igång](./getting-started)._

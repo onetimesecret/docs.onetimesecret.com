@@ -49,11 +49,11 @@ To connect your domain, you need to update your DNS settings. The process differ
 2. Create a CNAME record with the following details:
    - Host: Your chosen subdomain (e.g., secrets)
    - Points to / Value:
-     - For EU region: identity.eu.onetime.co
-     - For UK region: identity.ingress.onetime.co
-     - For US region: identity.us.onetime.co
      - For CA region: identity.ca.onetime.co
+     - For EU region: identity.eu.onetime.co
      - For NZ region: identity.nz.onetime.co
+     - For UK region: identity.ingress.onetime.co (anycast)
+     - For US region: identity.us.onetime.co
 3. Remove any existing A, AAAA, or CNAME records for the same subdomain
 
 ### For Apex Domains
@@ -98,7 +98,7 @@ Apex domains cannot use CNAME records due to DNS standards. Therefore, we must u
 Once setup is complete, you should see the following information:
 
 - Domain Status: Active with SSL
-- Target Address: The identity endpoint for your chosen region (e.g. identity.eu.onetime.co, identity.ingress.onetime.co, identity.us.onetime.co)
+- Target Address: The identity endpoint for your chosen region (e.g. identity.ca.onetime.co, identity.eu.onetime.co, identity.nz.onetime.co, identity.ingress.onetime.co, identity.us.onetime.co)
 - SSL Status: Active
 - SSL Renewal Date: (Will be displayed, typically about a year from setup)
 
