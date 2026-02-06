@@ -3,12 +3,9 @@ title: Aotearoa New Zealand (NZ)
 description: Onetime Secret's Aotearoa New Zealand data center region, located in Porirua.
 ---
 
-## Location
-
-Porirua, Aotearoa New Zealand
-
 ## Infrastructure
 
+- **Location**: Porirua, Aotearoa New Zealand
 - **URL**: [nz.onetimesecret.com](https://nz.onetimesecret.com)
 - **Hosting provider**: <a href="https://catalystcloud.nz" target="_blank" rel="noopener noreferrer nofollow">Catalyst Cloud</a>
 - **Custom domain CNAME**: `identity.nz.onetime.co`
@@ -17,9 +14,9 @@ Porirua, Aotearoa New Zealand
 
 To point a custom domain at this region, create a CNAME record:
 
-| Record type | Host                             | Value                    |
-| ----------- | -------------------------------- | ------------------------ |
-| CNAME       | your subdomain (e.g., `secrets`) | `identity.nz.onetime.co` |
+| Record type | Host                  | Value                    |
+| ----------- | --------------------- | ------------------------ |
+| CNAME       | `secrets.example.com` | `identity.nz.onetime.co` |
 
 See the [Custom Domain Setup Guide](/en/custom-domains/setup-guide) for full instructions.
 

@@ -3,23 +3,20 @@ title: United Kingdom (UK)
 description: Onetime Secret's United Kingdom data center region, located in London.
 ---
 
-## Location
-
-London, United Kingdom
-
 ## Infrastructure
 
+- **Location**: London, United Kingdom
 - **URL**: [uk.onetimesecret.com](https://uk.onetimesecret.com)
-- **Hosting provider**: <a href="https://upcloud.com" target="_blank" rel="noopener noreferrer nofollow">UpCloud</a>
+- **Hosting provider**: <a href="https://upcloud.com" target="_blank" rel="noopener noreferrer nofollow">UpCloud</a> (Helsinki, Finland)
 - **Custom domain CNAME**: `identity.ingress.onetime.co` (anycast)
 
 ## Custom Domain DNS
 
 To point a custom domain at this region, create a CNAME record:
 
-| Record type | Host                             | Value                         |
-| ----------- | -------------------------------- | ----------------------------- |
-| CNAME       | your subdomain (e.g., `secrets`) | `identity.ingress.onetime.co` |
+| Record type | Host                  | Value                         |
+| ----------- | --------------------- | ----------------------------- |
+| CNAME       | `secrets.example.com` | `identity.ingress.onetime.co` |
 
 Note that the UK region uses an anycast CNAME rather than a region-specific subdomain.
 

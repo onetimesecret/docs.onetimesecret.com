@@ -3,12 +3,9 @@ title: Canada (CA)
 description: Onetime Secret's Canadian data center region, located in Toronto.
 ---
 
-## Location
-
-Toronto, Canada
-
 ## Infrastructure
 
+- **Location**: Toronto, Canada
 - **URL**: [ca.onetimesecret.com](https://ca.onetimesecret.com)
 - **Hosting provider**: <a href="https://www.digitalocean.com" target="_blank" rel="noopener noreferrer nofollow">DigitalOcean</a>
 - **Custom domain CNAME**: `identity.ca.onetime.co`
@@ -21,9 +18,9 @@ We are a Canadian company and are actively looking for a suitable Canadian-owned
 
 To point a custom domain at this region, create a CNAME record:
 
-| Record type | Host                             | Value                    |
-| ----------- | -------------------------------- | ------------------------ |
-| CNAME       | your subdomain (e.g., `secrets`) | `identity.ca.onetime.co` |
+| Record type | Host                  | Value                    |
+| ----------- | --------------------- | ------------------------ |
+| CNAME       | `secrets.example.com` | `identity.ca.onetime.co` |
 
 See the [Custom Domain Setup Guide](/en/custom-domains/setup-guide) for full instructions.
 

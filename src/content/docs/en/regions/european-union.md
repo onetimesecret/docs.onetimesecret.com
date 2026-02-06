@@ -3,12 +3,9 @@ title: European Union (EU)
 description: Onetime Secret's European Union data center region, located in Nuremberg, Germany.
 ---
 
-## Location
-
-Nuremberg, Germany (European Union)
-
 ## Infrastructure
 
+- **Location**: Nuremberg, Germany
 - **URL**: [eu.onetimesecret.com](https://eu.onetimesecret.com)
 - **Hosting provider**: <a href="https://www.hetzner.com" target="_blank" rel="noopener noreferrer nofollow">Hetzner</a>
 - **Custom domain CNAME**: `identity.eu.onetime.co`
@@ -18,9 +15,9 @@ Nuremberg, Germany (European Union)
 
 To point a custom domain at this region, create a CNAME record:
 
-| Record type | Host                             | Value                    |
-| ----------- | -------------------------------- | ------------------------ |
-| CNAME       | your subdomain (e.g., `secrets`) | `identity.eu.onetime.co` |
+| Record type | Host                  | Value                    |
+| ----------- | --------------------- | ------------------------ |
+| CNAME       | `secrets.example.com` | `identity.eu.onetime.co` |
 
 See the [Custom Domain Setup Guide](/en/custom-domains/setup-guide) for full instructions.
 

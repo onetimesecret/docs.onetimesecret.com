@@ -3,12 +3,9 @@ title: United States (US)
 description: Onetime Secret's United States data center region, located in Hillsboro, Oregon.
 ---
 
-## Location
-
-Hillsboro, Oregon, United States
-
 ## Infrastructure
 
+- **Location**: Hillsboro, Oregon, United States
 - **URL**: [us.onetimesecret.com](https://us.onetimesecret.com)
 - **Hosting provider**: <a href="https://www.hetzner.com" target="_blank" rel="noopener noreferrer nofollow">Hetzner</a>
 - **Custom domain CNAME**: `identity.us.onetime.co`
@@ -17,9 +14,9 @@ Hillsboro, Oregon, United States
 
 To point a custom domain at this region, create a CNAME record:
 
-| Record type | Host                             | Value                    |
-| ----------- | -------------------------------- | ------------------------ |
-| CNAME       | your subdomain (e.g., `secrets`) | `identity.us.onetime.co` |
+| Record type | Host                  | Value                    |
+| ----------- | --------------------- | ------------------------ |
+| CNAME       | `secrets.example.com` | `identity.us.onetime.co` |
 
 See the [Custom Domain Setup Guide](/en/custom-domains/setup-guide) for full instructions.
 
