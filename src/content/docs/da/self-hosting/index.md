@@ -35,7 +35,7 @@ Få adgang på `http://localhost:3000`.
 ### Manuel installation
 Til produktionsmiljøer, der kræver brugerdefinerede konfigurationer.
 
-Se vores [Installation & implementering](./self-hosting/installation)-vejledning for detaljerede trin.
+Se vores [Installation & implementering](./installation)-vejledning for detaljerede trin.
 
 ## Hvad er inkluderet
 

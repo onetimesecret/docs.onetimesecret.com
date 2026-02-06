@@ -141,7 +141,7 @@ A: 現在のところ、当社の価格はすべての地域で統一されて�
 
 どの地域を選べばよいかわからない場合や、ご質問がある場合は、ご遠慮なくサポートチームまでお問い合わせください。お客様のニーズに合った最適な決断をお手伝いいたします。
 
-- Eメール：support@onetimesecret.com
-- フィードバックフォーム[https://onetimesecret.com/feedback](https://onetimesecret.com/feedback)
+- Eメール：[support@onetimesecret.com](mailto:support@onetimesecret.com)
+- フィードバックフォーム：[https://onetimesecret.com/feedback](https://onetimesecret.com/feedback)
 
 適切な地域を選択することで、最高のパフォーマンスを得ることができ、Onetime Secretの使用中に関連するデータ規制を遵守することができます。

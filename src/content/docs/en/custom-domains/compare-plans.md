@@ -17,7 +17,7 @@ description: Compare our feature-rich plans offering secure secret sharing with 
 | Setup Required | Yes (DNS configuration) | No | No |
 | Paid | Yes (part of Identity plan) | No | No |
 | SSL/TLS Security | ✅ | ✅ | ✅ |
-| Data Locality | ✅ (EU or US) | ✅ (EU or US) | ✅ (EU or US) |
+| Data Locality | ✅ (EU, UK, US, CA, NZ) | ✅ (EU, UK, US, CA, NZ) | ✅ (EU, UK, US, CA, NZ) |
 
 
 For more information on account upgrades and pricing, please visit our [Pricing Page](https://onetimesecret.com/pricing).

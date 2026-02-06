@@ -35,7 +35,7 @@ Access at `http://localhost:3000`.
 ### Manual Installation
 For production environments requiring custom configurations.
 
-See our [Installation & Deployment](./self-hosting/installation) guide for detailed steps.
+See our [Installation & Deployment](./installation) guide for detailed steps.
 
 ## What's Included
 
@@ -58,10 +58,10 @@ Your self-hosted instance includes:
 
 ## Next Steps
 
-1. **[Getting Started](./self-hosting/getting-started)** - Step-by-step setup guide
-2. **[Installation & Deployment](./self-hosting/installation)** - Detailed deployment options
-3. **[Configuration Reference](./self-hosting/configuration)** - Complete settings documentation
+1. **[Getting Started](./getting-started)** - Step-by-step setup guide
+2. **[Installation & Deployment](./installation)** - Detailed deployment options
+3. **[Configuration Reference](./configuration)** - Complete settings documentation
 
 ---
 
-_Ready to get started? Follow our [Getting Started](./self-hosting/getting-started) guide._
+_Ready to get started? Follow our [Getting Started](./getting-started) guide._

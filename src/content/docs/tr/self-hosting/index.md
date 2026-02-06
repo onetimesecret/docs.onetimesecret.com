@@ -35,7 +35,7 @@ docker run -p 3000:3000 -d \
 ### Manuel Kurulum
 Özel yapılandırmalar gerektiren üretim ortamları için.
 
-Ayrıntılı adımlar için [Kurulum ve Dağıtım](./self-hosting/installation) kılavuzumuza bakın.
+Ayrıntılı adımlar için [Kurulum ve Dağıtım](./installation) kılavuzumuza bakın.
 
 ## Neler Dahil
 
@@ -58,10 +58,10 @@ Kendi sunucunuzda barındırılan örneğiniz şunları içerir:
 
 ## Sonraki Adımlar
 
-1. **[Başlangıç](./self-hosting/getting-started)** - Adım adım kurulum kılavuzu
-2. **[Kurulum ve Dağıtım](./self-hosting/installation)** - Ayrıntılı dağıtım seçenekleri
-3. **[Yapılandırma Referansı](./self-hosting/configuration)** - Eksiksiz ayarlar dokümantasyonu
+1. **[Başlangıç](./getting-started)** - Adım adım kurulum kılavuzu
+2. **[Kurulum ve Dağıtım](./installation)** - Ayrıntılı dağıtım seçenekleri
+3. **[Yapılandırma Referansı](./configuration)** - Eksiksiz ayarlar dokümantasyonu
 
 ---
 
-_Başlamaya hazır mısınız? [Başlangıç](./self-hosting/getting-started) kılavuzumuzu izleyin._
+_Başlamaya hazır mısınız? [Başlangıç](./getting-started) kılavuzumuzu izleyin._

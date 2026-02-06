@@ -3,7 +3,7 @@ title: Data Center Regions
 description: Learn about Onetime Secret's data center regions and how to choose the right one for your needs.
 ---
 
-Onetime Secret offers four data center regions: European Union (EU), United States (US), Canada (CA), and Aotearoa New Zealand (NZ). This guide will help you understand the importance of region selection and how to choose the right one for your needs.
+Onetime Secret offers five data center regions: Canada (CA), European Union (EU), Aotearoa New Zealand (NZ), United Kingdom (UK), and United States (US). This guide will help you understand the importance of region selection and how to choose the right one for your needs.
 
 ## Why Region Selection Matters
 
@@ -15,37 +15,15 @@ Choosing the right data center region is crucial for several reasons:
 
 ## Available Regions
 
-### European Union (EU)
+| Region | Location | URL |
+|--------|----------|-----|
+| [Canada (CA)](/en/regions/canada) | Toronto | [ca.onetimesecret.com](https://ca.onetimesecret.com) |
+| [European Union (EU)](/en/regions/european-union) | Nuremberg | [eu.onetimesecret.com](https://eu.onetimesecret.com) |
+| [Aotearoa New Zealand (NZ)](/en/regions/new-zealand) | Porirua | [nz.onetimesecret.com](https://nz.onetimesecret.com) |
+| [United Kingdom (UK)](/en/regions/united-kingdom) | London | [uk.onetimesecret.com](https://uk.onetimesecret.com) |
+| [United States (US)](/en/regions/united-states) | Hillsboro, Oregon | [us.onetimesecret.com](https://us.onetimesecret.com) |
 
-- **Location**: The European Union (Nuremberg)
-- **URL**: [https://eu.onetimesecret.com](https://eu.onetimesecret.com)
-- **Key Features**:
-  - Compliant with GDPR and other EU data protection regulations
-  - Ideal for European users or those serving primarily European customers
-
-### Canada (CA)
-
-- **Location**: Canada (Toronto)
-- **URL**: [https://ca.onetimesecret.com](https://ca.onetimesecret.com)
-- **Key Features**:
-  - Compliant with PIPEDA and Canadian data protection laws
-  - Suitable for Canadian users or those primarily serving Canadian customers
-
-### Aotearoa New Zealand (NZ)
-
-- **Location**: Aotearoa New Zealand (Porirua)
-- **URL**: [https://nz.onetimesecret.com](https://nz.onetimesecret.com)
-- **Key Features**:
-  - Compliant with New Zealand Privacy Act and local regulations
-  - Suitable for New Zealand users or those serving Oceania customers
-
-### United States (US)
-
-- **Location**: The United States (Hillsboro, Oregon)
-- **URL**: [https://us.onetimesecret.com](https://us.onetimesecret.com)
-- **Key Features**:
-  - Compliant with US data protection laws
-  - Suitable for US-based users or those primarily serving US customers
+Each region page includes details on the local regulatory environment and when that region may be relevant to your use case.
 
 ## Share-Nothing Architecture
 
@@ -59,22 +37,16 @@ Onetime Secret employs a share-nothing architecture, ensuring complete data isol
 
 Consider the following factors when selecting your data center region:
 
-### For Anonymous Users
+### Without an Account
 
 - Requests to onetimesecret.com may be routed to any active data center.
-- The location of your secret is always clear from the generated link (e.g., `us.onetimesecret.com/secret/abcd1234`).
-- You can choose a specific data locality by navigating directly to any regional domain (e.g., [ca.onetimesecret.com](https://ca.onetimesecret.com/)).
+- You can choose a specific region by navigating directly to a regional domain (e.g., [ca.onetimesecret.com](https://ca.onetimesecret.com/)).
+- The generated link always identifies the region (e.g., `us.onetimesecret.com/secret/abcd1234`).
 
-### For Authenticated Users
+### With an Account
 
-- When creating a new account, you must choose a data center location.
-- You'll need to return to the same location to log in.
-- Existing accounts and secrets remain in their original data center.
-
-### For All Users
-
-- Secrets created without a subdomain jurisdiction (e.g., onetimesecret.com/secret/efgh5678) will continue to default to our EU data center.
-- All users, both paid and free, can choose their preferred data center when creating an account.
+- When you create an account, you choose a data center region. All plans — free and paid — have access to every region.
+- You log in at the same regional domain where you signed up (e.g., if you registered at `eu.onetimesecret.com`, that's where you log in).
 
 ### Additional Considerations
 
@@ -92,50 +64,30 @@ Consider the following factors when selecting your data center region:
    - Latency requirements for your application
    - Integration with other services or systems
 
-## Pricing and Plans
-
-Our commitment to data locality extends to our pricing model:
-
-- Charges are based on where you're paying from, not where your account is created.
-- Identity Plus plans include unlimited custom domains across all data centers under a single subscription.
-
 ## Future Plans
 
 We're continuously working to expand our data center options. Future plans include additional data center locations in:
 
+- Australia
 - Brazil
-- Spain
-- UK
+- Japan
+- Mexico
+- Norway
+- South Korea
 
 These expansions will provide even more options for data locality, improving performance and compliance capabilities for users in different regions.
 
-## Setting Up Your Region
-
-When setting up your Onetime Secret account or configuring a custom domain, you'll have the option to choose your preferred region. Here's how:
-
-1. For new accounts: Select your preferred region during the sign-up process.
-2. For existing accounts: Contact our support team to discuss region migration options.
-3. For custom domains: Specify your chosen region when configuring your DNS settings (refer to our [Custom Domain Setup Guide](/en/custom-domains/setup-guide) for detailed instructions).
 
 ## Frequently Asked Questions
 
 **Q: Can I change my region after setting up my account?**
-A: Yes, you can change your region by creating a new account with the same email address and navigating to the account screen. If you have an active subscription, your account will update automatically (you may need to refresh the page).
-
-Please note:
-- Existing data is not transferred between regions
-- Any secret links you've created will continue to function until they are viewed or expire
-- For links with custom domains, you'll need to:
-  1. Re-add the domain to your new region account
-  2. Update the associated DNS records
-  3. Use a unique subdomain when re-adding the domain to avoid conflicts with existing links
-  4. Later on, you can add your preferred domain (if necessary) so you can start sending new links with your preferred domain
+A: Yes. See [Changing Your Region](/en/regions/switching-regions) for step-by-step instructions covering free accounts, paid subscriptions, and custom domain migration.
 
 **Q: Does my choice of region affect the security of my secrets?**
 A: No, all regions offer the same high level of security. The choice primarily affects data residency and potential latency.
 
 **Q: Are there price differences between regions?**
-A: Currently, our pricing is consistent across all regions. Check our [pricing page](https://onetimesecret.com/pricing) for the most up-to-date information.
+A: Pricing is specific to each region — you can pay in your local currency and Stripe handles currency conversion automatically. Identity Plus plans include unlimited custom domains across all data centers under a single subscription. Check our [pricing page](https://onetimesecret.com/pricing) for the most up-to-date information.
 
 ## Need Help?
 
