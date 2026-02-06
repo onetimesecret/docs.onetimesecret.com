@@ -26,7 +26,11 @@ See the [Custom Domain Setup Guide](/en/custom-domains/setup-guide) for full ins
 
 The United Kingdom's data protection framework is governed by the **UK General Data Protection Regulation (UK GDPR)** and the **Data Protection Act 2018**. Post-Brexit, the UK maintains its own data protection regime that is closely aligned with the EU GDPR.
 
-Key aspects relevant to this region:
+### About the hosting provider
+
+This region is hosted by <a href="https://upcloud.com" target="_blank" rel="noopener noreferrer nofollow">UpCloud</a>, a European cloud infrastructure provider founded in 2011 and headquartered in Helsinki, Finland. As a sovereign European provider, all account-related data is stored exclusively in Finland under Finnish and EU data protection regulations. UpCloud operates data centers across multiple European locations including London, which hosts this region.
+
+### Key regulatory aspects
 
 - The Information Commissioner's Office (ICO) serves as the independent supervisory authority
 - The UK GDPR retains the core principles and rights of the EU GDPR, including data subject rights and lawful basis requirements

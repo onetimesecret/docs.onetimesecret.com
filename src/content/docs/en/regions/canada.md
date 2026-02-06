@@ -28,7 +28,11 @@ See the [Custom Domain Setup Guide](/en/custom-domains/setup-guide) for full ins
 
 Canada's federal privacy legislation, the **Personal Information Protection and Electronic Documents Act (PIPEDA)**, governs the collection, use, and disclosure of personal information in the course of commercial activity. Several provinces also maintain their own privacy legislation that may apply.
 
-Key aspects relevant to this region:
+### About the hosting provider
+
+This region is hosted by <a href="https://www.digitalocean.com" target="_blank" rel="noopener noreferrer nofollow">DigitalOcean</a>, a US-based cloud provider headquartered in Broomfield, Colorado, serving millions of developers globally. DigitalOcean complies with GDPR for European customers, supports data portability, and publishes transparency reports detailing government data requests. The company implements robust security controls and publishes audit reports.
+
+### Key regulatory aspects
 
 - PIPEDA requires meaningful consent for data collection and use
 - The Office of the Privacy Commissioner of Canada oversees compliance

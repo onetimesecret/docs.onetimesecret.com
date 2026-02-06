@@ -9,7 +9,6 @@ description: Onetime Secret's European Union data center region, located in Nure
 - **URL**: [eu.onetimesecret.com](https://eu.onetimesecret.com)
 - **Hosting provider**: <a href="https://www.hetzner.com" target="_blank" rel="noopener noreferrer nofollow">Hetzner</a>
 - **Custom domain CNAME**: `identity.eu.onetime.co`
-- **Default region**: Secrets created on `onetimesecret.com` without a subdomain are stored in this region
 
 ## Custom Domain DNS
 
@@ -25,7 +24,11 @@ See the [Custom Domain Setup Guide](/en/custom-domains/setup-guide) for full ins
 
 The EU region operates under the **General Data Protection Regulation (GDPR)**, one of the most comprehensive data protection frameworks in the world. Germany, as the hosting country, also applies the **Bundesdatenschutzgesetz (BDSG)** which supplements the GDPR.
 
-Key aspects relevant to this region:
+### About the hosting provider
+
+This region is hosted by <a href="https://www.hetzner.com" target="_blank" rel="noopener noreferrer nofollow">Hetzner</a>, a German hosting provider based in Gunzenhausen, operating under EU jurisdiction. Hetzner offers cost-effective cloud solutions with a focus on privacy and data protection under GDPR. Customer personal data is not exposed in public WHOIS records for private customers, and the company operates under strict German and EU data protection laws.
+
+### Key regulatory aspects
 
 - GDPR provides strong rights for data subjects including access, rectification, erasure, and portability
 - Data processing requires a lawful basis (e.g., consent, legitimate interest, contractual necessity)

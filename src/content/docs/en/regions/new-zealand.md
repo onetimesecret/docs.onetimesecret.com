@@ -24,7 +24,11 @@ See the [Custom Domain Setup Guide](/en/custom-domains/setup-guide) for full ins
 
 New Zealand's data protection framework is governed by the **Privacy Act 2020**, which replaced the Privacy Act 1993. The Act establishes thirteen information privacy principles that apply to agencies handling personal information.
 
-Key aspects relevant to this region:
+### About the hosting provider
+
+This region is hosted by <a href="https://catalystcloud.nz" target="_blank" rel="noopener noreferrer nofollow">Catalyst Cloud</a>, a New Zealand-based, owned, and operated cloud provider supporting Aotearoa's digital economy. All customer data is stored locally across three onshore data centers, and data remains in New Zealand, protected by local laws and privacy regulations. Catalyst Cloud is an approved provider for New Zealand Government agencies and holds ISO certifications for information security management.
+
+### Key regulatory aspects
 
 - The Privacy Act 2020 includes mandatory breach notification requirements
 - The Office of the Privacy Commissioner oversees compliance and investigates complaints

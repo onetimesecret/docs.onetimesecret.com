@@ -24,7 +24,11 @@ See the [Custom Domain Setup Guide](/en/custom-domains/setup-guide) for full ins
 
 The United States does not have a single comprehensive federal data protection law. Instead, data protection is addressed through a combination of federal and state laws that apply to specific sectors or types of data.
 
-Key aspects relevant to this region:
+### About the hosting provider
+
+This region is hosted by <a href="https://www.hetzner.com" target="_blank" rel="noopener noreferrer nofollow">Hetzner</a>, a German hosting provider based in Gunzenhausen, operating under EU jurisdiction. Even for its US data center locations, Hetzner maintains its privacy-conscious approach rooted in German and EU data protection standards. Customer personal data is not exposed in public WHOIS records for private customers.
+
+### Key regulatory aspects
 
 - Federal laws such as HIPAA (health data), GLBA (financial data), and COPPA (children's data) apply to specific sectors
 - State-level privacy laws are increasingly significant, notably the **California Consumer Privacy Act (CCPA)** and its amendment the **California Privacy Rights Act (CPRA)**

@@ -37,22 +37,16 @@ Onetime Secret employs a share-nothing architecture, ensuring complete data isol
 
 Consider the following factors when selecting your data center region:
 
-### For Anonymous Users
+### Without an Account
 
 - Requests to onetimesecret.com may be routed to any active data center.
-- The location of your secret is always clear from the generated link (e.g., `us.onetimesecret.com/secret/abcd1234`).
-- You can choose a specific data locality by navigating directly to any regional domain (e.g., [ca.onetimesecret.com](https://ca.onetimesecret.com/)).
+- You can choose a specific region by navigating directly to a regional domain (e.g., [ca.onetimesecret.com](https://ca.onetimesecret.com/)).
+- The generated link always identifies the region (e.g., `us.onetimesecret.com/secret/abcd1234`).
 
-### For Authenticated Users
+### With an Account
 
-- When creating a new account, you must choose a data center location.
-- You'll need to return to the same location to log in.
-- Existing accounts and secrets remain in their original data center.
-
-### For All Users
-
-- Secrets created without a subdomain jurisdiction (e.g., onetimesecret.com/secret/efgh5678) will continue to default to our EU data center.
-- All users, both paid and free, can choose their preferred data center when creating an account.
+- When you create an account, you choose a data center region. All plans — free and paid — have access to every region.
+- You log in at the same regional domain where you signed up (e.g., if you registered at `eu.onetimesecret.com`, that's where you log in).
 
 ### Additional Considerations
 
@@ -70,13 +64,6 @@ Consider the following factors when selecting your data center region:
    - Latency requirements for your application
    - Integration with other services or systems
 
-## Pricing and Plans
-
-Our commitment to data locality extends to our pricing model:
-
-- Pricing is specific to each region. You can pay in your local currency — Stripe handles currency conversion automatically.
-- Identity Plus plans include unlimited custom domains across all data centers under a single subscription.
-
 ## Future Plans
 
 We're continuously working to expand our data center options. Future plans include additional data center locations in:
@@ -90,13 +77,6 @@ We're continuously working to expand our data center options. Future plans inclu
 
 These expansions will provide even more options for data locality, improving performance and compliance capabilities for users in different regions.
 
-## Setting Up Your Region
-
-When setting up your Onetime Secret account or configuring a custom domain, you'll have the option to choose your preferred region. Here's how:
-
-1. For new accounts: Select your preferred region during the sign-up process.
-2. For existing accounts: Create a new account in your preferred region using the same email address. See [Changing Your Region](/en/regions/switching-regions) for the full process.
-3. For custom domains: Specify your chosen region when configuring your DNS settings (refer to our [Custom Domain Setup Guide](/en/custom-domains/setup-guide) for detailed instructions).
 
 ## Frequently Asked Questions
 
@@ -107,7 +87,7 @@ A: Yes. See [Changing Your Region](/en/regions/switching-regions) for step-by-st
 A: No, all regions offer the same high level of security. The choice primarily affects data residency and potential latency.
 
 **Q: Are there price differences between regions?**
-A: Currently, our pricing is consistent across all regions. Check our [pricing page](https://onetimesecret.com/pricing) for the most up-to-date information.
+A: Pricing is specific to each region — you can pay in your local currency and Stripe handles currency conversion automatically. Identity Plus plans include unlimited custom domains across all data centers under a single subscription. Check our [pricing page](https://onetimesecret.com/pricing) for the most up-to-date information.
 
 ## Need Help?
 
