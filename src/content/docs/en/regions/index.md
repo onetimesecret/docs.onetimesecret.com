@@ -3,7 +3,7 @@ title: Data Center Regions
 description: Learn about Onetime Secret's data center regions and how to choose the right one for your needs.
 ---
 
-Onetime Secret offers five data center regions: European Union (EU), United Kingdom (UK), United States (US), Canada (CA), and Aotearoa New Zealand (NZ). This guide will help you understand the importance of region selection and how to choose the right one for your needs.
+Onetime Secret offers five data center regions: Canada (CA), European Union (EU), Aotearoa New Zealand (NZ), United Kingdom (UK), and United States (US). This guide will help you understand the importance of region selection and how to choose the right one for your needs.
 
 ## Why Region Selection Matters
 
