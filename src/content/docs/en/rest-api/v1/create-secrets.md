@@ -7,7 +7,7 @@ _Updated 2025-04-02_
 
 :::note
 **Data Locality and Region Selection**
-- Choose between US ([`us.onetimesecret.com`](https://us.onetimesecret.com/)), EU ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)), Canada ([`ca.onetimesecret.com`](https://ca.onetimesecret.com/)), or New Zealand ([`nz.onetimesecret.com`](https://nz.onetimesecret.com/)) data centers
+- Choose between US ([`us.onetimesecret.com`](https://us.onetimesecret.com/)), EU ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)), UK ([`uk.onetimesecret.com`](https://uk.onetimesecret.com/)), Canada ([`ca.onetimesecret.com`](https://ca.onetimesecret.com/)), or New Zealand ([`nz.onetimesecret.com`](https://nz.onetimesecret.com/)) data centers
 - Consider factors like data sovereignty, latency, and compliance requirements
 - **NOTE:** Default `onetimesecret.com` remains operational and routes to an active data center, using a specific locality is recommended as this functionality may be deprecated in the future.
 :::

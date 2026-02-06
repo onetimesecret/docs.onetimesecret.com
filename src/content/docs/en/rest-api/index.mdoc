@@ -13,11 +13,11 @@ Test and explore the API endpoints with our interactive [Postman Collection](htt
 
 `https://REGION.onetimesecret.com/api`
 
-Where `REGION` is either `us` or `eu`.
+Where `REGION` is one of `us`, `eu`, `uk`, `ca`, or `nz`.
 
 <!-- ::callout{icon="i-heroicons-globe-alt"} -->
 **Data Locality and Region Selection**
-- Choose a region (e.g. US [`us.onetimesecret.com`](https://us.onetimesecret.com/)) or EU ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)). See [Regions](/en/regions) for all options.
+- Choose a region (e.g. US [`us.onetimesecret.com`](https://us.onetimesecret.com/), EU [`eu.onetimesecret.com`](https://eu.onetimesecret.com/), or UK [`uk.onetimesecret.com`](https://uk.onetimesecret.com/)). See [Regions](/en/regions) for all options.
 - Consider factors like data sovereignty, latency, and compliance requirements
 - **NOTE:** Default `onetimesecret.com` remains operational and routes to an active data center, using a specific locality is recommended as this functionality may be deprecated in the future.
 ::
@@ -45,7 +45,10 @@ We support two modes of API usage:
 Onetime Secret supports multiple geographic data centers. We follow a zero data sharing policy between regions, ensuring complete data isolation. Choose the right data center for your needs:
 
 - **EU Data Center:** [eu.onetimesecret.com](https://eu.onetimesecret.com/)
+- **UK Data Center:** [uk.onetimesecret.com](https://uk.onetimesecret.com/)
 - **US Data Center:** [us.onetimesecret.com](https://us.onetimesecret.com/)
+- **CA Data Center:** [ca.onetimesecret.com](https://ca.onetimesecret.com/)
+- **NZ Data Center:** [nz.onetimesecret.com](https://nz.onetimesecret.com/)
 
 ### Important Considerations:
 - You can choose a specific data locality by navigating directly to the desired domain
@@ -80,6 +83,11 @@ Current status of the system.
 
 ```bash
 $ curl -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/status
+{"status":"nominal"}
+```
+
+```bash
+$ curl -u 'USERNAME:APITOKEN' https://uk.onetimesecret.com/api/v1/status
 {"status":"nominal"}
 ```
 

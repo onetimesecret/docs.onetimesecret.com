@@ -31,7 +31,7 @@ Custom Domains allow you to use your own domain name for Onetime Secret links, i
 3. **Professional Appearance**: Demonstrate a higher level of sophistication and commitment to security.
 4. **Brand Customization**: Upload custom logos and set brand colors to match your visual identity.
 5. **Seamless Integration**: Create a cohesive experience that aligns with your existing digital presence.
-6. **Regional Flexibility**: Choose between EU and US data center regions to meet your data locality needs.
+6. **Regional Flexibility**: Choose from five data center regions (EU, UK, US, CA, NZ) to meet your data locality needs.
 
 ## Getting Started
 
@@ -40,11 +40,11 @@ To set up a Custom Domain:
 1. Log in to your Onetime Secret account.
 2. Navigate to Account Settings > Custom Domains.
 3. Enter the domain you wish to use and click "Add Domain".
-4. Select your preferred data center region (EU or US).
+4. Select your preferred data center region (EU, UK, US, CA, or NZ).
 5. Follow the step-by-step instructions provided for DNS configuration.
 6. Wait for the domain to be verified. If available, click the "Verify" button to expedite the process. You may need to refresh the page.
 
-For detailed instructions, including how to choose between EU and US regions, please refer to our [Custom Domain Setup Guide](/en/custom-domains/setup-guide).
+For detailed instructions, including how to choose the right region, please refer to our [Custom Domain Setup Guide](/en/custom-domains/setup-guide).
 
 ## Brand Customization
 
@@ -65,6 +65,6 @@ For detailed branding instructions, see our [Brand Guide](/en/custom-domains/bra
 - You are responsible for maintaining and renewing your domain registration.
 - Proper SSL/TLS configuration is crucial for security (handled automatically by Onetime Secret).
 - Ensure your chosen domain complies with your organization's branding guidelines.
-- Consider data protection regulations when choosing between [EU and US regions](/en/regions).
+- Consider data protection regulations when choosing your [data center region](/en/regions).
 
 To learn about best practices for using Custom Domains securely, check out our [Security Best Practices](/en/security-best-practices) guide.

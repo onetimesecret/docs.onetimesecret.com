@@ -1,6 +1,6 @@
 ---
 title: How do they work?
-description: Custom Domains allow you to host secret sharing under your own domain name, with DNS configuration in EU or US data centers and optional brand customization features.
+description: Custom Domains allow you to host secret sharing under your own domain name, with DNS configuration in any of our data center regions and optional brand customization features.
 ---
 
 ## Your Brand, Our Security
@@ -13,7 +13,7 @@ By leveraging Custom Domains, you're not just sharing secrets; you're reinforcin
 ## How Custom Domains Work
 
 1. You register a domain or use one you already own.
-2. Choose your preferred data center region (EU or US).
+2. Choose your preferred data center region (EU, UK, US, CA, or NZ).
 3. [Configure your domain's DNS settings](/en/custom-domains/setup-guide) to point to Onetime Secret's servers in your chosen region.
 4. Set up the custom domain in your Onetime Secret account settings.
 5. Once verified, your secret links will use your custom domain.

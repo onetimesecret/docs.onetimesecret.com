@@ -19,7 +19,7 @@ Before setting up your custom domain, it's important to understand the differenc
 
 ## Choose Your Region
 
-Onetime Secret offers two data center regions: EU and US. When setting up your custom domain, you'll need to choose which region you prefer for storing your data. This choice is important for several reasons:
+Onetime Secret offers multiple data center regions: EU, UK, US, CA, and NZ. When setting up your custom domain, you'll need to choose which region you prefer for storing your data. This choice is important for several reasons:
 
 - **For Individuals**: You can choose based on your personal preference, such as proximity for potentially faster access or personal data sovereignty concerns.
 - **For Businesses**: Your choice may depend on your data locality obligations, such as compliance with GDPR, state, or provincial guidelines. Ensure you select the region that best aligns with your regulatory requirements.
@@ -50,7 +50,10 @@ To connect your domain, you need to update your DNS settings. The process differ
    - Host: Your chosen subdomain (e.g., secrets)
    - Points to / Value:
      - For EU region: identity.eu.onetime.co
+     - For UK region: identity.uk.onetime.co
      - For US region: identity.us.onetime.co
+     - For CA region: identity.ca.onetime.co
+     - For NZ region: identity.nz.onetime.co
 3. Remove any existing A, AAAA, or CNAME records for the same subdomain
 
 ### For Apex Domains
@@ -61,6 +64,7 @@ To connect your domain, you need to update your DNS settings. The process differ
    - Points to / Value:
      - For EU region: 109.105.217.207
      - For US region: 66.51.126.41
+     - For other regions: Contact support for current A record IP addresses
 
 Important: Ensure there are no conflicting records for the domain you're using.
 
@@ -94,7 +98,7 @@ Apex domains cannot use CNAME records due to DNS standards. Therefore, we must u
 Once setup is complete, you should see the following information:
 
 - Domain Status: Active with SSL
-- Target Address: identity.eu.onetime.co or identity.us.onetime.co (depending on your chosen region)
+- Target Address: The identity endpoint for your chosen region (e.g. identity.eu.onetime.co, identity.uk.onetime.co, identity.us.onetime.co)
 - SSL Status: Active
 - SSL Renewal Date: (Will be displayed, typically about a year from setup)
 
