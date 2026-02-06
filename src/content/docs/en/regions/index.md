@@ -15,45 +15,15 @@ Choosing the right data center region is crucial for several reasons:
 
 ## Available Regions
 
-### Canada (CA)
+| Region | Location | URL |
+|--------|----------|-----|
+| [Canada (CA)](/en/regions/canada) | Toronto | [ca.onetimesecret.com](https://ca.onetimesecret.com) |
+| [European Union (EU)](/en/regions/european-union) | Nuremberg | [eu.onetimesecret.com](https://eu.onetimesecret.com) |
+| [Aotearoa New Zealand (NZ)](/en/regions/new-zealand) | Porirua | [nz.onetimesecret.com](https://nz.onetimesecret.com) |
+| [United Kingdom (UK)](/en/regions/united-kingdom) | London | [uk.onetimesecret.com](https://uk.onetimesecret.com) |
+| [United States (US)](/en/regions/united-states) | Hillsboro, Oregon | [us.onetimesecret.com](https://us.onetimesecret.com) |
 
-- **Location**: Canada (Toronto)
-- **URL**: [https://ca.onetimesecret.com](https://ca.onetimesecret.com)
-- **Key Features**:
-  - Compliant with PIPEDA and Canadian data protection laws
-  - Suitable for Canadian users or those primarily serving Canadian customers
-
-### European Union (EU)
-
-- **Location**: The European Union (Nuremberg)
-- **URL**: [https://eu.onetimesecret.com](https://eu.onetimesecret.com)
-- **Key Features**:
-  - Compliant with GDPR and other EU data protection regulations
-  - Ideal for European users or those serving primarily European customers
-
-### Aotearoa New Zealand (NZ)
-
-- **Location**: Aotearoa New Zealand (Porirua)
-- **URL**: [https://nz.onetimesecret.com](https://nz.onetimesecret.com)
-- **Key Features**:
-  - Compliant with New Zealand Privacy Act and local regulations
-  - Suitable for New Zealand users or those serving Oceania customers
-
-### United Kingdom (UK)
-
-- **Location**: United Kingdom (London)
-- **URL**: [https://uk.onetimesecret.com](https://uk.onetimesecret.com)
-- **Key Features**:
-  - Compliant with UK GDPR and the Data Protection Act 2018
-  - Ideal for UK users or those primarily serving UK customers
-
-### United States (US)
-
-- **Location**: The United States (Hillsboro, Oregon)
-- **URL**: [https://us.onetimesecret.com](https://us.onetimesecret.com)
-- **Key Features**:
-  - Compliant with US data protection laws
-  - Suitable for US-based users or those primarily serving US customers
+Each region page includes details on the local regulatory environment and when that region may be relevant to your use case.
 
 ## Share-Nothing Architecture
 
@@ -104,7 +74,7 @@ Consider the following factors when selecting your data center region:
 
 Our commitment to data locality extends to our pricing model:
 
-- Charges are based on where you're paying from, not where your account is created.
+- Pricing is specific to each region. You can pay in your local currency — Stripe handles currency conversion automatically.
 - Identity Plus plans include unlimited custom domains across all data centers under a single subscription.
 
 ## Future Plans

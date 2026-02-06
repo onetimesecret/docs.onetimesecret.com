@@ -137,7 +137,14 @@ export const sidebar = [
     createLink("useCases", "custom-domains/use-cases"),
   ]),
 
-  createGroup("regions", [createLink("overview", "regions")]),
+  createGroup("regions", [
+    createLink("overview", "regions"),
+    createLink("regionCA", "regions/canada"),
+    createLink("regionEU", "regions/european-union"),
+    createLink("regionNZ", "regions/new-zealand"),
+    createLink("regionUK", "regions/united-kingdom"),
+    createLink("regionUS", "regions/united-states"),
+  ]),
 
   createGroup("selfHosting", [
     createLink("overview", "self-hosting"),
