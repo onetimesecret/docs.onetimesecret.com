@@ -129,7 +129,7 @@ export const sidebar = [
     createLink("howItWorks", "custom-domains/how-it-works"),
     createLink("setupGuide", "custom-domains/setup-guide"),
     createLink("brandGuide", "custom-domains/brand-guide", {
-      text: "Helpful!",
+      text: "★",
       variant: "tip",
       class: "small",
     }),
