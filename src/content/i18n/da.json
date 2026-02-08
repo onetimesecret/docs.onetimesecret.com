@@ -8,6 +8,7 @@
       "home": "Tilbage til onetimesecret.com"
     }
   },
+  "heading.anchorLabel": "Afsnit med titlen “{{title}}”",
   "sidebar": {
     "home": "Hjem",
     "introduction": "Introduktion",

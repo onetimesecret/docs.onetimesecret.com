@@ -8,6 +8,7 @@
       "home": "返回 onetimesecret.com"
     }
   },
+  "heading.anchorLabel": "“{{title}}”部分",
   "sidebar": {
     "home": "首页",
     "introduction": "介绍",

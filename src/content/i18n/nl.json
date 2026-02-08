@@ -8,6 +8,7 @@
       "home": "Back to onetimesecret.com"
     }
   },
+  "heading.anchorLabel": "Sectie getiteld “{{title}}”",
   "sidebar": {
     "home": "Home",
     "introduction": "Introductie",

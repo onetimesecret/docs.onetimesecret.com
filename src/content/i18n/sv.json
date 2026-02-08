@@ -8,6 +8,7 @@
       "home": "Tillbaka till onetimesecret.com"
     }
   },
+  "heading.anchorLabel": "Avsnitt med titeln “{{title}}”",
   "sidebar": {
     "home": "Hem",
     "introduction": "Introduktion",

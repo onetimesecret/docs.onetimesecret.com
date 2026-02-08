@@ -81,11 +81,9 @@
   "aside.danger": "Danger",
   "fileTree.directory": "Directory",
   "builtWithStarlight.label": "Built with Starlight",
-
   "expressiveCode.copyButtonCopied": "Copied!",
   "expressiveCode.copyButtonTooltip": "Copy to clipboard",
   "expressiveCode.terminalWindowFallbackTitle": "Terminal window",
-
   "pagefind.clear_search": "Clear",
   "pagefind.load_more": "Load more results",
   "pagefind.search_label": "Search this site",
