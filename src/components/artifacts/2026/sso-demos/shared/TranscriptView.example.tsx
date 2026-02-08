@@ -7,6 +7,7 @@
 
 import React from "react";
 import { TranscriptView } from "./TranscriptView.tsx";
+import { DEMOS_INDEX_PATH } from "./index.ts";
 import type { Step, DemoConfig } from "./types.ts";
 
 // Example configuration (would typically come from your demo's config.ts)
@@ -15,15 +16,15 @@ const exampleConfig: DemoConfig = {
   subtitle: "Caddy + Logto (OIDC) + Entra (SAML)",
   version: "1.0.0",
   backLink: {
-    href: "/artifacts/2026/sso-demos",
+    href: DEMOS_INDEX_PATH,
     label: "Back to SSO Demos",
   },
   actorConfig: [
-    { key: "browser", label: "Browser", activeColor: "bg-rose-500" },
-    { key: "caddy", label: "Caddy", activeColor: "bg-purple-500" },
-    { key: "logto", label: "Logto", activeColor: "bg-emerald-500" },
-    { key: "entra", label: "Entra", activeColor: "bg-amber-500" },
-    { key: "ots", label: "OTS", activeColor: "bg-cyan-500" },
+    { key: "browser", label: "Browser", activeColor: "bg-actor-browser" },
+    { key: "caddy", label: "Caddy", activeColor: "bg-actor-caddy" },
+    { key: "logto", label: "Logto", activeColor: "bg-actor-logto" },
+    { key: "entra", label: "Entra", activeColor: "bg-actor-entra" },
+    { key: "ots", label: "OTS", activeColor: "bg-actor-ots" },
   ],
   protocolStack: {
     components: [],

@@ -11,8 +11,6 @@
  * apply to all components using these semantic class names.
  */
 
-@import "tailwindcss";
-
 @theme {
   /* HTTP Message Type Colors
    * These generate utilities: bg-http-*, border-http-*, text-http-*, ring-http-*

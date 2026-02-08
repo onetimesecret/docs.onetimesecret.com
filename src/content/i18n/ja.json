@@ -8,6 +8,7 @@
       "home": "onetimesecret.comに戻る"
     }
   },
+  "heading.anchorLabel": "「{{title}}」セクション",
   "sidebar": {
     "home": "ホーム",
     "introduction": "はじめに",

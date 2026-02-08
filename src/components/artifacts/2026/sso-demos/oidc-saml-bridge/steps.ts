@@ -25,7 +25,7 @@ const STEPS: Step[] = [
       {
         type: "internal",
         from: "Caddy",
-        to: "OAuth2Proxy",
+        to: "oauth2-proxy",
         label: "forward_auth subrequest",
         note: "Caddy asks auth layer: is this user authenticated?",
       },
@@ -115,7 +115,7 @@ const STEPS: Step[] = [
     urlBar:
       "https://logto.example.com/sign-in?first_screen=signIn&interaction_id=abc123",
     description:
-      "User identifies themselves or clicks the SSO button. Logto initiates SAML request to Entra.",
+      "User identifies themselves or clicks the SSO button. Logto initiates SAML request to Entra ID.",
     http: [
       {
         type: "request",
@@ -150,11 +150,11 @@ const STEPS: Step[] = [
   },
   {
     id: 4,
-    title: "Browser redirects to Entra (IdP)",
+    title: "Browser redirects to Entra ID (IdP)",
     userSees: "entra-login",
     urlBar: "https://login.microsoftonline.com/contoso.com/saml2",
     description:
-      "Browser follows redirect to customer's Entra. The SAMLRequest is a base64-encoded (and optionally signed) XML document. RelayState preserves application state.",
+      "Browser follows redirect to customer's Entra ID. The SAMLRequest is a base64-encoded (and optionally signed) XML document. RelayState preserves application state.",
     securityNote:
       "SAML AuthnRequest signing is recommended for high-security environments to prevent tampering. Always validate the decoded structure. The RelayState parameter preserves application state across the SAML roundtrip.",
     http: [
@@ -189,7 +189,7 @@ const STEPS: Step[] = [
           "Content-Type: text/html",
           "Set-Cookie: ESTSAUTH=...; HttpOnly; Secure",
         ],
-        note: "Entra login page (or auto-proceeds if session exists)",
+        note: "Entra ID login page (or auto-proceeds if session exists)",
       },
     ],
     actors: {
@@ -202,9 +202,9 @@ const STEPS: Step[] = [
   },
   {
     id: 5,
-    title: "User authenticates with Entra",
+    title: "User authenticates with Entra ID",
     userSees: "entra-login",
-    urlBar: "https://login.microsoftonline.com/contoso.com/oauth2/authorize",
+    urlBar: "https://login.microsoftonline.com/contoso.com/saml2",
     description:
       "User enters credentials (or is auto-logged-in via Windows SSO). MFA may be required.",
     http: [
@@ -237,11 +237,11 @@ const STEPS: Step[] = [
   },
   {
     id: 6,
-    title: "Entra issues SAML Response",
+    title: "Entra ID issues SAML Response",
     userSees: "entra-autosubmit",
     urlBar: "https://login.microsoftonline.com/contoso.com/saml2",
     description:
-      "After successful auth, Entra returns a signed SAML assertion via auto-submitting form.",
+      "After successful auth, Entra ID returns a signed SAML assertion via auto-submitting form.",
     http: [
       {
         type: "response",
@@ -276,7 +276,7 @@ const STEPS: Step[] = [
     description:
       "Browser auto-submits the SAML Response to Logto's assertion consumer service.",
     securityNote:
-      "The SAML assertion contains the signed proof of identity from Entra. Production must validate signature, timestamps, InResponseTo field, and prevent replay attacks.",
+      "The SAML assertion contains the signed proof of identity from Entra ID. Production must validate signature, timestamps, InResponseTo field, and prevent replay attacks.",
     http: [
       {
         type: "request",
@@ -342,7 +342,7 @@ const STEPS: Step[] = [
         from: "Logto",
         to: "Logto",
         label: "Validate SAML assertion",
-        note: "Verify signature against Entra's certificate, check timestamps, audience, etc.",
+        note: "Verify signature against Entra ID's certificate, check timestamps, audience, etc.",
       },
       {
         type: "response",
@@ -366,7 +366,7 @@ const STEPS: Step[] = [
   },
   {
     id: 8,
-    title: "Logto completes OIDC flow",
+    title: "Logto issues authorization code",
     userSees: "loading",
     urlBar:
       "https://secrets.example.com/oauth2/callback?code=authz_code_xyz&state=random-csrf-token",
@@ -421,7 +421,7 @@ const STEPS: Step[] = [
       },
       {
         type: "server",
-        from: "Caddy (OAuth2Proxy)",
+        from: "Caddy (oauth2-proxy)",
         to: "Logto",
         label: "Server-to-server token exchange",
         method: "POST",
@@ -436,7 +436,7 @@ const STEPS: Step[] = [
       {
         type: "server-response",
         from: "Logto",
-        to: "Caddy (OAuth2Proxy)",
+        to: "Caddy (oauth2-proxy)",
         status: "200 OK",
         body: `{
   "access_token": "at_xyz...",
@@ -494,7 +494,7 @@ const STEPS: Step[] = [
     userSees: "dashboard",
     urlBar: "https://secrets.example.com/dashboard",
     description:
-      "Finally! The user reaches their dashboard. OTS receives identity headers from Caddy.",
+      "The user reaches their dashboard. OTS receives identity headers from Caddy.",
     securityNote:
       "After authentication, your app only receives identity headers from the reverse proxy and never validates tokens directly. Restrict OTS to only accept traffic from Caddy. OTS must set appropriate security headers (Content-Security-Policy, CORS) for browser protection—reverse proxy authentication doesn't replace application-level security headers.",
     http: [
@@ -509,7 +509,7 @@ const STEPS: Step[] = [
       {
         type: "internal",
         from: "Caddy",
-        to: "OAuth2Proxy",
+        to: "oauth2-proxy",
         label: "forward_auth validation",
         note: "Decrypt session cookie, validate not expired",
       },
@@ -554,7 +554,7 @@ const STEPS: Step[] = [
     description:
       "All future requests follow the same pattern: session cookie → forward_auth → identity headers → OTS.",
     securityNote:
-      "Session timeouts must be configured consistently across browser cookies, OAuth2 proxy sessions, and application sessions to prevent security gaps.",
+      "Session timeouts must be configured consistently across browser cookies, oauth2-proxy sessions, and application sessions to prevent security gaps.",
     http: [
       {
         type: "request",
@@ -567,7 +567,7 @@ const STEPS: Step[] = [
       {
         type: "internal",
         from: "Caddy",
-        to: "OAuth2Proxy",
+        to: "oauth2-proxy",
         label: "forward_auth (fast path)",
         note: "Session valid → 200 + headers (no redirects)",
       },

@@ -134,6 +134,9 @@ interface ActorConfig {
 | `←` | Previous step |
 | `→` | Next step |
 | `Space` | Toggle autoplay |
+| `T` | Toggle transcript view |
+| `R` | Restart demo |
+| `1` / `2` / `3` | Playback speed (slow / normal / fast) |
 
 ## Adding New IdP Screens
 

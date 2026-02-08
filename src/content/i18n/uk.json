@@ -8,6 +8,7 @@
       "home": "Повернутися на onetimesecret.com"
     }
   },
+  "heading.anchorLabel": "Розділ під назвою «{{title}}»",
   "sidebar": {
     "home": "Головна",
     "introduction": "Вступ",

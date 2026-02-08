@@ -1,7 +1,5 @@
 // src/components/artifacts/2026/sso-demos/shared/screens/ots/Loading.tsx
 
-import React from "react";
-
 /**
  * Loading/processing screen - shown during redirect flows
  * when the browser is following authentication redirects.

@@ -1,6 +1,6 @@
 // src/components/artifacts/2026/sso-demos/shared/screens/ots/Dashboard.tsx
 
-import React, { useState } from "react";
+import { useState } from "react";
 
 interface Secret {
   id: string;

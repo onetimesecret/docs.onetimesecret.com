@@ -65,4 +65,4 @@ You can maintain accounts in multiple regions simultaneously. All accounts using
 
 ## Global Elite
 
-Global Elite customers on dedicated instances should contact us at [dedicated@onetimesecret.com](mailto:dedicated@onetimesecret.com) for region changes, as dedicated infrastructure requires manual reconfiguration. You can also reach us through the [feedback page](/feedback).
+Global Elite customers on dedicated instances should contact us at [dedicated@onetimesecret.com](mailto:dedicated@onetimesecret.com) for region changes, as dedicated infrastructure requires manual reconfiguration. You can also reach us through the [feedback page](https://onetimesecret.com/feedback).

@@ -155,11 +155,3 @@ export interface DemoConfig {
   /** Protocol stack visualization configuration */
   protocolStack: ProtocolStackConfig;
 }
-
-/**
- * Props for screen components.
- */
-export interface ScreenProps {
-  /** Optional additional class names */
-  className?: string;
-}

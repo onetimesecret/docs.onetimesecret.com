@@ -26,16 +26,15 @@ import type { Step, DemoConfig, HttpMessage, ActorConfig } from "./types.ts";
  *
  * ## Actor Colors
  *
- * Actor colors must match the `activeColor` values in the demo's `config.ts` file.
- * The mapping uses Tailwind color classes (e.g., `bg-purple-500` in config.ts
- * corresponds to `var(--color-purple-500)` in the CSS theme).
+ * Actor colors are defined as semantic tokens in `sso-demo-theme.css` and
+ * referenced via `bg-actor-*` classes in each demo's `config.ts`.
  *
- * Current actor color mapping:
- * - Browser: rose-500
- * - Caddy: orange-500
+ * Current actor color mapping (from sso-demo-theme.css):
+ * - Browser: slate-600
+ * - Caddy: lime-600
  * - Logto: purple-500
  * - Entra: cyan-500
- * - OTS: emerald-500
+ * - OTS: red-500
  */
 
 interface TranscriptViewProps {
@@ -225,7 +224,7 @@ function StepArticle({
       const normalized = str.toLowerCase().trim();
       // Try direct match first
       if (labelToKeyMap[normalized]) return labelToKeyMap[normalized];
-      // Try partial match with longest labels first (e.g., "Caddy (OAuth2Proxy)" should match "caddy")
+      // Try partial match with longest labels first (e.g., "Caddy (oauth2-proxy)" should match "caddy")
       for (const [label, key] of sortedLabels) {
         if (normalized.includes(label)) {
           return key;
@@ -610,6 +609,9 @@ function HttpTranscriptEntry({
 
 /**
  * Gets color classes for an actor based on their activeColor from config.
+ * Dynamically derives variant classes from any `bg-<token>` activeColor,
+ * supporting both semantic tokens (bg-actor-browser) and raw Tailwind
+ * classes (bg-blue-500). No manual updates needed when adding new actors.
  */
 function getActorColorInfo(activeColor?: string): {
   bgClass: string;
@@ -619,118 +621,6 @@ function getActorColorInfo(activeColor?: string): {
   textClass: string;
   dotClass: string;
 } {
-  // Map Tailwind bg-* classes to their color families
-  const colorMap: Record<
-    string,
-    {
-      bgClass: string;
-      bgMutedClass: string;
-      borderClass: string;
-      ringClass: string;
-      textClass: string;
-      dotClass: string;
-    }
-  > = {
-    "bg-blue-500": {
-      bgClass: "bg-blue-500/30",
-      bgMutedClass: "bg-blue-950/50",
-      borderClass: "border-blue-500",
-      ringClass: "ring-blue-500",
-      textClass: "text-blue-200",
-      dotClass: "bg-blue-500",
-    },
-    "bg-orange-500": {
-      bgClass: "bg-orange-500/30",
-      bgMutedClass: "bg-orange-950/50",
-      borderClass: "border-orange-500",
-      ringClass: "ring-orange-500",
-      textClass: "text-orange-200",
-      dotClass: "bg-orange-500",
-    },
-    "bg-purple-500": {
-      bgClass: "bg-purple-500/30",
-      bgMutedClass: "bg-purple-950/50",
-      borderClass: "border-purple-500",
-      ringClass: "ring-purple-500",
-      textClass: "text-purple-200",
-      dotClass: "bg-purple-500",
-    },
-    "bg-cyan-500": {
-      bgClass: "bg-cyan-500/30",
-      bgMutedClass: "bg-cyan-950/50",
-      borderClass: "border-cyan-500",
-      ringClass: "ring-cyan-500",
-      textClass: "text-cyan-200",
-      dotClass: "bg-cyan-500",
-    },
-    "bg-emerald-500": {
-      bgClass: "bg-emerald-500/30",
-      bgMutedClass: "bg-emerald-950/50",
-      borderClass: "border-emerald-500",
-      ringClass: "ring-emerald-500",
-      textClass: "text-emerald-200",
-      dotClass: "bg-emerald-500",
-    },
-    "bg-rose-500": {
-      bgClass: "bg-rose-500/30",
-      bgMutedClass: "bg-rose-950/50",
-      borderClass: "border-rose-500",
-      ringClass: "ring-rose-500",
-      textClass: "text-rose-200",
-      dotClass: "bg-rose-500",
-    },
-    "bg-amber-500": {
-      bgClass: "bg-amber-500/30",
-      bgMutedClass: "bg-amber-950/50",
-      borderClass: "border-amber-500",
-      ringClass: "ring-amber-500",
-      textClass: "text-amber-200",
-      dotClass: "bg-amber-500",
-    },
-    // Semantic actor colors from sso-demo-theme.css
-    "bg-actor-browser": {
-      bgClass: "bg-actor-browser/30",
-      bgMutedClass: "bg-rose-950/50",
-      borderClass: "border-actor-browser",
-      ringClass: "ring-actor-browser",
-      textClass: "text-rose-200",
-      dotClass: "bg-actor-browser",
-    },
-    "bg-actor-caddy": {
-      bgClass: "bg-actor-caddy/30",
-      bgMutedClass: "bg-orange-950/50",
-      borderClass: "border-actor-caddy",
-      ringClass: "ring-actor-caddy",
-      textClass: "text-orange-200",
-      dotClass: "bg-actor-caddy",
-    },
-    "bg-actor-logto": {
-      bgClass: "bg-actor-logto/30",
-      bgMutedClass: "bg-purple-950/50",
-      borderClass: "border-actor-logto",
-      ringClass: "ring-actor-logto",
-      textClass: "text-purple-200",
-      dotClass: "bg-actor-logto",
-    },
-    "bg-actor-entra": {
-      bgClass: "bg-actor-entra/30",
-      bgMutedClass: "bg-cyan-950/50",
-      borderClass: "border-actor-entra",
-      ringClass: "ring-actor-entra",
-      textClass: "text-cyan-200",
-      dotClass: "bg-actor-entra",
-    },
-    "bg-actor-ots": {
-      bgClass: "bg-actor-ots/30",
-      bgMutedClass: "bg-emerald-950/50",
-      borderClass: "border-actor-ots",
-      ringClass: "ring-actor-ots",
-      textClass: "text-emerald-200",
-      dotClass: "bg-actor-ots",
-    },
-  };
-
-  // Default to gray if no color or unknown color
   const defaultColors = {
     bgClass: "bg-gray-500/30",
     bgMutedClass: "bg-gray-800/50",
@@ -741,7 +631,19 @@ function getActorColorInfo(activeColor?: string): {
   };
 
   if (!activeColor) return defaultColors;
-  return colorMap[activeColor] || defaultColors;
+
+  // Extract the color token from "bg-<token>" (e.g. "actor-browser" or "blue-500")
+  const token = activeColor.replace(/^bg-/, "");
+  if (!token) return defaultColors;
+
+  return {
+    bgClass: `bg-${token}/30`,
+    bgMutedClass: `bg-${token}/10`,
+    borderClass: `border-${token}`,
+    ringClass: `ring-${token}`,
+    textClass: `text-${token}`,
+    dotClass: `bg-${token}`,
+  };
 }
 
 /**

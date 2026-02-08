@@ -27,5 +27,10 @@ export function createRedirectsConfig() {
     "/principals": "/en/principles/",
     "/principles": "/en/principles/",
     "/regions": "/en/regions/",
+    "/regions/ca": "/en/regions/canada/",
+    "/regions/eu": "/en/regions/european-union/",
+    "/regions/nz": "/en/regions/new-zealand/",
+    "/regions/uk": "/en/regions/united-kingdom/",
+    "/regions/us": "/en/regions/united-states/",
   };
 }

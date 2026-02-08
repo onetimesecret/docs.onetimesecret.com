@@ -1,7 +1,5 @@
 // src/components/artifacts/2026/sso-demos/shared/screens/idp/Auth0Universal.tsx
 
-import React from "react";
-
 /**
  * Auth0 Universal Login screen mockup.
  * Shows the Auth0 Lock widget style authentication UI.
@@ -97,9 +95,9 @@ export function Auth0Universal() {
 
           <div className="mt-4 text-center text-sm text-gray-500">
             Don't have an account?{" "}
-            <a href="#" className="text-orange-500 hover:text-orange-600">
+            <span role="link" aria-disabled="true" className="cursor-default text-orange-500">
               Sign up
-            </a>
+            </span>
           </div>
         </div>
       </div>

@@ -3,7 +3,8 @@
 // Template: Copy this directory to create a new demo (e.g., sso-demos/my-demo/).
 // The import path below is already correct for the copied location.
 
-import type { DemoConfig, ActorConfig, ProtocolStackConfig } from "../shared";
+import type { DemoConfig, ActorConfig, ProtocolStackConfig } from "..";
+import { DEMOS_INDEX_PATH } from "..";
 
 /**
  * Actor configuration for the demo.
@@ -27,6 +28,9 @@ export const actorConfig: ActorConfig[] = [
 /**
  * Protocol stack configuration showing the architecture.
  * Components appear left-to-right, connections link adjacent components.
+ *
+ * Minimum: at least two components and one connection between them,
+ * otherwise the protocol stack diagram will render empty.
  */
 export const protocolStack: ProtocolStackConfig = {
   components: [
@@ -60,7 +64,7 @@ export const demoConfig: DemoConfig = {
   subtitle: "Brief description of the auth flow",
   version: "0.1.0",
   backLink: {
-    href: "/artifacts/2026/sso-demos/",
+    href: DEMOS_INDEX_PATH,
     label: "All demos",
   },
   actorConfig,

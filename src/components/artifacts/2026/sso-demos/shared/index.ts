@@ -8,6 +8,10 @@
  *   import type { Step, DemoConfig } from '../shared';
  */
 
+// Constants
+/** Base path for the SSO demos index page */
+export const DEMOS_INDEX_PATH = "/artifacts/2026/sso-demos/";
+
 // Types
 export type {
   ExpandedPayload,
@@ -19,7 +23,6 @@ export type {
   ProtocolStackConfig,
   Step,
   DemoConfig,
-  ScreenProps,
 } from "./types.ts";
 
 // Core components

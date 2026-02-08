@@ -1,7 +1,5 @@
 // src/components/artifacts/2026/sso-demos/shared/screens/idp/GoogleOAuth.tsx
 
-import React from "react";
-
 /**
  * Google OAuth consent screen mockup.
  * Shows the Google account picker and permission grant UI.
