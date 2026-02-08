@@ -1,7 +1,5 @@
 // src/components/artifacts/2026/sso-demos/shared/screens/idp/KeycloakLogin.tsx
 
-import React from "react";
-
 /**
  * Keycloak login screen mockup.
  * Shows the default Keycloak theme authentication UI.
@@ -50,9 +48,9 @@ export function KeycloakLogin() {
                 <input id="keycloak-remember" type="checkbox" className="rounded border-gray-300" />
                 Remember me
               </label>
-              <a href="#" className="text-sm text-blue-600 hover:underline">
+              <span role="link" aria-disabled="true" className="cursor-default text-sm text-blue-600">
                 Forgot Password?
-              </a>
+              </span>
             </div>
 
             <button type="submit" className="w-full rounded bg-blue-600 py-2.5 font-medium text-white hover:bg-blue-700">

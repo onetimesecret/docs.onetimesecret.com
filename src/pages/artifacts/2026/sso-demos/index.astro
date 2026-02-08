@@ -3,7 +3,7 @@
 import DemoLayout from '../../../../layouts/DemoLayout.astro';
 
 const pageTitle = "SSO Authentication Flow Demos";
-const pageDescription = "Interactive visualizations of enterprise SSO authentication patterns and protocol bridging";
+const pageDescription = "Interactive visualizations of enterprise SSO authentication patterns, protocol bridging, and identity federation";
 
 /**
  * Demo Naming Rationale
@@ -44,7 +44,16 @@ const demos = [
           SSO Authentication Flow Demos
         </h1>
         <p class="text-xl text-gray-300">
-          Interactive visualizations of popular SSO patterns
+          Interactive visualizations of enterprise SSO authentication patterns
+        </p>
+        <p class="mx-auto mt-6 max-w-2xl text-sm leading-relaxed text-gray-400">
+          Each demo walks through a complete authentication flow step by step,
+          showing what the user sees alongside the HTTP exchanges happening
+          behind the scenes. Built for technical analysts and engineers
+          evaluating SSO integration patterns for their own applications.
+        </p>
+        <p class="mx-auto mt-4 max-w-2xl rounded-lg border border-gray-700 bg-gray-800/50 px-4 py-3 text-sm leading-relaxed text-gray-400">
+          The example application in these demos is <a href="https://onetimesecret.com" class="text-blue-400 hover:text-blue-300">Onetime Secret</a> (OTS) — an open-source tool for sharing sensitive information via self-destructing links. It serves as a realistic stand-in for any web application adding SSO support.
         </p>
       </header>
 
@@ -107,6 +116,9 @@ const demos = [
           </h3>
           <div class="h-px flex-1 bg-gradient-to-r from-transparent via-gray-600 to-transparent" />
         </div>
+        <p class="mt-4 text-center text-sm text-gray-500">
+          Planned demos include SP-initiated SAML login, SCIM provisioning flows, and multi-IdP federation patterns.
+        </p>
       </div>
 
       {/* Footer */}
@@ -116,8 +128,8 @@ const demos = [
             These demonstrations are designed for technical analysts evaluating SSO integration patterns.
           </p>
           <p class="mt-3">
-            <a href="https://docs.onetimesecret.com" class="text-sm text-gray-400 hover:text-gray-200 transition-colors">
-              ← Back to Documentation
+            <a href="https://onetimesecret.com" class="text-sm text-gray-400 hover:text-gray-200 transition-colors">
+              ← onetimesecret.com
             </a>
           </p>
         </div>

@@ -70,10 +70,12 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
   }, []);
 
   // Keyboard navigation: ← → arrows and space for autoplay
-  useHotkeys("left", () => setCurrentStep((s) => Math.max(0, s - 1)), []);
+  const hotkeyOpts = { enableOnFormTags: false } as const;
+  useHotkeys("left", () => setCurrentStep((s) => Math.max(0, s - 1)), hotkeyOpts, []);
   useHotkeys(
     "right",
     () => setCurrentStep((s) => Math.min(steps.length - 1, s + 1)),
+    hotkeyOpts,
     []
   );
   useHotkeys(
@@ -82,6 +84,7 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
       e.preventDefault();
       setAutoPlay((a) => !a);
     },
+    hotkeyOpts,
     []
   );
 
@@ -92,16 +95,17 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
       e.preventDefault();
       toggleViewMode();
     },
+    hotkeyOpts,
     [toggleViewMode]
   );
 
   // Restart demo (R key)
-  useHotkeys("r", restartDemo, [restartDemo]);
+  useHotkeys("r", restartDemo, hotkeyOpts, [restartDemo]);
 
   // Speed controls (1, 2, 3 keys)
-  useHotkeys("1", () => changeSpeed("slow"), [changeSpeed]);
-  useHotkeys("2", () => changeSpeed("normal"), [changeSpeed]);
-  useHotkeys("3", () => changeSpeed("fast"), [changeSpeed]);
+  useHotkeys("1", () => changeSpeed("slow"), hotkeyOpts, [changeSpeed]);
+  useHotkeys("2", () => changeSpeed("normal"), hotkeyOpts, [changeSpeed]);
+  useHotkeys("3", () => changeSpeed("fast"), hotkeyOpts, [changeSpeed]);
 
   // Autoplay: advance to next step after interval
   useEffect(() => {
@@ -159,6 +163,9 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
             {config.title}
           </h1>
           <p className="text-base text-gray-400">{config.subtitle}</p>
+          <p className="mt-2 text-xs text-gray-500">
+            This is a static, self-contained demo for educational purposes. It does not connect to any live systems and is not intended as a reference implementation.
+          </p>
         </div>
 
         {/* Controls and Progress */}
@@ -244,8 +251,8 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
           </div>
           {/* Step counter with progress - only shown in interactive mode */}
           {viewMode === "interactive" && (
-            <div className="flex items-center gap-3">
-              <div className="flex items-center gap-1.5">
+            <div className="flex items-center gap-2 sm:gap-3">
+              <div className="flex items-center gap-1 overflow-x-auto sm:gap-1.5">
                 {steps.map((s, i) => {
                   const isCompleted = i < currentStep;
                   const isCurrent = i === currentStep;
@@ -256,21 +263,21 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
                       key={s.id}
                       onClick={() => setCurrentStep(i)}
                       aria-label={`${isCompleted ? "Completed" : isCurrent ? "Current" : "Pending"} step ${i + 1}: ${s.title}`}
-                      className={`flex h-6 items-center justify-center rounded-full p-1 transition-all motion-reduce:transition-none hover:opacity-80 focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 ${
+                      className={`flex flex-shrink-0 items-center justify-center rounded-full p-0.5 transition-all motion-reduce:transition-none hover:opacity-80 focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 sm:p-1 ${
                         isCurrent
-                          ? "w-8 bg-blue-500 ring-2 ring-blue-300 ring-offset-2 ring-offset-gray-800"
+                          ? "h-5 w-6 bg-blue-500 ring-2 ring-blue-300 ring-offset-2 ring-offset-gray-800 sm:h-6 sm:w-8"
                           : isCompleted
-                            ? "w-6 bg-emerald-500"
-                            : "w-6 border-2 border-dashed border-gray-500 bg-gray-700"
+                            ? "h-5 w-5 bg-emerald-500 sm:h-6 sm:w-6"
+                            : "h-5 w-5 border-2 border-dashed border-gray-500 bg-gray-700 sm:h-6 sm:w-6"
                       }`}
                     >
                       {isCompleted && (
-                        <svg className="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <svg className="h-2.5 w-2.5 text-white sm:h-3 sm:w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                         </svg>
                       )}
                       {isPending && (
-                        <svg className="h-2 w-2 text-gray-400" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <svg className="h-1.5 w-1.5 text-gray-400 sm:h-2 sm:w-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                           <circle cx="12" cy="12" r="3" />
                         </svg>
                       )}
@@ -278,7 +285,7 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
                   );
                 })}
               </div>
-              <span className="text-sm font-medium text-gray-300">
+              <span className="flex-shrink-0 text-xs font-medium text-gray-300 sm:text-sm">
                 Step {currentStep + 1} of {steps.length}
               </span>
             </div>
@@ -310,7 +317,7 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
         ) : (
           <>
             {/* Step description */}
-            <div className="grid min-h-32 grid-cols-[1fr_auto] items-center gap-6 rounded-lg border border-gray-700/50 bg-gray-800 px-5 py-4">
+            <div className="grid min-h-32 grid-cols-1 items-center gap-6 rounded-lg border border-gray-700/50 bg-gray-800 px-5 py-4 lg:grid-cols-[1fr_auto]">
               {/* Left: Step info */}
               <div className="flex items-center gap-4">
                 <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-blue-700 text-lg font-bold shadow-lg shadow-blue-500/20">
@@ -328,7 +335,7 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
 
               {/* Right: Security note (if available) */}
               {step.securityNote && (
-                <div className="flex max-w-md items-start gap-3 self-center border-l border-gray-700 pl-6">
+                <div className="flex max-w-md items-start gap-3 self-center border-t border-gray-700 pt-4 lg:border-l lg:border-t-0 lg:pl-6 lg:pt-0">
                   <svg
                     className="mt-0.5 h-5 w-5 flex-shrink-0 text-amber-500"
                     fill="none"
@@ -351,7 +358,7 @@ export function SSODemoShell({ steps, screens, config }: SSODemoShellProps) {
             </div>
 
             {/* Main content */}
-            <main id="main-content" className="grid min-h-[50rem] grid-cols-2 gap-5">
+            <main id="main-content" className="grid min-h-[50rem] grid-cols-1 gap-5 lg:grid-cols-2">
           {/* Left: User view */}
           <div className="flex flex-col gap-3">
             <h2 className="flex items-center gap-2.5 text-base font-semibold">

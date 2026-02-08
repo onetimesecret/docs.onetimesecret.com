@@ -1,6 +1,7 @@
 // src/components/artifacts/2026/sso-demos/oidc-saml-bridge/config.ts
 
 import type { DemoConfig, ActorConfig, ProtocolStackConfig } from "../shared";
+import { DEMOS_INDEX_PATH } from "../shared";
 
 /**
  * Actor configuration for the OIDC→SAML Bridge demo.
@@ -71,7 +72,7 @@ export const protocolStack: ProtocolStackConfig = {
       from: "caddy",
       to: "logto",
       protocol: "OIDC",
-      subProtocol: "(via OAuth2Proxy)",
+      subProtocol: "(via oauth2-proxy)",
       activeColor: "bg-actor-caddy",
     },
     {
@@ -91,7 +92,7 @@ export const demoConfig: DemoConfig = {
   subtitle: "Caddy + Logto bridge OIDC↔SAML to Entra",
   version: "0.3.0",
   backLink: {
-    href: "/artifacts/2026/sso-demos/",
+    href: DEMOS_INDEX_PATH,
     label: "All demos",
   },
   actorConfig,

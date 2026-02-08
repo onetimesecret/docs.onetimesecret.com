@@ -11,7 +11,6 @@
 // 4. Update the screens map below with the screens your demo uses
 // 5. Create an Astro page to host the demo (see existing demos for examples)
 
-import React from "react";
 import {
   SSODemoShell,
   // OTS screens (constant across demos)
@@ -26,7 +25,7 @@ import {
   // Auth0Universal,
   // GoogleOAuth,
   // KeycloakLogin,
-} from "../shared";
+} from "..";
 import { STEPS } from "./steps.ts";
 import { demoConfig } from "./config.ts";
 

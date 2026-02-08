@@ -1,7 +1,5 @@
 // src/components/artifacts/2026/sso-demos/shared/screens/idp/OktaLogin.tsx
 
-import React from "react";
-
 /**
  * Okta login screen mockup.
  * Shows the Okta authentication UI with username/password fields.
@@ -50,9 +48,9 @@ export function OktaLogin() {
               <input id="okta-remember" type="checkbox" className="rounded border-gray-300" />
               Remember me
             </label>
-            <a href="#" className="text-blue-600 hover:text-blue-500">
+            <span role="link" aria-disabled="true" className="cursor-default text-blue-600">
               Need help signing in?
-            </a>
+            </span>
           </div>
           <button type="submit" className="w-full rounded-md bg-blue-600 py-2.5 font-medium text-white hover:bg-blue-700">
             Sign In

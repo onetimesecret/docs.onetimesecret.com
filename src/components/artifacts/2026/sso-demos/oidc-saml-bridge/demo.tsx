@@ -7,7 +7,7 @@
  * SP-initiated flow with external auth gateway and protocol bridging.
  *
  * This demo shows OIDC-to-SAML protocol translation for enterprise SSO.
- * The application (OTS) uses OIDC, while the enterprise IdP (Entra) uses SAML.
+ * The application (OTS) uses OIDC, while the enterprise IdP (Entra ID) uses SAML.
  * Logto bridges the protocols, and Caddy enforces authentication at the gateway.
  *
  * Technology Stack: Caddy (reverse proxy with forward_auth), Logto
@@ -16,7 +16,6 @@
  * overall pattern applies to similar stacks.
  */
 
-import React from "react";
 import {
   SSODemoShell,
   Blank,

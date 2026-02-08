@@ -1,6 +1,6 @@
 // src/components/artifacts/2026/sso-demos/shared/ActorDiagram.tsx
 
-import React, { Fragment } from "react";
+import { Fragment } from "react";
 import type { Actors, ActorConfig } from "./types.ts";
 
 interface ActorDiagramProps {

@@ -1,7 +1,5 @@
 // src/components/artifacts/2026/sso-demos/shared/screens/idp/EntraAutoSubmit.tsx
 
-import React from "react";
-
 /**
  * Entra auto-submit screen - shown when the IdP is posting
  * the SAML response back to the SP via an auto-submitting form.

@@ -1,7 +1,5 @@
 // src/components/artifacts/2026/sso-demos/shared/screens/idp/EntraLogin.tsx
 
-import React from "react";
-
 /**
  * Microsoft Entra ID (Azure AD) login screen mockup.
  * Shows the Microsoft sign-in experience with email and password fields.

@@ -1,6 +1,6 @@
 // src/components/artifacts/2026/sso-demos/shared/BrowserMockup.tsx
 
-import React, { type ReactNode } from "react";
+import { type ReactNode } from "react";
 
 interface BrowserMockupProps {
   /** URL to display in the address bar */

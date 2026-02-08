@@ -1,7 +1,5 @@
 // src/components/artifacts/2026/sso-demos/shared/screens/idp/LogtoSignIn.tsx
 
-import React from "react";
-
 /**
  * Logto sign-in screen mockup.
  * Shows the Logto authentication UI with multiple sign-in options
@@ -62,8 +60,7 @@ export function LogtoSignIn() {
             id="logto-email"
             type="email"
             placeholder="Email"
-            className="box-border w-full appearance-none border border-slate-600 bg-slate-700 px-4 py-3 text-slate-200 placeholder-slate-400 outline-none"
-            style={{ borderRadius: "0.5rem" }}
+            className="box-border w-full appearance-none rounded-lg border border-slate-600 bg-slate-700 px-4 py-3 text-slate-200 placeholder-slate-400 outline-none"
             readOnly
           />
           <button className="w-full rounded-lg bg-slate-600 py-2 text-slate-200 hover:bg-slate-500">

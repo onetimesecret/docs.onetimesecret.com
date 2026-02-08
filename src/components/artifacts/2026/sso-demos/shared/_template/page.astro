@@ -1,0 +1,23 @@
+---
+// src/components/artifacts/2026/sso-demos/shared/_template/page.astro
+//
+// Template: Copy this file to create the Astro page for your demo.
+// Target location: src/pages/artifacts/2026/sso-demos/your-demo/index.astro
+//
+// After copying, update:
+// 1. The import paths (adjust ../ depth to match your page location)
+// 2. The component import to point to your demo's demo.tsx
+// 3. The pageTitle and pageDescription
+
+import DemoLayout from '../../../../../layouts/DemoLayout.astro';
+import YourDemo from '../../../../../components/artifacts/2026/sso-demos/your-demo/demo.tsx';
+// Demo-scoped theme with semantic color variables for HTTP messages and actors
+import '../../../../../components/artifacts/2026/sso-demos/shared/sso-demo-theme.css';
+
+const pageTitle = "Your Demo Title";
+const pageDescription = "Brief description of your SSO authentication demo";
+---
+
+<DemoLayout title={pageTitle} description={pageDescription}>
+  <YourDemo client:load />
+</DemoLayout>
