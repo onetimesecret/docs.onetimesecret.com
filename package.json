@@ -29,10 +29,10 @@
     "@astrojs/starlight-tailwind": "^4.0.2",
     "@astrojs/vue": "^5.1.4",
     "@tailwindcss/vite": "^4.1.18",
-    "@types/react": "^19.2.13",
+    "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "accessible-astro-components": "^5.1.2",
-    "astro": "^5.17.1",
+    "astro": "^5.17.2",
     "devalue": "^5.6.2",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
@@ -41,6 +41,6 @@
     "sitemap": "9.0.0",
     "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3",
-    "vue": "^3.5.27"
+    "vue": "^3.5.28"
   }
 }
