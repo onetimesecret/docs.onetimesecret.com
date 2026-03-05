@@ -2,7 +2,7 @@
 title: Upgrading to v0.24.0
 description: Guide for upgrading Onetime Secret from v0.22 or v0.23 to v0.24.0
 sidebar:
-  order: 5
+  order: 6
 ---
 
 This guide covers upgrading to v0.24.0 from v0.22 or v0.23. There are significant changes to the authentication system, configuration structure, and data model. You'll need to choose an upgrade path, update configuration files, and possibly run data migrations.
@@ -127,7 +127,7 @@ docker compose up -d
 
 See `docker-compose.yml` for available profiles (simple vs full stack) and `docker/README.md` for details.
 
-**From source** — see the [Development Guide](/docs/development/) for running with Overmind, separate terminals, or production-style builds.
+**From source** — see the [Development Guide](https://github.com/onetimesecret/onetimesecret/tree/develop/docs/development) for running with Overmind, separate terminals, or production-style builds.
 
 The application will initialize itself with clean state.
 
@@ -260,7 +260,7 @@ docker run -p 3000:3000 -d \
 docker compose up -d
 ```
 
-**From source** — see the [Development Guide](/docs/development/) for running with Overmind, separate terminals, or production-style builds.
+**From source** — see the [Development Guide](https://github.com/onetimesecret/onetimesecret/tree/develop/docs/development) for running with Overmind, separate terminals, or production-style builds.
 
 ### 10. Verify
 

@@ -2,7 +2,7 @@
 title: Upgrading to v0.23.0
 description: Guide for upgrading Onetime Secret to v0.23.0 — maintenance release with config migration
 sidebar:
-  order: 6
+  order: 5
 ---
 
 v0.23.0 is a maintenance release that converts the main config file (`etc/config.yaml`) from symbol keys to string keys. This is part of a series of changes preparing for the v0.24.0 release.
