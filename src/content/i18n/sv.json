@@ -54,7 +54,8 @@
     "universalGuidance": "Universella Riktlinjer",
     "styleGuide": "Stilguide",
     "glossary": "Ordlista",
-    "qualityChecklist": "Kvalitetschecklista"
+    "qualityChecklist": "Kvalitetschecklista",
+    "upgradingToV024": "Uppgradering till v0.24.0"
   },
   "skipLink.label": "Hoppa till innehåll",
   "search.label": "Sök",

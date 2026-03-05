@@ -53,7 +53,8 @@
     "universalGuidance": "Universelle Richtlinien",
     "styleGuide": "Stilrichtlinien",
     "glossary": "Glossar",
-    "qualityChecklist": "Qualitätsprüfliste"
+    "qualityChecklist": "Qualitätsprüfliste",
+    "upgradingToV024": "Upgrade auf v0.24.0"
   },
   "skipLink.label": "Zum Inhalt springen",
   "search.label": "Suche",

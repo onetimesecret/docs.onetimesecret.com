@@ -54,7 +54,8 @@
     "universalGuidance": "通用指南",
     "styleGuide": "样式指南",
     "glossary": "词汇表",
-    "qualityChecklist": "质量检查清单"
+    "qualityChecklist": "质量检查清单",
+    "upgradingToV024": "升级到 v0.24.0"
   },
   "skipLink.label": "跳转到内容",
   "search.label": "搜索",

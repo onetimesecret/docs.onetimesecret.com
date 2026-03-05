@@ -54,7 +54,8 @@
     "universalGuidance": "Universelle Retningslinjer",
     "styleGuide": "Stilvejledning",
     "glossary": "Ordliste",
-    "qualityChecklist": "Kvalitetskontrolliste"
+    "qualityChecklist": "Kvalitetskontrolliste",
+    "upgradingToV024": "Opgradering til v0.24.0"
   },
   "skipLink.label": "Spring til indhold",
   "search.label": "Søg",

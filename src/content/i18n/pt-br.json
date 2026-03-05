@@ -54,7 +54,8 @@
     "universalGuidance": "Diretrizes Universais",
     "styleGuide": "Guia de Estilo",
     "glossary": "Glossário",
-    "qualityChecklist": "Lista de verificação de qualidade"
+    "qualityChecklist": "Lista de verificação de qualidade",
+    "upgradingToV024": "Atualização para v0.24.0"
   },
   "skipLink.label": "Pular para o conteúdo",
   "search.label": "Buscar",

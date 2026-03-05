@@ -54,7 +54,8 @@
     "universalGuidance": "共通ガイダンス",
     "styleGuide": "スタイルガイド",
     "glossary": "用語集",
-    "qualityChecklist": "品質チェックリスト"
+    "qualityChecklist": "品質チェックリスト",
+    "upgradingToV024": "v0.24.0へのアップグレード"
   },
   "skipLink.label": "コンテンツにスキップ",
   "search.label": "検索",

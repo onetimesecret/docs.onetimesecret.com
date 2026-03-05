@@ -54,7 +54,8 @@
     "universalGuidance": "Evrensel Rehber",
     "styleGuide": "Stil Kılavuzu",
     "glossary": "Sözlük",
-    "qualityChecklist": "Kalite Kontrol Listesi"
+    "qualityChecklist": "Kalite Kontrol Listesi",
+    "upgradingToV024": "v0.24.0'a Yükseltme"
   },
   "skipLink.label": "İçeriğe atla",
   "search.label": "Ara",

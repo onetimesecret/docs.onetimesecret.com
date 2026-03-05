@@ -54,7 +54,8 @@
     "universalGuidance": "Универсални насоки",
     "styleGuide": "Стилово ръководство",
     "glossary": "Речник",
-    "qualityChecklist": "Контролен списък за качество"
+    "qualityChecklist": "Контролен списък за качество",
+    "upgradingToV024": "Надграждане до v0.24.0"
   },
   "skipLink.label": "Преминаване към съдържанието",
   "search.label": "Търсене",

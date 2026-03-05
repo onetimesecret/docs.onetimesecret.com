@@ -53,7 +53,8 @@
     "universalGuidance": "Linee Guida Universali",
     "styleGuide": "Guida di Stile",
     "glossary": "Glossario",
-    "qualityChecklist": "Lista di controllo qualità"
+    "qualityChecklist": "Lista di controllo qualità",
+    "upgradingToV024": "Aggiornamento a v0.24.0"
   },
   "skipLink.label": "Vai al contenuto",
   "search.label": "Cerca",
