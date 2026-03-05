@@ -62,14 +62,17 @@ If you have an existing config with customizations you want to carry forward (br
 
 ### 3. Maintain your SECRET
 
-Copy your existing `SECRET` value into the new config or `.env` file. If this is a truly fresh deployment with no data from a previous instance, you can generate a new value:
+Copy your existing `SECRET` value into the new config or `.env` file. If this is a truly fresh deployment with no data from a previous instance, you can generate and store a new value:
 
 ```bash
-openssl rand -hex 32
+openssl rand -hex 32 > .ots_secret
+chmod 600 .ots_secret
 ```
 
+This creates a `.ots_secret` file in your project directory containing the key. The `docker run` command in step 5 reads from this file. Alternatively, set the value directly in your `.env` file or config.
+
 :::caution
-Changing the `SECRET`  makes all previously encrypted secrets unreadable. If you have any existing secrets from your previous instance, keep your existing `SECRET` value the same.
+Changing the `SECRET`  makes all previously encrypted secrets unreadable. If you have any existing secrets from your previous instance, keep your existing `SECRET` value the same — do not generate a new one.
 :::
 
 
@@ -104,40 +107,27 @@ For full mode, also configure your PostgreSQL and RabbitMQ connection details.
 
 ### 5. Start the application
 
-**Docker Compose** (recommended for most deployments):
+**Docker** (simplest — matches the `docker pull` from step 1):
 
 ```bash
+docker run -p 3000:3000 -d \
+  -e REDIS_URL=redis://host.docker.internal:6379/0 \
+  -e SECRET="$(cat .ots_secret)" \
+  -e HOST=localhost:3000 \
+  -e SSL=false \
+  onetimesecret/onetimesecret:v0.24.0
+```
+
+**Docker Compose** (for persistent or multi-service deployments):
+
+```bash
+cp --preserve --no-clobber .env.example .env
 docker compose up -d
 ```
 
-**From source** — separate terminals:
+See `docker-compose.yml` for available profiles (simple vs full stack) and `docker/README.md` for details.
 
-```bash
-# Terminal 1: Backend (Ruby/Rack server)
-bin/backend
-
-# Terminal 2: Frontend (Vite dev server with HMR)
-bin/frontend
-```
-
-Both scripts source `.env.sh` automatically if present.
-
-For production-style local runs, build the frontend first and serve everything from the backend:
-
-```bash
-pnpm build
-RACK_ENV=production bin/backend
-```
-
-**From source** — [Overmind](https://github.com/DarthSim/overmind) (single command):
-
-```bash
-# Link shared config files (config.yaml, puma.rb, etc.)
-bin/setup-dev-links
-
-# Start backend, frontend, and worker together
-bin/dev
-```
+**From source** — see the [Development Guide](/docs/development/) for running with Overmind, separate terminals, or production-style builds.
 
 The application will initialize itself with clean state.
 
@@ -253,35 +243,24 @@ This happens automatically on each user's first login after the upgrade. No manu
 
 ### 9. Start the application
 
+**Docker:**
+
+```bash
+docker run -p 3000:3000 -d \
+  -e REDIS_URL=redis://your-redis-host:6379/0 \
+  -e SECRET="$YOUR_SECRET" \
+  -e HOST=your-domain.com \
+  -e SSL=true \
+  onetimesecret/onetimesecret:v0.24.0
+```
+
 **Docker Compose:**
 
 ```bash
 docker compose up -d
 ```
 
-**From source** — separate terminals:
-
-```bash
-# Terminal 1: Backend
-bin/backend
-
-# Terminal 2: Frontend
-bin/frontend
-```
-
-**From source** — [Overmind](https://github.com/DarthSim/overmind) (single command):
-
-```bash
-bin/setup-dev-links  # once per checkout/worktree
-bin/dev
-```
-
-For production-style local runs:
-
-```bash
-pnpm build
-RACK_ENV=production bin/backend
-```
+**From source** — see the [Development Guide](/docs/development/) for running with Overmind, separate terminals, or production-style builds.
 
 ### 10. Verify
 
@@ -358,7 +337,7 @@ v0.24.0 simplified CSRF handling to Rack::Protection only (removed the old shrim
 - Verify RabbitMQ 4.3+ is running and accessible
 - Check connection credentials in your config
 - The application handles connection pool crashes on Puma fork gracefully, but check logs for connection refused errors
-- Health check endpoint (`/health`) reports RabbitMQ status
+- Health check endpoint (`/health/advanced`) reports RabbitMQ status
 
 ### Legacy Redis database auto-configuration
 
