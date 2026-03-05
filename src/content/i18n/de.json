@@ -54,7 +54,8 @@
     "styleGuide": "Stilrichtlinien",
     "glossary": "Glossar",
     "qualityChecklist": "Qualitätsprüfliste",
-    "upgradingToV024": "Upgrade auf v0.24.0"
+    "upgradingToV024": "Upgrade auf v0.24.0",
+    "upgradingToV023": "Upgrade auf v0.23.0"
   },
   "skipLink.label": "Zum Inhalt springen",
   "search.label": "Suche",

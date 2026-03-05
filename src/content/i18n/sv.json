@@ -55,7 +55,8 @@
     "styleGuide": "Stilguide",
     "glossary": "Ordlista",
     "qualityChecklist": "Kvalitetschecklista",
-    "upgradingToV024": "Uppgradering till v0.24.0"
+    "upgradingToV024": "Uppgradering till v0.24.0",
+    "upgradingToV023": "Uppgradering till v0.23.0"
   },
   "skipLink.label": "Hoppa till innehåll",
   "search.label": "Sök",

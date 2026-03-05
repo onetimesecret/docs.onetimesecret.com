@@ -55,7 +55,8 @@
     "styleGuide": "스타일 가이드",
     "glossary": "용어집",
     "qualityChecklist": "품질 체크리스트",
-    "upgradingToV024": "v0.24.0으로 업그레이드"
+    "upgradingToV024": "v0.24.0으로 업그레이드",
+    "upgradingToV023": "v0.23.0으로 업그레이드"
   },
   "skipLink.label": "콘텐츠로 건너뛰기",
   "search.label": "검색",
