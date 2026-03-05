@@ -53,7 +53,9 @@
     "universalGuidance": "Lignes Directrices Universelles",
     "styleGuide": "Guide de style",
     "glossary": "Glossaire",
-    "qualityChecklist": "Liste de contrôle qualité"
+    "qualityChecklist": "Liste de contrôle qualité",
+    "upgradingToV024": "Mise à jour vers v0.24.0",
+    "upgradingToV023": "Mise à jour vers v0.23.0"
   },
   "skipLink.label": "Passer au contenu",
   "search.label": "Rechercher",

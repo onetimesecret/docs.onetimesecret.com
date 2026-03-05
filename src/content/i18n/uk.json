@@ -54,7 +54,9 @@
     "universalGuidance": "Універсальні настанови",
     "styleGuide": "Стильовий гайд",
     "glossary": "Глосарій",
-    "qualityChecklist": "Контрольний список якості"
+    "qualityChecklist": "Контрольний список якості",
+    "upgradingToV024": "Оновлення до v0.24.0",
+    "upgradingToV023": "Оновлення до v0.23.0"
   },
   "skipLink.label": "Перейти до вмісту",
   "search.label": "Пошук",

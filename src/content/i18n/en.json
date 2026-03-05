@@ -34,6 +34,8 @@
     "coreConfig": "Core Configuration",
     "systemSettings": "System Settings",
     "environmentVariables": "Environment Variables",
+    "upgradingToV024": "Upgrading to v0.24.0",
+    "upgradingToV023": "Upgrading to v0.23.0",
     "security": "Security Guide",
     "migration": "Migration Guide",
     "quickReference": "Quick Reference",

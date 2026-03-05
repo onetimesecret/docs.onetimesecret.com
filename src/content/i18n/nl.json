@@ -54,7 +54,9 @@
     "universalGuidance": "Universele Richtlijnen",
     "styleGuide": "Stijlgids",
     "glossary": "Woordenlijst",
-    "qualityChecklist": "Kwaliteitscontrolelijst"
+    "qualityChecklist": "Kwaliteitscontrolelijst",
+    "upgradingToV024": "Upgraden naar v0.24.0",
+    "upgradingToV023": "Upgraden naar v0.23.0"
   },
   "skipLink.label": "Ga naar inhoud",
   "search.label": "Zoeken",
