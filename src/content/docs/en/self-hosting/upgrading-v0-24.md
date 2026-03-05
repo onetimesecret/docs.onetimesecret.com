@@ -7,7 +7,11 @@ sidebar:
 
 This guide covers upgrading to v0.24.0 from v0.22 or v0.23. There are significant changes to the authentication system, configuration structure, and data model. You'll need to choose an upgrade path, update configuration files, and possibly run data migrations.
 
+For the full context on what changed and why, see the [v0.24.0 release notes](https://blog.onetimesecret.com/posts/2026-03-04-release-notes-v0.24.0).
+
 ## Before You Start
+
+**Coming from v0.22?** Complete the [v0.23 config migration](upgrading-v0-23) first. The v0.23 release converts config keys from symbol to string format, which v0.24 requires.
 
 1. **Back up your Redis data.** `redis-cli BGSAVE` or equivalent. Keep the RDB file somewhere safe.
 2. **Back up your configuration files.** `config.yaml`,`.env`.
