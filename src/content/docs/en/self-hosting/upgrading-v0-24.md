@@ -10,8 +10,8 @@ This guide covers upgrading to v0.24.0 from v0.22 or v0.23. There are significan
 ## Before You Start
 
 1. **Back up your Redis data.** `redis-cli BGSAVE` or equivalent. Keep the RDB file somewhere safe.
-2. **Back up your configuration files.** All of them: `config.yaml`, `auth.yaml`, `.env`, any custom templates.
-3. **Note your current SECRET value.** You'll need it if migrating (to continue decrypting existing secrets). You'll replace it if starting fresh.
+2. **Back up your configuration files.** `config.yaml`,`.env`.
+3. **Note your current SECRET value.** You'll need it to continue decrypting existing secrets. Only generate a new one if you're certain no unretrieved secrets remain.
 4. **Decide your auth mode.** Disabled, simple, or full. This determines your infrastructure requirements (see below).
 
 ## System Requirements
@@ -44,7 +44,13 @@ Use this path if you don't need to preserve existing accounts or live secrets.
 docker pull onetimesecret/onetimesecret:v0.24.0
 ```
 
-Or clone/checkout the v0.24.0 tag if running from source.
+Or clone/checkout the v0.24.0 tag if running from source, then run the install script:
+
+```bash
+./install.sh
+```
+
+This auto-detects a new environment and runs `init`: installs Ruby and Node dependencies, generates derived keys, and prepares the environment. You can also run `./install.sh doctor` to check prerequisites.
 
 ### 2. Set up configuration
 
@@ -54,13 +60,18 @@ Or clone/checkout the v0.24.0 tag if running from source.
 
 If you have an existing config with customizations you want to carry forward (branding, SMTP, plan structure), reference your old files while filling in the new ones. The key names have changed — see the [config mapping reference](#config-mapping-reference) below.
 
-### 3. Generate a new SECRET
+### 3. Maintain your SECRET
+
+Copy your existing `SECRET` value into the new config or `.env` file. If this is a truly fresh deployment with no data from a previous instance, you can generate a new value:
 
 ```bash
 openssl rand -hex 32
 ```
 
-Set this as your `SECRET` in your config or `.env`. This is the site-wide encryption key for secret payloads.
+:::caution
+Changing the `SECRET`  makes all previously encrypted secrets unreadable. If you have any existing secrets from your previous instance, keep your existing `SECRET` value the same.
+:::
+
 
 ### 4. Configure auth mode
 
@@ -158,7 +169,13 @@ Even if you already backed up in the prerequisites. Make a timestamped copy righ
 docker pull onetimesecret/onetimesecret:v0.24.0
 ```
 
-Or clone/checkout the v0.24.0 tag if running from source. Do not start it yet.
+Or clone/checkout the v0.24.0 tag if running from source. Do not start it yet. Run the install script to update dependencies and re-derive child keys:
+
+```bash
+./install.sh
+```
+
+This auto-detects an existing environment and runs `reconcile`: installs gems and node packages, re-derives child keys from your existing `SECRET`, and re-applies RabbitMQ policies if in full mode. You can also run `./install.sh doctor` to check your environment.
 
 ### 4. Update configuration files
 
