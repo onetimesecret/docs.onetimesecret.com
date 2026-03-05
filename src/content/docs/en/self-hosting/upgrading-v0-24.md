@@ -72,7 +72,7 @@ chmod 600 .ots_secret
 This creates a `.ots_secret` file in your project directory containing the key. The `docker run` command in step 5 reads from this file. Alternatively, set the value directly in your `.env` file or config.
 
 :::caution
-Changing the `SECRET`  makes all previously encrypted secrets unreadable. If you have any existing secrets from your previous instance, keep your existing `SECRET` value the same — do not generate a new one.
+Changing the `SECRET` makes all previously encrypted secrets unreadable. If you have any existing secrets from your previous instance, keep your existing `SECRET` value the same — do not generate a new one.
 :::
 
 
@@ -200,7 +200,7 @@ Set your chosen authentication mode (see [Path A, step 4](#4-configure-auth-mode
 
 For full mode, you'll also need to set up PostgreSQL and RabbitMQ before proceeding:
 
-- **PostgreSQL:** Run the initial schema setup before starting the application. See `apps/web/auth/migrations/README.md`.
+- **PostgreSQL:** Run the initial schema setup before starting the application. See [`apps/web/auth/migrations/README.md`](https://github.com/onetimesecret/onetimesecret/tree/develop/apps/web/auth/migrations).
 - **RabbitMQ:** Initialize the queues and exchanges with `bin/ots queues init`.
 
 ### 7. Run the Familia v1-to-v2 data migration
