@@ -6,24 +6,26 @@ description: Compara nuestros planes repletos de funciones que ofrecen compartir
 
 ## Matriz de funciones
 
-| Características/Plan | Identity Plus | Basic | Sin iniciar sesión |
-|---------|----------------|-------------------------|------------|
-| Dominios personalizados | Ilimitados | ❌ | ❌ |
-| Página de inicio de marca | ✅ | ❌ | ❌ |
-| Logotipo y color personalizados | ✅ | ❌ | ❌ |
-| Número de cuentas | 1 | 1 | ❌ |
-| Caducidad del enlace | Hasta 30 días | 14 días | Limitado a 7 días |
-| Acceso a la API | ✅ | ✅ | Limitado |
-| Configuración requerida | Sí (configuración DNS) | No | No |
-| Pago | Sí (parte del plan de identidad) | No | No |
-| Seguridad SSL/TLS | ✅ | ✅ | ✅ |
-| Localidad de los datos | ✅ (UE o EE.UU.) | ✅ (UE o EE.UU.) | ✅ (UE o EE.UU.) |
+| Característica/Plan | Sin iniciar sesión | Basic | Identity Plus |
+|---------|------------|-------------------------|----------------|
+| Dominios personalizados | ❌ | ❌ | Ilimitados |
+| Secretos en la página de inicio | ❌ | ✅ | ✅ |
+| Marca personalizada (logotipo, color) | ❌ | ❌ | ✅ |
+| Número de cuentas | ❌ | 1 | 1 |
+| Caducidad del enlace | Limitado a 7 días | 14 días | Hasta 30 días |
+| Acceso a la API | Limitado | ✅ | ✅ |
+| Configuración requerida | No | ✅ (configuración DNS) | ✅ (configuración DNS) |
+| Pago | No | No | Sí |
+| Cifrado en tránsito y en reposo | ✅ | ✅ | ✅ |
+| Elección de región (UE, RU, EE.UU., CA, NZ) | ✅ | ✅ | ✅ |
 
 
-Para más información sobre actualizaciones de cuenta y precios, visite nuestra [Página de precios](https://onetimesecret.com/pricing).
+Para más información sobre actualizaciones de cuenta y precios, visita nuestra [Página de precios](https://onetimesecret.com/pricing).
 
 
 ## Próximamente
 
-* Correo electrónico personalizado desde detalles con soporte SPF y DKIM
-* Planes de equipo para varios usuarios
+* Planes de equipo para varios usuarios (abril 2026)
+* [Secretary Links](https://onetimesecretary.com) — enlaces seguros de recopilación para recibir información confidencial de cualquier persona, sin necesidad de cuenta
+* Inbound Secrets — una página de destino para que clientes, socios, etc. envíen secretos directamente a una lista preconfigurada de destinatarios
+* Correo electrónico personalizado con soporte SPF y DKIM
