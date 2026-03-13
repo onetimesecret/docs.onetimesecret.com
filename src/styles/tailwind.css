@@ -101,4 +101,16 @@ h4,
 h5,
 h6 {
   font-family: var(--font-brand);
+  letter-spacing: -0.01em;
+}
+
+/* Smooth scroll for anchor navigation */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--sl-nav-height) + 1rem);
+}
+
+/* Selection color */
+::selection {
+  background: color-mix(in srgb, var(--color-accent-500) 25%, transparent);
 }

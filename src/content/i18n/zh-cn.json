@@ -2,10 +2,9 @@
   "nav": {
     "label": {
       "blog": "博客",
-      "custom-domain": "自定义域名",
-      "principles": "原则",
+      "guides": "指南",
       "rest-api": "API",
-      "home": "返回 onetimesecret.com"
+      "self-hosting": "自托管"
     }
   },
   "heading.anchorLabel": "“{{title}}”部分",

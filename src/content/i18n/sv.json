@@ -2,10 +2,9 @@
   "nav": {
     "label": {
       "blog": "Blogg",
-      "custom-domain": "Anpassade domäner",
-      "principles": "Principer",
+      "guides": "Guider",
       "rest-api": "API",
-      "home": "Tillbaka till onetimesecret.com"
+      "self-hosting": "Egenhosting"
     }
   },
   "heading.anchorLabel": "Avsnitt med titeln “{{title}}”",

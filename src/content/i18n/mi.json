@@ -2,10 +2,9 @@
   "nav": {
     "label": {
       "blog": "Rangitaki",
-      "custom-domain": "Rohe Whakaritea",
-      "principles": "Mātāpono",
+      "guides": "Aratohu",
       "rest-api": "API",
-      "home": "Hoki ki onetimesecret.com"
+      "self-hosting": "Whakamahi-ā-kaitiaki"
     }
   },
   "heading.anchorLabel": "Wāhanga e kīia ana ko “{{title}}”",

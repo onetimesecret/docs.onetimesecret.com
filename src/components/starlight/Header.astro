@@ -15,29 +15,26 @@ const shouldRenderSearch =
 	config.pagefind || config.components.Search !== '@astrojs/starlight/components/Search.astro';
 
 const currentLocale = Astro.currentLocale ?? 'en';
-const navLink1 = getRelativeLocaleUrl(currentLocale, 'custom-domains');
-const navLink2 = getRelativeLocaleUrl(currentLocale, 'rest-api');
-const navLink3 = 'https://blog.onetimesecret.com/';
-const homeLink = 'https://onetimesecret.com/';
+const docsHome = getRelativeLocaleUrl(currentLocale, '/');
+const guidesLink = getRelativeLocaleUrl(currentLocale, 'introduction');
+const apiLink = getRelativeLocaleUrl(currentLocale, 'rest-api');
+const selfHostingLink = getRelativeLocaleUrl(currentLocale, 'self-hosting');
+const blogLink = 'https://blog.onetimesecret.com/';
 
 ---
 
 <div class="header sl-flex">
 	<div class="title-wrapper sl-flex">
     <SiteTitle />
+    <a href={docsHome} class="docs-badge">docs</a>
 	</div>
-	<div class="sl-flex print:hidden">
+	<div class="sl-flex center-group print:hidden">
 		{shouldRenderSearch && <Search />}
     <nav class="nav-links">
-      <a href={navLink1}>{Astro.locals.t('nav.label.custom-domain')}</a>
-      <a href={navLink2}>{Astro.locals.t('nav.label.rest-api')}</a>
-      <a href={navLink3}>{Astro.locals.t('nav.label.blog')}</a>
-      <a href={homeLink} class="home-link" target="_self" aria-label={Astro.locals.t('nav.label.home')}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-          <polyline points="9 22 9 12 15 12 15 22"></polyline>
-        </svg>
-      </a>
+      <a href={guidesLink}>{Astro.locals.t('nav.label.guides')}</a>
+      <a href={apiLink}>{Astro.locals.t('nav.label.rest-api')}</a>
+      <a href={selfHostingLink}>{Astro.locals.t('nav.label.self-hosting')}</a>
+      <a href={blogLink}>{Astro.locals.t('nav.label.blog')}</a>
     </nav>
 	</div>
 	<div class="sl-hidden md:sl-flex print:hidden right-group">
@@ -64,6 +61,30 @@ const homeLink = 'https://onetimesecret.com/';
 		padding: 0.25rem;
 		margin: -0.25rem;
 		min-width: 0;
+		align-items: center;
+		gap: 0.625rem;
+	}
+
+	.docs-badge {
+		display: none;
+		font-size: 0.6875rem;
+		font-weight: 600;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: var(--sl-color-text-accent);
+		background: color-mix(in srgb, var(--sl-color-text-accent) 12%, transparent);
+		padding: 0.1875rem 0.5rem;
+		border-radius: 5px;
+		border: 1px solid color-mix(in srgb, var(--sl-color-text-accent) 20%, transparent);
+		line-height: 1.2;
+		white-space: nowrap;
+		transition: background 0.15s ease, border-color 0.15s ease;
+	}
+
+	.docs-badge:hover {
+		background: color-mix(in srgb, var(--sl-color-text-accent) 20%, transparent);
+		border-color: color-mix(in srgb, var(--sl-color-text-accent) 35%, transparent);
 	}
 
 	.right-group,
@@ -73,32 +94,44 @@ const homeLink = 'https://onetimesecret.com/';
 	}
 	.social-icons::after {
 		content: '';
-		height: 2rem;
-		border-inline-end: 1px solid var(--sl-color-gray-5);
+		height: 1.5rem;
+		border-inline-end: 1px solid var(--sl-color-hairline-light);
 	}
 
- .nav-links {
-    display: none;
-    gap: 1.5rem;
-    margin-left: 1rem;
-  }
-  .nav-links a {
-    color: var(--sl-color-text);
-    text-decoration: none;
-    font-size: var(--sl-text-lg);
-    font-weight: 500;
-    transition: color 0.2s ease;
-  }
-  .nav-links a:hover {
-    color: var(--sl-color-text-accent);
-  }
-  .home-link {
-    display: flex;
+  .center-group {
     align-items: center;
+    gap: 0.5rem;
   }
+
+  .nav-links {
+    display: none;
+    gap: 0.125rem;
+    align-items: center;
+    margin-left: 0.25rem;
+  }
+
+  .nav-links a {
+    color: var(--sl-color-gray-3);
+    text-decoration: none;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    padding: 0.3rem 0.625rem;
+    border-radius: 6px;
+    transition: color 0.15s ease, background-color 0.15s ease;
+    white-space: nowrap;
+  }
+
+  .nav-links a:hover {
+    color: var(--sl-color-text);
+    background: color-mix(in srgb, var(--sl-color-text) 7%, transparent);
+  }
+
   @media (min-width: 768px) {
     .nav-links {
       display: flex;
+    }
+    .docs-badge {
+      display: inline-block;
     }
   }
 

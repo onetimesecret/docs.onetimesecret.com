@@ -2,10 +2,9 @@
   "nav": {
     "label": {
       "blog": "Блог",
-      "custom-domain": "Власні домени",
-      "principles": "Принципи",
+      "guides": "Посібники",
       "rest-api": "API",
-      "home": "Повернутися на onetimesecret.com"
+      "self-hosting": "Самостійний хостинг"
     }
   },
   "heading.anchorLabel": "Розділ під назвою «{{title}}»",

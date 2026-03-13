@@ -2,10 +2,9 @@
   "nav": {
     "label": {
       "blog": "Blog",
-      "custom-domain": "Benutzerdefinierte Domains",
-      "principles": "Prinzipien",
+      "guides": "Anleitungen",
       "rest-api": "API",
-      "home": "onetimesecret.com"
+      "self-hosting": "Selbst-Hosting"
     }
   },
   "sidebar": {

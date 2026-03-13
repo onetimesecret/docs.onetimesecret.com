@@ -2,10 +2,9 @@
   "nav": {
     "label": {
       "blog": "Blog",
-      "custom-domain": "Dominios Personalizados",
-      "principles": "Principios",
+      "guides": "Guías",
       "rest-api": "API",
-      "home": "Volver a onetimesecret.com"
+      "self-hosting": "Autoalojamiento"
     }
   },
   "sidebar": {

@@ -2,10 +2,9 @@
   "nav": {
     "label": {
       "blog": "ブログ",
-      "custom-domain": "カスタムドメイン",
-      "principles": "原則",
+      "guides": "ガイド",
       "rest-api": "API",
-      "home": "onetimesecret.comに戻る"
+      "self-hosting": "セルフホスティング"
     }
   },
   "heading.anchorLabel": "「{{title}}」セクション",

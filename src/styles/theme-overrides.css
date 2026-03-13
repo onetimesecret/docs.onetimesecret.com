@@ -1,54 +1,204 @@
 /* src/styles/theme-overrides.css */
 
-/* Set ALL possible Starlight accent-related CSS custom properties */
+/* ========================================================================
+   Starlight Theme Overrides
+   Modern SaaS documentation styling
+   ======================================================================== */
+
+/* --- Accent Colors --- */
 :root {
-  /* Core accent variables */
   --sl-color-accent-low: #fcf4e8;
   --sl-color-accent: #dc4a22;
   --sl-color-accent-high: #a32d12;
-
-  /* Text accent variable - this is what the button is actually using */
-  --sl-color-text-accent: #dc4a22 !important;
+  --sl-color-text-accent: #dc4a22;
 }
 
 :root[data-theme="dark"] {
   --sl-color-accent-low: #85200c;
   --sl-color-accent: #dc4a22;
   --sl-color-accent-high: #f0c39e;
-  --sl-color-text-accent: #dc4a22 !important;
+  --sl-color-text-accent: #e8663f;
 }
 
-/* Target the exact selector from your build */
-.sl-link-button:where(.astro-w4zgqqgl).primary {
-  background: var(--sl-color-text-accent) !important;
-  border-color: var(--sl-color-text-accent) !important;
-  color: var(--sl-color-black) !important;
+
+/* --- Header --- */
+header.header {
+  border-bottom: 1px solid var(--sl-color-hairline-shade);
 }
 
-.sl-link-button:where(.astro-w4zgqqgl).primary:hover {
-  background: #a32d12 !important;
-  border-color: #a32d12 !important;
+
+/* --- Sidebar --- */
+
+/* Sidebar group headings (summary elements) */
+.sidebar summary {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
-/* Additional fallback for any button that might use different classes */
+/* Sidebar links - refined spacing and transitions */
+.sidebar a {
+  font-size: 0.8125rem;
+  border-radius: 5px;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+/* Active sidebar link - accent indicator */
+.sidebar a[aria-current="page"] {
+  background: color-mix(in srgb, var(--sl-color-text-accent) 10%, transparent);
+  font-weight: 600;
+  position: relative;
+}
+
+/* Left accent bar on active link */
+.sidebar a[aria-current="page"]::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.25rem;
+  bottom: 0.25rem;
+  width: 2px;
+  background: var(--sl-color-text-accent);
+  border-radius: 1px;
+}
+
+/* Sidebar hover state */
+.sidebar a:not([aria-current="page"]):hover {
+  background: color-mix(in srgb, var(--sl-color-text) 6%, transparent);
+}
+
+
+/* --- Primary Buttons --- */
 .sl-link-button.primary {
-  background: #dc4a22 !important;
-  border-color: #dc4a22 !important;
+  background: var(--sl-color-text-accent);
+  border-color: var(--sl-color-text-accent);
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.15s ease, transform 0.1s ease;
 }
 
-/* Card icon customization */
-.sl-card .icon {
-  background: var(--sl-color-accent) !important;
-  color: white !important;
+.sl-link-button.primary:hover {
+  background: #c43d1b;
+  border-color: #c43d1b;
+  transform: translateY(-1px);
 }
 
-/* Alternative: target specific card icons by their container */
-.sl-card .icon svg {
-  color: white !important;
+/* Secondary / minimal buttons */
+.sl-link-button.minimal {
+  border-radius: 8px;
+  transition: color 0.15s ease, background 0.15s ease;
 }
 
-/* Dark theme card icons */
-:root[data-theme="dark"] .sl-card .icon {
-  background: var(--sl-color-accent-high) !important;
-  color: var(--sl-color-black) !important;
+.sl-link-button.minimal:hover {
+  background: color-mix(in srgb, var(--sl-color-text) 6%, transparent);
+}
+
+
+/* --- Cards --- */
+.card {
+  border-radius: 10px;
+  border: 1px solid var(--sl-color-hairline-light);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  border-color: color-mix(in srgb, var(--sl-color-text-accent) 30%, var(--sl-color-hairline-light));
+  box-shadow: 0 2px 12px color-mix(in srgb, var(--sl-color-text-accent) 6%, transparent);
+}
+
+.card .card-icon {
+  color: var(--sl-color-text-accent);
+}
+
+
+/* --- Content Typography --- */
+
+/* Inline code styling */
+:not(pre) > code {
+  background: color-mix(in srgb, var(--sl-color-text) 8%, transparent);
+  border-radius: 4px;
+  padding: 0.15em 0.35em;
+  font-size: 0.875em;
+}
+
+/* Content links */
+.sl-markdown-content a:not(.sl-link-button) {
+  text-decoration-color: color-mix(in srgb, var(--sl-color-text-accent) 40%, transparent);
+  text-underline-offset: 2px;
+  transition: text-decoration-color 0.15s ease, color 0.15s ease;
+}
+
+.sl-markdown-content a:not(.sl-link-button):hover {
+  text-decoration-color: var(--sl-color-text-accent);
+}
+
+
+/* --- Table of Contents --- */
+starlight-toc a {
+  font-size: 0.8125rem;
+  transition: color 0.15s ease;
+}
+
+starlight-toc a[aria-current="true"] {
+  color: var(--sl-color-text-accent);
+  font-weight: 600;
+}
+
+
+/* --- Pagination (prev/next) --- */
+.pagination-links a {
+  border-radius: 8px;
+  border: 1px solid var(--sl-color-hairline-light);
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.pagination-links a:hover {
+  border-color: color-mix(in srgb, var(--sl-color-text-accent) 30%, var(--sl-color-hairline-light));
+  background: color-mix(in srgb, var(--sl-color-text-accent) 4%, transparent);
+}
+
+
+/* --- Edit Link --- */
+a[href*="github.com"][href*="/edit/"] {
+  font-size: 0.8125rem;
+  opacity: 0.65;
+  transition: opacity 0.15s ease;
+}
+
+a[href*="github.com"][href*="/edit/"]:hover {
+  opacity: 1;
+}
+
+
+/* --- Global Polish --- */
+
+/* Smooth transitions on theme toggle */
+:root {
+  transition: background-color 0.2s ease, color 0.15s ease;
+}
+
+/* Better focus ring */
+:focus-visible {
+  outline: 2px solid var(--sl-color-text-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Scrollbar styling for sidebar (Webkit) */
+.sidebar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--sl-color-text) 15%, transparent);
+  border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--sl-color-text) 25%, transparent);
 }
