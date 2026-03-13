@@ -6,18 +6,18 @@ description: Compare our feature-rich plans offering secure secret sharing with 
 
 ## Feature Matrix
 
-| Feature/Plan | Identity Plus | Basic | Not signed in |
-|---------|----------------|-------------------------|------------|
-| Custom Domains | Unlimited | ❌ | ❌ |
-| Branded Homepage | ✅ | ❌ | ❌ |
-| Custom logo, color | ✅ | ❌ | ❌ |
-| Number of Accounts | 1 | 1 | ❌ |
-| Link Expiration | Up to 30 days | 14 days | Limited to 7 days |
-| API Access | ✅ | ✅ | Limited |
-| Setup Required | Yes (DNS configuration) | No | No |
-| Paid | Yes (part of Identity plan) | No | No |
-| SSL/TLS Security | ✅ | ✅ | ✅ |
-| Data Locality | ✅ (EU, UK, US, CA, NZ) | ✅ (EU, UK, US, CA, NZ) | ✅ (EU, UK, US, CA, NZ) |
+| Feature/Plan | Not signed in | Basic | Identity Plus |
+|---------|------------|-------------------------|----------------|
+| Custom Domains | ❌ | ❌ | Unlimited |
+| Homepage Secrets | ❌ | ✅ | ✅ |
+| Custom Branding (logo, color) | ❌ | ❌ | ✅ |
+| Number of Accounts | ❌ | 1 | 1 |
+| Link Expiration | Limited to 7 days | 14 days | Up to 30 days |
+| API Access | Limited | ✅ | ✅ |
+| Setup Required | No | ✅ (DNS configuration) | ✅ (DNS configuration) |
+| Paid | No | No | Yes |
+| Encrypted in transit and at rest | ✅ | ✅ | ✅ |
+| Choice of Region (EU, UK, US, CA, NZ) | ✅ | ✅ | ✅ |
 
 
 For more information on account upgrades and pricing, please visit our [Pricing Page](https://onetimesecret.com/pricing).
@@ -25,5 +25,7 @@ For more information on account upgrades and pricing, please visit our [Pricing 
 
 ## Coming Soon
 
+* Team plans for multiple users (April 2026)
+* [Secretary Links](https://onetimesecretary.com) — secure collection links for receiving sensitive information from anyone, no account required
+* Inbound Secrets — a destination page for customers, clients, etc. to send secrets directly to a preconfigured list of recipients
 * Custom email from details with SPF and DKIM support
-* Team plans for multiple users

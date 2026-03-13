@@ -116,12 +116,16 @@ function createGroup(key, items = [], collapsed = false) {
 export const sidebar = [
   createLink("home", "/"),
 
-  createGroup("introduction", [createLink("gettingStarted", "introduction")]),
+  createGroup("introduction", [
+    createLink("gettingStarted", "introduction"),
+    createLink("guides", "introduction/guides"),
+  ]),
 
   createGroup("secretLinks", [
     createLink("overview", "secret-links"),
     createLink("whyUseSecretLinks", "secret-links/why-use-secret-links"),
     createLink("useCases", "secret-links/use-cases"),
+    createLink("comparePlans", "custom-domains/compare-plans"),
   ]),
 
   createGroup("customDomains", [
@@ -133,7 +137,6 @@ export const sidebar = [
       variant: "tip",
       class: "small",
     }),
-    createLink("comparePlans", "custom-domains/compare-plans"),
     createLink("useCases", "custom-domains/use-cases"),
   ]),
 

@@ -22,8 +22,10 @@ Onetime Secret provides a straightforward solution for sharing sensitive informa
 5. Optional passphrase: Add an extra security layer to shared secrets
 6. Open-source: Review our codebase for enhanced transparency
 
-Explore our Bonus Content to learn how Onetime Secret can address your secure communication needs efficiently and discreetly.
+## Where to start
 
-## Get Started
-
-Ready to dive in? Check out our [documentation](/en/docs-overview) for detailed instructions on using Onetime Secret effectively. If you have any questions or feedback, feel free to [contact us](https://onetimesecret.com/feedback) directly.
+- **Use the service** — Head to [onetimesecret.com](https://onetimesecret.com/) and share a secret in seconds
+- **Browse the docs** — See all [Guides](/en/introduction/guides/) for walkthroughs and references
+- **Integrate via API** — Check the [REST API](/en/rest-api/) for programmatic access
+- **Run your own instance** — Follow the [Self-Hosting](/en/self-hosting/) guide
+- **Questions?** — [Contact us](https://onetimesecret.com/feedback) directly
