@@ -1,0 +1,95 @@
+---
+title: REST API
+description: REST API Onetime Secret oferuje elastyczne możliwości udostępniania sekretów, obsługując zarówno uwierzytelnionych, jak i anonimowych użytkowników. Uwierzytelnieni użytkownicy uzyskują zaawansowane funkcje i wyższe limity użycia, podczas gdy nieuwierzytelnieni użytkownicy mogą szybko udostępniać sekrety z podstawową funkcjonalnością.
+---
+
+_Zaktualizowano 2025-04-29_
+
+{% aside type="tip" %}
+Testuj i eksploruj endpointy API za pomocą naszej interaktywnej [kolekcji Postman](https://docs.onetimesecret.dev/).
+{% /aside %}
+
+## Bazowy URI
+
+`https://REGION.onetimesecret.com/api`
+
+Gdzie `REGION` to jedno z: `ca`, `eu`, `nz`, `uk` lub `us`.
+
+<!-- ::callout{icon="i-heroicons-globe-alt"} -->
+**Lokalizacja danych i wybór regionu**
+- Wybierz region (np. UE [`eu.onetimesecret.com`](https://eu.onetimesecret.com/), UK [`uk.onetimesecret.com`](https://uk.onetimesecret.com/) lub US [`us.onetimesecret.com`](https://us.onetimesecret.com/)). Zobacz [Regiony](/pl/regions), aby poznać wszystkie opcje.
+- Weź pod uwagę takie czynniki jak suwerenność danych, opóźnienia i wymagania dotyczące zgodności
+- **UWAGA:** Domyślny `onetimesecret.com` nadal działa i kieruje do aktywnego centrum danych, ale zalecane jest korzystanie z konkretnej lokalizacji, ponieważ ta funkcjonalność może zostać wycofana w przyszłości.
+
+## Uwierzytelnianie
+Obsługujemy dwa tryby korzystania z API:
+
+### Dostęp uwierzytelniony
+
+`https://USERNAME:APITOKEN@REGION.onetimesecret.com/api`
+
+- Użyj uwierzytelniania HTTP Basic, aby uzyskać pełne możliwości API
+- Nazwa użytkownika to login Twojego konta
+- Hasło to token API ze strony Twojego konta
+
+### Dostęp anonimowy
+
+`https://REGION.onetimesecret.com/api`
+
+- Ograniczona funkcjonalność dostępna bez uwierzytelniania
+- Idealny do szybkiego, jednorazowego udostępniania sekretów
+- Może być używany zarówno do tworzenia, jak i pobierania sekretów
+
+## Lokalizacja danych
+Onetime Secret obsługuje wiele geograficznych centrów danych. Stosujemy politykę zerowego udostępniania danych między regionami, zapewniając pełną izolację danych. Wybierz odpowiednie centrum danych dla swoich potrzeb:
+
+- **Centrum danych CA:** [ca.onetimesecret.com](https://ca.onetimesecret.com/)
+- **Centrum danych UE:** [eu.onetimesecret.com](https://eu.onetimesecret.com/)
+- **Centrum danych NZ:** [nz.onetimesecret.com](https://nz.onetimesecret.com/)
+- **Centrum danych UK:** [uk.onetimesecret.com](https://uk.onetimesecret.com/)
+- **Centrum danych US:** [us.onetimesecret.com](https://us.onetimesecret.com/)
+
+### Ważne uwagi:
+- Możesz wybrać konkretną lokalizację danych, przechodząc bezpośrednio do żądanej domeny
+- Lokalizacja Twojego sekretu jest zawsze widoczna w wygenerowanym linku (np. `us.onetimesecret.com/secret/abcd1234`)
+- **UWAGA:** Obecnie dostęp przez `onetimesecret.com/api` nadal działa, ale zalecane jest korzystanie z konkretnej lokalizacji, ponieważ ta funkcjonalność może zostać wycofana w przyszłości.
+
+## Niestandardowe domeny
+Onetime Secret obsługuje konfiguracje niestandardowych domen dla organizacji ze specyficznymi wymaganiami sieciowymi lub brandingowymi poprzez nasz plan [Identity Plus](https://onetimesecret.com/pricing).
+
+### Korzyści z niestandardowych domen
+- **Prywatny branding:** Użyj własnej domeny (np. `secrets.example.com`) do dostępu API i udostępniania sekretów
+- **Spójne doświadczenie użytkownika:** Zachowaj wizualną tożsamość i zaufanie swojej organizacji wobec klientów i partnerów.
+- **Włączenie do szkoleń pracowników:** Użyj niestandardowych domen, aby wzmocnić praktyki bezpieczeństwa i przepływy pracy w Twojej organizacji.
+
+<!-- ::callout{icon="i-heroicons-lock-closed"} -->
+**Funkcja Premium**
+Niestandardowe domeny są dostępne w naszym planie [Identity Plus](https://onetimesecret.com/pricing). Konfiguracja w kilka minut dzięki łatwym w użyciu opcjom konfiguracyjnym. [Dowiedz się więcej](/pl/custom-domains/).
+
+### Użycie API z niestandardowymi domenami
+Podczas korzystania z niestandardowej domeny wszystkie endpointy API zachowują tę samą strukturę:
+
+`https://secrets.example.com/api`
+
+
+## Status systemu
+
+`GET https://REGION.onetimesecret.com/api/v1/status`
+Aktualny status systemu.
+
+**Parametry:** Brak
+
+```bash
+$ curl -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/status
+{"status":"nominal"}
+```
+
+```bash
+$ curl -u 'USERNAME:APITOKEN' https://uk.onetimesecret.com/api/v1/status
+{"status":"nominal"}
+```
+
+```bash
+$ curl -u 'USERNAME:APITOKEN' https://us.onetimesecret.com/api/v1/status
+{"status":"nominal"}
+```
