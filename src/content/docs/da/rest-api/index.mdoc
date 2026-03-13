@@ -1,0 +1,95 @@
+---
+title: REST API
+description: Onetime Secrets REST API giver fleksible muligheder for besked deling og understøtter både godkendt og anonym brug. Godkendte brugere får avancerede funktioner og højere brugsgrænser, mens ikke-godkendte brugere hurtigt kan dele beskeder med grundlæggende funktionalitet.
+---
+
+_Opdateret 2025-04-29_
+
+{% aside type="tip" %}
+Test og udforsk API-endepunkterne med vores interaktive [Postman Collection](https://docs.onetimesecret.dev/).
+{% /aside %}
+
+## Basis-URI
+
+`https://REGION.onetimesecret.com/api`
+
+Hvor `REGION` er en af `ca`, `eu`, `nz`, `uk` eller `us`.
+
+<!-- ::callout{icon="i-heroicons-globe-alt"} -->
+**Datalokation og regionsvalg**
+- Vælg en region (f.eks. EU [`eu.onetimesecret.com`](https://eu.onetimesecret.com/), UK [`uk.onetimesecret.com`](https://uk.onetimesecret.com/) eller US [`us.onetimesecret.com`](https://us.onetimesecret.com/)). Se [Regioner](/da/regions) for alle muligheder.
+- Overvej faktorer som datasuverænitet, latens og overholdelseskrav
+- **BEMÆRK:** Standard `onetimesecret.com` er stadig i drift og dirigerer til et aktivt datacenter, men det anbefales at bruge en specifik lokation, da denne funktionalitet kan blive udfaset i fremtiden.
+
+## Godkendelse
+Vi understøtter to tilstande for API-brug:
+
+### Godkendt adgang
+
+`https://USERNAME:APITOKEN@REGION.onetimesecret.com/api`
+
+- Brug HTTP Basic Authentication for fuld API-funktionalitet
+- Brugernavnet er dit kontoLogin
+- Adgangskoden er API-tokenet fra din kontoside
+
+### Anonym adgang
+
+`https://REGION.onetimesecret.com/api`
+
+- Begrænset funktionalitet tilgængelig uden godkendelse
+- Ideel til hurtig engangsdeling af beskeder
+- Kan bruges til både oprettelse og hentning af beskeder
+
+## Datalokation
+Onetime Secret understøtter flere geografiske datacentre. Vi følger en politik om nul datadeling mellem regioner, hvilket sikrer fuldstændig dataisolering. Vælg det rette datacenter til dine behov:
+
+- **CA-datacenter:** [ca.onetimesecret.com](https://ca.onetimesecret.com/)
+- **EU-datacenter:** [eu.onetimesecret.com](https://eu.onetimesecret.com/)
+- **NZ-datacenter:** [nz.onetimesecret.com](https://nz.onetimesecret.com/)
+- **UK-datacenter:** [uk.onetimesecret.com](https://uk.onetimesecret.com/)
+- **US-datacenter:** [us.onetimesecret.com](https://us.onetimesecret.com/)
+
+### Vigtige overvejelser:
+- Du kan vælge en specifik datalokation ved at navigere direkte til det ønskede domæne
+- Placeringen af din besked fremgår altid tydeligt af det genererede link (f.eks. `us.onetimesecret.com/secret/abcd1234`)
+- **BEMÆRK:** I øjeblikket er adgang via `onetimesecret.com/api` stadig i drift, men det anbefales at bruge en specifik lokation, da denne funktionalitet kan blive udfaset i fremtiden.
+
+## Brugerdefinerede domæner
+Onetime Secret understøtter brugerdefinerede domænekonfigurationer for organisationer med specifikke netværks- eller brandingkrav via vores [Identity Plus](https://onetimesecret.com/pricing)-plan.
+
+### Fordele ved brugerdefinerede domæner
+- **Privat branding:** Brug dit eget domæne (f.eks. `secrets.example.com`) til API-adgang og besked deling
+- **Ensartet brugeroplevelse:** Bevar din organisations visuelle identitet og troværdighed over for kunder og partnere.
+- **Inkluder i medarbejdertræning:** Brug brugerdefinerede domæner til at styrke din organisations sikkerhedspraksis og arbejdsgange.
+
+<!-- ::callout{icon="i-heroicons-lock-closed"} -->
+**Premiumfunktion**
+Brugerdefinerede domæner er tilgængelige på vores [Identity Plus](https://onetimesecret.com/pricing)-plan. Opsætning på få minutter med vores brugervenlige konfigurationsmuligheder. [Læs mere](/da/custom-domains/).
+
+### API-brug med brugerdefinerede domæner
+Når du bruger et brugerdefineret domæne, følger alle API-endepunkter den samme struktur:
+
+`https://secrets.example.com/api`
+
+
+## Systemstatus
+
+`GET https://REGION.onetimesecret.com/api/v1/status`
+Aktuel status for systemet.
+
+**Parametre:** Ingen
+
+```bash
+$ curl -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/status
+{"status":"nominal"}
+```
+
+```bash
+$ curl -u 'USERNAME:APITOKEN' https://uk.onetimesecret.com/api/v1/status
+{"status":"nominal"}
+```
+
+```bash
+$ curl -u 'USERNAME:APITOKEN' https://us.onetimesecret.com/api/v1/status
+{"status":"nominal"}
+```

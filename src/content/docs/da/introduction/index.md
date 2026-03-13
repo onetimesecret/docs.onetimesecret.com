@@ -22,8 +22,10 @@ Onetime Secret tilbyder en ligetil løsning til sikker deling af følsom informa
 5. Valgfri adgangssætning: Tilføj et ekstra sikkerhedslag til delte beskeder
 6. Open-source: Gennemgå vores kodebase for øget gennemsigtighed
 
-Udforsk vores bonusindhold for at lære, hvordan Onetime Secret kan imødekomme dine sikre kommunikationsbehov effektivt og diskret.
+## Hvor skal du starte
 
-## Kom i gang
-
-Klar til at dykke ned i det? Tjek vores [dokumentation](/da/docs-overview) for detaljerede instruktioner om effektiv brug af Onetime Secret. Hvis du har spørgsmål eller feedback, er du velkommen til at [kontakte os](https://onetimesecret.com/feedback) direkte.
+- **Brug tjenesten** — Gå til [onetimesecret.com](https://onetimesecret.com/) og del en besked på få sekunder
+- **Gennemse dokumentationen** — Se alle [Vejledninger](/da/introduction/guides/) for gennemgange og referencer
+- **Integrer via API** — Tjek [REST API](/da/rest-api/) for programmatisk adgang
+- **Kør din egen instans** — Følg vejledningen til [Selv-hosting](/da/self-hosting/)
+- **Spørgsmål?** — [Kontakt os](https://onetimesecret.com/feedback) direkte
