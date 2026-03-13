@@ -7,6 +7,16 @@ sidebar:
 
 Kör din egen privata instans av Onetime Secret med full kontroll över din data, säkerhet och distribution.
 
+:::caution[Mars 2026 — Dokumentation för självhosting under omställning]
+Vi är mitt i en övergång mellan **v0.23** och **v0.24** (`main`-grenen). En del av vår dokumentation för självhosting är inaktuell och vi [arbetar aktivt med att förbättra den](https://github.com/onetimesecret/onetimesecret/issues/2628).
+
+**Om du bara vill få igång något** rekommenderar vi `rel/0.23`-grenen. Den behöver bara ett par miljövariabler och Redis, och vi skickar fortfarande aktivt ut korrigeringar och mindre uppdateringar till den.
+
+```bash
+git clone -b rel/0.23 https://github.com/onetimesecret/onetimesecret.git
+```
+:::
+
 ## Varför självhosta?
 
 Självhosting av Onetime Secret ger dig:
