@@ -7,6 +7,16 @@ sidebar:
 
 Verileriniz, güvenliğiniz ve dağıtımınız üzerinde tam kontrolle kendi özel Onetime Secret örneğinizi çalıştırın.
 
+:::caution[Mart 2026 — Kendi sunucunuzda barındırma belgeleri geçiş sürecinde]
+**v0.23** ile **v0.24** (`main` dalı) arasında geçiş sürecindeyiz. Kendi sunucunuzda barındırma belgelerimizin bir kısmı güncelliğini yitirmiş olup [iyileştirmek için aktif olarak çalışıyoruz](https://github.com/onetimesecret/onetimesecret/issues/2628).
+
+**Sadece çalışan bir şey istiyorsanız**, `rel/0.23` dalını öneriyoruz. Yalnızca birkaç ortam değişkeni ve Redis gerektirir ve bu dala hâlâ aktif olarak düzeltmeler ve küçük güncellemeler gönderiyoruz.
+
+```bash
+git clone -b rel/0.23 https://github.com/onetimesecret/onetimesecret.git
+```
+:::
+
 ## Neden Kendi Sunucunuzda Barındırmalısınız?
 
 Onetime Secret'ı kendi sunucunuzda barındırmak size şunları sağlar:

@@ -1,0 +1,95 @@
+---
+title: REST API
+description: Onetime Secret'ın REST API'si, hem kimlik doğrulamalı hem de anonim kullanımı destekleyen esnek gizli mesaj paylaşım yetenekleri sunar. Kimlik doğrulamalı kullanıcılar gelişmiş özellikler ve daha yüksek kullanım limitlerine sahip olurken, kimlik doğrulamasız kullanıcılar temel işlevsellikle hızlıca gizli mesaj paylaşabilir.
+---
+
+_Güncelleme: 2025-04-29_
+
+{% aside type="tip" %}
+API uç noktalarını interaktif [Postman Koleksiyonumuz](https://docs.onetimesecret.dev/) ile test edin ve keşfedin.
+{% /aside %}
+
+## Temel URI
+
+`https://REGION.onetimesecret.com/api`
+
+Burada `REGION`, `ca`, `eu`, `nz`, `uk` veya `us` değerlerinden biridir.
+
+<!-- ::callout{icon="i-heroicons-globe-alt"} -->
+**Veri Yerelliği ve Bölge Seçimi**
+- Bir bölge seçin (ör. AB [`eu.onetimesecret.com`](https://eu.onetimesecret.com/), İngiltere [`uk.onetimesecret.com`](https://uk.onetimesecret.com/) veya ABD [`us.onetimesecret.com`](https://us.onetimesecret.com/)). Tüm seçenekler için [Bölgeler](/tr/regions) sayfasına bakın.
+- Veri egemenliği, gecikme süresi ve uyumluluk gereksinimlerini göz önünde bulundurun
+- **NOT:** Varsayılan `onetimesecret.com` hâlâ çalışmaktadır ve aktif bir veri merkezine yönlendirir; ancak bu işlevsellik gelecekte kullanımdan kaldırılabileceğinden belirli bir bölge kullanılması önerilir.
+
+## Kimlik Doğrulama
+İki API kullanım modunu destekliyoruz:
+
+### Kimlik Doğrulamalı Erişim
+
+`https://USERNAME:APITOKEN@REGION.onetimesecret.com/api`
+
+- Tam API yetenekleri için HTTP Temel Kimlik Doğrulama kullanın
+- Kullanıcı adı, hesap giriş bilginizdir
+- Şifre, hesap sayfanızdaki API belirtecidir
+
+### Anonim Erişim
+
+`https://REGION.onetimesecret.com/api`
+
+- Kimlik doğrulama olmadan sınırlı işlevsellik kullanılabilir
+- Hızlı, tek seferlik gizli mesaj paylaşımı için idealdir
+- Hem gizli mesaj oluşturmak hem de almak için kullanılabilir
+
+## Veri Yerelliği
+Onetime Secret birden fazla coğrafi veri merkezini destekler. Bölgeler arası sıfır veri paylaşım politikası uygulayarak tam veri izolasyonu sağlarız. İhtiyaçlarınıza uygun veri merkezini seçin:
+
+- **KA Veri Merkezi:** [ca.onetimesecret.com](https://ca.onetimesecret.com/)
+- **AB Veri Merkezi:** [eu.onetimesecret.com](https://eu.onetimesecret.com/)
+- **YZ Veri Merkezi:** [nz.onetimesecret.com](https://nz.onetimesecret.com/)
+- **İng. Veri Merkezi:** [uk.onetimesecret.com](https://uk.onetimesecret.com/)
+- **ABD Veri Merkezi:** [us.onetimesecret.com](https://us.onetimesecret.com/)
+
+### Önemli Hususlar:
+- Doğrudan istediğiniz alan adına giderek belirli bir veri yerelliği seçebilirsiniz
+- Gizli mesajınızın konumu, oluşturulan bağlantıdan her zaman bellidir (ör. `us.onetimesecret.com/secret/abcd1234`)
+- **NOT:** Şu anda `onetimesecret.com/api` üzerinden erişim hâlâ çalışmaktadır ancak bu işlevsellik gelecekte kullanımdan kaldırılabileceğinden belirli bir bölge kullanılması önerilir.
+
+## Özel Alan Adları
+Onetime Secret, [Identity Plus](https://onetimesecret.com/pricing) planımız aracılığıyla belirli ağ veya markalama gereksinimlerine sahip kuruluşlar için özel alan adı yapılandırmalarını destekler.
+
+### Özel Alan Adı Avantajları
+- **Özel Markalama:** API erişimi ve gizli mesaj paylaşımı için kendi alan adınızı kullanın (ör. `secrets.example.com`)
+- **Tutarlı Kullanıcı Deneyimi:** Müşterileriniz ve iş ortaklarınız nezdinde kuruluşunuzun görsel ve güven kimliğini koruyun.
+- **Çalışan eğitiminde kullanım:** Kuruluşunuzun güvenlik uygulamalarını ve iş akışlarını pekiştirmek için özel alan adlarını kullanın.
+
+<!-- ::callout{icon="i-heroicons-lock-closed"} -->
+**Premium Özellik**
+Özel alan adları [Identity Plus](https://onetimesecret.com/pricing) planımızda mevcuttur. Kullanımı kolay yapılandırma seçeneklerimizle dakikalar içinde kurulum yapın. [Daha fazla bilgi](/tr/custom-domains/).
+
+### Özel Alan Adlarıyla API Kullanımı
+Özel alan adı kullanırken tüm API uç noktaları aynı yapıyı izler:
+
+`https://secrets.example.com/api`
+
+
+## Sistem Durumu
+
+`GET https://REGION.onetimesecret.com/api/v1/status`
+Sistemin mevcut durumu.
+
+**Parametreler:** Yok
+
+```bash
+$ curl -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/status
+{"status":"nominal"}
+```
+
+```bash
+$ curl -u 'USERNAME:APITOKEN' https://uk.onetimesecret.com/api/v1/status
+{"status":"nominal"}
+```
+
+```bash
+$ curl -u 'USERNAME:APITOKEN' https://us.onetimesecret.com/api/v1/status
+{"status":"nominal"}
+```
