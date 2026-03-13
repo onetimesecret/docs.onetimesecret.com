@@ -6,7 +6,7 @@ description: Compare our feature-rich plans offering secure secret sharing with 
 
 ## Feature Matrix
 
-| Feature/Plan | Identity Plus | Basic | Anonymous |
+| Feature/Plan | Identity Plus | Basic | Not signed in |
 |---------|----------------|-------------------------|------------|
 | Custom Domains | Unlimited | ❌ | ❌ |
 | Branded Homepage | ✅ | ❌ | ❌ |

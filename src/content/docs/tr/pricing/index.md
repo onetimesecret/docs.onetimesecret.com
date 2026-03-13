@@ -25,8 +25,6 @@ Herkes için güvenli, tek kullanımlık paylaşım.
 
 ### Identity Plus
 
-**$35/ay veya $365/yıl**
-
 Markanızı yükselten ve iletişimi basitleştiren güvenli paylaşım.
 
 **Özellikler:**
@@ -35,13 +33,11 @@ Markanızı yükselten ve iletişimi basitleştiren güvenli paylaşım.
 - Gelişmiş gizlilik özellikleri
 - Tam API erişimi
 
-[Bu planı seçin](https://onetimesecret.com/plans/identity)
+[Güncel fiyatları görün](https://onetimesecret.com/pricing) | [Bu planı seçin](https://onetimesecret.com/plans/identity)
 
 ### Global Elite
 
-**Yakında**
-
-Veri uyumluluk kontrolleri ve sınırsız ölçeklenebilirlik ile özel altyapı.
+Özel altyapı, veri uyumluluk kontrolleri ve sınırsız ölçeklenebilirlik ile tamamen özelleştirilmiş, tek kiracılı kurulum.
 
 **Özellikler:**
 - Özel bulut ortamı

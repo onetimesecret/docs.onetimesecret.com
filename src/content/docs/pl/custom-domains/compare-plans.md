@@ -6,7 +6,7 @@ description: Porównaj nasze bogate w funkcje plany oferujące bezpieczne udost�
 
 ## Macierz funkcji
 
-| Funkcja/Plan | Identity Plus | Basic | Anonimowy |
+| Funkcja/Plan | Identity Plus | Basic | Niezalogowany |
 |---------|----------------|-------------------------|------------|
 | Niestandardowe domeny | Nieograniczone | ❌ | ❌ |
 | Brandowana strona główna | ✅ | ❌ | ❌ |

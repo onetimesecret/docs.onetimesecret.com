@@ -25,8 +25,6 @@ Sikker engangsdeling for alle.
 
 ### Identity Plus
 
-**$35/måned eller $365/år**
-
 Sikker deling, der løfter dit brand og forenkler kommunikation.
 
 **Funktioner:**
@@ -35,13 +33,11 @@ Sikker deling, der løfter dit brand og forenkler kommunikation.
 - Forbedrede privatlivsfunktioner
 - Fuld API-adgang
 
-[Vælg denne plan](https://onetimesecret.com/plans/identity)
+[Se aktuelle priser](https://onetimesecret.com/pricing) | [Vælg denne plan](https://onetimesecret.com/plans/identity)
 
 ### Global Elite
 
-**Kommer snart**
-
-Dedikeret infrastruktur med dataoverensstemmelseskontrol og ubegrænset skalerbarhed.
+En fuldt tilpasset installation til én enkelt lejer med dedikeret infrastruktur, dataoverensstemmelseskontrol og ubegrænset skalerbarhed.
 
 **Funktioner:**
 - Privat cloud-miljø
