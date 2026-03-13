@@ -1,0 +1,95 @@
+---
+title: REST API
+description: A REST API do Onetime Secret oferece recursos flexíveis de compartilhamento de segredos, suportando uso autenticado e anônimo. Usuários autenticados obtêm recursos avançados e limites de uso mais altos, enquanto usuários não autenticados podem compartilhar segredos rapidamente com funcionalidade básica.
+---
+
+_Atualizado em 29/04/2025_
+
+{% aside type="tip" %}
+Teste e explore os endpoints da API com nossa [Coleção Postman](https://docs.onetimesecret.dev/) interativa.
+{% /aside %}
+
+## URI Base
+
+`https://REGION.onetimesecret.com/api`
+
+Onde `REGION` é um dos seguintes: `ca`, `eu`, `nz`, `uk` ou `us`.
+
+<!-- ::callout{icon="i-heroicons-globe-alt"} -->
+**Localidade de Dados e Seleção de Região**
+- Escolha uma região (ex.: EU [`eu.onetimesecret.com`](https://eu.onetimesecret.com/), UK [`uk.onetimesecret.com`](https://uk.onetimesecret.com/) ou US [`us.onetimesecret.com`](https://us.onetimesecret.com/)). Veja [Regiões](/pt-br/regions) para todas as opções.
+- Considere fatores como soberania de dados, latência e requisitos de conformidade
+- **NOTA:** O domínio padrão `onetimesecret.com` permanece operacional e roteia para um data center ativo; o uso de uma localidade específica é recomendado, pois essa funcionalidade pode ser descontinuada no futuro.
+
+## Autenticação
+Suportamos dois modos de uso da API:
+
+### Acesso Autenticado
+
+`https://USERNAME:APITOKEN@REGION.onetimesecret.com/api`
+
+- Use Autenticação Básica HTTP para acesso completo à API
+- O nome de usuário é o login da sua conta
+- A senha é o token de API da sua página de conta
+
+### Acesso Anônimo
+
+`https://REGION.onetimesecret.com/api`
+
+- Funcionalidade limitada disponível sem autenticação
+- Ideal para compartilhamento rápido e único de segredos
+- Pode ser usado tanto para criar quanto para recuperar segredos
+
+## Localidade de Dados
+O Onetime Secret suporta múltiplos data centers geográficos. Seguimos uma política de zero compartilhamento de dados entre regiões, garantindo isolamento completo dos dados. Escolha o data center adequado para suas necessidades:
+
+- **Data Center CA:** [ca.onetimesecret.com](https://ca.onetimesecret.com/)
+- **Data Center EU:** [eu.onetimesecret.com](https://eu.onetimesecret.com/)
+- **Data Center NZ:** [nz.onetimesecret.com](https://nz.onetimesecret.com/)
+- **Data Center UK:** [uk.onetimesecret.com](https://uk.onetimesecret.com/)
+- **Data Center US:** [us.onetimesecret.com](https://us.onetimesecret.com/)
+
+### Considerações Importantes:
+- Você pode escolher uma localidade de dados específica navegando diretamente para o domínio desejado
+- A localização do seu segredo é sempre clara pelo link gerado (ex.: `us.onetimesecret.com/secret/abcd1234`)
+- **NOTA:** Atualmente, o acesso via `onetimesecret.com/api` ainda está operacional, mas o uso de uma localidade específica é recomendado, pois essa funcionalidade pode ser descontinuada no futuro.
+
+## Domínios Personalizados
+O Onetime Secret suporta configurações de domínio personalizado para organizações com requisitos específicos de rede ou marca através do nosso plano [Identity Plus](https://onetimesecret.com/pricing).
+
+### Benefícios de Domínios Personalizados
+- **Marca Própria:** Use seu próprio domínio (ex.: `secrets.example.com`) para acesso à API e compartilhamento de segredos
+- **Experiência Consistente:** Mantenha a identidade visual e de confiança da sua organização com seus clientes e parceiros.
+- **Inclua no treinamento de funcionários:** Use domínios personalizados para reforçar as práticas e fluxos de trabalho de segurança da sua organização.
+
+<!-- ::callout{icon="i-heroicons-lock-closed"} -->
+**Recurso Premium**
+Domínios personalizados estão disponíveis no nosso plano [Identity Plus](https://onetimesecret.com/pricing). Configure em minutos com nossas opções de configuração fáceis de usar. [Saiba mais](/pt-br/custom-domains/).
+
+### Uso da API com Domínios Personalizados
+Ao usar um domínio personalizado, todos os endpoints da API seguem a mesma estrutura:
+
+`https://secrets.example.com/api`
+
+
+## Status do Sistema
+
+`GET https://REGION.onetimesecret.com/api/v1/status`
+Status atual do sistema.
+
+**Parâmetros:** Nenhum
+
+```bash
+$ curl -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/status
+{"status":"nominal"}
+```
+
+```bash
+$ curl -u 'USERNAME:APITOKEN' https://uk.onetimesecret.com/api/v1/status
+{"status":"nominal"}
+```
+
+```bash
+$ curl -u 'USERNAME:APITOKEN' https://us.onetimesecret.com/api/v1/status
+{"status":"nominal"}
+```

@@ -7,6 +7,16 @@ sidebar:
 
 Execute sua própria instância privada do Onetime Secret com controle total sobre seus dados, segurança e implantação.
 
+:::caution[Março de 2026 — Documentação de auto-hospedagem em transição]
+Estamos no meio da transição entre **v0.23** e **v0.24** (o branch `main`). Parte da nossa documentação de auto-hospedagem está desatualizada e estamos [trabalhando ativamente para melhorá-la](https://github.com/onetimesecret/onetimesecret/issues/2628).
+
+**Se você só quer colocar algo para funcionar**, recomendamos o branch `rel/0.23`. Ele precisa apenas de algumas variáveis de ambiente e Redis, e ainda estamos enviando correções e pequenas atualizações para ele.
+
+```bash
+git clone -b rel/0.23 https://github.com/onetimesecret/onetimesecret.git
+```
+:::
+
 ## Por Que Auto-Hospedar?
 
 Auto-hospedar o Onetime Secret oferece:
