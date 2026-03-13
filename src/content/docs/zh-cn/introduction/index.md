@@ -22,8 +22,10 @@ Onetime Secret 提供了安全共享敏感信息的直接解决方案：
 5.可选口令：为共享内容添加额外的安全层
 6.开源：查看我们的代码库，提高透明度
 
-浏览我们的奖励内容，了解 Onetime Secret 如何高效、谨慎地满足您的安全通信需求。
+## 从何开始
 
-## 开始
-
-准备好了吗？请查看我们的[文档](/zh-cn/docs-overview)，了解有效使用Onetime Secret的详细说明。如果您有任何问题或反馈，请直接[联系我们](https://onetimesecret.com/feedback)。
+- **使用服务** — 前往[onetimesecret.com](https://onetimesecret.com/)，几秒钟内即可共享秘密
+- **浏览文档** — 查看所有[指南](/zh-cn/introduction/guides/)获取操作指南和参考资料
+- **通过API集成** — 查看[REST API](/zh-cn/rest-api/)进行编程访问
+- **运行自己的实例** — 参阅[自托管](/zh-cn/self-hosting/)指南
+- **有问题？** — 直接[联系我们](https://onetimesecret.com/feedback)
