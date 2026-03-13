@@ -6,24 +6,26 @@ description: Confronta i nostri piani ricchi di funzionalità che offrono la con
 
 ## Matrice delle caratteristiche
 
-| Caratteristiche/Piani | Identity Plus | Basic | Non autenticato |
-|---------|----------------|-------------------------|------------|
-| Domini Personalizzati | Illimitati | ❌ | ❌ | ❌ | ❌
-| Homepage di marca | ✅ | ❌ | ❌ | ❌ |
-| Logo personalizzato, colore | ✅ | ❌ | ❌ | ❌ |
-| Numero di account | 1 | 1 | ❌ | ❌ |
-| Scadenza del link | Fino a 30 giorni | 14 giorni | Limitato a 7 giorni |
-| Accesso API | ✅ | ✅ | ✅ | Limitato |
-| Configurazione richiesta | Sì (configurazione DNS) | No | No | No |
-| A pagamento | Sì (parte del piano di Identità) | No | No |
-| Sicurezza SSL/TLS | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Data Locality | ✅ (EU o US) | ✅ (EU o US) | ✅ (EU o US) | ✅ (EU o US) | ✅ (EU o US)
+| Caratteristiche/Piani | Non autenticato | Basic | Identity Plus |
+|---------|------------|-------------------------|----------------|
+| Domini personalizzati | ❌ | ❌ | Illimitati |
+| Homepage Secrets | ❌ | ✅ | ✅ |
+| Branding personalizzato (logo, colore) | ❌ | ❌ | ✅ |
+| Numero di account | ❌ | 1 | 1 |
+| Scadenza del link | Limitato a 7 giorni | 14 giorni | Fino a 30 giorni |
+| Accesso API | Limitato | ✅ | ✅ |
+| Configurazione richiesta | No | ✅ (configurazione DNS) | ✅ (configurazione DNS) |
+| A pagamento | No | No | Sì |
+| Crittografia in transito e a riposo | ✅ | ✅ | ✅ |
+| Scelta della regione (EU, UK, US, CA, NZ) | ✅ | ✅ | ✅ |
 
 
-Per ulteriori informazioni sugli aggiornamenti dell'account e sui prezzi, visitate la nostra [Pricing Page](https://onetimesecret.com/pricing).
+Per ulteriori informazioni sugli aggiornamenti dell'account e sui prezzi, visita la nostra [Pagina Prezzi](https://onetimesecret.com/pricing).
 
 
 ## In arrivo
 
-* Email personalizzate da dettagli con supporto SPF e DKIM
-* Piani di squadra per più utenti
+* Piani di squadra per più utenti (aprile 2026)
+* [Secretary Links](https://onetimesecretary.com) — link sicuri di raccolta per ricevere informazioni sensibili da chiunque, senza necessità di un account
+* Inbound Secrets — una pagina di destinazione per clienti, partner, ecc. per inviare segreti direttamente a un elenco preconfigurato di destinatari
+* Email personalizzate con supporto SPF e DKIM
