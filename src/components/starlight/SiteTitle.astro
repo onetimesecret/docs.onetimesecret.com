@@ -4,7 +4,7 @@ import config from 'virtual:starlight/user-config';
 const { siteTitle, siteTitleHref } = Astro.locals.starlightRoute;
 ---
 
-<a href={siteTitleHref} class="site-title sl-flex">
+<a href="https://onetimesecret.com/" class="site-title sl-flex">
 	{
 		config.logo && logos.dark && (
 			<>
@@ -49,5 +49,6 @@ const { siteTitle, siteTitleHref } = Astro.locals.starlightRoute;
 		max-width: 100%;
 		object-fit: contain;
 		object-position: 0 50%;
+		border-radius: 8px;
 	}
 </style>

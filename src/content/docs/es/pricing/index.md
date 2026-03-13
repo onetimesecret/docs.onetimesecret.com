@@ -11,11 +11,11 @@ Comparta información confidencial con confianza, eleve su marca y genere confia
 
 ### Basic
 
-**0$/mes
+**0$/mes**
 
 Compartir de forma segura y una sola vez para todos.
 
-**Características
+**Características:**
 - Visualización única de secretos compartidos
 - Eliminación automática tras la visualización
 - Cuenta necesaria para enviar correos electrónicos a los destinatarios
@@ -25,25 +25,21 @@ Compartir de forma segura y una sola vez para todos.
 
 ### Identidad Plus
 
-**35 $/mes o 365 $/año**.
-
 Compartición segura que eleva su marca y simplifica la comunicación.
 
-**Características
+**Características:**
 - Dominios personalizados ilimitados
 - Capacidad ilimitada para compartir
 - Funciones de privacidad mejoradas
 - Acceso completo a la API
 
-[Elija este plan](https://onetimesecret.com/plans/identity)
+[Ver precios actuales](https://onetimesecret.com/pricing) | [Elija este plan](https://onetimesecret.com/plans/identity)
 
 ### Global Elite
 
-**Próximamente
+Una instalación totalmente personalizada de inquilino único con infraestructura dedicada, controles de cumplimiento de datos y escalabilidad ilimitada.
 
-Infraestructura dedicada con controles de cumplimiento de datos y escalabilidad ilimitada.
-
-**Características
+**Características:**
 - Entorno de nube privada
 - Uso y escalado ilimitados
 - Múltiples opciones de ubicación de datos (UE, EE.UU.)

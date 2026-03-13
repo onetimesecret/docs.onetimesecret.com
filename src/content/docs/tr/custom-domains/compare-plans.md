@@ -6,7 +6,7 @@ description: Bireyler ve işletmeler için süresi dolan bağlantılar, özel al
 
 ## Özellik Matrisi
 
-| Özellik/Plan | Identity Plus | Basic | Anonim |
+| Özellik/Plan | Identity Plus | Basic | Giriş yapılmamış |
 |---------|----------------|-------------------------|------------|
 | Özel Alan Adları | Sınırsız | ❌ | ❌ |
 | Markalı Ana Sayfa | ✅ | ❌ | ❌ |

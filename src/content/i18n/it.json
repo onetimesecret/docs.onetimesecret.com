@@ -2,16 +2,16 @@
   "nav": {
     "label": {
       "blog": "Blog",
-      "custom-domain": "Domini Personalizzati",
-      "principles": "Principi",
+      "guides": "Guide",
       "rest-api": "API",
-      "home": "Torna a onetimesecret.com"
+      "self-hosting": "Self-Hosting"
     }
   },
   "sidebar": {
     "home": "Home",
     "introduction": "Introduzione",
     "gettingStarted": "Inizia",
+    "guides": "Guide",
     "secretLinks": "Link Monouso",
     "overview": "Panoramica",
     "whyUseSecretLinks": "Perché Usare Link Monouso",

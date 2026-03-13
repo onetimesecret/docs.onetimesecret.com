@@ -6,7 +6,7 @@ description: Confronta i nostri piani ricchi di funzionalità che offrono la con
 
 ## Matrice delle caratteristiche
 
-| Caratteristiche/Piani | Identity Plus | Basic | Anonimo |
+| Caratteristiche/Piani | Identity Plus | Basic | Non autenticato |
 |---------|----------------|-------------------------|------------|
 | Domini Personalizzati | Illimitati | ❌ | ❌ | ❌ | ❌
 | Homepage di marca | ✅ | ❌ | ❌ | ❌ |

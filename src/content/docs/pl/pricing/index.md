@@ -25,8 +25,6 @@ Bezpieczne, jednorazowe udostępnianie dla każdego.
 
 ### Identity Plus
 
-**$35/miesiąc lub $365/rok**
-
 Bezpieczne udostępnianie, które podnosi Twoją markę i upraszcza komunikację.
 
 **Funkcje:**
@@ -35,13 +33,11 @@ Bezpieczne udostępnianie, które podnosi Twoją markę i upraszcza komunikację
 - Ulepszone funkcje prywatności
 - Pełny dostęp do API
 
-[Wybierz ten plan](https://onetimesecret.com/plans/identity)
+[Zobacz aktualne ceny](https://onetimesecret.com/pricing) | [Wybierz ten plan](https://onetimesecret.com/plans/identity)
 
 ### Global Elite
 
-**Wkrótce**
-
-Dedykowana infrastruktura z kontrolami zgodności danych i nieograniczoną skalowalnością.
+W pełni dostosowana instalacja single-tenant z dedykowaną infrastrukturą, kontrolami zgodności danych i nieograniczoną skalowalnością.
 
 **Funkcje:**
 - Prywatne środowisko chmurowe

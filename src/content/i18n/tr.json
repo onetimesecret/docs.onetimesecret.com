@@ -2,10 +2,9 @@
   "nav": {
     "label": {
       "blog": "Blog",
-      "custom-domain": "Özel Alan Adları",
-      "principles": "İlkelerimiz",
+      "guides": "Kılavuzlar",
       "rest-api": "API",
-      "home": "onetimesecret.com'a dön"
+      "self-hosting": "Kendi Sunucunuzda Barındırma"
     }
   },
   "heading.anchorLabel": "“{{title}}” başlıklı bölüm",
@@ -13,6 +12,7 @@
     "home": "Ana Sayfa",
     "introduction": "Giriş",
     "gettingStarted": "Başlangıç",
+    "guides": "Kılavuzlar",
     "secretLinks": "Gizli Bağlantılar",
     "overview": "Genel Bakış",
     "whyUseSecretLinks": "Neden Gizli Bağlantılar Kullanmalı",

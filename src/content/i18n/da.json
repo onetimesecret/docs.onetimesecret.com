@@ -2,10 +2,9 @@
   "nav": {
     "label": {
       "blog": "Blog",
-      "custom-domain": "Brugerdefinerede Domæner",
-      "principles": "Principper",
+      "guides": "Vejledninger",
       "rest-api": "API",
-      "home": "Tilbage til onetimesecret.com"
+      "self-hosting": "Selvhosting"
     }
   },
   "heading.anchorLabel": "Afsnit med titlen “{{title}}”",
@@ -13,6 +12,7 @@
     "home": "Hjem",
     "introduction": "Introduktion",
     "gettingStarted": "Kom i Gang",
+    "guides": "Vejledninger",
     "secretLinks": "Sikre Links",
     "overview": "Oversigt",
     "whyUseSecretLinks": "Hvorfor Bruge Sikre Links",

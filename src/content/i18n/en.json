@@ -2,16 +2,16 @@
   "nav": {
     "label": {
       "blog": "Blog",
-      "custom-domain": "Custom Domains",
-      "principles": "Principles",
+      "guides": "Guides",
       "rest-api": "API",
-      "home": "Back to onetimesecret.com"
+      "self-hosting": "Self-Hosting"
     }
   },
   "sidebar": {
     "home": "Home",
     "introduction": "Introduction",
     "gettingStarted": "Getting Started",
+    "guides": "Guides",
     "secretLinks": "Secret Links",
     "overview": "Overview",
     "whyUseSecretLinks": "Why Use Secret Links",

@@ -2,10 +2,9 @@
   "nav": {
     "label": {
       "blog": "Blog",
-      "custom-domain": "Domeny niestandardowe",
-      "principles": "Zasady",
+      "guides": "Przewodniki",
       "rest-api": "API",
-      "home": "Powrót do onetimesecret.com"
+      "self-hosting": "Self-Hosting"
     }
   },
   "heading.anchorLabel": "Sekcja zatytułowana „{{title}}”",
@@ -13,6 +12,7 @@
     "home": "Strona główna",
     "introduction": "Wprowadzenie",
     "gettingStarted": "Pierwsze kroki",
+    "guides": "Przewodniki",
     "secretLinks": "Tajne linki",
     "overview": "Przegląd",
     "whyUseSecretLinks": "Dlaczego używać tajnych linków",
