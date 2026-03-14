@@ -5,6 +5,12 @@
       "guides": "Kılavuzlar",
       "rest-api": "API",
       "self-hosting": "Kendi Sunucunuzda Barındırma"
+    },
+    "ariaLabel": {
+      "guides": "Rehber belgeleri",
+      "apiReference": "API referansı",
+      "selfHosting": "Kendi sunucunda barındırma belgeleri",
+      "blog": "Onetime Secret blogu"
     }
   },
   "heading.anchorLabel": "“{{title}}” başlıklı bölüm",

@@ -31,10 +31,10 @@ const blogLink = 'https://blog.onetimesecret.com/';
 	<div class="sl-flex center-group print:hidden">
 		{shouldRenderSearch && <Search />}
     <nav class="nav-links">
-      <a href={guidesLink} aria-label="Guides documentation">{Astro.locals.t('nav.label.guides')}</a>
-      <a href={apiLink} aria-label="API reference">{Astro.locals.t('nav.label.rest-api')}</a>
-      <a href={selfHostingLink} aria-label="Self-hosting documentation">{Astro.locals.t('nav.label.self-hosting')}</a>
-      <a href={blogLink} target="_blank" rel="noopener noreferrer" aria-label="Onetime Secret blog">{Astro.locals.t('nav.label.blog')}</a>
+      <a href={guidesLink} aria-label={Astro.locals.t('nav.ariaLabel.guides')}>{Astro.locals.t('nav.label.guides')}</a>
+      <a href={apiLink} aria-label={Astro.locals.t('nav.ariaLabel.apiReference')}>{Astro.locals.t('nav.label.rest-api')}</a>
+      <a href={selfHostingLink} aria-label={Astro.locals.t('nav.ariaLabel.selfHosting')}>{Astro.locals.t('nav.label.self-hosting')}</a>
+      <a href={blogLink} target="_blank" rel="noopener noreferrer" aria-label={Astro.locals.t('nav.ariaLabel.blog')}>{Astro.locals.t('nav.label.blog')}</a>
     </nav>
 	</div>
 	<div class="sl-hidden md:sl-flex print:hidden right-group">

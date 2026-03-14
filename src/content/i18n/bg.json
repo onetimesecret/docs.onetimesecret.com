@@ -5,6 +5,12 @@
       "guides": "Ръководства",
       "rest-api": "API",
       "self-hosting": "Самостоятелно хостване"
+    },
+    "ariaLabel": {
+      "guides": "Документация с ръководства",
+      "apiReference": "Справка за API",
+      "selfHosting": "Документация за самостоятелен хостинг",
+      "blog": "Блог на Onetime Secret"
     }
   },
   "heading.anchorLabel": "Раздел, озаглавен „{{title}}“",

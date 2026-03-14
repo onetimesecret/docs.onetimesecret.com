@@ -5,6 +5,12 @@
       "guides": "指南",
       "rest-api": "API",
       "self-hosting": "自托管"
+    },
+    "ariaLabel": {
+      "guides": "指南文档",
+      "apiReference": "API 参考",
+      "selfHosting": "自托管文档",
+      "blog": "Onetime Secret 博客"
     }
   },
   "heading.anchorLabel": "“{{title}}”部分",
