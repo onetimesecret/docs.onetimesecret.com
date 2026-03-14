@@ -12,13 +12,13 @@ Testen und erkunden Sie die API-Endpunkte mit unserer interaktiven [Postman Coll
 
 ## Basis-URI
 
-https://REGION.onetimesecret.com/api
+`https://REGION.onetimesecret.com/api`
 
-Wobei `REGION` entweder `us` oder `eu` ist.
+Wobei `REGION` entweder `CA`, `EU`, `NZ`, `UK` oder `US` ist.
 
 <!-- ::callout{icon="i-heroicons-globe-alt"} -->
 **Auswahl des Datenorts und der Region**
-- Wählen Sie zwischen US ([`us.onetimesecret.com`](https://us.onetimesecret.com/)) oder EU ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)) Rechenzentren
+- Wählen Sie eine Region (z.B. EU [`eu.onetimesecret.com`](https://eu.onetimesecret.com/), UK [`uk.onetimesecret.com`](https://uk.onetimesecret.com/) oder US [`us.onetimesecret.com`](https://us.onetimesecret.com/)). Siehe [Regionen](/de/regions) für alle Optionen.
 - Berücksichtigen Sie Faktoren wie Datenhoheit, Latenzzeit und Compliance-Anforderungen
 - **HINWEIS:** Standardmäßig bleibt `onetimesecret.com` in Betrieb und leitet zu einem aktiven Rechenzentrum weiter. Es wird empfohlen, eine bestimmte Lokalität zu verwenden, da diese Funktion in Zukunft möglicherweise veraltet sein wird.
 
@@ -44,7 +44,10 @@ Wir unterstützen zwei Arten der API-Nutzung:
 ## Datenlokalisierung
 Onetime Secret unterstützt mehrere geografische Datenzentren. Wir verfolgen eine Politik des Null-Datenaustauschs zwischen den Regionen, um eine vollständige Datenisolierung zu gewährleisten. Wählen Sie das richtige Datenzentrum für Ihre Bedürfnisse:
 
+- **CA-Datenzentrum:** [ca.onetimesecret.com](https://ca.onetimesecret.com/)
 - **EU-Datenzentrum:** [eu.onetimesecret.com](https://eu.onetimesecret.com/)
+- **NZ-Datenzentrum:** [nz.onetimesecret.com](https://nz.onetimesecret.com/)
+- **UK-Datenzentrum:** [uk.onetimesecret.com](https://uk.onetimesecret.com/)
 - **US-Datenzentrum:** [us.onetimesecret.com](https://us.onetimesecret.com/)
 
 ### Wichtige Überlegungen:
@@ -77,12 +80,17 @@ Aktueller Status des Systems.
 
 **Parameter:** Keine
 
-``bash
+```bash
 $ curl -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/status
-{"status": "nominal"}
+{"status":"nominal"}
 ```
 
 ```bash
-$ curl -u 'BENUTZERNAME:APITOKEN' https://us.onetimesecret.com/api/v1/status
-{"status": "nominal"}
+$ curl -u 'USERNAME:APITOKEN' https://uk.onetimesecret.com/api/v1/status
+{"status":"nominal"}
+```
+
+```bash
+$ curl -u 'USERNAME:APITOKEN' https://us.onetimesecret.com/api/v1/status
+{"status":"nominal"}
 ```
