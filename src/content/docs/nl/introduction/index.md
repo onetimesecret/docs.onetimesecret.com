@@ -1,9 +1,9 @@
 ---
 title: Aan de slag
-description: Uw hub voor Onetime Secret resources, documentatie en inzichten.
+description: Je hub voor Onetime Secret resources, documentatie en inzichten.
 ---
 
-Welkom bij Onetime Secret Docs, uw centrale bron voor het maximaliseren van de waarde van onze privacy-gerichte, efemere geheime deeldienst.
+Welkom bij Onetime Secret Docs, je centrale bron voor het maximaliseren van de waarde van onze privacy-gerichte, efemere geheime deeldienst.
 
 ## Wat is hier
 
