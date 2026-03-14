@@ -125,7 +125,7 @@ export const sidebar = [
     createLink("overview", "secret-links"),
     createLink("whyUseSecretLinks", "secret-links/why-use-secret-links"),
     createLink("useCases", "secret-links/use-cases"),
-    createLink("comparePlans", "custom-domains/compare-plans"),
+    createLink("comparePlans", "pricing/compare-plans"),
   ]),
 
   createGroup("customDomains", [
