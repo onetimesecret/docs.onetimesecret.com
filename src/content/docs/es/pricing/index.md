@@ -23,7 +23,7 @@ Compartir de forma segura y una sola vez para todos.
 
 [Inicio](https://onetimesecret.com/plans/basic)
 
-### Identidad Plus
+### Identity Plus
 
 Compartición segura que eleva su marca y simplifica la comunicación.
 

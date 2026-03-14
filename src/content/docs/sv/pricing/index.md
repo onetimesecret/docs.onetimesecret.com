@@ -37,7 +37,7 @@ Säker delning som förhöjer ditt varumärke och förenklar kommunikation.
 
 ### Global Elite
 
-En helt anpassad installation med dedikerad infrastruktur, dataefterlevnadskontroller och obegränsad skalbarhet.
+En helt anpassad installation med enskild klientmiljö, dedikerad infrastruktur, dataefterlevnadskontroller och obegränsad skalbarhet.
 
 **Funktioner:**
 - Privat molnmiljö

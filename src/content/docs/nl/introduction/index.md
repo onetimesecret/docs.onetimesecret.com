@@ -22,8 +22,10 @@ Onetime Secret biedt een eenvoudige oplossing voor het veilig delen van gevoelig
 5. Optionele wachtwoordzin: Voeg een extra beveiligingslaag toe aan gedeelde geheimen
 6. Open-source: Bekijk onze codebase voor meer transparantie
 
-Bekijk onze Bonus Content om te ontdekken hoe Onetime Secret efficiënt en discreet kan voorzien in uw behoefte aan beveiligde communicatie.
+## Waar te beginnen
 
-## Aan de slag
-
-Klaar om erin te duiken? Bekijk onze [documentatie](/nl/docs-overview) voor gedetailleerde instructies over het effectief gebruik van Onetime Secret. Als je vragen of feedback hebt, voel je dan vrij om direct [contact](https://onetimesecret.com/feedback) met ons op te nemen.
+- **Gebruik de dienst** — Ga naar [onetimesecret.com](https://onetimesecret.com/) en deel een geheim in enkele seconden
+- **Bekijk de documentatie** — Zie alle [Handleidingen](/nl/introduction/guides/) voor uitleg en naslagmateriaal
+- **Integreer via API** — Bekijk de [REST API](/nl/rest-api/) voor programmatische toegang
+- **Draai je eigen instantie** — Volg de [Zelf hosten](/nl/self-hosting/) handleiding
+- **Vragen?** — [Neem contact met ons op](https://onetimesecret.com/feedback) direct

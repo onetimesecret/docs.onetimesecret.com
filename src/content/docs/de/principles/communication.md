@@ -17,23 +17,23 @@ Die meisten Dienste überfluten Ihren Posteingang mit:
 - Werbeangebote
 - Re-Engagement-Kampagnen
 
-In unserer gesamten Geschichte haben wir noch nie eine Marketing-E-Mail verschickt. Die einzigen E-Mails, die Sie von uns erhalten, sind die, die Sie ausdrücklich angefordert haben: geheime Linklieferungen. Keine Newsletter, keine Updates, keine Werbeaktionen. Wir glauben, dass Ihr Posteingang Ihnen gehört.
+Die einzigen E-Mails, die Sie von uns erhalten, sind solche, die Sie ausdrücklich angefordert haben — zum Beispiel die Zustellung geheimer Links, Kontobenachrichtigungen oder Updates, für die Sie sich bewusst angemeldet haben. Selbst wenn Sie sich anmelden, werden Sie selten von uns hören, und nur aus den Gründen, für die Sie sich eingetragen haben. Ihr Posteingang gehört Ihnen.
 
 ## Warum das wichtig ist
 
-Indem wir auf die üblichen Marketing- und Kommunikationspraktiken verzichten, können wir:
-- erhalten wir einen sauberen, einfacheren Service
-- verringern wir potenzielle Sicherheitsrisiken
-- konzentrieren wir uns auf unsere Hauptaufgabe
-- respektieren wir Ihre Zeit und Aufmerksamkeit
+Ein Datenschutz-Tool sollte sich nicht wie eine Marketing-Plattform verhalten. Indem wir unsere Kommunikation minimal halten:
 
-## Unser Fokus stattdessen
+- Verringern wir die Angriffsfläche für Phishing und Social Engineering — weniger legitime E-Mails von uns bedeuten, dass verdächtige leichter zu erkennen sind
+- Konzentrieren wir uns darauf, einen zuverlässigen Dienst zu betreiben, anstatt Engagement-Kennzahlen zu optimieren
+- Respektieren wir das Vertrauen, das Sie uns entgegenbringen, wenn Sie Ihre E-Mail-Adresse mit uns teilen
 
-Wir investieren unsere Zeit und Ressourcen in:
-- Verbesserung der Kernfunktionalität
-- Verstärkung des Schutzes der Privatsphäre
-- Sicherstellung eines zuverlässigen Service
-- Einhaltung gesetzlicher Vorschriften
-- Aufrechterhaltung eines transparenten Betriebs
+## Worin wir unsere Energie investieren
+
+Anstatt Kampagnen zu entwerfen, verwenden wir unsere Zeit auf die Dinge, die für Sie wirklich wichtig sind:
+
+- **Kernzuverlässigkeit** — sicherstellen, dass der Dienst funktioniert, wenn Sie ihn brauchen
+- **Datenschutzmaßnahmen** — Verschlüsselung und Datenverarbeitung stärken
+- **Compliance** — jurisdiktionale und regulatorische Anforderungen einhalten
+- **Transparenz** — offen darüber sein, wie wir arbeiten und warum
 
 Haben Sie Gedanken zu unserem Kommunikationsansatz? [Kontaktieren Sie uns](https://onetimesecret.com/feedback).

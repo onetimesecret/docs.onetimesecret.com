@@ -23,9 +23,9 @@ Condivisione sicura e unica per tutti.
 
 [Iniziare](https://onetimesecret.com/plans/basic)
 
-### Identità Plus
+### Identity Plus
 
-Una condivisione sicura che eleva il vostro marchio e semplifica la comunicazione.
+Condivisione sicura che valorizza il vostro marchio e semplifica la comunicazione.
 
 **Caratteristiche:**
 - Domini personalizzati illimitati
@@ -35,7 +35,7 @@ Una condivisione sicura che eleva il vostro marchio e semplifica la comunicazion
 
 [Vedi i prezzi attuali](https://onetimesecret.com/pricing) | [Scegli questo piano](https://onetimesecret.com/plans/identity)
 
-### Elite globale
+### Global Elite
 
 Un'installazione completamente personalizzata, single-tenant, con infrastruttura dedicata, controlli di conformità dei dati e scalabilità illimitata.
 
