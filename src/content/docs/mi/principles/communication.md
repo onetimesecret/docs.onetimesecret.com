@@ -17,23 +17,23 @@ Ko te nuinga o ngā ratonga ka waipuke i tō pouakaīmēra ki:
 - Ngā tuku hokohoko
 - Ngā kaupapa whakahoki-whakauru
 
-I tō mātou hītori katoa, kāore mātou i tuku i tētahi īmēra hokohoko. Ko ngā īmēra anake ka whiwhi koe mai i a mātou ko ērā e tono motuhake ana koe: ngā tukuanga hononga karere huna. Kāore he pānui, kāore he whakahōutanga, kāore he hokohoko. E whakapono ana mātou ko tō pouakaīmēra nōu.
+Ko ngā īmēra anake ka whiwhi koe mai i a mātou ko ērā e tono motuhake ana koe — pērā i ngā tukuanga hononga karere huna, ngā whakamōhiotanga pūkete, me ngā whakahōutanga kua whiriwhiri mārika koe. Ahakoa ka whiriwhiri koe ki te whiwhi, ka iti rawa ō rongo mai i a mātou, ā, mō ngā take anake i waitohu ai koe. Nōu tō pouakaīmēra.
 
 ## He Aha Te Tikanga o Tēnei
 
-Mā te karo i ngā tikanga hokohoko me te whakawhitiwhiti paerewa, mātou:
-- Pupuritia he ratonga māmā ake, māmā ake
-- Whakaitihia ngā mōrearea haumaru pea
-- Noho arotahi ki tō mātou kaupapa matua
-- Whakaute i tō wā me tō aro
+Me kaua tētahi taputapu tūmataiti e whanako pērā ki tētahi pūhara hokohoko. Mā te pupuri i ā mātou whakawhitiwhiti kia iti:
 
-## Tō Mātou Arotahi Kē Atu
+- Ka whakaitihia e mātou te horahanga mō te hī-ika me te hangarau pāpori — ko te iti o ngā īmēra pono mai i a mātou, ka ngāwari ake te kite i ngā mea whakapae
+- Ka noho arotahi mātou ki te whakahaere ratonga pono kē i te whakapai i ngā metorika whakauru
+- Ka whakaute mātou i te whakawhirinaki e tuku mai ana koe ina toha mai koe i tō wāhitau īmēra
 
-Ka whakangao mātou i tō mātou wā me ngā rauemi ki:
-- Te whakapai i ngā mahi matua
-- Te whakapakari i ngā tiaki tūmataiti
-- Te whakaū i te ratonga pono
-- Te whakatutuki i te ūnga rohenga
-- Te pupuri i ngā mahi pūataata
+## Te Wāhi Ka Ū Tō Mātou Kaha
+
+Kē atu i te tuhi kaupapa hokohoko, ka whakapau mātou i tō mātou wā ki ngā mea e tino hira ana ki a koe:
+
+- **Te pono o te matua** — kia mahi pai te ratonga ina hiahia koe
+- **Ngā tiaki tūmataiti** — te whakapakari i te whakamuna me te whakahaere raraunga
+- **Te ūnga ture** — te whai i ngā herenga rohenga me ngā ture
+- **Te pūataata** — te noho mārama mō te āhua o tā mātou mahi me te take
 
 He whakaaro mō tō mātou huarahi whakawhitiwhiti? [Whakapā mai](https://onetimesecret.com/feedback).

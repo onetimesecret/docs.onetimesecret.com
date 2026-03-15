@@ -22,8 +22,10 @@ Ka whakarato a Onetime Secret i tētahi rongoā tōtika mō te tohatoha kōrero 
 5. Kupu karapa kōwhiringa: Tāpirihia tētahi papa haumaru tāpiri ki ngā karere huna kua tohatohahia
 6. Puna-tuwhera: Arotakehia tō mātou puna waehere mō te pūataata whakanui
 
-Tirotirohia ō mātou Ihirangi Pōnaki hei ako i te āhua ka whakatau a Onetime Secret i ō hiahiatanga whakawhitiwhiti haumaru, whai hua, me te noho huna.
+## Me tīmata ki hea
 
-## Tīmata
-
-Kei te rite ki te ruku? Tirohia ō mātou [tohutohu](/mi/docs-overview) mō ngā tohutohu taipitopito mō te whakamahi i Onetime Secret. Mēnā he pātai, he urupare rānei ōu, kaua e whakamā ki te [whakapā mai](https://onetimesecret.com/feedback) tōtika.
+- **Whakamahia te ratonga** — Haere ki [onetimesecret.com](https://onetimesecret.com/) ka toha i tētahi karere huna i roto i ngā hēkona ruarua
+- **Tirohia ngā tuhinga** — Tirohia ngā [Aratohu](/mi/introduction/guides/) katoa mō ngā aratohu me ngā tohutoro
+- **Whakakao mā te API** — Tirohia te [REST API](/mi/rest-api/) mō te uru ā-hōtaka
+- **Whakahaeretia tōu ake tauira** — Whāia te aratohu [Whakahaere-Whaiaro](/mi/self-hosting/)
+- **He pātai?** — [Whakapā mai](https://onetimesecret.com/feedback) tōtika

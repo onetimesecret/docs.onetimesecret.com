@@ -5,6 +5,12 @@
       "guides": "Guias",
       "rest-api": "API",
       "self-hosting": "Auto-hospedagem"
+    },
+    "ariaLabel": {
+      "guides": "Documentação de guias",
+      "apiReference": "Referência da API",
+      "selfHosting": "Documentação de auto-hospedagem",
+      "blog": "Blog do Onetime Secret"
     }
   },
   "heading.anchorLabel": "Seção intitulada “{{title}}”",

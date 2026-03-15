@@ -5,6 +5,12 @@
       "guides": "Aratohu",
       "rest-api": "API",
       "self-hosting": "Whakamahi-ā-kaitiaki"
+    },
+    "ariaLabel": {
+      "guides": "Tuhinga aratohu",
+      "apiReference": "Tohutoro API",
+      "selfHosting": "Tuhinga manaaki-whaiaro",
+      "blog": "Rangitaki Onetime Secret"
     }
   },
   "heading.anchorLabel": "Wāhanga e kīia ana ko “{{title}}”",

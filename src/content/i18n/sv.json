@@ -5,6 +5,12 @@
       "guides": "Guider",
       "rest-api": "API",
       "self-hosting": "Egenhosting"
+    },
+    "ariaLabel": {
+      "guides": "Guidedokumentation",
+      "apiReference": "API-referens",
+      "selfHosting": "Egenhostingdokumentation",
+      "blog": "Onetime Secret blogg"
     }
   },
   "heading.anchorLabel": "Avsnitt med titeln “{{title}}”",

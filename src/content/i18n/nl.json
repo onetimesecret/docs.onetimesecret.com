@@ -5,6 +5,12 @@
       "guides": "Handleidingen",
       "rest-api": "API",
       "self-hosting": "Self-Hosting"
+    },
+    "ariaLabel": {
+      "guides": "Handleidingen documentatie",
+      "apiReference": "API-referentie",
+      "selfHosting": "Zelf hosten documentatie",
+      "blog": "Onetime Secret blog"
     }
   },
   "heading.anchorLabel": "Sectie getiteld “{{title}}”",

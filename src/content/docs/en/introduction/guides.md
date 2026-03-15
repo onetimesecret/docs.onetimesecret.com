@@ -16,7 +16,7 @@ Welcome to Onetime Secret Docs. Find what you need to get started, integrate, or
 - **[Custom Domains](/en/custom-domains/)** — Use your own domain for secret sharing
 - **[Setup Guide](/en/custom-domains/setup-guide/)** — DNS configuration walkthrough
 - **[Brand Guide](/en/custom-domains/brand-guide/)** — Customize logo, colors, and homepage
-- **[Compare Plans](/en/custom-domains/compare-plans/)** — Feature comparison across plans
+- **[Compare Plans](/en/pricing/compare-plans/)** — Feature comparison across plans
 
 ## Integrate with the API
 

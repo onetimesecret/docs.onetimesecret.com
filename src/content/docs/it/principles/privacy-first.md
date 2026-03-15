@@ -18,7 +18,7 @@ La maggior parte dei servizi inonda la vostra casella di posta elettronica con:
 - Offerte promozionali
 - Campagne di reengagement
 
-Limitiamo le nostre comunicazioni via e-mail solo alle comunicazioni più essenziali: consegne di link segreti e notifiche di account critici. Non invieremo mai e-mail di marketing o aggiornamenti non richiesti. Crediamo che la vostra casella di posta appartenga a voi.
+Le uniche email che riceverete da noi sono quelle che richiedete espressamente — consegne di link segreti, notifiche relative all'account o aggiornamenti per i quali avete dato il vostro consenso esplicito. Anche quando scegliete di ricevere comunicazioni, sentirete raramente parlare di noi, e solo per i motivi specifici che avete scelto. La vostra casella di posta vi appartiene.
 
 ## Standard di settore che saltiamo
 
@@ -27,38 +27,38 @@ Evitiamo deliberatamente i comuni strumenti di tracciamento e di marketing:
 - Pacchetti di analisi che tracciano il comportamento degli utenti
 - Pulsanti di integrazione con i social media
 - Reti pubblicitarie
-- Quadri di test A/B
+- Framework di test A/B
 - Strumenti di automazione del marketing
 - Pixel di tracciamento di terze parti
 
 ## Perché è importante
 
-Il nostro approccio si basa su tre principi fondamentali:
+Queste scelte si riducono a tre cose che ci stanno profondamente a cuore:
 
-1. **Rispetto della privacy**: I vostri dati sono vostri, punto
-2. **Concentrarsi sull'affidabilità**: Lo strumento deve semplicemente funzionare quando ne avete bisogno
-3. **Costruire la fiducia attraverso l'azione**: Dimostriamo il nostro impegno attraverso ciò che non facciamo.
+1. **I vostri dati sono vostri.** Non trattiamo le informazioni degli utenti come una risorsa da sfruttare. La privacy non è una funzionalità aggiunta in seguito — è il modo in cui il servizio è costruito.
+2. **Lo strumento deve semplicemente funzionare.** Quando dovete condividere qualcosa di sensibile, l'affidabilità conta più di ogni altra cosa.
+3. **La fiducia si guadagna con ciò che scegliamo di non fare.** Ogni tracker che evitiamo, ogni campagna che non inviamo, è una piccola prova di dove risiedono le nostre priorità.
 
 ## Il vero impatto
 
-Evitando le pratiche di marketing e di tracciamento standard, noi:
+Evitare le pratiche standard di marketing e tracciamento non è solo una questione filosofica — ha vantaggi concreti:
 
-- Mantenere un servizio più pulito e veloce
-- Ridurre le potenziali vulnerabilità della sicurezza
-- Mantenere i dati sotto controllo diretto
-- Rimanere concentrati sul nostro obiettivo principale
+- Un servizio più snello e veloce con meno componenti in movimento
+- Una superficie di attacco ridotta con meno dipendenze da terze parti
+- I vostri dati restano sotto il vostro controllo, non dispersi tra reti pubblicitarie
+- Il nostro impegno ingegneristico resta concentrato sul prodotto, non sui funnel di conversione
 
-Investiamo il nostro tempo in:
+Dedichiamo il nostro tempo al lavoro che conta davvero per voi:
 
-- **Funzionalità di base**: Miglioramento delle funzioni essenziali che interessano agli utenti
-- **Protezione della privacy**: Rafforzamento delle tutele per i dati degli utenti
-- **Affidabilità del servizio**: Garantire la presenza del servizio quando ne avete bisogno.
-- **Conformità**: Soddisfare i requisiti legali e normativi
+- **Funzionalità di base** — migliorare le funzioni che utilizzate realmente
+- **Protezione della privacy** — rafforzare la crittografia e la gestione dei dati
+- **Affidabilità del servizio** — assicurarci di esserci quando ne avete bisogno
+- **Conformità normativa** — soddisfare i requisiti giurisdizionali e normativi
 
 ## Guardare avanti
 
-Continueremo a dare priorità alla semplicità e alla privacy rispetto alla portata del marketing. Anche se questo significa che potremmo crescere più lentamente rispetto ai servizi che si commercializzano in modo aggressivo, crediamo che sia la scelta giusta per uno strumento incentrato sulla privacy.
+Continueremo a scegliere semplicità e privacy rispetto alla portata del marketing. Questo significa che potremmo crescere più lentamente rispetto ai servizi che ottimizzano per l'engagement — e per noi va bene così. Uno strumento per la privacy si guadagna la reputazione attraverso un'affidabilità costante e silenziosa.
 
-Potete fidarvi del fatto che Onetime Secret sia presente quando ne avete bisogno, senza che vi ricordi continuamente che avete un conto con noi.
+Quando sentirete parlare di noi, sarà perché lo avete chiesto voi.
 
-**Domande sul nostro approccio? ** [Contattateci](https://onetimesecret.com/feedback).
+**Domande sul nostro approccio?** [Contattateci](https://onetimesecret.com/feedback).

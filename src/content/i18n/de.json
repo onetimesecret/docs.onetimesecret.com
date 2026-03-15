@@ -5,6 +5,12 @@
       "guides": "Anleitungen",
       "rest-api": "API",
       "self-hosting": "Selbst-Hosting"
+    },
+    "ariaLabel": {
+      "guides": "Anleitungen-Dokumentation",
+      "apiReference": "API-Referenz",
+      "selfHosting": "Selbst-Hosting-Dokumentation",
+      "blog": "Onetime Secret Blog"
     }
   },
   "sidebar": {

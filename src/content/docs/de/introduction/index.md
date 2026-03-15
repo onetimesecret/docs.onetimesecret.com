@@ -22,8 +22,10 @@ Onetime Secret bietet eine unkomplizierte Lösung für die sichere Weitergabe ve
 5. Optionale Passphrase: Füge den gemeinsamen Geheimnissen eine zusätzliche Sicherheitsebene hinzu.
 6. Open-Source: Prüfe unsere Codebasis für mehr Transparenz
 
-Entdecken Sie unseren Bonus-Inhalt und erfahren Sie, wie Onetime Secret Ihre Anforderungen an eine sichere Kommunikation effizient und diskret erfüllen kann.
+## Wo anfangen
 
-## Los geht's
-
-Sind Sie bereit, loszulegen? In unserer [Dokumentation](/de/docs-overview) finden Sie ausführliche Anleitungen zur effektiven Nutzung von Onetime Secret. Wenn Sie Fragen oder Anregungen haben, können Sie sich direkt an [Kontakt](https://onetimesecret.com/feedback) wenden.
+- **Den Dienst nutzen** — Besuche [onetimesecret.com](https://onetimesecret.com/) und teile ein Geheimnis in Sekunden
+- **Dokumentation durchstöbern** — Alle [Anleitungen](/de/introduction/guides/) für Walkthroughs und Referenzen
+- **Über die API integrieren** — Schau dir die [REST API](/de/rest-api/) für programmatischen Zugriff an
+- **Eigene Instanz betreiben** — Folge der [Self-Hosting](/de/self-hosting/)-Anleitung
+- **Fragen?** — [Kontaktiere uns](https://onetimesecret.com/feedback) direkt

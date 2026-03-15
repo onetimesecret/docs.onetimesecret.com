@@ -5,6 +5,12 @@
       "guides": "ガイド",
       "rest-api": "API",
       "self-hosting": "セルフホスティング"
+    },
+    "ariaLabel": {
+      "guides": "ガイドドキュメント",
+      "apiReference": "APIリファレンス",
+      "selfHosting": "セルフホスティングドキュメント",
+      "blog": "Onetime Secretブログ"
     }
   },
   "heading.anchorLabel": "「{{title}}」セクション",
