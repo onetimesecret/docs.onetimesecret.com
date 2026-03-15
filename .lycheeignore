@@ -35,6 +35,15 @@ mailto:*
 # other locale index pages link to it but the pages don't exist yet)
 .*/translations/guide$
 
+# Self-hosting sub-pages (only exist in en; Starlight serves English
+# fallback with "untranslated content" banner for other locales)
+.*/self-hosting/configuration$
+.*/self-hosting/getting-started$
+.*/self-hosting/installation$
+
+# REST API v2 docs (only exist in en)
+.*/rest-api/v2$
+
 # Note: The internal link check uses --root-dir src/content/docs with
 # --fallback-extensions md,mdoc so that root-relative content paths
 # (like /en/regions/) resolve correctly in offline mode.

@@ -2,10 +2,15 @@
   "nav": {
     "label": {
       "blog": "블로그",
-      "custom-domain": "사용자 정의 도메인",
-      "principles": "원칙",
+      "guides": "가이드",
       "rest-api": "API",
-      "home": "onetimesecret.com으로 돌아가기"
+      "self-hosting": "셀프 호스팅"
+    },
+    "ariaLabel": {
+      "guides": "가이드 문서",
+      "apiReference": "API 레퍼런스",
+      "selfHosting": "셀프 호스팅 문서",
+      "blog": "Onetime Secret 블로그"
     }
   },
   "heading.anchorLabel": "“{{title}}” 섹션",
@@ -13,6 +18,7 @@
     "home": "홈",
     "introduction": "소개",
     "gettingStarted": "시작하기",
+    "guides": "가이드",
     "secretLinks": "비밀 링크",
     "overview": "개요",
     "whyUseSecretLinks": "비밀 링크를 사용하는 이유",

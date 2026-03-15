@@ -25,8 +25,6 @@ Sicheres, einmaliges Teilen für jeden.
 
 ### Identity Plus
 
-**$35/Monat oder $365/Jahr**
-
 Sicheres Teilen, das Ihre Marke aufwertet und die Kommunikation vereinfacht.
 
 **Funktionen:**
@@ -35,13 +33,11 @@ Sicheres Teilen, das Ihre Marke aufwertet und die Kommunikation vereinfacht.
 - Erweiterte Datenschutzfunktionen
 - Voller API-Zugriff
 
-[Diesen Plan wählen](https://onetimesecret.com/plans/identity)
+[Aktuelle Preise ansehen](https://onetimesecret.com/pricing) | [Diesen Plan wählen](https://onetimesecret.com/plans/identity)
 
 ### Global Elite
 
-**Demnächst verfügbar**
-
-Dedizierte Infrastruktur mit Daten-Compliance-Kontrollen und unbegrenzter Skalierbarkeit.
+Eine vollständig angepasste Single-Tenant-Installation mit dedizierter Infrastruktur, Daten-Compliance-Kontrollen und unbegrenzter Skalierbarkeit.
 
 **Funktionen:**
 - Private Cloud-Umgebung

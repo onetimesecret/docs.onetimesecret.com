@@ -21,11 +21,9 @@ Partage sécurisé et unique pour tous.
 - Compte requis pour envoyer des courriels aux destinataires
 - Accès de base à l'API
 
-[Démarrer] (https://onetimesecret.com/plans/basic)
+[Démarrer](https://onetimesecret.com/plans/basic)
 
 ### Identity Plus
-
-**35$/mois ou 365$/an**
 
 Un partage sécurisé qui valorise votre marque et simplifie la communication.
 
@@ -35,13 +33,11 @@ Un partage sécurisé qui valorise votre marque et simplifie la communication.
 - Fonctions de confidentialité améliorées
 - Accès complet à l'API
 
-[Choisissez ce plan] (https://onetimesecret.com/plans/identity)
+[Voir les tarifs actuels](https://onetimesecret.com/pricing) | [Choisissez ce plan](https://onetimesecret.com/plans/identity)
 
 ### Global Elite
 
-**Bientôt disponible**
-
-Infrastructure dédiée avec contrôles de conformité des données et évolutivité illimitée.
+Une installation entièrement personnalisée, à locataire unique, avec une infrastructure dédiée, des contrôles de conformité des données et une évolutivité illimitée.
 
 **Caractéristiques:**
 - Environnement en nuage privé

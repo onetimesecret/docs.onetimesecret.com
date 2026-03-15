@@ -22,8 +22,10 @@ O Onetime Secret oferece uma solução direta para compartilhar informações se
 5. Frase secreta opcional: Adicione uma camada extra de segurança às mensagens compartilhadas
 6. Código aberto: Revise nosso código para maior transparência
 
-Explore nosso Conteúdo Adicional para aprender como o Onetime Secret pode atender suas necessidades de comunicação segura de forma eficiente e discreta.
+## Por onde começar
 
-## Comece Agora
-
-Pronto para mergulhar? Confira nossa [documentação](/pt-br/docs-overview) para instruções detalhadas sobre como usar o Onetime Secret efetivamente. Se você tiver alguma dúvida ou feedback, sinta-se à vontade para [entrar em contato](https://onetimesecret.com/feedback) diretamente.
+- **Use o serviço** — Acesse [onetimesecret.com](https://onetimesecret.com/) e compartilhe um segredo em segundos
+- **Navegue pela documentação** — Veja todos os [Guias](/pt-br/introduction/guides/) para tutoriais e referências
+- **Integre via API** — Confira a [API REST](/pt-br/rest-api/) para acesso programático
+- **Execute sua própria instância** — Siga o guia de [Self-Hosting](/pt-br/self-hosting/)
+- **Dúvidas?** — [Entre em contato](https://onetimesecret.com/feedback) diretamente

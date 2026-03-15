@@ -7,6 +7,16 @@ sidebar:
 
 运行您自己的私有 Onetime Secret 实例，全面控制您的数据、安全性和部署。
 
+:::caution[2026年3月 — 自托管文档正在更新中]
+我们正在从 **v0.23** 过渡到 **v0.24**（`main` 分支）。部分自托管文档已过时，我们正在[积极改进中](https://github.com/onetimesecret/onetimesecret/issues/2628)。
+
+**如果您只是想先运行起来**，我们推荐使用 `rel/0.23` 分支。它只需要几个环境变量和 Redis，我们仍在积极推送修复和小更新。
+
+```bash
+git clone -b rel/0.23 https://github.com/onetimesecret/onetimesecret.git
+```
+:::
+
 ## 为什么要自托管？
 
 自托管 Onetime Secret 为您提供：

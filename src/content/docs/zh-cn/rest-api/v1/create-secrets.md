@@ -5,11 +5,11 @@ description: 了解如何使用 Onetime Secret REST API 创建和检索内容，
 
 _更新日期 2025-04-02_
 
-注
-**数据地点和区域选择***
-- 选择美国（[`us.onetimesecret.com`](https://us.onetimesecret.com/)）、欧盟（[`eu.onetimesecret.com`](https://eu.onetimesecret.com/)）、加拿大（[`ca.onetimesecret.com`](https://ca.onetimesecret.com/)）或新西兰（[`nz.onetimesecret.com`](https://nz.onetimesecret.com/)）数据中心
+:::note
+**数据地点和区域选择**
+- 选择加拿大（[`ca.onetimesecret.com`](https://ca.onetimesecret.com/)）、欧盟（[`eu.onetimesecret.com`](https://eu.onetimesecret.com/)）、新西兰（[`nz.onetimesecret.com`](https://nz.onetimesecret.com/)）、英国（[`uk.onetimesecret.com`](https://uk.onetimesecret.com/)）或美国（[`us.onetimesecret.com`](https://us.onetimesecret.com/)）数据中心
 - 考虑数据主权、延迟和合规要求等因素
-- ** 注：** 默认情况下，`onetimesecret.com` 仍可运行并路由至活动数据中心，建议使用特定位置，因为此功能将来可能会过时。
+- **注：** 默认情况下，`onetimesecret.com` 仍可运行并路由至活动数据中心，建议使用特定位置，因为此功能将来可能会过时。
 :::
 
 
@@ -57,13 +57,13 @@ $ curl -X POST -d 'secret=SECRET&ttl=3600' https://us.onetimesecret.com/api/v1/s
 
 #### 响应示例：
 
-``json
+```json
 {
-  "custid": "USERNAME"、
-  "metadata_key": "qjpjroeit8wra0ojeyhcw5pjsgwtuq7"、
+  "custid":"USERNAME",
+  "metadata_key":"qjpjroeit8wra0ojeyhcw5pjsgwtuq7",
   "secret_key":"153l8vbwqx5taskp92pf05uvgjefvu9",
-  "ttl": "3600"、
-  "share_domain"："",
+  "ttl":"3600",
+  "share_domain": "",
   "updated":"1324174006",
   "created":"1324174006"
 }
@@ -88,14 +88,14 @@ $ curl -X POST -d 'ttl=3600' https://us.onetimesecret.com/api/v1/generate
 ```
 
 
-``json
+```json
 {
-  "custid": "USERNAME"、
+  "custid":"USERNAME",
   "value":"3Rg8R2sfD3?a",
-  "metadata_key": "2b6bjmudhmtiqjn2qmdaqjkqxp323gi"、
-  "secret_key": "pgcdv7org3vtdurif809sygnt0mstw6"、
-  "ttl": "3600"、
-  "share_domain"："",
+  "metadata_key":"2b6bjmudhmtiqjn2qmdaqjkqxp323gi",
+  "secret_key":"pgcdv7org3vtdurif809sygnt0mstw6",
+  "ttl":"3600",
+  "share_domain": "",
   "updated":"1324174095",
   "created":"1324174095"
 }

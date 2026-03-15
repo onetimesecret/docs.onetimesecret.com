@@ -6,18 +6,18 @@ description: Vergelijk onze veelzijdige plannen met functies voor het veilig del
 
 ## Feature Matrix
 
-| Identiteit Plus Basis Anoniem
+| Functie/Plan | Identity Plus | Basis | Niet ingelogd |
 |---------|----------------|-------------------------|------------|
-| Aangepaste domeinen: onbeperkt.
-| Eigen homepage.
-| Aangepast logo, kleur
+| Aangepaste domeinen | Onbeperkt | ❌ | ❌ |
+| Eigen homepage | ✅ | ❌ | ❌ |
+| Aangepast logo, kleur | ✅ | ❌ | ❌ |
 | Aantal rekeningen | 1 | 1 | ❌ |
 | Verlopen van links | Tot 30 dagen | 14 dagen | Beperkt tot 7 dagen |
-| API toegang is beperkt.
+| API-toegang | ✅ | ✅ | Beperkt |
 | Configuratie vereist | Ja (DNS-configuratie) | Nee | Nee |
 | Betaald | Ja (onderdeel van Identiteitsplan) | Nee | Nee |
-| SSL/TLS-beveiliging.
-Gegevenslocatie | (EU of VS) | (EU of VS) | (EU of VS) | (EU of VS) |
+| SSL/TLS-beveiliging | ✅ | ✅ | ✅ |
+| Gegevenslocatie | ✅ (EU of VS) | ✅ (EU of VS) | ✅ (EU of VS) |
 
 
 Ga voor meer informatie over accountupgrades en prijzen naar onze [Prijzenpagina](https://onetimesecret.com/pricing).

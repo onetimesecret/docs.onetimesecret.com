@@ -18,7 +18,7 @@ De flesta tjänster översvämmar din inkorg med:
 - Kampanjerbjudanden
 - Återengagemangskampanjer
 
-Vi begränsar vår e-postkommunikation till endast de mest väsentliga kommunikationerna: leveranser av hemliga länkar och kritiska kontoaviseringar. Vi kommer aldrig att skicka marknadsföringsmejl eller oönskade uppdateringar. Vi tror att din inkorg tillhör dig.
+De enda mejl du får från oss är de du specifikt begär — leveranser av hemliga länkar, kontonotifieringar eller uppdateringar du uttryckligen har valt att ta emot. Även när du väljer att ta emot mejl hör du sällan från oss, och bara av de specifika anledningar du valde. Din inkorg tillhör dig.
 
 ## Branschstandarder vi hoppar över
 
@@ -33,32 +33,32 @@ Vi undviker medvetet vanliga spårnings- och marknadsföringsverktyg:
 
 ## Varför detta är viktigt
 
-Vårt tillvägagångssätt centreras kring tre kärnprinciper:
+Dessa val handlar om tre saker vi bryr oss djupt om:
 
-1. **Respektera integritet**: Din data är din, punkt
-2. **Fokusera på tillförlitlighet**: Verktyget ska helt enkelt fungera när du behöver det
-3. **Bygga förtroende genom handling**: Vi bevisar vårt åtagande genom vad vi inte gör
+1. **Din data är din.** Vi behandlar inte användarinformation som en resurs att utvinna. Integritet är inte en funktion vi skruvar fast i efterhand — det är så tjänsten är byggd.
+2. **Verktyget ska bara fungera.** När du behöver dela något känsligt är tillförlitlighet viktigare än allt annat.
+3. **Förtroende byggs genom det vi väljer att inte göra.** Varje spårare vi hoppar över, varje kampanj vi inte skickar, är ett litet bevis på var våra prioriteringar ligger.
 
 ## Den verkliga inverkan
 
-Genom att undvika standardmarknadsföring och spårningsmetoder:
+Att hoppa över standardmarknadsföring och spårning är inte bara filosofiskt — det har konkreta fördelar:
 
-- Upprätthåller vi en renare, snabbare tjänst
-- Minskar vi potentiella säkerhetssårbarheter
-- Håller vi din data under direkt kontroll
-- Stannar vi fokuserade på vårt kärnändamål
+- En smidigare, snabbare tjänst med färre rörliga delar
+- En mindre attackyta med färre tredjepartsberoenden
+- Din data förblir under din kontroll, inte utspridd över reklamsnätverk
+- Vårt ingenjörsfokus stannar på produkten, inte på konverteringstrattar
 
-Vi investerar vår tid i:
+Vi lägger vår tid på det som faktiskt betyder något för dig:
 
-- **Kärnfunktionalitet**: Förbättra de väsentliga funktioner som är viktiga för användare
-- **Integritetsskydd**: Stärka skydd för användardata
-- **Tjänstens tillförlitlighet**: Säkerställa att tjänsten finns där när du behöver den
-- **Efterlevnad**: Möta juridiska och regulatoriska krav
+- **Kärnfunktionalitet** — att förbättra de funktioner du faktiskt använder
+- **Integritetsskydd** — att stärka kryptering och datahantering
+- **Tjänstens tillförlitlighet** — att se till att vi finns där när du behöver oss
+- **Efterlevnad** — att uppfylla jurisdiktionella och regulatoriska krav
 
 ## Framåtblickande
 
-Vi kommer att fortsätta prioritera enkelhet och integritet framför marknadsföringsräckvidd. Även om detta betyder att vi kan växa långsammare än tjänster som aggressivt marknadsför sig själva, tror vi att det är rätt val för ett integritetsfokuserat verktyg.
+Vi fortsätter att välja enkelhet och integritet framför marknadsföringsräckvidd. Det innebär att vi kanske växer långsammare än tjänster som optimerar för engagemang — och det går bra för oss. Ett integritetsverktyg bygger sitt rykte genom konsekvent, tyst tillförlitlighet.
 
-Du kan lita på att Onetime Secret finns där när du behöver det, utan de ständiga påminnelserna om att du har ett konto hos oss.
+När du väl hör från oss beror det på att du bad om det.
 
 **Frågor om vårt tillvägagångssätt?** [Kontakta oss](https://onetimesecret.com/feedback).
