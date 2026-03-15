@@ -1,5 +1,5 @@
 ---
-title: Primeros pasos
+title: REST API
 description: La API REST de Onetime Secret proporciona capacidades flexibles para compartir secretos, soportando tanto el uso autenticado como el anónimo. Los usuarios autenticados obtienen características avanzadas y límites de uso más altos, mientras que los usuarios no autenticados pueden compartir secretos rápidamente con una funcionalidad básica.
 ---
 
@@ -13,14 +13,13 @@ Prueba y explora los endpoints de la API con nuestra [Colección Postman](https:
 
 `https://REGION.onetimesecret.com/api`
 
-Donde `REGION` es `us` o `eu`.
+Donde `REGION` es `CA`, `EU`, `NZ`, `UK` o `US`.
 
 <!-- ::callout{icon="i-heroicons-globe-alt"} -->
 **Selección de localidad y región de los datos**
-- Elija entre los centros de datos de EE.UU. ([`us.onetimesecret.com`](https://us.onetimesecret.com/)) o de la UE ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)).
+- Elija una región (por ejemplo, UE [`eu.onetimesecret.com`](https://eu.onetimesecret.com/), RU [`uk.onetimesecret.com`](https://uk.onetimesecret.com/) o EE.UU. [`us.onetimesecret.com`](https://us.onetimesecret.com/)). Consulte [Regiones](/es/regions) para todas las opciones.
 - Tenga en cuenta factores como la soberanía de los datos, la latencia y los requisitos de cumplimiento.
 - **NOTA:** Por defecto `onetimesecret.com` permanece operativo y dirige a un centro de datos activo, se recomienda utilizar una localidad específica ya que esta funcionalidad puede quedar obsoleta en el futuro.
-::
 
 ## Autenticación
 Admitimos dos modos de uso de la API:
@@ -44,8 +43,11 @@ Admitimos dos modos de uso de la API:
 ## Localización de datos
 Onetime Secret soporta múltiples centros de datos geográficos. Seguimos una política de cero intercambio de datos entre regiones, lo que garantiza un aislamiento completo de los datos. Elija el centro de datos adecuado a sus necesidades:
 
-- Centro de datos de la UE:** [eu.onetimesecret.com](https://eu.onetimesecret.com/)
-- Centro de datos de EE.UU.:** [us.onetimesecret.com](https://us.onetimesecret.com/)
+- **Centro de datos CA:** [ca.onetimesecret.com](https://ca.onetimesecret.com/)
+- **Centro de datos UE:** [eu.onetimesecret.com](https://eu.onetimesecret.com/)
+- **Centro de datos NZ:** [nz.onetimesecret.com](https://nz.onetimesecret.com/)
+- **Centro de datos RU:** [uk.onetimesecret.com](https://uk.onetimesecret.com/)
+- **Centro de datos EE.UU.:** [us.onetimesecret.com](https://us.onetimesecret.com/)
 
 ### Consideraciones importantes:
 - Puede elegir una localidad de datos específica navegando directamente al dominio deseado
@@ -56,14 +58,13 @@ Onetime Secret soporta múltiples centros de datos geográficos. Seguimos una po
 Onetime Secret admite configuraciones de dominio personalizadas para organizaciones con requisitos específicos de red o de marca a través de nuestro plan [Identity Plus](https://onetimesecret.com/pricing).
 
 ### Ventajas del dominio personalizado
-- Marca privada:** Utilice su propio dominio (por ejemplo, `secrets.example.com`) para acceder a la API y compartir secretos.
+- **Marca privada:** Utilice su propio dominio (por ejemplo, `secrets.example.com`) para acceder a la API y compartir secretos.
 - **Experiencia de usuario coherente:** Mantenga la identidad visual y de confianza de su organización con sus clientes y socios.
 - **Incluir durante la formación de los empleados:** Utilice dominios personalizados para reforzar las prácticas de seguridad y los flujos de trabajo de su organización.
 
 <!-- ::callout{icon="i-heroicons-lock-closed"} -->
-**Característica Premium
-Los dominios personalizados están disponibles en nuestro plan [Identity Plus](https://onetimesecret.com/pricing). Configúrelos en cuestión de minutos con nuestras sencillas opciones de configuración. [Más información](/es/custom-domains).
-::
+**Característica Premium**
+Los dominios personalizados están disponibles en nuestro plan [Identity Plus](https://onetimesecret.com/pricing). Configúrelos en cuestión de minutos con nuestras sencillas opciones de configuración. [Más información](/es/custom-domains/).
 
 ### Uso de la API con dominios personalizados
 Cuando se utiliza un dominio personalizado, todos los puntos finales de la API siguen la misma estructura:
@@ -80,10 +81,15 @@ Estado actual del sistema.
 
 ```bash
 $ curl -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/status
-{"status": "nominal"}
+{"status":"nominal"}
+```
+
+```bash
+$ curl -u 'USERNAME:APITOKEN' https://uk.onetimesecret.com/api/v1/status
+{"status":"nominal"}
 ```
 
 ```bash
 $ curl -u 'USERNAME:APITOKEN' https://us.onetimesecret.com/api/v1/status
-{"status": "nominal"}
+{"status":"nominal"}
 ```

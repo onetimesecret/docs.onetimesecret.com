@@ -22,8 +22,10 @@ Onetime Secret tillhandahåller en enkel lösning för att dela känslig informa
 5. Valfri lösenfras: Lägg till ett extra säkerhetslager till delade hemligheter
 6. Öppen källkod: Granska vår kodbas för förbättrad transparens
 
-Utforska vårt bonusinnehåll för att lära dig hur Onetime Secret kan adressera dina behov av säker kommunikation effektivt och diskret.
+## Var du ska börja
 
-## Kom igång
-
-Redo att börja? Kolla in vår [dokumentation](/sv/docs-overview) för detaljerade instruktioner om hur du använder Onetime Secret effektivt. Om du har några frågor eller feedback, tveka inte att [kontakta oss](https://onetimesecret.com/feedback) direkt.
+- **Använd tjänsten** — Gå till [onetimesecret.com](https://onetimesecret.com/) och dela en hemlighet på några sekunder
+- **Utforska dokumentationen** — Se alla [guider](/sv/introduction/guides/) för genomgångar och referenser
+- **Integrera via API** — Kolla in [REST API](/sv/rest-api/) för programmatisk åtkomst
+- **Kör din egen instans** — Följ guiden för [egen drift](/sv/self-hosting/)
+- **Frågor?** — [Kontakta oss](https://onetimesecret.com/feedback) direkt

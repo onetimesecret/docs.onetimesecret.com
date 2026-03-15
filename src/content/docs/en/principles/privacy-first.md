@@ -18,7 +18,7 @@ Most services flood your inbox with:
 - Promotional offers
 - Re-engagement campaigns
 
-We limit our email communications to only the most essential communications: secret link deliveries and critical account notifications. We'll never send marketing emails or unsolicited updates. We believe your inbox belongs to you.
+The only emails you'll receive from us are the ones you specifically request — secret link deliveries, account notifications, or updates you've explicitly opted into. Even when you do opt in, you'll rarely hear from us, and only for the specific reasons you chose. Your inbox belongs to you.
 
 ## Industry Standards We Skip
 
@@ -33,32 +33,32 @@ We deliberately avoid common tracking and marketing tools:
 
 ## Why This Matters
 
-Our approach centers on three core principles:
+These choices come down to three things we care about deeply:
 
-1. **Respect privacy**: Your data is yours, period
-2. **Focus on reliability**: The tool should simply work when you need it
-3. **Build trust through action**: We prove our commitment through what we don't do
+1. **Your data is yours.** We don't treat user information as a resource to mine. Privacy isn't a feature we bolt on — it's how the service is built.
+2. **The tool should just work.** When you need to share something sensitive, reliability matters more than anything else.
+3. **Trust is earned by what we choose not to do.** Every tracker we skip, every campaign we don't send, is a small proof of where our priorities lie.
 
 ## The Real Impact
 
-By avoiding standard marketing and tracking practices, we:
+Skipping standard marketing and tracking practices isn't just philosophical — it has tangible benefits:
 
-- Maintain a cleaner, faster service
-- Reduce potential security vulnerabilities
-- Keep your data under direct control
-- Stay focused on our core purpose
+- A leaner, faster service with fewer moving parts
+- A smaller attack surface with fewer third-party dependencies
+- Your data stays under your control, not scattered across ad networks
+- Our engineering focus stays on the product, not on conversion funnels
 
-We invest our time in:
+We put our time into the work that matters to you:
 
-- **Core Functionality**: Improving the essential features that matter to users
-- **Privacy Protection**: Strengthening safeguards for user data
-- **Service Reliability**: Ensuring the service is there when you need it
-- **Compliance**: Meeting legal and regulatory requirements
+- **Core functionality** — improving the features you actually use
+- **Privacy safeguards** — strengthening encryption and data handling
+- **Service reliability** — making sure we're there when you need us
+- **Compliance** — meeting jurisdictional and regulatory requirements
 
 ## Looking Forward
 
-We'll continue prioritizing simplicity and privacy over marketing reach. While this means we might grow more slowly than services that aggressively market themselves, we believe it's the right choice for a privacy-focused tool.
+We'll keep choosing simplicity and privacy over marketing reach. That means we may grow more slowly than services that optimize for engagement — and we're fine with that. A privacy tool earns its reputation through consistent, quiet reliability.
 
-You can trust Onetime Secret to be there when you need it, without the constant reminders that you have an account with us.
+When you do hear from us, it'll be because you asked to.
 
 **Questions about our approach?** [Contact us](https://onetimesecret.com/feedback).

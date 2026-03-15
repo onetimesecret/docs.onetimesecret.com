@@ -5,7 +5,7 @@ description: Compare nossos planos ricos em recursos oferecendo compartilhamento
 
 ## Matriz de Recursos
 
-| Recurso/Plano | Identity Plus | Basic | Anônimo |
+| Recurso/Plano | Identity Plus | Basic | Sem login |
 |---------|----------------|-------------------------|------------|
 | Domínios Personalizados | Ilimitados | ❌ | ❌ |
 | Página Inicial com Marca | ✅ | ❌ | ❌ |

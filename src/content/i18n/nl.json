@@ -2,10 +2,15 @@
   "nav": {
     "label": {
       "blog": "Blog",
-      "custom-domain": "Custom Domains",
-      "principles": "Principles",
+      "guides": "Handleidingen",
       "rest-api": "API",
-      "home": "Back to onetimesecret.com"
+      "self-hosting": "Self-Hosting"
+    },
+    "ariaLabel": {
+      "guides": "Handleidingen documentatie",
+      "apiReference": "API-referentie",
+      "selfHosting": "Zelf hosten documentatie",
+      "blog": "Onetime Secret blog"
     }
   },
   "heading.anchorLabel": "Sectie getiteld “{{title}}”",
@@ -13,6 +18,7 @@
     "home": "Home",
     "introduction": "Introductie",
     "gettingStarted": "Aan de slag",
+    "guides": "Gidsen",
     "secretLinks": "Geheime links",
     "overview": "Overzicht",
     "whyUseSecretLinks": "Waarom geheime links gebruiken",

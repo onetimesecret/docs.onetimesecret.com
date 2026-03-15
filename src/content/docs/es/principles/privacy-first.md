@@ -1,4 +1,3 @@
-
 ---
 title: Privacidad
 description: Nuestro enfoque para proteger la privacidad del usuario a través de opciones de diseño deliberadas
@@ -19,7 +18,7 @@ La mayoría de los servicios inundan su bandeja de entrada con:
 - Ofertas promocionales
 - Campañas de reenganche
 
-Limitamos nuestras comunicaciones por correo electrónico a las comunicaciones más esenciales: envíos de enlaces secretos y notificaciones críticas de cuentas. Nunca enviaremos correos electrónicos de marketing ni actualizaciones no solicitadas. Creemos que su bandeja de entrada le pertenece.
+Los únicos correos electrónicos que recibirá de nosotros son los que solicite específicamente: envíos de enlaces secretos, notificaciones de cuenta o actualizaciones a las que se haya suscrito explícitamente. Incluso cuando elige recibirlos, rara vez tendrá noticias nuestras, y solo por los motivos específicos que haya elegido. Su bandeja de entrada le pertenece.
 
 ## Nos saltamos las normas del sector
 
@@ -32,34 +31,34 @@ Evitamos deliberadamente las herramientas habituales de seguimiento y marketing:
 - Herramientas de automatización del marketing
 - Píxeles de seguimiento de terceros
 
-## Por qué esto importa
+## Por qué esto es importante
 
-Nuestro planteamiento se basa en tres principios fundamentales:
+Estas decisiones se reducen a tres cosas que nos importan profundamente:
 
-1. **Respete la privacidad**: Tus datos son tuyos y punto
-2. **Centrarse en la fiabilidad**: La herramienta debe funcionar simplemente cuando la necesites
-3. **Construir confianza a través de la acción**: Demostramos nuestro compromiso a través de lo que no hacemos
+1. **Sus datos son suyos.** No tratamos la información del usuario como un recurso para explotar. La privacidad no es una función que añadimos después; es la base sobre la que se construye el servicio.
+2. **La herramienta simplemente debe funcionar.** Cuando necesita compartir algo confidencial, la fiabilidad importa más que cualquier otra cosa.
+3. **La confianza se gana por lo que decidimos no hacer.** Cada rastreador que omitimos, cada campaña que no enviamos, es una pequeña prueba de dónde están nuestras prioridades.
 
 ## El impacto real
 
-Evitamos las prácticas habituales de marketing y seguimiento:
+Omitir las prácticas habituales de marketing y seguimiento no es solo filosófico: tiene beneficios tangibles:
 
-- Mantener un servicio más limpio y rápido
-- Reducir las posibles vulnerabilidades de seguridad
-- Mantener sus datos bajo control directo
-- Mantenernos centrados en nuestro objetivo principal
+- Un servicio más ligero y rápido con menos piezas en movimiento
+- Una superficie de ataque más pequeña con menos dependencias de terceros
+- Sus datos permanecen bajo su control, no dispersos por redes publicitarias
+- Nuestro esfuerzo de ingeniería se centra en el producto, no en embudos de conversión
 
-Invertimos nuestro tiempo en:
+Dedicamos nuestro tiempo al trabajo que realmente le importa:
 
-- Funcionalidad básica**: Mejora de las funciones esenciales que importan a los usuarios
-- Protección de la privacidad**: Reforzar la protección de los datos de los usuarios
-- Fiabilidad del servicio**: Garantizar que el servicio esté disponible cuando lo necesite.
-- Cumplimiento**: Cumplir los requisitos legales y reglamentarios
+- **Funcionalidad básica** — mejorar las funciones que realmente utiliza
+- **Protección de la privacidad** — reforzar el cifrado y el manejo de datos
+- **Fiabilidad del servicio** — asegurar que estemos disponibles cuando nos necesite
+- **Cumplimiento normativo** — cumplir con los requisitos jurisdiccionales y regulatorios
 
 ## Mirando hacia el futuro
 
-Seguiremos dando prioridad a la sencillez y la privacidad frente al alcance comercial. Aunque esto significa que podemos crecer más lentamente que los servicios que se comercializan agresivamente, creemos que es la elección correcta para una herramienta centrada en la privacidad.
+Seguiremos eligiendo la sencillez y la privacidad por encima del alcance comercial. Eso significa que podemos crecer más lentamente que los servicios que optimizan para la interacción, y nos parece bien. Una herramienta de privacidad se gana su reputación a través de una fiabilidad constante y discreta.
 
-Puede confiar en que Onetime Secret estará ahí cuando lo necesite, sin los constantes recordatorios de que tiene una cuenta con nosotros.
+Cuando tenga noticias nuestras, será porque usted lo solicitó.
 
-**¿Preguntas sobre nuestro enfoque?** [Contacte con nosotros](https://onetimesecret.com/feedback).
+**¿Preguntas sobre nuestro enfoque?** [Póngase en contacto con nosotros](https://onetimesecret.com/feedback).

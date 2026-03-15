@@ -2,10 +2,15 @@
   "nav": {
     "label": {
       "blog": "Блог",
-      "custom-domain": "Власні домени",
-      "principles": "Принципи",
+      "guides": "Посібники",
       "rest-api": "API",
-      "home": "Повернутися на onetimesecret.com"
+      "self-hosting": "Самостійний хостинг"
+    },
+    "ariaLabel": {
+      "guides": "Документація посібників",
+      "apiReference": "Довідник API",
+      "selfHosting": "Документація самостійного хостингу",
+      "blog": "Блог Onetime Secret"
     }
   },
   "heading.anchorLabel": "Розділ під назвою «{{title}}»",
@@ -13,6 +18,7 @@
     "home": "Головна",
     "introduction": "Вступ",
     "gettingStarted": "Початок роботи",
+    "guides": "Посібники",
     "secretLinks": "Таємні посилання",
     "overview": "Огляд",
     "whyUseSecretLinks": "Чому варто використовувати таємні посилання",

@@ -25,8 +25,6 @@ Säker, engångsdelning för alla.
 
 ### Identity Plus
 
-**35 USD/månad eller 365 USD/år**
-
 Säker delning som förhöjer ditt varumärke och förenklar kommunikation.
 
 **Funktioner:**
@@ -35,13 +33,11 @@ Säker delning som förhöjer ditt varumärke och förenklar kommunikation.
 - Förbättrade integritetsfunktioner
 - Full API-åtkomst
 
-[Välj denna plan](https://onetimesecret.com/plans/identity)
+[Se aktuella priser](https://onetimesecret.com/pricing) | [Välj denna plan](https://onetimesecret.com/plans/identity)
 
 ### Global Elite
 
-**Kommer snart**
-
-Dedikerad infrastruktur med dataefterlevnadskontroller och obegränsad skalbarhet.
+En helt anpassad installation med enskild klientmiljö, dedikerad infrastruktur, dataefterlevnadskontroller och obegränsad skalbarhet.
 
 **Funktioner:**
 - Privat molnmiljö

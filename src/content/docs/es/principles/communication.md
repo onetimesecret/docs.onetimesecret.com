@@ -17,23 +17,23 @@ La mayoría de los servicios inundan su bandeja de entrada con:
 - Ofertas promocionales
 - Campañas de reenganche
 
-En toda nuestra historia, nunca hemos enviado un correo electrónico de marketing. Los únicos correos electrónicos que recibirá de nosotros son los que solicite específicamente: envíos de enlaces secretos. Ni boletines, ni actualizaciones, ni promociones. Creemos que su bandeja de entrada le pertenece.
+Los únicos correos electrónicos que recibirá de nosotros son los que solicite específicamente, como envíos de enlaces secretos, notificaciones de cuenta o actualizaciones a las que se haya suscrito explícitamente. Incluso cuando elige recibirlos, rara vez tendrá noticias nuestras, y solo por los motivos específicos para los que se registró. Su bandeja de entrada le pertenece.
 
-## Why This Matters
+## Por qué esto es importante
 
-Al evitar las prácticas habituales de marketing y comunicación, nosotros
-- Mantenemos un servicio más limpio y sencillo
-- Reducimos los posibles riesgos de seguridad
-- Nos centramos en nuestro objetivo principal
-- Respetamos su tiempo y atención
+Una herramienta de privacidad no debería comportarse como una plataforma de marketing. Al mantener nuestras comunicaciones al mínimo:
 
-## Our Focus Instead
+- Reducimos la superficie de ataque para el phishing y la ingeniería social: cuantos menos correos legítimos enviemos, más fácil será detectar los sospechosos
+- Nos centramos en ofrecer un servicio fiable en lugar de optimizar métricas de interacción
+- Respetamos la confianza que deposita en nosotros al compartir su dirección de correo electrónico
 
-Invertimos nuestro tiempo y recursos en
-- Mejorar la funcionalidad básica
-- Reforzar la protección de la privacidad
-- Garantizar un servicio fiable
-- Cumplimiento de las normas jurisdiccionales
-- Mantener la transparencia de las operaciones
+## Dónde concentramos nuestra energía
+
+En lugar de redactar campañas, dedicamos nuestro tiempo a lo que realmente le importa:
+
+- **Fiabilidad del servicio** — asegurar que el servicio funcione cuando lo necesita
+- **Protección de la privacidad** — reforzar el cifrado y el manejo de datos
+- **Cumplimiento normativo** — mantenernos al día con los requisitos jurisdiccionales y regulatorios
+- **Transparencia** — ser abiertos sobre cómo operamos y por qué
 
 ¿Tiene alguna opinión sobre nuestro enfoque de la comunicación? [Póngase en contacto con nosotros](https://onetimesecret.com/feedback).

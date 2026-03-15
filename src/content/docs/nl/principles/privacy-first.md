@@ -18,7 +18,7 @@ De meeste diensten overspoelen je inbox met:
 - Promotionele aanbiedingen
 - Campagnes voor hernieuwde betrokkenheid
 
-We beperken onze e-mailcommunicatie tot de meest essentiële mededelingen: geheime linkleveringen en kritieke accountmeldingen. We sturen nooit marketinge-mails of ongevraagde updates. Wij vinden dat je inbox van jou is.
+De enige e-mails die je van ons ontvangt, zijn de e-mails waar je specifiek om vraagt — geheime linkleveringen, accountmeldingen of updates waarvoor je je expliciet hebt aangemeld. Zelfs als je je aanmeldt, hoor je zelden van ons, en alleen voor de specifieke redenen die je hebt gekozen. Je inbox is van jou.
 
 ## Industriestandaarden die we overslaan
 
@@ -33,32 +33,32 @@ We vermijden bewust gebruikelijke tracking- en marketingtools:
 
 ## Waarom dit belangrijk is
 
-Onze aanpak is gebaseerd op drie kernprincipes:
+Deze keuzes komen neer op drie dingen die ons na aan het hart liggen:
 
-1. **Respecteer privacy**: Jouw gegevens zijn van jou, punt
-2. **Focus op betrouwbaarheid**: De tool moet gewoon werken wanneer je hem nodig hebt
-3. **Bouw vertrouwen door actie**: We bewijzen onze betrokkenheid door wat we niet doen
+1. **Je gegevens zijn van jou.** We behandelen gebruikersinformatie niet als een bron om te ontginnen. Privacy is geen functie die we er achteraf opplakken — het is hoe de dienst is gebouwd.
+2. **De tool moet gewoon werken.** Wanneer je iets gevoeligs moet delen, is betrouwbaarheid belangrijker dan wat dan ook.
+3. **Vertrouwen verdien je door wat je niet doet.** Elke tracker die we overslaan, elke campagne die we niet versturen, is een klein bewijs van waar onze prioriteiten liggen.
 
 ## De echte impact
 
-Door standaard marketing- en traceerpraktijken te vermijden:
+Het overslaan van standaard marketing- en trackingpraktijken is niet alleen filosofisch — het heeft tastbare voordelen:
 
-- Een schonere, snellere service onderhouden
-- Potentiële kwetsbaarheden in de beveiliging verminderen
-- Uw gegevens onder directe controle houden
-- Gefocust blijven op ons hoofddoel
+- Een slankere, snellere dienst met minder bewegende onderdelen
+- Een kleiner aanvalsoppervlak met minder afhankelijkheden van derden
+- Je gegevens blijven onder jouw controle, niet verspreid over advertentienetwerken
+- Onze technische focus blijft op het product, niet op conversiefunnels
 
-We investeren onze tijd in:
+We steken onze tijd in het werk dat er voor jou toe doet:
 
-- **Kernfunctionaliteit**: De essentiële functies verbeteren die belangrijk zijn voor gebruikers
-- Privacybescherming**: Betere beveiliging van gebruikersgegevens
-- Betrouwbaarheid van de service**: Ervoor zorgen dat de service er is wanneer u hem nodig hebt
-- Conformiteit**: Voldoen aan wet- en regelgeving
+- **Kernfunctionaliteit** — de functies verbeteren die je daadwerkelijk gebruikt
+- **Privacywaarborgen** — versterking van encryptie en gegevensverwerking
+- **Dienstbetrouwbaarheid** — zorgen dat we er zijn wanneer je ons nodig hebt
+- **Compliance** — voldoen aan jurisdictie- en regelgevingsvereisten
 
 ## Vooruitkijken
 
-We blijven prioriteit geven aan eenvoud en privacy boven marketingbereik. Hoewel dit betekent dat we misschien langzamer groeien dan diensten die zichzelf agressief vermarkten, geloven we dat dit de juiste keuze is voor een privacy-gerichte tool.
+We blijven kiezen voor eenvoud en privacy boven marketingbereik. Dat betekent dat we misschien langzamer groeien dan diensten die optimaliseren voor betrokkenheid — en dat vinden we prima. Een privacytool verdient zijn reputatie door consistente, stille betrouwbaarheid.
 
-Je kunt erop vertrouwen dat Onetime Secret er is wanneer je het nodig hebt, zonder de constante herinneringen dat je een account bij ons hebt.
+Wanneer je van ons hoort, is dat omdat je erom gevraagd hebt.
 
 **Vragen over onze aanpak?** [Neem contact met ons op](https://onetimesecret.com/feedback).

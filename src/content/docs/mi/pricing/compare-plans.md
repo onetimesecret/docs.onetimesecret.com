@@ -6,7 +6,7 @@ description: Whakataurite i ā mātou mahere āhuatanga-nui e whakarato ana i te
 
 ## Papawhakatau Āhuatanga
 
-| Āhuatanga/Mahere | Identity Plus | Taketake | Ingoa-kore |
+| Āhuatanga/Mahere | Identity Plus | Taketake | Kāore i waitohua |
 |---------|----------------|-------------------------|------------|
 | Rohe Ritenga | Mutunga kore | ❌ | ❌ |
 | Whārangi Kāinga Waitohu | ✅ | ❌ | ❌ |

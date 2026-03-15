@@ -5,7 +5,7 @@ description: Sammenlign vores funktionsrige planer, der tilbyder sikker besked d
 
 ## Funktionsmatrix
 
-| Funktion/Plan | Identity Plus | Basic | Anonym |
+| Funktion/Plan | Identity Plus | Basic | Ikke logget ind |
 |---------|----------------|-------------------------|------------|
 | Brugerdefinerede domæner | Ubegrænset | ❌ | ❌ |
 | Brandede hjemmeside | ✅ | ❌ | ❌ |

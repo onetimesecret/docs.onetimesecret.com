@@ -2,10 +2,15 @@
   "nav": {
     "label": {
       "blog": "Блог",
-      "custom-domain": "Персонализирани домейни",
-      "principles": "Принципи",
+      "guides": "Ръководства",
       "rest-api": "API",
-      "home": "Обратно към onetimesecret.com"
+      "self-hosting": "Самостоятелно хостване"
+    },
+    "ariaLabel": {
+      "guides": "Документация с ръководства",
+      "apiReference": "Справка за API",
+      "selfHosting": "Документация за самостоятелен хостинг",
+      "blog": "Блог на Onetime Secret"
     }
   },
   "heading.anchorLabel": "Раздел, озаглавен „{{title}}“",
@@ -13,6 +18,7 @@
     "home": "Начало",
     "introduction": "Въведение",
     "gettingStarted": "Първи стъпки",
+    "guides": "Ръководства",
     "secretLinks": "Тайни връзки",
     "overview": "Общ преглед",
     "whyUseSecretLinks": "Защо да използвате тайни връзки",

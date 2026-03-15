@@ -21,11 +21,9 @@ Veilig, eenmalig delen voor iedereen.
 - Account vereist om ontvangers te e-mailen
 - Basis API toegang
 
-[Aan de slag] (https://onetimesecret.com/plans/basic)
+[Aan de slag](https://onetimesecret.com/plans/basic)
 
 ### Identiteit Plus
-
-**$35/maand of $365/jaar**
 
 Veilig delen dat je merk versterkt en communicatie vereenvoudigt.
 
@@ -35,13 +33,11 @@ Veilig delen dat je merk versterkt en communicatie vereenvoudigt.
 - Verbeterde privacyfuncties
 - Volledige API-toegang
 
-[Kies dit plan](https://onetimesecret.com/plans/identity)
+[Bekijk actuele prijzen](https://onetimesecret.com/pricing) | [Kies dit plan](https://onetimesecret.com/plans/identity)
 
 ### Wereldwijde elite
 
-**Binnenkort beschikbaar**
-
-Dedicated infrastructuur met controle op naleving van gegevens en onbeperkte schaalbaarheid.
+Een volledig aangepaste, single-tenant installatie met dedicated infrastructuur, controles voor gegevenscompliance en onbeperkte schaalbaarheid.
 
 **Functies:**
 - Privé cloud-omgeving
