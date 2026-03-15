@@ -25,13 +25,30 @@ Before translating, review these cross-language guidelines that apply to all loc
 
 本词汇表为关键术语提供标准化的中文翻译，以确保 Onetime Secret 应用程序的一致性。
 
-**重要提示：** 本词汇表遵循[语言注释](/zh-cn/translations/language-notes)中记录的中文特定翻译原则。关键原则是避免使用"秘密"一词的强烈情感内涵，转而使用更具功能性的术语。
+**重要提示：** 本词汇表遵循[语言注释](/zh-cn/translations/language-notes)中记录的中文特定翻译原则。关键原则是避免使用"秘密"一词的强烈情感内涵，转而根据语境使用分层术语。
+
+## "Secret"术语分层体系
+
+"Secret"一词在不同语境中应使用不同的中文翻译。我们采用三层术语体系：
+
+| 层级 | 中文术语 | 适用语境 | 示例 |
+|------|----------|----------|------|
+| 1. UI/功能性 | **内容** | 按钮、操作、API 操作、导航 | 创建内容、获取内容、销毁内容 |
+| 2. 描述性/文档 | **机密内容** | 说明性文字、功能描述、技术文档 | 您的机密内容将被加密存储 |
+| 3. 营销/说服性 | **机密信息** | 定价页面、落地页、推广文案 | 自信地共享机密信息 |
+
+**选择指南：**
+- **内容**：用户直接交互的界面元素（按钮标签、表单字段、API 端点描述、状态消息）
+- **机密内容**：解释产品功能和安全机制的文档正文
+- **机密信息**：面向用户的营销和定价内容，强调保密价值
+
+**绝不使用"秘密"**，除非在翻译指南文件中说明为何避免使用该词。
 
 ## 核心术语
 
 | 英文 | 中文（简体）| 语境 | 注释 |
 |---------|-------------|-------|------|
-| secret (noun) | 内容 / 信息 | 应用程序的核心概念 | 在创建/检索操作中使用"内容"；避免"秘密"的情感内涵 |
+| secret (noun) | 内容 / 机密内容 / 机密信息 | 应用程序的核心概念 | 按上方分层体系选择：UI 用"内容"，文档用"机密内容"，营销用"机密信息" |
 | secret (adj) | 加密的 / 安全的 | 描述性形容词 | 根据上下文使用 |
 | secret link | 一次性链接 | 产品的核心功能 | **不要**翻译为"秘密链接"；强调一次性使用特性 |
 | passphrase | 口令 | 用于保护内容的身份验证方法 | 与"密码"（账户认证）区分 |
@@ -130,6 +147,8 @@ Before translating, review these cross-language guidelines that apply to all loc
 
 | 英文 | 中文（简体）| 语境 | 注释 |
 |---------|-------------|-------|------|
+| secret (in marketing) | 机密信息 | 营销/定价页面 | 使用"机密信息"而非"内容"或"秘密" |
+| share secrets | 共享机密信息 | 营销文案 | 强调信息的保密价值 |
 | secure links | 安全链接 | 产品功能 | |
 | privacy-first design | 隐私优先设计 | 设计理念 | |
 | custom branding | 自定义品牌 | 高级功能 | |
@@ -159,8 +178,10 @@ Before translating, review these cross-language guidelines that apply to all loc
 
 - "秘密"在中文中带有强烈的个人、隐藏或情感色彩的含义
 - 它暗示刻意隐瞒，而不是功能性安全特性
-- 更好的替代方案：
-  - **功能性上下文**：使用"内容"（创建内容、获取内容）
+- 我们采用三层替代术语体系（详见上方"Secret"术语分层体系）：
+  - **UI/功能性上下文**：使用"内容"（创建内容、获取内容、销毁内容）
+  - **描述性/文档上下文**：使用"机密内容"（您的机密内容将被加密存储）
+  - **营销/说服性上下文**：使用"机密信息"（自信地共享机密信息）
   - **产品功能**：使用"一次性链接"（强调核心的一次性使用特性）
 
 ### 密码 vs 口令
@@ -208,7 +229,7 @@ Before translating, review these cross-language guidelines that apply to all loc
 
 ---
 
-**最后更新：** 2025-11-14
+**最后更新：** 2026-03-15
 
 ---
 
@@ -222,13 +243,23 @@ Before translating, review these cross-language guidelines that apply to all loc
 
 **Reasoning:** Following the style guide's Danish example, "秘密" (secret) in Chinese carries strong connotations of personal, hidden, or confidential information with emotional weight - similar to the Italian "segreto." It suggests something deliberately concealed rather than a functional security feature.
 
+**Three-tier replacement system:**
+
+| Tier | Term | Context | Example |
+|------|------|---------|---------|
+| UI/functional | 内容 (content) | Buttons, actions, API operations | 创建内容, 获取内容, 销毁内容 |
+| Descriptive/docs | 机密内容 (confidential content) | Prose, feature descriptions | 您的机密内容将被加密存储 |
+| Marketing/persuasive | 机密信息 (confidential information) | Pricing, landing pages | 自信地共享机密信息 |
+
 **Key Examples:**
 - `"secretLinks": "Secret Links"` → `"一次性链接"` (one-time links)
 - `"createSecrets": "Create Secrets"` → `"创建内容"` (create content)
 - `"retrieveSecrets": "Retrieve Secrets"` → `"获取内容"` (retrieve content)
 - `"whyUseSecretLinks": "Why Use Secret Links"` → `"为什么使用一次性链接"` (why use one-time links)
+- Documentation prose about secrets → use "机密内容" (confidential content)
+- Pricing/marketing copy about secrets → use "机密信息" (confidential information)
 
-**Alternative considered:** "临时信息" (temporary information) or "加密消息" (encrypted messages), but "一次性" (one-time) better emphasizes the core product feature of single-use access.
+**Alternative considered:** "临时信息" (temporary information) or "加密消息" (encrypted messages), but the tiered approach better serves the varying needs of UI brevity, documentation clarity, and marketing persuasion.
 
 ### 2. UI Text Optimization for Chinese Language Patterns
 
@@ -287,7 +318,7 @@ Before translating, review these cross-language guidelines that apply to all loc
 ## Summary of Changes to the Chinese (Simplified) Translation
 
 ### Core Terminology Evolution
-- **"秘密" → Functional alternatives**: Replaced "secret" with "内容" (content) for create/retrieve actions and "一次性链接" (one-time links) for the core feature
+- **"秘密" → Three-tier alternatives**: Replaced "secret" with "内容" (content) for UI/actions, "机密内容" (confidential content) for documentation, and "机密信息" (confidential information) for marketing. "一次性链接" (one-time links) for the Secret Links feature
 - **Maintained technical precision**: API, REST, version numbers preserved
 - **Brand names untranslated**: Starlight, Onetime Secret kept in original form
 
@@ -326,4 +357,4 @@ This guide was generated from the following source files:
 - Glossary: `/zh-cn/translations/glossary.md`
 - Language notes: `/zh-cn/translations/language-notes.md`
 
-Generated: 2026-01-20
+Generated: 2026-03-15

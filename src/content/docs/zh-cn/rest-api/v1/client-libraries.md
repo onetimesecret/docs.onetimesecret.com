@@ -16,7 +16,7 @@ require 'onetime/api'
 
 api = Onetime::API.new('YOUR_EMAIL', 'YOUR_OTS_APIKEY')
 选项 = {
-  秘密：'爵士、爵士、更多爵士'、
+  内容：'爵士、爵士、更多爵士'、
   recipient: 'example@onetimesecret.com'、
   ttl: 7200
 }
@@ -270,7 +270,7 @@ Get-Command -Module OneTimeSecret | Select Name
 作为脚本应用程序接口的 #### 使用示例
 
 ```bash
-# 匿名使用的源代码（匿名创建的秘密）
+# 匿名使用的源代码（匿名创建内容）
 source ots.bash
 
 # 或者，使用特定授权凭证的源代码
@@ -281,12 +281,12 @@ source ots.bash -u $APIUSER -k $APIKEY
 # 检查服务器状态
 ots_status
 
-# 创建一个秘密并获取 URL
+# 创建内容并获取 URL
 URL=$(echo "secret" | ots_share)
 
-# 通过 HEREDOC 共享多行秘密。
+# 通过 HEREDOC 共享多行内容。
 URL=$(ots_share <<-EOF
-      这是一个秘密
+      这是一条机密内容
       ...多行
 EOF
 )
@@ -296,10 +296,10 @@ URL=$(ots_share ttl=600\
                   passphrase="shared-secret" \
                   recipient="someone@somewhere.com"<<< "SECRET")
 
-# 获取秘密数据
+# 获取内容数据
 本地 DATA="$(ots_retrieve "$URL")"
 
-# 共享/生成一个新的秘密，并取回私人元数据密钥
+# 共享/生成新的内容，并取回私人元数据密钥
 本地 KEY=$(ots_metashare <<< "SECRET")
 本地 KEY=$(ots_metagenerate)
 
@@ -307,28 +307,28 @@ URL=$(ots_share ttl=600\
 # 注意，这需要有效的自动验证凭证
 local -a RECENT=( $(ots_recent) )
 
-# 根据私人密钥检查秘密的当前状态
+# 根据私人密钥检查内容的当前状态
 ots_state $KEY
 
-# 给定私人密钥，刻录秘密
+# 给定私人密钥，销毁内容
 ots_burn $KEY
 ```
 
 ### CLI 使用示例
 
 ```bash
-# 共享秘密（从 stdin
+# 共享内容（从 stdin
 ./ots 共享
-秘密
+内容
 ^D
 
-# 分享秘密（通过 HEREDOC）
+# 分享内容（通过 HEREDOC）
 ./ots share <<-EOF
-      这是通过 HEREDOC 共享的多行秘密。
+      这是通过 HEREDOC 共享的多行内容。
       其他内容放在这里。
 EOF
 
-# 获取/检索秘密：
+# 获取/检索内容：
 ./ots get <key|url>
 ./ots retrieve <key|url
 

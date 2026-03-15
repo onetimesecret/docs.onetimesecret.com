@@ -1,6 +1,6 @@
 ---
 title: REST API v2 概述
-description: 描述Onetime Secret 的 REST API v2 通过一个强大的 RESTful JSON 接口，为安全的秘密管理和共享提供了更强大的功能。
+description: 描述Onetime Secret 的 REST API v2 通过一个强大的 RESTful JSON 接口，为安全的机密内容管理和共享提供了更强大的功能。
 ---
 
 {% aside type="note" %}
@@ -10,12 +10,12 @@ description: 描述Onetime Secret 的 REST API v2 通过一个强大的 RESTful 
 
 ## 简介
 
-Onetime Secret的REST API v2为与秘密共享平台进行编程交互提供了一个全面、安全的接口。API v2以RESTful服务形式构建，利用JSON进行数据交换，与前一版本（v1）相比，功能更强大，稳定性更高。
+Onetime Secret的REST API v2为与机密内容共享平台进行编程交互提供了一个全面、安全的接口。API v2以RESTful服务形式构建，利用JSON进行数据交换，与前一版本（v1）相比，功能更强大，稳定性更高。
 
 ## 关键功能
 
 - 全 JSON：** 对请求体和响应使用 JSON。
-- 增强功能：** 包括用于详细的秘密元数据检索、明确的秘密刻录和改进的状态管理的端点。
+- 增强功能：** 包括用于详细的内容元数据检索、明确的内容销毁和改进的状态管理的端点。
 - 增强稳健性：** 为集成提供更稳定、功能更丰富的基础。
 - 身份验证：** 支持用于完全访问的基本身份验证和用于有限操作的匿名使用，与整个应用程序接口结构保持一致。
 
@@ -31,8 +31,8 @@ API v2 端点遵循标准基础 URI 结构：
 
 以下端点在 API v2 中可用：
 
-* `POST /v2/secret/conceal` - 创建一个新的秘密。
-* `POST /v2/secret/generate` - 用随机值生成新的秘密。
+* `POST /v2/secret/conceal` - 创建新的内容。
+* `POST /v2/secret/generate` - 用随机值生成新的内容。
 * `GET /v2/private/recent` - 为已通过身份验证的用户读取最近的元数据记录。
 * `GET /v2/private/:key` - 读取特定密文的元数据。
 * `POST /v2/private/:key/burn` - 手动销毁（烧毁）一个密文。

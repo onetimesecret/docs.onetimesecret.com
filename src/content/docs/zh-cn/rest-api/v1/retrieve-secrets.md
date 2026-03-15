@@ -1,6 +1,6 @@
 ---
-title: 找回秘密
-description: 了解如何使用 Onetime Secret REST API 检索秘密，支持身份验证和匿名访问。
+title: 找回内容
+description: 了解如何使用 Onetime Secret REST API 检索内容，支持身份验证和匿名访问。
 ---
 
 _更新日期 2025-04-02_
@@ -12,7 +12,7 @@ _更新日期 2025-04-02_
 - **注：** 默认情况下，`onetimesecret.com` 仍可运行并路由至活动数据中心，建议使用特定位置，因为此功能将来可能会过时。
 :::
 
-## 检索秘密
+## 检索内容
 
 `POST https://REGION.onetimesecret.com/api/v1/secret/SECRET_KEY`
 
@@ -31,18 +31,18 @@ $ curl -X POST https://eu.onetimesecret.com/api/v1/secret/SECRET_KEY
 ### 查询参数
 
 - **SECRET_KEY**：该密文的唯一密钥。
-- **passphrase**（如需要）：只有在创建秘密时才需要口令。
+- **passphrase**（如需要）：只有在创建内容时才需要口令。
 
 ### 属性
 
-- **secret_key**：您创建的秘密的唯一密钥。这是可以共享的密钥。
-- **value**：实际秘密。不言而喻，它只能使用一次。
+- **secret_key**：您创建的内容的唯一密钥。这是可以共享的密钥。
+- **value**：实际内容。不言而喻，它只能使用一次。
 
 ## 检索元数据
 
 `POST https://REGION.onetimesecret.com/api/v1/private/METADATA_KEY`
 
-每个秘密都有相关的元数据。元数据仅供秘密创建者使用（即不供接收者使用），一般应保密。由于元数据密钥与秘密密钥不同，因此你可以放心使用元数据密钥来获取关于秘密本身的基本信息（如是否或何时被查看）。
+每条机密内容都有相关的元数据。元数据仅供内容创建者使用（即不供接收者使用），一般应保密。由于元数据密钥与内容密钥不同，因此你可以放心使用元数据密钥来获取关于机密内容本身的基本信息（如是否或何时被查看）。
 
 ### 验证请求
 
@@ -56,24 +56,24 @@ $ curl -X POST -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/privat
 
 ### 属性
 
-- **custid**：创建秘密的账户的用户名。对于匿名请求，该值将是 `anon`。
+- **custid**：创建内容的账户的用户名。对于匿名请求，该值将是 `anon`。
 - **metadata\_key**：元数据的唯一密钥。请勿共享。
-- **secret\_key**：你创建的秘密的唯一密钥。这是可以共享的密钥。
+- **secret\_key**：你创建的内容的唯一密钥。这是可以共享的密钥。
 - **ttl**：指定的生存时间（即不是剩余时间）
 - **metadata\_ttl**：元数据的剩余生存时间（以秒为单位）。
-- **secret\_ttl**：秘密的剩余生存时间（秒）。
+- **secret\_ttl**：内容的剩余生存时间（秒）。
 - **recipient**：如果指定了收件人，这是电子邮件地址的混淆版本。
 - **created**：元数据的创建时间，以 unix 时间（UTC）表示。
 - **updated**：同上，不过是最后一次更新的时间。
-- **received**：收到秘密的时间。
+- **received**：收到内容的时间。
 - **passphrase\_required**：如果在创建密文时提供了口令，则此值为 true。否则显然为假。
 
 
-## 销毁秘密
+## 销毁内容
 
 `POST https://REGION.onetimesecret.com/api/v1/private/METADATA_KEY/burn`
 
-销毁一个尚未被读取的秘密。
+销毁一条尚未被读取的内容。
 
 ### 验证请求
 

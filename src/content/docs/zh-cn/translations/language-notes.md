@@ -19,6 +19,26 @@ description: Translation guidelines and terminology for Chinese Simplified (zh-C
 
 **Alternative considered:** "临时信息" (temporary information) or "加密消息" (encrypted messages), but "一次性" (one-time) better emphasizes the core product feature of single-use access.
 
+#### Tiered Terminology for "Secret" (as Noun)
+
+Replacing "秘密" with a single term across all contexts would lose important nuance. Instead, we use a three-tier system based on the communication context:
+
+| Tier | Term | Context | Examples |
+|------|------|---------|----------|
+| **1. UI/Functional** | **内容** (content) | Buttons, actions, API operations | 创建内容, 获取内容, 销毁内容 |
+| **2. Descriptive/Documentation** | **机密内容** (confidential content) | Prose explaining features, how-it-works sections | 您的机密内容将被加密存储 |
+| **3. Marketing/Persuasive** | **机密信息** (confidential information) | Pricing pages, landing copy, calls to action | 自信地共享机密信息 |
+
+**Rationale for the tiers:**
+
+- **内容** (Tier 1) is intentionally neutral and functional. In button labels and API descriptions, users need quick comprehension without emotional weight. "创建内容" reads like a standard action, not a dramatic revelation.
+- **机密内容** (Tier 2) adds the "confidential" qualifier for documentation contexts where the security nature of the content matters. When explaining how encryption works or what happens to stored data, readers need to understand that this is not ordinary content but confidential material.
+- **机密信息** (Tier 3) uses "information" (信息) instead of "content" (内容) because marketing copy addresses the reader's broader concern of protecting sensitive information. "机密信息" sounds more natural in persuasive Chinese prose and aligns with how security products are marketed in the Chinese-speaking market.
+
+**Additional mapping:**
+- "secret link" → **一次性链接** (one-time link) in all contexts — emphasizing the one-time-use property rather than secrecy
+- The product feature "Secret Links" → **一次性链接** in navigation and headers
+
 ### 2. UI Text Optimization for Chinese Language Patterns
 
 **Reasoning:** Chinese language structure allows for more concise expressions. The style guide emphasizes efficiency and respect for users' time.
@@ -76,7 +96,8 @@ description: Translation guidelines and terminology for Chinese Simplified (zh-C
 ## Summary of Changes to the Chinese (Simplified) Translation
 
 ### Core Terminology Evolution
-- **"秘密" → Functional alternatives**: Replaced "secret" with "内容" (content) for create/retrieve actions and "一次性链接" (one-time links) for the core feature
+- **"秘密" → Tiered alternatives**: Replaced "secret" using a three-tier system: **内容** (content) for UI/functional contexts, **机密内容** (confidential content) for descriptive documentation, and **机密信息** (confidential information) for marketing/persuasive copy
+- **"secret link" → 一次性链接**: Emphasizes the one-time-use property rather than secrecy
 - **Maintained technical precision**: API, REST, version numbers preserved
 - **Brand names untranslated**: Starlight, Onetime Secret kept in original form
 
