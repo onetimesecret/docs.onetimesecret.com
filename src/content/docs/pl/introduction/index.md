@@ -22,8 +22,10 @@ Onetime Secret zapewnia proste rozwiązanie do bezpiecznego udostępniania poufn
 5. Opcjonalna fraza dostępowa: Dodaj dodatkową warstwę bezpieczeństwa do udostępnianych sekretów
 6. Otwartoźródłowy: Przejrzyj nasz kod źródłowy dla zwiększonej przejrzystości
 
-Zapoznaj się z naszymi dodatkowymi treściami, aby dowiedzieć się, jak Onetime Secret może skutecznie i dyskretnie spełnić Twoje potrzeby w zakresie bezpiecznej komunikacji.
+## Od czego zacząć
 
-## Rozpocznij
-
-Gotowy do działania? Sprawdź naszą [dokumentację](/pl/docs-overview), aby uzyskać szczegółowe instrukcje dotyczące efektywnego korzystania z Onetime Secret. Jeśli masz jakieś pytania lub opinie, skontaktuj się z nami bezpośrednio [kontakt](https://onetimesecret.com/feedback).
+- **Skorzystaj z usługi** — Przejdź na [onetimesecret.com](https://onetimesecret.com/) i udostępnij sekret w kilka sekund
+- **Przeglądaj dokumentację** — Zobacz wszystkie [przewodniki](/pl/introduction/guides/) z instrukcjami i materiałami referencyjnymi
+- **Integruj przez API** — Sprawdź [REST API](/pl/rest-api/) dla dostępu programistycznego
+- **Uruchom własną instancję** — Skorzystaj z przewodnika [Self-Hosting](/pl/self-hosting/)
+- **Pytania?** — [Skontaktuj się z nami](https://onetimesecret.com/feedback) bezpośrednio

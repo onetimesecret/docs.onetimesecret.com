@@ -5,7 +5,7 @@ description: Jämför våra funktionsrika planer som erbjuder säker hemlighetsd
 
 ## Funktionsmatris
 
-| Funktion/Plan | Identity Plus | Basic | Anonym |
+| Funktion/Plan | Identity Plus | Basic | Inte inloggad |
 |---------|----------------|-------------------------|------------|
 | Anpassade domäner | Obegränsat | ❌ | ❌ |
 | Varumärkesstartsida | ✅ | ❌ | ❌ |

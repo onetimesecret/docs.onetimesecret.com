@@ -1,5 +1,5 @@
 ---
-title: Te Tīmatanga
+title: REST API
 description: Ka whakarato te REST API o Onetime Secret i ngā āhuatanga ngāwari mō te tohatoha karere muna, e tautoko ana i te whakamahi motuhēhēnga me te ingoa-kore. Ka whiwhi ngā kaiwhakamahi motuhēhēnga i ngā āhuatanga teitei me ngā tepe whakamahi teitei ake, ā, ka taea e ngā kaiwhakamahi ingoa-kore te tohatoha tere i ngā karere muna me ngā āhuatanga taketake.
 ---
 
@@ -13,14 +13,13 @@ Whakamātau me te tūhura i ngā poutoko API ki tā mātou [Kohinga Postman](htt
 
 `https://REGION.onetimesecret.com/api`
 
-Kei hea `REGION` ko `us`, ko `eu` rānei.
+Kei hea `REGION` ko tētahi o `CA`, `EU`, `NZ`, `UK`, `US` rānei.
 
 <!-- ::callout{icon="i-heroicons-globe-alt"} -->
 **Wāhitanga Raraunga me te Kōwhiringa Rohe**
-- Kōwhiria tētahi rohe (hei tauira, US [`us.onetimesecret.com`](https://us.onetimesecret.com/)) EU rānei ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)). Tirohia [Ngā Rohe](/mi/regions) mō ngā kōwhiringa katoa.
+- Kōwhiria tētahi rohe (hei tauira, EU [`eu.onetimesecret.com`](https://eu.onetimesecret.com/), UK [`uk.onetimesecret.com`](https://uk.onetimesecret.com/), US rānei [`us.onetimesecret.com`](https://us.onetimesecret.com/)). Tirohia [Ngā Rohe](/mi/regions) mō ngā kōwhiringa katoa.
 - Whakaarohia ngā āhuatanga pērā i te mana rangatiratanga raraunga, te tauhanga, me ngā hiahiatanga ūnga
-- **TUHIPOKA:** Ka noho haumanu tonu te `onetimesecret.com` taunoa, ā, ka ārahi ki tētahi pūtoi raraunga haumanu, engari e tūtohu ana kia whakamahi i tētahi wāhitanga motuhake nā te mea ka taea pea te whakakorehia o tēnei āhuatanga ā ngā wā ka heke mai.
-::
+- **TUHIPOKA:** Ka noho haumanu tonu te `onetimesecret.com` taunoa, ā, ka ārahi ki tētahi pūtoi raraunga haumanu, e tūtohu ana kia whakamahi i tētahi wāhitanga motuhake nā te mea ka taea pea te whakakorehia o tēnei āhuatanga ā ngā wā ka heke mai.
 
 ## Motuhēhēnga
 
@@ -46,7 +45,10 @@ E tautoko ana mātou i ngā āhuatanga e rua mō te whakamahi API:
 
 E tautoko ana a Onetime Secret i ngā pūtoi raraunga ā-whenua maha. E whai ana mātou i tētahi kaupapa here kore-tohatoha-raraunga i waenganui i ngā rohe, e whakaū ana i te motuhake tino raraunga. Kōwhiria te pūtoi raraunga tika mō ō hiahiatanga:
 
+- **Pūtoi Raraunga CA:** [ca.onetimesecret.com](https://ca.onetimesecret.com/)
 - **Pūtoi Raraunga EU:** [eu.onetimesecret.com](https://eu.onetimesecret.com/)
+- **Pūtoi Raraunga NZ:** [nz.onetimesecret.com](https://nz.onetimesecret.com/)
+- **Pūtoi Raraunga UK:** [uk.onetimesecret.com](https://uk.onetimesecret.com/)
 - **Pūtoi Raraunga US:** [us.onetimesecret.com](https://us.onetimesecret.com/)
 
 ### Ngā Whakaarohanga Nui:
@@ -66,7 +68,6 @@ E tautoko ana a Onetime Secret i ngā whirihoranga rohe ritenga mō ngā whakaha
 <!-- ::callout{icon="i-heroicons-lock-closed"} -->
 **Āhuatanga Taumata Teitei**
 E wātea ana ngā rohe ritenga i runga i tā mātou mahere [Identity Plus](https://onetimesecret.com/pricing). Whakatūhia i roto i ngā meneti ki ā mātou kōwhiringa whirihoranga ngāwari. [Ako atu](/mi/custom-domains/).
-::
 
 ### Whakamahi API ki ngā Rohe Ritenga
 I te wā e whakamahi ana i tētahi rohe ritenga, ka whai ngā poutoko API katoa i te hanganga ōrite:
@@ -83,6 +84,11 @@ Ko te tūnga o nāianei o te pūnaha.
 
 ```bash
 $ curl -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/status
+{"status":"nominal"}
+```
+
+```bash
+$ curl -u 'USERNAME:APITOKEN' https://uk.onetimesecret.com/api/v1/status
 {"status":"nominal"}
 ```
 

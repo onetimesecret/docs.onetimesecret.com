@@ -22,8 +22,10 @@ Onetime Secret, hassas bilgileri güvenli bir şekilde paylaşmak için basit bi
 5. İsteğe bağlı güvenlik ifadesi: Paylaşılan gizli mesajlara ekstra bir güvenlik katmanı ekleyin
 6. Açık kaynak: Gelişmiş şeffaflık için kod tabanımızı inceleyin
 
-Onetime Secret'ın güvenli iletişim ihtiyaçlarınızı verimli ve gizli bir şekilde nasıl karşılayabileceğini öğrenmek için Bonus İçeriğimizi keşfedin.
+## Nereden başlamalı
 
-## Başlayın
-
-Dalmaya hazır mısınız? Onetime Secret'ı etkili bir şekilde kullanma hakkında ayrıntılı talimatlar için [belgelerimize](/tr/docs-overview) göz atın. Herhangi bir sorunuz veya geri bildiriminiz varsa, doğrudan [bizimle iletişime geçmekten](https://onetimesecret.com/feedback) çekinmeyin.
+- **Hizmeti kullanın** — [onetimesecret.com](https://onetimesecret.com/) adresine gidin ve saniyeler içinde bir gizli mesaj paylaşın
+- **Belgelere göz atın** — Adım adım kılavuzlar ve referanslar için tüm [Kılavuzları](/tr/introduction/guides/) inceleyin
+- **API ile entegre edin** — Programatik erişim için [REST API](/tr/rest-api/) sayfasını kontrol edin
+- **Kendi sunucunuzu çalıştırın** — [Kendi Sunucunuzda Barındırma](/tr/self-hosting/) kılavuzunu takip edin
+- **Sorularınız mı var?** — Doğrudan [bizimle iletişime geçin](https://onetimesecret.com/feedback)

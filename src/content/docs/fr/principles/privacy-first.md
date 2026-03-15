@@ -3,13 +3,13 @@ title: Vie privée
 description: Notre approche de la protection de la vie privée des utilisateurs par des choix de conception délibérés
 ---
 
-# Les premières pratiques en matière de protection de la vie privée
+# La vie privée avant tout
 
-Chez Onetime Secret, nous adoptons une approche délibérément minimale de la protection de la vie privée des utilisateurs. Voici ce que nous choisissons délibérément de ne pas faire et, surtout, pourquoi.
+Chez Onetime Secret, nous adoptons une approche délibérément minimale de la vie privée des utilisateurs. Voici ce que nous choisissons délibérément de ne pas faire et, surtout, pourquoi.
 
 ## Notre philosophie de l'absence de courrier électronique
 
-La plupart des services inondent votre boîte de réception de messages :
+La plupart des services inondent votre boîte de réception de :
 
 - Bulletins d'information marketing
 - Mises à jour des produits
@@ -18,47 +18,47 @@ La plupart des services inondent votre boîte de réception de messages :
 - Offres promotionnelles
 - Campagnes de réengagement
 
-Nous limitons nos communications par courrier électronique aux communications les plus essentielles : livraisons de liens secrets et notifications de comptes critiques. Nous n'envoyons jamais d'e-mails marketing ou de mises à jour non sollicitées. Nous pensons que votre boîte de réception vous appartient.
+Les seuls courriels que vous recevrez de notre part sont ceux que vous demandez expressément — livraisons de liens secrets, notifications de compte ou mises à jour auxquelles vous avez explicitement choisi de vous abonner. Même lorsque vous vous abonnez, vous n'entendrez que rarement parler de nous, et uniquement pour les raisons précises que vous avez choisies. Votre boîte de réception vous appartient.
 
 ## Normes industrielles que nous ignorons
 
-Nous évitons délibérément les outils de suivi et de marketing courants :
+Nous évitons délibérément les outils de suivi et de marketing courants :
 
-- Paquets d'analyse permettant de suivre le comportement de l'utilisateur
+- Paquets d'analyse permettant de suivre le comportement des utilisateurs
 - Boutons d'intégration des médias sociaux
 - Réseaux publicitaires
 - Cadres de test A/B
 - Outils d'automatisation du marketing
-- Pixels de suivi de tiers
+- Pixels de suivi tiers
 
 ## Pourquoi c'est important
 
-Notre approche s'articule autour de trois principes fondamentaux :
+Ces choix se résument à trois convictions profondes :
 
-1. **Respecter la vie privée** : Vos données vous appartiennent, un point c'est tout
-2. **Se concentrer sur la fiabilité** : L'outil doit simplement fonctionner lorsque vous en avez besoin
-3. **Construire la confiance par l'action** : Nous prouvons notre engagement par ce que nous ne faisons pas
+1. **Vos données vous appartiennent.** Nous ne traitons pas les informations des utilisateurs comme une ressource à exploiter. La vie privée n'est pas une fonctionnalité ajoutée après coup — c'est ainsi que le service est conçu.
+2. **L'outil doit simplement fonctionner.** Lorsque vous devez partager quelque chose de sensible, la fiabilité compte plus que tout le reste.
+3. **La confiance se gagne par ce que l'on choisit de ne pas faire.** Chaque traqueur que nous évitons, chaque campagne que nous n'envoyons pas, est une petite preuve de nos priorités.
 
 ## L'impact réel
 
-En évitant les pratiques standard de marketing et de suivi, nous.. :
+Renoncer aux pratiques standard de marketing et de suivi n'est pas qu'une question de principe — cela a des avantages concrets :
 
-- Maintenir un service plus propre et plus rapide
-- Réduire les vulnérabilités potentielles en matière de sécurité
-- Garder vos données sous contrôle direct
-- Rester concentré sur notre objectif principal
+- Un service plus léger et plus rapide avec moins de composants
+- Une surface d'attaque réduite avec moins de dépendances tierces
+- Vos données restent sous votre contrôle, au lieu d'être dispersées à travers des réseaux publicitaires
+- Notre effort d'ingénierie reste concentré sur le produit, pas sur des tunnels de conversion
 
-Nous investissons notre temps dans :
+Nous consacrons notre temps au travail qui compte pour vous :
 
-- **Fonctionnalité de base** : Améliorer les fonctionnalités essentielles qui importent aux utilisateurs
-- Protection de la vie privée** : Protection de la vie privée** : renforcement des garanties pour les données des utilisateurs
-- Fiabilité du service** : Fiabilité du service** : veiller à ce que le service soit disponible lorsque vous en avez besoin
-- Conformité** : Respecter les exigences légales et réglementaires
+- **Fonctionnalités essentielles** — améliorer les fonctionnalités que vous utilisez réellement
+- **Protection de la vie privée** — renforcer le chiffrement et le traitement des données
+- **Fiabilité du service** — s'assurer que nous sommes là quand vous avez besoin de nous
+- **Conformité** — respecter les exigences juridictionnelles et réglementaires
 
-## Regarder vers l'avenir
+## Regard vers l'avenir
 
-Nous continuerons à privilégier la simplicité et le respect de la vie privée plutôt que la portée marketing. Même si cela signifie que notre croissance sera peut-être plus lente que celle des services qui se commercialisent de manière agressive, nous pensons que c'est le bon choix pour un outil axé sur la protection de la vie privée.
+Nous continuerons à privilégier la simplicité et la vie privée plutôt que la portée marketing. Cela signifie que notre croissance sera peut-être plus lente que celle des services qui optimisent l'engagement — et cela nous convient. Un outil de protection de la vie privée forge sa réputation par une fiabilité constante et discrète.
 
-Vous pouvez faire confiance à Onetime Secret pour être là quand vous en avez besoin, sans avoir à vous rappeler constamment que vous avez un compte chez nous.
+Quand vous entendrez parler de nous, ce sera parce que vous l'avez demandé.
 
-**Si vous avez des questions sur notre approche, contactez-nous (https://onetimesecret.com/feedback).
+**Des questions sur notre approche ?** [Contactez-nous](https://onetimesecret.com/feedback).

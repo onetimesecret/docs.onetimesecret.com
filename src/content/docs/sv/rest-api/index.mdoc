@@ -1,5 +1,5 @@
 ---
-title: Komma igång
+title: REST API
 description: Onetime Secrets REST API tillhandahåller flexibla hemlighetsdelningsmöjligheter, med stöd för både autentiserad och anonym användning. Autentiserade användare får avancerade funktioner och högre användningsgränser, medan icke-autentiserade användare snabbt kan dela hemligheter med grundläggande funktionalitet.
 ---
 
@@ -13,14 +13,13 @@ Testa och utforska API-slutpunkterna med vår interaktiva [Postman Collection](h
 
 `https://REGION.onetimesecret.com/api`
 
-Där `REGION` är antingen `us` eller `eu`.
+Där `REGION` är `CA`, `EU`, `NZ`, `UK` eller `US`.
 
 <!-- ::callout{icon="i-heroicons-globe-alt"} -->
 **Datalokalisering och regionval**
-- Välj en region (t.ex. USA [`us.onetimesecret.com`](https://us.onetimesecret.com/)) eller EU ([`eu.onetimesecret.com`](https://eu.onetimesecret.com/)). Se [Regioner](/sv/regions) för alla alternativ.
+- Välj en region (t.ex. EU [`eu.onetimesecret.com`](https://eu.onetimesecret.com/), UK [`uk.onetimesecret.com`](https://uk.onetimesecret.com/) eller USA [`us.onetimesecret.com`](https://us.onetimesecret.com/)). Se [Regioner](/sv/regions) för alla alternativ.
 - Överväg faktorer som datasuveränitet, latens och efterlevnadskrav
 - **NOTERA:** Standard `onetimesecret.com` förblir operativ och dirigerar till ett aktivt datacenter, användning av en specifik lokalitet rekommenderas eftersom denna funktionalitet kan bli föråldrad i framtiden.
-::
 
 ## Autentisering
 Vi stöder två användningslägen för API:
@@ -44,7 +43,10 @@ Vi stöder två användningslägen för API:
 ## Datalokalisering
 Onetime Secret stöder flera geografiska datacenter. Vi följer en policy med noll datadelning mellan regioner, vilket säkerställer fullständig dataisolering. Välj rätt datacenter för dina behov:
 
+- **CA-datacenter:** [ca.onetimesecret.com](https://ca.onetimesecret.com/)
 - **EU-datacenter:** [eu.onetimesecret.com](https://eu.onetimesecret.com/)
+- **NZ-datacenter:** [nz.onetimesecret.com](https://nz.onetimesecret.com/)
+- **UK-datacenter:** [uk.onetimesecret.com](https://uk.onetimesecret.com/)
 - **USA-datacenter:** [us.onetimesecret.com](https://us.onetimesecret.com/)
 
 ### Viktiga överväganden:
@@ -63,7 +65,6 @@ Onetime Secret stöder anpassade domänkonfigurationer för organisationer med s
 <!-- ::callout{icon="i-heroicons-lock-closed"} -->
 **Premiumfunktion**
 Anpassade domäner är tillgängliga på vår [Identity Plus](https://onetimesecret.com/pricing)-plan. Konfigurera på några minuter med våra lättanvända konfigurationsalternativ. [Läs mer](/sv/custom-domains/).
-::
 
 ### API-användning med anpassade domäner
 När du använder en anpassad domän följer alla API-slutpunkter samma struktur:
@@ -80,6 +81,11 @@ Aktuell status för systemet.
 
 ```bash
 $ curl -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/status
+{"status":"nominal"}
+```
+
+```bash
+$ curl -u 'USERNAME:APITOKEN' https://uk.onetimesecret.com/api/v1/status
 {"status":"nominal"}
 ```
 

@@ -17,23 +17,23 @@ A maioria dos serviços inunda sua caixa de entrada com:
 - Ofertas promocionais
 - Campanhas de reengajamento
 
-Em toda a nossa história, nunca enviamos um e-mail de marketing. Os únicos e-mails que você receberá de nós são aqueles que você solicitar especificamente: entrega de links de mensagens confidenciais. Sem newsletters, sem atualizações, sem promoções. Acreditamos que sua caixa de entrada pertence a você.
+Os únicos e-mails que você receberá de nós são aqueles que você solicitar especificamente — como entrega de links secretos, notificações de conta ou atualizações nas quais você optou explicitamente por receber. Mesmo quando você opta por receber, raramente entrará em contato, e apenas pelos motivos específicos para os quais você se inscreveu. Sua caixa de entrada pertence a você.
 
 ## Por Que Isso Importa
 
-Ao evitar práticas padrão de marketing e comunicação, nós:
-- Mantemos um serviço mais limpo e simples
-- Reduzimos riscos de segurança potenciais
-- Permanecemos focados em nosso propósito principal
-- Respeitamos seu tempo e atenção
+Uma ferramenta de privacidade não deveria se comportar como uma plataforma de marketing. Ao manter nossas comunicações mínimas:
 
-## Nosso Foco Alternativo
+- Reduzimos a superfície de ataque para phishing e engenharia social — menos e-mails legítimos nossos significa que os suspeitos são mais fáceis de identificar
+- Permanecemos focados em manter um serviço confiável em vez de otimizar métricas de engajamento
+- Respeitamos a confiança que você deposita em nós ao compartilhar seu endereço de e-mail
 
-Investimos nosso tempo e recursos em:
-- Melhorar a funcionalidade principal
-- Fortalecer proteções de privacidade
-- Garantir serviço confiável
-- Abordar conformidade jurisdicional
-- Manter operações transparentes
+## Onde Investimos Nossa Energia
+
+Em vez de elaborar campanhas, dedicamos nosso tempo ao que realmente importa para você:
+
+- **Confiabilidade central** — garantir que o serviço funcione quando você precisa
+- **Proteções de privacidade** — fortalecer a criptografia e o tratamento de dados
+- **Conformidade** — acompanhar requisitos jurisdicionais e regulatórios
+- **Transparência** — ser aberto sobre como operamos e por quê
 
 Tem opiniões sobre nossa abordagem de comunicação? [Entre em contato](https://onetimesecret.com/feedback).

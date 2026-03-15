@@ -18,7 +18,7 @@ De fleste tjenester oversvømmer din indbakke med:
 - Kampagnetilbud
 - Genengagementskampagner
 
-Vi begrænser vores e-mailkommunikation til kun de mest essentielle kommunikationer: leveringer af hemmelige links og kritiske kontonotifikationer. Vi sender aldrig marketing-e-mails eller uopfordrede opdateringer. Vi mener, at din indbakke tilhører dig.
+De eneste e-mails du modtager fra os, er dem du specifikt har anmodet om — levering af hemmelige links, kontobeskeder eller opdateringer du udtrykkeligt har tilmeldt dig. Selv når du tilmelder dig, hører du sjældent fra os, og kun af de specifikke grunde du valgte. Din indbakke tilhører dig.
 
 ## Industristandarder vi springer over
 
@@ -33,32 +33,32 @@ Vi undgår bevidst almindelige sporings- og marketingværktøjer:
 
 ## Hvorfor dette betyder noget
 
-Vores tilgang centrerer om tre kerneprincipper:
+Disse valg bunder i tre ting vi virkelig går op i:
 
-1. **Respekter privatliv**: Dine data er dine, punktum
-2. **Fokus på pålidelighed**: Værktøjet skal simpelthen fungere, når du har brug for det
-3. **Opbyg tillid gennem handling**: Vi beviser vores engagement gennem, hvad vi ikke gør
+1. **Dine data er dine.** Vi behandler ikke brugerinformation som en ressource der kan udvindes. Privatliv er ikke en funktion vi bolter på — det er sådan tjenesten er bygget.
+2. **Værktøjet skal bare fungere.** Når du har brug for at dele noget følsomt, betyder pålidelighed mere end alt andet.
+3. **Tillid optjenes gennem det vi vælger ikke at gøre.** Hver tracker vi springer over, hver kampagne vi ikke sender, er et lille bevis på hvor vores prioriteter ligger.
 
 ## Den reelle indvirkning
 
-Ved at undgå standard marketing- og sporingspraksis:
+At springe standard marketing- og sporingspraksis over er ikke bare filosofisk — det har håndgribelige fordele:
 
-- Opretholder vi en renere, hurtigere service
-- Reducerer potentielle sikkerhedssårbarheder
-- Holder dine data under direkte kontrol
-- Holder fokus på vores kernepurpose
+- En slankere, hurtigere tjeneste med færre bevægelige dele
+- En mindre angrebsflade med færre tredjepartsafhængigheder
+- Dine data forbliver under din kontrol, ikke spredt ud over annoncenetværk
+- Vores tekniske fokus forbliver på produktet, ikke på konverteringstragte
 
-Vi investerer vores tid i:
+Vi bruger vores tid på det arbejde der betyder noget for dig:
 
-- **Kernefunktionalitet**: Forbedring af de essentielle funktioner, der betyder noget for brugere
-- **Privatlivsbeskyttelse**: Styrkelse af beskyttelse for brugerdata
-- **Tjenestepålidelighed**: Sikring af at tjenesten er der, når du har brug for den
-- **Overholdelse**: Opfyldelse af juridiske og regulatoriske krav
+- **Kernefunktionalitet** — forbedring af de funktioner du faktisk bruger
+- **Privatlivsbeskyttelse** — styrkelse af kryptering og datahåndtering
+- **Tjenestepålidelighed** — at sikre vi er der, når du har brug for os
+- **Overholdelse** — opfyldelse af jurisdiktionelle og lovgivningsmæssige krav
 
 ## Fremadrettet
 
-Vi vil fortsætte med at prioritere enkelhed og privatliv frem for markedsføring. Selvom dette betyder, at vi måske vokser langsommere end tjenester, der aggressivt markedsfører sig selv, mener vi, at det er det rigtige valg for et privatlivsfokuseret værktøj.
+Vi vil blive ved med at vælge enkelhed og privatliv frem for markedsføringsrækkevidde. Det betyder, at vi måske vokser langsommere end tjenester der optimerer for engagement — og det har vi det fint med. Et privatlivsværktøj optjener sit ry gennem konsekvent, stille pålidelighed.
 
-Du kan stole på, at Onetime Secret er der, når du har brug for det, uden de konstante påmindelser om, at du har en konto hos os.
+Når du hører fra os, er det fordi du bad om det.
 
 **Spørgsmål til vores tilgang?** [Kontakt os](https://onetimesecret.com/feedback).

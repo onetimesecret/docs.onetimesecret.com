@@ -2,10 +2,15 @@
   "nav": {
     "label": {
       "blog": "Rangitaki",
-      "custom-domain": "Rohe Whakaritea",
-      "principles": "Mātāpono",
+      "guides": "Aratohu",
       "rest-api": "API",
-      "home": "Hoki ki onetimesecret.com"
+      "self-hosting": "Whakamahi-ā-kaitiaki"
+    },
+    "ariaLabel": {
+      "guides": "Tuhinga aratohu",
+      "apiReference": "Tohutoro API",
+      "selfHosting": "Tuhinga manaaki-whaiaro",
+      "blog": "Rangitaki Onetime Secret"
     }
   },
   "heading.anchorLabel": "Wāhanga e kīia ana ko “{{title}}”",
@@ -13,6 +18,7 @@
     "home": "Kāinga",
     "introduction": "Kupu Whakataki",
     "gettingStarted": "Tīmatanga",
+    "guides": "Aratohu",
     "secretLinks": "Hononga Muna",
     "overview": "Tirohanga Whānui",
     "whyUseSecretLinks": "He aha te take o ngā Hononga Muna",

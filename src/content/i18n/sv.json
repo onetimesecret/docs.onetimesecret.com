@@ -2,10 +2,15 @@
   "nav": {
     "label": {
       "blog": "Blogg",
-      "custom-domain": "Anpassade domäner",
-      "principles": "Principer",
+      "guides": "Guider",
       "rest-api": "API",
-      "home": "Tillbaka till onetimesecret.com"
+      "self-hosting": "Egenhosting"
+    },
+    "ariaLabel": {
+      "guides": "Guidedokumentation",
+      "apiReference": "API-referens",
+      "selfHosting": "Egenhostingdokumentation",
+      "blog": "Onetime Secret blogg"
     }
   },
   "heading.anchorLabel": "Avsnitt med titeln “{{title}}”",
@@ -13,6 +18,7 @@
     "home": "Hem",
     "introduction": "Introduktion",
     "gettingStarted": "Komma igång",
+    "guides": "Guider",
     "secretLinks": "Hemliga länkar",
     "overview": "Översikt",
     "whyUseSecretLinks": "Varför använda hemliga länkar",

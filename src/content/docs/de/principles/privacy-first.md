@@ -1,24 +1,24 @@
 ---
 title: Datenschutz
-description: Unser Ansatz zum Schutz der Privatsphäre der Benutzer durch bewusste Designentscheidungen
+description: Unser Ansatz zum Schutz deiner Privatsphäre durch bewusste Designentscheidungen
 ---
 
 # Datenschutz an erster Stelle
 
-Bei Onetime Secret verfolgen wir einen bewusst minimalen Ansatz zum Schutz der Privatsphäre. Hier erfahren Sie, was wir bewusst nicht tun und vor allem, warum.
+Bei Onetime Secret verfolgen wir einen bewusst minimalen Ansatz zum Schutz der Privatsphäre. Hier erfährst du, was wir bewusst nicht tun und vor allem, warum.
 
-## Unsere No-Email Philosophie
+## Unsere No-E-Mail-Philosophie
 
-Die meisten Dienste überfluten Ihren Posteingang mit:
+Die meisten Dienste überfluten deinen Posteingang mit:
 
 - Marketing-Newslettern
 - Produkt-Updates
 - Benutzungsstatistiken
 - Feature-Ankündigungen
-- Werbeangebote
+- Werbeangeboten
 - Re-Engagement-Kampagnen
 
-Wir beschränken unsere E-Mail-Kommunikation auf das Nötigste: die Übermittlung von geheimen Links und wichtige Kontobenachrichtigungen. Wir werden niemals Marketing-E-Mails oder unaufgeforderte Updates versenden. Wir glauben, dass Ihr Posteingang Ihnen gehört.
+Die einzigen E-Mails, die du von uns erhältst, sind solche, die du ausdrücklich angefordert hast — die Zustellung geheimer Links, Kontobenachrichtigungen oder Updates, für die du dich bewusst angemeldet hast. Selbst wenn du dich anmeldest, wirst du selten von uns hören, und nur aus den Gründen, die du gewählt hast. Dein Posteingang gehört dir.
 
 ## Branchenstandards, die wir überspringen
 
@@ -33,32 +33,32 @@ Wir verzichten absichtlich auf gängige Tracking- und Marketing-Tools:
 
 ## Warum das wichtig ist
 
-Unser Ansatz basiert auf drei Grundprinzipien:
+Diese Entscheidungen lassen sich auf drei Dinge zurückführen, die uns am Herzen liegen:
 
-1. **Privatsphäre respektieren**: Ihre Daten gehören Ihnen, Punkt.
-2. **Fokus auf Zuverlässigkeit**: Das Tool sollte einfach funktionieren, wenn Sie es brauchen
-3. **Vertrauen schaffen durch Handeln**: Wir beweisen unser Engagement durch das, was wir nicht tun
+1. **Deine Daten gehören dir.** Wir behandeln Benutzerinformationen nicht als Ressource, die es auszuwerten gilt. Datenschutz ist keine Funktion, die wir nachträglich hinzufügen — so ist der Dienst gebaut.
+2. **Das Tool soll einfach funktionieren.** Wenn du etwas Sensibles teilen musst, ist Zuverlässigkeit wichtiger als alles andere.
+3. **Vertrauen wird durch das verdient, was wir nicht tun.** Jeder Tracker, auf den wir verzichten, jede Kampagne, die wir nicht versenden, ist ein kleiner Beweis dafür, wo unsere Prioritäten liegen.
 
 ## Die wahre Wirkung
 
-Indem wir auf die üblichen Marketing- und Tracking-Praktiken verzichten, können wir:
+Der Verzicht auf übliche Marketing- und Tracking-Praktiken ist nicht nur philosophisch — er hat greifbare Vorteile:
 
-- einen sauberen, schnelleren Service erhalten
-- potenzielle Sicherheitslücken reduzieren
-- Ihre Daten unter direkter Kontrolle behalten
-- uns auf unser Kernziel konzentrieren
+- Ein schlankerer, schnellerer Dienst mit weniger beweglichen Teilen
+- Eine kleinere Angriffsfläche durch weniger Abhängigkeiten von Drittanbietern
+- Deine Daten bleiben unter deiner Kontrolle, statt über Werbenetzwerke verstreut zu werden
+- Unser Engineering-Fokus bleibt auf dem Produkt, nicht auf Conversion-Funnels
 
-Wir investieren unsere Zeit in:
+Wir investieren unsere Zeit in die Arbeit, die für dich wirklich zählt:
 
-- **Kernfunktionalität**: Verbesserung der wesentlichen Funktionen, die für die Benutzer wichtig sind
-- **Datenschutz**: Stärkung der Sicherheitsvorkehrungen für Benutzerdaten
-- **Zuverlässigkeit der Dienste**: Sicherstellen, dass der Dienst verfügbar ist, wenn Sie ihn brauchen
-- **Compliance**: Erfüllung rechtlicher und regulatorischer Anforderungen
+- **Kernfunktionalität** — Verbesserung der Funktionen, die du tatsächlich nutzt
+- **Datenschutzmaßnahmen** — Stärkung von Verschlüsselung und Datenverarbeitung
+- **Dienstzuverlässigkeit** — sicherstellen, dass wir da sind, wenn du uns brauchst
+- **Compliance** — Erfüllung jurisdiktionaler und regulatorischer Anforderungen
 
 ## Ausblick
 
-Wir werden auch weiterhin der Einfachheit und dem Datenschutz Vorrang vor der Reichweite des Marketings einräumen. Das bedeutet zwar, dass wir vielleicht langsamer wachsen als Dienste, die sich aggressiv vermarkten, aber wir glauben, dass dies die richtige Entscheidung für ein Tool ist, bei dem der Datenschutz im Vordergrund steht.
+Wir werden weiterhin Einfachheit und Datenschutz über Marketing-Reichweite stellen. Das bedeutet, dass wir möglicherweise langsamer wachsen als Dienste, die auf Engagement optimieren — und das ist für uns in Ordnung. Ein Datenschutz-Tool verdient seinen Ruf durch beständige, stille Zuverlässigkeit.
 
-Sie können darauf vertrauen, dass Onetime Secret für Sie da ist, wenn Sie es brauchen, ohne dass Sie ständig daran erinnert werden, dass Sie ein Konto bei uns haben.
+Wenn du von uns hörst, dann weil du darum gebeten hast.
 
-**Fragen zu unserem Ansatz?** [Kontaktieren Sie uns](https://onetimesecret.com/feedback).
+**Fragen zu unserem Ansatz?** [Kontaktiere uns](https://onetimesecret.com/feedback).

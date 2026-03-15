@@ -25,8 +25,6 @@ Te tohatoha haumaru, kotahi-wā mō te katoa.
 
 ### Identity Plus
 
-**$35/marama, $365/tau rānei**
-
 Te tohatoha haumaru e whakanui ana i tō waitohu me te whakamāmā i te whakawhitiwhiti.
 
 **Ngā Āhuatanga:**
@@ -35,13 +33,11 @@ Te tohatoha haumaru e whakanui ana i tō waitohu me te whakamāmā i te whakawhi
 - Ngā āhuatanga matatapu whakanui
 - Te urunga API katoa
 
-[Kōwhiria tēnei mahere](https://onetimesecret.com/plans/identity)
+[Tirohia ngā utu o nāianei](https://onetimesecret.com/pricing) | [Kōwhiria tēnei mahere](https://onetimesecret.com/plans/identity)
 
 ### Global Elite
 
-**Kei te Haere Mai**
-
-Te hanganga whakatuwhera me ngā whakahaere ūnga-raraunga me te tāpae mutunga kore.
+He hanganga ritenga katoa, kainoho-kotahi me te hanganga tūmataiti, ngā whakahaere ūnga-raraunga, me te tāpae mutunga kore.
 
 **Ngā Āhuatanga:**
 - Te taiao kapua tūmataiti
