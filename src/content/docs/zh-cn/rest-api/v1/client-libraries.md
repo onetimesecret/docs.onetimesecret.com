@@ -286,7 +286,7 @@ URL=$(echo "secret" | ots_share)
 
 # 通过 HEREDOC 共享多行内容。
 URL=$(ots_share <<-EOF
-      这是一条机密内容
+      这是一个内容
       ...多行
 EOF
 )
