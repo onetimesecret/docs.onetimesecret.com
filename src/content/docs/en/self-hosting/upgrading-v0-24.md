@@ -11,7 +11,7 @@ For the full context on what changed and why, see the [v0.24.0 release notes](ht
 
 ## Before You Start
 
-**Coming from v0.22?** Complete the [v0.23 config migration](upgrading-v0-23) first. The v0.23 release converts config keys from symbol to string format, which v0.24 requires.
+**Coming from v0.22?** Complete the [v0.23 config migration](../upgrading-v0-23/) first. The v0.23 release converts config keys from symbol to string format, which v0.24 requires.
 
 1. **Back up your Redis data.** `redis-cli BGSAVE` or equivalent. Keep the RDB file somewhere safe.
 2. **Back up your configuration files.** `config.yaml`,`.env`.
@@ -45,7 +45,7 @@ Use this path if you don't need to preserve existing accounts or live secrets.
 ### 1. Pull the new version
 
 ```bash
-docker pull onetimesecret/onetimesecret:v0.24.0
+docker pull onetimesecret/onetimesecret:v0.24.6
 ```
 
 Or clone/checkout the v0.24.0 tag if running from source, then run the install script:
@@ -119,7 +119,7 @@ docker run -p 3000:3000 -d \
   -e SECRET="$(cat .ots_secret)" \
   -e HOST=localhost:3000 \
   -e SSL=false \
-  onetimesecret/onetimesecret:v0.24.0
+  onetimesecret/onetimesecret:v0.24.6
 ```
 
 **Docker Compose** (for persistent or multi-service deployments):
@@ -160,7 +160,7 @@ Even if you already backed up in the prerequisites. Make a timestamped copy righ
 ### 3. Pull the new version
 
 ```bash
-docker pull onetimesecret/onetimesecret:v0.24.0
+docker pull onetimesecret/onetimesecret:v0.24.6
 ```
 
 Or clone/checkout the v0.24.0 tag if running from source. Do not start it yet. Run the install script to update dependencies and re-derive child keys:
@@ -255,7 +255,7 @@ docker run -p 3000:3000 -d \
   -e SECRET="$YOUR_SECRET" \
   -e HOST=your-domain.com \
   -e SSL=true \
-  onetimesecret/onetimesecret:v0.24.0
+  onetimesecret/onetimesecret:v0.24.6
 ```
 
 **Docker Compose:**
