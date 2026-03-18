@@ -1,0 +1,48 @@
+---
+// Banner override: renders frontmatter banners + API Explorer link on /api/ pages
+const route = Astro.locals.starlightRoute
+const slug = route?.slug ?? ''
+const banner = route?.entry?.data?.banner
+const isApiPage = slug === 'api' || slug.startsWith('api/')
+---
+
+{banner && (
+  <div class="ots-banner" data-pagefind-ignore set:html={banner.content} />
+)}
+
+{isApiPage && (
+  <div class="ots-banner-api-explorer" data-pagefind-ignore>
+    <span>Try these endpoints interactively in the</span>
+    <a href="/api-explorer/">API Explorer</a>
+  </div>
+)}
+
+<style>
+  .ots-banner {
+    padding: var(--sl-nav-pad-y) var(--sl-nav-pad-x);
+    text-align: center;
+    background: var(--sl-color-bg-accent);
+    color: var(--sl-color-text-invert);
+    box-shadow: var(--sl-shadow-sm);
+  }
+
+  .ots-banner-api-explorer {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.875rem;
+    background: var(--sl-color-accent-low);
+    border-left: 3px solid var(--sl-color-accent);
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .ots-banner-api-explorer a {
+    color: var(--sl-color-accent);
+    text-decoration: underline;
+  }
+
+  .ots-banner-api-explorer a:hover {
+    text-decoration: none;
+  }
+</style>

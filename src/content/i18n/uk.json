@@ -62,7 +62,9 @@
     "glossary": "Глосарій",
     "qualityChecklist": "Контрольний список якості",
     "upgradingToV024": "Оновлення до v0.24.0",
-    "upgradingToV023": "Оновлення до v0.23.0"
+    "upgradingToV023": "Оновлення до v0.23.0",
+    "apiExplorer": "API Оглядач",
+    "apiReference": "API Довідник"
   },
   "skipLink.label": "Перейти до вмісту",
   "search.label": "Пошук",

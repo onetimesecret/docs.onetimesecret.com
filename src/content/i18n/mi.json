@@ -62,7 +62,9 @@
     "glossary": "Papakupu",
     "qualityChecklist": "Rārangi Tirotiro Kounga",
     "upgradingToV024": "Whakahou ki v0.24.0",
-    "upgradingToV023": "Whakahou ki v0.23.0"
+    "upgradingToV023": "Whakahou ki v0.23.0",
+    "apiExplorer": "API Tūhuranga",
+    "apiReference": "API Tohutoro"
   },
   "skipLink.label": "Peke ki te ihirangi",
   "search.label": "Rapu",

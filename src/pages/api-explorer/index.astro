@@ -1,0 +1,47 @@
+---
+// src/pages/api-explorer.astro
+// Standalone Scalar API reference — interactive explorer with try-it functionality
+import ApiExplorerLayout from "../../layouts/ApiExplorerLayout.astro";
+import { ScalarComponent } from "@scalar/astro";
+---
+
+<ApiExplorerLayout title="API Explorer — Onetime Secret">
+  <ScalarComponent
+    configuration={{
+      url: "/schemas/openapi.json",   // OpenAPI spec URL
+      theme: "deepSpace",                // UI theme
+      layout: "modern",               // Layout style
+      defaultOpenAllTags: false,      // Collapse tag groups by default
+      showSidebar: true,              // Show navigation sidebar
+      hideTestRequestButton: false,   // Show the "Try it" button
+      // defaultHttpClient: "ruby",
+      pathRouting: {
+        basePath: "/api-explorer/",
+      },
+      // theme: "deepSpace",
+      telemetry: false,
+      withDefaultFonts: true,         // Use Scalar's bundled fonts
+      mcp: { disabled: true },        // Disable AI/MCP integration
+      customCss: `.agent-button-container, .ask-agent-scalar-input { display: none !important; } .flex.gap-1\\.5.px-3.pt-3 > .bg-sidebar-b-search { display: none !important; }`,
+    }}
+  />
+</ApiExplorerLayout>
+
+<!--
+  Beyond what's configured here, @scalar/astro (v0.2.3) supports additional options through the ScalarComponent configuration:
+
+- spec — pass spec as an object instead of fetching from URL
+- proxyUrl — proxy for "Try it" requests to avoid CORS
+- baseServerURL — override the server URL from the spec
+- servers — custom server list
+- authentication — pre-fill auth credentials (API key, bearer, basic)
+- darkMode — force dark/light mode (true/false)
+- hiddenClients — hide specific HTTP client examples (e.g., ['node'])
+- defaultHttpClient — which language/client to show by default (e.g., { targetKey: 'node', clientKey: 'fetch' })
+- metaData — custom page metadata
+- searchHotKey — keyboard shortcut for search (default: k)
+- hideModels — hide the schema models section
+- hideDownloadButton — hide the spec download button
+- tagsSorter / operationsSorter — custom sort functions
+- pathRouting — enable URL-based routing for operations (e.g., /api-explorer/tag/account/GET/api/v2/account)
+-->

@@ -62,7 +62,9 @@
     "glossary": "Речник",
     "qualityChecklist": "Контролен списък за качество",
     "upgradingToV024": "Надграждане до v0.24.0",
-    "upgradingToV023": "Надграждане до v0.23.0"
+    "upgradingToV023": "Надграждане до v0.23.0",
+    "apiExplorer": "API Изследовател",
+    "apiReference": "API Справка"
   },
   "skipLink.label": "Преминаване към съдържанието",
   "search.label": "Търсене",

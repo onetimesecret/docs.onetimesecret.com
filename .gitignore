@@ -42,3 +42,6 @@ Dockerfile.*
 .ipynb_checkpoints
 *.ipynb
 .qodo
+
+# Derived artifacts
+public/schemas/

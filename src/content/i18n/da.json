@@ -62,7 +62,9 @@
     "glossary": "Ordliste",
     "qualityChecklist": "Kvalitetskontrolliste",
     "upgradingToV024": "Opgradering til v0.24.0",
-    "upgradingToV023": "Opgradering til v0.23.0"
+    "upgradingToV023": "Opgradering til v0.23.0",
+    "apiExplorer": "API-udforsker",
+    "apiReference": "API-reference"
   },
   "skipLink.label": "Spring til indhold",
   "search.label": "Søg",

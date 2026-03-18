@@ -62,7 +62,9 @@
     "glossary": "Sözlük",
     "qualityChecklist": "Kalite Kontrol Listesi",
     "upgradingToV024": "v0.24.0'a Yükseltme",
-    "upgradingToV023": "v0.23.0'a Yükseltme"
+    "upgradingToV023": "v0.23.0'a Yükseltme",
+    "apiExplorer": "API Gezgini",
+    "apiReference": "API Referansı"
   },
   "skipLink.label": "İçeriğe atla",
   "search.label": "Ara",
