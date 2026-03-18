@@ -62,7 +62,9 @@
     "glossary": "Woordenlijst",
     "qualityChecklist": "Kwaliteitscontrolelijst",
     "upgradingToV024": "Upgraden naar v0.24.0",
-    "upgradingToV023": "Upgraden naar v0.23.0"
+    "upgradingToV023": "Upgraden naar v0.23.0",
+    "apiExplorer": "API Verkenner",
+    "apiReference": "API-referentie"
   },
   "skipLink.label": "Ga naar inhoud",
   "search.label": "Zoeken",

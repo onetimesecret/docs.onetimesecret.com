@@ -62,7 +62,9 @@
     "glossary": "用語集",
     "qualityChecklist": "品質チェックリスト",
     "upgradingToV024": "v0.24.0へのアップグレード",
-    "upgradingToV023": "v0.23.0へのアップグレード"
+    "upgradingToV023": "v0.23.0へのアップグレード",
+    "apiExplorer": "API エクスプローラー",
+    "apiReference": "API リファレンス"
   },
   "skipLink.label": "コンテンツにスキップ",
   "search.label": "検索",

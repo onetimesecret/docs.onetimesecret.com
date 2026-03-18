@@ -60,7 +60,9 @@
     "translations": "Translations",
     "universalGuidance": "Universal Guidance",
     "styleGuide": "Style Guide",
-    "glossary": "Glossary"
+    "glossary": "Glossary",
+    "apiExplorer": "API Explorer",
+    "apiReference": "API Reference"
   },
   "skipLink.label": "Skip to content",
   "search.label": "Search",
