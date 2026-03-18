@@ -11,7 +11,7 @@ For the full context on what changed and why, see the [v0.24.0 release notes](ht
 
 ## Before You Start
 
-**Coming from v0.22?** Complete the [v0.23 config migration](../upgrading-v0-23/) first. The v0.23 release converts config keys from symbol to string format, which v0.24 requires.
+**Coming from v0.22?** Complete the [v0.23 config migration](upgrading-v0-23/) first. The v0.23 release converts config keys from symbol to string format, which v0.24 requires.
 
 1. **Back up your Redis data.** `redis-cli BGSAVE` or equivalent. Keep the RDB file somewhere safe.
 2. **Back up your configuration files.** `config.yaml`,`.env`.
