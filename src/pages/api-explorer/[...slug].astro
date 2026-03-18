@@ -1,0 +1,66 @@
+---
+// src/pages/api-explorer/[...slug].astro
+// Catch-all route for Scalar's client-side path routing.
+// Scalar uses pathRouting to create deep-linkable URLs like:
+//   /api-explorer/tag/{tagName}
+//   /api-explorer/tag/{tagName}/{METHOD}/{apiPath}
+// Astro needs a static page at each path so direct navigation works.
+// Once the page loads, Scalar's client-side router takes over.
+
+import ApiExplorerLayout from "../../layouts/ApiExplorerLayout.astro";
+import { ScalarComponent } from "@scalar/astro";
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
+
+export function getStaticPaths() {
+  const specPath = join(process.cwd(), "schemas/openapi.json");
+  const spec = JSON.parse(readFileSync(specPath, "utf-8"));
+
+  const paths: Array<{ params: { slug: string } }> = [];
+  const tags = new Set<string>();
+
+  for (const [apiPath, methods] of Object.entries(spec.paths || {})) {
+    for (const [method, details] of Object.entries(methods as Record<string, any>)) {
+      if (!["get", "post", "put", "delete", "patch", "options", "head"].includes(method)) continue;
+
+      const opTags = details.tags || [];
+      for (const tag of opTags) {
+        tags.add(tag);
+      }
+
+      // Scalar operation URL: /api-explorer/tag/{tag}/{METHOD}/{apiPath}
+      const cleanPath = apiPath.replace(/^\//, "").replace(/\/$/, "");
+      for (const tag of opTags) {
+        paths.push({ params: { slug: `tag/${tag}/${method.toUpperCase()}/${cleanPath}` } });
+      }
+    }
+  }
+
+  // Tag overview pages: /api-explorer/tag/{tagName}
+  for (const tag of tags) {
+    paths.push({ params: { slug: `tag/${tag}` } });
+  }
+
+  return paths;
+}
+---
+
+<ApiExplorerLayout title="API Explorer — Onetime Secret">
+  <ScalarComponent
+    configuration={{
+      url: "/schemas/openapi.json",
+      theme: "deepSpace",
+      layout: "modern",
+      defaultOpenAllTags: false,
+      showSidebar: true,
+      hideTestRequestButton: false,
+      pathRouting: {
+        basePath: "/api-explorer/",
+      },
+      telemetry: false,
+      withDefaultFonts: true,
+      mcp: { disabled: true },
+      customCss: `.agent-button-container, .ask-agent-scalar-input { display: none !important; } .flex.gap-1\\.5.px-3.pt-3 > .bg-sidebar-b-search { display: none !important; }`,
+    }}
+  />
+</ApiExplorerLayout>
