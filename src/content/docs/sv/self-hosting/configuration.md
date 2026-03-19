@@ -24,7 +24,7 @@ Huvudkonfigurationsfilen är `config/config.yaml`, som använder ERB-mallar för
 3. De flesta vanliga inställningar kan åsidosättas med miljövariabler
 
 **Visa den kompletta konfigurationsfilen:**
-[config.example.yaml](https://raw.githubusercontent.com/onetimesecret/onetimesecret/refs/tags/v0.22.4/etc/config.example.yaml)
+[config.example.yaml](https://raw.githubusercontent.com/onetimesecret/onetimesecret/main/etc/config.example.yaml)
 
 ### Viktiga konfigurationssektioner
 
