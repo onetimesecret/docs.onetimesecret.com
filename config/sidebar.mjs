@@ -159,16 +159,10 @@ export const sidebar = [
     createLink("upgradingToV024", "self-hosting/upgrading-v0-24"),
   ]),
 
-  createGroup("restApi", [
-    createLink("overview", "rest-api"),
+  createLink("restApi", "rest-api"),
 
-    createGroup("v2", [createLink("overview", "rest-api/v2")]),
-
-    createGroup("v1", [
-      createLink("createSecrets", "rest-api/v1/create-secrets"),
-      createLink("retrieveSecrets", "rest-api/v1/retrieve-secrets"),
-      createLink("clientLibraries", "rest-api/v1/client-libraries"),
-    ]),
+  createGroup("resources", [
+    createLink("clientLibraries", "resources/client-libraries"),
   ]),
 
   createGroup("securityBestPractices", [

@@ -1,95 +1,30 @@
 ---
-title: REST API
-description: REST API на Onetime Secret предоставя гъвкави възможности за споделяне на тайни, като поддържа както удостоверено, така и анонимно използване. Удостоверените потребители получават усъвършенствани функции и по-високи лимити за използване, докато неудостоверените потребители могат бързо да споделят тайни с основна функционалност.
+title: REST API Documentation
+description: The Onetime Secret REST API documentation has moved to api.onetimesecret.com with interactive API explorer and full endpoint reference.
 ---
 
-_Актуализирано 2025-04-29_
+## Documentation Has Moved
 
-{% aside type="tip" %}
-Тествайте и изследвайте крайните точки на API с нашата интерактивна колекция [Postman Collection](https://docs.onetimesecret.dev/).
-{% /aside %}
+The complete REST API documentation is now hosted at **[api.onetimesecret.com](https://api.onetimesecret.com)**.
 
-## Базов URI
+The new documentation includes:
 
-`https://REGION.onetimesecret.com/api`
+- **API v1** — Original endpoints for secret sharing
+- **API v2** — Enhanced metadata and burn operations
+- **API v3** — Latest version with expanded capabilities
 
-Където `REGION` е или `CA`, `EU`, `NZ`, `UK`, или `US`.
+Visit the [interactive API documentation](https://api.onetimesecret.com) for endpoint details, request/response schemas, and try-it-now functionality.
 
-<!-- ::callout{icon="i-heroicons-globe-alt"} -->
-**Избор на местоположение на данни и регион**
-- Изберете регион (напр. ЕС [`eu.onetimesecret.com`](https://eu.onetimesecret.com/), Великобритания [`uk.onetimesecret.com`](https://uk.onetimesecret.com/) или САЩ [`us.onetimesecret.com`](https://us.onetimesecret.com/)). Вижте [Региони](/bg/regions) за всички опции.
-- Вземете предвид фактори като суверенитет на данните, латентност и изисквания за съответствие
-- **ЗАБЕЛЕЖКА:** По подразбиране `onetimesecret.com` остава оперативен и маршрутизира към активен център за данни, като се препоръчва използването на конкретна локализация, тъй като тази функционалност може да бъде изчерпана в бъдеще.
+## Base URI
 
-## Удостоверяване
-Поддържаме два режима на използване на API:
-
-### Автентичен достъп
-
-`https://USERNAME:APITOKEN@REGION.onetimesecret.com/api`
-
-- Използвайте HTTP Basic Authentication за пълните възможности на API
-- Потребителското име е входът в профила ви
-- Паролата е API токенът от страницата на профила ви
-
-### Анонимен достъп
+All API requests use regional endpoints:
 
 `https://REGION.onetimesecret.com/api`
 
-- Ограничена функционалност без удостоверяване
-- Идеален за бързо, еднократно споделяне на тайна
-- Може да се използва както за създаване, така и за извличане на тайни
+Where `REGION` is one of: `CA`, `EU`, `NZ`, `UK`, or `US`.
 
-## Местоположение на данните
-Onetime Secret поддържа множество географски центрове за данни. Ние следваме политика на нулев обмен на данни между регионите, като гарантираме пълна изолация на данните. Изберете подходящия център за данни за вашите нужди:
+See [Regions](/en/regions/) for details on data locality and compliance considerations.
 
-- **Център за данни CA:** [ca.onetimesecret.com](https://ca.onetimesecret.com/)
-- **Център за данни ЕС:** [eu.onetimesecret.com](https://eu.onetimesecret.com/)
-- **Център за данни NZ:** [nz.onetimesecret.com](https://nz.onetimesecret.com/)
-- **Център за данни Великобритания:** [uk.onetimesecret.com](https://uk.onetimesecret.com/)
-- **Център за данни САЩ:** [us.onetimesecret.com](https://us.onetimesecret.com/)
+## Related Resources
 
-### Важни съображения:
-- Можете да изберете конкретно местоположение на данните, като преминете директно към желания домейн
-- Местонахождението на вашата тайна винаги е ясно от генерираната връзка (напр. `us.onetimesecret.com/secret/abcd1234`)
-- **Забележка:** Понастоящем достъпът през `onetimesecret.com/api` все още функционира, но се препоръчва използването на конкретна локалност, тъй като тази функционалност може да бъде изчерпана в бъдеще.
-
-## Потребителски домейни
-Onetime Secret поддържа персонализирани конфигурации на домейни за организации със специфични изисквания за работа в мрежа или за брандиране чрез нашия план [Identity Plus](https://onetimesecret.com/pricing).
-
-### Предимства на потребителския домейн
-- **Самостоятелна марка:** Използвайте свой собствен домейн (напр. `secrets.example.com`) за достъп до API и споделяне на тайни
-- **Последователно потребителско изживяване: ** Поддържайте визуалната идентичност на организацията си и доверието към нея от страна на клиентите и партньорите ви.
-- **Включване по време на обучението на служителите:** Използвайте собствени домейни, за да затвърдите практиките за сигурност и работните процеси на вашата организация.
-
-<!-- ::callout{icon="i-heroicons-lock-closed"} -->
-**Премиум функция**
-Потребителските домейни са налични в нашия план [Identity Plus](https://onetimesecret.com/pricing). Настройте за минути с нашите лесни за използване опции за конфигуриране. [Научете повече](/bg/custom-domains/).
-
-### Използване на API с потребителски домейни
-Когато използвате потребителски домейн, всички крайни точки на API следват една и съща структура:
-
-`https://secrets.example.com/api`
-
-
-## Състояние на системата
-
-`GET https://REGION.onetimesecret.com/api/v1/status`
-Текущо състояние на системата.
-
-**Параметри:** Няма
-
-```bash
-$ curl -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/status
-{"status":"nominal"}
-```
-
-```bash
-$ curl -u 'USERNAME:APITOKEN' https://uk.onetimesecret.com/api/v1/status
-{"status":"nominal"}
-```
-
-```bash
-$ curl -u 'USERNAME:APITOKEN' https://us.onetimesecret.com/api/v1/status
-{"status":"nominal"}
-```
+- [Client Libraries](/en/resources/client-libraries/) — Community SDKs for Ruby, Python, Go, and more

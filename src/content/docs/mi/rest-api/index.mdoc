@@ -1,98 +1,30 @@
 ---
-title: REST API
-description: Ka whakarato te REST API o Onetime Secret i ngā āhuatanga ngāwari mō te tohatoha karere muna, e tautoko ana i te whakamahi motuhēhēnga me te ingoa-kore. Ka whiwhi ngā kaiwhakamahi motuhēhēnga i ngā āhuatanga teitei me ngā tepe whakamahi teitei ake, ā, ka taea e ngā kaiwhakamahi ingoa-kore te tohatoha tere i ngā karere muna me ngā āhuatanga taketake.
+title: REST API Documentation
+description: The Onetime Secret REST API documentation has moved to api.onetimesecret.com with interactive API explorer and full endpoint reference.
 ---
 
-_Kua whakahōutia 2025-04-29_
+## Documentation Has Moved
 
-{% aside type="tip" %}
-Whakamātau me te tūhura i ngā poutoko API ki tā mātou [Kohinga Postman](https://docs.onetimesecret.dev/) tauwhitinga.
-{% /aside %}
+The complete REST API documentation is now hosted at **[api.onetimesecret.com](https://api.onetimesecret.com)**.
 
-## URI Tūāpapa
+The new documentation includes:
 
-`https://REGION.onetimesecret.com/api`
+- **API v1** — Original endpoints for secret sharing
+- **API v2** — Enhanced metadata and burn operations
+- **API v3** — Latest version with expanded capabilities
 
-Kei hea `REGION` ko tētahi o `CA`, `EU`, `NZ`, `UK`, `US` rānei.
+Visit the [interactive API documentation](https://api.onetimesecret.com) for endpoint details, request/response schemas, and try-it-now functionality.
 
-<!-- ::callout{icon="i-heroicons-globe-alt"} -->
-**Wāhitanga Raraunga me te Kōwhiringa Rohe**
-- Kōwhiria tētahi rohe (hei tauira, EU [`eu.onetimesecret.com`](https://eu.onetimesecret.com/), UK [`uk.onetimesecret.com`](https://uk.onetimesecret.com/), US rānei [`us.onetimesecret.com`](https://us.onetimesecret.com/)). Tirohia [Ngā Rohe](/mi/regions) mō ngā kōwhiringa katoa.
-- Whakaarohia ngā āhuatanga pērā i te mana rangatiratanga raraunga, te tauhanga, me ngā hiahiatanga ūnga
-- **TUHIPOKA:** Ka noho haumanu tonu te `onetimesecret.com` taunoa, ā, ka ārahi ki tētahi pūtoi raraunga haumanu, e tūtohu ana kia whakamahi i tētahi wāhitanga motuhake nā te mea ka taea pea te whakakorehia o tēnei āhuatanga ā ngā wā ka heke mai.
+## Base URI
 
-## Motuhēhēnga
-
-E tautoko ana mātou i ngā āhuatanga e rua mō te whakamahi API:
-
-### Urunga Motuhēhēnga
-
-`https://USERNAME:APITOKEN@REGION.onetimesecret.com/api`
-
-- Whakamahia te Motuhēhēnga Taketake HTTP mō ngā āhuatanga API katoa
-- Ko te ingoa kaiwhakamahi ko tō pūkete takiuru
-- Ko te kupuhipa ko te tohu API mai i tō whārangi pūkete
-
-### Urunga Ingoa-kore
+All API requests use regional endpoints:
 
 `https://REGION.onetimesecret.com/api`
 
-- He āhuatanga iti e wātea ana me te kore motuhēhēnga
-- Pai mō te tohatoha karere muna tere, kotahi-wā
-- Ka taea te whakamahi mō te waihanga me te tiki i ngā karere muna
+Where `REGION` is one of: `CA`, `EU`, `NZ`, `UK`, or `US`.
 
-## Wāhitanga Raraunga
+See [Regions](/en/regions/) for details on data locality and compliance considerations.
 
-E tautoko ana a Onetime Secret i ngā pūtoi raraunga ā-whenua maha. E whai ana mātou i tētahi kaupapa here kore-tohatoha-raraunga i waenganui i ngā rohe, e whakaū ana i te motuhake tino raraunga. Kōwhiria te pūtoi raraunga tika mō ō hiahiatanga:
+## Related Resources
 
-- **Pūtoi Raraunga CA:** [ca.onetimesecret.com](https://ca.onetimesecret.com/)
-- **Pūtoi Raraunga EU:** [eu.onetimesecret.com](https://eu.onetimesecret.com/)
-- **Pūtoi Raraunga NZ:** [nz.onetimesecret.com](https://nz.onetimesecret.com/)
-- **Pūtoi Raraunga UK:** [uk.onetimesecret.com](https://uk.onetimesecret.com/)
-- **Pūtoi Raraunga US:** [us.onetimesecret.com](https://us.onetimesecret.com/)
-
-### Ngā Whakaarohanga Nui:
-- Ka taea e koe te kōwhiri i tētahi wāhitanga raraunga motuhake mā te whakatere tōtika ki te rohe e hiahia ana
-- Ka mārama tonu te wāhi o tō karere muna mai i te hononga kua whakaputaina (hei tauira, `us.onetimesecret.com/secret/abcd1234`)
-- **TUHIPOKA:** I tēnei wā, ka noho haumanu tonu te urunga mā `onetimesecret.com/api` engari e tūtohu ana kia whakamahi i tētahi wāhitanga motuhake nā te mea ka taea pea te whakakorehia o tēnei āhuatanga ā ngā wā ka heke mai.
-
-## Ngā Rohe Ritenga
-
-E tautoko ana a Onetime Secret i ngā whirihoranga rohe ritenga mō ngā whakahaere me ngā hiahiatanga whatunga motuhake, me ngā hiahiatanga waitohu mā tā mātou mahere [Identity Plus](https://onetimesecret.com/pricing).
-
-### Ngā Painga Rohe Ritenga
-- **Waitohu Tūmataiti:** Whakamahia tō ake rohe (hei tauira, `secrets.example.com`) mō te urunga API me te tohatoha karere muna
-- **Wheako Kaiwhakamahi Ōrite:** Pupuritia te āhua tirohanga me te tuakiri pono o tō whakahaere ki ō kiritaki me ō hoa mahi.
-- **Whakauru i roto i te whakangungu kaimahi:** Whakamahia ngā rohe ritenga ki te whakapakari i ngā tikanga haumaru me ngā rerenga mahi o tō whakahaere.
-
-<!-- ::callout{icon="i-heroicons-lock-closed"} -->
-**Āhuatanga Taumata Teitei**
-E wātea ana ngā rohe ritenga i runga i tā mātou mahere [Identity Plus](https://onetimesecret.com/pricing). Whakatūhia i roto i ngā meneti ki ā mātou kōwhiringa whirihoranga ngāwari. [Ako atu](/mi/custom-domains/).
-
-### Whakamahi API ki ngā Rohe Ritenga
-I te wā e whakamahi ana i tētahi rohe ritenga, ka whai ngā poutoko API katoa i te hanganga ōrite:
-
-`https://secrets.example.com/api`
-
-
-## Tūnga Pūnaha
-
-`GET https://REGION.onetimesecret.com/api/v1/status`
-Ko te tūnga o nāianei o te pūnaha.
-
-**Ngā Tawhā:** Kāore
-
-```bash
-$ curl -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/status
-{"status":"nominal"}
-```
-
-```bash
-$ curl -u 'USERNAME:APITOKEN' https://uk.onetimesecret.com/api/v1/status
-{"status":"nominal"}
-```
-
-```bash
-$ curl -u 'USERNAME:APITOKEN' https://us.onetimesecret.com/api/v1/status
-{"status":"nominal"}
-```
+- [Client Libraries](/en/resources/client-libraries/) — Community SDKs for Ruby, Python, Go, and more

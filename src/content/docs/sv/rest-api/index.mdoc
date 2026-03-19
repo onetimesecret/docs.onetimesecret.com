@@ -1,95 +1,30 @@
 ---
-title: REST API
-description: Onetime Secrets REST API tillhandahåller flexibla hemlighetsdelningsmöjligheter, med stöd för både autentiserad och anonym användning. Autentiserade användare får avancerade funktioner och högre användningsgränser, medan icke-autentiserade användare snabbt kan dela hemligheter med grundläggande funktionalitet.
+title: REST API Documentation
+description: The Onetime Secret REST API documentation has moved to api.onetimesecret.com with interactive API explorer and full endpoint reference.
 ---
 
-_Uppdaterad 2025-04-29_
+## Documentation Has Moved
 
-{% aside type="tip" %}
-Testa och utforska API-slutpunkterna med vår interaktiva [Postman Collection](https://docs.onetimesecret.dev/).
-{% /aside %}
+The complete REST API documentation is now hosted at **[api.onetimesecret.com](https://api.onetimesecret.com)**.
 
-## Bas-URI
+The new documentation includes:
 
-`https://REGION.onetimesecret.com/api`
+- **API v1** — Original endpoints for secret sharing
+- **API v2** — Enhanced metadata and burn operations
+- **API v3** — Latest version with expanded capabilities
 
-Där `REGION` är `CA`, `EU`, `NZ`, `UK` eller `US`.
+Visit the [interactive API documentation](https://api.onetimesecret.com) for endpoint details, request/response schemas, and try-it-now functionality.
 
-<!-- ::callout{icon="i-heroicons-globe-alt"} -->
-**Datalokalisering och regionval**
-- Välj en region (t.ex. EU [`eu.onetimesecret.com`](https://eu.onetimesecret.com/), UK [`uk.onetimesecret.com`](https://uk.onetimesecret.com/) eller USA [`us.onetimesecret.com`](https://us.onetimesecret.com/)). Se [Regioner](/sv/regions) för alla alternativ.
-- Överväg faktorer som datasuveränitet, latens och efterlevnadskrav
-- **NOTERA:** Standard `onetimesecret.com` förblir operativ och dirigerar till ett aktivt datacenter, användning av en specifik lokalitet rekommenderas eftersom denna funktionalitet kan bli föråldrad i framtiden.
+## Base URI
 
-## Autentisering
-Vi stöder två användningslägen för API:
-
-### Autentiserad åtkomst
-
-`https://USERNAME:APITOKEN@REGION.onetimesecret.com/api`
-
-- Använd HTTP Basic Authentication för fullständiga API-funktioner
-- Användarnamnet är din kontoinloggning
-- Lösenordet är API-token från din kontosida
-
-### Anonym åtkomst
+All API requests use regional endpoints:
 
 `https://REGION.onetimesecret.com/api`
 
-- Begränsad funktionalitet tillgänglig utan autentisering
-- Idealisk för snabb, engångsdelning av hemligheter
-- Kan användas för både skapande och hämtning av hemligheter
+Where `REGION` is one of: `CA`, `EU`, `NZ`, `UK`, or `US`.
 
-## Datalokalisering
-Onetime Secret stöder flera geografiska datacenter. Vi följer en policy med noll datadelning mellan regioner, vilket säkerställer fullständig dataisolering. Välj rätt datacenter för dina behov:
+See [Regions](/en/regions/) for details on data locality and compliance considerations.
 
-- **CA-datacenter:** [ca.onetimesecret.com](https://ca.onetimesecret.com/)
-- **EU-datacenter:** [eu.onetimesecret.com](https://eu.onetimesecret.com/)
-- **NZ-datacenter:** [nz.onetimesecret.com](https://nz.onetimesecret.com/)
-- **UK-datacenter:** [uk.onetimesecret.com](https://uk.onetimesecret.com/)
-- **USA-datacenter:** [us.onetimesecret.com](https://us.onetimesecret.com/)
+## Related Resources
 
-### Viktiga överväganden:
-- Du kan välja en specifik datalokalisering genom att navigera direkt till önskad domän
-- Platsen för din hemlighet är alltid tydlig från den genererade länken (t.ex. `us.onetimesecret.com/secret/abcd1234`)
-- **NOTERA:** För närvarande är åtkomst via `onetimesecret.com/api` fortfarande operativ men användning av en specifik lokalitet rekommenderas eftersom denna funktionalitet kan bli föråldrad i framtiden.
-
-## Anpassade domäner
-Onetime Secret stöder anpassade domänkonfigurationer för organisationer med specifika nätverks- eller varumärkeskrav via vår [Identity Plus](https://onetimesecret.com/pricing)-plan.
-
-### Fördelar med anpassade domäner
-- **Privat varumärkesbyggande:** Använd din egen domän (t.ex. `secrets.example.com`) för API-åtkomst och hemlighetsdelning
-- **Konsekvent användarupplevelse:** Upprätthåll din organisations visuella identitet och förtroende hos dina kunder och partners.
-- **Inkludera i medarbetarutbildning:** Använd anpassade domäner för att förstärka din organisations säkerhetspraxis och arbetsflöden.
-
-<!-- ::callout{icon="i-heroicons-lock-closed"} -->
-**Premiumfunktion**
-Anpassade domäner är tillgängliga på vår [Identity Plus](https://onetimesecret.com/pricing)-plan. Konfigurera på några minuter med våra lättanvända konfigurationsalternativ. [Läs mer](/sv/custom-domains/).
-
-### API-användning med anpassade domäner
-När du använder en anpassad domän följer alla API-slutpunkter samma struktur:
-
-`https://secrets.example.com/api`
-
-
-## Systemstatus
-
-`GET https://REGION.onetimesecret.com/api/v1/status`
-Aktuell status för systemet.
-
-**Parametrar:** Inga
-
-```bash
-$ curl -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/status
-{"status":"nominal"}
-```
-
-```bash
-$ curl -u 'USERNAME:APITOKEN' https://uk.onetimesecret.com/api/v1/status
-{"status":"nominal"}
-```
-
-```bash
-$ curl -u 'USERNAME:APITOKEN' https://us.onetimesecret.com/api/v1/status
-{"status":"nominal"}
-```
+- [Client Libraries](/en/resources/client-libraries/) — Community SDKs for Ruby, Python, Go, and more

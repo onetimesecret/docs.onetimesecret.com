@@ -1,96 +1,30 @@
 ---
-title: REST API
-description: Die REST-API von Onetime Secret bietet flexible Funktionen für die gemeinsame Nutzung von Geheimnissen und unterstützt sowohl die authentifizierte als auch die anonyme Nutzung. Authentifizierte Benutzer erhalten erweiterte Funktionen und höhere Nutzungslimits, während nicht authentifizierte Benutzer schnell Geheimnisse mit grundlegenden Funktionen teilen können.
+title: REST API Documentation
+description: The Onetime Secret REST API documentation has moved to api.onetimesecret.com with interactive API explorer and full endpoint reference.
 ---
 
-_Aktualisiert 2025-04-29_
+## Documentation Has Moved
 
-{% aside type="tip" %}
-Testen und erkunden Sie die API-Endpunkte mit unserer interaktiven [Postman Collection](https://docs.onetimesecret.dev/).
-{% /aside %}
+The complete REST API documentation is now hosted at **[api.onetimesecret.com](https://api.onetimesecret.com)**.
 
+The new documentation includes:
 
-## Basis-URI
+- **API v1** — Original endpoints for secret sharing
+- **API v2** — Enhanced metadata and burn operations
+- **API v3** — Latest version with expanded capabilities
 
-`https://REGION.onetimesecret.com/api`
+Visit the [interactive API documentation](https://api.onetimesecret.com) for endpoint details, request/response schemas, and try-it-now functionality.
 
-Wobei `REGION` entweder `CA`, `EU`, `NZ`, `UK` oder `US` ist.
+## Base URI
 
-<!-- ::callout{icon="i-heroicons-globe-alt"} -->
-**Auswahl des Datenorts und der Region**
-- Wählen Sie eine Region (z.B. EU [`eu.onetimesecret.com`](https://eu.onetimesecret.com/), UK [`uk.onetimesecret.com`](https://uk.onetimesecret.com/) oder US [`us.onetimesecret.com`](https://us.onetimesecret.com/)). Siehe [Regionen](/de/regions) für alle Optionen.
-- Berücksichtigen Sie Faktoren wie Datenhoheit, Latenzzeit und Compliance-Anforderungen
-- **HINWEIS:** Standardmäßig bleibt `onetimesecret.com` in Betrieb und leitet zu einem aktiven Rechenzentrum weiter. Es wird empfohlen, eine bestimmte Lokalität zu verwenden, da diese Funktion in Zukunft möglicherweise veraltet sein wird.
-
-## Authentifizierung
-Wir unterstützen zwei Arten der API-Nutzung:
-
-### Authentifizierter Zugang
-
-`https://USERNAME:APITOKEN@REGION.onetimesecret.com/api`
-
-- Verwenden Sie die HTTP-Basisauthentifizierung für alle API-Funktionen
-- Der Benutzername ist Ihr Konto-Login
-- Das Passwort ist das API-Token von Ihrer Kontoseite
-
-### Anonymer Zugang
+All API requests use regional endpoints:
 
 `https://REGION.onetimesecret.com/api`
 
-- Eingeschränkte Funktionalität ohne Authentifizierung verfügbar
-- Ideal für den schnellen, einmaligen Austausch von Geheimnissen
-- Kann sowohl zum Erstellen als auch zum Abrufen von Geheimnissen verwendet werden
+Where `REGION` is one of: `CA`, `EU`, `NZ`, `UK`, or `US`.
 
-## Datenlokalisierung
-Onetime Secret unterstützt mehrere geografische Datenzentren. Wir verfolgen eine Politik des Null-Datenaustauschs zwischen den Regionen, um eine vollständige Datenisolierung zu gewährleisten. Wählen Sie das richtige Datenzentrum für Ihre Bedürfnisse:
+See [Regions](/en/regions/) for details on data locality and compliance considerations.
 
-- **CA-Datenzentrum:** [ca.onetimesecret.com](https://ca.onetimesecret.com/)
-- **EU-Datenzentrum:** [eu.onetimesecret.com](https://eu.onetimesecret.com/)
-- **NZ-Datenzentrum:** [nz.onetimesecret.com](https://nz.onetimesecret.com/)
-- **UK-Datenzentrum:** [uk.onetimesecret.com](https://uk.onetimesecret.com/)
-- **US-Datenzentrum:** [us.onetimesecret.com](https://us.onetimesecret.com/)
+## Related Resources
 
-### Wichtige Überlegungen:
-- Sie können eine bestimmte Datenlokalität auswählen, indem Sie direkt zur gewünschten Domain navigieren
-- Der Speicherort Ihres Geheimnisses ist immer aus dem generierten Link ersichtlich (z.B. `us.onetimesecret.com/secret/abcd1234`)
-- **HINWEIS:** Derzeit ist der Zugriff über `onetimesecret.com/api` noch möglich, aber es wird empfohlen, eine bestimmte Lokalität zu verwenden, da diese Funktion in Zukunft möglicherweise veraltet sein wird.
-
-## Benutzerdefinierte Domains
-Onetime Secret unterstützt benutzerdefinierte Domain-Konfigurationen für Unternehmen mit speziellen Netzwerk- oder Branding-Anforderungen über unseren [Identity Plus](https://onetimesecret.com/pricing) Plan.
-
-### Vorteile einer benutzerdefinierten Domain
-- **Private Branding:** Verwenden Sie Ihre eigene Domain (z.B. `secrets.example.com`) für den API-Zugang und die gemeinsame Nutzung von Geheimnissen
-- **Konsistente Benutzererfahrung:** Pflegen Sie die visuelle und vertrauenswürdige Identität Ihres Unternehmens bei Ihren Kunden und Partnern.
-- **Bei Mitarbeiterschulungen einbeziehen:** Verwenden Sie benutzerdefinierte Domains, um die Sicherheitspraktiken und Arbeitsabläufe Ihres Unternehmens zu verstärken.
-
-<!-- ::callout{icon="i-heroicons-lock-closed"} -->
-**Premium-Funktion**
-Benutzerdefinierte Domains sind in unserem [Identity Plus](https://onetimesecret.com/pricing) Plan verfügbar. Mit unseren benutzerfreundlichen Konfigurationsoptionen ist die Einrichtung in wenigen Minuten erledigt. [Erfahren Sie mehr](/de/custom-domains/).
-
-### API-Nutzung mit benutzerdefinierten Domains
-Wenn Sie eine benutzerdefinierte Domäne verwenden, folgen alle API-Endpunkte der gleichen Struktur:
-
-`https://secrets.example.com/api`
-
-
-## Systemstatus
-
-`GET https://REGION.onetimesecret.com/api/v1/status`
-Aktueller Status des Systems.
-
-**Parameter:** Keine
-
-```bash
-$ curl -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/status
-{"status":"nominal"}
-```
-
-```bash
-$ curl -u 'USERNAME:APITOKEN' https://uk.onetimesecret.com/api/v1/status
-{"status":"nominal"}
-```
-
-```bash
-$ curl -u 'USERNAME:APITOKEN' https://us.onetimesecret.com/api/v1/status
-{"status":"nominal"}
-```
+- [Client Libraries](/en/resources/client-libraries/) — Community SDKs for Ruby, Python, Go, and more

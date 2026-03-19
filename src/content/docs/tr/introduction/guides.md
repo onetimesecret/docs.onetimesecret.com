@@ -20,9 +20,8 @@ Onetime Secret Belgelerine hoş geldiniz. Başlamak, entegre etmek veya kendi su
 
 ## API ile entegrasyon
 
-- **[REST API](/tr/rest-api/)** — Kimlik doğrulama, bölgeler ve uç noktalar
-- **[API v2](/tr/rest-api/v2/)** — En güncel API sürümü
-- **[İstemci Kütüphaneleri](/tr/rest-api/v1/client-libraries/)** — SDK'lar ve topluluk entegrasyonları
+- **[REST API Dokümantasyonu](https://api.onetimesecret.com)** — Tam API referansı (v1, v2, v3)
+- **[İstemci Kütüphaneleri](/en/resources/client-libraries/)** — Topluluk SDK'ları ve entegrasyonlar
 
 ## Kendi sunucunuzu çalıştırın
 

@@ -20,9 +20,8 @@ Benvenuti in Onetime Secret Docs. Trovate ciò che vi serve per iniziare, integr
 
 ## Integrare con l'API
 
-- **[API REST](/it/rest-api/)** — Autenticazione, regioni e endpoint
-- **[API v2](/it/rest-api/v2/)** — Ultima versione dell'API
-- **[Librerie client](/it/rest-api/v1/client-libraries/)** — SDK e integrazioni della community
+- **[Documentazione API REST](https://api.onetimesecret.com)** — Riferimento API completo (v1, v2, v3)
+- **[Librerie client](/en/resources/client-libraries/)** — SDK e integrazioni della community
 
 ## Eseguire la propria istanza
 

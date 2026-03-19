@@ -1,95 +1,30 @@
 ---
-title: REST API
-description: Onetime SecretのREST APIは、認証ユーザと匿名ユーザの両方をサポートし、柔軟なシークレット共有機能を提供します。認証されたユーザーは、高度な機能と高い利用制限を得ることができ、認証されていないユーザーは、基本的な機能で素早くシークレットを共有することができます。
+title: REST API Documentation
+description: The Onetime Secret REST API documentation has moved to api.onetimesecret.com with interactive API explorer and full endpoint reference.
 ---
 
-_更新 2025-04-29_
+## Documentation Has Moved
 
-{% aside type="tip" %}
-インタラクティブな[Postman Collection](https://docs.onetimesecret.dev/)を使用して、APIエンドポイントをテストおよび探索できます。
-{% /aside %}
+The complete REST API documentation is now hosted at **[api.onetimesecret.com](https://api.onetimesecret.com)**.
 
-## ベースURI
+The new documentation includes:
 
-`https://REGION.onetimesecret.com/api`
+- **API v1** — Original endpoints for secret sharing
+- **API v2** — Enhanced metadata and burn operations
+- **API v3** — Latest version with expanded capabilities
 
-ここで `REGION` は `CA`、`EU`、`NZ`、`UK`、または `US` のいずれかです。
+Visit the [interactive API documentation](https://api.onetimesecret.com) for endpoint details, request/response schemas, and try-it-now functionality.
 
-<!-- ::callout{icon="i-heroicons-globe-alt"} -->
-**データロカリティとリージョンの選択**
-- リージョンを選択してください（例: EU [`eu.onetimesecret.com`](https://eu.onetimesecret.com/)、UK [`uk.onetimesecret.com`](https://uk.onetimesecret.com/)、または US [`us.onetimesecret.com`](https://us.onetimesecret.com/)）。すべてのオプションは[リージョン](/ja/regions)をご覧ください。
-- データ主権、レイテンシー、コンプライアンス要件などの要因を考慮する。
-- **NOTE:** デフォルトの `onetimesecret.com` は引き続き運用可能で、アクティブなデータセンターにルーティングされますが、この機能は将来廃止される可能性があるため、特定のロカリティを使用することをお勧めします。
+## Base URI
 
-## 認証
-APIは2つの利用モードをサポートしています：
-
-### 認証アクセス
-
-`https://USERNAME:APITOKEN@REGION.onetimesecret.com/api`
-
-- APIの全機能を使用するには、HTTPベーシック認証を使用してください。
-- ユーザー名はアカウントログイン名
-- パスワードはアカウントページのAPIトークンです。
-
-### 匿名アクセス
+All API requests use regional endpoints:
 
 `https://REGION.onetimesecret.com/api`
 
-- 認証なしで利用できる機能は限定的
-- 迅速で一回限りのシークレット共有に最適
-- シークレットの作成と取得の両方に使用可能
+Where `REGION` is one of: `CA`, `EU`, `NZ`, `UK`, or `US`.
 
-## データロカリティ
-Onetime Secretは複数のデータセンターをサポートしています。地域間のデータ共有ゼロポリシーに従い、データの完全な分離を保証します。お客様のニーズに合ったデータセンターをお選びください：
+See [Regions](/en/regions/) for details on data locality and compliance considerations.
 
-- **CAデータセンター:** [ca.onetimesecret.com](https://ca.onetimesecret.com/)
-- **EUデータセンター:** [eu.onetimesecret.com](https://eu.onetimesecret.com/)
-- **NZデータセンター:** [nz.onetimesecret.com](https://nz.onetimesecret.com/)
-- **UKデータセンター:** [uk.onetimesecret.com](https://uk.onetimesecret.com/)
-- **USデータセンター:** [us.onetimesecret.com](https://us.onetimesecret.com/)
+## Related Resources
 
-### 重要な考慮事項
-- 希望するドメインに直接移動することで、特定のデータロカリティを選択することができる。
-- あなたのシークレットの場所は、生成されたリンク（例：`us.onetimesecret.com/secret/abcd1234`）から常に明らかです。
-- **NOTE:** 現在、`onetimesecret.com/api`経由でのアクセスはまだ可能ですが、この機能は将来廃止される可能性があるため、特定のロケールを使用することをお勧めします。
-
-## カスタムドメイン
-Onetime Secretは、[Identity Plus](https://onetimesecret.com/pricing)プランにより、特定のネットワークやブランディングを必要とする組織向けのカスタムドメイン設定をサポートしています。
-
-### カスタムドメインの利点
-- **Private Branding:** APIアクセスやシークレット共有に独自のドメイン（例：`secrets.example.com`）を使用する。
-- **一貫したユーザーエクスペリエンス：**顧客やパートナーとの組織のビジュアルと信頼のアイデンティティを維持します。
-- **従業員トレーニングに組み込む:** カスタムドメインを使用して、組織のセキュリティ慣行とワークフローを強化します。
-
-<!-- ::callout{icon="i-heroicons-lock-closed"}。-->
-**プレミアム機能**
-カスタムドメインは[Identity Plus](https://onetimesecret.com/pricing)プランでご利用いただけます。使いやすい設定オプションで数分でセットアップが完了します。[詳細はこちら](/ja/custom-domains/)。
-
-### カスタムドメインでのAPI使用
-カスタム・ドメインを使用する場合、すべての API エンドポイントは同じ構造に従います：
-
-`https://secrets.example.com/api`
-
-
-## システムステータス
-
-`GET https://REGION.onetimesecret.com/api/v1/status`
-システムの現在の状態。
-
-**パラメーター:** なし
-
-```bash
-$ curl -u 'USERNAME:APITOKEN' https://eu.onetimesecret.com/api/v1/status
-{"status":"nominal"}
-```
-
-```bash
-$ curl -u 'USERNAME:APITOKEN' https://uk.onetimesecret.com/api/v1/status
-{"status":"nominal"}
-```
-
-```bash
-$ curl -u 'USERNAME:APITOKEN' https://us.onetimesecret.com/api/v1/status
-{"status":"nominal"}
-```
+- [Client Libraries](/en/resources/client-libraries/) — Community SDKs for Ruby, Python, Go, and more
