@@ -62,7 +62,9 @@
     "glossary": "Glosariusz",
     "qualityChecklist": "Lista kontroli jakości",
     "upgradingToV024": "Aktualizacja do v0.24.0",
-    "upgradingToV023": "Aktualizacja do v0.23.0"
+    "upgradingToV023": "Aktualizacja do v0.23.0",
+    "apiExplorer": "API Eksplorator",
+    "apiReference": "Dokumentacja API"
   },
   "skipLink.label": "Przejdź do treści",
   "search.label": "Wyszukaj",
