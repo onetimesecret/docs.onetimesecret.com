@@ -1,15 +1,15 @@
 ---
-title: Client Libraries
-description: Explore the client libraries available for the Onetime Secret API, including Ruby, Python, Perl, Java, C#, Go, and more.
+title: Klientbibliotek
+description: Utforska klientbiblioteken som finns tillgängliga för Onetime Secret API, inklusive Ruby, Python, Perl, Java, C#, Go och fler.
 ---
 
 ## Ruby
 
 
 [Github page onetime-ruby](https://github.com/onetimesecret/onetime-ruby)
-by [Delano](https://delanotes.com/) (updated 2024-06-09)
+av [Delano](https://delanotes.com/) (uppdaterad 2024-06-09)
 
-### Usage Example
+### Användningsexempel
 
 ```ruby
 require 'onetime/api'
@@ -31,9 +31,9 @@ puts ret['secret_key']
 
 
 [Github page - onetimesecret-cli](https://github.com/slashpass/onetimesecret-cli)
-by [slashpass](https://github.com/slashpass) (added 2021-07-08)
+av [slashpass](https://github.com/slashpass) (tillagd 2021-07-08)
 
-### Usage Example
+### Användningsexempel
 
 ```python
 from onetimesecret import OneTimeSecretCli
@@ -43,9 +43,9 @@ cli.create_link("secret") # return a link like https://onetimesecret.com/secret/
 ```
 
 [Github page - py\_onetimesecret](https://github.com/utter-step/py_onetimesecret)
-by [Vladislav Stepanov](https://github.com/utter-step/) (added 2012-06-26)
+av [Vladislav Stepanov](https://github.com/utter-step/) (tillagd 2012-06-26)
 
-### Usage Example
+### Användningsexempel
 
 ```python
 from onetimesecret import OneTimeSecret
@@ -64,9 +64,9 @@ print o.retrieve_secret(secret["secret_key"])
 
 
 [Net::OneTimeSecret on CPAN](http://search.cpan.org/~kyled/Net-OneTimeSecret/lib/Net/OneTimeSecret.pm)
-by [Kyle Dawkins](http://www.shoffle.com/) (added 2012-01-06)
+av [Kyle Dawkins](http://www.shoffle.com/) (tillagd 2012-01-06)
 
-### Usage Example
+### Användningsexempel
 
 ```perl
 #!/usr/bin/env perl
@@ -95,9 +95,9 @@ printf( "%s\n", $secret->{value} );
 
 
 [Github page - onetime-java](https://github.com/mpawlowski/onetime-java)
-by [Marcin Pawlowski](https://github.com/mpawlowski) (added 2014-05-22)
+av [Marcin Pawlowski](https://github.com/mpawlowski) (tillagd 2014-05-22)
 
-### Usage Example
+### Användningsexempel
 
 ```java
 OneTimeSecret ots = new OneTimeSecretRestImpl(
@@ -125,9 +125,9 @@ assertEquals(generateResponse.getValue(), retrieveResponse.getValue());
 
 
 [Github page - OneTimeSharp](https://github.com/utter-step/OneTimeSharp)
-by [Vladislav Stepanov](https://github.com/utter-step/) (added 2014-05-29)
+av [Vladislav Stepanov](https://github.com/utter-step/) (tillagd 2014-05-29)
 
-### Usage Example
+### Användningsexempel
 
 ```csharp
 # You can use OneTimeSharp in any of your projects which are compatible with .NET (4.0+) or Mono (2.10.8+).
@@ -160,9 +160,9 @@ class Test
 
 
 [Github page - onetimesecret](https://github.com/corbaltcode/go-onetimesecret)
-by [Corbalt](https://github.com/corbaltcode/) (added 2021-12-10)
+av [Corbalt](https://github.com/corbaltcode/) (tillagd 2021-12-10)
 
-### Usage Example
+### Användningsexempel
 
 ```go
 import ots "github.com/corbaltcode/go-onetimesecret"
@@ -186,7 +186,7 @@ if err != nil {
 print(secret)
 ```
 
-### Usage Example as CLI
+### Användningsexempel som CLI
 
 ```bash
 $ go install github.com/corbaltcode/go-onetimesecret/cmd/ots@latest
@@ -211,9 +211,9 @@ flsdlaun6hwczqu9utmc0vts5xj9xu1
 
 
 [Github page](https://github.com/emdneto/otsgo)
-by [Emídio Neto](https://github.com/emdneto) (added 2024-06-09)
+av [Emídio Neto](https://github.com/emdneto) (tillagd 2024-06-09)
 
-### Usage Example
+### Användningsexempel
 
 ```go
 // Build a new client
@@ -238,9 +238,9 @@ fmt.Println(response.Status)
 
 
 [Github page - OneTimeSecret](https://github.com/chelnak/OneTimeSecret)
-by [Craig Gumbley](https://www.helloitscraig.co.uk) (updated 2017-04-28)
+av [Craig Gumbley](https://www.helloitscraig.co.uk) (uppdaterad 2017-04-28)
 
-### Usage Example
+### Användningsexempel
 
 ```powershell
 # Install from the PowerShell gallery
@@ -265,9 +265,9 @@ Get-Command -Module OneTimeSecret | Select Name
 
 
 [Github page - OneTimeSecret-bash](https://github.com/eengstrom/onetimesecret-bash)
-by [Eric Engstrom](https://eengstrom.github.io/) (updated 2018-12-19)
+av [Eric Engstrom](https://eengstrom.github.io/) (uppdaterad 2018-12-19)
 
-### Usage Example as Scripting API
+### Användningsexempel som skript-API
 
 ```bash
 # source for use anonymously (secrets created anonymously)
@@ -314,7 +314,7 @@ ots_state $KEY
 ots_burn $KEY
 ```
 
-### Usage Example as CLI
+### Användningsexempel som CLI
 
 ```bash
 # Share a secret (from stdin
@@ -331,8 +331,11 @@ EOF
 # Get/Retrieve a secret:
 ./ots get <key|url>
 ./ots retrieve <key|url>
+```
 
-# Burn a secret:
+### Användningsexempel som CLI
+
+```bash
 $ ots burn flsdlaun6hwczqu9utmc0vts5xj9xu1
 flsdlaun6hwczqu9utmc0vts5xj9xu1
 ```

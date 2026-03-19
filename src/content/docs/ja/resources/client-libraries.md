@@ -1,6 +1,6 @@
 ---
-title: Client Libraries
-description: Explore the client libraries available for the Onetime Secret API, including Ruby, Python, Perl, Java, C#, Go, and more.
+title: クライアントライブラリ
+description: Ruby、Python、Perl、Java、C#、Goなど、Onetime Secret APIで利用可能なクライアントライブラリをご紹介します。
 ---
 
 ## Ruby
@@ -9,7 +9,7 @@ description: Explore the client libraries available for the Onetime Secret API, 
 [Github page onetime-ruby](https://github.com/onetimesecret/onetime-ruby)
 by [Delano](https://delanotes.com/) (updated 2024-06-09)
 
-### Usage Example
+### 使用例
 
 ```ruby
 require 'onetime/api'
@@ -33,7 +33,7 @@ puts ret['secret_key']
 [Github page - onetimesecret-cli](https://github.com/slashpass/onetimesecret-cli)
 by [slashpass](https://github.com/slashpass) (added 2021-07-08)
 
-### Usage Example
+### 使用例
 
 ```python
 from onetimesecret import OneTimeSecretCli
@@ -45,7 +45,7 @@ cli.create_link("secret") # return a link like https://onetimesecret.com/secret/
 [Github page - py\_onetimesecret](https://github.com/utter-step/py_onetimesecret)
 by [Vladislav Stepanov](https://github.com/utter-step/) (added 2012-06-26)
 
-### Usage Example
+### 使用例
 
 ```python
 from onetimesecret import OneTimeSecret
@@ -66,7 +66,7 @@ print o.retrieve_secret(secret["secret_key"])
 [Net::OneTimeSecret on CPAN](http://search.cpan.org/~kyled/Net-OneTimeSecret/lib/Net/OneTimeSecret.pm)
 by [Kyle Dawkins](http://www.shoffle.com/) (added 2012-01-06)
 
-### Usage Example
+### 使用例
 
 ```perl
 #!/usr/bin/env perl
@@ -97,7 +97,7 @@ printf( "%s\n", $secret->{value} );
 [Github page - onetime-java](https://github.com/mpawlowski/onetime-java)
 by [Marcin Pawlowski](https://github.com/mpawlowski) (added 2014-05-22)
 
-### Usage Example
+### 使用例
 
 ```java
 OneTimeSecret ots = new OneTimeSecretRestImpl(
@@ -127,7 +127,7 @@ assertEquals(generateResponse.getValue(), retrieveResponse.getValue());
 [Github page - OneTimeSharp](https://github.com/utter-step/OneTimeSharp)
 by [Vladislav Stepanov](https://github.com/utter-step/) (added 2014-05-29)
 
-### Usage Example
+### 使用例
 
 ```csharp
 # You can use OneTimeSharp in any of your projects which are compatible with .NET (4.0+) or Mono (2.10.8+).
@@ -162,7 +162,7 @@ class Test
 [Github page - onetimesecret](https://github.com/corbaltcode/go-onetimesecret)
 by [Corbalt](https://github.com/corbaltcode/) (added 2021-12-10)
 
-### Usage Example
+### 使用例
 
 ```go
 import ots "github.com/corbaltcode/go-onetimesecret"
@@ -186,7 +186,7 @@ if err != nil {
 print(secret)
 ```
 
-### Usage Example as CLI
+### CLIとしての使用例
 
 ```bash
 $ go install github.com/corbaltcode/go-onetimesecret/cmd/ots@latest
@@ -213,7 +213,7 @@ flsdlaun6hwczqu9utmc0vts5xj9xu1
 [Github page](https://github.com/emdneto/otsgo)
 by [Emídio Neto](https://github.com/emdneto) (added 2024-06-09)
 
-### Usage Example
+### 使用例
 
 ```go
 // Build a new client
@@ -240,7 +240,7 @@ fmt.Println(response.Status)
 [Github page - OneTimeSecret](https://github.com/chelnak/OneTimeSecret)
 by [Craig Gumbley](https://www.helloitscraig.co.uk) (updated 2017-04-28)
 
-### Usage Example
+### 使用例
 
 ```powershell
 # Install from the PowerShell gallery
@@ -267,7 +267,7 @@ Get-Command -Module OneTimeSecret | Select Name
 [Github page - OneTimeSecret-bash](https://github.com/eengstrom/onetimesecret-bash)
 by [Eric Engstrom](https://eengstrom.github.io/) (updated 2018-12-19)
 
-### Usage Example as Scripting API
+### スクリプトAPIとしての使用例
 
 ```bash
 # source for use anonymously (secrets created anonymously)
@@ -314,7 +314,7 @@ ots_state $KEY
 ots_burn $KEY
 ```
 
-### Usage Example as CLI
+### CLIとしての使用例
 
 ```bash
 # Share a secret (from stdin
@@ -331,8 +331,11 @@ EOF
 # Get/Retrieve a secret:
 ./ots get <key|url>
 ./ots retrieve <key|url>
+```
 
-# Burn a secret:
+### CLIとしての使用例
+
+```bash
 $ ots burn flsdlaun6hwczqu9utmc0vts5xj9xu1
 flsdlaun6hwczqu9utmc0vts5xj9xu1
 ```

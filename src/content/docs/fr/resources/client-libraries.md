@@ -1,15 +1,15 @@
 ---
-title: Client Libraries
-description: Explore the client libraries available for the Onetime Secret API, including Ruby, Python, Perl, Java, C#, Go, and more.
+title: Bibliothèques clientes
+description: Découvrez les bibliothèques clientes disponibles pour l'API Onetime Secret, notamment Ruby, Python, Perl, Java, C#, Go et plus encore.
 ---
 
 ## Ruby
 
 
-[Github page onetime-ruby](https://github.com/onetimesecret/onetime-ruby)
-by [Delano](https://delanotes.com/) (updated 2024-06-09)
+[Page Github onetime-ruby](https://github.com/onetimesecret/onetime-ruby)
+par [Delano](https://delanotes.com/) (mis à jour le 2024-06-09)
 
-### Usage Example
+### Exemple d'utilisation
 
 ```ruby
 require 'onetime/api'
@@ -30,10 +30,10 @@ puts ret['secret_key']
 ## Python
 
 
-[Github page - onetimesecret-cli](https://github.com/slashpass/onetimesecret-cli)
-by [slashpass](https://github.com/slashpass) (added 2021-07-08)
+[Page Github - onetimesecret-cli](https://github.com/slashpass/onetimesecret-cli)
+par [slashpass](https://github.com/slashpass) (ajouté le 2021-07-08)
 
-### Usage Example
+### Exemple d'utilisation
 
 ```python
 from onetimesecret import OneTimeSecretCli
@@ -42,10 +42,10 @@ cli = OneTimeSecretCli(ONETIMESECRET_USER, ONETIMESECRET_KEY)
 cli.create_link("secret") # return a link like https://onetimesecret.com/secret/xxxxxxxxxxx
 ```
 
-[Github page - py\_onetimesecret](https://github.com/utter-step/py_onetimesecret)
-by [Vladislav Stepanov](https://github.com/utter-step/) (added 2012-06-26)
+[Page Github - py\_onetimesecret](https://github.com/utter-step/py_onetimesecret)
+par [Vladislav Stepanov](https://github.com/utter-step/) (ajouté le 2012-06-26)
 
-### Usage Example
+### Exemple d'utilisation
 
 ```python
 from onetimesecret import OneTimeSecret
@@ -63,10 +63,10 @@ print o.retrieve_secret(secret["secret_key"])
 ## Perl
 
 
-[Net::OneTimeSecret on CPAN](http://search.cpan.org/~kyled/Net-OneTimeSecret/lib/Net/OneTimeSecret.pm)
-by [Kyle Dawkins](http://www.shoffle.com/) (added 2012-01-06)
+[Net::OneTimeSecret sur CPAN](http://search.cpan.org/~kyled/Net-OneTimeSecret/lib/Net/OneTimeSecret.pm)
+par [Kyle Dawkins](http://www.shoffle.com/) (ajouté le 2012-01-06)
 
-### Usage Example
+### Exemple d'utilisation
 
 ```perl
 #!/usr/bin/env perl
@@ -94,10 +94,10 @@ printf( "%s\n", $secret->{value} );
 ## Java
 
 
-[Github page - onetime-java](https://github.com/mpawlowski/onetime-java)
-by [Marcin Pawlowski](https://github.com/mpawlowski) (added 2014-05-22)
+[Page Github - onetime-java](https://github.com/mpawlowski/onetime-java)
+par [Marcin Pawlowski](https://github.com/mpawlowski) (ajouté le 2014-05-22)
 
-### Usage Example
+### Exemple d'utilisation
 
 ```java
 OneTimeSecret ots = new OneTimeSecretRestImpl(
@@ -124,10 +124,10 @@ assertEquals(generateResponse.getValue(), retrieveResponse.getValue());
 ## C#
 
 
-[Github page - OneTimeSharp](https://github.com/utter-step/OneTimeSharp)
-by [Vladislav Stepanov](https://github.com/utter-step/) (added 2014-05-29)
+[Page Github - OneTimeSharp](https://github.com/utter-step/OneTimeSharp)
+par [Vladislav Stepanov](https://github.com/utter-step/) (ajouté le 2014-05-29)
 
-### Usage Example
+### Exemple d'utilisation
 
 ```csharp
 # You can use OneTimeSharp in any of your projects which are compatible with .NET (4.0+) or Mono (2.10.8+).
@@ -159,10 +159,10 @@ class Test
 ## Go
 
 
-[Github page - onetimesecret](https://github.com/corbaltcode/go-onetimesecret)
-by [Corbalt](https://github.com/corbaltcode/) (added 2021-12-10)
+[Page Github - onetimesecret](https://github.com/corbaltcode/go-onetimesecret)
+par [Corbalt](https://github.com/corbaltcode/) (ajouté le 2021-12-10)
 
-### Usage Example
+### Exemple d'utilisation
 
 ```go
 import ots "github.com/corbaltcode/go-onetimesecret"
@@ -186,7 +186,7 @@ if err != nil {
 print(secret)
 ```
 
-### Usage Example as CLI
+### Exemple d'utilisation en CLI
 
 ```bash
 $ go install github.com/corbaltcode/go-onetimesecret/cmd/ots@latest
@@ -210,10 +210,10 @@ flsdlaun6hwczqu9utmc0vts5xj9xu1
 ## Go (lib)
 
 
-[Github page](https://github.com/emdneto/otsgo)
-by [Emídio Neto](https://github.com/emdneto) (added 2024-06-09)
+[Page Github](https://github.com/emdneto/otsgo)
+par [Emídio Neto](https://github.com/emdneto) (ajouté le 2024-06-09)
 
-### Usage Example
+### Exemple d'utilisation
 
 ```go
 // Build a new client
@@ -237,10 +237,10 @@ fmt.Println(response.Status)
 ## PowerShell
 
 
-[Github page - OneTimeSecret](https://github.com/chelnak/OneTimeSecret)
-by [Craig Gumbley](https://www.helloitscraig.co.uk) (updated 2017-04-28)
+[Page Github - OneTimeSecret](https://github.com/chelnak/OneTimeSecret)
+par [Craig Gumbley](https://www.helloitscraig.co.uk) (mis à jour le 2017-04-28)
 
-### Usage Example
+### Exemple d'utilisation
 
 ```powershell
 # Install from the PowerShell gallery
@@ -264,10 +264,10 @@ Get-Command -Module OneTimeSecret | Select Name
 ## Bash
 
 
-[Github page - OneTimeSecret-bash](https://github.com/eengstrom/onetimesecret-bash)
-by [Eric Engstrom](https://eengstrom.github.io/) (updated 2018-12-19)
+[Page Github - OneTimeSecret-bash](https://github.com/eengstrom/onetimesecret-bash)
+par [Eric Engstrom](https://eengstrom.github.io/) (mis à jour le 2018-12-19)
 
-### Usage Example as Scripting API
+### Exemple d'utilisation comme API de script
 
 ```bash
 # source for use anonymously (secrets created anonymously)
@@ -314,7 +314,7 @@ ots_state $KEY
 ots_burn $KEY
 ```
 
-### Usage Example as CLI
+### Exemple d'utilisation en CLI
 
 ```bash
 # Share a secret (from stdin
