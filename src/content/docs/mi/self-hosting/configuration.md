@@ -27,7 +27,7 @@ Ko te kōnae whirihoranga matua ko `config/config.yaml`, e whakamahi ana i ngā 
 3. Ko te nuinga o ngā tautuhinga noa ka taea te whakahē mā ngā tāhuatanga taiao
 
 **Tirohia te kōnae whirihoranga katoa:**
-[config.example.yaml](https://raw.githubusercontent.com/onetimesecret/onetimesecret/refs/tags/v0.22.4/etc/config.example.yaml)
+[config.example.yaml](https://raw.githubusercontent.com/onetimesecret/onetimesecret/main/etc/config.example.yaml)
 
 ### Ngā Wāhanga Whirihoranga Matua
 

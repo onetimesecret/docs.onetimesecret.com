@@ -27,7 +27,7 @@ Onetime Secret 使用多个配置文件：
 3. 大多数常用设置可以使用环境变量覆盖
 
 **查看完整的配置文件：**
-[config.example.yaml](https://raw.githubusercontent.com/onetimesecret/onetimesecret/refs/tags/v0.22.4/etc/config.example.yaml)
+[config.example.yaml](https://raw.githubusercontent.com/onetimesecret/onetimesecret/main/etc/config.example.yaml)
 
 ### 关键配置部分
 

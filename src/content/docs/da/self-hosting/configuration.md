@@ -27,7 +27,7 @@ Vigtige områder at tilpasse:
 - **Sikkerhedsindstillinger**: Rate limiting, sessioner
 - **E-mailkonfiguration**: SMTP-indstillinger
 
-Se den [komplette konfigurationsfil](https://raw.githubusercontent.com/onetimesecret/onetimesecret/refs/tags/v0.22.4/etc/config.example.yaml) på GitHub.
+Se den [komplette konfigurationsfil](https://raw.githubusercontent.com/onetimesecret/onetimesecret/main/etc/config.example.yaml) på GitHub.
 
 ## Kom i gang
 

@@ -27,7 +27,7 @@ Ana yapılandırma dosyası `config/config.yaml`'dır ve ortam değişkenlerini 
 3. En yaygın ayarların çoğu ortam değişkenleriyle geçersiz kılınabilir
 
 **Eksiksiz yapılandırma dosyasını görüntüle:**
-[config.example.yaml](https://raw.githubusercontent.com/onetimesecret/onetimesecret/refs/tags/v0.22.4/etc/config.example.yaml)
+[config.example.yaml](https://raw.githubusercontent.com/onetimesecret/onetimesecret/main/etc/config.example.yaml)
 
 ### Temel Yapılandırma Bölümleri
 
@@ -199,4 +199,4 @@ Büyük olasılıkla özelleştirmeniz gereken en önemli bölümler şunlardır
     :stripe_key: <%= ENV['STRIPE_KEY'] || nil %>
 ```
 
-Yapılandırmanın geri kalanı için lütfen [config.example.yaml](https://raw.githubusercontent.com/onetimesecret/onetimesecret/refs/tags/v0.22.4/etc/config.example.yaml) dosyasına bakın.
+Yapılandırmanın geri kalanı için lütfen [config.example.yaml](https://raw.githubusercontent.com/onetimesecret/onetimesecret/main/etc/config.example.yaml) dosyasına bakın.

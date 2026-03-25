@@ -20,9 +20,8 @@ Onetime Secret 문서에 오신 것을 환영합니다. 시작하기, 통합 또
 
 ## API와 통합하기
 
-- **[REST API](/ko/rest-api/)** — 인증, 리전 및 엔드포인트
-- **[API v2](/ko/rest-api/v2/)** — 최신 API 버전
-- **[클라이언트 라이브러리](/ko/rest-api/v1/client-libraries/)** — SDK 및 커뮤니티 통합
+- **[REST API 문서](https://api.onetimesecret.com)** — 전체 API 레퍼런스 (v1, v2, v3)
+- **[클라이언트 라이브러리](/en/resources/client-libraries/)** — 커뮤니티 SDK 및 통합
 
 ## 자체 인스턴스 운영하기
 

@@ -27,7 +27,7 @@ The main configuration file is `config/config.yaml`, which uses ERB templates to
 3. Most common settings can be overridden with environment variables
 
 **View the complete configuration file:**
-[config.example.yaml](https://raw.githubusercontent.com/onetimesecret/onetimesecret/refs/tags/v0.22.4/etc/config.example.yaml)
+[config.example.yaml](https://raw.githubusercontent.com/onetimesecret/onetimesecret/main/etc/config.example.yaml)
 
 ### Key Configuration Sections
 

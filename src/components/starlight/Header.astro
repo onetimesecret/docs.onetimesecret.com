@@ -17,7 +17,7 @@ const shouldRenderSearch =
 const currentLocale = Astro.currentLocale ?? 'en';
 const docsHome = getRelativeLocaleUrl(currentLocale, '/');
 const guidesLink = getRelativeLocaleUrl(currentLocale, 'introduction/guides');
-const apiLink = getRelativeLocaleUrl(currentLocale, 'rest-api');
+const apiLink = 'https://api.onetimesecret.com';
 const selfHostingLink = getRelativeLocaleUrl(currentLocale, 'self-hosting');
 const blogLink = 'https://blog.onetimesecret.com/';
 
@@ -32,7 +32,7 @@ const blogLink = 'https://blog.onetimesecret.com/';
 		{shouldRenderSearch && <Search />}
     <nav class="nav-links">
       <a href={guidesLink} aria-label={Astro.locals.t('nav.ariaLabel.guides')}>{Astro.locals.t('nav.label.guides')}</a>
-      <a href={apiLink} aria-label={Astro.locals.t('nav.ariaLabel.apiReference')}>{Astro.locals.t('nav.label.rest-api')}</a>
+      <a href={apiLink} target="_blank" rel="noopener noreferrer" aria-label={Astro.locals.t('nav.ariaLabel.apiReference')}>{Astro.locals.t('nav.label.rest-api')}</a>
       <a href={selfHostingLink} aria-label={Astro.locals.t('nav.ariaLabel.selfHosting')}>{Astro.locals.t('nav.label.self-hosting')}</a>
       <a href={blogLink} target="_blank" rel="noopener noreferrer" aria-label={Astro.locals.t('nav.ariaLabel.blog')}>{Astro.locals.t('nav.label.blog')}</a>
     </nav>
