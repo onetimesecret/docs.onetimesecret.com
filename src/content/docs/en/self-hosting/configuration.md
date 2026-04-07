@@ -14,15 +14,15 @@ Onetime Secret uses multiple configuration files:
 
 
 - **`.env`** - Environment variables for common settings. Use for simple configuration and Docker deployments without modifying YAML files. (Copy from `.env.example`)
-- **`config/config.yaml`** - Main application configuration using ERB templates. Environment variables are integrated here, making it easy to see how each setting is applied. (Copy from `etc/config.example.yaml`)
+- **`etc/config.yaml`** - Main application configuration using ERB templates. Environment variables are integrated here, making it easy to see how each setting is applied. (Copy from `etc/config.example.yaml`)
 
 
 ## Main Configuration
 
-The main configuration file is `config/config.yaml`, which uses ERB templates to integrate environment variables.
+The main configuration file is `etc/config.yaml`, which uses ERB templates to integrate environment variables.
 
 **Getting started:**
-1. Copy the example: `cp etc/config.example.yaml config/config.yaml`
+1. Copy the example: `cp etc/config.example.yaml etc/config.yaml`
 2. Edit values as needed for your deployment
 3. Most common settings can be overridden with environment variables
 

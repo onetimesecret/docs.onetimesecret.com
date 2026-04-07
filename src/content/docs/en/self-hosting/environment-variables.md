@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-This guide covers all environment variables available in Onetime Secret v0.22.4+.
+This guide covers all environment variables available in Onetime Secret v0.24+.
 
 
 ## Environment Variables
@@ -38,10 +38,13 @@ AUTH_ENABLED=true                     # Enable authentication system (disables A
 AUTH_SIGNUP=true                      # Allow new user registration
 AUTH_SIGNIN=true                      # Allow existing users to sign in
 AUTH_AUTOVERIFY=false                 # Skip email verification for new accounts
-COLONEL=email@example.com             # Admin email addresses granted "colonel" privileges (comma-separated)
+AUTHENTICATION_MODE=local             # Authentication mode: local, database
+AUTH_DATABASE_URL=                     # Database URL for auth when using database mode
+FEDERATION_SECRET=                    # Secret key for federation between instances
+VALKEY_URL=valkey://localhost:6379/0  # Valkey connection string (alternative to REDIS_URL)
 ```
 
-**Note**: "Colonel" is our term for "admin" users. Colonels can access the admin area at `/colonel` which shows basic system stats. The admin interface currently has limited functionality - no user management and only readonly configuration viewing.
+**Note**: "Colonel" is our term for "admin" users. Colonel email addresses are configured in the `etc/config.yaml` file under `:colonels:`. Colonels can access the admin area at `/colonel` which shows basic system stats.
 
 ### User Interface & Features
 
@@ -111,7 +114,7 @@ VERIFIER_DOMAIN=                     # Domain for SMTP verification (required fo
 VERIFIER_EMAIL=                      # Email address for SMTP verification (required for SMTP validation)
 ```
 
-**Note**: Many additional Truemail configuration options are available in the YAML config under the `truemail:` section, including validation types, timeout settings, allowed/blocked domains, DNS servers, and more. See `config/config.yaml` for the full configuration.
+**Note**: Many additional Truemail configuration options are available in the YAML config under the `truemail:` section, including validation types, timeout settings, allowed/blocked domains, DNS servers, and more. See `etc/config.yaml` for the full configuration.
 
 ### Internationalization
 

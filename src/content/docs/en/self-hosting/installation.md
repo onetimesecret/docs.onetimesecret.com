@@ -73,36 +73,58 @@ For environments requiring custom configurations or existing infrastructure.
 
 #### Installing Dependencies
 
-**Ubuntu 22.04 LTS:**
+:::caution[System Ruby is too old]
+Default system packages on most Linux distributions provide Ruby 3.1 or older, which is **not sufficient**. Onetime Secret requires **Ruby 3.4+**. Use a version manager like [rbenv](https://github.com/rbenv/rbenv) or [mise](https://mise.jdx.dev/) to install the correct version.
+:::
+
+**Ubuntu/Debian:**
 ```bash
 # Update system
 sudo apt update && sudo apt upgrade -y
 
-# Install Ruby and build tools
-sudo apt install -y ruby ruby-dev build-essential git
-sudo gem install bundler
+# Install build tools and dependencies
+sudo apt install -y build-essential git libssl-dev libreadline-dev zlib1g-dev
 
-# Install Redis
+# Install rbenv and ruby-build
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+echo 'eval "$(~/.rbenv/bin/rbenv init - bash)"' >> ~/.bashrc
+source ~/.bashrc
+git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
+
+# Install Ruby 3.4+ (check .ruby-version in the repo for exact version)
+rbenv install 3.4.8
+rbenv global 3.4.8
+gem install bundler
+
+# Install Redis/Valkey
 sudo apt install -y redis-server
 sudo systemctl enable redis-server
 sudo systemctl start redis-server
 
-# Install Node.js (for development and building frontend assets)
+# Install Node.js (for building frontend assets)
 curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
 sudo apt install -y nodejs
 sudo npm install -g pnpm@latest
 ```
 
-**CentOS/RHEL 8:**
+**CentOS/RHEL:**
 ```bash
 # Enable PowerTools/CodeReady repository
 sudo dnf install -y dnf-plugins-core
 sudo dnf config-manager --set-enabled powertools
 
-# Install Ruby and development tools
+# Install development tools
 sudo dnf groupinstall -y "Development Tools"
-sudo dnf install -y ruby ruby-devel git
-sudo gem install bundler
+sudo dnf install -y git openssl-devel readline-devel zlib-devel
+
+# Install rbenv and Ruby 3.4+ (same steps as above)
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+echo 'eval "$(~/.rbenv/bin/rbenv init - bash)"' >> ~/.bashrc
+source ~/.bashrc
+git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
+rbenv install 3.4.8
+rbenv global 3.4.8
+gem install bundler
 
 # Install Redis
 sudo dnf install -y redis
@@ -123,8 +145,11 @@ sudo su - onetime
 git clone https://github.com/onetimesecret/onetimesecret.git
 cd onetimesecret
 
-# Install dependencies
-bundle install --deployment --without development test
+# Run the initialization script
+./install.sh init
+
+# Install Ruby dependencies
+bundle install --without development test
 
 # Copy and configure environment
 cp .env.example .env
@@ -132,6 +157,45 @@ cp ./etc/config.example.yaml ./etc/config.yaml
 
 # Create commit hash for version tracking
 git rev-parse --short HEAD > .commit_hash.txt
+```
+
+#### Starting the Application
+
+```bash
+# Source environment variables
+source .env.sh
+
+# Start the application
+bundle exec thin -R config.ru -p 3000 start
+```
+
+#### Systemd Service (Production)
+
+Create a systemd service for automatic startup and management:
+
+```ini
+# /etc/systemd/system/onetime.service
+[Unit]
+Description=Onetime Secret
+After=network.target redis-server.service
+
+[Service]
+Type=simple
+User=onetime
+WorkingDirectory=/home/onetime/onetimesecret
+ExecStart=/bin/bash -lc 'source .env.sh && bundle exec thin -R config.ru -p 3000 start'
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+```
+
+```bash
+# Enable and start the service
+sudo systemctl daemon-reload
+sudo systemctl enable onetime
+sudo systemctl start onetime
 ```
 
 ## Reverse Proxy Configuration
