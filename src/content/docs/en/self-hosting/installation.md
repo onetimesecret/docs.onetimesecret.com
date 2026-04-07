@@ -164,7 +164,7 @@ git rev-parse --short HEAD > .commit_hash.txt
 **Using the Procfile runner (simplest):**
 ```bash
 source .env.sh
-foreman start -f Procfile.production
+bundle exec foreman start -f Procfile.production
 ```
 
 **Direct Puma:**
@@ -185,9 +185,9 @@ The repository includes example systemd unit files for all processes:
 # Copy the provided service files
 sudo cp etc/examples/systemd/onetimesecret-*.service /etc/systemd/system/
 
-# Enable and start the web service
+# Enable and start all services (web, worker, scheduler)
 sudo systemctl daemon-reload
-sudo systemctl enable --now onetimesecret-web
+sudo systemctl enable --now onetimesecret-web onetimesecret-worker onetimesecret-scheduler
 ```
 
 ## Reverse Proxy Configuration

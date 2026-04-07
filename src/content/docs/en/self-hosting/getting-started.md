@@ -62,6 +62,7 @@ After cloning the repository, run the initialization script and build frontend a
 
 ```bash
 ./install.sh init
+cp .env.example .env
 pnpm install && pnpm run build:local
 ```
 
@@ -76,7 +77,7 @@ Or using the Procfile runner:
 
 ```bash
 source .env.sh
-foreman start -f Procfile.production
+bundle exec foreman start -f Procfile.production
 ```
 
 See [INSTALL.md](https://github.com/onetimesecret/onetimesecret/blob/main/INSTALL.md) for complete manual installation details.
