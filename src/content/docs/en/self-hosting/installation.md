@@ -161,41 +161,33 @@ git rev-parse --short HEAD > .commit_hash.txt
 
 #### Starting the Application
 
+**Using the Procfile runner (simplest):**
 ```bash
-# Source environment variables
 source .env.sh
-
-# Start the application
-bundle exec thin -R config.ru -p 3000 start
+foreman start -f Procfile.production
 ```
+
+**Direct Puma:**
+```bash
+source .env.sh
+bundle exec puma -C etc/puma.rb
+```
+
+:::note[Separate processes in v0.24+]
+Thin is no longer used — Puma is the only web server, configured via `etc/puma.rb`. Workers and scheduler run as separate processes (`bin/ots worker`, `bin/ots scheduler`) rather than threads in the web process.
+:::
 
 #### Systemd Service (Production)
 
-Create a systemd service for automatic startup and management:
-
-```ini
-# /etc/systemd/system/onetime.service
-[Unit]
-Description=Onetime Secret
-After=network.target redis-server.service
-
-[Service]
-Type=simple
-User=onetime
-WorkingDirectory=/home/onetime/onetimesecret
-ExecStart=/bin/bash -lc 'source .env.sh && bundle exec thin -R config.ru -p 3000 start'
-Restart=on-failure
-RestartSec=5
-
-[Install]
-WantedBy=multi-user.target
-```
+The repository includes example systemd unit files for all processes:
 
 ```bash
-# Enable and start the service
+# Copy the provided service files
+sudo cp etc/examples/systemd/onetimesecret-*.service /etc/systemd/system/
+
+# Enable and start the web service
 sudo systemctl daemon-reload
-sudo systemctl enable onetime
-sudo systemctl start onetime
+sudo systemctl enable --now onetimesecret-web
 ```
 
 ## Reverse Proxy Configuration

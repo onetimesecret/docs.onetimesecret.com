@@ -69,7 +69,14 @@ To start the application:
 
 ```bash
 source .env.sh
-bundle exec thin -R config.ru -p 3000 start
+bundle exec puma -C etc/puma.rb
+```
+
+Or using the Procfile runner:
+
+```bash
+source .env.sh
+foreman start -f Procfile.production
 ```
 
 See [INSTALL.md](https://github.com/onetimesecret/onetimesecret/blob/main/INSTALL.md) for complete manual installation details.
