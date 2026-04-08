@@ -44,7 +44,7 @@ FEDERATION_SECRET=                    # Secret key for federation between instan
 VALKEY_URL=valkey://localhost:6379/0  # Valkey connection string (alternative to REDIS_URL)
 ```
 
-**Note**: "Colonel" is our term for "admin" users. Colonel email addresses are configured in the `etc/config.yaml` file under `:colonels:`. Colonels can access the admin area at `/colonel` which shows basic system stats.
+**Note**: "Colonel" is our term for "admin" users. Colonel accounts are created using `bin/ots customer create email@example.com && bin/ots customer promote email@example.com`. Colonels can access the admin area at `/colonel` which shows basic system stats. The admin interface currently has limited functionality - no user management and only readonly configuration viewing.
 
 ### User Interface & Features
 
