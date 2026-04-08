@@ -169,6 +169,9 @@ bundle exec foreman start -f Procfile.production
 
 **Direct Puma:**
 ```bash
+# Copy the example config (can be used verbatim — the OCI image uses it unmodified)
+cp etc/examples/puma.example.rb etc/puma.rb
+
 source .env.sh  # exports .env vars into the current shell
 bundle exec puma -C etc/puma.rb
 ```
