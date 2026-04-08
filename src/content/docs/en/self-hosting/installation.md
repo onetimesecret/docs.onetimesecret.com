@@ -174,7 +174,7 @@ bundle exec puma -C etc/puma.rb
 ```
 
 :::note[Separate processes in v0.24+]
-Thin is no longer used — Puma is the only web server, configured via `etc/puma.rb`. Workers and scheduler run as separate processes (`bin/ots worker`, `bin/ots scheduler`) rather than threads in the web process.
+Thin is no longer used — Puma is the only web server, configured via `etc/puma.rb`. Workers and scheduler run as separate processes (`bin/ots worker`, `bin/ots scheduler`) rather than threads in the web process. In simple mode (`AUTHENTICATION_MODE=simple`), only the web process is needed. The worker and scheduler are required for full authentication mode (PostgreSQL + RabbitMQ).
 :::
 
 #### Systemd Service (Production)
@@ -185,9 +185,13 @@ The repository includes example systemd unit files for all processes:
 # Copy the provided service files
 sudo cp etc/examples/systemd/onetimesecret-*.service /etc/systemd/system/
 
-# Enable and start all services (web, worker, scheduler)
+# Enable and start all services
 sudo systemctl daemon-reload
-sudo systemctl enable --now onetimesecret-web onetimesecret-worker onetimesecret-scheduler
+sudo systemctl enable --now onetimesecret-web
+
+# Worker and scheduler are only needed for full authentication mode
+# (AUTHENTICATION_MODE=full with PostgreSQL + RabbitMQ)
+sudo systemctl enable --now onetimesecret-worker onetimesecret-scheduler
 ```
 
 ## Reverse Proxy Configuration
