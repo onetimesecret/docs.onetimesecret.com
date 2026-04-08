@@ -163,13 +163,13 @@ git rev-parse --short HEAD > .commit_hash.txt
 
 **Using the Procfile runner (simplest):**
 ```bash
-source .env.sh  # loads .env into the current shell
+source .env.sh  # exports .env vars into the current shell
 bundle exec foreman start -f Procfile.production
 ```
 
 **Direct Puma:**
 ```bash
-source .env.sh  # loads .env into the current shell
+source .env.sh  # exports .env vars into the current shell
 bundle exec puma -C etc/puma.rb
 ```
 
