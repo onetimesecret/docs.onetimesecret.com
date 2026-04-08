@@ -91,9 +91,9 @@ echo 'eval "$(~/.rbenv/bin/rbenv init - bash)"' >> ~/.bashrc
 source ~/.bashrc
 git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
 
-# Install Ruby 3.4+ (check .ruby-version in the repo for exact version)
-rbenv install 3.4.8
-rbenv global 3.4.8
+# Install Ruby 3.4+ (check the Gemfile for the minimum version)
+rbenv install 3.4
+rbenv global 3.4
 gem install bundler
 
 # Install Redis/Valkey
@@ -122,8 +122,8 @@ git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 echo 'eval "$(~/.rbenv/bin/rbenv init - bash)"' >> ~/.bashrc
 source ~/.bashrc
 git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
-rbenv install 3.4.8
-rbenv global 3.4.8
+rbenv install 3.4
+rbenv global 3.4
 gem install bundler
 
 # Install Redis
@@ -163,13 +163,13 @@ git rev-parse --short HEAD > .commit_hash.txt
 
 **Using the Procfile runner (simplest):**
 ```bash
-source .env.sh
+source .env.sh  # loads .env into the current shell
 bundle exec foreman start -f Procfile.production
 ```
 
 **Direct Puma:**
 ```bash
-source .env.sh
+source .env.sh  # loads .env into the current shell
 bundle exec puma -C etc/puma.rb
 ```
 

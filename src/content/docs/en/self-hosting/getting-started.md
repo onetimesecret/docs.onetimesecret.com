@@ -69,14 +69,14 @@ pnpm install && pnpm run build:local
 To start the application:
 
 ```bash
-source .env.sh
+source .env.sh  # loads .env into the current shell
 bundle exec puma -C etc/puma.rb
 ```
 
 Or using the Procfile runner:
 
 ```bash
-source .env.sh
+source .env.sh  # loads .env into the current shell
 bundle exec foreman start -f Procfile.production
 ```
 
