@@ -73,36 +73,58 @@ For environments requiring custom configurations or existing infrastructure.
 
 #### Installing Dependencies
 
-**Ubuntu 22.04 LTS:**
+:::caution[System Ruby is too old]
+Default system packages on most Linux distributions provide Ruby 3.1 or older, which is **not sufficient**. Onetime Secret requires **Ruby 3.4+**. Use a version manager like [rbenv](https://github.com/rbenv/rbenv) or [mise](https://mise.jdx.dev/) to install the correct version.
+:::
+
+**Ubuntu/Debian:**
 ```bash
 # Update system
 sudo apt update && sudo apt upgrade -y
 
-# Install Ruby and build tools
-sudo apt install -y ruby ruby-dev build-essential git
-sudo gem install bundler
+# Install build tools and dependencies
+sudo apt install -y build-essential git libssl-dev libreadline-dev zlib1g-dev
 
-# Install Redis
+# Install rbenv and ruby-build
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+echo 'eval "$(~/.rbenv/bin/rbenv init - bash)"' >> ~/.bashrc
+source ~/.bashrc
+git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
+
+# Install Ruby 3.4+ (check the Gemfile for the minimum version)
+rbenv install 3.4
+rbenv global 3.4
+gem install bundler
+
+# Install Redis/Valkey
 sudo apt install -y redis-server
 sudo systemctl enable redis-server
 sudo systemctl start redis-server
 
-# Install Node.js (for development and building frontend assets)
+# Install Node.js (for building frontend assets)
 curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
 sudo apt install -y nodejs
 sudo npm install -g pnpm@latest
 ```
 
-**CentOS/RHEL 8:**
+**CentOS/RHEL:**
 ```bash
 # Enable PowerTools/CodeReady repository
 sudo dnf install -y dnf-plugins-core
 sudo dnf config-manager --set-enabled powertools
 
-# Install Ruby and development tools
+# Install development tools
 sudo dnf groupinstall -y "Development Tools"
-sudo dnf install -y ruby ruby-devel git
-sudo gem install bundler
+sudo dnf install -y git openssl-devel readline-devel zlib-devel
+
+# Install rbenv and Ruby 3.4+ (same steps as above)
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+echo 'eval "$(~/.rbenv/bin/rbenv init - bash)"' >> ~/.bashrc
+source ~/.bashrc
+git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
+rbenv install 3.4
+rbenv global 3.4
+gem install bundler
 
 # Install Redis
 sudo dnf install -y redis
@@ -123,8 +145,11 @@ sudo su - onetime
 git clone https://github.com/onetimesecret/onetimesecret.git
 cd onetimesecret
 
-# Install dependencies
-bundle install --deployment --without development test
+# Run the initialization script
+./install.sh init
+
+# Install Ruby dependencies
+bundle install --without development test
 
 # Copy and configure environment
 cp .env.example .env
@@ -132,6 +157,44 @@ cp ./etc/config.example.yaml ./etc/config.yaml
 
 # Create commit hash for version tracking
 git rev-parse --short HEAD > .commit_hash.txt
+```
+
+#### Starting the Application
+
+**Using the Procfile runner (simplest):**
+```bash
+source .env.sh  # exports .env vars into the current shell
+bundle exec foreman start -f Procfile.production
+```
+
+**Direct Puma:**
+```bash
+# Copy the example config (can be used verbatim — the OCI image uses it unmodified)
+cp etc/examples/puma.example.rb etc/puma.rb
+
+source .env.sh  # exports .env vars into the current shell
+bundle exec puma -C etc/puma.rb
+```
+
+:::note[Separate processes in v0.24+]
+Thin is no longer used — Puma is the only web server, configured via `etc/puma.rb`. Workers and scheduler run as separate processes (`bin/ots worker`, `bin/ots scheduler`) rather than threads in the web process. In simple mode (`AUTHENTICATION_MODE=simple`), only the web process is needed. The worker and scheduler are required for full authentication mode (PostgreSQL + RabbitMQ).
+:::
+
+#### Systemd Service (Production)
+
+The repository includes example systemd unit files for all processes:
+
+```bash
+# Copy the provided service files
+sudo cp etc/examples/systemd/onetimesecret-*.service /etc/systemd/system/
+
+# Enable and start all services
+sudo systemctl daemon-reload
+sudo systemctl enable --now onetimesecret-web
+
+# Worker and scheduler are only needed for full authentication mode
+# (AUTHENTICATION_MODE=full with PostgreSQL + RabbitMQ)
+sudo systemctl enable --now onetimesecret-worker onetimesecret-scheduler
 ```
 
 ## Reverse Proxy Configuration

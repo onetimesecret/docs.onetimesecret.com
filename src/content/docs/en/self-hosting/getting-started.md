@@ -54,11 +54,31 @@ Open your browser to:
 
 For those who prefer manual setup, you'll need:
 
-- **Ruby 3.2+** (may not be available in default system packages)
+- **Ruby 3.4+** (not available in default system packages — use [rbenv](https://github.com/rbenv/rbenv) or [mise](https://mise.jdx.dev/) to install)
 - **Redis 5+** or **Valkey** (Redis alternative)
 - **Node.js 22+** and **pnpm** (only required for development and building frontend assets)
 
-You'll need to build the frontend assets with `pnpm install && pnpm run build:local` before running the application.
+After cloning the repository, run the initialization script and build frontend assets:
+
+```bash
+./install.sh init
+cp .env.example .env
+pnpm install && pnpm run build:local
+```
+
+To start the application:
+
+```bash
+source .env.sh  # exports .env vars into the current shell
+bundle exec puma -C etc/puma.rb
+```
+
+Or using the Procfile runner:
+
+```bash
+source .env.sh  # exports .env vars into the current shell
+bundle exec foreman start -f Procfile.production
+```
 
 See [INSTALL.md](https://github.com/onetimesecret/onetimesecret/blob/main/INSTALL.md) for complete manual installation details.
 
