@@ -44,7 +44,7 @@ Esta página documenta as variáveis de ambiente disponíveis para configurar su
 Para uma lista completa de variáveis de ambiente e opções de configuração avançadas, consulte:
 
 - [Documentação do GitHub](https://github.com/onetimesecret/onetimesecret/tree/main/docs)
-- [Arquivo de configuração de exemplo](https://github.com/onetimesecret/onetimesecret/blob/main/etc/config.example.yaml)
+- [Arquivo de configuração de exemplo](https://github.com/onetimesecret/onetimesecret/blob/main/etc/defaults/config.defaults.yaml)
 
 ## Suporte
 

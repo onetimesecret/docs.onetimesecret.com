@@ -128,7 +128,7 @@ bundle install --deployment --without development test
 
 # Tārua me te whirihora taiao
 cp .env.example .env
-cp ./etc/config.example.yaml ./etc/config.yaml
+cp ./etc/defaults/config.defaults.yaml ./etc/config.yaml
 
 # Waihangahia te hash tāmua mō te aroturuki putanga
 git rev-parse --short HEAD > .commit_hash.txt

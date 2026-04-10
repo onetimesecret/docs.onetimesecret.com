@@ -128,7 +128,7 @@ bundle install --deployment --without development test
 
 # Ortamı kopyala ve yapılandır
 cp .env.example .env
-cp ./etc/config.example.yaml ./etc/config.yaml
+cp ./etc/defaults/config.defaults.yaml ./etc/config.yaml
 
 # Sürüm takibi için commit hash oluştur
 git rev-parse --short HEAD > .commit_hash.txt

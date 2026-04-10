@@ -128,7 +128,7 @@ bundle install --deployment --without development test
 
 # Kopiera och konfigurera miljö
 cp .env.example .env
-cp ./etc/config.example.yaml ./etc/config.yaml
+cp ./etc/defaults/config.defaults.yaml ./etc/config.yaml
 
 # Skapa commit hash för versionsspårning
 git rev-parse --short HEAD > .commit_hash.txt

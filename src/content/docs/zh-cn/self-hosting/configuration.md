@@ -14,7 +14,7 @@ Onetime Secret 使用多个配置文件：
 
 
 - **`.env`** - 常用设置的环境变量。用于简单配置和 Docker 部署，无需修改 YAML 文件。（从 `.env.example` 复制）
-- **`config/config.yaml`** - 使用 ERB 模板的主应用程序配置。环境变量在此处集成，便于查看每个设置的应用方式。（从 `etc/config.example.yaml` 复制）
+- **`config/config.yaml`** - 使用 ERB 模板的主应用程序配置。环境变量在此处集成，便于查看每个设置的应用方式。（从 `etc/defaults/config.defaults.yaml` 复制）
 
 
 ## 主配置
@@ -22,12 +22,12 @@ Onetime Secret 使用多个配置文件：
 主配置文件是 `config/config.yaml`，它使用 ERB 模板集成环境变量。
 
 **入门：**
-1. 复制示例：`cp etc/config.example.yaml config/config.yaml`
+1. 复制示例：`cp etc/defaults/config.defaults.yaml config/config.yaml`
 2. 根据您的部署需要编辑值
 3. 大多数常用设置可以使用环境变量覆盖
 
 **查看完整的配置文件：**
-[config.example.yaml](https://raw.githubusercontent.com/onetimesecret/onetimesecret/main/etc/config.example.yaml)
+[config.defaults.yaml](https://raw.githubusercontent.com/onetimesecret/onetimesecret/main/etc/defaults/config.defaults.yaml)
 
 ### 关键配置部分
 
