@@ -14,7 +14,7 @@ Onetime Secret birden fazla yapılandırma dosyası kullanır:
 
 
 - **`.env`** - Yaygın ayarlar için ortam değişkenleri. YAML dosyalarını değiştirmeden basit yapılandırma ve Docker dağıtımları için kullanın. (`.env.example`'dan kopyalayın)
-- **`config/config.yaml`** - ERB şablonlarını kullanarak ana uygulama yapılandırması. Ortam değişkenleri burada entegre edilir, böylece her ayarın nasıl uygulandığını görmek kolaydır. (`etc/config.example.yaml`'dan kopyalayın)
+- **`config/config.yaml`** - ERB şablonlarını kullanarak ana uygulama yapılandırması. Ortam değişkenleri burada entegre edilir, böylece her ayarın nasıl uygulandığını görmek kolaydır. (`etc/defaults/config.defaults.yaml`'dan kopyalayın)
 
 
 ## Ana Yapılandırma
@@ -22,12 +22,12 @@ Onetime Secret birden fazla yapılandırma dosyası kullanır:
 Ana yapılandırma dosyası `config/config.yaml`'dır ve ortam değişkenlerini entegre etmek için ERB şablonlarını kullanır.
 
 **Başlarken:**
-1. Örneği kopyalayın: `cp etc/config.example.yaml config/config.yaml`
+1. Örneği kopyalayın: `cp etc/defaults/config.defaults.yaml config/config.yaml`
 2. Dağıtımınız için gerektiği gibi değerleri düzenleyin
 3. En yaygın ayarların çoğu ortam değişkenleriyle geçersiz kılınabilir
 
 **Eksiksiz yapılandırma dosyasını görüntüle:**
-[config.example.yaml](https://raw.githubusercontent.com/onetimesecret/onetimesecret/main/etc/config.example.yaml)
+[config.defaults.yaml](https://raw.githubusercontent.com/onetimesecret/onetimesecret/main/etc/defaults/config.defaults.yaml)
 
 ### Temel Yapılandırma Bölümleri
 
@@ -199,4 +199,4 @@ Büyük olasılıkla özelleştirmeniz gereken en önemli bölümler şunlardır
     :stripe_key: <%= ENV['STRIPE_KEY'] || nil %>
 ```
 
-Yapılandırmanın geri kalanı için lütfen [config.example.yaml](https://raw.githubusercontent.com/onetimesecret/onetimesecret/main/etc/config.example.yaml) dosyasına bakın.
+Yapılandırmanın geri kalanı için lütfen [config.defaults.yaml](https://raw.githubusercontent.com/onetimesecret/onetimesecret/main/etc/defaults/config.defaults.yaml) dosyasına bakın.

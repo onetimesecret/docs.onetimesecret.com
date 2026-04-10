@@ -14,7 +14,7 @@ Ka whakamahi a Onetime Secret i ngā kōnae whirihoranga maha:
 
 
 - **`.env`** - Ngā tāhuatanga taiao mō ngā tautuhinga noa. Whakamahia mō te whirihoranga māmā me ngā whakatakoto Docker me te kore whakarerekē i ngā kōnae YAML. (Tārua mai i `.env.example`)
-- **`config/config.yaml`** - Ko te whirihoranga papatono matua e whakamahi ana i ngā tauira ERB. Ka whakaurunga ngā tāhuatanga taiao ki konei, e māmā ai te kite me pēhea te whakamahi i ia tautuhinga. (Tārua mai i `etc/config.example.yaml`)
+- **`config/config.yaml`** - Ko te whirihoranga papatono matua e whakamahi ana i ngā tauira ERB. Ka whakaurunga ngā tāhuatanga taiao ki konei, e māmā ai te kite me pēhea te whakamahi i ia tautuhinga. (Tārua mai i `etc/defaults/config.defaults.yaml`)
 
 
 ## Whirihoranga Matua
@@ -22,12 +22,12 @@ Ka whakamahi a Onetime Secret i ngā kōnae whirihoranga maha:
 Ko te kōnae whirihoranga matua ko `config/config.yaml`, e whakamahi ana i ngā tauira ERB ki te whakaurunga i ngā tāhuatanga taiao.
 
 **Tīmatanga:**
-1. Tārua te tauira: `cp etc/config.example.yaml config/config.yaml`
+1. Tārua te tauira: `cp etc/defaults/config.defaults.yaml config/config.yaml`
 2. Whakatika i ngā uara e hiahia ana mō tō whakatakoto
 3. Ko te nuinga o ngā tautuhinga noa ka taea te whakahē mā ngā tāhuatanga taiao
 
 **Tirohia te kōnae whirihoranga katoa:**
-[config.example.yaml](https://raw.githubusercontent.com/onetimesecret/onetimesecret/main/etc/config.example.yaml)
+[config.defaults.yaml](https://raw.githubusercontent.com/onetimesecret/onetimesecret/main/etc/defaults/config.defaults.yaml)
 
 ### Ngā Wāhanga Whirihoranga Matua
 

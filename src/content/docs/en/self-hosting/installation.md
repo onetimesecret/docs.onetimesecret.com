@@ -153,7 +153,7 @@ bundle install --without development test
 
 # Copy and configure environment
 cp .env.example .env
-cp ./etc/config.example.yaml ./etc/config.yaml
+cp ./etc/defaults/config.defaults.yaml ./etc/config.yaml
 
 # Create commit hash for version tracking
 git rev-parse --short HEAD > .commit_hash.txt

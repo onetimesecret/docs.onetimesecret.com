@@ -27,11 +27,11 @@ Vigtige områder at tilpasse:
 - **Sikkerhedsindstillinger**: Rate limiting, sessioner
 - **E-mailkonfiguration**: SMTP-indstillinger
 
-Se den [komplette konfigurationsfil](https://raw.githubusercontent.com/onetimesecret/onetimesecret/main/etc/config.example.yaml) på GitHub.
+Se den [komplette konfigurationsfil](https://raw.githubusercontent.com/onetimesecret/onetimesecret/main/etc/defaults/config.defaults.yaml) på GitHub.
 
 ## Kom i gang
 
-1. Kopier eksemplet: `cp etc/config.example.yaml config/config.yaml`
+1. Kopier eksemplet: `cp etc/defaults/config.defaults.yaml config/config.yaml`
 2. Rediger værdier efter behov for din implementering
 3. De fleste almindelige indstillinger kan tilsidesættes med miljøvariabler
 

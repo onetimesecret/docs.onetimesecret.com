@@ -128,7 +128,7 @@ bundle install --deployment --without development test
 
 # 复制并配置环境
 cp .env.example .env
-cp ./etc/config.example.yaml ./etc/config.yaml
+cp ./etc/defaults/config.defaults.yaml ./etc/config.yaml
 
 # 创建提交哈希以进行版本跟踪
 git rev-parse --short HEAD > .commit_hash.txt

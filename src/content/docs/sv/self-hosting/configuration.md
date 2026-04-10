@@ -12,19 +12,19 @@ Denna omfattande guide täcker alla konfigurationsalternativ för självhostade 
 Onetime Secret använder flera konfigurationsfiler:
 
 - **`.env`** - Miljövariabler för vanliga inställningar. Använd för enkel konfiguration och Docker-distributioner utan att modifiera YAML-filer. (Kopiera från `.env.example`)
-- **`config/config.yaml`** - Huvudapplikationskonfiguration med ERB-mallar. Miljövariabler integreras här, vilket gör det enkelt att se hur varje inställning tillämpas. (Kopiera från `etc/config.example.yaml`)
+- **`config/config.yaml`** - Huvudapplikationskonfiguration med ERB-mallar. Miljövariabler integreras här, vilket gör det enkelt att se hur varje inställning tillämpas. (Kopiera från `etc/defaults/config.defaults.yaml`)
 
 ## Huvudkonfiguration
 
 Huvudkonfigurationsfilen är `config/config.yaml`, som använder ERB-mallar för att integrera miljövariabler.
 
 **Komma igång:**
-1. Kopiera exemplet: `cp etc/config.example.yaml config/config.yaml`
+1. Kopiera exemplet: `cp etc/defaults/config.defaults.yaml config/config.yaml`
 2. Redigera värden efter behov för din distribution
 3. De flesta vanliga inställningar kan åsidosättas med miljövariabler
 
 **Visa den kompletta konfigurationsfilen:**
-[config.example.yaml](https://raw.githubusercontent.com/onetimesecret/onetimesecret/main/etc/config.example.yaml)
+[config.defaults.yaml](https://raw.githubusercontent.com/onetimesecret/onetimesecret/main/etc/defaults/config.defaults.yaml)
 
 ### Viktiga konfigurationssektioner
 

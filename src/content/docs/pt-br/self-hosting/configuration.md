@@ -26,7 +26,7 @@ Consulte a página [Variáveis de Ambiente](/pt-br/self-hosting/environment-vari
 ## Exemplos de Configuração
 
 Exemplos de configuração estão disponíveis no repositório do GitHub:
-- [config/config.example.yml](https://github.com/onetimesecret/onetimesecret/blob/main/etc/config.example.yaml)
+- [config/config.example.yml](https://github.com/onetimesecret/onetimesecret/blob/main/etc/defaults/config.defaults.yaml)
 
 ## Suporte
 
