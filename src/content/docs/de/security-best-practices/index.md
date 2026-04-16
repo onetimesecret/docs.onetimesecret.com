@@ -51,7 +51,7 @@ Dieser Abschnitt behandelt erweiterte Sicherheitsüberlegungen für Unternehmen,
 
 Die folgenden Empfehlungen können Sie auf der Ebene Ihrer Infrastruktur umsetzen, wenn Sie Onetime Secret selbst hosten:
 
-1. **Kurzlebige Umgebungen verwenden**: Erstellen und zerstören Sie nach Möglichkeit Umgebungen für jede Sitzung zur gemeinsamen Nutzung von Geheimnissen. Dies kann besonders bei hochsensiblen Vorgängen nützlich sein. Unser [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/blob/v0.18.5/docs/DOCKER-lite.md) Docker-Image ist für ephemere Anwendungsfälle konzipiert.
+1. **Kurzlebige Umgebungen verwenden**: Erstellen und zerstören Sie nach Möglichkeit Umgebungen für jede Sitzung zur gemeinsamen Nutzung von Geheimnissen. Dies kann besonders bei hochsensiblen Vorgängen nützlich sein.
 
 2. **Zeitbasierte Beschränkungen implementieren**: Wenn Ihr Anwendungsfall es zulässt, sollten Sie zeitliche Beschränkungen für den Zugriff auf Geheimnisse einführen, z.B. nur während der Geschäftszeiten.
 

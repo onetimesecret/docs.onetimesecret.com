@@ -51,7 +51,7 @@ Esta sección cubre consideraciones avanzadas de seguridad para organizaciones q
 
 Las siguientes recomendaciones pueden aplicarse a nivel de infraestructura cuando se autoaloje Onetime Secret:
 
-1. **Utilizar entornos efímeros**: Cuando sea posible, cree y destruya entornos para cada sesión de intercambio de secretos. Esto puede ser particularmente útil para operaciones altamente sensibles. Nuestra imagen Docker [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/blob/v0.18.5/docs/DOCKER-lite.md) está diseñada para casos de uso efímero.
+1. **Utilizar entornos efímeros**: Cuando sea posible, cree y destruya entornos para cada sesión de intercambio de secretos. Esto puede ser particularmente útil para operaciones altamente sensibles.
 
 2. **Implantar restricciones horarias**: Si su caso de uso lo permite, considere implementar restricciones basadas en el tiempo para acceder a los secretos, como por ejemplo sólo durante las horas de oficina.
 

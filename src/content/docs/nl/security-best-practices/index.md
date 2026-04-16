@@ -51,7 +51,7 @@ Deze sectie behandelt geavanceerde beveiligingsoverwegingen voor organisaties di
 
 De onderstaande aanbevelingen kunnen worden geïmplementeerd op uw infrastructuurniveau bij het zelf hosten van Onetime Secret:
 
-1. **Gebruik kortstondige omgevingen**: Creëer en vernietig waar mogelijk omgevingen voor elke sessie voor het delen van geheimen. Dit kan vooral nuttig zijn voor zeer gevoelige operaties. Onze [Onetime Secret Lite] (https://github.com/onetimesecret/onetimesecret/blob/v0.18.5/docs/DOCKER-lite.md) Docker image is ontworpen voor kortstondig gebruik.
+1. **Gebruik kortstondige omgevingen**: Creëer en vernietig waar mogelijk omgevingen voor elke sessie voor het delen van geheimen. Dit kan vooral nuttig zijn voor zeer gevoelige operaties.
 
 2. **Implementeer op tijd gebaseerde beperkingen**: Als je use case het toelaat, overweeg dan om tijdsgebaseerde beperkingen te implementeren voor toegang tot geheimen, zoals alleen tijdens kantooruren.
 

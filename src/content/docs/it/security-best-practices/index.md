@@ -51,7 +51,7 @@ Questa sezione tratta le considerazioni avanzate sulla sicurezza per le organizz
 
 Le raccomandazioni riportate di seguito possono essere implementate a livello di infrastruttura quando si ospita Onetime Secret in modo autonomo:
 
-1. **Utilizzare ambienti effimeri**: Quando è possibile, creare e distruggere ambienti per ogni sessione di condivisione dei segreti. Questo può essere particolarmente utile per le operazioni altamente sensibili. La nostra immagine [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/blob/v0.18.5/docs/DOCKER-lite.md) Docker è stata progettata per casi d'uso effimeri.
+1. **Utilizzare ambienti effimeri**: Quando è possibile, creare e distruggere ambienti per ogni sessione di condivisione dei segreti. Questo può essere particolarmente utile per le operazioni altamente sensibili.
 
 2. **Implement Time-Based Restrictions**: Se il vostro caso d'uso lo consente, prendete in considerazione l'implementazione di restrizioni temporali per l'accesso ai segreti, ad esempio solo durante l'orario di lavoro.
 

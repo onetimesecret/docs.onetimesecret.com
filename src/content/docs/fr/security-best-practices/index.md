@@ -51,7 +51,7 @@ Cette section couvre les considérations de sécurité avancées pour les organi
 
 Les recommandations ci-dessous peuvent être mises en œuvre au niveau de votre infrastructure lorsque vous hébergez vous-même Onetime Secret :
 
-1. **Utiliser des environnements éphémères** : Dans la mesure du possible, créez et détruisez des environnements pour chaque session d'échange de secrets. Cela peut s'avérer particulièrement utile pour les opérations très sensibles. Notre image Docker [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/blob/v0.18.5/docs/DOCKER-lite.md) Docker est conçue pour les cas d'utilisation éphémère.
+1. **Utiliser des environnements éphémères** : Dans la mesure du possible, créez et détruisez des environnements pour chaque session d'échange de secrets. Cela peut s'avérer particulièrement utile pour les opérations très sensibles.
 
 2. **Mettre en place des restrictions temporelles** : Si votre cas d'utilisation le permet, envisagez de mettre en place des restrictions temporelles pour l'accès aux secrets, par exemple uniquement pendant les heures de bureau.
 

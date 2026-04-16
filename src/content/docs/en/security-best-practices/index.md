@@ -51,7 +51,7 @@ This section covers advanced security considerations for organizations running t
 
 The recommendations below can be implemented at your infrastructure level when self-hosting Onetime Secret:
 
-1. **Use Ephemeral Environments**: When possible, create and destroy environments for each secret sharing session. This can be particularly useful for highly sensitive operations. Our [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/blob/v0.18.5/docs/DOCKER-lite.md) Docker image is designed for ephemeral use cases.
+1. **Use Ephemeral Environments**: When possible, create and destroy environments for each secret sharing session. This can be particularly useful for highly sensitive operations. The official Docker image supports this pattern well — run a container for a session and remove it when done.
 
 2. **Implement Time-Based Restrictions**: If your use case allows, consider implementing time-based restrictions for accessing secrets, such as only during business hours.
 

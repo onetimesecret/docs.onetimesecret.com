@@ -51,7 +51,7 @@ Bu bölüm, Onetime Secret'ın kendi örneğini çalıştıran kuruluşlar için
 
 Aşağıdaki öneriler, Onetime Secret'ı kendi sunucunuzda barındırırken altyapı seviyenizde uygulanabilir:
 
-1. **Geçici Ortamlar Kullanın**: Mümkün olduğunda, her gizli mesaj paylaşım oturumu için ortamlar oluşturun ve yok edin. Bu, son derece hassas işlemler için özellikle yararlı olabilir. [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/blob/v0.18.5/docs/DOCKER-lite.md) Docker görüntümüz geçici kullanım senaryoları için tasarlanmıştır.
+1. **Geçici Ortamlar Kullanın**: Mümkün olduğunda, her gizli mesaj paylaşım oturumu için ortamlar oluşturun ve yok edin. Bu, son derece hassas işlemler için özellikle yararlı olabilir.
 
 2. **Zamana Dayalı Kısıtlamalar Uygulayın**: Kullanım senaryonuz izin veriyorsa, gizli mesajlara erişim için zamana dayalı kısıtlamalar uygulamayı düşünün, örneğin yalnızca çalışma saatleri boyunca.
 
