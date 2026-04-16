@@ -51,7 +51,7 @@ Dette afsnit dækker avancerede sikkerhedsovervejelser for organisationer, der k
 
 Nedenstående anbefalinger kan implementeres på dit infrastrukturniveau, når du selv hoster Onetime Secret:
 
-1. **Brug midlertidige miljøer**: Når det er muligt, skal du oprette og ødelægge miljøer for hver besked delingssession. Dette kan være særligt nyttigt til meget følsomme operationer. Vores [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/blob/v0.18.5/docs/DOCKER-lite.md) Docker-billede er designet til midlertidige anvendelsestilfælde.
+1. **Brug midlertidige miljøer**: Når det er muligt, skal du oprette og ødelægge miljøer for hver besked delingssession. Dette kan være særligt nyttigt til meget følsomme operationer.
 
 2. **Implementer tidsbaserede begrænsninger**: Hvis dit anvendelsestilfælde tillader det, skal du overveje at implementere tidsbaserede begrænsninger for adgang til beskeder, såsom kun i arbejdstiden.
 

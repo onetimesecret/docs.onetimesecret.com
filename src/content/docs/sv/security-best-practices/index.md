@@ -51,7 +51,7 @@ Detta avsnitt täcker avancerade säkerhetsöverväganden för organisationer so
 
 Rekommendationerna nedan kan implementeras på din infrastrukturnivå när du självhostar Onetime Secret:
 
-1. **Använd tillfälliga miljöer**: När det är möjligt, skapa och förstör miljöer för varje hemlighetsdel ningssession. Detta kan vara särskilt användbart för mycket känsliga operationer. Vår [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/blob/v0.18.5/docs/DOCKER-lite.md) Docker-avbild är designad för tillfälliga användningsfall.
+1. **Använd tillfälliga miljöer**: När det är möjligt, skapa och förstör miljöer för varje hemlighetsdel ningssession. Detta kan vara särskilt användbart för mycket känsliga operationer.
 
 2. **Implementera tidsbaserade begränsningar**: Om ditt användningsfall tillåter det, överväg att implementera tidsbaserade begränsningar för åtkomst till hemligheter, såsom endast under kontorstid.
 

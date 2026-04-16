@@ -1,11 +1,11 @@
 ---
-title: Upgrading to v0.24.0
-description: Guide for upgrading Onetime Secret from v0.22 or v0.23 to v0.24.0
+title: Upgrading to v0.24.x
+description: Guide for upgrading Onetime Secret from v0.22 or v0.23 to the v0.24 series
 sidebar:
   order: 6
 ---
 
-This guide covers upgrading to v0.24.0 from v0.22 or v0.23. There are significant changes to the authentication system, configuration structure, and data model. You'll need to choose an upgrade path, update configuration files, and possibly run data migrations.
+This guide covers upgrading to the v0.24 series from v0.22 or v0.23. There are significant changes to the authentication system, configuration structure, and data model. You'll need to choose an upgrade path, update configuration files, and possibly run data migrations.
 
 For the full context on what changed and why, see the [v0.24.0 release notes](https://blog.onetimesecret.com/posts/2026-03-04-release-notes-v0.24.0).
 
@@ -48,7 +48,7 @@ Use this path if you don't need to preserve existing accounts or live secrets.
 docker pull onetimesecret/onetimesecret:v0.24.7
 ```
 
-Or clone/checkout the v0.24.0 tag if running from source, then run the install script:
+Or clone/checkout the v0.24.7 tag if running from source, then run the install script:
 
 ```bash
 ./install.sh
@@ -163,7 +163,7 @@ Even if you already backed up in the prerequisites. Make a timestamped copy righ
 docker pull onetimesecret/onetimesecret:v0.24.7
 ```
 
-Or clone/checkout the v0.24.0 tag if running from source. Do not start it yet. Run the install script to update dependencies and re-derive child keys:
+Or clone/checkout the v0.24.7 tag if running from source. Do not start it yet. Run the install script to update dependencies and re-derive child keys:
 
 ```bash
 ./install.sh

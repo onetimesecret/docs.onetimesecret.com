@@ -51,7 +51,7 @@ Esta seção cobre considerações avançadas de segurança para organizações 
 
 As recomendações abaixo podem ser implementadas no nível de sua infraestrutura ao auto-hospedar o Onetime Secret:
 
-1. **Use Ambientes Efêmeros**: Quando possível, crie e destrua ambientes para cada sessão de compartilhamento de mensagens. Isso pode ser particularmente útil para operações altamente sensíveis. Nossa imagem Docker [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/blob/v0.18.5/docs/DOCKER-lite.md) é projetada para casos de uso efêmeros.
+1. **Use Ambientes Efêmeros**: Quando possível, crie e destrua ambientes para cada sessão de compartilhamento de mensagens. Isso pode ser particularmente útil para operações altamente sensíveis.
 
 2. **Implemente Restrições Baseadas em Tempo**: Se seu caso de uso permitir, considere implementar restrições baseadas em tempo para acessar mensagens, como apenas durante o horário comercial.
 
