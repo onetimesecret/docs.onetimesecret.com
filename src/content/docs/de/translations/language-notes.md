@@ -5,131 +5,78 @@ description: Kritische Regeln für die deutsche Übersetzung
 
 # Deutsch
 
+:::note[Reference baseline for de_AT]
+Commit `f95b03f44`, `src/locales/de_AT.json` in the onetimesecret repo — last
+human-curated snapshot with consistent Sie-form and the object/content split
+pattern. Use this as the authoritative disambiguator for de_AT questions.
+:::
+
 ## Translation Choices for German Locale
 
 ### Key Terminology
 
-### 1. `secret` → `Nachricht` (UI) / `Geheimnis` (technical documentation)
+### 1. `secret` → `Geheimnis` (object) / `Nachricht` (revealed content)
 
-**Choice:** Context-specific translation:
-- **UI elements and direct user communication:** `Nachricht` (message)
-- **Technical documentation and security descriptions:** `Geheimnis` (secret)
+**Rule (both — de and de_AT):** Translate `secret` based on whether the string
+refers to the secret as a record/container or to its revealed payload.
 
-**Rationale:**
+- **`Geheimnis`** — the secret as an object: the record that is created,
+  shared, viewed, burned, destroyed, or expired. Use with verbs such as
+  `erstellen` (create), `teilen` (share), `ansehen` (view),
+  `verbrennen`/`zerstören` (burn/destroy), `ablaufen` (expire).
+- **`Nachricht`** — the revealed content/payload: post-reveal display, the
+  decrypted body shown to the recipient, truncated previews,
+  `encrypted_message`, and phrasing such as "your secure message is ready".
 
-The word "secret" can be translated to German as either "Geheimnis" or "Nachricht", with important nuances:
+This split is taken from the 2025-04-15 human-curated de_AT baseline
+(`f95b03f44`). It applies to both `de` and `de_AT` unless a specific
+exception is documented below.
 
-**Prefer "Nachricht" for UI contexts:**
-- **"Nachricht"** (neutral meaning) should be preferred when referring to Onetime Secret generated content in the user interface
-- While "Geheimnis" is the literal translation of "Secret", it carries strong connotations of something personal or intimate in German, which doesn't match the intended neutral, technical meaning
-- **Examples:**
-  - ✅ "Sie haben 3 neue Nachrichten" (neutral, technical - You have 3 new secrets)
-  - ❌ "Sie haben 3 neue Geheimnisse" (sounds too personal/intimate)
+**Examples (both):**
 
-**"Geheimnis" acceptable in technical contexts:**
-- In technical descriptions and documentation, "Geheimnis" can be used (e.g., "Ende-zu-Ende-Verschlüsselung schützt Ihre Geheimnisse" - End-to-end encryption protects your secrets)
-- For UI and direct user address, "Nachricht" is often the more natural choice
+- `Geheimnis erstellen` — Create a secret (object: action on the record)
+- `Geheimnis teilen` — Share a secret (object)
+- `Geheimnis ansehen` — View a secret (object)
+- `Geheimnis verbrennen` / `Geheimnis zerstören` — Burn / destroy the record
+- `Das Geheimnis ist abgelaufen` — The secret has expired (object)
+- `Ihre sichere Nachricht wird unten angezeigt` (de_AT) /
+  `Deine sichere Nachricht wird unten angezeigt` (de) — Post-reveal payload
+- `Verschlüsselte Nachricht` — Encrypted message (payload)
+- `Die Nachricht wurde gekürzt` — The message has been truncated (payload)
 
-**Regional Differences:**
-- **Deutschland (de_DE)**: "Nachricht" preferred as neutral term for UI
-- **Österreich (de_AT)**: Same usage as Germany
-- **Schweiz (de_CH)**: Identical in written German; dialectal variations exist only in spoken language
-
-**Distinction from `de_AT`:** Usage is expected to be identical in Austrian German.
+**Anti-pattern (both):** Do not use `Geheimnis` for the revealed payload
+(it reads as "a personal secret" rather than "the message body"), and do
+not use `Nachricht` for the record itself (it loses the container semantics
+that the rest of the UI relies on).
 
 ### 2. `password` → `Passwort`
 
-**Choice:** The term `password`, referring specifically to account login credentials, was translated as `Passwort`.
+**Rule (both):** Translate `password` (account login credential) as
+`Passwort`. `Passwort` is the dominant term for digital account credentials
+in all German-speaking regions. `Kennwort` exists but is not used here.
 
-**Rationale:** `Passwort` is the standard, universally understood term for website/account login credentials in German-speaking regions. The alternative `Kennwort` is sometimes seen but `Passwort` is dominant for digital contexts.
+### 3. `passphrase` → `Passphrase` (de) / `Sicherheitsphrase` (de_AT)
 
-**Distinction from `de_AT`:** Usage is identical in Austrian German. `Passwort` is the standard term.
+**Rule:** `passphrase` refers to the protection on an individual secret and
+must remain lexically distinct from `Passwort`.
 
-### 3. `passphrase` → `Passphrase`
-
-**Choice:** The term `passphrase`, referring to the protection for an individual secret, was translated directly as `Passphrase`.
-
-**Rationale:** This follows the guideline to maintain a clear distinction from the account `Passwort`. While `Passphrase` is an adopted English term, it is widely recognized in German technical and security contexts precisely for this distinct meaning (a potentially longer, phrase-based secret protector, different from a standard password).
-
-**Distinction from `de_AT`:** Usage is expected to be very similar in Austrian German. `Passphrase` is understood and used in technical contexts across German-speaking areas, including Austria.
-
-## Thinking Behind Changes & Important Examples
-
-### 1. Consistency of Core Terms
-
-**Rationale:** The initial file sometimes used English terms or less precise German words. The guidelines emphasize consistent terminology.
-
-**Examples:**
-- `web.COMMON.secret`: Changed from `Geheim` (adjective) to `Geheimnis` (noun)
-- `web.COMMON.header_dashboard`: Changed from `Account` to `Konto`
-- `web.COMMON.header_sign_in`: Changed from `Einloggen` to `Anmelden`
-- `web.COMMON.burn`: Standardized to `Zerstören` (verb) / `Zerstört` (past participle/status)
-- `web.COMMON.received`: Changed from `Erhalten` to `Empfangen`
-
-### 2. Appropriate Voice (Imperative vs. Declarative/Passive)
-
-**Rationale:** Guidelines specify imperative for user actions (buttons, links) and passive/declarative for informational text.
-
-**Examples:**
-- `web.help.learn_more`: `Mehr erfahren` (Imperative/infinitive for links)
-- `web.COMMON.button_generate_secret_short`: `Passwort generieren` (Imperative action)
-- `web.COMMON.share_link_securely`: `Teile diesen Link aus Sicherheitsgründen...` (Clear imperative)
-- `web.help.secret_view_faq.*.description`: Declarative sentences (e.g., "Du siehst...", "Dieser Inhalt wird...")
-- `web.STATUS.*_description`: Declarative/passive voice (e.g., "Geheimer Link wurde erstellt...")
-- `web.shared.post_reveal_default`: `Deine sichere Nachricht wird unten angezeigt.` (Passive voice)
-
-### 3. Clarity and Natural Phrasing
-
-**Rationale:** Some existing translations were literal or slightly awkward. The aim was for natural-sounding German.
-
-**Examples:**
-- `web.COMMON.copied_to_clipboard`: `In die Zwischenablage kopiert`
-- `web.COMMON.faq_title`: Changed from `F.A.Q.` to `Häufig gestellte Fragen`
-- `web.LABELS.loading`: Changed from `Loading...` to `Lädt...`
-- `web.login.remember_me`: `Angemeldet bleiben` (Standard phrase)
-- `web.shared.viewed_own_secret`: Changed `angeschaut` to `angesehen`
-
-### Voice Usage for Status Messages
-
-**Rationale:** Guidelines specify imperative for user actions (buttons, links) and passive/declarative for informational text.
-
-**Examples:**
-- `web.STATUS.*_description`: Declarative/passive voice (e.g., "Geheimer Link wurde erstellt...")
-- `web.shared.post_reveal_default`: `Deine sichere Nachricht wird unten angezeigt.` (Passive voice)
-
-### Voice Usage for Actions
-
-**Rationale:** Imperative for user actions (buttons, links).
-
-**Examples:**
-- `web.help.learn_more`: `Mehr erfahren` (Imperative/infinitive for links)
-- `web.COMMON.button_generate_secret_short`: `Passwort generieren` (Imperative action)
-- `web.COMMON.share_link_securely`: `Teile diesen Link aus Sicherheitsgründen...` (Clear imperative)
-- `web.help.secret_view_faq.*.description`: Declarative sentences (e.g., "Du siehst...", "Dieser Inhalt wird...")
-
-### 4. Direct Address (Du vs. Sie)
-
-**Rationale:** The existing partial translations predominantly used the informal "Du". This was made consistent across user-facing instructions and questions.
-
-**Examples:**
-- `web.COMMON.careful_only_see_once`: Changed "Wir werden es..." to `Du wirst es...`
-- `web.LABELS.need_help`: `Brauchst du Hilfe?`
-- `web.homepage.cta_title`: Changed from formal "Verwenden Sie..." to informal `Verwende...`
-- `web.login.login_to_your_account`: `Melde dich bei deinem Konto an`
-
-### 5. Completeness
-
-Many keys contained only English source text and were translated according to the guidelines (e.g., `web.help.*`, `web.FEATURES.*`, `web.UNITS.*`, `web.INSTRUCTION.*`, `web.meta.*`, `email.*`).
+- **de:** `Passphrase` — the established anglicism in German technical
+  contexts.
+- **de_AT:** `Sicherheitsphrase` — the native compound used in the
+  `f95b03f44` baseline. See glossary for the corresponding compound forms
+  (e.g. `Schutz durch Sicherheitsphrase`).
 
 ## Critical Translation Rules
 
-| Regel | Korrekt | Inkorrekt | Beispiel |
-|-------|---------|-----------|---------|
-| Secret Übersetzung | Nachricht (UI-Elemente), Geheimnis (technische Dokumentation) | Mixed usage | ✓ Sie haben 3 neue Nachrichten (UI); ✗ Sie haben 3 neue Geheimnisse (UI) |
-| Aktiv vs. Passiv | Aktiv (Schaltflächen/Aktionen), Passiv (Status/Benachrichtigungen) | Mixed forms | ✓ Änderungen speichern (button); ✗ Änderungen speichern (status) |
-| Förmliche Anrede | du (informal - DE), Sie (formal - AT) | Mixing forms | ✓ Du kannst dein Geheimnis erstellen (DE); ✓ Sie können Ihr Geheimnis erstellen (AT) |
-| Zahlenformat | Komma (Dezimal), Punkt (Tausender) | Englisches Format | ✓ 1.234,56; ✗ 1,234.56 |
-| Colonel Rolle | Administrator | Wörtliche Übersetzung | ✓ Nur Administratoren haben Zugriff; ✗ Nur Colonels haben Zugriff |
+| Region | Regel | Korrekt | Inkorrekt |
+|--------|-------|---------|-----------|
+| both | secret as object | `Geheimnis erstellen`, `Geheimnis teilen`, `Geheimnis verbrennen` | `Nachricht erstellen` für die Datensatz-Aktion |
+| both | secret as revealed payload | `Ihre sichere Nachricht wird unten angezeigt` | `Ihr sicheres Geheimnis wird unten angezeigt` |
+| both | Aktiv vs. Passiv | Aktiv für Schaltflächen/Aktionen, Passiv für Status/Benachrichtigungen | Vermischte Formen innerhalb einer Kategorie |
+| de | Förmliche Anrede | informell `du` | `Sie` |
+| de_AT | Förmliche Anrede | formell `Sie`, `Ihr`, `Ihnen` | `du`, `dein` |
+| both | Zahlenformat | `1.234,56` (Komma Dezimal, Punkt Tausender) | `1,234.56` |
+| both | Rolle `Colonel` | `Administrator` | wörtliche Übersetzung |
 
 ## Regional Formality Considerations
 
@@ -147,7 +94,7 @@ The German language has two primary forms of address that significantly impact t
 - Creates sense of partnership with users
 - Used with lowercase "du", "dein", "dir", etc.
 
-**Examples:**
+**Examples (de only — NOT for de_AT):**
 - "Du siehst eine sichere Nachricht" (You see a secure message)
 - "Gib dein Passwort ein" (Enter your password)
 - "Teile diesen Link" (Share this link)
@@ -168,7 +115,7 @@ The German language has two primary forms of address that significantly impact t
 - Maintains appropriate professional distance
 - Used with capitalized "Sie", "Ihr", "Ihnen", etc.
 
-**Examples:**
+**Examples (de_AT only):**
 - "Sie betrachten eine sichere Nachricht" (You view a secure message)
 - "Geben Sie Ihr Passwort ein" (Enter your password)
 - "Teilen Sie diesen Link" (Share this link)
@@ -246,7 +193,7 @@ Before finalizing translations:
 ### Technical Terms
 - Prioritize accuracy over localization for security terms
 - Use established German technical terminology
-- Maintain clear distinction between `Passwort` (account password) and `Passphrase` (secret protection)
+- Maintain clear distinction between `Passwort` (account password) and `Passphrase` / `Sicherheitsphrase` (secret protection)
 
 ### UI and Platform Conventions
 - Follow platform conventions for the target language
