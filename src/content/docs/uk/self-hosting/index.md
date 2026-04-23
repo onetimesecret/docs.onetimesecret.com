@@ -7,16 +7,6 @@ sidebar:
 
 Запустіть власний приватний екземпляр Onetime Secret з повним контролем над вашими даними, безпекою та розгортанням.
 
-:::caution[Березень 2026 — Документація з самостійного хостингу в процесі оновлення]
-Ми знаходимося в процесі переходу між **v0.23** та **v0.24** (гілка `main`). Деяка документація з самостійного хостингу застаріла, і ми [активно працюємо над її покращенням](https://github.com/onetimesecret/onetimesecret/issues/2628).
-
-**Якщо ви просто хочете запустити робочий екземпляр**, ми рекомендуємо гілку `rel/0.23`. Для неї потрібні лише кілька змінних середовища та Redis, і ми продовжуємо активно випускати виправлення та невеликі оновлення.
-
-```bash
-git clone -b rel/0.23 https://github.com/onetimesecret/onetimesecret.git
-```
-:::
-
 ## Навіщо використовувати самостійний хостинг?
 
 Самостійний хостинг Onetime Secret надає вам:
@@ -37,7 +27,7 @@ docker run -p 6379:6379 -d redis:bookworm
 docker run -p 3000:3000 -d \
   -e REDIS_URL=redis://host.docker.internal:6379/0 \
   -e SECRET="$(openssl rand -hex 32)" \
-  onetimesecret/onetimesecret:latest
+  onetimesecret/onetimesecret:v0.24.7
 ```
 
 Доступ за адресою `http://localhost:3000`.

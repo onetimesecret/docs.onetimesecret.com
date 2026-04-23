@@ -7,16 +7,6 @@ sidebar:
 
 자체 인프라에서 Onetime Secret의 프라이빗 인스턴스를 운영하여 데이터, 보안 및 배포를 완벽하게 제어할 수 있습니다.
 
-:::caution[2026년 3월 — 자체 호스팅 문서 전환 중]
-현재 **v0.23**에서 **v0.24**(`main` 브랜치)로 전환하는 과정에 있습니다. 일부 자체 호스팅 문서가 최신 상태가 아니며, [적극적으로 개선 작업을 진행하고 있습니다](https://github.com/onetimesecret/onetimesecret/issues/2628).
-
-**빠르게 실행해 보고 싶으시다면**, `rel/0.23` 브랜치를 권장합니다. 몇 가지 환경 변수와 Redis만 있으면 되며, 해당 브랜치에 대한 수정 사항과 소규모 업데이트를 계속 적용하고 있습니다.
-
-```bash
-git clone -b rel/0.23 https://github.com/onetimesecret/onetimesecret.git
-```
-:::
-
 ## 자체 호스팅을 선택하는 이유
 
 자체 호스팅을 통해 다음과 같은 이점을 얻을 수 있습니다:
@@ -37,7 +27,7 @@ docker run -p 6379:6379 -d redis:bookworm
 docker run -p 3000:3000 -d \
   -e REDIS_URL=redis://host.docker.internal:6379/0 \
   -e SECRET="$(openssl rand -hex 32)" \
-  onetimesecret/onetimesecret:latest
+  onetimesecret/onetimesecret:v0.24.7
 ```
 
 `http://localhost:3000`에서 접속할 수 있습니다.

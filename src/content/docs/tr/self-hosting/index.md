@@ -7,16 +7,6 @@ sidebar:
 
 Verileriniz, güvenliğiniz ve dağıtımınız üzerinde tam kontrolle kendi özel Onetime Secret örneğinizi çalıştırın.
 
-:::caution[Mart 2026 — Kendi sunucunuzda barındırma dokümantasyonu geçiş sürecinde]
-**v0.23** ile **v0.24** (`main` dalı) arasındaki geçiş sürecindeyiz. Kendi sunucunuzda barındırma dokümantasyonumuzun bir kısmı güncel değil ve [aktif olarak iyileştirme üzerinde çalışıyoruz](https://github.com/onetimesecret/onetimesecret/issues/2628).
-
-**Hızlıca çalışan bir kurulum istiyorsanız**, `rel/0.23` dalını öneriyoruz. Yalnızca birkaç ortam değişkeni ve Redis gerektirir ve bu dala hâlâ aktif olarak düzeltmeler ve küçük güncellemeler gönderiyoruz.
-
-```bash
-git clone -b rel/0.23 https://github.com/onetimesecret/onetimesecret.git
-```
-:::
-
 ## Neden Kendi Sunucunuzda Barındırmalısınız?
 
 Onetime Secret'ı kendi sunucunuzda barındırmak size şunları sağlar:
@@ -37,7 +27,7 @@ docker run -p 6379:6379 -d redis:bookworm
 docker run -p 3000:3000 -d \
   -e REDIS_URL=redis://host.docker.internal:6379/0 \
   -e SECRET="$(openssl rand -hex 32)" \
-  onetimesecret/onetimesecret:latest
+  onetimesecret/onetimesecret:v0.24.7
 ```
 
 `http://localhost:3000` adresinden erişin.

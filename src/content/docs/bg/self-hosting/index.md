@@ -7,16 +7,6 @@ sidebar:
 
 Стартирайте собствена частна инстанция на Onetime Secret с пълен контрол върху вашите данни, сигурност и внедряване.
 
-:::caution[Март 2026 — Документацията за самостоятелно хостване е в процес на обновяване]
-Намираме се в процес на преход между **v0.23** и **v0.24** (клонът `main`). Част от документацията ни за самостоятелно хостване е остаряла и [активно работим по нейното подобряване](https://github.com/onetimesecret/onetimesecret/issues/2628).
-
-**Ако просто искате да пуснете нещо работещо**, препоръчваме клона `rel/0.23`. Той изисква само няколко променливи на средата и Redis, а ние продължаваме активно да публикуваме поправки и малки актуализации към него.
-
-```bash
-git clone -b rel/0.23 https://github.com/onetimesecret/onetimesecret.git
-```
-:::
-
 ## Защо да хоствате самостоятелно?
 
 Самостоятелното хостване на Onetime Secret ви дава:
@@ -37,7 +27,7 @@ docker run -p 6379:6379 -d redis:bookworm
 docker run -p 3000:3000 -d \
   -e REDIS_URL=redis://host.docker.internal:6379/0 \
   -e SECRET="$(openssl rand -hex 32)" \
-  onetimesecret/onetimesecret:latest
+  onetimesecret/onetimesecret:v0.24.7
 ```
 
 Достъп на `http://localhost:3000`.

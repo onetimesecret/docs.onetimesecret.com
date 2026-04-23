@@ -45,10 +45,10 @@ Use this path if you don't need to preserve existing accounts or live secrets.
 ### 1. Pull the new version
 
 ```bash
-docker pull onetimesecret/onetimesecret:v0.24.5
+docker pull onetimesecret/onetimesecret:v0.24.7
 ```
 
-Or clone/checkout the v0.24.0 tag if running from source, then run the install script:
+Or clone/checkout the v0.24.7 tag if running from source, then run the install script:
 
 ```bash
 ./install.sh
@@ -119,7 +119,7 @@ docker run -p 3000:3000 -d \
   -e SECRET="$(cat .ots_secret)" \
   -e HOST=localhost:3000 \
   -e SSL=false \
-  onetimesecret/onetimesecret:v0.24.5
+  onetimesecret/onetimesecret:v0.24.7
 ```
 
 **Docker Compose** (for persistent or multi-service deployments):
@@ -160,10 +160,10 @@ Even if you already backed up in the prerequisites. Make a timestamped copy righ
 ### 3. Pull the new version
 
 ```bash
-docker pull onetimesecret/onetimesecret:v0.24.5
+docker pull onetimesecret/onetimesecret:v0.24.7
 ```
 
-Or clone/checkout the v0.24.0 tag if running from source. Do not start it yet. Run the install script to update dependencies and re-derive child keys:
+Or clone/checkout the v0.24.7 tag if running from source. Do not start it yet. Run the install script to update dependencies and re-derive child keys:
 
 ```bash
 ./install.sh
@@ -255,7 +255,7 @@ docker run -p 3000:3000 -d \
   -e SECRET="$YOUR_SECRET" \
   -e HOST=your-domain.com \
   -e SSL=true \
-  onetimesecret/onetimesecret:v0.24.5
+  onetimesecret/onetimesecret:v0.24.7
 ```
 
 **Docker Compose:**

@@ -7,16 +7,6 @@ sidebar:
 
 Kør din egen private instans af Onetime Secret med fuld kontrol over dine data, sikkerhed og implementering.
 
-:::caution[Marts 2026 — Selv-hosting dokumentation under opdatering]
-Vi er midt i en overgang mellem **v0.23** og **v0.24** (`main`-branchen). Noget af vores selv-hosting dokumentation er forældet, og vi [arbejder aktivt på at forbedre den](https://github.com/onetimesecret/onetimesecret/issues/2628).
-
-**Hvis du bare vil have noget kørende**, anbefaler vi `rel/0.23`-branchen. Den kræver kun et par miljøvariabler og Redis, og vi sender stadig aktivt rettelser og små opdateringer til den.
-
-```bash
-git clone -b rel/0.23 https://github.com/onetimesecret/onetimesecret.git
-```
-:::
-
 ## Hvorfor selv-hoste?
 
 Selv-hosting af Onetime Secret giver dig:
@@ -37,7 +27,7 @@ docker run -p 6379:6379 -d redis:bookworm
 docker run -p 3000:3000 -d \
   -e REDIS_URL=redis://host.docker.internal:6379/0 \
   -e SECRET="$(openssl rand -hex 32)" \
-  onetimesecret/onetimesecret:latest
+  onetimesecret/onetimesecret:v0.24.7
 ```
 
 Få adgang på `http://localhost:3000`.
