@@ -21,12 +21,12 @@
     "generate:for-translators": "./bin/generate-for-translators all"
   },
   "dependencies": {
-    "@astrojs/markdoc": "^0.15.11",
-    "@astrojs/react": "^4.4.2",
+    "@astrojs/markdoc": "^1.0.4",
+    "@astrojs/react": "^5.0.4",
     "@astrojs/starlight": "^0.37.7",
     "@astrojs/starlight-markdoc": "^0.5.1",
     "@astrojs/starlight-tailwind": "^4.0.2",
-    "@astrojs/vue": "^5.1.4",
+    "@astrojs/vue": "^6.0.1",
     "@tailwindcss/vite": "^4.2.1",
     "accessible-astro-components": "^5.2.0",
     "astro": "^5.18.1",
