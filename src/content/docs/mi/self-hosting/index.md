@@ -7,16 +7,6 @@ sidebar:
 
 Whakahaerehia tō ake tauira tūmataiti o Onetime Secret me te whakahaere katoa o ō raraunga, haumaru, me te whakatakoto.
 
-:::caution[Māehe 2026 — Kei te huri ngā tuhinga whakatū-rānei]
-Kei waenganui mātou i te huringa i waenganui i **v0.23** me **v0.24** (te peka `main`). He tawhito ētahi o ā mātou tuhinga whakatū-rānei ā kei te [mahi tonu mātou ki te whakapai ake](https://github.com/onetimesecret/onetimesecret/issues/2628).
-
-**Ki te hiahia koe kia whakahaere i tētahi mea**, ka tūtohu mātou i te peka `rel/0.23`. Ka hiahia ia ki ētahi taurangi taiao me Redis anake, ā kei te tuku tonu mātou i ngā whakatikanga me ngā whakahoutanga iti ki reira.
-
-```bash
-git clone -b rel/0.23 https://github.com/onetimesecret/onetimesecret.git
-```
-:::
-
 ## He aha ai te Whakatū Rānei?
 
 Ka whakarato te whakatū rānei i Onetime Secret i:
@@ -37,7 +27,7 @@ docker run -p 6379:6379 -d redis:bookworm
 docker run -p 3000:3000 -d \
   -e REDIS_URL=redis://host.docker.internal:6379/0 \
   -e SECRET="$(openssl rand -hex 32)" \
-  onetimesecret/onetimesecret:latest
+  onetimesecret/onetimesecret:v0.25.0
 ```
 
 Uru mai i `http://localhost:3000`.

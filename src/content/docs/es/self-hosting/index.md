@@ -7,16 +7,6 @@ sidebar:
 
 Ejecute su propia instancia privada de Onetime Secret con control total sobre sus datos, seguridad e implementación.
 
-:::caution[Marzo de 2026 — Documentación de autoalojamiento en transición]
-Nos encontramos en medio de la transición entre **v0.23** y **v0.24** (la rama `main`). Parte de nuestra documentación de autoalojamiento está desactualizada y estamos [trabajando activamente para mejorarla](https://github.com/onetimesecret/onetimesecret/issues/2628).
-
-**Si solo desea poner algo en funcionamiento**, le recomendamos la rama `rel/0.23`. Solo necesita un par de variables de entorno y Redis, y seguimos publicando correcciones y pequeñas actualizaciones en ella.
-
-```bash
-git clone -b rel/0.23 https://github.com/onetimesecret/onetimesecret.git
-```
-:::
-
 ## ¿Por qué autoalojar?
 
 El autoalojamiento de Onetime Secret le ofrece:
@@ -37,7 +27,7 @@ docker run -p 6379:6379 -d redis:bookworm
 docker run -p 3000:3000 -d \
   -e REDIS_URL=redis://host.docker.internal:6379/0 \
   -e SECRET="$(openssl rand -hex 32)" \
-  onetimesecret/onetimesecret:latest
+  onetimesecret/onetimesecret:v0.25.0
 ```
 
 Acceda en `http://localhost:3000`.
@@ -55,7 +45,6 @@ Su instancia autoalojada incluye:
 - **API REST** - Acceso programático para integraciones
 - **Soporte multilingüe** - Disponible en más de 12 idiomas
 - **Dominios personalizados** - Utilice su propio dominio y marca
-
 
 ## Requisitos del sistema
 

@@ -7,16 +7,6 @@ sidebar:
 
 Exécutez votre propre instance privée de Onetime Secret avec un contrôle total sur vos données, votre sécurité et votre déploiement.
 
-:::caution[Mars 2026 — Documentation d'auto-hébergement en transition]
-Nous sommes en pleine transition entre **v0.23** et **v0.24** (la branche `main`). Une partie de notre documentation d'auto-hébergement est obsolète et nous [travaillons activement à l'améliorer](https://github.com/onetimesecret/onetimesecret/issues/2628).
-
-**Si vous souhaitez simplement mettre quelque chose en route**, nous vous recommandons la branche `rel/0.23`. Elle ne nécessite que quelques variables d'environnement et Redis, et nous continuons à y publier des correctifs et des mises à jour mineures.
-
-```bash
-git clone -b rel/0.23 https://github.com/onetimesecret/onetimesecret.git
-```
-:::
-
 ## Pourquoi auto-héberger ?
 
 L'auto-hébergement de Onetime Secret vous offre :
@@ -37,7 +27,7 @@ docker run -p 6379:6379 -d redis:bookworm
 docker run -p 3000:3000 -d \
   -e REDIS_URL=redis://host.docker.internal:6379/0 \
   -e SECRET="$(openssl rand -hex 32)" \
-  onetimesecret/onetimesecret:latest
+  onetimesecret/onetimesecret:v0.25.0
 ```
 
 Accessible à l'adresse `http://localhost:3000`.
@@ -55,7 +45,6 @@ Votre instance auto-hébergée comprend :
 - **API REST** - Accès programmatique pour les intégrations
 - **Support multilingue** - Disponible dans plus de 12 langues
 - **Domaines personnalisés** - Utilisez votre propre domaine et votre propre image de marque
-
 
 ## Configuration requise
 
