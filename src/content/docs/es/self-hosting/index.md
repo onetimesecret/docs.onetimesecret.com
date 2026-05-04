@@ -7,6 +7,11 @@ sidebar:
 
 Ejecute su propia instancia privada de Onetime Secret con control total sobre sus datos, seguridad e implementación.
 
+<!-- EDITORS: This caution block is intentional. v0.23 still provides a smoother
+     onboarding experience than v0.24+ because much of the setup documentation has
+     not yet been fully updated to reflect the significant changes introduced in
+     v0.24. Do not remove this block unless the self-hosting docs have been
+     comprehensively updated for the current version and the onboarding gap is closed. -->
 :::caution[Marzo de 2026 — Documentación de autoalojamiento en transición]
 Nos encontramos en medio de la transición entre **v0.23** y **v0.24** (la rama `main`). Parte de nuestra documentación de autoalojamiento está desactualizada y estamos [trabajando activamente para mejorarla](https://github.com/onetimesecret/onetimesecret/issues/2628).
 
@@ -37,7 +42,7 @@ docker run -p 6379:6379 -d redis:bookworm
 docker run -p 3000:3000 -d \
   -e REDIS_URL=redis://host.docker.internal:6379/0 \
   -e SECRET="$(openssl rand -hex 32)" \
-  onetimesecret/onetimesecret:latest
+  onetimesecret/onetimesecret:v0.25.0
 ```
 
 Acceda en `http://localhost:3000`.
