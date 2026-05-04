@@ -7,6 +7,16 @@ sidebar:
 
 Eseguite la vostra istanza privata di Onetime Secret con il pieno controllo sui vostri dati, la sicurezza e il deployment.
 
+:::caution[Marzo 2026 — Documentazione sul self-hosting in fase di aggiornamento]
+Ci troviamo nel mezzo della transizione tra **v0.23** e **v0.24** (il branch `main`). Parte della nostra documentazione sul self-hosting non è aggiornata e stiamo [lavorando attivamente per migliorarla](https://github.com/onetimesecret/onetimesecret/issues/2628).
+
+**Se volete semplicemente avviare qualcosa che funzioni**, vi consigliamo il branch `rel/0.23`. Richiede solo un paio di variabili d'ambiente e Redis, e continuiamo a pubblicare attivamente correzioni e piccoli aggiornamenti.
+
+```bash
+git clone -b rel/0.23 https://github.com/onetimesecret/onetimesecret.git
+```
+:::
+
 ## Perché il self-hosting?
 
 Il self-hosting di Onetime Secret vi offre:
@@ -27,7 +37,7 @@ docker run -p 6379:6379 -d redis:bookworm
 docker run -p 3000:3000 -d \
   -e REDIS_URL=redis://host.docker.internal:6379/0 \
   -e SECRET="$(openssl rand -hex 32)" \
-  onetimesecret/onetimesecret:v0.25.0
+  onetimesecret/onetimesecret:latest
 ```
 
 Accessibile all'indirizzo `http://localhost:3000`.

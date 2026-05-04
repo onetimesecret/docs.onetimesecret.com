@@ -7,6 +7,16 @@ sidebar:
 
 运行您自己的私有 Onetime Secret 实例，全面控制您的数据、安全性和部署。
 
+:::caution[2026年3月 — 自托管文档正在更新中]
+我们正在从 **v0.23** 过渡到 **v0.24**（`main` 分支）。部分自托管文档已过时，我们正在[积极改进中](https://github.com/onetimesecret/onetimesecret/issues/2628)。
+
+**如果您只是想先运行起来**，我们推荐使用 `rel/0.23` 分支。它只需要几个环境变量和 Redis，我们仍在积极推送修复和小更新。
+
+```bash
+git clone -b rel/0.23 https://github.com/onetimesecret/onetimesecret.git
+```
+:::
+
 ## 为什么要自托管？
 
 自托管 Onetime Secret 为您提供：
@@ -27,7 +37,7 @@ docker run -p 6379:6379 -d redis:bookworm
 docker run -p 3000:3000 -d \
   -e REDIS_URL=redis://host.docker.internal:6379/0 \
   -e SECRET="$(openssl rand -hex 32)" \
-  onetimesecret/onetimesecret:v0.25.0
+  onetimesecret/onetimesecret:latest
 ```
 
 访问 `http://localhost:3000`。
@@ -45,6 +55,7 @@ docker run -p 3000:3000 -d \
 - **REST API** - 用于集成的编程访问
 - **多语言支持** - 支持 12 种以上的语言
 - **自定义域名** - 使用您自己的域名和品牌
+
 
 ## 系统要求
 

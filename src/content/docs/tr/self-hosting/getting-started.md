@@ -41,7 +41,7 @@ docker run -p 3000:3000 -d \
   -e HOST=localhost:3000 \
   -e SSL=false \
   -e RACK_ENV=production \
-  onetimesecret/onetimesecret:v0.25.0
+  onetimesecret/onetimesecret:latest
 ```
 
 ### 4. Örneğinize Erişin
