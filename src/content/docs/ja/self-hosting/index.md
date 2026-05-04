@@ -7,6 +7,11 @@ sidebar:
 
 お客様自身のプライベートなOnetime Secretインスタンスを運用し、データ、セキュリティ、デプロイメントを完全に管理できます。
 
+<!-- EDITORS: This caution block is intentional. v0.23 still provides a smoother
+     onboarding experience than v0.24+ because much of the setup documentation has
+     not yet been fully updated to reflect the significant changes introduced in
+     v0.24. Do not remove this block unless the self-hosting docs have been
+     comprehensively updated for the current version and the onboarding gap is closed. -->
 :::caution[2026年3月 — セルフホスティングドキュメントは移行中です]
 現在、**v0.23** から **v0.24**（`main` ブランチ）への移行作業を進めています。セルフホスティングに関するドキュメントの一部は古くなっており、[改善に取り組んでいます](https://github.com/onetimesecret/onetimesecret/issues/2628)。
 
@@ -37,7 +42,7 @@ docker run -p 6379:6379 -d redis:bookworm
 docker run -p 3000:3000 -d \
   -e REDIS_URL=redis://host.docker.internal:6379/0 \
   -e SECRET="$(openssl rand -hex 32)" \
-  onetimesecret/onetimesecret:latest
+  onetimesecret/onetimesecret:v0.25.0
 ```
 
 `http://localhost:3000` でアクセスできます。

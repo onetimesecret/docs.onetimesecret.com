@@ -7,6 +7,11 @@ sidebar:
 
 Стартирайте собствена частна инстанция на Onetime Secret с пълен контрол върху вашите данни, сигурност и внедряване.
 
+<!-- EDITORS: This caution block is intentional. v0.23 still provides a smoother
+     onboarding experience than v0.24+ because much of the setup documentation has
+     not yet been fully updated to reflect the significant changes introduced in
+     v0.24. Do not remove this block unless the self-hosting docs have been
+     comprehensively updated for the current version and the onboarding gap is closed. -->
 :::caution[Март 2026 — Документацията за самостоятелно хостване е в процес на обновяване]
 Намираме се в процес на преход между **v0.23** и **v0.24** (клонът `main`). Част от документацията ни за самостоятелно хостване е остаряла и [активно работим по нейното подобряване](https://github.com/onetimesecret/onetimesecret/issues/2628).
 
@@ -37,7 +42,7 @@ docker run -p 6379:6379 -d redis:bookworm
 docker run -p 3000:3000 -d \
   -e REDIS_URL=redis://host.docker.internal:6379/0 \
   -e SECRET="$(openssl rand -hex 32)" \
-  onetimesecret/onetimesecret:latest
+  onetimesecret/onetimesecret:v0.25.0
 ```
 
 Достъп на `http://localhost:3000`.

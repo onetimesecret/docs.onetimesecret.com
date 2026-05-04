@@ -7,6 +7,11 @@ sidebar:
 
 자체 인프라에서 Onetime Secret의 프라이빗 인스턴스를 운영하여 데이터, 보안 및 배포를 완벽하게 제어할 수 있습니다.
 
+<!-- EDITORS: This caution block is intentional. v0.23 still provides a smoother
+     onboarding experience than v0.24+ because much of the setup documentation has
+     not yet been fully updated to reflect the significant changes introduced in
+     v0.24. Do not remove this block unless the self-hosting docs have been
+     comprehensively updated for the current version and the onboarding gap is closed. -->
 :::caution[2026년 3월 — 자체 호스팅 문서 전환 중]
 현재 **v0.23**에서 **v0.24**(`main` 브랜치)로 전환하는 과정에 있습니다. 일부 자체 호스팅 문서가 최신 상태가 아니며, [적극적으로 개선 작업을 진행하고 있습니다](https://github.com/onetimesecret/onetimesecret/issues/2628).
 
@@ -37,7 +42,7 @@ docker run -p 6379:6379 -d redis:bookworm
 docker run -p 3000:3000 -d \
   -e REDIS_URL=redis://host.docker.internal:6379/0 \
   -e SECRET="$(openssl rand -hex 32)" \
-  onetimesecret/onetimesecret:latest
+  onetimesecret/onetimesecret:v0.25.0
 ```
 
 `http://localhost:3000`에서 접속할 수 있습니다.
