@@ -65,7 +65,7 @@ jobs:
 
       - name: Create Issue if internal links are broken
         if: failure() && github.event_name == 'schedule'
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         with:
           script: |
             github.rest.issues.create({
@@ -141,7 +141,7 @@ jobs:
 
       - name: Create Issue if external links are broken
         if: failure() && github.event_name == 'schedule'
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         with:
           script: |
             github.rest.issues.create({
