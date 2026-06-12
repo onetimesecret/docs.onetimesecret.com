@@ -34,7 +34,7 @@ version: '3.8'
 
 services:
   onetime:
-    image: onetimesecret/onetimesecret:v0.25.7
+    image: onetimesecret/onetimesecret:v0.25.8
     ports:
       - "3000:3000"
     environment:
