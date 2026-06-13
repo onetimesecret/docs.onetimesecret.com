@@ -17,7 +17,7 @@ Le choix de la région du centre de données est crucial pour plusieurs raisons�
 
 ### Union européenne (UE)
 
-- Localisation** : Dans l'Union européenne (Nuremberg)
+- **Localisation** : Dans l'Union européenne (Nuremberg)
 - **URL** : [https://eu.onetimesecret.com](https://eu.onetimesecret.com)
 - **Caractéristiques principales** :
   - Conforme au GDPR et aux autres réglementations de l'UE en matière de protection des données.
@@ -25,7 +25,7 @@ Le choix de la région du centre de données est crucial pour plusieurs raisons�
 
 ### Canada (CA)
 
-- Localisation** : Au Canada (Toronto)
+- **Localisation** : Au Canada (Toronto)
 - **URL** : [https://ca.onetimesecret.com](https://ca.onetimesecret.com)
 - **Caractéristiques principales** :
   - Conforme à la LPRPDE et aux lois canadiennes sur la protection des données
@@ -33,7 +33,7 @@ Le choix de la région du centre de données est crucial pour plusieurs raisons�
 
 ### Aotearoa Nouvelle-Zélande (NZ)
 
-- Localisation** : En Nouvelle-Zélande (Porirua)
+- **Localisation** : En Nouvelle-Zélande (Porirua)
 - **URL** : [https://nz.onetimesecret.com](https://nz.onetimesecret.com)
 - **Caractéristiques principales** :
   - Conforme à la loi néo-zélandaise sur la protection de la vie privée et aux réglementations locales
@@ -41,7 +41,7 @@ Le choix de la région du centre de données est crucial pour plusieurs raisons�
 
 ### États-Unis (US)
 
-- Localisation** : Aux Etats-Unis (Hillsboro, Oregon)
+- **Localisation** : Aux Etats-Unis (Hillsboro, Oregon)
 - **URL** : [https://us.onetimesecret.com](https://us.onetimesecret.com)
 - **Caractéristiques principales** :
   - Conforme aux lois américaines sur la protection des données
@@ -51,9 +51,9 @@ Le choix de la région du centre de données est crucial pour plusieurs raisons�
 
 Onetime Secret utilise une architecture sans partage, garantissant une isolation complète des données entre les régions :
 
-- Comptes séparés** : La création d'un compte sur un domaine régional est entièrement séparée des comptes sur d'autres domaines, même si vous utilisez la même adresse électronique.
-- Pas d'opérations entre centres de données** : Vous ne pouvez pas effectuer d'opérations (comme brûler un secret) entre les centres de données. Chaque centre conserve son propre ensemble de secrets et de données utilisateur.
-- Facturation cohérente pour les utilisateurs payants** : Pour les comptes payants, bien qu'aucune donnée utilisateur ne soit partagée entre les centres, votre statut d'abonnement est reconnu dans toutes les régions par notre fournisseur de paiement, Stripe.
+- **Comptes séparés** : La création d'un compte sur un domaine régional est entièrement séparée des comptes sur d'autres domaines, même si vous utilisez la même adresse électronique.
+- **Pas d'opérations entre centres de données** : Vous ne pouvez pas effectuer d'opérations (comme brûler un secret) entre les centres de données. Chaque centre conserve son propre ensemble de secrets et de données utilisateur.
+- **Facturation cohérente pour les utilisateurs payants** : Pour les comptes payants, bien qu'aucune donnée utilisateur ne soit partagée entre les centres, votre statut d'abonnement est reconnu dans toutes les régions par notre fournisseur de paiement, Stripe.
 
 ## Comment choisir sa région
 
@@ -132,11 +132,11 @@ Veuillez noter :
   3. Utiliser un sous-domaine unique lors de l'ajout du domaine pour éviter les conflits avec les liens existants
   4. Plus tard, vous pourrez ajouter votre domaine préféré (si nécessaire) pour commencer à envoyer de nouveaux liens avec votre domaine préféré
 
-**Q : Mon choix de région a-t-il une incidence sur la sécurité de mes secrets ?
+**Q : Mon choix de région a-t-il une incidence sur la sécurité de mes secrets ?**
 R : Non, toutes les régions offrent le même niveau élevé de sécurité. Le choix affecte principalement la résidence des données et la latence potentielle.
 
-**Q : Y a-t-il des différences de prix entre les régions ?
-R : Actuellement, nos prix sont les mêmes dans toutes les régions. Consultez notre [page de tarification] (https://onetimesecret.com/pricing) pour obtenir les informations les plus récentes.
+**Q : Y a-t-il des différences de prix entre les régions ?**
+R : Actuellement, nos prix sont les mêmes dans toutes les régions. Consultez notre [page de tarification](https://onetimesecret.com/pricing) pour obtenir les informations les plus récentes.
 
 ## Besoin d'aide ?
 

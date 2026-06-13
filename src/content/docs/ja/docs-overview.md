@@ -13,7 +13,7 @@ description: ナビゲーションメニューから Onetime Secret のドキュ
 
 ## キーセクション
 
-- シークレットリンク](/ja/secret-links/) - 1回限りのシークレットを作成し、共有する方法を学びます。
-- カスタムドメイン](/ja/custom-domains/) - あなただけのシークレット共有体験を設定できます。
-- REST API](/ja/rest-api/) - Onetime Secretをアプリケーションに統合する。
-- セキュリティベストプラクティス](/ja/security-best-practices/) - 機密情報を共有する際に最大限のセキュリティを確保します。
+- [シークレットリンク](/ja/secret-links/) - 1回限りのシークレットを作成し、共有する方法を学びます。
+- [カスタムドメイン](/ja/custom-domains/) - あなただけのシークレット共有体験を設定できます。
+- [REST API](/ja/rest-api/) - Onetime Secretをアプリケーションに統合する。
+- [セキュリティベストプラクティス](/ja/security-best-practices/) - 機密情報を共有する際に最大限のセキュリティを確保します。

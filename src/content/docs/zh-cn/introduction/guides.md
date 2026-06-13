@@ -21,7 +21,7 @@ description: 您的 Onetime Secret 文档、指南和资源中心。
 ## 与 API 集成
 
 - **[REST API 文档](https://api.onetimesecret.com)** — 完整 API 参考 (v1, v2, v3)
-- **[客户端库](/en/resources/client-libraries/)** — 社区 SDK 和集成
+- **[客户端库](/zh-cn/resources/client-libraries/)** — 社区 SDK 和集成
 
 ## 运行您自己的实例
 

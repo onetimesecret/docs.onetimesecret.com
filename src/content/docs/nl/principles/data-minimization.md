@@ -17,7 +17,7 @@ description: Onze belofte om alleen de essentiële gegevens te verzamelen die no
 
 **Hoe het werkt:**
 
-1. **Voor afzonderlijke geheimen:** We slaan het versleutelde geheim alleen op totdat het wordt bekeken of verloopt. Daarna wordt het permanent verwijderd. (Afgezien van de minimale versleutelde back-ups die we bewaren in geval van nood. We bespreken dit meer in ons [Privacybeleid] (https://onetimesecret.com/info/privacy).
+1. **Voor afzonderlijke geheimen:** We slaan het versleutelde geheim alleen op totdat het wordt bekeken of verloopt. Daarna wordt het permanent verwijderd. (Afgezien van de minimale versleutelde back-ups die we bewaren in geval van nood. We bespreken dit meer in ons [Privacybeleid](https://onetimesecret.com/info/privacy).
 
 2. **Voor geregistreerde gebruikers:** We bewaren net genoeg informatie om je account te beheren en de service te bieden waarvoor je hebt betaald. Daarom verzamelen we alleen een e-mailadres. We verzamelen geen naam- of profielgegevens omdat je die functies niet nodig hebt.
 

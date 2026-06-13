@@ -21,7 +21,7 @@ Nau mai ki Onetime Secret Docs. Kimihia ngā mea e hiahia ana koe hei tīmata, h
 ## Whakakao ki te API
 
 - **[Tuhinga REST API](https://api.onetimesecret.com)** — Te tohutoro API katoa (v1, v2, v3)
-- **[Ngā Whare Pukapuka Kiritaki](/en/resources/client-libraries/)** — Ngā SDK hapori me ngā whakakaokaotanga
+- **[Ngā Whare Pukapuka Kiritaki](/mi/resources/client-libraries/)** — Ngā SDK hapori me ngā whakakaokaotanga
 
 ## Whakahaeretia tōu ake tauira
 

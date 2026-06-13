@@ -21,7 +21,7 @@ Onetime Secret 문서에 오신 것을 환영합니다. 시작하기, 통합 또
 ## API와 통합하기
 
 - **[REST API 문서](https://api.onetimesecret.com)** — 전체 API 레퍼런스 (v1, v2, v3)
-- **[클라이언트 라이브러리](/en/resources/client-libraries/)** — 커뮤니티 SDK 및 통합
+- **[클라이언트 라이브러리](/ko/resources/client-libraries/)** — 커뮤니티 SDK 및 통합
 
 ## 자체 인스턴스 운영하기
 

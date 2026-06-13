@@ -15,5 +15,5 @@ Tīmataria ki tā mātou wāhanga [Kupu Whakataki](/mi/introduction/) kia ako ai
 
 - [Ngā Hononga Huna](/mi/secret-links/) - Ako me pēhea te waihanga me te tiritiri i ngā karere huna kotahi noa
 - [Ngā Rohe Whakaritea](/mi/custom-domains/) - Whakatūria tō wheako tiritiri karere huna me tō tohu
-- [REST API](/en/rest-api/) - Whakakaongia a Onetime Secret ki ō taupānga
+- [REST API](/mi/rest-api/) - Whakakaongia a Onetime Secret ki ō taupānga
 - [Tikanga Pai mō te Haumaru](/mi/security-best-practices/) - Whakaritea te haumaru tino teitei ina tiritiri mōhiohio matatapu

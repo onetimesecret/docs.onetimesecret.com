@@ -133,10 +133,10 @@ Let op:
   3. Een uniek subdomein gebruiken bij het opnieuw toevoegen van het domein om conflicten met bestaande links te voorkomen
   4. Later kunt u uw voorkeurdomein toevoegen (indien nodig) om nieuwe links met uw voorkeurdomein te versturen
 
-**V: Heeft de keuze van mijn regio invloed op de veiligheid van mijn geheimen?
+**V: Heeft de keuze van mijn regio invloed op de veiligheid van mijn geheimen?**
 A: Nee, beide regio's bieden hetzelfde hoge beveiligingsniveau. De keuze heeft vooral invloed op het verblijf van gegevens en de potentiële latentie.
 
-**V: Zijn er prijsverschillen tussen regio's?
+**V: Zijn er prijsverschillen tussen regio's?**
 A: Momenteel zijn onze prijzen consistent in beide regio's. Bekijk onze [prijspagina](https://onetimesecret.com/pricing) voor de meest actuele informatie.
 
 ## Hulp nodig?

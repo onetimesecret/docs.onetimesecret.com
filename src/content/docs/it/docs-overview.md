@@ -14,6 +14,6 @@ Iniziate con la nostra sezione [Introduzione](/it/introduction/) per imparare le
 ## Sezioni chiave
 
 - [Link segreti](/it/secret-links/) - Imparare a creare e condividere segreti una tantum
-- Domini personalizzati](/it/custom-domains/) - Impostare l'esperienza di condivisione dei segreti con il proprio marchio.
-- REST API](/it/rest-api/) - Integrare Onetime Secret con le proprie applicazioni.
+- [Domini personalizzati](/it/custom-domains/) - Impostare l'esperienza di condivisione dei segreti con il proprio marchio.
+- [REST API](/it/rest-api/) - Integrare Onetime Secret con le proprie applicazioni.
 - [Migliori pratiche di sicurezza](/it/security-best-practices/) - Garantire la massima sicurezza nella condivisione di informazioni sensibili.

@@ -21,7 +21,7 @@ description: Ваш центр документації, посібників т
 ## Інтеграція з API
 
 - **[Документація REST API](https://api.onetimesecret.com)** — Повна довідка API (v1, v2, v3)
-- **[Клієнтські бібліотеки](/en/resources/client-libraries/)** — SDK та інтеграції від спільноти
+- **[Клієнтські бібліотеки](/uk/resources/client-libraries/)** — SDK та інтеграції від спільноти
 
 ## Запуск власного екземпляра
 

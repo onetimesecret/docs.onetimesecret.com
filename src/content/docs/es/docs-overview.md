@@ -13,7 +13,7 @@ Empieza con nuestra sección [Introducción](/es/introduction/) para aprender lo
 
 ## Secciones clave
 
-- Enlaces secretos](/es/secret-links/) - Aprende a crear y compartir secretos de un solo uso.
-- Custom Domains](/es/custom-domains/) - Configure su propia experiencia de compartir secretos de marca
-- REST API](/es/rest-api/) - Integre Onetime Secret con sus aplicaciones
-- Security Best Practices](/es/security-best-practices/) - Garantice la máxima seguridad al compartir información confidencial
+- [Enlaces secretos](/es/secret-links/) - Aprende a crear y compartir secretos de un solo uso.
+- [Custom Domains](/es/custom-domains/) - Configure su propia experiencia de compartir secretos de marca
+- [REST API](/es/rest-api/) - Integre Onetime Secret con sus aplicaciones
+- [Security Best Practices](/es/security-best-practices/) - Garantice la máxima seguridad al compartir información confidencial

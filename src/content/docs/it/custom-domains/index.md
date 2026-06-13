@@ -44,7 +44,7 @@ Per impostare un dominio personalizzato:
 5. Seguite le istruzioni passo-passo fornite per la configurazione del DNS.
 6. Attendere la verifica del dominio. Se disponibile, fare clic sul pulsante "Verifica" per accelerare il processo. Potrebbe essere necessario aggiornare la pagina.
 
-Per istruzioni dettagliate, compreso il modo in cui scegliere tra le regioni UE e USA, consultare la nostra [Guida all'impostazione del dominio personalizzato] (/docs/custom-domains/setup-guide).
+Per istruzioni dettagliate, compreso il modo in cui scegliere tra le regioni UE e USA, consultare la nostra [Guida all'impostazione del dominio personalizzato](/it/custom-domains/setup-guide).
 
 ## Personalizzazione del marchio
 
@@ -56,7 +56,7 @@ Gli utenti del dominio personalizzato possono personalizzare l'interfaccia di co
 4. Anteprima delle modifiche in tempo reale
 5. Abilita/disabilita la creazione del segreto pubblico
 
-Per istruzioni dettagliate sul marchio, consultare la nostra [Guida al marchio] (/docs/custom-domains/brand-guide).
+Per istruzioni dettagliate sul marchio, consultare la nostra [Guida al marchio](/it/custom-domains/brand-guide).
 
 
 ## Considerazioni importanti

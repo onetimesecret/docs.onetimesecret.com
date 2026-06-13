@@ -61,7 +61,7 @@ Before starting your translation:
 
 - [ ] All internal documentation links use locale prefix:
   - ✅ Correct: `[Guide](/fr/translations/guide)`
-  - ❌ Wrong: `[Guide](/translations/guide)`
+  - ❌ Wrong: `[Guide](/en/translations/guide)`
   - ❌ Wrong: `[Guide](translations/guide)`
 - [ ] Link text is translated appropriately
 - [ ] External links remain in English (unless linking to localized external content)

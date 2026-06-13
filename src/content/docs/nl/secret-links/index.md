@@ -19,10 +19,10 @@ Geheime koppelingen zijn unieke, zelfvernietigende URL's waarmee je gevoelige in
 
 ## Belangrijkste voordelen
 
-- Eenmalig gebruik**: Elke link werkt maar één keer, waardoor onbevoegde toegang wordt voorkomen.
+- **Eenmalig gebruik**: Elke link werkt maar één keer, waardoor onbevoegde toegang wordt voorkomen.
 - **Automatische vernietiging**: Inhoud wordt verwijderd na het bekijken, zonder digitaal spoor achter te laten.
-- Veilig delen**: Ideaal voor wachtwoorden, privéberichten en andere gevoelige gegevens.
-- Eenvoudig en gebruiksvriendelijk**: Geen account nodig voor basisgebruik.
+- **Veilig delen**: Ideaal voor wachtwoorden, privéberichten en andere gevoelige gegevens.
+- **Eenvoudig en gebruiksvriendelijk**: Geen account nodig voor basisgebruik.
 
 ## Gebruikscases
 

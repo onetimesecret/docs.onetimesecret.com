@@ -56,7 +56,7 @@ Gebruikers van een aangepast domein kunnen hun interface voor het delen van gehe
 4. Wijzigingen in real-time bekijken
 5. Aanmaken van een publiek geheim in-/uitschakelen
 
-Voor gedetailleerde brandinginstructies, zie onze [Brand Guide] (/docs/custom-domains/brand-guide).
+Voor gedetailleerde brandinginstructies, zie onze [Brand Guide](/nl/custom-domains/brand-guide).
 
 
 ## Belangrijke overwegingen

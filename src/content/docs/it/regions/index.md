@@ -53,7 +53,7 @@ Onetime Secret utilizza un'architettura share-nothing, che garantisce il complet
 
 - **Account separati**: La creazione di un account su qualsiasi dominio regionale è completamente separata dagli account su altri domini, anche se si utilizza lo stesso indirizzo e-mail.
 - **Nessuna operazione tra centri dati**: Non è possibile eseguire operazioni (come la masterizzazione di un segreto) tra i vari data center. Ogni centro mantiene il proprio set di segreti e dati utente.
-- Fatturazione coerente per gli utenti a pagamento**: Per gli account a pagamento, mentre i dati dell'utente non vengono condivisi tra i centri, lo stato dell'abbonamento viene riconosciuto in tutte le regioni attraverso il nostro fornitore di pagamenti, Stripe.
+- **Fatturazione coerente per gli utenti a pagamento**: Per gli account a pagamento, mentre i dati dell'utente non vengono condivisi tra i centri, lo stato dell'abbonamento viene riconosciuto in tutte le regioni attraverso il nostro fornitore di pagamenti, Stripe.
 
 ## Come scegliere la regione
 
@@ -115,11 +115,11 @@ Quando si configura l'account Onetime Secret o si configura un dominio personali
 
 1. Per i nuovi account: Selezionare la regione preferita durante il processo di registrazione.
 2. Per gli account esistenti: Contattare il nostro team di assistenza per discutere le opzioni di migrazione della regione.
-3. Per i domini personalizzati: Specificare la regione prescelta durante la configurazione delle impostazioni DNS (consultare la nostra [Guida all'impostazione dei domini personalizzati] (/docs/custom-domains/setup-guide) per istruzioni dettagliate).
+3. Per i domini personalizzati: Specificare la regione prescelta durante la configurazione delle impostazioni DNS (consultare la nostra [Guida all'impostazione dei domini personalizzati](/it/custom-domains/setup-guide) per istruzioni dettagliate).
 
 ## Domande frequenti
 
-**D: Posso cambiare la mia regione dopo aver creato il mio account?
+**D: Posso cambiare la mia regione dopo aver creato il mio account?**
 R: Sì, è possibile cambiare la regione creando un nuovo account con lo stesso indirizzo e-mail e accedendo alla schermata dell'account. Se si ha un abbonamento attivo, l'account verrà aggiornato automaticamente (potrebbe essere necessario aggiornare la pagina).
 
 Attenzione:
@@ -131,11 +131,11 @@ Attenzione:
   3. Quando si aggiunge nuovamente il dominio, utilizzare un sottodominio unico per evitare conflitti con i collegamenti esistenti.
   4. In seguito, potrete aggiungere il vostro dominio preferito (se necessario), in modo da poter iniziare a inviare nuovi link con il vostro dominio preferito.
 
-**D: La scelta della regione influisce sulla sicurezza dei miei segreti?
+**D: La scelta della regione influisce sulla sicurezza dei miei segreti?**
 R: No, tutte le regioni offrono lo stesso elevato livello di sicurezza. La scelta influisce principalmente sulla residenza dei dati e sulla latenza potenziale.
 
-**D: Ci sono differenze di prezzo tra le varie regioni?
-R: Attualmente, i nostri prezzi sono coerenti in tutte le regioni. Per informazioni più aggiornate, consultare la nostra [pagina dei prezzi] (https://onetimesecret.com/pricing).
+**D: Ci sono differenze di prezzo tra le varie regioni?**
+R: Attualmente, i nostri prezzi sono coerenti in tutte le regioni. Per informazioni più aggiornate, consultare la nostra [pagina dei prezzi](https://onetimesecret.com/pricing).
 
 ## Hai bisogno di aiuto?
 

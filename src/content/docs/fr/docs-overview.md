@@ -13,7 +13,7 @@ Commencez par notre section [Introduction](/fr/introduction/) pour apprendre les
 
 ## Sections clés
 
-- Liens secrets](/fr/secret-links/) - Apprenez à créer et à partager des secrets uniques.
-- Domaines personnalisés](/fr/custom-domains/) - Créez votre propre expérience de partage de secrets.
-- API REST](/fr/rest-api/) - Intégrez Onetime Secret à vos applications
-- Security Best Practices](/fr/security-best-practices/) - Assurez une sécurité maximale lors du partage d'informations sensibles.
+- [Liens secrets](/fr/secret-links/) - Apprenez à créer et à partager des secrets uniques.
+- [Domaines personnalisés](/fr/custom-domains/) - Créez votre propre expérience de partage de secrets.
+- [API REST](/fr/rest-api/) - Intégrez Onetime Secret à vos applications
+- [Security Best Practices](/fr/security-best-practices/) - Assurez une sécurité maximale lors du partage d'informations sensibles.

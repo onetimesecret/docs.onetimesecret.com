@@ -20,9 +20,9 @@ Les liens secrets sont des URL uniques et autodestructifs qui vous permettent de
 ## Principaux avantages
 
 - **Utilisation unique** : Chaque lien ne fonctionne qu'une seule fois, ce qui empêche tout accès non autorisé.
-- Destruction automatique** : Le contenu est supprimé après avoir été visionné, sans laisser de trace numérique.
-- Partage sécurisé** : Idéal pour les mots de passe, les messages privés et autres données sensibles.
-- Simplicité et convivialité** : Aucun compte n'est nécessaire pour l'utilisation de base.
+- **Destruction automatique** : Le contenu est supprimé après avoir été visionné, sans laisser de trace numérique.
+- **Partage sécurisé** : Idéal pour les mots de passe, les messages privés et autres données sensibles.
+- **Simplicité et convivialité** : Aucun compte n'est nécessaire pour l'utilisation de base.
 
 ## Cas d'utilisation
 

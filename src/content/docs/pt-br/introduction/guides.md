@@ -21,7 +21,7 @@ Bem-vindo ao Onetime Secret Docs. Encontre o que você precisa para começar, in
 ## Integre com a API
 
 - **[Documentação da API REST](https://api.onetimesecret.com)** — Referência completa da API (v1, v2, v3)
-- **[Bibliotecas Cliente](/en/resources/client-libraries/)** — SDKs e integrações da comunidade
+- **[Bibliotecas Cliente](/pt-br/resources/client-libraries/)** — SDKs e integrações da comunidade
 
 ## Execute sua própria instância
 
