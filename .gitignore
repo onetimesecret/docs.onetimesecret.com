@@ -8,6 +8,10 @@ data
 # Node dependencies
 node_modules
 
+# npm lockfile is not used — this repo installs/builds with pnpm only.
+# Removing it keeps Dependabot/Renovate from scanning a second, drifting manifest.
+package-lock.json
+
 # Logs
 logs
 *.log
