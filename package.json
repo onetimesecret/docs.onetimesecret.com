@@ -46,11 +46,13 @@
     "typescript": "^5.9.3"
   },
   "overrides": {
-    "yaml": "^2.9.0"
+    "yaml": "^2.9.0",
+    "esbuild": "^0.28.1"
   },
   "pnpm": {
     "overrides": {
-      "yaml": "^2.9.0"
+      "yaml": "^2.9.0",
+      "esbuild": "^0.28.1"
     }
   }
 }
