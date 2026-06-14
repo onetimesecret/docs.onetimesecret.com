@@ -21,15 +21,15 @@
     "generate:for-translators": "./bin/generate-for-translators all"
   },
   "dependencies": {
-    "@astrojs/markdoc": "^0.15.11",
-    "@astrojs/react": "^4.4.2",
-    "@astrojs/starlight": "^0.37.7",
-    "@astrojs/starlight-markdoc": "^0.5.1",
-    "@astrojs/starlight-tailwind": "^4.0.2",
-    "@astrojs/vue": "^5.1.4",
-    "@tailwindcss/vite": "^4.2.1",
-    "accessible-astro-components": "^5.2.0",
-    "astro": "^5.18.1",
+    "@astrojs/markdoc": "^1.0.6",
+    "@astrojs/react": "^5.0.7",
+    "@astrojs/starlight": "^0.40.0",
+    "@astrojs/starlight-markdoc": "^0.6.0",
+    "@astrojs/starlight-tailwind": "^5.0.0",
+    "@astrojs/vue": "^6.0.1",
+    "@tailwindcss/vite": "^4.3.1",
+    "accessible-astro-components": "^5.3.1",
+    "astro": "^6.4.6",
     "devalue": "^5.8.1",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
@@ -40,38 +40,16 @@
     "vue": "^3.5.30"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.8",
+    "@astrojs/check": "^0.9.9",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "typescript": "^5.9.3"
   },
   "overrides": {
-    "defu": "^6.1.7",
-    "devalue": "^5.8.1",
-    "fast-uri": "^3.1.2",
-    "h3": "^1.15.11",
-    "picomatch@2": "^2.3.2",
-    "picomatch@4": "^4.0.4",
-    "postcss": "^8.5.10",
-    "rollup": "^4.60.1",
-    "smol-toml": "^1.6.1",
-    "svgo": "^4.0.1",
-    "vite": "^6.4.3",
     "yaml": "^2.9.0"
   },
   "pnpm": {
     "overrides": {
-      "defu": "^6.1.7",
-      "devalue": "^5.8.1",
-      "fast-uri": "^3.1.2",
-      "h3": "^1.15.11",
-      "picomatch@2": "^2.3.2",
-      "picomatch@4": "^4.0.4",
-      "postcss": "^8.5.10",
-      "rollup": "^4.60.1",
-      "smol-toml": "^1.6.1",
-      "svgo": "^4.0.1",
-      "vite": "^6.4.3",
       "yaml": "^2.9.0"
     }
   }
