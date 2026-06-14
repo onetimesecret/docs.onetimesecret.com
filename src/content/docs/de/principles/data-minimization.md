@@ -5,7 +5,7 @@ description: Unsere Verpflichtung, nur die wesentlichen Daten zu erheben, die f�
 
 # Wir sammeln nur das Nötigste
 
-**description:** Bei Onetime Secret erheben wir nur die Daten, die für die Bereitstellung unseres Dienstes erforderlich sind: temporäre Geheimnisse und die Mindestkontoinformationen, die für kostenpflichtige Abonnements benötigt werden. So bleiben die Dinge einfach und sicher.
+**Beschreibung:** Bei Onetime Secret erheben wir nur die Daten, die für die Bereitstellung unseres Dienstes erforderlich sind: temporäre Geheimnisse und die Mindestkontoinformationen, die für kostenpflichtige Abonnements benötigt werden. So bleiben die Dinge einfach und sicher.
 
 **Warum das wichtig ist:**
 

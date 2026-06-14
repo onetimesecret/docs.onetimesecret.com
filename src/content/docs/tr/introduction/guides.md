@@ -21,7 +21,7 @@ Onetime Secret Belgelerine hoş geldiniz. Başlamak, entegre etmek veya kendi su
 ## API ile entegrasyon
 
 - **[REST API Dokümantasyonu](https://api.onetimesecret.com)** — Tam API referansı (v1, v2, v3)
-- **[İstemci Kütüphaneleri](/en/resources/client-libraries/)** — Topluluk SDK'ları ve entegrasyonlar
+- **[İstemci Kütüphaneleri](/tr/resources/client-libraries/)** — Topluluk SDK'ları ve entegrasyonlar
 
 ## Kendi sunucunuzu çalıştırın
 

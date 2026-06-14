@@ -21,7 +21,7 @@ Välkommen till Onetime Secret Docs. Hitta det du behöver för att komma igång
 ## Integrera med API:et
 
 - **[REST API Dokumentation](https://api.onetimesecret.com)** — Komplett API-referens (v1, v2, v3)
-- **[Klientbibliotek](/en/resources/client-libraries/)** — Community SDK:er och integrationer
+- **[Klientbibliotek](/sv/resources/client-libraries/)** — Community SDK:er och integrationer
 
 ## Kör din egen instans
 

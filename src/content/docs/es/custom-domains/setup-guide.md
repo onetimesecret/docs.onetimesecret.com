@@ -21,8 +21,8 @@ Antes de configurar su dominio personalizado, es importante que entienda la dife
 
 Onetime Secret ofrece dos regiones de centros de datos: EU y US. Cuando configure su dominio personalizado, tendrá que elegir qué región prefiere para almacenar sus datos. Esta elección es importante por varias razones:
 
-- Para particulares**: Puede elegir en función de sus preferencias personales, como la proximidad para un acceso potencialmente más rápido o la preocupación por la soberanía de los datos personales.
-- Para empresas**: Su elección puede depender de sus obligaciones de localización de datos, como el cumplimiento del GDPR, las directrices estatales o provinciales. Asegúrese de seleccionar la región que mejor se adapte a sus requisitos normativos.
+- **Para particulares**: Puede elegir en función de sus preferencias personales, como la proximidad para un acceso potencialmente más rápido o la preocupación por la soberanía de los datos personales.
+- **Para empresas**: Su elección puede depender de sus obligaciones de localización de datos, como el cumplimiento del GDPR, las directrices estatales o provinciales. Asegúrese de seleccionar la región que mejor se adapte a sus requisitos normativos.
 
 Tenga en cuenta sus necesidades y requisitos específicos a la hora de tomar esta decisión. Si desea información más detallada sobre las regiones de nuestros centros de datos y cómo elegir la que mejor se adapte a sus necesidades, consulte nuestra guía [Regiones de los centros de datos](/es/regions).
 

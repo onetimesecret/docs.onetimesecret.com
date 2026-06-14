@@ -22,7 +22,7 @@ I link segreti sono URL unici e autodistruttivi che consentono di condividere in
 - **Utilizzo una volta sola**: Ogni collegamento funziona solo una volta, impedendo l'accesso non autorizzato.
 - **Distruzione automatica**: Il contenuto viene eliminato dopo la visione, senza lasciare alcuna traccia digitale.
 - **Condivisione sicura**: Ideale per password, messaggi privati e altri dati sensibili.
-- Semplice e facile da usare**: Non è richiesto alcun account per l'uso di base.
+- **Semplice e facile da usare**: Non è richiesto alcun account per l'uso di base.
 
 ## Casi d'uso
 

@@ -23,8 +23,8 @@ Door gebruik te maken van aangepaste domeinen deelt u niet alleen geheimen, maar
 ## Problemen oplossen bij veelvoorkomende installatieproblemen
 
 - **DNS-overdracht**: Het kan tot 48 uur duren voordat wijzigingen volledig zijn doorgevoerd. Wees geduldig en probeer het later opnieuw als verificatie in eerste instantie mislukt.
-- Onjuiste DNS-records**: Controleer uw DNS-instellingen nogmaals aan de hand van de instructies voor de door u gekozen regio.
-- Problemen met hetSSL-certificaat**: Neem contact op met ons ondersteuningsteam als u SSL-gerelateerde problemen ondervindt.
+- **Onjuiste DNS-records**: Controleer uw DNS-instellingen nogmaals aan de hand van de instructies voor de door u gekozen regio.
+- **Problemen met hetSSL-certificaat**: Neem contact op met ons ondersteuningsteam als u SSL-gerelateerde problemen ondervindt.
 - **Verificatie van domeineigendom**: Controleer of u de volledige controle heeft over het domein dat u probeert in te stellen.
 - **Regio selectie**: Als u niet zeker weet welke regio u moet kiezen, raadpleeg dan onze gids [Datacenterregio's](/nl/regions) of neem contact op met ons ondersteuningsteam.
 

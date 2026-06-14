@@ -22,7 +22,7 @@ Voordat je je aangepaste domein instelt, is het belangrijk om het verschil tusse
 Onetime Secret biedt twee datacenterregio's: EU en VS. Bij het instellen van je eigen domein, moet je kiezen welke regio je verkiest voor het opslaan van je gegevens. Deze keuze is om verschillende redenen belangrijk:
 
 - **Voor particulieren**: U kunt kiezen op basis van uw persoonlijke voorkeur, zoals nabijheid voor mogelijk snellere toegang of zorgen over de soevereiniteit van persoonlijke gegevens.
-- Voor bedrijven**: Uw keuze kan afhangen van uw verplichtingen met betrekking tot datalocatie, zoals naleving van GDPR-, staats- of provinciale richtlijnen. Zorg ervoor dat u de regio selecteert die het beste overeenkomt met uw wettelijke vereisten.
+- **Voor bedrijven**: Uw keuze kan afhangen van uw verplichtingen met betrekking tot datalocatie, zoals naleving van GDPR-, staats- of provinciale richtlijnen. Zorg ervoor dat u de regio selecteert die het beste overeenkomt met uw wettelijke vereisten.
 
 Houd bij het maken van deze keuze rekening met uw specifieke wensen en eisen. Voor meer gedetailleerde informatie over onze datacenterregio's en hoe u de juiste regio voor uw behoeften kunt kiezen, raadpleegt u onze gids [Datacenterregio's](/nl/regions).
 

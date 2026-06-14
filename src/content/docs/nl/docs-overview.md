@@ -13,7 +13,7 @@ Begin met onze [Introductie](/nl/introduction/) sectie om de basis van Onetime S
 
 ## Belangrijkste secties
 
-- Geheime koppelingen](/en/secret-links/) - Leer hoe je eenmalige geheimen kunt maken en delen
-- Aangepaste domeinen](/nl/custom-domains/) - Stel uw eigen ervaring in voor het delen van geheimen onder uw eigen merknaam
-- REST API](/nl/rest-api/) - Integreer Onetime Secret met uw applicaties
-- Security Best Practices](/nl/security-best-practices/) - Zorg voor maximale veiligheid bij het delen van gevoelige informatie
+- [Geheime koppelingen](/nl/secret-links/) - Leer hoe je eenmalige geheimen kunt maken en delen
+- [Aangepaste domeinen](/nl/custom-domains/) - Stel uw eigen ervaring in voor het delen van geheimen onder uw eigen merknaam
+- [REST API](/nl/rest-api/) - Integreer Onetime Secret met uw applicaties
+- [Security Best Practices](/nl/security-best-practices/) - Zorg voor maximale veiligheid bij het delen van gevoelige informatie

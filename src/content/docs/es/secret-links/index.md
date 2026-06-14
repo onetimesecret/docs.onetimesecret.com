@@ -19,10 +19,10 @@ Los enlaces secretos son URL únicas que se autodestruyen y permiten compartir i
 
 ## Principales ventajas
 
-- Uso único**: Cada enlace funciona una sola vez, evitando accesos no autorizados.
-- Destrucción automática**: El contenido se elimina después de verlo, sin dejar rastro digital.
-- Uso compartido seguro**: Ideal para contraseñas, mensajes privados y otros datos confidenciales.
-- Sencillo y fácil de usar**: No se requiere una cuenta para el uso básico.
+- **Uso único**: Cada enlace funciona una sola vez, evitando accesos no autorizados.
+- **Destrucción automática**: El contenido se elimina después de verlo, sin dejar rastro digital.
+- **Uso compartido seguro**: Ideal para contraseñas, mensajes privados y otros datos confidenciales.
+- **Sencillo y fácil de usar**: No se requiere una cuenta para el uso básico.
 
 ## Casos de uso
 

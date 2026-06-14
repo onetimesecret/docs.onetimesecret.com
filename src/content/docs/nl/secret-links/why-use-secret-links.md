@@ -12,18 +12,18 @@ Secret Links zijn ontworpen met beveiliging als topprioriteit:
 
 - **Eenmalige toegang**: Elke link kan maar één keer worden bekeken, waardoor het risico op onbevoegde toegang drastisch wordt verminderd.
 - **Zelfvernietiging**: Na het bekijken worden de link en de inhoud ervan permanent vernietigd, waardoor er geen digitale voetafdruk wordt achtergelaten.
-- Versleutelde overdracht**: Je gegevens worden end-to-end versleuteld, zodat ze tijdens het transport beschermd blijven.
+- **Versleutelde overdracht**: Je gegevens worden end-to-end versleuteld, zodat ze tijdens het transport beschermd blijven.
 
 ## 2. Eenvoud en gebruiksgemak
 
-- Geen account nodig**: Voor basisgebruik hoef je geen account aan te maken of extra wachtwoorden te onthouden.
-- Gebruiksvriendelijke interface**: Het maken en delen van een geheime link is een eenvoudig proces dat slechts een paar klikken in beslag neemt.
-- Compatibel met meerdere platforms**: Geheime koppelingen werken op elk apparaat met een webbrowser, waardoor het delen op verschillende systemen moeiteloos verloopt.
+- **Geen account nodig**: Voor basisgebruik hoef je geen account aan te maken of extra wachtwoorden te onthouden.
+- **Gebruiksvriendelijke interface**: Het maken en delen van een geheime link is een eenvoudig proces dat slechts een paar klikken in beslag neemt.
+- **Compatibel met meerdere platforms**: Geheime koppelingen werken op elk apparaat met een webbrowser, waardoor het delen op verschillende systemen moeiteloos verloopt.
 
 ## 3. Controle over gedeelde informatie
 
 - **Verloopopties**: Stel aangepaste verlooptijden in voor je links, zodat je zelf kunt bepalen hoe lang de informatie beschikbaar is.
-- Verbrand na lezen**: Zodra de ontvanger het geheim bekijkt, is het voorgoed verdwenen. Zo blijft de informatie niet hangen.
+- **Verbrand na lezen**: Zodra de ontvanger het geheim bekijkt, is het voorgoed verdwenen. Zo blijft de informatie niet hangen.
 - **Toegangsmeldingen**: (Voor premium gebruikers) Ontvang meldingen wanneer je geheim is bekeken.
 
 ## 4. Naleving en beste praktijken

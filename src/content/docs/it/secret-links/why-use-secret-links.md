@@ -16,15 +16,15 @@ I collegamenti segreti sono progettati con la massima priorità per la sicurezza
 
 ## 2. Semplicità e facilità d'uso
 
-- Non è richiesto alcun account**: Per l'uso di base, non è necessario creare un account o ricordare password aggiuntive.
-- Interfaccia facile da usare**: Creare e condividere un link segreto è un processo semplice che richiede solo pochi clic.
-- Compatibilità multipiattaforma**: I link segreti funzionano su qualsiasi dispositivo dotato di browser web, rendendo semplice la condivisione su diversi sistemi.
+- **Non è richiesto alcun account**: Per l'uso di base, non è necessario creare un account o ricordare password aggiuntive.
+- **Interfaccia facile da usare**: Creare e condividere un link segreto è un processo semplice che richiede solo pochi clic.
+- **Compatibilità multipiattaforma**: I link segreti funzionano su qualsiasi dispositivo dotato di browser web, rendendo semplice la condivisione su diversi sistemi.
 
 ## 3. Controllo delle informazioni condivise
 
 - **Opzioni di scadenza**: Impostate tempi di scadenza personalizzati per i vostri link, in modo da avere il controllo sulla durata di disponibilità delle informazioni.
 - **Brucia dopo la lettura**: Una volta che il destinatario ha visualizzato il segreto, è sparito per sempre, garantendo che le informazioni non rimangano nel tempo.
-- Notifiche di accesso**: (Per gli utenti premium) Ricevere notifiche quando il vostro segreto è stato visualizzato.
+- **Notifiche di accesso**: (Per gli utenti premium) Ricevere notifiche quando il vostro segreto è stato visualizzato.
 
 ## 4. Conformità e migliori pratiche
 
@@ -34,7 +34,7 @@ I collegamenti segreti sono progettati con la massima priorità per la sicurezza
 ## 5. Versatilità
 
 - **Molteplici casi d'uso**: Dalla condivisione di password all'invio di informazioni aziendali riservate, i link segreti sono abbastanza versatili per vari scenari.
-- Integrazione API**: Per gli sviluppatori, la nostra API consente una perfetta integrazione dei link segreti nelle applicazioni e nei flussi di lavoro.
+- **Integrazione API**: Per gli sviluppatori, la nostra API consente una perfetta integrazione dei link segreti nelle applicazioni e nei flussi di lavoro.
 
 ## 6. La pace della mente
 

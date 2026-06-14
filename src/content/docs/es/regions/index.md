@@ -9,7 +9,7 @@ Onetime Secret ofrece cuatro regiones de centros de datos: Unión Europea (UE), 
 
 Elegir la región adecuada para el centro de datos es crucial por varias razones:
 
-1. **Soberanía de los datos Diferentes regiones tienen diferentes leyes y reglamentos de protección de datos.
+1. **Soberanía de los datos**: Diferentes regiones tienen diferentes leyes y reglamentos de protección de datos.
 2. **Latencia**: Elegir una región más cercana a su base de usuarios principal puede reducir la latencia.
 3. **Cumplimiento**: Algunas organizaciones tienen requisitos específicos sobre dónde pueden almacenarse sus datos.
 
@@ -17,33 +17,33 @@ Elegir la región adecuada para el centro de datos es crucial por varias razones
 
 ### Unión Europea (UE)
 
-- Ubicación**: Dentro de la Unión Europea (Nuremberg)
+- **Ubicación**: Dentro de la Unión Europea (Nuremberg)
 - **URL**: [https://eu.onetimesecret.com](https://eu.onetimesecret.com)
-- Características principales**:
+- **Características principales**:
   - Cumple con GDPR y otras normativas de protección de datos de la UE
   - Ideal para usuarios europeos o que atienden principalmente a clientes europeos
 
 ### Canada (CA)
 
-- Ubicación**: Dentro de Canadá (Toronto)
+- **Ubicación**: Dentro de Canadá (Toronto)
 - **URL**: [https://ca.onetimesecret.com](https://ca.onetimesecret.com)
-- Características principales
+- **Características principales**:
   - Conforme a la LPRPDE y a las leyes canadienses de protección de datos
   - Adecuado para usuarios canadienses o que atienden principalmente a clientes canadienses
 
 ### Aotearoa Nueva Zelanda (NZ)
 
-- Ubicación**: Dentro de Nueva Zelanda (Porirua)
+- **Ubicación**: Dentro de Nueva Zelanda (Porirua)
 - **URL**: [https://nz.onetimesecret.com](https://nz.onetimesecret.com)
-- Características principales
+- **Características principales**:
   - Cumple con la Ley de Privacidad de Nueva Zelanda y la normativa local
   - Adecuado para usuarios de Nueva Zelanda o para clientes de Oceanía
 
 ### Estados Unidos (US)
 
-- Ubicación**: Dentro de los Estados Unidos (Hillsboro, Oregon)
+- **Ubicación**: Dentro de los Estados Unidos (Hillsboro, Oregon)
 - **URL**: [https://us.onetimesecret.com](https://us.onetimesecret.com)
-- Características principales
+- **Características principales**:
   - Cumple la legislación estadounidense sobre protección de datos
   - Adecuado para usuarios establecidos en EE.UU. o que atienden principalmente a clientes de EE.UU.
 
@@ -51,7 +51,7 @@ Elegir la región adecuada para el centro de datos es crucial por varias razones
 
 Onetime Secret emplea una arquitectura de no compartir nada, lo que garantiza el aislamiento total de los datos entre regiones:
 
-- Cuentas separadas**: La creación de una cuenta en cualquier dominio regional es totalmente independiente de las cuentas de otros dominios, incluso si utiliza la misma dirección de correo electrónico.
+- **Cuentas separadas**: La creación de una cuenta en cualquier dominio regional es totalmente independiente de las cuentas de otros dominios, incluso si utiliza la misma dirección de correo electrónico.
 - **No hay operaciones entre centros de datos**: No se pueden realizar operaciones (como quemar un secreto) entre centros de datos. Cada centro mantiene su propio conjunto de secretos y datos de usuario.
 - **Facturación coherente para usuarios de pago**: Para las cuentas de pago, aunque no se comparten datos de usuario entre centros, su estado de suscripción se reconoce en todas las regiones a través de nuestro proveedor de pagos, Stripe.
 
@@ -132,10 +132,10 @@ Tenga en cuenta:
   4. Más adelante, puede añadir su dominio preferido (si es necesario) para comenzar a enviar nuevos enlaces con su dominio preferido
 
 
-**P: ¿Afecta mi elección de región a la seguridad de mis secretos?
+**P: ¿Afecta mi elección de región a la seguridad de mis secretos?**
 R: No, todas las regiones ofrecen el mismo nivel de seguridad. La elección afecta principalmente a la residencia de los datos y a la latencia potencial.
 
-**P: ¿Existen diferencias de precio entre regiones?
+**P: ¿Existen diferencias de precio entre regiones?**
 R: Actualmente, nuestros precios son los mismos en todas las regiones. Consulte nuestra [página de precios](https://onetimesecret.com/pricing) para obtener la información más actualizada.
 
 ## ¿Necesitas ayuda?

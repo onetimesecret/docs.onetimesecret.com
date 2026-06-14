@@ -44,7 +44,7 @@ Pour configurer un domaine personnalisé :
 5. Suivez les instructions pas à pas fournies pour la configuration du DNS.
 6. Attendez que le domaine soit vérifié. Si possible, cliquez sur le bouton "Vérifier" pour accélérer le processus. Il se peut que vous deviez rafraîchir la page.
 
-Pour des instructions détaillées, y compris comment choisir entre les régions UE et US, veuillez vous référer à notre [Guide de configuration des domaines personnalisés] (/docs/custom-domains/setup-guide).
+Pour des instructions détaillées, y compris comment choisir entre les régions UE et US, veuillez vous référer à notre [Guide de configuration des domaines personnalisés](/fr/custom-domains/setup-guide).
 
 ## Personnalisation de la marque
 
@@ -56,7 +56,7 @@ Les utilisateurs du domaine personnalisé peuvent personnaliser leur interface d
 4. Prévisualisation des changements en temps réel
 5. Activer/désactiver la création de secrets publics
 
-Pour des instructions détaillées sur le branding, voir notre [Guide du branding] (/docs/custom-domains/brand-guide).
+Pour des instructions détaillées sur le branding, voir notre [Guide du branding](/fr/custom-domains/brand-guide).
 
 
 ## Considérations importantes
