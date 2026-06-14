@@ -142,7 +142,7 @@ This creates a professional but approachable tone, standard for tech documentati
 ✅ CORRECT: [primeiros passos](/pt-br/introduction)
 ✅ CORRECT: [segurança](/pt-br/security/best-practices)
 
-❌ WRONG: [documentação](/pt-br/docs-overview)  # Wrong locale code
+❌ WRONG: [documentação](/pt/docs-overview)  # Wrong locale code
 ❌ WRONG: [documentação](docs-overview)      # Missing locale prefix
 ```
 

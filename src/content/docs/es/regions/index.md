@@ -27,7 +27,7 @@ Elegir la región adecuada para el centro de datos es crucial por varias razones
 
 - **Ubicación**: Dentro de Canadá (Toronto)
 - **URL**: [https://ca.onetimesecret.com](https://ca.onetimesecret.com)
-- Características principales
+- **Características principales**:
   - Conforme a la LPRPDE y a las leyes canadienses de protección de datos
   - Adecuado para usuarios canadienses o que atienden principalmente a clientes canadienses
 
@@ -35,7 +35,7 @@ Elegir la región adecuada para el centro de datos es crucial por varias razones
 
 - **Ubicación**: Dentro de Nueva Zelanda (Porirua)
 - **URL**: [https://nz.onetimesecret.com](https://nz.onetimesecret.com)
-- Características principales
+- **Características principales**:
   - Cumple con la Ley de Privacidad de Nueva Zelanda y la normativa local
   - Adecuado para usuarios de Nueva Zelanda o para clientes de Oceanía
 
@@ -43,7 +43,7 @@ Elegir la región adecuada para el centro de datos es crucial por varias razones
 
 - **Ubicación**: Dentro de los Estados Unidos (Hillsboro, Oregon)
 - **URL**: [https://us.onetimesecret.com](https://us.onetimesecret.com)
-- Características principales
+- **Características principales**:
   - Cumple la legislación estadounidense sobre protección de datos
   - Adecuado para usuarios establecidos en EE.UU. o que atienden principalmente a clientes de EE.UU.
 
