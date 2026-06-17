@@ -7,19 +7,13 @@ sidebar:
 
 Run your own private instance of Onetime Secret with full control over your data, security, and deployment.
 
-<!-- EDITORS: This caution block is intentional. v0.23 still provides a smoother
-     onboarding experience than v0.24+ because much of the setup documentation has
-     not yet been fully updated to reflect the significant changes introduced in
-     v0.24. Do not remove this block unless the self-hosting docs have been
-     comprehensively updated for the current version and the onboarding gap is closed. -->
-:::caution[March 2026 — Self-hosting documentation in transition]
-We are in the middle of transitioning between **v0.23** and **v0.24** (the `main` branch). Some of our self-hosting documentation is stale and we are [actively working to improve it](https://github.com/onetimesecret/onetimesecret/issues/2628).
+:::tip[Current release: v0.25]
+The current stable release is **v0.25** (the `main` branch). It runs in two modes:
 
-**If you just want to get something running**, we recommend the `rel/0.23` branch. It only needs a couple of environment variables and Redis, and we are still actively pushing fixes and small updates to it.
+- **Simple mode** — the easiest path. Only needs Redis and a couple of environment variables. Accounts work the same as they always have. Start here with the [Quick Start](#quick-start-options) below.
+- **Full mode** — adds account features (MFA, SSO, WebAuthn, organizations) backed by PostgreSQL and RabbitMQ.
 
-```bash
-git clone -b rel/0.23 https://github.com/onetimesecret/onetimesecret.git
-```
+If you are coming from v0.22 or v0.23, follow the [Upgrading to v0.24+](./upgrading-v0-24) guide, which covers the configuration and data-model changes and how to pick an auth mode.
 :::
 
 ## Why Self-Host?
@@ -42,7 +36,7 @@ docker run -p 6379:6379 -d redis:bookworm
 docker run -p 3000:3000 -d \
   -e REDIS_URL=redis://host.docker.internal:6379/0 \
   -e SECRET="$(openssl rand -hex 32)" \
-  onetimesecret/onetimesecret:v0.25.8
+  onetimesecret/onetimesecret:v0.25.10
 ```
 
 Access at `http://localhost:3000`.
