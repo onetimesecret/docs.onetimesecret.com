@@ -60,7 +60,7 @@ For dem, der foretrækker manuel opsætning, skal du bruge:
 
 Du skal bygge frontend-aktiverne med `pnpm install && pnpm run build:local` før du kører applikationen.
 
-Se [INSTALL.md](https://github.com/onetimesecret/onetimesecret/blob/main/INSTALL.md) for komplette manuelle installationsdetaljer.
+Se [README](https://github.com/onetimesecret/onetimesecret#readme) for komplette manuelle installationsdetaljer.
 
 ## Verificering
 
@@ -84,5 +84,5 @@ Nu hvor din instans kører:
 ## Få hjælp
 
 - **Dokumentation**: Gennemse vores [konfigurationsreference](./configuration)
-- **Community**: Deltag i diskussioner på [GitHub](https://github.com/onetimesecret/onetimesecret/discussions)
+- **Community**: Deltag i diskussioner på [GitHub](https://github.com/onetimesecret/onetimesecret)
 - **Problemer**: Rapporter fejl på vores [issue tracker](https://github.com/onetimesecret/onetimesecret/issues)

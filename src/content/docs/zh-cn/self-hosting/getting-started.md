@@ -60,7 +60,7 @@ docker run -p 3000:3000 -d \
 
 在运行应用程序之前，您需要使用 `pnpm install && pnpm run build:local` 构建前端资源。
 
-有关完整的手动安装详细信息，请参阅 [INSTALL.md](https://github.com/onetimesecret/onetimesecret/blob/main/INSTALL.md)。
+有关完整的手动安装详细信息，请参阅 [README](https://github.com/onetimesecret/onetimesecret#readme)。
 
 ## 验证
 
@@ -84,5 +84,5 @@ docker run -p 3000:3000 -d \
 ## 获取帮助
 
 - **文档**：浏览我们的[配置参考](./configuration)
-- **社区**：加入 [GitHub](https://github.com/onetimesecret/onetimesecret/discussions) 上的讨论
+- **社区**：加入 [GitHub](https://github.com/onetimesecret/onetimesecret) 上的讨论
 - **问题**：在我们的[问题跟踪器](https://github.com/onetimesecret/onetimesecret/issues)上报告错误

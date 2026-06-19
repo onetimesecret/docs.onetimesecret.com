@@ -60,7 +60,7 @@ Manuel kurulumu tercih edenler için şunlara ihtiyacınız olacak:
 
 Uygulamayı çalıştırmadan önce `pnpm install && pnpm run build:local` ile ön uç varlıklarını oluşturmanız gerekir.
 
-Eksiksiz manuel kurulum ayrıntıları için [INSTALL.md](https://github.com/onetimesecret/onetimesecret/blob/main/INSTALL.md) dosyasına bakın.
+Eksiksiz manuel kurulum ayrıntıları için [README](https://github.com/onetimesecret/onetimesecret#readme) dosyasına bakın.
 
 ## Doğrulama
 
@@ -84,5 +84,5 @@ Artık örneğiniz çalışıyor:
 ## Yardım Alma
 
 - **Dokümantasyon**: [Yapılandırma referansımıza](./configuration) göz atın
-- **Topluluk**: [GitHub](https://github.com/onetimesecret/onetimesecret/discussions) üzerindeki tartışmalara katılın
+- **Topluluk**: [GitHub](https://github.com/onetimesecret/onetimesecret) üzerindeki tartışmalara katılın
 - **Sorunlar**: Hataları [sorun izleyicimizde](https://github.com/onetimesecret/onetimesecret/issues) bildirin

@@ -60,7 +60,7 @@ docker run -p 3000:3000 -d \
 
 Вам потрібно буде зібрати фронтенд-ресурси за допомогою `pnpm install && pnpm run build:local` перед запуском додатку.
 
-Перегляньте [INSTALL.md](https://github.com/onetimesecret/onetimesecret/blob/main/INSTALL.md) для повних деталей ручного встановлення.
+Перегляньте [README](https://github.com/onetimesecret/onetimesecret#readme) для повних деталей ручного встановлення.
 
 ## Перевірка
 
@@ -84,5 +84,5 @@ docker run -p 3000:3000 -d \
 ## Отримання допомоги
 
 - **Документація**: Перегляньте наш [довідник конфігурації](./configuration)
-- **Спільнота**: Приєднуйтесь до обговорень на [GitHub](https://github.com/onetimesecret/onetimesecret/discussions)
+- **Спільнота**: Приєднуйтесь до обговорень на [GitHub](https://github.com/onetimesecret/onetimesecret)
 - **Проблеми**: Повідомляйте про помилки в нашому [трекері проблем](https://github.com/onetimesecret/onetimesecret/issues)

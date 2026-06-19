@@ -49,5 +49,5 @@ Para uma lista completa de variáveis de ambiente e opções de configuração a
 ## Suporte
 
 Para dúvidas sobre configuração:
-- [GitHub Discussions](https://github.com/onetimesecret/onetimesecret/discussions)
+- [GitHub Issues](https://github.com/onetimesecret/onetimesecret/issues)
 - [Issue Tracker](https://github.com/onetimesecret/onetimesecret/issues)
