@@ -38,6 +38,25 @@ fi
 
 status=0
 
+# Run a PCRE grep over the target Markdown files and echo any matches. grep
+# exits 1 for "no matches" (expected, clean) but 2 for a real error such as a
+# bad path. Without this guard, `set -euo pipefail` plus an `if grep ...`
+# wrapper would treat that error as "clean" and let a broken scan pass CI
+# silently (this also makes a run from the wrong directory fail loudly rather
+# than scan nothing).
+scan() {
+  local out rc
+  set +e
+  out=$(grep -rnP "$1" --include='*.md' --include='*.mdoc' "${TARGETS[@]}")
+  rc=$?
+  set -e
+  if [ "$rc" -gt 1 ]; then
+    echo -e "${RED}error: grep failed (exit $rc) — check the target paths.${NC}" >&2
+    exit 2
+  fi
+  printf '%s' "$out"
+}
+
 echo -e "${GREEN}🔍 Checking for malformed / wrong-prefix internal links...${NC}"
 echo ""
 
@@ -47,9 +66,10 @@ echo ""
 # like "(/img/docs/..." and prose like `src/content/docs/` are not matched.
 # ---------------------------------------------------------------------------
 echo -e "${YELLOW}[1/2] Absolute /docs/ link targets${NC}"
-if matches=$(grep -rnP '\(/docs/' --include='*.md' --include='*.mdoc' "${TARGETS[@]}" 2>/dev/null); then
+docs_hits=$(scan '\(/docs/')
+if [ -n "$docs_hits" ]; then
   echo -e "${RED}✗ Found /docs/ links (use /{locale}/... instead):${NC}"
-  echo "$matches"
+  echo "$docs_hits"
   echo ""
   status=1
 else
@@ -64,12 +84,18 @@ fi
 # excluded.
 # ---------------------------------------------------------------------------
 echo -e "${YELLOW}[2/2] Detached link targets (missing/stray bracket)${NC}"
-if matches=$(grep -rnP '(?<!\])\(/(?!img/|socialcards/)[a-z]' \
-      --include='*.md' --include='*.mdoc' "${TARGETS[@]}" 2>/dev/null \
-      | grep -F '[' \
-      | grep -vF 'allow-detached-link'); then
+# Heuristic and line-based: flag lines that open a link with "[" and also hold a
+# "(/" not attached to a "]". This reliably catches the one-link-per-line
+# Markdown we author; it is not a full parser, so a second, detached target on a
+# line that already contains a valid link could be missed. Good enough as a CI
+# guard alongside lychee — widen it if that pattern ever shows up.
+raw=$(scan '(?<!\])\(/(?!img/|socialcards/)[a-z]')
+set +e
+detached=$(printf '%s' "$raw" | grep -F '[' | grep -vF 'allow-detached-link')
+set -e
+if [ -n "$detached" ]; then
   echo -e "${RED}✗ Found detached link targets (likely a missing '[' or ']'):${NC}"
-  echo "$matches"
+  echo "$detached"
   echo ""
   status=1
 else
