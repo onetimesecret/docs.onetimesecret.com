@@ -42,7 +42,7 @@ docker run -p 6379:6379 -d redis:bookworm
 docker run -p 3000:3000 -d \
   -e REDIS_URL=redis://host.docker.internal:6379/0 \
   -e SECRET="$(openssl rand -hex 32)" \
-  onetimesecret/onetimesecret:v0.25.8
+  onetimesecret/onetimesecret:v0.25.10
 ```
 
 Uru mai i `http://localhost:3000`.
