@@ -43,7 +43,7 @@ cli.create_link("secret") # return a link like https://onetimesecret.com/secret/
 ```
 
 [Сторінка Github - py\_onetimesecret](https://github.com/utter-step/py_onetimesecret)
-автор [Vladislav Stepanov](https://github.com/utter-step/) (додано 2012-06-26)
+автор Vladislav Stepanov (додано 2012-06-26)
 
 ### Приклад використання
 
@@ -125,7 +125,7 @@ assertEquals(generateResponse.getValue(), retrieveResponse.getValue());
 
 
 [Сторінка Github - OneTimeSharp](https://github.com/utter-step/OneTimeSharp)
-автор [Vladislav Stepanov](https://github.com/utter-step/) (додано 2014-05-29)
+автор Vladislav Stepanov (додано 2014-05-29)
 
 ### Приклад використання
 

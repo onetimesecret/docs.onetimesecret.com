@@ -31,5 +31,5 @@ Exemplos de configuração estão disponíveis no repositório do GitHub:
 ## Suporte
 
 Para dúvidas sobre configuração:
-- [GitHub Discussions](https://github.com/onetimesecret/onetimesecret/discussions)
+- [GitHub Issues](https://github.com/onetimesecret/onetimesecret/issues)
 - [Documentação do GitHub](https://github.com/onetimesecret/onetimesecret/tree/main/docs)

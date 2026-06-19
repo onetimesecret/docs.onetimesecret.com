@@ -60,7 +60,7 @@ Para aqueles que preferem configuração manual, você precisará:
 
 Você precisará construir os assets frontend com `pnpm install && pnpm run build:local` antes de executar a aplicação.
 
-Consulte [INSTALL.md](https://github.com/onetimesecret/onetimesecret/blob/main/INSTALL.md) para detalhes completos de instalação manual.
+Consulte [README](https://github.com/onetimesecret/onetimesecret#readme) para detalhes completos de instalação manual.
 
 ## Verificação
 
@@ -84,5 +84,5 @@ Agora que sua instância está em execução:
 ## Obtendo Ajuda
 
 - **Documentação**: Navegue nossa [referência de configuração](./configuration)
-- **Comunidade**: Participe de discussões no [GitHub](https://github.com/onetimesecret/onetimesecret/discussions)
+- **Comunidade**: Participe de discussões no [GitHub](https://github.com/onetimesecret/onetimesecret/issues)
 - **Issues**: Relate bugs em nosso [rastreador de issues](https://github.com/onetimesecret/onetimesecret/issues)

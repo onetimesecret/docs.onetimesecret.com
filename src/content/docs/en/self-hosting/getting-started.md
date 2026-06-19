@@ -80,7 +80,7 @@ source .env.sh  # exports .env vars into the current shell
 bundle exec foreman start -f Procfile.production
 ```
 
-See [INSTALL.md](https://github.com/onetimesecret/onetimesecret/blob/main/INSTALL.md) for complete manual installation details.
+See [README](https://github.com/onetimesecret/onetimesecret#readme) for complete manual installation details.
 
 ## Verification
 
@@ -104,5 +104,5 @@ Now that your instance is running:
 ## Getting Help
 
 - **Documentation**: Browse our [configuration reference](./configuration)
-- **Community**: Join discussions on [GitHub](https://github.com/onetimesecret/onetimesecret/discussions)
+- **Community**: Join discussions on [GitHub](https://github.com/onetimesecret/onetimesecret/issues)
 - **Issues**: Report bugs on our [issue tracker](https://github.com/onetimesecret/onetimesecret/issues)

@@ -60,7 +60,7 @@ För dem som föredrar manuell installation behöver du:
 
 Du behöver bygga frontend-tillgångarna med `pnpm install && pnpm run build:local` innan du kör applikationen.
 
-Se [INSTALL.md](https://github.com/onetimesecret/onetimesecret/blob/main/INSTALL.md) för kompletta detaljer om manuell installation.
+Se [README](https://github.com/onetimesecret/onetimesecret#readme) för kompletta detaljer om manuell installation.
 
 ## Verifiering
 
@@ -84,5 +84,5 @@ Nu när din instans körs:
 ## Få hjälp
 
 - **Dokumentation**: Bläddra i vår [konfigurationsreferens](./configuration)
-- **Community**: Delta i diskussioner på [GitHub](https://github.com/onetimesecret/onetimesecret/discussions)
+- **Community**: Delta i diskussioner på [GitHub](https://github.com/onetimesecret/onetimesecret/issues)
 - **Problem**: Rapportera buggar på vår [ärendespårare](https://github.com/onetimesecret/onetimesecret/issues)

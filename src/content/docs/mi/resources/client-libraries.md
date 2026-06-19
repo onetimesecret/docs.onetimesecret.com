@@ -43,7 +43,7 @@ cli.create_link("secret") # return a link like https://onetimesecret.com/secret/
 ```
 
 [Whārangi Github - py\_onetimesecret](https://github.com/utter-step/py_onetimesecret)
-nā [Vladislav Stepanov](https://github.com/utter-step/) (tāpiritia 2012-06-26)
+nā Vladislav Stepanov (tāpiritia 2012-06-26)
 
 ### Tauira Whakamahi
 
@@ -125,7 +125,7 @@ assertEquals(generateResponse.getValue(), retrieveResponse.getValue());
 
 
 [Whārangi Github - OneTimeSharp](https://github.com/utter-step/OneTimeSharp)
-nā [Vladislav Stepanov](https://github.com/utter-step/) (tāpiritia 2014-05-29)
+nā Vladislav Stepanov (tāpiritia 2014-05-29)
 
 ### Tauira Whakamahi
 
