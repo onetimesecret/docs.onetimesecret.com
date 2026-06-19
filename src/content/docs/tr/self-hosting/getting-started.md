@@ -84,5 +84,5 @@ Artık örneğiniz çalışıyor:
 ## Yardım Alma
 
 - **Dokümantasyon**: [Yapılandırma referansımıza](./configuration) göz atın
-- **Topluluk**: [GitHub](https://github.com/onetimesecret/onetimesecret/issues) üzerindeki tartışmalara katılın
+- **Topluluk**: [GitHub](https://github.com/onetimesecret/onetimesecret) üzerindeki tartışmalara katılın
 - **Sorunlar**: Hataları [sorun izleyicimizde](https://github.com/onetimesecret/onetimesecret/issues) bildirin

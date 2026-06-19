@@ -84,5 +84,5 @@ I nāianei ka haere tō tauira:
 ## Te Whiwhi Āwhina
 
 - **Tuhinga**: Tirotiro i tō mātou [tohutoro whirihoranga](./configuration)
-- **Hapori**: Uru mai ki ngā matapaki i runga i [GitHub](https://github.com/onetimesecret/onetimesecret/issues)
+- **Hapori**: Uru mai ki ngā matapaki i runga i [GitHub](https://github.com/onetimesecret/onetimesecret)
 - **Ngā Take**: Pūrongo i ngā hapa i runga i tō mātou [kaiwhakatūturu take](https://github.com/onetimesecret/onetimesecret/issues)

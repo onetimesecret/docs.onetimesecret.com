@@ -84,5 +84,5 @@ Nu hvor din instans kører:
 ## Få hjælp
 
 - **Dokumentation**: Gennemse vores [konfigurationsreference](./configuration)
-- **Community**: Deltag i diskussioner på [GitHub](https://github.com/onetimesecret/onetimesecret/issues)
+- **Community**: Deltag i diskussioner på [GitHub](https://github.com/onetimesecret/onetimesecret)
 - **Problemer**: Rapporter fejl på vores [issue tracker](https://github.com/onetimesecret/onetimesecret/issues)

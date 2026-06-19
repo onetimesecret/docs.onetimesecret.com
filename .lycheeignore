@@ -16,6 +16,20 @@ https://www.linkedin.com/*
 https://twitter.com/*
 https://x.com/*
 
+# Bot-protected hosts that return 403/503 to automated checkers but are
+# verified live in a browser. Excluded to keep the weekly external report
+# actionable (signal, not noise). NOTE: scoped to infrastructure and
+# first-party domains only — third-party/personal author sites are left in
+# so genuine link rot still surfaces for human review.
+https://docs.astro.build/*
+https://www.digitalocean.com/*
+https://www.hetzner.com/*
+https://upcloud.com/*
+https://mise.jdx.dev/*
+https://creativecommons.org/*
+https://onetimesecret.com/*
+https://*.onetimesecret.com/*
+
 # Exclude placeholder/example URLs
 https://example.com/*
 https://yourdomain.com/*

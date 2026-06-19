@@ -104,5 +104,5 @@ Now that your instance is running:
 ## Getting Help
 
 - **Documentation**: Browse our [configuration reference](./configuration)
-- **Community**: Join discussions on [GitHub](https://github.com/onetimesecret/onetimesecret/issues)
+- **Community**: Join discussions on [GitHub](https://github.com/onetimesecret/onetimesecret)
 - **Issues**: Report bugs on our [issue tracker](https://github.com/onetimesecret/onetimesecret/issues)

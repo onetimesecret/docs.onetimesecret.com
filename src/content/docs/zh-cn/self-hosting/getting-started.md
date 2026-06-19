@@ -84,5 +84,5 @@ docker run -p 3000:3000 -d \
 ## 获取帮助
 
 - **文档**：浏览我们的[配置参考](./configuration)
-- **社区**：加入 [GitHub](https://github.com/onetimesecret/onetimesecret/issues) 上的讨论
+- **社区**：加入 [GitHub](https://github.com/onetimesecret/onetimesecret) 上的讨论
 - **问题**：在我们的[问题跟踪器](https://github.com/onetimesecret/onetimesecret/issues)上报告错误

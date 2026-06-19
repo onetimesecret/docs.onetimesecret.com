@@ -41,6 +41,20 @@ permissions:
   issues: write
 
 jobs:
+  check-malformed-links:
+    name: Check Malformed Links
+    runs-on: ubuntu-latest
+    # Fast structural lint (no build, no network). Catches malformed Markdown
+    # links — missing/stray brackets and absolute /docs/ targets — that lychee
+    # cannot see because they never parse as links, so it would report a valid
+    # site while the live page 404s.
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Lint for malformed internal links
+        run: ./bin/check-malformed-links.sh
+
   check-internal-links:
     name: Check Internal Links
     runs-on: ubuntu-latest

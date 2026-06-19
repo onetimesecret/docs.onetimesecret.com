@@ -84,5 +84,5 @@ Agora que sua instância está em execução:
 ## Obtendo Ajuda
 
 - **Documentação**: Navegue nossa [referência de configuração](./configuration)
-- **Comunidade**: Participe de discussões no [GitHub](https://github.com/onetimesecret/onetimesecret/issues)
+- **Comunidade**: Participe de discussões no [GitHub](https://github.com/onetimesecret/onetimesecret)
 - **Issues**: Relate bugs em nosso [rastreador de issues](https://github.com/onetimesecret/onetimesecret/issues)
