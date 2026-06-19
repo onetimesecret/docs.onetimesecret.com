@@ -1,9 +1,11 @@
 ---
 // src/pages/404.astro
-import { Image } from 'astro:assets';
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import '../styles/tailwind.css';
-import notFoundImage from '../assets/img/404-illustration.svg';
+// Inline the SVG (raw) so its theme-aware CSS can respond to Starlight's
+// [data-theme] toggle. Rendered as <img>, the SVG is isolated and can only
+// react to the OS prefers-color-scheme, not the on-site light/dark switch.
+import notFoundSvg from '../assets/img/404-illustration.svg?raw';
 ---
 
 <StarlightPage frontmatter={{ title: 'Page Not Found', template: 'splash' }}>
@@ -27,16 +29,8 @@ import notFoundImage from '../assets/img/404-illustration.svg';
       </a>
     </div>
 
-    <!-- Illustration -->
-    <div class="max-w-md mx-auto">
-      <Image
-        src={notFoundImage}
-        alt="Page not found illustration"
-        width={400}
-        height={300}
-        class="w-full h-auto"
-      />
-    </div>
+    <!-- Illustration (inlined so it follows the site's light/dark theme) -->
+    <div class="max-w-md mx-auto" set:html={notFoundSvg} />
 
     <!-- Helpful Links -->
     <div class="pt-36 mt-10 border-t border-gray-200 dark:border-gray-700">
