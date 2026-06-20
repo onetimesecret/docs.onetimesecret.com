@@ -106,5 +106,16 @@
   "pagefind.one_result": "[COUNT] резултат за [SEARCH_TERM]",
   "pagefind.alt_search": "Няма резултати за [SEARCH_TERM]. Показват се резултати за [DIFFERENT_TERM]",
   "pagefind.search_suggestion": "Няма резултати за [SEARCH_TERM]. Опитайте едно от следните търсения:",
-  "pagefind.searching": "Търсене на [SEARCH_TERM]..."
+  "pagefind.searching": "Търсене на [SEARCH_TERM]...",
+  "notFound.title": "Страницата не е намерена",
+  "notFound.message": "Страницата, която търсите, не съществува или е преместена.",
+  "notFound.browseDocs": "Към документацията",
+  "notFound.goToApp": "Към Onetime Secret",
+  "notFound.lookingFor": "Търсите ли нещо?",
+  "notFound.docsTitle": "Документация",
+  "notFound.docsDesc": "Научете как да използвате Onetime Secret",
+  "notFound.createTitle": "Създайте тайна",
+  "notFound.createDesc": "Използвайте приложението",
+  "notFound.supportTitle": "Поддръжка",
+  "notFound.supportDesc": "Получете помощ при всякакви проблеми"
 }

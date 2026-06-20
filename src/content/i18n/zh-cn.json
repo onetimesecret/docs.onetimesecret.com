@@ -106,5 +106,16 @@
   "pagefind.one_result": "找到 [COUNT] 个 [SEARCH_TERM] 的结果",
   "pagefind.alt_search": "未找到 [SEARCH_TERM] 的结果。显示 [DIFFERENT_TERM] 的结果",
   "pagefind.search_suggestion": "未找到 [SEARCH_TERM] 的结果。试试以下搜索：",
-  "pagefind.searching": "正在搜索 [SEARCH_TERM]..."
+  "pagefind.searching": "正在搜索 [SEARCH_TERM]...",
+  "notFound.title": "页面未找到",
+  "notFound.message": "您查找的页面不存在或已被移动。",
+  "notFound.browseDocs": "浏览文档",
+  "notFound.goToApp": "前往 Onetime Secret",
+  "notFound.lookingFor": "在找什么吗？",
+  "notFound.docsTitle": "文档",
+  "notFound.docsDesc": "了解如何使用 Onetime Secret",
+  "notFound.createTitle": "创建密文",
+  "notFound.createDesc": "使用应用程序",
+  "notFound.supportTitle": "支持",
+  "notFound.supportDesc": "获取任何问题的帮助"
 }

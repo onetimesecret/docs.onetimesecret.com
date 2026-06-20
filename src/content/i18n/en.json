@@ -104,5 +104,16 @@
   "pagefind.one_result": "[COUNT] result for [SEARCH_TERM]",
   "pagefind.alt_search": "No results for [SEARCH_TERM]. Showing results for [DIFFERENT_TERM] instead",
   "pagefind.search_suggestion": "No results for [SEARCH_TERM]. Try one of the following searches:",
-  "pagefind.searching": "Searching for [SEARCH_TERM]..."
+  "pagefind.searching": "Searching for [SEARCH_TERM]...",
+  "notFound.title": "Page Not Found",
+  "notFound.message": "The page you're looking for doesn't exist or has been moved.",
+  "notFound.browseDocs": "Browse the documentation",
+  "notFound.goToApp": "Go to Onetime Secret",
+  "notFound.lookingFor": "Looking for something?",
+  "notFound.docsTitle": "Documentation",
+  "notFound.docsDesc": "Learn how to use Onetime Secret",
+  "notFound.createTitle": "Create a Secret",
+  "notFound.createDesc": "Use the application",
+  "notFound.supportTitle": "Support",
+  "notFound.supportDesc": "Get help with any issues"
 }

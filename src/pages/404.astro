@@ -2,6 +2,7 @@
 // src/pages/404.astro
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import '../styles/tailwind.css';
+import { i18nConfig } from '../../config/i18n.mjs';
 // Inline the SVG (raw) so its theme-aware CSS can respond to Starlight's
 // [data-theme] toggle. Rendered as <img>, the SVG is isolated and can only
 // react to the OS prefers-color-scheme, not the on-site light/dark switch.
@@ -13,9 +14,50 @@ import '../styles/tailwind.css';
 // set:html is safe here because this is a static, repo-controlled asset with
 // no user input; do not template untrusted data into it without sanitizing.
 import notFoundSvg from '../assets/img/404-illustration.svg?raw';
+
+// This page is emitted as a single static /404.html that the host serves for
+// every unmatched route, in every language. There is therefore no build-time
+// locale to key off. Instead we ship the translated strings for every locale
+// and let a tiny inline script below pick the right one from the URL path at
+// runtime. English is rendered server-side as the no-JS / fallback default.
+const i18nModules = import.meta.glob('../content/i18n/*.json', { eager: true });
+const strings: Record<string, Record<string, string>> = {};
+for (const [path, mod] of Object.entries(i18nModules)) {
+  const code = path.split('/').pop()!.replace('.json', '');
+  strings[code] = (mod as { default?: Record<string, string> }).default ?? (mod as Record<string, string>);
+}
+
+const defaultLocale = i18nConfig.defaultLocale;
+const localeCodes = Object.keys(i18nConfig.locales);
+const en = strings[defaultLocale];
+// Per-key fallback to English so a locale missing a key never renders blank.
+const tr = (code: string, key: string) => strings[code]?.[key] ?? en[key];
+
+const t: Record<string, Record<string, string>> = {};
+for (const code of localeCodes) {
+  const { lang, dir } = i18nConfig.locales[code];
+  t[code] = {
+    lang,
+    dir,
+    title: tr(code, 'notFound.title'),
+    message: tr(code, 'notFound.message'),
+    browseDocs: tr(code, 'notFound.browseDocs'),
+    goToApp: tr(code, 'notFound.goToApp'),
+    lookingFor: tr(code, 'notFound.lookingFor'),
+    docsTitle: tr(code, 'notFound.docsTitle'),
+    docsDesc: tr(code, 'notFound.docsDesc'),
+    createTitle: tr(code, 'notFound.createTitle'),
+    createDesc: tr(code, 'notFound.createDesc'),
+    supportTitle: tr(code, 'notFound.supportTitle'),
+    supportDesc: tr(code, 'notFound.supportDesc'),
+  };
+}
+
+const d = t[defaultLocale]; // English defaults for server-rendered output
+const docsHref = `/${defaultLocale}/introduction/`;
 ---
 
-<StarlightPage frontmatter={{ title: 'Page Not Found', template: 'splash' }}>
+<StarlightPage frontmatter={{ title: d.title, template: 'splash' }}>
   <div class="container mx-auto px-4 py-8 max-w-3xl text-center">
     <!-- Illustration, front and centre. Labelled in the asset (role="img");
          the heading + message below remain the text fallback if it can't
@@ -24,39 +66,72 @@ import notFoundSvg from '../assets/img/404-illustration.svg?raw';
 
     <!-- Accessible message: the real, text-based content. Visible to everyone,
          announced to screen readers, and the fallback if the SVG can't render.
-         The page title "Page Not Found" is the page heading, rendered by
-         Starlight from the frontmatter. -->
-    <p class="text-lg mb-10 text-gray-600 dark:text-gray-300">
-      The page you're looking for doesn't exist or has been moved.
+         The page title is the heading, rendered by Starlight from the
+         frontmatter and localised client-side below. -->
+    <p data-i18n="message" class="text-lg mb-10 text-gray-600 dark:text-gray-300">
+      {d.message}
     </p>
 
-    <!-- Two distinct actions: keep reading the docs, or jump to the app. -->
+    <!-- Two distinct actions: keep reading the docs, or jump to the app.
+         data-doclink links are re-pointed to the visitor's locale at runtime. -->
     <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16 not-content">
-      <a href="/en/introduction/" class="bg-brand-500 text-white hover:bg-brand-600 px-6 py-2 rounded-lg font-medium transition-colors">
-        Browse the documentation
+      <a data-doclink data-i18n="browseDocs" href={docsHref} class="bg-brand-500 text-white hover:bg-brand-600 px-6 py-2 rounded-lg font-medium transition-colors">
+        {d.browseDocs}
       </a>
-      <a href="https://onetimesecret.com" class="border border-gray-400 dark:border-gray-600 text-gray-700 dark:text-gray-200 hover:border-brand-500 px-6 py-2 rounded-lg font-medium transition-colors">
-        Go to Onetime Secret
+      <a data-i18n="goToApp" href="https://onetimesecret.com" class="border border-gray-400 dark:border-gray-600 text-gray-700 dark:text-gray-200 hover:border-brand-500 px-6 py-2 rounded-lg font-medium transition-colors">
+        {d.goToApp}
       </a>
     </div>
 
     <!-- Helpful Links -->
     <div class="pt-10 mt-4 border-t border-gray-200 dark:border-gray-700">
-      <h2 class="text-xl font-semibold mb-6 text-gray-900 dark:text-white">Looking for something?</h2>
+      <h2 data-i18n="lookingFor" class="text-xl font-semibold mb-6 text-gray-900 dark:text-white">{d.lookingFor}</h2>
       <div class="grid md:grid-cols-3 gap-6">
-        <a href="/en/introduction/" class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
-          <h3 class="font-medium text-gray-900 dark:text-white mb-2">Documentation</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-300">Learn how to use Onetime Secret</p>
+        <a data-doclink href={docsHref} class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+          <h3 data-i18n="docsTitle" class="font-medium text-gray-900 dark:text-white mb-2">{d.docsTitle}</h3>
+          <p data-i18n="docsDesc" class="text-sm text-gray-600 dark:text-gray-300">{d.docsDesc}</p>
         </a>
         <a href="https://onetimesecret.com" class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
-          <h3 class="font-medium text-gray-900 dark:text-white mb-2">Create a Secret</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-300">Use the application</p>
+          <h3 data-i18n="createTitle" class="font-medium text-gray-900 dark:text-white mb-2">{d.createTitle}</h3>
+          <p data-i18n="createDesc" class="text-sm text-gray-600 dark:text-gray-300">{d.createDesc}</p>
         </a>
         <a href="https://onetimesecret.com/feedback" class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
-          <h3 class="font-medium text-gray-900 dark:text-white mb-2">Support</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-300">Get help with any issues</p>
+          <h3 data-i18n="supportTitle" class="font-medium text-gray-900 dark:text-white mb-2">{d.supportTitle}</h3>
+          <p data-i18n="supportDesc" class="text-sm text-gray-600 dark:text-gray-300">{d.supportDesc}</p>
         </a>
       </div>
     </div>
   </div>
 </StarlightPage>
+
+<script is:inline define:vars={{ i18n: t, codes: localeCodes, fallback: defaultLocale }}>
+  // Localise the static 404 to the visitor's language, inferred from the first
+  // path segment (e.g. /fr/missing -> "fr"). Falls back to the default locale
+  // for unknown segments. Runs once on load; no-JS visitors keep the English
+  // server-rendered copy.
+  (function () {
+    var seg = location.pathname.split('/').filter(Boolean)[0];
+    var loc = codes.indexOf(seg) !== -1 ? seg : fallback;
+    var s = i18n[loc] || i18n[fallback];
+    if (!s) return;
+
+    var root = document.documentElement;
+    root.setAttribute('lang', s.lang);
+    root.setAttribute('dir', s.dir);
+
+    var h1 = document.getElementById('_top');
+    if (h1) h1.textContent = s.title;
+
+    var sep = document.title.indexOf('|');
+    document.title = sep > -1 ? s.title + ' ' + document.title.slice(sep) : s.title;
+
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n');
+      if (s[key]) el.textContent = s[key];
+    });
+
+    document.querySelectorAll('[data-doclink]').forEach(function (a) {
+      a.setAttribute('href', '/' + loc + '/introduction/');
+    });
+  })();
+</script>
