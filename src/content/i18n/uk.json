@@ -106,5 +106,16 @@
   "pagefind.one_result": "[COUNT] результат для [SEARCH_TERM]",
   "pagefind.alt_search": "Немає результатів для [SEARCH_TERM]. Показано результати для [DIFFERENT_TERM]",
   "pagefind.search_suggestion": "Немає результатів для [SEARCH_TERM]. Спробуйте один з наступних запитів:",
-  "pagefind.searching": "Пошук [SEARCH_TERM]..."
+  "pagefind.searching": "Пошук [SEARCH_TERM]...",
+  "notFound.title": "Сторінку не знайдено",
+  "notFound.message": "Сторінка, яку ви шукаєте, не існує або була переміщена.",
+  "notFound.browseDocs": "Переглянути документацію",
+  "notFound.goToApp": "Перейти до Onetime Secret",
+  "notFound.lookingFor": "Шукаєте щось?",
+  "notFound.docsTitle": "Документація",
+  "notFound.docsDesc": "Дізнайтеся, як користуватися Onetime Secret",
+  "notFound.createTitle": "Створити секрет",
+  "notFound.createDesc": "Скористатися застосунком",
+  "notFound.supportTitle": "Підтримка",
+  "notFound.supportDesc": "Отримайте допомогу з будь-яких питань"
 }

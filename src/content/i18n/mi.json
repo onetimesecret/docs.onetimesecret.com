@@ -106,5 +106,16 @@
   "pagefind.one_result": "[COUNT] te hua mō [SEARCH_TERM]",
   "pagefind.alt_search": "Kāore he hua mō [SEARCH_TERM]. Kei te whakaatu ngā hua mō [DIFFERENT_TERM] hei utu",
   "pagefind.search_suggestion": "Kāore he hua mō [SEARCH_TERM]. Whakamātauria tētahi o ngā rapunga e whai ake nei:",
-  "pagefind.searching": "Kei te rapu mō [SEARCH_TERM]..."
+  "pagefind.searching": "Kei te rapu mō [SEARCH_TERM]...",
+  "notFound.title": "Kāore i Kitea te Whārangi",
+  "notFound.message": "Kāore te whārangi e rapua ana e koe, kua nekehia rānei.",
+  "notFound.browseDocs": "Tirohia ngā tuhinga",
+  "notFound.goToApp": "Haere ki Onetime Secret",
+  "notFound.lookingFor": "Kei te rapu koe i tētahi mea?",
+  "notFound.docsTitle": "Ngā Tuhinga",
+  "notFound.docsDesc": "Akohia te whakamahi i Onetime Secret",
+  "notFound.createTitle": "Waihangahia he Mea Muna",
+  "notFound.createDesc": "Whakamahia te taupānga",
+  "notFound.supportTitle": "Tautoko",
+  "notFound.supportDesc": "Tikina he āwhina mō ngā raruraru"
 }

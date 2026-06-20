@@ -106,5 +106,16 @@
   "pagefind.one_result": "[SEARCH_TERM]에 대한 결과 [COUNT]개",
   "pagefind.alt_search": "[SEARCH_TERM]에 대한 결과 없음. 대신 [DIFFERENT_TERM]에 대한 결과 표시",
   "pagefind.search_suggestion": "[SEARCH_TERM]에 대한 결과 없음. 다음 검색 중 하나를 시도해 보세요:",
-  "pagefind.searching": "[SEARCH_TERM] 검색 중..."
+  "pagefind.searching": "[SEARCH_TERM] 검색 중...",
+  "notFound.title": "페이지를 찾을 수 없습니다",
+  "notFound.message": "찾으시는 페이지가 존재하지 않거나 이동되었습니다.",
+  "notFound.browseDocs": "문서 둘러보기",
+  "notFound.goToApp": "Onetime Secret로 이동",
+  "notFound.lookingFor": "찾으시는 것이 있나요?",
+  "notFound.docsTitle": "문서",
+  "notFound.docsDesc": "Onetime Secret 사용법 알아보기",
+  "notFound.createTitle": "시크릿 만들기",
+  "notFound.createDesc": "애플리케이션 사용하기",
+  "notFound.supportTitle": "지원",
+  "notFound.supportDesc": "문제가 있으면 도움 받기"
 }

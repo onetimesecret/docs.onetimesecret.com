@@ -106,5 +106,16 @@
   "pagefind.one_result": "[COUNT] resultaat voor [SEARCH_TERM]",
   "pagefind.alt_search": "Geen resultaten voor [SEARCH_TERM]. In plaats daarvan worden resultaten voor [DIFFERENT_TERM] weergegeven",
   "pagefind.search_suggestion": "Geen resultaten voor [SEARCH_TERM]. Probeer een van de volgende zoekopdrachten:",
-  "pagefind.searching": "Zoeken naar [SEARCH_TERM]..."
+  "pagefind.searching": "Zoeken naar [SEARCH_TERM]...",
+  "notFound.title": "Pagina niet gevonden",
+  "notFound.message": "De pagina die je zoekt bestaat niet of is verplaatst.",
+  "notFound.browseDocs": "Bekijk de documentatie",
+  "notFound.goToApp": "Ga naar Onetime Secret",
+  "notFound.lookingFor": "Op zoek naar iets?",
+  "notFound.docsTitle": "Documentatie",
+  "notFound.docsDesc": "Leer hoe je Onetime Secret gebruikt",
+  "notFound.createTitle": "Een geheim aanmaken",
+  "notFound.createDesc": "Gebruik de applicatie",
+  "notFound.supportTitle": "Ondersteuning",
+  "notFound.supportDesc": "Krijg hulp bij problemen"
 }

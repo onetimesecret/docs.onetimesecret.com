@@ -106,5 +106,16 @@
   "pagefind.one_result": "[SEARCH_TERM] için [COUNT] sonuç",
   "pagefind.alt_search": "[SEARCH_TERM] için sonuç bulunamadı. Bunun yerine [DIFFERENT_TERM] için sonuçlar gösteriliyor",
   "pagefind.search_suggestion": "[SEARCH_TERM] için sonuç bulunamadı. Aşağıdaki aramalardan birini deneyin:",
-  "pagefind.searching": "[SEARCH_TERM] aranıyor..."
+  "pagefind.searching": "[SEARCH_TERM] aranıyor...",
+  "notFound.title": "Sayfa bulunamadı",
+  "notFound.message": "Aradığınız sayfa mevcut değil veya taşınmış.",
+  "notFound.browseDocs": "Belgeleri inceleyin",
+  "notFound.goToApp": "Onetime Secret'e git",
+  "notFound.lookingFor": "Bir şey mi arıyorsunuz?",
+  "notFound.docsTitle": "Belgeler",
+  "notFound.docsDesc": "Onetime Secret'i nasıl kullanacağınızı öğrenin",
+  "notFound.createTitle": "Bir sır oluşturun",
+  "notFound.createDesc": "Uygulamayı kullanın",
+  "notFound.supportTitle": "Destek",
+  "notFound.supportDesc": "Herhangi bir sorunda yardım alın"
 }

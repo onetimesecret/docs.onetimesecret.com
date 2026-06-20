@@ -106,5 +106,16 @@
   "pagefind.one_result": "[SEARCH_TERM] の検索結果 [COUNT] 件",
   "pagefind.alt_search": "[SEARCH_TERM] の検索結果はありません。代わりに [DIFFERENT_TERM] の結果を表示しています",
   "pagefind.search_suggestion": "[SEARCH_TERM] の検索結果はありません。以下のいずれかの検索をお試しください:",
-  "pagefind.searching": "[SEARCH_TERM] を検索中..."
+  "pagefind.searching": "[SEARCH_TERM] を検索中...",
+  "notFound.title": "ページが見つかりません",
+  "notFound.message": "お探しのページは存在しないか、移動されました。",
+  "notFound.browseDocs": "ドキュメントを見る",
+  "notFound.goToApp": "Onetime Secret へ移動",
+  "notFound.lookingFor": "お探しのものはありますか？",
+  "notFound.docsTitle": "ドキュメント",
+  "notFound.docsDesc": "Onetime Secret の使い方を学ぶ",
+  "notFound.createTitle": "シークレットを作成",
+  "notFound.createDesc": "アプリケーションを使う",
+  "notFound.supportTitle": "サポート",
+  "notFound.supportDesc": "問題があればサポートを受ける"
 }

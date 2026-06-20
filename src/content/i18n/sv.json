@@ -106,5 +106,16 @@
   "pagefind.one_result": "[COUNT] resultat för [SEARCH_TERM]",
   "pagefind.alt_search": "Inga resultat för [SEARCH_TERM]. Visar resultat för [DIFFERENT_TERM] istället",
   "pagefind.search_suggestion": "Inga resultat för [SEARCH_TERM]. Prova en av följande sökningar:",
-  "pagefind.searching": "Söker efter [SEARCH_TERM]..."
+  "pagefind.searching": "Söker efter [SEARCH_TERM]...",
+  "notFound.title": "Sidan hittades inte",
+  "notFound.message": "Sidan du letar efter finns inte eller har flyttats.",
+  "notFound.browseDocs": "Bläddra i dokumentationen",
+  "notFound.goToApp": "Gå till Onetime Secret",
+  "notFound.lookingFor": "Letar du efter något?",
+  "notFound.docsTitle": "Dokumentation",
+  "notFound.docsDesc": "Lär dig använda Onetime Secret",
+  "notFound.createTitle": "Skapa en hemlighet",
+  "notFound.createDesc": "Använd applikationen",
+  "notFound.supportTitle": "Support",
+  "notFound.supportDesc": "Få hjälp med eventuella problem"
 }

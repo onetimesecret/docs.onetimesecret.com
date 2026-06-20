@@ -106,5 +106,16 @@
   "pagefind.one_result": "[COUNT] resultat for [SEARCH_TERM]",
   "pagefind.alt_search": "Ingen resultater for [SEARCH_TERM]. Viser resultater for [DIFFERENT_TERM] i stedet",
   "pagefind.search_suggestion": "Ingen resultater for [SEARCH_TERM]. Prøv en af følgende søgninger:",
-  "pagefind.searching": "Søger efter [SEARCH_TERM]..."
+  "pagefind.searching": "Søger efter [SEARCH_TERM]...",
+  "notFound.title": "Siden blev ikke fundet",
+  "notFound.message": "Siden, du leder efter, findes ikke eller er blevet flyttet.",
+  "notFound.browseDocs": "Gennemse dokumentationen",
+  "notFound.goToApp": "Gå til Onetime Secret",
+  "notFound.lookingFor": "Leder du efter noget?",
+  "notFound.docsTitle": "Dokumentation",
+  "notFound.docsDesc": "Lær at bruge Onetime Secret",
+  "notFound.createTitle": "Opret en hemmelighed",
+  "notFound.createDesc": "Brug applikationen",
+  "notFound.supportTitle": "Support",
+  "notFound.supportDesc": "Få hjælp til eventuelle problemer"
 }
