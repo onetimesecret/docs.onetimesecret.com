@@ -5,49 +5,52 @@ import '../styles/tailwind.css';
 // Inline the SVG (raw) so its theme-aware CSS can respond to Starlight's
 // [data-theme] toggle. Rendered as <img>, the SVG is isolated and can only
 // react to the OS prefers-color-scheme, not the on-site light/dark switch.
+// The illustration is decorative (aria-hidden in the asset); the heading and
+// message below carry the meaning for screen readers and for the case where
+// the SVG fails to render.
 // set:html is safe here because this is a static, repo-controlled asset with
 // no user input; do not template untrusted data into it without sanitizing.
 import notFoundSvg from '../assets/img/404-illustration.svg?raw';
 ---
 
 <StarlightPage frontmatter={{ title: 'Page Not Found', template: 'splash' }}>
-  <div class="container mx-auto px-4 py-16 max-w-4xl text-center">
-    <!-- Error Message -->
-    <h1 class="text-5xl font-bold mb-4 text-gray-900 dark:text-white">404</h1>
-    <h2 class="text-2xl font-semibold mb-6 text-gray-700 dark:text-gray-200">
-      Page Not Found
-    </h2>
-    <p class="text-lg mb-8 text-gray-600 dark:text-gray-300">
+  <div class="container mx-auto px-4 py-8 max-w-3xl text-center">
+    <!-- Illustration, front and centre. Decorative (aria-hidden); the message
+         below is the accessible, text-based equivalent. -->
+    <div class="max-w-lg mx-auto mb-8" set:html={notFoundSvg} />
+
+    <!-- Accessible message: the real, text-based content. Visible to everyone,
+         announced to screen readers, and the fallback if the SVG can't render.
+         The page title "Page Not Found" is the page heading, rendered by
+         Starlight from the frontmatter. -->
+    <p class="text-lg mb-10 text-gray-600 dark:text-gray-300">
       The page you're looking for doesn't exist or has been moved.
     </p>
 
-    <!-- Navigation Options -->
-    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12 not-content">
-      <a href="/" class="bg-brand-500 text-white hover:bg-brand-600 px-6 py-2 rounded-lg font-medium transition-colors">
-        Return Home
+    <!-- Two distinct actions: keep reading the docs, or jump to the app. -->
+    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16 not-content">
+      <a href="/en/introduction/" class="bg-brand-500 text-white hover:bg-brand-600 px-6 py-2 rounded-lg font-medium transition-colors">
+        Browse the documentation
       </a>
-      <a href="/en/introduction/" class="border border-gray-400 dark:border-gray-600 text-gray-700 dark:text-gray-200 hover:border-brand-500 px-6 py-2 rounded-lg font-medium transition-colors">
-        View Documentation
+      <a href="https://onetimesecret.com" class="border border-gray-400 dark:border-gray-600 text-gray-700 dark:text-gray-200 hover:border-brand-500 px-6 py-2 rounded-lg font-medium transition-colors">
+        Go to Onetime Secret
       </a>
     </div>
 
-    <!-- Illustration (inlined so it follows the site's light/dark theme) -->
-    <div class="max-w-md mx-auto" set:html={notFoundSvg} />
-
     <!-- Helpful Links -->
-    <div class="pt-36 mt-10 border-t border-gray-200 dark:border-gray-700">
-      <h3 class="text-xl font-semibold mb-6 text-gray-900 dark:text-white">Looking for something?</h3>
+    <div class="pt-10 mt-4 border-t border-gray-200 dark:border-gray-700">
+      <h2 class="text-xl font-semibold mb-6 text-gray-900 dark:text-white">Looking for something?</h2>
       <div class="grid md:grid-cols-3 gap-6">
         <a href="/en/introduction/" class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
-          <h4 class="font-medium text-gray-900 dark:text-white mb-2">Documentation</h4>
+          <h3 class="font-medium text-gray-900 dark:text-white mb-2">Documentation</h3>
           <p class="text-sm text-gray-600 dark:text-gray-300">Learn how to use Onetime Secret</p>
         </a>
         <a href="https://onetimesecret.com" class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
-          <h4 class="font-medium text-gray-900 dark:text-white mb-2">Create a Secret</h4>
+          <h3 class="font-medium text-gray-900 dark:text-white mb-2">Create a Secret</h3>
           <p class="text-sm text-gray-600 dark:text-gray-300">Use the application</p>
         </a>
         <a href="https://onetimesecret.com/feedback" class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
-          <h4 class="font-medium text-gray-900 dark:text-white mb-2">Support</h4>
+          <h3 class="font-medium text-gray-900 dark:text-white mb-2">Support</h3>
           <p class="text-sm text-gray-600 dark:text-gray-300">Get help with any issues</p>
         </a>
       </div>
