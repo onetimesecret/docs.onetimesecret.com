@@ -5,9 +5,11 @@ import '../styles/tailwind.css';
 // Inline the SVG (raw) so its theme-aware CSS can respond to Starlight's
 // [data-theme] toggle. Rendered as <img>, the SVG is isolated and can only
 // react to the OS prefers-color-scheme, not the on-site light/dark switch.
-// The illustration is decorative (aria-hidden in the asset); the heading and
-// message below carry the meaning for screen readers and for the case where
-// the SVG fails to render.
+// The illustration carries a brand-voice line ("...this page has vanished")
+// that exists nowhere else on the page, so it is labelled (role="img" +
+// aria-label in the asset) rather than hidden. The heading and the message
+// paragraph below still convey the core "page not found" meaning on their own,
+// so nothing is lost if the SVG fails to render.
 // set:html is safe here because this is a static, repo-controlled asset with
 // no user input; do not template untrusted data into it without sanitizing.
 import notFoundSvg from '../assets/img/404-illustration.svg?raw';
@@ -15,8 +17,9 @@ import notFoundSvg from '../assets/img/404-illustration.svg?raw';
 
 <StarlightPage frontmatter={{ title: 'Page Not Found', template: 'splash' }}>
   <div class="container mx-auto px-4 py-8 max-w-3xl text-center">
-    <!-- Illustration, front and centre. Decorative (aria-hidden); the message
-         below is the accessible, text-based equivalent. -->
+    <!-- Illustration, front and centre. Labelled in the asset (role="img");
+         the heading + message below remain the text fallback if it can't
+         render. -->
     <div class="max-w-lg mx-auto mb-8" set:html={notFoundSvg} />
 
     <!-- Accessible message: the real, text-based content. Visible to everyone,
