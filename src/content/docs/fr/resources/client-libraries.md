@@ -42,8 +42,8 @@ cli = OneTimeSecretCli(ONETIMESECRET_USER, ONETIMESECRET_KEY)
 cli.create_link("secret") # return a link like https://onetimesecret.com/secret/xxxxxxxxxxx
 ```
 
-[Page Github - py\_onetimesecret](https://github.com/utter-step/py_onetimesecret)
-par [Vladislav Stepanov](https://github.com/utter-step/) (ajouté le 2012-06-26)
+[Page Github - py\_onetimesecret](https://github.com/utterstep/py_onetimesecret)
+par [Vladislav Stepanov](https://github.com/utterstep) (ajouté le 2012-06-26)
 
 ### Exemple d'utilisation
 
@@ -124,8 +124,8 @@ assertEquals(generateResponse.getValue(), retrieveResponse.getValue());
 ## C#
 
 
-[Page Github - OneTimeSharp](https://github.com/utter-step/OneTimeSharp)
-par [Vladislav Stepanov](https://github.com/utter-step/) (ajouté le 2014-05-29)
+[Page Github - OneTimeSharp](https://github.com/utterstep/OneTimeSharp)
+par [Vladislav Stepanov](https://github.com/utterstep) (ajouté le 2014-05-29)
 
 ### Exemple d'utilisation
 

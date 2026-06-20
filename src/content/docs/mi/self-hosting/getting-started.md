@@ -41,7 +41,7 @@ docker run -p 3000:3000 -d \
   -e HOST=localhost:3000 \
   -e SSL=false \
   -e RACK_ENV=production \
-  onetimesecret/onetimesecret:v0.25.8
+  onetimesecret/onetimesecret:v0.25.10
 ```
 
 ### 4. Uru ki Tō Tauira
@@ -60,7 +60,7 @@ Mō te hunga e pai ana ki te whakatū ā-ringaringa, ka hiahia koe:
 
 Me hanga e koe ngā rawa tukuatu mā te `pnpm install && pnpm run build:local` i mua i te whakahaere i te papatono.
 
-Tirohia [INSTALL.md](https://github.com/onetimesecret/onetimesecret/blob/main/INSTALL.md) mō ngā taipitopito whakatōnga ā-ringaringa katoa.
+Tirohia [README](https://github.com/onetimesecret/onetimesecret#readme) mō ngā taipitopito whakatōnga ā-ringaringa katoa.
 
 ## Manatoko
 
@@ -84,5 +84,5 @@ I nāianei ka haere tō tauira:
 ## Te Whiwhi Āwhina
 
 - **Tuhinga**: Tirotiro i tō mātou [tohutoro whirihoranga](./configuration)
-- **Hapori**: Uru mai ki ngā matapaki i runga i [GitHub](https://github.com/onetimesecret/onetimesecret/discussions)
+- **Hapori**: Uru mai ki ngā matapaki i runga i [GitHub](https://github.com/onetimesecret/onetimesecret)
 - **Ngā Take**: Pūrongo i ngā hapa i runga i tō mātou [kaiwhakatūturu take](https://github.com/onetimesecret/onetimesecret/issues)

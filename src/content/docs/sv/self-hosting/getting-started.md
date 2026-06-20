@@ -41,7 +41,7 @@ docker run -p 3000:3000 -d \
   -e HOST=localhost:3000 \
   -e SSL=false \
   -e RACK_ENV=production \
-  onetimesecret/onetimesecret:v0.25.8
+  onetimesecret/onetimesecret:v0.25.10
 ```
 
 ### 4. Få åtkomst till din instans
@@ -60,7 +60,7 @@ För dem som föredrar manuell installation behöver du:
 
 Du behöver bygga frontend-tillgångarna med `pnpm install && pnpm run build:local` innan du kör applikationen.
 
-Se [INSTALL.md](https://github.com/onetimesecret/onetimesecret/blob/main/INSTALL.md) för kompletta detaljer om manuell installation.
+Se [README](https://github.com/onetimesecret/onetimesecret#readme) för kompletta detaljer om manuell installation.
 
 ## Verifiering
 
@@ -84,5 +84,5 @@ Nu när din instans körs:
 ## Få hjälp
 
 - **Dokumentation**: Bläddra i vår [konfigurationsreferens](./configuration)
-- **Community**: Delta i diskussioner på [GitHub](https://github.com/onetimesecret/onetimesecret/discussions)
+- **Community**: Delta i diskussioner på [GitHub](https://github.com/onetimesecret/onetimesecret)
 - **Problem**: Rapportera buggar på vår [ärendespårare](https://github.com/onetimesecret/onetimesecret/issues)

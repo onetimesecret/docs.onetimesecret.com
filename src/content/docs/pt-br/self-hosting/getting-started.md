@@ -41,7 +41,7 @@ docker run -p 3000:3000 -d \
   -e HOST=localhost:3000 \
   -e SSL=false \
   -e RACK_ENV=production \
-  onetimesecret/onetimesecret:v0.25.8
+  onetimesecret/onetimesecret:v0.25.10
 ```
 
 ### 4. Acessar Sua Instância
@@ -60,7 +60,7 @@ Para aqueles que preferem configuração manual, você precisará:
 
 Você precisará construir os assets frontend com `pnpm install && pnpm run build:local` antes de executar a aplicação.
 
-Consulte [INSTALL.md](https://github.com/onetimesecret/onetimesecret/blob/main/INSTALL.md) para detalhes completos de instalação manual.
+Consulte [README](https://github.com/onetimesecret/onetimesecret#readme) para detalhes completos de instalação manual.
 
 ## Verificação
 
@@ -84,5 +84,5 @@ Agora que sua instância está em execução:
 ## Obtendo Ajuda
 
 - **Documentação**: Navegue nossa [referência de configuração](./configuration)
-- **Comunidade**: Participe de discussões no [GitHub](https://github.com/onetimesecret/onetimesecret/discussions)
+- **Comunidade**: Participe de discussões no [GitHub](https://github.com/onetimesecret/onetimesecret)
 - **Issues**: Relate bugs em nosso [rastreador de issues](https://github.com/onetimesecret/onetimesecret/issues)

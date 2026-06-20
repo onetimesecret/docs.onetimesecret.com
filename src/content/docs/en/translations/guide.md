@@ -296,5 +296,5 @@ These resources apply across all languages:
 ### Getting Help
 
 - Open a [Translation Request Issue](https://github.com/onetimesecret/docs.onetimesecret.com/issues/new?template=translation-request.md) for questions or coordination
-- Join [GitHub Discussions](https://github.com/onetimesecret/docs.onetimesecret.com/discussions) for translator community
+- Watch the [GitHub repository](https://github.com/onetimesecret/docs.onetimesecret.com) to follow translation activity
 - [Contact the team](https://onetimesecret.com/feedback) for translation support

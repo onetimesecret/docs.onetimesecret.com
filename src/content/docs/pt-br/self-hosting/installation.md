@@ -9,7 +9,7 @@ sidebar:
 
 Para instruções detalhadas de instalação e implantação, consulte a documentação oficial em inglês:
 
-- [INSTALL.md no GitHub](https://github.com/onetimesecret/onetimesecret/blob/main/INSTALL.md)
+- [README no GitHub](https://github.com/onetimesecret/onetimesecret#readme)
 - [Documentação de Implantação](https://github.com/onetimesecret/onetimesecret/blob/main/docs/)
 
 ## Opções de Implantação
@@ -32,5 +32,5 @@ Consulte a documentação completa no repositório do GitHub para etapas detalha
 ## Suporte
 
 Para questões sobre instalação, visite:
-- [GitHub Discussions](https://github.com/onetimesecret/onetimesecret/discussions)
+- [GitHub Issues](https://github.com/onetimesecret/onetimesecret/issues)
 - [Issue Tracker](https://github.com/onetimesecret/onetimesecret/issues)

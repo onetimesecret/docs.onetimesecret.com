@@ -41,7 +41,7 @@ docker run -p 3000:3000 -d \
   -e HOST=localhost:3000 \
   -e SSL=false \
   -e RACK_ENV=production \
-  onetimesecret/onetimesecret:v0.25.8
+  onetimesecret/onetimesecret:v0.25.10
 ```
 
 ### 4. Отримайте доступ до свого екземпляра
@@ -60,7 +60,7 @@ docker run -p 3000:3000 -d \
 
 Вам потрібно буде зібрати фронтенд-ресурси за допомогою `pnpm install && pnpm run build:local` перед запуском додатку.
 
-Перегляньте [INSTALL.md](https://github.com/onetimesecret/onetimesecret/blob/main/INSTALL.md) для повних деталей ручного встановлення.
+Перегляньте [README](https://github.com/onetimesecret/onetimesecret#readme) для повних деталей ручного встановлення.
 
 ## Перевірка
 
@@ -84,5 +84,5 @@ docker run -p 3000:3000 -d \
 ## Отримання допомоги
 
 - **Документація**: Перегляньте наш [довідник конфігурації](./configuration)
-- **Спільнота**: Приєднуйтесь до обговорень на [GitHub](https://github.com/onetimesecret/onetimesecret/discussions)
+- **Спільнота**: Приєднуйтесь до обговорень на [GitHub](https://github.com/onetimesecret/onetimesecret)
 - **Проблеми**: Повідомляйте про помилки в нашому [трекері проблем](https://github.com/onetimesecret/onetimesecret/issues)
