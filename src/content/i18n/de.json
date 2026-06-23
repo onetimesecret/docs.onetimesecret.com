@@ -66,6 +66,9 @@
     "apiExplorer": "API Explorer",
     "apiReference": "API-Referenz"
   },
+  "staging.bannerWarning": "Sie sehen die Staging-Version der Dokumentation",
+  "staging.bannerDescription": "Inhalte dienen hier nur zu Testzwecken und können von der Live-Dokumentation abweichen.",
+  "staging.goToProduction": "Zur Live-Dokumentation",
   "skipLink.label": "Zum Inhalt springen",
   "search.label": "Suche",
   "search.ctrlKey": "Strg",

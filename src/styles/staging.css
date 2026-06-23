@@ -1,0 +1,87 @@
+/* src/styles/staging.css
+ *
+ * Staging-only layout adjustments.
+ *
+ * This stylesheet is added to Starlight's `customCss` ONLY on staging builds
+ * (see config/starlight.mjs), so production never loads it. Its job is to make
+ * room for the fixed staging banner (StagingBanner.astro): Starlight's header,
+ * left sidebar, right table-of-contents, and mobile TOC bar are all
+ * `position: fixed` anchored to the top of the viewport, so each must be
+ * pushed down by the banner's height. Everything is expressed relative to a
+ * single custom property, `--ots-staging-banner-h`, so the layout stays in
+ * sync if the banner height changes.
+ *
+ * Specificity / cascade: Starlight's own layout rules live in
+ * `@layer starlight.core`. These overrides are intentionally unlayered, and
+ * unlayered rules beat any layered rule regardless of specificity, so they
+ * apply cleanly without `!important`.
+ */
+
+:root {
+  /* Height of the fixed staging banner. Keep in sync with the `height` set on
+     .ots-staging-banner in StagingBanner.astro. */
+  --ots-staging-banner-h: 2.5rem;
+}
+
+/* Push the fixed top navbar below the banner. */
+header.header {
+  inset-block-start: var(--ots-staging-banner-h);
+}
+
+/* Push the fixed left sidebar (and its mobile drop-down pane) below the
+   banner + navbar. */
+.sidebar-pane {
+  inset-block-start: calc(var(--sl-nav-height) + var(--ots-staging-banner-h));
+}
+
+/* Push the main content column's top padding down so content clears the
+   banner. (--sl-nav-height + --sl-mobile-toc-height are Starlight's existing
+   offsets; we add the banner on top.) */
+.main-frame {
+  padding-top: calc(
+    var(--sl-nav-height) + var(--sl-mobile-toc-height) +
+      var(--ots-staging-banner-h)
+  );
+}
+
+/* Mobile "On this page" table-of-contents bar, fixed just under the navbar. */
+mobile-starlight-toc nav {
+  inset-block-start: calc(
+    var(--sl-nav-height) - 1px + var(--ots-staging-banner-h)
+  );
+}
+
+/* Desktop right-hand table of contents: a fixed, full-height column whose
+   content is padded down past the navbar — add the banner height too. */
+@media (min-width: 72rem) {
+  .right-sidebar {
+    padding-top: calc(var(--sl-nav-height) + var(--ots-staging-banner-h));
+  }
+}
+
+/* Keep anchored headings (#fragment links) from landing under the banner +
+   navbar. Mirrors the scroll-padding-top rule in tailwind.css. */
+html {
+  scroll-padding-top: calc(
+    var(--sl-nav-height) + 1rem + var(--ots-staging-banner-h)
+  );
+}
+
+/* Starlight's "skip to content" link is fixed at top:0.75rem and only becomes
+   visible on focus; nudge it below the banner so keyboard users can see it
+   instead of it appearing behind the strip. (#_top is the page title id.) */
+a[href="#_top"] {
+  top: calc(0.75rem + var(--ots-staging-banner-h));
+}
+
+/* When printing, hide the banner/watermark and zero the offset so the printed
+   page has no empty band at the top. */
+@media print {
+  :root {
+    --ots-staging-banner-h: 0px;
+  }
+  .ots-staging-banner,
+  .ots-staging-watermark {
+    display: none;
+  }
+}

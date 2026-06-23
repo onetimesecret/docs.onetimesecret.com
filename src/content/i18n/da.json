@@ -67,6 +67,9 @@
     "apiExplorer": "API-udforsker",
     "apiReference": "API-reference"
   },
+  "staging.bannerWarning": "Du ser staging-versionen af dokumentationen",
+  "staging.bannerDescription": "Indholdet her er til test og kan afvige fra den live dokumentation.",
+  "staging.goToProduction": "Gå til live dokumentation",
   "skipLink.label": "Spring til indhold",
   "search.label": "Søg",
   "search.ctrlKey": "Ctrl",

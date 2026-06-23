@@ -67,6 +67,9 @@
     "apiExplorer": "API Изследовател",
     "apiReference": "API Справка"
   },
+  "staging.bannerWarning": "Преглеждате тестовия сайт с документация",
+  "staging.bannerDescription": "Съдържанието тук е за тестване и може да се различава от продукционната документация.",
+  "staging.goToProduction": "Към продукционната документация",
   "skipLink.label": "Преминаване към съдържанието",
   "search.label": "Търсене",
   "search.ctrlKey": "Ctrl",
