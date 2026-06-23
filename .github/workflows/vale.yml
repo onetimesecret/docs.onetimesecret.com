@@ -10,7 +10,12 @@ name: Vale Prose Lint
 
 on:
   pull_request:
-    branches: [main]
+    branches:
+      - main
+      - "integration/*"
+      - "integrate/*"
+      - "feature/*"
+      - "fix/*"
   workflow_dispatch:
 
 permissions:
