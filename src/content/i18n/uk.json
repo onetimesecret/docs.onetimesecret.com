@@ -67,7 +67,7 @@
     "apiExplorer": "API Оглядач",
     "apiReference": "API Довідник"
   },
-  "staging.bannerWarning": "Ви переглядаєте staging-версію сайту документації",
+  "staging.bannerWarning": "Ви переглядаєте попередню версію сайту документації",
   "staging.bannerDescription": "Вміст тут призначений для тестування й може відрізнятися від актуальної документації.",
   "staging.goToProduction": "Перейти до актуальної документації",
   "skipLink.label": "Перейти до вмісту",
