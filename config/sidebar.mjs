@@ -122,28 +122,15 @@ function createGroup(key, items = [], collapsed = false) {
 }
 
 // ---------------------------------------------------------------------------
-// Custom-domain & team feature navigation
+// Custom-domain, Identity Plus & Team Plus navigation
 //
-// The list of custom-domain features is growing (Incoming Secrets, Homepage
-// Secrets, Signup/Signin Settings, DNS Validation, Privacy Options) and some
-// adjacent capabilities (SSO, Audit Log, Shared Dashboard) are really team
-// features, not domain features. To make room for them — and to let us compare
-// arrangements before committing — the section is rendered through one of four
-// switchable VARIANTS. Preview any of them with the SIDEBAR_VARIANT env var,
-// e.g.  `SIDEBAR_VARIANT=plans pnpm dev`.
-//
-//   "nested"    (default) Custom Domains group with a collapsible
-//               "Domain Features" subgroup. Least disruptive; scales cleanly.
-//   "flat"      Single Custom Domains group, every feature listed flat.
-//   "top-level" Custom Domains group + a separate top-level
-//               "Custom Domain Features" group.
-//   "plans"     Plan-based: "Identity Plus" (custom domains + features) and
-//               "Team Plus" (SSO, Audit Log, Shared Dashboard). Matches the
-//               real product tiers. NOTE: "Team Plus" is a placeholder name —
-//               the roadmap currently says "Team plans (April 2026)".
-//
-// Once a structure is chosen, delete the unused branches of customDomainsSlot()
-// (and any feature builders they no longer use) to collapse this back to one.
+// Three product-oriented top-level groups:
+//   - Custom Domains: setting up and branding a custom domain.
+//   - Identity Plus:  the per-domain features included with the plan.
+//   - Team Plus:      team/account capabilities — SSO today; Audit Log and
+//                     Shared Dashboard are placeholders for upcoming team
+//                     plans. NOTE: "Team Plus" is a working name; the roadmap
+//                     currently says "Team plans (April 2026)".
 // ---------------------------------------------------------------------------
 
 const cdBaseLinks = () => [
@@ -158,7 +145,7 @@ const cdBaseLinks = () => [
   createLink("useCases", "custom-domains/use-cases"),
 ];
 
-const cdFeatureLinks = () => [
+const identityPlusLinks = () => [
   createLink("incomingSecrets", "custom-domains/incoming-secrets"),
   createLink("homepageSecrets", "custom-domains/homepage-secrets"),
   createLink("signupSettings", "custom-domains/signup-settings"),
@@ -167,60 +154,11 @@ const cdFeatureLinks = () => [
   createLink("privacyOptions", "custom-domains/privacy-options"),
 ];
 
-// In the custom-domain-centric variants, SSO is shown alongside the domain
-// features (matching the original feature list). In the plan-based variant it
-// moves under Team Plus instead.
-const cdFeatureLinksWithSso = () => [
-  ...cdFeatureLinks(),
-  createLink("sso", "team/sso"),
-];
-
-const teamFeatureLinks = () => [
+const teamPlusLinks = () => [
   createLink("sso", "team/sso", { text: "★", variant: "tip", class: "small" }),
   createLink("auditLog", "team/audit-log"),
   createLink("sharedDashboard", "team/shared-dashboard"),
 ];
-
-/**
- * Returns the top-level sidebar item(s) that occupy the custom-domains slot for
- * a given variant. Everything else in the sidebar stays constant.
- * @param {string} variant
- * @returns {Array}
- */
-function customDomainsSlot(variant) {
-  switch (variant) {
-    case "flat":
-      return [
-        createGroup("customDomains", [...cdBaseLinks(), ...cdFeatureLinksWithSso()]),
-      ];
-
-    case "top-level":
-      return [
-        createGroup("customDomains", cdBaseLinks()),
-        createGroup("customDomainFeatures", cdFeatureLinksWithSso()),
-      ];
-
-    case "plans":
-      return [
-        createGroup("identityPlus", [
-          ...cdBaseLinks(),
-          createGroup("domainFeatures", cdFeatureLinks(), true),
-        ]),
-        createGroup("teamPlus", teamFeatureLinks()),
-      ];
-
-    case "nested":
-    default:
-      return [
-        createGroup("customDomains", [
-          ...cdBaseLinks(),
-          createGroup("domainFeatures", cdFeatureLinksWithSso(), true),
-        ]),
-      ];
-  }
-}
-
-const SIDEBAR_VARIANT = process.env.SIDEBAR_VARIANT || "nested";
 
 // Sidebar configuration using translation keys
 export const sidebar = [
@@ -238,7 +176,11 @@ export const sidebar = [
     createLink("comparePlans", "pricing/compare-plans"),
   ]),
 
-  ...customDomainsSlot(SIDEBAR_VARIANT),
+  createGroup("customDomains", cdBaseLinks()),
+
+  createGroup("identityPlus", identityPlusLinks()),
+
+  createGroup("teamPlus", teamPlusLinks()),
 
   createGroup("regions", [
     createLink("overview", "regions"),
