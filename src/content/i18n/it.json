@@ -66,7 +66,7 @@
     "apiExplorer": "API Esploratore",
     "apiReference": "Riferimento API"
   },
-  "staging.bannerWarning": "Stai visualizzando il sito di documentazione di staging",
+  "staging.bannerWarning": "Stai visualizzando il sito di documentazione in anteprima",
   "staging.bannerDescription": "I contenuti qui servono per i test e possono differire dalla documentazione di produzione.",
   "staging.goToProduction": "Vai alla documentazione di produzione",
   "skipLink.label": "Vai al contenuto",

@@ -67,7 +67,7 @@
     "apiExplorer": "API 探索器",
     "apiReference": "API 参考"
   },
-  "staging.bannerWarning": "您正在浏览预发布（staging）文档站点",
+  "staging.bannerWarning": "您正在浏览预发布文档站点",
   "staging.bannerDescription": "此处内容仅供测试，可能与正式文档有所不同。",
   "staging.goToProduction": "前往正式文档",
   "skipLink.label": "跳转到内容",

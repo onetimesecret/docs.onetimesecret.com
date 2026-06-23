@@ -67,7 +67,7 @@
     "apiExplorer": "API エクスプローラー",
     "apiReference": "API リファレンス"
   },
-  "staging.bannerWarning": "ステージング環境のドキュメントを表示しています",
+  "staging.bannerWarning": "プレリリース版のドキュメントを表示しています",
   "staging.bannerDescription": "こちらのコンテンツはテスト用であり、本番のドキュメントとは異なる場合があります。",
   "staging.goToProduction": "本番のドキュメントへ",
   "skipLink.label": "コンテンツにスキップ",

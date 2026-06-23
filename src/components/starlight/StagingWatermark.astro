@@ -1,32 +1,32 @@
 ---
 // src/components/starlight/StagingWatermark.astro
 //
-// Full-page diagonal "STAGING" watermark overlay for the documentation site.
+// Full-page diagonal "PRERELEASE" watermark overlay for the documentation site.
 //
 // This is the docs-site counterpart to the company site's
-// `StagingWatermark.vue`. It paints a repeating, rotated "STAGING" stamp over
-// the whole viewport (the legal-document "COPY"/"DUPLICATE" effect) so the
-// staging deploy is unmistakable at a glance.
+// `StagingWatermark.vue`. It paints a repeating, rotated "PRERELEASE" stamp
+// over the whole viewport (the legal-document "COPY"/"DUPLICATE" effect) so the
+// prerelease (staging) deploy is unmistakable at a glance.
 //
 // Docs-specific considerations:
 //   - `pointer-events: none` means it never blocks reading, selecting text,
 //     copying code blocks, or any link/menu interaction underneath.
 //   - `aria-hidden` keeps it out of the accessibility tree.
-//   - The opacity is kept very low (0.05). Documentation is dense, text-heavy,
+//   - The opacity is kept low (0.07–0.08). Documentation is dense, text-heavy,
 //     and full of code blocks, so the stamp must stay faint enough not to hurt
 //     readability or contrast while remaining noticeable.
 //   - Two colour layers are rendered and toggled via Starlight's
 //     `:root[data-theme='dark']` switch, because an SVG data URI can't read
 //     `currentColor`.
 
-// Build a repeating SVG tile data URI containing the word "STAGING".
+// Build a repeating SVG tile data URI containing the word "PRERELEASE".
 function buildSvgBackground(color: string): string {
   const svg = [
-    '<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">',
-    '<text x="200" y="110" text-anchor="middle"',
+    '<svg xmlns="http://www.w3.org/2000/svg" width="560" height="200">',
+    '<text x="280" y="110" text-anchor="middle"',
     ' font-size="48" font-weight="900" font-family="sans-serif"',
     ' letter-spacing="0.2em"',
-    ` fill="${color}">STAGING</text>`,
+    ` fill="${color}">PRERELEASE</text>`,
     "</svg>",
   ].join("");
   return `url("data:image/svg+xml,${encodeURIComponent(svg)}")`;
@@ -69,11 +69,11 @@ const darkBg = buildSvgBackground("#fde68a");
     height: 200vmax;
     transform: translate(-50%, -50%) rotate(-30deg);
     background-repeat: repeat;
-    background-size: 400px 200px;
+    background-size: 560px 200px;
   }
 
   .ots-staging-watermark__layer--light {
-    opacity: 0.05;
+    opacity: 0.08;
   }
 
   .ots-staging-watermark__layer--dark {
@@ -85,6 +85,6 @@ const darkBg = buildSvgBackground("#fde68a");
   }
 
   :global(:root[data-theme="dark"]) .ots-staging-watermark__layer--dark {
-    opacity: 0.05;
+    opacity: 0.07;
   }
 </style>

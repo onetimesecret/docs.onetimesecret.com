@@ -67,7 +67,7 @@
     "apiExplorer": "API Tūhuranga",
     "apiReference": "API Tohutoro"
   },
-  "staging.bannerWarning": "Kei te tirohia e koe te pae tuhinga whakamātau (staging)",
+  "staging.bannerWarning": "Kei te tirohia e koe te pae tuhinga whakaaturanga (prerelease)",
   "staging.bannerDescription": "He mea whakamātau ngā ihirangi i konei, tērā pea ka rerekē i ngā tuhinga whakaputa.",
   "staging.goToProduction": "Haere ki ngā tuhinga whakaputa",
   "skipLink.label": "Peke ki te ihirangi",

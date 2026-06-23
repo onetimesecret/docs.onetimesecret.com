@@ -65,7 +65,7 @@
     "apiExplorer": "API Explorer",
     "apiReference": "API Reference"
   },
-  "staging.bannerWarning": "You're viewing the staging documentation site",
+  "staging.bannerWarning": "You're viewing the prerelease documentation site",
   "staging.bannerDescription": "Content here is for testing and may differ from the live docs.",
   "staging.goToProduction": "Go to live docs",
   "skipLink.label": "Skip to content",
