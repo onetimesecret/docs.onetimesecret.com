@@ -64,9 +64,6 @@ jobs:
         env:
           SITE_URL: https://docs.onetimesecret.dev
 
-      - name: Mark build as noindex
-        run: |
-          printf 'User-agent: *\nDisallow: /\n' > dist/robots.txt
 
       - name: Upload dist/ to Bunny Edge Storage
         env:
