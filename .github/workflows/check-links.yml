@@ -20,7 +20,12 @@ name: Check Links
 on:
   # Run on PRs to catch issues before merge
   pull_request:
-    branches: [main]
+    branches:
+      - main
+      - "integration/*"
+      - "integrate/*"
+      - "feature/*"
+      - "fix/*"
   # Run on push to main to catch any issues
   push:
     branches: [main]

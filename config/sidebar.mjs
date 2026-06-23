@@ -35,6 +35,49 @@ const ptBrTranslations = loadTranslations("pt-br");
 const svTranslations = loadTranslations("sv");
 const trTranslations = loadTranslations("tr");
 
+// Map of Starlight locale code (BCP-47) -> that locale's translation bundle.
+const localeTranslations = {
+  de: deTranslations,
+  nl: nlTranslations,
+  fr: frTranslations,
+  es: esTranslations,
+  uk: ukTranslations,
+  ko: koTranslations,
+  ja: jaTranslations,
+  mi: miTranslations,
+  bg: bgTranslations,
+  it: itTranslations,
+  "zh-CN": zhCnTranslations,
+  da: daTranslations,
+  pl: plTranslations,
+  "pt-BR": ptBrTranslations,
+  sv: svTranslations,
+  tr: trTranslations,
+};
+
+/**
+ * Build the per-locale label overrides for a sidebar key.
+ *
+ * Only locales that actually have a translation for `key` are included.
+ * Starlight's schema rejects `undefined` translation values, and for any
+ * locale we omit it falls back to the default (English) `label`. This lets us
+ * add English-only sidebar keys without breaking the build or hand-editing
+ * all 16 non-English locale files first — the translation pipeline fills them
+ * in later.
+ * @param {string} key - Translation key for the label
+ * @returns {Record<string, string>} Locale -> translated label
+ */
+function buildTranslations(key) {
+  const translations = {};
+  for (const [locale, bundle] of Object.entries(localeTranslations)) {
+    const value = bundle.sidebar?.[key];
+    if (value !== undefined) {
+      translations[locale] = value;
+    }
+  }
+  return translations;
+}
+
 /**
  * Helper function to create sidebar link items with required attrs
  * @param {string} key - Translation key for the label
@@ -51,24 +94,7 @@ function createLink(key, link, badge) {
   return {
     label: enLabel,
     link,
-    translations: {
-      de: deTranslations.sidebar?.[key],
-      nl: nlTranslations.sidebar?.[key],
-      fr: frTranslations.sidebar?.[key],
-      es: esTranslations.sidebar?.[key],
-      uk: ukTranslations.sidebar?.[key],
-      ko: koTranslations.sidebar?.[key],
-      ja: jaTranslations.sidebar?.[key],
-      mi: miTranslations.sidebar?.[key],
-      bg: bgTranslations.sidebar?.[key],
-      it: itTranslations.sidebar?.[key],
-      "zh-CN": zhCnTranslations.sidebar?.[key],
-      da: daTranslations.sidebar?.[key],
-      pl: plTranslations.sidebar?.[key],
-      "pt-BR": ptBrTranslations.sidebar?.[key],
-      sv: svTranslations.sidebar?.[key],
-      tr: trTranslations.sidebar?.[key],
-    },
+    translations: buildTranslations(key),
     attrs: {},
     ...(badge ? { badge } : {}),
   };
@@ -89,28 +115,63 @@ function createGroup(key, items = [], collapsed = false) {
   const enLabel = enTranslations.sidebar?.[key] || key;
   return {
     label: enLabel,
-    translations: {
-      de: deTranslations.sidebar?.[key],
-      nl: nlTranslations.sidebar?.[key],
-      fr: frTranslations.sidebar?.[key],
-      es: esTranslations.sidebar?.[key],
-      uk: ukTranslations.sidebar?.[key],
-      ko: koTranslations.sidebar?.[key],
-      ja: jaTranslations.sidebar?.[key],
-      mi: miTranslations.sidebar?.[key],
-      bg: bgTranslations.sidebar?.[key],
-      it: itTranslations.sidebar?.[key],
-      "zh-CN": zhCnTranslations.sidebar?.[key],
-      da: daTranslations.sidebar?.[key],
-      pl: plTranslations.sidebar?.[key],
-      "pt-BR": ptBrTranslations.sidebar?.[key],
-      sv: svTranslations.sidebar?.[key],
-      tr: trTranslations.sidebar?.[key],
-    },
+    translations: buildTranslations(key),
     items,
     collapsed,
   };
 }
+
+// ---------------------------------------------------------------------------
+// Custom-domain & plan-tier navigation
+//
+// Grouped by billing entitlement: each feature is filed under the plan tier
+// that first unlocks it (see etc/billing.yaml). "Custom Domains" holds the
+// setup docs (custom_domains is itself a Free entitlement); the Free Plan,
+// Identity Plus and Team Plus groups then show what each tier adds.
+//
+//   Custom Domains  domain setup & usage docs (custom_domains)
+//   Free Plan       homepage_secrets, incoming_secrets                (Free)
+//   Identity Plus   custom_branding, custom_mail_sender,
+//                   custom_privacy_defaults, custom_signin_config, manage_members
+//   Team Plus       manage_sso, custom_signup_validation, manage_teams, audit_logs
+//
+// NOTE: audit_logs is defined as an entitlement but is not yet assigned to any
+// plan; Audit Log lives under Team Plus as the most advanced tier. Pages keep
+// their existing /custom-domains/ and /team/ URLs regardless of which group
+// they appear in.
+// ---------------------------------------------------------------------------
+
+const customDomainsLinks = () => [
+  createLink("overview", "custom-domains"),
+  createLink("howItWorks", "custom-domains/how-it-works"),
+  createLink("setupGuide", "custom-domains/setup-guide"),
+  createLink("dnsValidation", "custom-domains/dns-validation"),
+  createLink("useCases", "custom-domains/use-cases"),
+];
+
+const freePlanLinks = () => [
+  createLink("homepageSecrets", "custom-domains/homepage-secrets"),
+  createLink("incomingSecrets", "custom-domains/incoming-secrets"),
+];
+
+const identityPlusLinks = () => [
+  createLink("brandGuide", "custom-domains/brand-guide", {
+    text: "★",
+    variant: "tip",
+    class: "small",
+  }),
+  createLink("emailSender", "custom-domains/email-sender"),
+  createLink("privacyOptions", "custom-domains/privacy-options"),
+  createLink("signinSettings", "custom-domains/signin-settings"),
+  createLink("memberInvites", "custom-domains/member-invites"),
+];
+
+const teamPlusLinks = () => [
+  createLink("sso", "team/sso", { text: "★", variant: "tip", class: "small" }),
+  createLink("signupSettings", "custom-domains/signup-settings"),
+  createLink("sharedDashboard", "team/shared-dashboard"),
+  createLink("auditLog", "team/audit-log"),
+];
 
 // Sidebar configuration using translation keys
 export const sidebar = [
@@ -128,17 +189,13 @@ export const sidebar = [
     createLink("comparePlans", "pricing/compare-plans"),
   ]),
 
-  createGroup("customDomains", [
-    createLink("overview", "custom-domains"),
-    createLink("howItWorks", "custom-domains/how-it-works"),
-    createLink("setupGuide", "custom-domains/setup-guide"),
-    createLink("brandGuide", "custom-domains/brand-guide", {
-      text: "★",
-      variant: "tip",
-      class: "small",
-    }),
-    createLink("useCases", "custom-domains/use-cases"),
-  ]),
+  createGroup("customDomains", customDomainsLinks()),
+
+  createGroup("freePlan", freePlanLinks()),
+
+  createGroup("identityPlus", identityPlusLinks()),
+
+  createGroup("teamPlus", teamPlusLinks()),
 
   createGroup("regions", [
     createLink("overview", "regions"),
@@ -165,8 +222,11 @@ export const sidebar = [
     createLink("clientLibraries", "resources/client-libraries"),
   ]),
 
-  createGroup("securityBestPractices", [
-    createLink("overview", "security-best-practices"),
+  createGroup("securityTrust", [
+    createLink("overview", "security"),
+    createLink("dataProtection", "security/data-protection"),
+    createLink("securityBestPractices", "security-best-practices"),
+    createLink("vulnerabilityDisclosure", "security/vulnerability-disclosure"),
   ]),
 
   createGroup(

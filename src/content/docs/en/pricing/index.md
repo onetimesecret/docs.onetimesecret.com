@@ -9,17 +9,17 @@ Share confidential information with confidence, elevate your brand, and build tr
 
 ## Plans
 
-### Basic
+### Free
 
 **$0/month**
 
-Secure, one-time sharing for everyone.
+Secure, self-destructing secret sharing for everyone.
 
 **Features:**
-- Onetime viewing of shared secrets
-- Automatic deletion after viewing
-- Account required to email recipients
-- Basic API access
+- Onetime viewing with automatic deletion after access
+- One custom domain
+- Homepage & incoming secrets
+- API access
 
 [Get Started](https://onetimesecret.com/plans/basic)
 
@@ -35,15 +35,18 @@ Secure sharing that elevates your brand and simplifies communication.
 
 [See current pricing](https://onetimesecret.com/pricing) | [Choose this plan](https://onetimesecret.com/plans/identity)
 
-### Global Elite
+### Team Plus
 
-A fully custom, single-tenant installation with dedicated infrastructure, data-compliance controls, and unlimited scalability.
+Governed secret sharing with SSO, access controls, and organizational visibility.
 
 **Features:**
-- Private cloud environment
-- Unlimited usage and scaling
-- Multiple data location choices (EU, US)
-- Full regulatory compliance (including GDPR, CCPA, HIPAA)
+- Everything in Identity Plus
+- Single sign-on (SSO)
+- Team management & shared dashboard
+- Flexible email From domain
+- Per-domain signup validation
+
+[See current pricing](https://onetimesecret.com/pricing)
 
 ## Frequently Asked Questions
 

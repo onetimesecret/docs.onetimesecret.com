@@ -63,6 +63,6 @@ If you don't use a custom domain, the switch is immediate. Your old links (using
 
 You can maintain accounts in multiple regions simultaneously. All accounts using the same email address share the same subscription status. This can be useful if you serve users in different geographic areas and want to minimize latency or meet data residency requirements.
 
-## Global Elite
+## Dedicated instances
 
-Global Elite customers on dedicated instances should contact us at [dedicated@onetimesecret.com](mailto:dedicated@onetimesecret.com) for region changes, as dedicated infrastructure requires manual reconfiguration. You can also reach us through the [feedback page](https://onetimesecret.com/feedback).
+Customers on dedicated instances should contact us at [dedicated@onetimesecret.com](mailto:dedicated@onetimesecret.com) for region changes, as dedicated infrastructure requires manual reconfiguration. You can also reach us through the [feedback page](https://onetimesecret.com/feedback).

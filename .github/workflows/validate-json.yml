@@ -6,7 +6,13 @@ on:
     paths:
       - "**/*.json"
   pull_request:
-    branches: [main, develop]
+    branches:
+      - main
+      - develop
+      - "integration/*"
+      - "integrate/*"
+      - "feature/*"
+      - "fix/*"
     paths:
       - "**/*.json"
   workflow_dispatch:

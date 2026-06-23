@@ -33,7 +33,12 @@ on:
   push:
     branches: [main]
   pull_request:
-    branches: [main]
+    branches:
+      - main
+      - "integration/*"
+      - "integrate/*"
+      - "feature/*"
+      - "fix/*"
   # Allows the workflow to be manually triggered from the Grand UI of Actions
   workflow_dispatch:
     inputs:
