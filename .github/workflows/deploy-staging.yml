@@ -62,10 +62,8 @@ jobs:
       - name: Build site
         run: pnpm run build
         env:
-          SITE_URL: https://docs.onetimesecret.dev
+          SITE_URL: ${{ vars.SITE_URL }}
 
-      - name: Mark build as noindex
-        run: printf 'User-agent: *\nDisallow: /\n' > dist/robots.txt
 
       - name: Upload dist/ to Bunny Edge Storage
         env:
