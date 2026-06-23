@@ -85,7 +85,8 @@ jobs:
           echo "Uploading ${total} files to ${STORAGE_ZONE}..."
           failed=0
           find . -type f -printf '%P\n' | while IFS= read -r file; do
-            url="${base}/${file}"
+            encoded=$(python3 -c "import urllib.parse, sys; print(urllib.parse.quote(sys.argv[1]))" "${file}")
+            url="${base}/${encoded}"
             if ! curl -gfsS --retry 3 -X PUT \
               -H "AccessKey: ${STORAGE_PASSWORD}" \
               --data-binary "@${file}" \
