@@ -35,6 +35,49 @@ const ptBrTranslations = loadTranslations("pt-br");
 const svTranslations = loadTranslations("sv");
 const trTranslations = loadTranslations("tr");
 
+// Map of Starlight locale code (BCP-47) -> that locale's translation bundle.
+const localeTranslations = {
+  de: deTranslations,
+  nl: nlTranslations,
+  fr: frTranslations,
+  es: esTranslations,
+  uk: ukTranslations,
+  ko: koTranslations,
+  ja: jaTranslations,
+  mi: miTranslations,
+  bg: bgTranslations,
+  it: itTranslations,
+  "zh-CN": zhCnTranslations,
+  da: daTranslations,
+  pl: plTranslations,
+  "pt-BR": ptBrTranslations,
+  sv: svTranslations,
+  tr: trTranslations,
+};
+
+/**
+ * Build the per-locale label overrides for a sidebar key.
+ *
+ * Only locales that actually have a translation for `key` are included.
+ * Starlight's schema rejects `undefined` translation values, and for any
+ * locale we omit it falls back to the default (English) `label`. This lets us
+ * add English-only sidebar keys without breaking the build or hand-editing
+ * all 16 non-English locale files first — the translation pipeline fills them
+ * in later.
+ * @param {string} key - Translation key for the label
+ * @returns {Record<string, string>} Locale -> translated label
+ */
+function buildTranslations(key) {
+  const translations = {};
+  for (const [locale, bundle] of Object.entries(localeTranslations)) {
+    const value = bundle.sidebar?.[key];
+    if (value !== undefined) {
+      translations[locale] = value;
+    }
+  }
+  return translations;
+}
+
 /**
  * Helper function to create sidebar link items with required attrs
  * @param {string} key - Translation key for the label
@@ -51,24 +94,7 @@ function createLink(key, link, badge) {
   return {
     label: enLabel,
     link,
-    translations: {
-      de: deTranslations.sidebar?.[key],
-      nl: nlTranslations.sidebar?.[key],
-      fr: frTranslations.sidebar?.[key],
-      es: esTranslations.sidebar?.[key],
-      uk: ukTranslations.sidebar?.[key],
-      ko: koTranslations.sidebar?.[key],
-      ja: jaTranslations.sidebar?.[key],
-      mi: miTranslations.sidebar?.[key],
-      bg: bgTranslations.sidebar?.[key],
-      it: itTranslations.sidebar?.[key],
-      "zh-CN": zhCnTranslations.sidebar?.[key],
-      da: daTranslations.sidebar?.[key],
-      pl: plTranslations.sidebar?.[key],
-      "pt-BR": ptBrTranslations.sidebar?.[key],
-      sv: svTranslations.sidebar?.[key],
-      tr: trTranslations.sidebar?.[key],
-    },
+    translations: buildTranslations(key),
     attrs: {},
     ...(badge ? { badge } : {}),
   };
@@ -89,28 +115,112 @@ function createGroup(key, items = [], collapsed = false) {
   const enLabel = enTranslations.sidebar?.[key] || key;
   return {
     label: enLabel,
-    translations: {
-      de: deTranslations.sidebar?.[key],
-      nl: nlTranslations.sidebar?.[key],
-      fr: frTranslations.sidebar?.[key],
-      es: esTranslations.sidebar?.[key],
-      uk: ukTranslations.sidebar?.[key],
-      ko: koTranslations.sidebar?.[key],
-      ja: jaTranslations.sidebar?.[key],
-      mi: miTranslations.sidebar?.[key],
-      bg: bgTranslations.sidebar?.[key],
-      it: itTranslations.sidebar?.[key],
-      "zh-CN": zhCnTranslations.sidebar?.[key],
-      da: daTranslations.sidebar?.[key],
-      pl: plTranslations.sidebar?.[key],
-      "pt-BR": ptBrTranslations.sidebar?.[key],
-      sv: svTranslations.sidebar?.[key],
-      tr: trTranslations.sidebar?.[key],
-    },
+    translations: buildTranslations(key),
     items,
     collapsed,
   };
 }
+
+// ---------------------------------------------------------------------------
+// Custom-domain & team feature navigation
+//
+// The list of custom-domain features is growing (Incoming Secrets, Homepage
+// Secrets, Signup/Signin Settings, DNS Validation, Privacy Options) and some
+// adjacent capabilities (SSO, Audit Log, Shared Dashboard) are really team
+// features, not domain features. To make room for them — and to let us compare
+// arrangements before committing — the section is rendered through one of four
+// switchable VARIANTS. Preview any of them with the SIDEBAR_VARIANT env var,
+// e.g.  `SIDEBAR_VARIANT=plans pnpm dev`.
+//
+//   "nested"    (default) Custom Domains group with a collapsible
+//               "Domain Features" subgroup. Least disruptive; scales cleanly.
+//   "flat"      Single Custom Domains group, every feature listed flat.
+//   "top-level" Custom Domains group + a separate top-level
+//               "Custom Domain Features" group.
+//   "plans"     Plan-based: "Identity Plus" (custom domains + features) and
+//               "Team Plus" (SSO, Audit Log, Shared Dashboard). Matches the
+//               real product tiers. NOTE: "Team Plus" is a placeholder name —
+//               the roadmap currently says "Team plans (April 2026)".
+//
+// Once a structure is chosen, delete the unused branches of customDomainsSlot()
+// (and any feature builders they no longer use) to collapse this back to one.
+// ---------------------------------------------------------------------------
+
+const cdBaseLinks = () => [
+  createLink("overview", "custom-domains"),
+  createLink("howItWorks", "custom-domains/how-it-works"),
+  createLink("setupGuide", "custom-domains/setup-guide"),
+  createLink("brandGuide", "custom-domains/brand-guide", {
+    text: "★",
+    variant: "tip",
+    class: "small",
+  }),
+  createLink("useCases", "custom-domains/use-cases"),
+];
+
+const cdFeatureLinks = () => [
+  createLink("incomingSecrets", "custom-domains/incoming-secrets"),
+  createLink("homepageSecrets", "custom-domains/homepage-secrets"),
+  createLink("signupSettings", "custom-domains/signup-settings"),
+  createLink("signinSettings", "custom-domains/signin-settings"),
+  createLink("dnsValidation", "custom-domains/dns-validation"),
+  createLink("privacyOptions", "custom-domains/privacy-options"),
+];
+
+// In the custom-domain-centric variants, SSO is shown alongside the domain
+// features (matching the original feature list). In the plan-based variant it
+// moves under Team Plus instead.
+const cdFeatureLinksWithSso = () => [
+  ...cdFeatureLinks(),
+  createLink("sso", "team/sso"),
+];
+
+const teamFeatureLinks = () => [
+  createLink("sso", "team/sso", { text: "★", variant: "tip", class: "small" }),
+  createLink("auditLog", "team/audit-log"),
+  createLink("sharedDashboard", "team/shared-dashboard"),
+];
+
+/**
+ * Returns the top-level sidebar item(s) that occupy the custom-domains slot for
+ * a given variant. Everything else in the sidebar stays constant.
+ * @param {string} variant
+ * @returns {Array}
+ */
+function customDomainsSlot(variant) {
+  switch (variant) {
+    case "flat":
+      return [
+        createGroup("customDomains", [...cdBaseLinks(), ...cdFeatureLinksWithSso()]),
+      ];
+
+    case "top-level":
+      return [
+        createGroup("customDomains", cdBaseLinks()),
+        createGroup("customDomainFeatures", cdFeatureLinksWithSso()),
+      ];
+
+    case "plans":
+      return [
+        createGroup("identityPlus", [
+          ...cdBaseLinks(),
+          createGroup("domainFeatures", cdFeatureLinks(), true),
+        ]),
+        createGroup("teamPlus", teamFeatureLinks()),
+      ];
+
+    case "nested":
+    default:
+      return [
+        createGroup("customDomains", [
+          ...cdBaseLinks(),
+          createGroup("domainFeatures", cdFeatureLinksWithSso(), true),
+        ]),
+      ];
+  }
+}
+
+const SIDEBAR_VARIANT = process.env.SIDEBAR_VARIANT || "nested";
 
 // Sidebar configuration using translation keys
 export const sidebar = [
@@ -128,17 +238,7 @@ export const sidebar = [
     createLink("comparePlans", "pricing/compare-plans"),
   ]),
 
-  createGroup("customDomains", [
-    createLink("overview", "custom-domains"),
-    createLink("howItWorks", "custom-domains/how-it-works"),
-    createLink("setupGuide", "custom-domains/setup-guide"),
-    createLink("brandGuide", "custom-domains/brand-guide", {
-      text: "★",
-      variant: "tip",
-      class: "small",
-    }),
-    createLink("useCases", "custom-domains/use-cases"),
-  ]),
+  ...customDomainsSlot(SIDEBAR_VARIANT),
 
   createGroup("regions", [
     createLink("overview", "regions"),

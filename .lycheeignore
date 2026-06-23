@@ -45,6 +45,12 @@ mailto:*
 .*/img/.*
 .*/socialcards/.*
 
+# Interactive demo / artifact pages live in src/pages, not src/content/docs, so
+# the source-rooted internal link check (--root-dir src/content/docs) can't
+# resolve them. They build to /artifacts/... in dist and are verified in the
+# browser; documentation pages link to them (e.g. the SSO demos).
+.*/artifacts/.*
+
 # Exclude missing translations/guide pages (only en and zh-cn have this file;
 # other locale index pages link to it but the pages don't exist yet)
 .*/translations/guide$

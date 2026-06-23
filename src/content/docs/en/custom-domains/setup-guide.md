@@ -93,6 +93,9 @@ Apex domains cannot use CNAME records due to DNS standards. Therefore, we must u
 3. SSL certificate generation will begin once verification is successful
 4. This process may take a few minutes to complete
 
+For a closer look at the verification lifecycle, what each domain status means,
+and how to resolve a failed check, see [DNS Validation](/en/custom-domains/dns-validation).
+
 ## Step 5: Confirm Setup
 
 Once setup is complete, you should see the following information:

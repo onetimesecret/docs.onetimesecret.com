@@ -47,17 +47,9 @@ Verify your branding changes on the live site after saving.
 
 ## Homepage Settings
 
-### Allow public secrets
-
-Back on your Domain Dashboard you can configure the visibility for your branded homepage. Enabling this feature allows your clients, customers, or team members to create and share secrets directly from your branded interface.
-
-<img src="/img/docs/custom-domains/guide-brand-admin-5.png" alt="Preview panel showing branded interface" width="400" />
-
-### Disable homepage
-
-
-
-<img src="/img/docs/custom-domains/guide-brand-admin-6.png" alt="Live implementation view" width="400" />
+Back on your Domain Dashboard you can also control whether your branded homepage
+is public and whether visitors may create secrets from it. That setting now has
+its own guide — see [Homepage Secrets](/en/custom-domains/homepage-secrets).
 
 ## Important Notes
 - Changes process immediately upon saving
