@@ -1,0 +1,117 @@
+# .github/workflows/deploy-production.yml
+#
+# Publishes the docs site from `main` to BunnyCDN at
+# https://docs.onetimesecret.com (production).
+#
+# Uses a GitHub Environment ("production") so the same secret names work for
+# both staging and production with different values per environment —
+# mirroring the proven pattern in onetimesecret.com.
+#
+# Required secrets/variables (scoped to the "production" environment):
+#
+#   Secrets:
+#     STORAGE_NAME            - Bunny Edge Storage zone name
+#     STORAGE_DESTINATION     - Directory within the storage zone (empty for root)
+#     STORAGE_PASSWORD_RW     - Storage zone read/write password
+#     STORAGE_KEY             - Storage zone API key (for uploads)
+#     PULL_ZONE_ID            - Bunny Pull Zone ID
+#     BUNNY_API_KEY           - Bunny account API key (for cache purge)
+#
+#   Variables (environment-level):
+#     VITE_BASE_URL           - Base URL path (typically "/")
+---
+name: (production) Build and Deploy to BunnyCDN
+
+concurrency:
+  group: ${{ github.workflow }}-production
+  cancel-in-progress: true
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment: production
+    concurrency: production
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 10.30.3
+          run_install: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22.x
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build site
+        run: pnpm run build
+        env:
+          SITE_URL: https://docs.onetimesecret.com
+
+      - name: Upload dist/ to Bunny Edge Storage
+        env:
+          STORAGE_ZONE: ${{ secrets.STORAGE_NAME }}
+          STORAGE_ENDPOINT: ${{ secrets.STORAGE_DESTINATION }}
+          STORAGE_PASSWORD: ${{ secrets.STORAGE_PASSWORD_RW }}
+        run: |
+          set -euo pipefail
+          if [ -z "${STORAGE_ENDPOINT}" ] || [ -z "${STORAGE_PASSWORD}" ]; then
+            echo "::error::STORAGE_DESTINATION and STORAGE_PASSWORD_RW secrets must be configured in the production environment."
+            exit 1
+          fi
+          base="https://${STORAGE_ENDPOINT}/${STORAGE_ZONE}"
+          cd dist
+          find . -type f -printf '%P\n' | xargs -P 8 -I{} \
+            curl -fsS --retry 3 -X PUT \
+              -H "AccessKey: ${STORAGE_PASSWORD}" \
+              --data-binary "@{}" \
+              "${base}/{}"
+          echo "Uploaded $(find . -type f | wc -l) files to ${STORAGE_ZONE}."
+
+      - name: Wait for storage replication
+        run: |
+          echo "Waiting 10 seconds for BunnyCDN storage replication..."
+          sleep 10
+
+      - name: Purge Pull Zone cache
+        env:
+          PULLZONE_ID: ${{ secrets.PULL_ZONE_ID }}
+          BUNNY_API_KEY: ${{ secrets.BUNNY_API_KEY }}
+        run: |
+          set -euo pipefail
+          if [ -z "${PULLZONE_ID}" ] || [ -z "${BUNNY_API_KEY}" ]; then
+            echo "::warning::PULL_ZONE_ID or BUNNY_API_KEY not set — skipping cache purge."
+            exit 0
+          fi
+          echo "Purging BunnyCDN pull zone cache..."
+          response=$(curl -s -w "\n%{http_code}" --retry 3 -X POST \
+            "https://api.bunny.net/pullzone/${PULLZONE_ID}/purgeCache" \
+            -H "AccessKey: ${BUNNY_API_KEY}" \
+            -H "Content-Type: application/json")
+
+          http_code=$(echo "$response" | tail -n1)
+          body=$(echo "$response" | sed '$d')
+
+          if [[ "$http_code" -ge 200 && "$http_code" -lt 300 ]]; then
+            echo "Cache purge completed successfully (HTTP $http_code)"
+          else
+            echo "Cache purge failed with HTTP $http_code"
+            echo "Response: $body"
+            exit 1
+          fi
