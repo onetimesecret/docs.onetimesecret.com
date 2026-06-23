@@ -11,7 +11,7 @@
 #
 #   Secrets:
 #     STORAGE_NAME            - Bunny Edge Storage zone name
-#     STORAGE_DESTINATION     - Directory within the storage zone (empty for root)
+#     STORAGE_ENDPOINT        - Storage host (e.g. storage.bunnycdn.com, or ny./la./uk.)
 #     STORAGE_PASSWORD_RW     - Storage zone read/write password
 #     STORAGE_KEY             - Storage zone API key (for uploads)
 #     PULL_ZONE_ID            - Bunny Pull Zone ID
@@ -67,12 +67,12 @@ jobs:
       - name: Upload dist/ to Bunny Edge Storage
         env:
           STORAGE_ZONE: ${{ secrets.STORAGE_NAME }}
-          STORAGE_ENDPOINT: ${{ secrets.STORAGE_DESTINATION }}
+          STORAGE_ENDPOINT: ${{ secrets.STORAGE_ENDPOINT }}
           STORAGE_PASSWORD: ${{ secrets.STORAGE_PASSWORD_RW }}
         run: |
           set -euo pipefail
           if [ -z "${STORAGE_ENDPOINT}" ] || [ -z "${STORAGE_PASSWORD}" ]; then
-            echo "::error::STORAGE_DESTINATION and STORAGE_PASSWORD_RW secrets must be configured in the production environment."
+            echo "::error::STORAGE_ENDPOINT and STORAGE_PASSWORD_RW secrets must be configured in the production environment."
             exit 1
           fi
           base="https://${STORAGE_ENDPOINT}/${STORAGE_ZONE}"
