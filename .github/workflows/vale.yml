@@ -1,0 +1,36 @@
+# .github/workflows/vale.yml
+---
+name: Vale Prose Lint
+
+# Enforces brand / product-tier terminology (see styles/OnetimeSecret and
+# src/content/docs/en/translations/universal/brand-terms.md).
+#
+# Report-only for now: fail_on_error is false so it annotates PRs without
+# blocking. Flip to true once the existing backlog of warnings is cleared.
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  vale:
+    name: Lint prose
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Run Vale
+        uses: errata-ai/vale-action@v2
+        with:
+          # Scope to English source content; translations carry localized prose.
+          files: src/content/docs/en
+          fail_on_error: false
+          reporter: github-pr-check
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
