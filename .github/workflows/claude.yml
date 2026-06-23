@@ -5,6 +5,8 @@ name: Claude Code
 on:
   pull_request:
     branches:
+      - "integration/*"
+      - "integrate/*"
       - "feature/*"
       - "claude/*"
       - "fix/*"

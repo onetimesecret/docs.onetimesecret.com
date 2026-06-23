@@ -7,6 +7,10 @@ on:
     branches:
       - main
       - develop
+      - "integration/*"
+      - "integrate/*"
+      - "feature/*"
+      - "fix/*"
     types: [opened, synchronize, labeled]
 
 jobs:
