@@ -48,16 +48,6 @@ Governed secret sharing with SSO, access controls, and organizational visibility
 
 [See current pricing](https://onetimesecret.com/pricing)
 
-### Global Elite
-
-A fully custom, single-tenant installation with dedicated infrastructure, data-compliance controls, and unlimited scalability.
-
-**Features:**
-- Private cloud environment
-- Unlimited usage and scaling
-- Multiple data location choices (EU, US)
-- Full regulatory compliance (including GDPR, CCPA, HIPAA)
-
 ## Frequently Asked Questions
 
 ### How does Onetime Secret work?
