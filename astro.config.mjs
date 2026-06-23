@@ -5,7 +5,10 @@ import { createViteConfig, createAllowedHosts } from "./config/vite.mjs";
 import { createRedirectsConfig } from "./config/redirects.mjs";
 
 export default defineConfig({
-  site: "https://docs.onetimesecret.com",
+  // Canonical site URL. Defaults to production; the staging deploy overrides
+  // it via SITE_URL (e.g. https://docs.onetimesecret.dev) so canonicals,
+  // sitemap, and absolute links match the domain being served.
+  site: process.env.SITE_URL || "https://docs.onetimesecret.com",
   redirects: createRedirectsConfig(),
   integrations: createIntegrations(),
   vite: createViteConfig(),
