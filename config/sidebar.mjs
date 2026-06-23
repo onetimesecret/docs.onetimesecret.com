@@ -222,8 +222,11 @@ export const sidebar = [
     createLink("clientLibraries", "resources/client-libraries"),
   ]),
 
-  createGroup("securityBestPractices", [
-    createLink("overview", "security-best-practices"),
+  createGroup("securityTrust", [
+    createLink("overview", "security"),
+    createLink("dataProtection", "security/data-protection"),
+    createLink("securityBestPractices", "security-best-practices"),
+    createLink("vulnerabilityDisclosure", "security/vulnerability-disclosure"),
   ]),
 
   createGroup(
