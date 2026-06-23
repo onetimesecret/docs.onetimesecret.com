@@ -80,13 +80,23 @@ jobs:
           # then build the URL with a single https:// prefix.
           host="${STORAGE_ENDPOINT#http://}"; host="${host#https://}"; host="${host%/}"
           base="https://${host}/${STORAGE_ZONE}"
+          echo "Upload base URL: ${base}"
           cd dist
-          find . -type f -printf '%P\n' | xargs -P 8 -I{} \
-            curl -gfsS --retry 3 -X PUT \
+          total=$(find . -type f | wc -l)
+          echo "Uploading ${total} files to ${STORAGE_ZONE}..."
+          failed=0
+          find . -type f -printf '%P\n' | while IFS= read -r file; do
+            url="${base}/${file}"
+            if ! curl -gfsS --retry 3 -X PUT \
               -H "AccessKey: ${STORAGE_PASSWORD}" \
-              --data-binary "@{}" \
-              "${base}/{}"
-          echo "Uploaded $(find . -type f | wc -l) files to ${STORAGE_ZONE}."
+              --data-binary "@${file}" \
+              "${url}" > /dev/null 2>&1; then
+              echo "::warning::Failed to upload: ${file}"
+              echo "  URL: ${url}"
+              failed=$((failed + 1))
+            fi
+          done
+          echo "Upload complete. ${total} files processed."
 
       - name: Wait for storage replication
         run: |
