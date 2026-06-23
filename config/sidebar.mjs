@@ -122,21 +122,23 @@ function createGroup(key, items = [], collapsed = false) {
 }
 
 // ---------------------------------------------------------------------------
-// Custom-domain, Identity Plus & Team Plus navigation
+// Custom-domain & plan-tier navigation
 //
 // Grouped by billing entitlement: each feature is filed under the plan tier
-// that first unlocks it (see etc/billing.yaml). "Custom Domains" is the Free
-// baseline — custom_domains, homepage_secrets and incoming_secrets are all
-// included in the Free plan. Identity Plus and Team Plus add features on top.
+// that first unlocks it (see etc/billing.yaml). "Custom Domains" holds the
+// setup docs (custom_domains is itself a Free entitlement); the Free Plan,
+// Identity Plus and Team Plus groups then show what each tier adds.
 //
-//   Custom Domains  custom_domains, homepage_secrets, incoming_secrets  (Free)
-//   Identity Plus   custom_branding, custom_privacy_defaults, custom_signin_config
+//   Custom Domains  domain setup & usage docs (custom_domains)
+//   Free Plan       homepage_secrets, incoming_secrets                (Free)
+//   Identity Plus   custom_branding, custom_mail_sender,
+//                   custom_privacy_defaults, custom_signin_config, manage_members
 //   Team Plus       manage_sso, custom_signup_validation, manage_teams, audit_logs
 //
-// NOTE: "Team Plus" matches the billing catalog. audit_logs is defined as an
-// entitlement but is not yet assigned to any plan; Audit Log lives under Team
-// Plus as the most advanced tier. Pages keep their existing /custom-domains/
-// and /team/ URLs regardless of which group they appear in.
+// NOTE: audit_logs is defined as an entitlement but is not yet assigned to any
+// plan; Audit Log lives under Team Plus as the most advanced tier. Pages keep
+// their existing /custom-domains/ and /team/ URLs regardless of which group
+// they appear in.
 // ---------------------------------------------------------------------------
 
 const customDomainsLinks = () => [
@@ -145,6 +147,9 @@ const customDomainsLinks = () => [
   createLink("setupGuide", "custom-domains/setup-guide"),
   createLink("dnsValidation", "custom-domains/dns-validation"),
   createLink("useCases", "custom-domains/use-cases"),
+];
+
+const freePlanLinks = () => [
   createLink("homepageSecrets", "custom-domains/homepage-secrets"),
   createLink("incomingSecrets", "custom-domains/incoming-secrets"),
 ];
@@ -155,8 +160,10 @@ const identityPlusLinks = () => [
     variant: "tip",
     class: "small",
   }),
+  createLink("emailSender", "custom-domains/email-sender"),
   createLink("privacyOptions", "custom-domains/privacy-options"),
   createLink("signinSettings", "custom-domains/signin-settings"),
+  createLink("memberInvites", "custom-domains/member-invites"),
 ];
 
 const teamPlusLinks = () => [
@@ -183,6 +190,8 @@ export const sidebar = [
   ]),
 
   createGroup("customDomains", customDomainsLinks()),
+
+  createGroup("freePlan", freePlanLinks()),
 
   createGroup("identityPlus", identityPlusLinks()),
 
