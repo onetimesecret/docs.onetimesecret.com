@@ -124,40 +124,46 @@ function createGroup(key, items = [], collapsed = false) {
 // ---------------------------------------------------------------------------
 // Custom-domain, Identity Plus & Team Plus navigation
 //
-// Three product-oriented top-level groups:
-//   - Custom Domains: setting up and branding a custom domain.
-//   - Identity Plus:  the per-domain features included with the plan.
-//   - Team Plus:      team/account capabilities — SSO today; Audit Log and
-//                     Shared Dashboard are placeholders for upcoming team
-//                     plans. NOTE: "Team Plus" is a working name; the roadmap
-//                     currently says "Team plans (April 2026)".
+// Grouped by billing entitlement: each feature is filed under the plan tier
+// that first unlocks it (see etc/billing.yaml). "Custom Domains" is the Free
+// baseline — custom_domains, homepage_secrets and incoming_secrets are all
+// included in the Free plan. Identity Plus and Team Plus add features on top.
+//
+//   Custom Domains  custom_domains, homepage_secrets, incoming_secrets  (Free)
+//   Identity Plus   custom_branding, custom_privacy_defaults, custom_signin_config
+//   Team Plus       manage_sso, custom_signup_validation, manage_teams, audit_logs
+//
+// NOTE: "Team Plus" matches the billing catalog. audit_logs is defined as an
+// entitlement but is not yet assigned to any plan; Audit Log lives under Team
+// Plus as the most advanced tier. Pages keep their existing /custom-domains/
+// and /team/ URLs regardless of which group they appear in.
 // ---------------------------------------------------------------------------
 
-const cdBaseLinks = () => [
+const customDomainsLinks = () => [
   createLink("overview", "custom-domains"),
   createLink("howItWorks", "custom-domains/how-it-works"),
   createLink("setupGuide", "custom-domains/setup-guide"),
+  createLink("dnsValidation", "custom-domains/dns-validation"),
+  createLink("useCases", "custom-domains/use-cases"),
+  createLink("homepageSecrets", "custom-domains/homepage-secrets"),
+  createLink("incomingSecrets", "custom-domains/incoming-secrets"),
+];
+
+const identityPlusLinks = () => [
   createLink("brandGuide", "custom-domains/brand-guide", {
     text: "★",
     variant: "tip",
     class: "small",
   }),
-  createLink("useCases", "custom-domains/use-cases"),
-];
-
-const identityPlusLinks = () => [
-  createLink("incomingSecrets", "custom-domains/incoming-secrets"),
-  createLink("homepageSecrets", "custom-domains/homepage-secrets"),
-  createLink("signupSettings", "custom-domains/signup-settings"),
-  createLink("signinSettings", "custom-domains/signin-settings"),
-  createLink("dnsValidation", "custom-domains/dns-validation"),
   createLink("privacyOptions", "custom-domains/privacy-options"),
+  createLink("signinSettings", "custom-domains/signin-settings"),
 ];
 
 const teamPlusLinks = () => [
   createLink("sso", "team/sso", { text: "★", variant: "tip", class: "small" }),
-  createLink("auditLog", "team/audit-log"),
+  createLink("signupSettings", "custom-domains/signup-settings"),
   createLink("sharedDashboard", "team/shared-dashboard"),
+  createLink("auditLog", "team/audit-log"),
 ];
 
 // Sidebar configuration using translation keys
@@ -176,7 +182,7 @@ export const sidebar = [
     createLink("comparePlans", "pricing/compare-plans"),
   ]),
 
-  createGroup("customDomains", cdBaseLinks()),
+  createGroup("customDomains", customDomainsLinks()),
 
   createGroup("identityPlus", identityPlusLinks()),
 
