@@ -65,7 +65,7 @@ jobs:
       - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v2
         with:
-          version: 10.30.3
+          version: 11.8.0
       - name: Use Node.js
         uses: actions/setup-node@v6
         with:
