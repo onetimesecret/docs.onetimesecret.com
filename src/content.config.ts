@@ -11,6 +11,11 @@ export const collections = {
     schema: i18nSchema({
       extend: z.object({
         "custom.label": z.string().optional(),
+        // Staging banner (StagingBanner.astro). Optional so locales that
+        // haven't been translated yet fall back to English per-key.
+        "staging.bannerWarning": z.string().optional(),
+        "staging.bannerDescription": z.string().optional(),
+        "staging.goToProduction": z.string().optional(),
         // Custom 404 page (src/pages/404.astro). Optional so locales that
         // haven't been translated yet fall back to English per-key.
         "notFound.title": z.string().optional(),

@@ -1,0 +1,175 @@
+---
+// src/components/starlight/StagingBanner.astro
+//
+// Staging environment banner for the documentation site.
+//
+// Renders a slim warning strip pinned to the very top of the viewport so it is
+// obvious when someone is reading the staging docs (docs.onetimesecret.dev)
+// rather than the live site. This is the docs-site counterpart to the company
+// site's `StagingBanner.vue`, adapted for Starlight:
+//
+//   - It is an Astro component (no client-side JS / hydration), so the banner
+//     is part of the static HTML. Combined with build-time detection in
+//     `config/starlight.mjs`, that means zero layout shift and no flash.
+//   - Dark mode follows Starlight's `:root[data-theme='dark']` toggle rather
+//     than Tailwind's `dark:` variant (Starlight does not use the `.dark`
+//     class), so the strip recolours with the on-site theme switcher.
+//   - The fixed height is exposed to the layout as `--ots-staging-banner-h`
+//     (see `src/styles/staging.css`), which offsets Starlight's fixed header
+//     and sidebars so nothing is hidden behind the strip.
+//
+// i18n: copy comes from the Starlight `staging.*` keys when available, with an
+// English fallback so the component also works outside a Starlight page.
+
+import { CANONICAL_ORIGIN } from "../../../config/domains.mjs";
+
+const t = Astro.locals?.t;
+const warning = t
+  ? t("staging.bannerWarning")
+  : "You're viewing the staging documentation site";
+const description = t
+  ? t("staging.bannerDescription")
+  : "Content here is for testing and may differ from the live docs.";
+const goToProduction = t ? t("staging.goToProduction") : "Go to live docs";
+
+// Point at the same path on production so visitors land on the page they were
+// already reading, just on the live site.
+const productionHref = new URL(Astro.url.pathname, CANONICAL_ORIGIN).href;
+---
+
+<div class="ots-staging-banner print:hidden" aria-label={warning}>
+  <div class="ots-staging-banner__inner">
+    <svg
+      class="ots-staging-banner__icon"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.8"
+      aria-hidden="true"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"
+      ></path>
+    </svg>
+    <p class="ots-staging-banner__text">
+      <span class="ots-staging-banner__warning">{warning}</span>
+      <span class="ots-staging-banner__description">{description}</span>
+    </p>
+    <a class="ots-staging-banner__link" href={productionHref}>
+      {goToProduction}
+    </a>
+  </div>
+</div>
+
+<style>
+  .ots-staging-banner {
+    position: fixed;
+    inset-block-start: 0;
+    inset-inline: 0;
+    /* Above Starlight's navbar/menu/skiplink (z 4–20) so it sits at the very
+       top, and below the watermark (z 9999). */
+    z-index: 1000;
+    height: var(--ots-staging-banner-h);
+    background-color: #fffbeb; /* amber-50 */
+    color: #78350f; /* amber-900 */
+    border-block-end: 1px solid #fcd34d; /* amber-300 */
+  }
+
+  .ots-staging-banner__inner {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    height: 100%;
+    max-width: 87.5rem;
+    margin-inline: auto;
+    padding-inline: clamp(0.75rem, 3vw, 2rem);
+  }
+
+  .ots-staging-banner__icon {
+    flex: none;
+    width: 1.125rem;
+    height: 1.125rem;
+    color: #b45309; /* amber-700 */
+  }
+
+  .ots-staging-banner__text {
+    margin: 0;
+    min-width: 0;
+    flex: 1 1 auto;
+    /* Keep the strip a single, predictable row so --ots-staging-banner-h stays
+       accurate; overflow is truncated rather than wrapped. */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.8125rem;
+    line-height: 1.2;
+  }
+
+  .ots-staging-banner__warning {
+    font-weight: 600;
+  }
+
+  .ots-staging-banner__description {
+    color: #92400e; /* amber-800 */
+    margin-inline-start: 0.5ch;
+  }
+
+  /* The longer description is supplementary — hide it on narrow screens so the
+     warning and the production link always stay visible. */
+  @media (max-width: 36rem) {
+    .ots-staging-banner__description {
+      display: none;
+    }
+  }
+
+  .ots-staging-banner__link {
+    flex: none;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.625rem;
+    border: 1px solid #f59e0b; /* amber-500 */
+    border-radius: 6px;
+    background-color: rgb(255 255 255 / 0.7);
+    color: #78350f; /* amber-900 */
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition:
+      background-color 0.15s ease,
+      border-color 0.15s ease;
+  }
+
+  .ots-staging-banner__link:hover {
+    background-color: #fffbeb; /* amber-50 */
+    border-color: #d97706; /* amber-600 */
+  }
+
+  /* --- Dark mode (Starlight's data-theme toggle) --- */
+  :global(:root[data-theme="dark"]) .ots-staging-banner {
+    background-color: #451a03; /* amber-950 */
+    color: #fef3c7; /* amber-100 */
+    border-block-end-color: #92400e; /* amber-800 */
+  }
+
+  :global(:root[data-theme="dark"]) .ots-staging-banner__icon {
+    color: #fbbf24; /* amber-400 */
+  }
+
+  :global(:root[data-theme="dark"]) .ots-staging-banner__description {
+    color: #fde68a; /* amber-200 */
+  }
+
+  :global(:root[data-theme="dark"]) .ots-staging-banner__link {
+    background-color: rgb(146 64 14 / 0.45); /* amber-800 @ 45% */
+    border-color: #b45309; /* amber-700 */
+    color: #fef3c7; /* amber-100 */
+  }
+
+  :global(:root[data-theme="dark"]) .ots-staging-banner__link:hover {
+    background-color: rgb(146 64 14 / 0.75);
+    border-color: #d97706; /* amber-600 */
+  }
+</style>

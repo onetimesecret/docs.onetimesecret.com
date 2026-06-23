@@ -67,6 +67,9 @@
     "apiExplorer": "API Verkenner",
     "apiReference": "API-referentie"
   },
+  "staging.bannerWarning": "Je bekijkt de staging-documentatiesite",
+  "staging.bannerDescription": "De inhoud hier dient om te testen en kan afwijken van de live documentatie.",
+  "staging.goToProduction": "Ga naar live documentatie",
   "skipLink.label": "Ga naar inhoud",
   "search.label": "Zoeken",
   "search.ctrlKey": "Ctrl",

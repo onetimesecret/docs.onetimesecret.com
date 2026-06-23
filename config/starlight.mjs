@@ -1,6 +1,14 @@
 // docs.onetimesecret.com/starlight/config/starlight.mjs
 import { i18nConfig } from "./i18n.mjs";
 import { sidebar } from "./sidebar.mjs";
+import { isStagingBuild } from "./domains.mjs";
+
+// Staging builds (docs.onetimesecret.dev) get a top warning banner and a
+// diagonal "STAGING" watermark, mirroring the company site. Detection is done
+// once at build time from SITE_URL (see config/domains.mjs), so the markers
+// are baked into the static HTML — no client-side JS, no layout shift. On
+// production builds nothing below is wired up, so the output is untouched.
+const staging = isStagingBuild();
 
 /**
  * Starlight configuration object
@@ -26,6 +34,10 @@ export const starlightConfig = {
   components: {
     Header: "./src/components/starlight/Header.astro",
     SiteTitle: "./src/components/starlight/SiteTitle.astro",
+    // Staging only: wrap PageFrame to mount the staging banner + watermark.
+    ...(staging
+      ? { PageFrame: "./src/components/starlight/PageFrame.astro" }
+      : {}),
   },
   social: [
     {
@@ -43,6 +55,8 @@ export const starlightConfig = {
     "./src/styles/tailwind.css",
     "./src/fonts/font-face.css",
     "./src/styles/theme-overrides.css",
+    // Staging only: offsets Starlight's fixed header/sidebars for the banner.
+    ...(staging ? ["./src/styles/staging.css"] : []),
   ],
   defaultLocale: i18nConfig.defaultLocale,
   locales: i18nConfig.locales,
