@@ -1,0 +1,135 @@
+# .github/workflows/deploy-staging.yml
+#
+# Publishes the docs site from `develop` to BunnyCDN at
+# https://docs.onetimesecret.dev (staging).
+#
+# Uses a GitHub Environment ("staging") so the same secret names work for
+# both staging and production with different values per environment —
+# mirroring the proven pattern in onetimesecret.com.
+#
+# Required secrets/variables (scoped to the "staging" environment):
+#
+#   Secrets:
+#     STORAGE_NAME            - Bunny Edge Storage zone name
+#     STORAGE_ENDPOINT        - Storage host (e.g. storage.bunnycdn.com, or ny./la./uk.)
+#     STORAGE_PASSWORD_RW     - Storage zone read/write password
+#     STORAGE_KEY             - Storage zone API key (for uploads)
+#     PULL_ZONE_ID            - Bunny Pull Zone ID
+#     BUNNY_API_KEY           - Bunny account API key (for cache purge)
+#
+#   Variables (environment-level):
+#     VITE_BASE_URL           - Base URL path (typically "/")
+---
+name: (staging) Build and Deploy to BunnyCDN
+
+concurrency:
+  group: ${{ github.workflow }}-staging
+  cancel-in-progress: true
+
+on:
+  push:
+    branches: [develop]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment: staging
+    concurrency: staging
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 10.30.3
+          run_install: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22.x
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build site
+        run: pnpm run build
+        env:
+          SITE_URL: ${{ vars.SITE_URL }}
+
+
+      - name: Upload dist/ to Bunny Edge Storage
+        env:
+          STORAGE_ZONE: ${{ secrets.STORAGE_NAME }}
+          STORAGE_ENDPOINT: ${{ secrets.STORAGE_ENDPOINT }}
+          STORAGE_PASSWORD: ${{ secrets.STORAGE_PASSWORD_RW }}
+        run: |
+          set -euo pipefail
+          if [ -z "${STORAGE_ENDPOINT}" ] || [ -z "${STORAGE_ZONE}" ] || [ -z "${STORAGE_PASSWORD}" ]; then
+            echo "::error::STORAGE_NAME, STORAGE_ENDPOINT and STORAGE_PASSWORD_RW secrets must be configured in the staging environment."
+            exit 1
+          fi
+          # Accept STORAGE_ENDPOINT with or without scheme / trailing slash,
+          # then build the URL with a single https:// prefix.
+          host="${STORAGE_ENDPOINT#http://}"; host="${host#https://}"; host="${host%/}"
+          base="https://${host}/${STORAGE_ZONE}"
+          echo "Upload base URL: ${base}"
+          cd dist
+          total=$(find . -type f | wc -l)
+          echo "Uploading ${total} files to ${STORAGE_ZONE}..."
+
+          _upload() {
+            local file="$1"
+            local encoded
+            encoded=$(python3 -c "import urllib.parse,sys;print(urllib.parse.quote(sys.argv[1]))" "$file")
+            if ! curl -gfsS --retry 3 -X PUT \
+              -H "AccessKey: ${STORAGE_PASSWORD}" \
+              --data-binary "@${file}" \
+              "${base}/${encoded}" > /dev/null 2>&1; then
+              echo "::warning::Failed to upload: ${file}"
+            fi
+          }
+          export -f _upload
+          export base STORAGE_PASSWORD
+
+          find . -type f -printf '%P\n' | xargs -P 8 -I{} bash -c '_upload "$@"' _ {}
+          echo "Upload complete. ${total} files processed."
+
+      - name: Wait for storage replication
+        run: |
+          echo "Waiting 10 seconds for BunnyCDN storage replication..."
+          sleep 10
+
+      - name: Purge Pull Zone cache
+        env:
+          PULLZONE_ID: ${{ secrets.PULL_ZONE_ID }}
+          BUNNY_API_KEY: ${{ secrets.BUNNY_API_KEY }}
+        run: |
+          set -euo pipefail
+          if [ -z "${PULLZONE_ID}" ] || [ -z "${BUNNY_API_KEY}" ]; then
+            echo "::warning::PULL_ZONE_ID or BUNNY_API_KEY not set — skipping cache purge."
+            exit 0
+          fi
+          echo "Purging BunnyCDN pull zone cache..."
+          response=$(curl -s -w "\n%{http_code}" --retry 3 -X POST \
+            "https://api.bunny.net/pullzone/${PULLZONE_ID}/purgeCache" \
+            -H "AccessKey: ${BUNNY_API_KEY}" \
+            -H "Content-Type: application/json")
+
+          http_code=$(echo "$response" | tail -n1)
+          body=$(echo "$response" | sed '$d')
+
+          if [[ "$http_code" -ge 200 && "$http_code" -lt 300 ]]; then
+            echo "Cache purge completed successfully (HTTP $http_code)"
+          else
+            echo "Cache purge failed with HTTP $http_code"
+            echo "Response: $body"
+            exit 1
+          fi
