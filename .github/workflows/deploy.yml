@@ -1,13 +1,15 @@
 # .github/workflows/deploy.yml
 #
-# Publishes the docs site from `develop` to BunnyCDN at
-# https://docs.onetimesecret.dev (staging).
+# Publishes the docs site to BunnyCDN:
+#   - push to `develop` -> staging    (https://docs.onetimesecret.dev)
+#   - push to `main`    -> production (https://docs.onetimesecret.com)
 #
-# Uses a GitHub Environment ("staging") so the same secret names work for
-# both staging and production with different values per environment —
-# mirroring the proven pattern in onetimesecret.com.
+# A single workflow that selects the GitHub Environment from the branch, so the
+# same secret/variable names resolve to per-environment values — mirroring the
+# proven pattern in onetimesecret.com.
 #
-# Required secrets/variables (scoped to the "staging" environment):
+# Required secrets/variables (scoped to each environment, "staging" and
+# "production"):
 #
 #   Secrets:
 #     STORAGE_NAME            - Bunny Edge Storage zone name
@@ -18,17 +20,20 @@
 #     BUNNY_API_KEY           - Bunny account API key (for cache purge)
 #
 #   Variables (environment-level):
+#     SITE_URL                - Canonical site origin
 #     VITE_BASE_URL           - Base URL path (typically "/")
+#     SHOW_STAGING_WARNING    - "true" on staging to show the prerelease banner
+#     SHOW_STAGING_WATERMARK  - "true" on staging to show the prerelease watermark
 ---
-name: (staging) Build and Deploy to BunnyCDN
+name: Build and Deploy to BunnyCDN
 
 concurrency:
-  group: ${{ github.workflow }}-staging
+  group: deploy-${{ github.ref_name }}
   cancel-in-progress: true
 
 on:
   push:
-    branches: [develop]
+    branches: [develop, main]
   workflow_dispatch:
 
 permissions:
@@ -37,8 +42,8 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    environment: staging
-    concurrency: staging
+    # main -> production; develop (and manual dispatch) -> staging
+    environment: ${{ github.ref_name == 'main' && 'production' || 'staging' }}
 
     steps:
       - name: Checkout code
@@ -63,7 +68,7 @@ jobs:
         run: pnpm run build
         env:
           SITE_URL: ${{ vars.SITE_URL }}
-          # Prerelease markers (set to "true" in the staging environment).
+          # Prerelease markers (set to "true" in the staging environment only).
           # Drive the banner/watermark and a site-wide noindex. Decoupled from
           # SITE_URL so the canonical strategy is unaffected.
           SHOW_STAGING_WARNING: ${{ vars.SHOW_STAGING_WARNING }}
@@ -77,7 +82,7 @@ jobs:
         run: |
           set -euo pipefail
           if [ -z "${STORAGE_ENDPOINT}" ] || [ -z "${STORAGE_ZONE}" ] || [ -z "${STORAGE_PASSWORD}" ]; then
-            echo "::error::STORAGE_NAME, STORAGE_ENDPOINT and STORAGE_PASSWORD_RW secrets must be configured in the staging environment."
+            echo "::error::STORAGE_NAME, STORAGE_ENDPOINT and STORAGE_PASSWORD_RW secrets must be configured for this environment."
             exit 1
           fi
           # Accept STORAGE_ENDPOINT with or without scheme / trailing slash,
