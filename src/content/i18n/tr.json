@@ -67,6 +67,9 @@
     "apiExplorer": "API Gezgini",
     "apiReference": "API Referansı"
   },
+  "staging.bannerWarning": "Ön sürüm belgeler sitesini görüntülüyorsunuz",
+  "staging.bannerDescription": "Buradaki içerik test amaçlıdır ve canlı belgelerden farklı olabilir.",
+  "staging.goToProduction": "Canlı belgelere git",
   "skipLink.label": "İçeriğe atla",
   "search.label": "Ara",
   "search.ctrlKey": "Ctrl",

@@ -67,6 +67,9 @@
     "apiExplorer": "API 탐색기",
     "apiReference": "API 레퍼런스"
   },
+  "staging.bannerWarning": "사전 릴리스 문서 사이트를 보고 있습니다",
+  "staging.bannerDescription": "여기 콘텐츠는 테스트용이며 실제 문서와 다를 수 있습니다.",
+  "staging.goToProduction": "실제 문서로 이동",
   "skipLink.label": "콘텐츠로 건너뛰기",
   "search.label": "검색",
   "search.ctrlKey": "Ctrl",

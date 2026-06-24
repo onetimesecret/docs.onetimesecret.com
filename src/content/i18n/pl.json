@@ -67,6 +67,9 @@
     "apiExplorer": "API Eksplorator",
     "apiReference": "Dokumentacja API"
   },
+  "staging.bannerWarning": "Przeglądasz przedpremierową wersję dokumentacji",
+  "staging.bannerDescription": "Treści tutaj służą do testów i mogą różnić się od dokumentacji produkcyjnej.",
+  "staging.goToProduction": "Przejdź do dokumentacji produkcyjnej",
   "skipLink.label": "Przejdź do treści",
   "search.label": "Wyszukaj",
   "search.ctrlKey": "Ctrl",

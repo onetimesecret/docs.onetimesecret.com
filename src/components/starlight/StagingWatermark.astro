@@ -1,0 +1,90 @@
+---
+// src/components/starlight/StagingWatermark.astro
+//
+// Full-page diagonal "PRERELEASE" watermark overlay for the documentation site.
+//
+// This is the docs-site counterpart to the company site's
+// `StagingWatermark.vue`. It paints a repeating, rotated "PRERELEASE" stamp
+// over the whole viewport (the legal-document "COPY"/"DUPLICATE" effect) so the
+// prerelease (staging) deploy is unmistakable at a glance.
+//
+// Docs-specific considerations:
+//   - `pointer-events: none` means it never blocks reading, selecting text,
+//     copying code blocks, or any link/menu interaction underneath.
+//   - `aria-hidden` keeps it out of the accessibility tree.
+//   - The opacity is kept low (0.07–0.08). Documentation is dense, text-heavy,
+//     and full of code blocks, so the stamp must stay faint enough not to hurt
+//     readability or contrast while remaining noticeable.
+//   - Two colour layers are rendered and toggled via Starlight's
+//     `:root[data-theme='dark']` switch, because an SVG data URI can't read
+//     `currentColor`.
+
+// Build a repeating SVG tile data URI containing the word "PRERELEASE".
+function buildSvgBackground(color: string): string {
+  const svg = [
+    '<svg xmlns="http://www.w3.org/2000/svg" width="560" height="200">',
+    '<text x="280" y="110" text-anchor="middle"',
+    ' font-size="48" font-weight="900" font-family="sans-serif"',
+    ' letter-spacing="0.2em"',
+    ` fill="${color}">PRERELEASE</text>`,
+    "</svg>",
+  ].join("");
+  return `url("data:image/svg+xml,${encodeURIComponent(svg)}")`;
+}
+
+// amber-900 for light mode, amber-200 for dark mode (matches the banner).
+const lightBg = buildSvgBackground("#78350f");
+const darkBg = buildSvgBackground("#fde68a");
+---
+
+<div class="ots-staging-watermark print:hidden" aria-hidden="true">
+  <!--
+    The inner layers are oversized (200vmax square) and rotated so the
+    repeating tile covers the whole viewport diagonally with no visible
+    corners, regardless of aspect ratio.
+  -->
+  <div class="ots-staging-watermark__layer ots-staging-watermark__layer--light" style={`background-image:${lightBg}`}>
+  </div>
+  <div class="ots-staging-watermark__layer ots-staging-watermark__layer--dark" style={`background-image:${darkBg}`}>
+  </div>
+</div>
+
+<style>
+  .ots-staging-watermark {
+    position: fixed;
+    inset: 0;
+    /* Above all Starlight chrome and the banner so the stamp reads as a single
+       overlay across the whole page. pointer-events:none keeps it inert. */
+    z-index: 9999;
+    pointer-events: none;
+    user-select: none;
+    overflow: hidden;
+  }
+
+  .ots-staging-watermark__layer {
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+    width: 200vmax;
+    height: 200vmax;
+    transform: translate(-50%, -50%) rotate(-30deg);
+    background-repeat: repeat;
+    background-size: 560px 200px;
+  }
+
+  .ots-staging-watermark__layer--light {
+    opacity: 0.08;
+  }
+
+  .ots-staging-watermark__layer--dark {
+    opacity: 0;
+  }
+
+  :global(:root[data-theme="dark"]) .ots-staging-watermark__layer--light {
+    opacity: 0;
+  }
+
+  :global(:root[data-theme="dark"]) .ots-staging-watermark__layer--dark {
+    opacity: 0.07;
+  }
+</style>
