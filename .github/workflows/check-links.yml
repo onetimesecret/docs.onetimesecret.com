@@ -20,7 +20,12 @@ name: Check Links
 on:
   # Run on PRs to catch issues before merge
   pull_request:
-    branches: [main]
+    branches:
+      - main
+      - "integration/*"
+      - "integrate/*"
+      - "feature/*"
+      - "fix/*"
   # Run on push to main to catch any issues
   push:
     branches: [main]
@@ -50,7 +55,7 @@ jobs:
     # site while the live page 404s.
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Lint for malformed internal links
         run: ./bin/check-malformed-links.sh
@@ -60,7 +65,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Check internal links with Lychee
         uses: lycheeverse/lychee-action@v2
@@ -98,7 +103,7 @@ jobs:
     if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Check external links with HEAD method
         id: lychee-head

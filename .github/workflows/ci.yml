@@ -1,0 +1,46 @@
+# .github/workflows/ci.yml
+#
+# Build check for pull requests. Ensures the Astro site compiles before merge.
+---
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+      - develop
+      - "integration/*"
+      - "integrate/*"
+      - "feature/*"
+      - "fix/*"
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build check
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 10.30.3
+          run_install: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22.x
+          cache: pnpm
+
+      - run: pnpm install
+
+      - name: Build
+        run: pnpm run build

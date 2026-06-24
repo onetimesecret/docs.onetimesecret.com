@@ -6,7 +6,13 @@ on:
     paths:
       - "**/*.json"
   pull_request:
-    branches: [main, develop]
+    branches:
+      - main
+      - develop
+      - "integration/*"
+      - "integrate/*"
+      - "feature/*"
+      - "fix/*"
     paths:
       - "**/*.json"
   workflow_dispatch:
@@ -21,7 +27,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Setup Node.js
         uses: actions/setup-node@v6
