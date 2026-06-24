@@ -1,13 +1,13 @@
-# .github/workflows/deploy-production.yml
+# .github/workflows/deploy.yml
 #
-# Publishes the docs site from `main` to BunnyCDN at
-# https://docs.onetimesecret.com (production).
+# Publishes the docs site from `develop` to BunnyCDN at
+# https://docs.onetimesecret.dev (staging).
 #
-# Uses a GitHub Environment ("production") so the same secret names work for
+# Uses a GitHub Environment ("staging") so the same secret names work for
 # both staging and production with different values per environment —
 # mirroring the proven pattern in onetimesecret.com.
 #
-# Required secrets/variables (scoped to the "production" environment):
+# Required secrets/variables (scoped to the "staging" environment):
 #
 #   Secrets:
 #     STORAGE_NAME            - Bunny Edge Storage zone name
@@ -20,15 +20,15 @@
 #   Variables (environment-level):
 #     VITE_BASE_URL           - Base URL path (typically "/")
 ---
-name: (production) Build and Deploy to BunnyCDN
+name: (staging) Build and Deploy to BunnyCDN
 
 concurrency:
-  group: ${{ github.workflow }}-production
+  group: ${{ github.workflow }}-staging
   cancel-in-progress: true
 
 on:
   push:
-    branches: [main]
+    branches: [develop]
   workflow_dispatch:
 
 permissions:
@@ -37,8 +37,8 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    environment: production
-    concurrency: production
+    environment: staging
+    concurrency: staging
 
     steps:
       - name: Checkout code
@@ -63,6 +63,11 @@ jobs:
         run: pnpm run build
         env:
           SITE_URL: ${{ vars.SITE_URL }}
+          # Prerelease markers (set to "true" in the staging environment).
+          # Drive the banner/watermark and a site-wide noindex. Decoupled from
+          # SITE_URL so the canonical strategy is unaffected.
+          SHOW_STAGING_WARNING: ${{ vars.SHOW_STAGING_WARNING }}
+          SHOW_STAGING_WATERMARK: ${{ vars.SHOW_STAGING_WATERMARK }}
 
       - name: Upload dist/ to Bunny Edge Storage
         env:
@@ -72,7 +77,7 @@ jobs:
         run: |
           set -euo pipefail
           if [ -z "${STORAGE_ENDPOINT}" ] || [ -z "${STORAGE_ZONE}" ] || [ -z "${STORAGE_PASSWORD}" ]; then
-            echo "::error::STORAGE_NAME, STORAGE_ENDPOINT and STORAGE_PASSWORD_RW secrets must be configured in the production environment."
+            echo "::error::STORAGE_NAME, STORAGE_ENDPOINT and STORAGE_PASSWORD_RW secrets must be configured in the staging environment."
             exit 1
           fi
           # Accept STORAGE_ENDPOINT with or without scheme / trailing slash,
