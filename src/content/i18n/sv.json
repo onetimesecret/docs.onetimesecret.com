@@ -67,6 +67,9 @@
     "apiExplorer": "API-utforskare",
     "apiReference": "API-referens"
   },
+  "staging.bannerWarning": "Du visar förhandsversionen av dokumentationen",
+  "staging.bannerDescription": "Innehållet här är för testning och kan skilja sig från den publika dokumentationen.",
+  "staging.goToProduction": "Gå till den publika dokumentationen",
   "skipLink.label": "Hoppa till innehåll",
   "search.label": "Sök",
   "search.ctrlKey": "Ctrl",
