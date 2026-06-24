@@ -1,11 +1,7 @@
 // docs.onetimesecret.com/starlight/config/starlight.mjs
 import { i18nConfig } from "./i18n.mjs";
 import { sidebar } from "./sidebar.mjs";
-import {
-  showStagingWarning,
-  showStagingWatermark,
-  isPrereleaseBuild,
-} from "./domains.mjs";
+import { showStagingWarning, isPrereleaseBuild } from "./domains.mjs";
 
 // Prerelease builds (e.g. docs.onetimesecret.dev) get a top warning banner
 // and/or a diagonal "PRERELEASE" watermark, independently toggled at build time
@@ -16,7 +12,6 @@ import {
 // canonical is left self-referential). On production builds none of this is
 // wired up, so the output is untouched.
 const warning = showStagingWarning();
-const watermark = showStagingWatermark();
 const prerelease = isPrereleaseBuild();
 
 /**
