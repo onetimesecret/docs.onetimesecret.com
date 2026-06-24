@@ -63,7 +63,11 @@ jobs:
         run: pnpm run build
         env:
           SITE_URL: ${{ vars.SITE_URL }}
-
+          # Prerelease markers (set to "true" in the staging environment).
+          # Drive the banner/watermark and a site-wide noindex. Decoupled from
+          # SITE_URL so the canonical strategy is unaffected.
+          SHOW_STAGING_WARNING: ${{ vars.SHOW_STAGING_WARNING }}
+          SHOW_STAGING_WATERMARK: ${{ vars.SHOW_STAGING_WATERMARK }}
 
       - name: Upload dist/ to Bunny Edge Storage
         env:

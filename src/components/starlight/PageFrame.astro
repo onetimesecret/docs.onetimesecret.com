@@ -1,12 +1,15 @@
 ---
 // src/components/starlight/PageFrame.astro
 //
-// Override of Starlight's PageFrame that mounts the staging banner and the
-// diagonal "STAGING" watermark above the default page layout.
+// Override of Starlight's PageFrame that mounts the prerelease warning banner
+// and/or the diagonal "PRERELEASE" watermark above the default page layout.
 //
-// This is registered as the PageFrame override ONLY on staging builds (see
-// config/starlight.mjs). On production the override is never wired up, so this
-// file is not loaded and the layout is identical to stock Starlight.
+// This is registered as the PageFrame override ONLY on prerelease builds (see
+// config/starlight.mjs — when either SHOW_STAGING_WARNING or
+// SHOW_STAGING_WATERMARK is set). Each marker is then rendered conditionally on
+// its own flag, so the two can be toggled independently. On production neither
+// flag is set, the override is never wired up, and the layout is identical to
+// stock Starlight.
 //
 // We wrap — rather than reimplement — the default PageFrame so we inherit all
 // of Starlight's layout behaviour (header/sidebar/main placement, mobile menu
@@ -14,17 +17,24 @@
 // component reads everything it needs from `Astro.locals.starlightRoute`, so
 // there are no props to thread through; we just forward the named slots.
 //
-// The fixed banner/watermark would otherwise sit on top of Starlight's fixed
-// header and sidebars, so `src/styles/staging.css` offsets those elements by
-// the banner height (`--ots-staging-banner-h`). That stylesheet is likewise
-// only loaded on staging builds.
+// The fixed banner would otherwise sit on top of Starlight's fixed header and
+// sidebars, so `src/styles/staging.css` offsets those elements by the banner
+// height (`--ots-staging-banner-h`). That stylesheet is loaded only when the
+// banner is shown.
 import Default from "@astrojs/starlight/components/PageFrame.astro";
 import StagingBanner from "./StagingBanner.astro";
 import StagingWatermark from "./StagingWatermark.astro";
+import {
+  showStagingWarning,
+  showStagingWatermark,
+} from "../../../config/domains.mjs";
+
+const warning = showStagingWarning();
+const watermark = showStagingWatermark();
 ---
 
-<StagingBanner />
-<StagingWatermark />
+{warning && <StagingBanner />}
+{watermark && <StagingWatermark />}
 <Default>
   <slot name="header" slot="header" />
   <slot name="sidebar" slot="sidebar" />
