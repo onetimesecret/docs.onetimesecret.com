@@ -1,34 +1,39 @@
 # .github/workflows/deploy.yml
 #
-# Publishes the docs site from `develop` to BunnyCDN at
-# https://docs.onetimesecret.dev (staging).
+# Publishes the docs site to BunnyCDN:
+#   - push to `develop` -> staging    (https://docs.onetimesecret.dev)
+#   - push to `main`    -> production (https://docs.onetimesecret.com)
 #
-# Uses a GitHub Environment ("staging") so the same secret names work for
-# both staging and production with different values per environment —
-# mirroring the proven pattern in onetimesecret.com.
+# A single workflow that selects the GitHub Environment from the branch, so the
+# same secret/variable names resolve to per-environment values — mirroring the
+# proven pattern in onetimesecret.com.
 #
-# Required secrets/variables (scoped to the "staging" environment):
+# Required secrets/variables (scoped to each environment, "staging" and
+# "production"):
 #
 #   Secrets:
 #     STORAGE_NAME            - Bunny Edge Storage zone name
-#     STORAGE_DESTINATION     - Directory within the storage zone (empty for root)
+#     STORAGE_ENDPOINT        - Storage host (e.g. storage.bunnycdn.com, or ny./la./uk.)
 #     STORAGE_PASSWORD_RW     - Storage zone read/write password
 #     STORAGE_KEY             - Storage zone API key (for uploads)
 #     PULL_ZONE_ID            - Bunny Pull Zone ID
 #     BUNNY_API_KEY           - Bunny account API key (for cache purge)
 #
 #   Variables (environment-level):
+#     SITE_URL                - Canonical site origin
 #     VITE_BASE_URL           - Base URL path (typically "/")
+#     SHOW_STAGING_WARNING    - "true" on staging to show the prerelease banner
+#     SHOW_STAGING_WATERMARK  - "true" on staging to show the prerelease watermark
 ---
-name: (staging) Build and Deploy to BunnyCDN
+name: Build and Deploy to BunnyCDN
 
 concurrency:
-  group: ${{ github.workflow }}-staging
+  group: deploy-${{ github.ref_name }}
   cancel-in-progress: true
 
 on:
   push:
-    branches: [develop]
+    branches: [develop, main]
   workflow_dispatch:
 
 permissions:
@@ -37,8 +42,8 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    environment: staging
-    concurrency: staging
+    # main -> production; develop (and manual dispatch) -> staging
+    environment: ${{ github.ref_name == 'main' && 'production' || 'staging' }}
 
     steps:
       - name: Checkout code
@@ -63,7 +68,7 @@ jobs:
         run: pnpm run build
         env:
           SITE_URL: ${{ vars.SITE_URL }}
-          # Prerelease markers (set to "true" in the staging environment).
+          # Prerelease markers (set to "true" in the staging environment only).
           # Drive the banner/watermark and a site-wide noindex. Decoupled from
           # SITE_URL so the canonical strategy is unaffected.
           SHOW_STAGING_WARNING: ${{ vars.SHOW_STAGING_WARNING }}
@@ -72,22 +77,39 @@ jobs:
       - name: Upload dist/ to Bunny Edge Storage
         env:
           STORAGE_ZONE: ${{ secrets.STORAGE_NAME }}
-          STORAGE_ENDPOINT: ${{ secrets.STORAGE_DESTINATION }}
+          STORAGE_ENDPOINT: ${{ secrets.STORAGE_ENDPOINT }}
           STORAGE_PASSWORD: ${{ secrets.STORAGE_PASSWORD_RW }}
         run: |
           set -euo pipefail
-          if [ -z "${STORAGE_ENDPOINT}" ] || [ -z "${STORAGE_PASSWORD}" ]; then
-            echo "::error::STORAGE_DESTINATION and STORAGE_PASSWORD_RW secrets must be configured in the staging environment."
+          if [ -z "${STORAGE_ENDPOINT}" ] || [ -z "${STORAGE_ZONE}" ] || [ -z "${STORAGE_PASSWORD}" ]; then
+            echo "::error::STORAGE_NAME, STORAGE_ENDPOINT and STORAGE_PASSWORD_RW secrets must be configured for this environment."
             exit 1
           fi
-          base="https://${STORAGE_ENDPOINT}/${STORAGE_ZONE}"
+          # Accept STORAGE_ENDPOINT with or without scheme / trailing slash,
+          # then build the URL with a single https:// prefix.
+          host="${STORAGE_ENDPOINT#http://}"; host="${host#https://}"; host="${host%/}"
+          base="https://${host}/${STORAGE_ZONE}"
+          echo "Upload base URL: ${base}"
           cd dist
-          find . -type f -printf '%P\n' | xargs -P 8 -I{} \
-            curl -fsS --retry 3 -X PUT \
+          total=$(find . -type f | wc -l)
+          echo "Uploading ${total} files to ${STORAGE_ZONE}..."
+
+          _upload() {
+            local file="$1"
+            local encoded
+            encoded=$(python3 -c "import urllib.parse,sys;print(urllib.parse.quote(sys.argv[1]))" "$file")
+            if ! curl -gfsS --retry 3 -X PUT \
               -H "AccessKey: ${STORAGE_PASSWORD}" \
-              --data-binary "@{}" \
-              "${base}/{}"
-          echo "Uploaded $(find . -type f | wc -l) files to ${STORAGE_ZONE}."
+              --data-binary "@${file}" \
+              "${base}/${encoded}" > /dev/null 2>&1; then
+              echo "::warning::Failed to upload: ${file}"
+            fi
+          }
+          export -f _upload
+          export base STORAGE_PASSWORD
+
+          find . -type f -printf '%P\n' | xargs -P 8 -I{} bash -c '_upload "$@"' _ {}
+          echo "Upload complete. ${total} files processed."
 
       - name: Wait for storage replication
         run: |
