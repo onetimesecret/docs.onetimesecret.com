@@ -7,20 +7,15 @@ sidebar:
 
 Whakahaerehia tō ake tauira tūmataiti o Onetime Secret me te whakahaere katoa o ō raraunga, haumaru, me te whakatakoto.
 
-<!-- EDITORS: This caution block is intentional. v0.23 still provides a smoother
-     onboarding experience than v0.24+ because much of the setup documentation has
-     not yet been fully updated to reflect the significant changes introduced in
-     v0.24. Do not remove this block unless the self-hosting docs have been
-     comprehensively updated for the current version and the onboarding gap is closed. -->
-:::caution[Māehe 2026 — Kei te huri ngā tuhinga whakatū-rānei]
-Kei waenganui mātou i te huringa i waenganui i **v0.23** me **v0.24** (te peka `main`). He tawhito ētahi o ā mātou tuhinga whakatū-rānei ā kei te [mahi tonu mātou ki te whakapai ake](https://github.com/onetimesecret/onetimesecret/issues/2628).
+:::tip[Tukuna ināianei: v0.25]
+Ko te tukuna pumau ināianei ko **v0.25** (te peka `main`). Ka oma i roto i ngā āhua e rua:
 
-**Ki te hiahia koe kia whakahaere i tētahi mea**, ka tūtohu mātou i te peka `rel/0.23`. Ka hiahia ia ki ētahi taurangi taiao me Redis anake, ā kei te tuku tonu mātou i ngā whakatikanga me ngā whakahoutanga iti ki reira.
+- **Āhua māmā** — te ara ngāwari rawa atu. Me Redis anake me ētahi taupānga taiao. Ka mahi tonu ngā pūkete pērā i ōna wā katoa.
+- **Āhua katoa** — ka tāpirihia ngā āhuatanga pūkete (MFA, SSO, WebAuthn, whakahaere) i tautokona e PostgreSQL me RabbitMQ.
 
-```bash
-git clone -b rel/0.23 https://github.com/onetimesecret/onetimesecret.git
-```
+Mēnā ka haere mai koe i v0.22 rānei v0.23, whāia te aratohu [Whakahou ki v0.24+](./upgrading-v0-24).
 :::
+
 
 ## He aha ai te Whakatū Rānei?
 
