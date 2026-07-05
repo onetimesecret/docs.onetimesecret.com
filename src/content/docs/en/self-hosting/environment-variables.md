@@ -7,6 +7,9 @@ sidebar:
 
 This guide covers all environment variables available in Onetime Secret v0.24+.
 
+:::tip[Generate a starter config]
+The **[Configuration Generator](/en/self-hosting/configuration-generator/)** produces a matching `.env` starter (with secret-bearing variables left blank for you to fill in) alongside `config.yaml` / `auth.yaml` fragments, based on a few preset choices — generated in your browser from the config schemas.
+:::
 
 ## Environment Variables
 

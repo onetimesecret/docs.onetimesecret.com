@@ -211,6 +211,7 @@ export const sidebar = [
     createLink("gettingStarted", "self-hosting/getting-started"),
     createLink("installationDeployment", "self-hosting/installation"),
     createLink("configurationReference", "self-hosting/configuration"),
+    createLink("configurationGenerator", "self-hosting/configuration-generator"),
     createLink("environmentVariables", "self-hosting/environment-variables"),
     createLink("upgradingToV023", "self-hosting/upgrading-v0-23"),
     createLink("upgradingToV024", "self-hosting/upgrading-v0-24"),
