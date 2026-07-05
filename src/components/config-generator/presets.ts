@@ -47,8 +47,16 @@ export interface OptionSpec {
   choices?: Choice[];
   /** Gate this option on another selection (e.g. sso needs full mode). */
   requires?: Record<string, string | number | boolean>;
-  /** Env vars this choice implies. Rendered as empty placeholders when the
-   *  value is secret-bearing (secret:true) so nothing sensitive is ever baked. */
+  /**
+   * Environment variables the operator must supply for this choice — secrets
+   * (database URLs, API keys) and connection details (SMTP host/user). Emitted
+   * as blank placeholders in the .env starter for the operator to fill in.
+   *
+   * Feature toggles and modes are NOT listed here: those are expressed in the
+   * generated config.yaml / auth.yaml, and emitting e.g. `EMAILER_MODE=` blank
+   * would override the setting to an empty string. `secret: true` flags the
+   * values that must never be committed or shared.
+   */
   env?: Array<{ name: string; secret?: boolean; when?: string | number | boolean }>;
 }
 
@@ -84,7 +92,6 @@ export const OPTIONS: OptionSpec[] = [
       { value: 'full', label: 'Full — accounts, teams, SSO (adds PostgreSQL)' },
     ],
     env: [
-      { name: 'AUTHENTICATION_MODE' },
       { name: 'AUTH_DATABASE_URL', secret: true, when: 'full' },
       { name: 'ARGON2_SECRET', secret: true, when: 'full' },
     ],
@@ -106,7 +113,6 @@ export const OPTIONS: OptionSpec[] = [
       { value: 'lettermint', label: 'Lettermint' },
     ],
     env: [
-      { name: 'EMAILER_MODE' },
       { name: 'SMTP_HOST', when: 'smtp' },
       { name: 'SMTP_USERNAME', when: 'smtp' },
       { name: 'SMTP_PASSWORD', secret: true, when: 'smtp' },
@@ -128,7 +134,6 @@ export const OPTIONS: OptionSpec[] = [
     path: 'full.features.sso',
     fallbackDefault: false,
     requires: { deployment_mode: 'full' },
-    env: [{ name: 'AUTH_SSO_ENABLED' }],
   },
   {
     key: 'domains_enabled',
@@ -140,7 +145,6 @@ export const OPTIONS: OptionSpec[] = [
     path: 'features.domains.enabled',
     schemaPath: { file: 'config', path: 'features.domains.enabled' },
     fallbackDefault: false,
-    env: [{ name: 'DOMAINS_ENABLED' }],
   },
   {
     key: 'regions_enabled',
@@ -152,7 +156,6 @@ export const OPTIONS: OptionSpec[] = [
     path: 'features.regions.enabled',
     schemaPath: { file: 'config', path: 'features.regions.enabled' },
     fallbackDefault: false,
-    env: [{ name: 'REGIONS_ENABLED' }],
   },
   {
     key: 'diagnostics_enabled',
@@ -163,10 +166,7 @@ export const OPTIONS: OptionSpec[] = [
     path: 'diagnostics.enabled',
     schemaPath: { file: 'config', path: 'diagnostics.enabled' },
     fallbackDefault: false,
-    env: [
-      { name: 'DIAGNOSTICS_ENABLED' },
-      { name: 'SENTRY_DSN_BACKEND', secret: true, when: true },
-    ],
+    env: [{ name: 'SENTRY_DSN_BACKEND', secret: true, when: true }],
   },
   {
     key: 'trusted_proxy_enabled',
@@ -180,7 +180,6 @@ export const OPTIONS: OptionSpec[] = [
     // NOTE: site.network is not present in the static schema, so there is no
     // schemaPath — the fallbackDefault is authoritative here.
     fallbackDefault: false,
-    env: [{ name: 'TRUSTED_PROXY_ENABLED' }],
   },
   {
     key: 'passphrase_required',
@@ -190,7 +189,6 @@ export const OPTIONS: OptionSpec[] = [
     path: 'site.secret_options.passphrase.required',
     schemaPath: { file: 'config', path: 'site.secret_options.passphrase.required' },
     fallbackDefault: false,
-    env: [{ name: 'PASSPHRASE_REQUIRED' }],
   },
   {
     key: 'default_ttl',
@@ -201,6 +199,5 @@ export const OPTIONS: OptionSpec[] = [
     schemaPath: { file: 'config', path: 'site.secret_options.default_ttl' },
     fallbackDefault: 604800,
     choices: TTL_CHOICES,
-    env: [{ name: 'DEFAULT_TTL' }],
   },
 ];

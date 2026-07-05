@@ -29,7 +29,6 @@
   } from './generate';
 
   const selections = reactive<Selections>(defaultSelections());
-  const ready = ref(false);
 
   const outputs = [
     { key: 'configYaml' as const, label: 'config.yaml', filename: 'config.yaml' },
@@ -81,7 +80,6 @@
 
   onMounted(() => {
     seedFromUrl();
-    ready.value = true;
     watch(selections, syncUrl, { deep: true });
   });
 
@@ -183,13 +181,13 @@
         <div class="cg-tabs">
           <div
             class="cg-tablist"
-            role="tablist">
+            role="group"
+            aria-label="Generated file">
             <button
               v-for="output in outputs"
               :key="output.key"
               type="button"
-              role="tab"
-              :aria-selected="activeOutput === output.key"
+              :aria-pressed="activeOutput === output.key"
               class="cg-tab"
               :class="{ active: activeOutput === output.key }"
               @click="activeOutput = output.key">
@@ -214,7 +212,8 @@
 
         <pre
           class="cg-preview"
-          tabindex="0"><code>{{ activeContent }}</code></pre>
+          tabindex="0"
+          :aria-label="`${activeMeta.label} preview`"><code>{{ activeContent }}</code></pre>
 
         <p class="cg-note">
           These fragments contain the options you selected above and layer on
@@ -271,7 +270,7 @@
   }
   .cg-option-label {
     font-weight: 600;
-    color: var(--sl-color-white);
+    color: var(--sl-color-text);
   }
   .cg-option-desc {
     margin: 0.4rem 0 0;
@@ -291,7 +290,7 @@
     border-radius: 0.375rem;
     border: 1px solid var(--sl-color-gray-5);
     background: var(--sl-color-bg);
-    color: var(--sl-color-white);
+    color: var(--sl-color-text);
     font: inherit;
   }
 
@@ -363,7 +362,7 @@
     color: var(--sl-color-gray-2);
   }
   .cg-tab.active {
-    color: var(--sl-color-white);
+    color: var(--sl-color-text);
     border-bottom-color: var(--sl-color-accent);
   }
   .cg-actions {
@@ -375,7 +374,7 @@
     border: 1px solid var(--sl-color-gray-5);
     border-radius: 0.375rem;
     background: var(--sl-color-bg);
-    color: var(--sl-color-white);
+    color: var(--sl-color-text);
     font-size: 0.8rem;
     cursor: pointer;
   }

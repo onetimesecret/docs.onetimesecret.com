@@ -171,16 +171,23 @@ export function generate(rawSelections: Selections): GenerateResult {
 }
 
 /**
- * Build the .env starter. Secret-bearing vars are always emitted as empty
- * placeholders — the generator never bakes a value that could leak through a
- * shared link or a committed file.
+ * Build the .env starter: the secrets and connection details the selected
+ * options require, emitted as empty placeholders for the operator to fill in.
+ *
+ * Only values the operator must supply themselves appear here — never a
+ * generated value that could leak through a shared link. Feature toggles and
+ * modes are expressed in the config.yaml / auth.yaml above, not here (emitting
+ * e.g. `EMAILER_MODE=` blank would override the setting to an empty string).
+ * SECRET is always required, so it leads the list.
  */
 export function envSnippet(selections: Selections): string {
   const lines = [
-    '# Secrets — generate and store these yourself; never commit them',
-    '# or paste them into a shared link.',
+    '# Secrets and connection details your selections require — fill these in',
+    '# yourself. Never commit the secret values or paste them into a shared',
+    '# link. Feature toggles and modes are in the YAML above, not here.',
+    'SECRET=',
   ];
-  const seen = new Set<string>();
+  const seen = new Set<string>(['SECRET']);
 
   for (const opt of OPTIONS) {
     const value = selections[opt.key];
