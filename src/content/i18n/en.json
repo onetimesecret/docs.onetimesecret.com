@@ -49,6 +49,7 @@
     "regionUS": "United States (US)",
     "selfHosting": "Self-Hosting",
     "configurationReference": "Configuration Reference",
+    "configurationGenerator": "Configuration Generator",
     "installationDeployment": "Installation & Deployment",
     "configuration": "Configuration",
     "coreConfig": "Core Configuration",

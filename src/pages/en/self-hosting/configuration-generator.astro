@@ -1,0 +1,36 @@
+---
+// src/pages/en/self-hosting/configuration-generator.astro
+//
+// Hosts the client-side Configuration Generator island inside the standard
+// Starlight docs chrome (sidebar, header, TOC). The tool itself is a self-
+// contained Vue component that reads the vendored config JSON schemas and a
+// preset manifest to generate config.yaml / auth.yaml / .env entirely in the
+// browser — no dependency on the running application.
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import ConfigGenerator from '../../../components/config-generator/ConfigGenerator.vue';
+
+const title = 'Configuration Generator';
+const description =
+  'Pick a few preset options and copy out ready-to-use config.yaml, auth.yaml, ' +
+  'and .env fragments for your self-hosted Onetime Secret instance.';
+---
+
+<StarlightPage
+  frontmatter={{
+    title,
+    description,
+    tableOfContents: false,
+    lastUpdated: false,
+  }}>
+  <p>
+    Choose the options that fit your deployment and copy the generated YAML into
+    your <code>etc/</code> directory. These fragments layer on top of the shipped
+    defaults, so you only need the options shown here. For the full option
+    surface, see the
+    <a href="/en/self-hosting/configuration/">Configuration Reference</a> and
+    <a href="/en/self-hosting/environment-variables/">Environment Variables</a>
+    pages.
+  </p>
+
+  <ConfigGenerator client:load />
+</StarlightPage>
