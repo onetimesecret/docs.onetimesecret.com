@@ -92,15 +92,20 @@ const UNSAFE_KEYS = new Set(['__proto__', 'constructor', 'prototype']);
 
 function setPath(target: Record<string, unknown>, path: string, value: unknown): void {
   const keys = path.split('.');
-  if (keys.some((key) => UNSAFE_KEYS.has(key))) return;
 
   let node = target;
   for (let i = 0; i < keys.length - 1; i++) {
     const key = keys[i];
+    // Guard each key immediately before it is used to write, so a __proto__ /
+    // constructor / prototype segment can never reach a property assignment.
+    if (UNSAFE_KEYS.has(key)) return;
     if (typeof node[key] !== 'object' || node[key] == null) node[key] = {};
     node = node[key] as Record<string, unknown>;
   }
-  node[keys[keys.length - 1]] = value;
+
+  const lastKey = keys[keys.length - 1];
+  if (UNSAFE_KEYS.has(lastKey)) return;
+  node[lastKey] = value;
 }
 
 export interface GenerateResult {
