@@ -84,27 +84,25 @@ export function coerce(opt: OptionSpec, raw: unknown): Scalar {
   return match ? match.value : defaultFor(opt);
 }
 
-// Keys that must never be written through a dotted path, to avoid prototype
-// pollution. The paths here come from the hard-coded preset manifest (not user
-// input), so this is defense-in-depth, but it also keeps the generator safe if
-// a path is ever sourced from somewhere less trusted.
-const UNSAFE_KEYS = new Set(['__proto__', 'constructor', 'prototype']);
-
+// Reject the dangerous prototype-pollution keys before any property write.
+// The comparison is spelled out inline at each write site (rather than a
+// Set/array lookup) so static analysis recognizes it as a guard on the
+// property name. The paths here come from the hard-coded preset manifest, not
+// user input, so this is defense-in-depth — but it keeps the writer safe
+// regardless of the source.
 function setPath(target: Record<string, unknown>, path: string, value: unknown): void {
   const keys = path.split('.');
 
   let node = target;
   for (let i = 0; i < keys.length - 1; i++) {
     const key = keys[i];
-    // Guard each key immediately before it is used to write, so a __proto__ /
-    // constructor / prototype segment can never reach a property assignment.
-    if (UNSAFE_KEYS.has(key)) return;
+    if (key === '__proto__' || key === 'constructor' || key === 'prototype') return;
     if (typeof node[key] !== 'object' || node[key] == null) node[key] = {};
     node = node[key] as Record<string, unknown>;
   }
 
   const lastKey = keys[keys.length - 1];
-  if (UNSAFE_KEYS.has(lastKey)) return;
+  if (lastKey === '__proto__' || lastKey === 'constructor' || lastKey === 'prototype') return;
   node[lastKey] = value;
 }
 
