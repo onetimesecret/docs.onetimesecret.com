@@ -93,6 +93,9 @@ export const OPTIONS: OptionSpec[] = [
     ],
     env: [
       { name: 'AUTH_DATABASE_URL', secret: true, when: 'full' },
+      // AUTH_SECRET: independent HMAC key for Rodauth (TOTP, login tokens);
+      // cannot be recovered from SECRET, so full mode must supply it.
+      { name: 'AUTH_SECRET', secret: true, when: 'full' },
       { name: 'ARGON2_SECRET', secret: true, when: 'full' },
     ],
   },
