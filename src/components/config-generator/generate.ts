@@ -84,8 +84,16 @@ export function coerce(opt: OptionSpec, raw: unknown): Scalar {
   return match ? match.value : defaultFor(opt);
 }
 
+// Keys that must never be written through a dotted path, to avoid prototype
+// pollution. The paths here come from the hard-coded preset manifest (not user
+// input), so this is defense-in-depth, but it also keeps the generator safe if
+// a path is ever sourced from somewhere less trusted.
+const UNSAFE_KEYS = new Set(['__proto__', 'constructor', 'prototype']);
+
 function setPath(target: Record<string, unknown>, path: string, value: unknown): void {
   const keys = path.split('.');
+  if (keys.some((key) => UNSAFE_KEYS.has(key))) return;
+
   let node = target;
   for (let i = 0; i < keys.length - 1; i++) {
     const key = keys[i];
