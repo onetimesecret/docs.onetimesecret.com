@@ -1,5 +1,8 @@
 # Page templates
 
+> These are authoring templates, not published pages. Everything under `docs/`
+> is internal tooling; the site's published content lives in `src/content/docs/`.
+
 Every doc on this site is one of four types. Before you write, decide which
 one you're writing — the type determines the job of the page, and mixing two
 jobs into one page is the most common way our docs go wrong.

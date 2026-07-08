@@ -21,6 +21,6 @@ should start from a template.
 
 ## Checklist
 
-- [ ] Internal links use the locale prefix (e.g. `/en/`) and resolve (no 404s)
+- [ ] Internal links resolve within the current locale (no 404s) — either relative (`./page`) or locale-prefixed absolute (`/en/page`)
 - [ ] New pages were copied from a [template](../docs/templates/) and match its type's job
 - [ ] Sidebar and translation keys updated if navigation changed

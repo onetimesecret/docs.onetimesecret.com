@@ -2,7 +2,7 @@
 title: "Simple or Full: choosing your authentication mode"
 description: A decision guide for self-hosters choosing between Simple and Full authentication mode in Onetime Secret v0.24+ — what each needs to run, what each unlocks, and how hard it is to switch later.
 sidebar:
-  order: 2
+  order: 3
 ---
 
 From v0.24 onward, a self-hosted Onetime Secret instance runs its

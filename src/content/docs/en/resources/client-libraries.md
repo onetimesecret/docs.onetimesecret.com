@@ -31,7 +31,7 @@ instance before depending on it.
 ## Ruby
 
 
-[Github page onetime-ruby](https://github.com/onetimesecret/onetime-ruby)
+[GitHub page onetime-ruby](https://github.com/onetimesecret/onetime-ruby)
 by [Delano](https://delanotes.com/) — **official client**, actively maintained
 (last commit 2026-06). Supports API v1 (deprecated) and v2, regional domains,
 and custom base URLs. Requires Ruby 3.1+, zero runtime dependencies.
@@ -57,7 +57,7 @@ puts ret['secret_key']
 ## Python
 
 
-[Github page - onetimesecret-cli](https://github.com/slashpass/onetimesecret-cli)
+[GitHub page - onetimesecret-cli](https://github.com/slashpass/onetimesecret-cli)
 by [slashpass](https://github.com/slashpass) — community-maintained (last
 commit 2024-11). Supports a region option (`us` / `eu`).
 
@@ -70,7 +70,7 @@ cli = OneTimeSecretCli(ONETIMESECRET_USER, ONETIMESECRET_KEY)
 cli.create_link("secret") # return a link like https://onetimesecret.com/secret/xxxxxxxxxxx
 ```
 
-[Github page - py\_onetimesecret](https://github.com/utterstep/py_onetimesecret)
+[GitHub page - py\_onetimesecret](https://github.com/utterstep/py_onetimesecret)
 by [Vladislav Stepanov](https://github.com/utterstep) — **unmaintained** (last
 commit 2019; the example below is Python 2). Uses the deprecated v1 API against
 `onetimesecret.com` only.
@@ -125,7 +125,7 @@ printf( "%s\n", $secret->{value} );
 ## Java
 
 
-[Github page - onetime-java](https://github.com/mpawlowski/onetime-java)
+[GitHub page - onetime-java](https://github.com/mpawlowski/onetime-java)
 by [Marcin Pawlowski](https://github.com/mpawlowski) — **unmaintained** (last
 commit 2014-06). Takes an instance URL, so it may work self-hosted, but it
 predates API v2.
@@ -157,7 +157,7 @@ assertEquals(generateResponse.getValue(), retrieveResponse.getValue());
 ## C#
 
 
-[Github page - OneTimeSharp](https://github.com/utterstep/OneTimeSharp)
+[GitHub page - OneTimeSharp](https://github.com/utterstep/OneTimeSharp)
 by [Vladislav Stepanov](https://github.com/utterstep) — **unmaintained** (last
 commit 2018-05). Uses the deprecated v1 API against `onetimesecret.com` only.
 
@@ -193,7 +193,7 @@ class Test
 ## Go
 
 
-[Github page - onetimesecret](https://github.com/corbaltcode/go-onetimesecret)
+[GitHub page - onetimesecret](https://github.com/corbaltcode/go-onetimesecret)
 by [Corbalt](https://github.com/corbaltcode/) — community-maintained (last
 commit 2026-05, updated for the `us.onetimesecret.com` host). Includes a CLI.
 
@@ -245,7 +245,7 @@ flsdlaun6hwczqu9utmc0vts5xj9xu1
 ## Go (lib)
 
 
-[Github page](https://github.com/emdneto/otsgo)
+[GitHub page](https://github.com/emdneto/otsgo)
 by [Emídio Neto](https://github.com/emdneto) — community-maintained (last
 release v1.1.0, 2024-03). Regional-domain support not documented.
 
@@ -273,7 +273,7 @@ fmt.Println(response.Status)
 ## PowerShell
 
 
-[Github page - OneTimeSecret](https://github.com/chelnak/OneTimeSecret)
+[GitHub page - OneTimeSecret](https://github.com/chelnak/OneTimeSecret)
 by [Craig Gumbley](https://www.helloitscraig.co.uk) — **unmaintained** (last
 release 2021-06). Supports a custom `-BaseUrl`, so it can point at a region or
 self-hosted instance, but it predates API v2.
@@ -302,7 +302,7 @@ Get-Command -Module OneTimeSecret | Select Name
 ## Bash
 
 
-[Github page - OneTimeSecret-bash](https://github.com/eengstrom/onetimesecret-bash)
+[GitHub page - OneTimeSecret-bash](https://github.com/eengstrom/onetimesecret-bash)
 by [Eric Engstrom](https://eengstrom.github.io/) — **unmaintained** (last
 commit 2020-05). Supports a custom host via `ots_set_host`, but predates API
 v2 and regional domains.
