@@ -66,16 +66,18 @@ capabilities — not just your day-one needs.
 
 ## Can you change your mind later?
 
-Mostly one direction, cheaply. Going **Simple → Full** is additive: you stand
-up PostgreSQL and RabbitMQ, switch `authentication.mode` to `full`, and
-configure the new connections. Because the extra services are only introduced
-when you flip the mode, you're not carrying their operational cost until you
-choose to.
+Going **Simple → Full** is a supported migration: you stand up PostgreSQL and
+RabbitMQ, switch `authentication.mode` to `full`, and run the CLI command that
+populates the authentication database from your existing accounts. Because the
+extra services are only introduced when you flip the mode, you're not carrying
+their operational cost until you choose to.
 
-Going **Full → Simple** is a downgrade in capability — accounts relying on MFA,
-SSO, or organizations lose those features, and the authoritative store changes
-from PostgreSQL back to Redis. Treat that as a migration, not a toggle, and plan
-it deliberately.
+That said, the recommendation is to **pick one mode and stay with it**. The
+migration path exists so nobody is stranded, not so you can move back and
+forth. Going **Full → Simple** in particular is a downgrade in capability —
+accounts relying on MFA, SSO, or organizations lose those features, and the
+authoritative store changes from PostgreSQL back to Redis. Decide based on
+where your roadmap points, not just your day-one needs.
 
 Whichever mode you pick, **keep your `SECRET` value unchanged** across the
 switch. Changing it makes every previously encrypted secret unreadable — the
