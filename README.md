@@ -72,6 +72,18 @@ Contributions to documentation are welcome. Please follow these steps:
 3. Make your changes
 4. Submit a pull request
 
+### Writing a new page
+
+Every page on this site is one of four types — Concept / Decision guide,
+How-to, Reference, or Architecture note. **Start a new doc by copying a
+template**, not from a blank file. See [`docs/templates/`](./docs/templates/)
+for the templates and guidance on picking the right type.
+
+One question to ask before you open a PR: **does your change introduce a
+decision axis** — a new flag, plan tier, entitlement, region, or config choice?
+If so, a Concept / Decision guide should reason about that choice, not just a
+how-to that configures it. The pull request template prompts for this.
+
 ## License
 
 This documentation site is licensed under the MIT License.
