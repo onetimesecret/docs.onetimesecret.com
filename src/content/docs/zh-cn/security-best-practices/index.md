@@ -47,11 +47,11 @@ Onetime Secret负责保护定制域名安全的技术方面，包括SSL/TLS配�
 
 ##高级自托管安全
 
-本节介绍了企业在运行自己的 Onetime Secret 实例时需要注意的高级安全事项。您可以在[GitHub](https://github.com/onetimesecret/onetimesecret)上找到开源项目，在[Docker Hub](https://hub.docker.com/r/onetimesecret/onetimesecret)上找到官方 Docker 映像。
+本节介绍了企业在运行自己的 Onetime Secret 实例时需要注意的高级安全事项。您可以在[GitHub](https://github.com/onetimesecret/onetimesecret)上找到开源项目，在[Docker Hub](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret)上找到官方 Docker 映像。
 
 在自行托管 Onetime Secret 时，可在基础设施层面实施以下建议：
 
-1.**使用短暂环境**：在可能的情况下，为每次机密内容共享会话创建和销毁环境。这对于高度敏感的操作尤其有用。我们的 [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/blob/v0.18.5/docs/DOCKER-lite.md)Docker 映像专为短暂使用情况而设计。
+1.**使用短暂环境**：在可能的情况下，为每次机密内容共享会话创建和销毁环境。这对于高度敏感的操作尤其有用。我们的 [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret-lite)Docker 映像专为短暂使用情况而设计。
 
 2.**实施基于时间的限制**：如果使用情况允许，考虑对访问机密实施基于时间的限制，例如只在工作时间内访问。
 

@@ -7,20 +7,15 @@ sidebar:
 
 Стартирайте собствена частна инстанция на Onetime Secret с пълен контрол върху вашите данни, сигурност и внедряване.
 
-<!-- EDITORS: This caution block is intentional. v0.23 still provides a smoother
-     onboarding experience than v0.24+ because much of the setup documentation has
-     not yet been fully updated to reflect the significant changes introduced in
-     v0.24. Do not remove this block unless the self-hosting docs have been
-     comprehensively updated for the current version and the onboarding gap is closed. -->
-:::caution[Март 2026 — Документацията за самостоятелно хостване е в процес на обновяване]
-Намираме се в процес на преход между **v0.23** и **v0.24** (клонът `main`). Част от документацията ни за самостоятелно хостване е остаряла и [активно работим по нейното подобряване](https://github.com/onetimesecret/onetimesecret/issues/2628).
+:::tip[Текуща версия: v0.25]
+Текущата стабилна версия е **v0.25** (клонът `main`). Работи в два режима:
 
-**Ако просто искате да пуснете нещо работещо**, препоръчваме клона `rel/0.23`. Той изисква само няколко променливи на средата и Redis, а ние продължаваме активно да публикуваме поправки и малки актуализации към него.
+- **Прост режим** — най-лесният вариант. Изисква само Redis и няколко променливи на средата. Акаунтите работят по същия начин като винаги.
+- **Пълен режим** — добавя функции за акаунт (MFA, SSO, WebAuthn, организации), подкрепени от PostgreSQL и RabbitMQ.
 
-```bash
-git clone -b rel/0.23 https://github.com/onetimesecret/onetimesecret.git
-```
+Ако идвате от v0.22 или v0.23, следвайте ръководството [Надграждане до v0.24+](./upgrading-v0-24), което обхваща промените в конфигурацията и модела на данни.
 :::
+
 
 ## Защо да хоствате самостоятелно?
 

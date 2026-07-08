@@ -47,11 +47,11 @@ Onetime Secret은 SSL/TLS 구성 및 도메인 활동 모니터링 등 사용자
 
 ## 고급 셀프 호스팅 보안
 
-이 섹션에서는 Onetime Secret의 자체 인스턴스를 실행하는 조직을 위한 고급 보안 고려 사항을 다룹니다. 오픈 소스 프로젝트는 [GitHub](https://github.com/onetimesecret/onetimesecret)에서, 공식 Docker 이미지는 [Docker Hub](https://hub.docker.com/r/onetimesecret/onetimesecret)에서 찾을 수 있습니다.
+이 섹션에서는 Onetime Secret의 자체 인스턴스를 실행하는 조직을 위한 고급 보안 고려 사항을 다룹니다. 오픈 소스 프로젝트는 [GitHub](https://github.com/onetimesecret/onetimesecret)에서, 공식 Docker 이미지는 [Docker Hub](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret)에서 찾을 수 있습니다.
 
 원타임 시크릿을 셀프 호스팅할 때 인프라 수준에서 아래 권장 사항을 구현할 수 있습니다:
 
-1. **임시 환경 사용**: 가능하면 각 비밀 공유 세션에 대해 환경을 만들고 삭제하세요. 이는 매우 민감한 작업에 특히 유용할 수 있습니다. [온타임 시크릿 라이트](https://github.com/onetimesecret/onetimesecret/blob/v0.18.5/docs/DOCKER-lite.md) 도커 이미지는 임시 사용 사례를 위해 설계되었습니다.
+1. **임시 환경 사용**: 가능하면 각 비밀 공유 세션에 대해 환경을 만들고 삭제하세요. 이는 매우 민감한 작업에 특히 유용할 수 있습니다. [온타임 시크릿 라이트](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret-lite) 도커 이미지는 임시 사용 사례를 위해 설계되었습니다.
 
 2. **시간 기반 제한 구현**: 사용 사례에서 허용하는 경우, 업무 시간에만 비밀 정보에 액세스하도록 하는 등 시간 기반 제한을 구현하는 것을 고려하세요.
 

@@ -47,11 +47,11 @@ Jeśli używasz API Onetime Secret:
 
 ## Zaawansowane bezpieczeństwo self-hosting
 
-Ta sekcja obejmuje zaawansowane zagadnienia bezpieczeństwa dla organizacji prowadzących własną instancję Onetime Secret. Projekt open source można znaleźć na [GitHub](https://github.com/onetimesecret/onetimesecret), a oficjalne obrazy Docker na [Docker Hub](https://hub.docker.com/r/onetimesecret/onetimesecret).
+Ta sekcja obejmuje zaawansowane zagadnienia bezpieczeństwa dla organizacji prowadzących własną instancję Onetime Secret. Projekt open source można znaleźć na [GitHub](https://github.com/onetimesecret/onetimesecret), a oficjalne obrazy Docker na [Docker Hub](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret).
 
 Poniższe rekomendacje mogą być zaimplementowane na poziomie Twojej infrastruktury podczas self-hostingu Onetime Secret:
 
-1. **Używaj środowisk efemerycznych**: Kiedy to możliwe, twórz i niszcz środowiska dla każdej sesji udostępniania sekretów. Może to być szczególnie przydatne dla wysoce poufnych operacji. Nasz obraz Docker [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/blob/v0.18.5/docs/DOCKER-lite.md) jest zaprojektowany dla przypadków użycia efemerycznych.
+1. **Używaj środowisk efemerycznych**: Kiedy to możliwe, twórz i niszcz środowiska dla każdej sesji udostępniania sekretów. Może to być szczególnie przydatne dla wysoce poufnych operacji. Nasz obraz Docker [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret-lite) jest zaprojektowany dla przypadków użycia efemerycznych.
 
 2. **Implementuj ograniczenia czasowe**: Jeśli Twój przypadek użycia na to pozwala, rozważ implementację ograniczeń czasowych dla dostępu do sekretów, takich jak tylko podczas godzin pracy.
 

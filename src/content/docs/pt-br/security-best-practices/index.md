@@ -47,11 +47,11 @@ Se você estiver usando a API do Onetime Secret:
 
 ## Segurança Avançada de Auto-Hospedagem
 
-Esta seção cobre considerações avançadas de segurança para organizações que executam sua própria instância do Onetime Secret. Você pode encontrar o projeto de código aberto no [GitHub](https://github.com/onetimesecret/onetimesecret) e imagens oficiais do Docker em [Docker Hub](https://hub.docker.com/r/onetimesecret/onetimesecret).
+Esta seção cobre considerações avançadas de segurança para organizações que executam sua própria instância do Onetime Secret. Você pode encontrar o projeto de código aberto no [GitHub](https://github.com/onetimesecret/onetimesecret) e imagens oficiais do Docker em [Docker Hub](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret).
 
 As recomendações abaixo podem ser implementadas no nível de sua infraestrutura ao auto-hospedar o Onetime Secret:
 
-1. **Use Ambientes Efêmeros**: Quando possível, crie e destrua ambientes para cada sessão de compartilhamento de mensagens. Isso pode ser particularmente útil para operações altamente sensíveis. Nossa imagem Docker [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/blob/v0.18.5/docs/DOCKER-lite.md) é projetada para casos de uso efêmeros.
+1. **Use Ambientes Efêmeros**: Quando possível, crie e destrua ambientes para cada sessão de compartilhamento de mensagens. Isso pode ser particularmente útil para operações altamente sensíveis. Nossa imagem Docker [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret-lite) é projetada para casos de uso efêmeros.
 
 2. **Implemente Restrições Baseadas em Tempo**: Se seu caso de uso permitir, considere implementar restrições baseadas em tempo para acessar mensagens, como apenas durante o horário comercial.
 

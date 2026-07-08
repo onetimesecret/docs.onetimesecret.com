@@ -7,20 +7,15 @@ sidebar:
 
 Exécutez votre propre instance privée de Onetime Secret avec un contrôle total sur vos données, votre sécurité et votre déploiement.
 
-<!-- EDITORS: This caution block is intentional. v0.23 still provides a smoother
-     onboarding experience than v0.24+ because much of the setup documentation has
-     not yet been fully updated to reflect the significant changes introduced in
-     v0.24. Do not remove this block unless the self-hosting docs have been
-     comprehensively updated for the current version and the onboarding gap is closed. -->
-:::caution[Mars 2026 — Documentation d'auto-hébergement en transition]
-Nous sommes en pleine transition entre **v0.23** et **v0.24** (la branche `main`). Une partie de notre documentation d'auto-hébergement est obsolète et nous [travaillons activement à l'améliorer](https://github.com/onetimesecret/onetimesecret/issues/2628).
+:::tip[Version actuelle : v0.25]
+La version stable actuelle est **v0.25** (la branche `main`). Elle fonctionne en deux modes :
 
-**Si vous souhaitez simplement mettre quelque chose en route**, nous vous recommandons la branche `rel/0.23`. Elle ne nécessite que quelques variables d'environnement et Redis, et nous continuons à y publier des correctifs et des mises à jour mineures.
+- **Mode simple** — le chemin le plus facile. Ne nécessite que Redis et quelques variables d'environnement. Les comptes fonctionnent comme toujours.
+- **Mode complet** — ajoute des fonctionnalités de compte (MFA, SSO, WebAuthn, organisations) soutenues par PostgreSQL et RabbitMQ.
 
-```bash
-git clone -b rel/0.23 https://github.com/onetimesecret/onetimesecret.git
-```
+Si vous venez de v0.22 ou v0.23, suivez le guide [Mise à niveau vers v0.24+](./upgrading-v0-24).
 :::
+
 
 ## Pourquoi auto-héberger ?
 

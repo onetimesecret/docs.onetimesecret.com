@@ -47,11 +47,11 @@ Wenn Sie die Onetime Secret API verwenden:
 
 ## Erweiterte Sicherheit für selbst gehostete Systeme
 
-Dieser Abschnitt behandelt erweiterte Sicherheitsüberlegungen für Unternehmen, die ihre eigene Instanz von Onetime Secret betreiben. Sie finden das Open-Source-Projekt auf [GitHub](https://github.com/onetimesecret/onetimesecret) und die offiziellen Docker-Images auf [Docker Hub](https://hub.docker.com/r/onetimesecret/onetimesecret).
+Dieser Abschnitt behandelt erweiterte Sicherheitsüberlegungen für Unternehmen, die ihre eigene Instanz von Onetime Secret betreiben. Sie finden das Open-Source-Projekt auf [GitHub](https://github.com/onetimesecret/onetimesecret) und die offiziellen Docker-Images auf [Docker Hub](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret).
 
 Die folgenden Empfehlungen können Sie auf der Ebene Ihrer Infrastruktur umsetzen, wenn Sie Onetime Secret selbst hosten:
 
-1. **Kurzlebige Umgebungen verwenden**: Erstellen und zerstören Sie nach Möglichkeit Umgebungen für jede Sitzung zur gemeinsamen Nutzung von Geheimnissen. Dies kann besonders bei hochsensiblen Vorgängen nützlich sein. Unser [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/blob/v0.18.5/docs/DOCKER-lite.md) Docker-Image ist für ephemere Anwendungsfälle konzipiert.
+1. **Kurzlebige Umgebungen verwenden**: Erstellen und zerstören Sie nach Möglichkeit Umgebungen für jede Sitzung zur gemeinsamen Nutzung von Geheimnissen. Dies kann besonders bei hochsensiblen Vorgängen nützlich sein. Unser [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret-lite) Docker-Image ist für ephemere Anwendungsfälle konzipiert.
 
 2. **Zeitbasierte Beschränkungen implementieren**: Wenn Ihr Anwendungsfall es zulässt, sollten Sie zeitliche Beschränkungen für den Zugriff auf Geheimnisse einführen, z.B. nur während der Geschäftszeiten.
 

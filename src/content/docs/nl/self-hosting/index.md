@@ -7,20 +7,15 @@ sidebar:
 
 Draai je eigen privé-instantie van Onetime Secret met volledige controle over je gegevens, beveiliging en deployment.
 
-<!-- EDITORS: This caution block is intentional. v0.23 still provides a smoother
-     onboarding experience than v0.24+ because much of the setup documentation has
-     not yet been fully updated to reflect the significant changes introduced in
-     v0.24. Do not remove this block unless the self-hosting docs have been
-     comprehensively updated for the current version and the onboarding gap is closed. -->
-:::caution[Maart 2026 — Documentatie over self-hosting in transitie]
-We zitten midden in de overgang van **v0.23** naar **v0.24** (de `main`-branch). Een deel van onze self-hosting-documentatie is verouderd en we [werken er actief aan om dit te verbeteren](https://github.com/onetimesecret/onetimesecret/issues/2628).
+:::tip[Huidige release: v0.25]
+De huidige stabiele release is **v0.25** (de `main` branch). Het werkt in twee modi:
 
-**Als je gewoon iets draaiend wilt hebben**, raden we de `rel/0.23`-branch aan. Die heeft slechts een paar omgevingsvariabelen en Redis nodig, en we pushen er nog steeds actief fixes en kleine updates naartoe.
+- **Eenvoudige modus** — de gemakkelijkste manier. Heeft alleen Redis en een paar omgevingsvariabelen nodig. Accounts werken hetzelfde als altijd.
+- **Volledige modus** — voegt accountfuncties toe (MFA, SSO, WebAuthn, organisaties) ondersteund door PostgreSQL en RabbitMQ.
 
-```bash
-git clone -b rel/0.23 https://github.com/onetimesecret/onetimesecret.git
-```
+Als u van v0.22 of v0.23 komt, volg dan de handleiding [Upgraden naar v0.24+](./upgrading-v0-24).
 :::
+
 
 ## Waarom Self-Hosting?
 

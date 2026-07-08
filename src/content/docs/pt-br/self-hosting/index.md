@@ -7,20 +7,15 @@ sidebar:
 
 Execute sua própria instância privada do Onetime Secret com controle total sobre seus dados, segurança e implantação.
 
-<!-- EDITORS: This caution block is intentional. v0.23 still provides a smoother
-     onboarding experience than v0.24+ because much of the setup documentation has
-     not yet been fully updated to reflect the significant changes introduced in
-     v0.24. Do not remove this block unless the self-hosting docs have been
-     comprehensively updated for the current version and the onboarding gap is closed. -->
-:::caution[Março de 2026 — Documentação de auto-hospedagem em transição]
-Estamos no meio da transição entre **v0.23** e **v0.24** (a branch `main`). Parte da nossa documentação de auto-hospedagem está desatualizada e estamos [trabalhando ativamente para melhorá-la](https://github.com/onetimesecret/onetimesecret/issues/2628).
+:::tip[Versão atual: v0.25]
+A versão estável atual é **v0.25** (o branch `main`). Ela funciona em dois modos:
 
-**Se você só quer colocar algo para funcionar**, recomendamos a branch `rel/0.23`. Ela precisa apenas de algumas variáveis de ambiente e Redis, e ainda estamos publicando correções e pequenas atualizações nela.
+- **Modo simples** — o caminho mais fácil. Precisa apenas de Redis e algumas variáveis de ambiente. As contas funcionam da mesma forma que sempre.
+- **Modo completo** — adiciona recursos de conta (MFA, SSO, WebAuthn, organizações) suportados por PostgreSQL e RabbitMQ.
 
-```bash
-git clone -b rel/0.23 https://github.com/onetimesecret/onetimesecret.git
-```
+Se você está vindo do v0.22 ou v0.23, siga o guia [Atualizando para v0.24+](./upgrading-v0-24).
 :::
+
 
 ## Por Que Auto-Hospedar?
 

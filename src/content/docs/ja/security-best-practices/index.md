@@ -47,11 +47,11 @@ Onetime Secret APIを使用している場合：
 
 ## 高度な自己ホスト型セキュリティ
 
-このセクションでは、Onetime Secretのインスタンスを独自に運用する場合の、高度なセキュリティについて説明します。オープンソースプロジェクトは[GitHub](https://github.com/onetimesecret/onetimesecret)に、公式Dockerイメージは[Docker Hub](https://hub.docker.com/r/onetimesecret/onetimesecret)にあります。
+このセクションでは、Onetime Secretのインスタンスを独自に運用する場合の、高度なセキュリティについて説明します。オープンソースプロジェクトは[GitHub](https://github.com/onetimesecret/onetimesecret)に、公式Dockerイメージは[Docker Hub](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret)にあります。
 
 Onetime Secretをセルフホストする場合、以下の推奨事項をインフラレベルで実装できます：
 
-1. **エフェメラルな環境を使用する**：可能であれば、シークレット共有セッションごとに環境を作成し、破棄する。これは特に機密性の高い操作に有用である。私たちの[Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/blob/v0.18.5/docs/DOCKER-lite.md)Dockerイメージは、エフェメラルなユースケースのために設計されています。
+1. **エフェメラルな環境を使用する**：可能であれば、シークレット共有セッションごとに環境を作成し、破棄する。これは特に機密性の高い操作に有用である。私たちの[Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret-lite)Dockerイメージは、エフェメラルなユースケースのために設計されています。
 
 2. **時間ベースの制限を実施する**：ユースケースが許すのであれば、営業時間内のみなど、シークレットへのアクセスに時間ベースの制限を実装することを検討する。
 

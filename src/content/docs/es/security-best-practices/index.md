@@ -47,11 +47,11 @@ Si utiliza la API Onetime Secret:
 
 ## Seguridad avanzada autoalojada
 
-Esta sección cubre consideraciones avanzadas de seguridad para organizaciones que ejecutan su propia instancia de Onetime Secret. Puedes encontrar el proyecto de código abierto en [GitHub](https://github.com/onetimesecret/onetimesecret) y las imágenes Docker oficiales en [Docker Hub](https://hub.docker.com/r/onetimesecret/onetimesecret).
+Esta sección cubre consideraciones avanzadas de seguridad para organizaciones que ejecutan su propia instancia de Onetime Secret. Puedes encontrar el proyecto de código abierto en [GitHub](https://github.com/onetimesecret/onetimesecret) y las imágenes Docker oficiales en [Docker Hub](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret).
 
 Las siguientes recomendaciones pueden aplicarse a nivel de infraestructura cuando se autoaloje Onetime Secret:
 
-1. **Utilizar entornos efímeros**: Cuando sea posible, cree y destruya entornos para cada sesión de intercambio de secretos. Esto puede ser particularmente útil para operaciones altamente sensibles. Nuestra imagen Docker [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/blob/v0.18.5/docs/DOCKER-lite.md) está diseñada para casos de uso efímero.
+1. **Utilizar entornos efímeros**: Cuando sea posible, cree y destruya entornos para cada sesión de intercambio de secretos. Esto puede ser particularmente útil para operaciones altamente sensibles. Nuestra imagen Docker [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret-lite) está diseñada para casos de uso efímero.
 
 2. **Implantar restricciones horarias**: Si su caso de uso lo permite, considere implementar restricciones basadas en el tiempo para acceder a los secretos, como por ejemplo sólo durante las horas de oficina.
 

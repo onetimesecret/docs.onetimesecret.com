@@ -7,20 +7,15 @@ sidebar:
 
 Kör din egen privata instans av Onetime Secret med full kontroll över din data, säkerhet och distribution.
 
-<!-- EDITORS: This caution block is intentional. v0.23 still provides a smoother
-     onboarding experience than v0.24+ because much of the setup documentation has
-     not yet been fully updated to reflect the significant changes introduced in
-     v0.24. Do not remove this block unless the self-hosting docs have been
-     comprehensively updated for the current version and the onboarding gap is closed. -->
-:::caution[Mars 2026 — Dokumentation för självhosting under omarbetning]
-Vi håller på att övergå mellan **v0.23** och **v0.24** (`main`-grenen). Delar av vår dokumentation för självhosting är inaktuell och vi [arbetar aktivt med att förbättra den](https://github.com/onetimesecret/onetimesecret/issues/2628).
+:::tip[Aktuell release: v0.25]
+Den aktuella stabila releasen är **v0.25** (grenen `main`). Den körs i två lägen:
 
-**Om du bara vill komma igång snabbt** rekommenderar vi `rel/0.23`-grenen. Den kräver bara ett par miljövariabler och Redis, och vi fortsätter att aktivt publicera fixar och mindre uppdateringar till den.
+- **Enkelt läge** — den enklaste vägen. Behöver bara Redis och ett par miljövariabler. Konton fungerar som de alltid har gjort.
+- **Fullständigt läge** — lägger till kontofunktioner (MFA, SSO, WebAuthn, organisationer) med stöd av PostgreSQL och RabbitMQ.
 
-```bash
-git clone -b rel/0.23 https://github.com/onetimesecret/onetimesecret.git
-```
+Om du kommer från v0.22 eller v0.23, följ guiden [Uppgradering till v0.24+](./upgrading-v0-24).
 :::
+
 
 ## Varför självhosta?
 
