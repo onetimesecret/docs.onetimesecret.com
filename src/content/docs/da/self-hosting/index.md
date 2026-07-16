@@ -10,10 +10,10 @@ Kør din egen private instans af Onetime Secret med fuld kontrol over dine data,
 :::tip[Nuværende udgivelse: v0.25]
 Den nuværende stabile udgivelse er **v0.25** (grenen `main`). Den kører i to tilstande:
 
-- **Simpel tilstand** — den nemmeste vej. Kræver kun Redis og et par miljøvariabler. Konti fungerer som de altid har.
+- **Simpel tilstand** — den nemmeste vej. Kræver kun Redis og et par miljøvariabler. Konti fungerer som de altid har. Start her med [Hurtig start](#hurtig-start-muligheder) nedenfor.
 - **Fuld tilstand** — tilføjer kontofunktioner (MFA, SSO, WebAuthn, organisationer) understøttet af PostgreSQL og RabbitMQ.
 
-Hvis du kommer fra v0.22 eller v0.23, følg guiden [Opgradering til v0.24+](./upgrading-v0-24).
+Hvis du kommer fra v0.22 eller v0.23, følg guiden [Opgradering til v0.24+](./upgrading-v0-24), som dækker konfigurations- og datamodelændringerne, og hvordan du vælger en godkendelsestilstand.
 :::
 
 

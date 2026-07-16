@@ -47,7 +47,7 @@ Se você estiver usando a API do Onetime Secret:
 
 ## Segurança Avançada de Auto-Hospedagem
 
-Esta seção cobre considerações avançadas de segurança para organizações que executam sua própria instância do Onetime Secret. Você pode encontrar o projeto de código aberto no [GitHub](https://github.com/onetimesecret/onetimesecret) e imagens oficiais do Docker em [Docker Hub](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret).
+Esta seção cobre considerações avançadas de segurança para organizações que executam sua própria instância do Onetime Secret. Você pode encontrar o projeto de código aberto no [GitHub](https://github.com/onetimesecret/onetimesecret) e imagens oficiais do Docker no [GitHub Container Registry](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret).
 
 As recomendações abaixo podem ser implementadas no nível de sua infraestrutura ao auto-hospedar o Onetime Secret:
 

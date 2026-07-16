@@ -47,7 +47,7 @@ Onetime Secret APIを使用している場合：
 
 ## 高度な自己ホスト型セキュリティ
 
-このセクションでは、Onetime Secretのインスタンスを独自に運用する場合の、高度なセキュリティについて説明します。オープンソースプロジェクトは[GitHub](https://github.com/onetimesecret/onetimesecret)に、公式Dockerイメージは[Docker Hub](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret)にあります。
+このセクションでは、Onetime Secretのインスタンスを独自に運用する場合の、高度なセキュリティについて説明します。オープンソースプロジェクトは[GitHub](https://github.com/onetimesecret/onetimesecret)に、公式Dockerイメージは[GitHub Container Registry](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret)にあります。
 
 Onetime Secretをセルフホストする場合、以下の推奨事項をインフラレベルで実装できます：
 
@@ -68,7 +68,7 @@ Onetime Secretをセルフホストする場合、以下の推奨事項をイン
 
 1. **計画を持つ**：シークレット共有プロセスに特化したインシデント対応計画を策定する。これには、アクセス権の剥奪、影響を受ける当事者への通知、潜在的な損害の軽減などの手順を含める。
 
-2. **クイックアクション**：シークレットが漏洩した疑いがある場合、シークレットがまだ閲覧されていなければ、すぐに Onetime Secret の書き込み機能を使用してください。閲覧されている場合は、適切な対処を行い、潜在的な損害を軽減してください。
+2. **クイックアクション**：シークレットが漏洩した疑いがある場合、シークレットがまだ閲覧されていなければ、すぐに Onetime Secret の削除機能を使用してください。閲覧されている場合は、適切な対処を行い、潜在的な損害を軽減してください。
 
 3. **定期的なセキュリティの見直し**：シークレット共有の慣行を定期的に見直し、必要に応じてセキュリティ対策を調整する。
 

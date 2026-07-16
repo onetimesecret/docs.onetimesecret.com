@@ -10,7 +10,7 @@ Ejecute su propia instancia privada de Onetime Secret con control total sobre su
 :::tip[Versión actual: v0.25]
 La versión estable actual es **v0.25** (la rama `main`). Funciona en dos modos:
 
-- **Modo simple** — el camino más sencillo. Solo necesita Redis y un par de variables de entorno. Las cuentas funcionan igual que siempre.
+- **Modo simple** — el camino más sencillo. Solo necesita Redis y un par de variables de entorno. Las cuentas funcionan igual que siempre. Empiece aquí con las [opciones de inicio rápido](#opciones-de-inicio-rápido) a continuación.
 - **Modo completo** — añade funciones de cuenta (MFA, SSO, WebAuthn, organizaciones) respaldadas por PostgreSQL y RabbitMQ.
 
 Si viene de v0.22 o v0.23, siga la guía [Actualización a v0.24+](./upgrading-v0-24), que cubre los cambios de configuración y modelo de datos y cómo elegir un modo de autenticación.

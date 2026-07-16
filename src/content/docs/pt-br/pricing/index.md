@@ -9,17 +9,17 @@ Compartilhe informações confidenciais com confiança, eleve sua marca e constr
 
 ## Planos
 
-### Basic
+### Free
 
 **$0/mês**
 
-Compartilhamento seguro e de uso único para todos.
+Compartilhamento seguro e autodestrutivo de mensagens confidenciais para todos.
 
 **Recursos:**
-- Visualização única de mensagens compartilhadas
-- Exclusão automática após visualização
-- Conta necessária para enviar por e-mail aos destinatários
-- Acesso básico à API
+- Visualização única com exclusão automática após o acesso
+- Um domínio personalizado
+- Página inicial e recebimento de mensagens confidenciais
+- Acesso à API
 
 [Comece Agora](https://onetimesecret.com/plans/basic)
 
@@ -35,15 +35,18 @@ Compartilhamento seguro que eleva sua marca e simplifica a comunicação.
 
 [Ver preços atuais](https://onetimesecret.com/pricing) | [Escolha este plano](https://onetimesecret.com/plans/identity)
 
-### Global Elite
+### Team Plus
 
-Uma instalação totalmente personalizada, single-tenant, com infraestrutura dedicada, controles de conformidade de dados e escalabilidade ilimitada.
+Compartilhamento de mensagens confidenciais com governança, incluindo SSO, controles de acesso e visibilidade organizacional.
 
 **Recursos:**
-- Ambiente de nuvem privada
-- Uso e escalabilidade ilimitados
-- Múltiplas opções de localização de dados (EU, US)
-- Conformidade regulatória completa (incluindo GDPR, CCPA, HIPAA)
+- Tudo do Identity Plus
+- Autenticação única (SSO)
+- Gerenciamento de equipe e painel compartilhado
+- Domínio flexível para o remetente de e-mail
+- Validação de cadastro por domínio
+
+[Ver preços atuais](https://onetimesecret.com/pricing)
 
 ## Perguntas Frequentes
 
@@ -60,7 +63,7 @@ Sim, o Onetime Secret oferece um plano gratuito que permite usar a maioria dos r
 Sim, o Onetime Secret oferece uma opção de auto-hospedagem com nossa garantia SimpleStack℠, garantindo implantação e gerenciamento fáceis. [GitHub](https://github.com/onetimesecret/onetimesecret)
 
 ### Quão seguro é o Onetime Secret?
-Levamos a segurança muito a sério e empregamos múltiplas medidas para proteger as informações dos usuários. Conforme declarado em nossa política de privacidade, usamos práticas padrão da indústria para proteger todos os dados contra acesso não autorizado, alteração ou destruição. Todos os dados em trânsito são criptografados usando HTTPS/TLS e armazenados com segurança na União Europeia em conformidade com as leis de proteção de dados.
+Levamos a segurança muito a sério e empregamos múltiplas medidas para proteger as informações dos usuários. Conforme declarado em nossa política de privacidade, usamos práticas padrão da indústria para proteger todos os dados contra acesso não autorizado, alteração ou destruição. Todos os dados em trânsito são criptografados usando HTTPS/TLS, e os dados em repouso são armazenados com segurança na região de data center que você escolher — Canadá, União Europeia, Nova Zelândia, Reino Unido ou Estados Unidos — em conformidade com as leis de proteção de dados aplicáveis a essa região.
 
 No entanto, também somos transparentes que nenhum método de transmissão ou armazenamento eletrônico é 100% seguro. Embora nos esforcemos para usar meios comercialmente aceitáveis para proteger informações pessoais, não podemos garantir sua segurança absoluta. Recomendamos que os usuários tomem precauções como usar frases secretas. Nosso compromisso é ser diligentes na proteção de dados com o melhor de nossas capacidades, sendo francos sobre riscos potenciais.
 

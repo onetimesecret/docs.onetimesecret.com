@@ -47,7 +47,7 @@ Onetime Secret се занимава с техническите аспекти 
 
 ## Усъвършенствана самостоятелно хоствана сигурност
 
-В този раздел са разгледани разширени съображения за сигурност за организации, които използват собствена версия на Onetime Secret. Можете да намерите проекта с отворен код в [GitHub](https://github.com/onetimesecret/onetimesecret), а официалните образи на Docker в [Docker Hub](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret).
+В този раздел са разгледани разширени съображения за сигурност за организации, които използват собствена версия на Onetime Secret. Можете да намерите проекта с отворен код в [GitHub](https://github.com/onetimesecret/onetimesecret), а официалните образи на Docker в [GitHub Container Registry](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret).
 
 Препоръките по-долу могат да бъдат приложени на ниво инфраструктура при самостоятелно хостване на Onetime Secret:
 

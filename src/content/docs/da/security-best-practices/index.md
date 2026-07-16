@@ -47,7 +47,7 @@ Hvis du bruger Onetime Secret API:
 
 ## Avanceret selv-hostet sikkerhed
 
-Dette afsnit dækker avancerede sikkerhedsovervejelser for organisationer, der kører deres egen forekomst af Onetime Secret. Du kan finde open source-projektet på [GitHub](https://github.com/onetimesecret/onetimesecret) og officielle Docker-billeder på [Docker Hub](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret).
+Dette afsnit dækker avancerede sikkerhedsovervejelser for organisationer, der kører deres egen forekomst af Onetime Secret. Du kan finde open source-projektet på [GitHub](https://github.com/onetimesecret/onetimesecret) og officielle Docker-billeder på [GitHub Container Registry](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret).
 
 Nedenstående anbefalinger kan implementeres på dit infrastrukturniveau, når du selv hoster Onetime Secret:
 

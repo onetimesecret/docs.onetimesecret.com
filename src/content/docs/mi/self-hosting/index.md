@@ -13,7 +13,7 @@ Ko te tukuna pumau ināianei ko **v0.25** (te peka `main`). Ka oma i roto i ngā
 - **Āhua māmā** — te ara ngāwari rawa atu. Me Redis anake me ētahi taupānga taiao. Ka mahi tonu ngā pūkete pērā i ōna wā katoa.
 - **Āhua katoa** — ka tāpirihia ngā āhuatanga pūkete (MFA, SSO, WebAuthn, whakahaere) i tautokona e PostgreSQL me RabbitMQ.
 
-Mēnā ka haere mai koe i v0.22 rānei v0.23, whāia te aratohu [Whakahou ki v0.24+](./upgrading-v0-24).
+Mēnā ka haere mai koe i v0.22 rānei v0.23, whāia te aratohu [Whakahou ki v0.24+](./upgrading-v0-24), e whakaatu ana i ngā panonitanga whirihorahanga me te tauira-raraunga, me te pēhea o te kōwhiri i tētahi āhua motuhēhē.
 :::
 
 

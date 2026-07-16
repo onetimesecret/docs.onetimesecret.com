@@ -9,17 +9,17 @@ Udostępniaj poufne informacje z pewnością, podnosząc swoją markę i buduj z
 
 ## Plany
 
-### Basic
+### Free
 
 **$0/miesiąc**
 
-Bezpieczne, jednorazowe udostępnianie dla każdego.
+Bezpieczne, samousuwające się udostępnianie sekretów dla każdego.
 
 **Funkcje:**
-- Jednorazowe wyświetlanie udostępnionych sekretów
-- Automatyczne usuwanie po wyświetleniu
-- Wymagane konto do wysyłania e-maili odbiorcom
-- Podstawowy dostęp do API
+- Jednorazowe wyświetlanie z automatycznym usuwaniem po uzyskaniu dostępu
+- Jedna niestandardowa domena
+- Strona główna i przychodzące sekrety
+- Dostęp do API
 
 [Rozpocznij](https://onetimesecret.com/plans/basic)
 
@@ -35,15 +35,18 @@ Bezpieczne udostępnianie, które podnosi Twoją markę i upraszcza komunikację
 
 [Zobacz aktualne ceny](https://onetimesecret.com/pricing) | [Wybierz ten plan](https://onetimesecret.com/plans/identity)
 
-### Global Elite
+### Team Plus
 
-W pełni dostosowana instalacja single-tenant z dedykowaną infrastrukturą, kontrolami zgodności danych i nieograniczoną skalowalnością.
+Zarządzane udostępnianie sekretów z SSO, kontrolą dostępu i widocznością organizacyjną.
 
 **Funkcje:**
-- Prywatne środowisko chmurowe
-- Nieograniczone użycie i skalowanie
-- Wiele opcji lokalizacji danych (UE, USA)
-- Pełna zgodność z przepisami (w tym GDPR, CCPA, HIPAA)
+- Wszystko z Identity Plus
+- Jednokrotne logowanie (SSO)
+- Zarządzanie zespołem i wspólny panel
+- Elastyczna domena nadawcy wiadomości e-mail
+- Weryfikacja rejestracji na poziomie domeny
+
+[Zobacz aktualne ceny](https://onetimesecret.com/pricing)
 
 ## Często zadawane pytania
 
@@ -60,7 +63,7 @@ Tak, Onetime Secret oferuje bezpłatny plan, który pozwala korzystać z większ
 Tak, Onetime Secret oferuje opcję samodzielnego hostowania z naszą gwarancją SimpleStack℠, zapewniającą łatwe wdrożenie i zarządzanie. [GitHub](https://github.com/onetimesecret/onetimesecret)
 
 ### Jak bezpieczny jest Onetime Secret?
-Traktujemy bezpieczeństwo bardzo poważnie i stosujemy wiele środków w celu ochrony informacji użytkowników. Jak stwierdzono w naszej polityce prywatności, używamy standardowych praktyk branżowych w celu ochrony wszystkich danych przed nieautoryzowanym dostępem, zmianą lub zniszczeniem. Wszystkie dane w tranzycie są szyfrowane przy użyciu HTTPS/TLS i przechowywane bezpiecznie w Unii Europejskiej zgodnie z przepisami o ochronie danych.
+Traktujemy bezpieczeństwo bardzo poważnie i stosujemy wiele środków w celu ochrony informacji użytkowników. Jak stwierdzono w naszej polityce prywatności, używamy standardowych praktyk branżowych w celu ochrony wszystkich danych przed nieautoryzowanym dostępem, zmianą lub zniszczeniem. Wszystkie dane w tranzycie są szyfrowane przy użyciu HTTPS/TLS, a dane w spoczynku są przechowywane bezpiecznie w wybranym przez Ciebie regionie centrum danych — Kanadzie, Unii Europejskiej, Nowej Zelandii, Wielkiej Brytanii lub Stanach Zjednoczonych — zgodnie z obowiązującymi w tym regionie przepisami o ochronie danych.
 
 Jednakże jesteśmy również przejrzyści, że żadna metoda transmisji elektronicznej ani przechowywania nie jest w 100% bezpieczna. Chociaż staramy się używać komercyjnie akceptowalnych środków do ochrony danych osobowych, nie możemy zagwarantować ich absolutnego bezpieczeństwa. Zalecamy użytkownikom podejmowanie środków ostrożności, takich jak używanie fraz dostępowych. Naszym zobowiązaniem jest dbałość o zabezpieczanie danych w najlepszy możliwy sposób, jednocześnie będąc szczerym co do potencjalnych zagrożeń.
 

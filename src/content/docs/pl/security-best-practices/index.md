@@ -47,7 +47,7 @@ Jeśli używasz API Onetime Secret:
 
 ## Zaawansowane bezpieczeństwo self-hosting
 
-Ta sekcja obejmuje zaawansowane zagadnienia bezpieczeństwa dla organizacji prowadzących własną instancję Onetime Secret. Projekt open source można znaleźć na [GitHub](https://github.com/onetimesecret/onetimesecret), a oficjalne obrazy Docker na [Docker Hub](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret).
+Ta sekcja obejmuje zaawansowane zagadnienia bezpieczeństwa dla organizacji prowadzących własną instancję Onetime Secret. Projekt open source można znaleźć na [GitHub](https://github.com/onetimesecret/onetimesecret), a oficjalne obrazy kontenerów na [GitHub Container Registry](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret).
 
 Poniższe rekomendacje mogą być zaimplementowane na poziomie Twojej infrastruktury podczas self-hostingu Onetime Secret:
 

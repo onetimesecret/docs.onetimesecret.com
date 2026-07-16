@@ -13,7 +13,7 @@ De huidige stabiele release is **v0.25** (de `main` branch). Het werkt in twee m
 - **Eenvoudige modus** — de gemakkelijkste manier. Heeft alleen Redis en een paar omgevingsvariabelen nodig. Accounts werken hetzelfde als altijd.
 - **Volledige modus** — voegt accountfuncties toe (MFA, SSO, WebAuthn, organisaties) ondersteund door PostgreSQL en RabbitMQ.
 
-Als u van v0.22 of v0.23 komt, volg dan de handleiding [Upgraden naar v0.24+](./upgrading-v0-24).
+Als u van v0.22 of v0.23 komt, volg dan de handleiding [Upgraden naar v0.24+](./upgrading-v0-24), die de configuratie- en datamodelwijzigingen behandelt en hoe u een auth-modus kiest.
 :::
 
 

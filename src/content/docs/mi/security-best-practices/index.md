@@ -47,7 +47,7 @@ Mēnā kei te whakamahi koe i te API Onetime Secret:
 
 ## Te Haumaru Manaaki-Ā-Kiri Mātāmua
 
-Ko tēnei wāhanga e kawe ana i ngā whakaarohanga haumaru mātāmua mō ngā whakahaere e whakahaere ana i tō rātou ake tauira o Onetime Secret. Ka kitea e koe te kaupapa puna tuwhera i [GitHub](https://github.com/onetimesecret/onetimesecret) me ngā atahanga Docker ōkawa i [Docker Hub](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret).
+Ko tēnei wāhanga e kawe ana i ngā whakaarohanga haumaru mātāmua mō ngā whakahaere e whakahaere ana i tō rātou ake tauira o Onetime Secret. Ka kitea e koe te kaupapa puna tuwhera i [GitHub](https://github.com/onetimesecret/onetimesecret) me ngā atahanga Docker ōkawa i [GitHub Container Registry](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret).
 
 Ka taea te whakatinana i ngā tūtohunga i raro nei i tō taumata hanganga i te wā e manaaki-ā-kiri ana i Onetime Secret:
 

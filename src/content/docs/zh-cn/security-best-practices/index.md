@@ -9,7 +9,7 @@ description: 通过这些针对 Onetime Secret 的最佳实践来提高机密内
 
 ## 共享机密内容的最佳做法
 
-1.** 设置适当的失效时间**：为机密选择最短的实际失效时间。这样可以最大限度地减少未经授权访问的机会。
+1. **设置适当的失效时间**：为机密选择最短的实际失效时间。这样可以最大限度地减少未经授权访问的机会。
 
 2.**使用密码保护**：对于高度敏感的信息，请使用密码保护功能。这就增加了一层额外的安全保护，要求收件人输入口令才能查看机密内容。
 
@@ -21,7 +21,7 @@ description: 通过这些针对 Onetime Secret 的最佳实践来提高机密内
 
 6.**教育用户**：如果在组织内部使用 Onetime Secret，则应向团队成员讲解正确的使用方法以及机密内容共享的具体安全措施。
 
-### 自定义域的安全优势
+## 自定义域的安全优势
 
 在 Onetime Secret 中使用自定义域名具有多种安全优势：
 
@@ -39,15 +39,15 @@ Onetime Secret负责保护定制域名安全的技术方面，包括SSL/TLS配�
 
 如果您使用的是 Onetime Secret API：
 
-1.** 安全的 API 密钥**：安全存储 API 密钥，切勿在客户端代码或公共存储库中公开这些密钥。
+1. **安全的 API 密钥**：安全存储 API 密钥，切勿在客户端代码或公共存储库中公开这些密钥。
 
 2.**轮换 API 密钥**：定期更换 API 密钥，尤其是在怀疑密钥被泄露的情况下。
 
 3.**限制 API 访问权限**：在设置应用程序接口访问权限时，使用最小权限原则。只授予每个特定用例所需的权限。
 
-##高级自托管安全
+## 高级自托管安全
 
-本节介绍了企业在运行自己的 Onetime Secret 实例时需要注意的高级安全事项。您可以在[GitHub](https://github.com/onetimesecret/onetimesecret)上找到开源项目，在[Docker Hub](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret)上找到官方 Docker 映像。
+本节介绍了企业在运行自己的 Onetime Secret 实例时需要注意的高级安全事项。您可以在[GitHub](https://github.com/onetimesecret/onetimesecret)上找到开源项目，在[GitHub Container Registry](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret)上找到官方 Docker 映像。
 
 在自行托管 Onetime Secret 时，可在基础设施层面实施以下建议：
 

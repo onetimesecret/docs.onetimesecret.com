@@ -9,17 +9,17 @@ Tohatohahia ngā kōrero matatapu ki te maia, whakanui i tō waitohu, ā, hanga 
 
 ## Ngā Mahere
 
-### Basic
+### Free
 
 **$0/marama**
 
-Te tohatoha haumaru, kotahi-wā mō te katoa.
+Te tohatoha karere huna haumaru, whakakorehia-anō, mō te katoa.
 
 **Ngā Āhuatanga:**
-- Te tirohanga kotahi-wā o ngā karere huna kua tohatohahia
-- Te whakamutunga aunoa i muri i te tirohanga
-- E hiahiatia ana te pūkete ki te īmēra ki ngā kaiwhiwhi
-- Te urunga API taketake
+- Te tirohanga kotahi-wā me te mukunga aunoa i muri i te urunga
+- Kotahi rohe ritenga
+- Whārangi kāinga me ngā karere huna e tae mai ana
+- Te urunga API
 
 [Tīmata](https://onetimesecret.com/plans/basic)
 
@@ -35,15 +35,18 @@ Te tohatoha haumaru e whakanui ana i tō waitohu me te whakamāmā i te whakawhi
 
 [Tirohia ngā utu o nāianei](https://onetimesecret.com/pricing) | [Kōwhiria tēnei mahere](https://onetimesecret.com/plans/identity)
 
-### Global Elite
+### Team Plus
 
-He hanganga ritenga katoa, kainoho-kotahi me te hanganga tūmataiti, ngā whakahaere ūnga-raraunga, me te tāpae mutunga kore.
+He tohatoha karere huna e whakahaerehia ana mā te SSO, ngā whakahaere urunga, me te kitea whānui o te whakahaere.
 
 **Ngā Āhuatanga:**
-- Te taiao kapua tūmataiti
-- Te whakamahinga me te tāpae mutunga kore
-- Ngā kōwhiringa wāhi raraunga maha (EU, US)
-- Te ūnga ture katoa (tae atu ki te GDPR, CCPA, HIPAA)
+- Ngā mea katoa o Identity Plus
+- Takiuru kotahi (SSO)
+- Te whakahaere tīma me te papatohu tohatoha
+- Te rohe īmēra kaituku ngāwari
+- Te manatoko rēhitatanga mō ia rohe
+
+[Tirohia ngā utu o nāianei](https://onetimesecret.com/pricing)
 
 ## Ngā Pātai Auau
 
@@ -60,7 +63,7 @@ Kāore e hiahiatia he pūkete mō te whakamahinga taketake. Ka taea e koe te tī
 Āe, ka whakarato a Onetime Secret i tētahi kōwhiringa manaaki-ā-kiri ki tā mātou whakawhiwhinga SimpleStack℠, e whakaū ana he whakatinanatanga māmā me te whakahaere. [GitHub](https://github.com/onetimesecret/onetimesecret)
 
 ### He pēhea te haumaru o Onetime Secret?
-Ka tino whakaaro nui mātou ki te haumaru, ā, ka whakamahi i ngā āheinga maha ki te tiaki i ngā kōrero o ngā kaiwhakamahi. E ai ki tā mātou kaupapahere tūmataiti, ka whakamahi mātou i ngā tikanga tauira ahumahi ki te tiaki i ngā raraunga katoa mai i te urunga kāore i whakaaetia, whakarerekētanga, whakakorehanga rānei. Ka muhumuhu ngā raraunga katoa i roto i te kawenga mā te HTTPS/TLS, ā, ka penapena haumaru i te European Union i raro i ngā ture tiaki raraunga.
+Ka tino whakaaro nui mātou ki te haumaru, ā, ka whakamahi i ngā āheinga maha ki te tiaki i ngā kōrero o ngā kaiwhakamahi. E ai ki tā mātou kaupapahere tūmataiti, ka whakamahi mātou i ngā tikanga tauira ahumahi ki te tiaki i ngā raraunga katoa mai i te urunga kāore i whakaaetia, whakarerekētanga, whakakorehanga rānei. Ka muhumuhu ngā raraunga katoa i roto i te kawenga mā te HTTPS/TLS, ā, ka penapena haumarutia ngā raraunga i te wā noho ki te rohe pokapū raraunga kua kōwhiria e koe — ko Kanata, ko te European Union, ko Aotearoa, ko te United Kingdom, ko te United States rānei — e ū ana ki ngā ture tiaki raraunga e whai take ana mō taua rohe.
 
 Heoi, ka pūataata hoki mātou kāore he tikanga whakawhiti hiko, penapena rānei e 100% haumaru. Ahakoa ka ngana mātou ki te whakamahi i ngā tikanga hokohoko pai ki te tiaki i ngā kōrero whaiaro, kāore mātou e taea te whakaū i tōna haumaru tino. Ka tūtohu mātou i ngā kaiwhakamahi kia mahi i ngā ārai penei i te whakamahi i ngā kupu karapa. Ko tā mātou here ko te urupare i te tiaki raraunga ki te pai o ō mātou kaha me te tino tika mō ngā mōrearea pea.
 
