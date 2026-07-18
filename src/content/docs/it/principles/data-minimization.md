@@ -3,8 +3,6 @@ title: Raccolta minima di dati
 description: Il nostro impegno a raccogliere solo i dati essenziali necessari per fornire il nostro servizio.
 ---
 
-# Raccogliamo solo ciò che è necessario
-
 **Descrizione:** In Onetime Secret, raccogliamo solo i dati necessari per fornire il nostro servizio: segreti temporanei e le informazioni minime sull'account necessarie per gli abbonamenti a pagamento. In questo modo manteniamo le cose semplici e sicure.
 
 **Perché questo è importante:**

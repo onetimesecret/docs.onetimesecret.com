@@ -3,8 +3,6 @@ title: Minimal datainsamling
 description: Vårt åtagande att samla in endast den väsentliga data som krävs för att tillhandahålla vår tjänst
 ---
 
-# Vi samlar bara in vad som behövs
-
 **Beskrivning:** På Onetime Secret samlar vi endast in den data som krävs för att leverera vår tjänst: tillfälliga hemligheter och den minsta kontoinformation som behövs för betalda prenumerationer. Detta håller saker enkla och säkra.
 
 **Varför detta är viktigt:**

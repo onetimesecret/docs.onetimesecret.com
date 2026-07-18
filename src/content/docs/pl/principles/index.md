@@ -3,8 +3,6 @@ title: Nasze zasady
 description: Podstawowe wartości i zasady przewodnie, które kierują naszym podejściem do prywatności i bezpieczeństwa
 ---
 
-# Zasady
-
 Witamy w zasadach przewodnich Onetime Secret. Te fundamentalne dokumenty wyjaśniają nasze podejście do:
 
 - Prywatności i minimalizacji danych

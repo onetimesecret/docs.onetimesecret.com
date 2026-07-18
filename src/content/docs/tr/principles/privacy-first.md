@@ -3,8 +3,6 @@ title: Gizlilik
 description: Bilinçli tasarım seçimleriyle kullanıcı gizliliğini koruma yaklaşımımız
 ---
 
-# Gizlilik Öncelikli Uygulamalar
-
 Onetime Secret'ta kullanıcı gizliliğine kasıtlı olarak minimal bir yaklaşım benimsiyoruz. İşte kasıtlı olarak yapmamayı seçtiğimiz şeyler ve daha da önemlisi, neden.
 
 ## E-posta Yok Felsefemiz

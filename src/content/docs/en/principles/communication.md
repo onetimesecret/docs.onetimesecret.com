@@ -3,19 +3,13 @@ title: Communication
 description: Why we limit email communication to only what's necessary
 ---
 
-# Our Communication Philosophy
-
-We take a deliberately minimal approach to user communication, respecting your time and inbox.
+We take a deliberately minimal approach to user communication, out of respect for your time and your inbox.
 
 ## Our Minimal-Email Philosophy
 
-Most services flood your inbox with:
-- Marketing newsletters
-- Usage statistics
-- Promotional offers
-- Re-engagement campaigns
+Most services flood your inbox with marketing newsletters, usage statistics, promotional offers, and re-engagement campaigns. We don't do any of that. You'll only hear from us for the service you're using, notices we're obligated to send, or updates you opted into.
 
-We don't do any of that. You'll only hear from us for the service you're using, notices we're obligated to send, or updates you opted into. Every email we send falls into one of three categories:
+Every email we send falls into one of three categories:
 
 - **Transactional** — secret links, account notices, and billing notices. These are part of the service itself.
 - **Service and security notices** — security advisories, breach notifications, policy changes, and deprecations. We send these when needed, including when we're legally required to. They're never marketing.
@@ -31,13 +25,6 @@ A privacy tool shouldn't behave like a marketing platform. By keeping our commun
 - We stay focused on running a reliable service rather than optimizing engagement metrics
 - We respect the trust you place in us when you share your email address
 
-## Where We Put Our Energy
+The time other companies spend drafting campaigns, we spend on the service itself: core reliability, stronger privacy safeguards, and keeping up with jurisdictional and regulatory requirements.
 
-Instead of drafting campaigns, we spend our time on the things that actually matter to you:
-
-- **Core reliability** — making sure the service works when you need it
-- **Privacy safeguards** — strengthening encryption and data handling
-- **Compliance** — keeping up with jurisdictional and regulatory requirements
-- **Transparency** — being open about how we operate and why
-
-Have thoughts about our communication approach? [Contact us](https://onetimesecret.com/feedback).
+**Questions about our approach?** [Contact us](https://onetimesecret.com/feedback).

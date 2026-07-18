@@ -3,8 +3,6 @@ title: Comunicazione
 description: Perché limitiamo la comunicazione via email solo allo stretto necessario
 ---
 
-# La nostra filosofia di comunicazione
-
 Adottiamo un approccio volutamente minimale alla comunicazione con gli utenti, rispettando il vostro tempo e la vostra casella di posta.
 
 ## La nostra filosofia No-Email

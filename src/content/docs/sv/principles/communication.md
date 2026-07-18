@@ -3,8 +3,6 @@ title: Kommunikation
 description: Varför vi begränsar e-postkommunikation till endast vad som är nödvändigt
 ---
 
-# Vår kommunikationsfilosofi
-
 Vi tar ett medvetet minimalt tillvägagångssätt till användarkommunikation, och respekterar din tid och inkorg.
 
 ## Vår ingen-e-post-filosofi

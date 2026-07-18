@@ -3,8 +3,6 @@ title: Vores principper
 description: Kerneværdierne og vejledende principper, der driver vores tilgang til privatliv og sikkerhed
 ---
 
-# Principper
-
 Velkommen til Onetime Secrets vejledende principper. Disse grundlæggende dokumenter forklarer vores tilgang til:
 
 - Privatliv og dataminimering

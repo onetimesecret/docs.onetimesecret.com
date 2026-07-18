@@ -3,8 +3,6 @@ title: Tūmataiti
 description: Tō mātou huarahi ki te tiaki i te tūmataiti kaiwhakamahi mā ngā kōwhiringa hoahoa whakaaro nui
 ---
 
-# Ngā Tikanga Matatapu Tuatahi
-
 I Onetime Secret, ka tango mātou i tētahi huarahi iti whakaaro nui ki te tūmataiti kaiwhakamahi. Anei ngā mea e kōwhiri whakaaro nui mātou kia kaua e mahi, ā, te mea nui ake, he aha.
 
 ## Tō Mātou Kaupapa Kore-Īmēra

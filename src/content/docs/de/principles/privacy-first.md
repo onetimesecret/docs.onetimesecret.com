@@ -3,8 +3,6 @@ title: Datenschutz
 description: Unser Ansatz zum Schutz deiner Privatsphäre durch bewusste Designentscheidungen
 ---
 
-# Datenschutz an erster Stelle
-
 Bei Onetime Secret verfolgen wir einen bewusst minimalen Ansatz zum Schutz der Privatsphäre. Hier erfährst du, was wir bewusst nicht tun und vor allem, warum.
 
 ## Unsere No-E-Mail-Philosophie

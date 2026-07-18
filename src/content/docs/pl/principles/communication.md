@@ -3,8 +3,6 @@ title: Komunikacja
 description: Dlaczego ograniczamy komunikację e-mailową tylko do tego, co konieczne
 ---
 
-# Nasza filozofia komunikacji
-
 Przyjmujemy celowo minimalne podejście do komunikacji z użytkownikami, szanując Twój czas i skrzynkę odbiorczą.
 
 ## Nasza filozofia bez e-maili

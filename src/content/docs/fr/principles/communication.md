@@ -3,8 +3,6 @@ title: Communication
 description: Pourquoi nous limitons la communication par courrier électronique au strict nécessaire
 ---
 
-# Notre philosophie de la communication
-
 Nous adoptons une approche délibérément minimale de la communication avec les utilisateurs, en respectant votre temps et votre boîte de réception.
 
 ## Notre philosophie de l'absence de courrier électronique

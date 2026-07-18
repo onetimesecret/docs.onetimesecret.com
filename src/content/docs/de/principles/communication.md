@@ -3,8 +3,6 @@ title: Kommunikation
 description: Warum wir die E-Mail-Kommunikation auf das Nötigste beschränken
 ---
 
-# Unsere Kommunikationsphilosophie
-
 Wir verfolgen einen bewusst minimalen Ansatz bei der Benutzerkommunikation und respektieren deine Zeit und deinen Posteingang.
 
 ## Unsere No-E-Mail-Philosophie

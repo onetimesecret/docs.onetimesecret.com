@@ -3,8 +3,6 @@ title: Våra principer
 description: Kärnvärden och vägledande principer som driver vårt tillvägagångssätt till integritet och säkerhet
 ---
 
-# Principer
-
 Välkommen till Onetime Secrets vägledande principer. Dessa grundläggande dokument förklarar vårt tillvägagångssätt till:
 
 - Integritet och dataminimering

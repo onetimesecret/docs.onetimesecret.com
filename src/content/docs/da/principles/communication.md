@@ -3,8 +3,6 @@ title: Kommunikation
 description: Hvorfor vi begrænser e-mailkommunikation til kun det nødvendige
 ---
 
-# Vores kommunikationsfilosofi
-
 Vi tager en bevidst minimal tilgang til brugerkommunikation og respekterer din tid og indbakke.
 
 ## Vores ingen-e-mail-filosofi

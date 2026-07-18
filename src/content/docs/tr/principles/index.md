@@ -3,8 +3,6 @@ title: İlkelerimiz
 description: Gizlilik ve güvenliğe yaklaşımımızı yönlendiren temel değerler ve ilkeler
 ---
 
-# İlkeler
-
 Onetime Secret'ın yol gösterici ilkelerine hoş geldiniz. Bu temel belgeler şu konulardaki yaklaşımımızı açıklar:
 
 - Gizlilik ve veri minimizasyonu

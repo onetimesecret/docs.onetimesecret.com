@@ -3,8 +3,6 @@ title: Collecte minimale de données
 description: Notre engagement à ne collecter que les données essentielles à la fourniture de nos services
 ---
 
-# Nous ne collectons que ce qui est nécessaire
-
 **Description:** Chez Onetime Secret, nous ne collectons que les données nécessaires à la fourniture de notre service : des secrets temporaires et les informations de compte minimales requises pour les abonnements payants. Cela permet de garder les choses simples et sécurisées.
 
 **Pourquoi c'est important:**

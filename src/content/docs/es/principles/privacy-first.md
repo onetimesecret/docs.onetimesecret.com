@@ -3,8 +3,6 @@ title: Privacidad
 description: Nuestro enfoque para proteger la privacidad del usuario a través de opciones de diseño deliberadas
 ---
 
-# Prácticas de privacidad prioritaria
-
 En Onetime Secret, adoptamos un enfoque deliberadamente mínimo respecto a la privacidad del usuario. Esto es lo que deliberadamente decidimos no hacer y, lo que es más importante, por qué.
 
 ## Nuestra filosofía de no enviar correos electrónicos

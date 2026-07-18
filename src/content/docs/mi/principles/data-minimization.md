@@ -3,8 +3,6 @@ title: Kohikohi Raraunga Iti
 description: Tō mātou here ki te kohikohi i ngā raraunga tino nui anake e hiahiatia ana ki te whakarato i tā mātou ratonga
 ---
 
-# Ka Kohikohi Mātou i te Mea e Hiahiatia Ana Anake
-
 **Whakamāramatanga:** I Onetime Secret, ka kohikohi mātou i ngā raraunga e hiahiatia ana anake ki te tuku i tā mātou ratonga: ngā karere huna poto me ngā kōrero pūkete iti rawa e hiahiatia ana mō ngā ohaurunga utu. Ka noho māmā tēnei, haumaru hoki.
 
 **He Aha Te Tikanga o Tēnei:**

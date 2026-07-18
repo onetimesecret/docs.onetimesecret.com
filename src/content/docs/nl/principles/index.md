@@ -3,8 +3,6 @@ title: Onze principes
 description: De kernwaarden en leidende principes die onze benadering van privacy en beveiliging bepalen
 ---
 
-# Principes
-
 Welkom bij de richtlijnen van Onetime Secret. Deze basisdocumenten verklaren onze benadering van:
 
 - Privacy en gegevensminimalisatie

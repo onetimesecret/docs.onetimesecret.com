@@ -3,8 +3,6 @@ title: Comunicação
 description: Por que limitamos a comunicação por e-mail apenas ao que é necessário
 ---
 
-# Nossa Filosofia de Comunicação
-
 Adotamos uma abordagem deliberadamente minimalista para a comunicação com usuários, respeitando seu tempo e caixa de entrada.
 
 ## Nossa Filosofia de Não-Email

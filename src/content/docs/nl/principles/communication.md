@@ -3,8 +3,6 @@ title: Communicatie
 description: Waarom we e-mailcommunicatie beperken tot alleen het noodzakelijke
 ---
 
-# Onze communicatiefilosofie
-
 We benaderen communicatie met gebruikers bewust minimaal, met respect voor je tijd en inbox.
 
 ## Onze geen-mail-filosofie

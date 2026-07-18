@@ -3,8 +3,6 @@ title: Minimal Veri Toplama
 description: Hizmetimizi sağlamak için gerekli olan yalnızca temel verileri toplama taahhüdümüz
 ---
 
-# Yalnızca Gerekeni Topluyoruz
-
 **Açıklama:** Onetime Secret'ta yalnızca hizmetimizi sunmak için gereken verileri topluyoruz: geçici gizli mesajlar ve ücretli abonelikler için gereken minimum hesap bilgileri. Bu işleri basit ve güvenli tutar.
 
 **Bu Neden Önemlidir:**

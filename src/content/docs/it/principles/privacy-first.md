@@ -3,8 +3,6 @@ title: Privacy
 description: Il nostro approccio alla protezione della privacy degli utenti attraverso scelte di design deliberate
 ---
 
-# Pratiche di privacy
-
 In Onetime Secret adottiamo un approccio volutamente minimale alla privacy degli utenti. Ecco cosa scegliamo deliberatamente di non fare e, soprattutto, perché.
 
 ## La nostra filosofia No-Email

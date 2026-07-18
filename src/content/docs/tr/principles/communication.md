@@ -3,8 +3,6 @@ title: İletişim
 description: E-posta iletişimini neden yalnızca gerekli olanla sınırlıyoruz
 ---
 
-# İletişim Felsefemiz
-
 Zamanınıza ve gelen kutunuza saygı göstererek, kullanıcı iletişimine kasıtlı olarak minimal bir yaklaşım benimsiyoruz.
 
 ## E-posta Yok Felsefemiz

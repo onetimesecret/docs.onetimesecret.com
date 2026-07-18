@@ -4,8 +4,6 @@ description: Los valores fundamentales y los principios rectores que rigen nuest
 diseño: página
 ---
 
-# Principios
-
 Bienvenido a los principios rectores de Onetime Secret. Estos documentos fundacionales explican nuestro enfoque de:
 
 - Privacidad y minimización de datos

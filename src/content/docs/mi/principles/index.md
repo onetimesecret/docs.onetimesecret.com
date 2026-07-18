@@ -3,8 +3,6 @@ title: Ō Mātou Mātāpono
 description: Ngā uara matua me ngā mātāpono arataki e ārahi ana i tō mātou huarahi ki te tūmataiti me te haumaru
 ---
 
-# Ngā Mātāpono
-
 Nau mai ki ngā mātāpono arataki a Onetime Secret. Ko ēnei tuhinga tūāpapa e whakamārama ana i tō mātou huarahi ki:
 
 - Te tūmataiti me te whakaitihia raraunga

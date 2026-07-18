@@ -3,8 +3,6 @@ title: Comunicación
 description: Por qué limitamos la comunicación por correo electrónico a lo estrictamente necesario
 ---
 
-# Nuestra filosofía de comunicación
-
 Adoptamos un enfoque deliberadamente minimalista de la comunicación con el usuario, respetando su tiempo y su bandeja de entrada.
 
 ## Nuestra filosofía de no enviar correos electrónicos

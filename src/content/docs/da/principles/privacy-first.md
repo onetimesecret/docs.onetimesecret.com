@@ -3,8 +3,6 @@ title: Privatliv
 description: Vores tilgang til beskyttelse af brugerprivatliv gennem bevidste designvalg
 ---
 
-# Privatlivs-først praksis
-
 Hos Onetime Secret tager vi en bevidst minimal tilgang til brugerprivatliv. Her er, hvad vi bevidst vælger ikke at gøre, og mere vigtigt, hvorfor.
 
 ## Vores ingen-e-mail-filosofi

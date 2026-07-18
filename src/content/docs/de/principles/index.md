@@ -3,8 +3,6 @@ title: Unsere Grundsätze
 description: Die Grundwerte und Leitprinzipien, die unseren Ansatz für Datenschutz und Sicherheit bestimmen
 ---
 
-# Grundsätze
-
 Willkommen bei den Leitprinzipien von Onetime Secret. Diese grundlegenden Dokumente erklären unseren Ansatz zu:
 
 - Datenschutz und Datensparsamkeit

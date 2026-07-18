@@ -3,8 +3,6 @@ title: Minimalna zbieranie danych
 description: Nasze zobowiązanie do zbierania tylko niezbędnych danych wymaganych do świadczenia naszej usługi
 ---
 
-# Zbieramy tylko to, co potrzebne
-
 **Opis:** W Onetime Secret zbieramy tylko dane wymagane do dostarczenia naszej usługi: tymczasowe sekrety i minimalne informacje o koncie potrzebne do płatnych subskrypcji. To sprawia, że wszystko jest proste i bezpieczne.
 
 **Dlaczego to ma znaczenie:**

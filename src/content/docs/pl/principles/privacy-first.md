@@ -3,8 +3,6 @@ title: Prywatność
 description: Nasze podejście do ochrony prywatności użytkowników poprzez przemyślane wybory projektowe
 ---
 
-# Praktyki priorytetowe dla prywatności
-
 W Onetime Secret przyjmujemy celowo minimalne podejście do prywatności użytkowników. Oto, czego celowo nie robimy i, co ważniejsze, dlaczego.
 
 ## Nasza filozofia bez e-maili

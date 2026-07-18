@@ -3,8 +3,6 @@ title: Privacy
 description: Onze aanpak om de privacy van gebruikers te beschermen door bewuste ontwerpkeuzes
 ---
 
-# Privacy Eerste Praktijken
-
 Bij Onetime Secret benaderen we privacy bewust minimaal. Dit is wat we bewust niet doen, en nog belangrijker, waarom.
 
 ## Onze geen-mail-filosofie

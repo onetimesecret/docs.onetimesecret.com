@@ -3,8 +3,6 @@ title: Coleta Mínima de Dados
 description: Nosso compromisso de coletar apenas os dados essenciais necessários para fornecer nosso serviço
 ---
 
-# Coletamos Apenas o Que É Necessário
-
 **Descrição:** No Onetime Secret, coletamos apenas os dados necessários para fornecer nosso serviço: mensagens confidenciais temporárias e as informações mínimas de conta necessárias para assinaturas pagas. Isso mantém as coisas simples e seguras.
 
 **Por Que Isso Importa:**

@@ -3,8 +3,6 @@ title: Whakawhitiwhiti
 description: He aha mātou e whāititi ana i te whakawhitiwhiti īmēra ki te mea e hiahiatia ana anake
 ---
 
-# Tō Mātou Kaupapa Whakawhitiwhiti
-
 Ka tango mātou i tētahi huarahi iti whakaaro nui ki te whakawhitiwhiti kaiwhakamahi, e whakaute ana i tō wā me tō pouakaīmēra.
 
 ## Tō Mātou Kaupapa Kore-Īmēra

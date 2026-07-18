@@ -4,8 +4,6 @@ description: Les valeurs fondamentales et les principes directeurs qui guident n
 mise en page : page
 ---
 
-# Principes
-
 Bienvenue dans les principes directeurs de Onetime Secret. Ces documents fondamentaux expliquent notre approche :
 
 - Protection de la vie privée et minimisation des données

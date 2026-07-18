@@ -3,8 +3,6 @@ title: Recogida mínima de datos
 description: Nuestro compromiso de recopilar sólo los datos esenciales necesarios para prestar nuestro servicio
 ---
 
-# Sólo recaudamos lo necesario
-
 **Descripción:** En Onetime Secret, sólo recopilamos los datos necesarios para prestar nuestro servicio: secretos temporales y la información de cuenta mínima necesaria para las suscripciones de pago. Esto mantiene las cosas simples y seguras.
 
 **Por qué es importante:**

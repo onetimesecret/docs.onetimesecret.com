@@ -3,8 +3,6 @@ title: Integritet
 description: Vårt tillvägagångssätt till att skydda användarintegritet genom avsiktliga designval
 ---
 
-# Integritet först-metoder
-
 På Onetime Secret tar vi ett medvetet minimalt tillvägagångssätt till användarintegritet. Här är vad vi medvetet väljer att inte göra, och ännu viktigare, varför.
 
 ## Vår ingen-e-post-filosofi

@@ -3,8 +3,6 @@ title: Vie privée
 description: Notre approche de la protection de la vie privée des utilisateurs par des choix de conception délibérés
 ---
 
-# La vie privée avant tout
-
 Chez Onetime Secret, nous adoptons une approche délibérément minimale de la vie privée des utilisateurs. Voici ce que nous choisissons délibérément de ne pas faire et, surtout, pourquoi.
 
 ## Notre philosophie de l'absence de courrier électronique

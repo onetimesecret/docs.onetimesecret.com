@@ -3,8 +3,6 @@ title: Minimale gegevensverzameling
 description: Onze belofte om alleen de essentiële gegevens te verzamelen die nodig zijn om onze service te leveren
 ---
 
-# We verzamelen alleen wat nodig is
-
 **Beschrijving:** Bij Onetime Secret verzamelen we alleen de gegevens die nodig zijn om onze service te leveren: tijdelijke geheimen en de minimale accountgegevens die nodig zijn voor betaalde abonnementen. Dit houdt het simpel en veilig.
 
 **Waarom dit belangrijk is:**

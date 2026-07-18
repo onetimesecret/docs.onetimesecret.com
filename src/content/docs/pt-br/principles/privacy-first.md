@@ -3,8 +3,6 @@ title: Privacidade
 description: Nossa abordagem para proteger a privacidade do usuário através de escolhas de design deliberadas
 ---
 
-# Práticas de Privacidade em Primeiro Lugar
-
 No Onetime Secret, adotamos uma abordagem deliberadamente minimalista para a privacidade do usuário. Aqui está o que deliberadamente escolhemos não fazer e, mais importante, por quê.
 
 ## Nossa Filosofia de Não-Email

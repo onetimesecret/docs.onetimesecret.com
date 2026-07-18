@@ -3,8 +3,6 @@ title: Minimal dataindsamling
 description: Vores forpligtelse til kun at indsamle de essentielle data, der kræves for at levere vores service
 ---
 
-# Vi indsamler kun det nødvendige
-
 **Beskrivelse:** Hos Onetime Secret indsamler vi kun de data, der kræves for at levere vores service: midlertidige beskeder og den minimale kontoinformation, der er nødvendig for betalte abonnementer. Dette holder tingene enkle og sikre.
 
 **Hvorfor dette betyder noget:**

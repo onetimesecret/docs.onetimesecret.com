@@ -3,8 +3,6 @@ title: Nossos Princípios
 description: Os valores fundamentais e princípios orientadores que impulsionam nossa abordagem de privacidade e segurança
 ---
 
-# Princípios
-
 Bem-vindo aos princípios orientadores do Onetime Secret. Estes documentos fundamentais explicam nossa abordagem para:
 
 - Privacidade e minimização de dados

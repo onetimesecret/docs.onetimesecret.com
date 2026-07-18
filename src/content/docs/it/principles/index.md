@@ -3,8 +3,6 @@ title: I nostri principi
 description: I valori fondamentali e i principi guida che guidano il nostro approccio alla privacy e alla sicurezza.
 ---
 
-# Principi
-
 Benvenuti nei principi guida di Onetime Secret. Questi documenti fondamentali spiegano il nostro approccio a:
 
 - Privacy e minimizzazione dei dati

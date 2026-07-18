@@ -33,7 +33,7 @@ find the details.
 
 ## Related
 
-- **[Our Principles](/en/principles)** — Privacy First, Trust, Communication, and Data Minimization.
+- **[Our Principles](/en/principles)** — Privacy First, Communication, and Data Minimization.
 - **[Data Center Regions](/en/regions)** — choose where your data is processed and stored.
 - **[Self-Hosting](https://github.com/onetimesecret/onetimesecret)** — run Onetime Secret on your own infrastructure for full control.
 
