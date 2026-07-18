@@ -1,3 +1,31 @@
+================================================================================
+HISTORICAL CONVERSATIONAL CHANGE-LOG — NOT NORMATIVE
+================================================================================
+
+This file is a past conversation transcript about edits made to the `de`
+(Germany) locale at a specific point in time. Its statements are descriptive
+("X was changed from Y to Z"), not prescriptive. Phrasing such as "we changed"
+or "was made consistent" describes one historical edit pass and must not be
+read as a rule for current or future work.
+
+In particular:
+
+  - Examples here are NOT regionally tagged. Several apply only to `de` (du-
+    form) and would be incorrect if copied into `de_AT` (which uses Sie).
+  - The "secret -> Geheimnis" assertion in section 1 below is incomplete and
+    contradicts the current object/content split rule.
+  - This file must NOT be used as a source when generating, reviewing, or
+    auditing translations.
+
+Canonical rules live in:
+  - language-notes.md  (terminology, regional formality)
+  - glossary.md        (term tables)
+
+This file is preserved only so that git history and downstream-of-the-loop
+investigations remain traceable. Do not extend it. Do not cite it.
+
+================================================================================
+
 
 ## Convo
 
