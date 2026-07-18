@@ -1,6 +1,6 @@
 ---
 title: Sözlük
-description: Onetime Secret'ın temel terimlerinin, arayüz öğelerinin ve teknik terminolojisinin tutarlılığını korumak için çoklu dilde çeviri referans kılavuzu
+description: Onetime Secret'in temel terimlerinin, arayüz öğelerinin ve teknik terminolojisinin tutarlılığını korumak için çoklu dilde çeviri referans kılavuzu
 ---
 
 # Onetime Secret Çeviri Sözlüğü

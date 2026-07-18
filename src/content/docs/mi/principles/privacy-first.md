@@ -1,64 +1,51 @@
 ---
-title: Tūmataiti
-description: Tō mātou huarahi ki te tiaki i te tūmataiti kaiwhakamahi mā ngā kōwhiringa hoahoa whakaaro nui
+title: Tūmataitinga i te Tuatahi
+description: Ngā tikanga aroturuki me te hokohoko e karohia whakaaro nui ana e mātou, te take e karohia ai, me te āhua o tā mātou pupuri i aua here kia taea te manatoko
 ---
 
-# Ngā Tikanga Matatapu Tuatahi
+Ehara te tūmataiti i tētahi āhuatanga e āpitihia ana e mātou ki a Onetime Secret — koinei kē te āhua i hangaia ai te ratonga. E kitea ana tērā, kaua i ngā mea e tāpiritia ana e mātou, engari i ngā mea e waihotia ana e mātou ki waho. Ka kōrero tēnei whārangi mō ngā tikanga e karohia whakaaro nui ana e mātou, te take e karohia ai, me te āhua e taea ai e koe te whakaū he pono tā mātou kī.
 
-I Onetime Secret, ka tango mātou i tētahi huarahi iti whakaaro nui ki te tūmataiti kaiwhakamahi. Anei ngā mea e kōwhiri whakaaro nui mātou kia kaua e mahi, ā, te mea nui ake, he aha.
+## Ngā Paerewa Ahumahi e Kapohia ana e Mātou
 
-## Tō Mātou Kaupapa Kore-Īmēra
-
-Ko te nuinga o ngā ratonga ka waipuke i tō pouakaīmēra ki:
-
-- Ngā pānui hokohoko
-- Ngā whakahōutanga papatono
-- Ngā tauanga whakamahinga
-- Ngā pānuitanga āhuatanga
-- Ngā tuku hokohoko
-- Ngā kaupapa whakahoki-whakauru
-
-Ko ngā īmēra anake ka whiwhi koe mai i a mātou ko ērā e tono motuhake ana koe — ngā tukuanga hononga karere huna, ngā whakamōhiotanga pūkete, me ngā whakahōutanga kua whiriwhiri mārika koe. Ahakoa ka whiriwhiri koe ki te whiwhi, ka iti rawa ō rongo mai i a mātou, ā, mō ngā take anake i kōwhiri ai koe. Nōu tō pouakaīmēra.
-
-## Ngā Paerewa Ahumahi e Kapohia e Mātou
-
-Ka karo whakaaro nui mātou i ngā taputapu aroturuki me te hokohoko noa:
+Kāore mātou e whakamahi i ngā taputapu aroturuki me te hokohoko e kīia ana e te nuinga o ngā ratonga he mea māori noa:
 
 - Ngā pūkete tātari e aroturuki ana i te whanonga kaiwhakamahi
 - Ngā pātene whakaurunga pāpāho pāpori
 - Ngā whatunga pānuitanga
 - Ngā anga whakamātau A/B
 - Ngā taputapu whakahaere aunoa hokohoko
-- Ngā momo aroturuki tuatoru
+- Ngā pika aroturuki a te hunga tuatoru
+
+## Īmēra Iti
+
+Ka pērā anō te here mō tō pouakaīmēra. Kāore mātou e tuku pānui hokohoko, tuku hokohoko, kaupapa whakahoki-whakauru rānei — ka rongo noa koe i a mātou mō te ratonga e whakamahia ana e koe, mō tētahi pānui e tika ana kia tukuna ki a koe, mō ngā rongo rānei i whiriwhiria e koe. Kāore he pika aroturuki, he hononga aroturuki-pāwhiri rānei i roto i tētahi īmēra e tukuna ana e mātou, nō reira kāore mātou e mōhio mēnā i huakina e koe, he aha rānei i pāwhiritia e koe. Mā tā mātou [Kaupapa Whakawhitiwhiti Kōrero](/mi/principles/communication) e wewete i ngā mea e tukuna ana e mātou me te take.
 
 ## He Aha Te Tikanga o Tēnei
 
 E hāngai ana ēnei kōwhiringa ki ngā mea e toru e tino aro nui ana mātou:
 
-1. **Nōu ō raraunga.** Kāore mātou e mahi i ngā mōhiohio kaiwhakamahi hei rauemi hei keri. Ehara te tūmataiti i tētahi āhuatanga ka tāpiritia — ko te āhua tēnei o te hanganga o te ratonga.
-2. **Me mahi noa te taputapu.** Ina hiahia koe ki te toha i tētahi mea matatapu, ko te pono te mea nui ake i ngā mea katoa.
-3. **Ka riro te whakawhirinaki mā ngā mea kāore mātou e mahi.** Ko ia aroturuki ka kapohia, ia kaupapa hokohoko kāore i tukuna, he tohu iti o te wāhi e takoto ana ō mātou whakaarotau.
+- **Nōu ō raraunga.** Kāore mātou e whakaaro ki ngā mōhiohio kaiwhakamahi hei rauemi hei keri.
+- **Me mahi noa te taputapu.** Ina hiahia koe ki te tohatoha i tētahi mea matatapu, ko te pono te mea nui rawa atu.
+- **Ka riro mai te whakawhirinaki mā ngā mea e kore e mahia e mātou.** Ko ia aroturuki e kapohia ana, ko ia kaupapa hokohoko e kore e tukuna, he tohu iti o te wāhi e takoto ana ō mātou whakaarotau.
+
+## Te Whakawhirinaki mā te Pūataata
+
+Ka taea e tētahi ratonga noa te kī e whakaute ana ia i te tūmataiti. He pai ake ki a mātou kia taea ā mātou kī te whakamātau:
+
+- **He pūtake tuwhera.** Ko te ratonga matua he [pūtake tuwhera](https://github.com/onetimesecret/onetimesecret) — ka taea e koe te pānui i te waehere e whakahaere ana i ō karere huna, te whakahaere rānei i a ia māu anō.
+- **He kaupapahere reo māmā.** Ko tā mātou [Kaupapahere Tūmataiti](https://onetimesecret.com/info/privacy) e whakaatu ana i ngā mea e kohia ana e mātou me te take, i roto i ngā kupu kāore e hiahiatia he rōia hei wewete.
+- **He tikanga haumaru kua tuhia.** Mā [Haumarutanga me te Whakapono](/mi/security) e whakamārama tō mātou tauira haumaru, te āhua o tā mātou tiaki raraunga, me te huarahi hei pūrongo i tētahi whakaraeraetanga.
+- **He kōrerorero tōtika.** E pōwhiritia ana ngā pātai, ngā urupare, me ngā whakahē — [whakapā mai](https://onetimesecret.com/feedback), ā, mā tētahi tangata tonu e pānui.
 
 ## Te Pānga Tūturu
 
-Ko te kapo i ngā tikanga hokohoko me te aroturuki paerewa ehara i te whakaaro anake — he painga tūturu ōna:
+Ko te kape i ēnei tikanga ehara i te whakaaro noa — ka huri i te papatono:
 
-- He ratonga māmā, tere, he iti ngā wāhanga korikori
-- He iti ake te horahanga whakaeke me te iti o ngā herenga tuatoru
-- Ka noho ō raraunga i raro i tōu whakahaere, kāore i te marara puta noa i ngā whatunga pānuitanga
-- Ka noho tō mātou arotahi hangarau ki te papatono, kāore i ngā pūtahanga hurihanga
-
-Ka whakapau mātou i tō mātou wā ki ngā mahi e hira ana ki a koe:
-
-- **Ngā mahi matua** — te whakapai i ngā āhuatanga e whakamahi tūturu ana koe
-- **Ngā tiaki tūmataiti** — te whakapakari i te whakamuna me te whakahaere raraunga
-- **Te pono ratonga** — kia mahi pai mātou i te wā e hiahia ana koe i a mātou
-- **Te ūnga ture** — te whakatutuki i ngā herenga rohenga me ngā ture
+- He ratonga māmā ake, tere ake, he iti ake ngā wāhanga korikori
+- He iti ake te horahanga whakaeke, he iti ake ngā herenga ki te hunga tuatoru
+- Ka noho ō raraunga i raro i tōu whakahaere, kaua e marara puta noa i ngā whatunga pānuitanga
+- Ka haere tō mātou wā hangarau ki te papatono, kaua ki ngā pūtahanga hurihanga
 
 ## Te Titiro Whakamua
 
-Ka haere tonu mātou i te kōwhiri i te māmā me te tūmataiti i mua i te toro hokohoko. Ko te tikanga pea ka tupu māmā ake mātou i ngā ratonga e whakapai ana mō te whakauru — ā, ka pai tēnā ki a mātou. Ka riro te ingoa pai o tētahi taputapu tūmataiti mā te pono, mārie tonu.
-
-Ina rongo koe mai i a mātou, nā te mea i tono koe.
-
-**He pātai mō tō mātou huarahi?** [Whakapā mai](https://onetimesecret.com/feedback).
+Ka kōwhiri tonu mātou i te māmā me te tūmataiti i mua i te toronga hokohoko. Ko te tikanga pea ka pōturi ake tā mātou tupu i ngā ratonga e whakapai ana mō te whakauru — ā, e pai ana tērā ki a mātou. Ka riro mai te ingoa pai o tētahi taputapu tūmataiti mā te pono pūmau, mārie hoki.

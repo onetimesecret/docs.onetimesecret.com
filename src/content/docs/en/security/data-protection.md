@@ -3,8 +3,6 @@ title: Data Protection
 description: What Onetime Secret stores, how long it's kept, where it's processed, and how this supports your compliance obligations.
 ---
 
-# Data Protection
-
 This page describes how Onetime Secret handles your data: what is stored, for
 how long, where it lives, and how that supports your own compliance program.
 

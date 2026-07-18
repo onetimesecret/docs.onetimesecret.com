@@ -1,9 +1,7 @@
 ---
 title: Güvenlik En İyi Uygulamaları
-description: Özel Alan Adlarının güvenlik faydaları da dahil olmak üzere Onetime Secret'a özgü bu en iyi uygulamalarla gizli mesaj paylaşım güvenliğinizi artırın.
+description: Özel Alan Adlarının güvenlik faydaları da dahil olmak üzere Onetime Secret'e özgü bu en iyi uygulamalarla gizli mesaj paylaşım güvenliğinizi artırın.
 ---
-
-# Onetime Secret için Güvenlik En İyi Uygulamaları
 
 Onetime Secret güvenlik göz önünde bulundurularak tasarlanmış olsa da, bu en iyi uygulamaları takip etmek hassas bilgilerinizin korumasını daha da artırabilir, özellikle Özel Alan Adları gibi özellikleri kullanırken.
 
@@ -19,7 +17,7 @@ Onetime Secret güvenlik göz önünde bulundurularak tasarlanmış olsa da, bu 
 
 5. **Alıcıyı Doğrulayın**: Gizli mesajları amaçlanan alıcıyla paylaştığınızdan emin olun. Göndermeden önce e-posta adreslerini veya kullanıcı adlarını iki kez kontrol edin.
 
-6. **Kullanıcıları Eğitin**: Onetime Secret'ı bir kuruluş içinde kullanıyorsanız, ekibinizi gizli mesaj paylaşımına özgü uygun kullanım ve güvenlik uygulamaları hakkında eğitin.
+6. **Kullanıcıları Eğitin**: Onetime Secret'i bir kuruluş içinde kullanıyorsanız, ekibinizi gizli mesaj paylaşımına özgü uygun kullanım ve güvenlik uygulamaları hakkında eğitin.
 
 ## Özel Alan Adlarının Güvenlik Faydaları
 
@@ -47,9 +45,9 @@ Onetime Secret API'sını kullanıyorsanız:
 
 ## Gelişmiş Kendi Sunucusunda Barındırma Güvenliği
 
-Bu bölüm, Onetime Secret'ın kendi örneğini çalıştıran kuruluşlar için gelişmiş güvenlik hususlarını kapsar. Açık kaynak projeyi [GitHub](https://github.com/onetimesecret/onetimesecret)'da ve resmi Docker görüntülerini [GitHub Container Registry](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret)'de bulabilirsiniz.
+Bu bölüm, Onetime Secret'in kendi örneğini çalıştıran kuruluşlar için gelişmiş güvenlik hususlarını kapsar. Açık kaynak projeyi [GitHub](https://github.com/onetimesecret/onetimesecret)'da ve resmi Docker görüntülerini [GitHub Container Registry](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret)'de bulabilirsiniz.
 
-Aşağıdaki öneriler, Onetime Secret'ı kendi sunucunuzda barındırırken altyapı seviyenizde uygulanabilir:
+Aşağıdaki öneriler, Onetime Secret'i kendi sunucunuzda barındırırken altyapı seviyenizde uygulanabilir:
 
 1. **Geçici Ortamlar Kullanın**: Mümkün olduğunda, her gizli mesaj paylaşım oturumu için ortamlar oluşturun ve yok edin. Bu, son derece hassas işlemler için özellikle yararlı olabilir. [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret-lite) Docker görüntümüz geçici kullanım senaryoları için tasarlanmıştır.
 
@@ -67,12 +65,12 @@ Bu bölüm, kuruluşunuz için yararlı olabilecek genel güvenlik önerilerini 
 
 1. **Bir Plan Hazırlayın**: Gizli mesaj paylaşım süreçlerinize özgü bir olay müdahale planı geliştirin. Bu, erişimi iptal etme, etkilenen tarafları bilgilendirme ve potansiyel hasarı azaltma adımlarını içermelidir.
 
-2. **Hızlı Eylem**: Bir gizli mesajın tehlikeye atıldığından şüpheleniyorsanız, gizli mesaj henüz görüntülenmediyse Onetime Secret'ın yakma özelliğini hemen kullanın. Görüntülendiyse, potansiyel hasarı azaltmak için uygun eylemleri gerçekleştirin.
+2. **Hızlı Eylem**: Bir gizli mesajın tehlikeye atıldığından şüpheleniyorsanız, gizli mesaj henüz görüntülenmediyse Onetime Secret'in yakma özelliğini hemen kullanın. Görüntülendiyse, potansiyel hasarı azaltmak için uygun eylemleri gerçekleştirin.
 
 3. **Düzenli Güvenlik İncelemeleri**: Gizli mesaj paylaşım uygulamalarınızı periyodik olarak inceleyin ve gerektiğinde güvenlik önlemlerinizi ayarlayın.
 
 ---
 
-Bu en iyi uygulamaları izleyerek, Onetime Secret'taki gizli mesaj paylaşım etkinliklerinizin güvenliğini önemli ölçüde artırabilirsiniz. Unutmayın, güvenlik devam eden bir süreçtir ve hassas bilgilerinizi korumak için tetikte olmak anahtardır.
+Bu en iyi uygulamaları izleyerek, Onetime Secret'teki gizli mesaj paylaşım etkinliklerinizin güvenliğini önemli ölçüde artırabilirsiniz. Unutmayın, güvenlik devam eden bir süreçtir ve hassas bilgilerinizi korumak için tetikte olmak anahtardır.
 
 Herhangi bir güvenlik endişesi veya potansiyel güvenlik açıklarını bildirmek için lütfen güvenlik ekibimizle derhal security@onetimesecret.com adresinden iletişime geçin.

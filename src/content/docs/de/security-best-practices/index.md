@@ -3,8 +3,6 @@ title: Bewährte Sicherheitspraktiken
 description: Erhöhen Sie die Sicherheit beim Austausch von Geheimnissen mit diesen Best Practices, die speziell für Onetime Secret gelten, einschließlich der Sicherheitsvorteile von Custom Domains.
 ---
 
-# Bewährte Sicherheitspraktiken für Onetime Secret
-
 Onetime Secret wurde zwar mit Blick auf die Sicherheit entwickelt, aber wenn Sie die folgenden bewährten Praktiken befolgen, können Sie den Schutz Ihrer vertraulichen Daten noch weiter verbessern, insbesondere wenn Sie Funktionen wie die benutzerdefinierten Domänen verwenden.
 
 ## Best Practices für die gemeinsame Nutzung von Geheimnissen

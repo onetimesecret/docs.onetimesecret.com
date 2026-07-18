@@ -1,9 +1,7 @@
 ---
-title: Beste praktijken voor beveiliging
+title: Best practices voor beveiliging
 description: Verbeter de beveiliging van het delen van geheimen met deze best practices die specifiek zijn voor Onetime Secret, inclusief de beveiligingsvoordelen van aangepaste domeinen.
 ---
-
-# Beste beveiligingspraktijken voor Onetime Secret
 
 Hoewel Onetime Secret is ontworpen met beveiliging in het achterhoofd, kan het volgen van deze best practices de bescherming van uw gevoelige informatie verder verbeteren, vooral bij het gebruik van functies zoals Custom Domains.
 

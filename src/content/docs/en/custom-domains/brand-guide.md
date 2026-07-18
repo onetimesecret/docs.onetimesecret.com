@@ -3,8 +3,6 @@ title: Brand Guide
 description: Customize the presentation of your domain with your brand's logo, colors, and styling.
 ---
 
-# Customize Domain Branding
-
 ## Prerequisites
 
 - An active, verified custom domain in your Onetime Secret account

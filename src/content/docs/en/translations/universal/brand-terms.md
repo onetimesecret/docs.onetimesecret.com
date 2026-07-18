@@ -3,8 +3,6 @@ title: Brand Terms
 description: Terms that should not be translated and guidance on consistent brand name usage across all locales
 ---
 
-# Brand Terms
-
 Certain terms must remain untranslated to maintain brand identity and product consistency across all locales.
 
 ## Do Not Translate

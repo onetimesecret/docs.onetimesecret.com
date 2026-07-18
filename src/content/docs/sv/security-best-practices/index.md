@@ -1,9 +1,7 @@
 ---
-title: Säkerhetsbästa praxis
+title: Bästa säkerhetspraxis
 description: Förbättra din hemlighetsdelningssäkerhet med dessa bästa praxis specifika för Onetime Secret, inklusive säkerhetsfördelarna med anpassade domäner.
 ---
-
-# Säkerhetsbästa praxis för Onetime Secret
 
 Även om Onetime Secret är designad med säkerhet i åtanke, kan följande av dessa bästa praxis ytterligare förbättra skyddet av din känsliga information, särskilt när du använder funktioner som anpassade domäner.
 

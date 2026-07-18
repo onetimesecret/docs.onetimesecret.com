@@ -1,6 +1,6 @@
 ---
 title: Kurulum ve Dağıtım
-description: Onetime Secret'ın üretim dağıtımı için kapsamlı kılavuz
+description: Onetime Secret'in üretim dağıtımı için kapsamlı kılavuz
 sidebar:
   order: 3
 ---

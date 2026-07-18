@@ -3,8 +3,6 @@ title: Pricing
 description: Choose the plan that's right for your secure sharing needs.
 ---
 
-# Secure Links, Stronger Connections
-
 Share confidential information with confidence, elevate your brand, and build trust.
 
 ## Plans

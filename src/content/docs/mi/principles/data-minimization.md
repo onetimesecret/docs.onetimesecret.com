@@ -1,26 +1,25 @@
 ---
-title: Kohikohi Raraunga Iti
+title: Whakaiti Raraunga
 description: Tō mātou here ki te kohikohi i ngā raraunga tino nui anake e hiahiatia ana ki te whakarato i tā mātou ratonga
 ---
 
-# Ka Kohikohi Mātou i te Mea e Hiahiatia Ana Anake
+Ka kohia e mātou ngā raraunga e hiahiatia ana anake hei tuku i te ratonga: ngā karere huna taupua, me te iti rawa o ngā mōhiohio pūkete e hiahiatia ana mō ngā ohaurunga utu. Ko ērā atu mea katoa, e kore rawa e tonoa e mātou.
 
-**Whakamāramatanga:** I Onetime Secret, ka kohikohi mātou i ngā raraunga e hiahiatia ana anake ki te tuku i tā mātou ratonga: ngā karere huna poto me ngā kōrero pūkete iti rawa e hiahiatia ana mō ngā ohaurunga utu. Ka noho māmā tēnei, haumaru hoki.
+## Ngā Mea e Penapenatia ana e Mātou
 
-**He Aha Te Tikanga o Tēnei:**
+- **Mō ia karere huna** — ko te karere huna muhumuhu tonu, e puritia ana kia tirohia rā anō, kia pau rānei. I muri i tērā, ka mukua mō ake tonu. Kotahi anake te rerekētanga: ko ngā putunga muhumuhu iti rawa e puritia ana e mātou mō te wā ohotata, e whakamāramatia whānuitia ana i tā mātou [Kaupapahere Tūmataiti](https://onetimesecret.com/info/privacy).
+- **Mō ngā kaipupuri pūkete** — he wāhitau īmēra, koinā anake te mea e hiahiatia ana hei whakahaere i tō pūkete me tō ohaurunga. Kāore mātou e kohi i ngā ingoa, i ngā taipitopito kōtaha rānei; kāore te ratonga e hiahia ki ēnā, nō reira kāore mātou e tono.
 
-1. **He Iti Ake te Mōrearea:** He iti ake ngā raraunga e penapena ana mātou, he iti ake ngā mea hei tiaki. Mā te kohikohi i te mea e hiahiatia ana anake, ka whakaitihia e mātou ngā mōrearea haumaru pea.
+## Ngā Mea Kāore e Aroturukitia ana e Mātou
 
-2. **He Kaupapa Mārama:** He kaupapa motuhake tā ia mōhiohio e kohikohia ana e mātou i roto i te tuku i tā mātou ratonga. Kāore he aroturuki, kāore he tātari, kāore he tāpiri.
+Kāore mātou e whakamahi i ngā pihikete mō te aroturuki, te tātari, te pānuitanga rānei. Ko te pihikete kotahi e tautuhia ana e mātou ka pupuri i a koe kia takiuru tonu mēnā ka waihangatia e koe he pūkete. Ko ngā manakohanga atanga pērā i te aratau tae me te reo ka noho ki te penapena ake o tō pūtirotiro (`localStorage` me `sessionStorage`), kaua ki ngā pihikete.
 
-3. **Te Hoahoa Kore-Mōhiotanga:** Kāore mātou e taea te uru atu ki ō karere huna, kāore hoki mātou e hiahia. Ka muhumuhu ia karere huna, ka taea te uru atu kotahi anake, ā, ka mukua aunoa i muri i te tirohanga, i te paunga rānei.
+## He Aha Te Tikanga o Tēnei
 
-**Pēhea te Mahi:**
+- **He iti ake te mōrearea.** He iti ake ngā raraunga e penapenatia ana e mātou, he iti ake ngā mea hei tiaki. Mā te kohi i te mea e hiahiatia ana anake ka whakaitihia ngā mōrearea haumaru pea ka puta.
+- **He kaupapa mārama.** He mahi motuhake tā ia mōhiohio e kohia ana e mātou i roto i te tuku i te ratonga. Kāore he aroturuki, kāore he tātari, kāore he tāpiritanga.
+- **He hoahoa kore-mōhiotanga.** Kāore e taea e mātou te uru atu ki ō karere huna, kāore hoki mātou e hiahia. Ka whakamuhumuhua ia karere huna, kotahi anake te urunga ka taea, ā, ka mukua aunoatia i muri i te tirohanga, i te paunga rānei.
 
-1. **Mō ngā Karere Huna Takitahi:** Ka penapena mātou i te karere huna muhumuhu tae atu ki te tirohanga, ki te pau rānei. I muri i tērā, ka mukua mō ake tonu. (Hāunga ngā putunga muhumuhu iti e pupuri ana mātou i te wā o te ohotata. Ka kōrero atu mātou mō tēnei i tō mātou [Kaupapahere Tūmataiti](https://onetimesecret.com/info/privacy).)
+Kua pai tēnei huarahi ki a mātou me ō mātou kaiwhakamahi mai i te tau 2012. He māmā, he whai hua, ā, e whakaute ana i tō tūmataiti.
 
-2. **Mō ngā Kaiwhakamahi Rēhita:** Ka pupuri mātou i te mōhiohio tika anake ki te whakahaere i tō pūkete me te whakarato i te ratonga kua utua e koe. Koinā te take ka kohikohi mātou i te wāhitau īmēra anake. Kāore mātou e kohikohi i te ingoa, i ngā taipitopito kōtaha rānei nā te mea kāore e hiahiatia e koe ērā āhuatanga.
-
-3. **Kāore he Aroturuki:** Kāore mātou e whakamahi i ngā pihikete mō te aroturuki, tātari, pānuitanga rānei. Ko te pihikete kotahi e whakamahia ana e mātou ko te mea e noho takiuru ana koe mēnā e kōwhiri ana koe ki te waihanga pūkete.
-
-Kua pai tēnei huarahi ki a mātou me ō mātou kaiwhakamahi mai i te 2012. He māmā, he whai hua, ā, e whakaute ana i tō tūmataiti.
+**He pātai mō tō mātou huarahi?** [Whakapā mai](https://onetimesecret.com/feedback).

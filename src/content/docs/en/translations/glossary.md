@@ -3,8 +3,6 @@ title: Glossary
 description: A reference guide for translating Onetime Secret's key terms, interface elements, and technical vocabulary across multiple languages to maintain consistency
 ---
 
-# Onetime Secret Translation Glossary
-
 This glossary provides standardized translations for key terms across languages to ensure consistency in the Onetime Secret application. It is based on analysis of the existing translations in German (Germany and Austria), French (France and Canada), and Polish.
 
 ## Core Terminology

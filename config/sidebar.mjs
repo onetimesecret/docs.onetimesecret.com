@@ -238,7 +238,6 @@ export const sidebar = [
     [
       createLink("overview", "principles"),
       createLink("privacyFirst", "principles/privacy-first"),
-      createLink("trust", "principles/trust"),
       createLink("communication", "principles/communication"),
       createLink("dataMinimization", "principles/data-minimization"),
     ],

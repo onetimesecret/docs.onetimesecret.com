@@ -3,8 +3,6 @@ title: Bedste sikkerhedspraksis
 description: Forbedr din beskeddelingssikkerhed med disse bedste praksis specifikt for Onetime Secret, inklusive sikkerhedsfordelene ved brugerdefinerede domæner.
 ---
 
-# Bedste sikkerhedspraksis for Onetime Secret
-
 Selvom Onetime Secret er designet med sikkerhed i tankerne, kan det yderligere forbedre beskyttelsen af din følsomme information at følge disse bedste praksis, især når du bruger funktioner som brugerdefinerede domæner.
 
 ## Bedste praksis for besked deling

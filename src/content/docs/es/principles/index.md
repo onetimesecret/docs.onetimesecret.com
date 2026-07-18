@@ -1,33 +1,20 @@
 ---
 title: Nuestros principios
-description: Los valores fundamentales y los principios rectores que rigen nuestro enfoque de la privacidad y la seguridad.
-diseño: página
+description: Los valores fundamentales y los principios rectores que guían nuestro enfoque de la privacidad y la seguridad
 ---
 
-# Principios
-
-Bienvenido a los principios rectores de Onetime Secret. Estos documentos fundacionales explican nuestro enfoque de:
-
-- Privacidad y minimización de datos
-- Comunicación con el usuario y transparencia
-- Fiabilidad y confianza en el servicio
-- Prácticas operativas
+Onetime Secret existe para que pueda compartir información confidencial sin dejarla olvidada en cualquier parte. Estos principios dan forma a cada decisión de producto y operativa que tomamos y, como están por escrito, puede exigirnos que los cumplamos.
 
 ## Nuestros compromisos
 
-- **[Privacidad ante todo](/es/principles/privacy-first)**: Nuestro enfoque para proteger la privacidad del usuario mediante elecciones de diseño deliberadas.
-- **[Creación de confianza](/es/principles/trust)**: Cómo nos ganamos y mantenemos la confianza de los usuarios con acciones, no con palabras.
-- **[Filosofía de comunicación](/es/principles/communication)**: Por qué limitamos la comunicación por correo electrónico a lo estrictamente necesario.
-- **[Minimización de datos](/es/principles/data-minimization)**: Nuestro compromiso de recopilar y conservar sólo los datos más esenciales.
-
+- **[Privacidad ante todo](/es/principles/privacy-first)** — las prácticas de seguimiento y marketing que evitamos deliberadamente, y cómo mantenemos esos compromisos verificables
+- **[Comunicación](/es/principles/communication)** — por qué enviamos el mínimo posible de correos electrónicos, y las tres categorías muy concretas a las que nos limitamos
+- **[Minimización de datos](/es/principles/data-minimization)** — lo poco que almacenamos, cuánto tiempo lo conservamos y lo que nunca recopilamos
 
 ## Por qué importan los principios
 
-En Onetime Secret, nuestros principios guían cada decisión que tomamos. Nos ayudan:
+Los principios escritos nos mantienen coherentes. Resuelven las decisiones de producto antes de que se conviertan en debates y le ofrecen un registro público y fijo con el que medirnos. Cuando el crecimiento y la privacidad tiran en direcciones opuestas, estas páginas ya dicen cuál de los dos gana.
 
-- Centrarse en lo importante
-- Tome decisiones coherentes
-- Construir una confianza duradera
-- Mantener la transparencia
+Para el lado técnico de estos compromisos (cifrado, manejo de datos, notificación de vulnerabilidades), consulte [Seguridad y confianza](/es/security).
 
-No se trata sólo de directrices, sino de compromisos con nuestros usuarios que determinan nuestra forma de trabajar.
+**¿Preguntas sobre nuestro enfoque?** [Póngase en contacto con nosotros](https://onetimesecret.com/feedback).

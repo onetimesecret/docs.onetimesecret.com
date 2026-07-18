@@ -3,8 +3,6 @@ title: Setup Guide
 description: This guide will walk you through the process of setting up a custom domain for your Onetime Secret account, including the differences between subdomains and apex domains, and choosing your preferred data center region.
 ---
 
-# Custom Domain Setup Guide
-
 ## Prerequisites
 
 - An active Onetime Secret account with custom domain feature enabled

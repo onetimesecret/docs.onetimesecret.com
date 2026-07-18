@@ -3,8 +3,6 @@ title: Najlepsze praktyki bezpieczeństwa
 description: Zwiększ bezpieczeństwo udostępniania sekretów dzięki tym najlepszym praktykom specyficznym dla Onetime Secret, w tym korzyściom bezpieczeństwa niestandardowych domen.
 ---
 
-# Najlepsze praktyki bezpieczeństwa dla Onetime Secret
-
 Chociaż Onetime Secret został zaprojektowany z myślą o bezpieczeństwie, stosowanie tych najlepszych praktyk może dodatkowo wzmocnić ochronę Twoich poufnych informacji, szczególnie podczas korzystania z funkcji takich jak niestandardowe domeny.
 
 ## Najlepsze praktyki udostępniania sekretów

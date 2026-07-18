@@ -3,8 +3,6 @@ title: Migliori pratiche di sicurezza
 description: Migliorate la sicurezza della condivisione dei segreti con queste best practice specifiche per Onetime Secret, compresi i vantaggi della sicurezza dei domini personalizzati.
 ---
 
-# Migliori pratiche di sicurezza per Onetime Secret
-
 Sebbene Onetime Secret sia stato progettato con un occhio di riguardo alla sicurezza, seguire queste best practice può migliorare ulteriormente la protezione delle informazioni sensibili, soprattutto quando si utilizzano funzioni come i domini personalizzati.
 
 ## Migliori pratiche per la condivisione dei segreti

@@ -1,9 +1,7 @@
 ---
 title: Türkçe çeviri rehberi
-description: Onetime Secret'ı Türkçe'ye çevirmek için kapsamlı rehber, sözlük ve dil notlarını birleştirir
+description: Onetime Secret'i Türkçe'ye çevirmek için kapsamlı rehber, sözlük ve dil notlarını birleştirir
 ---
-
-# Translation Guidance for Turkish
 
 This document provides comprehensive guidance for translating Onetime Secret content. It combines universal translation resources with locale-specific terminology and rules.
 
@@ -20,8 +18,6 @@ Before translating, review these cross-language guidelines that apply to all loc
 ---
 
 ## Sözlük
-
-# Onetime Secret Çeviri Sözlüğü
 
 Onetime Secret uygulamasında tutarlılığı sağlamak için temel terimlerin standartlaştırılmış çevirilerini sağlayan referans kılavuzu.
 
@@ -178,8 +174,6 @@ Bu ayrım güvenlik netliği için **kritik** öneme sahiptir:
 ---
 
 ## Turkish Translation Notes
-
-# Turkish (tr) Translation Notes
 
 ## Translation Choices and Adjustments
 

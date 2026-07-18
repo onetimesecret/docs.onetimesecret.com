@@ -3,8 +3,6 @@ title: Universal Translation Guidance
 description: Cross-language translation resources that apply to all locales when translating Onetime Secret documentation
 ---
 
-# Universal Translation Guidance
-
 This section contains translation guidance that applies across all languages. Review these resources before starting any translation work, as they establish standards for handling common challenges.
 
 ## Why Universal Resources

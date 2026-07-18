@@ -49,7 +49,7 @@ Bu kullanım senaryoları, Gizli Mesaj Bağlantılarının çeşitli endüstrile
 
 Gizli Mesaj Bağlantıları bazı önemli uyarılarla temel anonim ipuçları için uygun olabilir:
 
-### Anonim İpuçları için Onetime Secret'ın Avantajları
+### Anonim İpuçları için Onetime Secret'in Avantajları
 - Hesap gerekmez
 - Tor ağı üzerinden erişilebilir
 - İçerik aktarım sırasında ve beklemede şifrelenir

@@ -3,8 +3,6 @@ title: Welcome to the Documentation
 description: Use the navigation menu to explore the Onetime Secret documentation. You'll find everything you need to know about creating, sharing, and managing secure, self-destructing messages.
 ---
 
-# Onetime Secret Documentation
-
 Use the navigation menu to explore the Onetime Secret documentation. You'll find everything you need to know about creating, sharing, and managing secure, self-destructing messages.
 
 ## Getting Started
