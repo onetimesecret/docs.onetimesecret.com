@@ -10,10 +10,10 @@ Betreibe deine eigene private Instanz von Onetime Secret mit voller Kontrolle ü
 :::tip[Aktuelle Version: v0.25]
 Die aktuelle stabile Version ist **v0.25** (der `main`-Branch). Sie läuft in zwei Modi:
 
-- **Einfacher Modus** — der einfachste Weg. Benötigt nur Redis und ein paar Umgebungsvariablen. Konten funktionieren wie immer.
+- **Einfacher Modus** — der einfachste Weg. Benötigt nur Redis und ein paar Umgebungsvariablen. Konten funktionieren wie immer. Beginne hier mit dem [Schnellstart](#schnellstart-optionen) weiter unten.
 - **Vollständiger Modus** — fügt Kontofunktionen (MFA, SSO, WebAuthn, Organisationen) hinzu, die von PostgreSQL und RabbitMQ unterstützt werden.
 
-Wenn du von v0.22 oder v0.23 kommst, folge der Anleitung [Upgrade auf v0.24+](./upgrading-v0-24).
+Wenn du von v0.22 oder v0.23 kommst, folge der Anleitung [Upgrade auf v0.24+](./upgrading-v0-24), die die Konfigurations- und Datenmodelländerungen sowie die Wahl des Authentifizierungsmodus behandelt.
 :::
 
 

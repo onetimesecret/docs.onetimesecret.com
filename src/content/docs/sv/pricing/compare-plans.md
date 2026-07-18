@@ -1,26 +1,39 @@
 ---
 title: Jämför planer
-description: Jämför våra funktionsrika planer som erbjuder säker hemlighetsdel ning med utgående länkar, anpassade domäner och flexibla lagringsalternativ för privatpersoner och företag.
+description: Jämför våra planer för säker delning av hemligheter — länkar med utgångstid, anpassade domäner, varumärkesprofilering, SSO och teamkontroller i Free, Identity Plus och Team Plus.
 ---
+
 
 ## Funktionsmatris
 
-| Funktion/Plan | Identity Plus | Basic | Inte inloggad |
-|---------|----------------|-------------------------|------------|
-| Anpassade domäner | Obegränsat | ❌ | ❌ |
-| Varumärkesstartsida | ✅ | ❌ | ❌ |
-| Anpassad logotyp, färg | ✅ | ❌ | ❌ |
-| Antal konton | 1 | 1 | ❌ |
-| Länkutgång | Upp till 30 dagar | 14 dagar | Begränsat till 7 dagar |
-| API-åtkomst | ✅ | ✅ | Begränsad |
-| Konfiguration krävs | Ja (DNS-konfiguration) | Nej | Nej |
-| Betald | Ja (del av Identity-planen) | Nej | Nej |
-| SSL/TLS-säkerhet | ✅ | ✅ | ✅ |
-| Datalokalisering | ✅ (EU eller USA) | ✅ (EU eller USA) | ✅ (EU eller USA) |
+| Funktion / Plan | Inte inloggad | Free | Identity Plus | Team Plus |
+|---|---|---|---|---|
+| Anpassade domäner | ❌ | 1 | Obegränsat | Obegränsat |
+| Hemligheter via startsidan | ❌ | ✅ | ✅ | ✅ |
+| Inkommande hemligheter | ❌ | ✅ | ✅ | ✅ |
+| API-åtkomst | Begränsad | ✅ | ✅ | ✅ |
+| Anpassad varumärkesprofil (logotyp, färg) | ❌ | ❌ | ✅ | ✅ |
+| Anpassad e-postavsändare | ❌ | ❌ | ✅ | ✅ \* |
+| Anpassade standardinställningar för integritet | ❌ | ❌ | ✅ | ✅ |
+| Domänspecifik inloggningskonfiguration | ❌ | ❌ | ✅ | ✅ |
+| Medlemsinbjudningar | ❌ | ❌ | ✅ | ✅ |
+| Domänspecifik registreringsvalidering | ❌ | ❌ | ❌ | ✅ |
+| Single sign-on (SSO) | ❌ | ❌ | ❌ | ✅ |
+| Team & delad instrumentpanel | ❌ | ❌ | ❌ | ✅ |
+| Varumärkesprofil för arbetsytor | ❌ | ❌ | ❌ | ✅ |
+| Medlemmar per organisation | — | 1 | Upp till 50 | Upp till 100 |
+| Länkutgång | Upp till 7 dagar | Upp till 14 dagar | Upp till 30 dagar | Upp till 30 dagar |
+| Val av region (EU, UK, US, CA, NZ) | ✅ | ✅ | ✅ | ✅ |
+| Krypterad under överföring och i vila | ✅ | ✅ | ✅ | ✅ |
+| Betald | Nej | Nej | Ja | Ja |
 
-För mer information om kontouppgraderingar och priser, vänligen besök vår [prissida](https://onetimesecret.com/pricing).
+\* Team Plus utökar den anpassade e-postavsändaren med en **flexibel avsändardomän** —
+vilken domän som helst, inte bara din anpassade domän.
+
+För aktuella priser, besök gärna vår [prissida](https://onetimesecret.com/pricing).
+
 
 ## Kommer snart
 
-* Anpassad e-post från detaljer med SPF- och DKIM-support
-* Teamplaner för flera användare
+* Granskningsloggar och IP-baserade åtkomstregler för Team Plus
+* [Secretary Links](https://secretlinks.com) — säkra insamlingslänkar för att ta emot känslig information från vem som helst, inget konto krävs

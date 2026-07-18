@@ -13,7 +13,7 @@ A versão estável atual é **v0.25** (o branch `main`). Ela funciona em dois mo
 - **Modo simples** — o caminho mais fácil. Precisa apenas de Redis e algumas variáveis de ambiente. As contas funcionam da mesma forma que sempre.
 - **Modo completo** — adiciona recursos de conta (MFA, SSO, WebAuthn, organizações) suportados por PostgreSQL e RabbitMQ.
 
-Se você está vindo do v0.22 ou v0.23, siga o guia [Atualizando para v0.24+](./upgrading-v0-24).
+Se você está vindo do v0.22 ou v0.23, siga o guia [Atualizando para v0.24+](./upgrading-v0-24), que aborda as mudanças de configuração e de modelo de dados e como escolher um modo de autenticação.
 :::
 
 

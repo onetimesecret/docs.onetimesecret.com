@@ -10,10 +10,10 @@ Verileriniz, güvenliğiniz ve dağıtımınız üzerinde tam kontrolle kendi ö
 :::tip[Mevcut sürüm: v0.25]
 Mevcut kararlı sürüm **v0.25** (`main` dalı) sürümüdür. İki modda çalışır:
 
-- **Basit mod** — en kolay yol. Yalnızca Redis ve birkaç ortam değişkenine ihtiyaç duyar. Hesaplar her zaman olduğu gibi çalışır.
+- **Basit mod** — en kolay yol. Yalnızca Redis ve birkaç ortam değişkenine ihtiyaç duyar. Hesaplar her zaman olduğu gibi çalışır. Aşağıdaki [Hızlı Başlangıç](#hızlı-başlangıç-seçenekleri) bölümünden başlayın.
 - **Tam mod** — PostgreSQL ve RabbitMQ tarafından desteklenen hesap özelliklerini (MFA, SSO, WebAuthn, organizasyonlar) ekler.
 
-v0.22 veya v0.23'ten geliyorsanız, [v0.24+ Sürümüne Yükseltme](./upgrading-v0-24) kılavuzunu izleyin.
+v0.22 veya v0.23'ten geliyorsanız, yapılandırma ve veri modeli değişikliklerini ve bir kimlik doğrulama modu seçmeyi ele alan [v0.24+ Sürümüne Yükseltme](./upgrading-v0-24) kılavuzunu izleyin.
 :::
 
 

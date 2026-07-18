@@ -47,7 +47,7 @@ Onetime Secret API'sını kullanıyorsanız:
 
 ## Gelişmiş Kendi Sunucusunda Barındırma Güvenliği
 
-Bu bölüm, Onetime Secret'ın kendi örneğini çalıştıran kuruluşlar için gelişmiş güvenlik hususlarını kapsar. Açık kaynak projeyi [GitHub](https://github.com/onetimesecret/onetimesecret)'da ve resmi Docker görüntülerini [Docker Hub](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret)'da bulabilirsiniz.
+Bu bölüm, Onetime Secret'ın kendi örneğini çalıştıran kuruluşlar için gelişmiş güvenlik hususlarını kapsar. Açık kaynak projeyi [GitHub](https://github.com/onetimesecret/onetimesecret)'da ve resmi Docker görüntülerini [GitHub Container Registry](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret)'de bulabilirsiniz.
 
 Aşağıdaki öneriler, Onetime Secret'ı kendi sunucunuzda barındırırken altyapı seviyenizde uygulanabilir:
 

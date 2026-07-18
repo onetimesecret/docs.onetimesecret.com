@@ -47,7 +47,7 @@ Als je de Onetime Secret API gebruikt:
 
 ## Geavanceerde Zelf Gehoste Beveiliging
 
-Deze sectie behandelt geavanceerde beveiligingsoverwegingen voor organisaties die hun eigen instantie van Onetime Secret draaien. U kunt het open source project vinden op [GitHub](https://github.com/onetimesecret/onetimesecret) en officiële Docker images op [Docker Hub](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret).
+Deze sectie behandelt geavanceerde beveiligingsoverwegingen voor organisaties die hun eigen instantie van Onetime Secret draaien. U kunt het open source project vinden op [GitHub](https://github.com/onetimesecret/onetimesecret) en officiële Docker images op [GitHub Container Registry](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret).
 
 De onderstaande aanbevelingen kunnen worden geïmplementeerd op uw infrastructuurniveau bij het zelf hosten van Onetime Secret:
 

@@ -9,19 +9,19 @@ Teilen Sie vertrauliche Informationen mit Zuversicht, stärken Sie Ihre Marke un
 
 ## Pläne
 
-### Basic
+### Free
 
 **$0/Monat**
 
-Sicheres, einmaliges Teilen für jeden.
+Sicheres, sich selbst zerstörendes Teilen von Geheimnissen für alle.
 
 **Funktionen:**
-- Einmaliges Anzeigen geteilter Geheimnisse
-- Automatische Löschung nach dem Anzeigen
-- Konto erforderlich, um Empfängern E-Mails zu senden
-- Grundlegender API-Zugriff
+- Einmaliges Anzeigen mit automatischer Löschung nach dem Zugriff
+- Eine benutzerdefinierte Domain
+- Startseite & eingehende Geheimnisse
+- API-Zugriff
 
-[Erste Schritte](https://onetimesecret.com/plans/basic)
+[Erste Schritte](https://onetimesecret.com/plans/free)
 
 ### Identity Plus
 
@@ -35,15 +35,18 @@ Sicheres Teilen, das Ihre Marke aufwertet und die Kommunikation vereinfacht.
 
 [Aktuelle Preise ansehen](https://onetimesecret.com/pricing) | [Diesen Plan wählen](https://onetimesecret.com/plans/identity)
 
-### Global Elite
+### Team Plus
 
-Eine vollständig angepasste Single-Tenant-Installation mit dedizierter Infrastruktur, Daten-Compliance-Kontrollen und unbegrenzter Skalierbarkeit.
+Kontrolliertes Teilen von Geheimnissen mit SSO, Zugriffskontrollen und organisatorischer Transparenz.
 
 **Funktionen:**
-- Private Cloud-Umgebung
-- Unbegrenzte Nutzung und Skalierung
-- Mehrere Datenstandort-Optionen (EU, USA)
-- Vollständige regulatorische Compliance (einschließlich DSGVO, CCPA, HIPAA)
+- Alle Funktionen von Identity Plus
+- Single Sign-On (SSO)
+- Teamverwaltung & gemeinsames Dashboard
+- Flexible E-Mail-Absenderdomain
+- Domainspezifische Anmeldevalidierung
+
+[Aktuelle Preise ansehen](https://onetimesecret.com/pricing)
 
 ## Häufig gestellte Fragen
 
@@ -60,7 +63,7 @@ Ja, Onetime Secret bietet eine kostenlose Stufe, die es Ihnen ermöglicht, die m
 Ja, Onetime Secret bietet eine Self-Hosting-Option mit unserer SimpleStack℠-Garantie, die eine einfache Bereitstellung und Verwaltung gewährleistet. [GitHub](https://github.com/onetimesecret/onetimesecret)
 
 ### Wie sicher ist Onetime Secret?
-Wir nehmen Sicherheit sehr ernst und setzen mehrere Maßnahmen zum Schutz der Informationen unserer Benutzer ein. Wie in unserer Datenschutzrichtlinie angegeben, verwenden wir branchenübliche Praktiken, um alle Daten vor unbefugtem Zugriff, Änderung oder Zerstörung zu schützen. Alle Daten bei der Übertragung werden mit HTTPS/TLS verschlüsselt und in der Europäischen Union in Übereinstimmung mit den Datenschutzgesetzen sicher gespeichert.
+Wir nehmen Sicherheit sehr ernst und setzen mehrere Maßnahmen zum Schutz der Informationen unserer Benutzer ein. Wie in unserer Datenschutzrichtlinie angegeben, verwenden wir branchenübliche Praktiken, um alle Daten vor unbefugtem Zugriff, Änderung oder Zerstörung zu schützen. Alle Daten werden während der Übertragung mit HTTPS/TLS verschlüsselt, und Daten im Ruhezustand werden sicher in der von Ihnen gewählten Rechenzentrumsregion gespeichert – Kanada, die Europäische Union, Neuseeland, das Vereinigte Königreich oder die Vereinigten Staaten – in Übereinstimmung mit den für diese Region geltenden Datenschutzgesetzen.
 
 Wir sind jedoch auch transparent, dass keine Methode der elektronischen Übertragung oder Speicherung zu 100 % sicher ist. Während wir bestrebt sind, kommerziell akzeptable Mittel zum Schutz persönlicher Informationen zu verwenden, können wir deren absolute Sicherheit nicht garantieren. Wir empfehlen Ihnen, Vorsichtsmaßnahmen wie die Verwendung von Passphrasen zu treffen. Unser Engagement besteht darin, sorgfältig bei der Sicherung von Daten nach bestem Wissen und Gewissen zu sein und gleichzeitig offen über potenzielle Risiken zu sein.
 

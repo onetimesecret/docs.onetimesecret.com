@@ -21,7 +21,7 @@ Secure, self-destructing secret sharing for everyone.
 - Homepage & incoming secrets
 - API access
 
-[Get Started](https://onetimesecret.com/plans/basic)
+[Get Started](https://onetimesecret.com/plans/free)
 
 ### Identity Plus
 
@@ -63,7 +63,7 @@ Yes, Onetime Secret offers a free tier that allows you to use most features at n
 Yes, Onetime Secret offers a self-hosting option with our SimpleStack℠ guarantee, ensuring easy deployment and management. [GitHub](https://github.com/onetimesecret/onetimesecret)
 
 ### How secure is Onetime Secret?
-We take security very seriously and employ multiple measures to protect users' information. As stated in our privacy policy, we use industry standard practices to safeguard all data from unauthorized access, alteration, or destruction. All data in transit is encrypted using HTTPS/TLS and stored securely in the European Union in compliance with data protection laws.
+We take security very seriously and employ multiple measures to protect users' information. As stated in our privacy policy, we use industry standard practices to safeguard all data from unauthorized access, alteration, or destruction. All data in transit is encrypted using HTTPS/TLS, and data at rest is stored securely in the data center region you choose — Canada, the European Union, New Zealand, the United Kingdom, or the United States — in compliance with the applicable data protection laws for that region.
 
 However, we are also transparent that no method of electronic transmission or storage is 100% secure. While we strive to use commercially acceptable means to protect personal information, we cannot guarantee its absolute security. We recommend users take precautions like using passphrases. Our commitment is to be diligent in securing data to the best of our abilities while being upfront about potential risks.
 

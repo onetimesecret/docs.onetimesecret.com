@@ -54,11 +54,31 @@ docker run -p 3000:3000 -d \
 
 For dem, der foretrækker manuel opsætning, skal du bruge:
 
-- **Ruby 3.2+** (kan muligvis ikke være tilgængelig i standard systempakker)
+- **Ruby 3.4+** (ikke tilgængelig i standard systempakker — brug [rbenv](https://github.com/rbenv/rbenv) eller [mise](https://mise.jdx.dev/) til installation)
 - **Redis 5+** eller **Valkey** (Redis-alternativ)
 - **Node.js 22+** og **pnpm** (kun påkrævet til udvikling og opbygning af frontend-aktiver)
 
-Du skal bygge frontend-aktiverne med `pnpm install && pnpm run build:local` før du kører applikationen.
+Efter at have klonet repositoriet, kør initialiseringsscriptet og byg frontend-aktiverne:
+
+```bash
+./install.sh init
+cp .env.example .env
+pnpm install && pnpm run build:local
+```
+
+For at starte applikationen:
+
+```bash
+source .env.sh  # eksporterer .env-variabler til den aktuelle shell
+bundle exec puma -C etc/puma.rb
+```
+
+Eller ved hjælp af Procfile-runneren:
+
+```bash
+source .env.sh  # eksporterer .env-variabler til den aktuelle shell
+bundle exec foreman start -f Procfile.production
+```
 
 Se [README](https://github.com/onetimesecret/onetimesecret#readme) for komplette manuelle installationsdetaljer.
 

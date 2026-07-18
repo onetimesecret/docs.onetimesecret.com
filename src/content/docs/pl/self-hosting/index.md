@@ -10,10 +10,10 @@ Uruchom własną prywatną instancję Onetime Secret z pełną kontrolą nad dan
 :::tip[Aktualna wersja: v0.25]
 Aktualna stabilna wersja to **v0.25** (gałąź `main`). Działa w dwóch trybach:
 
-- **Tryb prosty** — najłatwiejsza ścieżka. Wymaga tylko Redis i kilku zmiennych środowiskowych. Konta działają tak samo jak zawsze.
+- **Tryb prosty** — najłatwiejsza ścieżka. Wymaga tylko Redis i kilku zmiennych środowiskowych. Konta działają tak samo jak zawsze. Zacznij tutaj od [Szybkiego startu](#opcje-szybkiego-startu) poniżej.
 - **Tryb pełny** — dodaje funkcje konta (MFA, SSO, WebAuthn, organizacje) wspierane przez PostgreSQL i RabbitMQ.
 
-Jeśli aktualizujesz z v0.22 lub v0.23, postępuj zgodnie z przewodnikiem [Aktualizacja do v0.24+](./upgrading-v0-24).
+Jeśli aktualizujesz z v0.22 lub v0.23, postępuj zgodnie z przewodnikiem [Aktualizacja do v0.24+](./upgrading-v0-24), który omawia zmiany konfiguracji i modelu danych oraz sposób wyboru trybu uwierzytelniania.
 :::
 
 

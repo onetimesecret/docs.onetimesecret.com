@@ -47,7 +47,7 @@ Si utiliza la API Onetime Secret:
 
 ## Seguridad avanzada autoalojada
 
-Esta sección cubre consideraciones avanzadas de seguridad para organizaciones que ejecutan su propia instancia de Onetime Secret. Puedes encontrar el proyecto de código abierto en [GitHub](https://github.com/onetimesecret/onetimesecret) y las imágenes Docker oficiales en [Docker Hub](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret).
+Esta sección cubre consideraciones avanzadas de seguridad para organizaciones que ejecutan su propia instancia de Onetime Secret. Puedes encontrar el proyecto de código abierto en [GitHub](https://github.com/onetimesecret/onetimesecret) y las imágenes Docker oficiales en [GitHub Container Registry](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret).
 
 Las siguientes recomendaciones pueden aplicarse a nivel de infraestructura cuando se autoaloje Onetime Secret:
 
@@ -68,7 +68,7 @@ Esta sección presenta recomendaciones generales de seguridad que pueden ser út
 
 1. **Tenga un plan**: Desarrolle un plan de respuesta a incidentes específico para sus procesos de intercambio de secretos. Debe incluir pasos para revocar el acceso, notificar a las partes afectadas y mitigar los posibles daños.
 
-2. **Acción rápida**: Si sospecha que un secreto ha sido comprometido, utilice la función de grabación de Onetime Secret inmediatamente si el secreto no ha sido visto todavía. Si ha sido visto, tome las medidas apropiadas para mitigar cualquier daño potencial.
+2. **Acción rápida**: Si sospecha que un secreto ha sido comprometido, utilice la función de destrucción de Onetime Secret inmediatamente si el secreto no ha sido visto todavía. Si ha sido visto, tome las medidas apropiadas para mitigar cualquier daño potencial.
 
 3. **Revisiones periódicas de seguridad**: Revise periódicamente sus prácticas de intercambio de secretos y ajuste sus medidas de seguridad según sea necesario.
 

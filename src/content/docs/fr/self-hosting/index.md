@@ -10,10 +10,10 @@ Exécutez votre propre instance privée de Onetime Secret avec un contrôle tota
 :::tip[Version actuelle : v0.25]
 La version stable actuelle est **v0.25** (la branche `main`). Elle fonctionne en deux modes :
 
-- **Mode simple** — le chemin le plus facile. Ne nécessite que Redis et quelques variables d'environnement. Les comptes fonctionnent comme toujours.
+- **Mode simple** — le chemin le plus facile. Ne nécessite que Redis et quelques variables d'environnement. Les comptes fonctionnent comme toujours. Commencez ici avec le [Démarrage rapide](#options-de-démarrage-rapide) ci-dessous.
 - **Mode complet** — ajoute des fonctionnalités de compte (MFA, SSO, WebAuthn, organisations) soutenues par PostgreSQL et RabbitMQ.
 
-Si vous venez de v0.22 ou v0.23, suivez le guide [Mise à niveau vers v0.24+](./upgrading-v0-24).
+Si vous venez de v0.22 ou v0.23, suivez le guide [Mise à niveau vers v0.24+](./upgrading-v0-24), qui couvre les changements de configuration et de modèle de données, ainsi que la manière de choisir un mode d'authentification.
 :::
 
 
