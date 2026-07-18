@@ -3,8 +3,6 @@ title: Security & Trust
 description: How Onetime Secret protects your secrets — the security model, data handling, regional residency, and how to report a vulnerability.
 ---
 
-# Security & Trust
-
 Onetime Secret exists to move sensitive information from one person to another
 without leaving it lying around in inboxes, chat logs, or ticketing systems.
 This section explains how the service is built to do that safely and where to

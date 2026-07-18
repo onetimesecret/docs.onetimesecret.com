@@ -1,24 +1,25 @@
 ---
-title: Minimale gegevensverzameling
-description: Onze belofte om alleen de essentiële gegevens te verzamelen die nodig zijn om onze service te leveren
+title: Gegevensminimalisatie
+description: Onze belofte om alleen de essentiële gegevens te verzamelen die nodig zijn om onze dienst te leveren
 ---
 
-**Beschrijving:** Bij Onetime Secret verzamelen we alleen de gegevens die nodig zijn om onze service te leveren: tijdelijke geheimen en de minimale accountgegevens die nodig zijn voor betaalde abonnementen. Dit houdt het simpel en veilig.
+We verzamelen alleen de gegevens die nodig zijn om de dienst te leveren: tijdelijke beveiligde berichten en de minimale accountgegevens die nodig zijn voor betaalde abonnementen. Naar al het andere vragen we simpelweg nooit.
 
-**Waarom dit belangrijk is:**
+## Wat we opslaan
 
-1. **Minder risico:** Hoe minder gegevens we opslaan, hoe minder we hoeven te beschermen. Door alleen het noodzakelijke te verzamelen, verminderen we potentiële beveiligingsrisico's.
+- **Voor elk beveiligd bericht** — het versleutelde bericht zelf, alleen bewaard totdat het wordt bekeken of verloopt. Daarna wordt het permanent verwijderd. De enige uitzondering: minimale versleutelde back-ups die we bewaren voor noodgevallen, uitgebreider beschreven in ons [Privacybeleid](https://onetimesecret.com/info/privacy).
+- **Voor accounthouders** — een e-mailadres, meer is er niet nodig om je account en abonnement te beheren. We verzamelen geen namen of profielgegevens; de dienst heeft ze niet nodig, dus we vragen er niet om.
 
-2. **Een duidelijk doel:** Elk stukje informatie dat we verzamelen heeft een specifiek doel voor het leveren van onze service. Geen tracking, geen analytics, geen extra's.
+## Wat we niet bijhouden
 
-3. **Zero-Knowledge Design**: We hebben geen toegang tot je geheimen en willen dat ook niet. Elk geheim is versleuteld, slechts één keer toegankelijk en wordt automatisch verwijderd nadat het is bekeken of verlopen.
+We gebruiken geen cookies voor tracking, analytics of advertenties. De enige cookie die we plaatsen houdt je ingelogd als je een account aanmaakt. Interfacevoorkeuren zoals kleurmodus en taal staan in de eigen opslag van je browser (`localStorage` en `sessionStorage`), niet in cookies.
 
-**Hoe het werkt:**
+## Waarom dit belangrijk is
 
-1. **Voor afzonderlijke geheimen:** We slaan het versleutelde geheim alleen op totdat het wordt bekeken of verloopt. Daarna wordt het permanent verwijderd. (Afgezien van de minimale versleutelde back-ups die we bewaren in geval van nood. We bespreken dit meer in ons [Privacybeleid](https://onetimesecret.com/info/privacy).
-
-2. **Voor geregistreerde gebruikers:** We bewaren net genoeg informatie om je account te beheren en de service te bieden waarvoor je hebt betaald. Daarom verzamelen we alleen een e-mailadres. We verzamelen geen naam- of profielgegevens omdat je die functies niet nodig hebt.
-
-3. **Geen tracking:** We gebruiken geen cookies voor tracking, analyse of reclame. De enige cookie die we gebruiken is om je ingelogd te houden als je ervoor kiest om een account aan te maken.
+- **Minder risico.** Hoe minder gegevens we opslaan, hoe minder er te beschermen valt. Alleen het noodzakelijke verzamelen verkleint potentiële beveiligingsrisico's.
+- **Duidelijk doel.** Elk stukje informatie dat we verzamelen heeft een specifieke taak in het leveren van de dienst. Geen tracking, geen analytics, geen extra's.
+- **Zero-knowledge-ontwerp.** We hebben geen toegang tot je beveiligde berichten en willen die ook niet. Elk bericht is versleuteld, slechts één keer toegankelijk en wordt na het bekijken of verlopen automatisch verwijderd.
 
 Deze aanpak heeft ons en onze gebruikers sinds 2012 goede diensten bewezen. Het is eenvoudig, effectief en respecteert je privacy.
+
+**Vragen over onze aanpak?** [Neem contact met ons op](https://onetimesecret.com/feedback).

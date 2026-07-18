@@ -1,24 +1,25 @@
 ---
-title: Recogida mínima de datos
-description: Nuestro compromiso de recopilar sólo los datos esenciales necesarios para prestar nuestro servicio
+title: Minimización de datos
+description: Nuestro compromiso de recopilar solo los datos esenciales necesarios para prestar nuestro servicio
 ---
 
-**Descripción:** En Onetime Secret, sólo recopilamos los datos necesarios para prestar nuestro servicio: secretos temporales y la información de cuenta mínima necesaria para las suscripciones de pago. Esto mantiene las cosas simples y seguras.
+Recopilamos solo los datos necesarios para prestar el servicio: secretos temporales y la información de cuenta mínima necesaria para las suscripciones de pago. Todo lo demás, nunca lo pedimos.
 
-**Por qué es importante:**
+## Qué almacenamos
 
-1. **Menos riesgo:** Cuantos menos datos almacenamos, menos hay que proteger. Al recopilar solo lo necesario, reducimos los posibles riesgos de seguridad.
+- **Por cada secreto** — el propio secreto cifrado, que se conserva solo hasta que se visualiza o expira. Después, se elimina de forma permanente. La única excepción: las copias de seguridad cifradas mínimas que guardamos para casos de emergencia, explicadas con más detalle en nuestra [Política de privacidad](https://onetimesecret.com/info/privacy).
+- **Por cada titular de una cuenta** — una dirección de correo electrónico, que es todo lo necesario para gestionar su cuenta y su suscripción. No recopilamos nombres ni datos de perfil: el servicio no los necesita, así que no los pedimos.
 
-2. **Propósito claro:** Cada dato que recopilamos tiene una finalidad específica en la prestación de nuestro servicio. Sin seguimiento, sin análisis, sin extras.
+## Qué no rastreamos
 
-3. **Diseño de conocimiento cero**: No podemos acceder a sus secretos y no queremos hacerlo. Cada secreto está encriptado, sólo se puede acceder a él una vez y se elimina automáticamente después de su visualización o caducidad.
+No utilizamos cookies para seguimiento, análisis ni publicidad. La única cookie que establecemos sirve para mantener su sesión iniciada si crea una cuenta. Las preferencias de la interfaz, como el modo de color y el idioma, se guardan en el almacenamiento del propio navegador (`localStorage` y `sessionStorage`), no en cookies.
 
-**Cómo funciona:**
+## Por qué esto es importante
 
-1. **Para Secretos Únicos:** Sólo almacenamos el secreto encriptado hasta que es visto o expira. Después, se borra permanentemente. (Aparte de las copias de seguridad cifradas mínimas que guardamos en caso de emergencia. Hablamos más de esto en nuestra [Política de privacidad](https://onetimesecret.com/info/privacy).)
+- **Menos riesgo.** Cuantos menos datos almacenamos, menos hay que proteger. Recopilar solo lo necesario reduce los posibles riesgos de seguridad.
+- **Propósito claro.** Cada dato que recopilamos tiene una función específica en la prestación del servicio. Sin seguimiento, sin análisis, sin extras.
+- **Diseño de conocimiento cero.** No podemos acceder a sus secretos y no queremos hacerlo. Cada secreto está cifrado, solo se puede acceder a él una vez y se elimina automáticamente tras su visualización o expiración.
 
-2. **Para usuarios registrados:** Sólo guardamos la información necesaria para gestionar su cuenta y prestarle el servicio por el que ha pagado. Por eso sólo recogemos una dirección de correo electrónico. No recopilamos datos sobre su nombre o perfil porque no los necesita.
+Este enfoque nos ha funcionado bien a nosotros y a nuestros usuarios desde 2012. Es sencillo, eficaz y respeta su privacidad.
 
-3. **Sin seguimiento:** No utilizamos cookies de seguimiento, análisis ni publicidad. La única cookie que utilizamos es para mantenerte conectado si decides crear una cuenta.
-
-Este enfoque nos ha servido bien a nosotros y a nuestros usuarios desde 2012. Es sencillo, eficaz y respeta su privacidad.
+**¿Preguntas sobre nuestro enfoque?** [Póngase en contacto con nosotros](https://onetimesecret.com/feedback).

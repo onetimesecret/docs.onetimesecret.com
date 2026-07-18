@@ -1,62 +1,51 @@
 ---
-title: Vie privée
-description: Notre approche de la protection de la vie privée des utilisateurs par des choix de conception délibérés
+title: La vie privée d'abord
+description: Les pratiques de suivi et de marketing que nous évitons délibérément, pourquoi nous les évitons, et comment nous gardons ces engagements vérifiables
 ---
 
-Chez Onetime Secret, nous adoptons une approche délibérément minimale de la vie privée des utilisateurs. Voici ce que nous choisissons délibérément de ne pas faire et, surtout, pourquoi.
+La vie privée n'est pas une fonctionnalité greffée sur Onetime Secret — c'est ainsi que le service est construit. Cela se voit moins dans ce que nous ajoutons que dans ce que nous laissons de côté. Cette page présente les pratiques que nous évitons délibérément, pourquoi nous les évitons, et comment vérifier que ce ne sont pas que des mots.
 
-## Notre philosophie de l'absence de courrier électronique
+## Normes du secteur que nous ignorons
 
-La plupart des services inondent votre boîte de réception de :
+Nous n'utilisons pas les outils de suivi et de marketing que la plupart des services considèrent comme incontournables :
 
-- Bulletins d'information marketing
-- Mises à jour des produits
-- Statistiques d'utilisation
-- Annonces de nouveautés
-- Offres promotionnelles
-- Campagnes de réengagement
-
-Les seuls courriels que vous recevrez de notre part sont ceux que vous demandez expressément — livraisons de liens secrets, notifications de compte ou mises à jour auxquelles vous avez explicitement choisi de vous abonner. Même lorsque vous vous abonnez, vous n'entendrez que rarement parler de nous, et uniquement pour les raisons précises que vous avez choisies. Votre boîte de réception vous appartient.
-
-## Normes industrielles que nous ignorons
-
-Nous évitons délibérément les outils de suivi et de marketing courants :
-
-- Paquets d'analyse permettant de suivre le comportement des utilisateurs
-- Boutons d'intégration des médias sociaux
+- Solutions d'analyse qui suivent le comportement des utilisateurs
+- Boutons d'intégration des réseaux sociaux
 - Réseaux publicitaires
-- Cadres de test A/B
+- Frameworks de tests A/B
 - Outils d'automatisation du marketing
 - Pixels de suivi tiers
 
+## Un minimum de courriels
+
+La même retenue s'applique à votre boîte de réception. Nous n'envoyons ni bulletins d'information marketing, ni offres promotionnelles, ni campagnes de réengagement — vous n'entendrez parler de nous que pour le service que vous utilisez, un avis que nous vous devons ou une actualité à laquelle vous vous êtes abonné. Aucun courriel que nous envoyons ne contient de pixels de suivi ni de liens de suivi des clics : nous ne savons donc pas si vous l'avez ouvert ni sur quoi vous avez cliqué. Notre [philosophie de communication](/fr/principles/communication) détaille exactement ce que nous envoyons, et pourquoi.
+
 ## Pourquoi c'est important
 
-Ces choix se résument à trois convictions profondes :
+Ces choix se résument à trois choses qui nous tiennent profondément à cœur :
 
-1. **Vos données vous appartiennent.** Nous ne traitons pas les informations des utilisateurs comme une ressource à exploiter. La vie privée n'est pas une fonctionnalité ajoutée après coup — c'est ainsi que le service est conçu.
-2. **L'outil doit simplement fonctionner.** Lorsque vous devez partager quelque chose de sensible, la fiabilité compte plus que tout le reste.
-3. **La confiance se gagne par ce que l'on choisit de ne pas faire.** Chaque traqueur que nous évitons, chaque campagne que nous n'envoyons pas, est une petite preuve de nos priorités.
+- **Vos données vous appartiennent.** Nous ne traitons pas les informations des utilisateurs comme une ressource à exploiter.
+- **L'outil doit simplement fonctionner.** Quand vous devez partager quelque chose de sensible, la fiabilité compte plus que tout.
+- **La confiance se gagne par ce que l'on choisit de ne pas faire.** Chaque traceur que nous écartons, chaque campagne que nous n'envoyons pas est une petite preuve de nos priorités.
+
+## La confiance par la transparence
+
+N'importe quel service peut prétendre respecter la vie privée. Nous préférons rendre nos affirmations vérifiables :
+
+- **Open source.** Le cœur du service est [open source](https://github.com/onetimesecret/onetimesecret) — vous pouvez lire le code qui traite vos secrets, ou l'exécuter vous-même.
+- **Politiques en langage clair.** Notre [Politique de confidentialité](https://onetimesecret.com/info/privacy) indique ce que nous collectons et pourquoi, en des termes compréhensibles sans l'aide d'un juriste.
+- **Pratiques de sécurité documentées.** [Sécurité et confiance](/fr/security) explique notre modèle de sécurité, la façon dont nous protégeons les données et comment signaler une vulnérabilité.
+- **Dialogue direct.** Questions, retours et critiques sont les bienvenus — [contactez-nous](https://onetimesecret.com/feedback) et c'est une personne qui vous lira.
 
 ## L'impact réel
 
-Renoncer aux pratiques standard de marketing et de suivi n'est pas qu'une question de principe — cela a des avantages concrets :
+Renoncer à ces pratiques n'est pas qu'une question de philosophie — cela change le produit :
 
-- Un service plus léger et plus rapide avec moins de composants
-- Une surface d'attaque réduite avec moins de dépendances tierces
-- Vos données restent sous votre contrôle, au lieu d'être dispersées à travers des réseaux publicitaires
-- Notre effort d'ingénierie reste concentré sur le produit, pas sur des tunnels de conversion
-
-Nous consacrons notre temps au travail qui compte pour vous :
-
-- **Fonctionnalités essentielles** — améliorer les fonctionnalités que vous utilisez réellement
-- **Protection de la vie privée** — renforcer le chiffrement et le traitement des données
-- **Fiabilité du service** — s'assurer que nous sommes là quand vous avez besoin de nous
-- **Conformité** — respecter les exigences juridictionnelles et réglementaires
+- Un service plus léger et plus rapide, avec moins de composants
+- Une surface d'attaque réduite, avec moins de dépendances tierces
+- Vos données restent sous votre contrôle au lieu d'être dispersées à travers des réseaux publicitaires
+- Notre temps d'ingénierie va au produit, pas à des tunnels de conversion
 
 ## Regard vers l'avenir
 
-Nous continuerons à privilégier la simplicité et la vie privée plutôt que la portée marketing. Cela signifie que notre croissance sera peut-être plus lente que celle des services qui optimisent l'engagement — et cela nous convient. Un outil de protection de la vie privée forge sa réputation par une fiabilité constante et discrète.
-
-Quand vous entendrez parler de nous, ce sera parce que vous l'avez demandé.
-
-**Des questions sur notre approche ?** [Contactez-nous](https://onetimesecret.com/feedback).
+Nous continuerons à privilégier la simplicité et la vie privée plutôt que la portée marketing. Cela signifie que nous croîtrons peut-être plus lentement que les services qui optimisent l'engagement — et cela nous convient. Un outil de protection de la vie privée forge sa réputation par une fiabilité constante et discrète.

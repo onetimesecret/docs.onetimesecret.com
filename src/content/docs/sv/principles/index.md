@@ -1,29 +1,20 @@
 ---
 title: Våra principer
-description: Kärnvärden och vägledande principer som driver vårt tillvägagångssätt till integritet och säkerhet
+description: Kärnvärdena och de vägledande principer som styr vårt förhållningssätt till integritet och säkerhet
 ---
 
-Välkommen till Onetime Secrets vägledande principer. Dessa grundläggande dokument förklarar vårt tillvägagångssätt till:
-
-- Integritet och dataminimering
-- Användarkommunikation och transparens
-- Tjänstens tillförlitlighet och förtroende
-- Operativa metoder
+Onetime Secret finns för att du ska kunna dela känslig information utan att den blir liggande och skräpar. De här principerna formar varje produkt- och driftsbeslut vi fattar — och eftersom de är nedskrivna kan du ställa oss till svars för dem.
 
 ## Våra åtaganden
 
-- **[Integritet först](/sv/principles/privacy-first)**: Vårt tillvägagångssätt till att skydda användarintegritet genom avsiktliga designval
-- **[Bygga förtroende](/sv/principles/trust)**: Hur vi förtjänar och upprätthåller användarförtroende genom handlingar, inte ord
-- **[Kommunikationsfilosofi](/sv/principles/communication)**: Varför vi begränsar e-postkommunikation till endast vad som är nödvändigt
-- **[Dataminimering](/sv/principles/data-minimization)**: Vårt åtagande att samla in och behålla endast den mest väsentliga datan
+- **[Integritet först](/sv/principles/privacy-first)** — spårnings- och marknadsföringsmetoderna vi medvetet undviker, och hur vi ser till att åtagandena går att kontrollera
+- **[Kommunikation](/sv/principles/communication)** — varför vi skickar så lite e-post som möjligt, och de tre snäva kategorier vi begränsar oss till
+- **[Dataminimering](/sv/principles/data-minimization)** — det lilla vi lagrar, hur länge vi behåller det och vad vi aldrig samlar in
 
 ## Varför principer är viktiga
 
-På Onetime Secret vägleder våra principer varje beslut vi fattar. De hjälper oss att:
+Nedskrivna principer håller oss konsekventa. De avgör produktbeslut innan de hinner bli diskussioner, och de ger dig en fast, offentlig referenspunkt att mäta oss mot. När tillväxt och integritet drar åt olika håll står det redan på de här sidorna vilken som vinner.
 
-- Hålla fokus på vad som är viktigt
-- Fatta konsekventa val
-- Bygga långvarigt förtroende
-- Upprätthålla transparens
+För den tekniska sidan av de här åtagandena — kryptering, datahantering, sårbarhetsrapportering — se [Säkerhet och förtroende](/sv/security).
 
-Dessa är inte bara riktlinjer - de är åtaganden till våra användare som formar hur vi arbetar.
+**Frågor om vårt förhållningssätt?** [Kontakta oss](https://onetimesecret.com/feedback).

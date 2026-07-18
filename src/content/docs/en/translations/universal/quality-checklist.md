@@ -3,8 +3,6 @@ title: Translation Quality Checklist
 description: A comprehensive checklist for ensuring high-quality, consistent translations of Onetime Secret documentation
 ---
 
-# Translation Quality Checklist
-
 This checklist helps ensure translations meet Onetime Secret's quality standards before submission. Use this as a guide when translating documentation or reviewing translation contributions.
 
 ## Pre-Translation Planning

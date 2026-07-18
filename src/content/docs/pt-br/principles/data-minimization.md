@@ -1,24 +1,25 @@
 ---
-title: Coleta Mínima de Dados
+title: Minimização de Dados
 description: Nosso compromisso de coletar apenas os dados essenciais necessários para fornecer nosso serviço
 ---
 
-**Descrição:** No Onetime Secret, coletamos apenas os dados necessários para fornecer nosso serviço: mensagens confidenciais temporárias e as informações mínimas de conta necessárias para assinaturas pagas. Isso mantém as coisas simples e seguras.
+Coletamos apenas os dados necessários para fornecer o serviço: mensagens confidenciais temporárias e as informações mínimas de conta necessárias para assinaturas pagas. Todo o resto, nunca pedimos.
 
-**Por Que Isso Importa:**
+## O Que Armazenamos
 
-1. **Menos Risco:** Quanto menos dados armazenamos, menos há para proteger. Ao coletar apenas o que é necessário, reduzimos riscos de segurança potenciais.
+- **Para cada mensagem confidencial** — a própria mensagem criptografada, mantida apenas até ser visualizada ou expirar. Depois disso, é excluída permanentemente. A única exceção: os backups criptografados mínimos que mantemos para casos de emergência, explicados em mais detalhes em nossa [Política de Privacidade](https://onetimesecret.com/info/privacy).
+- **Para titulares de conta** — um endereço de e-mail, que é tudo o que é preciso para gerenciar sua conta e assinatura. Não coletamos nomes nem detalhes de perfil; o serviço não precisa deles, então não pedimos.
 
-2. **Propósito Claro:** Cada informação que coletamos tem um propósito específico na entrega de nosso serviço. Sem rastreamento, sem análise, sem extras.
+## O Que Não Rastreamos
 
-3. **Design de Conhecimento Zero**: Não podemos acessar suas mensagens e não queremos. Cada mensagem é criptografada, acessível apenas uma vez e automaticamente excluída após visualização ou expiração.
+Não usamos cookies para rastreamento, análise ou publicidade. O único cookie que definimos mantém você conectado se você criar uma conta. Preferências de interface, como modo de cor e idioma, ficam no armazenamento do próprio navegador (`localStorage` e `sessionStorage`), não em cookies.
 
-**Como Funciona:**
+## Por Que Isso Importa
 
-1. **Para Mensagens Individuais:** Armazenamos apenas a mensagem criptografada até que seja visualizada ou expire. Depois disso, é permanentemente excluída. (Exceto os backups criptografados mínimos que mantemos em caso de emergência. Discutimos isso mais em nossa [Política de Privacidade](https://onetimesecret.com/info/privacy).)
+- **Menos risco.** Quanto menos dados armazenamos, menos há para proteger. Coletar apenas o necessário reduz riscos de segurança potenciais.
+- **Propósito claro.** Cada informação que coletamos tem uma função específica na entrega do serviço. Sem rastreamento, sem análise, sem extras.
+- **Design de conhecimento zero.** Não podemos acessar suas mensagens confidenciais e não queremos. Cada mensagem é criptografada, acessível apenas uma vez e excluída automaticamente após a visualização ou expiração.
 
-2. **Para Usuários Registrados:** Mantemos apenas informações suficientes para gerenciar sua conta e fornecer o serviço pelo qual você pagou. É por isso que coletamos apenas um endereço de e-mail. Não coletamos nome ou detalhes de perfil porque você não precisa desses recursos.
+Essa abordagem tem servido bem a nós e aos nossos usuários desde 2012. É simples, eficaz e respeita sua privacidade.
 
-3. **Sem Rastreamento:** Não usamos cookies para rastreamento, análise ou publicidade. O único cookie que usamos é para mantê-lo conectado se você optar por criar uma conta.
-
-Esta abordagem tem servido bem a nós e nossos usuários desde 2012. É simples, eficaz e respeita sua privacidade.
+**Dúvidas sobre nossa abordagem?** [Entre em contato](https://onetimesecret.com/feedback).

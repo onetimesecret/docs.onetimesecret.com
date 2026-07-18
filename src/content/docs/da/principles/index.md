@@ -1,29 +1,20 @@
 ---
 title: Vores principper
-description: Kerneværdierne og vejledende principper, der driver vores tilgang til privatliv og sikkerhed
+description: Kerneværdierne og de vejledende principper, der driver vores tilgang til privatliv og sikkerhed
 ---
 
-Velkommen til Onetime Secrets vejledende principper. Disse grundlæggende dokumenter forklarer vores tilgang til:
-
-- Privatliv og dataminimering
-- Brugerkommunikation og gennemsigtighed
-- Tjenestepålidelighed og tillid
-- Operationelle praksisser
+Onetime Secret findes, så du kan dele følsomme oplysninger, uden at de kommer til at ligge og flyde. Disse principper former hver eneste produkt- og driftsbeslutning, vi træffer — og fordi de er skrevet ned, kan du holde os op på dem.
 
 ## Vores forpligtelser
 
-- **[Privatliv først](/da/principles/privacy-first)**: Vores tilgang til beskyttelse af brugerprivatliv gennem bevidste designvalg
-- **[Opbygning af tillid](/da/principles/trust)**: Hvordan vi opnår og opretholder brugertillid gennem handlinger, ikke ord
-- **[Kommunikationsfilosofi](/da/principles/communication)**: Hvorfor vi begrænser e-mailkommunikation til kun det nødvendige
-- **[Dataminimering](/da/principles/data-minimization)**: Vores forpligtelse til kun at indsamle og opbevare de mest essentielle data
+- **[Privatliv først](/da/principles/privacy-first)** — de sporings- og marketingpraksisser, vi bevidst undgår, og hvordan vi sørger for, at disse forpligtelser kan efterprøves
+- **[Kommunikation](/da/principles/communication)** — hvorfor vi sender så få e-mails som muligt, og de tre snævre kategorier, vi begrænser os til
+- **[Dataminimering](/da/principles/data-minimization)** — hvor lidt vi gemmer, hvor længe vi beholder det, og hvad vi aldrig indsamler
 
 ## Hvorfor principper betyder noget
 
-Hos Onetime Secret vejleder vores principper hver beslutning, vi træffer. De hjælper os med at:
+Nedskrevne principper holder os konsistente. De afgør produktbeslutninger, før de bliver til diskussioner, og de giver dig et fast, offentligt holdepunkt, som du kan måle os på. Når vækst og privatliv trækker i hver sin retning, står der allerede på disse sider, hvad der vinder.
 
-- Holde fokus på, hvad der betyder noget
-- Træffe konsistente valg
-- Opbygge varig tillid
-- Opretholde gennemsigtighed
+For den tekniske side af disse forpligtelser — kryptering, datahåndtering, sårbarhedsrapportering — se [Sikkerhed og tillid](/da/security).
 
-Dette er ikke kun retningslinjer - det er forpligtelser over for vores brugere, der former, hvordan vi opererer.
+**Spørgsmål til vores tilgang?** [Kontakt os](https://onetimesecret.com/feedback).

@@ -3,35 +3,28 @@ title: Comunicação
 description: Por que limitamos a comunicação por e-mail apenas ao que é necessário
 ---
 
-Adotamos uma abordagem deliberadamente minimalista para a comunicação com usuários, respeitando seu tempo e caixa de entrada.
+Adotamos uma abordagem deliberadamente minimalista na comunicação com usuários, por respeito ao seu tempo e à sua caixa de entrada.
 
-## Nossa Filosofia de Não-Email
+## Nossa Filosofia de E-mail Mínimo
 
-A maioria dos serviços inunda sua caixa de entrada com:
-- Newsletters de marketing
-- Atualizações de produto
-- Estatísticas de uso
-- Anúncios de recursos
-- Ofertas promocionais
-- Campanhas de reengajamento
+A maioria dos serviços inunda sua caixa de entrada com newsletters de marketing, estatísticas de uso, ofertas promocionais e campanhas de reengajamento. Nós não fazemos nada disso. Você só terá notícias nossas por causa do serviço que está usando, de avisos que somos obrigados a enviar ou de novidades que você optou por receber.
 
-Os únicos e-mails que você receberá de nós são aqueles que você solicitar especificamente — como entrega de links secretos, notificações de conta ou atualizações nas quais você optou explicitamente por receber. Mesmo quando você opta por receber, raramente entrará em contato, e apenas pelos motivos específicos para os quais você se inscreveu. Sua caixa de entrada pertence a você.
+Todo e-mail que enviamos se enquadra em uma destas três categorias:
+
+- **Transacionais** — links secretos, notificações de conta e avisos de cobrança. Eles fazem parte do próprio serviço.
+- **Avisos de serviço e segurança** — alertas de segurança, notificações de violação de dados, mudanças de política e descontinuações. Enviamos quando necessário, inclusive quando somos legalmente obrigados. Nunca são marketing.
+- **Novidades do produto** — anúncios de recursos e atualizações semelhantes. Estritamente opcionais (só chegam se você se inscrever), raras, e cada uma inclui um link para cancelar a inscrição com um clique.
+
+Nenhum e-mail que enviamos contém pixels de rastreamento ou links com rastreamento de cliques. Não sabemos se você abriu um e-mail nem em que clicou — e preferimos assim. Sua caixa de entrada pertence a você.
 
 ## Por Que Isso Importa
 
 Uma ferramenta de privacidade não deveria se comportar como uma plataforma de marketing. Ao manter nossas comunicações mínimas:
 
-- Reduzimos a superfície de ataque para phishing e engenharia social — menos e-mails legítimos nossos significa que os suspeitos são mais fáceis de identificar
-- Permanecemos focados em manter um serviço confiável em vez de otimizar métricas de engajamento
+- Reduzimos a superfície de ataque para phishing e engenharia social — menos e-mails legítimos nossos significa que os suspeitos ficam mais fáceis de identificar
+- Permanecemos focados em manter um serviço confiável, em vez de otimizar métricas de engajamento
 - Respeitamos a confiança que você deposita em nós ao compartilhar seu endereço de e-mail
 
-## Onde Investimos Nossa Energia
+O tempo que outras empresas gastam elaborando campanhas, nós dedicamos ao serviço em si: confiabilidade central, proteções de privacidade mais fortes e o acompanhamento de requisitos jurisdicionais e regulatórios.
 
-Em vez de elaborar campanhas, dedicamos nosso tempo ao que realmente importa para você:
-
-- **Confiabilidade central** — garantir que o serviço funcione quando você precisa
-- **Proteções de privacidade** — fortalecer a criptografia e o tratamento de dados
-- **Conformidade** — acompanhar requisitos jurisdicionais e regulatórios
-- **Transparência** — ser aberto sobre como operamos e por quê
-
-Tem opiniões sobre nossa abordagem de comunicação? [Entre em contato](https://onetimesecret.com/feedback).
+**Dúvidas sobre nossa abordagem?** [Entre em contato](https://onetimesecret.com/feedback).

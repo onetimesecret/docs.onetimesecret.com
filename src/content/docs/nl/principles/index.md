@@ -3,28 +3,18 @@ title: Onze principes
 description: De kernwaarden en leidende principes die onze benadering van privacy en beveiliging bepalen
 ---
 
-Welkom bij de richtlijnen van Onetime Secret. Deze basisdocumenten verklaren onze benadering van:
-
-- Privacy en gegevensminimalisatie
-- Gebruikerscommunicatie en transparantie
-- Betrouwbaarheid en vertrouwen van de service
-- Operationele praktijken
+Onetime Secret bestaat zodat je gevoelige informatie kunt delen zonder dat die ergens blijft rondslingeren. Deze principes sturen elke product- en operationele beslissing die we nemen — en omdat ze zwart op wit staan, kun je ons eraan houden.
 
 ## Onze beloften
 
-- **[Privacy-first](/nl/principles/privacy-first)**: Onze benadering van het beschermen van de privacy van gebruikers door middel van bewuste ontwerpkeuzes
-- **[Vertrouwen opbouwen](/nl/principles/trust)**: Hoe we het vertrouwen van de gebruiker verdienen en behouden door middel van acties, niet door woorden
-- **[Communicatiefilosofie](/nl/principles/communication)**: Waarom we e-mailcommunicatie beperken tot het hoognodige
-- **[Gegevensminimalisatie](/nl/principles/data-minimization)**: Ons streven om alleen de meest essentiële gegevens te verzamelen en te bewaren
-
+- **[Privacy-first](/nl/principles/privacy-first)** — de tracking- en marketingpraktijken die we bewust vermijden, en hoe we die beloften controleerbaar houden
+- **[Communicatie](/nl/principles/communication)** — waarom we zo min mogelijk e-mail versturen, en de drie nauw afgebakende categorieën waartoe we ons beperken
+- **[Gegevensminimalisatie](/nl/principles/data-minimization)** — hoe weinig we opslaan, hoe lang we het bewaren en wat we nooit verzamelen
 
 ## Waarom principes belangrijk zijn
 
-Bij Onetime Secret laten we ons leiden door onze principes bij elke beslissing die we nemen. Ze helpen ons:
+Opgeschreven principes houden ons consistent. Ze beslechten productbeslissingen voordat het discussies worden, en ze geven jou een vast, openbaar ijkpunt om ons aan af te meten. Wanneer groei en privacy verschillende kanten op trekken, staat op deze pagina's al welke van de twee wint.
 
-- Blijf gefocust op wat belangrijk is
-- Maak consistente keuzes
-- Duurzaam vertrouwen opbouwen
-- Transparant blijven
+Voor de technische kant van deze beloften — versleuteling, gegevensverwerking, het melden van kwetsbaarheden — zie [Beveiliging & vertrouwen](/nl/security).
 
-Dit zijn niet zomaar richtlijnen - het zijn verplichtingen aan onze gebruikers die vorm geven aan onze manier van werken.
+**Vragen over onze aanpak?** [Neem contact met ons op](https://onetimesecret.com/feedback).

@@ -1,62 +1,51 @@
 ---
-title: Prywatność
-description: Nasze podejście do ochrony prywatności użytkowników poprzez przemyślane wybory projektowe
+title: Prywatność na pierwszym miejscu
+description: Praktyki śledzenia i marketingu, których celowo unikamy, dlaczego ich unikamy i jak dbamy o to, by te zobowiązania były weryfikowalne
 ---
 
-W Onetime Secret przyjmujemy celowo minimalne podejście do prywatności użytkowników. Oto, czego celowo nie robimy i, co ważniejsze, dlaczego.
-
-## Nasza filozofia bez e-maili
-
-Większość usług zalewa Twoją skrzynkę odbiorczą:
-
-- Biuletynami marketingowymi
-- Aktualizacjami produktu
-- Statystykami użycia
-- Ogłoszeniami funkcji
-- Ofertami promocyjnymi
-- Kampaniami reaktywacyjnymi
-
-Jedyne e-maile, które od nas otrzymasz, to te, o które sam poprosisz — dostarczanie linków do sekretów, powiadomienia o koncie czy aktualizacje, na które wyraźnie wyraziłeś zgodę. Nawet jeśli zdecydujesz się je otrzymywać, odezwiemy się rzadko i wyłącznie w sprawach, które wybrałeś. Twoja skrzynka odbiorcza należy do Ciebie.
+Prywatność nie jest funkcją, którą dokręcamy do Onetime Secret — to sposób, w jaki ta usługa jest zbudowana. Widać to mniej w tym, co dodajemy, a bardziej w tym, co pomijamy. Ta strona opisuje praktyki, których celowo unikamy, powody, dla których ich unikamy, oraz to, jak możesz sprawdzić, że traktujemy to poważnie.
 
 ## Standardy branżowe, które pomijamy
 
-Celowo unikamy popularnych narzędzi śledzenia i marketingu:
+Nie korzystamy z narzędzi śledzących i marketingowych, które większość usług traktuje jako oczywisty standard:
 
-- Pakietów analitycznych, które śledzą zachowanie użytkowników
+- Pakietów analitycznych, które śledzą zachowania użytkowników
 - Przycisków integracji z mediami społecznościowymi
 - Sieci reklamowych
-- Framework'ów testów A/B
+- Frameworków testów A/B
 - Narzędzi automatyzacji marketingu
 - Pikseli śledzących stron trzecich
+
+## Minimum e-maili
+
+Ta sama powściągliwość dotyczy Twojej skrzynki odbiorczej. Nie wysyłamy biuletynów marketingowych, ofert promocyjnych ani kampanii reaktywacyjnych — odezwiemy się wyłącznie w związku z usługą, z której korzystasz, powiadomieniem, które jesteśmy Ci winni, lub aktualnościami, na które sam się zapisałeś. Żaden wysyłany przez nas e-mail nie zawiera pikseli śledzących ani linków śledzących kliknięcia, więc nie wiemy, czy go otworzyłeś ani co kliknąłeś. Nasza [filozofia komunikacji](/pl/principles/communication) dokładnie wyjaśnia, co wysyłamy i dlaczego.
 
 ## Dlaczego to ma znaczenie
 
 Te wybory sprowadzają się do trzech rzeczy, na których głęboko nam zależy:
 
-1. **Twoje dane należą do Ciebie.** Nie traktujemy informacji o użytkownikach jako zasobu do eksploatacji. Prywatność nie jest funkcją, którą dokręcamy na końcu — to sposób, w jaki usługa jest zbudowana.
-2. **Narzędzie powinno po prostu działać.** Gdy musisz udostępnić coś poufnego, niezawodność jest ważniejsza niż cokolwiek innego.
-3. **Zaufanie buduje się przez to, czego nie robimy.** Każdy tracker, który pomijamy, każda kampania, której nie wysyłamy, to mały dowód na to, gdzie leżą nasze priorytety.
+- **Twoje dane należą do Ciebie.** Nie traktujemy informacji o użytkownikach jak zasobu do eksploatacji.
+- **Narzędzie powinno po prostu działać.** Gdy musisz udostępnić coś poufnego, niezawodność liczy się bardziej niż cokolwiek innego.
+- **Zaufanie zdobywa się tym, czego świadomie się nie robi.** Każdy tracker, który pomijamy, i każda kampania, której nie wysyłamy, to mały dowód na to, gdzie leżą nasze priorytety.
+
+## Zaufanie przez przejrzystość
+
+Każda usługa może twierdzić, że szanuje prywatność. My wolimy, aby nasze deklaracje dało się sprawdzić:
+
+- **Otwarte oprogramowanie.** Podstawowa część usługi to [otwarte oprogramowanie](https://github.com/onetimesecret/onetimesecret) — możesz przeczytać kod, który obsługuje Twoje sekrety, albo uruchomić go samodzielnie.
+- **Zasady napisane prostym językiem.** Nasza [Polityka prywatności](https://onetimesecret.com/info/privacy) opisuje, co zbieramy i dlaczego — słowami, do których zrozumienia nie potrzebujesz prawnika.
+- **Udokumentowane praktyki bezpieczeństwa.** Sekcja [Bezpieczeństwo i zaufanie](/pl/security) wyjaśnia nasz model bezpieczeństwa, sposób ochrony danych oraz to, jak zgłosić podatność.
+- **Bezpośredni dialog.** Pytania, opinie i krytyka są mile widziane — [napisz do nas](https://onetimesecret.com/feedback), a przeczyta to człowiek.
 
 ## Prawdziwy wpływ
 
-Rezygnacja ze standardowych praktyk marketingowych i śledzenia to nie tylko filozofia — niesie ze sobą konkretne korzyści:
+Rezygnacja z tych praktyk to nie tylko filozofia — ona realnie zmienia produkt:
 
-- Lżejsza, szybsza usługa z mniejszą liczbą ruchomych części
-- Mniejsza powierzchnia ataku dzięki ograniczeniu zależności od stron trzecich
+- Lżejsza i szybsza usługa z mniejszą liczbą ruchomych części
+- Mniejsza powierzchnia ataku dzięki mniejszej liczbie zależności od stron trzecich
 - Twoje dane pozostają pod Twoją kontrolą, zamiast być rozproszone po sieciach reklamowych
-- Nasz zespół inżynierów skupia się na produkcie, a nie na lejkach konwersji
-
-Poświęcamy nasz czas na to, co naprawdę ma dla Ciebie znaczenie:
-
-- **Podstawowe funkcje** — ulepszanie funkcji, z których faktycznie korzystasz
-- **Zabezpieczenia prywatności** — wzmacnianie szyfrowania i ochrony danych
-- **Niezawodność usługi** — dbamy o to, byśmy byli dostępni, gdy nas potrzebujesz
-- **Zgodność z przepisami** — spełnianie wymagań jurysdykcyjnych i regulacyjnych
+- Czas naszego zespołu inżynierskiego przeznaczamy na produkt, a nie na lejki konwersji
 
 ## Patrząc w przyszłość
 
-Będziemy nadal wybierać prostotę i prywatność ponad zasięg marketingowy. Oznacza to, że możemy rosnąć wolniej niż usługi optymalizujące się pod kątem zaangażowania — i nie mamy z tym problemu. Narzędzie do ochrony prywatności buduje swoją reputację poprzez konsekwentną, spokojną niezawodność.
-
-Gdy się do Ciebie odezwiemy, to dlatego, że o to poprosiłeś.
-
-**Pytania dotyczące naszego podejścia?** [Skontaktuj się z nami](https://onetimesecret.com/feedback).
+Będziemy nadal wybierać prostotę i prywatność zamiast zasięgów marketingowych. Oznacza to, że możemy rosnąć wolniej niż usługi optymalizowane pod kątem zaangażowania — i nie mamy z tym problemu. Narzędzie do ochrony prywatności zdobywa reputację dzięki konsekwentnej, spokojnej niezawodności.

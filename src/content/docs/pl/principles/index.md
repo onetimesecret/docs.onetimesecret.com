@@ -3,28 +3,18 @@ title: Nasze zasady
 description: Podstawowe wartości i zasady przewodnie, które kierują naszym podejściem do prywatności i bezpieczeństwa
 ---
 
-Witamy w zasadach przewodnich Onetime Secret. Te fundamentalne dokumenty wyjaśniają nasze podejście do:
-
-- Prywatności i minimalizacji danych
-- Komunikacji z użytkownikami i przejrzystości
-- Niezawodności usług i zaufania
-- Praktyk operacyjnych
+Onetime Secret istnieje po to, abyś mógł udostępniać poufne informacje, nie zostawiając ich potem byle gdzie. Te zasady kształtują każdą naszą decyzję produktową i operacyjną — a ponieważ są spisane, możesz nas z nich rozliczać.
 
 ## Nasze zobowiązania
 
-- **[Prywatność na pierwszym miejscu](/pl/principles/privacy-first)**: Nasze podejście do ochrony prywatności użytkowników poprzez przemyślane wybory projektowe
-- **[Budowanie zaufania](/pl/principles/trust)**: Jak zdobywamy i utrzymujemy zaufanie użytkowników poprzez działania, a nie słowa
-- **[Filozofia komunikacji](/pl/principles/communication)**: Dlaczego ograniczamy komunikację e-mailową tylko do tego, co konieczne
-- **[Minimalizacja danych](/pl/principles/data-minimization)**: Nasze zobowiązanie do zbierania i przechowywania tylko najbardziej niezbędnych danych
-
+- **[Prywatność na pierwszym miejscu](/pl/principles/privacy-first)** — praktyki śledzenia i marketingu, których celowo unikamy, oraz to, jak dbamy o weryfikowalność tych zobowiązań
+- **[Komunikacja](/pl/principles/communication)** — dlaczego wysyłamy możliwie najmniej e-maili i do jakich trzech wąskich kategorii się ograniczamy
+- **[Minimalizacja danych](/pl/principles/data-minimization)** — jak niewiele danych przechowujemy, na jak długo i czego nigdy nie zbieramy
 
 ## Dlaczego zasady mają znaczenie
 
-W Onetime Secret nasze zasady kierują każdą decyzją, którą podejmujemy. Pomagają nam:
+Spisane zasady pomagają nam zachować spójność. Rozstrzygają decyzje produktowe, zanim staną się przedmiotem sporów, i dają Ci stały, publiczny punkt odniesienia, według którego możesz nas oceniać. Gdy wzrost i prywatność ciągną nas w przeciwnych kierunkach, te strony już z góry mówią, która z tych wartości wygrywa.
 
-- Pozostać skupionym na tym, co ważne
-- Podejmować konsekwentne decyzje
-- Budować trwałe zaufanie
-- Utrzymywać przejrzystość
+Techniczną stronę tych zobowiązań — szyfrowanie, przetwarzanie danych, zgłaszanie podatności — opisuje sekcja [Bezpieczeństwo i zaufanie](/pl/security).
 
-To nie są tylko wytyczne - to zobowiązania wobec naszych użytkowników, które kształtują sposób, w jaki działamy.
+**Masz pytania o nasze podejście?** [Skontaktuj się z nami](https://onetimesecret.com/feedback).

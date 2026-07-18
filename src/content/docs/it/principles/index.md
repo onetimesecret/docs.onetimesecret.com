@@ -1,30 +1,20 @@
 ---
 title: I nostri principi
-description: I valori fondamentali e i principi guida che guidano il nostro approccio alla privacy e alla sicurezza.
+description: I valori fondamentali e i principi guida che orientano il nostro approccio alla privacy e alla sicurezza
 ---
 
-Benvenuti nei principi guida di Onetime Secret. Questi documenti fondamentali spiegano il nostro approccio a:
-
-- Privacy e minimizzazione dei dati
-- Comunicazione e trasparenza con gli utenti
-- Affidabilità e fiducia nel servizio
-- Pratiche operative
+Onetime Secret esiste perché possiate condividere informazioni sensibili senza lasciarle in giro. Questi principi danno forma a ogni decisione di prodotto e operativa che prendiamo — e poiché sono scritti nero su bianco, potete esigere che li rispettiamo.
 
 ## I nostri impegni
 
-- **[Privacy First](/it/principles/privacy-first)**: Il nostro approccio alla protezione della privacy degli utenti attraverso scelte progettuali mirate.
-- **[Building Trust](/it/principles/trust)**: Come guadagniamo e manteniamo la fiducia degli utenti attraverso le azioni, non le parole.
-- **[Filosofia della comunicazione](/it/principles/communication)**: Perché limitiamo la comunicazione via e-mail solo a ciò che è necessario
-- **[Minimizzazione dei dati](/it/principles/data-minimization)**: Il nostro impegno a raccogliere e conservare solo i dati più essenziali
-
+- **[La privacy prima di tutto](/it/principles/privacy-first)** — le pratiche di tracciamento e marketing che evitiamo deliberatamente, e come manteniamo verificabili questi impegni
+- **[Comunicazione](/it/principles/communication)** — perché inviamo meno email possibile, e le tre categorie ben delimitate a cui ci limitiamo
+- **[Minimizzazione dei dati](/it/principles/data-minimization)** — il poco che conserviamo, per quanto tempo lo teniamo e cosa non raccogliamo mai
 
 ## Perché i principi contano
 
-In Onetime Secret, i nostri principi guidano ogni decisione che prendiamo. Ci aiutano:
+Dei principi scritti ci mantengono coerenti. Risolvono le decisioni di prodotto prima che diventino dibattiti e vi danno un riferimento pubblico e stabile su cui misurarci. Quando crescita e privacy tirano in direzioni opposte, queste pagine dicono già quale delle due vince.
 
-- Rimanere concentrati su ciò che conta
-- Fare scelte coerenti
-- Costruire una fiducia duratura
-- Mantenere la trasparenza
+Per il lato tecnico di questi impegni — crittografia, gestione dei dati, segnalazione delle vulnerabilità — consultate [Sicurezza e fiducia](/it/security).
 
-Non si tratta di semplici linee guida, ma di impegni assunti nei confronti dei nostri utenti, che danno forma al nostro modo di operare.
+**Domande sul nostro approccio?** [Contattateci](https://onetimesecret.com/feedback).

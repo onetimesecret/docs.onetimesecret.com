@@ -1,24 +1,25 @@
 ---
-title: Minimalna zbieranie danych
-description: Nasze zobowiązanie do zbierania tylko niezbędnych danych wymaganych do świadczenia naszej usługi
+title: Minimalizacja danych
+description: Nasze zobowiązanie do zbierania wyłącznie niezbędnych danych wymaganych do świadczenia usługi
 ---
 
-**Opis:** W Onetime Secret zbieramy tylko dane wymagane do dostarczenia naszej usługi: tymczasowe sekrety i minimalne informacje o koncie potrzebne do płatnych subskrypcji. To sprawia, że wszystko jest proste i bezpieczne.
+Zbieramy tylko te dane, które są niezbędne do świadczenia usługi: tymczasowe sekrety oraz minimum informacji o koncie potrzebnych do obsługi płatnych subskrypcji. O nic więcej nie pytamy.
 
-**Dlaczego to ma znaczenie:**
+## Co przechowujemy
 
-1. **Mniejsze ryzyko:** Im mniej danych przechowujemy, tym mniej jest do ochrony. Zbierając tylko to, co konieczne, zmniejszamy potencjalne zagrożenia bezpieczeństwa.
+- **Dla każdego sekretu** — sam zaszyfrowany sekret, przechowywany tylko do momentu wyświetlenia lub wygaśnięcia. Potem jest trwale usuwany. Jedyny wyjątek: minimalne zaszyfrowane kopie zapasowe, które przechowujemy na wypadek awarii — więcej na ten temat w naszej [Polityce prywatności](https://onetimesecret.com/info/privacy).
+- **Dla posiadaczy kont** — adres e-mail, który w zupełności wystarcza do zarządzania kontem i subskrypcją. Nie zbieramy imion, nazwisk ani danych profilowych; usługa ich nie potrzebuje, więc o nie nie pytamy.
 
-2. **Jasny cel:** Każda informacja, którą zbieramy, ma określony cel w dostarczaniu naszej usługi. Bez śledzenia, bez analityki, bez dodatków.
+## Czego nie śledzimy
 
-3. **Projekt zero-knowledge**: Nie możemy uzyskać dostępu do Twoich sekretów i nie chcemy. Każdy sekret jest zaszyfrowany, dostępny tylko raz i automatycznie usuwany po wyświetleniu lub wygaśnięciu.
+Nie używamy plików cookie do śledzenia, analityki ani reklam. Jedyny plik cookie, który ustawiamy, utrzymuje Cię zalogowanym, jeśli utworzysz konto. Preferencje interfejsu, takie jak tryb kolorów i język, są zapisywane we własnej pamięci Twojej przeglądarki (`localStorage` i `sessionStorage`), a nie w plikach cookie.
 
-**Jak to działa:**
+## Dlaczego to ma znaczenie
 
-1. **Dla pojedynczych sekretów:** Przechowujemy tylko zaszyfrowany sekret, dopóki nie zostanie wyświetlony lub nie wygaśnie. Potem jest trwale usuwany. (Poza minimalnymi zaszyfrowanymi kopiami zapasowymi, które przechowujemy na wypadek awarii. Więcej na ten temat omawiamy w naszej [Polityce prywatności](https://onetimesecret.com/info/privacy).)
+- **Mniejsze ryzyko.** Im mniej danych przechowujemy, tym mniej jest do ochrony. Zbieranie tylko tego, co konieczne, ogranicza potencjalne zagrożenia bezpieczeństwa.
+- **Jasny cel.** Każda informacja, którą zbieramy, pełni konkretną rolę w świadczeniu usługi. Bez śledzenia, bez analityki, bez dodatków.
+- **Projekt zero-knowledge.** Nie możemy uzyskać dostępu do Twoich sekretów i nie chcemy tego. Każdy sekret jest zaszyfrowany, dostępny tylko raz i automatycznie usuwany po wyświetleniu lub wygaśnięciu.
 
-2. **Dla zarejestrowanych użytkowników:** Przechowujemy tylko tyle informacji, ile potrzeba do zarządzania Twoim kontem i świadczenia usługi, za którą zapłaciłeś. Dlatego zbieramy tylko adres e-mail. Nie zbieramy nazwiska ani szczegółów profilu, ponieważ nie potrzebujesz tych funkcji.
+To podejście dobrze służy nam i naszym użytkownikom od 2012 roku. Jest proste, skuteczne i szanuje Twoją prywatność.
 
-3. **Bez śledzenia:** Nie używamy plików cookie do śledzenia, analityki ani reklam. Jedyny plik cookie, którego używamy, służy do utrzymywania Cię zalogowanym, jeśli zdecydujesz się utworzyć konto.
-
-To podejście dobrze nam i naszym użytkownikom służy od 2012 roku. Jest proste, skuteczne i szanuje Twoją prywatność.
+**Masz pytania o nasze podejście?** [Skontaktuj się z nami](https://onetimesecret.com/feedback).
