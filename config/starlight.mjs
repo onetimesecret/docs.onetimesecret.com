@@ -32,7 +32,7 @@ export const starlightConfig = {
     alt: "Onetime Secret",
     replacesTitle: true,
   },
-  pagefind: false,
+  pagefind: true,
   plugins: [],
 
   // Prerelease only: keep the staging/preview deploy out of search engines.
