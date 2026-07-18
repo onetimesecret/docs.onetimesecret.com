@@ -7,20 +7,15 @@ sidebar:
 
 Verileriniz, güvenliğiniz ve dağıtımınız üzerinde tam kontrolle kendi özel Onetime Secret örneğinizi çalıştırın.
 
-<!-- EDITORS: This caution block is intentional. v0.23 still provides a smoother
-     onboarding experience than v0.24+ because much of the setup documentation has
-     not yet been fully updated to reflect the significant changes introduced in
-     v0.24. Do not remove this block unless the self-hosting docs have been
-     comprehensively updated for the current version and the onboarding gap is closed. -->
-:::caution[Mart 2026 — Kendi sunucunuzda barındırma dokümantasyonu geçiş sürecinde]
-**v0.23** ile **v0.24** (`main` dalı) arasındaki geçiş sürecindeyiz. Kendi sunucunuzda barındırma dokümantasyonumuzun bir kısmı güncel değil ve [aktif olarak iyileştirme üzerinde çalışıyoruz](https://github.com/onetimesecret/onetimesecret/issues/2628).
+:::tip[Mevcut sürüm: v0.25]
+Mevcut kararlı sürüm **v0.25** (`main` dalı) sürümüdür. İki modda çalışır:
 
-**Hızlıca çalışan bir kurulum istiyorsanız**, `rel/0.23` dalını öneriyoruz. Yalnızca birkaç ortam değişkeni ve Redis gerektirir ve bu dala hâlâ aktif olarak düzeltmeler ve küçük güncellemeler gönderiyoruz.
+- **Basit mod** — en kolay yol. Yalnızca Redis ve birkaç ortam değişkenine ihtiyaç duyar. Hesaplar her zaman olduğu gibi çalışır. Aşağıdaki [Hızlı Başlangıç](#hızlı-başlangıç-seçenekleri) bölümünden başlayın.
+- **Tam mod** — PostgreSQL ve RabbitMQ tarafından desteklenen hesap özelliklerini (MFA, SSO, WebAuthn, organizasyonlar) ekler.
 
-```bash
-git clone -b rel/0.23 https://github.com/onetimesecret/onetimesecret.git
-```
+v0.22 veya v0.23'ten geliyorsanız, yapılandırma ve veri modeli değişikliklerini ve bir kimlik doğrulama modu seçmeyi ele alan [v0.24+ Sürümüne Yükseltme](./upgrading-v0-24) kılavuzunu izleyin.
 :::
+
 
 ## Neden Kendi Sunucunuzda Barındırmalısınız?
 
@@ -42,7 +37,7 @@ docker run -p 6379:6379 -d redis:bookworm
 docker run -p 3000:3000 -d \
   -e REDIS_URL=redis://host.docker.internal:6379/0 \
   -e SECRET="$(openssl rand -hex 32)" \
-  onetimesecret/onetimesecret:v0.25.10
+  onetimesecret/onetimesecret:v0.25.11
 ```
 
 `http://localhost:3000` adresinden erişin.

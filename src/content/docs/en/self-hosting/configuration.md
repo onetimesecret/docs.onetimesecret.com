@@ -8,6 +8,10 @@ sidebar:
 
 This comprehensive guide covers all configuration options for self-hosted Onetime Secret instances.
 
+:::tip[Try the Configuration Generator]
+Not sure where to start? The **[Configuration Generator](/en/self-hosting/configuration-generator/)** lets you pick a few preset options (deployment mode, email delivery, SSO, custom domains, and more) and copies out ready-to-use `etc/config.yaml` and `etc/auth.yaml` fragments plus a matching `.env` starter — all generated in your browser from the config schemas.
+:::
+
 ## Configuration Files
 
 Onetime Secret uses multiple configuration files:

@@ -1,74 +1,59 @@
 // config/domains.mjs
-// Central domain configuration for canonical URLs and staging detection.
-//
-// This mirrors the company site's `config/domains.ts` so the documentation
-// site marks its staging environment the same way the main onetimesecret.dev
-// site does (a top banner + a diagonal "STAGING" watermark). Keeping the
-// hostname list and helper identical across properties means the two sites
-// stay in sync if a new staging/dev domain is ever added.
+// Canonical URL + prerelease-marker configuration for the documentation site.
 
 /**
- * The canonical production domain for the documentation site. Used for the
- * "Go to live docs" link in the staging banner so visitors can jump from the
- * staging deploy to the real docs.
+ * The canonical production origin. Used as the target of the "Go to live docs"
+ * link in the prerelease banner (StagingBanner.astro). It is intentionally NOT
+ * used to derive page canonicals — those come from Astro's `site` / `SITE_URL`
+ * (see astro.config.mjs).
  */
 export const CANONICAL_ORIGIN = "https://docs.onetimesecret.com";
 
-/**
- * Hostnames that indicate a staging/development environment. The banner and
- * watermark are shown on any hostname that exactly matches one of these or is
- * a subdomain of it (e.g. `docs.onetimesecret.dev`).
- */
-export const STAGING_HOSTNAMES = [
-  "onetimesecret.dev", // Staging deployment (docs.onetimesecret.dev)
-  "onetime.dev", // Local development convenience domain
-];
-
-/**
- * Check if a hostname is a staging/development environment.
- *
- * Uses strict matching (exact match or subdomain) to prevent spoofing where an
- * attacker could register e.g. `onetimesecret.dev.attacker.com`.
- *
- * @param {string | undefined | null} hostname
- * @returns {boolean}
- */
-export function isStagingHostname(hostname) {
-  if (!hostname) return false;
-  return STAGING_HOSTNAMES.some(
-    (staging) => hostname === staging || hostname.endsWith(`.${staging}`),
-  );
+/** Coerce an env-var string to a boolean: "true"/"1" => true, anything else => false. */
+function flag(value) {
+  return value === "true" || value === "1";
 }
 
 /**
- * Decide at build time whether this is a staging build.
+ * Whether to render the prerelease warning banner (StagingBanner.astro).
  *
- * The staging deploy sets `SITE_URL` to the .dev domain (see
- * `.github/workflows/deploy-staging.yml`), which also drives canonical URLs
- * and the sitemap. Because staging is a separate build from production we can
- * resolve this once at build time — the banner is then baked into the static
- * HTML with no client-side JavaScript, no layout shift, and no flash.
+ * Driven by the build-time `SHOW_STAGING_WARNING` env var, deliberately
+ * DECOUPLED from `SITE_URL`. `SITE_URL` governs the canonical/sitemap/OG URLs;
+ * the prerelease markers are a separate, explicit signal. Off by default, so a
+ * production build (which sets neither flag) never shows the banner.
  *
- * The `STAGING_BANNER` environment variable provides an explicit override that
- * takes precedence over `SITE_URL` detection:
- *   - `STAGING_BANNER=true` (or `1`)  -> force the banner/watermark on
- *   - `STAGING_BANNER=false` (or `0`) -> force them off
- * This is handy for previewing the banner locally (`STAGING_BANNER=true
- * pnpm dev`) or disabling it on a one-off staging build.
+ * To preview locally: `SHOW_STAGING_WARNING=true pnpm dev`.
  *
  * @param {NodeJS.ProcessEnv} [env]
  * @returns {boolean}
  */
-export function isStagingBuild(env = process.env) {
-  const flag = env.STAGING_BANNER;
-  if (flag === "true" || flag === "1") return true;
-  if (flag === "false" || flag === "0") return false;
+export function showStagingWarning(env = process.env) {
+  return flag(env.SHOW_STAGING_WARNING);
+}
 
-  const siteUrl = env.SITE_URL;
-  if (!siteUrl) return false;
-  try {
-    return isStagingHostname(new URL(siteUrl).hostname);
-  } catch {
-    return false;
-  }
+/**
+ * Whether to render the diagonal "PRERELEASE" watermark overlay
+ * (StagingWatermark.astro). Driven by `SHOW_STAGING_WATERMARK`, independent of
+ * the banner so the two can be toggled separately.
+ *
+ * @param {NodeJS.ProcessEnv} [env]
+ * @returns {boolean}
+ */
+export function showStagingWatermark(env = process.env) {
+  return flag(env.SHOW_STAGING_WATERMARK);
+}
+
+/**
+ * Whether this is a prerelease build at all (either marker enabled).
+ *
+ * Used to emit a site-wide `noindex` so the staging/preview deploy stays out of
+ * search engines — the directive Google actually honours for keeping a page out
+ * of the index. The page canonical is left self-referential (we do NOT add a
+ * cross-host canonical, which would conflict with `noindex`).
+ *
+ * @param {NodeJS.ProcessEnv} [env]
+ * @returns {boolean}
+ */
+export function isPrereleaseBuild(env = process.env) {
+  return showStagingWarning(env) || showStagingWatermark(env);
 }

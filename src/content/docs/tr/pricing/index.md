@@ -9,19 +9,19 @@ Gizli bilgileri güvenle paylaşın, markanızı yükseltin ve güven oluşturun
 
 ## Planlar
 
-### Basic
+### Free
 
 **$0/ay**
 
-Herkes için güvenli, tek kullanımlık paylaşım.
+Herkes için güvenli, kendi kendini yok eden gizli mesaj paylaşımı.
 
 **Özellikler:**
-- Paylaşılan gizli mesajların tek seferlik görüntülenmesi
-- Görüntüleme sonrası otomatik silme
-- Alıcılara e-posta göndermek için hesap gereklidir
-- Temel API erişimi
+- Erişimden sonra otomatik olarak silinen tek seferlik görüntüleme
+- Bir özel alan adı
+- Ana sayfa ve gelen gizli mesajlar
+- API erişimi
 
-[Başlayın](https://onetimesecret.com/plans/basic)
+[Başlayın](https://onetimesecret.com/plans/free)
 
 ### Identity Plus
 
@@ -35,15 +35,18 @@ Markanızı yükselten ve iletişimi basitleştiren güvenli paylaşım.
 
 [Güncel fiyatları görün](https://onetimesecret.com/pricing) | [Bu planı seçin](https://onetimesecret.com/plans/identity)
 
-### Global Elite
+### Team Plus
 
-Özel altyapı, veri uyumluluk kontrolleri ve sınırsız ölçeklenebilirlik ile tamamen özelleştirilmiş, tek kiracılı kurulum.
+SSO, erişim kontrolleri ve kurumsal görünürlük ile yönetilen gizli mesaj paylaşımı.
 
 **Özellikler:**
-- Özel bulut ortamı
-- Sınırsız kullanım ve ölçekleme
-- Çoklu veri konumu seçenekleri (AB, ABD)
-- Tam düzenleyici uyumluluk (GDPR, CCPA, HIPAA dahil)
+- Identity Plus'taki her şey
+- Tek oturum açma (SSO)
+- Ekip yönetimi ve paylaşılan kontrol paneli
+- Esnek e-posta gönderen alan adı
+- Alan adı başına kayıt doğrulaması
+
+[Güncel fiyatları görün](https://onetimesecret.com/pricing)
 
 ## Sıkça Sorulan Sorular
 
@@ -60,7 +63,7 @@ Evet, Onetime Secret çoğu özelliği ücretsiz olarak kullanmanıza olanak tan
 Evet, Onetime Secret, kolay dağıtım ve yönetim sağlayan SimpleStack℠ garantimizle kendi sunucunuzda barındırma seçeneği sunar. [GitHub](https://github.com/onetimesecret/onetimesecret)
 
 ### Onetime Secret ne kadar güvenli?
-Güvenliği çok ciddiye alıyoruz ve kullanıcıların bilgilerini korumak için çeşitli önlemler uyguluyoruz. Gizlilik politikamızda belirtildiği üzere, tüm verileri yetkisiz erişim, değiştirme veya imha edilmeden korumak için endüstri standardı uygulamalar kullanıyoruz. Aktarılan tüm veriler HTTPS/TLS kullanılarak şifrelenir ve veri koruma yasalarına uygun olarak Avrupa Birliği'nde güvenli bir şekilde saklanır.
+Güvenliği çok ciddiye alıyoruz ve kullanıcıların bilgilerini korumak için çeşitli önlemler uyguluyoruz. Gizlilik politikamızda belirtildiği üzere, tüm verileri yetkisiz erişim, değiştirme veya imha edilmeden korumak için endüstri standardı uygulamalar kullanıyoruz. Aktarım sırasında tüm veriler HTTPS/TLS kullanılarak şifrelenir, bekleyen veriler ise seçtiğiniz veri merkezi bölgesinde — Kanada, Avrupa Birliği, Yeni Zelanda, Birleşik Krallık veya Amerika Birleşik Devletleri — o bölge için geçerli veri koruma yasalarına uygun şekilde güvenli bir biçimde saklanır.
 
 Ancak, hiçbir elektronik iletim veya depolama yönteminin %100 güvenli olmadığı konusunda da şeffafız. Kişisel bilgileri korumak için ticari olarak kabul edilebilir araçlar kullanmaya çalışsak da, mutlak güvenliğini garanti edemeyiz. Kullanıcıların güvenlik ifadeleri kullanma gibi önlemler almasını öneririz. Taahhüdümüz, potansiyel riskler konusunda açık olmakla birlikte verileri elimizden geldiğince güvence altına almada özenli olmaktır.
 

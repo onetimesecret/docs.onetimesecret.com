@@ -204,13 +204,17 @@ export const sidebar = [
     createLink("regionNZ", "regions/new-zealand"),
     createLink("regionUK", "regions/united-kingdom"),
     createLink("regionUS", "regions/united-states"),
+    createLink("switchingRegions", "regions/switching-regions"),
   ]),
 
   createGroup("selfHosting", [
     createLink("overview", "self-hosting"),
+    createLink("hostingChoice", "self-hosting/self-hosting-vs-hosted"),
+    createLink("authModeChoice", "self-hosting/simple-or-full-auth"),
     createLink("gettingStarted", "self-hosting/getting-started"),
     createLink("installationDeployment", "self-hosting/installation"),
     createLink("configurationReference", "self-hosting/configuration"),
+    createLink("configurationGenerator", "self-hosting/configuration-generator"),
     createLink("environmentVariables", "self-hosting/environment-variables"),
     createLink("upgradingToV023", "self-hosting/upgrading-v0-23"),
     createLink("upgradingToV024", "self-hosting/upgrading-v0-24"),

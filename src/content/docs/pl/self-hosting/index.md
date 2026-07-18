@@ -7,20 +7,15 @@ sidebar:
 
 Uruchom własną prywatną instancję Onetime Secret z pełną kontrolą nad danymi, bezpieczeństwem i wdrożeniem.
 
-<!-- EDITORS: This caution block is intentional. v0.23 still provides a smoother
-     onboarding experience than v0.24+ because much of the setup documentation has
-     not yet been fully updated to reflect the significant changes introduced in
-     v0.24. Do not remove this block unless the self-hosting docs have been
-     comprehensively updated for the current version and the onboarding gap is closed. -->
-:::caution[Marzec 2026 — Dokumentacja self-hostingu w trakcie aktualizacji]
-Jesteśmy w trakcie przejścia między **v0.23** a **v0.24** (gałąź `main`). Część naszej dokumentacji self-hostingu jest nieaktualna i [aktywnie pracujemy nad jej ulepszeniem](https://github.com/onetimesecret/onetimesecret/issues/2628).
+:::tip[Aktualna wersja: v0.25]
+Aktualna stabilna wersja to **v0.25** (gałąź `main`). Działa w dwóch trybach:
 
-**Jeśli chcesz po prostu uruchomić działającą instancję**, zalecamy gałąź `rel/0.23`. Wymaga ona jedynie kilku zmiennych środowiskowych i Redisa, a my nadal aktywnie publikujemy poprawki i drobne aktualizacje.
+- **Tryb prosty** — najłatwiejsza ścieżka. Wymaga tylko Redis i kilku zmiennych środowiskowych. Konta działają tak samo jak zawsze. Zacznij tutaj od [Szybkiego startu](#opcje-szybkiego-startu) poniżej.
+- **Tryb pełny** — dodaje funkcje konta (MFA, SSO, WebAuthn, organizacje) wspierane przez PostgreSQL i RabbitMQ.
 
-```bash
-git clone -b rel/0.23 https://github.com/onetimesecret/onetimesecret.git
-```
+Jeśli aktualizujesz z v0.22 lub v0.23, postępuj zgodnie z przewodnikiem [Aktualizacja do v0.24+](./upgrading-v0-24), który omawia zmiany konfiguracji i modelu danych oraz sposób wyboru trybu uwierzytelniania.
 :::
+
 
 ## Dlaczego self-hosting?
 
@@ -42,7 +37,7 @@ docker run -p 6379:6379 -d redis:bookworm
 docker run -p 3000:3000 -d \
   -e REDIS_URL=redis://host.docker.internal:6379/0 \
   -e SECRET="$(openssl rand -hex 32)" \
-  onetimesecret/onetimesecret:v0.25.10
+  onetimesecret/onetimesecret:v0.25.11
 ```
 
 Dostęp pod adresem `http://localhost:3000`.

@@ -7,20 +7,15 @@ sidebar:
 
 Ejecute su propia instancia privada de Onetime Secret con control total sobre sus datos, seguridad e implementación.
 
-<!-- EDITORS: This caution block is intentional. v0.23 still provides a smoother
-     onboarding experience than v0.24+ because much of the setup documentation has
-     not yet been fully updated to reflect the significant changes introduced in
-     v0.24. Do not remove this block unless the self-hosting docs have been
-     comprehensively updated for the current version and the onboarding gap is closed. -->
-:::caution[Marzo de 2026 — Documentación de autoalojamiento en transición]
-Nos encontramos en medio de la transición entre **v0.23** y **v0.24** (la rama `main`). Parte de nuestra documentación de autoalojamiento está desactualizada y estamos [trabajando activamente para mejorarla](https://github.com/onetimesecret/onetimesecret/issues/2628).
+:::tip[Versión actual: v0.25]
+La versión estable actual es **v0.25** (la rama `main`). Funciona en dos modos:
 
-**Si solo desea poner algo en funcionamiento**, le recomendamos la rama `rel/0.23`. Solo necesita un par de variables de entorno y Redis, y seguimos publicando correcciones y pequeñas actualizaciones en ella.
+- **Modo simple** — el camino más sencillo. Solo necesita Redis y un par de variables de entorno. Las cuentas funcionan igual que siempre. Empiece aquí con las [opciones de inicio rápido](#opciones-de-inicio-rápido) a continuación.
+- **Modo completo** — añade funciones de cuenta (MFA, SSO, WebAuthn, organizaciones) respaldadas por PostgreSQL y RabbitMQ.
 
-```bash
-git clone -b rel/0.23 https://github.com/onetimesecret/onetimesecret.git
-```
+Si viene de v0.22 o v0.23, siga la guía [Actualización a v0.24+](./upgrading-v0-24), que cubre los cambios de configuración y modelo de datos y cómo elegir un modo de autenticación.
 :::
+
 
 ## ¿Por qué autoalojar?
 
@@ -42,7 +37,7 @@ docker run -p 6379:6379 -d redis:bookworm
 docker run -p 3000:3000 -d \
   -e REDIS_URL=redis://host.docker.internal:6379/0 \
   -e SECRET="$(openssl rand -hex 32)" \
-  onetimesecret/onetimesecret:v0.25.10
+  onetimesecret/onetimesecret:v0.25.11
 ```
 
 Acceda en `http://localhost:3000`.

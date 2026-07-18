@@ -19,7 +19,8 @@ Certain terms must remain untranslated to maintain brand identity and product co
 | Term | Context |
 |------|---------|
 | **Identity Plus** | Subscription tier name |
-| **Global Elite** | Subscription tier name |
+| **Team Plus** | Subscription tier name |
+| **Global Elite** | Subscription tier name (retired from public pricing, still referenced for dedicated-instance inquiries) |
 | **Custom Install** | Self-hosted product offering |
 
 ## About the Brand Name

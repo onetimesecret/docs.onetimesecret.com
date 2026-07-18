@@ -9,19 +9,19 @@ Dela konfidentiell information med förtroende, förhöj ditt varumärke och byg
 
 ## Planer
 
-### Basic
+### Free
 
-**0 kr/månad**
+**$0/månad**
 
-Säker, engångsdelning för alla.
+Säker, självförstörande delning av hemligheter för alla.
 
 **Funktioner:**
-- Engångsvisning av delade hemligheter
-- Automatisk radering efter visning
-- Konto krävs för att e-posta mottagare
-- Grundläggande API-åtkomst
+- Engångsvisning med automatisk radering efter åtkomst
+- En anpassad domän
+- Startsida & inkommande hemligheter
+- API-åtkomst
 
-[Kom igång](https://onetimesecret.com/plans/basic)
+[Kom igång](https://onetimesecret.com/plans/free)
 
 ### Identity Plus
 
@@ -35,15 +35,18 @@ Säker delning som förhöjer ditt varumärke och förenklar kommunikation.
 
 [Se aktuella priser](https://onetimesecret.com/pricing) | [Välj denna plan](https://onetimesecret.com/plans/identity)
 
-### Global Elite
+### Team Plus
 
-En helt anpassad installation med enskild klientmiljö, dedikerad infrastruktur, dataefterlevnadskontroller och obegränsad skalbarhet.
+Kontrollerad delning av hemligheter med SSO, åtkomstkontroller och organisatorisk insyn.
 
 **Funktioner:**
-- Privat molnmiljö
-- Obegränsad användning och skalning
-- Flera datalokaliserings val (EU, USA)
-- Full regulatorisk efterlevnad (inklusive GDPR, CCPA, HIPAA)
+- Allt i Identity Plus
+- Single sign-on (SSO)
+- Teamhantering & delad instrumentpanel
+- Flexibel avsändardomän för e-post
+- Domänspecifik registreringsvalidering
+
+[Se aktuella priser](https://onetimesecret.com/pricing)
 
 ## Vanliga frågor
 
@@ -60,7 +63,7 @@ Ja, Onetime Secret erbjuder en gratis nivå som låter dig använda de flesta fu
 Ja, Onetime Secret erbjuder ett självhostningsalternativ med vår SimpleStack℠-garanti, vilket säkerställer enkel distribution och hantering. [GitHub](https://github.com/onetimesecret/onetimesecret)
 
 ### Hur säker är Onetime Secret?
-Vi tar säkerhet mycket på allvar och använder flera åtgärder för att skydda användares information. Som anges i vår integritetspolicy använder vi branschstandardmetoder för att skydda all data från obehörig åtkomst, ändring eller förstöring. All data under överföring krypteras med HTTPS/TLS och lagras säkert i Europeiska unionen i enlighet med dataskyddslagar.
+Vi tar säkerhet mycket på allvar och använder flera åtgärder för att skydda användares information. Som anges i vår integritetspolicy använder vi branschstandardmetoder för att skydda all data från obehörig åtkomst, ändring eller förstöring. All data under överföring krypteras med HTTPS/TLS, och data i vila lagras säkert i den datacenterregion du väljer – Kanada, Europeiska unionen, Nya Zeeland, Storbritannien eller USA – i enlighet med de tillämpliga dataskyddslagarna för den regionen.
 
 Dock är vi också transparenta om att ingen metod för elektronisk överföring eller lagring är 100% säker. Medan vi strävar efter att använda kommersiellt acceptabla metoder för att skydda personlig information, kan vi inte garantera dess absoluta säkerhet. Vi rekommenderar användare att vidta försiktighetsåtgärder som att använda lösenfraser. Vårt åtagande är att vara omsorgsfulla i att säkra data efter bästa förmåga samtidigt som vi är öppna om potentiella risker.
 

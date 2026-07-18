@@ -76,7 +76,7 @@ Before translating, review these cross-language guidelines that apply to all loc
 | Български | Немски (AT) | Френски (FR) | Френски (CA) | Бележки |
 |---------|-------------|-------------|-------------|-------|
 | one-time access | einmaliger Zugang | accès unique | accès unique | Core security feature |
-| защита с парола | Schutz durch Sicherheitsphrase | protection par phrase secrète | protection par phrase d'authentification | Допълнителна сигурност |
+| защита с ключова фраза | Schutz durch Sicherheitsphrase | protection par phrase secrète | protection par phrase d'authentification | Допълнителна сигурност |
 | encrypted in transit | verschlüsselt bei der Übertragung | chiffré en transit | chiffré en transit | Data protection method |
 | encrypted at rest | verschlüsselt im Ruhezustand | chiffré au repos | chiffré au repos | Storage protection |
 

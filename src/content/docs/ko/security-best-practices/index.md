@@ -15,7 +15,7 @@ Onetime Secret은 보안을 염두에 두고 설계되었지만, 특히 사용�
 
 4. **메타데이터 공유 시 보안 채널 사용**: Onetime Secret은 비밀 메시지의 콘텐츠를 보호하지만, 링크 및 관련 메타데이터(접근 문구 등)를 공유하는 방식에 유의하세요. 이 통신에는 안전한 암호화된 채널을 사용하세요.
 
-5. **수신자 확인**을 클릭합니다: 의도한 수신자와 비밀을 공유하고 있는지 확인하세요. 보내기 전에 이메일 주소나 사용자 아이디를 다시 확인하세요.
+5. **수신자 확인**: 의도한 수신자와 비밀을 공유하고 있는지 확인하세요. 보내기 전에 이메일 주소나 사용자 아이디를 다시 확인하세요.
 
 6. **사용자 교육**: 조직 내에서 Onetime Secret을 사용하는 경우, 팀원들에게 적절한 사용법과 비밀 공유와 관련된 보안 관행에 대해 교육하세요.
 
@@ -45,11 +45,11 @@ Onetime Secret API를 사용하는 경우:
 
 ## 고급 셀프 호스팅 보안
 
-이 섹션에서는 Onetime Secret의 자체 인스턴스를 실행하는 조직을 위한 고급 보안 고려 사항을 다룹니다. 오픈 소스 프로젝트는 [GitHub](https://github.com/onetimesecret/onetimesecret)에서, 공식 Docker 이미지는 [Docker Hub](https://hub.docker.com/r/onetimesecret/onetimesecret)에서 찾을 수 있습니다.
+이 섹션에서는 Onetime Secret의 자체 인스턴스를 실행하는 조직을 위한 고급 보안 고려 사항을 다룹니다. 오픈 소스 프로젝트는 [GitHub](https://github.com/onetimesecret/onetimesecret)에서, 공식 컨테이너 이미지는 [GitHub Container Registry](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret)에서 찾을 수 있습니다.
 
 Onetime Secret을 셀프 호스팅할 때 인프라 수준에서 아래 권장 사항을 구현할 수 있습니다:
 
-1. **임시 환경 사용**: 가능하면 각 비밀 공유 세션에 대해 환경을 만들고 삭제하세요. 이는 매우 민감한 작업에 특히 유용할 수 있습니다. [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/blob/v0.18.5/docs/DOCKER-lite.md) 도커 이미지는 임시 사용 사례를 위해 설계되었습니다.
+1. **임시 환경 사용**: 가능하면 각 비밀 공유 세션에 대해 환경을 만들고 삭제하세요. 이는 매우 민감한 작업에 특히 유용할 수 있습니다. [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret-lite) 도커 이미지는 임시 사용 사례를 위해 설계되었습니다.
 
 2. **시간 기반 제한 구현**: 사용 사례에서 허용하는 경우, 업무 시간에만 비밀 정보에 액세스하도록 하는 등 시간 기반 제한을 구현하는 것을 고려하세요.
 
@@ -62,7 +62,7 @@ Onetime Secret을 셀프 호스팅할 때 인프라 수준에서 아래 권장 �
 
 ## 인시던트 대응
 
-이 섹션에서는 조직에 도움이 될 수 있는 일반적인 보안 권장 사항을 간략하게 설명합니다. 이러한 권장 사항은 Dropbox 서비스의 특정 기능이 아닙니다.
+이 섹션에서는 조직에 도움이 될 수 있는 일반적인 보안 권장 사항을 간략하게 설명합니다. 이러한 권장 사항은 원타임 시크릿 자체 서비스의 특정 기능이 아닙니다.
 
 1. **계획을 세우세요**: 비밀 공유 프로세스에 맞는 사고 대응 계획을 수립하세요. 여기에는 액세스 권한 취소, 영향을 받는 당사자에게 알림, 잠재적 피해 완화 등의 단계가 포함되어야 합니다.
 

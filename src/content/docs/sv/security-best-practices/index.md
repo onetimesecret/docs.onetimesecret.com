@@ -45,11 +45,11 @@ Om du använder Onetime Secret API:
 
 ## Avancerad självhostad säkerhet
 
-Detta avsnitt täcker avancerade säkerhetsöverväganden för organisationer som kör sin egen instans av Onetime Secret. Du kan hitta open source-projektet på [GitHub](https://github.com/onetimesecret/onetimesecret) och officiella Docker-avbilder på [Docker Hub](https://hub.docker.com/r/onetimesecret/onetimesecret).
+Detta avsnitt täcker avancerade säkerhetsöverväganden för organisationer som kör sin egen instans av Onetime Secret. Du kan hitta open source-projektet på [GitHub](https://github.com/onetimesecret/onetimesecret) och officiella Docker-avbilder på [GitHub Container Registry](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret).
 
 Rekommendationerna nedan kan implementeras på din infrastrukturnivå när du självhostar Onetime Secret:
 
-1. **Använd tillfälliga miljöer**: När det är möjligt, skapa och förstör miljöer för varje hemlighetsdelningssession. Detta kan vara särskilt användbart för mycket känsliga operationer. Vår [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/blob/v0.18.5/docs/DOCKER-lite.md) Docker-avbild är designad för tillfälliga användningsfall.
+1. **Använd tillfälliga miljöer**: När det är möjligt, skapa och förstör miljöer för varje hemlighetsdelningssession. Detta kan vara särskilt användbart för mycket känsliga operationer. Vår [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret-lite) Docker-avbild är designad för tillfälliga användningsfall.
 
 2. **Implementera tidsbaserade begränsningar**: Om ditt användningsfall tillåter det, överväg att implementera tidsbaserade begränsningar för åtkomst till hemligheter, såsom endast under kontorstid.
 

@@ -1,29 +1,38 @@
 ---
 title: Comparar planes
-description: Compara nuestros planes repletos de funciones que ofrecen compartir secretos de forma segura con enlaces que caducan, dominios personalizados y opciones de almacenamiento flexibles para particulares y empresas.
+description: Compare nuestros planes de compartición segura de secretos — enlaces que caducan, dominios personalizados, marca personalizada, SSO y controles de equipo en Free, Identity Plus y Team Plus.
 ---
 
 
 ## Matriz de funciones
 
-| Características/Plan | Identity Plus | Basic | Sin iniciar sesión |
-|---------|----------------|-------------------------|------------|
-| Dominios personalizados | Ilimitados | ❌ | ❌ |
-| Página de inicio de marca | ✅ | ❌ | ❌ |
-| Logotipo y color personalizados | ✅ | ❌ | ❌ |
-| Número de cuentas | 1 | 1 | ❌ |
-| Caducidad del enlace | Hasta 30 días | 14 días | Limitado a 7 días |
-| Acceso a la API | ✅ | ✅ | Limitado |
-| Configuración requerida | Sí (configuración DNS) | No | No |
-| Pago | Sí (parte del plan de identidad) | No | No |
-| Seguridad SSL/TLS | ✅ | ✅ | ✅ |
-| Localidad de los datos | ✅ (UE o EE.UU.) | ✅ (UE o EE.UU.) | ✅ (UE o EE.UU.) |
+| Función / Plan | Sin iniciar sesión | Free | Identity Plus | Team Plus |
+|---|---|---|---|---|
+| Dominios personalizados | ❌ | 1 | Ilimitados | Ilimitados |
+| Secretos desde la página de inicio | ❌ | ✅ | ✅ | ✅ |
+| Secretos entrantes | ❌ | ✅ | ✅ | ✅ |
+| Acceso a la API | Limitado | ✅ | ✅ | ✅ |
+| Marca personalizada (logotipo, color) | ❌ | ❌ | ✅ | ✅ |
+| Remitente de correo electrónico personalizado | ❌ | ❌ | ✅ | ✅ \* |
+| Configuración de privacidad predeterminada personalizada | ❌ | ❌ | ✅ | ✅ |
+| Configuración de inicio de sesión por dominio | ❌ | ❌ | ✅ | ✅ |
+| Invitaciones de miembros | ❌ | ❌ | ✅ | ✅ |
+| Validación de registro por dominio | ❌ | ❌ | ❌ | ✅ |
+| Inicio de sesión único (SSO) | ❌ | ❌ | ❌ | ✅ |
+| Equipos y panel compartido | ❌ | ❌ | ❌ | ✅ |
+| Marca del espacio de trabajo | ❌ | ❌ | ❌ | ✅ |
+| Miembros por organización | — | 1 | Hasta 50 | Hasta 100 |
+| Caducidad del enlace | Hasta 7 días | Hasta 14 días | Hasta 30 días | Hasta 30 días |
+| Elección de región (EU, UK, US, CA, NZ) | ✅ | ✅ | ✅ | ✅ |
+| Cifrado en tránsito y en reposo | ✅ | ✅ | ✅ | ✅ |
+| De pago | No | No | Sí | Sí |
 
+\* Team Plus amplía el remitente de correo electrónico personalizado con un **dominio de remitente flexible** — cualquier dominio, no solo su dominio personalizado.
 
-Para más información sobre actualizaciones de cuenta y precios, visite nuestra [Página de precios](https://onetimesecret.com/pricing).
+Para conocer los precios actuales, visite nuestra [página de precios](https://onetimesecret.com/pricing).
 
 
 ## Próximamente
 
-* Correo electrónico personalizado desde detalles con soporte SPF y DKIM
-* Planes de equipo para varios usuarios
+* Registros de auditoría y reglas de acceso basadas en IP para Team Plus
+* [Secretary Links](https://secretlinks.com) — enlaces de recopilación seguros para recibir información confidencial de cualquier persona, sin necesidad de cuenta
