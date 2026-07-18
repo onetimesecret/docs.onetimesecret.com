@@ -31,7 +31,7 @@ chmod 600 .ots_secret
 echo "Gizli anahtar .ots_secret dosyasına kaydedildi (bu dosyayı güvende tutun!)"
 ```
 
-### 3. Onetime Secret'ı Çalıştırın
+### 3. Onetime Secret'i Çalıştırın
 
 ```bash
 # Gizli anahtarı kullanarak konteyneri çalıştırın

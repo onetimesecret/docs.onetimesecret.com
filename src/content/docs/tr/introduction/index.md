@@ -7,9 +7,9 @@ Onetime Secret Belgelerine hoş geldiniz. Gizlilik odaklı, geçici gizli mesaj 
 
 ## Burada Neler Var
 
-- Belgeler: Onetime Secret'ı etkili bir şekilde kullanmak için açık, özlü kılavuzlar
+- Belgeler: Onetime Secret'i etkili bir şekilde kullanmak için açık, özlü kılavuzlar
 - Blog: Gizlilik, güvenlik ve ürün güncellemeleri hakkında içgörüler
-- Kullanım Senaryoları: Çeşitli senaryolarda Onetime Secret'ın pratik uygulamaları (yakında)
+- Kullanım Senaryoları: Çeşitli senaryolarda Onetime Secret'in pratik uygulamaları (yakında)
 
 ## Temel İşlevsellik
 

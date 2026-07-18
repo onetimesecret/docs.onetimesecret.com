@@ -9,11 +9,11 @@ Onetime Secret belgelerini keşfetmek için navigasyon menüsünü kullanın. G�
 
 ## Başlangıç
 
-Onetime Secret'ın temellerini öğrenmek için [Giriş](/tr/introduction/) bölümümüzle başlayın.
+Onetime Secret'in temellerini öğrenmek için [Giriş](/tr/introduction/) bölümümüzle başlayın.
 
 ## Ana Bölümler
 
 - [Gizli Mesaj Bağlantıları](/tr/secret-links/) - Tek kullanımlık gizli mesajlar oluşturmayı ve paylaşmayı öğrenin
 - [Özel Alan Adları](/tr/custom-domains/) - Kendi markalı gizli mesaj paylaşım deneyiminizi kurun
-- [REST API](/tr/rest-api/) - Onetime Secret'ı uygulamalarınızla entegre edin
+- [REST API](/tr/rest-api/) - Onetime Secret'i uygulamalarınızla entegre edin
 - [Güvenlik En İyi Uygulamaları](/tr/security-best-practices/) - Hassas bilgileri paylaşırken maksimum güvenliği sağlayın

@@ -24,7 +24,7 @@ git clone -b rel/0.23 https://github.com/onetimesecret/onetimesecret.git
 
 ## Neden Kendi Sunucunuzda Barındırmalısınız?
 
-Onetime Secret'ı kendi sunucunuzda barındırmak size şunları sağlar:
+Onetime Secret'i kendi sunucunuzda barındırmak size şunları sağlar:
 
 - **Tam veri kontrolü** - Tüm gizli mesajlar altyapınızda ve ağınızda kalır
 - **Özel güvenlik politikaları** - Kimlik doğrulama, gizlilik seçenekleri ve erişim kontrollerini yapılandırın
@@ -37,7 +37,7 @@ Ortamınıza en uygun dağıtım yöntemini seçin:
 
 ### Docker (Önerilen)
 ```bash
-# Redis ve Onetime Secret'ı başlat
+# Redis ve Onetime Secret'i başlat
 docker run -p 6379:6379 -d redis:bookworm
 docker run -p 3000:3000 -d \
   -e REDIS_URL=redis://host.docker.internal:6379/0 \

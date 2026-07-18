@@ -5,7 +5,7 @@ description: 대행사, 기업 및 파워 유저를 위한 고급 기능인 사�
 
 ## 사용자 정의 도메인이란 무엇인가요?
 
-사용자 지정 도메인을 사용하면 원타임 시크릿 링크에 기본 _onetimesecret.com_ 도메인 대신 자신만의 도메인 이름을 사용할 수 있습니다. 이 기능은 브랜드 아이덴티티를 비밀 공유 경험에 통합하여 신뢰도와 전문성을 높여줍니다.
+사용자 지정 도메인을 사용하면 Onetime Secret 링크에 기본 _onetimesecret.com_ 도메인 대신 자신만의 도메인 이름을 사용할 수 있습니다. 이 기능은 브랜드 아이덴티티를 비밀 공유 경험에 통합하여 신뢰도와 전문성을 높여줍니다.
 
 <div class="flex justify-center items-center my-10">
   <a href="https://onetimesecret.com/pricing" class="text-center inline-block">
@@ -37,7 +37,7 @@ description: 대행사, 기업 및 파워 유저를 위한 고급 기능인 사�
 
 사용자 정의 도메인을 설정하려면
 
-1. 원타임 시크릿 계정에 로그인합니다.
+1. Onetime Secret 계정에 로그인합니다.
 2. 2. 계정 설정 > 사용자 지정 도메인으로 이동합니다.
 3. 3. 사용하려는 도메인을 입력하고 "도메인 추가"를 클릭합니다.
 4. 4. 원하는 데이터 센터 지역(EU 또는 미국)을 선택합니다.
