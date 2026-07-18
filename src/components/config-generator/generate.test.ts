@@ -10,7 +10,6 @@ import {
   coerce,
   defaultFor,
   defaultSelections,
-  envSnippet,
   generate,
   toQuery,
   type Selections,
