@@ -21,6 +21,6 @@ description: Our commitment to collecting only the essential data required to pr
 
 2. **For Registered Users:** We keep just enough information to manage your account and provide the service you've paid for. That's why we only collect an email address. We don't collect name or profile details because you don't need those features.
 
-3. **No Tracking:** We don't use cookies for tracking, analytics, or advertising. The only cookie we use is for keeping you logged in if you choose to create an account.
+3. **No Tracking:** We don't use cookies for tracking, analytics, or advertising. The only cookie we use is for keeping you logged in if you choose to create an account. Interface preferences like color mode and language live in your browser's own storage (`localStorage` and `sessionStorage`), not in cookies.
 
 This approach has served us and our users well since 2012. It's simple, effective, and respects your privacy.

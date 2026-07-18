@@ -7,18 +7,16 @@ description: Our approach to protecting user privacy through deliberate design c
 
 At Onetime Secret, we take a deliberately minimal approach to user privacy. Here's what we deliberately choose not to do, and more importantly, why.
 
-## Our No-Email Philosophy
+## Our Minimal-Email Philosophy
 
 Most services flood your inbox with:
 
 - Marketing newsletters
-- Product updates
 - Usage statistics
-- Feature announcements
 - Promotional offers
 - Re-engagement campaigns
 
-The only emails you'll receive from us are the ones you specifically request — secret link deliveries, account notifications, or updates you've explicitly opted into. Even when you do opt in, you'll rarely hear from us, and only for the specific reasons you chose. Your inbox belongs to you.
+We don't. You'll only hear from us for the service you're using, notices we're obligated to send, or updates you opted into. And no email we send contains tracking pixels or click-tracking links — we don't know whether you opened it or what you clicked. Your inbox belongs to you. (Our [Communication Philosophy](/en/principles/communication) breaks down exactly what we send and why.)
 
 ## Industry Standards We Skip
 
@@ -59,6 +57,6 @@ We put our time into the work that matters to you:
 
 We'll keep choosing simplicity and privacy over marketing reach. That means we may grow more slowly than services that optimize for engagement — and we're fine with that. A privacy tool earns its reputation through consistent, quiet reliability.
 
-When you do hear from us, it'll be because you asked to.
+When you do hear from us, it'll be for the service you use, a notice we owe you, or news you asked for.
 
 **Questions about our approach?** [Contact us](https://onetimesecret.com/feedback).
