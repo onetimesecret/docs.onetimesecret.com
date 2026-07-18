@@ -21,7 +21,7 @@ description: Изберете плана, който е подходящ за в
 - Начална страница и входящи тайни
 - Достъп до API
 
-[Започнете](https://onetimesecret.com/plans/basic)
+[Започнете](https://onetimesecret.com/plans/free)
 
 ### Identity Plus
 

@@ -21,9 +21,9 @@ description: 安全な共有のニーズに合ったプランをお選びくだ�
 - ホームページ機能と受信シークレット機能
 - APIアクセス
 
-[スタート](https://onetimesecret.com/plans/basic)
+[スタート](https://onetimesecret.com/plans/free)
 
-### アイデンティティ・プラス
+### Identity Plus
 
 ブランドを高め、コミュニケーションを簡素化する安全な共有。
 
@@ -35,12 +35,12 @@ description: 安全な共有のニーズに合ったプランをお選びくだ�
 
 [現在の料金を見る](https://onetimesecret.com/pricing) | [このプランを選択](https://onetimesecret.com/plans/identity)
 
-### チーム・プラス
+### Team Plus
 
 SSO、アクセス制御、組織全体の可視性を備えた、統制の効いたシークレット共有。
 
 **特徴:**
-- アイデンティティ・プラスの全機能
+- Identity Plusの全機能
 - シングルサインオン（SSO）
 - チーム管理と共有ダッシュボード
 - 柔軟なメール送信元（From）ドメイン

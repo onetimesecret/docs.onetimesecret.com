@@ -21,7 +21,7 @@ Herkes için güvenli, kendi kendini yok eden gizli mesaj paylaşımı.
 - Ana sayfa ve gelen gizli mesajlar
 - API erişimi
 
-[Başlayın](https://onetimesecret.com/plans/basic)
+[Başlayın](https://onetimesecret.com/plans/free)
 
 ### Identity Plus
 

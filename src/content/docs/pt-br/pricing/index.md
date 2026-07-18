@@ -21,7 +21,7 @@ Compartilhamento seguro e autodestrutivo de mensagens confidenciais para todos.
 - Página inicial e recebimento de mensagens confidenciais
 - Acesso à API
 
-[Comece Agora](https://onetimesecret.com/plans/basic)
+[Comece Agora](https://onetimesecret.com/plans/free)
 
 ### Identity Plus
 

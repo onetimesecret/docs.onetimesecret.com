@@ -21,7 +21,7 @@ Condivisione sicura e autodistruttiva dei segreti per tutti.
 - Homepage e segreti in arrivo
 - Accesso API
 
-[Iniziare](https://onetimesecret.com/plans/basic)
+[Iniziare](https://onetimesecret.com/plans/free)
 
 ### Identity Plus
 

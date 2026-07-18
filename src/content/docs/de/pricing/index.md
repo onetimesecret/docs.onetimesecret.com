@@ -21,7 +21,7 @@ Sicheres, sich selbst zerstörendes Teilen von Geheimnissen für alle.
 - Startseite & eingehende Geheimnisse
 - API-Zugriff
 
-[Erste Schritte](https://onetimesecret.com/plans/basic)
+[Erste Schritte](https://onetimesecret.com/plans/free)
 
 ### Identity Plus
 

@@ -11,7 +11,7 @@ Dela konfidentiell information med förtroende, förhöj ditt varumärke och byg
 
 ### Free
 
-**$0/month**
+**$0/månad**
 
 Säker, självförstörande delning av hemligheter för alla.
 
@@ -21,7 +21,7 @@ Säker, självförstörande delning av hemligheter för alla.
 - Startsida & inkommande hemligheter
 - API-åtkomst
 
-[Kom igång](https://onetimesecret.com/plans/basic)
+[Kom igång](https://onetimesecret.com/plans/free)
 
 ### Identity Plus
 

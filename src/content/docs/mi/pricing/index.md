@@ -21,7 +21,7 @@ Te tohatoha karere huna haumaru, whakakorehia-anō, mō te katoa.
 - Whārangi kāinga me ngā karere huna e tae mai ana
 - Te urunga API
 
-[Tīmata](https://onetimesecret.com/plans/basic)
+[Tīmata](https://onetimesecret.com/plans/free)
 
 ### Identity Plus
 

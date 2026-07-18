@@ -21,7 +21,7 @@ Secure, self-destructing secret sharing for everyone.
 - Homepage & incoming secrets
 - API access
 
-[Get Started](https://onetimesecret.com/plans/basic)
+[Get Started](https://onetimesecret.com/plans/free)
 
 ### Identity Plus
 

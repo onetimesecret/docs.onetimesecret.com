@@ -21,9 +21,9 @@ description: 选择适合您的安全共享需求的计划。
 - 主页与接收的机密信息
 - API 访问权限
 
-[开始](https://onetimesecret.com/plans/basic)
+[开始](https://onetimesecret.com/plans/free)
 
-### 身份加号
+### Identity Plus
 
 安全共享，提升品牌，简化沟通。
 
@@ -35,12 +35,12 @@ description: 选择适合您的安全共享需求的计划。
 
 [查看当前价格](https://onetimesecret.com/pricing) | [选择此计划](https://onetimesecret.com/plans/identity)
 
-### 团队加号
+### Team Plus
 
 受管控的机密信息共享，具备单点登录、访问控制和组织可见性。
 
 **特点：**
-- 身份加号的所有功能
+- Identity Plus 的所有功能
 - 单点登录（SSO）
 - 团队管理与共享仪表板
 - 灵活的邮件发件域名

@@ -21,9 +21,9 @@ Veilig, zelfvernietigend delen van berichten voor iedereen.
 - Startpagina & inkomende berichten
 - API-toegang
 
-[Aan de slag](https://onetimesecret.com/plans/basic)
+[Aan de slag](https://onetimesecret.com/plans/free)
 
-### Identiteit Plus
+### Identity Plus
 
 Veilig delen dat je merk versterkt en communicatie vereenvoudigt.
 
@@ -40,7 +40,7 @@ Veilig delen dat je merk versterkt en communicatie vereenvoudigt.
 Gecontroleerd delen van berichten met SSO, toegangscontroles en zichtbaarheid op organisatieniveau.
 
 **Functies:**
-- Alles van Identiteit Plus
+- Alles van Identity Plus
 - Single sign-on (SSO)
 - Teambeheer & gedeeld dashboard
 - Flexibel afzenderdomein voor e-mail

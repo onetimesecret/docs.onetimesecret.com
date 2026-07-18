@@ -21,7 +21,7 @@ Sikker, selvdestruerende beskeddeling for alle.
 - Forside & indkommende beskeder
 - API-adgang
 
-[Kom i gang](https://onetimesecret.com/plans/basic)
+[Kom i gang](https://onetimesecret.com/plans/free)
 
 ### Identity Plus
 

@@ -21,7 +21,7 @@ Bezpieczne, samousuwające się udostępnianie sekretów dla każdego.
 - Strona główna i przychodzące sekrety
 - Dostęp do API
 
-[Rozpocznij](https://onetimesecret.com/plans/basic)
+[Rozpocznij](https://onetimesecret.com/plans/free)
 
 ### Identity Plus
 
