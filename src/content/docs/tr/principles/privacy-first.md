@@ -1,5 +1,5 @@
 ---
-title: Gizlilik Öncelikli
+title: Önce Gizlilik
 description: Bilinçli olarak kaçındığımız izleme ve pazarlama uygulamaları, bunlardan neden kaçındığımız ve bu taahhütleri nasıl doğrulanabilir tuttuğumuz
 ---
 

@@ -3,8 +3,6 @@ title: Melhores Práticas de Segurança
 description: Melhore a segurança do seu compartilhamento de mensagens com estas melhores práticas específicas do Onetime Secret, incluindo os benefícios de segurança dos Domínios Personalizados.
 ---
 
-# Melhores Práticas de Segurança para o Onetime Secret
-
 Embora o Onetime Secret seja projetado com segurança em mente, seguir essas melhores práticas pode melhorar ainda mais a proteção de suas informações sensíveis, especialmente ao usar recursos como Domínios Personalizados.
 
 ## Melhores Práticas para Compartilhamento de Mensagens

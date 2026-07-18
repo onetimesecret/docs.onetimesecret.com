@@ -1,13 +1,11 @@
 ---
-title: Säkerhetsbästa praxis
-description: Förbättra din hemlighetsdel ningssäkerhet med dessa bästa praxis specifika för Onetime Secret, inklusive säkerhetsfördelarna med anpassade domäner.
+title: Bästa säkerhetspraxis
+description: Förbättra din hemlighetsdelningssäkerhet med dessa bästa praxis specifika för Onetime Secret, inklusive säkerhetsfördelarna med anpassade domäner.
 ---
-
-# Säkerhetsbästa praxis för Onetime Secret
 
 Även om Onetime Secret är designad med säkerhet i åtanke, kan följande av dessa bästa praxis ytterligare förbättra skyddet av din känsliga information, särskilt när du använder funktioner som anpassade domäner.
 
-## Bästa praxis för hemlighetsdel ning
+## Bästa praxis för hemlighetsdelning
 
 1. **Ställ in lämpliga utgångstider**: Välj kortaste praktiska utgångstid för dina hemligheter. Detta minimerar tidsfönstret för obehörig åtkomst.
 
@@ -19,19 +17,19 @@ description: Förbättra din hemlighetsdel ningssäkerhet med dessa bästa praxi
 
 5. **Verifiera mottagare**: Säkerställ att du delar hemligheter med den avsedda mottagaren. Dubbelkolla e-postadresser eller användarnamn innan du skickar.
 
-6. **Utbilda användare**: Om du använder Onetime Secret inom en organisation, utbilda ditt team om korrekt användning och säkerhetsmetoder specifika för hemlighetsdel ning.
+6. **Utbilda användare**: Om du använder Onetime Secret inom en organisation, utbilda ditt team om korrekt användning och säkerhetsmetoder specifika för hemlighetsdelning.
 
 ## Säkerhetsfördelar med anpassade domäner
 
 Att använda anpassade domäner med Onetime Secret erbjuder flera säkerhetsfördelar:
 
-1. **Förbättrat nätfiskeskydd**: Med en anpassad domän blir dina användare vana vid en specifik URL för hemlighetsdel ning. Detta gör det lättare att identifiera potentiella nätfiskeförsök som kan använda liknande domäner.
+1. **Förbättrat nätfiskeskydd**: Med en anpassad domän blir dina användare vana vid en specifik URL för hemlighetsdelning. Detta gör det lättare att identifiera potentiella nätfiskeförsök som kan använda liknande domäner.
 
 2. **Förbättrat förtroende och legitimitet**: När mottagare ser en bekant domän är de mer benägna att lita på källan till hemligheten. Detta är särskilt viktigt för företag som delar känslig information med kunder eller partners.
 
-3. **Sömlös integration med befintlig säkerhetsinfrastruktur**: En anpassad domän kan lättare integreras med dina befintliga säkerhetsverktyg och övervakningssystem, vilket ger en mer omfattande vy över din organisations hemlighetsdel ningsaktiviteter.
+3. **Sömlös integration med befintlig säkerhetsinfrastruktur**: En anpassad domän kan lättare integreras med dina befintliga säkerhetsverktyg och övervakningssystem, vilket ger en mer omfattande vy över din organisations hemlighetsdelningsaktiviteter.
 
-4. **Efterlevnad och revision**: För organisationer i reglerade branscher kan användning av en anpassad domän hjälpa till att upprätthålla efterlevnad genom att hålla hemlighetsdel ningsaktiviteter under din organisations direkta kontroll och göra revisionsprocesser mer raka.
+4. **Efterlevnad och revision**: För organisationer i reglerade branscher kan användning av en anpassad domän hjälpa till att upprätthålla efterlevnad genom att hålla hemlighetsdelningsaktiviteter under din organisations direkta kontroll och göra revisionsprocesser mer raka.
 
 Onetime Secret hanterar de tekniska aspekterna av att säkra din anpassade domän, inklusive SSL/TLS-konfiguration och domänaktivitetsövervakning, vilket låter dig fokusera på dessa strategiska säkerhetsfördelar.
 
@@ -51,7 +49,7 @@ Detta avsnitt täcker avancerade säkerhetsöverväganden för organisationer so
 
 Rekommendationerna nedan kan implementeras på din infrastrukturnivå när du självhostar Onetime Secret:
 
-1. **Använd tillfälliga miljöer**: När det är möjligt, skapa och förstör miljöer för varje hemlighetsdel ningssession. Detta kan vara särskilt användbart för mycket känsliga operationer. Vår [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/blob/v0.18.5/docs/DOCKER-lite.md) Docker-avbild är designad för tillfälliga användningsfall.
+1. **Använd tillfälliga miljöer**: När det är möjligt, skapa och förstör miljöer för varje hemlighetsdelningssession. Detta kan vara särskilt användbart för mycket känsliga operationer. Vår [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/blob/v0.18.5/docs/DOCKER-lite.md) Docker-avbild är designad för tillfälliga användningsfall.
 
 2. **Implementera tidsbaserade begränsningar**: Om ditt användningsfall tillåter det, överväg att implementera tidsbaserade begränsningar för åtkomst till hemligheter, såsom endast under kontorstid.
 
@@ -65,14 +63,14 @@ Rekommendationerna nedan kan implementeras på din infrastrukturnivå när du sj
 
 Detta avsnitt beskriver allmänna säkerhetsrekommendationer som kan vara användbara för din organisation. Dessa rekommendationer är inte specifika funktioner för vår tjänst.
 
-1. **Ha en plan**: Utveckla en incidentresponsplan specifik för dina hemlighetsdel ningsprocesser. Detta bör inkludera steg för att återkalla åtkomst, meddela berörda parter och mildra potentiell skada.
+1. **Ha en plan**: Utveckla en incidentresponsplan specifik för dina hemlighetsdelningsprocesser. Detta bör inkludera steg för att återkalla åtkomst, meddela berörda parter och mildra potentiell skada.
 
 2. **Snabb åtgärd**: Om du misstänker att en hemlighet har kompromisserats, använd Onetime Secrets bränna-funktion omedelbart om hemligheten inte har visats ännu. Om den har visats, vidta lämpliga åtgärder för att mildra eventuell skada.
 
-3. **Regelbundna säkerhetsgranskningar**: Granska regelbundet dina hemlighetsdel ningsmetoder och justera dina säkerhetsåtgärder efter behov.
+3. **Regelbundna säkerhetsgranskningar**: Granska regelbundet dina hemlighetsdelningsmetoder och justera dina säkerhetsåtgärder efter behov.
 
 ---
 
-Genom att följa dessa bästa praxis kan du avsevärt förbättra säkerheten för dina hemlighetsdel ningsaktiviteter på Onetime Secret. Kom ihåg att säkerhet är en pågående process, och att vara vaksam är nyckeln till att skydda din känsliga information.
+Genom att följa dessa bästa praxis kan du avsevärt förbättra säkerheten för dina hemlighetsdelningsaktiviteter på Onetime Secret. Kom ihåg att säkerhet är en pågående process, och att vara vaksam är nyckeln till att skydda din känsliga information.
 
 För eventuella säkerhetsproblem eller för att rapportera potentiella sårbarheter, vänligen kontakta vårt säkerhetsteam omedelbart på security@onetimesecret.com.

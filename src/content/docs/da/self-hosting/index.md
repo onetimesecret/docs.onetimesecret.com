@@ -1,5 +1,5 @@
 ---
-title: Selv-hosting oversigt
+title: Selv-hosting-oversigt
 description: Komplet vejledning til at køre din egen Onetime Secret-instans
 sidebar:
   order: 1

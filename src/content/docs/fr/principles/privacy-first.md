@@ -1,5 +1,5 @@
 ---
-title: La vie privée d'abord
+title: Confidentialité d'abord
 description: Les pratiques de suivi et de marketing que nous évitons délibérément, pourquoi nous les évitons, et comment nous gardons ces engagements vérifiables
 ---
 

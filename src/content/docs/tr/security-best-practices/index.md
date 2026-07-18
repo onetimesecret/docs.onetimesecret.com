@@ -3,8 +3,6 @@ title: Güvenlik En İyi Uygulamaları
 description: Özel Alan Adlarının güvenlik faydaları da dahil olmak üzere Onetime Secret'a özgü bu en iyi uygulamalarla gizli mesaj paylaşım güvenliğinizi artırın.
 ---
 
-# Onetime Secret için Güvenlik En İyi Uygulamaları
-
 Onetime Secret güvenlik göz önünde bulundurularak tasarlanmış olsa da, bu en iyi uygulamaları takip etmek hassas bilgilerinizin korumasını daha da artırabilir, özellikle Özel Alan Adları gibi özellikleri kullanırken.
 
 ## Gizli Mesaj Paylaşımı için En İyi Uygulamalar

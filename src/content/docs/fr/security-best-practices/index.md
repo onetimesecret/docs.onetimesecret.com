@@ -1,9 +1,7 @@
 ---
-title: Meilleures pratiques en matière de sécurité
+title: Meilleures pratiques de sécurité
 description: Améliorez la sécurité de votre partage de secret grâce à ces meilleures pratiques spécifiques à Onetime Secret, y compris les avantages de sécurité des domaines personnalisés.
 ---
-
-# Meilleures pratiques de sécurité pour Onetime Secret
 
 Bien que Onetime Secret ait été conçu dans un souci de sécurité, le respect de ces bonnes pratiques peut renforcer la protection de vos informations sensibles, en particulier lors de l'utilisation de fonctionnalités telles que les domaines personnalisés (Custom Domains).
 

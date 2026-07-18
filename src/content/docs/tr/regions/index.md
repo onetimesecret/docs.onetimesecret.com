@@ -1,6 +1,6 @@
 ---
 title: Veri Merkezi Bölgeleri
-description: Onetime Secret'ın veri merkezi bölgeleri hakkında bilgi edinin ve ihtiyaçlarınıza uygun olanı nasıl seçeceğinizi öğrenin.
+description: Onetime Secret'in veri merkezi bölgeleri hakkında bilgi edinin ve ihtiyaçlarınıza uygun olanı nasıl seçeceğinizi öğrenin.
 ---
 
 Onetime Secret dört veri merkezi bölgesi sunar: Avrupa Birliği (EU), Amerika Birleşik Devletleri (US), Kanada (CA) ve Aotearoa Yeni Zelanda (NZ). Bu kılavuz, bölge seçiminin önemini anlamanıza ve ihtiyaçlarınıza uygun olanı seçmenize yardımcı olacaktır.
