@@ -1,64 +1,51 @@
 ---
-title: Privacidade
-description: Nossa abordagem para proteger a privacidade do usuário através de escolhas de design deliberadas
+title: Privacidade em Primeiro Lugar
+description: As práticas de rastreamento e marketing que evitamos deliberadamente, por que as evitamos e como mantemos esses compromissos verificáveis
 ---
 
-# Práticas de Privacidade em Primeiro Lugar
-
-No Onetime Secret, adotamos uma abordagem deliberadamente minimalista para a privacidade do usuário. Aqui está o que deliberadamente escolhemos não fazer e, mais importante, por quê.
-
-## Nossa Filosofia de Não-Email
-
-A maioria dos serviços inunda sua caixa de entrada com:
-
-- Newsletters de marketing
-- Atualizações de produto
-- Estatísticas de uso
-- Anúncios de recursos
-- Ofertas promocionais
-- Campanhas de reengajamento
-
-Os únicos e-mails que você receberá de nós são aqueles que você solicitar especificamente — entrega de links secretos, notificações de conta ou atualizações nas quais você optou explicitamente por receber. Mesmo quando você opta por receber, raramente entrará em contato, e apenas pelos motivos específicos que você escolheu. Sua caixa de entrada pertence a você.
+Privacidade não é um recurso que acrescentamos ao Onetime Secret — é como o serviço é construído. Isso aparece menos no que adicionamos do que no que deixamos de fora. Esta página cobre as práticas que evitamos deliberadamente, por que as evitamos e como você pode verificar que falamos sério.
 
 ## Padrões da Indústria que Ignoramos
 
-Deliberadamente evitamos ferramentas comuns de rastreamento e marketing:
+Não usamos as ferramentas de rastreamento e marketing que a maioria dos serviços trata como requisito básico:
 
-- Pacotes de análise que rastreiam comportamento do usuário
+- Pacotes de análise que rastreiam o comportamento do usuário
 - Botões de integração com redes sociais
 - Redes de publicidade
 - Frameworks de testes A/B
 - Ferramentas de automação de marketing
 - Pixels de rastreamento de terceiros
 
+## E-mail Mínimo
+
+A mesma contenção vale para a sua caixa de entrada. Não enviamos newsletters de marketing, ofertas promocionais nem campanhas de reengajamento — você só terá notícias nossas por causa do serviço que está usando, de um aviso que devemos a você ou de novidades que você optou por receber. Nenhum e-mail que enviamos contém pixels de rastreamento ou links com rastreamento de cliques, então não sabemos se você o abriu nem em que clicou. Nossa [Filosofia de Comunicação](/pt-br/principles/communication) detalha exatamente o que enviamos e por quê.
+
 ## Por Que Isso Importa
 
-Essas escolhas se resumem a três coisas que nos importam profundamente:
+Essas escolhas se resumem a três coisas com que nos importamos profundamente:
 
-1. **Seus dados são seus.** Não tratamos informações dos usuários como um recurso a ser explorado. Privacidade não é um recurso que adicionamos depois — é como o serviço é construído.
-2. **A ferramenta deve simplesmente funcionar.** Quando você precisa compartilhar algo sensível, confiabilidade importa mais do que qualquer outra coisa.
-3. **Confiança se conquista pelo que escolhemos não fazer.** Cada rastreador que ignoramos, cada campanha que não enviamos, é uma pequena prova de onde estão nossas prioridades.
+- **Seus dados são seus.** Não tratamos as informações dos usuários como um recurso a ser explorado.
+- **A ferramenta deve simplesmente funcionar.** Quando você precisa compartilhar algo sensível, a confiabilidade importa mais do que qualquer outra coisa.
+- **Confiança se conquista pelo que escolhemos não fazer.** Cada rastreador que dispensamos, cada campanha que não enviamos, é uma pequena prova de onde estão nossas prioridades.
+
+## Confiança por Meio da Transparência
+
+Qualquer serviço pode alegar que respeita a privacidade. Preferimos que nossas afirmações possam ser verificadas:
+
+- **Código aberto.** O serviço principal é de [código aberto](https://github.com/onetimesecret/onetimesecret) — você pode ler o código que lida com suas mensagens confidenciais ou executá-lo por conta própria.
+- **Políticas em linguagem simples.** Nossa [Política de Privacidade](https://onetimesecret.com/info/privacy) diz o que coletamos e por quê, em palavras que dá para entender sem precisar de advogado.
+- **Práticas de segurança documentadas.** [Segurança e Confiança](/pt-br/security) explica nosso modelo de segurança, como protegemos os dados e como relatar uma vulnerabilidade.
+- **Diálogo direto.** Perguntas, feedback e críticas são bem-vindos — [entre em contato](https://onetimesecret.com/feedback) e uma pessoa lerá sua mensagem.
 
 ## O Impacto Real
 
-Ignorar práticas padrão de marketing e rastreamento não é apenas filosófico — traz benefícios tangíveis:
+Dispensar essas práticas não é só filosofia — muda o produto:
 
 - Um serviço mais enxuto e rápido, com menos partes móveis
 - Uma superfície de ataque menor, com menos dependências de terceiros
-- Seus dados permanecem sob seu controle, não espalhados por redes de publicidade
-- Nosso foco de engenharia permanece no produto, não em funis de conversão
-
-Dedicamos nosso tempo ao trabalho que importa para você:
-
-- **Funcionalidade principal** — melhorar os recursos que você realmente usa
-- **Proteções de privacidade** — fortalecer a criptografia e o tratamento de dados
-- **Confiabilidade do serviço** — garantir que estejamos disponíveis quando você precisar
-- **Conformidade** — atender aos requisitos jurisdicionais e regulatórios
+- Seus dados ficam sob seu controle, em vez de espalhados por redes de publicidade
+- Nosso tempo de engenharia vai para o produto, não para funis de conversão
 
 ## Olhando para o Futuro
 
-Continuaremos escolhendo simplicidade e privacidade em vez de alcance de marketing. Isso significa que podemos crescer mais lentamente do que serviços que otimizam para engajamento — e estamos bem com isso. Uma ferramenta de privacidade conquista sua reputação através de confiabilidade consistente e silenciosa.
-
-Quando você ouvir de nós, será porque você pediu.
-
-**Dúvidas sobre nossa abordagem?** [Entre em contato](https://onetimesecret.com/feedback).
+Continuaremos escolhendo simplicidade e privacidade em vez de alcance de marketing. Isso significa que podemos crescer mais devagar do que serviços que otimizam para engajamento — e estamos bem com isso. Uma ferramenta de privacidade conquista sua reputação por meio de uma confiabilidade consistente e discreta.

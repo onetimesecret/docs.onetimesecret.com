@@ -1,9 +1,7 @@
 ---
-title: Ngā Tikanga Haumaru Pai
+title: Tikanga Pai mō te Haumaru
 description: Whakanui i tō haumaru tohatoha karere huna ki ēnei tikanga pai motuhake ki Onetime Secret, tae atu ki ngā painga haumaru o ngā Rohe Ritenga.
 ---
-
-# Ngā Tikanga Haumaru Pai mō Onetime Secret
 
 Ahakoa kua hoahoatia a Onetime Secret ki te haumaru i te whakaaro, ko te whai i ēnei tikanga pai ka whakanui ake i te tiaki o ō kōrero matatapu, ā tino i te whakamahi i ngā āhuatanga pēnei i ngā Rohe Ritenga.
 

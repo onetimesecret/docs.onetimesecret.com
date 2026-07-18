@@ -1,39 +1,30 @@
 ---
 title: Kommunikation
-description: Varför vi begränsar e-postkommunikation till endast vad som är nödvändigt
+description: Varför vi begränsar e-postkommunikation till endast det nödvändiga
 ---
 
-# Vår kommunikationsfilosofi
+Vi håller medvetet användarkommunikationen till ett minimum — av respekt för din tid och din inkorg.
 
-Vi tar ett medvetet minimalt tillvägagångssätt till användarkommunikation, och respekterar din tid och inkorg.
+## Vår filosofi om minimal e-post
 
-## Vår ingen-e-post-filosofi
+De flesta tjänster översvämmar din inkorg med marknadsföringsnyhetsbrev, användningsstatistik, kampanjerbjudanden och återengagemangskampanjer. Vi gör inget av det. Du hör bara från oss om tjänsten du använder, besked vi är skyldiga att skicka eller uppdateringar du själv har valt att ta emot.
 
-De flesta tjänster översvämmar din inkorg med:
-- Marknadsföringsnyhetsbrev
-- Produktuppdateringar
-- Användningsstatistik
-- Funktionsmeddelanden
-- Kampanjerbjudanden
-- Återengagemangskampanjer
+Varje mejl vi skickar hör till en av tre kategorier:
 
-De enda mejl du får från oss är de du specifikt begär — som leveranser av hemliga länkar, kontonotifieringar eller uppdateringar du uttryckligen har valt att ta emot. Även när du väljer att ta emot mejl hör du sällan från oss, och bara av de specifika anledningar du anmälde dig för. Din inkorg tillhör dig.
+- **Transaktionsmejl** — hemliga länkar, kontoaviseringar och faktureringsaviseringar. De är en del av själva tjänsten.
+- **Tjänste- och säkerhetsbesked** — säkerhetsvarningar, underrättelser om dataintrång, policyändringar och utfasningar. Vi skickar dem när det behövs, bland annat när vi enligt lag är skyldiga att göra det. De är aldrig marknadsföring.
+- **Produktnyheter** — funktionsnyheter och liknande uppdateringar. Skickas bara till dig som aktivt har tackat ja, kommer sällan, och varje utskick kan avregistreras med ett klick.
+
+Inget mejl vi skickar innehåller spårningspixlar eller länkar med klickspårning. Vi vet inte om du öppnade ett mejl eller vad du klickade på, och det är precis så vi vill ha det. Din inkorg tillhör dig.
 
 ## Varför detta är viktigt
 
 Ett integritetsverktyg bör inte bete sig som en marknadsföringsplattform. Genom att hålla vår kommunikation minimal:
 
 - Minskar vi ytan för nätfiske och social ingenjörskonst — färre legitima mejl från oss gör det lättare att upptäcka misstänkta
-- Håller vi fokus på att driva en pålitlig tjänst istället för att optimera engagemangsmått
+- Håller vi fokus på att driva en pålitlig tjänst i stället för att optimera engagemangsmått
 - Respekterar vi det förtroende du visar oss när du delar din e-postadress
 
-## Där vi lägger vår energi
+Den tid andra företag lägger på att utforma kampanjer lägger vi på själva tjänsten: grundläggande tillförlitlighet, starkare integritetsskydd och att hålla jämna steg med jurisdiktionella och regulatoriska krav.
 
-Istället för att skapa kampanjer lägger vi vår tid på det som faktiskt betyder något för dig:
-
-- **Grundläggande tillförlitlighet** — att se till att tjänsten fungerar när du behöver den
-- **Integritetsskydd** — att stärka kryptering och datahantering
-- **Efterlevnad** — att hålla oss uppdaterade med jurisdiktionella och regulatoriska krav
-- **Transparens** — att vara öppna med hur vi arbetar och varför
-
-Har du tankar om vårt kommunikationstillvägagångssätt? [Kontakta oss](https://onetimesecret.com/feedback).
+**Frågor om vårt förhållningssätt?** [Kontakta oss](https://onetimesecret.com/feedback).

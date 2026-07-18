@@ -59,7 +59,7 @@ Temel işlevsellik için hesap gerekmez. Karmaşık kurulum olmadan hemen gizli 
 ### Ücretsiz bir seçenek var mı?
 Evet, Onetime Secret çoğu özelliği ücretsiz olarak kullanmanıza olanak tanıyan ücretsiz bir katman sunar. Gelişmiş özellikler ve markalama seçenekleri için ücretli planlarımızı değerlendirin.
 
-### Onetime Secret'ı kendi sunucumda barındırabilir miyim?
+### Onetime Secret'i kendi sunucumda barındırabilir miyim?
 Evet, Onetime Secret, kolay dağıtım ve yönetim sağlayan SimpleStack℠ garantimizle kendi sunucunuzda barındırma seçeneği sunar. [GitHub](https://github.com/onetimesecret/onetimesecret)
 
 ### Onetime Secret ne kadar güvenli?

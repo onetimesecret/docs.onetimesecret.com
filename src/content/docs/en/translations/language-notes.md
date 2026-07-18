@@ -3,8 +3,6 @@ title: Language-Specific Translation Notes
 description: Template for language-specific translation rules
 ---
 
-# Language-Specific Translation Notes Template
-
 ```markdown
 | Rule | Correct | Incorrect | Example |
 |------|---------|-----------|---------|

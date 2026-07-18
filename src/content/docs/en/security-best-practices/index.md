@@ -3,8 +3,6 @@ title: Security Best Practices
 description: Enhance your secret sharing security with these best practices specific to Onetime Secret, including the security benefits of Custom Domains.
 ---
 
-# Security Best Practices for Onetime Secret
-
 While Onetime Secret is designed with security in mind, following these best practices can further enhance the protection of your sensitive information, especially when using features like Custom Domains.
 
 ## Best Practices for Secret Sharing

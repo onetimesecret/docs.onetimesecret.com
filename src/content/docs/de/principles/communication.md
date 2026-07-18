@@ -3,37 +3,28 @@ title: Kommunikation
 description: Warum wir die E-Mail-Kommunikation auf das Nötigste beschränken
 ---
 
-# Unsere Kommunikationsphilosophie
+Wir verfolgen bei der Benutzerkommunikation einen bewusst minimalen Ansatz — aus Respekt vor deiner Zeit und deinem Posteingang.
 
-Wir verfolgen einen bewusst minimalen Ansatz bei der Benutzerkommunikation und respektieren deine Zeit und deinen Posteingang.
+## Unsere Minimal-E-Mail-Philosophie
 
-## Unsere No-E-Mail-Philosophie
+Die meisten Dienste überfluten deinen Posteingang mit Marketing-Newslettern, Nutzungsstatistiken, Werbeangeboten und Re-Engagement-Kampagnen. Wir tun nichts davon. Du hörst von uns nur zum Dienst, den du nutzt, zu Mitteilungen, die wir versenden müssen, oder zu Updates, für die du dich angemeldet hast.
 
-Die meisten Dienste überfluten deinen Posteingang mit:
-- Marketing-Newslettern
-- Produkt-Updates
-- Benutzungsstatistiken
-- Feature-Ankündigungen
-- Werbeangeboten
-- Re-Engagement-Kampagnen
+Jede E-Mail, die wir versenden, fällt in eine von drei Kategorien:
 
-Die einzigen E-Mails, die du von uns erhältst, sind solche, die du ausdrücklich angefordert hast — zum Beispiel die Zustellung geheimer Links, Kontobenachrichtigungen oder Updates, für die du dich bewusst angemeldet hast. Selbst wenn du dich anmeldest, wirst du selten von uns hören, und nur aus den Gründen, für die du dich eingetragen hast. Dein Posteingang gehört dir.
+- **Transaktional** — geheime Links, Kontomitteilungen und Abrechnungsmitteilungen. Sie sind Teil des Dienstes selbst.
+- **Service- und Sicherheitsmitteilungen** — Sicherheitshinweise, Benachrichtigungen bei Datenpannen, Richtlinienänderungen und Abkündigungen. Wir versenden sie, wenn es nötig ist — auch dann, wenn wir gesetzlich dazu verpflichtet sind. Sie sind niemals Marketing.
+- **Produktneuigkeiten** — Feature-Ankündigungen und ähnliche Updates. Ausschließlich per Opt-in, selten, und jede lässt sich mit einem Klick abbestellen.
+
+Keine E-Mail von uns enthält Tracking-Pixel oder Links mit Klick-Tracking. Wir wissen nicht, ob du eine E-Mail geöffnet hast oder was du angeklickt hast — und genau so soll es sein. Dein Posteingang gehört dir.
 
 ## Warum das wichtig ist
 
 Ein Datenschutz-Tool sollte sich nicht wie eine Marketing-Plattform verhalten. Indem wir unsere Kommunikation minimal halten:
 
 - Verringern wir die Angriffsfläche für Phishing und Social Engineering — weniger legitime E-Mails von uns bedeuten, dass verdächtige leichter zu erkennen sind
-- Konzentrieren wir uns darauf, einen zuverlässigen Dienst zu betreiben, anstatt Engagement-Kennzahlen zu optimieren
+- Bleiben wir darauf konzentriert, einen zuverlässigen Dienst zu betreiben, statt Engagement-Kennzahlen zu optimieren
 - Respektieren wir das Vertrauen, das du uns entgegenbringst, wenn du deine E-Mail-Adresse mit uns teilst
 
-## Worin wir unsere Energie investieren
+Die Zeit, die andere Unternehmen in das Entwerfen von Kampagnen stecken, stecken wir in den Dienst selbst: in Kernzuverlässigkeit, stärkere Datenschutzmaßnahmen und die Einhaltung jurisdiktionaler und regulatorischer Anforderungen.
 
-Anstatt Kampagnen zu entwerfen, verwenden wir unsere Zeit auf die Dinge, die für dich wirklich wichtig sind:
-
-- **Kernzuverlässigkeit** — sicherstellen, dass der Dienst funktioniert, wenn du ihn brauchst
-- **Datenschutzmaßnahmen** — Verschlüsselung und Datenverarbeitung stärken
-- **Compliance** — jurisdiktionale und regulatorische Anforderungen einhalten
-- **Transparenz** — offen darüber sein, wie wir arbeiten und warum
-
-Hast du Gedanken zu unserem Kommunikationsansatz? [Kontaktiere uns](https://onetimesecret.com/feedback).
+**Fragen zu unserem Ansatz?** [Kontaktiere uns](https://onetimesecret.com/feedback).

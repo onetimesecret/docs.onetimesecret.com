@@ -3,37 +3,28 @@ title: Komunikacja
 description: Dlaczego ograniczamy komunikację e-mailową tylko do tego, co konieczne
 ---
 
-# Nasza filozofia komunikacji
+Celowo ograniczamy komunikację z użytkownikami do minimum — z szacunku dla Twojego czasu i Twojej skrzynki odbiorczej.
 
-Przyjmujemy celowo minimalne podejście do komunikacji z użytkownikami, szanując Twój czas i skrzynkę odbiorczą.
+## Nasza filozofia minimum e-maili
 
-## Nasza filozofia bez e-maili
+Większość usług zalewa Twoją skrzynkę biuletynami marketingowymi, statystykami użycia, ofertami promocyjnymi i kampaniami reaktywacyjnymi. My nie robimy żadnej z tych rzeczy. Odezwiemy się do Ciebie wyłącznie w związku z usługą, z której korzystasz, powiadomieniami, które mamy obowiązek wysłać, lub aktualnościami, na które sam się zapisałeś.
 
-Większość usług zalewa Twoją skrzynkę odbiorczą:
-- Biuletynami marketingowymi
-- Aktualizacjami produktu
-- Statystykami użycia
-- Ogłoszeniami funkcji
-- Ofertami promocyjnymi
-- Kampaniami reaktywacyjnymi
+Każdy e-mail, który wysyłamy, należy do jednej z trzech kategorii:
 
-Jedyne e-maile, które od nas otrzymasz, to te, o które sam poprosisz — takie jak dostarczanie linków do sekretów, powiadomienia o koncie czy aktualizacje, na które wyraźnie wyraziłeś zgodę. Nawet jeśli zdecydujesz się je otrzymywać, odezwiemy się rzadko i wyłącznie w sprawach, na które się zapisałeś. Twoja skrzynka odbiorcza należy do Ciebie.
+- **Transakcyjne** — linki do sekretów oraz powiadomienia dotyczące konta i płatności. Są one częścią samej usługi.
+- **Powiadomienia serwisowe i dotyczące bezpieczeństwa** — komunikaty bezpieczeństwa, powiadomienia o naruszeniach, zmiany zasad i informacje o wycofywanych funkcjach. Wysyłamy je w razie potrzeby, również wtedy, gdy jesteśmy do tego prawnie zobowiązani. Nigdy nie są to treści marketingowe.
+- **Nowości produktowe** — zapowiedzi nowych funkcji i podobne aktualności. Wyłącznie za wyraźną zgodą, rzadkie, a każda taka wiadomość zawiera link do wypisania się jednym kliknięciem.
+
+Żaden wysyłany przez nas e-mail nie zawiera pikseli śledzących ani linków śledzących kliknięcia. Nie wiemy, czy otworzyłeś wiadomość ani co kliknąłeś — i bardzo nam to odpowiada. Twoja skrzynka odbiorcza należy do Ciebie.
 
 ## Dlaczego to ma znaczenie
 
 Narzędzie do ochrony prywatności nie powinno zachowywać się jak platforma marketingowa. Utrzymując komunikację na minimalnym poziomie:
 
-- Zmniejszamy podatność na phishing i inżynierię społeczną — im mniej oficjalnych e-maili od nas, tym łatwiej rozpoznać podejrzane wiadomości
-- Skupiamy się na prowadzeniu niezawodnej usługi, zamiast optymalizować wskaźniki zaangażowania
-- Szanujemy zaufanie, jakim nas obdarzasz, udostępniając swój adres e-mail
+- Ograniczamy pole do phishingu i inżynierii społecznej — im mniej prawdziwych e-maili od nas, tym łatwiej dostrzec te podejrzane
+- Skupiamy się na prowadzeniu niezawodnej usługi, a nie na optymalizowaniu wskaźników zaangażowania
+- Szanujemy zaufanie, jakim nas obdarzasz, udostępniając nam swój adres e-mail
 
-## Na czym koncentrujemy naszą energię
+Czas, który inne firmy poświęcają na przygotowywanie kampanii, my przeznaczamy na samą usługę: podstawową niezawodność, silniejsze zabezpieczenia prywatności i nadążanie za wymogami jurysdykcyjnymi i regulacyjnymi.
 
-Zamiast tworzyć kampanie, poświęcamy czas na to, co naprawdę ma dla Ciebie znaczenie:
-
-- **Niezawodność podstawowa** — dbamy o to, by usługa działała, gdy jej potrzebujesz
-- **Zabezpieczenia prywatności** — wzmacniamy szyfrowanie i ochronę danych
-- **Zgodność z przepisami** — dotrzymujemy kroku wymaganiom jurysdykcyjnym i regulacyjnym
-- **Przejrzystość** — otwarcie informujemy o tym, jak działamy i dlaczego
-
-Masz przemyślenia na temat naszego podejścia do komunikacji? [Skontaktuj się z nami](https://onetimesecret.com/feedback).
+**Masz pytania o nasze podejście?** [Skontaktuj się z nami](https://onetimesecret.com/feedback).
