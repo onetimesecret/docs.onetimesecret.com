@@ -42,8 +42,12 @@ function schemaNodeAt(file: 'config' | 'auth', path: string): SchemaNode | undef
 export function defaultFor(opt: OptionSpec): Scalar {
   if (opt.schemaPath) {
     const node = schemaNodeAt(opt.schemaPath.file, opt.schemaPath.path);
-    if (node && 'default' in node && node.default != null) {
-      return node.default as Scalar;
+    const d = node?.default;
+    // Only trust a scalar schema default. If a future schema regeneration emits
+    // an object/array default for a mapped path, fall through to fallbackDefault
+    // rather than writing a non-scalar into the generated YAML.
+    if (typeof d === 'string' || typeof d === 'number' || typeof d === 'boolean') {
+      return d;
     }
   }
   return opt.fallbackDefault;
