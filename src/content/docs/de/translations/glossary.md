@@ -11,7 +11,8 @@ Ein Referenzleitfaden für die Übersetzung der Schlüsselbegriffe, Oberflächen
 
 | English | German (AT) | German (DE) | French (FR) | French (CA) | Notes |
 |---------|-------------|-------------|-------------|-------------|-------|
-| secret (noun) | Geheimnis | Geheimnis | secret | secret | Central concept of the application |
+| secret (noun, object/record) | Geheimnis | Geheimnis | secret | secret | The record being created, shared, viewed, burned, expired. See language-notes §1. |
+| secret (noun, revealed payload) | Nachricht | Nachricht | message | message | The decrypted body shown post-reveal, encrypted_message, truncated content. See language-notes §1. |
 | secret (adj) | geheim | geheim | secret/sécurisé | secret/sécurisé | |
 | passphrase | Sicherheitsphrase | Passphrase | phrase secrète | mot de passe | Authentication method for secrets |
 | burn | verbrennen | löschen | supprimer | supprimer | Action to delete a secret before viewing |
@@ -118,10 +119,10 @@ Ein Referenzleitfaden für die Übersetzung der Schlüsselbegriffe, Oberflächen
 
 ## Besondere Überlegungen
 
-- Der Begriff "secret" ist für die Anwendung zentral und sollte einheitlich als `Geheimnis` übersetzt werden
-- Regionale Variationen zwischen Deutsch (DE) und österreichischem Deutsch (AT) sollten respektiert werden, insbesondere hinsichtlich der Formalität
-- Bei technischen Begriffen zur Sicherheit sollte die Genauigkeit Vorrang vor der Lokalisierung haben
-- UI-Elemente sollten den Plattformkonventionen für die Zielsprache folgen
-- Halten Sie eine klare Unterscheidung zwischen `Passwort` (Kontopasswort) und `Passphrase` (Schutz einzelner Geheimnisse) aufrecht
-- Die Zahlenformatierung muss immer den deutschen Konventionen folgen (Komma für Dezimalstellen, Punkt für Tausender)
-- Rollennamen wie "Colonel" sollten in ihr funktionales Äquivalent (`Administrator`) übersetzt werden, nicht wörtlich
+- Der Begriff "secret" wird kontextabhängig übersetzt: `Geheimnis` für den Datensatz/das Objekt (erstellen, teilen, ansehen, verbrennen, ablaufen) und `Nachricht` für den entschlüsselten Inhalt nach dem Aufdecken (Post-Reveal-Anzeige, `encrypted_message`, gekürzte Inhalte). Diese Aufteilung gilt sowohl für `de` als auch für `de_AT`. Maßgebliche Referenz: `language-notes.md` §1 sowie das de_AT-Baseline-Commit `f95b03f44`.
+- Regionale Variationen zwischen Deutsch (DE) und österreichischem Deutsch (AT) sollten respektiert werden, insbesondere hinsichtlich der Formalität (`du` für `de`, `Sie` für `de_AT`).
+- Bei technischen Begriffen zur Sicherheit sollte die Genauigkeit Vorrang vor der Lokalisierung haben.
+- UI-Elemente sollten den Plattformkonventionen für die Zielsprache folgen.
+- Halten Sie eine klare Unterscheidung zwischen `Passwort` (Kontopasswort) und `Passphrase` / `Sicherheitsphrase` (Schutz einzelner Geheimnisse) aufrecht.
+- Die Zahlenformatierung muss immer den deutschen Konventionen folgen (Komma für Dezimalstellen, Punkt für Tausender).
+- Rollennamen wie "Colonel" sollten in ihr funktionales Äquivalent (`Administrator`) übersetzt werden, nicht wörtlich.
