@@ -14,6 +14,11 @@ import { showStagingWarning, isPrereleaseBuild } from "./domains.mjs";
 const warning = showStagingWarning();
 const prerelease = isPrereleaseBuild();
 
+// Default social-preview (Open Graph / Twitter) card. OG requires an
+// absolute URL, so derive it from the same SITE_URL used for canonicals.
+const siteUrl = process.env.SITE_URL || "https://docs.onetimesecret.com";
+const ogImage = new URL("/social-card.png", siteUrl).href;
+
 /**
  * Starlight configuration object
  * Defines the structure and behavior of the documentation site
@@ -35,21 +40,31 @@ export const starlightConfig = {
   pagefind: true,
   plugins: [],
 
+  // Site-wide default social-preview card (Open Graph / Twitter). Emitted on
+  // every build; per-page frontmatter can still override these.
+  //
   // Prerelease only: keep the staging/preview deploy out of search engines.
   // noindex is the directive Google honours for this; we deliberately do NOT
   // add a cross-host canonical (it would conflict with noindex).
-  head: prerelease
-    ? [
-        {
-          tag: "meta",
-          attrs: { name: "robots", content: "noindex, nofollow" },
-        },
-      ]
-    : [],
+  head: [
+    { tag: "meta", attrs: { property: "og:image", content: ogImage } },
+    { tag: "meta", attrs: { property: "og:image:width", content: "1280" } },
+    { tag: "meta", attrs: { property: "og:image:height", content: "640" } },
+    { tag: "meta", attrs: { name: "twitter:image", content: ogImage } },
+    ...(prerelease
+      ? [
+          {
+            tag: "meta",
+            attrs: { name: "robots", content: "noindex, nofollow" },
+          },
+        ]
+      : []),
+  ],
 
   components: {
     Header: "./src/components/starlight/Header.astro",
     SiteTitle: "./src/components/starlight/SiteTitle.astro",
+    Hero: "./src/components/starlight/Hero.astro",
     // Prerelease only: wrap PageFrame to mount the banner and/or watermark.
     // The override renders each marker conditionally on its own flag.
     ...(prerelease

@@ -7,7 +7,7 @@ This is the documentation site for [Onetime Secret](https://onetimesecret.com/),
 ## Features
 
 - Full documentation for Onetime Secret
-- Multilingual support (currently English and German)
+- Multilingual support
 - Custom components for card layouts
 - Responsive design
 
@@ -26,7 +26,7 @@ Start the development server:
 
 ```bash
 # From the project root
-pnpm dev
+SHOW_STAGING_WARNING=true pnpm dev
 ```
 
 This will start Astro's development server, and you can view the site at `http://localhost:4321`.
