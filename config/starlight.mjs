@@ -64,6 +64,7 @@ export const starlightConfig = {
   components: {
     Header: "./src/components/starlight/Header.astro",
     SiteTitle: "./src/components/starlight/SiteTitle.astro",
+    Hero: "./src/components/starlight/Hero.astro",
     // Prerelease only: wrap PageFrame to mount the banner and/or watermark.
     // The override renders each marker conditionally on its own flag.
     ...(prerelease
