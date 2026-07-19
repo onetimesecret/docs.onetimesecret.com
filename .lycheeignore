@@ -60,6 +60,12 @@ mailto:*
 .*/self-hosting/configuration$
 .*/self-hosting/getting-started$
 .*/self-hosting/installation$
+.*/self-hosting/upgrading-v0-24$
+
+# Configuration Generator is an interactive tool page in
+# src/pages/en/self-hosting, not src/content/docs, so the source-rooted
+# internal link check can't resolve it (same rationale as artifacts above).
+.*/self-hosting/configuration-generator$
 
 # REST API v2 docs (only exist in en)
 .*/rest-api/v2$

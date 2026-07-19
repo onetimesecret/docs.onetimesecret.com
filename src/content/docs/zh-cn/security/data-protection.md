@@ -52,5 +52,5 @@ Onetime Secret 旨在支持您的合规工作；它不能取代您自己的控�
 
 我们随时为您提供帮助。
 
-- 一般问题：support@onetimesecret.com
-- 安全问题：security@onetimesecret.com（[披露政策](/zh-cn/security/vulnerability-disclosure)）
+- 一般问题：**support@onetimesecret.com**
+- 安全问题：**security@onetimesecret.com**（[披露政策](/zh-cn/security/vulnerability-disclosure)）

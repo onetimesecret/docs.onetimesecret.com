@@ -35,5 +35,5 @@ Onetime Secretは、お客様のコンプライアンスへの取り組みを支
 
 いつでもお手伝いいたします。
 
-- 一般的なお問い合わせ：support@onetimesecret.com
-- セキュリティ上の問題：security@onetimesecret.com（[報告ポリシー](/ja/security/vulnerability-disclosure)）
+- 一般的なお問い合わせ：**support@onetimesecret.com**
+- セキュリティ上の問題：**security@onetimesecret.com**（[報告ポリシー](/ja/security/vulnerability-disclosure)）
