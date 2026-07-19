@@ -10,7 +10,7 @@
  *
  * Re-sync this file with upstream on Starlight upgrades.
  */
-import { Image } from 'astro:assets';
+import { Image, getImage } from 'astro:assets';
 import DraftContentNotice from 'virtual:starlight/components/DraftContentNotice';
 // Mirrors Starlight's `PAGE_TITLE_ID` from '../constants' (verified value: '_top').
 // Inlined because the upstream relative import does not resolve outside the package.
@@ -44,16 +44,66 @@ if (image) {
 		rawHtml = image.html;
 	}
 }
+
+/*
+ * Random hero card: when the hero image is one of the socialcards, rotate a
+ * random one per page load (client-side — this is a static build, so a
+ * build-time pick would only change on rebuild). We collect every candidate,
+ * run each through Astro's image pipeline (so we get optimized, hashed URLs),
+ * and hand the list to a tiny inline script that sets `src` on load. `src` is
+ * set client-side only to avoid fetching a default and then swapping it (these
+ * cards are ~600KB); the box is sized up front so there's no layout shift, and
+ * a <noscript> fallback shows the frontmatter image when JS is off.
+ * All socialcards are 16:9 (1920x1080); at width 800 that's height 450.
+ */
+const cardModules = import.meta.glob<{ default: ImageMetadata }>(
+	'../../assets/img/socialcards/*.png',
+	{ eager: true }
+);
+const cardOriginals = new Set(Object.values(cardModules).map((m) => m.default.src));
+const randomizeHero = Boolean(darkImage && !lightImage && cardOriginals.has(darkImage.src));
+let cardSrcs: string[] = [];
+if (randomizeHero) {
+	const processed = await Promise.all(
+		Object.values(cardModules).map((m) => getImage({ src: m.default, width: 800 }))
+	);
+	cardSrcs = processed.map((p) => p.src);
+}
 ---
 
 <div class="hero">
 	{
-		darkImage && (
-			<Image
-				src={darkImage}
-				{...imageAttrs}
-				class:list={{ 'light:sl-hidden': Boolean(lightImage) }}
-			/>
+		randomizeHero ? (
+			<Fragment>
+				<img
+					id="sl-hero-random"
+					width={800}
+					height={450}
+					loading="eager"
+					decoding="async"
+					alt={imageAttrs.alt}
+					data-hero-cards={JSON.stringify(cardSrcs)}
+				/>
+				<script is:inline>
+					(function () {
+						var el = document.getElementById('sl-hero-random');
+						if (!el) return;
+						var cards = JSON.parse(el.dataset.heroCards);
+						if (cards.length) el.src = cards[Math.floor(Math.random() * cards.length)];
+					})();
+				</script>
+				<noscript>
+					<img src={cardSrcs[0]} width={800} height={450} alt={imageAttrs.alt} />
+				</noscript>
+			</Fragment>
+		) : (
+			darkImage && (
+				<Image
+					src={darkImage}
+					{...imageAttrs}
+					class:list={{ 'light:sl-hidden': Boolean(lightImage) }}
+				/>
+			)
 		)
 	}
 	{lightImage && <Image src={lightImage} {...imageAttrs} class="dark:sl-hidden" />}
