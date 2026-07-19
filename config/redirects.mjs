@@ -1,5 +1,7 @@
 // config/redirects.mjs
 
+import { i18nConfig } from "./i18n.mjs";
+
 /**
  * Astro's redirect configuration is static and evaluated at build time, not
  * runtime so we can't access browser language preferences here. For dynamic
@@ -10,7 +12,17 @@
  *
  */
 export function createRedirectsConfig() {
+  // The standalone Trust principles page was merged into Privacy First
+  // (#DOCS-1), so its URL redirects in every locale.
+  const trustMergeRedirects = Object.fromEntries(
+    Object.keys(i18nConfig.locales).map((locale) => [
+      `/${locale}/principles/trust`,
+      `/${locale}/principles/privacy-first/`,
+    ]),
+  );
+
   return {
+    ...trustMergeRedirects,
     "/api": "/en/rest-api/",
     "/rest-api": "/en/rest-api/",
     "/docs/rest-api": "/en/rest-api/",

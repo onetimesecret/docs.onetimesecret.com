@@ -31,7 +31,7 @@ chmod 600 .ots_secret
 echo "Gizli anahtar .ots_secret dosyasına kaydedildi (bu dosyayı güvende tutun!)"
 ```
 
-### 3. Onetime Secret'ı Çalıştırın
+### 3. Onetime Secret'i Çalıştırın
 
 ```bash
 # Gizli anahtarı kullanarak konteyneri çalıştırın
@@ -41,7 +41,7 @@ docker run -p 3000:3000 -d \
   -e HOST=localhost:3000 \
   -e SSL=false \
   -e RACK_ENV=production \
-  onetimesecret/onetimesecret:v0.25.10
+  onetimesecret/onetimesecret:v0.25.11
 ```
 
 ### 4. Örneğinize Erişin

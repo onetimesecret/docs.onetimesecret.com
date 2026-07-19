@@ -7,20 +7,15 @@ sidebar:
 
 运行您自己的私有 Onetime Secret 实例，全面控制您的数据、安全性和部署。
 
-<!-- EDITORS: This caution block is intentional. v0.23 still provides a smoother
-     onboarding experience than v0.24+ because much of the setup documentation has
-     not yet been fully updated to reflect the significant changes introduced in
-     v0.24. Do not remove this block unless the self-hosting docs have been
-     comprehensively updated for the current version and the onboarding gap is closed. -->
-:::caution[2026年3月 — 自托管文档正在更新中]
-我们正在从 **v0.23** 过渡到 **v0.24**（`main` 分支）。部分自托管文档已过时，我们正在[积极改进中](https://github.com/onetimesecret/onetimesecret/issues/2628)。
+:::tip[当前版本：v0.25]
+当前稳定版本为 **v0.25**（`main` 分支）。支持两种运行模式：
 
-**如果您只是想先运行起来**，我们推荐使用 `rel/0.23` 分支。它只需要几个环境变量和 Redis，我们仍在积极推送修复和小更新。
+- **简单模式** — 最简便的方式，只需 Redis 和几个环境变量，账户功能与以往相同。请从下方的[快速入门](#快速入门选项)开始。
+- **完整模式** — 新增基于 PostgreSQL 和 RabbitMQ 的账户功能（MFA、SSO、WebAuthn、组织管理）。
 
-```bash
-git clone -b rel/0.23 https://github.com/onetimesecret/onetimesecret.git
-```
+如果您从 v0.22 或 v0.23 升级，请参阅[升级至 v0.24+](./upgrading-v0-24) 指南，了解配置和数据模型变更以及如何选择认证模式。
 :::
+
 
 ## 为什么要自托管？
 
@@ -42,7 +37,7 @@ docker run -p 6379:6379 -d redis:bookworm
 docker run -p 3000:3000 -d \
   -e REDIS_URL=redis://host.docker.internal:6379/0 \
   -e SECRET="$(openssl rand -hex 32)" \
-  onetimesecret/onetimesecret:v0.25.10
+  onetimesecret/onetimesecret:v0.25.11
 ```
 
 访问 `http://localhost:3000`。

@@ -1,28 +1,13 @@
 ---
-title: Privacy
-description: Il nostro approccio alla protezione della privacy degli utenti attraverso scelte di design deliberate
+title: La privacy prima di tutto
+description: Le pratiche di tracciamento e marketing che evitiamo deliberatamente, perché le evitiamo e come manteniamo verificabili questi impegni
 ---
 
-# Pratiche di privacy
-
-In Onetime Secret adottiamo un approccio volutamente minimale alla privacy degli utenti. Ecco cosa scegliamo deliberatamente di non fare e, soprattutto, perché.
-
-## La nostra filosofia No-Email
-
-La maggior parte dei servizi inonda la vostra casella di posta elettronica con:
-
-- Newsletter di marketing
-- Aggiornamenti sui prodotti
-- Statistiche di utilizzo
-- Annunci di funzionalità
-- Offerte promozionali
-- Campagne di reengagement
-
-Le uniche email che riceverete da noi sono quelle che richiedete espressamente — consegne di link segreti, notifiche relative all'account o aggiornamenti per i quali avete dato il vostro consenso esplicito. Anche quando scegliete di ricevere comunicazioni, sentirete raramente parlare di noi, e solo per i motivi specifici che avete scelto. La vostra casella di posta vi appartiene.
+La privacy non è una funzionalità innestata su Onetime Secret in un secondo momento — è il modo in cui il servizio è costruito. E si vede meno in ciò che aggiungiamo che in ciò che tralasciamo. Questa pagina illustra le pratiche che evitiamo deliberatamente, perché le evitiamo e come potete verificare che facciamo sul serio.
 
 ## Standard di settore che saltiamo
 
-Evitiamo deliberatamente i comuni strumenti di tracciamento e di marketing:
+Non utilizziamo gli strumenti di tracciamento e marketing che la maggior parte dei servizi considera imprescindibili:
 
 - Pacchetti di analisi che tracciano il comportamento degli utenti
 - Pulsanti di integrazione con i social media
@@ -31,34 +16,36 @@ Evitiamo deliberatamente i comuni strumenti di tracciamento e di marketing:
 - Strumenti di automazione del marketing
 - Pixel di tracciamento di terze parti
 
+## Email al minimo
+
+La stessa sobrietà vale per la vostra casella di posta. Non inviamo newsletter di marketing, offerte promozionali né campagne di reengagement — sentirete parlare di noi solo per il servizio che utilizzate, per un avviso che vi dobbiamo o per le novità a cui avete scelto di iscrivervi. Nessuna email che inviamo contiene pixel di tracciamento o link che tracciano i clic, quindi non sappiamo se l'avete aperta né su cosa avete cliccato. La nostra [filosofia della comunicazione](/it/principles/communication) spiega esattamente cosa inviamo e perché.
+
 ## Perché è importante
 
 Queste scelte si riducono a tre cose che ci stanno profondamente a cuore:
 
-1. **I vostri dati sono vostri.** Non trattiamo le informazioni degli utenti come una risorsa da sfruttare. La privacy non è una funzionalità aggiunta in seguito — è il modo in cui il servizio è costruito.
-2. **Lo strumento deve semplicemente funzionare.** Quando dovete condividere qualcosa di sensibile, l'affidabilità conta più di ogni altra cosa.
-3. **La fiducia si guadagna con ciò che scegliamo di non fare.** Ogni tracker che evitiamo, ogni campagna che non inviamo, è una piccola prova di dove risiedono le nostre priorità.
+- **I vostri dati sono vostri.** Non trattiamo le informazioni degli utenti come una risorsa da sfruttare.
+- **Lo strumento deve semplicemente funzionare.** Quando dovete condividere qualcosa di sensibile, l'affidabilità conta più di ogni altra cosa.
+- **La fiducia si guadagna con ciò che si sceglie di non fare.** Ogni tracker che evitiamo, ogni campagna che non inviamo, è una piccola prova di dove stanno le nostre priorità.
 
-## Il vero impatto
+## Fiducia attraverso la trasparenza
 
-Evitare le pratiche standard di marketing e tracciamento non è solo una questione filosofica — ha vantaggi concreti:
+Qualsiasi servizio può affermare di rispettare la privacy. Noi preferiamo rendere verificabili le nostre affermazioni:
 
-- Un servizio più snello e veloce con meno componenti in movimento
-- Una superficie di attacco ridotta con meno dipendenze da terze parti
-- I vostri dati restano sotto il vostro controllo, non dispersi tra reti pubblicitarie
-- Il nostro impegno ingegneristico resta concentrato sul prodotto, non sui funnel di conversione
+- **Open source.** Il cuore del servizio è [open source](https://github.com/onetimesecret/onetimesecret) — potete leggere il codice che gestisce i vostri segreti, o eseguirlo voi stessi.
+- **Politiche in linguaggio chiaro.** La nostra [Informativa sulla privacy](https://onetimesecret.com/info/privacy) dice cosa raccogliamo e perché, con parole che non richiedono un avvocato per essere interpretate.
+- **Pratiche di sicurezza documentate.** [Sicurezza e fiducia](/it/security) spiega il nostro modello di sicurezza, come proteggiamo i dati e come segnalare una vulnerabilità.
+- **Dialogo diretto.** Domande, feedback e critiche sono benvenuti — [contattateci](https://onetimesecret.com/feedback) e sarà una persona a leggere il vostro messaggio.
 
-Dedichiamo il nostro tempo al lavoro che conta davvero per voi:
+## L'impatto reale
 
-- **Funzionalità di base** — migliorare le funzioni che utilizzate realmente
-- **Protezione della privacy** — rafforzare la crittografia e la gestione dei dati
-- **Affidabilità del servizio** — assicurarci di esserci quando ne avete bisogno
-- **Conformità normativa** — soddisfare i requisiti giurisdizionali e normativi
+Rinunciare a queste pratiche non è solo filosofia — cambia il prodotto:
+
+- Un servizio più snello e veloce, con meno componenti in movimento
+- Una superficie di attacco più piccola, con meno dipendenze da terze parti
+- I vostri dati restano sotto il vostro controllo invece di essere dispersi tra reti pubblicitarie
+- Il nostro tempo di ingegneria va al prodotto, non ai funnel di conversione
 
 ## Guardare avanti
 
-Continueremo a scegliere semplicità e privacy rispetto alla portata del marketing. Questo significa che potremmo crescere più lentamente rispetto ai servizi che ottimizzano per l'engagement — e per noi va bene così. Uno strumento per la privacy si guadagna la reputazione attraverso un'affidabilità costante e silenziosa.
-
-Quando sentirete parlare di noi, sarà perché lo avete chiesto voi.
-
-**Domande sul nostro approccio?** [Contattateci](https://onetimesecret.com/feedback).
+Continueremo a scegliere semplicità e privacy rispetto alla portata del marketing. Questo significa che potremmo crescere più lentamente dei servizi che ottimizzano per l'engagement — e per noi va bene così. Uno strumento per la privacy si guadagna la reputazione con un'affidabilità costante e silenziosa.

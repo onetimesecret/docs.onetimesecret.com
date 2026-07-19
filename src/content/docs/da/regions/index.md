@@ -1,5 +1,5 @@
 ---
-title: Datacentre regioner
+title: Datacenterregioner
 description: Lær om Onetime Secrets datacenterregioner, og hvordan du vælger den rigtige til dine behov.
 ---
 

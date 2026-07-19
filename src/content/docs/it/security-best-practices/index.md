@@ -3,8 +3,6 @@ title: Migliori pratiche di sicurezza
 description: Migliorate la sicurezza della condivisione dei segreti con queste best practice specifiche per Onetime Secret, compresi i vantaggi della sicurezza dei domini personalizzati.
 ---
 
-# Migliori pratiche di sicurezza per Onetime Secret
-
 Sebbene Onetime Secret sia stato progettato con un occhio di riguardo alla sicurezza, seguire queste best practice può migliorare ulteriormente la protezione delle informazioni sensibili, soprattutto quando si utilizzano funzioni come i domini personalizzati.
 
 ## Migliori pratiche per la condivisione dei segreti
@@ -47,13 +45,13 @@ Se si utilizza l'API Onetime Secret:
 
 ## Sicurezza avanzata in self-hosting
 
-Questa sezione tratta le considerazioni avanzate sulla sicurezza per le organizzazioni che gestiscono la propria istanza di Onetime Secret. Il progetto open source è disponibile su [GitHub](https://github.com/onetimesecret/onetimesecret) e le immagini Docker ufficiali su [Docker Hub](https://hub.docker.com/r/onetimesecret/onetimesecret).
+Questa sezione tratta le considerazioni avanzate sulla sicurezza per le organizzazioni che gestiscono la propria istanza di Onetime Secret. Il progetto open source è disponibile su [GitHub](https://github.com/onetimesecret/onetimesecret) e le immagini Docker ufficiali su [GitHub Container Registry](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret).
 
 Le raccomandazioni riportate di seguito possono essere implementate a livello di infrastruttura quando si ospita Onetime Secret in modo autonomo:
 
-1. **Utilizzare ambienti effimeri**: Quando è possibile, creare e distruggere ambienti per ogni sessione di condivisione dei segreti. Questo può essere particolarmente utile per le operazioni altamente sensibili. La nostra immagine [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/blob/v0.18.5/docs/DOCKER-lite.md) Docker è stata progettata per casi d'uso effimeri.
+1. **Utilizzare ambienti effimeri**: Quando è possibile, creare e distruggere ambienti per ogni sessione di condivisione dei segreti. Questo può essere particolarmente utile per le operazioni altamente sensibili. La nostra immagine [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret-lite) Docker è stata progettata per casi d'uso effimeri.
 
-2. **Implement Time-Based Restrictions**: Se il vostro caso d'uso lo consente, prendete in considerazione l'implementazione di restrizioni temporali per l'accesso ai segreti, ad esempio solo durante l'orario di lavoro.
+2. **Implementare restrizioni basate sul tempo**: Se il vostro caso d'uso lo consente, prendete in considerazione l'implementazione di restrizioni temporali per l'accesso ai segreti, ad esempio solo durante l'orario di lavoro.
 
 3. **Geo-Fencing**: Per le operazioni altamente sensibili, considerate l'implementazione del geo-fencing per limitare l'accesso ai segreti da posizioni geografiche specifiche.
 
@@ -68,7 +66,7 @@ Questa sezione illustra le raccomandazioni generali sulla sicurezza che possono 
 
 1. **Avere un piano**: Sviluppate un piano di risposta agli incidenti specifico per i vostri processi di condivisione dei segreti. Questo dovrebbe includere le fasi di revoca dell'accesso, di notifica alle parti interessate e di mitigazione dei danni potenziali.
 
-2. **Azione rapida**: Se si sospetta che un segreto sia stato compromesso, utilizzare immediatamente la funzione di masterizzazione di Onetime Secret se il segreto non è ancora stato visualizzato. Se è stato visualizzato, adottare le misure appropriate per ridurre i danni potenziali.
+2. **Azione rapida**: Se si sospetta che un segreto sia stato compromesso, utilizzare immediatamente la funzione di eliminazione (burn) di Onetime Secret se il segreto non è ancora stato visualizzato. Se è stato visualizzato, adottare le misure appropriate per ridurre i danni potenziali.
 
 3. **Riprese di sicurezza periodiche**: Rivedete periodicamente le vostre pratiche di condivisione dei segreti e modificate le misure di sicurezza se necessario.
 

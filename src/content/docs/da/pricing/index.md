@@ -9,19 +9,19 @@ Del fortrolig information med tillid, løft dit brand og opbyg tillid.
 
 ## Planer
 
-### Basic
+### Free
 
 **$0/måned**
 
-Sikker engangsdeling for alle.
+Sikker, selvdestruerende beskeddeling for alle.
 
 **Funktioner:**
-- Engangsvisning af delte beskeder
-- Automatisk sletning efter visning
-- Konto påkrævet for at e-maile modtagere
-- Grundlæggende API-adgang
+- Engangsvisning med automatisk sletning efter adgang
+- Ét brugerdefineret domæne
+- Forside & indkommende beskeder
+- API-adgang
 
-[Kom i gang](https://onetimesecret.com/plans/basic)
+[Kom i gang](https://onetimesecret.com/plans/free)
 
 ### Identity Plus
 
@@ -35,15 +35,18 @@ Sikker deling, der løfter dit brand og forenkler kommunikation.
 
 [Se aktuelle priser](https://onetimesecret.com/pricing) | [Vælg denne plan](https://onetimesecret.com/plans/identity)
 
-### Global Elite
+### Team Plus
 
-En fuldt tilpasset installation til én enkelt lejer med dedikeret infrastruktur, dataoverensstemmelseskontrol og ubegrænset skalerbarhed.
+Styret beskeddeling med SSO, adgangskontrol og organisatorisk synlighed.
 
 **Funktioner:**
-- Privat cloud-miljø
-- Ubegrænset brug og skalering
-- Flere dataplaceringsmuligheder (EU, US)
-- Fuld regulatorisk overholdelse (inklusiv GDPR, CCPA, HIPAA)
+- Alt i Identity Plus
+- Single sign-on (SSO)
+- Teamadministration & delt oversigt
+- Fleksibelt e-mail-afsenderdomæne
+- Domænespecifik tilmeldingsvalidering
+
+[Se aktuelle priser](https://onetimesecret.com/pricing)
 
 ## Ofte stillede spørgsmål
 
@@ -60,7 +63,7 @@ Ja, Onetime Secret tilbyder et gratis niveau, der giver dig mulighed for at brug
 Ja, Onetime Secret tilbyder en selv-hosting-mulighed med vores SimpleStack℠-garanti, der sikrer nem implementering og administration. [GitHub](https://github.com/onetimesecret/onetimesecret)
 
 ### Hvor sikker er Onetime Secret?
-Vi tager sikkerhed meget alvorligt og anvender flere foranstaltninger til at beskytte brugernes information. Som angivet i vores privatlivspolitik bruger vi industristandardpraksis til at beskytte alle data mod uautoriseret adgang, ændring eller ødelæggelse. Alle data under overførsel er krypteret ved hjælp af HTTPS/TLS og gemmes sikkert i Den Europæiske Union i overensstemmelse med databeskyttelseslovgivningen.
+Vi tager sikkerhed meget alvorligt og anvender flere foranstaltninger til at beskytte brugernes information. Som angivet i vores privatlivspolitik bruger vi industristandardpraksis til at beskytte alle data mod uautoriseret adgang, ændring eller ødelæggelse. Alle data under overførsel er krypteret ved hjælp af HTTPS/TLS, og data i hvile opbevares sikkert i den datacenterregion, du vælger — Canada, Den Europæiske Union, New Zealand, Storbritannien eller USA — i overensstemmelse med de gældende databeskyttelseslove for den pågældende region.
 
 Vi er dog også gennemsigtige om, at ingen metode til elektronisk transmission eller lagring er 100% sikker. Selvom vi bestræber os på at bruge kommercielt acceptable midler til at beskytte personlige oplysninger, kan vi ikke garantere dens absolutte sikkerhed. Vi anbefaler brugere at tage forholdsregler som at bruge adgangssætninger. Vores forpligtelse er at være omhyggelige med at sikre data efter bedste evne, samtidig med at vi er åbne om potentielle risici.
 

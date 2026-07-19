@@ -1,29 +1,39 @@
 ---
 title: Porównaj plany
-description: Porównaj nasze bogate w funkcje plany oferujące bezpieczne udostępnianie sekretów z wygasającymi linkami, niestandardowymi domenami i elastycznymi opcjami przechowywania dla osób indywidualnych i firm.
+description: Porównaj nasze plany bezpiecznego udostępniania sekretów — wygasające linki, niestandardowe domeny, branding, SSO i kontrola zespołowa w planach Free, Identity Plus i Team Plus.
 ---
 
 
 ## Macierz funkcji
 
-| Funkcja/Plan | Identity Plus | Basic | Niezalogowany |
-|---------|----------------|-------------------------|------------|
-| Niestandardowe domeny | Nieograniczone | ❌ | ❌ |
-| Brandowana strona główna | ✅ | ❌ | ❌ |
-| Niestandardowe logo, kolor | ✅ | ❌ | ❌ |
-| Liczba kont | 1 | 1 | ❌ |
-| Wygaśnięcie linku | Do 30 dni | 14 dni | Ograniczone do 7 dni |
-| Dostęp API | ✅ | ✅ | Ograniczony |
-| Wymagana konfiguracja | Tak (konfiguracja DNS) | Nie | Nie |
-| Płatny | Tak (część planu Identity) | Nie | Nie |
-| Bezpieczeństwo SSL/TLS | ✅ | ✅ | ✅ |
-| Lokalizacja danych | ✅ (UE lub USA) | ✅ (UE lub USA) | ✅ (UE lub USA) |
+| Funkcja / Plan | Niezalogowany | Free | Identity Plus | Team Plus |
+|---|---|---|---|---|
+| Niestandardowe domeny | ❌ | 1 | Nieograniczone | Nieograniczone |
+| Sekrety ze strony głównej | ❌ | ✅ | ✅ | ✅ |
+| Przychodzące sekrety | ❌ | ✅ | ✅ | ✅ |
+| Dostęp do API | Ograniczony | ✅ | ✅ | ✅ |
+| Niestandardowy branding (logo, kolor) | ❌ | ❌ | ✅ | ✅ |
+| Niestandardowy nadawca wiadomości e-mail | ❌ | ❌ | ✅ | ✅ \* |
+| Niestandardowe domyślne ustawienia prywatności | ❌ | ❌ | ✅ | ✅ |
+| Konfiguracja logowania na poziomie domeny | ❌ | ❌ | ✅ | ✅ |
+| Zaproszenia dla członków | ❌ | ❌ | ✅ | ✅ |
+| Weryfikacja rejestracji na poziomie domeny | ❌ | ❌ | ❌ | ✅ |
+| Jednokrotne logowanie (SSO) | ❌ | ❌ | ❌ | ✅ |
+| Zespoły i wspólny panel | ❌ | ❌ | ❌ | ✅ |
+| Branding przestrzeni roboczej | ❌ | ❌ | ❌ | ✅ |
+| Członkowie w organizacji | — | 1 | Do 50 | Do 100 |
+| Wygaśnięcie linku | Do 7 dni | Do 14 dni | Do 30 dni | Do 30 dni |
+| Wybór regionu (EU, UK, US, CA, NZ) | ✅ | ✅ | ✅ | ✅ |
+| Szyfrowanie w tranzycie i w spoczynku | ✅ | ✅ | ✅ | ✅ |
+| Płatny | Nie | Nie | Tak | Tak |
 
+\* Team Plus rozszerza niestandardowego nadawcę wiadomości e-mail o **elastyczną domenę nadawcy** —
+dowolną domenę, nie tylko Twoją niestandardową domenę.
 
-Po więcej informacji o ulepszeniach konta i cenach odwiedź naszą [stronę cennika](https://onetimesecret.com/pricing).
+Aktualne ceny znajdziesz na naszej [stronie cennika](https://onetimesecret.com/pricing).
 
 
 ## Wkrótce
 
-* Niestandardowe szczegóły nadawcy e-mail z obsługą SPF i DKIM
-* Plany zespołowe dla wielu użytkowników
+* Dzienniki audytu i reguły dostępu oparte na adresach IP dla Team Plus
+* [Secretary Links](https://secretlinks.com) — bezpieczne linki do zbierania poufnych informacji od dowolnej osoby, bez konieczności posiadania konta

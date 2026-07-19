@@ -26,7 +26,7 @@ function buildSvgBackground(color: string): string {
     '<text x="280" y="110" text-anchor="middle"',
     ' font-size="48" font-weight="900" font-family="sans-serif"',
     ' letter-spacing="0.2em"',
-    ` fill="${color}">PRERELEASE</text>`,
+    ` fill="${color}">DRAFT</text>`,
     "</svg>",
   ].join("");
   return `url("data:image/svg+xml,${encodeURIComponent(svg)}")`;

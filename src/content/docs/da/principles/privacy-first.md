@@ -1,64 +1,51 @@
 ---
-title: Privatliv
-description: Vores tilgang til beskyttelse af brugerprivatliv gennem bevidste designvalg
+title: Privatliv først
+description: De sporings- og marketingpraksisser, vi bevidst undgår, hvorfor vi undgår dem, og hvordan vi sørger for, at disse forpligtelser kan efterprøves
 ---
 
-# Privatlivs-først praksis
+Privatliv er ikke en funktion, vi bolter på Onetime Secret — det er sådan, tjenesten er bygget. Det kommer mindre til udtryk i det, vi tilføjer, end i det, vi udelader. Denne side gennemgår de praksisser, vi bevidst undgår, hvorfor vi undgår dem, og hvordan du selv kan efterprøve, at vi mener det.
 
-Hos Onetime Secret tager vi en bevidst minimal tilgang til brugerprivatliv. Her er, hvad vi bevidst vælger ikke at gøre, og mere vigtigt, hvorfor.
+## Industristandarder, vi springer over
 
-## Vores ingen-e-mail-filosofi
+Vi bruger ikke de sporings- og marketingværktøjer, som de fleste tjenester betragter som en selvfølge:
 
-De fleste tjenester oversvømmer din indbakke med:
-
-- Marketingnyhedsbreve
-- Produktopdateringer
-- Brugsstatistikker
-- Funktionsmeddelelser
-- Kampagnetilbud
-- Genengagementskampagner
-
-De eneste e-mails du modtager fra os, er dem du specifikt har anmodet om — levering af hemmelige links, kontobeskeder eller opdateringer du udtrykkeligt har tilmeldt dig. Selv når du tilmelder dig, hører du sjældent fra os, og kun af de specifikke grunde du valgte. Din indbakke tilhører dig.
-
-## Industristandarder vi springer over
-
-Vi undgår bevidst almindelige sporings- og marketingværktøjer:
-
-- Analyser, der sporer brugeradfærd
+- Analysepakker, der sporer brugeradfærd
 - Integrationsknapper til sociale medier
 - Annoncenetværk
 - A/B-testrammeværk
 - Marketingautomatiseringsværktøjer
-- Tredjepartssporingspixels
+- Sporingspixels fra tredjepart
+
+## Minimal e-mail
+
+Den samme tilbageholdenhed gælder din indbakke. Vi sender ingen marketingnyhedsbreve, kampagnetilbud eller genengagementskampagner — du hører kun fra os om den tjeneste, du bruger, en meddelelse, vi skylder dig, eller nyheder, du selv har tilmeldt dig. Ingen af vores e-mails indeholder sporingspixels eller links med kliksporing, så vi ved ikke, om du har åbnet den, eller hvad du har klikket på. Vores [Kommunikationsfilosofi](/da/principles/communication) gennemgår præcis, hvad vi sender og hvorfor.
 
 ## Hvorfor dette betyder noget
 
-Disse valg bunder i tre ting vi virkelig går op i:
+Disse valg bunder i tre ting, vi virkelig går op i:
 
-1. **Dine data er dine.** Vi behandler ikke brugerinformation som en ressource der kan udvindes. Privatliv er ikke en funktion vi bolter på — det er sådan tjenesten er bygget.
-2. **Værktøjet skal bare fungere.** Når du har brug for at dele noget følsomt, betyder pålidelighed mere end alt andet.
-3. **Tillid optjenes gennem det vi vælger ikke at gøre.** Hver tracker vi springer over, hver kampagne vi ikke sender, er et lille bevis på hvor vores prioriteter ligger.
+- **Dine data er dine.** Vi behandler ikke brugerinformation som en ressource, der skal udvindes.
+- **Værktøjet skal bare fungere.** Når du har brug for at dele noget følsomt, betyder pålidelighed mere end alt andet.
+- **Tillid optjenes gennem det, vi vælger ikke at gøre.** Hver tracker, vi springer over, hver kampagne, vi ikke sender, er et lille bevis på, hvor vores prioriteter ligger.
+
+## Tillid gennem gennemsigtighed
+
+Enhver tjeneste kan påstå, at den respekterer privatlivet. Vi vil hellere gøre vores påstande efterprøvelige:
+
+- **Open source.** Kernetjenesten er [open source](https://github.com/onetimesecret/onetimesecret) — du kan læse den kode, der håndterer dine beskeder, eller selv køre den.
+- **Politikker i klart sprog.** Vores [Privatlivspolitik](https://onetimesecret.com/info/privacy) beskriver, hvad vi indsamler og hvorfor, i et sprog, du ikke behøver en advokat for at forstå.
+- **Dokumenterede sikkerhedspraksisser.** [Sikkerhed og tillid](/da/security) forklarer vores sikkerhedsmodel, hvordan vi beskytter data, og hvordan du rapporterer en sårbarhed.
+- **Direkte dialog.** Spørgsmål, feedback og kritik er velkomne — [kontakt os](https://onetimesecret.com/feedback), og det bliver læst af et menneske.
 
 ## Den reelle indvirkning
 
-At springe standard marketing- og sporingspraksis over er ikke bare filosofisk — det har håndgribelige fordele:
+At springe disse praksisser over er ikke bare filosofi — det ændrer produktet:
 
 - En slankere, hurtigere tjeneste med færre bevægelige dele
 - En mindre angrebsflade med færre tredjepartsafhængigheder
-- Dine data forbliver under din kontrol, ikke spredt ud over annoncenetværk
-- Vores tekniske fokus forbliver på produktet, ikke på konverteringstragte
-
-Vi bruger vores tid på det arbejde der betyder noget for dig:
-
-- **Kernefunktionalitet** — forbedring af de funktioner du faktisk bruger
-- **Privatlivsbeskyttelse** — styrkelse af kryptering og datahåndtering
-- **Tjenestepålidelighed** — at sikre vi er der, når du har brug for os
-- **Overholdelse** — opfyldelse af jurisdiktionelle og lovgivningsmæssige krav
+- Dine data forbliver under din kontrol i stedet for at være spredt ud over annoncenetværk
+- Vores udviklingstid går til produktet, ikke til konverteringstragte
 
 ## Fremadrettet
 
-Vi vil blive ved med at vælge enkelhed og privatliv frem for markedsføringsrækkevidde. Det betyder, at vi måske vokser langsommere end tjenester der optimerer for engagement — og det har vi det fint med. Et privatlivsværktøj optjener sit ry gennem konsekvent, stille pålidelighed.
-
-Når du hører fra os, er det fordi du bad om det.
-
-**Spørgsmål til vores tilgang?** [Kontakt os](https://onetimesecret.com/feedback).
+Vi vil blive ved med at vælge enkelhed og privatliv frem for markedsføringsrækkevidde. Det betyder, at vi måske vokser langsommere end tjenester, der optimerer for engagement — og det har vi det fint med. Et privatlivsværktøj optjener sit ry gennem konsekvent, stille pålidelighed.

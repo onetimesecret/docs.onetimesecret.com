@@ -7,20 +7,15 @@ sidebar:
 
 자체 인프라에서 Onetime Secret의 프라이빗 인스턴스를 운영하여 데이터, 보안 및 배포를 완벽하게 제어할 수 있습니다.
 
-<!-- EDITORS: This caution block is intentional. v0.23 still provides a smoother
-     onboarding experience than v0.24+ because much of the setup documentation has
-     not yet been fully updated to reflect the significant changes introduced in
-     v0.24. Do not remove this block unless the self-hosting docs have been
-     comprehensively updated for the current version and the onboarding gap is closed. -->
-:::caution[2026년 3월 — 자체 호스팅 문서 전환 중]
-현재 **v0.23**에서 **v0.24**(`main` 브랜치)로 전환하는 과정에 있습니다. 일부 자체 호스팅 문서가 최신 상태가 아니며, [적극적으로 개선 작업을 진행하고 있습니다](https://github.com/onetimesecret/onetimesecret/issues/2628).
+:::tip[현재 릴리스: v0.25]
+현재 안정 버전은 **v0.25** (`main` 브랜치)입니다. 두 가지 모드로 실행됩니다:
 
-**빠르게 실행해 보고 싶으시다면**, `rel/0.23` 브랜치를 권장합니다. 몇 가지 환경 변수와 Redis만 있으면 되며, 해당 브랜치에 대한 수정 사항과 소규모 업데이트를 계속 적용하고 있습니다.
+- **심플 모드** — 가장 간편한 방법입니다. Redis와 몇 가지 환경 변수만 필요하며, 계정은 기존과 동일하게 작동합니다. 아래의 빠른 시작 부분부터 시작하세요.
+- **풀 모드** — PostgreSQL 및 RabbitMQ를 기반으로 계정 기능(MFA, SSO, WebAuthn, 조직)을 추가합니다.
 
-```bash
-git clone -b rel/0.23 https://github.com/onetimesecret/onetimesecret.git
-```
+v0.22 또는 v0.23에서 업그레이드하는 경우, 구성 및 데이터 모델 변경 사항과 인증 모드 선택 방법을 다루는 [v0.24+로 업그레이드](./upgrading-v0-24) 가이드를 따르세요.
 :::
+
 
 ## 자체 호스팅을 선택하는 이유
 
@@ -42,7 +37,7 @@ docker run -p 6379:6379 -d redis:bookworm
 docker run -p 3000:3000 -d \
   -e REDIS_URL=redis://host.docker.internal:6379/0 \
   -e SECRET="$(openssl rand -hex 32)" \
-  onetimesecret/onetimesecret:v0.25.10
+  onetimesecret/onetimesecret:v0.25.11
 ```
 
 `http://localhost:3000`에서 접속할 수 있습니다.

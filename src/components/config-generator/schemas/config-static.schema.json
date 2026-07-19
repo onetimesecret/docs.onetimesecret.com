@@ -1,0 +1,1278 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://onetimesecret.com/schemas/config/static.schema.json",
+  "type": "object",
+  "properties": {
+    "site": {
+      "type": "object",
+      "properties": {
+        "host": {
+          "default": "localhost:3000",
+          "type": "string"
+        },
+        "ssl": {
+          "default": false,
+          "type": "boolean"
+        },
+        "secret": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "interface": {},
+        "secret_options": {
+          "type": "object",
+          "properties": {
+            "default_ttl": {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "exclusiveMinimum": 0,
+                  "maximum": 9007199254740991
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "ttl_options": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "generated_value_display_ttl": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            "passphrase": {
+              "type": "object",
+              "properties": {
+                "required": {
+                  "default": false,
+                  "type": "boolean"
+                },
+                "minimum_length": {
+                  "default": 4,
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 256
+                },
+                "maximum_length": {
+                  "default": 128,
+                  "type": "integer",
+                  "exclusiveMinimum": 0,
+                  "maximum": 9007199254740991
+                },
+                "enforce_complexity": {
+                  "default": false,
+                  "type": "boolean"
+                }
+              }
+            },
+            "password_generation": {
+              "type": "object",
+              "properties": {
+                "default_length": {
+                  "default": 12,
+                  "type": "integer",
+                  "exclusiveMinimum": 0,
+                  "maximum": 9007199254740991
+                },
+                "character_sets": {
+                  "type": "object",
+                  "properties": {
+                    "uppercase": {
+                      "default": true,
+                      "type": "boolean"
+                    },
+                    "lowercase": {
+                      "default": true,
+                      "type": "boolean"
+                    },
+                    "numbers": {
+                      "default": true,
+                      "type": "boolean"
+                    },
+                    "symbols": {
+                      "default": true,
+                      "type": "boolean"
+                    },
+                    "exclude_ambiguous": {
+                      "default": true,
+                      "type": "boolean"
+                    }
+                  }
+                }
+              },
+              "required": [
+                "character_sets"
+              ]
+            }
+          },
+          "required": [
+            "passphrase",
+            "password_generation"
+          ]
+        },
+        "authentication": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "default": true,
+              "type": "boolean"
+            },
+            "signup": {
+              "default": true,
+              "type": "boolean"
+            },
+            "signin": {
+              "default": true,
+              "type": "boolean"
+            },
+            "autoverify": {
+              "default": false,
+              "type": "boolean"
+            },
+            "required": {
+              "default": false,
+              "type": "boolean"
+            },
+            "colonels": {
+              "default": [],
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "allowed_signup_domains": {
+              "default": [],
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "support": {
+          "type": "object",
+          "properties": {
+            "host": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "session": {
+          "type": "object",
+          "properties": {
+            "secret": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "expire_after": {
+              "default": 86400,
+              "type": "integer",
+              "exclusiveMinimum": 0,
+              "maximum": 9007199254740991
+            },
+            "key": {
+              "default": "onetime.session",
+              "type": "string"
+            },
+            "secure": {
+              "default": true,
+              "type": "boolean"
+            },
+            "same_site": {
+              "default": "lax",
+              "type": "string",
+              "enum": [
+                "strict",
+                "lax",
+                "none"
+              ]
+            },
+            "httponly": {
+              "default": true,
+              "type": "boolean"
+            }
+          }
+        },
+        "middleware": {
+          "type": "object",
+          "properties": {
+            "static_files": {
+              "default": true,
+              "type": "boolean"
+            },
+            "utf8_sanitizer": {
+              "default": true,
+              "type": "boolean"
+            },
+            "authenticity_token": {
+              "default": true,
+              "type": "boolean"
+            },
+            "http_origin": {
+              "default": false,
+              "type": "boolean"
+            },
+            "xss_header": {
+              "default": false,
+              "type": "boolean"
+            },
+            "frame_options": {
+              "default": false,
+              "type": "boolean"
+            },
+            "path_traversal": {
+              "default": false,
+              "type": "boolean"
+            },
+            "cookie_tossing": {
+              "default": false,
+              "type": "boolean"
+            },
+            "ip_spoofing": {
+              "default": false,
+              "type": "boolean"
+            },
+            "strict_transport": {
+              "default": false,
+              "type": "boolean"
+            }
+          }
+        },
+        "security": {
+          "type": "object",
+          "properties": {
+            "csp": {
+              "type": "object",
+              "properties": {
+                "enabled": {
+                  "default": false,
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "features": {
+      "type": "object",
+      "properties": {
+        "regions": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "default": false,
+              "type": "boolean"
+            },
+            "current_jurisdiction": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "jurisdictions": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "identifier": {
+                        "type": "string"
+                      },
+                      "display_name": {
+                        "type": "string"
+                      },
+                      "domain": {
+                        "type": "string"
+                      },
+                      "icon": {
+                        "type": "object",
+                        "properties": {
+                          "collection": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "incoming": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "default": false,
+              "type": "boolean"
+            },
+            "memo_max_length": {
+              "default": 50,
+              "type": "integer",
+              "exclusiveMinimum": 0,
+              "maximum": 9007199254740991
+            },
+            "default_ttl": {
+              "default": 604800,
+              "type": "integer",
+              "exclusiveMinimum": 0,
+              "maximum": 9007199254740991
+            },
+            "default_passphrase": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "recipients": {
+              "type": "array",
+              "items": {
+                "anyOf": [
+                  {
+                    "type": "array",
+                    "prefixItems": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "domains": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "default": false,
+              "type": "boolean"
+            },
+            "require_verified": {
+              "default": false,
+              "type": "boolean"
+            },
+            "default": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "validation_strategy": {
+              "default": "passthrough",
+              "type": "string",
+              "enum": [
+                "passthrough",
+                "approximated",
+                "caddy_on_demand"
+              ]
+            },
+            "approximated": {
+              "type": "object",
+              "properties": {
+                "api_key": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "proxy_ip": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "proxy_host": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "proxy_name": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "vhost_target": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              }
+            },
+            "acme": {
+              "type": "object",
+              "properties": {
+                "enabled": {
+                  "default": false,
+                  "type": "boolean"
+                },
+                "listen_address": {
+                  "default": "127.0.0.1",
+                  "type": "string"
+                },
+                "port": {
+                  "default": "12020",
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "redis": {
+      "type": "object",
+      "properties": {
+        "uri": {
+          "default": "redis://127.0.0.1:6379",
+          "type": "string"
+        },
+        "dbs": {
+          "type": "object",
+          "properties": {
+            "session": {
+              "default": 0,
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 15
+            },
+            "custom_domain": {
+              "default": 0,
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 15
+            },
+            "customer": {
+              "default": 0,
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 15
+            },
+            "metadata": {
+              "default": 0,
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 15
+            },
+            "secret": {
+              "default": 0,
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 15
+            },
+            "feedback": {
+              "default": 0,
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 15
+            }
+          }
+        }
+      }
+    },
+    "emailer": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "default": "smtp",
+          "type": "string"
+        },
+        "region": {
+          "type": "string"
+        },
+        "from": {
+          "default": "CHANGEME@example.com",
+          "type": "string"
+        },
+        "from_name": {
+          "default": "Support",
+          "type": "string"
+        },
+        "reply_to": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "host": {
+          "default": "smtp.provider.com",
+          "type": "string"
+        },
+        "port": {
+          "default": 587,
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "maximum": 9007199254740991
+        },
+        "user": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "pass": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "auth": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "tls": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "mail": {
+      "type": "object",
+      "properties": {
+        "truemail": {
+          "type": "object",
+          "properties": {
+            "default_validation_type": {
+              "default": ":regex",
+              "type": "string"
+            },
+            "verifier_email": {
+              "default": "CHANGEME@example.com",
+              "type": "string"
+            },
+            "verifier_domain": {
+              "type": "string"
+            },
+            "connection_timeout": {
+              "type": "number"
+            },
+            "response_timeout": {
+              "type": "number"
+            },
+            "connection_attempts": {
+              "type": "number"
+            },
+            "validation_type_for": {
+              "type": "object",
+              "propertyNames": {
+                "type": "string"
+              },
+              "additionalProperties": {
+                "type": "string"
+              }
+            },
+            "allowed_domains_only": {
+              "default": false,
+              "type": "boolean"
+            },
+            "allowed_emails": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "blocked_emails": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "allowed_domains": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "blocked_domains": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "blocked_mx_ip_addresses": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "dns": {
+              "default": [
+                "1.1.1.1",
+                "8.8.4.4",
+                "208.67.220.220"
+              ],
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "smtp_port": {
+              "type": "integer",
+              "exclusiveMinimum": 0,
+              "maximum": 9007199254740991
+            },
+            "smtp_fail_fast": {
+              "default": false,
+              "type": "boolean"
+            },
+            "smtp_safe_check": {
+              "default": true,
+              "type": "boolean"
+            },
+            "not_rfc_mx_lookup_flow": {
+              "default": false,
+              "type": "boolean"
+            },
+            "email_pattern": {
+              "type": "string"
+            },
+            "smtp_error_body_pattern": {
+              "type": "string"
+            },
+            "logger": {
+              "type": "object",
+              "properties": {
+                "tracking_event": {
+                  "default": ":error",
+                  "type": "string"
+                },
+                "stdout": {
+                  "default": true,
+                  "type": "boolean"
+                },
+                "log_absolute_path": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "jobs": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "default": false,
+          "type": "boolean"
+        },
+        "rabbitmq_url": {
+          "default": "amqp://guest:guest@localhost:5672/dev",
+          "type": "string"
+        },
+        "channel_pool_size": {
+          "default": 5,
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "maximum": 9007199254740991
+        },
+        "fallback_to_sync": {
+          "default": true,
+          "type": "boolean"
+        },
+        "workers": {
+          "type": "object",
+          "properties": {
+            "email": {
+              "default": {
+                "threads": 4,
+                "prefetch": 10
+              },
+              "type": "object",
+              "properties": {
+                "threads": {
+                  "type": "integer",
+                  "exclusiveMinimum": 0,
+                  "maximum": 9007199254740991
+                },
+                "prefetch": {
+                  "type": "integer",
+                  "exclusiveMinimum": 0,
+                  "maximum": 9007199254740991
+                }
+              },
+              "required": [
+                "threads",
+                "prefetch"
+              ]
+            },
+            "notifications": {
+              "default": {
+                "threads": 2,
+                "prefetch": 10
+              },
+              "type": "object",
+              "properties": {
+                "threads": {
+                  "type": "integer",
+                  "exclusiveMinimum": 0,
+                  "maximum": 9007199254740991
+                },
+                "prefetch": {
+                  "type": "integer",
+                  "exclusiveMinimum": 0,
+                  "maximum": 9007199254740991
+                }
+              },
+              "required": [
+                "threads",
+                "prefetch"
+              ]
+            },
+            "billing": {
+              "default": {
+                "threads": 2,
+                "prefetch": 5
+              },
+              "type": "object",
+              "properties": {
+                "threads": {
+                  "type": "integer",
+                  "exclusiveMinimum": 0,
+                  "maximum": 9007199254740991
+                },
+                "prefetch": {
+                  "type": "integer",
+                  "exclusiveMinimum": 0,
+                  "maximum": 9007199254740991
+                }
+              },
+              "required": [
+                "threads",
+                "prefetch"
+              ]
+            }
+          }
+        },
+        "scheduler": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "default": false,
+              "type": "boolean"
+            }
+          }
+        },
+        "plan_cache_refresh_enabled": {
+          "default": false,
+          "type": "boolean"
+        },
+        "catalog_retry_enabled": {
+          "default": false,
+          "type": "boolean"
+        },
+        "dlq_consumer_enabled": {
+          "default": true,
+          "type": "boolean"
+        },
+        "domain_refresh": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "default": false,
+              "type": "boolean"
+            },
+            "check_interval": {
+              "default": "30m",
+              "type": "string"
+            },
+            "batch_size": {
+              "default": 200,
+              "type": "integer",
+              "exclusiveMinimum": 0,
+              "maximum": 9007199254740991
+            },
+            "rate_limit": {
+              "default": 0.5,
+              "type": "number",
+              "minimum": 0
+            }
+          }
+        },
+        "expiration_warnings": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "default": false,
+              "type": "boolean"
+            },
+            "check_interval": {
+              "default": "1h",
+              "type": "string"
+            },
+            "warning_hours": {
+              "default": 24,
+              "type": "integer",
+              "exclusiveMinimum": 0,
+              "maximum": 9007199254740991
+            },
+            "min_ttl_hours": {
+              "default": 48,
+              "type": "integer",
+              "exclusiveMinimum": 0,
+              "maximum": 9007199254740991
+            },
+            "batch_size": {
+              "default": 100,
+              "type": "integer",
+              "exclusiveMinimum": 0,
+              "maximum": 9007199254740991
+            }
+          }
+        },
+        "maintenance": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "default": false,
+              "type": "boolean"
+            },
+            "phantom_cleanup": {
+              "type": "object",
+              "properties": {
+                "enabled": {
+                  "default": false,
+                  "type": "boolean"
+                },
+                "interval": {
+                  "default": "1h",
+                  "type": "string"
+                },
+                "batch_size": {
+                  "default": 500,
+                  "type": "integer",
+                  "exclusiveMinimum": 0,
+                  "maximum": 9007199254740991
+                },
+                "auto_repair": {
+                  "default": false,
+                  "type": "boolean"
+                }
+              }
+            },
+            "data_audit": {
+              "type": "object",
+              "properties": {
+                "enabled": {
+                  "default": false,
+                  "type": "boolean"
+                },
+                "interval": {
+                  "default": "6h",
+                  "type": "string"
+                },
+                "sample_size": {
+                  "default": 100,
+                  "type": "integer",
+                  "exclusiveMinimum": 0,
+                  "maximum": 9007199254740991
+                }
+              }
+            },
+            "participation_gc": {
+              "type": "object",
+              "properties": {
+                "enabled": {
+                  "default": false,
+                  "type": "boolean"
+                },
+                "cron": {
+                  "default": "0 5 * * *",
+                  "type": "string"
+                },
+                "batch_size": {
+                  "default": 500,
+                  "type": "integer",
+                  "exclusiveMinimum": 0,
+                  "maximum": 9007199254740991
+                },
+                "auto_repair": {
+                  "default": false,
+                  "type": "boolean"
+                }
+              }
+            },
+            "index_rebuild": {
+              "type": "object",
+              "properties": {
+                "enabled": {
+                  "default": false,
+                  "type": "boolean"
+                },
+                "cron": {
+                  "default": "0 4 * * *",
+                  "type": "string"
+                },
+                "auto_repair": {
+                  "default": false,
+                  "type": "boolean"
+                }
+              }
+            },
+            "instances_rebuild": {
+              "type": "object",
+              "properties": {
+                "enabled": {
+                  "default": false,
+                  "type": "boolean"
+                },
+                "cron": {
+                  "default": "0 3 * * 0",
+                  "type": "string"
+                },
+                "auto_repair": {
+                  "default": false,
+                  "type": "boolean"
+                }
+              }
+            },
+            "housekeeping": {
+              "type": "object",
+              "properties": {
+                "enabled": {
+                  "default": false,
+                  "type": "boolean"
+                },
+                "cron": {
+                  "default": "0 2 * * *",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "internationalization": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "default": false,
+          "type": "boolean"
+        },
+        "default_locale": {
+          "default": "en",
+          "type": "string"
+        },
+        "fallback_locale": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              {
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "locales": {
+          "default": [],
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "incomplete": {
+          "default": [],
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "date_format": {
+          "default": "locale",
+          "type": "string"
+        },
+        "datetime_format": {
+          "default": "locale",
+          "type": "string"
+        }
+      },
+      "required": [
+        "fallback_locale"
+      ]
+    },
+    "diagnostics": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "default": false,
+          "type": "boolean"
+        },
+        "sentry": {
+          "type": "object",
+          "properties": {
+            "defaults": {
+              "type": "object",
+              "properties": {
+                "dsn": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "sampleRate": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ]
+                },
+                "maxBreadcrumbs": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ]
+                },
+                "logErrors": {
+                  "default": true,
+                  "type": "boolean"
+                }
+              }
+            },
+            "backend": {
+              "type": "object",
+              "properties": {
+                "dsn": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "sampleRate": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ]
+                },
+                "maxBreadcrumbs": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ]
+                },
+                "logErrors": {
+                  "default": true,
+                  "type": "boolean"
+                }
+              }
+            },
+            "frontend": {
+              "type": "object",
+              "properties": {
+                "dsn": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "sampleRate": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ]
+                },
+                "maxBreadcrumbs": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ]
+                },
+                "logErrors": {
+                  "default": true,
+                  "type": "boolean"
+                },
+                "trackComponents": {
+                  "default": true,
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "development": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "default": false,
+          "type": "boolean"
+        },
+        "debug": {
+          "default": false,
+          "type": "boolean"
+        },
+        "frontend_host": {
+          "default": "http://localhost:5173",
+          "type": "string"
+        },
+        "domain_context_enabled": {
+          "default": false,
+          "type": "boolean"
+        },
+        "allow_nil_global_secret": {
+          "default": false,
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  "required": [
+    "site"
+  ]
+}

@@ -3,8 +3,6 @@ title: Setup Guide
 description: This guide will walk you through the process of setting up a custom domain for your Onetime Secret account, including the differences between subdomains and apex domains, and choosing your preferred data center region.
 ---
 
-# Custom Domain Setup Guide
-
 ## Prerequisites
 
 - An active Onetime Secret account with custom domain feature enabled
@@ -92,6 +90,9 @@ Apex domains cannot use CNAME records due to DNS standards. Therefore, we must u
 2. The system will automatically attempt to verify your domain
 3. SSL certificate generation will begin once verification is successful
 4. This process may take a few minutes to complete
+
+For a closer look at the verification lifecycle, what each domain status means,
+and how to resolve a failed check, see [DNS Validation](/en/custom-domains/dns-validation).
 
 ## Step 5: Confirm Setup
 

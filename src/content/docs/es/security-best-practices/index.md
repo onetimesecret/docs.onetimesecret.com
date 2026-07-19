@@ -3,8 +3,6 @@ title: Buenas prácticas de seguridad
 description: Mejore la seguridad de sus secretos compartidos con estas mejores prácticas específicas para Onetime Secret, incluyendo los beneficios de seguridad de los Dominios Personalizados.
 ---
 
-# Prácticas recomendadas de seguridad para Onetime Secret
-
 Aunque Onetime Secret está diseñado pensando en la seguridad, seguir estas buenas prácticas puede mejorar aún más la protección de su información confidencial, especialmente cuando se utilizan funciones como los dominios personalizados.
 
 ## Buenas prácticas para compartir secretos
@@ -47,11 +45,11 @@ Si utiliza la API Onetime Secret:
 
 ## Seguridad avanzada autoalojada
 
-Esta sección cubre consideraciones avanzadas de seguridad para organizaciones que ejecutan su propia instancia de Onetime Secret. Puedes encontrar el proyecto de código abierto en [GitHub](https://github.com/onetimesecret/onetimesecret) y las imágenes Docker oficiales en [Docker Hub](https://hub.docker.com/r/onetimesecret/onetimesecret).
+Esta sección cubre consideraciones avanzadas de seguridad para organizaciones que ejecutan su propia instancia de Onetime Secret. Puedes encontrar el proyecto de código abierto en [GitHub](https://github.com/onetimesecret/onetimesecret) y las imágenes Docker oficiales en [GitHub Container Registry](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret).
 
 Las siguientes recomendaciones pueden aplicarse a nivel de infraestructura cuando se autoaloje Onetime Secret:
 
-1. **Utilizar entornos efímeros**: Cuando sea posible, cree y destruya entornos para cada sesión de intercambio de secretos. Esto puede ser particularmente útil para operaciones altamente sensibles. Nuestra imagen Docker [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/blob/v0.18.5/docs/DOCKER-lite.md) está diseñada para casos de uso efímero.
+1. **Utilizar entornos efímeros**: Cuando sea posible, cree y destruya entornos para cada sesión de intercambio de secretos. Esto puede ser particularmente útil para operaciones altamente sensibles. Nuestra imagen Docker [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret-lite) está diseñada para casos de uso efímero.
 
 2. **Implantar restricciones horarias**: Si su caso de uso lo permite, considere implementar restricciones basadas en el tiempo para acceder a los secretos, como por ejemplo sólo durante las horas de oficina.
 
@@ -68,7 +66,7 @@ Esta sección presenta recomendaciones generales de seguridad que pueden ser út
 
 1. **Tenga un plan**: Desarrolle un plan de respuesta a incidentes específico para sus procesos de intercambio de secretos. Debe incluir pasos para revocar el acceso, notificar a las partes afectadas y mitigar los posibles daños.
 
-2. **Acción rápida**: Si sospecha que un secreto ha sido comprometido, utilice la función de grabación de Onetime Secret inmediatamente si el secreto no ha sido visto todavía. Si ha sido visto, tome las medidas apropiadas para mitigar cualquier daño potencial.
+2. **Acción rápida**: Si sospecha que un secreto ha sido comprometido, utilice la función de destrucción de Onetime Secret inmediatamente si el secreto no ha sido visto todavía. Si ha sido visto, tome las medidas apropiadas para mitigar cualquier daño potencial.
 
 3. **Revisiones periódicas de seguridad**: Revise periódicamente sus prácticas de intercambio de secretos y ajuste sus medidas de seguridad según sea necesario.
 

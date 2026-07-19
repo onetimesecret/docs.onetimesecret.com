@@ -1,0 +1,15 @@
+extends: substitution
+message: "Product tier: use the official name '%s'."
+link: /en/translations/universal/brand-terms
+level: warning
+ignorecase: false
+# Only incorrect casings are listed, so correct usage is never flagged.
+swap:
+  'Identity plus': Identity Plus
+  'identity Plus': Identity Plus
+  'identity plus': Identity Plus
+  'Team plus': Team Plus
+  'team Plus': Team Plus
+  'team plus': Team Plus
+  'Global elite': Global Elite
+  'global elite': Global Elite

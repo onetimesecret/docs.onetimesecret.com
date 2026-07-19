@@ -1,0 +1,13 @@
+extends: substitution
+message: "Brand name: use '%s' (two words, 'Onetime' capitalized)."
+link: /en/translations/universal/brand-terms
+level: warning
+ignorecase: false
+# Left-hand side entries are common incorrect renderings of the brand name.
+# The all-lowercase 'onetimesecret' (package/URL token) is intentionally allowed.
+swap:
+  OneTimeSecret: Onetime Secret
+  'OneTime Secret': Onetime Secret
+  'One Time Secret': Onetime Secret
+  'One-Time Secret': Onetime Secret
+  Onetimesecret: Onetime Secret

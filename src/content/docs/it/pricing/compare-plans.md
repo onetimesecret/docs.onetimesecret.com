@@ -1,29 +1,38 @@
 ---
 title: Confronta i piani
-description: Confronta i nostri piani ricchi di funzionalità che offrono la condivisione sicura di segreti con link a scadenza, domini personalizzati e opzioni di archiviazione flessibili per privati e aziende.
+description: Confrontate i nostri piani per la condivisione sicura dei segreti — link a scadenza, domini personalizzati, branding, SSO e controlli per i team su Free, Identity Plus e Team Plus.
 ---
 
 
 ## Matrice delle caratteristiche
 
-| Caratteristiche/Piani | Identity Plus | Basic | Non autenticato |
-|---------|----------------|-------------------------|------------|
-| Domini Personalizzati | Illimitati | ❌ | ❌ | ❌ | ❌
-| Homepage di marca | ✅ | ❌ | ❌ | ❌ |
-| Logo personalizzato, colore | ✅ | ❌ | ❌ | ❌ |
-| Numero di account | 1 | 1 | ❌ | ❌ |
-| Scadenza del link | Fino a 30 giorni | 14 giorni | Limitato a 7 giorni |
-| Accesso API | ✅ | ✅ | ✅ | Limitato |
-| Configurazione richiesta | Sì (configurazione DNS) | No | No | No |
-| A pagamento | Sì (parte del piano di Identità) | No | No |
-| Sicurezza SSL/TLS | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Data Locality | ✅ (EU o US) | ✅ (EU o US) | ✅ (EU o US) | ✅ (EU o US) | ✅ (EU o US)
+| Caratteristica / Piano | Non autenticato | Free | Identity Plus | Team Plus |
+|---|---|---|---|---|
+| Domini personalizzati | ❌ | 1 | Illimitati | Illimitati |
+| Segreti dalla homepage | ❌ | ✅ | ✅ | ✅ |
+| Segreti in arrivo | ❌ | ✅ | ✅ | ✅ |
+| Accesso API | Limitato | ✅ | ✅ | ✅ |
+| Branding personalizzato (logo, colore) | ❌ | ❌ | ✅ | ✅ |
+| Mittente email personalizzato | ❌ | ❌ | ✅ | ✅ \* |
+| Impostazioni predefinite di privacy personalizzate | ❌ | ❌ | ✅ | ✅ |
+| Configurazione dell'accesso per dominio | ❌ | ❌ | ✅ | ✅ |
+| Inviti dei membri | ❌ | ❌ | ✅ | ✅ |
+| Convalida dell'iscrizione per dominio | ❌ | ❌ | ❌ | ✅ |
+| Single Sign-On (SSO) | ❌ | ❌ | ❌ | ✅ |
+| Team e dashboard condivisa | ❌ | ❌ | ❌ | ✅ |
+| Branding dello spazio di lavoro | ❌ | ❌ | ❌ | ✅ |
+| Membri per organizzazione | — | 1 | Fino a 50 | Fino a 100 |
+| Scadenza del link | Fino a 7 giorni | Fino a 14 giorni | Fino a 30 giorni | Fino a 30 giorni |
+| Scelta della regione (EU, UK, US, CA, NZ) | ✅ | ✅ | ✅ | ✅ |
+| Crittografato in transito e a riposo | ✅ | ✅ | ✅ | ✅ |
+| A pagamento | No | No | Sì | Sì |
 
+\* Team Plus estende il mittente email personalizzato con un **dominio email "Da" flessibile** — qualsiasi dominio, non solo il vostro dominio personalizzato.
 
-Per ulteriori informazioni sugli aggiornamenti dell'account e sui prezzi, visitate la nostra [Pricing Page](https://onetimesecret.com/pricing).
+Per i prezzi attuali, visitate la nostra [pagina dei prezzi](https://onetimesecret.com/pricing).
 
 
 ## In arrivo
 
-* Email personalizzate da dettagli con supporto SPF e DKIM
-* Piani di squadra per più utenti
+* Registri di controllo e regole di accesso basate su IP per Team Plus
+* [Secretary Links](https://secretlinks.com) — link di raccolta sicuri per ricevere informazioni sensibili da chiunque, senza bisogno di un account

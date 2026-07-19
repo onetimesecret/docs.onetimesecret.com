@@ -3,21 +3,19 @@ title: Kommunikation
 description: Hvorfor vi begrænser e-mailkommunikation til kun det nødvendige
 ---
 
-# Vores kommunikationsfilosofi
+Vi har en bevidst minimal tilgang til brugerkommunikation — af respekt for din tid og din indbakke.
 
-Vi tager en bevidst minimal tilgang til brugerkommunikation og respekterer din tid og indbakke.
+## Vores filosofi om minimal e-mail
 
-## Vores ingen-e-mail-filosofi
+De fleste tjenester oversvømmer din indbakke med marketingnyhedsbreve, brugsstatistikker, kampagnetilbud og genengagementskampagner. Det gør vi ikke. Du hører kun fra os om den tjeneste, du bruger, meddelelser, vi er forpligtet til at sende, eller opdateringer, du selv har tilmeldt dig.
 
-De fleste tjenester oversvømmer din indbakke med:
-- Marketingnyhedsbreve
-- Produktopdateringer
-- Brugsstatistikker
-- Funktionsmeddelelser
-- Kampagnetilbud
-- Genengagementskampagner
+Hver e-mail, vi sender, falder i én af tre kategorier:
 
-De eneste e-mails du modtager fra os, er dem du specifikt har anmodet om — ting som levering af hemmelige links, kontobeskeder eller opdateringer du udtrykkeligt har tilmeldt dig. Selv når du tilmelder dig, hører du sjældent fra os, og kun af de specifikke grunde du tilmeldte dig for. Din indbakke tilhører dig.
+- **Transaktionelle** — besked-links, kontomeddelelser og faktureringsmeddelelser. De er en del af selve tjenesten.
+- **Tjeneste- og sikkerhedsmeddelelser** — sikkerhedsvarsler, underretninger om sikkerhedsbrud, politikændringer og udfasninger. Dem sender vi efter behov, herunder når vi er juridisk forpligtet til det. De er aldrig marketing.
+- **Produktnyheder** — nyheder om nye funktioner og lignende opdateringer. Udelukkende efter eget tilvalg, sjældne, og hver eneste kan afmeldes med ét klik.
+
+Ingen af vores e-mails indeholder sporingspixels eller links med kliksporing. Vi ved ikke, om du har åbnet en e-mail, eller hvad du har klikket på, og sådan vil vi have det. Din indbakke tilhører dig.
 
 ## Hvorfor dette betyder noget
 
@@ -25,15 +23,8 @@ Et privatlivsværktøj bør ikke opføre sig som en marketingplatform. Ved at ho
 
 - Reducerer vi angrebsfladen for phishing og social engineering — færre legitime e-mails fra os gør det lettere at spotte mistænkelige
 - Holder vi fokus på at drive en pålidelig tjeneste i stedet for at optimere engagementsmålinger
-- Respekterer vi den tillid du viser os, når du deler din e-mailadresse
+- Respekterer vi den tillid, du viser os, når du deler din e-mailadresse
 
-## Hvor vi lægger vores energi
+Den tid, andre virksomheder bruger på at udforme kampagner, bruger vi på selve tjenesten: kernepålidelighed, stærkere privatlivsbeskyttelse og at følge med jurisdiktionelle og lovgivningsmæssige krav.
 
-I stedet for at udarbejde kampagner bruger vi vores tid på det der virkelig betyder noget for dig:
-
-- **Kernepålidelighed** — at sikre at tjenesten fungerer, når du har brug for den
-- **Privatlivsbeskyttelse** — styrkelse af kryptering og datahåndtering
-- **Overholdelse** — at følge med jurisdiktionelle og lovgivningsmæssige krav
-- **Gennemsigtighed** — at være åbne om hvordan vi opererer og hvorfor
-
-Har du tanker om vores kommunikationstilgang? [Kontakt os](https://onetimesecret.com/feedback).
+**Spørgsmål til vores tilgang?** [Kontakt os](https://onetimesecret.com/feedback).

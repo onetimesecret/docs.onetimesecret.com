@@ -9,19 +9,19 @@ Partagez des informations confidentielles en toute confiance, valorisez votre ma
 
 ## Plans
 
-### Basic
+### Free
 
 **0$/mois**
 
-Partage sécurisé et unique pour tous.
+Partage de secrets sécurisé et autodestructeur, pour tous.
 
 **Caractéristiques:**
-- Visualisation unique des secrets partagés
-- Suppression automatique après consultation
-- Compte requis pour envoyer des courriels aux destinataires
-- Accès de base à l'API
+- Visualisation unique avec suppression automatique après consultation
+- Un domaine personnalisé
+- Page d'accueil et secrets entrants
+- Accès à l'API
 
-[Démarrer](https://onetimesecret.com/plans/basic)
+[Démarrer](https://onetimesecret.com/plans/free)
 
 ### Identity Plus
 
@@ -35,15 +35,18 @@ Un partage sécurisé qui valorise votre marque et simplifie la communication.
 
 [Voir les tarifs actuels](https://onetimesecret.com/pricing) | [Choisissez ce plan](https://onetimesecret.com/plans/identity)
 
-### Global Elite
+### Team Plus
 
-Une installation entièrement personnalisée, à locataire unique, avec une infrastructure dédiée, des contrôles de conformité des données et une évolutivité illimitée.
+Un partage de secrets encadré avec authentification unique (SSO), contrôles d'accès et visibilité organisationnelle.
 
 **Caractéristiques:**
-- Environnement en nuage privé
-- Utilisation et mise à l'échelle illimitées
-- Plusieurs choix de localisation des données (UE, États-Unis)
-- Conformité réglementaire complète (y compris GDPR, CCPA, HIPAA)
+- Tout ce qui est inclus dans Identity Plus
+- Authentification unique (SSO)
+- Gestion d'équipe et tableau de bord partagé
+- Domaine d'expédition des courriels flexible
+- Validation des inscriptions par domaine
+
+[Voir les tarifs actuels](https://onetimesecret.com/pricing)
 
 ## Questions fréquemment posées
 
@@ -60,7 +63,7 @@ Oui, Onetime Secret propose une option gratuite qui vous permet d'utiliser la pl
 Oui, Onetime Secret offre une option d'auto-hébergement avec notre garantie SimpleStack℠, assurant un déploiement et une gestion faciles. [GitHub](https://github.com/onetimesecret/onetimesecret)
 
 ### Quel est le niveau de sécurité de Onetime Secret ?
-Nous prenons la sécurité très au sérieux et employons de multiples mesures pour protéger les informations des utilisateurs. Comme indiqué dans notre politique de confidentialité, nous utilisons les pratiques standard de l'industrie pour protéger toutes les données contre l'accès non autorisé, la modification ou la destruction. Toutes les données en transit sont cryptées à l'aide de HTTPS/TLS et stockées en toute sécurité dans l'Union européenne, conformément aux lois sur la protection des données.
+Nous prenons la sécurité très au sérieux et employons de multiples mesures pour protéger les informations des utilisateurs. Comme indiqué dans notre politique de confidentialité, nous utilisons les pratiques standard de l'industrie pour protéger toutes les données contre l'accès non autorisé, la modification ou la destruction. Toutes les données en transit sont cryptées à l'aide de HTTPS/TLS, et les données au repos sont stockées en toute sécurité dans la région de centre de données que vous choisissez — Canada, Union européenne, Nouvelle-Zélande, Royaume-Uni ou États-Unis — conformément aux lois sur la protection des données applicables à cette région.
 
 Toutefois, nous sommes également conscients qu'aucune méthode de transmission ou de stockage électronique n'est sûre à 100 %. Bien que nous nous efforcions d'utiliser des moyens commercialement acceptables pour protéger les informations personnelles, nous ne pouvons pas garantir leur sécurité absolue. Nous recommandons aux utilisateurs de prendre des précautions telles que l'utilisation de phrases de passe. Nous nous engageons à faire preuve de diligence pour sécuriser les données au mieux de nos capacités, tout en étant francs quant aux risques potentiels.
 

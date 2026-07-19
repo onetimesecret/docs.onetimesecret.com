@@ -3,8 +3,6 @@ title: セキュリティのベストプラクティス
 description: カスタムドメインのセキュリティ上の利点など、Onetime Secret特有のベストプラクティスでシークレット共有のセキュリティを強化してください。
 ---
 
-# セキュリティのベストプラクティス
-
 Onetime Secretはセキュリティを考慮して設計されていますが、特にカスタムドメインなどの機能を使用する場合は、これらのベストプラクティスに従うことで、機密情報の保護がさらに強化されます。
 
 ## シークレット共有のベストプラクティス
@@ -47,11 +45,11 @@ Onetime Secret APIを使用している場合：
 
 ## 高度な自己ホスト型セキュリティ
 
-このセクションでは、Onetime Secretのインスタンスを独自に運用する場合の、高度なセキュリティについて説明します。オープンソースプロジェクトは[GitHub](https://github.com/onetimesecret/onetimesecret)に、公式Dockerイメージは[Docker Hub](https://hub.docker.com/r/onetimesecret/onetimesecret)にあります。
+このセクションでは、Onetime Secretのインスタンスを独自に運用する場合の、高度なセキュリティについて説明します。オープンソースプロジェクトは[GitHub](https://github.com/onetimesecret/onetimesecret)に、公式Dockerイメージは[GitHub Container Registry](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret)にあります。
 
 Onetime Secretをセルフホストする場合、以下の推奨事項をインフラレベルで実装できます：
 
-1. **エフェメラルな環境を使用する**：可能であれば、シークレット共有セッションごとに環境を作成し、破棄する。これは特に機密性の高い操作に有用である。私たちの[Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/blob/v0.18.5/docs/DOCKER-lite.md)Dockerイメージは、エフェメラルなユースケースのために設計されています。
+1. **エフェメラルな環境を使用する**：可能であれば、シークレット共有セッションごとに環境を作成し、破棄する。これは特に機密性の高い操作に有用である。私たちの[Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret-lite)Dockerイメージは、エフェメラルなユースケースのために設計されています。
 
 2. **時間ベースの制限を実施する**：ユースケースが許すのであれば、営業時間内のみなど、シークレットへのアクセスに時間ベースの制限を実装することを検討する。
 
@@ -68,7 +66,7 @@ Onetime Secretをセルフホストする場合、以下の推奨事項をイン
 
 1. **計画を持つ**：シークレット共有プロセスに特化したインシデント対応計画を策定する。これには、アクセス権の剥奪、影響を受ける当事者への通知、潜在的な損害の軽減などの手順を含める。
 
-2. **クイックアクション**：シークレットが漏洩した疑いがある場合、シークレットがまだ閲覧されていなければ、すぐに Onetime Secret の書き込み機能を使用してください。閲覧されている場合は、適切な対処を行い、潜在的な損害を軽減してください。
+2. **クイックアクション**：シークレットが漏洩した疑いがある場合、シークレットがまだ閲覧されていなければ、すぐに Onetime Secret の削除機能を使用してください。閲覧されている場合は、適切な対処を行い、潜在的な損害を軽減してください。
 
 3. **定期的なセキュリティの見直し**：シークレット共有の慣行を定期的に見直し、必要に応じてセキュリティ対策を調整する。
 

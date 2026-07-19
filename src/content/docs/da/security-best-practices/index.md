@@ -3,8 +3,6 @@ title: Bedste sikkerhedspraksis
 description: Forbedr din beskeddelingssikkerhed med disse bedste praksis specifikt for Onetime Secret, inklusive sikkerhedsfordelene ved brugerdefinerede domæner.
 ---
 
-# Bedste sikkerhedspraksis for Onetime Secret
-
 Selvom Onetime Secret er designet med sikkerhed i tankerne, kan det yderligere forbedre beskyttelsen af din følsomme information at følge disse bedste praksis, især når du bruger funktioner som brugerdefinerede domæner.
 
 ## Bedste praksis for besked deling
@@ -47,11 +45,11 @@ Hvis du bruger Onetime Secret API:
 
 ## Avanceret selv-hostet sikkerhed
 
-Dette afsnit dækker avancerede sikkerhedsovervejelser for organisationer, der kører deres egen forekomst af Onetime Secret. Du kan finde open source-projektet på [GitHub](https://github.com/onetimesecret/onetimesecret) og officielle Docker-billeder på [Docker Hub](https://hub.docker.com/r/onetimesecret/onetimesecret).
+Dette afsnit dækker avancerede sikkerhedsovervejelser for organisationer, der kører deres egen forekomst af Onetime Secret. Du kan finde open source-projektet på [GitHub](https://github.com/onetimesecret/onetimesecret) og officielle Docker-billeder på [GitHub Container Registry](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret).
 
 Nedenstående anbefalinger kan implementeres på dit infrastrukturniveau, når du selv hoster Onetime Secret:
 
-1. **Brug midlertidige miljøer**: Når det er muligt, skal du oprette og ødelægge miljøer for hver besked delingssession. Dette kan være særligt nyttigt til meget følsomme operationer. Vores [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/blob/v0.18.5/docs/DOCKER-lite.md) Docker-billede er designet til midlertidige anvendelsestilfælde.
+1. **Brug midlertidige miljøer**: Når det er muligt, skal du oprette og ødelægge miljøer for hver besked delingssession. Dette kan være særligt nyttigt til meget følsomme operationer. Vores [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret-lite) Docker-billede er designet til midlertidige anvendelsestilfælde.
 
 2. **Implementer tidsbaserede begrænsninger**: Hvis dit anvendelsestilfælde tillader det, skal du overveje at implementere tidsbaserede begrænsninger for adgang til beskeder, såsom kun i arbejdstiden.
 

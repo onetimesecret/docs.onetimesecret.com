@@ -7,20 +7,15 @@ sidebar:
 
 Eseguite la vostra istanza privata di Onetime Secret con il pieno controllo sui vostri dati, la sicurezza e il deployment.
 
-<!-- EDITORS: This caution block is intentional. v0.23 still provides a smoother
-     onboarding experience than v0.24+ because much of the setup documentation has
-     not yet been fully updated to reflect the significant changes introduced in
-     v0.24. Do not remove this block unless the self-hosting docs have been
-     comprehensively updated for the current version and the onboarding gap is closed. -->
-:::caution[Marzo 2026 — Documentazione sul self-hosting in fase di aggiornamento]
-Ci troviamo nel mezzo della transizione tra **v0.23** e **v0.24** (il branch `main`). Parte della nostra documentazione sul self-hosting non è aggiornata e stiamo [lavorando attivamente per migliorarla](https://github.com/onetimesecret/onetimesecret/issues/2628).
+:::tip[Versione attuale: v0.25]
+La versione stabile attuale è **v0.25** (il branch `main`). Funziona in due modalità:
 
-**Se volete semplicemente avviare qualcosa che funzioni**, vi consigliamo il branch `rel/0.23`. Richiede solo un paio di variabili d'ambiente e Redis, e continuiamo a pubblicare attivamente correzioni e piccoli aggiornamenti.
+- **Modalità semplice** — il percorso più facile. Richiede solo Redis e un paio di variabili d'ambiente. Gli account funzionano come sempre. Iniziate da qui con l'[Avvio rapido](#opzioni-di-avvio-rapido) qui sotto.
+- **Modalità completa** — aggiunge funzionalità per gli account (MFA, SSO, WebAuthn, organizzazioni) supportate da PostgreSQL e RabbitMQ.
 
-```bash
-git clone -b rel/0.23 https://github.com/onetimesecret/onetimesecret.git
-```
+Se provieni da v0.22 o v0.23, segui la guida [Aggiornamento a v0.24+](./upgrading-v0-24), che copre le modifiche alla configurazione e al modello dati e come scegliere una modalità di autenticazione.
 :::
+
 
 ## Perché il self-hosting?
 
@@ -42,7 +37,7 @@ docker run -p 6379:6379 -d redis:bookworm
 docker run -p 3000:3000 -d \
   -e REDIS_URL=redis://host.docker.internal:6379/0 \
   -e SECRET="$(openssl rand -hex 32)" \
-  onetimesecret/onetimesecret:v0.25.10
+  onetimesecret/onetimesecret:v0.25.11
 ```
 
 Accessibile all'indirizzo `http://localhost:3000`.

@@ -1,9 +1,7 @@
 ---
-title: Ngā Tikanga Haumaru Pai
+title: Tikanga Pai mō te Haumaru
 description: Whakanui i tō haumaru tohatoha karere huna ki ēnei tikanga pai motuhake ki Onetime Secret, tae atu ki ngā painga haumaru o ngā Rohe Ritenga.
 ---
-
-# Ngā Tikanga Haumaru Pai mō Onetime Secret
 
 Ahakoa kua hoahoatia a Onetime Secret ki te haumaru i te whakaaro, ko te whai i ēnei tikanga pai ka whakanui ake i te tiaki o ō kōrero matatapu, ā tino i te whakamahi i ngā āhuatanga pēnei i ngā Rohe Ritenga.
 
@@ -47,11 +45,11 @@ Mēnā kei te whakamahi koe i te API Onetime Secret:
 
 ## Te Haumaru Manaaki-Ā-Kiri Mātāmua
 
-Ko tēnei wāhanga e kawe ana i ngā whakaarohanga haumaru mātāmua mō ngā whakahaere e whakahaere ana i tō rātou ake tauira o Onetime Secret. Ka kitea e koe te kaupapa puna tuwhera i [GitHub](https://github.com/onetimesecret/onetimesecret) me ngā atahanga Docker ōkawa i [Docker Hub](https://hub.docker.com/r/onetimesecret/onetimesecret).
+Ko tēnei wāhanga e kawe ana i ngā whakaarohanga haumaru mātāmua mō ngā whakahaere e whakahaere ana i tō rātou ake tauira o Onetime Secret. Ka kitea e koe te kaupapa puna tuwhera i [GitHub](https://github.com/onetimesecret/onetimesecret) me ngā atahanga Docker ōkawa i [GitHub Container Registry](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret).
 
 Ka taea te whakatinana i ngā tūtohunga i raro nei i tō taumata hanganga i te wā e manaaki-ā-kiri ana i Onetime Secret:
 
-1. **Whakamahia ngā Taiao Poto**: I te wā ka taea, waihangahia, whakangaro hoki i ngā taiao mō ia hui tohatoha karere huna. Ka tino whaihua tēnei mō ngā mahi tino matatapu. Ko tā mātou [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/blob/v0.18.5/docs/DOCKER-lite.md) atahanga Docker kua hoahoatia mō ngā keehi whakamahi poto.
+1. **Whakamahia ngā Taiao Poto**: I te wā ka taea, waihangahia, whakangaro hoki i ngā taiao mō ia hui tohatoha karere huna. Ka tino whaihua tēnei mō ngā mahi tino matatapu. Ko tā mātou [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret-lite) atahanga Docker kua hoahoatia mō ngā keehi whakamahi poto.
 
 2. **Whakatinana i ngā Whāititanga Wā-Hāngai**: Mēnā ka taea e tō keehi whakamahi, whakaarohia te whakatinana i ngā whāititanga wā-hāngai mō te uru atu ki ngā karere huna, pēnei i te wā pakihi anake.
 

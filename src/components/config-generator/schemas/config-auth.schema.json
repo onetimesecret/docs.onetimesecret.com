@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://onetimesecret.com/schemas/config/auth.schema.json",
+  "type": "object",
+  "properties": {
+    "mode": {
+      "default": "simple",
+      "type": "string",
+      "enum": [
+        "simple",
+        "full"
+      ]
+    },
+    "simple": {
+      "type": "object",
+      "properties": {
+        "password_hash_cost": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "maximum": 9007199254740991
+        },
+        "session_timeout": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "maximum": 9007199254740991
+        }
+      }
+    },
+    "full": {
+      "type": "object",
+      "properties": {
+        "database_url": {
+          "default": "sqlite://data/auth.db",
+          "type": "string"
+        },
+        "database_url_migrations": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "service_url": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
