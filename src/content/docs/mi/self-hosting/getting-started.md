@@ -41,7 +41,7 @@ docker run -p 3000:3000 -d \
   -e HOST=localhost:3000 \
   -e SSL=false \
   -e RACK_ENV=production \
-  onetimesecret/onetimesecret:v0.25.11
+  onetimesecret/onetimesecret:v0.26.1
 ```
 
 ### 4. Uru ki Tō Tauira
@@ -55,7 +55,7 @@ Huakina tō pūtirotiro ki:
 Mō te hunga e pai ana ki te whakatū ā-ringaringa, ka hiahia koe:
 
 - **Ruby 3.2+** (kāore pea e wātea i roto i ngā kete pūnaha taunoa)
-- **Redis 5+** rānei **Valkey** (Whakakapi Redis)
+- **Redis 7+** rānei **Valkey** (Whakakapi Redis)
 - **Node.js 22+** me **pnpm** (ka hiahiatia anake mō te whanaketanga me te hanga i ngā rawa tukuatu)
 
 Me hanga e koe ngā rawa tukuatu mā te `pnpm install && pnpm run build:local` i mua i te whakahaere i te papatono.

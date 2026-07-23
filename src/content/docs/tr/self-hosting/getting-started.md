@@ -41,7 +41,7 @@ docker run -p 3000:3000 -d \
   -e HOST=localhost:3000 \
   -e SSL=false \
   -e RACK_ENV=production \
-  onetimesecret/onetimesecret:v0.25.11
+  onetimesecret/onetimesecret:v0.26.1
 ```
 
 ### 4. Örneğinize Erişin
@@ -55,7 +55,7 @@ Tarayıcınızda açın:
 Manuel kurulumu tercih edenler için şunlara ihtiyacınız olacak:
 
 - **Ruby 3.2+** (varsayılan sistem paketlerinde mevcut olmayabilir)
-- **Redis 5+** veya **Valkey** (Redis alternatifi)
+- **Redis 7+** veya **Valkey** (Redis alternatifi)
 - **Node.js 22+** ve **pnpm** (yalnızca geliştirme ve ön uç varlıklarını oluşturmak için gereklidir)
 
 Uygulamayı çalıştırmadan önce `pnpm install && pnpm run build:local` ile ön uç varlıklarını oluşturmanız gerekir.

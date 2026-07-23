@@ -34,7 +34,7 @@ version: '3.8'
 
 services:
   onetime:
-    image: onetimesecret/onetimesecret:v0.25.11
+    image: onetimesecret/onetimesecret:v0.26.1
     ports:
       - "3000:3000"
     environment:
@@ -123,8 +123,11 @@ sudo su - onetime
 git clone https://github.com/onetimesecret/onetimesecret.git
 cd onetimesecret
 
+# 运行初始化脚本
+./install.sh init
+
 # 安装依赖项
-bundle install --deployment --without development test
+bundle install --without development test
 
 # 复制并配置环境
 cp .env.example .env

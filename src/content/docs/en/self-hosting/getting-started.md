@@ -41,7 +41,7 @@ docker run -p 3000:3000 -d \
   -e HOST=localhost:3000 \
   -e SSL=false \
   -e RACK_ENV=production \
-  onetimesecret/onetimesecret:v0.25.11
+  onetimesecret/onetimesecret:v0.26.1
 ```
 
 ### 4. Access Your Instance
@@ -55,7 +55,7 @@ Open your browser to:
 For those who prefer manual setup, you'll need:
 
 - **Ruby 3.4+** (not available in default system packages — use [rbenv](https://github.com/rbenv/rbenv) or [mise](https://mise.jdx.dev/) to install)
-- **Redis 5+** or **Valkey** (Redis alternative)
+- **Redis 7+** or **Valkey** (Redis alternative)
 - **Node.js 22+** and **pnpm** (only required for development and building frontend assets)
 
 After cloning the repository, run the initialization script and build frontend assets:
