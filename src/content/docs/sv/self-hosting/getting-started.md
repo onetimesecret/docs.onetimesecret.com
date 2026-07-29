@@ -41,7 +41,7 @@ docker run -p 3000:3000 -d \
   -e HOST=localhost:3000 \
   -e SSL=false \
   -e RACK_ENV=production \
-  onetimesecret/onetimesecret:v0.26.1
+  onetimesecret/onetimesecret:v0.26.2
 ```
 
 ### 4. Få åtkomst till din instans
@@ -54,7 +54,7 @@ docker run -p 3000:3000 -d \
 
 För dem som föredrar manuell installation behöver du:
 
-- **Ruby 3.2+** (kanske inte tillgängligt i standard systempaket)
+- **Ruby 3.4+** (kanske inte tillgängligt i standard systempaket)
 - **Redis 7+** eller **Valkey** (Redis-alternativ)
 - **Node.js 22+** och **pnpm** (krävs endast för utveckling och byggande av frontend-tillgångar)
 
