@@ -7,8 +7,8 @@ sidebar:
 
 Whakahaerehia tō ake tauira tūmataiti o Onetime Secret me te whakahaere katoa o ō raraunga, haumaru, me te whakatakoto.
 
-:::tip[Tukuna ināianei: v0.25]
-Ko te tukuna pumau ināianei ko **v0.25** (te peka `main`). Ka oma i roto i ngā āhua e rua:
+:::tip[Tukuna ināianei: v0.26]
+Ko te tukuna pumau ināianei ko **v0.26** (te peka `main`). Ka oma i roto i ngā āhua e rua:
 
 - **Āhua māmā** — te ara ngāwari rawa atu. Me Redis anake me ētahi taupānga taiao. Ka mahi tonu ngā pūkete pērā i ōna wā katoa.
 - **Āhua katoa** — ka tāpirihia ngā āhuatanga pūkete (MFA, SSO, WebAuthn, whakahaere) i tautokona e PostgreSQL me RabbitMQ.
@@ -37,7 +37,7 @@ docker run -p 6379:6379 -d redis:bookworm
 docker run -p 3000:3000 -d \
   -e REDIS_URL=redis://host.docker.internal:6379/0 \
   -e SECRET="$(openssl rand -hex 32)" \
-  onetimesecret/onetimesecret:v0.25.11
+  onetimesecret/onetimesecret:v0.26.2
 ```
 
 Uru mai i `http://localhost:3000`.
@@ -53,7 +53,7 @@ He aha ngā mea e whāki ana i tō tauira whakatū-rānei:
 
 - **Atanga tukutuku** - Atanga UI āhuatanga-katoa mō te waihanga me te tohatoha i ngā karere muna
 - **REST API** - Urunga papatono mō ngā whakaurunga
-- **Tautoko reo-maha** - E wātea ana i ngā reo 12+
+- **Tautoko reo-maha** - E wātea ana i ngā reo 17
 - **Rohe ritenga** - Whakamahia tō ake rohe me te waitohu
 
 ## Ngā Hiahiatanga Pūnaha

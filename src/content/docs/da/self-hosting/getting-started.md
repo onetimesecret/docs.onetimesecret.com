@@ -41,7 +41,7 @@ docker run -p 3000:3000 -d \
   -e HOST=localhost:3000 \
   -e SSL=false \
   -e RACK_ENV=production \
-  onetimesecret/onetimesecret:v0.25.11
+  onetimesecret/onetimesecret:v0.26.2
 ```
 
 ### 4. Få adgang til din instans
@@ -55,7 +55,7 @@ docker run -p 3000:3000 -d \
 For dem, der foretrækker manuel opsætning, skal du bruge:
 
 - **Ruby 3.4+** (ikke tilgængelig i standard systempakker — brug [rbenv](https://github.com/rbenv/rbenv) eller [mise](https://mise.jdx.dev/) til installation)
-- **Redis 5+** eller **Valkey** (Redis-alternativ)
+- **Redis 7+** eller **Valkey** (Redis-alternativ)
 - **Node.js 22+** og **pnpm** (kun påkrævet til udvikling og opbygning af frontend-aktiver)
 
 Efter at have klonet repositoriet, kør initialiseringsscriptet og byg frontend-aktiverne:

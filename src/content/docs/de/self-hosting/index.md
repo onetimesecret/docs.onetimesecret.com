@@ -7,8 +7,8 @@ sidebar:
 
 Betreibe deine eigene private Instanz von Onetime Secret mit voller Kontrolle über deine Daten, Sicherheit und Bereitstellung.
 
-:::tip[Aktuelle Version: v0.25]
-Die aktuelle stabile Version ist **v0.25** (der `main`-Branch). Sie läuft in zwei Modi:
+:::tip[Aktuelle Version: v0.26]
+Die aktuelle stabile Version ist **v0.26** (der `main`-Branch). Sie läuft in zwei Modi:
 
 - **Einfacher Modus** — der einfachste Weg. Benötigt nur Redis und ein paar Umgebungsvariablen. Konten funktionieren wie immer. Beginne hier mit dem [Schnellstart](#schnellstart-optionen) weiter unten.
 - **Vollständiger Modus** — fügt Kontofunktionen (MFA, SSO, WebAuthn, Organisationen) hinzu, die von PostgreSQL und RabbitMQ unterstützt werden.
@@ -37,7 +37,7 @@ docker run -p 6379:6379 -d redis:bookworm
 docker run -p 3000:3000 -d \
   -e REDIS_URL=redis://host.docker.internal:6379/0 \
   -e SECRET="$(openssl rand -hex 32)" \
-  onetimesecret/onetimesecret:v0.25.11
+  onetimesecret/onetimesecret:v0.26.2
 ```
 
 Erreichbar unter `http://localhost:3000`.
@@ -53,7 +53,7 @@ Deine selbst gehostete Instanz umfasst:
 
 - **Weboberfläche** - Vollständige Benutzeroberfläche zum Erstellen und Teilen von Geheimnissen
 - **REST API** - Programmatischer Zugriff für Integrationen
-- **Mehrsprachige Unterstützung** - Verfügbar in über 12 Sprachen
+- **Mehrsprachige Unterstützung** - Verfügbar in 17 Sprachen
 - **Eigene Domains** - Nutze deine eigene Domain und dein Branding
 
 

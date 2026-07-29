@@ -7,8 +7,8 @@ sidebar:
 
 运行您自己的私有 Onetime Secret 实例，全面控制您的数据、安全性和部署。
 
-:::tip[当前版本：v0.25]
-当前稳定版本为 **v0.25**（`main` 分支）。支持两种运行模式：
+:::tip[当前版本：v0.26]
+当前稳定版本为 **v0.26**（`main` 分支）。支持两种运行模式：
 
 - **简单模式** — 最简便的方式，只需 Redis 和几个环境变量，账户功能与以往相同。请从下方的[快速入门](#快速入门选项)开始。
 - **完整模式** — 新增基于 PostgreSQL 和 RabbitMQ 的账户功能（MFA、SSO、WebAuthn、组织管理）。
@@ -37,7 +37,7 @@ docker run -p 6379:6379 -d redis:bookworm
 docker run -p 3000:3000 -d \
   -e REDIS_URL=redis://host.docker.internal:6379/0 \
   -e SECRET="$(openssl rand -hex 32)" \
-  onetimesecret/onetimesecret:v0.25.11
+  onetimesecret/onetimesecret:v0.26.2
 ```
 
 访问 `http://localhost:3000`。
@@ -53,7 +53,7 @@ docker run -p 3000:3000 -d \
 
 - **Web 界面** - 用于创建和共享机密内容的全功能 UI
 - **REST API** - 用于集成的编程访问
-- **多语言支持** - 支持 12 种以上的语言
+- **多语言支持** - 支持 17 种语言
 - **自定义域名** - 使用您自己的域名和品牌
 
 

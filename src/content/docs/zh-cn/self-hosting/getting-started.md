@@ -41,7 +41,7 @@ docker run -p 3000:3000 -d \
   -e HOST=localhost:3000 \
   -e SSL=false \
   -e RACK_ENV=production \
-  onetimesecret/onetimesecret:v0.25.11
+  onetimesecret/onetimesecret:v0.26.2
 ```
 
 ### 4. 访问您的实例
@@ -54,8 +54,8 @@ docker run -p 3000:3000 -d \
 
 对于喜欢手动设置的用户，您需要：
 
-- **Ruby 3.2+**（可能在默认系统软件包中不可用）
-- **Redis 5+** 或 **Valkey**（Redis 替代方案）
+- **Ruby 3.4+**（可能在默认系统软件包中不可用）
+- **Redis 7+** 或 **Valkey**（Redis 替代方案）
 - **Node.js 22+** 和 **pnpm**（仅用于开发和构建前端资源）
 
 在运行应用程序之前，您需要使用 `pnpm install && pnpm run build:local` 构建前端资源。

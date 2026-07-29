@@ -34,7 +34,7 @@ version: '3.8'
 
 services:
   onetime:
-    image: onetimesecret/onetimesecret:v0.25.11
+    image: onetimesecret/onetimesecret:v0.26.2
     ports:
       - "3000:3000"
     environment:
@@ -123,8 +123,11 @@ sudo su - onetime
 git clone https://github.com/onetimesecret/onetimesecret.git
 cd onetimesecret
 
+# Запуск скрипту ініціалізації
+./install.sh init
+
 # Встановлення залежностей
-bundle install --deployment --without development test
+bundle install --without development test
 
 # Копіювання та налаштування середовища
 cp .env.example .env

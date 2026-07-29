@@ -41,7 +41,7 @@ docker run -p 3000:3000 -d \
   -e HOST=localhost:3000 \
   -e SSL=false \
   -e RACK_ENV=production \
-  onetimesecret/onetimesecret:v0.25.11
+  onetimesecret/onetimesecret:v0.26.2
 ```
 
 ### 4. Acessar Sua Instância
@@ -54,8 +54,8 @@ Abra seu navegador em:
 
 Para aqueles que preferem configuração manual, você precisará:
 
-- **Ruby 3.2+** (pode não estar disponível em pacotes de sistema padrão)
-- **Redis 5+** ou **Valkey** (alternativa ao Redis)
+- **Ruby 3.4+** (pode não estar disponível em pacotes de sistema padrão)
+- **Redis 7+** ou **Valkey** (alternativa ao Redis)
 - **Node.js 22+** e **pnpm** (necessário apenas para desenvolvimento e construção de assets frontend)
 
 Você precisará construir os assets frontend com `pnpm install && pnpm run build:local` antes de executar a aplicação.

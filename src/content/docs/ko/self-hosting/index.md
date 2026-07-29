@@ -7,8 +7,8 @@ sidebar:
 
 자체 인프라에서 Onetime Secret의 프라이빗 인스턴스를 운영하여 데이터, 보안 및 배포를 완벽하게 제어할 수 있습니다.
 
-:::tip[현재 릴리스: v0.25]
-현재 안정 버전은 **v0.25** (`main` 브랜치)입니다. 두 가지 모드로 실행됩니다:
+:::tip[현재 릴리스: v0.26]
+현재 안정 버전은 **v0.26** (`main` 브랜치)입니다. 두 가지 모드로 실행됩니다:
 
 - **심플 모드** — 가장 간편한 방법입니다. Redis와 몇 가지 환경 변수만 필요하며, 계정은 기존과 동일하게 작동합니다. 아래의 빠른 시작 부분부터 시작하세요.
 - **풀 모드** — PostgreSQL 및 RabbitMQ를 기반으로 계정 기능(MFA, SSO, WebAuthn, 조직)을 추가합니다.
@@ -37,7 +37,7 @@ docker run -p 6379:6379 -d redis:bookworm
 docker run -p 3000:3000 -d \
   -e REDIS_URL=redis://host.docker.internal:6379/0 \
   -e SECRET="$(openssl rand -hex 32)" \
-  onetimesecret/onetimesecret:v0.25.11
+  onetimesecret/onetimesecret:v0.26.2
 ```
 
 `http://localhost:3000`에서 접속할 수 있습니다.
@@ -53,7 +53,7 @@ docker run -p 3000:3000 -d \
 
 - **웹 인터페이스** - 비밀 메시지 생성 및 공유를 위한 모든 기능이 포함된 UI
 - **REST API** - 통합을 위한 프로그래밍 방식의 접근
-- **다국어 지원** - 12개 이상의 언어 지원
+- **다국어 지원** - 17개 언어 지원
 - **커스텀 도메인** - 자체 도메인 및 브랜딩 사용 가능
 
 
