@@ -1,6 +1,6 @@
 ---
 title: Como funcionam?
-description: Domínios Personalizados permitem hospedar compartilhamento de mensagens sob seu próprio nome de domínio, com configuração de DNS nos data centers da EU ou EUA e recursos opcionais de personalização de marca.
+description: Domínios Personalizados permitem hospedar compartilhamento de mensagens sob seu próprio nome de domínio, com configuração de DNS em qualquer uma de nossas regiões de data center e recursos opcionais de personalização de marca.
 ---
 
 ## Sua Marca, Nossa Segurança

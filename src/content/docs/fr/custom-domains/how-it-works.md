@@ -1,6 +1,6 @@
 ---
-title : Comment fonctionnent-ils ?
-description: Les domaines personnalisés vous permettent d'héberger le partage de secrets sous votre propre nom de domaine, avec une configuration DNS dans les centres de données de l'UE ou des États-Unis et des fonctions optionnelles de personnalisation de la marque.
+title: Comment fonctionnent-ils ?
+description: Les domaines personnalisés vous permettent d'héberger le partage de secrets sous votre propre nom de domaine, avec une configuration DNS dans l'une de nos régions de centres de données et des fonctions optionnelles de personnalisation de la marque.
 ---
 
 ## Votre marque, notre sécurité

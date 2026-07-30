@@ -1,6 +1,6 @@
 ---
 title: Hoe werken ze?
-description: Met aangepaste domeinen kunt u geheime uitwisseling onder uw eigen domeinnaam hosten, met DNS-configuratie in datacenters in de EU of de VS en optionele functies voor merkaanpassing.
+description: Met aangepaste domeinen kunt u geheime uitwisseling onder uw eigen domeinnaam hosten, met DNS-configuratie in elk van onze datacenterregio's en optionele functies voor merkaanpassing.
 ---
 
 ## Uw merk, onze beveiliging

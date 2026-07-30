@@ -1,6 +1,6 @@
 ---
 title: Hur fungerar de?
-description: Anpassade domäner låter dig vara värd för hemlighetsdel ning under ditt eget domännamn, med DNS-konfiguration i EU- eller USA-datacenter och valfria varumärkesanpassningsfunktioner.
+description: Anpassade domäner låter dig vara värd för hemlighetsdelning under ditt eget domännamn, med DNS-konfiguration i någon av våra datacenterregioner och valfria varumärkesanpassningsfunktioner.
 ---
 
 ## Ditt varumärke, vår säkerhet

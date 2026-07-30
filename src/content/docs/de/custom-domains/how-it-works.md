@@ -1,6 +1,6 @@
 ---
 title: Wie funktionieren sie?
-description: Benutzerdefinierte Domains ermöglichen es Ihnen, geheime Freigaben unter Ihrem eigenen Domainnamen zu hosten, mit DNS-Konfiguration in EU- oder US-Rechenzentren und optionalen Funktionen zur Markenanpassung.
+description: Benutzerdefinierte Domains ermöglichen es Ihnen, geheime Freigaben unter Ihrem eigenen Domainnamen zu hosten, mit DNS-Konfiguration in jeder unserer Rechenzentrumsregionen und optionalen Funktionen zur Markenanpassung.
 ---
 
 

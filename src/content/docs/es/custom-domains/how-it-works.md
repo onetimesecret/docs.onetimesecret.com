@@ -1,6 +1,6 @@
 ---
 title: ¿Cómo funcionan?
-description: Los dominios personalizados le permiten alojar la compartición de secretos bajo su propio nombre de dominio, con configuración DNS en centros de datos de la UE o EE.UU. y funciones opcionales de personalización de la marca.
+description: Los dominios personalizados le permiten alojar la compartición de secretos bajo su propio nombre de dominio, con configuración DNS en cualquiera de nuestras regiones de centros de datos y funciones opcionales de personalización de la marca.
 ---
 
 ## Su marca, nuestra seguridad

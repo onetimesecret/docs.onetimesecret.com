@@ -1,6 +1,6 @@
 ---
 title: Come funzionano?
-description: I domini personalizzati consentono di ospitare la condivisione segreta sotto il proprio nome di dominio, con configurazione DNS nei data center dell'UE o degli Stati Uniti e funzionalità opzionali di personalizzazione del marchio.
+description: I domini personalizzati consentono di ospitare la condivisione segreta sotto il proprio nome di dominio, con configurazione DNS in una qualsiasi delle nostre regioni di data center e funzionalità opzionali di personalizzazione del marchio.
 ---
 
 ## Il vostro marchio, la nostra sicurezza

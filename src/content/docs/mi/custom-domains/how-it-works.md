@@ -1,6 +1,6 @@
 ---
 title: Me pēhea tā rātou mahi?
-description: Ka taea e ngā Rohe Ritenga te kawe i te tohatoha karere muna i raro i tō ake ingoa rohe, me te whirihoranga DNS i ngā pūtoi raraunga EU, US rānei me ngā āhuatanga ritenga waitohu.
+description: Ka taea e ngā Rohe Ritenga te kawe i te tohatoha karere muna i raro i tō ake ingoa rohe, me te whirihoranga DNS i tētahi o ā mātou rohe pūtoi raraunga me ngā āhuatanga ritenga waitohu.
 ---
 
 ## Tō Waitohu, Tō Mātou Haumaru

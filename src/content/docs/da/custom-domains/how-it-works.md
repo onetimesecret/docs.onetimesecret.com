@@ -1,6 +1,6 @@
 ---
 title: Hvordan fungerer de?
-description: Brugerdefinerede domæner giver dig mulighed for at hoste besked deling under dit eget domænenavn med DNS-konfiguration i EU- eller US-datacentre og valgfrie brandtilpasningsfunktioner.
+description: Brugerdefinerede domæner giver dig mulighed for at hoste besked deling under dit eget domænenavn med DNS-konfiguration i enhver af vores datacenterregioner og valgfrie brandtilpasningsfunktioner.
 ---
 
 ## Dit brand, vores sikkerhed

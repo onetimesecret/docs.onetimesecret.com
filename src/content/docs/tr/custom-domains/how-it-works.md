@@ -1,6 +1,6 @@
 ---
 title: Nasıl çalışır?
-description: Özel Alan Adları, AB veya ABD veri merkezlerinde DNS yapılandırması ve isteğe bağlı marka özelleştirme özellikleriyle kendi alan adınız altında gizli mesaj paylaşımı barındırmanıza olanak tanır.
+description: Özel Alan Adları, veri merkezi bölgelerimizin herhangi birinde DNS yapılandırması ve isteğe bağlı marka özelleştirme özellikleriyle kendi alan adınız altında gizli mesaj paylaşımı barındırmanıza olanak tanır.
 ---
 
 ## Markanız, Bizim Güvenliğimiz

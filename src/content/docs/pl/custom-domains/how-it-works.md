@@ -1,6 +1,6 @@
 ---
 title: Jak one działają?
-description: Niestandardowe domeny pozwalają hostować udostępnianie sekretów pod własną nazwą domeny, z konfiguracją DNS w centrach danych UE lub USA oraz opcjonalnymi funkcjami dostosowania marki.
+description: Niestandardowe domeny pozwalają hostować udostępnianie sekretów pod własną nazwą domeny, z konfiguracją DNS w dowolnym z naszych regionów centrów danych oraz opcjonalnymi funkcjami dostosowania marki.
 ---
 
 ## Twoja marka, nasze bezpieczeństwo
