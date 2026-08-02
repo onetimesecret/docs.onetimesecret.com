@@ -19,7 +19,7 @@ Antes de configurar su dominio personalizado, es importante que entienda la dife
 
 ## Elija su región
 
-Onetime Secret ofrece dos regiones de centros de datos: EU y US. Cuando configure su dominio personalizado, tendrá que elegir qué región prefiere para almacenar sus datos. Esta elección es importante por varias razones:
+Onetime Secret ofrece varias regiones de centros de datos: EU, UK, US, CA y NZ. Cuando configure su dominio personalizado, tendrá que elegir qué región prefiere para almacenar sus datos. Esta elección es importante por varias razones:
 
 - **Para particulares**: Puede elegir en función de sus preferencias personales, como la proximidad para un acceso potencialmente más rápido o la preocupación por la soberanía de los datos personales.
 - **Para empresas**: Su elección puede depender de sus obligaciones de localización de datos, como el cumplimiento del GDPR, las directrices estatales o provinciales. Asegúrese de seleccionar la región que mejor se adapte a sus requisitos normativos.
@@ -49,7 +49,10 @@ Para conectar su dominio, tiene que actualizar la configuración DNS. El proceso
 2. Cree un registro CNAME con los siguientes datos:
    - Host: Su subdominio elegido (por ejemplo, secretos)
    - Apunta a / Valor:
+     - Para la región CA: identity.ca.onetime.co
      - Para la región de la UE: identity.eu.onetime.co
+     - Para la región NZ: identity.nz.onetime.co
+     - Para la región UK: identity.ingress.onetime.co (anycast)
      - Para la región de EE.UU.: identity.us.onetime.co
 3. Elimine cualquier registro A, AAAA o CNAME existente para el mismo subdominio.
 
@@ -61,6 +64,7 @@ Para conectar su dominio, tiene que actualizar la configuración DNS. El proceso
    - Apunta a / Valor:
      - Para la región de la UE: 109.105.217.207
      - Para la región de EE.UU.: 66.51.126.41
+     - Para otras regiones: Póngase en contacto con soporte para conocer las direcciones IP de registro A vigentes.
 
 Importante: Asegúrese de que no hay registros conflictivos para el dominio que está utilizando.
 
@@ -94,7 +98,7 @@ Los dominios Apex no pueden utilizar registros CNAME debido a las normas DNS. Po
 Una vez finalizada la configuración, debería ver la siguiente información:
 
 - Estado del dominio: Activo con SSL
-- Dirección de destino: identity.eu.onetime.co o identity.us.onetime.co (dependiendo de la región elegida)
+- Dirección de destino: el endpoint de identidad para la región elegida (por ejemplo, identity.ca.onetime.co, identity.eu.onetime.co, identity.nz.onetime.co, identity.ingress.onetime.co, identity.us.onetime.co)
 - Estado SSL: Activo
 - Fecha de Renovación SSL: (Se mostrará, normalmente un año desde la configuración)
 

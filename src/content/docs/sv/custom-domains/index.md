@@ -30,7 +30,7 @@ Anpassade domäner låter dig använda ditt eget domännamn för Onetime Secret-
 3. **Professionellt utseende**: Visa en högre nivå av sofistikering och engagemang för säkerhet.
 4. **Varumärkesanpassning**: Ladda upp anpassade logotyper och ställ in varumärkesfärger för att matcha din visuella identitet.
 5. **Sömlös integration**: Skapa en sammanhängande upplevelse som överensstämmer med din befintliga digitala närvaro.
-6. **Regional flexibilitet**: Välj mellan EU- och USA-datacenterregioner för att möta dina datalokaliserings behov.
+6. **Regional flexibilitet**: Välj mellan fem datacenterregioner (EU, UK, US, CA, NZ) för att möta dina datalokaliserings behov.
 
 ## Komma igång
 
@@ -39,11 +39,11 @@ För att konfigurera en anpassad domän:
 1. Logga in på ditt Onetime Secret-konto.
 2. Navigera till Kontoinställningar > Anpassade domäner.
 3. Ange domänen du vill använda och klicka på "Lägg till domän".
-4. Välj din föredragna datacenterregion (EU eller USA).
+4. Välj din föredragna datacenterregion (EU, UK, US, CA eller NZ).
 5. Följ de steg-för-steg-instruktioner som tillhandahålls för DNS-konfiguration.
 6. Vänta på att domänen verifieras. Om tillgängligt, klicka på knappen "Verifiera" för att påskynda processen. Du kan behöva uppdatera sidan.
 
-För detaljerade instruktioner, inklusive hur man väljer mellan EU- och USA-regioner, vänligen se vår [Guide för anpassad domänkonfiguration](/sv/custom-domains/setup-guide).
+För detaljerade instruktioner, inklusive hur man väljer rätt region, vänligen se vår [Guide för anpassad domänkonfiguration](/sv/custom-domains/setup-guide).
 
 ## Varumärkesanpassning
 
@@ -63,6 +63,6 @@ För detaljerade varumärkesinstruktioner, se vår [Varumärkesguide](/sv/custom
 - Du är ansvarig för att underhålla och förnya din domänregistrering.
 - Korrekt SSL/TLS-konfiguration är avgörande för säkerhet (hanteras automatiskt av Onetime Secret).
 - Säkerställ att din valda domän överensstämmer med din organisations varumärkesriktlinjer.
-- Överväg dataskyddsregler när du väljer mellan [EU- och USA-regioner](/sv/regions).
+- Överväg dataskyddsregler när du väljer din [datacenterregion](/sv/regions).
 
 För att lära dig om bästa praxis för att använda anpassade domäner säkert, kolla in vår guide för [säkerhetsbästa praxis](/sv/security-best-practices).

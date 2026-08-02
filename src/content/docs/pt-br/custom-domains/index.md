@@ -30,7 +30,7 @@ Domínios Personalizados permitem que você use seu próprio nome de domínio pa
 3. **Aparência Profissional**: Demonstre um nível mais alto de sofisticação e compromisso com a segurança.
 4. **Personalização de Marca**: Faça upload de logotipos personalizados e defina cores da marca para combinar com sua identidade visual.
 5. **Integração Perfeita**: Crie uma experiência coesa que se alinhe com sua presença digital existente.
-6. **Flexibilidade Regional**: Escolha entre as regiões de data center EU e US para atender suas necessidades de localidade de dados.
+6. **Flexibilidade Regional**: Escolha entre cinco regiões de data center (EU, UK, US, CA, NZ) para atender suas necessidades de localidade de dados.
 
 ## Primeiros Passos
 
@@ -39,11 +39,11 @@ Para configurar um Domínio Personalizado:
 1. Faça login na sua conta do Onetime Secret.
 2. Navegue até Configurações da Conta > Domínios Personalizados.
 3. Digite o domínio que deseja usar e clique em "Adicionar Domínio".
-4. Selecione sua região de data center preferida (EU ou US).
+4. Selecione sua região de data center preferida (EU, UK, US, CA ou NZ).
 5. Siga as instruções passo a passo fornecidas para configuração de DNS.
 6. Aguarde a verificação do domínio. Se disponível, clique no botão "Verificar" para agilizar o processo. Pode ser necessário atualizar a página.
 
-Para instruções detalhadas, incluindo como escolher entre as regiões EU e US, consulte nosso [Guia de Configuração de Domínio Personalizado](/pt-br/custom-domains/setup-guide).
+Para instruções detalhadas, incluindo como escolher a região certa, consulte nosso [Guia de Configuração de Domínio Personalizado](/pt-br/custom-domains/setup-guide).
 
 ## Personalização de Marca
 
@@ -63,6 +63,6 @@ Para instruções detalhadas de marca, consulte nosso [Guia de Marca](/pt-br/cus
 - Você é responsável por manter e renovar o registro do seu domínio.
 - A configuração adequada de SSL/TLS é crucial para segurança (gerenciada automaticamente pelo Onetime Secret).
 - Certifique-se de que seu domínio escolhido está em conformidade com as diretrizes de marca da sua organização.
-- Considere regulamentos de proteção de dados ao escolher entre [regiões EU e US](/pt-br/regions).
+- Considere regulamentos de proteção de dados ao escolher sua [região de data center](/pt-br/regions).
 
 Para aprender sobre as melhores práticas para usar Domínios Personalizados com segurança, confira nosso guia de [Melhores Práticas de Segurança](/pt-br/security-best-practices).

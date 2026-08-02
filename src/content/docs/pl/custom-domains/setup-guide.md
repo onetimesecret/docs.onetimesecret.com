@@ -19,7 +19,7 @@ Przed skonfigurowaniem niestandardowej domeny ważne jest zrozumienie różnicy 
 
 ## Wybierz swój region
 
-Onetime Secret oferuje dwa regiony centrów danych: UE i USA. Podczas konfigurowania niestandardowej domeny będziesz musiał wybrać, który region preferujesz do przechowywania swoich danych. Ten wybór jest ważny z kilku powodów:
+Onetime Secret oferuje wiele regionów centrów danych: EU, UK, US, CA i NZ. Podczas konfigurowania niestandardowej domeny będziesz musiał wybrać, który region preferujesz do przechowywania swoich danych. Ten wybór jest ważny z kilku powodów:
 
 - **Dla osób indywidualnych**: Możesz wybrać w oparciu o swoje osobiste preferencje, takie jak bliskość dla potencjalnie szybszego dostępu lub osobiste obawy dotyczące suwerenności danych.
 - **Dla firm**: Twój wybór może zależeć od Twoich zobowiązań dotyczących lokalizacji danych, takich jak zgodność z RODO, wytycznymi stanowymi lub prowincjonalnymi. Upewnij się, że wybrałeś region, który najlepiej odpowiada Twoim wymaganiom regulacyjnym.
@@ -49,8 +49,11 @@ Aby podłączyć swoją domenę, musisz zaktualizować ustawienia DNS. Proces r�
 2. Utwórz rekord CNAME z następującymi szczegółami:
    - Host: Twoja wybrana subdomena (np. secrets)
    - Wskazuje na / Wartość:
-     - Dla regionu UE: identity.eu.onetime.co
-     - Dla regionu USA: identity.us.onetime.co
+     - Dla regionu CA: identity.ca.onetime.co
+     - Dla regionu EU: identity.eu.onetime.co
+     - Dla regionu NZ: identity.nz.onetime.co
+     - Dla regionu UK: identity.ingress.onetime.co (anycast)
+     - Dla regionu US: identity.us.onetime.co
 3. Usuń wszelkie istniejące rekordy A, AAAA lub CNAME dla tej samej subdomeny
 
 ### Dla domen apex
@@ -59,8 +62,9 @@ Aby podłączyć swoją domenę, musisz zaktualizować ustawienia DNS. Proces r�
 2. Utwórz lub zmodyfikuj rekord A z następującymi szczegółami:
    - Host: @ (lub pozostaw puste, w zależności od dostawcy DNS)
    - Wskazuje na / Wartość:
-     - Dla regionu UE: 109.105.217.207
-     - Dla regionu USA: 66.51.126.41
+     - Dla regionu EU: 109.105.217.207
+     - Dla regionu US: 66.51.126.41
+     - Dla pozostałych regionów: Skontaktuj się z naszym zespołem wsparcia, aby uzyskać aktualne adresy IP rekordów A
 
 Ważne: Upewnij się, że nie ma konfliktujących rekordów dla domeny, której używasz.
 
@@ -94,7 +98,7 @@ Domeny apex nie mogą używać rekordów CNAME ze względu na standardy DNS. Dla
 Po zakończeniu konfiguracji powinieneś zobaczyć następujące informacje:
 
 - Status domeny: Aktywna z SSL
-- Adres docelowy: identity.eu.onetime.co lub identity.us.onetime.co (w zależności od wybranego regionu)
+- Adres docelowy: punkt końcowy identity dla wybranego regionu (np. identity.ca.onetime.co, identity.eu.onetime.co, identity.nz.onetime.co, identity.ingress.onetime.co, identity.us.onetime.co)
 - Status SSL: Aktywny
 - Data odnowienia SSL: (Będzie wyświetlona, zazwyczaj około roku od konfiguracji)
 

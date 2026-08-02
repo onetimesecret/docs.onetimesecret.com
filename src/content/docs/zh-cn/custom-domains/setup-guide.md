@@ -19,7 +19,7 @@ description: 本指南将指导你为 Onetime Secret 账户设置自定义域名
 
 ## 选择您所在的地区
 
-Onetime Secret 提供两个数据中心区域：欧盟和美国。在设置自定义域名时，您需要选择您喜欢在哪个地区存储数据。这一选择非常重要，原因有以下几点：
+Onetime Secret 提供多个数据中心区域：EU、UK、US、CA 和 NZ。在设置自定义域名时，您需要选择您喜欢在哪个地区存储数据。这一选择非常重要，原因有以下几点：
 
 - **针对个人**：您可以根据个人偏好进行选择，例如就近访问可能更快或个人数据主权问题。
 - **对于企业**：您的选择可能取决于您的数据本地化义务，如遵守 GDPR、州或省的指导方针。确保您选择的地区最符合您的监管要求。
@@ -49,8 +49,11 @@ Onetime Secret 提供两个数据中心区域：欧盟和美国。在设置自�
 2.创建包含以下详细信息的 CNAME 记录：
    - 主机：您选择的子域（如 secrets）
    - 指向/值：
-     - 欧盟地区：identity.eu.onetime.co
-     - 美国地区：identity.us.onetime.co
+     - CA 地区：identity.ca.onetime.co
+     - EU 地区：identity.eu.onetime.co
+     - NZ 地区：identity.nz.onetime.co
+     - UK 地区：identity.ingress.onetime.co（任播）
+     - US 地区：identity.us.onetime.co
 3.删除同一子域的任何现有 A、AAAA 或 CNAME 记录
 
 ### 对于 Apex 域名
@@ -61,6 +64,7 @@ Onetime Secret 提供两个数据中心区域：欧盟和美国。在设置自�
    - 指向/值：
      - 欧盟地区：109.105.217.207
      - 美国地区：66.51.126.41
+     - 其他地区：请联系支持团队获取当前的 A 记录 IP 地址
 
 重要： 确保您使用的域名没有冲突记录。
 
@@ -94,7 +98,7 @@ Onetime Secret 提供两个数据中心区域：欧盟和美国。在设置自�
 设置完成后，您将看到以下信息：
 
 - 域名状态：激活 SSL
-- 目标地址： identity.eu.onetime.co或identity.us.onetime.co（取决于您选择的地区）
+- 目标地址：您所选区域对应的身份端点（例如 identity.ca.onetime.co、identity.eu.onetime.co、identity.nz.onetime.co、identity.ingress.onetime.co、identity.us.onetime.co）
 - SSL 状态：激活
 - SSL 更新日期： （将会显示，通常为设置后的一年左右）
 

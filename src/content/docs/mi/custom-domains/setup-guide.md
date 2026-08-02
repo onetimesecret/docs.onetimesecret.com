@@ -19,7 +19,7 @@ I mua i te whakatū i tō rohe ritenga, he mea nui kia mārama koe ki te rerekē
 
 ## Kōwhiria Tō Rohe
 
-Ka whakarato a Onetime Secret i ngā rohe pūtoi raraunga e rua: EU me US. I te wā e whakatū ana i tō rohe ritenga, me kōwhiri koe i tō rohe e hiahia ai mō te penapena i ō raraunga. He mea nui tēnei kōwhiringa mō ētahi take:
+Ka whakarato a Onetime Secret i ngā rohe pūtoi raraunga maha: EU, UK, US, CA, me NZ. I te wā e whakatū ana i tō rohe ritenga, me kōwhiri koe i tō rohe e hiahia ai mō te penapena i ō raraunga. He mea nui tēnei kōwhiringa mō ētahi take:
 
 - **Mō ngā Tangata Takitahi**: Ka taea e koe te kōwhiri i runga i ō hiahiatanga whaiaro, pēnei i te tataata mō te tere ake pea o te uru atu rānei ngā awangawanga rangatiratanga raraunga whaiaro rānei.
 - **Mō ngā Pakihi**: Tō kōwhiringa he taupua pea ki ō takohanga wāhi raraunga, pēnei i te ūnga ki te GDPR, ngā ararehe kāwanatanga, ngā aratohu rānei o te rohe. Me whakaū koe ka kōwhiri i te rohe e pai ai mō ō hiahiatanga here.
@@ -49,7 +49,10 @@ Hei hono i tō rohe, me whakahōu koe i ō tautuhinga DNS. He rerekē iti te tuk
 2. Waihanga tētahi rēkōta CNAME me ēnei taipitopito:
    - Kaiwhakataki: Tō rohe-iti kua kōwhiria (hei tauira, secrets)
    - Kōkiri ki / Uara:
+     - Mō te rohe CA: identity.ca.onetime.co
      - Mō te rohe EU: identity.eu.onetime.co
+     - Mō te rohe NZ: identity.nz.onetime.co
+     - Mō te rohe UK: identity.ingress.onetime.co (anycast)
      - Mō te rohe US: identity.us.onetime.co
 3. Tango i ngā rēkōta A, AAAA, CNAME rānei kei te ora mō te rohe-iti kotahi
 
@@ -61,6 +64,7 @@ Hei hono i tō rohe, me whakahōu koe i ō tautuhinga DNS. He rerekē iti te tuk
    - Kōkiri ki / Uara:
      - Mō te rohe EU: 109.105.217.207
      - Mō te rohe US: 66.51.126.41
+     - Mō ētahi atu rohe: Whakapā atu ki te tautoko mō ngā wāhitau IP rēkōta A o nāianei
 
 He mea nui: Me whakaū kāore he rēkōta tautohetohe mō te rohe koe e whakamahi ana.
 
@@ -94,7 +98,7 @@ Kāore ngā rohe matua e taea ai te whakamahi i ngā rēkōta CNAME nā ngā pae
 I te otinga o te whakatūnga, me kite koe i ēnei kōrero:
 
 - Tūranga Rohe: Kei te Mahi me SSL
-- Wāhitau Taupae: identity.eu.onetime.co, identity.us.onetime.co rānei (i runga i tō rohe kua kōwhiria)
+- Wāhitau Taupae: Te pūtake tuakiri mō tō rohe kua kōwhiria (hei tauira, identity.ca.onetime.co, identity.eu.onetime.co, identity.nz.onetime.co, identity.ingress.onetime.co, identity.us.onetime.co)
 - Tūranga SSL: Kei te Mahi
 - Rā Whakahōu SSL: (Ka whakātuahia, he tau hoki i te whakatūnga)
 

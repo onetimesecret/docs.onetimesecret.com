@@ -31,7 +31,7 @@ description: Ajanslar, işletmeler ve profesyonel kullanıcılar için gelişmi�
 3. **Profesyonel Görünüm**: Daha yüksek düzeyde sofistike ve güvenlik taahhüdü sergileyin.
 4. **Marka Özelleştirme**: Görsel kimliğinize uyması için özel logolar yükleyin ve marka renklerini ayarlayın.
 5. **Sorunsuz Entegrasyon**: Mevcut dijital varlığınızla uyumlu tutarlı bir deneyim oluşturun.
-6. **Bölgesel Esneklik**: Veri yerelliği ihtiyaçlarınızı karşılamak için AB ve ABD veri merkezi bölgeleri arasından seçim yapın.
+6. **Bölgesel Esneklik**: Veri yerelliği ihtiyaçlarınızı karşılamak için beş veri merkezi bölgesinden (EU, UK, US, CA, NZ) birini seçin.
 
 ## Başlangıç
 
@@ -40,11 +40,11 @@ description: Ajanslar, işletmeler ve profesyonel kullanıcılar için gelişmi�
 1. Onetime Secret hesabınıza giriş yapın.
 2. Hesap Ayarları > Özel Alan Adları'na gidin.
 3. Kullanmak istediğiniz alan adını girin ve "Alan Adı Ekle"ye tıklayın.
-4. Tercih ettiğiniz veri merkezi bölgesini (AB veya ABD) seçin.
+4. Tercih ettiğiniz veri merkezi bölgesini (EU, UK, US, CA veya NZ) seçin.
 5. DNS yapılandırması için sağlanan adım adım talimatları izleyin.
 6. Alan adının doğrulanmasını bekleyin. Varsa, işlemi hızlandırmak için "Doğrula" düğmesine tıklayın. Sayfayı yenilemeniz gerekebilir.
 
-AB ve ABD bölgeleri arasında nasıl seçim yapacağınız dahil olmak üzere ayrıntılı talimatlar için lütfen [Özel Alan Adı Kurulum Kılavuzumuza](/tr/custom-domains/setup-guide) bakın.
+Doğru bölgeyi nasıl seçeceğiniz dahil olmak üzere ayrıntılı talimatlar için lütfen [Özel Alan Adı Kurulum Kılavuzumuza](/tr/custom-domains/setup-guide) bakın.
 
 ## Marka Özelleştirme
 
@@ -65,6 +65,6 @@ Ayrıntılı markalama talimatları için [Marka Kılavuzumuza](/tr/custom-domai
 - Alan adı kaydınızı sürdürmek ve yenilemekten siz sorumlusunuz.
 - Güvenlik için uygun SSL/TLS yapılandırması kritik öneme sahiptir (Onetime Secret tarafından otomatik olarak yönetilir).
 - Seçtiğiniz alan adının kuruluşunuzun marka yönergelerine uygun olduğundan emin olun.
-- [AB ve ABD bölgeleri](/tr/regions) arasında seçim yaparken veri koruma düzenlemelerini göz önünde bulundurun.
+- [Veri merkezi bölgenizi](/tr/regions) seçerken veri koruma düzenlemelerini göz önünde bulundurun.
 
 Özel Alan Adlarını güvenli bir şekilde kullanmaya ilişkin en iyi uygulamalar hakkında bilgi edinmek için [Güvenlik En İyi Uygulamalar](/tr/security-best-practices) kılavuzumuza göz atın.
