@@ -33,6 +33,7 @@
     "regionNZ": "Neuseeland (NZ)",
     "regionUK": "Vereinigtes Königreich (UK)",
     "regionUS": "Vereinigte Staaten (US)",
+    "switchingRegions": "Region wechseln",
     "selfHosting": "Selbst-Hosting",
     "installationDeployment": "Installation & Bereitstellung",
     "configurationReference": "Konfigurationsreferenz",
