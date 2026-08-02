@@ -30,7 +30,7 @@ Ka taea e ngā Rohe Ritenga te whakamahi i tō ake ingoa rohe mō ngā hononga O
 3. **Te Āhua Ngaio**: Whakaaturia he taumata teitei ake o te kounga me te here ki te haumaru.
 4. **Te Ritenga Waitohu**: Tukuake i ngā waitohu ritenga me te whakatakoto i ngā tae waitohu kia hāngai ki tō tuakiri tirohanga.
 5. **Te Whakaurunga Rere**: Waihangahia he wheako kotahi e hāngai ana ki tō noho matihiko kei te ora.
-6. **Te Ngāwari Rohenga**: Kōwhiria i waenganui i ngā rohe pūtoi raraunga EU me US kia tutuki i ō hiahiatanga wāhi raraunga.
+6. **Te Ngāwari Rohenga**: Kōwhiria mai i ngā rohe pūtoi raraunga e rima (EU, UK, US, CA, NZ) kia tutuki i ō hiahiatanga wāhi raraunga.
 
 ## Te Tīmatanga
 
@@ -39,11 +39,11 @@ Hei whakatū i tētahi Rohe Ritenga:
 1. Takiuru ki tō pūkete Onetime Secret.
 2. Whakatere ki Tautuhinga Pūkete > Ngā Rohe Ritenga.
 3. Whakauru i te rohe e hiahia ana koe ki te whakamahi, ā, pāwhiri "Tāpiri Rohe".
-4. Kōwhiria tō rohe pūtoi raraunga i hiahia ai (EU, US rānei).
+4. Kōwhiria tō rohe pūtoi raraunga i hiahia ai (EU, UK, US, CA, NZ rānei).
 5. Whai i ngā tohutohu tukutuku kua whakaratohia mō te whirihorahanga DNS.
 6. Tatari kia manatokohia te rohe. Mēnā kei te wātea, pāwhiria te pātene "Manatoko" ki te tere i te tukanga. Me whakahōu pea koe i te whārangi.
 
-Mō ngā tohutohu taipitopito, tae atu ki te āhua o te kōwhiri i waenganui i ngā rohe EU me US, tirohia tō mātou [Aratohu Whakatū Rohe Ritenga](/mi/custom-domains/setup-guide).
+Mō ngā tohutohu taipitopito, tae atu ki te āhua o te kōwhiri i te rohe tika, tirohia tō mātou [Aratohu Whakatū Rohe Ritenga](/mi/custom-domains/setup-guide).
 
 ## Te Ritenga Waitohu
 
@@ -63,6 +63,6 @@ Mō ngā tohutohu waitohu taipitopito, tirohia tō mātou [Aratohu Waitohu](/mi/
 - Ko koe te kaiwhakahaere mō te pupuri me te whakahōu i tō rēhitatanga rohe.
 - He nui te whirihorahanga tika SSL/TLS mō te haumaru (ka whakahaerea aunoa e Onetime Secret).
 - Whakaūngia ka ūnga tō rohe kua kōwhiria ki ngā aratohu waitohu o tō whakahaere.
-- Whakaarohia ngā ture tiaki raraunga i te wā e kōwhiri ana i waenganui i ngā [rohe EU me US](/mi/regions).
+- Whakaarohia ngā ture tiaki raraunga i te wā e kōwhiri ana i tō [rohe pūtoi raraunga](/mi/regions).
 
 Hei ako mō ngā tikanga pai mō te whakamahi i ngā Rohe Ritenga ki te haumaru, tirohia tō mātou aratohu [Ngā Tikanga Haumaru Pai](/mi/security-best-practices).

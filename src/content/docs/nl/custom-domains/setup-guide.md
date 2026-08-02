@@ -19,7 +19,7 @@ Voordat je je aangepaste domein instelt, is het belangrijk om het verschil tusse
 
 ## Kies uw regio
 
-Onetime Secret biedt twee datacenterregio's: EU en VS. Bij het instellen van je eigen domein, moet je kiezen welke regio je verkiest voor het opslaan van je gegevens. Deze keuze is om verschillende redenen belangrijk:
+Onetime Secret biedt meerdere datacenterregio's: EU, UK, US, CA en NZ. Bij het instellen van je eigen domein, moet je kiezen welke regio je verkiest voor het opslaan van je gegevens. Deze keuze is om verschillende redenen belangrijk:
 
 - **Voor particulieren**: U kunt kiezen op basis van uw persoonlijke voorkeur, zoals nabijheid voor mogelijk snellere toegang of zorgen over de soevereiniteit van persoonlijke gegevens.
 - **Voor bedrijven**: Uw keuze kan afhangen van uw verplichtingen met betrekking tot datalocatie, zoals naleving van GDPR-, staats- of provinciale richtlijnen. Zorg ervoor dat u de regio selecteert die het beste overeenkomt met uw wettelijke vereisten.
@@ -49,7 +49,10 @@ Om uw domein te verbinden, moet u uw DNS-instellingen bijwerken. Het proces vers
 2. Maak een CNAME-record aan met de volgende gegevens:
    - Host: Uw gekozen subdomein (bijv. geheimen)
    - Wijst naar / Waarde:
+     - Voor CA-regio: identity.ca.onetime.co
      - Voor EU-regio: identity.eu.onetime.co
+     - Voor NZ-regio: identity.nz.onetime.co
+     - Voor UK-regio: identity.ingress.onetime.co (anycast)
      - Voor VS-regio: identity.us.onetime.co
 3. Verwijder alle bestaande A, AAAA of CNAME records voor hetzelfde subdomein.
 
@@ -61,6 +64,7 @@ Om uw domein te verbinden, moet u uw DNS-instellingen bijwerken. Het proces vers
    - Wijst naar / Waarde:
      - Voor EU-regio: 109.105.217.207
      - Voor VS-regio: 66.51.126.41
+     - Voor overige regio's: Neem contact op met support voor de actuele A-record IP-adressen
 
 Belangrijk: zorg ervoor dat er geen conflicterende records zijn voor het domein dat je gebruikt.
 
@@ -94,7 +98,7 @@ Apex-domeinen kunnen geen CNAME-records gebruiken vanwege DNS-standaarden. Daaro
 Zodra de installatie is voltooid, zou je de volgende informatie moeten zien:
 
 - Domeinstatus: Actief met SSL
-- Doeladres: identity.eu.onetime.co of identity.us.onetime.co (afhankelijk van de door u gekozen regio)
+- Doeladres: het identity-eindpunt voor uw gekozen regio (bijv. identity.ca.onetime.co, identity.eu.onetime.co, identity.nz.onetime.co, identity.ingress.onetime.co, identity.us.onetime.co)
 - SSL Status: Actief
 - SSL Vernieuwingsdatum: (wordt weergegeven, meestal ongeveer een jaar na installatie)
 

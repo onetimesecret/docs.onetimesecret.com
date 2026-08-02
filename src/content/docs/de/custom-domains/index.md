@@ -32,7 +32,7 @@ geheimnisse.musterfirma.de
 3. **Professionelles Erscheinungsbild**: Zeigen Sie ein höheres Maß an Raffinesse und Engagement für Sicherheit.
 4. **Anpassung der Marke**: Laden Sie benutzerdefinierte Logos hoch und legen Sie Markenfarben fest, die zu Ihrer visuellen Identität passen.
 5. **Nahtlose Integration**: Schaffen Sie ein einheitliches Erlebnis, das zu Ihrer bestehenden digitalen Präsenz passt.
-6. **Regionale Flexibilität**: Wählen Sie zwischen den Rechenzentrumsregionen EU und USA, um Ihre Anforderungen an die Datenlokalisierung zu erfüllen.
+6. **Regionale Flexibilität**: Wählen Sie aus fünf Rechenzentrumsregionen (EU, UK, US, CA, NZ), um Ihre Anforderungen an die Datenlokalisierung zu erfüllen.
 
 ## Los geht's
 
@@ -41,11 +41,11 @@ So richten Sie eine benutzerdefinierte Domain ein:
 1. Melden Sie sich bei Ihrem Onetime-Secret-Konto an.
 2. Navigieren Sie zu „Kontoeinstellungen" > „Benutzerdefinierte Domains".
 3. Geben Sie die gewünschte Domain ein und klicken Sie auf „Domain hinzufügen".
-4. Wählen Sie die gewünschte Rechenzentrumsregion (EU oder USA) aus.
+4. Wählen Sie Ihre bevorzugte Rechenzentrumsregion (EU, UK, US, CA oder NZ) aus.
 5. Folgen Sie den schrittweisen Anweisungen für die DNS-Konfiguration.
 6. Warten Sie, bis die Domain verifiziert wurde. Klicken Sie, falls verfügbar, auf die Schaltfläche „Verifizieren", um den Vorgang zu beschleunigen. Möglicherweise müssen Sie die Seite aktualisieren.
 
-Detaillierte Anweisungen, einschließlich der Auswahl zwischen EU- und US-Regionen, finden Sie in unserem [Leitfaden zur Einrichtung benutzerdefinierter Domains](/de/custom-domains/setup-guide).
+Detaillierte Anweisungen, einschließlich der Auswahl der richtigen Region, finden Sie in unserem [Leitfaden zur Einrichtung benutzerdefinierter Domains](/de/custom-domains/setup-guide).
 
 ## Anpassung der Marke
 
@@ -66,6 +66,6 @@ Detaillierte Anweisungen zum Branding finden Sie in unserem [Markenleitfaden](/d
 - Sie sind für die Pflege und Verlängerung Ihrer Domainregistrierung verantwortlich.
 - Eine ordnungsgemäße SSL/TLS-Konfiguration ist für die Sicherheit von entscheidender Bedeutung (wird automatisch von Onetime Secret übernommen).
 - Stellen Sie sicher, dass die von Ihnen gewählte Domain den Markenrichtlinien Ihrer Organisation entspricht.
-- Berücksichtigen Sie bei der Wahl zwischen [EU- und US-Regionen](/de/regions) die Datenschutzbestimmungen.
+- Berücksichtigen Sie Datenschutzbestimmungen bei der Wahl Ihrer [Rechenzentrumsregion](/de/regions).
 
 Informationen zu bewährten Verfahren für die sichere Verwendung benutzerdefinierter Domains finden Sie in unserem Leitfaden [Bewährte Sicherheitsverfahren](/de/security-best-practices).

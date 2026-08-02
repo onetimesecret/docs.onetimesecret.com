@@ -19,7 +19,7 @@ Bevor Sie Ihre benutzerdefinierte Domain einrichten, sollten Sie den Unterschied
 
 ## Wählen Sie Ihre Region
 
-Onetime Secret bietet zwei Rechenzentrumsregionen an: EU und US. Wenn Sie Ihre benutzerdefinierte Domain einrichten, müssen Sie wählen, welche Region Sie für die Speicherung Ihrer Daten bevorzugen. Diese Wahl ist aus mehreren Gründen wichtig:
+Onetime Secret bietet mehrere Rechenzentrumsregionen an: EU, UK, US, CA und NZ. Wenn Sie Ihre benutzerdefinierte Domain einrichten, müssen Sie wählen, welche Region Sie für die Speicherung Ihrer Daten bevorzugen. Diese Wahl ist aus mehreren Gründen wichtig:
 
 - **Für Privatpersonen**: Sie können die Region nach Ihren persönlichen Vorlieben auswählen, z. B. nach der Nähe für einen möglicherweise schnelleren Zugriff oder nach den Bedenken hinsichtlich der persönlichen Datensouveränität.
 - **Für Unternehmen**: Ihre Wahl kann von Ihren Verpflichtungen in Bezug auf die Datenlokalisierung abhängen, wie z.B. die Einhaltung von GDPR, staatlichen oder provinziellen Richtlinien. Stellen Sie sicher, dass Sie die Region auswählen, die am besten mit Ihren gesetzlichen Anforderungen übereinstimmt.
@@ -51,8 +51,11 @@ Um Ihre Domain zu verbinden, müssen Sie Ihre DNS-Einstellungen aktualisieren. D
 2. Erstellen Sie einen CNAME-Eintrag mit den folgenden Angaben:
 - Host: Die von Ihnen gewählte Subdomain (z.B. Geheimnisse)
 - Zeigt auf / Wert:
+- Für die Region CA: identity.ca.onetime.co
 - Für die Region EU: identity.eu.onetime.co
-- Für die Region USA: identity.us.onetime.co
+- Für die Region NZ: identity.nz.onetime.co
+- Für die Region UK: identity.ingress.onetime.co (anycast)
+- Für die Region US: identity.us.onetime.co
 3. Entfernen Sie alle vorhandenen A-, AAAA- oder CNAME-Einträge für dieselbe Subdomain
 
 ### Für Apex-Domains
@@ -63,6 +66,7 @@ Um Ihre Domain zu verbinden, müssen Sie Ihre DNS-Einstellungen aktualisieren. D
 - Zeigt auf / Wert:
 - Für die EU-Region: 109.105.217.207
 - Für die US-Region: 66.51.126.41
+- Für andere Regionen: Wenden Sie sich an den Support für aktuelle A-Eintrag-IP-Adressen
 
 Wichtig: Stellen Sie sicher, dass es keine konkurrierenden Einträge für die von Ihnen verwendete Domain gibt.
 
@@ -96,7 +100,7 @@ Apex-Domänen können aufgrund von DNS-Standards keine CNAME-Einträge verwenden
 Sobald die Einrichtung abgeschlossen ist, sollten Sie die folgenden Informationen sehen:
 
 - Domain Status: Aktiv mit SSL
-- Zieladresse: identity.eu.onetime.co oder identity.us.onetime.co (je nach der von Ihnen gewählten Region)
+- Zieladresse: Der Identity-Endpunkt für Ihre gewählte Region (z.B. identity.ca.onetime.co, identity.eu.onetime.co, identity.nz.onetime.co, identity.ingress.onetime.co, identity.us.onetime.co)
 - SSL-Status: Aktiv
 - SSL-Verlängerungsdatum: (Wird angezeigt, in der Regel etwa ein Jahr nach der Einrichtung)
 

@@ -19,7 +19,7 @@ description: 이 가이드에서는 하위 도메인과 에이펙스 도메인�
 
 ## 지역 선택
 
-Onetime Secret은 두 개의 데이터 센터 지역을 제공합니다: EU와 미국. 사용자 정의 도메인을 설정할 때 데이터를 저장할 지역을 선택해야 합니다. 이 선택은 여러 가지 이유로 중요합니다:
+Onetime Secret은 여러 개의 데이터 센터 지역을 제공합니다: EU, UK, US, CA, NZ. 사용자 정의 도메인을 설정할 때 데이터를 저장할 지역을 선택해야 합니다. 이 선택은 여러 가지 이유로 중요합니다:
 
 - **개인용**: 잠재적으로 더 빠른 액세스를 위한 근접성 또는 개인 데이터 주권 문제와 같은 개인적 선호도에 따라 선택할 수 있습니다.
 - **기업용**: GDPR, 주 또는 지방 지침 준수와 같은 데이터 지역 의무에 따라 선택할 수 있습니다. 규제 요건에 가장 부합하는 지역을 선택해야 합니다.
@@ -49,7 +49,10 @@ Onetime Secret은 두 개의 데이터 센터 지역을 제공합니다: EU와 �
 2. 2. 다음 세부 정보로 CNAME 레코드를 만듭니다:
    - 호스트: 선택한 하위 도메인(예: 시크릿)
    - 포인트/값:
+     - CA 지역의 경우: identity.ca.onetime.co
      - EU 지역의 경우: identity.eu.onetime.co
+     - NZ 지역의 경우: identity.nz.onetime.co
+     - UK 지역의 경우: identity.ingress.onetime.co (애니캐스트)
      - 미국 지역의 경우: identity.us.onetime.co
 3. 동일한 하위 도메인에 대한 기존 A, AAAA 또는 CNAME 레코드를 모두 제거합니다.
 
@@ -61,6 +64,7 @@ Apex 도메인의 경우 ###
    - 포인터/값:
      - EU 지역의 경우: 109.105.217.207
      - 미국 지역의 경우: 66.51.126.41
+     - 기타 지역의 경우: 현재 A 레코드 IP 주소는 지원팀에 문의하세요.
 
 중요: 사용 중인 도메인에 충돌하는 레코드가 없는지 확인하세요.
 
@@ -94,7 +98,7 @@ Apex 도메인은 DNS 표준으로 인해 CNAME 레코드를 사용할 수 없�
 설정이 완료되면 다음 정보가 표시됩니다:
 
 - 도메인 상태: SSL로 활성화됨
-- 대상 주소: identity.eu.onetime.co 또는 identity.us.onetime.co(선택한 지역에 따라 다름)
+- 대상 주소: 선택한 지역에 따른 identity 엔드포인트(예: identity.ca.onetime.co, identity.eu.onetime.co, identity.nz.onetime.co, identity.ingress.onetime.co, identity.us.onetime.co)
 - SSL 상태: 활성
 - SSL 갱신 날짜: (일반적으로 설정 후 약 1년 후에 표시됨)
 

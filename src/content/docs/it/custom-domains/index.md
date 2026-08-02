@@ -31,7 +31,7 @@ I domini personalizzati consentono di utilizzare il proprio nome di dominio per 
 3. **Apparenza professionale**: Dimostra un livello superiore di sofisticazione e di impegno per la sicurezza.
 4. **Personalizzazione del marchio**: Caricate loghi personalizzati e impostate i colori del marchio in modo che corrispondano alla vostra identità visiva.
 5. **Integrazione perfetta**: Create un'esperienza coesiva che si allinei alla vostra presenza digitale esistente.
-6. **Flessibilità regionale**: Scegliete tra le regioni dei data center dell'UE e degli USA per soddisfare le vostre esigenze di localizzazione dei dati.
+6. **Flessibilità regionale**: Scegliete tra cinque regioni di data center (EU, UK, US, CA, NZ) per soddisfare le vostre esigenze di localizzazione dei dati.
 
 ## Iniziare
 
@@ -40,11 +40,11 @@ Per impostare un dominio personalizzato:
 1. Accedere al proprio account Onetime Secret.
 2. Andare su Impostazioni account > Domini personalizzati.
 3. Inserite il dominio che desiderate utilizzare e fate clic su "Aggiungi dominio".
-4. Selezionare la regione del centro dati preferita (UE o USA).
+4. Selezionare la regione del centro dati preferita (EU, UK, US, CA o NZ).
 5. Seguite le istruzioni passo-passo fornite per la configurazione del DNS.
 6. Attendere la verifica del dominio. Se disponibile, fare clic sul pulsante "Verifica" per accelerare il processo. Potrebbe essere necessario aggiornare la pagina.
 
-Per istruzioni dettagliate, compreso il modo in cui scegliere tra le regioni UE e USA, consultare la nostra [Guida all'impostazione del dominio personalizzato](/it/custom-domains/setup-guide).
+Per istruzioni dettagliate, compreso il modo in cui scegliere la regione più adatta, consultare la nostra [Guida all'impostazione del dominio personalizzato](/it/custom-domains/setup-guide).
 
 ## Personalizzazione del marchio
 
@@ -65,6 +65,6 @@ Per istruzioni dettagliate sul marchio, consultare la nostra [Guida al marchio](
 - L'utente è responsabile della manutenzione e del rinnovo della registrazione del dominio.
 - Una corretta configurazione SSL/TLS è fondamentale per la sicurezza (gestita automaticamente da Onetime Secret).
 - Assicurarsi che il dominio scelto sia conforme alle linee guida del branding della propria organizzazione.
-- Considerare le normative sulla protezione dei dati quando si sceglie tra [regioni UE e USA](/it/regions).
+- Considerare le normative sulla protezione dei dati quando si sceglie la [regione del data center](/it/regions).
 
 Per conoscere le migliori pratiche per l'utilizzo sicuro dei domini personalizzati, consultate la nostra guida [Security Best Practices](/it/security-best-practices).
