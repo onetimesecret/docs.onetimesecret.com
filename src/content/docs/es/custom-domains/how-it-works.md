@@ -13,7 +13,7 @@ Al aprovechar los dominios personalizados, no sólo comparte secretos, sino que 
 ## Cómo funcionan los dominios personalizados
 
 1. Registra un dominio o utiliza uno que ya posea.
-2. Elija la región del centro de datos que prefiera (UE o EE.UU.).
+2. Elija la región del centro de datos que prefiera.
 3. [Configure los ajustes DNS de su dominio](/es/custom-domains/setup-guide) para que apunten a los servidores de Onetime Secret en la región elegida.
 4. Configure el dominio personalizado en la configuración de su cuenta de Onetime Secret.
 5. Una vez verificados, sus enlaces secretos utilizarán su dominio personalizado.

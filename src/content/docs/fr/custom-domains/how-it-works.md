@@ -13,7 +13,7 @@ En exploitant les domaines personnalisés, vous ne vous contentez pas de partage
 ## Comment fonctionnent les domaines personnalisés
 
 1. Vous enregistrez un domaine ou utilisez celui que vous possédez déjà.
-2. Choisissez la région du centre de données que vous préférez (UE ou USA).
+2. Choisissez la région du centre de données que vous préférez.
 3. [Configurez les paramètres DNS de votre domaine](/fr/custom-domains/setup-guide) pour pointer vers les serveurs de Onetime Secret dans la région choisie.
 4. Configurez le domaine personnalisé dans les paramètres de votre compte Onetime Secret.
 5. Une fois vérifiés, vos liens secrets utiliseront votre domaine personnalisé.

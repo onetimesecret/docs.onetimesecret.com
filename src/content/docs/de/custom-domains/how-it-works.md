@@ -13,7 +13,7 @@ Durch die Nutzung von Custom Domains geben Sie nicht nur Geheimnisse weiter, son
 ## So funktionieren benutzerdefinierte Domains
 
 1. Sie registrieren eine Domain oder verwenden eine, die Sie bereits besitzen.
-2. Wählen Sie Ihre bevorzugte Rechenzentrumsregion (EU oder USA).
+2. Wählen Sie Ihre bevorzugte Rechenzentrumsregion.
 3. [Konfigurieren Sie die DNS-Einstellungen Ihrer Domain](/de/custom-domains/setup-guide) so, dass sie auf die Server von Onetime Secret in der von Ihnen gewählten Region zeigen.
 4. Richten Sie die benutzerdefinierte Domain in den Einstellungen Ihres Onetime Secret-Kontos ein.
 5. Nach der Überprüfung werden Ihre geheimen Links Ihre benutzerdefinierte Domain verwenden.

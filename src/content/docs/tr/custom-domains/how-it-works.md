@@ -13,7 +13,7 @@ description: Özel Alan Adları, veri merkezi bölgelerimizin herhangi birinde D
 ## Özel Alan Adları Nasıl Çalışır
 
 1. Bir alan adı kaydedersiniz veya zaten sahip olduğunuz birini kullanırsınız.
-2. Tercih ettiğiniz veri merkezi bölgesini (AB veya ABD) seçersiniz.
+2. Tercih ettiğiniz veri merkezi bölgesini seçersiniz.
 3. Seçtiğiniz bölgedeki Onetime Secret sunucularını işaret etmesi için alan adınızın [DNS ayarlarını yapılandırırsınız](/tr/custom-domains/setup-guide).
 4. Onetime Secret hesap ayarlarınızda özel alan adını ayarlarsınız.
 5. Doğrulandıktan sonra, gizli mesaj bağlantılarınız özel alan adınızı kullanacaktır.

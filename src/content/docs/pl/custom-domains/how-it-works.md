@@ -13,7 +13,7 @@ Wykorzystując niestandardowe domeny, nie tylko udostępniasz sekrety; wzmacnias
 ## Jak działają niestandardowe domeny
 
 1. Rejestrujesz domenę lub używasz takiej, którą już posiadasz.
-2. Wybierz preferowany region centrum danych (UE lub USA).
+2. Wybierz preferowany region centrum danych.
 3. [Skonfiguruj ustawienia DNS swojej domeny](/pl/custom-domains/setup-guide), aby wskazywały na serwery Onetime Secret w wybranym regionie.
 4. Skonfiguruj niestandardową domenę w ustawieniach swojego konta Onetime Secret.
 5. Po weryfikacji Twoje linki do sekretów będą używać Twojej niestandardowej domeny.

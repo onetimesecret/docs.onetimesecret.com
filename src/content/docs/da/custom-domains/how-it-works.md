@@ -12,7 +12,7 @@ Ved at udnytte brugerdefinerede domæner deler du ikke bare beskeder; du forstæ
 ## Hvordan brugerdefinerede domæner fungerer
 
 1. Du registrerer et domæne eller bruger et, du allerede ejer.
-2. Vælg din foretrukne datacenterregion (EU eller US).
+2. Vælg din foretrukne datacenterregion.
 3. [Konfigurer dit domænes DNS-indstillinger](/da/custom-domains/setup-guide) til at pege på Onetime Secrets servere i din valgte region.
 4. Opsæt det brugerdefinerede domæne i dine Onetime Secret-kontoindstillinger.
 5. Når det er verificeret, vil dine hemmelige links bruge dit brugerdefinerede domæne.

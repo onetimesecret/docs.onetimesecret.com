@@ -5,14 +5,14 @@ description: Anpassade domäner låter dig vara värd för hemlighetsdelning und
 
 ## Ditt varumärke, vår säkerhet
 
-Genom att utnyttja anpassade domäner delar du inte bara hemligheter; du förstärker ditt varumärke, förbättrar förtroende och säkerställer efterlevnad av datalokalisering med varje interaktion. Uppgradera till Identity-planen idag för att låsa upp denna kraftfulla funktion och ta din hemlighetsdel ning till nästa nivå.
+Genom att utnyttja anpassade domäner delar du inte bara hemligheter; du förstärker ditt varumärke, förbättrar förtroende och säkerställer efterlevnad av datalokalisering med varje interaktion. Uppgradera till Identity-planen idag för att låsa upp denna kraftfulla funktion och ta din hemlighetsdelning till nästa nivå.
 
 <img src="/img/docs/custom-domains/branded-homepage-enabled.png" alt="Inställningar för anpassad domän" width="600" />
 
 ## Hur anpassade domäner fungerar
 
 1. Du registrerar en domän eller använder en du redan äger.
-2. Välj din föredragna datacenterregion (EU eller USA).
+2. Välj din föredragna datacenterregion.
 3. [Konfigurera din domäns DNS-inställningar](/sv/custom-domains/setup-guide) för att peka på Onetime Secrets servrar i din valda region.
 4. Konfigurera den anpassade domänen i dina Onetime Secret-kontoinställningar.
 5. När den har verifierats kommer dina hemliga länkar att använda din anpassade domän.
