@@ -34,6 +34,7 @@
     "regionNZ": "Nya Zeeland (NZ)",
     "regionUK": "Storbritannien (UK)",
     "regionUS": "USA (US)",
+    "switchingRegions": "Byte av region",
     "selfHosting": "Egen hosting",
     "installationDeployment": "Installation och distribution",
     "configurationReference": "Konfigurationsreferens",

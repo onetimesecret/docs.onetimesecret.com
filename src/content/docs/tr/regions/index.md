@@ -3,7 +3,7 @@ title: Veri Merkezi Bölgeleri
 description: Onetime Secret'in veri merkezi bölgeleri hakkında bilgi edinin ve ihtiyaçlarınıza uygun olanı nasıl seçeceğinizi öğrenin.
 ---
 
-Onetime Secret dört veri merkezi bölgesi sunar: Avrupa Birliği (EU), Amerika Birleşik Devletleri (US), Kanada (CA) ve Aotearoa Yeni Zelanda (NZ). Bu kılavuz, bölge seçiminin önemini anlamanıza ve ihtiyaçlarınıza uygun olanı seçmenize yardımcı olacaktır.
+Onetime Secret beş veri merkezi bölgesi sunar: Kanada (CA), Avrupa Birliği (EU), Aotearoa Yeni Zelanda (NZ), Birleşik Krallık (UK) ve Amerika Birleşik Devletleri (US). Bu kılavuz, bölge seçiminin önemini anlamanıza ve ihtiyaçlarınıza uygun olanı seçmenize yardımcı olacaktır.
 
 ## Bölge Seçimi Neden Önemli
 
@@ -15,37 +15,15 @@ Doğru veri merkezi bölgesini seçmek birkaç nedenden dolayı kritik öneme sa
 
 ## Mevcut Bölgeler
 
-### Avrupa Birliği (EU)
+| Bölge | Konum | URL |
+|--------|----------|-----|
+| [Kanada (CA)](/tr/regions/canada) | Toronto | [ca.onetimesecret.com](https://ca.onetimesecret.com) |
+| [Avrupa Birliği (EU)](/tr/regions/european-union) | Nürnberg | [eu.onetimesecret.com](https://eu.onetimesecret.com) |
+| [Aotearoa Yeni Zelanda (NZ)](/tr/regions/new-zealand) | Porirua | [nz.onetimesecret.com](https://nz.onetimesecret.com) |
+| [Birleşik Krallık (UK)](/tr/regions/united-kingdom) | Londra | [uk.onetimesecret.com](https://uk.onetimesecret.com) |
+| [Amerika Birleşik Devletleri (US)](/tr/regions/united-states) | Hillsboro, Oregon | [us.onetimesecret.com](https://us.onetimesecret.com) |
 
-- **Konum**: Avrupa Birliği (Nürnberg)
-- **URL**: [https://eu.onetimesecret.com](https://eu.onetimesecret.com)
-- **Temel Özellikler**:
-  - GDPR ve diğer AB veri koruma düzenlemelerine uyumlu
-  - Avrupa kullanıcıları veya öncelikli olarak Avrupa müşterilerine hizmet verenler için ideal
-
-### Kanada (CA)
-
-- **Konum**: Kanada (Toronto)
-- **URL**: [https://ca.onetimesecret.com](https://ca.onetimesecret.com)
-- **Temel Özellikler**:
-  - PIPEDA ve Kanada veri koruma yasalarına uyumlu
-  - Kanada kullanıcıları veya öncelikli olarak Kanada müşterilerine hizmet verenler için uygun
-
-### Aotearoa Yeni Zelanda (NZ)
-
-- **Konum**: Aotearoa Yeni Zelanda (Porirua)
-- **URL**: [https://nz.onetimesecret.com](https://nz.onetimesecret.com)
-- **Temel Özellikler**:
-  - Yeni Zelanda Gizlilik Yasası ve yerel düzenlemelere uyumlu
-  - Yeni Zelanda kullanıcıları veya Okyanusya müşterilerine hizmet verenler için uygun
-
-### Amerika Birleşik Devletleri (US)
-
-- **Konum**: Amerika Birleşik Devletleri (Hillsboro, Oregon)
-- **URL**: [https://us.onetimesecret.com](https://us.onetimesecret.com)
-- **Temel Özellikler**:
-  - ABD veri koruma yasalarına uyumlu
-  - ABD merkezli kullanıcılar veya öncelikli olarak ABD müşterilerine hizmet verenler için uygun
+Her bölge sayfası, yerel düzenleyici ortama ilişkin ayrıntıları ve o bölgenin kullanım senaryonuz için ne zaman uygun olabileceğini içerir.
 
 ## Paylaşımsız Mimari
 
@@ -59,22 +37,16 @@ Onetime Secret, bölgeler arasında tam veri izolasyonu sağlayan paylaşımsız
 
 Veri merkezi bölgenizi seçerken aşağıdaki faktörleri göz önünde bulundurun:
 
-### Anonim Kullanıcılar İçin
+### Hesabınız Yoksa
 
 - onetimesecret.com'a yapılan istekler herhangi bir aktif veri merkezine yönlendirilebilir.
-- Gizli mesajınızın konumu, oluşturulan bağlantıdan her zaman açıktır (örneğin, `us.onetimesecret.com/secret/abcd1234`).
-- Herhangi bir bölgesel alan adına doğrudan giderek (örneğin, [ca.onetimesecret.com](https://ca.onetimesecret.com/)) belirli bir veri yerini seçebilirsiniz.
+- Doğrudan bir bölgesel alan adına giderek (örneğin, [ca.onetimesecret.com](https://ca.onetimesecret.com/)) belirli bir bölge seçebilirsiniz.
+- Oluşturulan bağlantı her zaman bölgeyi belirtir (örneğin, `us.onetimesecret.com/secret/abcd1234`).
 
-### Kimliği Doğrulanmış Kullanıcılar İçin
+### Hesabınız Varsa
 
-- Yeni bir hesap oluştururken bir veri merkezi konumu seçmelisiniz.
-- Giriş yapmak için aynı konuma dönmeniz gerekir.
-- Mevcut hesaplar ve gizli mesajlar orijinal veri merkezlerinde kalır.
-
-### Tüm Kullanıcılar İçin
-
-- Alt alan yargı yetkisi olmadan oluşturulan gizli mesajlar (örneğin, onetimesecret.com/secret/efgh5678) varsayılan olarak AB veri merkezimize yönlendirilmeye devam edecektir.
-- Hem ücretli hem de ücretsiz tüm kullanıcılar, hesap oluştururken tercih ettikleri veri merkezini seçebilir.
+- Bir hesap oluşturduğunuzda bir veri merkezi bölgesi seçersiniz. Tüm planlar — ücretsiz ve ücretli — her bölgeye erişebilir.
+- Kayıt olduğunuz aynı bölgesel alan adından giriş yaparsınız (örneğin, `eu.onetimesecret.com` adresinde kayıt olduysanız, giriş de oradan yapılır).
 
 ### Ek Hususlar
 
@@ -92,50 +64,30 @@ Veri merkezi bölgenizi seçerken aşağıdaki faktörleri göz önünde bulundu
    - Uygulamanız için gecikme gereksinimleri
    - Diğer hizmetler veya sistemlerle entegrasyon
 
-## Fiyatlandırma ve Planlar
-
-Veri yerleşimine olan taahhüdümüz fiyatlandırma modelimize kadar uzanır:
-
-- Ücretler, hesabınızın oluşturulduğu yere değil, ödeme yaptığınız yere göre belirlenir.
-- Identity Plus planları, tek bir abonelik altında tüm veri merkezlerinde sınırsız özel alan adı içerir.
-
 ## Gelecek Planlar
 
-Veri merkezi seçeneklerimizi genişletmek için sürekli çalışıyoruz. Gelecek planlarımız şunları içerir:
+Veri merkezi seçeneklerimizi genişletmek için sürekli çalışıyoruz. Gelecek planlarımız aşağıdaki konumlarda ek veri merkezleri içeriyor:
 
+- Avustralya
 - Brezilya
-- İspanya
-- Birleşik Krallık
+- Japonya
+- Meksika
+- Norveç
+- Güney Kore
 
 Bu genişlemeler, farklı bölgelerdeki kullanıcılar için performansı ve uyumluluk yeteneklerini artırarak veri yerleşimi için daha fazla seçenek sağlayacaktır.
 
-## Bölgenizi Ayarlama
-
-Onetime Secret hesabınızı kurarken veya özel bir alan adı yapılandırırken, tercih ettiğiniz bölgeyi seçme seçeneğiniz olacaktır. İşte nasıl:
-
-1. Yeni hesaplar için: Kayıt işlemi sırasında tercih ettiğiniz bölgeyi seçin.
-2. Mevcut hesaplar için: Bölge geçiş seçeneklerini görüşmek için destek ekibimizle iletişime geçin.
-3. Özel alan adları için: DNS ayarlarınızı yapılandırırken seçtiğiniz bölgeyi belirtin (ayrıntılı talimatlar için [Özel Alan Adı Kurulum Kılavuzumuza](/tr/custom-domains/setup-guide) bakın).
 
 ## Sıkça Sorulan Sorular
 
 **S: Hesabımı kurduktan sonra bölgemi değiştirebilir miyim?**
-C: Evet, aynı e-posta adresiyle yeni bir hesap oluşturarak ve hesap ekranına giderek bölgenizi değiştirebilirsiniz. Aktif bir aboneliğiniz varsa, hesabınız otomatik olarak güncellenecektir (sayfayı yenilemeniz gerekebilir).
-
-Lütfen unutmayın:
-- Mevcut veriler bölgeler arasında aktarılmaz
-- Oluşturduğunuz herhangi bir gizli mesaj bağlantısı görüntülenene veya süresi dolana kadar çalışmaya devam edecektir
-- Özel alan adlarına sahip bağlantılar için şunları yapmanız gerekir:
-  1. Alan adını yeni bölge hesabınıza yeniden ekleyin
-  2. İlişkili DNS kayıtlarını güncelleyin
-  3. Mevcut bağlantılarla çakışmayı önlemek için alan adını yeniden eklerken benzersiz bir alt alan adı kullanın
-  4. Daha sonra, tercih ettiğiniz alan adıyla yeni bağlantılar göndermeye başlayabilmeniz için tercih ettiğiniz alan adını ekleyebilirsiniz (gerekirse)
+C: Evet. Ücretsiz hesapları, ücretli abonelikleri ve özel alan adı taşıma sürecini kapsayan adım adım talimatlar için [Bölgenizi Değiştirme](/tr/regions/switching-regions) sayfasına bakın.
 
 **S: Bölge seçimim gizli mesajlarımın güvenliğini etkiler mi?**
-C: Hayır, tüm bölgeler aynı yüksek güvenlik düzeyini sunar. Seçim öncelikle veri ikamet ve potansiyel gecikmeyi etkiler.
+C: Hayır, tüm bölgeler aynı yüksek güvenlik düzeyini sunar. Seçim öncelikle veri yerleşimini ve olası gecikmeyi etkiler.
 
 **S: Bölgeler arasında fiyat farkları var mı?**
-C: Şu anda fiyatlandırmamız tüm bölgelerde tutarlıdır. En güncel bilgiler için [fiyatlandırma sayfamıza](https://onetimesecret.com/pricing) bakın.
+C: Fiyatlandırma her bölgeye özeldir — yerel para biriminizle ödeme yapabilirsiniz ve Stripe döviz dönüşümünü otomatik olarak gerçekleştirir. Identity Plus planları, tek bir abonelik altında tüm veri merkezlerinde sınırsız özel alan adı içerir. En güncel bilgiler için [fiyatlandırma sayfamıza](https://onetimesecret.com/pricing) bakın.
 
 ## Yardıma İhtiyacınız Var mı?
 

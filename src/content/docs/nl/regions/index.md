@@ -1,149 +1,99 @@
 ---
 title: Datacenter regio's
-description: Lees meer over de datacenterregio's van Onetime Secret en hoe u de juiste regio voor uw behoeften kunt kiezen.
+description: Lees meer over de datacenterregio's van Onetime Secret en hoe je de juiste regio voor jouw behoeften kiest.
 ---
 
-
-Onetime Secret biedt twee datacenterregio's: Europese Unie (EU) en Verenigde Staten (VS). Deze gids helpt u het belang van regioselectie te begrijpen en hoe u de juiste regio kiest voor uw behoeften.
+Onetime Secret biedt vijf datacenterregio's: Canada (CA), Europese Unie (EU), Aotearoa Nieuw-Zeeland (NZ), Verenigd Koninkrijk (UK) en Verenigde Staten (US). Deze gids helpt je het belang van regioselectie te begrijpen en hoe je de juiste regio voor jouw behoeften kiest.
 
 ## Waarom regioselectie belangrijk is
 
 Het kiezen van de juiste datacenterregio is om verschillende redenen cruciaal:
 
 1. **Gegevenssoevereiniteit**: Verschillende regio's hebben verschillende wetten en regels voor gegevensbescherming.
-2. **Latency**: Door een regio te kiezen die dichter bij uw primaire gebruikers ligt, kunt u de latentie verlagen.
-3. **Conformiteit**: Sommige organisaties hebben specifieke vereisten over waar hun gegevens kunnen worden opgeslagen.
+2. **Latency**: Door een regio te kiezen die dichter bij je primaire gebruikers ligt, verlaag je de latency.
+3. **Conformiteit**: Sommige organisaties hebben specifieke vereisten over waar hun gegevens opgeslagen mogen worden.
 
 ## Beschikbare regio's
 
-### Europese Unie (EU)
+| Regio | Locatie | URL |
+|--------|----------|-----|
+| [Canada (CA)](/nl/regions/canada) | Toronto | [ca.onetimesecret.com](https://ca.onetimesecret.com) |
+| [Europese Unie (EU)](/nl/regions/european-union) | Neurenberg | [eu.onetimesecret.com](https://eu.onetimesecret.com) |
+| [Aotearoa Nieuw-Zeeland (NZ)](/nl/regions/new-zealand) | Porirua | [nz.onetimesecret.com](https://nz.onetimesecret.com) |
+| [Verenigd Koninkrijk (UK)](/nl/regions/united-kingdom) | Londen | [uk.onetimesecret.com](https://uk.onetimesecret.com) |
+| [Verenigde Staten (US)](/nl/regions/united-states) | Hillsboro, Oregon | [us.onetimesecret.com](https://us.onetimesecret.com) |
 
-- **Locatie**: Binnen de Europese Unie (Neurenberg)
-- **URL**: [https://eu.onetimesecret.com](https://eu.onetimesecret.com)
-- **Keigenschappen**:
-  - Voldoet aan GDPR en andere EU-voorschriften voor gegevensbescherming
-  - Ideaal voor Europese gebruikers of gebruikers die voornamelijk Europese klanten bedienen
-
-### Canada (CA)
-
-- **Locatie**: In Canada (Toronto)
-- **URL**: [https://ca.onetimesecret.com](https://ca.onetimesecret.com)
-- **Belangrijkste kenmerken**:
-  - Voldoet aan PIPEDA en Canadese wetgeving voor gegevensbescherming
-  - Geschikt voor Canadese gebruikers of degenen die voornamelijk Canadese klanten bedienen
-
-### Aotearoa Nieuw-Zeeland (NZ)
-
-- **Locatie**: In Nieuw-Zeeland (Porirua)
-- **URL**: [https://nz.onetimesecret.com](https://nz.onetimesecret.com)
-- **Belangrijkste kenmerken**:
-  - Voldoet aan de Nieuw-Zeelandse Privacy Act en lokale regelgeving
-  - Geschikt voor Nieuw-Zeelandse gebruikers of degenen die klanten in Oceanië bedienen
-
-### Verenigde Staten (US)
-
-- **Locatie**: Binnen de Verenigde Staten (Hillsboro, Oregon)
-- **URL**: [https://us.onetimesecret.com](https://us.onetimesecret.com)
-- **Belangrijkste kenmerken**:
-  - Voldoet aan de Amerikaanse wetgeving inzake gegevensbescherming
-  - Geschikt voor gebruikers die in de VS zijn gevestigd of voornamelijk Amerikaanse klanten bedienen
+Elke regiopagina bevat details over de lokale wet- en regelgeving en wanneer die regio relevant kan zijn voor jouw gebruikssituatie.
 
 ## Deel-niets-architectuur
 
-Onetime Secret maakt gebruik van een 'share-nothing' architectuur, waardoor volledige data-isolatie tussen regio's wordt gegarandeerd:
+Onetime Secret maakt gebruik van een share-nothing-architectuur, die volledige data-isolatie tussen regio's garandeert:
 
-- **Separate Accounts**: Het aanmaken van een account op `us.onetimesecret.com` is volledig gescheiden van een account op `eu.onetimesecret.com`, zelfs als u hetzelfde e-mailadres gebruikt.
-- **Geen centrumoverschrijdende bewerkingen**: U kunt geen bewerkingen uitvoeren (zoals het verbranden van een geheim) tussen datacenters. Elk centrum onderhoudt zijn eigen set geheimen en gebruikersgegevens.
-- **Consistente facturering voor betaalde gebruikers**: Voor betaalde accounts worden geen gebruikersgegevens tussen centra gedeeld, maar wordt uw abonnementsstatus in alle regio's herkend via onze betalingsprovider Stripe.
+- **Aparte accounts**: Het aanmaken van een account op om het even welk regionaal domein staat volledig los van accounts op andere domeinen, zelfs als je hetzelfde e-mailadres gebruikt.
+- **Geen centrumoverschrijdende bewerkingen**: Je kunt geen bewerkingen (zoals het verbranden van een geheim) uitvoeren tussen datacenters. Elk centrum beheert zijn eigen set geheimen en gebruikersgegevens.
+- **Consistente facturering voor betaalde gebruikers**: Voor betaalde accounts worden er geen gebruikersgegevens gedeeld tussen centra, maar wordt je abonnementsstatus via onze betalingsprovider Stripe wel regio-overstijgend herkend.
 
-## Hoe kies ik mijn regio
+## Hoe kies je jouw regio
 
-Neem de volgende factoren in overweging bij het kiezen van de regio voor uw datacenter:
+Houd rekening met de volgende factoren bij het kiezen van je datacenterregio:
 
-### Voor anonieme gebruikers
+### Zonder account
 
-- Verzoeken naar onetimesecret.com kunnen worden doorgestuurd naar elk actief datacenter.
-- De locatie van je geheim is altijd duidelijk via de gegenereerde link (bijv. `us.onetimesecret.com/secret/abcd1234`).
-- Je kunt een specifieke datalocatie kiezen door direct naar [us.onetimesecret.com](https://us.onetimesecret.com/) of [eu.onetimesecret.com](https://eu.onetimesecret.com/) te navigeren.
+- Aanvragen naar onetimesecret.com kunnen naar elk actief datacenter worden doorgestuurd.
+- Je kunt een specifieke regio kiezen door direct naar een regionaal domein te navigeren (bijv. [ca.onetimesecret.com](https://ca.onetimesecret.com/)).
+- De gegenereerde link toont altijd de regio (bijv. `us.onetimesecret.com/secret/abcd1234`).
 
-### Voor geauthenticeerde gebruikers
+### Met account
 
-- Bij het aanmaken van een nieuwe account moet je een locatie voor het datacenter kiezen.
-- Je moet terugkeren naar dezelfde locatie om in te loggen.
-- Bestaande accounts en geheimen blijven in het EU-datacenter (Neurenberg).
+- Wanneer je een account aanmaakt, kies je een datacenterregio. Alle abonnementen — gratis en betaald — hebben toegang tot elke regio.
+- Je logt in op hetzelfde regionale domein waar je je hebt geregistreerd (bijv. als je je hebt aangemeld bij `eu.onetimesecret.com`, log je daar ook in).
 
-### Voor alle gebruikers
-
-- Geheimen die zijn aangemaakt zonder subdomeinjurisdictie (bijv. onetimesecret.com/secret/efgh5678) blijven standaard in ons EU-datacenter.
-- Alle gebruikers, zowel betaalde als gratis, kunnen hun voorkeursdatacenter kiezen wanneer ze een account aanmaken.
-
-### Extra overwegingen
+### Overige overwegingen
 
 1. **Voor individuen**:
    - Persoonlijke voorkeur
-   - Nabijheid van uw locatie voor mogelijk snellere toegang
-   - Bezorgdheid over de soevereiniteit van persoonlijke gegevens
+   - Nabijheid tot je locatie voor mogelijk snellere toegang
+   - Zorgen over persoonlijke gegevenssoevereiniteit
 
 2. **Voor bedrijven**:
-   - Wettelijke en regelgevende vereisten (bijv. GDPR voor EU-klanten)
-   - Locatie van uw primaire klantenbestand
-   - Branchespecifieke nalevingsbehoeften
+   - Wettelijke en regelgevende vereisten
+   - Locatie van je belangrijkste klantenbestand
+   - Branchespecifieke complianceverplichtingen
 
 3. **Technische overwegingen**:
-   - Latency-vereisten voor uw toepassing
-   - Integratie met andere services of systemen
-
-## Prijzen en plannen
-
-Onze toewijding aan datalokalisatie strekt zich uit tot ons prijsmodel:
-
-- De kosten zijn gebaseerd op waar u vandaan betaalt, niet op waar uw account is aangemaakt.
-- Identity Plus-plannen omvatten onbeperkte aangepaste domeinen in alle datacenters onder één abonnement.
+   - Latency-vereisten van je applicatie
+   - Integratie met andere diensten of systemen
 
 ## Toekomstplannen
 
 We werken voortdurend aan de uitbreiding van onze datacenteropties. Toekomstige plannen omvatten extra datacenterlocaties in:
 
+- Australië
 - Brazilië
-- Spanje
-- VERENIGD KONINKRIJK
+- Japan
+- Mexico
+- Noorwegen
+- Zuid-Korea
 
-Deze uitbreidingen bieden nog meer opties voor datalokalisatie, waardoor de prestaties en compliancemogelijkheden voor gebruikers in verschillende regio's worden verbeterd.
+Deze uitbreidingen bieden nog meer opties voor datalokalisatie, en verbeteren de prestaties en compliancemogelijkheden voor gebruikers in verschillende regio's.
 
-## Uw regio instellen
-
-Bij het instellen van je Onetime Secret account of het configureren van een aangepast domein, heb je de mogelijkheid om de regio van je voorkeur te kiezen. Hier lees je hoe:
-
-1. Voor nieuwe accounts: Selecteer je voorkeursregio tijdens het aanmeldingsproces.
-2. Voor bestaande accounts: Neem contact op met ons ondersteuningsteam om de opties voor regiomigratie te bespreken.
-3. Voor aangepaste domeinen: Geef de door u gekozen regio op bij het configureren van uw DNS-instellingen (raadpleeg onze [Handleiding voor aangepaste domeininstellingen](/nl/custom-domains/setup-guide) voor gedetailleerde instructies).
 
 ## Veelgestelde vragen
 
-**V: Kan ik mijn regio wijzigen na het instellen van mijn account?**
+**V: Kan ik mijn regio wijzigen nadat ik mijn account heb ingesteld?**
+A: Ja. Bekijk [Je regio wijzigen](/nl/regions/switching-regions) voor stapsgewijze instructies over gratis accounts, betaalde abonnementen en het migreren van aangepaste domeinen.
 
-A: Ja, u kunt uw regio wijzigen door een nieuw account aan te maken met hetzelfde e-mailadres en naar het accountscherm te navigeren. Als u een actief abonnement heeft, wordt uw account automatisch bijgewerkt (mogelijk moet u de pagina vernieuwen).
-
-Let op:
-- Bestaande gegevens worden niet overgedragen tussen regio's
-- Eerder gemaakte geheime links blijven werken totdat ze worden bekeken of verlopen
-- Voor links met aangepaste domeinen moet u:
-  1. Het domein opnieuw toevoegen aan uw nieuwe regionale account
-  2. De bijbehorende DNS-records bijwerken
-  3. Een uniek subdomein gebruiken bij het opnieuw toevoegen van het domein om conflicten met bestaande links te voorkomen
-  4. Later kunt u uw voorkeurdomein toevoegen (indien nodig) om nieuwe links met uw voorkeurdomein te versturen
-
-**V: Heeft de keuze van mijn regio invloed op de veiligheid van mijn geheimen?**
-A: Nee, beide regio's bieden hetzelfde hoge beveiligingsniveau. De keuze heeft vooral invloed op het verblijf van gegevens en de potentiële latentie.
+**V: Heeft mijn regiokeuze invloed op de beveiliging van mijn geheimen?**
+A: Nee, alle regio's bieden hetzelfde hoge beveiligingsniveau. De keuze heeft vooral invloed op waar je gegevens zich bevinden en de mogelijke latency.
 
 **V: Zijn er prijsverschillen tussen regio's?**
-A: Momenteel zijn onze prijzen consistent in beide regio's. Bekijk onze [prijspagina](https://onetimesecret.com/pricing) voor de meest actuele informatie.
+A: De prijzen zijn per regio specifiek — je betaalt in je lokale valuta en Stripe verzorgt automatisch de valutaomrekening. Identity Plus-abonnementen omvatten onbeperkte aangepaste domeinen in alle datacenters onder één abonnement. Bekijk onze [prijspagina](https://onetimesecret.com/pricing) voor de meest actuele informatie.
 
 ## Hulp nodig?
 
-Als je niet zeker weet welke regio je moet kiezen of als je vragen hebt, aarzel dan niet om contact op te nemen met ons supportteam. We zijn er om je te helpen de beste beslissing te nemen voor jouw specifieke behoeften.
+Als je niet zeker weet welke regio je moet kiezen of als je vragen hebt, aarzel dan niet om contact op te nemen met ons supportteam. We helpen je graag de beste beslissing te nemen voor jouw specifieke situatie.
 
 - E-mail: support@onetimesecret.com
 - Feedbackformulier: [https://onetimesecret.com/feedback](https://onetimesecret.com/feedback)
 
-Vergeet niet dat het kiezen van de juiste regio ervoor zorgt dat je de beste prestaties krijgt en voldoet aan alle relevante gegevensvoorschriften bij het gebruik van Onetime Secret.
+Denk eraan: door de juiste regio te kiezen, krijg je de beste prestaties en voldoe je aan de relevante gegevensregelgeving bij het gebruik van Onetime Secret.

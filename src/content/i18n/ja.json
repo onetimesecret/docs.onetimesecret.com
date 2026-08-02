@@ -34,6 +34,7 @@
     "regionNZ": "ニュージーランド (NZ)",
     "regionUK": "イギリス (UK)",
     "regionUS": "アメリカ合衆国 (US)",
+    "switchingRegions": "地域の変更方法",
     "selfHosting": "セルフホスティング",
     "installationDeployment": "インストールとデプロイ",
     "configurationReference": "設定リファレンス",
