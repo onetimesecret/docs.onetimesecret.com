@@ -1,6 +1,6 @@
 ---
 title: Como funcionam?
-description: Domínios Personalizados permitem hospedar compartilhamento de mensagens sob seu próprio nome de domínio, com configuração de DNS nos data centers da EU ou EUA e recursos opcionais de personalização de marca.
+description: Domínios Personalizados permitem hospedar compartilhamento de mensagens sob seu próprio nome de domínio, com configuração de DNS em qualquer uma de nossas regiões de data center e recursos opcionais de personalização de marca.
 ---
 
 ## Sua Marca, Nossa Segurança
@@ -12,7 +12,7 @@ Ao aproveitar os Domínios Personalizados, você não está apenas compartilhand
 ## Como Funcionam os Domínios Personalizados
 
 1. Você registra um domínio ou usa um que já possui.
-2. Escolha sua região de data center preferida (EU ou EUA).
+2. Escolha sua região de data center preferida.
 3. [Configure as configurações de DNS do seu domínio](/pt-br/custom-domains/setup-guide) para apontar para os servidores do Onetime Secret na sua região escolhida.
 4. Configure o domínio personalizado nas configurações da sua conta do Onetime Secret.
 5. Uma vez verificado, seus links de mensagens usarão seu domínio personalizado.

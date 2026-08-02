@@ -1,6 +1,6 @@
 ---
 title: Come funzionano?
-description: I domini personalizzati consentono di ospitare la condivisione segreta sotto il proprio nome di dominio, con configurazione DNS nei data center dell'UE o degli Stati Uniti e funzionalità opzionali di personalizzazione del marchio.
+description: I domini personalizzati consentono di ospitare la condivisione segreta sotto il proprio nome di dominio, con configurazione DNS in una qualsiasi delle nostre regioni di data center e funzionalità opzionali di personalizzazione del marchio.
 ---
 
 ## Il vostro marchio, la nostra sicurezza
@@ -13,7 +13,7 @@ Sfruttando i domini personalizzati, non vi limitate a condividere i segreti, ma 
 ## Come funzionano i domini personalizzati
 
 1. Registrate un dominio o utilizzate quello che già possedete.
-2. Scegliete la regione del centro dati che preferite (UE o USA).
+2. Scegliete la regione del centro dati che preferite.
 3. [Configurate le impostazioni DNS del vostro dominio](/it/custom-domains/setup-guide) per puntare ai server di Onetime Secret nella regione prescelta.
 4. Configurare il dominio personalizzato nelle impostazioni dell'account Onetime Secret.
 5. Una volta verificati, i link segreti utilizzeranno il dominio personalizzato.

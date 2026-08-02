@@ -1,6 +1,6 @@
 ---
 title: Hoe werken ze?
-description: Met aangepaste domeinen kunt u geheime uitwisseling onder uw eigen domeinnaam hosten, met DNS-configuratie in datacenters in de EU of de VS en optionele functies voor merkaanpassing.
+description: Met aangepaste domeinen kunt u geheime uitwisseling onder uw eigen domeinnaam hosten, met DNS-configuratie in elk van onze datacenterregio's en optionele functies voor merkaanpassing.
 ---
 
 ## Uw merk, onze beveiliging
@@ -13,7 +13,7 @@ Door gebruik te maken van aangepaste domeinen deelt u niet alleen geheimen, maar
 ## Hoe aangepaste domeinen werken
 
 1. U registreert een domein of gebruikt een domein dat u al bezit.
-2. Kies de datacenterregio van uw voorkeur (EU of VS).
+2. Kies de datacenterregio van uw voorkeur.
 3. [Configureer de DNS-instellingen van uw domein](/nl/custom-domains/setup-guide) om naar de servers van Onetime Secret in de door u gekozen regio te wijzen.
 4. Stel het aangepaste domein in uw Onetime Secret accountinstellingen in.
 5. Eenmaal geverifieerd, zullen uw geheime links uw aangepaste domein gebruiken.

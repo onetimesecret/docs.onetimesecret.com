@@ -1,6 +1,6 @@
 ---
 title: Me pēhea tā rātou mahi?
-description: Ka taea e ngā Rohe Ritenga te kawe i te tohatoha karere muna i raro i tō ake ingoa rohe, me te whirihoranga DNS i ngā pūtoi raraunga EU, US rānei me ngā āhuatanga ritenga waitohu.
+description: Ka taea e ngā Rohe Ritenga te kawe i te tohatoha karere muna i raro i tō ake ingoa rohe, me te whirihoranga DNS i tētahi o ā mātou rohe pūtoi raraunga me ngā āhuatanga ritenga waitohu.
 ---
 
 ## Tō Waitohu, Tō Mātou Haumaru
@@ -13,7 +13,7 @@ Mā te whakamahi i ngā Rohe Ritenga, ehara koe i te tohatoha karere muna noa; k
 ## Me Pēhea te Mahi o ngā Rohe Ritenga
 
 1. Me rēhita koe i tētahi rohe, whakamahi rānei i tētahi e pupurihia ana e koe.
-2. Kōwhiria tō rohe pūtoi raraunga e pai ana (EU, US rānei).
+2. Kōwhiria tō rohe pūtoi raraunga e pai ana.
 3. [Whirihorahia ngā tautuhinga DNS o tō rohe](/mi/custom-domains/setup-guide) kia ārahi ki ngā tūmau Onetime Secret i tō rohe kua kōwhiria.
 4. Whakatūhia te rohe ritenga i roto i ō tautuhinga pūkete Onetime Secret.
 5. I te wā ka manatokohia, ka whakamahi ō hononga karere muna i tō rohe ritenga.
