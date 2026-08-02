@@ -19,7 +19,7 @@ Innan du konfigurerar din anpassade domän är det viktigt att förstå skillnad
 
 ## Välj din region
 
-Onetime Secret erbjuder två datacenterregioner: EU och USA. När du konfigurerar din anpassade domän måste du välja vilken region du föredrar för att lagra din data. Detta val är viktigt av flera skäl:
+Onetime Secret erbjuder flera datacenterregioner: EU, UK, US, CA och NZ. När du konfigurerar din anpassade domän måste du välja vilken region du föredrar för att lagra din data. Detta val är viktigt av flera skäl:
 
 - **För privatpersoner**: Du kan välja baserat på din personliga preferens, såsom närhet för potentiellt snabbare åtkomst eller personliga datakontrollproblem.
 - **För företag**: Ditt val kan bero på dina datalokaliserings skyldigheter, såsom efterlevnad av GDPR, statliga eller provinsiella riktlinjer. Säkerställ att du väljer den region som bäst överensstämmer med dina regulatoriska krav.
@@ -49,7 +49,10 @@ För att ansluta din domän behöver du uppdatera dina DNS-inställningar. Proce
 2. Skapa en CNAME-post med följande detaljer:
    - Värd: Din valda subdomän (t.ex. secrets)
    - Pekar på / Värde:
+     - För CA-region: identity.ca.onetime.co
      - För EU-region: identity.eu.onetime.co
+     - För NZ-region: identity.nz.onetime.co
+     - För UK-region: identity.ingress.onetime.co (anycast)
      - För USA-region: identity.us.onetime.co
 3. Ta bort eventuella befintliga A-, AAAA- eller CNAME-poster för samma subdomän
 
@@ -61,6 +64,7 @@ För att ansluta din domän behöver du uppdatera dina DNS-inställningar. Proce
    - Pekar på / Värde:
      - För EU-region: 109.105.217.207
      - För USA-region: 66.51.126.41
+     - För övriga regioner: Kontakta supporten för aktuella A-post-IP-adresser.
 
 Viktigt: Säkerställ att det inte finns några konfliktande poster för domänen du använder.
 
@@ -94,7 +98,7 @@ Apex-domäner kan inte använda CNAME-poster på grund av DNS-standarder. Därf�
 När konfigurationen är klar bör du se följande information:
 
 - Domänstatus: Aktiv med SSL
-- Måladress: identity.eu.onetime.co eller identity.us.onetime.co (beroende på din valda region)
+- Måladress: Identitetsslutpunkten för din valda region (t.ex. identity.ca.onetime.co, identity.eu.onetime.co, identity.nz.onetime.co, identity.ingress.onetime.co, identity.us.onetime.co)
 - SSL-status: Aktiv
 - SSL-förnyelsedatum: (Kommer att visas, vanligtvis cirka ett år från konfiguration)
 

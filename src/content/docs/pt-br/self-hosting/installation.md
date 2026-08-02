@@ -22,8 +22,8 @@ A maneira mais simples de implantar o Onetime Secret é usando Docker. Consulte 
 
 Para implantações manuais em ambientes de produção, você precisará configurar:
 
-- Ruby 3.2+
-- Redis 5+ ou Valkey
+- Ruby 3.4+
+- Redis 7+ ou Valkey
 - Servidor web (nginx recomendado)
 - Certificado SSL/TLS
 

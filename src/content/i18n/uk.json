@@ -34,6 +34,7 @@
     "regionNZ": "Нова Зеландія (NZ)",
     "regionUK": "Велика Британія (UK)",
     "regionUS": "Сполучені Штати (US)",
+    "switchingRegions": "Зміна регіону",
     "selfHosting": "Самостійний хостинг",
     "installationDeployment": "Встановлення та розгортання",
     "configurationReference": "Довідник конфігурації",

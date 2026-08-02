@@ -19,7 +19,7 @@ Avant de configurer votre domaine personnalisé, il est important de comprendre 
 
 ## Choisissez votre région
 
-Onetime Secret propose deux régions de centres de données : UE et USA. Lors de la configuration de votre domaine personnalisé, vous devrez choisir la région que vous préférez pour le stockage de vos données. Ce choix est important pour plusieurs raisons :
+Onetime Secret propose plusieurs régions de centres de données : UE, UK, US, CA et NZ. Lors de la configuration de votre domaine personnalisé, vous devrez choisir la région que vous préférez pour le stockage de vos données. Ce choix est important pour plusieurs raisons :
 
 - **Pour les particuliers** : Vous pouvez choisir en fonction de vos préférences personnelles, telles que la proximité pour un accès potentiellement plus rapide ou les préoccupations relatives à la souveraineté des données personnelles.
 - **Pour les entreprises** : Votre choix peut dépendre de vos obligations en matière de localisation des données, telles que la conformité au GDPR, aux directives de l'État ou de la province. Assurez-vous de sélectionner la région qui correspond le mieux à vos exigences réglementaires.
@@ -49,8 +49,11 @@ Pour connecter votre domaine, vous devez mettre à jour vos paramètres DNS. La 
 2. Créez un enregistrement CNAME avec les détails suivants :
    - Hôte : Le sous-domaine que vous avez choisi (par exemple, secrets)
    - Points à / Valeur :
+     - Pour la région CA : identity.ca.onetime.co
      - Pour la région UE : identity.eu.onetime.co
-     - Pour les États-Unis : identity.us.onetime.co
+     - Pour la région NZ : identity.nz.onetime.co
+     - Pour la région UK : identity.ingress.onetime.co (anycast)
+     - Pour la région US : identity.us.onetime.co
 3. Supprimez tout enregistrement A, AAAA ou CNAME existant pour le même sous-domaine.
 
 ### Pour Apex Domains
@@ -61,6 +64,7 @@ Pour connecter votre domaine, vous devez mettre à jour vos paramètres DNS. La 
    - Points vers / Valeur :
      - Pour la région UE : 109.105.217.207
      - Pour la région US : 66.51.126.41
+     - Pour les autres régions : contactez le support pour obtenir les adresses IP actuelles des enregistrements A
 
 Important : Assurez-vous qu'il n'y a pas d'enregistrements contradictoires pour le domaine que vous utilisez.
 
@@ -94,7 +98,7 @@ Les domaines Apex ne peuvent pas utiliser les enregistrements CNAME en raison de
 Une fois l'installation terminée, vous devriez voir les informations suivantes :
 
 - Statut du domaine : Actif avec SSL
-- Adresse cible : identity.eu.onetime.co ou identity.us.onetime.co (en fonction de la région choisie)
+- Adresse cible : le point de terminaison identity pour votre région choisie (par exemple, identity.ca.onetime.co, identity.eu.onetime.co, identity.nz.onetime.co, identity.ingress.onetime.co, identity.us.onetime.co)
 - Statut SSL : Actif
 - Date de renouvellement du SSL : (Sera affichée, généralement environ un an après l'installation)
 

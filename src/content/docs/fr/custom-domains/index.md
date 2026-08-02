@@ -31,7 +31,7 @@ Les domaines personnalisés vous permettent d'utiliser votre propre nom de domai
 3. **Apparence professionnelle** : Démontrer un niveau plus élevé de sophistication et d'engagement en matière de sécurité.
 4. **Personnalisation de la marque** : Téléchargez des logos personnalisés et définissez les couleurs de la marque pour qu'elle corresponde à votre identité visuelle.
 5. **Intégration transparente** : Créez une expérience cohérente qui s'aligne sur votre présence numérique existante.
-6. **Flexibilité régionale** : Choisissez entre les centres de données de l'UE et des États-Unis pour répondre à vos besoins en matière de localisation des données.
+6. **Flexibilité régionale** : Choisissez parmi cinq régions de centres de données (UE, UK, US, CA, NZ) pour répondre à vos besoins en matière de localisation des données.
 
 ## Démarrage
 
@@ -40,11 +40,11 @@ Pour configurer un domaine personnalisé :
 1. Connectez-vous à votre compte Onetime Secret.
 2. Naviguez vers Paramètres du compte > Domaines personnalisés.
 3. Entrez le domaine que vous souhaitez utiliser et cliquez sur "Ajouter un domaine".
-4. Sélectionnez votre région de centre de données préférée (UE ou US).
+4. Sélectionnez votre région de centre de données préférée (UE, UK, US, CA ou NZ).
 5. Suivez les instructions pas à pas fournies pour la configuration du DNS.
 6. Attendez que le domaine soit vérifié. Si possible, cliquez sur le bouton "Vérifier" pour accélérer le processus. Il se peut que vous deviez rafraîchir la page.
 
-Pour des instructions détaillées, y compris comment choisir entre les régions UE et US, veuillez vous référer à notre [Guide de configuration des domaines personnalisés](/fr/custom-domains/setup-guide).
+Pour des instructions détaillées, y compris comment choisir la bonne région, veuillez vous référer à notre [Guide de configuration des domaines personnalisés](/fr/custom-domains/setup-guide).
 
 ## Personnalisation de la marque
 
@@ -65,6 +65,6 @@ Pour des instructions détaillées sur le branding, voir notre [Guide du brandin
 - Vous êtes responsable de la maintenance et du renouvellement de l'enregistrement de votre domaine.
 - Une configuration SSL/TLS appropriée est cruciale pour la sécurité (gérée automatiquement par Onetime Secret).
 - Veillez à ce que le domaine choisi soit conforme aux directives de votre organisation en matière d'image de marque.
-- Tenez compte des réglementations en matière de protection des données lorsque vous choisissez entre [régions UE et US](/fr/regions).
+- Tenez compte des réglementations en matière de protection des données lorsque vous choisissez votre [région de centre de données](/fr/regions).
 
 Pour en savoir plus sur les meilleures pratiques en matière d'utilisation sécurisée des domaines personnalisés, consultez notre guide [Meilleures pratiques de sécurité](/fr/security-best-practices).

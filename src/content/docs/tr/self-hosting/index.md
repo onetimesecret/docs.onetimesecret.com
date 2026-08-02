@@ -7,8 +7,8 @@ sidebar:
 
 Verileriniz, güvenliğiniz ve dağıtımınız üzerinde tam kontrolle kendi özel Onetime Secret örneğinizi çalıştırın.
 
-:::tip[Mevcut sürüm: v0.25]
-Mevcut kararlı sürüm **v0.25** (`main` dalı) sürümüdür. İki modda çalışır:
+:::tip[Mevcut sürüm: v0.26]
+Mevcut kararlı sürüm **v0.26** (`main` dalı) sürümüdür. İki modda çalışır:
 
 - **Basit mod** — en kolay yol. Yalnızca Redis ve birkaç ortam değişkenine ihtiyaç duyar. Hesaplar her zaman olduğu gibi çalışır. Aşağıdaki [Hızlı Başlangıç](#hızlı-başlangıç-seçenekleri) bölümünden başlayın.
 - **Tam mod** — PostgreSQL ve RabbitMQ tarafından desteklenen hesap özelliklerini (MFA, SSO, WebAuthn, organizasyonlar) ekler.
@@ -37,7 +37,7 @@ docker run -p 6379:6379 -d redis:bookworm
 docker run -p 3000:3000 -d \
   -e REDIS_URL=redis://host.docker.internal:6379/0 \
   -e SECRET="$(openssl rand -hex 32)" \
-  onetimesecret/onetimesecret:v0.25.11
+  onetimesecret/onetimesecret:v0.26.2
 ```
 
 `http://localhost:3000` adresinden erişin.
@@ -53,7 +53,7 @@ Kendi sunucunuzda barındırılan örneğiniz şunları içerir:
 
 - **Web arayüzü** - Gizli mesaj oluşturma ve paylaşma için tam özellikli UI
 - **REST API** - Entegrasyonlar için programatik erişim
-- **Çoklu dil desteği** - 12+ dilde mevcut
+- **Çoklu dil desteği** - 17 dilde mevcut
 - **Özel alan adları** - Kendi alan adınızı ve markanızı kullanın
 
 

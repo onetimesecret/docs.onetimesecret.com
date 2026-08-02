@@ -1,6 +1,6 @@
 ---
 title: Nasıl çalışır?
-description: Özel Alan Adları, AB veya ABD veri merkezlerinde DNS yapılandırması ve isteğe bağlı marka özelleştirme özellikleriyle kendi alan adınız altında gizli mesaj paylaşımı barındırmanıza olanak tanır.
+description: Özel Alan Adları, veri merkezi bölgelerimizin herhangi birinde DNS yapılandırması ve isteğe bağlı marka özelleştirme özellikleriyle kendi alan adınız altında gizli mesaj paylaşımı barındırmanıza olanak tanır.
 ---
 
 ## Markanız, Bizim Güvenliğimiz
@@ -13,7 +13,7 @@ description: Özel Alan Adları, AB veya ABD veri merkezlerinde DNS yapılandır
 ## Özel Alan Adları Nasıl Çalışır
 
 1. Bir alan adı kaydedersiniz veya zaten sahip olduğunuz birini kullanırsınız.
-2. Tercih ettiğiniz veri merkezi bölgesini (AB veya ABD) seçersiniz.
+2. Tercih ettiğiniz veri merkezi bölgesini seçersiniz.
 3. Seçtiğiniz bölgedeki Onetime Secret sunucularını işaret etmesi için alan adınızın [DNS ayarlarını yapılandırırsınız](/tr/custom-domains/setup-guide).
 4. Onetime Secret hesap ayarlarınızda özel alan adını ayarlarsınız.
 5. Doğrulandıktan sonra, gizli mesaj bağlantılarınız özel alan adınızı kullanacaktır.

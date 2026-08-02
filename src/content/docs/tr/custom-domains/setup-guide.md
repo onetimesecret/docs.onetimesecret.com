@@ -19,7 +19,7 @@ description: Bu kılavuz, alt alan adları ve ana alan adları arasındaki farkl
 
 ## Bölgenizi Seçin
 
-Onetime Secret iki veri merkezi bölgesi sunar: AB ve ABD. Özel alan adınızı kurarken verilerinizi depolamak için hangi bölgeyi tercih ettiğinizi seçmeniz gerekir. Bu seçim birkaç nedenden dolayı önemlidir:
+Onetime Secret birden fazla veri merkezi bölgesi sunar: EU, UK, US, CA ve NZ. Özel alan adınızı kurarken verilerinizi depolamak için hangi bölgeyi tercih ettiğinizi seçmeniz gerekir. Bu seçim birkaç nedenden dolayı önemlidir:
 
 - **Bireyler İçin**: Potansiyel olarak daha hızlı erişim için yakınlık veya kişisel veri egemenliği endişeleri gibi kişisel tercihinize göre seçim yapabilirsiniz.
 - **İşletmeler İçin**: Seçiminiz, GDPR, eyalet veya il yönergelerine uyum gibi veri yerelliği yükümlülüklerinize bağlı olabilir. Düzenleyici gereksinimlerinize en uygun bölgeyi seçtiğinizden emin olun.
@@ -49,8 +49,11 @@ Alan adınızı bağlamak için DNS ayarlarınızı güncellemeniz gerekir. Sür
 2. Aşağıdaki ayrıntılarla bir CNAME kaydı oluşturun:
    - Host: Seçtiğiniz alt alan adı (örneğin, secrets)
    - İşaret ettiği yer / Değer:
-     - AB bölgesi için: identity.eu.onetime.co
-     - ABD bölgesi için: identity.us.onetime.co
+     - CA bölgesi için: identity.ca.onetime.co
+     - EU bölgesi için: identity.eu.onetime.co
+     - NZ bölgesi için: identity.nz.onetime.co
+     - UK bölgesi için: identity.ingress.onetime.co (anycast)
+     - US bölgesi için: identity.us.onetime.co
 3. Aynı alt alan adı için mevcut A, AAAA veya CNAME kayıtlarını kaldırın
 
 ### Ana Alan Adları İçin
@@ -59,8 +62,9 @@ Alan adınızı bağlamak için DNS ayarlarınızı güncellemeniz gerekir. Sür
 2. Aşağıdaki ayrıntılarla bir A kaydı oluşturun veya değiştirin:
    - Host: @ (veya DNS sağlayıcınıza bağlı olarak boş bırakın)
    - İşaret ettiği yer / Değer:
-     - AB bölgesi için: 109.105.217.207
-     - ABD bölgesi için: 66.51.126.41
+     - EU bölgesi için: 109.105.217.207
+     - US bölgesi için: 66.51.126.41
+     - Diğer bölgeler için: Güncel A kaydı IP adresleri için destek ekibiyle iletişime geçin
 
 Önemli: Kullandığınız alan adı için çakışan kayıtların olmadığından emin olun.
 
@@ -94,7 +98,7 @@ Ana alan adları, DNS standartları nedeniyle CNAME kayıtlarını kullanamaz. B
 Kurulum tamamlandığında aşağıdaki bilgileri görmelisiniz:
 
 - Alan Adı Durumu: SSL ile Aktif
-- Hedef Adres: identity.eu.onetime.co veya identity.us.onetime.co (seçtiğiniz bölgeye bağlı olarak)
+- Hedef Adres: Seçtiğiniz bölge için kimlik uç noktası (örn. identity.ca.onetime.co, identity.eu.onetime.co, identity.nz.onetime.co, identity.ingress.onetime.co, identity.us.onetime.co)
 - SSL Durumu: Aktif
 - SSL Yenileme Tarihi: (Gösterilecektir, genellikle kurulumdan yaklaşık bir yıl sonra)
 

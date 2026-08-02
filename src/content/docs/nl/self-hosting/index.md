@@ -7,8 +7,8 @@ sidebar:
 
 Draai je eigen privé-instantie van Onetime Secret met volledige controle over je gegevens, beveiliging en deployment.
 
-:::tip[Huidige release: v0.25]
-De huidige stabiele release is **v0.25** (de `main` branch). Het werkt in twee modi:
+:::tip[Huidige release: v0.26]
+De huidige stabiele release is **v0.26** (de `main` branch). Het werkt in twee modi:
 
 - **Eenvoudige modus** — de gemakkelijkste manier. Heeft alleen Redis en een paar omgevingsvariabelen nodig. Accounts werken hetzelfde als altijd.
 - **Volledige modus** — voegt accountfuncties toe (MFA, SSO, WebAuthn, organisaties) ondersteund door PostgreSQL en RabbitMQ.
@@ -37,7 +37,7 @@ docker run -p 6379:6379 -d redis:bookworm
 docker run -p 3000:3000 -d \
   -e REDIS_URL=redis://host.docker.internal:6379/0 \
   -e SECRET="$(openssl rand -hex 32)" \
-  onetimesecret/onetimesecret:v0.25.11
+  onetimesecret/onetimesecret:v0.26.2
 ```
 
 Toegankelijk op `http://localhost:3000`.
@@ -53,7 +53,7 @@ Je self-hosted instantie bevat:
 
 - **Webinterface** - Volledige UI voor het aanmaken en delen van secrets
 - **REST API** - Programmatische toegang voor integraties
-- **Meertalige ondersteuning** - Beschikbaar in meer dan 12 talen
+- **Meertalige ondersteuning** - Beschikbaar in 17 talen
 - **Eigen domeinen** - Gebruik je eigen domein en branding
 
 

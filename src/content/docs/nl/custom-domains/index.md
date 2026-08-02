@@ -31,7 +31,7 @@ geheimen.uwmerk.nl
 3. **Professionele uitstraling**: Laat een hoger niveau van verfijning en toewijding aan beveiliging zien.
 4. **Brandaanpassing**: Upload aangepaste logo's en stel merkkleuren in die bij uw visuele identiteit passen.
 5. **Naadloze integratie**: Creëer een samenhangende ervaring die aansluit bij uw bestaande digitale aanwezigheid.
-6. **Regionale flexibiliteit**: Kies tussen datacenterregio's in de EU en de VS om te voldoen aan uw datalocatiebehoeften.
+6. **Regionale flexibiliteit**: Kies uit vijf datacenterregio's (EU, UK, US, CA, NZ) om te voldoen aan uw datalocatiebehoeften.
 
 ## Aan de slag
 
@@ -40,11 +40,11 @@ Een aangepast domein instellen
 1. Log in op uw Onetime Secret account.
 2. Navigeer naar Accountinstellingen > Aangepaste domeinen.
 3. Voer het domein in dat u wilt gebruiken en klik op “Domein toevoegen”.
-4. Selecteer de datacenterregio van uw voorkeur (EU of VS).
+4. Selecteer de datacenterregio van uw voorkeur (EU, UK, US, CA of NZ).
 5. Volg de stap-voor-stap instructies voor DNS-configuratie.
 6. Wacht tot het domein is geverifieerd. Klik, indien beschikbaar, op de knop “Verifiëren” om het proces te versnellen. Mogelijk moet u de pagina verversen.
 
-Raadpleeg onze [Handleiding voor aangepaste domeininstellingen](/nl/custom-domains/setup-guide) voor gedetailleerde instructies, inclusief hoe u kunt kiezen tussen EU- en VS-regio's.
+Raadpleeg onze [Handleiding voor aangepaste domeininstellingen](/nl/custom-domains/setup-guide) voor gedetailleerde instructies, inclusief hoe u de juiste regio kiest.
 
 ## Merkaanpassing
 
@@ -65,6 +65,6 @@ Voor gedetailleerde brandinginstructies, zie onze [Brand Guide](/nl/custom-domai
 - U bent verantwoordelijk voor het onderhouden en vernieuwen van uw domeinregistratie.
 - Een juiste SSL/TLS-configuratie is cruciaal voor de veiligheid (wordt automatisch door Onetime Secret afgehandeld).
 - Zorg ervoor dat het door u gekozen domein voldoet aan de merkrichtlijnen van uw organisatie.
-- Houd rekening met de regelgeving voor gegevensbescherming bij het kiezen tussen [EU- en VS-regio's](/nl/regions).
+- Houd rekening met de regelgeving voor gegevensbescherming bij het kiezen van uw [datacenterregio](/nl/regions).
 
 Voor meer informatie over best practices voor het veilig gebruik van aangepaste domeinen, kunt u onze gids [Best practices beveiliging](/nl/security-best-practices) raadplegen.

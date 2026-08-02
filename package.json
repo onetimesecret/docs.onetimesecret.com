@@ -2,7 +2,7 @@
   "name": "docs",
   "type": "module",
   "version": "2.1.1",
-  "packageManager": "pnpm@11.13.1",
+  "packageManager": "pnpm@11.17.0",
   "scripts": {
     "dev": "astro dev --host",
     "start": "astro dev --host",
@@ -25,18 +25,18 @@
     "generate:for-translators": "./bin/generate-for-translators all"
   },
   "dependencies": {
-    "@astrojs/markdoc": "^2.0.3",
+    "@astrojs/markdoc": "^2.0.5",
     "@astrojs/react": "^6.0.1",
-    "@astrojs/starlight": "^0.41.3",
+    "@astrojs/starlight": "^0.41.5",
     "@astrojs/starlight-markdoc": "^0.7.0",
     "@astrojs/starlight-tailwind": "^5.0.0",
     "@astrojs/vue": "^7.0.1",
     "@tailwindcss/vite": "^4.3.3",
     "accessible-astro-components": "^5.4.0",
-    "astro": "^7.1.1",
-    "devalue": "^5.8.1",
-    "react": "^19.2.7",
-    "react-dom": "^19.2.7",
+    "astro": "^7.1.4",
+    "devalue": "^5.8.2",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
     "react-hotkeys-hook": "^5.3.3",
     "sharp": "^0.35.3",
     "sitemap": "9.0.1",
@@ -45,7 +45,7 @@
     "yaml": "^2.9.0"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.9",
+    "@astrojs/check": "^0.9.10",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "typescript": "^7.0.2",

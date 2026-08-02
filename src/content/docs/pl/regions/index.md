@@ -3,7 +3,7 @@ title: Regiony centrów danych
 description: Poznaj regiony centrów danych Onetime Secret i dowiedz się, jak wybrać odpowiedni dla swoich potrzeb.
 ---
 
-Onetime Secret oferuje cztery regiony centrów danych: Unia Europejska (EU), Stany Zjednoczone (US), Kanada (CA) i Aotearoa Nowa Zelandia (NZ). Ten przewodnik pomoże zrozumieć znaczenie wyboru regionu i jak wybrać odpowiedni dla swoich potrzeb.
+Onetime Secret oferuje pięć regionów centrów danych: Kanadę (CA), Unię Europejską (EU), Aotearoa Nową Zelandię (NZ), Wielką Brytanię (UK) i Stany Zjednoczone (US). Ten przewodnik pomoże Ci zrozumieć znaczenie wyboru regionu oraz to, jak wybrać odpowiedni dla swoich potrzeb.
 
 ## Dlaczego wybór regionu ma znaczenie
 
@@ -15,37 +15,15 @@ Wybór odpowiedniego regionu centrum danych jest kluczowy z kilku powodów:
 
 ## Dostępne regiony
 
-### Unia Europejska (EU)
+| Region | Lokalizacja | URL |
+|--------|-------------|-----|
+| [Kanada (CA)](/pl/regions/canada) | Toronto | [ca.onetimesecret.com](https://ca.onetimesecret.com) |
+| [Unia Europejska (EU)](/pl/regions/european-union) | Norymberga | [eu.onetimesecret.com](https://eu.onetimesecret.com) |
+| [Aotearoa Nowa Zelandia (NZ)](/pl/regions/new-zealand) | Porirua | [nz.onetimesecret.com](https://nz.onetimesecret.com) |
+| [Wielka Brytania (UK)](/pl/regions/united-kingdom) | Londyn | [uk.onetimesecret.com](https://uk.onetimesecret.com) |
+| [Stany Zjednoczone (US)](/pl/regions/united-states) | Hillsboro, Oregon | [us.onetimesecret.com](https://us.onetimesecret.com) |
 
-- **Lokalizacja**: Unia Europejska (Norymberga)
-- **URL**: [https://eu.onetimesecret.com](https://eu.onetimesecret.com)
-- **Kluczowe cechy**:
-  - Zgodność z RODO i innymi przepisami UE dotyczącymi ochrony danych
-  - Idealne dla użytkowników europejskich lub obsługujących głównie europejskich klientów
-
-### Kanada (CA)
-
-- **Lokalizacja**: Kanada (Toronto)
-- **URL**: [https://ca.onetimesecret.com](https://ca.onetimesecret.com)
-- **Kluczowe cechy**:
-  - Zgodność z PIPEDA i kanadyjskimi przepisami dotyczącymi ochrony danych
-  - Odpowiednie dla użytkowników kanadyjskich lub obsługujących głównie kanadyjskich klientów
-
-### Aotearoa Nowa Zelandia (NZ)
-
-- **Lokalizacja**: Aotearoa Nowa Zelandia (Porirua)
-- **URL**: [https://nz.onetimesecret.com](https://nz.onetimesecret.com)
-- **Kluczowe cechy**:
-  - Zgodność z ustawą o prywatności Nowej Zelandii i lokalnymi przepisami
-  - Odpowiednie dla użytkowników z Nowej Zelandii lub obsługujących klientów z Oceanii
-
-### Stany Zjednoczone (US)
-
-- **Lokalizacja**: Stany Zjednoczone (Hillsboro, Oregon)
-- **URL**: [https://us.onetimesecret.com](https://us.onetimesecret.com)
-- **Kluczowe cechy**:
-  - Zgodność z przepisami USA dotyczącymi ochrony danych
-  - Odpowiednie dla użytkowników z USA lub obsługujących głównie klientów z USA
+Każda strona regionu zawiera szczegóły dotyczące lokalnego środowiska regulacyjnego oraz informacje o tym, kiedy dany region może być odpowiedni dla Twojego przypadku użycia.
 
 ## Architektura bez współdzielenia
 
@@ -59,22 +37,16 @@ Onetime Secret wykorzystuje architekturę bez współdzielenia, zapewniającą c
 
 Rozważ następujące czynniki przy wyborze regionu centrum danych:
 
-### Dla użytkowników anonimowych
+### Bez konta
 
 - Żądania do onetimesecret.com mogą być kierowane do dowolnego aktywnego centrum danych.
-- Lokalizacja Twojego sekretu jest zawsze jasna z wygenerowanego linku (np. `us.onetimesecret.com/secret/abcd1234`).
-- Możesz wybrać konkretną lokalizację danych, przechodząc bezpośrednio do dowolnej domeny regionalnej (np. [ca.onetimesecret.com](https://ca.onetimesecret.com/)).
+- Możesz wybrać konkretny region, przechodząc bezpośrednio do domeny regionalnej (np. [ca.onetimesecret.com](https://ca.onetimesecret.com/)).
+- Wygenerowany link zawsze identyfikuje region (np. `us.onetimesecret.com/secret/abcd1234`).
 
-### Dla uwierzytelnionych użytkowników
+### Z kontem
 
-- Podczas tworzenia nowego konta musisz wybrać lokalizację centrum danych.
-- Będziesz musiał wrócić do tej samej lokalizacji, aby się zalogować.
-- Istniejące konta i sekrety pozostają w swoim pierwotnym centrum danych.
-
-### Dla wszystkich użytkowników
-
-- Sekrety utworzone bez subdomeny jurysdykcji (np. onetimesecret.com/secret/efgh5678) będą nadal domyślnie kierowane do naszego centrum danych w UE.
-- Wszyscy użytkownicy, zarówno płacący, jak i darmowi, mogą wybrać preferowane centrum danych podczas tworzenia konta.
+- Podczas tworzenia konta wybierasz region centrum danych. Wszystkie plany — darmowe i płatne — mają dostęp do każdego regionu.
+- Logujesz się w tej samej domenie regionalnej, w której się zarejestrowałeś (np. jeśli zarejestrowałeś się na `eu.onetimesecret.com`, tam właśnie się logujesz).
 
 ### Dodatkowe uwagi
 
@@ -92,50 +64,30 @@ Rozważ następujące czynniki przy wyborze regionu centrum danych:
    - Wymagania dotyczące opóźnień dla Twojej aplikacji
    - Integracja z innymi usługami lub systemami
 
-## Cennik i plany
-
-Nasze zobowiązanie do lokalizacji danych rozciąga się na nasz model cenowy:
-
-- Opłaty są oparte na tym, skąd płacisz, a nie na tym, gdzie utworzono Twoje konto.
-- Plany Identity Plus obejmują nieograniczone niestandardowe domeny we wszystkich centrach danych w ramach jednej subskrypcji.
-
 ## Plany na przyszłość
 
 Nieustannie pracujemy nad rozszerzeniem naszych opcji centrów danych. Przyszłe plany obejmują dodatkowe lokalizacje centrów danych w:
 
+- Australii
 - Brazylii
-- Hiszpanii
-- Wielkiej Brytanii
+- Japonii
+- Meksyku
+- Norwegii
+- Korei Południowej
 
 Te rozszerzenia zapewnią jeszcze więcej opcji lokalizacji danych, poprawiając wydajność i możliwości zgodności dla użytkowników w różnych regionach.
 
-## Konfiguracja regionu
-
-Podczas konfigurowania konta Onetime Secret lub konfigurowania niestandardowej domeny będziesz mieć możliwość wyboru preferowanego regionu. Oto jak:
-
-1. Dla nowych kont: Wybierz preferowany region podczas procesu rejestracji.
-2. Dla istniejących kont: Skontaktuj się z naszym zespołem wsparcia, aby omówić opcje migracji regionu.
-3. Dla niestandardowych domen: Określ wybrany region podczas konfigurowania ustawień DNS (zapoznaj się z naszym [Przewodnikiem konfiguracji niestandardowej domeny](/pl/custom-domains/setup-guide) po szczegółowe instrukcje).
 
 ## Często zadawane pytania
 
 **P: Czy mogę zmienić swój region po skonfigurowaniu konta?**
-O: Tak, możesz zmienić swój region, tworząc nowe konto z tym samym adresem e-mail i przechodząc do ekranu konta. Jeśli masz aktywną subskrypcję, Twoje konto zaktualizuje się automatycznie (może być konieczne odświeżenie strony).
+O: Tak. Zobacz [Zmiana regionu](/pl/regions/switching-regions), gdzie znajdziesz instrukcje krok po kroku dotyczące kont darmowych, płatnych subskrypcji oraz migracji domeny niestandardowej.
 
-Należy pamiętać:
-- Istniejące dane nie są przenoszone między regionami
-- Wszelkie utworzone linki do sekretów będą nadal działać, dopóki nie zostaną wyświetlone lub wygasną
-- Dla linków z niestandardowymi domenami będziesz musiał:
-  1. Ponownie dodać domenę do konta w nowym regionie
-  2. Zaktualizować powiązane rekordy DNS
-  3. Użyć unikalnej subdomeny podczas ponownego dodawania domeny, aby uniknąć konfliktów z istniejącymi linkami
-  4. Później możesz dodać preferowaną domenę (jeśli to konieczne), aby móc rozpocząć wysyłanie nowych linków z preferowaną domeną
-
-**P: Czy mój wybór regionu wpływa na bezpieczeństwo moich sekretów?**
+**P: Czy wybór regionu wpływa na bezpieczeństwo moich sekretów?**
 O: Nie, wszystkie regiony oferują ten sam wysoki poziom bezpieczeństwa. Wybór wpływa głównie na rezydencję danych i potencjalne opóźnienie.
 
 **P: Czy są różnice w cenach między regionami?**
-O: Obecnie nasze ceny są spójne we wszystkich regionach. Sprawdź naszą [stronę cennika](https://onetimesecret.com/pricing) po najnowsze informacje.
+O: Ceny są ustalane indywidualnie dla każdego regionu — możesz płacić w swojej lokalnej walucie, a Stripe automatycznie obsługuje przeliczanie walut. Plany Identity Plus obejmują nieograniczoną liczbę niestandardowych domen we wszystkich centrach danych w ramach jednej subskrypcji. Sprawdź naszą [stronę cennika](https://onetimesecret.com/pricing), aby uzyskać najbardziej aktualne informacje.
 
 ## Potrzebujesz pomocy?
 

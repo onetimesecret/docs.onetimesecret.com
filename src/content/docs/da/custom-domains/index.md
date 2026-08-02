@@ -30,7 +30,7 @@ Brugerdefinerede domæner giver dig mulighed for at bruge dit eget domænenavn t
 3. **Professionelt udseende**: Demonstrer et højere niveau af sofistikering og engagement i sikkerhed.
 4. **Brandtilpasning**: Upload brugerdefinerede logoer og indstil brandfarver, der matcher din visuelle identitet.
 5. **Problemfri integration**: Skab en sammenhængende oplevelse, der stemmer overens med din eksisterende digitale tilstedeværelse.
-6. **Regional fleksibilitet**: Vælg mellem EU- og US-datacenterregioner for at opfylde dine datalokationsbehov.
+6. **Regional fleksibilitet**: Vælg mellem fem datacenterregioner (EU, UK, US, CA, NZ) for at opfylde dine datalokationsbehov.
 
 ## Kom i gang
 
@@ -39,11 +39,11 @@ For at opsætte et brugerdefineret domæne:
 1. Log ind på din Onetime Secret-konto.
 2. Naviger til Kontoindstillinger > Brugerdefinerede domæner.
 3. Indtast det domæne, du ønsker at bruge, og klik på "Tilføj domæne".
-4. Vælg din foretrukne datacenterregion (EU eller US).
+4. Vælg din foretrukne datacenterregion (EU, UK, US, CA eller NZ).
 5. Følg de trinvise instruktioner til DNS-konfiguration.
 6. Vent på, at domænet bliver verificeret. Hvis tilgængeligt, klik på "Verificer"-knappen for at fremskynde processen. Du skal muligvis opdatere siden.
 
-For detaljerede instruktioner, herunder hvordan du vælger mellem EU- og US-regioner, se venligst vores [Brugerdefineret domæneopsætningsvejledning](/da/custom-domains/setup-guide).
+For detaljerede instruktioner, herunder hvordan du vælger den rigtige region, se venligst vores [Brugerdefineret domæneopsætningsvejledning](/da/custom-domains/setup-guide).
 
 ## Brandtilpasning
 
@@ -63,6 +63,6 @@ For detaljerede brandinginstruktioner, se vores [Brandvejledning](/da/custom-dom
 - Du er ansvarlig for at vedligeholde og forny din domæneregistrering.
 - Korrekt SSL/TLS-konfiguration er afgørende for sikkerhed (håndteres automatisk af Onetime Secret).
 - Sørg for, at dit valgte domæne overholder din organisations brandingretningslinjer.
-- Overvej databeskyttelsesregler, når du vælger mellem [EU- og US-regioner](/da/regions).
+- Overvej databeskyttelsesregler, når du vælger din [datacenterregion](/da/regions).
 
 For at lære om bedste praksis for sikker brug af brugerdefinerede domæner, se vores [Bedste sikkerhedspraksis](/da/security-best-practices)-vejledning.
