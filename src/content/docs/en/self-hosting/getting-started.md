@@ -61,7 +61,7 @@ For those who prefer manual setup, you'll need:
 After cloning the repository, run the initialization script and build frontend assets:
 
 ```bash
-./install.sh init
+bin/setup --init
 cp .env.example .env
 pnpm install && pnpm run build:local
 ```
@@ -90,7 +90,17 @@ See [README](https://github.com/onetimesecret/onetimesecret#readme) for complete
 
 ## Admin Setup
 
-To create an admin user, add email addresses to the `:colonels:` section in your config file, then sign up with one of those emails to automatically get admin access.
+With Valkey/Redis running and your `.env` loaded into the shell (`set -a; source .env; set +a`), create an admin account directly:
+
+```bash
+bundle exec bin/ots customers create admin@example.com --role colonel
+```
+
+This creates a verified account and prints a one-time generated password — save it — unless you pass `--password`. It works in both simple and full authentication modes. To promote an account that already exists:
+
+```bash
+bundle exec bin/ots customers role promote admin@example.com
+```
 
 **Note**: The admin area currently has limited functionality - it's readonly config viewing with no user management. More features are planned for future releases.
 

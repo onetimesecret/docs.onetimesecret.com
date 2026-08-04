@@ -124,7 +124,7 @@ git clone https://github.com/onetimesecret/onetimesecret.git
 cd onetimesecret
 
 # 运行初始化脚本
-./install.sh init
+bin/setup --init
 
 # 安装依赖项
 bundle install --without development test
@@ -181,7 +181,7 @@ server {
         proxy_pass http://127.0.0.1:3000;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-For $remote_addr;
         proxy_set_header X-Forwarded-Proto $scheme;
     }
 
@@ -190,7 +190,7 @@ server {
         proxy_pass http://127.0.0.1:3000;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-For $remote_addr;
         proxy_set_header X-Forwarded-Proto $scheme;
 
         # WebSocket 支持
@@ -200,6 +200,13 @@ server {
     }
 }
 ```
+
+:::note[客户端 IP 转发与代理信任]
+- 除非设置 `TRUSTED_PROXY_ENABLED=true`，否则应用会忽略转发的请求头——没有它，每个请求都会被归因于代理的地址。
+- 上面用 `$remote_addr` 覆盖请求头是默认的 `TRUSTED_PROXY_MODE=filter` 所必需的，该模式选取**最左侧**的非代理条目——若改为追加请求头，客户端就能在速率限制、封禁和审计记录面前伪造自己的 IP。
+- 例外：使用 `TRUSTED_PROXY_MODE=depth` 时，请保留追加写法（`$proxy_add_x_forwarded_for`），并将 `TRUSTED_PROXY_DEPTH` 设置为你的跳数——在 depth 模式下覆盖会压缩整条链路，并将请求错误地归因于代理。
+- 下面的 Caddy 配置通过 `header_up X-Forwarded-For {client_ip}` 实现相同的覆盖。
+:::
 
 **启用站点：**
 ```bash
@@ -223,12 +230,16 @@ your-domain.com {
 
     # API 请求到后端
     handle /api/* {
-        reverse_proxy 127.0.0.1:3000
+        reverse_proxy 127.0.0.1:3000 {
+            header_up X-Forwarded-For {client_ip}
+        }
     }
 
     # 所有其他请求到后端（用于服务器渲染的页面）
     handle {
-        reverse_proxy 127.0.0.1:3000
+        reverse_proxy 127.0.0.1:3000 {
+            header_up X-Forwarded-For {client_ip}
+        }
     }
 }
 ```

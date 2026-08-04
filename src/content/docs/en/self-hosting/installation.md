@@ -146,7 +146,7 @@ git clone https://github.com/onetimesecret/onetimesecret.git
 cd onetimesecret
 
 # Run the initialization script
-./install.sh init
+bin/setup --init
 
 # Install Ruby dependencies
 bundle install --without development test
@@ -241,7 +241,7 @@ server {
         proxy_pass http://127.0.0.1:3000;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-For $remote_addr;
         proxy_set_header X-Forwarded-Proto $scheme;
     }
 
@@ -250,7 +250,7 @@ server {
         proxy_pass http://127.0.0.1:3000;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-For $remote_addr;
         proxy_set_header X-Forwarded-Proto $scheme;
 
         # WebSocket support
@@ -260,6 +260,13 @@ server {
     }
 }
 ```
+
+:::note[Client IP forwarding and proxy trust]
+- The app ignores forwarded headers unless `TRUSTED_PROXY_ENABLED=true` — without it, every request is attributed to the proxy's address.
+- The `$remote_addr` overwrite above is required for the default `TRUSTED_PROXY_MODE=filter`, which picks the **leftmost** non-proxy entry — an appended header would let clients spoof their IP to rate limits, bans, and audit records.
+- Exception: with `TRUSTED_PROXY_MODE=depth`, keep the append (`$proxy_add_x_forwarded_for`) and set `TRUSTED_PROXY_DEPTH` to your hop count — overwriting in depth mode collapses the chain and misattributes requests to the proxy.
+- The Caddy configuration below applies the same overwrite with `header_up X-Forwarded-For {client_ip}`.
+:::
 
 **Enable the site:**
 ```bash
@@ -283,12 +290,16 @@ your-domain.com {
 
     # API requests to backend
     handle /api/* {
-        reverse_proxy 127.0.0.1:3000
+        reverse_proxy 127.0.0.1:3000 {
+            header_up X-Forwarded-For {client_ip}
+        }
     }
 
     # All other requests to backend (for server-rendered pages)
     handle {
-        reverse_proxy 127.0.0.1:3000
+        reverse_proxy 127.0.0.1:3000 {
+            header_up X-Forwarded-For {client_ip}
+        }
     }
 }
 ```
