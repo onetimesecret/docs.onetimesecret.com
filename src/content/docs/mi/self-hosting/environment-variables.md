@@ -96,7 +96,7 @@ SMTP_AUTH=login                      # Tikanga motuhēhēnga SMTP (takiuru, māo
 
 ```bash
 DEFAULT_TTL=604800                   # Paunga karere muna taunoa i ngā hēkona (604800 = 7 rā)
-TTL_OPTIONS=300,1800,3600,86400      # Ngā kōwhiringa TTL e wātea ana e whakaatuhia ana ki ngā kaiwhakamahi, keri-wehe (hēkona)
+TTL_OPTIONS="300 1800 3600 86400"      # Ngā kōwhiringa TTL e wātea ana e whakaatuhia ana ki ngā kaiwhakamahi, keri-wehe (hēkona)
 DEFAULT_DOMAIN=                      # Rohe taunoa mō ngā hononga karere muna (ka whakamahi i HOST mēnā he kau)
 ALLOW_NIL_GLOBAL_SECRET=false        # Tukua kia haere me te kī SECRET e ngaro ana (whakahoki ohorere)
 ```
@@ -140,7 +140,7 @@ SENTRY_DSN=
 SENTRY_DSN_BACKEND=
 SENTRY_DSN_FRONTEND=
 SENTRY_LOG_ERRORS=true
-SENTRY_MAX_BREADCRUMBS=50
-SENTRY_SAMPLE_RATE=1.0
+SENTRY_MAX_BREADCRUMBS=5
+SENTRY_SAMPLE_RATE=0.10
 SENTRY_VUE_TRACK_COMPONENTS=true
 ```

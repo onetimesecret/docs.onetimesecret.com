@@ -48,13 +48,13 @@ Use this path if you don't need to preserve existing accounts or live secrets.
 docker pull onetimesecret/onetimesecret:v0.24.5
 ```
 
-Or clone/checkout the v0.24.0 tag if running from source, then run the install script:
+Or clone/checkout the v0.24.0 tag if running from source, then run the setup script:
 
 ```bash
-./install.sh
+bin/setup --init
 ```
 
-This auto-detects a new environment and runs `init`: installs Ruby and Node dependencies, generates derived keys, and prepares the environment. You can also run `./install.sh doctor` to check prerequisites.
+This initializes a new environment: installs Ruby and Node dependencies, generates derived keys, and prepares the environment. You can also run `bin/setup --doctor` to check prerequisites.
 
 ### 2. Set up configuration
 
@@ -163,13 +163,13 @@ Even if you already backed up in the prerequisites. Make a timestamped copy righ
 docker pull onetimesecret/onetimesecret:v0.24.5
 ```
 
-Or clone/checkout the v0.24.0 tag if running from source. Do not start it yet. Run the install script to update dependencies and re-derive child keys:
+Or clone/checkout the v0.24.0 tag if running from source. Do not start it yet. Run the setup script to update dependencies and re-derive child keys:
 
 ```bash
-./install.sh
+bin/setup --reconcile
 ```
 
-This auto-detects an existing environment and runs `reconcile`: installs gems and node packages, re-derives child keys from your existing `SECRET`, and re-applies RabbitMQ policies if in full mode. You can also run `./install.sh doctor` to check your environment.
+This reconciles an existing environment: re-derives child keys from your existing `SECRET`, reinstalls gems and node packages, and re-applies RabbitMQ policies if in full mode. You can also run `bin/setup --doctor` to check your environment.
 
 ### 4. Update configuration files
 
@@ -239,11 +239,23 @@ The migration pipeline includes validators that check data integrity during the 
 
 For a system with a few thousand accounts and/or secrets, the migration should complete in about 5 minutes. For larger datasets, it may take longer. Monitor the logs for progress.
 
-### 8. Password migration (full mode only)
+### 8. Sync accounts to the auth database (full mode only)
 
-For full mode deployments, passwords migrate from Redis to Rodauth's PostgreSQL tables. Users don't need to reset their passwords. On next login, bcrypt hashes are transparently upgraded to argon2id.
+Upgrading versions requires no account sync while `AUTHENTICATION_MODE` stays `simple` (the default). Switching an existing install to `AUTHENTICATION_MODE=full` **requires** syncing existing customers into the auth database — accounts that are not synced cannot log in.
 
-This happens automatically on each user's first login after the upgrade. No manual password migration step is required.
+Preview the sync first, then execute:
+
+```bash
+# Preview which customers will be synced
+AUTHENTICATION_MODE=full bin/ots customers sync-auth-accounts
+
+# Execute the sync
+AUTHENTICATION_MODE=full bin/ots customers sync-auth-accounts --run
+```
+
+The sync is idempotent and safe to re-run. It requires the Familia v1-to-v2 data migration (step 7) to be complete and the auth database to be reachable.
+
+Users don't need to reset their passwords: on next login, bcrypt hashes are transparently upgraded to argon2id.
 
 ### 9. Start the application
 
@@ -280,7 +292,8 @@ curl -v http://localhost:3000/health/advanced
 # Diagnostic tools
 bundle exec bin/ots boot-test
 bundle exec bin/ots queues status
-bundle exec bin/ots doctor
+bin/setup --doctor                    # environment checks
+bundle exec bin/ots customers doctor  # customer-data checks
 ```
 
 Then manually verify:
