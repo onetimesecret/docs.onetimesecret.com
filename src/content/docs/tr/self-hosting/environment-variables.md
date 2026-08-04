@@ -96,7 +96,9 @@ SMTP_AUTH=login                      # SMTP kimlik doğrulama yöntemi (login, p
 
 ```bash
 DEFAULT_TTL=604800                   # Varsayılan gizli mesaj sona erme süresi saniye cinsinden (604800 = 7 gün)
-TTL_OPTIONS="300 1800 3600 86400"      # Kullanıcılara sunulan mevcut TTL seçenekleri, virgülle ayrılmış (saniye)
+# Kullanıcılara sunulan TTL seçenekleri: boşlukla ayrılmış saniyeler.
+# Virgül KULLANMAYIN — virgülle ayrılmış bir liste sessizce ilk değerine indirgenir.
+TTL_OPTIONS="300 1800 3600 86400"
 DEFAULT_DOMAIN=                      # Gizli mesaj bağlantıları için varsayılan alan adı (boşsa HOST kullanır)
 ALLOW_NIL_GLOBAL_SECRET=false        # Eksik SECRET anahtarıyla çalışmaya izin ver (acil durum kurtarma)
 ```

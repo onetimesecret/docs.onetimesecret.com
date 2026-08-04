@@ -201,6 +201,13 @@ server {
 }
 ```
 
+:::note[Te tuku i te IP kiritaki me te whakapono ki te takawaenga]
+- Kāore te taupānga e aro ki ngā pane kua tukuna mai mēnā kāore a `TRUSTED_PROXY_ENABLED=true` — ki te kore, ka kīia ko te wāhitau o te takawaenga te pūtake o ia tono.
+- Me whakakapi te `$remote_addr` i runga ake nei mō te aratau taunoa `TRUSTED_PROXY_MODE=filter`, ka tīpakohia e tērā te wāhitau **mauī rawa** ehara nō te takawaenga — mā te pane tāpiri ka taea e ngā kiritaki te tinihanga i ō rātou IP ki ngā tepe pāpātanga, ngā aukati, me ngā mauhanga arotake.
+- Engari: mēnā `TRUSTED_PROXY_MODE=depth`, waiho te tāpiri (`$proxy_add_x_forwarded_for`) me te tautuhi i `TRUSTED_PROXY_DEPTH` ki te maha o ō peke — mā te whakakapi i te aratau depth ka ngaro te mekameka, ā, ka hē te kī ko te takawaenga te pūtake o ngā tono.
+- Ka whakamahi te whirihoranga Caddy i raro nei i taua whakakapinga anō mā `header_up X-Forwarded-For {client_ip}`.
+:::
+
 **Whakahohetia te pae:**
 ```bash
 sudo ln -s /etc/nginx/sites-available/onetime /etc/nginx/sites-enabled/
@@ -223,12 +230,16 @@ your-domain.com {
 
     # Ngā tono API ki te kūwaha
     handle /api/* {
-        reverse_proxy 127.0.0.1:3000
+        reverse_proxy 127.0.0.1:3000 {
+            header_up X-Forwarded-For {client_ip}
+        }
     }
 
     # Ngā tono katoa ki te kūwaha (mō ngā whārangi kua hangaia e te tūmau)
     handle {
-        reverse_proxy 127.0.0.1:3000
+        reverse_proxy 127.0.0.1:3000 {
+            header_up X-Forwarded-For {client_ip}
+        }
     }
 }
 ```

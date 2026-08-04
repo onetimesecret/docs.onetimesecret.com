@@ -201,6 +201,13 @@ server {
 }
 ```
 
+:::note[Передавання IP клієнта та довіра до проксі]
+- Застосунок ігнорує передані заголовки, доки не встановлено `TRUSTED_PROXY_ENABLED=true` — без цього кожен запит приписується адресі проксі.
+- Перезапис `$remote_addr` вище потрібен для типового режиму `TRUSTED_PROXY_MODE=filter`, який обирає **крайній лівий** запис, що не належить проксі — заголовок із дописуванням дозволив би клієнтам підробляти свою IP-адресу для обмежень частоти, блокувань і записів аудиту.
+- Виняток: з `TRUSTED_PROXY_MODE=depth` залиште дописування (`$proxy_add_x_forwarded_for`) і встановіть `TRUSTED_PROXY_DEPTH` відповідно до кількості переходів — перезапис у режимі depth згортає ланцюжок і хибно приписує запити проксі.
+- Наведена нижче конфігурація Caddy застосовує той самий перезапис за допомогою `header_up X-Forwarded-For {client_ip}`.
+:::
+
 **Увімкнення сайту:**
 ```bash
 sudo ln -s /etc/nginx/sites-available/onetime /etc/nginx/sites-enabled/
@@ -223,12 +230,16 @@ your-domain.com {
 
     # API-запити до бекенду
     handle /api/* {
-        reverse_proxy 127.0.0.1:3000
+        reverse_proxy 127.0.0.1:3000 {
+            header_up X-Forwarded-For {client_ip}
+        }
     }
 
     # Всі інші запити до бекенду (для серверних сторінок)
     handle {
-        reverse_proxy 127.0.0.1:3000
+        reverse_proxy 127.0.0.1:3000 {
+            header_up X-Forwarded-For {client_ip}
+        }
     }
 }
 ```

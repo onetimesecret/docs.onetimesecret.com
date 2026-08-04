@@ -201,6 +201,13 @@ server {
 }
 ```
 
+:::note[Vidarebefordran av klient-IP och förtroende för proxyn]
+- Appen ignorerar vidarebefordrade headers om inte `TRUSTED_PROXY_ENABLED=true` är satt – utan den tillskrivs varje förfrågan proxyns adress.
+- Överskrivningen med `$remote_addr` ovan krävs för standardläget `TRUSTED_PROXY_MODE=filter`, som väljer den **vänstraste** posten som inte är en proxy – en påhängd header skulle låta klienter förfalska sin IP gentemot hastighetsbegränsningar, blockeringar och granskningsloggar.
+- Undantag: med `TRUSTED_PROXY_MODE=depth` behåller du tillägget (`$proxy_add_x_forwarded_for`) och sätter `TRUSTED_PROXY_DEPTH` till ditt antal hopp – att skriva över i depth-läge klappar ihop kedjan och tillskriver proxyn förfrågningarna.
+- Caddy-konfigurationen nedan gör samma överskrivning med `header_up X-Forwarded-For {client_ip}`.
+:::
+
 **Aktivera webbplatsen:**
 ```bash
 sudo ln -s /etc/nginx/sites-available/onetime /etc/nginx/sites-enabled/
@@ -223,12 +230,16 @@ your-domain.com {
 
     # API-förfrågningar till backend
     handle /api/* {
-        reverse_proxy 127.0.0.1:3000
+        reverse_proxy 127.0.0.1:3000 {
+            header_up X-Forwarded-For {client_ip}
+        }
     }
 
     # Alla andra förfrågningar till backend (för server-renderade sidor)
     handle {
-        reverse_proxy 127.0.0.1:3000
+        reverse_proxy 127.0.0.1:3000 {
+            header_up X-Forwarded-For {client_ip}
+        }
     }
 }
 ```

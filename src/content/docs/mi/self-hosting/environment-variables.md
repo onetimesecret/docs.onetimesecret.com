@@ -96,7 +96,9 @@ SMTP_AUTH=login                      # Tikanga motuhēhēnga SMTP (takiuru, māo
 
 ```bash
 DEFAULT_TTL=604800                   # Paunga karere muna taunoa i ngā hēkona (604800 = 7 rā)
-TTL_OPTIONS="300 1800 3600 86400"      # Ngā kōwhiringa TTL e wātea ana e whakaatuhia ana ki ngā kaiwhakamahi, keri-wehe (hēkona)
+# Ngā kōwhiringa TTL e whakaatuhia ana ki ngā kaiwhakamahi: ngā hēkona kua wehea ki te mokowā.
+# KAUA e whakamahi piko — ka whakaitihia noatia te rārangi kua wehea ki te piko ki tōna uara tuatahi, kāore he whakatūpato.
+TTL_OPTIONS="300 1800 3600 86400"
 DEFAULT_DOMAIN=                      # Rohe taunoa mō ngā hononga karere muna (ka whakamahi i HOST mēnā he kau)
 ALLOW_NIL_GLOBAL_SECRET=false        # Tukua kia haere me te kī SECRET e ngaro ana (whakahoki ohorere)
 ```
