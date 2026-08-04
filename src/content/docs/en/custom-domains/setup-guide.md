@@ -41,6 +41,11 @@ Consider your specific needs and requirements when making this choice. For more 
 
 To connect your domain, you need to create exactly two DNS records: a TXT record that verifies you own the domain, and a routing record (CNAME for subdomains, A for apex domains). You can create them in either order. The routing record differs slightly depending on whether you're using a subdomain or an apex domain, and which data center region you choose.
 
+<!-- LOCALE DRIFT (2026-08): This TXT ownership section (and the related mentions in
+Steps 3–4 and Troubleshooting, plus the 24–48h propagation window) exists only in this
+EN page. The 16 locale copies of setup-guide.md lack the section entirely and still say
+"24 hours". Remove this comment once the locales are re-synced. -->
+
 ### Create the Ownership Verification TXT Record (All Domains)
 
 Your Domain Dashboard lists this record first, before the routing record, and shows the exact Type, Host, and Value to copy.
