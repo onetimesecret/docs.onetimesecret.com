@@ -35,4 +35,4 @@ description: 安全なシークレット共有のためのプラン比較 — �
 ## 近日公開
 
 * Team Plus向けの監査ログとIPベースのアクセスルール
-* [Secretary Links](https://secretlinks.com) — アカウント不要で誰からでも機密情報を安全に受け取れる収集リンク
+* [Secretary Links](https://secretarylinks.com) — アカウント不要で誰からでも機密情報を安全に受け取れる収集リンク

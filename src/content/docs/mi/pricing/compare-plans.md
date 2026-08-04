@@ -36,4 +36,4 @@ Mō ngā utu o nāianei, tēnā haere ki tō mātou [Whārangi Utu](https://onet
 ## Kei te Haere Mai
 
 * Ngā rangitaki tātari me ngā ture urunga ā-IP mō Team Plus
-* [Secretary Links](https://secretlinks.com) — he hononga kohikohi haumaru hei whiwhi kōrero matatapu mai i tētahi tangata noa, kāore he pūkete e hiahiatia ana
+* [Secretary Links](https://secretarylinks.com) — he hononga kohikohi haumaru hei whiwhi kōrero matatapu mai i tētahi tangata noa, kāore he pūkete e hiahiatia ana

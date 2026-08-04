@@ -36,4 +36,4 @@ För aktuella priser, besök gärna vår [prissida](https://onetimesecret.com/pr
 ## Kommer snart
 
 * Granskningsloggar och IP-baserade åtkomstregler för Team Plus
-* [Secretary Links](https://secretlinks.com) — säkra insamlingslänkar för att ta emot känslig information från vem som helst, inget konto krävs
+* [Secretary Links](https://secretarylinks.com) — säkra insamlingslänkar för att ta emot känslig information från vem som helst, inget konto krävs
