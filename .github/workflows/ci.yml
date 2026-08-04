@@ -44,5 +44,17 @@ jobs:
 
       - run: pnpm install
 
+      - name: Check sidebar links
+        run: pnpm run check:nav
+
+      - name: Check orphaned pages
+        run: pnpm run check:orphans
+
+      - name: Check locale configuration
+        run: pnpm run check:locales
+
+      - name: Test
+        run: pnpm test
+
       - name: Build
         run: pnpm run build
