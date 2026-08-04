@@ -307,7 +307,6 @@ description: 为从事 Onetime Secret 中文本地化工作的译员提供的综
 
 ## 参考资料
 
-- [中文语言注释](/zh-cn/translations/language-notes) - 翻译决策和原则的详细说明
 - [词汇表](/zh-cn/translations/glossary) - 标准化术语翻译
 - [Mozilla L10N 风格指南](https://github.com/mozilla-l10n/styleguides/) - 通用本地化指导
 
