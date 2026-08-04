@@ -354,7 +354,7 @@ These changes align the Chinese translation with the style guide's core principl
 This guide was generated from the following source files:
 
 - Universal resources: `/en/translations/universal/`
-- Glossary: `/zh-cn/translations/glossary.md`
-- Language notes: `/zh-cn/translations/language-notes.md`
+- Glossary: `zh-cn/translations/glossary.md`
+- Language notes: `zh-cn/translations/_language-notes.md`
 
 Generated: 2026-03-15

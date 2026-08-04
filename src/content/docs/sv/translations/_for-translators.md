@@ -360,7 +360,7 @@ Prioritize accuracy over casual localization. Use established Swedish technical 
 This guide was generated from the following source files:
 
 - Universal resources: `/en/translations/universal/`
-- Glossary: `/sv/translations/glossary.md`
-- Language notes: `/sv/translations/language-notes.md`
+- Glossary: `sv/translations/glossary.md`
+- Language notes: `sv/translations/_language-notes.md`
 
 Generated: 2026-01-20

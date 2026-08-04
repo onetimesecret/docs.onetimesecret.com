@@ -331,7 +331,7 @@ This consistent terminology distinction helps Bulgarian users better understand 
 This guide was generated from the following source files:
 
 - Universal resources: `/en/translations/universal/`
-- Glossary: `/bg/translations/glossary.md`
-- Language notes: `/bg/translations/language-notes.md`
+- Glossary: `bg/translations/glossary.md`
+- Language notes: `bg/translations/_language-notes.md`
 
 Generated: 2026-01-20

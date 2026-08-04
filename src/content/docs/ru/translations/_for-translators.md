@@ -585,7 +585,7 @@ Russian typically expands 10-25% from English. Check UI constraints:
 This guide was generated from the following source files:
 
 - Universal resources: `/en/translations/universal/`
-- Glossary: `/ru/translations/glossary.md`
-- Language notes: `/ru/translations/language-notes.md`
+- Glossary: `ru/translations/glossary.md`
+- Language notes: `ru/translations/_language-notes.md`
 
 Generated: 2026-01-20

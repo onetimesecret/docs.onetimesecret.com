@@ -32,9 +32,48 @@ export function createRedirectsConfig() {
       ]),
   );
 
+  // Translator notes are now repo-only reference material: the per-locale
+  // language-notes.md and for-translators.md files were renamed with an
+  // underscore prefix so Astro stops routing them, and the EN
+  // language-notes.md template was deleted. Their previously published URLs
+  // redirect to the locale's translations index rather than 404.
+  const translatorNotesRedirects = Object.fromEntries(
+    Object.keys(i18nConfig.locales).flatMap((locale) => [
+      [`/${locale}/translations/language-notes`, `/${locale}/translations/`],
+      // EN never had a for-translators page; the other locales did.
+      ...(locale === i18nConfig.defaultLocale
+        ? []
+        : [
+            [
+              `/${locale}/translations/for-translators`,
+              `/${locale}/translations/`,
+            ],
+          ]),
+    ]),
+  );
+
+  // Content directories that exist under src/content/docs but are not in
+  // i18nConfig.locales. Astro still builds pages for them, so their
+  // translator-note routes were published too and need the same treatment.
+  // They have no translations/index.md, so they land on the EN index instead.
+  // Keys use the lowercased URL form Astro emits (ca_ES -> /ca_es/).
+  const unconfiguredLocaleNoteRedirects = Object.fromEntries(
+    ["ar", "ca_ES", "cs", "el_GR", "he", "hu", "ru", "sl_SI", "vi"].flatMap(
+      (dir) => {
+        const locale = dir.toLowerCase();
+        return [
+          [`/${locale}/translations/language-notes`, `/en/translations/`],
+          [`/${locale}/translations/for-translators`, `/en/translations/`],
+        ];
+      },
+    ),
+  );
+
   return {
     ...trustMergeRedirects,
     ...configGeneratorRedirects,
+    ...translatorNotesRedirects,
+    ...unconfiguredLocaleNoteRedirects,
     "/api": "/en/rest-api/",
     "/rest-api": "/en/rest-api/",
     "/docs/rest-api": "/en/rest-api/",

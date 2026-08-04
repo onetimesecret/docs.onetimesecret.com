@@ -292,7 +292,7 @@ This distinction must be maintained throughout the application to avoid confusio
 This guide was generated from the following source files:
 
 - Universal resources: `/en/translations/universal/`
-- Glossary: `/he/translations/glossary.md`
-- Language notes: `/he/translations/language-notes.md`
+- Glossary: `he/translations/glossary.md`
+- Language notes: `he/translations/_language-notes.md`
 
 Generated: 2026-01-20

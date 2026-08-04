@@ -365,7 +365,7 @@ Den danske oversættelse opretholder:
 This guide was generated from the following source files:
 
 - Universal resources: `/en/translations/universal/`
-- Glossary: `/da/translations/glossary.md`
-- Language notes: `/da/translations/language-notes.md`
+- Glossary: `da/translations/glossary.md`
+- Language notes: `da/translations/_language-notes.md`
 
 Generated: 2026-01-20

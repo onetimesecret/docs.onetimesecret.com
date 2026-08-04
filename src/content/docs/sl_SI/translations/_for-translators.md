@@ -248,7 +248,7 @@ Key points for Slovenian translation:
 This guide was generated from the following source files:
 
 - Universal resources: `/en/translations/universal/`
-- Glossary: `/sl_SI/translations/glossary.md`
-- Language notes: `/sl_SI/translations/language-notes.md`
+- Glossary: `sl_SI/translations/glossary.md`
+- Language notes: `sl_SI/translations/_language-notes.md`
 
 Generated: 2026-01-20

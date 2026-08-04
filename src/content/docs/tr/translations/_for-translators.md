@@ -469,7 +469,7 @@ Special attention was given to maintaining the security-focused terminology in w
 This guide was generated from the following source files:
 
 - Universal resources: `/en/translations/universal/`
-- Glossary: `/tr/translations/glossary.md`
-- Language notes: `/tr/translations/language-notes.md`
+- Glossary: `tr/translations/glossary.md`
+- Language notes: `tr/translations/_language-notes.md`
 
 Generated: 2026-01-20

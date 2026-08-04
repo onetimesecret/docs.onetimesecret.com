@@ -27,6 +27,7 @@ on:
     branches:
       - develop
       - main
+      - "claude/*"
       - "i18n/*"
       - "integration/*"
       - "integrate/*"
