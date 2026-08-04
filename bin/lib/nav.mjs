@@ -72,17 +72,25 @@ export async function sidebarLinks() {
 }
 
 /**
+ * Slug for a content file, from its path relative to the collection root:
+ * strip the extension, then collapse a trailing "/index" to its directory.
+ * The root index page has no directory to collapse into (the regex needs a
+ * leading slash), so it keeps the slug "index".
+ */
+export function fileSlug(relativePath, ext) {
+  return relativePath.replace(ext, "").replace(/\/index$/, "");
+}
+
+/**
  * Slugs of every EN docs page, mirroring Starlight's docsLoader: any DOC_EXT
- * file under src/content/docs/en, basenames starting with "_" excluded,
- * trailing "/index" collapsing to its directory. The root index page has no
- * directory to collapse into, so it keeps the slug "index".
+ * file under src/content/docs/en, basenames starting with "_" excluded.
  */
 export function docsSlugs() {
   const dir = join(repoRoot, "src", "content", "docs", "en");
   const slugs = new Set();
   for (const path of walk(dir)) {
     if (!DOC_EXT.test(path) || basename(path).startsWith("_")) continue;
-    slugs.add(relative(dir, path).replace(DOC_EXT, "").replace(/\/index$/, ""));
+    slugs.add(fileSlug(relative(dir, path), DOC_EXT));
   }
   return slugs;
 }
@@ -94,7 +102,7 @@ export function pagesSlugs() {
   if (!existsSync(dir)) return slugs;
   for (const path of walk(dir)) {
     if (!path.endsWith(".astro")) continue;
-    slugs.add(relative(dir, path).replace(/\.astro$/, "").replace(/\/index$/, ""));
+    slugs.add(fileSlug(relative(dir, path), /\.astro$/));
   }
   return slugs;
 }

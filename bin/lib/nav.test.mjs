@@ -8,7 +8,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 
-import { normalizeLink, parseAllowlist } from "./nav.mjs";
+import { fileSlug, normalizeLink, parseAllowlist, repoRoot } from "./nav.mjs";
 
 describe("normalizeLink", () => {
   it("maps the site root to the index slug", () => {
@@ -70,10 +70,35 @@ describe("parseAllowlist", () => {
     expect(problems).toEqual([]);
   });
 
-  it("resolves repo-relative paths against the repo root", () => {
-    const { entries, problems } = parseAllowlist("config/nav-orphans.allow");
-    expect(problems).toEqual([]);
-    expect(entries.length).toBeGreaterThan(0);
-    expect(entries.every((e) => e.reason.length > 0)).toBe(true);
+  it("resolves repo-relative paths against the repo root, not the cwd", () => {
+    const absolute = parseAllowlist(join(repoRoot, "config/nav-orphans.allow"));
+    const cwd = process.cwd();
+    try {
+      process.chdir(tmpdir());
+      const relative = parseAllowlist("config/nav-orphans.allow");
+      expect(relative.entries).toEqual(absolute.entries);
+    } finally {
+      process.chdir(cwd);
+    }
+  });
+});
+
+describe("fileSlug", () => {
+  const DOC_EXT = /\.(md|mdx|mdoc|markdown)$/;
+
+  it("keeps the root index page at the index slug", () => {
+    expect(fileSlug("index.mdoc", DOC_EXT)).toBe("index");
+    expect(fileSlug("index.md", DOC_EXT)).toBe("index");
+    expect(fileSlug("index.astro", /\.astro$/)).toBe("index");
+  });
+
+  it("collapses a nested index file to its directory", () => {
+    expect(fileSlug("regions/index.mdoc", DOC_EXT)).toBe("regions");
+    expect(fileSlug("a/b/index.mdx", DOC_EXT)).toBe("a/b");
+  });
+
+  it("strips the extension from a non-index page", () => {
+    expect(fileSlug("pricing.md", DOC_EXT)).toBe("pricing");
+    expect(fileSlug("a/b/index-of-things.markdown", DOC_EXT)).toBe("a/b/index-of-things");
   });
 });
