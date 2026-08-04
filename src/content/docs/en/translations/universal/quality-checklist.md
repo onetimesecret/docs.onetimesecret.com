@@ -11,7 +11,7 @@ Before starting your translation:
 
 - [ ] Read the [Translation Style Guide](/en/translations/guide) completely
 - [ ] Review the [Terminology Glossary](/en/translations/glossary) for your target language
-- [ ] Check your locale's language-specific notes (`/{locale}/translations/language-notes`) if available
+- [ ] Check your locale's language-specific notes (`src/content/docs/{locale}/translations/_language-notes.md` in the repository) if available
 - [ ] Identify the source English files you'll be translating
 - [ ] Verify the directory structure for your target locale exists
 
