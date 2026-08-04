@@ -8,30 +8,16 @@
 // page deleted) also fail, so the list cannot rot.
 //
 // Usage: pnpm run check:orphans
-import { existsSync, readFileSync } from "node:fs";
-import { join } from "node:path";
-import { docsSlugs, normalizeLink, repoRoot, sidebarLinks } from "./lib/nav.mjs";
+import { docsSlugs, normalizeLink, parseAllowlist, sidebarLinks } from "./lib/nav.mjs";
 
 const ALLOWLIST = "config/nav-orphans.allow";
-const allowlistPath = join(repoRoot, ALLOWLIST);
 
 const linked = new Set((await sidebarLinks()).map(normalizeLink));
 const docs = docsSlugs();
 const allowed = new Set();
-const problems = [];
+const { entries, problems } = parseAllowlist(ALLOWLIST);
 
-const lines = existsSync(allowlistPath)
-  ? readFileSync(allowlistPath, "utf8").split("\n")
-  : [];
-for (const [i, raw] of lines.entries()) {
-  const line = raw.trim();
-  if (line === "" || line.startsWith("#")) continue;
-  const match = line.match(/^(\S+)\s+#\s*(\S.*)$/);
-  if (!match) {
-    problems.push(`${ALLOWLIST}:${i + 1}: entry needs a trailing "# reason" comment: "${line}"`);
-    continue;
-  }
-  const slug = match[1];
+for (const { value: slug } of entries) {
   allowed.add(slug);
   if (linked.has(slug)) {
     problems.push(`stale allowlist entry "${slug}": now linked from the sidebar — remove it from ${ALLOWLIST}`);

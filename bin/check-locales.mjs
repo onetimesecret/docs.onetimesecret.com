@@ -11,30 +11,16 @@
 // config/unconfigured-locales.allow with a "# reason" comment.
 //
 // Usage: pnpm run check:locales
-import { existsSync, readFileSync } from "node:fs";
-import { join } from "node:path";
-import { configuredLocales, localeDirs, repoRoot } from "./lib/nav.mjs";
+import { configuredLocales, localeDirs, parseAllowlist } from "./lib/nav.mjs";
 
 const ALLOWLIST = "config/unconfigured-locales.allow";
-const allowlistPath = join(repoRoot, ALLOWLIST);
 
 const configured = await configuredLocales();
 const dirs = localeDirs();
 const allowed = new Set();
-const problems = [];
+const { entries, problems } = parseAllowlist(ALLOWLIST);
 
-const lines = existsSync(allowlistPath)
-  ? readFileSync(allowlistPath, "utf8").split("\n")
-  : [];
-for (const [i, raw] of lines.entries()) {
-  const line = raw.trim();
-  if (line === "" || line.startsWith("#")) continue;
-  const match = line.match(/^(\S+)\s+#\s*(\S.*)$/);
-  if (!match) {
-    problems.push(`${ALLOWLIST}:${i + 1}: entry needs a trailing "# reason" comment: "${line}"`);
-    continue;
-  }
-  const locale = match[1];
+for (const { value: locale } of entries) {
   allowed.add(locale);
   if (configured.has(locale)) {
     problems.push(
