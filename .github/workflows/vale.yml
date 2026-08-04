@@ -11,7 +11,9 @@ name: Vale Prose Lint
 on:
   pull_request:
     branches:
+      - develop
       - main
+      - "i18n/*"
       - "integration/*"
       - "integrate/*"
       - "feature/*"

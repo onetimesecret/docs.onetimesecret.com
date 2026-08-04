@@ -5,6 +5,7 @@ name: Claude Code
 on:
   pull_request:
     branches:
+      - "i18n/*"
       - "integration/*"
       - "integrate/*"
       - "feature/*"
