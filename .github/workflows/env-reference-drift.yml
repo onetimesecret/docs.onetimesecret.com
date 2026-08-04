@@ -1,0 +1,56 @@
+# .github/workflows/env-reference-drift.yml
+#
+# The environment-variables page is GENERATED from .env.reference in the
+# onetimesecret app repo — it is not maintained by hand. This guard fails when
+# the committed page no longer matches that source.
+#
+# Why it needs a schedule and not just a pull_request trigger: the source of
+# truth lives in a DIFFERENT repository. A PR here can only go stale by editing
+# the page, which the pull_request trigger catches; but the usual way the page
+# rots is that someone adds a variable over in the app repo and this repo hears
+# nothing about it. That is exactly how the page came to advertise "v0.25" while
+# the app shipped v0.26.3 — three releases of variables missing, silently. The
+# nightly run is what turns that silence into a red build.
+#
+# To fix a failure, from a checkout of the app repo with this repo beside it:
+#
+#     scripts/generate-env-docs.py ../docs.onetimesecret.com
+#
+# then commit the regenerated page here. Never hand-edit between the
+# BEGIN/END GENERATED markers — the next run overwrites it. Content changes
+# belong in .env.reference in the app repo.
+---
+name: Env reference drift
+
+on:
+  pull_request:
+    paths:
+      - 'src/content/docs/en/self-hosting/environment-variables.md'
+      - '.github/workflows/env-reference-drift.yml'
+  schedule:
+    # Nightly, to catch variables added in the app repo.
+    - cron: '17 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  drift:
+    name: page matches .env.reference
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout docs site
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+
+      - name: Checkout onetimesecret (source of truth)
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          repository: onetimesecret/onetimesecret
+          ref: main
+          path: .onetimesecret
+          persist-credentials: false
+
+      - name: Assert the page matches .env.reference
+        run: python3 .onetimesecret/scripts/generate-env-docs.py --check .
