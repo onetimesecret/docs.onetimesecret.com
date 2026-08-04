@@ -54,7 +54,7 @@ command follows it. Each of these was verified against source this session:
 | `:colonels:` auto-promotion (`getting-started.md:93`) | removed from the product | new self-hoster ends up with **no admin account** |
 | "no manual step needed" for password migration (`upgrading-v0-24.md:244`) | `bin/ots customers sync-auth-accounts --run` is required | **every pre-existing user locked out** after upgrade |
 | nginx snippet uses `$proxy_add_x_forwarded_for` (`installation.md:244,253`) | appends rather than overwrites | resolved client IPs become spoofable |
-| three removed `UI_HOMEPAGE_*` vars still published as settable | removed | under the default `DEPRECATED_CONFIG_MODE=strict` a removed key **refuses boot** |
+| two removed `UI_HOMEPAGE_*` vars still published as settable | `UI_HOMEPAGE_TRUSTED_PROXY_DEPTH` and `UI_HOMEPAGE_TRUSTED_IP_HEADER` are removed (`config.rb:198-215` `DEPRECATIONS`); the third the docs list, `UI_HOMEPAGE_DEFAULT_MODE`, never existed in the app | under the default `DEPRECATED_CONFIG_MODE=strict` a removed key **refuses boot** |
 | `team/audit-log.md` says "Status: Planned" | shipped in 0.26.0 and since renamed | advertises an unshipped feature that shipped |
 
 Underneath: `configuration.md` is 636 lines of which **596 are one unbroken YAML fence** with no
@@ -76,9 +76,19 @@ links only the unresolvable parent, leaving all five unreachable from navigation
 ## Finding 2 — 183 features have no page at all
 
 Zero-hit greps across the entire `en/` tree: `TXT` · `passkey` · `DLQ` · `sqlite` · `password reset` ·
-`suppress` · `catalog` · `429` · `Retry-After` · `TRUSTED_PROXY` · `HEALTH_TRUSTED_CIDR` ·
-`STANDALONE_ENTITLEMENTS`. `BRAND` returns two hits, both a URL constant — so the entire
-17-variable branding subsystem plus brand packs is absent.
+`suppress` · `catalog` · `429` · `Retry-After` · `HEALTH_TRUSTED_CIDR` · `STANDALONE_ENTITLEMENTS`.
+`BRAND` returns two hits, both a URL constant — so the entire 17-variable branding subsystem plus brand
+packs is absent.
+
+`TRUSTED_PROXY` was on that list and has been removed from it, but not for the reason Appendix A
+implies, so both halves are worth stating precisely. The trusted-proxy *toggle* is genuinely reachable —
+the Configuration Generator offers it (`presets.ts:175,182`, `trusted_proxy_enabled` →
+`site.network.trusted_proxy.enabled`), which is what Appendix A caught. The trusted-proxy *environment
+variables* are still undocumented: `TRUSTED_PROXY_ENABLED`, `_MODE`, `_HEADER` and `_CIDRS` have no
+occurrence anywhere in `src/`. The one uppercase `TRUSTED_PROXY` hit in the published tree is
+`UI_HOMEPAGE_TRUSTED_PROXY_DEPTH` at `environment-variables.md:330` — a **removed** variable. So the
+grep was wrong on a technicality that makes the underlying finding worse rather than better, and
+"invalidated outright" overstates it in the opposite direction.
 
 The `TXT` result is the most expensive single gap on the site: the product UI presents the
 `_onetime-challenge-*` TXT ownership record **first**, verification cannot complete without it, and
@@ -531,7 +541,11 @@ cheap half of what the SEO argument was protecting, and it costs one fragment pe
 
 Filed as [onetimesecret/onetimesecret#3993](https://github.com/onetimesecret/onetimesecret/issues/3993).
 The defects are code-side, so they leave the docs plan and become app-repo work. All four were
-re-verified against source before filing:
+re-verified against source before filing — which also closes four of the six items
+[`…-self-analysis.md`](./documentation-audit-2026-08-self-analysis.md) Appendix C listed as unverified
+and load-bearing. That verification changed one of them: the DLQ discard is **deliberate**, not silent
+in the sense of accidental, and the audit's original wording overclaimed it in exactly the direction
+that analysis warned about.
 
 | Defect | Evidence | Nature |
 |---|---|---|
