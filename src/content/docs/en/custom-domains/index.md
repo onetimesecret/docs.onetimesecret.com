@@ -24,7 +24,7 @@ Custom Domains allow you to use your own domain name for Onetime Secret links, i
 </div>
 
 
-## Key Benefits
+## Key benefits
 
 1. **Brand Identity**: Share secrets using your own domain name, reinforcing security and professionalism.
 2. **Increased Trust**: Recipients see a familiar domain, boosting their confidence in the shared information.
@@ -33,7 +33,7 @@ Custom Domains allow you to use your own domain name for Onetime Secret links, i
 5. **Seamless Integration**: Create a cohesive experience that aligns with your existing digital presence.
 6. **Regional Flexibility**: Choose from five data center regions (EU, UK, US, CA, NZ) to meet your data locality needs.
 
-## Getting Started
+## Getting started
 
 To set up a Custom Domain:
 
@@ -46,7 +46,7 @@ To set up a Custom Domain:
 
 For detailed instructions, including how to choose the right region, please refer to our [Custom Domain Setup Guide](/en/custom-domains/setup-guide).
 
-## Brand Customization
+## Brand customization
 
 Custom Domain users can personalize their secret sharing interface:
 
@@ -59,9 +59,9 @@ Custom Domain users can personalize their secret sharing interface:
 For detailed branding instructions, see our [Brand Guide](/en/custom-domains/brand-guide).
 
 
-## Important Considerations
+## Important considerations
 
-- Custom Domains are a premium feature available with the Identity plan.
+- Custom Domains are available on every account: Free includes one custom domain, and Identity Plus and Team Plus include unlimited domains. See [Compare plans](/en/pricing/compare-plans).
 - You are responsible for maintaining and renewing your domain registration.
 - Proper SSL/TLS configuration is crucial for security (handled automatically by Onetime Secret).
 - Ensure your chosen domain complies with your organization's branding guidelines.

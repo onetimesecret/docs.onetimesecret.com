@@ -1,19 +1,21 @@
 ---
 title: Shared Dashboard
-description: A team-wide view of domains, members, and activity — part of upcoming team plans.
+description: A team-wide view of domains, members, and activity — a planned capability, not yet available.
 ---
 
-> **Status:** Planned. Team plans for multiple users are on the roadmap
-> ([Compare Plans](/en/pricing/compare-plans)). This page is a placeholder so
-> the documentation has a home as the feature ships.
+> **Status:** Planned. The Shared Dashboard is on the roadmap and has not
+> shipped. Team capabilities are sold on Team Plus — see
+> [Compare plans](/en/pricing/compare-plans) — but the consolidated team-wide
+> view described on this page is not available yet. This page is a placeholder
+> so the documentation has a home as the feature ships.
 
 ## What is the Shared Dashboard?
 
-The Shared Dashboard is a team-wide workspace where members and administrators
-manage shared resources together, rather than each person working from an
-isolated account.
+The Shared Dashboard is a planned team-wide workspace where members and
+administrators would manage shared resources together, rather than each person
+working from an isolated account.
 
-Expected to bring together:
+It is expected to bring together:
 
 - Shared [custom domains](/en/custom-domains) and their settings.
 - Team membership and roles.
@@ -21,11 +23,11 @@ Expected to bring together:
 
 ## Related
 
-- [Compare Plans](/en/pricing/compare-plans) — where team capabilities live.
+- [Compare plans](/en/pricing/compare-plans) — where team capabilities live.
 - [Audit Log](/en/team/audit-log) — the activity record for your team.
 - [Single Sign-On (SSO)](/en/team/sso) — centralized authentication for your team.
 
-## Questions or Need Support?
+## Questions or need support?
 
 We're here to help.
 

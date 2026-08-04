@@ -36,7 +36,7 @@ by [Delano](https://delanotes.com/) — **official client**, actively maintained
 (last commit 2026-06). Supports API v1 (deprecated) and v2, regional domains,
 and custom base URLs. Requires Ruby 3.1+, zero runtime dependencies.
 
-### Usage Example
+### Usage example
 
 ```ruby
 require 'onetime/api'
@@ -61,7 +61,7 @@ puts ret['secret_key']
 by [slashpass](https://github.com/slashpass) — community-maintained (last
 commit 2024-11). Supports a region option (`us` / `eu`).
 
-### Usage Example
+### Usage example
 
 ```python
 from onetimesecret import OneTimeSecretCli
@@ -75,7 +75,7 @@ by [Vladislav Stepanov](https://github.com/utterstep) — **unmaintained** (last
 commit 2019; the example below is Python 2). Uses the deprecated v1 API against
 `onetimesecret.com` only.
 
-### Usage Example
+### Usage example
 
 ```python
 from onetimesecret import OneTimeSecret
@@ -97,7 +97,7 @@ print o.retrieve_secret(secret["secret_key"])
 by [Kyle Dawkins](http://www.shoffle.com/) — **unmaintained** (last release
 0.04, 2012-02). Predates API v2 and regional domains.
 
-### Usage Example
+### Usage example
 
 ```perl
 #!/usr/bin/env perl
@@ -130,7 +130,7 @@ by [Marcin Pawlowski](https://github.com/mpawlowski) — **unmaintained** (last
 commit 2014-06). Takes an instance URL, so it may work self-hosted, but it
 predates API v2.
 
-### Usage Example
+### Usage example
 
 ```java
 OneTimeSecret ots = new OneTimeSecretRestImpl(
@@ -161,7 +161,7 @@ assertEquals(generateResponse.getValue(), retrieveResponse.getValue());
 by [Vladislav Stepanov](https://github.com/utterstep) — **unmaintained** (last
 commit 2018-05). Uses the deprecated v1 API against `onetimesecret.com` only.
 
-### Usage Example
+### Usage example
 
 ```csharp
 # You can use OneTimeSharp in any of your projects which are compatible with .NET (4.0+) or Mono (2.10.8+).
@@ -197,7 +197,7 @@ class Test
 by [Corbalt](https://github.com/corbaltcode/) — community-maintained (last
 commit 2026-05, updated for the `us.onetimesecret.com` host). Includes a CLI.
 
-### Usage Example
+### Usage example
 
 ```go
 import ots "github.com/corbaltcode/go-onetimesecret"
@@ -221,7 +221,7 @@ if err != nil {
 print(secret)
 ```
 
-### Usage Example as CLI
+### Usage example as CLI
 
 ```bash
 $ go install github.com/corbaltcode/go-onetimesecret/cmd/ots@latest
@@ -249,7 +249,7 @@ flsdlaun6hwczqu9utmc0vts5xj9xu1
 by [Emídio Neto](https://github.com/emdneto) — community-maintained (last
 release v1.1.0, 2024-03). Regional-domain support not documented.
 
-### Usage Example
+### Usage example
 
 ```go
 // Build a new client
@@ -278,7 +278,7 @@ by [Craig Gumbley](https://www.helloitscraig.co.uk) — **unmaintained** (last
 release 2021-06). Supports a custom `-BaseUrl`, so it can point at a region or
 self-hosted instance, but it predates API v2.
 
-### Usage Example
+### Usage example
 
 ```powershell
 # Install from the PowerShell gallery
@@ -307,7 +307,7 @@ by [Eric Engstrom](https://eengstrom.github.io/) — **unmaintained** (last
 commit 2020-05). Supports a custom host via `ots_set_host`, but predates API
 v2 and regional domains.
 
-### Usage Example as Scripting API
+### Usage example as scripting API
 
 ```bash
 # source for use anonymously (secrets created anonymously)
@@ -354,7 +354,7 @@ ots_state $KEY
 ots_burn $KEY
 ```
 
-### Usage Example as CLI
+### Usage example as CLI
 
 ```bash
 # Share a secret (from stdin

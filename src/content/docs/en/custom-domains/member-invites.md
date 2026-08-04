@@ -29,11 +29,11 @@ Typical uses include:
 
 ## Related features
 
-- [Shared Dashboard](/en/team/shared-dashboard) — the team-wide view members work from on Team Plus.
+- [Shared Dashboard](/en/team/shared-dashboard) — the planned team-wide view for members.
 - [Single Sign-On (SSO)](/en/team/sso) — centralize how members authenticate.
 - [Compare Plans](/en/pricing/compare-plans) — member limits by tier.
 
-## Questions or Need Support?
+## Questions or need support?
 
 We're here to help.
 

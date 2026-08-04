@@ -3,9 +3,11 @@ title: Single Sign-On (SSO)
 description: Connect Onetime Secret to your identity provider so your team signs in with their existing corporate credentials.
 ---
 
-> **Status:** This page is a work in progress. SSO is part of our team-oriented
-> capabilities. The interactive demos linked below are live today and walk
-> through real authentication flows step by step.
+SSO is available on Team Plus ([Compare plans](/en/pricing/compare-plans)).
+
+> **Note:** Provider-by-provider setup guides are still being written. The
+> overview below covers the shape of an integration, and the interactive demos
+> further down walk through real authentication flows step by step.
 
 ## What is SSO?
 
@@ -48,7 +50,7 @@ application:
 - [Signin Settings](/en/custom-domains/signin-settings) — require SSO for sign-in on a custom domain.
 - [Signup Settings](/en/custom-domains/signup-settings) — control who can onboard.
 
-## Questions or Need Support?
+## Questions or need support?
 
 We're here to help.
 

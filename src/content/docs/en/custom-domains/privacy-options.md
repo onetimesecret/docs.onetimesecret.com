@@ -29,7 +29,7 @@ rather than exposing more than you intend.
 - [Incoming Secrets](/en/custom-domains/incoming-secrets) — collect secrets from others through your domain.
 - [Our Principles: Privacy First](/en/principles/privacy-first) — the philosophy behind these controls.
 
-## Questions or Need Support?
+## Questions or need support?
 
 We're here to help.
 

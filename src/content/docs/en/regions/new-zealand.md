@@ -10,7 +10,7 @@ description: Onetime Secret's Aotearoa New Zealand data center region, located i
 - **Hosting provider**: <a href="https://catalystcloud.nz" target="_blank" rel="noopener noreferrer nofollow">Catalyst Cloud</a>
 - **Custom domain CNAME**: `identity.nz.onetime.co`
 
-## Custom Domain DNS
+## Custom domain DNS
 
 To point a custom domain at this region, create a CNAME record:
 
@@ -20,7 +20,7 @@ To point a custom domain at this region, create a CNAME record:
 
 See the [Custom Domain Setup Guide](/en/custom-domains/setup-guide) for full instructions.
 
-## Regulatory Environment
+## Regulatory environment
 
 New Zealand's data protection framework is governed by the **Privacy Act 2020**, which replaced the Privacy Act 1993. The Act establishes thirteen information privacy principles that apply to agencies handling personal information.
 
@@ -35,7 +35,7 @@ This region is hosted by <a href="https://catalystcloud.nz" target="_blank" rel=
 - New Zealand holds an adequacy decision from the European Commission, facilitating data transfers with the EU
 - The Act applies to overseas agencies that carry on business in New Zealand
 
-## When to Consider This Region
+## When to consider this region
 
 - Your organization or users are primarily based in New Zealand or the Pacific region
 - You need to comply with the New Zealand Privacy Act 2020

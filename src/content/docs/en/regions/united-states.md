@@ -10,7 +10,7 @@ description: Onetime Secret's United States data center region, located in Hills
 - **Hosting provider**: <a href="https://www.hetzner.com" target="_blank" rel="noopener noreferrer nofollow">Hetzner</a>
 - **Custom domain CNAME**: `identity.us.onetime.co`
 
-## Custom Domain DNS
+## Custom domain DNS
 
 To point a custom domain at this region, create a CNAME record:
 
@@ -20,7 +20,7 @@ To point a custom domain at this region, create a CNAME record:
 
 See the [Custom Domain Setup Guide](/en/custom-domains/setup-guide) for full instructions.
 
-## Regulatory Environment
+## Regulatory environment
 
 The United States does not have a single comprehensive federal data protection law. Instead, data protection is addressed through a combination of federal and state laws that apply to specific sectors or types of data.
 
@@ -35,7 +35,7 @@ This region is hosted by <a href="https://www.hetzner.com" target="_blank" rel="
 - Other states including Virginia, Colorado, Connecticut, and Utah have enacted comprehensive privacy legislation
 - Oregon, where this data center is located, enacted the **Oregon Consumer Privacy Act** effective July 2024
 
-## When to Consider This Region
+## When to consider this region
 
 - Your organization or users are primarily based in the United States
 - You need to comply with US federal or state data protection laws

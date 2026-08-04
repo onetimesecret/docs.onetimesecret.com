@@ -10,7 +10,7 @@ description: Onetime Secret's European Union data center region, located in Nure
 - **Hosting provider**: <a href="https://www.hetzner.com" target="_blank" rel="noopener noreferrer nofollow">Hetzner</a>
 - **Custom domain CNAME**: `identity.eu.onetime.co`
 
-## Custom Domain DNS
+## Custom domain DNS
 
 To point a custom domain at this region, create a CNAME record:
 
@@ -20,7 +20,7 @@ To point a custom domain at this region, create a CNAME record:
 
 See the [Custom Domain Setup Guide](/en/custom-domains/setup-guide) for full instructions.
 
-## Regulatory Environment
+## Regulatory environment
 
 The EU region operates under the **General Data Protection Regulation (GDPR)**, one of the most comprehensive data protection frameworks in the world. Germany, as the hosting country, also applies the **Bundesdatenschutzgesetz (BDSG)** which supplements the GDPR.
 
@@ -35,7 +35,7 @@ This region is hosted by <a href="https://www.hetzner.com" target="_blank" rel="
 - The German Federal Commissioner for Data Protection and Freedom of Information (BfDI) serves as a supervisory authority
 - Strict rules on international data transfers outside the EU/EEA
 
-## When to Consider This Region
+## When to consider this region
 
 - Your organization or users are primarily based in the EU or EEA
 - You need to comply with GDPR requirements

@@ -35,10 +35,10 @@ Account and security events (such as logins and SSO changes) are a separate plan
 ## Related
 
 - [Compare Plans](/en/pricing/compare-plans) — where team capabilities live.
-- [Shared Dashboard](/en/team/shared-dashboard) — the team-wide view of your organization's secrets.
+- [Shared Dashboard](/en/team/shared-dashboard) — the planned team-wide view of your organization's shared resources.
 - [Single Sign-On (SSO)](/en/team/sso) — centralized authentication for your team.
 
-## Questions or Need Support?
+## Questions or need support?
 
 We're here to help.
 

@@ -14,7 +14,7 @@ description: Onetime Secret's Canadian data center region, located in Toronto.
 We are a Canadian company and are actively looking for a suitable Canadian-owned hosting provider for this region. If you have suggestions, we'd love to hear from you via our [feedback form](https://onetimesecret.com/feedback).
 :::
 
-## Custom Domain DNS
+## Custom domain DNS
 
 To point a custom domain at this region, create a CNAME record:
 
@@ -24,7 +24,7 @@ To point a custom domain at this region, create a CNAME record:
 
 See the [Custom Domain Setup Guide](/en/custom-domains/setup-guide) for full instructions.
 
-## Regulatory Environment
+## Regulatory environment
 
 Canada's federal privacy legislation, the **Personal Information Protection and Electronic Documents Act (PIPEDA)**, governs the collection, use, and disclosure of personal information in the course of commercial activity. Several provinces also maintain their own privacy legislation that may apply.
 
@@ -39,7 +39,7 @@ This region is hosted by <a href="https://www.digitalocean.com" target="_blank" 
 - Canada holds an adequacy decision from the European Commission, facilitating data transfers with the EU
 - Provincial laws (e.g., Alberta's PIPA, Quebec's Law 25) may impose additional requirements
 
-## When to Consider This Region
+## When to consider this region
 
 - Your organization or users are primarily based in Canada
 - You need to comply with PIPEDA or provincial privacy legislation

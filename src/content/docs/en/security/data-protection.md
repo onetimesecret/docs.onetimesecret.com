@@ -53,7 +53,7 @@ replace your own controls, policies, and legal review.
 For organizations with strict data-control requirements, [self-hosting](https://github.com/onetimesecret/onetimesecret)
 keeps everything within your own infrastructure.
 
-## Questions or Need Support?
+## Questions or need support?
 
 We're here to help.
 

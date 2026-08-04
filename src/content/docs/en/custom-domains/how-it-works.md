@@ -3,14 +3,16 @@ title: How do they work?
 description: Custom Domains allow you to host secret sharing under your own domain name, with DNS configuration in any of our data center regions and optional brand customization features.
 ---
 
-## Your Brand, Our Security
+## Your brand, our security
 
-By leveraging Custom Domains, you're not just sharing secrets; you're reinforcing your brand, enhancing trust, and ensuring data locality compliance with every interaction. Upgrade to the Identity plan today to unlock this powerful feature and take your secret sharing to the next level.
+With Custom Domains, secret links carry your own domain name instead of onetimesecret.com. Recipients see an address they already recognize, and the secret is served from the data center region you selected for that domain.
+
+Every account includes at least one custom domain: Free includes one, and Identity Plus and Team Plus include unlimited domains. See [Compare plans](/en/pricing/compare-plans) for what each plan covers.
 
 <img src="/img/docs/custom-domains/branded-homepage-enabled.png" alt="Custom domain settings" width="600" />
 
 
-## How Custom Domains Work
+## How Custom Domains work
 
 1. You register a domain or use one you already own.
 2. Choose your preferred data center region (EU, UK, US, CA, or NZ).
@@ -20,7 +22,7 @@ By leveraging Custom Domains, you're not just sharing secrets; you're reinforcin
 6. [Customize your domain's appearance](/en/custom-domains/brand-guide) with logos and brand colors through the admin interface.
 
 
-## Troubleshooting Common Setup Issues
+## Troubleshooting common setup issues
 
 - **DNS Propagation**: Changes may take up to 24–48 hours to fully propagate. Be patient and try again later if verification fails initially.
 - **Incorrect DNS Records**: Double-check your DNS settings against the provided instructions for your chosen region.

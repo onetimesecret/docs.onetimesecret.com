@@ -25,7 +25,7 @@ Typical uses include:
 - [Single Sign-On (SSO)](/en/team/sso) — connect your identity provider so people sign in with their existing corporate accounts.
 - [Privacy Options](/en/custom-domains/privacy-options) — broader controls over visitor behavior on your domain.
 
-## Questions or Need Support?
+## Questions or need support?
 
 We're here to help.
 

@@ -9,7 +9,7 @@ description: Welcome to Onetime Secret's guide on Secret Links, a core feature o
 
 Secret Links are unique, self-destructing URLs that allow you to share sensitive information securely. Each link can only be accessed once before it disappears forever, ensuring your shared data remains confidential and doesn't linger online.
 
-## How Secret Links Work
+## How Secret Links work
 
 1. You create a secret message on our platform.
 2. We generate a unique, encrypted link for that message.
@@ -17,14 +17,14 @@ Secret Links are unique, self-destructing URLs that allow you to share sensitive
 4. The recipient opens the link to view the message.
 5. After viewing, the link and its content are permanently destroyed.
 
-## Key Benefits
+## Key benefits
 
 - **Onetime Use**: Each link works only once, preventing unauthorized access.
 - **Automatic Destruction**: Content is deleted after viewing, leaving no digital trace.
 - **Secure Sharing**: Ideal for passwords, private messages, and other sensitive data.
 - **Simple and User-Friendly**: No account required for basic use.
 
-## Use Cases
+## Use cases
 
 Secret Links are perfect for:
 
@@ -32,7 +32,7 @@ Secret Links are perfect for:
 - Sending confidential information to colleagues
 - Transmitting sensitive personal data
 
-## Getting Started
+## Getting started
 
 To create your first Secret Link, visit [onetimesecret.com](https://onetimesecret.com) and follow the simple steps on our homepage.
 

@@ -5,7 +5,7 @@ description: Why we limit email communication to only what's necessary
 
 We take a deliberately minimal approach to user communication, out of respect for your time and your inbox.
 
-## Our Minimal-Email Philosophy
+## Our minimal-email philosophy
 
 Most services flood your inbox with marketing newsletters, usage statistics, promotional offers, and re-engagement campaigns. We don't do any of that. You'll only hear from us for the service you're using, notices we're obligated to send, or updates you opted into.
 
@@ -17,7 +17,7 @@ Every email we send falls into one of three categories:
 
 No email we send contains tracking pixels or click-tracking links. We don't know whether you opened an email or what you clicked, and we like it that way. Your inbox belongs to you.
 
-## Why This Matters
+## Why this matters
 
 A privacy tool shouldn't behave like a marketing platform. By keeping our communications minimal:
 

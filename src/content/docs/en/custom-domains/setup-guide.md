@@ -8,14 +8,14 @@ description: This guide will walk you through the process of setting up a custom
 - An active Onetime Secret account with custom domain feature enabled
 - A domain you own and can manage DNS settings for
 
-## Understanding Domain Types
+## Understanding domain types
 
 Before setting up your custom domain, it's important to understand the difference between subdomains and apex domains:
 
 1. **Subdomain**: A subdivision of your main domain (e.g., secrets.yourdomain.com)
 2. **Apex Domain**: The root domain itself (e.g., yourdomain.com)
 
-## Choose Your Region
+## Choose your region
 
 Onetime Secret offers multiple data center regions: EU, UK, US, CA, and NZ. When setting up your custom domain, you'll need to choose which region you prefer for storing your data. This choice is important for several reasons:
 
@@ -24,7 +24,7 @@ Onetime Secret offers multiple data center regions: EU, UK, US, CA, and NZ. When
 
 Consider your specific needs and requirements when making this choice. For more detailed information about our data center regions and how to choose the right one for your needs, please refer to our [Data Center Regions](/en/regions) guide.
 
-## Step 1: Access Domains Dashboard
+## Step 1: Access domains dashboard
 
 1. Log in to your Onetime Secret account
 2. Navigate to Dashboard > Custom Domains
@@ -32,7 +32,7 @@ Consider your specific needs and requirements when making this choice. For more 
 
 <img src="/img/docs/custom-domains/3-Custom-domains.png" alt="Custom domains view" width="400" />
 
-## Step 2: Enter Your Domain
+## Step 2: Enter your domain
 
 1. In the custom domain settings, enter your desired domain (e.g., secrets.yourdomain.com or yourdomain.com)
 2. Click "Add Domain" or equivalent button to proceed
@@ -42,7 +42,7 @@ ownership-verification TXT record section to this EN page and widens the propaga
 window to 24–48h. The 16 locale copies of setup-guide.md lack that section and still
 say "24 hours". Remove this comment once the locales are re-synced. -->
 
-## Step 3: Configure DNS Settings
+## Step 3: Configure DNS settings
 
 To connect your domain, you need to create exactly two DNS records: a TXT record that verifies you own the domain, and a routing record (CNAME for subdomains, A for apex domains). You can create them in either order. The routing record differs slightly depending on whether you're using a subdomain or an apex domain, and which data center region you choose.
 
@@ -51,7 +51,7 @@ Steps 3–4 and Troubleshooting, plus the 24–48h propagation window) exists on
 EN page. The 16 locale copies of setup-guide.md lack the section entirely and still say
 "24 hours". Remove this comment once the locales are re-synced. -->
 
-### Create the Ownership Verification TXT Record (All Domains)
+### Create the ownership verification TXT record (all domains)
 
 Your Domain Dashboard lists this record first, before the routing record, and shows the exact Type, Host, and Value to copy.
 
@@ -68,7 +68,7 @@ Registrars display record hosts differently: some expect just the label (and app
 
 Ownership verification cannot complete without this record, and it must stay in place after verification — do not remove it.
 
-### For Subdomains (Recommended)
+### For subdomains (recommended)
 
 1. Access your domain's DNS management panel (through your domain registrar or DNS provider)
 2. Create a CNAME record with the following details:
@@ -81,7 +81,7 @@ Ownership verification cannot complete without this record, and it must stay in 
      - For US region: identity.us.onetime.co
 3. Remove any existing A, AAAA, or CNAME records for the same subdomain — but keep the TXT ownership record
 
-### For Apex Domains
+### For apex domains
 
 1. Access your domain's DNS management panel
 2. Create or modify an A record with the following details:
@@ -95,23 +95,23 @@ Important: Ensure there are no conflicting A, AAAA, or CNAME records for the dom
 
 <img src="/img/docs/custom-domains/4-Custom-domain-settings.png" alt="Custom domain settings" width="400" />
 
-### More Info
+### More info
 
-#### Why CNAME for Subdomains?
+#### Why CNAME for subdomains?
 
 We recommend using CNAME records for subdomains because:
 
 1. They're more flexible and allow us to change our server IP addresses without requiring you to update your DNS settings.
 2. They automatically adapt to any changes we make to our infrastructure.
 
-#### Why A Records for Apex Domains?
+#### Why A records for apex domains?
 
 Apex domains cannot use CNAME records due to DNS standards. Therefore, we must use A records, which have some limitations:
 
 1. If we change our IP address (which is rare), you'll need to update your DNS settings manually.
 2. They don't automatically adapt to changes in our infrastructure.
 
-## Step 4: Verify Domain and Wait for SSL
+## Step 4: Verify domain and wait for SSL
 
 1. After creating both DNS records, return to the Onetime Secret custom domain page
 2. Press the "Verify" button to check your records right away — verification also re-runs automatically about every 30 minutes
@@ -124,7 +124,7 @@ Note: a correct CNAME or A record alone will never verify. SSL may already be is
 For a closer look at the verification lifecycle, what each domain status means,
 and how to resolve a failed check, see [DNS Validation](/en/custom-domains/dns-validation).
 
-## Step 5: Confirm Setup
+## Step 5: Confirm setup
 
 Once setup is complete, you should see the following information:
 
@@ -140,12 +140,12 @@ Once setup is complete, you should see the following information:
 - Ensure you've removed any conflicting records (but never the TXT ownership record)
 - DNS propagation can take up to 24–48 hours, though it's usually much faster
 
-## Using Your Custom Domain
+## Using your custom domain
 
 Once active, your secret links will use your custom domain. For example:
 `https://secrets-example.onetime.dev/secret/abc123`
 
-## We've Got You Covered
+## We've got you covered
 
 We handle the rest of the technical details so you don't have to.
 
@@ -156,7 +156,7 @@ For those who like to stay informed, you can easily check the health of your dom
 
 - Simply look at the "Last Monitored" timestamp in your dashboard to confirm ongoing connectivity
 
-## Questions or Need Support?
+## Questions or need support?
 
 We're here to help. If you have any questions or need assistance:
 

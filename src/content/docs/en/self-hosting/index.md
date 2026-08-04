@@ -16,7 +16,7 @@ The current stable release is **v0.26** (the `main` branch). It runs in two mode
 If you are coming from v0.22 or v0.23, follow the [Upgrading to v0.24+](./upgrading-v0-24) guide, which covers the configuration and data-model changes and how to pick an auth mode.
 :::
 
-## Why Self-Host?
+## Why self-host?
 
 Self-hosting Onetime Secret gives you:
 
@@ -25,11 +25,11 @@ Self-hosting Onetime Secret gives you:
 - **Compliance** - Meet regulatory requirements for data handling
 - **Custom branding** - Customize the interface for your organization
 
-## Quick Start Options
+## Quick start options
 
 Choose the deployment method that best fits your environment:
 
-### Docker (Recommended)
+### Docker (recommended)
 ```bash
 # Start Redis and Onetime Secret
 docker run -p 6379:6379 -d redis:bookworm
@@ -41,12 +41,12 @@ docker run -p 3000:3000 -d \
 
 Access at `http://localhost:3000`.
 
-### Manual Installation
+### Manual installation
 For production environments requiring custom configurations.
 
 See our [Installation & Deployment](./installation) guide for detailed steps.
 
-## What's Included
+## What's included
 
 Your self-hosted instance includes:
 
@@ -56,7 +56,7 @@ Your self-hosted instance includes:
 - **Custom domains** - Use your own domain and branding
 
 
-## System Requirements
+## System requirements
 
 **Recommended:**
 - 2+ CPU cores
@@ -65,7 +65,7 @@ Your self-hosted instance includes:
 - Redis for session storage
 - Node.js 22+ (for development)
 
-## Next Steps
+## Next steps
 
 1. **[Getting Started](./getting-started)** - Step-by-step setup guide
 2. **[Installation & Deployment](./installation)** - Detailed deployment options

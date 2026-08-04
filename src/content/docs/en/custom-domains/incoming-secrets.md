@@ -3,10 +3,12 @@ title: Incoming Secrets
 description: Let customers, clients, and colleagues send secrets directly to your team through a destination page on your custom domain.
 ---
 
-> **Status:** This page is a work in progress. Incoming Secrets is part of the
-> roadmap for receiving sensitive information on your custom domain. The summary
-> below describes the intended behavior; detailed setup steps will follow as the
-> feature ships.
+Incoming Secrets is available on every signed-in plan — Free, Identity Plus, and
+Team Plus ([Compare plans](/en/pricing/compare-plans)). It runs on a verified
+[custom domain](/en/custom-domains), so set your domain up first.
+
+> **Note:** Detailed, screenshot-driven setup steps are still being written. The
+> overview below describes how the feature works today.
 
 ## What are Incoming Secrets?
 
@@ -36,7 +38,7 @@ distribute it, for example:
 - [Privacy Options](/en/custom-domains/privacy-options) — tune what visitors can and cannot do on your domain.
 - [Custom Domains Overview](/en/custom-domains) — the foundation these features build on.
 
-## Questions or Need Support?
+## Questions or need support?
 
 We're here to help.
 

@@ -10,7 +10,7 @@ description: Onetime Secret's United Kingdom data center region, located in Lond
 - **Hosting provider**: <a href="https://upcloud.com" target="_blank" rel="noopener noreferrer nofollow">UpCloud</a> (Helsinki, Finland)
 - **Custom domain CNAME**: `identity.ingress.onetime.co` (anycast)
 
-## Custom Domain DNS
+## Custom domain DNS
 
 To point a custom domain at this region, create a CNAME record:
 
@@ -22,7 +22,7 @@ Note that the UK region uses an anycast CNAME rather than a region-specific subd
 
 See the [Custom Domain Setup Guide](/en/custom-domains/setup-guide) for full instructions.
 
-## Regulatory Environment
+## Regulatory environment
 
 The United Kingdom's data protection framework is governed by the **UK General Data Protection Regulation (UK GDPR)** and the **Data Protection Act 2018**. Post-Brexit, the UK maintains its own data protection regime that is closely aligned with the EU GDPR.
 
@@ -37,7 +37,7 @@ This region is hosted by <a href="https://upcloud.com" target="_blank" rel="noop
 - The UK has an adequacy decision from the European Commission, allowing data to flow freely from the EU/EEA
 - The Data Protection Act 2018 supplements the UK GDPR with provisions specific to UK law enforcement and intelligence services
 
-## When to Consider This Region
+## When to consider this region
 
 - Your organization or users are primarily based in the United Kingdom
 - You need to comply with UK GDPR and the Data Protection Act 2018

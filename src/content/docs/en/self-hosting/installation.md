@@ -7,9 +7,9 @@ sidebar:
 
 This guide covers deployment options for self-hosted Onetime Secret instances.
 
-## Deployment Options
+## Deployment options
 
-### Docker Deployment
+### Docker deployment
 
 Docker provides the most reliable and portable deployment method.
 
@@ -67,11 +67,11 @@ HOST=your-domain.com
 SSL=true
 ```
 
-### Manual Installation
+### Manual installation
 
 For environments requiring custom configurations or existing infrastructure.
 
-#### Installing Dependencies
+#### Installing dependencies
 
 :::caution[System Ruby is too old]
 Default system packages on most Linux distributions provide Ruby 3.1 or older, which is **not sufficient**. Onetime Secret requires **Ruby 3.4+**. Use a version manager like [rbenv](https://github.com/rbenv/rbenv) or [mise](https://mise.jdx.dev/) to install the correct version.
@@ -132,7 +132,7 @@ sudo systemctl enable redis
 sudo systemctl start redis
 ```
 
-#### Application Setup
+#### Application setup
 
 ```bash
 # Create application user
@@ -159,7 +159,7 @@ cp ./etc/defaults/config.defaults.yaml ./etc/config.yaml
 git rev-parse --short HEAD > .commit_hash.txt
 ```
 
-#### Starting the Application
+#### Starting the application
 
 **Using the Procfile runner (simplest):**
 ```bash
@@ -180,7 +180,7 @@ bundle exec puma -C etc/puma.rb
 Thin is no longer used — Puma is the only web server, configured via `etc/puma.rb`. Workers and scheduler run as separate processes (`bin/ots worker`, `bin/ots scheduler`) rather than threads in the web process. In simple mode (`AUTHENTICATION_MODE=simple`), only the web process is needed. The worker and scheduler are required for full authentication mode (PostgreSQL + RabbitMQ).
 :::
 
-#### Systemd Service (Production)
+#### Systemd service (production)
 
 The repository includes example systemd unit files for all processes:
 
@@ -197,7 +197,7 @@ sudo systemctl enable --now onetimesecret-web
 sudo systemctl enable --now onetimesecret-worker onetimesecret-scheduler
 ```
 
-## Reverse Proxy Configuration
+## Reverse proxy configuration
 
 These configuration examples can help you get started, but you should adjust them to fit your specific needs.
 
@@ -342,7 +342,7 @@ your-domain.com {
 </VirtualHost>
 ```
 
-## SSL/TLS Configuration
+## SSL/TLS configuration
 
 ### Let's Encrypt (Certbot)
 
@@ -373,7 +373,7 @@ sudo certbot certonly --webroot -w /var/www/html -d your-domain.com
 echo "0 12 * * * /usr/bin/certbot renew --quiet" | sudo tee -a /etc/crontab
 ```
 
-### Custom SSL Certificates
+### Custom SSL certificates
 
 Place your certificates and update paths in proxy configuration:
 
@@ -388,7 +388,7 @@ sudo chmod 644 /etc/ssl/certs/your-domain.com.crt
 ```
 
 
-### Redis Configuration
+### Redis configuration
 
 **Option 1: Memory-only (never save to disk for maximum security):**
 
@@ -450,7 +450,7 @@ Choose based on your security vs. backup requirements.
 sudo systemctl restart redis
 ```
 
-#### Redis Backups
+#### Redis backups
 
 **Redis:**
 ```bash
@@ -468,7 +468,7 @@ redis-cli -a "$REDIS_PASSWORD" --rdb $BACKUP_DIR/redis_$DATE.rdb
 find $BACKUP_DIR -name "redis_*.rdb" -mtime +7 -delete
 ```
 
-## Next Steps
+## Next steps
 
 After successful deployment:
 

@@ -6,11 +6,11 @@ Onetime Secret uses a [share-nothing architecture](/en/regions) across all five 
 
 This means changing your region is less of a "migration" and more of setting up fresh in your preferred region. The good news: it takes about two minutes, and your subscription carries over automatically.
 
-## Free Accounts
+## Free accounts
 
 Navigate directly to your preferred region (see [Available Regions](/en/regions#available-regions) for the full list) and create a new account with the same email address. That's it — your new account is ready to use immediately.
 
-## Paid Accounts (Identity Plus)
+## Paid accounts (Identity Plus)
 
 The process is the same as free accounts, with one extra step:
 
@@ -21,7 +21,7 @@ The process is the same as free accounts, with one extra step:
 
 You may need to refresh the page once for the subscription to sync up. This works because we keep data separate between regions while your billing relationship is managed through Stripe, which recognizes your email address across regions.
 
-## What Happens to Your Old Account
+## What happens to your old account
 
 Your previous region account remains fully functional:
 
@@ -29,7 +29,7 @@ Your previous region account remains fully functional:
 - Your account stays active in case you need to reference anything
 - No action is required on the old account unless you want to close it
 
-## Custom Domain Migration
+## Custom domain migration
 
 If you have a custom domain configured on your current region, the process requires a bit more planning. Because your existing secret links use your custom domain's DNS records, you can't simply point the domain at the new region without breaking links that haven't been viewed yet.
 
@@ -55,11 +55,11 @@ The maximum time-to-live (TTL) for a secret is 30 days. Waiting this period ensu
 
 If you know that all your existing secrets have shorter TTLs or have already been viewed, you can make the switch sooner.
 
-## Accounts Without Custom Domains
+## Accounts without custom domains
 
 If you don't use a custom domain, the switch is immediate. Your old links (using the regional onetimesecret.com URLs like `eu.onetimesecret.com/secret/abcd1234`) will continue to resolve correctly regardless of which region your active account is in.
 
-## Multiple Regions
+## Multiple regions
 
 You can maintain accounts in multiple regions simultaneously. All accounts using the same email address share the same subscription status. This can be useful if you serve users in different geographic areas and want to minimize latency or meet data residency requirements.
 

@@ -41,7 +41,7 @@ disable the homepage entirely.
 - [Incoming Secrets](/en/custom-domains/incoming-secrets) — let people send secrets _to_ you, rather than create their own.
 - [Privacy Options](/en/custom-domains/privacy-options) — additional controls over what visitors can do.
 
-## Questions or Need Support?
+## Questions or need support?
 
 We're here to help.
 

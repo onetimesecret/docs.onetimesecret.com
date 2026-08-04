@@ -34,7 +34,7 @@ working reliably; specifics will be documented here as the feature ships.
 - [Custom Domains Overview](/en/custom-domains) — the domain these emails are sent from.
 - [Compare Plans](/en/pricing/compare-plans) — where this feature sits across tiers.
 
-## Questions or Need Support?
+## Questions or need support?
 
 We're here to help.
 
