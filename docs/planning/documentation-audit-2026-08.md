@@ -59,8 +59,11 @@ copy-drift with better writing, only by deleting the copy** — which is why the
 generated reference.
 
 Two live navigation defects found while mapping: `sidebar.mjs:217` links a path with no backing
-content-collection file, and `sidebar.mjs:255` links `translations/universal`, whose only file is
-`_index.md` — which Astro content collections skip.
+content-collection file, and `sidebar.mjs:251` links `translations/universal`, whose landing page is
+named `_index.md` — and Astro content collections skip underscore-prefixed files, so the section has no
+index to resolve to. Its five sibling guidance pages (`voice-and-tone.md`, `quality-checklist.md`,
+`brand-terms.md`, `secret-concept.md`, `password-passphrase.md`) do exist and do build, but the sidebar
+links only the unresolvable parent, leaving all five unreachable from navigation.
 
 ---
 
