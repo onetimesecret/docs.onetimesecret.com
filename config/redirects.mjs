@@ -21,8 +21,20 @@ export function createRedirectsConfig() {
     ]),
   );
 
+  // The configuration generator is an interactive page (src/pages) that only
+  // exists in English, so non-EN sidebar links redirect to the EN page.
+  const configGeneratorRedirects = Object.fromEntries(
+    Object.keys(i18nConfig.locales)
+      .filter((locale) => locale !== i18nConfig.defaultLocale)
+      .map((locale) => [
+        `/${locale}/self-hosting/configuration-generator`,
+        `/en/self-hosting/configuration-generator`,
+      ]),
+  );
+
   return {
     ...trustMergeRedirects,
+    ...configGeneratorRedirects,
     "/api": "/en/rest-api/",
     "/rest-api": "/en/rest-api/",
     "/docs/rest-api": "/en/rest-api/",
