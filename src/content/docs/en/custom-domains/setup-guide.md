@@ -37,6 +37,11 @@ Consider your specific needs and requirements when making this choice. For more 
 1. In the custom domain settings, enter your desired domain (e.g., secrets.yourdomain.com or yourdomain.com)
 2. Click "Add Domain" or equivalent button to proceed
 
+<!-- LOCALE DRIFT (2026-08): PR #392 (claude/audit-txt-verification-step) adds an
+ownership-verification TXT record section to this EN page and widens the propagation
+window to 24–48h. The 16 locale copies of setup-guide.md lack that section and still
+say "24 hours". Remove this comment once the locales are re-synced. -->
+
 ## Step 3: Configure DNS Settings
 
 To connect your domain, you need to update your DNS settings. The process differs slightly depending on whether you're using a subdomain or an apex domain, and which data center region you choose.
