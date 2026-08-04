@@ -285,7 +285,6 @@ These resources apply across all languages:
 
 - **[Translation Overview](/en/translations/)** - Introduction and available languages
 - **[Terminology Glossary](/en/translations/glossary)** - Standardized translations for key terms across languages
-- **[Language-Specific Notes](/en/translations/language-notes)** - Special considerations for specific languages
 
 ### Submission Guidelines
 
