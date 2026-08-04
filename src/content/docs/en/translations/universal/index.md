@@ -44,6 +44,6 @@ These universal resources document proven approaches from multiple language team
 After reviewing universal guidance, consult the locale-specific resources:
 
 - **[Glossary](/en/translations/glossary)** - Standardized term translations per language
-- **Language Notes** - Language-specific rules and exceptions, available at `/{locale}/translations/language-notes` for locales that have them
+- **Language Notes** - Language-specific rules and exceptions, kept in the repository at `src/content/docs/{locale}/translations/_language-notes.md` for locales that have them
 
 These combine with universal guidance in each locale's export guide.

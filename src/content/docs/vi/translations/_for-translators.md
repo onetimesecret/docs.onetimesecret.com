@@ -317,7 +317,7 @@ Prioritize accuracy over casual localization. Use established Vietnamese technic
 This guide was generated from the following source files:
 
 - Universal resources: `/en/translations/universal/`
-- Glossary: `/vi/translations/glossary.md`
-- Language notes: `/vi/translations/language-notes.md`
+- Glossary: `vi/translations/glossary.md`
+- Language notes: `vi/translations/_language-notes.md`
 
 Generated: 2026-01-20

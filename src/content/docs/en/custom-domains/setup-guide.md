@@ -37,6 +37,18 @@ Consider your specific needs and requirements when making this choice. For more 
 1. In the custom domain settings, enter your desired domain (e.g., secrets.yourdomain.com or yourdomain.com)
 2. Click "Add Domain" or equivalent button to proceed
 
+<!-- LOCALE DRIFT (2026-08): PR #392 (claude/audit-txt-verification-step) adds an
+ownership-verification TXT record section to this EN page and widens the propagation
+window to 24–48h. The 16 locale copies of setup-guide.md lack that section and still
+say "24 hours". Remove this comment once the locales are re-synced.
+
+DO NOT DELETE AS DUPLICATE. This is deliberately paired with the second LOCALE DRIFT
+note below, and the pairing is load-bearing: this one marks where a locale reader's
+page starts diverging from EN (the step boundary), the one below scopes exactly which
+content is EN-only. Automated reviewers have flagged the pair as redundant — it is not.
+The PR reference is retained on purpose as drift provenance. Both notes come out
+together when the locales are re-synced, and not before. -->
+
 ## Step 3: Configure DNS Settings
 
 To connect your domain, you need to create exactly two DNS records: a TXT record that verifies you own the domain, and a routing record (CNAME for subdomains, A for apex domains). You can create them in either order. The routing record differs slightly depending on whether you're using a subdomain or an apex domain, and which data center region you choose.

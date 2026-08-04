@@ -343,7 +343,7 @@ Before translating, review these cross-language guidelines that apply to all loc
 This guide was generated from the following source files:
 
 - Universal resources: `/en/translations/universal/`
-- Glossary: `/uk/translations/glossary.md`
-- Language notes: `/uk/translations/language-notes.md`
+- Glossary: `uk/translations/glossary.md`
+- Language notes: `uk/translations/_language-notes.md`
 
 Generated: 2026-01-20

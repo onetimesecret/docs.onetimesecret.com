@@ -427,7 +427,7 @@ Use standard Brazilian Portuguese abbreviations:
 This guide was generated from the following source files:
 
 - Universal resources: `/en/translations/universal/`
-- Glossary: `/pt-br/translations/glossary.md`
-- Language notes: `/pt-br/translations/language-notes.md`
+- Glossary: `pt-br/translations/glossary.md`
+- Language notes: `pt-br/translations/_language-notes.md`
 
 Generated: 2026-01-20

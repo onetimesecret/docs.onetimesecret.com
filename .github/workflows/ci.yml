@@ -9,10 +9,12 @@ on:
     branches:
       - main
       - develop
-      - "integration/*"
-      - "integrate/*"
+      - "claude/*"
       - "feature/*"
       - "fix/*"
+      - "i18n/*"
+      - "integrate/*"
+      - "integration/*"
 
 concurrency:
   group: ci-${{ github.ref }}

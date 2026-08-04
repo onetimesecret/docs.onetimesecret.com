@@ -289,7 +289,7 @@ This distinction must be maintained throughout the application to avoid confusio
 This guide was generated from the following source files:
 
 - Universal resources: `/en/translations/universal/`
-- Glossary: `/el_GR/translations/glossary.md`
-- Language notes: `/el_GR/translations/language-notes.md`
+- Glossary: `el_GR/translations/glossary.md`
+- Language notes: `el_GR/translations/_language-notes.md`
 
 Generated: 2026-01-20

@@ -264,7 +264,7 @@ Critical distinction that must be maintained throughout the application:
 This guide was generated from the following source files:
 
 - Universal resources: `/en/translations/universal/`
-- Glossary: `/ca_ES/translations/glossary.md`
-- Language notes: `/ca_ES/translations/language-notes.md`
+- Glossary: `ca_ES/translations/glossary.md`
+- Language notes: `ca_ES/translations/_language-notes.md`
 
 Generated: 2026-01-20

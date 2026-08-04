@@ -301,7 +301,7 @@ The Spanish translation maintains:
 This guide was generated from the following source files:
 
 - Universal resources: `/en/translations/universal/`
-- Glossary: `/es/translations/glossary.md`
-- Language notes: `/es/translations/language-notes.md`
+- Glossary: `es/translations/glossary.md`
+- Language notes: `es/translations/_language-notes.md`
 
 Generated: 2026-01-20
