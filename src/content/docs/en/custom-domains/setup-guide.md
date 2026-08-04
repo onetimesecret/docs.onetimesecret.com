@@ -47,12 +47,14 @@ Your Domain Dashboard lists this record first, before the routing record, and sh
 
 1. Access your domain's DNS management panel (through your domain registrar or DNS provider)
 2. Create a TXT record, copying the Host and Value exactly as shown in your Domain Dashboard:
-   - Host: `_onetime-challenge-<id>`, where `<id>` is a short identifier unique to your domain
+   - Host: `_onetime-challenge-<id>` for an apex domain, or `_onetime-challenge-<id>.<subdomain>` for a subdomain, where `<id>` is a short identifier unique to your domain
      - For an apex domain (e.g., example.com): `_onetime-challenge-abc1234`
      - For a subdomain (e.g., secrets.example.com): `_onetime-challenge-abc1234.secrets` — the record is created on the base domain's zone (example.com)
-   - Value: the unique 32-character code shown in your dashboard
+   - Value: the unique 32-character hexadecimal code shown in your dashboard
 
 The host and value above show the shape only — your actual record is unique to your domain and must be copied from your Domain Dashboard. The value never rotates or expires.
+
+Registrars display record hosts differently: some expect just the label (and append the zone for you), others expect the fully qualified name. If your provider's form does not accept the host as shown, match its convention — the value from your Domain Dashboard is what must resolve.
 
 Ownership verification cannot complete without this record, and it must stay in place after verification — do not remove it.
 
@@ -126,7 +128,7 @@ Once setup is complete, you should see the following information:
 - If verification fails, double-check your DNS settings
 - Confirm the TXT ownership record exists — verification cannot complete without it, even if the domain appears to work
 - Ensure you've removed any conflicting records (but never the TXT ownership record)
-- DNS propagation can take up to 24 hours, though it's usually much faster
+- DNS propagation can take up to 24–48 hours, though it's usually much faster
 
 ## Using Your Custom Domain
 
