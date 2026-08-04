@@ -1,0 +1,24 @@
+# config/unconfigured-locales.allow
+#
+# Locale directories under src/content/docs that are intentionally absent from
+# i18nConfig.locales in config/i18n.mjs. Their pages build and publish but are
+# reachable only by direct URL — no sidebar, no language picker, no EN fallback.
+# Format: one locale code per line with a trailing "# reason" comment (required).
+# bin/check-locales.mjs fails on unlisted unconfigured directories AND on stale
+# entries here (locale now configured, or directory deleted).
+#
+# The nine below each hold only translations/{for-translators,glossary,
+# language-notes}.md — translator-facing reference for app languages the docs
+# site does not yet publish. Contributors reach them from the translation guide,
+# not from navigation. Delete the entry when the locale gains a full content set
+# and moves into config/i18n.mjs.
+
+ar  # translator resources only; docs site does not publish Arabic
+ca_ES  # translator resources only; docs site does not publish Catalan
+cs  # translator resources only; docs site does not publish Czech
+el_GR  # translator resources only; docs site does not publish Greek
+he  # translator resources only; docs site does not publish Hebrew
+hu  # translator resources only; docs site does not publish Hungarian
+ru  # translator resources only; docs site does not publish Russian
+sl_SI  # translator resources only; docs site does not publish Slovenian
+vi  # translator resources only; docs site does not publish Vietnamese

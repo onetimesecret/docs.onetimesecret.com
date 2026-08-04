@@ -1,6 +1,6 @@
 // bin/lib/nav.mjs
 //
-// Shared slug collection for bin/check-nav.mjs and bin/check-orphans.mjs.
+// Shared slug and locale collection for the bin/check-*.mjs drift checks.
 // Plain Node ESM, zero dependencies; paths resolve relative to this file so
 // the scripts work from any cwd.
 import { existsSync, readdirSync } from "node:fs";
@@ -69,4 +69,21 @@ export function pagesSlugs() {
     slugs.add(slug === "index" ? "index" : slug.replace(/\/index$/, ""));
   }
   return slugs;
+}
+
+/** Locale codes declared in config/i18n.mjs, including the default locale. */
+export async function configuredLocales() {
+  const url = pathToFileURL(join(repoRoot, "config", "i18n.mjs")).href;
+  const { i18nConfig } = await import(url);
+  return new Set(Object.keys(i18nConfig.locales));
+}
+
+/** Locale directory names present under src/content/docs. */
+export function localeDirs() {
+  const dir = join(repoRoot, "src", "content", "docs");
+  return new Set(
+    readdirSync(dir, { withFileTypes: true })
+      .filter((entry) => entry.isDirectory())
+      .map((entry) => entry.name),
+  );
 }

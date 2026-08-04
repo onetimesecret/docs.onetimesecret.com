@@ -48,6 +48,9 @@ jobs:
       - name: Check orphaned pages
         run: pnpm run check:orphans
 
+      - name: Check locale configuration
+        run: pnpm run check:locales
+
       - name: Test
         run: pnpm test
 
