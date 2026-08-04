@@ -14,9 +14,11 @@ Fully-documented features are omitted. 304 topics follow.
 still a gap. What changed for a handful of topics is *who resolves them and when*, so those lines carry
 a trailing marker:
 
-- **[D2]** — a code-side defect, not a writing task. Tracked in
-  [onetimesecret#3993](https://github.com/onetimesecret/onetimesecret/issues/3993); the docs describe
-  current behaviour and do not claim the feature works.
+- **[D2]** — the underlying defect is code-side and tracked in
+  [onetimesecret#3993](https://github.com/onetimesecret/onetimesecret/issues/3993), so no amount of
+  writing will resolve it. These topics still get written: the docs owe an accurate account of current
+  behaviour, which for these means stating plainly that the feature does not work as its configuration
+  suggests. What the marker rules out is documenting them as if they did.
 - **[D3]** — blocked on the production `etc/billing.yaml`, which is kept outside both repos and
   requested when needed. Cannot be written from in-repo sources.
 - **[D8]** — no dedicated deprecated/removed reference page; the project is pre-1.0 and the reference

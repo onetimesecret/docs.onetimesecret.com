@@ -14,10 +14,11 @@ adversarial verifier tasked with *refuting* every claimed gap and a completeness
 finding what the surveys missed. Both adversarial passes landed hits; their corrections are applied
 below and recorded in Appendix A rather than quietly dropped.
 
-**Status — revised 2026-08-04.** The nine decisions this audit raised have been answered. Eight are
-settled; their consequences are applied throughout the plan below and the reasoning is recorded in
-[Decisions](#decisions). One — who owns the end-user task layer — remains open and gates five pages in
-Phase 2; an interim posture is defined so nothing else waits on it.
+**Status — revised 2026-08-04.** All nine decisions this audit raised now have a recorded response.
+Eight of those responses **settle** the question, and their consequences are applied throughout the plan
+below; the ninth — who owns the end-user task layer — responded without settling it, so D9 stays **open**
+and gates five pages in Phase 2. An interim posture is defined so nothing else waits on it. The
+reasoning for all nine is in [Decisions](#decisions).
 
 ---
 
@@ -178,7 +179,7 @@ marketing site. Its current paid CTA points at `pricing/index.md`, which is an o
 | | Page | Covers |
 |---|---|---|
 |`MRG`|`start/index`|absorbs `docs-overview` + `introduction/index` + `introduction/guides`|
-|`NEW`|`start/send-your-first-secret` **†**|the product's core action, end to end — gated on [D9](#d9--who-owns-the-end-user-task-layer-open)|
+|`NEW`|`start/send-your-first-secret` **†**|the product's core action, end to end — gated on [D9](#d9--who-owns-the-end-user-task-layer)|
 |`MRG`|`start/run-your-own-instance`|absorbs `self-hosting/getting-started`|
 |`MOV`|`start/hosted-or-self-hosted`|from `self-hosting/self-hosting-vs-hosted`|
 |`NEW`|`start/glossary`|receipt vs private link vs metadata; passphrase vs password; organization vs workspace vs team; colonel vs admin vs staff; entitlement vs permission vs capability; Secret Activity vs Security Events; canonical vs custom domain|
@@ -188,7 +189,7 @@ inside long pages, reachable only by already knowing which page hides them.
 
 #### 3. Using Onetime Secret · 30 pages
 
-Pages marked **†** are gated on [D9](#d9--who-owns-the-end-user-task-layer-open). Eleven of the twelve
+Pages marked **†** are gated on [D9](#d9--who-owns-the-end-user-task-layer). Eleven of the twelve
 contested end-user pages are in this section — the twelfth, `start/send-your-first-secret`, is in *Start
 here* and is also gated — and the seven unmarked ones proceed regardless of how D9 lands. The rule that
 separates them is stated after *Your account*.
@@ -237,7 +238,7 @@ ownership step**) · `UPD custom-domains/dns-validation` · `MOV custom-domains/
 **Plans & billing** (2) — `MRG billing/index` (de-orphans `pricing/index`, absorbs `compare-plans`) ·
 `NEW billing/managing-your-subscription`
 
-> Per [D3](#d3--billing-catalog-settled), the plan matrix is **hand-maintained with a named owner** and
+> Per [D3](#d3--billing-catalog), the plan matrix is **hand-maintained with a named owner** and
 > is explicitly out of the generated reference's scope. Its source of truth is the production
 > `etc/billing.yaml`, which lives outside both repos and is requested when a docs task needs it.
 > `etc/examples/billing.example.yaml` is an example file and cannot arbitrate what buyers are sold.
@@ -263,7 +264,7 @@ surfaces with no hosted counterpart, which fell out of the first draft precisely
 organised as an audience mirror: `NEW features/feedback-channel` · `NEW features/broadcast-banner`
 
 > `features/caddy-on-demand-tls` must not be written as a working strategy. Per
-> [D2](#d2--four-code-vs-docs-defects-settled), `caddy_on_demand` currently issues no certificate at all;
+> [D2](#d2--four-code-vs-docs-defects), `caddy_on_demand` currently issues no certificate at all;
 > the page documents the two strategies that work (`passthrough`, `approximated`) and states plainly
 > that the third does not, until the app-repo issue closes. `features/custom-domains` carries the same
 > caveat where it lists strategy choices, and `operate/queues-and-dlq` documents the DLQ consumer's
@@ -303,7 +304,7 @@ CHANGELOG's bolded Action Required migration**, `bin/ots migrate --run 20260703_
 `site-and-interface` · `features-and-branding` · `datastore-and-queues` · `email-and-delivery` ·
 `auth-logging-and-billing-files`
 
-> `reference/deprecated-and-removed` is **cut** per [D8](#d8--removed-and-inert-variables-settled): the
+> `reference/deprecated-and-removed` is **cut** per [D8](#d8--removed-and-inert-variables): the
 > project is pre-1.0 and the reference documents what the current version reads, nothing else. The two
 > jobs that page was carrying still need homes, and both are cheaper than a graveyard inventory. The ~19
 > unsupported variables the site publishes today are **deleted outright** in Phase 1, not relocated —
@@ -318,10 +319,17 @@ CHANGELOG's bolded Action Required migration**, `bin/ots migrate --run 20260703_
 `MOV security/best-practices` · `MRG security/our-principles` (the four principles pages) ·
 `security/vulnerability-disclosure`
 
-> The region merge is settled by [D1](#d1--per-region-pages-settled) in favour of reader experience over
+> The region merge is settled by [D1](#d1--per-region-pages) in favour of reader experience over
 > search ranking. One consequence is worth building for rather than accepting: give
 > `where-your-data-lives` a stable per-region anchor (`#european-union`, `#canada`, …) and point each
-> retired URL at its anchor rather than at the page top. A compliance questionnaire that cites
+> retired URL at its anchor rather than at the page top.
+>
+> That only works if the anchors are what the redirects assume, so pin the contract: **each region's
+> heading text is the bare jurisdiction name and nothing else** — `European Union`, `Canada`,
+> `United Kingdom`, `United States`, `New Zealand`. No "The " prefix, no parenthetical, no "Data
+> residency in …" phrasing. Those five slugify to exactly the five retired filenames, so the redirect
+> targets are derivable rather than hand-matched, and a reviewer can check the contract by reading the
+> headings. A compliance questionnaire that cites
 > `/regions/european-union` then still lands on the EU facts, and the merged page has to carry every
 > per-region fact the five templates carried — jurisdiction, data location, operating entity — or the
 > merge trades away something real. `regions/switching-regions` is not part of the merge; it moves to
@@ -333,12 +341,13 @@ documentation at all. `NEW contribute/developer-on-ramp` (`bin/dev`, `bin/setup 
 containerized test lanes, the 32 ADRs) plus the nine existing translation pages moved, including the
 five currently orphaned under `translations/universal/`.
 
-> This section is guidance *for* translators. It is unaffected by [D5](#d5--translation-policy-settled)
+> This section is guidance *for* translators. It is unaffected by [D5](#d5--translation-policy)
 > deferring translation *of* the site: the contributors it serves are the ones the future initiative
 > will depend on, so its pages stay in the tree and get fixed in Phase 1.
 
-**Totals: 61 pages → 114. ~62 new, ~20 moved, ~14 merged away, 1 deleted.** Of the 62 new pages, five are
-held pending [D9](#d9--who-owns-the-end-user-task-layer-open).
+**Totals: 61 pages → 114. ~62 new, ~20 moved, ~14 merged away, 1 deleted.** Five of the new pages are
+held pending [D9](#d9--who-owns-the-end-user-task-layer); that five is exact, the surrounding counts are
+not.
 
 ---
 
@@ -352,7 +361,7 @@ settable rather than relocating them (per D8); add the missing TXT step to `setu
 `translations/universal/_index.md` → `index.md` to fix the live 404; delete
 `translations/language-notes.md` (an 11-line unfinished `[placeholder]` table) — **all 26 copies**, one
 per locale directory, since every copy is the same unfilled template. That last deletion drops the nine
-stub locales from three files to two, which is consistent with [D6](#d6--stub-locales-settled): it
+stub locales from three files to two, which is consistent with [D6](#d6--stub-locales): it
 neither completes nor removes them.
 
 Two additions from the decisions: the four code-vs-docs defects are filed as
@@ -417,7 +426,7 @@ four — so the `movedPages` entries carry an optional fragment.
 **Translation.** Measured: no locale is at parity (best 41/61; most 36–40), and nine further directories
 hold 3 files each with no i18n bundle and no sidebar entry. The audit proposed a tiered policy —
 translate the end-user surface, make the operator and reference trees English-only by construction.
-[D5](#d5--translation-policy-settled) replaces that with something simpler and more honest about
+[D5](#d5--translation-policy) replaces that with something simpler and more honest about
 sequencing: **English is the only language this plan ships in, and translation is a separate initiative
 scoped after the restructure settles.**
 
@@ -444,7 +453,7 @@ that sidebar entry currently points at something invisible. English-only is a co
 rendering one.
 
 **Stub locales.** The nine 3-file directories (`ar`, `ca_ES`, `cs`, `el_GR`, `he`, `hu`, `ru`, `sl_SI`,
-`vi`) are left in place per [D6](#d6--stub-locales-settled) and revisited with the translation
+`vi`) are left in place per [D6](#d6--stub-locales) and revisited with the translation
 initiative. They stay indexed and reachable, which is a knowingly accepted cost: each holds only
 translation-contributor guidance, so a reader who lands there finds a real page, not a broken product
 doc. If that changes — if the restructure ever routes product content into them — the cheap fix is a
@@ -460,7 +469,7 @@ rather than inventing a second one** — `src/components/config-generator/schema
 Schemas generated in the app repo by `pnpm run schemas:json:generate`, with env mappings curated in
 `presets.ts`. The generator emits to the docs repo; CI fails on drift.
 
-[D7](#d7--generator-ownership-settled) stubs the app-repo half of that pipeline, so the shape changes:
+[D7](#d7--generator-ownership) stubs the app-repo half of that pipeline, so the shape changes:
 the generator lives **in this repo from the start** and reads a **vendored snapshot** of
 `.env.reference` and `config.defaults.yaml` — the same vendoring pattern
 `src/components/config-generator/schemas/` already uses, which is why this is a stub and not a new
@@ -501,9 +510,13 @@ repo already documents.**
 Nine decisions were raised by the audit. Eight are settled and their consequences are applied
 throughout the plan above; one is open. Each entry records the answer as given, then what changed.
 
-### D1 — Per-region pages *(settled)*
+> Keep the settled/open status in the body text, **not** in these headings. The rest of the document
+> deep-links to them by slug, and D9 is expected to move from open to settled before Phase 2 — a status
+> word in the heading would silently break every reference to it at exactly that moment.
 
-**Answer: prioritise developer experience; deprioritise SEO.**
+### D1 — Per-region pages
+
+**Settled — answer:** prioritise developer experience; deprioritise SEO.
 
 The five 43–47 line templates merge into `security/where-your-data-lives`. Applied: the merge is now
 stated as settled rather than conditional; the merged page must carry every per-region fact the
@@ -512,9 +525,9 @@ compliance questionnaire citing `/regions/european-union` still lands on the EU 
 cheap half of what the SEO argument was protecting, and it costs one fragment per `movedPages` entry.
 `regions/switching-regions` is not part of the merge — it moves to `account/change-your-region`.
 
-### D2 — Four code-vs-docs defects *(settled)*
+### D2 — Four code-vs-docs defects
 
-**Answer: file a terse issue in `onetimesecret/onetimesecret`, labelled `documentation`.**
+**Settled — answer:** file a terse issue in `onetimesecret/onetimesecret`, labelled `documentation`.
 
 Filed as [onetimesecret/onetimesecret#3993](https://github.com/onetimesecret/onetimesecret/issues/3993).
 The defects are code-side, so they leave the docs plan and become app-repo work. All four were
@@ -532,9 +545,9 @@ supported strategy, and `features/custom-domains` carries the same caveat. The D
 rather than a fix — `operate/queues-and-dlq` documents the discard as shipped behaviour, since silently
 dropping a secret link is exactly the kind of thing an operator must be told before they debug it.
 
-### D3 — Billing catalog *(settled)*
+### D3 — Billing catalog
 
-**Answer: the product `billing.yaml` is kept separate. Ask for it when needed.**
+**Settled — answer:** the product `billing.yaml` is kept separate. Ask for it when needed.
 
 So the plan matrix **cannot** be generated, and stays hand-maintained with a named owner; the billing
 catalog is explicitly out of the generator's scope. Applied under *Plans & billing* and *The generated
@@ -544,9 +557,9 @@ catalog before `billing/index` ships. One correction to the audit's framing — 
 what buyers are sold. The published "Member Invites / Up to 50" claim is therefore **unverified**, not
 demonstrated wrong, and it does not belong in Finding 1's table of factual errors.
 
-### D4 — The `/audit-events` rename *(settled)*
+### D4 — The `/audit-events` rename
 
-**Answer: ignore. The previous path was not shipped in a meaningful way, and only for a week.**
+**Settled — answer:** ignore. The previous path was not shipped in a meaningful way, and only for a week.
 
 No deprecation notice, no migration note, no breaking-change entry. Applied: the docs document
 `/secret-activity` only (`apps/api/organizations/routes.txt:20`). `CHANGELOG.rst:57` still names the old
@@ -557,9 +570,9 @@ still fixed in Phase 1. The terminology question ADR-021 was raised for — Secr
 Events vs the operator audit log — is not dropped either; it is answered by `start/glossary`, which is
 where a reader hits it.
 
-### D5 — Translation policy *(settled)*
+### D5 — Translation policy
 
-**Answer: focus on the primary language. Translation is a future initiative, after the dust settles.**
+**Settled — answer:** focus on the primary language. Translation is a future initiative, after the dust settles.
 
 This supersedes the tiered policy the audit proposed. Applied in full under *Translation*: no new
 obligations are created, today's 976 is frozen rather than grown, existing locale files stay and keep
@@ -567,9 +580,9 @@ serving, and no phase blocks on a translation decision. The `translate` frontmat
 from the Phase 2 schema work — `audience` already partitions the tree the way the future initiative
 would select on it. The audit's "63 of 115 pages" framing is moot: it is now 114 of 114.
 
-### D6 — Stub locales *(settled)*
+### D6 — Stub locales
 
-**Answer: ignore; see D5.**
+**Settled — answer:** ignore; see D5.
 
 The nine stub directories stay as they are and are revisited with the translation initiative. Applied
 under *Stub locales*, with the accepted cost stated (they remain indexed) and the cheap mitigation named
@@ -578,9 +591,9 @@ in case it stops being acceptable. **Count correction: nine, not ten.** The audi
 `ca_ES`, `cs`, `el_GR`, `he`, `hu`, `ru`, `sl_SI`, `vi` — out of 26 content directories, 17 of which
 have i18n bundles.
 
-### D7 — Generator ownership *(settled)*
+### D7 — Generator ownership
 
-**Answer: stub for now.**
+**Settled — answer:** stub for now.
 
 The generator moves into this repo and reads a vendored snapshot of `.env.reference` and
 `config.defaults.yaml`; app-repo stages 1–3 leave the critical path. Applied under *The generated
@@ -590,9 +603,9 @@ snapshot is a copy, and the Phase 5 drift gate — snapshot versus upstream, fai
 is what keeps that copy from becoming the next `configuration.md`. The refresh still needs a name
 against it before Phase 4 exits.
 
-### D8 — Removed and inert variables *(settled)*
+### D8 — Removed and inert variables
 
-**Answer: focus on current content. The project is still pre-1.0.**
+**Settled — answer:** focus on current content. The project is still pre-1.0.
 
 `reference/deprecated-and-removed` is cut; Reference drops to 12 pages and the tree to 114. Applied
 under §6 and Phase 1. The two jobs that page carried are rehomed rather than lost: the ~19 unsupported
@@ -604,9 +617,9 @@ still moving.
 
 ---
 
-### D9 — Who owns the end-user task layer? *(open)*
+### D9 — Who owns the end-user task layer?
 
-**Answer: important — work carefully. The largest single scope swing in the plan.**
+**Open — answer as given:** important — work carefully. The largest single scope swing in the plan.
 
 Still open, and it should be. Below is what the plan does in the meantime.
 
