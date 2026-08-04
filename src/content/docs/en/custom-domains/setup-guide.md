@@ -46,7 +46,7 @@ To connect your domain, you need to create exactly two DNS records: a TXT record
 Your Domain Dashboard lists this record first, before the routing record, and shows the exact Type, Host, and Value to copy.
 
 1. Access your domain's DNS management panel (through your domain registrar or DNS provider)
-2. Create a TXT record, copying the Host and Value exactly as shown in your Domain Dashboard:
+2. Create a TXT record, copying the Value exactly as shown in your Domain Dashboard and entering the Host in your registrar's expected form:
    - Host: `_onetime-challenge-<id>` for an apex domain, or `_onetime-challenge-<id>.<subdomain>` for a subdomain, where `<id>` is a short identifier unique to your domain
      - For an apex domain (e.g., example.com): `_onetime-challenge-abc1234`
      - For a subdomain (e.g., secrets.example.com): `_onetime-challenge-abc1234.secrets` — the record is created on the base domain's zone (example.com)
@@ -54,7 +54,7 @@ Your Domain Dashboard lists this record first, before the routing record, and sh
 
 The host and value above show the shape only — your actual record is unique to your domain and must be copied from your Domain Dashboard. The value never rotates or expires.
 
-Registrars display record hosts differently: some expect just the label (and append the zone for you), others expect the fully qualified name. If your provider's form does not accept the host as shown, match its convention — the value from your Domain Dashboard is what must resolve.
+Registrars display record hosts differently: some expect just the label (and append the zone for you), others expect the fully qualified name. Enter the host in whichever form your provider expects — what matters is that the resulting record resolves at `<host>.<your base domain>` and returns the dashboard value unchanged.
 
 Ownership verification cannot complete without this record, and it must stay in place after verification — do not remove it.
 
