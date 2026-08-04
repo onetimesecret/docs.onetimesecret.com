@@ -9,9 +9,11 @@
 #
 # The nine below each hold only translations/{for-translators,glossary,
 # language-notes}.md — translator-facing reference for app languages the docs
-# site does not yet publish. Contributors reach them from the translation guide,
-# not from navigation. Delete the entry when the locale gains a full content set
-# and moves into config/i18n.mjs.
+# site does not yet publish. Only language-notes.md is referenced from the
+# translation guide (as a /{locale}/ path pattern); for-translators.md and
+# glossary.md are reachable by direct URL only, which is accepted for
+# contributor-facing pages. Delete the entry when the locale gains a full
+# content set and moves into config/i18n.mjs.
 
 ar  # translator resources only; docs site does not publish Arabic
 ca_ES  # translator resources only; docs site does not publish Catalan
