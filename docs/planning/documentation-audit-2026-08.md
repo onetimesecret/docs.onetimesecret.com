@@ -392,7 +392,13 @@ repo already documents.**
    and they gate Phase 4. Without a named owner and a backlog slot, the realistic outcome is Phase 4
    ships hand-written reference pages that drift exactly as the current two have — making the reshape
    cosmetic. **Highest-risk dependency in the plan.**
-8. **Does the docs site own the end-user "send a secret" layer, or does the product?** Twelve of the
+8. **Should removed and inert variables be published at all?** The deprecated/removed/inert reference
+   page is what makes `DEPRECATED_CONFIG_MODE=strict` survivable, and it prevents the
+   silent-misconfiguration class — setting a variable that looks right and does nothing. Against: it
+   publishes a precise inventory of what older versions read, and names variables that exist in the
+   codebase but are not wired up. Low risk and high operational value in our assessment, but it is a
+   security-posture call for whoever owns `SECURITY.md`, not a docs call.
+9. **Does the docs site own the end-user "send a secret" layer, or does the product?** Twelve of the
    highest-traffic proposed pages document a UI that arguably should be self-explanatory. The content
    demonstrably does not exist anywhere today, but if in-app guidance is planned, these pages should be
    scoped as its durable linkable reference rather than a duplicate. Settle before Phase 2 — it
