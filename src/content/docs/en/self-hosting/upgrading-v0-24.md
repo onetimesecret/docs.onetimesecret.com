@@ -48,13 +48,17 @@ Use this path if you don't need to preserve existing accounts or live secrets.
 docker pull onetimesecret/onetimesecret:v0.24.5
 ```
 
-Or clone/checkout the v0.24.0 tag if running from source, then run the setup script:
+Or clone/checkout the v0.24.0 tag if running from source, then run the install script:
 
 ```bash
-bin/setup --init
+./install.sh
 ```
 
-This initializes a new environment: installs Ruby and Node dependencies, generates derived keys, and prepares the environment. You can also run `bin/setup --doctor` to check prerequisites.
+This auto-detects a new environment and runs `init`: installs Ruby and Node dependencies, generates derived keys, and prepares the environment. You can also run `./install.sh doctor` to check prerequisites.
+
+:::note
+The commands on this page target the v0.24 code you are checking out — v0.24 ships `./install.sh`. In v0.26 and later, `install.sh` was removed and replaced by `bin/setup` (`--init`, `--reconcile`, `--doctor`).
+:::
 
 ### 2. Set up configuration
 
@@ -163,13 +167,13 @@ Even if you already backed up in the prerequisites. Make a timestamped copy righ
 docker pull onetimesecret/onetimesecret:v0.24.5
 ```
 
-Or clone/checkout the v0.24.0 tag if running from source. Do not start it yet. Run the setup script to update dependencies and re-derive child keys:
+Or clone/checkout the v0.24.0 tag if running from source. Do not start it yet. Run the install script to update dependencies and re-derive child keys:
 
 ```bash
-bin/setup --reconcile
+./install.sh
 ```
 
-This reconciles an existing environment: re-derives child keys from your existing `SECRET`, reinstalls gems and node packages, and re-applies RabbitMQ policies if in full mode. You can also run `bin/setup --doctor` to check your environment.
+This auto-detects an existing environment and runs `reconcile`: installs gems and node packages, re-derives child keys from your existing `SECRET`, and re-applies RabbitMQ policies if in full mode. You can also run `./install.sh doctor` to check your environment. (In v0.26 and later, use `bin/setup --reconcile` and `bin/setup --doctor` instead.)
 
 ### 4. Update configuration files
 
@@ -292,8 +296,7 @@ curl -v http://localhost:3000/health/advanced
 # Diagnostic tools
 bundle exec bin/ots boot-test
 bundle exec bin/ots queues status
-bin/setup --doctor                    # environment checks
-bundle exec bin/ots customers doctor  # customer-data checks
+./install.sh doctor   # environment checks (v0.26+: bin/setup --doctor)
 ```
 
 Then manually verify:

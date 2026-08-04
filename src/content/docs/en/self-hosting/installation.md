@@ -265,7 +265,7 @@ server {
 - The app ignores forwarded headers unless `TRUSTED_PROXY_ENABLED=true` — without it, every request is attributed to the proxy's address.
 - The `$remote_addr` overwrite above is required for the default `TRUSTED_PROXY_MODE=filter`, which picks the **leftmost** non-proxy entry — an appended header would let clients spoof their IP to rate limits, bans, and audit records.
 - Exception: with `TRUSTED_PROXY_MODE=depth`, keep the append (`$proxy_add_x_forwarded_for`) and set `TRUSTED_PROXY_DEPTH` to your hop count — overwriting in depth mode collapses the chain and misattributes requests to the proxy.
-- For the Caddy configuration below, use `header_up X-Forwarded-For {client_ip}`.
+- The Caddy configuration below applies the same overwrite with `header_up X-Forwarded-For {client_ip}`.
 :::
 
 **Enable the site:**
@@ -290,12 +290,16 @@ your-domain.com {
 
     # API requests to backend
     handle /api/* {
-        reverse_proxy 127.0.0.1:3000
+        reverse_proxy 127.0.0.1:3000 {
+            header_up X-Forwarded-For {client_ip}
+        }
     }
 
     # All other requests to backend (for server-rendered pages)
     handle {
-        reverse_proxy 127.0.0.1:3000
+        reverse_proxy 127.0.0.1:3000 {
+            header_up X-Forwarded-For {client_ip}
+        }
     }
 }
 ```
