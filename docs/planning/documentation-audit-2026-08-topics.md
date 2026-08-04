@@ -10,6 +10,22 @@ identifiers are the environment variables the topic covers, truncated to four.
 
 Fully-documented features are omitted. 304 topics follow.
 
+**Decision annotations (2026-08-04).** Priority and status are unchanged by the decisions — a gap is
+still a gap. What changed for a handful of topics is *who resolves them and when*, so those lines carry
+a trailing marker:
+
+- **[D2]** — a code-side defect, not a writing task. Tracked in
+  [onetimesecret#3993](https://github.com/onetimesecret/onetimesecret/issues/3993); the docs describe
+  current behaviour and do not claim the feature works.
+- **[D3]** — blocked on the production `etc/billing.yaml`, which is kept outside both repos and
+  requested when needed. Cannot be written from in-repo sources.
+- **[D8]** — no dedicated deprecated/removed reference page; the project is pre-1.0 and the reference
+  documents what the current version reads. The marker records where the topic goes instead, which for
+  most of these is *nowhere for now*.
+
+Everything unmarked proceeds as the plan describes. See
+[`documentation-audit-2026-08.md`](./documentation-audit-2026-08.md#decisions) for the full reasoning.
+
 ### Secrets, cryptography & key management
 - [crit/partia] SECRET as root input keying material (IKM) — the HKDF key tree — SECRET
 - [crit/partia] Three key classes: [derived] vs [independent] vs [federation] — SESSION_SECRET,IDENTIFIER_SECRET,AUTH_SECRET,ARGON2_SECRET
@@ -40,7 +56,7 @@ Fully-documented features are omitted. 304 topics follow.
 - [medi/partia] At-most-once reveal guarantee (fail-closed, not fail-open)
 - [medi/undocu] Uniform 'no longer available' response — the deliberate absence of an existence oracle
 - [medi/undocu] Reads are state-neutral: viewing does not reset expiration or advance state
-- [low/undocu] RODAUTH_HMAC_SECRET — deprecated and silently ignored — RODAUTH_HMAC_SECRET
+- [low/undocu] RODAUTH_HMAC_SECRET — deprecated and silently ignored — RODAUTH_HMAC_SECRET **[D8: deferred]**
 - [low/undocu] SECRET_VARIABLE_NAMES — routing secrets to Podman/container secret stores — SECRET_VARIABLE_NAMES
 
 ### HTTP security, sessions, middleware & network
@@ -111,8 +127,8 @@ Fully-documented features are omitted. 304 topics follow.
 - [medi/partia] Simple mode: what it actually supports
 - [low/partia] Per-provider SSO display names and the deprecated SSO_DISPLAY_NAME — SSO_DISPLAY_NAME,OIDC_DISPLAY_NAME,ENTRA_DISPLAY_NAME,GOOGLE_DISPLAY_NAME
 - [low/partia] TOTP authenticator issuer label (BRAND_TOTP_ISSUER) — BRAND_TOTP_ISSUER,BRAND_PRODUCT_NAME,SITE_NAME
-- [low/undocu] AUTH_SERVICE_URL (reserved / inert) — AUTH_SERVICE_URL
-- [low/undocu] Deprecated and inert auth variables (RODAUTH_HMAC_SECRET, GITHUB_KEY/SECRET, GOOGLE_KEY/SECRET) — RODAUTH_HMAC_SECRET,GITHUB_KEY,GITHUB_SECRET,GOOGLE_KEY
+- [low/undocu] AUTH_SERVICE_URL (reserved / inert) — AUTH_SERVICE_URL **[D8: deferred]**
+- [low/undocu] Deprecated and inert auth variables (RODAUTH_HMAC_SECRET, GITHUB_KEY/SECRET, GOOGLE_KEY/SECRET) — RODAUTH_HMAC_SECRET,GITHUB_KEY,GITHUB_SECRET,GOOGLE_KEY **[D8: deferred]**
 
 ### Email delivery, providers & deliverability
 - [crit/partia] Email delivery mode / transport selection (emailer.mode) — EMAILER_MODE
@@ -155,11 +171,11 @@ Fully-documented features are omitted. 304 topics follow.
 - [crit/partia] Running the scheduler daemon — SCHEDULER_PID_PATH
 - [high/undocu] RabbitMQ TLS (amqps) configuration — RABBITMQ_VERIFY_PEER,RABBITMQ_CA_CERTIFICATES
 - [high/partia] Queue and exchange provisioning (ots queue init) — RABBITMQ_MANAGEMENT_URL
-- [high/undocu] JOBS_SCHEDULER_ENABLED does not gate the scheduler — JOBS_SCHEDULER_ENABLED
-- [high/undocu] Fallback delivery when the broker is unavailable — JOBS_FALLBACK_SYNC
+- [high/undocu] JOBS_SCHEDULER_ENABLED does not gate the scheduler — JOBS_SCHEDULER_ENABLED **[D2]**
+- [high/undocu] Fallback delivery when the broker is unavailable — JOBS_FALLBACK_SYNC **[D2]**
 - [high/undocu] Dead-letter queue inspection, replay and purge
 - [high/undocu] Dead-letter queue 7-day message TTL
-- [high/undocu] DLQ email consumer job (auth-email rescue)
+- [high/undocu] DLQ email consumer job (auth-email rescue) — non-auth mail, incl. secret links and expiration warnings, is discarded by design **[D2: documented in operate/queues-and-dlq, not fixed]**
 - [high/undocu] Queue reset and the immutable-queue-arguments hazard
 - [high/undocu] Plan cache refresh job
 - [high/undocu] Secret expiration warning emails
@@ -167,7 +183,7 @@ Fully-documented features are omitted. 304 topics follow.
 - [high/undocu] Index rebuild maintenance job
 - [high/undocu] Instances rebuild maintenance job
 - [high/undocu] Secret count reconciliation job
-- [high/undocu] Removal of the 32 JOBS_* tuning environment variables in v0.26 — JOBS_EXPIRATION_WARNINGS_ENABLED,JOBS_DLQ_CONSUMER_ENABLED,JOBS_DOMAIN_REFRESH_ENABLED,JOBS_MAINTENANCE_ENABLED
+- [high/undocu] Removal of the 32 JOBS_* tuning environment variables in v0.26 — JOBS_EXPIRATION_WARNINGS_ENABLED,JOBS_DLQ_CONSUMER_ENABLED,JOBS_DOMAIN_REFRESH_ENABLED,JOBS_MAINTENANCE_ENABLED **[D8: → upgrades/v0-26 + troubleshoot/boot-failures]**
 - [medi/undocu] Per-worker concurrency and prefetch tuning — EMAIL_WORKER_THREADS,EMAIL_WORKER_PREFETCH,NOTIFICATION_WORKER_THREADS,NOTIFICATION_WORKER_PREFETCH
 - [medi/undocu] Publisher channel pool sizing — RABBITMQ_CHANNEL_POOL_SIZE
 - [medi/undocu] Queue topology reference
@@ -228,7 +244,7 @@ Fully-documented features are omitted. 304 topics follow.
 - [crit/partia] Domain validation strategy: choosing between passthrough / approximated / caddy_on_demand — DOMAINS_VALIDATION_STRATEGY
 - [crit/undocu] passthrough strategy accepts any domain string with zero ownership proof — DOMAINS_VALIDATION_STRATEGY,DOMAINS_REQUIRE_VERIFIED
 - [crit/undocu] Require verified domain before secret creation (DOMAINS_REQUIRE_VERIFIED) — DOMAINS_REQUIRE_VERIFIED
-- [crit/undocu] caddy_on_demand currently refuses every certificate (ask endpoint returns 403 for all domains) — DOMAINS_VALIDATION_STRATEGY,ACME_ENDPOINT_ENABLED
+- [crit/undocu] caddy_on_demand currently refuses every certificate (ask endpoint returns 403 for all domains) — DOMAINS_VALIDATION_STRATEGY,ACME_ENDPOINT_ENABLED **[D2]**
 - [crit/undocu] The TXT ownership challenge record (_onetime-challenge-…)
 - [crit/undocu] INCOMING_ENABLED does not gate custom domains (canonical/custom split) — INCOMING_ENABLED,ORGS_INCOMING_SECRETS_ENABLED
 - [high/partia] Custom domains master switch (enable the feature at all) — DOMAINS_ENABLED
@@ -237,7 +253,7 @@ Fully-documented features are omitted. 304 topics follow.
 - [high/undocu] Blocking the internal ACME endpoint at the reverse proxy — ACME_ENDPOINT_ENABLED
 - [high/partia] Approximated provider configuration (API key and vhost target) — APPROXIMATED_API_KEY,APPROXIMATED_VHOST_TARGET
 - [high/partia] Cluster proxy settings drive the DNS instructions shown to your customers — APPROXIMATED_PROXY_IP,APPROXIMATED_PROXY_HOST,APPROXIMATED_PROXY_NAME
-- [high/undocu] Unknown validation_strategy silently downgrades to passthrough (features.domains.strict_strategy)
+- [high/undocu] Unknown validation_strategy silently downgrades to passthrough (features.domains.strict_strategy) **[D2]**
 - [high/partia] Reverse-proxy requirements for serving tenant hostnames
 - [high/partia] Homepage secrets mode: private landing page / create form / incoming form
 - [high/partia] Multi-region deployment: REGIONS_ENABLED, JURISDICTION, JURISDICTIONS — REGIONS_ENABLED,JURISDICTION,JURISDICTIONS
@@ -253,7 +269,7 @@ Fully-documented features are omitted. 304 topics follow.
 - [medi/undocu] Domain context override for local testing (DOMAIN_CONTEXT_ENABLED) — DOMAIN_CONTEXT_ENABLED,DOMAIN_CONTEXT
 - [medi/partia] Who may create a secret on a custom domain (domain permission matrix)
 - [medi/partia] Cross-region subscription federation (FEDERATION_SECRET) — FEDERATION_SECRET
-- [medi/undocu] Deprecated regions/domains config paths (site.regions, site.domains, array-form jurisdictions)
+- [medi/undocu] Deprecated regions/domains config paths (site.regions, site.domains, array-form jurisdictions) **[D8: deferred]**
 - [medi/partia] Incoming memo length and TTL — and why custom domains ignore your setting — INCOMING_MEMO_MAX_LENGTH,INCOMING_DEFAULT_TTL
 - [medi/partia] Enabling per-domain incoming for organizations (ORGS_INCOMING_SECRETS_ENABLED) — ORGS_INCOMING_SECRETS_ENABLED
 - [low/undocu] Approximated DNS widget (auto-detect the customer's DNS provider)
@@ -293,7 +309,7 @@ Fully-documented features are omitted. 304 topics follow.
 - [low/undocu] Help modal on secret pages (HELP_ENABLED) — HELP_ENABLED
 - [low/partia] Web UI master switch (UI_ENABLED) — UI_ENABLED
 - [low/undocu] PWA web manifest branding (/site.webmanifest) — BRAND_PRODUCT_NAME,BRAND_PRIMARY_COLOR
-- [low/undocu] BRAND_PRODUCT_DOMAIN (stored, currently inert) — BRAND_PRODUCT_DOMAIN
+- [low/undocu] BRAND_PRODUCT_DOMAIN (stored, currently inert) — BRAND_PRODUCT_DOMAIN **[D8: deferred]**
 
 ### Organizations, teams, entitlements, billing & admin (colonel)
 - [crit/undocu] The entitlement model (what entitlements are, and the 23-string catalog)
@@ -326,7 +342,7 @@ Fully-documented features are omitted. 304 topics follow.
 - [medi/undocu] Billing background jobs: plan cache refresh, catalog retry, billing worker — BILLING_WORKER_THREADS,BILLING_WORKER_PREFETCH,JOBS_SCHEDULER_ENABLED
 - [medi/undocu] System role hierarchy: colonel, admin, staff, customer
 - [medi/undocu] Colonel audit trail (ColonelAuditEvent)
-- [medi/partia] Plan tier → entitlement mapping shown to buyers
+- [medi/partia] Plan tier → entitlement mapping shown to buyers — hand-maintained, needs a named owner **[D3]**
 - [medi/undocu] Control plane vs data plane: admin surfaces are canonical-domain only (planned) — CANONICAL_DOMAIN,DEFAULT_DOMAIN
 - [low/undocu] Colonel plan-preview mode (request-scoped entitlement preview)
 - [low/undocu] Complimentary and pro-bono plans
