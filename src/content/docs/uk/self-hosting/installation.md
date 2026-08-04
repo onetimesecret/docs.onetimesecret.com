@@ -124,7 +124,7 @@ git clone https://github.com/onetimesecret/onetimesecret.git
 cd onetimesecret
 
 # Запуск скрипту ініціалізації
-./install.sh init
+bin/setup --init
 
 # Встановлення залежностей
 bundle install --without development test
@@ -181,7 +181,7 @@ server {
         proxy_pass http://127.0.0.1:3000;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-For $remote_addr;
         proxy_set_header X-Forwarded-Proto $scheme;
     }
 
@@ -190,7 +190,7 @@ server {
         proxy_pass http://127.0.0.1:3000;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-For $remote_addr;
         proxy_set_header X-Forwarded-Proto $scheme;
 
         # Підтримка WebSocket
@@ -200,6 +200,13 @@ server {
     }
 }
 ```
+
+:::note[Передавання IP клієнта та довіра до проксі]
+- Застосунок ігнорує передані заголовки, доки не встановлено `TRUSTED_PROXY_ENABLED=true` — без цього кожен запит приписується адресі проксі.
+- Перезапис `$remote_addr` вище потрібен для типового режиму `TRUSTED_PROXY_MODE=filter`, який обирає **крайній лівий** запис, що не належить проксі — заголовок із дописуванням дозволив би клієнтам підробляти свою IP-адресу для обмежень частоти, блокувань і записів аудиту.
+- Виняток: з `TRUSTED_PROXY_MODE=depth` залиште дописування (`$proxy_add_x_forwarded_for`) і встановіть `TRUSTED_PROXY_DEPTH` відповідно до кількості переходів — перезапис у режимі depth згортає ланцюжок і хибно приписує запити проксі.
+- Наведена нижче конфігурація Caddy застосовує той самий перезапис за допомогою `header_up X-Forwarded-For {client_ip}`.
+:::
 
 **Увімкнення сайту:**
 ```bash
@@ -223,12 +230,16 @@ your-domain.com {
 
     # API-запити до бекенду
     handle /api/* {
-        reverse_proxy 127.0.0.1:3000
+        reverse_proxy 127.0.0.1:3000 {
+            header_up X-Forwarded-For {client_ip}
+        }
     }
 
     # Всі інші запити до бекенду (для серверних сторінок)
     handle {
-        reverse_proxy 127.0.0.1:3000
+        reverse_proxy 127.0.0.1:3000 {
+            header_up X-Forwarded-For {client_ip}
+        }
     }
 }
 ```

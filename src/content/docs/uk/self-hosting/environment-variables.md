@@ -96,7 +96,9 @@ SMTP_AUTH=login                      # Метод автентифікації S
 
 ```bash
 DEFAULT_TTL=604800                   # Стандартний час закінчення таємниць у секундах (604800 = 7 днів)
-TTL_OPTIONS=300,1800,3600,86400      # Доступні варіанти TTL, представлені користувачам, розділені комами (секунди)
+# Доступні варіанти TTL, що пропонуються користувачам: секунди, розділені пробілами.
+# НЕ використовуйте коми — список, розділений комами, мовчки скорочується до першого значення.
+TTL_OPTIONS="300 1800 3600 86400"
 DEFAULT_DOMAIN=                      # Стандартний домен для таємних посилань (використовує HOST, якщо порожньо)
 ALLOW_NIL_GLOBAL_SECRET=false        # Дозволити роботу з відсутнім ключем SECRET (екстрене відновлення)
 ```
@@ -140,7 +142,7 @@ SENTRY_DSN=
 SENTRY_DSN_BACKEND=
 SENTRY_DSN_FRONTEND=
 SENTRY_LOG_ERRORS=true
-SENTRY_MAX_BREADCRUMBS=50
-SENTRY_SAMPLE_RATE=1.0
+SENTRY_MAX_BREADCRUMBS=5
+SENTRY_SAMPLE_RATE=0.10
 SENTRY_VUE_TRACK_COMPONENTS=true
 ```

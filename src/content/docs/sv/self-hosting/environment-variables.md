@@ -95,7 +95,9 @@ SMTP_AUTH=login                      # SMTP-autentiseringsmetod (login, plain, e
 
 ```bash
 DEFAULT_TTL=604800                   # Standard hemlighetens utgång i sekunder (604800 = 7 dagar)
-TTL_OPTIONS=300,1800,3600,86400      # Tillgängliga TTL-alternativ presenterade för användare, kommaseparerade (sekunder)
+# Tillgängliga TTL-alternativ som presenteras för användare: mellanslagsseparerade sekunder.
+# Använd INTE kommatecken – en kommaseparerad lista reduceras tyst till sitt första värde.
+TTL_OPTIONS="300 1800 3600 86400"
 DEFAULT_DOMAIN=                      # Standarddomän för hemliga länkar (använder HOST om tom)
 ALLOW_NIL_GLOBAL_SECRET=false        # Tillåt drift med saknad SECRET-nyckel (nödåterställning)
 ```
@@ -138,7 +140,7 @@ SENTRY_DSN=
 SENTRY_DSN_BACKEND=
 SENTRY_DSN_FRONTEND=
 SENTRY_LOG_ERRORS=true
-SENTRY_MAX_BREADCRUMBS=50
-SENTRY_SAMPLE_RATE=1.0
+SENTRY_MAX_BREADCRUMBS=5
+SENTRY_SAMPLE_RATE=0.10
 SENTRY_VUE_TRACK_COMPONENTS=true
 ```

@@ -39,7 +39,29 @@ Consider your specific needs and requirements when making this choice. For more 
 
 ## Step 3: Configure DNS Settings
 
-To connect your domain, you need to update your DNS settings. The process differs slightly depending on whether you're using a subdomain or an apex domain, and which data center region you choose.
+To connect your domain, you need to create exactly two DNS records: a TXT record that verifies you own the domain, and a routing record (CNAME for subdomains, A for apex domains). You can create them in either order. The routing record differs slightly depending on whether you're using a subdomain or an apex domain, and which data center region you choose.
+
+<!-- LOCALE DRIFT (2026-08): This TXT ownership section (and the related mentions in
+Steps 3–4 and Troubleshooting, plus the 24–48h propagation window) exists only in this
+EN page. The 16 locale copies of setup-guide.md lack the section entirely and still say
+"24 hours". Remove this comment once the locales are re-synced. -->
+
+### Create the Ownership Verification TXT Record (All Domains)
+
+Your Domain Dashboard lists this record first, before the routing record, and shows the exact Type, Host, and Value to copy.
+
+1. Access your domain's DNS management panel (through your domain registrar or DNS provider)
+2. Create a TXT record, copying the Value exactly as shown in your Domain Dashboard and entering the Host in your registrar's expected form:
+   - Host: `_onetime-challenge-<id>` for an apex domain, or `_onetime-challenge-<id>.<subdomain>` for a subdomain, where `<id>` is a short identifier unique to your domain
+     - For an apex domain (e.g., example.com): `_onetime-challenge-abc1234`
+     - For a subdomain (e.g., secrets.example.com): `_onetime-challenge-abc1234.secrets` — the record is created on the base domain's zone (example.com)
+   - Value: the unique 32-character hexadecimal code shown in your dashboard
+
+The host and value above show the shape only — your actual record is unique to your domain and must be copied from your Domain Dashboard. The value never rotates or expires.
+
+Registrars display record hosts differently: some expect just the label (and append the zone for you), others expect the fully qualified name. Enter the host in whichever form your provider expects — what matters is that the resulting record resolves at `<host>.<your base domain>` and returns the dashboard value unchanged.
+
+Ownership verification cannot complete without this record, and it must stay in place after verification — do not remove it.
 
 ### For Subdomains (Recommended)
 
@@ -52,7 +74,7 @@ To connect your domain, you need to update your DNS settings. The process differ
      - For NZ region: identity.nz.onetime.co
      - For UK region: identity.ingress.onetime.co (anycast)
      - For US region: identity.us.onetime.co
-3. Remove any existing A, AAAA, or CNAME records for the same subdomain
+3. Remove any existing A, AAAA, or CNAME records for the same subdomain — but keep the TXT ownership record
 
 ### For Apex Domains
 
@@ -64,7 +86,7 @@ To connect your domain, you need to update your DNS settings. The process differ
      - For US region: 66.51.126.41
      - For other regions: Contact support for current A record IP addresses
 
-Important: Ensure there are no conflicting records for the domain you're using.
+Important: Ensure there are no conflicting A, AAAA, or CNAME records for the domain you're using. The TXT ownership record is not a conflict — leave it in place.
 
 <img src="/img/docs/custom-domains/4-Custom-domain-settings.png" alt="Custom domain settings" width="400" />
 
@@ -86,10 +108,13 @@ Apex domains cannot use CNAME records due to DNS standards. Therefore, we must u
 
 ## Step 4: Verify Domain and Wait for SSL
 
-1. After updating DNS settings, return to the Onetime Secret custom domain page
-2. The system will automatically attempt to verify your domain
-3. SSL certificate generation will begin once verification is successful
-4. This process may take a few minutes to complete
+1. After creating both DNS records, return to the Onetime Secret custom domain page
+2. Press the "Verify" button to check your records right away — verification also re-runs automatically about every 30 minutes
+3. Every verification pass checks both records: the TXT ownership record and your CNAME or A record
+4. SSL certificate generation will begin once verification is successful
+5. This process may take a few minutes to complete
+
+Note: a correct CNAME or A record alone will never verify. SSL may already be issued and your domain may appear to work, but ownership verification cannot complete until the TXT record is in place.
 
 For a closer look at the verification lifecycle, what each domain status means,
 and how to resolve a failed check, see [DNS Validation](/en/custom-domains/dns-validation).
@@ -106,8 +131,9 @@ Once setup is complete, you should see the following information:
 ## Troubleshooting
 
 - If verification fails, double-check your DNS settings
-- Ensure you've removed any conflicting records
-- DNS propagation can take up to 24 hours, though it's usually much faster
+- Confirm the TXT ownership record exists — verification cannot complete without it, even if the domain appears to work
+- Ensure you've removed any conflicting records (but never the TXT ownership record)
+- DNS propagation can take up to 24–48 hours, though it's usually much faster
 
 ## Using Your Custom Domain
 

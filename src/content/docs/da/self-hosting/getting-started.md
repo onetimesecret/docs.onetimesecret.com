@@ -61,7 +61,7 @@ For dem, der foretrækker manuel opsætning, skal du bruge:
 Efter at have klonet repositoriet, kør initialiseringsscriptet og byg frontend-aktiverne:
 
 ```bash
-./install.sh init
+bin/setup --init
 cp .env.example .env
 pnpm install && pnpm run build:local
 ```

@@ -22,7 +22,7 @@ By leveraging Custom Domains, you're not just sharing secrets; you're reinforcin
 
 ## Troubleshooting Common Setup Issues
 
-- **DNS Propagation**: Changes may take up to 48 hours to fully propagate. Be patient and try again later if verification fails initially.
+- **DNS Propagation**: Changes may take up to 24–48 hours to fully propagate. Be patient and try again later if verification fails initially.
 - **Incorrect DNS Records**: Double-check your DNS settings against the provided instructions for your chosen region.
 - **SSL Certificate Issues**: Contact our support team if you encounter any SSL-related problems.
 - **Domain Ownership Verification**: Ensure you have full control over the domain you're trying to set up.
