@@ -53,6 +53,9 @@ jobs:
       - name: Check locale configuration
         run: pnpm run check:locales
 
+      - name: Check colour contrast
+        run: pnpm run check:contrast
+
       - name: Test
         run: pnpm test
 

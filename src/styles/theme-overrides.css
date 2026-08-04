@@ -5,19 +5,53 @@
    Modern SaaS documentation styling
    ======================================================================== */
 
-/* --- Accent Colors --- */
+/* --- Accent Colors ---
+ *
+ * Contrast budget (WCAG 2.2 SC 1.4.3, AA): every token below that is used as
+ * TEXT clears 4.5:1 against the surface it lands on, and every token used as a
+ * SURFACE clears 4.5:1 against the ink Starlight puts on it. Ratios in the
+ * comments are measured against the page background of the matching theme
+ * (#ffffff light / #171717 dark — the greyscale comes from Tailwind's neutral
+ * scale via @astrojs/starlight-tailwind, not Starlight's stock ramp).
+ *
+ * `pnpm run check:contrast` re-measures all of this against the real tokens.
+ *
+ * --sl-color-text-accent is the load-bearing one: Starlight uses it for body
+ * links (markdown.css), the active table-of-contents entry, the site title, and
+ * the skip link's background. The brand orange #dc4a22 only reaches 4.16:1 on
+ * white, so light mode uses the next shade down (#c43d1b, brand-600) which
+ * clears AA both as ink on white AND as a surface under white ink. Dark mode
+ * keeps #e8663f (5.47:1 on the dark page background).
+ */
 :root {
   --sl-color-accent-low: #fcf4e8;
   --sl-color-accent: #dc4a22;
-  --sl-color-accent-high: #a32d12;
-  --sl-color-text-accent: #dc4a22;
+  --sl-color-accent-high: #a32d12; /* 7.14:1 — readable accent ink */
+  --sl-color-text-accent: #c43d1b; /* 5.21:1 (was #dc4a22 at 4.16:1) */
+
+  /* Starlight leaves this as --sl-color-black, which is #ffffff in light mode.
+     Pinned explicitly because it is the ink for accent-coloured surfaces (skip
+     link, banner) and must not drift with the greyscale ramp. */
+  --sl-color-text-invert: #ffffff;
+
+  /* Solid accent surface for filled controls. Kept theme-independent so a
+     filled button carries white ink at AA in both themes — the dark-mode
+     --sl-color-text-accent is deliberately light for use as ink, which makes
+     it too light to sit *under* white ink. */
+  --ots-accent-solid: #c43d1b; /* white ink: 5.21:1 */
+  --ots-accent-solid-hover: #a32d12; /* white ink: 7.14:1 */
 }
 
 :root[data-theme="dark"] {
   --sl-color-accent-low: #85200c;
   --sl-color-accent: #dc4a22;
-  --sl-color-accent-high: #f0c39e;
-  --sl-color-text-accent: #e8663f;
+  --sl-color-accent-high: #f0c39e; /* 11.10:1 — readable accent ink */
+  --sl-color-text-accent: #e8663f; /* 5.47:1 */
+
+  /* Ink for accent-coloured surfaces. Starlight's dark default resolves to
+     --sl-color-accent-low (#85200c above), which only reaches 2.90:1 on
+     --sl-color-text-accent — near-invisible on the skip link. */
+  --sl-color-text-invert: #2b0703; /* on #e8663f: 5.64:1 */
 }
 
 
@@ -43,9 +77,31 @@ header.header {
   transition: color 0.15s ease, background-color 0.15s ease;
 }
 
-/* Active sidebar link - accent indicator */
-.sidebar a[aria-current="page"] {
+/* Active sidebar link - accent indicator
+ *
+ * `color` MUST be set alongside `background` here. Starlight's own rule
+ * (SidebarSublist.astro, @layer starlight.core) pairs them:
+ *
+ *   [aria-current='page'] { color: var(--sl-color-text-invert);
+ *                           background-color: var(--sl-color-text-accent); }
+ *
+ * i.e. inverted ink on a *saturated* accent fill. Replacing only the background
+ * with a 10% tint left that inverted ink stranded on a near-white surface —
+ * #ffffff on #fcede9, a contrast ratio of 1.14:1 in light mode (and 1.41:1 in
+ * dark, where the inherited invert colour resolved to #85200c). Both are far
+ * below the 4.5:1 AA floor and the link read as blank.
+ *
+ * --sl-color-accent-high is the token meant for accent-coloured ink, so it
+ * carries the active state legibly on the tint: 6.18:1 light, 8.30:1 dark.
+ *
+ * This rule is unlayered, so it also wins over Starlight's :hover / :focus
+ * variants of the same selector without needing !important.
+ */
+.sidebar a[aria-current="page"],
+.sidebar a[aria-current="page"]:hover,
+.sidebar a[aria-current="page"]:focus {
   background: color-mix(in srgb, var(--sl-color-text-accent) 10%, transparent);
+  color: var(--sl-color-accent-high);
   font-weight: 600;
   position: relative;
 }
@@ -68,19 +124,25 @@ header.header {
 }
 
 
-/* --- Primary Buttons --- */
+/* --- Primary Buttons ---
+ *
+ * Filled with --ots-accent-solid rather than --sl-color-text-accent: the latter
+ * is tuned to be *ink* in each theme, so in dark mode it is light enough
+ * (#e8663f) that white label text on it fell to 3.28:1. The solid token is the
+ * same in both themes and holds white at 5.21:1 / 7.14:1 on hover.
+ */
 .sl-link-button.primary {
-  background: var(--sl-color-text-accent);
-  border-color: var(--sl-color-text-accent);
-  color: white;
+  background: var(--ots-accent-solid);
+  border-color: var(--ots-accent-solid);
+  color: #fff;
   border-radius: 8px;
   font-weight: 600;
   transition: background 0.15s ease, transform 0.1s ease;
 }
 
 .sl-link-button.primary:hover {
-  background: #c43d1b;
-  border-color: #c43d1b;
+  background: var(--ots-accent-solid-hover);
+  border-color: var(--ots-accent-solid-hover);
   transform: translateY(-1px);
 }
 

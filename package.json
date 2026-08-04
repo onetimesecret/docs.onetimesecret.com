@@ -14,6 +14,7 @@
     "check:nav": "node bin/check-nav.mjs",
     "check:orphans": "node bin/check-orphans.mjs",
     "check:locales": "node bin/check-locales.mjs",
+    "check:contrast": "node bin/check-contrast.mjs",
     "check:links": "./bin/check-links.sh",
     "check:links:malformed": "./bin/check-malformed-links.sh",
     "check:links:get": "./bin/check-links.sh --get --external",
