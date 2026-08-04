@@ -272,9 +272,9 @@ site:
     # The nonce is available via `req.env['onetime.nonce']` for custom
     # script/style assets. Backend views add it automatically.
     #
-    # ENV: CSP_ENABLED (default: false)
+    # ENV: CSP_ENABLED (default: true)
     csp:
-      enabled: <%= ENV['CSP_ENABLED'] == 'true' || false %>
+      enabled: <%= ENV['CSP_ENABLED'] != 'false' %>
 
 features:
   # Incoming Secrets Feature

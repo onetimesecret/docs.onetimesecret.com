@@ -124,7 +124,7 @@ git clone https://github.com/onetimesecret/onetimesecret.git
 cd onetimesecret
 
 # Başlatma betiğini çalıştır
-./install.sh init
+bin/setup --init
 
 # Bağımlılıkları yükle
 bundle install --without development test
@@ -181,7 +181,7 @@ server {
         proxy_pass http://127.0.0.1:3000;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-For $remote_addr;
         proxy_set_header X-Forwarded-Proto $scheme;
     }
 
@@ -190,7 +190,7 @@ server {
         proxy_pass http://127.0.0.1:3000;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-For $remote_addr;
         proxy_set_header X-Forwarded-Proto $scheme;
 
         # WebSocket desteği
@@ -200,6 +200,13 @@ server {
     }
 }
 ```
+
+:::note[İstemci IP iletimi ve proxy güveni]
+- Uygulama, `TRUSTED_PROXY_ENABLED=true` ayarlanmadıkça iletilen başlıkları yok sayar — bu ayar olmadan her istek proxy'nin adresine atfedilir.
+- Yukarıdaki `$remote_addr` ile üzerine yazma, **en soldaki** proxy olmayan girdiyi seçen varsayılan `TRUSTED_PROXY_MODE=filter` için gereklidir — başlığa ekleme yapılması, istemcilerin hız sınırları, yasaklamalar ve denetim kayıtları karşısında IP adreslerini taklit etmesine olanak tanır.
+- İstisna: `TRUSTED_PROXY_MODE=depth` kullanıyorsanız ekleme biçimini (`$proxy_add_x_forwarded_for`) koruyun ve `TRUSTED_PROXY_DEPTH` değerini atlama sayınıza ayarlayın — depth modunda üzerine yazmak zinciri daraltır ve istekleri yanlışlıkla proxy'ye atfeder.
+- Aşağıdaki Caddy yapılandırması aynı üzerine yazmayı `header_up X-Forwarded-For {client_ip}` ile uygular.
+:::
 
 **Siteyi etkinleştir:**
 ```bash
@@ -223,12 +230,16 @@ your-domain.com {
 
     # Arka uca API istekleri
     handle /api/* {
-        reverse_proxy 127.0.0.1:3000
+        reverse_proxy 127.0.0.1:3000 {
+            header_up X-Forwarded-For {client_ip}
+        }
     }
 
     # Diğer tüm istekler arka uca (sunucu tarafından oluşturulan sayfalar için)
     handle {
-        reverse_proxy 127.0.0.1:3000
+        reverse_proxy 127.0.0.1:3000 {
+            header_up X-Forwarded-For {client_ip}
+        }
     }
 }
 ```

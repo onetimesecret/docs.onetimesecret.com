@@ -124,7 +124,7 @@ git clone https://github.com/onetimesecret/onetimesecret.git
 cd onetimesecret
 
 # Kör initieringsskriptet
-./install.sh init
+bin/setup --init
 
 # Installera beroenden
 bundle install --without development test
@@ -181,7 +181,7 @@ server {
         proxy_pass http://127.0.0.1:3000;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-For $remote_addr;
         proxy_set_header X-Forwarded-Proto $scheme;
     }
 
@@ -190,7 +190,7 @@ server {
         proxy_pass http://127.0.0.1:3000;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-For $remote_addr;
         proxy_set_header X-Forwarded-Proto $scheme;
 
         # WebSocket-stöd
@@ -200,6 +200,13 @@ server {
     }
 }
 ```
+
+:::note[Vidarebefordran av klient-IP och förtroende för proxyn]
+- Appen ignorerar vidarebefordrade headers om inte `TRUSTED_PROXY_ENABLED=true` är satt – utan den tillskrivs varje förfrågan proxyns adress.
+- Överskrivningen med `$remote_addr` ovan krävs för standardläget `TRUSTED_PROXY_MODE=filter`, som väljer den **vänstraste** posten som inte är en proxy – en påhängd header skulle låta klienter förfalska sin IP gentemot hastighetsbegränsningar, blockeringar och granskningsloggar.
+- Undantag: med `TRUSTED_PROXY_MODE=depth` behåller du tillägget (`$proxy_add_x_forwarded_for`) och sätter `TRUSTED_PROXY_DEPTH` till ditt antal hopp – att skriva över i depth-läge klappar ihop kedjan och tillskriver proxyn förfrågningarna.
+- Caddy-konfigurationen nedan gör samma överskrivning med `header_up X-Forwarded-For {client_ip}`.
+:::
 
 **Aktivera webbplatsen:**
 ```bash
@@ -223,12 +230,16 @@ your-domain.com {
 
     # API-förfrågningar till backend
     handle /api/* {
-        reverse_proxy 127.0.0.1:3000
+        reverse_proxy 127.0.0.1:3000 {
+            header_up X-Forwarded-For {client_ip}
+        }
     }
 
     # Alla andra förfrågningar till backend (för server-renderade sidor)
     handle {
-        reverse_proxy 127.0.0.1:3000
+        reverse_proxy 127.0.0.1:3000 {
+            header_up X-Forwarded-For {client_ip}
+        }
     }
 }
 ```
