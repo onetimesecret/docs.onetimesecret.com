@@ -36,4 +36,4 @@ Aktualne ceny znajdziesz na naszej [stronie cennika](https://onetimesecret.com/p
 ## Wkrótce
 
 * Dzienniki audytu i reguły dostępu oparte na adresach IP dla Team Plus
-* [Secretary Links](https://secretlinks.com) — bezpieczne linki do zbierania poufnych informacji od dowolnej osoby, bez konieczności posiadania konta
+* [Secretary Links](https://secretarylinks.com) — bezpieczne linki do zbierania poufnych informacji od dowolnej osoby, bez konieczności posiadania konta

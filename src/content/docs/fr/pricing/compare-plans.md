@@ -35,4 +35,4 @@ Pour connaître les tarifs actuels, veuillez consulter notre [page des tarifs](h
 ## Prochainement
 
 * Journaux d'audit et règles d'accès basées sur l'adresse IP pour Team Plus
-* [Secretary Links](https://secretlinks.com) — des liens de collecte sécurisés pour recevoir des informations sensibles de n'importe qui, sans compte requis
+* [Secretary Links](https://secretarylinks.com) — des liens de collecte sécurisés pour recevoir des informations sensibles de n'importe qui, sans compte requis

@@ -35,4 +35,4 @@ Güncel fiyatlandırma için lütfen [Fiyatlandırma Sayfamızı](https://onetim
 ## Yakında
 
 * Team Plus için denetim günlükleri ve IP tabanlı erişim kuralları
-* [Secretary Links](https://secretlinks.com) — hesap gerekmeden herkesten hassas bilgi almanızı sağlayan güvenli toplama bağlantıları
+* [Secretary Links](https://secretarylinks.com) — hesap gerekmeden herkesten hassas bilgi almanızı sağlayan güvenli toplama bağlantıları

@@ -35,4 +35,4 @@ description: 比较我们用于安全共享机密信息的计划——免费、I
 ## 即将推出
 
 * 面向 Team Plus 的审计日志和基于 IP 的访问规则
-* [Secretary Links](https://secretlinks.com)——无需账户即可从任何人处安全接收敏感信息的收集链接
+* [Secretary Links](https://secretarylinks.com)——无需账户即可从任何人处安全接收敏感信息的收集链接

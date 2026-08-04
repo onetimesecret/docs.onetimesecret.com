@@ -36,4 +36,4 @@ Para os preços atuais, visite nossa [Página de Preços](https://onetimesecret.
 ## Em Breve
 
 * Logs de auditoria e regras de acesso baseadas em IP para o Team Plus
-* [Secretary Links](https://secretlinks.com) — links seguros de coleta para receber informações sensíveis de qualquer pessoa, sem necessidade de conta
+* [Secretary Links](https://secretarylinks.com) — links seguros de coleta para receber informações sensíveis de qualquer pessoa, sem necessidade de conta
