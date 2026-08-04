@@ -359,7 +359,7 @@ Before finalizing translations:
 This guide was generated from the following source files:
 
 - Universal resources: `/en/translations/universal/`
-- Glossary: `/de/translations/glossary.md`
-- Language notes: `/de/translations/language-notes.md`
+- Glossary: `de/translations/glossary.md`
+- Language notes: `de/translations/_language-notes.md`
 
 Generated: 2026-07-18

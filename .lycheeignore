@@ -51,6 +51,19 @@ mailto:*
 # browser; documentation pages link to them (e.g. the SSO demos).
 .*/artifacts/.*
 
+# The configuration generator is the same case: src/pages/en/self-hosting/
+# configuration-generator.astro, routed at build time, invisible to a check
+# rooted at src/content/docs. Non-EN links to it redirect to EN
+# (config/redirects.mjs).
+.*/self-hosting/configuration-generator/?$
+
+# CJK false positives: lychee's plaintext extractor has no word boundary
+# before an email address when the preceding character is CJK (e.g.
+# "一般的なお問い合わせ：support@onetimesecret.com"), so it swallows the
+# surrounding sentence and reports the result as a missing file. The emails
+# themselves render as mailto: autolinks, which are excluded above.
+.*@onetimesecret\.com.*
+
 # Exclude missing translations/guide pages (only en and zh-cn have this file;
 # other locale index pages link to it but the pages don't exist yet)
 .*/translations/guide$
@@ -60,6 +73,7 @@ mailto:*
 .*/self-hosting/configuration$
 .*/self-hosting/getting-started$
 .*/self-hosting/installation$
+.*/self-hosting/upgrading-v0-24$
 
 # REST API v2 docs (only exist in en)
 .*/rest-api/v2$

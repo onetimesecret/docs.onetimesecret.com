@@ -411,7 +411,7 @@ These changes align the Italian translation with the guide's core principles: au
 This guide was generated from the following source files:
 
 - Universal resources: `/en/translations/universal/`
-- Glossary: `/it/translations/glossary.md`
-- Language notes: `/it/translations/language-notes.md`
+- Glossary: `it/translations/glossary.md`
+- Language notes: `it/translations/_language-notes.md`
 
 Generated: 2026-01-20

@@ -227,7 +227,7 @@ Les règles d'espacement avant ponctuation double s'appliquent identiquement :
 This guide was generated from the following source files:
 
 - Universal resources: `/en/translations/universal/`
-- Glossary: `/fr/translations/glossary.md`
-- Language notes: `/fr/translations/language-notes.md`
+- Glossary: `fr/translations/glossary.md`
+- Language notes: `fr/translations/_language-notes.md`
 
 Generated: 2026-01-21

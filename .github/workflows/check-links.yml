@@ -5,12 +5,16 @@ name: Check Links
 # Manual testing commands (requires lychee installed):
 #
 # Internal links check:
-#   lychee --no-progress --offline --root-dir "$(pwd)/src/content/docs" --fallback-extensions md,mdoc './src/**/*.md' './src/**/*.mdoc'
+#   lychee --no-progress --offline --root-dir "$(pwd)/src/content/docs" --fallback-extensions md,mdoc './src/**/[!_]*.md' './src/**/[!_]*.mdoc'
 #
 # External links check:
 #   lychee --no-progress --max-concurrency 8 --timeout 20 --max-retries 3 \
 #     --exclude-path ./CHANGELOG.md --accept 200,204,206,301,302,429 \
-#     './src/**/*.md' './src/**/*.mdoc'
+#     './src/**/[!_]*.md' './src/**/[!_]*.mdoc'
+#
+# The [!_] prefix class skips underscore-prefixed files: Astro does not route
+# them, so they are repo-only reference material (e.g. the per-locale
+# translations/_for-translators.md notes) and their links are not user-facing.
 #
 # Note: Static asset paths (/img/*, /socialcards/*) are excluded via .lycheeignore
 # since they live in public/, not in the content directory.
@@ -21,7 +25,10 @@ on:
   # Run on PRs to catch issues before merge
   pull_request:
     branches:
+      - develop
       - main
+      - "claude/*"
+      - "i18n/*"
       - "integration/*"
       - "integrate/*"
       - "feature/*"
@@ -78,8 +85,8 @@ jobs:
             --offline
             --root-dir ${{ github.workspace }}/src/content/docs
             --fallback-extensions md,mdoc
-            './src/**/*.md'
-            './src/**/*.mdoc'
+            './src/**/[!_]*.md'
+            './src/**/[!_]*.mdoc'
           fail: true
 
       - name: Create Issue if internal links are broken
@@ -117,8 +124,8 @@ jobs:
             --method head
             --exclude-path ./CHANGELOG.md
             --accept 200,204,206,301,302,429
-            './src/**/*.md'
-            './src/**/*.mdoc'
+            './src/**/[!_]*.md'
+            './src/**/[!_]*.mdoc'
           output: ./lychee-head.md
           fail: false
         env:
@@ -137,8 +144,8 @@ jobs:
             --method get
             --exclude-path ./CHANGELOG.md
             --accept 200,204,206,301,302,429
-            './src/**/*.md'
-            './src/**/*.mdoc'
+            './src/**/[!_]*.md'
+            './src/**/[!_]*.mdoc'
           output: ./lychee-get.md
           fail: false
         env:

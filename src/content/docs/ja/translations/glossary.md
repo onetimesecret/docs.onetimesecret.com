@@ -159,4 +159,4 @@ description: Onetime Secretの主要な用語、インターフェイス要素�
 
 ---
 
-**注**: このリファレンスに基づき、[language-notes.md](/ja/translations/language-notes)で詳細な翻訳方針を確認してください。
+**注**: このリファレンスに基づき、プロジェクトリポジトリ内の `_language-notes.md` で詳細な翻訳方針を確認してください。

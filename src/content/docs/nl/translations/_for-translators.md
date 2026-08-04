@@ -433,7 +433,7 @@ Voordat vertalingen worden gefinaliseerd:
 This guide was generated from the following source files:
 
 - Universal resources: `/en/translations/universal/`
-- Glossary: `/nl/translations/glossary.md`
-- Language notes: `/nl/translations/language-notes.md`
+- Glossary: `nl/translations/glossary.md`
+- Language notes: `nl/translations/_language-notes.md`
 
 Generated: 2026-01-20
