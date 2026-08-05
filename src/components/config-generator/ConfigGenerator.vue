@@ -397,4 +397,10 @@
     font-size: 0.8rem;
     color: var(--sl-color-gray-3);
   }
+  /* Inline code in the note sits on the tinted inline-code background, which
+     drops muted gray-3 ink to 4.16:1 in light mode. Step the code up to body
+     ink (9.10:1) — the note prose itself stays muted on the plain background. */
+  .cg-note code {
+    color: var(--sl-color-text);
+  }
 </style>
