@@ -60,6 +60,9 @@ export const STARLIGHT_BASE = {
 
 function hexToRgb(hex) {
   const h = hex.replace("#", "");
+  if (h.length !== 3 && h.length !== 6) {
+    throw new Error(`unsupported hex colour: #${h}`);
+  }
   const full = h.length === 3 ? h.split("").map((c) => c + c).join("") : h;
   return [
     parseInt(full.slice(0, 2), 16),
@@ -221,7 +224,9 @@ export function resolveTokens(theme, css = readFileSync(OVERRIDES_CSS, "utf8")) 
   const merged = { ...STARLIGHT_BASE[theme], ...declared };
 
   // Follow `var(--x)` aliases to a literal. Starlight's own defaults use them;
-  // one hop is all its props.css ever needs, but loop defensively.
+  // one hop is all its props.css ever needs, but loop defensively. The 8-hop
+  // cap is cycle protection, not correctness: a cyclic alias exhausts the loop
+  // and leaves a `var(...)` value that parseColor rejects downstream.
   const resolved = {};
   for (const [name, value] of Object.entries(merged)) {
     let v = value;

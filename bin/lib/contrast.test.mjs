@@ -37,6 +37,12 @@ describe("parseColor", () => {
     expect(() => parseColor("rgb(1 2 3)")).toThrow(/unsupported/);
     expect(() => parseColor("var(--nope)")).toThrow(/unsupported/);
   });
+
+  it("rejects hex lengths it cannot evaluate rather than yielding NaN channels", () => {
+    expect(() => parseColor("#ffff")).toThrow(/unsupported/); // 4-digit (alpha)
+    expect(() => parseColor("#ffffff80")).toThrow(/unsupported/); // 8-digit (alpha)
+    expect(() => parseColor("#ff")).toThrow(/unsupported/);
+  });
 });
 
 describe("luminance / contrastRatio", () => {
