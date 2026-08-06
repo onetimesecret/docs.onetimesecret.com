@@ -112,11 +112,19 @@ export function slugifyHeading(text) {
 
 /** Reduce a heading's inline markdown to the text a reader sees. */
 function headingText(raw) {
-  return raw
+  let text = raw
     .replace(/`([^`]*)`/g, "$1") // code spans
     .replace(/!?\[([^\]]*)\]\([^)]*\)/g, "$1") // links and images
-    .replace(/[*_]{1,3}(?=\S)([^*_]*)(?<=\S)[*_]{1,3}/g, "$1") // emphasis
-    .replace(/<[^>]+>/g, "") // inline html
+    .replace(/[*_]{1,3}(?=\S)([^*_]*)(?<=\S)[*_]{1,3}/g, "$1"); // emphasis
+  // Inline html: strip until stable so overlapping brackets can't reassemble
+  // into a tag after one pass (e.g. "<a<b>>"). This is slug math, not output
+  // sanitization, but the single-pass form also trips CodeQL's
+  // incomplete-multi-character-sanitization check.
+  for (let stripped = text.replace(/<[^>]+>/g, ""); stripped !== text; ) {
+    text = stripped;
+    stripped = text.replace(/<[^>]+>/g, "");
+  }
+  return text
     .replace(/\s+#*\s*$/, "") // closing ATX hashes
     .trim();
 }

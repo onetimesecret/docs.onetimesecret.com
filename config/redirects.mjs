@@ -67,6 +67,13 @@ const movedPages = [
   { from: "introduction/guides", to: "start" },
   { from: "self-hosting/self-hosting-vs-hosted", to: "start/hosted-or-self-hosted" },
   { from: "self-hosting/getting-started", to: "start/run-your-own-instance" },
+  // Link shims, not moves: the non-EN copies of run-your-own-instance (moved
+  // here from self-hosting/getting-started) still carry relative links to
+  // their old siblings — ./installation and ./configuration — which now
+  // resolve under start/. English-only policy means those translations are
+  // not edited, so route the stale targets back to the real pages instead.
+  { from: "start/installation", to: "self-hosting/installation" },
+  { from: "start/configuration", to: "self-hosting/configuration" },
 
   // Using Onetime Secret › Sharing secrets
   { from: "secret-links", to: "share" },
