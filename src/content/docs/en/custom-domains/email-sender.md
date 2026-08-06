@@ -6,8 +6,10 @@ audience: end-user
 pageType: how-to
 ---
 
-> **Status:** This page is a work in progress. The summary below describes what
-> the custom Email Sender covers; detailed, screenshot-driven steps will follow.
+:::caution[Work in progress]
+The summary below describes what the custom Email Sender covers; detailed,
+screenshot-driven steps will follow.
+:::
 
 ## What is the Email Sender?
 

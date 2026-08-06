@@ -182,7 +182,7 @@ for (const [slug, required] of Object.entries(REQUIRED_ANCHORS)) {
 // translation costs one line, not one line per locale — a check nobody can read
 // is a check nobody runs.
 
-const { createRedirectsConfig } = await import(
+const { createRedirectsConfig, isOffsiteTarget } = await import(
   new URL("../config/redirects.mjs", import.meta.url).href
 );
 const localeAnchors = new Map();
@@ -223,7 +223,7 @@ for (const [from, to] of Object.entries(createRedirectsConfig())) {
   const hash = to.indexOf("#");
   if (hash === -1) continue;
   fragments++;
-  if (/^[a-z]+:/i.test(to)) {
+  if (isOffsiteTarget(to)) {
     problems.push(
       `${REDIRECTS}: "${from}" points at an external URL with a fragment (${to}) — this check cannot verify it; drop the fragment or point at a page in this repo`,
     );

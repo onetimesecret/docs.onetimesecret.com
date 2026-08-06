@@ -211,11 +211,11 @@ function localeUrl(locale, slug, fragment) {
  *
  * @param {Record<string, string>} redirects
  */
-function assertNoChainedRedirects(redirects) {
+export function assertNoChainedRedirects(redirects) {
   const keys = new Set(Object.keys(redirects).map(pathKey));
   const chains = [];
   for (const [from, to] of Object.entries(redirects)) {
-    if (/^[a-z][a-z0-9+.-]*:/i.test(to)) continue;
+    if (isOffsiteTarget(to)) continue;
     if (keys.has(pathKey(to))) chains.push(`  ${from} -> ${to}`);
   }
   if (chains.length > 0) {
@@ -234,7 +234,7 @@ function assertNoChainedRedirects(redirects) {
  *
  * @param {{from: string}[]} pages
  */
-function assertNoDuplicateSources(pages) {
+export function assertNoDuplicateSources(pages) {
   const seen = new Set();
   const duplicates = [];
   for (const { from } of pages) {
@@ -247,6 +247,17 @@ function assertNoDuplicateSources(pages) {
     );
   }
 }
+
+/**
+ * True when a redirect target leaves this site (any URI scheme).
+ *
+ * The single source for the "is this off-site?" test — bin/check-frontmatter
+ * imports it too, so the exemption in assertNoChainedRedirects and the
+ * fragment check can never classify the same target differently.
+ *
+ * @param {string} target
+ */
+export const isOffsiteTarget = (target) => /^[a-z][a-z0-9+.-]*:/i.test(target);
 
 export function createRedirectsConfig() {
   assertNoDuplicateSources(movedPages);

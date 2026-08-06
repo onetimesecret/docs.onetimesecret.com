@@ -37,7 +37,7 @@ rather than exposing more than you intend.
 
 
 Signin Settings control how existing users authenticate when they access your
-custom domain. Where [Signup Settings](/en/custom-domains/access-and-privacy#signup-settings) govern account
+custom domain. Where the Signup Settings described below govern account
 _creation_, Signin Settings govern account _access_ — the login experience your
 users see on your branded domain.
 
