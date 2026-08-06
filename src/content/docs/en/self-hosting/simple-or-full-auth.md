@@ -88,4 +88,4 @@ safe to change casually.
 
 - Set the mode and configure connections: [Upgrading to v0.24+](./upgrading-v0-24)
 - Full settings surface: [Configuration Reference](./configuration)
-- Deciding whether to self-host at all: [Self-hosting vs. the hosted product](./self-hosting-vs-hosted)
+- Deciding whether to self-host at all: [Hosted or self-hosted?](/en/start/hosted-or-self-hosted)

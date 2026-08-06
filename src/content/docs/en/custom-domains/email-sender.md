@@ -1,6 +1,9 @@
 ---
 title: Email Sender
 description: Send branded email notifications from a custom sender address on your own domain.
+plan: Identity Plus
+audience: end-user
+pageType: how-to
 ---
 
 > **Status:** This page is a work in progress. The summary below describes what
@@ -30,7 +33,7 @@ working reliably; specifics will be documented here as the feature ships.
 
 ## Related features
 
-- [Brand Guide](/en/custom-domains/brand-guide) — match the logo and colors of the experience your emails point to.
+- [Brand Guide](/en/custom-domains/branding) — match the logo and colors of the experience your emails point to.
 - [Custom Domains Overview](/en/custom-domains) — the domain these emails are sent from.
 - [Compare Plans](/en/pricing/compare-plans) — where this feature sits across tiers.
 

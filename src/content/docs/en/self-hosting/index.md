@@ -67,10 +67,10 @@ Your self-hosted instance includes:
 
 ## Next Steps
 
-1. **[Getting Started](./getting-started)** - Step-by-step setup guide
+1. **[Run your own instance](/en/start/run-your-own-instance)** - Step-by-step setup guide
 2. **[Installation & Deployment](./installation)** - Detailed deployment options
 3. **[Configuration Reference](./configuration)** - Complete settings documentation
 
 ---
 
-_Ready to get started? Follow our [Getting Started](./getting-started) guide._
+_Ready to get started? Follow our [Run your own instance](/en/start/run-your-own-instance) guide._
