@@ -54,7 +54,7 @@ for (const code of localeCodes) {
 }
 
 const d = t[defaultLocale]; // English defaults for server-rendered output
-const docsHref = `/${defaultLocale}/introduction/`;
+const docsHref = `/${defaultLocale}/start/`;
 ---
 
 <StarlightPage frontmatter={{ title: d.title, template: 'splash' }}>
@@ -135,7 +135,7 @@ const docsHref = `/${defaultLocale}/introduction/`;
     });
 
     document.querySelectorAll('[data-doclink]').forEach(function (a) {
-      a.setAttribute('href', '/' + loc + '/introduction/');
+      a.setAttribute('href', '/' + loc + '/start/');
     });
   })();
 </script>

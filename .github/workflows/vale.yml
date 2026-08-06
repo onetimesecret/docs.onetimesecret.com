@@ -35,6 +35,11 @@ jobs:
 
       - name: Run Vale
         uses: errata-ai/vale-action@v2
+        # Report-only (see header): findings must not fail the job, and neither
+        # should reviewdog infrastructure errors — on PRs touching >300 files
+        # GitHub's diff API refuses to serve the diff and reviewdog exits 1
+        # without Vale having found anything. Remove when fail_on_error flips.
+        continue-on-error: true
         with:
           # Scope to English source content; translations carry localized prose.
           files: src/content/docs/en

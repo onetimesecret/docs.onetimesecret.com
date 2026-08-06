@@ -16,7 +16,10 @@ const shouldRenderSearch =
 
 const currentLocale = Astro.currentLocale ?? 'en';
 const docsHome = getRelativeLocaleUrl(currentLocale, '/');
-const guidesLink = getRelativeLocaleUrl(currentLocale, 'introduction/guides');
+// Phase 2 retired introduction/guides; "Start here" is the orientation entry
+// point now. The label key stays nav.label.guides so the 16 non-EN bundles keep
+// resolving — only the destination moved.
+const guidesLink = getRelativeLocaleUrl(currentLocale, 'start');
 const apiLink = 'https://api.onetimesecret.com';
 const selfHostingLink = getRelativeLocaleUrl(currentLocale, 'self-hosting');
 const blogLink = 'https://blog.onetimesecret.com/';

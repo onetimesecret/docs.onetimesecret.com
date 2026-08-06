@@ -122,135 +122,194 @@ function createGroup(key, items = [], collapsed = false) {
 }
 
 // ---------------------------------------------------------------------------
-// Custom-domain & plan-tier navigation
+// Plan tier as a badge, not as navigation
 //
-// Grouped by billing entitlement: each feature is filed under the plan tier
-// that first unlocks it (see etc/billing.yaml). "Custom Domains" holds the
-// setup docs (custom_domains is itself a Free entitlement); the Free Plan,
-// Identity Plus and Team Plus groups then show what each tier adds.
+// Until Phase 2 this file grouped pages by billing entitlement: four top-level
+// groups (Custom Domains / Free Plan / Identity Plus / Team Plus) that a reader
+// had to already know the tier of to find a feature in. That filing rule is
+// gone. A tier is an attribute of a page, not a place — so the pages are filed
+// by what a reader is trying to do, and the tier rides along as a badge.
 //
-//   Custom Domains  domain setup & usage docs (custom_domains)
-//   Free Plan       homepage_secrets, incoming_secrets                (Free)
-//   Identity Plus   custom_branding, custom_mail_sender,
-//                   custom_privacy_defaults, custom_signin_config, manage_members
-//   Team Plus       manage_sso, custom_signup_validation, manage_teams, audit_logs
+// The badge is a MECHANICAL CARRY-ACROSS of the group each page already sat
+// under. Nothing here asserts, corrects or re-tiers an entitlement: the
+// production etc/billing.yaml is the only source of truth for what a plan
+// contains, and it lives outside this repo. Do not add, remove or change a
+// badge without reading it.
 //
-// NOTE: audit_logs is defined as an entitlement but is not yet assigned to any
-// plan; Audit Log lives under Team Plus as the most advanced tier. Pages keep
-// their existing /custom-domains/ and /team/ URLs regardless of which group
-// they appear in.
+// Starlight allows exactly one badge per sidebar entry (see
+// @astrojs/starlight/schemas/badge.ts — `text` is a single string or a
+// per-locale record). The two pages that already carried a ★ therefore carry
+// star and tier in one badge text rather than losing either.
 // ---------------------------------------------------------------------------
 
-const customDomainsLinks = () => [
-  createLink("overview", "custom-domains"),
-  createLink("howItWorks", "custom-domains/how-it-works"),
-  createLink("setupGuide", "custom-domains/setup-guide"),
-  createLink("dnsValidation", "custom-domains/dns-validation"),
-  createLink("useCases", "custom-domains/use-cases"),
-];
+/**
+ * Badge marking the billing tier a page's subject belongs to.
+ * @param {"Free"|"Identity Plus"|"Team Plus"} tier
+ * @returns {{text: string, variant: string, class: string}}
+ */
+const planBadge = (tier) => ({ text: tier, variant: "note", class: "small" });
 
-const freePlanLinks = () => [
-  createLink("homepageSecrets", "custom-domains/homepage-secrets"),
-  createLink("incomingSecrets", "custom-domains/incoming-secrets"),
-];
+/**
+ * Plan badge for a page that also carries the pre-existing ★ highlight.
+ * @param {"Free"|"Identity Plus"|"Team Plus"} tier
+ * @returns {{text: string, variant: string, class: string}}
+ */
+const starredPlanBadge = (tier) => ({
+  text: `★ ${tier}`,
+  variant: "tip",
+  class: "small",
+});
 
-const identityPlusLinks = () => [
-  createLink("brandGuide", "custom-domains/brand-guide", {
-    text: "★",
-    variant: "tip",
-    class: "small",
-  }),
-  createLink("emailSender", "custom-domains/email-sender"),
-  createLink("privacyOptions", "custom-domains/privacy-options"),
-  createLink("signinSettings", "custom-domains/signin-settings"),
-  createLink("memberInvites", "custom-domains/member-invites"),
-];
-
-const teamPlusLinks = () => [
-  createLink("sso", "team/sso", { text: "★", variant: "tip", class: "small" }),
-  createLink("signupSettings", "custom-domains/signup-settings"),
-  createLink("sharedDashboard", "team/shared-dashboard"),
-  createLink("auditLog", "team/audit-log"),
-];
-
+// ---------------------------------------------------------------------------
 // Sidebar configuration using translation keys
+//
+// Seven top-level entries. An eighth, the generated Reference, lands in Phase 4.
+//
+// Groups nest: Starlight's ManualSidebarGroupSchema accepts a group inside
+// another group's `items` (schemas/sidebar.ts), and createGroup passes `items`
+// straight through, so no helper change was needed for the two-level sections.
+//
+// Every link label is a distinct translation key. "Overview" used to appear
+// seven times, disambiguated only by which group it happened to be under, which
+// made the sidebar unusable as a flat search result and useless to a screen
+// reader reading the links out of context. Each index page now says what it is.
+// ---------------------------------------------------------------------------
 export const sidebar = [
   createLink("home", "/"),
 
-  createGroup("introduction", [
-    createLink("gettingStarted", "introduction"),
-    createLink("guides", "introduction/guides"),
+  createGroup("startHere", [
+    createLink("whereToBegin", "start"),
+    createLink("sendYourFirstSecret", "start/send-your-first-secret"),
+    createLink("glossaryOfTerms", "start/glossary"),
+    createLink("hostingChoice", "start/hosted-or-self-hosted"),
+    createLink("runYourOwnInstance", "start/run-your-own-instance"),
   ]),
 
-  createGroup("secretLinks", [
-    createLink("overview", "secret-links"),
-    createLink("whyUseSecretLinks", "secret-links/why-use-secret-links"),
-    createLink("useCases", "secret-links/use-cases"),
-    createLink("comparePlans", "pricing/compare-plans"),
-  ]),
+  createGroup("usingOnetimeSecret", [
+    createGroup("sharingSecrets", [
+      createLink("shareASecret", "share"),
+      createLink("yourReceipt", "share/your-receipt"),
+      createLink("whatRecipientsSee", "share/what-recipients-see"),
+      createLink("whenALinkDoesntWork", "share/when-a-link-doesnt-work"),
+      createLink("whyUseSecretLinks", "share/why-secret-links"),
+      createLink("useCases", "share/use-cases"),
+    ]),
 
-  createGroup("customDomains", customDomainsLinks()),
+    createGroup("yourAccount", [
+      createLink("signingIn", "account/signing-in"),
+      createLink("twoFactorAndPasskeys", "account/two-factor-and-passkeys"),
+      createLink("sessionsAndIdentities", "account/sessions-and-identities"),
+      createLink(
+        "dashboardAndRecentSecrets",
+        "account/dashboard-and-recent-secrets",
+      ),
+      createLink("preferences", "account/preferences"),
+      createLink("changeYourEmail", "account/change-your-email"),
+      createLink("switchingRegions", "account/change-your-region"),
+      createLink("closeYourAccount", "account/close-your-account"),
+    ]),
 
-  createGroup("freePlan", freePlanLinks()),
+    createGroup("organizations", [
+      createLink("whatOrganizationsDo", "organizations"),
+      createLink(
+        "memberInvites",
+        "organizations/inviting-members",
+        planBadge("Identity Plus"),
+      ),
+      createLink("sso", "organizations/sso", starredPlanBadge("Team Plus")),
+      createLink(
+        "auditLog",
+        "organizations/audit-trail",
+        planBadge("Team Plus"),
+      ),
+    ]),
 
-  createGroup("identityPlus", identityPlusLinks()),
+    createGroup("customDomains", [
+      createLink("whatCustomDomainsDo", "custom-domains"),
+      createLink("setupGuide", "custom-domains/setup-guide"),
+      createLink("dnsValidation", "custom-domains/dns-validation"),
+      createLink(
+        "brandGuide",
+        "custom-domains/branding",
+        starredPlanBadge("Identity Plus"),
+      ),
+      createLink(
+        "emailSender",
+        "custom-domains/email-sender",
+        planBadge("Identity Plus"),
+      ),
+      createLink(
+        "homepageAndIncoming",
+        "custom-domains/homepage-and-incoming",
+        planBadge("Free"),
+      ),
+      createLink(
+        "accessAndPrivacy",
+        "custom-domains/access-and-privacy",
+        planBadge("Identity Plus"),
+      ),
+    ]),
 
-  createGroup("teamPlus", teamPlusLinks()),
-
-  createGroup("regions", [
-    createLink("overview", "regions"),
-    createLink("regionCA", "regions/canada"),
-    createLink("regionEU", "regions/european-union"),
-    createLink("regionNZ", "regions/new-zealand"),
-    createLink("regionUK", "regions/united-kingdom"),
-    createLink("regionUS", "regions/united-states"),
-    createLink("switchingRegions", "regions/switching-regions"),
+    // No badges here: this group is *about* the tiers, so labelling its own
+    // entries with one would be circular. Both pages are carried across
+    // unchanged pending the production billing catalog.
+    createGroup("plansAndBilling", [
+      createLink("plansAndPricing", "pricing"),
+      createLink("comparePlans", "pricing/compare-plans"),
+    ]),
   ]),
 
   createGroup("selfHosting", [
-    createLink("overview", "self-hosting"),
-    createLink("hostingChoice", "self-hosting/self-hosting-vs-hosted"),
-    createLink("authModeChoice", "self-hosting/simple-or-full-auth"),
-    createLink("gettingStarted", "self-hosting/getting-started"),
-    createLink("installationDeployment", "self-hosting/installation"),
-    createLink("configurationReference", "self-hosting/configuration"),
-    createLink("configurationGenerator", "self-hosting/configuration-generator"),
-    createLink("environmentVariables", "self-hosting/environment-variables"),
-    createLink("upgradingToV023", "self-hosting/upgrading-v0-23"),
-    createLink("upgradingToV024", "self-hosting/upgrading-v0-24"),
+    createGroup("installAndDeploy", [
+      createLink("aboutSelfHosting", "self-hosting"),
+      createLink("authModeChoice", "self-hosting/simple-or-full-auth"),
+      createLink("installationDeployment", "self-hosting/installation"),
+    ]),
+
+    createGroup("configure", [
+      createLink("configurationReference", "self-hosting/configuration"),
+      createLink(
+        "configurationGenerator",
+        "self-hosting/configuration-generator",
+      ),
+      createLink("environmentVariables", "self-hosting/environment-variables"),
+    ]),
+
+    createGroup("troubleshootAndUpgrade", [
+      createLink("upgradingToV024", "self-hosting/upgrading-v0-24"),
+      createLink("upgradingToV023", "self-hosting/upgrading-v0-23"),
+    ]),
   ]),
 
-  createLink("restApi", "rest-api"),
-
-  createGroup("resources", [
-    createLink("clientLibraries", "resources/client-libraries"),
+  createGroup("apiAndSdks", [
+    createLink("restApi", "api"),
+    createLink("clientLibraries", "api/client-libraries"),
   ]),
 
   createGroup("securityTrust", [
-    createLink("overview", "security"),
+    createLink("ourApproachToSecurity", "security"),
     createLink("dataProtection", "security/data-protection"),
-    createLink("securityBestPractices", "security-best-practices"),
+    createLink("whereYourDataLives", "security/where-your-data-lives"),
+    createLink("securityBestPractices", "security/best-practices"),
+    createLink("ourPrinciples", "security/our-principles"),
     createLink("vulnerabilityDisclosure", "security/vulnerability-disclosure"),
   ]),
 
   createGroup(
-    "ourPrinciples",
-    [
-      createLink("overview", "principles"),
-      createLink("privacyFirst", "principles/privacy-first"),
-      createLink("communication", "principles/communication"),
-      createLink("dataMinimization", "principles/data-minimization"),
-    ],
-    true,
-  ),
-
-  createGroup(
     "translations",
     [
-      createLink("overview", "translations"),
-      createLink("universalGuidance", "translations/universal"),
+      createLink("howTranslationsWork", "translations"),
       createLink("styleGuide", "translations/guide"),
       createLink("glossary", "translations/glossary"),
+      createLink("universalGuidance", "translations/universal"),
+      createLink("translatingSecret", "translations/universal/secret-concept"),
+      createLink(
+        "passwordVsPassphrase",
+        "translations/universal/password-passphrase",
+      ),
+      createLink("brandTerms", "translations/universal/brand-terms"),
+      createLink("voiceAndTone", "translations/universal/voice-and-tone"),
+      createLink("qualityChecklist", "translations/universal/quality-checklist"),
     ],
     true,
   ),

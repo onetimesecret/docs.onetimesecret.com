@@ -13,6 +13,7 @@
     "astro": "astro",
     "check:nav": "node bin/check-nav.mjs",
     "check:orphans": "node bin/check-orphans.mjs",
+    "check:frontmatter": "node bin/check-frontmatter.mjs",
     "check:locales": "node bin/check-locales.mjs",
     "check:contrast": "node bin/check-contrast.mjs",
     "check:links": "./bin/check-links.sh",
