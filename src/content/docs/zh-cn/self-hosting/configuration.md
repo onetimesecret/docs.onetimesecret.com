@@ -172,13 +172,10 @@ Onetime Secret 使用多个配置文件：
     # 这允许更严格的模式，其中只有经过身份验证的用户才能创建
     # 机密内容，同时保持站点导航和品牌。
     :required: <%= ENV['AUTH_REQUIRED'] == 'true' %>
-    # 下面列出的电子邮件地址将在帐户创建时自动授予
-    # 管理权限。这些帐户可以访问显示基本系统统计信息的页面。
-    # 使用术语"colonel"而不是"admin"。"Colonel"（发音为"kernel"）
-    # 既指 Linux 系统的受保护核心，也指军衔，象征着高级访问
-    # 权限。此命名有助于避免针对常见管理 URL 或角色名称的基本自动攻击。
-    :colonels:
-      - <%= ENV['COLONEL'] || 'CHANGEME@example.com' %>
+    # Colonel(管理员)账户通过 CLI 管理：
+    #   bin/ots customers role promote user@example.com
+    #   bin/ots customers role demote user@example.com
+    #   bin/ots customers role list
   # 一种类似验证码的功能，可保护反馈表单
   # 免受机器人和其他恶作剧的侵害。
   :authenticity:

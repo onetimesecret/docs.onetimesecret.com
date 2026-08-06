@@ -41,7 +41,7 @@ docker run -p 3000:3000 -d \
   -e HOST=localhost:3000 \
   -e SSL=false \
   -e RACK_ENV=production \
-  onetimesecret/onetimesecret:v0.26.2
+  onetimesecret/onetimesecret:v0.26.4
 ```
 
 ### 4. Örneğinize Erişin
@@ -70,7 +70,17 @@ Eksiksiz manuel kurulum ayrıntıları için [README](https://github.com/onetime
 
 ## Yönetici Kurulumu
 
-Bir yönetici kullanıcı oluşturmak için, yapılandırma dosyanızdaki `:colonels:` bölümüne e-posta adreslerini ekleyin, ardından otomatik olarak yönetici erişimi almak için bu e-postalardan biriyle kaydolun.
+Valkey/Redis çalışırken ve `.env` dosyanız kabuğa yüklenmişken (`set -a; source .env; set +a`), doğrudan bir yönetici hesabı oluşturun:
+
+```bash
+bundle exec bin/ots customers create admin@example.com --role colonel
+```
+
+Bu, doğrulanmış bir hesap oluşturur ve `--password` belirtmediğiniz sürece tek seferlik oluşturulmuş bir parola yazdırır — bunu kaydedin. Hem basit hem de tam kimlik doğrulama modlarında çalışır. Zaten var olan bir hesabı yükseltmek için:
+
+```bash
+bundle exec bin/ots customers role promote admin@example.com
+```
 
 **Not**: Yönetici alanı şu anda sınırlı işlevselliğe sahiptir - kullanıcı yönetimi olmayan salt okunur yapılandırma görüntüleme. Gelecek sürümler için daha fazla özellik planlanmıştır.
 

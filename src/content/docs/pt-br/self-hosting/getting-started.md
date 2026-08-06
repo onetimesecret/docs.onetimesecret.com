@@ -41,7 +41,7 @@ docker run -p 3000:3000 -d \
   -e HOST=localhost:3000 \
   -e SSL=false \
   -e RACK_ENV=production \
-  onetimesecret/onetimesecret:v0.26.2
+  onetimesecret/onetimesecret:v0.26.4
 ```
 
 ### 4. Acessar Sua Instância
@@ -70,7 +70,17 @@ Consulte [README](https://github.com/onetimesecret/onetimesecret#readme) para de
 
 ## Configuração de Administrador
 
-Para criar um usuário administrador, adicione endereços de e-mail à seção `:colonels:` no seu arquivo de configuração, então cadastre-se com um desses e-mails para obter automaticamente acesso de administrador.
+Com o Valkey/Redis em execução e seu `.env` carregado no shell (`set -a; source .env; set +a`), crie uma conta de administrador diretamente:
+
+```bash
+bundle exec bin/ots customers create admin@example.com --role colonel
+```
+
+Isso cria uma conta verificada e exibe uma senha gerada de uso único — salve-a — a menos que você use `--password`. Funciona tanto no modo de autenticação simples quanto no completo. Para promover uma conta já existente:
+
+```bash
+bundle exec bin/ots customers role promote admin@example.com
+```
 
 **Nota**: A área de administrador atualmente tem funcionalidade limitada - é visualização readonly de configuração sem gerenciamento de usuários. Mais recursos estão planejados para versões futuras.
 

@@ -177,16 +177,10 @@ Anei ngā wāhanga nui rawa e tino hiahia pea koe ki te whakamāori:
     # whāiti ake kei reira ko ngā kaiwhakamahi motuhēhēnga anake ka taea te
     # waihanga karere muna me te pupuri tonu i te whakatere pae me te waitohu.
     :required: <%= ENV['AUTH_REQUIRED'] == 'true' %>
-    # Ka whiwhihia e ngā wāhitau īmēra kei raro nei ngā mana kaiwhakahaere
-    # aunoa i te wā o te waihanga pūkete. He urunga ō ēnei pūkete ki tētahi
-    # whārangi e whakaatu ana i ngā tauanga pūnaha taketake. Ka whakamahia
-    # te kupu "colonel" kaua ko "admin". Ko "Colonel" (e kīia ana ko "kernel")
-    # e tohu ana i te pūtaiao tiakina o tētahi pūnaha Linux me tētahi kaikōeke
-    # tāua, e tohu ana i ngā whakaaetanga urunga taumata-teitei. Mā tēnei
-    # ingoatanga ka aukati i ngā whakamatenga taketake, aunoa e pā ana ki ngā
-    # URL kaiwhakahaere noa, i ngā ingoa tūnga rānei.
-    :colonels:
-      - <%= ENV['COLONEL'] || 'CHANGEME@example.com' %>
+    # Ka whakahaerehia ngā pūkete Colonel (kaiwhakahaere) mā te CLI:
+    #   bin/ots customers role promote user@example.com
+    #   bin/ots customers role demote user@example.com
+    #   bin/ots customers role list
   # He āhuatanga captcha-ōrite e tiaki ana i te puka urupare mai i ngā
   # pōtae me ētahi atu mahi kino.
   :authenticity:

@@ -10,7 +10,7 @@ sidebar:
 :::tip[現在のリリース: v0.26]
 現在の安定版リリースは **v0.26**（`main` ブランチ）です。2つのモードで動作します：
 
-- **シンプルモード** — 最も簡単な方法です。Redisといくつかの環境変数のみが必要で、アカウントはこれまでと同様に機能します。
+- **シンプルモード** — 最も簡単な方法です。Redisといくつかの環境変数のみが必要で、アカウントはこれまでと同様に機能します。下記の[クイックスタート](#クイックスタートオプション)から始めましょう。
 - **フルモード** — PostgreSQLとRabbitMQを基盤とするアカウント機能（MFA、SSO、WebAuthn、組織）を追加します。
 
 v0.22またはv0.23からアップグレードする場合は、設定とデータモデルの変更点、および認証モードの選び方について解説した[v0.24+へのアップグレード](./upgrading-v0-24)ガイドに従ってください。
@@ -37,7 +37,7 @@ docker run -p 6379:6379 -d redis:bookworm
 docker run -p 3000:3000 -d \
   -e REDIS_URL=redis://host.docker.internal:6379/0 \
   -e SECRET="$(openssl rand -hex 32)" \
-  onetimesecret/onetimesecret:v0.26.2
+  onetimesecret/onetimesecret:v0.26.4
 ```
 
 `http://localhost:3000` でアクセスできます。

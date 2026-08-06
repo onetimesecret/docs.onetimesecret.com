@@ -41,7 +41,7 @@ docker run -p 3000:3000 -d \
   -e HOST=localhost:3000 \
   -e SSL=false \
   -e RACK_ENV=production \
-  onetimesecret/onetimesecret:v0.26.2
+  onetimesecret/onetimesecret:v0.26.4
 ```
 
 ### 4. 访问您的实例
@@ -70,7 +70,17 @@ docker run -p 3000:3000 -d \
 
 ## 管理员设置
 
-要创建管理员用户，请在配置文件的 `:colonels:` 部分添加电子邮件地址，然后使用其中一个电子邮件注册以自动获得管理员访问权限。
+在 Valkey/Redis 运行且已将 `.env` 加载到 shell 中(`set -a; source .env; set +a`)的情况下，直接创建管理员账户：
+
+```bash
+bundle exec bin/ots customers create admin@example.com --role colonel
+```
+
+此命令会创建一个已验证的账户，并打印一次性生成的密码——请妥善保存——除非你传入了 `--password` 参数。该命令在简单模式和完整认证模式下均可使用。要提升一个已存在的账户：
+
+```bash
+bundle exec bin/ots customers role promote admin@example.com
+```
 
 **注意**：管理员区域目前功能有限 - 它是只读配置查看，没有用户管理功能。未来版本计划提供更多功能。
 

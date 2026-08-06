@@ -41,7 +41,7 @@ docker run -p 3000:3000 -d \
   -e HOST=localhost:3000 \
   -e SSL=false \
   -e RACK_ENV=production \
-  onetimesecret/onetimesecret:v0.26.2
+  onetimesecret/onetimesecret:v0.26.4
 ```
 
 ### 4. Uru ki Tō Tauira
@@ -70,7 +70,17 @@ Tirohia [README](https://github.com/onetimesecret/onetimesecret#readme) mō ngā
 
 ## Whakatū Kaiwhakahaere
 
-Hei waihanga i tētahi kaiwhakamahi kaiwhakahaere, tāpirihia ngā wāhitau īmēra ki te wāhanga `:colonels:` i roto i tō kōnae whirihoranga, katahi ka rēhita mā tētahi o ērā īmēra kia whiwhi aunoa i te urunga kaiwhakahaere.
+I te wā e rere ana a Valkey/Redis, ā, kua utaina tō `.env` ki roto i te anga (`set -a; source .env; set +a`), waihangahia tētahi pūkete kaiwhakahaere ā-tika tonu:
+
+```bash
+bundle exec bin/ots customers create admin@example.com --role colonel
+```
+
+Ka waihangahia e tēnei tētahi pūkete kua whakamanatia, ā, ka whakaputaina tētahi kupuhipa kua hangaia mō te wā kotahi anake — tiakina — mēnā kāore koe e whakamahi i te `--password`. Ka mahi tēnei i ngā aratau whakamana e rua, arā i te aratau ngāwari me te aratau kātoatoa. Hei whakapiki i tētahi pūkete kua noho kē:
+
+```bash
+bundle exec bin/ots customers role promote admin@example.com
+```
 
 **Tuhipoka**: Ko te rohe kaiwhakahaere he āhuatanga iti te wāteatanga - he tirohanga whirihoranga pānui-anake me te kore whakahaere kaiwhakamahi. He maha atu ngā āhuatanga e whakaaro ana mō ngā whakaputanga a tērā atu.
 

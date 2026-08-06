@@ -174,17 +174,10 @@ Büyük olasılıkla özelleştirmeniz gereken en önemli bölümler şunlardır
     # doğrulanmış kullanıcıların site gezinmesini ve markalamasını korurken
     # gizli mesaj oluşturabileceği daha kısıtlayıcı bir mod sağlar.
     :required: <%= ENV['AUTH_REQUIRED'] == 'true' %>
-    # Aşağıda listelenen e-posta adresleri, hesap oluşturulduğunda otomatik
-    # yönetici ayrıcalıkları verilecektir. Bu hesaplar temel sistem
-    # istatistiklerini gösteren bir sayfaya erişebilir.
-    # "Admin" yerine "colonel" terimi kullanılır. "Colonel" (ki
-    # "kernel" olarak telaffuz edilir) hem bir Linux sisteminin korunan
-    # çekirdeğine hem de bir askeri rütbeye atıfta bulunur ve yüksek düzeyde
-    # erişim izinlerini sembolize eder. Bu adlandırma, yaygın yönetici
-    # URL'lerini veya rol adlarını hedefleyen temel, otomatik saldırılardan
-    # kaçınmaya yardımcı olur.
-    :colonels:
-      - <%= ENV['COLONEL'] || 'CHANGEME@example.com' %>
+    # Colonel (yönetici) hesapları CLI üzerinden yönetilir:
+    #   bin/ots customers role promote user@example.com
+    #   bin/ots customers role demote user@example.com
+    #   bin/ots customers role list
   # Geri bildirim formunu botlardan ve diğer saçmalıklardan koruyan
   # captcha benzeri bir özellik.
   :authenticity:

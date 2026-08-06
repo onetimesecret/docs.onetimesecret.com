@@ -174,16 +174,10 @@ Här är de viktigaste sektionerna du sannolikt behöver anpassa:
     # mer restriktivt läge där endast autentiserade användare kan skapa
     # hemligheter samtidigt som webbplatsnavigering och varumärkning bibehålls.
     :required: <%= ENV['AUTH_REQUIRED'] == 'true' %>
-    # E-postadresser listade nedan kommer att beviljas automatiska
-    # administrativa privilegier vid kontoskapande. Dessa
-    # konton har åtkomst till en sida som visar grundläggande systemstatistik.
-    # Termen "colonel" används istället för "admin". "Colonel" (som
-    # uttalas "kernel") refererar till både den skyddade kärnan i ett
-    # Linux-system och en militär rang, vilket symboliserar hög åtkomst-
-    # behörighet. Denna namngivning hjälper till att undvika grundläggande,
-    # automatiserade attacker som riktar sig mot vanliga admin-URL:er eller rollnamn.
-    :colonels:
-      - <%= ENV['COLONEL'] || 'CHANGEME@example.com' %>
+    # Colonel-konton (admin) hanteras via CLI:
+    #   bin/ots customers role promote user@example.com
+    #   bin/ots customers role demote user@example.com
+    #   bin/ots customers role list
   # En captcha-liknande funktion som skyddar återkopplingsformuläret
   # från robotar och annat bus.
   :authenticity:
