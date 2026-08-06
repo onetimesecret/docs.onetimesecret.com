@@ -213,13 +213,23 @@ const VALUE_WINDOW = 120;
 const VALUE = /(?:^|[\s=:(`'"])[-+]?\d/;
 
 /**
+ * A line that opens a new Markdown block rather than continuing this one: a
+ * blank line, a fence, or a fresh list item. The stated-defaults window must
+ * not read past these — the next block is a different claim, and a numbered
+ * list marker ("1. …") would otherwise look like a value.
+ */
+const BLOCK_BREAK = /^\s*$|^\s{0,3}(`{3,}|~{3,})|^\s*(?:[-*+]|\d+[.)])\s/;
+
+/**
  * Prose in `body` that states a configurable default outright.
  *
  * Fenced code blocks are excluded: a docker-compose sample or an .env excerpt
- * is a transcript, not a claim about the hosted service. Only the run of text
- * after the variable name and on the same line is searched, bounded to
- * VALUE_WINDOW characters, so a number in the NEXT sentence does not attach
- * itself to a variable mentioned in this one.
+ * is a transcript, not a claim about the hosted service. The run of text after
+ * the variable name is searched to VALUE_WINDOW characters, continuing across
+ * hard-wrapped lines of the same block — this repo wraps prose at ~78 columns,
+ * so a variable at end-of-line and its value opening the next line are one
+ * sentence — but never past a blank line, fence, or new list item, so a number
+ * in the NEXT block does not attach itself to a variable in this one.
  *
  * @param {string} body
  * @returns {{line: number, variable: string, excerpt: string}[]}
@@ -227,8 +237,9 @@ const VALUE = /(?:^|[\s=:(`'"])[-+]?\d/;
 export function statedDefaults(body) {
   const found = [];
   let fence = null;
+  const lines = body.split("\n");
 
-  for (const [i, line] of body.split("\n").entries()) {
+  for (const [i, line] of lines.entries()) {
     const fenceMatch = line.match(/^\s{0,3}(`{3,}|~{3,})/);
     if (fenceMatch) {
       if (fence === null) fence = fenceMatch[1][0];
@@ -239,8 +250,12 @@ export function statedDefaults(body) {
 
     ENV_VAR.lastIndex = 0;
     for (const match of line.matchAll(ENV_VAR)) {
-      const after = line.slice(match.index + match[0].length, match.index + match[0].length + VALUE_WINDOW);
-      if (!VALUE.test(after)) continue;
+      let after = line.slice(match.index + match[0].length);
+      for (let j = i + 1; after.length < VALUE_WINDOW && j < lines.length; j++) {
+        if (BLOCK_BREAK.test(lines[j])) break;
+        after += ` ${lines[j]}`;
+      }
+      if (!VALUE.test(after.slice(0, VALUE_WINDOW))) continue;
       found.push({
         line: i + 1,
         variable: match[0],

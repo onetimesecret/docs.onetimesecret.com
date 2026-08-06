@@ -53,9 +53,9 @@ translations remain useful reference even where they can't be shipped as-is.
 
 | Source page (per locale) | Copies | Merged into |
 |---|---|---|
-| `custom-domains/homepage-secrets` | 1 | `custom-domains/access-and-privacy` `#homepage-secrets` |
+| `custom-domains/homepage-secrets` | 1 | `custom-domains/homepage-and-incoming` `#homepage-secrets` |
 | `custom-domains/how-it-works` | 17 | `custom-domains/` `#how-it-works` |
-| `custom-domains/incoming-secrets` | 1 | `custom-domains/access-and-privacy` `#incoming-secrets` |
+| `custom-domains/incoming-secrets` | 1 | `custom-domains/homepage-and-incoming` `#incoming-secrets` |
 | `custom-domains/privacy-options` | 1 | `custom-domains/access-and-privacy` `#privacy-options` |
 | `custom-domains/signin-settings` | 1 | `custom-domains/access-and-privacy` `#signin-settings` |
 | `custom-domains/signup-settings` | 1 | `custom-domains/access-and-privacy` `#signup-settings` |
@@ -85,7 +85,7 @@ were English-only pages. Total: 263 files.
 One line per deleted file: `path → merge target`.
 
 ```
-src/content/docs/en/custom-domains/homepage-secrets.md -> custom-domains/access-and-privacy#homepage-secrets
+src/content/docs/en/custom-domains/homepage-secrets.md -> custom-domains/homepage-and-incoming#homepage-secrets
 src/content/docs/bg/custom-domains/how-it-works.md -> custom-domains/#how-it-works
 src/content/docs/da/custom-domains/how-it-works.md -> custom-domains/#how-it-works
 src/content/docs/de/custom-domains/how-it-works.md -> custom-domains/#how-it-works
@@ -103,7 +103,7 @@ src/content/docs/sv/custom-domains/how-it-works.md -> custom-domains/#how-it-wor
 src/content/docs/tr/custom-domains/how-it-works.md -> custom-domains/#how-it-works
 src/content/docs/uk/custom-domains/how-it-works.md -> custom-domains/#how-it-works
 src/content/docs/zh-cn/custom-domains/how-it-works.md -> custom-domains/#how-it-works
-src/content/docs/en/custom-domains/incoming-secrets.md -> custom-domains/access-and-privacy#incoming-secrets
+src/content/docs/en/custom-domains/incoming-secrets.md -> custom-domains/homepage-and-incoming#incoming-secrets
 src/content/docs/en/custom-domains/privacy-options.md -> custom-domains/access-and-privacy#privacy-options
 src/content/docs/en/custom-domains/signin-settings.md -> custom-domains/access-and-privacy#signin-settings
 src/content/docs/en/custom-domains/signup-settings.md -> custom-domains/access-and-privacy#signup-settings

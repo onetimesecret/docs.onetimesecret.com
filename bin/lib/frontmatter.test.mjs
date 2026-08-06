@@ -191,4 +191,17 @@ describe("statedDefaults", () => {
     const far = `Set AUTHENTICATION_MODE to suit your deployment.${" ".repeat(130)}It takes 30 days.`;
     expect(statedDefaults(far)).toEqual([]);
   });
+
+  it("fires when the value lands on the next line of a hard-wrapped sentence", () => {
+    const wrapped = "Secrets expire after the window set by SECRET_TTL, which defaults to\n604800 seconds.";
+    expect(statedDefaults(wrapped)).toHaveLength(1);
+  });
+
+  it("does not read past a blank line into the next block", () => {
+    expect(statedDefaults("The window is set by SECRET_TTL.\n\nIt takes 30 days.")).toEqual([]);
+  });
+
+  it("does not mistake a numbered list marker on the next line for a value", () => {
+    expect(statedDefaults("To change SECRET_TTL:\n1. Open the config.")).toEqual([]);
+  });
 });
