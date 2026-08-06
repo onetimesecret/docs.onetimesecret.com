@@ -34,7 +34,7 @@ jobs:
         uses: actions/checkout@v7
 
       - name: Run Vale
-        uses: errata-ai/vale-action@v2
+        uses: errata-ai/vale-action@v3
         # Report-only (see header): findings must not fail the job, and neither
         # should reviewdog infrastructure errors — on PRs touching >300 files
         # GitHub's diff API refuses to serve the diff and reviewdog exits 1
