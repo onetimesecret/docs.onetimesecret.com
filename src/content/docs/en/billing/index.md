@@ -3,7 +3,7 @@ title: How plans work
 description: A plan belongs to your organization rather than your account, what it includes is shown in the app under Plan Features, and your role decides how much of it reaches you.
 audience: end-user
 pageType: concept
-sourceOfTruth: onetimesecret/lib/onetime/models/organization/features/with_plan_entitlements.rb:48-56 (the plan grants capabilities to the organization); onetimesecret/src/shared/composables/useEntitlements.ts:16-44 and onetimesecret/locales/content/en/workspace-billing.json (the in-app panel is titled "Plan Features"); onetimesecret/lib/onetime/models/features/with_entitlements.rb:149-153 (billing can be switched off entirely, which is the self-hosted default)
+sourceOfTruth: onetimesecret/lib/onetime/models/organization/features/with_plan_entitlements.rb:181-212 (the plan grants capabilities to the organization — the entitlement resolution order); onetimesecret/src/shared/composables/useEntitlements.ts:16-44 and onetimesecret/locales/content/en/workspace-billing.json:59 (the in-app panel is titled "Plan Features"); onetimesecret/lib/onetime/models/features/with_entitlements.rb:149-153 and onetimesecret/lib/onetime/billing_config.rb:41-53 (billing can be switched off entirely, and is off unless a billing config sets it, which is the self-hosted default)
 ---
 
 :::note
