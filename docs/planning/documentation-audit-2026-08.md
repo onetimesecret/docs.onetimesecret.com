@@ -27,11 +27,15 @@ delivered, and what each carried forward rather than finishing, is recorded in
 
 One gate remains shut across every phase that follows: the production `etc/billing.yaml` has not been
 supplied, so no page may assert a plan tier, entitlement, seat limit or price. Its reach has grown past
-what [D3](#d3--billing-catalog) scoped. It now holds four unwritten pages — `billing/index`,
-`billing/managing-your-subscription`, `organizations/roles-and-permissions`,
-`features/billing-and-entitlements` — and leaves two published pages carrying claims nothing in any
-repo can confirm: `pricing/compare-plans` (the four-column matrix) and `custom-domains/access-and-privacy`
-(three `**Plan:**` lines removed in Phase 2 rather than corrected).
+what [D3](#d3--billing-catalog) scoped, but the gate turns out to bind *content*, not *existence*.
+Three of the four pages it was holding — `billing/index`, `billing/managing-your-subscription`,
+`organizations/roles-and-permissions` — shipped after Phase 2 closed as shortened pages that describe
+the mechanism (a plan applies to an organization; effective permissions are plan ∩ role; the in-app
+**Plan Features** panel is authoritative) and assert no catalog contents at all. What the gate still
+holds outright is `features/billing-and-entitlements`, whose whole subject is the catalog. It also
+still leaves two published pages carrying claims nothing in any repo can confirm:
+`pricing/compare-plans` (the four-column matrix) and `custom-domains/access-and-privacy` (three
+`**Plan:**` lines removed in Phase 2 rather than corrected).
 
 ---
 
@@ -379,7 +383,7 @@ not.
 | Phase | Status | Shipped as |
 |---|---|---|
 | 1 — stop the bleeding | **done** 2026-08-04 | #391–#394 |
-| 2 — reshape and build the end-user task layer | **done** 2026-08-06 | [#405](https://github.com/onetimesecret/docs.onetimesecret.com/pull/405) |
+| 2 — reshape and build the end-user task layer | **done** 2026-08-06; six-page tail closed 2026-08-09 | [#405](https://github.com/onetimesecret/docs.onetimesecret.com/pull/405), [#407](https://github.com/onetimesecret/docs.onetimesecret.com/pull/407) |
 | 3 — the operator install and configure tree | **next** | — |
 | 4 — the generated reference and the Day-2 layer | not started | — |
 | 5 — drift prevention | not started | — |
@@ -409,12 +413,14 @@ resolving it.
 > **Shipped 2026-08-04 as #391–#394**, and re-verified in-repo before Phase 2 opened. Spot-checked
 > again 2026-08-09: the `_onetime-challenge-*` TXT step is in `custom-domains/setup-guide`, the
 > `:colonels:` auto-promotion claim is gone, `translations/universal/_index.md` is renamed, and all 26
-> `language-notes.md` copies are deleted. One departure from D8 worth naming, since it was a
-> judgement call rather than an oversight: `UI_HOMEPAGE_TRUSTED_PROXY_DEPTH` and
-> `UI_HOMEPAGE_TRUSTED_IP_HEADER` were not deleted without trace — `environment-variables.md:331-334`
-> keeps a comment saying they were removed, that setting them refuses boot under
-> `DEPRECATED_CONFIG_MODE=strict`, and what replaced them. Neither is published as settable, which is
-> what D8 was protecting against, and the note serves the operator who already has them in a file.
+> `language-notes.md` copies are deleted. One departure from D8 surfaced in that check and has since
+> been corrected: `UI_HOMEPAGE_TRUSTED_PROXY_DEPTH` and `UI_HOMEPAGE_TRUSTED_IP_HEADER` had survived
+> in `environment-variables.md` as a comment recording that they were removed, that setting them
+> refuses boot under `DEPRECATED_CONFIG_MODE=strict`, and what replaced them. The argument for keeping
+> it was that it serves an operator who already has the variables in a file. The argument against is
+> D8's letter — *a variable that is gone should leave no trace to copy* — and a comment naming a
+> removed variable is a trace to copy. The names are gone; what survives is the forward pointer
+> without them, to the `TRUSTED_PROXY_*` family documented in `self-hosting/installation`.
 >
 > Two things went differently from the text above. **`bin/check-nav.mjs` and `bin/check-orphans.mjs`
 > were built here** rather than waiting for Phase 5 — Phase 2's reshape would have been unverifiable
@@ -456,25 +462,41 @@ and if the answer arrives late they are the phase's tail, not its trunk.
 > locale's copy to the new URL, but the 15 merges could not, so **240 translated files were deleted**
 > and those locales now fall back to the current English page rather than serving stale partial
 > translations. Consistent with D5, and a real loss rather than bookkeeping. Every deleted file was
-> indexed by family, merge target and recovery command in `docs/planning/phase-2-deleted-files.md`;
-> see *Phase 2 working files* below for where that index now lives.
+> indexed by family, merge target and recovery command in `deleted-files.md`; see *Phase 2 working
+> files* below for where that index now lives.
 >
-> **Handed to Phase 3, not finished here.** Six of the 30 pages §3 specifies are unwritten. Four were
-> deferred by choice: `share/receiving-secrets`, `organizations/roles-and-permissions`,
-> `organizations/ownership-and-transfer` and `contribute/developer-on-ramp` — note that
-> `organizations/audit-trail` shipped leaning on the plan ∩ role rule with no page to link to. Two are
-> blocked on the billing catalog: `billing/index` and `billing/managing-your-subscription`.
-> `pricing/index` and `pricing/compare-plans` are therefore carried across unchanged, de-orphaned by
-> being linked for the first time but not merged.
+> **The six-page tail, and how it closed.** Phase 2 finished with six of the 30 pages §3 specifies
+> unwritten — four deferred by choice (`share/receiving-secrets`,
+> `organizations/roles-and-permissions`, `organizations/ownership-and-transfer`,
+> `contribute/developer-on-ramp`) and two blocked on the billing catalog (`billing/index`,
+> `billing/managing-your-subscription`). Declaring the phase complete in that state made the gap
+> legible only to someone reading this document line by line, which is the wrong place for it to live.
+> **All six now exist as shortened pages**, written after the phase closed and reviewable on the site
+> rather than in a plan. Each is a real page — verified claims, `sourceOfTruth` frontmatter, in the
+> sidebar — carrying a `:::note` **Status** banner that says which part is short and what is still
+> owed. None asserts a plan's contents; the three billing-adjacent ones describe the mechanism
+> instead, which is what the gate actually forbids. `organizations/audit-trail` now has the plan ∩ role
+> page it was already leaning on.
 >
-> **Phase 2 working files.** Three artifacts were removed from `docs/planning/` when the phase closed,
-> and live in git history at [`db6fe76`](https://github.com/onetimesecret/docs.onetimesecret.com/commit/db6fe76):
-> `documentation-audit-2026-08-phase-2-prep.md` (the readiness assessment and five-stream agent design),
-> `phase-2-deleted-files.md` (the 263-file deletion index), and `phase-2-ledger/` (four claim →
-> `file:line` ledgers verified against `onetimesecret@aafe503`). Retrieve any of them with
-> `git show db6fe76:docs/planning/<path>`. None is a source of truth — the ledgers were verified in
-> August 2026 and go stale as the app moves, so re-verify a row before reusing it rather than trusting
-> it, which is the instruction every phase of this plan inherits from Phase 1.
+> What is genuinely still owed on them: screen-level steps for role changes and for the incoming-secrets
+> form; the support process for an ownership transfer; payment, invoicing and cancellation specifics;
+> and the application-repository half of the developer on-ramp, which needs the app repo in hand to
+> verify. `pricing/index` and `pricing/compare-plans` are still carried across unchanged — the *merge*
+> into `billing/index` is what the catalog gates, not the page's existence, so the two pricing pages
+> and the two billing pages coexist until the catalog arrives.
+>
+> **Phase 2 working files.** Three artifacts moved out of `docs/planning/` when the phase closed and
+> are kept at [`docs/archive/documentation-audit-2026-08-phase-2/`](../archive/documentation-audit-2026-08-phase-2/):
+> `prep.md` (the readiness assessment and five-stream agent design), `deleted-files.md` (the 263-file
+> deletion index), and `ledger/` (four claim → `file:line` ledgers verified against
+> `onetimesecret@aafe503`). They were briefly deleted outright on the reasoning that a closed phase's
+> working material belongs in git history; that was wrong. The ledgers are the audit trail for 13
+> published end-user pages — each page carries one `sourceOfTruth` line, while the working, the
+> refuted rows and the "do not claim" lists exist nowhere else — and an audit trail that requires
+> knowing a commit hash to read is not an audit trail. None is a source of truth in its own right:
+> the ledgers were verified in August 2026 and go stale as the app moves, so re-verify a row before
+> reusing it rather than trusting it, which is the instruction every phase of this plan inherits from
+> Phase 1.
 
 **Phase 3 — the operator install and configure tree (6–8 weeks).** Split `installation.md` (470 lines,
 six unrelated jobs) into task pages; write the operator feature pages. Highest per-page research cost
@@ -656,6 +678,15 @@ catalog before `billing/index` ships. One correction to the audit's framing — 
 `etc/examples/billing.example.yaml` "the only catalog in the repo", but an example file cannot arbitrate
 what buyers are sold. The published "Member Invites / Up to 50" claim is therefore **unverified**, not
 demonstrated wrong, and it does not belong in Finding 1's table of factual errors.
+
+> **What actually happened.** The precondition was never met — the catalog was not supplied — so
+> `compare-plans.md:19` and `:24` are unverified still. `billing/index` shipped anyway, after Phase 2
+> closed, in a shape the precondition does not reach: it merges nothing, restates nothing from
+> `compare-plans`, and points a reader at the app's own **Plan Features** panel as the authoritative
+> answer for their organization. The precondition stands, unchanged, against the *merge* — which is
+> what it was written to gate. Phase 3's assessment records a second finding on the same question, a
+> two-source cross-reference indicating both published claims are wrong; it does not settle them
+> either, for the reason given above.
 
 ### D4 — The `/audit-events` rename
 

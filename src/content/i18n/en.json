@@ -30,6 +30,7 @@
     "yourReceipt": "Your receipt",
     "whatRecipientsSee": "What recipients see",
     "whenALinkDoesntWork": "When a link doesn't work",
+    "receivingSecrets": "Receiving secrets",
     "whyUseSecretLinks": "Why Use Secret Links",
     "useCases": "Use Cases",
 
@@ -45,7 +46,9 @@
 
     "organizations": "Organizations & members",
     "whatOrganizationsDo": "What organizations do",
+    "rolesAndPermissions": "Roles and permissions",
     "memberInvites": "Member Invites",
+    "ownershipAndTransfer": "Ownership and transfer",
     "sso": "Single Sign-On (SSO)",
     "auditLog": "Audit Log",
 
@@ -59,6 +62,8 @@
     "accessAndPrivacy": "Access & privacy",
 
     "plansAndBilling": "Plans & billing",
+    "howPlansWork": "How plans work",
+    "managingYourSubscription": "Managing your subscription",
     "plansAndPricing": "Plans and pricing",
     "comparePlans": "Compare Plans",
 
@@ -88,6 +93,7 @@
     "vulnerabilityDisclosure": "Vulnerability Disclosure",
 
     "translations": "Translations & contributing",
+    "developerOnRamp": "Developer on-ramp",
     "howTranslationsWork": "How translations work",
     "styleGuide": "Style Guide",
     "glossary": "Glossary",

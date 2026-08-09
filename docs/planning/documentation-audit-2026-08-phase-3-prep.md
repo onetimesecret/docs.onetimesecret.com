@@ -3,11 +3,12 @@
 **What this is:** the readiness assessment for Phase 3 of
 [`documentation-audit-2026-08.md`](./documentation-audit-2026-08.md), written after Phase 2 shipped as
 [#405](https://github.com/onetimesecret/docs.onetimesecret.com/pull/405). It follows the shape of the
-Phase 2 assessment, which was removed from this directory when that phase closed. It, the Phase 2
-verification ledgers and the deleted-file index are in git history at
-[`db6fe76`](https://github.com/onetimesecret/docs.onetimesecret.com/commit/db6fe76) —
-`git show db6fe76:docs/planning/documentation-audit-2026-08-phase-2-prep.md`,
-`…:docs/planning/phase-2-deleted-files.md`, `…:docs/planning/phase-2-ledger/<name>.md`.
+Phase 2 assessment, which moved out of this directory when that phase closed. It, the Phase 2
+verification ledgers and the deleted-file index are kept at
+[`docs/archive/documentation-audit-2026-08-phase-2/`](../archive/documentation-audit-2026-08-phase-2/) —
+[`prep.md`](../archive/documentation-audit-2026-08-phase-2/prep.md),
+[`deleted-files.md`](../archive/documentation-audit-2026-08-phase-2/deleted-files.md) and
+[`ledger/`](../archive/documentation-audit-2026-08-phase-2/ledger/).
 
 It does not restate the plan. It records the state Phase 3 starts from, the four problems Phase 3 has
 that Phase 2 did not, and what has to be true before it opens.
@@ -16,17 +17,21 @@ that Phase 2 did not, and what has to be true before it opens.
 
 ## 1. Verified starting state
 
-Re-measured in-repo on 2026-08-09, not taken from the plan or from #405's description:
+Re-measured in-repo on 2026-08-09, not taken from the plan or from #405's description. Two columns:
+the state Phase 2 left, and the state after the six-page tail closed (§2) later the same day.
 
-| | |
-|---|---|
-| `pnpm check:nav` | OK — 58 sidebar links across 14 groups, 1 warning |
-| `pnpm check:orphans` | OK — 57 EN pages, **0** allowlisted orphans |
-| `pnpm check:frontmatter` | OK — 57 EN pages (35 end-user), 8 contracted anchors, 277 redirect fragments resolved |
-| `pnpm check:locales` | OK — 17 configured locales, 9 allowlisted content-only directories |
-| `pnpm test` | 86 passed |
-| `pnpm build` | clean, 984 pages |
-| Nav warning | `self-hosting/configuration-generator` is served from `src/pages`, so non-EN locales 404 unless redirected — **pre-existing, and now Phase 3's to fix**, since that page sits in the Configure group Phase 3 rebuilds |
+| | At #405 | Now |
+|---|---|---|
+| `pnpm check:nav` | OK — 58 links / 14 groups, 1 warning | OK — **64** links / 14 groups, same warning |
+| `pnpm check:orphans` | OK — 57 EN pages, **0** allowlisted orphans | OK — **63** EN pages, **0** allowlisted orphans |
+| `pnpm check:frontmatter` | OK — 57 EN pages (35 end-user), 8 contracted anchors, 277 redirect fragments | OK — **63** EN pages (**40** end-user), 8 anchors, 277 fragments |
+| `pnpm check:locales` | OK — 17 configured locales, 9 allowlisted content-only directories | unchanged |
+| `pnpm test` | 86 passed | 86 passed |
+| `pnpm build` | clean, 984 pages | clean, **1086** pages |
+| Nav warning | `self-hosting/configuration-generator` is served from `src/pages`, so non-EN locales 404 unless redirected — **pre-existing, and now Phase 3's to fix**, since that page sits in the Configure group Phase 3 rebuilds | unchanged |
+
+The six new pages are English-only and add no locale directories; the 102-page build delta is
+6 × 17 locales falling back to English, which is the Phase 2 pattern rather than a new one.
 
 Phase 2's structural claims spot-checked and confirmed: seven top-level entries, no tier factories in
 `config/sidebar.mjs`, `plan` rendered as a badge, `docsSchema()` carrying all four optional fields, and
@@ -62,25 +67,42 @@ the audit had got backwards.
 
 ## 2. What Phase 2 handed over
 
-Six pages from §3's 30 are unwritten. They are Phase 3's tail, not Phase 3's trunk, and two of them
-are not operator work at all:
+Phase 2 closed with six of §3's 30 pages unwritten. **All six now exist as shortened pages**, written
+after the phase closed rather than carried into Phase 3 — a gap that lives only in a planning document
+is a gap nobody reviews.
 
-| Page | Why it did not ship | Blocked? |
+| Page | What shipped | Still owed |
 |---|---|---|
-| `organizations/roles-and-permissions` | the plan ∩ role rule — asserts what a tier grants | **yes**, billing catalog |
-| `billing/index` | merges `pricing/index` + `compare-plans` | **yes**, billing catalog |
-| `billing/managing-your-subscription` | — | **yes**, billing catalog |
-| `share/receiving-secrets` | deferred by choice | no |
-| `organizations/ownership-and-transfer` | deferred by choice | no |
-| `contribute/developer-on-ramp` | deferred by choice | no |
+| `organizations/roles-and-permissions` | the three role templates, the plan ∩ role rule, who may change what, domain-scoped memberships, the member limit as a mechanism | screen-level steps for a role change |
+| `organizations/ownership-and-transfer` | why the owner cannot be demoted, removed or promoted-to from inside the app; what to send support | the exact support process |
+| `share/receiving-secrets` | the choice between asking for a link and running an incoming form; the withheld share link on an incoming receipt | incoming-form setup steps (on the custom-domains page, also short) |
+| `billing/index` | a plan applies to an organization, **Plan Features** is authoritative, role gates the rest | the merge of `pricing/index` + `compare-plans` — **blocked**, billing catalog |
+| `billing/managing-your-subscription` | where the subscription lives, owner-only, what a plan change does to everyone | payment, invoicing, cancellation — **blocked**, billing catalog |
+| `contribute/developer-on-ramp` | the docs-repo on-ramp in full: setup, the four page types, every check and why each exists, the redirect rule | the app-repo half — needs the app repo in hand (`bin/dev`, `bin/setup --test`, the containerized test lanes, the 32 ADRs) |
 
-One of these is load-bearing rather than cosmetic: **`organizations/audit-trail` shipped leaning on the
-plan ∩ role rule with no page to link to.** A reader who hits "your plan includes this but your role
-refuses it" has nowhere to go.
+**What the billing gate turned out to bind.** Three of these were listed as blocked. Re-read against
+[D3](./documentation-audit-2026-08.md#d3--billing-catalog), the gate forbids *asserting the catalog* —
+not writing about billing. A page can say a plan belongs to an organization, that effective permissions
+are plan ∩ role, and that the in-app **Plan Features** panel is the authoritative answer, without
+naming a single tier's contents. All three do exactly that and none names one. `pricing/index` and
+`pricing/compare-plans` stay as they are: the merge is what the catalog gates.
 
-Two published pages also carry claims nothing in any repo can confirm — `pricing/compare-plans`'s
+`features/billing-and-entitlements` remains genuinely blocked — its whole subject is the catalog.
+
+**One dangling reference is now closed.** `organizations/audit-trail` had shipped leaning on the
+plan ∩ role rule with no page to link to; a reader hitting "your plan includes this but your role
+refuses it" had nowhere to go. `organizations/roles-and-permissions` is that page.
+
+Two published pages still carry claims nothing in any repo can confirm — `pricing/compare-plans`'s
 four-column matrix, and `custom-domains/access-and-privacy`, where three `**Plan:**` lines were removed
-before commit rather than corrected. Both wait on the same catalog.
+before commit rather than corrected. Both wait on the catalog.
+
+**Where these pages got their facts.** The Phase 2 ledgers, not fresh verification against app source —
+`vocabulary-and-orgs` §9 and §10 carry the role templates, the nesting, the endpoint limits and the
+plan ∩ role formula with `file:line` evidence, and its "do not claim" list is what kept the tier
+contents out. That is the ledgers earning their archive. It also means these six inherit the ledgers'
+staleness: they were verified against `onetimesecret@aafe503` in August 2026, and stream A should
+re-verify the rows these pages rest on rather than treating them as settled.
 
 ---
 
@@ -97,11 +119,11 @@ the plan — most of its pages require reading implementation to state a default
   It arbitrates nothing about behaviour.
 - **The production `etc/billing.yaml`** is in neither repo and has not been supplied.
 
-### The billing finding, restated because its source document is gone
+### The billing finding, restated
 
-Phase 2's assessment carried a two-source cross-reference that is the reason the billing gate is shut.
-It is recorded here rather than left in git history, because it is the evidence anyone re-opening the
-question will need:
+Phase 2's [assessment](../archive/documentation-audit-2026-08-phase-2/prep.md) carried a two-source
+cross-reference that is the reason the billing gate is shut. It is restated here — anyone re-opening
+the question needs the evidence in front of them, not a pointer to another file:
 
 The docs publish a four-column matrix in `pricing/compare-plans.md` — including `Member Invites: ✅`
 and `Members per organization: Up to 50` for Identity Plus, and `Up to 100` plus SSO, Teams & Shared
@@ -129,10 +151,11 @@ still defines a legacy `anonymous` / `basic` / `identity` model with a `$35` ide
 `productTiers.ts` uses `tier-free` / `tier-identity` and `Pricing.vue` links `identity_plus_v1`. Three
 plan models in one repo.
 
-Phase 2's ledgers (`git show db6fe76:docs/planning/phase-2-ledger/…`) cover the end-user surface —
+Phase 2's [ledgers](../archive/documentation-audit-2026-08-phase-2/ledger/) cover the end-user surface —
 vocabulary, secret lifecycle, auth and account, account surfaces. **They do not cover the operator
-surface**, so Phase 3 builds its own. Their value here is as a format precedent and as the place to
-check a reader-facing term before an operator page renames it.
+surface**, so Phase 3 builds its own. Their value here is threefold: as a format precedent, as the place
+to check a reader-facing term before an operator page renames it, and as the evidence behind the six
+tail pages in §2, which were written from them rather than from fresh verification.
 
 ---
 
@@ -181,8 +204,8 @@ matches its title, which is the "translated-but-wrong" outcome Phase 2 explicitl
 "correct-but-untranslated".
 
 So the precedent applies: **delete, fall back to English, index the deletion** in the same format
-Phase 2 used (`git show db6fe76:docs/planning/phase-2-deleted-files.md` for the template: family,
-copy count, merge target, then one line per file). Name the cost
+Phase 2 used ([`deleted-files.md`](../archive/documentation-audit-2026-08-phase-2/deleted-files.md) is
+the template: family, copy count, merge target, then one line per file). Name the cost
 rather than discovering it in review — this is 7 locales × a 481-line page, a heavier loss per file
 than any single Phase 2 merge, and Phase 4 repeats it twice more at 636 and 499 lines.
 
@@ -216,6 +239,23 @@ is the phase where the contract becomes real and where a checker can assert it.
 Note the asymmetry in row four: one hosted page pairs with two operator pages. A checker asserting a
 1:1 mapping will fail on it, so assert *reachability in both directions*, not pairing.
 
+**Four more pairs arrived with the §2 tail.** Each of these hosted pages already carries its operator
+aside; the operator half is Phase 3's or Phase 4's to write, and until it exists the aside points at
+`self-hosting/index`, which is honest but thin. They are listed here so the count is nine plus four
+rather than nine plus a surprise:
+
+| Hosted page (shipped) | Operator page | Phase |
+|---|---|---|
+| `share/receiving-secrets` | `features/incoming-secrets` | 3 |
+| `organizations/roles-and-permissions` | `features/billing-and-entitlements` | 3, blocked |
+| `billing/index` | `features/billing-and-entitlements` | 3, blocked |
+| `billing/managing-your-subscription` | `features/billing-and-entitlements` | 3, blocked |
+
+Three of the four converge on one operator page, which makes the asymmetry the rule rather than the
+exception — further reason to assert reachability rather than pairing. `organizations/ownership-and-transfer`
+is a fifth candidate: it tells a self-hosted reader that ownership transfer is an operator action,
+and the operator page that documents the command does not exist in any phase's scope yet.
+
 ---
 
 ## 5. Scope
@@ -235,10 +275,10 @@ listed here.
   `NEW features/languages` · `NEW features/multi-region` · `NEW features/billing-and-entitlements`
   (**blocked**, billing catalog) · `NEW features/feedback-channel` · `NEW features/broadcast-banner`
 
-Plus three cheap items that belong to this phase because they are in the tree it touches: backfill
-`audience: operator` on the seven inherited self-hosting pages; fix the
-`self-hosting/configuration-generator` locale-404 warning; and clear the Phase 2 tail's three unblocked
-pages (§2).
+Plus two cheap items that belong to this phase because they are in the tree it touches: backfill
+`audience: operator` on the seven inherited self-hosting pages, and fix the
+`self-hosting/configuration-generator` locale-404 warning. (Clearing the Phase 2 tail was a third; it
+is done — see §2.)
 
 **What D2 constrains.** Three of the four defects in
 [onetimesecret#3993](https://github.com/onetimesecret/onetimesecret/issues/3993) decide what Phase 3
@@ -270,8 +310,9 @@ weights changed — Phase 3 is research-heavy where Phase 2 was structure-heavy.
 
 **A — Verification.** The bulk of this phase. Produces claim → `file:line` ledgers against app source,
 one per sub-tree, in the format Phase 2 used
-(`git show db6fe76:docs/planning/phase-2-ledger/secret-lifecycle.md` is the clearest example: a table
-of claim → verdict → evidence, with a scope note and a "do not claim" list). Nothing in stream D may state a
+([`ledger/secret-lifecycle.md`](../archive/documentation-audit-2026-08-phase-2/ledger/secret-lifecycle.md)
+is the clearest example: a table of claim → verdict → evidence, with a scope note and a "do not claim"
+list). Nothing in stream D may state a
 default or a behaviour that is not in a ledger. Every value it records must be labelled
 **self-hosted shipped default** unless a code path makes it structural — the distinction Phase 2's
 ledgers drew, and the one that keeps hosted claims out of operator pages.
@@ -290,8 +331,9 @@ ledger does not cover stop and ask rather than infer.
 `check-frontmatter.mjs` with the reciprocal-aside assertion (§4.4) and the operator-scoped default rule
 (§4.1). Depends on D.
 
-**Held out of the fan-out:** `features/billing-and-entitlements` and the three billing-blocked pages
-from §2. Appended as a sixth stream when the catalog arrives, not designed around now.
+**Held out of the fan-out:** `features/billing-and-entitlements`. Appended as a sixth stream when the
+catalog arrives, along with the merge of the pricing pages into `billing/index` and the correction of
+`pricing/compare-plans` and `custom-domains/access-and-privacy` — not designed around now.
 
 ---
 
@@ -301,10 +343,11 @@ from §2. Appended as a sixth stream when the catalog arrives, not designed arou
 2. **§4.1 answered** — where do numbers go while the Reference does not exist? A one-line call, and
    the thing most likely to decide whether Phase 3 output ages well. Gates stream D.
 3. **onetimesecret#3993 read** — its current state decides what three Phase 3 pages may claim (§5).
-4. **The production `etc/billing.yaml` requested** — still outstanding from Phase 2, and now holding
-   four unwritten pages rather than two. Gates `features/billing-and-entitlements`,
-   `organizations/roles-and-permissions`, `billing/index`, `billing/managing-your-subscription`, and
-   the correction of two published pages.
+4. **The production `etc/billing.yaml` requested** — still outstanding from Phase 2. Its reach is now
+   narrower than it looked: it gates `features/billing-and-entitlements` outright, the merge of the
+   pricing pages into `billing/index`, the completion of `billing/managing-your-subscription`'s payment
+   and cancellation sections, and the correction of `pricing/compare-plans` and
+   `custom-domains/access-and-privacy`. It does not gate writing about billing (§2).
 
 Items 3 and 4 gate named pages only. Item 1 gates content. **Item 2 is the only one that gates the
 shape of the work**, and it is cheap to answer.

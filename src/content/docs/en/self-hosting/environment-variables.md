@@ -328,10 +328,9 @@ UI_HOMEPAGE_MODE=
 UI_HOMEPAGE_MATCHING_CIDRS=
 UI_HOMEPAGE_MODE_HEADER=
 
-# Note: UI_HOMEPAGE_TRUSTED_PROXY_DEPTH and UI_HOMEPAGE_TRUSTED_IP_HEADER were
-# removed. Under the default DEPRECATED_CONFIG_MODE=strict, setting them refuses
-# to boot. Proxy trust is now configured globally via TRUSTED_PROXY_ENABLED,
-# TRUSTED_PROXY_MODE, TRUSTED_PROXY_DEPTH, and TRUSTED_PROXY_HEADER.
+# Proxy trust is configured globally, not per feature. See TRUSTED_PROXY_ENABLED,
+# TRUSTED_PROXY_MODE, TRUSTED_PROXY_DEPTH and TRUSTED_PROXY_HEADER in
+# Installation & Deployment.
 
 # One of: DefaultLogo.vue, LegacyLogo.vue, OnetimeSecretLogo.vue
 #LOGO_URL=
