@@ -145,10 +145,16 @@ Dashboard and Workspace Branding for Team Plus.
   string "Team Plus" occurs nowhere in its `src/`, and its comparison table carries no member, invite,
   seat or organization row at all.
 - **App repo example catalog.** `etc/examples/billing.example.yaml` defines two active plans,
-  `free_v1:182` and `identity_plus_v1:224`, with the team tier present only as a commented-out block
-  (`:291-318`). `identity_plus_v1`'s entitlements do **not** include `manage_members` — the entitlement
-  exists at `:135` but appears only inside the commented team block at `:307` — and its limits are
+  `free_v1:192` and `identity_plus_v1:234`, with the team tier present only as a commented-out block
+  (`:293-330`). `identity_plus_v1`'s entitlements do **not** include `manage_members` — the entitlement
+  exists at `:145` but appears only inside the commented team block at `:317` — and its limits are
   `total_members_per_org: 1`, `role_members_per_org: 0`, `role_admins_per_org: 0`, `organizations: 1`.
+  (Line numbers re-pinned to `onetimesecret@6af1fe3` by the
+  [re-verification pass](./documentation-audit-2026-08-phase-3-reverification.md#7-correction-owed-to-the-prep-document);
+  the file gained 10 lines above every citation, so all five shifted +10 with no content change.
+  That pass also found the commented team block's own `total_members_per_org` is **5**, against the
+  published matrix's "Up to 50" and "Up to 100" — the example disagrees with the docs even where it
+  is most generous.)
 
 Two independent sources, reached by different routes, agree against both published claims. Neither
 settles it: [D3](./documentation-audit-2026-08.md#d3--billing-catalog)'s reasoning holds that an example
@@ -170,7 +176,7 @@ tail pages in §2, which were written from them rather than from fresh verificat
 
 ---
 
-## 4. Four problems Phase 3 has that Phase 2 did not
+## 4. Five problems Phase 3 has that Phase 2 did not
 
 Phase 2 was a reshape: it moved pages that existed and wrote pages nothing contradicted. Phase 3 writes
 26 pages into a tree where a competing description of the same settings is still published, and where
@@ -267,6 +273,42 @@ exception — further reason to assert reachability rather than pairing. `organi
 is a fifth candidate: it tells a self-hosted reader that ownership transfer is an operator action,
 and the operator page that documents the command does not exist in any phase's scope yet.
 
+**And the command turns out to exist.** The re-verification pass found
+`bin/ots org transfer-ownership ORG NEW_OWNER` — a 371-line operation at
+`lib/onetime/operations/org/transfer_ownership.rb` with a CLI wrapper, `--dry-run`, a `--demote-to`
+choice for the outgoing owner, and documented decisions about what it does *not* do (it does not add
+the new owner if they are not already a member, and does not remove the outgoing one). The REST
+endpoint is unbuilt and the operation's own comment says the UI already tells users to transfer
+ownership, "so the gap is real". This is a page Phase 3 should write and no stream currently owns —
+see [the pass](./documentation-audit-2026-08-phase-3-reverification.md#61-the-ownership-transfer-command-exists-and-it-is-substantial)
+for the behaviour an operator page has to state. It fits Configure or Operate, and Operate is Phase 4,
+so it needs a placement call alongside §4.1.
+
+### 4.5 On a stock self-hosted instance, the plan half of plan ∩ role is not a constraint
+
+The finding with the widest reach over the 26 pages, and the one most likely to produce a wrong
+operator page if it is missed.
+
+`with_plan_entitlements.rb:44-62` defines `STANDALONE_ENTITLEMENTS` as the *full* entitlement set,
+granted whenever billing is disabled or the plan cache is empty; `:32` adds that limits return
+`Float::INFINITY` in that mode. And billing is off unless a billing config turns it on
+(`billing_config.rb:41-53` — "Returns false if file doesn't exist or enabled is not set"), while the
+production `etc/billing.yaml` ships in neither repo. So the stock self-hosted state is: every
+entitlement granted, every limit infinite, **role is the whole answer.**
+
+Three consequences for Phase 3:
+
+1. This is **structural** to standalone mode, not a shipped default an operator tunes. An operator
+   page that presents entitlements as something the operator configures would be wrong in the
+   direction the audit exists to prevent.
+2. It narrows the billing gate over the *operator* tree specifically. Operator pages do not need the
+   catalog to say what a self-hosted operator gets, because a self-hosted operator with billing off
+   gets everything. The gate still binds every claim about hosted tiers.
+3. The hosted framing does not transfer. `organizations/roles-and-permissions` is built on "a feature
+   you are paying for can still be refused"; its operator counterpart has to invert it. Every
+   reciprocal aside in the table above crosses that boundary, so this is a per-page hazard, not a
+   one-page correction.
+
 ---
 
 ## 5. Scope
@@ -341,6 +383,13 @@ the **Plan Features** panel, billing being switchable off). Record the result as
 archived rows — confirmed, moved, or gone — rather than a new ledger; anything that moved is a
 correction to a published page, not a note.
 
+**Done — see [`…-phase-3-reverification.md`](./documentation-audit-2026-08-phase-3-reverification.md).**
+No claim on any of the six pages is wrong at HEAD. One `sourceOfTruth` range was mis-aimed and has
+been repointed (`billing/index`), §3's example-catalog line numbers have been corrected above, and
+the pass turned up two scope findings: the ownership-transfer CLI command exists and is unscoped
+(§4.4 below), and standalone mode grants every entitlement with infinite limits, which is the
+governing fact for the operator tree (§4.5).
+
 **B — Split & nav mechanics.** Splits `installation.md`; builds the `install/` and `features/` sidebar
 groups; backfills `audience: operator`; fixes the configuration-generator locale warning. Needs no app
 source — **can start now.**
@@ -363,11 +412,17 @@ catalog arrives, along with the merge of the pricing pages into `billing/index` 
 
 ## 7. What has to be true before launch
 
-1. **App source cloned** — `onetimesecret/onetimesecret`, unshallowed. Gates streams A, D, E. Its
-   first use is the re-verification pass over the six §2 tail pages (§6), not new research.
+1. ~~**App source cloned**~~ — **done.** `onetimesecret@6af1fe3` (2026-08-08), fully unshallowed,
+   157 commits past the ledgers' `aafe503` pin. Its first use was the re-verification pass over the
+   six §2 tail pages, which is [complete](./documentation-audit-2026-08-phase-3-reverification.md).
 2. **§4.1 answered** — where do numbers go while the Reference does not exist? A one-line call, and
    the thing most likely to decide whether Phase 3 output ages well. Gates stream D.
-3. **onetimesecret#3993 read** — its current state decides what three Phase 3 pages may claim (§5).
+3. ~~**onetimesecret#3993 read**~~ — **done, and nothing has moved.** Read 2026-08-09: still open,
+   filed 2026-08-04 as "Four operator-facing surfaces contradict the code", no comment activity. All
+   four defects stand as §5 assumes, so the three constrained pages are constrained exactly as
+   written. The issue's fourth defect — the DLQ consumer silently discarding non-auth templates
+   (`dlq_email_consumer_job.rb:151-155`) — is not in §5's list and belongs to Phase 4's Operate
+   group; noted so it is not lost.
 4. **The production `etc/billing.yaml` requested** — still outstanding from Phase 2. Its reach is now
    narrower than it looked: it gates `features/billing-and-entitlements` outright, the merge of the
    pricing pages into `billing/index`, the completion of `billing/managing-your-subscription`'s payment
