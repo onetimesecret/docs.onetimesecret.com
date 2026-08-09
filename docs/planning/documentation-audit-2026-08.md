@@ -14,11 +14,24 @@ adversarial verifier tasked with *refuting* every claimed gap and a completeness
 finding what the surveys missed. Both adversarial passes landed hits; their corrections are applied
 below and recorded in Appendix A rather than quietly dropped.
 
-**Status — revised 2026-08-04.** All nine decisions this audit raised now have a recorded response.
-Eight of those responses **settle** the question, and their consequences are applied throughout the plan
-below; the ninth — who owns the end-user task layer — responded without settling it, so D9 stays **open**
-and gates five pages in Phase 2. An interim posture is defined so nothing else waits on it. The
-reasoning for all nine is in [Decisions](#decisions).
+**Status — revised 2026-08-09.** All nine decisions this audit raised are now **settled**, and their
+consequences are applied throughout the plan below; the reasoning for each is in
+[Decisions](#decisions). D9 — who owns the end-user task layer — was the last to close, and closed by
+its deadline expiring rather than by an answer arriving, which the plan had provided for.
+
+**Phases 1 and 2 have shipped**: Phase 1 as #391–#394 on 2026-08-04, Phase 2 as
+[#405](https://github.com/onetimesecret/docs.onetimesecret.com/pull/405) on 2026-08-06. What each
+delivered, and what each carried forward rather than finishing, is recorded in
+[Sequencing](#sequencing). Phase 3 is next; its readiness assessment is
+[`…-phase-3-prep.md`](./documentation-audit-2026-08-phase-3-prep.md).
+
+One gate remains shut across every phase that follows: the production `etc/billing.yaml` has not been
+supplied, so no page may assert a plan tier, entitlement, seat limit or price. Its reach has grown past
+what [D3](#d3--billing-catalog) scoped. It now holds four unwritten pages — `billing/index`,
+`billing/managing-your-subscription`, `organizations/roles-and-permissions`,
+`features/billing-and-entitlements` — and leaves two published pages carrying claims nothing in any
+repo can confirm: `pricing/compare-plans` (the four-column matrix) and `custom-domains/access-and-privacy`
+(three `**Plan:**` lines removed in Phase 2 rather than corrected).
 
 ---
 
@@ -363,6 +376,17 @@ not.
 
 ## Sequencing
 
+| Phase | Status | Shipped as |
+|---|---|---|
+| 1 — stop the bleeding | **done** 2026-08-04 | #391–#394 |
+| 2 — reshape and build the end-user task layer | **done** 2026-08-06 | [#405](https://github.com/onetimesecret/docs.onetimesecret.com/pull/405) |
+| 3 — the operator install and configure tree | **next** | — |
+| 4 — the generated reference and the Day-2 layer | not started | — |
+| 5 — drift prevention | not started | — |
+
+The phase descriptions below are the plan as written before execution and are left unedited; each
+carries a status note recording what actually landed and what it handed to the next phase.
+
 **Phase 1 — stop the bleeding (1–2 weeks).** Corrections in place. No sidebar change, no new
 translation keys, no redirects, so it ships independently of every other decision here. Fix the ~25
 wrong statements in Finding 1; **delete** the ~19 no-longer-supported variables the site publishes as
@@ -382,6 +406,28 @@ the stub reference generator in this repo** (D7) rather than waiting on app-repo
 it is the critical path for Phase 4"; D7 removes that dependency from the critical path instead of
 resolving it.
 
+> **Shipped 2026-08-04 as #391–#394**, and re-verified in-repo before Phase 2 opened. Spot-checked
+> again 2026-08-09: the `_onetime-challenge-*` TXT step is in `custom-domains/setup-guide`, the
+> `:colonels:` auto-promotion claim is gone, `translations/universal/_index.md` is renamed, and all 26
+> `language-notes.md` copies are deleted. One departure from D8 worth naming, since it was a
+> judgement call rather than an oversight: `UI_HOMEPAGE_TRUSTED_PROXY_DEPTH` and
+> `UI_HOMEPAGE_TRUSTED_IP_HEADER` were not deleted without trace — `environment-variables.md:331-334`
+> keeps a comment saying they were removed, that setting them refuses boot under
+> `DEPRECATED_CONFIG_MODE=strict`, and what replaced them. Neither is published as settable, which is
+> what D8 was protecting against, and the note serves the operator who already has them in a file.
+>
+> Two things went differently from the text above. **`bin/check-nav.mjs` and `bin/check-orphans.mjs`
+> were built here** rather than waiting for Phase 5 — Phase 2's reshape would have been unverifiable
+> without them, so Phase 5 now extends checkers rather than inventing them. And **neither page named
+> for early publication shipped in this phase**: `share/when-a-link-doesnt-work` slipped to Phase 2,
+> where it landed, and `configure/secrets-and-keys` was not written at all, so it carries to Phase 3.
+>
+> The phase's own assessment is
+> [`…-self-analysis.md`](./documentation-audit-2026-08-self-analysis.md), and it is the most useful
+> thing Phase 1 produced: verifying against app source before editing found that **4 of this report's
+> 10 headline rows overclaimed**, always toward more alarm than the source justified. Every later phase
+> inherits that instruction — this document is a plan, not a source of truth.
+
 **Phase 2 — reshape and build the end-user task layer (5–7 weeks).** 14 top-level entries become 8;
 tiers leave navigation; orphans are absorbed; the end-user surface gets its first real how-tos.
 Prerequisite: extend `docsSchema()` with `plan`, `audience`, `pageType`, `sourceOfTruth`. (`translate`
@@ -389,6 +435,46 @@ is dropped — see D5; `audience` already partitions the tree the way a future t
 would need to select on it, so a second field would only duplicate that partition and start drifting
 from it.) Seven of the twelve end-user pages proceed unconditionally; the five marked **†** wait on D9,
 and if the answer arrives late they are the phase's tail, not its trunk.
+
+> **Shipped 2026-08-06 as [#405](https://github.com/onetimesecret/docs.onetimesecret.com/pull/405)**
+> (460 files, +6206/−10851), plus two follow-up commits for CI and non-blocking review notes. Verified
+> at 2026-08-09: `check:nav` 58 links across 14 groups (1 pre-existing warning), `check:orphans` 57 EN
+> pages and **0 allowlisted orphans**, `check:frontmatter` 8 contracted anchors and 277 redirect
+> fragments resolved, `check:locales`, 86 tests, clean 984-page build.
+>
+> Delivered: 14 top-level entries → **7**; the four tier factories and their filing-rule comment
+> deleted, tier now a badge; `docsSchema()` extended with all four fields; **13 new end-user pages**;
+> the D1 region and principles merges with the anchor contract asserted in both directions by
+> `bin/check-frontmatter.mjs`; redirects generated from a 33-family `movedPages` table; the seven
+> identical `createLink("overview", …)` labels made distinct.
+>
+> Three deliberate departures. The eighth top-level entry is the generated *Reference*, which belongs
+> to Phase 4 and is **absent rather than faked** out of `configuration.md`. **All twelve** contested
+> end-user pages were built, not seven — D9's deadline was reached with no in-app guidance funded, so
+> the five held pages shipped in option 3's shape: short behaviour-focused targets the app can
+> deep-link into, not screen walkthroughs. And the merges cost translations: 146 moves carried every
+> locale's copy to the new URL, but the 15 merges could not, so **240 translated files were deleted**
+> and those locales now fall back to the current English page rather than serving stale partial
+> translations. Consistent with D5, and a real loss rather than bookkeeping. Every deleted file was
+> indexed by family, merge target and recovery command in `docs/planning/phase-2-deleted-files.md`;
+> see *Phase 2 working files* below for where that index now lives.
+>
+> **Handed to Phase 3, not finished here.** Six of the 30 pages §3 specifies are unwritten. Four were
+> deferred by choice: `share/receiving-secrets`, `organizations/roles-and-permissions`,
+> `organizations/ownership-and-transfer` and `contribute/developer-on-ramp` — note that
+> `organizations/audit-trail` shipped leaning on the plan ∩ role rule with no page to link to. Two are
+> blocked on the billing catalog: `billing/index` and `billing/managing-your-subscription`.
+> `pricing/index` and `pricing/compare-plans` are therefore carried across unchanged, de-orphaned by
+> being linked for the first time but not merged.
+>
+> **Phase 2 working files.** Three artifacts were removed from `docs/planning/` when the phase closed,
+> and live in git history at [`db6fe76`](https://github.com/onetimesecret/docs.onetimesecret.com/commit/db6fe76):
+> `documentation-audit-2026-08-phase-2-prep.md` (the readiness assessment and five-stream agent design),
+> `phase-2-deleted-files.md` (the 263-file deletion index), and `phase-2-ledger/` (four claim →
+> `file:line` ledgers verified against `onetimesecret@aafe503`). Retrieve any of them with
+> `git show db6fe76:docs/planning/<path>`. None is a source of truth — the ledgers were verified in
+> August 2026 and go stale as the app moves, so re-verify a row before reusing it rather than trusting
+> it, which is the instruction every phase of this plan inherits from Phase 1.
 
 **Phase 3 — the operator install and configure tree (6–8 weeks).** Split `installation.md` (470 lines,
 six unrelated jobs) into task pages; write the operator feature pages. Highest per-page research cost
@@ -633,9 +719,20 @@ still moving.
 
 ### D9 — Who owns the end-user task layer?
 
-**Open — answer as given:** important — work carefully. The largest single scope swing in the plan.
+**Settled 2026-08-06 by its deadline expiring — answer as given:** important — work carefully. The
+largest single scope swing in the plan.
 
-Still open, and it should be. Below is what the plan does in the meantime.
+**How it closed.** No yes/no on in-app guidance arrived before Phase 2 opened, which is the case the
+recommendation below was written for: build the five as well. So **docs own all twelve**, and all
+twelve are published. The five were not written as option 1 would have written them — they took option
+3's *shape* (short, behaviour-focused targets the app can deep-link into from its empty and error
+states) so that if in-app guidance is funded later, they remain the thing it links to instead of a
+second surface describing the same screens. That keeps option 3 available at the cost of nothing, which
+is the reason for choosing shape over speed here.
+
+The material below is the reasoning as it stood while the decision was open. It is left unedited: the
+reachability rule it derives is still the rule that decides what belongs in the docs, and it is cited
+from §3.
 
 **What the swing actually is now.** The audit sized this at "~12 pages plus the entire Tier 1
 translation set". D5 removes the second half from the near term — no translation set is being built in
@@ -684,6 +781,12 @@ unowned while both sides assume the other has it.
 **What would settle it:** a yes/no on whether in-app guidance is scheduled inside the Phase 2 window,
 and if yes, who writes it. That is a product call, not a docs call. **Needed before Phase 2 opens** —
 about five weeks after Phase 1 starts, which is the slack this decision has.
+
+> **What actually happened:** the slack ran out and the fallback fired. Worth recording, because the
+> decision closed without anyone deciding — which is the failure mode this entry named at the top
+> ("an unowned question staying unowned while both sides assume the other has it") and then survived
+> only because a deadline and a default had been attached to it in advance. If in-app guidance is
+> funded later, this is not reopened: the five pages are already shaped to be its link targets.
 
 ---
 
