@@ -89,6 +89,16 @@ naming a single tier's contents. All three do exactly that and none names one. `
 
 `features/billing-and-entitlements` remains genuinely blocked — its whole subject is the catalog.
 
+**The cost of that decision, named.** Adding the two billing pages without merging the pricing pages
+puts four entries in one sidebar group (`config/sidebar.mjs:262-267`: How plans work · Managing your
+subscription · Plans and pricing · Compare plans), and the first and third cover adjacent ground.
+`billing/index` describes the mechanism — a plan belongs to an organization, **Plan Features** is
+authoritative, role gates the rest — while `pricing/index` lists tier contents, which is the half the
+catalog gates. A reader looking for "what do I get" can reasonably land on either. That is the honest
+state rather than an oversight: the alternative was withholding the mechanism until the catalog
+arrives, and the mechanism is what the rest of the end-user tree needs to link to. It resolves when
+the merge happens, which is the same held-out sixth stream (§6) — not a separate cleanup.
+
 **One dangling reference is now closed.** `organizations/audit-trail` had shipped leaning on the
 plan ∩ role rule with no page to link to; a reader hitting "your plan includes this but your role
 refuses it" had nowhere to go. `organizations/roles-and-permissions` is that page.
@@ -102,7 +112,8 @@ before commit rather than corrected. Both wait on the catalog.
 plan ∩ role formula with `file:line` evidence, and its "do not claim" list is what kept the tier
 contents out. That is the ledgers earning their archive. It also means these six inherit the ledgers'
 staleness: they were verified against `onetimesecret@aafe503` in August 2026, and stream A should
-re-verify the rows these pages rest on rather than treating them as settled.
+re-verify the rows these pages rest on rather than treating them as settled. That pass is scoped in
+§6 as A's first work, ahead of its own research.
 
 ---
 
@@ -317,6 +328,19 @@ default or a behaviour that is not in a ledger. Every value it records must be l
 **self-hosted shipped default** unless a code path makes it structural — the distinction Phase 2's
 ledgers drew, and the one that keeps hosted claims out of operator pages.
 
+**A also owes one backward-looking pass.** The six §2 tail pages were written from the Phase 2 ledgers
+rather than from fresh reads, so they carry those ledgers' pin to `onetimesecret@aafe503`. Once the app
+source is cloned, re-verify the rows they rest on against `HEAD` before the phase's own research
+starts — it is the cheapest moment to do it, the clone is already in hand, and a drifted row propagates
+into the operator pages that link to these. Concretely, from
+[`ledger/vocabulary-and-orgs.md`](../archive/documentation-audit-2026-08-phase-2/ledger/vocabulary-and-orgs.md)
+§9 and §10: the three role templates and what each may change, the plan ∩ role formula,
+domain-scoped memberships, the member limit as a mechanism, the owner-cannot-be-demoted invariants,
+the endpoint limits, and the three `sourceOfTruth` citations on `billing/index` (entitlement grant,
+the **Plan Features** panel, billing being switchable off). Record the result as a diff against the
+archived rows — confirmed, moved, or gone — rather than a new ledger; anything that moved is a
+correction to a published page, not a note.
+
 **B — Split & nav mechanics.** Splits `installation.md`; builds the `install/` and `features/` sidebar
 groups; backfills `audience: operator`; fixes the configuration-generator locale warning. Needs no app
 source — **can start now.**
@@ -339,7 +363,8 @@ catalog arrives, along with the merge of the pricing pages into `billing/index` 
 
 ## 7. What has to be true before launch
 
-1. **App source cloned** — `onetimesecret/onetimesecret`, unshallowed. Gates streams A, D, E.
+1. **App source cloned** — `onetimesecret/onetimesecret`, unshallowed. Gates streams A, D, E. Its
+   first use is the re-verification pass over the six §2 tail pages (§6), not new research.
 2. **§4.1 answered** — where do numbers go while the Reference does not exist? A one-line call, and
    the thing most likely to decide whether Phase 3 output ages well. Gates stream D.
 3. **onetimesecret#3993 read** — its current state decides what three Phase 3 pages may claim (§5).
