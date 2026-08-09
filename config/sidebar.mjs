@@ -191,6 +191,7 @@ export const sidebar = [
       createLink("yourReceipt", "share/your-receipt"),
       createLink("whatRecipientsSee", "share/what-recipients-see"),
       createLink("whenALinkDoesntWork", "share/when-a-link-doesnt-work"),
+      createLink("receivingSecrets", "share/receiving-secrets"),
       createLink("whyUseSecretLinks", "share/why-secret-links"),
       createLink("useCases", "share/use-cases"),
     ]),
@@ -211,11 +212,13 @@ export const sidebar = [
 
     createGroup("organizations", [
       createLink("whatOrganizationsDo", "organizations"),
+      createLink("rolesAndPermissions", "organizations/roles-and-permissions"),
       createLink(
         "memberInvites",
         "organizations/inviting-members",
         planBadge("Identity Plus"),
       ),
+      createLink("ownershipAndTransfer", "organizations/ownership-and-transfer"),
       createLink("sso", "organizations/sso", starredPlanBadge("Team Plus")),
       createLink(
         "auditLog",
@@ -251,9 +254,14 @@ export const sidebar = [
     ]),
 
     // No badges here: this group is *about* the tiers, so labelling its own
-    // entries with one would be circular. Both pages are carried across
-    // unchanged pending the production billing catalog.
+    // entries with one would be circular. The two pricing pages are carried
+    // across unchanged pending the production billing catalog — the merge of
+    // both into billing/index is what the catalog gates, not the existence of
+    // the billing pages, which describe the mechanism and assert no plan
+    // contents.
     createGroup("plansAndBilling", [
+      createLink("howPlansWork", "billing"),
+      createLink("managingYourSubscription", "billing/managing-your-subscription"),
       createLink("plansAndPricing", "pricing"),
       createLink("comparePlans", "pricing/compare-plans"),
     ]),
@@ -298,6 +306,7 @@ export const sidebar = [
   createGroup(
     "translations",
     [
+      createLink("developerOnRamp", "contribute/developer-on-ramp"),
       createLink("howTranslationsWork", "translations"),
       createLink("styleGuide", "translations/guide"),
       createLink("glossary", "translations/glossary"),

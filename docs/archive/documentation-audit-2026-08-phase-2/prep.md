@@ -1,9 +1,14 @@
 # Phase 2 preparation — agent-team workflow
 
+> **Archived 2026-08-09**, unchanged except that its four relative links were repointed from
+> `./` to `../../planning/` when it moved out of that directory. It describes a state that no
+> longer holds; see [the plan](../../planning/documentation-audit-2026-08.md) for what Phase 2
+> actually delivered.
+
 **What this is:** the readiness assessment and execution design for Phase 2 of
-[`documentation-audit-2026-08.md`](./documentation-audit-2026-08.md), written after reading that plan,
-its [topic inventory](./documentation-audit-2026-08-topics.md), and the
-[Phase 1 self-analysis](./documentation-audit-2026-08-self-analysis.md).
+[`documentation-audit-2026-08.md`](../../planning/documentation-audit-2026-08.md), written after reading that plan,
+its [topic inventory](../../planning/documentation-audit-2026-08-topics.md), and the
+[Phase 1 self-analysis](../../planning/documentation-audit-2026-08-self-analysis.md).
 
 Phase 1 shipped as #391–#394. This document does not restate the plan; it records the verified state
 Phase 2 starts from, the one dependency that blocks it, and how a team of agents should be structured
@@ -126,7 +131,7 @@ Twelve end-user pages, split by the reachability rule:
 - **Seven proceed unconditionally** — `share/what-recipients-see`, `share/when-a-link-doesnt-work`,
   `share/your-receipt`, `account/signing-in`, `account/two-factor-and-passkeys`,
   `account/change-your-email`, `account/close-your-account`.
-- **Five held on [D9](./documentation-audit-2026-08.md#d9--who-owns-the-end-user-task-layer)** —
+- **Five held on [D9](../../planning/documentation-audit-2026-08.md#d9--who-owns-the-end-user-task-layer)** —
   `start/send-your-first-secret`, `share/index`, `account/sessions-and-identities`,
   `account/dashboard-and-recent-secrets`, `account/preferences`.
 
