@@ -6,13 +6,6 @@ pageType: how-to
 sourceOfTruth: onetimesecret/lib/onetime/models/receipt.rb:93-101 (SOURCE_CAPABILITIES — a secret submitted through an incoming form has shows_share_link false), applied at onetimesecret/lib/onetime/models/receipt/features/safe_dump_fields.rb:66-67,79 and consumed at onetimesecret/apps/api/v2/logic/secrets/show_receipt.rb:322-330
 ---
 
-:::note
-**Status:** Shortened. This page covers the choice between the two ways of
-collecting a secret. Step-by-step setup for the incoming form lives on
-[Homepage and incoming secrets](/en/custom-domains/homepage-and-incoming) and is
-itself still being written up.
-:::
-
 Most of Onetime Secret is about sending. This page is the other direction: you need
 someone to give *you* a password, an API key, a recovery code, or anything else
 that should not sit in an inbox or a ticket.
