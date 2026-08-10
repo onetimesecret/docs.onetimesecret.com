@@ -26,11 +26,11 @@ sudo apt install -y --no-install-recommends \
   python3 procps redis-server
 ```
 
-Everything in that list except `redis-server` is what the project's clean-room
-install lane puts into an empty container before running the install, mirrored
-from the image build. It covers the build headers the `pg`, `sqlite3`, `argon2`,
-`bcrypt` and `puma` gems compile against. `redis-server` is the datastore
-itself, added here because a bare-metal host needs one locally.
+That list is exactly what the project's clean-room install lane puts into an
+empty container before running the install, mirrored from the image build. It
+covers the build headers the `pg`, `sqlite3`, `argon2`, `bcrypt` and `puma` gems
+compile against, and it includes `redis-server` for the same reason a bare-metal
+host needs one: the datastore has to be reachable locally.
 
 Not all of it is build tooling. `libsodium23` is a runtime shared library rather
 than a build header — `rbnacl` binds to the shared object, so the application

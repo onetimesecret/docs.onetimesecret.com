@@ -209,6 +209,20 @@ for (const page of pages) {
         );
       }
     }
+
+    // D-4.1 has two clauses, and assertion 6 below only enforces the second.
+    // "State a default, cite it" leaves an operator page that states no default
+    // uncited, which is the loophole the rule was written to close: these pages
+    // exist because the reference pages could not be trusted, so the citation
+    // is the whole contract, not a conditional on wording. REFERENCE_OWNERS are
+    // the reference — they cite themselves.
+    if (fields.audience === "operator" && !REFERENCE_OWNERS.includes(page.slug)) {
+      if (!fields.sourceOfTruth) {
+        problems.push(
+          `${page.path}: audience: operator under ${GATED_TREES.map((t) => `${t}/`).join(", ")} with no sourceOfTruth — D-4.1 has these pages carry a citation to app source in the "path:lines (what it proves)" form, whether or not they state a default outright`,
+        );
+      }
+    }
   }
 
   // Rule 3 applies to prose that is not itself the reference. Both reader

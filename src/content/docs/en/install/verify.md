@@ -72,9 +72,14 @@ is called in both stacks:
 docker compose exec app bin/ots customers create me@example.com --role colonel
 ```
 
-On a bare-metal install, run the same command from the application directory:
+On a bare-metal install, run the same command from the application directory.
+`bin/ots` does not read `.env` itself, so the environment has to be in the shell
+first — this is the same `set -a` form the shipped `Procfile.production` and the
+systemd units use, and it applies to every bare-metal `bin/ots` invocation on
+this page:
 
 ```bash
+set -a; source .env; set +a
 bin/ots customers create me@example.com --role colonel
 ```
 

@@ -3,7 +3,7 @@ title: Install with Docker
 description: How to bring up Onetime Secret from the Compose stacks the project ships, and what has to be set before either stack will start.
 audience: operator
 pageType: how-to
-sourceOfTruth: onetimesecret/docker/README.md:3-5,42-48,62-75,93-108,110-126 (the Compose stacks live in the application repository, the separate docker-compose repository is archived as of v0.24, the quick start that omits VALKEY_PASSWORD, the per-stack requirement table including AUTH_SECRET and ACCOUNT_ID_SECRET, the OTS_IMAGE_TAG default, and where each stack keeps its data); onetimesecret/docker/compose/docker-compose.simple.yml:20-30,66-113 (the pinned OTS_IMAGE_TAG default, env_file ../../.env, the fail-fast SECRET and VALKEY_PASSWORD interpolation, Valkey exposed only to the Compose network, AOF persistence into a named volume); onetimesecret/docker/compose/docker-compose.full.yml:44-46,60-89,100-109,193-265,272-283 (Caddy publishes 80 and 443, RACK_ENV defaults to production, the empty-default AUTH_SECRET and ACCOUNT_ID_SECRET next to the fail-fast SECRET, VALKEY_PASSWORD, RABBITMQ_USER and RABBITMQ_PASS, JOBS_ENABLED defaulting to false, /app/data shared by app, worker-email and scheduler, and the email.message.send queue the worker consumes); onetimesecret/docker-compose.yml:25-27 (the root file is an include wrapper defaulting to the simple stack); onetimesecret/apps/web/auth/config/base.rb:12,22-27 (AUTH_SECRET backs the HMAC secret guard, ACCOUNT_ID_SECRET of at least 32 bytes is required in production and boot raises without it, an unset RACK_ENV fails closed to production, and the two are independent); onetimesecret/scripts/install-tests/seed-compose-env.sh:8-13,31-45 (the six values CI exports for a full-stack up, why AUTH_SECRET and ACCOUNT_ID_SECRET are among them, and the repo-root .env written separately as the env_file target); onetimesecret/.github/workflows/compose-smoke.yml:71-79 (Compose interpolation reads the shell and the project-directory .env, not a service's env_file, and -f docker/compose/<file> shifts the project directory); onetimesecret/scripts/check-version-pins.sh:17-21 (the compose app-image default is held in lockstep with the README quick-start pin); onetimesecret/Procfile.production:13 (set -a; source .env; set +a as the documented way to put .env into the shell); onetimesecret/README.md:22-29 with onetimesecret/.github/workflows/compose-smoke.yml:315-324,336-347 (the documented docker run form, including --add-host, and the CI lane that resolves its image tag from the README and exercises it); onetimesecret/docker/entrypoints/healthcheck.sh:51-64 (the web-role healthcheck curls /health/advanced and requires top-level status ok, falling back to /health only when /health/advanced is unreachable)
+sourceOfTruth: onetimesecret/docker/README.md:3-5,42-48,62-75,93-108,110-126 (the Compose stacks live in the application repository, the separate docker-compose repository is archived as of v0.24, the quick start that omits VALKEY_PASSWORD, the per-stack requirement table including AUTH_SECRET and ACCOUNT_ID_SECRET, the OTS_IMAGE_TAG default, and where each stack keeps its data); onetimesecret/docker/compose/docker-compose.simple.yml:20-30,66-113 (the pinned OTS_IMAGE_TAG default, env_file ../../.env, the fail-fast SECRET and VALKEY_PASSWORD interpolation, Valkey exposed only to the Compose network, AOF persistence into a named volume); onetimesecret/docker/compose/docker-compose.full.yml:44-46,60-89,100-109,193-265,272-283 (Caddy publishes 80 and 443, RACK_ENV defaults to production, the empty-default AUTH_SECRET and ACCOUNT_ID_SECRET next to the fail-fast SECRET, VALKEY_PASSWORD, RABBITMQ_USER and RABBITMQ_PASS, JOBS_ENABLED defaulting to false, /app/data shared by app, worker-email and scheduler, and the email.message.send queue the worker consumes); onetimesecret/docker-compose.yml:25-27 (the root file is an include wrapper defaulting to the simple stack); onetimesecret/apps/web/auth/config/base.rb:12,22-27 (AUTH_SECRET backs the HMAC secret guard, ACCOUNT_ID_SECRET of at least 32 bytes is required in production and boot raises without it, an unset RACK_ENV fails closed to production, and the two are independent); onetimesecret/scripts/install-tests/seed-compose-env.sh:8-13,31-45 (the six values CI exports for a full-stack up, why AUTH_SECRET and ACCOUNT_ID_SECRET are among them, and the repo-root .env written separately as the env_file target); onetimesecret/.github/workflows/compose-smoke.yml:71-79 (Compose interpolation reads the shell and the project-directory .env, not a service's env_file, and -f docker/compose/<file> shifts the project directory); onetimesecret/scripts/check-version-pins.sh:17-21 (the compose app-image default is held in lockstep with the README quick-start pin); onetimesecret/Procfile.production:13 (set -a; source .env; set +a as the documented way to put .env into the shell); onetimesecret/README.md:22-29 with onetimesecret/.github/workflows/compose-smoke.yml:315-324,336-347 (the documented docker run form, including --add-host, and the CI lane that resolves its image tag from the README and exercises it)
 sidebar:
   label: Install with Docker
   order: 2
@@ -42,9 +42,9 @@ cd onetimesecret
 git checkout "$OTS_VERSION"
 ```
 
-Every command below runs from that directory. The image pin inside the Compose
-files is held in lockstep with the release, so a checkout at `$OTS_VERSION`
-already agrees with the tag you exported.
+Every command below runs from that directory. The Compose files carry their own
+pinned default image tag, which is not necessarily the release you just checked
+out; exporting `OTS_IMAGE_TAG=$OTS_VERSION` above is what makes the two agree.
 
 ## The two stacks
 
@@ -159,7 +159,7 @@ The full stack keeps its account database as a SQLite file under `/app/data`, on
 the `onetime_app_data` named volume mounted by the application, the email worker
 and the scheduler. The simple stack has no `/app/data` mount.
 [Simple or Full](/en/self-hosting/simple-or-full-auth) covers what full mode
-adds, why it needs a database of its own, and what that means for backups.
+adds and why it needs a database of its own.
 
 If you replace the named volume with a host directory, on Linux make it writable
 by the container user first — the container runs as uid 1001:
@@ -207,12 +207,8 @@ deliberate — this is the value you have to keep.
 ## Confirming it came up
 
 `docker compose up --wait` blocks until the containers report `healthy` rather
-than returning as soon as they are running. That healthcheck is a readiness
-probe, not a liveness one: in the application container it curls
-`/health/advanced` and requires the top-level status to be exactly `ok`, falling
-back to plain `/health` only when `/health/advanced` cannot be reached. So a
-clean exit already tells you the datastore answered — and in the full stack, the
-queue and the auth database too.
+than returning as soon as they are running — a readiness signal, not merely
+"running".
 
 What it does not tell you is that the UI is serving its built assets, or that a
 secret can be created and read back exactly once.
