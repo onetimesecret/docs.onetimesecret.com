@@ -62,17 +62,29 @@ export function docsPages(locale = "en") {
  * `bodyLine` is the 1-based line the body starts on, so a body offset can be
  * reported as a real line number in the file.
  *
+ * `raw` is the frontmatter block verbatim, for callers that need to hand it to
+ * a real YAML parser. This one accepts input Astro rejects: it reads a value as
+ * everything after the first `key:`, where YAML reads an unquoted scalar as
+ * ending at the next `: `. A citation containing a phrase like "what the
+ * installer does: version gates" parses cleanly here and fails the build with
+ * "bad indentation of a mapping entry". See assertion 0 in check-frontmatter.
+ *
  * @param {string} source
- * @returns {{fields: Record<string,string>, body: string, bodyLine: number}}
+ * @returns {{fields: Record<string,string>, body: string, bodyLine: number, raw: string}}
  */
 export function parseFrontmatter(source) {
   const lines = source.split("\n");
-  if (lines[0]?.trim() !== "---") return { fields: {}, body: source, bodyLine: 1 };
+  if (lines[0]?.trim() !== "---") return { fields: {}, body: source, bodyLine: 1, raw: "" };
 
   const fields = {};
   for (let i = 1; i < lines.length; i++) {
     if (lines[i].trim() === "---") {
-      return { fields, body: lines.slice(i + 1).join("\n"), bodyLine: i + 2 };
+      return {
+        fields,
+        body: lines.slice(i + 1).join("\n"),
+        bodyLine: i + 2,
+        raw: lines.slice(1, i).join("\n"),
+      };
     }
     // Top level only: an indented line belongs to a nested block.
     const match = lines[i].match(/^([A-Za-z_][\w.-]*):[ \t]*(.*)$/);
@@ -81,7 +93,7 @@ export function parseFrontmatter(source) {
   }
   // Unterminated frontmatter: treat the whole file as frontmatter-less so the
   // required-field check reports it rather than this parser guessing.
-  return { fields: {}, body: source, bodyLine: 1 };
+  return { fields: {}, body: source, bodyLine: 1, raw: "" };
 }
 
 /** Strip one layer of matching quotes from a scalar value. */

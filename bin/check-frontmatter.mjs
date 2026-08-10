@@ -89,6 +89,8 @@
 import { existsSync } from "node:fs";
 import { join } from "node:path";
 
+import { parse as parseYaml } from "yaml";
+
 import {
   ENUM_FIELDS,
   docsPages,
@@ -154,7 +156,23 @@ let operatorPages = 0;
 let gatedPages = 0;
 
 for (const page of pages) {
-  const { fields, body, bodyLine } = parseFrontmatter(page.source);
+  const { fields, body, bodyLine, raw } = parseFrontmatter(page.source);
+
+  // 0: the block is YAML a build would accept. Everything below reads fields
+  // out of the lenient line parser in bin/lib/frontmatter.mjs, which takes a
+  // value as the rest of the line and so accepts input Astro rejects — an
+  // unquoted scalar ends at the next ": ", and a long sourceOfTruth citation
+  // containing an ordinary English colon parses here and then fails the build
+  // with "bad indentation of a mapping entry". This check passed such a page.
+  if (raw) {
+    try {
+      parseYaml(raw);
+    } catch (error) {
+      problems.push(
+        `${page.path}: frontmatter is not valid YAML — ${error.message.split("\n")[0]}. The build fails on this even though the rest of this check passes it; an unquoted scalar ends at the first ": ", so a citation like "what the installer does: version gates" needs the colon removed or the whole value quoted`,
+      );
+    }
+  }
 
   for (const required of ["title", "description"]) {
     if (!fields[required]) {
