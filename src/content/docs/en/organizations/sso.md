@@ -6,12 +6,6 @@ pageType: how-to
 plan: Team Plus
 ---
 
-:::note
-**Status:** This page is a work in progress. SSO is part of our team-oriented
-capabilities. The interactive demos linked below are live today and walk
-through real authentication flows step by step.
-:::
-
 SSO is configured per organization, under the **SSO** tab in Organization
 settings. Only an organization owner can change it.
 
