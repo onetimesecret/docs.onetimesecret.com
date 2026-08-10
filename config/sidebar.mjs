@@ -55,6 +55,15 @@ const localeTranslations = {
   tr: trTranslations,
 };
 
+// Every translation key the sidebar below asks for, in call order.
+//
+// createLink and createGroup both resolve a label as `sidebar?.[key] || key`,
+// which means a mistyped key neither throws nor blanks the entry: it renders the
+// raw camelCase key as the visible label. bin/check-nav.mjs reads this array and
+// fails on any key with no entry in src/content/i18n/en.json, which is the only
+// thing that catches the typo before someone looks at the rendered sidebar.
+const requestedKeys = [];
+
 /**
  * Build the per-locale label overrides for a sidebar key.
  *
@@ -90,6 +99,7 @@ function buildTranslations(key) {
  * in i18n.mjs and directory names use lowercase (e.g., "zh-cn", "pt-br").
  */
 function createLink(key, link, badge) {
+  requestedKeys.push(key);
   const enLabel = enTranslations.sidebar?.[key] || key;
   return {
     label: enLabel,
@@ -112,6 +122,7 @@ function createLink(key, link, badge) {
  * in i18n.mjs and directory names use lowercase (e.g., "zh-cn", "pt-br").
  */
 function createGroup(key, items = [], collapsed = false) {
+  requestedKeys.push(key);
   const enLabel = enTranslations.sidebar?.[key] || key;
   return {
     label: enLabel,
@@ -202,17 +213,40 @@ export const sidebar = [
   ]),
 
   createGroup("selfHosting", [
+    // Install & deploy. The first two are orientation and the one decision that
+    // changes what you install; the six install/* pages are the split of the
+    // retired self-hosting/installation (Phase 3) in the order a first-time
+    // operator meets them. install/ has no index page on purpose — nothing
+    // links to /en/install/ and the group IS the index.
+    //
+    // Order is array position, not a number. createLink/createGroup emit no
+    // `order` key and there is no autogenerate group anywhere in this repo, so
+    // Starlight renders this array as written and adding a group later is a
+    // pure splice that renumbers nothing.
     createGroup("installAndDeploy", [
       createLink("aboutSelfHosting", "self-hosting"),
       createLink("authModeChoice", "self-hosting/simple-or-full-auth"),
-      createLink("installationDeployment", "self-hosting/installation"),
+      createLink("imagesAndVariants", "install/images-and-variants"),
+      createLink("installWithDocker", "install/docker"),
+      createLink("installOnLinux", "install/linux"),
+      createLink("runAsAService", "install/run-as-a-service"),
+      createLink("reverseProxyAndTls", "install/reverse-proxy-and-tls"),
+      createLink("verifyYourInstall", "install/verify"),
     ]),
 
+    // Configure. The three entries below are the surviving reference pages;
+    // Phase 4 retires them as movedPages families. The task-shaped configure/*
+    // pages are appended ABOVE them when they land — tasks first, reference
+    // last.
     createGroup("configure", [
       createLink("configurationReference", "self-hosting/configuration"),
       createLink("configurationGenerator", "self-hosting/configuration-generator"),
       createLink("environmentVariables", "self-hosting/environment-variables"),
     ]),
+
+    // A createGroup("features", [...]) call goes here when the first features/*
+    // page lands. It is NOT added empty: bin/check-nav.mjs:68-72 fails on a
+    // group with no items.
 
     createGroup("troubleshootAndUpgrade", [
       createLink("upgradingToV024", "self-hosting/upgrading-v0-24"),
@@ -251,3 +285,12 @@ export const sidebar = [
     true,
   ),
 ];
+
+/**
+ * The translation keys `sidebar` above was built from, populated as a side
+ * effect of the createLink/createGroup calls in it. Declared after the array so
+ * it is complete when a consumer imports it.
+ *
+ * @type {readonly string[]}
+ */
+export const sidebarKeys = Object.freeze([...requestedKeys]);

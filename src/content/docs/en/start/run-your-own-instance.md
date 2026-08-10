@@ -109,7 +109,7 @@ bundle exec bin/ots customers role promote admin@example.com
 
 Now that your instance is running:
 
-1. **[Configure your deployment](/en/self-hosting/installation)** for production use
+1. **[Reverse proxy and TLS](/en/install/reverse-proxy-and-tls/)** for production use
 2. **[Review configuration options](/en/self-hosting/configuration)** for customization
 
 ## Getting Help
