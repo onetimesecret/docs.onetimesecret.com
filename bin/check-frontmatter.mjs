@@ -4,7 +4,7 @@
 // matches the schema, anchors that redirects can actually land on, and defaults
 // that stay in the reference.
 //
-// Four assertions, each guarding something that otherwise fails silently:
+// Five assertions, each guarding something that otherwise fails silently:
 //
 //  1. Every EN page has a title and a description. Starlight's schema requires
 //     `title` but not `description`, so a page can ship with no meta
@@ -29,28 +29,57 @@
 //     resolves to a real heading on the page it targets. That second direction
 //     is what makes the redirect targets derivable rather than hand-matched.
 //
-//  4. THE "REFERENCE OWNS EVERY DEFAULT" RULE (plan rule 3). An end-user page
+//  4. THE "CITE WHERE THE VALUE CAME FROM" RULE (plan rule 3, D-4.1). A page
 //     that spells out a configurable default has forked the reference: the
 //     number goes stale the first time an operator changes it, and nothing
-//     connects the copy back to the page that owns it. Fails on an ALL_CAPS
-//     environment-variable name with its value written out beside it, on pages
-//     that declare `audience: end-user` and no `sourceOfTruth`. Scoped that
-//     narrowly on purpose — the self-hosting and reference trees state values
-//     because stating values is their job, and a check that fires on them would
-//     be switched off within a week.
+//     connects the copy back to the source it was read from. Fails on an
+//     ALL_CAPS environment-variable name with its value written out beside it,
+//     on pages that declare `audience: end-user` or `audience: operator` and
+//     carry no `sourceOfTruth`.
 //
-//     Tuned against the real tree, and the two narrowing rules were each
-//     measured. Over the 57 EN pages: 45 candidate hits with code blocks
-//     included, 1 once fenced blocks are excluded (`GENERATED_VALUE_DISPLAY_TTL=60`
-//     in prose on self-hosting/upgrading-v0-24), and 0 once the audience gate is
-//     applied — every candidate lives in the self-hosting tree. So it reports
+//     `sourceOfTruth` is the whole exemption, for both audiences. Phase 3
+//     considered making the operator rule stricter — citation AND a link to
+//     self-hosting/environment-variables or self-hosting/configuration — and
+//     dropped it: the Phase 3 anchor audit found 14 staleness defects across
+//     those two pages, and 11 of their 14 anchors index the superseded v0.24
+//     stack. A rule that forces operator pages to link there would route
+//     readers into wrong content to satisfy a checker. Operator pages cite app
+//     source instead, in the `path:lines (what it proves)` form
+//     src/content/docs/en/billing/index.md uses. When Phase 4 regenerates the
+//     Reference, revisit the link half of D-4.1.
+//
+//     REFERENCE_OWNERS stay exempt outright, cited or not: stating values is
+//     what those two pages are for.
+//
+//     Tuned against the real tree, and the narrowing rules were each measured.
+//     Over the EN tree: 45 candidate hits with code blocks included, 1 once
+//     fenced blocks are excluded (`GENERATED_VALUE_DISPLAY_TTL=60` in prose on
+//     self-hosting/upgrading-v0-24, which now carries the `.env.reference`
+//     citation it was read from), and 0 after the audience gate. So it reports
 //     nothing today and has no false positives to report: it is a ratchet
-//     against the next end-user page, not a cleanup task.
+//     against the next page, not a cleanup task.
 //
 //     Known limit: it catches a NAMED variable with a value, not a bare number.
 //     "Links last 7 days" on a page with no sourceOfTruth passes. Catching that
 //     means flagging every numeral in reader-facing prose, which is exactly the
 //     cry-wolf check that gets deleted.
+//
+//  5. AUDIENCE IS NOT OPTIONAL WHERE ASSERTION 4 IS THE POINT. Assertion 4 is
+//     gated on `audience`, and src/content.config.ts makes every Phase 2 field
+//     optional (deliberately — 60 pre-audit pages carry none of them). Those two
+//     facts together made the citation rule OPT-IN: deleting one frontmatter
+//     line exempted a page from D-4.1 entirely, and the only trace was the
+//     operator counter in the OK line below dropping by one. Removing the field
+//     has to be a FAILURE, not an exemption, so `audience` and `pageType` are
+//     REQUIRED on every EN page under GATED_TREES. The trees are the ones whose
+//     pages are written to a template and quote knobs at a reader: install/ and
+//     self-hosting/ today, configure/ and features/ pre-emptively, because the
+//     next 18 operator pages land there and the rule has to be in place before
+//     the pages are, not after.
+//
+//     Scope is deliberately narrow. The other ~60 pages predate the audit and
+//     are not being retrofitted here; widening this list is how a tree opts in,
+//     one line, once its pages have been through the audit.
 //
 // Fails (exit 1) listing every problem with the file to edit. Warns (exit 0)
 // where a fragment resolves in EN but not in a locale still holding its own
@@ -88,6 +117,23 @@ const REQUIRED_ANCHORS = {
   "security/our-principles": ["privacy-first", "communication", "data-minimization"],
 };
 
+// D-4.1. The two pages that own every default until the generated Reference
+// lands in Phase 4. They are exempt from assertion 4 whether or not they cite
+// sourceOfTruth: stating values is what they are for. Every other page — of
+// either audience — states a default only with a citation beside it.
+const REFERENCE_OWNERS = ["self-hosting/environment-variables", "self-hosting/configuration"];
+
+// Assertion 5. Reader-facing trees where the audience gate on assertion 4 is
+// load-bearing, so the field it reads cannot be optional. A slug matches a tree
+// when it IS the tree (self-hosting/index.md -> slug "self-hosting") or sits
+// under it. configure/ and features/ hold no pages yet — they are listed now so
+// the first page that lands there arrives under the rule.
+const GATED_TREES = ["install", "self-hosting", "configure", "features"];
+const GATED_FIELDS = ["audience", "pageType"];
+
+const inGatedTree = (slug) =>
+  GATED_TREES.some((tree) => slug === tree || slug.startsWith(`${tree}/`));
+
 const problems = [];
 
 // --- 1 + 2 + 4: per-page frontmatter and prose ------------------------------
@@ -104,6 +150,8 @@ for (const field of ENUM_FIELDS) {
 const pages = docsPages("en");
 const anchorsBySlug = new Map();
 let endUserPages = 0;
+let operatorPages = 0;
+let gatedPages = 0;
 
 for (const page of pages) {
   const { fields, body, bodyLine } = parseFrontmatter(page.source);
@@ -132,16 +180,34 @@ for (const page of pages) {
 
   anchorsBySlug.set(page.slug, new Map(headings(body).map((h) => [h.slug, h])));
 
-  // Rule 3 applies to reader-facing prose only. An operator page states the
-  // value because the value is the subject; sourceOfTruth is the declared
-  // exception, and it carries the citation that keeps the copy auditable.
-  if (fields.audience !== "end-user") continue;
-  endUserPages++;
+  // 5: the gate below reads `audience`, so on the trees that gate is FOR, the
+  // field is mandatory. Deleting it must fail here rather than skip the page.
+  if (inGatedTree(page.slug)) {
+    gatedPages++;
+    for (const required of GATED_FIELDS) {
+      if (!fields[required]) {
+        problems.push(
+          `${page.path}: no ${required} in frontmatter — every EN page under ${GATED_TREES.map((t) => `${t}/`).join(", ")} declares both ${GATED_FIELDS.join(" and ")}; the "cite where the value came from" rule (D-4.1) is gated on audience, so an operator page without one is exempt from it by omission rather than by decision`,
+        );
+      }
+    }
+  }
+
+  // Rule 3 applies to prose that is not itself the reference. Both reader
+  // audiences are gated; sourceOfTruth is the exemption for both (D-4.1).
+  // Pages with no audience, or a developer/contributor audience, are out of
+  // scope — they are writing about the code, not quoting a knob at a reader.
+  const { audience } = fields;
+  if (audience === "end-user") endUserPages++;
+  else if (audience === "operator") operatorPages++;
+  else continue;
+
+  if (REFERENCE_OWNERS.includes(page.slug)) continue;
   if (fields.sourceOfTruth) continue;
 
   for (const stated of statedDefaults(body)) {
     problems.push(
-      `${page.path}:${bodyLine + stated.line - 1}: end-user page states the default for ${stated.variable} outright: "${stated.excerpt}" — link to the page that owns it (/en/self-hosting/environment-variables) instead, or add sourceOfTruth frontmatter citing the app source you read it from`,
+      `${page.path}:${bodyLine + stated.line - 1}: ${audience} page states the default for ${stated.variable} outright: "${stated.excerpt}" — add sourceOfTruth frontmatter citing the app source you read it from, in the "path:lines (what it proves)" form, or stop stating the value and describe the behaviour instead`,
     );
   }
 }
@@ -185,6 +251,22 @@ for (const [slug, required] of Object.entries(REQUIRED_ANCHORS)) {
 const { createRedirectsConfig, isOffsiteTarget } = await import(
   new URL("../config/redirects.mjs", import.meta.url).href
 );
+
+// createRedirectsConfig() runs config/redirects.mjs's own assertions, and they
+// THROW. Uncaught, that would abort this script with a stack trace and take the
+// 68 pages' worth of findings already sitting in `problems` down with it —
+// they are not printed until the end. So the redirects failure becomes one more
+// reported problem and the rest of the run still reports itself. bin/check-nav
+// loads the same module the same way, for the same reason.
+let redirects = null;
+try {
+  redirects = createRedirectsConfig();
+} catch (error) {
+  problems.push(
+    `${REDIRECTS} did not load, so no redirect fragment could be resolved (the per-page assertions above still ran): ${error.message}`,
+  );
+}
+
 const localeAnchors = new Map();
 
 /** Heading ids of `slug` in `locale`, or null if that locale has no such page. */
@@ -219,7 +301,7 @@ const record = (map, key, from, detail) => {
   map.get(key).froms.push(from);
 };
 
-for (const [from, to] of Object.entries(createRedirectsConfig())) {
+for (const [from, to] of Object.entries(redirects ?? {})) {
   const hash = to.indexOf("#");
   if (hash === -1) continue;
   fragments++;
@@ -288,6 +370,7 @@ if (problems.length > 0) {
 
 const contracted = Object.values(REQUIRED_ANCHORS).reduce((n, a) => n + a.length, 0);
 console.log(
-  `check:frontmatter OK — ${pages.length} EN pages (${endUserPages} end-user), ` +
+  `check:frontmatter OK — ${pages.length} EN pages (${endUserPages} end-user, ${operatorPages} operator), ` +
+    `${gatedPages} of them under ${GATED_TREES.map((t) => `${t}/`).join(", ")} with audience and pageType required, ` +
     `${contracted} contracted anchors, ${fragments} redirect fragment${fragments === 1 ? "" : "s"} resolved`,
 );
