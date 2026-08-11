@@ -93,7 +93,11 @@ are plan ∩ role, and that the in-app **Plan Features** panel is the authoritat
 naming a single tier's contents. All three do exactly that and none names one. `pricing/index` and
 `pricing/compare-plans` stay as they are: the merge is what the catalog gates.
 
-`features/billing-and-entitlements` remains genuinely blocked — its whole subject is the catalog.
+`features/billing-and-entitlements` is the one page whose whole subject *is* the catalog, which is why
+it was the last blocked item. It is unblocked now: the catalog exists as an operator-supplied file
+(sha256 `69a96394920fd1777cf23a9bdedee174648f46b54e13c99a1f27b3cdc0a17501`), cited by key path under
+the features ledger's `operator-supplied` verdict — one operator's file, never a structural fact. See
+§4.4.
 
 **The cost of that decision, named.** Adding the two billing pages without merging the pricing pages
 puts four entries in one sidebar group (`config/sidebar.mjs:262-267`: How plans work · Managing your
@@ -245,22 +249,36 @@ relax the assertion, and not to leave the shim pointing at a redirect.
 ### 4.4 The reciprocal-aside contract becomes assertable for the first time
 
 Rule 2 — nine hosted↔operator feature pairs carry reciprocal `:::note` asides in both directions — was
-unenforceable in Phase 2 because only the hosted half existed. Phase 3 writes the other half, so this
-is the phase where the contract becomes real and where a checker can assert it.
+unenforceable in Phase 2 because only the hosted half existed. "Nine" counts *subjects* (custom
+domains, SSO, incoming secrets, email sender, sign-in/sign-up config, branding, homepage modes, secret
+options, regions), not page-to-page edges; the table below has eight rows and ten hosted pages. Phase 3
+writes the other half, so this is the phase where the contract becomes real and where a checker can
+assert it.
 
 | Hosted page (shipped) | Operator page (Phase 3) |
 |---|---|
-| `custom-domains/index` | `features/custom-domains` |
+| `custom-domains/index`, `custom-domains/dns-validation` | `features/custom-domains` |
 | `custom-domains/branding` | `features/branding` |
 | `custom-domains/email-sender` | `configure/email` |
 | `custom-domains/homepage-and-incoming` | `features/incoming-secrets`, `features/interface-and-homepage` |
 | `custom-domains/access-and-privacy` | `configure/authentication` |
 | `organizations/sso` | `configure/sso` |
 | `share/index` | `configure/secret-options` |
-| `account/change-your-region`, `security/where-your-data-lives` | `features/multi-region` |
+| `account/change-your-region`, `security/where-your-data-lives` | `features/regions-and-federation` |
 
-Note the asymmetry in row four: one hosted page pairs with two operator pages. A checker asserting a
-1:1 mapping will fail on it, so assert *reachability in both directions*, not pairing.
+The last row's operator page is `features/regions-and-federation`. `features/multi-region` is a
+**retired slug** — the features ledger renamed it (§J) because the old name promised a distributed
+system where the reality is regions siloed by design plus one Stripe-mediated crossing. No redirect is
+owed — the old slug was planned but never written or published, so no URL points at it.
+
+The table is an **adjacency list, not a bijection**, and it is asymmetric in both directions. Row one:
+two hosted pages pair with one operator page — `custom-domains/dns-validation` is the page carrying the
+material `features/custom-domains` actually inverts (the TXT ownership record, the verification
+lifecycle, what each status means; on the shipped `passthrough` strategy that record is never checked —
+features ledger §G), while `custom-domains/index` is the family entry point a self-hoster lands on
+first. Row four: one hosted page pairs with two operator pages. The last row: two hosted pages again
+pair with one operator page. A checker asserting a 1:1 mapping will fail on all three, so assert
+*reachability in both directions*, not pairing.
 
 **Four more pairs arrived with the §2 tail.** Each of these hosted pages already carries its operator
 aside; the operator half is Phase 3's or Phase 4's to write, and until it exists the aside points at
@@ -270,25 +288,40 @@ rather than nine plus a surprise:
 | Hosted page (shipped) | Operator page | Phase |
 |---|---|---|
 | `share/receiving-secrets` | `features/incoming-secrets` | 3 |
-| `organizations/roles-and-permissions` | `features/billing-and-entitlements` | 3, blocked |
-| `billing/index` | `features/billing-and-entitlements` | 3, blocked |
-| `billing/managing-your-subscription` | `features/billing-and-entitlements` | 3, blocked |
+| `organizations/roles-and-permissions` | `features/billing-and-entitlements` | 3 |
+| `billing/index` | `features/billing-and-entitlements` | 3 |
+| `billing/managing-your-subscription` | `features/billing-and-entitlements` | 3 |
 
 Three of the four converge on one operator page, which makes the asymmetry the rule rather than the
-exception — further reason to assert reachability rather than pairing. `organizations/ownership-and-transfer`
-is a fifth candidate: it tells a self-hosted reader that ownership transfer is an operator action,
-and the operator page that documents the command does not exist in any phase's scope yet.
+exception — further reason to assert reachability rather than pairing. Those three rows are **no longer
+blocked**: the billing catalog exists as an **operator-supplied** artefact (the docs-repo copy,
+gitignored, sha256 `69a96394920fd1777cf23a9bdedee174648f46b54e13c99a1f27b3cdc0a17501`), so
+`features/billing-and-entitlements` is written from it in two halves that must never be mixed — see the
+features ledger §K head and its ledger-wide citation convention, which requires the `operator-supplied`
+verdict rather than `verified` for every value read from that file.
 
-**And the command turns out to exist.** The re-verification pass found
-`bin/ots org transfer-ownership ORG NEW_OWNER` — a 371-line operation at
-`lib/onetime/operations/org/transfer_ownership.rb` with a CLI wrapper, `--dry-run`, a `--demote-to`
-choice for the outgoing owner, and documented decisions about what it does *not* do (it does not add
-the new owner if they are not already a member, and does not remove the outgoing one). The REST
-endpoint is unbuilt and the operation's own comment says the UI already tells users to transfer
-ownership, "so the gap is real". This is a page Phase 3 should write and no stream currently owns —
-see [the pass](./documentation-audit-2026-08-phase-3-reverification.md#61-the-ownership-transfer-command-exists-and-it-is-substantial)
-for the behaviour an operator page has to state. It fits Configure or Operate, and Operate is Phase 4,
-so it needs a placement call alongside §4.1.
+`organizations/ownership-and-transfer` is a fifth candidate: it tells a self-hosted reader that
+ownership transfer is an operator action, and the command it refers to does exist. The re-verification
+pass found `bin/ots org transfer-ownership ORG NEW_OWNER` — a 371-line operation at
+`lib/onetime/operations/org/transfer_ownership.rb` with a CLI wrapper, a `--demote-to` choice for the
+outgoing owner (default `admin`), and documented decisions about what it does *not* do (it does not add
+the new owner if they are not already a member, and does not remove the outgoing one). There is **no
+`--dry-run` flag**: omitting `--yes` runs the dry run automatically and prints the plan — who loses
+ownership, how many owner memberships are demoted, and to what — before prompting, so answering `n` is
+how an operator previews a transfer. The REST endpoint is unbuilt and the operation's own comment says
+the UI already tells users to transfer ownership, "so the gap is real". The verified behaviour an
+operator page has to state is rows 132–139 of
+[install ledger §H](./phase-3-ledger-install-and-deploy.md#h-ownership-transfer--the-short-subsection-self-hostingindex-gets-d-42),
+which supersede
+[the pass](./documentation-audit-2026-08-phase-3-reverification.md#61-the-ownership-transfer-command-exists-and-it-is-substantial)
+on the flag set.
+
+**The placement call is made:**
+[D-4.2](./documentation-audit-2026-08-phase-3-decisions.md#d-42--the-ownership-transfer-page--deferred-to-phase-4-aside-closed-now)
+defers the standalone page to **Phase 4's Operate group** — it is an operator action, Operate is where
+it belongs, and a single-page `operate/` group in Phase 3 would pre-empt Phase 4's nav design. The
+dangling aside does not wait for it: `self-hosting/index`'s Phase 3 update carries a short verified
+subsection naming the command, so the aside on the published hosted page lands somewhere useful now.
 
 ### 4.5 On a stock self-hosted instance, the plan half of plan ∩ role is not a constraint
 
@@ -319,8 +352,8 @@ Three consequences for Phase 3:
 
 ## 5. Scope
 
-26 pages, from §4 of the plan. **Operate (10) and Troubleshoot & upgrade (7) are Phase 4** and are not
-listed here.
+25 pages — the 26 in §4 of the plan, less `features/caddy-on-demand-tls`, which is not a page (see
+below). **Operate (10) and Troubleshoot & upgrade (7) are Phase 4** and are not listed here.
 
 - **Install & deploy (8)** — `UPD self-hosting/index` · `UPD self-hosting/simple-or-full-auth` ·
   `NEW install/images-and-variants` · `SPL install/docker` · `SPL install/linux` ·
@@ -329,10 +362,11 @@ listed here.
   publication in Phase 1 and never written — it starts here) · `NEW configure/authentication` ·
   `NEW configure/sso` · `NEW configure/email` · `NEW configure/secret-options` ·
   `NEW configure/sessions-and-cookies` · `NEW configure/security-headers`
-- **Features (10)** — `NEW features/custom-domains` · `NEW features/caddy-on-demand-tls` ·
-  `NEW features/incoming-secrets` · `NEW features/branding` · `NEW features/interface-and-homepage` ·
-  `NEW features/languages` · `NEW features/multi-region` · `NEW features/billing-and-entitlements`
-  (**blocked**, billing catalog) · `NEW features/feedback-channel` · `NEW features/broadcast-banner`
+- **Features (9)** — `NEW features/custom-domains` · `NEW features/incoming-secrets` ·
+  `NEW features/branding` · `NEW features/interface-and-homepage` · `NEW features/languages` ·
+  `NEW features/regions-and-federation` (renamed from `features/multi-region`, a planned slug that was
+  never published, so no redirect is owed) · `NEW features/billing-and-entitlements` (written from the operator-supplied catalog; the
+  earlier block is lifted) · `NEW features/feedback-channel` · `NEW features/broadcast-banner`
 
 Plus two cheap items that belong to this phase because they are in the tree it touches: backfill
 `audience: operator` on the seven inherited self-hosting pages, and fix the
@@ -343,9 +377,13 @@ is done — see §2.)
 [onetimesecret#3993](https://github.com/onetimesecret/onetimesecret/issues/3993) decide what Phase 3
 pages may claim, so the issue's state has to be read at launch rather than assumed:
 
-- `caddy_on_demand` issues no certificate → `features/caddy-on-demand-tls` documents the two strategies
-  that work and states plainly that the third does not. It is not written as a supported strategy.
-  `features/custom-domains` carries the same caveat.
+- `caddy_on_demand` issues no certificate → **nothing is written about it.** There is no
+  `features/caddy-on-demand-tls` page: the strategy returns 403 for every domain at 4cbd42149, so a
+  page would only walk an operator into a closed loop. `features/custom-domains` owes the subject
+  exactly one honest paragraph — the value exists, `passthrough` is the shipped default, it does not
+  work end-to-end — and no configuration steps, Caddyfile block or ask-endpoint URL. The verified
+  record of why, and the one condition that would make it a page again, is
+  [features ledger §H](./phase-3-ledger-features.md#h-caddy-on-demand-tls--not-a-page-closed-record-of-a-non-functional-path).
 - `features.domains.strict_strategy` is unreachable by config → not documented as a knob.
 - `JOBS_SCHEDULER_ENABLED` / `JOBS_FALLBACK_SYNC` are inert while `docker/README.md:90` and
   `docker-compose.full.yml:253` instruct operators to set them → `install/docker` inherits that
