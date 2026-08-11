@@ -33,6 +33,12 @@ Typical uses include:
 Proper email authentication (SPF/DKIM) for your domain is part of getting this
 working reliably; specifics will be documented here as the feature ships.
 
+:::note[Running your own instance?]
+[Outbound email](/en/configure/email) is the operator side of this page — the
+provider credentials and DNS fixtures that back a custom sender address on an
+instance you run yourself.
+:::
+
 ## Related features
 
 - [Brand Guide](/en/custom-domains/branding) — match the logo and colors of the experience your emails point to.

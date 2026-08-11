@@ -61,6 +61,12 @@ Typical uses include:
 - Limiting who can sign up (for example, restricting to particular email domains).
 - Aligning the signup experience with your organization's access policies.
 
+:::note[Running your own instance?]
+[Authentication](/en/configure/authentication) is the operator side of this
+page — the same sign-in and sign-up decisions, made in configuration rather than
+from the Domain Dashboard.
+:::
+
 ## Related features
 
 - [Homepage and Incoming Secrets](/en/custom-domains/homepage-and-incoming) — turn public secret creation on or off, and collect secrets from others through your domain.

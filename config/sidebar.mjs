@@ -245,11 +245,29 @@ export const sidebar = [
       createLink("verifyYourInstall", "install/verify"),
     ]),
 
-    // Configure. The three entries below are the surviving reference pages;
-    // Phase 4 retires them as movedPages families. The task-shaped configure/*
-    // pages are appended ABOVE them when they land — tasks first, reference
-    // last.
+    // Configure. Task-shaped pages first, reference last: the eight configure/*
+    // pages are read in the order an operator meets them — the overview, then
+    // the two things that must be right before the instance boots (secrets, then
+    // authentication), then the three that decide what users can do (SSO, mail,
+    // secret options), then the two hardening pages. The three self-hosting/*
+    // entries below them are the surviving reference pages, which Phase 4
+    // retires as movedPages families.
+    //
+    // Four labels here cannot repeat one that already exists — check-nav
+    // compares labels across the whole tree, not against siblings. "Configure
+    // SSO" is distinct from "Single Sign-On (SSO)" under Organizations,
+    // "Outbound email" from "Email Sender" under Custom domains, "Sessions and
+    // cookies" from "Sessions and identities" under Your account, and
+    // "Configuration Overview" from "Configuration Reference" below it.
     createGroup("configure", [
+      createLink("configurationOverview", "configure"),
+      createLink("secretsAndKeys", "configure/secrets-and-keys"),
+      createLink("authentication", "configure/authentication"),
+      createLink("configureSso", "configure/sso"),
+      createLink("outboundEmail", "configure/email"),
+      createLink("secretOptions", "configure/secret-options"),
+      createLink("sessionsAndCookies", "configure/sessions-and-cookies"),
+      createLink("securityHeaders", "configure/security-headers"),
       createLink("configurationReference", "self-hosting/configuration"),
       createLink("configurationGenerator", "self-hosting/configuration-generator"),
       createLink("environmentVariables", "self-hosting/environment-variables"),

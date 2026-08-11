@@ -8,9 +8,10 @@ sourceOfTruth: onetimesecret/etc/defaults/auth.defaults.yaml:6-8 (auth.mode acce
 
 ## Two settings, not three modes
 
-`auth.mode` — set by the `AUTHENTICATION_MODE` environment variable — takes
-`simple` or `full`, and nothing else. It ships as `simple`, and the application
-carries predicates for exactly those two values.
+The mode is the top-level `mode:` key in `etc/auth.yaml`, set by the
+`AUTHENTICATION_MODE` environment variable. It takes `simple` or `full`, and
+nothing else. It ships as `simple`, and the application carries predicates for
+exactly those two values.
 
 Switching authentication off altogether is a separate setting that lives in a
 different file and a different section: `site.authentication.enabled`, set by
@@ -18,6 +19,11 @@ different file and a different section: `site.authentication.enabled`, set by
 API authentication along with everything else. If your instance sits behind a VPN
 or a proxy that already authenticates people, that is the setting you want, and
 the mode stops mattering.
+
+This page is the decision. [Authentication](/en/configure/authentication) is the
+reference for both settings — what each mode loads, which features are full-mode
+only, the sign-in and sign-up gates, and what to turn off to run a closed
+instance.
 
 ## What the mode changes
 

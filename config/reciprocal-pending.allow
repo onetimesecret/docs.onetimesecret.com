@@ -27,9 +27,10 @@ features/custom-domains # Phase 3 features group, unwritten
 features/branding # Phase 3 features group, unwritten
 features/incoming-secrets # Phase 3 features group, unwritten
 features/interface-and-homepage # Phase 3 features group, unwritten
-features/multi-region # Phase 3 features group, unwritten
-features/billing-and-entitlements # Phase 3, blocked on the production billing catalog
-configure/email # Phase 3 configure group, unwritten
-configure/authentication # Phase 3 configure group, unwritten
-configure/sso # Phase 3 configure group, unwritten
-configure/secret-options # Phase 3 configure group, unwritten
+features/regions-and-federation # Phase 3 features group, unwritten (renamed from features/multi-region)
+features/billing-and-entitlements # Phase 3 features group, unwritten (no longer blocked; the catalog is operator-supplied)
+
+# The four configure/* entries this file carried were deleted when their pages
+# landed, which is what turns the reachability assertion on for those pairs:
+# configure/email, configure/authentication, configure/sso and
+# configure/secret-options. Nothing under configure/ is pending any more.

@@ -93,8 +93,8 @@
 //     on correct content. Reach at least one counterpart each way and it
 //     passes; reach none in either direction and it fails.
 //
-//     Most of the operator half is unwritten today (all of features/, most of
-//     configure/), and an aside cannot point at a page that does not exist. That
+//     Part of the operator half is still unwritten (all of features/; configure/
+//     landed in full), and an aside cannot point at a page that does not exist. That
 //     gap is DECLARED in config/reciprocal-pending.allow rather than inferred,
 //     because inferring it means the assertion sleeps through the page landing
 //     as well as through its absence. Listing a slug there suspends the pair;
@@ -154,8 +154,9 @@ const REFERENCE_OWNERS = ["self-hosting/environment-variables", "self-hosting/co
 // Assertion 5. Reader-facing trees where the audience gate on assertion 4 is
 // load-bearing, so the field it reads cannot be optional. A slug matches a tree
 // when it IS the tree (self-hosting/index.md -> slug "self-hosting") or sits
-// under it. configure/ and features/ hold no pages yet — they are listed now so
-// the first page that lands there arrives under the rule.
+// under it. features/ holds no pages yet — it is listed now so the first page
+// that lands there arrives under the rule, which is how configure/'s eight
+// pages arrived.
 const GATED_TREES = ["install", "self-hosting", "configure", "features"];
 const GATED_FIELDS = ["audience", "pageType"];
 
@@ -174,6 +175,7 @@ const GATED_FIELDS = ["audience", "pageType"];
 // with the rules that file's header states.
 const RECIPROCAL_PAIRS = {
   "custom-domains": ["features/custom-domains"],
+  "custom-domains/dns-validation": ["features/custom-domains"],
   "custom-domains/branding": ["features/branding"],
   "custom-domains/email-sender": ["configure/email"],
   "custom-domains/homepage-and-incoming": [
@@ -183,8 +185,8 @@ const RECIPROCAL_PAIRS = {
   "custom-domains/access-and-privacy": ["configure/authentication"],
   "organizations/sso": ["configure/sso"],
   share: ["configure/secret-options"],
-  "account/change-your-region": ["features/multi-region"],
-  "security/where-your-data-lives": ["features/multi-region"],
+  "account/change-your-region": ["features/regions-and-federation"],
+  "security/where-your-data-lives": ["features/regions-and-federation"],
   "share/receiving-secrets": ["features/incoming-secrets"],
   "organizations/roles-and-permissions": ["features/billing-and-entitlements"],
   billing: ["features/billing-and-entitlements"],

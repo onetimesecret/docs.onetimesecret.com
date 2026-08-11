@@ -18,3 +18,7 @@
 # Add an entry only for a page that is genuinely meant to be reachable by URL
 # alone — and say why in the reason, because the reason is the only thing
 # stopping the entry from becoming a place to park navigation debt.
+#
+# It is empty again: the two configure/* entries added while the pages were
+# being written were parked here only until the Configure group existed to file
+# them, and all eight configure/* pages are now linked from config/sidebar.mjs.

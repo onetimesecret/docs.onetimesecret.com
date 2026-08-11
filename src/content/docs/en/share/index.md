@@ -181,6 +181,12 @@ passphrase to burn.
 Once a secret has been revealed there is nothing left to take back. Create a new
 secret and send a new link.
 
+:::note[Running your own instance?]
+[Secret options](/en/configure/secret-options) is the operator side of this
+page — the same choices, as the settings that decide which of them the people
+using your instance are offered.
+:::
+
 ## More on sharing
 
 - [Your receipt](/en/share/your-receipt) — what your receipt shows, how long it

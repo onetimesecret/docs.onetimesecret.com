@@ -228,3 +228,9 @@ refuses the boot instead; `off` skips the check entirely.
 - **`/health/advanced` returns 403.** You curled it from outside a private or
   loopback range. Run it from the host, from inside the container, or add your
   range to `HEALTH_TRUSTED_CIDR`.
+
+## Once it passes
+
+A verified install is not a configured one. Every check on this page proves the
+instance serves; none of them prove it is set up for the people who will use it.
+[Configuration Overview](/en/configure) is the order to take the rest in.

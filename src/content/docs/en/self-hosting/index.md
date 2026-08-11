@@ -3,7 +3,7 @@ title: Self-Hosting Overview
 description: What running your own Onetime Secret instance involves, which authentication mode to pick first, and where the installation and operator instructions live.
 audience: operator
 pageType: concept
-sourceOfTruth: onetimesecret/etc/defaults/auth.defaults.yaml:6-8 (the authentication mode defaults to simple, which is Redis-only) and :36 (full mode's account database defaults to sqlite://data/auth.db — PostgreSQL is an option, not a requirement) and :32-33 (a SQLite file in a container must sit in a mounted volume directory); onetimesecret/docker/README.md:9-15 (the deployment stacks the project ships); onetimesecret/scripts/install-tests/run.sh:14-21,46-48 and onetimesecret/.github/workflows/installer.yml:47-65 (the clean-room install lanes cover Debian only); onetimesecret/etc/examples/puma.example.rb:38 and onetimesecret/Dockerfile:449 (the app binds plain HTTP and exposes one port — it never terminates TLS); onetimesecret/lib/onetime/cli/org/transfer_ownership_command.rb:14-17,19-21,23-32,66-78 (the ownership transfer command, its options and its automatic plan pass) and onetimesecret/lib/onetime/operations/org/transfer_ownership.rb:34-50,68-76,115-117 (the forced promote-then-demote ordering, the deliberate omissions, and the demotable roles); the hardware sizing figures below are maintainer confirmation of 2026-08-10 and have no repo source
+sourceOfTruth: onetimesecret/etc/defaults/auth.defaults.yaml:6-8 (the authentication mode defaults to simple, which is Redis-only) and :36 (full mode's account database defaults to sqlite://data/auth.db — PostgreSQL is an option, not a requirement) and :32-33 (a SQLite file in a container must sit in a mounted volume directory); onetimesecret/docker/README.md:9-15 (the deployment stacks the project ships); onetimesecret/scripts/install-tests/run.sh:14-21,46-48 and onetimesecret/.github/workflows/installer.yml:47-65 (the clean-room install lanes cover Debian only); onetimesecret/etc/examples/puma.example.rb:38 and onetimesecret/Dockerfile:449 (the app binds plain HTTP and exposes one port — it never terminates TLS); onetimesecret/lib/onetime/cli/org/transfer_ownership_command.rb:14-17,19-21,23-32,66-78 (the ownership transfer command, its options and its automatic plan pass) and onetimesecret/lib/onetime/operations/org/transfer_ownership.rb:34-50,68-76,115-117 (the forced promote-then-demote ordering, the deliberate omissions, and the demotable roles); onetimesecret/etc/defaults/config.defaults.yaml:293-298 (site.authentication.autoverify ships false, so a new account verifies by email before it can sign in) with :944 (the from-address ships as CHANGEME@example.com) and :947 plus onetimesecret/lib/onetime/mail/delivery/smtp.rb:70-73 (SMTP_HOST ships as the placeholder smtp.provider.com, which satisfies the only host check there is) and onetimesecret/lib/onetime/config.rb:961-969 (a missing SECRET is the one fatal config error — there is no equivalent check on either mail value); onetimesecret/lib/onetime/utils/config_resolver.rb:36,56-59,71-73 (etc/config.yaml is the override layer deep-merged over the shipped etc/defaults/config.defaults.yaml); the hardware sizing figures below are maintainer confirmation of 2026-08-10 and have no repo source
 ---
 
 Run your own instance and every secret, account and log line stays on
@@ -45,6 +45,24 @@ switch later.
 Coming from an earlier release? [Upgrading to
 v0.24.0](/en/self-hosting/upgrading-v0-24) covers the configuration and
 data-model changes.
+
+## Configure it
+
+An instance that boots is not yet an instance anyone can use, and none of the
+gaps announce themselves at startup.
+
+- [Configuration Overview](/en/configure) — the three configuration layers and
+  how they merge, which settings have to be right before the instance boots, and
+  which only bite once someone tries to use it.
+- [Secrets and keys](/en/configure/secrets-and-keys) — read first. It decides
+  whether the instance starts at all and whether what it stores can ever be read
+  back.
+- [Authentication](/en/configure/authentication) — the two switches behind the
+  mode you chose above: whether the instance has accounts, and every gate on
+  getting one.
+- [Outbound email](/en/configure/email) — sign-in depends on it. A new account
+  verifies by email before it can sign in, and the shipped sender and SMTP host
+  are both placeholders that nothing refuses at boot.
 
 ## System requirements
 

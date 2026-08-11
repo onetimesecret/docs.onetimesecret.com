@@ -45,6 +45,12 @@ application:
 - **[Browse all SSO demos](/artifacts/2026/sso-demos/)**
 - **[Enterprise SAML for Modern Apps](/artifacts/2026/sso-demos/oidc-saml-bridge/)** — a Caddy + Logto gateway bridging OIDC ↔ SAML to Microsoft Entra ID.
 
+:::note[Running your own instance?]
+[Configure SSO](/en/configure/sso) is the operator side of this page — how
+single sign-on is set up on an instance you run yourself, rather than per
+organization on the hosted service.
+:::
+
 ## Related features
 
 - [Organizations](/en/organizations) — what an organization is and who can administer it.
