@@ -35,15 +35,23 @@
 //     mix; failing on that would fire on the translation pipeline rather than
 //     on the sidebar.
 //
-//  4. Every sidebar translation key exists. config/sidebar.mjs resolves a label
-//     as `enTranslations.sidebar?.[key] || key`, so a mistyped key does not
-//     throw and does not blank the entry — it ships the raw camelCase key as the
-//     visible label. `createLink("instalWithDocker", …)` renders a sidebar entry
-//     reading "instalWithDocker", and nothing else here would notice: assertion
-//     1 validates the LINK, assertion 3 sees a typo as a distinct string, and
-//     check:locales never opens src/content/i18n/*.json at all. Non-EN bundles
-//     are not checked, for the same reason assertion 3 is EN-only: a missing
-//     key there is a translation still in flight and falls back per-key.
+//  4. Every sidebar translation key RESOLVES. config/sidebar.mjs resolves a
+//     label as `enTranslations.sidebar?.[key] || key`, so a mistyped key does
+//     not throw and does not blank the entry — it ships the raw camelCase key as
+//     the visible label. `createLink("instalWithDocker", …)` renders a sidebar
+//     entry reading "instalWithDocker", and nothing else here would notice:
+//     assertion 1 validates the LINK, assertion 3 sees a typo as a distinct
+//     string, and check:locales never opens src/content/i18n/*.json at all.
+//
+//     "Resolves", not "exists": the fallback is `||`, so a key present in
+//     en.json with an empty or whitespace value renders the raw key exactly as a
+//     missing key does. An existence test passes that page and the sidebar still
+//     reads "instalWithDocker". The rule is the one config/sidebar.mjs actually
+//     applies — falsy label, raw key — so the two cannot drift.
+//
+//     Non-EN bundles are not checked, for the same reason assertion 3 is
+//     EN-only: a missing key there is a translation still in flight and falls
+//     back per-key.
 //
 // Usage: pnpm run check:nav
 import { readFileSync } from "node:fs";
@@ -60,6 +68,7 @@ import {
   repoRoot,
   sidebarGroups,
   sidebarLinks,
+  unresolvedSidebarKeys,
 } from "./lib/nav.mjs";
 
 const EN_BUNDLE = "src/content/i18n/en.json";
@@ -105,12 +114,12 @@ try {
 }
 
 const keys = [...new Set(sidebarKeys)].sort();
-for (const key of keys) {
-  if (enSidebarLabels[key] === undefined) {
-    problems.push(
-      `sidebar key "${key}" has no entry under "sidebar" in ${EN_BUNDLE} — config/sidebar.mjs falls back to the key itself, so this renders as a sidebar entry literally reading "${key}"; add the key to the bundle or fix the typo in config/sidebar.mjs`,
-    );
-  }
+for (const { key, kind } of unresolvedSidebarKeys(sidebarKeys, enSidebarLabels)) {
+  problems.push(
+    kind === "missing"
+      ? `sidebar key "${key}" has no entry under "sidebar" in ${EN_BUNDLE} — config/sidebar.mjs falls back to the key itself, so this renders as a sidebar entry literally reading "${key}"; add the key to the bundle or fix the typo in config/sidebar.mjs`
+      : `sidebar key "${key}" is present in ${EN_BUNDLE} but its label is empty — config/sidebar.mjs resolves labels with "||", so an empty string falls back to the key and this renders as a sidebar entry literally reading "${key}"; give it a label or remove the key from config/sidebar.mjs`,
+  );
 }
 
 for (const link of links) {

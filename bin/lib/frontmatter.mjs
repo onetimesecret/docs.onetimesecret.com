@@ -277,3 +277,141 @@ export function statedDefaults(body) {
   }
   return found;
 }
+
+/**
+ * Every EN docs slug this page links to.
+ *
+ * Reads Markdown links (`](/en/…)`) and raw HTML hrefs, which is every link
+ * shape in the tree. Fragments and query strings are dropped, so a link into a
+ * section counts as a link to the page. Off-site URLs, mailto:, assets and
+ * other locales' pages are ignored — only `/en/…` targets are returned, as
+ * slugs in the same namespace docsPages() produces (`/en/` -> "index",
+ * `/en/share/` -> "share").
+ *
+ * RELATIVE links are deliberately NOT resolved. The house style, and what
+ * bin/check-links.sh enforces, is an absolute `/en/…` link; two relative links
+ * exist in the whole EN tree and neither is in an aside. Resolving them would
+ * mean guessing whether a slug came from `dir/index.md` or `dir.md`, and the
+ * cost of not resolving them is a loud, named failure in the reciprocal check
+ * rather than a silent pass.
+ *
+ * @param {string} body
+ * @returns {Set<string>}
+ */
+export function pageLinks(body) {
+  const slugs = new Set();
+  const add = (href) => {
+    const path = href.split(/[#?]/)[0].trim();
+    if (path === "" || path.startsWith("//") || /^[a-z][a-z0-9+.-]*:/i.test(path)) return;
+    const parts = path.replace(/^\/+|\/+$/g, "").split("/");
+    if (parts[0] !== "en") return;
+    slugs.add(parts.slice(1).join("/") || "index");
+  };
+  for (const match of body.matchAll(/\]\(\s*<?([^)\s>]+)/g)) add(match[1]);
+  for (const match of body.matchAll(/href\s*=\s*["']([^"']*)["']/g)) add(match[1]);
+  return slugs;
+}
+
+/**
+ * The reciprocal-aside contract (audit §4.4, plan rule 2): a hosted feature
+ * page and its operator counterpart each point at the other.
+ *
+ * Asserts REACHABILITY IN BOTH DIRECTIONS, not pairing. The table is not a
+ * bijection and never was — custom-domains/homepage-and-incoming answers to two
+ * operator pages, and three separate billing and organization pages all
+ * converge on features/billing-and-entitlements — so a 1:1 assertion would fail
+ * on correct content. What is actually required is that from a hosted page you
+ * can get to *at least one* of its operator counterparts, and from an operator
+ * page back to *at least one* of its hosted ones. Many-to-one and one-to-many
+ * both pass; zero in either direction is the failure.
+ *
+ * Operator pages that are not written yet are declared, not inferred. An
+ * undeclared missing page fails (the table names a page nobody is tracking) and
+ * so does a declared one that now exists (the allowlist has gone stale). That
+ * second failure is the point of the mechanism: it is what turns "the page
+ * arrived" into "write the two asides", instead of leaving the assertion
+ * permanently asleep.
+ *
+ * Pure: every fact it needs is an argument, so the tests can hand it a bad
+ * tree without writing files.
+ *
+ * @param {object} input
+ * @param {Record<string, string[]>} input.pairs Hosted slug -> operator slugs.
+ * @param {Map<string, {path: string, links: Set<string>}>} input.pages Every EN
+ *   page that exists, by slug. Membership IS existence.
+ * @param {Map<string, string>} input.pending Declared not-yet-written operator
+ *   slug -> the reason it is pending.
+ * @param {string} [input.allowlist] Path named in stale-entry messages.
+ * @returns {{problems: string[], pendingPairs: string[], hosted: number, operator: number}}
+ *   `hosted` / `operator` count the pages actually asserted in each direction.
+ */
+export function reciprocalReachability({ pairs, pages, pending, allowlist = "the allowlist" }) {
+  const problems = [];
+  const pendingPairs = [];
+
+  const hostedFor = new Map();
+  for (const [hosted, operators] of Object.entries(pairs)) {
+    for (const operator of operators) {
+      if (!hostedFor.has(operator)) hostedFor.set(operator, []);
+      hostedFor.get(operator).push(hosted);
+    }
+  }
+
+  // The allowlist tracks operator pages only, and only ones the table names.
+  for (const [slug, reason] of pending) {
+    if (!hostedFor.has(slug)) {
+      problems.push(
+        `${allowlist}: "${slug}" is not an operator page in the reciprocal-aside table (${reason}) — remove the entry, or add the pair to RECIPROCAL_PAIRS if the page really is one half of a contract`,
+      );
+    } else if (pages.has(slug)) {
+      problems.push(
+        `${allowlist}: "${slug}" is listed as not written yet (${reason}) but src/content/docs/en/${slug} now exists — delete that line, then give the page a note aside linking to ${hostedFor.get(slug).map((h) => `/en/${h}`).join(" or ")} and add the matching aside on the hosted side`,
+      );
+    }
+  }
+
+  for (const [operator, hostedSlugs] of [...hostedFor].sort()) {
+    if (pages.has(operator) || pending.has(operator)) continue;
+    problems.push(
+      `reciprocal asides: src/content/docs/en/${operator} does not exist and is not declared in ${allowlist} — the contract names it as the operator half of ${hostedSlugs.map((h) => `/en/${h}`).join(", ")}; write the page, or declare it pending with a reason so the check fires when it lands`,
+    );
+  }
+
+  let hosted = 0;
+  for (const [hostedSlug, operators] of Object.entries(pairs).sort()) {
+    const page = pages.get(hostedSlug);
+    if (!page) {
+      problems.push(
+        `reciprocal asides: src/content/docs/en/${hostedSlug} does not exist, but the contract names it as the hosted half of ${operators.join(", ")} — fix the slug in RECIPROCAL_PAIRS or restore the page`,
+      );
+      continue;
+    }
+    const live = operators.filter((operator) => pages.has(operator));
+    if (live.length === 0) {
+      pendingPairs.push(hostedSlug);
+      continue;
+    }
+    hosted++;
+    if (!live.some((operator) => page.links.has(operator))) {
+      problems.push(
+        `${page.path}: no link to any of its operator counterparts (${live.map((o) => `/en/${o}`).join(", ")}) — rule 2 has each half of a hosted/operator pair point at the other; add the ":::note[Running your own instance?]" aside`,
+      );
+    }
+  }
+
+  let operator = 0;
+  for (const [operatorSlug, hostedSlugs] of [...hostedFor].sort()) {
+    const page = pages.get(operatorSlug);
+    if (!page) continue;
+    const live = hostedSlugs.filter((slug) => pages.has(slug));
+    if (live.length === 0) continue;
+    operator++;
+    if (!live.some((slug) => page.links.has(slug))) {
+      problems.push(
+        `${page.path}: no link back to any of its hosted counterparts (${live.map((h) => `/en/${h}`).join(", ")}) — the contract is reciprocal, so the operator half links back; one of them is enough`,
+      );
+    }
+  }
+
+  return { problems, pendingPairs, hosted, operator };
+}

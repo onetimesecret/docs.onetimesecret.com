@@ -187,7 +187,7 @@ access is a manual, identity-checked action.
 Session tracking and connected identities are both part of the full
 authentication mode. On a self-hosted install running the simpler mode, the
 whole Security section is absent and neither surface exists. See
-[Simple or full authentication](/en/self-hosting/simple-or-full-auth).
+[Simple or Full mode](/en/self-hosting/simple-or-full-auth).
 :::
 
 ## Related

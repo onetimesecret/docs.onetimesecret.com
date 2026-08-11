@@ -63,7 +63,7 @@ customization that goes beyond what the hosted plans expose.
 The cost is real and ongoing: you provision and secure the services, apply
 updates, run backups, and own uptime. Depending on the features you need, that's
 Redis alone (Simple mode) or Redis plus PostgreSQL and RabbitMQ (Full mode) —
-see [Simple or Full](/en/self-hosting/simple-or-full-auth) for that second decision, which only
+see [Simple or Full mode](/en/self-hosting/simple-or-full-auth) for that second decision, which only
 applies once you've chosen to self-host. Budget for the time, not just the
 servers.
 
@@ -84,4 +84,4 @@ hosted regions through Stripe, but it does not extend to a self-hosted instance
 
 - Ready to self-host: [Self-Hosting Overview](/en/self-hosting/) and [Run your own instance](/en/start/run-your-own-instance)
 - Staying hosted: [Compare plans](/en/pricing/compare-plans) and [where your data lives](/en/security/where-your-data-lives)
-- Already self-hosting: decide your [authentication mode](/en/self-hosting/simple-or-full-auth)
+- Already self-hosting: decide the [Simple or Full mode](/en/self-hosting/simple-or-full-auth) question

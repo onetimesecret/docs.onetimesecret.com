@@ -21,9 +21,9 @@ The mode decides what else has to be running, so settle it before you install.
 requirement. In a container that file needs a mounted volume to survive a
 restart.
 
-[Simple or Full](/en/self-hosting/simple-or-full-auth) covers what each mode
-unlocks, where that database has to live, and how hard the mode is to switch
-later.
+[Simple or Full mode](/en/self-hosting/simple-or-full-auth) covers what each
+mode unlocks, where that database has to live, and how hard the mode is to
+switch later.
 
 ## Pick an installation path
 

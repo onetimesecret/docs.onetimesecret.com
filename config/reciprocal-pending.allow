@@ -1,0 +1,35 @@
+# config/reciprocal-pending.allow
+#
+# Operator pages that the reciprocal-aside contract names but that nobody has
+# written yet. Format: one slug per line with a trailing "# reason" comment
+# (required). Read by bin/check-frontmatter.mjs, assertion 6.
+#
+# The contract (audit §4.4, plan rule 2) is that a hosted feature page and its
+# operator counterpart each carry a note aside pointing at the other. The table
+# of pairs lives in bin/check-frontmatter.mjs as RECIPROCAL_PAIRS; this file
+# holds only the half of it that does not exist on disk yet.
+#
+# Why a list and not silence: an aside cannot point at a page that has not been
+# written, so the check has to tolerate the gap — but tolerating it silently
+# means the assertion never fires at all, including on the day the page finally
+# lands. So the gap is declared here instead, and the check fails BOTH ways:
+#
+#   * a slug in RECIPROCAL_PAIRS that exists neither on disk nor in this file
+#     fails, so a new pair cannot be added and left untracked;
+#   * a slug listed here whose page now EXISTS fails, so landing the page forces
+#     you to delete its line, which in turn turns the reachability assertion on
+#     for that pair in the same commit.
+#
+# Deleting a line is therefore part of writing the page, not a follow-up. The
+# reason column says which phase owns it, so the list reads as a work queue.
+
+features/custom-domains # Phase 3 features group, unwritten
+features/branding # Phase 3 features group, unwritten
+features/incoming-secrets # Phase 3 features group, unwritten
+features/interface-and-homepage # Phase 3 features group, unwritten
+features/multi-region # Phase 3 features group, unwritten
+features/billing-and-entitlements # Phase 3, blocked on the production billing catalog
+configure/email # Phase 3 configure group, unwritten
+configure/authentication # Phase 3 configure group, unwritten
+configure/sso # Phase 3 configure group, unwritten
+configure/secret-options # Phase 3 configure group, unwritten

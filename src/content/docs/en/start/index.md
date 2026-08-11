@@ -66,9 +66,9 @@ that fits.
 
 - **[Run your own instance](/en/start/run-your-own-instance/)** — step-by-step
   setup
-- **[Self-hosting overview](/en/self-hosting/)** — why and how to self-host
+- **[Self-Hosting Overview](/en/self-hosting/)** — why and how to self-host
 - **[Install with Docker](/en/install/docker/)** — or
-  [install on Linux](/en/install/linux/) from a checkout
+  [Install on Linux](/en/install/linux/) from a checkout
 - **[Configuration](/en/self-hosting/configuration/)** — settings reference
 
 ## Questions?

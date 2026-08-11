@@ -222,7 +222,18 @@ export const sidebar = [
     // Order is array position, not a number. createLink/createGroup emit no
     // `order` key and there is no autogenerate group anywhere in this repo, so
     // Starlight renders this array as written and adding a group later is a
-    // pure splice that renumbers nothing.
+    // pure splice that renumbers nothing. The eight pages below carry no
+    // frontmatter `sidebar` block for the same reason: under a manual sidebar
+    // Starlight ignores both `label` and `order` there, and the blocks that
+    // used to sit on five of them disagreed with these labels while looking
+    // authoritative.
+    //
+    // Every label here matches its page's frontmatter title, with one
+    // deliberate exception: `aboutSelfHosting` renders "About self-hosting"
+    // for a page titled "Self-Hosting Overview". The group is already called
+    // Self-Hosting, so the title repeats it in the nav; the label is what the
+    // note above means by an index page saying what it is. Do not "fix" it by
+    // retitling the page — the inbound link text tracks the title, not this.
     createGroup("installAndDeploy", [
       createLink("aboutSelfHosting", "self-hosting"),
       createLink("authModeChoice", "self-hosting/simple-or-full-auth"),

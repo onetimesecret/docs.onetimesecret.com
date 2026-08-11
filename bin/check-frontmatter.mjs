@@ -81,6 +81,29 @@
 //     are not being retrofitted here; widening this list is how a tree opts in,
 //     one line, once its pages have been through the audit.
 //
+//  6. THE RECIPROCAL-ASIDE CONTRACT (plan rule 2, audit §4.4). A hosted feature
+//     page and its operator counterpart each carry a note aside pointing at the
+//     other. Unenforceable in Phase 2 because only the hosted half existed;
+//     Phase 3 writes the other half, which is what makes it assertable.
+//
+//     It asserts REACHABILITY IN BOTH DIRECTIONS, not pairing, because the
+//     table is not a bijection: custom-domains/homepage-and-incoming answers to
+//     two operator pages, and three separate billing and organization pages all
+//     converge on features/billing-and-entitlements. A 1:1 assertion would fail
+//     on correct content. Reach at least one counterpart each way and it
+//     passes; reach none in either direction and it fails.
+//
+//     Most of the operator half is unwritten today (all of features/, most of
+//     configure/), and an aside cannot point at a page that does not exist. That
+//     gap is DECLARED in config/reciprocal-pending.allow rather than inferred,
+//     because inferring it means the assertion sleeps through the page landing
+//     as well as through its absence. Listing a slug there suspends the pair;
+//     the page existing while its line is still listed is itself a failure, so
+//     deleting the line is part of writing the page and the reachability
+//     assertion switches on in the same commit. A slug in the table that is
+//     neither on disk nor declared also fails, so a pair cannot be added and
+//     then forgotten.
+//
 // Fails (exit 1) listing every problem with the file to edit. Warns (exit 0)
 // where a fragment resolves in EN but not in a locale still holding its own
 // copy of the target page.
@@ -95,14 +118,17 @@ import {
   ENUM_FIELDS,
   docsPages,
   headings,
+  pageLinks,
   parseFrontmatter,
+  reciprocalReachability,
   schemaEnums,
   statedDefaults,
 } from "./lib/frontmatter.mjs";
-import { repoRoot } from "./lib/nav.mjs";
+import { parseAllowlist, repoRoot } from "./lib/nav.mjs";
 
 const CONFIG = "src/content.config.ts";
 const REDIRECTS = "config/redirects.mjs";
+const RECIPROCAL_PENDING = "config/reciprocal-pending.allow";
 
 // D1, the anchor contract. Slug -> the heading ids that page must keep because
 // a redirect (or an inbound link from outside this repo) depends on them.
@@ -133,6 +159,38 @@ const REFERENCE_OWNERS = ["self-hosting/environment-variables", "self-hosting/co
 const GATED_TREES = ["install", "self-hosting", "configure", "features"];
 const GATED_FIELDS = ["audience", "pageType"];
 
+// Assertion 6, the reciprocal-aside contract. Transcribed from the two tables
+// in docs/planning/documentation-audit-2026-08-phase-3-prep.md §4.4 — the nine
+// original pairs plus the four that arrived with the §2 tail. Hosted slug ->
+// the operator page(s) that answer it. Slugs are docsPages() slugs, so an index
+// page is its directory ("custom-domains", not "custom-domains/index").
+//
+// Neither column is unique, and that is the contract rather than a defect in
+// it: row four has one hosted page answered by two operator pages, and three
+// separate hosted pages converge on features/billing-and-entitlements. Read it
+// as an adjacency list, not a mapping.
+//
+// The operator pages that do not exist yet are listed in RECIPROCAL_PENDING,
+// with the rules that file's header states.
+const RECIPROCAL_PAIRS = {
+  "custom-domains": ["features/custom-domains"],
+  "custom-domains/branding": ["features/branding"],
+  "custom-domains/email-sender": ["configure/email"],
+  "custom-domains/homepage-and-incoming": [
+    "features/incoming-secrets",
+    "features/interface-and-homepage",
+  ],
+  "custom-domains/access-and-privacy": ["configure/authentication"],
+  "organizations/sso": ["configure/sso"],
+  share: ["configure/secret-options"],
+  "account/change-your-region": ["features/multi-region"],
+  "security/where-your-data-lives": ["features/multi-region"],
+  "share/receiving-secrets": ["features/incoming-secrets"],
+  "organizations/roles-and-permissions": ["features/billing-and-entitlements"],
+  billing: ["features/billing-and-entitlements"],
+  "billing/managing-your-subscription": ["features/billing-and-entitlements"],
+};
+
 const inGatedTree = (slug) =>
   GATED_TREES.some((tree) => slug === tree || slug.startsWith(`${tree}/`));
 
@@ -151,6 +209,9 @@ for (const field of ENUM_FIELDS) {
 
 const pages = docsPages("en");
 const anchorsBySlug = new Map();
+// Slug -> { path, links }, for assertion 6. Built in the loop below so the
+// bodies are parsed once; membership doubles as "this EN page exists".
+const pagesBySlug = new Map();
 let endUserPages = 0;
 let operatorPages = 0;
 let gatedPages = 0;
@@ -197,6 +258,7 @@ for (const page of pages) {
   }
 
   anchorsBySlug.set(page.slug, new Map(headings(body).map((h) => [h.slug, h])));
+  pagesBySlug.set(page.slug, { path: page.path, links: pageLinks(body) });
 
   // 5: the gate below reads `audience`, so on the trees that gate is FOR, the
   // field is mandatory. Deleting it must fail here rather than skip the page.
@@ -267,6 +329,19 @@ for (const [slug, required] of Object.entries(REQUIRED_ANCHORS)) {
     }
   }
 }
+
+// --- 6: the reciprocal-aside contract, both directions ----------------------
+
+const pendingAllowlist = parseAllowlist(RECIPROCAL_PENDING);
+problems.push(...pendingAllowlist.problems);
+
+const reciprocal = reciprocalReachability({
+  pairs: RECIPROCAL_PAIRS,
+  pages: pagesBySlug,
+  pending: new Map(pendingAllowlist.entries.map((entry) => [entry.value, entry.reason])),
+  allowlist: RECIPROCAL_PENDING,
+});
+problems.push(...reciprocal.problems);
 
 // --- 3b: every redirect fragment resolves to a heading that exists -----------
 //
@@ -404,5 +479,8 @@ const contracted = Object.values(REQUIRED_ANCHORS).reduce((n, a) => n + a.length
 console.log(
   `check:frontmatter OK — ${pages.length} EN pages (${endUserPages} end-user, ${operatorPages} operator), ` +
     `${gatedPages} of them under ${GATED_TREES.map((t) => `${t}/`).join(", ")} with audience and pageType required, ` +
-    `${contracted} contracted anchors, ${fragments} redirect fragment${fragments === 1 ? "" : "s"} resolved`,
+    `${contracted} contracted anchors, ${fragments} redirect fragment${fragments === 1 ? "" : "s"} resolved, ` +
+    `reciprocal asides reach both ways on ${reciprocal.hosted} hosted and ${reciprocal.operator} operator ` +
+    `page${reciprocal.operator === 1 ? "" : "s"} (${reciprocal.pendingPairs.length} pair${reciprocal.pendingPairs.length === 1 ? "" : "s"} ` +
+    `suspended by ${RECIPROCAL_PENDING})`,
 );

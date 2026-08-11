@@ -3,10 +3,7 @@ title: Install on Linux
 description: How to install Onetime Secret from a checkout on Debian or Ubuntu — the exact toolchain versions, the system packages, the datastore decision, and what bin/install does for you.
 audience: operator
 pageType: how-to
-sourceOfTruth: onetimesecret/.ruby-version:1 and onetimesecret/scripts/setup/lib.sh:43-48 (Ruby must match .ruby-version exactly — 3.4.10 — the installer dies on any other patch level, and its error message names rbenv and mise); onetimesecret/.node-version:1 and onetimesecret/scripts/setup/lib.sh:53-70 (Node is checked by major version only, 22); onetimesecret/package.json:6 (pnpm is pinned by packageManager); onetimesecret/scripts/install-tests/run.sh:50-60 (the Debian package set the clean-room install lane installs, mirrored from the image build); onetimesecret/scripts/install-tests/run.sh:46-47 (that lane runs inside ruby:3.4.10-slim, so the set assumes a Ruby is already present and is not a ruby-build prerequisite list); onetimesecret/scripts/install-tests/run.sh:14-21,46-48 (the clean-room install lanes are Debian only); onetimesecret/bin/install:3-9,43-47 and onetimesecret/bin/setup:590-597 (bin/install is the operator front door, idempotent, and reconciles rather than re-initializing a live environment); onetimesecret/bin/setup:601-609,626-627,641 and onetimesecret/scripts/setup/lib.sh:168-187,196-213,215-229 (what the installer does — version gates, frozen installs, seeding etc/*, generating .env, chmod 600, install mark); onetimesecret/lib/tasks/init.rake:104-122 (the installer's env step copies .env.example verbatim and skips an existing .env); onetimesecret/lib/tasks/init.rake:129-146 (the secrets step keeps an existing SECRET and only re-derives the child keys); onetimesecret/.env.example:28 (the REDIS_URL the generated .env starts with carries no password); onetimesecret/bin/setup:634-648 (the install mark boots the app with the .env just generated, and warns rather than failing when that boot does not succeed); onetimesecret/scripts/setup/lib.sh:191-194,204-207 (installs are frozen — BUNDLE_FROZEN=true bundle install, no --without); onetimesecret/scripts/setup/lib.sh:239-245 (the installer's locale generation step needs python3); onetimesecret/bin/setup:614-623 (the one manual PostgreSQL schema step, not required for SQLite); onetimesecret/scripts/setup/lib.sh:236-237 and onetimesecret/bin/setup:1105-1113 (setup never runs pnpm run build, and an operator doctor pass warns when public/web/dist is empty); onetimesecret/vite.config.ts:241,243,248 and onetimesecret/lib/onetime/middleware/static_files.rb:146-148 (assets build to public/web/dist and the app serves them itself at /dist); onetimesecret/scripts/install-tests/baremetal-boot.sh:102-124 (the clean-room reproduction of build, env sourcing and boot); onetimesecret/Procfile.production:13,20 and onetimesecret/etc/examples/puma.example.rb:24-25,38 (the start command, the env-sourcing form, and the plain-HTTP bind); onetimesecret/etc/examples/systemd/onetimesecret-web.service:9-13,18,25-27,30 (the layout and datastore service names the shipped units assume, and the /bin/bash -lc login shell their ExecStart runs); onetimesecret/etc/examples/valkey.conf:4-5,7,9-10,14,22-26,30,33 (the shipped datastore example, which enables persistence); onetimesecret/docker/compose/docker-compose.simple.yml:74-87 (the compose stacks set the same knobs as valkey-server flags); onetimesecret/lib/onetime/initializers/check_redis_url.rb:13-29 (an empty or CHANGEME datastore URL fails the boot with a named error); onetimesecret/Gemfile:109-116 (libsodium is a runtime requirement, not a build one)
-sidebar:
-  label: Install on Linux
-  order: 3
+sourceOfTruth: onetimesecret/.ruby-version:1 and onetimesecret/scripts/setup/lib.sh:43-48 (Ruby must match .ruby-version exactly — 3.4.10 — the installer dies on any other patch level, and its error message names rbenv and mise); onetimesecret/.node-version:1 and onetimesecret/scripts/setup/lib.sh:53-70 (Node is checked by major version only, 22); onetimesecret/package.json:6 (pnpm is pinned by packageManager); onetimesecret/scripts/install-tests/run.sh:50-60 (the Debian package set the clean-room install lane installs, mirrored from the image build); onetimesecret/scripts/install-tests/run.sh:46-47 (that lane runs inside ruby:3.4.10-slim, so the set assumes a Ruby is already present and is not a ruby-build prerequisite list); onetimesecret/scripts/install-tests/run.sh:14-21,46-48 (the clean-room install lanes are Debian only); onetimesecret/bin/install:3-9,43-47 and onetimesecret/bin/setup:590-597 (bin/install is the operator front door, idempotent, and reconciles rather than re-initializing a live environment); onetimesecret/bin/setup:601-609,626-627,641 and onetimesecret/scripts/setup/lib.sh:168-187,196-213,215-229 (what the installer does — version gates, frozen installs, seeding etc/*, generating .env, chmod 600, install mark); onetimesecret/lib/tasks/init.rake:104-122 (the installer's env step copies .env.example verbatim and skips an existing .env); onetimesecret/lib/tasks/init.rake:129-146 (the secrets step keeps an existing SECRET and only re-derives the child keys); onetimesecret/.env.example:28 (the REDIS_URL the generated .env starts with carries no password); onetimesecret/bin/setup:634-648 (the install mark boots the app with the .env just generated, and warns rather than failing when that boot does not succeed); onetimesecret/scripts/setup/lib.sh:191-194,204-207 (installs are frozen — BUNDLE_FROZEN=true bundle install, no --without); onetimesecret/scripts/setup/lib.sh:239-245 (the installer's locale generation step needs python3); onetimesecret/bin/setup:614-623 (the one manual PostgreSQL schema step, not required for SQLite); onetimesecret/bin/setup:629-631 (full mode declares the job queues and warns rather than fails when the broker is unreachable); onetimesecret/scripts/setup/lib.sh:236-237 and onetimesecret/bin/setup:1105-1113 (setup never runs pnpm run build, and an operator doctor pass warns when public/web/dist is empty); onetimesecret/vite.config.ts:241,243,248 and onetimesecret/lib/onetime/middleware/static_files.rb:146-148 (assets build to public/web/dist and the app serves them itself at /dist); onetimesecret/scripts/install-tests/baremetal-boot.sh:102-124 (the clean-room reproduction of build, env sourcing and boot); onetimesecret/Procfile.production:13,20 and onetimesecret/etc/examples/puma.example.rb:24-25,38 (the start command, the env-sourcing form, and the plain-HTTP bind); onetimesecret/etc/examples/systemd/onetimesecret-web.service:9-13,18,25-27,30 (the layout and datastore service names the shipped units assume, and the /bin/bash -lc login shell their ExecStart runs); onetimesecret/etc/examples/valkey.conf:4-5,7,9-10,14,22-26,30,33 (the shipped datastore example, which enables persistence); onetimesecret/docker/compose/docker-compose.simple.yml:74-87 (the compose stacks set the same knobs as valkey-server flags); onetimesecret/etc/defaults/config.defaults.yaml:884-888,896-903 and onetimesecret/lib/onetime/initializers/check_redis_url.rb:13-31 (Valkey and Redis are interchangeable to this application — VALKEY_URL then REDIS_URL resolve into one setting, and both error strings name both); onetimesecret/lib/onetime/initializers/check_redis_url.rb:13-29 (an empty or CHANGEME datastore URL fails the boot with a named error); onetimesecret/Gemfile:109-116 (libsodium is a runtime requirement, not a build one)
 ---
 
 This page installs Onetime Secret from a source checkout onto a Debian or
@@ -27,9 +24,10 @@ sudo apt install -y --no-install-recommends \
 ```
 
 That list is exactly what the project's clean-room install lane puts into an
-empty container before running the install, mirrored from the image build. It
-covers the build headers the `pg`, `sqlite3`, `argon2`, `bcrypt` and `puma` gems
-compile against, and it includes `redis-server` for the same reason a bare-metal
+empty container before running the install. Everything in it but `redis-server`
+is mirrored from the image build — the build headers the `pg`, `sqlite3`,
+`argon2`, `bcrypt` and `puma` gems compile against, and the shared libraries the
+runtime image installs. `redis-server` is there for the same reason a bare-metal
 host needs one: the datastore has to be reachable locally.
 
 Not all of it is build tooling. `libsodium23` is a runtime shared library rather
@@ -63,11 +61,11 @@ disagrees with that pin, install the pinned version instead.
 
 ## The datastore
 
-Onetime Secret stores its data in Valkey or Redis. The two are wire-compatible
-and the `valkey-*` and `redis-*` binaries are interchangeable, so the
-`redis-server` package installed above is a valid datastore; the shipped
-systemd units order themselves after both `redis-server.service` and
-`valkey.service` for that reason.
+Onetime Secret stores its data in Valkey or Redis, and treats the two as
+interchangeable: it reads both `VALKEY_URL` and `REDIS_URL` into one setting,
+its datastore errors name both, and the shipped systemd units order the web
+service after both `redis-server.service` and `valkey.service`. So the
+`redis-server` package installed above is a valid datastore.
 
 The repository ships a reference configuration at `etc/examples/valkey.conf`,
 and it turns persistence on:
@@ -90,11 +88,10 @@ The durable copy is the append-only file, fsynced once a second.
 
 **Whether to keep that is a decision about your threat model, not a tuning
 knob.** With persistence on, the ciphertext of every live secret is written to
-`onetime.rdb` and `onetime.aof` and stays on disk until the record expires and
-the files are rewritten. That is what lets an instance survive a restart
-without losing every unretrieved secret, and it is also what puts secret
-material into everything that reads the disk afterwards — backups, volume
-snapshots, a recovered disk image. To keep secrets in memory only, set
+`onetime.rdb` and `onetime.aof`. That is what lets an instance survive a
+restart without losing every unretrieved secret, and it is also what puts
+secret material into everything that reads those files afterwards — backups,
+volume snapshots, a recovered disk image. To keep secrets in memory only, set
 `save ""` and `appendonly no` instead and accept that a restart loses them all.
 
 Either way, set a password and keep the listener on loopback. The example ships
@@ -106,8 +103,9 @@ a step further down this page.
 Take the settings from `etc/examples/valkey.conf` rather than copying the file
 over the one the package installed — it is written as a standalone
 configuration, including `daemonize yes`, which is not what a service-managed
-datastore wants. Apply the persistence, bind and password settings to
-`/etc/redis/redis.conf`, then start it, still as root:
+datastore wants. Apply the persistence, bind and password settings to whichever
+file your datastore package configures — Debian's `redis-server` reads
+`/etc/redis/redis.conf` — then start it, still as root:
 
 ```bash
 sudo systemctl enable --now redis-server
@@ -143,8 +141,9 @@ export OTS_VERSION=vX.Y.Z
 git checkout "$OTS_VERSION"
 ```
 
-`$OTS_VERSION` is a git tag here and the container image tag on the Docker path.
-It is the same string in both places.
+`OTS_VERSION` is the release name — a git tag here, and the image tag on the
+container path. [Images and variants](/en/install/images-and-variants) explains
+which release names are immutable and which move.
 
 ## Ruby
 
@@ -213,6 +212,13 @@ If you are running full authentication mode against PostgreSQL, one step is
 left to you: run
 `apps/web/auth/migrations/schemas/postgres/initialize_auth_db.sql` as a
 PostgreSQL superuser. SQLite, which is the default, needs nothing.
+
+In full mode the installer also tries to declare the job queues, and warns —
+rather than fails — when the broker is not there:
+`queue init failed (is RabbitMQ running?)`. That is expected on an instance
+that is not running background jobs, and it is not evidence that full mode
+needs a broker. [Simple or Full mode](/en/self-hosting/simple-or-full-auth)
+covers where the requirement actually comes from.
 
 ### Point the app at the datastore
 

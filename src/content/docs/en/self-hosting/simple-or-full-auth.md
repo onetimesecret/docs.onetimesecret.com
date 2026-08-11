@@ -1,5 +1,5 @@
 ---
-title: "Simple or Full: choosing your authentication mode"
+title: Simple or Full mode
 description: Which authentication mode to run, what each one changes about the services you operate, and why switching authentication off entirely is a different setting.
 audience: operator
 pageType: concept

@@ -4,9 +4,6 @@ description: How to bring up Onetime Secret from the Compose stacks the project 
 audience: operator
 pageType: how-to
 sourceOfTruth: onetimesecret/docker/README.md:3-5,42-48,62-75,93-108,110-126 (the Compose stacks live in the application repository, the separate docker-compose repository is archived as of v0.24, the quick start that omits VALKEY_PASSWORD, the per-stack requirement table including AUTH_SECRET and ACCOUNT_ID_SECRET, the OTS_IMAGE_TAG default, and where each stack keeps its data); onetimesecret/docker/compose/docker-compose.simple.yml:20-30,66-113 (the pinned OTS_IMAGE_TAG default, env_file ../../.env, the fail-fast SECRET and VALKEY_PASSWORD interpolation, Valkey exposed only to the Compose network, AOF persistence into a named volume); onetimesecret/docker/compose/docker-compose.full.yml:44-46,60-89,100-109,193-265,272-283 (Caddy publishes 80 and 443, RACK_ENV defaults to production, the empty-default AUTH_SECRET and ACCOUNT_ID_SECRET next to the fail-fast SECRET, VALKEY_PASSWORD, RABBITMQ_USER and RABBITMQ_PASS, JOBS_ENABLED defaulting to false, /app/data shared by app, worker-email and scheduler, and the email.message.send queue the worker consumes); onetimesecret/docker-compose.yml:25-27 (the root file is an include wrapper defaulting to the simple stack); onetimesecret/apps/web/auth/config/base.rb:12,22-27 (AUTH_SECRET backs the HMAC secret guard, ACCOUNT_ID_SECRET of at least 32 bytes is required in production and boot raises without it, an unset RACK_ENV fails closed to production, and the two are independent); onetimesecret/scripts/install-tests/seed-compose-env.sh:8-13,31-45 (the six values CI exports for a full-stack up, why AUTH_SECRET and ACCOUNT_ID_SECRET are among them, and the repo-root .env written separately as the env_file target); onetimesecret/.github/workflows/compose-smoke.yml:71-79 (Compose interpolation reads the shell and the project-directory .env, not a service's env_file, and -f docker/compose/<file> shifts the project directory); onetimesecret/scripts/check-version-pins.sh:17-21 (the compose app-image default is held in lockstep with the README quick-start pin); onetimesecret/Procfile.production:13 (set -a; source .env; set +a as the documented way to put .env into the shell); onetimesecret/README.md:22-29 with onetimesecret/.github/workflows/compose-smoke.yml:315-324,336-347 (the documented docker run form, including --add-host, and the CI lane that resolves its image tag from the README and exercises it)
-sidebar:
-  label: Install with Docker
-  order: 2
 ---
 
 Onetime Secret ships two Docker Compose stacks, and both live in the application
@@ -21,12 +18,14 @@ Choose a release from
 set it once in your shell:
 
 ```bash
-export OTS_VERSION=vX.Y.Z          # a release tag from the link above
-export OTS_IMAGE_TAG=$OTS_VERSION  # what the Compose files read
+export OTS_VERSION=vX.Y.Z          # the release name, from the link above
+export OTS_IMAGE_TAG=$OTS_VERSION  # what the Compose files interpolate
 ```
 
-The Compose files read `OTS_IMAGE_TAG` and already default to a pinned release,
-so skipping this still gives you a reproducible stack. For which image to run,
+`OTS_VERSION` is the release name and serves as both the git tag checked out
+below and the image tag pulled; `OTS_IMAGE_TAG` is the variable the Compose
+files themselves read. Those files already default it to a pinned release, so
+skipping this still gives you a reproducible stack. For which image to run,
 what the variants are and why the tag you pin matters, see
 [Images and variants](/en/install/images-and-variants).
 
@@ -158,8 +157,8 @@ on the `maindb` service rather than in a config file.
 The full stack keeps its account database as a SQLite file under `/app/data`, on
 the `onetime_app_data` named volume mounted by the application, the email worker
 and the scheduler. The simple stack has no `/app/data` mount.
-[Simple or Full](/en/self-hosting/simple-or-full-auth) covers what full mode
-adds and why it needs a database of its own.
+[Simple or Full mode](/en/self-hosting/simple-or-full-auth) covers what full
+mode adds and why it needs a database of its own.
 
 If you replace the named volume with a host directory, on Linux make it writable
 by the container user first — the container runs as uid 1001:
@@ -212,7 +211,7 @@ than returning as soon as they are running — a readiness signal, not merely
 
 What it does not tell you is that the UI is serving its built assets, or that a
 secret can be created and read back exactly once.
-[Verify an install](/en/install/verify) checks both, and it is also where the
+[Verify your install](/en/install/verify) checks both, and it is also where the
 first account gets created. For the systemd equivalent of all of this, and for
 the web, worker and scheduler process model,
 [Run as a service](/en/install/run-as-a-service);

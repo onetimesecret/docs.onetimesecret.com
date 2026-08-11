@@ -3,12 +3,20 @@
 // Unit tests for the pure helpers behind the check:* drift checks. The checks
 // themselves are executable assertions over real repo state; these cover the
 // parsing edge cases that would otherwise regress silently.
-import { mkdtempSync, writeFileSync } from "node:fs";
+import { mkdtempSync, readFileSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 
-import { fileSlug, normalizeLink, parseAllowlist, repoRoot } from "./nav.mjs";
+import { sidebarKeys } from "../../config/sidebar.mjs";
+
+import {
+  fileSlug,
+  normalizeLink,
+  parseAllowlist,
+  repoRoot,
+  unresolvedSidebarKeys,
+} from "./nav.mjs";
 
 describe("normalizeLink", () => {
   it("maps the site root to the index slug", () => {
@@ -100,5 +108,59 @@ describe("fileSlug", () => {
   it("strips the extension from a non-index page", () => {
     expect(fileSlug("pricing.md", DOC_EXT)).toBe("pricing");
     expect(fileSlug("a/b/index-of-things.markdown", DOC_EXT)).toBe("a/b/index-of-things");
+  });
+});
+
+describe("unresolvedSidebarKeys", () => {
+  it("passes keys the bundle answers", () => {
+    const labels = { home: "Home", startHere: "Start here" };
+    expect(unresolvedSidebarKeys(["home", "startHere"], labels)).toEqual([]);
+  });
+
+  it("catches a mistyped key, which would otherwise ship as the visible label", () => {
+    // config/sidebar.mjs resolves `sidebar?.[key] || key`, so this renders a
+    // sidebar entry literally reading "instalWithDocker" and builds green.
+    const keys = ["installWithDocker", "instalWithDocker"];
+    expect(unresolvedSidebarKeys(keys, { installWithDocker: "Docker" })).toEqual([
+      { key: "instalWithDocker", kind: "missing" },
+    ]);
+  });
+
+  it("catches an empty or whitespace label, which falls back the same way", () => {
+    // The fallback is `||`, not `??`. An existence test passes both of these
+    // and the sidebar still shows the raw key.
+    expect(unresolvedSidebarKeys(["a", "b"], { a: "", b: "   " })).toEqual([
+      { key: "a", kind: "empty" },
+      { key: "b", kind: "empty" },
+    ]);
+  });
+
+  it("reports a repeated key once, sorted", () => {
+    expect(unresolvedSidebarKeys(["zeta", "alpha", "zeta"], {})).toEqual([
+      { key: "alpha", kind: "missing" },
+      { key: "zeta", kind: "missing" },
+    ]);
+  });
+
+  it("survives a bundle with no sidebar object at all", () => {
+    expect(unresolvedSidebarKeys(["home"], undefined)).toEqual([{ key: "home", kind: "missing" }]);
+  });
+
+  const bundle = (locale) =>
+    JSON.parse(readFileSync(join(repoRoot, `src/content/i18n/${locale}.json`), "utf8")).sidebar;
+
+  it("resolves every key the real sidebar asks for against en.json", () => {
+    expect(unresolvedSidebarKeys(sidebarKeys, bundle("en"))).toEqual([]);
+  });
+
+  it("does not look at the 16 non-English bundles", () => {
+    // buildTranslations() omits any locale with no value for a key and Starlight
+    // falls back to the English label per-key, so an English-only key is the
+    // documented steady state, not a defect. Asserting parity would fail on
+    // every key the translation pipeline has not reached.
+    const de = bundle("de");
+    const englishOnly = sidebarKeys.filter((key) => de[key] === undefined);
+    expect(englishOnly.length).toBeGreaterThan(0);
+    expect(unresolvedSidebarKeys(englishOnly, bundle("en"))).toEqual([]);
   });
 });
