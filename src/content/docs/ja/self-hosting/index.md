@@ -37,7 +37,7 @@ docker run -p 6379:6379 -d redis:bookworm
 docker run -p 3000:3000 -d \
   -e REDIS_URL=redis://host.docker.internal:6379/0 \
   -e SECRET="$(openssl rand -hex 32)" \
-  onetimesecret/onetimesecret:v0.26.2
+  onetimesecret/onetimesecret:v0.26.4
 ```
 
 `http://localhost:3000` でアクセスできます。
@@ -68,10 +68,10 @@ docker run -p 3000:3000 -d \
 
 ## 次のステップ
 
-1. **[はじめに](./getting-started)** - ステップバイステップのセットアップガイド
+1. **[はじめに](/en/start/run-your-own-instance)** - ステップバイステップのセットアップガイド
 2. **[インストールとデプロイメント](./installation)** - 詳細なデプロイオプション
 3. **[設定リファレンス](./configuration)** - 設定に関する完全なドキュメント
 
 ---
 
-_始める準備はできましたか？[はじめに](./getting-started)ガイドに従ってください。_
+_始める準備はできましたか？[はじめに](/en/start/run-your-own-instance)ガイドに従ってください。_

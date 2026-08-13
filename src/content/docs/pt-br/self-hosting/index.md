@@ -37,7 +37,7 @@ docker run -p 6379:6379 -d redis:bookworm
 docker run -p 3000:3000 -d \
   -e REDIS_URL=redis://host.docker.internal:6379/0 \
   -e SECRET="$(openssl rand -hex 32)" \
-  onetimesecret/onetimesecret:v0.26.2
+  onetimesecret/onetimesecret:v0.26.4
 ```
 
 Acesse em `http://localhost:3000`.
@@ -67,10 +67,10 @@ Sua instância auto-hospedada inclui:
 
 ## Próximos Passos
 
-1. **[Primeiros Passos](./getting-started)** - Guia de configuração passo a passo
+1. **[Primeiros Passos](/pt-br/start/run-your-own-instance)** - Guia de configuração passo a passo
 2. **[Instalação e Implantação](./installation)** - Opções detalhadas de implantação
 3. **[Referência de Configuração](./configuration)** - Documentação completa de configurações
 
 ---
 
-_Pronto para começar? Siga nosso guia [Primeiros Passos](./getting-started)._
+_Pronto para começar? Siga nosso guia [Primeiros Passos](/pt-br/start/run-your-own-instance)._
