@@ -23,18 +23,18 @@ sicher zu tun, und wo du die Details findest.
 - **Zerstören vor dem Lesen.** Solange ein Geheimnis noch nicht angesehen wurde,
   kannst du es zerstören — dann kann es nie gelesen werden.
 - **Datenminimierung.** Wir wollen nur erheben und aufbewahren, was nötig ist —
-  siehe [Datenminimierung](/de/principles/data-minimization).
+  siehe [Datenminimierung](/en/security/our-principles#data-minimization).
 
 ## Inhalte dieses Abschnitts
 
 - **[Datenschutz](/de/security/data-protection)** — was wir speichern, wie lange, wo die Daten liegen und wie das zu deinen Compliance-Anforderungen passt.
-- **[Bewährte Sicherheitspraktiken](/de/security-best-practices)** — praktische Hinweise zum sicheren Teilen von Geheimnissen, einschließlich der Vorteile benutzerdefinierter Domains.
+- **[Bewährte Sicherheitspraktiken](/de/security/best-practices)** — praktische Hinweise zum sicheren Teilen von Geheimnissen, einschließlich der Vorteile benutzerdefinierter Domains.
 - **[Meldung von Sicherheitslücken](/de/security/vulnerability-disclosure)** — wie du ein Sicherheitsproblem verantwortungsvoll meldest.
 
 ## Verwandte Themen
 
-- **[Unsere Grundsätze](/de/principles)** — Datenschutz zuerst, Kommunikation und Datenminimierung.
-- **[Rechenzentrumsregionen](/de/regions)** — wähle, wo deine Daten verarbeitet und gespeichert werden.
+- **[Unsere Grundsätze](/en/security/our-principles)** — Datenschutz zuerst, Kommunikation und Datenminimierung.
+- **[Rechenzentrumsregionen](/en/security/where-your-data-lives)** — wähle, wo deine Daten verarbeitet und gespeichert werden.
 - **[Self-Hosting](https://github.com/onetimesecret/onetimesecret)** — betreibe Onetime Secret auf deiner eigenen Infrastruktur für volle Kontrolle.
 
 ## Ein Sicherheitsproblem melden

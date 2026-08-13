@@ -12,18 +12,18 @@ O Onetime Secret existe para levar informações sensíveis de uma pessoa a outr
 - **Proteção por frase secreta.** Você pode exigir uma frase secreta para visualizar uma mensagem confidencial, adicionando uma camada que o link sozinho não consegue desbloquear.
 - **Tempo limitado por design.** Cada mensagem confidencial tem um prazo de expiração; escolha o menor tempo de vida prático para minimizar a exposição.
 - **Queimar antes da leitura.** Se uma mensagem confidencial ainda não foi visualizada, você pode queimá-la para que nunca possa ser lida.
-- **Minimização de dados.** Buscamos coletar e reter apenas o necessário — veja [Minimização de Dados](/pt-br/principles/data-minimization).
+- **Minimização de dados.** Buscamos coletar e reter apenas o necessário — veja [Minimização de Dados](/en/security/our-principles#data-minimization).
 
 ## Explore Esta Seção
 
 - **[Proteção de Dados](/pt-br/security/data-protection)** — o que armazenamos, por quanto tempo, onde os dados ficam e como isso se relaciona com suas necessidades de conformidade.
-- **[Melhores Práticas de Segurança](/pt-br/security-best-practices)** — orientações práticas para compartilhar mensagens confidenciais com segurança, incluindo os benefícios dos Domínios Personalizados.
+- **[Melhores Práticas de Segurança](/pt-br/security/best-practices)** — orientações práticas para compartilhar mensagens confidenciais com segurança, incluindo os benefícios dos Domínios Personalizados.
 - **[Divulgação de Vulnerabilidades](/pt-br/security/vulnerability-disclosure)** — como relatar um problema de segurança de forma responsável.
 
 ## Relacionados
 
-- **[Nossos Princípios](/pt-br/principles)** — Privacidade em Primeiro Lugar, Comunicação e Minimização de Dados.
-- **[Regiões de Data Center](/pt-br/regions)** — escolha onde seus dados são processados e armazenados.
+- **[Nossos Princípios](/en/security/our-principles)** — Privacidade em Primeiro Lugar, Comunicação e Minimização de Dados.
+- **[Regiões de Data Center](/en/security/where-your-data-lives)** — escolha onde seus dados são processados e armazenados.
 - **[Auto-hospedagem](https://github.com/onetimesecret/onetimesecret)** — execute o Onetime Secret na sua própria infraestrutura para ter controle total.
 
 ## Relatando um Problema de Segurança
