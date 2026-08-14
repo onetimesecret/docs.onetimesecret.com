@@ -93,7 +93,7 @@ A: 価格は各リージョンに固有であり、現地通貨でお支払い�
 
 どの地域を選べばよいかわからない場合や、ご質問がある場合は、ご遠慮なくサポートチームまでお問い合わせください。お客様のニーズに合った最適な決断をお手伝いいたします。
 
-- Eメール：support@onetimesecret.com
+- Eメール：[support@onetimesecret.com](mailto:support@onetimesecret.com)
 - フィードバックフォーム：[https://onetimesecret.com/feedback](https://onetimesecret.com/feedback)
 
 適切な地域を選択することで、最高のパフォーマンスを得られ、Onetime Secretをご利用いただく中で関連するデータ規制を遵守することができます。
