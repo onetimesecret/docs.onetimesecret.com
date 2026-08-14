@@ -93,7 +93,7 @@ Onetime Secret 采用无共享架构，确保区域间数据完全隔离：
 
 如果您不确定该选择哪个地区，或有任何疑问，请随时联系我们的支持团队。我们随时为您提供帮助，助您根据自身需求做出最佳决定。
 
-- 电子邮件：support@onetimesecret.com
+- 电子邮件：[support@onetimesecret.com](mailto:support@onetimesecret.com)
 - 反馈表：[https://onetimesecret.com/feedback](https://onetimesecret.com/feedback)
 
 请记住，选择合适的地区可确保您在使用 Onetime Secret 时获得最佳性能，并遵守相关的数据法规。
