@@ -6,14 +6,6 @@ pageType: concept
 sourceOfTruth: onetimesecret/lib/onetime/models/organization/features/with_plan_entitlements.rb:181-212 (the plan grants capabilities to the organization — the entitlement resolution order); onetimesecret/src/shared/composables/useEntitlements.ts:16-44 and onetimesecret/locales/content/en/workspace-billing.json:59 (the in-app panel is titled "Plan Features"); onetimesecret/lib/onetime/models/features/with_entitlements.rb:149-153 and onetimesecret/lib/onetime/billing_config.rb:41-53 (billing can be switched off entirely, and is off unless a billing config sets it, which is the self-hosted default)
 ---
 
-:::note
-**Status:** Shortened, and deliberately so. This page explains the *mechanism* — where
-a plan applies and how to read what yours includes. It does not restate which plan
-carries which capability, because the app is the authoritative answer for your
-organization and the published summary below is a summary. The fuller treatment,
-including the merge of the pricing pages into this one, is pending.
-:::
-
 ## A plan belongs to your organization
 
 Not to your account. Every signed-in account belongs to an

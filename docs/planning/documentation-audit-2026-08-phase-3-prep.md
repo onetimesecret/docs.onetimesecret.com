@@ -13,6 +13,12 @@ verification ledgers and the deleted-file index are kept at
 It does not restate the plan. It records the state Phase 3 starts from, the four problems Phase 3 has
 that Phase 2 did not, and what has to be true before it opens.
 
+**Amended.** §4.1's recommendation and §4.2's split framing were both overturned by the research pass on
+2026-08-10 — the reference pages it proposes linking to are wrong in fourteen places, and the page it
+proposes splitting is wrong in twenty-seven. The answers to §4.1, §4.2 and §7 item 2, and the corrections
+owed to §5's assumptions, are in
+[`…-phase-3-decisions.md`](./documentation-audit-2026-08-phase-3-decisions.md).
+
 ---
 
 ## 1. Verified starting state

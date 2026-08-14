@@ -5,6 +5,12 @@ the point where the remote session stopped. It is deliberately concrete: the fac
 established so you do not re-derive them, the decisions still open, and the exact starting points for
 the work that has not begun.
 
+**Superseded in places.** Phase 3 resumed locally on 2026-08-10 and the research pass proved six statements
+in this document false — including the `--dry-run` flag in §3, the three-bullet range in §5, and the
+`configuration-generator` 404 in §6. Read
+[`…-phase-3-decisions.md`](./documentation-audit-2026-08-phase-3-decisions.md) §2 before relying on
+anything here.
+
 Read alongside — but not instead of —
 [`…-phase-3-prep.md`](./documentation-audit-2026-08-phase-3-prep.md) (the plan) and
 [`…-phase-3-reverification.md`](./documentation-audit-2026-08-phase-3-reverification.md) (stream A's

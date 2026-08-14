@@ -20,8 +20,13 @@ Phase 2 distinguished **moves** from **merges**:
 - **Merges** (the 263 files below) — the page was absorbed into a different
   page. The absorbed non-EN copies could not be kept:
   1. *In place*: a real file at e.g. `nl/regions.md` would collide with the
-     generated `/nl/regions` → `/nl/security/where-your-data-lives` redirect
-     (`config/redirects.mjs` asserts no redirect source is also a page).
+     generated `/nl/regions` → `/nl/security/where-your-data-lives` redirect.
+     (This sentence used to claim `config/redirects.mjs` asserts no redirect
+     source is also a page. It does not, and never did: it exports
+     `assertNoDuplicateSources` and `assertNoChainedRedirects` only, and no
+     `bin/check-*.mjs` compares redirect sources against the page tree either.
+     `pnpm build` is the only thing that would notice. The invariant is real;
+     the enforcement is manual discipline. Corrected in Phase 3.)
   2. *Relocated to the merge target*: a stale translation sitting at the new
      URL would break the anchor contract — its translated headings slugify to
      different ids, so the fragment redirects (`#canada`, `#privacy-first`, …)

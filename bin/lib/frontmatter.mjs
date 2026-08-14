@@ -18,6 +18,30 @@ export const CONTENT_CONFIG = join(repoRoot, "src", "content.config.ts");
 /** Frontmatter fields whose value must be a member of a content.config.ts enum. */
 export const ENUM_FIELDS = ["plan", "audience", "pageType"];
 
+// Assertion 5 in check-frontmatter. Reader-facing trees where the audience gate
+// on assertion 4 is load-bearing, so the field that gate reads cannot be
+// optional. A slug matches a tree when it IS the tree (self-hosting/index.md ->
+// slug "self-hosting") or sits under it. configure/ and features/ hold no pages
+// yet — they are listed now so the first page that lands there arrives under the
+// rule. Lives here rather than in the check script so it is testable: the script
+// runs its assertions at import time and cannot be imported by a test.
+export const GATED_TREES = ["install", "self-hosting", "configure", "features"];
+export const GATED_FIELDS = ["audience", "pageType"];
+
+/**
+ * Is `slug` inside a tree where `audience` and `pageType` are mandatory?
+ *
+ * Prefix match on a path SEGMENT, not on the string: "installation" is not
+ * inside "install", and getting that wrong would silently pull the retired
+ * self-hosting/installation family under the rule (or, in the other direction,
+ * exempt a real install/ page).
+ *
+ * @param {string} slug
+ * @returns {boolean}
+ */
+export const inGatedTree = (slug) =>
+  GATED_TREES.some((tree) => slug === tree || slug.startsWith(`${tree}/`));
+
 function* walk(dir) {
   for (const entry of readdirSync(dir, { withFileTypes: true })) {
     const path = join(dir, entry.name);
@@ -62,17 +86,29 @@ export function docsPages(locale = "en") {
  * `bodyLine` is the 1-based line the body starts on, so a body offset can be
  * reported as a real line number in the file.
  *
+ * `raw` is the frontmatter block verbatim, for callers that need to hand it to
+ * a real YAML parser. This one accepts input Astro rejects: it reads a value as
+ * everything after the first `key:`, where YAML reads an unquoted scalar as
+ * ending at the next `: `. A citation containing a phrase like "what the
+ * installer does: version gates" parses cleanly here and fails the build with
+ * "bad indentation of a mapping entry". See assertion 0 in check-frontmatter.
+ *
  * @param {string} source
- * @returns {{fields: Record<string,string>, body: string, bodyLine: number}}
+ * @returns {{fields: Record<string,string>, body: string, bodyLine: number, raw: string}}
  */
 export function parseFrontmatter(source) {
   const lines = source.split("\n");
-  if (lines[0]?.trim() !== "---") return { fields: {}, body: source, bodyLine: 1 };
+  if (lines[0]?.trim() !== "---") return { fields: {}, body: source, bodyLine: 1, raw: "" };
 
   const fields = {};
   for (let i = 1; i < lines.length; i++) {
     if (lines[i].trim() === "---") {
-      return { fields, body: lines.slice(i + 1).join("\n"), bodyLine: i + 2 };
+      return {
+        fields,
+        body: lines.slice(i + 1).join("\n"),
+        bodyLine: i + 2,
+        raw: lines.slice(1, i).join("\n"),
+      };
     }
     // Top level only: an indented line belongs to a nested block.
     const match = lines[i].match(/^([A-Za-z_][\w.-]*):[ \t]*(.*)$/);
@@ -81,7 +117,7 @@ export function parseFrontmatter(source) {
   }
   // Unterminated frontmatter: treat the whole file as frontmatter-less so the
   // required-field check reports it rather than this parser guessing.
-  return { fields: {}, body: source, bodyLine: 1 };
+  return { fields: {}, body: source, bodyLine: 1, raw: "" };
 }
 
 /** Strip one layer of matching quotes from a scalar value. */

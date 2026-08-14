@@ -1,8 +1,11 @@
 ---
 title: Environment Variables Reference
 description: A reference for Onetime Secret environment variables
+audience: operator
+pageType: reference
+sourceOfTruth: onetimesecret/.env.reference:1-1995 (the application's own complete environment-variable reference, which this page mirrors); onetimesecret/.env.reference:5-10 (that file — not .env.example — is the one documenting every supported variable, and it marks which values are derived from SECRET and which are independent)
 sidebar:
-  order: 5
+  order: 4
 ---
 
 This guide covers all environment variables available in Onetime Secret v0.24+.

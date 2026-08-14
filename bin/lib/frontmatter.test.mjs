@@ -12,10 +12,14 @@
 import { existsSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
+import { parse as parseYaml } from "yaml";
 
 import {
+  GATED_FIELDS,
+  GATED_TREES,
   docsPages,
   headings,
+  inGatedTree,
   parseFrontmatter,
   schemaEnums,
   slugifyHeading,
@@ -54,6 +58,97 @@ describe("parseFrontmatter", () => {
 
   it("treats unterminated frontmatter as having none, so the check reports it", () => {
     expect(parseFrontmatter("---\ntitle: Oops\n").fields).toEqual({});
+  });
+});
+
+// Assertion 0 in check-frontmatter. The parser above is deliberately lenient,
+// which means it accepts blocks the Astro build rejects. The check closes that
+// gap by handing `raw` to the real YAML parser, so what these tests pin is the
+// pairing: the lenient parser is happy, the strict one is not, and `raw` is
+// exactly the text that lets the check tell the difference.
+describe("parseFrontmatter raw (assertion 0: the block is YAML the build accepts)", () => {
+  const parseRaw = (source) => parseYaml(parseFrontmatter(source).raw);
+
+  it("returns the block verbatim, without the fences", () => {
+    const { raw } = parseFrontmatter("---\ntitle: A page\nsidebar:\n  label: A\n---\nbody\n");
+    expect(raw).toBe("title: A page\nsidebar:\n  label: A");
+    expect(parseRaw("---\ntitle: A page\nsidebar:\n  label: A\n---\nbody\n")).toEqual({
+      title: "A page",
+      sidebar: { label: "A" },
+    });
+  });
+
+  it("is empty when there is no frontmatter, so the check skips the YAML gate", () => {
+    expect(parseFrontmatter("# Just a heading\n").raw).toBe("");
+  });
+
+  // The bug that motivated the assertion: an unquoted scalar ends at the next
+  // ": ", so a sourceOfTruth citation containing an ordinary English colon
+  // parses here and fails the build with "bad indentation of a mapping entry".
+  it("carries a colon-bearing unquoted scalar that the lenient parser accepts", () => {
+    const source =
+      "---\ntitle: Install\nsourceOfTruth: app/installer.rb:10-20 (what the installer does: version gates)\n---\nbody\n";
+    expect(parseFrontmatter(source).fields.sourceOfTruth).toBe(
+      "app/installer.rb:10-20 (what the installer does: version gates)",
+    );
+    expect(() => parseRaw(source)).toThrow();
+  });
+
+  it("accepts the same citation once it is quoted", () => {
+    const source =
+      '---\ntitle: Install\nsourceOfTruth: "app/installer.rb:10-20 (what the installer does: version gates)"\n---\nbody\n';
+    expect(() => parseRaw(source)).not.toThrow();
+  });
+
+  it("accepts the real citation shape used across install/ — colons in paths are fine", () => {
+    const source =
+      "---\ntitle: Install\nsourceOfTruth: onetimesecret/docker/README.md:3-5,42-48 (the Compose stacks live in the application repository)\n---\nbody\n";
+    expect(() => parseRaw(source)).not.toThrow();
+  });
+});
+
+// Assertion 5 in check-frontmatter: on the trees the audience gate is FOR,
+// `audience` and `pageType` are mandatory, so deleting a line cannot silently
+// exempt a page from D-4.1.
+describe("inGatedTree (assertion 5)", () => {
+  it("matches a tree's own index page", () => {
+    for (const tree of GATED_TREES) expect(inGatedTree(tree)).toBe(true);
+  });
+
+  it("matches pages under a gated tree, at any depth", () => {
+    expect(inGatedTree("install/docker")).toBe(true);
+    expect(inGatedTree("self-hosting/upgrading-v0-24")).toBe(true);
+    expect(inGatedTree("configure/lockdown")).toBe(true);
+    expect(inGatedTree("features/custom-domains/dns")).toBe(true);
+  });
+
+  it("matches on a path segment, not a string prefix", () => {
+    // The retired page family. "installation" starts with "install" but is not
+    // inside install/, and pulling it under the rule would be wrong.
+    expect(inGatedTree("installation")).toBe(false);
+    expect(inGatedTree("self-hosting-vs-hosted")).toBe(false);
+  });
+
+  it("leaves ungated trees alone", () => {
+    expect(inGatedTree("start")).toBe(false);
+    expect(inGatedTree("api/client-libraries")).toBe(false);
+    expect(inGatedTree("")).toBe(false);
+  });
+
+  it("requires both fields the audience gate reads", () => {
+    expect(GATED_FIELDS).toEqual(["audience", "pageType"]);
+  });
+
+  it("holds every EN page under a gated tree to both fields", () => {
+    const offenders = docsPages("en")
+      .filter((page) => inGatedTree(page.slug))
+      .flatMap((page) => {
+        const { fields } = parseFrontmatter(page.source);
+        return GATED_FIELDS.filter((field) => !fields[field]).map(
+          (field) => `${page.path}: missing ${field}`,
+        );
+      });
+    expect(offenders).toEqual([]);
   });
 });
 

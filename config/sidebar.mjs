@@ -55,6 +55,15 @@ const localeTranslations = {
   tr: trTranslations,
 };
 
+// Every translation key the sidebar below asks for, in call order.
+//
+// createLink and createGroup both resolve a label as `sidebar?.[key] || key`,
+// which means a mistyped key neither throws nor blanks the entry: it renders the
+// raw camelCase key as the visible label. bin/check-nav.mjs reads this array and
+// fails on any key with no entry in src/content/i18n/en.json, which is the only
+// thing that catches the typo before someone looks at the rendered sidebar.
+const requestedKeys = [];
+
 /**
  * Build the per-locale label overrides for a sidebar key.
  *
@@ -90,6 +99,7 @@ function buildTranslations(key) {
  * in i18n.mjs and directory names use lowercase (e.g., "zh-cn", "pt-br").
  */
 function createLink(key, link, badge) {
+  requestedKeys.push(key);
   const enLabel = enTranslations.sidebar?.[key] || key;
   return {
     label: enLabel,
@@ -112,6 +122,7 @@ function createLink(key, link, badge) {
  * in i18n.mjs and directory names use lowercase (e.g., "zh-cn", "pt-br").
  */
 function createGroup(key, items = [], collapsed = false) {
+  requestedKeys.push(key);
   const enLabel = enTranslations.sidebar?.[key] || key;
   return {
     label: enLabel,
@@ -120,45 +131,6 @@ function createGroup(key, items = [], collapsed = false) {
     collapsed,
   };
 }
-
-// ---------------------------------------------------------------------------
-// Plan tier as a badge, not as navigation
-//
-// Until Phase 2 this file grouped pages by billing entitlement: four top-level
-// groups (Custom Domains / Free Plan / Identity Plus / Team Plus) that a reader
-// had to already know the tier of to find a feature in. That filing rule is
-// gone. A tier is an attribute of a page, not a place — so the pages are filed
-// by what a reader is trying to do, and the tier rides along as a badge.
-//
-// The badge is a MECHANICAL CARRY-ACROSS of the group each page already sat
-// under. Nothing here asserts, corrects or re-tiers an entitlement: the
-// production etc/billing.yaml is the only source of truth for what a plan
-// contains, and it lives outside this repo. Do not add, remove or change a
-// badge without reading it.
-//
-// Starlight allows exactly one badge per sidebar entry (see
-// @astrojs/starlight/schemas/badge.ts — `text` is a single string or a
-// per-locale record). The two pages that already carried a ★ therefore carry
-// star and tier in one badge text rather than losing either.
-// ---------------------------------------------------------------------------
-
-/**
- * Badge marking the billing tier a page's subject belongs to.
- * @param {"Free"|"Identity Plus"|"Team Plus"} tier
- * @returns {{text: string, variant: string, class: string}}
- */
-const planBadge = (tier) => ({ text: tier, variant: "note", class: "small" });
-
-/**
- * Plan badge for a page that also carries the pre-existing ★ highlight.
- * @param {"Free"|"Identity Plus"|"Team Plus"} tier
- * @returns {{text: string, variant: string, class: string}}
- */
-const starredPlanBadge = (tier) => ({
-  text: `★ ${tier}`,
-  variant: "tip",
-  class: "small",
-});
 
 // ---------------------------------------------------------------------------
 // Sidebar configuration using translation keys
@@ -200,10 +172,7 @@ export const sidebar = [
       createLink("signingIn", "account/signing-in"),
       createLink("twoFactorAndPasskeys", "account/two-factor-and-passkeys"),
       createLink("sessionsAndIdentities", "account/sessions-and-identities"),
-      createLink(
-        "dashboardAndRecentSecrets",
-        "account/dashboard-and-recent-secrets",
-      ),
+      createLink("dashboardAndRecentSecrets", "account/dashboard-and-recent-secrets"),
       createLink("preferences", "account/preferences"),
       createLink("changeYourEmail", "account/change-your-email"),
       createLink("switchingRegions", "account/change-your-region"),
@@ -213,44 +182,20 @@ export const sidebar = [
     createGroup("organizations", [
       createLink("whatOrganizationsDo", "organizations"),
       createLink("rolesAndPermissions", "organizations/roles-and-permissions"),
-      createLink(
-        "memberInvites",
-        "organizations/inviting-members",
-        planBadge("Identity Plus"),
-      ),
+      createLink("memberInvites", "organizations/inviting-members"),
       createLink("ownershipAndTransfer", "organizations/ownership-and-transfer"),
-      createLink("sso", "organizations/sso", starredPlanBadge("Team Plus")),
-      createLink(
-        "auditLog",
-        "organizations/audit-trail",
-        planBadge("Team Plus"),
-      ),
+      createLink("sso", "organizations/sso"),
+      createLink("auditLog", "organizations/audit-trail"),
     ]),
 
     createGroup("customDomains", [
       createLink("whatCustomDomainsDo", "custom-domains"),
       createLink("setupGuide", "custom-domains/setup-guide"),
       createLink("dnsValidation", "custom-domains/dns-validation"),
-      createLink(
-        "brandGuide",
-        "custom-domains/branding",
-        starredPlanBadge("Identity Plus"),
-      ),
-      createLink(
-        "emailSender",
-        "custom-domains/email-sender",
-        planBadge("Identity Plus"),
-      ),
-      createLink(
-        "homepageAndIncoming",
-        "custom-domains/homepage-and-incoming",
-        planBadge("Free"),
-      ),
-      createLink(
-        "accessAndPrivacy",
-        "custom-domains/access-and-privacy",
-        planBadge("Identity Plus"),
-      ),
+      createLink("brandGuide", "custom-domains/branding"),
+      createLink("emailSender", "custom-domains/email-sender"),
+      createLink("homepageAndIncoming", "custom-domains/homepage-and-incoming"),
+      createLink("accessAndPrivacy", "custom-domains/access-and-privacy"),
     ]),
 
     // No badges here: this group is *about* the tiers, so labelling its own
@@ -268,20 +213,46 @@ export const sidebar = [
   ]),
 
   createGroup("selfHosting", [
+    // Install & deploy. The first two are orientation and the one decision that
+    // changes what you install; the six install/* pages are the split of the
+    // retired self-hosting/installation (Phase 3) in the order a first-time
+    // operator meets them. install/ has no index page on purpose — nothing
+    // links to /en/install/ and the group IS the index.
+    //
+    // Order is array position, not a number. createLink/createGroup emit no
+    // `order` key and there is no autogenerate group anywhere in this repo, so
+    // Starlight renders this array as written and adding a group later is a
+    // pure splice that renumbers nothing.
+    //
+    // For the same reason the install/* pages carry no `sidebar.order` in their
+    // frontmatter. Starlight only reads that key for an autogenerate group;
+    // under a manual array it is inert, and an inert number that disagrees with
+    // the array below is worse than no number at all — it reads as the source of
+    // truth to the next editor. Reorder here, not in frontmatter.
     createGroup("installAndDeploy", [
       createLink("aboutSelfHosting", "self-hosting"),
       createLink("authModeChoice", "self-hosting/simple-or-full-auth"),
-      createLink("installationDeployment", "self-hosting/installation"),
+      createLink("imagesAndVariants", "install/images-and-variants"),
+      createLink("installWithDocker", "install/docker"),
+      createLink("installOnLinux", "install/linux"),
+      createLink("runAsAService", "install/run-as-a-service"),
+      createLink("reverseProxyAndTls", "install/reverse-proxy-and-tls"),
+      createLink("verifyYourInstall", "install/verify"),
     ]),
 
+    // Configure. The three entries below are the surviving reference pages;
+    // Phase 4 retires them as movedPages families. The task-shaped configure/*
+    // pages are appended ABOVE them when they land — tasks first, reference
+    // last.
     createGroup("configure", [
       createLink("configurationReference", "self-hosting/configuration"),
-      createLink(
-        "configurationGenerator",
-        "self-hosting/configuration-generator",
-      ),
+      createLink("configurationGenerator", "self-hosting/configuration-generator"),
       createLink("environmentVariables", "self-hosting/environment-variables"),
     ]),
+
+    // A createGroup("features", [...]) call goes here when the first features/*
+    // page lands. It is NOT added empty: bin/check-nav.mjs:68-72 fails on a
+    // group with no items.
 
     createGroup("troubleshootAndUpgrade", [
       createLink("upgradingToV024", "self-hosting/upgrading-v0-24"),
@@ -312,10 +283,7 @@ export const sidebar = [
       createLink("glossary", "translations/glossary"),
       createLink("universalGuidance", "translations/universal"),
       createLink("translatingSecret", "translations/universal/secret-concept"),
-      createLink(
-        "passwordVsPassphrase",
-        "translations/universal/password-passphrase",
-      ),
+      createLink("passwordVsPassphrase", "translations/universal/password-passphrase"),
       createLink("brandTerms", "translations/universal/brand-terms"),
       createLink("voiceAndTone", "translations/universal/voice-and-tone"),
       createLink("qualityChecklist", "translations/universal/quality-checklist"),
@@ -323,3 +291,12 @@ export const sidebar = [
     true,
   ),
 ];
+
+/**
+ * The translation keys `sidebar` above was built from, populated as a side
+ * effect of the createLink/createGroup calls in it. Declared after the array so
+ * it is complete when a consumer imports it.
+ *
+ * @type {readonly string[]}
+ */
+export const sidebarKeys = Object.freeze([...requestedKeys]);

@@ -25,6 +25,7 @@ logs
 .claude
 .crossnote
 .lycheecache
+billing.yaml
 tmp
 
 # Local env files

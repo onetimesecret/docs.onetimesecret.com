@@ -5,13 +5,6 @@ audience: contributor
 pageType: how-to
 ---
 
-:::note
-**Status:** Shortened. The documentation-site half below is complete and current.
-The application-repository on-ramp — local development, the containerized test
-lanes, and the architecture decision records — is being written and is not here
-yet.
-:::
-
 Onetime Secret is open source, and contributions arrive in two different
 repositories with two different setups. Start by working out which one your change
 belongs to.

@@ -6,11 +6,6 @@ pageType: how-to
 plan: Identity Plus
 ---
 
-:::note
-**Status:** This page is a work in progress. The summary below describes what
-Member Invites covers; detailed, screenshot-driven steps will follow.
-:::
-
 Members are managed under the **Members** tab in Organization settings, which
 only owners and admins can open.
 

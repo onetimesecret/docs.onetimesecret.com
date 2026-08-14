@@ -6,12 +6,6 @@ pageType: concept
 sourceOfTruth: onetimesecret/lib/onetime/models/organization_membership.rb:72-106 (the three role templates and their nesting); onetimesecret/lib/onetime/models/organization_membership/features/with_materialized_entitlements.rb:13-18 (effective = plan ∩ role); onetimesecret/apps/api/organizations/logic/members/update_member_role.rb:29,154-192 (the role-change endpoint accepts member and admin only)
 ---
 
-:::note
-**Status:** Shortened. The three roles, the plan ∩ role rule and the member-management
-limits below are verified against the shipped product. Screen-by-screen steps for
-changing a role are still to be written.
-:::
-
 Every person in an [organization](/en/organizations) holds a role, and that role
 decides what they can do. But the role is only half the answer. The other half is
 your organization's plan — and a capability is available to someone only when

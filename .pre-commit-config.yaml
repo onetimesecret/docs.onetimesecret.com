@@ -36,12 +36,13 @@
 # slowing down the local development process.
 
 # Hook installation configuration
+#
+# Every installed hook type is a separate pre-commit invocation, and each one
+# stashes and restores the unstaged worktree before it runs. Only install the
+# stages that earn that cost.
 default_install_hook_types:
   - pre-commit # Primary code quality checks
   - prepare-commit-msg # Commit message preprocessing
-  - post-commit # Actions after successful commit
-  - post-checkout # Triggered after git checkout
-  - post-merge # Triggered after git merge
 
 # Default execution stage
 default_stages: [pre-commit]
@@ -86,14 +87,7 @@ repos:
           - "--pattern=(i18n(?=/)|([a-zA-Z0-9]{0,10}-?[0-9]{1,5}))"
           - "--template=[#{}]"
 
-  # Commit metadata tracking
-  - repo: local
-    hooks:
-      - id: register-build
-        stages: [post-commit, post-checkout, post-merge]
-        name: Record commit hash
-        description: Log current commit hash for build reference
-        entry: "sh -c 'git rev-parse --short HEAD > .commit_hash.txt; echo Commit hash recorded; head -4 .commit_hash.txt package.json'"
-        language: system
-        always_run: true
-        pass_filenames: false
+  # register-build was removed 2026-08-10. It wrote .commit_hash.txt on every
+  # commit, checkout and merge, at the cost of three extra worktree
+  # stash/restore cycles. The file is gitignored and nothing in this repo reads
+  # it; the app repo's lib/onetime/version.rb derives the hash itself.

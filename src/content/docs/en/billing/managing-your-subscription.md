@@ -6,12 +6,6 @@ pageType: how-to
 sourceOfTruth: onetimesecret/src/apps/workspace/routes/organizations.ts:42,47 and onetimesecret/src/apps/workspace/account/settings/OrganizationSettings.vue:74-82 (settings live at /org/:extid/:tab, with a subscription tab, and require owner or admin to open); onetimesecret/lib/onetime/models/organization_membership.rb:90-100 (manage_billing sits in the owner template only)
 ---
 
-:::note
-**Status:** Shortened. Where the subscription lives and who may change it are
-verified against the shipped product. Payment, invoicing and cancellation
-specifics are not documented here yet — contact support for those in the meantime.
-:::
-
 A subscription belongs to an [organization](/en/organizations), not to a person.
 Changing it changes what everyone in that organization can do.
 

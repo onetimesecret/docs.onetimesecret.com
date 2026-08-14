@@ -6,12 +6,6 @@ pageType: how-to
 sourceOfTruth: onetimesecret/lib/onetime/operations/org/transfer_ownership.rb and onetimesecret/apps/api/colonel/routes.txt:74 (transfer exists only as an operator action — onetimesecret/apps/api/organizations/routes.txt has no transfer route); onetimesecret/lib/onetime/operations/memberships/set_role.rb:40-43,93-96 (the last owner cannot be demoted); onetimesecret/apps/api/organizations/logic/members/remove_member.rb:160-175 (an owner cannot be removed)
 ---
 
-:::note
-**Status:** Shortened. What follows is verified against the shipped product. The
-support request path is described in general terms and will gain exact steps once
-the process is written up.
-:::
-
 Every organization has exactly one owner, and the owner is the account that can
 manage billing, SSO and the organization's own settings. This page covers what
 happens to that role when the person holding it leaves, changes jobs, or hands the
