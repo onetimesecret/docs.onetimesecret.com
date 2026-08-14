@@ -43,9 +43,9 @@ list changes not repeated here.
 | Forwarded-host trust | Admin gate refuses a forwarded host unless the proxy is proven via `TRUSTED_PROXY_CIDRS` (#4062, #4127) | **Yes**, if behind a header-forwarding proxy |
 | Client IP in depth mode | The `+1` remap that double-counted the connecting peer is gone (#4024) | **Yes**, if you compensated for it |
 | Proxy mode validation | `TRUSTED_PROXY_MODE` is validated at boot; invalid values fall back to `filter` with a warning (#4087) | No — but check the warning |
-| Geo header | `GEO_HEADER` is honoured in `filter` mode only; ignored under `depth` (#4024, #4068) | **Yes**, if depth + `GEO_HEADER` |
+| Geo header | `GEO_HEADER` is honored in `filter` mode only; ignored under `depth` (#4024, #4068) | **Yes**, if depth + `GEO_HEADER` |
 | Auth policy resolution | Sign-in policy reads now fail closed, and global auth defaults require positive operator classification (#4155, #4157, #4161) | No — verify sign-in after upgrade |
-| Boolean flags | `RABBITMQ_VERIFY_PEER`, `BILLING_ENABLED`, `STRIPE_AUTOMATIC_TAX` share one parser; unrecognised tokens now fail the boot (#4156, #4160) | **Yes**, if any is set to a typo'd value |
+| Boolean flags | `RABBITMQ_VERIFY_PEER`, `BILLING_ENABLED`, `STRIPE_AUTOMATIC_TAX` share one parser; unrecognized tokens now fail the boot (#4156, #4160) | **Yes**, if any is set to a typo'd value |
 | WebAuthn env names | `WEBAUTHN_*` → `AUTH_WEBAUTHN_*`; old names ignored (warned at boot) | **Yes**, if the old names are set |
 | Link domains | New `LINK_DOMAINS` operator pool (#4063) | No — opt-in |
 | Social cards | `BRAND_OG_IMAGE_URL=none` disables; custom domains no longer inherit the install's image (#4150) | No — opt-in |
@@ -141,7 +141,7 @@ forged chain entry.
 
 Only if `TRUSTED_PROXY_MODE=depth` **and** `GEO_HEADER` is set.
 
-`GEO_HEADER` is now honoured in `filter` mode only, and is ignored under
+`GEO_HEADER` is now honored in `filter` mode only, and is ignored under
 `depth`. Depth-mode deployments that want country data should use a local
 MaxMind database instead:
 
@@ -151,7 +151,7 @@ GEO_DB_PATH=/path/to/GeoLite2-Country.mmdb   # requires the maxmind-db gem
 
 Otherwise country resolves to `**`. `GEO_DB_PATH` works in all modes.
 
-### 6. Normalise your boolean flags
+### 6. Normalize your boolean flags
 
 `RABBITMQ_VERIFY_PEER`, `BILLING_ENABLED` and `STRIPE_AUTOMATIC_TAX` now share
 one parser
@@ -165,7 +165,7 @@ one parser
   the valid tokens. The rejected value is never echoed — the message carries a
   character count and a short SHA-256 tag instead.
 
-Two behaviour changes to check for:
+Two behavior changes to check for:
 
 - **`RABBITMQ_VERIFY_PEER` defaults ON and was previously read as
   `== 'true'`.** Any other token — `1`, `TRUE`, `yes`, or a typo — silently
@@ -193,8 +193,9 @@ the shared vocabulary from step 6. Only the literal string `true` enables
 them. `1`, `yes`, and `on` leave them off, silently.
 :::
 
-`AUTH_WEBAUTHN_VERIFY_ACCOUNT` additionally requires `AUTHENTICATION_MODE=full`.
-Custom domains cannot be restricted to passkey-only sign-in.
+`AUTH_WEBAUTHN_VERIFY_ACCOUNT` additionally requires `AUTHENTICATION_MODE=full`
+(see [Simple or Full Auth](./simple-or-full-auth) if you are unsure which mode
+you run). Custom domains cannot be restricted to passkey-only sign-in.
 
 ### 8. Optional: new features
 
@@ -223,8 +224,9 @@ Run all five. Steps 1–3 fail identically (404), so check them separately.
 1. **Boot log is clean.** No `ConfigError`, and no warning about
    `TRUSTED_PROXY_MODE` falling back to `filter`, a blank
    `ADMIN_ALLOWED_HOSTS`, or an ignored `WEBAUTHN_*` variable.
-2. **Admin reachable.** Load `/colonel` on the hostname you expect, from a
-   network inside `ADMIN_ALLOWED_CIDRS` if you set one. A 404 here means step
+2. **Admin reachable.** Load `/colonel` on the hostname you expect — the
+   canonical host, its `www.` sibling, or an `ADMIN_ALLOWED_HOSTS` entry — from
+   a network inside `ADMIN_ALLOWED_CIDRS` if you set one. A 404 here means step
    1, 2 or 3.
 3. **Client IP is correct.** Create a secret and confirm the recorded client
    IP is the real client, not your proxy. This is the check that catches a
@@ -253,7 +255,7 @@ Run all five. Steps 1–3 fail identically (404), so check them separately.
 | `LINK_DOMAINS` | `features.domains.link_domains` | Unset |
 | `AUTH_WEBAUTHN_ENABLED` | `auth: full.features.webauthn` | `false` |
 
-### Changed behaviour
+### Changed behavior
 
 | Variable | Config path | Change |
 |---|---|---|
