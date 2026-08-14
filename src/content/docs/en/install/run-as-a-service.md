@@ -6,7 +6,6 @@ pageType: how-to
 sourceOfTruth: onetimesecret/etc/examples/systemd/onetimesecret-web.service:8-13,18-21,25-30,33,36-37,39,42-46 (the install commands, the assumed path and user, the login-shell .env sourcing, restart and stop policy, the optional EnvironmentFile, the hardening block); onetimesecret/etc/examples/systemd/onetimesecret-worker.service:14,24,27 (the worker's ordering, command, and 60-second drain window); onetimesecret/etc/examples/systemd/onetimesecret-scheduler.service:14,24,26 (the scheduler's equivalents); onetimesecret/docs/specs/install-onboarding/install-onboarding-clean-room-validation.md:112-117 (ProtectHome=true against a Ruby on the onetime user's PATH when that home is under /home); onetimesecret/Procfile.production:13,20-24 (the non-systemd form, and the environment line every shipped invocation uses); onetimesecret/etc/defaults/config.defaults.yaml:1113 and onetimesecret/docker/README.md:79-84 (background jobs are off unless JOBS_ENABLED is true, and RabbitMQ is what the worker consumes from); onetimesecret/apps/web/core/controllers/health.rb:65 (the job-queue health check reports not_configured while jobs are off); onetimesecret/etc/defaults/auth.defaults.yaml:36 (full authentication mode's account store defaults to SQLite, so the auth mode does not imply a job queue)
 sidebar:
   label: Run as a service
-  order: 4
 ---
 
 An install started from a shell dies with the shell. The project ships three

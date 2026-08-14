@@ -223,6 +223,12 @@ export const sidebar = [
     // `order` key and there is no autogenerate group anywhere in this repo, so
     // Starlight renders this array as written and adding a group later is a
     // pure splice that renumbers nothing.
+    //
+    // For the same reason the install/* pages carry no `sidebar.order` in their
+    // frontmatter. Starlight only reads that key for an autogenerate group;
+    // under a manual array it is inert, and an inert number that disagrees with
+    // the array below is worse than no number at all — it reads as the source of
+    // truth to the next editor. Reorder here, not in frontmatter.
     createGroup("installAndDeploy", [
       createLink("aboutSelfHosting", "self-hosting"),
       createLink("authModeChoice", "self-hosting/simple-or-full-auth"),

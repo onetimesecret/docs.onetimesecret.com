@@ -284,7 +284,7 @@ export function createRedirectsConfig() {
 
   // Phase 2 information-architecture rework: every retired page family, in
   // every configured locale. Generated rather than written out so the source of
-  // truth stays the ~35-row movedPages table above instead of ~600 literals.
+  // truth stays the ~40-row movedPages table above instead of ~600 literals.
   const movedPageRedirects = Object.fromEntries(
     LOCALES.flatMap((locale) =>
       movedPages.map(({ from, to, fragment, toDefaultLocale }) => [
