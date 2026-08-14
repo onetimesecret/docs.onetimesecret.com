@@ -6,7 +6,6 @@ pageType: how-to
 sourceOfTruth: onetimesecret/docker/README.md:3-5,42-48,62-75,93-108,110-126 (the Compose stacks live in the application repository, the separate docker-compose repository is archived as of v0.24, the quick start that omits VALKEY_PASSWORD, the per-stack requirement table including AUTH_SECRET and ACCOUNT_ID_SECRET, the OTS_IMAGE_TAG default, and where each stack keeps its data); onetimesecret/docker/compose/docker-compose.simple.yml:20-30,66-113 (the pinned OTS_IMAGE_TAG default, env_file ../../.env, the fail-fast SECRET and VALKEY_PASSWORD interpolation, Valkey exposed only to the Compose network, AOF persistence into a named volume); onetimesecret/docker/compose/docker-compose.full.yml:44-46,60-89,100-109,193-265,272-283 (Caddy publishes 80 and 443, RACK_ENV defaults to production, the empty-default AUTH_SECRET and ACCOUNT_ID_SECRET next to the fail-fast SECRET, VALKEY_PASSWORD, RABBITMQ_USER and RABBITMQ_PASS, JOBS_ENABLED defaulting to false, /app/data shared by app, worker-email and scheduler, and the email.message.send queue the worker consumes); onetimesecret/docker-compose.yml:25-27 (the root file is an include wrapper defaulting to the simple stack); onetimesecret/apps/web/auth/config/base.rb:12,22-27 (AUTH_SECRET backs the HMAC secret guard, ACCOUNT_ID_SECRET of at least 32 bytes is required in production and boot raises without it, an unset RACK_ENV fails closed to production, and the two are independent); onetimesecret/scripts/install-tests/seed-compose-env.sh:8-13,31-45 (the six values CI exports for a full-stack up, why AUTH_SECRET and ACCOUNT_ID_SECRET are among them, and the repo-root .env written separately as the env_file target); onetimesecret/.github/workflows/compose-smoke.yml:71-79 (Compose interpolation reads the shell and the project-directory .env, not a service's env_file, and -f docker/compose/<file> shifts the project directory); onetimesecret/scripts/check-version-pins.sh:17-21 (the compose app-image default is held in lockstep with the README quick-start pin); onetimesecret/Procfile.production:13 (set -a; source .env; set +a as the documented way to put .env into the shell); onetimesecret/README.md:22-29 with onetimesecret/.github/workflows/compose-smoke.yml:315-324,336-347 (the documented docker run form, including --add-host, and the CI lane that resolves its image tag from the README and exercises it)
 sidebar:
   label: Install with Docker
-  order: 2
 ---
 
 Onetime Secret ships two Docker Compose stacks, and both live in the application
@@ -85,18 +84,28 @@ only `SECRET`. That sequence does not work — `.env.example` carries no
 
 ```bash
 [ -f .env ] || cp .env.example .env
-echo "SECRET=$(openssl rand -hex 32)" >> .env
-echo "VALKEY_PASSWORD=$(openssl rand -hex 32)" >> .env
+grep -q '^SECRET=' .env          || echo "SECRET=$(openssl rand -hex 32)" >> .env
+grep -q '^VALKEY_PASSWORD=' .env || echo "VALKEY_PASSWORD=$(openssl rand -hex 32)" >> .env
 ```
 
 For the full stack, add the four it needs on top of those:
 
 ```bash
-echo "RABBITMQ_USER=ots" >> .env
-echo "RABBITMQ_PASS=$(openssl rand -hex 16)" >> .env
-echo "AUTH_SECRET=$(openssl rand -hex 32)" >> .env
-echo "ACCOUNT_ID_SECRET=$(openssl rand -hex 32)" >> .env
+grep -q '^RABBITMQ_USER=' .env      || echo "RABBITMQ_USER=ots" >> .env
+grep -q '^RABBITMQ_PASS=' .env      || echo "RABBITMQ_PASS=$(openssl rand -hex 16)" >> .env
+grep -q '^AUTH_SECRET=' .env        || echo "AUTH_SECRET=$(openssl rand -hex 32)" >> .env
+grep -q '^ACCOUNT_ID_SECRET=' .env  || echo "ACCOUNT_ID_SECRET=$(openssl rand -hex 32)" >> .env
 ```
+
+Every line above is guarded, so the block is safe to rerun against an existing
+installation. Without the guards, a second run appends a *new* `SECRET` — and
+because Compose and dotenv take the last assignment of a duplicated key, the
+application would come up on a different root secret with every stored secret
+encrypted under the old one and no longer readable. The same applies to
+`AUTH_SECRET` and `ACCOUNT_ID_SECRET`: rotating them invalidates existing
+sessions and account-id derivation. If you need to rotate a value deliberately,
+edit the existing line in `.env` rather than appending a second one, and treat
+it as the destructive operation it is.
 
 Both stacks declare `env_file: ../../.env`, so a repository-root `.env` has to
 exist even when you supply every value through the shell. There is a second trap

@@ -18,6 +18,30 @@ export const CONTENT_CONFIG = join(repoRoot, "src", "content.config.ts");
 /** Frontmatter fields whose value must be a member of a content.config.ts enum. */
 export const ENUM_FIELDS = ["plan", "audience", "pageType"];
 
+// Assertion 5 in check-frontmatter. Reader-facing trees where the audience gate
+// on assertion 4 is load-bearing, so the field that gate reads cannot be
+// optional. A slug matches a tree when it IS the tree (self-hosting/index.md ->
+// slug "self-hosting") or sits under it. configure/ and features/ hold no pages
+// yet — they are listed now so the first page that lands there arrives under the
+// rule. Lives here rather than in the check script so it is testable: the script
+// runs its assertions at import time and cannot be imported by a test.
+export const GATED_TREES = ["install", "self-hosting", "configure", "features"];
+export const GATED_FIELDS = ["audience", "pageType"];
+
+/**
+ * Is `slug` inside a tree where `audience` and `pageType` are mandatory?
+ *
+ * Prefix match on a path SEGMENT, not on the string: "installation" is not
+ * inside "install", and getting that wrong would silently pull the retired
+ * self-hosting/installation family under the rule (or, in the other direction,
+ * exempt a real install/ page).
+ *
+ * @param {string} slug
+ * @returns {boolean}
+ */
+export const inGatedTree = (slug) =>
+  GATED_TREES.some((tree) => slug === tree || slug.startsWith(`${tree}/`));
+
 function* walk(dir) {
   for (const entry of readdirSync(dir, { withFileTypes: true })) {
     const path = join(dir, entry.name);

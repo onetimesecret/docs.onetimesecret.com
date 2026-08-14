@@ -93,8 +93,11 @@ import { parse as parseYaml } from "yaml";
 
 import {
   ENUM_FIELDS,
+  GATED_FIELDS,
+  GATED_TREES,
   docsPages,
   headings,
+  inGatedTree,
   parseFrontmatter,
   schemaEnums,
   statedDefaults,
@@ -125,16 +128,9 @@ const REQUIRED_ANCHORS = {
 // either audience — states a default only with a citation beside it.
 const REFERENCE_OWNERS = ["self-hosting/environment-variables", "self-hosting/configuration"];
 
-// Assertion 5. Reader-facing trees where the audience gate on assertion 4 is
-// load-bearing, so the field it reads cannot be optional. A slug matches a tree
-// when it IS the tree (self-hosting/index.md -> slug "self-hosting") or sits
-// under it. configure/ and features/ hold no pages yet — they are listed now so
-// the first page that lands there arrives under the rule.
-const GATED_TREES = ["install", "self-hosting", "configure", "features"];
-const GATED_FIELDS = ["audience", "pageType"];
-
-const inGatedTree = (slug) =>
-  GATED_TREES.some((tree) => slug === tree || slug.startsWith(`${tree}/`));
+// Assertion 5's tree list, its required fields and the segment-wise prefix test
+// live in bin/lib/frontmatter.mjs — this script runs its assertions at import
+// time, so anything a unit test needs to reach has to sit in the library.
 
 const problems = [];
 
@@ -305,6 +301,13 @@ const localeAnchors = new Map();
 function localAnchors(locale, slug) {
   if (locale === "en") return anchorsBySlug.get(slug) ?? null;
   if (!localeAnchors.has(locale)) {
+    // `locale` comes from the redirect TARGET url, lowercased (`zh-cn`), and is
+    // used verbatim as a directory name. That holds because the content
+    // directories are lowercase too. If a BCP-47 tag ever diverges from its
+    // directory (the `zh-CN` vs `zh-cn` hazard config/sidebar.mjs warns about),
+    // existsSync misses and this returns an empty map — the stale-translation
+    // warning below goes quiet rather than failing, so the divergence has to be
+    // caught here rather than downstream.
     const dir = join(repoRoot, "src", "content", "docs", locale);
     localeAnchors.set(
       locale,
