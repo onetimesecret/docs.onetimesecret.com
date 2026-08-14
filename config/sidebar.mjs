@@ -218,6 +218,7 @@ export const sidebar = [
     createLink("environmentVariables", "self-hosting/environment-variables"),
     createLink("upgradingToV023", "self-hosting/upgrading-v0-23"),
     createLink("upgradingToV024", "self-hosting/upgrading-v0-24"),
+    createLink("upgradingToV026", "self-hosting/upgrading-v0-26"),
   ]),
 
   createLink("restApi", "rest-api"),

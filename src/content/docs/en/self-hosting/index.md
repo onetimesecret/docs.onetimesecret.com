@@ -14,6 +14,8 @@ The current stable release is **v0.26** (the `main` branch). It runs in two mode
 - **Full mode** — adds account features (MFA, SSO, WebAuthn, organizations) backed by PostgreSQL and RabbitMQ.
 
 If you are coming from v0.22 or v0.23, follow the [Upgrading to v0.24+](./upgrading-v0-24) guide, which covers the configuration and data-model changes and how to pick an auth mode.
+
+Already on v0.26? [Upgrading to v0.26.5](./upgrading-v0-26) covers the admin host gate, trusted-proxy hardening, and boolean-flag validation introduced in that release.
 :::
 
 ## Why Self-Host?
