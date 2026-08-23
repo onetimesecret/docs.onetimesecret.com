@@ -5,9 +5,9 @@ description: Universal guidelines for voice patterns, formality levels, and tone
 
 Detailed guidance on when to use different voices in interface elements.
 
-## Voice Patterns by Context
+## Voice patterns by context
 
-### User Actions (Active/Imperative Voice)
+### User actions (active/imperative voice)
 
 **Buttons**
 ```
@@ -35,7 +35,7 @@ Detailed guidance on when to use different voices in interface elements.
 ✅ Add optional message
 ```
 
-### System Communication (Passive/Declarative Voice)
+### System communication (passive/declarative voice)
 
 **Status Messages**
 ```
@@ -70,29 +70,29 @@ Detailed guidance on when to use different voices in interface elements.
 ✅ Session expired
 ```
 
-## Context-Specific Examples
+## Context-specific examples
 
-### Form Submission Flow
+### Form submission flow
 1. **Button**: "Save changes" (imperative)
 2. **Processing**: "Saving changes..." (progressive)
 3. **Success**: "Changes saved successfully" (passive)
 4. **Error**: "Save failed - please try again" (declarative)
 
-### File Operations
+### File operations
 1. **Action**: "Download file" (imperative)
 2. **Progress**: "Downloading..." (progressive)
 3. **Complete**: "Download completed" (passive)
 4. **Error**: "Download failed" (declarative)
 
-### Secret Management
+### Secret management
 1. **Creation**: "Create secret" (imperative)
 2. **Status**: "Secret created" (passive)
 3. **Viewing**: "View secret" (imperative)
 4. **Result**: "Secret viewed and destroyed" (passive)
 
-## Language-Specific Considerations
+## Language-specific considerations
 
-### Formality Levels
+### Formality levels
 
 **Informal Languages (tu/du form)**
 - Spanish: "Crea tu secreto" (Create your secret)
@@ -104,7 +104,7 @@ Detailed guidance on when to use different voices in interface elements.
 - German (formal): "Erstellen Sie Ihr Geheimnis" (Create your secret)
 - French (formal): "Créez votre secret" (Create your secret)
 
-### Grammatical Structures
+### Grammatical structures
 
 **Languages with Complex Verb Conjugation**
 - Maintain consistency in person and formality
@@ -116,7 +116,7 @@ Detailed guidance on when to use different voices in interface elements.
 - Balance respect with accessibility
 - Consider your primary user base
 
-### Cultural Tone Adaptations
+### Cultural tone adaptations
 
 **Direct Communication Cultures**
 - Clear, concise instructions
@@ -128,15 +128,15 @@ Detailed guidance on when to use different voices in interface elements.
 - More polite request forms
 - Cultural courtesy markers
 
-## Implementation Guidelines
+## Implementation guidelines
 
-### Consistency Checks
+### Consistency checks
 1. **Within features**: All buttons in a feature use same voice
 2. **Across features**: Similar elements use same patterns
 3. **Error handling**: All errors follow same tone
 4. **Success states**: All confirmations use same voice
 
-### Testing Your Voice Choices
+### Testing your voice choices
 
 Create these test scenarios in your language:
 
@@ -152,7 +152,7 @@ Create these test scenarios in your language:
 3. User clicks "Try again" (button)
 4. System shows "Changes saved" (success)
 
-### Common Pitfalls to Avoid
+### Common pitfalls to avoid
 
 **Mixing Voices Inappropriately**
 - ❌ Button: "Changes will be saved" (passive)
@@ -170,7 +170,7 @@ Create these test scenarios in your language:
 - ❌ Ambiguous: "Secret deleted" (by whom?)
 - ✅ Clear context: "Secret deleted" (after user action) vs "Secret expired" (automatic)
 
-## Regional Variations
+## Regional variations
 
 When working with languages that span multiple regions:
 

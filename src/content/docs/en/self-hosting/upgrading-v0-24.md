@@ -10,7 +10,7 @@ This guide covers upgrading to v0.24.0 from v0.22 or v0.23. There are significan
 
 For the full context on what changed and why, see the [v0.24.0 release notes](https://blog.onetimesecret.com/posts/2026-03-04-release-notes-v0.24.0).
 
-## Before You Start
+## Before you start
 
 **Coming from v0.22?** Complete the [v0.23 config migration](upgrading-v0-23/) first. The v0.23 release converts config keys from symbol to string format, which v0.24 requires.
 
@@ -19,27 +19,27 @@ For the full context on what changed and why, see the [v0.24.0 release notes](ht
 3. **Note your current SECRET value.** You'll need it to continue decrypting existing secrets. Only generate a new one if you're certain no unretrieved secrets remain.
 4. **Decide your auth mode.** Disabled, simple, or full. This determines your infrastructure requirements (see below).
 
-## System Requirements
+## System requirements
 
-### Simple Mode
+### Simple mode
 
 - Ruby 3.4+
 - Redis 7+ (or Valkey)
 
-### Full Mode
+### Full mode
 
 Everything from Simple Mode, plus:
 
 - **PostgreSQL 17+** with a dedicated database for OTS auth tables
 - **RabbitMQ 4.3+** accessible from the OTS application
 
-## Choose Your Path
+## Choose your path
 
 There are two upgrade paths. If you don't have critical data or accounts that need to be preserved, **Path A (fresh start)** is significantly easier. Path B covers in-place migration for operators who need to preserve accounts, live secrets, or API integration stability.
 
 ---
 
-## Path A: Fresh Start
+## Path A: Fresh start
 
 Use this path if you don't need to preserve existing accounts or live secrets.
 
@@ -195,7 +195,7 @@ The config structure has changed significantly. The application will not start w
 
 The safest approach: start from `config.defaults.yaml` and `auth.defaults.yaml`, then transplant your site-specific values into the new structure. This is more work than editing in place but eliminates the risk of missing a structural change.
 
-#### Environment Variables
+#### Environment variables
 
 Many new environment variables have been added. Review the `.env.example` files for the most common settings. For the most part, environment vars are consumed in the YAML config files at load-time, so the values must be set before starting the application.
 
@@ -310,7 +310,7 @@ Then manually verify:
 
 ---
 
-## Config Mapping Reference
+## Config mapping reference
 
 ### Environment variables
 

@@ -5,16 +5,16 @@ description: Terms that should not be translated and guidance on consistent bran
 
 Certain terms must remain untranslated to maintain brand identity and product consistency across all locales.
 
-## Do Not Translate
+## Do not translate
 
-### Company and Product Names
+### Company and product names
 
 | Term | Usage | Notes |
 |------|-------|-------|
 | **Onetime Secret** | Company and product name | Always as two words, "Onetime" capitalized |
 | **OTS** | Product abbreviation | Only when used as brand abbreviation |
 
-### Product Tier Names
+### Product tier names
 
 | Term | Context |
 |------|---------|
@@ -23,11 +23,11 @@ Certain terms must remain untranslated to maintain brand identity and product co
 | **Global Elite** | Subscription tier name (retired from public pricing, still referenced for dedicated-instance inquiries) |
 | **Custom Install** | Self-hosted product offering |
 
-## About the Brand Name
+## About the brand name
 
 In "Onetime Secret", "Onetime" functions as a compound adjective that modifies the noun "Secret". It describes the key characteristic - the secret can only be accessed once.
 
-### Spelling Variants
+### Spelling variants
 
 Three common spellings exist in English:
 
@@ -37,7 +37,7 @@ Three common spellings exist in English:
 | "one time" | Two words (informal usage) |
 | "onetime" | Compound form - **canonical brand spelling** |
 
-### When Translating Nearby Text
+### When translating nearby text
 
 The hyphenated form "one-time" is standard English when used as an adjective:
 
@@ -55,7 +55,7 @@ But the compound form "Onetime" is always part of the brand name and should not 
 | "Create a one-time link" | Translate "one-time" and "link" as appropriate |
 | "Your OTS account" | Keep "OTS" untranslated |
 
-## Technical Terms to Preserve
+## Technical terms to preserve
 
 These technical terms should generally remain in English (or use established loan words in your language):
 
@@ -72,7 +72,7 @@ These technical terms should generally remain in English (or use established loa
 
 **Note:** Some languages have established equivalents for terms like "URL" or "API". Use your language's standard technical vocabulary, but ensure consistency throughout your translation.
 
-## Product Feature Names
+## Product feature names
 
 These features may have translated descriptions, but the feature name itself follows specific patterns:
 
@@ -83,9 +83,9 @@ These features may have translated descriptions, but the feature name itself fol
 | Webhook | Technical term; keep or use locale standard |
 | Metadata | May be translated if locale has standard term |
 
-## Examples in Context
+## Examples in context
 
-### Correct Usage
+### Correct usage
 
 > Bienvenue sur Onetime Secret
 > (Welcome to Onetime Secret - French)
@@ -96,7 +96,7 @@ These features may have translated descriptions, but the feature name itself fol
 > Identity Plus 플랜으로 업그레이드하세요
 > (Upgrade to Identity Plus plan - Korean)
 
-### Incorrect Usage
+### Incorrect usage
 
 > Bienvenue sur Secret Unique ❌
 > (Brand name translated)
@@ -107,7 +107,7 @@ These features may have translated descriptions, but the feature name itself fol
 > 아이덴티티 플러스 플랜으로 업그레이드하세요 ❌
 > (Product tier name phonetically transliterated - should keep English)
 
-## When in Doubt
+## When in doubt
 
 If you're unsure whether a term should be translated:
 

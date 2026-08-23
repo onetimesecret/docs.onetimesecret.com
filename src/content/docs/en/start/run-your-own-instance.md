@@ -13,7 +13,7 @@ This guide will get you up and running with a self-hosted Onetime Secret instanc
 - **1GB+ RAM** for optimal performance
 - **Redis storage note**: Depending on your Redis configuration, secrets can be stored entirely in memory without ever being written to disk for enhanced security
 
-## Method 1: Docker (Recommended)
+## Method 1: Docker (recommended)
 
 The fastest way to get started uses Docker with minimal configuration.
 
@@ -23,7 +23,7 @@ The fastest way to get started uses Docker with minimal configuration.
 docker run -p 6379:6379 -d redis:bookworm
 ```
 
-### 2. Generate Secret Key
+### 2. Generate secret key
 
 ```bash
 # Generate and store a persistent secret key
@@ -45,13 +45,13 @@ docker run -p 3000:3000 -d \
   onetimesecret/onetimesecret:v0.26.2
 ```
 
-### 4. Access Your Instance
+### 4. Access your instance
 
 Open your browser to:
 - **Web Interface**: http://localhost:3000
 - **API Endpoint**: http://localhost:3000/api/v2/status
 
-## Method 2: Manual Installation
+## Method 2: Manual installation
 
 For those who prefer manual setup, you'll need:
 
@@ -89,7 +89,7 @@ See [README](https://github.com/onetimesecret/onetimesecret#readme) for complete
 2. Create a test secret to verify everything works
 3. Check the API status at http://localhost:3000/api/v2/status
 
-## Admin Setup
+## Admin setup
 
 With Valkey/Redis running and your `.env` loaded into the shell (`set -a; source .env; set +a`), create an admin account directly:
 
@@ -103,16 +103,16 @@ This creates a verified account and prints a one-time generated password — sav
 bundle exec bin/ots customers role promote admin@example.com
 ```
 
-**Note**: The admin area currently has limited functionality - it's readonly config viewing with no user management. More features are planned for future releases.
+**Note**: The admin console lives at `/colonel` and is gated on the `colonel` role. It covers platform statistics and usage trends, customer management (role changes, verification, suspension), organizations, domains, secrets, sessions, banned IPs, billing, email tools, and a read-only view of system configuration. Every mutating admin action is recorded in the admin audit log.
 
-## Next Steps
+## Next steps
 
 Now that your instance is running:
 
 1. **[Reverse proxy and TLS](/en/install/reverse-proxy-and-tls/)** for production use
 2. **[Review configuration options](/en/self-hosting/configuration)** for customization
 
-## Getting Help
+## Getting help
 
 - **Documentation**: Browse our [configuration reference](/en/self-hosting/configuration)
 - **Community**: Join discussions on [GitHub](https://github.com/onetimesecret/onetimesecret)

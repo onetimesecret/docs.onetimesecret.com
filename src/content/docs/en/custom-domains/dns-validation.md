@@ -50,7 +50,7 @@ If problems persist, including any SSL-related errors, contact our support team.
 - [How Custom Domains Work](/en/custom-domains#how-it-works) — the bigger picture.
 - [Where your data lives](/en/security/where-your-data-lives) — choose the right region and its endpoint.
 
-## Questions or Need Support?
+## Questions or need support?
 
 We're here to help.
 

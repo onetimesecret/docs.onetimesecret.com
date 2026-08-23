@@ -6,7 +6,7 @@ description: Information about available language translations and how to contri
 
 Onetime Secret documentation is available in multiple languages to serve our diverse global community. We're continuously working to expand our language offerings and improve existing translations.
 
-## Available Languages
+## Available languages
 
 Onetime Secret documentation is currently available in the following languages:
 
@@ -30,11 +30,11 @@ Onetime Secret documentation is currently available in the following languages:
 
 You can switch between languages using the language selector in the top-right corner of any page.
 
-## Contributing Translations
+## Contributing translations
 
 We welcome contributions to our translation efforts. If you'd like to help translate Onetime Secret documentation to your language, please follow these guidelines:
 
-### Translation Workflow
+### Translation workflow
 
 1. **Locate content**: Original English content is stored in the `/content/docs/en/` directory
 2. **Create corresponding files**: Create matching files in your language's directory (e.g., `/content/docs/de/`)
@@ -42,7 +42,7 @@ We welcome contributions to our translation efforts. If you'd like to help trans
 4. **Preserve frontmatter**: Copy all frontmatter fields, translating only the values
 5. **Submit your work**: Use [GitHub Pull Requests](https://github.com/onetimesecret/onetimesecret) for submissions
 
-### Translation Standards
+### Translation standards
 
 For consistent, high-quality translations:
 
@@ -50,10 +50,10 @@ For consistent, high-quality translations:
 - Refer to our [Terminology Glossary](/en/translations/glossary) for standardized translations of key terms
 - Use the [Quality Checklist](/en/translations/universal/quality-checklist) to verify your translation meets all requirements before submission
 
-## Automatic Fallback
+## Automatic fallback
 
 When content is not available in your selected language, you'll automatically see the English version with a notification indicating the content hasn't been translated yet.
 
-## Need Help?
+## Need help?
 
 If you have questions about translations or need assistance contributing, please [contact our team](https://onetimesecret.com/feedback) or open an issue on our [GitHub repository](https://github.com/onetimesecret/onetimesecret).

@@ -4,7 +4,7 @@ description: Compare our plans for secure secret sharing — expiring links, cus
 ---
 
 
-## Feature Matrix
+## Feature matrix
 
 | Feature / Plan | Not signed in | Free | Identity Plus | Team Plus |
 |---|---|---|---|---|
@@ -20,6 +20,7 @@ description: Compare our plans for secure secret sharing — expiring links, cus
 | Per-domain Signup Validation | ❌ | ❌ | ❌ | ✅ |
 | Single Sign-On (SSO) | ❌ | ❌ | ❌ | ✅ |
 | Teams & Shared Dashboard | ❌ | ❌ | ❌ | ✅ |
+| Audit Logs (Secret Activity) | ❌ | ❌ | ❌ | ✅ |
 | Workspace Branding | ❌ | ❌ | ❌ | ✅ |
 | Members per organization | — | 1 | Up to 50 | Up to 100 |
 | Link Expiration | Up to 7 days | Up to 14 days | Up to 30 days | Up to 30 days |
@@ -33,7 +34,7 @@ any domain, not just your custom domain.
 For current pricing, please visit our [Pricing Page](https://onetimesecret.com/pricing).
 
 
-## Coming Soon
+## Coming soon
 
-* Audit logs and IP-based access rules for Team Plus
+* IP-based access rules for Team Plus
 * [Secretary Links](https://secretarylinks.com) — secure collection links for receiving sensitive information from anyone, no account required

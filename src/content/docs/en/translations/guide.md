@@ -3,7 +3,7 @@ title: Translation style guide
 description: A comprehensive guide for translators working on Onetime Secret localization, covering brand voice, terminology standards, and language-specific requirements to ensure high-quality and consistent translations
 ---
 
-## Translation Style Guide English, Canada (en-CA)
+## Translation style guide English, Canada (en-CA)
 
 ![Translation Style Guide](/socialcards/onetime-socialcard-20250226-1.png)
 
@@ -12,7 +12,7 @@ This style guide provides instruction for translating to the Canadian English lo
 | *This Style Guide is based on content from [Mozilla L10N Styleguides](https://github.com/mozilla-l10n/styleguides/) by Mozilla Contributors, licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).*  |
 |  |
 
-## Target Audience
+## Target audience
 
 Our English-speaking audience includes:
 
@@ -31,11 +31,11 @@ Our English-speaking audience includes:
 
 **Translation Note:** These audience descriptions provide context about how the product is used by different groups and should inform translation tone and style. They are not intended to define or limit how we view our customers.
 
-## Brand Voice
+## Brand voice
 
 About the brand voice and tone.
 
-### Core Values
+### Core values
 
 - Authentic and transparent
 
@@ -45,7 +45,7 @@ About the brand voice and tone.
 
 - Professional yet approachable
 
-### Communication Principles
+### Communication principles
 
 - Adapt tone to match user expertise, from beginners to security professionals
 
@@ -55,7 +55,7 @@ About the brand voice and tone.
 
 - Provide delightful experiences through thoughtful interactions
 
-### Writing Guidelines
+### Writing guidelines
 
 - Use clear, direct language that respects users' time
 
@@ -86,9 +86,9 @@ About the brand voice and tone.
 - In general, use the second person (`you`) to address the user.
 - Avoid using the first person (`my`, `I`) as it can create confusion about who is being addressed.
 
-### UI Text: When to Use Active vs Passive Voice
+### UI text: when to use active vs passive voice
 
-#### Active, Imperative Voice ("Do something")
+#### Active, imperative voice ("Do something")
 
 Buttons
 ✓ Save changes
@@ -99,7 +99,7 @@ Menu items
 ✓ View settings
 ✓ Create new folder
 
-#### Passive or Declarative Voice ("Something happened")
+#### Passive or declarative voice ("Something happened")
 
 Status messages
 ✓ Changes saved
@@ -116,7 +116,7 @@ System states
 ✓ Connection lost
 ✓ Email address not found
 
-#### Examples in Context
+#### Examples in context
 
 Form submission
 ✓ Save changes (button->active)
@@ -131,7 +131,7 @@ File upload
 
 *Create a glossary of key terms, along with their approved translations, to ensure consistent usage across all content.*
 
-### Brand Terms (Do Not Translate)
+### Brand terms (do not translate)
 
 - Onetime Secret
 - OTS (when used as product abbreviation)
@@ -139,7 +139,7 @@ File upload
 - Global Elite (product name)
 - Custom Install (product name)
 
-### About the Brand Name
+### About the brand name
 
 In "Onetime Secret", "Onetime" functions as a compound adjective (also called a attributive adjective) that modifies the noun "Secret". It describes a key characteristic of the secret - that it can only be accessed once. Note the spelling choice. There are actually three common variants of this term:
 
@@ -151,9 +151,9 @@ The hyphenated form "one-time" is considered the standard spelling when the term
 
 The compound form is the canonical spelling for the brand and company name: Onetime Secret.
 
-### Core Concepts
+### Core concepts
 
-#### Secret Management
+#### Secret management
 
 - **secret** (n.) - The confidential information being shared
     - Translations must maintain the context of confidentiality
@@ -171,7 +171,7 @@ The compound form is the canonical spelling for the brand and company name: Onet
     - Translations should maintain the permanence implied
     - Example: "The secret was burned and no longer available"
 
-#### Security Terms
+#### Security terms
 
 - **encryption** (n.) - The process of encoding secrets
     - Technical term that should remain consistent
@@ -186,7 +186,7 @@ The compound form is the canonical spelling for the brand and company name: Onet
 - **password / passphrase**
 - **expiration / expiry / time-to-live**
 
-### Translating Key Terms
+### Translating key terms
 
 For detailed guidance on translating core concepts, see the universal translation resources:
 
@@ -198,7 +198,7 @@ For detailed guidance on translating core concepts, see the universal translatio
 
 - **[Brand Terms](/en/translations/universal/brand-terms)** - Terms that should not be translated (product names, tier names) and guidance on brand name usage.
 
-#### User Management
+#### User management
 
 - **colonel** (n.) - Administrator role
     - Project-specific term, rhymes with "kernel" which is a technical term and central component of an operating system. No other project uses this term in this way. It can be confusing even in North America.
@@ -207,7 +207,7 @@ For detailed guidance on translating core concepts, see the universal translatio
 - **plan** (n.) - Subscription level
     - Use consistently for service tiers
     - Prefer over "tier" or "level"
-    - Example: "Upgrade to a premium plan"
+    - Example: "Upgrade to a paid plan"
 
 ## Formatting and layout
 
@@ -252,7 +252,7 @@ The imperial system is used for everyday weights in Canada. Everything else incl
     Vancouver, BC. V6A 3N2
     CANADA
 
-## Clear, Respectful Communication
+## Clear, respectful communication
 
 Our goal: We want our writing to connect effectively with all readers while being clear, accurate, and respectful.
 
@@ -268,9 +268,9 @@ To verify your writing achieves these goals, ask:
 - Translate with cultural context when translating content for marketing or advertising
 - Use transcreation where you adapt the message so it resonates culturally and emotively with the audience, for creative content including blog posts and marketing copy.
 
-## Related Resources
+## Related resources
 
-### Universal Translation Guidance
+### Universal translation guidance
 
 These resources apply across all languages:
 
@@ -281,18 +281,18 @@ These resources apply across all languages:
 - **[Brand Terms](/en/translations/universal/brand-terms)** - Terms that should not be translated
 - **[Quality Checklist](/en/translations/universal/quality-checklist)** - Pre-submission review checklist
 
-### Language-Specific Resources
+### Language-specific resources
 
 - **[Translation Overview](/en/translations/)** - Introduction and available languages
 - **[Terminology Glossary](/en/translations/glossary)** - Standardized translations for key terms across languages
 
-### Submission Guidelines
+### Submission guidelines
 
 - Use the [Translation PR Template](https://github.com/onetimesecret/docs.onetimesecret.com/blob/main/.github/PULL_REQUEST_TEMPLATE/translation.md) when submitting translations
 - Review the [Quality Checklist](/en/translations/universal/quality-checklist) before creating your pull request
 - Tag language-specific reviewers if known
 
-### Getting Help
+### Getting help
 
 - Open a [Translation Request Issue](https://github.com/onetimesecret/docs.onetimesecret.com/issues/new?template=translation-request.md) for questions or coordination
 - Watch the [GitHub repository](https://github.com/onetimesecret/docs.onetimesecret.com) to follow translation activity
