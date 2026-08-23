@@ -90,6 +90,21 @@ SECRET=
 
 # [independent] Obfuscates numeric account IDs in email-verification
 # links and remember-me cookies.
+#
+# Also keys the pseudonymous Sentry diagnostics references
+# (Onetime::Utils::DiagnosticsRef): the actor reference is derived from the
+# customer's external identifier and the organization reference from the
+# organization objid, both HMAC'd under this secret and truncated. Sentry
+# receives only the opaque reference, never the identifier it was derived
+# from. Those references support issue correlation and affected-account
+# counts within this installation; they are not for product usage analytics
+# or behavioral profiling, and a keyed pseudonym is still potentially
+# personal data. Because both pre-images are minted per installation,
+# separately provisioned installations do not correlate — do not copy this
+# secret between installations. Rotating it re-keys every reference, so
+# correlation with already-reported events breaks; under Sentry's retention
+# window that discontinuity ages out on its own. With no secret set, no
+# references are emitted at all.
 #ACCOUNT_ID_SECRET=  # Since v0.26.0
 
 # Previous AUTH_SECRET value, set only while rotating AUTH_SECRET
@@ -997,6 +1012,7 @@ APPROXIMATED_VHOST_TARGET=  # Since v0.24.0
 
 ```bash
 REGIONS_ENABLED=false
+# This instance's jurisdiction ID (e.g. EU).
 JURISDICTION=
 # Available jurisdictions as ID:domain pairs (e.g., EU:eu.example.com,CA:ca.example.com)
 JURISDICTIONS=  # Since v0.25.5
@@ -1846,6 +1862,12 @@ SENTRY_RELEASE=  # Since v0.24.5
 # other Sentry orgs' traces out. Self-hosted Sentry must set this
 # explicitly; leave empty to continue all inbound traces. No default.
 #SENTRY_ORG_ID=  # Since v0.25.0
+
+# Pseudonymous Sentry references (actor and organization) are keyed by
+# ACCOUNT_ID_SECRET — see that entry for what is derived, what Sentry
+# receives, and what rotating it costs. There is no diagnostics-specific
+# secret and no residency knob: both pre-images are minted per installation,
+# so separately provisioned installations do not correlate by default.
 ```
 
 ### Job System
