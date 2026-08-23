@@ -61,4 +61,13 @@ jobs:
           persist-credentials: false
 
       - name: Assert the page matches .env.reference
-        run: python3 .onetimesecret/scripts/generate-env-docs.py --check .
+        run: |
+          GEN=.onetimesecret/scripts/generate-env-docs.py
+          if [[ ! -f "$GEN" ]]; then
+            echo "::error::The generator does not exist on onetimesecret/onetimesecret@main yet."
+            echo "$GEN is missing. It lands with the app-side change that also adds the"
+            echo '"# Since" markers to .env.reference. Merge the onetimesecret PR first,'
+            echo "then re-run this check. Until then this job cannot verify anything."
+            exit 1
+          fi
+          python3 "$GEN" --check .
