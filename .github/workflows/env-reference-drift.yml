@@ -12,7 +12,15 @@
 # the app shipped v0.26.3 — three releases of variables missing, silently. The
 # nightly run is what turns that silence into a red build.
 #
-# To fix a failure, from a checkout of the app repo with this repo beside it:
+# MERGE ORDER. This job reads .env.reference from the app repo's `main`, so a
+# docs change that depends on an app-repo change is red until that change is
+# merged there. That is the correct reading, not a flake: until the app side
+# lands, this page really does describe variables no released app has. Merge
+# the onetimesecret PR first, then this one. A red check here whose diff shows
+# the page ADDING content is almost always this, not a broken page.
+#
+# To fix a genuine failure, from a checkout of the app repo with this repo
+# beside it:
 #
 #     scripts/generate-env-docs.py ../docs.onetimesecret.com
 #
