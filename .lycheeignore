@@ -81,3 +81,20 @@ mailto:*
 # Note: The internal link check uses --root-dir src/content/docs with
 # --fallback-extensions md,mdoc so that root-relative content paths
 # (like /en/regions/) resolve correctly in offline mode.
+
+# Phase 2 merges/moves (2026-08): non-EN copies still link to retired paths.
+# Every one of these routes resolves in production via config/redirects.mjs
+# (fanned out across all configured locales) or Starlight English fallback;
+# this offline source check cannot see the redirect layer. English content
+# links directly to the new pages, so these patterns only mask
+# stale-but-redirected translation links. Retire each pattern as its locale
+# pages are re-translated (see docs/planning/phase-2-deleted-files.md).
+.*/regions(#.*)?$
+.*/principles$
+.*/principles/data-minimization$
+.*/security-best-practices$
+.*/introduction$
+.*/custom-domains/use-cases$
+.*/custom-domains/brand-guide$
+.*/start/installation$
+.*/start/configuration$

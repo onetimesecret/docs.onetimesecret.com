@@ -1,8 +1,9 @@
 ---
 title: Upgrading to v0.24.0
 description: Guide for upgrading Onetime Secret from v0.22 or v0.23 to v0.24.0
-sidebar:
-  order: 6
+audience: operator
+pageType: how-to
+sourceOfTruth: onetimesecret/.env.reference:324-330 (GENERATED_VALUE_DISPLAY_TTL — the receipt-page reveal window, its 60-second default, and that 0 disables it — which this page's config mapping restates); onetimesecret/.env.reference:5-6 and onetimesecret/.env.example:1-11 (.env.reference is the file that documents every supported environment variable; .env.example is the quick-start subset); onetimesecret/etc/defaults/config.defaults.yaml:288,292 and onetimesecret/.env.reference:422-423 (the account toggles are named AUTH_SIGNUP and AUTH_SIGNIN, both on unless set to false)
 ---
 
 This guide covers upgrading to v0.24.0 from v0.22 or v0.23. There are significant changes to the authentication system, configuration structure, and data model. You'll need to choose an upgrade path, update configuration files, and possibly run data migrations.
@@ -313,10 +314,12 @@ Then manually verify:
 
 ### Environment variables
 
-The `.env.example` file documents every supported environment variable. Key patterns:
+The `.env.reference` file in the repository documents every supported
+environment variable; `.env.example` is the quick-start subset, not the full
+list. Key patterns:
 
-- `AUTH_SIGNIN_ENABLED=true/false` — controls whether the signin route is active
-- `AUTH_SIGNUP_ENABLED=true/false` — controls whether the signup route is active
+- `AUTH_SIGNUP=true/false` — whether visitors can create accounts. On unless set to `false`
+- `AUTH_SIGNIN=true/false` — whether signing in is available at all. On unless set to `false`
 - `GENERATED_VALUE_DISPLAY_TTL=60` — controls how long generated passwords show on the receipt page (seconds; 0 to disable)
 
 ### New configuration files

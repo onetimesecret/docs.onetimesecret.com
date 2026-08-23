@@ -16,7 +16,10 @@ const shouldRenderSearch =
 
 const currentLocale = Astro.currentLocale ?? 'en';
 const docsHome = getRelativeLocaleUrl(currentLocale, '/');
-const guidesLink = getRelativeLocaleUrl(currentLocale, 'introduction/guides');
+// Phase 2 retired introduction/guides; "Start here" is the orientation entry
+// point now. The label key stays nav.label.guides so the 16 non-EN bundles keep
+// resolving — only the destination moved.
+const guidesLink = getRelativeLocaleUrl(currentLocale, 'start');
 const apiLink = 'https://api.onetimesecret.com';
 const selfHostingLink = getRelativeLocaleUrl(currentLocale, 'self-hosting');
 const blogLink = 'https://blog.onetimesecret.com/';
@@ -65,6 +68,10 @@ const blogLink = 'https://blog.onetimesecret.com/';
 		gap: 0.625rem;
 	}
 
+	/* Ink is --sl-color-accent-high, not --sl-color-text-accent: the badge sits on
+	   a 12% tint of the accent itself, and accent-on-its-own-tint is only ~4:1 —
+	   under the 4.5:1 AA floor for 11px text. accent-high is the token meant for
+	   accent-coloured ink and clears it in both themes (5.52:1 / 8.02:1). */
 	.docs-badge {
 		display: none;
 		font-size: 0.6875rem;
@@ -72,7 +79,7 @@ const blogLink = 'https://blog.onetimesecret.com/';
 		letter-spacing: 0.05em;
 		text-transform: uppercase;
 		text-decoration: none;
-		color: var(--sl-color-text-accent);
+		color: var(--sl-color-accent-high);
 		background: color-mix(in srgb, var(--sl-color-text-accent) 12%, transparent);
 		padding: 0.1875rem 0.5rem;
 		border-radius: 5px;
@@ -110,8 +117,12 @@ const blogLink = 'https://blog.onetimesecret.com/';
     margin-left: 0.25rem;
   }
 
+  /* --sl-color-gray-3 is only 4.35:1 on the light nav background, so the resting
+     state uses --sl-color-text and hover steps up to --sl-color-white. Same
+     resting/hover pairing Starlight uses for sidebar links, and it keeps a
+     visible hover step in both themes. */
   .nav-links a {
-    color: var(--sl-color-gray-3);
+    color: var(--sl-color-text);
     text-decoration: none;
     font-size: 0.8125rem;
     font-weight: 500;
@@ -122,7 +133,7 @@ const blogLink = 'https://blog.onetimesecret.com/';
   }
 
   .nav-links a:hover {
-    color: var(--sl-color-text);
+    color: var(--sl-color-white);
     background: color-mix(in srgb, var(--sl-color-text) 7%, transparent);
   }
 
