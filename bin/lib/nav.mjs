@@ -10,7 +10,7 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 export const repoRoot = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
 
 // Same extensions Starlight's docsLoader picks up.
-const DOC_EXT = /\.(md|mdx|mdoc|markdown)$/;
+export const DOC_EXT = /\.(md|mdx|mdoc|markdown)$/;
 
 function* walk(dir) {
   for (const entry of readdirSync(dir, { withFileTypes: true })) {
@@ -56,10 +56,15 @@ export function parseAllowlist(path) {
   return { entries, problems };
 }
 
-/** Every `link` value in config/sidebar.mjs, recursing into group `items`. */
-export async function sidebarLinks() {
+/** The evaluated `sidebar` array from config/sidebar.mjs, structure intact. */
+export async function sidebarTree() {
   const url = pathToFileURL(join(repoRoot, "config", "sidebar.mjs")).href;
   const { sidebar } = await import(url);
+  return sidebar;
+}
+
+/** Every `link` value in config/sidebar.mjs, recursing into group `items`. */
+export async function sidebarLinks() {
   const links = [];
   const collect = (items) => {
     for (const item of items) {
@@ -67,8 +72,29 @@ export async function sidebarLinks() {
       if (item.items) collect(item.items);
     }
   };
-  collect(sidebar);
+  collect(await sidebarTree());
   return links;
+}
+
+/**
+ * Flatten the sidebar into one record per *sibling list*, so a check can reason
+ * about an entry's neighbours rather than only about the entry.
+ *
+ * The root array is included as the group at path "" — a duplicate label
+ * between two top-level entries is the same defect as one inside a group.
+ *
+ * @returns {{path: string, items: object[]}[]} Outermost group first.
+ */
+export async function sidebarGroups() {
+  const groups = [];
+  const collect = (items, path) => {
+    groups.push({ path, items });
+    for (const item of items) {
+      if (item.items) collect(item.items, `${path}/${item.label}`);
+    }
+  };
+  collect(await sidebarTree(), "");
+  return groups;
 }
 
 /**

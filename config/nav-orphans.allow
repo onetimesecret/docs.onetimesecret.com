@@ -4,11 +4,17 @@
 # Format: one slug per line with a trailing "# reason" comment (required).
 # bin/check-orphans.mjs fails on unlisted orphans AND on stale entries here
 # (slug now linked from the sidebar, or page deleted).
-
-docs-overview  # legacy landing page, kept for inbound links
-pricing  # superseded in the sidebar by pricing/compare-plans
-translations/universal/brand-terms  # linked from the translations/universal index body, not the sidebar
-translations/universal/password-passphrase  # linked from the translations/universal index body, not the sidebar
-translations/universal/quality-checklist  # linked from the translations/universal index body, not the sidebar
-translations/universal/secret-concept  # linked from the translations/universal index body, not the sidebar
-translations/universal/voice-and-tone  # linked from the translations/universal index body, not the sidebar
+#
+# The list is EMPTY, and that is the intended state: after the Phase 2
+# information-architecture rework every EN page is reachable from the sidebar.
+# The seven entries this file used to carry were all retired by that rework —
+# docs-overview was deleted outright; pricing gained a sidebar link under
+# Plans & billing; and the five translations/universal/* children, previously
+# reachable only from their index page's body, are now linked from the
+# Translations & contributing group. None of them was an intentional orphan on
+# the merits: each was a page the sidebar could not file, not a page the
+# sidebar chose not to file.
+#
+# Add an entry only for a page that is genuinely meant to be reachable by URL
+# alone — and say why in the reason, because the reason is the only thing
+# stopping the entry from becoming a place to park navigation debt.

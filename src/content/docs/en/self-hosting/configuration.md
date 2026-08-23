@@ -1,8 +1,9 @@
 ---
 title: Configuration Reference
 description: Complete reference for all Onetime Secret configuration options
-sidebar:
-  order: 4
+audience: operator
+pageType: reference
+sourceOfTruth: onetimesecret/etc/defaults/config.defaults.yaml:1-1543 (the shipped default configuration file this page mirrors, in full); onetimesecret/etc/defaults/config.defaults.yaml:3-6 (the site block this page opens with — HOST and the SSL flag that turns https on or off when generating links)
 ---
 
 

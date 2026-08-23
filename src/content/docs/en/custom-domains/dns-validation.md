@@ -1,6 +1,8 @@
 ---
 title: DNS Validation
 description: How Onetime Secret verifies your custom domain's DNS configuration, what each status means, and how to resolve validation failures.
+audience: end-user
+pageType: how-to
 ---
 
 ## What is DNS validation?
@@ -16,7 +18,7 @@ guidance — see the [Setup Guide](/en/custom-domains/setup-guide).
 
 ## The validation lifecycle
 
-1. **Records created** — You add the two records shown in your Domain Dashboard: the TXT ownership record, plus the CNAME (subdomain) or A record (apex) for your chosen [region](/en/regions). They can be created in either order.
+1. **Records created** — You add the two records shown in your Domain Dashboard: the TXT ownership record, plus the CNAME (subdomain) or A record (apex) for your chosen [region](/en/security/where-your-data-lives). They can be created in either order.
 2. **Verification** — Onetime Secret automatically re-checks the domain on a schedule (roughly every 30 minutes), and you can use the **Verify** button to expedite the check; you may need to refresh the page. Every pass checks both the TXT ownership record and your CNAME/A record.
 3. **SSL issuance** — Once verification succeeds, SSL certificate generation begins automatically. This usually takes a few minutes.
 4. **Active** — When complete, the dashboard shows **Active with SSL**, the target address for your region, an SSL status of **Active**, and an SSL renewal date.
@@ -45,8 +47,8 @@ If problems persist, including any SSL-related errors, contact our support team.
 ## Related pages
 
 - [Setup Guide](/en/custom-domains/setup-guide) — create the DNS records and choose your region.
-- [How Custom Domains Work](/en/custom-domains/how-it-works) — the bigger picture.
-- [Data Center Regions](/en/regions) — choose the right region and its endpoint.
+- [How Custom Domains Work](/en/custom-domains#how-it-works) — the bigger picture.
+- [Where your data lives](/en/security/where-your-data-lives) — choose the right region and its endpoint.
 
 ## Questions or Need Support?
 

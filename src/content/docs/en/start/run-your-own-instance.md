@@ -1,0 +1,119 @@
+---
+title: Run your own instance
+description: Quick setup guide to get your self-hosted Onetime Secret instance running
+audience: operator
+pageType: how-to
+---
+
+This guide will get you up and running with a self-hosted Onetime Secret instance in minutes.
+
+## Prerequisites
+
+- You've decided to self-host — see [Hosted or self-hosted?](/en/start/hosted-or-self-hosted) if you haven't
+- **1GB+ RAM** for optimal performance
+- **Redis storage note**: Depending on your Redis configuration, secrets can be stored entirely in memory without ever being written to disk for enhanced security
+
+## Method 1: Docker (Recommended)
+
+The fastest way to get started uses Docker with minimal configuration.
+
+### 1. Start Redis
+
+```bash
+docker run -p 6379:6379 -d redis:bookworm
+```
+
+### 2. Generate Secret Key
+
+```bash
+# Generate and store a persistent secret key
+openssl rand -hex 32 > .ots_secret
+chmod 600 .ots_secret
+echo "Secret key saved to .ots_secret (keep this file secure!)"
+```
+
+### 3. Run Onetime Secret
+
+```bash
+# Run the container using the secret key
+docker run -p 3000:3000 -d \
+  -e REDIS_URL=redis://host.docker.internal:6379/0 \
+  -e SECRET="$(cat .ots_secret)" \
+  -e HOST=localhost:3000 \
+  -e SSL=false \
+  -e RACK_ENV=production \
+  onetimesecret/onetimesecret:v0.26.2
+```
+
+### 4. Access Your Instance
+
+Open your browser to:
+- **Web Interface**: http://localhost:3000
+- **API Endpoint**: http://localhost:3000/api/v2/status
+
+## Method 2: Manual Installation
+
+For those who prefer manual setup, you'll need:
+
+- **Ruby 3.4+** (not available in default system packages — use [rbenv](https://github.com/rbenv/rbenv) or [mise](https://mise.jdx.dev/) to install)
+- **Redis 7+** or **Valkey** (Redis alternative)
+- **Node.js 22+** and **pnpm** (only required for development and building frontend assets)
+
+After cloning the repository, run the initialization script and build frontend assets:
+
+```bash
+bin/setup --init
+cp .env.example .env
+pnpm install && pnpm run build:local
+```
+
+To start the application:
+
+```bash
+source .env.sh  # exports .env vars into the current shell
+bundle exec puma -C etc/puma.rb
+```
+
+Or using the Procfile runner:
+
+```bash
+source .env.sh  # exports .env vars into the current shell
+bundle exec foreman start -f Procfile.production
+```
+
+See [README](https://github.com/onetimesecret/onetimesecret#readme) for complete manual installation details.
+
+## Verification
+
+1. Navigate to http://localhost:3000
+2. Create a test secret to verify everything works
+3. Check the API status at http://localhost:3000/api/v2/status
+
+## Admin Setup
+
+With Valkey/Redis running and your `.env` loaded into the shell (`set -a; source .env; set +a`), create an admin account directly:
+
+```bash
+bundle exec bin/ots customers create admin@example.com --role colonel
+```
+
+This creates a verified account and prints a one-time generated password — save it — unless you pass `--password`. It works in both simple and full authentication modes. To promote an account that already exists:
+
+```bash
+bundle exec bin/ots customers role promote admin@example.com
+```
+
+**Note**: The admin area currently has limited functionality - it's readonly config viewing with no user management. More features are planned for future releases.
+
+## Next Steps
+
+Now that your instance is running:
+
+1. **[Reverse proxy and TLS](/en/install/reverse-proxy-and-tls/)** for production use
+2. **[Review configuration options](/en/self-hosting/configuration)** for customization
+
+## Getting Help
+
+- **Documentation**: Browse our [configuration reference](/en/self-hosting/configuration)
+- **Community**: Join discussions on [GitHub](https://github.com/onetimesecret/onetimesecret)
+- **Issues**: Report bugs on our [issue tracker](https://github.com/onetimesecret/onetimesecret/issues)

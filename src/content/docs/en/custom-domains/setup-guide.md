@@ -1,6 +1,8 @@
 ---
 title: Setup Guide
 description: This guide will walk you through the process of setting up a custom domain for your Onetime Secret account, including the differences between subdomains and apex domains, and choosing your preferred data center region.
+audience: end-user
+pageType: how-to
 ---
 
 ## Prerequisites
@@ -22,7 +24,7 @@ Onetime Secret offers multiple data center regions: EU, UK, US, CA, and NZ. When
 - **For Individuals**: You can choose based on your personal preference, such as proximity for potentially faster access or personal data sovereignty concerns.
 - **For Businesses**: Your choice may depend on your data locality obligations, such as compliance with GDPR, state, or provincial guidelines. Ensure you select the region that best aligns with your regulatory requirements.
 
-Consider your specific needs and requirements when making this choice. For more detailed information about our data center regions and how to choose the right one for your needs, please refer to our [Data Center Regions](/en/regions) guide.
+Consider your specific needs and requirements when making this choice. For more detailed information about our data center regions and how to choose the right one for your needs, please refer to our [Where your data lives](/en/security/where-your-data-lives/) guide.
 
 ## Step 1: Access Domains Dashboard
 

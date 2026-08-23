@@ -1,91 +1,89 @@
 ---
 title: "Simple or Full: choosing your authentication mode"
-description: A decision guide for self-hosters choosing between Simple and Full authentication mode in Onetime Secret v0.24+ — what each needs to run, what each unlocks, and how hard it is to switch later.
-sidebar:
-  order: 3
+description: Which authentication mode to run, what each one changes about the services you operate, and why switching authentication off entirely is a different setting.
+audience: operator
+pageType: concept
+sourceOfTruth: onetimesecret/etc/defaults/auth.defaults.yaml:6-8 (auth.mode accepts simple or full, ships as simple, and is read from AUTHENTICATION_MODE); onetimesecret/lib/onetime/auth_config.rb:78-85 (only full_enabled? and simple_enabled? predicates exist); onetimesecret/etc/defaults/config.defaults.yaml:281-283 (site.authentication.enabled / AUTH_ENABLED is a separate off switch, on unless set to false); onetimesecret/apps/web/auth/application.rb:19-23 (the Rodauth application at /auth skips loading unless the mode is full); onetimesecret/etc/defaults/auth.defaults.yaml:18-36 and onetimesecret/lib/onetime/auth_config.rb:60-63 (the full-mode database URL defaults to sqlite://data/auth.db); onetimesecret/etc/defaults/auth.defaults.yaml:32-33 and onetimesecret/Dockerfile:59 (a SQLite file in a container must sit in a mounted volume directory or the data is lost on restart; the application directory is /app, so the default relative path resolves to /app/data/auth.db); onetimesecret/docker/README.md:110-117 and onetimesecret/docker/compose/docker-compose.full.yml:71,104-109,234,265,272-274 (the full stack keeps the SQLite auth.db in the onetime_app_data named volume, mounted at /app/data on the app, worker-email and scheduler services); onetimesecret/docker/compose/docker-compose.simple.yml:51-53 (the simple stack has no /app/data mount); onetimesecret/docker/compose/docker-compose.simple.yml:36 and onetimesecret/docker/compose/docker-compose.full.yml:75 (each shipped stack sets AUTHENTICATION_MODE to its own name as an overridable default — ${AUTHENTICATION_MODE:-simple} and ${AUTHENTICATION_MODE:-full}); onetimesecret/etc/defaults/config.defaults.yaml:1113 and onetimesecret/docker/README.md:79-84 (JOBS_ENABLED is off unless set to the string true, and is what makes RabbitMQ necessary); onetimesecret/bin/setup:614-621,629-631 (the PostgreSQL-only schema step, and the queue-init warning in full mode); onetimesecret/docker/compose/docker-compose.full.yml:120,166 (the service versions the shipped full stack pins)
 ---
 
-From v0.24 onward, a self-hosted Onetime Secret instance runs its
-authentication in one of three modes: **disabled**, **simple**, or **full**.
-The real decision most operators face is **Simple vs. Full** — disabled is only
-for instances that don't have accounts at all. This page reasons about that
-choice before you touch a config file. When you're ready to set the value, the
-[Upgrading to v0.24+](./upgrading-v0-24) guide has the exact keys.
+## Two settings, not three modes
 
-## The short answer
+`auth.mode` — set by the `AUTHENTICATION_MODE` environment variable — takes
+`simple` or `full`, and nothing else. It ships as `simple`, and the application
+carries predicates for exactly those two values.
 
-- Choose **Simple** if you want a login gate in front of secret creation and
-  nothing more — and you'd rather run only Redis.
-- Choose **Full** if you need MFA, SSO, WebAuthn, or organizations, and you can
-  run PostgreSQL and RabbitMQ alongside Redis.
+Switching authentication off altogether is a separate setting that lives in a
+different file and a different section: `site.authentication.enabled`, set by
+`AUTH_ENABLED`. It is on unless you set it to `false`, and disabling it disables
+API authentication along with everything else. If your instance sits behind a VPN
+or a proxy that already authenticates people, that is the setting you want, and
+the mode stops mattering.
 
-If you're unsure, start with **Simple**. It has the smallest infrastructure
-footprint, accounts behave exactly as they did in older releases, and moving to
-Full later is an additive change — you stand up the extra services when you
-actually need the features they enable.
+## What the mode changes
 
-Not sure you need accounts at all? If your instance sits behind a VPN or a
-reverse proxy that already handles authentication, consider **disabled** mode
-(`authentication.enabled: false`) and skip this decision entirely.
+Simple mode keeps accounts in the Valkey/Redis datastore your instance already
+runs for secrets. It adds no service and no file.
 
-## What actually differs
+Full mode brings up the Rodauth-based authentication application, mounted at
+`/auth`, and stores accounts in a SQL database. The mode gate sits on the
+application itself: it skips loading entirely unless the mode is `full`, so in
+simple mode nothing it serves exists.
 
-| | Simple | Full |
-|---|---|---|
-| Backing store for accounts | Redis | PostgreSQL (Redis still required for sessions/secrets) |
-| Background jobs | Not required | RabbitMQ (email, notifications, webhooks) |
-| MFA / WebAuthn | ❌ | ✅ |
-| Single Sign-On (SSO) | ❌ | ✅ |
-| Organizations / teams | ❌ | ✅ |
-| Future account features | Frozen — no new features | Where all new development goes |
-| Infrastructure to operate | Redis 7+ | Redis 7+, PostgreSQL 17+, RabbitMQ 4.3+ |
+## The full-mode database
 
-## Choosing Simple
+`AUTH_DATABASE_URL` defaults to `sqlite://data/auth.db`, and the code falls back
+to that same value when the configuration is silent. PostgreSQL is a supported
+target, not a requirement — the shipped full stack runs SQLite.
 
-Simple mode is the Redis-backed authentication carried forward from earlier
-versions. It needs no infrastructure beyond the Redis you're already running
-for secrets, and existing accounts keep working exactly as before.
+That database is a single file, and the default path resolves inside the
+application directory — `/app/data/auth.db` in a container. It has to sit in a
+mounted volume directory. Written anywhere else it lives in the container's own
+writable layer, so every account it holds is gone the moment the container is
+replaced. The full stack mounts the `onetime_app_data` named volume at
+`/app/data` on all three services that open the file: the app, the email worker
+and the scheduler. The simple stack has no `/app/data` mount at all, because
+simple mode stores nothing there — which is the one thing to fix if you run full
+mode on the simple stack.
 
-The tradeoff is stated plainly by the project: Simple mode is a **basic gating
-layer**. It authenticates users so you can require an account to create
-secrets, but its functionality is frozen — MFA, WebAuthn, and SSO are not
-available and won't be added. Choose it when a login gate is all you need and
-you value operational simplicity over the account feature set.
+If you point `AUTH_DATABASE_URL` at PostgreSQL on a bare-metal install, one step
+is yours rather than the installer's: the Rodauth schema SQL has to be run
+against the database as a PostgreSQL superuser. The installer prints the exact
+command when it detects full mode, and says in the same breath that SQLite needs
+none of it.
 
-## Choosing Full
+## RabbitMQ is a background-jobs decision, not an auth-mode one
 
-Full mode replaces the Redis-backed auth with Rodauth-based authentication and
-moves account data into PostgreSQL. Background work — email delivery,
-notifications, webhook processing — runs through RabbitMQ.
+Neither mode decides whether background jobs run. That is `JOBS_ENABLED`, which
+is off unless it is set to the literal string `true`, and turning it on is what
+makes a broker necessary — full mode on its own does not.
+[Run as a service](/en/install/run-as-a-service) covers what the worker and the
+scheduler do, and when you need to start them at all.
 
-That's two additional services to provision, secure, back up, and monitor. In
-return you get the features that only exist here: multi-factor authentication,
-WebAuthn, single sign-on, and organizations. This is also where all future
-account development lands, so choose Full if your roadmap points at any of those
-capabilities — not just your day-one needs.
+Expect one misleading warning on the way: in full mode the installer tries to
+declare the job queues and warns, rather than fails, when RabbitMQ is not
+reachable. That warning is not evidence that full mode needs the broker.
 
-## Can you change your mind later?
+## What the project tests against
 
-Going **Simple → Full** is a supported migration: you stand up PostgreSQL and
-RabbitMQ, switch `authentication.mode` to `full`, and run the CLI command that
-populates the authentication database from your existing accounts. Because the
-extra services are only introduced when you flip the mode, you're not carrying
-their operational cost until you choose to.
+No minimum version of any backing service is declared anywhere in the project.
+The shipped full stack pins Valkey 8.1 and RabbitMQ 4.2 by digest and uses SQLite
+for the auth database; that is what the project builds and tests against, not a
+supported floor.
 
-That said, the recommendation is to **pick one mode and stay with it**. The
-migration path exists so nobody is stranded, not so you can move back and
-forth. Going **Full → Simple** in particular is a downgrade in capability —
-accounts relying on MFA, SSO, or organizations lose those features, and the
-authoritative store changes from PostgreSQL back to Redis. Decide based on
-where your roadmap points, not just your day-one needs.
+## Deciding
 
-Whichever mode you pick, **keep your `SECRET` value unchanged** across the
-switch. Changing it makes every previously encrypted secret unreadable — the
-mode decision and the encryption key are independent, and only one of them is
-safe to change casually.
+The mode determines where accounts live, so decide it before the instance has
+accounts in it. Simple mode's store is the datastore you are already operating.
+Full mode's is a separate SQL database — a second store, not a second view of the
+first.
 
-## Next steps
+The two shipped Compose stacks are named after the mode each one defaults to,
+but the mode is a variable rather than a property of the stack: both files set
+`AUTHENTICATION_MODE` to their own name only as a default, and setting the
+variable overrides it either way. What a stack does fix is the set of services
+it brings up alongside the application.
 
-- Set the mode and configure connections: [Upgrading to v0.24+](./upgrading-v0-24)
-- Full settings surface: [Configuration Reference](./configuration)
-- Deciding whether to self-host at all: [Self-hosting vs. the hosted product](./self-hosting-vs-hosted)
+Then install. [Install with Docker](/en/install/docker) covers the two Compose
+stacks, and [Install on Linux](/en/install/linux) covers a bare-metal install on
+Debian or Ubuntu. On both paths the mode comes from `AUTHENTICATION_MODE` in the
+environment the application boots with.
