@@ -30,11 +30,9 @@ docker-compose up -d
 
 ```yaml
 # docker-compose.yml
-version: '3.8'
-
 services:
   onetime:
-    image: onetimesecret/onetimesecret:v0.26.2
+    image: onetimesecret/onetimesecret:v0.26.12
     ports:
       - "3000:3000"
     environment:

@@ -10,8 +10,11 @@ Rodauth's active-session table load-bearing on every authenticated request in `f
 authentication mode. There is no schema migration and no dependency change, so rollback is
 a tag swap.
 
-Upgrading from a release earlier than v0.26.11? Work through the
-[v0.24.0 upgrade guide](./upgrading-v0-24) first, then return here.
+Upgrading from a release earlier than v0.26.11? Work forward through the guides for the
+releases you are skipping, then return here. From v0.22 or v0.23, start with
+[v0.24.0](./upgrading-v0-24). From anywhere in the v0.26 line, complete
+[v0.26.6](./upgrading-v0-26) and then [v0.26.11](./upgrading-v0-26-11). Each of those
+carries configuration work this guide assumes is already done.
 
 ## Before You Start
 
