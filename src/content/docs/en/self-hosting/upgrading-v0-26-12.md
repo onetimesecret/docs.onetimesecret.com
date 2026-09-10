@@ -10,8 +10,11 @@ Rodauth's active-session table load-bearing on every authenticated request in `f
 authentication mode. There is no schema migration and no dependency change, so rollback is
 a tag swap.
 
-Upgrading from a release earlier than v0.26.11? Work through the
-[v0.24.0 upgrade guide](./upgrading-v0-24) first, then return here.
+Upgrading from a release earlier than v0.26.11? Work forward through the guides for the
+releases you are skipping, then return here. From v0.22 or v0.23, start with
+[v0.24.0](./upgrading-v0-24). From anywhere in the v0.26 line, complete
+[v0.26.6](./upgrading-v0-26) and then [v0.26.11](./upgrading-v0-26-11). Each of those
+carries configuration work this guide assumes is already done.
 
 ## Before You Start
 
@@ -48,9 +51,16 @@ signed-in request, which looks like the site being down, so establish that first
    `[active_session_gate] authdb unreachable`.
 
    :::caution
-   Setting `AUTH_ACTIVE_SESSIONS_ENABLED=false` removes this dependency, but it also
-   disables per-request revocation enforcement — a revoked session keeps working until it
-   expires on its own. Do not use it as an availability workaround.
+   Setting `AUTH_ACTIVE_SESSIONS_ENABLED=false` removes this dependency, but it is a
+   deploy-time product decision, not an incident toggle. With it off, Rodauth writes no
+   active-session rows and stamps no join key at login, so user-driven revocation (the
+   sessions card, "sign out everywhere", Rodauth Admin) has nothing to act on, and the
+   72-hour inactivity and 30-day lifetime deadlines are not enforced at all: a Rack
+   session that keeps being used lives indefinitely. Operator-driven revocation
+   (`ots sessions revoke-all`, the Colonel console, password and email change) still
+   deletes the Redis blob and keeps working. Sessions minted while the flag was off carry
+   no join key and stay exempt from the gate after it is turned back on, until their
+   24-hour idle TTL clears them. Do not use it as an availability workaround.
    :::
 
 2. **Pull `v0.26.12` and restart.** No migration runs. Existing sessions signed in before
@@ -101,9 +111,12 @@ RODAUTH_ADMIN_URL=http://127.0.0.1:9292
 **Changed behavior**
 
 ```bash
-# Unchanged default (on). What changed is its reach: this flag now also controls
-# whether session revocation is enforced on every request, not just whether the
-# Active Sessions card is shown.
+# Unchanged default (on). What changed is its reach. Before v0.26.12 the flag
+# controlled whether Rodauth tracked sessions at all (rows, join-key stamp,
+# /auth/active-sessions routes), but nothing outside those routes consulted the
+# rows, and the settings card was hidden by a hardcoded `false` regardless. It
+# now also gates per-request revocation enforcement, the two session deadlines,
+# and (for the first time) whether the Active Sessions card is shown.
 #
 # Parsed as ENV['AUTH_ACTIVE_SESSIONS_ENABLED'] != 'false' — only the exact
 # lowercase string 'false' disables it. 'False', '0', 'no' and 'off' leave it ON.
@@ -128,7 +141,9 @@ sessions page. Expected. The 30-day lifetime deadline behaves the same way.
 
 ### Session revocation still doesn't take effect
 
-`AUTH_ACTIVE_SESSIONS_ENABLED` is set to `false`, or the mode is not `full`.
+`AUTH_ACTIVE_SESSIONS_ENABLED` is set to `false`, or the mode is not `full`. With the flag
+off this affects user-driven revocation only; `ots sessions revoke-all` and the other
+operator-driven paths still work.
 
 ### Account deletion from Account Settings still fails
 
