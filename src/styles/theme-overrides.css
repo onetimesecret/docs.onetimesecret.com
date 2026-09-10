@@ -43,9 +43,18 @@ header.header {
   transition: color 0.15s ease, background-color 0.15s ease;
 }
 
-/* Active sidebar link - accent indicator */
-.sidebar a[aria-current="page"] {
+/* Active sidebar link - accent indicator.
+   Starlight's default pairs `color: var(--sl-color-text-invert)` with a solid
+   `--sl-color-text-accent` fill. This override replaces that fill with a 10%
+   tint, so the inverted text color has to be replaced too: left as-is it is
+   white on near-white in light mode (1.14:1) and dark red on dark red in dark
+   mode (1.41:1). `--sl-color-accent-high` is the accent shade Starlight defines
+   as readable against the page background in each theme. */
+.sidebar a[aria-current="page"],
+.sidebar a[aria-current="page"]:hover,
+.sidebar a[aria-current="page"]:focus {
   background: color-mix(in srgb, var(--sl-color-text-accent) 10%, transparent);
+  color: var(--sl-color-accent-high);
   font-weight: 600;
   position: relative;
 }
