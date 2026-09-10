@@ -31,15 +31,6 @@ https://onetimesecret.com/*
 https://*.onetimesecret.com/*
 
 # Exclude placeholder/example URLs
-# The self-hosting environment-variable reference mirrors the release's
-# .env.reference verbatim, so its code comments carry a bare "https://..."
-# placeholder, third-party API base URLs that reject HEAD, an authenticated
-# vendor dashboard, and the internal dev host. None are navigable links.
-https://...
-https://api.lettermint.co/*
-https://dash.lettermint.co/*
-https://api.smtp2go.com/*
-https://*.onetime.dev/*
 https://example.com/*
 https://yourdomain.com/*
 https://yourbrand.com/*
