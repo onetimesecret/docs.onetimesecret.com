@@ -11,14 +11,6 @@ This guide covers all environment variables available in Onetime Secret v0.24+.
 The **[Configuration Generator](/en/self-hosting/configuration-generator/)** produces a matching `.env` starter (with secret-bearing variables left blank for you to fill in) alongside `config.yaml` / `auth.yaml` fragments, based on a few preset choices — generated in your browser from the config schemas.
 :::
 
-:::note[Variables added since v0.25]
-The reference below covers v0.24 and v0.25. Variables the v0.26 line added, or whose reach it changed, are documented in the upgrade guide for the release that introduced them:
-
-- `TRUSTED_PROXY_ENABLED` — [Upgrading to v0.26.6](./upgrading-v0-26)
-- `TRUSTED_PROXY_MODE`, `TRUSTED_PROXY_HEADER`, `TRUSTED_PROXY_CIDRS`, `TRUSTED_PROXY_DEPTH`, `SESSION_COOKIE_SECURE`, `COLONEL_ELEVATION_ENABLED`, `COLONEL_ELEVATION_REAUTH_GRACE`, `SECRET_CREATE_RATE_LIMIT_ENABLED`, `SECRET_CREATE_RATE_LIMIT_MAX_PER_IP`, `SECRET_CREATE_RATE_LIMIT_WINDOW`, `SECRET_CREATE_RATE_LIMIT_LOCKOUT` — [Upgrading to v0.26.11](./upgrading-v0-26-11)
-- `RODAUTH_ADMIN_URL`, and the widened reach of `AUTH_ACTIVE_SESSIONS_ENABLED` — [Upgrading to v0.26.12](./upgrading-v0-26-12)
-:::
-
 ## Environment Variables
 
 Set these in your `.env` file or environment or add them to your docker commands or docker-compose.yml file. All variables are optional unless marked as required.
