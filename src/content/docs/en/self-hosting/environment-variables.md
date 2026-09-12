@@ -3,7 +3,7 @@ title: Environment Variables Reference
 description: A reference for Onetime Secret environment variables
 audience: operator
 pageType: reference
-sourceOfTruth: onetimesecret/.env.reference:1-2367 (the application's own complete environment-variable reference, which this page mirrors); onetimesecret/.env.reference:5-10 (that file — not .env.example — is the one documenting every supported variable, and it marks which values are derived from SECRET and which are independent)
+sourceOfTruth: onetimesecret/.env.reference:1-2370 (the application's own complete environment-variable reference, which this page mirrors); onetimesecret/.env.reference:5-10 (that file — not .env.example — is the one documenting every supported variable, and it marks which values are derived from SECRET and which are independent)
 sidebar:
   order: 4
 ---
@@ -28,6 +28,11 @@ Set these in your `.env` file or environment or add them to your docker commands
 A trailing `# Since vX.Y.Z` comment marks the release a variable first
 shipped in. A variable with no such comment predates v0.24.0.
 `# Since unreleased` means it is merged but not yet in a tagged release.
+
+The marker describes the variable; it is not part of the value. Remove it
+when copying a line into an env file — `docker run --env-file` and
+`docker compose --env-file` do not strip a trailing comment, so the marker
+would end up inside the value.
 
 ```bash
 # Onetime Secret - Full Environment Variable Reference
