@@ -25,14 +25,12 @@ Set these in your `.env` file or environment or add them to your docker commands
   overwrites it. Edit .env.reference and regenerate instead.
 -->
 
-A trailing `# Since vX.Y.Z` comment marks the release a variable first
-shipped in. A variable with no such comment predates v0.24.0.
-`# Since unreleased` means it is merged but not yet in a tagged release.
-
-The marker describes the variable; it is not part of the value. Remove it
-when copying a line into an env file — `docker run --env-file` and
-`docker compose --env-file` do not strip a trailing comment, so the marker
-would end up inside the value.
+A trailing `# Since vX.Y.Z` records the release a variable first shipped in;
+`# Since unreleased` means it ships in the next one. A variable with no
+marker predates v0.24.0. The marker is a comment about the variable, not
+part of its value — drop it when copying a line, since `docker run
+--env-file` and `docker compose --env-file` take the whole rest of the line
+as the value rather than stripping a trailing comment.
 
 ```bash
 # Onetime Secret - Full Environment Variable Reference
