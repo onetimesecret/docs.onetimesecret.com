@@ -7,7 +7,7 @@ pageType: how-to
 
 While Onetime Secret is designed with security in mind, following these best practices can further enhance the protection of your sensitive information, especially when using features like Custom Domains.
 
-## Best Practices for Secret Sharing
+## Best practices for secret sharing
 
 1. **Set Appropriate Expiration Times**: Choose the shortest practical expiration time for your secrets. This minimizes the window of opportunity for unauthorized access.
 
@@ -21,7 +21,7 @@ While Onetime Secret is designed with security in mind, following these best pra
 
 6. **Educate Users**: If using Onetime Secret within an organization, educate your team about proper usage and security practices specific to secret sharing.
 
-## Security Benefits of Custom Domains
+## Security benefits of Custom Domains
 
 Using Custom Domains with Onetime Secret offers several security advantages:
 
@@ -35,7 +35,7 @@ Using Custom Domains with Onetime Secret offers several security advantages:
 
 Onetime Secret handles the technical aspects of securing your custom domain, including SSL/TLS configuration and domain activity monitoring, allowing you to focus on these strategic security benefits.
 
-## API Usage Security
+## API usage security
 
 If you're using the Onetime Secret API:
 
@@ -45,7 +45,7 @@ If you're using the Onetime Secret API:
 
 3. **Limit API Access**: Use the principle of least privilege when setting up API access. Only grant the permissions necessary for each specific use case.
 
-## Advanced Self-Hosted Security
+## Advanced self-hosted security
 
 This section covers advanced security considerations for organizations running their own instance of Onetime Secret. You can find the open source project on [GitHub](https://github.com/onetimesecret/onetimesecret) and official container images at [GitHub Container Registry](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret).
 
@@ -62,7 +62,7 @@ The recommendations below can be implemented at your infrastructure level when s
 5. **Encryption at Rest**: While Onetime Secret handles encryption, for highly sensitive data, consider encrypting the content before creating the secret for an additional layer of protection.
 
 
-## Incident Response
+## Incident response
 
 This section outlines general security recommendations that may be helpful for your organization. These recommendations are not specific features of our service.
 

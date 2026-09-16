@@ -39,7 +39,7 @@ Custom Domains allow you to use your own domain name for Onetime Secret links, i
 
 ### Your Brand, Our Security
 
-By leveraging Custom Domains, you're not just sharing secrets; you're reinforcing your brand, enhancing trust, and ensuring data locality compliance with every interaction. Upgrade to the Identity plan today to unlock this powerful feature and take your secret sharing to the next level.
+Custom Domains reinforce your brand, give recipients a familiar hostname to trust, and let you keep data in the region you choose. Free accounts include one custom domain; Identity Plus and Team Plus include unlimited domains — see [Compare plans](/en/pricing/compare-plans).
 
 <img src="/img/docs/custom-domains/branded-homepage-enabled.png" alt="Custom domain settings" width="600" />
 
@@ -121,13 +121,13 @@ When handling sensitive employee information such as salary details, tax identif
 
 When managing rotating clinical staff, residents, or temporary personnel, securely communicate initial login credentials through tempaccess.example.com. Administrative teams can create time-sensitive links containing system usernames and temporary passwords, where the secure message containing these credentials expires after first viewing.
 
-Note: When implementing this solution, ensure your complete security stack maintains compliance with relevant healthcare regulations such as HIPAA or GDPR. OneTimeSecret should be used only for the secure communication of initial access credentials, while actual system access durations and permissions should be managed through your organization's access control systems. While the service provides more security than email for sharing sensitive information like PHI, it should be used as a stopgap rather than a permanent solution for such data - consider implementing dedicated HIPAA-compliant secure messaging systems for regular PHI communication.
+Note: When implementing this solution, ensure your complete security stack maintains compliance with relevant healthcare regulations such as HIPAA or GDPR. Onetime Secret should be used only for the secure communication of initial access credentials, while actual system access durations and permissions should be managed through your organization's access control systems. While the service provides more security than email for sharing sensitive information like PHI, it should be used as a stopgap rather than a permanent solution for such data - consider implementing dedicated HIPAA-compliant secure messaging systems for regular PHI communication.
 
 The ability to generate secure, time-bound links through your branded domain provides additional security without compromising efficiency. Each use case demonstrates how Custom Domains enhance both security posture and professional presence.
 
 ## Important Considerations
 
-- Custom Domains are a premium feature available with the Identity plan.
+- Free accounts include one custom domain; Identity Plus and Team Plus include unlimited domains.
 - You are responsible for maintaining and renewing your domain registration.
 - Proper SSL/TLS configuration is crucial for security (handled automatically by Onetime Secret).
 - Ensure your chosen domain complies with your organization's branding guidelines.

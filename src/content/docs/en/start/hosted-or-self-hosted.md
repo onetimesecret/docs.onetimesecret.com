@@ -44,7 +44,7 @@ The hosted service is the right default for most people and most organizations.
 You get secure, expiring secret links with no infrastructure to run, and you can
 pick from five [data-center regions](/en/security/where-your-data-lives) — Canada, the EU, New Zealand,
 the UK, and the US — to keep data where you need it. Paid
-[plans](/en/pricing/compare-plans) layer on custom domains, branding, SSO, and
+[plans](/en/pricing/compare-plans) layer on unlimited custom domains, branding, SSO, and
 team features without any of the operational burden.
 
 The tradeoff: secrets transit and are stored on infrastructure we operate.

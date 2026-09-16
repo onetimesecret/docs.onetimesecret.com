@@ -1,0 +1,26 @@
+extends: substitution
+message: "Product tier: use the official name '%s'."
+link: /en/translations/universal/brand-terms
+level: error
+ignorecase: false
+# Invented tier names that map 1:1 onto an official tier. TierNames.yml covers
+# miscasings of names that exist; this covers names that don't exist at all
+# ("the Identity plan"), which is a factual error about the product rather than
+# a style slip — hence error rather than warning.
+#
+# Case-sensitive on purpose. Capitalised "Identity plan" reads as a tier name;
+# lowercase "identity provider" and "team plans" are ordinary prose and are left
+# alone. The official names always carry "Plus", so "Identity Plus plan" and
+# "Team Plus plans" never match — the word after Identity/Team must be plan/tier.
+#
+# "Team" is singular-only: "the Team plan" is tier usage, but a sentence-case
+# heading like "Team plans for growing companies" is legitimate generic prose.
+# "Identity" takes the plural too, since capitalised "Identity plans" has no
+# generic reading.
+#
+# \s+ rather than a literal space so the match survives hard-wrapped paragraphs.
+swap:
+  'Identity\s+[Pp]lans?': Identity Plus
+  'Identity\s+[Tt]iers?': Identity Plus
+  'Team\s+[Pp]lan': Team Plus
+  'Team\s+[Tt]ier': Team Plus

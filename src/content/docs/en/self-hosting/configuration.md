@@ -13,7 +13,7 @@ This comprehensive guide covers all configuration options for self-hosted Onetim
 Not sure where to start? The **[Configuration Generator](/en/self-hosting/configuration-generator/)** lets you pick a few preset options (deployment mode, email delivery, SSO, custom domains, and more) and copies out ready-to-use `etc/config.yaml` and `etc/auth.yaml` fragments plus a matching `.env` starter — all generated in your browser from the config schemas.
 :::
 
-## Configuration Files
+## Configuration files
 
 Onetime Secret uses multiple configuration files:
 
@@ -22,7 +22,7 @@ Onetime Secret uses multiple configuration files:
 - **`etc/config.yaml`** - Main application configuration using ERB templates. Environment variables are integrated here, making it easy to see how each setting is applied. (Copy from `etc/defaults/config.defaults.yaml`)
 
 
-## Main Configuration
+## Main configuration
 
 The main configuration file is `etc/config.yaml`, which uses ERB templates to integrate environment variables.
 
@@ -34,7 +34,7 @@ The main configuration file is `etc/config.yaml`, which uses ERB templates to in
 **View the complete configuration file:**
 [config.defaults.yaml](https://raw.githubusercontent.com/onetimesecret/onetimesecret/main/etc/defaults/config.defaults.yaml)
 
-### Key Configuration Sections
+### Key configuration sections
 
 Here are the most important sections you'll likely need to customize:
 

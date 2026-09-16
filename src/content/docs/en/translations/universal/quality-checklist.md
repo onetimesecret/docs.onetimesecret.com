@@ -5,7 +5,7 @@ description: A comprehensive checklist for ensuring high-quality, consistent tra
 
 This checklist helps ensure translations meet Onetime Secret's quality standards before submission. Use this as a guide when translating documentation or reviewing translation contributions.
 
-## Pre-Translation Planning
+## Pre-translation planning
 
 Before starting your translation:
 
@@ -15,7 +15,7 @@ Before starting your translation:
 - [ ] Identify the source English files you'll be translating
 - [ ] Verify the directory structure for your target locale exists
 
-## Core Quality Criteria
+## Core quality criteria
 
 ### 1. Completeness ✅
 
@@ -29,7 +29,7 @@ Before starting your translation:
   - Code examples and command-line syntax
   - Brand names (Onetime Secret, GitHub, etc.)
 
-### 2. Formality Consistency ✅
+### 2. Formality consistency ✅
 
 - [ ] Consistent use of formal/informal address throughout
   - German: Use "Sie/Ihre" (formal) consistently
@@ -40,7 +40,7 @@ Before starting your translation:
 - [ ] Address matches target audience (professional B2B users)
 - [ ] Tone is professional but approachable
 
-### 3. Terminology Standards ✅
+### 3. Terminology standards ✅
 
 - [ ] Core terms match the [Glossary](/en/translations/glossary):
   - **secret** → (check glossary for your language)
@@ -55,7 +55,7 @@ Before starting your translation:
   - OTS (not translated when used as product abbreviation)
   - Product names: Identity Plus, Global Elite, Custom Install
 
-### 4. Link Localization ✅
+### 4. Link localization ✅
 
 - [ ] All internal documentation links use locale prefix:
   - ✅ Correct: `[Guide](/fr/translations/guide)`
@@ -66,7 +66,7 @@ Before starting your translation:
 - [ ] Anchor links are updated if heading text changed
 - [ ] All links tested and working
 
-### 5. Markdown Formatting ✅
+### 5. Markdown formatting ✅
 
 - [ ] No malformed markdown syntax:
   - Links: `[text](url)` format correct
@@ -78,7 +78,7 @@ Before starting your translation:
 - [ ] Tables are properly formatted with aligned columns
 - [ ] Line breaks and spacing match source document
 
-### 6. File Structure ✅
+### 6. File structure ✅
 
 - [ ] File placed in correct locale directory (e.g., `/content/docs/fr/`)
 - [ ] Filename matches English source exactly
@@ -87,7 +87,7 @@ Before starting your translation:
 - [ ] Line endings are consistent (LF preferred)
 - [ ] Frontmatter YAML is valid and complete
 
-### 7. Cultural Adaptation ✅
+### 7. Cultural adaptation ✅
 
 - [ ] Examples are culturally appropriate
 - [ ] Date formats match locale conventions (if applicable)
@@ -97,7 +97,7 @@ Before starting your translation:
 - [ ] Time formats match locale (12h vs 24h)
 - [ ] Regional variants respected (e.g., fr-FR vs fr-CA)
 
-### 8. Natural Language Quality ✅
+### 8. Natural language quality ✅
 
 - [ ] Translation sounds natural, not machine-translated
 - [ ] Grammar is correct for target language
@@ -107,9 +107,9 @@ Before starting your translation:
 - [ ] Technical accuracy maintained while sounding natural
 - [ ] Spelling is correct (including diacritics/accents)
 
-## Post-Translation Review
+## Post-translation review
 
-### Self-Review
+### Self-review
 
 - [ ] Read entire translation aloud to check flow
 - [ ] Compare side-by-side with English to ensure nothing missed
@@ -118,14 +118,14 @@ Before starting your translation:
 - [ ] Test in local development environment if possible
 - [ ] Run spell checker for target language
 
-### Peer Review (Recommended)
+### Peer review (recommended)
 
 - [ ] Have another native speaker review translation
 - [ ] Get feedback on terminology choices
 - [ ] Verify formality level is appropriate
 - [ ] Confirm cultural adaptations make sense
 
-### Technical Validation
+### Technical validation
 
 - [ ] Markdown renders correctly (no broken formatting)
 - [ ] Images display with translated alt text
@@ -133,7 +133,7 @@ Before starting your translation:
 - [ ] Code examples work (if translatable portions were changed)
 - [ ] No broken links or 404 errors
 
-## Accessibility Considerations
+## Accessibility considerations
 
 - [ ] Image alt text is translated
 - [ ] Link text is descriptive (not just "click here")
@@ -141,7 +141,7 @@ Before starting your translation:
 - [ ] Tables have proper header cells
 - [ ] Language attributes set correctly if using HTML
 
-## Submission Checklist
+## Submission checklist
 
 Before creating your pull request:
 
@@ -152,9 +152,9 @@ Before creating your pull request:
 - [ ] Referenced any related issues
 - [ ] Requested review from language-specific reviewers (if known)
 
-## Quick Reference
+## Quick reference
 
-### Common Issues to Avoid
+### Common issues to avoid
 
 ❌ **Don't:**
 - Mix formal and informal address
@@ -172,7 +172,7 @@ Before creating your pull request:
 - Provide context in PR descriptions
 - Review your own work before submitting
 
-## Getting Help
+## Getting help
 
 If you're unsure about any aspect of translation:
 
@@ -183,7 +183,7 @@ If you're unsure about any aspect of translation:
 5. Tag language-specific reviewers if known
 6. [Contact the team](https://onetimesecret.com/feedback) for clarification
 
-## Quality Grading (Internal Reference)
+## Quality grading (internal reference)
 
 Based on QA reviews, translations are graded on:
 

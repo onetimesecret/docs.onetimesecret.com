@@ -22,7 +22,7 @@ pageType: how-to
 
 Back on the Domain Dashboard, you can enable or disable your public homepage and manage your brand settings anytime.
 
-## Logo Management
+## Logo management
 Upload your brand logo through the admin interface. The system accepts PNG or JPG files under 1MB.
 
 ### Upload logo
@@ -36,7 +36,7 @@ Remove or replace logos as needed through the logo management panel.
 <img src="/img/docs/custom-domains/guide-brand-admin-2.png" alt="Logo management interface with remove option" width="400" />
 
 
-## Brand Customization
+## Brand customization
 Adjust colors, fonts, and styling through the brand settings interface. Review your changes in real-time through the preview panel.
 
 <img src="/img/docs/custom-domains/guide-brand-admin-4.png" alt="Brand customization interface" width="400" />
@@ -46,19 +46,19 @@ Verify your branding changes on the live site after saving.
 
 <img src="/img/docs/custom-domains/guide-brand-admin-3.png" alt="Homepage configuration panel" width="400" />
 
-## Homepage Settings
+## Homepage settings
 
 Back on your Domain Dashboard you can also control whether your branded homepage
 is public and whether visitors may create secrets from it. That setting now has
 its own guide — see [Homepage Secrets](/en/custom-domains/homepage-and-incoming#homepage-secrets).
 
-## Important Notes
+## Important notes
 - Changes process immediately upon saving
 - Allow up to 5 minutes for CDN cache refresh
 - Preview panel shows real-time rendering
 - Settings are domain-specific
 
-## Questions or Need Support?
+## Questions or need support?
 
 We're here to help.
 

@@ -1,0 +1,26 @@
+extends: existence
+message: "'%s' is not an Onetime Secret tier. Use Free, Identity Plus, Team Plus, Global Elite, or Custom Install."
+link: /en/translations/universal/brand-terms
+level: error
+ignorecase: false
+# Tier names that were invented wholesale and have no official counterpart to
+# swap in, so this is an existence check rather than a substitution — the writer
+# has to decide which real tier was meant. TierAliases.yml handles the invented
+# names that do map 1:1.
+#
+# Case-sensitive on purpose, and always anchored to plan/tier: "basic
+# functionality", "premium users", and "enterprise deployments" are legitimate
+# prose and must not fire. Only the tier-name construction is flagged.
+#
+# \s+ rather than a literal space so the match survives hard-wrapped paragraphs.
+tokens:
+  - 'Premium\s+[Pp]lans?'
+  - 'Premium\s+[Tt]iers?'
+  - 'Basic\s+[Pp]lans?'
+  - 'Basic\s+[Tt]iers?'
+  - 'Pro\s+[Pp]lans?'
+  - 'Pro\s+[Tt]iers?'
+  - 'Starter\s+[Pp]lans?'
+  - 'Starter\s+[Tt]iers?'
+  - 'Enterprise\s+[Pp]lans?'
+  - 'Enterprise\s+[Tt]iers?'
