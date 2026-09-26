@@ -39,7 +39,7 @@
     "@tailwindcss/vite": "^4.3.3",
     "accessible-astro-components": "^5.8.0",
     "astro": "^7.3.5",
-    "devalue": "^5.9.4",
+    "devalue": "^6.0.2",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
     "react-hotkeys-hook": "^5.3.3",
