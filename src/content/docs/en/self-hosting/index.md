@@ -15,7 +15,7 @@ The current stable release is **v0.26** (the `main` branch). It runs in two mode
 
 If you are coming from v0.22 or v0.23, follow the [Upgrading to v0.24+](./upgrading-v0-24) guide, which covers the configuration and data-model changes and how to pick an auth mode.
 
-Already on v0.26? Start at the guide for the release you are running and work forward: [v0.26.6](./upgrading-v0-26) covers the admin host gate and trusted-proxy hardening from v0.26.5, plus the Host-rewriting-proxy auth fixes and billing federation change introduced in v0.26.6; [v0.26.11](./upgrading-v0-26-11) covers the proxy, session-cookie, and Colonel authentication changes; and [v0.26.12](./upgrading-v0-26-12) covers the session-token disclosure fix and the per-request active-session gate in full mode.
+Already on v0.26? Start at the guide for the release you are running and work forward: [v0.26.6](./upgrading-v0-26) covers the admin host gate and trusted-proxy hardening from v0.26.5, plus the Host-rewriting-proxy auth fixes and billing federation change introduced in v0.26.6; [v0.26.11](./upgrading-v0-26-11) covers the proxy, session-cookie, and Colonel authentication changes; [v0.26.12](./upgrading-v0-26-12) covers the session-token disclosure fix and the per-request active-session gate in full mode; and [v0.26.14](./upgrading-v0-26-14) covers the boot-time auth migration in full mode, the domain refresh job walking every domain, and the working `caddy_on_demand` strategy.
 :::
 
 ## Why Self-Host?
