@@ -106,3 +106,84 @@
   font-style: normal;
   font-display: swap;
 }
+
+/*
+ * Provenance (P+) builds. Nerd Font builds patched with
+ * --provenance=explicit (https://github.com/delano/nerd-fonts/issues/10,
+ * branch delano/self-added-fonts): text marked AI-generated (U+E0101 after
+ * each character, or the PUA-B form U+100000 + code point) renders with a bar
+ * across the glyph; unmarked text renders as the plain face. Self-contained
+ * WOFF2 copied from blog.onetimesecret.com (app/assets/css/font.css); licence
+ * texts (LICENSE / OFL.txt) ship beside the files per OFL 1.1 clause 2.
+ */
+
+/* Zilla Slab Provenance: headings, nav (via --font-brand). */
+@font-face {
+  font-family: 'Zilla Slab Provenance';
+  src: url('./zilla-slab-provenance/ZillaSlabNerdFontPropoP+-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Zilla Slab Provenance';
+  src: url('./zilla-slab-provenance/ZillaSlabNerdFontPropoP+-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Zilla Slab Provenance';
+  src: url('./zilla-slab-provenance/ZillaSlabNerdFontPropoP+-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Zilla Slab Provenance';
+  src: url('./zilla-slab-provenance/ZillaSlabNerdFontPropoP+-BoldItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/*
+ * Maryheather Provenance: body/prose (via --font-serif). Maryheather is
+ * Merriweather patched and renamed — "Merriweather" is an OFL Reserved Font
+ * Name, so the derived family carries a non-reserved name; upstream copyright
+ * and OFL text ship in maryheather-provenance/.
+ */
+@font-face {
+  font-family: 'Maryheather Provenance';
+  src: url('./maryheather-provenance/MaryheatherNerdFontPropoP+-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Maryheather Provenance';
+  src: url('./maryheather-provenance/MaryheatherNerdFontPropoP+-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Maryheather Provenance';
+  src: url('./maryheather-provenance/MaryheatherNerdFontPropoP+-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Maryheather Provenance';
+  src: url('./maryheather-provenance/MaryheatherNerdFontPropoP+-BoldItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
