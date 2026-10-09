@@ -216,11 +216,11 @@ export const sidebar = [
     createLink("configurationReference", "self-hosting/configuration"),
     createLink("configurationGenerator", "self-hosting/configuration-generator"),
     createLink("environmentVariables", "self-hosting/environment-variables"),
-    createLink("upgradingToV023", "self-hosting/upgrading-v0-23"),
-    createLink("upgradingToV024", "self-hosting/upgrading-v0-24"),
     createLink("upgradingToV026", "self-hosting/upgrading-v0-26"),
     createLink("upgradingToV02611", "self-hosting/upgrading-v0-26-11"),
     createLink("upgradingToV02612", "self-hosting/upgrading-v0-26-12"),
+    createLink("upgradingToV02614", "self-hosting/upgrading-v0-26-14"),
+    createLink("upgradingToV02615", "self-hosting/upgrading-v0-26-15"),
   ]),
 
   createLink("restApi", "rest-api"),
