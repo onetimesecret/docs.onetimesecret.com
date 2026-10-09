@@ -32,7 +32,7 @@ docker-compose up -d
 # docker-compose.yml
 services:
   onetime:
-    image: onetimesecret/onetimesecret:v0.26.12
+    image: onetimesecret/onetimesecret:v0.26.15
     ports:
       - "3000:3000"
     environment:
