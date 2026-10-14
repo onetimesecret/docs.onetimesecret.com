@@ -198,8 +198,8 @@ importers:
         specifier: ^7.3.5
         version: 7.3.5(@types/node@24.13.3)(jiti@2.7.0)(yaml@2.9.1)
       devalue:
-        specifier: ^5.9.4
-        version: 5.9.4
+        specifier: ^6.0.3
+        version: 6.0.3
       react:
         specifier: ^19.3.0
         version: 19.3.0
@@ -1907,6 +1907,10 @@ packages:
 
   devalue@5.9.4:
     resolution: {integrity: sha512-sPAT4pztbu6586/hrhOnMKS17IJrvg12mXiSPSS3W5qDeN2RGgvZ0diZCm31dBbnevfVmujNO3IM2wrS4Y2Rhg==}
+
+  devalue@6.0.3:
+    resolution: {integrity: sha512-3woMEITftG1wKeO/4d/QXH1DVKctTSZg3jNGPpjp9hNr5Hos8MCFF5McTML5ZtgKDObm2R591B0spRp2IVernA==}
+    engines: {node: '>=18'}
 
   devlop@1.1.0:
     resolution: {integrity: sha512-RWmIqhcFf1lRYBvNmr7qTNuyCt/7/ns2jbpp1+PalgE/rDQcBT0fioSMUpJ93irlUhC5hrg4cYqe6U+0ImW0rA==}
@@ -4928,6 +4932,8 @@ snapshots:
   detect-libc@2.1.2: {}
 
   devalue@5.9.4: {}
+
+  devalue@6.0.3: {}
 
   devlop@1.1.0:
     dependencies:
