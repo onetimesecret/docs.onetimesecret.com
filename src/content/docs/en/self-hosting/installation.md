@@ -36,7 +36,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - REDIS_URL=redis://redis:6379/0
+      - REDIS_URL=redis://:${REDIS_PASSWORD}@redis:6379/0
       - SECRET=${SECRET}
       - HOST=${HOST:-localhost:3000}
       - SSL=${SSL:-false}
@@ -161,8 +161,8 @@ git rev-parse --short HEAD > .commit_hash.txt
 
 **Using the Procfile runner (simplest):**
 ```bash
-source .env.sh  # exports .env vars into the current shell
-bundle exec foreman start -f Procfile.production
+set -a; source .env; set +a  # exports .env vars into the current shell
+bundle exec foreman start -f Procfile.example
 ```
 
 **Direct Puma:**
@@ -170,7 +170,7 @@ bundle exec foreman start -f Procfile.production
 # Copy the example config (can be used verbatim — the OCI image uses it unmodified)
 cp etc/examples/puma.example.rb etc/puma.rb
 
-source .env.sh  # exports .env vars into the current shell
+set -a; source .env; set +a  # exports .env vars into the current shell
 bundle exec puma -C etc/puma.rb
 ```
 

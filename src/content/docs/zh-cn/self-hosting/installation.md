@@ -36,7 +36,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - REDIS_URL=redis://redis:6379/0
+      - REDIS_URL=redis://:${REDIS_PASSWORD}@redis:6379/0
       - SECRET=${SECRET}
       - HOST=${HOST:-localhost:3000}
       - SSL=${SSL:-false}

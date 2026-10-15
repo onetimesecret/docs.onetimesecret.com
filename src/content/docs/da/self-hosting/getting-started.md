@@ -70,15 +70,15 @@ pnpm install && pnpm run build:local
 For at starte applikationen:
 
 ```bash
-source .env.sh  # eksporterer .env-variabler til den aktuelle shell
+set -a; source .env; set +a  # eksporterer .env-variabler til den aktuelle shell
 bundle exec puma -C etc/puma.rb
 ```
 
 Eller ved hjælp af Procfile-runneren:
 
 ```bash
-source .env.sh  # eksporterer .env-variabler til den aktuelle shell
-bundle exec foreman start -f Procfile.production
+set -a; source .env; set +a  # eksporterer .env-variabler til den aktuelle shell
+bundle exec foreman start -f Procfile.example
 ```
 
 Se [README](https://github.com/onetimesecret/onetimesecret#readme) for komplette manuelle installationsdetaljer.
