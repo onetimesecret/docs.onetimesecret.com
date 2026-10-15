@@ -199,6 +199,10 @@ sudo systemctl enable --now onetimesecret-worker onetimesecret-scheduler
 
 These configuration examples can help you get started, but you should adjust them to fit your specific needs.
 
+:::note[Trust the proxy]
+Behind one of these proxies, every request reaches the application from `127.0.0.1`. Set `TRUSTED_PROXY_ENABLED=true` so it reads the client address from `X-Forwarded-For`. Otherwise every visitor shares one rate-limit bucket, and the password-reset limit (10 an hour) and, in full mode with magic links, the magic-link limit (30 an hour) lock everyone out at once. Loopback and private addresses are trusted once it is on. The application takes the leftmost entry that is not a trusted proxy, so the proxy must replace `X-Forwarded-For` and `X-Forwarded-Host` rather than append to what the client sent. The Nginx and Apache examples below do this, and Caddy does it by default. See [Environment Variables](./environment-variables) for `TRUSTED_PROXY_CIDRS` and the other modes.
+:::
+
 ### Nginx
 
 **Basic Configuration:**
@@ -239,7 +243,8 @@ server {
         proxy_pass http://127.0.0.1:3000;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-For $remote_addr;
+        proxy_set_header X-Forwarded-Host $host;
         proxy_set_header X-Forwarded-Proto $scheme;
     }
 
@@ -248,7 +253,8 @@ server {
         proxy_pass http://127.0.0.1:3000;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-For $remote_addr;
+        proxy_set_header X-Forwarded-Host $host;
         proxy_set_header X-Forwarded-Proto $scheme;
 
         # WebSocket support
@@ -323,6 +329,10 @@ your-domain.com {
 
     # API and app requests to backend
     ProxyPreserveHost On
+    # Drop client-supplied forwarding headers; mod_proxy then adds the real ones
+    RequestHeader unset X-Forwarded-For early
+    RequestHeader unset X-Forwarded-Host early
+    RequestHeader set X-Forwarded-Proto "https"
     ProxyPass /dist !
     ProxyPass / http://127.0.0.1:3000/
     ProxyPassReverse / http://127.0.0.1:3000/

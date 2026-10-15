@@ -179,7 +179,8 @@ server {
         proxy_pass http://127.0.0.1:3000;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-For $remote_addr;
+        proxy_set_header X-Forwarded-Host $host;
         proxy_set_header X-Forwarded-Proto $scheme;
     }
 
@@ -188,7 +189,8 @@ server {
         proxy_pass http://127.0.0.1:3000;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-For $remote_addr;
+        proxy_set_header X-Forwarded-Host $host;
         proxy_set_header X-Forwarded-Proto $scheme;
 
         # WebSocket 支持
@@ -263,6 +265,10 @@ your-domain.com {
 
     # API 和应用程序请求到后端
     ProxyPreserveHost On
+    # Drop client-supplied forwarding headers; mod_proxy then adds the real ones
+    RequestHeader unset X-Forwarded-For early
+    RequestHeader unset X-Forwarded-Host early
+    RequestHeader set X-Forwarded-Proto "https"
     ProxyPass /dist !
     ProxyPass / http://127.0.0.1:3000/
     ProxyPassReverse / http://127.0.0.1:3000/
