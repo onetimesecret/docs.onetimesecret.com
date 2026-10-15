@@ -32,8 +32,15 @@
   --color-gray-900: var(--color-neutral-900);
   --color-gray-950: var(--color-neutral-950);
 
-  /* Custom brand font family. */
-  --font-brand: "Zilla Slab", var(--font-serif);
+  /* Custom brand font family. Provenance (P+) face leads; plain Zilla Slab and
+     the serif stack are fallbacks so text renders before/without the webfont. */
+  --font-brand: "Zilla Slab Provenance", "Zilla Slab", var(--font-serif);
+
+  /* Body/prose serif. Maryheather Provenance leads; Georgia stack falls back.
+     Nothing drives body text off this yet (Starlight body uses --sl-font); it
+     currently feeds only --font-brand's tail. Opt body prose in separately. */
+  --font-serif: "Maryheather Provenance", Georgia, Cambria, "Times New Roman",
+    Times, serif;
 
   /* Custom brand color palette. */
   --color-brand-50: #fcf8f2;
