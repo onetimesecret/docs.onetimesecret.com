@@ -33,11 +33,12 @@ Wybierz metodę wdrożenia najlepiej dopasowaną do Twojego środowiska:
 ### Docker (Zalecany)
 ```bash
 # Uruchom Redis i Onetime Secret
-docker run -p 6379:6379 -d redis:bookworm
-docker run -p 3000:3000 -d \
-  -e REDIS_URL=redis://host.docker.internal:6379/0 \
+docker network create onetime
+docker run -d --name redis --network onetime redis:bookworm
+docker run -p 3000:3000 -d --network onetime \
+  -e REDIS_URL=redis://redis:6379/0 \
   -e SECRET="$(openssl rand -hex 32)" \
-  onetimesecret/onetimesecret:v0.26.15
+  onetimesecret/onetimesecret:v0.26.17
 ```
 
 Dostęp pod adresem `http://localhost:3000`.
