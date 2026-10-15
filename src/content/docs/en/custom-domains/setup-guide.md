@@ -64,6 +64,14 @@ To connect your domain, you need to update your DNS settings. The process differ
      - For US region: 66.51.126.41
      - For other regions: Contact support for current A record IP addresses
 
+### Ownership Record (All Domains)
+
+Also create the TXT record shown on your domain's verification page. Its host starts
+with `_onetime-challenge-` and its value is unique to your domain. Onetime Secret
+checks it to confirm that you own the domain, and serves the domain only once it is
+found. Keep the record in place after the domain is verified: if a later check does
+not find it, the domain stops being served until the record is found again.
+
 Important: Ensure there are no conflicting records for the domain you're using.
 
 <img src="/img/docs/custom-domains/4-Custom-domain-settings.png" alt="Custom domain settings" width="400" />
@@ -107,6 +115,7 @@ Once setup is complete, you should see the following information:
 
 - If verification fails, double-check your DNS settings
 - Ensure you've removed any conflicting records
+- Ensure the TXT ownership record is still in place
 - DNS propagation can take up to 24 hours, though it's usually much faster
 
 ## Using Your Custom Domain

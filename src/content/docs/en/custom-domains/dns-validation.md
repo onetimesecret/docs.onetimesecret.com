@@ -6,8 +6,9 @@ description: How Onetime Secret verifies your custom domain's DNS configuration,
 ## What is DNS validation?
 
 After you add a custom domain and create the required DNS records, Onetime
-Secret needs to confirm that those records point to the correct region endpoint
-before it can issue an SSL certificate and start serving your domain. That
+Secret needs to confirm that you own the domain and that those records point to
+the correct region endpoint before it can issue an SSL certificate and start
+serving your domain. That
 confirmation step is **DNS validation**.
 
 This page focuses on the _validation lifecycle_. For creating the records in the
@@ -16,7 +17,7 @@ guidance — see the [Setup Guide](/en/custom-domains/setup-guide).
 
 ## The validation lifecycle
 
-1. **Records created** — You add the CNAME (subdomain) or A record (apex) shown in your Domain Dashboard for your chosen [region](/en/regions).
+1. **Records created** — You add the CNAME (subdomain) or A record (apex) for your chosen [region](/en/regions), and the TXT ownership record, as shown in your Domain Dashboard.
 2. **Verification** — Onetime Secret automatically attempts to verify the domain. You can use the **Verify** button to expedite the check; you may need to refresh the page.
 3. **SSL issuance** — Once verification succeeds, SSL certificate generation begins automatically. This usually takes a few minutes.
 4. **Active** — When complete, the dashboard shows **Active with SSL**, the target address for your region, an SSL status of **Active**, and an SSL renewal date.
@@ -25,7 +26,7 @@ guidance — see the [Setup Guide](/en/custom-domains/setup-guide).
 
 Your Domain Dashboard reflects where the domain is in this lifecycle:
 
-- **Pending / Unverified** — Records have not yet been detected. DNS changes can take time to propagate (often minutes, but up to 24–48 hours).
+- **Pending / Unverified** — Records have not yet been detected. DNS changes can take time to propagate (often minutes, but up to 24–48 hours). Until the domain is verified, it answers "This domain is not configured" and is not offered for secret links.
 - **Active with SSL** — Verification succeeded and a certificate has been issued. Your secret links now use the custom domain.
 - **Last Monitored** timestamp — Onetime Secret continuously monitors your domain's connectivity. The timestamp confirms the most recent successful check.
 
@@ -38,6 +39,7 @@ If validation does not succeed, work through the following:
 - **Propagation delay** — DNS changes may take up to 24–48 hours to fully propagate. If verification fails initially, wait and try again.
 - **Apex domain limitations** — Apex (root) domains cannot use CNAME records and must use A records; confirm you are using the correct record type.
 - **Domain ownership** — Make sure you have full control of the domain and its DNS settings.
+- **TXT record removed** — Keep the TXT ownership record in place after verification. If a later check does not find it, the domain stops being served until the record is found again.
 
 If problems persist, including any SSL-related errors, contact our support team.
 
