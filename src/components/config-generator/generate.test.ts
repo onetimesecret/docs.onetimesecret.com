@@ -15,6 +15,7 @@ import {
   type Selections,
 } from './generate';
 import { OPTIONS } from './presets';
+import configStaticSchema from './schemas/config-static.schema.json';
 
 const opt = (key: string) => {
   const found = OPTIONS.find((o) => o.key === key);
@@ -34,6 +35,22 @@ describe('defaultFor', () => {
     // default_ttl has no schema default; site.network isn't in the schema.
     expect(defaultFor(opt('default_ttl'))).toBe(604800);
     expect(defaultFor(opt('trusted_proxy_enabled'))).toBe(false);
+  });
+});
+
+describe('presets against the vendored schema', () => {
+  it('offers only email providers the schema accepts for emailer.mode', () => {
+    const schema = configStaticSchema as {
+      properties: { emailer: { properties: { mode: { enum: string[] } } } };
+    };
+    const allowed = schema.properties.emailer.properties.mode.enum;
+    for (const choice of opt('email_provider').choices ?? []) {
+      expect(allowed).toContain(choice.value);
+    }
+  });
+
+  it('puts every option in a group', () => {
+    for (const o of OPTIONS) expect(o.group).toBeTruthy();
   });
 });
 
@@ -126,6 +143,29 @@ describe('generate — dependency enforcement', () => {
       mode: 'full',
       full: { features: { sso: true } },
     });
+  });
+
+});
+
+describe('generate — env starter per selection', () => {
+  it('asks for the sender address whatever the provider', () => {
+    for (const choice of opt('email_provider').choices ?? []) {
+      const sel: Selections = { ...defaultSelections(), email_provider: choice.value };
+      expect(generate(sel).envSnippet).toContain('FROM_EMAIL=');
+    }
+  });
+
+  it('emits the SMTP2GO key only for SMTP2GO', () => {
+    const smtp2go = generate({ ...defaultSelections(), email_provider: 'smtp2go' });
+    expect(smtp2go.envSnippet).toContain('SMTP2GO_API_KEY=');
+    expect(smtp2go.envSnippet).not.toContain('SMTP_HOST=');
+    expect(parse(smtp2go.configYaml).emailer).toEqual({ mode: 'smtp2go' });
+  });
+
+  it('emits the shared SENTRY_DSN so frontend errors are reported too', () => {
+    const result = generate({ ...defaultSelections(), diagnostics_enabled: true });
+    expect(result.envSnippet).toContain('SENTRY_DSN=');
+    expect(result.envSnippet).not.toContain('SENTRY_DSN_BACKEND=');
   });
 
   it('surfaces full-mode secrets in the env starter', () => {
