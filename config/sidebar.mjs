@@ -222,6 +222,7 @@ export const sidebar = [
     createLink("upgradingToV02614", "self-hosting/upgrading-v0-26-14"),
     createLink("upgradingToV02615", "self-hosting/upgrading-v0-26-15"),
     createLink("upgradingToV02617", "self-hosting/upgrading-v0-26-17"),
+    createLink("upgradingToV02618", "self-hosting/upgrading-v0-26-18"),
   ]),
 
   createLink("restApi", "rest-api"),

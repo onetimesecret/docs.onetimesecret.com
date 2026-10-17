@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-This guide documents every environment variable Onetime Secret supports. The reference below tracks `.env.reference` as shipped in v0.26.17. A [legacy section](#legacy-reference-v024) at the end keeps the older v0.24 variable set for instances still on that line.
+This guide documents every environment variable Onetime Secret supports. The reference below tracks `.env.reference` as shipped in v0.26.18. A [legacy section](#legacy-reference-v024) at the end keeps the older v0.24 variable set for instances still on that line.
 
 :::tip[Generate a starter config]
 The **[Configuration Generator](/en/self-hosting/configuration-generator/)** produces a matching `.env` starter (with secret-bearing variables left blank for you to fill in) alongside `config.yaml` / `auth.yaml` fragments, based on a few preset choices — generated in your browser from the config schemas.
