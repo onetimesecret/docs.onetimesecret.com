@@ -42,7 +42,7 @@ docker run -p 3000:3000 -d --network onetime \
   -e HOST=localhost:3000 \
   -e SSL=false \
   -e RACK_ENV=production \
-  onetimesecret/onetimesecret:v0.26.17
+  onetimesecret/onetimesecret:v0.26.18
 ```
 
 ### 4. Access Your Instance
