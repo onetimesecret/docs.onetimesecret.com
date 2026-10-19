@@ -1,6 +1,10 @@
 ---
 title: <Noun of the thing being documented — e.g. "Environment variables">
 description: <One sentence: what surface this page documents exhaustively.>
+audience: <user | admin | developer | operator>
+pageType: reference
+# Optional. Delete if the page describes no application behaviour:
+sourceOfTruth: <onetimesecret/path/to/file.rb (the claim it backs); ...>
 ---
 
 <!--

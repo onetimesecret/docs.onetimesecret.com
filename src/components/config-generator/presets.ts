@@ -20,6 +20,15 @@
 
 export type OptionType = 'select' | 'boolean';
 
+/** UI grouping only; it has no effect on the generated files. */
+export type OptionGroup = 'deployment' | 'features' | 'secrets';
+
+export const GROUPS: Array<{ key: OptionGroup; title: string }> = [
+  { key: 'deployment', title: 'Deployment' },
+  { key: 'features', title: 'Features' },
+  { key: 'secrets', title: 'Secrets and network' },
+];
+
 export interface Choice {
   value: string | number;
   label: string;
@@ -31,6 +40,7 @@ export interface OptionSpec {
   label: string;
   description?: string;
   type: OptionType;
+  group: OptionGroup;
   /** Which file the value is written to. */
   file: 'config' | 'auth';
   /**
@@ -83,13 +93,14 @@ export const OPTIONS: OptionSpec[] = [
       'Simple mode uses Redis/Valkey only, no SQL database. Full mode adds ' +
       'PostgreSQL-backed accounts, teams, and SSO.',
     type: 'select',
+    group: 'deployment',
     file: 'auth',
     // path handled by a custom applier (writes auth.mode)
     schemaPath: { file: 'auth', path: 'mode' },
     fallbackDefault: 'simple',
     choices: [
-      { value: 'simple', label: 'Simple — single container, Redis/Valkey only' },
-      { value: 'full', label: 'Full — accounts, teams, SSO (adds PostgreSQL)' },
+      { value: 'simple', label: 'Simple: Redis/Valkey only' },
+      { value: 'full', label: 'Full: accounts, teams, SSO (adds PostgreSQL)' },
     ],
     env: [
       { name: 'AUTH_DATABASE_URL', secret: true, when: 'full' },
@@ -105,6 +116,7 @@ export const OPTIONS: OptionSpec[] = [
     description:
       'How outgoing mail (verification, notifications, password reset) is sent.',
     type: 'select',
+    group: 'deployment',
     file: 'config',
     path: 'emailer.mode',
     schemaPath: { file: 'config', path: 'emailer.mode' },
@@ -114,8 +126,12 @@ export const OPTIONS: OptionSpec[] = [
       { value: 'ses', label: 'Amazon SES' },
       { value: 'sendgrid', label: 'SendGrid' },
       { value: 'lettermint', label: 'Lettermint' },
+      { value: 'smtp2go', label: 'SMTP2GO' },
     ],
     env: [
+      // Every provider sends from this address; the shipped default is a
+      // CHANGEME placeholder that no provider will accept.
+      { name: 'FROM_EMAIL' },
       { name: 'SMTP_HOST', when: 'smtp' },
       { name: 'SMTP_USERNAME', when: 'smtp' },
       { name: 'SMTP_PASSWORD', secret: true, when: 'smtp' },
@@ -124,6 +140,7 @@ export const OPTIONS: OptionSpec[] = [
       { name: 'SENDGRID_API_KEY', secret: true, when: 'sendgrid' },
       { name: 'LETTERMINT_API_TOKEN', secret: true, when: 'lettermint' },
       { name: 'LETTERMINT_TEAM_TOKEN', secret: true, when: 'lettermint' },
+      { name: 'SMTP2GO_API_KEY', secret: true, when: 'smtp2go' },
     ],
   },
   {
@@ -131,8 +148,9 @@ export const OPTIONS: OptionSpec[] = [
     label: 'Single sign-on (SSO)',
     description:
       'External identity providers via OmniAuth (OIDC, Entra ID, Google, ' +
-      'GitHub). Requires Full deployment mode.',
+      'GitHub). Add the credentials for each provider you use to .env.',
     type: 'boolean',
+    group: 'features',
     file: 'auth',
     path: 'full.features.sso',
     fallbackDefault: false,
@@ -144,6 +162,7 @@ export const OPTIONS: OptionSpec[] = [
     description:
       'Let users share secrets from their own domain instead of the default host.',
     type: 'boolean',
+    group: 'features',
     file: 'config',
     path: 'features.domains.enabled',
     schemaPath: { file: 'config', path: 'features.domains.enabled' },
@@ -155,6 +174,7 @@ export const OPTIONS: OptionSpec[] = [
     description:
       'Advertise multiple regional deployments for data-residency requirements.',
     type: 'boolean',
+    group: 'features',
     file: 'config',
     path: 'features.regions.enabled',
     schemaPath: { file: 'config', path: 'features.regions.enabled' },
@@ -165,11 +185,14 @@ export const OPTIONS: OptionSpec[] = [
     label: 'Error tracking (Sentry)',
     description: 'Report backend, frontend, and worker exceptions to Sentry.',
     type: 'boolean',
+    group: 'features',
     file: 'config',
     path: 'diagnostics.enabled',
     schemaPath: { file: 'config', path: 'diagnostics.enabled' },
     fallbackDefault: false,
-    env: [{ name: 'SENTRY_DSN_BACKEND', secret: true, when: true }],
+    // SENTRY_DSN is the shared default that reaches the backend, frontend,
+    // and workers; SENTRY_DSN_BACKEND would leave the frontend unreported.
+    env: [{ name: 'SENTRY_DSN', secret: true, when: true }],
   },
   {
     key: 'trusted_proxy_enabled',
@@ -178,6 +201,7 @@ export const OPTIONS: OptionSpec[] = [
       'Trust X-Forwarded-For from an upstream proxy (nginx, Caddy, ALB, k8s ' +
       'ingress) when resolving client IPs.',
     type: 'boolean',
+    group: 'secrets',
     file: 'config',
     path: 'site.network.trusted_proxy.enabled',
     // NOTE: site.network is not present in the static schema, so there is no
@@ -188,6 +212,7 @@ export const OPTIONS: OptionSpec[] = [
     key: 'passphrase_required',
     label: 'Require a passphrase on every secret',
     type: 'boolean',
+    group: 'secrets',
     file: 'config',
     path: 'site.secret_options.passphrase.required',
     schemaPath: { file: 'config', path: 'site.secret_options.passphrase.required' },
@@ -197,6 +222,7 @@ export const OPTIONS: OptionSpec[] = [
     key: 'default_ttl',
     label: 'Default secret lifetime',
     type: 'select',
+    group: 'secrets',
     file: 'config',
     path: 'site.secret_options.default_ttl',
     schemaPath: { file: 'config', path: 'site.secret_options.default_ttl' },

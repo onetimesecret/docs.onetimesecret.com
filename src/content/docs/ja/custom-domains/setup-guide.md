@@ -111,7 +111,7 @@ Apexドメインは、DNS標準によりCNAMEレコードを使用できませ�
 ## カスタムドメインの使用
 
 いったんアクティブになると、シークレットリンクはカスタムドメインを使用するようになります。例えば
-https://secrets-example.onetime.dev/secret/abc123`
+`https://secrets-example.onetime.dev/secret/abc123`
 
 ## We've Got You Covered
 

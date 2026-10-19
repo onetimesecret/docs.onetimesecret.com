@@ -1,14 +1,14 @@
 ---
 title: Environment Variables Reference
-description: A reference for Onetime Secret environment variables
+description: "Every environment variable Onetime Secret supports, grouped by subsystem: secrets, connections, authentication, SSO, proxy and client IP, jobs, branding, and diagnostics."
 audience: operator
 pageType: reference
-sourceOfTruth: onetimesecret/.env.reference:1-2370 (the application's own complete environment-variable reference, which this page mirrors); onetimesecret/.env.reference:5-10 (that file — not .env.example — is the one documenting every supported variable, and it marks which values are derived from SECRET and which are independent)
+sourceOfTruth: onetimesecret/.env.reference:1-2674 (the application's own complete environment-variable reference, which this page mirrors); onetimesecret/.env.reference:5-10 (that file — not .env.example — is the one documenting every supported variable, and it marks which values are derived from SECRET and which are independent)
 sidebar:
   order: 4
 ---
 
-This guide covers all environment variables available in Onetime Secret v0.24+.
+This guide documents every environment variable Onetime Secret supports.
 
 :::tip[Generate a starter config]
 The **[Configuration Generator](/en/self-hosting/configuration-generator/)** produces a matching `.env` starter (with secret-bearing variables left blank for you to fill in) alongside `config.yaml` / `auth.yaml` fragments, based on a few preset choices — generated in your browser from the config schemas.
@@ -16,7 +16,10 @@ The **[Configuration Generator](/en/self-hosting/configuration-generator/)** pro
 
 ## Environment Variables
 
-Set these in your `.env` file or environment or add them to your docker commands or docker-compose.yml file. All variables are optional unless marked as required.
+Set these in your `.env` file or environment, or add them to your `docker run` command
+or `docker-compose.yml`. All variables are optional unless a comment marks them required.
+For a smaller starting point than the full set below, the repository also ships
+`.env.example`.
 
 <!-- BEGIN GENERATED: .env.reference -->
 <!--
@@ -70,6 +73,18 @@ SECRET=
 
 # [derived] Rack session signing key
 #SESSION_SECRET=  # Since v0.24.0
+
+# Absolute session lifetime in seconds since sign-in, however active the
+# session is (site.session.absolute_timeout). site.session.expire_after is
+# the idle clock (24h rolling); this is the bound activity cannot slide.
+# Applies in both auth modes: to the session blob (from authenticated_at)
+# and, in full mode, to the active-session row (created_at), where it is
+# also Rodauth's session_lifetime_deadline. Remembered sessions end at
+# their own 14-day deadline first. Accepts a non-negative integer only;
+# anything else falls back to the default.
+# Default: 2592000 (30 days). Set to 0 to disable the bound (not
+# recommended).
+#SESSION_ABSOLUTE_TIMEOUT=2592000  # Since v0.26.14
 
 # [derived] Secret link verification key (Familia::VerifiableIdentifier).
 # Used to generate secret/receipt keys. Derived from SECRET via HKDF.
@@ -135,6 +150,17 @@ SECRET=
 ```bash
 REDIS_URL='redis://maindb:5212/0?timeout=5'
 VALKEY_URL=
+
+# Refuse to boot unless the datastore URI uses TLS (redis.require_tls):
+# rediss:// or valkeys://, with no `ssl` query parameter, whatever the host.
+# Either variable set to the exact string 'true' enables it. Off by default so
+# existing deployments keep booting; while off, a plaintext URI is reported
+# once at boot: a WARNING for a dotted hostname or public IP, an INFO line for
+# a single-label name (a compose service such as `maindb`) or a private, CGNAT
+# or link-local IP, nothing for loopback or a unix socket. Hostnames are never
+# resolved. Turn it on once the datastore serves TLS.
+#VALKEY_REQUIRE_TLS=false  # Since unreleased
+#REDIS_REQUIRE_TLS=false  # Since unreleased
 AUTH_DATABASE_URL=postgresql://onetime_user:CHANGEME@authdb/onetime_auth  # Since v0.24.0
 AUTH_DATABASE_URL_MIGRATIONS=postgresql://onetime_migrator:CHANGEME@authdb/onetime_auth  # Since v0.24.0
 
@@ -407,6 +433,10 @@ SMTP_USERNAME=
 SMTP_PASSWORD=
 SMTP_AUTH=login
 SMTP_TLS=true
+# Implicit TLS (SMTPS): the connection is encrypted from the start,
+# typically on port 465. When enabled it takes precedence over SMTP_TLS
+# and STARTTLS is not attempted. Default: false; set to 'true' to enable.
+#SMTP_SSL=false  # Since v0.26.15
 
 FROM_EMAIL=secure@onetimesecret.com
 FROM_NAME=secure@onetimesecret.com
@@ -579,6 +609,51 @@ AUTH_VERIFY_ACCOUNT_ENABLED=true  # Since v0.24.0
 # Default: 3600 (1 hour).
 #RESET_REQUEST_RATE_LIMIT_LOCKOUT=3600  # Since v0.26.3
 
+# Rate limiting for magic-link requests
+# (site.authentication.email_login_request_rate_limit). Throttles POST
+# /auth/email-login-request per client IP and per submitted login BEFORE any
+# account lookup, so one source cannot mail sign-in links to address after
+# address or sample the route for account existence. Full mode with
+# AUTH_EMAIL_AUTH_ENABLED=true only; the route does not exist otherwise.
+# Same two tiers as the reset-request limiter above, under separate keys.
+# Enabled by default (protective); set to the exact string 'false' to opt
+# out — other falsey-looking values leave it ENABLED.
+# See lib/onetime/security/reset_request_rate_limiter.rb.
+#EMAIL_LOGIN_REQUEST_RATE_LIMIT_ENABLED=true  # Since unreleased
+
+# Requests permitted per window from a single client IP before the per-IP
+# tier locks out (site.authentication.email_login_request_rate_limit.max_per_ip).
+# Default: 30 — looser than the reset-request cap because a magic link is a
+# sign-in method and a whole masked /24 shares the bucket. The same
+# TRUSTED_PROXY_ENABLED caveat as RESET_REQUEST_RATE_LIMIT_MAX_PER_IP applies.
+# To clear a stuck lockout:
+#   bin/ots ratelimit keys email_login_request_ip <masked-ip> | grep -v '^#' | valkey-cli
+# or POST /api/colonel/ratelimit/reset with kind=email_login_request_ip.
+#EMAIL_LOGIN_REQUEST_RATE_LIMIT_MAX_PER_IP=30  # Since unreleased
+
+# Backstop cap per submitted login, catching IP-rotating callers
+# (site.authentication.email_login_request_rate_limit.max_per_email).
+# Default: 90. Keep it at least 2 x EMAIL_LOGIN_REQUEST_RATE_LIMIT_MAX_PER_IP,
+# and EMAIL_LOGIN_REQUEST_RATE_LIMIT_LOCKOUT at least
+# EMAIL_LOGIN_REQUEST_RATE_LIMIT_WINDOW: a single IP timing its requests
+# around its own window boundary lands up to 2 x max_per_ip - 2 requests in
+# one login's window, and with a shorter lockout it is free again inside that
+# window, so one source could lock a victim out of magic-link sign-in from
+# every IP. The defaults satisfy both. Rodauth's resend window already caps
+# the mail an account receives.
+#EMAIL_LOGIN_REQUEST_RATE_LIMIT_MAX_PER_EMAIL=90  # Since unreleased
+
+# Counting window in seconds for both tiers
+# (site.authentication.email_login_request_rate_limit.window).
+# Default: 3600 (1 hour).
+#EMAIL_LOGIN_REQUEST_RATE_LIMIT_WINDOW=3600  # Since unreleased
+
+# Lockout duration in seconds once a tier's cap is hit
+# (site.authentication.email_login_request_rate_limit.lockout).
+# Default: 3600 (1 hour). Keep it >= EMAIL_LOGIN_REQUEST_RATE_LIMIT_WINDOW
+# (see EMAIL_LOGIN_REQUEST_RATE_LIMIT_MAX_PER_EMAIL).
+#EMAIL_LOGIN_REQUEST_RATE_LIMIT_LOCKOUT=3600  # Since unreleased
+
 # Rate limiting for unauthenticated account creation
 # (site.authentication.create_account_rate_limit). POST /auth/create-account
 # previously had no limiter in EITHER auth mode, leaving unthrottled account
@@ -628,10 +703,13 @@ AUTH_VERIFY_ACCOUNT_ENABLED=true  # Since v0.24.0
 # Default: 3600 (1 hour).
 #CREATE_ACCOUNT_RATE_LIMIT_LOCKOUT=3600  # Since v0.26.3
 
-# Remember-me: persistent login across browser sessions via the
-# "Remember me" checkbox (auth: full.features.remember_me). Cookie
-# lifetime is Rodauth's default 14 days. Full auth mode only.
-# Default: true. Set to 'false' to disable.
+# Remember-me: the sign-in form's "Remember me" checkbox (auth:
+# full.features.remember_me) makes THAT session last a fixed 14 days from
+# sign-in instead of the rolling 24 hours; activity does not extend it.
+# Both auth modes. Set to 'false' to ignore the checkbox; sessions already
+# remembered return to the default lifetime (their 14-day deadline still
+# ends them). SESSION_ABSOLUTE_TIMEOUT still caps every session.
+# Default: true.
 #AUTH_REMEMBER_ME_ENABLED=true  # Since v0.24.0
 
 # Reserved: auth service base URL for internal requests (auth:
@@ -827,6 +905,12 @@ OIDC_ISSUER=  # Since v0.24.0
 OIDC_CLIENT_ID=  # Since v0.24.0
 OIDC_CLIENT_SECRET=  # Since v0.24.0
 #OIDC_ROUTE_NAME=oidc  # Since v0.24.0
+# How the client secret is sent to the token endpoint: client_secret_basic
+# (Authorization: Basic header; the default when unset) or client_secret_post
+# (request body). Leave unset unless the IdP requires one method. An unknown
+# value is logged at boot and treated as unset. Custom-domain OIDC has its own
+# per-domain setting and never inherits this value.
+#OIDC_CLIENT_AUTH_METHOD=  # Since unreleased
 # Default false. Opt-in email-based SSO linking; single-tenant trusted-IdP only.
 #OIDC_TRUST_EMAIL_FOR_LINKING=false  # Since v0.26.2
 
@@ -849,6 +933,17 @@ GITHUB_CLIENT_SECRET=  # Since v0.24.3
 # Default false. Opt-in email-based SSO linking; single-tenant trusted-IdP only.
 #GITHUB_TRUST_EMAIL_FOR_LINKING=false  # Since v0.26.2
 
+# --- GitLab ---
+# Required: GITLAB_CLIENT_ID, GITLAB_CLIENT_SECRET
+# gitlab.com only. For a self-managed GitLab, use the generic OIDC
+# provider above with OIDC_ISSUER set to the instance URL.
+GITLAB_CLIENT_ID=  # Since unreleased
+GITLAB_CLIENT_SECRET=  # Since unreleased
+#GITLAB_ROUTE_NAME=gitlab  # Since unreleased
+#GITLAB_DISPLAY_NAME=GitLab  # Since unreleased
+# Default false. Opt-in email-based SSO linking; single-tenant trusted-IdP only.
+#GITLAB_TRUST_EMAIL_FOR_LINKING=false  # Since unreleased
+
 # --- Google ---
 # Required: GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET
 GOOGLE_CLIENT_ID=  # Since v0.24.3
@@ -857,6 +952,122 @@ GOOGLE_CLIENT_SECRET=  # Since v0.24.3
 #GOOGLE_DISPLAY_NAME=Google  # Since v0.24.3
 # Default false. Opt-in email-based SSO linking; single-tenant trusted-IdP only.
 #GOOGLE_TRUST_EMAIL_FOR_LINKING=false  # Since v0.26.2
+
+# --- Apple (Sign in with Apple) ---
+# Required: APPLE_CLIENT_ID, APPLE_TEAM_ID, APPLE_KEY_ID, APPLE_PRIVATE_KEY
+# APPLE_CLIENT_ID is the Services ID (e.g. com.example.web), not the App ID.
+# There is deliberately NO APPLE_CLIENT_SECRET: the strategy mints a fresh
+# ES256 client-secret JWT per request from the private key below.
+APPLE_CLIENT_ID=  # Since v0.26.13
+APPLE_TEAM_ID=  # Since v0.26.13
+APPLE_KEY_ID=  # Since v0.26.13
+# The CONTENTS of the .p8 EC key, not a path to it: the whole file, PEM
+# header and footer lines included. OpenSSL must be able to parse it, so the
+# newlines have to survive your env plumbing. The single-line form with each
+# newline written as a literal \n is accepted — the provider definition
+# un-escapes it before handing it to the strategy. (No sample value is shown
+# here: a realistic one trips the detect-private-key pre-commit hook.)
+APPLE_PRIVATE_KEY=  # Since v0.26.13
+#APPLE_ROUTE_NAME=apple  # Since v0.26.13
+#APPLE_DISPLAY_NAME=Apple  # Since v0.26.13
+# Default false. Opt-in email-based SSO linking; single-tenant trusted-IdP only.
+# Apple's email may be a private relay address (@privaterelay.appleid.com),
+# which is not evidence of control over the underlying mailbox. Keep this
+# false. (The email itself arrives on every authorization, from the id_token;
+# only the user's NAME is limited to the first authorization.)
+#APPLE_TRUST_EMAIL_FOR_LINKING=false  # Since v0.26.13
+# PREREQUISITE: Apple requires site.session.same_site: none (with
+# secure: true). Apple's callback is a cross-site POST
+# (response_mode=form_post) and a SameSite=Lax cookie is withheld on it, so
+# the session — and with it the OmniAuth state and nonce — is absent at the
+# callback and the flow fails CSRF validation.
+
+# --- SAML 2.0 ---
+# Install-wide switch that turns SAML on. Default false. Unless true, the app
+# processes no SAML at all, on both surfaces: no saml route is registered
+# (platform SAML_* settings and every tenant's saved SAML config included, so
+# omniauth-saml/ruby-saml are not loaded), the SAML callback answers 404, the
+# sign-in button is not shown, and the per-domain SSO API refuses to save or
+# edit a SAML configuration (tenants can still disable or delete theirs).
+# Saved configurations are kept, untouched, and resume when it is set back
+# to true. This is an incident switch for a ruby-saml advisory: it stops
+# SAML without taking OIDC and Entra tenants down (ORGS_SSO_ENABLED=false
+# does). WARNING: custom domains restricted to SSO sign-in and using SAML
+# have NO sign-in method while this is off. Accepts the shared boolean
+# vocabulary (true/1/yes/on, false/0/no/off); any other value fails boot.
+# UPGRADING: an install that already has SAML_* set for platform SAML, or
+# tenants with saved SAML configs, must set this to true before upgrading or
+# SAML sign-in stops. See docs/authentication/per-install-sso.md.
+#SAML_ENABLED=false  # Since v0.26.14
+# Required (with SAML_ENABLED=true): SAML_IDP_SSO_SERVICE_URL,
+# SAML_IDP_ENTITY_ID, SAML_IDP_CERT
+# There is no client id/secret: trust is the IdP's pinned signing certificate.
+# A missing OR unusable value skips the provider with an error in the boot log
+# (it never fails boot) and the login button is not shown.
+#
+# The IdP's SSO endpoint (HTTP-Redirect binding). https only. The CSP
+# form-action origin and the cross-site POST callback allowance are derived
+# from THIS url's origin, not from the EntityID.
+SAML_IDP_SSO_SERVICE_URL=  # Since v0.26.14
+# The IdP's EntityID, exactly as the IdP sends it in <Issuer> — compared byte
+# for byte (case, trailing slash and all), and stored as the issuer half of
+# every SAML identity. Changing it later orphans existing SAML sign-ins.
+SAML_IDP_ENTITY_ID=  # Since v0.26.14
+# The CONTENTS of the IdP's X.509 signing certificate in PEM form, header and
+# footer lines included — exactly one certificate, not expired. The
+# single-line form with each newline written as a literal \n is accepted.
+# Certificate FINGERPRINTS are not supported, deliberately: fingerprint-only
+# trust accepts whatever certificate the response embeds. When the IdP rotates
+# its certificate this value must be updated (one certificate at a time).
+SAML_IDP_CERT=  # Since v0.26.14
+# Our SP EntityID (the Audience the IdP must send). Default:
+# https://<site.host>/auth/sso/<route name>/metadata — which is also where the
+# SP metadata XML is served. The Assertion Consumer Service (ACS) URL to
+# register at the IdP is https://<site.host>/auth/sso/<route name>/callback
+# (HTTP-POST binding).
+#SAML_SP_ENTITY_ID=  # Since v0.26.14
+# Use this SAML attribute as the stable user id instead of the NameID. Required
+# when the IdP can only send a TRANSIENT NameID (refused otherwise — a
+# transient id would create a new account on every sign-in). The IdP should
+# send a persistent NameID (requested by default).
+#SAML_UID_ATTRIBUTE=  # Since v0.26.14
+# NameID format requested from the IdP and accepted in the response. Default
+# persistent. Also accepted: the SAML 1.1 emailAddress and unspecified formats,
+# the 2.0 transient format (needs SAML_UID_ATTRIBUTE; the provider is skipped
+# at boot without it), or 'omit' to send no NameIDPolicy at all. Existing
+# identities are keyed on the NameID and will not match after a format change
+# unless SAML_UID_ATTRIBUTE supplies the key. Tenant records carry their own
+# name_id_format. See docs/authentication/saml-policy.md.
+#SAML_NAME_ID_FORMAT=urn:oasis:names:tc:SAML:2.0:nameid-format:persistent  # Since v0.26.14
+# Operator-only: admit a literal 'Origin: null' header on POSTs to a configured
+# SAML callback route, for IdP flows that submit an opaque origin. Only the
+# exact string true enables it; unset, false and any other spelling deny. No
+# tenant setting can enable this. See docs/authentication/saml-policy.md.
+#SAML_ALLOW_NULL_ORIGIN=false  # Since v0.26.14
+# Staging admission for the SAML callback transport, per fixed 120-second
+# bucket: how many staged assertions one privacy-masked client source may
+# take, and the global cap shared by every host (the deployment-wide storage
+# bound). Positive integers up to 1000000; the source limit is clamped to the
+# global limit; an invalid value logs a warning and uses the default. Raising
+# them increases storage exposure. See docs/authentication/saml-callback-transport.md.
+#SAML_CALLBACK_SOURCE_LIMIT=64  # Since v0.26.14
+#SAML_CALLBACK_GLOBAL_LIMIT=256  # Since v0.26.14
+#SAML_ROUTE_NAME=saml  # Since v0.26.14
+#SAML_DISPLAY_NAME=SAML SSO  # Since v0.26.14
+# Default false. Opt-in email-based SSO linking; single-tenant trusted-IdP only.
+# SAML carries no email_verified claim: the email attribute is whatever the IdP
+# asserts.
+#SAML_TRUST_EMAIL_FOR_LINKING=false  # Since v0.26.14
+# PREREQUISITE: SAML requires a Secure session cookie (secure: true) with
+# site.session.same_site: lax or none. The IdP delivers the response as a
+# cross-site POST; the callback stages it without a cookie and redirects
+# (303) to a same-origin GET on which the browser sends the initiating Lax
+# cookie again, so the pending sign-in request can be matched. strict is
+# not supported: a Strict cookie is withheld on that cross-site top-level
+# GET too, so the initiating session cannot be recovered. none still
+# works. See docs/authentication/saml-callback-transport.md.
+# NOT SUPPORTED: IdP-initiated sign-in (users must start from this site's
+# login page), Single Logout, encrypted assertions, signed AuthnRequests.
 
 # Extra origins for the CSP form-action directive (space-separated).
 # IdP origins are auto-derived on two levels: each active platform
@@ -998,6 +1209,15 @@ DEFAULT_DOMAIN=
 #LINK_DOMAINS=links.example.com,short.example.net  # Since v0.26.5
 
 # Validation strategy: passthrough (default), approximated, caddy_on_demand
+# approximated and caddy_on_demand both require the customer to publish
+# the domain's TXT challenge record before the domain counts as verified.
+# Under caddy_on_demand the application performs that DNS lookup itself,
+# so it needs a working system resolver (/etc/resolv.conf). Caddy
+# obtaining a certificate is not treated as proof of ownership.
+# Resolving and SSL status under caddy_on_demand come from the
+# application's own A/AAAA lookup and a TLS handshake to the domain on
+# port 443 (no request is sent; private addresses are never dialled), so
+# the host also needs outbound TCP 443.
 DOMAINS_VALIDATION_STRATEGY=passthrough  # Since v0.24.0
 
 # Approximated provider settings (when strategy=approximated)
@@ -1027,11 +1247,78 @@ APPROXIMATED_VHOST_TARGET=  # Since v0.24.0
 #ACME_PORT=12020  # Since v0.24.0
 
 # When true, secret creation naming an unverified custom share_domain
-# is rejected with a form error (features.domains.require_verified).
-# Canonical domains are unaffected. The check fires whenever a custom
-# share_domain resolves to a domain record — it is not gated by
-# DOMAINS_ENABLED. Default: false.
+# is rejected with a form error (features.domains.require_verified),
+# under every validation strategy. When false, creation still requires
+# the domain to be served (see DOMAINS_SERVE_UNVERIFIED). Canonical
+# domains are unaffected. The check fires whenever a custom share_domain
+# resolves to a domain record — it is not gated by DOMAINS_ENABLED.
+# Default: false.
 #DOMAINS_REQUIRE_VERIFIED=false  # Since v0.25.2
+
+# When true, every registered custom domain that has an organization is
+# served whatever its ownership state (features.domains.serve_unverified),
+# and a warning is logged at boot. When false, under a validation strategy that
+# checks ownership (approximated, caddy_on_demand), a custom domain is
+# served only once its ownership is verified by its TXT record or an
+# operator override; until then its host answers 404 and the domain is
+# not offered for links. Under passthrough, registration by the owning
+# organization is enough. Run `bin/ots domains verify --all` to record
+# the ownership of domains whose TXT record is in place. Default: false.
+#DOMAINS_SERVE_UNVERIFIED=false  # Since unreleased
+
+# Rate limiting for "Check saved configuration" runs on a custom domain's SSO
+# record (features.organizations.sso_diagnostics_rate_limit; POST
+# /api/domains/:extid/sso/diagnostics). Every run contacts the identity
+# provider, and for Entra ID sends the stored client secret in a token
+# request, so run volume is capped per acting customer (keyed on the
+# customer's public id; limiter kind `sso_diagnostics`).
+# Enabled by default (protective); set to the exact string 'false' to opt out
+# — other falsey-looking values ('0', 'no', 'off') leave it ENABLED, the same
+# convention as the other *_ENABLED != 'false' knobs.
+# See lib/onetime/security/sso_diagnostics_rate_limiter.rb.
+#SSO_DIAGNOSTICS_RATE_LIMIT_ENABLED=true  # Since unreleased
+
+# Runs permitted per window for one customer, across all their domains
+# (features.organizations.sso_diagnostics_rate_limit.max_per_customer).
+# Default: 10.
+#SSO_DIAGNOSTICS_RATE_LIMIT_MAX_PER_CUSTOMER=10  # Since unreleased
+
+# Counting window in seconds
+# (features.organizations.sso_diagnostics_rate_limit.window).
+# Default: 3600 (1 hour).
+#SSO_DIAGNOSTICS_RATE_LIMIT_WINDOW=3600  # Since unreleased
+
+# Lockout duration in seconds once the cap is hit
+# (features.organizations.sso_diagnostics_rate_limit.lockout).
+# Default: 3600 (1 hour).
+#SSO_DIAGNOSTICS_RATE_LIMIT_LOCKOUT=3600  # Since unreleased
+
+# Rate limiting for "Send test" on a custom domain's email sender
+# (features.organizations.sender_test_email_rate_limit; POST
+# /api/domains/:extid/email-config/test). Every send is a real email through
+# the delivery provider and one security audit trail row, so the volume is
+# capped per acting customer (keyed on the customer's public id; limiter kind
+# `sender_test_email`).
+# Enabled by default (protective); set to the exact string 'false' to opt out
+# — other falsey-looking values ('0', 'no', 'off') leave it ENABLED, the same
+# convention as the other *_ENABLED != 'false' knobs.
+# See lib/onetime/security/sender_test_email_rate_limiter.rb.
+#SENDER_TEST_EMAIL_RATE_LIMIT_ENABLED=true  # Since unreleased
+
+# Test sends permitted per window for one customer, across all their domains
+# (features.organizations.sender_test_email_rate_limit.max_per_customer).
+# Default: 10.
+#SENDER_TEST_EMAIL_RATE_LIMIT_MAX_PER_CUSTOMER=10  # Since unreleased
+
+# Counting window in seconds
+# (features.organizations.sender_test_email_rate_limit.window).
+# Default: 3600 (1 hour).
+#SENDER_TEST_EMAIL_RATE_LIMIT_WINDOW=3600  # Since unreleased
+
+# Lockout duration in seconds once the cap is hit
+# (features.organizations.sender_test_email_rate_limit.lockout).
+# Default: 3600 (1 hour).
+#SENDER_TEST_EMAIL_RATE_LIMIT_LOCKOUT=3600  # Since unreleased
 ```
 
 ### Feature Flags
@@ -1053,6 +1340,13 @@ I18N_DEFAULT_LOCALE=en
 # custom domains, revoke the entitlement or set ORGS_INCOMING_SECRETS_ENABLED=false.
 INCOMING_ENABLED=false
 INCOMING_RECIPIENT_1=
+
+# Markdown secrets (features.markdown.enabled). When true, senders can mark a
+# secret as Markdown and the recipient sees it rendered and sanitized. When
+# false (the default), the create forms show no Markdown control, the API
+# refuses display_type=markdown, and secrets already stored as Markdown are
+# shown as plain text.
+#MARKDOWN_ENABLED=false  # Since unreleased
 
 FOOTER_LINKS=true
 PRICING_URL=/pricing  # Since v0.24.1
@@ -1330,14 +1624,17 @@ TRUSTED_PROXY_HEADER=X-Forwarded-For  # Since v0.25.5
 #
 # SECURITY: listing a range here is a full infrastructure-trust grant, not
 # just client-IP trust. Requests arriving from these ranges also have their
-# forwarded HOST headers honored (X-Forwarded-Host, X-Original-Host,
-# Apx-Incoming-Host) for custom-domain detection. The proxy MUST
-# therefore set or strip those headers itself rather than pass them through
-# from clients — a pass-through proxy lets a client pick the tenant domain
-# the app renders. This is the same requirement stated above for
-# X-Forwarded-For, extended to the host headers. RFC 7239 Forwarded's host=
-# parameter is never a host source: an edge that carries the public host
-# only there must preserve Host or send X-Forwarded-Host instead.
+# X-Forwarded-Host honored for custom-domain detection. It is the only
+# forwarded host header the application reads, and only when it holds one
+# value. The proxy MUST therefore overwrite it itself rather than pass it
+# through or append to it — a pass-through proxy lets a client pick the
+# tenant domain the app renders, and a comma-separated value is not read
+# at all (the request resolves on Host, with a WARN). This is the same
+# requirement stated above for X-Forwarded-For, extended to the host
+# header. Apx-Incoming-Host, X-Original-Host and RFC 7239 Forwarded's
+# host= parameter are never a host source: an edge that carries the public
+# host only there must preserve Host or send X-Forwarded-Host instead,
+# and should remove them. See docs/operations/proxy-authority-header.md.
 #TRUSTED_PROXY_CIDRS=  # Since v0.25.5
 
 # depth mode only: number of proxy hops to skip from the right. Default: 1.
@@ -1387,6 +1684,15 @@ TRUSTED_PROXY_DEPTH=1  # Since v0.25.5
 # this is on: pairing ASSUME_HTTPS=true with site.ssl:false makes generated
 # share/email/redirect links emit http:// while clients use https. Default: false.
 ASSUME_HTTPS=false  # Since v0.26.2
+
+# Public host rewrite (config site.network.public_host_rewrite). Opt-in. For
+# installs behind a proxy that rewrites Host to the origin target and sends
+# the public hostname in X-Forwarded-Host: when true, a request classified as
+# a canonical host, a subdomain of one, or a registered custom domain has its
+# Host set to that hostname before the mounted apps run. Requests that do not
+# classify are left as they are. No effect behind a proxy that preserves Host.
+# See docs/operations/proxy-authority-header.md. Default: false.
+#PUBLIC_HOST_REWRITE=false  # Since v0.26.15
 
 # Admin (Colonel) host allowlist (config site.admin.allowed_hosts).
 # Comma-separated hostnames that serve /colonel and /api/colonel; any other host
@@ -1556,10 +1862,12 @@ ASSUME_HTTPS=false  # Since v0.26.2
 #MIDDLEWARE_AUTHENTICITY_TOKEN=true  # Since v0.24.0
 
 # Cookie-tossing protection (site.middleware.cookie_tossing).
-# Enables Rack::Protection::CookieTossing to block session fixation
-# via cookies set on subdomains. Default: false. Set to 'true' to
-# enable.
-#MIDDLEWARE_COOKIE_TOSSING=false  # Since v0.24.0
+# Refuses (403) a request whose Cookie header carries the session
+# cookie (site.session.key) more than once, so a cookie planted by a
+# sibling or parent host cannot compete with the real one
+# (Onetime::Middleware::CookieTossing). Default: true since v0.26.14.
+# Set to 'false' to disable.
+#MIDDLEWARE_COOKIE_TOSSING=true  # Since v0.24.0
 
 # Clickjacking protection (site.middleware.frame_options).
 # Enables Rack::Protection::FrameOptions, which sets the
@@ -1580,8 +1888,9 @@ ASSUME_HTTPS=false  # Since v0.26.2
 # host resolved by Rack::DetectHost. Enabling this requires the
 # proxy tier to pass the public hostname through in Host or
 # X-Forwarded-Host. If your proxy rewrites Host to the canonical
-# origin and forwards the real host only in Apx-Incoming-Host or
-# X-Original-Host, every state-changing request from a custom
+# origin and forwards the real host only in a header the
+# application does not read (Apx-Incoming-Host, X-Original-Host,
+# Forwarded), every state-changing request from a custom
 # domain is rejected with a 403 — most visibly SSO sign-in, which
 # has no authenticity-token fallback. Symptom in logs:
 # "attack prevented by Rack::Protection::HttpOrigin".
@@ -1951,6 +2260,11 @@ LOG_HTTP_CAPTURE=minimal  # Since v0.24.0
 LOG_HTTP_ALLOWED_ERROR_FIELDS=  # Since v0.26.0
 
 DIAGNOSTICS_ENABLED=false
+# Under RACK_ENV=test, DIAGNOSTICS_ENABLED alone is ignored so a locally booted
+# test server cannot report to the Sentry project a dev shell points at. Set
+# this too when a test boot really should report. No effect in any other
+# environment.
+#DIAGNOSTICS_ENABLED_IN_TEST=false  # Since v0.26.13
 SENTRY_DSN_BACKEND=
 SENTRY_DSN_FRONTEND=
 SENTRY_DSN_WORKERS=  # Since v0.25.0
@@ -2280,7 +2594,7 @@ WORKER_HEARTBEAT_INTERVAL=600  # Since v0.24.0
 # worker-email, and scheduler services. Defaults to a pinned release so
 # a fresh `docker compose up` is reproducible; set to 'latest' or any
 # published tag to override.
-#OTS_IMAGE_TAG=v0.26.12  # Since v0.26.0
+#OTS_IMAGE_TAG=v0.26.14  # Since v0.26.0
 ```
 
 ### Compatibility
@@ -2357,13 +2671,6 @@ DEPRECATED_CONFIG_MODE=strict  # Since v0.25.5
 
 #RUBY_YJIT_ENABLE=1  # Since v0.24.1
 #RUBYOPT="--enable-frozen-string-literal"  # Since v0.24.1
-
-# Development tool: enables domain-context overrides in DomainStrategy
-# middleware (development.domain_context_enabled) to simulate a custom
-# domain without DNS. When true, the DOMAIN_CONTEXT env var, the
-# O-Domain-Context header, or the colonel UI can override the request
-# domain. Default: false. Must remain false in production.
-#DOMAIN_CONTEXT_ENABLED=false  # Since v0.24.0
 
 # Arming switch for the destructive visual-fixture seed task
 # (rake qa:visual:seed, lib/tasks/qa_visual.rake). The task creates brand

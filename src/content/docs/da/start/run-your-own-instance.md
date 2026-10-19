@@ -19,7 +19,8 @@ Den hurtigste måde at komme i gang på bruger Docker med minimal konfiguration.
 ### 1. Start Redis
 
 ```bash
-docker run -p 6379:6379 -d redis:bookworm
+docker network create onetime
+docker run -d --name redis --network onetime redis:bookworm
 ```
 
 ### 2. Generer hemmelig nøgle
@@ -35,13 +36,13 @@ echo "Secret key saved to .ots_secret (keep this file secure!)"
 
 ```bash
 # Kør containeren ved hjælp af den hemmelige nøgle
-docker run -p 3000:3000 -d \
-  -e REDIS_URL=redis://host.docker.internal:6379/0 \
+docker run -p 3000:3000 -d --network onetime \
+  -e REDIS_URL=redis://redis:6379/0 \
   -e SECRET="$(cat .ots_secret)" \
   -e HOST=localhost:3000 \
   -e SSL=false \
   -e RACK_ENV=production \
-  onetimesecret/onetimesecret:v0.26.2
+  onetimesecret/onetimesecret:v0.26.18
 ```
 
 ### 4. Få adgang til din instans
@@ -69,15 +70,15 @@ pnpm install && pnpm run build:local
 For at starte applikationen:
 
 ```bash
-source .env.sh  # eksporterer .env-variabler til den aktuelle shell
+set -a; source .env; set +a  # eksporterer .env-variabler til den aktuelle shell
 bundle exec puma -C etc/puma.rb
 ```
 
 Eller ved hjælp af Procfile-runneren:
 
 ```bash
-source .env.sh  # eksporterer .env-variabler til den aktuelle shell
-bundle exec foreman start -f Procfile.production
+set -a; source .env; set +a  # eksporterer .env-variabler til den aktuelle shell
+bundle exec foreman start -f Procfile.example
 ```
 
 Se [README](https://github.com/onetimesecret/onetimesecret#readme) for komplette manuelle installationsdetaljer.
