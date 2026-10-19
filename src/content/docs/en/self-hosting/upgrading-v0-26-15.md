@@ -14,7 +14,7 @@ public host in `Apx-Incoming-Host` or `X-Original-Host` must change **before** t
 upgrade. No database migration runs, but **rolling back needs a datastore step**
 (see [Rollback](#rollback)).
 
-Coming from v0.26.13 or earlier, read the [v0.26.14 upgrade guide](./upgrading-v0-26-14) first.
+Coming from v0.26.13 or earlier, read the [v0.26.14 upgrade guide](/en/self-hosting/upgrading-v0-26-14/) first.
 
 ## Before You Start
 

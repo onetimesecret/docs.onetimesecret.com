@@ -48,7 +48,7 @@ If problems persist, including any SSL-related errors, contact our support team.
 ## Related pages
 
 - [Setup Guide](/en/custom-domains/setup-guide) — create the DNS records and choose your region.
-- [How Custom Domains Work](/en/custom-domains#how-it-works) — the bigger picture.
+- [How Custom Domains Work](/en/custom-domains/#how-it-works) — the bigger picture.
 - [Where your data lives](/en/security/where-your-data-lives) — choose the right region and its endpoint.
 
 ## Questions or Need Support?

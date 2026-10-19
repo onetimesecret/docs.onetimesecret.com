@@ -1,7 +1,7 @@
 ---
 title: <X or Y: choosing your ___>
 description: <One sentence naming the two-or-more real alternatives and who has to choose between them.>
-audience: <user | admin | developer | operator>
+audience: <end-user | operator | developer | contributor>
 pageType: concept
 # Optional. Delete if the page describes no application behaviour:
 sourceOfTruth: <onetimesecret/path/to/file.rb (the claim it backs); ...>

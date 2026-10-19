@@ -8,7 +8,7 @@ sidebar:
   order: 8
 ---
 
-This guide covers upgrades from v0.26.9 or v0.26.10. v0.26.11 does not include a database migration. If you are upgrading from v0.24 or earlier, first complete [the v0.24.0 upgrade guide](./upgrading-v0-24).
+This guide covers upgrades from v0.26.9 or v0.26.10. v0.26.11 does not include a database migration. If you are upgrading from v0.24 or earlier, first complete [the v0.24.0 upgrade guide](/en/self-hosting/upgrading-v0-24/).
 
 Most installations can update the image and restart. Review the checks below before starting the new version if you use a reverse proxy, serve plain HTTP in production, or use SSO-only Colonel accounts.
 

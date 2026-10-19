@@ -1,7 +1,7 @@
 ---
 title: <Verb the specific job — e.g. "Set up a custom domain">
 description: <One sentence: what the reader will have accomplished by the end.>
-audience: <user | admin | developer | operator>
+audience: <end-user | operator | developer | contributor>
 pageType: how-to
 # Optional. Delete if the page describes no application behaviour:
 sourceOfTruth: <onetimesecret/path/to/file.rb (the claim it backs); ...>

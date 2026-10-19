@@ -16,7 +16,7 @@ depend on `TRUSTED_PROXY_ENABLED`.
   [Upgrading to v0.26.6](#upgrading-to-v0266-from-v0265) — the v0.26.5 section
   below is only needed if you're still on v0.26.4 or earlier.
 - Coming from **v0.25.x or earlier**? Work through the
-  [Upgrading to v0.24.0](./upgrading-v0-24) guide first, then apply both
+  [Upgrading to v0.24.0](/en/self-hosting/upgrading-v0-24/) guide first, then apply both
   sections below in order.
 
 **v0.26.6** is a follow-up to v0.26.5. It fixes three ways a **Host-rewriting
@@ -38,7 +38,7 @@ for either, and rollback for either is a container/tag swap.
 :::note[Scope]
 This guide covers the operator-visible changes in **v0.26.5** (from v0.26.4)
 and **v0.26.6** (from v0.26.5). If you are coming from v0.25.x or earlier,
-work through the [Upgrading to v0.24.0](./upgrading-v0-24) guide first. The
+work through the [Upgrading to v0.24.0](/en/self-hosting/upgrading-v0-24/) guide first. The
 v0.26.0–v0.26.4 release notes in
 [`CHANGELOG.rst`](https://github.com/onetimesecret/onetimesecret/blob/main/CHANGELOG.rst)
 list changes not repeated here.
@@ -239,7 +239,7 @@ them. `1`, `yes`, and `on` leave them off, silently.
 :::
 
 `AUTH_WEBAUTHN_VERIFY_ACCOUNT` additionally requires `AUTHENTICATION_MODE=full`
-(see [Simple or Full Auth](./simple-or-full-auth) if you are unsure which mode
+(see [Simple or Full Auth](/en/self-hosting/simple-or-full-auth/) if you are unsure which mode
 you run). Custom domains cannot be restricted to passkey-only sign-in.
 
 #### 8. Optional: new features

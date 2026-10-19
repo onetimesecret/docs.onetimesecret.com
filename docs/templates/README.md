@@ -20,13 +20,14 @@ rename it, and fill in the frontmatter (see [Frontmatter](#frontmatter)) and hea
 
 ## Frontmatter
 
-Besides `title` and `description`, every template carries three keys. Starlight
-ignores them; they are for authors, reviewers and tooling that audit the docs.
+Besides `title` and `description`, every template includes three keys. Their
+values are validated by `src/content.config.ts`; they help authors, reviewers
+and tooling audit the docs.
 
 | Key | Values | Meaning |
 |-----|--------|---------|
 | `pageType` | `concept`, `how-to`, `reference`, `architecture` | The type from the table above. Pre-filled in each template. |
-| `audience` | `user`, `admin`, `developer`, `operator` | Who the page is for: people sending and receiving secrets; account, organization and domain administrators; API and client library integrators; self-hosters. |
+| `audience` | `end-user`, `operator`, `developer`, `contributor` | Who the page is for: people sending and receiving secrets or administering accounts, organizations and domains; self-hosters; API and client library integrators; people contributing code, documentation or translations. |
 | `sourceOfTruth` | Source paths, each with a parenthetical naming the claim it backs, separated by `;` | The application files the page was checked against, so a reviewer can re-check it after a release. Paths start at the repository name, e.g. `onetimesecret/lib/onetime/session.rb`. Delete the key on pages that describe no application behaviour. |
 
 See [`upgrading-v0-26-15.md`](../../src/content/docs/en/self-hosting/upgrading-v0-26-15.md)

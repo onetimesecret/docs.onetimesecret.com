@@ -15,8 +15,8 @@ a tag swap.
 
 Upgrading from a release earlier than v0.26.11? Work forward through the guides for the
 releases you are skipping, then return here. From v0.22 or v0.23, start with
-[v0.24.0](./upgrading-v0-24). From anywhere in the v0.26 line, complete
-[v0.26.6](./upgrading-v0-26) and then [v0.26.11](./upgrading-v0-26-11). Each of those
+[v0.24.0](/en/self-hosting/upgrading-v0-24/). From anywhere in the v0.26 line, complete
+[v0.26.6](/en/self-hosting/upgrading-v0-26/) and then [v0.26.11](/en/self-hosting/upgrading-v0-26-11/). Each of those
 carries configuration work this guide assumes is already done.
 
 ## Before You Start
@@ -24,7 +24,7 @@ carries configuration work this guide assumes is already done.
 1. Back up Redis/Valkey and, in `full` mode, the authentication database.
 2. Record your current tag: `docker compose exec app ots version` (or your `OTS_IMAGE_TAG`).
 3. Note your `AUTHENTICATION_MODE`. Most of this guide applies only to `full` (see
-   [Simple or Full](./simple-or-full-auth) if you are unsure which mode you run).
+   [Simple or Full](/en/self-hosting/simple-or-full-auth/) if you are unsure which mode you run).
 4. In `full` mode, note how your authentication database is reached — direct, pooler, or
    failover pair — and who is paged when it goes down. Step 1 depends on it.
 

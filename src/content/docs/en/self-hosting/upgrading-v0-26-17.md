@@ -18,7 +18,7 @@ registered before v0.26.14 run one step after the upgrade, in a short maintenanc
 window: a backfill of the custom-domain name index. Rollback is a tag swap, with
 the SSO caveats in [Rollback](#rollback).
 
-Coming from v0.26.14 or earlier, read the [v0.26.15 upgrade guide](./upgrading-v0-26-15) first.
+Coming from v0.26.14 or earlier, read the [v0.26.15 upgrade guide](/en/self-hosting/upgrading-v0-26-15/) first.
 Coming from v0.26.15 or earlier, also read the
 [v0.26.16 release notes](https://github.com/onetimesecret/onetimesecret/releases/tag/v0.26.16);
 their deployment notes cover the simple-mode session ID change and the SSO email repair.
@@ -29,7 +29,7 @@ their deployment notes cover the simple-mode session ID change and the SSO email
 2. Record your current tag.
 3. Note your `DOMAINS_VALIDATION_STRATEGY` (`passthrough` by default) and how
    many custom domains you serve.
-4. Note your [authentication mode](./simple-or-full-auth) (`AUTHENTICATION_MODE`)
+4. Note your [authentication mode](/en/self-hosting/simple-or-full-auth/) (`AUTHENTICATION_MODE`)
    and whether `AUTH_EMAIL_AUTH_ENABLED=true` (magic links).
 5. Note whether a reverse proxy sits in front of the application and whether
    `TRUSTED_PROXY_ENABLED=true` is set.
@@ -113,7 +113,7 @@ Steps 1 to 3 run on your current version, before you upgrade.
    entry that is not a trusted proxy, so a proxy that appends lets a client choose
    its own address and get past the per-IP limit. A trusted proxy's
    `X-Forwarded-Host` is read as well; it must follow the rules in step 1 of the
-   [v0.26.15 upgrade guide](./upgrading-v0-26-15).
+   [v0.26.15 upgrade guide](/en/self-hosting/upgrading-v0-26-15/).
 
    Without trust, every visitor shares the proxy's address, and after 30
    magic-link requests in an hour everyone gets 429 for the next hour. If you
@@ -240,7 +240,7 @@ Pin the tag you recorded. No migration ran; earlier releases ignore the data and
 variables this release adds, and v0.26.16 reads the backfilled index entries as
 before. After a rollback, custom domains that are unverified or have no
 organization are served again. Rolling back to v0.26.14 or earlier also needs the
-[v0.26.15 datastore step](./upgrading-v0-26-15#rollback).
+[v0.26.15 datastore step](/en/self-hosting/upgrading-v0-26-15/#rollback).
 
 Two SSO behaviours do not survive the rollback:
 
