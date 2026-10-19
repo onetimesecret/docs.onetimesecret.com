@@ -20,6 +20,7 @@
 
 <script setup lang="ts">
   import { computed, onMounted, reactive, ref, watch } from 'vue';
+  import { changedLines, splitLines } from './diff';
   import { GROUPS, OPTIONS, type OptionSpec } from './presets';
   import {
     choicesFor,
@@ -38,25 +39,39 @@
     options: OPTIONS.filter((opt) => opt.group === group.key),
   }));
 
-  const outputs = [
-    { key: 'configYaml' as const, label: 'config.yaml', filename: 'config.yaml' },
-    { key: 'authYaml' as const, label: 'auth.yaml', filename: 'auth.yaml' },
-    { key: 'envSnippet' as const, label: '.env', filename: '.env' },
-  ];
-  type OutputKey = (typeof outputs)[number]['key'];
-  const activeOutput = ref<OutputKey>('configYaml');
-  const tabRefs = ref<HTMLButtonElement[]>([]);
-  const copied = ref(false);
+  // Every file is shown at once, so a change is visible whichever file it
+  // lands in. auth.yaml leads because Deployment mode, the first option,
+  // writes to it.
+  const files = [
+    { key: 'authYaml', dir: 'etc/', name: 'auth.yaml' },
+    { key: 'configYaml', dir: 'etc/', name: 'config.yaml' },
+    { key: 'envSnippet', dir: '', name: '.env' },
+  ] as const;
+  type FileKey = (typeof files)[number]['key'];
+  type FileMeta = (typeof files)[number];
 
+  const EMPTY = '# Nothing to override; the shipped defaults apply.\n';
   const result = computed(() => generate({ ...selections }));
+  const contents = computed<Record<FileKey, string>>(() => ({
+    authYaml: result.value.authYaml || EMPTY,
+    configYaml: result.value.configYaml || EMPTY,
+    envSnippet: result.value.envSnippet || EMPTY,
+  }));
 
-  const activeMeta = computed(
-    () => outputs.find((o) => o.key === activeOutput.value) ?? outputs[0]
-  );
-  const activeContent = computed(() => {
-    const content = result.value[activeOutput.value];
-    return content && content.length ? content : '# Nothing to override; the shipped defaults apply.\n';
+  // Lines the latest change added or rewrote, per file. `revision` re-keys
+  // the code block so the highlight animation restarts on every change.
+  const changed = reactive<Record<FileKey, boolean[]>>({
+    authYaml: [],
+    configYaml: [],
+    envSnippet: [],
   });
+  const revision = reactive<Record<FileKey, number>>({
+    authYaml: 0,
+    configYaml: 0,
+    envSnippet: 0,
+  });
+  const copiedKey = ref<FileKey | null>(null);
+  const copiedName = computed(() => files.find((f) => f.key === copiedKey.value)?.name);
 
   function requirementMet(opt: OptionSpec): boolean {
     if (!opt.requires) return true;
@@ -112,41 +127,34 @@
         }
       }
     );
+    // Registered after seeding, so a shared link does not light up on load.
+    watch(contents, (next, prev) => {
+      for (const { key } of files) {
+        if (next[key] === prev[key]) continue;
+        changed[key] = changedLines(prev[key], next[key]);
+        revision[key]++;
+      }
+    });
   });
-
-  // ── Tabs ────────────────────────────────────────────────────────────
-  function onTabKeydown(event: KeyboardEvent, index: number) {
-    const last = outputs.length - 1;
-    const next =
-      event.key === 'ArrowRight' ? (index === last ? 0 : index + 1)
-      : event.key === 'ArrowLeft' ? (index === 0 ? last : index - 1)
-      : event.key === 'Home' ? 0
-      : event.key === 'End' ? last
-      : null;
-    if (next == null) return;
-    event.preventDefault();
-    activeOutput.value = outputs[next].key;
-    tabRefs.value[next]?.focus();
-  }
 
   // ── Copy / download ─────────────────────────────────────────────────
   let copiedTimer: ReturnType<typeof setTimeout> | undefined;
-  async function copyActive() {
+  async function copyFile(file: FileMeta) {
     try {
-      await navigator.clipboard.writeText(activeContent.value);
-      copied.value = true;
+      await navigator.clipboard.writeText(contents.value[file.key]);
+      copiedKey.value = file.key;
       clearTimeout(copiedTimer);
-      copiedTimer = setTimeout(() => (copied.value = false), 1500);
+      copiedTimer = setTimeout(() => (copiedKey.value = null), 1500);
     } catch {
       /* clipboard unavailable; the user can still select the text */
     }
   }
-  function downloadActive() {
-    const blob = new Blob([activeContent.value], { type: 'text/plain;charset=utf-8' });
+  function downloadFile(file: FileMeta) {
+    const blob = new Blob([contents.value[file.key]], { type: 'text/plain;charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = activeMeta.value.filename;
+    link.download = file.name;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -235,63 +243,63 @@
           </li>
         </ul>
 
-        <div class="cg-panel">
-          <div class="cg-toolbar">
-            <div
-              class="cg-tablist"
-              role="tablist"
-              aria-label="Generated file">
-              <button
-                v-for="(output, index) in outputs"
-                :id="`cg-tab-${output.key}`"
-                :key="output.key"
-                ref="tabRefs"
-                type="button"
-                role="tab"
-                class="cg-tab"
-                :aria-selected="activeOutput === output.key"
-                aria-controls="cg-preview"
-                :tabindex="activeOutput === output.key ? 0 : -1"
-                @click="activeOutput = output.key"
-                @keydown="onTabKeydown($event, index)">
-                {{ output.label }}
-              </button>
+        <div class="cg-files">
+          <section
+            v-for="file in files"
+            :key="file.key"
+            class="cg-file"
+            :aria-labelledby="`cg-file-${file.key}`">
+            <div class="cg-file-header">
+              <h2
+                :id="`cg-file-${file.key}`"
+                class="cg-file-name">
+                <span
+                  v-if="file.dir"
+                  class="cg-file-dir"
+                  >{{ file.dir }}</span
+                >{{ file.name }}
+              </h2>
+              <div class="cg-actions">
+                <button
+                  type="button"
+                  class="cg-btn"
+                  :aria-label="`Copy ${file.name}`"
+                  @click="copyFile(file)">
+                  {{ copiedKey === file.key ? 'Copied' : 'Copy' }}
+                </button>
+                <button
+                  type="button"
+                  class="cg-btn"
+                  :aria-label="`Download ${file.name}`"
+                  @click="downloadFile(file)">
+                  Download
+                </button>
+              </div>
             </div>
-            <div class="cg-actions">
-              <button
-                type="button"
-                class="cg-btn"
-                @click="copyActive">
-                {{ copied ? 'Copied' : 'Copy' }}
-              </button>
-              <button
-                type="button"
-                class="cg-btn"
-                @click="downloadActive">
-                Download
-              </button>
-              <span
-                class="cg-sr-only"
-                aria-live="polite"
-                >{{ copied ? `${activeMeta.label} copied to clipboard` : '' }}</span
-              >
-            </div>
-          </div>
-
-          <pre
-            id="cg-preview"
-            class="cg-preview"
-            role="tabpanel"
-            tabindex="0"
-            :aria-labelledby="`cg-tab-${activeOutput}`"><code>{{ activeContent }}</code></pre>
+            <!-- One block span per line, each ending in its newline, so a
+                 changed line can be highlighted edge to edge and selecting
+                 the text still copies plain lines. -->
+            <pre
+              class="cg-code"
+              tabindex="0"
+              :aria-labelledby="`cg-file-${file.key}`"><code :key="revision[file.key]"><span
+                v-for="(line, i) in splitLines(contents[file.key])"
+                :key="i"
+                class="cg-line"
+                :class="{ 'is-changed': changed[file.key][i] }">{{ line + '\n' }}</span></code></pre>
+          </section>
         </div>
+        <span
+          class="cg-sr-only"
+          aria-live="polite"
+          >{{ copiedName ? `${copiedName} copied to clipboard` : '' }}</span
+        >
 
         <p class="cg-note">
-          Save <code>config.yaml</code> and <code>auth.yaml</code> in your
-          <code>etc/</code> directory. The <code>.env</code> tab lists the
-          secrets and connection details your choices need, left blank: fill
-          them in on the server, never in a shared link. Your selections are
-          kept in the page URL, so you can bookmark or share a setup.
+          The <code>.env</code> file lists the secrets and connection details
+          your selections need, left blank: fill them in on the server, never
+          in a shared link. Your selections are kept in the page URL, so you
+          can bookmark or share a setup.
         </p>
       </section>
     </div>
@@ -309,20 +317,14 @@
     display: grid;
     gap: 2rem;
   }
-  /* Side by side once the content column can hold both comfortably; the
-     preview then stays in view while the options scroll past. */
+  /* Side by side once the content column can hold both comfortably. The
+     three files together run about as long as the options, so the output
+     scrolls with the page rather than sticking. */
   @container (min-width: 50rem) {
     .cg-grid {
       grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
       align-items: start;
       gap: 2.5rem;
-    }
-    .cg-output {
-      position: sticky;
-      top: calc(var(--sl-nav-height) + 1.5rem);
-    }
-    .cg-preview {
-      max-height: calc(100vh - var(--sl-nav-height) - 15rem);
     }
   }
   .cg-options,
@@ -460,56 +462,44 @@
     color: var(--sl-color-orange-high);
     font-size: var(--sl-text-sm);
   }
-  .cg-panel {
+  .cg-files {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .cg-file {
     border: 1px solid var(--sl-color-gray-5);
     border-radius: 0.5rem;
     background: var(--sl-color-gray-7, var(--sl-color-gray-6));
     overflow: hidden;
   }
-  .cg-toolbar {
+  .cg-file-header {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    column-gap: 0.5rem;
+    gap: 0.5rem;
+    padding: 0.375rem 0.5rem 0.375rem 1.125rem;
     border-bottom: 1px solid var(--sl-color-gray-5);
     background: var(--sl-color-bg-sidebar);
   }
-  .cg-tablist {
-    display: flex;
-    min-width: 0;
-  }
-  .cg-tab {
+  .cg-file-name {
     margin: 0;
-    padding: 0.625rem 0.875rem;
-    border: 0;
-    border-bottom: 2px solid transparent;
-    background: none;
-    cursor: pointer;
+    min-width: 0;
+    overflow-wrap: anywhere;
     font-family: var(--__sl-font-mono);
     font-size: var(--sl-text-xs);
-    line-height: 1.25;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--sl-color-white);
+  }
+  .cg-file-dir {
+    font-weight: 400;
     color: var(--sl-color-gray-3);
   }
-  .cg-tab:hover {
-    color: var(--sl-color-white);
-  }
-  .cg-tab[aria-selected='true'] {
-    color: var(--sl-color-white);
-    border-bottom-color: var(--sl-color-accent);
-  }
-  .cg-tab:focus-visible {
-    outline: 2px solid var(--sl-color-accent);
-    outline-offset: -2px;
-  }
-  /* margin-inline-start: auto keeps the buttons right-aligned, including
-     when a narrow screen wraps them onto their own row. */
   .cg-actions {
     display: flex;
-    align-items: center;
+    flex: none;
     gap: 0.375rem;
-    margin-inline-start: auto;
-    padding: 0.375rem 0.5rem;
   }
   .cg-btn {
     margin: 0;
@@ -530,20 +520,48 @@
     outline: 2px solid var(--sl-color-accent);
     outline-offset: 1px;
   }
-  .cg-preview {
+  /* The padding sits on the lines, not the block, so a highlight runs to
+     the card's edges; max-content lets it follow a line that scrolls. */
+  .cg-code {
     margin: 0;
-    max-height: 60vh;
-    overflow: auto;
-    padding: 1rem 1.125rem;
+    overflow-x: auto;
+    padding: 0.75rem 0;
     font-family: var(--__sl-font-mono);
     font-size: var(--sl-text-xs);
     line-height: 1.6;
     color: var(--sl-color-text);
     background: transparent;
   }
-  .cg-preview:focus-visible {
+  .cg-code code {
+    display: block;
+    width: max-content;
+    min-width: 100%;
+    font: inherit;
+  }
+  .cg-code:focus-visible {
     outline: 2px solid var(--sl-color-accent);
     outline-offset: -2px;
+  }
+  .cg-line {
+    display: block;
+    padding: 0 1.125rem;
+  }
+  /* Marks what the last change wrote, then fades. A tint of the accent
+     rather than accent-low, which is a saturated block in dark mode. A
+     color change, not motion, so it stays on under prefers-reduced-motion. */
+  .cg-line.is-changed {
+    animation: cg-changed 2.4s ease-out;
+  }
+  @keyframes cg-changed {
+    0%,
+    35% {
+      background-color: color-mix(in srgb, var(--sl-color-accent) 16%, transparent);
+      box-shadow: inset 3px 0 0 var(--sl-color-accent);
+    }
+    100% {
+      background-color: transparent;
+      box-shadow: inset 3px 0 0 transparent;
+    }
   }
   .cg-note {
     margin: 0.875rem 0 0;
