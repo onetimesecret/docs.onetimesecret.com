@@ -15,6 +15,7 @@ import {
   type Selections,
 } from './generate';
 import { OPTIONS } from './presets';
+import configAuthSchema from './schemas/config-auth.schema.json';
 import configStaticSchema from './schemas/config-static.schema.json';
 
 const opt = (key: string) => {
@@ -51,6 +52,28 @@ describe('presets against the vendored schema', () => {
 
   it('puts every option in a group', () => {
     for (const o of OPTIONS) expect(o.group).toBeTruthy();
+  });
+
+  it('points every schemaPath at a field the schema has', () => {
+    const schemas = { config: configStaticSchema, auth: configAuthSchema };
+    for (const o of OPTIONS) {
+      if (!o.schemaPath) continue;
+      let node: { properties?: Record<string, unknown> } | undefined = schemas[o.schemaPath.file];
+      for (const key of o.schemaPath.path.split('.')) {
+        node = node?.properties?.[key] as typeof node;
+      }
+      expect(node, `${o.key} -> ${o.schemaPath.path}`).toBeDefined();
+    }
+  });
+
+  it('lists every dependency before the options that need it', () => {
+    // enforceDependencies resets in one pass, so SSO must precede SAML.
+    const index = new Map(OPTIONS.map((o, i) => [o.key, i]));
+    for (const o of OPTIONS) {
+      for (const dep of Object.keys(o.requires ?? {})) {
+        expect(index.get(dep), `${dep} before ${o.key}`).toBeLessThan(index.get(o.key)!);
+      }
+    }
   });
 });
 
@@ -94,8 +117,13 @@ describe('generate — all defaults', () => {
     // diff-only emitter.
     expect(parse(result.configYaml)).toEqual({
       emailer: { mode: 'smtp' },
-      features: { domains: { enabled: false }, regions: { enabled: false } },
+      features: {
+        domains: { enabled: false },
+        regions: { enabled: false },
+        markdown: { enabled: false },
+      },
       diagnostics: { enabled: false },
+      redis: { require_tls: false },
       site: {
         network: { trusted_proxy: { enabled: false } },
         secret_options: { passphrase: { required: false }, default_ttl: 604800 },
@@ -113,7 +141,7 @@ describe('generate — all defaults', () => {
     expect(result.envSnippet).not.toContain('AUTH_DATABASE_URL=');
   });
 
-  it('never emits a value, only blank placeholders', () => {
+  it('emits only blank placeholders', () => {
     for (const line of result.envSnippet.split('\n')) {
       if (line.startsWith('#') || line === '') continue;
       expect(line).toMatch(/^[A-Z0-9_]+=$/);
@@ -145,6 +173,25 @@ describe('generate — dependency enforcement', () => {
     });
   });
 
+  it('writes the full-mode sign-in features only in Full mode', () => {
+    const signin = { mfa_enabled: true, webauthn_enabled: true, email_auth_enabled: true };
+    const full = generate({ ...defaultSelections(), deployment_mode: 'full', ...signin });
+    expect(full.warnings).toEqual([]);
+    expect(parse(full.authYaml)).toEqual({
+      mode: 'full',
+      full: { features: { sso: false, mfa: true, webauthn: true, email_auth: true } },
+    });
+
+    const simple = generate({ ...defaultSelections(), ...signin });
+    expect(simple.warnings).toHaveLength(3);
+    expect(parse(simple.authYaml)).toEqual({ mode: 'simple' });
+  });
+
+  it('turns SAML off with SSO, and warns for each', () => {
+    const result = generate({ ...defaultSelections(), sso_enabled: true, saml_enabled: true });
+    expect(result.warnings).toHaveLength(2);
+    expect(result.envSnippet).not.toContain('SAML_');
+  });
 });
 
 describe('generate — env starter per selection', () => {
@@ -166,6 +213,28 @@ describe('generate — env starter per selection', () => {
     const result = generate({ ...defaultSelections(), diagnostics_enabled: true });
     expect(result.envSnippet).toContain('SENTRY_DSN=');
     expect(result.envSnippet).not.toContain('SENTRY_DSN_BACKEND=');
+  });
+
+  it('switches SAML on in .env, where its only switch lives', () => {
+    const result = generate({
+      ...defaultSelections(),
+      deployment_mode: 'full',
+      sso_enabled: true,
+      saml_enabled: true,
+    });
+    const lines = result.envSnippet.split('\n');
+    const at = lines.indexOf('SAML_ENABLED=true');
+    expect(at).toBeGreaterThan(0);
+    expect(lines[at - 1]).toMatch(/^# /);
+    for (const name of ['SAML_IDP_SSO_SERVICE_URL', 'SAML_IDP_ENTITY_ID', 'SAML_IDP_CERT']) {
+      expect(lines).toContain(`${name}=`);
+    }
+    // SAML writes no YAML: auth.yaml carries only the SSO switch it needs.
+    expect(parse(result.authYaml).full.features.sso).toBe(true);
+    expect(result.authYaml).not.toMatch(/saml/i);
+    // SAML_ENABLED is the only variable with a value.
+    const valued = lines.filter((l) => /^[A-Z0-9_]+=.+/.test(l));
+    expect(valued).toEqual(['SAML_ENABLED=true']);
   });
 
   it('surfaces full-mode secrets in the env starter', () => {

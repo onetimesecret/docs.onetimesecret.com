@@ -255,6 +255,7 @@ export const sidebar = [
     // group with no items.
 
     createGroup("troubleshootAndUpgrade", [
+      createLink("upgradeGuides", "self-hosting/upgrade-guides"),
       createLink("upgradingToV02618", "self-hosting/upgrading-v0-26-18"),
       createLink("upgradingToV02617", "self-hosting/upgrading-v0-26-17"),
       createLink("upgradingToV02615", "self-hosting/upgrading-v0-26-15"),

@@ -42,19 +42,10 @@ later.
 - [Verify your install](/en/install/verify) — prove the instance is genuinely
   serving before you hand it to anyone.
 
-Coming from an earlier release? [Upgrading to
-v0.24.0](/en/self-hosting/upgrading-v0-24) covers the configuration and
-data-model changes.
-
-Already on v0.26? Start at the first upgrade guide newer than the release you
-run, then work through each later one in order:
-[v0.26.6](/en/self-hosting/upgrading-v0-26),
-[v0.26.11](/en/self-hosting/upgrading-v0-26-11),
-[v0.26.12](/en/self-hosting/upgrading-v0-26-12),
-[v0.26.14](/en/self-hosting/upgrading-v0-26-14),
-[v0.26.15](/en/self-hosting/upgrading-v0-26-15),
-[v0.26.17](/en/self-hosting/upgrading-v0-26-17),
-[v0.26.18](/en/self-hosting/upgrading-v0-26-18).
+Upgrading an existing install? The [Upgrade Guides](/en/self-hosting/upgrade-guides)
+list the available guides, newest first. Start with the first guide after the
+release you run now and work forward, and read the release notes for every
+intervening release.
 
 ## System requirements
 
