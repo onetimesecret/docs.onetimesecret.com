@@ -68,7 +68,7 @@ The host and value above show the shape only — your actual record is unique to
 
 Registrars display record hosts differently: some expect just the label (and append the zone for you), others expect the fully qualified name. Enter the host in whichever form your provider expects — what matters is that the resulting record resolves at `<host>.<your base domain>` and returns the dashboard value unchanged.
 
-Ownership verification cannot complete without this record, and it must stay in place after verification — do not remove it.
+Ownership verification cannot complete without this record, and it must stay in place after verification — do not remove it. If a later check does not find it, the domain stops being served until the record is found again.
 
 ### For Subdomains (Recommended)
 

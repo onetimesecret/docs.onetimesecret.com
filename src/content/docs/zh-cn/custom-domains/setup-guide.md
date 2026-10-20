@@ -111,7 +111,7 @@ Onetime Secret 提供多个数据中心区域：EU、UK、US、CA 和 NZ。在�
 ## 使用自定义域名
 
 一旦激活，您的一次性链接将使用您的自定义域。例如
-https://secrets-example.onetime.dev/secret/abc123
+`https://secrets-example.onetime.dev/secret/abc123`
 
 ## We've Got You Covered
 

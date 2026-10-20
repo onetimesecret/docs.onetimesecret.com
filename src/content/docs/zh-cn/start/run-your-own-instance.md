@@ -19,7 +19,8 @@ sidebar:
 ### 1. 启动 Redis
 
 ```bash
-docker run -p 6379:6379 -d redis:bookworm
+docker network create onetime
+docker run -d --name redis --network onetime redis:bookworm
 ```
 
 ### 2. 生成密钥
@@ -35,13 +36,13 @@ echo "密钥已保存到 .ots_secret（请妥善保管此文件！）"
 
 ```bash
 # 使用密钥运行容器
-docker run -p 3000:3000 -d \
-  -e REDIS_URL=redis://host.docker.internal:6379/0 \
+docker run -p 3000:3000 -d --network onetime \
+  -e REDIS_URL=redis://redis:6379/0 \
   -e SECRET="$(cat .ots_secret)" \
   -e HOST=localhost:3000 \
   -e SSL=false \
   -e RACK_ENV=production \
-  onetimesecret/onetimesecret:v0.26.2
+  onetimesecret/onetimesecret:v0.26.18
 ```
 
 ### 4. 访问您的实例

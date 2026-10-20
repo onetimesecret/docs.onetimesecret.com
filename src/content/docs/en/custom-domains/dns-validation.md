@@ -27,7 +27,7 @@ guidance — see the [Setup Guide](/en/custom-domains/setup-guide).
 
 Your Domain Dashboard reflects where the domain is in this lifecycle:
 
-- **Pending / Unverified** — Records have not yet been detected. DNS changes can take time to propagate (often minutes, but up to 24–48 hours).
+- **Pending / Unverified** — Records have not yet been detected. DNS changes can take time to propagate (often minutes, but up to 24–48 hours). Until the domain is verified, it answers "This domain is not configured" and is not offered for secret links.
 - **Active with SSL** — Verification succeeded and a certificate has been issued. Your secret links now use the custom domain.
 - **Last Monitored** timestamp — Onetime Secret continuously monitors your domain's connectivity. The timestamp confirms the most recent successful check.
 
@@ -41,13 +41,14 @@ If validation does not succeed, work through the following:
 - **Propagation delay** — DNS changes may take up to 24–48 hours to fully propagate. If verification fails initially, wait and try again.
 - **Apex domain limitations** — Apex (root) domains cannot use CNAME records and must use A records; confirm you are using the correct record type.
 - **Domain ownership** — Make sure you have full control of the domain and its DNS settings.
+- **TXT record removed** — Keep the TXT ownership record in place after verification. If a later check does not find it, the domain stops being served until the record is found again.
 
 If problems persist, including any SSL-related errors, contact our support team.
 
 ## Related pages
 
 - [Setup Guide](/en/custom-domains/setup-guide) — create the DNS records and choose your region.
-- [How Custom Domains Work](/en/custom-domains#how-it-works) — the bigger picture.
+- [How Custom Domains Work](/en/custom-domains/#how-it-works) — the bigger picture.
 - [Where your data lives](/en/security/where-your-data-lives) — choose the right region and its endpoint.
 
 ## Questions or Need Support?

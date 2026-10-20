@@ -1,4 +1,4 @@
-import { defineMarkdocConfig } from "@astrojs/markdoc/config";
+import { component, defineMarkdocConfig } from "@astrojs/markdoc/config";
 import starlightMarkdoc from "@astrojs/starlight-markdoc";
 
 // https://docs.astro.build/en/guides/integrations-guide/markdoc/
@@ -23,6 +23,16 @@ export default defineMarkdocConfig({
       render: "CardGrid",
       attributes: {
         stagger: { type: Boolean, default: false },
+      },
+    },
+    // Regional globe icon, e.g. {% globe name="earth-canada" /%}
+    globe: {
+      render: component("./src/components/icons/OtsGlobe.astro"),
+      selfClosing: true,
+      attributes: {
+        name: { type: String, required: true },
+        size: { type: String },
+        label: { type: String },
       },
     },
   },

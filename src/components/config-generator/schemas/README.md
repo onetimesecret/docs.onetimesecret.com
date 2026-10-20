@@ -23,7 +23,7 @@ Then copy the two files here (renaming `static` → `config-static`, `auth` →
 `config-auth`) and commit. The app repo's `generated/schemas/` is git-ignored
 (a build artifact), which is why these are vendored rather than imported.
 
-Vendored at app repo commit: `d1840c5`.
+Vendored at app repo tag `v0.26.18` (commit `a4f02e8`).
 
 ## Why vendored (not fetched)
 
