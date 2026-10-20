@@ -1,81 +1,55 @@
 ---
-title: Onetime Secret - Secure Links, Stronger Connections
-description: Onetime Secret offers a secure, ephemeral way to share sensitive information in a digital world.
+title: Onetime Secret Documentation
+description: Send passwords, keys and other sensitive text as a link that opens once and then self-destructs. Guides for senders, recipients, teams, developers and self-hosters.
 template: splash
-tableOfContents:
-  minHeadingLevel: 3
+tableOfContents: false
 hero:
-  title: Secure links, stronger connections
-  tagline: Share sensitive information securely with self-destructing links that are only viewable once.
+  title: Share it once. Then it's gone.
+  tagline: Onetime Secret turns a password, API key or private note into a link that opens exactly one time. After that, the content is destroyed. No account needed to send or receive.
   actions:
-    - text: Get started
-      link: /en/start/
+    - text: Send your first secret
+      link: /en/start/send-your-first-secret/
       icon: right-arrow
+    - text: Self-host it
+      link: /en/self-hosting/
+      variant: secondary
     - text: View on GitHub
       link: https://github.com/onetimesecret/onetimesecret
       icon: external
       variant: minimal
 ---
 
-## The power of secure sharing
-
-Onetime Secret provides a simple, secure way to share sensitive information. Our service ensures your data remains private and ephemeral in an increasingly permanent digital world.
+## What brings you here?
 
 {% cardgrid %}
-{% card title="Self-destructing messages" icon="trash" %}
-Share secrets that automatically delete after being viewed or after a set time.
-{% /card %}
-{% card title="Server-side encryption" icon="lock-closed" %}
-Your secrets are securely encrypted on our servers, ensuring data protection.
-{% /card %}
-{% card title="Passphrase protection" icon="key" %}
-Add an extra layer of security with custom passphrases for your shared secrets.
-{% /card %}
+{% linkcard title="Send a secret" href="/en/start/send-your-first-secret/" description="Paste it, pick how long it lives, then share the link." /%}
+{% linkcard title="Someone sent you a link" href="/en/share/what-recipients-see/" description="What happens when you open it, and why it only works once." /%}
+{% linkcard title="The link says it's gone" href="/en/share/when-a-link-doesnt-work/" description="Already viewed, expired, or burned by the sender, and what to do next." /%}
+{% linkcard title="Teams and custom domains" href="/en/organizations/" description="Shared workspaces, member roles, SSO, and secret links on your own domain." /%}
+{% linkcard title="API and client libraries" href="/en/api/" description="Create and retrieve secrets from scripts, CI pipelines and your own apps." /%}
+{% linkcard title="Hosted or self-hosted?" href="/en/start/hosted-or-self-hosted/" description="Same open-source app either way. Decide who runs the servers." /%}
 {% /cardgrid %}
 
-## The flexibility of our service
+## How it works
 
-Onetime Secret offers customizable options to meet your specific needs, whether you're an individual or a business looking for a branded solution.
+{% steps %}
 
-{% cardgrid %}
-{% card title="Customizable expiration" icon="clock" %}
-Set your secret to expire after a specific time, from minutes to days.
-{% /card %}
-{% card title="Custom domains" icon="globe-alt" %}
-Use your own domain for a personalized and branded experience.
-{% /card %}
-{% card title="Open source" icon="code-bracket" %}
-Our transparent, community-audited codebase ensures trust and reliability.
-{% /card %}
-{% /cardgrid %}
+1. **Create.** Paste the secret, choose when it expires, and optionally add a passphrase the recipient must enter.
 
-## Why choose Onetime Secret?
+2. **Share.** Send the link through any channel you already use: chat, a ticket, email. You keep a separate [receipt](/en/share/your-receipt/) that shows whether it has been opened.
 
-Onetime Secret offers a secure, compliant, and user-friendly platform for sharing sensitive information, prioritizing your privacy and data protection.
+3. **Gone.** The recipient opens it once and the content is destroyed. Anyone who tries the link afterwards, including you, sees nothing.
 
-{% cardgrid %}
-{% card title="Privacy-First Design" icon="shield-check" %}
-Built from the ground up with privacy in mind, ensuring your sensitive data remains confidential and protected.
-{% /card %}
-{% card title="Custom Domains" icon="lock-closed" %}
-State-of-the-art network architecture allows for data-locality and custom domain integration, providing a branded and compliant experience.
-{% /card %}
-{% card title="Self-Destructing Messages" icon="clock" %}
-Messages automatically delete after a set time or single view, minimizing digital footprints and enhancing security.
-{% /card %}
-{% card title="Compliance Ready" icon="document-check" %}
-Designed to help meet global privacy regulations, including GDPR, CCPA, and HIPAA requirements.
-{% /card %}
-{% card title="Open-Source Transparency" icon="code-bracket" %}
-Our open-source model ensures transparency and allows for community-driven security enhancements.
-{% /card %}
-{% card title="User-Friendly Interface" icon="user-group" %}
-Intuitive design makes secure information sharing accessible to both technical and non-technical users.
-{% /card %}
-{% /cardgrid %}
+{% /steps %}
 
-## Enhance Your Privacy Today
+## What protects your secret
 
-Join the thousands of users who trust Onetime Secret for secure, ephemeral sharing. Family-operated since 2012.
+- **Destroyed on view or at expiry.** Every secret has a lifetime, and nothing is kept after it is read. [Data protection](/en/security/data-protection/)
+- **Encrypted in transit and at rest**, on every plan. Add a passphrase for anything you would not paste into email. [Best practices](/en/security/best-practices/)
+- **You choose the region.** Data is processed and stored in the EU, UK, US, Canada or New Zealand. [Where your data lives](/en/security/where-your-data-lives/)
+- **No trackers, no analytics, no marketing email.** We store only what the service needs to run. [Our principles](/en/security/our-principles/)
+- **Open source.** Read the code, or run it on your own infrastructure. [GitHub](https://github.com/onetimesecret/onetimesecret)
 
-[Explore Premium Plans](/en/pricing/) | [Try Free](/en/start/)
+Found a security issue? [Report it here](/en/security/vulnerability-disclosure/).
+
+Not sure where to begin? [Start here](/en/start/) has the full map of these docs.

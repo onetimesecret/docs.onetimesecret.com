@@ -8,6 +8,10 @@
  * card into a 400x400 square at build time. Passing only `width` lets Astro
  * infer `height` from the source and preserve the natural aspect ratio.
  *
+ * Second change: a hero with no image or html gets `.no-media`, which keeps
+ * the copy in one centered column on desktop. Upstream always switches to a
+ * 7fr/4fr grid at 50rem, leaving the right column empty when there is no media.
+ *
  * Re-sync this file with upstream on Starlight upgrades.
  */
 import { Image, getImage } from 'astro:assets';
@@ -71,7 +75,7 @@ if (randomizeHero) {
 }
 ---
 
-<div class="hero">
+<div class:list={['hero', { 'no-media': !darkImage && !rawHtml }]}>
 	{
 		randomizeHero ? (
 			<Fragment>
@@ -206,6 +210,23 @@ if (randomizeHero) {
 
 			.actions {
 				justify-content: flex-start;
+			}
+
+			.hero.no-media {
+				grid-template-columns: 100%;
+				justify-items: center;
+			}
+
+			.no-media .stack {
+				text-align: center;
+			}
+
+			.no-media .copy {
+				align-items: center;
+			}
+
+			.no-media .actions {
+				justify-content: center;
 			}
 		}
 	}
