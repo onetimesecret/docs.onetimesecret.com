@@ -19,15 +19,16 @@
 -->
 
 <script setup lang="ts">
-  import { computed, onMounted, reactive, ref, watch } from 'vue';
+  import { computed, nextTick, onMounted, reactive, ref, watch } from 'vue';
   import { changedLines, splitLines } from './diff';
-  import { GROUPS, OPTIONS, type OptionSpec } from './presets';
+  import { GROUPS, OPTIONS, type GroupSpec, type OptionSpec } from './presets';
   import {
     choicesFor,
     coerce,
     defaultFor,
     defaultSelections,
     generate,
+    requirementsMet,
     toQuery,
     type Selections,
   } from './generate';
@@ -73,25 +74,44 @@
   const copiedKey = ref<FileKey | null>(null);
   const copiedName = computed(() => files.find((f) => f.key === copiedKey.value)?.name);
 
+  type Requires = Record<string, string | number | boolean>;
+
   function requirementMet(opt: OptionSpec): boolean {
-    if (!opt.requires) return true;
-    return Object.entries(opt.requires).every(([dep, val]) => selections[dep] === val);
+    return requirementsMet(opt, selections);
   }
-  function requirementHint(opt: OptionSpec): string {
-    if (!opt.requires) return '';
-    return Object.entries(opt.requires)
-      .map(([dep, val]) => {
-        const depOpt = OPTIONS.find((o) => o.key === dep);
-        const choice = depOpt && choicesFor(depOpt).find((c) => c.value === val);
-        const choiceLabel = choice?.label.split(':')[0] ?? String(val);
-        return `${choiceLabel} ${(depOpt?.label ?? dep).toLowerCase()}`;
-      })
+  function groupRequirementMet(group: GroupSpec): boolean {
+    return Object.entries(group.requires ?? {}).every(([dep, val]) => selections[dep] === val);
+  }
+  /** "Full deployment mode" for a choice, the option's own label for a switch. */
+  function describeRequirement(dep: string, val: string | number | boolean): string {
+    const depOpt = OPTIONS.find((o) => o.key === dep);
+    if (!depOpt) return `${dep} ${val}`;
+    if (depOpt.type === 'boolean') return depOpt.label;
+    const choice = choicesFor(depOpt).find((c) => c.value === val);
+    const choiceLabel = choice?.label.split(':')[0] ?? String(val);
+    return `${choiceLabel} ${depOpt.label.toLowerCase()}`;
+  }
+  function requirementHint(requires: Requires): string {
+    return Object.entries(requires)
+      .map(([dep, val]) => describeRequirement(dep, val))
       .join(' and ');
   }
-  function describedBy(opt: OptionSpec): string | undefined {
+  /**
+   * The option's unmet requirements, less those its group states once under
+   * the group title, so every Sign-in row does not repeat "Requires Full
+   * deployment mode".
+   */
+  function ownHint(opt: OptionSpec, group: GroupSpec): string {
+    const unmet = Object.entries(opt.requires ?? {}).filter(
+      ([dep, val]) => selections[dep] !== val && group.requires?.[dep] !== val
+    );
+    return unmet.length ? requirementHint(Object.fromEntries(unmet)) : '';
+  }
+  function describedBy(opt: OptionSpec, group: GroupSpec): string | undefined {
     const ids = [
       opt.description && `cg-${opt.key}-desc`,
-      !requirementMet(opt) && `cg-${opt.key}-req`,
+      ownHint(opt, group) && `cg-${opt.key}-req`,
+      !groupRequirementMet(group) && `cg-group-${group.key}-req`,
     ].filter(Boolean);
     return ids.length ? ids.join(' ') : undefined;
   }
@@ -109,6 +129,31 @@
     const search = new URLSearchParams(query).toString();
     const url = search ? `${window.location.pathname}?${search}` : window.location.pathname;
     window.history.replaceState(null, '', url);
+  }
+
+  const outputEl = ref<HTMLElement | null>(null);
+
+  /**
+   * Scroll the output column to the first line the last change wrote, in the
+   * first file it touched. Only when the column scrolls by itself (the side
+   * by side layout); stacked, it is part of the page and nothing moves.
+   */
+  function revealChange(keys: FileKey[]) {
+    const panel = outputEl.value;
+    if (!panel || panel.scrollHeight <= panel.clientHeight) return;
+    const line = keys
+      .map((key) => panel.querySelector<HTMLElement>(`[data-file="${key}"] .cg-line.is-changed`))
+      .find(Boolean);
+    if (!line) return;
+    // The part of the column on screen: near the end of the page the grid
+    // pushes it up under Starlight's fixed header.
+    const view = panel.getBoundingClientRect();
+    const top = Math.max(view.top, document.querySelector('header')?.getBoundingClientRect().bottom ?? 0);
+    const bottom = Math.min(view.bottom, window.innerHeight);
+    const at = line.getBoundingClientRect();
+    if (at.top >= top && at.bottom <= bottom) return;
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    panel.scrollBy({ top: at.top - top - (bottom - top) / 3, behavior: reduce ? 'auto' : 'smooth' });
   }
 
   onMounted(() => {
@@ -129,11 +174,12 @@
     );
     // Registered after seeding, so a shared link does not light up on load.
     watch(contents, (next, prev) => {
-      for (const { key } of files) {
-        if (next[key] === prev[key]) continue;
+      const touched = files.map((f) => f.key).filter((key) => next[key] !== prev[key]);
+      for (const key of touched) {
         changed[key] = changedLines(prev[key], next[key]);
         revision[key]++;
       }
+      if (touched.length) nextTick(() => revealChange(touched));
     });
   });
 
@@ -175,6 +221,12 @@
           :key="group.key"
           class="cg-group">
           <legend class="cg-group-title">{{ group.title }}</legend>
+          <p
+            v-if="group.requires && !groupRequirementMet(group)"
+            :id="`cg-group-${group.key}-req`"
+            class="cg-group-req">
+            Requires {{ requirementHint(group.requires) }}.
+          </p>
           <div class="cg-group-body">
             <div
               v-for="opt in group.options"
@@ -194,10 +246,10 @@
                   {{ opt.description }}
                 </p>
                 <p
-                  v-if="!requirementMet(opt)"
+                  v-if="ownHint(opt, group)"
                   :id="`cg-${opt.key}-req`"
                   class="cg-option-req">
-                  Requires {{ requirementHint(opt) }}.
+                  Requires {{ ownHint(opt, group) }}.
                 </p>
               </div>
 
@@ -209,14 +261,14 @@
                 role="switch"
                 class="cg-switch"
                 :disabled="!requirementMet(opt)"
-                :aria-describedby="describedBy(opt)" />
+                :aria-describedby="describedBy(opt, group)" />
 
               <select
                 v-else
                 :id="`cg-${opt.key}`"
                 v-model="selections[opt.key]"
                 class="cg-select"
-                :aria-describedby="describedBy(opt)">
+                :aria-describedby="describedBy(opt, group)">
                 <option
                   v-for="choice in choicesFor(opt)"
                   :key="String(choice.value)"
@@ -231,6 +283,7 @@
 
       <!-- ── Output ── -->
       <section
+        ref="outputEl"
         class="cg-output"
         aria-label="Generated files">
         <ul
@@ -248,6 +301,7 @@
             v-for="file in files"
             :key="file.key"
             class="cg-file"
+            :data-file="file.key"
             :aria-labelledby="`cg-file-${file.key}`">
             <div class="cg-file-header">
               <h2
@@ -315,13 +369,20 @@
     gap: 2rem;
   }
   /* Side by side once the content column can hold both comfortably. The
-     three files together run about as long as the options, so the output
-     scrolls with the page rather than sticking. */
+     options run longer than the files, so the files stay in view below the
+     nav, scrolling inside their own column when they are taller than the
+     window; revealChange() brings each change into view there. */
   @container (min-width: 50rem) {
     .cg-grid {
       grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
       align-items: start;
       gap: 2.5rem;
+    }
+    .cg-output {
+      position: sticky;
+      top: calc(var(--sl-nav-height) + 1.5rem);
+      max-height: calc(100vh - var(--sl-nav-height) - 3rem);
+      overflow-y: auto;
     }
   }
   .cg-options,
@@ -348,6 +409,12 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--sl-color-gray-3);
+  }
+  .cg-group-req {
+    margin: -0.125rem 0 0.625rem;
+    font-size: var(--sl-text-sm);
+    line-height: 1.5;
+    color: var(--sl-color-orange-high);
   }
   /* hairline-light, not hairline: in dark mode hairline is the same gray as
      the sidebar background, which made the row dividers vanish. */

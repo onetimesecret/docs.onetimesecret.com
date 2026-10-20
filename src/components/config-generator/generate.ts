@@ -117,17 +117,23 @@ export interface GenerateResult {
   warnings: string[];
 }
 
+/** Whether every selection the option depends on has the value it needs. */
+export function requirementsMet(opt: OptionSpec, selections: Selections): boolean {
+  if (!opt.requires) return true;
+  return Object.entries(opt.requires).every(([dep, val]) => selections[dep] === val);
+}
+
 /**
  * A dependent option whose requirement isn't met is reset to its default and a
  * warning is recorded — never a hard error, so a stale shared link degrades
- * gracefully.
+ * gracefully. OPTIONS lists a dependency before its dependents, so a reset
+ * cascades (SSO off takes SAML with it) in one pass.
  */
 function enforceDependencies(selections: Selections): string[] {
   const warnings: string[] = [];
   for (const opt of OPTIONS) {
-    if (!opt.requires) continue;
-    const unmet = Object.entries(opt.requires).some(([dep, val]) => selections[dep] !== val);
-    if (unmet && selections[opt.key] !== defaultFor(opt)) {
+    if (requirementsMet(opt, selections)) continue;
+    if (selections[opt.key] !== defaultFor(opt)) {
       const req = Object.entries(opt.requires)
         .map(([k, v]) => `${k}: ${JSON.stringify(v)}`)
         .join(', ');
@@ -155,18 +161,16 @@ export function generate(rawSelections: Selections): GenerateResult {
 
   for (const opt of OPTIONS) {
     const value = selections[opt.key];
-    const target = opt.file === 'auth' ? auth : config;
 
     if (opt.key === 'deployment_mode') {
       auth.mode = value;
       continue;
     }
-    if (opt.key === 'sso_enabled') {
-      // Only meaningful in full mode (enforceDependencies guarantees this).
-      if (selections.deployment_mode === 'full') setPath(auth, 'full.features.sso', value);
-      continue;
-    }
-    if (opt.path) setPath(target, opt.path, value);
+    // An option whose requirement is unmet has no effect (the full.features
+    // block in Simple mode), so it writes nothing rather than a default.
+    if (!requirementsMet(opt, selections)) continue;
+    if (opt.file === 'env' || !opt.path) continue;
+    setPath(opt.file === 'auth' ? auth : config, opt.path, value);
   }
 
   return {
@@ -185,7 +189,9 @@ export function generate(rawSelections: Selections): GenerateResult {
  * generated value that could leak through a shared link. Feature toggles and
  * modes are expressed in the config.yaml / auth.yaml above, not here (emitting
  * e.g. `EMAILER_MODE=` blank would override the setting to an empty string).
- * SECRET is always required, so it leads the list.
+ * The exception is a switch with no YAML key (SAML_ENABLED), which carries a
+ * fixed value and a note saying why. SECRET is always required, so it leads
+ * the list.
  */
 export function envSnippet(selections: Selections): string {
   const lines = [
@@ -203,7 +209,8 @@ export function envSnippet(selections: Selections): string {
       if (env.when !== undefined && env.when !== value) continue;
       if (seen.has(env.name)) continue;
       seen.add(env.name);
-      lines.push(`${env.name}=`);
+      if (env.note) lines.push(`# ${env.note}`);
+      lines.push(`${env.name}=${env.value ?? ''}`);
     }
   }
   return lines.join('\n') + '\n';
