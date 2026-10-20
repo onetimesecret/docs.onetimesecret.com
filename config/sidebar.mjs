@@ -101,18 +101,6 @@ function createLink(key, link, badge) {
 }
 
 /**
- * Sidebar link labelled with a release version alone (e.g. "v0.26.18").
- * Version strings read the same in every locale, so it takes no translation
- * key; the enclosing group's label says what the versions are.
- * @param {string} version - Release version shown as the label
- * @param {string} link - URL path for the link
- * @returns {Object} Formatted sidebar link item
- */
-function createVersionLink(version, link) {
-  return { label: version, link, attrs: {} };
-}
-
-/**
  * Helper function to create sidebar group items
  * @param {string} key - Translation key for the group label
  * @param {Array} items - Child items (links or groups) within this group
@@ -228,21 +216,7 @@ export const sidebar = [
     createLink("configurationReference", "self-hosting/configuration"),
     createLink("configurationGenerator", "self-hosting/configuration-generator"),
     createLink("environmentVariables", "self-hosting/environment-variables"),
-    // Newest first: the guide for the release being installed is the one
-    // most readers want. Add each new guide at the top.
-    createGroup(
-      "upgradeGuides",
-      [
-        createVersionLink("v0.26.18", "self-hosting/upgrading-v0-26-18"),
-        createVersionLink("v0.26.17", "self-hosting/upgrading-v0-26-17"),
-        createVersionLink("v0.26.15", "self-hosting/upgrading-v0-26-15"),
-        createVersionLink("v0.26.14", "self-hosting/upgrading-v0-26-14"),
-        createVersionLink("v0.26.12", "self-hosting/upgrading-v0-26-12"),
-        createVersionLink("v0.26.11", "self-hosting/upgrading-v0-26-11"),
-        createVersionLink("v0.26.6", "self-hosting/upgrading-v0-26"),
-      ],
-      true,
-    ),
+    createLink("upgradeGuides", "self-hosting/upgrade-guides"),
   ]),
 
   createLink("restApi", "rest-api"),
