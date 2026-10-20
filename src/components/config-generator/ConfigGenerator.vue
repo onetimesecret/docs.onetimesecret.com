@@ -279,10 +279,7 @@
             <!-- One block span per line, each ending in its newline, so a
                  changed line can be highlighted edge to edge and selecting
                  the text still copies plain lines. -->
-            <pre
-              class="cg-code"
-              tabindex="0"
-              :aria-labelledby="`cg-file-${file.key}`"><code :key="revision[file.key]"><span
+            <pre class="cg-code"><code :key="revision[file.key]"><span
                 v-for="(line, i) in splitLines(contents[file.key])"
                 :key="i"
                 class="cg-line"
@@ -521,11 +518,14 @@
     outline-offset: 1px;
   }
   /* The padding sits on the lines, not the block, so a highlight runs to
-     the card's edges; max-content lets it follow a line that scrolls. */
+     the card's edges. Long lines (the .env header comments on a phone)
+     wrap rather than hide behind a sideways scroll; Copy and Download
+     still give the exact text. */
   .cg-code {
     margin: 0;
-    overflow-x: auto;
     padding: 0.75rem 0;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
     font-family: var(--__sl-font-mono);
     font-size: var(--sl-text-xs);
     line-height: 1.6;
@@ -534,17 +534,14 @@
   }
   .cg-code code {
     display: block;
-    width: max-content;
-    min-width: 100%;
     font: inherit;
   }
-  .cg-code:focus-visible {
-    outline: 2px solid var(--sl-color-accent);
-    outline-offset: -2px;
-  }
+  /* Hanging indent: a wrapped line continues 2ch in, so it does not read
+     as a line of its own. */
   .cg-line {
     display: block;
-    padding: 0 1.125rem;
+    padding: 0 1.125rem 0 calc(1.125rem + 2ch);
+    text-indent: -2ch;
   }
   /* Marks what the last change wrote, then fades. A tint of the accent
      rather than accent-low, which is a saturated block in dark mode. A
