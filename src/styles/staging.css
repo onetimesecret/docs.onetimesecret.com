@@ -29,8 +29,10 @@ header.header {
 }
 
 /* Push the fixed left sidebar (and its mobile drop-down pane) below the
-   banner + navbar. */
-.sidebar-pane {
+   banner + navbar. .section-menu is the short drawer Header.astro renders on
+   sidebar-less pages; it shares the pane's geometry. */
+.sidebar-pane,
+.section-menu {
   inset-block-start: calc(var(--sl-nav-height) + var(--ots-staging-banner-h));
 }
 
