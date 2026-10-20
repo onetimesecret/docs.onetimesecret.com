@@ -27,6 +27,11 @@ later.
 
 ## Pick an installation path
 
+In a hurry, with a Valkey or Redis you already run? The single `docker run`
+form in [Install with Docker](/en/install/docker#running-a-single-container)
+brings up an instance on port 3000 with one generated secret. Everything else
+on this page still applies once it is up.
+
 - [Images and variants](/en/install/images-and-variants) — which of the
   published images to run, and how the release tags work.
 - [Install with Docker](/en/install/docker) — the two Compose stacks the project
@@ -40,7 +45,9 @@ later.
   never terminates TLS, so a proxy in front of it is assumed. Read this before
   you expose the instance.
 - [Verify your install](/en/install/verify) — prove the instance is genuinely
-  serving before you hand it to anyone.
+  serving before you hand it to anyone, and
+  [create the first account](/en/install/verify#create-the-first-account):
+  the site-operator role is granted from the CLI only.
 
 Upgrading an existing install? The [Upgrade Guides](/en/self-hosting/upgrade-guides)
 list the available guides, newest first. Start with the first guide after the
@@ -93,3 +100,11 @@ it is idempotent and demotes every other owner. `org doctor` marks that check
 The end-user side of this is
 [Ownership and transfer](/en/organizations/ownership-and-transfer), which is what
 your users will have read before they ask you.
+
+## Getting help
+
+- [The GitHub repository](https://github.com/onetimesecret/onetimesecret) for
+  the source, the release notes and the shipped Compose stacks.
+- [The issue tracker](https://github.com/onetimesecret/onetimesecret/issues)
+  for bugs, with the release tag and the relevant log lines.
+- [Contact us](https://onetimesecret.com/feedback) directly for anything else.
