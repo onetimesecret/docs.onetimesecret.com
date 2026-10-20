@@ -2,7 +2,7 @@
   "name": "docs",
   "type": "module",
   "version": "2.1.1",
-  "packageManager": "pnpm@12.6.0",
+  "packageManager": "pnpm@12.14.0",
   "scripts": {
     "dev": "astro dev --host",
     "start": "astro dev --host",
@@ -38,7 +38,7 @@
     "@astrojs/vue": "^7.0.3",
     "@tailwindcss/vite": "^4.3.3",
     "accessible-astro-components": "^5.8.0",
-    "astro": "^7.3.5",
+    "astro": "^7.4.0",
     "devalue": "^5.9.4",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
