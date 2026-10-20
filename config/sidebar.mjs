@@ -139,7 +139,13 @@ function createGroup(key, items = [], collapsed = false) {
 //
 // Groups nest: Starlight's ManualSidebarGroupSchema accepts a group inside
 // another group's `items` (schemas/sidebar.ts), and createGroup passes `items`
-// straight through, so no helper change was needed for the two-level sections.
+// straight through, so no helper change was needed for the two-level section.
+// Only "Using Onetime Secret" nests; Self-hosting is deliberately flat (see
+// the comment on that group).
+//
+// Labels are sentence case ("Send your first secret", "Upgrade guides"), with
+// proper nouns and acronyms kept as written (Docker, Linux, TLS, DNS, SSO,
+// REST API). The label lives in src/content/i18n/en.json, not here.
 //
 // Every link label is a distinct translation key. "Overview" used to appear
 // seven times, disambiguated only by which group it happened to be under, which
@@ -152,9 +158,8 @@ export const sidebar = [
   createGroup("startHere", [
     createLink("whereToBegin", "start"),
     createLink("sendYourFirstSecret", "start/send-your-first-secret"),
-    createLink("glossaryOfTerms", "start/glossary"),
+    createLink("glossary", "start/glossary"),
     createLink("hostingChoice", "start/hosted-or-self-hosted"),
-    createLink("runYourOwnInstance", "start/run-your-own-instance"),
   ]),
 
   createGroup("usingOnetimeSecret", [
@@ -212,60 +217,38 @@ export const sidebar = [
     ]),
   ]),
 
+  // Self-hosting is one flat sequence, on purpose. The twelve pages serve one
+  // reader — the operator — in the order they meet them: orient, pick the one
+  // decision that changes what you install, install, configure, upgrade. The
+  // array order IS that sequence (createLink emits no `order` key and nothing
+  // here autogenerates, so Starlight renders the array as written; the
+  // install/* pages carry no `sidebar.order` for the same reason — reorder
+  // here, not in frontmatter). Subgroups would put every page three levels
+  // deep to label a sequence the order already shows; add one only when a
+  // section outgrows this list or gains a second audience.
+  //
+  // install/ has no index page on purpose — nothing links to /en/install/ and
+  // the sequence is the index. The six install/* pages are the split of the
+  // retired self-hosting/installation (Phase 3).
+  //
+  // The version-specific upgrade guides (self-hosting/upgrading-v0-*) are NOT
+  // listed. They are reached from the table on self-hosting/upgrade-guides,
+  // and bin/check-orphans.mjs counts a page linked from a sidebar-linked page
+  // in the same directory as reachable, so a new release guide needs a row in
+  // that table and nothing here.
   createGroup("selfHosting", [
-    // Install & deploy. The first two are orientation and the one decision that
-    // changes what you install; the six install/* pages are the split of the
-    // retired self-hosting/installation (Phase 3) in the order a first-time
-    // operator meets them. install/ has no index page on purpose — nothing
-    // links to /en/install/ and the group IS the index.
-    //
-    // Order is array position, not a number. createLink/createGroup emit no
-    // `order` key and there is no autogenerate group anywhere in this repo, so
-    // Starlight renders this array as written and adding a group later is a
-    // pure splice that renumbers nothing.
-    //
-    // For the same reason the install/* pages carry no `sidebar.order` in their
-    // frontmatter. Starlight only reads that key for an autogenerate group;
-    // under a manual array it is inert, and an inert number that disagrees with
-    // the array below is worse than no number at all — it reads as the source of
-    // truth to the next editor. Reorder here, not in frontmatter.
-    createGroup("installAndDeploy", [
-      createLink("aboutSelfHosting", "self-hosting"),
-      createLink("authModeChoice", "self-hosting/simple-or-full-auth"),
-      createLink("imagesAndVariants", "install/images-and-variants"),
-      createLink("installWithDocker", "install/docker"),
-      createLink("installOnLinux", "install/linux"),
-      createLink("runAsAService", "install/run-as-a-service"),
-      createLink("reverseProxyAndTls", "install/reverse-proxy-and-tls"),
-      createLink("verifyYourInstall", "install/verify"),
-    ]),
-
-    // Configure. The three entries below are the surviving reference pages;
-    // Phase 4 retires them as movedPages families. The task-shaped configure/*
-    // pages are appended ABOVE them when they land — tasks first, reference
-    // last.
-    createGroup("configure", [
-      createLink("configurationReference", "self-hosting/configuration"),
-      createLink("configurationGenerator", "self-hosting/configuration-generator"),
-      createLink("environmentVariables", "self-hosting/environment-variables"),
-    ]),
-
-    // A createGroup("features", [...]) call goes here when the first features/*
-    // page lands. It is NOT added empty: bin/check-nav.mjs:68-72 fails on a
-    // group with no items.
-
-    createGroup("troubleshootAndUpgrade", [
-      createLink("upgradeGuides", "self-hosting/upgrade-guides"),
-      createLink("upgradingToV02618", "self-hosting/upgrading-v0-26-18"),
-      createLink("upgradingToV02617", "self-hosting/upgrading-v0-26-17"),
-      createLink("upgradingToV02615", "self-hosting/upgrading-v0-26-15"),
-      createLink("upgradingToV02614", "self-hosting/upgrading-v0-26-14"),
-      createLink("upgradingToV02612", "self-hosting/upgrading-v0-26-12"),
-      createLink("upgradingToV02611", "self-hosting/upgrading-v0-26-11"),
-      createLink("upgradingToV026", "self-hosting/upgrading-v0-26"),
-      createLink("upgradingToV024", "self-hosting/upgrading-v0-24"),
-      createLink("upgradingToV023", "self-hosting/upgrading-v0-23"),
-    ]),
+    createLink("aboutSelfHosting", "self-hosting"),
+    createLink("authModeChoice", "self-hosting/simple-or-full-auth"),
+    createLink("imagesAndVariants", "install/images-and-variants"),
+    createLink("installWithDocker", "install/docker"),
+    createLink("installOnLinux", "install/linux"),
+    createLink("runAsAService", "install/run-as-a-service"),
+    createLink("reverseProxyAndTls", "install/reverse-proxy-and-tls"),
+    createLink("verifyYourInstall", "install/verify"),
+    createLink("configurationReference", "self-hosting/configuration"),
+    createLink("configurationGenerator", "self-hosting/configuration-generator"),
+    createLink("environmentVariables", "self-hosting/environment-variables"),
+    createLink("upgradeGuides", "self-hosting/upgrade-guides"),
   ]),
 
   createGroup("apiAndSdks", [
@@ -288,7 +271,7 @@ export const sidebar = [
       createLink("developerOnRamp", "contribute/developer-on-ramp"),
       createLink("howTranslationsWork", "translations"),
       createLink("styleGuide", "translations/guide"),
-      createLink("glossary", "translations/glossary"),
+      createLink("translationGlossary", "translations/glossary"),
       createLink("universalGuidance", "translations/universal"),
       createLink("translatingSecret", "translations/universal/secret-concept"),
       createLink("passwordVsPassphrase", "translations/universal/password-passphrase"),

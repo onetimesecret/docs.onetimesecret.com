@@ -8,7 +8,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 
-import { fileSlug, normalizeLink, parseAllowlist, repoRoot } from "./nav.mjs";
+import { enLinkSlugs, fileSlug, normalizeLink, parseAllowlist, repoRoot } from "./nav.mjs";
 
 describe("normalizeLink", () => {
   it("maps the site root to the index slug", () => {
@@ -100,5 +100,38 @@ describe("fileSlug", () => {
   it("strips the extension from a non-index page", () => {
     expect(fileSlug("pricing.md", DOC_EXT)).toBe("pricing");
     expect(fileSlug("a/b/index-of-things.markdown", DOC_EXT)).toBe("a/b/index-of-things");
+  });
+});
+
+describe("enLinkSlugs", () => {
+  it("collects absolute /en/ links as normalized slugs, in order", () => {
+    const md = [
+      "| [v0.26.18](/en/self-hosting/upgrading-v0-26-18) | migration |",
+      "| [v0.26.17](/en/self-hosting/upgrading-v0-26-17/) | backfill |",
+      "See [the index](/en/self-hosting/) too.",
+    ].join("\n");
+    expect([...enLinkSlugs(md)]).toEqual([
+      "self-hosting/upgrading-v0-26-18",
+      "self-hosting/upgrading-v0-26-17",
+      "self-hosting",
+    ]);
+  });
+
+  it("drops fragments, queries, and link titles", () => {
+    const md = '[a](/en/security/our-principles/#privacy-first) [b](/en/pricing?x=1) [c](/en/api/ "REST API")';
+    expect([...enLinkSlugs(md)]).toEqual(["security/our-principles", "pricing", "api"]);
+  });
+
+  it("ignores relative, external, other-locale, and image links", () => {
+    const md = [
+      "[rel](./upgrading-v0-26-18) [up](../install/docker/) [bare](upgrading-v0-24)",
+      "[ext](https://onetimesecret.com/en/pricing/) [de](/de/self-hosting/)",
+      "![img](/images/en/diagram.png) [root](/en/)",
+    ].join("\n");
+    expect([...enLinkSlugs(md)]).toEqual(["index"]);
+  });
+
+  it("deduplicates repeated targets", () => {
+    expect([...enLinkSlugs("[a](/en/x/) [b](/en/x)")]).toEqual(["x"]);
   });
 });

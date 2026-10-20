@@ -108,15 +108,51 @@ export function fileSlug(relativePath, ext) {
 }
 
 /**
- * Slugs of every EN docs page, mirroring Starlight's docsLoader: any DOC_EXT
- * file under src/content/docs/en, basenames starting with "_" excluded.
+ * Every EN docs page, mirroring Starlight's docsLoader: any DOC_EXT file under
+ * src/content/docs/en, basenames starting with "_" excluded.
+ *
+ * `dir` is the page's directory relative to the collection root ("" at the
+ * root), taken from the FILE path rather than the slug: an index page's slug
+ * is its directory, so "self-hosting/index.md" and "self-hosting/upgrade-guides.md"
+ * both report dir "self-hosting" and are siblings.
+ *
+ * @returns {{slug: string, dir: string, path: string}[]}
  */
-export function docsSlugs() {
-  const dir = join(repoRoot, "src", "content", "docs", "en");
-  const slugs = new Set();
-  for (const path of walk(dir)) {
+export function docsPages() {
+  const root = join(repoRoot, "src", "content", "docs", "en");
+  const pages = [];
+  for (const path of walk(root)) {
     if (!DOC_EXT.test(path) || basename(path).startsWith("_")) continue;
-    slugs.add(fileSlug(relative(dir, path), DOC_EXT));
+    const rel = relative(root, path);
+    const dir = dirname(rel);
+    pages.push({ slug: fileSlug(rel, DOC_EXT), dir: dir === "." ? "" : dir, path });
+  }
+  return pages;
+}
+
+/** Slugs of every EN docs page; see docsPages(). */
+export function docsSlugs() {
+  return new Set(docsPages().map((page) => page.slug));
+}
+
+/**
+ * EN docs slugs that a page's Markdown body links to.
+ *
+ * Only absolute, locale-prefixed targets count — `](/en/self-hosting/upgrade-guides/)`,
+ * with or without the trailing slash, and with any `#fragment` or `?query`
+ * dropped. Relative targets (`./sibling`, `../up`) are ignored on purpose:
+ * Starlight serves every page at a trailing-slash URL, so `./sibling` from
+ * /en/a/b/ resolves to /en/a/b/sibling, not /en/a/sibling, and a link checker
+ * that "understood" the author's intent would pass a link the browser breaks.
+ *
+ * @param {string} markdown Page source, frontmatter included or not.
+ * @returns {Set<string>} Normalized slugs, in link order.
+ */
+export function enLinkSlugs(markdown) {
+  const slugs = new Set();
+  for (const match of markdown.matchAll(/\]\(\s*<?\/en\/([^)\s>]*)>?\s*(?:"[^"]*")?\)/g)) {
+    const target = match[1].replace(/[#?].*$/, "");
+    slugs.add(normalizeLink(target));
   }
   return slugs;
 }

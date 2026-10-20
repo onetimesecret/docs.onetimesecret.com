@@ -91,6 +91,7 @@ Do not use these terms or sentence structures in authored prose:
 
 - Update `config/sidebar.mjs` when adding pages intended for navigation.
 - Add moved-page mappings to `config/redirects.mjs`; preserve old URLs and point directly at the final destination rather than another redirect.
+- A page linked with an absolute `/en/...` link from a sidebar-linked page in the same directory counts as reachable (for example, the version-specific upgrade guides listed on `self-hosting/upgrade-guides`). Add new release guides to that table rather than to the sidebar.
 - Use `config/nav-orphans.allow` only for intentional navigation exceptions, with a reason.
 
 ## Language Support
