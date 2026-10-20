@@ -30,9 +30,12 @@ header.header {
 
 /* Push the fixed left sidebar (and its mobile drop-down pane) below the
    banner + navbar. .section-menu is the short drawer Header.astro renders on
-   sidebar-less pages; it shares the pane's geometry. */
+   sidebar-less pages; it shares the pane's geometry. Its base rule is a scoped
+   Astro style, .section-menu:where(.astro-*): unlayered like this file, equal
+   in specificity to a bare .section-menu, and emitted after it, so it would
+   win. The header.header prefix outranks it. */
 .sidebar-pane,
-.section-menu {
+header.header .section-menu {
   inset-block-start: calc(var(--sl-nav-height) + var(--ots-staging-banner-h));
 }
 
