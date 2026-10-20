@@ -7,6 +7,7 @@ import SiteTitle from './SiteTitle.astro';
 import SocialIcons from '@astrojs/starlight/components/SocialIcons.astro';
 import ThemeSelect from '@astrojs/starlight/components/ThemeSelect.astro';
 import { getRelativeLocaleUrl } from 'astro:i18n';
+import { getNavLinks } from './nav-links';
 
 /**
  * Render the `Search` component if Pagefind is enabled or the default search component has been overridden.
@@ -16,14 +17,9 @@ const shouldRenderSearch =
 
 const currentLocale = Astro.currentLocale ?? 'en';
 const docsHome = getRelativeLocaleUrl(currentLocale, '/');
-// Phase 2 retired introduction/guides; "Start here" is the orientation entry
-// point now. The label key stays nav.label.guides so the 16 non-EN bundles keep
-// resolving — only the destination moved.
-const guidesLink = getRelativeLocaleUrl(currentLocale, 'start');
-const apiLink = 'https://api.onetimesecret.com';
-const selfHostingLink = getRelativeLocaleUrl(currentLocale, 'self-hosting');
-const blogLink = 'https://blog.onetimesecret.com/';
-
+// The same four links render in the mobile drawer's section card
+// (Sidebar.astro) below the 50rem breakpoint where .nav-links is hidden.
+const navLinks = getNavLinks(currentLocale);
 ---
 
 <div class="header sl-flex">
@@ -34,10 +30,18 @@ const blogLink = 'https://blog.onetimesecret.com/';
 	<div class="sl-flex center-group print:hidden">
 		{shouldRenderSearch && <Search />}
     <nav class="nav-links">
-      <a href={guidesLink} aria-label={Astro.locals.t('nav.ariaLabel.guides')}>{Astro.locals.t('nav.label.guides')}</a>
-      <a href={apiLink} target="_blank" rel="noopener noreferrer" aria-label={Astro.locals.t('nav.ariaLabel.apiReference')}>{Astro.locals.t('nav.label.rest-api')}</a>
-      <a href={selfHostingLink} aria-label={Astro.locals.t('nav.ariaLabel.selfHosting')}>{Astro.locals.t('nav.label.self-hosting')}</a>
-      <a href={blogLink} target="_blank" rel="noopener noreferrer" aria-label={Astro.locals.t('nav.ariaLabel.blog')}>{Astro.locals.t('nav.label.blog')}</a>
+      {
+        navLinks.map((link) => (
+          <a
+            href={link.href}
+            aria-label={Astro.locals.t(link.ariaKey)}
+            target={link.external ? '_blank' : undefined}
+            rel={link.external ? 'noopener noreferrer' : undefined}
+          >
+            {Astro.locals.t(link.labelKey)}
+          </a>
+        ))
+      }
     </nav>
 	</div>
 	<div class="sl-hidden md:sl-flex print:hidden right-group">
@@ -137,7 +141,9 @@ const blogLink = 'https://blog.onetimesecret.com/';
     background: color-mix(in srgb, var(--sl-color-text) 7%, transparent);
   }
 
-  @media (min-width: 768px) {
+  /* 50rem is Starlight's drawer breakpoint. Below it the drawer's section card
+     (Sidebar.astro) takes over, so the two never show at the same time. */
+  @media (min-width: 50rem) {
     .nav-links {
       display: flex;
     }

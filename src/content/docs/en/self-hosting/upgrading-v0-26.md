@@ -348,7 +348,7 @@ takes the first syntactically valid hostname it finds in precedence order
 Passing those headers through therefore lets any visitor who can reach the
 site block choose the detected host.
 
-```caddyfile
+```text
 header_up Host {http.request.host}
 header_up -X-Forwarded-Host
 header_up -Forwarded
@@ -363,7 +363,7 @@ the canonical host. Gate it on source instead, using the ingress ranges from
 your Approximated dashboard. `header_up` does not accept matchers, so the
 strip goes in the enclosing `handle` block:
 
-```caddyfile
+```text
 @not_apx not remote_ip 198.51.100.0/24
 request_header @not_apx -Apx-Incoming-Host
 ```
@@ -437,7 +437,7 @@ ADMIN_ALLOWED_CIDRS=100.64.0.0/10
 Add a dedicated Caddy handler ahead of the normal dynamic reverse-proxy
 handler, so a caller cannot forge Caddy's own snapshots:
 
-```caddyfile
+```text
 @proxy_header_debug path /api/colonel/system/proxy-headers
 handle @proxy_header_debug {
     header_up -X-Ots-Proxy-Debug-Peer

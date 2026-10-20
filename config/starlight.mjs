@@ -65,6 +65,10 @@ export const starlightConfig = {
     Header: "./src/components/starlight/Header.astro",
     SiteTitle: "./src/components/starlight/SiteTitle.astro",
     Hero: "./src/components/starlight/Hero.astro",
+    // Mobile drawer: section card + theme/language selects at the top,
+    // social icons only at the bottom. Desktop sidebar is unchanged.
+    Sidebar: "./src/components/starlight/Sidebar.astro",
+    MobileMenuFooter: "./src/components/starlight/MobileMenuFooter.astro",
     // Prerelease only: wrap PageFrame to mount the banner and/or watermark.
     // The override renders each marker conditionally on its own flag.
     ...(prerelease
