@@ -68,10 +68,10 @@ Twoja własna instancja obejmuje:
 
 ## Następne kroki
 
-1. **[Pierwsze kroki](./getting-started)** - Przewodnik konfiguracji krok po kroku
+1. **[Pierwsze kroki](/pl/install/docker)** - Przewodnik konfiguracji krok po kroku
 2. **[Instalacja i wdrożenie](./installation)** - Szczegółowe opcje wdrożenia
 3. **[Dokumentacja konfiguracji](./configuration)** - Pełna dokumentacja ustawień
 
 ---
 
-_Gotowy, aby zacząć? Skorzystaj z naszego przewodnika [Pierwsze kroki](./getting-started)._
+_Gotowy, aby zacząć? Skorzystaj z naszego przewodnika [Pierwsze kroki](/pl/install/docker)._

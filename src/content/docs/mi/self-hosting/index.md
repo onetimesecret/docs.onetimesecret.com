@@ -68,10 +68,10 @@ He aha ngā mea e whāki ana i tō tauira whakatū-rānei:
 
 ## Ngā Mahi e Whai Ake Nei
 
-1. **[Tīmatanga](./getting-started)** - Aratohu whakatū taipitopito
+1. **[Tīmatanga](/mi/install/docker)** - Aratohu whakatū taipitopito
 2. **[Whakatōnga me te Whakatakoto](./installation)** - Ngā kōwhiringa whakatakoto taipitopito
 3. **[Tohutoro Whirihoranga](./configuration)** - Tuhinga tautuhinga katoa
 
 ---
 
-_Kua rite ki te tīmata? Whai i tō mātou aratohu [Tīmatanga](./getting-started)._
+_Kua rite ki te tīmata? Whai i tō mātou aratohu [Tīmatanga](/mi/install/docker)._

@@ -69,10 +69,10 @@ Je self-hosted instantie bevat:
 
 ## Volgende stappen
 
-1. **[Aan de slag](./getting-started)** - Stapsgewijze installatiehandleiding
+1. **[Aan de slag](/nl/install/docker)** - Stapsgewijze installatiehandleiding
 2. **[Installatie & Deployment](./installation)** - Gedetailleerde deployment-opties
 3. **[Configuratiereferentie](./configuration)** - Volledige documentatie van instellingen
 
 ---
 
-_Klaar om te beginnen? Volg onze handleiding [Aan de slag](./getting-started)._
+_Klaar om te beginnen? Volg onze handleiding [Aan de slag](/nl/install/docker)._

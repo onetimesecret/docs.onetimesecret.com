@@ -69,10 +69,10 @@ docker run -p 3000:3000 -d --network onetime \
 
 ## 다음 단계
 
-1. **[시작하기](./getting-started)** - 단계별 설정 가이드
+1. **[시작하기](/ko/install/docker)** - 단계별 설정 가이드
 2. **[설치 및 배포](./installation)** - 상세 배포 옵션
 3. **[구성 레퍼런스](./configuration)** - 전체 설정 문서
 
 ---
 
-_시작할 준비가 되셨나요? [시작하기](./getting-started) 가이드를 따라 진행하세요._
+_시작할 준비가 되셨나요? [시작하기](/ko/install/docker) 가이드를 따라 진행하세요._
