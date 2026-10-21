@@ -6,7 +6,7 @@ The largest problems are conflicting descriptions of security behavior, plan ava
 
 ## How to use the ledger
 
-The tables below preserve the original walkthrough observations. F001–F010 are now **addressed** on `wip/docs-content-review`; see the resolution record at the end. Other candidate findings remain **open**. An entry records a problem to consider, not approval of its suggested correction. Resolve each ID as addressed, rejected with evidence, or deferred with a reason. No application changes are implied.
+The tables below preserve the original walkthrough observations. F001–F010 are **addressed** on `wip/docs-content-review`. Sharing secrets findings F011–F033 are also resolved: 22 addressed and F015 rejected with source evidence. Accounts findings F034–F048 are addressed. See the implementation records at the end. Other candidate findings remain **open**. An entry records a problem to consider, not approval of its suggested correction. Resolve each ID as addressed, rejected with evidence, or deferred with a reason. No application changes are implied.
 
 - **H**: prioritize because the text affects security expectations, access, data loss, or purchase/setup decisions.
 - **M**: task completion, navigation, ordering, or terminology problem.
@@ -261,3 +261,155 @@ unchanged first-secret guide and the broader audit remain separate work.
 Current coverage: **10 addressed Start here findings**, **103 other open
 candidate findings**, and F097 as a no-finding coverage note. No findings were
 rejected or silently removed.
+
+
+## Sharing secrets resolution record
+
+Applied after the Start here changes, with the application source checked at
+`145c1e7cfa`. All seven English sharing pages were revised. The existing
+`/en/share/receiving-secrets` URL is retained, with **Request a secret** as its
+page title and English sidebar label. Other locale labels were left alone.
+
+Two supporting passages were corrected: the generated-password instructions in
+Send your first secret, and the account/network attribution explanation in
+Secret Activity. Other account, billing, marketing, and security pages remain
+separate work; no claim is made that their broader discrepancies are resolved.
+
+| ID | Disposition | Final location and evidence |
+| --- | --- | --- |
+| F011 | Addressed in Sharing secrets | Sharing overview, recipient guide, requesting guide, rationale, and troubleshooting consistently distinguish loading a confirmation page from submitting a reveal. `show_secret.rb` checks the explicit continue flag; `secret_state_management.rb` consumes only on reveal. Product-homepage wording remains outside this pass. |
+| F012 | Addressed | Overview and recipient guide qualify creator warnings; anonymous creators cannot be identified. Checked against `show_secret.rb` and `Secret#owner?`. |
+| F013 | Addressed | Overview and receipt explain that the signed-in form navigates for generated passwords even with Stay on page enabled. The supporting first-secret sentence now agrees. `WorkspaceSecretForm.vue:171-174` navigates when workspace mode is off OR the action is generate-password; the public form normally navigates to the receipt. |
+| F014 | Addressed | Passphrase exclusion is next to generation instructions in Sharing secrets and in the receipt conditions. `show_receipt.rb` gates the displayed response with `!has_passphrase`. |
+| F015 | Rejected with contrary evidence | The byte-limit explanation is retained and simplified. `lib/onetime/logic/base.rb:190-206`, `validate_secret_size`, explicitly compares `value.to_s.bytesize`; `useTextarea.ts` counts/truncates JavaScript string length. The environment reference's character wording is not evidence of character-based server enforcement. Reference corrections remain under the later reference audit. |
+| F016 | Addressed | Sharing overview now starts with the task and uses direct descriptions of creation, lifetime, passphrase, delivery, receipt, and burn. Removed the cost framing and generation metaphors. |
+| F017 | Addressed | Sharing overview says only the first address is emailed and instructs creating separate secrets for independent reveals. Recipient guide no longer suggests forwarding a single link to everyone. `base_secret_action.rb:524-527` passes `recipient.first` to delivery. |
+| F018 | Addressed | Receipt now starts with the two link purposes, then status, notifications, generated-password conditions, burning, mistaken sharing, and lifetime. Removed dramatic cost/one-look metaphors and implementation justifications. |
+| F019 | Addressed | Receipt distinguishes content entered by the sender from generated values in the opening and display section. Removed absolute statements that contradicted the generated-password exception. |
+| F020 | Addressed | Recipient guide promises at most one successful retrieval rather than one human or the only copy. Sharing overview, rationale, and use cases explain that readers can save or forward the content. Atomic reveal checked in `secret_state_management.rb`. |
+| F021 | Addressed | Recipient guide and the supporting Secret Activity paragraph distinguish receipt fetch history, organization events, short secret/receipt references, full authenticated account IDs, active-member email resolution, and optional network context. No anonymity promise. Checked `actor_attribution.rb`, `access_telemetry.rb`, `access_timeline.rb`, `RequestContext`, and `list_secret_activity.rb:125-140`. |
+| F022 | Addressed | Troubleshooting opens with screen message → next action. The short history-privacy explanation follows the recovery steps; oracle/internal-error/terminal-state explanations were removed. |
+| F023 | Addressed | Troubleshooting and recipient guide explain that lockout is checked before passphrase verification, so correct input cannot bypass it. `PassphraseRateLimiter#enforce_passphrase_tier_lock!` raises while locked; ShowSecret and BurnSecret call it in raise_concerns before process verifies the passphrase. Successful verification clears counters only when the gate permits the attempt. |
+| F024 | Addressed | Receiving secrets became Request a secret in H1, description, and English sidebar label, preserving its route. It separately directs existing link recipients to the reveal/troubleshooting guides. |
+| F025 | Addressed | Incoming-form receipt description names creation/reveal status and explicitly distinguishes it from notification delivery or proof of reader identity. No delivery guarantee is substituted. |
+| F026 | Addressed in Sharing secrets | Why use secret links describes hosted HTTPS, encrypted storage, and server-side encryption/decryption. Removed end-to-end encryption wording. Checked Secret's encrypted ciphertext field and server-side reveal. The translation-guide example remains tracked under F104. |
+| F027 | Addressed | Rationale describes reducing copies in conversation history, retained receipt/activity records, bearer-link access, and recipient copies. Removed no-footprint and wrong-hands guarantees. Backup-policy reconciliation remains under F090. |
+| F028 | Addressed | Removed premium/business-user entitlement labels from the rationale. It links to Preferences and Secret Activity for their own prerequisites instead of duplicating plan restrictions. No new entitlement limit was inferred. |
+| F029 | Addressed | Rationale is a concise explanation of temporary links, lifetime, actual protections, and limits. Removed the six-part promotional essay and uses sentence-case secret links. |
+| F030 | Addressed | Recovery-code use case is delivery to someone who saves them durably. It warns against using an expiring link as the backup and links to the 2FA guide. |
+| F031 | Addressed | License/Wi-Fi/credential examples describe hosted-copy retrieval only, not downstream reuse control. Removed the interview integrity promises and financial-account protection example. Credential revocation is distinguished from burning the link. |
+| F032 | Addressed by removing the unsupported assertion | Removed the two-week logging figure, Tor-availability assertion, and suitability pitch for anonymous tips. Sensitive-disclosure guidance explains attribution limits without specifying retention or promising anonymity. No current operational retention period or legal conclusion was asserted. |
+| F033 | Addressed | Use cases now has sentence-case task headings, generic Wi-Fi example, relevant limits beside each example, no repeated Benefit paragraphs, and next steps after substantive content. |
+
+Validation completed:
+
+- `node bin/check-nav.mjs`: passed, 67 sidebar links and 78 label keys.
+- `node bin/check-orphans.mjs`: passed, 75 English pages, no orphan exceptions.
+- `node bin/check-frontmatter.mjs`: passed, 277 redirect fragments resolved.
+- `node bin/check-locales.mjs`: passed, 17 configured locales.
+- `bash bin/check-malformed-links.sh`: passed.
+- Production build: passed, 1,289 pages and search index generated. Used the
+  existing dependency symlink and native-binding `NODE_PATH` documented in the
+  Start here validation record.
+- Built HTML: all nine edited content pages have exactly one H1; 971 English
+  internal link occurrences and fragments resolve, including shared navigation.
+- `git diff --check`: passed.
+
+Source inspection established the application behavior described above. No
+live secret, passphrase attempt, email, account, activity export, or incoming
+submission was exercised. External URLs, deployed-version equivalence, backup
+policy, and visual/VoiceOver behavior were not validated. No application code,
+dependency manifest, or lockfile changed, and no new tests were added for these
+prose changes.
+
+Current coverage supersedes the earlier counts: **32 addressed**, **1 rejected
+with evidence (F015)**, **80 open candidate findings**, and F097 as a no-finding
+coverage note. No Sharing secrets finding is deferred or left unresolved within
+this section's scope.
+
+
+## Accounts resolution record
+
+Applied after the Sharing secrets changes, with the application source checked
+at `145c1e7cfa`. All eight English account pages were revised. The
+Organizations overview note on roles was corrected as part of F042. Account
+pages describe current behavior and service defaults without naming release
+versions; version history stays in the upgrade guides.
+
+| ID | Disposition | Final location and evidence |
+| --- | --- | --- |
+| F034 | Addressed | Sessions and connected identities says Remove and Logout All Other Sessions end those sessions on their next request, that last activity follows ordinary requests, and that entries show browser, masked network address, country, created and last-active times. Remove/remove-all delete `account_active_session_keys` rows (`apps/web/auth/routes/active_sessions.rb:99-137`); `ActiveSessionGate` returns `:revoked` for a missing row and `BaseSessionAuthStrategy` refuses with `SESSION_REVOKED` (`base_session_auth_strategy.rb:32-41`); `last_activity_at` comes from session metadata written on each ordinary request (`routes/active_sessions.rb:75`; `track_metadata.rb:101`); labels from `SessionListItem.vue:22-33`. The flag and auth-mode dependency is a note, not a warning that controls are ineffective. No live revocation test was performed. |
+| F035 | Addressed | Sessions and Signing in both state the defaults: 24-hour inactivity without Remember me, 14 days from sign-in with it, 30-day maximum for every session, and operator variability. `config.defaults.yaml:468-471`; `remember_me.rb:68-69`; `active_session_gate.rb:349-354`. The 72-hour row deadline is omitted from user pages because the 24-hour default ends an unremembered session first. |
+| F036 | Addressed | Signing in now opens with numbered sign-in and reset steps, then missing-email causes, other failures, and SSO. Removed the counted sections, the reset-email anatomy, the separate enumeration essay, and the reset-record explanation; the enumeration rationale is one sentence in the reset step. |
+| F037 | Addressed | Signing in describes main-service linking during sign-in (password, or emailed link without a password, then the second factor), linking from Connected Identities, and the custom-domain refusal. `omniauth.rb:300-544`; `link_sso.rb:44-55`; `sso_link_confirm.rb:218-235`; `session-auth.json:166-167`. Sessions now paraphrases the custom-domain message accurately. |
+| F038 | Addressed | Two-factor guide lists where to save codes, what to avoid, and what to do after signing in with a code. Removed the admonishments and idioms. Four codes checked at `mfa.rb:14`. |
+| F039 | Addressed | Dashboard page leads with where receipts appear and an action table by surface, then content limits, list contents, statuses, entry fields, expiry (explained once), refresh and the signed-out list. Removed the gating qualifier; `/dashboard` and `/recent` have no entitlement gate (`src/apps/workspace/routes/dashboard.ts`). |
+| F040 | Addressed | Preferences says the receipt records fetch and reveal/burn times only, and that reader account and masked network details go to Secret Activity for signed-in creators' secrets, visible to owners/admins on plans with it. `receipt/features/access_timeline.rb:48-107`; `access_telemetry.rb`; `list_secret_activity.rb:70-92`. Links to the recipient guide's sender section. |
+| F041 | Addressed | Preferences is grouped as account preferences, browser preferences, settings decided elsewhere, and related account settings. Removed the "whole list", "turn out not to be settings" and "people look for" framing. |
+| F042 | Addressed as documented behavior | Change Email, Region and Careful Consideration Zone are hidden in the UI unless the current organization role is owner or admin (`settings-navigation.ts:132,222,304`; `routes/account.ts:20-36`). The guards are deliberate (commit `f8180024d2`, PR #3309: "regular members' accounts are managed by the org owner"). The backend endpoints do not enforce the role (`request_email_change.rb:66-106`; `hooks/account.rb:1155-1180`); that gap is an application question and is not documented as a user workaround. Organizations note, email-change prerequisites and closure troubleshooting now say the same thing. |
+| F043 | Addressed | Email change puts role, password, inbox, unused-address and pending-invitation prerequisites first; steps follow, with the sign-out warning in step 3; consequences follow verification. Replaced lands, strands and in flight. |
+| F044 | Addressed | Email change has a "Changing back" section: no undo button, reversal by another confirmed change when the previous inbox is available and the address is unused. Closure's related link no longer calls email change irreversible. |
+| F045 | Addressed | Changing your region says a subscription belongs to an organization in one region; the plan can be applied to the account's own workspace in the new region when the email matches the purchase email, not to joined organizations, and possibly not immediately; check the plan and contact support rather than buying again. Recognition matches an HMAC of the email (`email_hash.rb:46-55`) through `apps/web/billing/operations/webhook_handlers/subscription_federation.rb`; pending records are claimed only by the account's default workspace (`ensure_default_workspace.rb:181-195,409-529`). Removed the Stripe-email explanation, "refresh once", and the claim that all same-email accounts share status. |
+| F046 | Addressed | Removed "good news", "about two minutes" and "That's it". Paid-plan section covers Identity Plus and Team Plus and says members are not moved. The custom-domain wait now runs from the last secret created on the old domain, uses the plan's longest lifetime via Compare plans instead of a fixed figure, and accounts for receipt pages on the share domain lasting twice the secret's lifetime (`receipt.rb:163-167,292`; `show_receipt.rb:365-368`). |
+| F047 | Addressed with corrected facts | Source contradicts the old page: self-service closure runs `Customers::Purge`, which deletes the customer record (`destroy_customer_record.rb:87-94`), keeps a closed Rodauth row and its authentication audit log (`remove_authentication_data.rb:100-112,170-196`), removes non-owner memberships, deletes an empty sole-owned default workspace, and refuses closure for other members, domains, live billing or another owned organization (`purge_preflight.rb:553-586,636-658,744-752`). The email unique index covers open and unverified rows only (`001_initial.rb:31-32`); `purge_same_email_recreation_spec.rb` covers re-registration. The page now says the address can be reused for a new, empty account. The 365-day retention, retained email claim, and SSO reattachment caution were removed. Retention was established from source only; product and privacy owners have not confirmed it. |
+| F048 | Addressed | Removed "the provider owns the account". Closure remains available in full mode under SSO-only (`/auth/close-account` is exempt from `restrict_to`); the page instead names the blocked control: a password-less account cannot set a password where sign-in is restricted to SSO, because password setup uses the reset routes (`apps/web/auth/restrict_to.rb:104-113`), and directs the user to support or the operator. |
+
+Application follow-ups found during verification (not documented as user
+behavior):
+
+- Change Email and account closure are hidden from members only in the UI;
+  `POST /api/account/change-email` and `/auth/close-account` do not check the
+  organization role (`request_email_change.rb:66-106`;
+  `hooks/account.rb:1155-1180`). The `routes/account.ts:15-18` docblock still
+  lists password, MFA, recovery codes and passkeys under the owner/admin guard.
+- A password-less account can confirm closure with any non-empty text: the UI
+  requires only a non-empty field and Rodauth skips the check when no password
+  exists (`AccountDeleteButtonWithModalForm.vue:27,132`; Rodauth
+  `close_account.rb:63-65`).
+- `apply_pending_federation!` may return before saving the computed email hash
+  when no pending record exists (`ensure_default_workspace.rb:437-516`), which
+  would stop later webhooks matching the new workspace. Not tested at runtime.
+- The closure refusal message is one hard-coded English string for every
+  blocker; the blocker codes are not shown to the user.
+
+Validation completed:
+
+- `node bin/check-nav.mjs`: passed, 67 sidebar links and 78 label keys.
+- `node bin/check-orphans.mjs`: passed, 75 English pages.
+- `node bin/check-frontmatter.mjs`: passed, 277 redirect fragments resolved.
+- `node bin/check-locales.mjs`: passed, 17 configured locales.
+- `bash bin/check-malformed-links.sh`: passed.
+- Production build: passed, 1,289 pages, with the dependency symlink and
+  native-binding `NODE_PATH` from the Start here record.
+- Built HTML: the eight account pages and Organizations each have one H1; 1,038
+  English internal link occurrences and fragments on those pages resolve.
+- `git diff --check`: passed.
+
+Source inspection established the behavior above. No session was revoked, no
+email changed, no account closed, no subscription or region change exercised,
+and no custom domain moved. Translated account pages were not changed and now
+lag the English corrections.
+
+Current coverage supersedes the earlier counts: **47 addressed**, **1 rejected
+with evidence (F015)**, **65 open candidate findings**, and F097 as a no-finding
+coverage note. No Accounts finding is deferred.
+
+
+## Request a secret naming follow-up
+
+At the user's request, F024 now includes the internal key and route rename:
+
+- English sidebar key: `requestSecret` (formerly `receivingSecrets`).
+- Canonical page: `/en/share/request-secret`, from `share/request-secret.md`.
+- Active English content links and sidebar target use the canonical route.
+- The moved-page mapping redirects `/{locale}/share/receiving-secrets` directly
+  to `/{locale}/share/request-secret` for all configured locales, preserving
+  old published URLs and the English fallback behavior.
+
+This supersedes the earlier decision to retain the old route. Earlier audit
+observations and historical planning references retain their original names.
+
+Rename validation: navigation, orphan, frontmatter, locale, and whitespace
+checks passed. Production build passed. All 17 configured locale redirects
+were checked to point directly to the new path; generated English redirect
+HTML and English/French/Japanese canonical page outputs were also checked.
