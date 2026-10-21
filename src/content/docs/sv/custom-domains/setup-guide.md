@@ -123,7 +123,7 @@ N󠄁ä󠄁r󠄁 e󠄁n󠄁 k󠄁o󠄁n󠄁t󠄁r󠄁o󠄁l󠄁l󠄁 h󠄁a󠄁r
 
 ## Använd domäne󠄁n󠄁
 
-När du󠄁 s󠄁k󠄁a󠄁p󠄁a󠄁r󠄁 en h󠄁e󠄁m󠄁l󠄁i󠄁g󠄁h󠄁e󠄁t s󠄁om i󠄁n󠄁l󠄁o󠄁g󠄁g󠄁a󠄁d󠄁 v󠄁ä󠄁l󠄁j󠄁er du󠄁 d󠄁e󠄁n d󠄁o󠄁m󠄁ä󠄁n󠄁 d󠄁u󠄁 s󠄁k󠄁ap󠄁a󠄁r󠄁 u󠄁n󠄁d󠄁e󠄁r󠄁.󠄁 D󠄁e󠄁n󠄁
+När du󠄁 s󠄁k󠄁a󠄁p󠄁a󠄁r󠄁 en h󠄁e󠄁m󠄁l󠄁i󠄁g󠄁h󠄁e󠄁t s󠄁om i󠄁n󠄁l󠄁o󠄁g󠄁g󠄁a󠄁d󠄁 v󠄁ä󠄁l󠄁j󠄁er du󠄁 v󠄁i󠄁l󠄁k󠄁e󠄁n d󠄁o󠄁m󠄁ä󠄁n󠄁 h󠄁e󠄁m󠄁l󠄁i󠄁g󠄁h󠄁e󠄁t󠄁e󠄁n󠄁 s󠄁k󠄁a s󠄁k󠄁a󠄁p󠄁a󠄁s󠄁 p󠄁å󠄁.󠄁 D󠄁e󠄁n󠄁
 hemliga länke󠄁n󠄁 använde󠄁r󠄁 d󠄁å󠄁 din domän,󠄁 t󠄁ill exempel
 `https://secrets.example.com/secret/abc123`.
 
