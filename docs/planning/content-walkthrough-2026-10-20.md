@@ -634,3 +634,89 @@ service's validation strategy and feature flags were not checked.
 Current coverage supersedes the earlier counts: **70 addressed**, **1 rejected
 with evidence (F015)**, **42 open candidate findings**, and F097 as a no-finding
 coverage note. No Custom domains finding is deferred.
+
+
+## Develop continuation and verification — 2026-10-21
+
+`git pull --ff-only origin develop` completed successfully. Develop was already
+current at `15c75c84d7cb3ed55039fb6aebd1ab72b8779126`, including PR #457
+(`49ba2e79`) and the Organizations and billing and Custom domains work recorded
+above. F049–F071 remain addressed; this continuation does not count their
+existing edits again or claim a fresh runtime test of their procedures.
+
+### F057 terminology reconciliation
+
+The English Brand Terms table now includes **Free** as the app, catalog and
+docs name and **Basic** as the public pricing name for the same plan.
+`styles/OnetimeSecret/TierInventions.yml` now explains both names in its
+message and comment. Its detection patterns are unchanged: neither name was
+previously rejected by the rule. This resolves the terminology-guidance
+conflict recorded at the end of the Custom domains pass without renaming plan
+identifiers or pretending that every product surface uses one label.
+
+Evidence refreshed for this change:
+
+- Local app revision remains `145c1e7cfa`; `etc/billing.yaml` names `free_v1`
+  **Free** with a jurisdiction suffix, and
+  `apps/web/billing/docs/plan-definitions.md` uses **Free (CA)**.
+- The [public pricing page](https://onetimesecret.com/en/pricing), read on
+  2026-10-21, still names the plan **Basic**.
+
+### Validation and remaining follow-up
+
+The worktree initially lacked dependencies used by the Markdown authoring and
+TextProv tests. `pnpm install --frozen-lockfile` restored them from the local
+cache without changing the manifest or lockfile. Subsequent checks passed:
+
+- Strict TextProv check against the starting SHA `15c75c84`: one eligible
+  changed page, zero failures.
+- TextProv producer tests: 33 passed.
+- `pnpm test`: 175 tests passed across 11 files.
+- Frontmatter, navigation, orphan, locale and malformed-link checks passed.
+- `pnpm build`: 1,306 pages built successfully.
+- Built HTML for the 18 canonical Organizations, Billing, Pricing, Custom
+  domains and Brand Terms pages: one H1 each, no AI markers in text nodes,
+  and 1,452 English internal link occurrences and fragments resolved.
+- Whitespace checks passed. Vale is not installed; its rules were inspected,
+  not executed.
+
+**DV01 — Open, inherited rendered-anchor issue.** Five heading IDs still
+contain the invisible U+E0101 AI marker in the generated HTML:
+
+| Page | Visible heading |
+| --- | --- |
+| Billing / Managing your subscription | Billing email, payment method and invoices |
+| Custom domains / Branding your domain | Set color, corners and font |
+| Custom domains overview | Questions or need support? |
+| Custom domains / Setting up a custom domain | Ownership record (TXT) |
+| Custom domains / Setting up a custom domain | Routing record (CNAME or A) |
+
+The headings' visible text is clean. Existing English internal links checked
+above resolve, but copied heading links can include an invisible marker. This
+was observed in the build before changing any of those pages during this
+continuation; they were not edited here. Follow up in the enrolled-page heading
+ID/fragment normalization code and add a punctuation-adjacent regression test.
+Check compatibility with previously published anchors before changing them.
+This is a rendering follow-up, not another unresolved content finding among
+F049–F071.
+
+No invitations, ownership transfers, SSO changes, billing transactions, domain
+or DNS changes, setting saves or email sends were performed. The application,
+catalog and hosted-service follow-ups from the two resolution records remain
+open. Translation work remains separate.
+
+
+### Finalization for the terminology follow-up
+
+**Ready** for the three-file terminology and verification-record change.
+F057's terminology-guidance conflict is addressed; final coverage and context
+review found no missed change in that scope. DV01 remains a deferred rendering
+follow-up outside this terminology diff; it does not affect the changed table,
+lint guidance or verification record. The runtime and policy follow-ups remain
+open and are not prerequisites for this naming clarification.
+
+Both same-document fragment links and the relative Accounts ledger link in
+this audit resolve. Brand Terms has no local links. The newly added pricing
+reference was checked separately; historical external links in the original
+audit were not re-crawled. Validation results and limits above apply to this
+final diff; no published prose changed after those checks.

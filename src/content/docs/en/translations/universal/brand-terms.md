@@ -1,4 +1,5 @@
 ---
+textprov: true
 title: Brand Terms
 description: Terms that should not be translated and guidance on consistent brand name usage across all locales
 ---
@@ -18,7 +19,8 @@ Certain terms must remain untranslated to maintain brand identity and product co
 
 | Term | Context |
 |------|---------|
-| **Basic** | Free subscription tier name on public pricing |
+| **F󠄁r󠄁e󠄁e󠄁** | N󠄁o󠄁-󠄁c󠄁o󠄁s󠄁t󠄁 p󠄁l󠄁a󠄁n󠄁 n󠄁a󠄁m󠄁e󠄁 i󠄁n󠄁 t󠄁h󠄁e󠄁 a󠄁p󠄁p󠄁,󠄁 b󠄁i󠄁l󠄁l󠄁i󠄁n󠄁g󠄁 c󠄁a󠄁t󠄁a󠄁l󠄁o󠄁g󠄁 a󠄁n󠄁d󠄁 t󠄁h󠄁e󠄁s󠄁e󠄁 d󠄁o󠄁c󠄁s󠄁 |
+| **Basic** | P󠄁ublic pricing n󠄁a󠄁m󠄁e󠄁 f󠄁o󠄁r󠄁 t󠄁h󠄁e󠄁 s󠄁a󠄁m󠄁e󠄁 F󠄁r󠄁e󠄁e󠄁 p󠄁l󠄁a󠄁n󠄁 |
 | **Identity Plus** | Subscription tier name |
 | **Team Plus** | Subscription tier name |
 | **Global Elite** | Subscription tier name (retired from public pricing, still referenced for dedicated-instance inquiries) |
