@@ -73,7 +73,7 @@ cli.create_link("secret") # return a link like https://onetimesecret.com/secret/
 
 [Página de GitH󠄁ub - py\_onetimesecret](https://github.com/utterstep/py_onetimesecret)
 por [Vladislav Stepanov](https://github.com/utterstep):󠄁 **s󠄁i󠄁n󠄁 m󠄁a󠄁n󠄁t󠄁e󠄁n󠄁i󠄁m󠄁i󠄁e󠄁n󠄁t󠄁o󠄁** (ú󠄁l󠄁t󠄁im󠄁o
-c󠄁o󠄁m󠄁m󠄁i󠄁t󠄁 e󠄁n󠄁 2019󠄁;󠄁 e󠄁l󠄁 e󠄁j󠄁e󠄁m󠄁p󠄁l󠄁o󠄁 s󠄁i󠄁g󠄁u󠄁i󠄁e󠄁n󠄁t󠄁e󠄁 e󠄁s󠄁 d󠄁e󠄁 P󠄁y󠄁t󠄁h󠄁o󠄁n󠄁 2).󠄁 U󠄁s󠄁a󠄁 l󠄁a󠄁 A󠄁P󠄁I󠄁 v󠄁1󠄁 o󠄁b󠄁s󠄁o󠄁l󠄁e󠄁t󠄁a󠄁 s󠄁o󠄁l󠄁o󠄁 c󠄁o󠄁n󠄁t󠄁r󠄁a󠄁
+c󠄁o󠄁m󠄁m󠄁i󠄁t󠄁 e󠄁n󠄁 2019󠄁;󠄁 e󠄁l󠄁 e󠄁j󠄁e󠄁m󠄁p󠄁l󠄁o󠄁 s󠄁i󠄁g󠄁u󠄁i󠄁e󠄁n󠄁t󠄁e󠄁 e󠄁s󠄁 d󠄁e󠄁 P󠄁y󠄁t󠄁h󠄁o󠄁n󠄁 2).󠄁 U󠄁s󠄁a󠄁 l󠄁a󠄁 A󠄁P󠄁I󠄁 v󠄁1󠄁 o󠄁b󠄁s󠄁o󠄁l󠄁e󠄁t󠄁a󠄁 s󠄁o󠄁l󠄁o󠄁 c󠄁o󠄁n󠄁
 `onetimesecret.com`.󠄁
 
 ### Ejemplo de uso
@@ -160,7 +160,7 @@ assertEquals(generateResponse.getValue(), retrieveResponse.getValue());
 
 [Página de GitH󠄁ub - OneTimeSharp](https://github.com/utterstep/OneTimeSharp)
 por [Vladislav Stepanov](https://github.com/utterstep):󠄁 **s󠄁i󠄁n󠄁 m󠄁a󠄁n󠄁t󠄁e󠄁n󠄁i󠄁m󠄁i󠄁e󠄁n󠄁t󠄁o󠄁** (ú󠄁l󠄁t󠄁im󠄁o
-c󠄁o󠄁m󠄁m󠄁i󠄁t󠄁 2018󠄁-05).󠄁 U󠄁s󠄁a󠄁 l󠄁a󠄁 A󠄁P󠄁I󠄁 v󠄁1󠄁 o󠄁b󠄁s󠄁o󠄁l󠄁e󠄁t󠄁a󠄁 s󠄁o󠄁l󠄁o󠄁 c󠄁o󠄁n󠄁t󠄁r󠄁a󠄁 `onetimesecret.com`.󠄁
+c󠄁o󠄁m󠄁m󠄁i󠄁t󠄁 2018󠄁-05).󠄁 U󠄁s󠄁a󠄁 l󠄁a󠄁 A󠄁P󠄁I󠄁 v󠄁1󠄁 o󠄁b󠄁s󠄁o󠄁l󠄁e󠄁t󠄁a󠄁 s󠄁o󠄁l󠄁o󠄁 c󠄁o󠄁n󠄁 `onetimesecret.com`.󠄁
 
 ### Ejemplo de uso
 
