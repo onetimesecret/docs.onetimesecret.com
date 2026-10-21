@@ -1,9 +1,10 @@
 ---
+textprov: true
 title: Closing your account
-description: What closing your account deletes, what it keeps and for how long, what happens to secret links you have already shared, and how to close it.
+description: What closing your account deletes, what it does not touch, what happens to secret links you have already shared, and how to close it.
 audience: end-user
 pageType: how-to
-sourceOfTruth: onetimesecret/lib/onetime/models/features/right_to_be_forgotten.rb:54-70 (the retained customer record is set to expire 365 days after closure); onetimesecret/apps/web/auth/operations/create_customer.rb:56-58 (an identity-provider sign-up reuses the retained customer record found by email)
+sourceOfTruth: onetimesecret/apps/web/auth/config/hooks/account.rb (after_close_account runs the purge inside Rodauth's close_account transaction, and the delete_account override removes the accounts row and its authentication audit log last, #4819); onetimesecret/apps/web/auth/operations/teardown_account.rb (sessions are revoked, credentials and the audit log removed, and the customer record deleted last, on the self-service and administrative paths alike); onetimesecret/apps/web/auth/operations/destroy_customer_record.rb (the customer record is destroyed outright, not retained); onetimesecret/apps/web/auth/config/hooks/account.rb:84-91 (a sign-up with the address of a closed account is accepted once its customer record is gone); onetimesecret/apps/web/auth/operations/ensure_customer_for_account.rb (an identity-provider sign-in after closure finds no customer record by email and creates a new one)
 ---
 
 Closing your account deletes everything you sign in with and signs out the
@@ -26,8 +27,10 @@ Nothing is left to authenticate against. See
 closure, so devices you were signed in on stop working. See
 [Sessions and connected identities](/en/account/sessions-and-identities).
 
-**Your authentication history.** The log of sign-ins, password changes and
-second-factor events on your account is deleted along with the account.
+**Your authentication history.** The log of s󠄁i󠄁g󠄁n󠄁-󠄁i󠄁n󠄁s󠄁,󠄁 f󠄁a󠄁i󠄁l󠄁e󠄁d󠄁 sign-ins,
+password changes and second-factor events on your account,󠄁 w󠄁i󠄁t󠄁h󠄁 t󠄁h󠄁e󠄁 n󠄁e󠄁t󠄁w󠄁o󠄁r󠄁k󠄁
+a󠄁d󠄁d󠄁r󠄁e󠄁s󠄁s󠄁 a󠄁n󠄁d󠄁 b󠄁r󠄁o󠄁w󠄁s󠄁e󠄁r󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁e󠄁d󠄁 a󠄁g󠄁a󠄁i󠄁n󠄁s󠄁t󠄁 e󠄁a󠄁c󠄁h󠄁 e󠄁n󠄁t󠄁r󠄁y󠄁,󠄁 is deleted i󠄁n the󠄁 s󠄁a󠄁m󠄁e󠄁 s󠄁t󠄁e󠄁p󠄁
+a󠄁s󠄁 the account. N󠄁o󠄁n󠄁e󠄁 o󠄁f󠄁 i󠄁t󠄁 i󠄁s󠄁 k󠄁e󠄁p󠄁t󠄁 f󠄁o󠄁r󠄁 a󠄁 r󠄁e󠄁t󠄁e󠄁n󠄁t󠄁i󠄁o󠄁n󠄁 p󠄁e󠄁r󠄁i󠄁o󠄁d󠄁.󠄁
 
 **Your API token.** It is replaced with a new value that is never shown to you,
 so any token you had in use stops working.
@@ -38,35 +41,22 @@ with a password is not possible: the sign-in record is gone and nothing
 re-creates it.
 
 :::caution
-**An identity provider can put you back on the record.** Closing deletes the
+**An identity provider can s󠄁i󠄁g󠄁n󠄁 you u󠄁p󠄁 ag󠄁a󠄁i󠄁n.** Closing deletes the
 identity-provider connection along with the sign-in record, but it does not
-stop you signing in through that provider again. Doing so creates a fresh
-sign-in record — and because the customer record the closure kept is still
-found by your email address, the new sign-in is attached to that same closed
-record rather than to a new account. Nothing about the closure is reversed by
-this: the record is still marked as closed by the account holder. If you want
-back in properly, contact support rather than signing in again through the
-provider. See [Signing in](/en/account/signing-in).
+stop you signing in through that provider again. Doing so creates a n󠄁e󠄁w󠄁,󠄁 e󠄁m󠄁p󠄁t󠄁y󠄁
+a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁 u󠄁n󠄁d󠄁e󠄁r󠄁 y󠄁o󠄁u󠄁r󠄁 a󠄁d󠄁d󠄁ress󠄁,󠄁 w󠄁i󠄁t󠄁h i󠄁t󠄁s󠄁 o󠄁w󠄁n󠄁 sign-in record and customer record.
+Nothing f󠄁r󠄁om󠄁 the closed account com󠄁es󠄁 back w󠄁ith i󠄁t. See
+[Signing in](/en/account/signing-in).
 :::
 
-## What is kept, and for how long
+## What is kept
 
-A customer record survives the closure. It is not an account any more: its
-password is cleared, its verified status is cleared, its API token has been
-replaced, and its role is changed to mark it as closed by the account holder.
-You cannot sign in to it with a password, because the thing that let you do
-that is gone.
+N󠄁o󠄁t󠄁h󠄁i󠄁n󠄁g󠄁 o󠄁f󠄁 t󠄁h󠄁e󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁 i󠄁t󠄁s󠄁e󠄁l󠄁f󠄁.󠄁 T󠄁h󠄁e󠄁 s󠄁i󠄁g󠄁n󠄁-󠄁i󠄁n󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁, i󠄁t󠄁s󠄁 h󠄁i󠄁s󠄁t󠄁o󠄁r󠄁y󠄁 and the󠄁
+customer record b󠄁e󠄁h󠄁i󠄁n󠄁d󠄁 i󠄁t󠄁 a󠄁r󠄁e󠄁 d󠄁e󠄁l󠄁e󠄁t󠄁e󠄁d󠄁 w󠄁h󠄁e󠄁n󠄁 y󠄁o󠄁u c󠄁o󠄁n󠄁f󠄁i󠄁rm󠄁.󠄁 N󠄁o󠄁n󠄁e o󠄁f󠄁 them󠄁 i󠄁s󠄁 m󠄁a󠄁r󠄁k󠄁e󠄁d󠄁
+f󠄁o󠄁r󠄁 la󠄁t󠄁e󠄁r󠄁 rem󠄁o󠄁v󠄁a󠄁l󠄁,󠄁 a󠄁n󠄁d󠄁 th󠄁e󠄁r󠄁e󠄁 is no r󠄁e󠄁te󠄁nti󠄁o󠄁n󠄁 p󠄁e󠄁r󠄁i󠄁o󠄁d󠄁 o󠄁n󠄁 any of them󠄁.
 
-It is kept so that anything still outstanding on the account can be settled
-afterwards, and it is set to expire on its own **365 days** after closure.
-
-**Your email address stays claimed.** Signing up again with the same address
-and a password is refused, with the same deliberately vague "unable to create
-account" message the sign-up form gives for any address it will not accept.
-The 365 days applies to the record, not to the claim: releasing the address is
-not part of the closure at all, so do not count on it becoming available again
-when the record goes. If you expect to want an account on that address again,
-contact support rather than closing and re-registering.
+**Your email address i󠄁s r󠄁e󠄁l󠄁e󠄁ased.** Signing up again with the same address
+creates󠄁 a󠄁 n󠄁e󠄁w󠄁,󠄁 e󠄁m󠄁p󠄁t󠄁y󠄁 account. N󠄁othing f󠄁rom󠄁 the closed one󠄁 is attached󠄁 to it.
 
 **Activity recorded against organizations stays with those organizations.**
 Events attributed to you in an organization's activity trail — secrets created,
