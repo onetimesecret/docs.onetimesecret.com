@@ -642,7 +642,7 @@ coverage note. No Custom domains finding is deferred.
 current at `15c75c84d7cb3ed55039fb6aebd1ab72b8779126`, including PR #457
 (`49ba2e79`) and the Organizations and billing and Custom domains work recorded
 above. F049–F071 remain addressed; this continuation does not count their
-existing edits again or claim a fresh runtime test of their procedures.
+existing edits again or report a fresh runtime test of their procedures.
 
 ### F057 terminology reconciliation
 
@@ -732,10 +732,10 @@ Items 1 and 6 were skipped at the user's request. Items 2–5 are addressed:
 | --- | --- | --- |
 | CR02 — Preferred term for new prose | Addressed | Brand Terms says to use Free in documentation and Basic only when referring to the public pricing page. The tier table preserves the mapping between surfaces. |
 | CR03 — Vale annotation wording | Addressed | TierInventions now says "Use Free (shown as Basic on the pricing page), Identity Plus, or Team Plus." Detection patterns are unchanged. |
-| CR04 — Durable DV01 tracking | Addressed | Issue #463 tracks integration of the existing fix, build and deep-link verification, collision handling and published-anchor compatibility. DV01 remains open until that work is verified. The already-pushed fix is `3b11e149` on `i18n/latest-content`; it is not in this PR's base. |
+| CR04 — Durable DV01 tracking | Addressed | Issue #463 tracks integration of the existing fix, build and deep-link verification, collision handling and published-anchor compatibility. DV01 remains open until that work is verified. Issue #463 is the durable integration-status reference; the implementation noted there was outside this PR's base when reviewed. |
 | CR05 — Source-search limitation | Addressed | TextProv maintenance notes explain why rg/grep can miss marked terms, direct audits to decoded temporary copies of enrolled pages, and name the existing disposable Vale preprocessing step. Original source marks must be preserved. |
 
-These dispositions address the review requests without claiming that DV01 has
+These dispositions address the review requests without stating that DV01 has
 been fixed on develop or that any runtime account, billing or domain checks
 have been completed.
 
@@ -751,3 +751,33 @@ issue link was verified through issue creation. Historical external links were
 not re-crawled, and Vale itself was not executed. DV01 implementation and
 published-anchor compatibility remain tracked by issue #463 outside this
 review follow-up.
+
+
+## PR #461 updated review follow-up
+
+This review supersedes neither the earlier requested skips nor the earlier
+CR02–CR05 decisions. The updated suggestions have separate IDs:
+
+| Finding | Materiality | Disposition | Evidence and verification |
+| --- | --- | --- | --- |
+| UR01 — Scope untranslated Free | Material: generic adjectives could be left untranslated | Addressed | Brand Terms limits preservation to the capitalized plan name and explicitly allows translation of lowercase generic “free”. |
+| UR02 — Separate authoring guidance | Material: audience instructions were mixed | Addressed | “Which plan name to use” precedes “Do not translate”; the naming preference is outside the translator table section. |
+| UR03 — Optional Vale enforcement | Non-material: naming convention is documented | Deferred | A pricing-directory exemption would miss legitimate pricing references elsewhere and flag some valid references outside that directory. Context-aware enforcement needs fixtures for both cases; keep this optional follow-up visible here rather than introduce a broader restriction in this wording change. |
+| UR04 — Shorten Vale message | Non-material: annotation length | Rejected | The user explicitly requested the expanded alias wording in the earlier CR03 review. Retain that wording; detection patterns remain unchanged. |
+| UR05 — Explain jurisdiction suffix | Material: apparent app/docs mismatch | Addressed | Free’s Context cell notes regional suffixes such as Free (CA); the current billing catalog still formats free_v1 as Free plus JURISDICTION. |
+| UR06 — Planning wording and durable tracking | Non-material: maintenance clarity | Addressed | Replaced the two reported wording occurrences and made issue #463 the integration-status reference instead of a branch/SHA status statement. |
+
+The optional token-regression test remains out of scope: this follow-up changes
+no Vale rule or detection behavior. Vale execution remains unverified locally.
+
+Updated-review finalization: **Ready**. Four suggestions are addressed (UR01,
+UR02, UR05, UR06), one optional suggestion is deferred (UR03), and one is
+rejected to preserve the prior explicit instruction (UR04). No material item
+remains unresolved. Final source and rendered context were checked separately.
+Strict TextProv against `f684e3c6`, 175 Vitest tests, 33 producer tests,
+frontmatter, navigation, orphan, locale, malformed-link and whitespace checks
+passed. Production build passed with 1,306 pages. Parsed Brand Terms HTML
+confirms the heading order, translation scope, regional suffix example and
+clean text nodes. All local links in the changed audit resolve; Brand Terms
+has no source links. No external link was added or changed; historical
+external references were not re-crawled. Vale was not executed.
