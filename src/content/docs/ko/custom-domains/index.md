@@ -19,7 +19,7 @@ https://secrets.example.com/secret/abc123
 |---|---|---|---|
 | 사󠄁용󠄁자󠄁 지󠄁정󠄁 도󠄁메󠄁인󠄁 | 1󠄁 | 무󠄁제󠄁한󠄁 | 무󠄁제󠄁한󠄁 |
 | [홈󠄁페󠄁이󠄁지󠄁 및󠄁 수󠄁신󠄁 비󠄁밀󠄁 메󠄁시󠄁지󠄁](/en/custom-domains/homepage-and-incoming) | ✅󠄁 | ✅󠄁 | ✅󠄁 |
-| [브󠄁랜󠄁딩󠄁](/ko/custom-domains/branding):󠄁 로󠄁고󠄁,󠄁 색󠄁상󠄁,󠄁 글󠄁꼴󠄁,󠄁 공󠄁개󠄁 안󠄁내󠄁 | —󠄁 | ✅󠄁 | ✅󠄁 |
+| [브󠄁랜󠄁딩󠄁](/ko/custom-domains/branding):󠄁 로󠄁고󠄁,󠄁 색󠄁상󠄁,󠄁 글󠄁꼴󠄁,󠄁 표󠄁시󠄁 안󠄁내󠄁 | —󠄁 | ✅󠄁 | ✅󠄁 |
 | [이󠄁메󠄁일󠄁 발󠄁신󠄁자󠄁](/en/custom-domains/email-sender):󠄁 사󠄁용󠄁자󠄁 지󠄁정󠄁 도󠄁메󠄁인󠄁의󠄁 주󠄁소󠄁 | —󠄁 | ✅󠄁 | ✅󠄁 |
 | 이󠄁메󠄁일󠄁 발󠄁신󠄁자󠄁:󠄁 모󠄁든󠄁 도󠄁메󠄁인󠄁의󠄁 주󠄁소󠄁 | —󠄁 | —󠄁 | ✅󠄁 |
 | [로󠄁그󠄁인󠄁 설󠄁정󠄁](/en/custom-domains/access-and-privacy) | —󠄁 | ✅󠄁 | ✅󠄁 |
