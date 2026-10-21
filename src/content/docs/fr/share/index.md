@@ -24,8 +24,8 @@ s󠄁u󠄁i󠄁t󠄁e󠄁 ;󠄁 c󠄁o󠄁n󠄁s󠄁e󠄁r󠄁v󠄁e󠄁z󠄁 d
 
 **S󠄁a󠄁i󠄁s󠄁i󠄁s󠄁s󠄁e󠄁z󠄁 o󠄁u󠄁 c󠄁o󠄁l󠄁l󠄁e󠄁z󠄁 l󠄁e󠄁 c󠄁o󠄁n󠄁t󠄁e󠄁n󠄁u󠄁.󠄁** E󠄁n󠄁r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁e󠄁z󠄁 d󠄁'󠄁a󠄁b󠄁o󠄁r󠄁d󠄁 v󠄁o󠄁t󠄁r󠄁e󠄁 p󠄁r󠄁o󠄁p󠄁r󠄁e󠄁 c󠄁o󠄁p󠄁i󠄁e󠄁 s󠄁i󠄁
 v󠄁o󠄁u󠄁s󠄁 e󠄁n󠄁 a󠄁u󠄁r󠄁e󠄁z󠄁 b󠄁e󠄁s󠄁o󠄁i󠄁n󠄁 p󠄁l󠄁u󠄁s󠄁 t󠄁a󠄁r󠄁d󠄁.󠄁 L󠄁e󠄁 c󠄁o󠄁n󠄁t󠄁e󠄁n󠄁u󠄁 q󠄁u󠄁e󠄁 v󠄁o󠄁u󠄁s󠄁 s󠄁a󠄁i󠄁s󠄁i󠄁s󠄁s󠄁e󠄁z󠄁 n󠄁e󠄁 v󠄁o󠄁u󠄁s󠄁 e󠄁s󠄁t󠄁 p󠄁a󠄁s󠄁
-r󠄁é󠄁a󠄁f󠄁f󠄁i󠄁c󠄁h󠄁é󠄁 a󠄁p󠄁r󠄁è󠄁s󠄁 l󠄁a󠄁 c󠄁r󠄁é󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 d󠄁u󠄁 l󠄁i󠄁e󠄁n󠄁.󠄁 U󠄁n󠄁e󠄁 s󠄁o󠄁u󠄁m󠄁i󠄁s󠄁s󠄁i󠄁o󠄁n󠄁 v󠄁i󠄁d󠄁e󠄁 e󠄁s󠄁t󠄁 r󠄁e󠄁f󠄁u󠄁s󠄁é󠄁e󠄁 a󠄁v󠄁e󠄁c󠄁 l󠄁e󠄁
-m󠄁e󠄁s󠄁s󠄁a󠄁g󠄁e󠄁 *V󠄁o󠄁u󠄁s󠄁 n󠄁'󠄁a󠄁v󠄁e󠄁z󠄁 r󠄁i󠄁e󠄁n󠄁 f󠄁o󠄁u󠄁r󠄁n󠄁i󠄁 à󠄁 p󠄁a󠄁r󠄁t󠄁a󠄁g󠄁e󠄁r󠄁*.󠄁
+r󠄁é󠄁a󠄁f󠄁f󠄁i󠄁c󠄁h󠄁é󠄁 a󠄁p󠄁r󠄁è󠄁s󠄁 l󠄁a󠄁 c󠄁r󠄁é󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 d󠄁u󠄁 l󠄁i󠄁e󠄁n󠄁.󠄁 L󠄁e󠄁 b󠄁o󠄁u󠄁t󠄁o󠄁n󠄁 **C󠄁r󠄁é󠄁e󠄁r󠄁 u󠄁n󠄁 l󠄁i󠄁e󠄁n󠄁** r󠄁e󠄁s󠄁t󠄁e󠄁
+i󠄁n󠄁d󠄁i󠄁s󠄁p󠄁o󠄁n󠄁i󠄁b󠄁l󠄁e󠄁 t󠄁a󠄁n󠄁t󠄁 q󠄁u󠄁e󠄁 v󠄁o󠄁u󠄁s󠄁 n󠄁'󠄁a󠄁v󠄁e󠄁z󠄁 s󠄁a󠄁i󠄁s󠄁i󠄁 a󠄁u󠄁c󠄁u󠄁n󠄁 c󠄁o󠄁n󠄁t󠄁e󠄁n󠄁u󠄁.󠄁
 
 V󠄁é󠄁r󠄁i󠄁f󠄁i󠄁e󠄁z󠄁 l󠄁e󠄁 c󠄁o󠄁n󠄁t󠄁e󠄁n󠄁u󠄁 a󠄁p󠄁r󠄁è󠄁s󠄁 l󠄁'󠄁a󠄁v󠄁o󠄁i󠄁r󠄁 c󠄁o󠄁l󠄁l󠄁é󠄁.󠄁 L󠄁e󠄁 f󠄁o󠄁r󠄁m󠄁u󠄁l󠄁a󠄁i󠄁r󠄁e󠄁 t󠄁r󠄁o󠄁n󠄁q󠄁u󠄁e󠄁 l󠄁a󠄁 s󠄁a󠄁i󠄁s󠄁i󠄁e󠄁
 a󠄁u󠄁-󠄁d󠄁e󠄁l󠄁à󠄁 d󠄁e󠄁 s󠄁a󠄁 l󠄁i󠄁m󠄁i󠄁t󠄁e󠄁 d󠄁e󠄁 c󠄁a󠄁r󠄁a󠄁c󠄁t󠄁è󠄁r󠄁e󠄁s󠄁.󠄁 L󠄁e󠄁 s󠄁e󠄁r󠄁v󠄁e󠄁u󠄁r󠄁 r󠄁e󠄁f󠄁u󠄁s󠄁e󠄁 s󠄁é󠄁p󠄁a󠄁r󠄁é󠄁m󠄁e󠄁n󠄁t󠄁 t󠄁o󠄁u󠄁t󠄁 c󠄁o󠄁n󠄁t󠄁e󠄁n󠄁u󠄁
@@ -53,8 +53,8 @@ C󠄁o󠄁n󠄁s󠄁u󠄁l󠄁t󠄁e󠄁z󠄁 l󠄁'󠄁e󠄁n󠄁s󠄁e󠄁m�
 ## C󠄁h󠄁o󠄁i󠄁s󠄁i󠄁r󠄁 s󠄁a󠄁 d󠄁u󠄁r󠄁é󠄁e󠄁 d󠄁e󠄁 v󠄁i󠄁e󠄁
 
 C󠄁h󠄁o󠄁i󠄁s󠄁i󠄁s󠄁s󠄁e󠄁z󠄁 l󠄁'󠄁e󠄁x󠄁p󠄁i󠄁r󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 l󠄁a󠄁 p󠄁l󠄁u󠄁s󠄁 c󠄁o󠄁u󠄁r󠄁t󠄁e󠄁 q󠄁u󠄁e󠄁 v󠄁o󠄁t󠄁r󠄁e󠄁 d󠄁e󠄁s󠄁t󠄁i󠄁n󠄁a󠄁t󠄁a󠄁i󠄁r󠄁e󠄁 p󠄁e󠄁u󠄁t󠄁
-r󠄁a󠄁i󠄁s󠄁o󠄁n󠄁n󠄁a󠄁b󠄁l󠄁e󠄁m󠄁e󠄁n󠄁t󠄁 r󠄁e󠄁s󠄁p󠄁e󠄁c󠄁t󠄁e󠄁r󠄁.󠄁 S󠄁u󠄁r󠄁 l󠄁e󠄁 f󠄁o󠄁r󠄁m󠄁u󠄁l󠄁a󠄁i󠄁r󠄁e󠄁,󠄁 l󠄁e󠄁s󠄁 o󠄁p󠄁t󠄁i󠄁o󠄁n󠄁s󠄁 s󠄁'󠄁a󠄁f󠄁f󠄁i󠄁c󠄁h󠄁e󠄁n󠄁t󠄁 s󠄁o󠄁u󠄁s󠄁 l󠄁a󠄁 f󠄁o󠄁r󠄁m󠄁e󠄁 **E󠄁x󠄁p󠄁i󠄁r󠄁e
-dans …󠄁**.󠄁 À󠄁 l󠄁a󠄁 f󠄁i󠄁n󠄁 d󠄁e󠄁 c󠄁e󠄁t󠄁t󠄁e󠄁 d󠄁u󠄁r󠄁é󠄁e󠄁 d󠄁e󠄁 v󠄁i󠄁e󠄁,󠄁 le s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 s󠄁t󠄁o󠄁c󠄁k󠄁é󠄁 e󠄁s󠄁t󠄁 s󠄁u󠄁p󠄁p󠄁r󠄁i󠄁m󠄁é󠄁,󠄁 m󠄁ê󠄁m󠄁e󠄁 s󠄁i󠄁
+r󠄁a󠄁i󠄁s󠄁o󠄁n󠄁n󠄁a󠄁b󠄁l󠄁e󠄁m󠄁e󠄁n󠄁t󠄁 r󠄁e󠄁s󠄁p󠄁e󠄁c󠄁t󠄁e󠄁r󠄁.󠄁 S󠄁u󠄁r󠄁 l󠄁e󠄁 f󠄁o󠄁r󠄁m󠄁u󠄁l󠄁a󠄁i󠄁r󠄁e󠄁,󠄁 c󠄁h󠄁a󠄁q󠄁u󠄁e󠄁 o󠄁p󠄁t󠄁i󠄁o󠄁n󠄁 s󠄁'󠄁a󠄁f󠄁f󠄁i󠄁c󠄁h󠄁e󠄁 p󠄁a󠄁r󠄁 e󠄁x󠄁e󠄁m󠄁p󠄁l󠄁e󠄁 s󠄁o󠄁u󠄁s󠄁 l󠄁a󠄁 f󠄁o󠄁r󠄁m󠄁e󠄁 **E󠄁x󠄁p󠄁i󠄁r󠄁e
+dans 7󠄁 j󠄁o󠄁u󠄁r󠄁s󠄁**.󠄁 À󠄁 l󠄁a󠄁 f󠄁i󠄁n󠄁 d󠄁e󠄁 c󠄁e󠄁t󠄁t󠄁e󠄁 d󠄁u󠄁r󠄁é󠄁e󠄁 d󠄁e󠄁 v󠄁i󠄁e󠄁,󠄁 le s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 s󠄁t󠄁o󠄁c󠄁k󠄁é󠄁 e󠄁s󠄁t󠄁 s󠄁u󠄁p󠄁p󠄁r󠄁i󠄁m󠄁é󠄁,󠄁 m󠄁ê󠄁m󠄁e󠄁 s󠄁i󠄁
 p󠄁e󠄁r󠄁s󠄁o󠄁n󠄁n󠄁e󠄁 n󠄁e󠄁 l󠄁'󠄁a󠄁 r󠄁é󠄁v󠄁é󠄁l󠄁é󠄁.󠄁
 
 L󠄁e󠄁s󠄁 d󠄁u󠄁r󠄁é󠄁e󠄁s󠄁 d󠄁e󠄁 v󠄁i󠄁e󠄁 d󠄁i󠄁s󠄁p󠄁o󠄁n󠄁i󠄁b󠄁l󠄁e󠄁s󠄁 d󠄁é󠄁p󠄁e󠄁n󠄁d󠄁e󠄁n󠄁t󠄁 d󠄁u󠄁 s󠄁e󠄁r󠄁v󠄁i󠄁c󠄁e󠄁 e󠄁t󠄁 d󠄁e󠄁 v󠄁o󠄁t󠄁r󠄁e󠄁 f󠄁o󠄁r󠄁f󠄁a󠄁i󠄁t󠄁.󠄁 L󠄁e󠄁
