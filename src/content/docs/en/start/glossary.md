@@ -61,7 +61,7 @@ unavailable secret.
 | **Admin** | An organization role that can manage members, custom domains and other shared settings, with fewer permissions than an owner. |
 | **Member** | Someone who belongs to an organization. **Member** is also the role for using its resources without administering the organization. |
 | **Plan feature** | Something your organization can use as part of its plan, such as custom domains or Secret Activity. Your role also determines which included features you can use. See [Compare plans](/en/pricing/compare-plans). |
-| **Secret Activity** | The organization's record of events involving its secrets, such as creation, link access, reveals and burns. It does not contain secret content. This feature is called **audit logs** in plan comparisons; see [Secret Activity](/en/organizations/audit-trail). |
+| **Secret Activity** | The organization's record of events involving its secrets, such as creation, link access, reveals and burns. It does not contain secret content. Plan comparisons call this feature **audit logs**, and the pricing page calls it the **security audit trail**; see [Secret Activity](/en/organizations/audit-trail). |
 
 See [Inviting members](/en/organizations/inviting-members) for managing access
 to an organization.

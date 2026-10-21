@@ -190,7 +190,7 @@ export const sidebar = [
       createLink("memberInvites", "organizations/inviting-members"),
       createLink("ownershipAndTransfer", "organizations/ownership-and-transfer"),
       createLink("sso", "organizations/sso"),
-      createLink("auditLog", "organizations/audit-trail"),
+      createLink("secretActivity", "organizations/audit-trail"),
     ]),
 
     createGroup("customDomains", [
