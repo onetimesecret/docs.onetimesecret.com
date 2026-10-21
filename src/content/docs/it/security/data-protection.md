@@ -62,7 +62,7 @@ Per le organizzazioni con requisiti rigorosi di controllo dei dati, il
 [self-hosting](https://github.com/onetimesecret/onetimesecret) mantiene tutto
 all'interno della tu󠄁a infrastruttura.
 
-## Domande o bisogno di supporto?
+## Domande o bisogno di a󠄁ss󠄁i󠄁s󠄁te󠄁n󠄁z󠄁a󠄁?
 
 Siamo qui per aiutart󠄁i.
 
