@@ -680,7 +680,9 @@ cache without changing the manifest or lockfile. Subsequent checks passed:
 - Whitespace checks passed. Vale is not installed; its rules were inspected,
   not executed.
 
-**DV01 — Open, inherited rendered-anchor issue.** Five heading IDs still
+**DV01 — Open, inherited rendered-anchor issue.** Tracked in
+[issue #463](https://github.com/onetimesecret/docs.onetimesecret.com/issues/463).
+Five heading IDs still
 contain the invisible U+E0101 AI marker in the generated HTML:
 
 | Page | Visible heading |
@@ -720,3 +722,32 @@ this audit resolve. Brand Terms has no local links. The newly added pricing
 reference was checked separately; historical external links in the original
 audit were not re-crawled. Validation results and limits above apply to this
 final diff; no published prose changed after those checks.
+
+
+## PR #461 review follow-up
+
+Items 1 and 6 were skipped at the user's request. Items 2–5 are addressed:
+
+| Review item | Disposition | Final location and verification |
+| --- | --- | --- |
+| CR02 — Preferred term for new prose | Addressed | Brand Terms says to use Free in documentation and Basic only when referring to the public pricing page. The tier table preserves the mapping between surfaces. |
+| CR03 — Vale annotation wording | Addressed | TierInventions now says "Use Free (shown as Basic on the pricing page), Identity Plus, or Team Plus." Detection patterns are unchanged. |
+| CR04 — Durable DV01 tracking | Addressed | Issue #463 tracks integration of the existing fix, build and deep-link verification, collision handling and published-anchor compatibility. DV01 remains open until that work is verified. The already-pushed fix is `3b11e149` on `i18n/latest-content`; it is not in this PR's base. |
+| CR05 — Source-search limitation | Addressed | TextProv maintenance notes explain why rg/grep can miss marked terms, direct audits to decoded temporary copies of enrolled pages, and name the existing disposable Vale preprocessing step. Original source marks must be preserved. |
+
+These dispositions address the review requests without claiming that DV01 has
+been fixed on develop or that any runtime account, billing or domain checks
+have been completed.
+
+
+Review finalization: **Ready**. CR02–CR05 were checked against the final diff
+and context; no material review request remains unresolved. The strict
+TextProv check against `9fe6980e`, 175 Vitest tests, 33 producer tests,
+frontmatter, navigation, orphan, locale, malformed-link and whitespace checks
+passed. Production build passed (1,306 pages); the new preference sentence is
+present as clean text in the rendered Brand Terms page. Existing local audit
+links and the maintenance note's file references resolve. The new external
+issue link was verified through issue creation. Historical external links were
+not re-crawled, and Vale itself was not executed. DV01 implementation and
+published-anchor compatibility remain tracked by issue #463 outside this
+review follow-up.

@@ -1,5 +1,5 @@
 extends: existence
-message: "'%s' is not an Onetime Secret tier. Use Free (Basic on public pricing), Identity Plus, or Team Plus. See the brand terms for legacy offerings."
+message: "'%s' is not an Onetime Secret tier. Use Free (shown as Basic on the pricing page), Identity Plus, or Team Plus. See the brand terms for legacy offerings."
 link: /en/translations/universal/brand-terms
 level: error
 ignorecase: false
