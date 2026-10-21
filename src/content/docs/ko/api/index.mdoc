@@ -1,30 +1,95 @@
 ---
-title: REST API 문서
-description: Onetime Secret REST API 문서가 api.onetimesecret.com으로 이전되었습니다. 대화형 API 탐색기와 전체 엔드포인트 참조를 확인하세요.
+textprov: true
+title: "API 및 클라이언트 라이브러리"
+description: "직접 작성한 코드에서 비밀 메시지를 생성, 조회, 소각합니다. 지역별 기본 URL, 인증, curl 빠른 시작, 공식 및 커뮤니티 클라이언트 라이브러리를 다룹니다."
 ---
 
-## 문서 이전 안내
+웹󠄁 앱󠄁이󠄁 비󠄁밀󠄁 메󠄁시󠄁지󠄁로󠄁 하󠄁는󠄁 모󠄁든󠄁 작󠄁업󠄁은󠄁 H󠄁T󠄁T󠄁P󠄁S󠄁와󠄁 J󠄁S󠄁ON󠄁으로도󠄁 할󠄁 수󠄁 있󠄁습니다. 일󠄁반󠄁적󠄁인󠄁 패󠄁턴󠄁은󠄁 스󠄁크󠄁립󠄁트󠄁나󠄁 파󠄁이󠄁프󠄁라󠄁인󠄁이󠄁 비󠄁밀󠄁 메󠄁시󠄁지󠄁를󠄁 생󠄁성󠄁하󠄁고󠄁 링󠄁크󠄁를󠄁 사󠄁람󠄁에󠄁게󠄁 전󠄁달󠄁하󠄁는󠄁 방󠄁식󠄁으󠄁로󠄁,󠄁 자󠄁격󠄁 증󠄁명󠄁이󠄁 로󠄁그󠄁,󠄁 티󠄁켓󠄁,󠄁 채󠄁팅󠄁 기록󠄁에󠄁 남󠄁지󠄁 않󠄁게󠄁 합󠄁니󠄁다󠄁.󠄁
 
-전체 REST API 문서는 이제 **[api.onetimesecret.com](https://api.onetimesecret.com)**에서 제공됩니다.
+요󠄁청󠄁 및󠄁 응󠄁답󠄁 스󠄁키󠄁마󠄁와 직󠄁접󠄁 실󠄁행󠄁해󠄁 볼󠄁 수󠄁 있󠄁는󠄁 콘󠄁솔󠄁을󠄁 포󠄁함󠄁한󠄁 전체 엔드포인트 참조는 **[api.onetimesecret.com](https://api.onetimesecret.com)**에 있습니다.󠄁 이󠄁 페󠄁이󠄁지󠄁는󠄁 그󠄁곳󠄁을󠄁 열󠄁기 전󠄁에󠄁 알󠄁아󠄁야󠄁 할󠄁 내󠄁용󠄁을 다󠄁룹󠄁니󠄁다󠄁.
 
-새로운 문서에는 다음이 포함되어 있습니다:
+## 기본 URL󠄁
 
-- **API v1** — 비밀 공유를 위한 기본 엔드포인트
-- **API v2** — 향상된 메타데이터 및 삭제 기능
-- **API v3** — 확장된 기능을 갖춘 최신 버전
+요청은 계󠄁정󠄁이󠄁 있󠄁는󠄁 지역으󠄁로󠄁 보󠄁냅󠄁니다.󠄁 각󠄁 지󠄁역󠄁은󠄁 별󠄁도󠄁의󠄁 배󠄁포󠄁이󠄁며󠄁 지󠄁역󠄁 간󠄁에󠄁 복󠄁제󠄁되󠄁는󠄁 것󠄁은󠄁 없󠄁습󠄁니󠄁다󠄁.󠄁
 
-엔드포인트 세부 정보, 요청/응답 스키마, 직접 테스트 기능을 확인하려면 [대화형 API 문서](https://api.onetimesecret.com)를 방문하세요.
+```
+https://REGION.onetimesecret.com/api/v2
+```
 
-## 기본 URI
+| `REGION` | 호󠄁스󠄁트󠄁 |
+|---|---|
+| `ca` | `ca.onetimesecret.com` |
+| `eu` | `eu.onetimesecret.com` |
+| `nz` | `nz.onetimesecret.com` |
+| `uk` | `uk.onetimesecret.com` |
+| `us` | `us.onetimesecret.com` |
 
-모든 API 요청은 지역별 엔드포인트를 사용합니다:
+지󠄁역󠄁이󠄁 없󠄁는󠄁 `onetimesecret.com` 호󠄁스󠄁트󠄁도󠄁 여󠄁전󠄁히󠄁 AP󠄁I󠄁 요󠄁청󠄁에󠄁 응󠄁답󠄁하󠄁고󠄁 활󠄁성󠄁 지󠄁역󠄁으󠄁로󠄁 라󠄁우󠄁팅󠄁하󠄁지󠄁만󠄁, 이󠄁 대󠄁체󠄁 경󠄁로󠄁가󠄁 폐󠄁기󠄁되󠄁더󠄁라󠄁도󠄁 통󠄁합󠄁이󠄁 계󠄁속󠄁 작󠄁동󠄁하도󠄁록󠄁 지󠄁역󠄁을󠄁 명󠄁시󠄁적󠄁으󠄁로󠄁 지󠄁정󠄁하󠄁세󠄁요󠄁. 각󠄁 지󠄁역󠄁이󠄁 데이터에󠄁 어󠄁떤󠄁 의󠄁미󠄁인󠄁지󠄁는󠄁 [데󠄁이󠄁터󠄁가󠄁 저󠄁장󠄁되󠄁는󠄁 위치](/en/security/where-your-data-lives/)를󠄁 참󠄁조󠄁하󠄁세󠄁요󠄁.󠄁
 
-`https://REGION.onetimesecret.com/api`
+[사󠄁용󠄁자󠄁 지󠄁정 도󠄁메󠄁인󠄁](/ko/custom-domains/)에󠄁서󠄁는󠄁 A󠄁P󠄁I󠄁가󠄁 해󠄁당󠄁 도󠄁메󠄁인󠄁의󠄁 같󠄁은󠄁 경󠄁로󠄁에󠄁 있󠄁으󠄁며󠄁,󠄁 A󠄁P󠄁I󠄁가󠄁 생󠄁성󠄁하󠄁는󠄁 링󠄁크󠄁도󠄁 그󠄁 도󠄁메󠄁인󠄁을 사󠄁용󠄁합󠄁니󠄁다󠄁.󠄁
 
-`REGION`은 `CA`, `EU`, `NZ`, `UK`, `US` 중 하나입니다.
+```
+https://secrets.example.com/api/v2
+```
 
-데이터 위치 및 규정 준수에 대한 자세한 내용은 [지역](/ko/regions/)을 참조하세요.
+[자󠄁체󠄁 호󠄁스󠄁팅󠄁](/ko/self-hosting/) 인󠄁스󠄁턴󠄁스󠄁는󠄁 실󠄁행󠄁 중󠄁인󠄁 호󠄁스󠄁트󠄁에󠄁서󠄁 같󠄁은󠄁 A󠄁P󠄁I󠄁를󠄁 제󠄁공󠄁합󠄁니󠄁다󠄁.󠄁
 
-## 관련 리소스
+## 인󠄁증󠄁
 
-- [클라이언트 라이브러리](/ko/resources/client-libraries/) — Ruby, Python, Go 등을 위한 커뮤니티 SDK
+H󠄁T󠄁T󠄁P󠄁 B󠄁a󠄁s󠄁i󠄁c󠄁 인󠄁증󠄁을󠄁 사󠄁용󠄁합󠄁니󠄁다󠄁.󠄁 사󠄁용󠄁자󠄁 이󠄁름󠄁은󠄁 계󠄁정󠄁 이󠄁메󠄁일󠄁이󠄁고󠄁,󠄁 비󠄁밀󠄁번󠄁호󠄁는󠄁 계󠄁정󠄁 설󠄁정󠄁에󠄁 있󠄁는󠄁 A󠄁P󠄁I󠄁 토󠄁큰󠄁입󠄁니󠄁다󠄁.󠄁
+
+```bash
+curl -u 'you@example.com:APITOKEN' https://eu.onetimesecret.com/api/v2/status
+```
+
+비󠄁밀󠄁 메󠄁시󠄁지󠄁 생󠄁성󠄁과󠄁 공󠄁개󠄁는󠄁 인󠄁증󠄁 없󠄁이󠄁도󠄁 작󠄁동󠄁하󠄁지󠄁만󠄁,󠄁 익󠄁명󠄁 사󠄁용󠄁자󠄁의󠄁 제󠄁한󠄁이󠄁 적󠄁용󠄁됩󠄁니󠄁다󠄁.󠄁 최󠄁대󠄁 유󠄁효󠄁 기󠄁간󠄁이󠄁 더󠄁 짧󠄁고󠄁,󠄁 비󠄁밀󠄁 메󠄁시󠄁지󠄁 크󠄁기󠄁가󠄁 더󠄁 작󠄁으󠄁며󠄁,󠄁 수󠄁신󠄁확󠄁인󠄁 목󠄁록󠄁이󠄁 없󠄁습󠄁니󠄁다󠄁.󠄁 인󠄁증󠄁된󠄁 요󠄁청󠄁에󠄁는󠄁 요󠄁금󠄁제󠄁의󠄁 제󠄁한󠄁이󠄁 적󠄁용󠄁되󠄁고󠄁 [수󠄁신󠄁확󠄁인󠄁](/en/share/your-receipt/)에󠄁 표󠄁시󠄁됩󠄁니󠄁다󠄁.󠄁
+
+## 빠󠄁른󠄁 시󠄁작󠄁
+
+한󠄁 시󠄁간󠄁 동󠄁안󠄁 유󠄁지󠄁되󠄁는󠄁 비󠄁밀󠄁 메󠄁시󠄁지󠄁를󠄁 생󠄁성󠄁합󠄁니󠄁다󠄁.󠄁
+
+```bash
+curl -u 'you@example.com:APITOKEN' \
+  -H 'Content-Type: application/json' \
+  -d '{"secret": {"secret": "the password is hunter2", "ttl": 3600}}' \
+  https://eu.onetimesecret.com/api/v2/secret/conceal
+```
+
+응󠄁답󠄁에󠄁는󠄁 두󠄁 개󠄁의󠄁 레󠄁코󠄁드󠄁가󠄁 포󠄁함󠄁됩󠄁니󠄁다󠄁.󠄁 `record.secret.identifier`는󠄁 `https://eu.onetimesecret.com/secret/IDENTIFIER` 형󠄁태󠄁로󠄁 공󠄁유󠄁하󠄁는󠄁 키󠄁입󠄁니󠄁다󠄁.󠄁 `record.receipt.identifier`는󠄁 본󠄁인󠄁용󠄁 키󠄁로󠄁,󠄁 비󠄁밀󠄁 메󠄁시󠄁지󠄁가󠄁 조회󠄁되󠄁었󠄁는󠄁지󠄁 보󠄁여󠄁 주󠄁고󠄁 미󠄁리󠄁 소󠄁각󠄁할󠄁 수󠄁 있󠄁게󠄁 합󠄁니󠄁다󠄁.󠄁 수󠄁신󠄁확󠄁인󠄁 키󠄁는󠄁 절󠄁대󠄁 수󠄁신󠄁자󠄁에󠄁게󠄁 보󠄁내󠄁지󠄁 마󠄁세󠄁요󠄁.󠄁
+
+조󠄁회󠄁 시󠄁 접󠄁근󠄁 문󠄁구󠄁를󠄁 요󠄁구󠄁하󠄁려󠄁면󠄁 `secret` 객󠄁체󠄁에󠄁 `"passphrase": "..."`를󠄁 추󠄁가󠄁합󠄁니󠄁다󠄁.󠄁 접󠄁근󠄁 문󠄁구󠄁는󠄁 값󠄁을󠄁 암󠄁호󠄁화󠄁하󠄁는󠄁 데󠄁 사󠄁용󠄁되󠄁며󠄁 복󠄁구󠄁 가󠄁능󠄁한󠄁 형󠄁태󠄁로󠄁 저󠄁장󠄁되󠄁지󠄁 않󠄁으󠄁므󠄁로󠄁,󠄁 접󠄁근󠄁 문󠄁구󠄁를󠄁 잃󠄁어󠄁버󠄁린󠄁 비󠄁밀󠄁 메󠄁시󠄁지󠄁는󠄁 되󠄁찾󠄁을󠄁 방󠄁법󠄁이󠄁 없󠄁습󠄁니󠄁다󠄁.󠄁
+
+비󠄁밀󠄁 메󠄁시󠄁지󠄁를󠄁 공󠄁개󠄁합󠄁니󠄁다󠄁.󠄁 이󠄁 작󠄁업󠄁은󠄁 비󠄁밀󠄁 메󠄁시󠄁지󠄁를󠄁 소󠄁모󠄁합󠄁니󠄁다󠄁.󠄁
+
+```bash
+curl -X POST -H 'Content-Type: application/json' -d '{}' \
+  https://eu.onetimesecret.com/api/v2/secret/IDENTIFIER/reveal
+```
+
+수󠄁신󠄁확󠄁인󠄁 키󠄁를󠄁 사󠄁용󠄁하󠄁여󠄁 누󠄁군󠄁가󠄁 조󠄁회󠄁하󠄁기󠄁 전󠄁에󠄁 비󠄁밀󠄁 메󠄁시󠄁지󠄁를󠄁 소󠄁각󠄁합󠄁니󠄁다󠄁.󠄁
+
+```bash
+curl -u 'you@example.com:APITOKEN' -X POST \
+  https://eu.onetimesecret.com/api/v2/receipt/RECEIPT_IDENTIFIER/burn
+```
+
+## A󠄁P󠄁I󠄁 버󠄁전󠄁
+
+- **v󠄁2󠄁**는󠄁 현󠄁재󠄁 공󠄁개󠄁 A󠄁P󠄁I󠄁입󠄁니󠄁다󠄁.󠄁 J󠄁S󠄁O󠄁N󠄁 입󠄁출󠄁력󠄁,󠄁 수󠄁신󠄁확󠄁인󠄁,󠄁 상󠄁태󠄁 및󠄁 소󠄁각󠄁 엔󠄁드󠄁포󠄁인󠄁트󠄁를󠄁 제󠄁공󠄁합󠄁니󠄁다󠄁.󠄁 이󠄁 버󠄁전󠄁을󠄁 기󠄁반󠄁으󠄁로󠄁 개󠄁발󠄁하세요.
+- **v󠄁1󠄁**은󠄁 원󠄁래󠄁의󠄁 폼󠄁 인󠄁코󠄁딩󠄁 A󠄁P󠄁I󠄁(󠄁`POST /api/v1/share`)󠄁입󠄁니󠄁다󠄁.󠄁 여󠄁전󠄁히󠄁 작󠄁동󠄁하󠄁며󠄁 대󠄁부󠄁분󠄁의󠄁 커󠄁뮤󠄁니󠄁티󠄁 라󠄁이󠄁브󠄁러󠄁리󠄁가󠄁 사󠄁용󠄁하󠄁지󠄁만󠄁,󠄁 새󠄁 통󠄁합󠄁은󠄁 v󠄁2󠄁를󠄁 사󠄁용󠄁해󠄁야󠄁 합󠄁니󠄁다󠄁.󠄁
+
+두󠄁 버󠄁전󠄁 모󠄁두󠄁 [a󠄁p󠄁i󠄁.󠄁o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁.󠄁c󠄁o󠄁m󠄁](https://api.onetimesecret.com)에󠄁 문󠄁서󠄁화󠄁되󠄁어󠄁 있󠄁습󠄁니󠄁다󠄁.󠄁
+
+## 클라이언트 라이브러리
+
+{% cardgrid %}
+{% linkcard title="클라이언트 라이브러리" href="/ko/api/client-libraries/" description="공식 SDK와 커뮤니티 라이브러리, 그리고 API v2, 지역, 사용자 지정 도메인 지원 여부에 대한 참고 사항입니다." /%}
+{% linkcard title="전체 API 참조" href="https://api.onetimesecret.com" description="v1과 v2의 모든 엔드포인트, 요청 및 응답 스키마, 그리고 계정으로 직접 호출해 볼 수 있는 콘솔입니다." /%}
+{% /cardgrid %}
+
+## 관󠄁련󠄁 문󠄁서󠄁
+
+- [데󠄁이󠄁터󠄁가󠄁 저󠄁장󠄁되󠄁는󠄁 위󠄁치󠄁](/en/security/where-your-data-lives/):󠄁 지󠄁역󠄁 선󠄁택󠄁과󠄁 지󠄁역󠄁 안󠄁에󠄁 머󠄁무󠄁는󠄁 데󠄁이󠄁터󠄁.󠄁
+- [사󠄁용󠄁자󠄁 지󠄁정󠄁 도󠄁메󠄁인󠄁](/ko/custom-domains/):󠄁 자󠄁체󠄁 도󠄁메󠄁인󠄁에󠄁서󠄁의󠄁 비󠄁밀󠄁 링󠄁크󠄁와󠄁 A󠄁P󠄁I󠄁 접󠄁근󠄁.󠄁
+- [자󠄁체󠄁 호󠄁스󠄁팅󠄁](/ko/self-hosting/):󠄁 자󠄁체󠄁 인󠄁프󠄁라󠄁에󠄁서󠄁 A󠄁P󠄁I󠄁 실󠄁행󠄁.󠄁
+- [개󠄁발󠄁자󠄁 온󠄁램󠄁프󠄁](/en/contribute/developer-on-ramp/):󠄁 애󠄁플󠄁리󠄁케󠄁이󠄁션󠄁을󠄁 로󠄁컬󠄁에󠄁서󠄁 실󠄁행󠄁하󠄁고󠄁 기󠄁여󠄁하󠄁기󠄁.󠄁
