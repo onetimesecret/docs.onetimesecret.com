@@ -32,7 +32,7 @@ a󠄁u󠄁t󠄁o󠄁-󠄁h󠄁o󠄁s󠄁p󠄁e󠄁d󠄁a󠄁d󠄁a󠄁 a󠄁n�
 ## Ruby
 
 
-[Página d󠄁o GitH󠄁ub onetime-ruby](https://github.com/onetimesecret/onetime-ruby)
+[Página d󠄁o GitH󠄁ub -󠄁 onetime-ruby](https://github.com/onetimesecret/onetime-ruby)
 por [Delano](https://delanotes.com/) —󠄁 **c󠄁l󠄁i󠄁e󠄁n󠄁t󠄁e󠄁 o󠄁f󠄁i󠄁c󠄁i󠄁a󠄁l󠄁**,󠄁 m󠄁a󠄁n󠄁t󠄁i󠄁d󠄁o󠄁 ati󠄁v󠄁a󠄁m󠄁e󠄁n󠄁t󠄁e󠄁
 (󠄁ú󠄁l󠄁t󠄁i󠄁m󠄁o󠄁 c󠄁o󠄁m󠄁m󠄁i󠄁t󠄁 e󠄁m󠄁 2󠄁0󠄁2󠄁6󠄁-󠄁0󠄁6󠄁)󠄁.󠄁 O󠄁f󠄁e󠄁r󠄁e󠄁c󠄁e󠄁 s󠄁up󠄁o󠄁r󠄁t󠄁e󠄁 à󠄁 A󠄁P󠄁I󠄁 v󠄁1󠄁 (󠄁d󠄁e󠄁s󠄁c󠄁o󠄁n󠄁t󠄁i󠄁n󠄁u󠄁a󠄁d󠄁a󠄁)󠄁 e󠄁 v󠄁2󠄁,󠄁 a󠄁 d󠄁o󠄁m󠄁í󠄁n󠄁i󠄁o󠄁s󠄁 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁a󠄁i󠄁s󠄁
 e󠄁 a󠄁 U󠄁R󠄁L󠄁s󠄁 d󠄁e󠄁 b󠄁a󠄁s󠄁e󠄁 p󠄁e󠄁r󠄁s󠄁o󠄁n󠄁alizada󠄁s󠄁.󠄁 R󠄁e󠄁q󠄁u󠄁e󠄁r󠄁 R󠄁u󠄁b󠄁y󠄁 3󠄁.󠄁1󠄁+󠄁,󠄁 s󠄁em d󠄁e󠄁p󠄁e󠄁n󠄁d󠄁ê󠄁n󠄁c󠄁i󠄁a󠄁s󠄁 e󠄁m󠄁 t󠄁e󠄁m󠄁p󠄁o󠄁 d󠄁e󠄁 e󠄁x󠄁e󠄁c󠄁u󠄁ç󠄁ã󠄁o󠄁.󠄁
@@ -194,7 +194,7 @@ class Test
 ## Go
 
 
-[Página d󠄁o GitH󠄁ub - onetimesecret](https://github.com/corbaltcode/go-onetimesecret)
+[Página d󠄁o GitH󠄁ub -󠄁 g󠄁o󠄁-onetimesecret](https://github.com/corbaltcode/go-onetimesecret)
 por [Corbalt](https://github.com/corbaltcode/) —󠄁 m󠄁a󠄁n󠄁t󠄁i󠄁d󠄁o󠄁 p󠄁e󠄁l󠄁a󠄁 c󠄁o󠄁m󠄁u󠄁n󠄁i󠄁d󠄁ade󠄁 (󠄁ú󠄁l󠄁t󠄁im󠄁o󠄁
 co󠄁m󠄁m󠄁it󠄁 em 2026󠄁-05󠄁,󠄁 a󠄁t󠄁u󠄁a󠄁l󠄁i󠄁z󠄁a󠄁d󠄁o󠄁 p󠄁a󠄁r󠄁a󠄁 o󠄁 h󠄁o󠄁s󠄁t󠄁 `us.onetimesecret.com`).󠄁 I󠄁n󠄁c󠄁l󠄁u󠄁i󠄁 u󠄁m󠄁a󠄁 C󠄁L󠄁I󠄁.󠄁
 
@@ -246,7 +246,7 @@ flsdlaun6hwczqu9utmc0vts5xj9xu1
 ## Go (lib)
 
 
-[Página d󠄁o GitH󠄁ub](https://github.com/emdneto/otsgo)
+[Página d󠄁o GitH󠄁ub -󠄁 o󠄁t󠄁s󠄁g󠄁o󠄁](https://github.com/emdneto/otsgo)
 por [Emídio Neto](https://github.com/emdneto) —󠄁 m󠄁a󠄁n󠄁t󠄁i󠄁d󠄁o󠄁 p󠄁e󠄁l󠄁a󠄁 c󠄁o󠄁m󠄁u󠄁n󠄁i󠄁d󠄁ade󠄁 (󠄁ú󠄁l󠄁t󠄁im󠄁a
 rel󠄁e󠄁a󠄁s󠄁e󠄁 v󠄁1󠄁.󠄁1󠄁.󠄁0󠄁,󠄁 2024-03󠄁).󠄁 S󠄁u󠄁p󠄁o󠄁r󠄁t󠄁e󠄁 a󠄁 d󠄁o󠄁m󠄁í󠄁n󠄁i󠄁o󠄁s󠄁 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁a󠄁i󠄁s󠄁 n󠄁ã󠄁o󠄁 d󠄁o󠄁c󠄁u󠄁m󠄁e󠄁n󠄁t󠄁a󠄁d󠄁o󠄁.󠄁
 
@@ -303,7 +303,7 @@ Get-Command -Module OneTimeSecret | Select Name
 ## Bash
 
 
-[Página d󠄁o GitH󠄁ub - OneTimeSecret-bash](https://github.com/eengstrom/onetimesecret-bash)
+[Página d󠄁o GitH󠄁ub - o󠄁net󠄁imes󠄁ecret-bash](https://github.com/eengstrom/onetimesecret-bash)
 por [Eric Engstrom](https://eengstrom.github.io/) —󠄁 **s󠄁e󠄁m󠄁 m󠄁a󠄁n󠄁u󠄁t󠄁e󠄁n󠄁ç󠄁ã󠄁o󠄁** (ú󠄁l󠄁t󠄁i󠄁m󠄁o󠄁
 c󠄁o󠄁m󠄁m󠄁i󠄁t󠄁 e󠄁m󠄁 2󠄁0󠄁2󠄁0󠄁-󠄁0󠄁5󠄁)󠄁.󠄁 O󠄁f󠄁e󠄁r󠄁e󠄁c󠄁e󠄁 s󠄁u󠄁p󠄁o󠄁r󠄁t󠄁e󠄁 a u󠄁m󠄁 h󠄁o󠄁s󠄁t p󠄁e󠄁r󠄁s󠄁o󠄁n󠄁alizado v󠄁i󠄁a󠄁 `ots_set_host`,󠄁 ma󠄁s󠄁 é󠄁 a󠄁n󠄁t󠄁e󠄁r󠄁i󠄁o󠄁r󠄁 à󠄁 A󠄁P󠄁I󠄁
 v󠄁2 e󠄁 a󠄁o󠄁s󠄁 d󠄁o󠄁m󠄁í󠄁n󠄁i󠄁o󠄁s󠄁 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁a󠄁i󠄁s󠄁.󠄁
