@@ -1,93 +1,80 @@
 ---
 title: Roles and permissions
-description: The three organization roles, what each one can do, and why a capability your plan includes can still be refused — permissions are the intersection of plan and role.
+description: The three organization roles, what each one can do, and why a feature your plan includes can still be unavailable to you.
 audience: end-user
 pageType: concept
-sourceOfTruth: onetimesecret/lib/onetime/models/organization_membership.rb:72-106 (the three role templates and their nesting); onetimesecret/lib/onetime/models/organization_membership/features/with_materialized_entitlements.rb:13-18 (effective = plan ∩ role); onetimesecret/apps/api/organizations/logic/members/update_member_role.rb:29,154-192 (the role-change endpoint accepts member and admin only)
+sourceOfTruth: onetimesecret at 145c1e7cfa — lib/onetime/models/organization_membership.rb:72-106 (the three role templates and their nesting); lib/onetime/models/organization_membership/features/with_materialized_entitlements.rb:13-18 (a member gets what both the plan and the role allow); apps/api/organizations/logic/members/update_member_role.rb:29,45,156-191 (owner-only role changes, member and admin only); apps/api/organizations/logic/members/remove_member.rb:160-205 (who can remove whom); apps/api/organizations/logic/invitations/create_invitation.rb (member counts are logged, not enforced)
 ---
 
-Every person in an [organization](/en/organizations) holds a role, and that role
-decides what they can do. But the role is only half the answer. The other half is
-your organization's plan — and a capability is available to someone only when
-**both** halves allow it.
-
-That is why a feature you are paying for can still be refused.
+Every person in an [organization](/en/organizations) has a role. The role
+decides what they can do, within what the organization's plan includes. A
+feature is available to you only when your plan includes it **and** your role
+allows it.
 
 ## The three roles
 
-An organization has three roles, and they nest: an owner can do everything an
-admin can, and an admin can do everything a member can.
+Each role includes everything the role below it can do.
 
 | Role | What it covers |
 |---|---|
-| **Owner** | Everything an admin can do, plus billing, SSO, IP access rules, workspace branding, the email sender settings, and organization settings themselves. |
-| **Admin** | Everything a member can do, plus member management, custom domains, homepage and incoming secrets, branding, privacy defaults, and Secret Activity. |
-| **Member** | Core use of the organization: creating secrets, viewing receipts, API access, extended expiration, notifications. |
+| **Owner** | Everything an admin can do, plus billing, organization settings, role changes, single sign-on, custom-domain sign-in and sign-up settings, and email sender settings. |
+| **Admin** | Everything a member can do, plus member invites and removals, custom domains, homepage and incoming secrets, domain branding, privacy defaults, and Secret Activity. |
+| **Member** | Creating secrets, viewing receipts, API access, and longer default expiration. |
 
-Organization settings are reachable only by owners and admins. A member uses the
+Organization settings open only for owners and admins. A member uses the
 organization's shared resources but does not administer them.
 
-## Plan and role, together
+## When a feature is unavailable
 
-Your effective permissions are the **intersection** of two sets: what your
-organization's plan grants, and what your role's template allows.
+There are two reasons, and the app tells them apart:
 
-- Your permissions can never exceed your organization's plan.
-- Your permissions can never exceed your role.
+- **The plan does not include it.** An owner or admin sees an upgrade prompt.
+  Changing the plan fixes this; see
+  [Managing your subscription](/en/billing/managing-your-subscription).
+- **Your role does not allow it.** The control is hidden or disabled, or you
+  are told it is for owners and admins. Upgrading does not change this; ask the
+  owner to change your role.
 
-Both refusals look similar from the outside but mean different things, and the app
-distinguishes them. [Secret Activity](/en/organizations/audit-trail) is the
-clearest example: an owner or admin whose plan does not include it is shown an
-upgrade prompt, while a member of an organization whose plan *does* include it is
-told the tab is for owners and admins. Upgrading fixes the first. Only a role
-change fixes the second.
-
-Authorization is always read from your **membership**, never from the organization
-alone — checking the organization alone would over-grant to members.
+[Secret Activity](/en/organizations/audit-trail) shows both: an admin on a plan
+without it sees an upgrade prompt, and a member on a plan that includes it is
+told the tab is for owners and admins.
 
 :::note
-What your organization's plan includes is shown in the app under **Plan Features**,
-in your organization's settings. That panel is the authoritative answer for your
-organization; see [How plans work](/en/billing).
+Your organization's settings list what its plan includes under **Plan
+Features**. That list is the answer for your organization; see
+[How plans work](/en/billing).
 :::
 
 ## Who can change what
 
-Member management is limited to owners and admins, but the limits are finer than
-that:
-
-- **Changing someone's role** is an owner-level action. The role-change screen
-  accepts only **member** and **admin** — you cannot promote someone to owner
-  there, and you cannot change an owner's role there. See
+- **Changing roles.** Only the owner can change someone's role, and only
+  between Member and Admin. Nobody can be made owner this way, and the owner's
+  role cannot be changed; see
   [Ownership and transfer](/en/organizations/ownership-and-transfer).
-- **Inviting people** is role-bearing: you invite someone as a member or as an
-  admin, never as an owner.
-- **Removing people** follows the hierarchy. An admin can remove members but not
-  other admins. A member can remove nobody. An owner cannot be removed at all,
-  and nobody can remove themselves through the member list.
-- **The last owner cannot be demoted.** An organization always has an owner.
+- **Inviting.** Owners and admins invite people as members or admins, never as
+  owners. Identity Plus offers the Member role only; see
+  [Inviting members](/en/organizations/inviting-members).
+- **Removing.** The owner can remove admins and members. An admin can remove
+  members but not other admins. A member can remove nobody. Nobody can remove
+  the owner, or themselves.
 
-## Memberships scoped to one domain
+## Memberships limited to one domain
 
-A membership can be limited to a single [custom domain](/en/custom-domains) rather
-than the whole organization. This happens when someone joins through
-[SSO](/en/organizations/sso) on that domain. A domain-scoped member works within
-that domain and is barred from member management, whatever their role otherwise
-allows.
+A membership can be limited to a single [custom domain](/en/custom-domains)
+rather than the whole organization. This happens when someone joins by signing
+in through [SSO](/en/organizations/sso) on that domain. A member limited to one
+domain works within that domain and cannot invite or remove anyone, whatever
+their role.
 
-## Member limits
+## Member counts
 
-Organizations have a limit on how many members they can hold, counted per role and
-in total. **Pending invitations occupy a place against that limit** — an invitation
-you sent but nobody accepted still counts. The app shows your current usage against
-your limit on the Members tab, and tells you when you have reached it.
-
-The app counts *members*, not seats.
+Paid plans do not set a fixed limit on the number of members. The Members tab
+shows how many members and pending invitations the organization has.
 
 :::note
-**Self-hosting this yourself?** When billing is disabled — the usual standalone
-configuration — the plan half of the rule is not in play and every capability is
-granted; roles still apply. See [Self-hosting](/en/self-hosting).
+**Self-hosting this yourself?** When billing is disabled, the usual standalone
+configuration, every feature is treated as included in the plan; roles still
+apply. See [Self-hosting](/en/self-hosting).
 :::
 
 ## Related
@@ -95,7 +82,7 @@ granted; roles still apply. See [Self-hosting](/en/self-hosting).
 - [Organizations](/en/organizations) — what an organization is and who administers it.
 - [Inviting members](/en/organizations/inviting-members) — adding people to your organization.
 - [Ownership and transfer](/en/organizations/ownership-and-transfer) — who the owner is, and how ownership moves.
-- [How plans work](/en/billing) — where the plan half of the rule comes from.
+- [How plans work](/en/billing) — what a plan applies to and how to read yours.
 
 ## Questions or Need Support?
 

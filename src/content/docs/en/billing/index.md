@@ -9,8 +9,8 @@ sourceOfTruth: onetimesecret/lib/onetime/models/organization/features/with_plan_
 ## A plan belongs to your organization
 
 Not to your account. Every signed-in account belongs to an
-[organization](/en/organizations) — often one that was created for you and holds
-only you — and the plan is a property of that organization.
+[organization](/en/organizations), often one that was created for you with you
+as its only member, and the plan belongs to that organization.
 
 Two consequences worth knowing:
 
@@ -21,7 +21,7 @@ Two consequences worth knowing:
 ## What your plan includes
 
 The app shows this directly. In your organization's settings, the **Plan Features**
-panel lists what the organization's plan carries, in plain names rather than
+panel lists what the organization's plan includes, in plain names rather than
 internal identifiers.
 
 That panel is the authoritative answer for your organization. The
@@ -32,9 +32,9 @@ your account specifically.
 
 ## Your role decides how much of it reaches you
 
-Being on a plan that includes something is not enough on its own — your
-[role in the organization](/en/organizations/roles-and-permissions) has to carry it
-too. Your effective permissions are the intersection of the two.
+Being on a plan that includes something is not enough on its own: your
+[role in the organization](/en/organizations/roles-and-permissions) has to allow
+it too.
 
 This is why a member of an organization on the top plan can still be told a screen
 is for owners and admins. The plan is not the problem in that case, and upgrading
@@ -42,18 +42,18 @@ will not change it.
 
 ## Changing plans
 
-Only an organization's **owner** can manage its subscription. See
-[Managing your subscription](/en/billing/managing-your-subscription).
+Only an organization's **owner** can start, change or cancel its subscription.
+See [Managing your subscription](/en/billing/managing-your-subscription).
 
 :::note
 **Self-hosting this yourself?** Billing is off by default on a standalone instance,
-and when it is off every capability is granted — there is no plan to be on and no
-subscription screen. Roles still apply. See [Self-hosting](/en/self-hosting).
+and when it is off every feature is available. There is no plan to be on and no
+subscription page. Roles still apply. See [Self-hosting](/en/self-hosting).
 :::
 
 ## Related
 
-- [Managing your subscription](/en/billing/managing-your-subscription) — where the subscription lives and who can change it.
+- [Managing your subscription](/en/billing/managing-your-subscription) — starting, changing and cancelling a plan.
 - [Roles and permissions](/en/organizations/roles-and-permissions) — the other half of what you can do.
 - [Plans and pricing](/en/pricing) · [Compare plans](/en/pricing/compare-plans) — what the plans are sold as.
 
