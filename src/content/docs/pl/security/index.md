@@ -18,7 +18,7 @@ znaleźć szczegóły.
 - **Ochrona frazą dostępową.** Możesz wymagać frazy dostępowej do wyświetlenia sekretu,
   dodając warstwę ochrony, której sam link nie odblokuje.
 - **Ograniczone w czasie z założenia.** Każdy sekret ma termin wygaśnięcia; wybieraj najkrótszy
-  praktyczny czas życia, aby zminimalizować ryzyko ujawnienia.
+  praktyczny czas w󠄁a󠄁żn󠄁o󠄁ś󠄁ci, aby zminimalizować ryzyko ujawnienia.
 - **Zniszcz przed odczytaniem.** Jeśli sekret nie został jeszcze wyświetlony, możesz go zniszczyć,
   aby nikt nigdy go nie odczytał.
 - **Minimalizacja danych.** Staramy się zbierać i przechowywać tylko to, co niezbędne —

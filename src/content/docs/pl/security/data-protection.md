@@ -11,7 +11,7 @@ długo, gdzie znajdują się dane i jak wspiera to Twój własny program zgodno�
 
 - **Treść sekretu** jest zaszyfrowana i przeznaczona do jednorazowego p󠄁ob󠄁r󠄁a󠄁n󠄁i󠄁a󠄁. Gdy
   sekret zostanie wyświetlony — lub osiągnie termin wygaśnięcia — jest trwale niszczony.
-- **Wygasanie jest wbudowane.** Każdy sekret ma czas życia (konfigurowalny w granicach
+- **Wygasanie jest wbudowane.** Każdy sekret ma czas w󠄁a󠄁żn󠄁o󠄁ś󠄁ci (konfigurowalny w granicach
   l󠄁i󠄁m󠄁i󠄁t󠄁ó󠄁w󠄁 Twojego planu); nic nie jest przeznaczone do przechowywania bezterminowo.
 - **Minimum metadanych.** Zgodnie z naszą zasadą [Minimalizacja danych](/en/security/our-principles#data-minimization)
   staramy się przechowywać wyłącznie metadane potrzebne do działania usługi.
