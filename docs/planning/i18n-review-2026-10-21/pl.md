@@ -180,3 +180,40 @@ These labels match the shipped pl strings: Domeny, Zarządzaj, Funkcje, Zarządz
 
 - Polish heading slugs suggested for the anchored links (custom-domains/index:54, setup-guide:11,35) were derived by hand using github-slugger rules. No build was run to confirm them.
 - `Manage` next to the domain: I did not open DomainsTableActionsCell.vue to see which key it renders. Both candidate keys (`web.COMMON.manage`, `web.domains.detail.manage`) are «Zarządzaj» in pl.
+
+## Resolution (fix round, 2026-10-21)
+
+All 37 findings were addressed: 36 as reported (some with different wording, listed below) and 1 in part. The `[new, pl sidebar]` general issue was also fixed. Shipped labels were checked against app main 145c1e7cfa (`locales/content/pl/workspace-branding.json`, `00-common.json`; SimpleBrandPanel.vue:82-86 and :218, DeliveryPanel.vue:73,81,96, BrandLogoField.vue:71, BrandFaviconField.vue:85, SecretReceiptTableItem.vue:152). The `pnpm build` output confirms the Polish anchors `#przenoszenie-domeny-niestandardowej`, `#co-obejmuje-każdy-plan` and `#gdzie-obsługiwana-jest-twoja-domena`, which resolves the first "Not checked" item.
+
+| Commit | Subject |
+|---|---|
+| 78f73dfd | docs(i18n/pl): match branding labels to the shipped app |
+| c9ec457a | docs(i18n/pl): match receipt status labels to the shipped app |
+| 3134af67 | docs(i18n/pl): correct mistranslations in setup-guide and index |
+| ea3bc06b | docs(i18n/pl): use consistent terms for lifetime, reveal and page names |
+| 16e7463e | docs(i18n/pl): link to Polish pages that exist |
+| cf075358 | docs(i18n/pl): fix fluency and typography |
+| 1522a71f | docs(i18n/pl): align sidebar labels with page titles |
+| f8b723ca | docs(i18n/pl): reword the data-protection support heading |
+
+Fixes that use different wording from the suggestion:
+
+- custom-domains/setup-guide.md:75: «Informacyjnie, oto cele…» instead of «Poglądowo». "Poglądowo" means "for illustration", but the table lists the actual targets.
+- custom-domains/branding.md:46: «Bez własnego favicona». The shipped app uses the masculine genitive «favicona» (`web.branding.refresh_favicon_queued` «…favicona…», `refresh_favicon_user_upload_hint` «…własny favicon…»), not «faviconu». Line 49 «Aby użyć własnej,» was changed to «własnego,» under the same agreement finding.
+- share/index.md:36: «o długości i zestawach znaków». This keeps the English plural "character sets".
+- pricing/index.md:74: «zgłaszaj w serwisie [GitHub](…/issues)», the reviewer's first option. It avoids repeating «zgłoszenie» from the next sentence.
+- src/content/i18n/pl.json: added `sharingSecrets` «Udostępnianie sekretów», `shareASecret` «Udostępnij sekret», `whatCustomDomainsDo` «Do czego służą domeny niestandardowe», `plansAndPricing` «Plany i cennik», `aboutSelfHosting` «O self-hostingu», `apiAndSdks` «API i SDK» and `ourApproachToSecurity` «Nasze podejście do bezpieczeństwa». Changed `selfHosting` to «Self-hosting», `whyUseSecretLinks` to «Dlaczego warto używać linków do sekretów» and `brandGuide` to «Branding» (the English sidebar label is "Branding", not the page title).
+
+### Skipped findings
+
+| Page:line | Finding | Reason |
+|---|---|---|
+| security/data-protection.md:56 | Use the shared heading «Masz pytania lub potrzebujesz pomocy?» | Partly fixed. The page now has «## Pytania i pomoc», which removes the noun/clause mix and uses «pomoc», but it differs from the other three pages. Every heading ending in «pomocy?» fails `tools/dogfood.py check --base b2883096`. The `correspondence()` moved-block rule pairs the AI-written «y» with the single legacy «y» removed from «życia» on line 14 and reports "marked unchanged legacy text". HEAD-based checks pass at every step. |
+
+### Decisions needed
+
+- TextProv (`tools/dogfood.py` `correspondence()`): when exactly one unmatched old block and one unmatched new block have the same text (here a single «y» on lines 14 and 56), they are treated as moved text. Across separate commits this produces false "marked unchanged legacy text" failures that edits from HEAD cannot fix. If the rule is narrowed, for example to blocks longer than one cluster, data-protection.md:56 can use «Masz pytania lub potrzebujesz pomocy?» like the other pages.
+- App pl glossary: reveal is split in the shipped app. `web.STATUS.revealed` «Wyświetlony» and `web.COMMON.click_to_continue` «Kliknij, aby wyświetlić →» use «wyświetl-»; `web.branding.delivery_reveal_instructions` / `delivery_before_reveal` / `delivery_after_reveal` use «ujawni-». The docs prose follows «wyświetl-» and quotes the Delivery labels exactly. If the app standardises on one stem, branding.md:4,70,77-78 and custom-domains/index.md:27 must follow.
+- Docs glossary candidates (pl glossary.md, not edited): secret lifetime → «czas ważności» (DNS TTL stays «czas życia (TTL)»); favicon → masculine «favicon», genitive «favicona»; the reveal confirmation page → «strona pośrednia» (keeps «potwierdzenie» for the receipt only).
+- English source, security/best-practices.md:16: "if one secret is compromised, the entire set of information remains protected" overstates the protection. pl:15 reproduces it; fix the English first, then re-sync.
+- Known English issues inherited by pl, left unchanged until the English is fixed: pricing/index.md "Self-Hosting Guide" link text (es-2), index.mdoc "Configuration and upgrades" (pt-br-2), share/index.md empty-submission trailing period (da-2), self-hosting/index.md "one generated secret" (de-1), branding.md SVG statement (it-1), and the passphrase-as-encryption contradiction (fr-2).
