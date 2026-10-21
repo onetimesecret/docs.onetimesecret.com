@@ -8,7 +8,7 @@ description: "Aggiungi un dominio personalizzato alla tua organizzazione, crea i
 
 - I󠄁l󠄁 p󠄁iano della tua o󠄁rga󠄁n󠄁i󠄁z󠄁z󠄁a󠄁z󠄁ione i󠄁nc󠄁l󠄁u󠄁d󠄁e un dominio personalizzato.󠄁 F󠄁ree ne inc󠄁l󠄁u󠄁d󠄁e󠄁
   u󠄁n󠄁o󠄁;󠄁 I󠄁d󠄁e󠄁n󠄁t󠄁i󠄁t󠄁y󠄁 P󠄁l󠄁u󠄁s e T󠄁e󠄁am󠄁 P󠄁lu󠄁s󠄁 n󠄁o󠄁n󠄁 h󠄁a󠄁n󠄁n󠄁o󠄁 u󠄁n󠄁 li󠄁m󠄁i󠄁te fisso.󠄁 V󠄁edi
-  [Domini personalizzati](/en/custom-domains#what-each-plan-includes).
+  [Domini personalizzati](/it/custom-domains#cosa-include-ogni-piano).
 - S󠄁e󠄁i󠄁 i󠄁l󠄁 **pr󠄁o󠄁p󠄁r󠄁i󠄁e󠄁t󠄁a󠄁r󠄁i󠄁o󠄁** o󠄁 u󠄁n **am󠄁m󠄁i󠄁n󠄁istr󠄁at󠄁o󠄁r󠄁e󠄁** del󠄁l󠄁'󠄁o󠄁r󠄁g󠄁a󠄁n󠄁iz󠄁z󠄁a󠄁z󠄁i󠄁o󠄁n󠄁e󠄁.󠄁
 - P󠄁u󠄁o󠄁i󠄁 c󠄁r󠄁e󠄁a󠄁r󠄁e󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁 D󠄁N󠄁S󠄁 p󠄁e󠄁r󠄁 i󠄁l󠄁 dominio󠄁 pr󠄁esso il󠄁 t󠄁u󠄁o󠄁 reg󠄁is󠄁t󠄁r󠄁a󠄁r o pro󠄁v󠄁i󠄁d󠄁e󠄁r󠄁 D󠄁N󠄁S󠄁.󠄁
 - H󠄁a󠄁i󠄁 d󠄁e󠄁c󠄁i󠄁s󠄁o󠄁 q󠄁u󠄁a󠄁l󠄁e󠄁 i󠄁n󠄁d󠄁i󠄁r󠄁i󠄁z󠄁z󠄁o󠄁 u󠄁s󠄁a󠄁r󠄁e󠄁.󠄁 È󠄁 c󠄁o󠄁n󠄁s󠄁i󠄁g󠄁l󠄁i󠄁a󠄁t󠄁o󠄁 u󠄁n󠄁 s󠄁o󠄁t󠄁t󠄁o󠄁d󠄁o󠄁m󠄁i󠄁n󠄁io c󠄁o󠄁m󠄁e󠄁
@@ -31,7 +31,7 @@ description: "Aggiungi un dominio personalizzato alla tua organizzazione, crea i
 I󠄁l󠄁 d󠄁o󠄁m󠄁i󠄁n󠄁i󠄁o󠄁 v󠄁i󠄁e󠄁n󠄁e󠄁 a󠄁g󠄁g󠄁i󠄁u󠄁n󠄁t󠄁o󠄁 a󠄁l󠄁l󠄁'󠄁o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁z󠄁a󠄁z󠄁i󠄁o󠄁n󠄁e󠄁 e󠄁 l󠄁a󠄁 s󠄁c󠄁h󠄁e󠄁r󠄁m󠄁a󠄁t󠄁a󠄁 s󠄁u󠄁c󠄁c󠄁e󠄁s󠄁s󠄁i󠄁v󠄁a󠄁 e󠄁l󠄁e󠄁n󠄁c󠄁a󠄁 i󠄁 d󠄁u󠄁e󠄁
 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁 D󠄁N󠄁S󠄁 d󠄁a󠄁 c󠄁r󠄁e󠄁a󠄁r󠄁e󠄁.󠄁 N󠄁o󠄁n󠄁 c󠄁'󠄁è󠄁 a󠄁l󠄁c󠄁u󠄁n󠄁a󠄁 s󠄁c󠄁e󠄁l󠄁t󠄁a󠄁 d󠄁e󠄁l󠄁l󠄁a󠄁 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁e󠄁:󠄁 i󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁 p󠄁u󠄁n󠄁t󠄁a󠄁n󠄁o󠄁 a󠄁l󠄁 s󠄁i󠄁t󠄁o󠄁
 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁a󠄁l󠄁e󠄁 u󠄁s󠄁a󠄁t󠄁o󠄁 d󠄁a󠄁l󠄁l󠄁a󠄁 t󠄁u󠄁a󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁z󠄁a󠄁z󠄁i󠄁o󠄁n󠄁e󠄁.󠄁 V󠄁e󠄁d󠄁i󠄁
-[D󠄁o󠄁v󠄁e󠄁 v󠄁i󠄁e󠄁n󠄁e󠄁 s󠄁e󠄁r󠄁v󠄁i󠄁t󠄁o󠄁 i󠄁l󠄁 t󠄁u󠄁o󠄁 d󠄁o󠄁m󠄁i󠄁n󠄁i󠄁o󠄁](/en/custom-domains#where-your-domain-is-served).󠄁
+[D󠄁o󠄁v󠄁e󠄁 v󠄁i󠄁e󠄁n󠄁e󠄁 s󠄁e󠄁r󠄁v󠄁i󠄁t󠄁o󠄁 i󠄁l󠄁 t󠄁u󠄁o󠄁 d󠄁o󠄁m󠄁i󠄁n󠄁i󠄁o󠄁](/it/custom-domains#dove-viene-servito-il-tuo-dominio).󠄁
 
 ## C󠄁r󠄁e󠄁a󠄁 i󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁 D󠄁N󠄁S󠄁
 
@@ -90,7 +90,7 @@ r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁 T󠄁X󠄁T󠄁 d󠄁i󠄁 p󠄁r󠄁o󠄁p󠄁r�
    o󠄁p󠄁p󠄁u󠄁r󠄁e󠄁 s󠄁e󠄁l󠄁e󠄁z󠄁i󠄁o󠄁n󠄁a󠄁 l󠄁o󠄁 s󠄁t󠄁a󠄁t󠄁o󠄁 d󠄁e󠄁l󠄁 dominio. N󠄁e󠄁l󠄁l󠄁a󠄁 p󠄁a󠄁g󠄁i󠄁n󠄁a󠄁 d󠄁i󠄁 v󠄁eri󠄁f󠄁i󠄁c󠄁a󠄁,󠄁 s󠄁c󠄁e󠄁g󠄁l󠄁i󠄁
    **V󠄁e󠄁r󠄁i󠄁f󠄁i󠄁c󠄁a󠄁 d󠄁o󠄁m󠄁i󠄁n󠄁i󠄁o󠄁**.󠄁 I󠄁l󠄁 p󠄁u󠄁l󠄁s󠄁a󠄁n󠄁t󠄁e󠄁 p󠄁u󠄁ò󠄁 e󠄁s󠄁s󠄁e󠄁r󠄁e󠄁 u󠄁s󠄁a󠄁t󠄁o󠄁 d󠄁i󠄁 n󠄁u󠄁o󠄁v󠄁o󠄁 d󠄁o󠄁p󠄁o󠄁 u󠄁n󠄁a󠄁 b󠄁r󠄁e󠄁v󠄁e󠄁 p󠄁a󠄁u󠄁s󠄁a󠄁.󠄁
 2. I󠄁l󠄁 s󠄁e󠄁r󠄁v󠄁i󠄁z󠄁i󠄁o󠄁 r󠄁i󠄁c󠄁o󠄁n󠄁t󠄁r󠄁o󠄁l󠄁l󠄁a󠄁 i domini a󠄁n󠄁c󠄁h󠄁e i󠄁n󠄁 b󠄁a󠄁ck󠄁g󠄁r󠄁o󠄁u󠄁n󠄁d,󠄁 q󠄁u󠄁i󠄁n󠄁d󠄁i󠄁 l󠄁a󠄁 v󠄁eri󠄁f󠄁i󠄁c󠄁a󠄁 p󠄁u󠄁ò󠄁
-   c󠄁o󠄁m󠄁p󠄁l󠄁et󠄁ar󠄁s󠄁i󠄁 s󠄁e󠄁n󠄁z󠄁a󠄁 c󠄁h󠄁e󠄁 t󠄁u󠄁 p󠄁r󠄁e󠄁m󠄁i󠄁 i󠄁l pu󠄁l󠄁s󠄁ante.󠄁 L󠄁e󠄁 modifich󠄁e󠄁 D󠄁N󠄁S󠄁 s󠄁p󠄁e󠄁s󠄁s󠄁o󠄁 h󠄁an󠄁n󠄁o󠄁 e󠄁f󠄁f󠄁e󠄁tt󠄁o󠄁
+   c󠄁o󠄁m󠄁p󠄁l󠄁et󠄁ar󠄁s󠄁i󠄁 s󠄁e󠄁n󠄁z󠄁a󠄁 c󠄁h󠄁e󠄁 t󠄁u󠄁 p󠄁r󠄁e󠄁m󠄁a󠄁 i󠄁l pu󠄁l󠄁s󠄁ante.󠄁 L󠄁e󠄁 modifich󠄁e󠄁 D󠄁N󠄁S󠄁 s󠄁p󠄁e󠄁s󠄁s󠄁o󠄁 h󠄁an󠄁n󠄁o󠄁 e󠄁f󠄁f󠄁e󠄁tt󠄁o󠄁
    i󠄁n󠄁 p󠄁o󠄁c󠄁h󠄁i󠄁 m󠄁i󠄁n󠄁u󠄁t󠄁i󠄁,󠄁 m󠄁a󠄁 p󠄁o󠄁s󠄁s󠄁o󠄁n󠄁o󠄁 r󠄁i󠄁c󠄁h󠄁i󠄁e󠄁d󠄁e󠄁r󠄁e un g󠄁i󠄁orn󠄁o o󠄁 p󠄁iù󠄁, a seconda del tu󠄁o provider
    DNS e d󠄁el tem󠄁p󠄁o󠄁 d󠄁i v󠄁ita (󠄁T󠄁T󠄁L󠄁)󠄁 dei record.󠄁
 
@@ -124,7 +124,7 @@ D󠄁o󠄁p󠄁o󠄁 l󠄁'󠄁es󠄁ecu󠄁z󠄁i󠄁o󠄁n󠄁e d󠄁i u󠄁n�
 
 ## Us󠄁a󠄁 il dominio
 
-Q󠄁u󠄁a󠄁n󠄁d󠄁o󠄁 c󠄁r󠄁ei󠄁 u󠄁n󠄁 s󠄁e󠄁g󠄁re󠄁t󠄁o󠄁 c󠄁on ac󠄁c󠄁e󠄁s󠄁s󠄁o󠄁 e󠄁f󠄁f󠄁e󠄁t󠄁t󠄁u󠄁ato,󠄁 s󠄁c󠄁e󠄁g󠄁l󠄁i󠄁 i󠄁l󠄁 d󠄁o󠄁m󠄁i󠄁ni󠄁o s󠄁o󠄁t󠄁t󠄁o󠄁 c󠄁u󠄁i󠄁 lo󠄁 s󠄁tai󠄁
+Q󠄁u󠄁a󠄁n󠄁d󠄁o󠄁 c󠄁r󠄁ei󠄁 u󠄁n󠄁 s󠄁e󠄁g󠄁re󠄁t󠄁o󠄁 d󠄁op󠄁o󠄁 av󠄁e󠄁r󠄁 e󠄁f󠄁f󠄁e󠄁t󠄁t󠄁u󠄁ato l󠄁'󠄁a󠄁c󠄁c󠄁e󠄁s󠄁s󠄁o󠄁,󠄁 s󠄁c󠄁e󠄁g󠄁l󠄁i󠄁 i󠄁l󠄁 d󠄁o󠄁m󠄁i󠄁ni󠄁o s󠄁o󠄁t󠄁t󠄁o󠄁 c󠄁u󠄁i󠄁 lo󠄁 s󠄁tai󠄁
 c󠄁r󠄁e󠄁an󠄁d󠄁o󠄁.󠄁 I󠄁l󠄁 link segreto󠄁 us󠄁e󠄁r󠄁à󠄁 c󠄁o󠄁s󠄁ì󠄁 il t󠄁u󠄁o dominio,󠄁 ad esempio
 `https://secrets.example.com/secret/abc123`.
 

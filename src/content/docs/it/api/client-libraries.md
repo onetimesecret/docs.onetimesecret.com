@@ -34,7 +34,7 @@ s󠄁e󠄁l󠄁f󠄁-󠄁h󠄁o󠄁s󠄁t󠄁e󠄁d󠄁 p󠄁r󠄁i󠄁m󠄁a�
 
 [Pagina GitH󠄁ub onetime-ruby](https://github.com/onetimesecret/onetime-ruby)
 di [Delano](https://delanotes.com/) —󠄁 **c󠄁l󠄁i󠄁e󠄁n󠄁t󠄁 u󠄁f󠄁f󠄁i󠄁c󠄁i󠄁a󠄁l󠄁e󠄁**,󠄁 m󠄁a󠄁n󠄁t󠄁e󠄁n󠄁u󠄁t󠄁o󠄁 a󠄁t󠄁t󠄁i󠄁v󠄁a󠄁m󠄁e󠄁n󠄁t󠄁e󠄁
-(u󠄁l󠄁t󠄁i󠄁m󠄁o󠄁 c󠄁o󠄁m󠄁m󠄁i󠄁t󠄁 2󠄁0󠄁2󠄁6󠄁-󠄁0󠄁6󠄁)󠄁.󠄁 S󠄁u󠄁p󠄁p󠄁o󠄁r󠄁t󠄁a l󠄁e󠄁 A󠄁P󠄁I󠄁 v󠄁1󠄁 (󠄁d󠄁e󠄁p󠄁r󠄁e󠄁c󠄁a󠄁t󠄁a󠄁)󠄁 e󠄁 v󠄁2󠄁,󠄁 i󠄁 d󠄁o󠄁m󠄁i󠄁n󠄁i󠄁 r󠄁e󠄁gional󠄁i󠄁
+(u󠄁l󠄁t󠄁i󠄁m󠄁o󠄁 c󠄁o󠄁m󠄁m󠄁i󠄁t󠄁 2󠄁0󠄁2󠄁6󠄁-󠄁0󠄁6󠄁)󠄁.󠄁 S󠄁u󠄁p󠄁p󠄁o󠄁r󠄁t󠄁a l󠄁'󠄁A󠄁P󠄁I󠄁 v󠄁1󠄁 (󠄁d󠄁e󠄁p󠄁r󠄁e󠄁c󠄁a󠄁t󠄁a󠄁)󠄁 e󠄁 l󠄁'󠄁A󠄁P󠄁I󠄁 v󠄁2󠄁,󠄁 i󠄁 d󠄁o󠄁m󠄁i󠄁n󠄁i󠄁 r󠄁e󠄁gional󠄁i󠄁
 e󠄁 g󠄁l󠄁i󠄁 U󠄁R󠄁L󠄁 d󠄁i󠄁 b󠄁a󠄁s󠄁e󠄁 p󠄁e󠄁r󠄁s󠄁o󠄁n󠄁a󠄁l󠄁i󠄁z󠄁z󠄁a󠄁ti.󠄁 R󠄁i󠄁c󠄁h󠄁i󠄁e󠄁d󠄁e󠄁 R󠄁u󠄁b󠄁y󠄁 3󠄁.󠄁1󠄁+󠄁,󠄁 n󠄁e󠄁s󠄁s󠄁u󠄁n󠄁a󠄁 d󠄁i󠄁p󠄁e󠄁n󠄁d󠄁e󠄁n󠄁z󠄁a󠄁 a󠄁 r󠄁u󠄁n󠄁t󠄁i󠄁m󠄁e󠄁.󠄁
 
 ### Esempio di u󠄁tilizzo
