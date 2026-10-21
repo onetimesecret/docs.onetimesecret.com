@@ -80,6 +80,14 @@ Use standard Markdown in `.md` files and Markdoc syntax in `.mdoc` files. Custom
 - `cardgrid` — Groups cards; accepts an optional Boolean `stagger`.
 - `globe` — Self-closing regional globe icon; requires `name`, with optional `size` and `label`.
 
+### Screenshots
+
+- Store screenshots in `src/assets/screenshots/{topic}/` with matching `-light` and `-dark` variants.
+- Capture lossless PNG or WebP when the tool supports it. Crop surrounding whitespace without changing the UI or example content.
+- Keep a `README.md` beside the assets recording the capture date, instance, application version (or explicitly unknown), viewport, crop, and regeneration steps. Never record usable secret links or passphrases.
+- Use fictional example content, descriptive alt text, and captions. In Markdown pages, use `figure.screenshot` with `screenshot-light` / `screenshot-dark` wrappers alongside Starlight's theme visibility classes; the shared styles add borders, captions, and light images for printing.
+- Keep raw HTML captions as plain text; Markdown formatting is not parsed inside `<figcaption>`.
+
 ### Terms and Phrases to Avoid
 
 Do not use these terms or sentence structures in authored prose:

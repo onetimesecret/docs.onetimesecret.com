@@ -12,7 +12,9 @@ it once and deletes the stored secret.
 
 This page walks through what a recipient actually experiences, in order. It is
 worth reading before you send a link too — this is what the person on the other
-end will meet. The screenshots use a fictional guest Wi-Fi password.
+end will meet. The screenshots show the hosted service at ca.onetimesecret.com
+with a fictional guest Wi-Fi password. A custom domain may use different
+branding and instructions.
 
 ## What arrives
 
@@ -20,9 +22,9 @@ Most links are passed along by the sender directly: a chat message, a ticket, a
 phone call. Onetime Secret does not have to be involved in delivery at all.
 
 If the sender used the built-in email option, you receive a message from
-Onetime Secret that carries the **link only, never the content**. It names the
+Onetime Secret with the **link only, never the content**. It names the
 sender's email address in the subject line, tells you the link works only once,
-and — if a passphrase is required — says so without carrying the passphrase
+and — if a passphrase is required — says so without including the passphrase
 itself. The sender has to give you that separately.
 
 Two things senders are often surprised by:
@@ -39,20 +41,20 @@ service's default address — see
 
 ## Before you reveal anything
 
-Opening the link does **not** consume the secret. You land on a confirmation
-step: the content stays hidden, and there is a single action — *Click to reveal
-→*. Below it the page says the thing that matters: *Careful: we will only show
-it once.*
+Opening the link does **not** consume the secret. The confirmation page keeps
+the content hidden. Under the *Click to reveal →* heading, a warning says
+*Careful: we will only show it once.* Select the button below the warning when
+you are ready to reveal the content.
 
-<figure>
-<div class="dark:sl-hidden">
+<figure class="screenshot">
+<div class="dark:sl-hidden screenshot-light">
 
-![Confirmation page with a Click to reveal button and a warning that the content is shown once.](../../../../assets/screenshots/recipient-experience/before-reveal-light.jpg)
+![Confirmation page with a Click to reveal button and a warning that the content is shown once.](../../../../assets/screenshots/recipient-experience/before-reveal-light.webp)
 
 </div>
-<div class="light:sl-hidden">
+<div class="light:sl-hidden screenshot-dark">
 
-![Confirmation page with a Click to reveal button and a warning that the content is shown once.](../../../../assets/screenshots/recipient-experience/before-reveal-dark.jpg)
+![Confirmation page with a Click to reveal button and a warning that the content is shown once.](../../../../assets/screenshots/recipient-experience/before-reveal-dark.webp)
 
 </div>
 <figcaption>The content stays hidden until you select Click to reveal.</figcaption>
@@ -79,15 +81,15 @@ When the sender adds a passphrase, the confirmation step asks for it, under the
 heading *This message requires a passphrase*. The page will tell you that much
 without revealing anything else about the secret.
 
-<figure>
-<div class="dark:sl-hidden">
+<figure class="screenshot">
+<div class="dark:sl-hidden screenshot-light">
 
-![Passphrase prompt with an empty entry field above the Click to reveal button.](../../../../assets/screenshots/recipient-experience/passphrase-light.jpg)
+![Passphrase prompt with an empty entry field above the Click to reveal button.](../../../../assets/screenshots/recipient-experience/passphrase-light.webp)
 
 </div>
-<div class="light:sl-hidden">
+<div class="light:sl-hidden screenshot-dark">
 
-![Passphrase prompt with an empty entry field above the Click to reveal button.](../../../../assets/screenshots/recipient-experience/passphrase-dark.jpg)
+![Passphrase prompt with an empty entry field above the Click to reveal button.](../../../../assets/screenshots/recipient-experience/passphrase-dark.webp)
 
 </div>
 <figcaption>If the sender set a passphrase, enter it before revealing the content.</figcaption>
@@ -116,22 +118,22 @@ the sender and not Onetime Secret, can produce it a second time.
 
 Exactly one person ever receives the content. If two people confirm at the same
 moment, exactly one of them receives it; the other gets nothing back, and the
-next attempt lands on the dead-link page.
+next attempt shows the dead-link page.
 
 What you see once it is revealed is the content in a read-only field with a
 copy-to-clipboard action. Put it where it actually belongs — your password
 manager, your configuration, wherever it is going — **before you leave the
 page**.
 
-<figure>
-<div class="dark:sl-hidden">
+<figure class="screenshot">
+<div class="dark:sl-hidden screenshot-light">
 
-![Revealed example guest Wi-Fi password with a Copy to clipboard button.](../../../../assets/screenshots/recipient-experience/revealed-light.jpg)
+![Revealed example guest Wi-Fi password with a Copy to clipboard button.](../../../../assets/screenshots/recipient-experience/revealed-light.webp)
 
 </div>
-<div class="light:sl-hidden">
+<div class="light:sl-hidden screenshot-dark">
 
-![Revealed example guest Wi-Fi password with a Copy to clipboard button.](../../../../assets/screenshots/recipient-experience/revealed-dark.jpg)
+![Revealed example guest Wi-Fi password with a Copy to clipboard button.](../../../../assets/screenshots/recipient-experience/revealed-dark.webp)
 
 </div>
 <figcaption>Copy the content before leaving this page. The password shown here is an example.</figcaption>
@@ -139,9 +141,9 @@ page**.
 
 ## Reloading and reopening
 
-Refreshing brings back nothing. The page in front of you holds the only copy; on
-the server there is no longer anything to serve, so a reload lands on the
-dead-link page. The same link opened later, and the same link opened on another
+Refreshing brings back nothing. The content is now in your browser; on the
+server there is no longer anything to serve, so a reload shows the dead-link
+page. The same link opened later, and the same link opened on another
 device, end the same way — there is nothing left to serve to any of them.
 
 Whatever is still on your screen is in that page, not on the server. Do not
@@ -156,18 +158,18 @@ If you still need the information, ask the sender to create a new secret. See
 
 ## When the link is already gone
 
-On onetimesecret.com a dead link produces one message: *This secret has been
+The default message for an unavailable secret is: *This secret has been
 viewed or expired.*
 
-<figure>
-<div class="dark:sl-hidden">
+<figure class="screenshot">
+<div class="dark:sl-hidden screenshot-light">
 
-![Unavailable-secret page stating This secret has been viewed or expired.](../../../../assets/screenshots/recipient-experience/unavailable-light.jpg)
+![Unavailable-secret page stating This secret has been viewed or expired.](../../../../assets/screenshots/recipient-experience/unavailable-light.webp)
 
 </div>
-<div class="light:sl-hidden">
+<div class="light:sl-hidden screenshot-dark">
 
-![Unavailable-secret page stating This secret has been viewed or expired.](../../../../assets/screenshots/recipient-experience/unavailable-dark.jpg)
+![Unavailable-secret page stating This secret has been viewed or expired.](../../../../assets/screenshots/recipient-experience/unavailable-dark.webp)
 
 </div>
 <figcaption>After a secret has been revealed, opening the same link again shows this message.</figcaption>
@@ -201,7 +203,7 @@ and the behaviour does not.
 - They can replace the default lines before and after the reveal with their own
   instructions. The defaults are *Click the button below to reveal your secure
   message.* and *Your secure message is shown below.*
-- The domain carries a language setting, which decides the page's language
+- The domain has a language setting, which decides the page's language
   unless you have chosen one yourself.
 - The dead-link page is branded too, and its wording is the domain's own — not
   the sentence quoted above. It still covers all four dead-link cases without
@@ -213,8 +215,8 @@ in the footer.
 
 ## What the sender learns about you
 
-The sender holds a **receipt** — a separate page at a different URL, which never
-carries a secret they typed. (If they asked the service to generate a password
+The sender has a **receipt** — a separate page at a different URL, which never
+includes a secret they typed. (If they asked the service to generate a password
 instead of typing one, the receipt shows them that generated value once, before
 anyone reveals it; [Your receipt](/en/share/your-receipt) owns that behaviour.)
 From the receipt they can see:
@@ -234,14 +236,14 @@ reveal does.
 
 One qualification, and it is the one that can identify you. If the secret was
 created inside an organization, that organization keeps its own activity record,
-and it holds more than the receipt does.
+and it records more than the receipt does.
 
-Some of what it holds is network context: a masked partial IP address, a
+That record includes network context: a masked partial IP address, a
 shortened user-agent string, and an opaque correlation token. The full IP address
 and the full user-agent string are never stored.
 
 The rest is **who acted**. Every entry — each fetch of the link, and the reveal
-itself — carries an actor label. The two that can describe a recipient are
+itself — has an actor label. The two that can describe a recipient are
 *anonymous* and *another signed-in account*.
 [Audit trail](/en/organizations/audit-trail) lists the full set.
 
