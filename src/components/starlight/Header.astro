@@ -207,6 +207,10 @@ const isDocsHome = !hasSidebar && trim(Astro.url.pathname) === trim(docsHome);
   /* 50rem is Starlight's drawer breakpoint. Below it the drawer's section card
      (SectionCard.astro) takes over, so the two never show at the same time. */
   @media (min-width: 50rem) {
+    /* The mobile-only wrapper must not create an empty second grid row. */
+    ots-section-menu {
+      display: none;
+    }
     .nav-links {
       display: flex;
     }
