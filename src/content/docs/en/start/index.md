@@ -27,7 +27,7 @@ Choose a guide for what you want to do next.
 - **[Security best practices](/en/security/best-practices/)** — keep your
   shared secrets safe
 - **[Custom domains](/en/custom-domains/)** — use your own domain for secret
-  sharing, starting with the [setup guide](/en/custom-domains/setup-guide/)
+  sharing, starting with [Setting up a custom domain](/en/custom-domains/setup-guide/)
 - **[Glossary](/en/start/glossary/)** — definitions of receipt, passphrase,
   organization, and other product terms
 

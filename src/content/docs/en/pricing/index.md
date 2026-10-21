@@ -32,7 +32,7 @@ Secret sharing under your own domain and brand, with members.
 **Features:**
 - Unlimited custom domains
 - Custom branding and email sender
-- Custom privacy defaults and per-domain sign-in settings
+- Per-domain sign-in settings
 - Member invites
 - Secret lifetimes up to 30 days
 - API access
@@ -49,7 +49,6 @@ Secret sharing for teams, with single sign-on and admin roles.
 - Admin role for members
 - Team management and shared dashboard
 - Flexible email From domain
-- Per-domain signup validation
 - Secret Activity, in beta
 
 [See current pricing](https://onetimesecret.com/pricing)

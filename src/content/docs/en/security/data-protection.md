@@ -43,10 +43,9 @@ replace your own controls, policies, and legal review.
   data minimization are designed to help you meet data-protection obligations.
   In most deployments you act as the data controller and Onetime Secret as a
   processor for the limited data involved.
-- **HIPAA.** As noted in our [use cases](/en/custom-domains/#use-cases), Onetime
-  Secret can provide a more secure channel than email for exchanging initial
-  access credentials, but it should be used as a stopgap rather than a permanent
-  system of record for PHI. Pair it with a dedicated compliant system for
+- **HIPAA.** Onetime Secret can provide a more secure channel than email for
+  exchanging initial access credentials, but it should be used as a stopgap
+  rather than a permanent system of record for PHI. Pair it with a dedicated compliant system for
   ongoing PHI workflows.
 - **Certifications, DPAs, and specific frameworks.** For questions about
   certifications, a Data Processing Agreement, or a specific regulatory

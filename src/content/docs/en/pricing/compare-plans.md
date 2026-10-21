@@ -3,7 +3,7 @@ title: Compare plans
 description: Compare our plans for secure secret sharing — expiring links, custom domains, branding, SSO, and team controls across Free, Identity Plus, and Team Plus.
 audience: end-user
 pageType: reference
-sourceOfTruth: billing catalog (billing.yaml, docs snapshot sha256 69a96394920fd1777cf23a9bdedee174648f46b54e13c99a1f27b3cdc0a17501) plans.free_v1, plans.identity_plus_v1 and plans.team_plus_v1 entitlements and limits; onetimesecret at 145c1e7cfa — apps/api/organizations/logic/invitations/create_invitation.rb (member counts are logged, not enforced); apps/api/account/logic/account/get_permissions.rb#compute_assignable_roles (Admin offered only where role_admins_per_org is not 0); lib/onetime/models/organization_membership.rb:81,91 (audit_logs, ip_access_rules and workspace_branding keys; no enforcement code for the last two); commit 2462d9e1b3 (audit_logs granted on team_plus_v1 in the maintained catalog)
+sourceOfTruth: billing catalog (billing.yaml, docs snapshot sha256 69a96394920fd1777cf23a9bdedee174648f46b54e13c99a1f27b3cdc0a17501) plans.free_v1, plans.identity_plus_v1 and plans.team_plus_v1 entitlements and limits; onetimesecret at 145c1e7cfa — apps/api/organizations/logic/invitations/create_invitation.rb (member counts are logged, not enforced); apps/api/account/logic/account/get_permissions.rb#compute_assignable_roles (Admin offered only where role_admins_per_org is not 0); lib/onetime/models/organization_membership.rb:81,91 (audit_logs, ip_access_rules and workspace_branding keys; no enforcement code for the last two); commit 2462d9e1b3 (audit_logs granted on team_plus_v1 in the maintained catalog); src/apps/workspace/domains/DomainDetail.vue:249 (no sign-up settings screen) and src/apps/workspace/components/domains/PrivacyDefaultsModal.vue (not mounted; brand_settings passphrase_required and default_ttl not read when creating secrets)
 ---
 
 ## Feature matrix
@@ -16,12 +16,10 @@ sourceOfTruth: billing catalog (billing.yaml, docs snapshot sha256 69a96394920fd
 | API access | Limited \* | ✅ | ✅ | ✅ |
 | Custom branding (logo, color) | ❌ | ❌ | ✅ | ✅ |
 | Custom email sender | ❌ | ❌ | ✅ | ✅ † |
-| Custom privacy defaults | ❌ | ❌ | ✅ | ✅ |
 | Per-domain sign-in configuration | ❌ | ❌ | ✅ | ✅ |
 | Member invites | ❌ | ❌ | ✅ | ✅ |
 | Admin role for members | ❌ | ❌ | ❌ | ✅ |
 | Members per organization | — | 1 | No fixed limit | No fixed limit |
-| Per-domain signup validation | ❌ | ❌ | ❌ | ✅ |
 | Single sign-on (SSO) | ❌ | ❌ | ❌ | ✅ |
 | Teams and shared dashboard | ❌ | ❌ | ❌ | ✅ |
 | Secret Activity (audit logs) | ❌ | ❌ | ❌ | Beta |
@@ -41,9 +39,12 @@ The [pricing page](https://onetimesecret.com/pricing) shows the Free plan as
 **Basic**, and lists current prices. Accounts on the earlier Identity Plus plan
 see it as **Identity Plus (Early Supporter)**; it is no longer sold.
 
-## Planned for Team Plus
+## Not available yet
 
-These are not available yet:
+These features are listed for the plans shown but cannot be used yet:
 
-- IP-based access rules
-- Workspace branding for sign-in pages and email templates
+- IP-based access rules (Team Plus)
+- Workspace branding for sign-in pages and email templates (Team Plus)
+- Per-domain sign-up validation (Team Plus)
+- Custom privacy defaults for a domain, such as a default expiry or a required
+  passphrase (Identity Plus and Team Plus)

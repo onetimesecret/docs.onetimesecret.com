@@ -3,7 +3,7 @@ title: Roles and permissions
 description: The three organization roles, what each one can do, and why a feature your plan includes can still be unavailable to you.
 audience: end-user
 pageType: concept
-sourceOfTruth: onetimesecret at 145c1e7cfa — lib/onetime/models/organization_membership.rb:72-106 (the three role templates and their nesting); lib/onetime/models/organization_membership/features/with_materialized_entitlements.rb:13-18 (a member gets what both the plan and the role allow); apps/api/organizations/logic/members/update_member_role.rb:29,45,156-191 (owner-only role changes, member and admin only); apps/api/organizations/logic/members/remove_member.rb:160-205 (who can remove whom); apps/api/organizations/logic/invitations/create_invitation.rb (member counts are logged, not enforced)
+sourceOfTruth: onetimesecret at 145c1e7cfa — lib/onetime/models/organization_membership.rb:72-106 (the three role templates and their nesting); apps/api/domains/policies/domain_config_authorization.rb:148-155 and spec/api/domains/domain_scope_enforcement_spec.rb:367 (saving any domain setting needs the owner-only manage_org); lib/onetime/models/organization_membership/features/with_materialized_entitlements.rb:13-18 (a member gets what both the plan and the role allow); apps/api/organizations/logic/members/update_member_role.rb:29,45,156-191 (owner-only role changes, member and admin only); apps/api/organizations/logic/members/remove_member.rb:160-205 (who can remove whom); apps/api/organizations/logic/invitations/create_invitation.rb (member counts are logged, not enforced)
 ---
 
 Every person in an [organization](/en/organizations) has a role. The role
@@ -17,8 +17,8 @@ Each role includes everything the role below it can do.
 
 | Role | What it covers |
 |---|---|
-| **Owner** | Everything an admin can do, plus billing, organization settings, role changes, single sign-on, custom-domain sign-in and sign-up settings, and email sender settings. |
-| **Admin** | Everything a member can do, plus member invites and removals, custom domains, homepage and incoming secrets, domain branding, privacy defaults, and Secret Activity. |
+| **Owner** | Everything an admin can do, plus billing, organization settings, role changes, single sign-on, and every custom-domain setting: branding, homepage, incoming secrets, email sender and sign-in. |
+| **Admin** | Everything a member can do, plus member invites and removals, adding, verifying and removing custom domains, and Secret Activity. Admins can open a domain's settings but cannot save changes. |
 | **Member** | Creating secrets, viewing receipts, API access, and longer default expiration. |
 
 Organization settings open only for owners and admins. A member uses the

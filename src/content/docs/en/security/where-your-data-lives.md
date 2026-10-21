@@ -28,7 +28,7 @@ Choosing the right data center region is crucial for several reasons:
 
 Each region section below includes details on the local regulatory environment and when that region may be relevant to your use case.
 
-To point a custom domain at a region, create a CNAME record from your chosen host (for example `secrets.example.com`) to that region's custom domain CNAME value. Note that the UK region uses an anycast CNAME rather than a region-specific subdomain. See the [Custom Domain Setup Guide](/en/custom-domains/setup-guide) for full instructions.
+To point a custom domain at a region, create a CNAME record from your chosen host (for example `secrets.example.com`) to that region's custom domain CNAME value. Note that the UK region uses an anycast CNAME rather than a region-specific subdomain. See [Setting up a custom domain](/en/custom-domains/setup-guide) for full instructions.
 
 ## Share-nothing architecture
 

@@ -71,7 +71,7 @@ to an organization.
 | Term | Meaning |
 |------|---------|
 | **Custom domain** | A domain you own, such as `secrets.example.com`, configured to use Onetime Secret for sharing. Your secret links use that address. See [Custom domains](/en/custom-domains). |
-| **Incoming Secrets** | A form on your custom domain where other people can send secrets to recipients you configure. Senders do not need an account. See [Incoming Secrets](/en/custom-domains/homepage-and-incoming#incoming-secrets). |
+| **Incoming secrets** | A form on your custom domain where someone without an account sends secret text to one recipient they choose from a list you set. See [Homepage and incoming secrets](/en/custom-domains/homepage-and-incoming#incoming-secrets). |
 | **Region** | A location where the hosted service stores your secrets and account. Regions operate independently; use the regional site where you created your account to sign in. See [Where your data lives](/en/security/where-your-data-lives). |
 | **Hosted service** | The version of Onetime Secret we run and maintain for you, available through [onetimesecret.com](https://onetimesecret.com/) and its regional sites. |
 | **Self-hosted instance** | A copy of Onetime Secret that you or your organization run on infrastructure you manage. The operator is responsible for its configuration, maintenance and updates. See [Hosted or self-hosted?](/en/start/hosted-or-self-hosted). |

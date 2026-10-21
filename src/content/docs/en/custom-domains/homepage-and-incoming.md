@@ -1,85 +1,104 @@
 ---
-title: Homepage and Incoming Secrets
-description: Control whether visitors can create secrets on your branded custom-domain homepage, or use that homepage to collect secrets sent to you.
+title: Homepage and incoming secrets
+description: Choose what visitors see on your custom domain's homepage, and set up a form where people send secret text to a recipient you choose.
 plan: Free
 audience: end-user
 pageType: how-to
-sourceOfTruth: onetimesecret/lib/onetime/models/custom_domain/homepage_config.rb:33-50
+sourceOfTruth: onetimesecret at 145c1e7cfa — lib/onetime/models/custom_domain/homepage_config.rb:31-49,119-120,190-200 (enabled false by default; create or incoming mode; incoming needs an enabled config with a recipient); src/apps/workspace/components/domains/DomainHomepageSelector.vue and locales/content/en/workspace-domains.json (Homepage options, saved on selection); locales/content/en/secret-homepage.json (private landing page text); src/apps/secret/conceal/BrandedHomepage.vue (text-only create form); lib/onetime/models/custom_domain/incoming_config.rb:34-56,141-161,267,282-292 (up to 20 recipients, hashed recipient ids, 7-day expiry, 50-character memo); src/apps/workspace/domains/DomainIncoming.vue:96-117 (recipient and Enable changes saved immediately); apps/api/incoming/logic/create_incoming_secret.rb:55-65,185-213,294-305 (one recipient and one secret per submission, no account, link on the custom domain); apps/api/incoming/routes.txt:22-24 (noauth); apps/api/domains/policies/domain_config_authorization.rb:148-155 (manage_org plus homepage_secrets or incoming_secrets)
 ---
 
-When you set up a [custom domain](/en/custom-domains), the address — for example
-`secrets.yourbrand.com` — has its own homepage. Two settings decide what that
-homepage does: whether it is enabled at all, and which interactive experience it
-offers when it is. The two experiences are the classic secret-creation form
-(**Homepage Secrets**) and the incoming-secrets form (**Incoming Secrets**).
+Every custom domain, such as `secrets.example.com`, has its own homepage. You
+choose what it shows: a private landing page, a form for creating secrets, or
+an incoming-secrets form where people send secret text to you.
 
-You manage both from your **Domain Dashboard** at any time. The settings are
-domain-specific, so each of your custom domains can behave differently.
+These settings are included on every plan. Only the organization's **owner**
+can change them. Each domain has its own settings.
 
-## Homepage Secrets
+## Homepage secrets
 
-**Homepage Secrets** is the setting that controls whether visitors to your
-branded homepage can create and share secrets directly from your interface.
+### Choose what the homepage shows
 
-### Allow public secrets
+1. Open the user menu and choose **Domains**.
+2. Choose **Manage** next to the domain.
+3. Under **Features**, choose **Homepage** and select one of the options below.
 
-On your Domain Dashboard you can configure the visibility of your branded
-homepage. Enabling this feature allows your clients, customers, or team members
-to create and share secrets directly from your branded interface.
+Your choice is saved as soon as you select it.
 
-<img src="/img/docs/custom-domains/guide-brand-admin-5.png" alt="Preview panel showing branded interface" width="400" />
+| Option | What visitors see |
+|---|---|
+| **Private landing page** (the default) | A notice that the service is for internal use, with a prompt to sign in. Secret links you share on the domain still work. |
+| **Secret creation form** | A form where anyone can create a secret link from text, without an account. There is no file upload. |
+| **Incoming secrets form** | The incoming-secrets form described below. Available only after incoming secrets are enabled with at least one recipient. |
 
-### Disable homepage
+If you choose the incoming form and later turn incoming secrets off or remove
+every recipient, the homepage shows the private landing page instead.
 
-If you would rather use your custom domain only for the secret links you
-generate yourself — and not present a public secret-creation page — you can
-disable the homepage entirely.
+## Incoming secrets
 
-<img src="/img/docs/custom-domains/guide-brand-admin-6.png" alt="Homepage disabled view" width="400" />
+Incoming secrets let someone without an account send you secret text, for
+example a client sending credentials during onboarding. You choose the
+recipients by email address. The sender picks one of them for each
+submission.
 
-### Important notes
+### Set up incoming secrets
 
-- Changes process immediately upon saving.
-- Allow up to 5 minutes for CDN cache refresh.
-- Settings are domain-specific.
+1. Open the domain as above and, under **Features**, choose **Configure
+   Incoming Secrets**.
+2. Under **Recipients**, enter an **Email Address** and a **Display Name**,
+   then choose **Add Recipient**. Repeat for up to 20 recipients.
+3. Turn on **Enable**.
 
-## Incoming Secrets
+Each change is saved as soon as you make it. To remove a recipient, choose
+**Remove** next to it.
 
-:::note
-Step-by-step, screenshot-driven setup for Incoming Secrets is not documented yet.
-The behaviour described below is what the product does; the screens are still
-being written up.
-:::
+If **Configure Incoming Secrets** does not appear, incoming secrets are not
+turned on for the service you use.
 
-Most of Onetime Secret is about _sending_ a secret: you create a one-time link
-and share it with someone. **Incoming Secrets** flips that direction. It gives
-you a destination page on your custom domain where other people — customers,
-clients, vendors, or colleagues — can send a secret **to you**, without needing
-an account of their own.
+### Share the form
 
-This is useful whenever you need to _collect_ sensitive information rather than
-distribute it, for example:
+The form is at `/incoming` on your domain, for example
+`https://secrets.example.com/incoming`. To show it on the homepage itself,
+choose **Incoming secrets form** under **Homepage**.
 
-- A client sending you credentials, API keys, or account details during onboarding
-- A customer submitting a document or value you need to handle securely
-- A vendor returning a password or token you provisioned for them
+### What senders do
 
-### How it works (overview)
+1. Open the form. No account is needed.
+2. Under **Send to**, choose a recipient. Senders see display names only, never
+   the recipients' email addresses.
+3. Enter the text under **Secret Information**, and optionally a **Memo** of up
+   to 50 characters.
+4. Choose **Send Secret**.
 
-1. You enable an incoming page for your verified custom domain.
-2. You configure who receives the submitted secrets (a preconfigured list of recipients).
-3. You share the page's address — for example `secrets.yourbrand.com` — with the sender.
-4. The sender writes their secret and submits it; it is encrypted and delivered as a one-time link to your configured recipients.
+The form accepts text only; it does not accept files. The service limits how
+many secrets can be sent in an hour, per sender and per recipient.
 
-## Related features
+### What recipients get
 
-- [Brand Guide](/en/custom-domains/branding) — customize the logo and colors shown on this homepage.
-- [Access and Privacy](/en/custom-domains/access-and-privacy) — additional controls over what visitors can do.
-- [Custom Domains Overview](/en/custom-domains) — the foundation these features build on.
+Each submission creates one secret for the one recipient the sender chose. That
+recipient receives an email with a secret link on your domain. The link can be
+revealed once and expires after 7 days if it is not opened.
 
-## Questions or Need Support?
+The sender gets a receipt that shows the secret's status and lets them burn it
+before it is revealed. The receipt does not show the secret link. See
+[Request a secret](/en/share/request-secret#what-the-sender-sees-afterwards).
 
-We're here to help.
+### Test the form
 
-- Email: support@onetimesecret.com
-- Feedback form: https://onetimesecret.com/feedback
+1. Add yourself as a recipient.
+2. In a private browser window, open `https://<your domain>/incoming`, choose
+   your display name, enter test text and choose **Send Secret**.
+3. Check that the email arrives and that its link opens on your domain.
+
+## Related
+
+- [Branding your domain](/en/custom-domains/branding) — the logo and colors on
+  these pages.
+- [Email sender](/en/custom-domains/email-sender) — send incoming-secret emails
+  from an address on your domain.
+- [Request a secret](/en/share/request-secret) — other ways to ask someone for
+  sensitive information.
+
+## Questions or need support?
+
+Email [support@onetimesecret.com](mailto:support@onetimesecret.com) or use the
+[feedback form](https://onetimesecret.com/feedback).

@@ -53,12 +53,12 @@
 
     "customDomains": "Custom domains",
     "whatCustomDomainsDo": "What custom domains do",
-    "setupGuide": "Setup guide",
+    "setupGuide": "Setting up a custom domain",
     "dnsValidation": "DNS validation",
-    "brandGuide": "Brand guide",
+    "brandGuide": "Branding your domain",
     "emailSender": "Email sender",
-    "homepageAndIncoming": "Homepage & incoming secrets",
-    "accessAndPrivacy": "Access & privacy",
+    "homepageAndIncoming": "Homepage and incoming secrets",
+    "accessAndPrivacy": "Access and privacy",
 
     "plansAndBilling": "Plans & billing",
     "howPlansWork": "How plans work",

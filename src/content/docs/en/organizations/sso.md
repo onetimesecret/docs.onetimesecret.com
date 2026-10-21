@@ -16,8 +16,8 @@ is set up per custom domain: each domain can use a different identity provider.
 - Your organization is on **Team Plus**.
 - You are the organization's **owner**. Admins see the SSO tab but cannot change
   it.
-- The custom domain is **verified**; see the
-  [custom domain setup guide](/en/custom-domains/setup-guide).
+- The custom domain is **verified**; see
+  [Setting up a custom domain](/en/custom-domains/setup-guide).
 - You can register an application in your identity provider.
 
 ## Supported providers

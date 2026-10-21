@@ -67,7 +67,7 @@ Use a temporary subdomain until they have expired.
    `secrets-new.example.com`.
 2. **Create a CNAME record** for the temporary subdomain that points to the new
    region's endpoint, for example `identity.us.onetime.co` for the US region.
-   See the [custom domain setup guide](/en/custom-domains/setup-guide).
+   See [Setting up a custom domain](/en/custom-domains/setup-guide).
 3. **Create new secrets on the temporary subdomain** from now on.
 4. **Wait until the last secret created on the old domain has expired.** That is
    the longest secret lifetime on your plan, counted from the last secret you

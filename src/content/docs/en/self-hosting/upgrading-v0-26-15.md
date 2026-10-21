@@ -66,7 +66,8 @@ Coming from v0.26.13 or earlier, read the [v0.26.14 upgrade guide](/en/self-host
    `http`, the `Secure` session cookie is not written, and sign-in fails.
 
 4. **Only if customers uploaded SVG logos or icons:** list them, and ask the owners
-   to upload PNG or WebP instead. Stored SVGs are kept but no longer served. The
+   to upload a PNG or WebP logo, or a PNG or ICO icon, instead. Stored SVGs are
+   kept but no longer served. The
    check reads the stored bytes, since earlier releases stored whatever type the
    browser declared:
 

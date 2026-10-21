@@ -92,7 +92,7 @@ its logo, colors, fonts, language, and instructions before or after reveal.
 The unavailable-secret message can also differ from the default wording above.
 
 These settings do not change the single-reveal behavior. See
-[Brand guide](/en/custom-domains/branding) for domain appearance settings.
+[Branding your domain](/en/custom-domains/branding) for domain appearance settings.
 
 ## What the sender learns about you
 

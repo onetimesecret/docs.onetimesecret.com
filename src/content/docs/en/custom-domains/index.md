@@ -1,136 +1,82 @@
 ---
-title: Custom Domains
-description: Elevate your brand and enhance your professional secret sharing experience with Custom Domains, an advanced feature for agencies, businesses, and power users.
+title: Custom domains
+description: Share secret links from an address you own, such as secrets.example.com, and see which domain settings each plan includes.
 audience: end-user
 pageType: concept
+sourceOfTruth: onetimesecret at 145c1e7cfa — lib/onetime/models/custom_domain.rb:99-161 (a domain belongs to an organization and has no region field); apps/api/domains/logic/domains/add_domain.rb:36-39,64 (add takes only the domain and organization; custom_domains entitlement); lib/onetime/models/organization_membership.rb:80-106 (custom_domains for owners and admins, manage_org for owners); apps/api/domains/policies/domain_config_authorization.rb:148-155 (domain settings need manage_org plus the setting's entitlement); docs billing catalog snapshot (sha256 69a96394…a17501) plans.*.entitlements and plans.*.limits.custom_domains
 ---
 
-## What are Custom Domains?
+A custom domain lets your organization share secret links from an address you
+own, such as `secrets.example.com`, instead of `onetimesecret.com`. A link then
+looks like this:
 
-Custom Domains allow you to use your own domain name for Onetime Secret links, instead of the default _onetimesecret.com_ domain. This feature incorporates your brand identity into the secret sharing experience, enhancing trust and professionalism.
+```text
+https://secrets.example.com/secret/abc123
+```
 
-<div class="flex justify-center items-center my-10">
-  <a href="https://onetimesecret.com/pricing" class="text-center inline-block">
-    <span class="font-brand text-3xl sm:text-4xl md:text-5xl
-                 bg-clip-text text-transparent
-                 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500
-                 animate-flowing-colors
-                 hover:animate-bounce
-                 transition-all duration-300 ease-in-out
-                 transform hover:scale-105
-                 rounded-xl
-                 dark:border-brand-600">
-      secrets.yourbrand.com
-    </span>
-  </a>
-</div>
+The secret behaves the same as on the main site: one reveal, then it is
+deleted. The domain changes the address, and optionally the look, of the pages
+your recipients open. It does not change who can open a link: anyone with the
+link can reveal it once, unless you also set a passphrase. See
+[What recipients see](/en/share/what-recipients-see).
 
+## What each plan includes
 
-## Key Benefits
+| Feature | Free | Identity Plus | Team Plus |
+|---|---|---|---|
+| Custom domains | 1 | Unlimited | Unlimited |
+| [Homepage and incoming secrets](/en/custom-domains/homepage-and-incoming) | ✅ | ✅ | ✅ |
+| [Branding](/en/custom-domains/branding): logo, color, font, reveal instructions | — | ✅ | ✅ |
+| [Email sender](/en/custom-domains/email-sender): an address on the custom domain | — | ✅ | ✅ |
+| Email sender: an address on any domain | — | — | ✅ |
+| [Sign-in settings](/en/custom-domains/access-and-privacy) | — | ✅ | ✅ |
+| [Single sign-on (SSO)](/en/organizations/sso) | — | — | ✅ |
 
-1. **Brand Identity**: Share secrets using your own domain name, reinforcing security and professionalism.
-2. **Increased Trust**: Recipients see a familiar domain, boosting their confidence in the shared information.
-3. **Professional Appearance**: Demonstrate a higher level of sophistication and commitment to security.
-4. **Brand Customization**: Upload custom logos and set brand colors to match your visual identity.
-5. **Seamless Integration**: Create a cohesive experience that aligns with your existing digital presence.
-6. **Regional Flexibility**: Choose from five data center regions (EU, UK, US, CA, NZ) to meet your data locality needs.
+See [Compare plans](/en/pricing/compare-plans) for everything else in each plan.
 
-## How It Works
+## Who can manage a domain
 
-### Your Brand, Our Security
+A domain belongs to an [organization](/en/organizations).
 
-By leveraging Custom Domains, you're not just sharing secrets; you're reinforcing your brand, enhancing trust, and ensuring data locality compliance with every interaction. The Free plan includes one custom domain; Identity Plus and Team Plus include unlimited custom domains. See [Compare plans](/en/pricing/compare-plans).
+- The **owner** and **admins** can add, verify and remove the organization's
+  domains.
+- Only the **owner** can save changes to a domain's settings: branding,
+  homepage, incoming secrets, email sender and sign-in.
 
-<img src="/img/docs/custom-domains/branded-homepage-enabled.png" alt="Custom domain settings" width="600" />
+See [Roles and permissions](/en/organizations/roles-and-permissions).
 
-### The setup path
+## Where your domain is served
 
-1. You register a domain or use one you already own.
-2. Choose your preferred data center region (EU, UK, US, CA, or NZ).
-3. [Configure your domain's DNS settings](/en/custom-domains/setup-guide) to point to Onetime Secret's servers in your chosen region.
-4. Set up the custom domain in your Onetime Secret account settings.
-5. Once verified, your secret links will use your custom domain.
-6. [Customize your domain's appearance](/en/custom-domains/branding) with logos and brand colors through the admin interface.
+There is no region choice when you add a domain. It is served by the regional
+site your organization uses, such as `eu.onetimesecret.com`, and secrets shared
+from it are stored in that region. The DNS records the site shows you point
+your domain at that region. To serve a domain from a different region, see
+[Moving a custom domain](/en/account/change-your-region#moving-a-custom-domain)
+and [Where your data lives](/en/security/where-your-data-lives).
 
-### Troubleshooting common setup issues
+## Setting up a domain
 
-The full validation lifecycle, what each domain status means, and the complete
-troubleshooting list live on [DNS Validation](/en/custom-domains/dns-validation).
-The most common causes are:
+1. [Add the domain and create its DNS records](/en/custom-domains/setup-guide).
+2. Wait for [DNS validation](/en/custom-domains/dns-validation) to confirm
+   that you own the domain.
+3. Optionally, change how the domain looks and behaves:
+   - [Branding your domain](/en/custom-domains/branding)
+   - [Homepage and incoming secrets](/en/custom-domains/homepage-and-incoming)
+   - [Email sender](/en/custom-domains/email-sender)
+   - [Access and privacy](/en/custom-domains/access-and-privacy)
 
-- **DNS Propagation**: Changes may take up to 24–48 hours to fully propagate. Be patient and try again later if verification fails initially.
-- **Incorrect DNS Records**: Double-check your DNS settings against the provided instructions for your chosen region.
-- **SSL Certificate Issues**: Contact our support team if you encounter any SSL-related problems.
-- **Domain Ownership Verification**: Ensure you have full control over the domain you're trying to set up.
-- **Region Selection**: If you're unsure about which region to choose, consult our [Where your data lives](/en/security/where-your-data-lives) guide or contact our support team.
+## Your responsibilities
 
-## Getting Started
+- Keep the domain registered and renewed with your registrar.
+- Keep both DNS records in place, including the ownership TXT record after
+  verification. If it is removed, the domain stops being served.
+- Onetime Secret obtains and renews the domain's TLS certificate. You do not
+  need to provide one.
 
-To set up a Custom Domain:
+For examples of what to share through a secret link, see
+[Use cases](/en/share/use-cases).
 
-1. Log in to your Onetime Secret account.
-2. Navigate to Account Settings > Custom Domains.
-3. Enter the domain you wish to use and click "Add Domain".
-4. Select your preferred data center region (EU, UK, US, CA, or NZ).
-5. Follow the step-by-step instructions provided for DNS configuration.
-6. Wait for the domain to be verified. If available, click the "Verify" button to expedite the process. You may need to refresh the page.
+## Questions or need support?
 
-For detailed instructions, including how to choose the right region, please refer to our [Custom Domain Setup Guide](/en/custom-domains/setup-guide).
-
-## Brand Customization
-
-Custom Domain users can personalize their secret sharing interface:
-
-1. Upload company logo (PNG/JPG, max 1MB)
-2. Set custom brand colors using hex codes
-3. Configure homepage visibility settings
-4. Preview changes in real-time
-5. Enable/disable public secret creation
-
-For detailed branding instructions, see our [Brand Guide](/en/custom-domains/branding).
-
-## Use Cases
-
-Secret Links with Custom Domains provide a high-degree of security for sensitive data sharing while maintaining brand consistency and continuity. Here are some ways that our customers use our service.
-
-### 1. Onboarding or invoicing clients
-
-When requesting sensitive information from a client, such as financial details or credit card information, ask them to share it by creating a secret link at secrets.example.com. This ensures that the information is shared securely and is only accessible to the intended recipient.
-
-**Benefit**: By using a custom domain, you can reinforce your brand identity and build trust with your clients. The client will recognize the domain and feel more confident sharing sensitive information.
-
-### 2. DevOps Credentials
-
-When managing deployments across multiple environments and teams, share temporary access credentials through secure.example.com. Development teams can safely exchange database passwords, API tokens, and configuration files that automatically expire after first use, preventing these sensitive details from being exposed in code repositories, chat logs, or email threads.
-
-**Benefit**: By integrating your custom domain with automated CI/CD pipelines, you maintain security best practices while keeping credential management seamless within your development workflow. Devs can trust that credentials come from an authorized source, and automated rotation ensures that exposed credentials cannot be reused.
-
-### 3. Employee Onboarding
-
-When bringing new team members aboard, streamline their first-day access by sending temporary login credentials through access.example.com. HR and IT teams can prepare individualized welcome packages containing initial passwords, VPN configurations, and sensitive documentation links that expire once accessed, ensuring that credentials don't linger in email inboxes or get accidentally forwarded.
-
-**Benefit**: By using your branded domain for credential distribution, you create a professional onboarding experience while establishing healthy security practices. New employees can confidently access resources knowing they're coming from a trusted company source.
-
-### 4. Private HR Communications
-
-When handling sensitive employee information such as salary details, tax identification numbers, or benefits enrollment codes, share confidential data through hrinfo.example.com. HR teams can send time-sensitive links to individual employees containing their personal information as secure text, ensuring that sensitive details expire after access and remain protected in compliance with data privacy regulations.
-
-**Benefit**: By utilizing your company's branded domain for confidential HR communications, you maintain professional standards while meeting compliance requirements for handling personally identifiable information. Employees can securely access their sensitive information through a trusted channel that reinforces your commitment to data protection.
-
-### 5. Temporary Staff Access
-
-When managing rotating clinical staff, residents, or temporary personnel, securely communicate initial login credentials through tempaccess.example.com. Administrative teams can create time-sensitive links containing system usernames and temporary passwords, where the secure message containing these credentials expires after first viewing.
-
-Note: When implementing this solution, ensure your complete security stack maintains compliance with relevant healthcare regulations such as HIPAA or GDPR. OneTimeSecret should be used only for the secure communication of initial access credentials, while actual system access durations and permissions should be managed through your organization's access control systems. While the service provides more security than email for sharing sensitive information like PHI, it should be used as a stopgap rather than a permanent solution for such data - consider implementing dedicated HIPAA-compliant secure messaging systems for regular PHI communication.
-
-The ability to generate secure, time-bound links through your branded domain provides additional security without compromising efficiency. Each use case demonstrates how Custom Domains enhance both security posture and professional presence.
-
-## Important Considerations
-
-- The Free plan includes one custom domain; Identity Plus and Team Plus include unlimited custom domains.
-- You are responsible for maintaining and renewing your domain registration.
-- Proper SSL/TLS configuration is crucial for security (handled automatically by Onetime Secret).
-- Ensure your chosen domain complies with your organization's branding guidelines.
-- Consider data protection regulations when choosing your [data center region](/en/security/where-your-data-lives).
-
-To learn about best practices for using Custom Domains securely, check out our [Security Best Practices](/en/security/best-practices) guide.
+Email [support@onetimesecret.com](mailto:support@onetimesecret.com) or use the
+[feedback form](https://onetimesecret.com/feedback).

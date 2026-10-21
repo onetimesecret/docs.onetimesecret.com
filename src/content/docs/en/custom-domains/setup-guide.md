@@ -1,168 +1,126 @@
 ---
-title: Setup Guide
-description: This guide will walk you through the process of setting up a custom domain for your Onetime Secret account, including the differences between subdomains and apex domains, and choosing your preferred data center region.
+title: Setting up a custom domain
+description: Add a custom domain to your organization, create its ownership and routing DNS records, and verify it.
 audience: end-user
 pageType: how-to
+sourceOfTruth: onetimesecret at 145c1e7cfa — src/apps/workspace/routes/dashboard.ts:63-113 and routes/organizations.ts:42 (Domains tab of the organization settings, owner or admin); src/apps/workspace/components/domains/DomainForm.vue:114-118 and locales/content/en/workspace-domains.json (Add domain, Custom domain, Continue with, Verify Domain, Domain Status fields); apps/api/domains/logic/domains/add_domain.rb:36-39 (no region field); lib/onetime/models/custom_domain.rb:654,688,717-751,819-828,1122 (TXT host and value, generated once); src/apps/workspace/composables/useDomainDnsRecord.ts:129-137 (routing target from the site's configuration); lib/onetime/operations/verify_domain.rb:203-216,479-481 (TXT decides verification); src/shared/composables/useDomainStatus.ts:89-101 (status labels); routing targets checked with dig on 2026-10-21
 ---
 
-## Prerequisites
+## Before you start
 
-- An active Onetime Secret account with custom domain feature enabled
-- A domain you own and can manage DNS settings for
+- Your organization's plan includes a custom domain. Free includes one; Identity
+  Plus and Team Plus have no fixed limit. See
+  [Custom domains](/en/custom-domains#what-each-plan-includes).
+- You are the organization's **owner** or an **admin**.
+- You can create DNS records for the domain at your registrar or DNS provider.
+- You have decided which address to use. A subdomain such as
+  `secrets.example.com` is recommended: it uses a CNAME record, which keeps
+  working if the service's addresses change. An apex domain such as
+  `example.com` needs an A record pointing at a fixed IP address.
 
-## Understanding Domain Types
+## Add the domain
 
-Before setting up your custom domain, it's important to understand the difference between subdomains and apex domains:
+1. Sign in, open the user menu and choose **Domains**. This opens your
+   organization's settings on the **Domains** tab. The domain belongs to the
+   organization whose settings are open.
+2. Choose **Add domain**.
+3. In **Custom domain**, enter the address, for example `secrets.example.com`.
+   If you enter an apex domain such as `example.com`, you are asked where
+   secret links should live: pick one of the **Popular subdomains**, or choose
+   **Use my root domain**.
+4. Choose **Continue with** _your domain_.
 
-1. **Subdomain**: A subdivision of your main domain (e.g., secrets.yourdomain.com)
-2. **Apex Domain**: The root domain itself (e.g., yourdomain.com)
+The domain is added to the organization, and the next screen lists the two DNS
+records to create. There is no region choice: the records point at the
+regional site your organization uses. See
+[Where your domain is served](/en/custom-domains#where-your-domain-is-served).
 
-## Choose Your Region
+## Create the DNS records
 
-Onetime Secret offers multiple data center regions: EU, UK, US, CA, and NZ. When setting up your custom domain, you'll need to choose which region you prefer for storing your data. This choice is important for several reasons:
+Create both records in your DNS provider. Copy the values from the Domains
+page; the examples below only show their form.
 
-- **For Individuals**: You can choose based on your personal preference, such as proximity for potentially faster access or personal data sovereignty concerns.
-- **For Businesses**: Your choice may depend on your data locality obligations, such as compliance with GDPR, state, or provincial guidelines. Ensure you select the region that best aligns with your regulatory requirements.
+### Ownership record (TXT)
 
-Consider your specific needs and requirements when making this choice. For more detailed information about our data center regions and how to choose the right one for your needs, please refer to our [Where your data lives](/en/security/where-your-data-lives/) guide.
+This record proves that you control the domain. Verification depends on it.
 
-## Step 1: Access Domains Dashboard
+- **Host:** `_onetime-challenge-` followed by a short identifier for your
+  domain. For a subdomain, the subdomain is added after it. For example,
+  `_onetime-challenge-abc1234` for `example.com`, or
+  `_onetime-challenge-abc1234.secrets` for `secrets.example.com`. Create it in
+  the zone of the base domain (`example.com`).
+- **Value:** a 32-character hexadecimal code.
 
-1. Log in to your Onetime Secret account
-2. Navigate to Dashboard > Custom Domains
-3. Click "Add Domain"
+Some providers expect only the host label and add the zone for you; others
+expect the full name. Either form is fine as long as the record resolves at
+`<host>.<your base domain>` and returns the value unchanged.
 
-<img src="/img/docs/custom-domains/3-Custom-domains.png" alt="Custom domains view" width="400" />
+The value stays the same while the domain is in your organization. If you
+remove the domain and add it again, it gets a new host and value.
 
-## Step 2: Enter Your Domain
+Keep this record after verification. Verification is repeated in the
+background, and a check that no longer finds the record stops the domain
+being served.
 
-1. In the custom domain settings, enter your desired domain (e.g., secrets.yourdomain.com or yourdomain.com)
-2. Click "Add Domain" or equivalent button to proceed
+### Routing record (CNAME or A)
 
-<!-- LOCALE DRIFT (2026-08): PR #392 (claude/audit-txt-verification-step) adds an
-ownership-verification TXT record section to this EN page and widens the propagation
-window to 24–48h. The 16 locale copies of setup-guide.md lack that section and still
-say "24 hours". Remove this comment once the locales are re-synced. -->
+This record sends visitors to Onetime Secret.
 
-## Step 3: Configure DNS Settings
+- **Subdomain:** a CNAME record from your subdomain (for example `secrets`) to
+  the target shown on the Domains page.
+- **Apex domain:** an A record for `@` (or a blank host, depending on your
+  provider) with the IP address shown on the Domains page.
 
-To connect your domain, you need to create exactly two DNS records: a TXT record that verifies you own the domain, and a routing record (CNAME for subdomains, A for apex domains). You can create them in either order. The routing record differs slightly depending on whether you're using a subdomain or an apex domain, and which data center region you choose.
+For reference, these are the targets for each regional site:
 
-<!-- LOCALE DRIFT (2026-08): This TXT ownership section (and the related mentions in
-Steps 3–4 and Troubleshooting, plus the 24–48h propagation window) exists only in this
-EN page. The 16 locale copies of setup-guide.md lack the section entirely and still say
-"24 hours". Remove this comment once the locales are re-synced. -->
+| Region | CNAME target | A record address |
+|---|---|---|
+| Canada | `identity.ca.onetime.co` | As shown on the Domains page |
+| European Union | `identity.eu.onetime.co` | `109.105.217.207` |
+| Aotearoa New Zealand | `identity.nz.onetime.co` | As shown on the Domains page |
+| United Kingdom | `identity.ingress.onetime.co` | As shown on the Domains page |
+| United States | `identity.us.onetime.co` | `66.51.126.41` |
 
-### Create the Ownership Verification TXT Record (All Domains)
+Remove any other A, AAAA or CNAME records for the same host. Do not remove the
+TXT ownership record; it is not a conflict.
 
-Your Domain Dashboard lists this record first, before the routing record, and shows the exact Type, Host, and Value to copy.
+## Verify the domain
 
-1. Access your domain's DNS management panel (through your domain registrar or DNS provider)
-2. Create a TXT record, copying the Value exactly as shown in your Domain Dashboard and entering the Host in your registrar's expected form:
-   - Host: `_onetime-challenge-<id>` for an apex domain, or `_onetime-challenge-<id>.<subdomain>` for a subdomain, where `<id>` is a short identifier unique to your domain
-     - For an apex domain (e.g., example.com): `_onetime-challenge-abc1234`
-     - For a subdomain (e.g., secrets.example.com): `_onetime-challenge-abc1234.secrets` — the record is created on the base domain's zone (example.com)
-   - Value: the unique 32-character hexadecimal code shown in your dashboard
+1. On the **Domains** tab, open the domain's menu and choose **Verify
+   Domain**, or select the domain's status. On the verification page, choose
+   **Verify Domain**. The button can be used again after a short pause.
+2. The service also re-checks domains in the background, so verification can
+   finish without you pressing the button. DNS changes can take up to 24–48
+   hours to propagate, although they are usually much faster.
 
-The host and value above show the shape only — your actual record is unique to your domain and must be copied from your Domain Dashboard. The value never rotates or expires.
+Verification succeeds when the TXT record is found. The domain is then served,
+and you can choose it when you create a secret. The routing record and the
+certificate are tracked separately; see
+[DNS validation](/en/custom-domains/dns-validation) for each stage and the
+status labels.
 
-Registrars display record hosts differently: some expect just the label (and append the zone for you), others expect the fully qualified name. Enter the host in whichever form your provider expects — what matters is that the resulting record resolves at `<host>.<your base domain>` and returns the dashboard value unchanged.
+## Check the result
 
-Ownership verification cannot complete without this record, and it must stay in place after verification — do not remove it. If a later check does not find it, the domain stops being served until the record is found again.
+When the domain is ready, its status on the Domains tab reads **Active**.
+After a check has run, the domain's verification page shows a **Domain
+Status** panel with these fields:
 
-### For Subdomains (Recommended)
+- **Status**: the latest result reported for the domain.
+- **Target Address**: where the service routes the domain internally. It is
+  not a value to enter in your DNS.
+- **DNS Record**: the routing record the service expects.
+- **SSL Status**: whether a certificate is active.
+- **SSL Renews**: the current certificate's expiry date. The service renews the
+  certificate before then; you do not need to do anything.
+- **Last Monitored**: when the domain was last checked.
 
-1. Access your domain's DNS management panel (through your domain registrar or DNS provider)
-2. Create a CNAME record with the following details:
-   - Host: Your chosen subdomain (e.g., secrets)
-   - Points to / Value:
-     - For CA region: identity.ca.onetime.co
-     - For EU region: identity.eu.onetime.co
-     - For NZ region: identity.nz.onetime.co
-     - For UK region: identity.ingress.onetime.co (anycast)
-     - For US region: identity.us.onetime.co
-3. Remove any existing A, AAAA, or CNAME records for the same subdomain — but keep the TXT ownership record
+## Use the domain
 
-### For Apex Domains
+When you create a secret while signed in, choose the domain you are creating
+under. The secret link then uses your domain, for example
+`https://secrets.example.com/secret/abc123`.
 
-1. Access your domain's DNS management panel
-2. Create or modify an A record with the following details:
-   - Host: @ (or leave blank, depending on your DNS provider)
-   - Points to / Value:
-     - For EU region: 109.105.217.207
-     - For US region: 66.51.126.41
-     - For other regions: Contact support for current A record IP addresses
+## Questions or need support?
 
-Important: Ensure there are no conflicting A, AAAA, or CNAME records for the domain you're using. The TXT ownership record is not a conflict — leave it in place.
-
-<img src="/img/docs/custom-domains/4-Custom-domain-settings.png" alt="Custom domain settings" width="400" />
-
-### More Info
-
-#### Why CNAME for Subdomains?
-
-We recommend using CNAME records for subdomains because:
-
-1. They're more flexible and allow us to change our server IP addresses without requiring you to update your DNS settings.
-2. They automatically adapt to any changes we make to our infrastructure.
-
-#### Why A Records for Apex Domains?
-
-Apex domains cannot use CNAME records due to DNS standards. Therefore, we must use A records, which have some limitations:
-
-1. If we change our IP address (which is rare), you'll need to update your DNS settings manually.
-2. They don't automatically adapt to changes in our infrastructure.
-
-## Step 4: Verify Domain and Wait for SSL
-
-1. After creating both DNS records, return to the Onetime Secret custom domain page
-2. Press the "Verify" button to check your records right away — verification also re-runs automatically about every 30 minutes
-3. Every verification pass checks both records: the TXT ownership record and your CNAME or A record
-4. SSL certificate generation will begin once verification is successful
-5. This process may take a few minutes to complete
-
-Note: a correct CNAME or A record alone will never verify. SSL may already be issued and your domain may appear to work, but ownership verification cannot complete until the TXT record is in place.
-
-For a closer look at the verification lifecycle, what each domain status means,
-and how to resolve a failed check, see [DNS Validation](/en/custom-domains/dns-validation).
-
-## Step 5: Confirm Setup
-
-Once setup is complete, you should see the following information:
-
-- Domain Status: Active with SSL
-- Target Address: The identity endpoint for your chosen region (e.g. identity.ca.onetime.co, identity.eu.onetime.co, identity.nz.onetime.co, identity.ingress.onetime.co, identity.us.onetime.co)
-- SSL Status: Active
-- SSL Renewal Date: (Will be displayed, typically about a year from setup)
-
-## Troubleshooting
-
-- If verification fails, double-check your DNS settings
-- Confirm the TXT ownership record exists — verification cannot complete without it, even if the domain appears to work
-- Ensure you've removed any conflicting records (but never the TXT ownership record)
-- DNS propagation can take up to 24–48 hours, though it's usually much faster
-
-## Using Your Custom Domain
-
-Once active, your secret links will use your custom domain. For example:
-`https://secrets-example.onetime.dev/secret/abc123`
-
-## We've Got You Covered
-
-We handle the rest of the technical details so you don't have to.
-
-- We continuously monitor your domain's status
-- SSL certificates are automatically renewed without any action required on your part
-
-For those who like to stay informed, you can easily check the health of your domain:
-
-- Simply look at the "Last Monitored" timestamp in your dashboard to confirm ongoing connectivity
-
-## Questions or Need Support?
-
-We're here to help. If you have any questions or need assistance:
-
-- Email us directly at support@onetimesecret.com
-- Use our feedback form at https://onetimesecret.com/feedback
-
-Our team is committed to providing you with the best possible support for your custom domain setup and usage, including guidance on choosing the right data center region for your needs.
+Email [support@onetimesecret.com](mailto:support@onetimesecret.com) or use the
+[feedback form](https://onetimesecret.com/feedback).

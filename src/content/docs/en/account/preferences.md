@@ -110,10 +110,10 @@ another computer, or cleared browser data starts from the defaults.
 | Setting | Where it is decided |
 |---|---|
 | Expiry options and the default expiry | The service. Your account has no expiry setting; your browser remembers your last choice |
-| Requiring a passphrase | Each secret, as you create it. The service, or a [custom domain's settings](/en/custom-domains/access-and-privacy), can also require one |
+| Requiring a passphrase | Each secret, as you create it. The service can also require one for every secret |
 | How long you stay signed in | The service's session limits. There is no limit on how many sessions you have open. See [Sessions and connected identities](/en/account/sessions-and-identities) |
 | Region | The site you create the account on. See [Changing your region](/en/account/change-your-region) |
-| Branding, language and passphrase rules for a custom domain | The domain's settings, which apply to everyone sharing from it. See [Custom domains](/en/custom-domains) |
+| Branding and language for a custom domain | The domain's settings, which apply to everyone sharing from it. See [Branding your domain](/en/custom-domains/branding) |
 
 An account has no display name, username or profile picture; it is identified
 by its email address.
@@ -135,8 +135,8 @@ by its email address.
 - [Your dashboard and recent secrets](/en/account/dashboard-and-recent-secrets)
   — the receipts for secrets you created, and how long they last
 - [Sharing secrets](/en/share) — the choices you make for each secret
-- [Custom domain access and privacy](/en/custom-domains/access-and-privacy) —
-  defaults that apply to a whole domain
+- [Access and privacy](/en/custom-domains/access-and-privacy) — sign-in
+  settings for a custom domain
 - [Translations](/en/translations) — which languages exist, and helping with one
 - [Glossary](/en/start/glossary) — passphrase, receipt, reveal, burn
 

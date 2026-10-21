@@ -46,13 +46,12 @@ const LOCALES = Object.keys(i18nConfig.locales);
  * back to fit.
  *
  * `toDefaultLocale` sends every locale to the EN copy of the target, the way
- * configGeneratorRedirects already does for the EN-only generator page. It is
- * set on exactly one merge — see the custom-domains block — and the reason is
- * always the same: the absorbed content exists in English only, so a
- * same-locale redirect would land the reader on a page that does not contain
- * what they followed the link for.
+ * configGeneratorRedirects already does for the EN-only generator page. No
+ * entry sets it at present. Set it only when the absorbed content exists in
+ * English only, so a same-locale redirect would send the reader to a page that
+ * does not contain what they followed the link for.
  *
- * Every other merge target resolves in-locale: either the locale has its own
+ * Every merge target resolves in-locale: either the locale has its own
  * translated copy (moved with the page this phase), or it has none and
  * Starlight serves the EN fallback, whose headings are the EN headings. Both
  * cases make the fragments below resolve.
@@ -104,27 +103,13 @@ const movedPages = [
 
   // Using Onetime Secret › Custom domains
   //
-  // The only toDefaultLocale merge in the table. custom-domains/how-it-works
-  // and use-cases were absorbed into custom-domains/index — but only into the
-  // EN copy. Their translations were deleted with the merge, and the sixteen
-  // non-EN custom-domains/index.md files still carry their pre-merge text and
-  // their own translated H2s. So /fr/custom-domains/ neither contains the
-  // absorbed content nor has a #how-it-works anchor to aim at, and sending a
-  // reader there would silently drop them at the top of a page missing the
-  // section they asked for. The EN merged page has both, and its language
-  // picker still gets them back to French.
-  {
-    from: "custom-domains/how-it-works",
-    to: "custom-domains",
-    fragment: "how-it-works",
-    toDefaultLocale: true,
-  },
-  {
-    from: "custom-domains/use-cases",
-    to: "custom-domains",
-    fragment: "use-cases",
-    toDefaultLocale: true,
-  },
+  // custom-domains/how-it-works and use-cases were first absorbed into the EN
+  // custom-domains/index. That page has since dropped both sections: its setup
+  // route replaces how-it-works, and the examples were general sharing advice
+  // that share/use-cases already covers. Both now resolve in-locale with no
+  // fragment; share/use-cases exists in every configured locale.
+  { from: "custom-domains/how-it-works", to: "custom-domains" },
+  { from: "custom-domains/use-cases", to: "share/use-cases" },
   { from: "custom-domains/brand-guide", to: "custom-domains/branding" },
   {
     from: "custom-domains/homepage-secrets",
@@ -144,12 +129,12 @@ const movedPages = [
   {
     from: "custom-domains/signin-settings",
     to: "custom-domains/access-and-privacy",
-    fragment: "signin-settings",
+    fragment: "sign-in-settings",
   },
   {
     from: "custom-domains/signup-settings",
     to: "custom-domains/access-and-privacy",
-    fragment: "signup-settings",
+    fragment: "sign-up-settings",
   },
 
   // API & SDKs

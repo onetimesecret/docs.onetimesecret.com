@@ -1,59 +1,102 @@
 ---
-title: DNS Validation
-description: How Onetime Secret verifies your custom domain's DNS configuration, what each status means, and how to resolve validation failures.
+title: DNS validation
+description: What Onetime Secret checks before it serves your custom domain, what each domain status means, and how to fix a failed check.
 audience: end-user
 pageType: how-to
+sourceOfTruth: onetimesecret at 145c1e7cfa — lib/onetime/operations/verify_domain.rb:203-216,479-481 (TXT decides ownership; a definite miss demotes the domain); lib/onetime/operations/verify_domain/confirmation_window.rb:40,101-112 (inconclusive checks keep the state for up to 7 days); lib/onetime/models/custom_domain/serving_policy.rb:42-58 and lib/onetime/middleware/domain_strategy.rb:368-384 (served only when ownership is verified, otherwise "This domain is not configured"); apps/api/domains/logic/domains/add_domain.rb:114-166 (certificate requested when the domain is added, by the configured strategy); apps/internal/acme/application.rb:144-157 (caddy_on_demand issues only after verification); lib/onetime/domain_validation/strategy.rb:38-75 and passthrough_strategy.rb:29-35 (one strategy per installation); lib/onetime/jobs/scheduled/domain_refresh_job.rb:62-194 (background re-checks); src/shared/composables/useDomainStatus.ts:89-101 and locales/content/en/00-common.json (status labels)
 ---
 
-## What is DNS validation?
+After you add a custom domain and create its DNS records, Onetime Secret checks
+the records before it serves the domain. For creating the records, see
+[Setting up a custom domain](/en/custom-domains/setup-guide).
 
-After you add a custom domain and create the required DNS records, Onetime
-Secret needs to confirm that you own the domain and that your records point to
-the correct region endpoint before it can issue an SSL certificate and start
-serving your domain. That confirmation step is **DNS validation**.
+## What is checked
 
-This page focuses on the _validation lifecycle_. For creating the records in the
-first place — CNAME vs. A records, per-region targets, and apex vs. subdomain
-guidance — see the [Setup Guide](/en/custom-domains/setup-guide).
+Four things have to be in place before your domain works. They are checked
+separately:
 
-## The validation lifecycle
+| Stage | What decides it | What you see until it is done |
+|---|---|---|
+| **Ownership** | The TXT ownership record is found with the right value | The status shows **Pending Verification** or **Inactive**, and secrets cannot be created on the domain |
+| **Routing** | Your CNAME or A record points at the target shown on the Domains page | Visitors do not reach Onetime Secret; the status shows **DNS Incorrect** or **Inactive** |
+| **Certificate** | The service obtains a TLS certificate for the domain | The status can show **Certificate pending** |
+| **Serving** | Ownership is verified | Visitors who do reach the service get "This domain is not configured" |
 
-1. **Records created** — You add the two records shown in your Domain Dashboard: the TXT ownership record, plus the CNAME (subdomain) or A record (apex) for your chosen [region](/en/security/where-your-data-lives). They can be created in either order.
-2. **Verification** — Onetime Secret automatically re-checks the domain on a schedule (roughly every 30 minutes), and you can use the **Verify** button to expedite the check; you may need to refresh the page. Every pass checks both the TXT ownership record and your CNAME/A record.
-3. **SSL issuance** — Once verification succeeds, SSL certificate generation begins automatically. This usually takes a few minutes.
-4. **Active** — When complete, the dashboard shows **Active with SSL**, the target address for your region, an SSL status of **Active**, and an SSL renewal date.
+Only the TXT record decides verification. A correct CNAME or A record without
+the TXT record never verifies. A certificate is not proof of ownership either:
+depending on how the service is set up, a certificate can be requested as soon
+as you add the domain, but the domain is still not served until the TXT record
+is verified.
 
-## Reading your domain status
+## When checks run
 
-Your Domain Dashboard reflects where the domain is in this lifecycle:
+- **Verify Domain** on the domain's verification page checks it immediately.
+  There is a short pause before you can use the button again.
+- The service also re-checks domains in the background on a schedule. A check
+  can finish without you doing anything.
 
-- **Pending / Unverified** — Records have not yet been detected. DNS changes can take time to propagate (often minutes, but up to 24–48 hours). Until the domain is verified, it answers "This domain is not configured" and is not offered for secret links.
-- **Active with SSL** — Verification succeeded and a certificate has been issued. Your secret links now use the custom domain.
-- **Last Monitored** timestamp — Onetime Secret continuously monitors your domain's connectivity. The timestamp confirms the most recent successful check.
+DNS changes can take time to propagate: often minutes, up to 24–48 hours.
 
-## Troubleshooting failed validation
+## Domain statuses
 
-If validation does not succeed, work through the following:
+The Domains tab shows one status for each domain:
 
-- **Wrong or missing record** — Double-check the record type, host, and target value against the [Setup Guide](/en/custom-domains/setup-guide) for your specific region.
-- **Missing TXT record** — Verification checks both the TXT ownership record and your CNAME/A record; a correct CNAME/A with a missing TXT record will never verify, even if SSL has been issued and the domain appears to work. Copy the TXT record's host and value from your Domain Dashboard.
-- **Conflicting records** — Remove any existing A, AAAA, or CNAME records for the same host that conflict with the one you added. Never remove the TXT ownership record — it must stay in place before and after verification.
-- **Propagation delay** — DNS changes may take up to 24–48 hours to fully propagate. If verification fails initially, wait and try again.
-- **Apex domain limitations** — Apex (root) domains cannot use CNAME records and must use A records; confirm you are using the correct record type.
-- **Domain ownership** — Make sure you have full control of the domain and its DNS settings.
-- **TXT record removed** — Keep the TXT ownership record in place after verification. If a later check does not find it, the domain stops being served until the record is found again.
+| Status | Meaning |
+|---|---|
+| **Active** | Ownership is verified, the domain resolves to the service, and it is ready to use. |
+| **Pending Verification** | The domain resolves to the service, but the TXT ownership record has not been verified, or it was verified and has since gone. Create or restore the TXT record. |
+| **Certificate pending** | Ownership is verified and the domain resolves; the first certificate has not been issued yet. Nothing to do. |
+| **DNS Incorrect** | The routing record does not point at the expected target. |
+| **Unverified** | The last status check failed, so the current state is unknown. Choose **Verify Domain** to try again. |
+| **Inactive** | No check has found the domain resolving to the service yet. Check the routing record. |
 
-If problems persist, including any SSL-related errors, contact our support team.
+## If the TXT record is removed later
 
-## Related pages
+Verification is repeated after the domain is active.
 
-- [Setup Guide](/en/custom-domains/setup-guide) — create the DNS records and choose your region.
-- [How Custom Domains Work](/en/custom-domains/#how-it-works) — the bigger picture.
-- [Where your data lives](/en/security/where-your-data-lives) — choose the right region and its endpoint.
+- When a check gets a clear answer that the TXT record is missing or wrong, the
+  domain is no longer verified and stops being served at once. It is served
+  again after a check finds the record.
+- When a check gets no clear answer, for example because a DNS server did not
+  respond, the domain keeps its current state for up to 7 days.
 
-## Questions or Need Support?
+## Troubleshooting
 
-We're here to help.
+- **Wrong or missing record:** compare the record type, host and value with the
+  ones on the Domains page.
+- **Missing TXT record:** a correct CNAME or A record alone never verifies.
+  Copy the TXT record's host and value from the Domains page.
+- **Host entered twice:** some DNS providers add the zone to the host you
+  enter. If the record resolves at a name such as
+  `_onetime-challenge-abc1234.example.com.example.com`, enter only the label.
+- **Conflicting records:** remove other A, AAAA or CNAME records for the same
+  host. Never remove the TXT ownership record.
+- **Apex domain:** an apex domain cannot use a CNAME record. Use an A record.
+- **Propagation delay:** wait and choose **Verify Domain** again.
 
-- Email: support@onetimesecret.com
-- Feedback form: https://onetimesecret.com/feedback
+If the problem persists, including any certificate error, contact support.
+
+:::note
+**Self-hosting this yourself?** Each installation uses one validation strategy,
+set with `DOMAINS_VALIDATION_STRATEGY`. With `approximated` or
+`caddy_on_demand`, a domain is served only after its TXT record is verified,
+unless `DOMAINS_SERVE_UNVERIFIED` is set; with `caddy_on_demand`, the
+certificate is also issued only after verification.
+With `passthrough`, the default, there is no DNS check: a domain is served once
+it is added, and certificates are handled outside the application. See
+[Environment variables](/en/self-hosting/environment-variables).
+:::
+
+## Related
+
+- [Setting up a custom domain](/en/custom-domains/setup-guide) — add the domain
+  and create its DNS records.
+- [Custom domains](/en/custom-domains) — plans, roles, and where the domain is
+  served.
+- [Where your data lives](/en/security/where-your-data-lives) — the regional
+  sites and their targets.
+
+## Questions or need support?
+
+Email [support@onetimesecret.com](mailto:support@onetimesecret.com) or use the
+[feedback form](https://onetimesecret.com/feedback).

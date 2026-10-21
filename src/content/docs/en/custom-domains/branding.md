@@ -1,69 +1,106 @@
 ---
-title: Brand Guide
-description: Customize the presentation of your domain with your brand's logo, colors, and styling.
+title: Branding your domain
+description: Add your logo, favicon, brand color, corner style, font and reveal instructions to the pages recipients see on your custom domain.
 plan: Identity Plus
 audience: end-user
 pageType: how-to
+sourceOfTruth: onetimesecret at 145c1e7cfa — src/apps/workspace/domains/DomainDetail.vue:194-201 and DomainBrand.vue:66,83-86 (Manage Brand, Brand and Delivery tabs, Update); src/apps/workspace/components/dashboard/brand/SimpleBrandPanel.vue and src/shared/utils/brand-helpers.ts:216-275 (fields and options); src/apps/workspace/components/domains/DeliveryPanel.vue:53-108 (language, reveal instructions); apps/api/domains/logic/domains/update_domain_image.rb:16-19,96-122,200-205 and lib/onetime/image_content.rb (accepted image types and sizes); src/apps/workspace/components/domains/ImageUploadModal.vue:30,53-54 and BrandFaviconField.vue:36-37 (upload form limits); apps/web/core/middleware/request_setup.rb:90-96 and apps/web/core/logic/page.rb:117,124 (branded pages not cached; favicon cached one day); apps/api/domains/logic/domains/update_domain_brand.rb:35-42,126-128 and domain_config_authorization.rb:148-155 (custom_branding plus manage_org); locales/content/en/workspace-branding.json
 ---
 
-## Prerequisites
+Branding changes how the pages on your custom domain look to the people you
+share with: the page where a recipient reveals a secret, and your domain's
+homepage.
 
-- An active, verified custom domain in your Onetime Secret account
-- A logo image file in PNG or JPG format, under 1MB in size
-- Hex code for your brand's color (e.g. `#DC4A22`) if using custom colors
+## Before you start
 
-## In a nutshell
-1. Navigate to Domain Dashboard
-2. Upload logo file
-3. Set brand colors
-4. Review preview
-5. Save changes
-6. Verify live implementation
+- Your organization is on **Identity Plus** or **Team Plus**.
+- You are the organization's **owner**. Admins can open the brand settings but
+  cannot save them.
+- The domain has been added to your organization. See
+  [Setting up a custom domain](/en/custom-domains/setup-guide).
+- Your logo is a JPEG, PNG, GIF, WebP, BMP or TIFF file of up to 1 MB. SVG is
+  not accepted. A square image of about 128 × 128 pixels is recommended.
+- If you want a favicon other than your logo, have a PNG or ICO file of up to
+  256 KB.
 
-Back on the Domain Dashboard, you can enable or disable your public homepage and manage your brand settings anytime.
+## Open the brand settings
 
-## Logo Management
-Upload your brand logo through the admin interface. The system accepts PNG or JPG files under 1MB.
+1. Open the user menu and choose **Domains**.
+2. Choose **Manage** next to the domain.
+3. Under **Features**, choose **Manage Brand**.
 
-### Upload logo
+The page has two tabs, **Brand** and **Delivery**, and a preview of the
+recipient page that updates as you edit.
 
-<img src="/img/docs/custom-domains/guide-brand-admin-1.png" alt="Logo upload interface showing add button" width="400" />
+## Add or replace your logo
 
-### Remove or replace logo
+1. On the **Brand** tab, under **Logo**, choose **Upload logo** (or
+   **Replace** if there is already one).
+2. In the **Domain logo** window, choose an image or drag it in.
+3. Choose **Save logo**.
 
-Remove or replace logos as needed through the logo management panel.
+The logo is saved straight away; you do not need to choose **Update**
+afterwards.
 
-<img src="/img/docs/custom-domains/guide-brand-admin-2.png" alt="Logo management interface with remove option" width="400" />
+To remove the logo, choose **Replace**, then **Remove logo**, and confirm with
+**Remove logo**.
 
+## Set the favicon
 
-## Brand Customization
-Adjust colors, fonts, and styling through the brand settings interface. Review your changes in real-time through the preview panel.
+Without a favicon of your own, the browser tab shows the icon fetched from your
+domain's website, if one was found, and otherwise your logo.
 
-<img src="/img/docs/custom-domains/guide-brand-admin-4.png" alt="Brand customization interface" width="400" />
+- To use your own, under **Favicon** choose **Upload favicon**, pick a PNG or
+  ICO file, and choose **Save favicon**.
+- To fetch the icon from your domain again, choose **Refresh favicon from
+  domain**. A favicon you uploaded is not replaced.
+- To remove an uploaded favicon, choose **Remove favicon**.
 
+## Set color, corners and font
 
-Verify your branding changes on the live site after saving.
+On the **Brand** tab:
 
-<img src="/img/docs/custom-domains/guide-brand-admin-3.png" alt="Homepage configuration panel" width="400" />
+- **Brand Color**: the color used for buttons and accents. The button text
+  switches between light and dark automatically to stay readable.
+- **Corners**: **Square**, **Rounded** or **Extra Rounded**.
+- **Font Family**: **Serif**, **Sans Serif**, **Monospace** or **System UI**.
 
-## Homepage Settings
+Choose **Update** to save. The button is available only when something has
+changed. If saving fails, the form returns to the last saved values.
 
-Back on your Domain Dashboard you can also control whether your branded homepage
-is public and whether visitors may create secrets from it. That setting now has
-its own guide — see [Homepage Secrets](/en/custom-domains/homepage-and-incoming#homepage-secrets).
+## Set language and reveal instructions
 
-## Important Notes
-- Changes process immediately upon saving
-- Allow up to 5 minutes for CDN cache refresh
-- Preview panel shows real-time rendering
-- Settings are domain-specific
+On the **Delivery** tab:
 
-## Questions or Need Support?
+- **Language**: the default language for recipient pages and emails on this
+  domain. Recipients can still switch language on the page. This card appears
+  only where the service offers more than one language.
+- **Reveal instructions**: text shown on the recipient page **Before reveal**
+  and **After reveal**, up to 500 characters each. HTML is removed. Leave a
+  field blank to use the built-in text in the selected language.
 
-We're here to help.
+Choose **Update** to save.
 
-Contact us:
-- Email: support@onetimesecret.com
-- Feedback form: https://onetimesecret.com/feedback
+## Check the result
 
-Our team is committed to providing you with the best possible support for your custom domain setup and usage.
+Open a secret link on your domain, or your domain's homepage, and reload the
+page. Saved changes appear on the next page load. Browsers can keep showing an
+old favicon for up to a day.
+
+## If your plan changes
+
+If your organization moves to a plan without branding, the saved branding stays
+on your domain, but it can no longer be changed.
+
+## Related
+
+- [Homepage and incoming secrets](/en/custom-domains/homepage-and-incoming) —
+  what visitors can do on your domain's homepage.
+- [Email sender](/en/custom-domains/email-sender) — send secret-link emails
+  from an address on your domain.
+- [Custom domains](/en/custom-domains) — plans and who can manage a domain.
+
+## Questions or need support?
+
+Email [support@onetimesecret.com](mailto:support@onetimesecret.com) or use the
+[feedback form](https://onetimesecret.com/feedback).
