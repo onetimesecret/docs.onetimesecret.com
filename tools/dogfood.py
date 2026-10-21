@@ -21,6 +21,8 @@ import textprov  # noqa: E402
 MAPPING = textprov.default_mapping()
 SELECTORS = set(MAPPING.selectors.values())
 STATES = {value: key for key, value in MAPPING.selectors.items()}
+# Visible clusters an unmatched block needs before a move can change its marks.
+MIN_MOVE_CLUSTERS = 2
 
 
 @dataclass
@@ -50,7 +52,8 @@ def correspondence(old, new):
     """Align visible clusters, ignoring reflow whitespace and provenance bytes.
 
     This is a deterministic comparison, not evidence of authorship. Exact
-    unmatched blocks also retain their identity when moved within a file.
+    unmatched blocks of MIN_MOVE_CLUSTERS or more also retain their identity
+    when moved within a file.
     """
     a = [i for i, item in enumerate(old) if item.text and not item.text.isspace()]
     b = [i for i, item in enumerate(new) if item.text and not item.text.isspace()]
@@ -84,8 +87,15 @@ def correspondence(old, new):
             align(subtag, i + x, i + y, k + z, k + w)
     for key, old_blocks in old_gaps.items():
         new_blocks = new_gaps.get(key, [])
-        if len(old_blocks) == len(new_blocks) == 1:
-            matches.update(zip(new_blocks[0], old_blocks[0]))
+        if len(old_blocks) != 1 or len(new_blocks) != 1:
+            continue
+        pairs = list(zip(new_blocks[0], old_blocks[0]))
+        # One cluster does not identify a passage: the y removed from "życia"
+        # and the y written in "pomocy?" are a coincidence, not a move. Pair a
+        # shorter block only when that keeps its exact bytes, so it can retain
+        # legacy text but never report a relabelled or lost mark.
+        if len(key) >= MIN_MOVE_CLUSTERS or all(new[n].raw == old[o].raw for n, o in pairs):
+            matches.update(pairs)
     return matches
 
 

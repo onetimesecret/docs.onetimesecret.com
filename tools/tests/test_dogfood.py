@@ -130,6 +130,42 @@ class CheckerTests(unittest.TestCase):
             self.assertIn("changed or lost an existing mark", self.messages(mark("old"), after))
         self.assertIn("marked unchanged legacy text", self.messages("old", mark("old")))
 
+    def test_single_character_coincidence_is_not_a_move(self):
+        self.assertEqual(self.messages("ay\nb\n", "a\nb" + mark("y") + "\n"), [])
+        # Legacy bytes that keep their encoding still match, rather than
+        # becoming new unmarked prose.
+        self.assertEqual(self.messages("ay\nb\n", "a\nby\n"), [])
+
+    def test_cumulative_check_matches_separately_checked_edits(self):
+        # Reported on pl/security/data-protection.md: one edit removed the
+        # legacy y from "życia" and a later one wrote "pomocy?" lines away.
+        # Each passed against its own base, but the cumulative check paired
+        # the two y clusters as moved text, which no edit sequence can satisfy.
+        def edit(source, old, new):
+            start = strip(source).index(old)
+            return dogfood.mark_edit(Path("a.md"), source, start, start + len(old), new, "ai")
+
+        base = "Czas życia sekretu.\n\n## Pytania lub potrzebujesz wsparcia?\n"
+        first = edit(base, "życia", "ważności")
+        second = edit(first, "wsparcia?", "pomocy?")
+        self.assertEqual(self.messages(base, first, ".md"), [])
+        self.assertEqual(self.messages(first, second, ".md"), [])
+        self.assertEqual(self.messages(base, second, ".md"), [])
+
+    def test_moved_and_unmoved_text_cannot_be_relabelled_or_lose_marks(self):
+        legacy, marked = "legacy paragraph", mark("marked paragraph")
+        self.assertIn("marked unchanged legacy text",
+                      self.messages(f"{legacy}\nmiddle\n", f"middle\n{mark(legacy)}\n"))
+        self.assertIn("marked unchanged legacy text", self.messages("a y b", "a " + mark("y") + " b"))
+        # Preserve-only checks allow new unmarked text but never lost marks.
+        for require_marks in (True, False):
+            for old, new in ((f"{marked}\nmiddle\n", f"middle\n{strip(marked)}\n"),
+                             ("a " + mark("y") + " b", "a y b")):
+                with self.subTest(require_marks=require_marks, old=ascii(old)):
+                    messages = [message for _, _, message in dogfood.check_text(
+                        Path("a.txt"), old, new, require_marks=require_marks)]
+                    self.assertIn("changed or lost an existing mark", messages)
+
     def test_inserted_duplicate_does_not_steal_existing_attribution(self):
         for original in ("same", mark("same", state="human")):
             self.assertEqual(self.messages(original, mark("same") + " " + original), [])
