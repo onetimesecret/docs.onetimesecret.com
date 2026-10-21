@@ -34,7 +34,7 @@ instance before depending on it.
 ## Ruby
 
 
-[GitHub page onetime-ruby](https://github.com/onetimesecret/onetime-ruby)
+[GitHub page -󠄁 onetime-ruby](https://github.com/onetimesecret/onetime-ruby)
 by [Delano](https://delanotes.com/) — **official client**, actively maintained
 (last commit 2026-06). Supports API v1 (deprecated) and v2, regional domains,
 and custom base URLs. Requires Ruby 3.1+, zero runtime dependencies.
@@ -196,7 +196,7 @@ class Test
 ## Go
 
 
-[GitHub page - onetimesecret](https://github.com/corbaltcode/go-onetimesecret)
+[GitHub page -󠄁 g󠄁o󠄁-onetimesecret](https://github.com/corbaltcode/go-onetimesecret)
 by [Corbalt](https://github.com/corbaltcode/) — community-maintained (last
 commit 2026-05, updated for the `us.onetimesecret.com` host). Includes a CLI.
 
@@ -248,7 +248,7 @@ flsdlaun6hwczqu9utmc0vts5xj9xu1
 ## Go (lib)
 
 
-[GitHub page](https://github.com/emdneto/otsgo)
+[GitHub page -󠄁 o󠄁t󠄁s󠄁g󠄁o󠄁](https://github.com/emdneto/otsgo)
 by [Emídio Neto](https://github.com/emdneto) — community-maintained (last
 release v1.1.0, 2024-03). Regional-domain support not documented.
 
@@ -305,7 +305,7 @@ Get-Command -Module OneTimeSecret | Select Name
 ## Bash
 
 
-[GitHub page - OneTimeSecret-bash](https://github.com/eengstrom/onetimesecret-bash)
+[GitHub page - o󠄁net󠄁imes󠄁ecret-bash](https://github.com/eengstrom/onetimesecret-bash)
 by [Eric Engstrom](https://eengstrom.github.io/) — **unmaintained** (last
 commit 2020-05). Supports a custom host via `ots_set_host`, but predates API
 v2 and regional domains.
