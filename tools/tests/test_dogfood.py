@@ -230,6 +230,16 @@ class RepositoryTests(unittest.TestCase):
         self.assertEqual(status, 1)
         self.assertIn("must opt in with textprov: true", output)
 
+    def test_docs_reject_human_marks_but_keep_genuine_ivs(self):
+        page = self.root / "src/content/docs/page.md"
+        page.parent.mkdir(parents=True)
+        page.write_text("---\ntitle: Page\n---\n\n" + mark("Hand", state="human") + " edit.\n")
+        status, output = self.check(require_marks=False)
+        self.assertEqual(status, 1)
+        self.assertIn("src/content/docs/page.md:5:1: docs record AI edits only", output)
+        page.write_text("---\ntitle: Page\n---\n\n辻\U000e0100 is a name.\n")
+        self.assertEqual(self.check(require_marks=False)[0], 0)
+
     def test_check_parses_all_changed_markdown_in_one_node_call(self):
         for name in ("a", "b", "c"):
             (self.root / f"{name}.md").write_text(mark(name.upper()) + " " + mark("prose") + "\n")

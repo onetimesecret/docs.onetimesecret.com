@@ -12,6 +12,7 @@ from pathlib import Path
 import subprocess
 import sys
 import tempfile
+import unicodedata
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "vendor/textprov/python"))
@@ -265,6 +266,18 @@ def has_ai_marks(text):
     return any(item.state == "ai" for item in clusters(text))
 
 
+def human_marks(text):
+    """Clusters carrying the human selector, which the docs renderer publishes raw.
+
+    The same code point after a CJK ideograph is a genuine ideographic
+    variation sequence, so those clusters are left alone.
+    """
+    return [
+        item for item in clusters(text) if item.state == "human"
+        and not (item.text and unicodedata.name(item.text[0], "").startswith("CJK "))
+    ]
+
+
 def check_repository(root, base, head=None, staged=False, require_marks=True):
     rules = policy(root)
     failed = checked = 0
@@ -296,6 +309,12 @@ def check_repository(root, base, head=None, staged=False, require_marks=True):
                 metadata = markdown_info([after])[0]
                 if metadata['textprov'] is not True:
                     problems.append((1, 1, 'AI-marked docs must opt in with textprov: true in frontmatter'))
+            if path.startswith('src/content/docs/'):
+                plain = textprov.strip_marks(after)
+                for item in human_marks(after):
+                    line = plain.count("\n", 0, item.start) + 1
+                    column = item.start - plain.rfind("\n", 0, item.start)
+                    problems.append((line, column, 'docs record AI edits only; a human mark is published as a raw selector'))
         except ValueError as error:
             raise ValueError(f"{path}: {error}") from error
         if problems:

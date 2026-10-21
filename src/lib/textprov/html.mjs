@@ -77,7 +77,7 @@ export function renderProvenance(html, { requireEnrollment = true, label } = {})
   const idMap = new Map();
   for (const id of ids) {
     const base = clean(id);
-    if (base === id) continue;
+    if (base === id || idMap.has(id)) continue;
     let value = base, suffix = 1;
     while (usedIds.has(value)) value = `${base}-${suffix++}`;
     // TOC links on this page are remapped, but links from other pages to
@@ -87,10 +87,9 @@ export function renderProvenance(html, { requireEnrollment = true, label } = {})
     idMap.set(id, value);
   }
   function visit(node, prose = false, blocked = false) {
+    if (blocked) return;
     const attrs = node.attrs ?? [];
     prose ||= attrs.some(a => a.name === 'class' && a.value.split(/\s+/).includes('sl-markdown-content'));
-    blocked ||= excluded.has(node.tagName);
-    if (blocked) return;
     if (node.nodeName === '#text' && candidate.test(node.value)) {
       const runs = aiRuns(node.value);
       // Any marker left after decoding is malformed, e.g. a legacy PUA code point
@@ -137,8 +136,9 @@ export function renderProvenance(html, { requireEnrollment = true, label } = {})
           `${attr.name}="${escape(plain).replaceAll('"', '&quot;')}"`]);
       }
     }
-    // Inert template contents (node.content) deliberately remain untouched.
-    for (const child of node.childNodes ?? []) visit(child, prose, blocked);
+    // An excluded element's own labels and IDs are cleaned above, but nothing
+    // inside it is. Inert template contents (node.content) remain untouched.
+    for (const child of node.childNodes ?? []) visit(child, prose, excluded.has(node.tagName));
   }
   visit(tree);
   for (const [start, end, value] of edits.sort((a, b) => b[0] - a[0])) html = html.slice(0, start) + value + html.slice(end);

@@ -1,7 +1,6 @@
 # Astro dev/build outputs
 .astro
 .serena
-.claude
 dist
 data
 
@@ -23,7 +22,6 @@ logs
 .fleet
 .idea
 .prompts
-.claude
 .crossnote
 .lycheecache
 billing.yaml
@@ -38,11 +36,9 @@ tmp
 !.env.example
 .ruby-version
 .commit_hash.txt
-CLAUDE.md
 
-# Shared agent instructions and the explicit Claude authoring command.
-!CLAUDE.md
-!.claude/
+# Shared agent instructions: of .claude/, only the explicit Claude authoring
+# command is tracked.
 .claude/*
 !.claude/commands/
 .claude/commands/*

@@ -70,6 +70,18 @@ describe('static TextProv HTML', () => {
     expect(doc.querySelector('p')?.textContent).toBe('Example');
   });
 
+  it('maps byte-identical marked IDs once instead of allocating a suffix', () => {
+    const marked = ai('topic');
+    const doc = new JSDOM(render(`<h2 id="${marked}">A</h2><h2 id="${marked}">B</h2>`)).window.document;
+    expect(Array.from(doc.querySelectorAll('h2'), h => h.id)).toEqual(['topic', 'topic']);
+  });
+
+  it('cleans an excluded element\'s own labels but nothing inside it', () => {
+    const sample = `<code title="${ai('Inner')}">${ai('x')}</code>`;
+    const result = render(`<pre aria-label="${ai('Code sample')}">${sample}</pre>`);
+    expect(result).toBe(`<pre aria-label="Code sample">${sample}</pre>`);
+  });
+
   it('remaps accessibility and label references when a decoded ID collides', () => {
     const marked = ai('topic');
     const html = `<h2 id="topic">Topic</h2><h2 id="${marked}">${ai('Topic')}</h2><label for="${marked}">Label</label><input aria-labelledby="${marked} topic" aria-controls="${marked}" data-private="${marked}">`;

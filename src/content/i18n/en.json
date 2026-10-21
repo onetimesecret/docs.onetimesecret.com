@@ -162,5 +162,7 @@
   "notFound.createTitle": "Create a Secret",
   "notFound.createDesc": "Use the application",
   "notFound.supportTitle": "Support",
-  "notFound.supportDesc": "Get help with any issues"
+  "notFound.supportDesc": "Get help with any issues",
+  "textprov.toggle": "TextProv · AI edits",
+  "textprov.help": "Highlights recorded AI agent edits. Unmarked content has no recorded origin."
 }
