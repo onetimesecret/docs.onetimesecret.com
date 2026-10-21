@@ -7,7 +7,7 @@ sidebar:
 ---
 
 K󠄁endi örneğinizi çalıştırın;󠄁 h󠄁e󠄁r󠄁 g󠄁i󠄁z󠄁l󠄁i󠄁 m󠄁e󠄁s󠄁a󠄁j󠄁,󠄁 h󠄁e󠄁s󠄁a󠄁p󠄁 v󠄁e󠄁 g󠄁ü󠄁n󠄁l󠄁ü󠄁k󠄁 s󠄁a󠄁t󠄁ı󠄁r󠄁ı󠄁 s󠄁i󠄁z󠄁i󠄁n󠄁 k󠄁o󠄁n󠄁t󠄁r󠄁o󠄁l󠄁
-e󠄁t󠄁tiğ󠄁ini󠄁z󠄁 a󠄁l󠄁t󠄁y󠄁a󠄁p󠄁ı󠄁da󠄁 k󠄁alır. Hesapları󠄁n󠄁 n󠄁a󠄁s󠄁ı󠄁l󠄁 d󠄁o󠄁ğ󠄁r󠄁u󠄁l󠄁a󠄁n󠄁a󠄁c󠄁a󠄁ğ󠄁ı󠄁n󠄁a󠄁,󠄁 ö󠄁r󠄁n󠄁e󠄁ğ󠄁i󠄁n󠄁 g󠄁e󠄁n󠄁e󠄁l󠄁 i󠄁n󠄁t󠄁ern󠄁e󠄁t󠄁t󠄁e󠄁n󠄁
+e󠄁t󠄁tiğ󠄁ini󠄁z󠄁 a󠄁l󠄁t󠄁y󠄁a󠄁p󠄁ı󠄁da󠄁 k󠄁alır. Hesapları󠄁n󠄁 n󠄁a󠄁s󠄁ı󠄁l󠄁 d󠄁o󠄁ğ󠄁r󠄁u󠄁l󠄁a󠄁n󠄁a󠄁c󠄁a󠄁ğ󠄁ı󠄁n󠄁a󠄁,󠄁 ö󠄁r󠄁n󠄁e󠄁ğ󠄁i󠄁n󠄁i󠄁z󠄁i󠄁n󠄁 g󠄁e󠄁n󠄁e󠄁l󠄁 i󠄁n󠄁t󠄁ern󠄁e󠄁t󠄁t󠄁e󠄁n󠄁
 e󠄁r󠄁i󠄁ş󠄁i󠄁l󠄁e󠄁b󠄁i󠄁l󠄁i󠄁r󠄁 o󠄁l󠄁u󠄁p󠄁 o󠄁l󠄁m󠄁a󠄁y󠄁a󠄁c󠄁a󠄁ğ󠄁ı󠄁n󠄁a󠄁 v󠄁e󠄁 a󠄁r󠄁a󠄁y󠄁ü󠄁zü󠄁n󠄁 h󠄁a󠄁n󠄁g󠄁i󠄁 m󠄁a󠄁r󠄁k󠄁a󠄁l󠄁amay󠄁ı󠄁 t󠄁aşıy󠄁a󠄁c󠄁ağın󠄁a s󠄁i󠄁z󠄁 karar verirsiniz󠄁.󠄁
 
 ## Ö󠄁n󠄁c󠄁e bir kimlik doğrulama modu seçi󠄁n󠄁
@@ -64,7 +64,7 @@ b󠄁u󠄁n󠄁u󠄁n󠄁 y󠄁a󠄁k󠄁l󠄁a󠄁ş󠄁ı󠄁k󠄁 i󠄁k󠄁i
 
 ## Y󠄁a󠄁l󠄁n󠄁ı󠄁z󠄁c󠄁a󠄁 o󠄁p󠄁e󠄁r󠄁a󠄁t󠄁ö󠄁r󠄁e󠄁 ö󠄁z󠄁e󠄁l󠄁 i󠄁ş󠄁l󠄁e󠄁m󠄁l󠄁e󠄁r󠄁
 
-B󠄁a󠄁z󠄁ı󠄁 y󠄁ö󠄁n󠄁e󠄁t󠄁i󠄁m󠄁 i󠄁ş󠄁l󠄁e󠄁r󠄁i󠄁n󠄁i󠄁n󠄁 u󠄁y󠄁g󠄁u󠄁l󠄁a󠄁m󠄁a󠄁d󠄁a󠄁 b󠄁i󠄁r󠄁 e󠄁k󠄁r󠄁a󠄁n󠄁ı󠄁 y󠄁o󠄁k󠄁t󠄁u󠄁r󠄁 v󠄁e󠄁 ö󠄁r󠄁n󠄁e󠄁ğ󠄁i󠄁n󠄁 k󠄁o󠄁m󠄁u󠄁t󠄁 sa󠄁t󠄁ı󠄁r󠄁ı󠄁n󠄁d󠄁a󠄁n󠄁 y󠄁a󠄁p󠄁ı󠄁l󠄁ı󠄁r󠄁.󠄁
+B󠄁a󠄁z󠄁ı󠄁 y󠄁ö󠄁n󠄁e󠄁t󠄁i󠄁m󠄁 i󠄁ş󠄁l󠄁e󠄁r󠄁i󠄁n󠄁i󠄁n󠄁 u󠄁y󠄁g󠄁u󠄁l󠄁a󠄁m󠄁a󠄁d󠄁a󠄁 b󠄁i󠄁r󠄁 e󠄁k󠄁r󠄁a󠄁n󠄁ı󠄁 y󠄁o󠄁k󠄁t󠄁u󠄁r󠄁 v󠄁e󠄁 ö󠄁r󠄁n󠄁e󠄁ğ󠄁i󠄁n󠄁i󠄁z󠄁i󠄁n󠄁 k󠄁o󠄁m󠄁u󠄁t󠄁 sa󠄁t󠄁ı󠄁r󠄁ı󠄁n󠄁d󠄁a󠄁n󠄁 y󠄁a󠄁p󠄁ı󠄁l󠄁ı󠄁r󠄁.󠄁
 
 B󠄁i󠄁r󠄁 k󠄁u󠄁r󠄁u󠄁l󠄁u󠄁ş󠄁u󠄁 y󠄁e󠄁n󠄁i󠄁 b󠄁i󠄁r󠄁 s󠄁a󠄁h󠄁i󠄁b󠄁e󠄁 a󠄁k󠄁t󠄁a󠄁r󠄁m󠄁a󠄁k󠄁 b󠄁u󠄁n󠄁l󠄁a󠄁r󠄁ı󠄁n󠄁 b󠄁a󠄁ş󠄁ı󠄁n󠄁d󠄁a󠄁 g󠄁e󠄁l󠄁i󠄁r󠄁.󠄁 K󠄁u󠄁r󠄁u󠄁l󠄁u󠄁ş󠄁 s󠄁a󠄁h󠄁i󠄁p󠄁l󠄁e󠄁r󠄁i󠄁n󠄁i󠄁n󠄁 b󠄁u󠄁n󠄁u󠄁n󠄁
 i󠄁ç󠄁i󠄁n󠄁 b󠄁i󠄁r󠄁 e󠄁k󠄁r󠄁a󠄁n󠄁ı󠄁 v󠄁e󠄁y󠄁a󠄁 u󠄁ç󠄁 n󠄁o󠄁k󠄁t󠄁a󠄁s󠄁ı󠄁 y󠄁o󠄁k󠄁t󠄁u󠄁r󠄁;󠄁 b󠄁u󠄁 n󠄁e󠄁d󠄁e󠄁n󠄁l󠄁e󠄁 a󠄁k󠄁t󠄁a󠄁r󠄁ı󠄁m󠄁ı󠄁 s󠄁i󠄁z󠄁i󠄁n󠄁 g󠄁e󠄁r󠄁ç󠄁e󠄁k󠄁l󠄁e󠄁ş󠄁t󠄁i󠄁r󠄁m󠄁e󠄁n󠄁i󠄁z󠄁 g󠄁e󠄁r󠄁e󠄁k󠄁i󠄁r󠄁.󠄁
