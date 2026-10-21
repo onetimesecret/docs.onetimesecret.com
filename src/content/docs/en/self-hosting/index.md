@@ -3,7 +3,7 @@ title: Self-Hosting Overview
 description: What running your own Onetime Secret instance involves, which authentication mode to pick first, and where the installation and operator instructions live.
 audience: operator
 pageType: concept
-sourceOfTruth: onetimesecret/etc/defaults/auth.defaults.yaml:6-8 (the authentication mode defaults to simple, which is Redis-only) and :36 (full mode's account database defaults to sqlite://data/auth.db — PostgreSQL is an option, not a requirement) and :32-33 (a SQLite file in a container must sit in a mounted volume directory); onetimesecret/docker/README.md:9-15 (the deployment stacks the project ships); onetimesecret/scripts/install-tests/run.sh:14-21,46-48 and onetimesecret/.github/workflows/installer.yml:47-65 (the clean-room install lanes cover Debian only); onetimesecret/etc/examples/puma.example.rb:38 and onetimesecret/Dockerfile:449 (the app binds plain HTTP and exposes one port — it never terminates TLS); onetimesecret/lib/onetime/cli/org/transfer_ownership_command.rb:14-17,19-21,23-32,66-78 (the ownership transfer command, its options and its automatic plan pass) and onetimesecret/lib/onetime/operations/org/transfer_ownership.rb:34-50,68-76,115-117 (the forced promote-then-demote ordering, the deliberate omissions, and the demotable roles); the hardware sizing figures below are maintainer confirmation of 2026-08-10 and have no repo source
+sourceOfTruth: onetimesecret/etc/defaults/auth.defaults.yaml:6-8 (the authentication mode defaults to simple, which is Redis-only) and :36 (full mode's account database defaults to sqlite://data/auth.db — PostgreSQL is an option, not a requirement) and :32-33 (a SQLite file in a container must sit in a mounted volume directory); onetimesecret/docker/README.md:9-15 (the deployment stacks the project ships); onetimesecret/scripts/install-tests/run.sh:14-21,46-48 and onetimesecret/.github/workflows/installer.yml:47-65 (the clean-room install lanes cover Debian only); onetimesecret/etc/examples/puma.example.rb:38 and onetimesecret/Dockerfile:449 (the app binds plain HTTP and exposes one port — it never terminates TLS); onetimesecret/lib/onetime/cli/org/transfer_ownership_command.rb:14-17,19-21,23-32,66-78 (the ownership transfer command, its options and its automatic plan pass) and onetimesecret/lib/onetime/operations/org/transfer_ownership.rb:34-50,68-76,115-117 (the forced promote-then-demote ordering, the deliberate omissions, and the demotable roles); onetimesecret/apps/api/colonel/routes.txt:94 and apps/api/colonel/logic/colonel/transfer_organization_ownership.rb:44-90 (the Colonel API transfer, which needs the colonel role and the organization name as confirmation and has no dry run); the hardware sizing figures below are maintainer confirmation of 2026-08-10 and have no repo source
 ---
 
 Run your own instance and every secret, account and log line stays on
@@ -70,9 +70,12 @@ scheduler needs roughly double that.
 Some administrative work has no screen in the application and is done from the
 instance's command line.
 
-Transferring an organization to a new owner is the main one. There is no REST
-endpoint for it, so the CLI is the only surface and the transfer is yours to
-perform.
+Transferring an organization to a new owner is the main one. Organization
+owners have no screen or endpoint for it, so the transfer is yours to perform.
+Use the command below. For automation, the Colonel API exposes the same
+operation at `POST /api/colonel/organizations/:org_id/transfer-ownership`; it
+requires the colonel role, takes the organization's name as confirmation, and
+applies immediately with no preview.
 
 ```bash
 bin/ots org transfer-ownership ORG NEW_OWNER
