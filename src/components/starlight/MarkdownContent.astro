@@ -1,47 +1,7 @@
 ---
 import Default from '@astrojs/starlight/components/MarkdownContent.astro';
+import TextProvControls from './TextProvControls.astro';
 const enrolled = Astro.locals.starlightRoute.entry.data.textprov === true;
 ---
-{enrolled && <div class="textprov-controls" data-textprov-document="true" data-pagefind-ignore>
-  <button type="button" data-textprov-toggle aria-pressed="false" aria-describedby="textprov-help" hidden>
-    TextProv · AI edits
-  </button>
-  <p id="textprov-help" class="textprov-help">Highlights recorded AI agent edits. Unmarked content has no recorded origin.</p>
-</div>}
+{enrolled && <TextProvControls />}
 <Default><slot /></Default>
-
-<script>
-  import { initTextProv } from '../../lib/textprov/display';
-  function init() {
-    let storage: Storage | undefined;
-    try { storage = window.localStorage; } catch { /* Private browsing may deny storage. */ }
-    initTextProv(document, storage);
-  }
-  init();
-  document.addEventListener('astro:page-load', init);
-</script>
-
-<style is:global>
-  .textprov-controls { margin-block-end: 1.5rem; }
-  .textprov-controls button {
-    color: var(--sl-color-text); background: var(--sl-color-bg);
-    border: 1px solid var(--sl-color-gray-4); border-radius: .35rem;
-    padding: .4rem .65rem; font: inherit; font-size: .875rem; cursor: pointer;
-  }
-  .textprov-controls button:focus-visible { outline: 2px solid var(--sl-color-text-accent); outline-offset: 3px; }
-  .textprov-controls button[aria-pressed="true"] { border-color: var(--sl-color-text-accent); }
-  .textprov-help {
-    position: absolute; width: 1px; height: 1px; overflow: hidden;
-    clip-path: inset(50%); white-space: nowrap; margin: 0; font-size: .875rem;
-  }
-  :root[data-textprov="shown"] .textprov-help {
-    position: static; width: auto; height: auto; overflow: visible;
-    clip-path: none; white-space: normal; margin-block: .5rem 0;
-  }
-  :root[data-textprov="shown"] .textprov-ai {
-    text-decoration-line: underline; text-decoration-style: wavy;
-    text-decoration-color: var(--sl-color-text-accent); text-underline-offset: .2em;
-    background: color-mix(in srgb, var(--sl-color-text-accent) 10%, transparent);
-  }
-  @media print { .textprov-controls { display: none; } .textprov-ai { text-decoration: none !important; background: none !important; } }
-</style>

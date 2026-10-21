@@ -12,6 +12,7 @@ from pathlib import Path
 import subprocess
 import sys
 import tempfile
+import unicodedata
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "vendor/textprov/python"))
@@ -88,18 +89,29 @@ def correspondence(old, new):
     return matches
 
 
+_MARKDOWN_INFO = {}
+
+
 def markdown_info(sources):
-    try:
-        result = subprocess.run(
-            ["node", str(ROOT / "tools/markdown-prose.mjs")],
-            input=json.dumps(sources), encoding="utf-8", capture_output=True, check=True,
-        )
-    except (OSError, subprocess.CalledProcessError) as error:
-        detail = getattr(error, "stderr", "") or str(error)
-        raise ValueError(
-            "Markdown parser unavailable or failed; run pnpm install.\n" + detail
-        ) from error
-    return json.loads(result.stdout)
+    """Parse sources with the Node bridge, caching results by source text.
+
+    A check reads each file several times; check_repository prefetches every
+    changed file in one call so a large diff costs one Node start, not hundreds.
+    """
+    missing = [source for source in dict.fromkeys(sources) if source not in _MARKDOWN_INFO]
+    if missing:
+        try:
+            result = subprocess.run(
+                ["node", str(ROOT / "tools/markdown-prose.mjs")],
+                input=json.dumps(missing), encoding="utf-8", capture_output=True, check=True,
+            )
+        except (OSError, subprocess.CalledProcessError) as error:
+            detail = getattr(error, "stderr", "") or str(error)
+            raise ValueError(
+                "Markdown parser unavailable or failed; run pnpm install.\n" + detail
+            ) from error
+        _MARKDOWN_INFO.update(zip(missing, json.loads(result.stdout)))
+    return [_MARKDOWN_INFO[source] for source in sources]
 
 
 def eligible_offsets(path, source):
@@ -217,6 +229,7 @@ def policy(root):
 
 
 def included(path, rules):
+    # fnmatch, not glob: "*" also matches "/", so docs/*.md covers every depth.
     return any(fnmatch.fnmatchcase(path, pattern) for pattern in rules["include"]) and not any(
         fnmatch.fnmatchcase(path, pattern) for pattern in rules["exclude"]
     )
@@ -234,7 +247,9 @@ def changed_files(root, base, head=None, staged=False):
     for status in records:
         path = next(records)
         old_path = path
-        if status.startswith("R"):
+        # Renames and copies carry source and destination. --find-renames
+        # overrides diff.renames=copies, but a C record must not desync parsing.
+        if status.startswith(("R", "C")):
             path = next(records)
         if status == "D":
             continue
@@ -246,13 +261,30 @@ def changed_files(root, base, head=None, staged=False):
     return result
 
 
+def has_ai_marks(text):
+    """True for a cluster in either AI encoding: the selector or legacy PUA."""
+    return any(item.state == "ai" for item in clusters(text))
+
+
+def human_marks(text):
+    """Clusters carrying the human selector, which the docs renderer publishes raw.
+
+    The same code point after a CJK ideograph is a genuine ideographic
+    variation sequence, so those clusters are left alone.
+    """
+    return [
+        item for item in clusters(text) if item.state == "human"
+        and not (item.text and unicodedata.name(item.text[0], "").startswith("CJK "))
+    ]
+
+
 def check_repository(root, base, head=None, staged=False, require_marks=True):
     rules = policy(root)
     failed = checked = 0
+    files = []
     for old_path, path in changed_files(root, base, head, staged):
         if not included(path, rules):
             continue
-        checked += 1
         before = git(root, "show", f"{base}:{old_path}").decode("utf-8") if old_path else ""
         if head or staged:
             after = git(root, "show", f"{head or ''}:{path}").decode("utf-8")
@@ -260,11 +292,31 @@ def check_repository(root, base, head=None, staged=False, require_marks=True):
             if (root / path).is_symlink():
                 raise ValueError(f"refusing to follow symlink: {path}")
             after = read_text(root / path)
-        problems = check_text(Path(path), before, after, require_marks=require_marks)
-        if path.startswith('src/content/docs/') and chr(MAPPING.selectors['ai']) in after:
-            metadata = markdown_info([after])[0]
-            if metadata['textprov'] is not True:
-                problems.append((1, 1, 'AI-marked docs must opt in with textprov: true in frontmatter'))
+        files.append((path, before, after))
+    # Parse every changed Markdown file in one Node call; check_text reads the cache.
+    try:
+        markdown_info([
+            source for path, _, after in files if Path(path).suffix.lower() in (".md", ".mdoc")
+            for source in (after, textprov.strip_marks(after))
+        ])
+    except ValueError:
+        pass  # Parse file by file below, so the error names the failing file.
+    for path, before, after in files:
+        checked += 1
+        try:
+            problems = check_text(Path(path), before, after, require_marks=require_marks)
+            if path.startswith('src/content/docs/') and has_ai_marks(after):
+                metadata = markdown_info([after])[0]
+                if metadata['textprov'] is not True:
+                    problems.append((1, 1, 'AI-marked docs must opt in with textprov: true in frontmatter'))
+            if path.startswith('src/content/docs/'):
+                plain = textprov.strip_marks(after)
+                for item in human_marks(after):
+                    line = plain.count("\n", 0, item.start) + 1
+                    column = item.start - plain.rfind("\n", 0, item.start)
+                    problems.append((line, column, 'docs record AI edits only; a human mark is published as a raw selector'))
+        except ValueError as error:
+            raise ValueError(f"{path}: {error}") from error
         if problems:
             failed += 1
             for line, column, message in problems[:8]:
@@ -293,6 +345,7 @@ def write_atomic(path, text):
         try:
             stream.write(text)
             stream.flush()
+            os.fsync(stream.fileno())
             os.chmod(temporary, mode)
             os.replace(temporary, path)
         finally:

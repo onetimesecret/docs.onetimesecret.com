@@ -9,16 +9,20 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { brotliDecompressSync } from 'node:zlib';
-import { describe, expect, it } from 'vitest';
+import { beforeAll, describe, expect, it } from 'vitest';
+import textprov from '../../vendor/textprov/textprov.cjs';
 
-const VS18 = 0xe0101; // AI-generated marker, follows the base character.
+const VS18 = textprov.mapping.selectors.ai; // AI-generated marker, follows the base character.
 const PUA_B = 0x100000; // AI-generated form: U+100000 + base code point.
 
 const range = (start: number, end: number) =>
   Array.from({ length: end - start + 1 }, (_, i) => start + i);
 
-// Printable Latin-1 less the soft hyphen, as documented in font-face.css.
-const COVERED = [...range(0x21, 0x7e), ...range(0xa1, 0xff).filter((cp) => cp !== 0xad)];
+// The decoder's PUA registry: printable Latin-1 less the soft hyphen, as
+// documented in font-face.css.
+const COVERED: number[] = textprov.mapping.puaRanges.flatMap(
+  ([start, end]: [number, number]) => range(start - PUA_B, end - PUA_B)
+);
 
 const hex = (cp: number) => `U+${cp.toString(16).toUpperCase().padStart(4, '0')}`;
 
@@ -114,8 +118,19 @@ describe('provenance (P+) webfonts', () => {
   });
 
   describe.each(fonts)('%s', (font) => {
-    const { glyphs, variants } = parseCmap(readCmap(readFileSync(join(dir, font))));
-    const marked = variants.get(VS18) ?? new Map<number, number>();
+    // Parse in a hook so a corrupt font fails its tests rather than collection.
+    let glyphs: Map<number, number>;
+    let variants: Map<number, Map<number, number>>;
+    let marked: Map<number, number>;
+    beforeAll(() => {
+      ({ glyphs, variants } = parseCmap(readCmap(readFileSync(join(dir, font)))));
+      marked = variants.get(VS18) ?? new Map<number, number>();
+    });
+
+    it('has a format 12 cmap and a U+E0101 variation selector record', () => {
+      expect(glyphs.size).toBeGreaterThan(0);
+      expect(variants.has(VS18)).toBe(true);
+    });
 
     it('maps <char, U+E0101> to a marked glyph distinct from the plain one', () => {
       const unmarked = COVERED.filter((cp) => !marked.has(cp) || marked.get(cp) === glyphs.get(cp));

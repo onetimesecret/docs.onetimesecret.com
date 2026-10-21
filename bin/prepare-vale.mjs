@@ -13,7 +13,13 @@ async function visit(directory) {
     if (entry.isDirectory()) await visit(path);
     else if (/\.(md|mdoc)$/.test(entry.name)) {
       const source = await readFile(path, 'utf8');
-      if (frontmatter(source)?.textprov === true) await writeFile(path, clean(source));
+      let enrolled;
+      try { enrolled = frontmatter(source)?.textprov === true; } catch (error) {
+        // Vale is report-only; one unparseable file must not fail the workflow.
+        console.warn(`prepare-vale: skipping ${path}: ${error.message}`);
+        continue;
+      }
+      if (enrolled) await writeFile(path, clean(source));
     }
   }
 }

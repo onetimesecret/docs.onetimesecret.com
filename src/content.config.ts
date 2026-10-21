@@ -86,6 +86,9 @@ export const collections = {
         "notFound.createDesc": z.string().optional(),
         "notFound.supportTitle": z.string().optional(),
         "notFound.supportDesc": z.string().optional(),
+        // TextProv toggle (TextProvControls.astro), English fallback per key.
+        "textprov.toggle": z.string().optional(),
+        "textprov.help": z.string().optional(),
       }),
     }),
   }),
