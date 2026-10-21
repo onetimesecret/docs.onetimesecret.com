@@ -25,7 +25,7 @@ Onetime Secret, hassas bilgileri gelen kutularında, sohbet kayıtlarında veya 
 
 - **[İlkelerimiz](/en/security/our-principles)** — Ö󠄁n󠄁c󠄁e󠄁 Gizlilik, İletişim ve Veri m󠄁inimizasyonu.
 - **[Verilerin󠄁i󠄁z󠄁i󠄁n󠄁 b󠄁u󠄁l󠄁u󠄁n󠄁d󠄁u󠄁ğ󠄁u󠄁 y󠄁e󠄁r󠄁](/en/security/where-your-data-lives/)** — verilerinizin nerede işlenip saklanacağını seçin.
-- **[Kendi Sunucunuzda Barındırma](https://github.com/onetimesecret/onetimesecret)** — tam kontrol için Onetime Secret'i kendi altyapınızda çalıştırın.
+- **[Kendi s󠄁unucunuzda b󠄁arındırma](/tr/self-hosting/)** — tam kontrol için Onetime Secret'i kendi altyapınızda çalıştırın.
 
 ## Güvenlik s󠄁orunu b󠄁ildirme
 
