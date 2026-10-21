@@ -19,6 +19,14 @@
 # the onetimesecret PRs first, then this one. A red check here whose diff shows
 # the page ADDING content is almost always this, not a broken page.
 #
+# TRUST BOUNDARY. bin/envref is code checked out from
+# onetimesecret/onetimesecret@main, not from this repository, and uv installs
+# whatever that repo's lockfile names before running it. Anyone who can merge
+# to the app repo's main can therefore run code in this job. That is accepted
+# because the job has nothing worth taking: `contents: read` only, the app
+# checkout uses persist-credentials: false, and no secrets are exposed to it.
+# The worst case is a wrong verdict. Keep it that way: add no secrets here.
+#
 # The app side is currently two stacked PRs: the one that annotates
 # .env.reference, and the one that moves the generator into tools/envref/
 # behind bin/envref. This job invokes bin/envref, so it stays red until both
