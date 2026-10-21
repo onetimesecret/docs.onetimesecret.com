@@ -205,6 +205,11 @@ export function envSnippet(selections: Selections): string {
   const seen = new Set<string>(['SECRET']);
 
   for (const opt of OPTIONS) {
+    // The same gate generate() applies to the YAML: an option whose
+    // requirement is unmet has no effect, so it asks for no secrets either.
+    // Every gated option defaults off today, so this changes nothing yet; it
+    // keeps the two paths in agreement once one of them defaults on.
+    if (!requirementsMet(opt, selections)) continue;
     const value = selections[opt.key];
     for (const env of opt.env ?? []) {
       if (env.when !== undefined && env.when !== value) continue;
