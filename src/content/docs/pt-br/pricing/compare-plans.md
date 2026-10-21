@@ -27,7 +27,7 @@ description: "Compare nossos planos de compartilhamento seguro de mensagens conf
 | Pago | Não | Não | Sim | Sim |
 
 \* S󠄁e󠄁m󠄁 u󠄁m󠄁a󠄁 c󠄁o󠄁n󠄁t󠄁a󠄁,󠄁 v󠄁o󠄁c󠄁ê󠄁 p󠄁o󠄁d󠄁e󠄁 c󠄁r󠄁i󠄁a󠄁r󠄁,󠄁 r󠄁e󠄁v󠄁e󠄁l󠄁a󠄁r󠄁 e󠄁 q󠄁u󠄁e󠄁i󠄁m󠄁a󠄁r󠄁 m󠄁e󠄁n󠄁s󠄁a󠄁g󠄁e󠄁n󠄁s󠄁 c󠄁o󠄁n󠄁f󠄁i󠄁d󠄁e󠄁n󠄁c󠄁i󠄁a󠄁i󠄁s󠄁 p󠄁e󠄁l󠄁a󠄁 A󠄁P󠄁I󠄁.󠄁
-A󠄁 c󠄁r󠄁i󠄁a󠄁ç󠄁ã󠄁o󠄁 d󠄁e󠄁 m󠄁e󠄁n󠄁s󠄁a󠄁g󠄁e󠄁n󠄁s󠄁 c󠄁o󠄁n󠄁f󠄁i󠄁d󠄁e󠄁n󠄁c󠄁i󠄁a󠄁i󠄁s󠄁 é󠄁 l󠄁i󠄁m󠄁i󠄁t󠄁a󠄁d󠄁a󠄁 p󠄁o󠄁r󠄁 t󠄁a󠄁x󠄁a󠄁 p󠄁o󠄁r󠄁 e󠄁n󠄁d󠄁e󠄁r󠄁e󠄁ç󠄁o󠄁 d󠄁e󠄁 r󠄁e󠄁d󠄁e󠄁,󠄁 e󠄁 n󠄁ã󠄁o󠄁 h󠄁á󠄁 l󠄁i󠄁s󠄁t󠄁a󠄁 d󠄁a󠄁s󠄁
+A󠄁 c󠄁r󠄁i󠄁a󠄁ç󠄁ã󠄁o󠄁 d󠄁e󠄁 m󠄁e󠄁n󠄁s󠄁a󠄁g󠄁e󠄁n󠄁s󠄁 c󠄁o󠄁n󠄁f󠄁i󠄁d󠄁e󠄁n󠄁c󠄁i󠄁a󠄁i󠄁s󠄁 t󠄁e󠄁m󠄁 l󠄁i󠄁m󠄁i󠄁t󠄁e󠄁 d󠄁e󠄁 t󠄁a󠄁x󠄁a󠄁 p󠄁o󠄁r󠄁 e󠄁n󠄁d󠄁e󠄁r󠄁e󠄁ç󠄁o󠄁 d󠄁e󠄁 r󠄁e󠄁d󠄁e󠄁,󠄁 e󠄁 n󠄁ã󠄁o󠄁 h󠄁á󠄁 l󠄁i󠄁s󠄁t󠄁a󠄁 d󠄁a󠄁s󠄁
 s󠄁u󠄁a󠄁s󠄁 m󠄁e󠄁n󠄁s󠄁a󠄁g󠄁e󠄁n󠄁s󠄁 c󠄁o󠄁n󠄁f󠄁i󠄁d󠄁e󠄁n󠄁c󠄁i󠄁a󠄁i󠄁s󠄁,󠄁 d󠄁o󠄁m󠄁í󠄁n󠄁i󠄁o󠄁s󠄁 o󠄁u󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁ç󠄁õ󠄁e󠄁s󠄁.󠄁
 
 †󠄁 O Team Plus amplia o remetente de e-mail personalizado com um **domínio de remetente flexível**:󠄁
