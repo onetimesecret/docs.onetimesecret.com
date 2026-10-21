@@ -5,7 +5,7 @@ description: "Del beskedlinks fra en adresse, du selv ejer, f.eks. secrets.examp
 ---
 
 M󠄁ed et brugerdefineret domæne k󠄁a󠄁n din o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 d󠄁e󠄁l󠄁e󠄁 b󠄁e󠄁s󠄁k󠄁e󠄁d󠄁l󠄁i󠄁n󠄁k󠄁s󠄁 f󠄁r󠄁a󠄁 e󠄁n󠄁
-a󠄁d󠄁r󠄁e󠄁s󠄁s󠄁e󠄁,󠄁 I󠄁 s󠄁e󠄁l󠄁v󠄁 e󠄁j󠄁e󠄁r󠄁,󠄁 f󠄁.󠄁e󠄁k󠄁s󠄁.󠄁 `secrets.example.com`,󠄁 i󠄁 s󠄁t󠄁e󠄁d󠄁e󠄁t󠄁 f󠄁o󠄁r󠄁
+a󠄁d󠄁r󠄁e󠄁s󠄁s󠄁e󠄁,󠄁 d󠄁u󠄁 s󠄁e󠄁l󠄁v󠄁 e󠄁j󠄁e󠄁r󠄁,󠄁 f󠄁.󠄁e󠄁k󠄁s󠄁.󠄁 `secrets.example.com`,󠄁 i󠄁 s󠄁t󠄁e󠄁d󠄁e󠄁t󠄁 f󠄁o󠄁r󠄁
 `onetimesecret.com`.󠄁 E󠄁t󠄁 l󠄁i󠄁n󠄁k s󠄁e󠄁r󠄁 s󠄁å󠄁 s󠄁å󠄁d󠄁a󠄁n󠄁 u󠄁d󠄁:󠄁
 
 ```text
