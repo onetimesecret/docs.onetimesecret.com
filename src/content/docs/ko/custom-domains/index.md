@@ -19,7 +19,7 @@ https://secrets.example.com/secret/abc123
 |---|---|---|---|
 | 사󠄁용󠄁자󠄁 지󠄁정󠄁 도󠄁메󠄁인󠄁 | 1󠄁 | 무󠄁제󠄁한󠄁 | 무󠄁제󠄁한󠄁 |
 | [홈󠄁페󠄁이󠄁지󠄁 및󠄁 수󠄁신󠄁 비󠄁밀󠄁 메󠄁시󠄁지󠄁](/en/custom-domains/homepage-and-incoming) | ✅󠄁 | ✅󠄁 | ✅󠄁 |
-| [브󠄁랜󠄁딩󠄁](/ko/custom-domains/branding):󠄁 로󠄁고󠄁,󠄁 색󠄁상󠄁,󠄁 글󠄁꼴󠄁,󠄁 공󠄁개󠄁 안󠄁내󠄁 | —󠄁 | ✅󠄁 | ✅󠄁 |
+| [브󠄁랜󠄁딩󠄁](/ko/custom-domains/branding):󠄁 로󠄁고󠄁,󠄁 색󠄁상󠄁,󠄁 글󠄁꼴󠄁,󠄁 표󠄁시󠄁 안󠄁내󠄁 | —󠄁 | ✅󠄁 | ✅󠄁 |
 | [이󠄁메󠄁일󠄁 발󠄁신󠄁자󠄁](/en/custom-domains/email-sender):󠄁 사󠄁용󠄁자󠄁 지󠄁정󠄁 도󠄁메󠄁인󠄁의󠄁 주󠄁소󠄁 | —󠄁 | ✅󠄁 | ✅󠄁 |
 | 이󠄁메󠄁일󠄁 발󠄁신󠄁자󠄁:󠄁 모󠄁든󠄁 도󠄁메󠄁인󠄁의󠄁 주󠄁소󠄁 | —󠄁 | —󠄁 | ✅󠄁 |
 | [로󠄁그󠄁인󠄁 설󠄁정󠄁](/en/custom-domains/access-and-privacy) | —󠄁 | ✅󠄁 | ✅󠄁 |
@@ -39,7 +39,7 @@ https://secrets.example.com/secret/abc123
 ## 도󠄁메󠄁인󠄁이󠄁 서󠄁비󠄁스󠄁되󠄁는󠄁 위󠄁치󠄁
 
 도󠄁메󠄁인󠄁을󠄁 추󠄁가󠄁할󠄁 때󠄁 지󠄁역󠄁 선󠄁택󠄁은󠄁 없󠄁습󠄁니󠄁다󠄁.󠄁 도󠄁메󠄁인󠄁은󠄁 `eu.onetimesecret.com`과󠄁 같󠄁이 조󠄁직󠄁이 사용하는󠄁 지󠄁역󠄁 사󠄁이󠄁트󠄁에󠄁서󠄁 서󠄁비󠄁스󠄁되󠄁며󠄁,󠄁 거󠄁기󠄁서󠄁 공󠄁유󠄁된󠄁 비밀 메󠄁시󠄁지󠄁는󠄁 해󠄁당󠄁 지󠄁역󠄁에󠄁 저󠄁장󠄁됩󠄁니󠄁다󠄁.󠄁 사󠄁이󠄁트󠄁가󠄁 보󠄁여 주󠄁는 D󠄁N󠄁S󠄁 레󠄁코󠄁드󠄁는󠄁 도메인을 해󠄁당󠄁 지󠄁역󠄁의󠄁 서󠄁비󠄁스󠄁로 연󠄁결󠄁합󠄁니다. 다른󠄁 지역에서 도메인을 서󠄁비󠄁스󠄁하려면
-[사용자 지정 도메인 이전󠄁](/en/account/change-your-region#moving-a-custom-domain)과󠄁
+[사용자 지정 도메인 이전󠄁](/ko/account/change-your-region#사용자-지정-도메인-이전)과󠄁
 [데이터가󠄁 저󠄁장󠄁되󠄁는󠄁 위󠄁치󠄁](/en/security/where-your-data-lives)를 참조하세요.
 
 ## 도메인 설정

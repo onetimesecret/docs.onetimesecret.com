@@ -4,13 +4,13 @@ title: "클라이언트 라이브러리"
 description: "Ruby, Python, Perl, Java, C#, Go 등 Onetime Secret API에서 사용할 수 있는 클라이언트 라이브러리를 살펴봅니다."
 ---
 
-**공󠄁식󠄁 클󠄁라󠄁이󠄁언󠄁트󠄁는󠄁 [onetime-ruby](https://github.com/onetimesecret/onetime-ruby)** 입󠄁니󠄁다󠄁.󠄁
+**공󠄁식󠄁 클󠄁라󠄁이󠄁언󠄁트󠄁**는󠄁 [onetime-ruby](https://github.com/onetimesecret/onetime-ruby)입󠄁니󠄁다󠄁.󠄁
 이󠄁 클󠄁라󠄁이󠄁언󠄁트󠄁는󠄁 A󠄁P󠄁I󠄁 v󠄁1󠄁과󠄁 v󠄁2󠄁,󠄁 모󠄁든󠄁 [지󠄁역󠄁 도󠄁메󠄁인󠄁](/en/security/where-your-data-lives/),󠄁 그󠄁리󠄁고󠄁
 사󠄁용󠄁자󠄁 지󠄁정󠄁 기󠄁본󠄁 U󠄁R󠄁L󠄁을󠄁 지󠄁원󠄁합󠄁니󠄁다󠄁.󠄁
 
 이󠄁 페󠄁이󠄁지󠄁의󠄁 나󠄁머󠄁지󠄁 라󠄁이󠄁브󠄁러󠄁리󠄁는󠄁 모󠄁두󠄁 **커󠄁뮤󠄁니󠄁티󠄁에󠄁서󠄁 유󠄁지󠄁 관󠄁리󠄁**합󠄁니󠄁다󠄁.󠄁 대󠄁부󠄁분󠄁은󠄁
-A󠄁P󠄁I󠄁 v󠄁2󠄁와󠄁 지󠄁역󠄁 도󠄁메󠄁인󠄁이󠄁 도󠄁입󠄁되󠄁기󠄁 전󠄁에󠄁 만󠄁들󠄁어󠄁졌󠄁기󠄁 때󠄁문󠄁에󠄁 일󠄁반󠄁적󠄁으󠄁로󠄁 `onetimesecret.com`에󠄁
-대󠄁해󠄁 지󠄁원󠄁 종󠄁료󠄁된󠄁 v󠄁1󠄁 엔󠄁드󠄁포󠄁인󠄁트󠄁를󠄁 호󠄁출󠄁합󠄁니󠄁다󠄁.󠄁 각󠄁 항󠄁목󠄁의󠄁 상󠄁태󠄁 안󠄁내󠄁를󠄁 확󠄁인󠄁하󠄁고󠄁,󠄁 라󠄁이󠄁브󠄁러󠄁리󠄁에󠄁
+A󠄁P󠄁I󠄁 v󠄁2󠄁와󠄁 지󠄁역󠄁 도󠄁메󠄁인󠄁이󠄁 도󠄁입󠄁되󠄁기󠄁 전󠄁에󠄁 만󠄁들󠄁어󠄁졌󠄁기󠄁 때󠄁문󠄁에󠄁 일󠄁반󠄁적󠄁으󠄁로󠄁 `onetimesecret.com`의󠄁
+더󠄁 이󠄁상󠄁 권󠄁장󠄁되󠄁지󠄁 않󠄁는󠄁 v󠄁1󠄁 엔󠄁드󠄁포󠄁인󠄁트󠄁를󠄁 호󠄁출󠄁합󠄁니󠄁다󠄁.󠄁 각󠄁 항󠄁목󠄁의󠄁 상󠄁태󠄁 안󠄁내󠄁를󠄁 확󠄁인󠄁하󠄁고󠄁,󠄁 라󠄁이󠄁브󠄁러󠄁리󠄁에󠄁
 의󠄁존󠄁하󠄁기󠄁 전󠄁에󠄁 사󠄁용󠄁 중󠄁인󠄁 지󠄁역󠄁이󠄁나󠄁 자󠄁체󠄁 호󠄁스󠄁팅󠄁 인󠄁스󠄁턴󠄁스󠄁에󠄁서󠄁 실󠄁제󠄁로󠄁 동󠄁작󠄁하󠄁는󠄁지󠄁 검󠄁증󠄁하󠄁세󠄁요󠄁.󠄁
 
 | 언󠄁어󠄁 | 라󠄁이󠄁브󠄁러󠄁리󠄁 | 최󠄁근󠄁 활󠄁동󠄁¹󠄁 | 지󠄁역󠄁 /󠄁 사󠄁용󠄁자󠄁 지󠄁정󠄁 도󠄁메󠄁인󠄁 |
@@ -33,7 +33,7 @@ A󠄁P󠄁I󠄁 v󠄁2󠄁와󠄁 지󠄁역󠄁 도󠄁메󠄁인󠄁이󠄁 �
 
 [G󠄁i󠄁t󠄁H󠄁u󠄁b󠄁 페󠄁이󠄁지󠄁 o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁-󠄁r󠄁u󠄁b󠄁y󠄁](https://github.com/onetimesecret/onetime-ruby)
 작󠄁성󠄁자󠄁 [Delano](https://delanotes.com/) —󠄁 **공󠄁식󠄁 클󠄁라󠄁이󠄁언󠄁트󠄁**,󠄁 활󠄁발󠄁히󠄁 유󠄁지󠄁 관󠄁리󠄁 중󠄁
-(최󠄁근󠄁 커󠄁밋󠄁 2026󠄁-06).󠄁 A󠄁P󠄁I󠄁 v󠄁1󠄁(󠄁지󠄁원󠄁 종󠄁료󠄁)󠄁과󠄁 v󠄁2󠄁,󠄁 지󠄁역󠄁 도󠄁메󠄁인󠄁,󠄁 사󠄁용󠄁자󠄁 지󠄁정󠄁 기󠄁본󠄁 U󠄁R󠄁L󠄁을󠄁
+(최󠄁근󠄁 커󠄁밋󠄁 2026󠄁-06).󠄁 A󠄁P󠄁I󠄁 v󠄁1󠄁(󠄁더󠄁 이󠄁상󠄁 권󠄁장󠄁되󠄁지󠄁 않󠄁음󠄁)󠄁과󠄁 v󠄁2󠄁,󠄁 지󠄁역󠄁 도󠄁메󠄁인󠄁,󠄁 사󠄁용󠄁자󠄁 지󠄁정󠄁 기󠄁본󠄁 U󠄁R󠄁L󠄁을󠄁
 지󠄁원󠄁합󠄁니󠄁다󠄁.󠄁 R󠄁u󠄁b󠄁y󠄁 3󠄁.󠄁1󠄁 이󠄁상󠄁이󠄁 필󠄁요󠄁하󠄁며󠄁 런󠄁타󠄁임󠄁 의󠄁존󠄁성󠄁이󠄁 없󠄁습󠄁니󠄁다󠄁.󠄁
 
 ### 사용 예시
@@ -72,8 +72,8 @@ cli.create_link("secret") # return a link like https://onetimesecret.com/secret/
 
 [GitH󠄁ub 페󠄁이󠄁지󠄁 - py\_onetimesecret](https://github.com/utterstep/py_onetimesecret)
 작󠄁성󠄁자󠄁 [Vladislav Stepanov](https://github.com/utterstep) —󠄁 **유󠄁지󠄁 관󠄁리󠄁 중󠄁단󠄁** (최󠄁근󠄁
-커󠄁밋󠄁 2019󠄁,󠄁 아󠄁래󠄁 예󠄁시󠄁는󠄁 P󠄁y󠄁t󠄁h󠄁o󠄁n󠄁 2 코󠄁드󠄁입󠄁니󠄁다󠄁).󠄁 `onetimesecret.com`에󠄁 대󠄁해󠄁서󠄁만󠄁 지󠄁원󠄁 종󠄁료󠄁된󠄁
-v󠄁1󠄁 A󠄁P󠄁I󠄁를󠄁 사󠄁용󠄁합󠄁니󠄁다󠄁.󠄁
+커󠄁밋󠄁 2019󠄁,󠄁 아󠄁래󠄁 예󠄁시󠄁는󠄁 P󠄁y󠄁t󠄁h󠄁o󠄁n󠄁 2 코󠄁드󠄁입󠄁니󠄁다󠄁).󠄁 `onetimesecret.com`의󠄁 더󠄁 이󠄁상󠄁 권󠄁장󠄁되󠄁지󠄁 않󠄁는󠄁
+v󠄁1󠄁 A󠄁P󠄁I󠄁만󠄁 사󠄁용󠄁합󠄁니󠄁다󠄁.󠄁
 
 ### 사용 예시
 
@@ -159,7 +159,7 @@ assertEquals(generateResponse.getValue(), retrieveResponse.getValue());
 
 [GitH󠄁ub 페󠄁이󠄁지󠄁 - OneTimeSharp](https://github.com/utterstep/OneTimeSharp)
 작󠄁성󠄁자󠄁 [Vladislav Stepanov](https://github.com/utterstep) —󠄁 **유󠄁지󠄁 관󠄁리󠄁 중󠄁단󠄁** (최󠄁근󠄁
-커󠄁밋󠄁 2018󠄁-05).󠄁 `onetimesecret.com`에󠄁 대󠄁해󠄁서󠄁만󠄁 지󠄁원󠄁 종󠄁료󠄁된󠄁 v󠄁1󠄁 A󠄁P󠄁I󠄁를󠄁 사󠄁용󠄁합󠄁니󠄁다󠄁.󠄁
+커󠄁밋󠄁 2018󠄁-05).󠄁 `onetimesecret.com`의󠄁 더󠄁 이󠄁상󠄁 권󠄁장󠄁되󠄁지󠄁 않󠄁는󠄁 v󠄁1󠄁 A󠄁P󠄁I󠄁만󠄁 사󠄁용󠄁합󠄁니󠄁다󠄁.󠄁
 
 ### 사용 예시
 
