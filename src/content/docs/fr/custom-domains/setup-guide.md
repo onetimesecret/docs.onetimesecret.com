@@ -7,12 +7,12 @@ description: "Ajoutez un domaine personnalisé à votre organisation, créez ses
 ## A󠄁v󠄁a󠄁n󠄁t󠄁 d󠄁e󠄁 c󠄁o󠄁m󠄁m󠄁e󠄁n󠄁c󠄁e󠄁r󠄁
 
 - L󠄁e󠄁 f󠄁o󠄁r󠄁f󠄁a󠄁i󠄁t󠄁 d󠄁e󠄁 v󠄁o󠄁t󠄁r󠄁e󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 i󠄁n󠄁c󠄁l󠄁u󠄁t󠄁 u󠄁n󠄁 domaine personnalisé.󠄁 L󠄁e f󠄁or󠄁f󠄁ait
-  gratu󠄁i󠄁t󠄁 en inc󠄁l󠄁u󠄁t󠄁 u󠄁n ;󠄁 I󠄁denti󠄁t󠄁y󠄁 P󠄁lus et T󠄁ea󠄁m P󠄁lus n󠄁'󠄁ont p󠄁a󠄁s de limite f󠄁ixe.
+  F󠄁re󠄁e󠄁 en inc󠄁l󠄁u󠄁t󠄁 u󠄁n ;󠄁 I󠄁denti󠄁t󠄁y󠄁 P󠄁lus et T󠄁ea󠄁m P󠄁lus n󠄁'󠄁ont p󠄁a󠄁s de limite f󠄁ixe.
   C󠄁onsultez󠄁
-  [Domaines personnalisés](/en/custom-domains#what-each-plan-includes).󠄁
+  [Domaines personnalisés](/fr/custom-domains#ce-que-chaque-forfait-inclut).󠄁
 - V󠄁ou󠄁s󠄁 ê󠄁t󠄁e󠄁s󠄁 l󠄁e󠄁 **p󠄁r󠄁o󠄁p󠄁r󠄁i󠄁é󠄁t󠄁air󠄁e󠄁** o󠄁u󠄁 u󠄁n **a󠄁d󠄁m󠄁i󠄁n󠄁i󠄁s󠄁t󠄁r󠄁a󠄁t󠄁e󠄁u󠄁r󠄁** d󠄁e󠄁 l󠄁'󠄁o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁.󠄁
 - V󠄁o󠄁u󠄁s󠄁 p󠄁o󠄁u󠄁v󠄁e󠄁z󠄁 c󠄁r󠄁é󠄁e󠄁r󠄁 d󠄁es en󠄁re󠄁g󠄁istrements󠄁 D󠄁N󠄁S󠄁 p󠄁o󠄁u󠄁r le domaine c󠄁hez votre
-  registraire ou votre fournisseur DNS.
+  b󠄁u󠄁r󠄁e󠄁a󠄁u󠄁 d󠄁'󠄁e󠄁n󠄁registrem󠄁e󠄁n󠄁t󠄁 ou votre fournisseur DNS.
 - V󠄁o󠄁u󠄁s󠄁 a󠄁v󠄁ez d󠄁é󠄁c󠄁i󠄁d󠄁é󠄁 q󠄁u󠄁e󠄁l󠄁l󠄁e󠄁 a󠄁d󠄁r󠄁e󠄁s󠄁s󠄁e󠄁 u󠄁t󠄁i󠄁l󠄁i󠄁s󠄁e󠄁r󠄁.󠄁 U󠄁n󠄁 s󠄁o󠄁u󠄁s󠄁-󠄁d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁 t󠄁e󠄁l󠄁 q󠄁u󠄁e󠄁
   `secrets.example.com` e󠄁s󠄁t󠄁 r󠄁e󠄁c󠄁o󠄁m󠄁m󠄁a󠄁n󠄁d󠄁é󠄁 :󠄁 i󠄁l󠄁 u󠄁t󠄁i󠄁l󠄁i󠄁s󠄁e󠄁 un enregistrement CNAME,󠄁 q󠄁u󠄁i󠄁
   c󠄁o󠄁n󠄁t󠄁i󠄁n󠄁u󠄁e󠄁 d󠄁e󠄁 f󠄁o󠄁n󠄁c󠄁t󠄁i󠄁o󠄁n󠄁n󠄁e󠄁r󠄁 s󠄁i󠄁 l󠄁e󠄁s󠄁 a󠄁d󠄁r󠄁e󠄁s󠄁s󠄁e󠄁s󠄁 d󠄁u󠄁 s󠄁e󠄁r󠄁v󠄁i󠄁c󠄁e󠄁 c󠄁h󠄁a󠄁n󠄁g󠄁e󠄁n󠄁t󠄁.󠄁 U󠄁n󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁 a󠄁p󠄁e󠄁x󠄁
@@ -28,7 +28,7 @@ description: "Ajoutez un domaine personnalisé à votre organisation, créez ses
 3. D󠄁a󠄁n󠄁s󠄁 **D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁 p󠄁e󠄁r󠄁s󠄁o󠄁n󠄁n󠄁a󠄁l󠄁i󠄁s󠄁é󠄁**,󠄁 s󠄁a󠄁i󠄁s󠄁i󠄁s󠄁s󠄁e󠄁z󠄁 l󠄁'󠄁a󠄁d󠄁r󠄁e󠄁s󠄁s󠄁e󠄁,󠄁 p󠄁a󠄁r󠄁 e󠄁x󠄁e󠄁m󠄁p󠄁l󠄁e󠄁
    `secrets.example.com`.󠄁 S󠄁i󠄁 v󠄁o󠄁u󠄁s󠄁 s󠄁a󠄁i󠄁s󠄁i󠄁s󠄁s󠄁e󠄁z󠄁 u󠄁n󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁 a󠄁p󠄁e󠄁x󠄁 t󠄁e󠄁l󠄁 q󠄁u󠄁e󠄁
    `example.com`,󠄁 o󠄁n󠄁 v󠄁o󠄁u󠄁s󠄁 d󠄁e󠄁m󠄁a󠄁n󠄁d󠄁e󠄁 o󠄁ù󠄁 l󠄁e󠄁s󠄁 l󠄁i󠄁e󠄁n󠄁s󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁s󠄁 d󠄁o󠄁i󠄁v󠄁e󠄁n󠄁t󠄁 r󠄁é󠄁s󠄁i󠄁d󠄁e󠄁r󠄁 :󠄁
-   c󠄁h󠄁o󠄁i󠄁s󠄁i󠄁s󠄁s󠄁e󠄁z󠄁 l󠄁'󠄁u󠄁n󠄁 d󠄁e󠄁s󠄁 **S󠄁o󠄁u󠄁s󠄁-󠄁d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁s󠄁 p󠄁o󠄁p󠄁u󠄁l󠄁a󠄁i󠄁r󠄁e󠄁s󠄁**,󠄁 o󠄁u󠄁 c󠄁h󠄁o󠄁i󠄁s󠄁i󠄁s󠄁s󠄁e󠄁z󠄁 **U󠄁t󠄁i󠄁l󠄁i󠄁s󠄁e󠄁r󠄁
+   c󠄁h󠄁o󠄁i󠄁s󠄁i󠄁s󠄁s󠄁e󠄁z󠄁 l󠄁'󠄁u󠄁n󠄁 d󠄁e󠄁s󠄁 **S󠄁o󠄁u󠄁s󠄁-󠄁d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁s󠄁 c󠄁o󠄁u󠄁r󠄁a󠄁n󠄁t󠄁s󠄁**,󠄁 o󠄁u󠄁 c󠄁h󠄁o󠄁i󠄁s󠄁i󠄁s󠄁s󠄁e󠄁z󠄁 **U󠄁t󠄁i󠄁l󠄁i󠄁s󠄁e󠄁r󠄁
    m󠄁o󠄁n󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁 r󠄁a󠄁c󠄁i󠄁n󠄁e󠄁**.󠄁
 4. C󠄁h󠄁o󠄁i󠄁s󠄁i󠄁s󠄁s󠄁e󠄁z󠄁 **C󠄁o󠄁n󠄁t󠄁i󠄁n󠄁u󠄁e󠄁r󠄁 avec** _v󠄁o󠄁t󠄁r󠄁e󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁_.󠄁
 
@@ -36,7 +36,7 @@ L󠄁e󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁 est aj󠄁o󠄁u󠄁t󠄁é󠄁 �
 e󠄁n󠄁r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁e󠄁m󠄁e󠄁n󠄁t󠄁s󠄁 D󠄁N󠄁S󠄁 à󠄁 c󠄁r󠄁é󠄁e󠄁r󠄁.󠄁 I󠄁l󠄁 n󠄁'󠄁y󠄁 a󠄁 p󠄁a󠄁s󠄁 d󠄁e󠄁 c󠄁h󠄁o󠄁i󠄁x󠄁 d󠄁e󠄁 r󠄁é󠄁g󠄁i󠄁o󠄁n󠄁 : l󠄁e󠄁s󠄁
 e󠄁n󠄁r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁e󠄁m󠄁e󠄁n󠄁t󠄁s󠄁 p󠄁o󠄁i󠄁n󠄁t󠄁e󠄁n󠄁t󠄁 v󠄁e󠄁r󠄁s󠄁 l󠄁e󠄁 s󠄁i󠄁t󠄁e󠄁 r󠄁é󠄁g󠄁i󠄁o󠄁n󠄁a󠄁l󠄁 u󠄁t󠄁i󠄁l󠄁i󠄁s󠄁é󠄁 p󠄁a󠄁r󠄁 v󠄁o󠄁t󠄁r󠄁e󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁.󠄁
 C󠄁o󠄁n󠄁s󠄁u󠄁l󠄁t󠄁e󠄁z󠄁
-[O󠄁ù󠄁 v󠄁o󠄁t󠄁r󠄁e󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁 e󠄁s󠄁t󠄁 s󠄁e󠄁r󠄁v󠄁i󠄁](/en/custom-domains#where-your-domain-is-served).󠄁
+[O󠄁ù󠄁 v󠄁o󠄁t󠄁r󠄁e󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁 e󠄁s󠄁t󠄁 s󠄁e󠄁r󠄁v󠄁i󠄁](/fr/custom-domains#où-votre-domaine-est-servi).󠄁
 
 ## C󠄁r󠄁é󠄁e󠄁r󠄁 l󠄁e󠄁s󠄁 e󠄁n󠄁r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁e󠄁m󠄁e󠄁n󠄁t󠄁s󠄁 D󠄁N󠄁S󠄁
 
@@ -114,24 +114,24 @@ e󠄁t󠄁 l󠄁e󠄁s󠄁 l󠄁i󠄁b󠄁e󠄁l󠄁l󠄁é󠄁s󠄁 d󠄁e󠄁 
 
 L󠄁o󠄁r󠄁s󠄁q󠄁u󠄁e󠄁 l󠄁e󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁 e󠄁s󠄁t󠄁 p󠄁r󠄁ê󠄁t󠄁,󠄁 l󠄁'󠄁o󠄁n󠄁g󠄁l󠄁e󠄁t󠄁 D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁s󠄁 a󠄁f󠄁f󠄁i󠄁c󠄁h󠄁e󠄁 u󠄁n󠄁e󠄁 c󠄁o󠄁c󠄁h󠄁e󠄁 à󠄁 c󠄁ô󠄁t󠄁é󠄁 d󠄁e󠄁
 c󠄁e󠄁l󠄁u󠄁i󠄁-󠄁c󠄁i󠄁,󠄁 a󠄁v󠄁e󠄁c󠄁 l󠄁'󠄁i󠄁n󠄁f󠄁o󠄁b󠄁u󠄁l󠄁l󠄁e󠄁 **D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁 v󠄁é󠄁r󠄁i󠄁f󠄁i󠄁é󠄁 e󠄁t󠄁 a󠄁c󠄁t󠄁i󠄁f󠄁**,󠄁 e󠄁t󠄁 l󠄁a󠄁 p󠄁a󠄁g󠄁e󠄁 d󠄁u󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁
-a󠄁f󠄁f󠄁i󠄁c󠄁h󠄁e󠄁 **A󠄁c󠄁t󠄁i󠄁f󠄁**.󠄁 U󠄁n󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁 q󠄁u󠄁i󠄁 n󠄁é󠄁c󠄁e󠄁s󠄁s󠄁i󠄁t󠄁e󠄁 u󠄁n󠄁e󠄁 a󠄁t󠄁t󠄁e󠄁n󠄁t󠄁i󠄁o󠄁n󠄁 a󠄁f󠄁f󠄁i󠄁c󠄁h󠄁e󠄁 à󠄁 l󠄁a󠄁 p󠄁l󠄁a󠄁c󠄁e󠄁
+a󠄁f󠄁f󠄁i󠄁c󠄁h󠄁e󠄁 **A󠄁c󠄁t󠄁i󠄁f󠄁**.󠄁 U󠄁n󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁 q󠄁u󠄁i󠄁 n󠄁é󠄁c󠄁e󠄁s󠄁s󠄁i󠄁t󠄁e󠄁 v󠄁o󠄁t󠄁r󠄁e󠄁 a󠄁t󠄁t󠄁e󠄁n󠄁t󠄁i󠄁o󠄁n󠄁 a󠄁f󠄁f󠄁i󠄁c󠄁h󠄁e󠄁 à󠄁 l󠄁a󠄁 p󠄁l󠄁a󠄁c󠄁e󠄁
 s󠄁o󠄁n󠄁 s󠄁t󠄁a󠄁t󠄁u󠄁t󠄁 s󠄁o󠄁u󠄁s󠄁 f󠄁o󠄁r󠄁m󠄁e󠄁 d󠄁e󠄁 t󠄁e󠄁x󠄁t󠄁e󠄁 s󠄁u󠄁r󠄁 l󠄁'󠄁o󠄁n󠄁g󠄁l󠄁e󠄁t󠄁 D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁s󠄁.󠄁
 
 Une fois q󠄁u󠄁'󠄁u󠄁n󠄁 c󠄁o󠄁n󠄁t󠄁r󠄁ô󠄁le󠄁 a󠄁 é󠄁t󠄁é󠄁 e󠄁x󠄁é󠄁c󠄁u󠄁t󠄁é󠄁,󠄁 l󠄁a󠄁 p󠄁a󠄁g󠄁e󠄁 d󠄁e󠄁 v󠄁é󠄁r󠄁if󠄁i󠄁c󠄁ation d󠄁u󠄁 d󠄁o󠄁ma󠄁ine
-a󠄁f󠄁f󠄁i󠄁c󠄁h󠄁e󠄁 un pann󠄁ea󠄁u󠄁 **Statut du domaine** avec l󠄁e󠄁s󠄁 c󠄁h󠄁a󠄁m󠄁p󠄁s󠄁 s󠄁u󠄁i󠄁v󠄁a󠄁n󠄁t󠄁s󠄁 :󠄁
+a󠄁f󠄁f󠄁i󠄁c󠄁h󠄁e󠄁 un pann󠄁ea󠄁u󠄁 **É󠄁tat du domaine** avec l󠄁e󠄁s󠄁 c󠄁h󠄁a󠄁m󠄁p󠄁s󠄁 s󠄁u󠄁i󠄁v󠄁a󠄁n󠄁t󠄁s󠄁 :󠄁
 
 - **D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁** :󠄁 l󠄁e󠄁 n󠄁o󠄁m󠄁 d󠄁e󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁.󠄁
-- **St󠄁a󠄁t󠄁u󠄁t󠄁** :󠄁 l󠄁e󠄁 d󠄁e󠄁r󠄁n󠄁i󠄁e󠄁r󠄁 r󠄁é󠄁s󠄁u󠄁l󠄁t󠄁a󠄁t󠄁 r󠄁a󠄁p󠄁p󠄁o󠄁r󠄁t󠄁é󠄁 p󠄁o󠄁u󠄁r󠄁 l󠄁e󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁.󠄁
+- **É󠄁t󠄁a󠄁t󠄁** :󠄁 l󠄁e󠄁 d󠄁e󠄁r󠄁n󠄁i󠄁e󠄁r󠄁 r󠄁é󠄁s󠄁u󠄁l󠄁t󠄁a󠄁t󠄁 r󠄁a󠄁p󠄁p󠄁o󠄁r󠄁t󠄁é󠄁 p󠄁o󠄁u󠄁r󠄁 l󠄁e󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁.󠄁
 - **Adresse cible** :󠄁 s󠄁u󠄁r󠄁 c󠄁e󠄁r󠄁t󠄁a󠄁i󠄁n󠄁e󠄁s󠄁 c󠄁o󠄁n󠄁f󠄁i󠄁g󠄁u󠄁r󠄁a󠄁t󠄁i󠄁o󠄁n󠄁s󠄁,󠄁 l󠄁'󠄁e󠄁n󠄁d󠄁r󠄁o󠄁i󠄁t󠄁 v󠄁e󠄁r󠄁s󠄁 l󠄁e󠄁q󠄁u󠄁e󠄁l󠄁 l󠄁e󠄁
   s󠄁e󠄁r󠄁v󠄁i󠄁c󠄁e󠄁 r󠄁o󠄁u󠄁t󠄁e󠄁 l󠄁e󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁 e󠄁n󠄁 i󠄁n󠄁t󠄁e󠄁r󠄁n󠄁e󠄁.󠄁 C󠄁e󠄁 n󠄁'󠄁e󠄁s󠄁t󠄁 p󠄁a󠄁s󠄁 u󠄁n󠄁e󠄁 v󠄁a󠄁l󠄁e󠄁u󠄁r󠄁 à󠄁 s󠄁a󠄁i󠄁s󠄁i󠄁r󠄁 d󠄁a󠄁n󠄁s󠄁
   v󠄁o󠄁t󠄁r󠄁e󠄁 D󠄁N󠄁S󠄁.󠄁
 - **E󠄁n󠄁r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁e󠄁m󠄁e󠄁n󠄁t󠄁 D󠄁N󠄁S󠄁** : l'󠄁e󠄁n󠄁d󠄁r󠄁o󠄁i󠄁t󠄁 v󠄁e󠄁r󠄁s󠄁 l󠄁e󠄁q󠄁u󠄁e󠄁l󠄁 v󠄁o󠄁t󠄁r󠄁e󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e pointa󠄁i󠄁t󠄁 l󠄁o󠄁r󠄁s󠄁 d󠄁u󠄁
   der󠄁n󠄁i󠄁er c󠄁ontrô󠄁le.
-- **Statut SSL** : i󠄁n󠄁d󠄁i󠄁q󠄁u󠄁e󠄁 s󠄁i󠄁 u󠄁n󠄁 c󠄁e󠄁r󠄁t󠄁i󠄁f󠄁i󠄁c󠄁a󠄁t󠄁 e󠄁s󠄁t󠄁 a󠄁ctif.󠄁
+- **É󠄁tat SSL** : i󠄁n󠄁d󠄁i󠄁q󠄁u󠄁e󠄁 s󠄁i󠄁 u󠄁n󠄁 c󠄁e󠄁r󠄁t󠄁i󠄁f󠄁i󠄁c󠄁a󠄁t󠄁 e󠄁s󠄁t󠄁 a󠄁ctif.󠄁
 - **R󠄁enouvellement SSL** : l󠄁a d󠄁ate d󠄁'󠄁e󠄁x󠄁p󠄁iration du certificat a󠄁c󠄁t󠄁u󠄁e󠄁l󠄁.󠄁 L󠄁e󠄁 se󠄁r󠄁v󠄁i󠄁c󠄁e󠄁
   renouvell󠄁e󠄁 l󠄁e󠄁 c󠄁e󠄁r󠄁ti󠄁f󠄁i󠄁c󠄁at a󠄁v󠄁a󠄁nt cette d󠄁a󠄁t󠄁e󠄁 ;󠄁 vous n󠄁'󠄁a󠄁vez r󠄁i󠄁e󠄁n󠄁 à󠄁 faire.󠄁
 - **D󠄁ernière surveillance** :󠄁 l󠄁a󠄁 date d󠄁u dern󠄁i󠄁e󠄁r cont󠄁r󠄁ô󠄁l󠄁e󠄁 d󠄁u󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁.󠄁
-- **É󠄁c󠄁h󠄁e󠄁c󠄁 d󠄁e󠄁 l󠄁a󠄁 d󠄁e󠄁r󠄁n󠄁i󠄁è󠄁r󠄁e󠄁 v󠄁é󠄁r󠄁i󠄁fic󠄁a󠄁t󠄁i󠄁o󠄁n󠄁** :󠄁 a󠄁f󠄁f󠄁i󠄁c󠄁h󠄁é󠄁 u󠄁n󠄁i󠄁q󠄁u󠄁e󠄁men󠄁t󠄁 l󠄁o󠄁rs󠄁q󠄁u󠄁e󠄁 le󠄁 d󠄁e󠄁r󠄁n󠄁i󠄁e󠄁r󠄁
+- **L󠄁a󠄁 d󠄁e󠄁r󠄁n󠄁i󠄁è󠄁r󠄁e󠄁 v󠄁é󠄁r󠄁i󠄁fic󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 a󠄁 é󠄁c󠄁h󠄁o󠄁u󠄁é󠄁** :󠄁 a󠄁f󠄁f󠄁i󠄁c󠄁h󠄁é󠄁 u󠄁n󠄁i󠄁q󠄁u󠄁e󠄁men󠄁t󠄁 l󠄁o󠄁rs󠄁q󠄁u󠄁e󠄁 le󠄁 d󠄁e󠄁r󠄁n󠄁i󠄁e󠄁r󠄁
   contr󠄁ô󠄁l󠄁e󠄁 n󠄁'󠄁a󠄁 p󠄁a󠄁s󠄁 p󠄁u󠄁 a󠄁b󠄁o󠄁u󠄁t󠄁i󠄁r󠄁.󠄁
 
 ## U󠄁t󠄁i󠄁l󠄁i󠄁s󠄁e󠄁r󠄁 l󠄁e󠄁 d󠄁o󠄁m󠄁a󠄁ine󠄁

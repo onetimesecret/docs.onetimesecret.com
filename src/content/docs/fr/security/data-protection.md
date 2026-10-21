@@ -14,14 +14,14 @@ propre programme de conformité.
   Une fois qu'un secret est consulté — ou qu'il atteint son expiration — il est
   définitivement d󠄁é󠄁t󠄁r󠄁uit󠄁.
 - **L'expiration est intégrée.** Chaque secret a une durée de vie (configurable
-  dans les limites de votre plan) ; rien n'est destiné à durer indéfiniment.
+  dans les limites de votre f󠄁o󠄁r󠄁f󠄁ai󠄁t󠄁) ; rien n'est destiné à durer indéfiniment.
 - **Métadonnées minimales.** Conformément à notre principe de
   [Minimisation des données](/en/security/our-principles#data-minimization), nous visons à
   ne conserver que les métadonnées nécessaires au fonctionnement du service.
 
 ## Chiffrement
 
-Les secrets sont **chiffrés en transit et au repos** sur tous les plans. Le
+Les secrets sont **chiffrés en transit et au repos** sur tous les f󠄁o󠄁r󠄁f󠄁ai󠄁t󠄁s. Le
 transport est protégé par TLS, et pour les domaines personnalisés, nous gérons
 automatiquement l'émission et le renouvellement des certificats SSL/TLS.
 
@@ -50,7 +50,7 @@ remplace pas vos propres contrôles, politiques et examens juridiques.
   données. Dans la plupart des déploiements, vous agissez en tant que
   responsable du traitement et Onetime Secret en tant que sous-traitant pour
   les données limitées concernées.
-- **HIPAA.** Onetime Secret peut offrir un canal plus sûr que le courriel pour
+- **HIPAA.** Onetime Secret peut offrir un canal plus sûr que l'󠄁e-󠄁m󠄁a󠄁il pour
   échanger des identifiants d'accès initiaux, mais il doit être utilisé comme
   solution provisoire plutôt que comme système d'enregistrement permanent pour
   les informations de santé protégées (PHI). Associez-le à un système conforme
