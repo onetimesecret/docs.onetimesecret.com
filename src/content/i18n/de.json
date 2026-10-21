@@ -4,7 +4,7 @@
       "blog": "Blog",
       "guides": "Anleitungen",
       "rest-api": "API",
-      "self-hosting": "Selbst-Hosting"
+      "self-hosting": "Self-Hosting"
     },
     "ariaLabel": {
       "guides": "Anleitungen-Dokumentation",
@@ -25,7 +25,7 @@
     "customDomains": "Benutzerdefinierte Domains",
     "howItWorks": "Wie es funktioniert",
     "setupGuide": "Einrichtungsanleitung",
-    "brandGuide": "Markenrichtlinie",
+    "brandGuide": "Branding",
     "comparePlans": "Pläne vergleichen",
     "regions": "Regionen",
     "regionCA": "Kanada (CA)",
@@ -34,7 +34,7 @@
     "regionUK": "Vereinigtes Königreich (UK)",
     "regionUS": "Vereinigte Staaten (US)",
     "switchingRegions": "Region wechseln",
-    "selfHosting": "Selbst-Hosting",
+    "selfHosting": "Self-Hosting",
     "installationDeployment": "Installation & Bereitstellung",
     "configurationReference": "Konfigurationsreferenz",
     "environmentVariables": "Umgebungsvariablen",
@@ -51,7 +51,7 @@
     "retrieveSecrets": "Geheimnisse abrufen",
     "clientLibraries": "Client-Bibliotheken",
     "resources": "Ressourcen",
-    "securityBestPractices": "Sicherheits-Best-Practices",
+    "securityBestPractices": "Bewährte Sicherheitspraktiken",
     "securityTrust": "Sicherheit & Vertrauen",
     "dataProtection": "Datenschutz",
     "vulnerabilityDisclosure": "Meldung von Sicherheitslücken",
