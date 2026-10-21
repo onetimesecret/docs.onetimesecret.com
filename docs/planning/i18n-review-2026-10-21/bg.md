@@ -198,3 +198,50 @@ All other quoted labels match the shipped bg app at 145c1e7cfa:
 - [known] share/index.md empty-submission error has a trailing period; shipped bg «Не сте предоставили нищо за споделяне» has none (da-2).
 - [known] pricing/index.md "Self-Hosting Guide" link text vs the "Self-hosting overview" title (es-2). bg reproduces it as «Ръководството за самостоятелно хостване» vs «Преглед на самостоятелното хостване».
 - [known] Locale readers sent to /en/ for pages missing from the bg tree (fr-1).
+
+## Resolution (fix round, 2026-10-21)
+
+Fixed 42 of the 43 findings (5 major, 37 minor) and 4 of the 5 sidebar items. Skipped 1 finding and 1 sidebar item. Shipped labels were checked against `$APP/locales/content/bg` at 145c1e7cfa and their components (BrandLogoField.vue, BrandFaviconField.vue, ImageUploadModal.vue, DomainForm.vue, DomainHeader.vue via useDomainStatus.ts).
+
+| Commit | Subject |
+|---|---|
+| 51c8f94c | docs(i18n/bg): match branding labels to the shipped app |
+| 416efff5 | docs(i18n/bg): match add-domain labels to the shipped app |
+| 1c1a327b | docs(i18n/bg): match the Secret Activity label to the shipped app |
+| 17426e3e | docs(i18n/bg): correct mistranslations in three pages |
+| 42390f3d | docs(i18n/bg): use consistent terms for lifetime, branding and ticket |
+| 361519f9 | docs(i18n/bg): link to Bulgarian pages that exist |
+| 0f13a9c3 | docs(i18n/bg): fix fluency and typography |
+| b2103706 | docs(i18n/bg): align sidebar labels with page titles |
+
+Notes on the fixes:
+
+- account/change-your-region.md:77–78 had a third «срок на живот» that the finding did not list. It now reads «срок на валидност» like lines 74 and 80.
+- share/why-secret-links.md:47 now reads «евентуално изискваната ключова фраза» instead of the suggested «ключовата фраза, ако се изисква такава». The suggested reordering failed `dogfood.py check`; the meaning ("any required passphrase") is the same.
+- self-hosting/index.md:32 now reads «с един генериран ключ `SECRET`» before the English is clarified, because install/docker.md shows the generated value is the `SECRET` variable.
+- index.mdoc:37 now reads «официални и създадени от общността SDK». The suggested «официални SDK и такива от общността» failed `dogfood.py check`.
+- api/index.mdoc:4 now reads «официалните клиентски библиотеки и тези от общността».
+- The sidebar `brandGuide` label is «Брандиране», which mirrors the English sidebar label "Branding" rather than the full page title.
+- The three `/bg/` heading anchors were checked in the built `dist/bg/` pages: `какво-включва-всеки-план`, `къде-се-обслужва-домейнът-ви` and `преместване-на-потребителски-домейн`.
+
+### Skipped findings
+
+| Page:line | Finding | Reason |
+|---|---|---|
+| custom-domains/setup-guide.md:108 | «**Активен**» → «**Активна**» (`web.STATUS.active`) | `dogfood.py check` fails whenever this edit and the major line-29 fix («Използвай моя основен домейн») are both in the file. `correspondence()` treats the one deleted legacy «е» of «Активен» and the one inserted «е» of «основен» as a moved block, then reports "marked unchanged legacy text" at 29:25. Each edit passes alone, and 4 alternative wordings failed the same way. The label differs only in gender and is still findable. |
+| src/content/i18n/bg.json `regionNZ` | «Нова Зеландия (NZ)» vs «Аотеароа Нова Зеландия» | The key is missing from `en.json` and `config/sidebar.mjs` does not use it, so the value is never rendered. AGENTS.md says not to clean up unused keys in passing. |
+
+### Decisions needed
+
+- TextProv: `tools/dogfood.py` `correspondence()` pairs single-cluster gaps with the same text across distant lines (the `old_gaps`/`new_gaps` move heuristic). This blocks setup-guide.md:108. Either limit move pairing to blocks longer than one cluster, or have a human make the one-word edit «Активен» → «Активна».
+- English source: self-hosting/index.md "brings up an instance on port 3000 with one generated secret" (known de-1). bg now says «ключ `SECRET`». The English should say "a generated `SECRET` key" (or similar) so the locales stay aligned.
+- Docs glossary (bg) is silent on these terms. Proposed rows, all now consistent across the 17 bg pages: lifetime → «срок на валидност»; ticket → «тикет»; branding (feature) → «брандиране» («Марка» only for the Brand tab); workspace → «работно пространство»; audit logs → «одитни логове»; data residency → «резидентност на данните»; reverse proxy → «обратен прокси»; license key → «лицензионен ключ».
+- Docs glossary vs app: custom domain is «потребителски домейн» (docs glossary, add-domain field `web.domains.add.field_label`) vs «персонализиран домейн» (most other app domain strings, e.g. `web.domains.custom_domain`). Pick one upstream.
+- bg app strings (app repo):
+  - `web.branding.favicon_modal_hint` = «Favicon», but the English is a usage hint.
+  - `web.branding.favicon_field_hint` adds SVG.
+  - Button grammar is mixed: `web.branding.upload_logo` = «Качи лого» (imperative) vs `upload_favicon` = «Качване на икона» (verbal noun).
+  - Audit logs appear as both «Одитни логове» (`web.billing.features.audit_logs`) and «одитни журнали» (`web.organizations.audit.upgrade_prompt`).
+  - SSO appears as both «Единно влизане» and «Единично влизане (SSO)».
+- Sidebar bundle: `nav.ariaLabel.selfHosting` still reads «Документация за самостоятелен хостинг». The report did not flag it, so it was left as is; «самостоятелно хостване» would match the visible label.
+- «журнал» for "log" remains on api/index.mdoc:7 and self-hosting/index.md:9, 112 (the review marks it optional). Unifying it on «логове» would follow the app.
