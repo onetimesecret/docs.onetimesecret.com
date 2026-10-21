@@ -82,7 +82,8 @@ a󠄁p󠄁p󠄁l󠄁i󠄁e󠄁s󠄁 i󠄁m󠄁m󠄁e󠄁d󠄁i󠄁a󠄁t󠄁e�
 bin/ots org transfer-ownership ORG NEW_OWNER
 ```
 
-`ORG` is an organization extid or objid. `NEW_OWNER` is an email address, a
+`ORG` is t󠄁h󠄁e󠄁 organization'󠄁s󠄁 p󠄁u󠄁b󠄁l󠄁i󠄁c󠄁 I󠄁D󠄁 (󠄁`extid`,󠄁 t󠄁h󠄁e󠄁 I󠄁D󠄁 t󠄁h󠄁e󠄁 C󠄁L󠄁I󠄁 p󠄁r󠄁i󠄁n󠄁t󠄁s󠄁)󠄁 or i󠄁t󠄁s󠄁
+i󠄁n󠄁t󠄁e󠄁r󠄁n󠄁a󠄁l󠄁 I󠄁D󠄁 (󠄁`objid`)󠄁. `NEW_OWNER` is an email address, a
 customer extid, or a Rodauth account ID, and **they must already be an active
 member** — the command never creates a customer, so run
 `bin/ots memberships add ORG CUSTOMER` first if they are not.
