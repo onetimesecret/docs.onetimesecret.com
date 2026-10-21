@@ -1,6 +1,6 @@
 ---
 textprov: true
-title: "Overzicht self-hosting"
+title: "Overzicht zelf hosten"
 description: "Wat het draaien van je eigen Onetime Secret-instantie inhoudt, welke authenticatiemodus je als eerste kiest en waar de installatie- en beheerinstructies staan."
 sidebar:
   order: 1

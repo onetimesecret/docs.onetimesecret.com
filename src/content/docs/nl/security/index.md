@@ -1,7 +1,7 @@
 ---
 textprov: true
 title: "Beveiliging en vertrouwen"
-description: "Hoe Onetime Secret je berichten beschermt — het beveiligingsmodel, de omgang met gegevens, regionale dataresidentie en hoe je een kwetsbaarheid meldt."
+description: "Hoe Onetime Secret je berichten beschermt — het beveiligingsmodel, de omgang met gegevens, regionale gegevensresidentie en hoe je een kwetsbaarheid meldt."
 ---
 
 Onetime Secret bestaat om gevoelige informatie van de ene persoon naar de
@@ -36,7 +36,7 @@ doen en waar je de details vindt.
 
 - **[Onze principes](/en/security/our-principles)** — Privacy v󠄁o󠄁o󠄁ro󠄁p󠄁, Communicatie en Gegevensminimalisatie.
 - **[W󠄁a󠄁a󠄁r󠄁 j󠄁e󠄁 g󠄁e󠄁g󠄁e󠄁v󠄁e󠄁n󠄁s󠄁 s󠄁t󠄁a󠄁a󠄁n󠄁](/en/security/where-your-data-lives/)** — kies waar je gegevens worden verwerkt en opgeslagen.
-- **[Self-hosting](https://github.com/onetimesecret/onetimesecret)** — draai Onetime Secret op je eigen infrastructuur voor volledige controle.
+- **[Z󠄁elf hoste󠄁n](https://github.com/onetimesecret/onetimesecret)** — draai Onetime Secret op je eigen infrastructuur voor volledige controle.
 
 ## Een beveiligingsprobleem melden
 

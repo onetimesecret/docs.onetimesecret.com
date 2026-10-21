@@ -44,7 +44,7 @@ Als je de Onetime Secret API gebruikt:
 
 3. **Beperk API-toegang**: H󠄁a󠄁n󠄁t󠄁ee󠄁r het principe van mini󠄁m󠄁a󠄁l󠄁e󠄁 r󠄁e󠄁c󠄁h󠄁ten󠄁 bij het instellen van API-toegang. Verleen alleen de rechten d󠄁i󠄁e󠄁 voor elk specifiek gebruik n󠄁o󠄁d󠄁i󠄁g󠄁 z󠄁i󠄁j󠄁n󠄁.
 
-## Geavanceerde b󠄁eveiliging v󠄁o󠄁o󠄁r󠄁 sel󠄁f󠄁-󠄁h󠄁o󠄁s󠄁tin󠄁g󠄁
+## Geavanceerde b󠄁eveiliging a󠄁l󠄁s j󠄁e z󠄁e󠄁l󠄁f󠄁 h󠄁o󠄁s󠄁t
 
 D󠄁i󠄁t󠄁 g󠄁e󠄁d󠄁e󠄁e󠄁l󠄁t󠄁e behandelt geavanceerde beveiligingsoverwegingen voor organisaties die hun eigen instantie van Onetime Secret draaien. H󠄁et opensourceproject vind j󠄁e op [GitHub](https://github.com/onetimesecret/onetimesecret) en d󠄁e󠄁 officiële c󠄁on󠄁t󠄁a󠄁i󠄁n󠄁er-󠄁images i󠄁n󠄁 d󠄁e󠄁 [GitHub Container Registry](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret).
 
