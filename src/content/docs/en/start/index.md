@@ -17,27 +17,26 @@ without creating an account.
 
 ## Continue with your task
 
-The documentation is organised around what you're trying to do. Pick the one
-that fits.
+Choose a guide for what you want to do next.
 
 ### Share secrets
 
-- **[Send your first secret](/en/start/send-your-first-secret/)** — the core
-  action, end to end
+- **[Send your first secret](/en/start/send-your-first-secret/)** — create a link, send it,
+  and check its status
 - **[Sharing secrets](/en/share/)** — how one-time secret sharing works
 - **[Security best practices](/en/security/best-practices/)** — keep your
   shared secrets safe
 - **[Custom domains](/en/custom-domains/)** — use your own domain for secret
   sharing, starting with the [setup guide](/en/custom-domains/setup-guide/)
-- **[Glossary](/en/start/glossary/)** — what we mean by receipt, passphrase,
-  organization, and the other terms that get used loosely elsewhere
+- **[Glossary](/en/start/glossary/)** — definitions of receipt, passphrase,
+  organization, and other product terms
 
 ### Evaluate Onetime Secret
 
 - **[Why use secret links](/en/share/why-secret-links/)** — the problem
   one-time links solve
-- **[Use cases](/en/share/use-cases/)** — practical applications of Onetime
-  Secret in various scenarios
+- **[Use cases](/en/share/use-cases/)** — examples of sharing passwords and other
+  sensitive information
 - **[Hosted or self-hosted?](/en/start/hosted-or-self-hosted/)** — compare the
   hosted service with running your own instance
 - **[Where your data lives](/en/security/where-your-data-lives/)** — data

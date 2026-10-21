@@ -36,6 +36,7 @@ help you understand what has happened to a secret.
 | **Reveal / Revealed** | Revealing displays the content once and deletes the stored secret. A **Revealed** status means this has happened; the link can no longer reveal it again. |
 | **Burn / Burned** | Burning permanently destroys an unread secret from its receipt. If you set a passphrase, it is also required to burn the secret. A **Burned** status means the secret was destroyed this way. |
 | **Expire / Expired** | The secret's lifetime ended before it was revealed or burned. The content is no longer available. |
+| **Delete** | A general word for removing data. To delete an unread secret from its receipt, use **burn**. Deleting your account is a separate action; see [Closing your account](/en/account/close-your-account). |
 | **Orphaned** | The secret is no longer available, but its receipt has no recorded reveal, burn or expiry to explain why. |
 
 See [Your receipt](/en/share/your-receipt) for status details, or
@@ -55,6 +56,7 @@ unavailable secret.
 | Term | Meaning |
 |------|---------|
 | **Organization / Workspace** | A shared space for custom domains, members and organization settings. Both names refer to the same thing in Onetime Secret. See [Organizations](/en/organizations). |
+| **Team** | People using Onetime Secret together. Manage their access through organization membership and roles. **Team Plus** is a plan name; see [Compare plans](/en/pricing/compare-plans) for its features. |
 | **Owner** | The organization role with the broadest access, including billing and single sign-on settings. |
 | **Admin** | An organization role that can manage members, custom domains and other shared settings, with fewer permissions than an owner. |
 | **Member** | Someone who belongs to an organization. **Member** is also the role for using its resources without administering the organization. |

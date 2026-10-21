@@ -1,87 +1,91 @@
 ---
 title: Hosted or self-hosted?
-description: A decision guide for choosing between running Onetime Secret yourself and using the hosted service at onetimesecret.com — what each gives you, what each costs to operate, and when to switch.
+description: Choose between the hosted Onetime Secret service and running your own instance. Compare setup, infrastructure control, and maintenance responsibilities.
 audience: end-user
 pageType: concept
+sourceOfTruth: onetimesecret/etc/defaults/auth.defaults.yaml at 145c1e7cfa (simple authentication default and SQLite default for full mode); onetimesecret/etc/defaults/config.defaults.yaml at 145c1e7cfa (jobs.enabled controls queued background jobs); onetimesecret/docker/README.md at 145c1e7cfa (Compose stack services and RabbitMQ for queued jobs)
 ---
 
-There are two ways to run Onetime Secret: use the **hosted service** at
-[onetimesecret.com](https://onetimesecret.com), or **self-host** your own
-instance. Both run the same open-source application. The difference is who
-operates the infrastructure — and that one difference cascades into cost,
-compliance, and how much of your day the software asks for.
+You can use the **hosted service** at
+[onetimesecret.com](https://onetimesecret.com/), or **self-host** Onetime Secret
+on infrastructure you manage. Both use the open-source application. The main
+choice is who runs and maintains the service.
 
 ## The short answer
 
-- Use the **hosted service** if you want secure secret sharing to just work,
-  with no servers to run — and a regional deployment already satisfies your data
-  requirements.
-- **Self-host** if you need secrets to never leave infrastructure you control,
-  or you have compliance, air-gap, or deep-customization requirements the hosted
-  service can't meet.
+- Use the **hosted service** if you want to share secrets without running
+  servers and one of its [regions](/en/security/where-your-data-lives) meets
+  your data-location requirements. You can
+  [send a secret without an account](/en/start/send-your-first-secret).
+- **Self-host** if you need control over the infrastructure, network access,
+  or application configuration, and can maintain the service yourself.
 
-If you're unsure, start with the **hosted service**. There's nothing to
-provision, the data-protection guarantees are the same, and you can choose a
-[region](/en/security/where-your-data-lives) close to your users or your
-regulators. Self-hosting is
-always available later if your requirements grow.
+If you are trying Onetime Secret for the first time, the hosted service lets you
+start sharing immediately. You can choose to self-host later.
 
 ## What actually differs
 
 | | Hosted service | Self-hosted |
 |---|---|---|
-| Who runs the infrastructure | Onetime Secret | You |
-| Where secrets live | Our regional data centers (you choose the region) | Your own network and storage |
-| Setup effort | Sign up | Provision, configure, deploy, maintain |
-| Ongoing operations | None | Updates, backups, monitoring, uptime |
-| Plan features (branding, SSO, teams) | Via [paid plans](/en/pricing/compare-plans) | Configure yourself |
-| Encryption in transit and at rest | ✅ | ✅ |
-| Cost model | Free tier + subscriptions | Your infrastructure + your time |
+| Who runs the infrastructure | Onetime Secret | You or your organization |
+| Where secrets are stored | The hosted region you choose | Infrastructure you select and manage |
+| Setup effort | No account needed for basic sharing; sign up for account features | Install and configure the application and its dependencies |
+| Who maintains the service | Onetime Secret | You manage updates, backups, monitoring, and availability |
+| Features and access | Your organization's plan and your role determine access | You configure enabled features and access |
+| Transport security | HTTPS is managed for you | You configure HTTPS, usually through a reverse proxy |
+| Cost | Free sharing, with subscriptions for additional features | Infrastructure and maintenance time |
 
 ## Choosing the hosted service
 
-The hosted service is the right default for most people and most organizations.
-You get secure, expiring secret links with no infrastructure to run, and you can
-pick from five [data-center regions](/en/security/where-your-data-lives) — Canada, the EU, New Zealand,
-the UK, and the US — to keep data where you need it. Paid
-[plans](/en/pricing/compare-plans) layer on custom domains, branding, SSO, and
-team features without any of the operational burden.
+The hosted service provides secret sharing without infrastructure to maintain.
+Choose from five [regions](/en/security/where-your-data-lives): Canada, the EU,
+New Zealand, the UK, and the US. See [Compare plans](/en/pricing/compare-plans)
+for account features such as custom domains, branding, and single sign-on.
 
-The tradeoff: secrets transit and are stored on infrastructure we operate.
-They're encrypted in transit and at rest, and a chosen region keeps them within
-a specific jurisdiction — but if your requirement is that sensitive data must
-*never* touch a third party's systems, that's the line self-hosting exists to
-cross.
+Secrets are processed and stored on infrastructure we operate. Review
+[Data protection](/en/security/data-protection) and the available regions when
+deciding whether the hosted service meets your requirements.
 
 ## Choosing to self-host
 
-Self-hosting keeps every secret on infrastructure you control, start to finish.
-Choose it when that's a hard requirement — regulatory constraints, an air-gapped
-or internal-only network, data-residency rules a shared region can't satisfy, or
-customization that goes beyond what the hosted plans expose.
+Self-hosting lets you choose where to run the application and who can reach it.
+For example, you can restrict access to an internal network or configure the
+service for your organization's needs. You are responsible for securing the
+instance, configuring HTTPS, applying updates, managing backups, and monitoring
+availability.
 
-The cost is real and ongoing: you provision and secure the services, apply
-updates, run backups, and own uptime. Depending on the features you need, that's
-Redis alone (Simple mode) or Redis plus PostgreSQL and RabbitMQ (Full mode) —
-see [Simple or Full](/en/self-hosting/simple-or-full-auth) for that second decision, which only
-applies once you've chosen to self-host. Budget for the time, not just the
-servers.
+Choose an [authentication mode](/en/self-hosting/simple-or-full-auth) before
+installing:
+
+- **Simple mode** stores secrets and accounts in Valkey or Redis.
+- **Full mode** also uses a SQL database for authentication. SQLite is the
+  default; PostgreSQL is an option.
+
+RabbitMQ is needed when you enable queued background jobs; full authentication
+mode alone does not require it. The full Docker Compose stack includes RabbitMQ
+and additional services. See [Install with Docker](/en/install/docker) for the
+stack contents and setup requirements.
+
+Using the same application does not remove these operational responsibilities.
+The protection your instance provides also depends on its configuration and how
+you run it.
 
 ## Can you change your mind later?
 
-Yes, in both directions — because there is no data migration between them by
-design. Onetime Secret's [share-nothing architecture](/en/security/where-your-data-lives) means
-secrets are never transferred between deployments, and that includes moving
-between the hosted service and your own instance. Switching isn't a
-data-export; it's pointing new secrets at the new deployment going forward.
-Existing live secrets simply expire or are read where they were created.
+Yes. Start creating new secrets on the deployment you want to use. Existing
+secret links remain on the deployment where you created them, until they are
+revealed, burned, or expire. They are not transferred to the new deployment.
 
-For **paid hosted accounts**, subscription status is recognized across the
-hosted regions through Stripe, but it does not extend to a self-hosted instance
-— self-hosting is a separate deployment you operate and license yourself.
+Hosted regions have separate accounts. See
+[Changing your region](/en/account/change-your-region) for account, subscription,
+and custom-domain considerations when switching between them. A self-hosted
+instance is a separate deployment; a hosted subscription does not configure or
+maintain it for you.
 
 ## Next steps
 
-- Ready to self-host: [Self-Hosting Overview](/en/self-hosting/)
-- Staying hosted: [Compare plans](/en/pricing/compare-plans) and [where your data lives](/en/security/where-your-data-lives)
-- Already self-hosting: decide your [authentication mode](/en/self-hosting/simple-or-full-auth)
+- Try the service: [Send your first secret](/en/start/send-your-first-secret)
+- Compare hosted options: [Compare plans](/en/pricing/compare-plans) and
+  [Where your data lives](/en/security/where-your-data-lives)
+- Plan your own instance: [Self-hosting overview](/en/self-hosting/) and
+  [Simple or full authentication](/en/self-hosting/simple-or-full-auth)
