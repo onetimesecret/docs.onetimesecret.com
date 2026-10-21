@@ -28,7 +28,7 @@ A󠄁P󠄁I󠄁 v󠄁1󠄁 と󠄁 v󠄁2󠄁、󠄁す󠄁べ󠄁て󠄁の󠄁
 
 
 [G󠄁i󠄁t󠄁H󠄁u󠄁b󠄁 ペ󠄁ー󠄁ジ󠄁 o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁-󠄁r󠄁u󠄁b󠄁y󠄁](https://github.com/onetimesecret/onetime-ruby)
-作󠄁者󠄁:󠄁 [Delano](https://delanotes.com/) —󠄁 **公󠄁式󠄁ク󠄁ラ󠄁イ󠄁ア󠄁ン󠄁ト󠄁**。󠄁活󠄁発󠄁に󠄁保󠄁守󠄁さ󠄁れ󠄁て󠄁い󠄁ま󠄁す󠄁（󠄁最󠄁終󠄁コ󠄁ミ󠄁ッ󠄁ト󠄁 2026󠄁-06）󠄁。󠄁A󠄁P󠄁I󠄁 v󠄁1󠄁（󠄁非󠄁推󠄁奨󠄁）󠄁と󠄁 v󠄁2󠄁、󠄁リ󠄁ー󠄁ジ󠄁ョ󠄁ン󠄁ド󠄁メ󠄁イ󠄁ン󠄁、󠄁カ󠄁ス󠄁タ󠄁ム󠄁ベ󠄁ー󠄁ス󠄁U󠄁R󠄁L󠄁に󠄁対󠄁応󠄁。󠄁R󠄁u󠄁b󠄁y󠄁 3󠄁.󠄁1󠄁 以󠄁上󠄁が󠄁必󠄁要󠄁で󠄁、󠄁ラ󠄁ン󠄁タ󠄁イ󠄁ム󠄁依󠄁存󠄁関󠄁係󠄁は󠄁あ󠄁り󠄁ま󠄁せ󠄁ん󠄁。󠄁
+作󠄁者󠄁：󠄁[Delano](https://delanotes.com/) —󠄁 **公󠄁式󠄁ク󠄁ラ󠄁イ󠄁ア󠄁ン󠄁ト󠄁**。󠄁活󠄁発󠄁に󠄁保󠄁守󠄁さ󠄁れ󠄁て󠄁い󠄁ま󠄁す󠄁（󠄁最󠄁終󠄁コ󠄁ミ󠄁ッ󠄁ト󠄁 2026󠄁-06）󠄁。󠄁A󠄁P󠄁I󠄁 v󠄁1󠄁（󠄁非󠄁推󠄁奨󠄁）󠄁と󠄁 v󠄁2󠄁、󠄁リ󠄁ー󠄁ジ󠄁ョ󠄁ン󠄁ド󠄁メ󠄁イ󠄁ン󠄁、󠄁カ󠄁ス󠄁タ󠄁ム󠄁ベ󠄁ー󠄁ス󠄁U󠄁R󠄁L󠄁に󠄁対󠄁応󠄁。󠄁R󠄁u󠄁b󠄁y󠄁 3󠄁.󠄁1󠄁 以󠄁上󠄁が󠄁必󠄁要󠄁で󠄁、󠄁ラ󠄁ン󠄁タ󠄁イ󠄁ム󠄁依󠄁存󠄁関󠄁係󠄁は󠄁あ󠄁り󠄁ま󠄁せ󠄁ん󠄁。󠄁
 
 ### 使用例
 
@@ -52,7 +52,7 @@ puts ret['secret_key']
 
 
 [GitH󠄁ub ペ󠄁ー󠄁ジ󠄁 - onetimesecret-cli](https://github.com/slashpass/onetimesecret-cli)
-作󠄁者󠄁:󠄁 [slashpass](https://github.com/slashpass) —󠄁 コ󠄁ミ󠄁ュ󠄁ニ󠄁テ󠄁ィ󠄁に󠄁よ󠄁る󠄁保󠄁守󠄁（󠄁最󠄁終󠄁コ󠄁ミ󠄁ッ󠄁ト󠄁 2024󠄁-󠄁11󠄁）󠄁。󠄁リ󠄁ー󠄁ジ󠄁ョ󠄁ン󠄁オ󠄁プ󠄁シ󠄁ョ󠄁ン󠄁（󠄁`us` /󠄁 `eu`）󠄁に󠄁対󠄁応󠄁。󠄁
+作󠄁者󠄁：󠄁[slashpass](https://github.com/slashpass) —󠄁 コ󠄁ミ󠄁ュ󠄁ニ󠄁テ󠄁ィ󠄁に󠄁よ󠄁る󠄁保󠄁守󠄁（󠄁最󠄁終󠄁コ󠄁ミ󠄁ッ󠄁ト󠄁 2024󠄁-󠄁11󠄁）󠄁。󠄁リ󠄁ー󠄁ジ󠄁ョ󠄁ン󠄁オ󠄁プ󠄁シ󠄁ョ󠄁ン󠄁（󠄁`us` /󠄁 `eu`）󠄁に󠄁対󠄁応󠄁。󠄁
 
 ### 使用例
 
@@ -64,7 +64,7 @@ cli.create_link("secret") # return a link like https://onetimesecret.com/secret/
 ```
 
 [GitH󠄁ub ペ󠄁ー󠄁ジ󠄁 - py\_onetimesecret](https://github.com/utterstep/py_onetimesecret)
-作󠄁者󠄁:󠄁 [Vladislav Stepanov](https://github.com/utterstep) —󠄁 **保󠄁守󠄁さ󠄁れ󠄁て󠄁い󠄁ま󠄁せ󠄁ん󠄁**（󠄁最󠄁終󠄁コ󠄁ミ󠄁ッ󠄁ト󠄁 2019󠄁 年󠄁。󠄁以󠄁下󠄁の󠄁例󠄁は󠄁 P󠄁y󠄁t󠄁h󠄁o󠄁n󠄁 2 で󠄁す󠄁）󠄁。󠄁`onetimesecret.com` に󠄁対󠄁し󠄁て󠄁の󠄁み󠄁、󠄁非󠄁推󠄁奨󠄁の󠄁 v󠄁1󠄁 A󠄁P󠄁I󠄁 を󠄁使󠄁用󠄁し󠄁ま󠄁す󠄁。󠄁
+作󠄁者󠄁：󠄁[Vladislav Stepanov](https://github.com/utterstep) —󠄁 **保󠄁守󠄁さ󠄁れ󠄁て󠄁い󠄁ま󠄁せ󠄁ん󠄁**（󠄁最󠄁終󠄁コ󠄁ミ󠄁ッ󠄁ト󠄁 2019󠄁 年󠄁。󠄁以󠄁下󠄁の󠄁例󠄁は󠄁 P󠄁y󠄁t󠄁h󠄁o󠄁n󠄁 2 で󠄁す󠄁）󠄁。󠄁`onetimesecret.com` に󠄁対󠄁し󠄁て󠄁の󠄁み󠄁、󠄁非󠄁推󠄁奨󠄁の󠄁 v󠄁1󠄁 A󠄁P󠄁I󠄁 を󠄁使󠄁用󠄁し󠄁ま󠄁す󠄁。󠄁
 
 ### 使用例
 
@@ -85,7 +85,7 @@ print o.retrieve_secret(secret["secret_key"])
 
 
 [C󠄁P󠄁A󠄁N󠄁 の󠄁 Net::OneTimeSecret](https://metacpan.org/pod/Net::OneTimeSecret)
-作󠄁者󠄁:󠄁 [Kyle Dawkins](http://www.shoffle.com/) —󠄁 **保󠄁守󠄁さ󠄁れ󠄁て󠄁い󠄁ま󠄁せ󠄁ん󠄁**（󠄁最󠄁終󠄁リ󠄁リ󠄁ー󠄁ス󠄁 0󠄁.󠄁0󠄁4󠄁、󠄁2012-02󠄁）󠄁。󠄁A󠄁P󠄁I󠄁 v󠄁2󠄁 と󠄁リ󠄁ー󠄁ジ󠄁ョ󠄁ン󠄁ド󠄁メ󠄁イ󠄁ン󠄁よ󠄁り󠄁前󠄁に󠄁作󠄁ら󠄁れ󠄁た󠄁も󠄁の󠄁で󠄁す󠄁。󠄁
+作󠄁者󠄁：󠄁[Kyle Dawkins](http://www.shoffle.com/) —󠄁 **保󠄁守󠄁さ󠄁れ󠄁て󠄁い󠄁ま󠄁せ󠄁ん󠄁**（󠄁最󠄁終󠄁リ󠄁リ󠄁ー󠄁ス󠄁 0󠄁.󠄁0󠄁4󠄁、󠄁2012-02󠄁）󠄁。󠄁A󠄁P󠄁I󠄁 v󠄁2󠄁 と󠄁リ󠄁ー󠄁ジ󠄁ョ󠄁ン󠄁ド󠄁メ󠄁イ󠄁ン󠄁よ󠄁り󠄁前󠄁に󠄁作󠄁ら󠄁れ󠄁た󠄁も󠄁の󠄁で󠄁す󠄁。󠄁
 
 ### 使用例
 
@@ -116,7 +116,7 @@ printf( "%s\n", $secret->{value} );
 
 
 [GitH󠄁ub ペ󠄁ー󠄁ジ󠄁 - onetime-java](https://github.com/mpawlowski/onetime-java)
-作󠄁者󠄁:󠄁 [Marcin Pawlowski](https://github.com/mpawlowski) —󠄁 **保󠄁守󠄁さ󠄁れ󠄁て󠄁い󠄁ま󠄁せ󠄁ん󠄁**（󠄁最󠄁終󠄁コ󠄁ミ󠄁ッ󠄁ト󠄁 2014-06󠄁）󠄁。󠄁イ󠄁ン󠄁ス󠄁タ󠄁ン󠄁ス󠄁U󠄁R󠄁L󠄁を󠄁受󠄁け󠄁取󠄁る󠄁た󠄁め󠄁セ󠄁ル󠄁フ󠄁ホ󠄁ス󠄁ト󠄁環󠄁境󠄁で󠄁動󠄁作󠄁す󠄁る󠄁可󠄁能󠄁性󠄁は󠄁あ󠄁り󠄁ま󠄁す󠄁が󠄁、󠄁A󠄁P󠄁I󠄁 v󠄁2 よ󠄁り󠄁前󠄁に󠄁作󠄁ら󠄁れ󠄁た󠄁も󠄁の󠄁で󠄁す󠄁。󠄁
+作󠄁者󠄁：󠄁[Marcin Pawlowski](https://github.com/mpawlowski) —󠄁 **保󠄁守󠄁さ󠄁れ󠄁て󠄁い󠄁ま󠄁せ󠄁ん󠄁**（󠄁最󠄁終󠄁コ󠄁ミ󠄁ッ󠄁ト󠄁 2014-06󠄁）󠄁。󠄁イ󠄁ン󠄁ス󠄁タ󠄁ン󠄁ス󠄁U󠄁R󠄁L󠄁を󠄁受󠄁け󠄁取󠄁る󠄁た󠄁め󠄁セ󠄁ル󠄁フ󠄁ホ󠄁ス󠄁ト󠄁環󠄁境󠄁で󠄁動󠄁作󠄁す󠄁る󠄁可󠄁能󠄁性󠄁は󠄁あ󠄁り󠄁ま󠄁す󠄁が󠄁、󠄁A󠄁P󠄁I󠄁 v󠄁2 よ󠄁り󠄁前󠄁に󠄁作󠄁ら󠄁れ󠄁た󠄁も󠄁の󠄁で󠄁す󠄁。󠄁
 
 ### 使用例
 
@@ -146,7 +146,7 @@ assertEquals(generateResponse.getValue(), retrieveResponse.getValue());
 
 
 [GitH󠄁ub ペ󠄁ー󠄁ジ󠄁 - OneTimeSharp](https://github.com/utterstep/OneTimeSharp)
-作󠄁者󠄁:󠄁 [Vladislav Stepanov](https://github.com/utterstep) —󠄁 **保󠄁守󠄁さ󠄁れ󠄁て󠄁い󠄁ま󠄁せ󠄁ん󠄁**（󠄁最󠄁終󠄁コ󠄁ミ󠄁ッ󠄁ト󠄁 2018󠄁-05）󠄁。󠄁`onetimesecret.com` に󠄁対󠄁し󠄁て󠄁の󠄁み󠄁、󠄁非󠄁推󠄁奨󠄁の󠄁 v󠄁1󠄁 A󠄁P󠄁I󠄁 を󠄁使󠄁用󠄁し󠄁ま󠄁す󠄁。󠄁
+作󠄁者󠄁：󠄁[Vladislav Stepanov](https://github.com/utterstep) —󠄁 **保󠄁守󠄁さ󠄁れ󠄁て󠄁い󠄁ま󠄁せ󠄁ん󠄁**（󠄁最󠄁終󠄁コ󠄁ミ󠄁ッ󠄁ト󠄁 2018󠄁-05）󠄁。󠄁`onetimesecret.com` に󠄁対󠄁し󠄁て󠄁の󠄁み󠄁、󠄁非󠄁推󠄁奨󠄁の󠄁 v󠄁1󠄁 A󠄁P󠄁I󠄁 を󠄁使󠄁用󠄁し󠄁ま󠄁す󠄁。󠄁
 
 ### 使用例
 
@@ -181,7 +181,7 @@ class Test
 
 
 [GitH󠄁ub ペ󠄁ー󠄁ジ󠄁 - onetimesecret](https://github.com/corbaltcode/go-onetimesecret)
-作󠄁者󠄁:󠄁 [Corbalt](https://github.com/corbaltcode/) —󠄁 コ󠄁ミ󠄁ュ󠄁ニ󠄁テ󠄁ィ󠄁に󠄁よ󠄁る󠄁保󠄁守󠄁（󠄁最󠄁終󠄁コ󠄁ミ󠄁ッ󠄁ト󠄁 2026󠄁-05󠄁、󠄁`us.onetimesecret.com` ホ󠄁ス󠄁ト󠄁向󠄁け󠄁に󠄁更󠄁新󠄁済󠄁み󠄁）󠄁。󠄁C󠄁L󠄁I󠄁 を󠄁含󠄁み󠄁ま󠄁す󠄁。󠄁
+作󠄁者󠄁：󠄁[Corbalt](https://github.com/corbaltcode/) —󠄁 コ󠄁ミ󠄁ュ󠄁ニ󠄁テ󠄁ィ󠄁に󠄁よ󠄁る󠄁保󠄁守󠄁（󠄁最󠄁終󠄁コ󠄁ミ󠄁ッ󠄁ト󠄁 2026󠄁-05󠄁、󠄁`us.onetimesecret.com` ホ󠄁ス󠄁ト󠄁向󠄁け󠄁に󠄁更󠄁新󠄁済󠄁み󠄁）󠄁。󠄁C󠄁L󠄁I󠄁 を󠄁含󠄁み󠄁ま󠄁す󠄁。󠄁
 
 ### 使用例
 
@@ -232,7 +232,7 @@ flsdlaun6hwczqu9utmc0vts5xj9xu1
 
 
 [GitH󠄁ub ペ󠄁ー󠄁ジ󠄁](https://github.com/emdneto/otsgo)
-作󠄁者󠄁:󠄁 [Emídio Neto](https://github.com/emdneto) —󠄁 コ󠄁ミ󠄁ュ󠄁ニ󠄁テ󠄁ィ󠄁に󠄁よ󠄁る󠄁保󠄁守󠄁（󠄁最󠄁終󠄁リ󠄁リ󠄁ー󠄁ス󠄁 v󠄁1󠄁.󠄁1󠄁.󠄁0󠄁、󠄁2024-03󠄁）󠄁。󠄁リ󠄁ー󠄁ジ󠄁ョ󠄁ン󠄁ド󠄁メ󠄁イ󠄁ン󠄁へ󠄁の󠄁対󠄁応󠄁は󠄁記󠄁載󠄁さ󠄁れ󠄁て󠄁い󠄁ま󠄁せ󠄁ん󠄁。󠄁
+作󠄁者󠄁：󠄁[Emídio Neto](https://github.com/emdneto) —󠄁 コ󠄁ミ󠄁ュ󠄁ニ󠄁テ󠄁ィ󠄁に󠄁よ󠄁る󠄁保󠄁守󠄁（󠄁最󠄁終󠄁リ󠄁リ󠄁ー󠄁ス󠄁 v󠄁1󠄁.󠄁1󠄁.󠄁0󠄁、󠄁2024-03󠄁）󠄁。󠄁リ󠄁ー󠄁ジ󠄁ョ󠄁ン󠄁ド󠄁メ󠄁イ󠄁ン󠄁へ󠄁の󠄁対󠄁応󠄁は󠄁記󠄁載󠄁さ󠄁れ󠄁て󠄁い󠄁ま󠄁せ󠄁ん󠄁。󠄁
 
 ### 使用例
 
@@ -259,7 +259,7 @@ fmt.Println(response.Status)
 
 
 [GitH󠄁ub ペ󠄁ー󠄁ジ󠄁 - OneTimeSecret](https://github.com/chelnak/OneTimeSecret)
-作󠄁者󠄁:󠄁 [Craig Gumbley](https://www.helloitscraig.co.uk) —󠄁 **保󠄁守󠄁さ󠄁れ󠄁て󠄁い󠄁ま󠄁せ󠄁ん󠄁**（󠄁最󠄁終󠄁リ󠄁リ󠄁ー󠄁ス󠄁 202󠄁1-06󠄁）󠄁。󠄁カ󠄁ス󠄁タ󠄁ム󠄁 `-BaseUrl` に󠄁対󠄁応󠄁し󠄁て󠄁い󠄁る󠄁た󠄁め󠄁リ󠄁ー󠄁ジ󠄁ョ󠄁ン󠄁や󠄁セ󠄁ル󠄁フ󠄁ホ󠄁ス󠄁ト󠄁イ󠄁ン󠄁ス󠄁タ󠄁ン󠄁ス󠄁を󠄁指󠄁定󠄁で󠄁き󠄁ま󠄁す󠄁が󠄁、󠄁A󠄁P󠄁I󠄁 v󠄁2 よ󠄁り󠄁前󠄁に󠄁作󠄁ら󠄁れ󠄁た󠄁も󠄁の󠄁で󠄁す󠄁。󠄁
+作󠄁者󠄁：󠄁[Craig Gumbley](https://www.helloitscraig.co.uk) —󠄁 **保󠄁守󠄁さ󠄁れ󠄁て󠄁い󠄁ま󠄁せ󠄁ん󠄁**（󠄁最󠄁終󠄁リ󠄁リ󠄁ー󠄁ス󠄁 202󠄁1-06󠄁）󠄁。󠄁カ󠄁ス󠄁タ󠄁ム󠄁 `-BaseUrl` に󠄁対󠄁応󠄁し󠄁て󠄁い󠄁る󠄁た󠄁め󠄁リ󠄁ー󠄁ジ󠄁ョ󠄁ン󠄁や󠄁セ󠄁ル󠄁フ󠄁ホ󠄁ス󠄁ト󠄁イ󠄁ン󠄁ス󠄁タ󠄁ン󠄁ス󠄁を󠄁指󠄁定󠄁で󠄁き󠄁ま󠄁す󠄁が󠄁、󠄁A󠄁P󠄁I󠄁 v󠄁2 よ󠄁り󠄁前󠄁に󠄁作󠄁ら󠄁れ󠄁た󠄁も󠄁の󠄁で󠄁す󠄁。󠄁
 
 ### 使用例
 
@@ -286,7 +286,7 @@ Get-Command -Module OneTimeSecret | Select Name
 
 
 [GitH󠄁ub ペ󠄁ー󠄁ジ󠄁 - OneTimeSecret-bash](https://github.com/eengstrom/onetimesecret-bash)
-作󠄁者󠄁:󠄁 [Eric Engstrom](https://eengstrom.github.io/) —󠄁 **保󠄁守󠄁さ󠄁れ󠄁て󠄁い󠄁ま󠄁せ󠄁ん󠄁**（󠄁最󠄁終󠄁コ󠄁ミ󠄁ッ󠄁ト󠄁 202󠄁0󠄁-0󠄁5󠄁）󠄁。󠄁`ots_set_host` に󠄁よ󠄁る󠄁カ󠄁ス󠄁タ󠄁ム󠄁ホ󠄁ス󠄁ト󠄁に󠄁対󠄁応󠄁し󠄁て󠄁い󠄁ま󠄁す󠄁が󠄁、󠄁A󠄁P󠄁I󠄁 v󠄁2 と󠄁リ󠄁ー󠄁ジ󠄁ョ󠄁ン󠄁ド󠄁メ󠄁イ󠄁ン󠄁よ󠄁り󠄁前󠄁に󠄁作󠄁ら󠄁れ󠄁た󠄁も󠄁の󠄁で󠄁す󠄁。󠄁
+作󠄁者󠄁：󠄁[Eric Engstrom](https://eengstrom.github.io/) —󠄁 **保󠄁守󠄁さ󠄁れ󠄁て󠄁い󠄁ま󠄁せ󠄁ん󠄁**（󠄁最󠄁終󠄁コ󠄁ミ󠄁ッ󠄁ト󠄁 202󠄁0󠄁-0󠄁5󠄁）󠄁。󠄁`ots_set_host` に󠄁よ󠄁る󠄁カ󠄁ス󠄁タ󠄁ム󠄁ホ󠄁ス󠄁ト󠄁に󠄁対󠄁応󠄁し󠄁て󠄁い󠄁ま󠄁す󠄁が󠄁、󠄁A󠄁P󠄁I󠄁 v󠄁2 と󠄁リ󠄁ー󠄁ジ󠄁ョ󠄁ン󠄁ド󠄁メ󠄁イ󠄁ン󠄁よ󠄁り󠄁前󠄁に󠄁作󠄁ら󠄁れ󠄁た󠄁も󠄁の󠄁で󠄁す󠄁。󠄁
 
 ### スクリプテ󠄁ィ󠄁ン󠄁グ󠄁 API としての使用例
 
