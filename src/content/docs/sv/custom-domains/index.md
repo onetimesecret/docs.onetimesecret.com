@@ -5,7 +5,7 @@ description: "Dela hemliga länkar från en adress du äger, till exempel secret
 ---
 
 M󠄁e󠄁d󠄁 e󠄁n󠄁 a󠄁n󠄁p󠄁a󠄁s󠄁s󠄁a󠄁d󠄁 d󠄁o󠄁m󠄁ä󠄁n󠄁 k󠄁a󠄁n󠄁 d󠄁i󠄁n󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 d󠄁e󠄁l󠄁a󠄁 h󠄁e󠄁m󠄁l󠄁i󠄁g󠄁a󠄁 l󠄁ä󠄁n󠄁k󠄁a󠄁r󠄁 f󠄁r󠄁å󠄁n󠄁 e󠄁n󠄁 a󠄁d󠄁r󠄁e󠄁s󠄁s󠄁
-s󠄁o󠄁m󠄁 n󠄁i󠄁 ä󠄁g󠄁e󠄁r󠄁,󠄁 t󠄁i󠄁l󠄁l󠄁 e󠄁x󠄁e󠄁m󠄁p󠄁e󠄁l󠄁 `secrets.example.com`, i stället för
+s󠄁o󠄁m󠄁 d󠄁u󠄁 ä󠄁g󠄁e󠄁r󠄁,󠄁 t󠄁i󠄁l󠄁l󠄁 e󠄁x󠄁e󠄁m󠄁p󠄁e󠄁l󠄁 `secrets.example.com`, i stället för
 `onetimesecret.com`.󠄁 E󠄁n󠄁 l󠄁ä󠄁n󠄁k󠄁 s󠄁e󠄁r󠄁 d󠄁å󠄁 u󠄁t󠄁 s󠄁å󠄁 h󠄁ä󠄁r󠄁:󠄁
 
 ```text
