@@ -114,17 +114,18 @@
 			--hb-ash: #8b8580;
 			--hb-spark: #23b5dd;
 			position: absolute;
-			inset-block-start: 50%;
+			inset-block-start: -1.5rem;
 			inset-inline-end: 0;
-			width: min(34rem, 46%);
-			transform: translateY(-50%);
+			width: min(26rem, 42%);
 			opacity: 0.24;
 			pointer-events: none;
 			z-index: -1;
-			/* Fade the paper out under the hero copy; the burning edge and the
-			 * embers on the right stay at full strength. */
-			-webkit-mask-image: linear-gradient(to right, transparent 0%, #000 55%);
-			mask-image: linear-gradient(to right, transparent 0%, #000 55%);
+			/* Frame the upper-right of the title. Fade the lower edge before the
+			 * tagline and actions, and the left edge as it approaches the copy. */
+			-webkit-mask-image: linear-gradient(to right, transparent 0%, #000 55%), linear-gradient(to bottom, #000 40%, transparent 90%);
+			-webkit-mask-composite: source-in;
+			mask-image: linear-gradient(to right, transparent 0%, #000 55%), linear-gradient(to bottom, #000 40%, transparent 90%);
+			mask-composite: intersect;
 		}
 
 		:global([data-theme='light']) .hero-burn {
@@ -216,12 +217,12 @@
 			}
 		}
 
-		/* Below the two-column breakpoint the hero is narrow and the copy fills
-		 * it, so the decoration sits behind the actions at lower strength. */
+		/* On narrow screens, keep the smaller note above the title instead of
+		 * moving it behind the actions. */
 		@media (max-width: 50rem) {
 			.hero-burn {
-				width: 80%;
-				inset-inline-end: -22%;
+				width: min(18rem, 65%);
+				inset-block-start: -2.75rem;
 				opacity: 0.12;
 			}
 		}
