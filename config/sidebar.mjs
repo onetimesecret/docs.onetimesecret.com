@@ -269,6 +269,7 @@ export const sidebar = [
     "translations",
     [
       createLink("developerOnRamp", "contribute/developer-on-ramp"),
+      createLink("textProvenance", "contribute/text-provenance"),
       createLink("howTranslationsWork", "translations"),
       createLink("styleGuide", "translations/guide"),
       createLink("translationGlossary", "translations/glossary"),

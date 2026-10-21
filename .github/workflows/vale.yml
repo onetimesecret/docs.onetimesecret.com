@@ -33,6 +33,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
 
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 12.14.0
+          run_install: false
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24.22.0
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Decode recorded AI marks for prose linting
+        run: node bin/prepare-vale.mjs
+
       - name: Run Vale
         uses: errata-ai/vale-action@v3
         # Report-only (see header): findings must not fail the job, and neither

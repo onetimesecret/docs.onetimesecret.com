@@ -1,4 +1,5 @@
 ---
+textprov: true
 title: Developer on-ramp
 description: Where the code lives, how to run the documentation site locally, and the checks a change has to pass before it can be merged.
 audience: contributor
@@ -94,6 +95,7 @@ Not every contribution is a pull request:
 
 ## Related
 
+- [S󠄁e󠄁e󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁e󠄁d󠄁 A󠄁I󠄁 e󠄁d󠄁i󠄁t󠄁s󠄁 w󠄁i󠄁t󠄁h󠄁 T󠄁e󠄁x󠄁t󠄁P󠄁r󠄁o󠄁v󠄁](/en/contribute/text-provenance) —󠄁 t󠄁h󠄁e󠄁 d󠄁i󠄁s󠄁p󠄁l󠄁a󠄁y󠄁 a󠄁n󠄁d󠄁 a󠄁u󠄁t󠄁h󠄁o󠄁r󠄁i󠄁n󠄁g󠄁 w󠄁o󠄁r󠄁k󠄁f󠄁l󠄁o󠄁w󠄁.󠄁
 - [How translations work](/en/translations) — the translation contribution path.
 - [Style guide](/en/translations/guide) — the writing conventions these pages follow.
 - [Vulnerability disclosure](/en/security/vulnerability-disclosure) — the path for security reports.

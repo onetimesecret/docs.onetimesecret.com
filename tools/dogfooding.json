@@ -1,0 +1,6 @@
+{
+  "include": ["src/content/docs/*.md", "src/content/docs/*.mdoc"],
+  "exclude": {
+    "src/content/docs/*/self-hosting/environment-variables.md": "Generated environment reference is maintained from the upstream application."
+  }
+}

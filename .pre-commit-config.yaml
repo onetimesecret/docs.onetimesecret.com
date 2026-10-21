@@ -66,7 +66,9 @@ repos:
     hooks:
       # Formatting and basic sanitization
       - id: trailing-whitespace # Remove trailing whitespaces
+        exclude: ^(src/fonts/.*/(LICENSE|OFL\.txt)|vendor/textprov/)
       - id: end-of-file-fixer # Ensure files end with newline
+        exclude: ^(src/fonts/.*/(LICENSE|OFL\.txt)|vendor/textprov/)
       - id: check-merge-conflict # Detect unresolved merge conflicts
       - id: detect-private-key # Warn about committing private keys
       - id: check-added-large-files # Prevent committing oversized files
