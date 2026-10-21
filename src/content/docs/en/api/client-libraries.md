@@ -1,4 +1,5 @@
 ---
+textprov: true
 title: Client Libraries
 description: Explore the client libraries available for the Onetime Secret API, including Ruby, Python, Perl, Java, C#, Go, and more.
 audience: developer
@@ -147,7 +148,7 @@ GenerateResponse generateResponse = ots.generate(
 
 RetrieveResponse retrieveResponse = ots.retrieve(
                 new RetrieveRequest.Builder()
-                        .withSecretKey(shareResponse.getSecretKey())
+                        .withSecretKey(generateResponse.getSecretKey())
                         .withPassphrase("supersecret")
                         .build());
 
