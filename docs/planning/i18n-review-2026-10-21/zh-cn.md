@@ -169,3 +169,46 @@ These labels were checked and match the app: 域名, 管理, 功能, 管理品�
 
 - Rendering of the hard line breaks in api/client-libraries.md was not checked in a browser. Whether a space appears depends on the browser's CJK segment-break handling.
 - No build, `dogfood.py check` or link checker was run (review was read-only). Emphasis flanking was checked with a script against both the clean copies and the marked repo files, and no breaks were found. The CJK heading slugs suggested for the anchors (e.g. `#迁移自定义域名`) assume Starlight's default github-slugger behaviour and were not checked in built output.
+
+## Resolution (fix round, 2026-10-21)
+
+26 of 27 findings fixed, 1 skipped. Labels were checked against `$APP/locales/content/zh/*.json` at 145c1e7cfa. The corner and font options were confirmed as hard-coded English in `brand-helpers.ts:216-221,266-270` and `SimpleBrandPanel.vue:84-86,262`. Validation: `dogfood.py check --base b2883096` passes for 14 files, and `pnpm test` (175 tests), `check:frontmatter`, `check:nav` and `pnpm build` (1306 pages) all pass. In the built HTML, the three new zh-cn anchors (`#迁移自定义域名`, `#各方案包含的功能`, `#您的域名在哪里提供服务`) match the heading ids.
+
+| Commit | Subject |
+|---|---|
+| e592e4be | docs(i18n/zh-cn): match branding labels to the shipped app |
+| 0835fb63 | docs(i18n/zh-cn): match plan and expiry labels to the shipped app |
+| dc63d329 | docs(i18n/zh-cn): correct mistranslations in three pages |
+| fb5ccbeb | docs(i18n/zh-cn): use consistent terms for sign-in, SSO, beta and revoke |
+| cf9b831a | docs(i18n/zh-cn): fix register breaks |
+| a7d0db3e | docs(i18n/zh-cn): link to Simplified Chinese pages that exist |
+| 914fed37 | docs(i18n/zh-cn): fix fluency and typography |
+| 32359f16 | docs(i18n/zh-cn): align sidebar labels with page titles |
+
+Notes on fixes that differ from the suggested text:
+
+- branding.md: the bold favicon labels now use the app's lower-case «上传 favicon» / «保存 favicon» / «移除 favicon». The heading «设置语言和显示说明» and custom-domains/index.md:21 now say «显示说明» to match the renamed setting. The font gloss for System UI is «系统界面».
+- api/index.mdoc:45: «适用您方案的限制». 限制 is kept so it matches «匿名用户的限制» earlier in the same sentence. Line 62: «（查看后即失效）».
+- vulnerability-disclosure.md:28: «我们不会追究其责任». The English says "pursue action", not "legal action", so 法律 is not added.
+- pricing/index.md:32 and compare-plans.md:17 now use «按域名的登录设置». custom-domains/index.md:24 keeps «登录设置» because the English row says "Sign-in settings", without "per-domain".
+- api/client-libraries.md: all 24 soft line breaks in prose are joined. There is no separator between CJK characters, and a space between CJK and Latin text, digits or a link.
+- Semicolons: all 15 «；» listed are replaced with «，» or «。». Spaced « — » in running prose (data-protection.md:11, 19, 23; self-hosting/index.md:52, 56) is now «——».
+- Sidebar: brandGuide «品牌» (the English label is "Branding"), switchingRegions «更换区域» (the page title). Nine keys were added: sharingSecrets «分享机密内容», shareASecret «分享内容» (docs glossary "Share a secret"), yourReceipt «您的回执», whatCustomDomainsDo «自定义域名的作用», plansAndPricing «方案与定价», aboutSelfHosting «关于自托管», apiAndSdks «API 与 SDK», ourApproachToSecurity «我们的安全方法», whereYourDataLives «您的数据存放在哪里».
+
+### Skipped findings
+
+| Page:line | Finding | Reason |
+|---|---|---|
+| index.mdoc:34 | «创建和获取内容» mixes tier 1 into a tier-3 page | The docs glossary maps "create secrets" / "retrieve secrets" to 创建内容 / 获取内容 for API operations (API 相关术语 table), and this sentence describes API use. The glossary's "one tier per page" rule conflicts with that row. See Decisions needed. |
+| branding.md:4 | «圆角样式» in the description | Partly skipped. 显示说明 was fixed. «圆角样式» translates the English description's prose "corner style", not the **Corners** field label, so it stays. |
+| (terminology table) em dash | « — » in index.mdoc:28-45, self-hosting/index.md:23-28, share/index.md:81-87, share/use-cases.md:43-45 and the api/client-libraries.md author lines | These are link/description and author/status separators, not dashes in running prose. The table asked for running prose at minimum. branding.md uses «——» for the same separator, so one separator style still needs to be chosen. |
+
+### Decisions needed
+
+- App (zh): `web.branding.logo_modal_hint` «PNG、JPG 或 SVG。…», `favicon_field_hint` «支持 ICO、PNG 或 SVG。…» and `favicon_modal_hint` «支持 ICO、PNG 或 SVG，…» still list SVG, but en says "PNG or JPG…" / "ICO or PNG…". These strings need a re-sync. branding.md:14 says «不接受 SVG».
+- App (zh): logo labels are split. `upload_logo` is «上传标志», while `logo`, `logo_modal_title`, `logo_modal_save` and `remove_logo` use «Logo». The docs now quote both forms as shipped, and prose uses 标志. If the app changes `upload_logo` to «上传 Logo», branding.md:27 must follow.
+- Docs glossary (zh-cn): decide whether API-operation phrases (创建内容 / 获取内容) are an exception to the one-tier-per-page rule. This blocks index.mdoc:34.
+- Docs glossary (zh-cn): proposed new rows: reveal instructions (setting) → 显示说明; revoke (credential) → 吊销; beta → 测试版; Single sign-on (SSO) → 单点登录 (SSO) with half-width parentheses; the em dash in prose → «——»; one separator style for "link — description" lists («——» or « — »).
+- Sidebar (zh-cn.json): 47 of the 82 English keys are still missing. Most are group labels or links to pages with no zh-cn translation (start, account, organizations, billing, install, contribute, and the custom-domain, sharing and self-hosting sub-pages). Two point at zh-cn pages outside this round's file list: `howTranslationsWork` (translations) and `translationGlossary` (translations/glossary). The unused `regions` «地区» key was left in place, as AGENTS.md asks.
+- English, all locales: security/index.md:38 and security/data-protection.md:54 link "self-hosting" to GitHub, not `/self-hosting/` (zh-cn data-protection.md:33 follows the English).
+- Build, all locales: a heading that ends in full-width punctuation keeps a U+E0101 mark in its built id. For example, «有问题或需要支持？» renders as `id="有问题或需要支持\u{E0101}"` in dist/zh-cn/custom-domains/index.html, so a link to that heading would not resolve. This is TextProv heading-id decoding, not the translation.
