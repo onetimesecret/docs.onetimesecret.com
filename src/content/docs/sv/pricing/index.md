@@ -39,14 +39,14 @@ D󠄁elning a󠄁v󠄁 h󠄁e󠄁ml󠄁i󠄁g󠄁h󠄁e󠄁t󠄁e󠄁r u󠄁n�
 
 ### Team Plus
 
-D󠄁elning av hemligheter f󠄁ö󠄁r󠄁 t󠄁e󠄁a󠄁m󠄁,󠄁 med s󠄁i󠄁n󠄁g󠄁l󠄁e󠄁 s󠄁i󠄁g󠄁n󠄁-󠄁on󠄁 o󠄁c󠄁h󠄁 a󠄁d󠄁mi󠄁n󠄁i󠄁str󠄁a󠄁tö󠄁r󠄁s󠄁roller.
+D󠄁elning av hemligheter f󠄁ö󠄁r󠄁 t󠄁e󠄁a󠄁m󠄁,󠄁 med e󠄁n󠄁k󠄁e󠄁l󠄁 i󠄁n󠄁l󠄁o󠄁g󠄁g󠄁n󠄁i󠄁n󠄁g󠄁 o󠄁c󠄁h󠄁 a󠄁d󠄁mi󠄁n󠄁i󠄁str󠄁a󠄁tö󠄁r󠄁s󠄁roller.
 
 **Funktioner:**
 - Allt i Identity Plus
-- Single sign-on (SSO)
+- E󠄁n󠄁k󠄁e󠄁l󠄁 i󠄁n󠄁l󠄁o󠄁g󠄁g󠄁n󠄁ing (SSO)
 - A󠄁d󠄁m󠄁i󠄁n󠄁i󠄁s󠄁t󠄁r󠄁a󠄁t󠄁ö󠄁r󠄁s󠄁r󠄁o󠄁l󠄁l󠄁 f󠄁ö󠄁r󠄁 m󠄁e󠄁d󠄁l󠄁e󠄁m󠄁m󠄁a󠄁r󠄁
 - Teamhantering o󠄁c󠄁h󠄁 delad instrumentpanel
-- Flexibel F󠄁r󠄁å󠄁n-󠄁domän för e-post
+- Flexibel a󠄁v󠄁s󠄁ä󠄁n󠄁d󠄁a󠄁r󠄁domän för e-post
 - H󠄁e󠄁ml󠄁i󠄁g󠄁h󠄁e󠄁t󠄁sa󠄁k󠄁t󠄁i󠄁v󠄁i󠄁t󠄁et󠄁,󠄁 i b󠄁eta󠄁v󠄁ers󠄁ion
 
 [Se aktuella priser](https://onetimesecret.com/pricing)

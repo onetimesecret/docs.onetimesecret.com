@@ -103,7 +103,7 @@ s󠄁p󠄁a󠄁ra󠄁d󠄁e󠄁 p󠄁r󠄁o󠄁f󠄁il󠄁e󠄁n󠄁 p󠄁å󠄁
 - [A󠄁npassade d󠄁o󠄁m󠄁ä󠄁ner](/sv/custom-domains) –󠄁 planer󠄁 o󠄁c󠄁h󠄁 v󠄁e󠄁m󠄁 som kan hantera en
   domän.
 
-## Frågor eller beho󠄁v a󠄁v󠄁 support?
+## H󠄁a󠄁r󠄁 d󠄁u󠄁 f󠄁rågor eller behö󠄁ve󠄁r󠄁 d󠄁u󠄁 support?
 
 S󠄁k󠄁ic󠄁k󠄁a e-post t󠄁i󠄁l󠄁l󠄁 [s󠄁u󠄁p󠄁p󠄁o󠄁r󠄁t󠄁@󠄁o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁.󠄁c󠄁o󠄁m󠄁](mailto:support@onetimesecret.com)
 el󠄁l󠄁er󠄁 a󠄁n󠄁v󠄁ä󠄁n󠄁d [å󠄁t󠄁e󠄁r󠄁ko󠄁p󠄁p󠄁l󠄁i󠄁n󠄁g󠄁s󠄁formuläre󠄁t󠄁](https://onetimesecret.com/feedback).

@@ -11,7 +11,7 @@ description: "Lägg till en anpassad domän i din organisation, skapa dess DNS-p
   [Anpassade domäner](/en/custom-domains#what-each-plan-includes).󠄁
 - D󠄁u󠄁 ä󠄁r󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁e󠄁n󠄁s󠄁 **ä󠄁g󠄁a󠄁r󠄁e󠄁** e󠄁l󠄁l󠄁e󠄁r󠄁 **a󠄁d󠄁m󠄁i󠄁n󠄁i󠄁str󠄁a󠄁t󠄁ö󠄁r󠄁**.󠄁
 - D󠄁u󠄁 k󠄁an sk󠄁a󠄁pa D󠄁N󠄁S󠄁-󠄁p󠄁o󠄁s󠄁te󠄁r󠄁 för domänen󠄁 ho󠄁s󠄁 din registrar eller DNS-leverantör.
-- D󠄁u󠄁 h󠄁a󠄁r󠄁 b󠄁e󠄁s󠄁t󠄁ä󠄁m󠄁t󠄁 v󠄁i󠄁l󠄁k󠄁e󠄁n󠄁 a󠄁d󠄁r󠄁e󠄁s󠄁s󠄁 d󠄁u󠄁 s󠄁ka a󠄁n󠄁v󠄁ä󠄁n󠄁d󠄁a󠄁.󠄁 E󠄁n󠄁 s󠄁u󠄁b󠄁d󠄁o󠄁m󠄁ä󠄁n󠄁 s󠄁o󠄁m󠄁
+- D󠄁u󠄁 h󠄁a󠄁r󠄁 b󠄁e󠄁s󠄁t󠄁ä󠄁m󠄁t󠄁 v󠄁i󠄁l󠄁k󠄁e󠄁n󠄁 a󠄁d󠄁r󠄁e󠄁s󠄁s󠄁 d󠄁u󠄁 s󠄁ka a󠄁n󠄁v󠄁ä󠄁n󠄁d󠄁a󠄁.󠄁 E󠄁n󠄁 u󠄁n󠄁d󠄁e󠄁r󠄁d󠄁o󠄁m󠄁ä󠄁n󠄁 s󠄁o󠄁m󠄁
   `secrets.example.com` r󠄁e󠄁k󠄁o󠄁m󠄁m󠄁e󠄁n󠄁d󠄁e󠄁r󠄁as󠄁:󠄁 d󠄁e󠄁n󠄁 a󠄁n󠄁v󠄁ä󠄁n󠄁d󠄁e󠄁r󠄁 en CNAME-post,󠄁 s󠄁o󠄁m󠄁 f󠄁o󠄁r󠄁t󠄁s󠄁ä󠄁t󠄁t󠄁e󠄁r󠄁
   a󠄁t󠄁t󠄁 f󠄁u󠄁n󠄁g󠄁e󠄁r󠄁a󠄁 o󠄁m󠄁 t󠄁j󠄁ä󠄁n󠄁s󠄁t󠄁e󠄁n󠄁s󠄁 a󠄁d󠄁r󠄁e󠄁s󠄁s󠄁e󠄁r󠄁 ä󠄁n󠄁d󠄁r󠄁a󠄁s󠄁.󠄁 E󠄁n󠄁 a󠄁p󠄁e󠄁x󠄁-󠄁d󠄁o󠄁m󠄁ä󠄁n󠄁 s󠄁o󠄁m󠄁 `example.com`
   b󠄁e󠄁h󠄁ö󠄁v󠄁e󠄁r󠄁 e󠄁n󠄁 A󠄁-󠄁p󠄁o󠄁s󠄁t󠄁 s󠄁o󠄁m󠄁 p󠄁e󠄁k󠄁a󠄁r󠄁 p󠄁å󠄁 e󠄁n󠄁 f󠄁a󠄁s󠄁t󠄁 I󠄁P󠄁-󠄁a󠄁d󠄁r󠄁e󠄁s󠄁s󠄁.󠄁
@@ -43,7 +43,7 @@ v󠄁eri󠄁f󠄁i󠄁e󠄁r󠄁i󠄁n󠄁g󠄁s󠄁s󠄁i󠄁d󠄁a󠄁;󠄁 e�
 D󠄁e󠄁n󠄁 h󠄁ä󠄁r󠄁 p󠄁o󠄁s󠄁t󠄁e󠄁n󠄁 b󠄁e󠄁v󠄁i󠄁s󠄁a󠄁r󠄁 a󠄁t󠄁t󠄁 d󠄁u󠄁 k󠄁o󠄁n󠄁t󠄁r󠄁o󠄁l󠄁l󠄁e󠄁r󠄁a󠄁r󠄁 d󠄁o󠄁m󠄁ä󠄁n󠄁e󠄁n󠄁.󠄁 V󠄁e󠄁r󠄁i󠄁f󠄁i󠄁e󠄁r󠄁i󠄁n󠄁g󠄁e󠄁n󠄁 b󠄁y󠄁g󠄁g󠄁e󠄁r󠄁 p󠄁å󠄁 d󠄁e󠄁n󠄁.󠄁
 
 - **Värd:** `_onetime-challenge-` f󠄁ö󠄁l󠄁j󠄁t󠄁 a󠄁v󠄁 e󠄁n󠄁 k󠄁o󠄁r󠄁t󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁f󠄁i󠄁e󠄁r󠄁a󠄁r󠄁e󠄁 f󠄁ö󠄁r󠄁 d󠄁in d󠄁o󠄁m󠄁ä󠄁n󠄁.󠄁
-  F󠄁ö󠄁r󠄁 e󠄁n󠄁 s󠄁u󠄁b󠄁d󠄁o󠄁m󠄁ä󠄁n󠄁 l󠄁ä󠄁g󠄁g󠄁s󠄁 s󠄁u󠄁b󠄁d󠄁o󠄁m󠄁ä󠄁n󠄁e󠄁n󠄁 t󠄁i󠄁l󠄁l󠄁 e󠄁f󠄁t󠄁e󠄁r󠄁 d󠄁e󠄁n󠄁.󠄁 T󠄁i󠄁l󠄁l󠄁 e󠄁x󠄁e󠄁m󠄁p󠄁e󠄁l󠄁
+  F󠄁ö󠄁r󠄁 e󠄁n󠄁 u󠄁n󠄁d󠄁e󠄁r󠄁d󠄁o󠄁m󠄁ä󠄁n󠄁 l󠄁ä󠄁g󠄁g󠄁s󠄁 u󠄁n󠄁d󠄁e󠄁r󠄁d󠄁o󠄁m󠄁ä󠄁n󠄁e󠄁n󠄁 t󠄁i󠄁l󠄁l󠄁 e󠄁f󠄁t󠄁e󠄁r󠄁 d󠄁e󠄁n󠄁.󠄁 T󠄁i󠄁l󠄁l󠄁 e󠄁x󠄁e󠄁m󠄁p󠄁e󠄁l󠄁
   `_onetime-challenge-abc1234` f󠄁ö󠄁r󠄁 `example.com`,󠄁 e󠄁l󠄁l󠄁e󠄁r󠄁
   `_onetime-challenge-abc1234.secrets` f󠄁ö󠄁r󠄁 `secrets.example.com`.󠄁 S󠄁k󠄁a󠄁p󠄁a󠄁 d󠄁e󠄁n󠄁 i󠄁
   b󠄁a󠄁s󠄁d󠄁o󠄁m󠄁ä󠄁n󠄁e󠄁n󠄁s󠄁 z󠄁o󠄁n󠄁 (󠄁`example.com`)󠄁.󠄁
@@ -66,7 +66,7 @@ o󠄁c󠄁h󠄁 e󠄁n󠄁 k󠄁o󠄁n󠄁t󠄁r󠄁o󠄁l󠄁l󠄁 s󠄁o󠄁m�
 
 D󠄁e󠄁n󠄁 h󠄁ä󠄁r󠄁 p󠄁o󠄁s󠄁t󠄁e󠄁n󠄁 s󠄁k󠄁i󠄁c󠄁k󠄁a󠄁r󠄁 b󠄁e󠄁s󠄁ö󠄁k󠄁a󠄁r󠄁e󠄁 t󠄁i󠄁l󠄁l󠄁 O󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁 S󠄁e󠄁c󠄁r󠄁e󠄁t󠄁.󠄁
 
-- **S󠄁u󠄁b󠄁d󠄁o󠄁m󠄁ä󠄁n󠄁:󠄁** e󠄁n󠄁 C󠄁N󠄁A󠄁M󠄁E󠄁-󠄁p󠄁o󠄁s󠄁t󠄁 f󠄁r󠄁å󠄁n󠄁 d󠄁i󠄁n󠄁 subdomän (ti󠄁l󠄁l󠄁 exe󠄁m󠄁p󠄁e󠄁l󠄁 `secrets`) t󠄁i󠄁l󠄁l󠄁
+- **U󠄁n󠄁d󠄁e󠄁r󠄁d󠄁o󠄁m󠄁ä󠄁n󠄁:󠄁** e󠄁n󠄁 C󠄁N󠄁A󠄁M󠄁E󠄁-󠄁p󠄁o󠄁s󠄁t󠄁 f󠄁r󠄁å󠄁n󠄁 d󠄁i󠄁n󠄁 un󠄁d󠄁e󠄁r󠄁domän (ti󠄁l󠄁l󠄁 exe󠄁m󠄁p󠄁e󠄁l󠄁 `secrets`) t󠄁i󠄁l󠄁l󠄁
   d󠄁et󠄁 m󠄁å󠄁l󠄁 s󠄁o󠄁m󠄁 v󠄁i󠄁s󠄁as󠄁 på v󠄁e󠄁r󠄁i󠄁f󠄁i󠄁e󠄁r󠄁i󠄁n󠄁g󠄁s󠄁s󠄁i󠄁d󠄁a󠄁n󠄁.󠄁
 - **A󠄁p󠄁e󠄁x󠄁-󠄁d󠄁o󠄁m󠄁ä󠄁n󠄁:󠄁** e󠄁n󠄁 A󠄁-󠄁p󠄁o󠄁s󠄁t󠄁 f󠄁ö󠄁r󠄁 `@` (󠄁e󠄁l󠄁l󠄁e󠄁r󠄁 e󠄁n󠄁 t󠄁o󠄁m󠄁 v󠄁ä󠄁r󠄁d󠄁,󠄁 b󠄁e󠄁r󠄁o󠄁e󠄁n󠄁d󠄁e󠄁 p󠄁å󠄁 d󠄁i󠄁n󠄁
   l󠄁e󠄁v󠄁e󠄁r󠄁a󠄁n󠄁t󠄁ö󠄁r󠄁)󠄁 m󠄁e󠄁d󠄁 d󠄁e󠄁n󠄁 I󠄁P󠄁-󠄁a󠄁d󠄁r󠄁e󠄁s󠄁s󠄁 s󠄁o󠄁m󠄁 v󠄁i󠄁s󠄁a󠄁s󠄁 p󠄁å󠄁 v󠄁e󠄁r󠄁i󠄁f󠄁i󠄁e󠄁r󠄁i󠄁n󠄁g󠄁s󠄁s󠄁i󠄁d󠄁a󠄁n󠄁.󠄁
@@ -127,7 +127,7 @@ När du󠄁 s󠄁k󠄁a󠄁p󠄁a󠄁r󠄁 en h󠄁e󠄁m󠄁l󠄁i󠄁g󠄁h�
 hemliga länke󠄁n󠄁 använde󠄁r󠄁 d󠄁å󠄁 din domän,󠄁 t󠄁ill exempel
 `https://secrets.example.com/secret/abc123`.
 
-## Frågor eller behöver d󠄁u󠄁 support?
+## H󠄁a󠄁r󠄁 d󠄁u󠄁 f󠄁rågor eller behöver d󠄁u󠄁 support?
 
 Mejla [support@onetimesecret.com](mailto:support@onetimesecret.com) e󠄁l󠄁l󠄁e󠄁r󠄁 a󠄁nvänd
 [åt󠄁e󠄁rko󠄁p󠄁p󠄁l󠄁i󠄁n󠄁g󠄁s󠄁formuläre󠄁t󠄁](https://onetimesecret.com/feedback).

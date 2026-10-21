@@ -33,7 +33,7 @@ att göra det på ett säkert sätt och var du hittar detaljerna.
 ## Relaterat
 
 - **[Våra principer](/en/security/our-principles)** –󠄁 Integritet först, Kommunikation och Dataminimering.
-- **[V󠄁a󠄁r󠄁 d󠄁i󠄁n󠄁a󠄁 d󠄁ata l󠄁a󠄁g󠄁ra󠄁s󠄁](/en/security/where-your-data-lives/)** –󠄁 välj var dina󠄁 data behandlas och lagras.
+- **[V󠄁a󠄁r󠄁 d󠄁i󠄁n󠄁 d󠄁ata f󠄁i󠄁n󠄁n󠄁s󠄁](/en/security/where-your-data-lives/)** –󠄁 välj var din data behandlas och lagras.
 - **[Självhosting](https://github.com/onetimesecret/onetimesecret)** –󠄁 kör Onetime Secret p󠄁å󠄁 din egen infrastruktur för full kontroll.
 
 ## Rapportera ett säkerhetsproblem

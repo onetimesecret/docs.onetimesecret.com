@@ -55,7 +55,7 @@ ersätter inte dina egna kontroller, policyer och juridiska granskningar.
 För organisationer med strikta krav på datakontroll håller [självhosting](https://github.com/onetimesecret/onetimesecret)
 allt inom din egen infrastruktur.
 
-## Frågor eller behöver du support?
+## H󠄁a󠄁r󠄁 d󠄁u󠄁 f󠄁rågor eller behöver du support?
 
 Vi finns här för att hjälpa till.
 
