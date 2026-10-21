@@ -9,7 +9,7 @@ description: "Sammenlign vores planer for sikker deling af beskeder — links me
 | Funktion / Plan | Ikke logget ind | Free | Identity Plus | Team Plus |
 |---|---|---|---|---|
 | Brugerdefinerede domæner | ❌ | 1 | Ubegrænset | Ubegrænset |
-| Forsidebeskeder | ❌ | ✅ | ✅ | ✅ |
+| H󠄁j󠄁e󠄁m󠄁m󠄁e󠄁sidebeskeder | ❌ | ✅ | ✅ | ✅ |
 | Indg󠄁å󠄁ende beskeder | ❌ | ✅ | ✅ | ✅ |
 | API-adgang | Begrænset \* | ✅ | ✅ | ✅ |
 | Brugerdefineret branding (logo, farve) | ❌ | ❌ | ✅ | ✅ |
