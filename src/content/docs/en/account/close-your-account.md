@@ -71,6 +71,9 @@ again to check.
   [Two-factor authentication and passkeys](/en/account/two-factor-and-passkeys).
 - **Your sessions.** Every device signed in to the account is signed out. See
   [Sessions and connected identities](/en/account/sessions-and-identities).
+- **Your sign-in record and its history.** Your email address as a sign-in
+  name, and the record of sign-ins, password changes and second-factor changes
+  on the account.
 - **Your account record.** Your account, its preferences and its API token.
 - **Your own workspace,** with its settings and its
   [Secret Activity](/en/organizations/audit-trail) record.
@@ -81,9 +84,6 @@ again to check.
 - **Secret links you already shared.** A link stays usable until it is revealed,
   burned, or expires. After closure you can no longer find or burn it, because
   your list of secrets is available only while signed in.
-- **A closed sign-in record.** Your email address and the history of sign-in
-  events on the account (sign-ins, password changes and second-factor changes)
-  are kept on a sign-in record marked closed. It cannot be used to sign in.
 - **Activity in other organizations.** Events attributed to you in the Secret
   Activity record of organizations you were a member of stay with those
   organizations, and are removed only under that record's own retention.
