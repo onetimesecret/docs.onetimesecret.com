@@ -191,3 +191,50 @@ Verified as matching: 도메인, 관리, 기능, 브랜드 관리, 브랜드 / �
 - No `pnpm build` or dogfood run (read-only review). Emphasis parity was checked by parsing the repo files, with marks, through the site's own @markdoc/markdoc 0.5.10 (.mdoc) and remark-parse 11 + remark-gfm (.md). The strong/emphasis counts match English on every page except api/index.mdoc (2 vs 3, the line 9 finding).
 - The frontmatter keys audience, pageType, sourceOfTruth and plan are missing from all ko pages. This is assumed to be the locale convention, because structure.md does not flag it.
 - The suggested /ko/ anchors are the ids in dist/ko (built 06:34 today). Those ids already match the re-synced ko headings, which changed in this commit, so the build used the new text.
+
+## Resolution (fix round, 2026-10-21)
+
+All 33 table findings (6 major, 27 minor) are fixed. Three terminology-table items with no table row are also fixed: revoke, viewed and the Related heading. The flagged keys in the sidebar bundle are fixed as well. Every UI label was checked against `$APP/locales/content/ko` (app main 145c1e7cfa). The corner options are hard-coded in English (brand-helpers.ts:216-222). Validation: `python3 tools/dogfood.py check --base b2883096` passed (15 files). `pnpm test` passed (175 tests), as did `check:frontmatter`, `check:nav` and `pnpm build` (1306 pages). The built `dist/ko` has the three new /ko/ anchors (`요금제별-포함-기능`, `도메인이-서비스되는-위치`, `사용자-지정-도메인-이전`). It renders api/index line 9 as `<strong><a>api.onetimesecret.com</a></strong>.`, and the five added sidebar labels appear on the ko pages.
+
+| Commit | Subject |
+|---|---|
+| ac27bc7a | docs(i18n/ko): match branding labels to the shipped app |
+| 87ab06d5 | docs(i18n/ko): match add-domain labels to the shipped app |
+| 80f8c0d1 | docs(i18n/ko): match share form labels to the shipped app |
+| ffe0725a | docs(i18n/ko): correct mistranslations in data-protection, why-secret-links |
+| d453b7cf | docs(i18n/ko): use consistent terms for member, revoke, viewed, SSO |
+| 6e2ffc5f | docs(i18n/ko): link to Korean pages that exist |
+| 4c908f29 | docs(i18n/ko): fix fluency and typography |
+| 98b11c79 | docs(i18n/ko): align sidebar labels with page titles |
+
+Where a fix differs from the suggestion in the report:
+
+- client-libraries:36. Changed to «API v1(더 이상 권장되지 않음)», not «사용 중단 예정». "Scheduled for removal" is not in the English, and one rendering now covers all four lines.
+- client-libraries:75 and 162. Changed to «`onetimesecret.com`의 더 이상 권장되지 않는 v1 API만 사용합니다». This keeps the English "only".
+- setup-guide:21. Changed to «***내 도메인*(으)로 계속**을 선택합니다(예: **secrets.example.com(으)로 계속**).». This matches the button text `{0}(으)로 계속`. remark parses it as one strong node, with or without marks.
+- revoke. Unified on 취소, not 폐기. The app renders revoke as 취소 (web.admin.customers.detail.sessions.revoke.*), and the prior ko glossary also uses 취소.
+- pricing/index:47. Only the term was swapped («멤버용 관리자 역할»), to keep the edit minimal.
+
+### Skipped findings
+
+| Page:line | Finding | Reason |
+|---|---|---|
+| api/index.mdoc:39 | «API 토큰» vs app «API 키» (web.account.api_key) | The ko follows the English "API token" (en api/index.mdoc:40). The English page needs fixing first (see Decisions needed). |
+| src/content/i18n/ko.json `sidebar.communication` | «소통» vs «커뮤니케이션» (security/index:35) | The key is unused: it has no en.json entry and config/sidebar.mjs does not reference it, so it never renders. AGENTS.md says not to remove unused keys as incidental cleanup. |
+| src/content/i18n/ko.json, the other 51 missing keys | The bundle lacks 56 of the 82 English sidebar keys | Only the five keys for pages in the ko tree were added. The remaining keys label pages that do not exist in ko and fall back to English by design (`buildTranslations`). |
+
+### Decisions needed
+
+- **ko docs glossary is corrupted.** In `src/content/docs/ko/translations/glossary.md`, the rows from line 23 ("사용자 인터페이스 요소") onward have machine-translated EN, AT, FR and CA columns, and their cells do not align. Line 80 lists 사용자 정의 도메인 and line 110 lists 맞춤형 브랜딩. Both conflict with the app (web.billing.features.custom_domains «사용자 지정 도메인», web.billing.features.custom_branding «사용자 지정 브랜딩») and with every ko page. Proposal: rebuild the glossary and record this round's terms there:
+  - member → 멤버
+  - revoke → 취소
+  - viewed → 열람
+  - deprecated → 더 이상 권장되지 않음
+  - data residency → 데이터 레지던시
+  - single sign-on → Single Sign-On (SSO), in Latin script
+  - reveal instructions → 표시 안내
+  - Related (heading) → 관련 문서
+- **English source.** en api/index.mdoc:40 says "the API token from your account settings", but the account settings label is "API Key" (web.account.api_key, ko «API 키»). Once the English changes, ko api/index.mdoc:39 «API 토큰» should become «API 키».
+- **App: two renderings of "reveal".** The ko app renders "reveal" as 공개 (web.STATUS.revealed «공개됨», web.branding.pre_reveal_instructions «공개 전 지침») and as 표시 on the Delivery tab (web.branding.delivery_reveal_instructions «표시 안내», delivery_before_reveal «표시 전», delivery_after_reveal «표시 후»). The docs now quote 표시. If the app moves to 공개, then branding.md:4, 68 and 75 and custom-domains/index.md:22 need the change too.
+- **App: two renderings of "member".** The ko app uses both 구성원 (web.organizations.tabs.members, web.admin.organizations.detail.sections.members) and 멤버 (web.billing.features.manage_members, team_members_*, api.invite.errors.already_member). The docs now use 멤버 throughout. The organization Members tab still reads 구성원.
+- **Site-wide: U+E0101 in heading ids.** Headings that end in "?" get an id with a trailing U+E0101 (e.g. dist/ko/custom-domains/index.html `질문이-있거나-지원이-필요하신가요\u{E0101}`), so links typed to these anchors fail. This needs a fix in TextProv or the slugger, not a locale fix.
