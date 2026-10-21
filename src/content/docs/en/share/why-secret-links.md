@@ -31,7 +31,7 @@ Secret Links are designed with security as the top priority:
 ## 4. Compliance and best practices
 
 - **Data minimization**: By sharing information that self-destructs, you're adhering to data minimization principles recommended by many privacy regulations.
-- **Audit trails**: (Team Plus) Keep track of secret creation and access, helping with compliance requirements.
+- **Audit trails**: (Team Plus, Beta) Keep track of secret creation and access, helping with compliance requirements.
 
 ## 5. Versatility
 

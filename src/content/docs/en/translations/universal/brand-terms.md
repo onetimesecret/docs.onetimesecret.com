@@ -18,6 +18,7 @@ Certain terms must remain untranslated to maintain brand identity and product co
 
 | Term | Context |
 |------|---------|
+| **Basic** | Free subscription tier name on public pricing |
 | **Identity Plus** | Subscription tier name |
 | **Team Plus** | Subscription tier name |
 | **Global Elite** | Subscription tier name (retired from public pricing, still referenced for dedicated-instance inquiries) |

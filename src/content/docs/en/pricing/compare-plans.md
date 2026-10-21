@@ -20,7 +20,7 @@ description: Compare our plans for secure secret sharing — expiring links, cus
 | Per-domain Signup Validation | ❌ | ❌ | ❌ | ✅ |
 | Single Sign-On (SSO) | ❌ | ❌ | ❌ | ✅ |
 | Teams & Shared Dashboard | ❌ | ❌ | ❌ | ✅ |
-| Audit Logs (Secret Activity) | ❌ | ❌ | ❌ | ✅ |
+| Audit Logs (Secret Activity, Beta) | ❌ | ❌ | ❌ | ✅ |
 | Workspace Branding | ❌ | ❌ | ❌ | ✅ |
 | Members per organization | — | 1 | Up to 50 | Up to 100 |
 | Link Expiration | Up to 7 days | Up to 14 days | Up to 30 days | Up to 30 days |
