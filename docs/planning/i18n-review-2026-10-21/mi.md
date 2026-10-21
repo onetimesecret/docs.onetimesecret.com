@@ -208,3 +208,41 @@ All other labels match: Ngā Rohe, Whakahaere, Ngā Āhuatanga, Whakahaere Waito
 - [known] custom-domains/setup-guide.md "no fixed limit" vs compare-plans.md "Unlimited". The split carries into mi (*Kāore he tepe pūmau* vs *Mutunga kore*/*kore-mutunga*).
 - [known] account/change-your-region.md step 4 unwrapped source line; mi line 76 mirrors it.
 - [known] index.mdoc "Setup your custom domain" and the "Configuration and upgrades" link text vs the "Self-hosting overview" title.
+
+## Resolution (fix round, 2026-10-21)
+
+All 54 findings were fixed (14 major, 40 minor), as were the "deployment" and "Next steps" rows of the terminology table and the four sidebar labels that are in use. Labels were checked against `$APP/locales/content/mi_NZ` at 145c1e7cfa. These fixes differ from the reviewer's suggested text:
+
+- compare-plans.md:45 — «ngā tātauira īmēra», not «tauira». The app uses *tātauira* for template (`web.admin.emailtools.*`), and *tauira* already means "example" on these pages (*hei tauira*).
+- share/index.md:52 — «He wā ora mōrahi motuhake», without «he poto ake». The English does not say the limit is shorter.
+- share/index.md:18,103 — «i waihangatia me te kore e takiuru» ("created without signing in") instead of «i a koe kāore i takiuru». It avoids two consecutive *kāore* clauses.
+- custom-domains/setup-guide.md:45 — «**Kaihautū** (ko **Kaiwhakahaere** te tapanga i te taupānga)». The docs term stays, and the shipped label is named so readers can find the field. Simplify it after the app fix below.
+- custom-domains/setup-guide.md:49,52 — DNS zone is now «takiwā DNS». *takiwā* is not used for region or domain anywhere on the page.
+- account/change-your-region.md — the old domain is now «te rohe ritenga (tawhito)» at lines 60, 70, 75, 76, 79, 82, 85 and 86, and region keeps *rohe*. This fixes the ambiguity without renaming region across the page or changing the title.
+- pricing/index.md:16 — «Ka kīia e ēnei tuhinga ko **Free**; ka kīia e te taupānga ko **Free**, ko **Kore Utu** rānei.» The mi app shows both names: "Free" via `PLAN_LABELS` for organizations with `free_v1`, and "Kore Utu" (`web.billing.plans.free_plan`) in the user-menu chip and for organizations without a plan ID.
+- compare-plans.md:15 — logo is «moko» in prose, because most pages already use it. Quoted UI labels on branding.md use the shipped *Tohu* strings.
+
+| Commit | Subject |
+|---|---|
+| 5e82d663 | docs(i18n/mi): match branding labels to the shipped app |
+| fbc1c60e | docs(i18n/mi): match domain setup labels to the shipped app |
+| 75c99f22 | docs(i18n/mi): correct mistranslations across ten pages |
+| 463009a7 | docs(i18n/mi): use consistent terms for domain, deployment and plans |
+| 83ee4ca3 | docs(i18n/mi): fix fluency and typography |
+| 7d477f99 | docs(i18n/mi): align sidebar labels with page titles |
+
+### Skipped findings
+
+| Page:line | Finding | Reason |
+|---|---|---|
+| setup-guide.md:79,82; pricing/index.md:69 (terminology table) | EU / US region names: decide on one set | The pages already agree with each other (*Uniana o Ūropi*, *Ngā Whenua o Amerika*). The differing sidebar keys `regionEU`/`regionUS` are not used by `config/sidebar.mjs`, so nothing visible conflicts. Choosing between the sets needs a native speaker (see below). |
+| src/content/i18n/mi.json `secretLinks`, `regionEU`, `regionUS` | Sidebar divergence ([known] item) | No current sidebar entry uses these keys, and AGENTS.md says to keep unused keys. Only the keys in use were aligned: `customDomains`, `brandGuide`, `selfHosting`, `whyUseSecretLinks`. |
+
+### Decisions needed
+
+- App fix: mi_NZ `web.COMMON.host` = "Kaiwhakahaere" (administrator) labels the DNS Host field (VerifyDomainDetails.vue:163,201; DomainDns.vue:101). Change it to "Kaihautū", and correct the misspelled `web.domains.host_0`/`host_1` "Kaiwhakahari". Then simplify setup-guide.md:45 to «**Kaihautū:**».
+- Plan name: decide whether "Free" is a locked tier name. If it is, set mi_NZ `web.billing.plans.free_plan` to "Free". If not, reword EN pricing/index.md:19 "The app and these docs call it **Free**" for locales that localize the label.
+- App consistency: mi_NZ "logo" is "Tohu" (`web.branding.logo`, `logo_modal_*`, `remove_logo`) but "moko" (`upload_logo`, `logo_controls`). Pick one. The docs prose uses *moko*.
+- Region names: a native speaker should choose between *Uniana o Ūropi* / *Ngā Whenua o Amerika* (docs pages) and *Kotahitanga o Ūropi* / *Hononga o Amerika* (unused sidebar keys). *Hononga* is the bound term for "link". The app ships English names.
+- Glossary additions, which the docs glossary does not cover yet: integration → *pāhekoheko*; deployment → *whakatakotoranga*; container image → *atahanga (ipu)*; DNS zone → *takiwā DNS*; email template → *tātauira īmēra*; unlimited → *kore-mutunga*; use case → *kēhi whakamahi*; Next steps → *Ngā hipanga e whai ake nei*; logo (prose) → *moko*. Also: use *rohe ritenga* for a custom domain wherever the same passage also says *rohe* for region.
+- English source ([known]): self-hosting/index.md "one generated secret" should name the `SECRET` key.
