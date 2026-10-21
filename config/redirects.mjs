@@ -354,6 +354,10 @@ export function createRedirectsConfig() {
     "/contact": "https://onetimesecret.com/feedback",
     "/feedback": "https://onetimesecret.com/feedback",
 
+    // The site root. There is no root locale, so "/" used to be served by a
+    // separate src/content/docs/index.mdx that drifted from the EN homepage.
+    // One homepage now, in /en/; Starlight's language picker handles the rest.
+    "/": "/en/",
     "/docs": "/en/",
     "/domains": "/en/custom-domains/",
 

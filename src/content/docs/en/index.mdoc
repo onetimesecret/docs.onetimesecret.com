@@ -1,72 +1,46 @@
 ---
-title: Onetime Secret - Secure Links, Stronger Connections
-description: Onetime Secret offers a secure, ephemeral way to share sensitive information in a digital world.
+title: Onetime Secret Documentation
+description: Reference and guides for the Onetime Secret API and client libraries, team workspaces and custom domains, self-hosting, and how the service handles your data.
 template: splash
-tableOfContents:
-  minHeadingLevel: 3
+heroBackground: burn
+tableOfContents: false
 hero:
-  title: Secure links, stronger connections
-  tagline: Share sensitive information securely with self-destructing links that are only viewable once.
+  title: Onetime Secret Documentation
+  tagline: Give your team a branded workspace on your own domain, integrate one-time secret links into your own tools, or host the whole thing yourself. Everything past sending the first secret.
   actions:
-    - text: Get started
-      link: /en/start/
+    - text: Setup your custom domain
+      link: /en/custom-domains/setup-guide/
       icon: right-arrow
+    - text: API docs
+      link: /en/api/
+      variant: secondary
     - text: View on GitHub
       link: https://github.com/onetimesecret/onetimesecret
       icon: external
       variant: minimal
 ---
 
-## The power of secure sharing
+## Branding and teams
 
-Onetime Secret provides a simple, secure way to share sensitive information. Our service ensures your data remains private and ephemeral in an increasingly permanent digital world.
+On the hosted service: a shared workspace with roles and SSO, and secret links sent from a domain your recipients already trust.
 
-{% cardgrid %}
-{% card title="Self-destructing messages" icon="trash" %}
-Share secrets that automatically delete after being viewed or after a set time.
-{% /card %}
-{% card title="Server-side encryption" icon="lock-closed" %}
-Your secrets are securely encrypted on our servers, ensuring data protection.
-{% /card %}
-{% card title="Passphrase protection" icon="key" %}
-Add an extra layer of security with custom passphrases for your shared secrets.
-{% /card %}
-{% /cardgrid %}
+- **[Custom domains](/en/custom-domains/)** — DNS validation, branding, and an incoming page for secrets sent to you.
+- **[Organizations](/en/organizations/)** — invite members, assign roles, and review the audit trail.
+- **[Single sign-on](/en/organizations/sso/)** — Entra, OIDC and SAML sign-in for your organization.
 
-## The flexibility of our service
+## Development
 
-Onetime Secret offers customizable options to meet your specific needs, whether you're an individual or a business looking for a branded solution.
+Create and retrieve secrets from scripts, CI pipelines and your own applications.
 
-{% cardgrid %}
-{% card title="Customizable expiration" icon="clock" %}
-Set your secret to expire after a specific time, from minutes to days.
-{% /card %}
-{% card title="Custom domains" icon="globe-alt" %}
-Share from your own branded domain, with SSL/TLS certificates issued and renewed for you.
-{% /card %}
-{% card title="Open source" icon="code-bracket" %}
-A transparent codebase you can read, audit, or self-host. No black boxes.
-{% /card %}
-{% /cardgrid %}
+- **[REST API](/en/api/)** — regional endpoints, authentication, and the full reference at api.onetimesecret.com.
+- **[Client libraries](/en/api/client-libraries/)** — official and community SDKs, and which ones support regions and custom domains.
 
-## Why choose Onetime Secret?
+## Self-hosting
 
-Onetime Secret is built to keep sensitive data private, support your compliance obligations, and stay simple enough that people actually use it.
+Run the same open-source application that powers onetimesecret.com on your own infrastructure.
 
-{% cardgrid %}
-{% card title="Privacy-first design" icon="shield-check" %}
-Built from the ground up with privacy in mind, ensuring your sensitive data remains confidential and protected.
-{% /card %}
-{% card title="Compliance support" icon="document-check" %}
-Regional data residency, short-lived data, and data minimization are designed to support your compliance efforts — including GDPR obligations — without replacing your own controls. [See how we handle your data](/en/security/data-protection).
-{% /card %}
-{% card title="User-friendly interface" icon="user-group" %}
-Intuitive design makes secure information sharing accessible to both technical and non-technical users.
-{% /card %}
-{% /cardgrid %}
+- **[Hosted or self-hosted?](/en/start/hosted-or-self-hosted/)** — what changes when you run the servers, and what doesn't.
+- **[Installation](/en/install/docker/)** — Docker, Linux, reverse proxy and TLS, running as a service.
+- **[Configuration and upgrades](/en/self-hosting/)** — configuration, environment variables, and version upgrade guides.
 
-## Enhance your privacy today
-
-Family-operated since 2012. Open source, privacy-first, and built to keep passwords out of inboxes and chat logs.
-
-[Compare plans](/en/pricing/) | [Start free](/en/start/)
+{% homepage-ending variant="receipt" /%}

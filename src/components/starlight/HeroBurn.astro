@@ -1,0 +1,230 @@
+---
+/*
+ * Decorative hero background: a note burning away from its right edge.
+ * Drawn from the Canva concept "B2" (burning note) as inline SVG so it stays
+ * a few KB, sharp at any size, and themed per color scheme. Opt in per page
+ * with `heroBackground: burn` in frontmatter; see Hero.astro.
+ *
+ * Purely decorative: aria-hidden, no pointer events, and the ember drift
+ * stops under prefers-reduced-motion.
+ */
+---
+
+<div class="hero-burn" aria-hidden="true">
+	<svg viewBox="90 170 490 320" xmlns="http://www.w3.org/2000/svg" focusable="false">
+		<defs>
+			<linearGradient id="hb-char" x1="0" x2="1" y1="0" y2="0">
+				<stop offset="0.8" stop-color="var(--hb-char)" stop-opacity="0" />
+				<stop offset="0.97" stop-color="var(--hb-char)" stop-opacity="0.85" />
+			</linearGradient>
+			<filter id="hb-glow" x="-50%" y="-50%" width="200%" height="200%">
+				<feGaussianBlur stdDeviation="4" />
+			</filter>
+		</defs>
+		<g transform="translate(150 240) rotate(14)">
+			<path
+				class="paper"
+				d="M0 6 Q0 0 6 0 L212 0 Q222.9 7.5 211.6 15.0 Q226.3 22.5 215.4 30.0 Q223.4 37.5 212.1 45.0 Q220.5 52.5 209.5 60.0 Q225.2 67.5 213.0 75.0 Q219.0 82.5 208.8 90.0 Q221.0 97.5 208.7 105.0 Q222.7 112.5 213.5 120.0 Q228.7 127.5 215.9 135.0 Q224.7 142.5 213.2 150.0 Q218.3 157.5 209.3 165.0 Q221.1 172.5 210.0 180.0 L6 180 Q0 180 0 174 Z"
+			/>
+			<path
+				fill="url(#hb-char)"
+				d="M0 6 Q0 0 6 0 L212 0 Q222.9 7.5 211.6 15.0 Q226.3 22.5 215.4 30.0 Q223.4 37.5 212.1 45.0 Q220.5 52.5 209.5 60.0 Q225.2 67.5 213.0 75.0 Q219.0 82.5 208.8 90.0 Q221.0 97.5 208.7 105.0 Q222.7 112.5 213.5 120.0 Q228.7 127.5 215.9 135.0 Q224.7 142.5 213.2 150.0 Q218.3 157.5 209.3 165.0 Q221.1 172.5 210.0 180.0 L6 180 Q0 180 0 174 Z"
+			/>
+			<g class="lines">
+				<line x1="26" y1="36" x2="160" y2="36" />
+				<line x1="26" y1="62" x2="172" y2="62" />
+				<line x1="26" y1="88" x2="150" y2="88" />
+				<line x1="26" y1="114" x2="166" y2="114" />
+				<line x1="26" y1="140" x2="118" y2="140" />
+			</g>
+			<path class="edge-glow" filter="url(#hb-glow)" d="M212 0 Q222.9 7.5 211.6 15.0 Q226.3 22.5 215.4 30.0 Q223.4 37.5 212.1 45.0 Q220.5 52.5 209.5 60.0 Q225.2 67.5 213.0 75.0 Q219.0 82.5 208.8 90.0 Q221.0 97.5 208.7 105.0 Q222.7 112.5 213.5 120.0 Q228.7 127.5 215.9 135.0 Q224.7 142.5 213.2 150.0 Q218.3 157.5 209.3 165.0 Q221.1 172.5 210.0 180.0" />
+			<path class="edge" d="M212 0 Q222.9 7.5 211.6 15.0 Q226.3 22.5 215.4 30.0 Q223.4 37.5 212.1 45.0 Q220.5 52.5 209.5 60.0 Q225.2 67.5 213.0 75.0 Q219.0 82.5 208.8 90.0 Q221.0 97.5 208.7 105.0 Q222.7 112.5 213.5 120.0 Q228.7 127.5 215.9 135.0 Q224.7 142.5 213.2 150.0 Q218.3 157.5 209.3 165.0 Q221.1 172.5 210.0 180.0" />
+		</g>
+		<g class="embers">
+			<circle class="ember" cx="379" cy="280" r="3.7" fill-opacity="0.85" style="--d:7.6s;--l:-6.4s" />
+			<polygon class="ash" points="421.3,331.2 423.8,332.3 422.7,334.8 420.2,333.7" fill-opacity="0.69" style="--d:8.5s;--l:-3.2s" />
+			<polygon class="ash" points="359.8,341.8 361.2,344.8 358.2,346.2 356.8,343.2" fill-opacity="0.74" style="--d:6.1s;--l:-9.3s" />
+			<circle class="spark" cx="373" cy="348" r="2.2" fill-opacity="0.63" style="--d:5.4s;--l:-3.3s" />
+			<polygon class="ash" points="362.2,389.4 365.6,391.2 363.8,394.6 360.4,392.8" fill-opacity="0.54" style="--d:7.8s;--l:-4.5s" />
+			<circle class="ember" cx="390" cy="338" r="4.0" fill-opacity="0.48" style="--d:9.3s;--l:-9.7s" />
+			<circle class="ember" cx="485" cy="179" r="2.3" fill-opacity="0.34" style="--d:7.2s;--l:-0.1s" />
+			<polygon class="ash" points="608.3,139.6 609.4,141.3 607.7,142.4 606.6,140.7" fill-opacity="0.09" style="--d:6.8s;--l:-6.2s" />
+			<circle class="ember" cx="445" cy="238" r="2.5" fill-opacity="0.54" style="--d:5.8s;--l:-6.3s" />
+			<circle class="ember" cx="420" cy="271" r="2.2" fill-opacity="0.41" style="--d:7.6s;--l:-2.6s" />
+			<circle class="ember" cx="450" cy="303" r="1.6" fill-opacity="0.41" style="--d:7.4s;--l:-6.5s" />
+			<polygon class="ash" points="432.4,252.0 435.0,253.4 433.6,256.0 431.0,254.6" fill-opacity="0.54" style="--d:6.2s;--l:-0.5s" />
+			<circle class="ember" cx="431" cy="252" r="2.4" fill-opacity="0.71" style="--d:7.9s;--l:-9.2s" />
+			<polygon class="ash" points="422.9,270.0 425.0,271.9 423.1,274.0 421.0,272.1" fill-opacity="0.44" style="--d:6.6s;--l:-1.4s" />
+			<circle class="ember" cx="468" cy="327" r="1.7" fill-opacity="0.36" style="--d:8.4s;--l:-9.0s" />
+			<polygon class="ash" points="428.7,349.0 431.0,350.7 429.3,353.0 427.0,351.3" fill-opacity="0.45" style="--d:7.9s;--l:-6.1s" />
+			<polygon class="ash" points="349.2,420.2 351.8,423.2 348.8,425.8 346.2,422.8" fill-opacity="0.84" style="--d:5.4s;--l:-7.5s" />
+			<polygon class="ash" points="451.3,217.6 452.4,219.3 450.7,220.4 449.6,218.7" fill-opacity="0.51" style="--d:7.4s;--l:-9.0s" />
+			<polygon class="ash" points="454.5,251.0 457.0,252.5 455.5,255.0 453.0,253.5" fill-opacity="0.43" style="--d:8.3s;--l:-2.0s" />
+			<circle class="ember" cx="501" cy="296" r="1.4" fill-opacity="0.2" style="--d:7.5s;--l:-8.4s" />
+			<polygon class="ash" points="328.8,431.8 331.2,435.8 327.2,438.2 324.8,434.2" fill-opacity="0.71" style="--d:8.1s;--l:-4.9s" />
+			<polygon class="ash" points="377.9,335.5 381.5,336.9 380.1,340.5 376.5,339.1" fill-opacity="0.48" style="--d:8.5s;--l:-5.7s" />
+			<polygon class="ash" points="386.6,359.7 388.3,362.6 385.4,364.3 383.7,361.4" fill-opacity="0.69" style="--d:9.9s;--l:-1.2s" />
+			<circle class="ember" cx="381" cy="382" r="3.4" fill-opacity="0.63" style="--d:5.9s;--l:-0.1s" />
+			<circle class="ember" cx="376" cy="307" r="2.3" fill-opacity="0.81" style="--d:7.0s;--l:-7.9s" />
+			<circle class="ember" cx="402" cy="376" r="3.0" fill-opacity="0.53" style="--d:9.5s;--l:-3.8s" />
+			<polygon class="ash" points="420.3,349.9 423.1,351.3 421.7,354.1 418.9,352.7" fill-opacity="0.54" style="--d:8.2s;--l:-7.2s" />
+			<polygon class="ash" points="370.4,418.6 372.4,421.4 369.6,423.4 367.6,420.6" fill-opacity="0.8" style="--d:9.3s;--l:-3.5s" />
+			<circle class="ember" cx="388" cy="334" r="3.1" fill-opacity="0.53" style="--d:7.7s;--l:-6.9s" />
+			<circle class="ember" cx="532" cy="298" r="1.4" fill-opacity="0.12" style="--d:9.4s;--l:-5.8s" />
+			<circle class="spark" cx="497" cy="233" r="2.2" fill-opacity="0.33" style="--d:6.3s;--l:-6.7s" />
+			<polygon class="ash" points="386.3,372.5 388.5,373.3 387.7,375.5 385.5,374.7" fill-opacity="0.59" style="--d:6.4s;--l:-5.0s" />
+			<polygon class="ash" points="572.0,209.6 573.4,211.0 572.0,212.4 570.6,211.0" fill-opacity="0.12" style="--d:7.5s;--l:-6.9s" />
+			<circle class="ember" cx="372" cy="399" r="3.8" fill-opacity="0.62" style="--d:6.7s;--l:-9.0s" />
+			<polygon class="ash" points="401.7,329.2 402.8,331.7 400.3,332.8 399.2,330.3" fill-opacity="0.71" style="--d:5.2s;--l:-1.6s" />
+			<polygon class="ash" points="401.1,301.8 403.2,304.1 400.9,306.2 398.8,303.9" fill-opacity="0.47" style="--d:7.6s;--l:-2.5s" />
+			<circle class="ember" cx="483" cy="207" r="2.0" fill-opacity="0.42" style="--d:6.1s;--l:-2.2s" />
+			<polygon class="ash" points="497.7,194.5 499.5,195.7 498.3,197.5 496.5,196.3" fill-opacity="0.3" style="--d:8.0s;--l:-8.9s" />
+			<polygon class="ash" points="371.7,384.9 373.1,387.7 370.3,389.1 368.9,386.3" fill-opacity="0.72" style="--d:7.1s;--l:-7.9s" />
+			<circle class="ember" cx="377" cy="386" r="2.6" fill-opacity="0.74" style="--d:6.8s;--l:-7.0s" />
+			<polygon class="ash" points="389.6,401.6 391.4,402.6 390.4,404.4 388.6,403.4" fill-opacity="0.55" style="--d:9.5s;--l:-4.8s" />
+			<circle class="ember" cx="495" cy="297" r="1.4" fill-opacity="0.24" style="--d:9.8s;--l:-4.6s" />
+			<circle class="ember" cx="429" cy="294" r="2.0" fill-opacity="0.55" style="--d:5.9s;--l:-4.5s" />
+			<circle class="ember" cx="362" cy="301" r="3.8" fill-opacity="0.91" style="--d:9.0s;--l:-7.0s" />
+			<circle class="ember" cx="456" cy="270" r="2.0" fill-opacity="0.57" style="--d:8.7s;--l:-7.8s" />
+			<polygon class="ash" points="405.2,391.1 406.9,393.2 404.8,394.9 403.1,392.8" fill-opacity="0.63" style="--d:7.0s;--l:-7.2s" />
+			<polygon class="ash" points="565.5,117.7 567.3,118.5 566.5,120.3 564.7,119.5" fill-opacity="0.15" style="--d:6.5s;--l:-2.2s" />
+			<circle class="ember" cx="543" cy="208" r="1.4" fill-opacity="0.21" style="--d:9.9s;--l:-0.2s" />
+			<circle class="ember" cx="370" cy="302" r="4.4" fill-opacity="0.63" style="--d:9.5s;--l:-5.5s" />
+			<polygon class="ash" points="373.2,368.9 377.1,371.2 374.8,375.1 370.9,372.8" fill-opacity="0.54" style="--d:8.0s;--l:-7.6s" />
+			<polygon class="ash" points="528.1,207.6 529.4,209.1 527.9,210.4 526.6,208.9" fill-opacity="0.23" style="--d:6.4s;--l:-4.0s" />
+			<polygon class="ash" points="367.8,376.2 368.8,378.8 366.2,379.8 365.2,377.2" fill-opacity="0.6" style="--d:5.1s;--l:-2.5s" />
+			<circle class="ember" cx="413" cy="353" r="2.0" fill-opacity="0.5" style="--d:9.0s;--l:-2.2s" />
+			<polygon class="ash" points="337.9,410.2 341.8,411.9 340.1,415.8 336.2,414.1" fill-opacity="0.87" style="--d:5.7s;--l:-9.6s" />
+			<polygon class="ash" points="391.0,338.6 393.4,341.0 391.0,343.4 388.6,341.0" fill-opacity="0.6" style="--d:8.3s;--l:-4.6s" />
+			<circle class="ember" cx="384" cy="319" r="2.8" fill-opacity="0.63" style="--d:5.6s;--l:-4.8s" />
+			<circle class="spark" cx="396" cy="344" r="2.2" fill-opacity="0.54" style="--d:6.4s;--l:-2.4s" />
+			<polygon class="ash" points="397.7,326.5 399.5,327.7 398.3,329.5 396.5,328.3" fill-opacity="0.61" style="--d:5.0s;--l:-2.6s" />
+		</g>
+	</svg>
+</div>
+
+<style>
+	@layer starlight.core {
+		.hero-burn {
+			--hb-paper: #ece8e3;
+			--hb-line: #9b958f;
+			--hb-char: #f6b27e;
+			--hb-ember: #dc4a22;
+			--hb-edge: #ffb08a;
+			--hb-ash: #8b8580;
+			--hb-spark: #23b5dd;
+			position: absolute;
+			inset-block-start: -1.5rem;
+			inset-inline-end: 0;
+			width: min(26rem, 42%);
+			opacity: 0.24;
+			pointer-events: none;
+			z-index: -1;
+			/* Frame the upper-right of the title. Fade the lower edge before the
+			 * tagline and actions, and the left edge as it approaches the copy. */
+			-webkit-mask-image: linear-gradient(to right, transparent 0%, #000 55%), linear-gradient(to bottom, #000 40%, transparent 90%);
+			-webkit-mask-composite: source-in;
+			mask-image: linear-gradient(to right, transparent 0%, #000 55%), linear-gradient(to bottom, #000 40%, transparent 90%);
+			mask-composite: intersect;
+		}
+
+		:global([data-theme='light']) .hero-burn {
+			--hb-paper: #ffffff;
+			--hb-line: #c9c4bf;
+			--hb-char: #f0c39e;
+			--hb-ash: #b8b2ac;
+			opacity: 0.36;
+		}
+
+		:global([data-theme='light']) .hero-burn .paper {
+			stroke: #e2ddd8;
+			stroke-width: 1.5;
+		}
+
+		svg {
+			display: block;
+			width: 100%;
+			height: auto;
+			overflow: visible;
+		}
+
+		.paper {
+			fill: var(--hb-paper);
+		}
+
+		.lines line {
+			stroke: var(--hb-line);
+			stroke-width: 8;
+			stroke-linecap: round;
+		}
+
+		.edge-glow,
+		.edge {
+			fill: none;
+			stroke-linejoin: round;
+		}
+
+		.edge-glow {
+			stroke: var(--hb-ember);
+			stroke-width: 10;
+		}
+
+		.edge {
+			stroke: var(--hb-edge);
+			stroke-width: 2.5;
+		}
+
+		.ember {
+			fill: var(--hb-ember);
+		}
+
+		.ash {
+			fill: var(--hb-ash);
+		}
+
+		.ember {
+			filter: drop-shadow(0 0 3px var(--hb-ember));
+		}
+
+		.spark {
+			fill: var(--hb-spark);
+		}
+
+		.embers > * {
+			transform-box: fill-box;
+			transform-origin: center;
+			animation: hb-rise var(--d, 8s) ease-out var(--l, 0s) infinite;
+		}
+
+		@keyframes hb-rise {
+			0% {
+				transform: translate(0, 0);
+				opacity: 0;
+			}
+			15%,
+			70% {
+				opacity: 1;
+			}
+			100% {
+				transform: translate(26px, -34px);
+				opacity: 0;
+			}
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			.embers > * {
+				animation: none;
+			}
+		}
+
+		/* On narrow screens, keep the smaller note above the title instead of
+		 * moving it behind the actions. */
+		@media (max-width: 50rem) {
+			.hero-burn {
+				width: min(18rem, 65%);
+				inset-block-start: -2.75rem;
+				opacity: 0.12;
+			}
+		}
+	}
+</style>
