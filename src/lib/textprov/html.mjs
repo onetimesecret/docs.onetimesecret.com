@@ -22,17 +22,22 @@ export const clean = (text) => candidate.test(text) ? aiRuns(text).map(run => ru
 // Rewrite only affected source ranges, preserving the rest of Astro's HTML
 // byte-for-byte (including islands, scripts, attributes, entities, and doctype).
 // Runs during prerender, before Starlight builds its Pagefind index, and in dev.
-export function renderProvenance(html) {
+export function renderProvenance(html, { requireEnrollment = false } = {}) {
   if (!candidate.test(html) && !html.includes('&#')) return html;
   const tree = parse(html, { sourceCodeLocationInfo: true });
   const edits = [];
   const ids = [];
+  let enrolled = false;
   function collectIds(node) {
+    const attrs = node.attrs ?? [];
+    if (attrs.some(a => a.name === 'class' && a.value.split(/\s+/).includes('textprov-controls')) &&
+        attrs.some(a => a.name === 'data-textprov-document' && a.value === 'true')) enrolled = true;
     const id = node.attrs?.find(a => a.name === 'id');
     if (id) ids.push(id.value);
     for (const child of node.childNodes ?? []) collectIds(child);
   }
   collectIds(tree);
+  if (requireEnrollment && !enrolled) return html;
   // The slugger sees the original selectors and can consider marked/unmarked
   // versions of the same heading different. Keep existing clean IDs stable,
   // allocate unique IDs for the decoded ones, and remap their TOC links.

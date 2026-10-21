@@ -8,8 +8,9 @@ export const onRequest = defineMiddleware(async (context, next) => {
   // an explicit enrollment flag while those locals are available.
   const source = await response.clone().text();
   if (!source.includes('data-textprov-document="true"')) return response;
-  const html = renderProvenance(source);
+  const html = renderProvenance(source, { requireEnrollment: true });
   const headers = new Headers(response.headers);
   headers.delete('content-length');
+  headers.delete('etag');
   return new Response(html, { status: response.status, statusText: response.statusText, headers });
 });

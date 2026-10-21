@@ -45,6 +45,13 @@ describe('static TextProv HTML', () => {
     expect(Array.from(doc.querySelectorAll('h2'), h => h.id)).toEqual(['topic-2', 'topic', 'topic-1']);
     expect(doc.querySelector('a')?.getAttribute('href')).toBe('#topic-2');
   });
+
+  it('requires an actual enrollment element rather than a quoted flag in a code example', () => {
+    const html = `<div class="textprov-controls" data-textprov-document="false"></div><code>data-textprov-document="true"</code><div class="sl-markdown-content">${ai('Example')}</div>`;
+    expect(renderProvenance(html, { requireEnrollment: true })).toBe(html);
+    const enrolled = html.replace('data-textprov-document="false"', 'data-textprov-document="true"');
+    expect(renderProvenance(enrolled, { requireEnrollment: true })).toContain('data-textprov="ai">Example</span>');
+  });
 });
 
 describe('TextProv toggle', () => {
