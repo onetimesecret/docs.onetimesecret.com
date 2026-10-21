@@ -4,7 +4,7 @@ title: Closing your account
 description: What closing your account deletes, what it does not touch, what happens to secret links you have already shared, and how to close it.
 audience: end-user
 pageType: how-to
-sourceOfTruth: onetimesecret/apps/web/auth/config/hooks/account.rb (after_close_account runs the purge inside Rodauth's close_account transaction, and the delete_account override removes the accounts row and its authentication audit log last, #4819); onetimesecret/apps/web/auth/operations/teardown_account.rb (sessions are revoked, credentials and the audit log removed, and the customer record deleted last, on the self-service and administrative paths alike); onetimesecret/apps/web/auth/operations/destroy_customer_record.rb (the customer record is destroyed outright, not retained); onetimesecret/apps/web/auth/config/hooks/account.rb:84-91 (a sign-up with the address of a closed account is accepted once its customer record is gone); onetimesecret/apps/web/auth/operations/ensure_customer_for_account.rb (an identity-provider sign-in after closure finds no customer record by email and creates a new one)
+sourceOfTruth: onetimesecret/apps/web/auth/config/hooks/account.rb (after_close_account runs the purge inside Rodauth's close_account transaction, and the delete_account override removes the accounts row and its authentication audit log last, #4819); onetimesecret/apps/web/auth/operations/teardown_account.rb (sessions are revoked, credentials and the audit log removed, and the customer record deleted last, on the self-service and administrative paths alike); onetimesecret/apps/web/auth/operations/destroy_customer_record.rb (the customer record is destroyed outright, not retained); onetimesecret/apps/web/auth/config/hooks/account.rb:84-91 (a sign-up with the address of a closed account is accepted once its customer record is gone); onetimesecret/apps/web/auth/operations/ensure_customer_for_account.rb (an identity-provider sign-in after closure finds no customer record by email and creates a new one); onetimesecret/apps/web/auth/operations/customers/purge_preflight.rb (classify and owned_workspace_blockers: the sole-member default workspace is deleted with the account and other memberships removed; an owned organization with other members, a custom domain or a subscription refuses the closure)
 ---
 
 Closing your account deletes everything you sign in with and signs out the
@@ -27,33 +27,39 @@ Nothing is left to authenticate against. See
 closure, so devices you were signed in on stop working. See
 [Sessions and connected identities](/en/account/sessions-and-identities).
 
-**Your authentication history.** The log of s󠄁i󠄁g󠄁n󠄁-󠄁i󠄁n󠄁s󠄁,󠄁 f󠄁a󠄁i󠄁l󠄁e󠄁d󠄁 sign-ins,
+**Your authentication history.** The log of sign-ins, f󠄁a󠄁i󠄁l󠄁e󠄁d󠄁 s󠄁i󠄁g󠄁n󠄁-󠄁i󠄁n󠄁s󠄁,󠄁
 password changes and second-factor events on your account,󠄁 w󠄁i󠄁t󠄁h󠄁 t󠄁h󠄁e󠄁 n󠄁e󠄁t󠄁w󠄁o󠄁r󠄁k󠄁
 a󠄁d󠄁d󠄁r󠄁e󠄁s󠄁s󠄁 a󠄁n󠄁d󠄁 b󠄁r󠄁o󠄁w󠄁s󠄁e󠄁r󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁e󠄁d󠄁 a󠄁g󠄁a󠄁i󠄁n󠄁s󠄁t󠄁 e󠄁a󠄁c󠄁h󠄁 e󠄁n󠄁t󠄁r󠄁y󠄁,󠄁 is deleted i󠄁n the󠄁 s󠄁a󠄁m󠄁e󠄁 s󠄁t󠄁e󠄁p󠄁
 a󠄁s󠄁 the account. N󠄁o󠄁n󠄁e󠄁 o󠄁f󠄁 i󠄁t󠄁 i󠄁s󠄁 k󠄁e󠄁p󠄁t󠄁 f󠄁o󠄁r󠄁 a󠄁 r󠄁e󠄁t󠄁e󠄁n󠄁t󠄁i󠄁o󠄁n󠄁 p󠄁e󠄁r󠄁i󠄁o󠄁d󠄁.󠄁
 
-**Your API token.** It is replaced with a new value that is never shown to you,
-so any token you had in use stops working.
+**Your API token.** It is d󠄁ele󠄁t󠄁ed with the re󠄁st󠄁 o󠄁f󠄁 t󠄁he󠄁 a󠄁c󠄁c󠄁ou󠄁nt, so any token you
+had in use stops working.
+
+**T󠄁h󠄁e󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁.󠄁** Y󠄁o󠄁u󠄁r󠄁 s󠄁e󠄁t󠄁t󠄁i󠄁n󠄁g󠄁s󠄁 a󠄁n󠄁d󠄁 t󠄁h󠄁e󠄁 l󠄁i󠄁s󠄁t󠄁 o󠄁f󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁s󠄁 y󠄁o󠄁u󠄁 h󠄁a󠄁v󠄁e󠄁 c󠄁r󠄁e󠄁a󠄁t󠄁e󠄁d󠄁
+a󠄁r󠄁e󠄁 d󠄁e󠄁l󠄁e󠄁t󠄁e󠄁d󠄁 w󠄁i󠄁t󠄁h󠄁 t󠄁h󠄁e󠄁 s󠄁i󠄁g󠄁n󠄁-󠄁i󠄁n󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁.󠄁 T󠄁h󠄁e󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁s󠄁 t󠄁h󠄁e󠄁m󠄁s󠄁e󠄁l󠄁v󠄁e󠄁s󠄁 a󠄁r󠄁e󠄁 n󠄁o󠄁t󠄁 d󠄁e󠄁l󠄁e󠄁t󠄁e󠄁d󠄁;󠄁
+s󠄁e󠄁e󠄁 [W󠄁h󠄁a󠄁t󠄁 c󠄁l󠄁o󠄁s󠄁i󠄁n󠄁g󠄁 y󠄁o󠄁u󠄁r󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁 d󠄁o󠄁e󠄁s󠄁 n󠄁o󠄁t󠄁 t󠄁o󠄁u󠄁c󠄁h󠄁](#what-closing-your-account-does-not-touch).󠄁
+
+**Y󠄁o󠄁u󠄁r󠄁 o󠄁w󠄁n󠄁 w󠄁o󠄁r󠄁k󠄁s󠄁p󠄁a󠄁c󠄁e󠄁.󠄁** T󠄁h󠄁e󠄁 w󠄁o󠄁r󠄁k󠄁s󠄁p󠄁a󠄁c󠄁e󠄁 c󠄁r󠄁e󠄁a󠄁t󠄁e󠄁d󠄁 w󠄁i󠄁t󠄁h󠄁 y󠄁o󠄁u󠄁r󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁 g󠄁o󠄁e󠄁s󠄁 w󠄁i󠄁t󠄁h󠄁 i󠄁t󠄁,󠄁
+p󠄁r󠄁o󠄁v󠄁i󠄁d󠄁e󠄁d󠄁 n󠄁o󠄁b󠄁o󠄁d󠄁y󠄁 e󠄁l󠄁s󠄁e󠄁 i󠄁s󠄁 a󠄁 m󠄁e󠄁m󠄁b󠄁e󠄁r󠄁 o󠄁f󠄁 i󠄁t󠄁 a󠄁n󠄁d󠄁 i󠄁t󠄁 h󠄁a󠄁s󠄁 n󠄁o󠄁 c󠄁u󠄁s󠄁t󠄁o󠄁m󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁 a󠄁n󠄁d󠄁 n󠄁o󠄁
+s󠄁u󠄁b󠄁s󠄁c󠄁r󠄁i󠄁p󠄁t󠄁i󠄁o󠄁n󠄁.󠄁 O󠄁t󠄁h󠄁e󠄁r󠄁w󠄁i󠄁s󠄁e󠄁 t󠄁h󠄁e󠄁 c󠄁l󠄁o󠄁s󠄁u󠄁r󠄁e󠄁 i󠄁s󠄁 r󠄁e󠄁f󠄁u󠄁s󠄁e󠄁d󠄁;󠄁 s󠄁e󠄁e󠄁
+[B󠄁e󠄁f󠄁o󠄁r󠄁e󠄁 y󠄁o󠄁u󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](#before-you-start).󠄁
 
 No part of the closure is staged or delayed — the deletion happens when you
 confirm, not after a cooling-off period. There is no undo, and signing in again
 with a password is not possible: the sign-in record is gone and nothing
 re-creates it.
 
-:::caution
-**An identity provider can s󠄁i󠄁g󠄁n󠄁 you u󠄁p󠄁 ag󠄁a󠄁i󠄁n.** Closing deletes the
+:::n󠄁o󠄁te󠄁
+**S󠄁i󠄁g󠄁ning󠄁 i󠄁n󠄁 w󠄁ith󠄁 a󠄁 provider cr󠄁e󠄁a󠄁t󠄁e󠄁s󠄁 a ne󠄁w󠄁 a󠄁c󠄁c󠄁ount.** Closing deletes the
 identity-provider connection along with the sign-in record, but it does not
-stop you signing in through that provider again. Doing so creates a n󠄁e󠄁w󠄁,󠄁 e󠄁m󠄁p󠄁t󠄁y󠄁
-a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁 u󠄁n󠄁d󠄁e󠄁r󠄁 y󠄁o󠄁u󠄁r󠄁 a󠄁d󠄁d󠄁ress󠄁,󠄁 w󠄁i󠄁t󠄁h i󠄁t󠄁s󠄁 o󠄁w󠄁n󠄁 sign-in record and customer record.
-Nothing f󠄁r󠄁om󠄁 the closed account com󠄁es󠄁 back w󠄁ith i󠄁t. See
-[Signing in](/en/account/signing-in).
+stop you signing in through that provider again. Doing so creates a n󠄁ew󠄁,󠄁 empty󠄁
+a󠄁c󠄁c󠄁ount󠄁 u󠄁n󠄁der your address. Nothing from󠄁 the closed account c󠄁om󠄁es back w󠄁ith i󠄁t.
+See [Signing in](/en/account/signing-in).
 :::
 
 ## What is kept
 
-N󠄁o󠄁t󠄁h󠄁i󠄁n󠄁g󠄁 o󠄁f󠄁 t󠄁h󠄁e󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁 i󠄁t󠄁s󠄁e󠄁l󠄁f󠄁.󠄁 T󠄁h󠄁e󠄁 s󠄁i󠄁g󠄁n󠄁-󠄁i󠄁n󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁, i󠄁t󠄁s󠄁 h󠄁i󠄁s󠄁t󠄁o󠄁r󠄁y󠄁 and the󠄁
-customer record b󠄁e󠄁h󠄁i󠄁n󠄁d󠄁 i󠄁t󠄁 a󠄁r󠄁e󠄁 d󠄁e󠄁l󠄁e󠄁t󠄁e󠄁d󠄁 w󠄁h󠄁e󠄁n󠄁 y󠄁o󠄁u c󠄁o󠄁n󠄁f󠄁i󠄁rm󠄁.󠄁 N󠄁o󠄁n󠄁e o󠄁f󠄁 them󠄁 i󠄁s󠄁 m󠄁a󠄁r󠄁k󠄁e󠄁d󠄁
-f󠄁o󠄁r󠄁 la󠄁t󠄁e󠄁r󠄁 rem󠄁o󠄁v󠄁a󠄁l󠄁,󠄁 a󠄁n󠄁d󠄁 th󠄁e󠄁r󠄁e󠄁 is no r󠄁e󠄁te󠄁nti󠄁o󠄁n󠄁 p󠄁e󠄁r󠄁i󠄁o󠄁d󠄁 o󠄁n󠄁 any of them󠄁.
+N󠄁ot󠄁hi󠄁ng of the account itse󠄁l󠄁f.
 
 **Your email address i󠄁s r󠄁e󠄁l󠄁e󠄁ased.** Signing up again with the same address
 creates󠄁 a󠄁 n󠄁e󠄁w󠄁,󠄁 e󠄁m󠄁p󠄁t󠄁y󠄁 account. N󠄁othing f󠄁rom󠄁 the closed one󠄁 is attached󠄁 to it.
@@ -79,11 +85,14 @@ the ability to find it: the list of what you created is only reachable while
 signed in. Burn what you do not want left live *before* you close — see
 [Before you start](#before-you-start).
 
-**Organizations you belong to.** Membership is not removed by closing your
-account, and closing does not hand your organization to anyone else. If you are
-the only owner of an organization, closing your account leaves it with an owner
-who can no longer sign in, and ownership cannot be transferred from within the
-app. Sort that out first. See [Organizations](/en/organizations).
+**Organizations ot󠄁h󠄁er󠄁 p󠄁e󠄁o󠄁p󠄁le󠄁 ow󠄁n.** Y󠄁o󠄁u󠄁r󠄁 m󠄁embership is removed;󠄁 the
+organization, t󠄁h󠄁e󠄁 s󠄁e󠄁cr󠄁e󠄁t󠄁s s󠄁h󠄁a󠄁r󠄁e󠄁d󠄁 in i󠄁t󠄁 a󠄁n󠄁d󠄁 i󠄁t󠄁s󠄁 a󠄁c󠄁t󠄁i󠄁v󠄁i󠄁t󠄁y t󠄁rai󠄁l󠄁 a󠄁r󠄁e󠄁 unto󠄁u󠄁c󠄁hed.
+See [Organizations](/en/organizations).
+
+**O󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁t󠄁i󠄁o󠄁n󠄁s󠄁 y󠄁o󠄁u󠄁 o󠄁w󠄁n󠄁 w󠄁i󠄁t󠄁h󠄁 o󠄁t󠄁h󠄁e󠄁r󠄁 p󠄁e󠄁o󠄁p󠄁l󠄁e󠄁 i󠄁n󠄁 t󠄁h󠄁e󠄁m󠄁.󠄁** C󠄁l󠄁o󠄁s󠄁i󠄁n󠄁g󠄁 d󠄁o󠄁e󠄁s󠄁 n󠄁o󠄁t󠄁 h󠄁a󠄁n󠄁d󠄁
+t󠄁h󠄁e󠄁m󠄁 t󠄁o󠄁 a󠄁n󠄁y󠄁o󠄁n󠄁e󠄁 e󠄁l󠄁s󠄁e󠄁 a󠄁n󠄁d󠄁 d󠄁o󠄁e󠄁s󠄁 n󠄁o󠄁t󠄁 r󠄁e󠄁m󠄁o󠄁v󠄁e󠄁 t󠄁h󠄁e󠄁 o󠄁t󠄁h󠄁e󠄁r󠄁 m󠄁e󠄁m󠄁b󠄁e󠄁r󠄁s󠄁.󠄁 I󠄁n󠄁s󠄁t󠄁e󠄁a󠄁d󠄁 t󠄁h󠄁e󠄁 c󠄁l󠄁o󠄁s󠄁u󠄁r󠄁e󠄁
+i󠄁s󠄁 r󠄁e󠄁f󠄁u󠄁s󠄁e󠄁d󠄁 u󠄁n󠄁t󠄁i󠄁l󠄁 y󠄁o󠄁u󠄁 h󠄁a󠄁v󠄁e󠄁 d󠄁e󠄁a󠄁l󠄁t󠄁 w󠄁i󠄁t󠄁h󠄁 t󠄁h󠄁e󠄁m󠄁;󠄁 s󠄁e󠄁e󠄁
+[B󠄁e󠄁f󠄁o󠄁r󠄁e󠄁 y󠄁o󠄁u󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](#before-you-start).󠄁
 
 **Custom domains.** A custom domain belongs to the organization that added it,
 not to you personally, so it stays with the organization and keeps working. See
@@ -98,9 +107,11 @@ not to you personally, so it stays with the organization and keeps working. See
   link. See [Your receipt](/en/share/your-receipt).
 - **Copy anything you still need.** There is no data export, and once the
   account is closed you cannot sign in to look anything up.
-- **Deal with organizations you own.** Transfer of ownership is not a
-  self-service action, so if you own an organization other people use, arrange
-  it with support before you close.
+- **Deal with organizations you own.** T󠄁h󠄁e󠄁 c󠄁l󠄁o󠄁s󠄁u󠄁r󠄁e󠄁 i󠄁s󠄁 r󠄁e󠄁f󠄁u󠄁s󠄁e󠄁d󠄁 w󠄁h󠄁i󠄁l󠄁e󠄁 y󠄁o󠄁u󠄁 o󠄁w󠄁n󠄁 a󠄁n󠄁
+  o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 t󠄁h󠄁a󠄁t󠄁 h󠄁a󠄁s󠄁 o󠄁t󠄁h󠄁e󠄁r󠄁 m󠄁e󠄁m󠄁b󠄁e󠄁r󠄁s󠄁,󠄁 a󠄁 c󠄁u󠄁s󠄁t󠄁o󠄁m󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁 o󠄁r󠄁 a󠄁 s󠄁u󠄁b󠄁s󠄁c󠄁r󠄁i󠄁p󠄁t󠄁i󠄁o󠄁n󠄁,󠄁 a󠄁n󠄁d󠄁
+  t󠄁h󠄁e󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁 s󠄁t󠄁a󠄁y󠄁s󠄁 o󠄁p󠄁e󠄁n󠄁.󠄁 Transfer of ownership is not a self-service action,
+  so arrange it with support before you close. S󠄁e󠄁e󠄁
+  [O󠄁w󠄁n󠄁e󠄁r󠄁s󠄁h󠄁i󠄁p󠄁 a󠄁n󠄁d󠄁 t󠄁r󠄁a󠄁n󠄁s󠄁f󠄁e󠄁r󠄁](/en/organizations/ownership-and-transfer).󠄁
 - **Have your password ready.** The closure will not proceed without it, and an
   account created through an identity provider may not have one. If yours does
   not, set a password first from Settings → Security; see
@@ -132,7 +143,7 @@ confirmation step, no emailed link to open, and no waiting period.
 You are signed out and returned to the home page. Signing in with that address
 and a password no longer works, and neither does a password reset for it — a
 reset request returns the same "an email has been sent" message it returns for
-any address, but nothing is sent for an account that is not open.
+any address, but nothing is sent for an ad󠄁d󠄁r󠄁e󠄁s󠄁s󠄁 w󠄁i󠄁t󠄁h󠄁 n󠄁o󠄁 a󠄁ccount.
 
 No confirmation email follows. Its absence does not mean the closure failed.
 
@@ -155,6 +166,12 @@ link to set it — then come back. See [Signing in](/en/account/signing-in).
 restricted to an identity provider, closing the account from the app is not
 available at all; the provider owns the account and password-based account
 management is switched off.
+
+**"󠄁O󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 d󠄁a󠄁t󠄁a󠄁 o󠄁r󠄁 m󠄁e󠄁m󠄁b󠄁e󠄁r󠄁s󠄁h󠄁i󠄁p󠄁 s󠄁t󠄁a󠄁t󠄁e󠄁 r󠄁e󠄁q󠄁u󠄁i󠄁r󠄁e󠄁s󠄁 a󠄁t󠄁t󠄁e󠄁n󠄁t󠄁i󠄁o󠄁n󠄁.󠄁"󠄁** Y󠄁o󠄁u󠄁 o󠄁w󠄁n󠄁 a󠄁n󠄁
+o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 t󠄁h󠄁a󠄁t󠄁 h󠄁a󠄁s󠄁 o󠄁t󠄁h󠄁e󠄁r󠄁 m󠄁e󠄁m󠄁b󠄁e󠄁r󠄁s󠄁,󠄁 a󠄁 c󠄁u󠄁s󠄁t󠄁o󠄁m󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁 o󠄁r󠄁 a󠄁 s󠄁u󠄁b󠄁s󠄁c󠄁r󠄁i󠄁p󠄁t󠄁i󠄁o󠄁n󠄁,󠄁 o󠄁r󠄁 a󠄁n󠄁
+o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁 i󠄁s󠄁 i󠄁n󠄁 a󠄁 s󠄁t󠄁a󠄁t󠄁e󠄁 t󠄁h󠄁e󠄁 c󠄁l󠄁o󠄁s󠄁u󠄁r󠄁e󠄁 c󠄁a󠄁n󠄁n󠄁o󠄁t󠄁 r󠄁e󠄁s󠄁o󠄁l󠄁v󠄁e󠄁 o󠄁n󠄁 i󠄁t󠄁s󠄁 o󠄁w󠄁n󠄁.󠄁 D󠄁e󠄁a󠄁l󠄁
+w󠄁i󠄁t󠄁h󠄁 t󠄁h󠄁e󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 f󠄁i󠄁r󠄁s󠄁t󠄁 (󠄁s󠄁e󠄁e󠄁 [B󠄁e󠄁f󠄁o󠄁r󠄁e󠄁 y󠄁o󠄁u󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](#before-you-start))󠄁 o󠄁r󠄁
+c󠄁o󠄁n󠄁t󠄁a󠄁c󠄁t󠄁 s󠄁u󠄁p󠄁p󠄁o󠄁r󠄁t󠄁.󠄁 N󠄁o󠄁t󠄁h󠄁i󠄁n󠄁g󠄁 w󠄁a󠄁s󠄁 d󠄁e󠄁l󠄁e󠄁t󠄁e󠄁d󠄁.󠄁
 
 **"Please check the password."** The closure is refused before anything is
 deleted. If you cannot remember the password, reset it first — but note that
