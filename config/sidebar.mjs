@@ -190,6 +190,9 @@ export const sidebar = [
       createLink("memberInvites", "organizations/inviting-members"),
       createLink("ownershipAndTransfer", "organizations/ownership-and-transfer"),
       createLink("sso", "organizations/sso"),
+      // Only the label changed (auditLog → secretActivity); the slug stays so
+      // existing audit-trail links keep working without a redirect. Contrast
+      // share/request-secret, which replaced receiving-secrets and redirects.
       createLink("secretActivity", "organizations/audit-trail"),
     ]),
 
