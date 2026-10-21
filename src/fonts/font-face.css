@@ -157,7 +157,8 @@
 }
 
 /*
- * Maryheather Provenance: body/prose (via --font-serif). Maryheather is
+ * Maryheather Provenance: available serif fallback (via --font-serif); body
+ * prose is not switched to it. Maryheather is
  * Merriweather patched and renamed — "Merriweather" is an OFL Reserved Font
  * Name, so the derived family carries a non-reserved name; upstream copyright
  * and OFL text ship in maryheather-provenance/.

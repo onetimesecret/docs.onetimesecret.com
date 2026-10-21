@@ -16,6 +16,7 @@ package-lock.json
 logs
 *.log
 *.txt
+!src/fonts/**/OFL.txt
 
 # Misc
 .DS_Store
@@ -38,6 +39,15 @@ tmp
 .ruby-version
 .commit_hash.txt
 CLAUDE.md
+
+# Shared agent instructions and the explicit Claude authoring command.
+!CLAUDE.md
+!.claude/
+.claude/*
+!.claude/commands/
+.claude/commands/*
+!.claude/commands/textprov.md
+__pycache__/
 
 # VSC
 .history

@@ -1,0 +1,41 @@
+---
+import Default from '@astrojs/starlight/components/MarkdownContent.astro';
+const enrolled = Astro.locals.starlightRoute.entry.data.textprov === true;
+---
+<div class="textprov-controls" data-textprov-document={String(enrolled)} data-pagefind-ignore>
+  <button type="button" data-textprov-toggle aria-pressed="false" aria-describedby="textprov-help" hidden>
+    TextProv · AI edits
+  </button>
+  <p id="textprov-help" class="textprov-help">Highlights recorded AI agent edits. Unmarked content has no recorded origin.</p>
+</div>
+<Default><slot /></Default>
+
+<script>
+  import { initTextProv } from '../../lib/textprov/display';
+  function init() {
+    let storage: Storage | undefined;
+    try { storage = window.localStorage; } catch { /* Private browsing may deny storage. */ }
+    initTextProv(document, storage);
+  }
+  init();
+  document.addEventListener('astro:page-load', init);
+</script>
+
+<style is:global>
+  .textprov-controls { margin-block-end: 1.5rem; }
+  .textprov-controls button {
+    color: var(--sl-color-text); background: var(--sl-color-bg);
+    border: 1px solid var(--sl-color-gray-4); border-radius: .35rem;
+    padding: .4rem .65rem; font: inherit; font-size: .875rem; cursor: pointer;
+  }
+  .textprov-controls button:focus-visible { outline: 2px solid var(--sl-color-text-accent); outline-offset: 3px; }
+  .textprov-controls button[aria-pressed="true"] { border-color: var(--sl-color-text-accent); }
+  .textprov-help { display: none; font-size: .875rem; margin-block: .5rem 0; }
+  :root[data-textprov="shown"] .textprov-help { display: block; }
+  :root[data-textprov="shown"] .textprov-ai {
+    text-decoration-line: underline; text-decoration-style: wavy;
+    text-decoration-color: var(--sl-color-text-accent); text-underline-offset: .2em;
+    background: color-mix(in srgb, var(--sl-color-text-accent) 10%, transparent);
+  }
+  @media print { .textprov-controls { display: none; } .textprov-ai { text-decoration: none !important; background: none !important; } }
+</style>

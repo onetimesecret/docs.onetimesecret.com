@@ -30,6 +30,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
 
       - uses: pnpm/action-setup@v6
         with:
@@ -58,6 +60,15 @@ jobs:
 
       - name: Test
         run: pnpm test
+
+      - name: Test provenance authoring
+        run: python3 -m unittest discover -s tools/tests
+
+      - name: Preserve recorded provenance
+        env:
+          PROVENANCE_BASE: ${{ github.event.pull_request.base.sha }}
+          PROVENANCE_HEAD: ${{ github.event.pull_request.head.sha }}
+        run: python3 tools/dogfood.py check --preserve-only --base "$PROVENANCE_BASE" --head "$PROVENANCE_HEAD"
 
       - name: Build
         run: pnpm run build

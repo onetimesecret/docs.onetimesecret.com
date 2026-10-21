@@ -1,0 +1,70 @@
+import { describe, it, expect } from 'vitest';
+import { JSDOM } from 'jsdom';
+import { aiRuns, renderProvenance } from './html.mjs';
+import { initTextProv } from './display';
+
+const ai = (s: string) => Array.from(s).map(c => /\s/u.test(c) ? c : c + '\u{E0101}').join('');
+
+describe('static TextProv HTML', () => {
+  it('emits clean text and provenance spans for headings, links, emphasis, tables and non-Latin prose', () => {
+    const html = `<title>${ai('Title')}</title><div class="sl-markdown-content"><h2 id="${ai('heading')}">${ai('Heading')}</h2><p>Old <em>${ai('日本語')}</em> <a href="/en/start">${ai('guide')}</a></p><table><tr><td>${ai('Cell')}</td></tr></table></div><a href="#${encodeURIComponent(ai('heading'))}" aria-label="${ai('Heading')}">${ai('Heading')}</a>`;
+    const result = renderProvenance(html);
+    expect(result).not.toContain('\u{E0101}');
+    const dom = new JSDOM(result).window.document;
+    expect(dom.title).toBe('Title');
+    expect(dom.querySelector('h2')?.id).toBe('heading');
+    expect(dom.querySelector('a[href="#heading"]')?.textContent).toBe('Heading');
+    expect(dom.querySelector('a[href="#heading"]')?.getAttribute('aria-label')).toBe('Heading');
+    expect(dom.querySelector('em .textprov-ai')?.textContent).toBe('日本語');
+    expect(dom.querySelector('td .textprov-ai')?.textContent).toBe('Cell');
+    expect(dom.querySelector('.sl-markdown-content')?.textContent).toBe('HeadingOld 日本語 guideCell');
+    expect(renderProvenance(result)).toBe(result);
+  });
+
+  it('decodes numeric character references, escapes text and handles the supported legacy PUA form', () => {
+    const result = renderProvenance(`<div class="sl-markdown-content">A&#xE0101;&lt;&#917761;&amp;${String.fromCodePoint(0x100042)}</div>`);
+    const doc = new JSDOM(result).window.document;
+    expect(doc.querySelector('div')?.textContent).toBe('A<&B');
+    expect(doc.querySelector('script')).toBeNull();
+    expect(doc.querySelectorAll('.textprov-ai')).toHaveLength(2);
+  });
+
+  it('preserves genuine IVS, emoji variants, combining graphemes, code, scripts, styles and unmarked HTML', () => {
+    const ivs = '辻\u{E0100}';
+    const unchanged = `<!doctype html><div>${ivs} ❤️</div><script>"${ai('code')}"</script><style>/* ${ai('css')} */</style><pre><code>${ai('example')}</code></pre>`;
+    expect(renderProvenance(unchanged)).toBe(unchanged);
+    expect(aiRuns(ivs)[0].text).toBe(ivs);
+    const grapheme = 'e\u0301\u{E0101}';
+    expect(renderProvenance(`<div class="sl-markdown-content">${grapheme}</div>`)).toContain('>e\u0301</span>');
+  });
+});
+
+describe('TextProv toggle', () => {
+  function page() {
+    return new JSDOM('<button data-textprov-toggle aria-pressed="false" hidden>TextProv</button><p class="textprov-ai">Clean text</p>', { url: 'https://docs.example.test' });
+  }
+  it('defaults to hidden, persists the choice, and never mutates page text', () => {
+    const dom = page();
+    const { document, localStorage } = dom.window;
+    const text = document.body.textContent;
+    initTextProv(document, localStorage);
+    const button = document.querySelector('button')!;
+    expect(button.hidden).toBe(false);
+    expect(button.getAttribute('aria-pressed')).toBe('false');
+    button.click();
+    expect(document.documentElement.dataset.textprov).toBe('shown');
+    expect(button.getAttribute('aria-pressed')).toBe('true');
+    initTextProv(document, localStorage);
+    expect(document.documentElement.dataset.textprov).toBe('shown');
+    button.click();
+    expect(document.documentElement.dataset.textprov).toBe('hidden');
+    expect(document.body.textContent).toBe(text);
+  });
+  it('works when browser storage is denied', () => {
+    const { document } = page().window;
+    const storage = { getItem() { throw Error('denied'); }, setItem() { throw Error('denied'); } } as unknown as Storage;
+    expect(() => initTextProv(document, storage)).not.toThrow();
+    document.querySelector('button')!.click();
+    expect(document.documentElement.dataset.textprov).toBe('shown');
+  });
+});
