@@ -371,6 +371,14 @@ behavior):
   would stop later webhooks matching the new workspace. Not tested at runtime.
 - The closure refusal message is one hard-coded English string for every
   blocker; the blocker codes are not shown to the user.
+- Closure keeps the Rodauth `accounts` row (status closed, plaintext email,
+  `external_id`, timestamps) and every `account_authentication_audit_logs` row,
+  whose metadata includes the masked IP and anonymized user agent per event.
+  `TeardownAccount#close_auth_account` always passes `retain_account: true`
+  (`teardown_account.rb:177-189`); nothing later prunes closed rows or their
+  audit logs, so both are kept indefinitely. Proposed change: delete both at
+  closure. The `remove_authentication_data.rb` header still says audit logs are
+  deleted with the account.
 
 Validation completed:
 
@@ -413,3 +421,12 @@ Rename validation: navigation, orphan, frontmatter, locale, and whitespace
 checks passed. Production build passed. All 17 configured locale redirects
 were checked to point directly to the new path; generated English redirect
 HTML and English/French/Japanese canonical page outputs were also checked.
+
+
+## Accounts verification follow-up
+
+Runtime checks, policy and support confirmations, and related application
+observations are tracked separately in the
+[Accounts verification ledger](accounts-verification-ledger-2026-10-20.md).
+All entries start open; the Accounts content dispositions above do not imply
+that those checks have passed or that policy commitments have been approved.
