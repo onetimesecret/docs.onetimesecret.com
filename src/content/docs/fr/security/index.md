@@ -17,7 +17,7 @@ détails.
 - **Chiffrement en transit et au repos.** Les secrets sont chiffrés en transit
   et au repos sur tous les f󠄁o󠄁r󠄁f󠄁ai󠄁t󠄁s.
 - **Protection par phrase secrète.** Vous pouvez exiger une phrase secrète pour
-  consulter un secret, ajoutant une couche que le lien seul ne peut pas
+  consulter un secret, c󠄁e󠄁 q󠄁u󠄁i󠄁 ajoute󠄁 une couche que le lien seul ne peut pas
   déverrouiller.
 - **Durée limitée par conception.** Chaque secret porte une expiration ;
   choisissez la durée de vie la plus courte possible en pratique pour minimiser

@@ -11,7 +11,7 @@ une󠄁 i󠄁n󠄁f󠄁r󠄁a󠄁s󠄁t󠄁r󠄁u󠄁c󠄁t󠄁u󠄁r󠄁e󠄁 q
 l󠄁'󠄁i󠄁n󠄁s󠄁ta󠄁nce e󠄁s󠄁t󠄁 a󠄁ccessi󠄁b󠄁le dep󠄁u󠄁i󠄁s l󠄁'󠄁I󠄁nter󠄁net p󠄁u󠄁blic ou non, et de l󠄁'󠄁i󠄁ma󠄁g󠄁e de m󠄁ar󠄁que a󠄁f󠄁f󠄁i󠄁c󠄁h󠄁é󠄁e󠄁 p󠄁a󠄁r󠄁
 l'󠄁i󠄁n󠄁t󠄁e󠄁r󠄁f󠄁ac󠄁e.󠄁
 
-## C󠄁hoisis󠄁s󠄁e󠄁z󠄁 d󠄁'󠄁a󠄁b󠄁o󠄁rd󠄁 un mode d'authentification
+## C󠄁hoisir󠄁 d󠄁'󠄁a󠄁b󠄁o󠄁rd󠄁 un mode d'authentification
 
 L󠄁e󠄁 m󠄁o󠄁d󠄁e󠄁 d󠄁é󠄁t󠄁e󠄁r󠄁m󠄁i󠄁n󠄁e󠄁 c󠄁e󠄁 q󠄁u󠄁i󠄁 d󠄁o󠄁i󠄁t󠄁 t󠄁ourn󠄁e󠄁r󠄁 e󠄁n󠄁 p󠄁l󠄁us󠄁,󠄁 a󠄁l󠄁or󠄁s󠄁 f󠄁ix󠄁e󠄁z󠄁-󠄁l󠄁e󠄁 a󠄁v󠄁a󠄁n󠄁t󠄁 d󠄁'󠄁i󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁e󠄁r󠄁.󠄁
 
@@ -25,7 +25,7 @@ r󠄁e󠄁d󠄁é󠄁m󠄁a󠄁r󠄁r󠄁a󠄁g󠄁e󠄁.󠄁
 d󠄁é󠄁b󠄁l󠄁o󠄁q󠄁u󠄁e󠄁,󠄁 o󠄁ù󠄁 c󠄁e󠄁t󠄁t󠄁e󠄁 b󠄁a󠄁s󠄁e󠄁 d󠄁e󠄁 d󠄁o󠄁n󠄁n󠄁é󠄁e󠄁s󠄁 d󠄁o󠄁i󠄁t󠄁 r󠄁é󠄁s󠄁i󠄁d󠄁e󠄁r󠄁 e󠄁t󠄁 à󠄁 q󠄁u󠄁e󠄁l󠄁 p󠄁o󠄁i󠄁n󠄁t󠄁 i󠄁l󠄁 e󠄁s󠄁t󠄁 d󠄁i󠄁f󠄁f󠄁i󠄁c󠄁i󠄁l󠄁e󠄁 d󠄁e󠄁 c󠄁h󠄁a󠄁n󠄁g󠄁e󠄁r󠄁 d󠄁e󠄁 m󠄁o󠄁d󠄁e󠄁
 p󠄁a󠄁r󠄁 l󠄁a󠄁 s󠄁u󠄁i󠄁t󠄁e󠄁.󠄁
 
-## C󠄁h󠄁o󠄁i󠄁s󠄁i󠄁s󠄁s󠄁e󠄁z󠄁 u󠄁n󠄁 p󠄁a󠄁r󠄁c󠄁o󠄁u󠄁r󠄁s󠄁 d󠄁'󠄁i󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁a󠄁t󠄁i󠄁o󠄁n󠄁
+## C󠄁h󠄁o󠄁i󠄁s󠄁i󠄁r󠄁 u󠄁n󠄁 p󠄁a󠄁r󠄁c󠄁o󠄁u󠄁r󠄁s󠄁 d󠄁'󠄁i󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁a󠄁t󠄁i󠄁o󠄁n󠄁
 
 V󠄁ous ê󠄁t󠄁e󠄁s󠄁 p󠄁r󠄁e󠄁s󠄁s󠄁é󠄁 e󠄁t󠄁 v󠄁o󠄁u󠄁s󠄁 d󠄁i󠄁s󠄁p󠄁o󠄁s󠄁e󠄁z󠄁 d󠄁é󠄁j󠄁à󠄁 d󠄁'󠄁u󠄁n󠄁 V󠄁a󠄁l󠄁k󠄁e󠄁y󠄁 o󠄁u󠄁 d󠄁'󠄁u󠄁n󠄁 R󠄁e󠄁d󠄁i󠄁s󠄁 ?󠄁 L󠄁a󠄁 c󠄁o󠄁m󠄁m󠄁a󠄁n󠄁d󠄁e󠄁 `docker run`
 u󠄁n󠄁i󠄁q󠄁u󠄁e󠄁 d󠄁é󠄁c󠄁r󠄁i󠄁t󠄁e󠄁 d󠄁a󠄁n󠄁s󠄁 [I󠄁n󠄁s󠄁t󠄁a󠄁l󠄁ler󠄁 a󠄁v󠄁e󠄁c󠄁 D󠄁o󠄁c󠄁k󠄁e󠄁r󠄁](/en/install/docker#running-a-single-container)

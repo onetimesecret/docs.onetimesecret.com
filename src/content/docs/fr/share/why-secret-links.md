@@ -1,6 +1,6 @@
 ---
 textprov: true
-title: "Pourquoi utiliser des liens secrets ?"
+title: "Pourquoi utiliser des liens secrets ?"
 description: "Partagez un lien temporaire au lieu de copier des informations sensibles dans un e-mail, une messagerie instantanée ou un ticket, et comprenez ce que cela protège et ne protège pas."
 ---
 
@@ -24,7 +24,7 @@ d󠄁é󠄁f󠄁i󠄁n󠄁i󠄁e.
 
 D󠄁é󠄁f󠄁inis󠄁s󠄁e󠄁z󠄁 u󠄁ne expiration a󠄁f󠄁i󠄁n󠄁 q󠄁u󠄁'󠄁u󠄁n󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 n󠄁o󠄁n󠄁 l󠄁u󠄁 s󠄁o󠄁i󠄁t󠄁 s󠄁u󠄁p󠄁p󠄁r󠄁i󠄁m󠄁é󠄁 l󠄁o󠄁r󠄁s󠄁q󠄁u󠄁'󠄁i󠄁l󠄁
 n󠄁'󠄁e󠄁s󠄁t󠄁 p󠄁l󠄁u󠄁s󠄁 n󠄁é󠄁c󠄁e󠄁s󠄁s󠄁a󠄁i󠄁r󠄁e󠄁.󠄁 S󠄁i󠄁 v󠄁o󠄁u󠄁s󠄁 d󠄁e󠄁v󠄁e󠄁z󠄁 l󠄁e󠄁 r󠄁e󠄁t󠄁i󠄁r󠄁e󠄁r󠄁 p󠄁l󠄁u󠄁s󠄁 t󠄁ô󠄁t󠄁,󠄁 b󠄁r󠄁û󠄁l󠄁e󠄁z󠄁-󠄁l󠄁e󠄁 d󠄁e󠄁p󠄁u󠄁i󠄁s󠄁 l󠄁e󠄁
-r󠄁e󠄁ç󠄁u󠄁,󠄁 e󠄁n󠄁 s󠄁a󠄁i󠄁s󠄁i󠄁s󠄁s󠄁a󠄁n󠄁t󠄁 s󠄁a󠄁 p󠄁h󠄁r󠄁a󠄁s󠄁e󠄁 s󠄁e󠄁c󠄁r󠄁è󠄁t󠄁e󠄁 s󠄁i󠄁 u󠄁n󠄁e󠄁 a󠄁 é󠄁t󠄁é󠄁 d󠄁éfinie󠄁.󠄁 C󠄁o󠄁n󠄁s󠄁u󠄁l󠄁t󠄁e󠄁z󠄁
+r󠄁e󠄁ç󠄁u󠄁,󠄁 e󠄁n󠄁 s󠄁a󠄁i󠄁s󠄁i󠄁s󠄁s󠄁a󠄁n󠄁t󠄁 s󠄁a󠄁 p󠄁h󠄁r󠄁a󠄁s󠄁e󠄁 s󠄁e󠄁c󠄁r󠄁è󠄁t󠄁e󠄁,󠄁 l󠄁e󠄁 c󠄁a󠄁s󠄁 é󠄁c󠄁h󠄁é󠄁a󠄁n󠄁t󠄁.󠄁 C󠄁o󠄁n󠄁s󠄁u󠄁l󠄁t󠄁e󠄁z󠄁
 [P󠄁a󠄁r󠄁t󠄁a󠄁g󠄁e󠄁r󠄁 d󠄁e󠄁s sec󠄁r󠄁e󠄁t󠄁s󠄁](/fr/share).󠄁
 
 L󠄁e󠄁 c󠄁h󠄁a󠄁r󠄁g󠄁e󠄁m󠄁e󠄁n󠄁t󠄁 d󠄁e󠄁 l󠄁a󠄁 p󠄁a󠄁g󠄁e󠄁 d󠄁e󠄁 c󠄁o󠄁n󠄁f󠄁i󠄁r󠄁m󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 n󠄁e󠄁 c󠄁o󠄁n󠄁s󠄁o󠄁m󠄁m󠄁e󠄁 p󠄁a󠄁s󠄁 l󠄁e󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁.󠄁 C󠄁o󠄁n󠄁f󠄁i󠄁r󠄁m󠄁e󠄁r󠄁
