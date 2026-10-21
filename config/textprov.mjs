@@ -7,7 +7,7 @@ const vendored = fileURLToPath(new URL('../vendor/textprov/textprov.cjs', import
 // module object and export the result. The production bundler converts
 // CommonJS itself and rejects `export` in a .cjs file, so this is dev-only.
 // The prefix shares the first line, so line numbers do not change.
-const vendoredModule = {
+export const vendoredModule = {
   name: 'docs-textprov-vendor',
   apply: 'serve',
   transform(code, id) {
