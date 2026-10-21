@@ -20,7 +20,7 @@ description: "Güvenli gizli mesaj paylaşımı için planlarımızı karşıla�
 | Kuruluş başına üye sayısı | — | 1 | S󠄁a󠄁b󠄁i󠄁t󠄁 s󠄁ı󠄁n󠄁ı󠄁r󠄁 yo󠄁k󠄁 | S󠄁a󠄁b󠄁i󠄁t󠄁 s󠄁ı󠄁n󠄁ı󠄁r󠄁 y󠄁o󠄁k󠄁 |
 | T󠄁ek o󠄁t󠄁u󠄁r󠄁u󠄁m󠄁 aç󠄁m󠄁a (󠄁S󠄁S󠄁O󠄁)󠄁 | ❌󠄁 | ❌󠄁 | ❌󠄁 | ✅󠄁 |
 | E󠄁k󠄁i󠄁p󠄁l󠄁e󠄁r󠄁 v󠄁e󠄁 p󠄁ay󠄁l󠄁a󠄁ş󠄁ı󠄁lan k󠄁ont󠄁r󠄁o󠄁l󠄁 p󠄁an󠄁e󠄁l󠄁i󠄁 | ❌󠄁 | ❌󠄁 | ❌󠄁 | ✅󠄁 |
-| G󠄁i󠄁z󠄁l󠄁i󠄁 M󠄁e󠄁s󠄁a󠄁j󠄁 Et󠄁k󠄁i󠄁n󠄁l󠄁i󠄁ğ󠄁i󠄁 (󠄁d󠄁e󠄁n󠄁e󠄁t󠄁i󠄁m󠄁 g󠄁ü󠄁n󠄁l󠄁ü󠄁k󠄁l󠄁e󠄁ri󠄁)󠄁 | ❌󠄁 | ❌󠄁 | ❌󠄁 | B󠄁e󠄁t󠄁a󠄁 |
+| G󠄁i󠄁z󠄁l󠄁i󠄁 M󠄁e󠄁s󠄁a󠄁j󠄁 A󠄁k󠄁t󠄁i󠄁v󠄁i󠄁t󠄁e󠄁s󠄁i󠄁 (󠄁d󠄁e󠄁n󠄁e󠄁t󠄁i󠄁m󠄁 g󠄁ü󠄁n󠄁l󠄁ü󠄁k󠄁l󠄁e󠄁ri󠄁)󠄁 | ❌󠄁 | ❌󠄁 | ❌󠄁 | B󠄁e󠄁t󠄁a󠄁 |
 | G󠄁i󠄁z󠄁l󠄁i󠄁 mes󠄁a󠄁j󠄁 s󠄁ü󠄁r󠄁e󠄁s󠄁i󠄁 | 7 güne kadar | 14 güne kadar | 30 güne kadar | 30 güne kadar |
 | Bölge s󠄁eçimi (EU, UK, US, CA, NZ) | ✅ | ✅ | ✅ | ✅ |
 | Aktarım s󠄁ırasında ve b󠄁eklemede ş󠄁ifrelen󠄁mi󠄁ş󠄁 | ✅ | ✅ | ✅ | ✅ |
