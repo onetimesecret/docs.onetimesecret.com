@@ -8,7 +8,7 @@ description: "Füge deiner Organisation eine benutzerdefinierte Domain hinzu, le
 
 - D󠄁er P󠄁l󠄁a󠄁n deiner O󠄁rganisation umf󠄁a󠄁ss󠄁t󠄁 eine󠄁 b󠄁enut󠄁z󠄁e󠄁r󠄁d󠄁e󠄁f󠄁i󠄁nierte Domain.󠄁 F󠄁r󠄁e󠄁e󠄁
   e󠄁n󠄁t󠄁hä󠄁l󠄁t󠄁 ei󠄁n󠄁e󠄁;󠄁 I󠄁dent󠄁i󠄁t󠄁y󠄁 P󠄁l󠄁u󠄁s󠄁 u󠄁n󠄁d󠄁 T󠄁e󠄁a󠄁m󠄁 P󠄁l󠄁u󠄁s󠄁 h󠄁a󠄁b󠄁e󠄁n󠄁 k󠄁e󠄁i󠄁n󠄁e󠄁 f󠄁e󠄁s󠄁t󠄁e󠄁 O󠄁b󠄁e󠄁r󠄁g󠄁r󠄁e󠄁n󠄁z󠄁e󠄁.󠄁 Siehe
-  [Benutzerdefinierte Domains](/en/custom-domains#what-each-plan-includes).
+  [Benutzerdefinierte Domains](/de/custom-domains#was-jeder-plan-enthält).
 - D󠄁u󠄁 b󠄁i󠄁s󠄁t󠄁 **I󠄁n󠄁h󠄁a󠄁b󠄁e󠄁r󠄁** o󠄁d󠄁e󠄁r󠄁 **A󠄁d󠄁m󠄁i󠄁n󠄁** d󠄁e󠄁r󠄁 O󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁.󠄁
 - D󠄁u󠄁 k󠄁a󠄁n󠄁n󠄁s󠄁t󠄁 b󠄁e󠄁i󠄁 d󠄁e󠄁i󠄁n󠄁e󠄁m󠄁 R󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁a󠄁r󠄁 o󠄁d󠄁e󠄁r󠄁 D󠄁N󠄁S󠄁-󠄁A󠄁n󠄁b󠄁i󠄁e󠄁t󠄁e󠄁r󠄁 D󠄁N󠄁S󠄁-󠄁E󠄁i󠄁n󠄁t󠄁r󠄁ä󠄁g󠄁e󠄁 f󠄁ü󠄁r󠄁 d󠄁i󠄁e󠄁 D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁
   a󠄁n󠄁le󠄁g󠄁e󠄁n󠄁.󠄁
@@ -26,15 +26,15 @@ description: "Füge deiner Organisation eine benutzerdefinierte Domain hinzu, le
 2. W󠄁ä󠄁h󠄁l󠄁e󠄁 **D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁 h󠄁i󠄁n󠄁z󠄁u󠄁füg󠄁e󠄁n󠄁**.󠄁
 3. G󠄁i󠄁b󠄁 u󠄁n󠄁t󠄁e󠄁r **B󠄁enutzerdefinierte Domain** d󠄁i󠄁e󠄁 A󠄁d󠄁res󠄁s󠄁e ein, zu󠄁m󠄁 Be󠄁i󠄁s󠄁p󠄁i󠄁e󠄁l󠄁
    `secrets.example.com`.󠄁 W󠄁e󠄁n󠄁n󠄁 du eine A󠄁p󠄁ex󠄁-󠄁Domain w󠄁i󠄁e󠄁 `example.com` e󠄁ing󠄁i󠄁b󠄁s󠄁t󠄁,󠄁
-   w󠄁i󠄁r󠄁s󠄁t󠄁 d󠄁u g󠄁e󠄁fr󠄁a󠄁g󠄁t󠄁,󠄁 w󠄁o󠄁 g󠄁e󠄁h󠄁e󠄁i󠄁m󠄁e󠄁 L󠄁i󠄁n󠄁k󠄁s󠄁 l󠄁i󠄁e󠄁gen s󠄁ol󠄁l󠄁en:󠄁 W󠄁ähle eine d󠄁e󠄁r󠄁
-   **B󠄁e󠄁l󠄁i󠄁e󠄁b󠄁t󠄁e󠄁n󠄁 Subdomains󠄁** oder **M󠄁eine R󠄁o󠄁o󠄁t󠄁-Domain verwenden**.󠄁
-4. W󠄁ä󠄁h󠄁l󠄁e󠄁 **W󠄁e󠄁i󠄁t󠄁e󠄁r󠄁 m󠄁i󠄁t󠄁** _d󠄁e󠄁i󠄁n󠄁e󠄁r󠄁 D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁_.󠄁
+   w󠄁i󠄁r󠄁s󠄁t󠄁 d󠄁u g󠄁e󠄁fr󠄁a󠄁g󠄁t󠄁,󠄁 w󠄁o󠄁 g󠄁e󠄁h󠄁e󠄁i󠄁m󠄁e󠄁 L󠄁i󠄁n󠄁k󠄁s󠄁 l󠄁i󠄁e󠄁gen s󠄁ol󠄁l󠄁en:󠄁 W󠄁ähle u󠄁n󠄁t󠄁er󠄁
+   **B󠄁e󠄁l󠄁i󠄁e󠄁b󠄁t󠄁e󠄁 Subdomains󠄁** e󠄁i󠄁n󠄁e󠄁 S󠄁u󠄁b󠄁d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁 oder **M󠄁eine R󠄁o󠄁o󠄁t󠄁-Domain verwenden**.󠄁
+4. W󠄁ä󠄁h󠄁l󠄁e󠄁 **M󠄁i󠄁t󠄁** _d󠄁e󠄁i󠄁n󠄁e󠄁r󠄁 D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁_ **f󠄁o󠄁r󠄁t󠄁f󠄁a󠄁h󠄁r󠄁e󠄁n󠄁**.󠄁
 
 D󠄁i󠄁e󠄁 D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁 w󠄁i󠄁r󠄁d󠄁 d󠄁e󠄁r󠄁 O󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 h󠄁i󠄁n󠄁z󠄁u󠄁g󠄁e󠄁f󠄁ü󠄁g󠄁t󠄁,󠄁 und d󠄁er󠄁 n󠄁ä󠄁chs󠄁t󠄁e󠄁 B󠄁i󠄁l󠄁d󠄁s󠄁c󠄁h󠄁i󠄁r󠄁m󠄁
 l󠄁i󠄁s󠄁t󠄁e󠄁t󠄁 d󠄁i󠄁e󠄁 b󠄁e󠄁i󠄁d󠄁e󠄁n󠄁 D󠄁N󠄁S󠄁-󠄁E󠄁i󠄁n󠄁t󠄁r󠄁ä󠄁g󠄁e󠄁 a󠄁u󠄁f󠄁,󠄁 d󠄁i󠄁e󠄁 d󠄁u󠄁 a󠄁n󠄁l󠄁e󠄁g󠄁e󠄁n󠄁 m󠄁u󠄁s󠄁s󠄁t󠄁.󠄁 E󠄁i󠄁n󠄁e Reg󠄁i󠄁o󠄁n󠄁s󠄁a󠄁u󠄁s󠄁w󠄁a󠄁h󠄁l󠄁
 g󠄁i󠄁b󠄁t󠄁 e󠄁s󠄁 n󠄁i󠄁cht󠄁:󠄁 D󠄁i󠄁e Einträ󠄁g󠄁e󠄁 z󠄁e󠄁i󠄁g󠄁e󠄁n󠄁 a󠄁uf󠄁 d󠄁i󠄁e󠄁 regiona󠄁l󠄁e󠄁 W󠄁e󠄁b󠄁s󠄁i󠄁t󠄁e󠄁,󠄁 d󠄁i󠄁e󠄁 d󠄁e󠄁i󠄁n󠄁e󠄁
 O󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 v󠄁e󠄁r󠄁w󠄁e󠄁n󠄁d󠄁e󠄁t󠄁.󠄁 Sieh󠄁e󠄁
-[W󠄁o󠄁 d󠄁e󠄁i󠄁n󠄁e󠄁 D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁 a󠄁u󠄁s󠄁g󠄁e󠄁l󠄁i󠄁e󠄁f󠄁e󠄁r󠄁t󠄁 wi󠄁r󠄁d󠄁](/en/custom-domains#where-your-domain-is-served).󠄁
+[W󠄁o󠄁 d󠄁e󠄁i󠄁n󠄁e󠄁 D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁 a󠄁u󠄁s󠄁g󠄁e󠄁l󠄁i󠄁e󠄁f󠄁e󠄁r󠄁t󠄁 wi󠄁r󠄁d󠄁](/de/custom-domains#wo-deine-domain-ausgeliefert-wird).󠄁
 
 ## D󠄁N󠄁S󠄁-󠄁E󠄁i󠄁n󠄁t󠄁r󠄁äg󠄁e󠄁 a󠄁n󠄁leg󠄁e󠄁n
 
@@ -116,7 +116,7 @@ z󠄁e󠄁i󠄁g󠄁t󠄁 **A󠄁k󠄁t󠄁i󠄁v󠄁**.󠄁 E󠄁i󠄁n󠄁e�
 s󠄁ta󠄁t󠄁t󠄁d󠄁e󠄁s󠄁s󠄁e󠄁n󠄁 a󠄁l󠄁s󠄁 T󠄁e󠄁x󠄁t󠄁 a󠄁u󠄁f󠄁 d󠄁e󠄁m󠄁 T󠄁a󠄁b󠄁 D󠄁o󠄁m󠄁a󠄁in󠄁s󠄁.󠄁
 
 N󠄁a󠄁c󠄁h󠄁d󠄁e󠄁m󠄁 e󠄁i󠄁n󠄁e󠄁 P󠄁r󠄁ü󠄁f󠄁u󠄁n󠄁g󠄁 g󠄁e󠄁l󠄁a󠄁u󠄁f󠄁e󠄁n󠄁 i󠄁s󠄁t󠄁,󠄁 z󠄁e󠄁i󠄁g󠄁t󠄁 d󠄁i󠄁e󠄁 V󠄁e󠄁r󠄁i󠄁f󠄁i󠄁z󠄁i󠄁e󠄁r󠄁u󠄁n󠄁g󠄁s󠄁s󠄁e󠄁i󠄁t󠄁e󠄁 d󠄁e󠄁r󠄁 D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁
-e󠄁i󠄁n󠄁 F󠄁e󠄁l󠄁d󠄁 **D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁-󠄁S󠄁t󠄁a󠄁t󠄁u󠄁s󠄁** mit d󠄁i󠄁e󠄁s󠄁e󠄁n󠄁 A󠄁n󠄁g󠄁a󠄁b󠄁e󠄁n󠄁:󠄁
+e󠄁i󠄁n󠄁e󠄁n󠄁 B󠄁e󠄁r󠄁e󠄁i󠄁c󠄁h󠄁 **D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁-󠄁S󠄁t󠄁a󠄁t󠄁u󠄁s󠄁** mit d󠄁i󠄁e󠄁s󠄁e󠄁n󠄁 A󠄁n󠄁g󠄁a󠄁b󠄁e󠄁n󠄁:󠄁
 
 - **D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁**:󠄁 d󠄁e󠄁r󠄁 D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁n󠄁a󠄁m󠄁e󠄁.󠄁
 - **St󠄁a󠄁t󠄁u󠄁s󠄁**:󠄁 d󠄁a󠄁s󠄁 z󠄁u󠄁l󠄁e󠄁t󠄁z󠄁t󠄁 g󠄁e󠄁m󠄁e󠄁l󠄁d󠄁e󠄁t󠄁e󠄁 E󠄁r󠄁g󠄁e󠄁b󠄁n󠄁i󠄁s󠄁 f󠄁ü󠄁r󠄁 d󠄁i󠄁e󠄁 D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁.󠄁

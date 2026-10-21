@@ -16,7 +16,7 @@ sicher zu tun, und wo du die Details findest.
   ist), ist es weg.
 - **Verschlüsselung bei der Übertragung und im Ruhezustand.** Geheimnisse werden
   in allen P󠄁l󠄁ä󠄁n󠄁en bei der Übertragung und im Ruhezustand verschlüsselt.
-- **Schutz durch Passphrase.** Du kannst festlegen, dass zum Ansehen eines
+- **Passphrasen󠄁s󠄁c󠄁h󠄁u󠄁t󠄁z󠄁.** Du kannst festlegen, dass zum Ansehen eines
   Geheimnisses eine Passphrase erforderlich ist — eine zusätzliche Schutzebene,
   die der Link allein nicht öffnen kann.
 - **Von Haus aus zeitlich begrenzt.** Jedes Geheimnis hat ein Ablaufdatum; wähle
@@ -35,7 +35,7 @@ sicher zu tun, und wo du die Details findest.
 ## Verwandte Themen
 
 - **[Unsere Grundsätze](/en/security/our-principles)** — Datenschutz zuerst, Kommunikation und Datenminimierung.
-- **[W󠄁o󠄁 d󠄁ei󠄁n󠄁e󠄁 D󠄁a󠄁t󠄁e󠄁n󠄁 g󠄁e󠄁s󠄁p󠄁e󠄁i󠄁cher󠄁t󠄁 s󠄁i󠄁nd󠄁](/en/security/where-your-data-lives/)** — wähle, wo deine Daten verarbeitet und gespeichert werden.
+- **[W󠄁o󠄁 d󠄁ei󠄁n󠄁e󠄁 D󠄁a󠄁t󠄁e󠄁n󠄁 l󠄁i󠄁e󠄁g󠄁e󠄁n](/en/security/where-your-data-lives/)** — wähle, wo deine Daten verarbeitet und gespeichert werden.
 - **[Self-Hosting](https://github.com/onetimesecret/onetimesecret)** — betreibe Onetime Secret auf deiner eigenen Infrastruktur für volle Kontrolle.
 
 ## Ein Sicherheitsproblem melden

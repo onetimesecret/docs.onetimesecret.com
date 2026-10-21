@@ -170,3 +170,45 @@ The translation is accurate and complete. Security statements (one-time reveal, 
 - No build or `pnpm` checks were run (this was a read-only review). The anchors suggested above come from the existing `dist/de/` output.
 - Plan limits and prices were not re-verified against `billing.yaml.txt`. The de numbers match the English pages one for one.
 - The user-menu path to **Domains** and the order of the domain-detail screens were not checked against the running app, only against the locale strings and Vue sources cited above.
+
+## Resolution (fix round, 2026-10-21)
+
+All 34 finding rows were checked against the English pages and the shipped de app strings (app main 145c1e7cfa). 33 were fixed and 1 was skipped. These terminology-table and general items were also fixed: the «Wo deine Daten liegen» link text, Passphrasenschutz, the support heading, and the sidebar labels `sidebar.brandGuide`, `sidebar.selfHosting`, `nav.label.self-hosting` and `sidebar.securityBestPractices`.
+
+Checks run on the worktree: `python3 tools/dogfood.py check --base b2883096` (15 files, 0 failed), `pnpm test` (175 passed), `pnpm run check:frontmatter`, `pnpm run check:nav` and `pnpm build` (exit 0). The built links resolve to `/de/account/change-your-region#benutzerdefinierte-domain-umziehen` and `/de/custom-domains#was-jeder-plan-enth%C3%A4lt`.
+
+| Commit | Subject |
+|---|---|
+| dd4d6841 | docs(i18n/de): match branding labels to the shipped app |
+| aa661968 | docs(i18n/de): match setup guide labels to the shipped app |
+| 05e27f61 | docs(i18n/de): correct mistranslations in setup, security and share pages |
+| 4d8bebcb | docs(i18n/de): use consistent terms for owner, reveal instructions, plan |
+| eb5dc589 | docs(i18n/de): link to German pages that exist |
+| 84319bbb | docs(i18n/de): fix fluency and typography |
+| 63476831 | docs(i18n/de): align sidebar labels with page titles |
+
+Some fixes differ from the suggested wording:
+
+- **pricing/index.md:28, 42:** the fix uses «Geheimnisse unter deiner eigenen Domain und Marke teilen — mit Mitgliedern.» and «Geheimnisse im Team teilen — mit Single Sign-On und Admin-Rollen.» The suggested comma version moves «teilen» unchanged. TextProv's check treats a moved word as the same text, so the newly marked copy fails as "marked unchanged legacy text". The em dash changes the text around the moved word and avoids this. The pages use «—» 70 times and «–» 0 times.
+- **Brand compounds** (index.mdoc:3, 9; self-hosting/index.md:4; share/use-cases.md:49; pricing/compare-plans.md:37): these were rephrased as «Dokumentation zu Onetime Secret», «Instanz von Onetime Secret», «Konto bei Onetime Secret» and «Plan Identity Plus». Hyphenated forms such as «Onetime-Secret-Konto» were not used, because they change the written form of the brand name (`rule.brand-names-untranslated`). best-practices.md:49 already uses «Instanz von Onetime Secret».
+- **index.mdoc:34:** the fix uses «Geheimnisse aus Skripten, CI-Pipelines und deinen eigenen Anwendungen erstellen und abrufen.» This keeps "from scripts …" attached to both verbs, as in the English. The suggested «Erstelle Geheimnisse und rufe sie aus … ab» attaches it only to retrieving.
+- **«Where your data lives» link text:** this uses «Wo deine Daten liegen», the form on 3 pages (4 uses), instead of «Wo deine Daten gespeichert sind» (2 pages). The docs glossary and the app governance do not cover this text.
+- **«Questions or need support?»:** this uses «Fragen oder Hilfe nötig?», the form on 2 of the 4 pages in the de tree.
+
+### Skipped findings
+
+| Page:line | Finding | Reason |
+|---|---|---|
+| account/change-your-region.md:35 | «Workspace» → «Arbeitsbereich» | The suggestion depends on a decision. The docs glossary and app governance have no workspace term, and every de page uses «Workspace» (change-your-region:29,31,35; index.mdoc:4,10,26; compare-plans:45). Changing one use would make the pages inconsistent. See Decisions needed. |
+
+### Decisions needed
+
+- **workspace:** the shipped app uses «Arbeitsbereich» (web.layout.workspace, web.organizations.organization; 26 hits vs 1 «Workspace»). The docs use «Workspace» 7 times on 3 pages. Either add a docs glossary row recording «Workspace» as a docs-only term, or adopt «Arbeitsbereich» and change the 7 uses listed above.
+- **plan:** the docs use Plan/Pläne throughout; change-your-region:79 was the last «Tarif». The shipped app mostly uses «Tarif» (about 61 hits vs about 17 «Plan»). Record «Plan» in the docs glossary, or open an app task to harmonise.
+- **owner role:** add a docs glossary row: owner (role) → «Inhaber» (web.organizations.members.roles.owner), and ownership → «Eigentümerschaft» (self-hosting/index.md:92, 108).
+- **reveal:** the docs glossary row `view/reveal → ansehen/anzeigen` (DE column) conflicts with «aufdecken», which all 17 pages use in prose. The app uses «Anzeigen» in labels (web.branding.delivery_* «Vor dem Anzeigen» / «Nach dem Anzeigen», «Anzeige-Anweisungen»), and the status «Enthüllt» (web.STATUS.revealed) is quoted verbatim. The glossary row needs updating to match the pages, or the pages need a full prose pass. This round changed neither.
+- **reveal instructions:** add a docs glossary row → «Anzeige-Anweisungen» (web.branding.delivery_reveal_instructions).
+- **App string:** web.domains.detail.features is untranslated in de («Features»). custom-domains/branding.md:28 now quotes «Features». If the app translates it to «Funktionen», the docs line must follow.
+- **Language notes:** add a rule for compounds with the brand name. Prefer «… zu/von/bei Onetime Secret» to «Onetime Secret X» or «Onetime-Secret-X». Unflagged uses remain: «Onetime Secret API» (index.mdoc:4; security/best-practices.md:39) and «Onetime Secret Blog» (src/content/i18n/de.json `nav.ariaLabel.blog`).
+- **Sidebar bundle, not flagged (out of scope this round):** `nav.ariaLabel.selfHosting` still reads «Selbst-Hosting-Dokumentation». These keys in src/content/i18n/de.json use Sie, which breaks the du register: `staging.bannerWarning`, `search.devWarning`, `i18n.untranslatedContent`, `404.text`, `pagefind.search_suggestion`, `notFound.lookingFor`, `notFound.docsDesc`.
+- **English source:** the issues from the review still apply: api/index.mdoc:40 "API token" vs app "API Key"; security/best-practices.md:16 "the entire set of information remains protected".
