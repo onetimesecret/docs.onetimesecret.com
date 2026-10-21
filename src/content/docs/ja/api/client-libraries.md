@@ -1,13 +1,34 @@
 ---
-title: クライアントライブラリ
-description: Ruby、Python、Perl、Java、C#、Goなど、Onetime Secret APIで利用可能なクライアントライブラリをご紹介します。
+textprov: true
+title: "クライアントライブラリ"
+description: "Ruby、Python、Perl、Java、C#、Go など、Onetime Secret API で利用できるクライアントライブラリを紹介します。"
 ---
 
-## Ruby
+**公󠄁式󠄁ク󠄁ラ󠄁イ󠄁ア󠄁ン󠄁ト󠄁は󠄁 [onetime-ruby](https://github.com/onetimesecret/onetime-ruby)** で󠄁す󠄁。󠄁
+A󠄁P󠄁I󠄁 v󠄁1󠄁 と󠄁 v󠄁2󠄁、󠄁す󠄁べ󠄁て󠄁の󠄁[リ󠄁ー󠄁ジ󠄁ョ󠄁ン󠄁ド󠄁メ󠄁イ󠄁ン󠄁](/en/security/where-your-data-lives/)、󠄁お󠄁よ󠄁び󠄁カ󠄁ス󠄁タ󠄁ム󠄁ベ󠄁ー󠄁ス󠄁U󠄁R󠄁L󠄁に󠄁対󠄁応󠄁し󠄁て󠄁い󠄁ま󠄁す󠄁。󠄁
+
+こ󠄁の󠄁ペ󠄁ー󠄁ジ󠄁に󠄁掲󠄁載󠄁さ󠄁れ󠄁て󠄁い󠄁る󠄁そ󠄁の󠄁他󠄁の󠄁ラ󠄁イ󠄁ブ󠄁ラ󠄁リ󠄁は󠄁す󠄁べ󠄁て󠄁**コ󠄁ミ󠄁ュ󠄁ニ󠄁テ󠄁ィ󠄁に󠄁よ󠄁っ󠄁て󠄁保󠄁守󠄁さ󠄁れ󠄁て󠄁い󠄁ま󠄁す󠄁**。󠄁こ󠄁れ󠄁ら󠄁の󠄁ラ󠄁イ󠄁ブ󠄁ラ󠄁リ󠄁の󠄁多󠄁く󠄁は󠄁 A󠄁P󠄁I󠄁 v󠄁2󠄁 や󠄁リ󠄁ー󠄁ジ󠄁ョ󠄁ン󠄁ド󠄁メ󠄁イ󠄁ン󠄁よ󠄁り󠄁前󠄁に󠄁作󠄁ら󠄁れ󠄁た󠄁た󠄁め󠄁、󠄁通󠄁常󠄁は󠄁 `onetimesecret.com` に󠄁対󠄁し󠄁て󠄁非󠄁推󠄁奨󠄁の󠄁 v󠄁1󠄁 エ󠄁ン󠄁ド󠄁ポ󠄁イ󠄁ン󠄁ト󠄁を󠄁呼󠄁び󠄁出󠄁し󠄁ま󠄁す󠄁。󠄁各󠄁エ󠄁ン󠄁ト󠄁リ󠄁の󠄁ス󠄁テ󠄁ー󠄁タ󠄁ス󠄁注󠄁記󠄁を󠄁確󠄁認󠄁し󠄁、󠄁利󠄁用󠄁す󠄁る󠄁リ󠄁ー󠄁ジ󠄁ョ󠄁ン󠄁ま󠄁た󠄁は󠄁セ󠄁ル󠄁フ󠄁ホ󠄁ス󠄁ト󠄁イ󠄁ン󠄁ス󠄁タ󠄁ン󠄁ス󠄁で󠄁ラ󠄁イ󠄁ブ󠄁ラ󠄁リ󠄁が󠄁動󠄁作󠄁す󠄁る󠄁こ󠄁と󠄁を󠄁検󠄁証󠄁し󠄁た󠄁う󠄁え󠄁で󠄁依󠄁存󠄁す󠄁る󠄁よ󠄁う󠄁に󠄁し󠄁て󠄁く󠄁だ󠄁さ󠄁い󠄁。󠄁
+
+| 言󠄁語󠄁 | ラ󠄁イ󠄁ブ󠄁ラ󠄁リ󠄁 | 最󠄁終󠄁活󠄁動󠄁¹󠄁 | リ󠄁ー󠄁ジ󠄁ョ󠄁ン󠄁 /󠄁 カ󠄁ス󠄁タ󠄁ム󠄁ド󠄁メ󠄁イ󠄁ン󠄁 |
+|---|---|---|---|
+| R󠄁u󠄁by | [o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁-󠄁r󠄁u󠄁b󠄁y󠄁](https://github.com/onetimesecret/onetime-ruby)（󠄁**公󠄁式󠄁**）󠄁 | 2󠄁0󠄁2󠄁6󠄁-󠄁0󠄁6󠄁 | ✅󠄁 全󠄁リ󠄁ー󠄁ジ󠄁ョ󠄁ン󠄁 +󠄁 カ󠄁ス󠄁タ󠄁ム󠄁ベ󠄁ー󠄁ス󠄁U󠄁R󠄁L󠄁 |
+| G󠄁o󠄁 | [g󠄁o󠄁-󠄁o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁](https://github.com/corbaltcode/go-onetimesecret) | 2󠄁0󠄁2󠄁6󠄁-󠄁0󠄁5󠄁 | U󠄁S󠄁 ホ󠄁ス󠄁ト󠄁 |
+| P󠄁y󠄁t󠄁h󠄁o󠄁n󠄁 | [o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁-󠄁c󠄁l󠄁i󠄁](https://github.com/slashpass/onetimesecret-cli) | 2󠄁0󠄁2󠄁4󠄁-󠄁1󠄁1󠄁 | U󠄁S󠄁 /󠄁 E󠄁U󠄁 リ󠄁ー󠄁ジ󠄁ョ󠄁ン󠄁オ󠄁プ󠄁シ󠄁ョ󠄁ン󠄁 |
+| G󠄁o󠄁 | [o󠄁t󠄁s󠄁g󠄁o󠄁](https://github.com/emdneto/otsgo) | 2󠄁0󠄁2󠄁4󠄁-󠄁0󠄁3󠄁 | 記󠄁載󠄁な󠄁し󠄁 |
+| P󠄁o󠄁w󠄁e󠄁r󠄁S󠄁h󠄁e󠄁l󠄁l󠄁 | [O󠄁n󠄁e󠄁T󠄁i󠄁m󠄁e󠄁S󠄁e󠄁c󠄁r󠄁e󠄁t󠄁](https://github.com/chelnak/OneTimeSecret) | 2󠄁0󠄁2󠄁1󠄁-󠄁0󠄁6󠄁 | カ󠄁ス󠄁タ󠄁ム󠄁ベ󠄁ー󠄁ス󠄁U󠄁R󠄁L󠄁 |
+| B󠄁a󠄁s󠄁h󠄁 | [o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁-󠄁b󠄁a󠄁s󠄁h󠄁](https://github.com/eengstrom/onetimesecret-bash) | 2󠄁0󠄁2󠄁0󠄁-󠄁0󠄁5󠄁 | カ󠄁ス󠄁タ󠄁ム󠄁ホ󠄁ス󠄁ト󠄁 |
+| P󠄁y󠄁t󠄁h󠄁o󠄁n󠄁 | [p󠄁y󠄁_󠄁o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁](https://github.com/utterstep/py_onetimesecret) | 2󠄁0󠄁1󠄁9󠄁-󠄁0󠄁5󠄁 | ❌󠄁（󠄁P󠄁y󠄁t󠄁h󠄁o󠄁n󠄁 2󠄁 時󠄁代󠄁）󠄁 |
+| C󠄁#󠄁 | [O󠄁n󠄁e󠄁T󠄁i󠄁m󠄁e󠄁S󠄁h󠄁a󠄁r󠄁p󠄁](https://github.com/utterstep/OneTimeSharp) | 2󠄁0󠄁1󠄁8󠄁-󠄁0󠄁5󠄁 | ❌󠄁 |
+| J󠄁a󠄁v󠄁a󠄁 | [o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁-󠄁j󠄁a󠄁v󠄁a󠄁](https://github.com/mpawlowski/onetime-java) | 2󠄁0󠄁1󠄁4󠄁-󠄁0󠄁6󠄁 | セ󠄁ル󠄁フ󠄁ホ󠄁ス󠄁ト󠄁U󠄁R󠄁L󠄁の󠄁み󠄁 |
+| P󠄁e󠄁r󠄁l󠄁 | [N󠄁e󠄁t󠄁:󠄁:󠄁O󠄁n󠄁e󠄁T󠄁i󠄁m󠄁e󠄁S󠄁e󠄁c󠄁r󠄁e󠄁t󠄁](https://metacpan.org/pod/Net::OneTimeSecret) | 2󠄁0󠄁1󠄁2󠄁-󠄁0󠄁2󠄁 | ❌󠄁 |
+
+¹󠄁 前󠄁回󠄁の󠄁調󠄁査󠄁時󠄁点󠄁（󠄁2󠄁0󠄁2󠄁6󠄁-󠄁0󠄁7󠄁）󠄁に󠄁お󠄁け󠄁る󠄁最󠄁新󠄁の󠄁コ󠄁ミ󠄁ッ󠄁ト󠄁ま󠄁た󠄁は󠄁リ󠄁リ󠄁ー󠄁ス󠄁。󠄁
+
+## R󠄁u󠄁b󠄁y󠄁
 
 
-[Github page onetime-ruby](https://github.com/onetimesecret/onetime-ruby)
-by [Delano](https://delanotes.com/) (updated 2024-06-09)
+[G󠄁i󠄁t󠄁H󠄁u󠄁b󠄁 ペ󠄁ー󠄁ジ󠄁 o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁-󠄁r󠄁u󠄁b󠄁y󠄁](https://github.com/onetimesecret/onetime-ruby)
+作󠄁者󠄁:󠄁 [Delano](https://delanotes.com/) —󠄁 **公󠄁式󠄁ク󠄁ラ󠄁イ󠄁ア󠄁ン󠄁ト󠄁**。󠄁活󠄁発󠄁に󠄁保󠄁守󠄁さ󠄁れ󠄁て󠄁い󠄁ま󠄁す󠄁（󠄁最󠄁終󠄁コ󠄁ミ󠄁ッ󠄁ト󠄁 2026󠄁-06）󠄁。󠄁A󠄁P󠄁I󠄁 v󠄁1󠄁（󠄁非󠄁推󠄁奨󠄁）󠄁と󠄁 v󠄁2󠄁、󠄁リ󠄁ー󠄁ジ󠄁ョ󠄁ン󠄁ド󠄁メ󠄁イ󠄁ン󠄁、󠄁カ󠄁ス󠄁タ󠄁ム󠄁ベ󠄁ー󠄁ス󠄁U󠄁R󠄁L󠄁に󠄁対󠄁応󠄁。󠄁R󠄁u󠄁b󠄁y󠄁 3󠄁.󠄁1󠄁 以󠄁上󠄁が󠄁必󠄁要󠄁で󠄁、󠄁ラ󠄁ン󠄁タ󠄁イ󠄁ム󠄁依󠄁存󠄁関󠄁係󠄁は󠄁あ󠄁り󠄁ま󠄁せ󠄁ん󠄁。󠄁
 
 ### 使用例
 
@@ -30,8 +51,8 @@ puts ret['secret_key']
 ## Python
 
 
-[Github page - onetimesecret-cli](https://github.com/slashpass/onetimesecret-cli)
-by [slashpass](https://github.com/slashpass) (added 2021-07-08)
+[GitH󠄁ub ペ󠄁ー󠄁ジ󠄁 - onetimesecret-cli](https://github.com/slashpass/onetimesecret-cli)
+作󠄁者󠄁:󠄁 [slashpass](https://github.com/slashpass) —󠄁 コ󠄁ミ󠄁ュ󠄁ニ󠄁テ󠄁ィ󠄁に󠄁よ󠄁る󠄁保󠄁守󠄁（󠄁最󠄁終󠄁コ󠄁ミ󠄁ッ󠄁ト󠄁 2024󠄁-󠄁11󠄁）󠄁。󠄁リ󠄁ー󠄁ジ󠄁ョ󠄁ン󠄁オ󠄁プ󠄁シ󠄁ョ󠄁ン󠄁（󠄁`us` /󠄁 `eu`）󠄁に󠄁対󠄁応󠄁。󠄁
 
 ### 使用例
 
@@ -42,8 +63,8 @@ cli = OneTimeSecretCli(ONETIMESECRET_USER, ONETIMESECRET_KEY)
 cli.create_link("secret") # return a link like https://onetimesecret.com/secret/xxxxxxxxxxx
 ```
 
-[Github page - py\_onetimesecret](https://github.com/utterstep/py_onetimesecret)
-by [Vladislav Stepanov](https://github.com/utterstep) (added 2012-06-26)
+[GitH󠄁ub ペ󠄁ー󠄁ジ󠄁 - py\_onetimesecret](https://github.com/utterstep/py_onetimesecret)
+作󠄁者󠄁:󠄁 [Vladislav Stepanov](https://github.com/utterstep) —󠄁 **保󠄁守󠄁さ󠄁れ󠄁て󠄁い󠄁ま󠄁せ󠄁ん󠄁**（󠄁最󠄁終󠄁コ󠄁ミ󠄁ッ󠄁ト󠄁 2019󠄁 年󠄁。󠄁以󠄁下󠄁の󠄁例󠄁は󠄁 P󠄁y󠄁t󠄁h󠄁o󠄁n󠄁 2 で󠄁す󠄁）󠄁。󠄁`onetimesecret.com` に󠄁対󠄁し󠄁て󠄁の󠄁み󠄁、󠄁非󠄁推󠄁奨󠄁の󠄁 v󠄁1󠄁 A󠄁P󠄁I󠄁 を󠄁使󠄁用󠄁し󠄁ま󠄁す󠄁。󠄁
 
 ### 使用例
 
@@ -63,8 +84,8 @@ print o.retrieve_secret(secret["secret_key"])
 ## Perl
 
 
-[Net::OneTimeSecret on CPAN](http://search.cpan.org/~kyled/Net-OneTimeSecret/lib/Net/OneTimeSecret.pm)
-by [Kyle Dawkins](http://www.shoffle.com/) (added 2012-01-06)
+[C󠄁P󠄁A󠄁N󠄁 の󠄁 Net::OneTimeSecret](https://metacpan.org/pod/Net::OneTimeSecret)
+作󠄁者󠄁:󠄁 [Kyle Dawkins](http://www.shoffle.com/) —󠄁 **保󠄁守󠄁さ󠄁れ󠄁て󠄁い󠄁ま󠄁せ󠄁ん󠄁**（󠄁最󠄁終󠄁リ󠄁リ󠄁ー󠄁ス󠄁 0󠄁.󠄁0󠄁4󠄁、󠄁2012-02󠄁）󠄁。󠄁A󠄁P󠄁I󠄁 v󠄁2󠄁 と󠄁リ󠄁ー󠄁ジ󠄁ョ󠄁ン󠄁ド󠄁メ󠄁イ󠄁ン󠄁よ󠄁り󠄁前󠄁に󠄁作󠄁ら󠄁れ󠄁た󠄁も󠄁の󠄁で󠄁す󠄁。󠄁
 
 ### 使用例
 
@@ -94,8 +115,8 @@ printf( "%s\n", $secret->{value} );
 ## Java
 
 
-[Github page - onetime-java](https://github.com/mpawlowski/onetime-java)
-by [Marcin Pawlowski](https://github.com/mpawlowski) (added 2014-05-22)
+[GitH󠄁ub ペ󠄁ー󠄁ジ󠄁 - onetime-java](https://github.com/mpawlowski/onetime-java)
+作󠄁者󠄁:󠄁 [Marcin Pawlowski](https://github.com/mpawlowski) —󠄁 **保󠄁守󠄁さ󠄁れ󠄁て󠄁い󠄁ま󠄁せ󠄁ん󠄁**（󠄁最󠄁終󠄁コ󠄁ミ󠄁ッ󠄁ト󠄁 2014-06󠄁）󠄁。󠄁イ󠄁ン󠄁ス󠄁タ󠄁ン󠄁ス󠄁U󠄁R󠄁L󠄁を󠄁受󠄁け󠄁取󠄁る󠄁た󠄁め󠄁セ󠄁ル󠄁フ󠄁ホ󠄁ス󠄁ト󠄁環󠄁境󠄁で󠄁動󠄁作󠄁す󠄁る󠄁可󠄁能󠄁性󠄁は󠄁あ󠄁り󠄁ま󠄁す󠄁が󠄁、󠄁A󠄁P󠄁I󠄁 v󠄁2 よ󠄁り󠄁前󠄁に󠄁作󠄁ら󠄁れ󠄁た󠄁も󠄁の󠄁で󠄁す󠄁。󠄁
 
 ### 使用例
 
@@ -124,8 +145,8 @@ assertEquals(generateResponse.getValue(), retrieveResponse.getValue());
 ## C#
 
 
-[Github page - OneTimeSharp](https://github.com/utterstep/OneTimeSharp)
-by [Vladislav Stepanov](https://github.com/utterstep) (added 2014-05-29)
+[GitH󠄁ub ペ󠄁ー󠄁ジ󠄁 - OneTimeSharp](https://github.com/utterstep/OneTimeSharp)
+作󠄁者󠄁:󠄁 [Vladislav Stepanov](https://github.com/utterstep) —󠄁 **保󠄁守󠄁さ󠄁れ󠄁て󠄁い󠄁ま󠄁せ󠄁ん󠄁**（󠄁最󠄁終󠄁コ󠄁ミ󠄁ッ󠄁ト󠄁 2018󠄁-05）󠄁。󠄁`onetimesecret.com` に󠄁対󠄁し󠄁て󠄁の󠄁み󠄁、󠄁非󠄁推󠄁奨󠄁の󠄁 v󠄁1󠄁 A󠄁P󠄁I󠄁 を󠄁使󠄁用󠄁し󠄁ま󠄁す󠄁。󠄁
 
 ### 使用例
 
@@ -159,8 +180,8 @@ class Test
 ## Go
 
 
-[Github page - onetimesecret](https://github.com/corbaltcode/go-onetimesecret)
-by [Corbalt](https://github.com/corbaltcode/) (added 2021-12-10)
+[GitH󠄁ub ペ󠄁ー󠄁ジ󠄁 - onetimesecret](https://github.com/corbaltcode/go-onetimesecret)
+作󠄁者󠄁:󠄁 [Corbalt](https://github.com/corbaltcode/) —󠄁 コ󠄁ミ󠄁ュ󠄁ニ󠄁テ󠄁ィ󠄁に󠄁よ󠄁る󠄁保󠄁守󠄁（󠄁最󠄁終󠄁コ󠄁ミ󠄁ッ󠄁ト󠄁 2026󠄁-05󠄁、󠄁`us.onetimesecret.com` ホ󠄁ス󠄁ト󠄁向󠄁け󠄁に󠄁更󠄁新󠄁済󠄁み󠄁）󠄁。󠄁C󠄁L󠄁I󠄁 を󠄁含󠄁み󠄁ま󠄁す󠄁。󠄁
 
 ### 使用例
 
@@ -186,7 +207,7 @@ if err != nil {
 print(secret)
 ```
 
-### CLIとしての使用例
+### CLI としての使用例
 
 ```bash
 $ go install github.com/corbaltcode/go-onetimesecret/cmd/ots@latest
@@ -207,11 +228,11 @@ flsdlaun6hwczqu9utmc0vts5xj9xu1
 ---
 
 
-## Go (lib)
+## Go（󠄁ラ󠄁イ󠄁ブ󠄁ラ󠄁リ󠄁）󠄁
 
 
-[Github page](https://github.com/emdneto/otsgo)
-by [Emídio Neto](https://github.com/emdneto) (added 2024-06-09)
+[GitH󠄁ub ペ󠄁ー󠄁ジ󠄁](https://github.com/emdneto/otsgo)
+作󠄁者󠄁:󠄁 [Emídio Neto](https://github.com/emdneto) —󠄁 コ󠄁ミ󠄁ュ󠄁ニ󠄁テ󠄁ィ󠄁に󠄁よ󠄁る󠄁保󠄁守󠄁（󠄁最󠄁終󠄁リ󠄁リ󠄁ー󠄁ス󠄁 v󠄁1󠄁.󠄁1󠄁.󠄁0󠄁、󠄁2024-03󠄁）󠄁。󠄁リ󠄁ー󠄁ジ󠄁ョ󠄁ン󠄁ド󠄁メ󠄁イ󠄁ン󠄁へ󠄁の󠄁対󠄁応󠄁は󠄁記󠄁載󠄁さ󠄁れ󠄁て󠄁い󠄁ま󠄁せ󠄁ん󠄁。󠄁
 
 ### 使用例
 
@@ -237,8 +258,8 @@ fmt.Println(response.Status)
 ## PowerShell
 
 
-[Github page - OneTimeSecret](https://github.com/chelnak/OneTimeSecret)
-by [Craig Gumbley](https://www.helloitscraig.co.uk) (updated 2017-04-28)
+[GitH󠄁ub ペ󠄁ー󠄁ジ󠄁 - OneTimeSecret](https://github.com/chelnak/OneTimeSecret)
+作󠄁者󠄁:󠄁 [Craig Gumbley](https://www.helloitscraig.co.uk) —󠄁 **保󠄁守󠄁さ󠄁れ󠄁て󠄁い󠄁ま󠄁せ󠄁ん󠄁**（󠄁最󠄁終󠄁リ󠄁リ󠄁ー󠄁ス󠄁 202󠄁1-06󠄁）󠄁。󠄁カ󠄁ス󠄁タ󠄁ム󠄁 `-BaseUrl` に󠄁対󠄁応󠄁し󠄁て󠄁い󠄁る󠄁た󠄁め󠄁リ󠄁ー󠄁ジ󠄁ョ󠄁ン󠄁や󠄁セ󠄁ル󠄁フ󠄁ホ󠄁ス󠄁ト󠄁イ󠄁ン󠄁ス󠄁タ󠄁ン󠄁ス󠄁を󠄁指󠄁定󠄁で󠄁き󠄁ま󠄁す󠄁が󠄁、󠄁A󠄁P󠄁I󠄁 v󠄁2 よ󠄁り󠄁前󠄁に󠄁作󠄁ら󠄁れ󠄁た󠄁も󠄁の󠄁で󠄁す󠄁。󠄁
 
 ### 使用例
 
@@ -264,10 +285,10 @@ Get-Command -Module OneTimeSecret | Select Name
 ## Bash
 
 
-[Github page - OneTimeSecret-bash](https://github.com/eengstrom/onetimesecret-bash)
-by [Eric Engstrom](https://eengstrom.github.io/) (updated 2018-12-19)
+[GitH󠄁ub ペ󠄁ー󠄁ジ󠄁 - OneTimeSecret-bash](https://github.com/eengstrom/onetimesecret-bash)
+作󠄁者󠄁:󠄁 [Eric Engstrom](https://eengstrom.github.io/) —󠄁 **保󠄁守󠄁さ󠄁れ󠄁て󠄁い󠄁ま󠄁せ󠄁ん󠄁**（󠄁最󠄁終󠄁コ󠄁ミ󠄁ッ󠄁ト󠄁 202󠄁0󠄁-0󠄁5󠄁）󠄁。󠄁`ots_set_host` に󠄁よ󠄁る󠄁カ󠄁ス󠄁タ󠄁ム󠄁ホ󠄁ス󠄁ト󠄁に󠄁対󠄁応󠄁し󠄁て󠄁い󠄁ま󠄁す󠄁が󠄁、󠄁A󠄁P󠄁I󠄁 v󠄁2 と󠄁リ󠄁ー󠄁ジ󠄁ョ󠄁ン󠄁ド󠄁メ󠄁イ󠄁ン󠄁よ󠄁り󠄁前󠄁に󠄁作󠄁ら󠄁れ󠄁た󠄁も󠄁の󠄁で󠄁す󠄁。󠄁
 
-### スクリプトAPIとしての使用例
+### スクリプテ󠄁ィ󠄁ン󠄁グ󠄁 API としての使用例
 
 ```bash
 # source for use anonymously (secrets created anonymously)
@@ -314,7 +335,7 @@ ots_state $KEY
 ots_burn $KEY
 ```
 
-### CLIとしての使用例
+### CLI としての使用例
 
 ```bash
 # Share a secret (from stdin
@@ -331,11 +352,8 @@ EOF
 # Get/Retrieve a secret:
 ./ots get <key|url>
 ./ots retrieve <key|url>
-```
 
-### CLIとしての使用例
-
-```bash
+# Burn a secret:
 $ ots burn flsdlaun6hwczqu9utmc0vts5xj9xu1
 flsdlaun6hwczqu9utmc0vts5xj9xu1
 ```
