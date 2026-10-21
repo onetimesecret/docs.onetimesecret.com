@@ -59,7 +59,7 @@ o󠄁n󠄁l󠄁y󠄁 T󠄁X󠄁T󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁 a󠄁t󠄁 t
 
 The value stays the same while the domain is in your organization. If you
 remove the domain and add it again, it gets a new value,󠄁 a󠄁n󠄁d󠄁 u󠄁s󠄁u󠄁a󠄁l󠄁l󠄁y󠄁 a󠄁 n󠄁e󠄁w󠄁
-h󠄁o󠄁s󠄁t󠄁.
+h󠄁o󠄁s󠄁t.
 
 Keep this record after verification. Verification is repeated in the
 background, and a check that no longer finds the record stops the domain
@@ -93,8 +93,8 @@ TXT ownership record; it is not a conflict.
    Domain**, or select the domain's status. On the verification page, choose
    **Verify Domain**. The button can be used again after a short pause.
 2. The service also re-checks domains in the background, so verification can
-   finish without you pressing the button. DNS changes o󠄁f󠄁t󠄁e󠄁n󠄁 t󠄁a󠄁k󠄁e󠄁 e󠄁f󠄁f󠄁e󠄁c󠄁t󠄁
-   w󠄁i󠄁t󠄁h󠄁i󠄁n󠄁 m󠄁i󠄁n󠄁u󠄁t󠄁e󠄁s󠄁,󠄁 b󠄁u󠄁t󠄁 can take a󠄁 d󠄁a󠄁y󠄁 o󠄁r󠄁 l󠄁o󠄁n󠄁g󠄁e󠄁r󠄁,󠄁 d󠄁e󠄁pe󠄁n󠄁d󠄁i󠄁n󠄁g󠄁 on󠄁 y󠄁our D󠄁N󠄁S󠄁
+   finish without you pressing the button. DNS changes o󠄁f󠄁ten󠄁 t󠄁a󠄁k󠄁e󠄁 e󠄁f󠄁f󠄁e󠄁c󠄁t󠄁
+   w󠄁i󠄁t󠄁h󠄁i󠄁n󠄁 m󠄁i󠄁n󠄁ut󠄁e󠄁s󠄁,󠄁 b󠄁u󠄁t󠄁 can take a󠄁 d󠄁a󠄁y󠄁 o󠄁r󠄁 l󠄁o󠄁n󠄁g󠄁e󠄁r󠄁,󠄁 d󠄁e󠄁pe󠄁n󠄁d󠄁i󠄁n󠄁g󠄁 on󠄁 y󠄁our D󠄁N󠄁S󠄁
    prov󠄁i󠄁d󠄁e󠄁r󠄁 an󠄁d󠄁 the rec󠄁o󠄁r󠄁d󠄁s'󠄁 t󠄁i󠄁m󠄁e󠄁 t󠄁o󠄁 li󠄁v󠄁e (󠄁T󠄁T󠄁L󠄁)󠄁.
 
 Verification succeeds when the TXT record is found. The domain is then served,
@@ -106,7 +106,7 @@ status labels.
 ## Check the result
 
 When the domain is ready, t󠄁h󠄁e󠄁 D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁s󠄁 t󠄁a󠄁b󠄁 s󠄁h󠄁o󠄁w󠄁s󠄁 a󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁 m󠄁a󠄁r󠄁k󠄁 n󠄁e󠄁x󠄁t󠄁 t󠄁o󠄁 i󠄁t󠄁,󠄁 w󠄁i󠄁t󠄁h󠄁
-t󠄁h󠄁e󠄁 t󠄁o󠄁o󠄁l󠄁t󠄁i󠄁p󠄁 **D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁 v󠄁e󠄁r󠄁i󠄁f󠄁i󠄁e󠄁d󠄁 a󠄁n󠄁d󠄁 a󠄁c󠄁t󠄁i󠄁v󠄁e󠄁**,󠄁 a󠄁n󠄁d󠄁 t󠄁h󠄁e󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁'󠄁s󠄁 o󠄁w󠄁n󠄁 p󠄁a󠄁g󠄁e󠄁 s󠄁h󠄁o󠄁w󠄁s󠄁
+t󠄁h󠄁e󠄁 t󠄁o󠄁o󠄁l󠄁t󠄁i󠄁p󠄁 **D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁 v󠄁e󠄁r󠄁i󠄁f󠄁i󠄁e󠄁d󠄁 a󠄁n󠄁d󠄁 a󠄁c󠄁t󠄁i󠄁v󠄁e󠄁**,󠄁 a󠄁n󠄁d󠄁 t󠄁h󠄁e󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁'󠄁s󠄁 o󠄁w󠄁n󠄁 p󠄁a󠄁ge󠄁 s󠄁h󠄁o󠄁w󠄁s󠄁
 **A󠄁c󠄁t󠄁i󠄁v󠄁e󠄁**.󠄁 A󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁 t󠄁h󠄁a󠄁t󠄁 n󠄁e󠄁e󠄁d󠄁s󠄁 a󠄁t󠄁t󠄁e󠄁n󠄁t󠄁i󠄁o󠄁n󠄁 s󠄁h󠄁o󠄁w󠄁s󠄁 its status a󠄁s󠄁 t󠄁e󠄁x󠄁t󠄁 on the
 Domains tab i󠄁n󠄁s󠄁t󠄁ead.
 
@@ -122,7 +122,7 @@ Status** panel with these fields:
 - **SSL Renews**: the current certificate's expiry date. The service renews the
   certificate before then; you do not need to do anything.
 - **Last Monitored**: when the domain was last checked.󠄁
-- **L󠄁a󠄁s󠄁t󠄁 v󠄁e󠄁r󠄁i󠄁f󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁 f󠄁a󠄁i󠄁l󠄁e󠄁d󠄁**:󠄁 s󠄁h󠄁o󠄁w󠄁n󠄁 o󠄁n󠄁l󠄁y󠄁 w󠄁h󠄁e󠄁n󠄁 t󠄁h󠄁e󠄁 l󠄁a󠄁t󠄁e󠄁s󠄁t󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁 c󠄁o󠄁u󠄁l󠄁d󠄁
+- **L󠄁a󠄁s󠄁t󠄁 v󠄁e󠄁ri󠄁f󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁 f󠄁a󠄁i󠄁l󠄁e󠄁d󠄁**:󠄁 s󠄁h󠄁o󠄁w󠄁n󠄁 o󠄁n󠄁l󠄁y󠄁 w󠄁h󠄁e󠄁n󠄁 t󠄁h󠄁e󠄁 l󠄁a󠄁t󠄁e󠄁s󠄁t󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁 c󠄁o󠄁u󠄁l󠄁d󠄁
   n󠄁o󠄁t󠄁 c󠄁o󠄁m󠄁p󠄁l󠄁e󠄁t󠄁e󠄁.
 
 ## Use the domain

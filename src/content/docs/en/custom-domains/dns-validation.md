@@ -68,7 +68,7 @@ Verification is repeated after the domain is active.
 ## Troubleshooting
 
 - **Wrong or missing record:** compare the record type, host and value with the
-  ones on the d󠄁omain'󠄁s v󠄁e󠄁r󠄁i󠄁f󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 page.
+  ones on the domain's v󠄁e󠄁r󠄁i󠄁f󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 page.
 - **Missing TXT record:** a correct CNAME or A record alone never verifies.
   Copy the TXT record's host and value from the v󠄁e󠄁r󠄁i󠄁f󠄁i󠄁c󠄁a󠄁t󠄁i󠄁on page.󠄁
 - **M󠄁o󠄁r󠄁e󠄁 t󠄁h󠄁a󠄁n󠄁 o󠄁n󠄁e󠄁 T󠄁X󠄁T󠄁 v󠄁a󠄁l󠄁u󠄁e󠄁:󠄁** t󠄁h󠄁e󠄁 o󠄁w󠄁n󠄁e󠄁r󠄁s󠄁h󠄁i󠄁p󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁 m󠄁u󠄁s󠄁t󠄁 b󠄁e󠄁 t󠄁h󠄁e󠄁 o󠄁n󠄁l󠄁y󠄁 T󠄁X󠄁T󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁

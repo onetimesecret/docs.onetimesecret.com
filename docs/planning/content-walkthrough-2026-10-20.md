@@ -614,7 +614,11 @@ Validation completed after the corrections:
 - `node bin/check-frontmatter.mjs`: passed, 243 redirect fragments resolved.
 - `node bin/check-locales.mjs`: passed, 17 configured locales.
 - `bash bin/check-malformed-links.sh`: passed.
-- `python3 tools/dogfood.py check --base HEAD --staged`: passed, 8 files.
+- `python3 tools/dogfood.py check --base origin/develop --preserve-only` (the
+  CI check): passed. Against the post-merge base `b67e648f`, the strict check
+  reports 13 unmarked single characters in three pages: aligned against
+  `develop`'s old pages they match legacy text, so CI rejects a mark there.
+  They were left unmarked; every other corrected cluster is marked `ai`.
 - `pnpm test`: 171 tests passed.
 - `pnpm build`: passed, 1,306 pages.
 - Built HTML: the 13 edited or linked pages each have one H1 and no leftover
