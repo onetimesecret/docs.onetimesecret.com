@@ -26,6 +26,26 @@ export function renderProvenance(html) {
   if (!candidate.test(html) && !html.includes('&#')) return html;
   const tree = parse(html, { sourceCodeLocationInfo: true });
   const edits = [];
+  const ids = [];
+  function collectIds(node) {
+    const id = node.attrs?.find(a => a.name === 'id');
+    if (id) ids.push(id.value);
+    for (const child of node.childNodes ?? []) collectIds(child);
+  }
+  collectIds(tree);
+  // The slugger sees the original selectors and can consider marked/unmarked
+  // versions of the same heading different. Keep existing clean IDs stable,
+  // allocate unique IDs for the decoded ones, and remap their TOC links.
+  const usedIds = new Set(ids.filter(id => clean(id) === id));
+  const idMap = new Map();
+  for (const id of ids) {
+    const base = clean(id);
+    if (base === id) continue;
+    let value = base, suffix = 1;
+    while (usedIds.has(value)) value = `${base}-${suffix++}`;
+    usedIds.add(value);
+    idMap.set(id, value);
+  }
   function visit(node, prose = false, blocked = false) {
     const attrs = node.attrs ?? [];
     prose ||= attrs.some(a => a.name === 'class' && a.value.split(/\s+/).includes('sl-markdown-content'));
@@ -49,7 +69,11 @@ export function renderProvenance(html) {
       if (attr.name === 'href' && value.startsWith('#')) {
         try { value = decodeURI(value); } catch { /* Keep malformed legacy URLs. */ }
       }
-      const plain = clean(value);
+      const plain = attr.name === 'id'
+        ? (idMap.get(value) ?? clean(value))
+        : attr.name === 'href' && value.startsWith('#')
+          ? '#' + (idMap.get(value.slice(1)) ?? clean(value.slice(1)))
+          : clean(value);
       if (plain !== value) {
         const location = node.sourceCodeLocation?.attrs?.[attr.name];
         if (location) edits.push([location.startOffset, location.endOffset,

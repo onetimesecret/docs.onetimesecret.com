@@ -37,6 +37,14 @@ describe('static TextProv HTML', () => {
     const grapheme = 'e\u0301\u{E0101}';
     expect(renderProvenance(`<div class="sl-markdown-content">${grapheme}</div>`)).toContain('>e\u0301</span>');
   });
+
+  it('keeps decoded heading IDs unique without taking existing anchors and remaps TOC links', () => {
+    const marked = ai('topic');
+    const html = `<div class="sl-markdown-content"><h2 id="${marked}">${ai('Topic')}</h2><h2 id="topic">Topic</h2><h2 id="topic-1">Topic</h2></div><a href="#${encodeURIComponent(marked)}">Topic</a>`;
+    const doc = new JSDOM(renderProvenance(html)).window.document;
+    expect(Array.from(doc.querySelectorAll('h2'), h => h.id)).toEqual(['topic-2', 'topic', 'topic-1']);
+    expect(doc.querySelector('a')?.getAttribute('href')).toBe('#topic-2');
+  });
 });
 
 describe('TextProv toggle', () => {
