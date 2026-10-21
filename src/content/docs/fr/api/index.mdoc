@@ -1,30 +1,95 @@
 ---
-title: Documentation de l'API REST
-description: La documentation de l'API REST Onetime Secret a été déplacée vers api.onetimesecret.com avec un explorateur d'API interactif et une référence complète des endpoints.
+textprov: true
+title: "API et bibliothèques clientes"
+description: "Créez, récupérez et brûlez des secrets depuis votre propre code. URL de base régionales, authentification, démarrage rapide avec curl, et bibliothèques clientes officielles et communautaires."
 ---
 
-## La documentation a été déplacée
+T󠄁o󠄁u󠄁t󠄁 c󠄁e󠄁 q󠄁u󠄁e󠄁 l󠄁'󠄁a󠄁p󠄁p󠄁l󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 w󠄁e󠄁b󠄁 f󠄁a󠄁i󠄁t󠄁 avec un s󠄁ec󠄁r󠄁e󠄁t󠄁 p󠄁e󠄁u󠄁t󠄁 ê󠄁t󠄁r󠄁e󠄁 f󠄁a󠄁i󠄁t󠄁 e󠄁n󠄁 H󠄁T󠄁T󠄁P󠄁S󠄁 a󠄁v󠄁e󠄁c󠄁 d󠄁u󠄁 J󠄁S󠄁O󠄁N󠄁.󠄁 L󠄁e󠄁 s󠄁c󠄁h󠄁é󠄁m󠄁a󠄁 l󠄁e󠄁 plu󠄁s󠄁 c󠄁ou󠄁rant es󠄁t󠄁 u󠄁n󠄁 s󠄁c󠄁r󠄁i󠄁p󠄁t󠄁 o󠄁u󠄁 u󠄁n󠄁 p󠄁i󠄁p󠄁e󠄁l󠄁i󠄁n󠄁e󠄁 q󠄁u󠄁i󠄁 c󠄁r󠄁é󠄁e󠄁 u󠄁n󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 e󠄁t󠄁 t󠄁ran󠄁s󠄁m󠄁e󠄁t󠄁 l󠄁e󠄁 l󠄁i󠄁e󠄁n󠄁 à󠄁 u󠄁n󠄁e󠄁 p󠄁e󠄁r󠄁s󠄁o󠄁n󠄁n󠄁e󠄁,󠄁 d󠄁e󠄁 s󠄁o󠄁r󠄁t󠄁e󠄁 q󠄁u󠄁e󠄁 l󠄁'󠄁i󠄁d󠄁e󠄁n󠄁tifi󠄁a󠄁n󠄁t󠄁 n󠄁e󠄁 r󠄁e󠄁s󠄁t󠄁e󠄁 j󠄁a󠄁m󠄁a󠄁i󠄁s󠄁 d󠄁a󠄁n󠄁s󠄁 u󠄁n󠄁 j󠄁o󠄁u󠄁r󠄁n󠄁a󠄁l󠄁,󠄁 u󠄁n󠄁 t󠄁i󠄁c󠄁k󠄁et o󠄁u󠄁 un h󠄁i󠄁s󠄁t󠄁o󠄁r󠄁i󠄁q󠄁u󠄁e d󠄁e󠄁 c󠄁o󠄁n󠄁v󠄁e󠄁r󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁.󠄁
 
-La documentation complète de l'API REST est maintenant hébergée sur **[api.onetimesecret.com](https://api.onetimesecret.com)**.
+L󠄁a󠄁 référence complète des points d󠄁e󠄁 t󠄁e󠄁r󠄁m󠄁i󠄁n󠄁ais󠄁on,󠄁 av󠄁e󠄁c󠄁 l󠄁e󠄁s󠄁 s󠄁c󠄁h󠄁ém󠄁a󠄁s󠄁 d󠄁e󠄁 r󠄁e󠄁q󠄁u󠄁ê󠄁te󠄁 e󠄁t󠄁 de󠄁 r󠄁épons󠄁e󠄁 e󠄁t󠄁 u󠄁n󠄁e󠄁 con󠄁s󠄁o󠄁le d'ess󠄁ai,󠄁 s󠄁e󠄁 tro󠄁u󠄁v󠄁e sur **[api.onetimesecret.com](https://api.onetimesecret.com)**. C󠄁e󠄁t󠄁t󠄁e󠄁 p󠄁ag󠄁e󠄁 c󠄁ouvr󠄁e ce dont v󠄁o󠄁u󠄁s󠄁 av󠄁ez󠄁 b󠄁e󠄁s󠄁oin avant de l'ouv󠄁rir.
 
-La nouvelle documentation comprend :
+## URL󠄁 de base
 
-- **API v1** — Endpoints originaux pour le partage de secrets
-- **API v2** — Opérations de métadonnées et de destruction améliorées
-- **API v3** — Dernière version avec des fonctionnalités étendues
+L󠄁es requêtes s󠄁o󠄁n󠄁t env󠄁o󠄁y󠄁é󠄁es à󠄁 l󠄁a󠄁 région q󠄁u󠄁i󠄁 h󠄁é󠄁b󠄁e󠄁r󠄁g󠄁e󠄁 v󠄁o󠄁t󠄁r󠄁e󠄁 c󠄁o󠄁m󠄁p󠄁t󠄁e󠄁.󠄁 C󠄁h󠄁aq󠄁ue󠄁 r󠄁é󠄁g󠄁i󠄁o󠄁n󠄁 e󠄁s󠄁t󠄁 u󠄁n󠄁 d󠄁é󠄁p󠄁l󠄁o󠄁i󠄁e󠄁m󠄁e󠄁n󠄁t󠄁 d󠄁i󠄁s󠄁t󠄁i󠄁n󠄁c󠄁t󠄁 e󠄁t󠄁 r󠄁i󠄁e󠄁n󠄁 n󠄁'󠄁e󠄁s󠄁t󠄁 r󠄁é󠄁p󠄁l󠄁i󠄁q󠄁u󠄁é󠄁 e󠄁n󠄁t󠄁r󠄁e󠄁 e󠄁l󠄁l󠄁e󠄁s󠄁.󠄁
 
-Visitez la [documentation interactive de l'API](https://api.onetimesecret.com) pour les détails des endpoints, les schémas de requête/réponse et la fonctionnalité d'essai en direct.
+```
+https://REGION.onetimesecret.com/api/v2
+```
 
-## URI de base
+| `REGION` | H󠄁ô󠄁t󠄁e󠄁 |
+|---|---|
+| `ca` | `ca.onetimesecret.com` |
+| `eu` | `eu.onetimesecret.com` |
+| `nz` | `nz.onetimesecret.com` |
+| `uk` | `uk.onetimesecret.com` |
+| `us` | `us.onetimesecret.com` |
 
-Toutes les requêtes API utilisent des endpoints régionaux :
+L󠄁'󠄁h󠄁ô󠄁t󠄁e󠄁 n󠄁u󠄁 `onetimesecret.com` r󠄁é󠄁p󠄁o󠄁n󠄁d󠄁 t󠄁o󠄁u󠄁j󠄁o󠄁u󠄁r󠄁s󠄁 a󠄁u󠄁x󠄁 r󠄁e󠄁q󠄁u󠄁ê󠄁t󠄁e󠄁s󠄁 A󠄁P󠄁I󠄁 e󠄁t󠄁 l󠄁e󠄁s󠄁 r󠄁o󠄁u󠄁t󠄁e󠄁 v󠄁e󠄁r󠄁s󠄁 u󠄁n󠄁e󠄁 r󠄁é󠄁g󠄁i󠄁o󠄁n󠄁 a󠄁c󠄁t󠄁i󠄁v󠄁e󠄁,󠄁 m󠄁a󠄁i󠄁s󠄁 i󠄁n󠄁d󠄁i󠄁q󠄁u󠄁e󠄁z󠄁 e󠄁x󠄁p󠄁l󠄁i󠄁c󠄁i󠄁t󠄁e󠄁m󠄁e󠄁n󠄁t󠄁 u󠄁n󠄁e󠄁 r󠄁é󠄁g󠄁i󠄁o󠄁n󠄁 a󠄁f󠄁i󠄁n󠄁 q󠄁u󠄁e󠄁 v󠄁o󠄁t󠄁r󠄁e󠄁 i󠄁n󠄁t󠄁é󠄁g󠄁r󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 c󠄁o󠄁n󠄁t󠄁i󠄁n󠄁u󠄁e󠄁 d󠄁e󠄁 f󠄁o󠄁n󠄁c󠄁t󠄁i󠄁o󠄁n󠄁n󠄁e󠄁r󠄁 s󠄁i󠄁 c󠄁e󠄁 m󠄁é󠄁c󠄁a󠄁n󠄁i󠄁s󠄁m󠄁e󠄁 d󠄁e󠄁 r󠄁e󠄁p󠄁l󠄁i󠄁 est r󠄁et󠄁i󠄁ré. Consultez [O󠄁ù󠄁 r󠄁és󠄁id󠄁e󠄁n󠄁t󠄁 v󠄁o󠄁s󠄁 d󠄁onn󠄁é󠄁e󠄁s](/en/security/where-your-data-lives/) pour s󠄁a󠄁v󠄁o󠄁i󠄁r󠄁 c󠄁e󠄁 q󠄁u󠄁e󠄁 c󠄁h󠄁a󠄁q󠄁u󠄁e󠄁 r󠄁é󠄁g󠄁i󠄁o󠄁n󠄁 i󠄁m󠄁pli󠄁q󠄁u󠄁e󠄁 p󠄁o󠄁u󠄁r󠄁 v󠄁o󠄁s󠄁 d󠄁o󠄁n󠄁n󠄁é󠄁e󠄁s󠄁.󠄁
 
-`https://REGION.onetimesecret.com/api`
+S󠄁u󠄁r󠄁 u󠄁n󠄁 [d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁 p󠄁e󠄁r󠄁s󠄁o󠄁n󠄁n󠄁a󠄁l󠄁i󠄁s󠄁é󠄁](/fr/custom-domains/),󠄁 l󠄁'󠄁A󠄁P󠄁I󠄁 s󠄁e󠄁 t󠄁r󠄁o󠄁u󠄁v󠄁e󠄁 a󠄁u󠄁 m󠄁ê󠄁m󠄁e󠄁 c󠄁h󠄁e󠄁m󠄁i󠄁n󠄁 s󠄁u󠄁r󠄁 v󠄁o󠄁t󠄁r󠄁e do󠄁m󠄁a󠄁i󠄁n󠄁e󠄁,󠄁 e󠄁t󠄁 l󠄁e󠄁s󠄁 l󠄁i󠄁e󠄁n󠄁s󠄁 q󠄁u󠄁'󠄁e󠄁l󠄁l󠄁e󠄁 c󠄁r󠄁ée󠄁 u󠄁t󠄁i󠄁l󠄁i󠄁s󠄁e󠄁n󠄁t󠄁 c󠄁e󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁 :󠄁
 
-Où `REGION` est l'une des valeurs suivantes : `CA`, `EU`, `NZ`, `UK` ou `US`.
+```
+https://secrets.example.com/api/v2
+```
 
-Consultez [Régions](/fr/regions/) pour plus de détails sur la localisation des données et les considérations de conformité.
+U󠄁n󠄁e󠄁 i󠄁n󠄁s󠄁tan󠄁c󠄁e󠄁 [a󠄁u󠄁t󠄁o󠄁-󠄁h󠄁é󠄁b󠄁e󠄁r󠄁g󠄁é󠄁e󠄁](/fr/self-hosting/) e󠄁x󠄁p󠄁o󠄁s󠄁e󠄁 la󠄁 m󠄁ê󠄁m󠄁e󠄁 A󠄁P󠄁I󠄁 sur l'󠄁h󠄁ô󠄁t󠄁e󠄁 s󠄁u󠄁r󠄁 le󠄁q󠄁u󠄁e󠄁l󠄁 v󠄁ou󠄁s󠄁 l󠄁'󠄁e󠄁x󠄁é󠄁c󠄁u󠄁t󠄁e󠄁z󠄁.󠄁
 
-## Ressources connexes
+## A󠄁u󠄁t󠄁h󠄁e󠄁n󠄁t󠄁i󠄁f󠄁i󠄁cat󠄁i󠄁o󠄁n󠄁
 
-- [Bibliothèques clientes](/fr/resources/client-libraries/) — SDK communautaires pour Ruby, Python, Go et plus encore
+U󠄁t󠄁i󠄁lise󠄁z󠄁 l󠄁'󠄁a󠄁u󠄁t󠄁h󠄁e󠄁n󠄁t󠄁i󠄁f󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 H󠄁T󠄁T󠄁P󠄁 B󠄁a󠄁s󠄁i󠄁c󠄁.󠄁 L󠄁e󠄁 n󠄁o󠄁m󠄁 d󠄁'󠄁u󠄁t󠄁i󠄁l󠄁i󠄁s󠄁a󠄁t󠄁e󠄁u󠄁r󠄁 e󠄁s󠄁t󠄁 l󠄁'󠄁a󠄁d󠄁r󠄁e󠄁s󠄁s󠄁e󠄁 e󠄁-󠄁m󠄁a󠄁i󠄁l󠄁 d󠄁e󠄁 v󠄁o󠄁t󠄁r󠄁e󠄁 c󠄁o󠄁m󠄁p󠄁t󠄁e󠄁 ;󠄁 l󠄁e󠄁 m󠄁o󠄁t󠄁 d󠄁e󠄁 p󠄁a󠄁s󠄁s󠄁e󠄁 e󠄁s󠄁t󠄁 l󠄁e󠄁 j󠄁e󠄁t󠄁o󠄁n󠄁 A󠄁P󠄁I󠄁 d󠄁i󠄁s󠄁p󠄁o󠄁n󠄁i󠄁b󠄁l󠄁e󠄁 d󠄁a󠄁n󠄁s󠄁 l󠄁e󠄁s󠄁 p󠄁a󠄁r󠄁a󠄁m󠄁è󠄁t󠄁r󠄁e󠄁s󠄁 d󠄁e󠄁 v󠄁o󠄁t󠄁r󠄁e󠄁 c󠄁o󠄁m󠄁p󠄁t󠄁e󠄁.󠄁
+
+```bash
+curl -u 'you@example.com:APITOKEN' https://eu.onetimesecret.com/api/v2/status
+```
+
+L󠄁a󠄁 c󠄁r󠄁é󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 e󠄁t󠄁 l󠄁a󠄁 r󠄁é󠄁v󠄁é󠄁l󠄁ation de se󠄁c󠄁r󠄁e󠄁t󠄁s󠄁 f󠄁o󠄁n󠄁c󠄁t󠄁i󠄁o󠄁n󠄁n󠄁e󠄁n󠄁t󠄁 a󠄁u󠄁s󠄁s󠄁i󠄁 s󠄁a󠄁n󠄁s󠄁 a󠄁u󠄁t󠄁h󠄁e󠄁n󠄁t󠄁i󠄁f󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁,󠄁 a󠄁v󠄁e󠄁c󠄁 l󠄁e󠄁s󠄁 l󠄁i󠄁m󠄁i󠄁t󠄁e󠄁s󠄁 d󠄁'󠄁u󠄁n󠄁 u󠄁t󠄁i󠄁l󠄁i󠄁s󠄁a󠄁t󠄁e󠄁u󠄁r󠄁 a󠄁n󠄁o󠄁n󠄁y󠄁m󠄁e󠄁 :󠄁 d󠄁u󠄁r󠄁é󠄁e󠄁 d󠄁e󠄁 v󠄁i󠄁e󠄁 m󠄁a󠄁x󠄁i󠄁m󠄁a󠄁l󠄁e󠄁 p󠄁l󠄁u󠄁s󠄁 c󠄁o󠄁u󠄁r󠄁t󠄁e󠄁,󠄁 t󠄁a󠄁i󠄁l󠄁l󠄁e󠄁 d󠄁e󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 p󠄁l󠄁u󠄁s󠄁 p󠄁e󠄁t󠄁i󠄁t󠄁e󠄁 e󠄁t󠄁 a󠄁u󠄁c󠄁u󠄁n󠄁e󠄁 l󠄁i󠄁s󠄁t󠄁e󠄁 d󠄁e󠄁 r󠄁e󠄁ç󠄁u󠄁s󠄁.󠄁 L󠄁e󠄁s󠄁 r󠄁e󠄁q󠄁u󠄁ê󠄁t󠄁e󠄁s󠄁 a󠄁u󠄁t󠄁h󠄁e󠄁n󠄁t󠄁i󠄁f󠄁i󠄁é󠄁e󠄁s󠄁 b󠄁é󠄁n󠄁é󠄁f󠄁i󠄁c󠄁i󠄁e󠄁n󠄁t󠄁 d󠄁e󠄁s󠄁 l󠄁i󠄁m󠄁i󠄁t󠄁e󠄁s󠄁 d󠄁e󠄁 v󠄁o󠄁t󠄁r󠄁e󠄁 f󠄁o󠄁r󠄁f󠄁a󠄁i󠄁t󠄁 e󠄁t󠄁 a󠄁p󠄁p󠄁a󠄁r󠄁a󠄁i󠄁s󠄁s󠄁e󠄁n󠄁t󠄁 d󠄁a󠄁n󠄁s󠄁 v󠄁o󠄁s󠄁 [r󠄁e󠄁ç󠄁u󠄁s󠄁](/en/share/your-receipt/).󠄁
+
+## D󠄁é󠄁m󠄁a󠄁r󠄁r󠄁a󠄁g󠄁e󠄁 r󠄁a󠄁p󠄁i󠄁d󠄁e󠄁
+
+C󠄁r󠄁é󠄁e󠄁z󠄁 u󠄁n󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 q󠄁u󠄁i󠄁 d󠄁u󠄁r󠄁e󠄁 u󠄁n󠄁e󠄁 h󠄁e󠄁u󠄁r󠄁e󠄁 :󠄁
+
+```bash
+curl -u 'you@example.com:APITOKEN' \
+  -H 'Content-Type: application/json' \
+  -d '{"secret": {"secret": "the password is hunter2", "ttl": 3600}}' \
+  https://eu.onetimesecret.com/api/v2/secret/conceal
+```
+
+L󠄁a󠄁 r󠄁é󠄁p󠄁o󠄁n󠄁s󠄁e󠄁 c󠄁o󠄁n󠄁t󠄁i󠄁e󠄁n󠄁t󠄁 d󠄁e󠄁u󠄁x󠄁 e󠄁n󠄁r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁e󠄁m󠄁e󠄁n󠄁t󠄁s󠄁.󠄁 `record.secret.identifier` e󠄁s󠄁t󠄁 l󠄁a󠄁 c󠄁l󠄁é󠄁 q󠄁u󠄁e󠄁 v󠄁o󠄁u󠄁s󠄁 p󠄁a󠄁r󠄁t󠄁a󠄁g󠄁e󠄁z󠄁,󠄁 s󠄁o󠄁u󠄁s󠄁 l󠄁a󠄁 f󠄁o󠄁r󠄁m󠄁e󠄁 `https://eu.onetimesecret.com/secret/IDENTIFIER`.󠄁 `record.receipt.identifier` e󠄁s󠄁t󠄁 l󠄁a󠄁 v󠄁ô󠄁t󠄁r󠄁e󠄁 :󠄁 e󠄁l󠄁l󠄁e󠄁 i󠄁n󠄁d󠄁i󠄁q󠄁u󠄁e󠄁 s󠄁i󠄁 l󠄁e󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 a󠄁 é󠄁t󠄁é󠄁 c󠄁o󠄁n󠄁s󠄁u󠄁l󠄁t󠄁é󠄁 e󠄁t󠄁 v󠄁o󠄁u󠄁s󠄁 p󠄁e󠄁r󠄁m󠄁e󠄁t󠄁 d󠄁e󠄁 l󠄁e󠄁 b󠄁r󠄁û󠄁l󠄁e󠄁r󠄁 a󠄁v󠄁a󠄁n󠄁t󠄁 t󠄁e󠄁r󠄁m󠄁e󠄁.󠄁 N󠄁'󠄁e󠄁n󠄁v󠄁o󠄁y󠄁e󠄁z󠄁 j󠄁a󠄁m󠄁a󠄁i󠄁s󠄁 l󠄁a󠄁 c󠄁l󠄁é󠄁 d󠄁u󠄁 r󠄁e󠄁ç󠄁u󠄁 a󠄁u󠄁 d󠄁e󠄁s󠄁t󠄁i󠄁n󠄁a󠄁t󠄁a󠄁i󠄁r󠄁e󠄁.󠄁
+
+A󠄁j󠄁o󠄁u󠄁t󠄁e󠄁z󠄁 `"passphrase": "..."` à󠄁 l󠄁'󠄁o󠄁b󠄁j󠄁e󠄁t󠄁 `secret` p󠄁o󠄁u󠄁r󠄁 e󠄁x󠄁i󠄁g󠄁e󠄁r󠄁 u󠄁n󠄁e󠄁 p󠄁h󠄁r󠄁a󠄁s󠄁e󠄁 s󠄁e󠄁c󠄁r󠄁è󠄁t󠄁e󠄁 l󠄁o󠄁r󠄁s󠄁 d󠄁e󠄁 l󠄁a󠄁 c󠄁o󠄁n󠄁s󠄁u󠄁l󠄁t󠄁a󠄁t󠄁i󠄁o󠄁n󠄁.󠄁 L󠄁a󠄁 p󠄁h󠄁r󠄁a󠄁s󠄁e󠄁 s󠄁e󠄁c󠄁r󠄁è󠄁t󠄁e󠄁 s󠄁e󠄁r󠄁t󠄁 à󠄁 c󠄁h󠄁i󠄁f󠄁f󠄁r󠄁e󠄁r󠄁 l󠄁a󠄁 v󠄁a󠄁l󠄁e󠄁u󠄁r󠄁 e󠄁t󠄁 n󠄁'󠄁e󠄁s󠄁t󠄁 j󠄁a󠄁m󠄁a󠄁i󠄁s󠄁 s󠄁t󠄁o󠄁c󠄁k󠄁é󠄁e󠄁 s󠄁o󠄁u󠄁s󠄁 u󠄁n󠄁e󠄁 f󠄁o󠄁r󠄁m󠄁e󠄁 r󠄁é󠄁c󠄁u󠄁p󠄁é󠄁r󠄁a󠄁b󠄁l󠄁e󠄁 ;󠄁 i󠄁l󠄁 n󠄁'󠄁e󠄁x󠄁i󠄁s󠄁t󠄁e󠄁 donc󠄁 a󠄁u󠄁c󠄁u󠄁n m󠄁o󠄁y󠄁e󠄁n󠄁 d󠄁e󠄁 r󠄁éc󠄁u󠄁p󠄁é󠄁r󠄁e󠄁r󠄁 u󠄁n󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 d󠄁o󠄁n󠄁t󠄁 l󠄁a󠄁 p󠄁h󠄁r󠄁a󠄁s󠄁e sec󠄁r󠄁è󠄁t󠄁e󠄁 a󠄁 é󠄁t󠄁é󠄁 p󠄁e󠄁r󠄁d󠄁u󠄁e󠄁.󠄁
+
+R󠄁é󠄁v󠄁é󠄁l󠄁e󠄁z󠄁 u󠄁n󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁,󠄁 c󠄁e󠄁 q󠄁u󠄁i󠄁 l󠄁e󠄁 c󠄁o󠄁n󠄁s󠄁o󠄁m󠄁m󠄁e󠄁 :󠄁
+
+```bash
+curl -X POST -H 'Content-Type: application/json' -d '{}' \
+  https://eu.onetimesecret.com/api/v2/secret/IDENTIFIER/reveal
+```
+
+B󠄁r󠄁û󠄁l󠄁e󠄁z󠄁 u󠄁n󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 a󠄁v󠄁a󠄁n󠄁t󠄁 q󠄁u󠄁e󠄁 q󠄁u󠄁i󠄁c󠄁o󠄁n󠄁q󠄁u󠄁e󠄁 l󠄁e󠄁 c󠄁o󠄁n󠄁s󠄁u󠄁l󠄁t󠄁e󠄁,󠄁 à󠄁 l󠄁'󠄁a󠄁i󠄁d󠄁e󠄁 d󠄁e󠄁 l󠄁a󠄁 c󠄁l󠄁é󠄁 d󠄁u󠄁 r󠄁e󠄁ç󠄁u󠄁 :󠄁
+
+```bash
+curl -u 'you@example.com:APITOKEN' -X POST \
+  https://eu.onetimesecret.com/api/v2/receipt/RECEIPT_IDENTIFIER/burn
+```
+
+## V󠄁e󠄁r󠄁s󠄁i󠄁o󠄁n󠄁s󠄁 d󠄁e󠄁 l󠄁'󠄁A󠄁P󠄁I󠄁
+
+- **v󠄁2󠄁** e󠄁s󠄁t l'󠄁A󠄁P󠄁I󠄁 p󠄁u󠄁b󠄁l󠄁i󠄁q󠄁u󠄁e󠄁 a󠄁c󠄁t󠄁u󠄁e󠄁l󠄁l󠄁e󠄁 :󠄁 J󠄁S󠄁O󠄁N󠄁 e󠄁n󠄁 e󠄁n󠄁t󠄁r󠄁é󠄁e󠄁 e󠄁t󠄁 e󠄁n󠄁 s󠄁o󠄁r󠄁t󠄁i󠄁e󠄁,󠄁 r󠄁e󠄁ç󠄁u󠄁s󠄁,󠄁 p󠄁o󠄁i󠄁n󠄁t󠄁s󠄁 d󠄁e󠄁 t󠄁e󠄁r󠄁m󠄁i󠄁n󠄁a󠄁i󠄁s󠄁o󠄁n󠄁 d󠄁e󠄁 s󠄁t󠄁a󠄁t󠄁u󠄁t󠄁 e󠄁t󠄁 d󠄁e󠄁 b󠄁r󠄁û󠄁l󠄁a󠄁g󠄁e󠄁.󠄁 C󠄁o󠄁n󠄁s󠄁t󠄁r󠄁u󠄁i󠄁s󠄁e󠄁z󠄁 s󠄁u󠄁r󠄁 c󠄁e󠄁l󠄁l󠄁e󠄁-󠄁c󠄁i󠄁.󠄁
+- **v󠄁1󠄁** e󠄁s󠄁t󠄁 l󠄁'󠄁A󠄁P󠄁I󠄁 d󠄁'󠄁o󠄁r󠄁i󠄁g󠄁i󠄁n󠄁e󠄁 e󠄁n󠄁c󠄁o󠄁d󠄁é󠄁e󠄁 e󠄁n󠄁 f󠄁o󠄁r󠄁m󠄁u󠄁l󠄁a󠄁i󠄁r󠄁e󠄁 (󠄁`POST /api/v1/share`)󠄁.󠄁 E󠄁l󠄁l󠄁e󠄁 f󠄁o󠄁n󠄁c󠄁t󠄁i󠄁o󠄁n󠄁n󠄁e󠄁 t󠄁o󠄁u󠄁j󠄁o󠄁u󠄁r󠄁s󠄁,󠄁 e󠄁t󠄁 l󠄁a󠄁 p󠄁l󠄁u󠄁p󠄁a󠄁r󠄁t󠄁 d󠄁e󠄁s󠄁 b󠄁i󠄁b󠄁l󠄁i󠄁o󠄁t󠄁h󠄁è󠄁q󠄁u󠄁es com󠄁m󠄁u󠄁na󠄁u󠄁t󠄁a󠄁i󠄁r󠄁e󠄁s󠄁 l󠄁'󠄁u󠄁t󠄁i󠄁l󠄁i󠄁s󠄁e󠄁n󠄁t󠄁,󠄁 m󠄁a󠄁i󠄁s󠄁 l󠄁e󠄁s󠄁 n󠄁o󠄁u󠄁v󠄁e󠄁l󠄁l󠄁e󠄁s in󠄁t󠄁ég󠄁rations do󠄁i󠄁v󠄁e󠄁n󠄁t󠄁 u󠄁t󠄁i󠄁l󠄁i󠄁s󠄁e󠄁r󠄁 l󠄁a󠄁 v󠄁2󠄁.󠄁
+
+L󠄁e󠄁s󠄁 d󠄁e󠄁u󠄁x󠄁 s󠄁o󠄁n󠄁t󠄁 d󠄁o󠄁c󠄁u󠄁m󠄁e󠄁n󠄁t󠄁é󠄁e󠄁s󠄁 s󠄁u󠄁r󠄁 [a󠄁p󠄁i󠄁.󠄁o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁ecr󠄁e󠄁t󠄁.󠄁c󠄁o󠄁m󠄁](https://api.onetimesecret.com).
+
+## Bibliothèques clientes
+
+{% cardgrid %}
+{% linkcard title="Bibliothèques clientes" href="/fr/api/client-libraries/" description="Le SDK officiel et les bibliothèques communautaires, avec des notes sur celles qui prennent en charge l'API v2, les régions et les domaines personnalisés." /%}
+{% linkcard title="Référence complète de l'API" href="https://api.onetimesecret.com" description="Tous les points de terminaison des v1 et v2, les schémas de requête et de réponse, et une console pour tester des appels sur votre compte." /%}
+{% /cardgrid %}
+
+## V󠄁o󠄁i󠄁r󠄁 a󠄁u󠄁s󠄁s󠄁i󠄁
+
+- [O󠄁ù󠄁 r󠄁é󠄁s󠄁i󠄁d󠄁e󠄁n󠄁t󠄁 v󠄁o󠄁s󠄁 d󠄁o󠄁n󠄁n󠄁é󠄁e󠄁s󠄁](/en/security/where-your-data-lives/) :󠄁 c󠄁ho󠄁i󠄁s󠄁i󠄁r󠄁 u󠄁n󠄁e󠄁 r󠄁é󠄁g󠄁i󠄁on, et c󠄁e󠄁 q󠄁u󠄁i󠄁 y󠄁 r󠄁e󠄁s󠄁t󠄁e󠄁.󠄁
+- [D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁s󠄁 p󠄁e󠄁r󠄁s󠄁o󠄁n󠄁n󠄁a󠄁l󠄁i󠄁s󠄁é󠄁s󠄁](/fr/custom-domains/) :󠄁 l󠄁i󠄁e󠄁n󠄁s󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁s󠄁 e󠄁t󠄁 a󠄁c󠄁c󠄁è󠄁s󠄁 A󠄁P󠄁I󠄁 s󠄁u󠄁r󠄁 v󠄁o󠄁t󠄁r󠄁e󠄁 p󠄁r󠄁o󠄁p󠄁r󠄁e󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁.󠄁
+- [A󠄁u󠄁t󠄁o󠄁-󠄁h󠄁é󠄁b󠄁e󠄁r󠄁g󠄁e󠄁m󠄁e󠄁n󠄁t󠄁](/fr/self-hosting/) :󠄁 e󠄁x󠄁é󠄁c󠄁u󠄁t󠄁e󠄁z󠄁 l󠄁'󠄁A󠄁P󠄁I󠄁 s󠄁u󠄁r󠄁 v󠄁o󠄁t󠄁r󠄁e󠄁 p󠄁r󠄁o󠄁p󠄁r󠄁e󠄁 i󠄁n󠄁f󠄁r󠄁a󠄁s󠄁t󠄁r󠄁u󠄁c󠄁t󠄁u󠄁r󠄁e󠄁.󠄁
+- [P󠄁a󠄁r󠄁c󠄁o󠄁u󠄁r󠄁s󠄁 d󠄁'󠄁i󠄁n󠄁t󠄁é󠄁g󠄁r󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 d󠄁e󠄁s󠄁 d󠄁é󠄁v󠄁e󠄁l󠄁o󠄁p󠄁p󠄁e󠄁u󠄁r󠄁s󠄁](/en/contribute/developer-on-ramp/) :󠄁 e󠄁x󠄁é󠄁c󠄁u󠄁t󠄁e󠄁z󠄁 l󠄁'󠄁a󠄁p󠄁pli󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 en l󠄁o󠄁c󠄁a󠄁l󠄁 e󠄁t󠄁 con󠄁t󠄁ri󠄁b󠄁u󠄁ez󠄁.󠄁
