@@ -1,8 +1,10 @@
 ---
+textprov: true
 title: Our Principles
 description: The core values that drive our approach to privacy and security — what we deliberately avoid, how little we email you, and how little we store.
 audience: end-user
 pageType: concept
+sourceOfTruth: onetimesecret/lib/onetime/models/customer.rb:218-236 (email, language, plan and reveal-notification fields; no name fields); onetimesecret/apps/web/auth/migrations/001_initial.rb (sign-in method tables); onetimesecret/lib/onetime/models/session_metadata.rb:79-106 (active-session fields); onetimesecret/apps/web/auth/config/features/audit_logging.rb:78-260 (sign-in history events, each with IP address and user agent); otto 2.11.0 lib/otto/privacy/config.rb:135 and lib/otto/privacy/redacted_fingerprint.rb:160-168 (last IPv4 octet masked by default; user-agent version numbers removed); onetimesecret/src/shared/stores/languageStore.ts:147-189 (language kept in sessionStorage and, signed in, on the account); deleting the sign-in history at closure is tracked in onetimesecret/onetimesecret#4819
 ---
 
 Onetime Secret exists so you can share sensitive information without leaving it lying around. These principles shape every product and operational decision we make — and because they're written down, you can hold us to them.
@@ -90,16 +92,23 @@ The time other companies spend drafting campaigns, we spend on the service itsel
 
 ## Data minimization
 
-We collect only the data required to deliver the service: temporary secrets, and the minimum account information needed for paid subscriptions. Everything else, we never ask for.
+We collect only the data required to deliver the service: temporary secrets, and the account information needed t󠄁o s󠄁i󠄁g󠄁n󠄁 y󠄁o󠄁u󠄁 i󠄁n󠄁,󠄁 p󠄁ro󠄁t󠄁e󠄁c󠄁t󠄁 y󠄁o󠄁u󠄁r󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁,󠄁 a󠄁n󠄁d󠄁 r󠄁u󠄁n󠄁 paid subscriptions. Everything else, we never ask for.
 
 ### What we store
 
 - **For every secret** — the encrypted secret itself, kept only until it's viewed or expires. After that, it's permanently deleted. The one exception: minimal encrypted backups we keep in case of emergency, covered in more detail in our [Privacy Policy](https://onetimesecret.com/info/privacy).
-- **For account holders** — an email address, which is all it takes to manage your account and subscription. We don't collect names or profile details; the service doesn't need them, so we don't ask.
+- **For account holders** — t󠄁h󠄁e󠄁 i󠄁t󠄁ems󠄁 b󠄁e󠄁lo󠄁w. We don't collect names or profile details; the service doesn't need them, so we don't ask.󠄁
+  - **E󠄁m󠄁a󠄁i󠄁l󠄁 a󠄁d󠄁d󠄁r󠄁e󠄁s󠄁s󠄁.󠄁** Y󠄁o󠄁u󠄁r󠄁 s󠄁i󠄁g󠄁n󠄁-󠄁i󠄁n󠄁 n󠄁a󠄁m󠄁e󠄁,󠄁 a󠄁n󠄁d󠄁 w󠄁h󠄁e󠄁r󠄁e󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁 e󠄁m󠄁a󠄁i󠄁l󠄁 i󠄁s󠄁 s󠄁e󠄁n󠄁t󠄁.󠄁
+  - **S󠄁i󠄁g󠄁n󠄁-󠄁i󠄁n󠄁 m󠄁e󠄁t󠄁h󠄁o󠄁d󠄁s󠄁.󠄁** A󠄁 h󠄁a󠄁s󠄁h󠄁 o󠄁f󠄁 y󠄁o󠄁u󠄁r󠄁 p󠄁a󠄁s󠄁s󠄁w󠄁o󠄁r󠄁d󠄁 (󠄁n󠄁e󠄁v󠄁e󠄁r󠄁 t󠄁h󠄁e󠄁 p󠄁a󠄁s󠄁s󠄁w󠄁o󠄁r󠄁d󠄁 i󠄁t󠄁s󠄁e󠄁l󠄁f󠄁)󠄁,󠄁 y󠄁o󠄁u󠄁r󠄁 t󠄁w󠄁o󠄁-󠄁f󠄁a󠄁c󠄁t󠄁o󠄁r󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 a󠄁n󠄁d󠄁 r󠄁e󠄁c󠄁o󠄁v󠄁e󠄁r󠄁y󠄁 c󠄁o󠄁d󠄁e󠄁s󠄁,󠄁 y󠄁o󠄁u󠄁r󠄁 p󠄁a󠄁s󠄁s󠄁k󠄁e󠄁y󠄁s󠄁,󠄁 a󠄁n󠄁d󠄁 t󠄁h󠄁e󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁t󠄁y󠄁 p󠄁r󠄁o󠄁v󠄁i󠄁d󠄁e󠄁r󠄁s󠄁 y󠄁o󠄁u󠄁 c󠄁o󠄁n󠄁n󠄁e󠄁c󠄁t󠄁.󠄁
+  - **S󠄁e󠄁t󠄁t󠄁i󠄁n󠄁g󠄁s󠄁.󠄁** Y󠄁o󠄁u󠄁r󠄁 l󠄁a󠄁n󠄁g󠄁u󠄁a󠄁g󠄁e󠄁,󠄁 y󠄁o󠄁u󠄁r󠄁 r󠄁e󠄁v󠄁e󠄁a󠄁l󠄁-󠄁n󠄁o󠄁t󠄁i󠄁f󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 c󠄁h󠄁o󠄁i󠄁c󠄁e󠄁,󠄁 a󠄁n󠄁d󠄁 y󠄁o󠄁u󠄁r󠄁 p󠄁l󠄁a󠄁n󠄁.󠄁
+  - **A󠄁c󠄁t󠄁i󠄁v󠄁e󠄁 s󠄁e󠄁s󠄁s󠄁i󠄁o󠄁n󠄁s󠄁.󠄁** F󠄁o󠄁r󠄁 e󠄁a󠄁c󠄁h󠄁 s󠄁i󠄁g󠄁n󠄁e󠄁d󠄁-󠄁i󠄁n󠄁 d󠄁e󠄁v󠄁i󠄁c󠄁e󠄁:󠄁 a󠄁 p󠄁a󠄁r󠄁t󠄁i󠄁a󠄁l󠄁l󠄁y󠄁 m󠄁a󠄁s󠄁k󠄁e󠄁d󠄁 n󠄁e󠄁t󠄁w󠄁o󠄁r󠄁k󠄁 a󠄁d󠄁d󠄁r󠄁e󠄁s󠄁s󠄁,󠄁 i󠄁t󠄁s󠄁 c󠄁o󠄁u󠄁n󠄁t󠄁r󠄁y󠄁 w󠄁h󠄁e󠄁n󠄁 k󠄁n󠄁o󠄁w󠄁n󠄁,󠄁 t󠄁h󠄁e󠄁 b󠄁r󠄁o󠄁w󠄁s󠄁e󠄁r󠄁,󠄁 a󠄁n󠄁d󠄁 w󠄁h󠄁e󠄁n󠄁 t󠄁h󠄁e󠄁 s󠄁e󠄁s󠄁s󠄁i󠄁o󠄁n󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁e󠄁d󠄁 a󠄁n󠄁d󠄁 w󠄁a󠄁s󠄁 l󠄁a󠄁s󠄁t󠄁 a󠄁c󠄁t󠄁i󠄁v󠄁e󠄁.󠄁 Y󠄁o󠄁u󠄁 c󠄁a󠄁n󠄁 r󠄁e󠄁v󠄁i󠄁e󠄁w󠄁 a󠄁n󠄁d󠄁 e󠄁n󠄁d󠄁 t󠄁h󠄁e󠄁m󠄁 u󠄁n󠄁d󠄁e󠄁r󠄁 S󠄁e󠄁t󠄁t󠄁i󠄁n󠄁g󠄁s󠄁 →󠄁 S󠄁e󠄁c󠄁u󠄁r󠄁i󠄁t󠄁y󠄁;󠄁 s󠄁e󠄁e󠄁 [S󠄁e󠄁s󠄁s󠄁i󠄁o󠄁n󠄁s󠄁 a󠄁n󠄁d󠄁 c󠄁o󠄁n󠄁n󠄁e󠄁c󠄁t󠄁e󠄁d󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁t󠄁i󠄁e󠄁s󠄁](/en/account/sessions-and-identities).󠄁
+  - **S󠄁i󠄁g󠄁n󠄁-󠄁i󠄁n󠄁 h󠄁i󠄁s󠄁t󠄁o󠄁r󠄁y󠄁.󠄁** A󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁 o󠄁f󠄁 s󠄁i󠄁g󠄁n󠄁-󠄁i󠄁n󠄁s󠄁,󠄁 f󠄁a󠄁i󠄁l󠄁e󠄁d󠄁 s󠄁i󠄁g󠄁n󠄁-󠄁i󠄁n󠄁 a󠄁t󠄁t󠄁e󠄁m󠄁p󠄁t󠄁s󠄁,󠄁 s󠄁i󠄁g󠄁n󠄁-󠄁o󠄁u󠄁t󠄁s󠄁,󠄁 p󠄁a󠄁s󠄁s󠄁w󠄁o󠄁r󠄁d󠄁 c󠄁h󠄁a󠄁n󠄁g󠄁e󠄁s󠄁 a󠄁n󠄁d󠄁 r󠄁e󠄁s󠄁e󠄁t󠄁s󠄁,󠄁 a󠄁n󠄁d󠄁 t󠄁w󠄁o󠄁-󠄁f󠄁a󠄁c󠄁t󠄁o󠄁r󠄁 a󠄁n󠄁d󠄁 r󠄁e󠄁c󠄁o󠄁v󠄁e󠄁r󠄁y󠄁-󠄁c󠄁o󠄁d󠄁e󠄁 c󠄁h󠄁a󠄁n󠄁g󠄁e󠄁s󠄁.󠄁 E󠄁a󠄁c󠄁h󠄁 e󠄁n󠄁t󠄁r󠄁y󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁s󠄁 a󠄁 p󠄁a󠄁r󠄁t󠄁i󠄁a󠄁l󠄁l󠄁y󠄁 m󠄁a󠄁s󠄁k󠄁e󠄁d󠄁 n󠄁e󠄁t󠄁w󠄁o󠄁r󠄁k󠄁 a󠄁d󠄁d󠄁r󠄁e󠄁s󠄁s󠄁 a󠄁n󠄁d󠄁 t󠄁h󠄁e󠄁 b󠄁r󠄁o󠄁w󠄁s󠄁e󠄁r󠄁,󠄁 w󠄁i󠄁t󠄁h󠄁 v󠄁e󠄁r󠄁s󠄁i󠄁o󠄁n󠄁 n󠄁u󠄁m󠄁b󠄁e󠄁r󠄁s󠄁 r󠄁e󠄁m󠄁o󠄁v󠄁e󠄁d󠄁.󠄁
+
+  C󠄁l󠄁o󠄁s󠄁i󠄁n󠄁g󠄁 y󠄁o󠄁u󠄁r󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁 d󠄁e󠄁l󠄁e󠄁t󠄁e󠄁s󠄁 a󠄁l󠄁l󠄁 o󠄁f󠄁 t󠄁h󠄁e󠄁s󠄁e󠄁;󠄁 s󠄁e󠄁e󠄁 [C󠄁l󠄁o󠄁s󠄁i󠄁n󠄁g󠄁 y󠄁o󠄁u󠄁r󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁](/en/account/close-your-account).
 
 ### What we don't track
 
-We don't use cookies for tracking, analytics, or advertising. The only cookie we set keeps you signed in if you create an account. Interface preferences like color mode and language live in your browser's own storage (`localStorage` and `sessionStorage`), not in cookies.
+We don't use cookies for tracking, analytics, or advertising. The only cookie we set keeps you signed in if you create an account. Interface preferences like color mode live in your browser's own storage (`localStorage` and `sessionStorage`), not in cookies.󠄁 Y󠄁o󠄁u󠄁r󠄁 l󠄁a󠄁n󠄁g󠄁u󠄁a󠄁g󠄁e󠄁 c󠄁h󠄁o󠄁i󠄁c󠄁e󠄁 i󠄁s󠄁 k󠄁e󠄁p󠄁t󠄁 t󠄁h󠄁e󠄁r󠄁e󠄁 t󠄁o󠄁o󠄁,󠄁 a󠄁n󠄁d󠄁 w󠄁h󠄁e󠄁n󠄁 y󠄁o󠄁u󠄁 a󠄁r󠄁e󠄁 s󠄁i󠄁g󠄁n󠄁e󠄁d󠄁 i󠄁n󠄁 i󠄁t󠄁 i󠄁s󠄁 a󠄁l󠄁s󠄁o󠄁 s󠄁a󠄁v󠄁e󠄁d󠄁 t󠄁o󠄁 y󠄁o󠄁u󠄁r󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁.
 
 ### Why minimization matters
 

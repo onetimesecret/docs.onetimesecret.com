@@ -1,4 +1,5 @@
 ---
+textprov: true
 title: Where your data lives
 description: Onetime Secret runs five independent regions — Canada, the European Union, Aotearoa New Zealand, the United Kingdom, and the United States. This page lists each region's location, endpoint, hosting provider, custom-domain CNAME, and regulatory environment, and explains how to choose between them.
 audience: end-user
@@ -28,7 +29,7 @@ Choosing the right data center region is crucial for several reasons:
 
 Each region section below includes details on the local regulatory environment and when that region may be relevant to your use case.
 
-To point a custom domain at a region, create a CNAME record from your chosen host (for example `secrets.example.com`) to that region's custom domain CNAME value. Note that the UK region uses an anycast CNAME rather than a region-specific subdomain. See the [Custom Domain Setup Guide](/en/custom-domains/setup-guide) for full instructions.
+To point a custom domain at a region, create a CNAME record from your chosen host (for example `secrets.example.com`) to that region's custom domain CNAME value. Note that the UK region uses an anycast CNAME rather than a region-specific subdomain. See [S󠄁e󠄁tt󠄁i󠄁n󠄁g󠄁 u󠄁p󠄁 a󠄁 c󠄁ustom d󠄁omain](/en/custom-domains/setup-guide) for full instructions.
 
 ## Share-nothing architecture
 

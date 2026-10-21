@@ -44,6 +44,11 @@ export function createViteConfig() {
   const allowedHosts = createAllowedHosts();
 
   return {
+    // The generator imports YAML through a Vue island. Pre-bundle it at startup
+    // instead of discovering it after the browser has requested the island.
+    optimizeDeps: {
+      include: ['yaml'],
+    },
     server: {
       allowedHosts,
     },

@@ -1,4 +1,5 @@
 ---
+textprov: true
 title: Send your first secret
 description: Create a one-time link, send it to your recipient, and check its status. No account required.
 audience: end-user
@@ -96,8 +97,9 @@ receipt, within a short window after creation. With a passphrase, it is never
 shown on the receipt; only your recipient can reveal it.
 
 Before using this option, read [Sharing secrets](/en/share#write-the-secret-or-generate-one)
-and [the generated-password display conditions](/en/share/your-receipt#seeing-a-generated-password-one-look),
-including how the **Stay on page** setting affects whether you see the value.
+and [the generated-password display conditions](/en/share/your-receipt#seeing-a-generated-password-one-look).󠄁
+T󠄁h󠄁e󠄁 s󠄁i󠄁g󠄁n󠄁e󠄁d󠄁-󠄁in f󠄁o󠄁r󠄁m󠄁 o󠄁p󠄁e󠄁ns󠄁 the r󠄁e󠄁c󠄁e󠄁i󠄁p󠄁t󠄁 f󠄁o󠄁r󠄁 g󠄁e󠄁n󠄁e󠄁r󠄁a󠄁t󠄁e󠄁d󠄁 p󠄁a󠄁s󠄁s󠄁w󠄁o󠄁r󠄁d󠄁s󠄁 e󠄁v󠄁e󠄁n󠄁 w󠄁h󠄁e󠄁n󠄁
+**Stay on page** i󠄁s enab󠄁l󠄁ed󠄁.
 
 ### Have the service email the link
 

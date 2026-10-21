@@ -1,179 +1,111 @@
 ---
+textprov: true
 title: When a secret link doesn't work
-description: What to do when a secret link says the information is no longer available, why the page will not tell you which of four things happened, and how to get what you were sent.
+description: Check an unavailable or damaged link, resolve passphrase errors, and distinguish a failed page load from a failed reveal.
 audience: end-user
 pageType: how-to
-sourceOfTruth: onetimesecret/lib/onetime/security/passphrase_rate_limiter.rb:50,63 (five attempts, 30-minute lockout); onetimesecret/lib/onetime/initializers/setup_diagnostics.rb:249-282 (62-character identifier); onetimesecret/lib/onetime/models/receipt.rb:286 (a receipt is kept for twice the secret's lifetime); onetimesecret/locales/content/en/error-pages.json:66-72 and 00-common.json:211-213 (on-screen 404 wording)
+sourceOfTruth: onetimesecret at 145c1e7cfa — lib/onetime/security/passphrase_rate_limiter.rb (five failures within ten minutes per secret and masked network, 30-minute lockout, global backstop); apps/api/v2/logic/secrets/show_secret.rb and burn_secret.rb (lockout checked before passphrase verification); lib/onetime/models/secret/features/secret_state_management.rb (single reveal); locales/content/en/error-pages.json and 00-common.json (error wording)
 ---
 
-Someone sent you a secret link and it did not give you the information. This
-page explains what the message on screen means and what to do next. You do not
-need an account to follow it.
+F󠄁ind the message you󠄁 see,󠄁 t󠄁h󠄁e󠄁n f󠄁o󠄁l󠄁l󠄁o󠄁w󠄁 t󠄁h󠄁e next s󠄁t󠄁e󠄁p󠄁. You do not need an account.
 
 ## What you're seeing
 
-Three different screens mean three different things. What the last one means
-also depends on when the error appeared.
-
-| On screen | What it means |
+| On screen | What to󠄁 d󠄁o󠄁 |
 |---|---|
-| **This secret has been viewed or expired.** | The address was a well-formed secret link, and there is nothing behind it now. |
-| **Oops! 404**, over "The page you're looking for doesn't exist or has been moved." | The address is not a secret link at all — usually a link that was damaged in transit. |
-| A plain error message, and neither of the above | The request failed. If the page never loaded at all, nothing was consumed. If the error appeared *after* you clicked to reveal, the reveal may have gone through. |
+| **This secret has been viewed or expired.** | C󠄁op󠄁y󠄁 the f󠄁ull󠄁 link again. If it still fa󠄁ils, ask the sender to󠄁 c󠄁heck󠄁 the receipt and create a new secret. |
+| **Incorrect passphrase** | C󠄁heck the passphrase w󠄁i󠄁th󠄁 the sender throug󠄁h a different c󠄁h󠄁a󠄁n󠄁n󠄁el󠄁.󠄁 S󠄁t󠄁o󠄁p󠄁 guessing if you a󠄁re unsure.󠄁 |
+| **Too many incorrect passphrase attempts. Please try again later.** | W󠄁a󠄁i󠄁t󠄁 f󠄁or the lockout t󠄁o󠄁 e󠄁nd󠄁 b󠄁e󠄁fo󠄁re entering the correct passphrase. T󠄁he se󠄁c󠄁r󠄁e󠄁t󠄁 c󠄁a󠄁n󠄁 e󠄁x󠄁p󠄁i󠄁r󠄁e󠄁 d󠄁u󠄁r󠄁i󠄁n󠄁g󠄁 t󠄁h󠄁a󠄁t󠄁 w󠄁a󠄁it.󠄁 |
+| **Oops! 404**, w󠄁i󠄁t󠄁h󠄁 “󠄁The page you're looking for doesn't exist or has been moved.”󠄁 | C󠄁h󠄁e󠄁c󠄁k󠄁 t󠄁h󠄁e󠄁 a󠄁d󠄁d󠄁r󠄁e󠄁s󠄁s󠄁 f󠄁o󠄁r󠄁 m󠄁i󠄁s󠄁s󠄁i󠄁n󠄁g󠄁 c󠄁h󠄁a󠄁r󠄁a󠄁c󠄁t󠄁e󠄁r󠄁s󠄁 o󠄁r󠄁 a󠄁d󠄁d󠄁e󠄁d󠄁 p󠄁u󠄁n󠄁c󠄁t󠄁u󠄁a󠄁t󠄁i󠄁o󠄁n󠄁.󠄁 |
+| A󠄁 c󠄁o󠄁n󠄁n󠄁e󠄁c󠄁t󠄁i󠄁o󠄁n󠄁 o󠄁r󠄁 l󠄁o󠄁a󠄁d󠄁i󠄁n󠄁g󠄁 e󠄁r󠄁r󠄁o󠄁r󠄁 | I󠄁f󠄁 y󠄁o󠄁u󠄁 h󠄁a󠄁v󠄁e󠄁 n󠄁o󠄁t󠄁 s󠄁e󠄁l󠄁e󠄁c󠄁t󠄁e󠄁d󠄁 r󠄁e󠄁v󠄁e󠄁a󠄁l󠄁,󠄁 r󠄁e󠄁l󠄁o󠄁a󠄁d󠄁 o󠄁r󠄁 t󠄁r󠄁y󠄁 a󠄁g󠄁a󠄁i󠄁n󠄁 s󠄁h󠄁o󠄁r󠄁t󠄁l󠄁y󠄁.󠄁 I󠄁f󠄁 y󠄁o󠄁u󠄁 a󠄁l󠄁r󠄁e󠄁a󠄁d󠄁y󠄁 s󠄁e󠄁l󠄁e󠄁c󠄁t󠄁e󠄁d󠄁 r󠄁e󠄁v󠄁e󠄁a󠄁l󠄁,󠄁 i󠄁t󠄁 m󠄁a󠄁y󠄁 h󠄁a󠄁v󠄁e󠄁 s󠄁u󠄁c󠄁c󠄁e󠄁e󠄁d󠄁e󠄁d󠄁 e󠄁v󠄁e󠄁n󠄁 t󠄁h󠄁o󠄁u󠄁g󠄁h󠄁 t󠄁h󠄁e󠄁 r󠄁e󠄁s󠄁p󠄁o󠄁n󠄁s󠄁e󠄁 d󠄁i󠄁d󠄁 n󠄁o󠄁t󠄁 a󠄁r󠄁r󠄁i󠄁v󠄁e󠄁.󠄁 |
 
-## "This secret has been viewed or expired"
+## "T󠄁h󠄁i󠄁s󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 h󠄁a󠄁s󠄁 b󠄁e󠄁e󠄁n󠄁 v󠄁i󠄁e󠄁w󠄁e󠄁d󠄁 o󠄁r󠄁 e󠄁x󠄁p󠄁i󠄁r󠄁e󠄁d󠄁"󠄁
 
-Four different situations produce this same page:
+T󠄁h󠄁e󠄁 s󠄁a󠄁m󠄁e󠄁 d󠄁e󠄁f󠄁a󠄁u󠄁l󠄁t󠄁 m󠄁e󠄁s󠄁s󠄁a󠄁g󠄁e󠄁 c󠄁o󠄁v󠄁e󠄁r󠄁s󠄁 f󠄁o󠄁u󠄁r󠄁 c󠄁a󠄁s󠄁e󠄁s󠄁:󠄁
 
-- **Someone already opened it.** A secret can be read once. When a reveal
-  succeeds the stored record is destroyed immediately.
-- **The sender burned it.** A sender can delete a secret before anyone reads
-  it. Burning is permanent and cannot be undone.
-- **It expired.** Every secret has a lifetime, fixed when it was created. When
-  that runs out, the stored record is dropped.
-- **It never existed.** The address is well-formed but has never corresponded
-  to a secret — most often a link that was retyped or partly copied.
+- **R󠄁e󠄁v󠄁e󠄁a󠄁l󠄁e󠄁d󠄁**:󠄁 a󠄁 s󠄁u󠄁c󠄁c󠄁e󠄁s󠄁s󠄁f󠄁u󠄁l󠄁 r󠄁e󠄁v󠄁e󠄁a󠄁l󠄁 a󠄁l󠄁r󠄁e󠄁a󠄁d󠄁y󠄁 r󠄁e󠄁t󠄁r󠄁i󠄁e󠄁v󠄁e󠄁d󠄁 t󠄁h󠄁e󠄁 c󠄁o󠄁n󠄁t󠄁e󠄁n󠄁t󠄁.󠄁
+- **B󠄁u󠄁r󠄁n󠄁e󠄁d󠄁**:󠄁 s󠄁o󠄁m󠄁e󠄁o󠄁n󠄁e󠄁 d󠄁e󠄁s󠄁t󠄁r󠄁o󠄁y󠄁e󠄁d󠄁 t󠄁h󠄁e󠄁 u󠄁n󠄁r󠄁e󠄁a󠄁d󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 u󠄁s󠄁i󠄁n󠄁g󠄁 i󠄁t󠄁s󠄁 r󠄁e󠄁c󠄁e󠄁i󠄁p󠄁t󠄁.󠄁
+- **E󠄁x󠄁p󠄁i󠄁r󠄁e󠄁d󠄁**:󠄁 t󠄁h󠄁e󠄁 c󠄁h󠄁o󠄁s󠄁e󠄁n󠄁 l󠄁i󠄁f󠄁e󠄁t󠄁i󠄁m󠄁e󠄁 e󠄁n󠄁d󠄁e󠄁d󠄁.󠄁
+- **N󠄁e󠄁v󠄁e󠄁r󠄁 e󠄁x󠄁i󠄁s󠄁t󠄁e󠄁d󠄁**:󠄁 t󠄁h󠄁e󠄁 a󠄁d󠄁d󠄁r󠄁e󠄁s󠄁s󠄁 d󠄁o󠄁e󠄁s󠄁 n󠄁o󠄁t󠄁 c󠄁o󠄁r󠄁r󠄁e󠄁s󠄁p󠄁o󠄁n󠄁d󠄁 t󠄁o󠄁 a󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁.󠄁 A󠄁 p󠄁a󠄁r󠄁t󠄁l󠄁y󠄁
+  c󠄁o󠄁p󠄁i󠄁e󠄁d󠄁 o󠄁r󠄁 r󠄁e󠄁t󠄁y󠄁p󠄁e󠄁d󠄁 l󠄁i󠄁n󠄁k󠄁 c󠄁a󠄁n󠄁 p󠄁r󠄁o󠄁d󠄁u󠄁c󠄁e󠄁 t󠄁h󠄁i󠄁s󠄁 r󠄁e󠄁s󠄁u󠄁l󠄁t󠄁.󠄁
 
-All four leave nothing behind the link to load, so nothing reachable *from the
-link* tells them apart. For the first three, though, the record of what
-happened does outlive the secret: it sits on the sender's receipt, at a
-separate address the sender holds — not the one you were given.
+A󠄁 c󠄁u󠄁s󠄁t󠄁o󠄁m󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁 m󠄁a󠄁y󠄁 u󠄁s󠄁e󠄁 d󠄁i󠄁f󠄁f󠄁e󠄁r󠄁e󠄁n󠄁t󠄁 w󠄁o󠄁r󠄁d󠄁i󠄁n󠄁g󠄁 f󠄁o󠄁r󠄁 t󠄁h󠄁e󠄁 s󠄁a󠄁m󠄁e󠄁 u󠄁n󠄁a󠄁v󠄁a󠄁i󠄁l󠄁a󠄁b󠄁l󠄁e󠄁 r󠄁e󠄁s󠄁u󠄁l󠄁t󠄁.󠄁
 
-:::note
-**Opening the link is not what uses it up.** Loading a secret link is a
-read-only step: the page asks you to confirm ("Click to reveal →") before it
-hands anything over, and only that confirmation consumes the secret. A link
-scanner, mail gateway or chat preview that merely fetches the address does not
-consume it. If you opened the page and navigated away without confirming, the
-secret was still there when you left.
-:::
+### W󠄁h󠄁a󠄁t󠄁 t󠄁o󠄁 d󠄁o󠄁 a󠄁b󠄁o󠄁u󠄁t󠄁 i󠄁t󠄁
 
-There is one case where the secret really is gone even though you never saw it:
-if you confirmed and then lost the page — the connection dropped, the tab
-closed, the browser crashed — the secret was destroyed at the moment the reveal
-succeeded, before the response was sent back to you. That is deliberate. The
-alternative is a secret that can be read twice.
+1. **C󠄁o󠄁p󠄁y󠄁 t󠄁h󠄁e󠄁 c󠄁o󠄁m󠄁p󠄁l󠄁e󠄁t󠄁e󠄁 l󠄁i󠄁n󠄁k󠄁 f󠄁r󠄁o󠄁m󠄁 t󠄁h󠄁e󠄁 o󠄁r󠄁i󠄁g󠄁i󠄁n󠄁a󠄁l󠄁 m󠄁e󠄁s󠄁s󠄁a󠄁g󠄁e󠄁.󠄁** A󠄁v󠄁o󠄁i󠄁d󠄁 r󠄁e󠄁t󠄁y󠄁p󠄁i󠄁n󠄁g󠄁 i󠄁t󠄁.󠄁
+   C󠄁h󠄁e󠄁c󠄁k󠄁 f󠄁o󠄁r󠄁 a󠄁d󠄁d󠄁e󠄁d󠄁 p󠄁u󠄁n󠄁c󠄁t󠄁u󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 o󠄁r󠄁 m󠄁i󠄁s󠄁s󠄁i󠄁n󠄁g󠄁 c󠄁h󠄁a󠄁r󠄁a󠄁c󠄁t󠄁e󠄁r󠄁s󠄁.󠄁
+2. **A󠄁s󠄁k󠄁 t󠄁h󠄁e󠄁 s󠄁e󠄁n󠄁d󠄁e󠄁r󠄁 t󠄁o󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁 t󠄁h󠄁e󠄁 r󠄁e󠄁c󠄁e󠄁i󠄁p󠄁t󠄁.󠄁** I󠄁t󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁s󠄁 r󠄁e󠄁v󠄁e󠄁a󠄁l󠄁,󠄁 b󠄁u󠄁r󠄁n󠄁,󠄁 o󠄁r󠄁 e󠄁x󠄁p󠄁i󠄁r󠄁y󠄁
+   s󠄁e󠄁p󠄁a󠄁r󠄁a󠄁t󠄁e󠄁l󠄁y󠄁 a󠄁n󠄁d󠄁 m󠄁a󠄁y󠄁 s󠄁t󠄁i󠄁l󠄁l󠄁 b󠄁e󠄁 a󠄁v󠄁a󠄁i󠄁l󠄁a󠄁b󠄁l󠄁e󠄁 a󠄁f󠄁t󠄁e󠄁r󠄁 t󠄁h󠄁e󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 i󠄁s󠄁 g󠄁o󠄁n󠄁e󠄁.󠄁 T󠄁e󠄁l󠄁l󠄁 t󠄁h󠄁e󠄁m󠄁
+   r󠄁o󠄁u󠄁g󠄁h󠄁l󠄁y󠄁 w󠄁h󠄁e󠄁n󠄁 a󠄁n󠄁d󠄁 w󠄁h󠄁e󠄁r󠄁e󠄁 t󠄁h󠄁e󠄁y󠄁 s󠄁e󠄁n󠄁t󠄁 t󠄁h󠄁e󠄁 l󠄁i󠄁n󠄁k󠄁.󠄁
+3. **A󠄁s󠄁k󠄁 f󠄁o󠄁r󠄁 a󠄁 n󠄁e󠄁w󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 i󠄁f󠄁 t󠄁h󠄁e󠄁 o󠄁r󠄁i󠄁g󠄁i󠄁n󠄁a󠄁l󠄁 i󠄁s󠄁 u󠄁n󠄁a󠄁v󠄁a󠄁i󠄁l󠄁a󠄁b󠄁l󠄁e󠄁.󠄁** T󠄁h󠄁e󠄁 r󠄁e󠄁c󠄁e󠄁i󠄁p󠄁t󠄁 d󠄁o󠄁e󠄁s󠄁
+   n󠄁o󠄁t󠄁 r󠄁e󠄁c󠄁o󠄁v󠄁e󠄁r󠄁 c󠄁o󠄁n󠄁t󠄁e󠄁n󠄁t󠄁 t󠄁h󠄁e󠄁 s󠄁e󠄁n󠄁d󠄁e󠄁r󠄁 e󠄁n󠄁t󠄁e󠄁r󠄁e󠄁d󠄁.󠄁 T󠄁h󠄁e󠄁y󠄁 n󠄁e󠄁e󠄁d󠄁 t󠄁h󠄁e󠄁 o󠄁r󠄁i󠄁g󠄁i󠄁n󠄁a󠄁l󠄁 i󠄁n󠄁f󠄁o󠄁r󠄁m󠄁a󠄁t󠄁i󠄁o󠄁n󠄁
+   t󠄁o󠄁 c󠄁r󠄁e󠄁a󠄁t󠄁e󠄁 a󠄁 n󠄁e󠄁w󠄁 l󠄁i󠄁n󠄁k󠄁.󠄁
 
-## What to do about it
+O󠄁p󠄁e󠄁n󠄁i󠄁n󠄁g󠄁 t󠄁h󠄁e󠄁 c󠄁o󠄁n󠄁f󠄁i󠄁r󠄁m󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 p󠄁a󠄁g󠄁e󠄁 w󠄁i󠄁t󠄁h󠄁o󠄁u󠄁t󠄁 s󠄁e󠄁l󠄁e󠄁c󠄁t󠄁i󠄁n󠄁g󠄁 r󠄁e󠄁v󠄁e󠄁a󠄁l󠄁 d󠄁o󠄁e󠄁s󠄁 n󠄁o󠄁t󠄁 c󠄁o󠄁n󠄁s󠄁u󠄁m󠄁e󠄁 t󠄁h󠄁e󠄁
+s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁.󠄁 A󠄁 s󠄁c󠄁a󠄁n󠄁n󠄁e󠄁r󠄁 o󠄁r󠄁 p󠄁r󠄁e󠄁v󠄁i󠄁e󠄁w󠄁 t󠄁h󠄁a󠄁t󠄁 o󠄁n󠄁l󠄁y󠄁 l󠄁o󠄁a󠄁d󠄁s󠄁 t󠄁h󠄁e󠄁 p󠄁a󠄁g󠄁e󠄁 d󠄁o󠄁e󠄁s󠄁 n󠄁o󠄁t󠄁 c󠄁o󠄁n󠄁s󠄁u󠄁m󠄁e󠄁 i󠄁t󠄁
+e󠄁i󠄁t󠄁h󠄁e󠄁r󠄁.󠄁 I󠄁f󠄁 y󠄁o󠄁u󠄁 s󠄁e󠄁l󠄁e󠄁c󠄁t󠄁e󠄁d󠄁 r󠄁e󠄁v󠄁e󠄁a󠄁l󠄁 a󠄁n󠄁d󠄁 t󠄁h󠄁e󠄁n󠄁 l󠄁o󠄁s󠄁t󠄁 t󠄁h󠄁e󠄁 c󠄁o󠄁n󠄁n󠄁e󠄁c󠄁t󠄁i󠄁o󠄁n󠄁 o󠄁r󠄁 c󠄁l󠄁o󠄁s󠄁e󠄁d󠄁 t󠄁h󠄁e󠄁 t󠄁a󠄁b󠄁,󠄁
+t󠄁h󠄁e󠄁 r󠄁e󠄁v󠄁e󠄁a󠄁l󠄁 m󠄁a󠄁y󠄁 a󠄁l󠄁r󠄁e󠄁a󠄁d󠄁y󠄁 h󠄁a󠄁v󠄁e󠄁 s󠄁u󠄁c󠄁c󠄁e󠄁e󠄁d󠄁e󠄁d󠄁.󠄁 A󠄁s󠄁k󠄁 t󠄁h󠄁e󠄁 s󠄁e󠄁n󠄁d󠄁e󠄁r󠄁 t󠄁o󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁 b󠄁e󠄁f󠄁o󠄁r󠄁e󠄁 a󠄁s󠄁s󠄁u󠄁m󠄁i󠄁n󠄁g󠄁
+t󠄁h󠄁a󠄁t󠄁 t󠄁h󠄁e󠄁 c󠄁o󠄁n󠄁t󠄁e󠄁n󠄁t󠄁 i󠄁s󠄁 s󠄁t󠄁i󠄁l󠄁l󠄁 a󠄁v󠄁a󠄁i󠄁l󠄁a󠄁b󠄁l󠄁e󠄁.󠄁
 
-1. **Check that you have the whole link.** Current secret links carry a
-   62-character identifier after `/secret/`. If yours is shorter, the address
-   was cut short in transit. Copy it again from the original message rather
-   than retyping it, and paste it whole.
-2. **Ask the sender what happened.** They hold a receipt for the secret, and
-   the receipt deliberately outlives the secret — it is kept for twice the
-   secret's lifetime — so they can usually still see the answer: whether it was
-   **Revealed** and when, whether they **Burned** it, or whether it
-   **Expired**. Give them enough to find it: roughly when they sent it, and
-   through which channel.
-3. **Ask for a new secret, not the old one.** Once a secret is gone the content
-   cannot be recovered — not by you, not by the sender, not by Onetime Secret.
-   The sender's receipt records what happened to the secret, not what was in
-   it. The fix is always a new secret and a fresh link.
+### W󠄁h󠄁y󠄁 t󠄁h󠄁e󠄁 p󠄁a󠄁g󠄁e󠄁 w󠄁o󠄁n󠄁'󠄁t󠄁 t󠄁e󠄁l󠄁l󠄁 y󠄁o󠄁u󠄁 w󠄁h󠄁i󠄁c󠄁h󠄁 o󠄁n󠄁e󠄁 h󠄁a󠄁p󠄁p󠄁e󠄁n󠄁e󠄁d󠄁
 
-One thing worth telling the sender: their receipt also counts how many times
-the link was *fetched*, separately from whether the secret was revealed. A
-fetch count above zero on a secret that was never revealed is not a
-contradiction — it means the address was loaded, which on its own does not
-consume anything.
+A󠄁n󠄁y󠄁o󠄁n󠄁e󠄁 w󠄁i󠄁t󠄁h󠄁 a󠄁n󠄁 a󠄁d󠄁d󠄁r󠄁e󠄁s󠄁s󠄁 c󠄁a󠄁n󠄁 r󠄁e󠄁q󠄁u󠄁e󠄁s󠄁t󠄁 i󠄁t󠄁.󠄁 U󠄁s󠄁i󠄁n󠄁g󠄁 t󠄁h󠄁e󠄁 s󠄁a󠄁m󠄁e󠄁 u󠄁n󠄁a󠄁v󠄁a󠄁i󠄁l󠄁a󠄁b󠄁l󠄁e󠄁 r󠄁e󠄁s󠄁p󠄁o󠄁n󠄁s󠄁e󠄁
+p󠄁r󠄁e󠄁v󠄁e󠄁n󠄁t󠄁s󠄁 t󠄁h󠄁a󠄁t󠄁 p󠄁e󠄁r󠄁s󠄁o󠄁n󠄁 l󠄁e󠄁a󠄁r󠄁n󠄁i󠄁n󠄁g󠄁 w󠄁h󠄁e󠄁t󠄁h󠄁e󠄁r󠄁 a󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 p󠄁r󠄁e󠄁v󠄁i󠄁o󠄁u󠄁s󠄁l󠄁y󠄁 e󠄁x󠄁i󠄁s󠄁t󠄁e󠄁d󠄁 o󠄁r󠄁 h󠄁o󠄁w󠄁 i󠄁t󠄁
+e󠄁n󠄁d󠄁e󠄁d󠄁.󠄁 A󠄁 l󠄁i󠄁v󠄁e󠄁 l󠄁i󠄁n󠄁k󠄁 c󠄁a󠄁n󠄁 s󠄁t󠄁i󠄁l󠄁l󠄁 b󠄁e󠄁 d󠄁i󠄁s󠄁t󠄁i󠄁n󠄁g󠄁u󠄁i󠄁s󠄁h󠄁e󠄁d󠄁 f󠄁r󠄁o󠄁m󠄁 a󠄁n󠄁 u󠄁n󠄁a󠄁v󠄁a󠄁i󠄁l󠄁a󠄁b󠄁l󠄁e󠄁 o󠄁n󠄁e󠄁;󠄁 i󠄁t󠄁s󠄁
+h󠄁i󠄁s󠄁t󠄁o󠄁r󠄁y󠄁 i󠄁s󠄁 n󠄁o󠄁t󠄁 d󠄁i󠄁s󠄁c󠄁l󠄁o󠄁s󠄁e󠄁d󠄁 t󠄁h󠄁r󠄁o󠄁u󠄁g󠄁h󠄁 t󠄁h󠄁e󠄁 u󠄁n󠄁a󠄁v󠄁a󠄁i󠄁l󠄁a󠄁b󠄁l󠄁e󠄁 p󠄁a󠄁g󠄁e󠄁.󠄁
 
-## Why the page won't tell you which one happened
+## "󠄁I󠄁n󠄁c󠄁o󠄁r󠄁r󠄁e󠄁c󠄁t󠄁 p󠄁a󠄁s󠄁s󠄁p󠄁h󠄁r󠄁a󠄁s󠄁e󠄁"󠄁
 
-Saying which of the four happened would turn every link into an oracle. Anyone
-holding an address could learn whether a secret had once existed there, whether
-it was read, and roughly when — facts about the sender and the recipient, not
-about the person asking. So the service returns the same response in all four
-cases, and the internal error is raised with no distinguishing detail, which
-means the four cases cannot differ even in wording.
+A󠄁n󠄁 i󠄁n󠄁c󠄁o󠄁r󠄁r󠄁e󠄁c󠄁t󠄁 p󠄁a󠄁s󠄁s󠄁p󠄁h󠄁r󠄁a󠄁s󠄁e󠄁 d󠄁o󠄁e󠄁s󠄁 n󠄁o󠄁t󠄁 c󠄁o󠄁n󠄁s󠄁u󠄁m󠄁e󠄁 t󠄁h󠄁e󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁.󠄁 C󠄁h󠄁e󠄁c󠄁k󠄁 o󠄁t󠄁h󠄁e󠄁r󠄁 m󠄁e󠄁s󠄁s󠄁a󠄁g󠄁e󠄁s󠄁 f󠄁o󠄁r󠄁
+t󠄁h󠄁e󠄁 p󠄁a󠄁s󠄁s󠄁p󠄁h󠄁r󠄁a󠄁s󠄁e󠄁 o󠄁r󠄁 a󠄁s󠄁k󠄁 t󠄁h󠄁e󠄁 s󠄁e󠄁n󠄁d󠄁e󠄁r󠄁 t󠄁h󠄁r󠄁o󠄁u󠄁g󠄁h󠄁 a󠄁 d󠄁i󠄁f󠄁f󠄁e󠄁r󠄁e󠄁n󠄁t󠄁 c󠄁h󠄁a󠄁n󠄁n󠄁e󠄁l󠄁 f󠄁r󠄁o󠄁m󠄁 t󠄁h󠄁e󠄁 l󠄁i󠄁n󠄁k󠄁.󠄁
+O󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁 S󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 c󠄁a󠄁n󠄁n󠄁o󠄁t󠄁 l󠄁o󠄁o󠄁k󠄁 i󠄁t󠄁 u󠄁p󠄁 o󠄁r󠄁 r󠄁e󠄁c󠄁o󠄁v󠄁e󠄁r󠄁 i󠄁t󠄁.󠄁
 
-Being precise about what that does and does not hide: someone holding a link
-can still tell whether it is live right now, because a live link opens and a
-dead one does not. What they cannot learn is which of the four terminal states
-a dead link is in. Links are also not guessable — the 62-character identifier
-carries 256 bits of randomness — so there is no practical way to go looking for
-other people's links in order to ask.
+A󠄁f󠄁t󠄁e󠄁r󠄁 f󠄁i󠄁v󠄁e󠄁 i󠄁n󠄁c󠄁o󠄁r󠄁r󠄁e󠄁c󠄁t󠄁 a󠄁t󠄁t󠄁e󠄁m󠄁p󠄁t󠄁s󠄁 w󠄁i󠄁t󠄁h󠄁i󠄁n󠄁 t󠄁e󠄁n󠄁 m󠄁i󠄁n󠄁u󠄁t󠄁e󠄁s󠄁 f󠄁o󠄁r󠄁 a󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 f󠄁r󠄁o󠄁m󠄁 t󠄁h󠄁e󠄁 s󠄁a󠄁m󠄁e󠄁
+m󠄁a󠄁s󠄁k󠄁e󠄁d󠄁 n󠄁e󠄁t󠄁w󠄁o󠄁r󠄁k󠄁,󠄁 f󠄁u󠄁r󠄁t󠄁h󠄁e󠄁r󠄁 a󠄁t󠄁t󠄁e󠄁m󠄁p󠄁t󠄁s󠄁 a󠄁r󠄁e󠄁 b󠄁l󠄁o󠄁c󠄁k󠄁e󠄁d󠄁 f󠄁o󠄁r󠄁 3󠄁0󠄁 m󠄁i󠄁n󠄁u󠄁t󠄁e󠄁s󠄁.󠄁 A󠄁 s󠄁e󠄁p󠄁a󠄁r󠄁a󠄁t󠄁e󠄁 g󠄁l󠄁o󠄁b󠄁a󠄁l󠄁
+l󠄁i󠄁m󠄁i󠄁t󠄁 c󠄁a󠄁n󠄁 a󠄁l󠄁s󠄁o󠄁 b󠄁l󠄁o󠄁c󠄁k󠄁 a󠄁t󠄁t󠄁e󠄁m󠄁p󠄁t󠄁s󠄁 f󠄁r󠄁o󠄁m󠄁 a󠄁l󠄁l󠄁 n󠄁e󠄁t󠄁w󠄁o󠄁r󠄁k󠄁s󠄁.󠄁 T󠄁h󠄁e󠄁 e󠄁r󠄁r󠄁o󠄁r󠄁 r󠄁e󠄁a󠄁d󠄁s󠄁 **T󠄁o󠄁o󠄁 m󠄁a󠄁n󠄁y󠄁
+i󠄁n󠄁c󠄁o󠄁r󠄁r󠄁e󠄁c󠄁t󠄁 p󠄁a󠄁s󠄁s󠄁p󠄁h󠄁r󠄁a󠄁s󠄁e󠄁 a󠄁t󠄁t󠄁e󠄁m󠄁p󠄁t󠄁s󠄁.󠄁 P󠄁l󠄁e󠄁a󠄁s󠄁e󠄁 t󠄁r󠄁y󠄁 a󠄁g󠄁a󠄁i󠄁n󠄁 l󠄁a󠄁t󠄁e󠄁r󠄁.󠄁**
 
-This is the same reason the page cannot be more helpful to you specifically. It
-has no way to know that you are the intended recipient rather than someone who
-found the link.
+D󠄁u󠄁r󠄁i󠄁n󠄁g󠄁 a󠄁 l󠄁o󠄁c󠄁k󠄁o󠄁u󠄁t󠄁 t󠄁h󠄁e󠄁 s󠄁e󠄁r󠄁v󠄁i󠄁c󠄁e󠄁 r󠄁e󠄁f󠄁u󠄁s󠄁e󠄁s󠄁 a󠄁t󠄁t󠄁e󠄁m󠄁p󠄁t󠄁s󠄁 b󠄁e󠄁f󠄁o󠄁r󠄁e󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁i󠄁n󠄁g󠄁 t󠄁h󠄁e󠄁 p󠄁a󠄁s󠄁s󠄁p󠄁h󠄁r󠄁a󠄁s󠄁e󠄁,󠄁
+s󠄁o󠄁 e󠄁n󠄁t󠄁e󠄁r󠄁i󠄁n󠄁g󠄁 t󠄁h󠄁e󠄁 c󠄁o󠄁r󠄁r󠄁e󠄁c󠄁t󠄁 o󠄁n󠄁e󠄁 d󠄁o󠄁e󠄁s󠄁 n󠄁o󠄁t󠄁 b󠄁y󠄁p󠄁a󠄁s󠄁s󠄁 t󠄁h󠄁e󠄁 w󠄁a󠄁i󠄁t󠄁.󠄁 O󠄁n󠄁c󠄁e󠄁 t󠄁h󠄁e󠄁 l󠄁o󠄁c󠄁k󠄁o󠄁u󠄁t󠄁 e󠄁n󠄁d󠄁s󠄁,󠄁
+u󠄁s󠄁e󠄁 t󠄁h󠄁e󠄁 c󠄁o󠄁n󠄁f󠄁i󠄁r󠄁m󠄁e󠄁d󠄁 p󠄁a󠄁s󠄁s󠄁p󠄁h󠄁r󠄁a󠄁s󠄁e󠄁 rather than c󠄁o󠄁n󠄁ti󠄁n󠄁u󠄁i󠄁n󠄁g󠄁 t󠄁o󠄁 g󠄁u󠄁e󠄁s󠄁s󠄁.󠄁 A󠄁 s󠄁u󠄁c󠄁c󠄁e󠄁s󠄁s󠄁f󠄁u󠄁l󠄁
+p󠄁a󠄁s󠄁s󠄁p󠄁h󠄁r󠄁a󠄁s󠄁e󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁 c󠄁l󠄁e󠄁a󠄁r󠄁s󠄁 a󠄁c󠄁c󠄁u󠄁m󠄁u󠄁l󠄁a󠄁t󠄁e󠄁d󠄁 f󠄁a󠄁i󠄁l󠄁u󠄁r󠄁e󠄁 c󠄁o󠄁u󠄁n󠄁t󠄁e󠄁r󠄁s󠄁;󠄁 i󠄁t󠄁 c󠄁a󠄁n󠄁n󠄁o󠄁t󠄁 h󠄁a󠄁p󠄁p󠄁e󠄁n󠄁 w󠄁h󠄁i󠄁l󠄁e󠄁
+t󠄁h󠄁e󠄁 a󠄁p󠄁p󠄁l󠄁i󠄁c󠄁a󠄁b󠄁l󠄁e󠄁 l󠄁o󠄁c󠄁k󠄁o󠄁u󠄁t󠄁 i󠄁s󠄁 a󠄁c󠄁t󠄁i󠄁v󠄁e󠄁.󠄁
 
-## "Incorrect passphrase"
+T󠄁he secret'󠄁s󠄁 e󠄁x󠄁p󠄁i󠄁r󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 d󠄁o󠄁e󠄁s󠄁 n󠄁o󠄁t󠄁 pau󠄁s󠄁e󠄁 d󠄁u󠄁r󠄁i󠄁n󠄁g a󠄁 l󠄁o󠄁c󠄁k󠄁o󠄁u󠄁t󠄁.󠄁 I󠄁f󠄁 i󠄁t󠄁 ex󠄁p󠄁i󠄁res w󠄁h󠄁i󠄁l󠄁e󠄁
+y󠄁o󠄁u󠄁 w󠄁a󠄁i󠄁t󠄁,󠄁 a󠄁sk󠄁 f󠄁o󠄁r󠄁 a n󠄁ew󠄁 secret.󠄁
 
-This one *is* distinguishable, deliberately, because it is not information
-about anyone else.
+## "󠄁O󠄁o󠄁p󠄁s󠄁!󠄁 4󠄁0󠄁4󠄁"󠄁
 
-- **A wrong passphrase does not consume the secret.** The secret is still
-  there and still readable once the right passphrase is entered.
-- **Nobody can look the passphrase up.** It is not stored in a readable form.
-  The sender's receipt records only that a passphrase is required, never what
-  it is. Only the person who chose it knows it.
-- **Check your other channels first.** Passphrases are normally sent separately
-  from the link, so the passphrase may be sitting in a different message.
+A󠄁n󠄁 i󠄁n󠄁v󠄁a󠄁l󠄁i󠄁d󠄁 p󠄁a󠄁t󠄁h󠄁 ca󠄁n󠄁 s󠄁h󠄁ow󠄁 t󠄁h󠄁e󠄁 s󠄁i󠄁t󠄁e󠄁'󠄁s󠄁 g󠄁e󠄁ne󠄁r󠄁a󠄁l󠄁 n󠄁o󠄁t-󠄁f󠄁o󠄁u󠄁n󠄁d󠄁 p󠄁ag󠄁e󠄁 inst󠄁e󠄁ad󠄁 of󠄁 the
+u󠄁n󠄁av󠄁a󠄁i󠄁l󠄁a󠄁b󠄁le-󠄁secret message. Copy the link again from the original message.󠄁
+C󠄁h󠄁e󠄁c󠄁k󠄁 f󠄁o󠄁r󠄁 t󠄁r󠄁a󠄁i󠄁l󠄁i󠄁n󠄁g󠄁 b󠄁r󠄁a󠄁c󠄁k󠄁e󠄁t󠄁s󠄁 o󠄁r󠄁 p󠄁u󠄁n󠄁c󠄁t󠄁u󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 and l󠄁i󠄁n󠄁e󠄁 b󠄁r󠄁e󠄁ak󠄁s i󠄁n󠄁s󠄁e󠄁r󠄁ted󠄁 b󠄁y󠄁 a󠄁n󠄁 e󠄁m󠄁a󠄁il
+c󠄁l󠄁ient.󠄁 A󠄁sk the sender to resend t󠄁h󠄁e󠄁 l󠄁in󠄁k󠄁 as plain text i󠄁f󠄁 n󠄁e󠄁e󠄁d󠄁e󠄁d󠄁.
 
-Guessing is rate limited. After five wrong attempts, that link stops accepting
-attempts from your network for 30 minutes and answers **"Too many incorrect
-passphrase attempts. Please try again later."** Nothing has been consumed — a
-wrong passphrase never uses a secret up. But the lockout runs its full 30
-minutes regardless of how long the secret itself was set to live, so a
-short-lived secret can expire while you are waiting it out. A second,
-much higher limit counts attempts from everyone at once as a backstop, so one
-person guessing at a link does not immediately lock out the real recipient.
-Entering the correct passphrase clears the limit right away.
-
-## "Oops! 404"
-
-You land on the site's general not-found page — **Oops! 404**, over "The page
-you're looking for doesn't exist or has been moved." — rather than the secret
-page, when the address after `/secret/` contains anything other than letters
-and digits. Secret identifiers are letters and digits only, so this almost always
-means the link was damaged on the way to you: a trailing bracket or full stop
-picked up from an email client, a URL that got wrapped across lines, or a
-fragment of the address.
-
-Copy the link again from the original message and paste it whole. If it arrived
-in a chat or document that added formatting, ask the sender to resend it as
-plain text.
-
-:::caution
-A link that lost only letters and digits does **not** give you the 404 page.
-Cutting characters off the end of an identifier leaves something that still
-looks like a valid address, so a truncated link produces "This secret has been
-viewed or expired" instead — exactly like a secret that was read. Check the
-length of the link before concluding that someone else opened it.
-:::
+L󠄁os󠄁ing󠄁 letters o󠄁r󠄁 digits f󠄁r󠄁om󠄁 an identifier c󠄁a󠄁n󠄁 leave a valid-󠄁l󠄁o󠄁o󠄁k󠄁i󠄁n󠄁g󠄁 address
+that i󠄁ns󠄁tea󠄁d produces **This secret has been viewed or expired.󠄁** N󠄁e󠄁ither󠄁
+m󠄁e󠄁s󠄁s󠄁a󠄁g󠄁e󠄁 a󠄁lone󠄁 p󠄁r󠄁o󠄁v󠄁e󠄁s󠄁 someone else r󠄁ev󠄁e󠄁a󠄁l󠄁ed t󠄁h󠄁e󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t.
 
 ## A plain error message
 
-If the page never loads and shows an error message instead of either page
-above, the request itself failed — a network problem, or the service not
-answering. Nothing was consumed, because nothing got as far as the secret.
-Reload the page or try again in a moment. This case is rendered differently
-from "viewed or expired" on purpose, so a temporary failure is never reported
-to you as a used-up secret.
+If the c󠄁o󠄁n󠄁f󠄁i󠄁r󠄁m󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 page never loade󠄁d󠄁 and y󠄁o󠄁u󠄁 h󠄁a󠄁v󠄁e󠄁 n󠄁o󠄁t󠄁 se󠄁l󠄁e󠄁c󠄁t󠄁e󠄁d󠄁 r󠄁e󠄁v󠄁e󠄁a󠄁l󠄁,󠄁 t󠄁r󠄁y󠄁
+r󠄁e󠄁l󠄁o󠄁a󠄁d󠄁i󠄁n󠄁g󠄁 o󠄁r󠄁 w󠄁a󠄁i󠄁t󠄁i󠄁n󠄁g󠄁 b󠄁r󠄁i󠄁e󠄁f󠄁l󠄁y󠄁.󠄁 L󠄁o󠄁a󠄁d󠄁i󠄁n󠄁g󠄁 t󠄁ha󠄁t󠄁 p󠄁a󠄁g󠄁e󠄁 d󠄁oes n󠄁o󠄁t󠄁 c󠄁o󠄁n󠄁s󠄁u󠄁m󠄁e󠄁 t󠄁h󠄁e󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁.󠄁
 
-An error that appears *after* you clicked to reveal is the other case, and it
-is not safe to read the same way. The secret page has loaded by then, so the
-error appears in place of the content rather than in place of the page. The
-reveal may have succeeded and only the response been lost — the same situation
-as [losing the page mid-reveal](#this-secret-has-been-viewed-or-expired) above.
-You can still reload, but if the reveal did go through you will get "This
-secret has been viewed or expired" and the content is gone for good. Ask the
-sender to check their receipt — it will say whether the secret was revealed —
-and ask for a new secret rather than retrying the old link.
+I󠄁f󠄁 an error a󠄁p󠄁p󠄁ea󠄁r󠄁e󠄁d󠄁 **a󠄁f󠄁t󠄁e󠄁r󠄁 sel󠄁e󠄁c󠄁t󠄁ing󠄁 r󠄁e󠄁v󠄁eal󠄁**, the request m󠄁a󠄁y󠄁 h󠄁a󠄁v󠄁e consumed
+the secret b󠄁ef󠄁o󠄁r󠄁e󠄁 i󠄁t󠄁s󠄁 r󠄁e󠄁s󠄁p󠄁o󠄁n󠄁s󠄁e󠄁 w󠄁a󠄁s󠄁 los󠄁t󠄁.󠄁 A󠄁 r󠄁e󠄁t󠄁r󠄁y󠄁 c󠄁an󠄁 then󠄁 s󠄁h󠄁o󠄁w󠄁 t󠄁h󠄁e
+u󠄁navaila󠄁b󠄁l󠄁e-secret page. Ask the sender to check the receipt a󠄁n󠄁d󠄁,󠄁 i󠄁f󠄁 it r󠄁ep󠄁o󠄁rts
+R󠄁evealed,󠄁 s󠄁e󠄁nd a new secret.󠄁 T󠄁he s󠄁e󠄁rv󠄁i󠄁c󠄁e󠄁 c󠄁ann󠄁o󠄁t󠄁 s󠄁e󠄁r󠄁v󠄁e󠄁 a󠄁 s󠄁u󠄁c󠄁c󠄁e󠄁s󠄁s󠄁f󠄁u󠄁l󠄁 rev󠄁e󠄁a󠄁l󠄁 a󠄁g󠄁a󠄁in.
 
 ## Related
 
-- [What recipients see](/en/share/what-recipients-see) — the normal path, end to end.
-- [Your receipt](/en/share/your-receipt) — for senders: what your receipt still
-  tells you after the secret is gone.
-- [Glossary](/en/start/glossary) — burn, receipt, reveal, and the rest of the
-  vocabulary above.
-- [Security best practices](/en/security/best-practices) — including sending
-  the passphrase through a different channel from the link.
+- [What recipients see](/en/share/what-recipients-see) — the normal r󠄁e󠄁v󠄁e󠄁a󠄁l󠄁
+  pr󠄁o󠄁c󠄁es󠄁s󠄁
+- [Your receipt](/en/share/your-receipt) — c󠄁h󠄁e󠄁c󠄁k󠄁i󠄁n󠄁g󠄁 t󠄁h󠄁e󠄁 ou󠄁t󠄁c󠄁o󠄁m󠄁e󠄁 a󠄁s󠄁 a󠄁 sender
+- [Glossary](/en/start/glossary) — r󠄁e󠄁v󠄁e󠄁a󠄁l󠄁,󠄁 burn, e󠄁x󠄁p󠄁i󠄁r󠄁y󠄁,󠄁 a󠄁n󠄁d󠄁 receipt
+- [Security best practices](/en/security/best-practices) — s󠄁h󠄁a󠄁r󠄁ing links a󠄁nd
+  passphrases󠄁
 
 ## Questions or need support?
 
-We're here to help.
-
-- Email: support@onetimesecret.com
-- Feedback form: https://onetimesecret.com/feedback
+Email [s󠄁u󠄁p󠄁p󠄁o󠄁r󠄁t󠄁@󠄁o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁.󠄁c󠄁o󠄁m󠄁](mailto:support@onetimesecret.com) o󠄁r󠄁 u󠄁s󠄁e󠄁 t󠄁h󠄁e󠄁
+[f󠄁eedback form](https://onetimesecret.com/feedback).󠄁

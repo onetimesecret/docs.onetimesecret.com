@@ -168,7 +168,7 @@ export const sidebar = [
       createLink("yourReceipt", "share/your-receipt"),
       createLink("whatRecipientsSee", "share/what-recipients-see"),
       createLink("whenALinkDoesntWork", "share/when-a-link-doesnt-work"),
-      createLink("receivingSecrets", "share/receiving-secrets"),
+      createLink("requestSecret", "share/request-secret"),
       createLink("whyUseSecretLinks", "share/why-secret-links"),
       createLink("useCases", "share/use-cases"),
     ]),
@@ -190,7 +190,10 @@ export const sidebar = [
       createLink("memberInvites", "organizations/inviting-members"),
       createLink("ownershipAndTransfer", "organizations/ownership-and-transfer"),
       createLink("sso", "organizations/sso"),
-      createLink("auditLog", "organizations/audit-trail"),
+      // Only the label changed (auditLog → secretActivity); the slug stays so
+      // existing audit-trail links keep working without a redirect. Contrast
+      // share/request-secret, which replaced receiving-secrets and redirects.
+      createLink("secretActivity", "organizations/audit-trail"),
     ]),
 
     createGroup("customDomains", [
@@ -204,11 +207,10 @@ export const sidebar = [
     ]),
 
     // No badges here: this group is *about* the tiers, so labelling its own
-    // entries with one would be circular. The two pricing pages are carried
-    // across unchanged pending the production billing catalog — the merge of
-    // both into billing/index is what the catalog gates, not the existence of
-    // the billing pages, which describe the mechanism and assert no plan
-    // contents.
+    // entries with one would be circular. The two pricing pages follow the
+    // docs snapshot of the billing catalog; merging both into billing/index
+    // waits on the production catalog. The billing pages describe the
+    // mechanism and assert no plan contents.
     createGroup("plansAndBilling", [
       createLink("howPlansWork", "billing"),
       createLink("managingYourSubscription", "billing/managing-your-subscription"),

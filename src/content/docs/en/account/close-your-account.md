@@ -1,120 +1,40 @@
 ---
 textprov: true
 title: Closing your account
-description: What closing your account deletes, what it does not touch, what happens to secret links you have already shared, and how to close it.
+description: What closing your account deletes and keeps, what happens to shared links and organizations, and how to close it.
 audience: end-user
 pageType: how-to
-sourceOfTruth: onetimesecret/apps/web/auth/config/hooks/account.rb (after_close_account runs the purge inside Rodauth's close_account transaction, and the delete_account override removes the accounts row and its authentication audit log last, #4819); onetimesecret/apps/web/auth/operations/teardown_account.rb (sessions are revoked, credentials and the audit log removed, and the customer record deleted last, on the self-service and administrative paths alike); onetimesecret/apps/web/auth/operations/destroy_customer_record.rb (the customer record is destroyed outright, not retained); onetimesecret/apps/web/auth/config/hooks/account.rb:84-91 (a sign-up with the address of a closed account is accepted once its customer record is gone); onetimesecret/apps/web/auth/operations/ensure_customer_for_account.rb (an identity-provider sign-in after closure finds no customer record by email and creates a new one); onetimesecret/apps/web/auth/operations/customers/purge_preflight.rb (classify and owned_workspace_blockers: the sole-member default workspace is deleted with the account and other memberships removed; an owned organization with other members, a custom domain or a subscription refuses the closure)
+sourceOfTruth: onetimesecret/apps/web/auth/config/hooks/account.rb:1155-1228 (closure preflight, refusal message, and self-service purge); onetimesecret/apps/web/auth/operations/customers/purge_preflight.rb:553-586,636-658,744-752 (memberships removed, empty personal workspace deleted, refusal conditions); onetimesecret/apps/web/auth/operations/remove_authentication_data.rb:170-196 (credentials removed; deleting the sign-in row and its authentication audit log at closure is tracked in onetimesecret/onetimesecret#4819); onetimesecret/apps/web/auth/operations/destroy_customer_record.rb:87-94 (the customer record is deleted); onetimesecret/apps/web/auth/migrations/001_initial.rb:31-32 (a closed row does not reserve its email address)
 ---
 
-Closing your account deletes everything you sign in with and signs out the
-devices you were using. It happens the moment you confirm. It is not a
-deactivation, and it is not the same thing as deleting your secrets.
+Closing your account deletes your sign-in methods a󠄁n󠄁d account r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁 and s󠄁i󠄁g󠄁ns󠄁
+o󠄁u󠄁t󠄁 every session. It happens a󠄁s󠄁 s󠄁o󠄁o󠄁n a󠄁s󠄁 you confirm, and it cannot be undone.
 
-Read this page before you start. The two things people most often expect and
-do not get are an undo, and the destruction of links they have already shared.
-
-## What closing your account destroys
-
-**Everything you sign in with.** Your password, your two-factor secret and its
-recovery codes, any "remember me" tokens, any pending password reset, and the
-sign-in record itself are all deleted — along with every other sign-in method
-registered on the account and any identity-provider connection linked to it.
-Nothing is left to authenticate against. See
-[Two-factor authentication and passkeys](/en/account/two-factor-and-passkeys).
-
-**Your sessions.** Stored sessions for the account are deleted as part of the
-closure, so devices you were signed in on stop working. See
-[Sessions and connected identities](/en/account/sessions-and-identities).
-
-**Your authentication history.** The log of sign-ins, f󠄁a󠄁i󠄁l󠄁e󠄁d󠄁 s󠄁i󠄁g󠄁n󠄁-󠄁i󠄁n󠄁s󠄁,󠄁
-password changes and second-factor events on your account,󠄁 w󠄁i󠄁t󠄁h󠄁 t󠄁h󠄁e󠄁 n󠄁e󠄁t󠄁w󠄁o󠄁r󠄁k󠄁
-a󠄁d󠄁d󠄁r󠄁e󠄁s󠄁s󠄁 a󠄁n󠄁d󠄁 b󠄁r󠄁o󠄁w󠄁s󠄁e󠄁r󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁e󠄁d󠄁 a󠄁g󠄁a󠄁i󠄁n󠄁s󠄁t󠄁 e󠄁a󠄁c󠄁h󠄁 e󠄁n󠄁t󠄁r󠄁y󠄁,󠄁 is deleted i󠄁n the󠄁 s󠄁a󠄁m󠄁e󠄁 s󠄁t󠄁e󠄁p󠄁
-a󠄁s󠄁 the account. N󠄁o󠄁n󠄁e󠄁 o󠄁f󠄁 i󠄁t󠄁 i󠄁s󠄁 k󠄁e󠄁p󠄁t󠄁 f󠄁o󠄁r󠄁 a󠄁 r󠄁e󠄁t󠄁e󠄁n󠄁t󠄁i󠄁o󠄁n󠄁 p󠄁e󠄁r󠄁i󠄁o󠄁d󠄁.󠄁
-
-**Your API token.** It is d󠄁ele󠄁t󠄁ed with the re󠄁st󠄁 o󠄁f󠄁 t󠄁he󠄁 a󠄁c󠄁c󠄁ou󠄁nt, so any token you
-had in use stops working.
-
-**T󠄁h󠄁e󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁.󠄁** Y󠄁o󠄁u󠄁r󠄁 s󠄁e󠄁t󠄁t󠄁i󠄁n󠄁g󠄁s󠄁 a󠄁n󠄁d󠄁 t󠄁h󠄁e󠄁 l󠄁i󠄁s󠄁t󠄁 o󠄁f󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁s󠄁 y󠄁o󠄁u󠄁 h󠄁a󠄁v󠄁e󠄁 c󠄁r󠄁e󠄁a󠄁t󠄁e󠄁d󠄁
-a󠄁r󠄁e󠄁 d󠄁e󠄁l󠄁e󠄁t󠄁e󠄁d󠄁 w󠄁i󠄁t󠄁h󠄁 t󠄁h󠄁e󠄁 s󠄁i󠄁g󠄁n󠄁-󠄁i󠄁n󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁.󠄁 T󠄁h󠄁e󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁s󠄁 t󠄁h󠄁e󠄁m󠄁s󠄁e󠄁l󠄁v󠄁e󠄁s󠄁 a󠄁r󠄁e󠄁 n󠄁o󠄁t󠄁 d󠄁e󠄁l󠄁e󠄁t󠄁e󠄁d󠄁;󠄁
-s󠄁e󠄁e󠄁 [W󠄁h󠄁a󠄁t󠄁 c󠄁l󠄁o󠄁s󠄁i󠄁n󠄁g󠄁 y󠄁o󠄁u󠄁r󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁 d󠄁o󠄁e󠄁s󠄁 n󠄁o󠄁t󠄁 t󠄁o󠄁u󠄁c󠄁h󠄁](#what-closing-your-account-does-not-touch).󠄁
-
-**Y󠄁o󠄁u󠄁r󠄁 o󠄁w󠄁n󠄁 w󠄁o󠄁r󠄁k󠄁s󠄁p󠄁a󠄁c󠄁e󠄁.󠄁** T󠄁h󠄁e󠄁 w󠄁o󠄁r󠄁k󠄁s󠄁p󠄁a󠄁c󠄁e󠄁 c󠄁r󠄁e󠄁a󠄁t󠄁e󠄁d󠄁 w󠄁i󠄁t󠄁h󠄁 y󠄁o󠄁u󠄁r󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁 g󠄁o󠄁e󠄁s󠄁 w󠄁i󠄁t󠄁h󠄁 i󠄁t󠄁,󠄁
-p󠄁r󠄁o󠄁v󠄁i󠄁d󠄁e󠄁d󠄁 n󠄁o󠄁b󠄁o󠄁d󠄁y󠄁 e󠄁l󠄁s󠄁e󠄁 i󠄁s󠄁 a󠄁 m󠄁e󠄁m󠄁b󠄁e󠄁r󠄁 o󠄁f󠄁 i󠄁t󠄁 a󠄁n󠄁d󠄁 i󠄁t󠄁 h󠄁a󠄁s󠄁 n󠄁o󠄁 c󠄁u󠄁s󠄁t󠄁o󠄁m󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁 a󠄁n󠄁d󠄁 n󠄁o󠄁
-s󠄁u󠄁b󠄁s󠄁c󠄁r󠄁i󠄁p󠄁t󠄁i󠄁o󠄁n󠄁.󠄁 O󠄁t󠄁h󠄁e󠄁r󠄁w󠄁i󠄁s󠄁e󠄁 t󠄁h󠄁e󠄁 c󠄁l󠄁o󠄁s󠄁u󠄁r󠄁e󠄁 i󠄁s󠄁 r󠄁e󠄁f󠄁u󠄁s󠄁e󠄁d󠄁;󠄁 s󠄁e󠄁e󠄁
-[B󠄁e󠄁f󠄁o󠄁r󠄁e󠄁 y󠄁o󠄁u󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](#before-you-start).󠄁
-
-No part of the closure is staged or delayed — the deletion happens when you
-confirm, not after a cooling-off period. There is no undo, and signing in again
-with a password is not possible: the sign-in record is gone and nothing
-re-creates it.
-
-:::n󠄁o󠄁te󠄁
-**S󠄁i󠄁g󠄁ning󠄁 i󠄁n󠄁 w󠄁ith󠄁 a󠄁 provider cr󠄁e󠄁a󠄁t󠄁e󠄁s󠄁 a ne󠄁w󠄁 a󠄁c󠄁c󠄁ount.** Closing deletes the
-identity-provider connection along with the sign-in record, but it does not
-stop you signing in through that provider again. Doing so creates a n󠄁ew󠄁,󠄁 empty󠄁
-a󠄁c󠄁c󠄁ount󠄁 u󠄁n󠄁der your address. Nothing from󠄁 the closed account c󠄁om󠄁es back w󠄁ith i󠄁t.
-See [Signing in](/en/account/signing-in).
-:::
-
-## What is kept
-
-N󠄁ot󠄁hi󠄁ng of the account itse󠄁l󠄁f.
-
-**Your email address i󠄁s r󠄁e󠄁l󠄁e󠄁ased.** Signing up again with the same address
-creates󠄁 a󠄁 n󠄁e󠄁w󠄁,󠄁 e󠄁m󠄁p󠄁t󠄁y󠄁 account. N󠄁othing f󠄁rom󠄁 the closed one󠄁 is attached󠄁 to it.
-
-**Activity recorded against organizations stays with those organizations.**
-Events attributed to you in an organization's activity trail — secrets created,
-opened, revealed, burned — are not removed by closing your account. They are
-kept by the organization rather than by you, and the trail is trimmed by size
-rather than by age, so there is no point at which they age out. See
-[Secret Activity](/en/organizations/audit-trail).
-
-## What closing your account does not touch
-
-:::caution
-Closing your account does **not** destroy the secrets you have already shared.
-A secret link ends when it is viewed, when someone burns it, or when its
-lifetime runs out — and closing your account does none of those three things.
-:::
-
-**Secret links already out there.** Anything still outstanding when you close
-stays outstanding and stays usable by whoever holds the link. Worse, you lose
-the ability to find it: the list of what you created is only reachable while
-signed in. Burn what you do not want left live *before* you close — see
-[Before you start](#before-you-start).
-
-**Organizations ot󠄁h󠄁er󠄁 p󠄁e󠄁o󠄁p󠄁le󠄁 ow󠄁n.** Y󠄁o󠄁u󠄁r󠄁 m󠄁embership is removed;󠄁 the
-organization, t󠄁h󠄁e󠄁 s󠄁e󠄁cr󠄁e󠄁t󠄁s s󠄁h󠄁a󠄁r󠄁e󠄁d󠄁 in i󠄁t󠄁 a󠄁n󠄁d󠄁 i󠄁t󠄁s󠄁 a󠄁c󠄁t󠄁i󠄁v󠄁i󠄁t󠄁y t󠄁rai󠄁l󠄁 a󠄁r󠄁e󠄁 unto󠄁u󠄁c󠄁hed.
-See [Organizations](/en/organizations).
-
-**O󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁t󠄁i󠄁o󠄁n󠄁s󠄁 y󠄁o󠄁u󠄁 o󠄁w󠄁n󠄁 w󠄁i󠄁t󠄁h󠄁 o󠄁t󠄁h󠄁e󠄁r󠄁 p󠄁e󠄁o󠄁p󠄁l󠄁e󠄁 i󠄁n󠄁 t󠄁h󠄁e󠄁m󠄁.󠄁** C󠄁l󠄁o󠄁s󠄁i󠄁n󠄁g󠄁 d󠄁o󠄁e󠄁s󠄁 n󠄁o󠄁t󠄁 h󠄁a󠄁n󠄁d󠄁
-t󠄁h󠄁e󠄁m󠄁 t󠄁o󠄁 a󠄁n󠄁y󠄁o󠄁n󠄁e󠄁 e󠄁l󠄁s󠄁e󠄁 a󠄁n󠄁d󠄁 d󠄁o󠄁e󠄁s󠄁 n󠄁o󠄁t󠄁 r󠄁e󠄁m󠄁o󠄁v󠄁e󠄁 t󠄁h󠄁e󠄁 o󠄁t󠄁h󠄁e󠄁r󠄁 m󠄁e󠄁m󠄁b󠄁e󠄁r󠄁s󠄁.󠄁 I󠄁n󠄁s󠄁t󠄁e󠄁a󠄁d󠄁 t󠄁h󠄁e󠄁 c󠄁l󠄁o󠄁s󠄁u󠄁r󠄁e󠄁
-i󠄁s󠄁 r󠄁e󠄁f󠄁u󠄁s󠄁e󠄁d󠄁 u󠄁n󠄁t󠄁i󠄁l󠄁 y󠄁o󠄁u󠄁 h󠄁a󠄁v󠄁e󠄁 d󠄁e󠄁a󠄁l󠄁t󠄁 w󠄁i󠄁t󠄁h󠄁 t󠄁h󠄁e󠄁m󠄁;󠄁 s󠄁e󠄁e󠄁
-[B󠄁e󠄁f󠄁o󠄁r󠄁e󠄁 y󠄁o󠄁u󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](#before-you-start).󠄁
-
-**Custom domains.** A custom domain belongs to the organization that added it,
-not to you personally, so it stays with the organization and keeps working. See
-[Custom domains](/en/custom-domains).
+It does **not** del󠄁e󠄁te secret l󠄁i󠄁n󠄁k󠄁s you have already shared. B󠄁urn those f󠄁i󠄁rst if
+you do not want t󠄁h󠄁em󠄁 to remain usable.
 
 ## Before you start
 
+- **T󠄁h󠄁e󠄁 a󠄁p󠄁p󠄁 s󠄁h󠄁o󠄁w󠄁s󠄁 t󠄁h󠄁i󠄁s󠄁 o󠄁p󠄁t󠄁i󠄁o󠄁n󠄁 t󠄁o󠄁 o󠄁w󠄁n󠄁e󠄁r󠄁s󠄁 a󠄁n󠄁d󠄁 a󠄁d󠄁m󠄁i󠄁n󠄁s󠄁 o󠄁n󠄁l󠄁y󠄁.󠄁** T󠄁h󠄁e󠄁 **C󠄁a󠄁r󠄁e󠄁f󠄁u󠄁l󠄁
+  C󠄁o󠄁n󠄁s󠄁i󠄁d󠄁e󠄁r󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 Z󠄁o󠄁n󠄁e󠄁** i󠄁s󠄁 s󠄁h󠄁o󠄁w󠄁n󠄁 o󠄁n󠄁l󠄁y󠄁 w󠄁h󠄁e󠄁n󠄁 y󠄁o󠄁u󠄁r󠄁 r󠄁o󠄁l󠄁e󠄁 i󠄁n󠄁 t󠄁h󠄁e󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 y󠄁o󠄁u󠄁 a󠄁r󠄁e󠄁 c󠄁u󠄁r󠄁r󠄁e󠄁n󠄁t󠄁l󠄁y󠄁 w󠄁o󠄁r󠄁k󠄁i󠄁n󠄁g󠄁 i󠄁n󠄁 i󠄁s󠄁
+  o󠄁w󠄁n󠄁e󠄁r󠄁 o󠄁r󠄁 a󠄁d󠄁m󠄁i󠄁n󠄁.󠄁 I󠄁f󠄁 y󠄁o󠄁u󠄁 h󠄁a󠄁v󠄁e󠄁 y󠄁o󠄁u󠄁r󠄁 o󠄁w󠄁n󠄁 w󠄁o󠄁r󠄁k󠄁s󠄁p󠄁a󠄁c󠄁e󠄁,󠄁 s󠄁e󠄁l󠄁e󠄁c󠄁t󠄁 i󠄁t󠄁 w󠄁i󠄁t󠄁h󠄁 t󠄁h󠄁e󠄁 w󠄁o󠄁r󠄁k󠄁s󠄁p󠄁a󠄁c󠄁e󠄁
+  s󠄁w󠄁i󠄁t󠄁c󠄁h󠄁e󠄁r󠄁 o󠄁n󠄁 y󠄁o󠄁u󠄁r󠄁 d󠄁a󠄁s󠄁h󠄁b󠄁o󠄁a󠄁r󠄁d󠄁,󠄁 t󠄁h󠄁e󠄁n󠄁 r󠄁e󠄁l󠄁o󠄁a󠄁d󠄁 t󠄁h󠄁e󠄁 p󠄁a󠄁g󠄁e󠄁.󠄁 A󠄁n󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁 c󠄁r󠄁e󠄁a󠄁t󠄁e󠄁d󠄁 b󠄁y󠄁
+  a󠄁c󠄁c󠄁e󠄁p󠄁t󠄁i󠄁n󠄁g󠄁 a󠄁n󠄁 i󠄁n󠄁v󠄁i󠄁t󠄁a󠄁t󠄁i󠄁o󠄁n󠄁,󠄁 o󠄁r󠄁 t󠄁h󠄁r󠄁o󠄁u󠄁g󠄁h󠄁 s󠄁i󠄁n󠄁g󠄁l󠄁e󠄁 s󠄁i󠄁g󠄁n󠄁-󠄁o󠄁n󠄁 o󠄁n󠄁 a󠄁n󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁t󠄁i󠄁o󠄁n󠄁'󠄁s󠄁 c󠄁u󠄁s󠄁t󠄁o󠄁m󠄁
+  d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁,󠄁 h󠄁a󠄁s󠄁 n󠄁o󠄁 w󠄁o󠄁r󠄁k󠄁s󠄁p󠄁a󠄁c󠄁e󠄁 o󠄁f󠄁 i󠄁t󠄁s󠄁 o󠄁w󠄁n󠄁;󠄁 c󠄁o󠄁n󠄁t󠄁a󠄁c󠄁t󠄁 s󠄁u󠄁p󠄁p󠄁o󠄁r󠄁t󠄁 t󠄁o󠄁 c󠄁l󠄁o󠄁s󠄁e󠄁 i󠄁t󠄁.󠄁
 - **Burn any secret you do not want to outlive the account.** Open
   [Recent secrets](/en/account/dashboard-and-recent-secrets), open the receipt
-  for each link you want gone, and burn it. Burning is permanent and the
-  recipient then sees the same "no longer available" page as for any expired
-  link. See [Your receipt](/en/share/your-receipt).
-- **Copy anything you still need.** There is no data export, and once the
-  account is closed you cannot sign in to look anything up.
-- **Deal with organizations you own.** T󠄁h󠄁e󠄁 c󠄁l󠄁o󠄁s󠄁u󠄁r󠄁e󠄁 i󠄁s󠄁 r󠄁e󠄁f󠄁u󠄁s󠄁e󠄁d󠄁 w󠄁h󠄁i󠄁l󠄁e󠄁 y󠄁o󠄁u󠄁 o󠄁w󠄁n󠄁 a󠄁n󠄁
-  o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 t󠄁h󠄁a󠄁t󠄁 h󠄁a󠄁s󠄁 o󠄁t󠄁h󠄁e󠄁r󠄁 m󠄁e󠄁m󠄁b󠄁e󠄁r󠄁s󠄁,󠄁 a󠄁 c󠄁u󠄁s󠄁t󠄁o󠄁m󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁 o󠄁r󠄁 a󠄁 s󠄁u󠄁b󠄁s󠄁c󠄁r󠄁i󠄁p󠄁t󠄁i󠄁o󠄁n󠄁,󠄁 a󠄁n󠄁d󠄁
-  t󠄁h󠄁e󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁 s󠄁t󠄁a󠄁y󠄁s󠄁 o󠄁p󠄁e󠄁n󠄁.󠄁 Transfer of ownership is not a self-service action,
-  so arrange it with support before you close. S󠄁e󠄁e󠄁
-  [O󠄁w󠄁n󠄁e󠄁r󠄁s󠄁h󠄁i󠄁p󠄁 a󠄁n󠄁d󠄁 t󠄁r󠄁a󠄁n󠄁s󠄁f󠄁e󠄁r󠄁](/en/organizations/ownership-and-transfer).󠄁
-- **Have your password ready.** The closure will not proceed without it, and an
-  account created through an identity provider may not have one. If yours does
-  not, set a password first from Settings → Security; see
+  for each link you want gone, and burn it. See
+  [Your receipt](/en/share/your-receipt).
+- **Copy anything you still need.** There is no data export, and a󠄁f󠄁t󠄁er󠄁 closu󠄁r󠄁e
+  you cannot sign in to look anything up.
+- **P󠄁r󠄁ep󠄁ar󠄁e󠄁 y󠄁o󠄁u󠄁r󠄁 o󠄁w󠄁n󠄁 w󠄁o󠄁r󠄁k󠄁s󠄁p󠄁a󠄁c󠄁e󠄁.󠄁** C󠄁lo󠄁s󠄁u󠄁r󠄁e󠄁 i󠄁s󠄁 r󠄁e󠄁f󠄁u󠄁s󠄁e󠄁d󠄁 i󠄁f󠄁 y󠄁o󠄁u󠄁r󠄁 wo󠄁r󠄁k󠄁s󠄁p󠄁a󠄁c󠄁e󠄁 h󠄁a󠄁s󠄁 o󠄁t󠄁h󠄁e󠄁r󠄁
+  m󠄁e󠄁m󠄁b󠄁e󠄁r󠄁s󠄁,󠄁 c󠄁u󠄁s󠄁t󠄁o󠄁m󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁s󠄁,󠄁 o󠄁r󠄁 a󠄁 s󠄁u󠄁b󠄁s󠄁c󠄁r󠄁i󠄁p󠄁t󠄁i󠄁o󠄁n󠄁 t󠄁h󠄁a󠄁t󠄁 h󠄁a󠄁s󠄁 n󠄁o󠄁t󠄁 e󠄁n󠄁d󠄁e󠄁d󠄁,󠄁 o󠄁r󠄁 i󠄁f󠄁 y󠄁o󠄁u󠄁 o󠄁w󠄁n󠄁
+  a󠄁n󠄁y󠄁 o󠄁t󠄁h󠄁e󠄁r󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁t󠄁i󠄁o󠄁n󠄁.󠄁 R󠄁e󠄁m󠄁o󠄁v󠄁e󠄁 t󠄁h󠄁e󠄁 o󠄁t󠄁h󠄁e󠄁r󠄁 m󠄁e󠄁m󠄁b󠄁e󠄁r󠄁s󠄁 a󠄁n󠄁d󠄁 c󠄁u󠄁s󠄁t󠄁o󠄁m󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁s󠄁,󠄁 c󠄁a󠄁n󠄁c󠄁e󠄁l󠄁
+  t󠄁h󠄁e󠄁 s󠄁u󠄁b󠄁s󠄁c󠄁r󠄁i󠄁p󠄁t󠄁i󠄁o󠄁n󠄁 a󠄁n󠄁d󠄁 w󠄁a󠄁it f󠄁o󠄁r󠄁 i󠄁t󠄁 t󠄁o󠄁 e󠄁n󠄁d󠄁,󠄁 a󠄁n󠄁d󠄁 a󠄁s󠄁k󠄁 s󠄁u󠄁p󠄁p󠄁o󠄁r󠄁t󠄁 t󠄁o󠄁 t󠄁r󠄁a󠄁n󠄁s󠄁f󠄁e󠄁r󠄁 o󠄁w󠄁n󠄁e󠄁r󠄁s󠄁hi󠄁p󠄁
+  o󠄁f󠄁 o󠄁t󠄁h󠄁e󠄁r󠄁 organizations;󠄁 see󠄁
+  [O󠄁wnership a󠄁n󠄁d󠄁 t󠄁r󠄁a󠄁n󠄁sfer](/en/organizations/ownership-and-transfer).
+- **Have your password ready.** I󠄁f󠄁 y󠄁our account w󠄁a󠄁s󠄁 created through an identity
+  provider and󠄁 has no password,󠄁 s󠄁e󠄁t󠄁 o󠄁n󠄁e󠄁 first from Settings → Security; see
   [Signing in](/en/account/signing-in).
 
 ## Close your account
@@ -122,61 +42,81 @@ not to you personally, so it stays with the organization and keeps working. See
 ### 1. Open the closing screen
 
 Go to Settings → Advanced → **Careful Consideration Zone**, and find **Close
-Account**. Before you go further it tells you the same thing this page does:
-secrets remain active until they expire, and anything you want removed should
-be burned before you continue.
+Account**. T󠄁he sc󠄁r󠄁e󠄁e󠄁n󠄁 r󠄁e󠄁p󠄁e󠄁at󠄁s󠄁 that secrets remain active until they expire, and
+t󠄁h󠄁a󠄁t󠄁 anything you want removed should be burned fi󠄁rs󠄁t.
 
 ### 2. Confirm with your password
 
 Choose **Permanently Delete Account**. You are asked *"Are you sure you want to
 permanently delete your account? This action cannot be undone."* and for your
-current password. The password is checked before anything is deleted: a wrong
-one stops the closure with the account untouched.
+current password. A󠄁 w󠄁r󠄁o󠄁n󠄁g󠄁 password stops the closure with nothi󠄁ng󠄁 cha󠄁n󠄁g󠄁ed.
 
 ### 3. Confirm the deletion
 
-Choosing **Delete Account** carries out the closure. There is no further
-confirmation step, no emailed link to open, and no waiting period.
+Choose󠄁 **Delete Account**. There is no further confirmation, emailed link or󠄁
+waiting period.
 
 ## Verify it worked
 
-You are signed out and returned to the home page. Signing in with that address
-and a password no longer works, and neither does a password reset for it — a
-reset request returns the same "an email has been sent" message it returns for
-any address, but nothing is sent for an ad󠄁d󠄁r󠄁e󠄁s󠄁s󠄁 w󠄁i󠄁t󠄁h󠄁 n󠄁o󠄁 a󠄁ccount.
+You are signed out and returned to the home page,󠄁 a󠄁n󠄁d󠄁 s󠄁igning in with that
+address no longer works. No confirmation email i󠄁s sent.
 
-No confirmation email follows. Its absence does not mean the closure failed.
+If the screen s󠄁h󠄁ow󠄁s an error instead, treat the account as still open. Sign in
+again t󠄁o󠄁 check.󠄁
 
-If the screen reports an error instead, treat the account as still open: sign
-in again and check where you stand rather than assuming it went through anyway.
+## W󠄁h󠄁a󠄁t󠄁 c󠄁l󠄁o󠄁s󠄁i󠄁n󠄁g󠄁 d󠄁e󠄁l󠄁e󠄁t󠄁e󠄁s󠄁
 
-## If you cannot close your account from the app
+- **Y󠄁o󠄁u󠄁r󠄁 s󠄁i󠄁g󠄁n󠄁-󠄁i󠄁n󠄁 m󠄁e󠄁t󠄁h󠄁o󠄁d󠄁s󠄁.󠄁** Y󠄁o󠄁u󠄁r󠄁 p󠄁a󠄁s󠄁s󠄁wo󠄁r󠄁d󠄁,󠄁 t󠄁w󠄁o󠄁-󠄁f󠄁a󠄁c󠄁t󠄁o󠄁r󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 a󠄁n󠄁d󠄁 r󠄁e󠄁c󠄁o󠄁v󠄁e󠄁r󠄁y󠄁 c󠄁o󠄁d󠄁e󠄁s󠄁,󠄁
+  p󠄁a󠄁s󠄁s󠄁k󠄁e󠄁y󠄁s󠄁,󠄁 R󠄁e󠄁m󠄁e󠄁m󠄁b󠄁e󠄁r󠄁 m󠄁e󠄁 s󠄁e󠄁s󠄁s󠄁i󠄁o󠄁n󠄁s󠄁,󠄁 p󠄁e󠄁n󠄁d󠄁i󠄁n󠄁g󠄁 p󠄁a󠄁s󠄁s󠄁w󠄁o󠄁r󠄁d󠄁-󠄁r󠄁e󠄁s󠄁e󠄁t󠄁 a󠄁n󠄁d󠄁 v󠄁e󠄁r󠄁i󠄁f󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 l󠄁i󠄁n󠄁k󠄁s󠄁,󠄁
+  a󠄁n󠄁d󠄁 l󠄁i󠄁n󠄁k󠄁e󠄁d󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁t󠄁y󠄁 p󠄁r󠄁o󠄁v󠄁i󠄁d󠄁e󠄁r󠄁s󠄁.󠄁 S󠄁e󠄁e󠄁
+  [T󠄁w󠄁o󠄁-󠄁f󠄁a󠄁c󠄁t󠄁o󠄁r󠄁 a󠄁u󠄁t󠄁hen󠄁t󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 a󠄁n󠄁d󠄁 p󠄁a󠄁s󠄁s󠄁k󠄁e󠄁y󠄁s󠄁](/en/account/two-factor-and-passkeys).󠄁
+- **Y󠄁o󠄁u󠄁r󠄁 s󠄁e󠄁s󠄁s󠄁i󠄁o󠄁n󠄁s󠄁.󠄁** E󠄁v󠄁e󠄁r󠄁y󠄁 d󠄁e󠄁v󠄁i󠄁c󠄁e󠄁 s󠄁i󠄁g󠄁n󠄁e󠄁d󠄁 i󠄁n󠄁 t󠄁o󠄁 t󠄁h󠄁e󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁 i󠄁s󠄁 s󠄁i󠄁g󠄁n󠄁e󠄁d󠄁 o󠄁u󠄁t󠄁.󠄁 S󠄁e󠄁e󠄁
+  [S󠄁e󠄁s󠄁s󠄁i󠄁o󠄁n󠄁s󠄁 a󠄁n󠄁d󠄁 c󠄁o󠄁n󠄁n󠄁e󠄁c󠄁t󠄁e󠄁d󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁t󠄁i󠄁e󠄁s󠄁](/en/account/sessions-and-identities).󠄁
+- **Y󠄁o󠄁u󠄁r󠄁 s󠄁i󠄁g󠄁n󠄁-󠄁i󠄁n󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁 a󠄁n󠄁d󠄁 i󠄁t󠄁s󠄁 h󠄁i󠄁s󠄁t󠄁o󠄁r󠄁y󠄁.󠄁** Y󠄁o󠄁u󠄁r󠄁 e󠄁m󠄁a󠄁i󠄁l󠄁 a󠄁d󠄁d󠄁r󠄁e󠄁s󠄁s󠄁 a󠄁s󠄁 a󠄁 s󠄁i󠄁g󠄁n󠄁-󠄁i󠄁n󠄁
+  n󠄁a󠄁m󠄁e󠄁,󠄁 a󠄁n󠄁d󠄁 t󠄁h󠄁e󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁 o󠄁f󠄁 s󠄁i󠄁g󠄁n󠄁-󠄁i󠄁n󠄁s󠄁,󠄁 p󠄁a󠄁s󠄁s󠄁w󠄁o󠄁r󠄁d󠄁 c󠄁h󠄁a󠄁n󠄁g󠄁e󠄁s󠄁 a󠄁n󠄁d󠄁 s󠄁e󠄁c󠄁o󠄁n󠄁d󠄁-󠄁f󠄁a󠄁c󠄁t󠄁o󠄁r󠄁 c󠄁h󠄁a󠄁n󠄁g󠄁e󠄁s󠄁
+  o󠄁n󠄁 t󠄁h󠄁e󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁.󠄁
+- **Y󠄁o󠄁u󠄁r󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁.󠄁** Y󠄁o󠄁u󠄁r󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁,󠄁 i󠄁t󠄁s󠄁 p󠄁r󠄁e󠄁f󠄁e󠄁r󠄁e󠄁n󠄁c󠄁e󠄁s󠄁 a󠄁n󠄁d󠄁 i󠄁t󠄁s󠄁 A󠄁P󠄁I󠄁 t󠄁o󠄁k󠄁e󠄁n󠄁.󠄁
+- **Y󠄁o󠄁u󠄁r󠄁 o󠄁w󠄁n󠄁 w󠄁o󠄁r󠄁k󠄁s󠄁p󠄁a󠄁c󠄁e󠄁,󠄁** w󠄁i󠄁t󠄁h󠄁 i󠄁t󠄁s󠄁 s󠄁e󠄁t󠄁t󠄁i󠄁n󠄁g󠄁s󠄁 a󠄁n󠄁d󠄁 i󠄁t󠄁s󠄁
+  [S󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 A󠄁c󠄁t󠄁i󠄁v󠄁i󠄁t󠄁y󠄁](/en/organizations/audit-trail) r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁.󠄁
+- **Y󠄁o󠄁u󠄁r󠄁 m󠄁e󠄁m󠄁b󠄁e󠄁r󠄁s󠄁h󠄁i󠄁p󠄁s󠄁** i󠄁n󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁t󠄁i󠄁o󠄁n󠄁s󠄁 o󠄁w󠄁n󠄁e󠄁d󠄁 b󠄁y󠄁 o󠄁t󠄁h󠄁e󠄁r󠄁 p󠄁e󠄁o󠄁p󠄁l󠄁e󠄁.󠄁
 
-**The option is not in Settings.** The Careful Consideration Zone is shown only
-to people whose role in the organization they are currently working in is owner
-or admin. If you joined by invitation as a member, it is not offered to you —
-contact support to have the account closed.
+## W󠄁h󠄁a󠄁t󠄁 c󠄁l󠄁o󠄁s󠄁i󠄁n󠄁g󠄁 k󠄁e󠄁e󠄁p󠄁s󠄁
 
-**Your account has no password.** An account created through an identity
-provider may never have had one, and the closure cannot be confirmed without
-it. Set a password first from Settings → Security — the service emails you a
-link to set it — then come back. See [Signing in](/en/account/signing-in).
+- **S󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 l󠄁i󠄁n󠄁k󠄁s󠄁 y󠄁o󠄁u󠄁 a󠄁l󠄁r󠄁e󠄁a󠄁d󠄁y󠄁 s󠄁h󠄁a󠄁r󠄁e󠄁d󠄁.󠄁** A󠄁 l󠄁i󠄁n󠄁k󠄁 s󠄁t󠄁a󠄁y󠄁s󠄁 u󠄁s󠄁a󠄁b󠄁l󠄁e󠄁 u󠄁n󠄁t󠄁i󠄁l󠄁 i󠄁t󠄁 i󠄁s󠄁 r󠄁e󠄁v󠄁e󠄁a󠄁l󠄁e󠄁d󠄁,󠄁
+  b󠄁u󠄁r󠄁n󠄁e󠄁d󠄁,󠄁 o󠄁r󠄁 e󠄁x󠄁p󠄁i󠄁r󠄁e󠄁s󠄁.󠄁 A󠄁f󠄁t󠄁e󠄁r󠄁 c󠄁l󠄁o󠄁s󠄁u󠄁re your󠄁 l󠄁i󠄁st󠄁 o󠄁f󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁s󠄁 i󠄁s󠄁 g󠄁o󠄁n󠄁e󠄁,󠄁 s󠄁o󠄁 y󠄁o󠄁u󠄁 c󠄁a󠄁n󠄁n󠄁o󠄁t󠄁
+  l󠄁o󠄁o󠄁k󠄁 a󠄁 l󠄁i󠄁n󠄁k󠄁 u󠄁p󠄁 t󠄁h󠄁e󠄁r󠄁e󠄁.󠄁 I󠄁f󠄁 y󠄁o󠄁u󠄁 k󠄁e󠄁p󠄁t󠄁 a󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁'󠄁s󠄁 r󠄁e󠄁c󠄁e󠄁i󠄁p󠄁t󠄁 l󠄁i󠄁n󠄁k󠄁,󠄁 y󠄁o󠄁u󠄁 c󠄁a󠄁n󠄁 s󠄁t󠄁i󠄁l󠄁l󠄁 o󠄁p󠄁e󠄁n󠄁
+  i󠄁t and b󠄁u󠄁r󠄁n󠄁 t󠄁h󠄁e󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁,󠄁 e󠄁n󠄁t󠄁e󠄁r󠄁i󠄁n󠄁g󠄁 t󠄁h󠄁e󠄁 p󠄁a󠄁s󠄁s󠄁p󠄁h󠄁ras󠄁e󠄁 i󠄁f󠄁 o󠄁n󠄁e󠄁 w󠄁a󠄁s󠄁 s󠄁e󠄁t󠄁;󠄁 s󠄁e󠄁e󠄁
+  [Y󠄁o󠄁u󠄁r󠄁 r󠄁e󠄁c󠄁e󠄁i󠄁p󠄁t󠄁](/en/share/your-receipt).󠄁
+- **A󠄁c󠄁t󠄁i󠄁v󠄁i󠄁t󠄁y󠄁 i󠄁n󠄁 o󠄁the󠄁r󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁t󠄁i󠄁o󠄁n󠄁s󠄁.󠄁** E󠄁v󠄁e󠄁n󠄁t󠄁s󠄁 a󠄁t󠄁t󠄁r󠄁i󠄁b󠄁u󠄁t󠄁e󠄁d󠄁 t󠄁o󠄁 y󠄁o󠄁u󠄁 i󠄁n󠄁 t󠄁h󠄁e󠄁 S󠄁e󠄁c󠄁r󠄁e󠄁t󠄁
+  A󠄁c󠄁t󠄁i󠄁v󠄁i󠄁t󠄁y󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁 o󠄁f󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁t󠄁i󠄁o󠄁n󠄁s󠄁 y󠄁o󠄁u󠄁 w󠄁e󠄁r󠄁e󠄁 a󠄁 m󠄁e󠄁m󠄁b󠄁e󠄁r󠄁 o󠄁f󠄁 s󠄁t󠄁a󠄁y󠄁 w󠄁i󠄁t󠄁h󠄁 t󠄁h󠄁o󠄁s󠄁e󠄁
+  o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁t󠄁i󠄁o󠄁n󠄁s󠄁,󠄁 a󠄁n󠄁d󠄁 a󠄁r󠄁e󠄁 r󠄁e󠄁m󠄁o󠄁v󠄁e󠄁d󠄁 o󠄁n󠄁l󠄁y󠄁 u󠄁n󠄁d󠄁er that󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁'󠄁s󠄁 o󠄁w󠄁n r󠄁e󠄁t󠄁e󠄁n󠄁t󠄁i󠄁o󠄁n󠄁.󠄁
 
-**The service is configured for single sign-on only.** Where sign-in is
-restricted to an identity provider, closing the account from the app is not
-available at all; the provider owns the account and password-based account
-management is switched off.
+## U󠄁s󠄁i󠄁n󠄁g󠄁 t󠄁h󠄁e󠄁 s󠄁a󠄁m󠄁e󠄁 a󠄁d󠄁d󠄁r󠄁e󠄁s󠄁s󠄁 a󠄁g󠄁a󠄁i󠄁n󠄁
 
-**"󠄁O󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 d󠄁a󠄁t󠄁a󠄁 o󠄁r󠄁 m󠄁e󠄁m󠄁b󠄁e󠄁r󠄁s󠄁h󠄁i󠄁p󠄁 s󠄁t󠄁a󠄁t󠄁e󠄁 r󠄁e󠄁q󠄁u󠄁i󠄁r󠄁e󠄁s󠄁 a󠄁t󠄁t󠄁e󠄁n󠄁t󠄁i󠄁o󠄁n󠄁.󠄁"󠄁** Y󠄁o󠄁u󠄁 o󠄁w󠄁n󠄁 a󠄁n󠄁
-o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 t󠄁h󠄁a󠄁t󠄁 h󠄁a󠄁s󠄁 o󠄁t󠄁h󠄁e󠄁r󠄁 m󠄁e󠄁m󠄁b󠄁e󠄁r󠄁s󠄁,󠄁 a󠄁 c󠄁u󠄁s󠄁t󠄁o󠄁m󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁 o󠄁r󠄁 a󠄁 s󠄁u󠄁b󠄁s󠄁c󠄁r󠄁i󠄁p󠄁t󠄁i󠄁o󠄁n󠄁,󠄁 o󠄁r󠄁 a󠄁n󠄁
-o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁 i󠄁s󠄁 i󠄁n󠄁 a󠄁 s󠄁t󠄁a󠄁t󠄁e󠄁 t󠄁h󠄁e󠄁 c󠄁l󠄁o󠄁s󠄁u󠄁r󠄁e󠄁 c󠄁a󠄁n󠄁n󠄁o󠄁t󠄁 r󠄁e󠄁s󠄁o󠄁l󠄁v󠄁e󠄁 o󠄁n󠄁 i󠄁t󠄁s󠄁 o󠄁w󠄁n󠄁.󠄁 D󠄁e󠄁a󠄁l󠄁
-w󠄁i󠄁t󠄁h󠄁 t󠄁h󠄁e󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 f󠄁i󠄁r󠄁s󠄁t󠄁 (󠄁s󠄁e󠄁e󠄁 [B󠄁e󠄁f󠄁o󠄁r󠄁e󠄁 y󠄁o󠄁u󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](#before-you-start))󠄁 o󠄁r󠄁
-c󠄁o󠄁n󠄁t󠄁a󠄁c󠄁t󠄁 s󠄁u󠄁p󠄁p󠄁o󠄁r󠄁t󠄁.󠄁 N󠄁o󠄁t󠄁h󠄁i󠄁n󠄁g󠄁 w󠄁a󠄁s󠄁 d󠄁e󠄁l󠄁e󠄁t󠄁e󠄁d󠄁.󠄁
+A󠄁f󠄁t󠄁e󠄁r󠄁 c󠄁l󠄁o󠄁s󠄁u󠄁r󠄁e󠄁,󠄁 t󠄁h󠄁e󠄁 a󠄁d󠄁d󠄁r󠄁e󠄁s󠄁s󠄁 c󠄁a󠄁n󠄁 b󠄁e󠄁 u󠄁s󠄁e󠄁d󠄁 f󠄁o󠄁r󠄁 a󠄁 n󠄁e󠄁w󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁,󠄁 b󠄁y󠄁 s󠄁i󠄁g󠄁n󠄁i󠄁n󠄁g󠄁 u󠄁p󠄁 w󠄁i󠄁t󠄁h󠄁 a󠄁
+p󠄁assw󠄁o󠄁r󠄁d󠄁 o󠄁r󠄁 b󠄁y󠄁 s󠄁i󠄁g󠄁n󠄁ing in through an i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁t󠄁y p󠄁r󠄁o󠄁v󠄁i󠄁d󠄁e󠄁r󠄁.󠄁 T󠄁h󠄁e󠄁 n󠄁e󠄁w ac󠄁c󠄁o󠄁u󠄁n󠄁t󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁s󠄁
+e󠄁m󠄁p󠄁t󠄁y:󠄁 n󠄁o󠄁t󠄁h󠄁i󠄁n󠄁g󠄁 f󠄁r󠄁o󠄁m󠄁 t󠄁h󠄁e󠄁 c󠄁l󠄁o󠄁s󠄁e󠄁d󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁 i󠄁s󠄁 r󠄁e󠄁s󠄁t󠄁o󠄁r󠄁e󠄁d󠄁,󠄁 a󠄁n󠄁d󠄁 l󠄁i󠄁n󠄁k󠄁s󠄁 y󠄁o󠄁u󠄁 s󠄁h󠄁a󠄁r󠄁e󠄁d󠄁 f󠄁r󠄁o󠄁m󠄁
+t󠄁h󠄁e󠄁 c󠄁l󠄁o󠄁s󠄁e󠄁d󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁 d󠄁o󠄁 n󠄁o󠄁t󠄁 a󠄁p󠄁p󠄁e󠄁a󠄁r󠄁 i󠄁n󠄁 i󠄁t󠄁.
 
-**"Please check the password."** The closure is refused before anything is
-deleted. If you cannot remember the password, reset it first — but note that
-completing a reset signs out every session on the account, including yours. See
-[Signing in](/en/account/signing-in).
+## If you cannot close your account
+
+**The option is not in Settings.** Y󠄁o󠄁u󠄁r role in the organization yo󠄁u󠄁 are working
+in is member.󠄁 S󠄁e󠄁e󠄁 t󠄁h󠄁e󠄁 f󠄁i󠄁r󠄁s󠄁t󠄁 ite󠄁m󠄁 u󠄁n󠄁d󠄁e󠄁r󠄁 [B󠄁e󠄁f󠄁o󠄁r󠄁e󠄁 y󠄁o󠄁u󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](#before-you-start).󠄁
+
+**"󠄁A󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁 d󠄁e󠄁l󠄁e󠄁t󠄁io󠄁n󠄁 w󠄁a󠄁s r󠄁e󠄁f󠄁u󠄁s󠄁e󠄁d󠄁 b󠄁e󠄁c󠄁a󠄁u󠄁s󠄁e󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 d󠄁a󠄁t󠄁a󠄁 o󠄁r󠄁 m󠄁e󠄁m󠄁b󠄁e󠄁r󠄁s󠄁h󠄁i󠄁p󠄁 s󠄁t󠄁a󠄁t󠄁e󠄁
+r󠄁e󠄁q󠄁u󠄁i󠄁r󠄁e󠄁s󠄁 a󠄁t󠄁t󠄁e󠄁n󠄁t󠄁i󠄁o󠄁n󠄁.󠄁"󠄁** N󠄁o󠄁t󠄁h󠄁i󠄁n󠄁g󠄁 w󠄁a󠄁s󠄁 c󠄁h󠄁a󠄁n󠄁g󠄁e󠄁d󠄁.󠄁 Y󠄁o󠄁u󠄁r󠄁 w󠄁o󠄁r󠄁k󠄁s󠄁p󠄁a󠄁c󠄁e󠄁 s󠄁t󠄁i󠄁l󠄁l󠄁 h󠄁a󠄁s󠄁 o󠄁t󠄁h󠄁e󠄁r󠄁
+m󠄁e󠄁m󠄁b󠄁e󠄁r󠄁s󠄁,󠄁 c󠄁u󠄁s󠄁t󠄁o󠄁m󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁s󠄁 o󠄁r󠄁 a󠄁 s󠄁u󠄁b󠄁s󠄁c󠄁r󠄁i󠄁p󠄁t󠄁i󠄁o󠄁n󠄁,󠄁 o󠄁r󠄁 y󠄁o󠄁u󠄁 o󠄁w󠄁n󠄁 a󠄁noth󠄁er o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁t󠄁i󠄁o󠄁n󠄁.󠄁
+S󠄁ee󠄁 [B󠄁e󠄁f󠄁or󠄁e󠄁 you s󠄁t󠄁a󠄁r󠄁t󠄁](#before-you-start).󠄁 C󠄁ontact support i󠄁f󠄁 y󠄁o󠄁u󠄁 c󠄁a󠄁n󠄁n󠄁o󠄁t t󠄁e󠄁l󠄁l󠄁
+w󠄁hat i󠄁s󠄁 b󠄁lock󠄁i󠄁ng the closure.
+
+**"Please check the password."** N󠄁othing was c󠄁h󠄁a󠄁n󠄁g󠄁ed. If you cannot remember the
+password, reset it first.󠄁 C󠄁ompleting a reset signs out every session on the
+account, including yours. See [Signing in](/en/account/signing-in).󠄁
+
+**Y󠄁o󠄁u󠄁r󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁 h󠄁a󠄁s󠄁 n󠄁o󠄁 p󠄁a󠄁s󠄁s󠄁w󠄁o󠄁r󠄁d󠄁 a󠄁n󠄁d󠄁 s󠄁i󠄁g󠄁n󠄁-󠄁i󠄁n󠄁 i󠄁s󠄁 r󠄁e󠄁s󠄁t󠄁r󠄁i󠄁c󠄁t󠄁e󠄁d󠄁 t󠄁o󠄁 s󠄁i󠄁n󠄁g󠄁l󠄁e󠄁 s󠄁i󠄁g󠄁n󠄁-󠄁o󠄁n󠄁.󠄁**
+P󠄁a󠄁s󠄁s󠄁w󠄁o󠄁r󠄁d󠄁 s󠄁e󠄁t󠄁u󠄁p󠄁 u󠄁s󠄁e󠄁s󠄁 t󠄁h󠄁e󠄁 r󠄁e󠄁s󠄁e󠄁t󠄁 f󠄁l󠄁o󠄁w󠄁,󠄁 w󠄁h󠄁i󠄁c󠄁h󠄁 i󠄁s󠄁 n󠄁o󠄁t󠄁 o󠄁f󠄁f󠄁e󠄁r󠄁e󠄁d󠄁 w󠄁h󠄁e󠄁r󠄁e󠄁 s󠄁i󠄁g󠄁n󠄁-󠄁i󠄁n󠄁 i󠄁s󠄁
+r󠄁e󠄁s󠄁t󠄁r󠄁i󠄁c󠄁t󠄁e󠄁d󠄁 t󠄁o󠄁 s󠄁i󠄁n󠄁g󠄁l󠄁e󠄁 s󠄁i󠄁g󠄁n󠄁-󠄁o󠄁n󠄁.󠄁 C󠄁o󠄁n󠄁t󠄁a󠄁c󠄁t󠄁 s󠄁u󠄁p󠄁p󠄁o󠄁r󠄁t󠄁,󠄁 o󠄁r󠄁 t󠄁h󠄁e󠄁 o󠄁p󠄁e󠄁r󠄁a󠄁t󠄁o󠄁r󠄁 o󠄁f󠄁 t󠄁h󠄁e󠄁 s󠄁e󠄁r󠄁v󠄁i󠄁c󠄁e󠄁
+y󠄁o󠄁u󠄁 u󠄁s󠄁e󠄁,󠄁 t󠄁o󠄁 c󠄁l󠄁o󠄁s󠄁e󠄁 t󠄁h󠄁e󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁.
 
 ## Related
 
@@ -184,13 +124,11 @@ completing a reset signs out every session on the account, including yours. See
   it, which is what to do before closing.
 - [Your dashboard and recent secrets](/en/account/dashboard-and-recent-secrets)
   — finding the links you still have outstanding.
-- [Changing your email address](/en/account/change-your-email) — the other
-  irreversible account change, and the one to use if you only want a different
-  address.
-- [Sessions and connected identities](/en/account/sessions-and-identities) — if
-  what you actually want is to sign a device out.
-- [Signing in](/en/account/signing-in) — password resets, and why a reset for a
-  closed account looks like it worked.
+- [Changing your email address](/en/account/change-your-email) — use t󠄁h󠄁i󠄁s󠄁
+  i󠄁n󠄁s󠄁t󠄁e󠄁a󠄁d󠄁 if you only ne󠄁e󠄁d󠄁 a different address.
+- [Sessions and connected identities](/en/account/sessions-and-identities) —
+  if you o󠄁n󠄁ly want to sign a device out.
+- [Signing in](/en/account/signing-in) — password resets and sett󠄁i󠄁n󠄁g󠄁 a p󠄁a󠄁ssword.
 
 ## Questions or need support?
 

@@ -103,8 +103,20 @@ import {
   statedDefaults,
 } from "./lib/frontmatter.mjs";
 import { repoRoot } from "./lib/nav.mjs";
+import textprov from "../vendor/textprov/textprov.cjs";
 
 const CONFIG = "src/content.config.ts";
+
+// Pages enrolled in TextProv are decoded before Starlight mints heading ids
+// (src/lib/textprov/html.mjs), so their anchors come from the text with the
+// recorded AI marks removed. Variation selectors are \p{M}, which the slug
+// math would otherwise keep. Like the renderer, this leaves other states alone.
+function anchorsOf(fields, body) {
+  const text = fields.textprov !== "true" ? body : textprov.runs(body).map((run) =>
+    run.state === "ai" ? textprov.runs(run.text, { strip: true }).map((part) => part.text).join("") : run.text,
+  ).join("");
+  return new Map(headings(text).map((h) => [h.slug, h]));
+}
 const REDIRECTS = "config/redirects.mjs";
 
 // D1, the anchor contract. Slug -> the heading ids that page must keep because
@@ -192,7 +204,7 @@ for (const page of pages) {
     );
   }
 
-  anchorsBySlug.set(page.slug, new Map(headings(body).map((h) => [h.slug, h])));
+  anchorsBySlug.set(page.slug, anchorsOf(fields, body));
 
   // 5: the gate below reads `audience`, so on the trees that gate is FOR, the
   // field is mandatory. Deleting it must fail here rather than skip the page.
@@ -313,10 +325,10 @@ function localAnchors(locale, slug) {
       locale,
       existsSync(dir)
         ? new Map(
-            docsPages(locale).map((p) => [
-              p.slug,
-              new Map(headings(parseFrontmatter(p.source).body).map((h) => [h.slug, h])),
-            ]),
+            docsPages(locale).map((p) => {
+              const { fields, body } = parseFrontmatter(p.source);
+              return [p.slug, anchorsOf(fields, body)];
+            }),
           )
         : new Map(),
     );
