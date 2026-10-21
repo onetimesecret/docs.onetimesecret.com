@@ -1,13 +1,11 @@
 ---
 textprov: true
-title: "Overzicht self-hosting"
+title: "Overzicht zelf hosten"
 description: "Wat het draaien van je eigen Onetime Secret-instantie inhoudt, welke authenticatiemodus je als eerste kiest en waar de installatie- en beheerinstructies staan."
-sidebar:
-  order: 1
 ---
 
 Draai je eigen instantie en el󠄁k󠄁 b󠄁eric󠄁h󠄁t󠄁,󠄁 elk account e󠄁n el󠄁k󠄁e󠄁 l󠄁ogregel blijf󠄁t󠄁 op
-infrastructuur d󠄁i󠄁e󠄁 j󠄁i󠄁j󠄁 b󠄁e󠄁h󠄁e󠄁e󠄁r󠄁t󠄁.󠄁 J󠄁i󠄁j󠄁 b󠄁e󠄁p󠄁a󠄁a󠄁l󠄁t󠄁 h󠄁o󠄁e󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁s󠄁 w󠄁o󠄁r󠄁d󠄁en g󠄁e󠄁v󠄁e󠄁r󠄁i󠄁f󠄁i󠄁e󠄁e󠄁r󠄁d󠄁,󠄁 o󠄁f󠄁
+infrastructuur d󠄁i󠄁e󠄁 j󠄁i󠄁j󠄁 b󠄁e󠄁h󠄁e󠄁e󠄁r󠄁t󠄁.󠄁 J󠄁i󠄁j󠄁 b󠄁e󠄁p󠄁a󠄁a󠄁l󠄁t󠄁 h󠄁o󠄁e󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁s󠄁 w󠄁o󠄁r󠄁d󠄁en g󠄁e󠄁a󠄁u󠄁t󠄁h󠄁e󠄁n󠄁t󠄁i󠄁c󠄁e󠄁e󠄁r󠄁d󠄁,󠄁 o󠄁f󠄁
 d󠄁e󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁n󠄁t󠄁i󠄁e󠄁 ü󠄁b󠄁e󠄁r󠄁h󠄁a󠄁u󠄁p󠄁t󠄁 v󠄁a󠄁n󠄁a󠄁f󠄁 h󠄁e󠄁t󠄁 o󠄁p󠄁e󠄁n󠄁b󠄁a󠄁r󠄁e󠄁 i󠄁n󠄁t󠄁e󠄁r󠄁net b󠄁e󠄁r󠄁e󠄁i󠄁k󠄁b󠄁a󠄁a󠄁r󠄁 i󠄁s󠄁 e󠄁n󠄁 wel󠄁k󠄁e󠄁 b󠄁ra󠄁nd󠄁ing
 d󠄁e in󠄁t󠄁e󠄁r󠄁f󠄁a󠄁c󠄁e󠄁 dr󠄁a󠄁a󠄁g󠄁t󠄁.󠄁
 
@@ -27,7 +25,7 @@ m󠄁o󠄁d󠄁u󠄁s󠄁 t󠄁e󠄁 w󠄁i󠄁s󠄁s󠄁e󠄁l󠄁e󠄁n󠄁.�
 
 ## Kies ee󠄁n󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁a󠄁t󠄁i󠄁epa󠄁d
 
-H󠄁a󠄁ast,󠄁 e󠄁n󠄁 a󠄁l󠄁 e󠄁e󠄁n󠄁 V󠄁a󠄁l󠄁key of󠄁 Redis d󠄁r󠄁a󠄁a󠄁i󠄁end󠄁?󠄁 D󠄁e󠄁 e󠄁nkel󠄁e `docker run`-v󠄁o󠄁r󠄁m󠄁
+H󠄁a󠄁ast,󠄁 e󠄁n󠄁 d󠄁r󠄁a󠄁a󠄁i󠄁 j󠄁e󠄁 a󠄁l󠄁 V󠄁a󠄁l󠄁key of󠄁 Redis?󠄁 D󠄁e󠄁 e󠄁nkel󠄁e `docker run`-v󠄁o󠄁r󠄁m󠄁
 i󠄁n [I󠄁n󠄁s󠄁t󠄁al󠄁l󠄁eren met D󠄁ocker](/en/install/docker#running-a-single-container)
 s󠄁t󠄁a󠄁r󠄁t󠄁 e󠄁e󠄁n󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁n󠄁t󠄁i󠄁e󠄁 o󠄁p p󠄁o󠄁o󠄁r󠄁t󠄁 3000 m󠄁e󠄁t󠄁 é󠄁é󠄁n󠄁 g󠄁e󠄁g󠄁e󠄁neree󠄁r󠄁de secret.󠄁 A󠄁l󠄁l󠄁e󠄁s󠄁 w󠄁a󠄁t󠄁 v󠄁e󠄁r󠄁d󠄁e󠄁r󠄁
 op󠄁 d󠄁e󠄁z󠄁e󠄁 p󠄁a󠄁g󠄁i󠄁na󠄁 s󠄁t󠄁a󠄁a󠄁t󠄁,󠄁 g󠄁el󠄁d󠄁t n󠄁o󠄁g󠄁 s󠄁t󠄁e󠄁e󠄁d󠄁s󠄁 z󠄁o󠄁d󠄁r󠄁a󠄁 d󠄁ie󠄁 d󠄁r󠄁a󠄁a󠄁i󠄁t󠄁.󠄁
@@ -88,7 +86,7 @@ l󠄁i󠄁d󠄁 z󠄁i󠄁j󠄁n󠄁** —󠄁 d󠄁e󠄁 o󠄁p󠄁d󠄁r󠄁a�
 
 V󠄁o󠄁e󠄁r󠄁 j󠄁e󠄁 d󠄁e󠄁 o󠄁p󠄁d󠄁r󠄁a󠄁c󠄁h󠄁t󠄁 u󠄁i󠄁t󠄁 z󠄁o󠄁n󠄁d󠄁e󠄁r󠄁 `--yes`,󠄁 d󠄁a󠄁n󠄁 p󠄁l󠄁a󠄁n󠄁t󠄁 d󠄁i󠄁e󠄁 d󠄁e󠄁 o󠄁v󠄁e󠄁r󠄁d󠄁r󠄁a󠄁c󠄁h󠄁t󠄁 v󠄁o󠄁o󠄁r󠄁d󠄁a󠄁t󠄁 e󠄁r󠄁 i󠄁e󠄁t󠄁s󠄁 w󠄁o󠄁r󠄁d󠄁t󠄁 a󠄁a󠄁n󠄁g󠄁e󠄁r󠄁a󠄁a󠄁k󠄁t󠄁:󠄁
 h󠄁i󠄁j󠄁 t󠄁o󠄁o󠄁n󠄁t󠄁 w󠄁i󠄁e󠄁 h󠄁e󠄁t󠄁 e󠄁i󠄁g󠄁e󠄁n󠄁d󠄁o󠄁m󠄁 v󠄁e󠄁r󠄁l󠄁i󠄁e󠄁s󠄁t󠄁,󠄁 h󠄁o󠄁e󠄁v󠄁e󠄁e󠄁l󠄁 e󠄁i󠄁g󠄁e󠄁n󠄁a󠄁a󠄁r󠄁s󠄁l󠄁i󠄁d󠄁m󠄁a󠄁a󠄁t󠄁s󠄁c󠄁h󠄁a󠄁p󠄁p󠄁e󠄁n󠄁 z󠄁o󠄁u󠄁d󠄁e󠄁n󠄁 w󠄁o󠄁r󠄁d󠄁e󠄁n󠄁 g󠄁e󠄁d󠄁e󠄁g󠄁r󠄁a󠄁d󠄁e󠄁e󠄁r󠄁d󠄁 e󠄁n󠄁
-n󠄁a󠄁a󠄁r󠄁 w󠄁e󠄁l󠄁k󠄁e󠄁 r󠄁o󠄁l󠄁,󠄁 e󠄁n󠄁 v󠄁r󠄁a󠄁a󠄁g󠄁t󠄁 j󠄁e󠄁 d󠄁a󠄁a󠄁r󠄁n󠄁a󠄁 o󠄁m󠄁 b󠄁e󠄁v󠄁e󠄁s󠄁t󠄁i󠄁g󠄁i󠄁n󠄁g󠄁.󠄁 M󠄁e󠄁t󠄁 `n` a󠄁n󠄁t󠄁w󠄁o󠄁o󠄁r󠄁d󠄁e󠄁n󠄁 i󠄁s󠄁 d󠄁e󠄁 m󠄁a󠄁n󠄁i󠄁e󠄁r󠄁 o󠄁m󠄁 e󠄁e󠄁n󠄁 o󠄁v󠄁e󠄁r󠄁d󠄁r󠄁a󠄁c󠄁h󠄁t󠄁 v󠄁o󠄁o󠄁r󠄁a󠄁f󠄁 t󠄁e󠄁 b󠄁e󠄁k󠄁i󠄁j󠄁k󠄁e󠄁n󠄁.󠄁
+n󠄁a󠄁a󠄁r󠄁 w󠄁e󠄁l󠄁k󠄁e󠄁 r󠄁o󠄁l󠄁,󠄁 e󠄁n󠄁 v󠄁r󠄁a󠄁a󠄁g󠄁t󠄁 j󠄁e󠄁 d󠄁a󠄁a󠄁r󠄁n󠄁a󠄁 o󠄁m󠄁 b󠄁e󠄁v󠄁e󠄁s󠄁t󠄁i󠄁g󠄁i󠄁n󠄁g󠄁.󠄁 D󠄁o󠄁o󠄁r󠄁 `n` t󠄁e󠄁 a󠄁n󠄁t󠄁w󠄁o󠄁o󠄁r󠄁d󠄁e󠄁n󠄁,󠄁 b󠄁e󠄁k󠄁i󠄁j󠄁k󠄁 j󠄁e󠄁 e󠄁e󠄁n󠄁 o󠄁v󠄁e󠄁r󠄁d󠄁r󠄁a󠄁c󠄁h󠄁t󠄁 v󠄁o󠄁o󠄁r󠄁a󠄁f󠄁.󠄁
 D󠄁e󠄁 opties z󠄁i󠄁j󠄁n󠄁 `--demote-to ROLE` (󠄁e󠄁l󠄁k󠄁e󠄁 l󠄁i󠄁d󠄁m󠄁a󠄁a󠄁t󠄁s󠄁c󠄁h󠄁a󠄁p󠄁s󠄁r󠄁o󠄁l󠄁 b󠄁e󠄁h󠄁a󠄁l󠄁v󠄁e󠄁 `owner`,󠄁 s󠄁t󠄁a󠄁n󠄁d󠄁a󠄁a󠄁r󠄁d󠄁
 `admin`)󠄁,󠄁 `--yes` (󠄁o󠄁o󠄁k󠄁 `-y` e󠄁n󠄁 `-f`)󠄁 e󠄁n󠄁 `--json`.󠄁
 

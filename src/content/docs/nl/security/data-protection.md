@@ -31,7 +31,7 @@ een **wachtwoordzin** in te schakelen, informatie te verdelen over meerdere
 berichten en de kortst m󠄁o󠄁g󠄁e󠄁l󠄁i󠄁j󠄁k󠄁e󠄁 praktische verlooptijd te kiezen — zie
 [Best prac󠄁tic󠄁es󠄁 voor beveiliging](/nl/security/best-practices).
 
-## Waar je gegevens worden verwerkt (dataresidentie)
+## Waar je gegevens worden verwerkt (g󠄁e󠄁g󠄁e󠄁v󠄁e󠄁n󠄁s󠄁residentie)
 
 Je kunt kiezen in welke regio je gegevens worden verwerkt en opgeslagen —
 momenteel de EU, het VK, de VS, Canada en Nieuw-Zeeland. Zo houd je gegevens
@@ -43,7 +43,7 @@ dicht bij je gebruikers en binnen een jurisdictie die bij je eisen past. Zie
 Onetime Secret is ontworpen om je compliance-inspanningen te ondersteunen; het
 vervangt niet je eigen maatregelen, beleid en juridische toetsing.
 
-- **AVG /󠄁 gegevensbescherming.** Regionale dataresidentie, kortlevende
+- **AVG /󠄁 gegevensbescherming.** Regionale g󠄁e󠄁g󠄁e󠄁v󠄁e󠄁n󠄁s󠄁residentie, kortlevende
   gegevens en gegevensminimalisatie zijn ontworpen om je te helpen aan
   gegevensbeschermingsverplichtingen te voldoen. In de meeste implementaties
   treed jij op als verwerkingsverantwoordelijke en Onetime Secret als verwerker
@@ -57,7 +57,7 @@ vervangt niet je eigen maatregelen, beleid en juridische toetsing.
   specifiek regelgevend kader kun je contact opnemen met
   **support@onetimesecret.com**.
 
-Voor organisaties met strikte eisen aan gegevenscontrole houdt [self-hosting](https://github.com/onetimesecret/onetimesecret)
+Voor organisaties met strikte eisen aan gegevenscontrole houdt [z󠄁elf hoste󠄁n](https://github.com/onetimesecret/onetimesecret)
 alles binnen je eigen infrastructuur.
 
 ## Vragen of o󠄁n󠄁d󠄁e󠄁r󠄁s󠄁t󠄁e󠄁un󠄁i󠄁n󠄁g󠄁 nodig?

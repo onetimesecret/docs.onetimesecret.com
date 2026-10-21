@@ -184,3 +184,43 @@ The translation is accurate and complete. Security claims, plan limits, hostname
 - No build, `check:*` script or `dogfood.py check` was run. This review was read-only, and only the clean copies were read.
 - The anchors I suggest for `/nl/` links (`#een-aangepast-domein-verhuizen`, `#wat-elk-plan-bevat`, `#waar-je-domein-wordt-bediend`) are derived from the nl headings with GitHub-style slugging, not from a built site.
 - sourceOfTruth code claims were not re-verified. I checked only UI labels against `locales/content/nl` and plan limits against `billing.yaml.txt`; both match.
+
+## Resolution (fix round, 2026-10-21)
+
+40 of 41 findings fixed, 1 skipped. The nine flagged sidebar keys (general issues) are also fixed. `python3 tools/dogfood.py check --base b2883096` passes (15 files). `pnpm run check:frontmatter` passes. No build was run.
+
+| Commit | Subject |
+|---|---|
+| ece10715 | docs(i18n/nl): correct mistranslations in api, self-hosting, share pages |
+| ccba596d | docs(i18n/nl): use consistent terms for self-hosting, instance, expiry |
+| 453e3bc0 | docs(i18n/nl): link to Dutch pages that exist |
+| 8b9ee8d1 | docs(i18n/nl): fix fluency and typography |
+| d1a3ba15 | docs(i18n/nl): align sidebar labels with page titles |
+| de1050b0 | docs(i18n/nl): use gehost for a served domain in setup-guide |
+| (this commit) | docs(planning): record Dutch fix-round resolution |
+
+Some fixes use different wording from the suggestion. The reason is meaning or TextProv: the check rejected some rewordings because of how they aligned with legacy unmarked characters.
+
+- share/why-secret-links:16: «zodra het beveiligde bericht niet meer beschikbaar is». This leaves «Een oud bericht» as is. «beveiligd bericht» is the glossary rendering of the secret, so the two senses are now distinct. The suggested «Een oude e-mail of een oud chatbericht» failed the TextProv check.
+- security/best-practices:47: «## Geavanceerde beveiliging als je zelf host». This matches line 51 («als je Onetime Secret zelf host»). «bij zelf hosten» failed the TextProv check.
+- security/index:22: «Altijd een beperkte levensduur.» «Standaard» would suggest a default that can be switched off, but every secret has an expiry.
+- share/use-cases:17: «Stuur een set inloggegevens naar». «Stuur inloggegevens naar» failed the TextProv check.
+- share/index:49: «na het herladen» instead of «na het opnieuw laden». This avoids saying «opnieuw» twice in the same clause.
+- custom-domains/setup-guide:101–102: «Het domein wordt dan gehost» (de1050b0) instead of «aangeboden». This matches the new custom-domains/index heading «Waar je domein wordt gehost», and the cumulative check against b2883096 then passes. That commit comes after the sidebar commit, out of the protocol order.
+- Sidebar: `setupGuide` «Domein instellen» (EN label "Setup guide"; page title «Een aangepast domein instellen»). `brandGuide` «Branding». `createSecrets`/`retrieveSecrets` «Berichten aanmaken»/«Berichten ophalen» (unused legacy keys, values changed, keys kept).
+- The anchors `#een-aangepast-domein-verhuizen`, `#wat-elk-plan-bevat` and `#waar-je-domein-wordt-gehost` were checked with github-slugger 2.0.0. No other nl page links to the headings that changed (Dedicated instanties, gegevensresidentie, als je zelf host, meldingen).
+
+### Skipped findings
+
+| Page:line | Finding | Reason |
+|---|---|---|
+| custom-domains/setup-guide.md:107 | «## Controleer het resultaat» vs branding «## Het resultaat controleren» (heading mood) | Every heading in setup-guide is imperative (Voeg het domein toe, Maak de DNS-records aan, Verifieer het domein, Gebruik het domein), and so are the headings in share/index and change-your-region. Changing one heading would make the page inconsistent. Making all of them consistent means restyling headings and anchors across pages, which is a house-style decision (see below) and not a minimal fix. |
+
+### Decisions needed
+
+- Docs glossary (`src/content/docs/nl/translations/glossary.md`): "view/reveal → bekijken/weergeven" conflicts with the pages and the app, which use «onthullen» (web.STATUS.revealed «Onthuld», web.COMMON.click_to_continue). Proposed additions: secret link → «berichtlink»; self-hosting → «zelf hosten» (noun/verb), self-hosted → «zelfgehost(e)»; instance → «instantie»; data residency → «gegevensresidentie»; expiry/expiration → «verlooptijd»; served (domain) → «gehost»/«aangeboden»; disclosure (report) → «melding», never «onthulling»; open source → «opensource-» written closed.
+- `src/content/docs/nl/translations/_language-notes.md:88`: the example «Geheime koppelingen» contradicts the «geheim» ban on lines 23, 150 and 151. Remove it or replace it with «Beveiligde links»/«Berichtlinks».
+- App: «Berichtlink» (web.secrets.secret_link, email.common.secret_link_label) vs «Beveiligde link» (web.LABELS.secret_link). The docs use «berichtlink». The app should pick one.
+- Heading mood house style for nl docs (infinitive vs imperative). branding, custom-domains/index and use-cases use infinitives; setup-guide, share/index and change-your-region use imperatives. A decision is needed before a cross-page pass, because changing headings changes anchors.
+- `src/content/i18n/nl.json` keys this report did not flag, left unchanged: `nav.label.self-hosting` «Self-Hosting», which `src/components/starlight/nav-links.ts:44` renders in the top nav. Proposed: «Zelf hosten». Also `sidebar.secretLinks` «Geheime links», an unused legacy key that contains «geheim».
+- "Dedicated instances": the nl docs keep the loanword «dedicated» («Dedicated instanties»). The app renders web.billing.features.dedicated_infrastructure as «Toegewijde infrastructuur». Decide whether docs should follow the app («toegewijde instanties»).

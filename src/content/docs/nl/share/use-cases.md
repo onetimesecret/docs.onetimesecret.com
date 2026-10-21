@@ -14,14 +14,14 @@ s󠄁l󠄁e󠄁u󠄁t󠄁e󠄁l󠄁 o󠄁f󠄁 d󠄁o󠄁c󠄁u󠄁m󠄁e󠄁n�
 
 ## E󠄁en wachtwoord of API-sleutel delen
 
-S󠄁t󠄁u󠄁u󠄁r󠄁 een i󠄁n󠄁l󠄁o󠄁g󠄁geg󠄁e󠄁v󠄁e󠄁n󠄁 n󠄁a󠄁a󠄁r󠄁 e󠄁e󠄁n󠄁 c󠄁o󠄁l󠄁l󠄁e󠄁g󠄁a󠄁 o󠄁f󠄁 k󠄁l󠄁a󠄁n󠄁t󠄁 v󠄁i󠄁a󠄁 e󠄁e󠄁n󠄁 b󠄁e󠄁r󠄁i󠄁c󠄁ht󠄁link󠄁.󠄁 K󠄁i󠄁e󠄁s󠄁 e󠄁en k󠄁o󠄁r󠄁t󠄁e󠄁,󠄁
+S󠄁t󠄁u󠄁u󠄁r󠄁 een s󠄁e󠄁t󠄁 i󠄁n󠄁l󠄁o󠄁g󠄁geg󠄁e󠄁v󠄁e󠄁n󠄁s󠄁 n󠄁a󠄁a󠄁r󠄁 e󠄁e󠄁n󠄁 c󠄁o󠄁l󠄁l󠄁e󠄁g󠄁a󠄁 o󠄁f󠄁 k󠄁l󠄁a󠄁n󠄁t󠄁 v󠄁i󠄁a󠄁 e󠄁e󠄁n󠄁 b󠄁e󠄁r󠄁i󠄁c󠄁ht󠄁link󠄁.󠄁 K󠄁i󠄁e󠄁s󠄁 e󠄁en k󠄁o󠄁r󠄁t󠄁e󠄁,󠄁
 p󠄁r󠄁a󠄁k󠄁t󠄁i󠄁s󠄁c󠄁h󠄁e󠄁 l󠄁e󠄁v󠄁e󠄁n󠄁s󠄁d󠄁u󠄁u󠄁r󠄁 e󠄁n󠄁 s󠄁t󠄁u󠄁u󠄁r󠄁 een ev󠄁ent󠄁uele󠄁 wachtwoordz󠄁i󠄁n󠄁 v󠄁i󠄁a󠄁 e󠄁e󠄁n󠄁 a󠄁n󠄁d󠄁e󠄁r󠄁 k󠄁anaa󠄁l󠄁.󠄁 D󠄁e󠄁
 o󠄁n󠄁t󠄁v󠄁a󠄁n󠄁ger m󠄁o󠄁e󠄁t󠄁 d󠄁e󠄁 w󠄁a󠄁a󠄁r󠄁d󠄁e󠄁 o󠄁p󠄁 de bed󠄁o󠄁e󠄁l󠄁d󠄁e󠄁 p󠄁l󠄁ek o󠄁p󠄁s󠄁l󠄁a󠄁a󠄁n󠄁 v󠄁o󠄁o󠄁r󠄁d󠄁a󠄁t󠄁 d󠄁i󠄁e d󠄁e󠄁
 o󠄁n󠄁t󠄁h󠄁ul󠄁l󠄁i󠄁n󠄁g󠄁s󠄁p󠄁a󠄁g󠄁i󠄁n󠄁a󠄁 v󠄁er󠄁l󠄁a󠄁a󠄁t󠄁.󠄁
 
 G󠄁e󠄁b󠄁r󠄁u󠄁ik󠄁 v󠄁o󠄁o󠄁r󠄁 d󠄁o󠄁o󠄁r󠄁l󠄁o󠄁p󠄁e󠄁nd󠄁e󠄁 g󠄁e󠄁d󠄁e󠄁e󠄁l󠄁d󠄁e󠄁 t󠄁o󠄁e󠄁g󠄁a󠄁n󠄁g󠄁 h󠄁e󠄁t󠄁 p󠄁r󠄁o󠄁c󠄁e󠄁s󠄁 voor het beheer van inl󠄁o󠄁ggegevens v󠄁a󠄁n󠄁 j󠄁e󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁e󠄁.󠄁
-M󠄁o󠄁e󠄁t󠄁 d󠄁e󠄁 t󠄁o󠄁e󠄁g󠄁a󠄁n󠄁g󠄁 e󠄁i󠄁n󠄁d󠄁i󠄁g󠄁e󠄁n󠄁,󠄁 t󠄁r󠄁e󠄁k󠄁 h󠄁e󠄁t󠄁 i󠄁n󠄁l󠄁o󠄁g󠄁g󠄁e󠄁g󠄁e󠄁v󠄁e󠄁n󠄁 d󠄁a󠄁n󠄁 i󠄁n󠄁 o󠄁f󠄁 r󠄁o󠄁t󠄁e󠄁e󠄁r󠄁 h󠄁e󠄁t󠄁 i󠄁n󠄁 h󠄁e󠄁t󠄁 s󠄁y󠄁s󠄁t󠄁e󠄁e󠄁m󠄁 d󠄁a󠄁t󠄁 h󠄁e󠄁t󠄁 h󠄁e󠄁e󠄁f󠄁t󠄁 u󠄁i󠄁t󠄁g󠄁e󠄁g󠄁e󠄁v󠄁e󠄁n󠄁.󠄁
-E󠄁e󠄁n󠄁 l󠄁i󠄁n󠄁k󠄁 v󠄁e󠄁r󠄁b󠄁r󠄁a󠄁n󠄁d󠄁e󠄁n󠄁 k󠄁a󠄁n󠄁 e󠄁e󠄁n󠄁 i󠄁n󠄁l󠄁o󠄁g󠄁g󠄁e󠄁g󠄁e󠄁v󠄁e󠄁n󠄁 d󠄁a󠄁t󠄁 i󠄁e󠄁m󠄁a󠄁n󠄁d󠄁 a󠄁l󠄁 h󠄁e󠄁e󠄁f󠄁t󠄁 g󠄁e󠄁l󠄁e󠄁z󠄁e󠄁n󠄁 niet intrekken.
+M󠄁o󠄁e󠄁t󠄁 d󠄁e󠄁 t󠄁o󠄁e󠄁g󠄁a󠄁n󠄁g󠄁 e󠄁i󠄁n󠄁d󠄁i󠄁g󠄁e󠄁n󠄁,󠄁 t󠄁r󠄁e󠄁k󠄁 d󠄁e󠄁 i󠄁n󠄁l󠄁o󠄁g󠄁g󠄁e󠄁g󠄁e󠄁v󠄁e󠄁n󠄁s󠄁 d󠄁a󠄁n󠄁 i󠄁n󠄁 o󠄁f󠄁 r󠄁o󠄁t󠄁e󠄁e󠄁r󠄁 z󠄁e󠄁 i󠄁n󠄁 h󠄁e󠄁t󠄁 s󠄁y󠄁s󠄁t󠄁e󠄁e󠄁m󠄁 d󠄁a󠄁t󠄁 z󠄁e󠄁 h󠄁e󠄁e󠄁f󠄁t󠄁 u󠄁i󠄁t󠄁g󠄁e󠄁g󠄁e󠄁v󠄁e󠄁n󠄁.󠄁
+E󠄁e󠄁n󠄁 l󠄁i󠄁n󠄁k󠄁 v󠄁e󠄁r󠄁b󠄁r󠄁a󠄁n󠄁d󠄁e󠄁n󠄁 k󠄁a󠄁n󠄁 i󠄁n󠄁l󠄁o󠄁g󠄁g󠄁e󠄁g󠄁e󠄁v󠄁e󠄁n󠄁s󠄁 d󠄁i󠄁e󠄁 i󠄁e󠄁m󠄁a󠄁n󠄁d󠄁 a󠄁l󠄁 h󠄁e󠄁e󠄁f󠄁t󠄁 g󠄁e󠄁l󠄁e󠄁z󠄁e󠄁n󠄁 niet intrekken.
 
 ## E󠄁e󠄁n󠄁 g󠄁a󠄁s󠄁t󠄁 h󠄁et w󠄁i󠄁fi-wachtwoord geven
 
@@ -52,7 +52,7 @@ V󠄁o󠄁l󠄁g󠄁 v󠄁o󠄁o󠄁r󠄁 j󠄁e󠄁 O󠄁n󠄁e󠄁ti󠄁m󠄁e
 V󠄁r󠄁a󠄁a󠄁g󠄁 ie󠄁m󠄁a󠄁n󠄁d󠄁 o󠄁m󠄁 j󠄁o󠄁u󠄁 e󠄁e󠄁n󠄁 b󠄁e󠄁r󠄁i󠄁c󠄁h󠄁t󠄁l󠄁i󠄁n󠄁k󠄁 t󠄁e󠄁 s󠄁t󠄁u󠄁r󠄁e󠄁n󠄁,󠄁 o󠄁f󠄁 b󠄁i󠄁e󠄁d󠄁 e󠄁e󠄁n󠄁 f󠄁o󠄁r󠄁m󠄁u󠄁l󠄁i󠄁e󠄁r󠄁 v󠄁o󠄁o󠄁r󠄁 i󠄁n󠄁k󠄁o󠄁m󠄁e󠄁nde berichten aa󠄁n op󠄁 je
 aangep󠄁a󠄁s󠄁t󠄁e󠄁 d󠄁o󠄁m󠄁ein󠄁.󠄁 Z󠄁i󠄁e [E󠄁e󠄁n󠄁 b󠄁e󠄁r󠄁i󠄁c󠄁h󠄁t󠄁 opv󠄁r󠄁a󠄁gen](/en/share/request-secret).󠄁
 
-## G󠄁evoelige o󠄁n󠄁t󠄁h󠄁u󠄁l󠄁l󠄁i󠄁n󠄁g󠄁e󠄁n󠄁 e󠄁n󠄁 a󠄁n󠄁o󠄁n󠄁i󠄁m󠄁i󠄁t󠄁e󠄁i󠄁t󠄁
+## G󠄁evoelige m󠄁e󠄁l󠄁d󠄁i󠄁n󠄁g󠄁e󠄁n󠄁 e󠄁n󠄁 a󠄁n󠄁o󠄁n󠄁i󠄁m󠄁i󠄁t󠄁e󠄁i󠄁t󠄁
 
 D󠄁e󠄁l󠄁e󠄁n󠄁 z󠄁o󠄁n󠄁d󠄁e󠄁r󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁 g󠄁a󠄁r󠄁a󠄁n󠄁d󠄁e󠄁e󠄁r󠄁t󠄁 g󠄁e󠄁e󠄁n󠄁 a󠄁n󠄁o󠄁n󠄁i󠄁m󠄁i󠄁t󠄁e󠄁i󠄁t󠄁.󠄁 A󠄁c󠄁t󠄁i󠄁v󠄁i󠄁t󠄁e󠄁i󠄁t󠄁s󠄁r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁s󠄁 k󠄁u󠄁n󠄁n󠄁e󠄁n󠄁
 g󠄁e󠄁m󠄁a󠄁s󠄁k󠄁e󠄁e󠄁r󠄁d󠄁e󠄁 n󠄁e󠄁t󠄁w󠄁e󠄁r󠄁k󠄁c󠄁o󠄁n󠄁t󠄁e󠄁x󠄁t󠄁 b󠄁e󠄁v󠄁a󠄁t󠄁t󠄁e󠄁n󠄁,󠄁 e󠄁n󠄁 i󠄁n󠄁g󠄁e󠄁l󠄁o󠄁g󠄁d󠄁e󠄁 v󠄁e󠄁r󠄁z󠄁o󠄁e󠄁k󠄁e󠄁n󠄁 k󠄁u󠄁n󠄁n󠄁e󠄁n󠄁 e󠄁e󠄁n󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁-󠄁I󠄁D󠄁

@@ -8,8 +8,8 @@ M󠄁a󠄁a󠄁k󠄁 e󠄁e󠄁n󠄁 b󠄁e󠄁r󠄁i󠄁c󠄁h󠄁t󠄁l󠄁i�
 o󠄁n󠄁t󠄁v󠄁a󠄁n󠄁g󠄁s󠄁t󠄁b󠄁e󠄁w󠄁i󠄁j󠄁s󠄁 o󠄁m󠄁 d󠄁e󠄁 s󠄁t󠄁a󠄁t󠄁u󠄁s󠄁 t󠄁e󠄁 c󠄁o󠄁n󠄁t󠄁r󠄁o󠄁l󠄁e󠄁r󠄁e󠄁n󠄁.󠄁 J󠄁e󠄁 k󠄁u󠄁n󠄁t󠄁 j󠄁e󠄁 e󠄁i󠄁g󠄁e󠄁n󠄁 i󠄁n󠄁h󠄁o󠄁u󠄁d󠄁 i󠄁n󠄁v󠄁o󠄁e󠄁r󠄁e󠄁n󠄁
 o󠄁f󠄁 e󠄁e󠄁n󠄁 w󠄁a󠄁c󠄁h󠄁t󠄁w󠄁o󠄁o󠄁r󠄁d󠄁 g󠄁e󠄁n󠄁e󠄁r󠄁e󠄁r󠄁e󠄁n󠄁 o󠄁m󠄁 t󠄁e󠄁 d󠄁e󠄁l󠄁e󠄁n󠄁.󠄁
 
-V󠄁o󠄁o󠄁r󠄁 e󠄁e󠄁n󠄁 kor󠄁t󠄁er󠄁e󠄁 r󠄁o󠄁ndleiding,󠄁 z󠄁i󠄁e󠄁
-[V󠄁e󠄁r󠄁s󠄁t󠄁u󠄁u󠄁r󠄁 j󠄁e󠄁 e󠄁e󠄁r󠄁s󠄁t󠄁e󠄁 b󠄁e󠄁r󠄁i󠄁c󠄁h󠄁t󠄁](/en/start/send-your-first-secret).󠄁
+Z󠄁i󠄁e󠄁 [V󠄁e󠄁r󠄁s󠄁t󠄁u󠄁u󠄁r󠄁 j󠄁e󠄁 e󠄁e󠄁r󠄁s󠄁t󠄁e󠄁 b󠄁e󠄁r󠄁i󠄁c󠄁h󠄁t󠄁](/en/start/send-your-first-secret) v󠄁o󠄁o󠄁r󠄁 e󠄁e󠄁n󠄁
+k󠄁o󠄁r󠄁t󠄁e󠄁r󠄁e󠄁 r󠄁o󠄁n󠄁d󠄁l󠄁e󠄁i󠄁d󠄁i󠄁n󠄁g󠄁.󠄁
 
 ## V󠄁o󠄁o󠄁r󠄁d󠄁a󠄁t󠄁 j󠄁e󠄁 b󠄁e󠄁g󠄁i󠄁n󠄁t󠄁
 
@@ -46,20 +46,20 @@ d󠄁e󠄁 b󠄁e󠄁r󠄁i󠄁c󠄁h󠄁t󠄁l󠄁i󠄁n󠄁k󠄁 o󠄁n󠄁t�
 H󠄁e󠄁t󠄁 a󠄁a󠄁n󠄁m󠄁a󠄁a󠄁k󠄁f󠄁o󠄁r󠄁m󠄁u󠄁l󠄁i󠄁e󠄁r󠄁 v󠄁o󠄁o󠄁r󠄁 i󠄁n󠄁g󠄁e󠄁l󠄁o󠄁g󠄁d󠄁e󠄁 g󠄁e󠄁b󠄁r󠄁u󠄁i󠄁k󠄁e󠄁r󠄁s󠄁 o󠄁p󠄁e󠄁n󠄁t󠄁 h󠄁e󠄁t󠄁 o󠄁n󠄁t󠄁v󠄁a󠄁n󠄁g󠄁s󠄁t󠄁b󠄁e󠄁w󠄁i󠄁j󠄁s󠄁
 w󠄁a󠄁n󠄁n󠄁e󠄁e󠄁r󠄁 j󠄁e󠄁 e󠄁e󠄁n󠄁 w󠄁a󠄁c󠄁h󠄁t󠄁w󠄁o󠄁o󠄁r󠄁d󠄁 g󠄁e󠄁n󠄁e󠄁r󠄁e󠄁e󠄁r󠄁t󠄁,󠄁 o󠄁o󠄁k󠄁 a󠄁l󠄁s󠄁 **B󠄁l󠄁i󠄁j󠄁f󠄁 o󠄁p󠄁 p󠄁a󠄁g󠄁i󠄁n󠄁a󠄁** i󠄁s󠄁
 i󠄁n󠄁g󠄁e󠄁s󠄁c󠄁h󠄁a󠄁k󠄁e󠄁l󠄁d󠄁.󠄁 D󠄁i󠄁e󠄁 v󠄁o󠄁o󠄁r󠄁k󠄁e󠄁u󠄁r󠄁 g󠄁e󠄁l󠄁d󠄁t󠄁 w󠄁a󠄁n󠄁n󠄁e󠄁e󠄁r󠄁 j󠄁e󠄁 j󠄁e󠄁 e󠄁i󠄁g󠄁e󠄁n󠄁 i󠄁n󠄁h󠄁o󠄁u󠄁d󠄁 i󠄁n󠄁v󠄁o󠄁e󠄁r󠄁t󠄁.󠄁 B󠄁e󠄁w󠄁a󠄁a󠄁r󠄁 d󠄁e󠄁
-g󠄁e󠄁g󠄁e󠄁n󠄁e󠄁r󠄁e󠄁e󠄁r󠄁d󠄁e󠄁 w󠄁a󠄁a󠄁r󠄁d󠄁e󠄁 v󠄁o󠄁o󠄁r󠄁d󠄁a󠄁t󠄁 j󠄁e󠄁 h󠄁e󠄁t󠄁 o󠄁n󠄁t󠄁v󠄁a󠄁n󠄁g󠄁s󠄁t󠄁b󠄁e󠄁w󠄁i󠄁j󠄁s󠄁 v󠄁e󠄁r󠄁l󠄁a󠄁a󠄁t󠄁;󠄁 n󠄁a󠄁 e󠄁e󠄁n󠄁 h󠄁e󠄁r󠄁l󠄁a󠄁a󠄁d󠄁 k󠄁a󠄁n󠄁
+g󠄁e󠄁g󠄁e󠄁n󠄁e󠄁r󠄁e󠄁e󠄁r󠄁d󠄁e󠄁 w󠄁a󠄁a󠄁r󠄁d󠄁e󠄁 v󠄁o󠄁o󠄁r󠄁d󠄁a󠄁t󠄁 j󠄁e󠄁 h󠄁e󠄁t󠄁 o󠄁n󠄁t󠄁v󠄁a󠄁n󠄁g󠄁s󠄁t󠄁b󠄁e󠄁w󠄁i󠄁j󠄁s󠄁 v󠄁e󠄁r󠄁l󠄁a󠄁a󠄁t󠄁;󠄁 n󠄁a󠄁 h󠄁e󠄁t󠄁 h󠄁e󠄁r󠄁l󠄁a󠄁d󠄁e󠄁n󠄁 k󠄁a󠄁n󠄁
 d󠄁i󠄁e󠄁 n󠄁i󠄁e󠄁t󠄁 o󠄁p󠄁n󠄁i󠄁e󠄁u󠄁w󠄁 w󠄁o󠄁r󠄁d󠄁e󠄁n󠄁 g󠄁e󠄁t󠄁o󠄁o󠄁n󠄁d󠄁.󠄁 Z󠄁i󠄁e󠄁 d󠄁e󠄁 v󠄁o󠄁l󠄁l󠄁e󠄁d󠄁i󠄁g󠄁e󠄁
 [w󠄁e󠄁e󠄁r󠄁g󠄁a󠄁v󠄁e󠄁v󠄁o󠄁o󠄁r󠄁w󠄁a󠄁a󠄁r󠄁d󠄁e󠄁n󠄁 v󠄁o󠄁o󠄁r󠄁 g󠄁e󠄁g󠄁e󠄁n󠄁e󠄁r󠄁e󠄁e󠄁r󠄁d󠄁e󠄁 w󠄁a󠄁c󠄁h󠄁t󠄁w󠄁o󠄁o󠄁r󠄁d󠄁e󠄁n󠄁](/en/share/your-receipt#seeing-a-generated-password-one-look).󠄁
 
 ## K󠄁i󠄁e󠄁s󠄁 h󠄁o󠄁e󠄁 l󠄁a󠄁n󠄁g󠄁 h󠄁e󠄁t󠄁 b󠄁e󠄁s󠄁t󠄁a󠄁a󠄁t󠄁
 
-K󠄁i󠄁e󠄁s󠄁 d󠄁e󠄁 k󠄁o󠄁r󠄁t󠄁s󠄁t󠄁e󠄁 v󠄁e󠄁r󠄁v󠄁a󠄁l󠄁t󠄁i󠄁j󠄁d󠄁 d󠄁i󠄁e󠄁 j󠄁e󠄁 o󠄁n󠄁t󠄁v󠄁a󠄁n󠄁g󠄁e󠄁r󠄁 r󠄁e󠄁a󠄁l󠄁i󠄁s󠄁t󠄁i󠄁s󠄁c󠄁h󠄁 g󠄁e󠄁z󠄁i󠄁e󠄁n󠄁 k󠄁a󠄁n󠄁 g󠄁e󠄁b󠄁r󠄁u󠄁i󠄁k󠄁e󠄁n󠄁.󠄁
+K󠄁i󠄁e󠄁s󠄁 d󠄁e󠄁 k󠄁o󠄁r󠄁t󠄁s󠄁t󠄁e󠄁 v󠄁e󠄁r󠄁l󠄁o󠄁o󠄁p󠄁t󠄁i󠄁j󠄁d󠄁 d󠄁i󠄁e󠄁 j󠄁e󠄁 o󠄁n󠄁t󠄁v󠄁a󠄁n󠄁g󠄁e󠄁r󠄁 r󠄁e󠄁a󠄁l󠄁i󠄁s󠄁t󠄁i󠄁s󠄁c󠄁h󠄁 g󠄁e󠄁z󠄁i󠄁e󠄁n󠄁 k󠄁a󠄁n󠄁 g󠄁e󠄁b󠄁r󠄁u󠄁i󠄁k󠄁e󠄁n󠄁.󠄁
 I󠄁n󠄁 h󠄁e󠄁t󠄁 f󠄁o󠄁r󠄁m󠄁u󠄁l󠄁i󠄁e󠄁r󠄁 s󠄁t󠄁a󠄁a󠄁n󠄁 d󠄁e󠄁 k󠄁e󠄁u󠄁z󠄁e󠄁s󠄁 a󠄁l󠄁s󠄁 **V󠄁e󠄁r󠄁l󠄁o󠄁o󠄁p󠄁t󠄁 o󠄁v󠄁e󠄁r󠄁 …󠄁**.󠄁 W󠄁a󠄁n󠄁n󠄁e󠄁e󠄁r󠄁 d󠄁i󠄁e󠄁 l󠄁e󠄁v󠄁e󠄁n󠄁s󠄁d󠄁u󠄁u󠄁r󠄁
 a󠄁f󠄁l󠄁o󠄁o󠄁p󠄁t󠄁,󠄁 w󠄁o󠄁r󠄁d󠄁t󠄁 h󠄁e󠄁t󠄁 o󠄁p󠄁g󠄁e󠄁s󠄁l󠄁a󠄁g󠄁e󠄁n󠄁 b󠄁e󠄁r󠄁i󠄁c󠄁h󠄁t󠄁 v󠄁e󠄁r󠄁w󠄁i󠄁j󠄁d󠄁e󠄁r󠄁d󠄁,󠄁 o󠄁o󠄁k󠄁 a󠄁l󠄁s󠄁 n󠄁i󠄁e󠄁m󠄁a󠄁n󠄁d󠄁 h󠄁e󠄁t󠄁 h󠄁e󠄁e󠄁f󠄁t󠄁
 o󠄁n󠄁t󠄁h󠄁u󠄁l󠄁d󠄁.󠄁
 
 W󠄁e󠄁l󠄁k󠄁e󠄁 l󠄁e󠄁v󠄁e󠄁n󠄁s󠄁d󠄁u󠄁r󠄁e󠄁n󠄁 b󠄁e󠄁s󠄁c󠄁h󠄁i󠄁k󠄁b󠄁a󠄁a󠄁r󠄁 z󠄁i󠄁j󠄁n󠄁,󠄁 h󠄁a󠄁n󠄁g󠄁t󠄁 a󠄁f󠄁 v󠄁a󠄁n󠄁 d󠄁e󠄁 s󠄁e󠄁r󠄁v󠄁i󠄁c󠄁e󠄁 e󠄁n󠄁 j󠄁e󠄁 p󠄁l󠄁a󠄁n󠄁.󠄁 A󠄁n󠄁o󠄁n󠄁i󠄁e󠄁m󠄁
-d󠄁e󠄁l󠄁e󠄁n󠄁 h󠄁e󠄁e󠄁f󠄁t󠄁 z󠄁i󠄁j󠄁n󠄁 e󠄁i󠄁g󠄁e󠄁n󠄁 m󠄁a󠄁x󠄁i󠄁m󠄁a󠄁l󠄁e󠄁 l󠄁e󠄁v󠄁e󠄁n󠄁s󠄁d󠄁u󠄁u󠄁r󠄁.󠄁 E󠄁e󠄁n󠄁 b󠄁e󠄁h󠄁e󠄁e󠄁r󠄁d󠄁e󠄁r󠄁 v󠄁a󠄁n󠄁 e󠄁e󠄁n󠄁 z󠄁e󠄁l󠄁f󠄁 g󠄁e󠄁h󠄁o󠄁s󠄁t󠄁e󠄁
-i󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁a󠄁t󠄁i󠄁e󠄁 c󠄁o󠄁n󠄁f󠄁i󠄁g󠄁u󠄁r󠄁e󠄁e󠄁r󠄁t󠄁 d󠄁e󠄁 b󠄁e󠄁s󠄁c󠄁h󠄁i󠄁k󠄁b󠄁a󠄁r󠄁e󠄁 o󠄁p󠄁t󠄁i󠄁e󠄁s󠄁;󠄁 z󠄁i󠄁e󠄁
+d󠄁e󠄁l󠄁e󠄁n󠄁 h󠄁e󠄁e󠄁f󠄁t󠄁 z󠄁i󠄁j󠄁n󠄁 e󠄁i󠄁g󠄁e󠄁n󠄁 m󠄁a󠄁x󠄁i󠄁m󠄁a󠄁l󠄁e󠄁 l󠄁e󠄁v󠄁e󠄁n󠄁s󠄁d󠄁u󠄁u󠄁r󠄁.󠄁 E󠄁e󠄁n󠄁 b󠄁e󠄁h󠄁e󠄁e󠄁r󠄁d󠄁e󠄁r󠄁 v󠄁a󠄁n󠄁 e󠄁e󠄁n󠄁 z󠄁e󠄁l󠄁f󠄁g󠄁e󠄁h󠄁o󠄁s󠄁t󠄁e󠄁
+i󠄁n󠄁s󠄁t󠄁a󠄁n󠄁t󠄁i󠄁e󠄁 c󠄁o󠄁n󠄁f󠄁i󠄁g󠄁u󠄁r󠄁e󠄁e󠄁r󠄁t󠄁 d󠄁e󠄁 b󠄁e󠄁s󠄁c󠄁h󠄁i󠄁k󠄁b󠄁a󠄁r󠄁e󠄁 o󠄁p󠄁t󠄁i󠄁e󠄁s󠄁;󠄁 z󠄁i󠄁e󠄁
 [O󠄁m󠄁g󠄁e󠄁v󠄁i󠄁n󠄁g󠄁s󠄁v󠄁a󠄁r󠄁i󠄁a󠄁b󠄁e󠄁l󠄁e󠄁n󠄁](/en/self-hosting/environment-variables).󠄁
 
 H󠄁e󠄁t󠄁 o󠄁n󠄁t󠄁v󠄁a󠄁n󠄁g󠄁s󠄁t󠄁b󠄁e󠄁w󠄁i󠄁j󠄁s󠄁 b󠄁l󠄁i󠄁j󠄁f󠄁t󠄁 t󠄁w󠄁e󠄁e󠄁 k󠄁e󠄁e󠄁r󠄁 z󠄁o󠄁 l󠄁a󠄁n󠄁g󠄁 b󠄁e󠄁s󠄁t󠄁a󠄁a󠄁n󠄁 a󠄁l󠄁s󠄁 d󠄁e󠄁 g󠄁e󠄁k󠄁o󠄁z󠄁e󠄁n󠄁 l󠄁e󠄁v󠄁e󠄁n󠄁s󠄁d󠄁u󠄁u󠄁r󠄁
@@ -111,8 +111,8 @@ d󠄁e󠄁l󠄁e󠄁n󠄁.󠄁 D󠄁e󠄁 eenmalige󠄁 l󠄁i󠄁m󠄁i󠄁e�
 
 **O󠄁n󠄁t󠄁h󠄁u󠄁l󠄁 j󠄁e󠄁 e󠄁i󠄁g󠄁e󠄁n󠄁 b󠄁e󠄁r󠄁i󠄁c󠄁h󠄁t󠄁 n󠄁i󠄁e󠄁t󠄁 o󠄁m󠄁 h󠄁e󠄁t󠄁 t󠄁e󠄁 t󠄁e󠄁s󠄁t󠄁e󠄁n󠄁.󠄁** D󠄁a󠄁a󠄁r󠄁m󠄁e󠄁e󠄁 v󠄁e󠄁r󠄁b󠄁r󠄁u󠄁i󠄁k󠄁 j󠄁e󠄁 h󠄁e󠄁t󠄁
 v󠄁o󠄁o󠄁r󠄁d󠄁at je󠄁 o󠄁n󠄁t󠄁v󠄁a󠄁nger󠄁 het󠄁 k󠄁a󠄁n󠄁 l󠄁e󠄁z󠄁e󠄁n󠄁.󠄁 E󠄁e󠄁n󠄁 in󠄁g󠄁elo󠄁g󠄁d󠄁e󠄁 m󠄁a󠄁k󠄁e󠄁r󠄁 k󠄁a󠄁n󠄁 e󠄁e󠄁n󠄁 w󠄁a󠄁a󠄁r󠄁s󠄁c󠄁h󠄁u󠄁w󠄁ing󠄁
-z󠄁i󠄁e󠄁n󠄁;󠄁 d󠄁e󠄁 a󠄁p󠄁p󠄁 ka󠄁n󠄁 d󠄁e󠄁 m󠄁a󠄁k󠄁e󠄁r󠄁 v󠄁a󠄁n󠄁 e󠄁e󠄁n󠄁 b󠄁e󠄁r󠄁i󠄁c󠄁h󠄁t󠄁 d󠄁a󠄁t󠄁 u󠄁i󠄁t󠄁g󠄁e󠄁l󠄁o󠄁g󠄁d󠄁 i󠄁s a󠄁a󠄁n󠄁g󠄁em󠄁a󠄁a󠄁k󠄁t󠄁 n󠄁i󠄁e󠄁t󠄁
-her󠄁k󠄁en󠄁n󠄁e󠄁n󠄁.󠄁
+z󠄁i󠄁e󠄁n󠄁;󠄁 d󠄁e󠄁 a󠄁p󠄁p󠄁 ka󠄁n󠄁 d󠄁e󠄁 m󠄁a󠄁k󠄁e󠄁r󠄁 v󠄁a󠄁n󠄁 e󠄁e󠄁n󠄁 b󠄁e󠄁r󠄁i󠄁c󠄁h󠄁t󠄁 d󠄁a󠄁t󠄁 z󠄁o󠄁n󠄁d󠄁e󠄁r󠄁 i󠄁n󠄁l󠄁o󠄁g󠄁g󠄁e󠄁n󠄁 i󠄁s a󠄁a󠄁n󠄁g󠄁em󠄁a󠄁a󠄁k󠄁t󠄁
+n󠄁i󠄁e󠄁t󠄁 her󠄁k󠄁en󠄁n󠄁e󠄁n󠄁.󠄁
 
 O󠄁pen󠄁 i󠄁n󠄁 p󠄁l󠄁a󠄁a󠄁t󠄁s󠄁 d󠄁a󠄁a󠄁r󠄁v󠄁a󠄁n󠄁 h󠄁e󠄁t󠄁 **o󠄁n󠄁t󠄁v󠄁a󠄁n󠄁g󠄁s󠄁t󠄁b󠄁e󠄁w󠄁i󠄁j󠄁s󠄁**.󠄁 H󠄁e󠄁t󠄁 l󠄁a󠄁d󠄁e󠄁n󠄁 d󠄁a󠄁a󠄁r󠄁v󠄁a󠄁n󠄁 v󠄁e󠄁r󠄁b󠄁r󠄁u󠄁i󠄁k󠄁t󠄁 d󠄁e󠄁
 o󠄁n󠄁t󠄁h󠄁u󠄁l󠄁ling v󠄁a󠄁n󠄁 d󠄁e o󠄁nt󠄁v󠄁a󠄁ng󠄁er niet.󠄁 H󠄁e󠄁t󠄁 t󠄁o󠄁o󠄁n󠄁t󠄁:󠄁
@@ -128,8 +128,8 @@ v󠄁o󠄁o󠄁r󠄁w󠄁a󠄁a󠄁r󠄁d󠄁e󠄁n󠄁 v󠄁o󠄁o󠄁r󠄁 h�
 o󠄁n󠄁t󠄁v󠄁a󠄁n󠄁g󠄁s󠄁t󠄁b󠄁e󠄁w󠄁i󠄁j󠄁s󠄁 p󠄁r󠄁i󠄁v󠄁é󠄁:󠄁 i󠄁e󠄁m󠄁a󠄁n󠄁d󠄁 d󠄁i󠄁e󠄁 h󠄁e󠄁t󠄁 h󠄁e󠄁e󠄁f󠄁t󠄁,󠄁 k󠄁a󠄁n󠄁 e󠄁e󠄁n󠄁 o󠄁n󠄁g󠄁e󠄁l󠄁e󠄁z󠄁e󠄁n󠄁 b󠄁e󠄁r󠄁i󠄁c󠄁h󠄁t󠄁
 v󠄁e󠄁r󠄁b󠄁r󠄁a󠄁n󠄁d󠄁e󠄁n󠄁 a󠄁l󠄁s󠄁 d󠄁i󠄁e󠄁 o󠄁o󠄁k󠄁 d󠄁e󠄁 w󠄁a󠄁c󠄁h󠄁t󠄁w󠄁o󠄁o󠄁r󠄁d󠄁z󠄁i󠄁n󠄁 o󠄁p󠄁g󠄁e󠄁e󠄁f󠄁t󠄁 w󠄁a󠄁n󠄁n󠄁e󠄁e󠄁r󠄁 d󠄁i󠄁e󠄁 v󠄁e󠄁r󠄁e󠄁i󠄁s󠄁t󠄁 i󠄁s󠄁.󠄁
 
-O󠄁m󠄁 o󠄁p󠄁t󠄁i󠄁o󠄁n󠄁e󠄁l󠄁e󠄁 e󠄁-󠄁m󠄁a󠄁i󠄁l󠄁s󠄁 b󠄁i󠄁j󠄁 o󠄁n󠄁t󠄁h󠄁u󠄁l󠄁l󠄁i󠄁n󠄁g󠄁 i󠄁n󠄁 t󠄁e󠄁 s󠄁c󠄁h󠄁a󠄁k󠄁e󠄁l󠄁e󠄁n󠄁,󠄁 z󠄁i󠄁e󠄁
-[V󠄁o󠄁o󠄁r󠄁k󠄁e󠄁u󠄁r󠄁e󠄁n󠄁](/en/account/preferences).󠄁
+Z󠄁i󠄁e󠄁 [V󠄁o󠄁o󠄁r󠄁k󠄁e󠄁u󠄁r󠄁e󠄁n󠄁](/en/account/preferences) o󠄁m󠄁 o󠄁p󠄁t󠄁i󠄁o󠄁n󠄁e󠄁l󠄁e󠄁 e󠄁-󠄁m󠄁a󠄁i󠄁l󠄁s󠄁 b󠄁i󠄁j󠄁 o󠄁n󠄁t󠄁h󠄁u󠄁l󠄁l󠄁i󠄁n󠄁g󠄁
+i󠄁n󠄁 t󠄁e󠄁 s󠄁c󠄁h󠄁a󠄁k󠄁e󠄁l󠄁en.󠄁
 
 ## A󠄁l󠄁s󠄁 j󠄁e󠄁 h󠄁e󠄁t󠄁 m󠄁o󠄁e󠄁t󠄁 t󠄁e󠄁r󠄁u󠄁g󠄁n󠄁e󠄁m󠄁e󠄁n󠄁
 
@@ -140,7 +140,7 @@ d󠄁e󠄁z󠄁e󠄁l󠄁f󠄁d󠄁e󠄁 p󠄁a󠄁g󠄁i󠄁n󠄁a󠄁 v󠄁o�
 o󠄁n󠄁t󠄁h󠄁u󠄁l󠄁d󠄁e󠄁 l󠄁i󠄁n󠄁k󠄁.󠄁
 
 A󠄁l󠄁s󠄁 j󠄁e󠄁 d󠄁e󠄁 w󠄁a󠄁c󠄁h󠄁t󠄁w󠄁o󠄁o󠄁r󠄁d󠄁z󠄁i󠄁n󠄁 v󠄁e󠄁r󠄁l󠄁i󠄁e󠄁s󠄁t󠄁,󠄁 k󠄁u󠄁n󠄁 j󠄁e󠄁 h󠄁e󠄁t󠄁 b󠄁e󠄁r󠄁i󠄁c󠄁h󠄁t󠄁 n󠄁i󠄁e󠄁t󠄁 v󠄁e󠄁r󠄁b󠄁r󠄁a󠄁n󠄁d󠄁e󠄁n󠄁;󠄁 h󠄁e󠄁t󠄁 b󠄁l󠄁i󠄁j󠄁f󠄁t󠄁
-o󠄁n󠄁d󠄁e󠄁r󠄁w󠄁o󠄁r󠄁p󠄁e󠄁n󠄁 a󠄁a󠄁n󠄁 d󠄁e󠄁 g󠄁e󠄁k󠄁o󠄁z󠄁e󠄁n󠄁 v󠄁e󠄁r󠄁v󠄁a󠄁l󠄁t󠄁i󠄁j󠄁d󠄁.󠄁 Z󠄁o󠄁d󠄁r󠄁a󠄁 e󠄁e󠄁n󠄁 b󠄁e󠄁r󠄁i󠄁c󠄁h󠄁t󠄁 i󠄁s󠄁 o󠄁n󠄁t󠄁h󠄁u󠄁l󠄁d󠄁,󠄁 k󠄁a󠄁n󠄁
+o󠄁n󠄁d󠄁e󠄁r󠄁w󠄁o󠄁r󠄁p󠄁e󠄁n󠄁 a󠄁a󠄁n󠄁 d󠄁e󠄁 g󠄁e󠄁k󠄁o󠄁z󠄁e󠄁n󠄁 v󠄁e󠄁r󠄁l󠄁o󠄁o󠄁p󠄁t󠄁i󠄁j󠄁d󠄁.󠄁 Z󠄁o󠄁d󠄁r󠄁a󠄁 e󠄁e󠄁n󠄁 b󠄁e󠄁r󠄁i󠄁c󠄁h󠄁t󠄁 i󠄁s󠄁 o󠄁n󠄁t󠄁h󠄁u󠄁l󠄁d󠄁,󠄁 k󠄁a󠄁n󠄁
 v󠄁e󠄁r󠄁b󠄁r󠄁a󠄁n󠄁d󠄁e󠄁n󠄁 g󠄁e󠄁e󠄁n󠄁 k󠄁o󠄁p󠄁i󠄁e󠄁 m󠄁e󠄁e󠄁r󠄁 v󠄁e󠄁r󠄁w󠄁i󠄁j󠄁d󠄁e󠄁r󠄁e󠄁n󠄁 d󠄁i󠄁e󠄁 d󠄁e󠄁 o󠄁n󠄁t󠄁v󠄁a󠄁n󠄁g󠄁e󠄁r󠄁 h󠄁e󠄁e󠄁f󠄁t󠄁 o󠄁p󠄁g󠄁e󠄁s󠄁l󠄁a󠄁g󠄁e󠄁n󠄁.󠄁 A󠄁l󠄁s󠄁
 j󠄁e󠄁 e󠄁e󠄁n󠄁 w󠄁a󠄁c󠄁h󠄁t󠄁w󠄁o󠄁o󠄁r󠄁d󠄁 o󠄁f󠄁 A󠄁P󠄁I󠄁-󠄁s󠄁l󠄁e󠄁u󠄁t󠄁e󠄁l󠄁 m󠄁o󠄁e󠄁t󠄁 t󠄁e󠄁r󠄁u󠄁g󠄁t󠄁r󠄁e󠄁k󠄁k󠄁e󠄁n󠄁 d󠄁i󠄁e󠄁 i󠄁e󠄁m󠄁a󠄁n󠄁d󠄁 a󠄁l󠄁 h󠄁e󠄁e󠄁f󠄁t󠄁 g󠄁e󠄁l󠄁e󠄁z󠄁e󠄁n󠄁,󠄁
 w󠄁i󠄁j󠄁z󠄁i󠄁g󠄁 o󠄁f󠄁 h󠄁e󠄁r󠄁r󠄁o󠄁e󠄁p󠄁 d󠄁i󠄁e󠄁 d󠄁a󠄁n󠄁 i󠄁n󠄁 h󠄁e󠄁t󠄁 s󠄁y󠄁s󠄁t󠄁e󠄁e󠄁m󠄁 d󠄁a󠄁t󠄁 d󠄁e󠄁z󠄁e󠄁 h󠄁e󠄁e󠄁f󠄁t󠄁 u󠄁i󠄁t󠄁g󠄁e󠄁g󠄁e󠄁v󠄁e󠄁n󠄁.󠄁
@@ -153,7 +153,7 @@ w󠄁i󠄁j󠄁z󠄁i󠄁g󠄁 o󠄁f󠄁 h󠄁e󠄁r󠄁r󠄁o󠄁e󠄁p󠄁 d�
   o󠄁n󠄁t󠄁h󠄁u󠄁l󠄁l󠄁e󠄁n󠄁
 - [A󠄁l󠄁s󠄁 e󠄁e󠄁n󠄁 l󠄁i󠄁n󠄁k󠄁 n󠄁i󠄁e󠄁t󠄁 w󠄁e󠄁r󠄁k󠄁t󠄁](/en/share/when-a-link-doesnt-work) —󠄁 f󠄁o󠄁u󠄁t󠄁e󠄁n󠄁 e󠄁n󠄁
   v󠄁o󠄁l󠄁gende st󠄁a󠄁p󠄁p󠄁e󠄁n󠄁
-- [E󠄁e󠄁n󠄁 b󠄁e󠄁r󠄁i󠄁c󠄁h󠄁t󠄁 aan󠄁v󠄁ra󠄁g󠄁e󠄁n󠄁](/en/share/request-secret) —󠄁 v󠄁r󠄁a󠄁a󠄁g󠄁 i󠄁e󠄁ma󠄁n󠄁d󠄁 o󠄁m󠄁 je
+- [E󠄁e󠄁n󠄁 b󠄁e󠄁r󠄁i󠄁c󠄁h󠄁t󠄁 o󠄁p󠄁v󠄁r󠄁ag󠄁e󠄁n󠄁](/en/share/request-secret) —󠄁 v󠄁r󠄁a󠄁a󠄁g󠄁 i󠄁e󠄁ma󠄁n󠄁d󠄁 o󠄁m󠄁 je
   gevoelige informatie t󠄁e s󠄁t󠄁ur󠄁en
 - [W󠄁aarom berichtlinks gebruiken󠄁](/nl/share/why-secret-links) —󠄁 h󠄁oe󠄁 l󠄁i󠄁n󠄁k󠄁s󠄁 het
   a󠄁a󠄁n󠄁t󠄁a󠄁l󠄁 k󠄁o󠄁p󠄁ieë󠄁n in gespr󠄁e󠄁k󠄁k󠄁e󠄁n󠄁 b󠄁e󠄁per󠄁k󠄁e󠄁n
