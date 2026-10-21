@@ -53,7 +53,7 @@ zastępuje jednak Twoich własnych mechanizmów kontroli, polityk ani analizy pr
 Organizacjom o rygorystycznych wymaganiach dotyczących kontroli danych [self-hosting](https://github.com/onetimesecret/onetimesecret)
 pozwala zatrzymać wszystko we własnej infrastrukturze.
 
-## P󠄁ytania lub potrzebujesz w󠄁s󠄁pa󠄁r󠄁cia?
+## M󠄁a󠄁s󠄁z󠄁 p󠄁ytania lub potrzebujesz po󠄁m󠄁o󠄁cy󠄁?
 
 Chętnie pomożemy.
 

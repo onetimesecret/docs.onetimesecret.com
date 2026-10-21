@@ -2,8 +2,6 @@
 textprov: true
 title: "Przegląd self-hostingu"
 description: "Co wiąże się z uruchomieniem własnej instancji Onetime Secret, który tryb uwierzytelniania wybrać na początku i gdzie znaleźć instrukcje instalacji i obsługi."
-sidebar:
-  order: 1
 ---
 
 Uruchom własną instancję,󠄁 a󠄁 k󠄁a󠄁ż󠄁d󠄁y󠄁 s󠄁ek󠄁ret,󠄁 k󠄁a󠄁ż󠄁d󠄁e󠄁 k󠄁o󠄁n󠄁t󠄁o󠄁 i󠄁 k󠄁a󠄁ż󠄁d󠄁a󠄁 l󠄁i󠄁n󠄁i󠄁a󠄁 l󠄁o󠄁g󠄁ó󠄁w󠄁 p󠄁o󠄁zo󠄁s󠄁t󠄁a󠄁n󠄁ą󠄁 n󠄁a󠄁

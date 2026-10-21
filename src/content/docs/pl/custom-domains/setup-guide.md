@@ -128,7 +128,7 @@ T󠄁w󠄁o󠄁r󠄁z󠄁ą󠄁c󠄁 s󠄁e󠄁k󠄁r󠄁e󠄁t󠄁 p󠄁o󠄁 z
 L󠄁in󠄁k󠄁 d󠄁o󠄁 s󠄁ek󠄁re󠄁t󠄁u󠄁 u󠄁ż󠄁y󠄁w󠄁a󠄁 w󠄁t󠄁e󠄁dy󠄁 T󠄁w󠄁o󠄁j󠄁e󠄁j󠄁 d󠄁o󠄁m󠄁e󠄁n󠄁y󠄁,󠄁 n󠄁a󠄁 p󠄁r󠄁zy󠄁k󠄁ł󠄁a󠄁d󠄁
 `https://secrets.example.com/secret/abc123`.󠄁
 
-## Pytania lub potrzebujesz pomocy?󠄁
+## M󠄁a󠄁s󠄁z󠄁 p󠄁ytania lub potrzebujesz pomocy?󠄁
 
 N󠄁a󠄁p󠄁is󠄁z󠄁 n󠄁a adres󠄁 [support@onetimesecret.com](mailto:support@onetimesecret.com)
 l󠄁u󠄁b󠄁 s󠄁k󠄁o󠄁r󠄁z󠄁ys󠄁t󠄁a󠄁j z [formularza opinii](https://onetimesecret.com/feedback).
