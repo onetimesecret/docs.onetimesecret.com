@@ -7,7 +7,9 @@ import { describe, expect, it } from "vitest";
 
 import {
   AA_MINIMUM,
+  BASE_VERIFIED_AGAINST,
   STARLIGHT_BASE,
+  baseVersionDrift,
   contrastRatio,
   luminance,
   mixOver,
@@ -198,5 +200,18 @@ describe("sidebar active link regression", () => {
       const ratio = contrastRatio(t["--sl-color-text-invert"], t["--sl-color-text-accent"]);
       expect(ratio, `${theme} skip link`).toBeGreaterThanOrEqual(AA_MINIMUM.text);
     }
+  });
+});
+
+describe("baseVersionDrift", () => {
+  it("reports nothing while the installed versions match the verified ones", () => {
+    expect(baseVersionDrift((name) => BASE_VERIFIED_AGAINST[name])).toEqual([]);
+  });
+
+  it("names each package whose installed version differs, with both versions", () => {
+    const installed = (name) => (name === "tailwindcss" ? "9.9.9" : BASE_VERIFIED_AGAINST[name]);
+    expect(baseVersionDrift(installed)).toEqual([
+      { name: "tailwindcss", verified: BASE_VERIFIED_AGAINST.tailwindcss, installed: "9.9.9" },
+    ]);
   });
 });

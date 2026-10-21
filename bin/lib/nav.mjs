@@ -102,9 +102,13 @@ export async function sidebarGroups() {
  * strip the extension, then collapse a trailing "/index" to its directory.
  * The root index page has no directory to collapse into (the regex needs a
  * leading slash), so it keeps the slug "index".
+ *
+ * Separators are normalised first. path.relative() yields backslashes on
+ * Windows, where the "/index" collapse would otherwise silently no-op and
+ * every index page would get a wrong slug.
  */
 export function fileSlug(relativePath, ext) {
-  return relativePath.replace(ext, "").replace(/\/index$/, "");
+  return relativePath.replaceAll("\\", "/").replace(ext, "").replace(/\/index$/, "");
 }
 
 /**
@@ -123,7 +127,7 @@ export function docsPages() {
   const pages = [];
   for (const path of walk(root)) {
     if (!DOC_EXT.test(path) || basename(path).startsWith("_")) continue;
-    const rel = relative(root, path);
+    const rel = relative(root, path).replaceAll("\\", "/");
     const dir = dirname(rel);
     pages.push({ slug: fileSlug(rel, DOC_EXT), dir: dir === "." ? "" : dir, path });
   }
