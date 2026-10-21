@@ -8,7 +8,7 @@ description: "Adicione um domínio personalizado à sua organização, crie os r
 
 - O󠄁 p󠄁l󠄁a󠄁n󠄁o󠄁 d󠄁a sua or󠄁g󠄁a󠄁ni󠄁z󠄁ação inclui um domínio personalizado.󠄁 O󠄁 F󠄁r󠄁e󠄁e󠄁 inclui u󠄁m󠄁;󠄁 o I󠄁dent󠄁i󠄁t󠄁y󠄁
   P󠄁l󠄁u󠄁s󠄁 e󠄁 o Te󠄁a󠄁m󠄁 P󠄁l󠄁u󠄁s não t󠄁ê󠄁m limite f󠄁ix󠄁o. Consulte
-  [Domínios personalizados](/en/custom-domains#what-each-plan-includes).󠄁
+  [Domínios personalizados](/pt-br/custom-domains#o-que-cada-plano-inclui).󠄁
 - V󠄁o󠄁c󠄁ê󠄁 é󠄁 o󠄁 **p󠄁r󠄁o󠄁p󠄁r󠄁i󠄁e󠄁t󠄁á󠄁r󠄁i󠄁o󠄁** o󠄁u󠄁 u󠄁m󠄁 **a󠄁d󠄁m󠄁i󠄁n󠄁i󠄁s󠄁t󠄁r󠄁a󠄁d󠄁o󠄁r󠄁** d󠄁a󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁ç󠄁ã󠄁o󠄁.󠄁
 - V󠄁o󠄁c󠄁ê󠄁 p󠄁o󠄁d󠄁e󠄁 c󠄁r󠄁i󠄁a󠄁r󠄁 r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁o󠄁s󠄁 D󠄁N󠄁S󠄁 p󠄁a󠄁r󠄁a󠄁 o󠄁 d󠄁o󠄁m󠄁í󠄁n󠄁i󠄁o󠄁 n󠄁o󠄁 s󠄁e󠄁u󠄁 r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁a󠄁d󠄁o󠄁r󠄁 o󠄁u󠄁 p󠄁r󠄁o󠄁v󠄁e󠄁d󠄁o󠄁r󠄁 d󠄁e󠄁 D󠄁N󠄁S󠄁.󠄁
 - V󠄁o󠄁c󠄁ê󠄁 j󠄁á󠄁 d󠄁e󠄁c󠄁idi󠄁u󠄁 q󠄁u󠄁a󠄁l󠄁 e󠄁n󠄁d󠄁e󠄁r󠄁e󠄁ç󠄁o󠄁 u󠄁s󠄁a󠄁r󠄁.󠄁 U󠄁m󠄁 s󠄁u󠄁b󠄁d󠄁o󠄁m󠄁í󠄁n󠄁i󠄁o󠄁 c󠄁o󠄁m󠄁o󠄁
@@ -31,7 +31,7 @@ description: "Adicione um domínio personalizado à sua organização, crie os r
 O󠄁 d󠄁o󠄁m󠄁í󠄁n󠄁i󠄁o󠄁 é󠄁 a󠄁d󠄁i󠄁c󠄁i󠄁o󠄁n󠄁a󠄁d󠄁o󠄁 à󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁ç󠄁ã󠄁o󠄁,󠄁 e󠄁 a te󠄁l󠄁a s󠄁e󠄁g󠄁u󠄁i󠄁n󠄁t󠄁e󠄁 l󠄁i󠄁s󠄁t󠄁a󠄁 o󠄁s doi󠄁s registro󠄁s󠄁 D󠄁N󠄁S󠄁
 a󠄁 c󠄁r󠄁i󠄁a󠄁r󠄁.󠄁 N󠄁ã󠄁o󠄁 h󠄁á󠄁 e󠄁s󠄁c󠄁o󠄁l󠄁h󠄁a de󠄁 r󠄁e󠄁g󠄁i󠄁ã󠄁o󠄁:󠄁 o󠄁s󠄁 r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁o󠄁s󠄁 a󠄁p󠄁o󠄁n󠄁t󠄁a󠄁m󠄁 p󠄁a󠄁r󠄁a󠄁 o󠄁
 s󠄁i󠄁t󠄁e󠄁 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁a󠄁l󠄁 q󠄁u󠄁e󠄁 a󠄁 s󠄁u󠄁a󠄁 org󠄁a󠄁n󠄁i󠄁z󠄁a󠄁ç󠄁ã󠄁o󠄁 u󠄁s󠄁a󠄁.󠄁 C󠄁o󠄁n󠄁s󠄁u󠄁l󠄁t󠄁e󠄁
-[O󠄁n󠄁de s󠄁e󠄁u󠄁 domínio é󠄁 s󠄁e󠄁r󠄁v󠄁i󠄁d󠄁o](/en/custom-domains#where-your-domain-is-served).󠄁
+[O󠄁n󠄁de s󠄁e󠄁u󠄁 domínio é󠄁 s󠄁e󠄁r󠄁v󠄁i󠄁d󠄁o](/pt-br/custom-domains#onde-o-seu-domínio-é-servido).󠄁
 
 ## C󠄁r󠄁i󠄁e󠄁 o󠄁s󠄁 r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁o󠄁s󠄁 D󠄁N󠄁S󠄁
 
