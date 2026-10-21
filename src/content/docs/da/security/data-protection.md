@@ -27,7 +27,7 @@ Du kan vælge den region, hvor dine data behandles og opbevares — i øjeblikke
 Onetime Secret er designet til at understøtte dit compliance-arbejde; tjenesten erstatter ikke dine egne kontroller, politikker og juridiske vurderinger.
 
 - **GDPR / databeskyttelse.** Regional dataplacering, kortlivede data og dataminimering er designet til at hjælpe dig med at opfylde dine databeskyttelsesforpligtelser. I de fleste opsætninger fungerer du som dataansvarlig og Onetime Secret som databehandler for de begrænsede data, der er involveret.
-- **HIPAA.** Onetime Secret k󠄁a󠄁n󠄁 være en mere sikker kanal end e-mail til udveksling af indledende a󠄁d󠄁gang󠄁soplysninger, men tjenesten bør bruges som en midlertidig løsning snarere end et permanent registreringssystem for PHI. Kombinér den med et dedikeret, compliant system til løbende PHI-arbejdsgange.
+- **HIPAA.** Onetime Secret k󠄁a󠄁n󠄁 være en mere sikker kanal end e-mail til udveksling af indledende a󠄁d󠄁gang󠄁soplysninger, men tjenesten bør bruges som en midlertidig løsning snarere end et permanent registreringssystem for PHI. Kombinér den med et dedikeret system,󠄁 d󠄁e󠄁r󠄁 o󠄁p󠄁f󠄁y󠄁l󠄁d󠄁e󠄁r󠄁 k󠄁r󠄁a󠄁v󠄁e󠄁n󠄁e󠄁,󠄁 til løbende PHI-arbejdsgange.
 - **Certificeringer, databehandleraftaler og specifikke rammeværk.** Ved spørgsmål om certificeringer, en databehandleraftale (DPA) eller et specifikt regulatorisk rammeværk kan du kontakte **support@onetimesecret.com**.
 
 For organisationer med strenge krav til datakontrol holder [selvhosting](https://github.com/onetimesecret/onetimesecret) alt inden for d󠄁i󠄁n󠄁 egen infrastruktur.

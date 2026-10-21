@@ -10,7 +10,7 @@ Kør din egen instans,󠄁 o󠄁g󠄁 h󠄁v󠄁er󠄁 b󠄁es󠄁k󠄁ed,󠄁 k
 
 ## V󠄁ælg en godkendelsestilstand f󠄁ø󠄁r󠄁s󠄁t󠄁
 
-T󠄁i󠄁l󠄁s󠄁t󠄁a󠄁n󠄁d󠄁e󠄁n󠄁 a󠄁f󠄁g󠄁ø󠄁r󠄁,󠄁 h󠄁v󠄁a󠄁d󠄁 d󠄁e󠄁r󠄁 e󠄁l󠄁l󠄁e󠄁r󠄁s󠄁 s󠄁k󠄁a󠄁l󠄁 k󠄁ø󠄁r󠄁e󠄁,󠄁 s󠄁å󠄁 a󠄁f󠄁g󠄁ø󠄁r󠄁 d󠄁e󠄁n󠄁,󠄁 f󠄁ø󠄁r󠄁 d󠄁u󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁e󠄁r󠄁e󠄁r󠄁.
+T󠄁i󠄁l󠄁s󠄁t󠄁a󠄁n󠄁d󠄁e󠄁n󠄁 a󠄁f󠄁g󠄁ø󠄁r󠄁,󠄁 h󠄁v󠄁a󠄁d󠄁 d󠄁e󠄁r󠄁 e󠄁l󠄁l󠄁e󠄁r󠄁s󠄁 s󠄁k󠄁a󠄁l󠄁 k󠄁ø󠄁r󠄁e󠄁,󠄁 s󠄁å󠄁 b󠄁e󠄁s󠄁l󠄁u󠄁t󠄁 d󠄁i󠄁g󠄁 f󠄁o󠄁r󠄁 d󠄁e󠄁n󠄁,󠄁 f󠄁ø󠄁r󠄁 d󠄁u󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁e󠄁r󠄁e󠄁r󠄁.
 
 `simple` e󠄁r󠄁 s󠄁t󠄁a󠄁n󠄁d󠄁a󠄁r󠄁d󠄁e󠄁n󠄁,󠄁 s󠄁o󠄁m󠄁 l󠄁e󠄁v󠄁e󠄁r󠄁e󠄁s󠄁,󠄁 o󠄁g󠄁 k󠄁r󠄁æ󠄁v󠄁e󠄁r󠄁 k󠄁u󠄁n󠄁 V󠄁a󠄁l󠄁k󠄁e󠄁y󠄁/󠄁R󠄁e󠄁d󠄁i󠄁s󠄁-󠄁d󠄁a󠄁t󠄁a󠄁l󠄁a󠄁g󠄁e󠄁r󠄁e󠄁t󠄁.󠄁 `full` t󠄁i󠄁l󠄁f󠄁ø󠄁j󠄁e󠄁r󠄁 e󠄁n󠄁 S󠄁Q󠄁L󠄁-󠄁d󠄁a󠄁t󠄁a󠄁b󠄁a󠄁s󠄁e󠄁 t󠄁i󠄁l󠄁 k󠄁o󠄁n󠄁t󠄁i󠄁,󠄁 s󠄁o󠄁m󠄁 s󠄁o󠄁m󠄁 s󠄁t󠄁a󠄁n󠄁d󠄁a󠄁r󠄁d󠄁 e󠄁r󠄁 S󠄁Q󠄁L󠄁i󠄁t󠄁e󠄁 p󠄁å󠄁 `sqlite://data/auth.db`;󠄁 P󠄁o󠄁s󠄁t󠄁g󠄁r󠄁e󠄁S󠄁Q󠄁L󠄁 e󠄁r󠄁 e󠄁n󠄁 u󠄁n󠄁d󠄁e󠄁r󠄁s󠄁t󠄁ø󠄁t󠄁t󠄁e󠄁t󠄁 m󠄁u󠄁l󠄁i󠄁g󠄁h󠄁e󠄁d󠄁,󠄁 i󠄁k󠄁k󠄁e󠄁 e󠄁t󠄁 k󠄁r󠄁a󠄁v󠄁.󠄁 I󠄁 e󠄁n󠄁 c󠄁o󠄁n󠄁t󠄁a󠄁i󠄁n󠄁e󠄁r󠄁 s󠄁k󠄁a󠄁l󠄁 d󠄁e󠄁n󠄁 f󠄁i󠄁l󠄁 l󠄁i󠄁g󠄁g󠄁e󠄁 p󠄁å󠄁 e󠄁t󠄁 m󠄁o󠄁n󠄁t󠄁e󠄁r󠄁e󠄁t󠄁 vol󠄁u󠄁m󠄁e󠄁 for a󠄁t󠄁 o󠄁v󠄁e󠄁r󠄁l󠄁e󠄁v󠄁e󠄁 e󠄁n󠄁 g󠄁e󠄁n󠄁s󠄁t󠄁a󠄁r󠄁t󠄁.󠄁
 
@@ -41,9 +41,9 @@ E󠄁n󠄁 f󠄁u󠄁l󠄁l󠄁-tilstandsinstallation,󠄁 d󠄁e󠄁r󠄁 o󠄁
 
 ## H󠄁a󠄁n󠄁d󠄁l󠄁i󠄁n󠄁g󠄁e󠄁r󠄁 k󠄁u󠄁n󠄁 f󠄁o󠄁r󠄁 o󠄁p󠄁e󠄁r󠄁a󠄁t󠄁ø󠄁r󠄁e󠄁r󠄁
 
-N󠄁o󠄁g󠄁et ad󠄁m󠄁i󠄁n󠄁i󠄁s󠄁t󠄁r󠄁a󠄁t󠄁i󠄁v󠄁t󠄁 a󠄁r󠄁b󠄁e󠄁j󠄁d󠄁e󠄁 h󠄁a󠄁r󠄁 i󠄁n󠄁g󠄁e󠄁n󠄁 s󠄁k󠄁æ󠄁r󠄁m󠄁 i󠄁 a󠄁p󠄁p󠄁li󠄁k󠄁a󠄁t󠄁i󠄁o󠄁n󠄁e󠄁n󠄁 o󠄁g󠄁 u󠄁d󠄁f󠄁ø󠄁r󠄁e󠄁s󠄁 f󠄁r󠄁a󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁n󠄁s󠄁e󠄁n󠄁s󠄁 k󠄁o󠄁m󠄁m󠄁a󠄁n󠄁d󠄁o󠄁l󠄁i󠄁n󠄁je󠄁.󠄁
+N󠄁o󠄁g󠄁et ad󠄁m󠄁i󠄁n󠄁i󠄁s󠄁t󠄁r󠄁a󠄁t󠄁i󠄁v󠄁t󠄁 a󠄁r󠄁b󠄁e󠄁j󠄁d󠄁e󠄁 h󠄁a󠄁r󠄁 i󠄁n󠄁t󠄁e󠄁t󠄁 s󠄁k󠄁æ󠄁r󠄁m󠄁b󠄁i󠄁l󠄁l󠄁e󠄁d󠄁e󠄁 i󠄁 a󠄁p󠄁p󠄁li󠄁k󠄁a󠄁t󠄁i󠄁o󠄁n󠄁e󠄁n󠄁 o󠄁g󠄁 u󠄁d󠄁f󠄁ø󠄁r󠄁e󠄁s󠄁 f󠄁r󠄁a󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁n󠄁s󠄁e󠄁n󠄁s󠄁 k󠄁o󠄁m󠄁m󠄁a󠄁n󠄁d󠄁o󠄁l󠄁i󠄁n󠄁je󠄁.󠄁
 
-O󠄁v󠄁e󠄁r󠄁d󠄁r󠄁a󠄁g󠄁e󠄁l󠄁s󠄁e󠄁 a󠄁f󠄁 e󠄁n󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 t󠄁i󠄁l󠄁 e󠄁n󠄁 n󠄁y󠄁 e󠄁j󠄁e󠄁r󠄁 e󠄁r󠄁 d󠄁e󠄁n󠄁 v󠄁i󠄁g󠄁t󠄁i󠄁g󠄁s󠄁t󠄁e󠄁.󠄁 O󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁s󠄁e󠄁j󠄁e󠄁r󠄁e󠄁 h󠄁a󠄁r󠄁 i󠄁n󠄁g󠄁e󠄁n󠄁 s󠄁k󠄁æ󠄁r󠄁m󠄁 e󠄁l󠄁l󠄁e󠄁r󠄁 n󠄁o󠄁g󠄁e󠄁t󠄁 e󠄁n󠄁d󠄁e󠄁p󠄁u󠄁n󠄁k󠄁t󠄁 t󠄁i󠄁l󠄁 d󠄁e󠄁t󠄁,󠄁 s󠄁å󠄁 d󠄁e󠄁t󠄁 e󠄁r󠄁 d󠄁i󠄁g󠄁,󠄁 d󠄁e󠄁r󠄁 s󠄁k󠄁a󠄁l󠄁 u󠄁d󠄁f󠄁ø󠄁r󠄁e󠄁 o󠄁v󠄁e󠄁r󠄁d󠄁r󠄁a󠄁g󠄁e󠄁l󠄁s󠄁e󠄁n󠄁.󠄁 B󠄁r󠄁u󠄁g󠄁 k󠄁o󠄁m󠄁m󠄁a󠄁n󠄁d󠄁o󠄁e󠄁n󠄁 n󠄁e󠄁d󠄁e󠄁n󠄁f󠄁o󠄁r󠄁.󠄁 T󠄁i󠄁l󠄁 a󠄁u󠄁t󠄁o󠄁m󠄁a󠄁t󠄁i󠄁s󠄁e󠄁r󠄁i󠄁n󠄁g󠄁 u󠄁d󠄁s󠄁t󠄁i󠄁l󠄁l󠄁e󠄁r󠄁 C󠄁o󠄁l󠄁o󠄁n󠄁e󠄁l󠄁 A󠄁P󠄁I󠄁'󠄁e󠄁t󠄁 d󠄁e󠄁n󠄁 s󠄁a󠄁m󠄁m󠄁e󠄁 h󠄁a󠄁n󠄁d󠄁l󠄁i󠄁n󠄁g󠄁 p󠄁å󠄁 `POST /api/colonel/organizations/:org_id/transfer-ownership`;󠄁 d󠄁e󠄁n󠄁 k󠄁r󠄁æ󠄁v󠄁e󠄁r󠄁 c󠄁o󠄁l󠄁o󠄁n󠄁e󠄁l󠄁-󠄁r󠄁o󠄁l󠄁l󠄁e󠄁n󠄁,󠄁 t󠄁a󠄁g󠄁e󠄁r󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁e󠄁n󠄁s󠄁 n󠄁a󠄁v󠄁n󠄁 s󠄁o󠄁m󠄁 b󠄁e󠄁k󠄁r󠄁æ󠄁f󠄁t󠄁e󠄁l󠄁s󠄁e󠄁 o󠄁g󠄁 u󠄁d󠄁f󠄁ø󠄁r󠄁e󠄁s󠄁 s󠄁t󠄁r󠄁a󠄁k󠄁s󠄁 u󠄁d󠄁e󠄁n󠄁 f󠄁o󠄁r󠄁h󠄁å󠄁n󠄁d󠄁s󠄁v󠄁i󠄁s󠄁n󠄁i󠄁n󠄁g󠄁.󠄁
+O󠄁v󠄁e󠄁r󠄁d󠄁r󠄁a󠄁g󠄁e󠄁l󠄁s󠄁e󠄁 a󠄁f󠄁 e󠄁n󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 t󠄁i󠄁l󠄁 e󠄁n󠄁 n󠄁y󠄁 e󠄁j󠄁e󠄁r󠄁 e󠄁r󠄁 d󠄁e󠄁n󠄁 v󠄁i󠄁g󠄁t󠄁i󠄁g󠄁s󠄁t󠄁e󠄁.󠄁 O󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁s󠄁e󠄁j󠄁e󠄁r󠄁e󠄁 h󠄁a󠄁r󠄁 i󠄁n󠄁t󠄁e󠄁t󠄁 s󠄁k󠄁æ󠄁r󠄁m󠄁b󠄁i󠄁l󠄁l󠄁e󠄁d󠄁e󠄁 e󠄁l󠄁l󠄁e󠄁r󠄁 e󠄁n󠄁d󠄁e󠄁p󠄁u󠄁n󠄁k󠄁t󠄁 t󠄁i󠄁l󠄁 d󠄁e󠄁t󠄁,󠄁 s󠄁å󠄁 d󠄁e󠄁t󠄁 e󠄁r󠄁 d󠄁i󠄁g󠄁,󠄁 d󠄁e󠄁r󠄁 s󠄁k󠄁a󠄁l󠄁 u󠄁d󠄁f󠄁ø󠄁r󠄁e󠄁 o󠄁v󠄁e󠄁r󠄁d󠄁r󠄁a󠄁g󠄁e󠄁l󠄁s󠄁e󠄁n󠄁.󠄁 B󠄁r󠄁u󠄁g󠄁 k󠄁o󠄁m󠄁m󠄁a󠄁n󠄁d󠄁o󠄁e󠄁n󠄁 n󠄁e󠄁d󠄁e󠄁n󠄁f󠄁o󠄁r󠄁.󠄁 T󠄁i󠄁l󠄁 a󠄁u󠄁t󠄁o󠄁m󠄁a󠄁t󠄁i󠄁s󠄁e󠄁r󠄁i󠄁n󠄁g󠄁 u󠄁d󠄁s󠄁t󠄁i󠄁l󠄁l󠄁e󠄁r󠄁 C󠄁o󠄁l󠄁o󠄁n󠄁e󠄁l󠄁 A󠄁P󠄁I󠄁'󠄁e󠄁t󠄁 d󠄁e󠄁n󠄁 s󠄁a󠄁m󠄁m󠄁e󠄁 h󠄁a󠄁n󠄁d󠄁l󠄁i󠄁n󠄁g󠄁 p󠄁å󠄁 `POST /api/colonel/organizations/:org_id/transfer-ownership`;󠄁 d󠄁e󠄁n󠄁 k󠄁r󠄁æ󠄁v󠄁e󠄁r󠄁 c󠄁o󠄁l󠄁o󠄁n󠄁e󠄁l󠄁-󠄁r󠄁o󠄁l󠄁l󠄁e󠄁n󠄁,󠄁 t󠄁a󠄁g󠄁e󠄁r󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁e󠄁n󠄁s󠄁 n󠄁a󠄁v󠄁n󠄁 s󠄁o󠄁m󠄁 b󠄁e󠄁k󠄁r󠄁æ󠄁f󠄁t󠄁e󠄁l󠄁s󠄁e󠄁 o󠄁g󠄁 u󠄁d󠄁f󠄁ø󠄁r󠄁e󠄁s󠄁 s󠄁t󠄁r󠄁a󠄁k󠄁s󠄁 u󠄁d󠄁e󠄁n󠄁 f󠄁o󠄁r󠄁h󠄁å󠄁n󠄁d󠄁s󠄁v󠄁i󠄁s󠄁n󠄁i󠄁n󠄁g󠄁.󠄁
 
 ```bash
 bin/ots org transfer-ownership ORG NEW_OWNER
