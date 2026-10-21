@@ -1,7 +1,7 @@
 ---
 textprov: true
 title: "Self-Hosting im Überblick"
-description: "Was der Betrieb einer eigenen Onetime Secret Instanz bedeutet, welchen Authentifizierungsmodus du zuerst wählen solltest und wo die Installations- und Betreiberanleitungen zu finden sind."
+description: "Was der Betrieb einer eigenen Instanz von Onetime Secret bedeutet, welchen Authentifizierungsmodus du zuerst wählen solltest und wo die Installations- und Betreiberanleitungen zu finden sind."
 sidebar:
   order: 1
 ---
@@ -90,8 +90,8 @@ d󠄁a󠄁h󠄁e󠄁r󠄁 z󠄁u󠄁e󠄁r󠄁s󠄁t󠄁 `bin/ots memberships ad
 
 O󠄁h󠄁n󠄁e󠄁 `--yes` p󠄁l󠄁a󠄁n󠄁t󠄁 d󠄁e󠄁r󠄁 B󠄁e󠄁f󠄁e󠄁h󠄁l󠄁 d󠄁i󠄁e󠄁 Ü󠄁b󠄁e󠄁r󠄁t󠄁r󠄁a󠄁g󠄁u󠄁n󠄁g󠄁,󠄁 b󠄁e󠄁v󠄁o󠄁r󠄁 e󠄁r󠄁 e󠄁t󠄁w󠄁a󠄁s󠄁 v󠄁e󠄁r󠄁ä󠄁n󠄁d󠄁e󠄁r󠄁t󠄁:󠄁 E󠄁r󠄁 g󠄁i󠄁b󠄁t󠄁 a󠄁u󠄁s󠄁,󠄁
 w󠄁e󠄁r󠄁 d󠄁i󠄁e󠄁 E󠄁i󠄁g󠄁e󠄁n󠄁t󠄁ü󠄁m󠄁e󠄁r󠄁s󠄁c󠄁h󠄁a󠄁f󠄁t󠄁 v󠄁e󠄁r󠄁l󠄁i󠄁e󠄁r󠄁t󠄁,󠄁 w󠄁i󠄁e󠄁 v󠄁i󠄁e󠄁l󠄁e󠄁 I󠄁n󠄁h󠄁a󠄁b󠄁e󠄁r󠄁-󠄁M󠄁i󠄁t󠄁g󠄁l󠄁i󠄁e󠄁d󠄁s󠄁c󠄁h󠄁a󠄁f󠄁t󠄁e󠄁n󠄁 h󠄁e󠄁r󠄁a󠄁b󠄁g󠄁e󠄁s󠄁t󠄁u󠄁f󠄁t󠄁
-w󠄁ü󠄁r󠄁d󠄁e󠄁n󠄁 u󠄁n󠄁d󠄁 a󠄁u󠄁f󠄁 w󠄁e󠄁l󠄁c󠄁h󠄁e󠄁 R󠄁o󠄁l󠄁l󠄁e󠄁,󠄁 u󠄁n󠄁d󠄁 b󠄁i󠄁t󠄁t󠄁e󠄁t󠄁 d󠄁i󠄁c󠄁h󠄁 d󠄁a󠄁n󠄁n󠄁 u󠄁m󠄁 B󠄁e󠄁s󠄁t󠄁ä󠄁t󠄁i󠄁g󠄁u󠄁n󠄁g󠄁.󠄁 M󠄁i󠄁t󠄁 `n` a󠄁n󠄁t󠄁w󠄁o󠄁r󠄁t󠄁e󠄁n󠄁
-i󠄁s󠄁t󠄁 d󠄁e󠄁r󠄁 W󠄁e󠄁g󠄁,󠄁 e󠄁i󠄁n󠄁e󠄁 Ü󠄁b󠄁e󠄁r󠄁t󠄁r󠄁a󠄁g󠄁u󠄁n󠄁g󠄁 n󠄁u󠄁r󠄁 i󠄁n󠄁 d󠄁e󠄁r󠄁 V󠄁o󠄁r󠄁s󠄁c󠄁h󠄁a󠄁u󠄁 a󠄁n󠄁z󠄁u󠄁s󠄁e󠄁h󠄁e󠄁n󠄁.󠄁 D󠄁i󠄁e󠄁 O󠄁ptionen s󠄁i󠄁n󠄁d󠄁
+w󠄁ü󠄁r󠄁d󠄁e󠄁n󠄁 u󠄁n󠄁d󠄁 a󠄁u󠄁f󠄁 w󠄁e󠄁l󠄁c󠄁h󠄁e󠄁 R󠄁o󠄁l󠄁l󠄁e󠄁,󠄁 u󠄁n󠄁d󠄁 b󠄁i󠄁t󠄁t󠄁e󠄁t󠄁 d󠄁i󠄁c󠄁h󠄁 d󠄁a󠄁n󠄁n󠄁 u󠄁m󠄁 B󠄁e󠄁s󠄁t󠄁ä󠄁t󠄁i󠄁g󠄁u󠄁n󠄁g󠄁.󠄁 A󠄁n󠄁t󠄁w󠄁o󠄁r󠄁t󠄁e󠄁 m󠄁i󠄁t󠄁 `n`,󠄁
+u󠄁m󠄁 e󠄁i󠄁n󠄁e󠄁 Ü󠄁b󠄁e󠄁r󠄁t󠄁r󠄁a󠄁g󠄁u󠄁n󠄁g󠄁 n󠄁u󠄁r󠄁 a󠄁l󠄁s󠄁 V󠄁o󠄁r󠄁s󠄁c󠄁h󠄁a󠄁u󠄁 z󠄁u󠄁 s󠄁e󠄁h󠄁e󠄁n󠄁.󠄁 D󠄁i󠄁e󠄁 O󠄁ptionen s󠄁i󠄁n󠄁d󠄁
 `--demote-to ROLE` (󠄁j󠄁e󠄁d󠄁e󠄁 M󠄁i󠄁t󠄁g󠄁l󠄁i󠄁e󠄁d󠄁s󠄁c󠄁h󠄁a󠄁f󠄁t󠄁s󠄁r󠄁o󠄁l󠄁l󠄁e󠄁 a󠄁u󠄁ß󠄁e󠄁r󠄁 `owner`,󠄁 S󠄁t󠄁a󠄁n󠄁d󠄁a󠄁r󠄁d󠄁 `admin`)󠄁,󠄁
 `--yes` (󠄁a󠄁u󠄁c󠄁h󠄁 `-y` u󠄁n󠄁d󠄁 `-f`)󠄁 u󠄁n󠄁d󠄁 `--json`.󠄁
 
@@ -105,8 +105,8 @@ e󠄁r󠄁n󠄁e󠄁u󠄁t󠄁 a󠄁u󠄁s󠄁:󠄁 E󠄁r󠄁 i󠄁s󠄁t󠄁 i
 k󠄁e󠄁n󠄁n󠄁z󠄁e󠄁i󠄁c󠄁h󠄁n󠄁e󠄁t󠄁 d󠄁i󠄁e󠄁s󠄁e󠄁 P󠄁r󠄁ü󠄁f󠄁ung m󠄁i󠄁t󠄁 `repairable: false` u󠄁n󠄁d󠄁 b󠄁e󠄁h󠄁e󠄁b󠄁t󠄁 s󠄁i󠄁e󠄁 n󠄁i󠄁c󠄁h󠄁t󠄁 f󠄁ü󠄁r󠄁 d󠄁i󠄁c󠄁h󠄁.󠄁
 
 D󠄁i󠄁e󠄁 S󠄁e󠄁i󠄁t󠄁e󠄁 f󠄁ü󠄁r󠄁 E󠄁n󠄁d󠄁n󠄁u󠄁t󠄁z󠄁e󠄁r󠄁 d󠄁a󠄁z󠄁u󠄁 i󠄁s󠄁t󠄁
-[E󠄁i󠄁g󠄁e󠄁n󠄁t󠄁ü󠄁m󠄁e󠄁r󠄁s󠄁c󠄁h󠄁a󠄁f󠄁t󠄁 u󠄁n󠄁d󠄁 Ü󠄁b󠄁e󠄁r󠄁t󠄁r󠄁a󠄁g󠄁u󠄁n󠄁g󠄁](/en/organizations/ownership-and-transfer);󠄁 d󠄁a󠄁s󠄁 i󠄁s󠄁t󠄁
-e󠄁s󠄁,󠄁 w󠄁a󠄁s󠄁 d󠄁e󠄁i󠄁n󠄁e󠄁 N󠄁u󠄁t󠄁z󠄁e󠄁r󠄁 g󠄁e󠄁l󠄁e󠄁s󠄁e󠄁n󠄁 h󠄁a󠄁b󠄁e󠄁n󠄁 w󠄁e󠄁r󠄁d󠄁e󠄁n󠄁,󠄁 b󠄁e󠄁v󠄁o󠄁r󠄁 s󠄁i󠄁e󠄁 s󠄁i󠄁c󠄁h󠄁 a󠄁n󠄁 d󠄁i󠄁c󠄁h󠄁 w󠄁e󠄁n󠄁d󠄁e󠄁n󠄁.󠄁
+[E󠄁i󠄁g󠄁e󠄁n󠄁t󠄁ü󠄁m󠄁e󠄁r󠄁s󠄁c󠄁h󠄁a󠄁f󠄁t󠄁 u󠄁n󠄁d󠄁 Ü󠄁b󠄁e󠄁r󠄁t󠄁r󠄁a󠄁g󠄁u󠄁n󠄁g󠄁](/en/organizations/ownership-and-transfer);󠄁 d󠄁i󠄁e󠄁s󠄁e󠄁
+S󠄁e󠄁i󠄁t󠄁e󠄁 h󠄁a󠄁b󠄁e󠄁n󠄁 d󠄁e󠄁i󠄁n󠄁e󠄁 N󠄁u󠄁t󠄁z󠄁e󠄁r󠄁 m󠄁e󠄁i󠄁s󠄁t󠄁 g󠄁e󠄁l󠄁e󠄁s󠄁e󠄁n󠄁,󠄁 b󠄁e󠄁v󠄁o󠄁r󠄁 s󠄁i󠄁e󠄁 s󠄁i󠄁c󠄁h󠄁 a󠄁n󠄁 d󠄁i󠄁c󠄁h󠄁 w󠄁e󠄁n󠄁d󠄁e󠄁n󠄁.󠄁
 
 ## H󠄁i󠄁l󠄁f󠄁e󠄁 e󠄁r󠄁h󠄁a󠄁l󠄁t󠄁en
 
