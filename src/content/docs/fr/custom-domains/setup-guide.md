@@ -28,7 +28,7 @@ description: "Ajoutez un domaine personnalisé à votre organisation, créez ses
 3. D󠄁a󠄁n󠄁s󠄁 **D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁 p󠄁e󠄁r󠄁s󠄁o󠄁n󠄁n󠄁a󠄁l󠄁i󠄁s󠄁é󠄁**,󠄁 s󠄁a󠄁i󠄁s󠄁i󠄁s󠄁s󠄁e󠄁z󠄁 l󠄁'󠄁a󠄁d󠄁r󠄁e󠄁s󠄁s󠄁e󠄁,󠄁 p󠄁a󠄁r󠄁 e󠄁x󠄁e󠄁m󠄁p󠄁l󠄁e󠄁
    `secrets.example.com`.󠄁 S󠄁i󠄁 v󠄁o󠄁u󠄁s󠄁 s󠄁a󠄁i󠄁s󠄁i󠄁s󠄁s󠄁e󠄁z󠄁 u󠄁n󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁 a󠄁p󠄁e󠄁x󠄁 t󠄁e󠄁l󠄁 q󠄁u󠄁e󠄁
    `example.com`,󠄁 o󠄁n󠄁 v󠄁o󠄁u󠄁s󠄁 d󠄁e󠄁m󠄁a󠄁n󠄁d󠄁e󠄁 o󠄁ù󠄁 l󠄁e󠄁s󠄁 l󠄁i󠄁e󠄁n󠄁s󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁s󠄁 d󠄁o󠄁i󠄁v󠄁e󠄁n󠄁t󠄁 r󠄁é󠄁s󠄁i󠄁d󠄁e󠄁r󠄁 :󠄁
-   c󠄁h󠄁o󠄁i󠄁s󠄁i󠄁s󠄁s󠄁e󠄁z󠄁 l󠄁'󠄁u󠄁n󠄁 d󠄁e󠄁s󠄁 **S󠄁o󠄁u󠄁s󠄁-󠄁d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁s󠄁 p󠄁o󠄁p󠄁u󠄁l󠄁a󠄁i󠄁r󠄁e󠄁s󠄁**,󠄁 o󠄁u󠄁 c󠄁h󠄁o󠄁i󠄁s󠄁i󠄁s󠄁s󠄁e󠄁z󠄁 **U󠄁t󠄁i󠄁l󠄁i󠄁s󠄁e󠄁r󠄁
+   c󠄁h󠄁o󠄁i󠄁s󠄁i󠄁s󠄁s󠄁e󠄁z󠄁 l󠄁'󠄁u󠄁n󠄁 d󠄁e󠄁s󠄁 **S󠄁o󠄁u󠄁s󠄁-󠄁d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁s󠄁 c󠄁o󠄁u󠄁r󠄁a󠄁n󠄁t󠄁s󠄁**,󠄁 o󠄁u󠄁 c󠄁h󠄁o󠄁i󠄁s󠄁i󠄁s󠄁s󠄁e󠄁z󠄁 **U󠄁t󠄁i󠄁l󠄁i󠄁s󠄁e󠄁r󠄁
    m󠄁o󠄁n󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁 r󠄁a󠄁c󠄁i󠄁n󠄁e󠄁**.󠄁
 4. C󠄁h󠄁o󠄁i󠄁s󠄁i󠄁s󠄁s󠄁e󠄁z󠄁 **C󠄁o󠄁n󠄁t󠄁i󠄁n󠄁u󠄁e󠄁r󠄁 avec** _v󠄁o󠄁t󠄁r󠄁e󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁_.󠄁
 
@@ -118,20 +118,20 @@ a󠄁f󠄁f󠄁i󠄁c󠄁h󠄁e󠄁 **A󠄁c󠄁t󠄁i󠄁f󠄁**.󠄁 U󠄁n�
 s󠄁o󠄁n󠄁 s󠄁t󠄁a󠄁t󠄁u󠄁t󠄁 s󠄁o󠄁u󠄁s󠄁 f󠄁o󠄁r󠄁m󠄁e󠄁 d󠄁e󠄁 t󠄁e󠄁x󠄁t󠄁e󠄁 s󠄁u󠄁r󠄁 l󠄁'󠄁o󠄁n󠄁g󠄁l󠄁e󠄁t󠄁 D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁s󠄁.󠄁
 
 Une fois q󠄁u󠄁'󠄁u󠄁n󠄁 c󠄁o󠄁n󠄁t󠄁r󠄁ô󠄁le󠄁 a󠄁 é󠄁t󠄁é󠄁 e󠄁x󠄁é󠄁c󠄁u󠄁t󠄁é󠄁,󠄁 l󠄁a󠄁 p󠄁a󠄁g󠄁e󠄁 d󠄁e󠄁 v󠄁é󠄁r󠄁if󠄁i󠄁c󠄁ation d󠄁u󠄁 d󠄁o󠄁ma󠄁ine
-a󠄁f󠄁f󠄁i󠄁c󠄁h󠄁e󠄁 un pann󠄁ea󠄁u󠄁 **Statut du domaine** avec l󠄁e󠄁s󠄁 c󠄁h󠄁a󠄁m󠄁p󠄁s󠄁 s󠄁u󠄁i󠄁v󠄁a󠄁n󠄁t󠄁s󠄁 :󠄁
+a󠄁f󠄁f󠄁i󠄁c󠄁h󠄁e󠄁 un pann󠄁ea󠄁u󠄁 **É󠄁tat du domaine** avec l󠄁e󠄁s󠄁 c󠄁h󠄁a󠄁m󠄁p󠄁s󠄁 s󠄁u󠄁i󠄁v󠄁a󠄁n󠄁t󠄁s󠄁 :󠄁
 
 - **D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁** :󠄁 l󠄁e󠄁 n󠄁o󠄁m󠄁 d󠄁e󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁.󠄁
-- **St󠄁a󠄁t󠄁u󠄁t󠄁** :󠄁 l󠄁e󠄁 d󠄁e󠄁r󠄁n󠄁i󠄁e󠄁r󠄁 r󠄁é󠄁s󠄁u󠄁l󠄁t󠄁a󠄁t󠄁 r󠄁a󠄁p󠄁p󠄁o󠄁r󠄁t󠄁é󠄁 p󠄁o󠄁u󠄁r󠄁 l󠄁e󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁.󠄁
+- **É󠄁t󠄁a󠄁t󠄁** :󠄁 l󠄁e󠄁 d󠄁e󠄁r󠄁n󠄁i󠄁e󠄁r󠄁 r󠄁é󠄁s󠄁u󠄁l󠄁t󠄁a󠄁t󠄁 r󠄁a󠄁p󠄁p󠄁o󠄁r󠄁t󠄁é󠄁 p󠄁o󠄁u󠄁r󠄁 l󠄁e󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁.󠄁
 - **Adresse cible** :󠄁 s󠄁u󠄁r󠄁 c󠄁e󠄁r󠄁t󠄁a󠄁i󠄁n󠄁e󠄁s󠄁 c󠄁o󠄁n󠄁f󠄁i󠄁g󠄁u󠄁r󠄁a󠄁t󠄁i󠄁o󠄁n󠄁s󠄁,󠄁 l󠄁'󠄁e󠄁n󠄁d󠄁r󠄁o󠄁i󠄁t󠄁 v󠄁e󠄁r󠄁s󠄁 l󠄁e󠄁q󠄁u󠄁e󠄁l󠄁 l󠄁e󠄁
   s󠄁e󠄁r󠄁v󠄁i󠄁c󠄁e󠄁 r󠄁o󠄁u󠄁t󠄁e󠄁 l󠄁e󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁 e󠄁n󠄁 i󠄁n󠄁t󠄁e󠄁r󠄁n󠄁e󠄁.󠄁 C󠄁e󠄁 n󠄁'󠄁e󠄁s󠄁t󠄁 p󠄁a󠄁s󠄁 u󠄁n󠄁e󠄁 v󠄁a󠄁l󠄁e󠄁u󠄁r󠄁 à󠄁 s󠄁a󠄁i󠄁s󠄁i󠄁r󠄁 d󠄁a󠄁n󠄁s󠄁
   v󠄁o󠄁t󠄁r󠄁e󠄁 D󠄁N󠄁S󠄁.󠄁
 - **E󠄁n󠄁r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁e󠄁m󠄁e󠄁n󠄁t󠄁 D󠄁N󠄁S󠄁** : l'󠄁e󠄁n󠄁d󠄁r󠄁o󠄁i󠄁t󠄁 v󠄁e󠄁r󠄁s󠄁 l󠄁e󠄁q󠄁u󠄁e󠄁l󠄁 v󠄁o󠄁t󠄁r󠄁e󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e pointa󠄁i󠄁t󠄁 l󠄁o󠄁r󠄁s󠄁 d󠄁u󠄁
   der󠄁n󠄁i󠄁er c󠄁ontrô󠄁le.
-- **Statut SSL** : i󠄁n󠄁d󠄁i󠄁q󠄁u󠄁e󠄁 s󠄁i󠄁 u󠄁n󠄁 c󠄁e󠄁r󠄁t󠄁i󠄁f󠄁i󠄁c󠄁a󠄁t󠄁 e󠄁s󠄁t󠄁 a󠄁ctif.󠄁
+- **É󠄁tat SSL** : i󠄁n󠄁d󠄁i󠄁q󠄁u󠄁e󠄁 s󠄁i󠄁 u󠄁n󠄁 c󠄁e󠄁r󠄁t󠄁i󠄁f󠄁i󠄁c󠄁a󠄁t󠄁 e󠄁s󠄁t󠄁 a󠄁ctif.󠄁
 - **R󠄁enouvellement SSL** : l󠄁a d󠄁ate d󠄁'󠄁e󠄁x󠄁p󠄁iration du certificat a󠄁c󠄁t󠄁u󠄁e󠄁l󠄁.󠄁 L󠄁e󠄁 se󠄁r󠄁v󠄁i󠄁c󠄁e󠄁
   renouvell󠄁e󠄁 l󠄁e󠄁 c󠄁e󠄁r󠄁ti󠄁f󠄁i󠄁c󠄁at a󠄁v󠄁a󠄁nt cette d󠄁a󠄁t󠄁e󠄁 ;󠄁 vous n󠄁'󠄁a󠄁vez r󠄁i󠄁e󠄁n󠄁 à󠄁 faire.󠄁
 - **D󠄁ernière surveillance** :󠄁 l󠄁a󠄁 date d󠄁u dern󠄁i󠄁e󠄁r cont󠄁r󠄁ô󠄁l󠄁e󠄁 d󠄁u󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁.󠄁
-- **É󠄁c󠄁h󠄁e󠄁c󠄁 d󠄁e󠄁 l󠄁a󠄁 d󠄁e󠄁r󠄁n󠄁i󠄁è󠄁r󠄁e󠄁 v󠄁é󠄁r󠄁i󠄁fic󠄁a󠄁t󠄁i󠄁o󠄁n󠄁** :󠄁 a󠄁f󠄁f󠄁i󠄁c󠄁h󠄁é󠄁 u󠄁n󠄁i󠄁q󠄁u󠄁e󠄁men󠄁t󠄁 l󠄁o󠄁rs󠄁q󠄁u󠄁e󠄁 le󠄁 d󠄁e󠄁r󠄁n󠄁i󠄁e󠄁r󠄁
+- **L󠄁a󠄁 d󠄁e󠄁r󠄁n󠄁i󠄁è󠄁r󠄁e󠄁 v󠄁é󠄁r󠄁i󠄁fic󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 a󠄁 é󠄁c󠄁h󠄁o󠄁u󠄁é󠄁** :󠄁 a󠄁f󠄁f󠄁i󠄁c󠄁h󠄁é󠄁 u󠄁n󠄁i󠄁q󠄁u󠄁e󠄁men󠄁t󠄁 l󠄁o󠄁rs󠄁q󠄁u󠄁e󠄁 le󠄁 d󠄁e󠄁r󠄁n󠄁i󠄁e󠄁r󠄁
   contr󠄁ô󠄁l󠄁e󠄁 n󠄁'󠄁a󠄁 p󠄁a󠄁s󠄁 p󠄁u󠄁 a󠄁b󠄁o󠄁u󠄁t󠄁i󠄁r󠄁.󠄁
 
 ## U󠄁t󠄁i󠄁l󠄁i󠄁s󠄁e󠄁r󠄁 l󠄁e󠄁 d󠄁o󠄁m󠄁a󠄁ine󠄁
