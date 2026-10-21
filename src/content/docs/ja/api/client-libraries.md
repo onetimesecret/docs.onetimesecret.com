@@ -27,7 +27,7 @@ A󠄁P󠄁I󠄁 v󠄁1󠄁 と󠄁 v󠄁2󠄁、󠄁す󠄁べ󠄁て󠄁の󠄁
 ## R󠄁u󠄁b󠄁y󠄁
 
 
-[G󠄁i󠄁t󠄁H󠄁u󠄁b󠄁 ペ󠄁ー󠄁ジ󠄁 o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁-󠄁r󠄁u󠄁b󠄁y󠄁](https://github.com/onetimesecret/onetime-ruby)
+[G󠄁i󠄁t󠄁H󠄁u󠄁b󠄁 ペ󠄁ー󠄁ジ󠄁 -󠄁 o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁-󠄁r󠄁u󠄁b󠄁y󠄁](https://github.com/onetimesecret/onetime-ruby)
 作󠄁者󠄁：󠄁[Delano](https://delanotes.com/) —󠄁 **公󠄁式󠄁ク󠄁ラ󠄁イ󠄁ア󠄁ン󠄁ト󠄁**。󠄁活󠄁発󠄁に󠄁保󠄁守󠄁さ󠄁れ󠄁て󠄁い󠄁ま󠄁す󠄁（󠄁最󠄁終󠄁コ󠄁ミ󠄁ッ󠄁ト󠄁 2026󠄁-06）󠄁。󠄁A󠄁P󠄁I󠄁 v󠄁1󠄁（󠄁非󠄁推󠄁奨󠄁）󠄁と󠄁 v󠄁2󠄁、󠄁リ󠄁ー󠄁ジ󠄁ョ󠄁ン󠄁ド󠄁メ󠄁イ󠄁ン󠄁、󠄁カ󠄁ス󠄁タ󠄁ム󠄁ベ󠄁ー󠄁ス󠄁U󠄁R󠄁L󠄁に󠄁対󠄁応󠄁。󠄁R󠄁u󠄁b󠄁y󠄁 3󠄁.󠄁1󠄁 以󠄁上󠄁が󠄁必󠄁要󠄁で󠄁、󠄁ラ󠄁ン󠄁タ󠄁イ󠄁ム󠄁依󠄁存󠄁関󠄁係󠄁は󠄁あ󠄁り󠄁ま󠄁せ󠄁ん󠄁。󠄁
 
 ### 使用例
@@ -180,7 +180,7 @@ class Test
 ## Go
 
 
-[GitH󠄁ub ペ󠄁ー󠄁ジ󠄁 - onetimesecret](https://github.com/corbaltcode/go-onetimesecret)
+[GitH󠄁ub ペ󠄁ー󠄁ジ󠄁 -󠄁 g󠄁o󠄁-onetimesecret](https://github.com/corbaltcode/go-onetimesecret)
 作󠄁者󠄁：󠄁[Corbalt](https://github.com/corbaltcode/) —󠄁 コ󠄁ミ󠄁ュ󠄁ニ󠄁テ󠄁ィ󠄁に󠄁よ󠄁る󠄁保󠄁守󠄁（󠄁最󠄁終󠄁コ󠄁ミ󠄁ッ󠄁ト󠄁 2026󠄁-05󠄁、󠄁`us.onetimesecret.com` ホ󠄁ス󠄁ト󠄁向󠄁け󠄁に󠄁更󠄁新󠄁済󠄁み󠄁）󠄁。󠄁C󠄁L󠄁I󠄁 を󠄁含󠄁み󠄁ま󠄁す󠄁。󠄁
 
 ### 使用例
@@ -231,7 +231,7 @@ flsdlaun6hwczqu9utmc0vts5xj9xu1
 ## Go（󠄁ラ󠄁イ󠄁ブ󠄁ラ󠄁リ󠄁）󠄁
 
 
-[GitH󠄁ub ペ󠄁ー󠄁ジ󠄁](https://github.com/emdneto/otsgo)
+[GitH󠄁ub ペ󠄁ー󠄁ジ󠄁 -󠄁 o󠄁t󠄁s󠄁g󠄁o󠄁](https://github.com/emdneto/otsgo)
 作󠄁者󠄁：󠄁[Emídio Neto](https://github.com/emdneto) —󠄁 コ󠄁ミ󠄁ュ󠄁ニ󠄁テ󠄁ィ󠄁に󠄁よ󠄁る󠄁保󠄁守󠄁（󠄁最󠄁終󠄁リ󠄁リ󠄁ー󠄁ス󠄁 v󠄁1󠄁.󠄁1󠄁.󠄁0󠄁、󠄁2024-03󠄁）󠄁。󠄁リ󠄁ー󠄁ジ󠄁ョ󠄁ン󠄁ド󠄁メ󠄁イ󠄁ン󠄁へ󠄁の󠄁対󠄁応󠄁は󠄁記󠄁載󠄁さ󠄁れ󠄁て󠄁い󠄁ま󠄁せ󠄁ん󠄁。󠄁
 
 ### 使用例
@@ -285,7 +285,7 @@ Get-Command -Module OneTimeSecret | Select Name
 ## Bash
 
 
-[GitH󠄁ub ペ󠄁ー󠄁ジ󠄁 - OneTimeSecret-bash](https://github.com/eengstrom/onetimesecret-bash)
+[GitH󠄁ub ペ󠄁ー󠄁ジ󠄁 - o󠄁net󠄁imes󠄁ecret-bash](https://github.com/eengstrom/onetimesecret-bash)
 作󠄁者󠄁：󠄁[Eric Engstrom](https://eengstrom.github.io/) —󠄁 **保󠄁守󠄁さ󠄁れ󠄁て󠄁い󠄁ま󠄁せ󠄁ん󠄁**（󠄁最󠄁終󠄁コ󠄁ミ󠄁ッ󠄁ト󠄁 202󠄁0󠄁-0󠄁5󠄁）󠄁。󠄁`ots_set_host` に󠄁よ󠄁る󠄁カ󠄁ス󠄁タ󠄁ム󠄁ホ󠄁ス󠄁ト󠄁に󠄁対󠄁応󠄁し󠄁て󠄁い󠄁ま󠄁す󠄁が󠄁、󠄁A󠄁P󠄁I󠄁 v󠄁2 と󠄁リ󠄁ー󠄁ジ󠄁ョ󠄁ン󠄁ド󠄁メ󠄁イ󠄁ン󠄁よ󠄁り󠄁前󠄁に󠄁作󠄁ら󠄁れ󠄁た󠄁も󠄁の󠄁で󠄁す󠄁。󠄁
 
 ### スクリプテ󠄁ィ󠄁ン󠄁グ󠄁 API としての使用例
