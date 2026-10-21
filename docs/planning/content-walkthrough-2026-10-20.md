@@ -6,7 +6,7 @@ The largest problems are conflicting descriptions of security behavior, plan ava
 
 ## How to use the ledger
 
-The tables below preserve the original walkthrough observations. F001–F010 are **addressed** on `wip/docs-content-review`. Sharing secrets findings F011–F033 are also resolved: 22 addressed and F015 rejected with source evidence. Accounts findings F034–F048 and Organizations and billing findings F049–F061 are addressed. See the implementation records at the end. Other candidate findings remain **open**. An entry records a problem to consider, not approval of its suggested correction. Resolve each ID as addressed, rejected with evidence, or deferred with a reason. No application changes are implied.
+The tables below preserve the original walkthrough observations. F001–F010 are **addressed** on `wip/docs-content-review`. Sharing secrets findings F011–F033 are also resolved: 22 addressed and F015 rejected with source evidence. Accounts findings F034–F048, Organizations and billing findings F049–F061, and Custom domains findings F062–F071 are addressed. See the implementation records at the end. Other candidate findings remain **open**. An entry records a problem to consider, not approval of its suggested correction. Resolve each ID as addressed, rejected with evidence, or deferred with a reason. No application changes are implied.
 
 - **H**: prioritize because the text affects security expectations, access, data loss, or purchase/setup decisions.
 - **M**: task completion, navigation, ordering, or terminology problem.
@@ -534,3 +534,97 @@ not checked.
 Current coverage supersedes the earlier counts: **60 addressed**, **1 rejected
 with evidence (F015)**, **52 open candidate findings**, and F097 as a no-finding
 coverage note. No Organizations and billing finding is deferred.
+
+## Custom domains resolution record
+
+Applied on `wip/docs-content-review` in `1db6b2de`, with corrections after the
+`develop` merge (`b67e648f`). Facts come from the application source at
+`145c1e7cfa`, the docs snapshot of the billing catalog (sha256
+`69a96394…a17501`, parsed with `yaml.safe_load`), the live `/en/pricing` page
+fetched 2026-10-21 05:53 UTC, and `dig` of the five routing targets on
+2026-10-20 (America/Vancouver). Four source surveys were followed by two
+adversarial fact-check passes over the rewritten pages. Of their 28 findings,
+26 were applied. Two were declined: the Free domain limit stays as the plan
+allowance, and IP-based access rules stay planned for Team Plus, as the live
+page shows them.
+
+Edited pages: all seven custom-domain pages; the Owner and Admin rows of Roles
+and permissions; Compare plans and Pricing (domain features that cannot be used
+yet); Preferences (domain passphrase rules); Data protection (the HIPAA bullet's
+link to the removed use cases); the Glossary's Incoming secrets row; link text
+on SSO, Where your data lives, Getting started, Changing your region and What
+recipients see; four English sidebar labels; the v0.26.15 upgrade guide's image
+types; and three redirects.
+
+| ID | Disposition | Final location and evidence |
+| --- | --- | --- |
+| F062 | Addressed | The overview's plan table separates the domain allowance (Free 1, paid plans no fixed limit; `plans.*.limits.custom_domains`) from paid settings: branding, email sender and sign-in on Identity Plus and Team Plus, a sender on any domain and SSO on Team Plus, homepage and incoming secrets on every plan (`plans.*.entitlements`). The upgrade pitch and "premium feature" consideration are gone. The Free limit is a plan allowance; it is not enforced (follow-up below). |
+| F063 | Addressed | Removed data-locality compliance, intended-recipient, credential-rotation and compliance-requirement claims. No region field exists on a domain (`custom_domain.rb:99-161`; `add_domain.rb:36-39`); a domain is served by the organization's regional site. Anyone with a link can reveal it once (`secret_state_management.rb:31-34,219-226`); no rotation feature exists. The overview now says what a domain changes and what it does not. |
+| F064 | Addressed | The overview is reduced to purpose, an example link, plan table, who can manage a domain, where it is served, the setup route and responsibilities. Key Benefits, the empty How It Works heading, the pitch, duplicate steps, branding list, troubleshooting list and five use cases were removed; examples point to `share/use-cases`. Redirects: `custom-domains/use-cases` → `share/use-cases` and `custom-domains/how-it-works` → `custom-domains`, both in-locale with no fragment; no entry uses `toDefaultLocale` now. |
+| F065 | Addressed | One path everywhere: user menu **Domains** → organization settings **Domains** tab → **Add domain** → **Custom domain** → **Continue with** _domain_ (`dashboard.ts:63-113`; `organizations.ts:42`; `DomainForm.vue:114-118`). The organization context comes first; no region step and no "or equivalent button". Owners and admins add, verify and remove domains; only owners save domain settings. |
+| F066 | Addressed | DNS validation separates ownership (TXT only; `verify_domain.rb:479-481`), routing, certificate and serving (`serving_policy.rb:42-58`; 404 "This domain is not configured"). A certificate can be requested at add time (`add_domain.rb:114-166`) without making the domain usable; `caddy_on_demand` issues only after verification (`acme/application.rb:144-157`). A self-hosting note covers the per-installation strategy, `passthrough` as default, `DOMAINS_SERVE_UNVERIFIED=true` and operator overrides. The TXT record must be the only value at its name (`txt_verifier.rb:93-101`). Status labels come from `useDomainStatus.ts:89-101`; a definite miss demotes at once, inconclusive checks keep a verified domain verified for 7 days after the first (`confirmation_window.rb`). |
+| F067 | Addressed | "About a year" removed: **SSL Renews** shows the current certificate's expiry, renewed by Approximated or Caddy, not the app. The 5-minute CDN delay has no source: branded pages are `no-store` (`request_setup.rb:90-96`), so saved changes show on the next load; the favicon is cached for a day (`page.rb:117,124`). Logo, favicon, homepage, incoming and sign-in changes save immediately; brand and email changes save with **Update**. Propagation is described by provider and TTL rather than a fixed window. |
+| F068 | Addressed | Placeholders replaced with procedures: Branding (Logo, Favicon, Brand Color, Corners, Font Family; Delivery tab Language and reveal instructions; types JPEG/PNG/GIF/WebP/BMP/TIFF up to 1 MB in the form, no SVG; owner-only; plan), Incoming (recipients up to 20, **Enable**, `/incoming`, test steps), Email sender (fields, **Update**, provider DNS records, **Re-validate**, DNS and Provider checks, **Send test**, enable), Access and privacy (sign-in modes, off on a custom domain until configured, Reset to defaults, require SSO; no sign-up on custom domains; no domain passphrase or expiry setting). The work-in-progress and "not documented yet" notes are gone. |
+| F069 | Addressed | Logo types from `update_domain_image.rb:16-19,96-122` and `image_content.rb` (server 2 MB, form 1 MB); favicon PNG or ICO, 256 KB in the form. The v0.26.15 guide now asks for a PNG or WebP logo, or a PNG or ICO icon; at v0.26.15 the server already accepted ICO for icons. |
+| F070 | Addressed | Page titles and English sidebar labels: Custom domains (label "What custom domains do"), Setting up a custom domain, DNS validation, Branding your domain, Email sender, Homepage and incoming secrets, Access and privacy. Keys unchanged so translated labels stay valid. Cross-links use these titles; UI labels stay exact. Headings are sentence case; the sign-in and sign-up redirect fragments now point at `#sign-in-settings` and `#sign-up-settings`. |
+| F071 | Addressed | The homepage and incoming forms accept text only (`BrandedHomepage.vue`; `IncomingSecretFormBody.vue`). The sender chooses one recipient; each submission creates one secret for that recipient only (`create_incoming_secret.rb:55-65,185-213,294-305`), expiring after 7 days, memo up to 50 characters. The Glossary row says the same. |
+
+Application follow-ups found during verification (INF marks conclusions from
+code paths without a test):
+
+- **Admins see domain settings they cannot save.** `ADMIN_ENTITLEMENTS`
+  includes `custom_branding`, `homepage_secrets` and `incoming_secrets`, and
+  the UI opens these screens for admins, but every save needs owner-only
+  `manage_org` (`domain_config_authorization.rb:154`; tested at
+  `domain_scope_enforcement_spec.rb:367`).
+- **Sign-up on custom domains.** Sign-up is off unless an enabled
+  `SignupConfig` exists, and the screen is hidden (`DomainDetail.vue:249`), so
+  nobody can sign up on a custom domain. The live page sells "custom signup
+  controls" on Team Plus.
+- **Privacy defaults.** `custom_privacy_defaults` is granted to Identity Plus
+  and Team Plus, but `PrivacyDefaultsModal.vue` is never mounted and
+  `passphrase_required` and `default_ttl` are not read when secrets are created.
+- **Email sender.** `from_name` is used only for the test email
+  (`mailer.rb:85-90`; `send_test_email.rb:96-106`), yet the form requires it.
+  The `noreply` fallback for a blank local part is unreachable from the form.
+  `badge_default_sender` and `default_sender_notice` strings are not displayed.
+- **Image limits.** `update_domain_image.rb:19` says 1 MB beside a 2 MB value;
+  the upload hint says "PNG or JPG" though six types are accepted; the favicon
+  form rejects WebP that the server accepts.
+- **Incoming secrets.** The success page says "Your secure message has been
+  delivered.", a delivery claim the receipt cannot support (compare F025). The
+  `ORGS_INCOMING_SECRETS_ENABLED` flag only hides the UI; the API does not
+  check it (INF).
+- **Other.** No server-side limit on **Verify Domain** (INF);
+  `api_config.enabled` has no visible effect (INF); **Inactive** is a catch-all
+  status; the Free domain limit remains unenforced (recorded under
+  Organizations and billing).
+
+Translated custom-domain pages were not changed and lag the English rewrite;
+several still call custom domains a premium Identity feature. The `develop`
+merge brought TextProv: `1db6b2de` predates it and is unmarked, while the
+post-merge corrections were applied with `tools/dogfood.py edit --state ai`.
+Develop's tier-name Vale rule says to use **Basic** for the free plan, while
+F057 chose **Free** as the canonical name; that conflict is open.
+
+Validation completed after the corrections:
+
+- `node bin/check-nav.mjs`: passed, 68 sidebar links and 79 label keys.
+- `node bin/check-orphans.mjs`: passed, 76 English pages.
+- `node bin/check-frontmatter.mjs`: passed, 243 redirect fragments resolved.
+- `node bin/check-locales.mjs`: passed, 17 configured locales.
+- `bash bin/check-malformed-links.sh`: passed.
+- `python3 tools/dogfood.py check --base HEAD --staged`: passed, 8 files.
+- `pnpm test`: 171 tests passed.
+- `pnpm build`: passed, 1,306 pages.
+- Built HTML: the 13 edited or linked pages each have one H1 and no leftover
+  TextProv marks; 1,078 English internal links and fragments on them resolve.
+- Vale was not run; it is not installed locally.
+
+No domain was added or verified, no DNS record created, no branding, homepage,
+incoming, sender or sign-in setting saved, and no email sent. The hosted
+service's validation strategy and feature flags were not checked.
+
+Current coverage supersedes the earlier counts: **70 addressed**, **1 rejected
+with evidence (F015)**, **42 open candidate findings**, and F097 as a no-finding
+coverage note. No Custom domains finding is deferred.

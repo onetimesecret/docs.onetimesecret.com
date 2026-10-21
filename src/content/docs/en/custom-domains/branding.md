@@ -1,10 +1,11 @@
 ---
+textprov: true
 title: Branding your domain
 description: Add your logo, favicon, brand color, corner style, font and reveal instructions to the pages recipients see on your custom domain.
 plan: Identity Plus
 audience: end-user
 pageType: how-to
-sourceOfTruth: onetimesecret at 145c1e7cfa — src/apps/workspace/domains/DomainDetail.vue:194-201 and DomainBrand.vue:66,83-86 (Manage Brand, Brand and Delivery tabs, Update); src/apps/workspace/components/dashboard/brand/SimpleBrandPanel.vue and src/shared/utils/brand-helpers.ts:216-275 (fields and options); src/apps/workspace/components/domains/DeliveryPanel.vue:53-108 (language, reveal instructions); apps/api/domains/logic/domains/update_domain_image.rb:16-19,96-122,200-205 and lib/onetime/image_content.rb (accepted image types and sizes); src/apps/workspace/components/domains/ImageUploadModal.vue:30,53-54 and BrandFaviconField.vue:36-37 (upload form limits); apps/web/core/middleware/request_setup.rb:90-96 and apps/web/core/logic/page.rb:117,124 (branded pages not cached; favicon cached one day); apps/api/domains/logic/domains/update_domain_brand.rb:35-42,126-128 and domain_config_authorization.rb:148-155 (custom_branding plus manage_org); locales/content/en/workspace-branding.json
+sourceOfTruth: onetimesecret at 145c1e7cfa — src/apps/workspace/domains/DomainDetail.vue:194-201 and DomainBrand.vue:66,83-86 (Manage Brand, Brand and Delivery tabs, Update); src/apps/workspace/components/dashboard/brand/SimpleBrandPanel.vue and src/shared/utils/brand-helpers.ts:216-275 (fields and options); src/apps/workspace/components/dashboard/DeliveryPanel.vue:53-108 (language, reveal instructions); apps/api/domains/logic/domains/update_domain_image.rb:16-19,96-122,200-205 and lib/onetime/image_content.rb (accepted image types and sizes); src/shared/components/modals/ImageUploadModal.vue:30,53-54,89-124 and src/apps/workspace/components/dashboard/brand/BrandFaviconField.vue:36-37,85-102 (upload form limits, Replace and Remove); src/apps/workspace/components/dashboard/DomainsTableActionsCell.vue:53-56 (Manage shown once the domain is active); apps/web/core/middleware/request_setup.rb:90-96 and apps/web/core/logic/page.rb:117,124 (branded pages not cached; favicon cached one day); apps/api/domains/logic/domains/update_domain_brand.rb:35-42,126-128 and domain_config_authorization.rb:148-155 (custom_branding plus manage_org); locales/content/en/workspace-branding.json
 ---
 
 Branding changes how the pages on your custom domain look to the people you
@@ -16,7 +17,7 @@ homepage.
 - Your organization is on **Identity Plus** or **Team Plus**.
 - You are the organization's **owner**. Admins can open the brand settings but
   cannot save them.
-- The domain has been added to your organization. See
+- The domain has been added and󠄁 v󠄁e󠄁r󠄁if󠄁ie󠄁d󠄁. See
   [Setting up a custom domain](/en/custom-domains/setup-guide).
 - Your logo is a JPEG, PNG, GIF, WebP, BMP or TIFF file of up to 1 MB. SVG is
   not accepted. A square image of about 128 × 128 pixels is recommended.
@@ -50,11 +51,14 @@ To remove the logo, choose **Replace**, then **Remove logo**, and confirm with
 Without a favicon of your own, the browser tab shows the icon fetched from your
 domain's website, if one was found, and otherwise your logo.
 
-- To use your own, under **Favicon** choose **Upload favicon**, pick a PNG or
-  ICO file, and choose **Save favicon**.
+- To use your own, under **Favicon** choose **Upload favicon** (󠄁o󠄁r󠄁 **R󠄁e󠄁p󠄁l󠄁a󠄁c󠄁e󠄁**
+  i󠄁f󠄁 a󠄁n󠄁 i󠄁c󠄁o󠄁n󠄁 i󠄁s󠄁 a󠄁l󠄁r󠄁e󠄁a󠄁d󠄁y󠄁 s󠄁h󠄁o󠄁w󠄁n󠄁)󠄁, pick a PNG or ICO file, and choose **Save
+  favicon**.
 - To fetch the icon from your domain again, choose **Refresh favicon from
   domain**. A favicon you uploaded is not replaced.
-- To remove an uploaded favicon, choose **Remove favicon**.
+- To remove an uploaded favicon, choose **Rep󠄁l󠄁a󠄁c󠄁e󠄁**,󠄁 t󠄁h󠄁e󠄁n󠄁 **R󠄁e󠄁move favicon**,󠄁
+  a󠄁n󠄁d󠄁 c󠄁o󠄁n󠄁f󠄁i󠄁r󠄁m󠄁 w󠄁i󠄁t󠄁h󠄁 **R󠄁e󠄁m󠄁o󠄁v󠄁e󠄁 f󠄁a󠄁v󠄁i󠄁c󠄁o󠄁n󠄁**.󠄁 T󠄁h󠄁e󠄁 s󠄁e󠄁r󠄁v󠄁i󠄁c󠄁e󠄁 t󠄁h󠄁e󠄁n󠄁 f󠄁e󠄁t󠄁c󠄁h󠄁e󠄁s󠄁 t󠄁h󠄁e󠄁 i󠄁c󠄁o󠄁n󠄁 f󠄁r󠄁o󠄁m󠄁
+  y󠄁o󠄁u󠄁r󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁'󠄁s󠄁 w󠄁e󠄁b󠄁s󠄁i󠄁t󠄁e󠄁 a󠄁g󠄁a󠄁i󠄁n󠄁.
 
 ## Set color, corners and font
 

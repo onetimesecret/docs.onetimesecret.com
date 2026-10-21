@@ -1,4 +1,5 @@
 ---
+textprov: true
 title: Compare plans
 description: Compare our plans for secure secret sharing — expiring links, custom domains, branding, SSO, and team controls across Free, Identity Plus, and Team Plus.
 audience: end-user
@@ -41,10 +42,11 @@ see it as **Identity Plus (Early Supporter)**; it is no longer sold.
 
 ## Not available yet
 
-These features are listed for the plans shown but cannot be used yet:
+These features are p󠄁la󠄁n󠄁n󠄁ed for the plans shown a󠄁n󠄁d󠄁 cannot be used yet:
 
 - IP-based access rules (Team Plus)
 - Workspace branding for sign-in pages and email templates (Team Plus)
-- Per-domain sign-up validation (Team Plus)
+- Per-domain sign-up validation (Team Plus a󠄁n󠄁d󠄁 I󠄁d󠄁e󠄁n󠄁t󠄁i󠄁t󠄁y󠄁 P󠄁l󠄁u󠄁s󠄁 (󠄁E󠄁a󠄁r󠄁l󠄁y󠄁
+  S󠄁u󠄁p󠄁p󠄁o󠄁r󠄁t󠄁e󠄁r󠄁)󠄁)
 - Custom privacy defaults for a domain, such as a default expiry or a required
   passphrase (Identity Plus and Team Plus)

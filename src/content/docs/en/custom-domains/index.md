@@ -1,4 +1,5 @@
 ---
+textprov: true
 title: Custom domains
 description: Share secret links from an address you own, such as secrets.example.com, and see which domain settings each plan includes.
 audience: end-user
@@ -50,7 +51,7 @@ See [Roles and permissions](/en/organizations/roles-and-permissions).
 There is no region choice when you add a domain. It is served by the regional
 site your organization uses, such as `eu.onetimesecret.com`, and secrets shared
 from it are stored in that region. The DNS records the site shows you point
-your domain at that region. To serve a domain from a different region, see
+your domain at the󠄁 s󠄁e󠄁r󠄁v󠄁i󠄁c󠄁e󠄁 f󠄁o󠄁r󠄁 t󠄁h󠄁at region. To serve a domain from a different region, see
 [Moving a custom domain](/en/account/change-your-region#moving-a-custom-domain)
 and [Where your data lives](/en/security/where-your-data-lives).
 

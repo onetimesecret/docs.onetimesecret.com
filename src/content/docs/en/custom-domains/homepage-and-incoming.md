@@ -1,10 +1,11 @@
 ---
+textprov: true
 title: Homepage and incoming secrets
 description: Choose what visitors see on your custom domain's homepage, and set up a form where people send secret text to a recipient you choose.
 plan: Free
 audience: end-user
 pageType: how-to
-sourceOfTruth: onetimesecret at 145c1e7cfa — lib/onetime/models/custom_domain/homepage_config.rb:31-49,119-120,190-200 (enabled false by default; create or incoming mode; incoming needs an enabled config with a recipient); src/apps/workspace/components/domains/DomainHomepageSelector.vue and locales/content/en/workspace-domains.json (Homepage options, saved on selection); locales/content/en/secret-homepage.json (private landing page text); src/apps/secret/conceal/BrandedHomepage.vue (text-only create form); lib/onetime/models/custom_domain/incoming_config.rb:34-56,141-161,267,282-292 (up to 20 recipients, hashed recipient ids, 7-day expiry, 50-character memo); src/apps/workspace/domains/DomainIncoming.vue:96-117 (recipient and Enable changes saved immediately); apps/api/incoming/logic/create_incoming_secret.rb:55-65,185-213,294-305 (one recipient and one secret per submission, no account, link on the custom domain); apps/api/incoming/routes.txt:22-24 (noauth); apps/api/domains/policies/domain_config_authorization.rb:148-155 (manage_org plus homepage_secrets or incoming_secrets)
+sourceOfTruth: onetimesecret at 145c1e7cfa — lib/onetime/models/custom_domain/homepage_config.rb:31-49,119-120,190-200 (enabled false by default; create or incoming mode; incoming needs an enabled config with a recipient); src/apps/workspace/components/domains/DomainHomepageSelector.vue and locales/content/en/workspace-domains.json (Homepage options, saved on selection); locales/content/en/secret-homepage.json (private landing page text); src/apps/secret/conceal/BrandedHomepage.vue (text-only create form); lib/onetime/models/custom_domain/incoming_config.rb:34-56,141-161,267,282-292 (up to 20 recipients, hashed recipient ids, 7-day expiry, 50-character memo); src/apps/workspace/domains/DomainIncoming.vue:96-117 (recipient and Enable changes saved immediately); apps/api/incoming/logic/create_incoming_secret.rb:55-65,185-213,294-305 (one recipient and one secret per submission, no account, link on the custom domain); apps/api/incoming/routes.txt:22-24 (noauth); lib/onetime/security/incoming_rate_limiter.rb:21-27,51-63 (per network address and per recipient); src/apps/secret/views/disabled/variants/DisabledClosed.vue:5-13 (no sign-in action on the private landing page); apps/api/domains/policies/domain_config_authorization.rb:148-155 (manage_org plus homepage_secrets or incoming_secrets)
 ---
 
 Every custom domain, such as `secrets.example.com`, has its own homepage. You
@@ -12,7 +13,8 @@ choose what it shows: a private landing page, a form for creating secrets, or
 an incoming-secrets form where people send secret text to you.
 
 These settings are included on every plan. Only the organization's **owner**
-can change them. Each domain has its own settings.
+can change them,󠄁 a󠄁f󠄁t󠄁e󠄁r󠄁 t󠄁h󠄁e󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁 i󠄁s󠄁 v󠄁e󠄁r󠄁i󠄁f󠄁i󠄁e󠄁d󠄁. Each domain has its own
+settings.
 
 ## Homepage secrets
 
@@ -26,7 +28,7 @@ Your choice is saved as soon as you select it.
 
 | Option | What visitors see |
 |---|---|
-| **Private landing page** (the default) | A notice that the service is for internal use, with a prompt to sign in. Secret links you share on the domain still work. |
+| **Private landing page** (the default) | A notice that the service is for internal use onl󠄁y󠄁. Secret links you share on the domain still work. |
 | **Secret creation form** | A form where anyone can create a secret link from text, without an account. There is no file upload. |
 | **Incoming secrets form** | The incoming-secrets form described below. Available only after incoming secrets are enabled with at least one recipient. |
 
@@ -70,7 +72,7 @@ choose **Incoming secrets form** under **Homepage**.
 4. Choose **Send Secret**.
 
 The form accepts text only; it does not accept files. The service limits how
-many secrets can be sent in an hour, per sender and per recipient.
+many secrets can be sent in an hour, per n󠄁e󠄁t󠄁w󠄁o󠄁r󠄁k󠄁 a󠄁d󠄁d󠄁r󠄁e󠄁ss󠄁 and per recipient.
 
 ### What recipients get
 
