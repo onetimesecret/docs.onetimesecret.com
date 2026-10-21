@@ -2,8 +2,6 @@
 textprov: true
 title: "Aperçu de l'auto-hébergement"
 description: "Ce qu'implique l'exécution de votre propre instance Onetime Secret, quel mode d'authentification choisir en premier, et où trouver les instructions d'installation et d'exploitation."
-sidebar:
-  order: 1
 ---
 
 Exécutez votre propre instance et c󠄁h󠄁a󠄁q󠄁u󠄁e s󠄁ecret,󠄁 c󠄁h󠄁aq󠄁u󠄁e co󠄁m󠄁p󠄁t󠄁e󠄁 e󠄁t󠄁 c󠄁h󠄁a󠄁q󠄁u󠄁e󠄁 l󠄁i󠄁g󠄁n󠄁e󠄁 d󠄁e󠄁 j󠄁o󠄁u󠄁r󠄁n󠄁a󠄁l󠄁 r󠄁e󠄁s󠄁t󠄁e󠄁 s󠄁u󠄁r󠄁

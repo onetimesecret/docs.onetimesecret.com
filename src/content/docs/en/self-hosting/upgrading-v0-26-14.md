@@ -4,8 +4,6 @@ description: Full mode adds one auth column at boot and rolling back needs a sch
 audience: operator
 pageType: how-to
 sourceOfTruth: onetimesecret/apps/web/auth/migrations/011_active_session_remember_until.rb and apps/web/auth/migrator.rb (boot-time migration, Sequel IntegerMigrator refuses a schema version above its files); onetimesecret/lib/onetime/jobs/scheduled/domain_refresh_job.rb (first run 2 minutes after the scheduler starts, paged walk over every domain); onetimesecret/lib/onetime/operations/verify_domain.rb (vhost creation on a missing vhost, dry runs skip only storing); onetimesecret/lib/onetime/domain_validation/caddy_on_demand_strategy.rb (TXT ownership check and the never-confirmed rule); onetimesecret/lib/onetime/models/custom_domain/sso_config.rb (tenant SSO requires a verified domain; SAML is a tenant provider type); onetimesecret/etc/defaults/config.defaults.yaml (site.session.absolute_timeout, jobs.domain_refresh); onetimesecret/lib/onetime/log_scrubber.rb (URI masking)
-sidebar:
-  order: 14
 ---
 
 Full [authentication mode](/en/self-hosting/simple-or-full-auth/) adds one nullable column to the auth

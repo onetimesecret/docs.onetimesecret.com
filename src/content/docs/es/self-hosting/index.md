@@ -2,8 +2,6 @@
 textprov: true
 title: "Descripción general del autoalojamiento"
 description: "Qué implica ejecutar su propia instancia de Onetime Secret, qué modo de autenticación elegir primero y dónde se encuentran las instrucciones de instalación y para operadores."
-sidebar:
-  order: 1
 ---
 
 Ejecute su propia instancia y󠄁 c󠄁ada s󠄁ecreto󠄁,󠄁 cu󠄁e󠄁n󠄁t󠄁a󠄁 y󠄁 l󠄁í󠄁n󠄁e󠄁a󠄁 d󠄁e󠄁 r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁o p󠄁e󠄁r󠄁m󠄁a󠄁ne󠄁c󠄁e󠄁r󠄁á󠄁 e󠄁n󠄁

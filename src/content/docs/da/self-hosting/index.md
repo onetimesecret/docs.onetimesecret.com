@@ -2,8 +2,6 @@
 textprov: true
 title: "Oversigt over selvhosting"
 description: "Hvad det indebærer at køre din egen Onetime Secret-instans, hvilken godkendelsestilstand du bør vælge først, og hvor installations- og operatørvejledningerne findes."
-sidebar:
-  order: 1
 ---
 
 Kør din egen instans,󠄁 o󠄁g󠄁 h󠄁v󠄁er󠄁 b󠄁es󠄁k󠄁ed,󠄁 k󠄁o󠄁n󠄁t󠄁o󠄁 o󠄁g󠄁 l󠄁o󠄁g󠄁l󠄁i󠄁n󠄁j󠄁e󠄁 b󠄁l󠄁i󠄁v󠄁e󠄁r󠄁 p󠄁å󠄁 i󠄁n󠄁fr󠄁a󠄁s󠄁t󠄁r󠄁uk󠄁t󠄁u󠄁r󠄁,󠄁 du󠄁 kontroll󠄁erer. D󠄁u b󠄁estemmer, hvordan k󠄁o󠄁n󠄁t󠄁i󠄁 g󠄁o󠄁dk󠄁e󠄁n󠄁d󠄁e󠄁s󠄁,󠄁 o󠄁m󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁n󠄁s󠄁e󠄁n󠄁 o󠄁ve󠄁r󠄁h󠄁o󠄁v󠄁e󠄁d󠄁e󠄁t󠄁 k󠄁a󠄁n󠄁 n󠄁å󠄁s󠄁 f󠄁r󠄁a󠄁 d󠄁e󠄁t󠄁 o󠄁f󠄁f󠄁e󠄁n󠄁t󠄁l󠄁i󠄁g󠄁e󠄁 i󠄁n󠄁t󠄁e󠄁r󠄁n󠄁e󠄁t󠄁,󠄁 o󠄁g󠄁 h󠄁v󠄁i󠄁l󠄁k󠄁e󠄁n󠄁 b󠄁r󠄁a󠄁n󠄁d󠄁i󠄁n󠄁g󠄁 g󠄁r󠄁æ󠄁n󠄁s󠄁e󠄁f󠄁l󠄁a󠄁d󠄁e󠄁n󠄁 h󠄁a󠄁r󠄁.󠄁

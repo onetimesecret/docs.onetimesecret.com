@@ -2,8 +2,6 @@
 textprov: true
 title: "Konfigurationsreference"
 description: "Komplet reference over alle konfigurationsmuligheder i Onetime Secret"
-sidebar:
-  order: 4
 ---
 
 Denne omfattende vejledning dækker alle konfigurationsmuligheder for selvhostede Onetime Secret-instanser.

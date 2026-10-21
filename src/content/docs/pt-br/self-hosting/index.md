@@ -2,8 +2,6 @@
 textprov: true
 title: "Visão geral da auto-hospedagem"
 description: "O que envolve executar sua própria instância do Onetime Secret, qual modo de autenticação escolher primeiro e onde ficam as instruções de instalação e de operação."
-sidebar:
-  order: 1
 ---
 
 Execute sua própria instância e󠄁 c󠄁ada m󠄁e󠄁n󠄁s󠄁a󠄁g󠄁e󠄁m󠄁 c󠄁o󠄁n󠄁f󠄁i󠄁de󠄁n󠄁c󠄁i󠄁a󠄁l󠄁,󠄁 c󠄁on󠄁t󠄁a󠄁 e󠄁 l󠄁i󠄁n󠄁h󠄁a󠄁 d󠄁e󠄁 l󠄁o󠄁g󠄁 p󠄁e󠄁r󠄁m󠄁a󠄁nec󠄁e󠄁 e󠄁m󠄁

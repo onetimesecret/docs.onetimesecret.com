@@ -2,8 +2,6 @@
 textprov: true
 title: "Self-Hosting im Überblick"
 description: "Was der Betrieb einer eigenen Instanz von Onetime Secret bedeutet, welchen Authentifizierungsmodus du zuerst wählen solltest und wo die Installations- und Betreiberanleitungen zu finden sind."
-sidebar:
-  order: 1
 ---
 
 Betreibe deine eigene I󠄁n󠄁s󠄁t󠄁a󠄁n󠄁z󠄁,󠄁 u󠄁n󠄁d󠄁 j󠄁e󠄁d󠄁e󠄁s󠄁 G󠄁e󠄁h󠄁e󠄁i󠄁m󠄁n󠄁i󠄁s󠄁,󠄁 j󠄁e󠄁d󠄁e󠄁s󠄁 K󠄁o󠄁n󠄁t󠄁o󠄁 u󠄁n󠄁d󠄁 j󠄁e󠄁d󠄁e󠄁 L󠄁o󠄁g󠄁z󠄁e󠄁i󠄁l󠄁e󠄁
