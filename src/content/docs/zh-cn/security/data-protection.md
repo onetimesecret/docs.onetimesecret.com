@@ -30,7 +30,7 @@ Onetime Secret 旨在支持您的合规工作。󠄁它不能取代您自己的�
 - **HIPAA。** 在交换初始访问凭据󠄁时，Onetime Secret 可以提供比电子邮件更安全的渠道，但它应作为权宜之计使用，而不是受保护健康信息（PHI）的永久记录系统。对于持续的 PHI 工作流程，请将其与专门的合规系统配合使用。
 - **认证、DPA 与特定框架。** 关于认证、数据处理协议（DPA）或特定监管框架的问题，请联系 **support@onetimesecret.com**。
 
-对于有严格数据控制要求的组织，[自托管](https://github.com/onetimesecret/onetimesecret)可将一切保留在您自己的基础设施内。
+对于有严格数据控制要求的组织，[自托管](/zh-cn/self-hosting/)可将一切保留在您自己的基础设施内。
 
 ## 有问题󠄁或需要支持？
 
