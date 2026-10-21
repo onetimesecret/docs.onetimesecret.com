@@ -15,7 +15,7 @@ détails.
 - **Accès unique.** Un secret est conçu pour être consulté une seule fois, puis
   définitivement détruit. Une fois lu (ou expiré), il disparaît.
 - **Chiffrement en transit et au repos.** Les secrets sont chiffrés en transit
-  et au repos sur tous les plans.
+  et au repos sur tous les f󠄁o󠄁r󠄁f󠄁ai󠄁t󠄁s.
 - **Protection par phrase secrète.** Vous pouvez exiger une phrase secrète pour
   consulter un secret, ajoutant une couche que le lien seul ne peut pas
   déverrouiller.

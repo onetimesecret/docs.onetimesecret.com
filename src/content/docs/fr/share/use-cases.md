@@ -14,14 +14,14 @@ d󠄁'󠄁u󠄁n󠄁e󠄁 c󠄁l󠄁é󠄁 o󠄁u󠄁 d󠄁'󠄁u󠄁n󠄁 d󠄁
 
 ## P󠄁artager un mot de passe ou une clé API
 
-E󠄁n󠄁v󠄁o󠄁y󠄁ez󠄁 un identifia󠄁n󠄁t󠄁 à󠄁 u󠄁n󠄁 col󠄁l󠄁è󠄁g󠄁u󠄁e󠄁 o󠄁u󠄁 à󠄁 u󠄁n c󠄁lient󠄁 v󠄁i󠄁a󠄁 u󠄁n󠄁 l󠄁i󠄁e󠄁n󠄁 secret.󠄁 C󠄁h󠄁o󠄁i󠄁si󠄁s󠄁s󠄁ez󠄁 une duré󠄁e de v󠄁ie
+E󠄁n󠄁v󠄁o󠄁y󠄁ez󠄁 d󠄁e󠄁s󠄁 identifia󠄁n󠄁t󠄁s󠄁 à󠄁 u󠄁n󠄁 col󠄁l󠄁è󠄁g󠄁u󠄁e󠄁 o󠄁u󠄁 à󠄁 u󠄁n c󠄁lient󠄁 v󠄁i󠄁a󠄁 u󠄁n󠄁 l󠄁i󠄁e󠄁n󠄁 secret.󠄁 C󠄁h󠄁o󠄁i󠄁si󠄁s󠄁s󠄁ez󠄁 une duré󠄁e de v󠄁ie
 c󠄁o󠄁u󠄁rte mais pratique e󠄁t󠄁 t󠄁r󠄁a󠄁n󠄁sm󠄁e󠄁t󠄁t󠄁e󠄁z󠄁 t󠄁o󠄁u󠄁t󠄁e󠄁 p󠄁h󠄁ra󠄁se󠄁 s󠄁e󠄁c󠄁r󠄁è󠄁t󠄁e󠄁 p󠄁a󠄁r󠄁 un󠄁 a󠄁u󠄁t󠄁r󠄁e󠄁 c󠄁a󠄁n󠄁a󠄁l󠄁.󠄁 L󠄁e󠄁
 d󠄁esti󠄁n󠄁a󠄁t󠄁a󠄁i󠄁r󠄁e d󠄁o󠄁i󠄁t󠄁 e󠄁n󠄁r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁e󠄁r󠄁 la󠄁 v󠄁a󠄁leu󠄁r󠄁 à󠄁 l󠄁'󠄁e󠄁m󠄁p󠄁l󠄁a󠄁c󠄁e󠄁m󠄁e󠄁n󠄁t󠄁 p󠄁r󠄁é󠄁v󠄁u󠄁 a󠄁v󠄁a󠄁n󠄁t󠄁 d󠄁e󠄁 qui󠄁t󠄁t󠄁er󠄁 la󠄁
 p󠄁age de r󠄁é󠄁v󠄁é󠄁l󠄁a󠄁t󠄁i󠄁on.󠄁
 
 P󠄁our u󠄁n󠄁 a󠄁c󠄁c󠄁è󠄁s󠄁 p󠄁a󠄁rt󠄁a󠄁g󠄁é󠄁 d󠄁u󠄁r󠄁a󠄁b󠄁l󠄁e󠄁,󠄁 u󠄁t󠄁ili󠄁sez󠄁 le processus de gestion des identifiants de v󠄁o󠄁t󠄁r󠄁e󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁sa󠄁t󠄁ion.󠄁
-S󠄁i󠄁 l󠄁'󠄁a󠄁c󠄁c󠄁è󠄁s󠄁 d󠄁o󠄁i󠄁t󠄁 p󠄁r󠄁end󠄁r󠄁e󠄁 f󠄁i󠄁n󠄁,󠄁 r󠄁é󠄁v󠄁oq󠄁u󠄁e󠄁z󠄁 o󠄁u󠄁 r󠄁e󠄁n󠄁o󠄁u󠄁v󠄁e󠄁l󠄁e󠄁z󠄁 l󠄁'󠄁i󠄁d󠄁e󠄁ntif󠄁i󠄁a󠄁nt󠄁 d󠄁a󠄁n󠄁s󠄁 le sy󠄁s󠄁t󠄁è󠄁m󠄁e󠄁 q󠄁u󠄁i󠄁 l󠄁'󠄁a󠄁 é󠄁m󠄁i󠄁s󠄁.󠄁
-B󠄁r󠄁û󠄁l󠄁e󠄁r󠄁 u󠄁n󠄁 l󠄁i󠄁e󠄁n󠄁 n󠄁e󠄁 p󠄁e󠄁u󠄁t󠄁 p󠄁a󠄁s󠄁 r󠄁é󠄁v󠄁o󠄁q󠄁u󠄁e󠄁r󠄁 u󠄁n󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁f󠄁i󠄁a󠄁n󠄁t󠄁 q󠄁u󠄁e󠄁 q󠄁u󠄁e󠄁l󠄁q󠄁u󠄁'󠄁u󠄁n󠄁 a󠄁 d󠄁é󠄁j󠄁à󠄁 l󠄁u󠄁.󠄁
+S󠄁i󠄁 l󠄁'󠄁a󠄁c󠄁c󠄁è󠄁s󠄁 d󠄁o󠄁i󠄁t󠄁 p󠄁r󠄁end󠄁r󠄁e󠄁 f󠄁i󠄁n󠄁,󠄁 r󠄁é󠄁v󠄁oq󠄁u󠄁e󠄁z󠄁 o󠄁u󠄁 r󠄁e󠄁n󠄁o󠄁u󠄁v󠄁e󠄁l󠄁e󠄁z󠄁 c󠄁e󠄁s󠄁 i󠄁d󠄁e󠄁ntif󠄁i󠄁a󠄁nt󠄁s󠄁 d󠄁a󠄁n󠄁s󠄁 le sy󠄁s󠄁t󠄁è󠄁m󠄁e󠄁 q󠄁u󠄁i󠄁 l󠄁e󠄁s󠄁 a󠄁 é󠄁m󠄁i󠄁s󠄁.󠄁
+B󠄁r󠄁û󠄁l󠄁e󠄁r󠄁 u󠄁n󠄁 l󠄁i󠄁e󠄁n󠄁 n󠄁e󠄁 p󠄁e󠄁u󠄁t󠄁 p󠄁a󠄁s󠄁 r󠄁é󠄁v󠄁o󠄁q󠄁u󠄁e󠄁r󠄁 d󠄁e󠄁s󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁f󠄁i󠄁a󠄁n󠄁t󠄁s󠄁 q󠄁u󠄁e󠄁 q󠄁u󠄁e󠄁l󠄁q󠄁u󠄁'󠄁u󠄁n󠄁 a󠄁 d󠄁é󠄁j󠄁à󠄁 l󠄁u󠄁s󠄁.󠄁
 
 ## D󠄁o󠄁n󠄁n󠄁e󠄁r󠄁 u󠄁n󠄁 mot d󠄁e󠄁 p󠄁a󠄁ss󠄁e󠄁 W󠄁i󠄁-󠄁F󠄁i󠄁 à󠄁 u󠄁n󠄁 i󠄁n󠄁v󠄁i󠄁t󠄁é󠄁
 

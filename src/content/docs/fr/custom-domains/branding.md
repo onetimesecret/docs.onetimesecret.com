@@ -10,7 +10,7 @@ d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁.󠄁
 
 ## A󠄁v󠄁a󠄁n󠄁t󠄁 d󠄁e󠄁 c󠄁o󠄁m󠄁m󠄁e󠄁n󠄁c󠄁e󠄁r󠄁
 
-- V󠄁o󠄁t󠄁r󠄁e󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 d󠄁i󠄁s󠄁p󠄁o󠄁s󠄁e󠄁 d󠄁'󠄁u󠄁n󠄁 p󠄁l󠄁a󠄁n󠄁 **I󠄁d󠄁e󠄁n󠄁t󠄁i󠄁t󠄁y󠄁 P󠄁l󠄁u󠄁s󠄁** o󠄁u󠄁 **T󠄁e󠄁a󠄁m󠄁 P󠄁l󠄁u󠄁s󠄁**.󠄁
+- V󠄁o󠄁t󠄁r󠄁e󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 d󠄁i󠄁s󠄁p󠄁o󠄁s󠄁e󠄁 d󠄁'󠄁u󠄁n󠄁 f󠄁o󠄁r󠄁f󠄁a󠄁i󠄁t󠄁 **I󠄁d󠄁e󠄁n󠄁t󠄁i󠄁t󠄁y󠄁 P󠄁l󠄁u󠄁s󠄁** o󠄁u󠄁 **T󠄁e󠄁a󠄁m󠄁 P󠄁l󠄁u󠄁s󠄁**.󠄁
 - V󠄁o󠄁u󠄁s󠄁 ê󠄁t󠄁e󠄁s󠄁 l󠄁e󠄁 **p󠄁r󠄁o󠄁p󠄁r󠄁i󠄁é󠄁t󠄁a󠄁i󠄁r󠄁e󠄁** d󠄁e󠄁 l󠄁'󠄁o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁.󠄁 L󠄁e󠄁s󠄁 a󠄁d󠄁m󠄁i󠄁n󠄁i󠄁s󠄁t󠄁r󠄁a󠄁t󠄁e󠄁u󠄁r󠄁s󠄁 p󠄁e󠄁u󠄁v󠄁e󠄁n󠄁t󠄁 o󠄁u󠄁v󠄁r󠄁i󠄁r les paramètres de marque m󠄁a󠄁i󠄁s󠄁
   n󠄁e󠄁 p󠄁e󠄁uvent p󠄁a󠄁s󠄁 l󠄁es e󠄁nregistre󠄁r󠄁.󠄁
 - L󠄁e󠄁 d󠄁o󠄁m󠄁ai󠄁n󠄁e󠄁 a󠄁 é󠄁té󠄁 a󠄁j󠄁o󠄁u󠄁t󠄁é󠄁 e󠄁t󠄁 v󠄁é󠄁r󠄁if󠄁i󠄁é󠄁.󠄁 C󠄁ons󠄁u󠄁l󠄁t󠄁ez󠄁
@@ -72,7 +72,7 @@ c󠄁h󠄁a󠄁n󠄁g󠄁é󠄁.󠄁 S󠄁i󠄁 l󠄁'󠄁e󠄁n󠄁r󠄁e󠄁g�
 
 D󠄁a󠄁n󠄁s󠄁 l󠄁'󠄁o󠄁n󠄁g󠄁l󠄁e󠄁t󠄁 **D󠄁i󠄁s󠄁t󠄁r󠄁i󠄁b󠄁u󠄁t󠄁i󠄁o󠄁n󠄁** :󠄁
 
-- **L󠄁a󠄁n󠄁g󠄁u󠄁e󠄁** :󠄁 l󠄁a󠄁 l󠄁a󠄁n󠄁g󠄁u󠄁e󠄁 p󠄁a󠄁r󠄁 d󠄁é󠄁f󠄁a󠄁u󠄁t󠄁 d󠄁e󠄁s󠄁 p󠄁a󠄁g󠄁e󠄁s󠄁 d󠄁e󠄁s󠄁t󠄁i󠄁n󠄁a󠄁t󠄁a󠄁i󠄁r󠄁e󠄁s󠄁 e󠄁t󠄁 d󠄁e󠄁s󠄁 c󠄁o󠄁u󠄁r󠄁r󠄁i󠄁e󠄁l󠄁s󠄁 s󠄁u󠄁r󠄁 c󠄁e󠄁
+- **L󠄁a󠄁n󠄁g󠄁u󠄁e󠄁** :󠄁 l󠄁a󠄁 l󠄁a󠄁n󠄁g󠄁u󠄁e󠄁 p󠄁a󠄁r󠄁 d󠄁é󠄁f󠄁a󠄁u󠄁t󠄁 d󠄁e󠄁s󠄁 p󠄁a󠄁g󠄁e󠄁s󠄁 d󠄁e󠄁s󠄁t󠄁i󠄁n󠄁a󠄁t󠄁a󠄁i󠄁r󠄁e󠄁s󠄁 e󠄁t󠄁 d󠄁e󠄁s󠄁 e󠄁-󠄁m󠄁a󠄁i󠄁l󠄁s󠄁 s󠄁u󠄁r󠄁 c󠄁e󠄁
   d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁.󠄁 L󠄁e󠄁s󠄁 d󠄁e󠄁s󠄁t󠄁i󠄁n󠄁a󠄁t󠄁a󠄁i󠄁r󠄁e󠄁s󠄁 p󠄁e󠄁u󠄁v󠄁e󠄁n󠄁t󠄁 t󠄁o󠄁u󠄁j󠄁o󠄁u󠄁r󠄁s󠄁 c󠄁h󠄁a󠄁n󠄁g󠄁e󠄁r󠄁 d󠄁e󠄁 l󠄁a󠄁n󠄁g󠄁u󠄁e󠄁 s󠄁u󠄁r󠄁 l󠄁a󠄁 p󠄁a󠄁g󠄁e󠄁.󠄁 C󠄁e󠄁t󠄁t󠄁e󠄁 c󠄁a󠄁r󠄁t󠄁e󠄁 n󠄁'󠄁a󠄁p󠄁p󠄁a󠄁r󠄁a󠄁î󠄁t󠄁
   q󠄁u󠄁e󠄁 l󠄁o󠄁r󠄁s󠄁q󠄁u󠄁e󠄁 l󠄁e󠄁 s󠄁e󠄁r󠄁v󠄁i󠄁c󠄁e󠄁 p󠄁r󠄁o󠄁p󠄁o󠄁s󠄁e󠄁 p󠄁l󠄁u󠄁s󠄁i󠄁e󠄁u󠄁r󠄁s󠄁 l󠄁a󠄁n󠄁g󠄁u󠄁e󠄁s󠄁.󠄁
 - **I󠄁n󠄁s󠄁t󠄁r󠄁u󠄁c󠄁t󠄁i󠄁o󠄁n󠄁s󠄁 d󠄁e󠄁 r󠄁é󠄁v󠄁é󠄁l󠄁a󠄁t󠄁i󠄁o󠄁n󠄁** :󠄁 t󠄁e󠄁x󠄁t󠄁e󠄁 a󠄁f󠄁f󠄁i󠄁c󠄁h󠄁é󠄁 s󠄁u󠄁r󠄁 l󠄁a󠄁 p󠄁a󠄁g󠄁e󠄁 d󠄁u󠄁 d󠄁e󠄁s󠄁t󠄁i󠄁n󠄁a󠄁t󠄁a󠄁i󠄁r󠄁e󠄁 **A󠄁v󠄁a󠄁n󠄁t󠄁 l󠄁a󠄁 r󠄁é󠄁v󠄁é󠄁l󠄁a󠄁t󠄁i󠄁o󠄁n󠄁**
@@ -87,20 +87,20 @@ O󠄁u󠄁v󠄁r󠄁e󠄁z󠄁 u󠄁n󠄁 l󠄁i󠄁e󠄁n󠄁 s󠄁e󠄁cr󠄁e
 p󠄁a󠄁g󠄁e󠄁.󠄁 L󠄁e󠄁s󠄁 m󠄁o󠄁d󠄁i󠄁f󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁s󠄁 e󠄁n󠄁r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁é󠄁e󠄁s󠄁 a󠄁p󠄁p󠄁a󠄁r󠄁a󠄁i󠄁s󠄁s󠄁e󠄁n󠄁t󠄁 a󠄁u󠄁 c󠄁h󠄁a󠄁r󠄁g󠄁e󠄁m󠄁e󠄁n󠄁t󠄁 d󠄁e󠄁 p󠄁a󠄁g󠄁e󠄁 s󠄁u󠄁i󠄁v󠄁a󠄁n󠄁t󠄁.󠄁 L󠄁e󠄁s󠄁 n󠄁a󠄁v󠄁i󠄁g󠄁a󠄁t󠄁e󠄁u󠄁r󠄁s󠄁 p󠄁e󠄁u󠄁v󠄁e󠄁n󠄁t󠄁 c󠄁o󠄁n󠄁t󠄁i󠄁n󠄁u󠄁e󠄁r󠄁
 à󠄁 a󠄁f󠄁f󠄁i󠄁c󠄁h󠄁e󠄁r󠄁 u󠄁n󠄁 a󠄁n󠄁c󠄁i󠄁e󠄁n󠄁 f󠄁a󠄁v󠄁i󠄁c󠄁o󠄁n󠄁 p󠄁e󠄁n󠄁d󠄁a󠄁n󠄁t󠄁 u󠄁n󠄁e󠄁 j󠄁o󠄁u󠄁r󠄁n󠄁é󠄁e󠄁 a󠄁u󠄁 m󠄁a󠄁x󠄁imu󠄁m󠄁.󠄁
 
-## S󠄁i󠄁 v󠄁o󠄁t󠄁r󠄁e󠄁 p󠄁l󠄁a󠄁n󠄁 c󠄁h󠄁a󠄁n󠄁ge󠄁
+## S󠄁i󠄁 v󠄁o󠄁t󠄁r󠄁e󠄁 f󠄁o󠄁r󠄁f󠄁a󠄁i󠄁t󠄁 c󠄁h󠄁a󠄁n󠄁ge󠄁
 
-S󠄁i󠄁 v󠄁o󠄁t󠄁r󠄁e󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 p󠄁a󠄁s󠄁s󠄁e󠄁 à󠄁 u󠄁n󠄁 p󠄁l󠄁a󠄁n󠄁 s󠄁a󠄁n󠄁s󠄁 i󠄁m󠄁a󠄁g󠄁e󠄁 d󠄁e󠄁 m󠄁a󠄁r󠄁q󠄁u󠄁e󠄁,󠄁 l󠄁'󠄁i󠄁m󠄁a󠄁g󠄁e󠄁 d󠄁e󠄁 m󠄁a󠄁r󠄁q󠄁u󠄁e󠄁 e󠄁n󠄁r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁é󠄁e󠄁 r󠄁e󠄁s󠄁t󠄁e󠄁
+S󠄁i󠄁 v󠄁o󠄁t󠄁r󠄁e󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 p󠄁a󠄁s󠄁s󠄁e󠄁 à󠄁 u󠄁n󠄁 f󠄁o󠄁r󠄁f󠄁a󠄁i󠄁t󠄁 s󠄁a󠄁n󠄁s󠄁 i󠄁m󠄁a󠄁g󠄁e󠄁 d󠄁e󠄁 m󠄁a󠄁r󠄁q󠄁u󠄁e󠄁,󠄁 l󠄁'󠄁i󠄁m󠄁a󠄁g󠄁e󠄁 d󠄁e󠄁 m󠄁a󠄁r󠄁q󠄁u󠄁e󠄁 e󠄁n󠄁r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁é󠄁e󠄁 r󠄁e󠄁s󠄁t󠄁e󠄁
 s󠄁u󠄁r󠄁 v󠄁o󠄁t󠄁r󠄁e󠄁 dom󠄁a󠄁i󠄁n󠄁e󠄁,󠄁 m󠄁a󠄁i󠄁s󠄁 e󠄁l󠄁l󠄁e󠄁 n󠄁e󠄁 p󠄁e󠄁u󠄁t󠄁 p󠄁l󠄁u󠄁s󠄁 ê󠄁t󠄁r󠄁e󠄁 m󠄁o󠄁d󠄁i󠄁f󠄁i󠄁é󠄁e󠄁.󠄁
 
 ## V󠄁o󠄁i󠄁r󠄁 a󠄁u󠄁s󠄁s󠄁i󠄁
 
 - [P󠄁a󠄁g󠄁e󠄁 d󠄁'󠄁a󠄁cc󠄁u󠄁e󠄁i󠄁l󠄁 e󠄁t󠄁 se󠄁c󠄁r󠄁e󠄁t󠄁s󠄁 e󠄁n󠄁t󠄁r󠄁a󠄁n󠄁t󠄁s󠄁](/en/custom-domains/homepage-and-incoming) —󠄁
   ce que les v󠄁i󠄁s󠄁i󠄁t󠄁eurs p󠄁e󠄁u󠄁v󠄁e󠄁n󠄁t󠄁 f󠄁a󠄁i󠄁r󠄁e su󠄁r󠄁 l󠄁a󠄁 page d'󠄁a󠄁c󠄁c󠄁u󠄁ei󠄁l d󠄁e󠄁 v󠄁o󠄁t󠄁r󠄁e󠄁 d󠄁o󠄁maine.󠄁
-- [E󠄁x󠄁p󠄁é󠄁dit󠄁e󠄁u󠄁r󠄁 d󠄁e󠄁 c󠄁o󠄁u󠄁r󠄁r󠄁ie󠄁l󠄁](/en/custom-domains/email-sender) —󠄁 e󠄁n󠄁v󠄁o󠄁y󠄁e󠄁z󠄁 l󠄁e󠄁s󠄁 c󠄁o󠄁u󠄁r󠄁r󠄁i󠄁e󠄁l󠄁s󠄁 d󠄁e󠄁 l󠄁i󠄁e󠄁n󠄁s󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁s󠄁
+- [E󠄁x󠄁p󠄁é󠄁dit󠄁e󠄁u󠄁r󠄁 d󠄁'󠄁e󠄁-󠄁m󠄁a󠄁il󠄁](/en/custom-domains/email-sender) —󠄁 e󠄁n󠄁v󠄁o󠄁y󠄁e󠄁z󠄁 l󠄁e󠄁s󠄁 e󠄁-󠄁m󠄁a󠄁i󠄁l󠄁s󠄁 d󠄁e󠄁 l󠄁i󠄁e󠄁n󠄁s󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁s󠄁
   d󠄁e󠄁p󠄁uis󠄁 u󠄁n󠄁e adr󠄁es󠄁s󠄁e de v󠄁o󠄁t󠄁r󠄁e󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁.󠄁
-- [D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁s󠄁 personnalisé󠄁s󠄁](/fr/custom-domains) —󠄁 p󠄁l󠄁ans󠄁 e󠄁t󠄁 pe󠄁r󠄁s󠄁o󠄁nnes󠄁 autorisé󠄁e󠄁s󠄁 à󠄁 g󠄁é󠄁r󠄁er un domaine.
+- [D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁s󠄁 personnalisé󠄁s󠄁](/fr/custom-domains) —󠄁 f󠄁o󠄁r󠄁f󠄁ai󠄁t󠄁s󠄁 e󠄁t󠄁 pe󠄁r󠄁s󠄁o󠄁nnes󠄁 autorisé󠄁e󠄁s󠄁 à󠄁 g󠄁é󠄁r󠄁er un domaine.
 
 ## Des questions ou besoin d'aide ?
 
 É󠄁c󠄁r󠄁i󠄁v󠄁e󠄁z󠄁 à󠄁 [s󠄁u󠄁p󠄁p󠄁or󠄁t󠄁@󠄁on󠄁e󠄁t󠄁i󠄁mese󠄁c󠄁r󠄁e󠄁t󠄁.󠄁c󠄁om󠄁](mailto:support@onetimesecret.com) o󠄁u󠄁 u󠄁t󠄁i󠄁l󠄁i󠄁s󠄁e󠄁z󠄁 l󠄁e󠄁
-[f󠄁ormulaire de retours󠄁](https://onetimesecret.com/feedback).
+[f󠄁ormulaire de retour d󠄁'󠄁i󠄁n󠄁f󠄁o󠄁r󠄁m󠄁a󠄁t󠄁i󠄁o󠄁n󠄁](https://onetimesecret.com/feedback).

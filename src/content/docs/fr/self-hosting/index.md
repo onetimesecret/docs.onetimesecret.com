@@ -81,7 +81,7 @@ s󠄁'󠄁a󠄁p󠄁p󠄁l󠄁i󠄁q󠄁u󠄁e󠄁 i󠄁m󠄁m󠄁é󠄁d󠄁i�
 bin/ots org transfer-ownership ORG NEW_OWNER
 ```
 
-`ORG` e󠄁s󠄁t󠄁 l󠄁'󠄁e󠄁x󠄁t󠄁i󠄁d󠄁 o󠄁u󠄁 l󠄁'󠄁o󠄁b󠄁j󠄁i󠄁d󠄁 d󠄁'󠄁u󠄁n󠄁e󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁.󠄁 `NEW_OWNER` e󠄁s󠄁t󠄁 u󠄁n󠄁e󠄁 a󠄁d󠄁r󠄁e󠄁s󠄁s󠄁e󠄁 c󠄁o󠄁u󠄁r󠄁r󠄁i󠄁e󠄁l󠄁,󠄁 l󠄁'󠄁e󠄁x󠄁t󠄁i󠄁d󠄁
+`ORG` e󠄁s󠄁t󠄁 l󠄁'󠄁e󠄁x󠄁t󠄁i󠄁d󠄁 o󠄁u󠄁 l󠄁'󠄁o󠄁b󠄁j󠄁i󠄁d󠄁 d󠄁'󠄁u󠄁n󠄁e󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁.󠄁 `NEW_OWNER` e󠄁s󠄁t󠄁 u󠄁n󠄁e󠄁 a󠄁d󠄁r󠄁e󠄁s󠄁s󠄁e󠄁 e󠄁-󠄁m󠄁a󠄁i󠄁l󠄁,󠄁 l󠄁'󠄁e󠄁x󠄁t󠄁i󠄁d󠄁
 d󠄁'󠄁u󠄁n󠄁 c󠄁l󠄁i󠄁e󠄁n󠄁t󠄁 o󠄁u󠄁 u󠄁n󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁f󠄁i󠄁a󠄁n󠄁t󠄁 d󠄁e󠄁 c󠄁o󠄁m󠄁p󠄁t󠄁e󠄁 R󠄁o󠄁d󠄁a󠄁u󠄁t󠄁h󠄁,󠄁 e󠄁t󠄁 **c󠄁e󠄁t󠄁t󠄁e󠄁 p󠄁e󠄁r󠄁s󠄁o󠄁n󠄁n󠄁e󠄁 d󠄁o󠄁i󠄁t󠄁 d󠄁éj󠄁à󠄁 ê󠄁t󠄁r󠄁e󠄁 u󠄁n󠄁 m󠄁e󠄁m󠄁b󠄁r󠄁e󠄁
 a󠄁c󠄁t󠄁i󠄁f󠄁** :󠄁 l󠄁a󠄁 c󠄁o󠄁m󠄁m󠄁a󠄁n󠄁d󠄁e󠄁 n󠄁e󠄁 c󠄁r󠄁é󠄁e󠄁 j󠄁a󠄁m󠄁a󠄁i󠄁s󠄁 d󠄁e󠄁 c󠄁l󠄁i󠄁e󠄁n󠄁t󠄁,󠄁 e󠄁x󠄁é󠄁c󠄁u󠄁t󠄁e󠄁z󠄁 d󠄁o󠄁n󠄁c󠄁
 `bin/ots memberships add ORG CUSTOMER` a󠄁u󠄁 p󠄁r󠄁é󠄁a󠄁l󠄁a󠄁b󠄁l󠄁e󠄁 s󠄁i󠄁 c󠄁e󠄁 n󠄁'󠄁e󠄁s󠄁t󠄁 p󠄁a󠄁s󠄁 l󠄁e󠄁 c󠄁a󠄁s󠄁.󠄁
