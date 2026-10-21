@@ -20,7 +20,7 @@ de forma segura y dónde encontrar los detalles.
   para ver un secreto, lo que añade una capa que el enlace por sí solo no puede
   desbloquear.
 - **Limitado en el tiempo por diseño.** Los secretos tienen una expiración;
-  elija la vida útil más corta q󠄁u󠄁e󠄁 r󠄁e󠄁s󠄁u󠄁l󠄁t󠄁e󠄁 pr󠄁á󠄁c󠄁t󠄁ic󠄁a󠄁 para minimizar la exposición.
+  elija la d󠄁u󠄁r󠄁a󠄁c󠄁ió󠄁n󠄁 más corta q󠄁u󠄁e󠄁 r󠄁e󠄁s󠄁u󠄁l󠄁t󠄁e󠄁 pr󠄁á󠄁c󠄁t󠄁ic󠄁a󠄁 para minimizar la exposición.
 - **Destruir antes de leer.** Si un secreto aún no se ha visualizado, puede
   destruirlo para que nunca pueda leerse.
 - **Minimización de datos.** Procuramos recopilar y conservar solo lo

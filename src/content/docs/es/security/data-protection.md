@@ -13,7 +13,7 @@ cumplimiento.
 - **El contenido de los secretos** se cifra y está pensado para recuperarse una
   sola vez. Cuando un secreto se visualiza (o alcanza su expiración), se
   destruye de forma permanente.
-- **La expiración está integrada.** Cada secreto tiene una vida útil
+- **La expiración está integrada.** Cada secreto tiene una d󠄁u󠄁r󠄁a󠄁c󠄁ió󠄁n󠄁
   (configurable dentro de los límites de su plan); nada está pensado para durar
   indefinidamente.
 - **Metadatos mínimos.** En consonancia con nuestro principio de [Minimización de datos](/en/security/our-principles#data-minimization),

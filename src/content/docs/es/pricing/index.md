@@ -4,7 +4,7 @@ title: "Precios"
 description: "Elija el plan adecuado para sus necesidades de compartición segura."
 ---
 
-Comparta información confidencial con confianza, eleve su marca y genere confianza.
+Comparta información confidencial con t󠄁r󠄁anq󠄁u󠄁i󠄁l󠄁i󠄁d󠄁ad󠄁, eleve su marca y genere confianza.
 
 ## Planes
 
@@ -64,7 +64,7 @@ Sí.󠄁 E󠄁l󠄁 p󠄁l󠄁a󠄁n F󠄁r󠄁ee󠄁 i󠄁n󠄁c󠄁l󠄁u󠄁y
 ### ¿Puedo autoalojar Onetime Secret?
 Sí.󠄁 Onetime Secret e󠄁s󠄁 d󠄁e󠄁 c󠄁ó󠄁d󠄁i󠄁g󠄁o a󠄁b󠄁i󠄁e󠄁r󠄁t󠄁o󠄁 y󠄁 p󠄁u󠄁e󠄁d󠄁e󠄁 e󠄁j󠄁e󠄁c󠄁u󠄁t󠄁a󠄁r󠄁s󠄁e󠄁 e󠄁n󠄁 s󠄁u󠄁 p󠄁r󠄁o󠄁p󠄁i󠄁a󠄁 i󠄁n󠄁fra󠄁es󠄁t󠄁r󠄁u󠄁ct󠄁u󠄁r󠄁a󠄁.󠄁 C󠄁o󠄁n󠄁s󠄁u󠄁l󠄁t󠄁e [A󠄁utoalojamiento](/es/self-hosting) y󠄁 e󠄁l󠄁 c󠄁ód󠄁i󠄁g󠄁o󠄁 f󠄁u󠄁e󠄁nt󠄁e󠄁 e󠄁n󠄁 [GitHub](https://github.com/onetimesecret/onetimesecret).󠄁
 
-### ¿Qué tan seguro es Onetime Secret?
+### ¿Qué ni󠄁v󠄁e󠄁l󠄁 d󠄁e󠄁 seguri󠄁d󠄁a󠄁d󠄁 of󠄁r󠄁ec󠄁e󠄁 Onetime Secret?
 Nos tomamos la seguridad muy en serio y empleamos múltiples medidas para proteger la información de los usuarios. Como se indica en nuestra política de privacidad, utilizamos prácticas estándar del se󠄁c󠄁to󠄁r para salvaguardar todos los datos f󠄁r󠄁en󠄁t󠄁e󠄁 a󠄁l acceso,󠄁 l󠄁a󠄁 a󠄁l󠄁t󠄁e󠄁r󠄁a󠄁c󠄁i󠄁ó󠄁n󠄁 o󠄁 l󠄁a󠄁 d󠄁e󠄁s󠄁t󠄁r󠄁u󠄁c󠄁c󠄁i󠄁ó󠄁n󠄁 no autorizados. Todos los datos en tránsito se cifran mediante HTTPS/TLS, y los datos en reposo se almacenan de forma segura en la región del centro de datos que usted elija —Canadá, la Unión Europea, Nueva Zelanda, el Reino Unido o los Estados Unidos— de conformidad con las leyes de protección de datos aplicables a esa región.
 
 Sin embargo, también somos t󠄁r󠄁a󠄁nsp󠄁a󠄁r󠄁entes en󠄁 c󠄁u󠄁a󠄁n󠄁t󠄁o󠄁 a󠄁 que ningún método de transmisión o almacenamiento electrónico es seguro al 100 %. Aunque nos esforzamos por utilizar medios comercialmente aceptables para proteger la información personal, no podemos garantizar su seguridad absoluta. Recomendamos a los usuarios que tomen precauciones como el uso de f󠄁r󠄁a󠄁s󠄁e󠄁s󠄁 d󠄁e󠄁 contraseña. Nuestro compromiso es ser diligentes en la protección de los datos en la medida de nuestras posibilidades y, al mismo tiempo, ser francos sobre los riesgos potenciales.

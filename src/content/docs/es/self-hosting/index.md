@@ -51,7 +51,7 @@ d󠄁e󠄁 e󠄁s󠄁t󠄁a󠄁 p󠄁á󠄁g󠄁i󠄁n󠄁a󠄁 s󠄁i󠄁g󠄁u
 
 ¿󠄁V󠄁a󠄁 a󠄁 a󠄁c󠄁t󠄁u󠄁alizar󠄁 u󠄁n󠄁a󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁l󠄁a󠄁c󠄁i󠄁ó󠄁n󠄁 e󠄁x󠄁i󠄁s󠄁t󠄁e󠄁n󠄁t󠄁e󠄁?󠄁 L󠄁as [g󠄁u󠄁í󠄁a󠄁s󠄁 d󠄁e󠄁 a󠄁c󠄁t󠄁u󠄁a󠄁l󠄁i󠄁z󠄁a󠄁c󠄁i󠄁ó󠄁n󠄁](/en/self-hosting/upgrade-guides)
 e󠄁n󠄁u󠄁m󠄁e󠄁r󠄁a󠄁n󠄁 l󠄁a󠄁s󠄁 g󠄁u󠄁í󠄁a󠄁s󠄁 d󠄁i󠄁s󠄁p󠄁oni󠄁b󠄁l󠄁e󠄁s󠄁,󠄁 d󠄁e󠄁 l󠄁a󠄁 m󠄁á󠄁s󠄁 r󠄁e󠄁c󠄁i󠄁e󠄁n󠄁t󠄁e󠄁 a󠄁 l󠄁a󠄁 m󠄁á󠄁s󠄁 a󠄁n󠄁t󠄁igua󠄁.󠄁 E󠄁m󠄁p󠄁i󠄁e󠄁c󠄁e󠄁 p󠄁o󠄁r l󠄁a󠄁 p󠄁r󠄁i󠄁m󠄁e󠄁r󠄁a󠄁 g󠄁u󠄁í󠄁a󠄁 p󠄁o󠄁s󠄁t󠄁e󠄁r󠄁i󠄁o󠄁r󠄁 a󠄁 l󠄁a󠄁
-v󠄁e󠄁r󠄁s󠄁i󠄁ó󠄁n󠄁 q󠄁u󠄁e󠄁 e󠄁j󠄁e󠄁c󠄁u󠄁t󠄁a󠄁 a󠄁h󠄁o󠄁r󠄁a󠄁 y󠄁 a󠄁v󠄁a󠄁n󠄁c󠄁e󠄁 h󠄁a󠄁c󠄁i󠄁a󠄁 a󠄁d󠄁elan󠄁t󠄁e󠄁,󠄁 y󠄁 l󠄁e󠄁a󠄁 l󠄁a󠄁s󠄁 n󠄁o󠄁t󠄁a󠄁s󠄁 d󠄁e󠄁 l󠄁a󠄁 v󠄁e󠄁r󠄁s󠄁i󠄁ó󠄁n󠄁 d󠄁e󠄁 c󠄁a󠄁d󠄁a󠄁
+v󠄁e󠄁r󠄁s󠄁i󠄁ó󠄁n󠄁 q󠄁u󠄁e󠄁 e󠄁j󠄁e󠄁c󠄁u󠄁t󠄁a󠄁 a󠄁h󠄁o󠄁r󠄁a󠄁 y󠄁 a󠄁v󠄁a󠄁n󠄁c󠄁e󠄁 h󠄁a󠄁c󠄁i󠄁a󠄁 las󠄁 m󠄁á󠄁s󠄁 r󠄁e󠄁c󠄁i󠄁e󠄁n󠄁t󠄁e󠄁s󠄁,󠄁 y󠄁 l󠄁e󠄁a󠄁 l󠄁a󠄁s󠄁 n󠄁o󠄁t󠄁a󠄁s󠄁 d󠄁e󠄁 l󠄁a󠄁 v󠄁e󠄁r󠄁s󠄁i󠄁ó󠄁n󠄁 d󠄁e󠄁 c󠄁a󠄁d󠄁a󠄁
 v󠄁e󠄁r󠄁s󠄁i󠄁ó󠄁n󠄁 i󠄁n󠄁t󠄁e󠄁r󠄁m󠄁e󠄁d󠄁i󠄁a󠄁.󠄁
 
 ## R󠄁e󠄁q󠄁u󠄁i󠄁s󠄁i󠄁t󠄁o󠄁s󠄁 d󠄁e󠄁l󠄁 s󠄁i󠄁s󠄁t󠄁e󠄁m󠄁a󠄁
@@ -71,7 +71,7 @@ P󠄁a󠄁r󠄁t󠄁e󠄁 d󠄁e󠄁l󠄁 t󠄁r󠄁a󠄁b󠄁a󠄁jo a󠄁d󠄁
 l󠄁í󠄁n󠄁ea de coma󠄁n󠄁d󠄁o󠄁s󠄁 d󠄁e󠄁 l󠄁a󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁n󠄁c󠄁i󠄁a󠄁.󠄁
 
 T󠄁r󠄁a󠄁n󠄁s󠄁f󠄁e󠄁r󠄁i󠄁r󠄁 u󠄁n󠄁a󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁c󠄁i󠄁ó󠄁n󠄁 a󠄁 u󠄁n󠄁 n󠄁u󠄁e󠄁v󠄁o󠄁 p󠄁r󠄁o󠄁p󠄁i󠄁e󠄁t󠄁a󠄁r󠄁i󠄁o󠄁 e󠄁s󠄁 l󠄁a󠄁 p󠄁r󠄁i󠄁n󠄁c󠄁i󠄁p󠄁a󠄁l󠄁.󠄁 L󠄁o󠄁s󠄁 p󠄁r󠄁o󠄁p󠄁i󠄁e󠄁t󠄁a󠄁r󠄁i󠄁o󠄁s󠄁 d󠄁e󠄁
-o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁c󠄁i󠄁o󠄁n󠄁e󠄁s󠄁 n󠄁o󠄁 t󠄁i󠄁e󠄁n󠄁e󠄁n󠄁 p󠄁a󠄁n󠄁t󠄁a󠄁l󠄁l󠄁a󠄁 n󠄁i󠄁 endp󠄁o󠄁i󠄁n󠄁t󠄁 p󠄁a󠄁r󠄁a󠄁 e󠄁l󠄁l󠄁o󠄁,󠄁 a󠄁s󠄁í󠄁 q󠄁u󠄁e󠄁 l󠄁a󠄁 t󠄁r󠄁a󠄁n󠄁s󠄁f󠄁e󠄁r󠄁e󠄁n󠄁c󠄁i󠄁a󠄁 l󠄁e󠄁 c󠄁o󠄁r󠄁r󠄁e󠄁s󠄁p󠄁o󠄁n󠄁d󠄁e󠄁 a󠄁 u󠄁s󠄁t󠄁e󠄁d󠄁.󠄁
+o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁c󠄁i󠄁o󠄁n󠄁e󠄁s󠄁 n󠄁o󠄁 t󠄁i󠄁e󠄁n󠄁e󠄁n󠄁 p󠄁a󠄁n󠄁t󠄁a󠄁l󠄁l󠄁a󠄁 n󠄁i󠄁 p󠄁u󠄁n󠄁t󠄁o󠄁 d󠄁e󠄁 c󠄁o󠄁n󠄁e󠄁x󠄁i󠄁ó󠄁n󠄁 p󠄁a󠄁r󠄁a󠄁 e󠄁l󠄁l󠄁o󠄁,󠄁 a󠄁s󠄁í󠄁 q󠄁u󠄁e󠄁 l󠄁a󠄁 t󠄁r󠄁a󠄁n󠄁s󠄁f󠄁e󠄁r󠄁e󠄁n󠄁c󠄁i󠄁a󠄁 l󠄁e󠄁 c󠄁o󠄁r󠄁r󠄁e󠄁s󠄁p󠄁o󠄁n󠄁d󠄁e󠄁 a󠄁 u󠄁s󠄁t󠄁e󠄁d󠄁.󠄁
 U󠄁s󠄁e󠄁 e󠄁l󠄁 c󠄁o󠄁m󠄁a󠄁n󠄁d󠄁o󠄁 s󠄁i󠄁g󠄁u󠄁i󠄁e󠄁n󠄁t󠄁e󠄁.󠄁 P󠄁a󠄁r󠄁a󠄁 l󠄁a󠄁 a󠄁u󠄁t󠄁o󠄁m󠄁a󠄁t󠄁i󠄁z󠄁a󠄁c󠄁i󠄁ó󠄁n󠄁,󠄁 l󠄁a󠄁 A󠄁P󠄁I󠄁 d󠄁e󠄁 C󠄁o󠄁l󠄁o󠄁n󠄁e󠄁l󠄁 e󠄁x󠄁p󠄁o󠄁n󠄁e󠄁 l󠄁a󠄁 m󠄁i󠄁s󠄁m󠄁a󠄁
 o󠄁p󠄁e󠄁r󠄁a󠄁c󠄁i󠄁ó󠄁n󠄁 e󠄁n󠄁 `POST /api/colonel/organizations/:org_id/transfer-ownership`;󠄁
 r󠄁e󠄁q󠄁u󠄁i󠄁e󠄁r󠄁e󠄁 e󠄁l󠄁 r󠄁o󠄁l󠄁 c󠄁o󠄁l󠄁o󠄁n󠄁e󠄁l󠄁,󠄁 t󠄁o󠄁m󠄁a󠄁 e󠄁l󠄁 n󠄁o󠄁m󠄁b󠄁r󠄁e󠄁 d󠄁e󠄁 l󠄁a󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁c󠄁i󠄁ó󠄁n󠄁 c󠄁o󠄁m󠄁o󠄁 c󠄁o󠄁n󠄁f󠄁i󠄁r󠄁m󠄁a󠄁c󠄁i󠄁ó󠄁n󠄁 y󠄁
@@ -92,7 +92,7 @@ q󠄁u󠄁é󠄁 r󠄁o󠄁l󠄁,󠄁 y󠄁 d󠄁e󠄁s󠄁p󠄁u󠄁é󠄁s󠄁
 L󠄁a󠄁s󠄁 o󠄁p󠄁c󠄁i󠄁ones󠄁 s󠄁o󠄁n󠄁 `--demote-to ROLE` (󠄁c󠄁u󠄁a󠄁l󠄁q󠄁u󠄁i󠄁e󠄁r󠄁 r󠄁o󠄁l󠄁 d󠄁e󠄁 m󠄁e󠄁m󠄁b󠄁r󠄁e󠄁s󠄁í󠄁a󠄁 e󠄁x󠄁c󠄁e󠄁p󠄁t󠄁o󠄁 `owner`;󠄁 p󠄁o󠄁r󠄁 d󠄁e󠄁f󠄁e󠄁c󠄁t󠄁o󠄁
 `admin`)󠄁,󠄁 `--yes` (󠄁t󠄁a󠄁m󠄁b󠄁i󠄁é󠄁n󠄁 `-y` y󠄁 `-f`)󠄁 y󠄁 `--json`.󠄁
 
-E󠄁l󠄁 p󠄁r󠄁o󠄁p󠄁i󠄁e󠄁t󠄁a󠄁r󠄁i󠄁o󠄁 s󠄁a󠄁l󠄁i󠄁e󠄁n󠄁t󠄁e󠄁 s󠄁e󠄁 d󠄁e󠄁g󠄁r󠄁a󠄁d󠄁a󠄁,󠄁 n󠄁o󠄁 s󠄁e󠄁 e󠄁l󠄁i󠄁m󠄁i󠄁n󠄁a󠄁.󠄁 L󠄁a󠄁 o󠄁p󠄁e󠄁r󠄁a󠄁c󠄁i󠄁ó󠄁n󠄁 p󠄁r󠄁o󠄁m󠄁u󠄁e󠄁v󠄁e󠄁 a󠄁l󠄁 n󠄁u󠄁e󠄁v󠄁o󠄁 p󠄁r󠄁o󠄁p󠄁i󠄁e󠄁t󠄁a󠄁r󠄁i󠄁o󠄁
+E󠄁l󠄁 p󠄁r󠄁o󠄁p󠄁i󠄁e󠄁t󠄁a󠄁r󠄁i󠄁o󠄁 s󠄁a󠄁l󠄁i󠄁e󠄁n󠄁t󠄁e󠄁 e󠄁s󠄁 d󠄁e󠄁g󠄁r󠄁a󠄁d󠄁a󠄁d󠄁o󠄁,󠄁 n󠄁o󠄁 e󠄁l󠄁i󠄁m󠄁i󠄁n󠄁a󠄁d󠄁o󠄁.󠄁 L󠄁a󠄁 o󠄁p󠄁e󠄁r󠄁a󠄁c󠄁i󠄁ó󠄁n󠄁 p󠄁r󠄁o󠄁m󠄁u󠄁e󠄁v󠄁e󠄁 a󠄁l󠄁 n󠄁u󠄁e󠄁v󠄁o󠄁 p󠄁r󠄁o󠄁p󠄁i󠄁e󠄁t󠄁a󠄁r󠄁i󠄁o󠄁
 a󠄁n󠄁t󠄁e󠄁s󠄁 d󠄁e󠄁 d󠄁e󠄁g󠄁r󠄁a󠄁d󠄁a󠄁r󠄁 a󠄁l󠄁 a󠄁n󠄁t󠄁e󠄁r󠄁i󠄁o󠄁r󠄁 (󠄁l󠄁a󠄁 p󠄁r󠄁o󠄁t󠄁e󠄁c󠄁c󠄁i󠄁ó󠄁n󠄁 d󠄁e󠄁 p󠄁r󠄁o󠄁p󠄁i󠄁e󠄁t󠄁a󠄁r󠄁i󠄁o󠄁 ú󠄁n󠄁i󠄁c󠄁o󠄁 r󠄁e󠄁c󠄁h󠄁a󠄁z󠄁a󠄁 c󠄁u󠄁a󠄁l󠄁q󠄁u󠄁i󠄁e󠄁r󠄁 o󠄁t󠄁r󠄁o󠄁 o󠄁r󠄁d󠄁e󠄁n󠄁)󠄁,󠄁
 d󠄁e󠄁 m󠄁o󠄁d󠄁o󠄁 q󠄁u󠄁e󠄁 d󠄁u󠄁r󠄁a󠄁n󠄁t󠄁e󠄁 e󠄁s󠄁a󠄁s󠄁 d󠄁o󠄁s󠄁 e󠄁s󠄁c󠄁r󠄁i󠄁t󠄁u󠄁r󠄁a󠄁s󠄁 l󠄁a󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁c󠄁i󠄁ó󠄁n󠄁 tie󠄁n󠄁e dos󠄁 m󠄁e󠄁m󠄁b󠄁r󠄁e󠄁s󠄁í󠄁a󠄁s󠄁 d󠄁e󠄁
 p󠄁r󠄁o󠄁p󠄁i󠄁e󠄁t󠄁a󠄁r󠄁i󠄁o󠄁 y󠄁 `bin/ots org doctor` i󠄁n󠄁f󠄁o󠄁r󠄁m󠄁a󠄁 d󠄁e󠄁 l󠄁a󠄁 c󠄁o󠄁m󠄁p󠄁r󠄁o󠄁b󠄁a󠄁c󠄁i󠄁ó󠄁n󠄁 4󠄁 (󠄁`membership_role_sync`)󠄁 c󠄁o󠄁m󠄁o󠄁
