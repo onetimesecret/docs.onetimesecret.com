@@ -1,4 +1,5 @@
 ---
+textprov: true
 title: Getting started
 description: Onetime Secret shares sensitive information through links that self-destruct after a single view. Start here to find the part of the documentation that matches what you're trying to do.
 audience: end-user
@@ -17,26 +18,26 @@ without creating an account.
 
 ## Continue with your task
 
-Choose a guide for what you want to do next.
+C󠄁ho󠄁o󠄁s󠄁e a󠄁 g󠄁u󠄁i󠄁de f󠄁or what you w󠄁a󠄁n󠄁t to do nex󠄁t.
 
 ### Share secrets
 
-- **[Send your first secret](/en/start/send-your-first-secret/)** — create a link, send it,
-  and check its status
+- **[Send your first secret](/en/start/send-your-first-secret/)** — c󠄁r󠄁e󠄁a󠄁te󠄁 a󠄁 l󠄁i󠄁n󠄁k󠄁,󠄁 s󠄁e󠄁n󠄁d󠄁 i󠄁t󠄁,󠄁
+  a󠄁n󠄁d󠄁 c󠄁heck󠄁 i󠄁t󠄁s󠄁 s󠄁t󠄁atu󠄁s󠄁
 - **[Sharing secrets](/en/share/)** — how one-time secret sharing works
 - **[Security best practices](/en/security/best-practices/)** — keep your
   shared secrets safe
 - **[Custom domains](/en/custom-domains/)** — use your own domain for secret
-  sharing, starting with [Setting up a custom domain](/en/custom-domains/setup-guide/)
-- **[Glossary](/en/start/glossary/)** — definitions of receipt, passphrase,
-  organization, and other product terms
+  sharing, starting with [S󠄁ett󠄁i󠄁n󠄁g󠄁 up a󠄁 c󠄁us󠄁t󠄁o󠄁m󠄁 d󠄁o󠄁m󠄁a󠄁in󠄁](/en/custom-domains/setup-guide/)
+- **[Glossary](/en/start/glossary/)** — d󠄁e󠄁f󠄁i󠄁n󠄁i󠄁ti󠄁o󠄁ns󠄁 o󠄁f󠄁 receipt, passphrase,
+  organization, and other p󠄁r󠄁o󠄁d󠄁u󠄁c󠄁t󠄁 terms
 
 ### Evaluate Onetime Secret
 
 - **[Why use secret links](/en/share/why-secret-links/)** — the problem
   one-time links solve
-- **[Use cases](/en/share/use-cases/)** — examples of sharing passwords and other
-  sensitive information
+- **[Use cases](/en/share/use-cases/)** — e󠄁x󠄁a󠄁m󠄁pl󠄁e󠄁s󠄁 o󠄁f󠄁 s󠄁h󠄁a󠄁ri󠄁n󠄁g󠄁 p󠄁as󠄁s󠄁w󠄁o󠄁r󠄁d󠄁s󠄁 a󠄁n󠄁d󠄁 o󠄁t󠄁h󠄁e󠄁r󠄁
+  s󠄁e󠄁n󠄁s󠄁i󠄁tiv󠄁e󠄁 in󠄁f󠄁o󠄁r󠄁m󠄁ation
 - **[Hosted or self-hosted?](/en/start/hosted-or-self-hosted/)** — compare the
   hosted service with running your own instance
 - **[Where your data lives](/en/security/where-your-data-lives/)** — data

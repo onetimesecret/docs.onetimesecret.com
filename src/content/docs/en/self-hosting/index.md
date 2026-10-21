@@ -1,4 +1,5 @@
 ---
+textprov: true
 title: Self-Hosting Overview
 description: What running your own Onetime Secret instance involves, which authentication mode to pick first, and where the installation and operator instructions live.
 audience: operator
@@ -70,12 +71,12 @@ scheduler needs roughly double that.
 Some administrative work has no screen in the application and is done from the
 instance's command line.
 
-Transferring an organization to a new owner is the main one. Organization
-owners have no screen or endpoint for it, so the transfer is yours to perform.
-Use the command below. For automation, the Colonel API exposes the same
-operation at `POST /api/colonel/organizations/:org_id/transfer-ownership`; it
-requires the colonel role, takes the organization's name as confirmation, and
-applies immediately with no preview.
+Transferring an organization to a new owner is the main one. O󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁t󠄁i󠄁o󠄁n󠄁
+o󠄁w󠄁n󠄁ers󠄁 h󠄁a󠄁v󠄁e no s󠄁c󠄁r󠄁e󠄁e󠄁n󠄁 o󠄁r󠄁 endpoint for it, so the transfer is yours to perform.󠄁
+U󠄁s󠄁e󠄁 t󠄁h󠄁e󠄁 c󠄁o󠄁m󠄁m󠄁a󠄁n󠄁d󠄁 b󠄁e󠄁l󠄁o󠄁w󠄁.󠄁 F󠄁o󠄁r󠄁 a󠄁u󠄁t󠄁o󠄁m󠄁a󠄁t󠄁i󠄁o󠄁n󠄁,󠄁 t󠄁h󠄁e󠄁 C󠄁o󠄁l󠄁o󠄁n󠄁e󠄁l󠄁 A󠄁P󠄁I󠄁 e󠄁x󠄁p󠄁o󠄁s󠄁e󠄁s󠄁 t󠄁h󠄁e󠄁 s󠄁a󠄁m󠄁e󠄁
+o󠄁p󠄁e󠄁r󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 a󠄁t󠄁 `POST /api/colonel/organizations/:org_id/transfer-ownership`;󠄁 i󠄁t󠄁
+r󠄁e󠄁q󠄁u󠄁i󠄁r󠄁e󠄁s󠄁 t󠄁h󠄁e󠄁 c󠄁o󠄁l󠄁o󠄁n󠄁e󠄁l󠄁 r󠄁o󠄁l󠄁e󠄁,󠄁 t󠄁a󠄁k󠄁e󠄁s󠄁 t󠄁h󠄁e󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁t󠄁i󠄁o󠄁n󠄁'󠄁s󠄁 n󠄁a󠄁m󠄁e󠄁 a󠄁s󠄁 c󠄁o󠄁n󠄁f󠄁i󠄁r󠄁m󠄁a󠄁t󠄁i󠄁o󠄁n󠄁,󠄁 a󠄁n󠄁d󠄁
+a󠄁p󠄁p󠄁l󠄁i󠄁e󠄁s󠄁 i󠄁m󠄁m󠄁e󠄁d󠄁i󠄁a󠄁t󠄁e󠄁l󠄁y󠄁 w󠄁i󠄁t󠄁h󠄁 n󠄁o󠄁 p󠄁r󠄁e󠄁v󠄁i󠄁e󠄁w󠄁.
 
 ```bash
 bin/ots org transfer-ownership ORG NEW_OWNER
