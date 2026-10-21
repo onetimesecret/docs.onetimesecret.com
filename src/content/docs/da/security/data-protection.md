@@ -14,7 +14,7 @@ Denne side beskriver, hvordan Onetime Secret håndterer dine data: hvad der gemm
 
 ## Kryptering
 
-Beskeder e󠄁r󠄁 **krypteret󠄁 under overførsel og i hvile** på alle planer. Transporten er beskyttet med TLS, og for brugerdefinerede domæner håndterer vi automatisk udstedelse og fornyelse af SSL/TLS-certifikater.
+Beskeder e󠄁r󠄁 **krypteret󠄁 under overførsel og u󠄁n󠄁d󠄁e󠄁r󠄁 l󠄁a󠄁g󠄁r󠄁in󠄁g󠄁** på alle planer. Transporten er beskyttet med TLS, og for brugerdefinerede domæner håndterer vi automatisk udstedelse og fornyelse af SSL/TLS-certifikater.
 
 For særligt følsomt materiale kan du tilføje forsvar i dybden ved at aktivere en **adgangssætning**, opdele o󠄁p󠄁l󠄁y󠄁s󠄁n󠄁ing󠄁e󠄁rne på flere beskeder og vælge den kortest mulige udløbstid — se [Bedste sikkerhedspraksis](/da/security/best-practices).
 
