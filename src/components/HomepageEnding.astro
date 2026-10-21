@@ -23,7 +23,7 @@ const { variant = 'receipt' } = Astro.props;
 
   <section class="ending receipt" data-ending="receipt" hidden={variant !== 'receipt'} aria-label="How we protect your data">
     <div class="tiny-receipt">
-      <span class="receipt-mark" aria-hidden="true">OTS / 001</span>
+      <span class="receipt-mark" data-receipt-mark aria-hidden="true">OTS / 7A3F</span>
       <p>There was a<br />secret here.</p>
       <span class="receipt-rule" aria-hidden="true"></span>
     </div>
@@ -34,9 +34,24 @@ const { variant = 'receipt' } = Astro.props;
     <a href="/en/share/what-recipients-see/">Received a link?</a>
     <a href="/en/share/when-a-link-doesnt-work/">Link not working?</a>
     <a href="/en/security/vulnerability-disclosure/">Report a security issue</a>
-    <a href="/en/start/">Getting started</a>
+    <a href="/en/start/glossary/">Glossary</a>
   </nav>
 </div>
+
+<script>
+  function refreshReceiptMark() {
+    document.querySelectorAll('[data-receipt-mark]').forEach((mark) => {
+      const bytes = crypto.getRandomValues(new Uint8Array(2));
+      const identifier = Array.from(bytes, (byte) =>
+        byte.toString(16).padStart(2, '0'),
+      ).join('').toUpperCase();
+      mark.textContent = `OTS / ${identifier}`;
+    });
+  }
+
+  refreshReceiptMark();
+  document.addEventListener('astro:after-swap', refreshReceiptMark);
+</script>
 
 <style>
   .homepage-ending {
