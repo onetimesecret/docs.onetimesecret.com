@@ -179,3 +179,46 @@ Labels checked and matching: ドメイン, 管理, 機能, ブランドを管理
 - No site build or `dogfood.py check` was run; this review was read-only. The suggested `/ja/…#<Japanese heading>` anchors are derived from the slugger rule, not confirmed against a build.
 - Prices, limits and lifetimes were checked for parity with the English only, not against `billing.yaml.txt`.
 - Other locales' sidebar bundles were not read, per the protocol.
+
+## Resolution (fix round, 2026-10-21)
+
+All 31 findings in the per-page tables (8 major, 23 minor) are fixed. The fixes also cover four actions from the terminology table and the general issues: credential → 資格情報 (api/index:7), reveal → 閲覧 (pricing/compare-plans:29, custom-domains/branding:7), the seven missing ja sidebar keys, and `switchingRegions`. Two terminology-table actions were skipped (see below). UI labels were checked against app main (`$APP/locales/content/ja`), not the docker bundle.
+
+| Commit | Subject |
+|---|---|
+| 0b9411fb | docs(i18n/ja): match branding labels to the shipped app |
+| ea9de879 | docs(i18n/ja): match domain setup labels to the shipped app |
+| 59fc867a | docs(i18n/ja): match receipt status label to the shipped app |
+| e02fb6ad | docs(i18n/ja): correct mistranslations in four pages |
+| de168a9d | docs(i18n/ja): use consistent terms for reveal, sender and page names |
+| b4f78ce3 | docs(i18n/ja): fix register breaks |
+| b3a6ab2f | docs(i18n/ja): link to Japanese pages that exist |
+| 2ace604c | docs(i18n/ja): fix fluency and typography |
+| 52a06839 | docs(i18n/ja): align sidebar labels with page titles |
+| (this commit) | docs(planning): record Japanese fix-round resolution |
+
+Fixes that differ from the suggested text:
+
+- index.mdoc:10: only the plain-form ending changed (ホストする。 → ホストできます。). The rest of the tagline was left as it was.
+- custom-domains/setup-guide.md:19: «_ご自身のドメイン_ **で続行** を選びます。» follows the English layout and the app's `{0}で続行` order.
+- custom-domains/branding.md:48–49: the corner options keep a short Japanese gloss («**Square**（四角）»). The font options are English only.
+- Request a secret: changed to «シークレットをリクエストする» (share/use-cases.md:33), which matches share/index.md:84 and the app's "Request …" pattern (パスワードリセットをリクエスト, データエクスポートをリクエスト). The heading «機密情報を依頼する» (use-cases:31) translates "Request sensitive information", not the page name, so it was not changed.
+- pricing/index.md:3: title «料金».
+
+Validation: `python3 tools/dogfood.py check --base b2883096` passed (16 files). `pnpm test` passed (175 tests). `pnpm run check:frontmatter` and `pnpm run check:nav` passed. `pnpm build` passed (1306 pages). In `dist/`, the three new `/ja/…#` anchors resolve to heading ids, no literal `**` or `_` remains on the edited pages, and the nine new or changed ja sidebar labels appear.
+
+### Skipped findings
+
+| Page:line | Finding | Reason |
+|---|---|---|
+| pricing/index, security/best-practices, security/index, security/vulnerability-disclosure | Terminology table: "we / our" rendered as 当社 or 私たち; pick one | The docs glossary and the app governance do not bind either form, and the app itself uses both (当社 in 7 keys such as web.footer.learn_about_our_company; 私たち in 5 keys such as web.help.contact_us_description). The ja sidebar label «私たちの原則» uses 私たち. Changing the voice across four pages would be a restyle, not a correction. |
+| self-hosting/index.md:46–58 | Terminology table: transfer ownership 移管 → consider 譲渡 | The app has three renderings: 移転 (api.organizations.members.errors.cannot_remove_owner), 譲渡 (web.admin.domaintoolbox.transfer.title) and 移管 (web.admin.domains.actions.transfer.title). Neither the docs glossary nor the app governance binds one. 移管 is used consistently within the page. |
+
+### Decisions needed
+
+- Docs glossary (`src/content/docs/ja/translations/glossary.md`): the row "received \| 受信済み/閲覧済み" points translators to 閲覧済み. No receipt control shows that string; the badge shows 表示済み (web.STATUS.revealed). Add "Revealed (receipt status) \| 表示済み" and limit 受信済み to web.STATUS.received.
+- Docs glossary: add the renderings this round normalised. Reveal (prose) 閲覧; reveal instructions 閲覧手順 (web.branding.delivery_reveal_instructions); email sender メール送信者, with 送信元 only in "From domain" (api.entitlements.errors.custom_mail_sender_required); credential 資格情報 (11 app keys, against 2 for 認証情報); Where your data lives データの保存場所; Use cases ユースケース; Request a secret シークレットをリクエスト.
+- ja style: all 17 pages now use the full-width «：» after Japanese labels. `_language-notes.md` quotes the app string "注意: " with a half-width colon. Record the docs convention so the next round does not reintroduce `: `.
+- we/our (当社 vs 私たち) and transfer ownership (移管 / 移転 / 譲渡) need a glossary or app-governance binding before the docs can be aligned. Evidence is in the skipped table.
+- App: the receipt page shows the same state as 表示済み (StatusBadge.vue, web.STATUS.revealed) and 受信済み (TimelineDisplay.vue, web.STATUS.received). Known item pl-2.
+- Sidebar, not flagged by the review and left unchanged: ja.json `brandGuide` = «ブランドガイド», while en.json says "Branding" and the ja page title is «ドメインのブランディング».

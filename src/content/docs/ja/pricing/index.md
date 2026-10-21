@@ -1,6 +1,6 @@
 ---
 textprov: true
-title: "価格設定"
+title: "料金"
 description: "安全な共有のニーズに合ったプランをお選びください。"
 ---
 
