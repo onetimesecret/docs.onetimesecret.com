@@ -18,7 +18,7 @@ https://secrets.example.com/secret/abc123
 |---|---|---|---|
 | 自󠄁定󠄁义󠄁域󠄁名󠄁 | 1󠄁 | 无󠄁限󠄁 | 无󠄁限󠄁 |
 | [主󠄁页󠄁与󠄁接󠄁收󠄁内󠄁容󠄁](/en/custom-domains/homepage-and-incoming) | ✅󠄁 | ✅󠄁 | ✅󠄁 |
-| [品󠄁牌󠄁](/zh-cn/custom-domains/branding)：󠄁标󠄁志󠄁、󠄁颜󠄁色󠄁、󠄁字󠄁体󠄁、󠄁查󠄁看󠄁说󠄁明󠄁 | —󠄁 | ✅󠄁 | ✅󠄁 |
+| [品󠄁牌󠄁](/zh-cn/custom-domains/branding)：󠄁标󠄁志󠄁、󠄁颜󠄁色󠄁、󠄁字󠄁体󠄁、󠄁显󠄁示󠄁说󠄁明󠄁 | —󠄁 | ✅󠄁 | ✅󠄁 |
 | [邮󠄁件󠄁发󠄁件󠄁人󠄁](/en/custom-domains/email-sender)：󠄁自󠄁定󠄁义󠄁域󠄁名󠄁上󠄁的󠄁地󠄁址󠄁 | —󠄁 | ✅󠄁 | ✅󠄁 |
 | 邮󠄁件󠄁发󠄁件󠄁人󠄁：󠄁任󠄁意󠄁域󠄁名󠄁上󠄁的󠄁地󠄁址󠄁 | —󠄁 | —󠄁 | ✅󠄁 |
 | [登󠄁录󠄁设󠄁置󠄁](/en/custom-domains/access-and-privacy) | —󠄁 | ✅󠄁 | ✅󠄁 |
