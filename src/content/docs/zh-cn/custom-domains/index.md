@@ -43,7 +43,7 @@ https://secrets.example.com/secret/abc123
 
 1. [添󠄁加󠄁域󠄁名󠄁并󠄁创󠄁建󠄁其󠄁 D󠄁N󠄁S󠄁 记󠄁录󠄁](/zh-cn/custom-domains/setup-guide)。
 2. 等󠄁待󠄁 [D󠄁N󠄁S󠄁 验󠄁证󠄁](/en/custom-domains/dns-validation)确󠄁认󠄁您󠄁拥󠄁有󠄁该󠄁域󠄁名󠄁。󠄁
-3. 可󠄁选󠄁地󠄁，󠄁更󠄁改󠄁域󠄁名󠄁的󠄁外󠄁观󠄁和󠄁行󠄁为󠄁：󠄁
+3. 您󠄁还󠄁可󠄁以󠄁根󠄁据󠄁需󠄁要󠄁更󠄁改󠄁域󠄁名󠄁的󠄁外󠄁观󠄁和󠄁行󠄁为󠄁：󠄁
    - [为󠄁您󠄁的󠄁域󠄁名󠄁设󠄁置󠄁品牌](/zh-cn/custom-domains/branding)
    - [主󠄁页󠄁与󠄁接󠄁收󠄁内󠄁容󠄁](/en/custom-domains/homepage-and-incoming)
    - [邮󠄁件󠄁发󠄁件󠄁人󠄁](/en/custom-domains/email-sender)
