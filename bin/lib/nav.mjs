@@ -108,15 +108,81 @@ export function fileSlug(relativePath, ext) {
 }
 
 /**
- * Slugs of every EN docs page, mirroring Starlight's docsLoader: any DOC_EXT
- * file under src/content/docs/en, basenames starting with "_" excluded.
+ * Every EN docs page, mirroring Starlight's docsLoader: any DOC_EXT file under
+ * src/content/docs/en, basenames starting with "_" excluded.
+ *
+ * `dir` is the page's directory relative to the collection root ("" at the
+ * root), taken from the FILE path rather than the slug: an index page's slug
+ * is its directory, so "self-hosting/index.md" and "self-hosting/upgrade-guides.md"
+ * both report dir "self-hosting" and are siblings.
+ *
+ * @returns {{slug: string, dir: string, path: string}[]}
  */
-export function docsSlugs() {
-  const dir = join(repoRoot, "src", "content", "docs", "en");
-  const slugs = new Set();
-  for (const path of walk(dir)) {
+export function docsPages() {
+  const root = join(repoRoot, "src", "content", "docs", "en");
+  const pages = [];
+  for (const path of walk(root)) {
     if (!DOC_EXT.test(path) || basename(path).startsWith("_")) continue;
-    slugs.add(fileSlug(relative(dir, path), DOC_EXT));
+    const rel = relative(root, path);
+    const dir = dirname(rel);
+    pages.push({ slug: fileSlug(rel, DOC_EXT), dir: dir === "." ? "" : dir, path });
+  }
+  return pages;
+}
+
+/** Slugs of every EN docs page; see docsPages(). */
+export function docsSlugs() {
+  return new Set(docsPages().map((page) => page.slug));
+}
+
+/**
+ * Markdown constructs whose links a reader can't follow; see enLinkSlugs().
+ * One alternation, so the leftmost construct wins as it does in Markdown:
+ * `<!--` inside a code span is code, and a fence inside a comment is hidden.
+ */
+const HIDDEN_MARKDOWN = new RegExp(
+  [
+    // HTML comment; an unclosed one runs to the end of the page.
+    /<!--[\s\S]*?(?:-->|(?![\s\S]))/.source,
+    // Fenced code, as in CommonMark: the closer is a run of the same character
+    // at least as long, alone on its line, and an unclosed fence runs to the
+    // end of the page. A backtick fence's info string can't hold a backtick.
+    // .source drops the m flag; it's here so linters read ^ and $ as line
+    // anchors, the way the combined pattern below uses them.
+    /^ {0,3}(?<bt>`{3,})[^`\n]*\n[\s\S]*?(?:^ {0,3}\k<bt>`*[ \t]*\r?$|(?![\s\S]))/m.source,
+    /^ {0,3}(?<tl>~{3,})[^\n]*\n[\s\S]*?(?:^ {0,3}\k<tl>~*[ \t]*\r?$|(?![\s\S]))/m.source,
+    // Code span: an unescaped backtick run closed by a run of the same length
+    // before the paragraph ends. An unmatched run is plain text.
+    /(?<![`\\])(?<cs>`+)(?!`)(?:[^\n]|\n(?![ \t]*\r?\n))*?(?<!`)\k<cs>(?!`)/.source,
+    // Image; the outer link of a linked image survives.
+    /!\[[^\]]*\]\([^)]*\)/.source,
+  ].join("|"),
+  "gm",
+);
+
+/**
+ * EN docs slugs that a page's Markdown body links to.
+ *
+ * Only absolute, locale-prefixed targets count — `](/en/self-hosting/upgrade-guides/)`,
+ * with or without the trailing slash, and with any `#fragment` or `?query`
+ * dropped. Relative targets (`./sibling`, `../up`) are ignored on purpose:
+ * Starlight serves every page at a trailing-slash URL, so `./sibling` from
+ * /en/a/b/ resolves to /en/a/b/sibling, not /en/a/sibling, and a link checker
+ * that "understood" the author's intent would pass a link the browser breaks.
+ *
+ * Links a reader can't follow don't count either: HTML comments, fenced and
+ * inline code, and images are removed before matching, so commenting out a
+ * page's last inbound link fails the orphan check instead of passing it.
+ *
+ * @param {string} markdown Page source, frontmatter included or not.
+ * @returns {Set<string>} Normalized slugs, in link order.
+ */
+export function enLinkSlugs(markdown) {
+  const visible = markdown.replace(HIDDEN_MARKDOWN, "");
+  const slugs = new Set();
+  for (const match of visible.matchAll(/\]\(\s*<?\/en\/([^)\s>]*)>?\s*(?:"[^"]*")?\)/g)) {
+    const target = match[1].replace(/[#?].*$/, "");
+    slugs.add(normalizeLink(target));
   }
   return slugs;
 }

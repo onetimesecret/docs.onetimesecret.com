@@ -8,7 +8,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 
-import { fileSlug, normalizeLink, parseAllowlist, repoRoot } from "./nav.mjs";
+import { enLinkSlugs, fileSlug, normalizeLink, parseAllowlist, repoRoot } from "./nav.mjs";
 
 describe("normalizeLink", () => {
   it("maps the site root to the index slug", () => {
@@ -100,5 +100,113 @@ describe("fileSlug", () => {
   it("strips the extension from a non-index page", () => {
     expect(fileSlug("pricing.md", DOC_EXT)).toBe("pricing");
     expect(fileSlug("a/b/index-of-things.markdown", DOC_EXT)).toBe("a/b/index-of-things");
+  });
+});
+
+describe("enLinkSlugs", () => {
+  it("collects absolute /en/ links as normalized slugs, in order", () => {
+    const md = [
+      "| [v0.26.18](/en/self-hosting/upgrading-v0-26-18) | migration |",
+      "| [v0.26.17](/en/self-hosting/upgrading-v0-26-17/) | backfill |",
+      "See [the index](/en/self-hosting/) too.",
+    ].join("\n");
+    expect([...enLinkSlugs(md)]).toEqual([
+      "self-hosting/upgrading-v0-26-18",
+      "self-hosting/upgrading-v0-26-17",
+      "self-hosting",
+    ]);
+  });
+
+  it("drops fragments, queries, and link titles", () => {
+    const md = '[a](/en/security/our-principles/#privacy-first) [b](/en/pricing?x=1) [c](/en/api/ "REST API")';
+    expect([...enLinkSlugs(md)]).toEqual(["security/our-principles", "pricing", "api"]);
+  });
+
+  it("ignores relative, external, other-locale, and image links", () => {
+    const md = [
+      "[rel](./upgrading-v0-26-18) [up](../install/docker/) [bare](upgrading-v0-24)",
+      "[ext](https://onetimesecret.com/en/pricing/) [de](/de/self-hosting/)",
+      "![img](/images/en/diagram.png) [root](/en/)",
+    ].join("\n");
+    expect([...enLinkSlugs(md)]).toEqual(["index"]);
+  });
+
+  it("deduplicates repeated targets", () => {
+    expect([...enLinkSlugs("[a](/en/x/) [b](/en/x)")]).toEqual(["x"]);
+  });
+
+  it("ignores links inside HTML comments", () => {
+    const md = [
+      "<!-- [one](/en/hidden-one) -->",
+      "<!--",
+      "| [two](/en/hidden-two) |",
+      "-->",
+      "[kept](/en/kept)",
+      "<!-- [unclosed](/en/hidden-three)",
+    ].join("\n");
+    expect([...enLinkSlugs(md)]).toEqual(["kept"]);
+  });
+
+  it("ignores links inside fenced code blocks", () => {
+    const md = [
+      "```markdown",
+      "[a](/en/hidden-a)",
+      "```",
+      "[kept](/en/kept)",
+      "~~~~",
+      "```",
+      "[b](/en/hidden-b)",
+      "~~~~",
+      "````",
+      "[c](/en/hidden-c)",
+    ].join("\n");
+    expect([...enLinkSlugs(md)]).toEqual(["kept"]);
+  });
+
+  it("closes a fence only on a long-enough run of its character, alone on its line", () => {
+    const shorter = "````\n```\n[a](/en/hidden-a)\n````\n[kept](/en/kept)";
+    const longer = "```\n[a](/en/hidden-a)\n`````\n[kept](/en/kept)";
+    const trailing = "```\n``` not a closer\n[a](/en/hidden-a)\n```\n[kept](/en/kept)";
+    for (const md of [shorter, longer, trailing]) {
+      expect([...enLinkSlugs(md)]).toEqual(["kept"]);
+    }
+  });
+
+  it("opens and closes a fence only at the start of a line", () => {
+    for (const fence of ["```", "~~~"]) {
+      const closer = `${fence}\nsee ${fence}\n[a](/en/hidden-a)\n${fence}\n[kept](/en/kept)`;
+      const opener = `A stray ${fence}\n[kept](/en/kept)`;
+      for (const md of [closer, opener]) {
+        expect([...enLinkSlugs(md)]).toEqual(["kept"]);
+      }
+    }
+  });
+
+  it("treats backticks in a fence's info string as a code span", () => {
+    const md = "```js``` then [kept](/en/kept)\nand [also](/en/also)";
+    expect([...enLinkSlugs(md)]).toEqual(["kept", "also"]);
+  });
+
+  it("ignores links inside inline code", () => {
+    const md = "Write `[a](/en/hidden-a)` or ``[b](/en/hidden-b)`` to link; [kept](/en/kept).";
+    expect([...enLinkSlugs(md)]).toEqual(["kept"]);
+  });
+
+  it("reads code spans left to right, across lines but not paragraphs", () => {
+    const cases = [
+      "Type `<!--` to start a comment.\n\n[kept](/en/kept)",
+      "Set `FOO\nBAR` and [kept](/en/kept) and `x`.",
+      "A stray `` run, [kept](/en/kept) and `x`.",
+      "An escaped \\` mark, [kept](/en/kept) and `x`.",
+      "An open `span\n\n[kept](/en/kept) and `x`.",
+    ];
+    for (const md of cases) {
+      expect([...enLinkSlugs(md)]).toEqual(["kept"]);
+    }
+  });
+
+  it("ignores images but keeps the link around a linked image", () => {
+    const md = "![diagram](/en/hidden.png) [![badge](/badge.svg)](/en/kept)";
+    expect([...enLinkSlugs(md)]).toEqual(["kept"]);
   });
 });

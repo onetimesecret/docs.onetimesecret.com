@@ -69,10 +69,10 @@ Kendi sunucunuzda barındırılan örneğiniz şunları içerir:
 
 ## Sonraki Adımlar
 
-1. **[Başlangıç](./getting-started)** - Adım adım kurulum kılavuzu
+1. **[Başlangıç](/tr/install/docker)** - Adım adım kurulum kılavuzu
 2. **[Kurulum ve Dağıtım](./installation)** - Ayrıntılı dağıtım seçenekleri
 3. **[Yapılandırma Referansı](./configuration)** - Eksiksiz ayarlar dokümantasyonu
 
 ---
 
-_Başlamaya hazır mısınız? [Başlangıç](./getting-started) kılavuzumuzu izleyin._
+_Başlamaya hazır mısınız? [Başlangıç](/tr/install/docker) kılavuzumuzu izleyin._

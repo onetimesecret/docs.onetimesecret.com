@@ -38,6 +38,16 @@ fi
 
 status=0
 
+# macOS provides BSD grep; GNU grep is commonly installed there as ggrep.
+GREP=grep
+if command -v ggrep >/dev/null 2>&1; then
+  GREP=ggrep
+fi
+if ! printf 'probe\n' | "$GREP" -qP 'probe' 2>/dev/null; then
+  echo -e "${RED}error: GNU grep with PCRE support is required. Install GNU grep (ggrep) or put it on PATH.${NC}" >&2
+  exit 2
+fi
+
 # Run a PCRE grep over the target Markdown files and echo any matches. grep
 # exits 1 for "no matches" (expected, clean) but 2 for a real error such as a
 # bad path. Without this guard, `set -euo pipefail` plus an `if grep ...`
@@ -47,7 +57,7 @@ status=0
 scan() {
   local out rc
   set +e
-  out=$(grep -rnP "$1" --include='*.md' --include='*.mdoc' "${TARGETS[@]}")
+  out=$("$GREP" -rnP "$1" --include='*.md' --include='*.mdoc' "${TARGETS[@]}")
   rc=$?
   set -e
   if [ "$rc" -gt 1 ]; then

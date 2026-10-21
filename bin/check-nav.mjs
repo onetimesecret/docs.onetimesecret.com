@@ -27,8 +27,8 @@
 //     are therefore compared across the whole tree, and the two shapes get
 //     different messages — two identical entries in one menu is a different
 //     mistake from one label reused in seven places. Distinct labels that merely
-//     look similar are fine: "Glossary of terms" under Start here and "Glossary"
-//     under Translations & contributing are different strings and pass.
+//     look similar are fine: "Glossary" under Start here and "Translation
+//     glossary" under Translations & contributing are different strings and pass.
 //
 //     EN labels only. A non-EN label comes from that locale's bundle and falls
 //     back to English per-key, so a locale mid-translation legitimately shows a

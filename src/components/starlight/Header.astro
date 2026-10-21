@@ -6,7 +6,10 @@ import Search from '@astrojs/starlight/components/Search.astro';
 import SiteTitle from './SiteTitle.astro';
 import SocialIcons from '@astrojs/starlight/components/SocialIcons.astro';
 import ThemeSelect from '@astrojs/starlight/components/ThemeSelect.astro';
+import MobileMenuToggle from '@astrojs/starlight/components/MobileMenuToggle.astro';
 import { getRelativeLocaleUrl } from 'astro:i18n';
+import { getNavLinks } from './nav-links';
+import SectionCard from './SectionCard.astro';
 
 /**
  * Render the `Search` component if Pagefind is enabled or the default search component has been overridden.
@@ -16,17 +19,20 @@ const shouldRenderSearch =
 
 const currentLocale = Astro.currentLocale ?? 'en';
 const docsHome = getRelativeLocaleUrl(currentLocale, '/');
-// Phase 2 retired introduction/guides; "Start here" is the orientation entry
-// point now. The label key stays nav.label.guides so the 16 non-EN bundles keep
-// resolving — only the destination moved.
-const guidesLink = getRelativeLocaleUrl(currentLocale, 'start');
-const apiLink = 'https://api.onetimesecret.com';
-const selfHostingLink = getRelativeLocaleUrl(currentLocale, 'self-hosting');
-const blogLink = 'https://blog.onetimesecret.com/';
+// The same four links render in the mobile drawer's section card
+// (SectionCard.astro) below the 50rem breakpoint where .nav-links is hidden.
+const navLinks = getNavLinks(currentLocale);
 
+// Starlight only renders a hamburger and drawer on pages with a sidebar
+// (template !== 'splash'). The homepage has neither, so on phones its header
+// is a logo and a search icon with no way into the docs. On those pages the
+// header renders Starlight's own MobileMenuToggle plus a short popover drawer
+// carrying the section card. The toggle targets id="starlight__sidebar", which
+// PageFrame only emits when hasSidebar is true, so there is no duplicate id.
+const { hasSidebar } = Astro.locals.starlightRoute;
 ---
 
-<div class="header sl-flex">
+<div class:list={['header', 'sl-flex', { 'no-sidebar': !hasSidebar }]}>
 	<div class="title-wrapper sl-flex">
     <SiteTitle />
     <a href={docsHome} class="docs-badge">docs</a>
@@ -34,10 +40,18 @@ const blogLink = 'https://blog.onetimesecret.com/';
 	<div class="sl-flex center-group print:hidden">
 		{shouldRenderSearch && <Search />}
     <nav class="nav-links">
-      <a href={guidesLink} aria-label={Astro.locals.t('nav.ariaLabel.guides')}>{Astro.locals.t('nav.label.guides')}</a>
-      <a href={apiLink} target="_blank" rel="noopener noreferrer" aria-label={Astro.locals.t('nav.ariaLabel.apiReference')}>{Astro.locals.t('nav.label.rest-api')}</a>
-      <a href={selfHostingLink} aria-label={Astro.locals.t('nav.ariaLabel.selfHosting')}>{Astro.locals.t('nav.label.self-hosting')}</a>
-      <a href={blogLink} target="_blank" rel="noopener noreferrer" aria-label={Astro.locals.t('nav.ariaLabel.blog')}>{Astro.locals.t('nav.label.blog')}</a>
+      {
+        navLinks.map((link) => (
+          <a
+            href={link.href}
+            aria-label={Astro.locals.t(link.ariaKey)}
+            target={link.external ? '_blank' : undefined}
+            rel={link.external ? 'noopener noreferrer' : undefined}
+          >
+            {Astro.locals.t(link.labelKey)}
+          </a>
+        ))
+      }
     </nav>
 	</div>
 	<div class="sl-hidden md:sl-flex print:hidden right-group">
@@ -47,7 +61,38 @@ const blogLink = 'https://blog.onetimesecret.com/';
 		<ThemeSelect />
 		<LanguageSelect />
 	</div>
+	{
+		!hasSidebar && (
+			<ots-section-menu>
+				{/* MobileMenuToggle styles `button:has(~ :popover-open)`, so the
+				    popover must follow the button as a sibling. */}
+				<MobileMenuToggle />
+				<div popover="auto" id="starlight__sidebar" class="section-menu md:sl-hidden print:hidden">
+					<SectionCard />
+				</div>
+			</ots-section-menu>
+		)
+	}
 </div>
+
+<script>
+	// Mirrors the focus trapping PageFrame's sl-sidebar-pane applies to the full
+	// drawer: while the section menu is open, the page body is inert so keyboard
+	// and screen-reader focus stays within the header and menu.
+	class SectionMenu extends HTMLElement {
+		constructor() {
+			super();
+			const popover = this.querySelector<HTMLElement>('[popover]');
+			popover?.addEventListener('toggle', (event) => {
+				const open = (event as ToggleEvent).newState === 'open';
+				document
+					.querySelectorAll<HTMLElement>('.main-frame, .sl-skip-link')
+					.forEach((el) => el.toggleAttribute('inert', open));
+			});
+		}
+	}
+	customElements.define('ots-section-menu', SectionMenu);
+</script>
 
 <style>
 	.header {
@@ -137,13 +182,43 @@ const blogLink = 'https://blog.onetimesecret.com/';
     background: color-mix(in srgb, var(--sl-color-text) 7%, transparent);
   }
 
-  @media (min-width: 768px) {
+  /* 50rem is Starlight's drawer breakpoint. Below it the drawer's section card
+     (SectionCard.astro) takes over, so the two never show at the same time. */
+  @media (min-width: 50rem) {
     .nav-links {
       display: flex;
     }
     .docs-badge {
       display: inline-block;
     }
+  }
+
+  /* Sidebar-less pages: PageFrame reserves room for the fixed menu button only
+     under [data-has-sidebar], so reserve it here instead or the button sits on
+     top of the search icon. Same formula PageFrame uses, minus the nav padding
+     the outer header already applies. */
+  @media (max-width: 49.99rem) {
+    .header.no-sidebar {
+      padding-inline-end: calc(var(--sl-nav-gap) + var(--sl-menu-button-size));
+    }
+  }
+
+  /* Short drawer for sidebar-less pages. Geometry copied from PageFrame's
+     .sidebar-pane so it opens in the same place as the full drawer; the UA
+     popover defaults (auto margins, border, fit-content size) are reset. */
+  .section-menu {
+    border: unset;
+    padding: 1rem var(--sl-sidebar-pad-x);
+    margin: 0;
+    height: unset;
+    color: unset;
+    position: fixed;
+    z-index: var(--sl-z-index-menu);
+    inset-block: var(--sl-nav-height) 0;
+    inset-inline-start: 0;
+    width: 100%;
+    background-color: var(--sl-color-black);
+    overflow-y: auto;
   }
 
 	@media (min-width: 50rem) {
