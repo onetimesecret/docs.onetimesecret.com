@@ -52,7 +52,7 @@ ersätter inte dina egna kontroller, policyer och juridiska granskningar.
   frågor om certifieringar, ett personuppgiftsbiträdesavtal (DPA) eller ett
   specifikt regelverk, kontakta **support@onetimesecret.com**.
 
-För organisationer med strikta krav på datakontroll håller [självhosting](https://github.com/onetimesecret/onetimesecret)
+För organisationer med strikta krav på datakontroll håller [självhosting](/sv/self-hosting/)
 allt inom din egen infrastruktur.
 
 ## H󠄁a󠄁r󠄁 d󠄁u󠄁 f󠄁rågor eller behöver du support?
