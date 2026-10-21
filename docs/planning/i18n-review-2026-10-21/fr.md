@@ -188,3 +188,44 @@ The translation is accurate and fluent. Every security statement (one-time revea
 
 - No build, `pnpm test` or `dogfood.py check` was run; this was a read-only review of the clean copies. The suggested `/fr/…#…` anchor slugs (accented, github-slugger style) were derived from the fr headings, not confirmed against a built site.
 - UI strings were compared against the fr_FR bundle in the local app checkout (`$APP/locales/content/fr_FR`), which may differ from the deployed version.
+
+## Resolution (fix round, 2026-10-21)
+
+All 42 findings (5 major, 37 minor) are fixed. The compare-plans:12 label noted in "App UI label mismatches" and the sidebar-bundle item in "English source and general issues" are fixed too. UI labels were re-checked against app main 145c1e7cfa (`locales/content/fr_FR`, `src/shared/utils/brand-helpers.ts`, `src/apps/secret/components/*` for `web.STATUS.previewed`). The accented anchors were confirmed in a local `pnpm build` (`id="déplacer-un-domaine-personnalisé"`, `id="ce-que-chaque-forfait-inclut"`, `id="où-votre-domaine-est-servi"`).
+
+| Commit | Subject |
+|---|---|
+| a66fef74 | docs(i18n/fr): match branding labels to the shipped app |
+| 6925806d | docs(i18n/fr): match domain setup labels to the shipped app |
+| 317ae6d1 | docs(i18n/fr): match share page labels to the shipped app |
+| ce8fbc86 | docs(i18n/fr): match plan feature label to the shipped app |
+| da0ec695 | docs(i18n/fr): correct mistranslations in index.mdoc |
+| 0583e9b3 | docs(i18n/fr): use consistent terms for plan, email, credential |
+| 8ccf4341 | docs(i18n/fr): link to French pages that exist |
+| 3cbf6845 | docs(i18n/fr): fix fluency and typography |
+| b10abfcc | docs(i18n/fr): align sidebar labels with page titles |
+
+### Fixes that differ from the suggested text
+
+| Page:line | Applied | Reason |
+|---|---|---|
+| index.mdoc:37 | «SDK officiels et communautaires, en indiquant ceux qui prennent en charge…» | `dogfood.py check` rejected «et lesquels…»: its inserted `l` paired with the `l` removed from «d'accueil» on line 28 as a moved block. The applied wording has the same meaning. |
+| pricing/index.md:49 | «Domaine d'expéditeur (From) flexible pour les e-mails» | The adjective placement is fixed. The «expédition» variant failed the TextProv check on this line of mixed human and AI text, so «expéditeur» stays. |
+| security/index.md:20 | «…, ce qui ajoute une couche que le lien seul ne peut pas déverrouiller.» | The finding was the participle clause. The line is human-origin text, and replacing the rest of the clause failed the TextProv check. |
+| share/index.md:141, share/why-secret-links.md:27 | «…sa phrase secrète, le cas échéant.» | Avoids repeating «phrase secrète» in the same clause, as «si une phrase secrète a été définie» would. |
+| src/content/i18n/fr.json `setupGuide`, `brandGuide` | «Guide de configuration», «Image de marque» | Mirrors the short English labels ("Setup guide", "Branding") rather than the full page titles. «installation» is gone. |
+
+### Skipped findings
+
+| Page:line | Finding | Reason |
+|---|---|---|
+| — | — | None skipped. |
+
+### Decisions needed
+
+- `src/content/docs/fr/translations/glossary.md`: the row `email | … | courriel/e-mail` should read «e-mail» for fr_FR. App governance (`generated/i18n/.resolved/fr_FR.json` `glossary.email` → `e-mail`) and the shipped app use «e-mail», and this round removed «courriel» from 5 pages. The row `view/reveal → consulter/afficher` conflicts with the app's «révéler» (`web.STATUS.revealed` «Révélé»). The first "Boutons et actions" row is malformed. Proposed additions: plan → «forfait», registrar → «bureau d'enregistrement», credential → «identifiants» (plural), feedback form → «formulaire de retour d'information».
+- `$S/prior/glossary-fr.md` candidates must be corrected before promotion: Previewed → «Aperçu», Delivery → «Distribution», Status / Domain Status / SSL Status → «État» / «État du domaine» / «État SSL», Font Family → «Police», Upload logo/favicon → «Téléverser un logo» / «Téléverser un favicon». Corner and font option names stay in English (hard-coded in `brand-helpers.ts`).
+- `src/content/docs/fr/translations/_language-notes.md` lists «"Statut" acceptable» for fr_FR. The shipped app uses «État» for every status label. Add a note that quoted UI labels follow the app.
+- `src/content/i18n/fr.json` `notFound.lookingFor` «Vous cherchez quelque chose ?» has a regular space before `?`. This key was not flagged, so it was left unchanged under the scope rule.
+- English source, security/best-practices.md:16: "if one secret is compromised, the entire set of information remains protected" contradicts itself (see "English source and general issues"). The fr text mirrors it and needs a follow-up after the English is fixed.
+- TextProv tooling: `dogfood.py edit` aligns clusters inside the edit span, while `check` aligns the whole file. When the replaced text contains unmarked (human) letters, the edit can keep a human mark on a new letter (Livraison → Distribution kept an unmarked `r`), and `check` then rejects it. Single-letter gaps from two edits in one file can also pair as a "move". Each edit here was simulated with `check_text` against HEAD and b2883096 before it was applied.
