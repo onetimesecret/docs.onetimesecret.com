@@ -159,3 +159,35 @@ These labels were checked and match the shipped it_IT strings: Domini, Gestisci,
 
 - I ran no build or site checks (`pnpm build`, `check:links`); this was a source-only review under a read-only mandate. I derived the Italian anchor slugs in the suggested fixes from the it headings and did not confirm them against rendered output.
 - I did not verify the English claims themselves (prices, limits, lifetimes, DNS targets) against billing.yaml.txt or DNS. The translation reproduces the English figures unchanged on every page.
+
+## Resolution (fix round, 2026-10-21)
+
+| Commit | Subject |
+|---|---|
+| f067ed9d | docs(i18n/it): match branding and plan labels to the shipped app |
+| f5d46838 | docs(i18n/it): correct mistranslations in custom-domains/branding |
+| 11abced1 | docs(i18n/it): use consistent terms for headings and plan features |
+| 675a4e47 | docs(i18n/it): link to Italian pages that exist |
+| 5142ea3a | docs(i18n/it): fix fluency and typography |
+
+All 28 per-page findings (1 major, 27 minor) are fixed. Labels were verified against app main 145c1e7cfa: `borderRadiusDisplayMap` in `src/shared/utils/brand-helpers.ts` (used by `SimpleBrandPanel.vue:84-86`), `PLAN_LABELS` in `src/types/billing.ts:88-97`, and `locales/content/it_IT/workspace-billing.json` / `workspace-domains.json` (`web.billing.plans.free_plan` «Gratuito», `web.billing.plans.early_supporter_plan` «Identity Plus (Sostenitore iniziale)», `web.billing.features.homepage_secrets` «Segreti in home page», `web.billing.features.audit_logs` «Log di audit», `web.domains.signup.title` «Convalida della registrazione», `web.billing.features.flexible_from_domain` «Dominio mittente email flessibile»). The three Italian anchors were confirmed in the `pnpm build` output. Four fixes differ from the suggested wording:
+
+- api/index.mdoc:78: «Usa questa per le tue integrazioni.» replaces the suggested «Usa questa per le nuove integrazioni.», because the next bullet already says «le nuove integrazioni dovrebbero usare la v2».
+- pricing/index.md:49: «Dominio mittente email flessibile» (the shipped app feature name) replaces the suggested «Dominio "Da" flessibile per le email». To keep one form, the compare-plans.md:33 footnote now reads «**dominio mittente flessibile**» (matching the app error `api.entitlements.errors.flexible_from_domain_required` «Il dominio mittente flessibile…»). The app does not use «"Da"» for this setting.
+- security/index.md:22: «**Durata limitata fin dalla progettazione.**» replaces the suggested «per impostazione», which means "by default" and changes the meaning of "by design". «fin dalla progettazione» is the standard Italian rendering, as in GDPR «protezione dei dati fin dalla progettazione».
+- self-hosting/index.md:47: «dimostra che l'istanza risponde davvero alle richieste» keeps «dimostra» ("prove") and corrects only the mood and the calque. The suggested «verifica che…» would repeat the link text «Verifica dell'installazione» just before it.
+share/use-cases.md:53 is normalised to «Richiedi un segreto», the form share/index.md:143 uses. share/index.md:104 (the second «con accesso effettuato» calque named in the share/index.md:41 finding) is also fixed. self-hosting/index.md: the stale `sidebar.order` key is removed as the finding asked. The es round skipped the same key as a cross-locale cleanup, so the two locales now differ on this point.
+
+### Skipped findings
+
+| Page:line | Finding | Reason |
+|---|---|---|
+| — | — | None skipped. |
+
+### Decisions needed
+
+- App: the plan display names are split. Free shows as `web.billing.plans.free_plan` («Gratuito») on the user-menu chip and in org settings, and as hard-coded `PLAN_LABELS.free_v1` 'Free' through `getPlanLabel` (`src/types/billing.ts:90`). Early Supporter shows as `web.billing.plans.early_supporter_plan` («Identity Plus (Sostenitore iniziale)», OrganizationSettings.vue:1935) and as hard-coded `PLAN_LABELS.identity` (`src/types/billing.ts:95`). it pricing/index.md:16 and compare-plans.md:38 now name both forms. If the app settles on one label, cut these sentences back to that label.
+- App: the corner options are hard-coded English (`borderRadiusDisplayMap`, brand-helpers.ts:217-223). If they get locale keys, it branding.md:65 must quote the localized labels again.
+- it glossary (`src/content/docs/it/translations/glossary.md`) does not cover these terms, which this round applied. Proposed entries: audit logs → log di audit; homepage secrets → segreti in home page; sign-up validation → convalida della registrazione; flexible From domain → dominio mittente (email) flessibile; incoming form → modulo per i segreti in arrivo; while signed in → dopo aver effettuato l'accesso (not «con accesso effettuato»); Related → Pagine correlate; Next steps → Prossimi passi; Questions or need support? → Domande o bisogno di assistenza?
+- it glossary: "homepage" vs "home page". The app feature name is «Segreti in home page», but the it pages write «homepage» elsewhere (custom-domains/index.md:26, :42, :63; pricing/index.md:21, :63; branding.md:8, :86, :97-98). compare-plans.md:12 now follows the app. Pick one spelling for prose.
+- `tools/dogfood.py edit`: the edit/check alignment mismatch the es round reported also occurred here (compare-plans.md:46, pricing/index.md:49, setup-guide.md:127, why-secret-links.md:53-54). It was worked around by splitting each change into a deletion and a fresh insertion. Each sequence was first simulated in memory with `dogfood.mark_edit` and `dogfood.check_text`, then applied through the CLI.
