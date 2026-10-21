@@ -1,57 +1,104 @@
 ---
 title: Managing your subscription
-description: Where an organization's subscription lives, why only the owner can change it, and what changes for everyone else when the plan changes.
+description: Start, change or cancel your organization's paid plan, update the billing email, download invoices, and know what a downgrade changes.
 audience: end-user
 pageType: how-to
-sourceOfTruth: onetimesecret/src/apps/workspace/routes/organizations.ts:42,47 and onetimesecret/src/apps/workspace/account/settings/OrganizationSettings.vue:74-82 (settings live at /org/:extid/:tab, with a subscription tab, and require owner or admin to open); onetimesecret/lib/onetime/models/organization_membership.rb:90-100 (manage_billing sits in the owner template only)
+sourceOfTruth: onetimesecret at 145c1e7cfa — src/apps/workspace/account/settings/OrganizationSettings.vue:941-956,1885-1996 (plan label opens /org/:extid/subscription; Change Plan, Manage Billing, View Invoices, Upgrade Plan); src/shared/components/layout/BillingLayout.vue:22-38 and src/apps/workspace/billing/{BillingOverview,PlanSelector,InvoiceList}.vue (Billing Overview, Select a Plan, Billing History); apps/web/billing/controllers/billing.rb:77,291-306,510,592,661-690,783-791,837-854,1136-1138 (owner-only actions, Stripe Checkout for the first subscription, prorated immediate changes, cancellation at period end, reactivation, last 12 invoices, no changes while past due); apps/web/billing/operations/apply_subscription_to_org.rb:102-156 (an ended subscription returns the organization to Free); locales/content/en/workspace-billing.json (labels and cancellation copy)
 ---
 
-A subscription belongs to an [organization](/en/organizations), not to a person.
-Changing it changes what everyone in that organization can do.
+A subscription belongs to an [organization](/en/organizations), not to a
+person, and only the organization's **owner** can change it. A change applies
+to everyone in the organization.
 
-## Where it lives
+## Open the subscription
 
-Open your organization's settings and choose the **Subscription** tab. Opening
-organization settings at all requires you to be an owner or an admin of that
-organization.
+1. Open your organization's settings. If you belong to more than one
+   organization, check that you are in the right one; each has its own
+   subscription.
+2. Choose the plan name shown next to the organization's name, such as
+   **Free** or **Identity Plus**.
 
-If you belong to more than one organization, check which one you are in before you
-change anything — the URL carries the organization's identifier, and each has its
-own subscription.
+**Subscription Status** shows the plan, its status (**Active**, **Past Due** or
+**Canceled**) and the plan's features, with these actions:
 
-## Only the owner can change it
+- **Change Plan**, or **Upgrade Plan** on the Free plan, opens **Select a
+  Plan**.
+- **Manage Billing** opens **Billing Overview**, with the next billing date and
+  the billing contact.
+- **View Invoices** opens **Billing History**.
 
-Billing is an owner-level capability. An admin can open organization settings and
-manage members and domains, but cannot change the subscription. There is exactly
-one owner; see
-[Ownership and transfer](/en/organizations/ownership-and-transfer) if the person
-holding it has left.
+Admins can open these pages, but the actions are refused for anyone other than
+the owner.
 
-## What changes when the plan changes
+## Start a paid plan
 
-The plan sets what the organization is entitled to. Each member's effective
-permissions are then recomputed as the intersection of that plan and their role, so:
+1. Choose **Upgrade Plan**.
+2. Choose **Monthly** or **Yearly**, then choose the plan.
+3. Pay on the Stripe checkout page. You can enter a promotion code there.
 
-- A plan change reaches everyone in the organization at once.
-- It does not change anyone's role, and it will not grant a member something their
-  role does not carry.
-- Downgrading removes capabilities from everyone, including capabilities in active
-  use. Check what your organization is relying on first — custom domains,
-  [SSO](/en/organizations/sso) and
-  [Secret Activity](/en/organizations/audit-trail) are the ones people notice.
+You return to **Billing Overview**, and the new plan applies immediately.
 
-See [How plans work](/en/billing) for the plan-and-role rule in full.
+## Change plan
+
+1. Choose **Change Plan**.
+2. Choose **Upgrade** or **Downgrade** on the plan you want.
+3. Review the prorated amount in the confirmation and confirm.
+
+The change applies immediately. The price difference for the rest of the
+billing period is prorated; a downgrade leaves a credit toward later invoices.
+
+To switch between monthly and yearly billing on the same plan, contact support.
+
+## Cancel or reactivate
+
+1. Open **Select a Plan** and choose **Cancel subscription**.
+2. Confirm with **Cancel Subscription**.
+
+Cancellation takes effect at the end of the current billing period. Until then
+the organization keeps the plan's features, and you are not charged again. When
+the period ends, the organization returns to the Free plan.
+
+To keep the subscription, choose **Reactivate Subscription** on **Select a
+Plan** before that date.
+
+## Billing email, payment method and invoices
+
+- **Billing email.** Edit it in the **Billing Contact** section of **Billing
+  Overview**.
+- **Payment method.** There is no control for it in the app; contact support to
+  change it.
+- **Invoices.** **Billing History** lists the last 12 invoices. Choose
+  **Download** to open one.
+
+## When a payment fails
+
+The subscription is shown as **Past Due**. While it is past due, changing,
+cancelling and reactivating are not available. Contact support rather than
+choosing a plan again, which would start a new checkout.
+
+## What a downgrade changes
+
+- **Nothing is deleted.** Custom domains, members, pending invitations,
+  branding, SSO configurations and Secret Activity records stay.
+- **Features outside the new plan stop being available to manage.** For
+  example, on Free you can no longer invite members, edit domain branding,
+  change SSO settings or open Secret Activity. Check what your organization
+  relies on first; see [Compare plans](/en/pricing/compare-plans).
+- **New secrets follow the new plan's lifetime limit.** Secrets that already
+  exist keep their lifetime.
+- **Roles do not change.** A plan never grants a member something their role
+  does not allow; see [How plans work](/en/billing).
 
 ## Regions are separate
 
 Each [region](/en/security/where-your-data-lives) is a separate service with
 separate accounts. If you are changing region as well as plan, read
-[Change your region](/en/account/change-your-region) first, and ask support what it
-means for an existing subscription rather than assuming.
+[Change your region](/en/account/change-your-region) first, and ask support what
+it means for an existing subscription.
 
 :::note
 **Self-hosting this yourself?** A standalone instance runs with billing off by
-default: there is no subscription tab and every capability is granted. See
+default: there is no subscription page and every feature is available. See
 [Self-hosting](/en/self-hosting).
 :::
 
@@ -59,7 +106,7 @@ default: there is no subscription tab and every capability is granted. See
 
 - [How plans work](/en/billing) — what a plan applies to and how to read yours.
 - [Roles and permissions](/en/organizations/roles-and-permissions) — why a plan alone is not enough.
-- [Compare plans](/en/pricing/compare-plans) — what the plans are sold as.
+- [Compare plans](/en/pricing/compare-plans) — what each plan includes.
 
 ## Questions or Need Support?
 
