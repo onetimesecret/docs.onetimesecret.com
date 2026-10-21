@@ -30,7 +30,7 @@ later.
 
 In a hurry, with a Valkey or Redis you already run? The single `docker run`
 form in [Install with Docker](/en/install/docker#running-a-single-container)
-brings up an instance on port 3000 with one generated secret. Everything else
+brings up an instance on port 3000 with a󠄁 generated `SECRET` v󠄁a󠄁l󠄁u󠄁e. Everything else
 on this page still applies once it is up.
 
 - [Images and variants](/en/install/images-and-variants) — which of the
