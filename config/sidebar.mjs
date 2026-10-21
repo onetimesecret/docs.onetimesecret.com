@@ -168,7 +168,7 @@ export const sidebar = [
       createLink("yourReceipt", "share/your-receipt"),
       createLink("whatRecipientsSee", "share/what-recipients-see"),
       createLink("whenALinkDoesntWork", "share/when-a-link-doesnt-work"),
-      createLink("receivingSecrets", "share/receiving-secrets"),
+      createLink("requestSecret", "share/request-secret"),
       createLink("whyUseSecretLinks", "share/why-secret-links"),
       createLink("useCases", "share/use-cases"),
     ]),

@@ -9,7 +9,7 @@ An organization is the shared workspace that owns resources several people use
 together, rather than each person working from an isolated account. Members and
 administrators manage those shared resources in one place.
 
-An organization holds:
+An organization contains:
 
 - Shared [custom domains](/en/custom-domains) and their settings.
 - Organization membership and roles — see [Inviting members](/en/organizations/inviting-members).
@@ -39,8 +39,13 @@ Organization settings are reachable only by owners and admins. A member uses the
 organization's shared resources but does not administer them.
 
 :::note
-This is separate from your own account settings. Roles here govern the shared
-organization, not your personal sign-in.
+Your role does not affect your password, two-factor authentication, passkeys,
+sessions or connected identities. It does affect three account settings:
+**Change Email**, **Region** and the **Careful Consideration Zone**, where you
+close your account, appear only when your role in the organization you are
+currently working in is owner or admin. See
+[Changing your email address](/en/account/change-your-email) and
+[Closing your account](/en/account/close-your-account).
 :::
 
 ## Related

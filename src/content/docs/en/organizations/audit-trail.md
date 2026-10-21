@@ -4,12 +4,13 @@ description: See who created, opened, revealed, and burned your organization's s
 audience: end-user
 pageType: reference
 plan: Team Plus
-sourceOfTruth: onetimesecret/lib/onetime/models/organization/features/secret_activity.rb:41
+sourceOfTruth: onetimesecret at 145c1e7cfa — lib/onetime/models/organization/features/secret_activity.rb (event collection and retention); apps/api/v2/logic/secrets/actor_attribution.rb and access_telemetry.rb (account attribution and request context); apps/api/organizations/logic/organizations/list_secret_activity.rb (active-membership email resolution)
 ---
 
 Secret Activity is a record of secret lifecycle and access events for your organization — what happened to each secret, and who triggered it. On plan comparisons it appears under the feature name "audit logs". It shipped in v0.26.0.
 
-If you are trying to answer "who opened my link?", this is the page that answers it.
+The record can help identify signed-in organization members who accessed a link.
+It does not prove that the intended recipient read the content.
 
 ## Where to find it
 
@@ -35,7 +36,19 @@ Secret Activity records lifecycle and access events for secrets created in the o
 | Secret orphaned | The secret ended without a normal terminal outcome. |
 | Reveal failed (undecryptable) | A reveal was attempted but the payload could not be decrypted. |
 
-Each event carries actor attribution — Creator, Another signed-in user, Anonymous, System, or Unknown — and never exposes secret contents. Entries reference short IDs only.
+Events record an actor label — Creator, Another signed-in user, Anonymous,
+System, or Unknown — without secret content. Secret and receipt references use
+short identifiers. Authenticated actors can also have their full internal
+account identifier recorded. When reading or exporting the trail, the service
+can resolve that identifier to an email address for an active organization
+member; it does not resolve other accounts through that membership lookup.
+
+Link-fetch events can also include a masked IP address, shortened user-agent
+string, and correlation token. A country code can be recorded where country
+collection is enabled. Anonymous events have no authenticated account identifier,
+but that does not guarantee anonymity. Collection can be disabled for an
+instance; see [What recipients see](/en/share/what-recipients-see#what-the-sender-learns-about-you)
+for how this differs from the sender's receipt.
 
 Account and authentication events, such as sign-ins and SSO changes, are not part of Secret Activity.
 

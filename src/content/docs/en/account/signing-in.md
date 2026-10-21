@@ -3,180 +3,134 @@ title: Signing in and resetting your password
 description: How to sign in, how to reset a password you cannot remember, and what to do when the reset email does not arrive.
 audience: end-user
 pageType: how-to
-sourceOfTruth: onetimesecret/apps/web/auth/migrations/001_initial.rb:47-53,78 (account_password_reset_keys.deadline — a reset link is good for 24 hours)
+sourceOfTruth: onetimesecret/apps/web/auth/migrations/001_initial.rb:47-53,78 (account_password_reset_keys.deadline — a reset link is good for 24 hours); onetimesecret/etc/defaults/config.defaults.yaml:468-471 and onetimesecret/lib/onetime/session/remember_me.rb:68-69 (session limits); onetimesecret/apps/web/auth/config/hooks/omniauth.rb:300-544 (linking an existing account during an identity-provider sign-in)
 ---
 
-This page is about getting into your account: signing in, resetting a password
-you no longer have, and the handful of reasons either one fails. You do not
-need to be signed in to follow any of it.
+This page covers signing in, resetting a forgotten password, and fixing common
+sign-in problems. You do not need to be signed in to follow it.
 
 ## Sign in
 
-Your email address is your account name, and capitalisation does not matter —
-the address is normalised before it is looked up. Everything else about it
-does matter: a different alias or a different domain is a different account.
+1. **Open the sign-in page for your region.** Each region is a separate service,
+   and an account exists only in the region where it was created. See
+   [Changing your region](/en/account/change-your-region).
+2. **Enter your email address.** Capitalization does not matter. A different
+   alias or domain is a different account.
+3. **Choose a sign-in method.** Depending on the service, the page can offer a
+   password, a single-use sign-in link sent by email, a passkey, or your
+   organization's identity provider. Only enabled methods are shown, and some
+   installations offer only one.
+4. **Enter your second factor, if asked.** If two-factor authentication is on,
+   enter the code from your authenticator app or a recovery code. You are not
+   signed in until this step succeeds.
 
-Onetime Secret can offer more than one way in — a password, a single-use
-sign-in link sent to your address, a passkey, or your organisation's identity
-provider. Not all of them are turned on everywhere. The sign-in page shows
-only the methods enabled for the service you are using, so if you do not see
-one, it is not available to you. Some installations are deliberately
-restricted to a single method.
+Select **Remember me** to stay signed in after you close the browser. With the
+service defaults:
 
-"Remember me" keeps you signed in after you close the browser. It does not
-last indefinitely — it has its own expiry, after which you sign in again.
-Separately from that, a session ends after a stretch of inactivity and has a
-maximum life however active you are; both windows are set out on
-[Sessions and connected identities](/en/account/sessions-and-identities).
+- Without Remember me, you are signed out after 24 hours without activity.
+- With Remember me, you stay signed in for 14 days from sign-in, whether or not
+  you use the account.
+- Every session ends 30 days after sign-in.
 
-If two-factor authentication is on for your account, sign-in stops and asks
-for a code before you are signed in. Until the second step succeeds the
-browser holds nothing that can reach your account — there is no
-partly-signed-in state that grants access.
+See [Sessions and connected identities](/en/account/sessions-and-identities)
+for what counts as activity and what else ends a session.
 
-Every successful sign-in sends you a **"New sign-in to your account"** email.
-Its "location" is a network address rather than a city: there is no
-geo-location lookup, and the address is masked for privacy before it is
-recorded. A value that looks unfamiliar may therefore just be your network.
-If a sign-in was not you, reset your password (below): completing a reset ends
-every other session on the account.
-
-:::note
-Regions are separate systems, and an account belongs to the region it was
-created in. The same address can have an account in one region and none in
-another, so if your details are not recognised at all, check that you are on
-the right regional site. See
-[Changing your region](/en/account/change-your-region).
-:::
-
-## If your account uses single sign-on
-
-Signing in through an identity provider does not involve your Onetime Secret
-password — the provider decides whether you get in. Four consequences are
-worth knowing:
-
-- **An SSO sign-in skips any second factor set on the account here.** The
-  identity provider is trusted to enforce its own factors instead. Turning on
-  two-factor authentication therefore does not, by itself, protect an account
-  that can also be signed in through a provider — the protection has to be
-  configured at the provider.
-- **Matching addresses are not linked for you.** If a provider offers an
-  address that already has a password account, the two are not joined
-  automatically. Sign in with the method you already have, then connect the
-  provider under Settings → Security → Connected identities.
-- **An account created through a provider may have no password at all.** You
-  can add one from Settings → Security: the service emails you a link to set
-  it, using the same emailed-link flow as a reset. After that, either method
-  signs you in.
-- **You cannot remove your only remaining way in.** Removing a connected
-  identity is refused when it is the last credential on the account.
-
-Where a service is configured for single sign-on only, password sign-in and
-password reset are not offered at all. For setting up SSO for an organisation,
-see [Single sign-on](/en/organizations/sso).
+Each successful sign-in sends a **"New sign-in to your account"** email. Its
+location is a country code or a partially masked network address, not a city. If
+the sign-in was not you, reset your password (below). Completing a reset ends
+every session on the account.
 
 ## Reset a forgotten password
 
-### 1. Ask for a reset link
+1. **Request a reset link.** On the sign-in page, choose **Forgot your
+   password?** and enter the address on the account. You see the same
+   confirmation whether or not the address has an account, so the message does
+   not confirm that an account exists.
+2. **Open the email.** The subject is **"Reset your password"**. Select **Reset
+   Password**, or copy the link from the message. The link works for **24
+   hours** after it was sent; the email does not state this.
+3. **Choose a new password.** Enter it twice. Your current password is not
+   accepted as the new one.
+4. **Sign in with the new password.** Completing a reset signs out **every**
+   session on the account, including the browser you reset from. Any session
+   that signed in before the reset is refused.
 
-From the sign-in page, follow **"Forgot your password?"** and enter the
-address on the account.
+If the reset page says the key is invalid or missing, the link has expired or
+was replaced by a newer one. Request a new link.
 
-### 2. Expect the same answer either way
+## If the reset email doesn't arrive
 
-You get the same confirmation — *"An email has been sent to you with a link to
-reset the password for your account"* — whether or not that address has an
-account. It is not a signal that the account exists. (Why: see below.)
-
-### 3. Open the link in the email
-
-The message has the subject **"Reset your password"**, a **Reset Password**
-button, the same link in plain text so you can copy it, and a closing line
-naming the address it was sent to. It does not tell you how long it is good
-for: the answer is **24 hours** from when it was sent. If the reset page says
-the key is invalid or missing, ask for a new link. Requests are rate limited,
-so ask once and wait for the mail rather than retrying in a loop.
-
-### 4. Choose a new password
-
-Enter the new password twice. Your current password is not accepted as the new
-one, and the rejection is a generic invalid-password message that does not
-confirm whether the guess was right.
-
-### What a completed reset does
-
-Completing a reset signs out **every** session on the account, including the
-browser you reset from. That is the point: anyone else who was signed in loses
-access at that moment. The account also records when the password changed, and
-any session that signed in before that moment is rejected — so a session that
-was somehow missed still cannot be used. You are returned to the sign-in page
-and sign in with the new password.
-
-## Why the reset page never says whether an address is registered
-
-If the answers differed — "we sent it" for a real account, "no such account"
-for anything else — anyone could type addresses into the form and learn which
-ones have Onetime Secret accounts. That would be a fact about our users, given
-away to whoever asked. So every ending is worded identically: an unknown
-address, an address whose account is not open, and an address that was sent a
-link moments ago all produce the same confirmation.
-
-For an unknown address, nothing happens beyond that message. No reset record
-is created and no email is sent — the response is the whole of it.
-
-The same reasoning shows up elsewhere: signing up with an address that already
-has an account returns a generic "unable to create account" rather than saying
-the address is taken.
-
-## When the reset email doesn't arrive
-
-**The address has no account here.** Nothing was sent. Check for typos, and
-for the other addresses you might have signed up with — work and personal, or
-an alias.
+**The address has no account here.** Nothing is sent. Check for typos and try
+other addresses you might have used, such as a work address or an alias.
 
 **The account was never verified, or has been closed.** No reset email is sent
-for an account that is not open. If you signed up and never opened the welcome
-email, use the verification link in it — that link does not expire, so an old
-welcome email still works — or ask for a new verification email.
+for an account that is not open. If you never verified the account, use the
+link in your welcome email (it does not expire) or request a new verification
+email.
 
-**You already asked a moment ago.** A second request inside the resend window
-returns the same confirmation *without* sending a second email. Look for the
-first one before asking again.
+**You requested a link a moment ago.** A second request inside the resend window
+shows the same confirmation without sending another email. Look for the first
+email before asking again.
 
-**Too many requests.** Reset requests are rate limited per address and per
-network, and the network side counts a range of addresses rather than yours
-alone — so a shared office, campus or VPN connection can reach the limit
-through other people's requests. This is the one case that does look
-different: you get a "too many attempts" message instead of the usual
-confirmation. Wait, then try once more.
+**Too many requests.** Reset requests are rate limited by address and by
+network. The network limit counts a range of addresses, so other people on a
+shared office, campus or VPN connection can contribute to it. In this case you
+see a "too many attempts" message instead of the usual confirmation. Wait, then
+try once more.
 
-**It is in spam, or held by a filter.** Check the junk folder and any
-quarantine your organisation runs before concluding nothing was sent.
+**It is in spam, or held by a filter.** Check the junk folder and any quarantine
+your organization runs.
 
 ## Other reasons sign-in fails
 
 **Repeated wrong passwords lock the account.** After several failed attempts,
-sign-in stops accepting that account and the correct password will not work
-either. The lock is temporary and clears on its own; the sign-in page will not
-tell you how many attempts remain or when it lifts. Requesting a password
-reset does not require signing in, so you can start one while locked out — and
-if sign-in still fails immediately afterwards, wait a while and try again.
+sign-in refuses that account, including with the correct password. The lock
+clears on its own; the page does not say how many attempts remain or when it
+lifts. You can request a password reset while locked out. If sign-in still
+fails immediately afterwards, wait and try again.
 
-**You have lost your second factor.** Sign in with one of your recovery codes
-instead of a code from your authenticator app. If you have neither the
-authenticator nor an unused recovery code, contact support: there is
-deliberately no email-based way around two-factor authentication, because
-email can already reset a password, so an email bypass would make the second
-factor worthless. Restoring access is a manual, identity-checked action. See
-[Two-factor authentication and passkeys](/en/account/two-factor-and-passkeys).
+**You have lost your second factor.** Enter a recovery code instead of a code
+from your authenticator app. If you have neither, contact support. Two-factor
+authentication cannot be turned off by email, because email can already reset
+your password. Support restores access after checking that the account is yours.
+See [Two-factor authentication and passkeys](/en/account/two-factor-and-passkeys).
 
-**Your email address changed.** Once an email change is confirmed, the old
-address stops working for sign-in and the new one is the login. See
-[Changing your email address](/en/account/change-your-email).
+**Your email address changed.** After an email change is confirmed, sign in with
+the new address. See [Changing your email address](/en/account/change-your-email).
 
-**The account was closed.** Closing an account permanently deletes its sign-in
-record — password, second factor, passkeys and all. It cannot be restored. See
+**The account was closed.** A closed account cannot be signed in to or reopened.
+You can create a new account with the same address. See
 [Closing your account](/en/account/close-your-account).
+
+**You are on the wrong regional site.** If your details are not recognized at
+all, check that you are signing in to the region where you created the account.
+
+## If your account uses single sign-on
+
+When you sign in through an identity provider, the provider checks who you are;
+your Onetime Secret password is not used.
+
+- **A second factor set up here is not requested.** The identity provider is
+  expected to enforce its own. To protect that sign-in route with a second
+  factor, configure it at the provider.
+- **Linking an existing account requires proof.** If the provider gives an
+  address that already has an account, the two are not linked automatically.
+  On the main service, you can link them during that sign-in by entering the
+  account's password, or by opening a link sent to the address if the account
+  has no password; a second factor is also required if the account has one. You
+  can also sign in with your existing method and connect the provider under
+  Settings → Security → Connected Identities. On an organization's custom
+  domain, linking during sign-in is not available; see
+  [How an identity is added](/en/account/sessions-and-identities#how-an-identity-is-added).
+- **An account created through a provider may have no password.** You can add
+  one from Settings → Security. The service emails you a link to set it, as in a
+  reset. After that, either method signs you in.
+- **You cannot remove your only way in.** Removing a connected identity is
+  refused when it is the account's last sign-in method.
+
+Where a service is configured for single sign-on only, password sign-in and
+password reset are not offered. To set up SSO for an organization, see
+[Single sign-on](/en/organizations/sso).
 
 ## Related
 
@@ -186,8 +140,8 @@ record — password, second factor, passkeys and all. It cannot be restored. See
   what is signed in right now, and signing other devices out.
 - [Changing your email address](/en/account/change-your-email) — the two-step
   confirmation and what it signs out.
-- [Security best practices](/en/security/best-practices) — including how to
-  handle a sign-in alert you did not expect.
+- [Closing your account](/en/account/close-your-account) — what closing deletes,
+  and using the same address again.
 
 ## Questions or need support?
 

@@ -1,159 +1,140 @@
 ---
 title: Preferences
-description: What you can actually set on your account, what each setting changes, and which things people expect to be settable but are not.
+description: The preferences saved to your account, the choices your browser remembers, and where other settings are decided.
 audience: end-user
 pageType: reference
+sourceOfTruth: onetimesecret/lib/onetime/models/receipt/features/access_timeline.rb:48-107 (a receipt stores access counts and times, not reader details); onetimesecret/apps/api/v2/logic/secrets/access_telemetry.rb and actor_attribution.rb (reader account and masked network details go to the organization's Secret Activity record); onetimesecret/lib/onetime/models/customer.rb:358-359 (reveal notifications are off unless switched on)
 ---
 
-Two preferences are saved to your account: the language you read the service in,
-and whether it emails you when one of your secrets is read. Everything else you
-can change is remembered by the browser you changed it in, or is not a setting
-at all. This page lists all three groups, including the things that turn out not
-to be settings.
+Two preferences are saved to your account: the language you use the service in,
+and whether you are emailed when one of your secrets is revealed. A few other
+choices are remembered by your browser. Account changes such as your email
+address, password and sign-in methods have their own pages.
 
-## Saved to your account
+## Account preferences
 
 | Setting | Where it is | What it changes |
 |---|---|---|
 | **Language** | Settings → Profile → Preferences | The language of the interface, and of the security notices the service emails you |
-| **Secret Reveal Notifications** | Settings → Profile → Notifications | Whether you are emailed when someone reads one of your secrets |
+| **Secret Reveal Notifications** | Settings → Profile → Notifications | Whether you are emailed when someone reveals one of your secrets |
 
-That is the whole list of preferences. Both follow the account rather than the
-device: sign in from another browser or another computer and both are already
-applied. Your email address, your password and second factor, and your connected
-identities are also held on your account, but they are credentials rather than
-preferences and are covered under [Settings that live somewhere
-else](#settings-that-live-somewhere-else).
+Both follow your account rather than the device. Sign in from another browser or
+computer and they are already applied.
 
 ## Language
 
-Only the languages the service has actually been translated into are offered,
-and one it does not have is refused rather than quietly accepted.
+Only languages the service has been translated into are offered.
 
-Signed in, your choice is written to your account and is what the service uses
-from then on, everywhere. Signed out, the choice belongs to that browser session
-and is not attached to any account, so it lasts as long as the session does.
+Signed in, your choice is saved to your account. Signed out, it applies to that
+browser session only.
 
-Your language also sets the language of the **security notices the service sends
-you** — sign-in alerts, the notice that your password changed, two-factor
-changes, and the reveal notification below. Emails triggered by a form you have
-just submitted go out in the language you were using when you submitted it
-instead: confirming an email-address change, and the password-reset email you
-asked for, both follow the request rather than the account. An account with no
+Your language also sets the language of the **security notices the service
+sends you**: sign-in alerts, password-change notices, two-factor changes, and
+the reveal notification below. Emails sent in response to a form you just
+submitted use the language you were using at the time instead. These include
+the email-change confirmation and the password-reset email. An account with no
 language chosen gets the service's default.
 
-It does **not** set the language of the page your recipient opens. Their page
-picks its own: a language they chose explicitly, then the brand language of the
-custom domain the link was shared from, then their browser's language, then the
-default. Choosing German for yourself does not send anyone a German page. If you
-use the create form's optional recipient field, though, the email carrying that
-link is written in the language you are reading the service in, not theirs.
+Your language does **not** set the language of the page your recipient opens.
+That page uses, in order: a language the recipient chose, the language of the
+custom domain the link was shared from, the recipient's browser language, then
+the default. If you use the create form's optional recipient email field, that
+email is written in your current language.
 
-Translations are contributed by volunteers, and coverage varies by language —
+Translations are contributed by volunteers, and coverage varies by language;
 see [Translations](/en/translations).
 
 :::note
-On a self-hosted install where translations are switched off, there is no
-language control at all. See [Configuration](/en/self-hosting/configuration).
+On a self-hosted installation with translations switched off, there is no
+language control. See [Configuration](/en/self-hosting/configuration).
 :::
 
 ## Secret reveal notifications
 
-One switch — **"Receive an email when someone views your secret"** — and it is
-off unless you turn it on.
+The switch is labelled **"Receive an email when someone views your secret"**. It
+is off until you turn it on.
 
 When it is on, the notification:
 
-- **covers** the secrets you create **while signed in** — a secret created
-  signed out has no account attached and can never notify anyone;
-- **goes to** the email address on your account, and nowhere else; there is no
-  separate notification address;
-- **fires** when someone reveals the secret through the site, which is what
-  a recipient opening your link does. It does not fire when the link is merely
-  fetched, so a mail scanner or a chat preview does not trigger one. A reveal
-  performed through the older v1 or v2 API endpoints does not notify you;
-- **contains** the time of the read and the secret's short identifier, and
-  nothing else — it does not name the reader, and it does not carry the content,
-  which cannot be retrieved.
+- **covers** the secrets you create **while signed in**. A secret created while
+  signed out is not attached to an account and cannot notify anyone;
+- **goes to** the email address on your account. There is no separate
+  notification address;
+- **is sent** when someone reveals the secret through the website. Opening the
+  link without revealing, including by a mail scanner or chat preview, does not
+  send one. Reveals through the older v1 or v2 API endpoints do not send one;
+- **contains** the time of the reveal and the secret's short identifier. It
+  does not identify the reader or include the content.
 
-If the email fails to send, the read still happened and the secret is still
-gone. Sending the notification is not part of the reveal and cannot reverse it.
+If the email fails to send, the reveal has still happened and the secret is
+gone.
 
-The switch controls that one email and nothing else. There is no digest or
-summary, no per-secret version of it, no notification when a secret is burned,
-and no reveal notification is ever sent to the recipient. Emailing the link
-itself to someone is a separate, per-secret choice on the create form, not a
-notification setting.
+The switch controls only this email. There is no digest, no per-secret
+notification setting, no notification when a secret is burned, and no
+notification to the recipient. Emailing a link to someone is a separate choice
+on the create form.
 
-The email is deliberately thin. The read itself is recorded, though: each access
-is written to the secret's receipt along with a partial IP address and a partial
-browser identifier, and a reader who was signed in is recorded by account. To
-find out what happened to a particular secret, open its
-[receipt](/en/share/your-receipt) or your
-[recent secrets](/en/account/dashboard-and-recent-secrets).
+### Where reveal details are recorded
 
-## Privacy settings
+The secret's [receipt](/en/share/your-receipt) records when the link was fetched
+and whether and when the secret was revealed or burned. It does not record who
+revealed it or from where.
 
-The Privacy panel has nothing on it to change. It states that the service runs
-no analytics and no tracking — "This isn't a setting because there's nothing to
-turn on or off" — and shows that as a switch which is permanently on and cannot
-be moved. So there is no opt-out here to find, because there is no control here
-at all. For the stance behind that, see
-[Our principles](/en/security/our-principles).
+For secrets you create while signed in, the organization's
+[Secret Activity](/en/organizations/audit-trail) record can hold more: the
+reader's account if they were signed in, and partially masked network details
+for link fetches. Owners and admins can view it on plans that include Secret
+Activity. See
+[What recipients see](/en/share/what-recipients-see#what-the-sender-learns-about-you).
 
-## Remembered by your browser, not your account
+## Privacy
 
-These are real choices that stick, but they stick to the browser you made them
-in. A new browser, a different computer, or a cleared browser starts from the
-defaults again.
+The Privacy panel has no controls. It states that the service runs no
+analytics or tracking, shown as a switch that is permanently on. For the
+reasoning, see [Our principles](/en/security/our-principles).
+
+## Browser preferences
+
+These choices are saved in the browser where you made them. A different browser,
+another computer, or cleared browser data starts from the defaults.
 
 | Choice | What it does | Scope |
 |---|---|---|
-| **Appearance** (light or dark) | Sets the theme. Until you choose, it follows your device's own light/dark setting | The browser you set it in. It is not saved to your account, so set it again on each one |
-| **The expiry you last picked** | Pre-selects that expiry on the create form in your account next time. If it is no longer one of the offered options, the form falls back to the service's default. The homepage create form does not use it | The browser you set it in |
-| **Stay on page** | Keeps you on the create form after a secret is made, so you can make another without navigating. When you generate a password from the form in your account, the app takes you to the receipt anyway, because that is the only place a generated password is shown | The browser you set it in |
+| **Appearance** (light or dark) | Sets the theme. Until you choose, it follows your device's light/dark setting | That browser |
+| **The expiry you last picked** | Preselects that expiry on the create form in your account. If it is no longer offered, the form uses the service's default. The homepage create form does not use it | That browser |
+| **Stay on page** | Keeps you on the create form after a secret is made. Generating a password from the form in your account still opens the receipt, because the receipt is where a generated password is shown | That browser |
 | **The domain you are creating under** | Chooses which of your organization's domains a new secret is shared from | The signed-in session |
 
-## What is not settable
+## Settings decided elsewhere
 
-These come up often. None of them exists.
-
-| People look for | What is true instead |
+| Setting | Where it is decided |
 |---|---|
-| A default expiry for my account | The expiry choices, and which one is preselected, come from the service. Your account has no expiry setting — only the per-browser memory above |
-| A default passphrase, or "always require a passphrase on my secrets" | A passphrase is decided per secret, as you create it. A requirement can be imposed by the service, or on links shared from a custom domain by [that domain's settings](/en/custom-domains/access-and-privacy) — never by your account |
-| How long my sign-in lasts, or a limit on simultaneous sign-ins | Both windows are fixed and neither is per-account; nothing caps how many sessions are open. See [Sessions and connected identities](/en/account/sessions-and-identities) |
-| A display name, username or profile picture | An account has none. It is identified by its email address |
-| A setting to move my account to another region | A region is a separate service, not a preference. See [Changing your region](/en/account/change-your-region) |
-| Turning analytics off | See [Privacy settings](#privacy-settings) above |
+| Expiry options and the default expiry | The service. Your account has no expiry setting; your browser remembers your last choice |
+| Requiring a passphrase | Each secret, as you create it. The service, or a [custom domain's settings](/en/custom-domains/access-and-privacy), can also require one |
+| How long you stay signed in | The service's session limits. There is no limit on how many sessions you have open. See [Sessions and connected identities](/en/account/sessions-and-identities) |
+| Region | The site you create the account on. See [Changing your region](/en/account/change-your-region) |
+| Branding, language and passphrase rules for a custom domain | The domain's settings, which apply to everyone sharing from it. See [Custom domains](/en/custom-domains) |
 
-## Settings that live somewhere else
+An account has no display name, username or profile picture; it is identified
+by its email address.
 
-Several things people file under "preferences" are account changes with
-consequences of their own, and each has its own page:
+## Related account settings
 
-- [Changing your email address](/en/account/change-your-email) — confirmed by
+- [Changing your email address](/en/account/change-your-email): confirmed by
   email, and it signs out every session.
 - [Signing in](/en/account/signing-in) and
-  [Two-factor authentication and passkeys](/en/account/two-factor-and-passkeys)
-  — how you get in, and the second factor.
-- [Sessions and connected identities](/en/account/sessions-and-identities) —
-  what is signed in right now, and which identity providers are linked.
-- [Closing your account](/en/account/close-your-account) — what closing deletes
-  and what it does not.
-
-Your account's language and notification switch are yours alone, and changing
-either affects nobody else. Settings that apply to everybody sharing a custom
-domain — its branding, the language it serves, whether its links require a
-passphrase — belong to the domain rather than to any one account, and are
-covered under [Custom domains](/en/custom-domains).
+  [Two-factor authentication and passkeys](/en/account/two-factor-and-passkeys):
+  how you sign in, and your second factor.
+- [Sessions and connected identities](/en/account/sessions-and-identities):
+  where you are signed in, and which identity providers are linked.
+- [Closing your account](/en/account/close-your-account): what closing deletes
+  and what it keeps.
 
 ## Related
 
 - [Your dashboard and recent secrets](/en/account/dashboard-and-recent-secrets)
-  — what the service keeps a record of, and for how long
-- [Sharing secrets](/en/share) — the choices you make per secret, which is where
-  most of the "settings" people look for actually live
+  — the receipts for secrets you created, and how long they last
+- [Sharing secrets](/en/share) — the choices you make for each secret
 - [Custom domain access and privacy](/en/custom-domains/access-and-privacy) —
   defaults that apply to a whole domain
 - [Translations](/en/translations) — which languages exist, and helping with one

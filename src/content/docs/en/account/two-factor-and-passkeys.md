@@ -56,10 +56,9 @@ and your account is not accessible until it succeeds.
 Recovery codes are the self-service way back in when the authenticator app is
 not available. They are short strings, generated for you when you enable 2FA.
 
-- **You get four.** That is enough to get out of trouble a few times, not
-  enough to be careless with.
-- **Each code works once.** A code that has already been used will simply be
-  rejected; the app does not distinguish a spent code from a mistyped one.
+- **You get four.** Each sign-in without the authenticator uses one.
+- **Each code works once.** A used code is rejected, with the same message as a
+  mistyped one.
 - **They are shown once, when they are generated.** Afterwards the settings
   page reports only how many unused codes remain, not the codes themselves.
 - **Generate a new set when you are running low.** Generating requires your
@@ -67,27 +66,28 @@ not available. They are short strings, generated for you when you enable 2FA.
 
 ### Where to keep them
 
-Blunt version: store them somewhere that is not this product and not the phone
-in your pocket.
+Save the codes somewhere you can reach if the device with your authenticator app
+is lost or replaced:
 
-- **Not in Onetime Secret.** This service is built to destroy what it holds. It
-  is not storage, and a link you cannot open twice is not a backup.
-- **Not only on the device that holds your authenticator app.** If one lost
-  phone takes out both factors, you have a single point of failure with extra
-  steps.
-- **A password manager on a different device, or a printed copy somewhere
-  physically safe**, are both fine. Treat a recovery code like a password: it
-  is one step away from your account.
+- **A password manager you can open from another device**, or
+- **A printed copy kept somewhere physically secure.**
+
+Do not keep them only on the device that runs your authenticator app: losing
+that device would then remove both your codes and your authenticator. Do not
+store them in a Onetime Secret link either. A secret is deleted once it is
+revealed or expires, so it cannot serve as a backup.
+
+Protect the codes as you would a password. Each one can complete the second
+step of a sign-in.
 
 ## If you lose your authenticator
 
 At the code prompt, choose **Use a recovery code instead** and enter one of
 your codes. That signs you in.
 
-Once you are back in, fix the underlying problem in the same session rather
-than putting it off:
+After you sign in:
 
-- Set up your authenticator app again on the device you still have. Turning
+- Set up your authenticator app again on the device you now use. Turning
   two-factor authentication off and setting it up again gives you a new secret
   and a new set of recovery codes.
 - Check how many unused recovery codes you have left, and generate a new set if
@@ -99,8 +99,8 @@ a device whose clock has drifted produces codes the server will not accept. Use
 the code showing right now, not one you copied a minute ago.
 
 **If you keep entering wrong codes**, the authenticator step stops accepting
-them for your account after several failures in a row. Recovery codes are the
-intended escape from that state — use one rather than waiting the lock out.
+them for your account after several failures in a row. A recovery code still
+signs you in while the authenticator step is locked.
 
 :::caution
 An account can end up holding recovery codes with no authenticator configured.

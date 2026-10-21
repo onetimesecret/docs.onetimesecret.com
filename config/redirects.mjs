@@ -87,6 +87,7 @@ const movedPages = [
   { from: "self-hosting/installation", to: "install/docker" },
 
   // Using Onetime Secret › Sharing secrets
+  { from: "share/receiving-secrets", to: "share/request-secret" },
   { from: "secret-links", to: "share" },
   { from: "secret-links/why-use-secret-links", to: "share/why-secret-links" },
   { from: "secret-links/use-cases", to: "share/use-cases" },
