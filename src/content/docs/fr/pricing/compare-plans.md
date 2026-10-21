@@ -9,7 +9,7 @@ description: "Comparez nos plans de partage sécurisé de secrets — liens à e
 | F󠄁o󠄁n󠄁c󠄁tio󠄁n󠄁n󠄁alité / Plan | Non connecté | Free | Identity Plus | Team Plus |
 |---|---|---|---|---|
 | Domaines personnalisés | ❌ | 1 | Illimités | Illimités |
-| Secrets via la page d'accueil | ❌ | ✅ | ✅ | ✅ |
+| Secrets s󠄁u󠄁r󠄁 la page d'accueil | ❌ | ✅ | ✅ | ✅ |
 | Secrets entrants | ❌ | ✅ | ✅ | ✅ |
 | Accès à l'API | Limité \* | ✅ | ✅ | ✅ |
 | Image de marque personnalisée (logo, couleur) | ❌ | ❌ | ✅ | ✅ |
