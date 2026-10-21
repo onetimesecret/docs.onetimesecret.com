@@ -1,5 +1,5 @@
 ---
-title: Start here
+title: Getting started
 description: Onetime Secret shares sensitive information through links that self-destruct after a single view. Start here to find the part of the documentation that matches what you're trying to do.
 audience: end-user
 pageType: concept
@@ -36,8 +36,8 @@ that fits.
   one-time links solve
 - **[Use cases](/en/share/use-cases/)** — practical applications of Onetime
   Secret in various scenarios
-- **[Hosted or self-hosted?](/en/start/hosted-or-self-hosted/)** — the first
-  real decision, and the one everything else follows from
+- **[Hosted or self-hosted?](/en/start/hosted-or-self-hosted/)** — compare the
+  hosted service with running your own instance
 - **[Where your data lives](/en/security/where-your-data-lives/)** — data
   locality and the available regions
 - **[Compare plans](/en/pricing/compare-plans/)** — feature comparison across

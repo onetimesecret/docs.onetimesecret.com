@@ -33,8 +33,8 @@ export const starlightConfig = {
   disable404Route: true,
   credits: true,
   logo: {
-    src: "./src/assets/img/onetime-logo-v3-xl.svg",
-    alt: "Onetime Secret",
+    src: "./src/assets/img/onetime-logo-v3-docs.svg",
+    alt: "Onetime Secret Docs",
     replacesTitle: true,
   },
   pagefind: true,

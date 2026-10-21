@@ -7,6 +7,7 @@ import SiteTitle from './SiteTitle.astro';
 import SocialIcons from '@astrojs/starlight/components/SocialIcons.astro';
 import ThemeSelect from '@astrojs/starlight/components/ThemeSelect.astro';
 import MobileMenuToggle from '@astrojs/starlight/components/MobileMenuToggle.astro';
+import { Icon } from '@astrojs/starlight/components';
 import { getRelativeLocaleUrl } from 'astro:i18n';
 import { getNavLinks } from './nav-links';
 import SectionCard from './SectionCard.astro';
@@ -30,12 +31,26 @@ const navLinks = getNavLinks(currentLocale);
 // carrying the section card. The toggle targets id="starlight__sidebar", which
 // PageFrame only emits when hasSidebar is true, so there is no duplicate id.
 const { hasSidebar } = Astro.locals.starlightRoute;
+
+// The docs homepage is the one page where a reader may have wanted the app
+// instead, so it alone gets a way back to onetimesecret.com beside the logo
+// (which links to the docs home). Compare with trailing slashes normalised.
+const trim = (p: string) => p.replace(/\/+$/, '');
+const isDocsHome = !hasSidebar && trim(Astro.url.pathname) === trim(docsHome);
 ---
 
 <div class:list={['header', 'sl-flex', { 'no-sidebar': !hasSidebar }]}>
 	<div class="title-wrapper sl-flex">
     <SiteTitle />
-    <a href={docsHome} class="docs-badge">docs</a>
+    {
+      isDocsHome && (
+        <a href="https://onetimesecret.com/" class="site-link" aria-label="Go to onetimesecret.com">
+          <span class="site-link-long" aria-hidden="true">Go to onetimesecret.com</span>
+          <span class="site-link-short" aria-hidden="true">onetimesecret.com</span>
+          <Icon name="external" size="0.875em" />
+        </a>
+      )
+    }
 	</div>
 	<div class="sl-flex center-group print:hidden">
 		{shouldRenderSearch && <Search />}
@@ -113,30 +128,37 @@ const { hasSidebar } = Astro.locals.starlightRoute;
 		gap: 0.625rem;
 	}
 
-	/* Ink is --sl-color-accent-high, not --sl-color-text-accent: the badge sits on
-	   a 12% tint of the accent itself, and accent-on-its-own-tint is only ~4:1 —
-	   under the 4.5:1 AA floor for 11px text. accent-high is the token meant for
-	   accent-coloured ink and clears it in both themes (5.52:1 / 8.02:1). */
-	.docs-badge {
-		display: none;
-		font-size: 0.6875rem;
-		font-weight: 600;
-		letter-spacing: 0.05em;
-		text-transform: uppercase;
+	/* Wayfinding link beside the logo, docs homepage only. A hairline rule
+	   separates it from the wordmark, the same device the header uses between
+	   the social icons and the theme controls. Resting ink is --sl-color-text
+	   for the same contrast reason as .nav-links below. */
+	.site-link {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.3rem;
+		padding-inline-start: 0.625rem;
+		border-inline-start: 1px solid var(--sl-color-hairline-light);
+		line-height: 1.25rem;
+		font-size: 0.75rem;
+		font-weight: 500;
+		color: var(--sl-color-text);
 		text-decoration: none;
-		color: var(--sl-color-accent-high);
-		background: color-mix(in srgb, var(--sl-color-text-accent) 12%, transparent);
-		padding: 0.1875rem 0.5rem;
-		border-radius: 5px;
-		border: 1px solid color-mix(in srgb, var(--sl-color-text-accent) 20%, transparent);
-		line-height: 1.2;
 		white-space: nowrap;
-		transition: background 0.15s ease, border-color 0.15s ease;
+		transition: color 0.15s ease;
 	}
-
-	.docs-badge:hover {
-		background: color-mix(in srgb, var(--sl-color-text-accent) 20%, transparent);
-		border-color: color-mix(in srgb, var(--sl-color-text-accent) 35%, transparent);
+	.site-link:hover {
+		color: var(--sl-color-white);
+	}
+	.site-link-long {
+		display: none;
+	}
+	/* Phones: logo, search and menu share ~375px, so only the host name fits;
+	   under 22rem even that goes and the glyph alone remains (the aria-label
+	   keeps the full name). */
+	@media (max-width: 21.99rem) {
+		.site-link-short {
+			display: none;
+		}
 	}
 
 	.right-group,
@@ -188,8 +210,14 @@ const { hasSidebar } = Astro.locals.starlightRoute;
     .nav-links {
       display: flex;
     }
-    .docs-badge {
-      display: inline-block;
+    .site-link {
+      font-size: 0.8125rem;
+    }
+    .site-link-long {
+      display: inline;
+    }
+    .site-link-short {
+      display: none;
     }
   }
 
