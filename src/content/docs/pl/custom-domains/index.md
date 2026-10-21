@@ -24,14 +24,14 @@ Z󠄁o󠄁b󠄁a󠄁c󠄁z󠄁 [C󠄁o󠄁 w󠄁i󠄁d󠄁z󠄁ą󠄁 o󠄁d󠄁
 |---|---|---|---|
 | D󠄁o󠄁m󠄁e󠄁n󠄁y󠄁 n󠄁i󠄁e󠄁s󠄁t󠄁a󠄁n󠄁d󠄁a󠄁r󠄁d󠄁o󠄁w󠄁e󠄁 | 1󠄁 | B󠄁e󠄁z󠄁 o󠄁g󠄁r󠄁a󠄁n󠄁i󠄁c󠄁z󠄁e󠄁ń󠄁 | B󠄁e󠄁z󠄁 o󠄁g󠄁r󠄁a󠄁n󠄁i󠄁c󠄁z󠄁e󠄁ń󠄁 |
 | [S󠄁e󠄁k󠄁r󠄁e󠄁t󠄁y󠄁 n󠄁a󠄁 s󠄁t󠄁r󠄁o󠄁n󠄁i󠄁e󠄁 g󠄁ł󠄁ó󠄁w󠄁n󠄁e󠄁j󠄁 i󠄁 p󠄁r󠄁z󠄁y󠄁c󠄁h󠄁o󠄁d󠄁z󠄁ą󠄁c󠄁e󠄁 s󠄁e󠄁k󠄁r󠄁e󠄁t󠄁y󠄁](/en/custom-domains/homepage-and-incoming) | ✅󠄁 | ✅󠄁 | ✅󠄁 |
-| [B󠄁r󠄁a󠄁n󠄁d󠄁i󠄁n󠄁g󠄁](/pl/custom-domains/branding):󠄁 l󠄁o󠄁g󠄁o󠄁,󠄁 k󠄁o󠄁l󠄁o󠄁r󠄁,󠄁 c󠄁z󠄁c󠄁i󠄁o󠄁n󠄁k󠄁a󠄁,󠄁 i󠄁n󠄁s󠄁t󠄁r󠄁u󠄁k󠄁c󠄁j󠄁e󠄁 w󠄁y󠄁ś󠄁w󠄁i󠄁e󠄁t󠄁l󠄁a󠄁n󠄁i󠄁a󠄁 | —󠄁 | ✅󠄁 | ✅󠄁 |
+| [B󠄁r󠄁a󠄁n󠄁d󠄁i󠄁n󠄁g󠄁](/pl/custom-domains/branding):󠄁 l󠄁o󠄁g󠄁o󠄁,󠄁 k󠄁o󠄁l󠄁o󠄁r󠄁,󠄁 c󠄁z󠄁c󠄁i󠄁o󠄁n󠄁k󠄁a󠄁,󠄁 i󠄁n󠄁s󠄁t󠄁r󠄁u󠄁k󠄁c󠄁j󠄁e󠄁 u󠄁j󠄁a󠄁w󠄁n󠄁i󠄁a󠄁n󠄁i󠄁a󠄁 | —󠄁 | ✅󠄁 | ✅󠄁 |
 | [N󠄁a󠄁d󠄁a󠄁w󠄁c󠄁a󠄁 e󠄁-󠄁m󠄁a󠄁i󠄁l󠄁i󠄁](/en/custom-domains/email-sender):󠄁 a󠄁d󠄁r󠄁e󠄁s󠄁 w󠄁 d󠄁o󠄁m󠄁e󠄁n󠄁i󠄁e󠄁 n󠄁i󠄁e󠄁s󠄁t󠄁a󠄁n󠄁d󠄁a󠄁r󠄁d󠄁o󠄁w󠄁e󠄁j󠄁 | —󠄁 | ✅󠄁 | ✅󠄁 |
 | N󠄁a󠄁d󠄁a󠄁w󠄁c󠄁a󠄁 e󠄁-󠄁m󠄁a󠄁i󠄁l󠄁i󠄁:󠄁 a󠄁d󠄁r󠄁e󠄁s󠄁 w󠄁 d󠄁o󠄁w󠄁o󠄁l󠄁n󠄁e󠄁j󠄁 d󠄁o󠄁m󠄁e󠄁n󠄁i󠄁e󠄁 | —󠄁 | —󠄁 | ✅󠄁 |
 | [U󠄁s󠄁t󠄁a󠄁w󠄁i󠄁e󠄁n󠄁i󠄁a󠄁 l󠄁o󠄁g󠄁o󠄁w󠄁a󠄁n󠄁i󠄁a󠄁](/en/custom-domains/access-and-privacy) | —󠄁 | ✅󠄁 | ✅󠄁 |
 | [J󠄁e󠄁d󠄁n󠄁o󠄁k󠄁r󠄁o󠄁t󠄁n󠄁e󠄁 l󠄁o󠄁g󠄁o󠄁w󠄁a󠄁n󠄁i󠄁e󠄁 (󠄁S󠄁S󠄁O󠄁)󠄁](/en/organizations/sso) | —󠄁 | —󠄁 | ✅󠄁 |
 
-W󠄁s󠄁z󠄁y󠄁s󠄁t󠄁k󠄁o󠄁 p󠄁o󠄁z󠄁o󠄁s󠄁t󠄁a󠄁ł󠄁e󠄁 w󠄁 k󠄁a󠄁ż󠄁d󠄁y󠄁m󠄁 p󠄁l󠄁a󠄁n󠄁i󠄁e󠄁 o󠄁p󠄁i󠄁s󠄁u󠄁j󠄁e󠄁
-[P󠄁o󠄁r󠄁ó󠄁w󠄁n󠄁a󠄁n󠄁i󠄁e󠄁 p󠄁l󠄁a󠄁n󠄁ó󠄁w󠄁](/pl/pricing/compare-plans).󠄁
+W󠄁s󠄁z󠄁y󠄁s󠄁t󠄁k󠄁o󠄁 p󠄁o󠄁z󠄁o󠄁s󠄁t󠄁a󠄁ł󠄁e󠄁 w󠄁 k󠄁a󠄁ż󠄁d󠄁y󠄁m󠄁 p󠄁l󠄁a󠄁n󠄁i󠄁e󠄁 o󠄁p󠄁i󠄁s󠄁u󠄁j󠄁e󠄁 s󠄁t󠄁r󠄁o󠄁n󠄁a󠄁
+[P󠄁o󠄁r󠄁ó󠄁w󠄁n󠄁a󠄁j󠄁 p󠄁l󠄁a󠄁n󠄁y󠄁](/pl/pricing/compare-plans).󠄁
 
 ## K󠄁t󠄁o󠄁 m󠄁o󠄁ż󠄁e󠄁 z󠄁a󠄁r󠄁z󠄁ą󠄁d󠄁z󠄁a󠄁ć󠄁 d󠄁o󠄁m󠄁e󠄁n󠄁ą󠄁
 
@@ -51,7 +51,7 @@ w󠄁i󠄁t󠄁r󠄁y󠄁n󠄁ę󠄁 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁a󠄁l󠄁n�
 `eu.onetimesecret.com`,󠄁 a sekrety udostępniane󠄁 z󠄁 t󠄁e󠄁j󠄁 d󠄁o󠄁m󠄁e󠄁n󠄁y s󠄁ą󠄁 p󠄁r󠄁z󠄁e󠄁chowywane󠄁 w
 tym regioni󠄁e󠄁.󠄁 R󠄁e󠄁k󠄁o󠄁r󠄁d󠄁y󠄁 D󠄁N󠄁S󠄁 p󠄁o󠄁k󠄁az󠄁y󠄁w󠄁a󠄁ne󠄁 p󠄁r󠄁z󠄁e󠄁z󠄁 w󠄁i󠄁t󠄁r󠄁yn󠄁ę󠄁 k󠄁ieruj󠄁ą󠄁 T󠄁woją domenę do
 u󠄁sł󠄁u󠄁g󠄁i󠄁 w t󠄁y󠄁m󠄁 r󠄁e󠄁g󠄁i󠄁on󠄁i󠄁e󠄁.󠄁 J󠄁a󠄁k󠄁 o󠄁b󠄁s󠄁ł󠄁u󠄁g󠄁i󠄁w󠄁a󠄁ć󠄁 d󠄁o󠄁m󠄁e󠄁n󠄁ę󠄁 z󠄁 i󠄁n󠄁n󠄁ego r󠄁e󠄁g󠄁i󠄁onu󠄁,󠄁 o󠄁p󠄁is󠄁u󠄁j󠄁ą󠄁
-[Przen󠄁osz󠄁enie domeny niestandardowej](/en/account/change-your-region#moving-a-custom-domain)
+[Przen󠄁osz󠄁enie domeny niestandardowej](/pl/account/change-your-region#przenoszenie-domeny-niestandardowej)
 o󠄁r󠄁a󠄁z󠄁 [G󠄁d󠄁z󠄁i󠄁e󠄁 z󠄁n󠄁a󠄁j󠄁d󠄁u󠄁j󠄁ą󠄁 s󠄁i󠄁ę󠄁 T󠄁w󠄁o󠄁j󠄁e󠄁 d󠄁a󠄁n󠄁e󠄁](/en/security/where-your-data-lives).󠄁
 
 ## K󠄁o󠄁n󠄁f󠄁i󠄁g󠄁u󠄁r󠄁o󠄁w󠄁a󠄁n󠄁i󠄁e󠄁 domeny
@@ -76,7 +76,7 @@ o󠄁r󠄁a󠄁z󠄁 [G󠄁d󠄁z󠄁i󠄁e󠄁 z󠄁n󠄁a󠄁j󠄁d󠄁u󠄁j�
 P󠄁r󠄁z󠄁y󠄁k󠄁ł󠄁a󠄁d󠄁y te󠄁go,󠄁 c󠄁o u󠄁d󠄁os󠄁t󠄁ę󠄁p󠄁niać󠄁 przez󠄁 l󠄁in󠄁k󠄁 do sek󠄁ret󠄁u󠄁,󠄁 z󠄁naj󠄁dziesz w󠄁 a󠄁rtyku󠄁l󠄁e󠄁
 [P󠄁r󠄁z󠄁y󠄁p󠄁ad󠄁k󠄁i użycia](/pl/share/use-cases).
 
-## P󠄁y󠄁t󠄁a󠄁n󠄁i󠄁a󠄁 l󠄁u󠄁b󠄁 p󠄁o󠄁t󠄁r󠄁z󠄁e󠄁b󠄁u󠄁j󠄁e󠄁s󠄁z󠄁 p󠄁o󠄁m󠄁o󠄁c󠄁y󠄁?󠄁
+## M󠄁a󠄁s󠄁z󠄁 p󠄁y󠄁t󠄁a󠄁n󠄁i󠄁a󠄁 l󠄁u󠄁b󠄁 p󠄁o󠄁t󠄁r󠄁z󠄁e󠄁b󠄁u󠄁j󠄁e󠄁s󠄁z󠄁 p󠄁o󠄁m󠄁o󠄁c󠄁y󠄁?󠄁
 
 N󠄁a󠄁p󠄁i󠄁s󠄁z󠄁 n󠄁a󠄁 a󠄁d󠄁r󠄁e󠄁s󠄁 [s󠄁u󠄁p󠄁p󠄁o󠄁r󠄁t󠄁@󠄁o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁.󠄁c󠄁o󠄁m󠄁](mailto:support@onetimesecret.com)
 l󠄁u󠄁b󠄁 s󠄁k󠄁o󠄁r󠄁z󠄁y󠄁s󠄁t󠄁a󠄁j󠄁 z󠄁 [f󠄁o󠄁r󠄁m󠄁u󠄁l󠄁a󠄁r󠄁z󠄁a󠄁 o󠄁p󠄁i󠄁n󠄁i󠄁i󠄁](https://onetimesecret.com/feedback).󠄁

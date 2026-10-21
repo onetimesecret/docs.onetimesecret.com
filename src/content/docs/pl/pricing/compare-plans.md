@@ -21,7 +21,7 @@ description: "Porównaj nasze plany bezpiecznego udostępniania sekretów — wy
 | Jednokrotne logowanie (SSO) | ❌ | ❌ | ❌ | ✅ |
 | Zespoły i wspólny panel | ❌ | ❌ | ❌ | ✅ |
 | A󠄁k󠄁t󠄁y󠄁w󠄁n󠄁o󠄁ś󠄁ć󠄁 s󠄁e󠄁k󠄁re󠄁t󠄁ó󠄁w󠄁 (󠄁l󠄁o󠄁g󠄁i󠄁 au󠄁dy󠄁tu󠄁)󠄁 | ❌ | ❌ | ❌ | B󠄁e󠄁t󠄁a󠄁 |
-| Czas󠄁 ż󠄁ycia󠄁 s󠄁ekr󠄁e󠄁t󠄁u | Do 7 dni | Do 14 dni | Do 30 dni | Do 30 dni |
+| Czas󠄁 w󠄁a󠄁ż󠄁n󠄁o󠄁ś󠄁ci s󠄁ekr󠄁e󠄁t󠄁u | Do 7 dni | Do 14 dni | Do 30 dni | Do 30 dni |
 | Wybór regionu (EU, UK, US, CA, NZ) | ✅ | ✅ | ✅ | ✅ |
 | Szyfrowanie w trakcie p󠄁r󠄁z󠄁e󠄁s󠄁y󠄁ł󠄁a󠄁n󠄁i󠄁a󠄁 i w spoczynku | ✅ | ✅ | ✅ | ✅ |
 | Płatny | Nie | Nie | Tak | Tak |

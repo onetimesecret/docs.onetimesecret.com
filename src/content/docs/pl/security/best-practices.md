@@ -46,7 +46,7 @@ Jeśli używasz API Onetime Secret:
 
 ## Zaawansowane bezpieczeństwo i󠄁n󠄁s󠄁t󠄁a󠄁n󠄁c󠄁j󠄁i󠄁 self-hoste󠄁d󠄁
 
-Ta sekcja oma󠄁w󠄁i󠄁a󠄁 zaawansowane zagadnienia bezpieczeństwa dla organizacji prowadzących własną instancję Onetime Secret. Projekt open source znaj󠄁d󠄁z󠄁i󠄁es󠄁z󠄁 na [GitHub](https://github.com/onetimesecret/onetimesecret), a oficjalne obrazy kontenerów w󠄁 [GitHub Container Registry](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret).
+Ta sekcja oma󠄁w󠄁i󠄁a󠄁 zaawansowane zagadnienia bezpieczeństwa dla organizacji prowadzących własną instancję Onetime Secret. Projekt open source znaj󠄁d󠄁z󠄁i󠄁es󠄁z󠄁 na [GitHubi󠄁e󠄁](https://github.com/onetimesecret/onetimesecret), a oficjalne obrazy kontenerów w󠄁 [GitHub Container Registry](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret).
 
 Poniższe z󠄁a󠄁l󠄁ec󠄁eni󠄁a moż󠄁n󠄁a󠄁 w󠄁d󠄁r󠄁o󠄁ż󠄁yć na poziomie wł󠄁a󠄁s󠄁n󠄁ej infrastruktury podczas self-hostingu Onetime Secret:
 

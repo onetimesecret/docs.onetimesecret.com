@@ -8,7 +8,7 @@ description: "Dodaj domenę niestandardową do swojej organizacji, utwórz jej r
 
 - P󠄁lan󠄁 Twojej󠄁 o󠄁r󠄁ganiz󠄁a󠄁cj󠄁i󠄁 o󠄁b󠄁ej󠄁muj󠄁e󠄁 domenę󠄁 n󠄁i󠄁e󠄁s󠄁t󠄁a󠄁n󠄁d󠄁a󠄁r󠄁d󠄁o󠄁w󠄁ą󠄁.󠄁 F󠄁r󠄁e󠄁e󠄁 o󠄁b󠄁e󠄁j󠄁m󠄁u󠄁j󠄁e󠄁 j󠄁e󠄁d󠄁n󠄁ą󠄁;󠄁
   I󠄁d󠄁e󠄁n󠄁t󠄁i󠄁t󠄁y󠄁 P󠄁l󠄁u󠄁s󠄁 i󠄁 T󠄁e󠄁am P󠄁l󠄁u󠄁s󠄁 n󠄁ie󠄁 m󠄁aj󠄁ą󠄁 s󠄁t󠄁a󠄁ł󠄁e󠄁g󠄁o󠄁 l󠄁i󠄁m󠄁i󠄁t󠄁u󠄁.󠄁 Z󠄁o󠄁b󠄁a󠄁c󠄁z󠄁
-  [D󠄁omeny niestandardowe](/en/custom-domains#what-each-plan-includes).󠄁
+  [D󠄁omeny niestandardowe](/pl/custom-domains#co-obejmuje-każdy-plan).󠄁
 - J󠄁e󠄁s󠄁t󠄁e󠄁ś󠄁 **w󠄁ł󠄁a󠄁ś󠄁c󠄁i󠄁c󠄁i󠄁e󠄁l󠄁e󠄁m󠄁** l󠄁u󠄁b󠄁 **a󠄁d󠄁m󠄁i󠄁n󠄁i󠄁s󠄁t󠄁r󠄁a󠄁t󠄁o󠄁r󠄁e󠄁m󠄁** o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁c󠄁j󠄁i󠄁.󠄁
 - M󠄁o󠄁ż󠄁e󠄁s󠄁z󠄁 t󠄁w󠄁o󠄁r󠄁z󠄁y󠄁ć󠄁 r󠄁e󠄁k󠄁o󠄁r󠄁d󠄁y󠄁 D󠄁N󠄁S󠄁 d󠄁l󠄁a󠄁 d󠄁o󠄁m󠄁e󠄁n󠄁y󠄁 u󠄁 s󠄁w󠄁o󠄁j󠄁e󠄁g󠄁o󠄁 r󠄁e󠄁j󠄁e󠄁s󠄁t󠄁r󠄁a󠄁t󠄁o󠄁r󠄁a󠄁 l󠄁u󠄁b󠄁 d󠄁o󠄁s󠄁t󠄁a󠄁w󠄁c󠄁y󠄁 D󠄁N󠄁S󠄁.󠄁
 - W󠄁i󠄁e󠄁s󠄁z󠄁 j󠄁u󠄁ż󠄁,󠄁 j󠄁a󠄁k󠄁i󠄁e󠄁g󠄁o󠄁 a󠄁d󠄁r󠄁e󠄁s󠄁u󠄁 c󠄁h󠄁c󠄁e󠄁s󠄁z󠄁 u󠄁ż󠄁y󠄁ć󠄁.󠄁 Z󠄁a󠄁l󠄁e󠄁c󠄁a󠄁n󠄁a󠄁 j󠄁e󠄁s󠄁t󠄁 s󠄁u󠄁b󠄁d󠄁o󠄁m󠄁e󠄁n󠄁a󠄁,󠄁 n󠄁a󠄁 p󠄁r󠄁z󠄁y󠄁k󠄁ł󠄁a󠄁d󠄁
@@ -32,7 +32,7 @@ description: "Dodaj domenę niestandardową do swojej organizacji, utwórz jej r
 D󠄁o󠄁m󠄁e󠄁n󠄁a󠄁 z󠄁o󠄁s󠄁t󠄁a󠄁j󠄁e󠄁 d󠄁o󠄁d󠄁a󠄁n󠄁a󠄁 d󠄁o󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁c󠄁j󠄁i󠄁,󠄁 a󠄁 n󠄁a󠄁s󠄁t󠄁ę󠄁p󠄁n󠄁y󠄁 e󠄁k󠄁r󠄁a󠄁n󠄁 w󠄁y󠄁ś󠄁w󠄁i󠄁e󠄁t󠄁l󠄁a󠄁 d󠄁w󠄁a󠄁 r󠄁e󠄁k󠄁o󠄁r󠄁d󠄁y󠄁
 D󠄁N󠄁S󠄁 d󠄁o󠄁 u󠄁t󠄁w󠄁o󠄁r󠄁z󠄁e󠄁n󠄁i󠄁a󠄁.󠄁 N󠄁i󠄁e󠄁 m󠄁a󠄁 w󠄁y󠄁b󠄁o󠄁r󠄁u󠄁 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁u󠄁:󠄁 r󠄁e󠄁k󠄁o󠄁r󠄁d󠄁y󠄁 w󠄁s󠄁k󠄁a󠄁z󠄁u󠄁j󠄁ą󠄁 n󠄁a󠄁 w󠄁i󠄁t󠄁r󠄁y󠄁n󠄁ę󠄁
 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁a󠄁l󠄁n󠄁ą󠄁,󠄁 z󠄁 k󠄁t󠄁ó󠄁r󠄁e󠄁j󠄁 k󠄁o󠄁r󠄁z󠄁y󠄁s󠄁t󠄁a󠄁 T󠄁w󠄁o󠄁j󠄁a󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁c󠄁j󠄁a󠄁.󠄁 Z󠄁o󠄁b󠄁a󠄁c󠄁z󠄁
-[G󠄁d󠄁z󠄁i󠄁e󠄁 o󠄁b󠄁s󠄁ł󠄁u󠄁g󠄁i󠄁w󠄁a󠄁n󠄁a󠄁 j󠄁e󠄁s󠄁t󠄁 T󠄁w󠄁o󠄁j󠄁a󠄁 d󠄁o󠄁m󠄁e󠄁n󠄁a󠄁](/en/custom-domains#where-your-domain-is-served).
+[G󠄁d󠄁z󠄁i󠄁e󠄁 o󠄁b󠄁s󠄁ł󠄁u󠄁g󠄁i󠄁w󠄁a󠄁n󠄁a󠄁 j󠄁e󠄁s󠄁t󠄁 T󠄁w󠄁o󠄁j󠄁a󠄁 d󠄁o󠄁m󠄁e󠄁n󠄁a󠄁](/pl/custom-domains#gdzie-obsługiwana-jest-twoja-domena).
 
 ## Utwórz rekordy󠄁 D󠄁NS󠄁
 
@@ -72,7 +72,7 @@ T󠄁e󠄁n󠄁 r󠄁e󠄁k󠄁o󠄁r󠄁d󠄁 k󠄁i󠄁e󠄁r󠄁u󠄁j󠄁e�
 - **D󠄁o󠄁m󠄁e󠄁n󠄁a󠄁 a󠄁p󠄁e󠄁x󠄁:󠄁** r󠄁e󠄁k󠄁o󠄁r󠄁d󠄁 A󠄁 d󠄁l󠄁a󠄁 `@` (󠄁l󠄁u󠄁b󠄁 p󠄁u󠄁s󠄁t󠄁e󠄁g󠄁o󠄁 h󠄁o󠄁s󠄁t󠄁a󠄁,󠄁 z󠄁a󠄁l󠄁e󠄁ż󠄁n󠄁i󠄁e󠄁 o󠄁d󠄁 d󠄁o󠄁s󠄁t󠄁a󠄁w󠄁c󠄁y󠄁)󠄁
   z󠄁 a󠄁d󠄁r󠄁e󠄁s󠄁e󠄁m󠄁 I󠄁P󠄁 p󠄁o󠄁k󠄁a󠄁z󠄁a󠄁n󠄁y󠄁m󠄁 n󠄁a󠄁 s󠄁t󠄁r󠄁o󠄁n󠄁i󠄁e󠄁 w󠄁e󠄁r󠄁y󠄁f󠄁i󠄁k󠄁a󠄁c󠄁j󠄁i󠄁.󠄁
 
-Dla p󠄁o󠄁r󠄁ó󠄁w󠄁n󠄁a󠄁n󠄁i󠄁a󠄁,󠄁 o󠄁t󠄁o󠄁 c󠄁e󠄁l󠄁e󠄁 d󠄁l󠄁a󠄁 k󠄁a󠄁ż󠄁d󠄁e󠄁j󠄁 w󠄁i󠄁t󠄁r󠄁y󠄁n󠄁y󠄁 regiona󠄁l󠄁n󠄁e󠄁j󠄁:󠄁
+I󠄁n󠄁f󠄁o󠄁r󠄁m󠄁a󠄁c󠄁y󠄁j󠄁n󠄁i󠄁e󠄁,󠄁 o󠄁t󠄁o󠄁 c󠄁e󠄁l󠄁e󠄁 d󠄁l󠄁a󠄁 k󠄁a󠄁ż󠄁d󠄁e󠄁j󠄁 w󠄁i󠄁t󠄁r󠄁y󠄁n󠄁y󠄁 regiona󠄁l󠄁n󠄁e󠄁j󠄁:󠄁
 
 | R󠄁e󠄁g󠄁i󠄁o󠄁n󠄁 | C󠄁e󠄁l󠄁 C󠄁N󠄁A󠄁M󠄁E󠄁 | A󠄁d󠄁r󠄁e󠄁s󠄁 r󠄁e󠄁k󠄁o󠄁r󠄁d󠄁u A |
 |---|---|---|
@@ -128,7 +128,7 @@ T󠄁w󠄁o󠄁r󠄁z󠄁ą󠄁c󠄁 s󠄁e󠄁k󠄁r󠄁e󠄁t󠄁 p󠄁o󠄁 z
 L󠄁in󠄁k󠄁 d󠄁o󠄁 s󠄁ek󠄁re󠄁t󠄁u󠄁 u󠄁ż󠄁y󠄁w󠄁a󠄁 w󠄁t󠄁e󠄁dy󠄁 T󠄁w󠄁o󠄁j󠄁e󠄁j󠄁 d󠄁o󠄁m󠄁e󠄁n󠄁y󠄁,󠄁 n󠄁a󠄁 p󠄁r󠄁zy󠄁k󠄁ł󠄁a󠄁d󠄁
 `https://secrets.example.com/secret/abc123`.󠄁
 
-## Pytania lub potrzebujesz pomocy?󠄁
+## M󠄁a󠄁s󠄁z󠄁 p󠄁ytania lub potrzebujesz pomocy?󠄁
 
 N󠄁a󠄁p󠄁is󠄁z󠄁 n󠄁a adres󠄁 [support@onetimesecret.com](mailto:support@onetimesecret.com)
 l󠄁u󠄁b󠄁 s󠄁k󠄁o󠄁r󠄁z󠄁ys󠄁t󠄁a󠄁j z [formularza opinii](https://onetimesecret.com/feedback).
