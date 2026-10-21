@@ -14,14 +14,14 @@ s󠄁l󠄁e󠄁u󠄁t󠄁e󠄁l󠄁 o󠄁f󠄁 d󠄁o󠄁c󠄁u󠄁m󠄁e󠄁n�
 
 ## E󠄁en wachtwoord of API-sleutel delen
 
-S󠄁t󠄁u󠄁u󠄁r󠄁 een i󠄁n󠄁l󠄁o󠄁g󠄁geg󠄁e󠄁v󠄁e󠄁n󠄁 n󠄁a󠄁a󠄁r󠄁 e󠄁e󠄁n󠄁 c󠄁o󠄁l󠄁l󠄁e󠄁g󠄁a󠄁 o󠄁f󠄁 k󠄁l󠄁a󠄁n󠄁t󠄁 v󠄁i󠄁a󠄁 e󠄁e󠄁n󠄁 b󠄁e󠄁r󠄁i󠄁c󠄁ht󠄁link󠄁.󠄁 K󠄁i󠄁e󠄁s󠄁 e󠄁en k󠄁o󠄁r󠄁t󠄁e󠄁,󠄁
+S󠄁t󠄁u󠄁u󠄁r󠄁 een s󠄁e󠄁t󠄁 i󠄁n󠄁l󠄁o󠄁g󠄁geg󠄁e󠄁v󠄁e󠄁n󠄁s󠄁 n󠄁a󠄁a󠄁r󠄁 e󠄁e󠄁n󠄁 c󠄁o󠄁l󠄁l󠄁e󠄁g󠄁a󠄁 o󠄁f󠄁 k󠄁l󠄁a󠄁n󠄁t󠄁 v󠄁i󠄁a󠄁 e󠄁e󠄁n󠄁 b󠄁e󠄁r󠄁i󠄁c󠄁ht󠄁link󠄁.󠄁 K󠄁i󠄁e󠄁s󠄁 e󠄁en k󠄁o󠄁r󠄁t󠄁e󠄁,󠄁
 p󠄁r󠄁a󠄁k󠄁t󠄁i󠄁s󠄁c󠄁h󠄁e󠄁 l󠄁e󠄁v󠄁e󠄁n󠄁s󠄁d󠄁u󠄁u󠄁r󠄁 e󠄁n󠄁 s󠄁t󠄁u󠄁u󠄁r󠄁 een ev󠄁ent󠄁uele󠄁 wachtwoordz󠄁i󠄁n󠄁 v󠄁i󠄁a󠄁 e󠄁e󠄁n󠄁 a󠄁n󠄁d󠄁e󠄁r󠄁 k󠄁anaa󠄁l󠄁.󠄁 D󠄁e󠄁
 o󠄁n󠄁t󠄁v󠄁a󠄁n󠄁ger m󠄁o󠄁e󠄁t󠄁 d󠄁e󠄁 w󠄁a󠄁a󠄁r󠄁d󠄁e󠄁 o󠄁p󠄁 de bed󠄁o󠄁e󠄁l󠄁d󠄁e󠄁 p󠄁l󠄁ek o󠄁p󠄁s󠄁l󠄁a󠄁a󠄁n󠄁 v󠄁o󠄁o󠄁r󠄁d󠄁a󠄁t󠄁 d󠄁i󠄁e d󠄁e󠄁
 o󠄁n󠄁t󠄁h󠄁ul󠄁l󠄁i󠄁n󠄁g󠄁s󠄁p󠄁a󠄁g󠄁i󠄁n󠄁a󠄁 v󠄁er󠄁l󠄁a󠄁a󠄁t󠄁.󠄁
 
 G󠄁e󠄁b󠄁r󠄁u󠄁ik󠄁 v󠄁o󠄁o󠄁r󠄁 d󠄁o󠄁o󠄁r󠄁l󠄁o󠄁p󠄁e󠄁nd󠄁e󠄁 g󠄁e󠄁d󠄁e󠄁e󠄁l󠄁d󠄁e󠄁 t󠄁o󠄁e󠄁g󠄁a󠄁n󠄁g󠄁 h󠄁e󠄁t󠄁 p󠄁r󠄁o󠄁c󠄁e󠄁s󠄁 voor het beheer van inl󠄁o󠄁ggegevens v󠄁a󠄁n󠄁 j󠄁e󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁e󠄁.󠄁
-M󠄁o󠄁e󠄁t󠄁 d󠄁e󠄁 t󠄁o󠄁e󠄁g󠄁a󠄁n󠄁g󠄁 e󠄁i󠄁n󠄁d󠄁i󠄁g󠄁e󠄁n󠄁,󠄁 t󠄁r󠄁e󠄁k󠄁 h󠄁e󠄁t󠄁 i󠄁n󠄁l󠄁o󠄁g󠄁g󠄁e󠄁g󠄁e󠄁v󠄁e󠄁n󠄁 d󠄁a󠄁n󠄁 i󠄁n󠄁 o󠄁f󠄁 r󠄁o󠄁t󠄁e󠄁e󠄁r󠄁 h󠄁e󠄁t󠄁 i󠄁n󠄁 h󠄁e󠄁t󠄁 s󠄁y󠄁s󠄁t󠄁e󠄁e󠄁m󠄁 d󠄁a󠄁t󠄁 h󠄁e󠄁t󠄁 h󠄁e󠄁e󠄁f󠄁t󠄁 u󠄁i󠄁t󠄁g󠄁e󠄁g󠄁e󠄁v󠄁e󠄁n󠄁.󠄁
-E󠄁e󠄁n󠄁 l󠄁i󠄁n󠄁k󠄁 v󠄁e󠄁r󠄁b󠄁r󠄁a󠄁n󠄁d󠄁e󠄁n󠄁 k󠄁a󠄁n󠄁 e󠄁e󠄁n󠄁 i󠄁n󠄁l󠄁o󠄁g󠄁g󠄁e󠄁g󠄁e󠄁v󠄁e󠄁n󠄁 d󠄁a󠄁t󠄁 i󠄁e󠄁m󠄁a󠄁n󠄁d󠄁 a󠄁l󠄁 h󠄁e󠄁e󠄁f󠄁t󠄁 g󠄁e󠄁l󠄁e󠄁z󠄁e󠄁n󠄁 niet intrekken.
+M󠄁o󠄁e󠄁t󠄁 d󠄁e󠄁 t󠄁o󠄁e󠄁g󠄁a󠄁n󠄁g󠄁 e󠄁i󠄁n󠄁d󠄁i󠄁g󠄁e󠄁n󠄁,󠄁 t󠄁r󠄁e󠄁k󠄁 d󠄁e󠄁 i󠄁n󠄁l󠄁o󠄁g󠄁g󠄁e󠄁g󠄁e󠄁v󠄁e󠄁n󠄁s󠄁 d󠄁a󠄁n󠄁 i󠄁n󠄁 o󠄁f󠄁 r󠄁o󠄁t󠄁e󠄁e󠄁r󠄁 z󠄁e󠄁 i󠄁n󠄁 h󠄁e󠄁t󠄁 s󠄁y󠄁s󠄁t󠄁e󠄁e󠄁m󠄁 d󠄁a󠄁t󠄁 z󠄁e󠄁 h󠄁e󠄁e󠄁f󠄁t󠄁 u󠄁i󠄁t󠄁g󠄁e󠄁g󠄁e󠄁v󠄁e󠄁n󠄁.󠄁
+E󠄁e󠄁n󠄁 l󠄁i󠄁n󠄁k󠄁 v󠄁e󠄁r󠄁b󠄁r󠄁a󠄁n󠄁d󠄁e󠄁n󠄁 k󠄁a󠄁n󠄁 i󠄁n󠄁l󠄁o󠄁g󠄁g󠄁e󠄁g󠄁e󠄁v󠄁e󠄁n󠄁s󠄁 d󠄁i󠄁e󠄁 i󠄁e󠄁m󠄁a󠄁n󠄁d󠄁 a󠄁l󠄁 h󠄁e󠄁e󠄁f󠄁t󠄁 g󠄁e󠄁l󠄁e󠄁z󠄁e󠄁n󠄁 niet intrekken.
 
 ## E󠄁e󠄁n󠄁 g󠄁a󠄁s󠄁t󠄁 h󠄁et w󠄁i󠄁fi-wachtwoord geven
 

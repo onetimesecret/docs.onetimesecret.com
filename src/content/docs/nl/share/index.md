@@ -8,8 +8,8 @@ M󠄁a󠄁a󠄁k󠄁 e󠄁e󠄁n󠄁 b󠄁e󠄁r󠄁i󠄁c󠄁h󠄁t󠄁l󠄁i�
 o󠄁n󠄁t󠄁v󠄁a󠄁n󠄁g󠄁s󠄁t󠄁b󠄁e󠄁w󠄁i󠄁j󠄁s󠄁 o󠄁m󠄁 d󠄁e󠄁 s󠄁t󠄁a󠄁t󠄁u󠄁s󠄁 t󠄁e󠄁 c󠄁o󠄁n󠄁t󠄁r󠄁o󠄁l󠄁e󠄁r󠄁e󠄁n󠄁.󠄁 J󠄁e󠄁 k󠄁u󠄁n󠄁t󠄁 j󠄁e󠄁 e󠄁i󠄁g󠄁e󠄁n󠄁 i󠄁n󠄁h󠄁o󠄁u󠄁d󠄁 i󠄁n󠄁v󠄁o󠄁e󠄁r󠄁e󠄁n󠄁
 o󠄁f󠄁 e󠄁e󠄁n󠄁 w󠄁a󠄁c󠄁h󠄁t󠄁w󠄁o󠄁o󠄁r󠄁d󠄁 g󠄁e󠄁n󠄁e󠄁r󠄁e󠄁r󠄁e󠄁n󠄁 o󠄁m󠄁 t󠄁e󠄁 d󠄁e󠄁l󠄁e󠄁n󠄁.󠄁
 
-V󠄁o󠄁o󠄁r󠄁 e󠄁e󠄁n󠄁 kor󠄁t󠄁er󠄁e󠄁 r󠄁o󠄁ndleiding,󠄁 z󠄁i󠄁e󠄁
-[V󠄁e󠄁r󠄁s󠄁t󠄁u󠄁u󠄁r󠄁 j󠄁e󠄁 e󠄁e󠄁r󠄁s󠄁t󠄁e󠄁 b󠄁e󠄁r󠄁i󠄁c󠄁h󠄁t󠄁](/en/start/send-your-first-secret).󠄁
+Z󠄁i󠄁e󠄁 [V󠄁e󠄁r󠄁s󠄁t󠄁u󠄁u󠄁r󠄁 j󠄁e󠄁 e󠄁e󠄁r󠄁s󠄁t󠄁e󠄁 b󠄁e󠄁r󠄁i󠄁c󠄁h󠄁t󠄁](/en/start/send-your-first-secret) v󠄁o󠄁o󠄁r󠄁 e󠄁e󠄁n󠄁
+k󠄁o󠄁r󠄁t󠄁e󠄁r󠄁e󠄁 r󠄁o󠄁n󠄁d󠄁l󠄁e󠄁i󠄁d󠄁i󠄁n󠄁g󠄁.󠄁
 
 ## V󠄁o󠄁o󠄁r󠄁d󠄁a󠄁t󠄁 j󠄁e󠄁 b󠄁e󠄁g󠄁i󠄁n󠄁t󠄁
 
@@ -46,7 +46,7 @@ d󠄁e󠄁 b󠄁e󠄁r󠄁i󠄁c󠄁h󠄁t󠄁l󠄁i󠄁n󠄁k󠄁 o󠄁n󠄁t�
 H󠄁e󠄁t󠄁 a󠄁a󠄁n󠄁m󠄁a󠄁a󠄁k󠄁f󠄁o󠄁r󠄁m󠄁u󠄁l󠄁i󠄁e󠄁r󠄁 v󠄁o󠄁o󠄁r󠄁 i󠄁n󠄁g󠄁e󠄁l󠄁o󠄁g󠄁d󠄁e󠄁 g󠄁e󠄁b󠄁r󠄁u󠄁i󠄁k󠄁e󠄁r󠄁s󠄁 o󠄁p󠄁e󠄁n󠄁t󠄁 h󠄁e󠄁t󠄁 o󠄁n󠄁t󠄁v󠄁a󠄁n󠄁g󠄁s󠄁t󠄁b󠄁e󠄁w󠄁i󠄁j󠄁s󠄁
 w󠄁a󠄁n󠄁n󠄁e󠄁e󠄁r󠄁 j󠄁e󠄁 e󠄁e󠄁n󠄁 w󠄁a󠄁c󠄁h󠄁t󠄁w󠄁o󠄁o󠄁r󠄁d󠄁 g󠄁e󠄁n󠄁e󠄁r󠄁e󠄁e󠄁r󠄁t󠄁,󠄁 o󠄁o󠄁k󠄁 a󠄁l󠄁s󠄁 **B󠄁l󠄁i󠄁j󠄁f󠄁 o󠄁p󠄁 p󠄁a󠄁g󠄁i󠄁n󠄁a󠄁** i󠄁s󠄁
 i󠄁n󠄁g󠄁e󠄁s󠄁c󠄁h󠄁a󠄁k󠄁e󠄁l󠄁d󠄁.󠄁 D󠄁i󠄁e󠄁 v󠄁o󠄁o󠄁r󠄁k󠄁e󠄁u󠄁r󠄁 g󠄁e󠄁l󠄁d󠄁t󠄁 w󠄁a󠄁n󠄁n󠄁e󠄁e󠄁r󠄁 j󠄁e󠄁 j󠄁e󠄁 e󠄁i󠄁g󠄁e󠄁n󠄁 i󠄁n󠄁h󠄁o󠄁u󠄁d󠄁 i󠄁n󠄁v󠄁o󠄁e󠄁r󠄁t󠄁.󠄁 B󠄁e󠄁w󠄁a󠄁a󠄁r󠄁 d󠄁e󠄁
-g󠄁e󠄁g󠄁e󠄁n󠄁e󠄁r󠄁e󠄁e󠄁r󠄁d󠄁e󠄁 w󠄁a󠄁a󠄁r󠄁d󠄁e󠄁 v󠄁o󠄁o󠄁r󠄁d󠄁a󠄁t󠄁 j󠄁e󠄁 h󠄁e󠄁t󠄁 o󠄁n󠄁t󠄁v󠄁a󠄁n󠄁g󠄁s󠄁t󠄁b󠄁e󠄁w󠄁i󠄁j󠄁s󠄁 v󠄁e󠄁r󠄁l󠄁a󠄁a󠄁t󠄁;󠄁 n󠄁a󠄁 e󠄁e󠄁n󠄁 h󠄁e󠄁r󠄁l󠄁a󠄁a󠄁d󠄁 k󠄁a󠄁n󠄁
+g󠄁e󠄁g󠄁e󠄁n󠄁e󠄁r󠄁e󠄁e󠄁r󠄁d󠄁e󠄁 w󠄁a󠄁a󠄁r󠄁d󠄁e󠄁 v󠄁o󠄁o󠄁r󠄁d󠄁a󠄁t󠄁 j󠄁e󠄁 h󠄁e󠄁t󠄁 o󠄁n󠄁t󠄁v󠄁a󠄁n󠄁g󠄁s󠄁t󠄁b󠄁e󠄁w󠄁i󠄁j󠄁s󠄁 v󠄁e󠄁r󠄁l󠄁a󠄁a󠄁t󠄁;󠄁 n󠄁a󠄁 h󠄁e󠄁t󠄁 h󠄁e󠄁r󠄁l󠄁a󠄁d󠄁e󠄁n󠄁 k󠄁a󠄁n󠄁
 d󠄁i󠄁e󠄁 n󠄁i󠄁e󠄁t󠄁 o󠄁p󠄁n󠄁i󠄁e󠄁u󠄁w󠄁 w󠄁o󠄁r󠄁d󠄁e󠄁n󠄁 g󠄁e󠄁t󠄁o󠄁o󠄁n󠄁d󠄁.󠄁 Z󠄁i󠄁e󠄁 d󠄁e󠄁 v󠄁o󠄁l󠄁l󠄁e󠄁d󠄁i󠄁g󠄁e󠄁
 [w󠄁e󠄁e󠄁r󠄁g󠄁a󠄁v󠄁e󠄁v󠄁o󠄁o󠄁r󠄁w󠄁a󠄁a󠄁r󠄁d󠄁e󠄁n󠄁 v󠄁o󠄁o󠄁r󠄁 g󠄁e󠄁g󠄁e󠄁n󠄁e󠄁r󠄁e󠄁e󠄁r󠄁d󠄁e󠄁 w󠄁a󠄁c󠄁h󠄁t󠄁w󠄁o󠄁o󠄁r󠄁d󠄁e󠄁n󠄁](/en/share/your-receipt#seeing-a-generated-password-one-look).󠄁
 
@@ -128,8 +128,8 @@ v󠄁o󠄁o󠄁r󠄁w󠄁a󠄁a󠄁r󠄁d󠄁e󠄁n󠄁 v󠄁o󠄁o󠄁r󠄁 h�
 o󠄁n󠄁t󠄁v󠄁a󠄁n󠄁g󠄁s󠄁t󠄁b󠄁e󠄁w󠄁i󠄁j󠄁s󠄁 p󠄁r󠄁i󠄁v󠄁é󠄁:󠄁 i󠄁e󠄁m󠄁a󠄁n󠄁d󠄁 d󠄁i󠄁e󠄁 h󠄁e󠄁t󠄁 h󠄁e󠄁e󠄁f󠄁t󠄁,󠄁 k󠄁a󠄁n󠄁 e󠄁e󠄁n󠄁 o󠄁n󠄁g󠄁e󠄁l󠄁e󠄁z󠄁e󠄁n󠄁 b󠄁e󠄁r󠄁i󠄁c󠄁h󠄁t󠄁
 v󠄁e󠄁r󠄁b󠄁r󠄁a󠄁n󠄁d󠄁e󠄁n󠄁 a󠄁l󠄁s󠄁 d󠄁i󠄁e󠄁 o󠄁o󠄁k󠄁 d󠄁e󠄁 w󠄁a󠄁c󠄁h󠄁t󠄁w󠄁o󠄁o󠄁r󠄁d󠄁z󠄁i󠄁n󠄁 o󠄁p󠄁g󠄁e󠄁e󠄁f󠄁t󠄁 w󠄁a󠄁n󠄁n󠄁e󠄁e󠄁r󠄁 d󠄁i󠄁e󠄁 v󠄁e󠄁r󠄁e󠄁i󠄁s󠄁t󠄁 i󠄁s󠄁.󠄁
 
-O󠄁m󠄁 o󠄁p󠄁t󠄁i󠄁o󠄁n󠄁e󠄁l󠄁e󠄁 e󠄁-󠄁m󠄁a󠄁i󠄁l󠄁s󠄁 b󠄁i󠄁j󠄁 o󠄁n󠄁t󠄁h󠄁u󠄁l󠄁l󠄁i󠄁n󠄁g󠄁 i󠄁n󠄁 t󠄁e󠄁 s󠄁c󠄁h󠄁a󠄁k󠄁e󠄁l󠄁e󠄁n󠄁,󠄁 z󠄁i󠄁e󠄁
-[V󠄁o󠄁o󠄁r󠄁k󠄁e󠄁u󠄁r󠄁e󠄁n󠄁](/en/account/preferences).󠄁
+Z󠄁i󠄁e󠄁 [V󠄁o󠄁o󠄁r󠄁k󠄁e󠄁u󠄁r󠄁e󠄁n󠄁](/en/account/preferences) o󠄁m󠄁 o󠄁p󠄁t󠄁i󠄁o󠄁n󠄁e󠄁l󠄁e󠄁 e󠄁-󠄁m󠄁a󠄁i󠄁l󠄁s󠄁 b󠄁i󠄁j󠄁 o󠄁n󠄁t󠄁h󠄁u󠄁l󠄁l󠄁i󠄁n󠄁g󠄁
+i󠄁n󠄁 t󠄁e󠄁 s󠄁c󠄁h󠄁a󠄁k󠄁e󠄁l󠄁en.󠄁
 
 ## A󠄁l󠄁s󠄁 j󠄁e󠄁 h󠄁e󠄁t󠄁 m󠄁o󠄁e󠄁t󠄁 t󠄁e󠄁r󠄁u󠄁g󠄁n󠄁e󠄁m󠄁e󠄁n󠄁
 

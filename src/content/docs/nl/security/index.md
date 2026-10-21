@@ -19,7 +19,7 @@ doen en waar je de details vindt.
 - **Bescherming met een wachtwoordzin.** Je kunt een wachtwoordzin verplicht
   stellen om een bericht te bekijken — een extra laag die de link alleen niet
   kan ontgrendelen.
-- **Beperkte levensduur door ontwerp.** Elk bericht heeft een verlooptijd; kies
+- **A󠄁l󠄁t󠄁i󠄁j󠄁d󠄁 e󠄁e󠄁n󠄁 b󠄁eperkte levensduur.** Elk bericht heeft een verlooptijd; kies
   de kortst m󠄁o󠄁g󠄁e󠄁l󠄁i󠄁j󠄁k󠄁e󠄁 praktische levensduur om blootstelling te minimaliseren.
 - **Verbranden vóór het lezen.** Is een bericht nog niet bekeken, dan kun je
   het verbranden zodat het nooit meer gelezen kan worden.

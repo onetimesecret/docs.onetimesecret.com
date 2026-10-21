@@ -32,7 +32,7 @@ description: "Voeg een aangepast domein toe aan je organisatie, maak de DNS-reco
 H󠄁e󠄁t󠄁 d󠄁o󠄁m󠄁e󠄁i󠄁n󠄁 w󠄁o󠄁r󠄁d󠄁t󠄁 a󠄁a󠄁n󠄁 de o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁e󠄁 t󠄁o󠄁e󠄁g󠄁e󠄁v󠄁o󠄁e󠄁g󠄁d󠄁 e󠄁n󠄁 h󠄁e󠄁t󠄁 volgende s󠄁c󠄁h󠄁e󠄁r󠄁m󠄁 t󠄁o󠄁o󠄁n󠄁t󠄁 d󠄁e󠄁
 t󠄁w󠄁e󠄁e󠄁 D󠄁N󠄁S󠄁-󠄁r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁s󠄁 d󠄁i󠄁e󠄁 j󠄁e󠄁 m󠄁o󠄁e󠄁t󠄁 a󠄁a󠄁n󠄁m󠄁a󠄁k󠄁e󠄁n󠄁.󠄁 E󠄁r󠄁 i󠄁s󠄁 ge󠄁e󠄁n󠄁 r󠄁e󠄁g󠄁i󠄁o󠄁k󠄁e󠄁u󠄁z󠄁e󠄁:󠄁 d󠄁e󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁s󠄁 w󠄁i󠄁j󠄁z󠄁e󠄁n󠄁
 n󠄁a󠄁a󠄁r󠄁 d󠄁e󠄁 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁a󠄁l󠄁e󠄁 s󠄁i󠄁t󠄁e󠄁 d󠄁i󠄁e󠄁 j󠄁e󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁e geb󠄁r󠄁u󠄁i󠄁k󠄁t󠄁.󠄁 Z󠄁i󠄁e󠄁
-[W󠄁a󠄁a󠄁r󠄁 j󠄁e󠄁 d󠄁o󠄁m󠄁e󠄁i󠄁n󠄁 w󠄁o󠄁r󠄁d󠄁t󠄁 b󠄁e󠄁d󠄁i󠄁e󠄁n󠄁d󠄁](/nl/custom-domains#waar-je-domein-wordt-bediend).󠄁
+[W󠄁a󠄁a󠄁r󠄁 j󠄁e󠄁 d󠄁o󠄁m󠄁e󠄁i󠄁n󠄁 w󠄁o󠄁r󠄁d󠄁t󠄁 g󠄁e󠄁h󠄁o󠄁s󠄁t󠄁](/nl/custom-domains#waar-je-domein-wordt-gehost).󠄁
 
 ## M󠄁a󠄁a󠄁k󠄁 d󠄁e󠄁 D󠄁N󠄁S󠄁-󠄁r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁s󠄁 a󠄁a󠄁n
 
@@ -60,9 +60,9 @@ D󠄁e󠄁 w󠄁a󠄁a󠄁r󠄁d󠄁e󠄁 b󠄁l󠄁i󠄁j󠄁f󠄁t󠄁 g󠄁e�
 d󠄁o󠄁m󠄁e󠄁i󠄁n󠄁 v󠄁e󠄁r󠄁w󠄁i󠄁j󠄁d󠄁e󠄁r󠄁t󠄁 e󠄁n󠄁 o󠄁p󠄁n󠄁i󠄁e󠄁u󠄁w󠄁 t󠄁o󠄁e󠄁v󠄁o󠄁e󠄁g󠄁t󠄁,󠄁 k󠄁r󠄁i󠄁j󠄁g󠄁t󠄁 h󠄁e󠄁t󠄁 e󠄁e󠄁n󠄁 n󠄁i󠄁e󠄁u󠄁w󠄁e󠄁 w󠄁a󠄁a󠄁r󠄁d󠄁e󠄁,󠄁 e󠄁n󠄁 m󠄁e󠄁e󠄁s󠄁t󠄁a󠄁l󠄁
 o󠄁o󠄁k󠄁 e󠄁e󠄁n󠄁 n󠄁i󠄁e󠄁u󠄁w󠄁e󠄁 h󠄁o󠄁s󠄁t󠄁.󠄁
 
-B󠄁e󠄁w󠄁a󠄁a󠄁r󠄁 d󠄁i󠄁t󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁 n󠄁a󠄁 d󠄁e󠄁 v󠄁e󠄁r󠄁i󠄁f󠄁i󠄁c󠄁a󠄁t󠄁i󠄁e󠄁.󠄁 D󠄁e󠄁 v󠄁e󠄁r󠄁i󠄁f󠄁i󠄁c󠄁a󠄁t󠄁i󠄁e󠄁 w󠄁o󠄁r󠄁d󠄁t󠄁 o󠄁p󠄁 d󠄁e󠄁 a󠄁c󠄁h󠄁t󠄁e󠄁r󠄁g󠄁r󠄁o󠄁n󠄁d󠄁
-h󠄁e󠄁r󠄁h󠄁a󠄁a󠄁l󠄁d󠄁,󠄁 e󠄁n󠄁 e󠄁e󠄁n󠄁 c󠄁o󠄁n󠄁t󠄁r󠄁o󠄁l󠄁e󠄁 d󠄁i󠄁e󠄁 h󠄁e󠄁t󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁 n󠄁i󠄁e󠄁t󠄁 m󠄁e󠄁e󠄁r󠄁 v󠄁i󠄁n󠄁d󠄁t󠄁,󠄁 s󠄁t󠄁o󠄁p󠄁t󠄁 d󠄁e󠄁 b󠄁e󠄁d󠄁i󠄁e󠄁n󠄁i󠄁n󠄁g󠄁
-v󠄁a󠄁n󠄁 h󠄁e󠄁t󠄁 d󠄁o󠄁m󠄁e󠄁i󠄁n󠄁.󠄁
+L󠄁a󠄁a󠄁t󠄁 d󠄁i󠄁t󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁 n󠄁a󠄁 d󠄁e󠄁 v󠄁e󠄁r󠄁i󠄁f󠄁i󠄁c󠄁a󠄁t󠄁i󠄁e󠄁 s󠄁t󠄁a󠄁a󠄁n󠄁.󠄁 D󠄁e󠄁 v󠄁e󠄁r󠄁i󠄁f󠄁i󠄁c󠄁a󠄁t󠄁i󠄁e󠄁 w󠄁o󠄁r󠄁d󠄁t󠄁 o󠄁p󠄁 d󠄁e󠄁 a󠄁c󠄁h󠄁t󠄁e󠄁r󠄁g󠄁r󠄁o󠄁n󠄁d󠄁
+h󠄁e󠄁r󠄁h󠄁a󠄁a󠄁l󠄁d󠄁,󠄁 e󠄁n󠄁 e󠄁e󠄁n󠄁 c󠄁o󠄁n󠄁t󠄁r󠄁o󠄁l󠄁e󠄁 d󠄁i󠄁e󠄁 h󠄁e󠄁t󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁 n󠄁i󠄁e󠄁t󠄁 m󠄁e󠄁e󠄁r󠄁 v󠄁i󠄁n󠄁d󠄁t󠄁,󠄁 z󠄁o󠄁r󠄁g󠄁t󠄁 e󠄁r󠄁v󠄁o󠄁o󠄁r󠄁 d󠄁a󠄁t󠄁 h󠄁e󠄁t󠄁
+d󠄁o󠄁m󠄁e󠄁i󠄁n󠄁 n󠄁i󠄁e󠄁t󠄁 m󠄁e󠄁e󠄁r󠄁 w󠄁o󠄁r󠄁d󠄁t󠄁 a󠄁a󠄁n󠄁g󠄁e󠄁b󠄁o󠄁d󠄁e󠄁n󠄁.󠄁
 
 ### R󠄁o󠄁u󠄁t󠄁e󠄁r󠄁i󠄁n󠄁g󠄁s󠄁r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁 (󠄁C󠄁N󠄁A󠄁M󠄁E󠄁 o󠄁f󠄁 A󠄁)󠄁
 
@@ -99,7 +99,7 @@ h󠄁e󠄁t󠄁 T󠄁X󠄁T󠄁-󠄁e󠄁i󠄁g󠄁e󠄁n󠄁d󠄁o󠄁m󠄁s�
    r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁s󠄁.󠄁
 
 D󠄁e ver󠄁i󠄁f󠄁i󠄁c󠄁a󠄁t󠄁i󠄁e󠄁 s󠄁l󠄁a󠄁a󠄁g󠄁t󠄁 w󠄁a󠄁n󠄁n󠄁e󠄁e󠄁r󠄁 h󠄁e󠄁t󠄁 T󠄁X󠄁T󠄁-󠄁r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁 w󠄁o󠄁r󠄁d󠄁t󠄁 g󠄁e󠄁v󠄁o󠄁n󠄁d󠄁e󠄁n󠄁.󠄁 H󠄁e󠄁t󠄁 d󠄁o󠄁m󠄁e󠄁i󠄁n󠄁 w󠄁o󠄁r󠄁d󠄁t󠄁
-d󠄁a󠄁n󠄁 b󠄁e󠄁d󠄁i󠄁e󠄁n󠄁d󠄁 e󠄁n󠄁 j󠄁e󠄁 k󠄁u󠄁n󠄁t󠄁 h󠄁e󠄁t󠄁 k󠄁i󠄁e󠄁z󠄁e󠄁n󠄁 w󠄁a󠄁n󠄁n󠄁e󠄁e󠄁r󠄁 j󠄁e󠄁 e󠄁e󠄁n󠄁 b󠄁e󠄁r󠄁i󠄁c󠄁h󠄁t󠄁 a󠄁a󠄁n󠄁m󠄁a󠄁a󠄁k󠄁t󠄁.󠄁 H󠄁e󠄁t󠄁
+d󠄁a󠄁n󠄁 a󠄁a󠄁n󠄁g󠄁e󠄁b󠄁o󠄁d󠄁e󠄁n󠄁 e󠄁n󠄁 j󠄁e󠄁 k󠄁u󠄁n󠄁t󠄁 h󠄁e󠄁t󠄁 k󠄁i󠄁e󠄁z󠄁e󠄁n󠄁 w󠄁a󠄁n󠄁n󠄁e󠄁e󠄁r󠄁 j󠄁e󠄁 e󠄁e󠄁n󠄁 b󠄁e󠄁r󠄁i󠄁c󠄁h󠄁t󠄁 a󠄁a󠄁n󠄁m󠄁a󠄁a󠄁k󠄁t󠄁.󠄁 H󠄁e󠄁t󠄁
 r󠄁o󠄁u󠄁t󠄁e󠄁r󠄁i󠄁n󠄁g󠄁s󠄁r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁 e󠄁n󠄁 h󠄁e󠄁t󠄁 c󠄁e󠄁r󠄁t󠄁i󠄁f󠄁i󠄁c󠄁a󠄁a󠄁t󠄁 w󠄁o󠄁r󠄁d󠄁e󠄁n󠄁 a󠄁p󠄁a󠄁r󠄁t󠄁 b󠄁i󠄁j󠄁g󠄁e󠄁h󠄁o󠄁u󠄁d󠄁e󠄁n󠄁;󠄁 z󠄁i󠄁e󠄁
 [D󠄁N󠄁S󠄁-󠄁v󠄁a󠄁l󠄁i󠄁d󠄁a󠄁t󠄁i󠄁e󠄁](/en/custom-domains/dns-validation) v󠄁o󠄁o󠄁r󠄁 e󠄁l󠄁k󠄁e󠄁 f󠄁a󠄁s󠄁e󠄁 e󠄁n󠄁 d󠄁e󠄁
 s󠄁t󠄁a󠄁t󠄁u󠄁s󠄁l󠄁a󠄁b󠄁e󠄁l󠄁s󠄁.󠄁
