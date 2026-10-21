@@ -7,12 +7,12 @@ sourceOfTruth: onetimesecret/lib/onetime/models/secret/features/secret_state_man
 ---
 
 Someone sent you a link. You don't need an account, an app or a sign-in to open
-it. What you do need to know is that the content behind it is handed over
-exactly once, and that opening it is what destroys it.
+it. Opening the link shows a confirmation page. Revealing the content retrieves
+it once and deletes the stored secret.
 
 This page walks through what a recipient actually experiences, in order. It is
 worth reading before you send a link too — this is what the person on the other
-end will meet.
+end will meet. The screenshots use a fictional guest Wi-Fi password.
 
 ## What arrives
 
@@ -44,6 +44,20 @@ step: the content stays hidden, and there is a single action — *Click to revea
 →*. Below it the page says the thing that matters: *Careful: we will only show
 it once.*
 
+<figure>
+<div class="dark:sl-hidden">
+
+![Confirmation page with a Click to reveal button and a warning that the content is shown once.](../../../../assets/screenshots/recipient-experience/before-reveal-light.jpg)
+
+</div>
+<div class="light:sl-hidden">
+
+![Confirmation page with a Click to reveal button and a warning that the content is shown once.](../../../../assets/screenshots/recipient-experience/before-reveal-dark.jpg)
+
+</div>
+<figcaption>The content stays hidden until you select Click to reveal.</figcaption>
+</figure>
+
 Because loading the page is a plain read, a link checker or mail-security
 scanner that merely fetches the URL will not destroy the secret. Only the
 explicit confirmation does. (Software that goes further and actually operates
@@ -64,6 +78,20 @@ opened it, and they will find nothing.
 When the sender adds a passphrase, the confirmation step asks for it, under the
 heading *This message requires a passphrase*. The page will tell you that much
 without revealing anything else about the secret.
+
+<figure>
+<div class="dark:sl-hidden">
+
+![Passphrase prompt with an empty entry field above the Click to reveal button.](../../../../assets/screenshots/recipient-experience/passphrase-light.jpg)
+
+</div>
+<div class="light:sl-hidden">
+
+![Passphrase prompt with an empty entry field above the Click to reveal button.](../../../../assets/screenshots/recipient-experience/passphrase-dark.jpg)
+
+</div>
+<figcaption>If the sender set a passphrase, enter it before revealing the content.</figcaption>
+</figure>
 
 - A wrong passphrase does not consume the secret. You get *Incorrect
   passphrase* and the secret is untouched — still there, still revealable.
@@ -95,6 +123,20 @@ copy-to-clipboard action. Put it where it actually belongs — your password
 manager, your configuration, wherever it is going — **before you leave the
 page**.
 
+<figure>
+<div class="dark:sl-hidden">
+
+![Revealed example guest Wi-Fi password with a Copy to clipboard button.](../../../../assets/screenshots/recipient-experience/revealed-light.jpg)
+
+</div>
+<div class="light:sl-hidden">
+
+![Revealed example guest Wi-Fi password with a Copy to clipboard button.](../../../../assets/screenshots/recipient-experience/revealed-dark.jpg)
+
+</div>
+<figcaption>Copy the content before leaving this page. The password shown here is an example.</figcaption>
+</figure>
+
 ## Reloading and reopening
 
 Refreshing brings back nothing. The page in front of you holds the only copy; on
@@ -116,6 +158,20 @@ If you still need the information, ask the sender to create a new secret. See
 
 On onetimesecret.com a dead link produces one message: *This secret has been
 viewed or expired.*
+
+<figure>
+<div class="dark:sl-hidden">
+
+![Unavailable-secret page stating This secret has been viewed or expired.](../../../../assets/screenshots/recipient-experience/unavailable-light.jpg)
+
+</div>
+<div class="light:sl-hidden">
+
+![Unavailable-secret page stating This secret has been viewed or expired.](../../../../assets/screenshots/recipient-experience/unavailable-dark.jpg)
+
+</div>
+<figcaption>After a secret has been revealed, opening the same link again shows this message.</figcaption>
+</figure>
 
 That single response covers four different situations, and it does not tell you
 which one you are in:
