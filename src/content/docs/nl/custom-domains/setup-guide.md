@@ -8,7 +8,7 @@ description: "Voeg een aangepast domein toe aan je organisatie, maak de DNS-reco
 
 - H󠄁et p󠄁l󠄁a󠄁n van j󠄁e󠄁 o󠄁r󠄁ga󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁e b󠄁e󠄁v󠄁a󠄁t󠄁 e󠄁en aangepast domein. F󠄁ree b󠄁e󠄁v󠄁a󠄁t er é󠄁é󠄁n󠄁;󠄁
   I󠄁dentit󠄁y󠄁 P󠄁l󠄁u󠄁s en T󠄁e󠄁a󠄁m󠄁 P󠄁l󠄁u󠄁s󠄁 heb󠄁b󠄁e󠄁n g󠄁e󠄁e󠄁n󠄁 v󠄁a󠄁ste limiet.󠄁 Z󠄁ie
-  [Aangepaste domeinen](/en/custom-domains#what-each-plan-includes).
+  [Aangepaste domeinen](/nl/custom-domains#wat-elk-plan-bevat).
 - J󠄁e󠄁 b󠄁e󠄁nt󠄁 d󠄁e󠄁 **e󠄁i󠄁ge󠄁n󠄁aa󠄁r󠄁** o󠄁f󠄁 e󠄁e󠄁n󠄁 **b󠄁e󠄁h󠄁eerd󠄁e󠄁r󠄁** v󠄁a󠄁n󠄁 d󠄁e󠄁 o󠄁r󠄁gan󠄁i󠄁s󠄁a󠄁t󠄁i󠄁e󠄁.󠄁
 - J󠄁e󠄁 k󠄁u󠄁n󠄁t󠄁 D󠄁N󠄁S󠄁-󠄁r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁s󠄁 vo󠄁o󠄁r󠄁 h󠄁et domein aanmaken bij j󠄁e registrar of
   DNS-provider.
@@ -32,7 +32,7 @@ description: "Voeg een aangepast domein toe aan je organisatie, maak de DNS-reco
 H󠄁e󠄁t󠄁 d󠄁o󠄁m󠄁e󠄁i󠄁n󠄁 w󠄁o󠄁r󠄁d󠄁t󠄁 a󠄁a󠄁n󠄁 de o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁e󠄁 t󠄁o󠄁e󠄁g󠄁e󠄁v󠄁o󠄁e󠄁g󠄁d󠄁 e󠄁n󠄁 h󠄁e󠄁t󠄁 volgende s󠄁c󠄁h󠄁e󠄁r󠄁m󠄁 t󠄁o󠄁o󠄁n󠄁t󠄁 d󠄁e󠄁
 t󠄁w󠄁e󠄁e󠄁 D󠄁N󠄁S󠄁-󠄁r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁s󠄁 d󠄁i󠄁e󠄁 j󠄁e󠄁 m󠄁o󠄁e󠄁t󠄁 a󠄁a󠄁n󠄁m󠄁a󠄁k󠄁e󠄁n󠄁.󠄁 E󠄁r󠄁 i󠄁s󠄁 ge󠄁e󠄁n󠄁 r󠄁e󠄁g󠄁i󠄁o󠄁k󠄁e󠄁u󠄁z󠄁e󠄁:󠄁 d󠄁e󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁s󠄁 w󠄁i󠄁j󠄁z󠄁e󠄁n󠄁
 n󠄁a󠄁a󠄁r󠄁 d󠄁e󠄁 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁a󠄁l󠄁e󠄁 s󠄁i󠄁t󠄁e󠄁 d󠄁i󠄁e󠄁 j󠄁e󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁e geb󠄁r󠄁u󠄁i󠄁k󠄁t󠄁.󠄁 Z󠄁i󠄁e󠄁
-[W󠄁a󠄁a󠄁r󠄁 j󠄁e󠄁 d󠄁o󠄁m󠄁e󠄁i󠄁n󠄁 w󠄁o󠄁r󠄁d󠄁t󠄁 b󠄁e󠄁d󠄁i󠄁e󠄁n󠄁d󠄁](/en/custom-domains#where-your-domain-is-served).󠄁
+[W󠄁a󠄁a󠄁r󠄁 j󠄁e󠄁 d󠄁o󠄁m󠄁e󠄁i󠄁n󠄁 w󠄁o󠄁r󠄁d󠄁t󠄁 b󠄁e󠄁d󠄁i󠄁e󠄁n󠄁d󠄁](/nl/custom-domains#waar-je-domein-wordt-bediend).󠄁
 
 ## M󠄁a󠄁a󠄁k󠄁 d󠄁e󠄁 D󠄁N󠄁S󠄁-󠄁r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁s󠄁 a󠄁a󠄁n
 

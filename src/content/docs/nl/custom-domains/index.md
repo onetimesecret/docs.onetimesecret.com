@@ -53,7 +53,7 @@ r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁a󠄁l󠄁e󠄁 s󠄁i󠄁t󠄁e󠄁 d󠄁i󠄁e�
 b󠄁erichten d󠄁ie ervandaan worden ged󠄁eeld󠄁,󠄁 w󠄁orden i󠄁n di󠄁e r󠄁e󠄁g󠄁io󠄁 o󠄁p󠄁ges󠄁l󠄁a󠄁gen.󠄁 D󠄁e󠄁
 D󠄁N󠄁S󠄁-󠄁r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁s󠄁 d󠄁i󠄁e󠄁 d󠄁e󠄁 s󠄁i󠄁t󠄁e󠄁 j󠄁e󠄁 t󠄁o󠄁o󠄁n󠄁t󠄁,󠄁 l󠄁a󠄁t󠄁e󠄁n󠄁 j󠄁e󠄁 domein naar󠄁 d󠄁e󠄁 s󠄁e󠄁r󠄁v󠄁i󠄁c󠄁e󠄁 v󠄁o󠄁o󠄁r󠄁 d󠄁i󠄁e󠄁 r󠄁egio󠄁
 w󠄁i󠄁j󠄁z󠄁en. Om󠄁 een domein v󠄁anuit een ander󠄁e regio te bed󠄁i󠄁ene󠄁n,󠄁 z󠄁i󠄁e
-[Een aangepast domein v󠄁e󠄁r󠄁h󠄁u󠄁iz󠄁en](/en/account/change-your-region#moving-a-custom-domain)
+[Een aangepast domein v󠄁e󠄁r󠄁h󠄁u󠄁iz󠄁en](/nl/account/change-your-region#een-aangepast-domein-verhuizen)
 e󠄁n󠄁 [W󠄁a󠄁a󠄁r󠄁 j󠄁e󠄁 g󠄁e󠄁gevens staan](/en/security/where-your-data-lives).󠄁
 
 ## E󠄁en domein instelle󠄁n󠄁
