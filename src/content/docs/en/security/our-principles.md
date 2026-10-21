@@ -3,6 +3,7 @@ title: Our Principles
 description: The core values that drive our approach to privacy and security — what we deliberately avoid, how little we email you, and how little we store.
 audience: end-user
 pageType: concept
+sourceOfTruth: onetimesecret/lib/onetime/models/customer.rb:218-236 (email, language, plan and reveal-notification fields; no name fields); onetimesecret/apps/web/auth/migrations/001_initial.rb (sign-in method tables); onetimesecret/lib/onetime/models/session_metadata.rb:79-106 (active-session fields); onetimesecret/apps/web/auth/config/features/audit_logging.rb:78-260 (sign-in history events, each with IP address and user agent); otto 2.11.0 lib/otto/privacy/config.rb:135 and lib/otto/privacy/redacted_fingerprint.rb:160-168 (last IPv4 octet masked by default; user-agent version numbers removed); onetimesecret/src/shared/stores/languageStore.ts:147-189 (language kept in sessionStorage and, signed in, on the account); deleting the sign-in history at closure is tracked in onetimesecret/onetimesecret#4819
 ---
 
 Onetime Secret exists so you can share sensitive information without leaving it lying around. These principles shape every product and operational decision we make — and because they're written down, you can hold us to them.
@@ -90,16 +91,23 @@ The time other companies spend drafting campaigns, we spend on the service itsel
 
 ## Data minimization
 
-We collect only the data required to deliver the service: temporary secrets, and the minimum account information needed for paid subscriptions. Everything else, we never ask for.
+We collect only the data required to deliver the service: temporary secrets, and the account information needed to sign you in, protect your account, and run paid subscriptions. Everything else, we never ask for.
 
 ### What we store
 
 - **For every secret** — the encrypted secret itself, kept only until it's viewed or expires. After that, it's permanently deleted. The one exception: minimal encrypted backups we keep in case of emergency, covered in more detail in our [Privacy Policy](https://onetimesecret.com/info/privacy).
-- **For account holders** — an email address, which is all it takes to manage your account and subscription. We don't collect names or profile details; the service doesn't need them, so we don't ask.
+- **For account holders** — the items below. We don't collect names or profile details; the service doesn't need them, so we don't ask.
+  - **Email address.** Your sign-in name, and where account email is sent.
+  - **Sign-in methods.** A hash of your password (never the password itself), your two-factor secret and recovery codes, your passkeys, and the identity providers you connect.
+  - **Settings.** Your language, your reveal-notification choice, and your plan.
+  - **Active sessions.** For each signed-in device: a partially masked network address, its country when known, the browser, and when the session started and was last active. You can review and end them under Settings → Security; see [Sessions and connected identities](/en/account/sessions-and-identities).
+  - **Sign-in history.** A record of sign-ins, failed sign-in attempts, sign-outs, password changes and resets, and two-factor and recovery-code changes. Each entry records a partially masked network address and the browser, with version numbers removed.
+
+  Closing your account deletes all of these; see [Closing your account](/en/account/close-your-account).
 
 ### What we don't track
 
-We don't use cookies for tracking, analytics, or advertising. The only cookie we set keeps you signed in if you create an account. Interface preferences like color mode and language live in your browser's own storage (`localStorage` and `sessionStorage`), not in cookies.
+We don't use cookies for tracking, analytics, or advertising. The only cookie we set keeps you signed in if you create an account. Interface preferences like color mode live in your browser's own storage (`localStorage` and `sessionStorage`), not in cookies. Your language choice is kept there too, and when you are signed in it is also saved to your account.
 
 ### Why minimization matters
 
