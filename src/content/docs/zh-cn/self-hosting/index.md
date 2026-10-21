@@ -69,10 +69,10 @@ docker run -p 3000:3000 -d --network onetime \
 
 ## 后续步骤
 
-1. **[入门指南](./getting-started)** - 分步设置指南
+1. **[入门指南](/zh-cn/install/docker)** - 分步设置指南
 2. **[安装和部署](./installation)** - 详细的部署选项
 3. **[配置参考](./configuration)** - 完整的设置文档
 
 ---
 
-_准备好开始了吗？请遵循我们的[入门指南](./getting-started)。_
+_准备好开始了吗？请遵循我们的[入门指南](/zh-cn/install/docker)。_

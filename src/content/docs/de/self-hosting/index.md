@@ -69,10 +69,10 @@ Deine selbst gehostete Instanz umfasst:
 
 ## Nächste Schritte
 
-1. **[Erste Schritte](./getting-started)** - Schritt-für-Schritt-Einrichtungsanleitung
+1. **[Erste Schritte](/de/install/docker)** - Schritt-für-Schritt-Einrichtungsanleitung
 2. **[Installation & Bereitstellung](./installation)** - Detaillierte Bereitstellungsoptionen
 3. **[Konfigurationsreferenz](./configuration)** - Vollständige Dokumentation der Einstellungen
 
 ---
 
-_Bereit loszulegen? Folge unserer [Erste-Schritte](./getting-started)-Anleitung._
+_Bereit loszulegen? Folge unserer [Erste-Schritte](/de/install/docker)-Anleitung._

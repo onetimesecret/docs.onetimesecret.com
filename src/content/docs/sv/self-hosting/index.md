@@ -68,10 +68,10 @@ Din självhostade instans inkluderar:
 
 ## Nästa steg
 
-1. **[Komma igång](./getting-started)** - Steg-för-steg-installationsguide
+1. **[Komma igång](/sv/install/docker)** - Steg-för-steg-installationsguide
 2. **[Installation & distribution](./installation)** - Detaljerade distributionsalternativ
 3. **[Konfigurationsreferens](./configuration)** - Komplett inställningsdokumentation
 
 ---
 
-_Redo att börja? Följ vår guide för [Komma igång](./getting-started)._
+_Redo att börja? Följ vår guide för [Komma igång](/sv/install/docker)._

@@ -69,10 +69,10 @@ Votre instance auto-hébergée comprend :
 
 ## Étapes suivantes
 
-1. **[Premiers pas](./getting-started)** - Guide de configuration étape par étape
+1. **[Premiers pas](/fr/install/docker)** - Guide de configuration étape par étape
 2. **[Installation et déploiement](./installation)** - Options de déploiement détaillées
 3. **[Référence de configuration](./configuration)** - Documentation complète des paramètres
 
 ---
 
-_Prêt à commencer ? Suivez notre guide [Premiers pas](./getting-started)._
+_Prêt à commencer ? Suivez notre guide [Premiers pas](/fr/install/docker)._

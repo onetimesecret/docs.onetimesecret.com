@@ -132,7 +132,9 @@ export function requirementsMet(opt: OptionSpec, selections: Selections): boolea
 function enforceDependencies(selections: Selections): string[] {
   const warnings: string[] = [];
   for (const opt of OPTIONS) {
-    if (requirementsMet(opt, selections)) continue;
+    // The presence check narrows opt.requires for the warning below;
+    // requirementsMet() returns a plain boolean.
+    if (!opt.requires || requirementsMet(opt, selections)) continue;
     if (selections[opt.key] !== defaultFor(opt)) {
       const req = Object.entries(opt.requires)
         .map(([k, v]) => `${k}: ${JSON.stringify(v)}`)

@@ -5,7 +5,7 @@ description: Cross-language guidance on maintaining the critical distinction bet
 
 Onetime Secret uses two distinct authentication concepts that must be clearly differentiated in translations.
 
-## The Distinction
+## The distinction
 
 ### Password
 - **Purpose**: Account login credentials
@@ -17,7 +17,7 @@ Onetime Secret uses two distinct authentication concepts that must be clearly di
 - **Context**: Secret creation and viewing
 - **Scope**: Specific to each secret
 
-## Why This Matters
+## Why this matters
 
 Users need to understand the difference between:
 1. The credentials they use to **access their account**
@@ -25,7 +25,7 @@ Users need to understand the difference between:
 
 Mixing these terms creates confusion about which credential is needed when.
 
-## Language Examples
+## Language examples
 
 ### German
 - **Password**: "Passwort" (account login)
@@ -63,21 +63,21 @@ Korean created "접근 문구" (access phrase) to emphasize the access-granting 
 
 French distinguished with "phrase secrète" for secret-specific protection.
 
-## Translation Strategies
+## Translation strategies
 
-### Option 1: Loan Word Approach
+### Option 1: Loan word approach
 Keep "passphrase" as a technical term (like German, Japanese):
 - Clear distinction from password
 - Recognized in technical contexts
 - May feel foreign to some users
 
-### Option 2: Descriptive Compound
+### Option 2: Descriptive compound
 Create a phrase that describes the function (like Spanish, Bulgarian):
 - More natural in the target language
 - Clearly indicates purpose
 - May be longer for UI elements
 
-### Option 3: Functional Description
+### Option 3: Functional description
 Use terms that emphasize the access-granting function (like Korean):
 - Natural language flow
 - Clear purpose
@@ -102,7 +102,7 @@ Use terms that emphasize the access-granting function (like Korean):
    - Don't use variations that could be confused
    - Make the distinction obvious
 
-## Testing Your Translation
+## Testing your translation
 
 Create these test phrases and see if the distinction is clear:
 
