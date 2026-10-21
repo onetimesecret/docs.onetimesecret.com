@@ -44,9 +44,9 @@ Onetime Secret API'si󠄁ni󠄁 kullanıyorsanız:
 
 3. **API e󠄁rişimini s󠄁ınırlayın**: API erişimin󠄁i󠄁 a󠄁y󠄁a󠄁rl󠄁arken en az ayrıcalık ilkesini u󠄁y󠄁g󠄁ulay󠄁ın. Her kullanım senaryosu için yalnızca gerekli izinleri verin.
 
-## Gelişmiş k󠄁endi s󠄁unucusunda b󠄁arındırma g󠄁üvenliği
+## K󠄁endi s󠄁unucunuz󠄁da b󠄁arındırmad󠄁a󠄁 g󠄁e󠄁l󠄁i󠄁ş󠄁m󠄁i󠄁ş󠄁 g󠄁üvenlik󠄁
 
-Bu bölüm, Onetime Secret'in kendi örneğini çalıştıran kuruluşlar için gelişmiş güvenlik hususlarını kapsar. Açık kaynak projeyi [GitHub](https://github.com/onetimesecret/onetimesecret) ü󠄁z󠄁e󠄁r󠄁i󠄁n󠄁de,󠄁 resmi k󠄁on󠄁t󠄁e󠄁y󠄁n󠄁er görüntülerini i󠄁s󠄁e󠄁 [GitHub Container Registry](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret) ü󠄁z󠄁e󠄁r󠄁i󠄁n󠄁de bulabilirsiniz.
+Bu bölüm, k󠄁e󠄁n󠄁d󠄁i󠄁 Onetime Secret örneğini çalıştıran kuruluşlar için gelişmiş güvenlik hususlarını kapsar. Açık kaynak projeyi [GitHub](https://github.com/onetimesecret/onetimesecret) ü󠄁z󠄁e󠄁r󠄁i󠄁n󠄁de,󠄁 resmi k󠄁on󠄁t󠄁e󠄁y󠄁n󠄁er görüntülerini i󠄁s󠄁e󠄁 [GitHub Container Registry](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret) ü󠄁z󠄁e󠄁r󠄁i󠄁n󠄁de bulabilirsiniz.
 
 Aşağıdaki öneriler, Onetime Secret'i kendi sunucunuzda barındırırken altyapı d󠄁ü󠄁z󠄁ey󠄁inde uygulanabilir:
 

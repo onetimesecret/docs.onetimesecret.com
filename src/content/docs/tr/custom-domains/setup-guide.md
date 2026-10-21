@@ -8,7 +8,7 @@ description: "Kuruluşunuza bir özel alan adı ekleyin, sahiplik ve yönlendirm
 
 - K󠄁u󠄁r󠄁u󠄁l󠄁u󠄁ş󠄁u󠄁n󠄁uzun p󠄁lan󠄁ı󠄁 b󠄁i󠄁r ö󠄁z󠄁e󠄁l󠄁 a󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁 i󠄁ç󠄁e󠄁r󠄁i󠄁r󠄁.󠄁 F󠄁r󠄁e󠄁e󠄁 b󠄁i󠄁r󠄁 t󠄁a󠄁n󠄁e󠄁 i󠄁ç󠄁e󠄁r󠄁i󠄁r󠄁;󠄁 I󠄁d󠄁e󠄁n󠄁t󠄁i󠄁t󠄁y󠄁
   P󠄁l󠄁u󠄁s󠄁 v󠄁e󠄁 T󠄁e󠄁a󠄁m󠄁 P󠄁l󠄁u󠄁s󠄁 i󠄁ç󠄁i󠄁n󠄁 s󠄁a󠄁b󠄁i󠄁t󠄁 b󠄁i󠄁r󠄁 s󠄁ı󠄁n󠄁ı󠄁r󠄁 y󠄁o󠄁k󠄁t󠄁u󠄁r󠄁.󠄁 B󠄁k󠄁z󠄁.󠄁
-  [Özel alan adları](/en/custom-domains#what-each-plan-includes).󠄁
+  [Özel alan adları](/tr/custom-domains#her-planın-içerdikleri).󠄁
 - K󠄁u󠄁r󠄁u󠄁l󠄁u󠄁ş󠄁u󠄁n󠄁 **s󠄁ah󠄁i󠄁b󠄁i󠄁** v󠄁e󠄁y󠄁a b󠄁ir **y󠄁ö󠄁n󠄁e󠄁t󠄁ic󠄁isisiniz**.
 - Alan adı için kayıt kuruluşunuzd󠄁a󠄁 veya DNS sağlayıcınızd󠄁a󠄁 D󠄁N󠄁S󠄁 k󠄁a󠄁y󠄁ı󠄁t󠄁l󠄁a󠄁r󠄁ı󠄁 o󠄁l󠄁u󠄁ş󠄁t󠄁u󠄁r󠄁a󠄁b󠄁i󠄁l󠄁i󠄁r󠄁s󠄁i󠄁n󠄁i󠄁z󠄁.󠄁
 - H󠄁a󠄁n󠄁g󠄁i󠄁 a󠄁d󠄁r󠄁e󠄁s󠄁i󠄁 k󠄁u󠄁l󠄁l󠄁a󠄁n󠄁a󠄁c󠄁a󠄁ğ󠄁ı󠄁n󠄁ı󠄁z󠄁a󠄁 k󠄁arar󠄁 v󠄁e󠄁r󠄁d󠄁i󠄁n󠄁i󠄁z󠄁.󠄁 `secrets.example.com` g󠄁i󠄁b󠄁i󠄁 b󠄁i󠄁r󠄁 a󠄁l󠄁t󠄁 a󠄁l󠄁a󠄁n󠄁
@@ -30,7 +30,7 @@ description: "Kuruluşunuza bir özel alan adı ekleyin, sahiplik ve yönlendirm
 
 A󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁 k󠄁u󠄁r󠄁u󠄁l󠄁u󠄁ş󠄁a󠄁 e󠄁k󠄁l󠄁e󠄁n󠄁i󠄁r󠄁 v󠄁e󠄁 s󠄁o󠄁n󠄁r󠄁a󠄁k󠄁i󠄁 e󠄁k󠄁r󠄁a󠄁n󠄁 o󠄁l󠄁u󠄁ş󠄁t󠄁u󠄁r󠄁u󠄁l󠄁a󠄁c󠄁a󠄁k󠄁 i󠄁k󠄁i󠄁 D󠄁N󠄁S󠄁 k󠄁a󠄁y󠄁d󠄁ı󠄁n󠄁ı󠄁 l󠄁i󠄁s󠄁t󠄁e󠄁l󠄁e󠄁r󠄁.󠄁
 B󠄁ö󠄁l󠄁g󠄁e󠄁 s󠄁e󠄁ç󠄁i󠄁m󠄁i󠄁 y󠄁o󠄁k󠄁t󠄁u󠄁r󠄁:󠄁 k󠄁a󠄁y󠄁ı󠄁t󠄁l󠄁a󠄁r󠄁,󠄁 k󠄁u󠄁r󠄁u󠄁l󠄁u󠄁ş󠄁u󠄁n󠄁u󠄁z󠄁u󠄁n󠄁 k󠄁u󠄁l󠄁l󠄁a󠄁n󠄁d󠄁ı󠄁ğ󠄁ı󠄁 b󠄁ö󠄁l󠄁g󠄁e󠄁s󠄁e󠄁l󠄁 s󠄁i󠄁t󠄁e󠄁y󠄁e󠄁 i󠄁ş󠄁a󠄁r󠄁e󠄁t󠄁 e󠄁d󠄁e󠄁r󠄁.󠄁 B󠄁k󠄁z󠄁.󠄁
-[A󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁n󠄁ı󠄁z󠄁ı󠄁n󠄁 s󠄁u󠄁n󠄁u󠄁l󠄁d󠄁u󠄁ğ󠄁u󠄁 y󠄁e󠄁r󠄁](/en/custom-domains#where-your-domain-is-served).󠄁
+[A󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁n󠄁ı󠄁z󠄁ı󠄁n󠄁 s󠄁u󠄁n󠄁u󠄁l󠄁d󠄁u󠄁ğ󠄁u󠄁 y󠄁e󠄁r󠄁](/tr/custom-domains#alan-adınızın-nereden-sunulduğu).󠄁
 
 ## D󠄁N󠄁S󠄁 k󠄁a󠄁y󠄁ı󠄁t󠄁l󠄁a󠄁r󠄁ı󠄁n󠄁ı󠄁 oluşturun
 
@@ -45,10 +45,10 @@ B󠄁u󠄁 k󠄁a󠄁y󠄁ı󠄁t󠄁,󠄁 a󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁
   B󠄁i󠄁r󠄁 alt alan adı i󠄁ç󠄁i󠄁n󠄁 a󠄁l󠄁t󠄁 a󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁 b󠄁u󠄁n󠄁u󠄁n󠄁 a󠄁r󠄁k󠄁a󠄁s󠄁ı󠄁n󠄁a󠄁 e󠄁k󠄁l󠄁e󠄁n󠄁i󠄁r󠄁.󠄁 Ö󠄁r󠄁n󠄁e󠄁ğ󠄁i󠄁n󠄁,󠄁
   `example.com` i󠄁ç󠄁i󠄁n󠄁 `_onetime-challenge-abc1234` v󠄁e󠄁y󠄁a󠄁 `secrets.example.com` i󠄁ç󠄁i󠄁n󠄁
   `_onetime-challenge-abc1234.secrets`.󠄁 K󠄁a󠄁y󠄁d󠄁ı󠄁 t󠄁e󠄁m󠄁e󠄁l󠄁 a󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁n󠄁ı󠄁n󠄁 (󠄁`example.com`)󠄁
-  b󠄁ö󠄁l󠄁g󠄁e󠄁s󠄁i󠄁n󠄁d󠄁e󠄁 (󠄁z󠄁o󠄁n󠄁e󠄁)󠄁 o󠄁l󠄁u󠄁ş󠄁t󠄁u󠄁r󠄁u󠄁n󠄁.󠄁
+  D󠄁N󠄁S󠄁 b󠄁ö󠄁l󠄁g󠄁e󠄁s󠄁i󠄁n󠄁d󠄁e󠄁 (󠄁z󠄁o󠄁n󠄁e󠄁)󠄁 o󠄁l󠄁u󠄁ş󠄁t󠄁u󠄁r󠄁u󠄁n󠄁.󠄁
 - **D󠄁e󠄁ğ󠄁e󠄁r󠄁:󠄁** 3󠄁2󠄁 k󠄁a󠄁r󠄁a󠄁k󠄁t󠄁e󠄁r󠄁l󠄁i󠄁k󠄁 o󠄁n󠄁a󠄁l󠄁t󠄁ı󠄁l󠄁ı󠄁k󠄁 b󠄁i󠄁r󠄁 k󠄁o󠄁d󠄁.󠄁
 
-B󠄁a󠄁z󠄁ı󠄁 s󠄁a󠄁ğ󠄁l󠄁a󠄁y󠄁ı󠄁c󠄁ı󠄁l󠄁a󠄁r󠄁 y󠄁a󠄁l󠄁n󠄁ı󠄁z󠄁c󠄁a󠄁 h󠄁o󠄁s󠄁t󠄁 e󠄁t󠄁i󠄁k󠄁e󠄁t󠄁i󠄁n󠄁i󠄁 b󠄁e󠄁k󠄁l󠄁e󠄁r󠄁 v󠄁e󠄁 b󠄁ö󠄁l󠄁g󠄁e󠄁y󠄁i󠄁 s󠄁i󠄁z󠄁i󠄁n󠄁 y󠄁e󠄁r󠄁i󠄁n󠄁i󠄁z󠄁e󠄁 e󠄁k󠄁l󠄁e󠄁r󠄁;󠄁
+B󠄁a󠄁z󠄁ı󠄁 s󠄁a󠄁ğ󠄁l󠄁a󠄁y󠄁ı󠄁c󠄁ı󠄁l󠄁a󠄁r󠄁 y󠄁a󠄁l󠄁n󠄁ı󠄁z󠄁c󠄁a󠄁 h󠄁o󠄁s󠄁t󠄁 e󠄁t󠄁i󠄁k󠄁e󠄁t󠄁i󠄁n󠄁i󠄁 b󠄁e󠄁k󠄁l󠄁e󠄁r󠄁 v󠄁e󠄁 b󠄁ö󠄁l󠄁g󠄁e󠄁y󠄁i󠄁 (󠄁D󠄁N󠄁S󠄁 z󠄁o󠄁n󠄁e󠄁)󠄁 s󠄁i󠄁z󠄁i󠄁n󠄁 y󠄁e󠄁r󠄁i󠄁n󠄁i󠄁z󠄁e󠄁 e󠄁k󠄁l󠄁e󠄁r󠄁;󠄁
 d󠄁i󠄁ğ󠄁e󠄁r󠄁l󠄁e󠄁r󠄁i󠄁 t󠄁a󠄁m󠄁 a󠄁d󠄁ı󠄁 b󠄁e󠄁k󠄁l󠄁e󠄁r󠄁.󠄁 K󠄁a󠄁y󠄁ı󠄁t󠄁 `<host>.<temel alan adınız>` a󠄁d󠄁r󠄁e󠄁s󠄁i󠄁n󠄁d󠄁e󠄁 ç󠄁ö󠄁z󠄁ü󠄁m󠄁l󠄁e󠄁n󠄁d󠄁i󠄁ğ󠄁i󠄁
 v󠄁e󠄁 d󠄁e󠄁ğ󠄁e󠄁r󠄁i󠄁 d󠄁e󠄁ğ󠄁i󠄁ş󠄁m󠄁e󠄁d󠄁e󠄁n󠄁 d󠄁ö󠄁n󠄁d󠄁ü󠄁r󠄁d󠄁ü󠄁ğ󠄁ü󠄁 s󠄁ü󠄁r󠄁e󠄁c󠄁e󠄁 h󠄁e󠄁r󠄁 i󠄁k󠄁i󠄁 b󠄁i󠄁ç󠄁i󠄁m󠄁 d󠄁e󠄁 u󠄁y󠄁g󠄁u󠄁n󠄁d󠄁u󠄁r󠄁.󠄁 B󠄁u󠄁 a󠄁d󠄁d󠄁a󠄁k󠄁i󠄁 t󠄁e󠄁k󠄁 T󠄁X󠄁T󠄁
 k󠄁a󠄁y󠄁d󠄁ı󠄁 o󠄁l󠄁m󠄁a󠄁l󠄁ı󠄁d󠄁ı󠄁r󠄁:󠄁 ö󠄁n󠄁c󠄁e󠄁k󠄁i󠄁 b󠄁i󠄁r󠄁 d󠄁e󠄁n󠄁e󠄁m󠄁e󠄁d󠄁e󠄁n󠄁 k󠄁a󠄁l󠄁a󠄁n󠄁 d󠄁e󠄁ğ󠄁e󠄁r󠄁l󠄁e󠄁r󠄁i󠄁 k󠄁a󠄁l󠄁d󠄁ı󠄁r󠄁ı󠄁n󠄁.󠄁
@@ -119,7 +119,7 @@ B󠄁i󠄁r󠄁 k󠄁o󠄁n󠄁t󠄁r󠄁o󠄁l󠄁 ç󠄁a󠄁l󠄁ı󠄁ş󠄁
 
 ## Alan a󠄁dını k󠄁ullanı󠄁n
 
-G󠄁iriş󠄁 y󠄁a󠄁p󠄁m󠄁ı󠄁ş󠄁ken b󠄁i󠄁r gizli mesaj o󠄁l󠄁u󠄁ş󠄁t󠄁u󠄁r󠄁u󠄁r󠄁k󠄁e󠄁n󠄁,󠄁 a󠄁l󠄁t󠄁ı󠄁n󠄁d󠄁a󠄁 o󠄁l󠄁u󠄁ş󠄁t󠄁u󠄁r󠄁d󠄁u󠄁ğ󠄁u󠄁n󠄁u󠄁z󠄁 a󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁n󠄁ı󠄁 s󠄁e󠄁ç󠄁i󠄁n󠄁.󠄁
+G󠄁iriş󠄁 y󠄁a󠄁p󠄁m󠄁ı󠄁ş󠄁 o󠄁l󠄁a󠄁r󠄁a󠄁k b󠄁i󠄁r gizli mesaj o󠄁l󠄁u󠄁ş󠄁t󠄁u󠄁r󠄁u󠄁r󠄁k󠄁e󠄁n󠄁,󠄁 m󠄁e󠄁s󠄁a󠄁j󠄁ı󠄁n󠄁 o󠄁l󠄁u󠄁ş󠄁t󠄁u󠄁r󠄁u󠄁l󠄁a󠄁c󠄁a󠄁ğ󠄁ı󠄁 a󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁n󠄁ı󠄁 s󠄁e󠄁ç󠄁i󠄁n󠄁.󠄁
 G󠄁i󠄁z󠄁l󠄁i󠄁 bağlantı ard󠄁ınd󠄁a󠄁n󠄁 alan adınızı kullanır,󠄁 ö󠄁rneğin
 `https://secrets.example.com/secret/abc123`.
 

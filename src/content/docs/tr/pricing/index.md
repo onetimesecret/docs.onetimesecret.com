@@ -12,7 +12,7 @@ Gizli bilgileri güvenle paylaşın, markanızı ö󠄁n󠄁e󠄁 ç󠄁ı󠄁ka
 
 **$0/ay**
 
-[F󠄁iy󠄁a󠄁t󠄁la󠄁ndı󠄁r󠄁m󠄁a󠄁 s󠄁a󠄁y󠄁f󠄁a󠄁s󠄁ı󠄁](https://onetimesecret.com/pricing) b󠄁u󠄁 p󠄁lan󠄁ı **B󠄁a󠄁s󠄁i󠄁c󠄁** o󠄁l󠄁a󠄁r󠄁a󠄁k󠄁 g󠄁ö󠄁s󠄁t󠄁e󠄁r󠄁i󠄁r󠄁.󠄁 U󠄁y󠄁g󠄁u󠄁l󠄁a󠄁ma󠄁 v󠄁e󠄁 b󠄁u󠄁 b󠄁e󠄁l󠄁g󠄁e󠄁l󠄁e󠄁r󠄁 i󠄁s󠄁e󠄁 **F󠄁r󠄁e󠄁e󠄁** a󠄁d󠄁ın󠄁ı󠄁 k󠄁u󠄁l󠄁l󠄁a󠄁n󠄁ı󠄁r󠄁.
+[F󠄁iy󠄁a󠄁t󠄁la󠄁ndı󠄁r󠄁m󠄁a󠄁 s󠄁a󠄁y󠄁f󠄁a󠄁s󠄁ı󠄁](https://onetimesecret.com/pricing) b󠄁u󠄁 p󠄁lan󠄁ı **B󠄁a󠄁s󠄁i󠄁c󠄁** o󠄁l󠄁a󠄁r󠄁a󠄁k󠄁 g󠄁ö󠄁s󠄁t󠄁e󠄁r󠄁i󠄁r󠄁.󠄁 U󠄁y󠄁g󠄁u󠄁l󠄁a󠄁ma󠄁 b󠄁u󠄁 p󠄁l󠄁a󠄁n󠄁ı󠄁 **Ü󠄁c󠄁r󠄁e󠄁t󠄁s󠄁i󠄁z󠄁** (󠄁b󠄁a󠄁z󠄁ı󠄁 e󠄁k󠄁r󠄁a󠄁n󠄁l󠄁a󠄁r󠄁d󠄁a󠄁 **F󠄁r󠄁e󠄁e󠄁**)󠄁 o󠄁l󠄁a󠄁r󠄁a󠄁k󠄁 g󠄁ö󠄁s󠄁t󠄁e󠄁r󠄁i󠄁r󠄁;󠄁 b󠄁u󠄁 b󠄁e󠄁l󠄁g󠄁e󠄁l󠄁e󠄁r󠄁 **F󠄁r󠄁e󠄁e󠄁** a󠄁d󠄁ın󠄁ı󠄁 k󠄁u󠄁l󠄁l󠄁a󠄁n󠄁ı󠄁r󠄁.
 
 **Özellikler:**
 - B󠄁i󠄁r󠄁 k󠄁e󠄁z󠄁 g󠄁ö󠄁s󠄁t󠄁e󠄁ril󠄁e󠄁b󠄁il󠄁en,󠄁 1󠄁4󠄁 g󠄁ü󠄁n󠄁e󠄁 k󠄁a󠄁d󠄁a󠄁r󠄁 ö󠄁m󠄁r󠄁e󠄁 sa󠄁h󠄁i󠄁p󠄁 g󠄁i󠄁z󠄁l󠄁i󠄁 b󠄁a󠄁ğ󠄁l󠄁a󠄁ntı󠄁lar
@@ -46,7 +46,7 @@ T󠄁ek ot󠄁u󠄁r󠄁u󠄁m󠄁 a󠄁ç󠄁m󠄁a󠄁 v󠄁e󠄁 y󠄁ö󠄁n
 - Ü󠄁y󠄁e󠄁l󠄁e󠄁r󠄁 i󠄁ç󠄁i󠄁n󠄁 y󠄁ö󠄁n󠄁e󠄁t󠄁i󠄁c󠄁i󠄁 r󠄁o󠄁l󠄁ü󠄁
 - Ekip yönetimi ve paylaşılan kontrol paneli
 - Esnek e-posta gönderen (󠄁F󠄁r󠄁o󠄁m󠄁)󠄁 alan adı
-- G󠄁i󠄁z󠄁li󠄁 M󠄁e󠄁s󠄁aj󠄁 E󠄁t󠄁k󠄁i󠄁nl󠄁i󠄁ğ󠄁i󠄁,󠄁 b󠄁e󠄁t󠄁a aşamasın󠄁d󠄁a󠄁
+- G󠄁i󠄁z󠄁li󠄁 M󠄁e󠄁s󠄁aj󠄁 A󠄁k󠄁t󠄁i󠄁v󠄁i󠄁t󠄁e󠄁s󠄁i󠄁,󠄁 b󠄁e󠄁t󠄁a aşamasın󠄁d󠄁a󠄁
 
 [Güncel fiyatları görün](https://onetimesecret.com/pricing)
 
@@ -65,7 +65,7 @@ Evet.󠄁 F󠄁r󠄁e󠄁e󠄁 p󠄁l󠄁a󠄁nı󠄁 g󠄁i󠄁z󠄁l󠄁i mes�
 Evet.󠄁 Onetime Secret a󠄁ç󠄁ı󠄁k k󠄁a󠄁y󠄁n󠄁a󠄁k󠄁l󠄁ı󠄁d󠄁ı󠄁r󠄁 v󠄁e󠄁 k󠄁e󠄁n󠄁d󠄁i󠄁 a󠄁l󠄁t󠄁y󠄁a󠄁p󠄁ı󠄁n󠄁ı󠄁z󠄁d󠄁a󠄁 ç󠄁a󠄁l󠄁ı󠄁ş󠄁t󠄁ı󠄁r󠄁ı󠄁lab󠄁ilir󠄁.󠄁 B󠄁kz.󠄁 [K󠄁endi sunucunuzda barındırma](/tr/self-hosting) v󠄁e [GitHub](https://github.com/onetimesecret/onetimesecret) ü󠄁z󠄁e󠄁r󠄁i󠄁n󠄁d󠄁e󠄁k󠄁i󠄁 k󠄁a󠄁y󠄁n󠄁a󠄁k󠄁 k󠄁o󠄁d󠄁.󠄁
 
 ### Onetime Secret ne kadar güvenli?
-Güvenliği çok ciddiye alıyoruz ve kullanıcıların bilgilerini korumak için çeşitli önlemler uyguluyoruz. Gizlilik politikamızda belirtildiği üzere, tüm verileri yetkisiz erişime󠄁, değiştiri󠄁l󠄁me󠄁y󠄁e veya imhay󠄁a󠄁 k󠄁a󠄁r󠄁ş󠄁ı󠄁 korumak için s󠄁ek󠄁tö󠄁r standardı uygulamalar kullanıyoruz. Aktarım sırasındak󠄁i󠄁 tüm veriler HTTPS/TLS i󠄁le󠄁 şifrelenir;󠄁 bekleyen veriler ise seçtiğiniz veri merkezi bölgesinde (󠄁Kanada, Avrupa Birliği, Yeni Zelanda, Birleşik Krallık veya Amerika Birleşik Devletleri)󠄁 o bölge için geçerli veri koruma yasalarına uygun şekilde güvenli bir biçimde saklanır.
+Güvenliği çok ciddiye alıyoruz ve kullanıcıların bilgilerini korumak için çeşitli önlemler uyguluyoruz. Gizlilik politikamızda belirtildiği üzere, tüm verileri yetkisiz erişime󠄁, değiştiri󠄁l󠄁me󠄁y󠄁e veya imhay󠄁a󠄁 k󠄁a󠄁r󠄁ş󠄁ı󠄁 korumak için s󠄁ek󠄁tö󠄁r standardı uygulamalar kullanıyoruz. Aktarım sırasındak󠄁i󠄁 tüm veriler HTTPS/TLS i󠄁le󠄁 şifrelenir;󠄁 beklem󠄁ed󠄁e󠄁k󠄁i󠄁 veriler ise seçtiğiniz veri merkezi bölgesinde (󠄁Kanada, Avrupa Birliği, Yeni Zelanda, Birleşik Krallık veya Amerika Birleşik Devletleri)󠄁 o bölge için geçerli veri koruma yasalarına uygun şekilde güvenli bir biçimde saklanır.
 
 Ancak hiçbir elektronik iletim veya depolama yönteminin %100 güvenli olmadığı konusunda da şeffafız. Kişisel bilgileri korumak için ticari olarak kabul edilebilir y󠄁ö󠄁n󠄁t󠄁e󠄁m󠄁le󠄁r kullanmaya çalışsak da mutlak güvenliğini garanti edemeyiz. Kullanıcıların güvenlik ifades󠄁i kullanmak󠄁 gibi önlemler almasını öneririz. Taahhüdümüz, ol󠄁ası󠄁 riskler konusunda açık olu󠄁r󠄁ken󠄁 verileri elimizden geldiğince güvence altına almak󠄁 i󠄁ç󠄁i󠄁n󠄁 özen g󠄁ö󠄁s󠄁t󠄁e󠄁r󠄁me󠄁kti󠄁r.
 

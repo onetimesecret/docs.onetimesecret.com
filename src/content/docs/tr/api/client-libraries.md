@@ -128,7 +128,7 @@ printf( "%s\n", $secret->{value} );
 
 [GitH󠄁ub sayfası - onetime-java](https://github.com/mpawlowski/onetime-java),󠄁
 [Marcin Pawlowski](https://github.com/mpawlowski) tarafından —󠄁 **s󠄁ü󠄁r󠄁d󠄁ü󠄁r󠄁ü󠄁l󠄁m󠄁ü󠄁y󠄁o󠄁r󠄁** (s󠄁o󠄁n󠄁
-c󠄁o󠄁mm󠄁i󠄁t󠄁 2014-06󠄁)󠄁.󠄁 B󠄁i󠄁r󠄁 ö󠄁r󠄁n󠄁e󠄁k󠄁 U󠄁R󠄁L󠄁'󠄁s󠄁i󠄁 a󠄁l󠄁d󠄁ı󠄁ğ󠄁ı󠄁n󠄁d󠄁a󠄁n󠄁 k󠄁e󠄁n󠄁d󠄁i󠄁 b󠄁a󠄁r󠄁ı󠄁n󠄁d󠄁ı󠄁r󠄁d󠄁ı󠄁ğ󠄁ı󠄁n󠄁ı󠄁z󠄁 k󠄁u󠄁r󠄁u󠄁l󠄁u󠄁m󠄁d󠄁a󠄁 ç󠄁a󠄁l󠄁ı󠄁ş󠄁a󠄁b󠄁i󠄁l󠄁i󠄁r󠄁,󠄁
+c󠄁o󠄁mm󠄁i󠄁t󠄁 2014-06󠄁)󠄁.󠄁 B󠄁i󠄁r󠄁 s󠄁u󠄁n󠄁u󠄁c󠄁u󠄁 ö󠄁r󠄁n󠄁e󠄁ğ󠄁i󠄁n󠄁i󠄁n󠄁 (󠄁i󠄁n󠄁s󠄁t󠄁a󠄁n󠄁c󠄁e󠄁)󠄁 U󠄁R󠄁L󠄁'󠄁s󠄁i󠄁n󠄁i󠄁 a󠄁l󠄁d󠄁ı󠄁ğ󠄁ı󠄁n󠄁d󠄁a󠄁n󠄁 k󠄁e󠄁n󠄁d󠄁i󠄁 b󠄁a󠄁r󠄁ı󠄁n󠄁d󠄁ı󠄁r󠄁d󠄁ı󠄁ğ󠄁ı󠄁n󠄁ı󠄁z󠄁 k󠄁u󠄁r󠄁u󠄁l󠄁u󠄁m󠄁d󠄁a󠄁 ç󠄁a󠄁l󠄁ı󠄁ş󠄁a󠄁b󠄁i󠄁l󠄁i󠄁r󠄁,󠄁
 a󠄁n󠄁c󠄁a󠄁k󠄁 A󠄁P󠄁I󠄁 v󠄁2'󠄁d󠄁e󠄁n󠄁 ö󠄁n󠄁c󠄁e󠄁d󠄁i󠄁r󠄁.󠄁
 
 ### Kullanım ö󠄁rneği

@@ -194,3 +194,45 @@ Verified matching: Alan Adları, Yönet, Özellikler, Markayı Yönet, Logo yük
 - No build, `check:*` script or link checker was run (review only). The `/tr/` anchor slugs suggested above are derived from the tr headings and assume Starlight's default slugger; they were not rendered.
 - self-hosting/configuration.md: the 597-line YAML block was compared to the English by script (byte-identical) and not read line by line.
 - UI labels were compared against `$APP` at 145c1e7cfa as the protocol requires. Whether production currently serves those tr strings was not verified.
+
+## Resolution (fix round, 2026-10-21)
+
+| Commit | Subject |
+|---|---|
+| 1926ae88 | docs(i18n/tr): match branding labels to the shipped app |
+| 004d5916 | docs(i18n/tr): match expiry, API key, plan and activity labels to the app |
+| 153dc46f | docs(i18n/tr): correct mistranslations in self-hosting/index |
+| 432a2a55 | docs(i18n/tr): use consistent terms for reveal, zone and instance |
+| 5810dab6 | docs(i18n/tr): link to Turkish pages that exist |
+| d44a0979 | docs(i18n/tr): fix fluency and typography |
+| 484db777 | docs(i18n/tr): align sidebar labels with page titles |
+| 5cee02ca | docs(i18n/tr): gloss the DNS zone on setup-guide line 51 |
+| (this commit) | docs(planning): record Turkish fix-round resolution |
+
+All 37 findings (6 major, 31 minor) are fixed. Every UI label was re-verified against `$APP/locales/content/tr/*.json` at 145c1e7cfa. Also fixed from the terminology table: custom-domains/index:21 «gösterme yönergeleri» → «açığa çıkarma talimatları»; account/change-your-region:95 «özel altyapı» → «size ayrılmış altyapı» (same "dedicated" collision as lines 91 and 93).
+
+Wording that differs from the suggested fix:
+
+- account/change-your-region:70 — «oluşturulurken belirlenen süreyi korur», not «ömrü»: the locale uses «süre» for a secret's lifetime throughout.
+- security/vulnerability-disclosure:24 — kept «fırsat» (EN "opportunity") rather than «süre».
+- custom-domains/setup-guide:51 — «bölgeyi (DNS zone)», not «DNS bölgesini (zone)». The suggested form passed `dogfood check --base HEAD` but failed `--base b2883096` once the line 11 link changed (see Decisions needed).
+- src/content/i18n/tr.json — also added `sidebar.shareASecret` («Gizli mesaj paylaş», glossary "Share a secret"). That key, not `sharingSecrets`, labels the share/index link. `sharingSecrets` (the group heading) is now «Gizli mesaj paylaşma».
+
+Validation run in the worktree: `python3 tools/dogfood.py check --base b2883096` (16 files, 0 failed), `pnpm test` (175 passed), `pnpm run check:frontmatter`, `pnpm run check:nav`, `pnpm build` (exit 0). The built `dist/tr/` pages contain the anchors `her-planın-içerdikleri`, `alan-adınızın-nereden-sunulduğu` and `bir-özel-alan-adını-taşıma`.
+
+### Skipped findings
+
+| Page:line | Finding | Reason |
+|---|---|---|
+| pricing/index:48 | Terminology table: «Esnek e-posta gönderen (From) alan adı» listed under "e-posta gönderen" | Not a finding row. EN is "Flexible email From domain"; here «gönderen» is a participle modifying «alan adı». «göndereni alan adı» would be ungrammatical. |
+| custom-domains/setup-guide:44 | **Host:** vs app «Sunucu» | Marked "Not a finding" in the report. The docs label matches the EN docs; the fix belongs in the app (see below). |
+
+### Decisions needed
+
+- tr docs glossary (`src/content/docs/tr/translations/glossary.md`), proposed additions. Its "view/reveal = görüntüle/göster" row does not say which verb applies when. Proposed: when the recipient reveals, use görüntüle-/aç-; use göster- for passive forms and statuses («Gösterildi»). Also add: reveal instructions = «açığa çıkarma talimatları» (web.branding.delivery_reveal_instructions); Secret Activity = «Gizli Mesaj Aktivitesi» (web.organizations.audit.title); API key/token = «API anahtarı» (web.account.api_key); DNS zone = «DNS bölgesi (zone)»; dedicated instance = «size ayrılmış (dedicated) örnek»; instance genitive = «örneğiniz-»/«sunucu örneği», never bare «örneğin», which reads as "for example"; ship(ped) = «birlikte gelen»; email sender (noun) = «e-posta göndereni».
+- English source, pricing/index.md:18–19: "The app and these docs call it **Free**" is true only in English, because UserMenu.vue:688 and OrganizationSettings.vue:954 render web.billing.plans.free_plan (tr «Ücretsiz»). tr now says the app shows «Ücretsiz» (and «Free» on some screens). The EN sentence needs rewording so other locales can follow.
+- English source, share/index.md:51–52: "the choices read **Expires in …**" cannot be quoted in verb-final locales; tr now quotes «… içinde sona erer». Suggested EN: "the choices read like **Expires in 7 days**".
+- English source, api/index.mdoc:40: "API token" vs the settings label "API Key" (web.account.api_key). tr now says «API anahtarı».
+- App: web.domains.host_0 / host_1 tr «Sunucu» ("server") is a poor rendering of the DNS "Host" column label. «Host» or «Ana bilgisayar adı» would match what DNS providers show.
+- Tooling (TextProv): `correspondence()` in tools/dogfood.py pairs single-character unmatched gaps across distant lines. Here the unmarked `s` of the old setup-guide:11 URL paired with a new `s` at :51. Per-commit `check --base HEAD` passed while the cumulative `check --base b2883096` failed, so cherry-picks should be re-checked against their own base. Separately, `dogfood edit` with a span that contains unmarked legacy clusters can attach marks to the wrong clusters (first attempt on branding.md:39). That uncommitted attempt was discarded by rewriting the file from `git show HEAD:` and redone with label-only spans.
+- `$S/prior/glossary-tr.md` still says the workspace-branding strings are "unshipped for tr". They exist in `$APP` since c7b0cc2c86 (2026-08-09). Correct it before the next tr pass.
