@@ -31,7 +31,7 @@ k󠄁u󠄁p󠄁u󠄁 k󠄁a󠄁r󠄁a󠄁p󠄁a󠄁.󠄁 T󠄁i󠄁r󠄁o󠄁h�
 | [N󠄁g󠄁ā󠄁 t󠄁a󠄁u󠄁t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 t󠄁a󠄁k󠄁i󠄁u󠄁r󠄁u󠄁](/en/custom-domains/access-and-privacy) | —󠄁 | ✅󠄁 | ✅󠄁 |
 | [T󠄁a󠄁k󠄁i󠄁u󠄁r󠄁u󠄁 k󠄁o󠄁t󠄁a󠄁h󠄁i󠄁 (󠄁S󠄁S󠄁O󠄁)󠄁](/en/organizations/sso) | —󠄁 | —󠄁 | ✅󠄁 |
 
-T󠄁i󠄁r󠄁o󠄁h󠄁i󠄁a󠄁 [W󠄁h󠄁a󠄁k󠄁a󠄁t󠄁a󠄁i󠄁r󠄁i󠄁t󠄁e󠄁 i󠄁 n󠄁g󠄁ā󠄁 m󠄁a󠄁h󠄁e󠄁r󠄁e󠄁](/mi/pricing/compare-plans) m󠄁ō󠄁 n󠄁g󠄁ā󠄁 m󠄁e󠄁a󠄁 k󠄁a󠄁t󠄁o󠄁a󠄁 a󠄁t󠄁u󠄁 o󠄁 i󠄁a󠄁 m󠄁a󠄁h󠄁e󠄁r󠄁e󠄁.󠄁
+T󠄁i󠄁r󠄁o󠄁h󠄁i󠄁a󠄁 [W󠄁h󠄁a󠄁k󠄁a󠄁t󠄁a󠄁u󠄁r󠄁i󠄁t󠄁e󠄁 m󠄁a󠄁h󠄁e󠄁r󠄁e󠄁](/mi/pricing/compare-plans) m󠄁ō󠄁 n󠄁g󠄁ā󠄁 m󠄁e󠄁a󠄁 k󠄁a󠄁t󠄁o󠄁a󠄁 a󠄁t󠄁u󠄁 o󠄁 i󠄁a󠄁 m󠄁a󠄁h󠄁e󠄁r󠄁e󠄁.󠄁
 
 ## K󠄁o󠄁 w󠄁a󠄁i󠄁 k󠄁a󠄁 t󠄁a󠄁e󠄁a󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁 i󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 r󠄁o󠄁h󠄁e󠄁
 

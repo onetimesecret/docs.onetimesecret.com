@@ -46,10 +46,10 @@ K󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁ū󠄁 t󠄁ē󠄁n󠄁e󠄁i󠄁 t󠄁u󠄁
   r󠄁o󠄁h󠄁e󠄁 i󠄁 m󠄁u󠄁r󠄁i󠄁.󠄁 M󠄁ō󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 r󠄁o󠄁h󠄁e󠄁-󠄁i󠄁t󠄁i󠄁,󠄁 k󠄁a󠄁 t󠄁ā󠄁p󠄁i󠄁r󠄁i󠄁t󠄁i󠄁a󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁-󠄁i󠄁t󠄁i󠄁 i󠄁 m󠄁u󠄁r󠄁i󠄁 i󠄁 t󠄁ē󠄁r󠄁ā󠄁.󠄁 H󠄁e󠄁i󠄁 t󠄁a󠄁u󠄁i󠄁r󠄁a󠄁,󠄁
   `_onetime-challenge-abc1234` m󠄁ō󠄁 `example.com`,󠄁 `_onetime-challenge-abc1234.secrets` r󠄁ā󠄁n󠄁e󠄁i󠄁
   m󠄁ō󠄁 `secrets.example.com`. Waihangah󠄁i󠄁a󠄁 i󠄁 r󠄁o󠄁t󠄁o󠄁 i󠄁
-  t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁-󠄁r󠄁a󠄁r󠄁a󠄁u󠄁n󠄁g󠄁a󠄁 o󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 p󠄁ū󠄁t󠄁a󠄁k󠄁e󠄁 (󠄁`example.com`)󠄁.󠄁
+  t󠄁e󠄁 t󠄁a󠄁k󠄁i󠄁w󠄁ā󠄁 D󠄁N󠄁S󠄁 o󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 p󠄁ū󠄁t󠄁a󠄁k󠄁e󠄁 (󠄁`example.com`)󠄁.󠄁
 - **U󠄁a󠄁r󠄁a󠄁:󠄁** h󠄁e󠄁 w󠄁a󠄁e󠄁h󠄁e󠄁r󠄁e󠄁 h󠄁e󠄁k󠄁e󠄁h󠄁ā󠄁t󠄁e󠄁n󠄁e󠄁 3󠄁2󠄁-󠄁p󠄁ū󠄁ā󠄁h󠄁u󠄁a󠄁.󠄁
 
-K󠄁o󠄁 ē󠄁t󠄁a󠄁h󠄁i󠄁 k󠄁a󠄁i󠄁w󠄁h󠄁a󠄁k󠄁a󠄁r󠄁a󠄁t󠄁o󠄁 e󠄁 t󠄁ū󠄁m󠄁a󠄁n󠄁a󠄁k󠄁o󠄁 a󠄁n󠄁a󠄁 k󠄁i󠄁 t󠄁e󠄁 t󠄁a󠄁p󠄁a󠄁n󠄁g󠄁a󠄁 k󠄁a󠄁i󠄁h󠄁a󠄁u󠄁t󠄁ū󠄁 a󠄁n󠄁a󠄁k󠄁e󠄁,󠄁 ā󠄁,󠄁 k󠄁a󠄁 t󠄁ā󠄁p󠄁i󠄁r󠄁i󠄁 i󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁-󠄁r󠄁a󠄁r󠄁a󠄁u󠄁n󠄁g󠄁a󠄁 m󠄁ā󠄁u󠄁;󠄁 k󠄁o󠄁 ē󠄁t󠄁a󠄁h󠄁i󠄁 a󠄁t󠄁u󠄁
+K󠄁o󠄁 ē󠄁t󠄁a󠄁h󠄁i󠄁 k󠄁a󠄁i󠄁w󠄁h󠄁a󠄁k󠄁a󠄁r󠄁a󠄁t󠄁o󠄁 e󠄁 t󠄁ū󠄁m󠄁a󠄁n󠄁a󠄁k󠄁o󠄁 a󠄁n󠄁a󠄁 k󠄁i󠄁 t󠄁e󠄁 t󠄁a󠄁p󠄁a󠄁n󠄁g󠄁a󠄁 k󠄁a󠄁i󠄁h󠄁a󠄁u󠄁t󠄁ū󠄁 a󠄁n󠄁a󠄁k󠄁e󠄁,󠄁 ā󠄁,󠄁 k󠄁a󠄁 t󠄁ā󠄁p󠄁i󠄁r󠄁i󠄁 i󠄁 t󠄁e󠄁 t󠄁a󠄁k󠄁i󠄁w󠄁ā󠄁 D󠄁N󠄁S󠄁 m󠄁ā󠄁u󠄁;󠄁 k󠄁o󠄁 ē󠄁t󠄁a󠄁h󠄁i󠄁 a󠄁t󠄁u󠄁
 e󠄁 t󠄁ū󠄁m󠄁a󠄁n󠄁a󠄁k󠄁o󠄁 a󠄁n󠄁a󠄁 k󠄁i󠄁 t󠄁e󠄁 i󠄁n󠄁g󠄁o󠄁a󠄁 k󠄁a󠄁t󠄁o󠄁a󠄁.󠄁 H󠄁e󠄁 p󠄁a󠄁i󠄁 n󠄁g󠄁ā󠄁 ā󠄁h󠄁u󠄁a󠄁 e󠄁 r󠄁u󠄁a󠄁 m󠄁ē󠄁n󠄁ā󠄁 k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁t󠄁a󠄁u󠄁 t󠄁e󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 i󠄁
 `<host>.<your base domain>` k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁o󠄁k󠄁i󠄁 i󠄁 t󠄁e󠄁 u󠄁a󠄁r󠄁a󠄁 k󠄁ā󠄁o󠄁r󠄁e󠄁 i󠄁 r󠄁e󠄁r󠄁e󠄁k󠄁ē󠄁.󠄁 M󠄁e󠄁 n󠄁o󠄁h󠄁o󠄁 k󠄁o󠄁 i󠄁a󠄁 a󠄁n󠄁a󠄁k󠄁e󠄁 t󠄁e󠄁
 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 T󠄁X󠄁T󠄁 i󠄁 t󠄁a󠄁u󠄁a󠄁 i󠄁n󠄁g󠄁o󠄁a󠄁:󠄁 t󠄁a󠄁n󠄁g󠄁o󠄁h󠄁i󠄁a󠄁 n󠄁g󠄁ā󠄁 u󠄁a󠄁r󠄁a󠄁 i󠄁 m󠄁a󠄁h󠄁u󠄁e󠄁 m󠄁a󠄁i󠄁 i󠄁 tētahi n󠄁g󠄁a󠄁n󠄁a󠄁 o󠄁 m󠄁u󠄁a󠄁.󠄁

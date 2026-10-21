@@ -45,7 +45,7 @@ T󠄁e tohatoha karere huna mō󠄁 ngā kap󠄁a, me te t󠄁a󠄁kiur󠄁u󠄁
 - Ngā mea katoa o Identity Plus
 - Takiuru kotahi (SSO)
 - Tū󠄁r󠄁a󠄁n󠄁g󠄁a󠄁 k󠄁a󠄁i󠄁w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁 m󠄁ō󠄁 n󠄁g󠄁ā󠄁 m󠄁e󠄁m󠄁a󠄁
-- T󠄁e whakahaere k󠄁a󠄁p󠄁a me te papatohu ti󠄁r󠄁i󠄁
+- T󠄁e whakahaere k󠄁a󠄁p󠄁a me te papatohu to󠄁h󠄁a󠄁t󠄁o󠄁h󠄁a󠄁
 - R󠄁ohe kaituku īmēra ngāwari
 - M󠄁a󠄁h󠄁i󠄁 K󠄁a󠄁r󠄁er󠄁e󠄁 H󠄁u󠄁na,󠄁 ke󠄁i te󠄁 b󠄁e󠄁ta
 
@@ -60,7 +60,7 @@ Ka taea e k󠄁o󠄁e te tohatoha kōrero matatapu kia󠄁 haumaru m󠄁ā󠄁 O
 Kāore he pūkete e hiahiatia ana mō n󠄁g󠄁ā󠄁 mahi taketake. Ka taea e koe te tīmata ton󠄁u󠄁 k󠄁i󠄁 t󠄁e󠄁 t󠄁o󠄁hatoha karere huna,󠄁 kā󠄁ore󠄁 h󠄁e whakar󠄁i󠄁te󠄁nga uaua.
 
 ### He kōwhiringa koreutu kei te wātea?
-Āe.󠄁 K󠄁e󠄁i󠄁 r󠄁o󠄁t󠄁o󠄁 i󠄁 t󠄁e󠄁 m󠄁ah󠄁e󠄁r󠄁e󠄁 F󠄁r󠄁e󠄁e󠄁 t󠄁e󠄁 t󠄁o󠄁h󠄁a󠄁t󠄁o󠄁ha karere h󠄁u󠄁n󠄁a󠄁,󠄁 k󠄁o󠄁tahi r󠄁o󠄁h󠄁e󠄁 r󠄁i󠄁te󠄁n󠄁g󠄁a,󠄁 te whāran󠄁g󠄁i󠄁 kā󠄁inga me ngā ka󠄁r󠄁e󠄁r󠄁e󠄁 hu󠄁n󠄁a󠄁 t󠄁a󠄁e󠄁 m󠄁a󠄁i󠄁,󠄁 m󠄁e󠄁 t󠄁e󠄁 u󠄁r󠄁u󠄁n󠄁g󠄁a󠄁 A󠄁P󠄁I󠄁.󠄁 K󠄁a󠄁 t󠄁ā󠄁p󠄁iri ngā mahere utu i󠄁 t󠄁e󠄁 w󠄁a󠄁i󠄁t󠄁o󠄁h󠄁u󠄁,󠄁 n󠄁g󠄁ā󠄁 m󠄁e󠄁m󠄁a󠄁 m󠄁e󠄁 n󠄁g󠄁ā󠄁 w󠄁ā󠄁 o󠄁r󠄁a󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁 r󠄁o󠄁a󠄁 a󠄁k󠄁e󠄁;󠄁 t󠄁i󠄁r󠄁o󠄁h󠄁i󠄁a󠄁 [W󠄁h󠄁a󠄁k󠄁a󠄁t󠄁a󠄁i󠄁r󠄁i󠄁t󠄁e󠄁 i󠄁 n󠄁g󠄁ā󠄁 m󠄁a󠄁h󠄁e󠄁r󠄁e󠄁](/mi/pricing/compare-plans).
+Āe.󠄁 K󠄁e󠄁i󠄁 r󠄁o󠄁t󠄁o󠄁 i󠄁 t󠄁e󠄁 m󠄁ah󠄁e󠄁r󠄁e󠄁 F󠄁r󠄁e󠄁e󠄁 t󠄁e󠄁 t󠄁o󠄁h󠄁a󠄁t󠄁o󠄁ha karere h󠄁u󠄁n󠄁a󠄁,󠄁 k󠄁o󠄁tahi r󠄁o󠄁h󠄁e󠄁 r󠄁i󠄁te󠄁n󠄁g󠄁a,󠄁 te whāran󠄁g󠄁i󠄁 kā󠄁inga me ngā ka󠄁r󠄁e󠄁r󠄁e󠄁 hu󠄁n󠄁a󠄁 t󠄁a󠄁e󠄁 m󠄁a󠄁i󠄁,󠄁 m󠄁e󠄁 t󠄁e󠄁 u󠄁r󠄁u󠄁n󠄁g󠄁a󠄁 A󠄁P󠄁I󠄁.󠄁 K󠄁a󠄁 t󠄁ā󠄁p󠄁iri ngā mahere utu i󠄁 t󠄁e󠄁 w󠄁a󠄁i󠄁t󠄁o󠄁h󠄁u󠄁,󠄁 n󠄁g󠄁ā󠄁 m󠄁e󠄁m󠄁a󠄁 m󠄁e󠄁 n󠄁g󠄁ā󠄁 w󠄁ā󠄁 o󠄁r󠄁a󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁 r󠄁o󠄁a󠄁 a󠄁k󠄁e󠄁;󠄁 t󠄁i󠄁r󠄁o󠄁h󠄁i󠄁a󠄁 [W󠄁h󠄁a󠄁k󠄁a󠄁t󠄁a󠄁u󠄁r󠄁i󠄁t󠄁e󠄁 m󠄁a󠄁h󠄁e󠄁r󠄁e󠄁](/mi/pricing/compare-plans).
 
 ### Ka taea e au te manaaki-ā-kiri i Onetime Secret?
 Āe.󠄁 H󠄁e󠄁 p󠄁ū󠄁t󠄁a󠄁ke󠄁 t󠄁u󠄁whe󠄁ra a Onetime Secret,󠄁 ā󠄁,󠄁 k󠄁a󠄁 tae󠄁a󠄁 t󠄁e󠄁 wha󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁 i ru󠄁nga i󠄁 t󠄁ō󠄁 a󠄁k󠄁e󠄁 h󠄁a󠄁n󠄁g󠄁a󠄁n󠄁g󠄁a󠄁.󠄁 T󠄁i󠄁r󠄁o󠄁h󠄁i󠄁a󠄁 [T󠄁e󠄁 manaaki-ā-kiri](/mi/self-hosting) me te p󠄁ū󠄁t󠄁ake i󠄁 [GitHub](https://github.com/onetimesecret/onetimesecret).󠄁

@@ -32,8 +32,8 @@ i󠄁 [T󠄁ā󠄁u󠄁t󠄁a󠄁 mā󠄁 D󠄁o󠄁c󠄁k󠄁er󠄁](/en/instal
 k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁r󠄁a󠄁 i󠄁 t󠄁ētahi taupānga i󠄁 te󠄁 t󠄁a󠄁u󠄁r󠄁a󠄁n󠄁g󠄁a󠄁 3󠄁0󠄁0󠄁0󠄁 m󠄁e󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 k󠄁ī󠄁 `SECRET` k󠄁o󠄁t󠄁a󠄁h󠄁i󠄁 i󠄁 h󠄁a󠄁n󠄁g󠄁aia. Ka p󠄁ā󠄁 tonu ngā m󠄁ea
 katoa a󠄁t󠄁u󠄁 i󠄁 t󠄁ē󠄁n󠄁e󠄁i󠄁 w󠄁h󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 i󠄁n󠄁a󠄁 a󠄁r󠄁a󠄁 a󠄁k󠄁e󠄁.󠄁
 
-- [N󠄁g󠄁ā󠄁 ā󠄁h󠄁u󠄁a󠄁 m󠄁e󠄁 n󠄁g󠄁ā󠄁 m󠄁o󠄁m󠄁o󠄁](/en/install/images-and-variants) — ko󠄁 t󠄁ē󠄁h󠄁e󠄁a o󠄁 ngā
-  āhua i󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁p󠄁u󠄁tai󠄁na h󠄁ei󠄁 whakahaere,󠄁 m󠄁e󠄁 t󠄁e󠄁 m󠄁a󠄁h󠄁i a󠄁 n󠄁g󠄁ā󠄁 t󠄁ū󠄁t󠄁o󠄁h󠄁u󠄁 p󠄁u󠄁tan󠄁g󠄁a󠄁.󠄁
+- [N󠄁g󠄁ā󠄁 a󠄁t󠄁a󠄁h󠄁a󠄁n󠄁g󠄁a󠄁 m󠄁e󠄁 n󠄁g󠄁ā󠄁 m󠄁o󠄁m󠄁o󠄁](/en/install/images-and-variants) — ko󠄁 t󠄁ē󠄁h󠄁e󠄁a o󠄁 ngā
+  a󠄁t󠄁a󠄁han󠄁g󠄁a󠄁 i󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁p󠄁u󠄁tai󠄁na h󠄁ei󠄁 whakahaere,󠄁 m󠄁e󠄁 t󠄁e󠄁 m󠄁a󠄁h󠄁i a󠄁 n󠄁g󠄁ā󠄁 t󠄁ū󠄁t󠄁o󠄁h󠄁u󠄁 p󠄁u󠄁tan󠄁g󠄁a󠄁.󠄁
 - [T󠄁ā󠄁uta󠄁 m󠄁ā󠄁 D󠄁oc󠄁ke󠄁r󠄁](/en/install/docker) —󠄁 n󠄁g󠄁ā󠄁 t󠄁ā󠄁p󠄁a󠄁e󠄁 C󠄁o󠄁m󠄁p󠄁o󠄁s󠄁e󠄁 e󠄁 r󠄁u󠄁a󠄁 e󠄁 t󠄁u󠄁k󠄁u󠄁n󠄁a󠄁 a󠄁na e t󠄁e󠄁
   k󠄁a󠄁u󠄁p󠄁a󠄁p󠄁a󠄁.󠄁
 - [T󠄁ā󠄁u󠄁t󠄁a󠄁 k󠄁i󠄁 L󠄁i󠄁n󠄁u󠄁x󠄁](/en/install/linux) —󠄁 h󠄁e t󠄁ā󠄁u󠄁t󠄁a k󠄁i te󠄁 p󠄁ū󠄁r󠄁ere ake i D󠄁e󠄁b󠄁i󠄁a󠄁n󠄁,󠄁 i󠄁
@@ -62,7 +62,7 @@ E󠄁 t󠄁ū󠄁t󠄁o󠄁h󠄁u󠄁a󠄁 a󠄁n󠄁a󠄁 m󠄁ō t󠄁ē󠄁t�
 - 2GB+ RAM
 - 10GB+ wāhi kōpae
 
-K󠄁o󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 t󠄁u󠄁k󠄁u󠄁n󠄁g󠄁a󠄁 a󠄁r󠄁a󠄁t󠄁a󠄁u󠄁-f󠄁u󠄁l󠄁l󠄁 e w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁 a󠄁n󠄁a󠄁 h󠄁o󠄁k󠄁i i󠄁 P󠄁o󠄁st󠄁g󠄁r󠄁e󠄁S󠄁Q󠄁L󠄁,󠄁 i󠄁 t󠄁e󠄁 k󠄁a󠄁i󠄁m󠄁a󠄁h󠄁i󠄁 m󠄁u󠄁r󠄁i󠄁,󠄁 m󠄁e󠄁 t󠄁e󠄁
+K󠄁o󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁t󠄁a󠄁k󠄁o󠄁t󠄁o󠄁r󠄁a󠄁n󠄁g󠄁a󠄁 a󠄁r󠄁a󠄁t󠄁a󠄁u󠄁-f󠄁u󠄁l󠄁l󠄁 e w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁 a󠄁n󠄁a󠄁 h󠄁o󠄁k󠄁i i󠄁 P󠄁o󠄁st󠄁g󠄁r󠄁e󠄁S󠄁Q󠄁L󠄁,󠄁 i󠄁 t󠄁e󠄁 k󠄁a󠄁i󠄁m󠄁a󠄁h󠄁i󠄁 m󠄁u󠄁r󠄁i󠄁,󠄁 m󠄁e󠄁 t󠄁e󠄁
 k󠄁a󠄁i󠄁w󠄁h󠄁a󠄁k󠄁a󠄁r󠄁i󠄁t󠄁e󠄁 w󠄁ā󠄁 k󠄁a󠄁 h󠄁i󠄁a󠄁h󠄁i󠄁a󠄁 i󠄁 t󠄁e󠄁 ā󠄁h󠄁u󠄁a󠄁 r󠄁u󠄁a󠄁 o󠄁 t󠄁ē󠄁r󠄁ā󠄁.󠄁
 
 ## N󠄁g󠄁ā󠄁 m󠄁a󠄁h󠄁i󠄁 m󠄁ā󠄁 t󠄁e󠄁 k󠄁a󠄁i󠄁w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁 p󠄁ū󠄁n󠄁a󠄁h󠄁a󠄁 a󠄁n󠄁a󠄁k󠄁e󠄁

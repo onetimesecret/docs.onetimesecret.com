@@ -8,11 +8,11 @@ description: "Whakatauritea ā mātou mahere mō te tohatoha karere huna haumaru
 
 | Āhuatanga / Mahere | Kāore i takiuru | Free | Identity Plus | Team Plus |
 |---|---|---|---|---|
-| Ngā rohe ritenga | ❌ | 1 | Mutunga kore | Mutunga kore |
+| Ngā rohe ritenga | ❌ | 1 | K󠄁o󠄁r󠄁e󠄁-󠄁m󠄁utunga | K󠄁ore-󠄁m󠄁utunga |
 | Ngā karere huna whārangi kāinga | ❌ | ✅ | ✅ | ✅ |
 | Ngā karere huna tae mai | ❌ | ✅ | ✅ | ✅ |
 | Te urunga API | Whāiti \* | ✅ | ✅ | ✅ |
-| Te waitohu ritenga (tohu, tae) | ❌ | ❌ | ✅ | ✅ |
+| Te waitohu ritenga (m󠄁ok󠄁o󠄁, tae) | ❌ | ❌ | ✅ | ✅ |
 | Te kaituku īmēra ritenga | ❌ | ❌ | ✅ | ✅ †󠄁 |
 | Te whirihora takiuru mō ia rohe | ❌ | ❌ | ✅ | ✅ |
 | Ngā pōhiri mema | ❌ | ❌ | ✅ | ✅ |
