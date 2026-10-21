@@ -75,6 +75,11 @@ integration produces AI marks only, using U+E0101 after a whole grapheme cluster
 The JS library also decodes its limited legacy replacement-PUA form. Other
 Unicode variation selectors are left alone.
 
+A decoded heading ID that matches an existing ID on the same page gets a numeric
+suffix, and the build prints a warning naming the page. Links on that page are
+remapped, but links from other pages to the unsuffixed fragment reach the
+existing heading, so check them when the warning appears.
+
 ## Maintenance
 
 The decoder and Python producer are pinned under vendor/textprov with their

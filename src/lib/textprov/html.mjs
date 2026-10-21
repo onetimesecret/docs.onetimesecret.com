@@ -42,7 +42,9 @@ export const clean = (text) => candidate.test(text) ? aiRuns(text).map(run => ru
  *   the page in errors, since one bad cluster otherwise fails a whole build anonymously.
  * @returns {string}
  */
-export function renderProvenance(html, { requireEnrollment = false, label } = {}) {
+// Enrollment is required unless a caller opts out, so a new caller cannot
+// decode the whole site by omission.
+export function renderProvenance(html, { requireEnrollment = true, label } = {}) {
   const fail = (message) => { throw new Error(`TextProv: ${message}${label ? ` (${label})` : ''}`); };
   if (!candidate.test(html) && !html.includes('&#')) return html;
   const tree = parse(html, { sourceCodeLocationInfo: true });
@@ -69,6 +71,9 @@ export function renderProvenance(html, { requireEnrollment = false, label } = {}
     if (base === id) continue;
     let value = base, suffix = 1;
     while (usedIds.has(value)) value = `${base}-${suffix++}`;
+    // TOC links on this page are remapped, but links from other pages to
+    // #base now reach the existing heading instead.
+    if (value !== base) console.warn(`TextProv: decoded id "${base}" is taken; using "${value}"${label ? ` (${label})` : ''}`);
     usedIds.add(value);
     idMap.set(id, value);
   }
