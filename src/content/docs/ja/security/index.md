@@ -23,8 +23,8 @@ Onetime Secret は、機密情報を受信トレイ、チャットログ、チ�
 
 ## 関連情報
 
-- **[私たちの理念](/en/security/our-principles)** — プライバシー・ファースト、コミュニケーション、データの最小化。
-- **[データの󠄁保󠄁管󠄁場󠄁所󠄁](/en/security/where-your-data-lives/)** — データが処理・保存される場所を選択できます。
+- **[私たちの原󠄁則󠄁](/en/security/our-principles)** — プライバシー・ファースト、コミュニケーション、データの最小化。
+- **[データの󠄁保󠄁存󠄁場󠄁所󠄁](/en/security/where-your-data-lives/)** — データが処理・保存される場所を選択できます。
 - **[セルフホスティング](https://github.com/onetimesecret/onetimesecret)** — 完全な管理下に置くために、ご自身のインフラス󠄁ト󠄁ラ󠄁ク󠄁チ󠄁ャ󠄁で Onetime Secret を運用できます。
 
 ## セキュリティ上の問題の報告
