@@ -261,10 +261,8 @@ def changed_files(root, base, head=None, staged=False):
 
 
 def has_ai_marks(text):
-    """True for either AI encoding: the selector or a legacy PUA code point."""
-    return chr(MAPPING.selectors["ai"]) in text or any(
-        MAPPING.pua2base.get(ord(char), (None, None))[1] == "ai" for char in text
-    )
+    """True for a cluster in either AI encoding: the selector or legacy PUA."""
+    return any(item.state == "ai" for item in clusters(text))
 
 
 def check_repository(root, base, head=None, staged=False, require_marks=True):
@@ -283,17 +281,23 @@ def check_repository(root, base, head=None, staged=False, require_marks=True):
             after = read_text(root / path)
         files.append((path, before, after))
     # Parse every changed Markdown file in one Node call; check_text reads the cache.
-    markdown_info([
-        source for path, _, after in files if Path(path).suffix.lower() in (".md", ".mdoc")
-        for source in (after, textprov.strip_marks(after))
-    ])
+    try:
+        markdown_info([
+            source for path, _, after in files if Path(path).suffix.lower() in (".md", ".mdoc")
+            for source in (after, textprov.strip_marks(after))
+        ])
+    except ValueError:
+        pass  # Parse file by file below, so the error names the failing file.
     for path, before, after in files:
         checked += 1
-        problems = check_text(Path(path), before, after, require_marks=require_marks)
-        if path.startswith('src/content/docs/') and has_ai_marks(after):
-            metadata = markdown_info([after])[0]
-            if metadata['textprov'] is not True:
-                problems.append((1, 1, 'AI-marked docs must opt in with textprov: true in frontmatter'))
+        try:
+            problems = check_text(Path(path), before, after, require_marks=require_marks)
+            if path.startswith('src/content/docs/') and has_ai_marks(after):
+                metadata = markdown_info([after])[0]
+                if metadata['textprov'] is not True:
+                    problems.append((1, 1, 'AI-marked docs must opt in with textprov: true in frontmatter'))
+        except ValueError as error:
+            raise ValueError(f"{path}: {error}") from error
         if problems:
             failed += 1
             for line, column, message in problems[:8]:

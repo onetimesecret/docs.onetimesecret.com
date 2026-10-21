@@ -30,6 +30,14 @@ export function aiRuns(text) {
   }));
 }
 
+// Context around the first marker, with marks and other invisible code points
+// spelled out, so an author can find the offending cluster in the source.
+const excerpt = (text) => {
+  const at = Math.max(0, text.search(candidate));
+  return Array.from(text.slice(Math.max(0, at - 24), at + 24), char =>
+    /[\p{M}\p{C}]/u.test(char) ? `<U+${char.codePointAt(0).toString(16).toUpperCase()}>` : char).join('');
+};
+
 /** @type {(text: string) => string} */
 export const clean = (text) => candidate.test(text) ? aiRuns(text).map(run => run.text).join('') : text;
 
@@ -45,6 +53,7 @@ export const clean = (text) => candidate.test(text) ? aiRuns(text).map(run => ru
 // Enrollment is required unless a caller opts out, so a new caller cannot
 // decode the whole site by omission.
 export function renderProvenance(html, { requireEnrollment = true, label } = {}) {
+  /** @type {(message: string) => never} */
   const fail = (message) => { throw new Error(`TextProv: ${message}${label ? ` (${label})` : ''}`); };
   if (!candidate.test(html) && !html.includes('&#')) return html;
   const tree = parse(html, { sourceCodeLocationInfo: true });
@@ -86,7 +95,7 @@ export function renderProvenance(html, { requireEnrollment = true, label } = {})
       const runs = aiRuns(node.value);
       // Any marker left after decoding is malformed, e.g. a legacy PUA code point
       // followed by a selector, which decodes to the PUA code point and renders as tofu.
-      if (runs.some(run => candidate.test(run.text))) fail('malformed AI marker in managed text');
+      if (runs.some(run => candidate.test(run.text))) fail(`malformed AI marker in managed text: "${excerpt(node.value)}"`);
       if (runs.some(run => run.state === 'ai')) {
         const location = node.sourceCodeLocation;
         if (!location) fail('marked text has no source location');
@@ -108,11 +117,12 @@ export function renderProvenance(html, { requireEnrollment = true, label } = {})
       if (attr.name === 'href' && !value.startsWith('#')) continue;
       let plain;
       if (attr.name === 'href') {
-        // Look the fragment up decoded, but write it back encoded.
+        // Look the fragment up decoded, but write it back encoded. The component
+        // pair round-trips reserved characters (%23 stays #), unlike decodeURI.
         let fragment = value.slice(1), decoded = false;
-        try { fragment = decodeURI(fragment); decoded = true; } catch { /* Keep malformed legacy URLs. */ }
+        try { fragment = decodeURIComponent(fragment); decoded = true; } catch { /* Keep malformed legacy URLs. */ }
         const target = idMap.get(fragment) ?? clean(fragment);
-        plain = target === fragment ? value : '#' + (decoded ? encodeURI(target) : target);
+        plain = target === fragment ? value : '#' + (decoded ? encodeURIComponent(target) : target);
       } else {
         plain = attr.name === 'id'
           ? (idMap.get(value) ?? clean(value))

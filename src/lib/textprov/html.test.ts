@@ -90,18 +90,21 @@ describe('static TextProv HTML', () => {
     }
   });
 
-  it('names the page in build errors when given a label', () => {
-    expect(() => render('<p>\u{E0101}</p>', { label: '/en/start/' }))
-      .toThrow('TextProv: malformed AI marker in managed text (/en/start/)');
+  it('names the page and spells out the offending code points in build errors', () => {
+    expect(() => render('<p>Text x\u{100061}\u{E0101}y</p>', { label: '/en/start/' }))
+      .toThrow('TextProv: malformed AI marker in managed text: "Text x<U+100061><U+E0101>y" (/en/start/)');
   });
 
   it('writes remapped fragment links back percent-encoded', () => {
     const marked = `a b${'\u{E0101}'}`;
-    const result = render(`<h2 id="${marked}">Title</h2><a href="#${encodeURI(marked)}">Link</a><a href="#caf%C3%A9">Other</a>`);
+    const reserved = `a#b${'\u{E0101}'}`;
+    const result = render(`<h2 id="${marked}">Title</h2><a href="#${encodeURI(marked)}">Link</a><a href="#caf%C3%A9">Other</a>` +
+      `<h2 id="${reserved}">Title</h2><a id="reserved" href="#${encodeURIComponent(reserved)}">Reserved</a>`);
     const doc = new JSDOM(result).window.document;
     expect(doc.querySelector('h2')?.id).toBe('a b');
     expect(doc.querySelector('a')?.getAttribute('href')).toBe('#a%20b');
     expect(result).toContain('href="#caf%C3%A9"');
+    expect(doc.getElementById('reserved')?.getAttribute('href')).toBe('#a%23b');
   });
 
   it('handles marked text foster-parented out of a table without losing its source range', () => {

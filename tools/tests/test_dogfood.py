@@ -141,6 +141,7 @@ class CheckerTests(unittest.TestCase):
 
 class RepositoryTests(unittest.TestCase):
     def setUp(self):
+        dogfood._MARKDOWN_INFO.clear()  # Keep call-count assertions order-independent.
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
@@ -230,13 +231,18 @@ class RepositoryTests(unittest.TestCase):
         self.assertIn("must opt in with textprov: true", output)
 
     def test_check_parses_all_changed_markdown_in_one_node_call(self):
-        for name in ("a.md", "b.md", "c.md"):
-            (self.root / name).write_text(mark("New") + " " + mark("prose") + "\n")
-        dogfood._MARKDOWN_INFO.clear()
+        for name in ("a", "b", "c"):
+            (self.root / f"{name}.md").write_text(mark(name.upper()) + " " + mark("prose") + "\n")
         with mock.patch.object(dogfood.subprocess, "run", wraps=subprocess.run) as run:
             self.assertEqual(self.check()[0], 0)
         node = [call for call in run.call_args_list if call.args[0][0] == "node"]
         self.assertEqual(len(node), 1)
+
+    def test_parse_failure_names_the_file(self):
+        (self.root / "a.md").write_text(mark("Fine") + "\n")
+        (self.root / "bad.md").write_text("---\n- not a mapping\n---\n\n" + mark("Text") + "\n")
+        with self.assertRaisesRegex(ValueError, "^bad.md: "):
+            self.check()
 
     def test_symlink_and_out_of_scope_path_are_rejected(self):
         (self.root / "alias.md").symlink_to("legacy.md")
