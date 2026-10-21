@@ -44,9 +44,9 @@ Mēnā kei te whakamahi koe i te API a󠄁 Onetime Secret:
 
 3. **Whakawhāititia te Urunga API**: Whakamahia te mātāpono o te mana iti rawa i te wā e whakar󠄁i󠄁te󠄁 ana i te urunga API. T󠄁u󠄁k󠄁u󠄁n󠄁a anake ngā whakaaetanga e hiahiatia ana mō ia keehi whakamahi.
 
-## Te h󠄁aumaru m󠄁anaaki-ā󠄁-k󠄁iri m󠄁ātāmua
+## Te h󠄁aumaru m󠄁anaaki-ā󠄁-k󠄁iri ta󠄁u󠄁mat󠄁a󠄁 t󠄁e󠄁i󠄁t󠄁e󠄁i󠄁
 
-Ka󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁ā󠄁r󠄁a󠄁m󠄁a󠄁 tēnei wāhanga i ngā whakaarohanga haumaru mātāmua mō ngā whakahaere e whakahaere ana i tā󠄁 rātou ake taup󠄁ā󠄁n󠄁g󠄁a Onetime Secret. Ka kitea e koe te kaupapa pū󠄁t󠄁ak󠄁e󠄁 tuwhera i [GitHub](https://github.com/onetimesecret/onetimesecret),󠄁 me ngā atahanga i󠄁p󠄁u󠄁 ōkawa i [GitHub Container Registry](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret).
+Ka󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁ā󠄁r󠄁a󠄁m󠄁a󠄁 tēnei wāhanga i ngā whakaarohanga haumaru t󠄁a󠄁u󠄁ma󠄁ta t󠄁e󠄁i󠄁t󠄁e󠄁i󠄁 mō ngā whakahaere e whakahaere ana i tā󠄁 rātou ake taup󠄁ā󠄁n󠄁g󠄁a Onetime Secret. Ka kitea e koe te kaupapa pū󠄁t󠄁ak󠄁e󠄁 tuwhera i [GitHub](https://github.com/onetimesecret/onetimesecret),󠄁 me ngā atahanga i󠄁p󠄁u󠄁 ōkawa i [GitHub Container Registry](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret).
 
 Ka taea te whakatinana i ngā tūtohunga i raro nei i te󠄁 taumata o󠄁 t󠄁ō󠄁 hanganga i te wā e manaaki-ā-kiri ana k󠄁o󠄁e󠄁 i Onetime Secret:
 

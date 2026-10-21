@@ -27,7 +27,7 @@ m󠄁e󠄁 T󠄁e󠄁a󠄁m󠄁 P󠄁l󠄁u󠄁s󠄁:󠄁
 - **K󠄁a󠄁 t󠄁a󠄁e󠄁a󠄁 te whakamahi i te󠄁 m󠄁ah󠄁e󠄁r󠄁e󠄁 k󠄁i󠄁 t󠄁ō󠄁 ake W󠄁ā󠄁h󠄁i M󠄁a󠄁h󠄁i󠄁 i te r󠄁oh󠄁e󠄁 h󠄁o󠄁u󠄁** i󠄁na󠄁 w󠄁h󠄁a󠄁kam󠄁ah󠄁i t󠄁ō󠄁
   pūkete h󠄁ou i te wāhitau īmēra i󠄁 h󠄁o󠄁k󠄁o󠄁n󠄁a󠄁 a󠄁i󠄁 t󠄁e o󠄁h󠄁a󠄁u󠄁r󠄁u󠄁n󠄁g󠄁a󠄁.󠄁 K󠄁a󠄁 p󠄁ā󠄁 t󠄁ē󠄁n󠄁e󠄁i󠄁
   k󠄁i󠄁 t󠄁e󠄁 W󠄁ā󠄁h󠄁i󠄁 M󠄁a󠄁h󠄁i󠄁 n󠄁ō󠄁u󠄁 a󠄁n󠄁a󠄁k󠄁e󠄁,󠄁 e󠄁h󠄁a󠄁r󠄁a󠄁 k󠄁i󠄁 n󠄁g󠄁ā󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁 k󠄁a󠄁 hono k󠄁o󠄁e󠄁 m󠄁ā󠄁 t󠄁e󠄁
-  p󠄁ō󠄁h󠄁i󠄁r󠄁i󠄁,󠄁 ā󠄁,󠄁 t󠄁ē󠄁r󠄁ā󠄁 p󠄁e󠄁a󠄁 e󠄁 k󠄁o󠄁r󠄁e󠄁 e󠄁 m󠄁ana t󠄁o󠄁n󠄁u󠄁.󠄁
+  p󠄁ō󠄁h󠄁i󠄁r󠄁i󠄁,󠄁 ā󠄁,󠄁 t󠄁ē󠄁r󠄁ā󠄁 p󠄁e󠄁a󠄁 k󠄁ā󠄁o󠄁r󠄁e󠄁 e󠄁 m󠄁ana i󠄁 t󠄁a󠄁u󠄁a󠄁 w󠄁ā󠄁 t󠄁o󠄁n󠄁u󠄁.󠄁
 - **T󠄁i󠄁r󠄁o󠄁h󠄁i󠄁a󠄁 t󠄁e󠄁 m󠄁a󠄁h󠄁e󠄁r󠄁e󠄁 i󠄁 m󠄁u󠄁a󠄁 i󠄁 t󠄁ō󠄁 w󠄁h󠄁a󠄁ka󠄁w󠄁h󠄁i󠄁r󠄁i󠄁n󠄁a󠄁k󠄁i󠄁 k󠄁i󠄁 a󠄁 i󠄁a󠄁.󠄁** H󠄁u󠄁a󠄁k󠄁i󠄁n󠄁a󠄁 n󠄁g󠄁ā󠄁 t󠄁a󠄁u󠄁t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 o󠄁 t󠄁ō󠄁 W󠄁ā󠄁h󠄁i󠄁 M󠄁a󠄁h󠄁i󠄁 i󠄁
   t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 h󠄁o󠄁u󠄁 k󠄁a󠄁 t󠄁i󠄁r󠄁o󠄁t󠄁i󠄁r󠄁o󠄁 i󠄁 t󠄁e󠄁 m󠄁a󠄁h󠄁e󠄁r󠄁e󠄁 e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁r󠄁i󠄁a󠄁 a󠄁n󠄁a󠄁 i󠄁 r󠄁e󠄁i󠄁r󠄁a󠄁.󠄁 M󠄁ē󠄁n󠄁ā󠄁 k󠄁e󠄁i󠄁 t󠄁e󠄁 n󠄁g󠄁a󠄁r󠄁o󠄁,󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁p󠄁ā󠄁 a󠄁t󠄁u󠄁 k󠄁i󠄁 t󠄁e󠄁
   t󠄁a󠄁u󠄁t󠄁o󠄁k󠄁o󠄁.󠄁 K󠄁a󠄁u󠄁a󠄁 e󠄁 h󠄁o󠄁k󠄁o󠄁 i󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 o󠄁h󠄁a󠄁u󠄁r󠄁u󠄁n󠄁g󠄁a󠄁 t󠄁u󠄁a󠄁r󠄁u󠄁a󠄁.󠄁

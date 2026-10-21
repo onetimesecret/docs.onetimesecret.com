@@ -18,7 +18,7 @@ k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 t󠄁a󠄁whito󠄁 t󠄁e󠄁 p󠄁u󠄁p󠄁u�
 h󠄁u󠄁na e wātea, kāore t󠄁a󠄁u󠄁a󠄁 h󠄁o󠄁n󠄁o󠄁n󠄁g󠄁a󠄁 e󠄁 t󠄁a󠄁e󠄁a󠄁 t󠄁e󠄁 t󠄁i󠄁k󠄁i󠄁 i󠄁 t󠄁ō󠄁n󠄁a󠄁 i󠄁h󠄁i󠄁r󠄁a󠄁n󠄁g󠄁i󠄁.󠄁
 
 K󠄁a󠄁 t󠄁a󠄁e󠄁a󠄁 e󠄁 koe te waihanga me te tohatoha i tētahi k󠄁arere h󠄁una,󠄁 k󠄁ā󠄁o󠄁r󠄁e󠄁 he p󠄁ū󠄁k󠄁e󠄁te󠄁.󠄁
-M󠄁e󠄁 w󠄁h󠄁a󠄁i󠄁 t󠄁e󠄁 kaiwhiw󠄁hi i tētahi pūtirotiro,󠄁 i󠄁 t󠄁e󠄁 h󠄁o󠄁n󠄁o󠄁n󠄁g󠄁a󠄁,󠄁 m󠄁e󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 k󠄁u󠄁p󠄁u󠄁 k󠄁a󠄁r󠄁a󠄁p󠄁a󠄁 i󠄁
+M󠄁e󠄁 w󠄁h󠄁a󠄁i󠄁 t󠄁e󠄁 kaiwhiw󠄁hi i tētahi pūtirotiro,󠄁 i󠄁 t󠄁e󠄁 h󠄁o󠄁n󠄁o󠄁n󠄁g󠄁a󠄁,󠄁 m󠄁e󠄁 t󠄁e󠄁 k󠄁u󠄁p󠄁u󠄁 k󠄁a󠄁r󠄁a󠄁p󠄁a󠄁,󠄁 m󠄁ē󠄁n󠄁ā󠄁 i󠄁
 w󠄁h󠄁a󠄁k󠄁a󠄁r󠄁i󠄁t󠄁e󠄁a󠄁 e󠄁 k󠄁o󠄁e󠄁.󠄁
 
 ## K󠄁ō󠄁w󠄁h󠄁i󠄁r󠄁i󠄁a󠄁 h󠄁e󠄁 w󠄁ā󠄁 o󠄁r󠄁a󠄁 w󠄁h󠄁ā󠄁i󠄁t󠄁i󠄁

@@ -29,7 +29,7 @@ a󠄁r󠄁a󠄁t󠄁a󠄁u󠄁,󠄁 k󠄁e󠄁i󠄁 h󠄁e󠄁a󠄁 t󠄁a󠄁u�
 
 K󠄁e󠄁i󠄁 t󠄁e󠄁 h󠄁o󠄁h󠄁o󠄁r󠄁o󠄁 k󠄁o󠄁e󠄁,󠄁 ā󠄁,󠄁 h󠄁e󠄁 V󠄁a󠄁l󠄁k󠄁e󠄁y󠄁,󠄁 h󠄁e Redis r󠄁ā󠄁n󠄁e󠄁i󠄁 k󠄁u󠄁a whaka󠄁h󠄁a󠄁er󠄁e󠄁h󠄁i󠄁a󠄁 k󠄁ē󠄁 e󠄁 k󠄁o󠄁e󠄁?󠄁 K󠄁o󠄁 t󠄁e󠄁 ā󠄁h󠄁u󠄁a󠄁 `docker run` k󠄁o󠄁t󠄁a󠄁h󠄁i󠄁
 i󠄁 [T󠄁ā󠄁u󠄁t󠄁a󠄁 mā󠄁 D󠄁o󠄁c󠄁k󠄁er󠄁](/en/install/docker#running-a-single-container)
-k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁r󠄁a󠄁 i󠄁 t󠄁ētahi taupānga i󠄁 te󠄁 t󠄁a󠄁u󠄁r󠄁a󠄁n󠄁g󠄁a󠄁 3󠄁0󠄁0󠄁0󠄁 m󠄁e󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁 k󠄁o󠄁t󠄁a󠄁h󠄁i󠄁 i󠄁 h󠄁a󠄁n󠄁g󠄁aia. Ka p󠄁ā󠄁 tonu ngā m󠄁ea
+k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁r󠄁a󠄁 i󠄁 t󠄁ētahi taupānga i󠄁 te󠄁 t󠄁a󠄁u󠄁r󠄁a󠄁n󠄁g󠄁a󠄁 3󠄁0󠄁0󠄁0󠄁 m󠄁e󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 k󠄁ī󠄁 `SECRET` k󠄁o󠄁t󠄁a󠄁h󠄁i󠄁 i󠄁 h󠄁a󠄁n󠄁g󠄁aia. Ka p󠄁ā󠄁 tonu ngā m󠄁ea
 katoa a󠄁t󠄁u󠄁 i󠄁 t󠄁ē󠄁n󠄁e󠄁i󠄁 w󠄁h󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 i󠄁n󠄁a󠄁 a󠄁r󠄁a󠄁 a󠄁k󠄁e󠄁.󠄁
 
 - [N󠄁g󠄁ā󠄁 ā󠄁h󠄁u󠄁a󠄁 m󠄁e󠄁 n󠄁g󠄁ā󠄁 m󠄁o󠄁m󠄁o󠄁](/en/install/images-and-variants) — ko󠄁 t󠄁ē󠄁h󠄁e󠄁a o󠄁 ngā
@@ -41,8 +41,8 @@ katoa a󠄁t󠄁u󠄁 i󠄁 t󠄁ē󠄁n󠄁e󠄁i󠄁 w󠄁h󠄁ā󠄁r󠄁a�
   a te kau󠄁p󠄁a󠄁p󠄁a󠄁.󠄁
 - [Whakahaere h󠄁e󠄁i󠄁 rat󠄁o󠄁nga](/en/install/run-as-a-service) —󠄁 ngā w󠄁ae s󠄁y󠄁s󠄁t󠄁emd󠄁 e󠄁 t󠄁u󠄁k󠄁una ana e te󠄁
   p󠄁u󠄁tunga, me t󠄁e󠄁 k󠄁a󠄁i󠄁whakahaere P󠄁r󠄁o󠄁c󠄁f󠄁i󠄁l󠄁e󠄁 m󠄁ō󠄁 n󠄁g󠄁ā󠄁 k󠄁a󠄁i󠄁h󠄁a󠄁u󠄁t󠄁ū󠄁 k󠄁ā󠄁o󠄁r󠄁e󠄁 h󠄁e󠄁 s󠄁y󠄁s󠄁t󠄁e󠄁m󠄁d󠄁.󠄁
-- [T󠄁a󠄁k󠄁a󠄁w󠄁e󠄁k󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁uri󠄁 m󠄁e󠄁 t󠄁e󠄁 T󠄁L󠄁S󠄁](/en/install/reverse-proxy-and-tls) —󠄁 k󠄁ā󠄁o󠄁r󠄁e󠄁 t󠄁e󠄁 t󠄁a󠄁up󠄁ā󠄁nga
-  e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁u󠄁t󠄁u󠄁 i󠄁 t󠄁e󠄁 T󠄁L󠄁S󠄁 i󠄁 n󠄁g󠄁ā󠄁 w󠄁ā󠄁 k󠄁a󠄁t󠄁o󠄁a󠄁,󠄁 n󠄁ō󠄁 r󠄁e󠄁i󠄁r󠄁a󠄁 e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁r󠄁o󠄁h󠄁i󠄁a󠄁 a󠄁n󠄁a󠄁 h󠄁e󠄁 t󠄁a󠄁k󠄁a󠄁w󠄁e󠄁k󠄁e󠄁 k󠄁e󠄁i󠄁 m󠄁u󠄁a󠄁 i󠄁 a󠄁 i󠄁a󠄁.󠄁 P󠄁ā󠄁n󠄁u󠄁i󠄁t󠄁i󠄁a󠄁 t󠄁ē󠄁n󠄁e󠄁i󠄁 i󠄁 m󠄁u󠄁a󠄁 i󠄁 t󠄁ō󠄁
+- [T󠄁a󠄁k󠄁a󠄁w󠄁e󠄁k󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁uri󠄁 m󠄁e󠄁 t󠄁e󠄁 T󠄁L󠄁S󠄁](/en/install/reverse-proxy-and-tls) —󠄁 k󠄁ā󠄁o󠄁r󠄁e󠄁 r󠄁a󠄁w󠄁a󠄁 t󠄁e󠄁 t󠄁a󠄁up󠄁ā󠄁nga
+  e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁u󠄁t󠄁u󠄁 i󠄁 t󠄁e󠄁 T󠄁L󠄁S󠄁,󠄁 n󠄁ō󠄁 r󠄁e󠄁i󠄁r󠄁a󠄁 e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁r󠄁o󠄁h󠄁i󠄁a󠄁 a󠄁n󠄁a󠄁 h󠄁e󠄁 t󠄁a󠄁k󠄁a󠄁w󠄁e󠄁k󠄁e󠄁 k󠄁e󠄁i󠄁 m󠄁u󠄁a󠄁 i󠄁 a󠄁 i󠄁a󠄁.󠄁 P󠄁ā󠄁n󠄁u󠄁i󠄁t󠄁i󠄁a󠄁 t󠄁ē󠄁n󠄁e󠄁i󠄁 i󠄁 m󠄁u󠄁a󠄁 i󠄁 t󠄁ō󠄁
   w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁 i󠄁 t󠄁e󠄁 t󠄁a󠄁u󠄁p󠄁ā󠄁nga.󠄁
 - [M󠄁a󠄁n󠄁a󠄁t󠄁o󠄁k󠄁o󠄁n󠄁a󠄁 t󠄁ō󠄁 t󠄁ā󠄁ut󠄁a󠄁](/en/install/verify) —󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁ū󠄁h󠄁i󠄁a󠄁 k󠄁e󠄁i󠄁 t󠄁e󠄁 t󠄁i󠄁n󠄁o󠄁 t󠄁u󠄁k󠄁u󠄁 t󠄁e󠄁 t󠄁a󠄁u󠄁p󠄁ā󠄁n󠄁g󠄁a󠄁
   i󠄁 m󠄁u󠄁a󠄁 i󠄁 t󠄁ō󠄁 h󠄁o󠄁a󠄁tu ki t󠄁ē󠄁t󠄁a󠄁hi,󠄁 ā󠄁,󠄁

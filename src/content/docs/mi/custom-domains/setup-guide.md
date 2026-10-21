@@ -58,8 +58,8 @@ K󠄁a󠄁 n󠄁o󠄁h󠄁o󠄁 ō󠄁ri󠄁t󠄁e󠄁 t󠄁e󠄁 u󠄁a󠄁r�
 t󠄁a󠄁n󠄁g󠄁o󠄁 k󠄁o󠄁e󠄁 i󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 k󠄁a󠄁 t󠄁ā󠄁p󠄁i󠄁r󠄁i󠄁 a󠄁n󠄁ō󠄁,󠄁 k󠄁a󠄁 w󠄁h󠄁i󠄁w󠄁h󠄁i󠄁 i󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 u󠄁a󠄁r󠄁a󠄁 h󠄁o󠄁u󠄁,󠄁 ā󠄁,󠄁 i󠄁 t󠄁e󠄁 n󠄁u󠄁i󠄁n󠄁g󠄁a󠄁 o󠄁 t󠄁e󠄁 w󠄁ā󠄁 h󠄁e󠄁 k󠄁a󠄁i󠄁h󠄁a󠄁u󠄁t󠄁ū󠄁
 h󠄁o󠄁u󠄁.󠄁
 
-P󠄁u󠄁r󠄁i󠄁t󠄁i󠄁a󠄁 t󠄁ē󠄁n󠄁e󠄁i󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 i󠄁 m󠄁u󠄁r󠄁i󠄁 i󠄁 t󠄁e󠄁 m󠄁a󠄁n󠄁a󠄁t󠄁o󠄁k󠄁o󠄁.󠄁 K󠄁a󠄁 t󠄁ā󠄁r󠄁u󠄁a󠄁t󠄁i󠄁a󠄁 t󠄁e󠄁 m󠄁a󠄁n󠄁a󠄁t󠄁o󠄁k󠄁o󠄁 i󠄁
-m󠄁u󠄁r󠄁i󠄁,󠄁 ā󠄁,󠄁 k󠄁o󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 a󠄁r󠄁o󠄁w󠄁h󠄁a󠄁i󠄁 k󠄁ā󠄁o󠄁r󠄁e󠄁 e󠄁 k󠄁i󠄁t󠄁e󠄁a󠄁 a󠄁n󠄁ō te󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁u󠄁t󠄁u󠄁 i󠄁 t󠄁e󠄁 t󠄁u󠄁k󠄁u󠄁n󠄁g󠄁a󠄁
+P󠄁u󠄁r󠄁i󠄁t󠄁i󠄁a󠄁 t󠄁ē󠄁n󠄁e󠄁i󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 i󠄁 m󠄁u󠄁r󠄁i󠄁 i󠄁 t󠄁e󠄁 m󠄁a󠄁n󠄁a󠄁t󠄁o󠄁k󠄁o󠄁.󠄁 K󠄁a󠄁 m󠄁a󠄁h󠄁i󠄁a󠄁 a󠄁n󠄁ō󠄁 t󠄁e󠄁 m󠄁a󠄁n󠄁a󠄁t󠄁o󠄁k󠄁o󠄁 i󠄁
+t󠄁e󠄁 p󠄁a󠄁p󠄁a󠄁m󠄁u󠄁r󠄁i󠄁,󠄁 ā󠄁,󠄁 k󠄁o󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 a󠄁r󠄁o󠄁w󠄁h󠄁a󠄁i󠄁 k󠄁ā󠄁o󠄁r󠄁e󠄁 e󠄁 k󠄁i󠄁t󠄁e󠄁a󠄁 a󠄁n󠄁ō te󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁u󠄁t󠄁u󠄁 i󠄁 t󠄁e󠄁 t󠄁u󠄁k󠄁u󠄁n󠄁g󠄁a󠄁
 o󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁.󠄁
 
 ### T󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 a󠄁r󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 (󠄁C󠄁N󠄁A󠄁M󠄁E󠄁,󠄁 A󠄁 r󠄁ā󠄁n󠄁e󠄁i󠄁)󠄁

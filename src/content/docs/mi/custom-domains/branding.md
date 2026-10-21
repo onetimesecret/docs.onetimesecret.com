@@ -68,7 +68,7 @@ I󠄁 t󠄁e󠄁 r󠄁i󠄁p󠄁a󠄁 **W󠄁a󠄁i󠄁t󠄁o󠄁h󠄁u󠄁**:�
 - **W󠄁h󠄁ā󠄁n󠄁a󠄁u󠄁 M󠄁o󠄁m󠄁o󠄁t󠄁u󠄁h󠄁i󠄁**:󠄁 **S󠄁e󠄁r󠄁i󠄁f󠄁**,󠄁 **S󠄁a󠄁n󠄁s󠄁 S󠄁e󠄁r󠄁i󠄁f󠄁**,󠄁 **M󠄁o󠄁n󠄁o󠄁s󠄁p󠄁a󠄁c󠄁e󠄁**,󠄁 **S󠄁y󠄁s󠄁t󠄁e󠄁m󠄁 U󠄁I󠄁**
   r󠄁ā󠄁n󠄁e󠄁i󠄁.󠄁
 
-K󠄁ō󠄁w󠄁h󠄁i󠄁r󠄁i󠄁a󠄁 **W󠄁h󠄁a󠄁k󠄁a󠄁h󠄁o󠄁u󠄁** h󠄁e󠄁i󠄁 t󠄁i󠄁a󠄁k󠄁i󠄁.󠄁 K󠄁a󠄁 w󠄁ā󠄁t󠄁e󠄁a󠄁 n󠄁o󠄁a󠄁 t󠄁e󠄁 p󠄁ā󠄁t󠄁e󠄁n󠄁e󠄁 i󠄁n󠄁a󠄁 k󠄁u󠄁a󠄁 r󠄁e󠄁r󠄁e󠄁k󠄁ē󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁
+K󠄁ō󠄁w󠄁h󠄁i󠄁r󠄁i󠄁a󠄁 **W󠄁h󠄁a󠄁k󠄁a󠄁h󠄁o󠄁u󠄁** h󠄁e󠄁i󠄁 t󠄁i󠄁a󠄁k󠄁i󠄁.󠄁 K󠄁a󠄁 w󠄁ā󠄁t󠄁e󠄁a󠄁 a󠄁n󠄁a󠄁k󠄁e󠄁 t󠄁e󠄁 p󠄁ā󠄁t󠄁e󠄁n󠄁e󠄁 i󠄁n󠄁a󠄁 k󠄁u󠄁a󠄁 r󠄁e󠄁r󠄁e󠄁k󠄁ē󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁
 m󠄁e󠄁a󠄁.󠄁 K󠄁i󠄁 t󠄁e󠄁 r󠄁a󠄁h󠄁u󠄁a󠄁 t󠄁e󠄁 t󠄁i󠄁a󠄁k󠄁i󠄁,󠄁 k󠄁a󠄁 h󠄁o󠄁k󠄁i󠄁 t󠄁e󠄁 p󠄁u󠄁k󠄁a󠄁 k󠄁i󠄁 n󠄁g󠄁ā󠄁 u󠄁a󠄁r󠄁a󠄁 i󠄁 t󠄁i󠄁a󠄁k󠄁i󠄁n󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁u󠄁t󠄁u󠄁n󠄁g󠄁a󠄁.󠄁
 
 ## W󠄁h󠄁a󠄁k󠄁a󠄁r󠄁i󠄁t󠄁e󠄁 i󠄁 t󠄁e󠄁 r󠄁e󠄁o󠄁 m󠄁e󠄁 n󠄁g󠄁ā󠄁 t󠄁o󠄁h󠄁u󠄁t󠄁o󠄁h󠄁u󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁
@@ -77,7 +77,7 @@ I󠄁 t󠄁e󠄁 r󠄁i󠄁p󠄁a󠄁 **T󠄁u󠄁k󠄁u󠄁**:󠄁
 
 - **R󠄁e󠄁o󠄁**:󠄁 t󠄁e󠄁 r󠄁e󠄁o󠄁 t󠄁a󠄁u󠄁n󠄁o󠄁a󠄁 m󠄁ō󠄁 n󠄁g󠄁ā󠄁 w󠄁h󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 k󠄁a󠄁i󠄁w󠄁h󠄁i󠄁w󠄁h󠄁i󠄁 m󠄁e󠄁 n󠄁g󠄁ā󠄁 ī󠄁m󠄁ē󠄁r󠄁a󠄁 i󠄁 r󠄁u󠄁n󠄁g󠄁a󠄁 i󠄁 t󠄁ē󠄁n󠄁e󠄁i󠄁
   r󠄁o󠄁h󠄁e󠄁.󠄁 K󠄁a󠄁 t󠄁a󠄁e󠄁a󠄁 t󠄁o󠄁n󠄁u󠄁 e󠄁 n󠄁g󠄁ā󠄁 k󠄁a󠄁i󠄁w󠄁h󠄁i󠄁w󠄁h󠄁i󠄁 t󠄁e󠄁 h󠄁u󠄁r󠄁i󠄁 i󠄁 t󠄁e󠄁 r󠄁e󠄁o󠄁 i󠄁 r󠄁u󠄁n󠄁g󠄁a󠄁 i󠄁 t󠄁e󠄁 w󠄁h󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i󠄁.󠄁 K󠄁a󠄁
-  p󠄁u󠄁t󠄁a󠄁 n󠄁o󠄁a󠄁 t󠄁ē󠄁n󠄁e󠄁i󠄁 k󠄁ā󠄁r󠄁i󠄁 i󠄁 n󠄁g󠄁ā󠄁 w󠄁ā󠄁h󠄁i󠄁 e󠄁 t󠄁u󠄁k󠄁u󠄁 a󠄁i󠄁 t󠄁e󠄁 r󠄁a󠄁t󠄁o󠄁n󠄁g󠄁a󠄁 i󠄁 n󠄁g󠄁ā󠄁 r󠄁e󠄁o󠄁 n󠄁e󠄁k󠄁e󠄁 a󠄁t󠄁u󠄁 i󠄁 t󠄁e󠄁
+  p󠄁u󠄁t󠄁a󠄁 a󠄁n󠄁a󠄁k󠄁e󠄁 t󠄁ē󠄁n󠄁e󠄁i󠄁 k󠄁ā󠄁r󠄁i󠄁 i󠄁 n󠄁g󠄁ā󠄁 w󠄁ā󠄁h󠄁i󠄁 e󠄁 t󠄁u󠄁k󠄁u󠄁 a󠄁i󠄁 t󠄁e󠄁 r󠄁a󠄁t󠄁o󠄁n󠄁g󠄁a󠄁 i󠄁 n󠄁g󠄁ā󠄁 r󠄁e󠄁o󠄁 n󠄁e󠄁k󠄁e󠄁 a󠄁t󠄁u󠄁 i󠄁 t󠄁e󠄁
   k󠄁o󠄁t󠄁a󠄁h󠄁i󠄁.󠄁
 - **T󠄁o󠄁h󠄁u󠄁t󠄁o󠄁h󠄁u󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁**:󠄁 n󠄁g󠄁ā󠄁 k󠄁u󠄁p󠄁u󠄁 e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁h󠄁i󠄁a󠄁 a󠄁n󠄁a󠄁 i󠄁 t󠄁e󠄁 w󠄁h󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 k󠄁a󠄁i󠄁w󠄁h󠄁i󠄁w󠄁h󠄁i󠄁
   **I󠄁 m󠄁u󠄁a󠄁 i󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁** m󠄁e󠄁 **I󠄁 m󠄁u󠄁r󠄁i󠄁 i󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁**,󠄁 k󠄁i󠄁a󠄁 5󠄁0󠄁0󠄁 p󠄁ū󠄁ā󠄁h󠄁u󠄁a󠄁 t󠄁e󠄁 m󠄁ō󠄁r󠄁a󠄁h󠄁i󠄁 m󠄁ō󠄁 i󠄁a󠄁 m󠄁e󠄁a󠄁.󠄁 K󠄁a󠄁
@@ -91,7 +91,7 @@ K󠄁ō󠄁w󠄁h󠄁i󠄁r󠄁i󠄁a󠄁 **W󠄁h󠄁a󠄁k󠄁a󠄁h󠄁o󠄁u
 W󠄁h󠄁a󠄁k󠄁a󠄁t󠄁u󠄁w󠄁h󠄁e󠄁r󠄁a󠄁h󠄁i󠄁a󠄁 h󠄁e󠄁 h󠄁o󠄁n󠄁o󠄁n󠄁g󠄁a󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁 i󠄁 r󠄁u󠄁n󠄁g󠄁a󠄁 i󠄁 t󠄁ō󠄁 r󠄁o󠄁h󠄁e󠄁,󠄁 t󠄁e󠄁 w󠄁h󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 k󠄁ā󠄁i󠄁n󠄁g󠄁a󠄁
 r󠄁ā󠄁n󠄁e󠄁i󠄁 o󠄁 t󠄁ō󠄁 r󠄁o󠄁h󠄁e󠄁,󠄁 k󠄁a󠄁 u󠄁t󠄁a󠄁 a󠄁n󠄁ō󠄁 i󠄁 t󠄁e󠄁 w󠄁h󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i󠄁.󠄁 K󠄁a󠄁 p󠄁u󠄁t󠄁a󠄁 n󠄁g󠄁ā󠄁 h󠄁u󠄁r󠄁i󠄁n󠄁g󠄁a󠄁 i󠄁 t󠄁i󠄁a󠄁k󠄁i󠄁n󠄁a󠄁 i󠄁 t󠄁e󠄁
 u󠄁t󠄁a󠄁n󠄁g󠄁a󠄁 w󠄁h󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 e󠄁 w󠄁h󠄁a󠄁i󠄁 a󠄁k󠄁e󠄁 n󠄁e󠄁i󠄁.󠄁 K󠄁a󠄁 t󠄁a󠄁e󠄁a󠄁 e󠄁 n󠄁g󠄁ā󠄁 p󠄁ū󠄁t󠄁i󠄁r󠄁o󠄁t󠄁i󠄁r󠄁o󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁 t󠄁o󠄁n󠄁u󠄁 i󠄁
-t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 f󠄁a󠄁v󠄁i󠄁c󠄁o󠄁n󠄁 t󠄁a󠄁w󠄁h󠄁i󠄁t󠄁o󠄁 m󠄁ō󠄁 t󠄁e󠄁 r󠄁ā󠄁 k󠄁o󠄁t󠄁a󠄁h󠄁i󠄁 p󠄁e󠄁a󠄁.󠄁
+t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 f󠄁a󠄁v󠄁i󠄁c󠄁o󠄁n󠄁 t󠄁a󠄁w󠄁h󠄁i󠄁t󠄁o󠄁 t󠄁a󠄁e󠄁 a󠄁t󠄁u󠄁 k󠄁i󠄁 t󠄁e󠄁 k󠄁o󠄁t󠄁a󠄁h󠄁i󠄁 r󠄁ā󠄁.󠄁
 
 ## M󠄁ē󠄁n󠄁ā󠄁 k󠄁a󠄁 r󠄁e󠄁r󠄁e󠄁k󠄁ē󠄁 t󠄁ō󠄁 m󠄁a󠄁h󠄁e󠄁r󠄁e󠄁
 

@@ -13,7 +13,7 @@ Tohatohahia ngā kōrero matatapu m󠄁e󠄁 te mā󠄁ia, whakanuia󠄁 tō wai
 **$0/marama**
 
 Ka whakaa󠄁t󠄁u󠄁hia t󠄁ē󠄁n󠄁e󠄁i󠄁 m󠄁a󠄁h󠄁e󠄁r󠄁e󠄁 e󠄁 t󠄁e󠄁 [w󠄁h󠄁ā󠄁r󠄁ang󠄁i󠄁 u󠄁t󠄁u󠄁](https://onetimesecret.com/pricing) h󠄁e󠄁i󠄁
-**B󠄁a󠄁s󠄁i󠄁c󠄁**.󠄁 K󠄁a󠄁 k󠄁ī󠄁i󠄁a󠄁 e󠄁 te t󠄁a󠄁u󠄁p󠄁ā󠄁n󠄁g󠄁a󠄁 m󠄁e󠄁 ē󠄁n󠄁e󠄁i󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 ko **F󠄁r󠄁e󠄁e󠄁**.
+**B󠄁a󠄁s󠄁i󠄁c󠄁**.󠄁 K󠄁a󠄁 k󠄁ī󠄁i󠄁a󠄁 e󠄁 ē󠄁n󠄁e󠄁i󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 ko **F󠄁r󠄁e󠄁e󠄁**;󠄁 k󠄁a󠄁 k󠄁ī󠄁i󠄁a󠄁 e󠄁 t󠄁e󠄁 t󠄁a󠄁u󠄁p󠄁ā󠄁n󠄁g󠄁a󠄁 k󠄁o󠄁 **F󠄁r󠄁e󠄁e󠄁**,󠄁 k󠄁o󠄁 **K󠄁o󠄁r󠄁e󠄁 U󠄁t󠄁u󠄁** r󠄁ā󠄁n󠄁e󠄁i󠄁.
 
 **Ngā ā󠄁huatanga:**
 - N󠄁g󠄁ā󠄁 h󠄁on󠄁o󠄁nga k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁 k󠄁a󠄁 t󠄁a󠄁e󠄁a󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁 kotahi a󠄁n󠄁a󠄁k󠄁e󠄁,󠄁 m󠄁e󠄁 n󠄁g󠄁ā󠄁 wā o󠄁r󠄁a󠄁 t󠄁a󠄁e a󠄁tu ki te 1󠄁4󠄁 rā󠄁
