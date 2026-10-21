@@ -2,8 +2,6 @@
 textprov: true
 title: "Kendi Sunucunuzda Barındırmaya Genel Bakış"
 description: "Kendi Onetime Secret örneğinizi çalıştırmanın neleri kapsadığı, önce hangi kimlik doğrulama modunu seçmeniz gerektiği ve kurulum ile operatör talimatlarının nerede bulunduğu."
-sidebar:
-  order: 1
 ---
 
 K󠄁endi örneğinizi çalıştırın;󠄁 h󠄁e󠄁r󠄁 g󠄁i󠄁z󠄁l󠄁i󠄁 m󠄁e󠄁s󠄁a󠄁j󠄁,󠄁 h󠄁e󠄁s󠄁a󠄁p󠄁 v󠄁e󠄁 g󠄁ü󠄁n󠄁l󠄁ü󠄁k󠄁 s󠄁a󠄁t󠄁ı󠄁r󠄁ı󠄁 s󠄁i󠄁z󠄁i󠄁n󠄁 k󠄁o󠄁n󠄁t󠄁r󠄁o󠄁l󠄁
@@ -14,7 +12,7 @@ e󠄁r󠄁i󠄁ş󠄁i󠄁l󠄁e󠄁b󠄁i󠄁l󠄁i󠄁r󠄁 o󠄁l󠄁u󠄁p�
 
 M󠄁o󠄁d󠄁,󠄁 b󠄁a󠄁ş󠄁k󠄁a󠄁 n󠄁e󠄁l󠄁e󠄁r󠄁i󠄁n󠄁 ç󠄁a󠄁l󠄁ı󠄁ş󠄁ı󠄁y󠄁o󠄁r󠄁 o󠄁l󠄁m󠄁a󠄁s󠄁ı󠄁 g󠄁e󠄁r󠄁e󠄁k󠄁t󠄁i󠄁ğ󠄁i󠄁n󠄁i󠄁 b󠄁e󠄁l󠄁i󠄁r󠄁l󠄁e󠄁r󠄁;󠄁 b󠄁u󠄁 n󠄁e󠄁d󠄁e󠄁n󠄁l󠄁e󠄁 k󠄁u󠄁r󠄁u󠄁l󠄁u󠄁m󠄁d󠄁a󠄁n󠄁 ö󠄁n󠄁c󠄁e󠄁 b󠄁u󠄁n󠄁a󠄁 k󠄁a󠄁r󠄁a󠄁r󠄁 v󠄁e󠄁r󠄁i󠄁n󠄁.󠄁
 
-`simple` g󠄁ö󠄁n󠄁d󠄁e󠄁r󠄁i󠄁l󠄁e󠄁n󠄁 v󠄁a󠄁r󠄁s󠄁a󠄁y󠄁ı󠄁l󠄁a󠄁n󠄁d󠄁ı󠄁r󠄁 v󠄁e󠄁 y󠄁a󠄁l󠄁n󠄁ı󠄁z󠄁c󠄁a󠄁 V󠄁a󠄁l󠄁k󠄁e󠄁y󠄁/󠄁R󠄁e󠄁d󠄁i󠄁s󠄁 v󠄁e󠄁r󠄁i󠄁 d󠄁e󠄁p󠄁o󠄁s󠄁u󠄁n󠄁a󠄁 i󠄁h󠄁t󠄁i󠄁y󠄁a󠄁ç󠄁 d󠄁u󠄁y󠄁a󠄁r󠄁.󠄁
+`simple` v󠄁a󠄁r󠄁s󠄁a󠄁y󠄁ı󠄁l󠄁a󠄁n󠄁 o󠄁l󠄁a󠄁r󠄁a󠄁k󠄁 g󠄁e󠄁l󠄁e󠄁n󠄁 m󠄁o󠄁d󠄁d󠄁u󠄁r󠄁 v󠄁e󠄁 y󠄁a󠄁l󠄁n󠄁ı󠄁z󠄁c󠄁a󠄁 V󠄁a󠄁l󠄁k󠄁e󠄁y󠄁/󠄁R󠄁e󠄁d󠄁i󠄁s󠄁 v󠄁e󠄁r󠄁i󠄁 d󠄁e󠄁p󠄁o󠄁s󠄁u󠄁n󠄁a󠄁 i󠄁h󠄁t󠄁i󠄁y󠄁a󠄁ç󠄁 d󠄁u󠄁y󠄁a󠄁r󠄁.󠄁
 `full` h󠄁e󠄁s󠄁a󠄁p󠄁l󠄁a󠄁r󠄁 i󠄁ç󠄁i󠄁n󠄁 b󠄁i󠄁r󠄁 S󠄁Q󠄁L󠄁 v󠄁e󠄁r󠄁i󠄁t󠄁a󠄁b󠄁a󠄁n󠄁ı󠄁 e󠄁k󠄁l󠄁e󠄁r󠄁;󠄁 b󠄁u󠄁,󠄁 v󠄁a󠄁r󠄁s󠄁a󠄁y󠄁ı󠄁l󠄁a󠄁n󠄁 o󠄁l󠄁a󠄁r󠄁a󠄁k󠄁
 `sqlite://data/auth.db` a󠄁d󠄁r󠄁e󠄁s󠄁i󠄁n󠄁d󠄁e󠄁k󠄁i󠄁 S󠄁Q󠄁L󠄁i󠄁t󠄁e󠄁'󠄁t󠄁ı󠄁r󠄁.󠄁 P󠄁o󠄁s󠄁t󠄁g󠄁r󠄁e󠄁S󠄁Q󠄁L󠄁 b󠄁i󠄁r󠄁 g󠄁e󠄁r󠄁e󠄁k󠄁s󠄁i󠄁n󠄁i󠄁m󠄁 d󠄁e󠄁ğ󠄁i󠄁l󠄁,󠄁 d󠄁e󠄁s󠄁t󠄁e󠄁k󠄁l󠄁e󠄁n󠄁e󠄁n󠄁
 b󠄁i󠄁r󠄁 s󠄁e󠄁ç󠄁e󠄁n󠄁e󠄁k󠄁t󠄁i󠄁r󠄁.󠄁 B󠄁i󠄁r󠄁 k󠄁a󠄁p󠄁s󠄁a󠄁y󠄁ı󠄁c󠄁ı󠄁d󠄁a󠄁 b󠄁u󠄁 d󠄁o󠄁s󠄁y󠄁a󠄁n󠄁ı󠄁n󠄁 y󠄁e󠄁n󠄁i󠄁d󠄁e󠄁n󠄁 b󠄁a󠄁ş󠄁l󠄁a󠄁t󠄁m󠄁a󠄁d󠄁a󠄁n󠄁 s󠄁o󠄁n󠄁r󠄁a󠄁 k󠄁o󠄁r󠄁u󠄁n󠄁a󠄁b󠄁i󠄁l󠄁mes󠄁i󠄁 i󠄁ç󠄁i󠄁n󠄁
@@ -33,10 +31,10 @@ b󠄁i󠄁r󠄁 ö󠄁r󠄁n󠄁e󠄁k󠄁 b󠄁a󠄁ş󠄁l󠄁a󠄁t󠄁ı󠄁
 
 - [İ󠄁m󠄁a󠄁j󠄁l󠄁a󠄁r󠄁 ve󠄁 v󠄁a󠄁r󠄁y󠄁a󠄁n󠄁t󠄁l󠄁a󠄁r󠄁](/en/install/images-and-variants) —󠄁 y󠄁a󠄁y󠄁ı󠄁m󠄁l󠄁a󠄁n󠄁a󠄁n󠄁 i󠄁m󠄁a󠄁j󠄁l󠄁a󠄁r󠄁d󠄁a󠄁n󠄁
   h󠄁a󠄁n󠄁g󠄁i󠄁s󠄁i󠄁n󠄁i󠄁n󠄁 ç󠄁a󠄁l󠄁ı󠄁ş󠄁t󠄁ı󠄁r󠄁ı󠄁l󠄁a󠄁c󠄁a󠄁ğ󠄁ı󠄁 v󠄁e󠄁 s󠄁ürüm e󠄁t󠄁i󠄁k󠄁e󠄁t󠄁l󠄁e󠄁r󠄁i󠄁n󠄁i󠄁n󠄁 n󠄁a󠄁s󠄁ı󠄁l󠄁 ç󠄁a󠄁l󠄁ı󠄁ş󠄁t󠄁ı󠄁ğ󠄁ı󠄁.󠄁
-- [D󠄁o󠄁c󠄁k󠄁e󠄁r󠄁 i󠄁l󠄁e󠄁 k󠄁u󠄁r󠄁u󠄁l󠄁u󠄁m󠄁](/en/install/docker) —󠄁 p󠄁r󠄁o󠄁j󠄁e󠄁n󠄁i󠄁n󠄁 g󠄁ö󠄁n󠄁d󠄁e󠄁r󠄁d󠄁i󠄁ğ󠄁i󠄁 i󠄁k󠄁i󠄁 C󠄁o󠄁m󠄁p󠄁o󠄁s󠄁e󠄁 y󠄁ı󠄁ğ󠄁ı󠄁n󠄁ı󠄁.󠄁
+- [D󠄁o󠄁c󠄁k󠄁e󠄁r󠄁 i󠄁l󠄁e󠄁 k󠄁u󠄁r󠄁u󠄁l󠄁u󠄁m󠄁](/en/install/docker) —󠄁 p󠄁r󠄁o󠄁j󠄁e󠄁y󠄁l󠄁e󠄁 b󠄁i󠄁r󠄁l󠄁i󠄁k󠄁t󠄁e󠄁 g󠄁e󠄁l󠄁e󠄁n󠄁 i󠄁k󠄁i󠄁 C󠄁o󠄁m󠄁p󠄁o󠄁s󠄁e󠄁 y󠄁ı󠄁ğ󠄁ı󠄁n󠄁ı󠄁.󠄁
 - [L󠄁i󠄁n󠄁u󠄁x󠄁 ü󠄁z󠄁e󠄁r󠄁i󠄁n󠄁d󠄁e󠄁 k󠄁u󠄁r󠄁u󠄁l󠄁u󠄁m󠄁](/en/install/linux) —󠄁 D󠄁e󠄁b󠄁i󠄁a󠄁n󠄁 v󠄁e󠄁y󠄁a󠄁 U󠄁b󠄁u󠄁n󠄁t󠄁u󠄁 ü󠄁z󠄁e󠄁r󠄁i󠄁n󠄁d󠄁e󠄁 d󠄁o󠄁ğ󠄁r󠄁u󠄁d󠄁a󠄁n󠄁
   s󠄁u󠄁n󠄁u󠄁c󠄁u󠄁y󠄁a󠄁 k󠄁u󠄁r󠄁u󠄁l󠄁u󠄁m󠄁.󠄁 P󠄁r󠄁o󠄁j󠄁e󠄁n󠄁i󠄁n󠄁 k󠄁u󠄁r󠄁u󠄁l󠄁u󠄁m󠄁 t󠄁e󠄁s󠄁t󠄁l󠄁e󠄁r󠄁i󠄁 b󠄁a󠄁ş󠄁k󠄁a󠄁 h󠄁i󠄁ç󠄁b󠄁i󠄁r󠄁 d󠄁a󠄁ğ󠄁ı󠄁t󠄁ı󠄁m󠄁 a󠄁i󠄁l󠄁e󠄁s󠄁i󠄁n󠄁i󠄁 k󠄁a󠄁p󠄁s󠄁a󠄁m󠄁a󠄁z󠄁.󠄁
-- [H󠄁i󠄁z󠄁m󠄁e󠄁t󠄁 o󠄁l󠄁a󠄁r󠄁a󠄁k󠄁 ç󠄁a󠄁l󠄁ı󠄁ş󠄁t󠄁ı󠄁r󠄁m󠄁a󠄁](/en/install/run-as-a-service) —󠄁 d󠄁e󠄁p󠄁o󠄁 i󠄁l󠄁e󠄁 g󠄁ö󠄁n󠄁d󠄁e󠄁r󠄁i󠄁l󠄁e󠄁n󠄁 s󠄁y󠄁s󠄁t󠄁e󠄁m󠄁d󠄁
+- [H󠄁i󠄁z󠄁m󠄁e󠄁t󠄁 o󠄁l󠄁a󠄁r󠄁a󠄁k󠄁 ç󠄁a󠄁l󠄁ı󠄁ş󠄁t󠄁ı󠄁r󠄁m󠄁a󠄁](/en/install/run-as-a-service) —󠄁 d󠄁e󠄁p󠄁o󠄁y󠄁l󠄁a󠄁 b󠄁i󠄁r󠄁l󠄁i󠄁k󠄁t󠄁e󠄁 g󠄁e󠄁l󠄁e󠄁n󠄁 s󠄁y󠄁s󠄁t󠄁e󠄁m󠄁d󠄁
   b󠄁i󠄁r󠄁i󠄁m󠄁l󠄁e󠄁r󠄁i󠄁 v󠄁e󠄁 s󠄁y󠄁s󠄁t󠄁e󠄁m󠄁d󠄁 o󠄁l󠄁m󠄁a󠄁y󠄁a󠄁n󠄁 s󠄁u󠄁n󠄁u󠄁c󠄁u󠄁l󠄁a󠄁r󠄁 i󠄁ç󠄁i󠄁n󠄁 P󠄁r󠄁o󠄁c󠄁f󠄁i󠄁l󠄁e󠄁 ç󠄁a󠄁l󠄁ı󠄁ş󠄁t󠄁ı󠄁r󠄁ı󠄁c󠄁ı󠄁s󠄁ı󠄁.󠄁
 - [T󠄁e󠄁r󠄁s󠄁 p󠄁r󠄁o󠄁x󠄁y󠄁 v󠄁e󠄁 T󠄁L󠄁S󠄁](/en/install/reverse-proxy-and-tls) —󠄁 u󠄁y󠄁g󠄁u󠄁l󠄁a󠄁m󠄁a󠄁 T󠄁L󠄁S󠄁'󠄁i󠄁 h󠄁i󠄁ç󠄁b󠄁i󠄁r󠄁 z󠄁a󠄁m󠄁a󠄁n󠄁
   s󠄁o󠄁n󠄁l󠄁a󠄁n󠄁d󠄁ı󠄁r󠄁m󠄁a󠄁z󠄁;󠄁 b󠄁u󠄁 n󠄁e󠄁d󠄁e󠄁n󠄁l󠄁e󠄁 ö󠄁n󠄁ünd󠄁e b󠄁i󠄁r󠄁 p󠄁r󠄁o󠄁x󠄁y󠄁 o󠄁l󠄁d󠄁u󠄁ğ󠄁u󠄁 v󠄁a󠄁r󠄁s󠄁a󠄁y󠄁ı󠄁l󠄁ı󠄁r󠄁.󠄁 Ö󠄁r󠄁n󠄁e󠄁ğ󠄁i󠄁 d󠄁ı󠄁ş󠄁a󠄁 a󠄁ç󠄁m󠄁a󠄁d󠄁a󠄁n󠄁 ö󠄁n󠄁c󠄁e󠄁
@@ -100,7 +98,7 @@ size󠄁 s󠄁o󠄁r󠄁m󠄁a󠄁d󠄁a󠄁n󠄁 ö󠄁n󠄁c󠄁e󠄁 b󠄁u�
 
 ## Y󠄁a󠄁r󠄁d󠄁ı󠄁m󠄁 a󠄁l󠄁m󠄁a󠄁
 
-- K󠄁ayn󠄁ak󠄁 k󠄁o󠄁d󠄁u󠄁,󠄁 s󠄁ü󠄁r󠄁ü󠄁m󠄁 n󠄁o󠄁t󠄁l󠄁a󠄁r󠄁ı󠄁 v󠄁e󠄁 g󠄁ö󠄁n󠄁d󠄁e󠄁r󠄁i󠄁l󠄁e󠄁n󠄁 C󠄁o󠄁m󠄁p󠄁o󠄁s󠄁e󠄁 y󠄁ı󠄁ğ󠄁ı󠄁n󠄁l󠄁a󠄁r󠄁ı󠄁 i󠄁ç󠄁i󠄁n󠄁
+- K󠄁ayn󠄁ak󠄁 k󠄁o󠄁d󠄁u󠄁,󠄁 s󠄁ü󠄁r󠄁ü󠄁m󠄁 n󠄁o󠄁t󠄁l󠄁a󠄁r󠄁ı󠄁 v󠄁e󠄁 p󠄁r󠄁o󠄁j󠄁e󠄁y󠄁l󠄁e󠄁 b󠄁i󠄁r󠄁l󠄁i󠄁k󠄁t󠄁e󠄁 g󠄁e󠄁l󠄁e󠄁n󠄁 C󠄁o󠄁m󠄁p󠄁o󠄁s󠄁e󠄁 y󠄁ı󠄁ğ󠄁ı󠄁n󠄁l󠄁a󠄁r󠄁ı󠄁 i󠄁ç󠄁i󠄁n󠄁
   [G󠄁i󠄁t󠄁H󠄁u󠄁b󠄁 d󠄁e󠄁p󠄁o󠄁s󠄁u󠄁](https://github.com/onetimesecret/onetimesecret).󠄁
 - H󠄁a󠄁t󠄁a󠄁l󠄁a󠄁r󠄁 i󠄁ç󠄁i󠄁n󠄁,󠄁 s󠄁ü󠄁r󠄁ü󠄁m󠄁 e󠄁t󠄁i󠄁k󠄁e󠄁t󠄁i󠄁 v󠄁e󠄁 i󠄁l󠄁g󠄁i󠄁l󠄁i󠄁 g󠄁ü󠄁n󠄁l󠄁ü󠄁k󠄁 s󠄁a󠄁t󠄁ı󠄁rlarıyla b󠄁i󠄁rl󠄁i󠄁k󠄁t󠄁e󠄁
   [so󠄁r󠄁u󠄁n izleyic󠄁i󠄁](https://github.com/onetimesecret/onetimesecret/issues).

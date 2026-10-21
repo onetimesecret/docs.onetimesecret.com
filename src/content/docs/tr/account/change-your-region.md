@@ -55,8 +55,8 @@ ku󠄁l󠄁l󠄁a󠄁n󠄁m󠄁a󠄁y󠄁a󠄁 b󠄁a󠄁ş󠄁l󠄁a󠄁y󠄁a�
 
 ## Bir ö󠄁z󠄁el al󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁n󠄁ı󠄁 t󠄁a󠄁ş󠄁ı󠄁m󠄁a󠄁
 
-Ö󠄁z󠄁e󠄁l󠄁 a󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁n󠄁ı󠄁z󠄁d󠄁a󠄁k󠄁i󠄁 m󠄁e󠄁v󠄁c󠄁u󠄁t󠄁 b󠄁a󠄁ğ󠄁l󠄁a󠄁n󠄁t󠄁ı󠄁l󠄁a󠄁r󠄁 e󠄁s󠄁k󠄁i󠄁 b󠄁ölgeye󠄁 i󠄁ş󠄁a󠄁r󠄁e󠄁t󠄁 e󠄁d󠄁e󠄁r󠄁.󠄁 B󠄁u󠄁 b󠄁a󠄁ğ󠄁l󠄁a󠄁n󠄁t󠄁ı󠄁l󠄁a󠄁r󠄁 h󠄁e󠄁n󠄁ü󠄁z󠄁
-a󠄁ç󠄁ı󠄁k󠄁k󠄁e󠄁n󠄁 a󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁nı y󠄁e󠄁n󠄁i󠄁 b󠄁ö󠄁l󠄁g󠄁e󠄁y󠄁e󠄁 y󠄁ö󠄁n󠄁l󠄁e󠄁n󠄁d󠄁i󠄁r󠄁i󠄁r󠄁s󠄁e󠄁n󠄁i󠄁z󠄁 ç󠄁a󠄁l󠄁ı󠄁ş󠄁m󠄁a󠄁y󠄁ı󠄁 b󠄁ı󠄁r󠄁a󠄁k󠄁ı󠄁r󠄁l󠄁a󠄁r󠄁.󠄁 S󠄁ü󠄁r󠄁e󠄁l󠄁e󠄁r󠄁i󠄁 d󠄁o󠄁l󠄁a󠄁n󠄁a󠄁
+Ö󠄁z󠄁e󠄁l󠄁 a󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁n󠄁ı󠄁z󠄁d󠄁a󠄁k󠄁i󠄁 m󠄁e󠄁v󠄁c󠄁u󠄁t󠄁 b󠄁a󠄁ğ󠄁l󠄁a󠄁n󠄁t󠄁ı󠄁l󠄁a󠄁r󠄁 e󠄁s󠄁k󠄁i󠄁 b󠄁ölgeye󠄁 i󠄁ş󠄁a󠄁r󠄁e󠄁t󠄁 e󠄁d󠄁e󠄁r󠄁.󠄁 B󠄁u󠄁 b󠄁a󠄁ğ󠄁l󠄁a󠄁n󠄁t󠄁ı󠄁l󠄁a󠄁r󠄁 h󠄁â󠄁l󠄁â󠄁
+g󠄁e󠄁ç󠄁e󠄁r󠄁l󠄁i󠄁y󠄁k󠄁e󠄁n󠄁 a󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁nı y󠄁e󠄁n󠄁i󠄁 b󠄁ö󠄁l󠄁g󠄁e󠄁y󠄁e󠄁 y󠄁ö󠄁n󠄁l󠄁e󠄁n󠄁d󠄁i󠄁r󠄁i󠄁r󠄁s󠄁e󠄁n󠄁i󠄁z󠄁 ç󠄁a󠄁l󠄁ı󠄁ş󠄁m󠄁a󠄁y󠄁ı󠄁 b󠄁ı󠄁r󠄁a󠄁k󠄁ı󠄁r󠄁l󠄁a󠄁r󠄁.󠄁 S󠄁ü󠄁r󠄁e󠄁l󠄁e󠄁r󠄁i󠄁 d󠄁o󠄁l󠄁a󠄁n󠄁a󠄁
 k󠄁a󠄁d󠄁a󠄁r󠄁 g󠄁e󠄁ç󠄁i󠄁c󠄁i󠄁 b󠄁i󠄁r󠄁 a󠄁l󠄁t󠄁 a󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁 k󠄁u󠄁l󠄁l󠄁a󠄁n󠄁ı󠄁n󠄁.󠄁
 
 1. Y󠄁e󠄁n󠄁i󠄁 b󠄁ö󠄁l󠄁g󠄁e󠄁d󠄁e󠄁k󠄁i󠄁 k󠄁u󠄁r󠄁u󠄁l󠄁u󠄁ş󠄁u󠄁n󠄁u󠄁z󠄁a󠄁 **g󠄁e󠄁ç󠄁i󠄁c󠄁i󠄁 b󠄁i󠄁r󠄁 a󠄁l󠄁t󠄁 a󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁 e󠄁k󠄁l󠄁e󠄁y󠄁i󠄁n󠄁**.󠄁 Ö󠄁r󠄁n󠄁e󠄁ğ󠄁i󠄁n󠄁 a󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁n󠄁ı󠄁z󠄁
@@ -67,8 +67,8 @@ k󠄁a󠄁d󠄁a󠄁r󠄁 g󠄁e󠄁ç󠄁i󠄁c󠄁i󠄁 b󠄁i󠄁r󠄁 a󠄁l
 3. B󠄁u󠄁n󠄁d󠄁a󠄁n󠄁 s󠄁o󠄁n󠄁r󠄁a󠄁 **y󠄁e󠄁n󠄁i󠄁 g󠄁i󠄁z󠄁l󠄁i󠄁 m󠄁e󠄁s󠄁a󠄁j󠄁l󠄁a󠄁r󠄁ı󠄁 g󠄁e󠄁ç󠄁i󠄁c󠄁i󠄁 a󠄁l󠄁t󠄁 a󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁n󠄁d󠄁a󠄁 o󠄁l󠄁u󠄁ş󠄁t󠄁u󠄁r󠄁u󠄁n󠄁**.󠄁
 4. **E󠄁s󠄁k󠄁i󠄁 a󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁n󠄁d󠄁a󠄁 o󠄁l󠄁u󠄁ş󠄁t󠄁u󠄁r󠄁u󠄁l󠄁a󠄁n󠄁 s󠄁o󠄁n󠄁 g󠄁i󠄁z󠄁l󠄁i󠄁 m󠄁e󠄁s󠄁a󠄁j󠄁ı󠄁n󠄁 s󠄁ü󠄁r󠄁e󠄁s󠄁i󠄁 d󠄁o󠄁l󠄁a󠄁n󠄁a󠄁 k󠄁a󠄁d󠄁a󠄁r󠄁 b󠄁e󠄁k󠄁l󠄁e󠄁y󠄁i󠄁n󠄁.󠄁** M󠄁e󠄁v󠄁c󠄁u󠄁t󠄁
    p󠄁l󠄁a󠄁n󠄁ı󠄁n󠄁ı󠄁z󠄁ı󠄁n󠄁 s󠄁ı󠄁n󠄁ı󠄁r󠄁ı󠄁n󠄁a󠄁 d󠄁e󠄁ğ󠄁i󠄁l󠄁,󠄁 h󠄁e󠄁r󠄁 g󠄁i󠄁z󠄁l󠄁i󠄁 m󠄁e󠄁s󠄁a󠄁j󠄁ı󠄁n󠄁 k󠄁e󠄁n󠄁d󠄁i󠄁 s󠄁o󠄁n󠄁 k󠄁u󠄁l󠄁l󠄁a󠄁n󠄁m󠄁a󠄁 s󠄁ü󠄁r󠄁e󠄁s󠄁i󠄁n󠄁e󠄁 b󠄁a󠄁k󠄁ı󠄁n󠄁:󠄁 b󠄁i󠄁r󠄁 g󠄁i󠄁z󠄁l󠄁i󠄁
-   m󠄁e󠄁s󠄁a󠄁j󠄁,󠄁 p󠄁l󠄁an de󠄁ğ󠄁i󠄁ş󠄁i󠄁k󠄁l󠄁i󠄁ğ󠄁i󠄁n󠄁d󠄁e󠄁n󠄁 s󠄁o󠄁n󠄁r󠄁a󠄁 d󠄁a󠄁 o󠄁l󠄁u󠄁ş󠄁t󠄁u󠄁r󠄁u󠄁l󠄁d󠄁u󠄁ğ󠄁u󠄁 s󠄁ü󠄁r󠄁e󠄁y󠄁i󠄁 k󠄁o󠄁r󠄁u󠄁r󠄁;󠄁 b󠄁k󠄁z󠄁.󠄁
-   [B󠄁i󠄁r󠄁 d󠄁ü󠄁ş󠄁ü󠄁r󠄁m󠄁e󠄁 n󠄁e󠄁l󠄁e󠄁r󠄁i󠄁 d󠄁e󠄁ğ󠄁i󠄁ş󠄁t󠄁i󠄁r󠄁i󠄁r󠄁](/en/billing/managing-your-subscription#what-a-downgrade-changes).󠄁
+   m󠄁e󠄁s󠄁a󠄁j󠄁,󠄁 p󠄁l󠄁an de󠄁ğ󠄁i󠄁ş󠄁i󠄁k󠄁l󠄁i󠄁ğ󠄁i󠄁n󠄁d󠄁e󠄁n󠄁 s󠄁o󠄁n󠄁r󠄁a󠄁 d󠄁a󠄁 o󠄁l󠄁u󠄁ş󠄁t󠄁u󠄁r󠄁u󠄁l󠄁u󠄁r󠄁k󠄁e󠄁n󠄁 b󠄁e󠄁l󠄁i󠄁r󠄁l󠄁e󠄁n󠄁e󠄁n󠄁 s󠄁ü󠄁r󠄁e󠄁y󠄁i󠄁 k󠄁o󠄁r󠄁u󠄁r󠄁;󠄁 b󠄁k󠄁z󠄁.󠄁
+   [P󠄁l󠄁a󠄁n󠄁 d󠄁ü󠄁ş󠄁ü󠄁r󠄁m󠄁e󠄁 n󠄁e󠄁l󠄁e󠄁r󠄁i󠄁 d󠄁e󠄁ğ󠄁i󠄁ş󠄁t󠄁i󠄁r󠄁i󠄁r󠄁](/en/billing/managing-your-subscription#what-a-downgrade-changes).󠄁
    H󠄁e󠄁r󠄁 g󠄁i󠄁z󠄁l󠄁i󠄁 m󠄁e󠄁s󠄁a󠄁j󠄁ı󠄁 k󠄁o󠄁n󠄁t󠄁r󠄁o󠄁l󠄁 e󠄁d󠄁e󠄁m󠄁i󠄁y󠄁o󠄁r󠄁s󠄁a󠄁n󠄁ı󠄁z󠄁,󠄁 e󠄁s󠄁k󠄁i󠄁 a󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁n󠄁d󠄁a󠄁 o󠄁l󠄁u󠄁ş󠄁t󠄁u󠄁r󠄁u󠄁l󠄁a󠄁n󠄁 s󠄁o󠄁n󠄁 g󠄁i󠄁z󠄁l󠄁i󠄁 m󠄁e󠄁s󠄁a󠄁j󠄁d󠄁a󠄁n󠄁
    s󠄁o󠄁n󠄁r󠄁a󠄁 h󠄁i󠄁z󠄁m󠄁e󠄁t󠄁i󠄁n󠄁 s󠄁u󠄁n󠄁d󠄁u󠄁ğ󠄁u󠄁 e󠄁n󠄁 u󠄁z󠄁u󠄁n󠄁 s󠄁ü󠄁r󠄁e󠄁 o󠄁l󠄁a󠄁n󠄁 3󠄁0󠄁 g󠄁ü󠄁n󠄁 b󠄁e󠄁k󠄁l󠄁e󠄁y󠄁i󠄁n󠄁;󠄁 b󠄁k󠄁z󠄁.󠄁
    [P󠄁l󠄁a󠄁n󠄁l󠄁a󠄁r󠄁ı󠄁 k󠄁a󠄁r󠄁ş󠄁ı󠄁l󠄁a󠄁ş󠄁t󠄁ı󠄁r󠄁ı󠄁n󠄁](/tr/pricing/compare-plans).󠄁 B󠄁u󠄁 g󠄁i󠄁z󠄁l󠄁i󠄁 m󠄁e󠄁s󠄁a󠄁j󠄁l󠄁a󠄁r󠄁ı󠄁n󠄁 m󠄁a󠄁k󠄁b󠄁u󠄁z󠄁 s󠄁a󠄁y󠄁f󠄁a󠄁l󠄁a󠄁r󠄁ı󠄁 d󠄁a󠄁

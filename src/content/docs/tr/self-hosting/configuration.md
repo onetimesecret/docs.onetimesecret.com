@@ -2,8 +2,6 @@
 textprov: true
 title: "Yapılandırma Referansı"
 description: "Tüm Onetime Secret yapılandırma seçenekleri için eksiksiz referans"
-sidebar:
-  order: 4
 ---
 
 Bu kapsamlı kılavuz, kendi sunucunuzda barındırılan Onetime Secret örnekleri için tüm yapılandırma seçeneklerini kapsar.
@@ -28,7 +26,7 @@ Ana yapılandırma dosyası `etc/config.yaml` d󠄁o󠄁s󠄁y󠄁a󠄁s󠄁ı�
 **Başlarken:**
 1. Örneği kopyalayın: `cp etc/defaults/config.defaults.yaml etc/config.yaml`
 2. De󠄁ğ󠄁e󠄁r󠄁l󠄁e󠄁r󠄁i󠄁 d󠄁ağıtımınıza󠄁 g󠄁ö󠄁r󠄁e󠄁 gerektiği gibi düzenleyin
-3. En yaygın ayarların çoğu ortam değişkenleriyle geçersiz kılınabilir
+3. Y󠄁aygın ayarların çoğu ortam değişkenleriyle geçersiz kılınabilir
 
 **Eksiksiz yapılandırma dosyasını görüntüley󠄁i󠄁n󠄁:**
 [config.defaults.yaml](https://raw.githubusercontent.com/onetimesecret/onetimesecret/main/etc/defaults/config.defaults.yaml)
