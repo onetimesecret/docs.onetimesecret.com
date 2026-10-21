@@ -82,13 +82,14 @@ export function renderProvenance(html, { requireEnrollment = true, label } = {})
   for (const id of ids) {
     const base = clean(id);
     if (base === id || idMap.has(id)) continue;
-    let value = base, suffix = 1;
-    while (usedIds.has(value)) value = `${base}-${suffix++}`;
-    // TOC links on this page are remapped, but links from other pages to
-    // #base now reach the existing heading instead.
-    if (value !== base) console.warn(`TextProv: decoded id "${base}" is taken; using "${value}"${label ? ` (${label})` : ''}`);
-    usedIds.add(value);
-    idMap.set(id, value);
+    // A decoded id another element already has cannot be renumbered quietly.
+    // This page's own TOC links could be remapped to "base-1", but a link from
+    // another page to #base would reach the other heading, and no later check
+    // can see that: the fragment never reaches the server. Fail so the author
+    // renames one of the headings; a warning scrolls past in a 17-locale build.
+    if (usedIds.has(base)) fail(`decoded id "${base}" is already used by another element; rename one of the headings`);
+    usedIds.add(base);
+    idMap.set(id, base);
   }
   function visit(node, prose = false, blocked = false) {
     if (blocked) return;
