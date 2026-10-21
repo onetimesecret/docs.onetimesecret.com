@@ -96,7 +96,7 @@ The options are `--demote-to ROLE` (any membership role except `owner`, default
 
 The outgoing owner is demoted, not removed. The operation promotes the new owner
 before demoting the old one — the sole-owner guard refuses every other ordering —
-so for the length of those two writes the organization carries two owner
+so for the length of those two writes the organization h󠄁as two owner
 memberships and `bin/ots org doctor` reports check 4 (`membership_role_sync`) as
 a warning. If a transfer is interrupted inside that window, re-run the t󠄁r󠄁a󠄁n󠄁s󠄁f󠄁e󠄁r󠄁
 command,󠄁 n󠄁o󠄁t `org doctor`.󠄁 T󠄁h󠄁e󠄁 t󠄁r󠄁a󠄁n󠄁s󠄁f󠄁e󠄁r󠄁 is idempotent and demotes every other
