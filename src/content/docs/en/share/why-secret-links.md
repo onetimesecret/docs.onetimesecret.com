@@ -1,46 +1,61 @@
 ---
-title: Why use Secret Links?
-description: Discover the compelling reasons to use Secret Links for secure, one-time sharing of sensitive information.
+title: Why use secret links?
+description: Share a temporary link instead of copying sensitive information into email, chat, or tickets, and understand what that does and does not protect.
 audience: end-user
 pageType: concept
+sourceOfTruth: onetimesecret at 145c1e7cfa — lib/onetime/models/secret.rb (encrypted content field); lib/onetime/models/secret/features/secret_state_management.rb (single reveal and burn); apps/api/v2/logic/secrets/show_secret.rb (confirmation and passphrase checks)
 ---
 
+Pasting a password into a conversation leaves the password in that conversation's
+history. A secret link lets you send a temporary address instead. Once its
+content is revealed, burned, or expired, the service no longer serves it through
+that link.
 
-In today's digital age, sharing sensitive information securely is more important than ever. Secret Links offer a robust solution to this challenge, providing a unique blend of security, simplicity, and peace of mind. Here's why you should consider using Secret Links:
+## Reduce copies in conversations
 
-## 1. Enhanced Security
+The recipient gets the information without the sender pasting it directly into
+an email, chat, or ticket. An old message can still contain the link, but after
+the secret is unavailable, that link cannot retrieve its content.
 
-Secret Links are designed with security as the top priority:
+You can create and share a secret without an account. A recipient needs a
+browser, the link, and any passphrase you set.
 
-- **One-time access**: Each link can only be viewed once, dramatically reducing the risk of unauthorized access.
-- **Self-destruction**: After viewing, the link and its content are permanently destroyed, leaving no digital footprint.
-- **Encrypted transmission**: Your data is encrypted end-to-end, ensuring it remains protected during transit.
+## Choose a limited lifetime
 
-## 2. Simplicity and Ease of Use
+Set an expiry so an unread secret is deleted when it is no longer needed.
+If you need to withdraw it sooner, burn it from the receipt, entering its
+passphrase if one was set. See [Sharing secrets](/en/share).
 
-- **No account required**: For basic use, you don't need to create an account or remember additional passwords.
-- **User-friendly interface**: Creating and sharing a Secret Link is a straightforward process that takes just a few clicks.
-- **Cross-platform compatibility**: Secret Links work on any device with a web browser, making sharing across different systems effortless.
+Loading the confirmation page does not use up the secret. Confirming the reveal
+retrieves it once. A sender can check the [receipt](/en/share/your-receipt) for
+recorded status without using the recipient's reveal.
 
-## 3. Control Over Shared Information
+## Understand the protection
 
-- **Expiration options**: Set custom expiration times for your links, giving you control over how long the information is available.
-- **Burn after reading**: Once the recipient views the secret, it's gone forever, ensuring the information doesn't linger.
-- **Access notifications**: (For premium users) Receive notifications when your secret has been viewed.
+The hosted service uses HTTPS for transport and stores secret content encrypted.
+The service encrypts and decrypts content on its servers. A passphrase adds an
+access check, and should be sent through a different channel from the link.
 
-## 4. Compliance and Best Practices
+See [Data protection](/en/security/data-protection) for data handling, including
+retention considerations. Receipts and organization activity can remain after
+the secret is no longer available, so a secret link does not mean there is no
+record of the share.
 
-- **Data minimization**: By sharing information that self-destructs, you're adhering to data minimization principles recommended by many privacy regulations.
-- **Audit trails**: (For business users) Keep track of secret creation and access, helping with compliance requirements.
+## Know the limits
 
-## 5. Versatility
+Anyone with a live link and any required passphrase can reveal it. The service
+does not verify that this is your intended recipient. After a reveal, the reader
+can copy, save, or forward the content. The one-time link does not control those
+copies or revoke a password, token, or license key in the system that issued it.
 
-- **Multiple use cases**: From sharing passwords to sending confidential business information, Secret Links are versatile enough for various scenarios.
-- **API integration**: For developers, our API allows seamless integration of Secret Links into your own applications and workflows.
+Keep information you need later in its intended long-term location. Onetime
+Secret is for delivery; an expiring link is not a backup for recovery codes.
 
-## 6. Peace of Mind
+## Next steps
 
-- **Reduced digital footprint**: By using Secret Links, you minimize the amount of sensitive information stored in emails, chat logs, or other persistent communication channels.
-- **Confidence in sharing**: Share sensitive information with the assurance that it won't fall into the wrong hands or remain accessible indefinitely.
-
-Secret Links provide a powerful tool for anyone needing to share sensitive information securely. By combining cutting-edge security features with user-friendly design, they offer an unparalleled solution for confidential communication in the digital world.
+- [Send your first secret](/en/start/send-your-first-secret) — try the process
+- [Use cases](/en/share/use-cases) — practical examples and limitations
+- [Preferences](/en/account/preferences) — optional reveal notifications
+- [Secret Activity](/en/organizations/audit-trail) — organization event records
+- [Security best practices](/en/security/best-practices) — links, passphrases,
+  and recipient checks

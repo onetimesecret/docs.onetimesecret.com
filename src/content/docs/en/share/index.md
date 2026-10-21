@@ -1,197 +1,146 @@
 ---
 title: Sharing secrets
-description: Create a secret link, choose how long it lives and who can open it, then hand it over so that only the right person can read it, once.
+description: Create a one-time secret link, choose its lifetime and optional passphrase, send it, and check its receipt.
 audience: end-user
 pageType: how-to
-sourceOfTruth: onetimesecret/lib/onetime/models/receipt.rb:287 (the receipt is kept for twice the secret's lifetime); onetimesecret/apps/api/v2/logic/secrets/base_secret_action.rb:283-303,481-485 (the recipient email requires an account and reaches the first address only)
+sourceOfTruth: onetimesecret at 145c1e7cfa — lib/onetime/models/receipt.rb (receipt lifetime); apps/api/v2/logic/secrets/base_secret_action.rb (recipient validation and first-address delivery); lib/onetime/logic/base.rb (byte limit); src/shared/composables/useTextarea.ts (browser truncation); src/apps/workspace/components/forms/WorkspaceSecretForm.vue (generated-password navigation); apps/api/v2/logic/secrets/show_receipt.rb (generated-value display conditions); apps/api/v2/logic/secrets/show_secret.rb (safe loading and creator identification); apps/api/v2/logic/secrets/burn_secret.rb (passphrase check)
 ---
 
-This page takes one secret from nothing to delivered. Everything on the way is
-optional except the content itself; what follows is what each choice does and
-what it costs you.
+Create a secret link, send it to your recipient, and use the receipt to check
+its status. You can enter your own content or generate a password to share.
+
+For a shorter walkthrough, see
+[Send your first secret](/en/start/send-your-first-secret).
 
 ## Before you start
 
-You do not need an account. Anyone can create a secret link and hand it over.
-
-Signing in changes two things that matter here:
-
-- The built-in recipient email becomes available. Without an account it is
-  refused outright, not merely hidden.
-- The secret is indexed to your account, so it appears in your recent secrets
-  and you can find its receipt again later. Secrets you create while signed out
-  are never attached to your account — if you lose the receipt link, there is no
-  way back to it. See
-  [Dashboard and recent secrets](/en/account/dashboard-and-recent-secrets).
+You do not need an account to create a secret link and send it yourself.
+Signing in lets you use the recipient email field and find receipts again in
+[Dashboard and recent secrets](/en/account/dashboard-and-recent-secrets).
+Secrets created while signed out are not added to your account later, so keep
+their receipt links if you need to check their status.
 
 ## Write the secret, or generate one
 
-There are two ways to create a secret, and they behave differently afterwards.
+**Type or paste the content.** Save your own copy first if you will need it
+later. Content you enter is not shown back to you after you create the link.
+An empty submission is rejected with *You did not provide anything to share.*
 
-**Type or paste the content.** Whatever you enter is what the recipient gets.
-An empty submission is rejected — *You did not provide anything to share.*
+Check the content after pasting. The form truncates input beyond its character
+limit. The server separately rejects content over its byte limit without
+trimming it. Accented letters, non-Latin scripts, and emoji can use multiple
+bytes, so content below the displayed character limit can still be rejected.
 
-**Generate a password.** The service mints a random value for you, using the
-length and character sets it is configured with — neither is yours to set in the
-web app. When more than one character set is enabled, the result is guaranteed
-to contain at least one character from each, and every character comes from a
-cryptographic random source.
+**Generate a password.** This creates a random password using the length and
+character sets configured by the service. The web form does not let you change
+those settings.
 
-The cost of generating is that you never see the value while creating it. It is
-shown to you **once**, on your receipt, on the first load of that page and only
-within a short window after creation. A second load will not show it again, and
-neither will a reload of the same page. If you miss it, create a new secret —
-there is no way to recover it.
+Without a passphrase, the generated value can be displayed once on the receipt,
+within a short window after creation. With a passphrase, it is never displayed
+on the receipt; the recipient must reveal it through the secret link.
 
-That makes one option worth checking before you generate. *Stay on page* —
-which keeps you on the create form so you can make several secrets in a row — is
-not disabled when you generate, and leaving it on costs you the password: the
-app only takes you to the receipt when it is off, and the receipt is the only
-place a generated value is ever shown. Turn *Stay on page* off before you
-generate.
-
-:::caution[A secret you typed is never shown back to you]
-Only generated passwords are ever redisplayed, and only under the conditions
-above. If you paste in a value you need to keep, put it where it belongs — your
-password manager, your configuration — **before** you create the link. Onetime
-Secret is a delivery mechanism, not storage.
-:::
-
-Content has a size ceiling, enforced in two places that behave differently. The
-compose box stops accepting input once it is full, so pasting a body longer than
-that is cut off in the browser with nothing to tell you — watch the character
-counter before you create the link. Content that reaches the server over the
-limit is rejected outright rather than trimmed.
-
-The server ceiling is measured in bytes while the compose box counts characters,
-so accented letters, non-Latin scripts and emoji consume more of the server
-budget than the visible character count suggests.
+The signed-in creation form opens the receipt when you generate a password,
+even if **Stay on page** is enabled. That preference applies when you enter
+your own content. Save the generated value before leaving the receipt; a
+reload cannot show it again. See the full
+[generated-password display conditions](/en/share/your-receipt#seeing-a-generated-password-one-look).
 
 ## Choose how long it lives
 
-Every secret gets a lifetime, fixed at the moment you create it. When it runs
-out the stored secret is deleted whether or not anyone read it. On the create
-form the field is labelled *Expiration Time*, and each choice reads *Expires in
-…*. Deletion is enforced by the datastore itself rather than by a cleanup job,
-so it does not depend on anything running on schedule.
+Choose the shortest expiration your recipient can realistically use. On the
+form, the choices read **Expires in …**. When that lifetime ends, the stored
+secret is deleted even if nobody has revealed it.
 
-Two things about the durations you are offered:
+Available lifetimes depend on the service and your plan. Anonymous sharing has
+its own maximum lifetime. A self-hosted operator configures the available
+options; see [Environment variables](/en/self-hosting/environment-variables).
 
-- The list is filtered to what would actually be enforced for you, so in normal
-  use it does not offer a duration the server would shorten. The exception is a
-  ceiling shorter than every duration configured: the shortest one is still
-  offered, and the server shortens it further.
-- Secrets created without an account have their own separate maximum lifetime.
-
-Prefer the shortest duration the recipient can realistically work with. The
-lifetime is the window in which a link that leaked — forwarded, screenshotted,
-left in a chat log — is still live.
-
-Your receipt deliberately outlives the secret: it is kept for **twice** the
-secret's lifetime, so you can still see what happened to a secret after the
-secret itself is gone.
-
-Self-hosted instances configure the available durations themselves; see
-[Environment variables](/en/self-hosting/environment-variables).
+The receipt lasts twice the secret's chosen lifetime, measured from creation,
+so you can check what happened after the secret is no longer available.
 
 ## Decide who can open it
 
-By default, anyone holding the link can open the secret. A passphrase narrows
-that to anyone holding the link *and* the passphrase.
+Anyone with the secret link can reveal it. Adding a passphrase requires them
+to supply both the link and the passphrase; the service does not check whether
+they are your intended recipient.
 
-- The passphrase controls **who may open** the secret. It is not the key the
-  content is encrypted with — see
-  [Data protection](/en/security/data-protection).
-- A wrong passphrase does not consume the secret. The recipient sees *Incorrect
-  passphrase* and the secret is untouched. Repeated guessing is rate limited.
-- Nobody can look it up or recover it — not the recipient, not you, not Onetime
-  Secret. Your receipt records only that a passphrase is required.
-- Burning the secret early also requires the passphrase. If you lose it, you can
-  no longer destroy the secret on demand; you can only wait for it to expire.
+- Send the passphrase through a **different channel** from the link, such as
+  a phone call when you send the link by email.
+- Keep the passphrase safe. It cannot be looked up or recovered by Onetime
+  Secret, and it is also needed to burn the secret early.
+- An incorrect passphrase does not reveal or consume the secret. Repeated
+  incorrect attempts are rate limited.
 
-Send the passphrase through a different channel from the link — a different app,
-a phone call. Sending both in the same message adds nothing: anyone who can read
-one can read the other.
+The passphrase is an access check, not the encryption key for the content.
+See [Data protection](/en/security/data-protection) for the service's encryption
+and data-handling overview.
 
 ## Hand over the link
 
-Most links are delivered by the sender: pasted into a chat, a ticket, an email
-you write yourself. Onetime Secret does not need to be in the delivery path at
-all.
+After creating the secret, send the **secret link**, whose address contains
+`/secret/`. Keep the **receipt link**, under `/receipt/`, private.
 
-If you are signed in you can instead enter a recipient address and let the
-service send it. Three things to know about that option:
+Copy the secret link into your chat, ticket, or email. If you are signed in,
+you can instead enter a recipient email address on the creation form:
 
-- The email carries the **link only, never the content**, and it tells the
-  recipient whether a passphrase is required without carrying the passphrase.
-- The address is checked before the secret is created, so a malformed address
-  fails at creation rather than after the fact. Passing that check is not proof
-  of delivery: treat a sent email as sent, not as received.
-- Only the **first** address is emailed. Additional addresses receive nothing —
-  pass the link on yourself if more than one person needs it.
+- The email contains the link, not the secret content or passphrase.
+- The address is checked before creation, but that check does not establish
+  that the message was delivered or read.
+- Only the first address is emailed if several are supplied. Create a separate
+  secret for each person who needs to reveal the content. Forwarding one link
+  does not give each recipient a separate reveal.
 
-Whichever route you use, the link is the credential. There is no second identity
-check: whoever opens it first gets the content, whether or not that is the
-person you meant. The link itself is not guessable — the identifier carries 256
-bits of randomness — so the risk is the channel you send it through, not someone
-finding it by chance.
+Loading the link opens a confirmation page without consuming the secret.
+Selecting **Click to reveal** retrieves the content once. A mail scanner or
+chat preview that only loads the page does not consume it; software that
+submits the reveal action can.
 
-Merely loading the link does not consume the secret; an explicit confirmation
-does. A link scanner, mail gateway or chat preview that fetches the address will
-not burn it. [What recipients see](/en/share/what-recipients-see) covers the
-other side in full.
+After revealing the content, a recipient can save or share their own copy.
+The one-time limit applies to retrieval from Onetime Secret.
 
 ## Check that it worked
 
-Do not open your own link to test it. Opening it consumes the secret exactly as
-the recipient's open would. The app warns you first — *You created this secret.
-If you view it, the recipient will not be able to see it.* — but if you continue
-anyway, the recipient will find nothing.
+**Do not reveal your own secret to test it.** Doing so consumes it before your
+recipient can read it. A signed-in creator may see a warning; the app cannot
+identify the creator of a secret made while signed out.
 
-Check the **receipt** instead. It is created at the same time as the secret, at
-a different URL with a different identifier. The receipt does not store the
-content, so for a secret you typed it can never show you what you sent; the one
-exception is a generated password, which it displays once as described above.
+Open the **receipt** instead. Loading it does not consume the recipient's
+reveal. It shows:
 
-- Untouched, it reads **New** — *Secret link has been created and not yet
-  viewed.*
-- Once anything has loaded the link without confirming, it reads **Previewed** —
-  *Secret link has been opened and is ready to be revealed.* Nothing has been
-  handed over and the recipient can still read it. A link scanner or a chat
-  preview is enough to move a receipt to Previewed.
-- After the recipient reveals it, it reads **Revealed**, with the time.
+- **New**: the secret link has not been previewed.
+- **Previewed**: the link has been loaded without revealing the content. A
+  scanner can cause this status; it does not identify your recipient.
+- **Revealed**: a reveal succeeded, with its time. This does not prove the
+  intended person read the content.
 
-If you have an account you can turn on an email that tells you when one of your
-secrets was revealed. It is off unless you enable it — see
-[Preferences](/en/account/preferences).
+See [Your receipt](/en/share/your-receipt) for other statuses and the conditions
+for displaying a generated password. Keep the receipt private: someone with
+it can burn an unread secret if they also supply its passphrase when required.
 
-Keep the receipt link to yourself. Anyone holding it can destroy the secret, and
-for a generated password, whoever reaches the receipt first within the short
-window after creation sees the password itself. For a secret you typed, the
-receipt never shows the content.
+To enable optional reveal emails, see [Preferences](/en/account/preferences).
 
 ## If you need to take it back
 
-Burn the secret from its receipt page. Burning destroys it before anyone reads
-it; it is permanent and cannot be undone. Afterwards the recipient sees the same
-*This secret has been viewed or expired* page as for any other dead link — they
-are not told that it was burned. A secret with a passphrase needs that
-passphrase to burn.
+Open the receipt and choose to **burn** the unread secret. Confirm the action
+and enter its passphrase if one was set. Burning permanently removes the stored
+secret. The recipient gets the same unavailable-secret page as for an expired
+or already revealed link.
 
-Once a secret has been revealed there is nothing left to take back. Create a new
-secret and send a new link.
+If you lose the passphrase, you cannot burn the secret; it remains subject to
+its chosen expiry. Once a secret has been revealed, burning cannot remove any
+copy the recipient saved. If you need to withdraw a password or API key that
+someone has already read, change or revoke it in the system that issued it.
 
 ## More on sharing
 
-- [Your receipt](/en/share/your-receipt) — what your receipt shows, how long it
-  lasts, and burning.
-- [What recipients see](/en/share/what-recipients-see) — the recipient's side,
-  in order.
-- [When a link doesn't work](/en/share/when-a-link-doesnt-work) — diagnosing a
-  dead, damaged or refused link.
-- [Why secret links](/en/share/why-secret-links) — what this solves that email
-  and chat do not.
-- [Use cases](/en/share/use-cases) — worked examples, from credentials to
-  recovery codes.
-- [Custom domains](/en/custom-domains) — sharing from your own domain instead of
-  onetimesecret.com.
+- [Your receipt](/en/share/your-receipt) — statuses, lifetime, and burning
+- [What recipients see](/en/share/what-recipients-see) — opening and revealing
+  a secret
+- [When a link doesn't work](/en/share/when-a-link-doesnt-work) — errors and
+  next steps
+- [Request a secret](/en/share/request-secret) — ask someone to send
+  sensitive information to you
+- [Why use secret links](/en/share/why-secret-links) — how links reduce copies
+  in conversations
+- [Use cases](/en/share/use-cases) — examples and their limitations
+- [Custom domains](/en/custom-domains) — sharing through your own domain

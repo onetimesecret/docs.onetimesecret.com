@@ -96,8 +96,9 @@ receipt, within a short window after creation. With a passphrase, it is never
 shown on the receipt; only your recipient can reveal it.
 
 Before using this option, read [Sharing secrets](/en/share#write-the-secret-or-generate-one)
-and [the generated-password display conditions](/en/share/your-receipt#seeing-a-generated-password-one-look),
-including how the **Stay on page** setting affects whether you see the value.
+and [the generated-password display conditions](/en/share/your-receipt#seeing-a-generated-password-one-look).
+The signed-in form opens the receipt for generated passwords even when
+**Stay on page** is enabled.
 
 ### Have the service email the link
 
