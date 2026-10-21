@@ -237,12 +237,21 @@ describe('generate — env starter per selection', () => {
     expect(valued).toEqual(['SAML_ENABLED=true']);
   });
 
+  it('asks for regional addresses only when regions are enabled', () => {
+    const enabled = generate({ ...defaultSelections(), regions_enabled: true });
+    expect(enabled.envSnippet).toContain('JURISDICTION=');
+    expect(enabled.envSnippet).toContain('JURISDICTIONS=');
+    expect(generate(defaultSelections()).envSnippet).not.toContain('JURISDICTION');
+  });
+
   it('surfaces full-mode secrets in the env starter', () => {
     const sel: Selections = { ...defaultSelections(), deployment_mode: 'full' };
     const result = generate(sel);
     expect(result.envSnippet).toContain('AUTH_DATABASE_URL=');
     expect(result.envSnippet).toContain('AUTH_SECRET=');
     expect(result.envSnippet).toContain('ARGON2_SECRET=');
+    expect(result.envSnippet).toContain('ACCOUNT_ID_SECRET=');
+    expect(generate(defaultSelections()).envSnippet).not.toContain('ACCOUNT_ID_SECRET=');
   });
 });
 
