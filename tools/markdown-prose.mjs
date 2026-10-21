@@ -2,6 +2,7 @@ import { unified } from "unified";
 import remarkParse from "remark-parse";
 import remarkGfm from "remark-gfm";
 import remarkFrontmatter from "remark-frontmatter";
+import { frontmatter } from './frontmatter.mjs';
 
 const parser = unified().use(remarkParse).use(remarkGfm).use(remarkFrontmatter, ["yaml", "toml"]);
 const strip = (value) => value.replace(/[\u{E0100}-\u{E0104}]/gu, "");
@@ -73,7 +74,9 @@ function inspect(source) {
     for (const child of node.children ?? []) walk(child);
   }
   walk(tree);
-  return { ranges, shape: shape(tree) };
+  const metadata = frontmatter(source);
+  return { ranges, shape: shape(tree), hasFrontmatter: metadata !== null,
+    hasTextprov: metadata !== null && Object.hasOwn(metadata, 'textprov'), textprov: metadata?.textprov ?? null };
 }
 
 let input = "";

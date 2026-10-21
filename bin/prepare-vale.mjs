@@ -4,16 +4,16 @@
 import { readdir, readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { clean } from '../src/lib/textprov/html.mjs';
+import { frontmatter } from '../tools/frontmatter.mjs';
 
-if (process.env.CI !== 'true') throw new Error('prepare-vale runs only in a disposable CI checkout');
+if (process.env.CI !== 'true' || process.env.GITHUB_ACTIONS !== 'true') throw new Error('prepare-vale runs only in a disposable GitHub Actions checkout');
 async function visit(directory) {
   for (const entry of await readdir(directory, { withFileTypes: true })) {
     const path = join(directory, entry.name);
     if (entry.isDirectory()) await visit(path);
     else if (/\.(md|mdoc)$/.test(entry.name)) {
       const source = await readFile(path, 'utf8');
-      const metadata = source.startsWith('---') ? source.split('---', 3)[1] : '';
-      if (metadata.split(/\r?\n/).includes('textprov: true')) await writeFile(path, clean(source));
+      if (frontmatter(source)?.textprov === true) await writeFile(path, clean(source));
     }
   }
 }

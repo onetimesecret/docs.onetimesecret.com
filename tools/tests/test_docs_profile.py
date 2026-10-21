@@ -7,6 +7,14 @@ import dogfood
 
 
 class DocsProfileTests(unittest.TestCase):
+    def test_yaml_owns_enrollment_spacing_comments_and_boolean_types(self):
+        for newline in ('\n', '\r\n'):
+            for field, expected in [('textprov:   true # recorded', True), ('textprov: false', False), ('textprov: "true"', 'true')]:
+                source = newline.join(['---', field, 'title: Plain', '---', '', 'Prose'])
+                info = dogfood.markdown_info([source])[0]
+                self.assertEqual(info['textprov'], expected)
+                self.assertTrue(info['hasFrontmatter'])
+
     def test_markdoc_tags_and_attributes_are_protected(self):
         source = '---\ntitle: Plain title\n---\n\n{% card title="Do not mark" %}\n\nNew **prose**, `code`, and [label](/en/start).\n\n{% /card %}\n'
         result = dogfood.mark_edit(Path('page.mdoc'), '', 0, 0, source, 'ai')

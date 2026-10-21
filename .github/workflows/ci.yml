@@ -68,7 +68,9 @@ jobs:
         env:
           PROVENANCE_BASE: ${{ github.event.pull_request.base.sha }}
           PROVENANCE_HEAD: ${{ github.event.pull_request.head.sha }}
-        run: python3 tools/dogfood.py check --preserve-only --base "$PROVENANCE_BASE" --head "$PROVENANCE_HEAD"
+        run: |
+          PROVENANCE_MERGE_BASE=$(git merge-base "$PROVENANCE_BASE" "$PROVENANCE_HEAD")
+          python3 tools/dogfood.py check --preserve-only --base "$PROVENANCE_MERGE_BASE" --head "$PROVENANCE_HEAD"
 
       - name: Build
         run: pnpm run build

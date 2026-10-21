@@ -52,6 +52,28 @@ describe('static TextProv HTML', () => {
     const enrolled = html.replace('data-textprov-document="false"', 'data-textprov-document="true"');
     expect(renderProvenance(enrolled, { requireEnrollment: true })).toContain('data-textprov="ai">Example</span>');
   });
+
+  it('preserves raw-text elements, inert templates, and opaque island props', () => {
+    for (const tag of ['noscript', 'iframe', 'noembed', 'noframes', 'xmp', 'plaintext', 'template']) {
+      const html = `<${tag}><b>${ai('Example')}</b></${tag}>`;
+      expect(renderProvenance(html)).toBe(html);
+    }
+    const props = JSON.stringify({ value: [0, ai('Example')] });
+    const html = `<astro-island props='${props}'><p>${ai('Example')}</p></astro-island>`;
+    const doc = new JSDOM(renderProvenance(html)).window.document;
+    expect(doc.querySelector('astro-island')?.getAttribute('props')).toBe(props);
+    expect(doc.querySelector('p')?.textContent).toBe('Example');
+  });
+
+  it('remaps accessibility and label references when a decoded ID collides', () => {
+    const marked = ai('topic');
+    const html = `<h2 id="topic">Topic</h2><h2 id="${marked}">${ai('Topic')}</h2><label for="${marked}">Label</label><input aria-labelledby="${marked} topic" aria-controls="${marked}" data-private="${marked}">`;
+    const doc = new JSDOM(renderProvenance(html)).window.document;
+    expect(doc.querySelector('label')?.getAttribute('for')).toBe('topic-1');
+    expect(doc.querySelector('input')?.getAttribute('aria-labelledby')).toBe('topic-1 topic');
+    expect(doc.querySelector('input')?.getAttribute('aria-controls')).toBe('topic-1');
+    expect(doc.querySelector('input')?.getAttribute('data-private')).toBe(marked);
+  });
 });
 
 describe('TextProv toggle', () => {

@@ -120,7 +120,8 @@
  * less the soft hyphen. Outside it the U+E0101 form falls back to the plain
  * glyph, but the PUA-B form has no glyph at all and renders as a missing-glyph
  * box, spaces and curly quotes and dashes included. provenance.test.ts checks
- * the mapping in every file.
+ * the mapping in every file. The docs renderer decodes enrolled prose before
+ * publishing; the TextProv toggle uses CSS spans rather than these glyphs.
  */
 
 /* Zilla Slab Provenance: headings, nav (via --font-brand). */

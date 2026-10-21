@@ -3,7 +3,11 @@ import textprov from '../../../vendor/textprov/textprov.cjs';
 
 const escape = (text) => text.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
 const candidate = /[\u{E0101}\u{100000}-\u{10FFFF}]/u;
-const excluded = new Set(['script', 'style', 'code', 'pre', 'textarea', 'svg', 'math']);
+const excluded = new Set(['script', 'style', 'code', 'pre', 'textarea', 'svg', 'math',
+  'noscript', 'iframe', 'noembed', 'noframes', 'xmp', 'plaintext', 'template']);
+const references = new Set(['aria-labelledby', 'aria-describedby', 'aria-controls', 'aria-owns',
+  'aria-flowto', 'aria-activedescendant', 'aria-details', 'aria-errormessage', 'for', 'list', 'headers', 'form']);
+const labels = new Set(['aria-label', 'title', 'alt']);
 
 // This integration reads only recorded AI marks in opted-in docs. In particular,
 // U+E0100 remains untouched: 辻 + U+E0100 is a real ideographic variation sequence.
@@ -70,7 +74,12 @@ export function renderProvenance(html, { requireEnrollment = false } = {}) {
     // Heading IDs, TOC fragments, and accessible labels can derive from marked
     // headings. Clean them too so deep links and accessibility text stay usable.
     for (const attr of attrs) {
+      // Never rewrite serialized island props, event handlers, or other opaque
+      // attributes. Only derived text labels and actual ID references belong here.
+      if (attr.name !== 'id' && attr.name !== 'href' && !references.has(attr.name) &&
+          !labels.has(attr.name) && !(node.tagName === 'meta' && attr.name === 'content')) continue;
       let value = attr.value;
+      if (attr.name === 'href' && !value.startsWith('#')) continue;
       if (attr.name === 'href' && value.startsWith('#')) {
         try { value = decodeURI(value); } catch { /* Keep malformed legacy URLs. */ }
       }
@@ -78,6 +87,8 @@ export function renderProvenance(html, { requireEnrollment = false } = {}) {
         ? (idMap.get(value) ?? clean(value))
         : attr.name === 'href' && value.startsWith('#')
           ? '#' + (idMap.get(value.slice(1)) ?? clean(value.slice(1)))
+          : references.has(attr.name)
+            ? value.replace(/\S+/g, id => idMap.get(id) ?? clean(id))
           : clean(value);
       if (plain !== value) {
         const location = node.sourceCodeLocation?.attrs?.[attr.name];
@@ -85,6 +96,7 @@ export function renderProvenance(html, { requireEnrollment = false } = {}) {
           `${attr.name}="${escape(plain).replaceAll('"', '&quot;')}"`]);
       }
     }
+    // Inert template contents (node.content) deliberately remain untouched.
     for (const child of node.childNodes ?? []) visit(child, prose, blocked);
   }
   visit(tree);

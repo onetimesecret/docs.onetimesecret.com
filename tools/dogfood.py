@@ -262,8 +262,8 @@ def check_repository(root, base, head=None, staged=False, require_marks=True):
             after = read_text(root / path)
         problems = check_text(Path(path), before, after, require_marks=require_marks)
         if path.startswith('src/content/docs/') and chr(MAPPING.selectors['ai']) in after:
-            metadata = after.split('---', 2)[1] if after.startswith('---') else ''
-            if 'textprov: true' not in metadata.splitlines():
+            metadata = markdown_info([after])[0]
+            if metadata['textprov'] is not True:
                 problems.append((1, 1, 'AI-marked docs must opt in with textprov: true in frontmatter'))
         if problems:
             failed += 1
@@ -346,13 +346,18 @@ def main(argv=None):
         if path.relative_to(root).as_posix().startswith('src/content/docs/'):
             if args.state != 'ai':
                 raise ValueError('docs authoring records AI edits only; human contributors edit normally and preserve existing marks')
-            if not result.startswith(('---\n', '---\r\n')):
+            metadata = markdown_info([result])[0]
+            if not metadata['hasFrontmatter']:
                 raise ValueError('docs need YAML frontmatter; start from a page template')
-            if 'textprov: false' in result.split('---', 2)[1]:
+            if metadata['textprov'] is False:
                 raise ValueError('this document explicitly opts out of TextProv')
-            if 'textprov: true' not in result.split('---', 2)[1]:
+            if metadata['hasTextprov'] and metadata['textprov'] is not True:
+                raise ValueError('textprov must be a YAML boolean')
+            if metadata['textprov'] is not True:
                 newline = '\r\n' if result.startswith('---\r\n') else '\n'
                 result = result.replace('---' + newline, '---' + newline + 'textprov: true' + newline, 1)
+                if markdown_info([result])[0]['textprov'] is not True:
+                    raise ValueError('could not enroll document without changing its YAML metadata')
         if args.dry_run:
             sys.stdout.buffer.write(result.encode("utf-8"))
         else:

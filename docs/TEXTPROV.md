@@ -6,6 +6,8 @@ origin; the toggle does not detect authorship or identify which agent was used.
 
 ## ChatGPT/Codex and Claude CLI
 
+Python fnmatch patterns in tools/dogfooding.json use * across directory separators.
+
 Both read AGENTS.md. Claude also imports it from CLAUDE.md and provides the
 `/textprov` command. There are no tool interception hooks, model-specific event
 schemas, automatic prompt logs, or global machine configuration changes.
@@ -50,14 +52,14 @@ environment reference are excluded. Source-code comments and strings are exclude
 Human contributors edit normally and preserve existing marks. For a combined diff
 containing human edits, run check with --preserve-only; it permits new unmarked
 text while still rejecting lost marks, backfill, and marks in protected syntax.
-CI runs this preservation check against the PR base. The strict check is an
+CI runs this preservation check against the merge base of the PR and target branch. The strict check is an
 agent completion requirement; CI cannot infer whether unmarked text came from AI.
 
 ## Display and search
 
 The vendored JS/TS integration decodes enrolled pages during Astro prerender and
 in the dev server. AI runs become clean text in spans with data-textprov="ai".
-The toggle changes CSS only, persists the reader's preference locally, defaults
+The toggle appears on enrolled pages, changes CSS only, persists the reader's preference locally, defaults
 to hidden, and works with every font. The help text explains what is recorded.
 
 The generated HTML already contains clean text before Pagefind indexing, so
