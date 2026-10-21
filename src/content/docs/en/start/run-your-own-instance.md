@@ -20,7 +20,8 @@ The fastest way to get started uses Docker with minimal configuration.
 ### 1. Start Redis
 
 ```bash
-docker run -p 6379:6379 -d redis:bookworm
+docker network create onetime
+docker run -d --name redis --network onetime redis:bookworm
 ```
 
 ### 2. Generate secret key
@@ -36,13 +37,13 @@ echo "Secret key saved to .ots_secret (keep this file secure!)"
 
 ```bash
 # Run the container using the secret key
-docker run -p 3000:3000 -d \
-  -e REDIS_URL=redis://host.docker.internal:6379/0 \
+docker run -p 3000:3000 -d --network onetime \
+  -e REDIS_URL=redis://redis:6379/0 \
   -e SECRET="$(cat .ots_secret)" \
   -e HOST=localhost:3000 \
   -e SSL=false \
   -e RACK_ENV=production \
-  onetimesecret/onetimesecret:v0.26.2
+  onetimesecret/onetimesecret:v0.26.18
 ```
 
 ### 4. Access your instance
@@ -70,15 +71,15 @@ pnpm install && pnpm run build:local
 To start the application:
 
 ```bash
-source .env.sh  # exports .env vars into the current shell
+set -a; source .env; set +a  # exports .env vars into the current shell
 bundle exec puma -C etc/puma.rb
 ```
 
 Or using the Procfile runner:
 
 ```bash
-source .env.sh  # exports .env vars into the current shell
-bundle exec foreman start -f Procfile.production
+set -a; source .env; set +a  # exports .env vars into the current shell
+bundle exec foreman start -f Procfile.example
 ```
 
 See [README](https://github.com/onetimesecret/onetimesecret#readme) for complete manual installation details.

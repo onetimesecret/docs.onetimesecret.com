@@ -83,6 +83,13 @@
     "configurationGenerator": "Configuration Generator",
     "environmentVariables": "Environment Variables",
     "troubleshootAndUpgrade": "Troubleshoot & upgrade",
+    "upgradingToV02618": "Upgrading to v0.26.18",
+    "upgradingToV02617": "Upgrading to v0.26.17",
+    "upgradingToV02615": "Upgrading to v0.26.15",
+    "upgradingToV02614": "Upgrading to v0.26.14",
+    "upgradingToV02612": "Upgrading to v0.26.12",
+    "upgradingToV02611": "Upgrading to v0.26.11",
+    "upgradingToV026": "Upgrading to v0.26.6",
     "upgradingToV024": "Upgrading to v0.24.0",
     "upgradingToV023": "Upgrading to v0.23.0",
 

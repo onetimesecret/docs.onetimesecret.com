@@ -19,7 +19,8 @@ Başlamanın en hızlı yolu, minimum yapılandırmayla Docker kullanmaktır.
 ### 1. Redis'i Başlatın
 
 ```bash
-docker run -p 6379:6379 -d redis:bookworm
+docker network create onetime
+docker run -d --name redis --network onetime redis:bookworm
 ```
 
 ### 2. Gizli Anahtar Oluşturun
@@ -35,13 +36,13 @@ echo "Gizli anahtar .ots_secret dosyasına kaydedildi (bu dosyayı güvende tutu
 
 ```bash
 # Gizli anahtarı kullanarak konteyneri çalıştırın
-docker run -p 3000:3000 -d \
-  -e REDIS_URL=redis://host.docker.internal:6379/0 \
+docker run -p 3000:3000 -d --network onetime \
+  -e REDIS_URL=redis://redis:6379/0 \
   -e SECRET="$(cat .ots_secret)" \
   -e HOST=localhost:3000 \
   -e SSL=false \
   -e RACK_ENV=production \
-  onetimesecret/onetimesecret:v0.26.2
+  onetimesecret/onetimesecret:v0.26.18
 ```
 
 ### 4. Örneğinize Erişin

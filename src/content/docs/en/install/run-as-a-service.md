@@ -3,7 +3,7 @@ title: Run as a service
 description: Keep a bare-metal install running under systemd with the three unit files the project ships, and decide whether you need more than the web unit.
 audience: operator
 pageType: how-to
-sourceOfTruth: onetimesecret/etc/examples/systemd/onetimesecret-web.service:8-13,18-21,25-30,33,36-37,39,42-46 (the install commands, the assumed path and user, the login-shell .env sourcing, restart and stop policy, the optional EnvironmentFile, the hardening block); onetimesecret/etc/examples/systemd/onetimesecret-worker.service:14,24,27 (the worker's ordering, command, and 60-second drain window); onetimesecret/etc/examples/systemd/onetimesecret-scheduler.service:14,24,26 (the scheduler's equivalents); onetimesecret/docs/specs/install-onboarding/install-onboarding-clean-room-validation.md:112-117 (ProtectHome=true against a Ruby on the onetime user's PATH when that home is under /home); onetimesecret/Procfile.production:13,20-24 (the non-systemd form, and the environment line every shipped invocation uses); onetimesecret/etc/defaults/config.defaults.yaml:1113 and onetimesecret/docker/README.md:79-84 (background jobs are off unless JOBS_ENABLED is true, and RabbitMQ is what the worker consumes from); onetimesecret/apps/web/core/controllers/health.rb:65 (the job-queue health check reports not_configured while jobs are off); onetimesecret/etc/defaults/auth.defaults.yaml:36 (full authentication mode's account store defaults to SQLite, so the auth mode does not imply a job queue)
+sourceOfTruth: onetimesecret/etc/examples/systemd/onetimesecret-web.service:8-13,18-21,25-30,33,36-37,39,42-46 (the install commands, the assumed path and user, the login-shell .env sourcing, restart and stop policy, the optional EnvironmentFile, the hardening block); onetimesecret/etc/examples/systemd/onetimesecret-worker.service:14,24,27 (the worker's ordering, command, and 60-second drain window); onetimesecret/etc/examples/systemd/onetimesecret-scheduler.service:14,24,26 (the scheduler's equivalents); onetimesecret/docs/specs/install-onboarding/install-onboarding-clean-room-validation.md:112-117 (ProtectHome=true against a Ruby on the onetime user's PATH when that home is under /home); onetimesecret/Procfile.example:14-17,24-28 (the non-systemd form, and the environment line every shipped invocation uses); onetimesecret/etc/defaults/config.defaults.yaml:1113 and onetimesecret/docker/README.md:79-84 (background jobs are off unless JOBS_ENABLED is true, and RabbitMQ is what the worker consumes from); onetimesecret/apps/web/core/controllers/health.rb:65 (the job-queue health check reports not_configured while jobs are off); onetimesecret/etc/defaults/auth.defaults.yaml:36 (full authentication mode's account store defaults to SQLite, so the auth mode does not imply a job queue)
 sidebar:
   label: Run as a service
 ---
@@ -126,14 +126,14 @@ you would rather keep outside the app directory or vary between hosts.
 
 ## Without systemd
 
-`Procfile.production` defines the same processes for any Procfile runner —
+`Procfile.example` defines the same processes for any Procfile runner —
 foreman, hivemind or goreman. Only the `web` line is uncommented; the worker
 and scheduler lines are shipped commented out. Export the environment first,
 the same way the units do:
 
 ```bash
 set -a; source .env; set +a
-foreman start -f Procfile.production
+foreman start -f Procfile.example
 ```
 
 In a container none of this applies. The main image runs a single process, and

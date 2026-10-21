@@ -255,6 +255,13 @@ export const sidebar = [
     // group with no items.
 
     createGroup("troubleshootAndUpgrade", [
+      createLink("upgradingToV02618", "self-hosting/upgrading-v0-26-18"),
+      createLink("upgradingToV02617", "self-hosting/upgrading-v0-26-17"),
+      createLink("upgradingToV02615", "self-hosting/upgrading-v0-26-15"),
+      createLink("upgradingToV02614", "self-hosting/upgrading-v0-26-14"),
+      createLink("upgradingToV02612", "self-hosting/upgrading-v0-26-12"),
+      createLink("upgradingToV02611", "self-hosting/upgrading-v0-26-11"),
+      createLink("upgradingToV026", "self-hosting/upgrading-v0-26"),
       createLink("upgradingToV024", "self-hosting/upgrading-v0-24"),
       createLink("upgradingToV023", "self-hosting/upgrading-v0-23"),
     ]),
