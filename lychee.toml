@@ -43,6 +43,5 @@ exclude_all_private = true
 # No need to specify exclude_mail (deprecated flag)
 
 # Remap certain URLs (useful for local development or redirects)
-# Format: "pattern" = "replacement"
-# [remap]
-# "https://example.com" = "https://docs.onetimesecret.com"
+# Format: an array of "regex replacement" strings
+# remap = ["https://example.com/(.*) https://docs.onetimesecret.com/$1"]
