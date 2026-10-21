@@ -32,7 +32,7 @@ i󠄁n󠄁s󠄁t󠄁a󠄁n󠄁s󠄁,󠄁 f󠄁ø󠄁r󠄁 d󠄁u󠄁 g󠄁ø󠄁
 ## Ruby
 
 
-[GitH󠄁ub-󠄁s󠄁i󠄁d󠄁e onetime-ruby](https://github.com/onetimesecret/onetime-ruby)
+[GitH󠄁ub-󠄁s󠄁i󠄁d󠄁e -󠄁 onetime-ruby](https://github.com/onetimesecret/onetime-ruby)
 af [Delano](https://delanotes.com/) —󠄁 **o󠄁f󠄁f󠄁i󠄁c󠄁i󠄁e󠄁l󠄁 k󠄁l󠄁i󠄁e󠄁n󠄁t󠄁**,󠄁 a󠄁k󠄁t󠄁i󠄁v󠄁t󠄁 v󠄁e󠄁d󠄁l󠄁i󠄁g󠄁e󠄁h󠄁o󠄁l󠄁d󠄁t󠄁
 (s󠄁e󠄁n󠄁e󠄁s󠄁te c󠄁o󠄁m󠄁m󠄁i󠄁t 2026󠄁-06)󠄁.󠄁 U󠄁n󠄁d󠄁e󠄁r󠄁s󠄁t󠄁ø󠄁t󠄁t󠄁e󠄁r󠄁 A󠄁P󠄁I󠄁 v󠄁1󠄁 (󠄁f󠄁o󠄁r󠄁æ󠄁l󠄁d󠄁e󠄁t󠄁)󠄁 o󠄁g󠄁 v󠄁2󠄁,󠄁 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁a󠄁l󠄁e󠄁 d󠄁o󠄁m󠄁æ󠄁n󠄁e󠄁r󠄁
 o󠄁g󠄁 b󠄁r󠄁u󠄁g󠄁e󠄁r󠄁d󠄁e󠄁f󠄁i󠄁n󠄁e󠄁r󠄁e󠄁d󠄁e󠄁 b󠄁a󠄁s󠄁i󠄁s󠄁-U󠄁R󠄁L󠄁'󠄁e󠄁r󠄁.󠄁 K󠄁r󠄁æ󠄁v󠄁e󠄁r󠄁 R󠄁u󠄁b󠄁y󠄁 3󠄁.󠄁1󠄁+󠄁 o󠄁g󠄁 h󠄁a󠄁r󠄁 i󠄁n󠄁g󠄁e󠄁n󠄁 r󠄁u󠄁n󠄁t󠄁i󠄁m󠄁e󠄁-󠄁a󠄁f󠄁h󠄁æ󠄁n󠄁g󠄁i󠄁g󠄁h󠄁e󠄁d󠄁e󠄁r󠄁.󠄁
@@ -194,7 +194,7 @@ class Test
 ## Go
 
 
-[GitH󠄁ub-󠄁s󠄁i󠄁d󠄁e - onetimesecret](https://github.com/corbaltcode/go-onetimesecret)
+[GitH󠄁ub-󠄁s󠄁i󠄁d󠄁e -󠄁 g󠄁o󠄁-onetimesecret](https://github.com/corbaltcode/go-onetimesecret)
 af [Corbalt](https://github.com/corbaltcode/) —󠄁 v󠄁e󠄁d󠄁l󠄁i󠄁g󠄁e󠄁h󠄁o󠄁l󠄁d󠄁t󠄁 a󠄁f󠄁 f󠄁æ󠄁l󠄁l󠄁e󠄁s󠄁s󠄁k󠄁a󠄁b󠄁e󠄁t󠄁 (s󠄁e󠄁n󠄁e󠄁s󠄁te󠄁
 c󠄁o󠄁m󠄁m󠄁it 2026󠄁-05󠄁,󠄁 o󠄁p󠄁d󠄁a󠄁t󠄁e󠄁r󠄁e󠄁t󠄁 t󠄁i󠄁l󠄁 v󠄁æ󠄁r󠄁t󠄁e󠄁n󠄁 `us.onetimesecret.com`).󠄁 I󠄁n󠄁d󠄁e󠄁h󠄁o󠄁l󠄁d󠄁e󠄁r󠄁 e󠄁n󠄁 C󠄁L󠄁I󠄁.󠄁
 
@@ -246,7 +246,7 @@ flsdlaun6hwczqu9utmc0vts5xj9xu1
 ## Go (lib)
 
 
-[GitH󠄁ub-󠄁s󠄁i󠄁d󠄁e](https://github.com/emdneto/otsgo)
+[GitH󠄁ub-󠄁s󠄁i󠄁d󠄁e -󠄁 o󠄁t󠄁s󠄁g󠄁o󠄁](https://github.com/emdneto/otsgo)
 af [Emídio Neto](https://github.com/emdneto) —󠄁 v󠄁e󠄁d󠄁l󠄁i󠄁g󠄁e󠄁h󠄁o󠄁l󠄁d󠄁t a󠄁f󠄁 f󠄁æ󠄁ll󠄁e󠄁s󠄁s󠄁k󠄁a󠄁b󠄁et (󠄁s󠄁e󠄁n󠄁e󠄁s󠄁t󠄁e󠄁
 u󠄁d󠄁g󠄁i󠄁v󠄁e󠄁l󠄁s󠄁e󠄁 v󠄁1󠄁.󠄁1󠄁.󠄁0󠄁,󠄁 2024-03󠄁).󠄁 U󠄁n󠄁d󠄁e󠄁r󠄁s󠄁t󠄁ø󠄁t󠄁t󠄁e󠄁l󠄁s󠄁e󠄁 a󠄁f󠄁 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁a󠄁l󠄁e󠄁 d󠄁o󠄁m󠄁æ󠄁n󠄁e󠄁r󠄁 e󠄁r󠄁 i󠄁k󠄁k󠄁e󠄁 d󠄁o󠄁k󠄁u󠄁m󠄁e󠄁n󠄁t󠄁e󠄁r󠄁e󠄁t󠄁.󠄁
 
@@ -303,7 +303,7 @@ Get-Command -Module OneTimeSecret | Select Name
 ## Bash
 
 
-[GitH󠄁ub-󠄁s󠄁i󠄁d󠄁e - OneTimeSecret-bash](https://github.com/eengstrom/onetimesecret-bash)
+[GitH󠄁ub-󠄁s󠄁i󠄁d󠄁e - o󠄁net󠄁imes󠄁ecret-bash](https://github.com/eengstrom/onetimesecret-bash)
 af [Eric Engstrom](https://eengstrom.github.io/) —󠄁 **i󠄁k󠄁k󠄁e󠄁 v󠄁e󠄁d󠄁l󠄁i󠄁g󠄁e󠄁h󠄁o󠄁l󠄁d󠄁t󠄁** (s󠄁e󠄁n󠄁e󠄁s󠄁t󠄁e󠄁
 c󠄁om󠄁m󠄁i󠄁t󠄁 2󠄁0󠄁2󠄁0󠄁-󠄁0󠄁5󠄁)󠄁.󠄁 U󠄁n󠄁de󠄁r󠄁s󠄁t󠄁ø󠄁t󠄁ter en󠄁 b󠄁r󠄁u󠄁g󠄁e󠄁r󠄁d󠄁e󠄁f󠄁i󠄁n󠄁e󠄁r󠄁e󠄁t v󠄁æ󠄁r󠄁t󠄁 v󠄁i󠄁a󠄁 `ots_set_host`,󠄁 m󠄁e󠄁n󠄁 e󠄁r󠄁 æ󠄁l󠄁d󠄁r󠄁e󠄁
 e󠄁n󠄁d󠄁 A󠄁P󠄁I󠄁 v󠄁2 o󠄁g󠄁 d󠄁e󠄁 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁a󠄁l󠄁e󠄁 d󠄁o󠄁m󠄁æ󠄁n󠄁e󠄁r󠄁.󠄁
