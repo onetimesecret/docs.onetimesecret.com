@@ -13,7 +13,7 @@ An organization contains:
 
 - Shared [custom domains](/en/custom-domains) and their settings.
 - Organization membership and roles — see [Inviting members](/en/organizations/inviting-members).
-- Authentication for everyone in it — see [Single Sign-On (SSO)](/en/organizations/sso).
+- Single sign-on for its custom domains — see [Single sign-on (SSO)](/en/organizations/sso).
 - A common record of what happened to the organization's secrets — see
   [Secret Activity](/en/organizations/audit-trail).
 
@@ -52,7 +52,7 @@ currently working in is owner or admin. See
 
 - [Compare Plans](/en/pricing/compare-plans) — where team capabilities live.
 - [Inviting members](/en/organizations/inviting-members) — add people to your organization.
-- [Single Sign-On (SSO)](/en/organizations/sso) — centralized authentication for your team.
+- [Single sign-on (SSO)](/en/organizations/sso) — members sign in on your custom domain through your identity provider.
 - [Secret Activity](/en/organizations/audit-trail) — the activity record for your organization.
 
 ## Questions or Need Support?
