@@ -9,6 +9,12 @@ The mapping test checks both marker encodings for all 188 covered Latin-1
 characters in each face. Runtime highlighting uses clean text and CSS spans,
 so it works for every font and script; it does not depend on these font mappings.
 Maryheather is available as a fallback; body prose keeps the existing font.
+
+The P+ Zilla family provides weights 400 and 700. CSS matches heading weight
+600 to its Bold face (700), and nav weight 500 to its Regular face (400). This
+is an accepted typography change from the previous font selection; intermediate
+weights are not advertised as separate font files. The nav font and marked
+heading appearance were inspected in the browser.
 The original license texts and embedded font notices are retained unchanged.
 
 SHA-256 of the assets received in #421:

@@ -2,7 +2,11 @@ import { parse } from 'parse5';
 import textprov from '../../../vendor/textprov/textprov.cjs';
 
 const escape = (text) => text.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
-const candidate = /[\u{E0101}\u{100000}-\u{10FFFF}]/u;
+const aiSelector = String.fromCodePoint(textprov.mapping.selectors.ai);
+const codepoint = (value) => `\\u{${value.toString(16)}}`;
+const candidate = new RegExp(`[${codepoint(textprov.mapping.selectors.ai)}${
+  textprov.mapping.puaRanges.map(([start, end]) => `${codepoint(start)}-${codepoint(end)}`).join('')
+}]`, 'u');
 const excluded = new Set(['script', 'style', 'code', 'pre', 'textarea', 'svg', 'math',
   'noscript', 'iframe', 'noembed', 'noframes', 'xmp', 'plaintext', 'template']);
 const references = new Set(['aria-labelledby', 'aria-describedby', 'aria-controls', 'aria-owns',
@@ -62,9 +66,11 @@ export function renderProvenance(html, { requireEnrollment = false } = {}) {
     if (blocked) return;
     if (node.nodeName === '#text' && candidate.test(node.value)) {
       const runs = aiRuns(node.value);
+      if (runs.some(run => run.text.includes(aiSelector))) throw new Error('TextProv: malformed AI marker in managed text');
       if (runs.some(run => run.state === 'ai')) {
         const location = node.sourceCodeLocation;
-        if (location) edits.push([location.startOffset, location.endOffset, runs.map(run =>
+        if (!location) throw new Error('TextProv: marked text has no source location');
+        edits.push([location.startOffset, location.endOffset, runs.map(run =>
           prose && run.state === 'ai'
             ? `<span class="textprov-ai" data-textprov="ai">${escape(run.text)}</span>`
             : escape(run.text)
@@ -92,7 +98,8 @@ export function renderProvenance(html, { requireEnrollment = false } = {}) {
           : clean(value);
       if (plain !== value) {
         const location = node.sourceCodeLocation?.attrs?.[attr.name];
-        if (location) edits.push([location.startOffset, location.endOffset,
+        if (!location) throw new Error('TextProv: marked attribute has no source location');
+        edits.push([location.startOffset, location.endOffset,
           `${attr.name}="${escape(plain).replaceAll('"', '&quot;')}"`]);
       }
     }

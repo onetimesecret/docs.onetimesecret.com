@@ -3,9 +3,12 @@ import remarkParse from "remark-parse";
 import remarkGfm from "remark-gfm";
 import remarkFrontmatter from "remark-frontmatter";
 import { frontmatter } from './frontmatter.mjs';
+import textprov from '../vendor/textprov/textprov.cjs';
 
 const parser = unified().use(remarkParse).use(remarkGfm).use(remarkFrontmatter, ["yaml", "toml"]);
-const strip = (value) => value.replace(/[\u{E0100}-\u{E0104}]/gu, "");
+// Normalize AST comparisons using the same VS/legacy-PUA registry as the SDK.
+// This never rewrites source; old grapheme encodings are retained by dogfood.py.
+const strip = (value) => textprov.runs(value, { strip: true }).map(run => run.text).join('');
 
 function maskDirectives(source) {
   let output = '', cursor = 0;

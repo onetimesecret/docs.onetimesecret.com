@@ -74,6 +74,20 @@ describe('static TextProv HTML', () => {
     expect(doc.querySelector('input')?.getAttribute('aria-controls')).toBe('topic-1');
     expect(doc.querySelector('input')?.getAttribute('data-private')).toBe(marked);
   });
+
+  it('rejects malformed managed declarations while preserving excluded samples', () => {
+    for (const value of ['x\u{E0101}\u{E0101}', ' \u{E0101}', '\u{E0101}']) {
+      expect(() => renderProvenance(`<div class="sl-markdown-content">${value}</div>`)).toThrow('malformed AI marker');
+      const code = `<code>${value}</code>`;
+      expect(renderProvenance(code)).toBe(code);
+    }
+  });
+
+  it('handles marked text foster-parented out of a table without losing its source range', () => {
+    const result = renderProvenance(`<div class="sl-markdown-content"><table>${ai('Text')}<tr><td>Cell</td></tr></table></div>`);
+    expect(result).not.toContain('\u{E0101}');
+    expect(new JSDOM(result).window.document.querySelector('div')?.textContent).toContain('Text');
+  });
 });
 
 describe('TextProv toggle', () => {

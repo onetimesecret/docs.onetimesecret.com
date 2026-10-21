@@ -30,8 +30,14 @@ const enrolled = Astro.locals.starlightRoute.entry.data.textprov === true;
   }
   .textprov-controls button:focus-visible { outline: 2px solid var(--sl-color-text-accent); outline-offset: 3px; }
   .textprov-controls button[aria-pressed="true"] { border-color: var(--sl-color-text-accent); }
-  .textprov-help { display: none; font-size: .875rem; margin-block: .5rem 0; }
-  :root[data-textprov="shown"] .textprov-help { display: block; }
+  .textprov-help {
+    position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip-path: inset(50%); white-space: nowrap; margin: 0; font-size: .875rem;
+  }
+  :root[data-textprov="shown"] .textprov-help {
+    position: static; width: auto; height: auto; overflow: visible;
+    clip-path: none; white-space: normal; margin-block: .5rem 0;
+  }
   :root[data-textprov="shown"] .textprov-ai {
     text-decoration-line: underline; text-decoration-style: wavy;
     text-decoration-color: var(--sl-color-text-accent); text-underline-offset: .2em;

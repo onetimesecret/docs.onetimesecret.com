@@ -7,6 +7,14 @@ import dogfood
 
 
 class DocsProfileTests(unittest.TestCase):
+    def test_editing_legacy_pua_preserves_its_encoding_and_validates_markdown(self):
+        legacy = dogfood.textprov.mark('Old', mode='pua')
+        source = legacy + ' prose\n'
+        result = dogfood.mark_edit(Path('legacy.md'), source, 0, len(dogfood.textprov.strip_marks(source)), 'Old new prose\n', 'ai')
+        self.assertTrue(result.startswith(legacy))
+        self.assertEqual(dogfood.textprov.strip_marks(result), 'Old new prose\n')
+        self.assertEqual(dogfood.check_text(Path('legacy.md'), source, result), [])
+
     def test_yaml_owns_enrollment_spacing_comments_and_boolean_types(self):
         for newline in ('\n', '\r\n'):
             for field, expected in [('textprov:   true # recorded', True), ('textprov: false', False), ('textprov: "true"', 'true')]:
