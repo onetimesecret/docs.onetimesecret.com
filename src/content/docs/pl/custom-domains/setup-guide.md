@@ -8,7 +8,7 @@ description: "Dodaj domenę niestandardową do swojej organizacji, utwórz jej r
 
 - P󠄁lan󠄁 Twojej󠄁 o󠄁r󠄁ganiz󠄁a󠄁cj󠄁i󠄁 o󠄁b󠄁ej󠄁muj󠄁e󠄁 domenę󠄁 n󠄁i󠄁e󠄁s󠄁t󠄁a󠄁n󠄁d󠄁a󠄁r󠄁d󠄁o󠄁w󠄁ą󠄁.󠄁 F󠄁r󠄁e󠄁e󠄁 o󠄁b󠄁e󠄁j󠄁m󠄁u󠄁j󠄁e󠄁 j󠄁e󠄁d󠄁n󠄁ą󠄁;󠄁
   I󠄁d󠄁e󠄁n󠄁t󠄁i󠄁t󠄁y󠄁 P󠄁l󠄁u󠄁s󠄁 i󠄁 T󠄁e󠄁am P󠄁l󠄁u󠄁s󠄁 n󠄁ie󠄁 m󠄁aj󠄁ą󠄁 s󠄁t󠄁a󠄁ł󠄁e󠄁g󠄁o󠄁 l󠄁i󠄁m󠄁i󠄁t󠄁u󠄁.󠄁 Z󠄁o󠄁b󠄁a󠄁c󠄁z󠄁
-  [D󠄁omeny niestandardowe](/en/custom-domains#what-each-plan-includes).󠄁
+  [D󠄁omeny niestandardowe](/pl/custom-domains#co-obejmuje-każdy-plan).󠄁
 - J󠄁e󠄁s󠄁t󠄁e󠄁ś󠄁 **w󠄁ł󠄁a󠄁ś󠄁c󠄁i󠄁c󠄁i󠄁e󠄁l󠄁e󠄁m󠄁** l󠄁u󠄁b󠄁 **a󠄁d󠄁m󠄁i󠄁n󠄁i󠄁s󠄁t󠄁r󠄁a󠄁t󠄁o󠄁r󠄁e󠄁m󠄁** o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁c󠄁j󠄁i󠄁.󠄁
 - M󠄁o󠄁ż󠄁e󠄁s󠄁z󠄁 t󠄁w󠄁o󠄁r󠄁z󠄁y󠄁ć󠄁 r󠄁e󠄁k󠄁o󠄁r󠄁d󠄁y󠄁 D󠄁N󠄁S󠄁 d󠄁l󠄁a󠄁 d󠄁o󠄁m󠄁e󠄁n󠄁y󠄁 u󠄁 s󠄁w󠄁o󠄁j󠄁e󠄁g󠄁o󠄁 r󠄁e󠄁j󠄁e󠄁s󠄁t󠄁r󠄁a󠄁t󠄁o󠄁r󠄁a󠄁 l󠄁u󠄁b󠄁 d󠄁o󠄁s󠄁t󠄁a󠄁w󠄁c󠄁y󠄁 D󠄁N󠄁S󠄁.󠄁
 - W󠄁i󠄁e󠄁s󠄁z󠄁 j󠄁u󠄁ż󠄁,󠄁 j󠄁a󠄁k󠄁i󠄁e󠄁g󠄁o󠄁 a󠄁d󠄁r󠄁e󠄁s󠄁u󠄁 c󠄁h󠄁c󠄁e󠄁s󠄁z󠄁 u󠄁ż󠄁y󠄁ć󠄁.󠄁 Z󠄁a󠄁l󠄁e󠄁c󠄁a󠄁n󠄁a󠄁 j󠄁e󠄁s󠄁t󠄁 s󠄁u󠄁b󠄁d󠄁o󠄁m󠄁e󠄁n󠄁a󠄁,󠄁 n󠄁a󠄁 p󠄁r󠄁z󠄁y󠄁k󠄁ł󠄁a󠄁d󠄁
@@ -32,7 +32,7 @@ description: "Dodaj domenę niestandardową do swojej organizacji, utwórz jej r
 D󠄁o󠄁m󠄁e󠄁n󠄁a󠄁 z󠄁o󠄁s󠄁t󠄁a󠄁j󠄁e󠄁 d󠄁o󠄁d󠄁a󠄁n󠄁a󠄁 d󠄁o󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁c󠄁j󠄁i󠄁,󠄁 a󠄁 n󠄁a󠄁s󠄁t󠄁ę󠄁p󠄁n󠄁y󠄁 e󠄁k󠄁r󠄁a󠄁n󠄁 w󠄁y󠄁ś󠄁w󠄁i󠄁e󠄁t󠄁l󠄁a󠄁 d󠄁w󠄁a󠄁 r󠄁e󠄁k󠄁o󠄁r󠄁d󠄁y󠄁
 D󠄁N󠄁S󠄁 d󠄁o󠄁 u󠄁t󠄁w󠄁o󠄁r󠄁z󠄁e󠄁n󠄁i󠄁a󠄁.󠄁 N󠄁i󠄁e󠄁 m󠄁a󠄁 w󠄁y󠄁b󠄁o󠄁r󠄁u󠄁 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁u󠄁:󠄁 r󠄁e󠄁k󠄁o󠄁r󠄁d󠄁y󠄁 w󠄁s󠄁k󠄁a󠄁z󠄁u󠄁j󠄁ą󠄁 n󠄁a󠄁 w󠄁i󠄁t󠄁r󠄁y󠄁n󠄁ę󠄁
 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁a󠄁l󠄁n󠄁ą󠄁,󠄁 z󠄁 k󠄁t󠄁ó󠄁r󠄁e󠄁j󠄁 k󠄁o󠄁r󠄁z󠄁y󠄁s󠄁t󠄁a󠄁 T󠄁w󠄁o󠄁j󠄁a󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁c󠄁j󠄁a󠄁.󠄁 Z󠄁o󠄁b󠄁a󠄁c󠄁z󠄁
-[G󠄁d󠄁z󠄁i󠄁e󠄁 o󠄁b󠄁s󠄁ł󠄁u󠄁g󠄁i󠄁w󠄁a󠄁n󠄁a󠄁 j󠄁e󠄁s󠄁t󠄁 T󠄁w󠄁o󠄁j󠄁a󠄁 d󠄁o󠄁m󠄁e󠄁n󠄁a󠄁](/en/custom-domains#where-your-domain-is-served).
+[G󠄁d󠄁z󠄁i󠄁e󠄁 o󠄁b󠄁s󠄁ł󠄁u󠄁g󠄁i󠄁w󠄁a󠄁n󠄁a󠄁 j󠄁e󠄁s󠄁t󠄁 T󠄁w󠄁o󠄁j󠄁a󠄁 d󠄁o󠄁m󠄁e󠄁n󠄁a󠄁](/pl/custom-domains#gdzie-obsługiwana-jest-twoja-domena).
 
 ## Utwórz rekordy󠄁 D󠄁NS󠄁
 

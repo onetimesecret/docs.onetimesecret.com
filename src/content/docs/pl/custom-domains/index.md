@@ -51,7 +51,7 @@ w󠄁i󠄁t󠄁r󠄁y󠄁n󠄁ę󠄁 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁a󠄁l󠄁n�
 `eu.onetimesecret.com`,󠄁 a sekrety udostępniane󠄁 z󠄁 t󠄁e󠄁j󠄁 d󠄁o󠄁m󠄁e󠄁n󠄁y s󠄁ą󠄁 p󠄁r󠄁z󠄁e󠄁chowywane󠄁 w
 tym regioni󠄁e󠄁.󠄁 R󠄁e󠄁k󠄁o󠄁r󠄁d󠄁y󠄁 D󠄁N󠄁S󠄁 p󠄁o󠄁k󠄁az󠄁y󠄁w󠄁a󠄁ne󠄁 p󠄁r󠄁z󠄁e󠄁z󠄁 w󠄁i󠄁t󠄁r󠄁yn󠄁ę󠄁 k󠄁ieruj󠄁ą󠄁 T󠄁woją domenę do
 u󠄁sł󠄁u󠄁g󠄁i󠄁 w t󠄁y󠄁m󠄁 r󠄁e󠄁g󠄁i󠄁on󠄁i󠄁e󠄁.󠄁 J󠄁a󠄁k󠄁 o󠄁b󠄁s󠄁ł󠄁u󠄁g󠄁i󠄁w󠄁a󠄁ć󠄁 d󠄁o󠄁m󠄁e󠄁n󠄁ę󠄁 z󠄁 i󠄁n󠄁n󠄁ego r󠄁e󠄁g󠄁i󠄁onu󠄁,󠄁 o󠄁p󠄁is󠄁u󠄁j󠄁ą󠄁
-[Przen󠄁osz󠄁enie domeny niestandardowej](/en/account/change-your-region#moving-a-custom-domain)
+[Przen󠄁osz󠄁enie domeny niestandardowej](/pl/account/change-your-region#przenoszenie-domeny-niestandardowej)
 o󠄁r󠄁a󠄁z󠄁 [G󠄁d󠄁z󠄁i󠄁e󠄁 z󠄁n󠄁a󠄁j󠄁d󠄁u󠄁j󠄁ą󠄁 s󠄁i󠄁ę󠄁 T󠄁w󠄁o󠄁j󠄁e󠄁 d󠄁a󠄁n󠄁e󠄁](/en/security/where-your-data-lives).󠄁
 
 ## K󠄁o󠄁n󠄁f󠄁i󠄁g󠄁u󠄁r󠄁o󠄁w󠄁a󠄁n󠄁i󠄁e󠄁 domeny
