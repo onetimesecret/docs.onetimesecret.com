@@ -26,7 +26,7 @@ const TYPE_LABELS: Record<HttpMessage["type"], string> = {
 };
 
 /** Directional icons for each HTTP message type */
-const TYPE_ICONS: Record<HttpMessage["type"], JSX.Element> = {
+const TYPE_ICONS: Record<HttpMessage["type"], React.JSX.Element> = {
   request: (
     <svg className="h-4 w-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
       <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
