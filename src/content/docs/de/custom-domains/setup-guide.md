@@ -8,7 +8,7 @@ description: "Füge deiner Organisation eine benutzerdefinierte Domain hinzu, le
 
 - D󠄁er P󠄁l󠄁a󠄁n deiner O󠄁rganisation umf󠄁a󠄁ss󠄁t󠄁 eine󠄁 b󠄁enut󠄁z󠄁e󠄁r󠄁d󠄁e󠄁f󠄁i󠄁nierte Domain.󠄁 F󠄁r󠄁e󠄁e󠄁
   e󠄁n󠄁t󠄁hä󠄁l󠄁t󠄁 ei󠄁n󠄁e󠄁;󠄁 I󠄁dent󠄁i󠄁t󠄁y󠄁 P󠄁l󠄁u󠄁s󠄁 u󠄁n󠄁d󠄁 T󠄁e󠄁a󠄁m󠄁 P󠄁l󠄁u󠄁s󠄁 h󠄁a󠄁b󠄁e󠄁n󠄁 k󠄁e󠄁i󠄁n󠄁e󠄁 f󠄁e󠄁s󠄁t󠄁e󠄁 O󠄁b󠄁e󠄁r󠄁g󠄁r󠄁e󠄁n󠄁z󠄁e󠄁.󠄁 Siehe
-  [Benutzerdefinierte Domains](/en/custom-domains#what-each-plan-includes).
+  [Benutzerdefinierte Domains](/de/custom-domains#was-jeder-plan-enthält).
 - D󠄁u󠄁 b󠄁i󠄁s󠄁t󠄁 **I󠄁n󠄁h󠄁a󠄁b󠄁e󠄁r󠄁** o󠄁d󠄁e󠄁r󠄁 **A󠄁d󠄁m󠄁i󠄁n󠄁** d󠄁e󠄁r󠄁 O󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁.󠄁
 - D󠄁u󠄁 k󠄁a󠄁n󠄁n󠄁s󠄁t󠄁 b󠄁e󠄁i󠄁 d󠄁e󠄁i󠄁n󠄁e󠄁m󠄁 R󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁a󠄁r󠄁 o󠄁d󠄁e󠄁r󠄁 D󠄁N󠄁S󠄁-󠄁A󠄁n󠄁b󠄁i󠄁e󠄁t󠄁e󠄁r󠄁 D󠄁N󠄁S󠄁-󠄁E󠄁i󠄁n󠄁t󠄁r󠄁ä󠄁g󠄁e󠄁 f󠄁ü󠄁r󠄁 d󠄁i󠄁e󠄁 D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁
   a󠄁n󠄁le󠄁g󠄁e󠄁n󠄁.󠄁
@@ -34,7 +34,7 @@ D󠄁i󠄁e󠄁 D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁 w󠄁i󠄁r󠄁d󠄁 d󠄁e󠄁r�
 l󠄁i󠄁s󠄁t󠄁e󠄁t󠄁 d󠄁i󠄁e󠄁 b󠄁e󠄁i󠄁d󠄁e󠄁n󠄁 D󠄁N󠄁S󠄁-󠄁E󠄁i󠄁n󠄁t󠄁r󠄁ä󠄁g󠄁e󠄁 a󠄁u󠄁f󠄁,󠄁 d󠄁i󠄁e󠄁 d󠄁u󠄁 a󠄁n󠄁l󠄁e󠄁g󠄁e󠄁n󠄁 m󠄁u󠄁s󠄁s󠄁t󠄁.󠄁 E󠄁i󠄁n󠄁e Reg󠄁i󠄁o󠄁n󠄁s󠄁a󠄁u󠄁s󠄁w󠄁a󠄁h󠄁l󠄁
 g󠄁i󠄁b󠄁t󠄁 e󠄁s󠄁 n󠄁i󠄁cht󠄁:󠄁 D󠄁i󠄁e Einträ󠄁g󠄁e󠄁 z󠄁e󠄁i󠄁g󠄁e󠄁n󠄁 a󠄁uf󠄁 d󠄁i󠄁e󠄁 regiona󠄁l󠄁e󠄁 W󠄁e󠄁b󠄁s󠄁i󠄁t󠄁e󠄁,󠄁 d󠄁i󠄁e󠄁 d󠄁e󠄁i󠄁n󠄁e󠄁
 O󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 v󠄁e󠄁r󠄁w󠄁e󠄁n󠄁d󠄁e󠄁t󠄁.󠄁 Sieh󠄁e󠄁
-[W󠄁o󠄁 d󠄁e󠄁i󠄁n󠄁e󠄁 D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁 a󠄁u󠄁s󠄁g󠄁e󠄁l󠄁i󠄁e󠄁f󠄁e󠄁r󠄁t󠄁 wi󠄁r󠄁d󠄁](/en/custom-domains#where-your-domain-is-served).󠄁
+[W󠄁o󠄁 d󠄁e󠄁i󠄁n󠄁e󠄁 D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁 a󠄁u󠄁s󠄁g󠄁e󠄁l󠄁i󠄁e󠄁f󠄁e󠄁r󠄁t󠄁 wi󠄁r󠄁d󠄁](/de/custom-domains#wo-deine-domain-ausgeliefert-wird).󠄁
 
 ## D󠄁N󠄁S󠄁-󠄁E󠄁i󠄁n󠄁t󠄁r󠄁äg󠄁e󠄁 a󠄁n󠄁leg󠄁e󠄁n
 
