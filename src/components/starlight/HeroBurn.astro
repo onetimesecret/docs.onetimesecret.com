@@ -6,7 +6,9 @@
  * with `heroBackground: burn` in frontmatter; see Hero.astro.
  *
  * Purely decorative: aria-hidden, no pointer events, and the ember drift
- * stops under prefers-reduced-motion.
+ * stops under prefers-reduced-motion and pauses while the hero is scrolled
+ * out of view (the animation is infinite, so it would otherwise keep 58
+ * elements compositing for as long as the page is open).
  */
 ---
 
@@ -102,6 +104,19 @@
 		</g>
 	</svg>
 </div>
+
+<script>
+	// Pause the ember drift while the hero is off screen. Without this the
+	// infinite animation keeps compositing after the reader has scrolled past.
+	// Where IntersectionObserver is missing the animation simply keeps running.
+	const heroes = document.querySelectorAll<HTMLElement>('.hero-burn');
+	if (heroes.length > 0 && 'IntersectionObserver' in window) {
+		const observer = new IntersectionObserver((entries) => {
+			for (const entry of entries) entry.target.toggleAttribute('data-offscreen', !entry.isIntersecting);
+		});
+		heroes.forEach((hero) => observer.observe(hero));
+	}
+</script>
 
 <style>
 	@layer starlight.core {
@@ -215,6 +230,11 @@
 			.embers > * {
 				animation: none;
 			}
+		}
+
+		/* Set by the script above while the hero is scrolled out of view. */
+		.hero-burn[data-offscreen] .embers > * {
+			animation-play-state: paused;
 		}
 
 		/* On narrow screens, keep the smaller note above the title instead of
