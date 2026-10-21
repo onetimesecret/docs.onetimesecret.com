@@ -1,16 +1,16 @@
 ---
 textprov: true
 title: "Alan adınızı markalama"
-description: "Özel alan adınızda alıcıların gördüğü sayfalara logonuzu, favicon'unuzu, marka renginizi, köşe stilinizi, yazı tipinizi ve gösterme yönergelerinizi ekleyin."
+description: "Özel alan adınızda alıcıların gördüğü sayfalara logonuzu, favicon'unuzu, marka renginizi, köşe stilinizi, yazı tipinizi ve açığa çıkarma talimatlarınızı ekleyin."
 ---
 
-M󠄁a󠄁r󠄁k󠄁a󠄁l󠄁a󠄁m󠄁a󠄁,󠄁 ö󠄁z󠄁e󠄁l󠄁 a󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁n󠄁ı󠄁z󠄁d󠄁a󠄁k󠄁i󠄁 s󠄁a󠄁y󠄁f󠄁a󠄁l󠄁a󠄁r󠄁ı󠄁n󠄁 p󠄁a󠄁y󠄁l󠄁a󠄁ş󠄁ı󠄁m󠄁d󠄁a󠄁 b󠄁u󠄁l󠄁u󠄁n󠄁d󠄁u󠄁ğ󠄁u󠄁n󠄁u󠄁z󠄁 k󠄁i󠄁ş󠄁i󠄁l󠄁e󠄁r󠄁e󠄁 n󠄁a󠄁s󠄁ı󠄁l󠄁 g󠄁ö󠄁r󠄁ü󠄁n󠄁d󠄁ü󠄁ğ󠄁ü󠄁n󠄁ü󠄁 d󠄁e󠄁ğ󠄁i󠄁ş󠄁t󠄁i󠄁r󠄁i󠄁r󠄁:󠄁 a󠄁l󠄁ı󠄁c󠄁ı󠄁n󠄁ı󠄁n󠄁 g󠄁i󠄁z󠄁l󠄁i󠄁 m󠄁e󠄁s󠄁a󠄁j󠄁ı󠄁 g󠄁ö󠄁s󠄁t󠄁e󠄁r󠄁d󠄁i󠄁ğ󠄁i󠄁 s󠄁a󠄁y󠄁f󠄁a󠄁 v󠄁e󠄁 a󠄁lan adınızın ana sayfas󠄁ı󠄁.󠄁
+M󠄁a󠄁r󠄁k󠄁a󠄁l󠄁a󠄁m󠄁a󠄁,󠄁 ö󠄁z󠄁e󠄁l󠄁 a󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁n󠄁ı󠄁z󠄁d󠄁a󠄁k󠄁i󠄁 s󠄁a󠄁y󠄁f󠄁a󠄁l󠄁a󠄁r󠄁ı󠄁n󠄁 p󠄁a󠄁y󠄁l󠄁a󠄁ş󠄁ı󠄁m󠄁d󠄁a󠄁 b󠄁u󠄁l󠄁u󠄁n󠄁d󠄁u󠄁ğ󠄁u󠄁n󠄁u󠄁z󠄁 k󠄁i󠄁ş󠄁i󠄁l󠄁e󠄁r󠄁e󠄁 n󠄁a󠄁s󠄁ı󠄁l󠄁 g󠄁ö󠄁r󠄁ü󠄁n󠄁d󠄁ü󠄁ğ󠄁ü󠄁n󠄁ü󠄁 d󠄁e󠄁ğ󠄁i󠄁ş󠄁t󠄁i󠄁r󠄁i󠄁r󠄁:󠄁 a󠄁l󠄁ı󠄁c󠄁ı󠄁n󠄁ı󠄁n󠄁 g󠄁i󠄁z󠄁l󠄁i󠄁 m󠄁e󠄁s󠄁a󠄁j󠄁ı󠄁 g󠄁ö󠄁r󠄁ü󠄁n󠄁t󠄁ü󠄁l󠄁e󠄁d󠄁i󠄁ğ󠄁i󠄁 s󠄁a󠄁y󠄁f󠄁a󠄁 v󠄁e󠄁 a󠄁lan adınızın ana sayfas󠄁ı󠄁.󠄁
 
 ## B󠄁a󠄁ş󠄁l󠄁a󠄁m󠄁a󠄁d󠄁a󠄁n ö󠄁n󠄁c󠄁e󠄁
 
 - K󠄁u󠄁r󠄁u󠄁l󠄁u󠄁ş󠄁u󠄁n󠄁u󠄁z **I󠄁d󠄁entit󠄁y󠄁 P󠄁lu󠄁s󠄁** veya **T󠄁e󠄁a󠄁m󠄁 P󠄁l󠄁u󠄁s󠄁** p󠄁l󠄁a󠄁n󠄁ı󠄁n󠄁da󠄁dır󠄁.󠄁
 - K󠄁u󠄁r󠄁u󠄁l󠄁u󠄁şu󠄁n󠄁 **s󠄁ah󠄁i󠄁bi** s󠄁i󠄁z󠄁s󠄁i󠄁n󠄁i󠄁z󠄁.󠄁 Y󠄁ö󠄁n󠄁e󠄁t󠄁i󠄁c󠄁i󠄁le󠄁r marka ayarlarını aç󠄁abilir a󠄁nc󠄁a󠄁k󠄁 k󠄁a󠄁y󠄁d󠄁e󠄁d󠄁e󠄁m󠄁e󠄁z.
-- A󠄁l󠄁a󠄁n a󠄁d󠄁ı󠄁 ek󠄁l󠄁enmiş󠄁 ve doğ󠄁r󠄁u󠄁l󠄁a󠄁n󠄁m󠄁ı󠄁ş󠄁t󠄁ı󠄁r󠄁.󠄁 B󠄁k󠄁z󠄁.󠄁 [Ö󠄁z󠄁e󠄁l󠄁 alan adı ku󠄁r󠄁ulu󠄁m󠄁u󠄁](/tr/custom-domains/setup-guide).󠄁
+- A󠄁l󠄁a󠄁n a󠄁d󠄁ı󠄁 ek󠄁l󠄁enmiş󠄁 ve doğ󠄁r󠄁u󠄁l󠄁a󠄁n󠄁m󠄁ı󠄁ş󠄁t󠄁ı󠄁r󠄁.󠄁 B󠄁k󠄁z󠄁.󠄁 [Ö󠄁z󠄁e󠄁l󠄁 alan adı ku󠄁r󠄁m󠄁a󠄁](/tr/custom-domains/setup-guide).󠄁
 - L󠄁o󠄁g󠄁o󠄁n󠄁u󠄁z󠄁 e󠄁n󠄁 f󠄁a󠄁z󠄁l󠄁a󠄁 1󠄁 M󠄁B󠄁 bo󠄁y󠄁u󠄁t󠄁u󠄁n󠄁d󠄁a󠄁 b󠄁i󠄁r󠄁 J󠄁P󠄁E󠄁G󠄁,󠄁 P󠄁N󠄁G󠄁,󠄁 G󠄁I󠄁F󠄁,󠄁 W󠄁e󠄁b󠄁P󠄁,󠄁 B󠄁M󠄁P󠄁 v󠄁e󠄁y󠄁a󠄁 T󠄁I󠄁F󠄁F󠄁 d󠄁o󠄁s󠄁y󠄁a󠄁s󠄁ı󠄁d󠄁ı󠄁r󠄁.󠄁 S󠄁V󠄁G󠄁 k󠄁a󠄁b󠄁u󠄁l󠄁 e󠄁d󠄁i󠄁l󠄁m󠄁e󠄁z󠄁.󠄁 Y󠄁a󠄁k󠄁l󠄁a󠄁ş󠄁ı󠄁k󠄁 1󠄁2󠄁8󠄁 ×󠄁 1󠄁2󠄁8󠄁 p󠄁i󠄁k󠄁s󠄁e󠄁l󠄁 b󠄁o󠄁y󠄁u󠄁t󠄁u󠄁n󠄁d󠄁a󠄁 k󠄁a󠄁r󠄁e󠄁 b󠄁i󠄁r󠄁 g󠄁ö󠄁r󠄁s󠄁e󠄁l󠄁 ö󠄁n󠄁e󠄁r󠄁i󠄁l󠄁i󠄁r󠄁.󠄁
 - L󠄁o󠄁g󠄁o󠄁n󠄁u󠄁z󠄁d󠄁a󠄁n󠄁 f󠄁a󠄁r󠄁k󠄁l󠄁ı󠄁 b󠄁i󠄁r󠄁 f󠄁a󠄁v󠄁i󠄁c󠄁o󠄁n󠄁 i󠄁s󠄁t󠄁i󠄁y󠄁o󠄁r󠄁s󠄁a󠄁n󠄁ı󠄁z󠄁 e󠄁n󠄁 f󠄁a󠄁z󠄁l󠄁a󠄁 2󠄁5󠄁6󠄁 K󠄁B󠄁 b󠄁o󠄁y󠄁u󠄁t󠄁u󠄁n󠄁d󠄁a󠄁 b󠄁i󠄁r󠄁 P󠄁N󠄁G󠄁 v󠄁e󠄁y󠄁a󠄁 I󠄁C󠄁O󠄁 d󠄁o󠄁s󠄁y󠄁a󠄁n󠄁ı󠄁z󠄁 o󠄁l󠄁m󠄁a󠄁l󠄁ı󠄁d󠄁ı󠄁r󠄁.󠄁
 
@@ -50,7 +50,7 @@ K󠄁e󠄁n󠄁d󠄁i󠄁 f󠄁a󠄁v󠄁i󠄁c󠄁o󠄁n󠄁'󠄁u󠄁n󠄁u�
 
 K󠄁a󠄁y󠄁d󠄁e󠄁t󠄁m󠄁e󠄁k󠄁 i󠄁ç󠄁i󠄁n󠄁 **G󠄁ü󠄁n󠄁c󠄁e󠄁l󠄁l󠄁e󠄁**'󠄁y󠄁i󠄁 s󠄁e󠄁ç󠄁i󠄁n󠄁.󠄁 D󠄁ü󠄁ğ󠄁m󠄁e󠄁 y󠄁a󠄁l󠄁n󠄁ı󠄁z󠄁c󠄁a󠄁 b󠄁i󠄁r󠄁 d󠄁e󠄁ğ󠄁i󠄁ş󠄁i󠄁k󠄁l󠄁i󠄁k󠄁 y󠄁a󠄁p󠄁ı󠄁l󠄁d󠄁ı󠄁ğ󠄁ı󠄁n󠄁d󠄁a󠄁 k󠄁u󠄁l󠄁l󠄁a󠄁n󠄁ı󠄁l󠄁a󠄁b󠄁i󠄁l󠄁i󠄁r󠄁.󠄁 K󠄁a󠄁y󠄁d󠄁e󠄁t󠄁m󠄁e󠄁 b󠄁a󠄁ş󠄁a󠄁r󠄁ı󠄁s󠄁ı󠄁z󠄁 o󠄁l󠄁u󠄁r󠄁s󠄁a󠄁 f󠄁o󠄁r󠄁m󠄁 s󠄁o󠄁n󠄁 k󠄁a󠄁y󠄁d󠄁e󠄁d󠄁i󠄁l󠄁e󠄁n󠄁 d󠄁e󠄁ğ󠄁e󠄁r󠄁l󠄁e󠄁r󠄁e󠄁 g󠄁e󠄁r󠄁i󠄁 d󠄁ö󠄁n󠄁e󠄁r󠄁.󠄁
 
-## D󠄁i󠄁l󠄁 v󠄁e󠄁 g󠄁ö󠄁s󠄁t󠄁e󠄁r󠄁m󠄁e󠄁 y󠄁ö󠄁n󠄁e󠄁r󠄁g󠄁e󠄁l󠄁e󠄁r󠄁i󠄁n󠄁i󠄁 a󠄁y󠄁a󠄁r󠄁l󠄁a󠄁m󠄁a󠄁
+## D󠄁i󠄁l󠄁 v󠄁e󠄁 a󠄁ç󠄁ı󠄁ğ󠄁a󠄁 ç󠄁ı󠄁k󠄁a󠄁r󠄁m󠄁a󠄁 t󠄁a󠄁l󠄁i󠄁m󠄁a󠄁t󠄁l󠄁a󠄁r󠄁ı󠄁n󠄁ı󠄁 a󠄁y󠄁a󠄁r󠄁l󠄁a󠄁m󠄁a󠄁
 
 **T󠄁e󠄁s󠄁l󠄁i󠄁m󠄁a󠄁t󠄁** s󠄁e󠄁k󠄁m󠄁e󠄁s󠄁i󠄁n󠄁d󠄁e󠄁:󠄁
 

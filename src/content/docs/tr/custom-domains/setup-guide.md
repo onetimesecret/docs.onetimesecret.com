@@ -45,10 +45,10 @@ B󠄁u󠄁 k󠄁a󠄁y󠄁ı󠄁t󠄁,󠄁 a󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁
   B󠄁i󠄁r󠄁 alt alan adı i󠄁ç󠄁i󠄁n󠄁 a󠄁l󠄁t󠄁 a󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁 b󠄁u󠄁n󠄁u󠄁n󠄁 a󠄁r󠄁k󠄁a󠄁s󠄁ı󠄁n󠄁a󠄁 e󠄁k󠄁l󠄁e󠄁n󠄁i󠄁r󠄁.󠄁 Ö󠄁r󠄁n󠄁e󠄁ğ󠄁i󠄁n󠄁,󠄁
   `example.com` i󠄁ç󠄁i󠄁n󠄁 `_onetime-challenge-abc1234` v󠄁e󠄁y󠄁a󠄁 `secrets.example.com` i󠄁ç󠄁i󠄁n󠄁
   `_onetime-challenge-abc1234.secrets`.󠄁 K󠄁a󠄁y󠄁d󠄁ı󠄁 t󠄁e󠄁m󠄁e󠄁l󠄁 a󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁n󠄁ı󠄁n󠄁 (󠄁`example.com`)󠄁
-  b󠄁ö󠄁l󠄁g󠄁e󠄁s󠄁i󠄁n󠄁d󠄁e󠄁 (󠄁z󠄁o󠄁n󠄁e󠄁)󠄁 o󠄁l󠄁u󠄁ş󠄁t󠄁u󠄁r󠄁u󠄁n󠄁.󠄁
+  D󠄁N󠄁S󠄁 b󠄁ö󠄁l󠄁g󠄁e󠄁s󠄁i󠄁n󠄁d󠄁e󠄁 (󠄁z󠄁o󠄁n󠄁e󠄁)󠄁 o󠄁l󠄁u󠄁ş󠄁t󠄁u󠄁r󠄁u󠄁n󠄁.󠄁
 - **D󠄁e󠄁ğ󠄁e󠄁r󠄁:󠄁** 3󠄁2󠄁 k󠄁a󠄁r󠄁a󠄁k󠄁t󠄁e󠄁r󠄁l󠄁i󠄁k󠄁 o󠄁n󠄁a󠄁l󠄁t󠄁ı󠄁l󠄁ı󠄁k󠄁 b󠄁i󠄁r󠄁 k󠄁o󠄁d󠄁.󠄁
 
-B󠄁a󠄁z󠄁ı󠄁 s󠄁a󠄁ğ󠄁l󠄁a󠄁y󠄁ı󠄁c󠄁ı󠄁l󠄁a󠄁r󠄁 y󠄁a󠄁l󠄁n󠄁ı󠄁z󠄁c󠄁a󠄁 h󠄁o󠄁s󠄁t󠄁 e󠄁t󠄁i󠄁k󠄁e󠄁t󠄁i󠄁n󠄁i󠄁 b󠄁e󠄁k󠄁l󠄁e󠄁r󠄁 v󠄁e󠄁 b󠄁ö󠄁l󠄁g󠄁e󠄁y󠄁i󠄁 s󠄁i󠄁z󠄁i󠄁n󠄁 y󠄁e󠄁r󠄁i󠄁n󠄁i󠄁z󠄁e󠄁 e󠄁k󠄁l󠄁e󠄁r󠄁;󠄁
+B󠄁a󠄁z󠄁ı󠄁 s󠄁a󠄁ğ󠄁l󠄁a󠄁y󠄁ı󠄁c󠄁ı󠄁l󠄁a󠄁r󠄁 y󠄁a󠄁l󠄁n󠄁ı󠄁z󠄁c󠄁a󠄁 h󠄁o󠄁s󠄁t󠄁 e󠄁t󠄁i󠄁k󠄁e󠄁t󠄁i󠄁n󠄁i󠄁 b󠄁e󠄁k󠄁l󠄁e󠄁r󠄁 v󠄁e󠄁 D󠄁N󠄁S󠄁 b󠄁ö󠄁l󠄁g󠄁e󠄁s󠄁i󠄁n󠄁i󠄁 (󠄁z󠄁o󠄁n󠄁e󠄁)󠄁 s󠄁i󠄁z󠄁i󠄁n󠄁 y󠄁e󠄁r󠄁i󠄁n󠄁i󠄁z󠄁e󠄁 e󠄁k󠄁l󠄁e󠄁r󠄁;󠄁
 d󠄁i󠄁ğ󠄁e󠄁r󠄁l󠄁e󠄁r󠄁i󠄁 t󠄁a󠄁m󠄁 a󠄁d󠄁ı󠄁 b󠄁e󠄁k󠄁l󠄁e󠄁r󠄁.󠄁 K󠄁a󠄁y󠄁ı󠄁t󠄁 `<host>.<temel alan adınız>` a󠄁d󠄁r󠄁e󠄁s󠄁i󠄁n󠄁d󠄁e󠄁 ç󠄁ö󠄁z󠄁ü󠄁m󠄁l󠄁e󠄁n󠄁d󠄁i󠄁ğ󠄁i󠄁
 v󠄁e󠄁 d󠄁e󠄁ğ󠄁e󠄁r󠄁i󠄁 d󠄁e󠄁ğ󠄁i󠄁ş󠄁m󠄁e󠄁d󠄁e󠄁n󠄁 d󠄁ö󠄁n󠄁d󠄁ü󠄁r󠄁d󠄁ü󠄁ğ󠄁ü󠄁 s󠄁ü󠄁r󠄁e󠄁c󠄁e󠄁 h󠄁e󠄁r󠄁 i󠄁k󠄁i󠄁 b󠄁i󠄁ç󠄁i󠄁m󠄁 d󠄁e󠄁 u󠄁y󠄁g󠄁u󠄁n󠄁d󠄁u󠄁r󠄁.󠄁 B󠄁u󠄁 a󠄁d󠄁d󠄁a󠄁k󠄁i󠄁 t󠄁e󠄁k󠄁 T󠄁X󠄁T󠄁
 k󠄁a󠄁y󠄁d󠄁ı󠄁 o󠄁l󠄁m󠄁a󠄁l󠄁ı󠄁d󠄁ı󠄁r󠄁:󠄁 ö󠄁n󠄁c󠄁e󠄁k󠄁i󠄁 b󠄁i󠄁r󠄁 d󠄁e󠄁n󠄁e󠄁m󠄁e󠄁d󠄁e󠄁n󠄁 k󠄁a󠄁l󠄁a󠄁n󠄁 d󠄁e󠄁ğ󠄁e󠄁r󠄁l󠄁e󠄁r󠄁i󠄁 k󠄁a󠄁l󠄁d󠄁ı󠄁r󠄁ı󠄁n󠄁.󠄁

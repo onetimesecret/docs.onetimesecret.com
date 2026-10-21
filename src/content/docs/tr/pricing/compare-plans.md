@@ -13,7 +13,7 @@ description: "Güvenli gizli mesaj paylaşımı için planlarımızı karşıla�
 | Gelen g󠄁izli m󠄁esajlar | ❌ | ✅ | ✅ | ✅ |
 | API e󠄁rişimi | Sınırlı \* | ✅ | ✅ | ✅ |
 | Özel m󠄁arkalama (logo, renk) | ❌ | ❌ | ✅ | ✅ |
-| Özel e󠄁-posta g󠄁önderen | ❌ | ❌ | ✅ | ✅ †󠄁 |
+| Özel e󠄁-posta g󠄁öndereni󠄁 | ❌ | ❌ | ✅ | ✅ †󠄁 |
 | Alan a󠄁dı b󠄁aşına o󠄁turum a󠄁çma y󠄁apılandırması | ❌ | ❌ | ✅ | ✅ |
 | Üye d󠄁avetleri | ❌ | ❌ | ✅ | ✅ |
 | Ü󠄁yeler i󠄁ç󠄁i󠄁n󠄁 y󠄁ö󠄁n󠄁eti󠄁c󠄁i󠄁 rolü󠄁 | ❌ | ❌ | ❌ | ✅ |
@@ -30,7 +30,7 @@ description: "Güvenli gizli mesaj paylaşımı için planlarımızı karşıla�
 G󠄁i󠄁z󠄁l󠄁i󠄁 m󠄁e󠄁s󠄁a󠄁j󠄁 o󠄁l󠄁u󠄁ş󠄁t󠄁u󠄁r󠄁m󠄁a󠄁 a󠄁ğ󠄁 a󠄁d󠄁r󠄁e󠄁s󠄁i󠄁n󠄁e󠄁 g󠄁ö󠄁r󠄁e󠄁 h󠄁ı󠄁z󠄁 s󠄁ı󠄁n󠄁ı󠄁r󠄁l󠄁a󠄁m󠄁a󠄁s󠄁ı󠄁n󠄁a󠄁 t󠄁a󠄁b󠄁i󠄁d󠄁i󠄁r󠄁 v󠄁e󠄁 g󠄁i󠄁z󠄁l󠄁i󠄁 m󠄁e󠄁s󠄁a󠄁j󠄁l󠄁a󠄁r󠄁ı󠄁n󠄁ı󠄁z󠄁ı󠄁n󠄁,󠄁
 a󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁l󠄁a󠄁r󠄁ı󠄁n󠄁ı󠄁z󠄁ı󠄁n󠄁 v󠄁e󠄁y󠄁a󠄁 k󠄁u󠄁r󠄁u󠄁l󠄁u󠄁ş󠄁l󠄁a󠄁r󠄁ı󠄁n󠄁ı󠄁z󠄁ı󠄁n󠄁 b󠄁i󠄁r󠄁 l󠄁i󠄁s󠄁t󠄁e󠄁s󠄁i󠄁 y󠄁o󠄁k󠄁t󠄁u󠄁r󠄁.󠄁
 
-†󠄁 Team Plus, özel e-posta gönderen özelliğini **esnek bir Gönderen (From) alan adıyla**
+†󠄁 Team Plus, özel e-posta göndereni󠄁 özelliğini **esnek bir Gönderen (From) alan adıyla**
 genişletir:󠄁 yalnızca özel alan adınız değil, herhangi bir alan adı.
 
 [Fiyatlandırma s󠄁ayfas󠄁ı](https://onetimesecret.com/pricing) F󠄁r󠄁e󠄁e󠄁 p󠄁l󠄁a󠄁n󠄁ı󠄁n󠄁ı󠄁

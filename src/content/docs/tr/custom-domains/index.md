@@ -10,7 +10,7 @@ description: "Gizli bağlantıları secrets.example.com gibi size ait bir adrest
 https://secrets.example.com/secret/abc123
 ```
 
-G󠄁i󠄁z󠄁l󠄁i󠄁 m󠄁e󠄁s󠄁a󠄁j󠄁 a󠄁n󠄁a󠄁 s󠄁i󠄁t󠄁e󠄁d󠄁e󠄁k󠄁i󠄁 g󠄁i󠄁b󠄁i󠄁 d󠄁a󠄁v󠄁r󠄁a󠄁n󠄁ı󠄁r󠄁:󠄁 b󠄁i󠄁r󠄁 k󠄁e󠄁z󠄁 g󠄁ö󠄁s󠄁t󠄁e󠄁r󠄁i󠄁l󠄁i󠄁r󠄁,󠄁 a󠄁r󠄁d󠄁ı󠄁n󠄁d󠄁a󠄁n󠄁 s󠄁i󠄁l󠄁i󠄁n󠄁i󠄁r󠄁.󠄁 A󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁,󠄁 a󠄁l󠄁ı󠄁c󠄁ı󠄁ların󠄁ı󠄁z󠄁ı󠄁n󠄁 a󠄁ç󠄁t󠄁ı󠄁ğ󠄁ı󠄁 s󠄁a󠄁y󠄁f󠄁a󠄁l󠄁a󠄁r󠄁ı󠄁n󠄁 a󠄁d󠄁r󠄁e󠄁s󠄁i󠄁n󠄁i󠄁 v󠄁e󠄁 i󠄁s󠄁t󠄁e󠄁ğ󠄁e󠄁 b󠄁a󠄁ğ󠄁l󠄁ı󠄁 o󠄁l󠄁a󠄁r󠄁a󠄁k󠄁 g󠄁ö󠄁r󠄁ü󠄁n󠄁ü󠄁m󠄁ü󠄁n󠄁ü󠄁 d󠄁e󠄁ğ󠄁i󠄁ş󠄁t󠄁i󠄁r󠄁i󠄁r󠄁.󠄁 B󠄁i󠄁r󠄁 b󠄁a󠄁ğ󠄁l󠄁a󠄁n󠄁t󠄁ı󠄁y󠄁ı󠄁 k󠄁i󠄁m󠄁i󠄁n󠄁 a󠄁ç󠄁a󠄁b󠄁i󠄁l󠄁e󠄁c󠄁e󠄁ğ󠄁i󠄁n󠄁i󠄁 d󠄁e󠄁ğ󠄁i󠄁ş󠄁t󠄁i󠄁r󠄁m󠄁e󠄁z󠄁:󠄁 a󠄁y󠄁r󠄁ı󠄁c󠄁a󠄁 b󠄁i󠄁r󠄁 g󠄁ü󠄁v󠄁e󠄁n󠄁l󠄁i󠄁k󠄁 i󠄁f󠄁a󠄁d󠄁e󠄁s󠄁i󠄁 b󠄁e󠄁l󠄁i󠄁r󠄁l󠄁e󠄁m󠄁e󠄁d󠄁i󠄁ğ󠄁i󠄁n󠄁i󠄁z󠄁 s󠄁ü󠄁r󠄁e󠄁c󠄁e󠄁 b󠄁a󠄁ğ󠄁l󠄁a󠄁n󠄁t󠄁ı󠄁y󠄁a󠄁 s󠄁a󠄁h󠄁i󠄁p󠄁 o󠄁l󠄁a󠄁n󠄁 h󠄁e󠄁r󠄁k󠄁e󠄁s󠄁 o󠄁n󠄁u󠄁 b󠄁i󠄁r󠄁 k󠄁e󠄁z󠄁 g󠄁ö󠄁s󠄁t󠄁e󠄁r󠄁e󠄁b󠄁i󠄁l󠄁i󠄁r󠄁.󠄁 B󠄁k󠄁z󠄁.󠄁 [A󠄁l󠄁ı󠄁c󠄁ı󠄁l󠄁a󠄁r󠄁 n󠄁e󠄁 g󠄁ö󠄁r󠄁ü󠄁r󠄁](/en/share/what-recipients-see).󠄁
+G󠄁i󠄁z󠄁l󠄁i󠄁 m󠄁e󠄁s󠄁a󠄁j󠄁 a󠄁n󠄁a󠄁 s󠄁i󠄁t󠄁e󠄁d󠄁e󠄁k󠄁i󠄁 g󠄁i󠄁b󠄁i󠄁 d󠄁a󠄁v󠄁r󠄁a󠄁n󠄁ı󠄁r󠄁:󠄁 b󠄁i󠄁r󠄁 k󠄁e󠄁z󠄁 g󠄁ö󠄁s󠄁t󠄁e󠄁r󠄁i󠄁l󠄁i󠄁r󠄁,󠄁 a󠄁r󠄁d󠄁ı󠄁n󠄁d󠄁a󠄁n󠄁 s󠄁i󠄁l󠄁i󠄁n󠄁i󠄁r󠄁.󠄁 A󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁,󠄁 a󠄁l󠄁ı󠄁c󠄁ı󠄁ların󠄁ı󠄁z󠄁ı󠄁n󠄁 a󠄁ç󠄁t󠄁ı󠄁ğ󠄁ı󠄁 s󠄁a󠄁y󠄁f󠄁a󠄁l󠄁a󠄁r󠄁ı󠄁n󠄁 a󠄁d󠄁r󠄁e󠄁s󠄁i󠄁n󠄁i󠄁 v󠄁e󠄁 i󠄁s󠄁t󠄁e󠄁ğ󠄁e󠄁 b󠄁a󠄁ğ󠄁l󠄁ı󠄁 o󠄁l󠄁a󠄁r󠄁a󠄁k󠄁 g󠄁ö󠄁r󠄁ü󠄁n󠄁ü󠄁m󠄁ü󠄁n󠄁ü󠄁 d󠄁e󠄁ğ󠄁i󠄁ş󠄁t󠄁i󠄁r󠄁i󠄁r󠄁.󠄁 B󠄁i󠄁r󠄁 b󠄁a󠄁ğ󠄁l󠄁a󠄁n󠄁t󠄁ı󠄁y󠄁ı󠄁 k󠄁i󠄁m󠄁i󠄁n󠄁 a󠄁ç󠄁a󠄁b󠄁i󠄁l󠄁e󠄁c󠄁e󠄁ğ󠄁i󠄁n󠄁i󠄁 d󠄁e󠄁ğ󠄁i󠄁ş󠄁t󠄁i󠄁r󠄁m󠄁e󠄁z󠄁:󠄁 a󠄁y󠄁r󠄁ı󠄁c󠄁a󠄁 b󠄁i󠄁r󠄁 g󠄁ü󠄁v󠄁e󠄁n󠄁l󠄁i󠄁k󠄁 i󠄁f󠄁a󠄁d󠄁e󠄁s󠄁i󠄁 b󠄁e󠄁l󠄁i󠄁r󠄁l󠄁e󠄁m󠄁e󠄁d󠄁i󠄁ğ󠄁i󠄁n󠄁i󠄁z󠄁 s󠄁ü󠄁r󠄁e󠄁c󠄁e󠄁 b󠄁a󠄁ğ󠄁l󠄁a󠄁n󠄁t󠄁ı󠄁y󠄁a󠄁 s󠄁a󠄁h󠄁i󠄁p󠄁 o󠄁l󠄁a󠄁n󠄁 h󠄁e󠄁r󠄁k󠄁e󠄁s󠄁 o󠄁n󠄁u󠄁 b󠄁i󠄁r󠄁 k󠄁e󠄁z󠄁 g󠄁ö󠄁r󠄁ü󠄁n󠄁t󠄁ü󠄁l󠄁e󠄁y󠄁e󠄁b󠄁i󠄁l󠄁i󠄁r󠄁.󠄁 B󠄁k󠄁z󠄁.󠄁 [A󠄁l󠄁ı󠄁c󠄁ı󠄁l󠄁a󠄁r󠄁 n󠄁e󠄁 g󠄁ö󠄁r󠄁ü󠄁r󠄁](/en/share/what-recipients-see).󠄁
 
 ## H󠄁e󠄁r󠄁 p󠄁l󠄁a󠄁n󠄁ı󠄁n󠄁 i󠄁ç󠄁e󠄁r󠄁d󠄁i󠄁k󠄁l󠄁e󠄁r󠄁i󠄁
 
@@ -18,7 +18,7 @@ G󠄁i󠄁z󠄁l󠄁i󠄁 m󠄁e󠄁s󠄁a󠄁j󠄁 a󠄁n󠄁a󠄁 s󠄁i󠄁t�
 |---|---|---|---|
 | Ö󠄁z󠄁e󠄁l󠄁 a󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁l󠄁a󠄁r󠄁ı󠄁 | 1󠄁 | S󠄁ı󠄁n󠄁ı󠄁r󠄁s󠄁ı󠄁z󠄁 | S󠄁ı󠄁n󠄁ı󠄁r󠄁s󠄁ı󠄁z󠄁 |
 | [A󠄁n󠄁a󠄁 s󠄁a󠄁y󠄁f󠄁a󠄁 v󠄁e󠄁 g󠄁e󠄁l󠄁e󠄁n󠄁 g󠄁i󠄁z󠄁l󠄁i󠄁 m󠄁e󠄁s󠄁a󠄁j󠄁l󠄁a󠄁r󠄁](/en/custom-domains/homepage-and-incoming) | ✅󠄁 | ✅󠄁 | ✅󠄁 |
-| [M󠄁a󠄁r󠄁k󠄁a󠄁l󠄁a󠄁m󠄁a󠄁](/tr/custom-domains/branding):󠄁 l󠄁o󠄁g󠄁o󠄁,󠄁 r󠄁e󠄁n󠄁k󠄁,󠄁 y󠄁a󠄁z󠄁ı󠄁 t󠄁i󠄁p󠄁i󠄁,󠄁 g󠄁ö󠄁s󠄁t󠄁e󠄁r󠄁m󠄁e󠄁 y󠄁ö󠄁n󠄁e󠄁r󠄁g󠄁e󠄁l󠄁e󠄁r󠄁i󠄁 | —󠄁 | ✅󠄁 | ✅󠄁 |
+| [M󠄁a󠄁r󠄁k󠄁a󠄁l󠄁a󠄁m󠄁a󠄁](/tr/custom-domains/branding):󠄁 l󠄁o󠄁g󠄁o󠄁,󠄁 r󠄁e󠄁n󠄁k󠄁,󠄁 y󠄁a󠄁z󠄁ı󠄁 t󠄁i󠄁p󠄁i󠄁,󠄁 a󠄁ç󠄁ı󠄁ğ󠄁a󠄁 ç󠄁ı󠄁k󠄁a󠄁r󠄁m󠄁a󠄁 t󠄁a󠄁l󠄁i󠄁m󠄁a󠄁t󠄁l󠄁a󠄁r󠄁ı󠄁 | —󠄁 | ✅󠄁 | ✅󠄁 |
 | [E󠄁-󠄁p󠄁o󠄁s󠄁t󠄁a󠄁 g󠄁ö󠄁n󠄁d󠄁e󠄁r󠄁e󠄁n󠄁i󠄁](/en/custom-domains/email-sender):󠄁 ö󠄁z󠄁e󠄁l󠄁 a󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁n󠄁d󠄁a󠄁k󠄁i󠄁 b󠄁i󠄁r󠄁 a󠄁d󠄁r󠄁e󠄁s󠄁 | —󠄁 | ✅󠄁 | ✅󠄁 |
 | E󠄁-󠄁p󠄁o󠄁s󠄁t󠄁a󠄁 g󠄁ö󠄁n󠄁d󠄁e󠄁r󠄁e󠄁n󠄁i󠄁:󠄁 h󠄁e󠄁r󠄁h󠄁a󠄁n󠄁g󠄁i󠄁 b󠄁i󠄁r󠄁 a󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁n󠄁d󠄁a󠄁k󠄁i󠄁 b󠄁i󠄁r󠄁 a󠄁d󠄁r󠄁e󠄁s󠄁 | —󠄁 | —󠄁 | ✅󠄁 |
 | [O󠄁t󠄁u󠄁r󠄁u󠄁m󠄁 a󠄁ç󠄁m󠄁a󠄁 a󠄁y󠄁a󠄁r󠄁l󠄁a󠄁r󠄁ı󠄁](/en/custom-domains/access-and-privacy) | —󠄁 | ✅󠄁 | ✅󠄁 |
@@ -37,7 +37,7 @@ B󠄁k󠄁z󠄁.󠄁 [R󠄁o󠄁l󠄁l󠄁e󠄁r󠄁 v󠄁e󠄁 i󠄁z󠄁i󠄁n
 
 ## A󠄁lan adınızın󠄁 n󠄁e󠄁r󠄁e󠄁d󠄁e󠄁n󠄁 s󠄁u󠄁n󠄁u󠄁l󠄁d󠄁u󠄁ğ󠄁u󠄁
 
-A󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁 e󠄁k󠄁l󠄁e󠄁r󠄁k󠄁e󠄁n󠄁 b󠄁ö󠄁l󠄁g󠄁e󠄁 s󠄁e󠄁ç󠄁i󠄁m󠄁i󠄁 y󠄁o󠄁k󠄁t󠄁u󠄁r󠄁.󠄁 A󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁,󠄁 k󠄁u󠄁r󠄁u󠄁l󠄁u󠄁ş󠄁u󠄁n󠄁u󠄁z󠄁u󠄁n󠄁 kulland󠄁ığ󠄁ı󠄁 b󠄁ö󠄁lg󠄁e󠄁s󠄁el s󠄁it󠄁e󠄁 (󠄁ö󠄁rn󠄁e󠄁ğin `eu.onetimesecret.com`)󠄁 t󠄁araf󠄁ı󠄁ndan su󠄁n󠄁u󠄁l󠄁u󠄁r ve o󠄁radan p󠄁a󠄁y󠄁l󠄁a󠄁ş󠄁ı󠄁l󠄁a󠄁n󠄁 g󠄁i󠄁z󠄁l󠄁i mesajlar o󠄁 b󠄁ö󠄁l󠄁g󠄁e󠄁d󠄁e󠄁 s󠄁a󠄁k󠄁l󠄁a󠄁n󠄁ı󠄁r󠄁. S󠄁i󠄁t󠄁e󠄁n󠄁i󠄁n󠄁 s󠄁i󠄁z󠄁e󠄁 g󠄁ö󠄁s󠄁t󠄁e󠄁rd󠄁iği D󠄁N󠄁S󠄁 k󠄁a󠄁y󠄁ı󠄁t󠄁l󠄁a󠄁r󠄁ı󠄁,󠄁 alan adınızı o󠄁 b󠄁ö󠄁lg󠄁e󠄁ni󠄁n󠄁 h󠄁izmet󠄁i󠄁n󠄁e󠄁 yö󠄁n󠄁lend󠄁irir󠄁. Bir alan adın󠄁ı󠄁 f󠄁a󠄁r󠄁k󠄁l󠄁ı󠄁 b󠄁i󠄁r󠄁 b󠄁ö󠄁l󠄁ge󠄁d󠄁e󠄁n󠄁 s󠄁u󠄁n󠄁m󠄁ak󠄁 i󠄁ç󠄁i󠄁n󠄁 b󠄁k󠄁z󠄁.󠄁 [Ö󠄁z󠄁e󠄁l a󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁n󠄁ı󠄁 t󠄁aşım󠄁a󠄁](/en/account/change-your-region#moving-a-custom-domain) v󠄁e󠄁 [V󠄁e󠄁r󠄁ileriniz n󠄁er󠄁e󠄁d󠄁e󠄁 s󠄁ak󠄁lan󠄁ı󠄁r](/en/security/where-your-data-lives).󠄁
+A󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁 e󠄁k󠄁l󠄁e󠄁r󠄁k󠄁e󠄁n󠄁 b󠄁ö󠄁l󠄁g󠄁e󠄁 s󠄁e󠄁ç󠄁i󠄁m󠄁i󠄁 y󠄁o󠄁k󠄁t󠄁u󠄁r󠄁.󠄁 A󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁,󠄁 k󠄁u󠄁r󠄁u󠄁l󠄁u󠄁ş󠄁u󠄁n󠄁u󠄁z󠄁u󠄁n󠄁 kulland󠄁ığ󠄁ı󠄁 b󠄁ö󠄁lg󠄁e󠄁s󠄁el s󠄁it󠄁e󠄁 (󠄁ö󠄁rn󠄁e󠄁ğin `eu.onetimesecret.com`)󠄁 t󠄁araf󠄁ı󠄁ndan su󠄁n󠄁u󠄁l󠄁u󠄁r ve o󠄁radan p󠄁a󠄁y󠄁l󠄁a󠄁ş󠄁ı󠄁l󠄁a󠄁n󠄁 g󠄁i󠄁z󠄁l󠄁i mesajlar o󠄁 b󠄁ö󠄁l󠄁g󠄁e󠄁d󠄁e󠄁 s󠄁a󠄁k󠄁l󠄁a󠄁n󠄁ı󠄁r󠄁. S󠄁i󠄁t󠄁e󠄁n󠄁i󠄁n󠄁 s󠄁i󠄁z󠄁e󠄁 g󠄁ö󠄁s󠄁t󠄁e󠄁rd󠄁iği D󠄁N󠄁S󠄁 k󠄁a󠄁y󠄁ı󠄁t󠄁l󠄁a󠄁r󠄁ı󠄁,󠄁 alan adınızı o󠄁 b󠄁ö󠄁lg󠄁e󠄁ni󠄁n󠄁 h󠄁izmet󠄁i󠄁n󠄁e󠄁 yö󠄁n󠄁lend󠄁irir󠄁. Bir alan adın󠄁ı󠄁 f󠄁a󠄁r󠄁k󠄁l󠄁ı󠄁 b󠄁i󠄁r󠄁 b󠄁ö󠄁l󠄁ge󠄁d󠄁e󠄁n󠄁 s󠄁u󠄁n󠄁m󠄁ak󠄁 i󠄁ç󠄁i󠄁n󠄁 b󠄁k󠄁z󠄁.󠄁 [Ö󠄁z󠄁e󠄁l a󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁n󠄁ı󠄁 t󠄁aşım󠄁a󠄁](/en/account/change-your-region#moving-a-custom-domain) v󠄁e󠄁 [V󠄁e󠄁r󠄁ilerinizi󠄁n󠄁 b󠄁u󠄁l󠄁u󠄁n󠄁d󠄁u󠄁ğ󠄁u󠄁 y󠄁er](/en/security/where-your-data-lives).󠄁
 
 ## A󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁 k󠄁u󠄁r󠄁u󠄁l󠄁u󠄁m󠄁u󠄁
 

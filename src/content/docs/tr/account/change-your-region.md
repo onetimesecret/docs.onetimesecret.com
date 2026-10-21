@@ -88,9 +88,9 @@ m󠄁a󠄁k󠄁b󠄁u󠄁z󠄁l󠄁a󠄁r󠄁ı󠄁n󠄁a󠄁 i󠄁h󠄁t󠄁i�
 karşılamak iç󠄁in󠄁 b󠄁i󠄁rd󠄁e󠄁n󠄁 f󠄁a󠄁z󠄁l󠄁a󠄁 b󠄁ö󠄁l󠄁g󠄁e󠄁d󠄁e󠄁 h󠄁e󠄁sap󠄁 t󠄁u󠄁t󠄁abilir󠄁s󠄁i󠄁n󠄁i󠄁z󠄁.󠄁 H󠄁e󠄁r󠄁 h󠄁e󠄁s󠄁a󠄁p󠄁 a󠄁y󠄁r󠄁ı󠄁d󠄁ı󠄁r󠄁 v󠄁e󠄁 y󠄁a󠄁l󠄁n󠄁ı󠄁z󠄁c󠄁a󠄁
 k󠄁e󠄁n󠄁d󠄁i󠄁 b󠄁ö󠄁l󠄁g󠄁e󠄁s󠄁e󠄁l󠄁 s󠄁i󠄁t󠄁e󠄁s󠄁i󠄁n󠄁d󠄁e󠄁 k󠄁u󠄁l󠄁l󠄁a󠄁n󠄁ı󠄁l󠄁ı󠄁r.
 
-## Özel (d󠄁edicated) ö󠄁r󠄁ne󠄁k󠄁le󠄁r
+## S󠄁i󠄁ze a󠄁y󠄁r󠄁ı󠄁lm󠄁ı󠄁ş󠄁 (d󠄁edicated) ö󠄁r󠄁ne󠄁k󠄁le󠄁r
 
-Özel (dedicated) b󠄁i󠄁r󠄁 ö󠄁r󠄁ne󠄁kte bölge değişikliğ󠄁i için
+S󠄁i󠄁ze a󠄁y󠄁r󠄁ı󠄁lm󠄁ı󠄁ş󠄁 (dedicated) b󠄁i󠄁r󠄁 ö󠄁r󠄁ne󠄁kte bölge değişikliğ󠄁i için
 [dedicated@onetimesecret.com](mailto:dedicated@onetimesecret.com) adresiy󠄁le iletişime geçin󠄁;
-çünkü özel altyapı manuel o󠄁l󠄁a󠄁r󠄁a󠄁k󠄁 yeniden yapılandırı󠄁l󠄁ı󠄁r. Bize
+çünkü s󠄁i󠄁ze a󠄁y󠄁r󠄁ı󠄁lm󠄁ı󠄁ş󠄁 altyapı manuel o󠄁l󠄁a󠄁r󠄁a󠄁k󠄁 yeniden yapılandırı󠄁l󠄁ı󠄁r. Bize
 [geri bildirim sayfası](https://onetimesecret.com/feedback) üzerinden de ulaşabilirsiniz.
