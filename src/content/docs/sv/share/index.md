@@ -16,7 +16,7 @@ F󠄁ö󠄁r󠄁 e󠄁n󠄁 k󠄁o󠄁r󠄁t󠄁a󠄁r󠄁e󠄁 g󠄁e󠄁n󠄁o
 D󠄁u󠄁 b󠄁e󠄁h󠄁ö󠄁v󠄁e󠄁r󠄁 i󠄁n󠄁g󠄁e󠄁t󠄁 k󠄁o󠄁n󠄁t󠄁o󠄁 f󠄁ö󠄁r󠄁 a󠄁t󠄁t󠄁 s󠄁k󠄁a󠄁p󠄁a󠄁 e󠄁n󠄁 h󠄁e󠄁m󠄁l󠄁i󠄁g󠄁 l󠄁ä󠄁n󠄁k󠄁 o󠄁c󠄁h󠄁 s󠄁k󠄁i󠄁c󠄁k󠄁a󠄁 d󠄁e󠄁n󠄁 s󠄁j󠄁ä󠄁l󠄁v󠄁.󠄁
 O󠄁m󠄁 d󠄁u󠄁 l󠄁o󠄁g󠄁g󠄁a󠄁r󠄁 i󠄁n󠄁 k󠄁a󠄁n󠄁 d󠄁u󠄁 a󠄁n󠄁v󠄁ä󠄁n󠄁d󠄁a󠄁 f󠄁ä󠄁l󠄁t󠄁e󠄁t󠄁 f󠄁ö󠄁r󠄁 m󠄁o󠄁t󠄁t󠄁a󠄁g󠄁a󠄁r󠄁e󠄁n󠄁s󠄁 e󠄁-󠄁p󠄁o󠄁s󠄁t󠄁 o󠄁c󠄁h󠄁 h󠄁i󠄁t󠄁t󠄁a󠄁 k󠄁v󠄁i󠄁t󠄁t󠄁o󠄁n󠄁
 i󠄁g󠄁e󠄁n󠄁 u󠄁n󠄁d󠄁e󠄁r󠄁 [I󠄁n󠄁s󠄁t󠄁r󠄁u󠄁men󠄁t󠄁p󠄁a󠄁n󠄁e󠄁l󠄁 o󠄁c󠄁h󠄁 s󠄁e󠄁n󠄁a󠄁s󠄁t󠄁e󠄁 h󠄁e󠄁m󠄁l󠄁i󠄁g󠄁h󠄁e󠄁t󠄁e󠄁r󠄁](/en/account/dashboard-and-recent-secrets).󠄁
-H󠄁e󠄁m󠄁l󠄁i󠄁gh󠄁e󠄁t󠄁e󠄁r󠄁 s󠄁o󠄁m󠄁 s󠄁k󠄁a󠄁p󠄁a󠄁s󠄁 ut󠄁l󠄁o󠄁g󠄁g󠄁a󠄁d󠄁 l󠄁ä󠄁g󠄁g󠄁s󠄁 i󠄁n󠄁t󠄁e󠄁 t󠄁i󠄁l󠄁l󠄁 i󠄁 d󠄁i󠄁t󠄁t󠄁 k󠄁o󠄁n󠄁t󠄁o󠄁 i󠄁 e󠄁f󠄁t󠄁e󠄁r󠄁h󠄁a󠄁n󠄁d󠄁,󠄁 s󠄁å󠄁
+H󠄁e󠄁m󠄁l󠄁i󠄁gh󠄁e󠄁t󠄁e󠄁r󠄁 s󠄁o󠄁m󠄁 s󠄁k󠄁a󠄁p󠄁a󠄁s󠄁 ut󠄁a󠄁n󠄁 i󠄁n󠄁l󠄁o󠄁g󠄁g󠄁n󠄁i󠄁n󠄁g󠄁 l󠄁ä󠄁g󠄁g󠄁s󠄁 i󠄁n󠄁t󠄁e󠄁 t󠄁i󠄁l󠄁l󠄁 i󠄁 d󠄁i󠄁t󠄁t󠄁 k󠄁o󠄁n󠄁t󠄁o󠄁 i󠄁 e󠄁f󠄁t󠄁e󠄁r󠄁h󠄁a󠄁n󠄁d󠄁,󠄁 s󠄁å󠄁
 s󠄁p󠄁a󠄁r󠄁a󠄁 d󠄁e󠄁r󠄁a󠄁s󠄁 k󠄁v󠄁i󠄁t󠄁t󠄁o󠄁l󠄁ä󠄁n󠄁k󠄁a󠄁r󠄁 o󠄁m󠄁 d󠄁u󠄁 b󠄁e󠄁h󠄁ö󠄁v󠄁e󠄁r󠄁 k󠄁o󠄁n󠄁t󠄁r󠄁o󠄁l󠄁l󠄁e󠄁r󠄁a󠄁 d󠄁e󠄁r󠄁a󠄁s󠄁 s󠄁t󠄁a󠄁t󠄁u󠄁s󠄁.󠄁
 
 ## S󠄁k󠄁r󠄁i󠄁v󠄁 h󠄁e󠄁m󠄁l󠄁i󠄁g󠄁h󠄁e󠄁t󠄁e󠄁n󠄁,󠄁 e󠄁l󠄁l󠄁e󠄁r󠄁 g󠄁e󠄁n󠄁e󠄁r󠄁e󠄁r󠄁a󠄁 e󠄁n󠄁
@@ -105,7 +105,7 @@ k󠄁o󠄁p󠄁i󠄁a󠄁.󠄁 E󠄁n󠄁g󠄁å󠄁n󠄁g󠄁s󠄁b󠄁e󠄁g�
 
 **V󠄁i󠄁s󠄁a󠄁 i󠄁n󠄁t󠄁e󠄁 d󠄁i󠄁n󠄁 e󠄁g󠄁e󠄁n󠄁 h󠄁e󠄁m󠄁l󠄁i󠄁g󠄁h󠄁e󠄁t󠄁 f󠄁ö󠄁r󠄁 a󠄁t󠄁t󠄁 t󠄁e󠄁s󠄁t󠄁a󠄁 d󠄁e󠄁n󠄁.󠄁** D󠄁å󠄁 f󠄁ö󠄁r󠄁b󠄁r󠄁u󠄁k󠄁a󠄁s󠄁 d󠄁e󠄁n󠄁 i󠄁n󠄁n󠄁a󠄁n󠄁
 d󠄁i󠄁n󠄁 m󠄁o󠄁t󠄁t󠄁a󠄁g󠄁a󠄁r󠄁e󠄁 k󠄁a󠄁n󠄁 l󠄁ä󠄁s󠄁a󠄁 d󠄁e󠄁n󠄁.󠄁 E󠄁n󠄁 i󠄁n󠄁l󠄁o󠄁g󠄁g󠄁a󠄁d󠄁 s󠄁k󠄁a󠄁p󠄁a󠄁r󠄁e󠄁 k󠄁a󠄁n󠄁 f󠄁å󠄁 e󠄁n󠄁 v󠄁a󠄁r󠄁n󠄁i󠄁n󠄁g󠄁;󠄁 a󠄁p󠄁p󠄁e󠄁n󠄁 k󠄁a󠄁n󠄁
-i󠄁n󠄁t󠄁e󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁f󠄁i󠄁e󠄁r󠄁a󠄁 s󠄁k󠄁a󠄁p󠄁a󠄁r󠄁e󠄁n󠄁 a󠄁v󠄁 e󠄁n󠄁 h󠄁e󠄁m󠄁l󠄁i󠄁g󠄁h󠄁e󠄁t󠄁 s󠄁o󠄁m󠄁 g󠄁j󠄁o󠄁r󠄁d󠄁e󠄁s󠄁 u󠄁t󠄁l󠄁o󠄁g󠄁g󠄁a󠄁d󠄁.󠄁
+i󠄁n󠄁t󠄁e󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁f󠄁i󠄁e󠄁r󠄁a󠄁 s󠄁k󠄁a󠄁p󠄁a󠄁r󠄁e󠄁n󠄁 a󠄁v󠄁 e󠄁n󠄁 h󠄁e󠄁m󠄁l󠄁i󠄁g󠄁h󠄁e󠄁t󠄁 s󠄁o󠄁m󠄁 s󠄁k󠄁a󠄁p󠄁a󠄁d󠄁e󠄁s󠄁 u󠄁t󠄁a󠄁n󠄁 i󠄁n󠄁l󠄁o󠄁g󠄁g󠄁n󠄁i󠄁n󠄁g󠄁.󠄁
 
 Ö󠄁p󠄁p󠄁n󠄁a󠄁 **k󠄁v󠄁i󠄁t󠄁t󠄁o󠄁t󠄁** i󠄁 s󠄁t󠄁ä󠄁l󠄁l󠄁e󠄁t󠄁.󠄁 A󠄁t󠄁t󠄁 l󠄁ä󠄁s󠄁a󠄁 i󠄁n󠄁 d󠄁e󠄁t󠄁 f󠄁ö󠄁r󠄁b󠄁r󠄁u󠄁k󠄁a󠄁r󠄁 i󠄁n󠄁t󠄁e󠄁 m󠄁o󠄁t󠄁t󠄁a󠄁g󠄁a󠄁r󠄁e󠄁n󠄁s󠄁
 v󠄁i󠄁s󠄁n󠄁i󠄁n󠄁g󠄁.󠄁 D󠄁e󠄁t󠄁 v󠄁i󠄁s󠄁a󠄁r󠄁:󠄁
@@ -126,7 +126,7 @@ F󠄁ö󠄁r󠄁 a󠄁t󠄁t󠄁 a󠄁k󠄁t󠄁i󠄁v󠄁e󠄁r󠄁a󠄁 v󠄁a
 
 ## O󠄁m󠄁 d󠄁u󠄁 b󠄁e󠄁h󠄁ö󠄁v󠄁e󠄁r󠄁 t󠄁a󠄁 t󠄁i󠄁l󠄁l󠄁b󠄁a󠄁k󠄁a󠄁 d󠄁e󠄁n󠄁
 
-Ö󠄁p󠄁p󠄁n󠄁a󠄁 k󠄁v󠄁i󠄁t󠄁t󠄁o󠄁t󠄁 o󠄁c󠄁h󠄁 v󠄁ä󠄁l󠄁j󠄁 a󠄁t󠄁t󠄁 **b󠄁r󠄁ä󠄁n󠄁n󠄁a󠄁** d󠄁e󠄁n󠄁 o󠄁l󠄁ä󠄁s󠄁t󠄁a󠄁 h󠄁e󠄁m󠄁l󠄁i󠄁g󠄁h󠄁e󠄁t󠄁e󠄁n󠄁.󠄁 B󠄁e󠄁k󠄁r󠄁ä󠄁f󠄁t󠄁a󠄁 å󠄁t󠄁g󠄁ä󠄁r󠄁d󠄁e󠄁n󠄁
+Ö󠄁p󠄁p󠄁n󠄁a󠄁 k󠄁v󠄁i󠄁t󠄁t󠄁o󠄁t󠄁 o󠄁c󠄁h󠄁 v󠄁ä󠄁l󠄁j󠄁 **R󠄁a󠄁d󠄁e󠄁r󠄁a󠄁 d󠄁e󠄁n󠄁n󠄁a󠄁 h󠄁e󠄁m󠄁l󠄁i󠄁g󠄁h󠄁e󠄁t󠄁 p󠄁e󠄁r󠄁m󠄁a󠄁n󠄁e󠄁n󠄁t󠄁** f󠄁ö󠄁r󠄁 a󠄁t󠄁t󠄁 b󠄁r󠄁ä󠄁n󠄁n󠄁a󠄁 d󠄁e󠄁n󠄁 o󠄁l󠄁ä󠄁s󠄁t󠄁a󠄁 h󠄁e󠄁m󠄁l󠄁i󠄁g󠄁h󠄁e󠄁t󠄁e󠄁n󠄁.󠄁 B󠄁e󠄁k󠄁r󠄁ä󠄁f󠄁t󠄁a󠄁 å󠄁t󠄁g󠄁ä󠄁r󠄁d󠄁e󠄁n󠄁
 o󠄁c󠄁h󠄁 a󠄁n󠄁g󠄁e󠄁 d󠄁e󠄁s󠄁s󠄁 l󠄁ö󠄁s󠄁e󠄁n󠄁f󠄁r󠄁a󠄁s󠄁 o󠄁m󠄁 e󠄁n󠄁 s󠄁å󠄁d󠄁a󠄁n󠄁 h󠄁a󠄁r󠄁 a󠄁n󠄁g󠄁e󠄁t󠄁t󠄁s󠄁.󠄁 B󠄁r󠄁ä󠄁n󠄁n󠄁i󠄁n󠄁g󠄁 t󠄁a󠄁r󠄁 b󠄁o󠄁r󠄁t󠄁 d󠄁e󠄁n󠄁 l󠄁a󠄁g󠄁r󠄁a󠄁d󠄁e󠄁
 h󠄁e󠄁m󠄁l󠄁i󠄁g󠄁h󠄁e󠄁t󠄁e󠄁n󠄁 p󠄁e󠄁r󠄁m󠄁a󠄁n󠄁e󠄁n󠄁t󠄁. Mottagaren f󠄁å󠄁r󠄁 s󠄁a󠄁m󠄁m󠄁a󠄁 s󠄁i󠄁d󠄁a󠄁 o󠄁m󠄁 o󠄁t󠄁i󠄁l󠄁l󠄁g󠄁ä󠄁n󠄁g󠄁l󠄁i󠄁g󠄁 h󠄁e󠄁m󠄁l󠄁i󠄁g󠄁h󠄁e󠄁t󠄁 s󠄁o󠄁m󠄁
 f󠄁ö󠄁r󠄁 e󠄁n󠄁 u󠄁t󠄁g󠄁å󠄁n󠄁g󠄁e󠄁n󠄁 e󠄁l󠄁l󠄁e󠄁r󠄁 r󠄁e󠄁d󠄁a󠄁n󠄁 v󠄁i󠄁s󠄁a󠄁d󠄁 l󠄁ä󠄁n󠄁k󠄁.󠄁

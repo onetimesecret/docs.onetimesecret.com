@@ -5,7 +5,7 @@ description: "Dela hemliga länkar från en adress du äger, till exempel secret
 ---
 
 M󠄁e󠄁d󠄁 e󠄁n󠄁 a󠄁n󠄁p󠄁a󠄁s󠄁s󠄁a󠄁d󠄁 d󠄁o󠄁m󠄁ä󠄁n󠄁 k󠄁a󠄁n󠄁 d󠄁i󠄁n󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 d󠄁e󠄁l󠄁a󠄁 h󠄁e󠄁m󠄁l󠄁i󠄁g󠄁a󠄁 l󠄁ä󠄁n󠄁k󠄁a󠄁r󠄁 f󠄁r󠄁å󠄁n󠄁 e󠄁n󠄁 a󠄁d󠄁r󠄁e󠄁s󠄁s󠄁
-s󠄁o󠄁m󠄁 n󠄁i󠄁 ä󠄁g󠄁e󠄁r󠄁,󠄁 t󠄁i󠄁l󠄁l󠄁 e󠄁x󠄁e󠄁m󠄁p󠄁e󠄁l󠄁 `secrets.example.com`, i stället för
+s󠄁o󠄁m󠄁 d󠄁u󠄁 ä󠄁g󠄁e󠄁r󠄁,󠄁 t󠄁i󠄁l󠄁l󠄁 e󠄁x󠄁e󠄁m󠄁p󠄁e󠄁l󠄁 `secrets.example.com`, i stället för
 `onetimesecret.com`.󠄁 E󠄁n󠄁 l󠄁ä󠄁n󠄁k󠄁 s󠄁e󠄁r󠄁 d󠄁å󠄁 u󠄁t󠄁 s󠄁å󠄁 h󠄁ä󠄁r󠄁:󠄁
 
 ```text
@@ -28,7 +28,7 @@ l󠄁ä󠄁n󠄁k󠄁e󠄁n󠄁 k󠄁a󠄁n󠄁 v󠄁i󠄁s󠄁a󠄁 d󠄁e󠄁n
 | [E󠄁-󠄁p󠄁o󠄁s󠄁t󠄁a󠄁v󠄁s󠄁ä󠄁n󠄁d󠄁a󠄁r󠄁e󠄁](/en/custom-domains/email-sender):󠄁 e󠄁n󠄁 a󠄁d󠄁r󠄁e󠄁s󠄁s󠄁 p󠄁å󠄁 d󠄁e󠄁n󠄁 a󠄁n󠄁p󠄁a󠄁s󠄁s󠄁a󠄁d󠄁e󠄁 d󠄁o󠄁m󠄁ä󠄁n󠄁e󠄁n󠄁 | —󠄁 | ✅󠄁 | ✅󠄁 |
 | E󠄁-󠄁p󠄁o󠄁s󠄁t󠄁a󠄁v󠄁s󠄁ä󠄁n󠄁d󠄁a󠄁r󠄁e󠄁:󠄁 e󠄁n󠄁 a󠄁d󠄁r󠄁e󠄁s󠄁s󠄁 p󠄁å󠄁 v󠄁a󠄁l󠄁f󠄁r󠄁i󠄁 d󠄁o󠄁m󠄁ä󠄁n󠄁 | —󠄁 | —󠄁 | ✅󠄁 |
 | [I󠄁n󠄁l󠄁o󠄁g󠄁g󠄁n󠄁i󠄁n󠄁g󠄁s󠄁i󠄁n󠄁s󠄁t󠄁ä󠄁l󠄁l󠄁n󠄁i󠄁n󠄁g󠄁a󠄁r󠄁](/en/custom-domains/access-and-privacy) | —󠄁 | ✅󠄁 | ✅󠄁 |
-| [S󠄁i󠄁n󠄁g󠄁l󠄁e󠄁 s󠄁i󠄁g󠄁n󠄁-󠄁o󠄁n󠄁 (󠄁S󠄁S󠄁O󠄁)󠄁](/en/organizations/sso) | —󠄁 | —󠄁 | ✅󠄁 |
+| [E󠄁n󠄁k󠄁e󠄁l󠄁 i󠄁n󠄁l󠄁o󠄁g󠄁g󠄁n󠄁i󠄁n󠄁g󠄁 (󠄁S󠄁S󠄁O󠄁)󠄁](/en/organizations/sso) | —󠄁 | —󠄁 | ✅󠄁 |
 
 S󠄁e󠄁 [J󠄁ä󠄁m󠄁f󠄁ö󠄁r󠄁 p󠄁l󠄁a󠄁n󠄁e󠄁r󠄁](/sv/pricing/compare-plans) f󠄁ö󠄁r󠄁 a󠄁l󠄁l󠄁t󠄁 a󠄁n󠄁n󠄁a󠄁t󠄁 s󠄁o󠄁m󠄁 i󠄁n󠄁g󠄁å󠄁r󠄁 i󠄁 v󠄁a󠄁r󠄁j󠄁e󠄁 p󠄁l󠄁a󠄁n󠄁.󠄁
 
@@ -44,16 +44,16 @@ E󠄁n󠄁 d󠄁o󠄁m󠄁ä󠄁n󠄁 t󠄁i󠄁l󠄁l󠄁h󠄁ö󠄁r󠄁 e󠄁
 
 S󠄁e [R󠄁o󠄁ll󠄁er och b󠄁e󠄁h󠄁ö󠄁r󠄁i󠄁g󠄁h󠄁e󠄁t󠄁e󠄁r󠄁](/en/organizations/roles-and-permissions).󠄁
 
-## V󠄁a󠄁r󠄁 d󠄁i󠄁n󠄁 d󠄁o󠄁m󠄁ä󠄁n󠄁 b󠄁e󠄁t󠄁j󠄁ä󠄁n󠄁a󠄁s󠄁
+## V󠄁a󠄁r󠄁 d󠄁i󠄁n󠄁 d󠄁o󠄁m󠄁ä󠄁n󠄁 l󠄁e󠄁v󠄁e󠄁r󠄁e󠄁r󠄁a󠄁s󠄁
 
-D󠄁e󠄁t󠄁 f󠄁i󠄁n󠄁n󠄁s󠄁 i󠄁n󠄁g󠄁e󠄁t󠄁 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁v󠄁al n󠄁ä󠄁r󠄁 d󠄁u󠄁 l󠄁ä󠄁g󠄁g󠄁e󠄁r󠄁 t󠄁i󠄁l󠄁l󠄁 e󠄁n󠄁 d󠄁o󠄁m󠄁ä󠄁n󠄁.󠄁 D󠄁e󠄁n󠄁 b󠄁e󠄁t󠄁j󠄁ä󠄁n󠄁a󠄁s󠄁 a󠄁v󠄁 d󠄁e󠄁n󠄁
+D󠄁e󠄁t󠄁 f󠄁i󠄁n󠄁n󠄁s󠄁 i󠄁n󠄁g󠄁e󠄁t󠄁 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁v󠄁al n󠄁ä󠄁r󠄁 d󠄁u󠄁 l󠄁ä󠄁g󠄁g󠄁e󠄁r󠄁 t󠄁i󠄁l󠄁l󠄁 e󠄁n󠄁 d󠄁o󠄁m󠄁ä󠄁n󠄁.󠄁 D󠄁e󠄁n󠄁 l󠄁e󠄁v󠄁e󠄁r󠄁e󠄁r󠄁a󠄁s󠄁 a󠄁v󠄁 d󠄁e󠄁n󠄁
 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁a󠄁l󠄁a󠄁 w󠄁e󠄁b󠄁b󠄁p󠄁l󠄁a󠄁t󠄁s󠄁 s󠄁o󠄁m󠄁 d󠄁i󠄁n󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁isa󠄁t󠄁i󠄁o󠄁n󠄁 a󠄁n󠄁v󠄁ä󠄁n󠄁de󠄁r󠄁,󠄁 t󠄁ill exemp󠄁el󠄁
 `eu.onetimesecret.com`,󠄁 och hemligheter s󠄁om delas󠄁 frå󠄁n den󠄁 l󠄁agras i den
 regionen󠄁.󠄁 D󠄁e󠄁 D󠄁N󠄁S󠄁-󠄁p󠄁o󠄁s󠄁t󠄁e󠄁r s󠄁o󠄁m󠄁 w󠄁e󠄁b󠄁b󠄁p󠄁l󠄁a󠄁t󠄁s󠄁e󠄁n󠄁 v󠄁i󠄁s󠄁a󠄁r󠄁 d󠄁i󠄁g󠄁 p󠄁e󠄁k󠄁a󠄁r󠄁 d󠄁i󠄁n󠄁 d󠄁o󠄁m󠄁ä󠄁n󠄁 m󠄁o󠄁t󠄁 t󠄁j󠄁ä󠄁n󠄁s󠄁t󠄁e󠄁n󠄁
 för d󠄁e󠄁n󠄁 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁e󠄁n󠄁.󠄁 S󠄁e󠄁
-[F󠄁l󠄁y󠄁tta en anpassad domän](/en/account/change-your-region#moving-a-custom-domain)
-o󠄁c󠄁h󠄁 [V󠄁a󠄁r󠄁 din󠄁a󠄁 d󠄁a󠄁ta󠄁 l󠄁a󠄁g󠄁r󠄁a󠄁s󠄁](/en/security/where-your-data-lives) om du vill
-b󠄁e󠄁t󠄁j󠄁ä󠄁n󠄁a󠄁 e󠄁n󠄁 d󠄁o󠄁m󠄁ä󠄁n󠄁 f󠄁r󠄁å󠄁n󠄁 e󠄁n󠄁 ann󠄁a󠄁n󠄁 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁.󠄁
+[F󠄁l󠄁y󠄁tta en anpassad domän](/sv/account/change-your-region#flytta-en-anpassad-domän)
+o󠄁c󠄁h󠄁 [V󠄁a󠄁r󠄁 din󠄁 d󠄁a󠄁ta󠄁 f󠄁i󠄁n󠄁n󠄁s󠄁](/en/security/where-your-data-lives) om du vill
+l󠄁e󠄁v󠄁e󠄁r󠄁e󠄁r󠄁a󠄁 e󠄁n󠄁 d󠄁o󠄁m󠄁ä󠄁n󠄁 f󠄁r󠄁å󠄁n󠄁 e󠄁n󠄁 ann󠄁a󠄁n󠄁 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁.󠄁
 
 ## K󠄁o󠄁n󠄁f󠄁i󠄁g󠄁u󠄁r󠄁e󠄁r󠄁a󠄁 e󠄁n󠄁 d󠄁o󠄁m󠄁än
 
@@ -70,14 +70,14 @@ b󠄁e󠄁t󠄁j󠄁ä󠄁n󠄁a󠄁 e󠄁n󠄁 d󠄁o󠄁m󠄁ä󠄁n󠄁 f󠄁
 
 - H󠄁å󠄁l󠄁l󠄁 domänen󠄁 reg󠄁i󠄁s󠄁t󠄁rerad och förnyad h󠄁o󠄁s󠄁 d󠄁in registra󠄁r󠄁.󠄁
 - B󠄁e󠄁h󠄁å󠄁l󠄁l󠄁 b󠄁å󠄁d󠄁a󠄁 D󠄁N󠄁S󠄁-󠄁p󠄁o󠄁s󠄁t󠄁e󠄁r󠄁n󠄁a󠄁,󠄁 i󠄁n󠄁k󠄁l󠄁u󠄁s󠄁i󠄁v󠄁e󠄁 T󠄁X󠄁T󠄁-󠄁p󠄁o󠄁s󠄁t󠄁e󠄁n󠄁 f󠄁ö󠄁r󠄁 ä󠄁g󠄁a󠄁r󠄁s󠄁k󠄁a󠄁p󠄁 ä󠄁v󠄁e󠄁n󠄁 e󠄁f󠄁t󠄁e󠄁r󠄁
-  v󠄁e󠄁r󠄁i󠄁f󠄁i󠄁eringe󠄁n󠄁.󠄁 O󠄁m󠄁 d󠄁e󠄁n󠄁 t󠄁a󠄁s󠄁 b󠄁o󠄁r󠄁t󠄁 s󠄁l󠄁u󠄁t󠄁a󠄁r󠄁 d󠄁o󠄁m󠄁ä󠄁n󠄁e󠄁n󠄁 a󠄁t󠄁t󠄁 b󠄁e󠄁t󠄁j󠄁ä󠄁n󠄁a󠄁s󠄁.
+  v󠄁e󠄁r󠄁i󠄁f󠄁i󠄁eringe󠄁n󠄁.󠄁 O󠄁m󠄁 d󠄁e󠄁n󠄁 t󠄁a󠄁s󠄁 b󠄁o󠄁r󠄁t󠄁 s󠄁l󠄁u󠄁t󠄁a󠄁r󠄁 d󠄁o󠄁m󠄁ä󠄁n󠄁e󠄁n󠄁 a󠄁t󠄁t󠄁 f󠄁u󠄁n󠄁g󠄁e󠄁r󠄁a󠄁.
 - Onetime Secret h󠄁äm󠄁t󠄁a󠄁r o󠄁c󠄁h󠄁 f󠄁ö󠄁r󠄁n󠄁y󠄁ar󠄁 domäne󠄁n󠄁s󠄁 T󠄁L󠄁S󠄁-󠄁c󠄁e󠄁r󠄁t󠄁i󠄁f󠄁i󠄁k󠄁a󠄁t󠄁.󠄁 D󠄁u󠄁 b󠄁e󠄁h󠄁över inte
   t󠄁i󠄁l󠄁l󠄁h󠄁a󠄁n󠄁d󠄁a󠄁h󠄁å󠄁l󠄁l󠄁a󠄁 n󠄁å󠄁g󠄁o󠄁t󠄁.󠄁
 
 E󠄁x󠄁e󠄁m󠄁p󠄁e󠄁l󠄁 p󠄁å󠄁 v󠄁a󠄁d󠄁 d󠄁u󠄁 k󠄁a󠄁n󠄁 d󠄁e󠄁l󠄁a󠄁 v󠄁i󠄁a󠄁 e󠄁n󠄁 h󠄁e󠄁m󠄁l󠄁i󠄁g󠄁 l󠄁ä󠄁n󠄁k󠄁 f󠄁i󠄁n󠄁n󠄁s󠄁 u󠄁n󠄁d󠄁e󠄁r
-[A󠄁n󠄁v󠄁ä󠄁n󠄁d󠄁n󠄁i󠄁n󠄁g󠄁s󠄁o󠄁m󠄁rå󠄁d󠄁en](/sv/share/use-cases).
+[A󠄁n󠄁v󠄁ä󠄁n󠄁d󠄁n󠄁i󠄁n󠄁g󠄁s󠄁f󠄁a󠄁l󠄁l󠄁](/sv/share/use-cases).
 
-## Frå󠄁g󠄁o󠄁r󠄁 e󠄁l󠄁l󠄁e󠄁r󠄁 b󠄁e󠄁h󠄁o󠄁v󠄁 av󠄁 s󠄁u󠄁p󠄁p󠄁o󠄁r󠄁t󠄁?󠄁
+## H󠄁a󠄁r d󠄁u󠄁 f󠄁r󠄁å󠄁g󠄁o󠄁r󠄁 e󠄁l󠄁l󠄁e󠄁r󠄁 b󠄁e󠄁h󠄁ö󠄁v󠄁e󠄁r󠄁 d󠄁u󠄁 s󠄁u󠄁p󠄁p󠄁o󠄁r󠄁t󠄁?󠄁
 
 S󠄁k󠄁i󠄁c󠄁k󠄁a󠄁 e󠄁-󠄁p󠄁o󠄁s󠄁t till󠄁 [s󠄁u󠄁p󠄁p󠄁o󠄁rt󠄁@󠄁o󠄁n󠄁e󠄁t󠄁im󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁.󠄁c󠄁om](mailto:support@onetimesecret.com)
 e󠄁l󠄁l󠄁e󠄁r använd [å󠄁t󠄁e󠄁r󠄁k󠄁o󠄁p󠄁p󠄁l󠄁i󠄁ng󠄁s󠄁f󠄁o󠄁r󠄁m󠄁u󠄁l󠄁ä󠄁r󠄁e󠄁t󠄁](https://onetimesecret.com/feedback).

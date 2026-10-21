@@ -2,8 +2,6 @@
 textprov: true
 title: "Konfigurationsreferens"
 description: "Komplett referens för alla konfigurationsalternativ i Onetime Secret"
-sidebar:
-  order: 4
 ---
 
 Den h󠄁ä󠄁r󠄁 omfattande guiden󠄁 täcker alla konfigurationsalternativ för självhostade Onetime Secret-instanser.

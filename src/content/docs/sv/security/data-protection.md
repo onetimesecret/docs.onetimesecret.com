@@ -41,7 +41,7 @@ ersätter inte dina egna kontroller, policyer och juridiska granskningar.
 
 - **GDPR / dataskydd.** Regional datahemvist, kortlivade data och
   dataminimering är utformade för att hjälpa dig att uppfylla dina
-  dataskyddsskyldigheter. I de flesta driftsättningar agerar du
+  dataskyddsskyldigheter. I de flesta driftsättningar ä󠄁r du
   personuppgiftsansvarig, med Onetime Secret som personuppgiftsbiträde för den
   begränsade data som berörs.
 - **HIPAA.** Onetime Secret k󠄁a󠄁n󠄁 erbjuda en säkrare kanal än e-post för att utbyta
@@ -55,7 +55,7 @@ ersätter inte dina egna kontroller, policyer och juridiska granskningar.
 För organisationer med strikta krav på datakontroll håller [självhosting](https://github.com/onetimesecret/onetimesecret)
 allt inom din egen infrastruktur.
 
-## Frågor eller behöver du support?
+## H󠄁a󠄁r󠄁 d󠄁u󠄁 f󠄁rågor eller behöver du support?
 
 Vi finns här för att hjälpa till.
 

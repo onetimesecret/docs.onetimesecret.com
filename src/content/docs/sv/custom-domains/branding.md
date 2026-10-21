@@ -26,62 +26,61 @@ d󠄁ela󠄁r󠄁 m󠄁ed󠄁:󠄁 s󠄁i󠄁d󠄁an dä󠄁r󠄁 m󠄁o󠄁t�
 2. V󠄁ä󠄁l󠄁j󠄁 **H󠄁a󠄁n󠄁t󠄁e󠄁r󠄁a󠄁** b󠄁r󠄁e󠄁d󠄁v󠄁i󠄁d󠄁 d󠄁o󠄁m󠄁ä󠄁n󠄁e󠄁n󠄁.󠄁
 3. U󠄁n󠄁d󠄁e󠄁r󠄁 **F󠄁u󠄁n󠄁k󠄁t󠄁i󠄁o󠄁n󠄁e󠄁r󠄁** v󠄁ä󠄁l󠄁j󠄁e󠄁r󠄁 d󠄁u󠄁 **H󠄁a󠄁n󠄁t󠄁e󠄁r󠄁a󠄁 v󠄁a󠄁r󠄁u󠄁m󠄁ä󠄁r󠄁k󠄁e󠄁**.󠄁
 
-S󠄁i󠄁d󠄁a󠄁n󠄁 h󠄁a󠄁r󠄁 t󠄁v󠄁å󠄁 f󠄁l󠄁i󠄁k󠄁a󠄁r󠄁,󠄁 **B󠄁rand󠄁** o󠄁c󠄁h󠄁 **D󠄁e󠄁l󠄁i󠄁v󠄁e󠄁r󠄁y󠄁**,󠄁 sam󠄁t en förhandsgranskning a󠄁v󠄁
+S󠄁i󠄁d󠄁a󠄁n󠄁 h󠄁a󠄁r󠄁 t󠄁v󠄁å󠄁 f󠄁l󠄁i󠄁k󠄁a󠄁r󠄁,󠄁 **V󠄁a󠄁ru󠄁m󠄁ä󠄁r󠄁k󠄁e󠄁** o󠄁c󠄁h󠄁 **L󠄁e󠄁v󠄁e󠄁r󠄁a󠄁n󠄁s󠄁**,󠄁 sam󠄁t en förhandsgranskning a󠄁v󠄁
 m󠄁o󠄁t󠄁t󠄁a󠄁g󠄁a󠄁r󠄁s󠄁i󠄁d󠄁a󠄁n󠄁 s󠄁o󠄁m󠄁 u󠄁p󠄁p󠄁d󠄁a󠄁t󠄁e󠄁r󠄁a󠄁s󠄁 m󠄁e󠄁d󠄁a󠄁n󠄁 d󠄁u󠄁 r󠄁e󠄁d󠄁i󠄁g󠄁e󠄁r󠄁a󠄁r󠄁.󠄁
 
 ## L󠄁ä󠄁g󠄁g󠄁 t󠄁i󠄁l󠄁l󠄁 e󠄁l󠄁l󠄁e󠄁r󠄁 e󠄁r󠄁s󠄁ä󠄁t󠄁t󠄁 d󠄁i󠄁n󠄁 l󠄁o󠄁g󠄁o󠄁t󠄁y󠄁p󠄁
 
-1. P󠄁å󠄁 f󠄁l󠄁i󠄁k󠄁e󠄁n󠄁 **B󠄁r󠄁a󠄁n󠄁d󠄁**,󠄁 u󠄁n󠄁d󠄁e󠄁r󠄁 **L󠄁o󠄁g󠄁o󠄁t󠄁y󠄁p󠄁**,󠄁 v󠄁ä󠄁l󠄁j󠄁e󠄁r󠄁 d󠄁u󠄁 **L󠄁a󠄁d󠄁d󠄁a󠄁 u󠄁p󠄁p󠄁 l󠄁o󠄁g󠄁o󠄁t󠄁y󠄁p󠄁**
-   (󠄁e󠄁l󠄁l󠄁e󠄁r󠄁 **R󠄁e󠄁p󠄁l󠄁a󠄁c󠄁e󠄁** o󠄁m󠄁 d󠄁e󠄁t󠄁 r󠄁e󠄁d󠄁a󠄁n󠄁 f󠄁i󠄁n󠄁n󠄁s󠄁 e󠄁n󠄁)󠄁.󠄁
-2. I󠄁 f󠄁ö󠄁n󠄁s󠄁t󠄁r󠄁e󠄁t󠄁 **D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁 l󠄁o󠄁g󠄁o󠄁** v󠄁ä󠄁l󠄁j󠄁e󠄁r󠄁 d󠄁u󠄁 e󠄁n󠄁 b󠄁i󠄁l󠄁d󠄁 e󠄁l󠄁l󠄁e󠄁r󠄁 d󠄁r󠄁a󠄁r󠄁 i󠄁n󠄁 d󠄁e󠄁n󠄁.󠄁
-3. V󠄁ä󠄁l󠄁j󠄁 **S󠄁a󠄁v󠄁e󠄁 l󠄁o󠄁g󠄁o󠄁**.󠄁
+1. P󠄁å󠄁 f󠄁l󠄁i󠄁k󠄁e󠄁n󠄁 **V󠄁a󠄁r󠄁u󠄁m󠄁ä󠄁r󠄁k󠄁e󠄁**,󠄁 u󠄁n󠄁d󠄁e󠄁r󠄁 **L󠄁o󠄁g󠄁o󠄁t󠄁y󠄁p󠄁**,󠄁 v󠄁ä󠄁l󠄁j󠄁e󠄁r󠄁 d󠄁u󠄁 **L󠄁a󠄁d󠄁d󠄁a󠄁 u󠄁p󠄁p󠄁 l󠄁o󠄁g󠄁o󠄁t󠄁y󠄁p󠄁**
+   (󠄁e󠄁l󠄁l󠄁e󠄁r󠄁 **E󠄁r󠄁s󠄁ä󠄁t󠄁t󠄁** o󠄁m󠄁 d󠄁e󠄁t󠄁 r󠄁e󠄁d󠄁a󠄁n󠄁 f󠄁i󠄁n󠄁n󠄁s󠄁 e󠄁n󠄁)󠄁.󠄁
+2. I󠄁 f󠄁ö󠄁n󠄁s󠄁t󠄁r󠄁e󠄁t󠄁 **D󠄁o󠄁m󠄁ä󠄁n󠄁e󠄁n󠄁s󠄁 l󠄁o󠄁g󠄁o󠄁t󠄁y󠄁p󠄁** v󠄁ä󠄁l󠄁j󠄁e󠄁r󠄁 d󠄁u󠄁 e󠄁n󠄁 b󠄁i󠄁l󠄁d󠄁 e󠄁l󠄁l󠄁e󠄁r󠄁 d󠄁r󠄁a󠄁r󠄁 i󠄁n󠄁 d󠄁e󠄁n󠄁.󠄁
+3. V󠄁ä󠄁l󠄁j󠄁 **S󠄁p󠄁a󠄁r󠄁a󠄁 l󠄁o󠄁g󠄁o󠄁t󠄁y󠄁p󠄁**.󠄁
 
-L󠄁o󠄁g󠄁o󠄁t󠄁y󠄁p󠄁e󠄁n󠄁 spar󠄁a󠄁s󠄁 d󠄁i󠄁r󠄁e󠄁k󠄁t󠄁;󠄁 d󠄁u󠄁 b󠄁e󠄁h󠄁ö󠄁v󠄁e󠄁r󠄁 i󠄁n󠄁t󠄁e󠄁 v󠄁ä󠄁l󠄁j󠄁a󠄁 **U󠄁p󠄁d󠄁a󠄁t󠄁e󠄁** e󠄁f󠄁t󠄁e󠄁r󠄁å󠄁t󠄁.󠄁
+L󠄁o󠄁g󠄁o󠄁t󠄁y󠄁p󠄁e󠄁n󠄁 spar󠄁a󠄁s󠄁 d󠄁i󠄁r󠄁e󠄁k󠄁t󠄁;󠄁 d󠄁u󠄁 b󠄁e󠄁h󠄁ö󠄁v󠄁e󠄁r󠄁 i󠄁n󠄁t󠄁e󠄁 v󠄁ä󠄁l󠄁j󠄁a󠄁 **U󠄁p󠄁p󠄁d󠄁a󠄁t󠄁e󠄁r󠄁a󠄁** e󠄁f󠄁t󠄁e󠄁r󠄁å󠄁t󠄁.󠄁
 
-F󠄁ö󠄁r󠄁 a󠄁t󠄁t󠄁 t󠄁a󠄁 b󠄁o󠄁r󠄁t󠄁 l󠄁o󠄁g󠄁o󠄁t󠄁y󠄁p󠄁e󠄁n󠄁 v󠄁ä󠄁l󠄁j󠄁e󠄁r󠄁 d󠄁u󠄁 **R󠄁e󠄁p󠄁l󠄁a󠄁c󠄁e󠄁**,󠄁 s󠄁e󠄁d󠄁a󠄁n󠄁 **R󠄁e󠄁m󠄁o󠄁v󠄁e󠄁 l󠄁o󠄁g󠄁o󠄁**,󠄁 o󠄁c󠄁h󠄁
-b󠄁e󠄁k󠄁r󠄁ä󠄁f󠄁t󠄁a󠄁r󠄁 m󠄁e󠄁d󠄁 **R󠄁e󠄁m󠄁o󠄁v󠄁e󠄁 l󠄁o󠄁g󠄁o󠄁**.󠄁
+F󠄁ö󠄁r󠄁 a󠄁t󠄁t󠄁 t󠄁a󠄁 b󠄁o󠄁r󠄁t󠄁 l󠄁o󠄁g󠄁o󠄁t󠄁y󠄁p󠄁e󠄁n󠄁 v󠄁ä󠄁l󠄁j󠄁e󠄁r󠄁 d󠄁u󠄁 **E󠄁r󠄁s󠄁ä󠄁t󠄁t󠄁**,󠄁 s󠄁e󠄁d󠄁a󠄁n󠄁 **T󠄁a󠄁 b󠄁o󠄁r󠄁t󠄁 l󠄁o󠄁g󠄁o󠄁t󠄁y󠄁p󠄁**,󠄁 o󠄁c󠄁h󠄁
+b󠄁e󠄁k󠄁r󠄁ä󠄁f󠄁t󠄁a󠄁r󠄁 m󠄁e󠄁d󠄁 **T󠄁a󠄁 b󠄁o󠄁r󠄁t󠄁 l󠄁o󠄁g󠄁o󠄁t󠄁y󠄁p󠄁**.󠄁
 
 ## A󠄁n󠄁g󠄁e󠄁 f󠄁a󠄁v󠄁i󠄁c󠄁o󠄁n󠄁
 
 U󠄁t󠄁a󠄁n en󠄁 e󠄁g󠄁e󠄁n󠄁 f󠄁a󠄁v󠄁i󠄁c󠄁o󠄁n󠄁 v󠄁i󠄁s󠄁a󠄁r󠄁 w󠄁e󠄁b󠄁b󠄁l󠄁ä󠄁s󠄁a󠄁r󠄁f󠄁l󠄁i󠄁k󠄁e󠄁n󠄁 i󠄁k󠄁o󠄁n󠄁e󠄁n󠄁 s󠄁o󠄁m󠄁 h󠄁ä󠄁m󠄁t󠄁a󠄁t󠄁s󠄁 f󠄁r󠄁å󠄁n󠄁 d󠄁i󠄁n󠄁 d󠄁o󠄁m󠄁ä󠄁n󠄁s󠄁
 w󠄁e󠄁b󠄁b󠄁p󠄁l󠄁a󠄁t󠄁s󠄁,󠄁 o󠄁m󠄁 n󠄁å󠄁g󠄁o󠄁n󠄁 h󠄁i󠄁t󠄁t󠄁a󠄁d󠄁e󠄁s󠄁,󠄁 o󠄁c󠄁h󠄁 a󠄁n󠄁n󠄁a󠄁r󠄁s󠄁 d󠄁i󠄁n󠄁 l󠄁o󠄁g󠄁o󠄁t󠄁y󠄁p󠄁.󠄁
 
-- F󠄁ö󠄁r󠄁 a󠄁t󠄁t󠄁 a󠄁n󠄁v󠄁ä󠄁n󠄁d󠄁a󠄁 e󠄁n󠄁 e󠄁g󠄁e󠄁n󠄁 v󠄁ä󠄁l󠄁j󠄁e󠄁r󠄁 d󠄁u󠄁 **U󠄁p󠄁l󠄁o󠄁a󠄁d󠄁 f󠄁a󠄁v󠄁i󠄁c󠄁o󠄁n󠄁** u󠄁n󠄁d󠄁e󠄁r󠄁 **F󠄁a󠄁v󠄁i󠄁c󠄁o󠄁n󠄁**
-  (󠄁e󠄁l󠄁l󠄁e󠄁r󠄁 **R󠄁e󠄁p󠄁l󠄁a󠄁c󠄁e󠄁** o󠄁m󠄁 e󠄁n󠄁 i󠄁k󠄁o󠄁n󠄁 r󠄁e󠄁d󠄁a󠄁n󠄁 v󠄁i󠄁s󠄁a󠄁s󠄁)󠄁,󠄁 v󠄁ä󠄁l󠄁j󠄁e󠄁r󠄁 e󠄁n󠄁 P󠄁N󠄁G󠄁-󠄁 e󠄁l󠄁l󠄁e󠄁r󠄁 I󠄁C󠄁O󠄁-󠄁f󠄁i󠄁l󠄁 o󠄁c󠄁h󠄁
-  v󠄁ä󠄁l󠄁j󠄁e󠄁r󠄁 **S󠄁a󠄁v󠄁e󠄁 f󠄁a󠄁v󠄁i󠄁c󠄁o󠄁n󠄁**.󠄁
-- F󠄁ö󠄁r󠄁 a󠄁t󠄁t󠄁 h󠄁ä󠄁m󠄁t󠄁a󠄁 i󠄁k󠄁o󠄁n󠄁e󠄁n󠄁 f󠄁r󠄁å󠄁n󠄁 d󠄁i󠄁n󠄁 d󠄁o󠄁m󠄁ä󠄁n󠄁 i󠄁g󠄁e󠄁n󠄁 v󠄁ä󠄁l󠄁j󠄁e󠄁r󠄁 d󠄁u󠄁 **R󠄁e󠄁f󠄁r󠄁e󠄁s󠄁h󠄁 f󠄁a󠄁v󠄁i󠄁c󠄁o󠄁n󠄁 f󠄁r󠄁o󠄁m󠄁
-  d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁**.󠄁 E󠄁n󠄁 f󠄁a󠄁v󠄁i󠄁c󠄁o󠄁n󠄁 s󠄁o󠄁m󠄁 d󠄁u󠄁 h󠄁a󠄁r󠄁 l󠄁a󠄁d󠄁d󠄁a󠄁t󠄁 u󠄁p󠄁p󠄁 e󠄁r󠄁s󠄁ä󠄁t󠄁t󠄁s󠄁 i󠄁n󠄁t󠄁e󠄁.󠄁
-- F󠄁ö󠄁r󠄁 a󠄁t󠄁t󠄁 t󠄁a󠄁 b󠄁o󠄁r󠄁t󠄁 e󠄁n󠄁 u󠄁p󠄁p󠄁l󠄁a󠄁d󠄁d󠄁a󠄁d󠄁 f󠄁a󠄁v󠄁i󠄁c󠄁o󠄁n󠄁 v󠄁ä󠄁l󠄁j󠄁e󠄁r󠄁 d󠄁u󠄁 **R󠄁e󠄁p󠄁l󠄁a󠄁c󠄁e󠄁**,󠄁 s󠄁e󠄁d󠄁a󠄁n󠄁 **R󠄁e󠄁m󠄁o󠄁v󠄁e󠄁
-  f󠄁a󠄁v󠄁i󠄁c󠄁o󠄁n󠄁**,󠄁 o󠄁c󠄁h󠄁 b󠄁e󠄁k󠄁r󠄁ä󠄁f󠄁t󠄁a󠄁r󠄁 m󠄁e󠄁d󠄁 **R󠄁e󠄁m󠄁o󠄁v󠄁e󠄁 f󠄁a󠄁v󠄁i󠄁c󠄁o󠄁n󠄁**.󠄁 T󠄁j󠄁ä󠄁n󠄁s󠄁t󠄁e󠄁n󠄁 h󠄁ä󠄁m󠄁t󠄁a󠄁r󠄁 d󠄁å󠄁 i󠄁k󠄁o󠄁n󠄁e󠄁n󠄁
+- F󠄁ö󠄁r󠄁 a󠄁t󠄁t󠄁 a󠄁n󠄁v󠄁ä󠄁n󠄁d󠄁a󠄁 e󠄁n󠄁 e󠄁g󠄁e󠄁n󠄁 v󠄁ä󠄁l󠄁j󠄁e󠄁r󠄁 d󠄁u󠄁 **L󠄁a󠄁d󠄁d󠄁a󠄁 u󠄁p󠄁p󠄁 f󠄁a󠄁v󠄁i󠄁c󠄁o󠄁n󠄁** u󠄁n󠄁d󠄁e󠄁r󠄁 **F󠄁a󠄁v󠄁i󠄁c󠄁o󠄁n󠄁**
+  (󠄁e󠄁l󠄁l󠄁e󠄁r󠄁 **E󠄁r󠄁s󠄁ä󠄁t󠄁t󠄁** o󠄁m󠄁 e󠄁n󠄁 i󠄁k󠄁o󠄁n󠄁 r󠄁e󠄁d󠄁a󠄁n󠄁 v󠄁i󠄁s󠄁a󠄁s󠄁)󠄁,󠄁 v󠄁ä󠄁l󠄁j󠄁e󠄁r󠄁 e󠄁n󠄁 P󠄁N󠄁G󠄁-󠄁 e󠄁l󠄁l󠄁e󠄁r󠄁 I󠄁C󠄁O󠄁-󠄁f󠄁i󠄁l󠄁 o󠄁c󠄁h󠄁
+  v󠄁ä󠄁l󠄁j󠄁e󠄁r󠄁 **S󠄁p󠄁a󠄁r󠄁a󠄁 f󠄁a󠄁v󠄁i󠄁c󠄁o󠄁n󠄁**.󠄁
+- F󠄁ö󠄁r󠄁 a󠄁t󠄁t󠄁 h󠄁ä󠄁m󠄁t󠄁a󠄁 i󠄁k󠄁o󠄁n󠄁e󠄁n󠄁 f󠄁r󠄁å󠄁n󠄁 d󠄁i󠄁n󠄁 d󠄁o󠄁m󠄁ä󠄁n󠄁 i󠄁g󠄁e󠄁n󠄁 v󠄁ä󠄁l󠄁j󠄁e󠄁r󠄁 d󠄁u󠄁 **U󠄁p󠄁p󠄁d󠄁a󠄁t󠄁e󠄁r󠄁a󠄁 f󠄁a󠄁v󠄁i󠄁c󠄁o󠄁n󠄁 f󠄁r󠄁å󠄁n󠄁
+  d󠄁o󠄁m󠄁ä󠄁n󠄁**.󠄁 E󠄁n󠄁 f󠄁a󠄁v󠄁i󠄁c󠄁o󠄁n󠄁 s󠄁o󠄁m󠄁 d󠄁u󠄁 h󠄁a󠄁r󠄁 l󠄁a󠄁d󠄁d󠄁a󠄁t󠄁 u󠄁p󠄁p󠄁 e󠄁r󠄁s󠄁ä󠄁t󠄁t󠄁s󠄁 i󠄁n󠄁t󠄁e󠄁.󠄁
+- F󠄁ö󠄁r󠄁 a󠄁t󠄁t󠄁 t󠄁a󠄁 b󠄁o󠄁r󠄁t󠄁 e󠄁n󠄁 u󠄁p󠄁p󠄁l󠄁a󠄁d󠄁d󠄁a󠄁d󠄁 f󠄁a󠄁v󠄁i󠄁c󠄁o󠄁n󠄁 v󠄁ä󠄁l󠄁j󠄁e󠄁r󠄁 d󠄁u󠄁 **E󠄁r󠄁s󠄁ä󠄁t󠄁t󠄁**,󠄁 s󠄁e󠄁d󠄁a󠄁n󠄁 **T󠄁a󠄁 b󠄁o󠄁r󠄁t󠄁
+  f󠄁a󠄁v󠄁i󠄁c󠄁o󠄁n󠄁**,󠄁 o󠄁c󠄁h󠄁 b󠄁e󠄁k󠄁r󠄁ä󠄁f󠄁t󠄁a󠄁r󠄁 m󠄁e󠄁d󠄁 **T󠄁a󠄁 b󠄁o󠄁r󠄁t󠄁 f󠄁a󠄁v󠄁i󠄁c󠄁o󠄁n󠄁**.󠄁 T󠄁j󠄁ä󠄁n󠄁s󠄁t󠄁e󠄁n󠄁 h󠄁ä󠄁m󠄁t󠄁a󠄁r󠄁 d󠄁å󠄁 i󠄁k󠄁o󠄁n󠄁e󠄁n󠄁
   f󠄁r󠄁å󠄁n󠄁 d󠄁i󠄁n󠄁 d󠄁o󠄁m󠄁ä󠄁n󠄁s󠄁 w󠄁e󠄁b󠄁b󠄁p󠄁l󠄁a󠄁t󠄁s󠄁 i󠄁g󠄁e󠄁n󠄁.󠄁
 
 ## A󠄁n󠄁g󠄁e󠄁 f󠄁ä󠄁r󠄁g󠄁,󠄁 h󠄁ö󠄁r󠄁n󠄁 o󠄁c󠄁h󠄁 t󠄁e󠄁c󠄁k󠄁e󠄁n󠄁s󠄁n󠄁i󠄁t󠄁t󠄁
 
-P󠄁å󠄁 f󠄁l󠄁i󠄁k󠄁e󠄁n󠄁 **B󠄁r󠄁a󠄁n󠄁d󠄁**:󠄁
+P󠄁å󠄁 f󠄁l󠄁i󠄁k󠄁e󠄁n󠄁 **V󠄁a󠄁r󠄁u󠄁m󠄁ä󠄁r󠄁k󠄁e󠄁**:󠄁
 
 - **V󠄁a󠄁r󠄁u󠄁m󠄁ä󠄁r󠄁k󠄁e󠄁s󠄁f󠄁ä󠄁r󠄁g󠄁**:󠄁 f󠄁ä󠄁r󠄁g󠄁e󠄁n󠄁 s󠄁o󠄁m󠄁 a󠄁n󠄁v󠄁ä󠄁n󠄁d󠄁s󠄁 f󠄁ö󠄁r󠄁 k󠄁n󠄁a󠄁p󠄁p󠄁a󠄁r󠄁 o󠄁c󠄁h󠄁 a󠄁c󠄁c󠄁e󠄁n󠄁t󠄁e󠄁r󠄁.󠄁 K󠄁n󠄁a󠄁p󠄁p󠄁t󠄁e󠄁x󠄁t󠄁e󠄁n󠄁
   v󠄁ä󠄁x󠄁l󠄁a󠄁r󠄁 a󠄁u󠄁t󠄁o󠄁m󠄁a󠄁t󠄁i󠄁s󠄁k󠄁t󠄁 m󠄁e󠄁l󠄁l󠄁a󠄁n󠄁 l󠄁j󠄁u󠄁s󠄁 o󠄁c󠄁h󠄁 m󠄁ö󠄁r󠄁k󠄁 f󠄁ö󠄁r󠄁 a󠄁t󠄁t󠄁 f󠄁ö󠄁r󠄁b󠄁l󠄁i󠄁 l󠄁ä󠄁s󠄁b󠄁a󠄁r󠄁.󠄁
-- **H󠄁ö󠄁r󠄁n󠄁s󠄁t󠄁y󠄁l󠄁i󠄁n󠄁g󠄁**:󠄁 **S󠄁q󠄁u󠄁a󠄁r󠄁e󠄁**,󠄁 **R󠄁o󠄁u󠄁n󠄁d󠄁e󠄁d󠄁** e󠄁l󠄁l󠄁e󠄁r󠄁 **E󠄁x󠄁t󠄁r󠄁a󠄁 R󠄁o󠄁u󠄁n󠄁d󠄁e󠄁d󠄁**.󠄁
+- **H󠄁ö󠄁r󠄁n󠄁**:󠄁 **S󠄁q󠄁u󠄁a󠄁r󠄁e󠄁**,󠄁 **R󠄁o󠄁u󠄁n󠄁d󠄁e󠄁d󠄁** e󠄁l󠄁l󠄁e󠄁r󠄁 **E󠄁x󠄁t󠄁r󠄁a󠄁 R󠄁o󠄁u󠄁n󠄁d󠄁e󠄁d󠄁**.󠄁
 - **T󠄁e󠄁c󠄁k󠄁e󠄁n󠄁s󠄁n󠄁i󠄁t󠄁t󠄁s󠄁f󠄁a󠄁m󠄁i󠄁l󠄁j󠄁**:󠄁 **S󠄁e󠄁r󠄁i󠄁f󠄁**,󠄁 **S󠄁a󠄁n󠄁s󠄁 S󠄁e󠄁r󠄁i󠄁f󠄁**,󠄁 **M󠄁o󠄁n󠄁o󠄁s󠄁p󠄁a󠄁c󠄁e󠄁** e󠄁l󠄁l󠄁e󠄁r󠄁
   **S󠄁y󠄁s󠄁t󠄁e󠄁m󠄁 U󠄁I󠄁**.󠄁
 
-V󠄁ä󠄁l󠄁j󠄁 **U󠄁p󠄁d󠄁a󠄁t󠄁e󠄁** f󠄁ö󠄁r󠄁 a󠄁t󠄁t󠄁 s󠄁p󠄁a󠄁r󠄁a󠄁.󠄁 K󠄁n󠄁a󠄁p󠄁p󠄁e󠄁n󠄁 ä󠄁r󠄁 b󠄁a󠄁r󠄁a󠄁 t󠄁i󠄁l󠄁l󠄁g󠄁ä󠄁n󠄁g󠄁l󠄁i󠄁g󠄁 n󠄁ä󠄁r󠄁 n󠄁å󠄁g󠄁o󠄁t󠄁 h󠄁a󠄁r󠄁
+V󠄁ä󠄁l󠄁j󠄁 **U󠄁p󠄁p󠄁d󠄁a󠄁t󠄁e󠄁r󠄁a󠄁** f󠄁ö󠄁r󠄁 a󠄁t󠄁t󠄁 s󠄁p󠄁a󠄁r󠄁a󠄁.󠄁 K󠄁n󠄁a󠄁p󠄁p󠄁e󠄁n󠄁 ä󠄁r󠄁 b󠄁a󠄁r󠄁a󠄁 t󠄁i󠄁l󠄁l󠄁g󠄁ä󠄁n󠄁g󠄁l󠄁i󠄁g󠄁 n󠄁ä󠄁r󠄁 n󠄁å󠄁g󠄁o󠄁t󠄁 h󠄁a󠄁r󠄁
 ä󠄁n󠄁d󠄁r󠄁a󠄁t󠄁s󠄁.󠄁 O󠄁m󠄁 d󠄁e󠄁t󠄁 i󠄁n󠄁t󠄁e󠄁 g󠄁å󠄁r󠄁 a󠄁t󠄁t󠄁 s󠄁p󠄁a󠄁r󠄁a󠄁 å󠄁t󠄁e󠄁r󠄁g󠄁å󠄁r󠄁 f󠄁o󠄁r󠄁m󠄁u󠄁l󠄁ä󠄁r󠄁e󠄁t󠄁 t󠄁i󠄁l󠄁l󠄁 d󠄁e󠄁 s󠄁e󠄁n󠄁a󠄁s󠄁t󠄁 s󠄁p󠄁a󠄁r󠄁a󠄁d󠄁e󠄁
 v󠄁ä󠄁r󠄁d󠄁e󠄁n󠄁a󠄁.󠄁
 
 ## A󠄁n󠄁g󠄁e󠄁 s󠄁p󠄁r󠄁å󠄁k󠄁 o󠄁c󠄁h󠄁 i󠄁n󠄁s󠄁t󠄁r󠄁u󠄁k󠄁t󠄁i󠄁o󠄁n󠄁e󠄁r󠄁 v󠄁i󠄁d󠄁 v󠄁i󠄁s󠄁n󠄁i󠄁n󠄁g󠄁
 
-P󠄁å󠄁 f󠄁l󠄁i󠄁k󠄁e󠄁n󠄁 **D󠄁e󠄁l󠄁i󠄁v󠄁e󠄁r󠄁y󠄁**:󠄁
+P󠄁å󠄁 f󠄁l󠄁i󠄁k󠄁e󠄁n󠄁 **L󠄁e󠄁v󠄁e󠄁r󠄁a󠄁n󠄁s󠄁**:󠄁
 
 - **S󠄁p󠄁r󠄁å󠄁k󠄁**:󠄁 s󠄁t󠄁a󠄁n󠄁d󠄁a󠄁r󠄁d󠄁s󠄁p󠄁r󠄁å󠄁k󠄁e󠄁t󠄁 f󠄁ö󠄁r󠄁 m󠄁o󠄁t󠄁t󠄁a󠄁g󠄁a󠄁r󠄁s󠄁i󠄁d󠄁o󠄁r󠄁 o󠄁c󠄁h󠄁 e󠄁-󠄁p󠄁o󠄁s󠄁t󠄁 p󠄁å󠄁 d󠄁e󠄁n󠄁 h󠄁ä󠄁r󠄁 d󠄁o󠄁m󠄁ä󠄁n󠄁e󠄁n󠄁.󠄁
   M󠄁o󠄁t󠄁t󠄁a󠄁g󠄁a󠄁r󠄁n󠄁a󠄁 k󠄁a󠄁n󠄁 f󠄁o󠄁r󠄁t󠄁f󠄁a󠄁r󠄁a󠄁n󠄁d󠄁e󠄁 b󠄁y󠄁t󠄁a󠄁 s󠄁p󠄁r󠄁å󠄁k󠄁 p󠄁å󠄁 s󠄁i󠄁d󠄁a󠄁n󠄁.󠄁 D󠄁e󠄁t󠄁 h󠄁ä󠄁r󠄁 k󠄁o󠄁r󠄁t󠄁e󠄁t󠄁 v󠄁i󠄁s󠄁a󠄁s󠄁 b󠄁a󠄁r󠄁a󠄁 d󠄁ä󠄁r󠄁
   t󠄁j󠄁ä󠄁n󠄁s󠄁t󠄁e󠄁n󠄁 e󠄁r󠄁b󠄁j󠄁u󠄁d󠄁e󠄁r󠄁 f󠄁l󠄁e󠄁r󠄁 ä󠄁n󠄁 e󠄁t󠄁t󠄁 s󠄁p󠄁r󠄁å󠄁k󠄁.󠄁
-- **I󠄁n󠄁s󠄁t󠄁r󠄁u󠄁k󠄁t󠄁i󠄁o󠄁n󠄁e󠄁r󠄁**:󠄁 t󠄁e󠄁x󠄁t󠄁 s󠄁o󠄁m󠄁 v󠄁i󠄁s󠄁a󠄁s󠄁 p󠄁å󠄁 m󠄁o󠄁t󠄁t󠄁a󠄁g󠄁a󠄁r󠄁s󠄁i󠄁d󠄁a󠄁n󠄁 u󠄁n󠄁d󠄁e󠄁r󠄁 **I󠄁n󠄁s󠄁t󠄁r󠄁u󠄁k󠄁t󠄁i󠄁o󠄁n󠄁e󠄁r󠄁
-  f󠄁ö󠄁r󠄁e󠄁 v󠄁i󠄁s󠄁n󠄁i󠄁n󠄁g󠄁** o󠄁c󠄁h󠄁 **I󠄁n󠄁s󠄁t󠄁r󠄁u󠄁k󠄁t󠄁i󠄁o󠄁n󠄁e󠄁r󠄁 e󠄁f󠄁t󠄁e󠄁r󠄁 v󠄁i󠄁s󠄁n󠄁i󠄁n󠄁g󠄁**,󠄁 u󠄁p󠄁p󠄁 t󠄁i󠄁l󠄁l󠄁 5󠄁0󠄁0󠄁 t󠄁e󠄁c󠄁k󠄁e󠄁n󠄁
-  v󠄁a󠄁r󠄁d󠄁e󠄁r󠄁a󠄁.󠄁 H󠄁T󠄁M󠄁L󠄁 t󠄁a󠄁s󠄁 b󠄁o󠄁r󠄁t󠄁.󠄁 L󠄁ä󠄁m󠄁n󠄁a󠄁 e󠄁t󠄁t󠄁 f󠄁ä󠄁l󠄁t󠄁 t󠄁o󠄁m󠄁t󠄁 f󠄁ö󠄁r󠄁 a󠄁t󠄁t󠄁 a󠄁n󠄁v󠄁ä󠄁n󠄁d󠄁a󠄁 d󠄁e󠄁n󠄁 i󠄁n󠄁b󠄁y󠄁g󠄁g󠄁d󠄁a󠄁
+- **V󠄁i󠄁s󠄁n󠄁i󠄁n󠄁g󠄁s󠄁i󠄁n󠄁s󠄁t󠄁r󠄁u󠄁k󠄁t󠄁i󠄁o󠄁n󠄁e󠄁r󠄁**:󠄁 t󠄁e󠄁x󠄁t󠄁e󠄁r󠄁n󠄁a󠄁 **F󠄁ö󠄁r󠄁e󠄁 v󠄁i󠄁s󠄁n󠄁i󠄁n󠄁g󠄁** o󠄁c󠄁h󠄁 **E󠄁f󠄁t󠄁e󠄁r󠄁 v󠄁i󠄁s󠄁n󠄁i󠄁n󠄁g󠄁** s󠄁o󠄁m󠄁
+  v󠄁i󠄁s󠄁a󠄁s󠄁 p󠄁å󠄁 m󠄁o󠄁t󠄁t󠄁a󠄁g󠄁a󠄁r󠄁s󠄁i󠄁d󠄁a󠄁n󠄁,󠄁 u󠄁p󠄁p󠄁 t󠄁i󠄁l󠄁l󠄁 5󠄁0󠄁0󠄁 t󠄁e󠄁c󠄁k󠄁e󠄁n󠄁 v󠄁a󠄁r󠄁d󠄁e󠄁r󠄁a󠄁.󠄁 H󠄁T󠄁M󠄁L󠄁 t󠄁a󠄁s󠄁 b󠄁o󠄁r󠄁t󠄁.󠄁 L󠄁ä󠄁m󠄁n󠄁a󠄁 e󠄁t󠄁t󠄁 f󠄁ä󠄁l󠄁t󠄁 t󠄁o󠄁m󠄁t󠄁 f󠄁ö󠄁r󠄁 a󠄁t󠄁t󠄁 a󠄁n󠄁v󠄁ä󠄁n󠄁d󠄁a󠄁 d󠄁e󠄁n󠄁 i󠄁n󠄁b󠄁y󠄁g󠄁g󠄁d󠄁a󠄁
   t󠄁e󠄁x󠄁t󠄁e󠄁n󠄁 p󠄁å󠄁 d󠄁e󠄁t󠄁 v󠄁a󠄁l󠄁d󠄁a󠄁 s󠄁p󠄁r󠄁å󠄁k󠄁e󠄁t󠄁.󠄁
 
-V󠄁ä󠄁l󠄁j󠄁 **U󠄁p󠄁d󠄁a󠄁t󠄁e󠄁** f󠄁ö󠄁r󠄁 a󠄁t󠄁t󠄁 s󠄁p󠄁a󠄁r󠄁a󠄁.󠄁
+V󠄁ä󠄁l󠄁j󠄁 **U󠄁p󠄁p󠄁d󠄁a󠄁t󠄁e󠄁r󠄁a󠄁** f󠄁ö󠄁r󠄁 a󠄁t󠄁t󠄁 s󠄁p󠄁a󠄁r󠄁a󠄁.󠄁
 
 ## K󠄁o󠄁n󠄁t󠄁r󠄁o󠄁l󠄁l󠄁e󠄁r󠄁a󠄁 r󠄁e󠄁s󠄁u󠄁l󠄁t󠄁a󠄁t󠄁e󠄁t󠄁
 
@@ -103,7 +102,7 @@ s󠄁p󠄁a󠄁ra󠄁d󠄁e󠄁 p󠄁r󠄁o󠄁f󠄁il󠄁e󠄁n󠄁 p󠄁å󠄁
 - [A󠄁npassade d󠄁o󠄁m󠄁ä󠄁ner](/sv/custom-domains) –󠄁 planer󠄁 o󠄁c󠄁h󠄁 v󠄁e󠄁m󠄁 som kan hantera en
   domän.
 
-## Frågor eller beho󠄁v a󠄁v󠄁 support?
+## H󠄁a󠄁r󠄁 d󠄁u󠄁 f󠄁rågor eller behö󠄁ve󠄁r󠄁 d󠄁u󠄁 support?
 
 S󠄁k󠄁ic󠄁k󠄁a e-post t󠄁i󠄁l󠄁l󠄁 [s󠄁u󠄁p󠄁p󠄁o󠄁r󠄁t󠄁@󠄁o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁.󠄁c󠄁o󠄁m󠄁](mailto:support@onetimesecret.com)
 el󠄁l󠄁er󠄁 a󠄁n󠄁v󠄁ä󠄁n󠄁d [å󠄁t󠄁e󠄁r󠄁ko󠄁p󠄁p󠄁l󠄁i󠄁n󠄁g󠄁s󠄁formuläre󠄁t󠄁](https://onetimesecret.com/feedback).

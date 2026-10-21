@@ -185,3 +185,56 @@ The meaning is accurate. Security claims (encryption, one-time reveal, passphras
 - The plan numbers in compare-plans.md and pricing/index.md (lifetimes, domain counts) were compared with the English, not re-derived from billing.yaml.txt.
 - The suggested anchors (`#flytta-en-anpassad-domän`, `#vad-varje-plan-omfattar`, `#var-din-domän-betjänas`) assume Starlight's github-slugger output. I did not confirm them with a build.
 - No build, test or link check was run. This review was a source comparison only.
+
+## Resolution (fix round, 2026-10-21)
+
+| Commit | Subject |
+|---|---|
+| 20328a64 | docs(i18n/sv): match branding labels to the shipped app |
+| 20f3ad3a | docs(i18n/sv): match domain, receipt and account labels to the app |
+| d0f00ace | docs(i18n/sv): correct mistranslations in domain, api and use-case pages |
+| 1c984e5b | docs(i18n/sv): use consistent terms for SSO, subdomain and hosted service |
+| 6f105843 | docs(i18n/sv): fix register breaks |
+| 0b4d4144 | docs(i18n/sv): link to Swedish pages that exist |
+| 7df40d0d | docs(i18n/sv): fix fluency and typography |
+| f81d4223 | docs(i18n/sv): align sidebar labels with page titles |
+| 31661509 | docs(i18n/sv): reword the reveal instructions item in branding |
+
+All 44 findings (12 major, 32 minor) are fixed, and so are the actionable rows of the terminology table and the sidebar and frontmatter items under "English source and general issues". Every flagged UI label was checked against `$APP/locales/content/sv_SE` at 145c1e7cfa.
+
+Fixes that differ from the suggested wording:
+
+- custom-domains/setup-guide.md:52 uses «bara värddelen» rather than «bara värdnamnet (etiketten)».
+- security/best-practices.md:59 uses «Upprätthåll detaljerade granskningsloggar» rather than «Spara …», because "Maintain" means keep, not save.
+- security/best-practices.md:70 uses «använd Onetime Secrets funktion för att bränna hemligheter omedelbart».
+- share/index.md:19,108 use «utan inloggning» in both places.
+- share/use-cases.md:30 uses «När hemligheten har visats eller gått ut»; share/use-cases.md:73 uses «förtida radering».
+- account/change-your-region.md:61 uses «fortfarande är i bruk».
+- custom-domains/branding.md:79–81 now reads «**Visningsinstruktioner**: texterna **Före visning** och **Efter visning** som visas på mottagarsidan, upp till 500 tecken vardera.» This also keeps the cumulative TextProv check clean (see the tooling item below).
+
+Changes that go beyond the findings, made for consistency:
+
+- «betjänas» changed to «levereras» / «slutar fungera» at custom-domains/setup-guide.md:63 and :97 as well as in custom-domains/index.md.
+- «subdomän» changed to «underdomän» in the prose of setup-guide.md and change-your-region.md, as well as in the field label.
+- «den hostade tjänsten» / «Hostad tjänst» changed to «värdtjänsten» / «Värdtjänst» in security/vulnerability-disclosure.md and share/why-secret-links.md.
+- security/index.md:36 description: «dina data» changed to «din data».
+- The heading «Har du frågor eller behöver du support?» is now used on branding, custom-domains/index, setup-guide and data-protection.
+- `nav.label.self-hosting` in `src/content/i18n/sv.json` changed to «Självhosting», alongside the flagged `nav.ariaLabel.selfHosting`.
+- The legacy `sidebar: order:` frontmatter was removed from self-hosting/index.md and self-hosting/configuration.md.
+
+Checks run: `python3 tools/dogfood.py check --base HEAD` before each commit and `--base b2883096` after the last content commit (pass, 15 files); `pnpm test` (175 passed); `pnpm run check:frontmatter` and `check:nav` (OK); `pnpm build` (1306 pages). The built pages contain the anchors `#vad-varje-plan-omfattar`, `#var-din-domän-levereras` and `#flytta-en-anpassad-domän`.
+
+### Skipped findings
+
+| Page:line | Finding | Reason |
+|---|---|---|
+| — | — | None skipped |
+
+### Decisions needed
+
+- **burn**: the docs glossary and `_language-notes.md` say «bränn». App governance `rule.sv-burn-radera-permanent` and the shipped buttons say «Radera (denna hemlighet) permanent» (`web.COMMON.burn_this_secret`). The prose keeps «bränn» as the glossary requires, and share/index.md:129 quotes the app button. Choose one rendering and update whichever source loses.
+- **branding** glossary row: «custom branding → anpassad varumärkning» in `translations/glossary.md` conflicts with «varumärkesprofil», which every page and the sidebar use (the app uses «varumärkesprofil» and «varumärkesprofilering»). Update the glossary row.
+- **App, stale sv_SE strings**: `web.branding.logo_modal_hint` («PNG, JPG eller SVG»), `favicon_field_hint` and `favicon_modal_hint` still list SVG, but the English source strings have dropped it. custom-domains/branding.md:18 says SVG is not accepted. Re-sync these sv_SE keys.
+- **English source, api/index.mdoc:40**: "the password is the API token from your account settings". The settings label is "API Key" (`web.account.api_key`), and security/best-practices.md says "API Keys". sv now says «API-nyckeln» to match the app. Align the English.
+- **English source, self-hosting/index.md:33** ("one generated secret", known de-1): sv now reads «en genererad `SECRET`-nyckel», based on install/docker.md (`.ots_secret`, `SECRET=`). Confirm, or clarify the English.
+- **Tooling**: `tools/dogfood.py` `correspondence()` pairs any two single-run gaps with identical text anywhere in a file, treating them as a moved block. In branding.md, a legacy unmarked «F» deleted at line 106 (heading) was paired with the new marked «F» of «Före» at line 79. Each commit passed `check --base HEAD`, but `check --base b2883096` failed until line 79 was reworded. Other fix agents can hit the same failure when two commits touch one file. Running the cumulative check before the last commit catches it.
