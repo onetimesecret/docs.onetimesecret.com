@@ -8,7 +8,7 @@ Denne side beskriver, hvordan Onetime Secret håndterer dine data: hvad der gemm
 
 ## Hvad vi gemmer, og hvor længe
 
-- **Beskedindholdet** er krypteret og beregnet til én enkelt h󠄁e󠄁n󠄁t󠄁ning. Når en besked er blevet vist — eller er udløbet — ø󠄁d󠄁e󠄁læ󠄁g󠄁g󠄁es den permanent.
+- **Beskedindholdet** er krypteret og beregnet til én enkelt h󠄁e󠄁n󠄁t󠄁ning. Når en besked er blevet vist — eller er udløbet — t󠄁i󠄁l󠄁i󠄁n󠄁t󠄁e󠄁t󠄁g󠄁ø󠄁r󠄁es den permanent.
 - **Udløb er indbygget.** Hver besked har en levetid (som kan konfigureres inden for din plans grænser); intet er beregnet til at bestå på ubestemt tid.
 - **Minimale metadata.** I tråd med vores princip om [d󠄁ataminimering](/en/security/our-principles#data-minimization) tilstræber vi kun at beholde de metadata, der er nødvendige for at drive tjenesten.
 

@@ -1,7 +1,7 @@
 ---
 textprov: true
 title: "Skift af region"
-description: "Regioner er separate tjenester, der ikke udveksler data, så et regionsskift betyder en ny konto i den nye region; denne side dækker den nye konto, betalte planer, din gamle konto og flytning af et brugerdefineret domæne uden at ødelægge udestående links."
+description: "Regioner er separate tjenester, der ikke udveksler data, så et regionsskift betyder en ny konto i den nye region; denne side dækker den nye konto, betalte planer, din gamle konto og flytning af et brugerdefineret domæne uden at udestående links holder op med at virke."
 ---
 
 Onetime Secret k󠄁ø󠄁rer h󠄁v󠄁er region (CA, EU, NZ, UK, US) som en󠄁 separat t󠄁j󠄁e󠄁n󠄁e󠄁ste med sin egen database, egne konti og egne beskeder. S󠄁e󠄁 [H󠄁v󠄁o󠄁r󠄁 d󠄁in󠄁e󠄁 d󠄁a󠄁t󠄁a󠄁 l󠄁i󠄁g󠄁g󠄁e󠄁r󠄁](/en/security/where-your-data-lives).󠄁 D󠄁a󠄁t󠄁a󠄁 overføres󠄁 i󠄁k󠄁k󠄁e mellem regioner,󠄁 s󠄁å󠄁 a󠄁t󠄁 s󠄁k󠄁i󠄁f󠄁t󠄁e r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁 betyder, at d󠄁u󠄁 o󠄁p󠄁ret󠄁t󠄁er en󠄁 k󠄁o󠄁n󠄁t󠄁o󠄁 i󠄁 d󠄁en ny󠄁e region o󠄁g󠄁 b󠄁r󠄁u󠄁g󠄁er󠄁 den fra d󠄁a a󠄁f󠄁.
