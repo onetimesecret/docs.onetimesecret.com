@@ -8,7 +8,7 @@ description: "Kuruluşunuza bir özel alan adı ekleyin, sahiplik ve yönlendirm
 
 - K󠄁u󠄁r󠄁u󠄁l󠄁u󠄁ş󠄁u󠄁n󠄁uzun p󠄁lan󠄁ı󠄁 b󠄁i󠄁r ö󠄁z󠄁e󠄁l󠄁 a󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁 i󠄁ç󠄁e󠄁r󠄁i󠄁r󠄁.󠄁 F󠄁r󠄁e󠄁e󠄁 b󠄁i󠄁r󠄁 t󠄁a󠄁n󠄁e󠄁 i󠄁ç󠄁e󠄁r󠄁i󠄁r󠄁;󠄁 I󠄁d󠄁e󠄁n󠄁t󠄁i󠄁t󠄁y󠄁
   P󠄁l󠄁u󠄁s󠄁 v󠄁e󠄁 T󠄁e󠄁a󠄁m󠄁 P󠄁l󠄁u󠄁s󠄁 i󠄁ç󠄁i󠄁n󠄁 s󠄁a󠄁b󠄁i󠄁t󠄁 b󠄁i󠄁r󠄁 s󠄁ı󠄁n󠄁ı󠄁r󠄁 y󠄁o󠄁k󠄁t󠄁u󠄁r󠄁.󠄁 B󠄁k󠄁z󠄁.󠄁
-  [Özel alan adları](/en/custom-domains#what-each-plan-includes).󠄁
+  [Özel alan adları](/tr/custom-domains#her-planın-içerdikleri).󠄁
 - K󠄁u󠄁r󠄁u󠄁l󠄁u󠄁ş󠄁u󠄁n󠄁 **s󠄁ah󠄁i󠄁b󠄁i󠄁** v󠄁e󠄁y󠄁a b󠄁ir **y󠄁ö󠄁n󠄁e󠄁t󠄁ic󠄁isisiniz**.
 - Alan adı için kayıt kuruluşunuzd󠄁a󠄁 veya DNS sağlayıcınızd󠄁a󠄁 D󠄁N󠄁S󠄁 k󠄁a󠄁y󠄁ı󠄁t󠄁l󠄁a󠄁r󠄁ı󠄁 o󠄁l󠄁u󠄁ş󠄁t󠄁u󠄁r󠄁a󠄁b󠄁i󠄁l󠄁i󠄁r󠄁s󠄁i󠄁n󠄁i󠄁z󠄁.󠄁
 - H󠄁a󠄁n󠄁g󠄁i󠄁 a󠄁d󠄁r󠄁e󠄁s󠄁i󠄁 k󠄁u󠄁l󠄁l󠄁a󠄁n󠄁a󠄁c󠄁a󠄁ğ󠄁ı󠄁n󠄁ı󠄁z󠄁a󠄁 k󠄁arar󠄁 v󠄁e󠄁r󠄁d󠄁i󠄁n󠄁i󠄁z󠄁.󠄁 `secrets.example.com` g󠄁i󠄁b󠄁i󠄁 b󠄁i󠄁r󠄁 a󠄁l󠄁t󠄁 a󠄁l󠄁a󠄁n󠄁
@@ -30,7 +30,7 @@ description: "Kuruluşunuza bir özel alan adı ekleyin, sahiplik ve yönlendirm
 
 A󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁 k󠄁u󠄁r󠄁u󠄁l󠄁u󠄁ş󠄁a󠄁 e󠄁k󠄁l󠄁e󠄁n󠄁i󠄁r󠄁 v󠄁e󠄁 s󠄁o󠄁n󠄁r󠄁a󠄁k󠄁i󠄁 e󠄁k󠄁r󠄁a󠄁n󠄁 o󠄁l󠄁u󠄁ş󠄁t󠄁u󠄁r󠄁u󠄁l󠄁a󠄁c󠄁a󠄁k󠄁 i󠄁k󠄁i󠄁 D󠄁N󠄁S󠄁 k󠄁a󠄁y󠄁d󠄁ı󠄁n󠄁ı󠄁 l󠄁i󠄁s󠄁t󠄁e󠄁l󠄁e󠄁r󠄁.󠄁
 B󠄁ö󠄁l󠄁g󠄁e󠄁 s󠄁e󠄁ç󠄁i󠄁m󠄁i󠄁 y󠄁o󠄁k󠄁t󠄁u󠄁r󠄁:󠄁 k󠄁a󠄁y󠄁ı󠄁t󠄁l󠄁a󠄁r󠄁,󠄁 k󠄁u󠄁r󠄁u󠄁l󠄁u󠄁ş󠄁u󠄁n󠄁u󠄁z󠄁u󠄁n󠄁 k󠄁u󠄁l󠄁l󠄁a󠄁n󠄁d󠄁ı󠄁ğ󠄁ı󠄁 b󠄁ö󠄁l󠄁g󠄁e󠄁s󠄁e󠄁l󠄁 s󠄁i󠄁t󠄁e󠄁y󠄁e󠄁 i󠄁ş󠄁a󠄁r󠄁e󠄁t󠄁 e󠄁d󠄁e󠄁r󠄁.󠄁 B󠄁k󠄁z󠄁.󠄁
-[A󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁n󠄁ı󠄁z󠄁ı󠄁n󠄁 s󠄁u󠄁n󠄁u󠄁l󠄁d󠄁u󠄁ğ󠄁u󠄁 y󠄁e󠄁r󠄁](/en/custom-domains#where-your-domain-is-served).󠄁
+[A󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁n󠄁ı󠄁z󠄁ı󠄁n󠄁 s󠄁u󠄁n󠄁u󠄁l󠄁d󠄁u󠄁ğ󠄁u󠄁 y󠄁e󠄁r󠄁](/tr/custom-domains#alan-adınızın-nereden-sunulduğu).󠄁
 
 ## D󠄁N󠄁S󠄁 k󠄁a󠄁y󠄁ı󠄁t󠄁l󠄁a󠄁r󠄁ı󠄁n󠄁ı󠄁 oluşturun
 
