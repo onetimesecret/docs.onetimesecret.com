@@ -82,6 +82,6 @@ hosted regions through Stripe, but it does not extend to a self-hosted instance
 
 ## Next steps
 
-- Ready to self-host: [Self-Hosting Overview](/en/self-hosting/) and [Run your own instance](/en/start/run-your-own-instance)
+- Ready to self-host: [Self-Hosting Overview](/en/self-hosting/)
 - Staying hosted: [Compare plans](/en/pricing/compare-plans) and [where your data lives](/en/security/where-your-data-lives)
 - Already self-hosting: decide your [authentication mode](/en/self-hosting/simple-or-full-auth)

@@ -64,9 +64,8 @@ that fits.
 
 ### Operate — run your own instance
 
-- **[Run your own instance](/en/start/run-your-own-instance/)** — step-by-step
-  setup
-- **[Self-hosting overview](/en/self-hosting/)** — why and how to self-host
+- **[Self-hosting overview](/en/self-hosting/)** — what running an instance
+  involves, and where to start
 - **[Install with Docker](/en/install/docker/)** — or
   [install on Linux](/en/install/linux/) from a checkout
 - **[Configuration](/en/self-hosting/configuration/)** — settings reference

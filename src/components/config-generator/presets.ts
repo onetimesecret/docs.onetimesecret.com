@@ -21,10 +21,22 @@
 export type OptionType = 'select' | 'boolean';
 
 /** UI grouping only; it has no effect on the generated files. */
-export type OptionGroup = 'deployment' | 'features' | 'secrets';
+export type OptionGroup = 'deployment' | 'signin' | 'features' | 'secrets';
 
-export const GROUPS: Array<{ key: OptionGroup; title: string }> = [
+export interface GroupSpec {
+  key: OptionGroup;
+  title: string;
+  /**
+   * A requirement every option in the group shares, stated once under the
+   * group title instead of on each row. Display only: each option still
+   * carries it in its own `requires`, which is what generate.ts enforces.
+   */
+  requires?: Record<string, string | number | boolean>;
+}
+
+export const GROUPS: GroupSpec[] = [
   { key: 'deployment', title: 'Deployment' },
+  { key: 'signin', title: 'Sign-in', requires: { deployment_mode: 'full' } },
   { key: 'features', title: 'Features' },
   { key: 'secrets', title: 'Secrets and network' },
 ];
@@ -41,8 +53,11 @@ export interface OptionSpec {
   description?: string;
   type: OptionType;
   group: OptionGroup;
-  /** Which file the value is written to. */
-  file: 'config' | 'auth';
+  /**
+   * Which file the value is written to. 'env' is for a switch with no YAML
+   * key (SAML_ENABLED): it writes no YAML, only its `env` entries.
+   */
+  file: 'config' | 'auth' | 'env';
   /**
    * Dotted path within that file's document, e.g.
    * 'site.secret_options.passphrase.required'. When omitted (deployment_mode,
@@ -67,7 +82,22 @@ export interface OptionSpec {
    * would override the setting to an empty string. `secret: true` flags the
    * values that must never be committed or shared.
    */
-  env?: Array<{ name: string; secret?: boolean; when?: string | number | boolean }>;
+  env?: EnvSpec[];
+}
+
+export interface EnvSpec {
+  name: string;
+  /** Must never be committed or shared. */
+  secret?: boolean;
+  /** Emit only when the option has this value. */
+  when?: string | number | boolean;
+  /**
+   * A fixed value to emit instead of a blank placeholder. Only for a switch
+   * that has no YAML key, never for a secret.
+   */
+  value?: string;
+  /** A comment line emitted above the variable. */
+  note?: string;
 }
 
 // Keep TTL choices in lockstep with
@@ -143,19 +173,81 @@ export const OPTIONS: OptionSpec[] = [
       { name: 'SMTP2GO_API_KEY', secret: true, when: 'smtp2go' },
     ],
   },
+  // ── Sign-in (Full mode) ──
+  // auth.yaml's full.features block is not in the vendored auth schema, so
+  // these carry no schemaPath; their fallbackDefaults match
+  // etc/defaults/auth.defaults.yaml.
   {
     key: 'sso_enabled',
     label: 'Single sign-on (SSO)',
     description:
-      'External identity providers via OmniAuth (OIDC, Entra ID, Google, ' +
-      'GitHub). Add the credentials for each provider you use to .env.',
+      'External identity providers: OIDC, Entra ID, Google, GitHub, GitLab, ' +
+      'and Apple. Add the credentials for each provider you use to .env.',
     type: 'boolean',
-    group: 'features',
+    group: 'signin',
     file: 'auth',
     path: 'full.features.sso',
     fallbackDefault: false,
     requires: { deployment_mode: 'full' },
   },
+  {
+    key: 'saml_enabled',
+    label: 'SAML 2.0',
+    description:
+      'Sign-in through a SAML identity provider such as Okta or ADFS. Its ' +
+      'switch, SAML_ENABLED, goes in .env with the provider settings.',
+    type: 'boolean',
+    group: 'signin',
+    file: 'env',
+    fallbackDefault: false,
+    requires: { deployment_mode: 'full', sso_enabled: true },
+    env: [
+      {
+        name: 'SAML_ENABLED',
+        value: 'true',
+        when: true,
+        note: 'SAML has no switch in auth.yaml; this turns it on.',
+      },
+      { name: 'SAML_IDP_SSO_SERVICE_URL', when: true },
+      { name: 'SAML_IDP_ENTITY_ID', when: true },
+      // The IdP's public signing certificate in PEM form: not a secret.
+      { name: 'SAML_IDP_CERT', when: true },
+    ],
+  },
+  {
+    key: 'mfa_enabled',
+    label: 'Two-factor authentication',
+    description: 'Codes from an authenticator app (TOTP), with recovery codes.',
+    type: 'boolean',
+    group: 'signin',
+    file: 'auth',
+    path: 'full.features.mfa',
+    fallbackDefault: false,
+    requires: { deployment_mode: 'full' },
+  },
+  {
+    key: 'webauthn_enabled',
+    label: 'Passkeys and security keys',
+    description: 'WebAuthn sign-in with a passkey, biometrics, or a hardware key.',
+    type: 'boolean',
+    group: 'signin',
+    file: 'auth',
+    path: 'full.features.webauthn',
+    fallbackDefault: false,
+    requires: { deployment_mode: 'full' },
+  },
+  {
+    key: 'email_auth_enabled',
+    label: 'Sign-in links by email',
+    description: 'Passwordless sign-in through a one-time link sent by email.',
+    type: 'boolean',
+    group: 'signin',
+    file: 'auth',
+    path: 'full.features.email_auth',
+    fallbackDefault: false,
+    requires: { deployment_mode: 'full' },
+  },
+  // ── Features ──
   {
     key: 'domains_enabled',
     label: 'Custom domains',
@@ -178,6 +270,19 @@ export const OPTIONS: OptionSpec[] = [
     file: 'config',
     path: 'features.regions.enabled',
     schemaPath: { file: 'config', path: 'features.regions.enabled' },
+    fallbackDefault: false,
+  },
+  {
+    key: 'markdown_enabled',
+    label: 'Markdown secrets',
+    description:
+      'Senders can mark a secret as Markdown, which the recipient sees ' +
+      'rendered and sanitized.',
+    type: 'boolean',
+    group: 'features',
+    file: 'config',
+    path: 'features.markdown.enabled',
+    schemaPath: { file: 'config', path: 'features.markdown.enabled' },
     fallbackDefault: false,
   },
   {
@@ -206,6 +311,18 @@ export const OPTIONS: OptionSpec[] = [
     path: 'site.network.trusted_proxy.enabled',
     // NOTE: site.network is not present in the static schema, so there is no
     // schemaPath — the fallbackDefault is authoritative here.
+    fallbackDefault: false,
+  },
+  {
+    key: 'redis_require_tls',
+    label: 'Require TLS to Redis/Valkey',
+    description:
+      'Refuse to start unless the datastore URI uses rediss:// or valkeys://.',
+    type: 'boolean',
+    group: 'secrets',
+    file: 'config',
+    path: 'redis.require_tls',
+    // Not in the static schema either; the fallbackDefault is authoritative.
     fallbackDefault: false,
   },
   {

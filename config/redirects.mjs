@@ -60,13 +60,22 @@ const LOCALES = Object.keys(i18nConfig.locales);
  * @type {{from: string, to: string, fragment?: string, toDefaultLocale?: boolean}[]}
  */
 const movedPages = [
-  // Start here — three entry points merged into one, and the two orientation
-  // pages that used to live under self-hosting.
+  // Start here — three entry points merged into one, plus the orientation
+  // page that used to live under self-hosting.
   { from: "docs-overview", to: "start" },
   { from: "introduction", to: "start" },
   { from: "introduction/guides", to: "start" },
   { from: "self-hosting/self-hosting-vs-hosted", to: "start/hosted-or-self-hosted" },
-  { from: "self-hosting/getting-started", to: "start/run-your-own-instance" },
+
+  // start/run-your-own-instance (itself the successor of
+  // self-hosting/getting-started) duplicated the install/* pages step for step
+  // and was folded into the self-hosting index. Both retired slugs aim straight
+  // at it — a redirect whose target is another redirect 404s in a static build.
+  // The non-EN copies were deleted with the EN page, which also retired the
+  // start/installation and start/configuration link shims that existed only to
+  // catch their stale relative links.
+  { from: "self-hosting/getting-started", to: "self-hosting" },
+  { from: "start/run-your-own-instance", to: "self-hosting" },
 
   // Phase 3: the 481-line installation page did six jobs and was split into six
   // install/* pages. A movedPages row fans one `from` to one `to` —
@@ -76,24 +85,6 @@ const movedPages = [
   // Docker, and its five siblings sit next to install/docker in the same
   // sidebar group, one click away.
   { from: "self-hosting/installation", to: "install/docker" },
-
-  // Link shims, not moves: the non-EN copies of run-your-own-instance (moved
-  // here from self-hosting/getting-started) still carry relative links to
-  // their old siblings — ./installation and ./configuration — which now
-  // resolve under start/. English-only policy means those translations are
-  // not edited, so route the stale targets back to the real pages instead.
-  // The installation shim now points at install/docker rather than at
-  // self-hosting/installation, which is a redirect key itself as of the row
-  // above; a redirect whose target is another redirect 404s in a static build.
-  // It does NOT point at self-hosting either: all 16 non-EN self-hosting/index
-  // files still link ./installation, which from there resolves to
-  // /{locale}/self-hosting/installation — a redirect key itself, sending the
-  // reader on to /{locale}/install/docker/. That is a three-hop detour to the
-  // same destination. Aim straight at it.
-  { from: "start/installation", to: "install/docker" },
-  // TODO(phase-4): self-hosting/configuration is retired in Phase 4; repoint
-  // this shim in the same commit that adds its movedPages row.
-  { from: "start/configuration", to: "self-hosting/configuration" },
 
   // Using Onetime Secret › Sharing secrets
   { from: "secret-links", to: "share" },

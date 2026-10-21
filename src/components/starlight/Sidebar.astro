@@ -1,0 +1,27 @@
+---
+/**
+ * Sidebar override: Starlight's default sidebar, preceded by the section card
+ * (SectionCard.astro) that only renders inside the mobile drawer, below
+ * Starlight's 50rem breakpoint where the header's section links and
+ * theme/language selects are hidden.
+ *
+ * The card puts the four section links and the selects at the top of the
+ * drawer so a phone reader does not have to scroll past the whole 70-page
+ * sidebar to switch language. MobileMenuFooter is overridden alongside this to
+ * drop the duplicate selects it would otherwise render at the bottom.
+ *
+ * Sidebar-less pages (template: splash) never render this component; Header.astro
+ * gives those their own short drawer with the same card.
+ */
+import Default from '@astrojs/starlight/components/Sidebar.astro';
+import SectionCard from './SectionCard.astro';
+---
+
+{/* The md:sl-hidden gate must sit on an element with no display rule of its
+    own: Starlight's utilities live in @layer starlight.utils, and any unlayered
+    declaration on the same element outranks them. */}
+<div class="md:sl-hidden">
+	<SectionCard />
+</div>
+
+<Default><slot /></Default>
