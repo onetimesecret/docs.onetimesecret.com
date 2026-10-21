@@ -11,6 +11,17 @@ export default defineMarkdocConfig({
     // Add custom node types here
   },
   tags: {
+    "homepage-ending": {
+      render: component("./src/components/HomepageEnding.astro"),
+      selfClosing: true,
+      attributes: {
+        variant: {
+          type: String,
+          default: "receipt",
+          matches: ["quiet", "envelope", "receipt"],
+        },
+      },
+    },
     // Override and extend tags
     // card and cardgrid come from starlightMarkdoc() above. Overriding them
     // with render: "Card" emitted a literal <card>/<cardgrid> HTML tag instead
