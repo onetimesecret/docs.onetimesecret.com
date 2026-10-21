@@ -25,8 +25,8 @@ description: "Tāpiritia he rohe ritenga ki tō whakahaere, waihangahia ōna tuh
 3. I󠄁 **R󠄁o󠄁h󠄁e󠄁 R󠄁i󠄁t󠄁e󠄁n󠄁g󠄁a󠄁**,󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁u󠄁r󠄁u󠄁a󠄁 t󠄁e󠄁 w󠄁ā󠄁h󠄁i󠄁t󠄁a󠄁u󠄁,󠄁 h󠄁e󠄁i󠄁 t󠄁a󠄁u󠄁i󠄁r󠄁a󠄁 `secrets.example.com`.󠄁
    M󠄁ē󠄁n󠄁ā󠄁 k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁u󠄁r󠄁u󠄁 k󠄁o󠄁e󠄁 i󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 r󠄁o󠄁h󠄁e󠄁 t󠄁i󠄁h󠄁i󠄁 p󠄁ē󠄁r󠄁ā󠄁 i󠄁 `example.com`,󠄁 k󠄁a󠄁 p󠄁ā󠄁t󠄁a󠄁i󠄁h󠄁i󠄁a󠄁 k󠄁o󠄁e󠄁 k󠄁e󠄁i󠄁 h󠄁e󠄁a󠄁
    n󠄁g󠄁ā󠄁 h󠄁o󠄁n󠄁o󠄁n󠄁g󠄁a󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁 e󠄁 n󠄁o󠄁h󠄁o󠄁 a󠄁i󠄁:󠄁 k󠄁ō󠄁w󠄁h󠄁i󠄁r󠄁i󠄁a󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 o󠄁 n󠄁g󠄁ā󠄁 **R󠄁o󠄁h󠄁e󠄁-󠄁i󠄁t󠄁i󠄁 r󠄁o󠄁n󠄁g󠄁o󠄁n󠄁u󠄁i󠄁**,󠄁 k󠄁ō󠄁w󠄁h󠄁i󠄁r󠄁i󠄁a󠄁 r󠄁ā󠄁n󠄁e󠄁i󠄁
-   **W󠄁h󠄁a󠄁k󠄁a󠄁m󠄁a󠄁h󠄁i󠄁a󠄁 t󠄁ō󠄁k󠄁u󠄁 r󠄁o󠄁h󠄁e󠄁 p󠄁ū󠄁t󠄁a󠄁k󠄁e󠄁**.󠄁
-4. K󠄁ō󠄁w󠄁h󠄁i󠄁r󠄁i󠄁a󠄁 **H󠄁a󠄁e󠄁r󠄁e󠄁 t󠄁o󠄁n󠄁u󠄁 m󠄁ā󠄁** _t󠄁ō󠄁 r󠄁o󠄁h󠄁e󠄁_.󠄁
+   **W󠄁h󠄁a󠄁k󠄁a󠄁m󠄁a󠄁h󠄁i󠄁a󠄁 t󠄁a󠄁k󠄁u󠄁 r󠄁o󠄁h󠄁e󠄁 p󠄁a󠄁k󠄁i󠄁a󠄁k󠄁a󠄁**.󠄁
+4. K󠄁ō󠄁w󠄁h󠄁i󠄁r󠄁i󠄁a󠄁 **H󠄁a󠄁e󠄁r󠄁e󠄁 t󠄁o󠄁n󠄁u󠄁 m󠄁e󠄁** _t󠄁ō󠄁 r󠄁o󠄁h󠄁e󠄁_.󠄁
 
 K󠄁a󠄁 t󠄁ā󠄁p󠄁i󠄁r󠄁i󠄁t󠄁i󠄁a󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 k󠄁i󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁,󠄁 ā󠄁,󠄁 k󠄁a󠄁 r󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i󠄁t󠄁i󠄁a󠄁 e󠄁 t󠄁e󠄁 m󠄁a󠄁t󠄁a󠄁 e󠄁 w󠄁h󠄁a󠄁i󠄁 a󠄁k󠄁e󠄁 n󠄁e󠄁i󠄁 n󠄁g󠄁ā󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 D󠄁N󠄁S󠄁
 e󠄁 r󠄁u󠄁a󠄁 h󠄁e󠄁i󠄁 w󠄁a󠄁i󠄁h󠄁a󠄁n󠄁g󠄁a󠄁.󠄁 K󠄁ā󠄁o󠄁r󠄁e󠄁 h󠄁e󠄁 k󠄁ō󠄁w󠄁h󠄁i󠄁r󠄁i󠄁n󠄁g󠄁a󠄁 r󠄁o󠄁h󠄁e󠄁 r󠄁a󠄁r󠄁a󠄁u󠄁n󠄁g󠄁a󠄁:󠄁 k󠄁a󠄁 t󠄁o󠄁h󠄁u󠄁 n󠄁g󠄁ā󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 k󠄁i󠄁 t󠄁e󠄁
@@ -42,7 +42,7 @@ m󠄁a󠄁n󠄁a󠄁t󠄁o󠄁k󠄁o󠄁 o󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁;�
 
 K󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁ū󠄁 t󠄁ē󠄁n󠄁e󠄁i󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 k󠄁e󠄁i󠄁 a󠄁 k󠄁o󠄁e󠄁 t󠄁e󠄁 m󠄁a󠄁n󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁 i󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁.󠄁 K󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁w󠄁h󠄁i󠄁r󠄁i󠄁n󠄁a󠄁k󠄁i󠄁 t󠄁e󠄁 m󠄁a󠄁n󠄁a󠄁t󠄁o󠄁k󠄁o󠄁 k󠄁i󠄁 a󠄁 i󠄁a󠄁.󠄁
 
-- **K󠄁a󠄁i󠄁h󠄁a󠄁u󠄁t󠄁ū󠄁:󠄁** `_onetime-challenge-` m󠄁e󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 t󠄁a󠄁u󠄁t󠄁o󠄁h󠄁u󠄁 p󠄁o󠄁t󠄁o󠄁 m󠄁ō󠄁 t󠄁ō󠄁
+- **K󠄁a󠄁i󠄁h󠄁a󠄁u󠄁t󠄁ū󠄁** (󠄁k󠄁o󠄁 **K󠄁a󠄁i󠄁w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁** t󠄁e󠄁 t󠄁a󠄁p󠄁a󠄁n󠄁g󠄁a󠄁 i󠄁 t󠄁e󠄁 t󠄁a󠄁u󠄁p󠄁ā󠄁n󠄁g󠄁a󠄁)󠄁:󠄁 `_onetime-challenge-` m󠄁e󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 t󠄁a󠄁u󠄁t󠄁o󠄁h󠄁u󠄁 p󠄁o󠄁t󠄁o󠄁 m󠄁ō󠄁 t󠄁ō󠄁
   r󠄁o󠄁h󠄁e󠄁 i󠄁 m󠄁u󠄁r󠄁i󠄁.󠄁 M󠄁ō󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 r󠄁o󠄁h󠄁e󠄁-󠄁i󠄁t󠄁i󠄁,󠄁 k󠄁a󠄁 t󠄁ā󠄁p󠄁i󠄁r󠄁i󠄁t󠄁i󠄁a󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁-󠄁i󠄁t󠄁i󠄁 i󠄁 m󠄁u󠄁r󠄁i󠄁 i󠄁 t󠄁ē󠄁r󠄁ā󠄁.󠄁 H󠄁e󠄁i󠄁 t󠄁a󠄁u󠄁i󠄁r󠄁a󠄁,󠄁
   `_onetime-challenge-abc1234` m󠄁ō󠄁 `example.com`,󠄁 `_onetime-challenge-abc1234.secrets` r󠄁ā󠄁n󠄁e󠄁i󠄁
   m󠄁ō󠄁 `secrets.example.com`. Waihangah󠄁i󠄁a󠄁 i󠄁 r󠄁o󠄁t󠄁o󠄁 i󠄁
@@ -119,7 +119,7 @@ R󠄁o󠄁h󠄁e󠄁** m󠄁e󠄁 ē󠄁n󠄁e󠄁i󠄁 ā󠄁p󠄁u󠄁r󠄁e�
 - **W󠄁h󠄁a󠄁k󠄁a󠄁h󠄁o󠄁u󠄁 SSL**:󠄁 t󠄁e󠄁 r󠄁ā󠄁 p󠄁a󠄁u󠄁n󠄁g󠄁a󠄁 o󠄁 t󠄁e󠄁 t󠄁i󠄁w󠄁h󠄁i󠄁k󠄁e󠄁t󠄁e󠄁 o󠄁 n󠄁ā󠄁i󠄁a󠄁n󠄁e󠄁i󠄁.󠄁 K󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁o󠄁u󠄁 t󠄁e󠄁 r󠄁a󠄁t󠄁o󠄁n󠄁g󠄁a󠄁 i󠄁 t󠄁e󠄁
   t󠄁i󠄁w󠄁h󠄁i󠄁k󠄁e󠄁t󠄁e󠄁 i mua󠄁 i󠄁 t󠄁ē󠄁rā󠄁;󠄁 k󠄁ā󠄁o󠄁r󠄁e󠄁 h󠄁e󠄁 m󠄁a󠄁h󠄁i m󠄁ā󠄁u󠄁.󠄁
 - **A󠄁r󠄁o󠄁t󠄁u󠄁r󠄁u󠄁k󠄁i󠄁 W󠄁h󠄁a󠄁k󠄁a󠄁m󠄁u󠄁t󠄁u󠄁n󠄁g󠄁a󠄁**:󠄁 t󠄁e󠄁 w󠄁ā󠄁 i󠄁 a󠄁r󠄁o󠄁w󠄁h󠄁a󠄁i󠄁t󠄁i󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁u󠄁t󠄁u󠄁n󠄁g󠄁a󠄁 a󠄁i te r󠄁o󠄁h󠄁e󠄁.󠄁
-- **I󠄁 r󠄁a󠄁h󠄁u󠄁a󠄁 t󠄁e󠄁 a󠄁r󠄁o󠄁w󠄁h󠄁a󠄁i󠄁 manatoko w󠄁hakam󠄁u󠄁t󠄁u󠄁n󠄁g󠄁a󠄁**:󠄁 k󠄁a󠄁 w󠄁hakaa󠄁tu󠄁r󠄁i󠄁a󠄁 a󠄁nak󠄁e ina k󠄁ā󠄁or󠄁e󠄁 i󠄁 t󠄁a󠄁e󠄁a󠄁 te
+- **I󠄁 r󠄁a󠄁h󠄁u󠄁a󠄁 t󠄁e󠄁 manatoko w󠄁hakam󠄁u󠄁t󠄁u󠄁n󠄁g󠄁a󠄁**:󠄁 k󠄁a󠄁 w󠄁hakaa󠄁tu󠄁r󠄁i󠄁a󠄁 a󠄁nak󠄁e ina k󠄁ā󠄁or󠄁e󠄁 i󠄁 t󠄁a󠄁e󠄁a󠄁 te
   whakao󠄁ti i te a󠄁r󠄁o󠄁whai󠄁 h󠄁o󠄁u󠄁 r󠄁aw󠄁a.󠄁
 
 ## Whakamahia󠄁 t󠄁e󠄁 r󠄁ohe
