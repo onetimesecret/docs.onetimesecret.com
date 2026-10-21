@@ -49,7 +49,7 @@ Onetime Secret은 여󠄁러󠄁분󠄁의 컴플라이언스 노력을 지원�
 - **인증, DPA, 특정 프레임워크.** 인증, 데이터 처리 계약(DPA), 특정 규제 프레임워크에
   관한 문의는 **support@onetimesecret.com**으로 연락해 주세요.
 
-엄격한 데이터 통제 요건이 있는 조직이라면 [자체 호스팅](https://github.com/onetimesecret/onetimesecret)으로
+엄격한 데이터 통제 요건이 있는 조직이라면 [자체 호스팅](/ko/self-hosting/)으로
 모든 것을 자체 인프라 내에 둘 수 있습니다.
 
 ## 질문이 있거나 지원이 필요하신가요?
