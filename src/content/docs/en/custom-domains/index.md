@@ -39,7 +39,7 @@ Custom Domains allow you to use your own domain name for Onetime Secret links, i
 
 ### Your Brand, Our Security
 
-By leveraging Custom Domains, you're not just sharing secrets; you're reinforcing your brand, enhancing trust, and ensuring data locality compliance with every interaction. Upgrade to the Identity plan today to unlock this powerful feature and take your secret sharing to the next level.
+By leveraging Custom Domains, you're not just sharing secrets; you're reinforcing your brand, enhancing trust, and ensuring data locality compliance with every interaction. The Free plan includes one custom domain; Identity Plus and Team Plus include unlimited custom domains. See [Compare plans](/en/pricing/compare-plans).
 
 <img src="/img/docs/custom-domains/branded-homepage-enabled.png" alt="Custom domain settings" width="600" />
 
@@ -127,7 +127,7 @@ The ability to generate secure, time-bound links through your branded domain pro
 
 ## Important Considerations
 
-- Custom Domains are a premium feature available with the Identity plan.
+- The Free plan includes one custom domain; Identity Plus and Team Plus include unlimited custom domains.
 - You are responsible for maintaining and renewing your domain registration.
 - Proper SSL/TLS configuration is crucial for security (handled automatically by Onetime Secret).
 - Ensure your chosen domain complies with your organization's branding guidelines.

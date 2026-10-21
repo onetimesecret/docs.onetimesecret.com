@@ -204,11 +204,10 @@ export const sidebar = [
     ]),
 
     // No badges here: this group is *about* the tiers, so labelling its own
-    // entries with one would be circular. The two pricing pages are carried
-    // across unchanged pending the production billing catalog — the merge of
-    // both into billing/index is what the catalog gates, not the existence of
-    // the billing pages, which describe the mechanism and assert no plan
-    // contents.
+    // entries with one would be circular. The two pricing pages follow the
+    // docs snapshot of the billing catalog; merging both into billing/index
+    // waits on the production catalog. The billing pages describe the
+    // mechanism and assert no plan contents.
     createGroup("plansAndBilling", [
       createLink("howPlansWork", "billing"),
       createLink("managingYourSubscription", "billing/managing-your-subscription"),

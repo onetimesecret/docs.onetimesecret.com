@@ -1,6 +1,9 @@
 ---
 title: Pricing
 description: Choose the plan that's right for your secure sharing needs.
+audience: end-user
+pageType: reference
+sourceOfTruth: billing catalog (billing.yaml, docs snapshot sha256 69a96394920fd1777cf23a9bdedee174648f46b54e13c99a1f27b3cdc0a17501) plans.free_v1, plans.identity_plus_v1 and plans.team_plus_v1 entitlements and limits; onetimesecret at 145c1e7cfa — src/types/billing.ts PLAN_LABELS (in-app plan names)
 ---
 
 Share confidential information with confidence, elevate your brand, and build trust.
@@ -11,38 +14,43 @@ Share confidential information with confidence, elevate your brand, and build tr
 
 **$0/month**
 
-Secure, self-destructing secret sharing for everyone.
+The [pricing page](https://onetimesecret.com/pricing) shows this plan as
+**Basic**. The app and these docs call it **Free**.
 
 **Features:**
-- Onetime viewing with automatic deletion after access
+- Secret links that can be revealed once, with lifetimes up to 14 days
 - One custom domain
-- Homepage & incoming secrets
+- Homepage and incoming secrets
 - API access
 
 [Get Started](https://onetimesecret.com/plans/free)
 
 ### Identity Plus
 
-Secure sharing that elevates your brand and simplifies communication.
+Secret sharing under your own domain and brand, with members.
 
 **Features:**
 - Unlimited custom domains
-- Unlimited sharing capacity
-- Enhanced privacy features
-- Full API access
+- Custom branding and email sender
+- Custom privacy defaults and per-domain sign-in settings
+- Member invites
+- Secret lifetimes up to 30 days
+- API access
 
 [See current pricing](https://onetimesecret.com/pricing) | [Choose this plan](https://onetimesecret.com/plans/identity)
 
 ### Team Plus
 
-Governed secret sharing with SSO, access controls, and organizational visibility.
+Secret sharing for teams, with single sign-on and admin roles.
 
 **Features:**
 - Everything in Identity Plus
 - Single sign-on (SSO)
-- Team management & shared dashboard
+- Admin role for members
+- Team management and shared dashboard
 - Flexible email From domain
 - Per-domain signup validation
+- Secret Activity, in beta
 
 [See current pricing](https://onetimesecret.com/pricing)
 
@@ -55,10 +63,10 @@ Onetime Secret allows you to share sensitive information securely. Each shared s
 No account is required for basic functionality. You can start sharing secrets immediately without complex setup.
 
 ### Is there a free option available?
-Yes, Onetime Secret offers a free tier that allows you to use most features at no cost. For advanced features and branding options, consider our paid plans.
+Yes. The Free plan includes secret sharing, one custom domain, homepage and incoming secrets, and API access. Paid plans add branding, members and longer secret lifetimes; see [Compare plans](/en/pricing/compare-plans).
 
 ### Can I self-host Onetime Secret?
-Yes, Onetime Secret offers a self-hosting option with our SimpleStack℠ guarantee, ensuring easy deployment and management. [GitHub](https://github.com/onetimesecret/onetimesecret)
+Yes. Onetime Secret is open source and can run on your own infrastructure. See [Self-hosting](/en/self-hosting) and the source on [GitHub](https://github.com/onetimesecret/onetimesecret).
 
 ### How secure is Onetime Secret?
 We take security very seriously and employ multiple measures to protect users' information. As stated in our privacy policy, we use industry standard practices to safeguard all data from unauthorized access, alteration, or destruction. All data in transit is encrypted using HTTPS/TLS, and data at rest is stored securely in the data center region you choose — Canada, the European Union, New Zealand, the United Kingdom, or the United States — in compliance with the applicable data protection laws for that region.
