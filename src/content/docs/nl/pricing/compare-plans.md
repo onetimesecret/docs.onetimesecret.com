@@ -36,4 +36,4 @@ Ga voor actuele prijzen naar onze [Prijzenpagina](https://onetimesecret.com/pric
 ## Binnenkort
 
 * Auditlogs en IP-gebaseerde toegangsregels voor Team Plus
-* [Secretary Links](https://secretlinks.com) — veilige verzamellinks voor het ontvangen van gevoelige informatie van wie dan ook, geen account vereist
+* [Secretary Links](https://secretarylinks.com) — veilige verzamellinks voor het ontvangen van gevoelige informatie van wie dan ook, geen account vereist

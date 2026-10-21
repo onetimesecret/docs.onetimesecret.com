@@ -116,7 +116,10 @@ const demos = [
           </h3>
           <div class="h-px flex-1 bg-gradient-to-r from-transparent via-gray-600 to-transparent" />
         </div>
-        <p class="mt-4 text-center text-sm text-gray-500">
+        <!-- gray-400, not gray-500: on this dark panel gray-500 is 3.59:1, under
+             the 4.5:1 AA floor. gray-400 gives 6.60:1 and matches the muted text
+             used elsewhere on the page. -->
+        <p class="mt-4 text-center text-sm text-gray-400">
           Planned demos include SP-initiated SAML login, SCIM provisioning flows, and multi-IdP federation patterns.
         </p>
       </div>
@@ -124,7 +127,8 @@ const demos = [
       {/* Footer */}
       <footer class="mt-auto pt-16 text-center">
         <div class="border-t border-gray-800 pt-8">
-          <p class="text-sm text-gray-500">
+          <!-- gray-400 (6.94:1) — gray-500 is 3.78:1 on this background. -->
+          <p class="text-sm text-gray-400">
             These demonstrations are designed for technical analysts evaluating SSO integration patterns.
           </p>
           <p class="mt-3">

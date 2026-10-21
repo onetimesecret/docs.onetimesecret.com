@@ -1,6 +1,9 @@
 ---
 title: Upgrading to v0.26.12
 description: "Upgrade Onetime Secret to v0.26.12: a session-token disclosure fix, and Rodauth's active-session table becomes load-bearing on every authenticated request in full authentication mode. No database migration is required."
+audience: operator
+pageType: how-to
+sourceOfTruth: onetimesecret/lib/onetime/middleware/isolate_response_headers.rb:7-32 and lib/onetime/application/base.rb:204 (router 404 and 500 fallbacks were static responses whose shared headers replayed session cookies from earlier misses, and each request now gets its own copy); onetimesecret/lib/onetime/session/active_session_gate.rb:48-53,113-119,155-178 (one primary-key SELECT on account_active_session_keys per authenticated full-mode request, a last_use write at most every 300 seconds, and the 72-hour inactivity and 30-day lifetime deadlines as constants with no env var); onetimesecret/lib/onetime/session/active_session_gate.rb:72-82,252-256 (an unreachable authdb refuses the request, logs "[active_session_gate] authdb unreachable ... (fail closed)", and leaves the Rack session in Redis to work again once the database returns); onetimesecret/lib/onetime/session/active_session_gate.rb:84-93,183-189 (the gate applies only in full mode with active sessions on and a join key in the Rack session, and sessions without one are exempt); onetimesecret/lib/onetime/session/active_session_gate.rb:245-250 (the "last_use refresh on active-session row failed" WARN); onetimesecret/lib/onetime/application/auth_strategies/base_session_auth_strategy.rb:95-111 (a revoked or unchecked row refuses the request); onetimesecret/apps/web/auth/config/features/active_sessions.rb:23-24,54-62 (Rodauth takes both deadlines from the gate, where v0.26.11 line 20 set inactivity to 24 hours, and a failed join-key stamp refuses the login); onetimesecret/etc/defaults/auth.defaults.yaml:73 with apps/web/auth/config.rb:138-139 (AUTH_ACTIVE_SESSIONS_ENABLED is on unless exactly false, and off leaves the Rodauth active_sessions feature unconfigured, so no rows and no join key); onetimesecret/src/apps/workspace/account/settings/SecurityOverview.vue:25 (the Active Sessions card follows the flag, where v0.26.11 line 24 hid it with a hardcoded false); onetimesecret/etc/defaults/config.defaults.yaml:431 (the 24-hour Rack session lifetime); onetimesecret/lib/onetime/operations/sessions/revoke_all_for_customer.rb:21-55 and lib/onetime/cli/session_command.rb:13-16,484 (ots sessions revoke-all deletes the Redis session blobs and, in full mode, the Rodauth rows); onetimesecret/src/apps/workspace/components/account/AccountDeleteButtonWithModalForm.vue:22-29 and apps/api/account/routes.txt:12-15 (full-mode Settings deletion posts to /auth/close-account, and /api/account/destroy stays the simple-mode path); onetimesecret/apps/api/colonel/logic/colonel/list_organizations.rb:60-73 (no roster cache, refresh accepted and ignored, and pagination.capped set when a bounded result may be incomplete); onetimesecret/lib/onetime/operations/audit_attempt.rb:9-26,118-146 and lib/onetime/operations/email/sync_provider_feedback.rb:200-213 (no-change attempts are marked outcome no_change, previews are marked dry_run true, and the sync_provider_feedback preview gains the dry_run marker); onetimesecret/etc/defaults/config.defaults.yaml:976-984, .env.reference:1434-1441 and lib/onetime/rodauth_admin.rb:13-22 (RODAUTH_ADMIN_URL is optional, renders outbound links only, applies only in full mode, and does not exist on v0.26.11); onetimesecret/lib/onetime/cli/simple_commands.rb:178 and docker/compose/docker-compose.simple.yml:11,19-22 (ots version, the app service and OTS_IMAGE_TAG); onetimesecret/migrations, apps/web/auth/migrations, Gemfile.lock and pnpm-lock.yaml (unchanged between v0.26.11 and v0.26.12, so no migration and no dependency change); onetimesecret/CHANGELOG.rst:15-102 (the v0.26.12 release notes)
 sidebar:
   order: 9
 ---
@@ -12,8 +15,8 @@ a tag swap.
 
 Upgrading from a release earlier than v0.26.11? Work forward through the guides for the
 releases you are skipping, then return here. From v0.22 or v0.23, start with
-[v0.24.0](./upgrading-v0-24). From anywhere in the v0.26 line, complete
-[v0.26.6](./upgrading-v0-26) and then [v0.26.11](./upgrading-v0-26-11). Each of those
+[v0.24.0](/en/self-hosting/upgrading-v0-24/). From anywhere in the v0.26 line, complete
+[v0.26.6](/en/self-hosting/upgrading-v0-26/) and then [v0.26.11](/en/self-hosting/upgrading-v0-26-11/). Each of those
 carries configuration work this guide assumes is already done.
 
 ## Before You Start
@@ -21,7 +24,7 @@ carries configuration work this guide assumes is already done.
 1. Back up Redis/Valkey and, in `full` mode, the authentication database.
 2. Record your current tag: `docker compose exec app ots version` (or your `OTS_IMAGE_TAG`).
 3. Note your `AUTHENTICATION_MODE`. Most of this guide applies only to `full` (see
-   [Simple or Full](./simple-or-full-auth) if you are unsure which mode you run).
+   [Simple or Full](/en/self-hosting/simple-or-full-auth/) if you are unsure which mode you run).
 4. In `full` mode, note how your authentication database is reached — direct, pooler, or
    failover pair — and who is paged when it goes down. Step 1 depends on it.
 

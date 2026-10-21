@@ -35,4 +35,4 @@ Para conocer los precios actuales, visite nuestra [página de precios](https://o
 ## Próximamente
 
 * Registros de auditoría y reglas de acceso basadas en IP para Team Plus
-* [Secretary Links](https://secretlinks.com) — enlaces de recopilación seguros para recibir información confidencial de cualquier persona, sin necesidad de cuenta
+* [Secretary Links](https://secretarylinks.com) — enlaces de recopilación seguros para recibir información confidencial de cualquier persona, sin necesidad de cuenta

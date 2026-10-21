@@ -36,4 +36,4 @@ For current pricing, please visit our [Pricing Page](https://onetimesecret.com/p
 ## Coming Soon
 
 * Audit logs and IP-based access rules for Team Plus
-* [Secretary Links](https://secretlinks.com) — secure collection links for receiving sensitive information from anyone, no account required
+* [Secretary Links](https://secretarylinks.com) — secure collection links for receiving sensitive information from anyone, no account required

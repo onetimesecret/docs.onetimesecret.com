@@ -8,20 +8,23 @@
 # same secret/variable names resolve to per-environment values — mirroring the
 # proven pattern in onetimesecret.com.
 #
-# Required secrets/variables (scoped to each environment, "staging" and
-# "production"):
+# Required secrets/variables. An environment secret overrides a repository
+# secret of the same name, so set each one in exactly one place.
 #
-#   Secrets:
+#   Repository secret (shared by "staging" and "production"):
+#     BUNNY_API_KEY           - Bunny account API key (for cache purge). The
+#                               account has a single key; a per-environment copy
+#                               would shadow this one and go stale when the key
+#                               is regenerated.
+#
+#   Environment secrets (set on each of "staging" and "production"):
 #     STORAGE_NAME            - Bunny Edge Storage zone name
 #     STORAGE_ENDPOINT        - Storage host (e.g. storage.bunnycdn.com, or ny./la./uk.)
-#     STORAGE_PASSWORD_RW     - Storage zone read/write password
-#     STORAGE_KEY             - Storage zone API key (for uploads)
+#     STORAGE_PASSWORD_RW     - Storage zone read/write password (for uploads)
 #     PULL_ZONE_ID            - Bunny Pull Zone ID
-#     BUNNY_API_KEY           - Bunny account API key (for cache purge)
 #
 #   Variables (environment-level):
 #     SITE_URL                - Canonical site origin
-#     VITE_BASE_URL           - Base URL path (typically "/")
 #     SHOW_STAGING_WARNING    - "true" on staging to show the prerelease banner
 #     SHOW_STAGING_WATERMARK  - "true" on staging to show the prerelease watermark
 ---
@@ -50,15 +53,15 @@ jobs:
         uses: actions/checkout@v7
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v6
         with:
-          version: 11.17.0
+          version: 12.14.0
           run_install: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v7
         with:
-          node-version: 24.18.1
+          node-version: 24.22.0
           cache: pnpm
 
       - name: Install dependencies

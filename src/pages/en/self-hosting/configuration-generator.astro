@@ -2,10 +2,10 @@
 // src/pages/en/self-hosting/configuration-generator.astro
 //
 // Hosts the client-side Configuration Generator island inside the standard
-// Starlight docs chrome (sidebar, header, TOC). The tool itself is a self-
+// Starlight docs chrome (sidebar, header). The tool itself is a self-
 // contained Vue component that reads the vendored config JSON schemas and a
 // preset manifest to generate config.yaml / auth.yaml / .env entirely in the
-// browser — no dependency on the running application.
+// browser, with no dependency on the running application.
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import ConfigGenerator from '../../../components/config-generator/ConfigGenerator.vue';
 
@@ -22,15 +22,26 @@ const description =
     tableOfContents: false,
     lastUpdated: false,
   }}>
-  <p>
-    Choose the options that fit your deployment and copy the generated YAML into
-    your <code>etc/</code> directory. These fragments layer on top of the shipped
-    defaults, so you only need the options shown here. For the full option
-    surface, see the
-    <a href="/en/self-hosting/configuration/">Configuration Reference</a> and
-    <a href="/en/self-hosting/environment-variables/">Environment Variables</a>
-    pages.
+  {/* Keep each link on the same line as the words around it: Astro drops
+      whitespace that spans a line break next to an element, which ran the
+      links into their neighbours. */}
+  <p class="cg-intro">
+    Pick the options that fit your deployment, then copy the generated files.
+    The YAML fragments hold only these choices and layer on top of the shipped
+    defaults, so everything else keeps its default value. For the full option
+    surface, see the <a href="/en/self-hosting/configuration/">Configuration Reference</a> and <a href="/en/self-hosting/environment-variables/">Environment Variables</a> pages.
   </p>
 
   <ConfigGenerator client:load />
 </StarlightPage>
+
+<style is:global>
+  /* The two-column tool needs more room than a prose page. Scoped with :has()
+     so only a page that renders the generator gets the wider column. */
+  :root:has(.cg) {
+    --sl-content-width: 66rem;
+  }
+  .cg-intro {
+    max-width: 45rem;
+  }
+</style>

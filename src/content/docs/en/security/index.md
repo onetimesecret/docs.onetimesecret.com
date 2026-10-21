@@ -1,6 +1,8 @@
 ---
 title: Security & Trust
 description: How Onetime Secret protects your secrets — the security model, data handling, regional residency, and how to report a vulnerability.
+audience: end-user
+pageType: concept
 ---
 
 Onetime Secret exists to move sensitive information from one person to another
@@ -21,18 +23,18 @@ find the details.
 - **Burn before reading.** If a secret hasn't been viewed yet, you can burn it
   so it can never be read.
 - **Data minimization.** We aim to collect and retain only what's necessary —
-  see [Data Minimization](/en/principles/data-minimization).
+  see [Data minimization](/en/security/our-principles#data-minimization).
 
 ## Explore this section
 
 - **[Data Protection](/en/security/data-protection)** — what we store, for how long, where it lives, and how this maps to compliance needs.
-- **[Security Best Practices](/en/security-best-practices)** — practical guidance for sharing secrets safely, including the benefits of Custom Domains.
+- **[Security Best Practices](/en/security/best-practices)** — practical guidance for sharing secrets safely, including the benefits of Custom Domains.
 - **[Vulnerability Disclosure](/en/security/vulnerability-disclosure)** — how to report a security issue responsibly.
 
 ## Related
 
-- **[Our Principles](/en/principles)** — Privacy First, Communication, and Data Minimization.
-- **[Data Center Regions](/en/regions)** — choose where your data is processed and stored.
+- **[Our Principles](/en/security/our-principles)** — Privacy first, Communication, and Data minimization.
+- **[Where your data lives](/en/security/where-your-data-lives/)** — choose where your data is processed and stored.
 - **[Self-Hosting](https://github.com/onetimesecret/onetimesecret)** — run Onetime Secret on your own infrastructure for full control.
 
 ## Reporting a security issue

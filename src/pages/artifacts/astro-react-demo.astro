@@ -84,7 +84,9 @@ const pageDescription = "Reference implementation demonstrating React component 
     }
 
     footer a {
-      color: #3b82f6;
+      /* blue-600, not blue-500: #3b82f6 on white is 3.68:1, under the 4.5:1 AA
+         floor for this 14px link. */
+      color: #2563eb;
       text-decoration: none;
     }
 

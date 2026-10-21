@@ -35,4 +35,4 @@ Aktuelle Preise finden Sie auf unserer [Preisseite](https://onetimesecret.com/pr
 ## Demnächst verfügbar
 
 * Audit-Protokolle und IP-basierte Zugriffsregeln für Team Plus
-* [Secretary Links](https://secretlinks.com) — sichere Sammellinks, um vertrauliche Informationen von beliebigen Personen zu empfangen, ganz ohne Konto
+* [Secretary Links](https://secretarylinks.com) — sichere Sammellinks, um vertrauliche Informationen von beliebigen Personen zu empfangen, ganz ohne Konto

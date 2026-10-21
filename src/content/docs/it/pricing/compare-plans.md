@@ -35,4 +35,4 @@ Per i prezzi attuali, visitate la nostra [pagina dei prezzi](https://onetimesecr
 ## In arrivo
 
 * Registri di controllo e regole di accesso basate su IP per Team Plus
-* [Secretary Links](https://secretlinks.com) — link di raccolta sicuri per ricevere informazioni sensibili da chiunque, senza bisogno di un account
+* [Secretary Links](https://secretarylinks.com) — link di raccolta sicuri per ricevere informazioni sensibili da chiunque, senza bisogno di un account

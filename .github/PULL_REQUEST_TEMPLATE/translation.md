@@ -66,7 +66,7 @@ I have reviewed my translation against the [Quality Checklist](https://docs.onet
 <!-- Check all that apply -->
 - [ ] Followed [Translation Style Guide](https://docs.onetimesecret.com/en/translations/guide)
 - [ ] Referenced [Terminology Glossary](https://docs.onetimesecret.com/en/translations/glossary)
-- [ ] Reviewed [Language-Specific Notes](https://docs.onetimesecret.com/en/translations/language-notes) (if available)
+- [ ] Reviewed your locale's language-specific notes, kept in the repository at `src/content/docs/{locale}/translations/_language-notes.md` (if available)
 - [ ] Consistent with existing translations in this language
 
 ## Additional Context

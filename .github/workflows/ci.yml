@@ -9,10 +9,12 @@ on:
     branches:
       - main
       - develop
-      - "integration/*"
-      - "integrate/*"
+      - "claude/*"
       - "feature/*"
       - "fix/*"
+      - "i18n/*"
+      - "integrate/*"
+      - "integration/*"
 
 concurrency:
   group: ci-${{ github.ref }}
@@ -29,18 +31,33 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v6
         with:
-          version: 11.17.0
+          version: 12.14.0
           run_install: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v7
         with:
-          node-version: 24.18.1
+          node-version: 24.22.0
           cache: pnpm
 
       - run: pnpm install
+
+      - name: Check sidebar links
+        run: pnpm run check:nav
+
+      - name: Check orphaned pages
+        run: pnpm run check:orphans
+
+      - name: Check locale configuration
+        run: pnpm run check:locales
+
+      - name: Check colour contrast
+        run: pnpm run check:contrast
+
+      - name: Test
+        run: pnpm test
 
       - name: Build
         run: pnpm run build

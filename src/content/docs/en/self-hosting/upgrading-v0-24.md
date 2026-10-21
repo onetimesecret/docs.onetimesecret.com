@@ -1,8 +1,9 @@
 ---
 title: Upgrading to v0.24.0
 description: Guide for upgrading Onetime Secret from v0.22 or v0.23 to v0.24.0
-sidebar:
-  order: 6
+audience: operator
+pageType: how-to
+sourceOfTruth: onetimesecret/.env.reference:324-330 (GENERATED_VALUE_DISPLAY_TTL — the receipt-page reveal window, its 60-second default, and that 0 disables it — which this page's config mapping restates); onetimesecret/.env.reference:5-6 and onetimesecret/.env.example:1-11 (.env.reference is the file that documents every supported environment variable; .env.example is the quick-start subset); onetimesecret/etc/defaults/config.defaults.yaml:288,292 and onetimesecret/.env.reference:422-423 (the account toggles are named AUTH_SIGNUP and AUTH_SIGNIN, both on unless set to false)
 ---
 
 This guide covers upgrading to v0.24.0 from v0.22 or v0.23. There are significant changes to the authentication system, configuration structure, and data model. You'll need to choose an upgrade path, update configuration files, and possibly run data migrations.
@@ -11,7 +12,7 @@ For the full context on what changed and why, see the [v0.24.0 release notes](ht
 
 ## Before You Start
 
-**Coming from v0.22?** Complete the [v0.23 config migration](upgrading-v0-23/) first. The v0.23 release converts config keys from symbol to string format, which v0.24 requires.
+**Coming from v0.22?** Complete the [v0.23 config migration](/en/self-hosting/upgrading-v0-23/) first. The v0.23 release converts config keys from symbol to string format, which v0.24 requires.
 
 1. **Back up your Redis data.** `redis-cli BGSAVE` or equivalent. Keep the RDB file somewhere safe.
 2. **Back up your configuration files.** `config.yaml`,`.env`.
@@ -55,6 +56,10 @@ Or clone/checkout the v0.24.0 tag if running from source, then run the install s
 ```
 
 This auto-detects a new environment and runs `init`: installs Ruby and Node dependencies, generates derived keys, and prepares the environment. You can also run `./install.sh doctor` to check prerequisites.
+
+:::note
+The commands on this page target the v0.24 code you are checking out — v0.24 ships `./install.sh`. In v0.26 and later, `install.sh` was removed and replaced by `bin/setup` (`--init`, `--reconcile`, `--doctor`).
+:::
 
 ### 2. Set up configuration
 
@@ -169,7 +174,7 @@ Or clone/checkout the v0.24.0 tag if running from source. Do not start it yet. R
 ./install.sh
 ```
 
-This auto-detects an existing environment and runs `reconcile`: installs gems and node packages, re-derives child keys from your existing `SECRET`, and re-applies RabbitMQ policies if in full mode. You can also run `./install.sh doctor` to check your environment.
+This auto-detects an existing environment and runs `reconcile`: installs gems and node packages, re-derives child keys from your existing `SECRET`, and re-applies RabbitMQ policies if in full mode. You can also run `./install.sh doctor` to check your environment. (In v0.26 and later, use `bin/setup --reconcile` and `bin/setup --doctor` instead.)
 
 ### 4. Update configuration files
 
@@ -239,11 +244,23 @@ The migration pipeline includes validators that check data integrity during the 
 
 For a system with a few thousand accounts and/or secrets, the migration should complete in about 5 minutes. For larger datasets, it may take longer. Monitor the logs for progress.
 
-### 8. Password migration (full mode only)
+### 8. Sync accounts to the auth database (full mode only)
 
-For full mode deployments, passwords migrate from Redis to Rodauth's PostgreSQL tables. Users don't need to reset their passwords. On next login, bcrypt hashes are transparently upgraded to argon2id.
+Upgrading versions requires no account sync while `AUTHENTICATION_MODE` stays `simple` (the default). Switching an existing install to `AUTHENTICATION_MODE=full` **requires** syncing existing customers into the auth database — accounts that are not synced cannot log in.
 
-This happens automatically on each user's first login after the upgrade. No manual password migration step is required.
+Preview the sync first, then execute:
+
+```bash
+# Preview which customers will be synced
+AUTHENTICATION_MODE=full bin/ots customers sync-auth-accounts
+
+# Execute the sync
+AUTHENTICATION_MODE=full bin/ots customers sync-auth-accounts --run
+```
+
+The sync is idempotent and safe to re-run. It requires the Familia v1-to-v2 data migration (step 7) to be complete and the auth database to be reachable.
+
+Users don't need to reset their passwords: on next login, bcrypt hashes are transparently upgraded to argon2id.
 
 ### 9. Start the application
 
@@ -280,7 +297,7 @@ curl -v http://localhost:3000/health/advanced
 # Diagnostic tools
 bundle exec bin/ots boot-test
 bundle exec bin/ots queues status
-bundle exec bin/ots doctor
+./install.sh doctor   # environment checks (v0.26+: bin/setup --doctor)
 ```
 
 Then manually verify:
@@ -297,10 +314,12 @@ Then manually verify:
 
 ### Environment variables
 
-The `.env.example` file documents every supported environment variable. Key patterns:
+The `.env.reference` file in the repository documents every supported
+environment variable; `.env.example` is the quick-start subset, not the full
+list. Key patterns:
 
-- `AUTH_SIGNIN_ENABLED=true/false` — controls whether the signin route is active
-- `AUTH_SIGNUP_ENABLED=true/false` — controls whether the signup route is active
+- `AUTH_SIGNUP=true/false` — whether visitors can create accounts. On unless set to `false`
+- `AUTH_SIGNIN=true/false` — whether signing in is available at all. On unless set to `false`
 - `GENERATED_VALUE_DISPLAY_TTL=60` — controls how long generated passwords show on the receipt page (seconds; 0 to disable)
 
 ### New configuration files

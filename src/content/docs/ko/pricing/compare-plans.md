@@ -35,4 +35,4 @@ description: 안전한 비밀 공유를 위한 요금제 비교 — 무료, Iden
 ## 출시 예정
 
 * Team Plus를 위한 감사 로그 및 IP 기반 액세스 규칙
-* [Secretary Links](https://secretlinks.com) — 계정 없이 누구에게서나 민감한 정보를 안전하게 수신할 수 있는 수집 링크
+* [Secretary Links](https://secretarylinks.com) — 계정 없이 누구에게서나 민감한 정보를 안전하게 수신할 수 있는 수집 링크

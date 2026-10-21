@@ -33,11 +33,12 @@ sidebar:
 ### Docker (Препоръчително)
 ```bash
 # Стартирайте Redis и Onetime Secret
-docker run -p 6379:6379 -d redis:bookworm
-docker run -p 3000:3000 -d \
-  -e REDIS_URL=redis://host.docker.internal:6379/0 \
+docker network create onetime
+docker run -d --name redis --network onetime redis:bookworm
+docker run -p 3000:3000 -d --network onetime \
+  -e REDIS_URL=redis://redis:6379/0 \
   -e SECRET="$(openssl rand -hex 32)" \
-  onetimesecret/onetimesecret:v0.26.12
+  onetimesecret/onetimesecret:v0.26.18
 ```
 
 Достъп на `http://localhost:3000`.

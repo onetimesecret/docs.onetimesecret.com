@@ -1,8 +1,11 @@
 ---
 title: Upgrading to v0.23.0
 description: Guide for upgrading Onetime Secret to v0.23.0 — maintenance release with config migration
+audience: operator
+pageType: how-to
+sourceOfTruth: onetimesecret/scripts/check-migration-status.sh:16-18,27 (CONFIG_MIGRATE takes check, auto or skip, and defaults to check); onetimesecret/scripts/check-migration-status.sh:20-23,104-124 (a pending migration halts startup with exit 1, and the three options this page describes are the ones the script itself prints, including the read-only config-directory case); onetimesecret/scripts/check-migration-status.sh:30-33 (the migration this release needs, migrations/2025-07-27/reorganize_config_structure.rb, and that the list is applied in order so a skipped release still gets the earlier ones)
 sidebar:
-  order: 5
+  order: 6
 ---
 
 v0.23.0 is a maintenance release that converts the main config file (`etc/config.yaml`) from symbol keys to string keys. This is part of a series of changes preparing for the v0.24.0 release.

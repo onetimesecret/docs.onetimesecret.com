@@ -9,7 +9,7 @@ jobs into one page is the most common way our docs go wrong.
 
 Starting a new doc means **copying a template**, not starting from a blank
 file. Copy the matching file below into `src/content/docs/en/<section>/`,
-rename it, and fill in the frontmatter and headings.
+rename it, and fill in the frontmatter (see [Frontmatter](#frontmatter)) and headings.
 
 | Type | Job | Copy this |
 |------|-----|-----------|
@@ -17,6 +17,21 @@ rename it, and fill in the frontmatter and headings.
 | **How-to / Task guide** | Get one specific job done. Narrow and imperative. | [`how-to-task-guide.md`](./how-to-task-guide.md) |
 | **Reference** | Document what exists — parameters, endpoints, config keys, flags — precisely. | [`reference.md`](./reference.md) |
 | **Architecture note** | Explain *why* a system behaves the way it does, below the level of a decision. | [`architecture-note.md`](./architecture-note.md) |
+
+## Frontmatter
+
+Besides `title` and `description`, every template includes three keys. Their
+values are validated by `src/content.config.ts`; they help authors, reviewers
+and tooling audit the docs.
+
+| Key | Values | Meaning |
+|-----|--------|---------|
+| `pageType` | `concept`, `how-to`, `reference`, `architecture` | The type from the table above. Pre-filled in each template. |
+| `audience` | `end-user`, `operator`, `developer`, `contributor` | Who the page is for: people sending and receiving secrets or administering accounts, organizations and domains; self-hosters; API and client library integrators; people contributing code, documentation or translations. |
+| `sourceOfTruth` | Source paths, each with a parenthetical naming the claim it backs, separated by `;` | The application files the page was checked against, so a reviewer can re-check it after a release. Paths start at the repository name, e.g. `onetimesecret/lib/onetime/session.rb`. Delete the key on pages that describe no application behaviour. |
+
+See [`upgrading-v0-26-15.md`](../../src/content/docs/en/self-hosting/upgrading-v0-26-15.md)
+for a filled-in example.
 
 ## How to pick
 
