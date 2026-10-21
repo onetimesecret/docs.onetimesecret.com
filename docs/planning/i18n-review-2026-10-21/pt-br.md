@@ -144,3 +144,39 @@ All other quoted labels match the shipped pt_BR strings: the domain flow (Domín
 
 - Anchor slugs (`#mover-um-domínio-personalizado`, `#o-que-cada-plano-inclui`, `#onde-o-seu-domínio-é-servido`) are derived by hand on the assumption that Starlight keeps accented letters (github-slugger behaviour). They were not confirmed with a build, because this review was read-only and no build was run.
 - `self-hosting/configuration.md` and `self-hosting/index.md` carry a legacy `sidebar.order` frontmatter key that the English lacks. It has no effect because `config/sidebar.mjs` lists links explicitly, so it is not reported as a finding.
+
+## Resolution (fix round, 2026-10-21)
+
+| Commit | Subject |
+|---|---|
+| 52952a14 | docs(i18n/pt-br): match branding labels to the shipped app |
+| 65198e6c | docs(i18n/pt-br): correct mistranslations in share/index |
+| 5a54685f | docs(i18n/pt-br): use consistent terms for activity, best practices, entry |
+| ce0222aa | docs(i18n/pt-br): link to Brazilian Portuguese pages that exist |
+| b7b3b02a | docs(i18n/pt-br): fix fluency and typography |
+| 2f7f3399 | docs(i18n/pt-br): align sidebar labels with page titles |
+| (this commit) | docs(planning): record Brazilian Portuguese fix-round resolution |
+
+Fixed: 23 of the 24 table findings, plus the sidebar-bundle item from "English source and general issues". Notes:
+
+- The five branding labels were checked against app 145c1e7cfa: `web.branding.logo`, `logo_modal_title`, `logo_modal_save`, `remove_logo` (BrandLogoField.vue:37,80–83) and `delivery_after_reveal` (DeliveryPanel.vue:96).
+- share/index.md:103 «sem conexão» was moved from fluency to accuracy, because it changes "signed out" to "offline".
+- custom-domains/setup-guide.md:26 now reads «Se for um domínio apex como `example.com`, o aplicativo pergunta onde». The suggested «Se você digitar» could not pass `dogfood.py check`, because that line's legacy unmarked letters had been dropped, and every «digitar» variant tried was flagged. «Se for» has the same meaning and avoids a second verb next to «digite» on line 25.
+- Anchor slugs were computed with github-slugger 2.0.0, which keeps accented letters. `src/lib/textprov/html.mjs` strips provenance marks from heading IDs, so the accented anchors resolve. No build was run.
+- Sidebar (`src/content/i18n/pt-br.json`): sentence case and page-title wording for the keys of the 18 re-synced pages (useCases, comparePlans, dataProtection, switchingRegions → «Mudar de região», brandGuide → «Marca personalizada», clientLibraries → «Bibliotecas de cliente», whyUseSecretLinks, setupGuide, configurationReference, securityBestPractices, vulnerabilityDisclosure). Added the six flagged missing keys: shareASecret, secretActivity, whatCustomDomainsDo, plansAndPricing, aboutSelfHosting and ourApproachToSecurity.
+- Checks run: `python3 tools/dogfood.py check --base HEAD` before each commit, `python3 tools/dogfood.py check --base b2883096` (12 files, 0 failed), `pnpm run check:nav` and `pnpm run check:frontmatter` (both OK). `pnpm test` and `pnpm build` were not run.
+
+### Skipped findings
+
+| Page:line | Finding | Reason |
+|---|---|---|
+| pricing/compare-plans.md:45 | «Marca do Workspace» vs `web.billing.features.workspace_branding` = "Marca do Espaço de Trabalho" | The docs text is right and the app string is the outlier: shipped pt_BR uses "Workspace" in 34 strings and "Espaço de Trabalho" in 3. The line also describes a planned feature rather than naming a control. Fix the app string (see below). |
+| custom-domains/branding.md:86, custom-domains/setup-guide.md:103 | "Check the result" rendered «Verificar o resultado» and «Confira o resultado» (marked optional in the terminology table) | Each heading follows its own page's pattern: branding uses infinitives («Definir o favicon») and setup-guide uses imperatives («Adicione o domínio», «Crie os registros DNS»). Unifying them would restyle one page and change its anchor. |
+
+### Decisions needed
+
+- App, pt_BR: `web.billing.features.workspace_branding` and `web.billing.overview.entitlements.workspace_branding` = "Marca do Espaço de Trabalho". Change to "Marca do Workspace" to match the other 34 "Workspace" strings and pricing/compare-plans.md:45.
+- App, pt_BR: `web.branding.upload_logo` = "Enviar logo", while `web.branding.logo`, `logo_modal_title`, `logo_modal_save` and `remove_logo` use "logotipo". If the app changes this to "Enviar logotipo", custom-domains/branding.md:34 «**Enviar logo**» must change with it. The docs currently quote the shipped string.
+- Docs glossary (`src/content/docs/pt-br/translations/glossary.md`): the row "view/reveal | visualizar/exibir" conflicts with the shipped app («Revelado» `web.STATUS.revealed`, «Antes/Depois da revelação» `web.branding.delivery_*_reveal`) and with all 18 pages, which use «revelar/revelação». Proposed: add "reveal | revelar" and keep "view | visualizar". The glossary's own context column also uses «segredo» («Ação para excluir um segredo», «Segredo foi visualizado»), which the same glossary forbids.
+- Docs language notes (`src/content/docs/pt-br/translations/_language-notes.md`): line 40 gives «Insira uma frase secreta» as the example, but line 234 says «Insira» → «Digite». Proposed: change the line 40 example to «Digite uma frase secreta».
+- Sidebar follow-up (outside this round's flagged keys): `src/content/i18n/pt-br.json` still lacks 50 sidebar keys that `config/sidebar.mjs` uses (for example startHere, sendYourFirstSecret, yourReceipt, organizations, sso, installWithDocker, whereYourDataLives), and these render in English. Six used labels remain in Title Case: customDomains «Domínios Personalizados», environmentVariables «Variáveis de Ambiente», securityTrust «Segurança e Confiança», ourPrinciples «Nossos Princípios», universalGuidance «Diretrizes Universais», styleGuide «Guia de Estilo». This needs a full sidebar translation pass.

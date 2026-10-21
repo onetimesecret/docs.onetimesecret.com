@@ -47,7 +47,7 @@ Compartilhamento de mensagens confidenciais p󠄁a󠄁r󠄁a󠄁 e󠄁q󠄁u󠄁
 - F󠄁u󠄁n󠄁ç󠄁ã󠄁o󠄁 d󠄁e󠄁 a󠄁d󠄁m󠄁i󠄁n󠄁i󠄁s󠄁t󠄁r󠄁a󠄁d󠄁o󠄁r󠄁 p󠄁a󠄁r󠄁a󠄁 m󠄁e󠄁m󠄁b󠄁r󠄁o󠄁s󠄁
 - Gerenciamento de equipe e painel compartilhado
 - Domínio flexível para o remetente (󠄁F󠄁r󠄁o󠄁m󠄁)󠄁 de e-mail
-- A󠄁t󠄁i󠄁v󠄁idade das m󠄁e󠄁n󠄁s󠄁a󠄁g󠄁e󠄁n󠄁s󠄁 c󠄁o󠄁n󠄁f󠄁i󠄁d󠄁e󠄁n󠄁c󠄁i󠄁a󠄁i󠄁s󠄁,󠄁 e󠄁m󠄁 b󠄁e󠄁ta󠄁
+- A󠄁t󠄁i󠄁v󠄁idade de󠄁 m󠄁e󠄁n󠄁s󠄁a󠄁g󠄁e󠄁n󠄁s󠄁 c󠄁o󠄁n󠄁f󠄁i󠄁d󠄁e󠄁n󠄁c󠄁i󠄁a󠄁i󠄁s󠄁,󠄁 e󠄁m󠄁 b󠄁e󠄁ta󠄁
 
 [Ver preços atuais](https://onetimesecret.com/pricing)
 

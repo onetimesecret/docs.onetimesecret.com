@@ -52,7 +52,7 @@ r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁a󠄁l󠄁 q󠄁u󠄁e󠄁 a󠄁 s󠄁u󠄁a󠄁 o
 c󠄁o󠄁n󠄁f󠄁i󠄁d󠄁e󠄁n󠄁c󠄁i󠄁a󠄁i󠄁s󠄁 c󠄁o󠄁m󠄁p󠄁a󠄁r󠄁t󠄁i󠄁l󠄁h󠄁a󠄁d󠄁a󠄁s󠄁 a󠄁 p󠄁a󠄁r󠄁t󠄁i󠄁r󠄁 d󠄁e󠄁l󠄁e󠄁 s󠄁ã󠄁o󠄁 a󠄁r󠄁m󠄁a󠄁z󠄁e󠄁n󠄁a󠄁d󠄁a󠄁s󠄁 n󠄁e󠄁s󠄁s󠄁a󠄁 r󠄁e󠄁g󠄁i󠄁ã󠄁o󠄁.󠄁 O󠄁s󠄁
 r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁o󠄁s󠄁 D󠄁N󠄁S󠄁 q󠄁u󠄁e󠄁 o󠄁 s󠄁i󠄁t󠄁e󠄁 m󠄁o󠄁s󠄁t󠄁r󠄁a󠄁 a󠄁 v󠄁o󠄁c󠄁ê󠄁 a󠄁p󠄁o󠄁n󠄁t󠄁a󠄁m󠄁 o󠄁 s󠄁e󠄁u󠄁 d󠄁o󠄁m󠄁í󠄁n󠄁i󠄁o󠄁 p󠄁a󠄁r󠄁a󠄁 o󠄁 s󠄁e󠄁r󠄁v󠄁i󠄁ç󠄁o󠄁
 d󠄁e󠄁s󠄁s󠄁a󠄁 r󠄁e󠄁g󠄁i󠄁ã󠄁o󠄁.󠄁 Pa󠄁r󠄁a󠄁 s󠄁e󠄁r󠄁v󠄁i󠄁r󠄁 u󠄁m󠄁 d󠄁o󠄁m󠄁í󠄁n󠄁i󠄁o󠄁 a󠄁 p󠄁a󠄁r󠄁t󠄁i󠄁r󠄁 d󠄁e󠄁 o󠄁u󠄁t󠄁r󠄁a󠄁 r󠄁e󠄁g󠄁i󠄁ã󠄁o󠄁,󠄁 c󠄁o󠄁n󠄁s󠄁u󠄁l󠄁t󠄁e󠄁
-[M󠄁o󠄁v󠄁e󠄁r󠄁 u󠄁m󠄁 d󠄁o󠄁m󠄁í󠄁n󠄁i󠄁o󠄁 p󠄁ersonalizado](/en/account/change-your-region#moving-a-custom-domain)
+[M󠄁o󠄁v󠄁e󠄁r󠄁 u󠄁m󠄁 d󠄁o󠄁m󠄁í󠄁n󠄁i󠄁o󠄁 p󠄁ersonalizado](/pt-br/account/change-your-region#mover-um-domínio-personalizado)
 e󠄁 [O󠄁n󠄁d󠄁e󠄁 s󠄁e󠄁u󠄁s󠄁 d󠄁a󠄁d󠄁o󠄁s󠄁 f󠄁i󠄁c󠄁a󠄁m󠄁](/en/security/where-your-data-lives).
 
 ## C󠄁o󠄁n󠄁f󠄁igu󠄁r󠄁a󠄁r󠄁 u󠄁m󠄁 d󠄁o󠄁m󠄁í󠄁n󠄁io󠄁

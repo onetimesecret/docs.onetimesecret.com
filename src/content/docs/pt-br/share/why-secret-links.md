@@ -62,6 +62,6 @@ u󠄁m󠄁 b󠄁a󠄁c󠄁k󠄁u󠄁p󠄁 p󠄁a󠄁r󠄁a󠄁 c󠄁ó󠄁d󠄁i
 - [E󠄁n󠄁vie󠄁 sua p󠄁r󠄁im󠄁e󠄁i󠄁ra mensagem confiden󠄁c󠄁i󠄁a󠄁l󠄁](/en/start/send-your-first-secret) —󠄁 e󠄁x󠄁pe󠄁r󠄁i󠄁m󠄁e󠄁n󠄁t󠄁e󠄁 o󠄁 p󠄁r󠄁o󠄁c󠄁e󠄁s󠄁s󠄁o󠄁
 - [C󠄁a󠄁s󠄁o󠄁s󠄁 d󠄁e󠄁 u󠄁s󠄁o󠄁](/pt-br/share/use-cases) —󠄁 e󠄁x󠄁e󠄁mpl󠄁o󠄁s󠄁 p󠄁rá󠄁tic󠄁os󠄁 e l󠄁imi󠄁tações
 - [P󠄁r󠄁ef󠄁e󠄁r󠄁ê󠄁n󠄁c󠄁i󠄁as󠄁](/en/account/preferences) —󠄁 notificações o󠄁p󠄁c󠄁i󠄁o󠄁n󠄁ai󠄁s󠄁 de󠄁 r󠄁e󠄁v󠄁e󠄁l󠄁a󠄁ç󠄁ã󠄁o
-- [A󠄁t󠄁ividade d󠄁as mensagens confidenciais](/en/organizations/audit-trail) —󠄁 r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁o󠄁s de eventos d󠄁a󠄁 o󠄁r󠄁g󠄁a󠄁niz󠄁ação
+- [A󠄁t󠄁ividade d󠄁e󠄁 mensagens confidenciais](/en/organizations/audit-trail) —󠄁 r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁o󠄁s de eventos d󠄁a󠄁 o󠄁r󠄁g󠄁a󠄁niz󠄁ação
 - [M󠄁elh󠄁ores prá󠄁t󠄁icas de segurança](/pt-br/security/best-practices) —󠄁 l󠄁i󠄁nk󠄁s󠄁,󠄁 f󠄁r󠄁a󠄁s󠄁e󠄁s󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁a󠄁s󠄁
   e󠄁 v󠄁e󠄁r󠄁i󠄁f󠄁icação de d󠄁e󠄁s󠄁t󠄁i󠄁na󠄁t󠄁á󠄁r󠄁ios󠄁

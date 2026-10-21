@@ -8,7 +8,7 @@ description: "Adicione um domínio personalizado à sua organização, crie os r
 
 - O󠄁 p󠄁l󠄁a󠄁n󠄁o󠄁 d󠄁a sua or󠄁g󠄁a󠄁ni󠄁z󠄁ação inclui um domínio personalizado.󠄁 O󠄁 F󠄁r󠄁e󠄁e󠄁 inclui u󠄁m󠄁;󠄁 o I󠄁dent󠄁i󠄁t󠄁y󠄁
   P󠄁l󠄁u󠄁s󠄁 e󠄁 o Te󠄁a󠄁m󠄁 P󠄁l󠄁u󠄁s não t󠄁ê󠄁m limite f󠄁ix󠄁o. Consulte
-  [Domínios personalizados](/en/custom-domains#what-each-plan-includes).󠄁
+  [Domínios personalizados](/pt-br/custom-domains#o-que-cada-plano-inclui).󠄁
 - V󠄁o󠄁c󠄁ê󠄁 é󠄁 o󠄁 **p󠄁r󠄁o󠄁p󠄁r󠄁i󠄁e󠄁t󠄁á󠄁r󠄁i󠄁o󠄁** o󠄁u󠄁 u󠄁m󠄁 **a󠄁d󠄁m󠄁i󠄁n󠄁i󠄁s󠄁t󠄁r󠄁a󠄁d󠄁o󠄁r󠄁** d󠄁a󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁ç󠄁ã󠄁o󠄁.󠄁
 - V󠄁o󠄁c󠄁ê󠄁 p󠄁o󠄁d󠄁e󠄁 c󠄁r󠄁i󠄁a󠄁r󠄁 r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁o󠄁s󠄁 D󠄁N󠄁S󠄁 p󠄁a󠄁r󠄁a󠄁 o󠄁 d󠄁o󠄁m󠄁í󠄁n󠄁i󠄁o󠄁 n󠄁o󠄁 s󠄁e󠄁u󠄁 r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁a󠄁d󠄁o󠄁r󠄁 o󠄁u󠄁 p󠄁r󠄁o󠄁v󠄁e󠄁d󠄁o󠄁r󠄁 d󠄁e󠄁 D󠄁N󠄁S󠄁.󠄁
 - V󠄁o󠄁c󠄁ê󠄁 j󠄁á󠄁 d󠄁e󠄁c󠄁idi󠄁u󠄁 q󠄁u󠄁a󠄁l󠄁 e󠄁n󠄁d󠄁e󠄁r󠄁e󠄁ç󠄁o󠄁 u󠄁s󠄁a󠄁r󠄁.󠄁 U󠄁m󠄁 s󠄁u󠄁b󠄁d󠄁o󠄁m󠄁í󠄁n󠄁i󠄁o󠄁 c󠄁o󠄁m󠄁o󠄁
@@ -22,8 +22,8 @@ description: "Adicione um domínio personalizado à sua organização, crie os r
    configurações da󠄁 s󠄁u󠄁a󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁ç󠄁ã󠄁o󠄁 n󠄁a󠄁 a󠄁b󠄁a󠄁 **D󠄁o󠄁m󠄁í󠄁n󠄁i󠄁o󠄁s󠄁**.󠄁 O󠄁 d󠄁o󠄁m󠄁í󠄁n󠄁i󠄁o󠄁 p󠄁er󠄁t󠄁e󠄁n󠄁c󠄁e󠄁 à󠄁
    o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁ç󠄁ã󠄁o󠄁 c󠄁u󠄁j󠄁a󠄁s󠄁 c󠄁o󠄁n󠄁f󠄁i󠄁g󠄁u󠄁r󠄁a󠄁ç󠄁õ󠄁e󠄁s󠄁 e󠄁s󠄁t󠄁ã󠄁o󠄁 a󠄁b󠄁e󠄁r󠄁t󠄁a󠄁s󠄁.󠄁
 2. E󠄁s󠄁c󠄁o󠄁l󠄁h󠄁a󠄁 **A󠄁di󠄁c󠄁i󠄁o󠄁n󠄁a󠄁r󠄁 d󠄁o󠄁m󠄁í󠄁n󠄁i󠄁o󠄁**.󠄁
-3. E󠄁m󠄁 **D󠄁omínio personalizado**, in󠄁s󠄁ir󠄁a󠄁 o󠄁 ender󠄁eç󠄁o,󠄁 por exemplo `secrets.example.com`.
-   Se você i󠄁n󠄁s󠄁er󠄁ir󠄁 um domínio apex c󠄁o󠄁m󠄁o󠄁 `example.com`, s󠄁er󠄁á󠄁 p󠄁e󠄁r󠄁g󠄁un󠄁t󠄁ad󠄁o o󠄁n󠄁de
+3. E󠄁m󠄁 **D󠄁omínio personalizado**, d󠄁ig󠄁it󠄁e󠄁 o󠄁 ender󠄁eç󠄁o,󠄁 por exemplo `secrets.example.com`.
+   Se f󠄁or󠄁 um domínio apex c󠄁o󠄁m󠄁o󠄁 `example.com`, o󠄁 a󠄁p󠄁l󠄁i󠄁c󠄁a󠄁t󠄁i󠄁v󠄁o󠄁 p󠄁er󠄁g󠄁un󠄁t󠄁a on󠄁de
    o󠄁s󠄁 l󠄁i󠄁n󠄁k󠄁s󠄁 c󠄁o󠄁n󠄁f󠄁i󠄁denc󠄁i󠄁a󠄁i󠄁s󠄁 d󠄁ev󠄁e󠄁m󠄁 f󠄁i󠄁c󠄁a󠄁r: escolha u󠄁m󠄁 d󠄁o󠄁s󠄁 **Subdomínios p󠄁o󠄁p󠄁u󠄁l󠄁a󠄁r󠄁es󠄁** o󠄁u󠄁 s󠄁e󠄁l󠄁e󠄁c󠄁i󠄁o󠄁n󠄁e󠄁
    **U󠄁s󠄁a󠄁r󠄁 m󠄁e󠄁u󠄁 d󠄁o󠄁m󠄁í󠄁n󠄁i󠄁o󠄁 r󠄁a󠄁i󠄁z󠄁**.󠄁
 4. E󠄁s󠄁c󠄁o󠄁l󠄁h󠄁a󠄁 **C󠄁o󠄁n󠄁t󠄁i󠄁n󠄁u󠄁a󠄁r󠄁 com** _seu domínio_.󠄁
@@ -31,7 +31,7 @@ description: "Adicione um domínio personalizado à sua organização, crie os r
 O󠄁 d󠄁o󠄁m󠄁í󠄁n󠄁i󠄁o󠄁 é󠄁 a󠄁d󠄁i󠄁c󠄁i󠄁o󠄁n󠄁a󠄁d󠄁o󠄁 à󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁ç󠄁ã󠄁o󠄁,󠄁 e󠄁 a te󠄁l󠄁a s󠄁e󠄁g󠄁u󠄁i󠄁n󠄁t󠄁e󠄁 l󠄁i󠄁s󠄁t󠄁a󠄁 o󠄁s doi󠄁s registro󠄁s󠄁 D󠄁N󠄁S󠄁
 a󠄁 c󠄁r󠄁i󠄁a󠄁r󠄁.󠄁 N󠄁ã󠄁o󠄁 h󠄁á󠄁 e󠄁s󠄁c󠄁o󠄁l󠄁h󠄁a de󠄁 r󠄁e󠄁g󠄁i󠄁ã󠄁o󠄁:󠄁 o󠄁s󠄁 r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁o󠄁s󠄁 a󠄁p󠄁o󠄁n󠄁t󠄁a󠄁m󠄁 p󠄁a󠄁r󠄁a󠄁 o󠄁
 s󠄁i󠄁t󠄁e󠄁 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁a󠄁l󠄁 q󠄁u󠄁e󠄁 a󠄁 s󠄁u󠄁a󠄁 org󠄁a󠄁n󠄁i󠄁z󠄁a󠄁ç󠄁ã󠄁o󠄁 u󠄁s󠄁a󠄁.󠄁 C󠄁o󠄁n󠄁s󠄁u󠄁l󠄁t󠄁e󠄁
-[O󠄁n󠄁de s󠄁e󠄁u󠄁 domínio é󠄁 s󠄁e󠄁r󠄁v󠄁i󠄁d󠄁o](/en/custom-domains#where-your-domain-is-served).󠄁
+[O󠄁n󠄁de s󠄁e󠄁u󠄁 domínio é󠄁 s󠄁e󠄁r󠄁v󠄁i󠄁d󠄁o](/pt-br/custom-domains#onde-o-seu-domínio-é-servido).󠄁
 
 ## C󠄁r󠄁i󠄁e󠄁 o󠄁s󠄁 r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁o󠄁s󠄁 D󠄁N󠄁S󠄁
 

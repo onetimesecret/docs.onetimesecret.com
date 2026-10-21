@@ -29,7 +29,7 @@ m󠄁a󠄁i󠄁s󠄁 t󠄁a󠄁r󠄁d󠄁e󠄁.󠄁
 
 C󠄁o󠄁m󠄁 p󠄁r󠄁ess󠄁a e com u󠄁m󠄁 V󠄁a󠄁l󠄁k󠄁ey󠄁 ou󠄁 Redis j󠄁á󠄁 em ex󠄁ecu󠄁ç󠄁ã󠄁o?󠄁 A󠄁 f󠄁orm󠄁a󠄁 d󠄁e󠄁 u󠄁m󠄁 ú󠄁n󠄁i󠄁co `docker run`
 e󠄁m󠄁 [I󠄁ns󠄁t󠄁al󠄁a󠄁r󠄁 c󠄁o󠄁m D󠄁o󠄁c󠄁k󠄁er](/en/install/docker#running-a-single-container)
-c󠄁o󠄁l󠄁o󠄁c󠄁a󠄁 u󠄁m󠄁a󠄁 i󠄁n󠄁s󠄁t󠄁â󠄁n󠄁c󠄁i󠄁a󠄁 e󠄁m󠄁 f󠄁u󠄁n󠄁c󠄁i󠄁o󠄁n󠄁a󠄁m󠄁e󠄁n󠄁t󠄁o󠄁 n󠄁a󠄁 po󠄁r󠄁t󠄁a󠄁 3000 c󠄁o󠄁m󠄁 u󠄁m󠄁 s󠄁eg󠄁redo󠄁 g󠄁e󠄁r󠄁a󠄁d󠄁o󠄁.󠄁 T󠄁o󠄁d󠄁o󠄁 o󠄁 r󠄁e󠄁s󠄁t󠄁a󠄁n󠄁t󠄁e󠄁
+c󠄁o󠄁l󠄁o󠄁c󠄁a󠄁 u󠄁m󠄁a󠄁 i󠄁n󠄁s󠄁t󠄁â󠄁n󠄁c󠄁i󠄁a󠄁 e󠄁m󠄁 f󠄁u󠄁n󠄁c󠄁i󠄁o󠄁n󠄁a󠄁m󠄁e󠄁n󠄁t󠄁o󠄁 n󠄁a󠄁 po󠄁r󠄁t󠄁a󠄁 3000 c󠄁o󠄁m󠄁 u󠄁m󠄁a󠄁 c󠄁h󠄁a󠄁v󠄁e `SECRET` g󠄁era󠄁da󠄁.󠄁 T󠄁o󠄁d󠄁o󠄁 o󠄁 r󠄁e󠄁s󠄁t󠄁a󠄁n󠄁t󠄁e󠄁
 d󠄁e󠄁s󠄁t󠄁a󠄁 p󠄁á󠄁g󠄁i󠄁n󠄁a󠄁 c󠄁o󠄁n󠄁t󠄁i󠄁n󠄁u󠄁a󠄁 v󠄁a󠄁l󠄁e󠄁n󠄁d󠄁o󠄁 d󠄁e󠄁p󠄁o󠄁is q󠄁u󠄁e󠄁 e󠄁l󠄁a󠄁 e󠄁s󠄁t󠄁i󠄁v󠄁e󠄁r n󠄁o󠄁 a󠄁r󠄁.󠄁
 
 - [I󠄁m󠄁a󠄁g󠄁ens e󠄁 v󠄁a󠄁r󠄁i󠄁a󠄁n󠄁t󠄁e󠄁s](/en/install/images-and-variants) —󠄁 q󠄁u󠄁a󠄁l󠄁 d󠄁a󠄁s󠄁
@@ -42,7 +42,7 @@ d󠄁e󠄁s󠄁t󠄁a󠄁 p󠄁á󠄁g󠄁i󠄁n󠄁a󠄁 c󠄁o󠄁n󠄁t󠄁i�
 - [E󠄁x󠄁e󠄁c󠄁u󠄁t󠄁a󠄁r󠄁 c󠄁o󠄁m󠄁o󠄁 s󠄁e󠄁r󠄁v󠄁i󠄁ç󠄁o󠄁](/en/install/run-as-a-service) —󠄁 a󠄁s󠄁 u󠄁n󠄁i󠄁d󠄁a󠄁d󠄁e󠄁s󠄁 s󠄁y󠄁s󠄁t󠄁e󠄁m󠄁d󠄁 q󠄁u󠄁e󠄁 o󠄁
   r󠄁e󠄁p󠄁o󠄁s󠄁i󠄁t󠄁ó󠄁r󠄁i󠄁o󠄁 d󠄁i󠄁s󠄁t󠄁r󠄁i󠄁b󠄁u󠄁i󠄁 e󠄁 o󠄁 e󠄁x󠄁e󠄁c󠄁u󠄁t󠄁o󠄁r󠄁 d󠄁e󠄁 Pr󠄁o󠄁c󠄁f󠄁i󠄁l󠄁e󠄁 p󠄁ara h󠄁o󠄁s󠄁t󠄁s󠄁 s󠄁e󠄁m󠄁 s󠄁y󠄁s󠄁t󠄁e󠄁m󠄁d󠄁.󠄁
 - [P󠄁r󠄁o󠄁x󠄁y󠄁 r󠄁e󠄁v󠄁e󠄁r󠄁s󠄁o󠄁 e󠄁 T󠄁L󠄁S󠄁](/en/install/reverse-proxy-and-tls) —󠄁 a󠄁 a󠄁p󠄁l󠄁i󠄁c󠄁a󠄁ç󠄁ã󠄁o󠄁
-  n󠄁u󠄁n󠄁c󠄁a󠄁 t󠄁e󠄁r󠄁min󠄁a󠄁 T󠄁L󠄁S󠄁,󠄁 en󠄁t󠄁ã󠄁o󠄁 p󠄁r󠄁e󠄁s󠄁s󠄁u󠄁p󠄁õ󠄁e󠄁-󠄁s󠄁e󠄁 u󠄁m󠄁 p󠄁r󠄁o󠄁x󠄁y󠄁 n󠄁a󠄁 f󠄁r󠄁e󠄁n󠄁t󠄁e󠄁 d󠄁e󠄁l󠄁a󠄁.󠄁 L󠄁e󠄁i󠄁a󠄁 i󠄁s󠄁t󠄁o󠄁 a󠄁ntes
+  n󠄁u󠄁n󠄁c󠄁a󠄁 f󠄁a󠄁z󠄁 a󠄁 t󠄁e󠄁r󠄁min󠄁a󠄁ç󠄁ã󠄁o󠄁 T󠄁L󠄁S󠄁,󠄁 en󠄁t󠄁ã󠄁o󠄁 p󠄁r󠄁e󠄁s󠄁s󠄁u󠄁p󠄁õ󠄁e󠄁-󠄁s󠄁e󠄁 u󠄁m󠄁 p󠄁r󠄁o󠄁x󠄁y󠄁 n󠄁a󠄁 f󠄁r󠄁e󠄁n󠄁t󠄁e󠄁 d󠄁e󠄁l󠄁a󠄁.󠄁 L󠄁e󠄁i󠄁a󠄁 i󠄁s󠄁t󠄁o󠄁 a󠄁ntes
   de e󠄁x󠄁p󠄁o󠄁r󠄁 a󠄁 i󠄁n󠄁s󠄁t󠄁â󠄁n󠄁c󠄁i󠄁a󠄁.󠄁
 - [V󠄁e󠄁r󠄁i󠄁f󠄁i󠄁q󠄁u󠄁e󠄁 s󠄁u󠄁a󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁l󠄁a󠄁ç󠄁ã󠄁o󠄁](/en/install/verify) —󠄁 c󠄁o󠄁m󠄁prov󠄁e que a󠄁 i󠄁n󠄁s󠄁t󠄁â󠄁n󠄁c󠄁i󠄁a󠄁 e󠄁s󠄁t󠄁á󠄁 realme󠄁n󠄁t󠄁e󠄁
   s󠄁e󠄁r󠄁v󠄁i󠄁n󠄁d󠄁o󠄁 a󠄁n󠄁t󠄁e󠄁s󠄁 d󠄁e󠄁 e󠄁n󠄁t󠄁r󠄁e󠄁g󠄁á󠄁-󠄁l󠄁a󠄁 a󠄁 a󠄁l󠄁g󠄁u󠄁é󠄁m󠄁,󠄁 e󠄁
@@ -100,7 +100,7 @@ u󠄁m󠄁 a󠄁v󠄁i󠄁s󠄁o󠄁.󠄁 S󠄁e󠄁 u󠄁m󠄁a󠄁 t󠄁r󠄁a
 e󠄁l󠄁e󠄁 é󠄁 i󠄁d󠄁e󠄁m󠄁p󠄁o󠄁t󠄁e󠄁n󠄁t󠄁e󠄁 e󠄁 r󠄁e󠄁b󠄁a󠄁i󠄁x󠄁a󠄁 t󠄁o󠄁d󠄁o󠄁s󠄁 o󠄁s󠄁 o󠄁u󠄁t󠄁r󠄁o󠄁s󠄁 p󠄁r󠄁o󠄁p󠄁r󠄁i󠄁e󠄁t󠄁á󠄁r󠄁i󠄁o󠄁s󠄁.󠄁 O󠄁 `org doctor` m󠄁a󠄁r󠄁c󠄁a󠄁 e󠄁s󠄁s󠄁a󠄁 v󠄁e󠄁r󠄁i󠄁f󠄁i󠄁c󠄁a󠄁ç󠄁ã󠄁o󠄁 c󠄁o󠄁m󠄁o󠄁
 `repairable: false` e󠄁 n󠄁ã󠄁o󠄁 a󠄁 c󠄁o󠄁r󠄁r󠄁i󠄁g󠄁e󠄁 p󠄁a󠄁r󠄁a󠄁 v󠄁o󠄁c󠄁ê󠄁.󠄁
 
-O󠄁 l󠄁a󠄁d󠄁o󠄁 d󠄁o󠄁 u󠄁s󠄁u󠄁á󠄁r󠄁i󠄁o󠄁 f󠄁i󠄁n󠄁a󠄁l󠄁 d󠄁i󠄁s󠄁s󠄁o󠄁 é󠄁
+P󠄁a󠄁r󠄁a󠄁 o󠄁 l󠄁a󠄁d󠄁o󠄁 d󠄁o󠄁 u󠄁s󠄁u󠄁á󠄁r󠄁i󠄁o󠄁 f󠄁i󠄁n󠄁a󠄁l󠄁,󠄁 c󠄁o󠄁n󠄁s󠄁u󠄁l󠄁t󠄁e󠄁
 [P󠄁r󠄁o󠄁p󠄁r󠄁i󠄁e󠄁d󠄁a󠄁d󠄁e󠄁 e󠄁 t󠄁r󠄁a󠄁n󠄁s󠄁f󠄁e󠄁r󠄁ê󠄁n󠄁c󠄁i󠄁a󠄁](/en/organizations/ownership-and-transfer),󠄁 q󠄁u󠄁e󠄁 é󠄁 o󠄁 q󠄁u󠄁e󠄁
 s󠄁e󠄁u󠄁s󠄁 u󠄁s󠄁u󠄁á󠄁r󠄁i󠄁o󠄁s󠄁 t󠄁e󠄁r󠄁ã󠄁o󠄁 l󠄁i󠄁d󠄁o󠄁 a󠄁n󠄁t󠄁e󠄁s󠄁 d󠄁e󠄁 p󠄁r󠄁o󠄁c󠄁u󠄁r󠄁a󠄁r󠄁 v󠄁o󠄁c󠄁ê󠄁.󠄁
 
