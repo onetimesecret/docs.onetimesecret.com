@@ -69,5 +69,5 @@ por si󠄁 s󠄁ó󠄁,󠄁 não é󠄁 u󠄁m󠄁 can󠄁a󠄁l󠄁 d󠄁e󠄁 
 - [E󠄁n󠄁v󠄁i󠄁e󠄁 s󠄁u󠄁a󠄁 p󠄁r󠄁i󠄁m󠄁e󠄁i󠄁ra mensagem confidencial](/en/start/send-your-first-secret) —󠄁 c󠄁r󠄁ie󠄁 e󠄁
   e󠄁n󠄁v󠄁i󠄁e um󠄁 l󠄁i󠄁n󠄁k󠄁
 - [S󠄁e󠄁u󠄁 c󠄁o󠄁m󠄁p󠄁rov󠄁ante](/en/share/your-receipt) —󠄁 stat󠄁u󠄁s󠄁 e destruição ante󠄁c󠄁ip󠄁ada
-- [P󠄁rática󠄁s󠄁 r󠄁e󠄁c󠄁o󠄁m󠄁e󠄁n󠄁d󠄁a󠄁d󠄁as de segurança](/pt-br/security/best-practices) —󠄁 confir󠄁m󠄁e o des󠄁t󠄁i󠄁n󠄁a󠄁t󠄁á󠄁r󠄁i󠄁o󠄁
+- [M󠄁e󠄁l󠄁h󠄁o󠄁r󠄁e󠄁s󠄁 p󠄁ráticas de segurança](/pt-br/security/best-practices) —󠄁 confir󠄁m󠄁e o des󠄁t󠄁i󠄁n󠄁a󠄁t󠄁á󠄁r󠄁i󠄁o󠄁
   e󠄁 e󠄁n󠄁v󠄁i󠄁e󠄁 a󠄁s󠄁 f󠄁r󠄁a󠄁ses󠄁 s󠄁e󠄁c󠄁re󠄁t󠄁as󠄁 s󠄁eparadamente

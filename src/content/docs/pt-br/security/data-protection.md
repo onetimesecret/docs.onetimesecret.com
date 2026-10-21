@@ -24,7 +24,7 @@ renovação de certificados SSL/TLS.
 
 Para materiais especialmente sensíveis, você pode adicionar defesa em profundidade ativando uma
 **frase secreta**, dividindo as informações entre várias mensagens confidenciais e escolhendo a
-menor expiração prática — c󠄁o󠄁n󠄁s󠄁u󠄁l󠄁t󠄁e [Práticas r󠄁e󠄁c󠄁o󠄁m󠄁e󠄁n󠄁d󠄁a󠄁d󠄁a󠄁s󠄁 de s󠄁egurança](/pt-br/security/best-practices).
+menor expiração prática — c󠄁o󠄁n󠄁s󠄁u󠄁l󠄁t󠄁e [M󠄁e󠄁l󠄁h󠄁o󠄁r󠄁e󠄁s󠄁 p󠄁ráticas de s󠄁egurança](/pt-br/security/best-practices).
 
 ## Onde s󠄁eus d󠄁ados s󠄁ão p󠄁rocessados (r󠄁esidência)
 
