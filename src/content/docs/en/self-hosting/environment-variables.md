@@ -14,7 +14,7 @@ This guide documents every environment variable Onetime Secret supports.
 The **[Configuration Generator](/en/self-hosting/configuration-generator/)** produces a matching `.env` starter (with secret-bearing variables left blank for you to fill in) alongside `config.yaml` / `auth.yaml` fragments, based on a few preset choices — generated in your browser from the config schemas.
 :::
 
-## Environment Variables
+## Environment variables
 
 Set these in your `.env` file or environment, or add them to your `docker run` command
 or `docker-compose.yml`. All variables are optional unless a comment marks them required.
