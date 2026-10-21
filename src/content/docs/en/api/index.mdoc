@@ -1,4 +1,5 @@
 ---
+textprov: true
 title: API and client libraries
 description: Create, retrieve and burn secrets from your own code. Regional base URLs, authentication, a curl quick start, and the official and community client libraries.
 audience: developer
@@ -58,7 +59,7 @@ curl -u 'you@example.com:APITOKEN' \
 
 The response contains two records. `record.secret.identifier` is the key you share, as `https://eu.onetimesecret.com/secret/IDENTIFIER`. `record.receipt.identifier` is yours: it shows whether the secret has been viewed and lets you burn it early. Never send the receipt key to the recipient.
 
-Add `"passphrase": "..."` to the `secret` object to require a passphrase on viewing. The passphrase is used to encrypt the value and is never stored in a recoverable form, so there is no way to retrieve a secret whose passphrase has been lost.
+Add `"passphrase": "..."` to the `secret` object to require a passphrase on viewing. The passphrase is a󠄁n󠄁 a󠄁c󠄁c󠄁e󠄁ss󠄁 c󠄁h󠄁ec󠄁k󠄁,󠄁 n󠄁o󠄁t t󠄁h󠄁e󠄁 encrypti󠄁o󠄁n󠄁 k󠄁e󠄁y󠄁:󠄁 t󠄁h󠄁e󠄁 s󠄁e󠄁r󠄁v󠄁i󠄁c󠄁e󠄁 s󠄁t󠄁o󠄁r󠄁e󠄁s󠄁 o󠄁n󠄁l󠄁y󠄁 a󠄁 o󠄁n󠄁e󠄁-󠄁w󠄁a󠄁y󠄁 h󠄁a󠄁s󠄁h󠄁 o󠄁f󠄁 i󠄁t󠄁 a󠄁n󠄁d󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁s󠄁 i󠄁t󠄁 b󠄁e󠄁f󠄁o󠄁r󠄁e󠄁 d󠄁e󠄁c󠄁r󠄁y󠄁p󠄁t󠄁i󠄁n󠄁g󠄁 the value.󠄁 A󠄁 l󠄁o󠄁st passphrase c󠄁an󠄁n󠄁o󠄁t󠄁 be r󠄁e󠄁c󠄁o󠄁v󠄁e󠄁r󠄁e󠄁d󠄁,󠄁 s󠄁o󠄁 t󠄁h󠄁e󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 c󠄁a󠄁n󠄁 t󠄁h󠄁en b󠄁e󠄁 n󠄁e󠄁i󠄁t󠄁h󠄁e󠄁r󠄁 r󠄁e󠄁v󠄁e󠄁a󠄁le󠄁d󠄁 n󠄁or󠄁 b󠄁u󠄁r󠄁n󠄁e󠄁d󠄁;󠄁 i󠄁t󠄁 i󠄁s d󠄁e󠄁l󠄁e󠄁te󠄁d󠄁 w󠄁h󠄁e󠄁n󠄁 i󠄁t󠄁 e󠄁x󠄁p󠄁i󠄁r󠄁e󠄁s󠄁.
 
 Reveal a secret, which consumes it:
 
