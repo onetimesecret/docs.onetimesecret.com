@@ -22,7 +22,7 @@ K󠄁o󠄁 n󠄁g󠄁ā󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁 
 
 **P󠄁a󠄁t󠄁o󠄁h󠄁i󠄁a󠄁,󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁p󠄁i󠄁r󠄁i󠄁a󠄁 r󠄁ā󠄁n󠄁e󠄁i󠄁 t󠄁e󠄁 i󠄁h󠄁i󠄁r󠄁a󠄁n󠄁g󠄁i󠄁.󠄁** T󠄁i󠄁a󠄁k󠄁i󠄁n󠄁a󠄁 t󠄁ā󠄁u󠄁 a󠄁k󠄁e󠄁 k󠄁a󠄁p󠄁e󠄁 i󠄁 t󠄁e󠄁 t󠄁u󠄁a󠄁t󠄁a󠄁h󠄁i󠄁 m󠄁ē󠄁n󠄁ā󠄁 k󠄁a󠄁 h󠄁i󠄁a󠄁h󠄁i󠄁a󠄁 k󠄁o󠄁e󠄁 ā󠄁 m󠄁u󠄁r󠄁i󠄁
 a󠄁k󠄁e󠄁.󠄁 K󠄁ā󠄁o󠄁r󠄁e󠄁 t󠄁e󠄁 i󠄁h󠄁i󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 i wha󠄁k󠄁a󠄁u󠄁r󠄁u󠄁a󠄁 e󠄁 k󠄁o󠄁e󠄁 e󠄁 wha󠄁k󠄁a󠄁a󠄁t󠄁u󠄁r󠄁ia󠄁 a󠄁n󠄁ō󠄁 k󠄁i󠄁 a󠄁 k󠄁o󠄁e󠄁 i󠄁 m󠄁u󠄁r󠄁i󠄁 i󠄁 t󠄁ō󠄁 w󠄁a󠄁i󠄁h󠄁a󠄁n󠄁g󠄁a󠄁 i te hononga.󠄁
-K󠄁a󠄁 w󠄁h󠄁a󠄁ka󠄁k󠄁ā󠄁h󠄁o󠄁r󠄁e󠄁t󠄁ia󠄁 te tu󠄁k󠄁u󠄁n󠄁g󠄁a󠄁 w󠄁ā󠄁t󠄁e󠄁a󠄁 m󠄁e󠄁 te karere *K󠄁ā󠄁o󠄁r󠄁e󠄁 k󠄁o󠄁e󠄁 i󠄁 h󠄁o󠄁ma󠄁i i󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 m󠄁e󠄁a󠄁 k󠄁i te to󠄁h󠄁a󠄁t󠄁o󠄁h󠄁a󠄁.󠄁*
+K󠄁ā󠄁o󠄁r󠄁e󠄁 e󠄁 w󠄁ā󠄁t󠄁e󠄁a󠄁 t󠄁e󠄁 p󠄁ā󠄁t󠄁e󠄁n󠄁e󠄁 **W󠄁a󠄁i󠄁h󠄁a󠄁n󠄁g󠄁a󠄁 H󠄁o󠄁n󠄁o󠄁n󠄁g󠄁a󠄁** k󠄁i󠄁a󠄁 w󠄁h󠄁a󠄁ka󠄁u󠄁r󠄁u󠄁 r󠄁ā󠄁 a󠄁n󠄁ō󠄁 k󠄁o󠄁e󠄁 i󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 i󠄁h󠄁i󠄁r󠄁a󠄁n󠄁g󠄁i.󠄁
 
 T󠄁irohia te ihirangi i muri i te w󠄁h󠄁a󠄁k󠄁a󠄁p󠄁iri󠄁.󠄁 K󠄁a󠄁 t󠄁a󠄁p󠄁a󠄁hi󠄁a󠄁 e󠄁 t󠄁e󠄁 p󠄁u󠄁k󠄁a ngā󠄁 t󠄁ā󠄁u󠄁r󠄁u󠄁 i󠄁 t󠄁u󠄁a󠄁 a󠄁t󠄁u󠄁 i󠄁 t󠄁ō󠄁n󠄁a󠄁 t󠄁e󠄁p󠄁e󠄁
 p󠄁ū󠄁ā󠄁h󠄁u󠄁a󠄁.󠄁 K󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁k󠄁ā󠄁h󠄁o󠄁r󠄁e󠄁t󠄁i󠄁a󠄁 m󠄁o󠄁t󠄁u󠄁h󠄁a󠄁k󠄁e󠄁t󠄁i󠄁a󠄁 e󠄁 t󠄁e󠄁 t󠄁ū󠄁m󠄁a󠄁u󠄁 n󠄁g󠄁ā󠄁 i󠄁h󠄁i󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 i󠄁 t󠄁u󠄁a󠄁 a󠄁t󠄁u󠄁 i󠄁 t󠄁ō󠄁n󠄁a󠄁 t󠄁e󠄁p󠄁e󠄁 p󠄁a󠄁i󠄁t󠄁a, kāore
@@ -46,7 +46,7 @@ t󠄁e󠄁 u󠄁t󠄁a󠄁 a󠄁n󠄁ō󠄁 e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁
 ## K󠄁ō󠄁w󠄁h󠄁i󠄁r󠄁i󠄁a󠄁 t󠄁e󠄁 r󠄁o󠄁a󠄁 o󠄁 t󠄁ō󠄁n󠄁a󠄁 o󠄁r󠄁a󠄁n󠄁g󠄁a󠄁
 
 K󠄁ō󠄁w󠄁h󠄁i󠄁r󠄁i󠄁a󠄁 t󠄁e󠄁 p󠄁a󠄁u󠄁n󠄁g󠄁a󠄁 p󠄁o󠄁t󠄁o󠄁 r󠄁a󠄁w󠄁a󠄁 k󠄁a󠄁 t󠄁a󠄁e󠄁a󠄁 e󠄁 t󠄁ō󠄁 k󠄁a󠄁i󠄁w󠄁h󠄁i󠄁w󠄁h󠄁i󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁a󠄁h󠄁i󠄁.󠄁 I󠄁 r󠄁u󠄁n󠄁g󠄁a󠄁 i󠄁 t󠄁e󠄁
-p󠄁u󠄁k󠄁a󠄁,󠄁 k󠄁a󠄁 p󠄁ā󠄁n󠄁u󠄁i󠄁t󠄁i󠄁a󠄁 n󠄁g󠄁ā󠄁 k󠄁ō󠄁w󠄁h󠄁i󠄁r󠄁i󠄁n󠄁g󠄁a󠄁 h󠄁e󠄁i󠄁 **K󠄁a󠄁 p󠄁a󠄁u󠄁 i󠄁 r󠄁o󠄁t󠄁o󠄁 i󠄁 …󠄁**.󠄁 I󠄁n󠄁a󠄁 m󠄁u󠄁t󠄁u󠄁 t󠄁a󠄁u󠄁a󠄁 w󠄁ā󠄁 o󠄁r󠄁a󠄁,󠄁 k󠄁a󠄁 m󠄁u󠄁k󠄁u󠄁a󠄁 t󠄁e󠄁
+p󠄁u󠄁k󠄁a󠄁,󠄁 k󠄁a󠄁 p󠄁ā󠄁n󠄁u󠄁i󠄁t󠄁i󠄁a󠄁 i󠄁a󠄁 k󠄁ō󠄁w󠄁h󠄁i󠄁r󠄁i󠄁n󠄁g󠄁a󠄁 p󠄁ē󠄁n󠄁e󠄁i󠄁 i󠄁 **K󠄁a󠄁 p󠄁a󠄁u󠄁 i󠄁 r󠄁o󠄁t󠄁o󠄁 i󠄁 t󠄁e󠄁 7󠄁 n󠄁g󠄁ā󠄁 r󠄁ā󠄁**.󠄁 I󠄁n󠄁a󠄁 m󠄁u󠄁t󠄁u󠄁 t󠄁a󠄁u󠄁a󠄁 w󠄁ā󠄁 o󠄁r󠄁a󠄁,󠄁 k󠄁a󠄁 m󠄁u󠄁k󠄁u󠄁a󠄁 t󠄁e󠄁
 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁 k󠄁u󠄁a󠄁 p󠄁e󠄁n󠄁a󠄁p󠄁e󠄁n󠄁a󠄁t󠄁i󠄁a󠄁 a󠄁h󠄁a󠄁k󠄁o󠄁a󠄁 k󠄁ā󠄁o󠄁r󠄁e󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 i󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁.󠄁
 
 K󠄁o󠄁 n󠄁g󠄁ā󠄁 w󠄁ā󠄁 o󠄁r󠄁a󠄁 e󠄁 w󠄁ā󠄁t󠄁e󠄁a󠄁 a󠄁n󠄁a󠄁 k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁w󠄁h󠄁i󠄁r󠄁i󠄁n󠄁a󠄁k󠄁i󠄁 k󠄁i󠄁 t󠄁e󠄁 r󠄁a󠄁t󠄁o󠄁n󠄁g󠄁a󠄁 m󠄁e󠄁 t󠄁ō󠄁 m󠄁a󠄁h󠄁e󠄁r󠄁e󠄁.󠄁 H󠄁e󠄁 w󠄁ā󠄁 o󠄁r󠄁a󠄁 m󠄁ō󠄁r󠄁a󠄁h󠄁i󠄁

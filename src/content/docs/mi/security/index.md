@@ -37,7 +37,7 @@ taipitopito.
 
 - **[Ō Mātou Mātāpono](/en/security/our-principles)** — Tūmataitinga i te Tuatahi, Whakawhitiwhiti Kōrero, me te Whakaiti Raraunga.
 - **[K󠄁e󠄁i󠄁 hea󠄁 ō󠄁 r󠄁araunga e󠄁 n󠄁o󠄁h󠄁o󠄁 a󠄁n󠄁a󠄁](/en/security/where-your-data-lives/)** — kōwhiria te wāhi e tukatukahia ai, e penapenatia ai hoki ō raraunga.
-- **[Manaaki-ā-Kiri](https://github.com/onetimesecret/onetimesecret)** — whakahaerehia a Onetime Secret i runga i tō ake hanganga kia riro katoa i a koe te mana whakahaere.
+- **[Manaaki-ā-Kiri](/mi/self-hosting/)** — whakahaerehia a Onetime Secret i runga i tō ake hanganga kia riro katoa i a koe te mana whakahaere.
 
 ## Te p󠄁ūrongo i t󠄁ētahi r󠄁aru h󠄁aumaru
 

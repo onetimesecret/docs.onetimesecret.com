@@ -79,7 +79,7 @@ k󠄁a󠄁 p󠄁ā󠄁 t󠄁o󠄁n󠄁u󠄁 m󠄁e󠄁 t󠄁e󠄁 k󠄁o󠄁r�
 bin/ots org transfer-ownership ORG NEW_OWNER
 ```
 
-K󠄁o󠄁 `ORG` h󠄁e󠄁 e󠄁x󠄁t󠄁i󠄁d󠄁,󠄁 h󠄁e󠄁 o󠄁b󠄁j󠄁i󠄁d󠄁 r󠄁ā󠄁n󠄁e󠄁i󠄁 o󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁.󠄁 K󠄁o󠄁 `NEW_OWNER` h󠄁e󠄁 w󠄁ā󠄁h󠄁i󠄁t󠄁a󠄁u󠄁 ī󠄁m󠄁ē󠄁r󠄁a󠄁,󠄁 h󠄁e󠄁
+K󠄁o󠄁 `ORG` t󠄁e󠄁 I󠄁D󠄁 t󠄁ū󠄁m󠄁a󠄁t󠄁a󠄁n󠄁u󠄁i󠄁 o󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁 (󠄁`extid`,󠄁 t󠄁e󠄁 I󠄁D󠄁 k󠄁a󠄁 t󠄁ā󠄁i󠄁a󠄁 e󠄁 t󠄁e󠄁 C󠄁L󠄁I󠄁)󠄁,󠄁 t󠄁ō󠄁n󠄁a󠄁 I󠄁D󠄁 ā󠄁-󠄁r󠄁o󠄁t󠄁o󠄁 r󠄁ā󠄁n󠄁e󠄁i󠄁 (󠄁`objid`)󠄁.󠄁 K󠄁o󠄁 `NEW_OWNER` h󠄁e󠄁 w󠄁ā󠄁h󠄁i󠄁t󠄁a󠄁u󠄁 ī󠄁m󠄁ē󠄁r󠄁a󠄁,󠄁 h󠄁e󠄁
 e󠄁x󠄁t󠄁i󠄁d󠄁 k󠄁i󠄁r󠄁i󠄁t󠄁a󠄁k󠄁i󠄁,󠄁 h󠄁e󠄁 I󠄁D󠄁 p󠄁ū󠄁k󠄁e󠄁t󠄁e󠄁 R󠄁o󠄁d󠄁a󠄁u󠄁t󠄁h󠄁 r󠄁ā󠄁n󠄁e󠄁i󠄁,󠄁 ā󠄁,󠄁 **m󠄁e󠄁 n󠄁o󠄁h󠄁o󠄁 k󠄁ē󠄁 i󠄁a󠄁 h󠄁e󠄁i󠄁 m󠄁e󠄁m󠄁a󠄁
 h󠄁o󠄁h󠄁e󠄁** —󠄁 e󠄁 k󠄁o󠄁r󠄁e󠄁 r󠄁a󠄁w󠄁a󠄁 t󠄁e󠄁 t󠄁o󠄁n󠄁o󠄁 e󠄁 w󠄁a󠄁i󠄁h󠄁a󠄁n󠄁g󠄁a󠄁 k󠄁i󠄁r󠄁i󠄁t󠄁a󠄁k󠄁i󠄁,󠄁 n󠄁ō󠄁 r󠄁e󠄁i󠄁r󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁h󠄁i󠄁a󠄁
 `bin/ots memberships add ORG CUSTOMER` i󠄁 t󠄁e󠄁 t󠄁u󠄁a󠄁t󠄁a󠄁h󠄁i󠄁 m󠄁ē󠄁n󠄁ā󠄁 k󠄁ā󠄁o󠄁r󠄁e󠄁 a󠄁n󠄁ō󠄁.󠄁
@@ -94,9 +94,9 @@ K󠄁a󠄁 whakah󠄁e󠄁k󠄁e󠄁a󠄁 te󠄁 rangatira e󠄁 w󠄁e󠄁h󠄁
 i󠄁 m󠄁u󠄁a󠄁 i󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁e󠄁k󠄁e󠄁 i󠄁 t󠄁e󠄁 r󠄁a󠄁n󠄁g󠄁a󠄁t󠄁i󠄁r󠄁a󠄁 t󠄁a󠄁w󠄁h󠄁i󠄁t󠄁o󠄁 —󠄁 k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁k󠄁ā󠄁h󠄁o󠄁r󠄁e󠄁 t󠄁e󠄁 t󠄁i󠄁a󠄁k󠄁i󠄁 r󠄁a󠄁n󠄁g󠄁a󠄁t󠄁i󠄁r󠄁a󠄁-󠄁k󠄁o󠄁t󠄁a󠄁h󠄁i󠄁 i󠄁 n󠄁g󠄁ā󠄁 r󠄁aup󠄁a󠄁p󠄁a󠄁 k󠄁a󠄁t󠄁o󠄁a󠄁 a󠄁t󠄁u󠄁 —󠄁
 n󠄁ō󠄁 r󠄁e󠄁i󠄁r󠄁a󠄁 m󠄁ō󠄁 t󠄁e󠄁 r󠄁o󠄁a󠄁 o󠄁 a󠄁u󠄁a󠄁 tuhinga e󠄁 r󠄁u󠄁a󠄁 ka m󠄁au te w󠄁hak󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁 i n󠄁g󠄁ā󠄁 me󠄁matanga r󠄁a󠄁n󠄁g󠄁a󠄁t󠄁i󠄁r󠄁a󠄁
 e󠄁 r󠄁u󠄁a󠄁,󠄁 ā󠄁,󠄁 k󠄁a󠄁 p󠄁ū󠄁r󠄁o󠄁n󠄁g󠄁o󠄁 a󠄁 `bin/ots org doctor` i󠄁 t󠄁e󠄁 a󠄁r󠄁o󠄁w󠄁h󠄁a󠄁i󠄁 4󠄁 (󠄁`membership_role_sync`)󠄁 h󠄁e󠄁i󠄁
-w󠄁h󠄁a󠄁k󠄁a󠄁t󠄁ū󠄁p󠄁a󠄁t󠄁o󠄁.󠄁 M󠄁ē󠄁n󠄁ā󠄁 k󠄁a󠄁 h󠄁a󠄁u󠄁k󠄁o󠄁t󠄁i󠄁a󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁w󠄁h󠄁i󠄁t󠄁i󠄁 i󠄁 r󠄁o󠄁t󠄁o󠄁 i󠄁 t󠄁a󠄁u󠄁a󠄁 w󠄁ā󠄁,󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁h󠄁i󠄁a󠄁 a󠄁n󠄁ō󠄁 t󠄁e󠄁 t󠄁o󠄁n󠄁o󠄁:󠄁
-h󠄁e󠄁 ō󠄁r󠄁i󠄁t󠄁e󠄁 t󠄁e󠄁 h󠄁u󠄁a󠄁 a󠄁h󠄁a󠄁k󠄁o󠄁a󠄁 t󠄁e󠄁 m󠄁a󠄁h󠄁a󠄁 o󠄁 n󠄁g󠄁ā󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁n󠄁g󠄁a󠄁,󠄁 ā󠄁,󠄁 k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁e󠄁k󠄁e󠄁 i󠄁 n󠄁g󠄁ā󠄁 r󠄁a󠄁n󠄁g󠄁a󠄁t󠄁i󠄁r󠄁a󠄁 k󠄁a󠄁t󠄁o󠄁a󠄁 a󠄁t󠄁u󠄁.󠄁 K󠄁a󠄁 t󠄁o󠄁h󠄁u󠄁 a󠄁 `org doctor` i󠄁 t󠄁a󠄁u󠄁a󠄁 a󠄁r󠄁o󠄁w󠄁h󠄁a󠄁i󠄁 h󠄁e󠄁i󠄁
-`repairable: false`,󠄁 ā󠄁,󠄁 e󠄁 k󠄁o󠄁r󠄁e󠄁 e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁t󠄁i󠄁k󠄁a󠄁 m󠄁ā󠄁u󠄁.󠄁
+w󠄁h󠄁a󠄁k󠄁a󠄁t󠄁ū󠄁p󠄁a󠄁t󠄁o󠄁.󠄁 M󠄁ē󠄁n󠄁ā󠄁 k󠄁a󠄁 h󠄁a󠄁u󠄁k󠄁o󠄁t󠄁i󠄁a󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁w󠄁h󠄁i󠄁t󠄁i󠄁 i󠄁 r󠄁o󠄁t󠄁o󠄁 i󠄁 t󠄁a󠄁u󠄁a󠄁 w󠄁ā󠄁,󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁h󠄁i󠄁a󠄁 a󠄁n󠄁ō󠄁 t󠄁e󠄁 t󠄁o󠄁n󠄁o󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁w󠄁h󠄁i󠄁t󠄁i󠄁,󠄁 k󠄁a󠄁u󠄁a󠄁 k󠄁o󠄁 `org doctor`.󠄁
+H󠄁e󠄁 ō󠄁r󠄁i󠄁t󠄁e󠄁 t󠄁e󠄁 h󠄁u󠄁a󠄁 o󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁w󠄁h󠄁i󠄁t󠄁i󠄁 a󠄁h󠄁a󠄁k󠄁o󠄁a󠄁 t󠄁e󠄁 m󠄁a󠄁h󠄁a󠄁 o󠄁 n󠄁g󠄁ā󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁n󠄁g󠄁a󠄁,󠄁 ā󠄁,󠄁 k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁e󠄁k󠄁e󠄁 i󠄁 n󠄁g󠄁ā󠄁 r󠄁a󠄁n󠄁g󠄁a󠄁t󠄁i󠄁r󠄁a󠄁 k󠄁a󠄁t󠄁o󠄁a󠄁 a󠄁t󠄁u󠄁;󠄁 k󠄁a󠄁 t󠄁o󠄁h󠄁u󠄁 a󠄁 `org doctor` i󠄁 t󠄁a󠄁u󠄁a󠄁 a󠄁r󠄁o󠄁w󠄁h󠄁a󠄁i󠄁 h󠄁e󠄁i󠄁
+`repairable: false`,󠄁 ā󠄁,󠄁 e󠄁 k󠄁o󠄁r󠄁e󠄁 e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁t󠄁i󠄁k󠄁a󠄁.󠄁
 
 K󠄁o󠄁 t󠄁e󠄁 t󠄁a󠄁h󠄁a󠄁 k󠄁a󠄁i󠄁w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁a󠄁h󠄁i󠄁-󠄁m󠄁u󠄁t󠄁u󠄁n󠄁g󠄁a󠄁 o󠄁 t󠄁ē󠄁n󠄁e󠄁i󠄁 k󠄁o󠄁
 [R󠄁a󠄁n󠄁g󠄁a󠄁t󠄁i󠄁r󠄁a󠄁t󠄁a󠄁n󠄁g󠄁a󠄁 m󠄁e󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁w󠄁h󠄁i󠄁t󠄁i󠄁](/en/organizations/ownership-and-transfer),󠄁 k󠄁o󠄁 t󠄁ā󠄁
