@@ -6,7 +6,7 @@ The largest problems are conflicting descriptions of security behavior, plan ava
 
 ## How to use the ledger
 
-The tables below preserve the original walkthrough observations. F001–F010 are **addressed** on `wip/docs-content-review`. Sharing secrets findings F011–F033 are also resolved: 22 addressed and F015 rejected with source evidence. Accounts findings F034–F048 are addressed. See the implementation records at the end. Other candidate findings remain **open**. An entry records a problem to consider, not approval of its suggested correction. Resolve each ID as addressed, rejected with evidence, or deferred with a reason. No application changes are implied.
+The tables below preserve the original walkthrough observations. F001–F010 are **addressed** on `wip/docs-content-review`. Sharing secrets findings F011–F033 are also resolved: 22 addressed and F015 rejected with source evidence. Accounts findings F034–F048 and Organizations and billing findings F049–F061 are addressed. See the implementation records at the end. Other candidate findings remain **open**. An entry records a problem to consider, not approval of its suggested correction. Resolve each ID as addressed, rejected with evidence, or deferred with a reason. No application changes are implied.
 
 - **H**: prioritize because the text affects security expectations, access, data loss, or purchase/setup decisions.
 - **M**: task completion, navigation, ordering, or terminology problem.
@@ -431,3 +431,106 @@ observations are tracked separately in the
 [Accounts verification ledger](accounts-verification-ledger-2026-10-20.md).
 All entries start open; the Accounts content dispositions above do not imply
 that those checks have passed or that policy commitments have been approved.
+
+
+## Organizations and billing resolution record
+
+Applied after the Accounts changes, with the application source checked at
+`145c1e7cfa`. Plan facts come from the docs snapshot of the billing catalog
+(`billing.yaml.txt`, sha256 `69a96394…a17501`, parsed with `yaml.safe_load`),
+the in-app labels, the marketing site at `0d1251ca`, and the live
+`/en/pricing` page fetched 2026-10-21 03:48 UTC. Edited pages: all six
+Organizations pages, both Billing pages, Pricing, Compare plans, the
+custom-domain overview (plan sentences only), the Self-hosting operator
+section, the Glossary Secret Activity entry, the docs homepage Organizations
+line, and the English sidebar label.
+
+| ID | Disposition | Final location and evidence |
+| --- | --- | --- |
+| F049 | Addressed | Inviting members is now a procedure: prerequisites (plan, owner/admin, role, exact address), Invite Member → Email Address/Role → Send Invitation, the invitee's 7-day link, sign-in or sign-up with the address fixed, Accept/Decline, verification under Current Members, Resend (new link, 7 days restart, three resends) and Revoke, role changes and removals. `create_invitation.rb:41,58-65`; `organization_membership.rb:53,196-209`; `accept_invite.rb:63-76`; `signup_and_accept.rb:88-91`; `resend_invitation.rb:15,54-78`; `revoke_invitation.rb:25,45`; `update_member_role.rb:45,156`; `remove_member.rb:160-205`; labels from `workspace-organizations.json`. Identity Plus offers Team Member only because `role_admins_per_org` is 0 (`get_permissions.rb#compute_assignable_roles`). Removal note: SSO sign-in re-adds a removed member (`join_domain_organization.rb`, `hooks/login.rb:161-177`). |
+| F050 | Addressed | Both pages now agree: no owner-facing screen or endpoint; the operator uses `bin/ots org transfer-ownership` or the Colonel API `POST /api/colonel/organizations/:org_id/transfer-ownership` (`colonel/routes.txt:94`; `transfer_organization_ownership.rb:44-90`). No Vue component calls the endpoint; only a response schema exists. Self-hosting no longer says there is no REST endpoint; Ownership no longer says there is an administrative interface. Corrected the stale `sourceOfTruth` line pins. |
+| F051 | Addressed | Ownership states the three rules and the support/operator request path without the design defence. Roles keeps the permissions table, corrected against `organization_membership.rb:72-106` (removed IP access rules and workspace branding, which have no implementation; added role changes and domain sign-in/sign-up settings to Owner), and replaces the intersection/"two halves" framing with "plan includes it and role allows it". How plans work drops the same framing. |
+| F052 | Addressed | SSO is a setup guide: Team Plus, owner, verified domain; Entra ID, generic OIDC and SAML 2.0 (where the service enables SAML) with their fields; Configure from the SSO tab; Callback URL forms; Check provider settings; Save and check / Check and turn on (saved off until a check passes, 10 checks an hour); test sign-in; Sign-In Configuration → One specific method → Single Sign-On; recovery from the main service; deletion effects. Google and GitHub are excluded for organization SSO (`sso_config.rb:36-50`). Installation-wide SSO is a separate self-hosting note; the gateway passage was removed and the demos kept as a related link. |
+| F053 | Addressed | "When someone leaves" states that nothing reaches the service from the IdP: no SCIM, back-channel logout or token revalidation (searched `apps/`, `lib/`, `src/`, `etc/`; only a SCIM "(future)" comment and 501 SAML logout routes). Existing sessions continue, membership and account remain, and SSO sign-in re-adds a removed member while the IdP still admits them. Removed the lifecycle and deprovisioning claims. |
+| F054 | Addressed | Page title and English sidebar label are Secret Activity (key renamed `auditLog` → `secretActivity`; no other bundle had the key). The URL `/organizations/audit-trail` is unchanged. Aliases named once: audit logs (plan comparison) and security audit trail (pricing page); glossary updated to match. A separate section names the operator's Administration Log (`admin-audit.json:3`, `/colonel/audit`, `bin/ots audit list`). Removed the "shipped in v0.26.0" line. |
+| F055 | Addressed | Event table corrected from `access_telemetry.rb:41-42`, `burn_secret.rb:17-29,101-108` and `show_receipt.rb:114-118,256`: preview means the signed-in creator opened the secret link; receipt viewed is the first load by anyone; burn is by anyone with the receipt link; expiry/orphan are recorded when the receipt is next loaded. Added an actor table from `actor_attribution.rb:51-77`, stating that labels describe the session and cannot prove the intended recipient read the secret. Scope limited to secrets created while signed in, in the organization (`base_secret_action.rb:475-506`). |
+| F056 | Addressed | Managing your subscription now covers opening the subscription from the plan label (there is no Subscription tab, `OrganizationSettings.vue:160-169,941-956`), starting a plan through Stripe Checkout, Change Plan with immediate prorated changes (`billing.rb:510,661-690`), cancellation at period end and reactivation (`billing.rb:783-791,837-854`), billing email, invoices (last 12), past-due behaviour (`billing.rb:1138`), and downgrade effects (nothing deleted; management features gated by entitlement; lifetime limit applies to new secrets). Payment-method changes go to support because no UI reaches the Stripe portal. |
+| F057 | Addressed | Canonical name **Free**, from the catalog (`plans.free_v1.name`) and the app (`PLAN_LABELS`, `web.billing.plans.free_plan`); Pricing and Compare plans name **Basic** as the pricing-page alias, and Compare plans names **Identity Plus (Early Supporter)** for the unsold legacy `identity` plan. The custom-domain overview's "Identity plan" sentences now state the per-plan domain counts (Free includes one). No plan IDs or URLs were renamed. |
+| F058 | Addressed | Members per organization: Free 1, Identity Plus and Team Plus "No fixed limit". Evidence: invitations no longer refuse at plan counts (commits `6bd5b301ce`, `8be0d26ab5`; `create_invitation.rb` "Log-only"), the live page says "Invite unlimited members", and marketing changelog entries of 2026-06-11/15 and 2026-07-22 say unlimited. The catalog's 50/100 values are informational. Added an Admin role row (Team Plus only). The responsible-use acknowledgement exists only as an unimplemented spec and is not documented. |
+| F059 | Addressed | Compare plans lists Secret Activity as Team Plus **Beta** (live page "Security audit trail — Beta"; commit `2462d9e1b3`: the maintained catalog grants `audit_logs` on `team_plus_v1`). IP-based access rules moved to "Planned for Team Plus" (entitlement key only, no enforcement; live page "Coming soon"). Secret Activity's own page says Team Plus, in beta. |
+| F060 | Addressed | Workspace branding moved from ✅ to planned: `workspace_branding` has no implementation (key, label and owner template only) and the live page marks it Coming soon. Secretary Links removed from the plan comparison: secretarylinks.com is a separate early-access product (text, images and files; waitlist), distinct from Incoming secrets (text only). |
+| F061 | Addressed | Removed the undefined SimpleStack℠ guarantee (no definition in the app, marketing site or live page) and "unlimited sharing capacity" (no per-plan secret count or size difference; `secrets_per_day` unenforced). All plans say "API access", since `api_access` is in every plan; the not-signed-in "Limited" cell now has a footnote from the guest routes and the anonymous conceal rate limit (`base_secret_action.rb:73`). |
+
+Application and catalog follow-ups found during verification (not documented
+as user behavior; INF marks conclusions from code paths without a test):
+
+- **Leave organization does not work.** The Settings tab's Leave button calls
+  `DELETE /members/<own extid>`, which `remove_member.rb:169-175` refuses with
+  "Cannot remove yourself. Use leave organization instead."; there is no leave
+  route. The docs tell members to ask an owner or admin to remove them.
+- **Admin invitations on Identity Plus.** The UI hides Admin when
+  `role_admins_per_org` is 0, but the API accepts `role=admin` since
+  `8be0d26ab5`. Team Plus's plan card says "Unlimited Administrators" while the
+  catalog sets 50.
+- **Billing portal unreachable.** `GET /billing/portal` exists but nothing in
+  the UI links to it; it opens the caller's default organization rather than
+  the one in the URL (`plans.rb:302,480-482`). `BillingOverview.vue:89` reads
+  `payment_method`, which the API never returns. There is no in-app way to
+  change the payment method, or the interval on the same plan.
+- **Past due keeps paid features.** `apply_subscription_to_org.rb:374-411`
+  stores the status but keeps the plan; `with_organization_billing.rb:36-38`
+  says past due should not keep premium features. Choosing a plan while past
+  due starts a new checkout because `subscription_guard.rb:33-36` allows it,
+  which could create a second subscription (INF).
+- **Downgrade leaves some features working.** Sign-in through an existing SSO
+  configuration has no entitlement check (`sso_config.rb:732-753`) and saved
+  branding renders without one (`domain_serializer.rb:81-108`). The docs say
+  only that these are not deleted and can no longer be managed.
+- **Free custom-domain count unenforced.** `custom_domains` limit 1 is not
+  checked by `add_domain.rb:64`.
+- **Plan-change email likely skipped.** The in-app change saves the new
+  `planid` before the webhook, so `subscription_updated.rb` sees no change and
+  sends no `subscription_changed` email (INF). The plan-change modal says "Due
+  today" while proration is charged on the next invoice (INF).
+- **Upgrade banner check.** `UpgradeBanner.vue:35-56` tests for plan id
+  `free`, so it probably never shows for `free_v1` (INF).
+- **SSO form gaps.** Allowed Email Domains is enforced on every callback but
+  hidden in the form (`DomainSsoConfigForm.vue:430`); Enforce SSO only is
+  API-only.
+- **Catalog snapshot drift.** The docs snapshot (header "Last Updated:
+  2026-07-20") grants `audit_logs` to no plan and omits `manage_billing` from
+  `team_plus_v1`; billing is gated on ownership (`plans.rb:323-331`), so the
+  second has no effect. Refresh the snapshot from the maintained catalog.
+- **Live pricing page.** Uses Basic; lists "No rate limits" for paid plans with
+  no plan-dependent limiter in code; lists homepage and incoming secrets under
+  Identity Plus though Basic includes them; its region selector shows Brazil,
+  Australia and Mexico while these docs list five regions (left for the regions
+  findings).
+
+Translated Organizations, Billing and Pricing pages were not changed and now
+lag the English corrections; every locale's Pricing and Compare plans still
+mention SimpleStack and Secretary Links.
+
+Validation completed:
+
+- `node bin/check-nav.mjs`: passed, 67 sidebar links and 78 label keys.
+- `node bin/check-orphans.mjs`: passed, 75 English pages.
+- `node bin/check-frontmatter.mjs`: passed, 277 redirect fragments resolved
+  (after quoting-safe rewording of one Self-hosting citation).
+- `node bin/check-locales.mjs`: passed, 17 configured locales.
+- `bash bin/check-malformed-links.sh`: passed.
+- `pnpm test`: 117 tests passed.
+- `pnpm build`: passed, 1,289 pages.
+- Built HTML: the 13 edited pages and the docs homepage each have one H1;
+  1,086 English internal link occurrences and fragments on them resolve.
+- `git diff --check`: passed.
+
+Source inspection and the live pricing fetch established the facts above. No
+invitation was sent, no SSO configuration saved, no subscription started,
+changed or cancelled, and no ownership transferred. Hosted-service settings
+(`ORGS_SSO_ENABLED`, `SAML_ENABLED`) and the production Stripe metadata were
+not checked.
+
+Current coverage supersedes the earlier counts: **60 addressed**, **1 rejected
+with evidence (F015)**, **52 open candidate findings**, and F097 as a no-finding
+coverage note. No Organizations and billing finding is deferred.
