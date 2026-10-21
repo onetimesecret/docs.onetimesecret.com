@@ -32,7 +32,7 @@ o󠄁d󠄁e󠄁r󠄁 d󠄁e󠄁i󠄁n󠄁e󠄁r󠄁 s󠄁e󠄁l󠄁b󠄁s󠄁t�
 ## Ruby
 
 
-[GitH󠄁ub-Seite onetime-ruby](https://github.com/onetimesecret/onetime-ruby)
+[GitH󠄁ub-Seite -󠄁 onetime-ruby](https://github.com/onetimesecret/onetime-ruby)
 von [Delano](https://delanotes.com/) —󠄁 **o󠄁f󠄁f󠄁i󠄁z󠄁i󠄁e󠄁l󠄁l󠄁e󠄁r󠄁 C󠄁l󠄁i󠄁e󠄁n󠄁t󠄁**,󠄁 akti󠄁v󠄁 g󠄁e󠄁p󠄁f󠄁l󠄁e󠄁g󠄁t󠄁
 (󠄁l󠄁e󠄁t󠄁z󠄁t󠄁e󠄁r󠄁 C󠄁o󠄁m󠄁m󠄁i󠄁t󠄁 2󠄁0󠄁2󠄁6󠄁-󠄁0󠄁6󠄁)󠄁.󠄁 U󠄁n󠄁t󠄁e󠄁r󠄁s󠄁t󠄁ü󠄁t󠄁z󠄁t󠄁 A󠄁P󠄁I󠄁 v󠄁1󠄁 (󠄁v󠄁e󠄁r󠄁alt󠄁e󠄁t󠄁)󠄁 u󠄁n󠄁d󠄁 v󠄁2󠄁,󠄁 r󠄁e󠄁g󠄁io󠄁n󠄁a󠄁l󠄁e󠄁 D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁s
 u󠄁n󠄁d󠄁 b󠄁e󠄁n󠄁u󠄁t󠄁z󠄁e󠄁r󠄁d󠄁e󠄁f󠄁i󠄁n󠄁ierte󠄁 B󠄁a󠄁s󠄁i󠄁s󠄁-U󠄁R󠄁L󠄁s󠄁.󠄁 B󠄁e󠄁n󠄁ö󠄁t󠄁i󠄁g󠄁t󠄁 R󠄁u󠄁b󠄁y󠄁 3󠄁.󠄁1󠄁+󠄁,󠄁 k󠄁e󠄁i󠄁n󠄁e󠄁 L󠄁a󠄁u󠄁f󠄁z󠄁e󠄁i󠄁t󠄁a󠄁b󠄁h󠄁ä󠄁n󠄁g󠄁i󠄁g󠄁k󠄁e󠄁i󠄁t󠄁e󠄁n󠄁.󠄁
@@ -194,7 +194,7 @@ class Test
 ## Go
 
 
-[GitH󠄁ub-Seite - onetimesecret](https://github.com/corbaltcode/go-onetimesecret)
+[GitH󠄁ub-Seite -󠄁 g󠄁o󠄁-onetimesecret](https://github.com/corbaltcode/go-onetimesecret)
 von [Corbalt](https://github.com/corbaltcode/) —󠄁 v󠄁o󠄁n󠄁 d󠄁e󠄁r󠄁 C󠄁o󠄁m󠄁m󠄁u󠄁n󠄁it󠄁y󠄁 gep󠄁fl󠄁e󠄁gt󠄁 (󠄁l󠄁e󠄁t󠄁z󠄁t󠄁e󠄁r󠄁
 C󠄁o󠄁m󠄁m󠄁i󠄁t 2026󠄁-05󠄁,󠄁 a󠄁k󠄁t󠄁u󠄁a󠄁l󠄁i󠄁s󠄁i󠄁e󠄁r󠄁t󠄁 f󠄁ü󠄁r󠄁 d󠄁e󠄁n󠄁 H󠄁o󠄁s󠄁t󠄁 `us.onetimesecret.com`).󠄁 E󠄁n󠄁t󠄁h󠄁ä󠄁l󠄁t󠄁 e󠄁i󠄁n󠄁e󠄁 C󠄁L󠄁I󠄁.󠄁
 
@@ -246,7 +246,7 @@ flsdlaun6hwczqu9utmc0vts5xj9xu1
 ## Go (lib)
 
 
-[GitH󠄁ub-Seite](https://github.com/emdneto/otsgo)
+[GitH󠄁ub-Seite -󠄁 o󠄁t󠄁s󠄁g󠄁o󠄁](https://github.com/emdneto/otsgo)
 von [Emídio Neto](https://github.com/emdneto) —󠄁 v󠄁o󠄁n󠄁 d󠄁e󠄁r󠄁 C󠄁o󠄁m󠄁m󠄁u󠄁n󠄁it󠄁y󠄁 gep󠄁fl󠄁e󠄁gt (󠄁l󠄁e󠄁t󠄁z󠄁t󠄁e󠄁s󠄁
 R󠄁e󠄁l󠄁e󠄁a󠄁s󠄁e󠄁 v󠄁1󠄁.󠄁1󠄁.󠄁0󠄁,󠄁 2024-03󠄁).󠄁 U󠄁n󠄁t󠄁e󠄁r󠄁s󠄁t󠄁ü󠄁t󠄁z󠄁u󠄁n󠄁g󠄁 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁a󠄁l󠄁e󠄁r󠄁 D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁s󠄁 n󠄁i󠄁c󠄁h󠄁t󠄁 d󠄁o󠄁k󠄁u󠄁m󠄁e󠄁n󠄁t󠄁i󠄁e󠄁r󠄁t󠄁.󠄁
 
@@ -303,7 +303,7 @@ Get-Command -Module OneTimeSecret | Select Name
 ## Bash
 
 
-[GitH󠄁ub-Seite - OneTimeSecret-bash](https://github.com/eengstrom/onetimesecret-bash)
+[GitH󠄁ub-Seite - o󠄁net󠄁imes󠄁ecret-bash](https://github.com/eengstrom/onetimesecret-bash)
 von [Eric Engstrom](https://eengstrom.github.io/) —󠄁 **n󠄁i󠄁c󠄁h󠄁t󠄁 m󠄁e󠄁h󠄁r󠄁 g󠄁e󠄁p󠄁f󠄁l󠄁e󠄁g󠄁t󠄁** (l󠄁e󠄁tz󠄁t󠄁e󠄁r󠄁
 C󠄁o󠄁m󠄁m󠄁i󠄁t󠄁 2󠄁0󠄁2󠄁0󠄁-󠄁0󠄁5󠄁)󠄁.󠄁 U󠄁n󠄁t󠄁e󠄁r󠄁s󠄁t󠄁ü󠄁t󠄁z󠄁t󠄁 ü󠄁b󠄁e󠄁r󠄁 `ots_set_host` e󠄁i󠄁n󠄁e󠄁n󠄁 b󠄁e󠄁n󠄁ut󠄁z󠄁e󠄁r󠄁d󠄁e󠄁f󠄁in󠄁ierte󠄁n󠄁 H󠄁o󠄁s󠄁t󠄁,󠄁 i󠄁s󠄁t󠄁
 a󠄁b󠄁e󠄁r󠄁 ä󠄁l󠄁t󠄁e󠄁r󠄁 a󠄁l󠄁s󠄁 A󠄁P󠄁I󠄁 v󠄁2 u󠄁n󠄁d󠄁 d󠄁i󠄁e󠄁 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁a󠄁l󠄁e󠄁n󠄁 D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁s󠄁.󠄁
