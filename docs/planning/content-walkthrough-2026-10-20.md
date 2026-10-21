@@ -267,8 +267,10 @@ rejected or silently removed.
 
 Applied after the Start here changes, with the application source checked at
 `145c1e7cfa`. All seven English sharing pages were revised. The existing
-`/en/share/receiving-secrets` URL is retained, with **Request a secret** as its
-page title and English sidebar label. Other locale labels were left alone.
+`/en/share/receiving-secrets` URL was first retained, with **Request a secret**
+as its page title and English sidebar label; the
+[naming follow-up](#request-a-secret-naming-follow-up) later moved it to
+`/en/share/request-secret`. Other locale labels were left alone.
 
 Two supporting passages were corrected: the generated-password instructions in
 Send your first secret, and the account/network attribution explanation in
@@ -290,7 +292,7 @@ separate work; no claim is made that their broader discrepancies are resolved.
 | F021 | Addressed | Recipient guide and the supporting Secret Activity paragraph distinguish receipt fetch history, organization events, short secret/receipt references, full authenticated account IDs, active-member email resolution, and optional network context. No anonymity promise. Checked `actor_attribution.rb`, `access_telemetry.rb`, `access_timeline.rb`, `RequestContext`, and `list_secret_activity.rb:125-140`. |
 | F022 | Addressed | Troubleshooting opens with screen message → next action. The short history-privacy explanation follows the recovery steps; oracle/internal-error/terminal-state explanations were removed. |
 | F023 | Addressed | Troubleshooting and recipient guide explain that lockout is checked before passphrase verification, so correct input cannot bypass it. `PassphraseRateLimiter#enforce_passphrase_tier_lock!` raises while locked; ShowSecret and BurnSecret call it in raise_concerns before process verifies the passphrase. Successful verification clears counters only when the gate permits the attempt. |
-| F024 | Addressed | Receiving secrets became Request a secret in H1, description, and English sidebar label, preserving its route. It separately directs existing link recipients to the reveal/troubleshooting guides. |
+| F024 | Addressed | Receiving secrets became Request a secret in H1, description, and English sidebar label. The route moved to `/en/share/request-secret`, with a redirect from the old URL in every locale; see [Request a secret naming follow-up](#request-a-secret-naming-follow-up). It separately directs existing link recipients to the reveal/troubleshooting guides. |
 | F025 | Addressed | Incoming-form receipt description names creation/reveal status and explicitly distinguishes it from notification delivery or proof of reader identity. No delivery guarantee is substituted. |
 | F026 | Addressed in Sharing secrets | Why use secret links describes hosted HTTPS, encrypted storage, and server-side encryption/decryption. Removed end-to-end encryption wording. Checked Secret's encrypted ciphertext field and server-side reveal. The translation-guide example remains tracked under F104. |
 | F027 | Addressed | Rationale describes reducing copies in conversation history, retained receipt/activity records, bearer-link access, and recipient copies. Removed no-footprint and wrong-hands guarantees. Backup-policy reconciliation remains under F090. |

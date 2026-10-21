@@ -1,7 +1,8 @@
 # Accounts verification and policy follow-up ledger
 
 This ledger tracks follow-up checks identified while resolving Accounts findings
-F034–F048 in the [content walkthrough](content-walkthrough-2026-10-20.md#accounts).
+F034–F048 in the [content walkthrough](content-walkthrough-2026-10-20.md#accounts),
+and one Sharing check (F013, AR12).
 It separates runtime evidence from approval of policy and support commitments.
 The documentation changes do not establish either of those independently.
 
@@ -41,6 +42,7 @@ environment before execution.
 | AR09 | Open | Move a disposable custom domain between regions using a temporary subdomain. Verify outstanding secret and receipt behavior before and after DNS changes, expiry waits, and domain verification. | F046; Changing your region |
 | AR10 | Open | Exercise closure blockers, then close a disposable account. Verify sessions and credentials stop working, the account record and workspace are removed, memberships are removed, no authentication row or authentication event history remains for the account (once onetimesecret/onetimesecret#4819 ships; see AP01), and previously shared secrets retain their documented behavior. | F047–F048; Closing your account |
 | AR11 | Open | After closure, register with the same address through password and SSO paths. Verify a new empty account, no restoration of old records, and no reattachment to the closed account. | F047; Closing your account; Signing in |
+| AR12 | Open | With **Stay on page** enabled, generate a password from the signed-in form and confirm the browser navigates to the receipt; then create an ordinary secret and confirm it stays on the form. Repeat from the public homepage form. The previous docs described the opposite; the current wording rests on `WorkspaceSecretForm.vue:171-174` alone. | F013; Sharing secrets; Your receipt; Send your first secret |
 
 ## Policy and support confirmations
 
