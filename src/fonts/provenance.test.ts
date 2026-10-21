@@ -9,7 +9,7 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { brotliDecompressSync } from 'node:zlib';
-import { describe, expect, it } from 'vitest';
+import { beforeAll, describe, expect, it } from 'vitest';
 
 const VS18 = 0xe0101; // AI-generated marker, follows the base character.
 const PUA_B = 0x100000; // AI-generated form: U+100000 + base code point.
@@ -114,8 +114,14 @@ describe('provenance (P+) webfonts', () => {
   });
 
   describe.each(fonts)('%s', (font) => {
-    const { glyphs, variants } = parseCmap(readCmap(readFileSync(join(dir, font))));
-    const marked = variants.get(VS18) ?? new Map<number, number>();
+    // Parse in a hook so a corrupt font fails its tests rather than collection.
+    let glyphs: Map<number, number>;
+    let marked: Map<number, number>;
+    beforeAll(() => {
+      const cmap = parseCmap(readCmap(readFileSync(join(dir, font))));
+      glyphs = cmap.glyphs;
+      marked = cmap.variants.get(VS18) ?? new Map<number, number>();
+    });
 
     it('maps <char, U+E0101> to a marked glyph distinct from the plain one', () => {
       const unmarked = COVERED.filter((cp) => !marked.has(cp) || marked.get(cp) === glyphs.get(cp));

@@ -2,7 +2,6 @@ import { parse } from 'parse5';
 import textprov from '../../../vendor/textprov/textprov.cjs';
 
 const escape = (text) => text.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
-const aiSelector = String.fromCodePoint(textprov.mapping.selectors.ai);
 const codepoint = (value) => `\\u{${value.toString(16)}}`;
 const candidate = new RegExp(`[${codepoint(textprov.mapping.selectors.ai)}${
   textprov.mapping.puaRanges.map(([start, end]) => `${codepoint(start)}-${codepoint(end)}`).join('')
@@ -16,6 +15,12 @@ const labels = new Set(['aria-label', 'title', 'alt']);
 // This integration reads only recorded AI marks in opted-in docs. In particular,
 // U+E0100 remains untouched: 辻 + U+E0100 is a real ideographic variation sequence.
 // TextProv's baseline is experimental; these values are not a private namespace.
+// Human-state selectors are indistinguishable from genuine IVS here, so they are
+// deliberately published as-is rather than decoded.
+/**
+ * @param {string} text
+ * @returns {{ state: 'ai' | null, text: string }[]}
+ */
 export function aiRuns(text) {
   return textprov.runs(text).map(run => ({
     state: run.state === 'ai' ? 'ai' : null,
@@ -25,12 +30,20 @@ export function aiRuns(text) {
   }));
 }
 
+/** @type {(text: string) => string} */
 export const clean = (text) => candidate.test(text) ? aiRuns(text).map(run => run.text).join('') : text;
 
 // Rewrite only affected source ranges, preserving the rest of Astro's HTML
 // byte-for-byte (including islands, scripts, attributes, entities, and doctype).
 // Runs during prerender, before Starlight builds its Pagefind index, and in dev.
-export function renderProvenance(html, { requireEnrollment = false } = {}) {
+/**
+ * @param {string} html
+ * @param {{ requireEnrollment?: boolean, label?: string }} [options] label names
+ *   the page in errors, since one bad cluster otherwise fails a whole build anonymously.
+ * @returns {string}
+ */
+export function renderProvenance(html, { requireEnrollment = false, label } = {}) {
+  const fail = (message) => { throw new Error(`TextProv: ${message}${label ? ` (${label})` : ''}`); };
   if (!candidate.test(html) && !html.includes('&#')) return html;
   const tree = parse(html, { sourceCodeLocationInfo: true });
   const edits = [];
@@ -66,10 +79,12 @@ export function renderProvenance(html, { requireEnrollment = false } = {}) {
     if (blocked) return;
     if (node.nodeName === '#text' && candidate.test(node.value)) {
       const runs = aiRuns(node.value);
-      if (runs.some(run => run.text.includes(aiSelector))) throw new Error('TextProv: malformed AI marker in managed text');
+      // Any marker left after decoding is malformed, e.g. a legacy PUA code point
+      // followed by a selector, which decodes to the PUA code point and renders as tofu.
+      if (runs.some(run => candidate.test(run.text))) fail('malformed AI marker in managed text');
       if (runs.some(run => run.state === 'ai')) {
         const location = node.sourceCodeLocation;
-        if (!location) throw new Error('TextProv: marked text has no source location');
+        if (!location) fail('marked text has no source location');
         edits.push([location.startOffset, location.endOffset, runs.map(run =>
           prose && run.state === 'ai'
             ? `<span class="textprov-ai" data-textprov="ai">${escape(run.text)}</span>`
@@ -84,21 +99,25 @@ export function renderProvenance(html, { requireEnrollment = false } = {}) {
       // attributes. Only derived text labels and actual ID references belong here.
       if (attr.name !== 'id' && attr.name !== 'href' && !references.has(attr.name) &&
           !labels.has(attr.name) && !(node.tagName === 'meta' && attr.name === 'content')) continue;
-      let value = attr.value;
+      const value = attr.value;
       if (attr.name === 'href' && !value.startsWith('#')) continue;
-      if (attr.name === 'href' && value.startsWith('#')) {
-        try { value = decodeURI(value); } catch { /* Keep malformed legacy URLs. */ }
-      }
-      const plain = attr.name === 'id'
-        ? (idMap.get(value) ?? clean(value))
-        : attr.name === 'href' && value.startsWith('#')
-          ? '#' + (idMap.get(value.slice(1)) ?? clean(value.slice(1)))
+      let plain;
+      if (attr.name === 'href') {
+        // Look the fragment up decoded, but write it back encoded.
+        let fragment = value.slice(1), decoded = false;
+        try { fragment = decodeURI(fragment); decoded = true; } catch { /* Keep malformed legacy URLs. */ }
+        const target = idMap.get(fragment) ?? clean(fragment);
+        plain = target === fragment ? value : '#' + (decoded ? encodeURI(target) : target);
+      } else {
+        plain = attr.name === 'id'
+          ? (idMap.get(value) ?? clean(value))
           : references.has(attr.name)
             ? value.replace(/\S+/g, id => idMap.get(id) ?? clean(id))
-          : clean(value);
+            : clean(value);
+      }
       if (plain !== value) {
         const location = node.sourceCodeLocation?.attrs?.[attr.name];
-        if (!location) throw new Error('TextProv: marked attribute has no source location');
+        if (!location) fail('marked attribute has no source location');
         edits.push([location.startOffset, location.endOffset,
           `${attr.name}="${escape(plain).replaceAll('"', '&quot;')}"`]);
       }

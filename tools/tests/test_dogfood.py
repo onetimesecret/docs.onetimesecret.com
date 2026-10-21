@@ -5,6 +5,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from unittest import mock
 
 TOOLS = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(TOOLS))
@@ -216,6 +217,26 @@ class RepositoryTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertEqual(path.read_bytes(), ("old " + mark("X") + "\r\n").encode())
         self.assertEqual(path.stat().st_mode & 0o777, 0o640)
+
+    def test_docs_with_only_legacy_pua_marks_must_enroll(self):
+        page = self.root / "src/content/docs/page.md"
+        page.parent.mkdir(parents=True)
+        page.write_text("---\ntitle: Page\n---\n\n" + mark("Old", mode="pua") + " prose.\n")
+        self.git("add", ".")
+        self.git("commit", "-qm", "legacy page")
+        page.write_text(page.read_text() + "\nHuman addition.\n")
+        status, output = self.check(require_marks=False)
+        self.assertEqual(status, 1)
+        self.assertIn("must opt in with textprov: true", output)
+
+    def test_check_parses_all_changed_markdown_in_one_node_call(self):
+        for name in ("a.md", "b.md", "c.md"):
+            (self.root / name).write_text(mark("New") + " " + mark("prose") + "\n")
+        dogfood._MARKDOWN_INFO.clear()
+        with mock.patch.object(dogfood.subprocess, "run", wraps=subprocess.run) as run:
+            self.assertEqual(self.check()[0], 0)
+        node = [call for call in run.call_args_list if call.args[0][0] == "node"]
+        self.assertEqual(len(node), 1)
 
     def test_symlink_and_out_of_scope_path_are_rejected(self):
         (self.root / "alias.md").symlink_to("legacy.md")

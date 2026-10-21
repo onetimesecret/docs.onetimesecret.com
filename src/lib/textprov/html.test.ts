@@ -76,11 +76,25 @@ describe('static TextProv HTML', () => {
   });
 
   it('rejects malformed managed declarations while preserving excluded samples', () => {
-    for (const value of ['x\u{E0101}\u{E0101}', ' \u{E0101}', '\u{E0101}']) {
+    for (const value of ['x\u{E0101}\u{E0101}', ' \u{E0101}', '\u{E0101}', 'x\u{100061}\u{E0101}']) {
       expect(() => renderProvenance(`<div class="sl-markdown-content">${value}</div>`)).toThrow('malformed AI marker');
       const code = `<code>${value}</code>`;
       expect(renderProvenance(code)).toBe(code);
     }
+  });
+
+  it('names the page in build errors when given a label', () => {
+    expect(() => renderProvenance('<p>\u{E0101}</p>', { label: '/en/start/' }))
+      .toThrow('TextProv: malformed AI marker in managed text (/en/start/)');
+  });
+
+  it('writes remapped fragment links back percent-encoded', () => {
+    const marked = `a b${'\u{E0101}'}`;
+    const result = renderProvenance(`<h2 id="${marked}">Title</h2><a href="#${encodeURI(marked)}">Link</a><a href="#caf%C3%A9">Other</a>`);
+    const doc = new JSDOM(result).window.document;
+    expect(doc.querySelector('h2')?.id).toBe('a b');
+    expect(doc.querySelector('a')?.getAttribute('href')).toBe('#a%20b');
+    expect(result).toContain('href="#caf%C3%A9"');
   });
 
   it('handles marked text foster-parented out of a table without losing its source range', () => {
@@ -117,5 +131,11 @@ describe('TextProv toggle', () => {
     expect(() => initTextProv(document, storage)).not.toThrow();
     document.querySelector('button')!.click();
     expect(document.documentElement.dataset.textprov).toBe('shown');
+  });
+  it('leaves unenrolled pages and storage untouched', () => {
+    const { document } = new JSDOM('<p>Unenrolled</p>').window;
+    const storage = { getItem() { throw Error('read'); } } as unknown as Storage;
+    expect(() => initTextProv(document, storage)).not.toThrow();
+    expect(document.documentElement.dataset.textprov).toBeUndefined();
   });
 });
