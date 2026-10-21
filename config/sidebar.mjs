@@ -219,7 +219,7 @@ export const sidebar = [
     ]),
   ]),
 
-  // Self-hosting is one flat sequence, on purpose. The twelve pages serve one
+  // Self-hosting is one flat sequence, on purpose. These pages serve one
   // reader — the operator — in the order they meet them: orient, pick the one
   // decision that changes what you install, install, configure, upgrade. The
   // array order IS that sequence (createLink emits no `order` key and nothing
@@ -237,7 +237,8 @@ export const sidebar = [
   // listed. They are reached from the table on self-hosting/upgrade-guides,
   // and bin/check-orphans.mjs counts a page linked from a sidebar-linked page
   // in the same directory as reachable, so a new release guide needs a row in
-  // that table and nothing here.
+  // that table and nothing here. The named IdP recipes use the same pattern:
+  // configure/sso/index links its siblings without adding sidebar entries.
   createGroup("selfHosting", [
     createLink("aboutSelfHosting", "self-hosting"),
     createLink("authModeChoice", "self-hosting/simple-or-full-auth"),
@@ -247,6 +248,14 @@ export const sidebar = [
     createLink("runAsAService", "install/run-as-a-service"),
     createLink("reverseProxyAndTls", "install/reverse-proxy-and-tls"),
     createLink("verifyYourInstall", "install/verify"),
+    createLink("configurationOverview", "configure"),
+    createLink("configureSecretsAndKeys", "configure/secrets-and-keys"),
+    createLink("configureAuthentication", "configure/authentication"),
+    createLink("configureSso", "configure/sso"),
+    createLink("configureEmail", "configure/email"),
+    createLink("configureSecretOptions", "configure/secret-options"),
+    createLink("configureSessions", "configure/sessions-and-cookies"),
+    createLink("configureSecurityHeaders", "configure/security-headers"),
     createLink("configurationReference", "self-hosting/configuration"),
     createLink("configurationGenerator", "self-hosting/configuration-generator"),
     createLink("environmentVariables", "self-hosting/environment-variables"),
