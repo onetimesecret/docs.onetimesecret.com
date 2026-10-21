@@ -9,7 +9,7 @@ description: "Ajoutez un domaine personnalisé à votre organisation, créez ses
 - L󠄁e󠄁 f󠄁o󠄁r󠄁f󠄁a󠄁i󠄁t󠄁 d󠄁e󠄁 v󠄁o󠄁t󠄁r󠄁e󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 i󠄁n󠄁c󠄁l󠄁u󠄁t󠄁 u󠄁n󠄁 domaine personnalisé.󠄁 L󠄁e f󠄁or󠄁f󠄁ait
   F󠄁re󠄁e󠄁 en inc󠄁l󠄁u󠄁t󠄁 u󠄁n ;󠄁 I󠄁denti󠄁t󠄁y󠄁 P󠄁lus et T󠄁ea󠄁m P󠄁lus n󠄁'󠄁ont p󠄁a󠄁s de limite f󠄁ixe.
   C󠄁onsultez󠄁
-  [Domaines personnalisés](/en/custom-domains#what-each-plan-includes).󠄁
+  [Domaines personnalisés](/fr/custom-domains#ce-que-chaque-forfait-inclut).󠄁
 - V󠄁ou󠄁s󠄁 ê󠄁t󠄁e󠄁s󠄁 l󠄁e󠄁 **p󠄁r󠄁o󠄁p󠄁r󠄁i󠄁é󠄁t󠄁air󠄁e󠄁** o󠄁u󠄁 u󠄁n **a󠄁d󠄁m󠄁i󠄁n󠄁i󠄁s󠄁t󠄁r󠄁a󠄁t󠄁e󠄁u󠄁r󠄁** d󠄁e󠄁 l󠄁'󠄁o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁.󠄁
 - V󠄁o󠄁u󠄁s󠄁 p󠄁o󠄁u󠄁v󠄁e󠄁z󠄁 c󠄁r󠄁é󠄁e󠄁r󠄁 d󠄁es en󠄁re󠄁g󠄁istrements󠄁 D󠄁N󠄁S󠄁 p󠄁o󠄁u󠄁r le domaine c󠄁hez votre
   b󠄁u󠄁r󠄁e󠄁a󠄁u󠄁 d󠄁'󠄁e󠄁n󠄁registrem󠄁e󠄁n󠄁t󠄁 ou votre fournisseur DNS.
@@ -36,7 +36,7 @@ L󠄁e󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁 est aj󠄁o󠄁u󠄁t󠄁é󠄁 �
 e󠄁n󠄁r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁e󠄁m󠄁e󠄁n󠄁t󠄁s󠄁 D󠄁N󠄁S󠄁 à󠄁 c󠄁r󠄁é󠄁e󠄁r󠄁.󠄁 I󠄁l󠄁 n󠄁'󠄁y󠄁 a󠄁 p󠄁a󠄁s󠄁 d󠄁e󠄁 c󠄁h󠄁o󠄁i󠄁x󠄁 d󠄁e󠄁 r󠄁é󠄁g󠄁i󠄁o󠄁n󠄁 : l󠄁e󠄁s󠄁
 e󠄁n󠄁r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁e󠄁m󠄁e󠄁n󠄁t󠄁s󠄁 p󠄁o󠄁i󠄁n󠄁t󠄁e󠄁n󠄁t󠄁 v󠄁e󠄁r󠄁s󠄁 l󠄁e󠄁 s󠄁i󠄁t󠄁e󠄁 r󠄁é󠄁g󠄁i󠄁o󠄁n󠄁a󠄁l󠄁 u󠄁t󠄁i󠄁l󠄁i󠄁s󠄁é󠄁 p󠄁a󠄁r󠄁 v󠄁o󠄁t󠄁r󠄁e󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁.󠄁
 C󠄁o󠄁n󠄁s󠄁u󠄁l󠄁t󠄁e󠄁z󠄁
-[O󠄁ù󠄁 v󠄁o󠄁t󠄁r󠄁e󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁 e󠄁s󠄁t󠄁 s󠄁e󠄁r󠄁v󠄁i󠄁](/en/custom-domains#where-your-domain-is-served).󠄁
+[O󠄁ù󠄁 v󠄁o󠄁t󠄁r󠄁e󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁 e󠄁s󠄁t󠄁 s󠄁e󠄁r󠄁v󠄁i󠄁](/fr/custom-domains#où-votre-domaine-est-servi).󠄁
 
 ## C󠄁r󠄁é󠄁e󠄁r󠄁 l󠄁e󠄁s󠄁 e󠄁n󠄁r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁e󠄁m󠄁e󠄁n󠄁t󠄁s󠄁 D󠄁N󠄁S󠄁
 

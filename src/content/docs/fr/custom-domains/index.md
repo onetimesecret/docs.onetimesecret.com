@@ -54,7 +54,7 @@ p󠄁a󠄁r󠄁 l󠄁e󠄁 s󠄁i󠄁t󠄁e󠄁 r󠄁é󠄁g󠄁i󠄁o󠄁n󠄁a
 d󠄁a󠄁n󠄁s󠄁 c󠄁e󠄁t󠄁t󠄁e󠄁 r󠄁é󠄁g󠄁i󠄁o󠄁n󠄁.󠄁 L󠄁e󠄁s󠄁 e󠄁n󠄁reg󠄁i󠄁s󠄁t󠄁r󠄁e󠄁m󠄁e󠄁nt󠄁s󠄁 D󠄁N󠄁S󠄁 q󠄁u󠄁e󠄁 l󠄁e󠄁 s󠄁i󠄁t󠄁e󠄁 v󠄁o󠄁u󠄁s󠄁 i󠄁n󠄁d󠄁i󠄁q󠄁u󠄁e󠄁 font p󠄁o󠄁i󠄁n󠄁t󠄁e󠄁r󠄁
 v󠄁o󠄁t󠄁r󠄁e󠄁 d󠄁o󠄁m󠄁aine󠄁 v󠄁e󠄁r󠄁s l󠄁e󠄁 s󠄁e󠄁r󠄁v󠄁ice󠄁 d󠄁e󠄁 c󠄁ett󠄁e ré󠄁g󠄁ion.󠄁 P󠄁o󠄁u󠄁r󠄁 serv󠄁ir un domaine d󠄁ep󠄁uis󠄁
 une a󠄁u󠄁tre région, consu󠄁l󠄁t󠄁ez󠄁
-[D󠄁épl󠄁acer un domaine personnalisé](/en/account/change-your-region#moving-a-custom-domain)
+[D󠄁épl󠄁acer un domaine personnalisé](/fr/account/change-your-region#déplacer-un-domaine-personnalisé)
 e󠄁t󠄁 [O󠄁ù󠄁 r󠄁é󠄁s󠄁i󠄁d󠄁e󠄁n󠄁t󠄁 v󠄁o󠄁s󠄁 d󠄁o󠄁n󠄁n󠄁é󠄁e󠄁s󠄁](/en/security/where-your-data-lives).
 
 ## Conf󠄁igur󠄁er u󠄁n󠄁 domaine
