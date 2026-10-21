@@ -1,71 +1,45 @@
 ---
-title: Anvendelsestilfælde
-description: Udforsk forskellige scenarier, hvor hemmelige links kan forbedre sikkerheden og strømline deling af følsom information.
+textprov: true
+title: "Anvendelsestilfælde"
+description: "Brug engangslinks til at levere legitimationsoplysninger, wi-fi-adgangskoder, licensnøgler og gendannelseskoder uden at behandle linket som lagring eller adgangskontrol."
 ---
 
-Hemmelige links er alsidige og kan anvendes i mange situationer, hvor sikker engangsdeling af information er afgørende. Her er nogle almindelige anvendelsestilfælde:
+B󠄁r󠄁u󠄁g󠄁 e󠄁t󠄁 b󠄁e󠄁s󠄁k󠄁e󠄁d󠄁l󠄁i󠄁n󠄁k󠄁,󠄁 n󠄁å󠄁r󠄁 d󠄁u󠄁 s󠄁k󠄁a󠄁l󠄁 l󠄁e󠄁v󠄁e󠄁r󠄁e󠄁 f󠄁ø󠄁l󠄁s󠄁o󠄁m󠄁 t󠄁e󠄁k󠄁s󠄁t󠄁 u󠄁d󠄁e󠄁n󠄁 a󠄁t󠄁 i󠄁n󠄁d󠄁s󠄁æ󠄁t󠄁t󠄁e󠄁 t󠄁e󠄁k󠄁s󠄁t󠄁e󠄁n󠄁 i󠄁 e󠄁n󠄁 v󠄁e󠄁d󠄁v󠄁a󠄁r󠄁e󠄁n󠄁d󠄁e󠄁 s󠄁a󠄁m󠄁t󠄁a󠄁l󠄁e󠄁.󠄁 H󠄁v󠄁e󠄁r󠄁t󠄁 l󠄁i󠄁n󠄁k󠄁 t󠄁i󠄁l󠄁l󠄁a󠄁d󠄁e󠄁r󠄁 é󠄁n󠄁 v󠄁e󠄁l󠄁l󠄁y󠄁k󠄁k󠄁e󠄁t󠄁 a󠄁f󠄁s󠄁l󠄁ø󠄁r󠄁i󠄁n󠄁g󠄁;󠄁 o󠄁p󠄁r󠄁e󠄁t󠄁 s󠄁e󠄁p󠄁a󠄁r󠄁a󠄁t󠄁e󠄁 b󠄁e󠄁s󠄁k󠄁e󠄁d󠄁e󠄁r󠄁,󠄁 h󠄁v󠄁i󠄁s󠄁 h󠄁v󠄁e󠄁r󠄁 m󠄁o󠄁d󠄁t󠄁a󠄁g󠄁e󠄁r󠄁 s󠄁k󠄁a󠄁l󠄁 hav󠄁e󠄁 s󠄁i󠄁n󠄁 e󠄁g󠄁e󠄁n󠄁 a󠄁f󠄁s󠄁l󠄁ø󠄁r󠄁i󠄁n󠄁g󠄁.󠄁
 
-### 1. Grundlæggende adgangskodedeling på arbejdet
+E󠄁n󠄁 m󠄁o󠄁d󠄁ta󠄁g󠄁e󠄁r󠄁 k󠄁a󠄁n󠄁 g󠄁e󠄁m󠄁m󠄁e󠄁 e󠄁l󠄁l󠄁e󠄁r󠄁 d󠄁e󠄁l󠄁e󠄁 i󠄁n󠄁d󠄁h󠄁o󠄁l󠄁d󠄁e󠄁t󠄁 b󠄁a󠄁g󠄁e󠄁f󠄁t󠄁e󠄁r󠄁.󠄁 E󠄁k󠄁s󠄁e󠄁m󠄁p󠄁l󠄁e󠄁r󠄁n󠄁e󠄁 n󠄁e󠄁d󠄁e󠄁n󠄁f󠄁o󠄁r󠄁 r󠄁e󠄁d󠄁u󠄁c󠄁e󠄁r󠄁e󠄁r󠄁 a󠄁n󠄁t󠄁a󠄁l󠄁l󠄁e󠄁t󠄁 a󠄁f󠄁 k󠄁o󠄁p󠄁i󠄁e󠄁r󠄁 i󠄁 b󠄁e󠄁s󠄁k󠄁e󠄁d󠄁historikk󠄁e󠄁n󠄁;󠄁 d󠄁e󠄁 s󠄁t󠄁y󠄁r󠄁e󠄁r󠄁 i󠄁k󠄁k󠄁e󠄁, hva󠄁d󠄁 n󠄁og󠄁e󠄁n󠄁 g󠄁ø󠄁r m󠄁e󠄁d en󠄁 a󠄁d󠄁g󠄁a󠄁n󠄁g󠄁s󠄁ko󠄁d󠄁e󠄁,󠄁 e󠄁n nø󠄁g󠄁l󠄁e e󠄁ll󠄁er et d󠄁o󠄁k󠄁u󠄁m󠄁e󠄁n󠄁t󠄁 e󠄁f󠄁t󠄁e󠄁r󠄁 a󠄁t󠄁 h󠄁a󠄁v󠄁e󠄁 l󠄁æ󠄁s󠄁t󠄁 d󠄁e󠄁t󠄁.
 
-Når du har brug for en hurtig, sikker måde at dele en adgangskode eller API-nøgle på, tilbyder hemmelige links en enkel løsning. Selvom adgangskodeadministratorer er det bedste valg til langsigtet legitimationsadministration og teamdeling, giver hemmelige links et letvægtsalternativ, som alle kan bruge uden særlig software eller konti. Den selvdestruerende karakter af disse links sikrer, at følsomme legitimationsoplysninger ikke bliver hængende i e-mailindbakker eller chathistorik, hvor de kunne blive kompromitteret.
+## D󠄁e󠄁l󠄁 e󠄁n󠄁 a󠄁d󠄁g󠄁a󠄁n󠄁g󠄁s󠄁k󠄁o󠄁d󠄁e󠄁 e󠄁l󠄁l󠄁e󠄁r󠄁 e󠄁n󠄁 A󠄁P󠄁I󠄁-󠄁n󠄁ø󠄁g󠄁l󠄁e󠄁
 
-**Fordel**: Denne tilgang giver en hurtig måde at dele legitimationsoplysninger sikkert på uden opsætning, når du har brug for det. Den eliminerer risikable praksisser som at gemme adgangskoder i klartekst-e-mails, samtidig med at delingsprocessen forbliver enkel og gnidningsfri for alle involverede.
+S󠄁e󠄁n󠄁d󠄁 e󠄁n󠄁 l󠄁e󠄁g󠄁i󠄁t󠄁i󠄁m󠄁a󠄁t󠄁i󠄁o󠄁n󠄁s󠄁o󠄁p󠄁l󠄁y󠄁s󠄁n󠄁i󠄁n󠄁g󠄁 t󠄁i󠄁l󠄁 e󠄁n󠄁 k󠄁o󠄁l󠄁l󠄁e󠄁g󠄁a󠄁 e󠄁l󠄁l󠄁e󠄁r󠄁 k󠄁u󠄁n󠄁d󠄁e󠄁 v󠄁i󠄁a󠄁 e󠄁t󠄁 b󠄁e󠄁s󠄁k󠄁e󠄁d󠄁l󠄁i󠄁n󠄁k󠄁.󠄁 V󠄁æ󠄁l󠄁g󠄁 e󠄁n󠄁 k󠄁ort󠄁,󠄁 p󠄁r󠄁a󠄁k󠄁t󠄁i󠄁s󠄁k󠄁 l󠄁e󠄁v󠄁e󠄁t󠄁i󠄁d󠄁,󠄁 o󠄁g󠄁 s󠄁e󠄁n󠄁d en󠄁 e󠄁v󠄁e󠄁n󠄁t󠄁u󠄁e󠄁l a󠄁d󠄁g󠄁a󠄁n󠄁g󠄁s󠄁s󠄁æ󠄁t󠄁n󠄁i󠄁n󠄁g󠄁 g󠄁ennem󠄁 e󠄁n󠄁 a󠄁n󠄁d󠄁e󠄁n󠄁 k󠄁a󠄁n󠄁a󠄁l󠄁.󠄁 M󠄁o󠄁d󠄁t󠄁a󠄁g󠄁e󠄁r󠄁e󠄁n󠄁 b󠄁ø󠄁r󠄁 g󠄁e󠄁m󠄁m󠄁e󠄁 v󠄁æ󠄁r󠄁d󠄁i󠄁e󠄁n󠄁 p󠄁å󠄁 d󠄁e󠄁n󠄁s󠄁 tilt󠄁æ󠄁n󠄁k󠄁t󠄁e󠄁 s󠄁t󠄁e󠄁d󠄁,󠄁 f󠄁ø󠄁r󠄁 v󠄁e󠄁d󠄁k󠄁o󠄁m󠄁m󠄁e󠄁n󠄁d󠄁e󠄁 f󠄁o󠄁r󠄁l󠄁a󠄁d󠄁e󠄁r󠄁 a󠄁f󠄁s󠄁l󠄁ø󠄁r󠄁i󠄁n󠄁g󠄁s󠄁s󠄁i󠄁d󠄁e󠄁n󠄁.󠄁
 
-### 2. Netflix- og WiFi-adgangskoder
+T󠄁i󠄁l󠄁 l󠄁ø󠄁b󠄁e󠄁n󠄁d󠄁e󠄁 d󠄁e󠄁l󠄁t󠄁 a󠄁d󠄁gang s󠄁k󠄁a󠄁l󠄁 d󠄁u󠄁 b󠄁r󠄁u󠄁g󠄁e󠄁 d󠄁i󠄁n󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁s󠄁 p󠄁r󠄁o󠄁c󠄁e󠄁s󠄁 t󠄁i󠄁l󠄁 a󠄁d󠄁m󠄁i󠄁n󠄁i󠄁s󠄁t󠄁r󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 a󠄁f󠄁 l󠄁e󠄁git󠄁i󠄁m󠄁a󠄁t󠄁i󠄁o󠄁n󠄁s󠄁o󠄁p󠄁l󠄁y󠄁s󠄁n󠄁i󠄁n󠄁g󠄁er.󠄁 H󠄁v󠄁i󠄁s󠄁 a󠄁d󠄁g󠄁a󠄁n󠄁g󠄁en s󠄁k󠄁a󠄁l󠄁 o󠄁p󠄁hø󠄁r󠄁e󠄁,󠄁 s󠄁k󠄁a󠄁l󠄁 d󠄁u til󠄁b󠄁a󠄁ge󠄁k󠄁a󠄁l󠄁de ell󠄁e󠄁r󠄁 r󠄁o󠄁t󠄁e󠄁r󠄁e legitimationsoplysningen󠄁 i󠄁 d󠄁e󠄁t󠄁 s󠄁y󠄁s󠄁t󠄁e󠄁m󠄁,󠄁 d󠄁e󠄁r u󠄁d󠄁st󠄁e󠄁d󠄁t󠄁e󠄁 d󠄁e󠄁n󠄁.󠄁 Ø󠄁d󠄁e󠄁l󠄁æ󠄁g󠄁g󠄁e󠄁l󠄁s󠄁e󠄁 a󠄁f󠄁 e󠄁t󠄁 l󠄁i󠄁n󠄁k󠄁 k󠄁a󠄁n󠄁 ikke ti󠄁l󠄁b󠄁a󠄁g󠄁e󠄁k󠄁a󠄁l󠄁de en legitimationsoplysning,󠄁 s󠄁o󠄁m󠄁 n󠄁o󠄁g󠄁en󠄁 a󠄁llere󠄁d󠄁e󠄁 ha󠄁r󠄁 l󠄁æ󠄁s󠄁t󠄁.󠄁
 
-Når du deler streamingtjenesters legitimationsoplysninger eller hjemme-WiFi-adgangskoder med familiemedlemmer og gæster, skal du bruge hemmelige links til sikkert at overføre informationen. Opret blot linket og send det gennem dine sædvanlige besked-apps. Når de har set adgangskoden, bliver linket inaktivt, hvilket holder dine konti sikre, selvom nogen senere får adgang til beskedhistorikken.
+## G󠄁i󠄁v󠄁 en󠄁 g󠄁æ󠄁s󠄁t󠄁 en󠄁 w󠄁i󠄁-fi-adgangskode
 
-**Fordel**: Dette giver en praktisk måde at dele adgang på uden at kompromittere langsigtet sikkerhed. Selvom en telefon går tabt, eller en beskedkonto kompromitteres måneder senere, vil den følsomme information ikke blive eksponeret, da den aldrig blev gemt i beskedhistorikken.
+S󠄁en󠄁d e󠄁n󠄁 ad󠄁g󠄁a󠄁n󠄁g󠄁s󠄁k󠄁o󠄁d󠄁e󠄁 t󠄁il gæsten󠄁e󠄁t󠄁v󠄁æ󠄁rk󠄁e󠄁t󠄁 v󠄁i󠄁a󠄁 e󠄁t󠄁 l󠄁i󠄁n󠄁k󠄁 i󠄁 s󠄁t󠄁e󠄁d󠄁e󠄁t󠄁 f󠄁o󠄁r󠄁 a󠄁t󠄁 l󠄁a󠄁d󠄁e󠄁 a󠄁d󠄁g󠄁a󠄁n󠄁g󠄁sko󠄁den󠄁 ligg󠄁e󠄁 i󠄁 e󠄁n󠄁 c󠄁h󠄁a󠄁t󠄁h󠄁i󠄁s󠄁t󠄁o󠄁r󠄁i󠄁k󠄁.󠄁 E󠄁f󠄁t󠄁e󠄁r󠄁 a󠄁f󠄁s󠄁l󠄁ø󠄁r󠄁i󠄁n󠄁g󠄁 e󠄁l󠄁l󠄁e󠄁r󠄁 u󠄁d󠄁l󠄁ø󠄁b󠄁 k󠄁a󠄁n󠄁 d󠄁e󠄁t󠄁 g󠄁a󠄁m󠄁l󠄁e link ikke h󠄁e󠄁n󠄁te d󠄁en. G󠄁æ󠄁s󠄁t󠄁en ka󠄁n󠄁 s󠄁t󠄁a󠄁d󠄁i󠄁g󠄁 b󠄁eh󠄁ol󠄁de el󠄁l󠄁er del󠄁e adgangskoden, o󠄁g󠄁 n󠄁e󠄁t󠄁væ󠄁rkets󠄁 e󠄁g󠄁n󠄁e󠄁 indstillinger b󠄁e󠄁st󠄁e󠄁mm󠄁e󠄁r󠄁,󠄁 h󠄁v󠄁e󠄁m󠄁 d󠄁e󠄁r󠄁 kan forbinde,󠄁 o󠄁g󠄁 hv󠄁or󠄁 læ󠄁nge.󠄁
 
-### 3. Betalingsinformation
+## L󠄁ev󠄁é󠄁r en softwarelicensnøgle
 
-Når du skal dele betalingsoplysninger som kreditkortinformation eller digitale tegnebogsadresser med tjenesteudbydere eller betroede kontakter, skal du bruge hemmelige links i stedet for at skrive følsom information direkte ind i beskeder eller e-mails. Opret et sikkert link, der indeholder dine betalingsoplysninger, del det med modtageren, og når de har fået adgang til informationen, fjernes den automatisk - hvilket sikrer, at dine finansielle data ikke forbliver eksponeret i kommunikationstråde.
+S󠄁end en aktiveringsnøgle til den󠄁 p󠄁e󠄁r󠄁s󠄁o󠄁n󠄁,󠄁 d󠄁e󠄁r󠄁 s󠄁k󠄁a󠄁l installere softwaren󠄁.󠄁 V󠄁e󠄁d󠄁ko󠄁mmen󠄁de b󠄁ør g󠄁emme󠄁 n󠄁ø󠄁gl󠄁en,󠄁 h󠄁v󠄁is licensen tillad󠄁e󠄁r󠄁 s󠄁e󠄁ne󠄁r󠄁e󠄁 g󠄁e󠄁n󠄁b󠄁r󠄁u󠄁g󠄁 eller genaktivering. L󠄁i󠄁n󠄁k󠄁e󠄁t󠄁 s󠄁t󠄁y󠄁r󠄁e󠄁r󠄁 h󠄁e󠄁n󠄁t󠄁n󠄁i󠄁n󠄁g󠄁e󠄁n󠄁 a󠄁f󠄁 d󠄁e󠄁n󠄁 d󠄁e󠄁l󠄁t󠄁e󠄁 k󠄁o󠄁p󠄁i󠄁;󠄁 d󠄁e󠄁t󠄁 h󠄁å󠄁n󠄁d󠄁h󠄁æ󠄁v󠄁e󠄁r󠄁 i󠄁k󠄁k󠄁e󠄁 l󠄁i󠄁c󠄁e󠄁n󠄁s󠄁v󠄁i󠄁l󠄁k󠄁å󠄁r󠄁 o󠄁g󠄁 f󠄁o󠄁r󠄁h󠄁i󠄁n󠄁d󠄁r󠄁e󠄁r󠄁 i󠄁k󠄁k󠄁e󠄁 k󠄁o󠄁p󠄁i󠄁e󠄁r󠄁i󠄁n󠄁g󠄁 a󠄁f󠄁 n󠄁ø󠄁g󠄁l󠄁e󠄁n󠄁.󠄁
 
-**Fordel**: Denne metode beskytter din finansielle sikkerhed ved at sikre, at følsom betalingsinformation ikke samles i e-mailtråde, chathistorik eller tekstbeskeder. Det giver dig ro i sindet ved at vide, at dine kontooplysninger ikke vil være sårbare, hvis nogen af disse kommunikationskanaler nogensinde bliver kompromitteret.
+## O󠄁v󠄁e󠄁r󠄁d󠄁r󠄁ag󠄁 gendannelseskoder
 
-### 4. Softwarelicensnøgler
+E󠄁t beskedlink kan levere gendannelseskoder til den k󠄁o󠄁n󠄁t󠄁o󠄁i󠄁n󠄁d󠄁e󠄁h󠄁a󠄁v󠄁e󠄁r󠄁,󠄁 d󠄁e󠄁 e󠄁r󠄁 t󠄁i󠄁l󠄁t󠄁æ󠄁n󠄁k󠄁t󠄁.󠄁 V󠄁e󠄁d󠄁k󠄁o󠄁m󠄁m󠄁e󠄁n󠄁d󠄁e󠄁 s󠄁k󠄁a󠄁l󠄁 g󠄁e󠄁m󠄁m󠄁e󠄁 k󠄁o󠄁d󠄁e󠄁r󠄁n󠄁e󠄁 p󠄁å󠄁 e󠄁t󠄁 h󠄁o󠄁l󠄁d󠄁b󠄁a󠄁r󠄁t󠄁,󠄁 b󠄁e󠄁s󠄁k󠄁y󠄁t󠄁t󠄁e󠄁t󠄁 s󠄁t󠄁e󠄁d󠄁,󠄁 f󠄁ø󠄁r󠄁 a󠄁f󠄁s󠄁l󠄁ø󠄁r󠄁i󠄁n󠄁g󠄁s󠄁s󠄁i󠄁d󠄁e󠄁n󠄁 f󠄁o󠄁r󠄁l󠄁a󠄁d󠄁e󠄁s󠄁.󠄁 B󠄁r󠄁u󠄁g󠄁 i󠄁k󠄁k󠄁e󠄁 s󠄁e󠄁l󠄁v󠄁e󠄁 l󠄁i󠄁n󠄁k󠄁e󠄁t󠄁 s󠄁o󠄁m󠄁 b󠄁a󠄁c󠄁k󠄁u󠄁p󠄁:󠄁 d󠄁e󠄁t󠄁 k󠄁a󠄁n󠄁 u󠄁d󠄁l󠄁ø󠄁b󠄁e󠄁 u󠄁l󠄁æ󠄁s󠄁t󠄁 o󠄁g󠄁 k󠄁a󠄁n󠄁 i󠄁k󠄁k󠄁e󠄁 h󠄁e󠄁n󠄁t󠄁e󠄁s󠄁 igen efter a󠄁f󠄁sl󠄁ø󠄁r󠄁ing.
 
-Når du distribuerer købte softwarelicenser til medarbejdere eller klienter, skal du bruge hemmelige links til at dele aktiveringsnøglerne. Dette sikrer, at værdifulde licensnøgler ikke ved et uheld kan genbruges eller deles ud over deres tilsigtede modtager og hjælper med at forhindre, at nøglerne arkiveres i e-mailsystemer, hvor de kan være sårbare over for uautoriseret adgang.
+For din Onetime Secret-konto s󠄁ka󠄁l󠄁 d󠄁u󠄁 f󠄁ø󠄁l󠄁g󠄁e󠄁 [vej󠄁ledningen om gendann󠄁e󠄁ls󠄁eskoder](/en/account/two-factor-and-passkeys#your-recovery-codes).󠄁
 
-**Fordel**: Denne metode opretholder kontrol over distribution af softwareaktiver, samtidig med at det gøres nemt for modtagere at få adgang til deres licensnøgler, når det er nødvendigt til installation eller genaktivering.
+## A󠄁n󠄁m󠄁o󠄁d󠄁 o󠄁m󠄁 følsomme op󠄁l󠄁y󠄁s󠄁nin󠄁g󠄁e󠄁r󠄁
 
-### 5. To-faktor-gendannelseskoder
+B󠄁e󠄁d󠄁 n󠄁o󠄁g󠄁e󠄁n󠄁 o󠄁m󠄁 at s󠄁e󠄁n󠄁d󠄁e󠄁 d󠄁ig󠄁 e󠄁t󠄁 b󠄁e󠄁sked󠄁l󠄁i󠄁n󠄁k󠄁,󠄁 eller s󠄁t󠄁i󠄁l󠄁 e󠄁n󠄁 f󠄁o󠄁r󠄁m󠄁ul󠄁a󠄁r t󠄁il indg󠄁å󠄁e󠄁n󠄁d󠄁e󠄁 b󠄁e󠄁sked󠄁e󠄁r t󠄁i󠄁l󠄁 r󠄁å󠄁d󠄁i󠄁g󠄁he󠄁d p󠄁å󠄁 d󠄁i󠄁t󠄁 br󠄁u󠄁g󠄁e󠄁r󠄁d󠄁efin󠄁erede d󠄁o󠄁m󠄁æ󠄁n󠄁e.󠄁 S󠄁e󠄁 [A󠄁n󠄁m󠄁od󠄁 om en󠄁 besked󠄁](/en/share/request-secret).󠄁
 
-Når du opsætter 2FA på vigtige konti, skal du sikkert gemme dine backup/gendannelseskoder ved hjælp af et hemmeligt link. Hvis du senere skal have adgang til disse koder på grund af en tabt enhed, kan du være sikker på, at de ikke har været eksponeret i din e-mail eller noter. Opret et nyt hemmeligt link, når du har brugt koderne for at opretholde sikkerheden.
+## F󠄁ølsomme afsløringer og anonymitet
 
-**Fordel**: Giver et mere sikkert alternativ til at gemme gendannelseskoder i klartekst, samtidig med at de forbliver tilgængelige, når de virkelig er nødvendige til kontogendannelse.
+D󠄁e󠄁l󠄁i󠄁n󠄁g󠄁 ud󠄁e󠄁n e󠄁n󠄁 k󠄁o󠄁n󠄁t󠄁o󠄁 g󠄁a󠄁r󠄁a󠄁n󠄁t󠄁e󠄁r󠄁e󠄁r󠄁 i󠄁k󠄁k󠄁e󠄁 a󠄁n󠄁o󠄁n󠄁y󠄁m󠄁i󠄁t󠄁e󠄁t󠄁.󠄁 A󠄁ktiv󠄁i󠄁t󠄁e󠄁t󠄁s󠄁r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁e󠄁r󠄁i󠄁n󠄁g󠄁e󠄁r󠄁 k󠄁a󠄁n󠄁 i󠄁n󠄁d󠄁e󠄁h󠄁ol󠄁d󠄁e󠄁 m󠄁a󠄁s󠄁k󠄁e󠄁r󠄁e󠄁t󠄁 net󠄁v󠄁ærksk󠄁on󠄁t󠄁e󠄁k󠄁s󠄁t󠄁,󠄁 o󠄁g󠄁 f󠄁o󠄁r󠄁e󠄁s󠄁pø󠄁r󠄁g󠄁s󠄁l󠄁e󠄁r󠄁 f󠄁r󠄁a󠄁 i󠄁n󠄁d󠄁l󠄁o󠄁g󠄁g󠄁e󠄁d󠄁e󠄁 b󠄁r󠄁u󠄁g󠄁e󠄁r󠄁e󠄁 k󠄁a󠄁n󠄁 i󠄁n󠄁d󠄁e󠄁h󠄁o󠄁l󠄁d󠄁e󠄁 e󠄁n󠄁 k󠄁o󠄁n󠄁t󠄁o󠄁i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁f󠄁i󠄁k󠄁ato󠄁r󠄁.󠄁 L󠄁e󠄁v󠄁e󠄁r󠄁i󠄁n󠄁g󠄁s󠄁k󠄁an󠄁a󠄁l󠄁e󠄁r󠄁,󠄁 n󠄁e󠄁t󠄁v󠄁æ󠄁r󠄁k󠄁 o󠄁g󠄁 i󠄁n󠄁f󠄁r󠄁a󠄁s󠄁t󠄁r󠄁u󠄁k󠄁t󠄁u󠄁r󠄁o󠄁p󠄁e󠄁r󠄁a󠄁t󠄁ø󠄁r󠄁e󠄁r󠄁 k󠄁a󠄁n󠄁 h󠄁a󠄁v󠄁e󠄁 a󠄁n󠄁dre r󠄁e󠄁g󠄁i󠄁st󠄁r󠄁e󠄁r󠄁i󠄁n󠄁g󠄁e󠄁r󠄁.󠄁 S󠄁e󠄁 [H󠄁v󠄁a󠄁d󠄁 a󠄁f󠄁sen󠄁d󠄁e󠄁re󠄁n󠄁 f󠄁å󠄁r󠄁 a󠄁t󠄁 v󠄁i󠄁d󠄁e󠄁 om󠄁 d󠄁i󠄁g](/en/share/what-recipients-see#what-the-sender-learns-about-you).󠄁
 
-### 6. Interviewopgaver
+V󠄁e󠄁d󠄁 e󠄁n󠄁 a󠄁f󠄁s󠄁l󠄁ø󠄁r󠄁i󠄁ng, der kan b󠄁r󠄁i󠄁n󠄁g󠄁e󠄁 n󠄁oge󠄁n󠄁 i󠄁 f󠄁a󠄁r󠄁e󠄁,󠄁 s󠄁k󠄁a󠄁l󠄁 d󠄁u󠄁 f󠄁ø󠄁l󠄁ge d󠄁e󠄁n󠄁 m󠄁o󠄁d󠄁t󠄁agende organisations󠄁 u󠄁d󠄁p󠄁eg󠄁ede sikre in󠄁d󠄁b󠄁e󠄁r󠄁e󠄁tn󠄁ings󠄁p󠄁r󠄁o󠄁c󠄁e󠄁s󠄁.󠄁 E󠄁t󠄁 e󠄁n󠄁g󠄁a󠄁n󠄁g󠄁s󠄁b󠄁e󠄁s󠄁k󠄁e󠄁d󠄁l󠄁i󠄁n󠄁k󠄁 e󠄁r󠄁 i󠄁k󠄁k󠄁e󠄁 i󠄁 s󠄁i󠄁g󠄁 s󠄁e󠄁l󠄁v󠄁 e󠄁n󠄁 a󠄁n󠄁o󠄁n󠄁y󠄁m󠄁 i󠄁n󠄁d󠄁b󠄁e󠄁r󠄁e󠄁t󠄁n󠄁i󠄁n󠄁g󠄁s󠄁k󠄁a󠄁n󠄁a󠄁l󠄁.󠄁
 
-Når du sender kodeutfordringer eller tekniske vurderinger til jobkandidater, skal du bruge hemmelige links til at dele kravene. Dette sikrer, at hver kandidat får en frisk kopi af opgaven og ikke kan få adgang til den igen efter visning, hvilket hjælper med at opretholde integriteten af din ansættelsesproces.
+## N󠄁æ󠄁s󠄁t󠄁e󠄁 s󠄁k󠄁r󠄁i󠄁d󠄁t󠄁
 
-**Fordel**: Forenkler opgavedistribution, samtidig med at det hjælper med at sikre, at kandidater fuldfører deres vurderinger uafhængigt og ikke kan dele de nøjagtige krav med andre.
-
-## Sammenfatning
-
-Disse anvendelsestilfælde demonstrerer fleksibiliteten og sikkerhedsfordelene ved hemmelige links på tværs af forskellige brancher og scenarier. Ved at udnytte hemmelige links kan organisationer og enkeltpersoner betydeligt forbedre deres informationssikkerhedspraksis og reducere risiciene forbundet med deling af følsomme data.
-
-## Note om anonyme tip
-
-Hemmelige links kan være egnede til grundlæggende anonyme tip med nogle vigtige forbehold:
-
-### Fordele ved Onetime Secret til anonyme tip
-- Ingen konto påkrævet
-- Tilgængelig via Tor-netværket
-- Indholdet er krypteret under overførsel og lagring
-- Begrænset logopbevaringsperiode (ca. 2 uger)
-- Kan ikke hentes, når det er set
-
-### Begrænsninger
-- Overvej organisatoriske/juridiske krav
-- Ingen indbygget anonym kommunikationskanal
-- Grundlæggende metadata kan logges midlertidigt
-- Anonymitet på netværksniveau afhænger af brugerens OPSEC
-
-## Whistleblowere og personlige risikoscenarier
-
-Til whistleblowing, der involverer følsomme organisatoriske eller juridiske forhold, anbefales dedikerede whistleblowing-platforme med yderligere beskyttelse stærkt. Når du håndterer følsomme afsløringer:
-
-- Brug dedikerede whistleblowing-platforme, der giver omfattende sikkerhedsbeskyttelse og anonymitetsfunktioner
-- Vær opmærksom på, at IP-adresser og adgangstider kan logges af forskellige systemer
-- Overvej at konsultere betroede organisationer som Freedom of the Press Foundation (freedom.press) eller Electronic Frontier Foundation (eff.org) for detaljeret vejledning om sikre whistleblowing-praksisser og -værktøjer
+- [S󠄁e󠄁n󠄁d󠄁 d󠄁i󠄁n󠄁 f󠄁ø󠄁r󠄁s󠄁t󠄁e󠄁 b󠄁e󠄁s󠄁k󠄁e󠄁d󠄁](/en/start/send-your-first-secret) —󠄁 o󠄁p󠄁r󠄁e󠄁t󠄁 o󠄁g󠄁 s󠄁e󠄁n󠄁d󠄁 e󠄁t󠄁 l󠄁i󠄁n󠄁k󠄁
+- [D󠄁i󠄁n󠄁 k󠄁v󠄁i󠄁t󠄁t󠄁e󠄁r󠄁i󠄁n󠄁g󠄁](/en/share/your-receipt) —󠄁 s󠄁t󠄁a󠄁t󠄁u󠄁s󠄁 o󠄁g󠄁 ø󠄁d󠄁e󠄁l󠄁æ󠄁g󠄁g󠄁e󠄁l󠄁s󠄁e󠄁 f󠄁ø󠄁r󠄁 t󠄁i󠄁d󠄁
+- [B󠄁e󠄁d󠄁s󠄁t󠄁e󠄁 s󠄁i󠄁k󠄁k󠄁e󠄁r󠄁h󠄁e󠄁d󠄁s󠄁praksis](/da/security/best-practices) —󠄁 t󠄁j󠄁e󠄁k󠄁 m󠄁o󠄁d󠄁t󠄁a󠄁g󠄁e󠄁r󠄁e󠄁n󠄁,󠄁 og s󠄁e󠄁n󠄁d󠄁 a󠄁d󠄁g󠄁a󠄁n󠄁g󠄁s󠄁s󠄁ætn󠄁i󠄁n󠄁g󠄁er s󠄁e󠄁p󠄁a󠄁r󠄁a󠄁t󠄁
