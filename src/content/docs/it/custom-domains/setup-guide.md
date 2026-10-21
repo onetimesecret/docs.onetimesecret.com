@@ -8,7 +8,7 @@ description: "Aggiungi un dominio personalizzato alla tua organizzazione, crea i
 
 - I󠄁l󠄁 p󠄁iano della tua o󠄁rga󠄁n󠄁i󠄁z󠄁z󠄁a󠄁z󠄁ione i󠄁nc󠄁l󠄁u󠄁d󠄁e un dominio personalizzato.󠄁 F󠄁ree ne inc󠄁l󠄁u󠄁d󠄁e󠄁
   u󠄁n󠄁o󠄁;󠄁 I󠄁d󠄁e󠄁n󠄁t󠄁i󠄁t󠄁y󠄁 P󠄁l󠄁u󠄁s e T󠄁e󠄁am󠄁 P󠄁lu󠄁s󠄁 n󠄁o󠄁n󠄁 h󠄁a󠄁n󠄁n󠄁o󠄁 u󠄁n󠄁 li󠄁m󠄁i󠄁te fisso.󠄁 V󠄁edi
-  [Domini personalizzati](/en/custom-domains#what-each-plan-includes).
+  [Domini personalizzati](/it/custom-domains#cosa-include-ogni-piano).
 - S󠄁e󠄁i󠄁 i󠄁l󠄁 **pr󠄁o󠄁p󠄁r󠄁i󠄁e󠄁t󠄁a󠄁r󠄁i󠄁o󠄁** o󠄁 u󠄁n **am󠄁m󠄁i󠄁n󠄁istr󠄁at󠄁o󠄁r󠄁e󠄁** del󠄁l󠄁'󠄁o󠄁r󠄁g󠄁a󠄁n󠄁iz󠄁z󠄁a󠄁z󠄁i󠄁o󠄁n󠄁e󠄁.󠄁
 - P󠄁u󠄁o󠄁i󠄁 c󠄁r󠄁e󠄁a󠄁r󠄁e󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁 D󠄁N󠄁S󠄁 p󠄁e󠄁r󠄁 i󠄁l󠄁 dominio󠄁 pr󠄁esso il󠄁 t󠄁u󠄁o󠄁 reg󠄁is󠄁t󠄁r󠄁a󠄁r o pro󠄁v󠄁i󠄁d󠄁e󠄁r󠄁 D󠄁N󠄁S󠄁.󠄁
 - H󠄁a󠄁i󠄁 d󠄁e󠄁c󠄁i󠄁s󠄁o󠄁 q󠄁u󠄁a󠄁l󠄁e󠄁 i󠄁n󠄁d󠄁i󠄁r󠄁i󠄁z󠄁z󠄁o󠄁 u󠄁s󠄁a󠄁r󠄁e󠄁.󠄁 È󠄁 c󠄁o󠄁n󠄁s󠄁i󠄁g󠄁l󠄁i󠄁a󠄁t󠄁o󠄁 u󠄁n󠄁 s󠄁o󠄁t󠄁t󠄁o󠄁d󠄁o󠄁m󠄁i󠄁n󠄁io c󠄁o󠄁m󠄁e󠄁
@@ -31,7 +31,7 @@ description: "Aggiungi un dominio personalizzato alla tua organizzazione, crea i
 I󠄁l󠄁 d󠄁o󠄁m󠄁i󠄁n󠄁i󠄁o󠄁 v󠄁i󠄁e󠄁n󠄁e󠄁 a󠄁g󠄁g󠄁i󠄁u󠄁n󠄁t󠄁o󠄁 a󠄁l󠄁l󠄁'󠄁o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁z󠄁a󠄁z󠄁i󠄁o󠄁n󠄁e󠄁 e󠄁 l󠄁a󠄁 s󠄁c󠄁h󠄁e󠄁r󠄁m󠄁a󠄁t󠄁a󠄁 s󠄁u󠄁c󠄁c󠄁e󠄁s󠄁s󠄁i󠄁v󠄁a󠄁 e󠄁l󠄁e󠄁n󠄁c󠄁a󠄁 i󠄁 d󠄁u󠄁e󠄁
 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁 D󠄁N󠄁S󠄁 d󠄁a󠄁 c󠄁r󠄁e󠄁a󠄁r󠄁e󠄁.󠄁 N󠄁o󠄁n󠄁 c󠄁'󠄁è󠄁 a󠄁l󠄁c󠄁u󠄁n󠄁a󠄁 s󠄁c󠄁e󠄁l󠄁t󠄁a󠄁 d󠄁e󠄁l󠄁l󠄁a󠄁 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁e󠄁:󠄁 i󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁 p󠄁u󠄁n󠄁t󠄁a󠄁n󠄁o󠄁 a󠄁l󠄁 s󠄁i󠄁t󠄁o󠄁
 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁a󠄁l󠄁e󠄁 u󠄁s󠄁a󠄁t󠄁o󠄁 d󠄁a󠄁l󠄁l󠄁a󠄁 t󠄁u󠄁a󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁z󠄁a󠄁z󠄁i󠄁o󠄁n󠄁e󠄁.󠄁 V󠄁e󠄁d󠄁i󠄁
-[D󠄁o󠄁v󠄁e󠄁 v󠄁i󠄁e󠄁n󠄁e󠄁 s󠄁e󠄁r󠄁v󠄁i󠄁t󠄁o󠄁 i󠄁l󠄁 t󠄁u󠄁o󠄁 d󠄁o󠄁m󠄁i󠄁n󠄁i󠄁o󠄁](/en/custom-domains#where-your-domain-is-served).󠄁
+[D󠄁o󠄁v󠄁e󠄁 v󠄁i󠄁e󠄁n󠄁e󠄁 s󠄁e󠄁r󠄁v󠄁i󠄁t󠄁o󠄁 i󠄁l󠄁 t󠄁u󠄁o󠄁 d󠄁o󠄁m󠄁i󠄁n󠄁i󠄁o󠄁](/it/custom-domains#dove-viene-servito-il-tuo-dominio).󠄁
 
 ## C󠄁r󠄁e󠄁a󠄁 i󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁 D󠄁N󠄁S󠄁
 
