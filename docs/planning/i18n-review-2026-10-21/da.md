@@ -164,3 +164,44 @@ All other quoted labels match shipped da_DK. This covers the branding labels (Do
 - No build, test or dogfood run, because this is a read-only review. The heading-anchor observations come from the existing `dist/`, built at 06:34, before the 08:39 commit time. Its da headings match the reviewed text.
 - The self-hosting/configuration.md YAML block (lines 40–636) was checked only for byte identity with the English (identical), not for content.
 - Application `sourceOfTruth` claims were not re-verified. The English is unchanged, and the translation was checked against the English for numbers, limits, hostnames, flags and paths (all preserved).
+
+## Resolution (fix round, 2026-10-21)
+
+Fixed 26 of 29 findings (1 major, 25 minor) and the six flagged sidebar keys; skipped 3 (all reveal terminology). Validation: `python3 tools/dogfood.py check --base b2883096` (14 files, 0 failed), `pnpm run check:frontmatter`, `pnpm run check:nav`. No build or `pnpm test` run.
+
+| Commit | Subject |
+|---|---|
+| 5a463506 | docs(i18n/da): match compare-plans labels to the shipped app |
+| c683480c | docs(i18n/da): correct mistranslation in why-secret-links |
+| 36b2ee6a | docs(i18n/da): use consistent terms for destroy, disclosure, message |
+| 3f3b24d9 | docs(i18n/da): use consistent terms for at rest, API, tab, data page |
+| a6c2ee4c | docs(i18n/da): fix register breaks |
+| e4104716 | docs(i18n/da): link to Danish pages that exist |
+| 0973712c | docs(i18n/da): fix fluency and typography |
+| b6489f4c | docs(i18n/da): align sidebar labels with page titles |
+| (this commit) | docs(planning): record Danish fix-round resolution |
+
+Fixes that differ from the suggested wording:
+
+- share/why-secret-links.md:9: «Når indholdet er vist, ødelagt eller udløbet». This fixes the grammar but keeps vis, because the glossary row has not changed (see the reveal row below).
+- security/vulnerability-disclosure.md:39: «Vi tager ikke retslige skridt mod sikkerhedsforskere». Adding the one word gives the usual Danish safe-harbour wording.
+- self-hosting/index.md:13: «så beslut dig for den, før du installerer».
+- index.mdoc:10: «et workspace med dit brand på dit eget domæne» (avoids a third «dit eget»).
+- security/best-practices.md:27: «som ligner dit», as suggested.
+
+### Skipped findings
+
+| Page:line | Finding | Reason |
+|---|---|---|
+| share/why-secret-links.md:28, 30, 46, 47, 60 | reveal rendered as visning / få vist; suggested afsløre | Fix protocol rule 3: the docs glossary wins for prose terms, and `da/translations/glossary.md:18` binds "view/reveal → vis/åben". The current text follows it. In line 60, «notifikationer ved visning» matches the app setting name «Notifikationer ved visning af besked» (`web.settings.notifications.reveal_notifications.title`), so the app does not use afsløre everywhere either. |
+| custom-domains/index.md:15, 18 | «én visning», «kan få det vist én gang»; suggested afsløring | Same glossary binding (vis). |
+| pricing/index.md:19 | «Beskedlinks, der kan vises én gang»; suggested afsløres | Same glossary binding (vis). |
+| src/content/i18n/da.json `sidebar.installationDeployment` | "Installation og Implementering" (general issue) | `config/sidebar.mjs` does not reference this key, and AGENTS.md says to keep it. Editing it would have no visible effect. |
+| self-hosting/configuration.md, self-hosting/index.md frontmatter `sidebar: order:` | legacy key (general issue, cleanup only) | The key has no effect and there was no finding against it. Left alone under the minimal-edits rule. |
+
+### Decisions needed
+
+- **Glossary: split reveal from view.** `src/content/docs/da/translations/glossary.md:18` has "view/reveal → vis/åben". The app uses afsløre for the action and the status ("Klik for at afsløre" `web.COMMON.click_to_continue`; "Afsløret" `web.STATUS.revealed`). It uses visning in the reveal-notification setting (`web.settings.notifications.reveal_notifications.title`) and in the branding labels ("Visningsinstruktioner", "Før/Efter visning"). share/index, share/use-cases, api/index, compare-plans and change-your-region use afsløre; why-secret-links, custom-domains/index, pricing/index and security/index use vis. If the row is split into view → vis and reveal → afslør, a follow-up should change why-secret-links:9, 28, 30, 46, 47, custom-domains/index:15, 18 and pricing/index:19. Keep «notifikationer ved visning» (why-secret-links:60) because it is the app's setting name.
+- **Glossary candidates.** The glossary does not cover these terms, which this round unified: tab → fane; API → neuter «API'et»; whistleblowing disclosure → indberetning; generic (chat/email) message → meddelelse, and message history → samtalehistorik, since besked is reserved for the product secret; destroyed (not burned) → tilintetgøre, with ødelægge for burn only; "Where your data lives" link label → «Hvor dine data ligger».
+- **App translation gap.** `web.domains.sso.back_to_signin` ("Sign-in settings", `locales/content/en/workspace-domains.json:562`) has no da_DK string, so the app shows English. The docs say «Loginindstillinger» (custom-domains/index.md:30, pricing/index.md:33), which matches the other da_DK wording ("dette domænes loginindstillinger").
+- **Tooling: `tools/dogfood.py edit` can move legacy marks.** When the old span contains unmarked (legacy) clusters, `correspondence()` matches them first by raw encoding. That can tie them to an unrelated new character with the same letter in the replacement, which drops existing AI marks. It happened three times in this round: branding.md:29 «Siden» took the unmarked d/e from «faneblade»; best-practices.md:27 «domæner» took the unmarked «ner»; self-hosting/index.md:44 «skærmbillede» took the unmarked l from «applikationen». In each case `dogfood.py check` failed ("changed or lost an existing mark" / "marked unchanged legacy text"). I repaired each one with two narrower edits that put the unmarked clusters back in their original positions. Fixers working in other locales should keep spans tight, run `check --base HEAD` after every edit, and avoid including legacy unmarked text in a span.
