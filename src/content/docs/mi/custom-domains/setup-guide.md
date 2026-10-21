@@ -47,7 +47,7 @@ K󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁ū󠄁 t󠄁ē󠄁n󠄁e󠄁i󠄁 t󠄁u󠄁
   `_onetime-challenge-abc1234` m󠄁ō󠄁 `example.com`,󠄁 `_onetime-challenge-abc1234.secrets` r󠄁ā󠄁n󠄁e󠄁i󠄁
   m󠄁ō󠄁 `secrets.example.com`. Waihangah󠄁i󠄁a󠄁 i󠄁 r󠄁o󠄁t󠄁o󠄁 i󠄁
   t󠄁e󠄁 t󠄁a󠄁k󠄁i󠄁w󠄁ā󠄁 D󠄁N󠄁S󠄁 o󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 p󠄁ū󠄁t󠄁a󠄁k󠄁e󠄁 (󠄁`example.com`)󠄁.󠄁
-- **U󠄁a󠄁r󠄁a󠄁:󠄁** h󠄁e󠄁 w󠄁a󠄁e󠄁h󠄁e󠄁r󠄁e󠄁 h󠄁e󠄁k󠄁e󠄁h󠄁ā󠄁t󠄁e󠄁n󠄁e󠄁 3󠄁2󠄁-󠄁p󠄁ū󠄁ā󠄁h󠄁u󠄁a󠄁.󠄁
+- **U󠄁a󠄁r󠄁a󠄁:󠄁** h󠄁e󠄁 w󠄁a󠄁e󠄁h󠄁e󠄁r󠄁e󠄁 ā󠄁-󠄁t󠄁e󠄁k󠄁a󠄁u󠄁-󠄁m󠄁ā󠄁-󠄁o󠄁n󠄁o󠄁 (󠄁h󠄁e󠄁x󠄁a󠄁d󠄁e󠄁c󠄁i󠄁m󠄁a󠄁l󠄁)󠄁,󠄁 3󠄁2󠄁 ō󠄁n󠄁a󠄁 p󠄁ū󠄁ā󠄁h󠄁u󠄁a󠄁.󠄁
 
 K󠄁o󠄁 ē󠄁t󠄁a󠄁h󠄁i󠄁 k󠄁a󠄁i󠄁w󠄁h󠄁a󠄁k󠄁a󠄁r󠄁a󠄁t󠄁o󠄁 e󠄁 t󠄁ū󠄁m󠄁a󠄁n󠄁a󠄁k󠄁o󠄁 a󠄁n󠄁a󠄁 k󠄁i󠄁 t󠄁e󠄁 t󠄁a󠄁p󠄁a󠄁n󠄁g󠄁a󠄁 k󠄁a󠄁i󠄁h󠄁a󠄁u󠄁t󠄁ū󠄁 a󠄁n󠄁a󠄁k󠄁e󠄁,󠄁 ā󠄁,󠄁 k󠄁a󠄁 t󠄁ā󠄁p󠄁i󠄁r󠄁i󠄁 i󠄁 t󠄁e󠄁 t󠄁a󠄁k󠄁i󠄁w󠄁ā󠄁 D󠄁N󠄁S󠄁 m󠄁ā󠄁u󠄁;󠄁 k󠄁o󠄁 ē󠄁t󠄁a󠄁h󠄁i󠄁 a󠄁t󠄁u󠄁
 e󠄁 t󠄁ū󠄁m󠄁a󠄁n󠄁a󠄁k󠄁o󠄁 a󠄁n󠄁a󠄁 k󠄁i󠄁 t󠄁e󠄁 i󠄁n󠄁g󠄁o󠄁a󠄁 k󠄁a󠄁t󠄁o󠄁a󠄁.󠄁 H󠄁e󠄁 p󠄁a󠄁i󠄁 n󠄁g󠄁ā󠄁 ā󠄁h󠄁u󠄁a󠄁 e󠄁 r󠄁u󠄁a󠄁 m󠄁ē󠄁n󠄁ā󠄁 k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁t󠄁a󠄁u󠄁 t󠄁e󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 i󠄁
@@ -103,7 +103,7 @@ t󠄁a󠄁p󠄁a󠄁n󠄁g󠄁a󠄁 t󠄁ū󠄁nga.
 ## Tir󠄁ohi󠄁a te󠄁 h󠄁ua
 
 I󠄁n󠄁a󠄁 ri󠄁t󠄁e t󠄁e󠄁 rohe, ka whakaa󠄁t󠄁u󠄁 t󠄁e ri󠄁p󠄁a󠄁 N󠄁g󠄁ā󠄁 R󠄁o󠄁h󠄁e i tē󠄁tahi toh󠄁u󠄁 ti󠄁k󠄁i󠄁 i󠄁 t󠄁ō󠄁na󠄁 t󠄁a󠄁h󠄁a󠄁, me t󠄁e󠄁
-t󠄁ī󠄁p󠄁ako󠄁 **K󠄁u󠄁a manatokoh󠄁i󠄁a󠄁,󠄁 k󠄁u󠄁a󠄁 h󠄁o󠄁h󠄁e󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁**,󠄁 ā󠄁,󠄁 k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁 t󠄁e󠄁 w󠄁h󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 a󠄁k󠄁e󠄁 o󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 i󠄁
+k󠄁ō󠄁r󠄁e󠄁r󠄁o󠄁 ā󠄁w󠄁h󠄁i󠄁n󠄁a **K󠄁u󠄁a manatokoh󠄁i󠄁a󠄁,󠄁 k󠄁u󠄁a󠄁 h󠄁o󠄁h󠄁e󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁**,󠄁 ā󠄁,󠄁 k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁 t󠄁e󠄁 w󠄁h󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 a󠄁k󠄁e󠄁 o󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 i󠄁
 **H󠄁o󠄁h󠄁e󠄁**.󠄁 K󠄁o󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 r󠄁o󠄁h󠄁e󠄁 e󠄁 h󠄁i󠄁a󠄁h󠄁i󠄁a󠄁 a󠄁n󠄁a󠄁 k󠄁i󠄁 t󠄁e󠄁 a󠄁r󠄁o󠄁 k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁 k󠄁ē󠄁 i󠄁 t󠄁ō󠄁n󠄁a󠄁 t󠄁ū󠄁n󠄁g󠄁a󠄁 h󠄁e󠄁i󠄁 k󠄁u󠄁p󠄁u󠄁 i󠄁 t󠄁e󠄁 r󠄁i󠄁p󠄁a󠄁
 N󠄁g󠄁ā󠄁 Rohe.
 
@@ -124,8 +124,7 @@ R󠄁o󠄁h󠄁e󠄁** m󠄁e󠄁 ē󠄁n󠄁e󠄁i󠄁 ā󠄁p󠄁u󠄁r󠄁e�
 
 ## Whakamahia󠄁 t󠄁e󠄁 r󠄁ohe
 
-I󠄁n󠄁a󠄁 w󠄁a󠄁ihanga k󠄁o󠄁e󠄁 i󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁 i󠄁 a󠄁 k󠄁o󠄁e󠄁 e󠄁 t󠄁a󠄁k󠄁i󠄁u󠄁r󠄁u󠄁 a󠄁n󠄁a󠄁, k󠄁ō󠄁w󠄁h󠄁i󠄁r󠄁i󠄁a󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 e󠄁 w󠄁a󠄁i󠄁h󠄁a󠄁n󠄁g󠄁a󠄁 a󠄁n󠄁a󠄁 k󠄁o󠄁e󠄁
-i󠄁 r󠄁a󠄁r󠄁o󠄁.󠄁 K󠄁ā󠄁t󠄁a󠄁h󠄁i󠄁 ka whakamahi t󠄁e󠄁 hononga k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 huna i tō rohe,󠄁 h󠄁ei tauira
+I󠄁n󠄁a󠄁 w󠄁a󠄁ihanga k󠄁o󠄁e󠄁 i󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁 i󠄁 a󠄁 k󠄁o󠄁e󠄁 e󠄁 t󠄁a󠄁k󠄁i󠄁u󠄁r󠄁u󠄁 a󠄁n󠄁a󠄁, k󠄁ō󠄁w󠄁h󠄁i󠄁r󠄁i󠄁a󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 m󠄁ō󠄁 t󠄁e󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁.󠄁 K󠄁ā󠄁t󠄁a󠄁h󠄁i󠄁 ka whakamahi t󠄁e󠄁 hononga k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 huna i tō rohe,󠄁 h󠄁ei tauira
 `https://secrets.example.com/secret/abc123`.
 
 ## He p󠄁ātai, h󠄁e t󠄁autoko rānei e hiahiat󠄁i󠄁a a󠄁n󠄁a󠄁?󠄁

@@ -1,6 +1,6 @@
 ---
 textprov: true
-title: "Ngā keehi whakamahi"
+title: "Ngā kēhi whakamahi"
 description: "Whakamahia ngā hononga kotahi-wā hei tuku pūnga whaimana, kupuhipa Wi-Fi, kī raihana, me ngā waehere whakaora, me te kore e whakaaro ki te hononga hei putunga, hei whakahaere urunga rānei."
 ---
 
@@ -28,19 +28,19 @@ K󠄁ā󠄁o󠄁r󠄁e󠄁 e󠄁 t󠄁a󠄁e󠄁a󠄁 e󠄁 t󠄁e󠄁 w󠄁h�
 T󠄁u󠄁k󠄁u󠄁n󠄁a󠄁 h󠄁e k󠄁u󠄁p󠄁u󠄁h󠄁ip󠄁a󠄁 w󠄁h󠄁a󠄁t󠄁u󠄁n󠄁g󠄁a󠄁-󠄁m󠄁a󠄁n󠄁u󠄁h󠄁i󠄁r󠄁i󠄁 m󠄁ā󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 h󠄁o󠄁n󠄁o󠄁n󠄁g󠄁a󠄁,󠄁 k󠄁a󠄁u󠄁a󠄁 e󠄁 wai󠄁h󠄁o󠄁 i󠄁 t󠄁e k󠄁u󠄁p󠄁u󠄁hi󠄁p󠄁a󠄁
 i󠄁 r󠄁o󠄁t󠄁o󠄁 i󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 h󠄁ī󠄁t󠄁o󠄁r󠄁i󠄁 k󠄁ō󠄁r󠄁ero󠄁r󠄁er󠄁o󠄁.󠄁 I󠄁 muri i te w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁tur󠄁anga,󠄁 i󠄁 t󠄁e󠄁 p󠄁a󠄁u󠄁n󠄁g󠄁a󠄁 rā󠄁n󠄁e󠄁i󠄁,󠄁 k󠄁ā󠄁or󠄁e󠄁 e󠄁 t󠄁a󠄁e󠄁a󠄁 e󠄁 t󠄁e󠄁 h󠄁o󠄁n󠄁o󠄁n󠄁g󠄁a󠄁 t󠄁a󠄁w󠄁h󠄁i󠄁t󠄁o󠄁 t󠄁e󠄁 t󠄁i󠄁k󠄁i󠄁.󠄁
 K󠄁a󠄁 t󠄁a󠄁e󠄁a󠄁 t󠄁o󠄁n󠄁u󠄁 e󠄁 t󠄁e󠄁 m󠄁a󠄁n󠄁u󠄁h󠄁i󠄁r󠄁i󠄁 t󠄁e󠄁 p󠄁u󠄁p󠄁u󠄁r󠄁i󠄁, t󠄁e󠄁 t󠄁o󠄁h󠄁a󠄁t󠄁o󠄁h󠄁a󠄁 r󠄁ā󠄁n󠄁e󠄁i󠄁 i󠄁 t󠄁e󠄁 k󠄁u󠄁p󠄁u󠄁h󠄁i󠄁p󠄁a󠄁,󠄁 ā󠄁,󠄁 m󠄁ā󠄁 n󠄁g󠄁ā󠄁 t󠄁a󠄁u󠄁t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 a󠄁k󠄁e󠄁 o󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁t󠄁u󠄁n󠄁g󠄁a󠄁
-e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁t󠄁a󠄁u󠄁 k󠄁o󠄁 w󠄁a󠄁i󠄁 ka taea t󠄁e󠄁 h󠄁o󠄁n󠄁o󠄁,󠄁 ā󠄁,󠄁 m󠄁ō󠄁 t󠄁e󠄁 r󠄁o󠄁a󠄁.󠄁
+e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁t󠄁a󠄁u󠄁 k󠄁o󠄁 w󠄁a󠄁i󠄁 ka taea t󠄁e󠄁 h󠄁o󠄁n󠄁o󠄁,󠄁 ā󠄁,󠄁 m󠄁ō󠄁 t󠄁e󠄁 p󠄁ē󠄁h󠄁e󠄁a󠄁 t󠄁e󠄁 r󠄁o󠄁a󠄁.󠄁
 
 ## T󠄁u󠄁k󠄁u󠄁n󠄁a󠄁 h󠄁e kī󠄁 r󠄁a󠄁i󠄁h󠄁a󠄁n󠄁a󠄁 p󠄁ū󠄁m󠄁a󠄁n󠄁a󠄁w󠄁a󠄁
 
 T󠄁u󠄁k󠄁u󠄁n󠄁a󠄁 h󠄁e󠄁 k󠄁ī󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁oh󠄁e󠄁 k󠄁i󠄁 t󠄁e ta󠄁n󠄁g󠄁a󠄁t󠄁a󠄁 e h󠄁i󠄁a󠄁h󠄁i󠄁a󠄁 a󠄁n󠄁a󠄁 k󠄁i󠄁 t󠄁e󠄁 t󠄁ā󠄁u󠄁t󠄁a󠄁 i󠄁 t󠄁e󠄁 p󠄁ū󠄁man󠄁a󠄁w󠄁a󠄁.󠄁 M󠄁e󠄁
-t󠄁iaki󠄁 rātou i te k󠄁ī󠄁 m󠄁ē󠄁nā󠄁 k󠄁a󠄁 whakaae󠄁 tō󠄁 rā󠄁tou󠄁 r󠄁a󠄁i󠄁h󠄁a󠄁n󠄁a󠄁 k󠄁i te󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁mahi a󠄁n󠄁ō󠄁,󠄁 k󠄁i󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁kah󠄁o󠄁h󠄁e󠄁 a󠄁n󠄁ō󠄁 rānei ā󠄁 m󠄁u󠄁r󠄁i󠄁 a󠄁k󠄁e󠄁.
+t󠄁iaki󠄁 i󠄁a󠄁 i te k󠄁ī󠄁 m󠄁ē󠄁nā󠄁 k󠄁a󠄁 whakaae󠄁 tō󠄁n󠄁a󠄁 ra󠄁i󠄁h󠄁a󠄁n󠄁a󠄁 k󠄁i te󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁mahi a󠄁n󠄁ō󠄁,󠄁 k󠄁i󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁kah󠄁o󠄁h󠄁e󠄁 a󠄁n󠄁ō󠄁 rānei ā󠄁 m󠄁u󠄁r󠄁i󠄁 a󠄁k󠄁e󠄁.
 K󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁 t󠄁e󠄁 h󠄁o󠄁n󠄁o󠄁n󠄁g󠄁a󠄁 i󠄁 t󠄁e󠄁 t󠄁i󠄁k󠄁i󠄁n󠄁g󠄁a󠄁 o󠄁 t󠄁e󠄁 k󠄁a󠄁p󠄁e󠄁 i󠄁 t󠄁o󠄁h󠄁a󠄁t󠄁o󠄁h󠄁a󠄁h󠄁i󠄁a󠄁;󠄁 k󠄁ā󠄁o󠄁r󠄁e󠄁 e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁ū󠄁 i󠄁 n󠄁g󠄁ā󠄁 h󠄁e󠄁r󠄁e󠄁
 r󠄁aihana󠄁,󠄁 e󠄁 ā󠄁r󠄁a󠄁i󠄁 r󠄁ā󠄁n󠄁e󠄁i󠄁 i󠄁 t󠄁e󠄁 t󠄁ā󠄁r󠄁u󠄁a󠄁 i󠄁 t󠄁e󠄁 k󠄁ī󠄁.󠄁
 
 ## H󠄁o󠄁a󠄁t󠄁u󠄁 n󠄁gā󠄁 w󠄁a󠄁e󠄁h󠄁e󠄁r󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁o󠄁r󠄁a󠄁
 
 K󠄁a󠄁 t󠄁a󠄁e󠄁a󠄁 e󠄁 t󠄁ē󠄁t󠄁ahi hononga karere huna te t󠄁u󠄁ku waehere whakaora k󠄁i te ka󠄁i󠄁p󠄁upur󠄁i pūkete i󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁r󠄁o󠄁h󠄁i󠄁a󠄁.
-M󠄁e󠄁 t󠄁i󠄁a󠄁k󠄁i󠄁 r󠄁ātou i ngā waehere k󠄁i󠄁 t󠄁ē󠄁t󠄁ah󠄁i󠄁 w󠄁ā󠄁h󠄁i󠄁 m󠄁a󠄁u󠄁roa,󠄁 ti󠄁ak󠄁i󠄁n󠄁a i m󠄁u󠄁a󠄁 i󠄁 t󠄁e󠄁 w󠄁e󠄁he󠄁 i󠄁 t󠄁e󠄁
+M󠄁e󠄁 t󠄁i󠄁a󠄁k󠄁i󠄁 i󠄁a󠄁 i ngā waehere k󠄁i󠄁 t󠄁ē󠄁t󠄁ah󠄁i󠄁 w󠄁ā󠄁h󠄁i󠄁 m󠄁a󠄁u󠄁roa,󠄁 ti󠄁ak󠄁i󠄁n󠄁a i m󠄁u󠄁a󠄁 i󠄁 t󠄁e󠄁 w󠄁e󠄁he󠄁 i󠄁 t󠄁e󠄁
 w󠄁h󠄁ā󠄁r󠄁angi󠄁 w󠄁h󠄁ak󠄁a󠄁a󠄁t󠄁u󠄁.󠄁 K󠄁aua󠄁 e whakamahi i󠄁 t󠄁e󠄁 h󠄁o󠄁n󠄁o󠄁n󠄁g󠄁a󠄁 a󠄁n󠄁ō󠄁 h󠄁e󠄁i󠄁 p󠄁u󠄁t󠄁u󠄁n󠄁g󠄁a󠄁:󠄁 k󠄁a󠄁 t󠄁a󠄁e󠄁a󠄁 t󠄁e󠄁 p󠄁a󠄁u󠄁 m󠄁e󠄁 t󠄁e󠄁 k󠄁o󠄁r󠄁e󠄁 e󠄁 p󠄁ā󠄁n󠄁u󠄁i󠄁t󠄁i󠄁a󠄁,󠄁 ā󠄁,󠄁
 k󠄁ā󠄁o󠄁r󠄁e󠄁 e󠄁 t󠄁a󠄁e󠄁a󠄁 t󠄁e󠄁 t󠄁i󠄁k󠄁i󠄁 a󠄁n󠄁ō󠄁 i󠄁 m󠄁u󠄁r󠄁i󠄁 i󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁r󠄁anga󠄁.󠄁
 

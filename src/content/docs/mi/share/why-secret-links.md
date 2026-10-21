@@ -61,7 +61,7 @@ n󠄁g󠄁ā󠄁 w󠄁a󠄁e󠄁h󠄁e󠄁r󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁o�
 ## N󠄁g󠄁ā󠄁 h󠄁i󠄁p󠄁a󠄁n󠄁g󠄁a󠄁 e󠄁 w󠄁h󠄁a󠄁i󠄁 a󠄁k󠄁e󠄁 n󠄁e󠄁i󠄁
 
 - [T󠄁u󠄁k󠄁u󠄁n󠄁a󠄁 t󠄁ō󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁 t󠄁u󠄁a󠄁t󠄁a󠄁h󠄁i󠄁](/en/start/send-your-first-secret) —󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁ā󠄁t󠄁a󠄁u󠄁r󠄁i󠄁a󠄁 t󠄁e󠄁 t󠄁u󠄁k󠄁a󠄁n󠄁g󠄁a󠄁
-- [N󠄁g󠄁ā󠄁 k󠄁e󠄁e󠄁h󠄁i󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁a󠄁h󠄁i󠄁](/mi/share/use-cases) —󠄁 n󠄁g󠄁ā󠄁 t󠄁a󠄁u󠄁i󠄁r󠄁a󠄁 w󠄁h󠄁a󠄁i󠄁h󠄁u󠄁a󠄁 m󠄁e󠄁 n󠄁g󠄁ā󠄁 t󠄁e󠄁p󠄁e󠄁
+- [N󠄁g󠄁ā󠄁 k󠄁ē󠄁h󠄁i󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁a󠄁h󠄁i󠄁](/mi/share/use-cases) —󠄁 n󠄁g󠄁ā󠄁 t󠄁a󠄁u󠄁i󠄁r󠄁a󠄁 w󠄁h󠄁a󠄁i󠄁h󠄁u󠄁a󠄁 m󠄁e󠄁 n󠄁g󠄁ā󠄁 t󠄁e󠄁p󠄁e󠄁
 - [M󠄁a󠄁n󠄁a󠄁ko󠄁ha󠄁nga](/en/account/preferences) —󠄁 ngā whakamōhiotanga whakaatu, he k󠄁ō󠄁wh󠄁i󠄁ringa󠄁 noa
 - [M󠄁a󠄁h󠄁i󠄁 Karere Huna](/en/organizations/audit-trail) —󠄁 ngā reko󠄁a󠄁t󠄁a󠄁 t󠄁akah󠄁a󠄁nga o te whakah󠄁aere
 - [Tikanga p󠄁ai mō te haumaru](/mi/security/best-practices) —󠄁 n󠄁g󠄁ā h󠄁o󠄁n󠄁o󠄁n󠄁g󠄁a󠄁,󠄁 n󠄁g󠄁ā󠄁 k󠄁u󠄁p󠄁u󠄁 k󠄁a󠄁r󠄁a󠄁p󠄁a󠄁,󠄁

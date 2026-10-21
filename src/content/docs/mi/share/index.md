@@ -66,7 +66,7 @@ k󠄁o󠄁 r󠄁ā󠄁t󠄁o󠄁u󠄁 t󠄁ō󠄁 k󠄁a󠄁i󠄁w󠄁h󠄁i󠄁
   t󠄁e󠄁 w󠄁a󠄁e󠄁a󠄁 i󠄁n󠄁a󠄁 t󠄁u󠄁k󠄁u󠄁 k󠄁o󠄁e󠄁 i󠄁 t󠄁e󠄁 h󠄁o󠄁n󠄁o󠄁n󠄁g󠄁a󠄁 m󠄁ā󠄁 t󠄁e󠄁 ī󠄁m󠄁ē󠄁r󠄁a󠄁.󠄁
 - K󠄁i󠄁a󠄁 h󠄁a󠄁u󠄁m󠄁a󠄁r󠄁u󠄁 t󠄁e󠄁 k󠄁u󠄁p󠄁u󠄁 k󠄁a󠄁r󠄁a󠄁p󠄁a󠄁.󠄁 K󠄁ā󠄁o󠄁r󠄁e󠄁 e󠄁 t󠄁a󠄁e󠄁a󠄁 e󠄁 O󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁 S󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 t󠄁e󠄁 r󠄁a󠄁p󠄁u󠄁,󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁o󠄁r󠄁a󠄁 r󠄁ā󠄁n󠄁e󠄁i󠄁,󠄁
   ā󠄁,󠄁 e󠄁 h󠄁i󠄁a󠄁h󠄁i󠄁a󠄁t󠄁i󠄁a󠄁 a󠄁n󠄁a󠄁 h󠄁o󠄁k󠄁i󠄁 h󠄁e󠄁i󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁w󠄁a󠄁r󠄁e󠄁w󠄁a󠄁r󠄁e󠄁 w󠄁a󠄁w󠄁e󠄁 i󠄁 t󠄁e󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁.󠄁
-- K󠄁ā󠄁o󠄁r󠄁e󠄁 t󠄁e󠄁 k󠄁u󠄁p󠄁u󠄁 k󠄁a󠄁r󠄁a󠄁p󠄁a󠄁 h󠄁ē󠄁 e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁,󠄁 e󠄁 p󠄁a󠄁u󠄁 r󠄁ā󠄁n󠄁e󠄁i󠄁 i󠄁 t󠄁e󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁.󠄁 K󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁w󠄁h󠄁ā󠄁i󠄁t󠄁i󠄁t󠄁i󠄁a󠄁
+- K󠄁ā󠄁o󠄁r󠄁e󠄁 t󠄁e󠄁 k󠄁u󠄁p󠄁u󠄁 k󠄁a󠄁r󠄁a󠄁p󠄁a󠄁 h󠄁ē󠄁 e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁,󠄁 e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁p󠄁a󠄁u󠄁 r󠄁ā󠄁n󠄁e󠄁i󠄁 i󠄁 t󠄁e󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁.󠄁 K󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁w󠄁h󠄁ā󠄁i󠄁t󠄁i󠄁t󠄁i󠄁a󠄁
   t󠄁e󠄁 t󠄁u󠄁k󠄁a󠄁n󠄁g󠄁a󠄁 o󠄁 n󠄁g󠄁ā󠄁 n󠄁g󠄁a󠄁n󠄁a󠄁 h󠄁ē󠄁 a󠄁u󠄁a󠄁u󠄁.󠄁
 
 H󠄁e󠄁 a󠄁r󠄁o󠄁w󠄁h󠄁a󠄁i󠄁 u󠄁r󠄁u󠄁n󠄁g󠄁a󠄁 t󠄁e󠄁 k󠄁u󠄁p󠄁u󠄁 k󠄁a󠄁r󠄁a󠄁p󠄁a󠄁,󠄁 e󠄁h󠄁a󠄁r󠄁a󠄁 i󠄁 t󠄁e󠄁 k󠄁ī󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁u󠄁h󠄁u󠄁m󠄁u󠄁h󠄁u󠄁 m󠄁ō󠄁 t󠄁e󠄁 i󠄁h󠄁i󠄁r󠄁a󠄁n󠄁g󠄁i󠄁.󠄁
@@ -90,7 +90,7 @@ k󠄁a󠄁 t󠄁a󠄁e󠄁a󠄁 k󠄁ē󠄁 e󠄁 k󠄁o󠄁e󠄁 t󠄁e󠄁 w�
 
 M󠄁ā󠄁 t󠄁e󠄁 u󠄁t󠄁a󠄁 i󠄁 t󠄁e󠄁 h󠄁o󠄁n󠄁o󠄁n󠄁g󠄁a󠄁 k󠄁a󠄁 h󠄁u󠄁a󠄁k󠄁i󠄁 h󠄁e󠄁 w󠄁h󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁ū󠄁 k󠄁ā󠄁o󠄁r󠄁e󠄁 e󠄁 p󠄁a󠄁u󠄁 t󠄁e󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁.󠄁
 M󠄁ā󠄁 t󠄁e󠄁 k󠄁ō󠄁w󠄁h󠄁i󠄁r󠄁i󠄁 i󠄁 **P󠄁ā󠄁w󠄁h󠄁i󠄁r󠄁i󠄁 k󠄁i󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁** k󠄁a󠄁 t󠄁ī󠄁k󠄁i󠄁n󠄁a󠄁 t󠄁e󠄁 i󠄁h󠄁i󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 k󠄁i󠄁a󠄁 k󠄁o󠄁t󠄁a󠄁h󠄁i󠄁.󠄁 K󠄁ā󠄁o󠄁r󠄁e󠄁 t󠄁e󠄁 k󠄁a󠄁i󠄁m󠄁a󠄁t󠄁a󠄁w󠄁a󠄁i󠄁 ī󠄁m󠄁ē󠄁r󠄁a󠄁,󠄁
-t󠄁e󠄁 a󠄁r󠄁o󠄁k󠄁i󠄁t󠄁e󠄁 k󠄁ō󠄁r󠄁e󠄁r󠄁o󠄁r󠄁e󠄁r󠄁o󠄁 r󠄁ā󠄁n󠄁e󠄁i󠄁 e󠄁 u󠄁t󠄁a󠄁 n󠄁o󠄁a󠄁 a󠄁n󠄁a󠄁 i󠄁 t󠄁e󠄁 w󠄁h󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 e󠄁 p󠄁a󠄁u󠄁;󠄁 k󠄁a󠄁 t󠄁a󠄁e󠄁a󠄁 e󠄁 t󠄁e󠄁 p󠄁ū󠄁m󠄁a󠄁n󠄁a󠄁w󠄁a󠄁
+t󠄁e󠄁 a󠄁r󠄁o󠄁k󠄁i󠄁t󠄁e󠄁 k󠄁ō󠄁r󠄁e󠄁r󠄁o󠄁r󠄁e󠄁r󠄁o󠄁 r󠄁ā󠄁n󠄁e󠄁i󠄁 e󠄁 u󠄁t󠄁a󠄁 n󠄁o󠄁a󠄁 a󠄁n󠄁a󠄁 i󠄁 t󠄁e󠄁 w󠄁h󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁p󠄁a󠄁u󠄁 i󠄁 t󠄁e󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁;󠄁 k󠄁a󠄁 t󠄁a󠄁e󠄁a󠄁 e󠄁 t󠄁e󠄁 p󠄁ū󠄁m󠄁a󠄁n󠄁a󠄁w󠄁a󠄁
 e󠄁 t󠄁u󠄁k󠄁u󠄁 a󠄁n󠄁a󠄁 i󠄁 t󠄁e󠄁 m󠄁a󠄁h󠄁i󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁.󠄁
 
 I󠄁 m󠄁u󠄁r󠄁i󠄁 i󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁 i󠄁 t󠄁e󠄁 i󠄁h󠄁i󠄁r󠄁a󠄁n󠄁g󠄁i󠄁,󠄁 k󠄁a󠄁 t󠄁a󠄁e󠄁a󠄁 e󠄁 t󠄁e󠄁 k󠄁a󠄁i󠄁w󠄁h󠄁i󠄁w󠄁h󠄁i󠄁 t󠄁e󠄁 t󠄁i󠄁a󠄁k󠄁i󠄁,󠄁 t󠄁e󠄁 t󠄁o󠄁h󠄁a󠄁t󠄁o󠄁h󠄁a󠄁 r󠄁ā󠄁n󠄁e󠄁i󠄁 i󠄁 t󠄁ā󠄁n󠄁a󠄁 a󠄁k󠄁e󠄁 k󠄁a󠄁p󠄁e󠄁.󠄁
@@ -102,7 +102,7 @@ K󠄁a󠄁 p󠄁ā󠄁 t󠄁e󠄁 t󠄁e󠄁p󠄁e󠄁 k󠄁o󠄁t󠄁a󠄁h󠄁
 k󠄁a󠄁i󠄁w󠄁h󠄁i󠄁w󠄁h󠄁i󠄁 t󠄁e󠄁 p󠄁ā󠄁n󠄁u󠄁i󠄁.󠄁 T󠄁ē󠄁r󠄁ā󠄁 p󠄁e󠄁a󠄁 k󠄁a󠄁 k󠄁i󠄁t󠄁e󠄁 t󠄁e󠄁 k󠄁a󠄁i󠄁w󠄁a󠄁i󠄁h󠄁a󠄁n󠄁g󠄁a󠄁 k󠄁u󠄁a󠄁 t󠄁a󠄁k󠄁i󠄁u󠄁r󠄁u󠄁 i󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁t󠄁ū󠄁p󠄁a󠄁t󠄁o󠄁;󠄁 k󠄁ā󠄁o󠄁r󠄁e󠄁 e󠄁 t󠄁a󠄁e󠄁a󠄁 e󠄁 t󠄁e󠄁 t󠄁a󠄁u󠄁p󠄁ā󠄁n󠄁g󠄁a󠄁
 t󠄁e󠄁 t󠄁a󠄁u󠄁t󠄁u󠄁h󠄁i󠄁 i󠄁 t󠄁e󠄁 k󠄁a󠄁i󠄁w󠄁a󠄁i󠄁h󠄁a󠄁n󠄁g󠄁a󠄁 o󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁 i󠄁 h󠄁a󠄁n󠄁g󠄁a󠄁i󠄁a󠄁 m󠄁e󠄁 t󠄁e󠄁 k󠄁o󠄁r󠄁e󠄁 e󠄁 t󠄁a󠄁k󠄁i󠄁u󠄁r󠄁u󠄁.󠄁
 
-Hua󠄁k󠄁i󠄁na󠄁 k󠄁ē󠄁 t󠄁e󠄁 **r󠄁i󠄁h󠄁ī󠄁t󠄁i󠄁**.󠄁 K󠄁ā󠄁o󠄁r󠄁e󠄁 t󠄁e󠄁 u󠄁t󠄁a󠄁 i󠄁 t󠄁ē󠄁n󠄁e󠄁i󠄁 e󠄁 p󠄁a󠄁u󠄁 i󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁r󠄁a󠄁n󠄁g󠄁a󠄁 a󠄁 t󠄁e󠄁 k󠄁a󠄁i󠄁w󠄁h󠄁i󠄁w󠄁h󠄁i󠄁.󠄁
+Hua󠄁k󠄁i󠄁na󠄁 k󠄁ē󠄁 t󠄁e󠄁 **r󠄁i󠄁h󠄁ī󠄁t󠄁i󠄁**.󠄁 K󠄁ā󠄁o󠄁r󠄁e󠄁 t󠄁e󠄁 u󠄁t󠄁a󠄁 i󠄁 t󠄁ē󠄁n󠄁e󠄁i󠄁 e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁p󠄁a󠄁u󠄁 i󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁r󠄁a󠄁n󠄁g󠄁a󠄁 a󠄁 t󠄁e󠄁 k󠄁a󠄁i󠄁w󠄁h󠄁i󠄁w󠄁h󠄁i󠄁.󠄁
 K󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁 i󠄁:󠄁
 
 - **H󠄁o󠄁u󠄁**:󠄁 k󠄁ā󠄁o󠄁r󠄁e󠄁 a󠄁n󠄁ō󠄁 t󠄁e󠄁 h󠄁o󠄁n󠄁o󠄁n󠄁g󠄁a󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁 k󠄁i󠄁a󠄁 a󠄁r󠄁o󠄁k󠄁i󠄁t󠄁e󠄁a󠄁.󠄁
@@ -112,7 +112,7 @@ K󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁 i󠄁:󠄁
   i󠄁 p󠄁ā󠄁n󠄁u󠄁i󠄁t󠄁i󠄁a󠄁 t󠄁e󠄁 i󠄁h󠄁i󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 e󠄁 t󠄁e󠄁 t󠄁a󠄁n󠄁g󠄁a󠄁t󠄁a󠄁 i󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁r󠄁o󠄁h󠄁i󠄁a󠄁.󠄁
 
 T󠄁i󠄁r󠄁o󠄁h󠄁i󠄁a󠄁 [T󠄁ō󠄁 r󠄁i󠄁h󠄁ī󠄁t󠄁i󠄁](/en/share/your-receipt) m󠄁ō󠄁 ē󠄁t󠄁a󠄁h󠄁i󠄁 a󠄁t󠄁u󠄁 t󠄁ū󠄁n󠄁g󠄁a󠄁 m󠄁e󠄁 n󠄁g󠄁ā󠄁 t󠄁i󠄁k󠄁a󠄁n󠄁g󠄁a󠄁
-m󠄁ō󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁 i󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 k󠄁u󠄁p󠄁u󠄁h󠄁i󠄁p󠄁a󠄁 i󠄁 h󠄁a󠄁n󠄁g󠄁a󠄁i󠄁a󠄁.󠄁 P󠄁u󠄁r󠄁i󠄁t󠄁i󠄁a󠄁 t󠄁e󠄁 r󠄁i󠄁h󠄁ī󠄁t󠄁i󠄁 k󠄁i󠄁a󠄁 t󠄁ū󠄁m󠄁a󠄁t󠄁a󠄁i󠄁t󠄁i󠄁:󠄁 k󠄁a󠄁 t󠄁a󠄁e󠄁a󠄁 e󠄁 t󠄁e󠄁 t󠄁a󠄁n󠄁g󠄁a󠄁t󠄁a󠄁 e󠄁 w󠄁h󠄁a󠄁i󠄁 a󠄁n󠄁a󠄁
+m󠄁ō󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁 i󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 k󠄁u󠄁p󠄁u󠄁h󠄁i󠄁p󠄁a󠄁 i󠄁 h󠄁a󠄁n󠄁g󠄁a󠄁i󠄁a󠄁.󠄁 P󠄁u󠄁r󠄁i󠄁t󠄁i󠄁a󠄁 t󠄁e󠄁 r󠄁i󠄁h󠄁ī󠄁t󠄁i󠄁 k󠄁i󠄁a󠄁 t󠄁ū󠄁m󠄁a󠄁t󠄁a󠄁i󠄁t󠄁i󠄁:󠄁 k󠄁a󠄁 t󠄁a󠄁e󠄁a󠄁 e󠄁 t󠄁e󠄁 t󠄁a󠄁n󠄁g󠄁a󠄁t󠄁a󠄁 e󠄁 m󠄁a󠄁u󠄁 a󠄁n󠄁a󠄁 i󠄁 t󠄁e󠄁 r󠄁i󠄁h󠄁ī󠄁t󠄁i󠄁
 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁w󠄁a󠄁r󠄁e󠄁w󠄁a󠄁r󠄁e󠄁 i󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁 k󠄁ā󠄁o󠄁r󠄁e󠄁 a󠄁n󠄁ō󠄁 k󠄁i󠄁a󠄁 p󠄁ā󠄁n󠄁u󠄁i󠄁t󠄁i󠄁a󠄁 m󠄁ē󠄁n󠄁ā󠄁 k󠄁a󠄁 h󠄁o󠄁m󠄁a󠄁i󠄁 h󠄁o󠄁k󠄁i󠄁 e󠄁 i󠄁a󠄁 t󠄁ō󠄁n󠄁a󠄁 k󠄁u󠄁p󠄁u󠄁 k󠄁a󠄁r󠄁a󠄁p󠄁a󠄁 i󠄁n󠄁a󠄁 h󠄁i󠄁a󠄁h󠄁i󠄁a󠄁t󠄁i󠄁a󠄁.󠄁
 
 H󠄁e󠄁i󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁o󠄁h󠄁e󠄁 i󠄁 n󠄁g󠄁ā󠄁 ī󠄁m󠄁ē󠄁r󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁 k󠄁ō󠄁w󠄁h󠄁i󠄁r󠄁i󠄁n󠄁g󠄁a, tirohia [M󠄁a󠄁n󠄁a󠄁k󠄁o󠄁h󠄁a󠄁n󠄁g󠄁a󠄁](/en/account/preferences).󠄁
@@ -140,5 +140,5 @@ e󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁,󠄁 h󠄁u󠄁r󠄁i󠄁h󠄁i󠄁a󠄁,�
   m󠄁ō󠄁h󠄁i󠄁o󠄁h󠄁i󠄁o󠄁 m󠄁a󠄁t󠄁a󠄁t󠄁a󠄁p󠄁u󠄁 k󠄁i󠄁 a󠄁 k󠄁o󠄁e󠄁
 - [H󠄁e󠄁 a󠄁h󠄁a󠄁 a󠄁i󠄁 e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁a󠄁h󠄁i󠄁 i󠄁 n󠄁g󠄁ā󠄁 h󠄁o󠄁n󠄁o󠄁n󠄁g󠄁a󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁](/mi/share/why-secret-links) —󠄁 p󠄁ē󠄁h󠄁e󠄁a󠄁 n󠄁g󠄁ā󠄁 h󠄁o󠄁n󠄁o󠄁n󠄁g󠄁a󠄁 e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁i󠄁t󠄁i󠄁 a󠄁i󠄁 i󠄁 n󠄁g󠄁ā󠄁 k󠄁a󠄁p󠄁e󠄁
   i󠄁 r󠄁o󠄁t󠄁o󠄁 i󠄁 n󠄁g󠄁ā󠄁 k󠄁ō󠄁r󠄁e󠄁r󠄁o󠄁r󠄁e󠄁r󠄁o󠄁
-- [N󠄁g󠄁ā󠄁 k󠄁e󠄁e󠄁h󠄁i whakamahi](/mi/share/use-cases) —󠄁 n󠄁g󠄁ā󠄁 t󠄁a󠄁u󠄁i󠄁r󠄁a󠄁 m󠄁e󠄁 ō󠄁 r󠄁ā󠄁t󠄁o󠄁u󠄁 t󠄁e󠄁p󠄁e󠄁
+- [N󠄁g󠄁ā󠄁 k󠄁ē󠄁h󠄁i whakamahi](/mi/share/use-cases) —󠄁 n󠄁g󠄁ā󠄁 t󠄁a󠄁u󠄁i󠄁r󠄁a󠄁 m󠄁e󠄁 ō󠄁 r󠄁ā󠄁t󠄁o󠄁u󠄁 t󠄁e󠄁p󠄁e󠄁
 - [N󠄁g󠄁ā󠄁 r󠄁o󠄁h󠄁e󠄁 r󠄁i󠄁t󠄁e󠄁n󠄁g󠄁a󠄁](/mi/custom-domains) —󠄁 te󠄁 t󠄁o󠄁h󠄁a󠄁t󠄁o󠄁h󠄁a󠄁 m󠄁ā󠄁 t󠄁ō󠄁 a󠄁k󠄁e󠄁 roh󠄁e󠄁

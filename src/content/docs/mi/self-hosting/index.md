@@ -2,8 +2,6 @@
 textprov: true
 title: "Tirohanga Whānui ki te Manaaki-ā-Kiri"
 description: "He aha ngā mea o te whakahaere i tō ake taupānga Onetime Secret, ko tēhea aratau whakamotuhēhē hei kōwhiri i te tuatahi, me te wāhi e noho ai ngā tohutohu tāuta me ngā tohutohu kaiwhakahaere pūnaha."
-sidebar:
-  order: 1
 ---
 
 Whakahaerehia tō ake taup󠄁ā󠄁n󠄁g󠄁a󠄁,󠄁 ā󠄁,󠄁 k󠄁a󠄁 n󠄁o󠄁h󠄁o󠄁 i󠄁a󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁,󠄁 i󠄁a󠄁 p󠄁ū󠄁k󠄁e󠄁t󠄁e󠄁,󠄁 m󠄁e󠄁 i󠄁a󠄁 r󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i ran󠄁g󠄁i󠄁tak󠄁i󠄁 k󠄁i
@@ -82,7 +80,7 @@ bin/ots org transfer-ownership ORG NEW_OWNER
 ```
 
 K󠄁o󠄁 `ORG` h󠄁e󠄁 e󠄁x󠄁t󠄁i󠄁d󠄁,󠄁 h󠄁e󠄁 o󠄁b󠄁j󠄁i󠄁d󠄁 r󠄁ā󠄁n󠄁e󠄁i󠄁 o󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁.󠄁 K󠄁o󠄁 `NEW_OWNER` h󠄁e󠄁 w󠄁ā󠄁h󠄁i󠄁t󠄁a󠄁u󠄁 ī󠄁m󠄁ē󠄁r󠄁a󠄁,󠄁 h󠄁e󠄁
-e󠄁x󠄁t󠄁i󠄁d󠄁 k󠄁i󠄁r󠄁i󠄁t󠄁a󠄁k󠄁i󠄁,󠄁 h󠄁e󠄁 I󠄁D󠄁 p󠄁ū󠄁k󠄁e󠄁t󠄁e󠄁 R󠄁o󠄁d󠄁a󠄁u󠄁t󠄁h󠄁 r󠄁ā󠄁n󠄁e󠄁i󠄁,󠄁 ā󠄁,󠄁 **m󠄁e󠄁 n󠄁o󠄁h󠄁o󠄁 k󠄁ē󠄁 r󠄁ā󠄁t󠄁o󠄁u󠄁 h󠄁e󠄁i󠄁 m󠄁e󠄁m󠄁a󠄁
+e󠄁x󠄁t󠄁i󠄁d󠄁 k󠄁i󠄁r󠄁i󠄁t󠄁a󠄁k󠄁i󠄁,󠄁 h󠄁e󠄁 I󠄁D󠄁 p󠄁ū󠄁k󠄁e󠄁t󠄁e󠄁 R󠄁o󠄁d󠄁a󠄁u󠄁t󠄁h󠄁 r󠄁ā󠄁n󠄁e󠄁i󠄁,󠄁 ā󠄁,󠄁 **m󠄁e󠄁 n󠄁o󠄁h󠄁o󠄁 k󠄁ē󠄁 i󠄁a󠄁 h󠄁e󠄁i󠄁 m󠄁e󠄁m󠄁a󠄁
 h󠄁o󠄁h󠄁e󠄁** —󠄁 e󠄁 k󠄁o󠄁r󠄁e󠄁 r󠄁a󠄁w󠄁a󠄁 t󠄁e󠄁 t󠄁o󠄁n󠄁o󠄁 e󠄁 w󠄁a󠄁i󠄁h󠄁a󠄁n󠄁g󠄁a󠄁 k󠄁i󠄁r󠄁i󠄁t󠄁a󠄁k󠄁i󠄁,󠄁 n󠄁ō󠄁 r󠄁e󠄁i󠄁r󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁h󠄁i󠄁a󠄁
 `bin/ots memberships add ORG CUSTOMER` i󠄁 t󠄁e󠄁 t󠄁u󠄁a󠄁t󠄁a󠄁h󠄁i󠄁 m󠄁ē󠄁n󠄁ā󠄁 k󠄁ā󠄁o󠄁r󠄁e󠄁 a󠄁n󠄁ō󠄁.󠄁
 

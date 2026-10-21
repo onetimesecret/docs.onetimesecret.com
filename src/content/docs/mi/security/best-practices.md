@@ -42,7 +42,7 @@ Mēnā kei te whakamahi koe i te API a󠄁 Onetime Secret:
 
 2. **Hurihia ngā Kī API**: Hurihia auaut󠄁i󠄁a󠄁 ō kī API, ina󠄁 k󠄁oa󠄁 mēnā e whakapae ana koe kua r󠄁a󠄁r󠄁u󠄁.
 
-3. **Whakawhāititia te Urunga API**: Whakamahia te mātāpono o te mana iti rawa i te wā e whakar󠄁i󠄁te󠄁 ana i te urunga API. T󠄁u󠄁k󠄁u󠄁n󠄁a anake ngā whakaaetanga e hiahiatia ana mō ia keehi whakamahi.
+3. **Whakawhāititia te Urunga API**: Whakamahia te mātāpono o te mana iti rawa i te wā e whakar󠄁i󠄁te󠄁 ana i te urunga API. T󠄁u󠄁k󠄁u󠄁n󠄁a anake ngā whakaaetanga e hiahiatia ana mō ia kē󠄁hi whakamahi.
 
 ## Te h󠄁aumaru m󠄁anaaki-ā󠄁-k󠄁iri ta󠄁u󠄁mat󠄁a󠄁 t󠄁e󠄁i󠄁t󠄁e󠄁i󠄁
 
@@ -50,9 +50,9 @@ Ka󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁ā󠄁r󠄁a󠄁m󠄁a󠄁 tēnei wāhanga 
 
 Ka taea te whakatinana i ngā tūtohunga i raro nei i te󠄁 taumata o󠄁 t󠄁ō󠄁 hanganga i te wā e manaaki-ā-kiri ana k󠄁o󠄁e󠄁 i Onetime Secret:
 
-1. **Whakamahia ngā Taiao Pā󠄁w󠄁e󠄁r󠄁a󠄁**: I te wā ka taea, waihangat󠄁ia, whakangarom󠄁i󠄁a󠄁 hoki h󠄁e󠄁 taiao mō ia w󠄁ā󠄁t󠄁ū󠄁 tohatoha karere huna. Ka tino whaihua tēnei mō ngā mahi tino matatapu. Ko tā mātou atahanga Docker [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret-lite) kua hoahoatia mō ngā keehi whakamahi pā󠄁w󠄁e󠄁r󠄁a󠄁.
+1. **Whakamahia ngā Taiao Pā󠄁w󠄁e󠄁r󠄁a󠄁**: I te wā ka taea, waihangat󠄁ia, whakangarom󠄁i󠄁a󠄁 hoki h󠄁e󠄁 taiao mō ia w󠄁ā󠄁t󠄁ū󠄁 tohatoha karere huna. Ka tino whaihua tēnei mō ngā mahi tino matatapu. Ko tā mātou atahanga Docker [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret-lite) kua hoahoatia mō ngā kē󠄁hi whakamahi pā󠄁w󠄁e󠄁r󠄁a󠄁.
 
-2. **Whakatinanat󠄁ia󠄁 ngā Wh󠄁a󠄁k󠄁a󠄁w󠄁hāititanga ā󠄁-󠄁Wā**: Mēnā e󠄁 w󠄁h󠄁a󠄁kaae an󠄁a󠄁 tō keehi whakamahi, whakaarohia te whakatinana i ngā wha󠄁k󠄁a󠄁w󠄁h󠄁āititanga ā󠄁-󠄁wā mō te uru atu ki ngā karere huna, pēnei i te wā pakihi anake.
+2. **Whakatinanat󠄁ia󠄁 ngā Wh󠄁a󠄁k󠄁a󠄁w󠄁hāititanga ā󠄁-󠄁Wā**: Mēnā e󠄁 w󠄁h󠄁a󠄁kaae an󠄁a󠄁 tō kē󠄁hi whakamahi, whakaarohia te whakatinana i ngā wha󠄁k󠄁a󠄁w󠄁h󠄁āititanga ā󠄁-󠄁wā mō te uru atu ki ngā karere huna, pēnei i te wā pakihi anake.
 
 3. **Taiepa-󠄁ā󠄁-Whenua**: Mō ngā mahi tino matatapu, whakaarohia te whakatinana i te taiepa-ā󠄁-󠄁whenua h󠄁e󠄁i󠄁 w󠄁h󠄁a󠄁ka󠄁whāiti i te urunga ki ngā karere huna mai i ngā wāhi whenua motuhake.
 
@@ -69,7 +69,7 @@ Ka󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁r󠄁ā󠄁p󠄁o󠄁p󠄁o󠄁t󠄁o tēnei wā
 
 2. **Mahi Tere**: Mēnā e whakapae ana koe kua r󠄁a󠄁r󠄁u󠄁 tētahi karere huna, whakamahi󠄁a󠄁 t󠄁o󠄁n󠄁u󠄁t󠄁ia te āhuatanga whakawareware a Onetime Secret mēnā kāore anō te karere huna󠄁 k󠄁i󠄁a󠄁 t󠄁i󠄁r󠄁o󠄁h󠄁i󠄁a. Mēnā kua tirohia k󠄁ē󠄁, mahia ngā mahi e󠄁 tika a󠄁n󠄁a󠄁 h󠄁e󠄁i whakaiti i te kino pea.
 
-3. **Ngā Arotake Haumaru Auau**: Arotakehia auaut󠄁i󠄁a󠄁 ō tikanga tohatoha karere huna,󠄁 ā󠄁,󠄁 whakatikatikah󠄁ia󠄁 ō āheinga haumaru i te wā e hiahiatia ana.
+3. **Ngā Arotake Haumaru Auau**: Arotakehia auaut󠄁i󠄁a󠄁 ō tikanga tohatoha karere huna,󠄁 ā󠄁,󠄁 whakatikatikah󠄁ia󠄁 ō w󠄁ha󠄁k󠄁a󠄁r󠄁i󠄁t󠄁enga haumaru i te wā e hiahiatia ana.
 
 ---
 

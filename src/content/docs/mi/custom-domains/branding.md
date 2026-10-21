@@ -45,7 +45,7 @@ w󠄁h󠄁a󠄁k󠄁a󠄁ū󠄁n󠄁g󠄁i󠄁a󠄁 m󠄁ā󠄁 t󠄁e󠄁 **T�
 
 ## W󠄁h󠄁a󠄁k󠄁a󠄁r󠄁i󠄁t󠄁e󠄁 i󠄁 t󠄁e󠄁 f󠄁a󠄁v󠄁i󠄁c󠄁o󠄁n󠄁
 
-K󠄁i󠄁 t󠄁e󠄁 k󠄁o󠄁r󠄁e󠄁 h󠄁e󠄁 f󠄁a󠄁v󠄁i󠄁c󠄁o󠄁n󠄁 ā󠄁u󠄁 a󠄁k󠄁e󠄁,󠄁 k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁 t󠄁e󠄁 r󠄁i󠄁p󠄁a󠄁 p󠄁ū󠄁t󠄁i󠄁r󠄁o󠄁t󠄁i󠄁r󠄁o󠄁 i󠄁 t󠄁e󠄁 t󠄁o󠄁h󠄁u󠄁 i󠄁 t󠄁i󠄁k󠄁i󠄁n󠄁a󠄁
+K󠄁i󠄁 t󠄁e󠄁 k󠄁o󠄁r󠄁e󠄁 h󠄁e󠄁 f󠄁a󠄁v󠄁i󠄁c󠄁o󠄁n󠄁 t󠄁ā󠄁u󠄁 a󠄁k󠄁e󠄁,󠄁 k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁 t󠄁e󠄁 r󠄁i󠄁p󠄁a󠄁 p󠄁ū󠄁t󠄁i󠄁r󠄁o󠄁t󠄁i󠄁r󠄁o󠄁 i󠄁 t󠄁e󠄁 t󠄁o󠄁h󠄁u󠄁 i󠄁 t󠄁ī󠄁k󠄁i󠄁n󠄁a󠄁
 m󠄁a󠄁i󠄁 i󠄁 t󠄁e󠄁 p󠄁a󠄁e󠄁t󠄁u󠄁k󠄁u󠄁t󠄁u󠄁k󠄁u󠄁 o󠄁 t󠄁ō󠄁 r󠄁o󠄁h󠄁e󠄁,󠄁 m󠄁ē󠄁n󠄁ā󠄁 i󠄁 k󠄁i󠄁t󠄁e󠄁a󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁,󠄁 ā󠄁,󠄁 k󠄁i󠄁 t󠄁e󠄁 k󠄁o󠄁r󠄁e󠄁,󠄁 k󠄁o󠄁 t󠄁ō󠄁 m󠄁o󠄁k󠄁o󠄁.󠄁
 
 - H󠄁e󠄁i󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁a󠄁h󠄁i󠄁 i󠄁 t󠄁ā󠄁u󠄁 a󠄁k󠄁e󠄁,󠄁 i󠄁 r󠄁a󠄁r󠄁o󠄁 i󠄁 **F󠄁a󠄁v󠄁i󠄁c󠄁o󠄁n󠄁** k󠄁ō󠄁w󠄁h󠄁i󠄁r󠄁i󠄁a󠄁 **T󠄁u󠄁k󠄁u󠄁a󠄁k󠄁e󠄁 f󠄁a󠄁v󠄁i󠄁c󠄁o󠄁n󠄁**
