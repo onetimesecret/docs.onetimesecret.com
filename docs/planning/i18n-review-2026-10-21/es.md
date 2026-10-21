@@ -190,3 +190,43 @@ Verified as matching the shipped es strings: Dominios, Gestionar, Funciones, Ges
 
 - I did not run a build. Anchor slugs in the suggested link fixes (`#trasladar-un-dominio-personalizado`, `#qué-incluye-cada-plan`, `#dónde-se-sirve-su-dominio`) come from the existing `dist/es` output, which was built before this commit; the es heading text is unchanged.
 - I did not re-verify plan limits and prices against `billing.yaml.txt`. The translated figures match the English pages exactly.
+
+## Resolution (fix round, 2026-10-21)
+
+| Commit | Subject |
+|---|---|
+| 01276a95 | docs(i18n/es): match branding labels to the shipped app |
+| b9bc94de | docs(i18n/es): correct mistranslations in share pages |
+| b091671f | docs(i18n/es): use consistent terms for lifetime, expiry and settings |
+| a3fd09ff | docs(i18n/es): link to Spanish pages that exist |
+| 1b83ae81 | docs(i18n/es): fix fluency and typography |
+| 8da86b9a | docs(i18n/es): align sidebar labels with page titles |
+
+All 37 per-page findings (4 major, 33 minor) are fixed. Labels were verified against app main 145c1e7cfa (`locales/content/es/workspace-branding.json`; `borderRadiusDisplayMap` and `fontDisplayMap` in `src/shared/utils/brand-helpers.ts`, used by `SimpleBrandPanel.vue`). Four fixes differ from the suggested wording:
+
+- branding.md:65: the corner options are quoted in English without the suggested Spanish glosses, the same way as the font options on line 66.
+- pricing/index.md:7: only «con confianza» changed (to «con tranquilidad»). «eleve su marca» was not part of the finding and is unchanged.
+- pricing/index.md:67: «¿Qué nivel de seguridad ofrece Onetime Secret?» replaces the suggested «¿Es seguro Onetime Secret?», which turns "How secure" into a yes/no question.
+- self-hosting/index.md:54: «avance hacia las más recientes» replaces the suggested «continúe en orden». The guide list runs newest to oldest, so "in order" would point the reader the wrong way.
+
+The terminology table rows that had no per-page finding were also fixed: custom-domains/index.md:21 «instrucciones de revelado» and share/index.md:21 «ajustes». In the sidebar bundle, the Title Case labels, the labels that differed from page titles and the five missing keys are fixed. The label for `brandGuide` is «Marca personalizada» (en "Branding"; the es glossary entry "custom branding"; the label custom-domains/index.md uses for this page). «Guía de marca» was not used because in Spanish it reads as brand guidelines.
+
+### Skipped findings
+
+| Page:line | Finding | Reason |
+|---|---|---|
+| api/index.mdoc:39 | «token de API» vs app «Clave API» (UI label table) | The translation follows the English "API token". It depends on an English source change; see Decisions needed. |
+| share/index.md:17 | Trailing period after the quoted error (UI label table) | Known issue es-2. The sentence punctuation follows the English and the quoted string matches the app. |
+| self-hosting/index.md:5 | Legacy `sidebar: order: 1` frontmatter key | Harmless (sidebar.mjs lists pages explicitly), and every locale copy has it. Removing it is a cross-locale cleanup, not an es fix. |
+
+### Decisions needed
+
+- `src/content/docs/es/translations/_language-notes.md` §4 locks the informal tú, and app governance `rule.es-register-informal` forbids usted. All 17 es docs pages use usted. Add a docs-register section that sets usted for documentation prose and keeps quoted app strings in their shipped tú form (for example share/index.md:17 *No proporcionaste nada para compartir.*).
+- `src/content/docs/es/translations/glossary.md:19` "view/reveal → ver/mostrar" conflicts with the app («Clic para revelar», «Revelado», «Instrucciones de revelación», «Antes de revelar») and with every es page. Change it to revelar / revelación. Add "disclosure (reporting sensitive information) → comunicar información / divulgación, never revelación".
+- Add to the es glossary the renderings this round applied: lifetime → duración; expiry/expire → expiración/expirar; endpoint → punto de conexión; settings → configuración (not ajustes); Related → Contenido relacionado; Next steps → Próximos pasos.
+- English source, api/index.mdoc:40: "the password is the API token from your account settings". The app labels this credential "API Key" (`web.account.api_key`; es «Clave API»). Once the English is fixed, es api/index.mdoc:39 should read «la clave API».
+- Remaining sidebar gaps in `src/content/i18n/es.json` (not flagged, so not changed):
+  - Group keys with no es value: `startHere`, `usingOnetimeSecret`, `sharingSecrets`, `yourAccount`, `organizations`, `plansAndBilling`, `apiAndSdks`.
+  - Keys for es pages that exist but have no label: `howTranslationsWork`, `translationGlossary`.
+  - Labels in use that are still in Title Case: `configurationReference` «Referencia de Configuración», `ourPrinciples` «Nuestros Principios», `universalGuidance` «Directrices Universales», `styleGuide` «Guía de Estilo».
+- `tools/dogfood.py edit`: `mark_edit` aligns clusters only inside the edited span, but `check` aligns the whole file. When the old span contains legacy unmarked clusters that share letters with the replacement, the edit succeeds and the check then fails ("marked unchanged legacy text" or "changed or lost an existing mark"). This happened on use-cases.md:55/63, compare-plans.md:48 and self-hosting/index.md:54/74. Replacing only the changed word passed the check. Other fix agents may need the same workaround, or the tool needs a fix.
