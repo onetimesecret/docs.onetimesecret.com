@@ -3,7 +3,7 @@ title: Closing your account
 description: What closing your account deletes and keeps, what happens to shared links and organizations, and how to close it.
 audience: end-user
 pageType: how-to
-sourceOfTruth: onetimesecret/apps/web/auth/config/hooks/account.rb:1155-1228 (closure preflight, refusal message, and self-service purge); onetimesecret/apps/web/auth/operations/customers/purge_preflight.rb:553-586,636-658,744-752 (memberships removed, empty personal workspace deleted, refusal conditions); onetimesecret/apps/web/auth/operations/remove_authentication_data.rb:100-112,170-196 (credentials removed; a closed sign-in row and its authentication audit log are kept); onetimesecret/apps/web/auth/operations/destroy_customer_record.rb:87-94 (the customer record is deleted); onetimesecret/apps/web/auth/migrations/001_initial.rb:31-32 (a closed row does not reserve its email address)
+sourceOfTruth: onetimesecret/apps/web/auth/config/hooks/account.rb:1155-1228 (closure preflight, refusal message, and self-service purge); onetimesecret/apps/web/auth/operations/customers/purge_preflight.rb:553-586,636-658,744-752 (memberships removed, empty personal workspace deleted, refusal conditions); onetimesecret/apps/web/auth/operations/remove_authentication_data.rb:170-196 (credentials removed; deleting the sign-in row and its authentication audit log at closure is tracked in onetimesecret/onetimesecret#4819); onetimesecret/apps/web/auth/operations/destroy_customer_record.rb:87-94 (the customer record is deleted); onetimesecret/apps/web/auth/migrations/001_initial.rb:31-32 (a closed row does not reserve its email address)
 ---
 
 Closing your account deletes your sign-in methods and account record and signs
