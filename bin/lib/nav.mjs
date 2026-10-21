@@ -147,8 +147,10 @@ const HIDDEN_MARKDOWN = new RegExp(
     // Fenced code, as in CommonMark: the closer is a run of the same character
     // at least as long, alone on its line, and an unclosed fence runs to the
     // end of the page. A backtick fence's info string can't hold a backtick.
-    /^ {0,3}(?<bt>`{3,})[^`\n]*\n[\s\S]*?(?:^ {0,3}\k<bt>`*[ \t]*\r?$|(?![\s\S]))/.source,
-    /^ {0,3}(?<tl>~{3,})[^\n]*\n[\s\S]*?(?:^ {0,3}\k<tl>~*[ \t]*\r?$|(?![\s\S]))/.source,
+    // .source drops the m flag; it's here so linters read ^ and $ as line
+    // anchors, the way the combined pattern below uses them.
+    /^ {0,3}(?<bt>`{3,})[^`\n]*\n[\s\S]*?(?:^ {0,3}\k<bt>`*[ \t]*\r?$|(?![\s\S]))/m.source,
+    /^ {0,3}(?<tl>~{3,})[^\n]*\n[\s\S]*?(?:^ {0,3}\k<tl>~*[ \t]*\r?$|(?![\s\S]))/m.source,
     // Code span: an unescaped backtick run closed by a run of the same length
     // before the paragraph ends. An unmatched run is plain text.
     /(?<![`\\])(?<cs>`+)(?!`)(?:[^\n]|\n(?![ \t]*\r?\n))*?(?<!`)\k<cs>(?!`)/.source,

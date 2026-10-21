@@ -172,6 +172,16 @@ describe("enLinkSlugs", () => {
     }
   });
 
+  it("opens and closes a fence only at the start of a line", () => {
+    for (const fence of ["```", "~~~"]) {
+      const closer = `${fence}\nsee ${fence}\n[a](/en/hidden-a)\n${fence}\n[kept](/en/kept)`;
+      const opener = `A stray ${fence}\n[kept](/en/kept)`;
+      for (const md of [closer, opener]) {
+        expect([...enLinkSlugs(md)]).toEqual(["kept"]);
+      }
+    }
+  });
+
   it("treats backticks in a fence's info string as a code span", () => {
     const md = "```js``` then [kept](/en/kept)\nand [also](/en/also)";
     expect([...enLinkSlugs(md)]).toEqual(["kept", "also"]);
