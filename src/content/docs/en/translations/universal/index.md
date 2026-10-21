@@ -5,7 +5,7 @@ description: Cross-language translation resources that apply to all locales when
 
 This section contains translation guidance that applies across all languages. Review these resources before starting any translation work, as they establish standards for handling common challenges.
 
-## Why Universal Resources
+## Why universal resources
 
 Translating Onetime Secret involves consistent challenges across languages:
 
@@ -18,13 +18,13 @@ These universal resources document proven approaches from multiple language team
 
 ## Resources
 
-### Core Concepts
+### Core concepts
 
 - **[Translating "Secret"](./secret-concept)** - How to handle the word "secret" in different language contexts, with examples from Danish, Italian, Chinese, and more
 
 - **[Password vs. Passphrase](./password-passphrase)** - Maintaining the critical distinction between account credentials and secret protection
 
-### Style and Quality
+### Style and quality
 
 - **[Voice and Tone](./voice-and-tone)** - Patterns for active vs. passive voice, formality levels, and cultural adaptations
 
@@ -32,14 +32,14 @@ These universal resources document proven approaches from multiple language team
 
 - **[Quality Checklist](./quality-checklist)** - Comprehensive checklist for pre-submission review
 
-## Usage Pattern
+## Usage pattern
 
 1. **Before translating**: Read all universal resources
 2. **During translation**: Reference these resources for consistent decisions
 3. **Before submitting**: Use the quality checklist to verify your work
 4. **When stuck**: Check if another language solved a similar problem
 
-## Language-Specific Resources
+## Language-specific resources
 
 After reviewing universal guidance, consult the locale-specific resources:
 
