@@ -1,17 +1,18 @@
 ---
 title: Onetime Secret Documentation
-description: Send passwords, keys and other sensitive text as a link that opens once and then self-destructs. Guides for senders, recipients, teams, developers and self-hosters.
+description: Reference and guides for the Onetime Secret API and client libraries, team workspaces and custom domains, self-hosting, and how the service handles your data.
 template: splash
+heroBackground: burn
 tableOfContents: false
 hero:
-  title: Share it once. Then it's gone.
-  tagline: Onetime Secret turns a password, API key or private note into a link that opens exactly one time. After that, the content is destroyed. No account needed to send or receive.
+  title: Onetime Secret Documentation
+  tagline: Give your team a branded workspace on your own domain, integrate one-time secret links into your own tools, or host the whole thing yourself. Everything past sending the first secret.
   actions:
-    - text: Send your first secret
-      link: /en/start/send-your-first-secret/
+    - text: Configure your custom domain
+      link: /en/custom-domains/setup-guide/
       icon: right-arrow
-    - text: Self-host it
-      link: /en/self-hosting/
+    - text: API docs
+      link: /en/api/
       variant: secondary
     - text: View on GitHub
       link: https://github.com/onetimesecret/onetimesecret
@@ -19,37 +20,46 @@ hero:
       variant: minimal
 ---
 
-## What brings you here?
+## Branding and teams
+
+On the hosted service: a shared workspace with roles and SSO, and secret links sent from a domain your recipients already trust.
 
 {% cardgrid %}
-{% linkcard title="Send a secret" href="/en/start/send-your-first-secret/" description="Paste it, pick how long it lives, then share the link." /%}
-{% linkcard title="Someone sent you a link" href="/en/share/what-recipients-see/" description="What happens when you open it, and why it only works once." /%}
-{% linkcard title="The link says it's gone" href="/en/share/when-a-link-doesnt-work/" description="Already viewed, expired, or burned by the sender, and what to do next." /%}
-{% linkcard title="Teams and custom domains" href="/en/organizations/" description="Shared workspaces, member roles, SSO, and secret links on your own domain." /%}
-{% linkcard title="API and client libraries" href="/en/api/" description="Create and retrieve secrets from scripts, CI pipelines and your own apps." /%}
-{% linkcard title="Hosted or self-hosted?" href="/en/start/hosted-or-self-hosted/" description="Same open-source app either way. Decide who runs the servers." /%}
+{% linkcard title="Organizations" href="/en/organizations/" description="Invite members, assign roles, and review the audit trail." /%}
+{% linkcard title="Custom domains" href="/en/custom-domains/" description="DNS validation, branding, and an incoming page for secrets sent to you." /%}
+{% linkcard title="Single sign-on" href="/en/organizations/sso/" description="Entra, OIDC and SAML sign-in for your organization." /%}
 {% /cardgrid %}
 
-## How it works
+## Integrate
 
-{% steps %}
+Create and retrieve secrets from scripts, CI pipelines and your own applications.
 
-1. **Create.** Paste the secret, choose when it expires, and optionally add a passphrase the recipient must enter.
+{% cardgrid %}
+{% linkcard title="REST API" href="/en/api/" description="Regional endpoints, authentication, and the full reference at api.onetimesecret.com." /%}
+{% linkcard title="Client libraries" href="/en/api/client-libraries/" description="Official and community SDKs, and which ones support regions and custom domains." /%}
+{% linkcard title="Developer on-ramp" href="/en/contribute/developer-on-ramp/" description="Run the app locally and contribute to the codebase." /%}
+{% /cardgrid %}
 
-2. **Share.** Send the link through any channel you already use: chat, a ticket, email. You keep a separate [receipt](/en/share/your-receipt/) that shows whether it has been opened.
+## Self-host
 
-3. **Gone.** The recipient opens it once and the content is destroyed. Anyone who tries the link afterwards, including you, sees nothing.
+Run the same open-source application that powers onetimesecret.com on your own infrastructure.
 
-{% /steps %}
+{% cardgrid %}
+{% linkcard title="Hosted or self-hosted?" href="/en/start/hosted-or-self-hosted/" description="What changes when you run the servers, and what doesn't." /%}
+{% linkcard title="Install" href="/en/install/docker/" description="Docker, Linux, reverse proxy and TLS, running as a service." /%}
+{% linkcard title="Configure and upgrade" href="/en/self-hosting/" description="Configuration, environment variables, and version upgrade guides." /%}
+{% /cardgrid %}
 
-## What protects your secret
+## How the service handles your data
+
+For security reviews, procurement, and anyone deciding whether to trust us with a secret.
 
 - **Destroyed on view or at expiry.** Every secret has a lifetime, and nothing is kept after it is read. [Data protection](/en/security/data-protection/)
-- **Encrypted in transit and at rest**, on every plan. Add a passphrase for anything you would not paste into email. [Best practices](/en/security/best-practices/)
+- **Encrypted in transit and at rest**, on every plan. A passphrase adds a layer the server never sees. [Best practices](/en/security/best-practices/)
 - **You choose the region.** Data is processed and stored in the EU, UK, US, Canada or New Zealand. [Where your data lives](/en/security/where-your-data-lives/)
 - **No trackers, no analytics, no marketing email.** We store only what the service needs to run. [Our principles](/en/security/our-principles/)
 - **Open source.** Read the code, or run it on your own infrastructure. [GitHub](https://github.com/onetimesecret/onetimesecret)
 
 Found a security issue? [Report it here](/en/security/vulnerability-disclosure/).
 
-Not sure where to begin? [Start here](/en/start/) has the full map of these docs.
+Opened a link someone sent you? See [what recipients see](/en/share/what-recipients-see/) and [what to do when a link doesn't work](/en/share/when-a-link-doesnt-work/). New to the service? [Start here](/en/start/).

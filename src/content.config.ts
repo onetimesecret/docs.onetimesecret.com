@@ -46,6 +46,11 @@ const docsFrontmatterExtension = z.object({
   // and by the drift checks in bin/ — a citation is what makes a restated
   // default auditable instead of a copy that quietly goes stale.
   sourceOfTruth: z.string().optional(),
+
+  // Decorative background drawn behind a splash hero by Hero.astro. Opt-in per
+  // page so a hero never grows decoration by accident. "burn" renders
+  // HeroBurn.astro, the burning note used on the homepage.
+  heroBackground: z.enum(["burn"]).optional(),
 });
 
 // https://starlight.astro.build/guides/i18n/
