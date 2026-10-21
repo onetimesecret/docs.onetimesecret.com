@@ -5,9 +5,11 @@ F034–F048 in the [content walkthrough](content-walkthrough-2026-10-20.md#accou
 It separates runtime evidence from approval of policy and support commitments.
 The documentation changes do not establish either of those independently.
 
-All entries are **Open**. No checks below were performed as part of creating
-this ledger, no policy approvals were obtained, and no follow-up is scheduled.
-Owners and target environments remain unassigned. Application-source evidence
+Entries are **Open** unless their row says otherwise. No checks below were
+performed as part of creating this ledger. Apart from the records under
+[Evidence and decisions](#evidence-and-decisions), no policy approvals were
+obtained and no follow-up is scheduled. Owners and target environments remain
+unassigned. Application-source evidence
 was recorded in the walkthrough against `145c1e7cfa`; recheck the implementation
 and deployed version before executing these checks.
 
@@ -37,7 +39,7 @@ environment before execution.
 | AR07 | Open | Enable reveal notifications and reveal a disposable secret. Verify delivery and contents, no notification on link fetch alone, and the separation between receipt details and organization Secret Activity. | F040–F041; Preferences |
 | AR08 | Open | Create an account in a second region and verify subscription recognition for the account's own workspace, its timing, and exclusion of organizations joined by invitation. Confirm records and memberships are not copied. | F045; Changing your region |
 | AR09 | Open | Move a disposable custom domain between regions using a temporary subdomain. Verify outstanding secret and receipt behavior before and after DNS changes, expiry waits, and domain verification. | F046; Changing your region |
-| AR10 | Open | Exercise closure blockers, then close a disposable account. Verify sessions and credentials stop working, the expected account/workspace records are removed or retained, memberships are removed, and previously shared secrets retain their documented behavior. | F047–F048; Closing your account |
+| AR10 | Open | Exercise closure blockers, then close a disposable account. Verify sessions and credentials stop working, the account record and workspace are removed, memberships are removed, no authentication row or authentication event history remains for the account (once onetimesecret/onetimesecret#4819 ships; see AP01), and previously shared secrets retain their documented behavior. | F047–F048; Closing your account |
 | AR11 | Open | After closure, register with the same address through password and SSO paths. Verify a new empty account, no restoration of old records, and no reattachment to the closed account. | F047; Closing your account; Signing in |
 
 ## Policy and support confirmations
@@ -47,7 +49,7 @@ A source-code observation alone does not close them.
 
 | ID | Status | Decision or confirmation needed | Suggested responsible function / dependency |
 | --- | --- | --- | --- |
-| AP01 | Open | Decide whether a closed authentication row, plaintext email, external identifier, timestamps and authentication event history should remain after closure; specify retention and deletion rules. Current walkthrough evidence records indefinite retention and a proposal to delete these records at closure. That proposal is not an approved policy or implemented change. | Product and privacy; AR10; application follow-up AX05 |
+| AP01 | Confirmed | Decide whether a closed authentication row, plaintext email, external identifier, timestamps and authentication event history should remain after closure; specify retention and deletion rules. Decided 2026-10-20: delete both at closure. Implementation is tracked in onetimesecret/onetimesecret#4819; see [Evidence and decisions](#evidence-and-decisions). | Product and privacy; AR10; application follow-up AX05 |
 | AP02 | Open | Confirm retention, access and attribution rules for a former member's activity in other organizations after account closure. Specify the applicable retention period or policy source. | Product and privacy; AR10 |
 | AP03 | Open | Confirm that a closed account's address may be reused for a new empty account through both password and SSO registration, and that this is intended service policy. | Product and identity/security; AR11 |
 | AP04 | Open | Confirm support can recover access after loss of all second factors or withdrawal of the only identity provider. Define identity checks, permitted actions, limits, and approved wording without promising a response time. | Support and identity/security; AR04–AR05 |
@@ -67,9 +69,23 @@ defects, approved fixes, or user workarounds.
 | AX02 | Open | For a password-less account, the recorded closure UI accepts non-empty text and Rodauth skips password verification. Determine the intended confirmation and authentication requirements. | AP07; AR10 |
 | AX03 | Open | `apply_pending_federation!` may return without saving the computed email hash when no pending record exists, potentially preventing later webhook matching. Reproduce before classifying as a defect. | AP06; AR08 |
 | AX04 | Open | Closure uses one hard-coded English refusal message for all blockers and does not expose blocker codes. Check diagnosis and localization needs. | AR10 |
-| AX05 | Open | Recorded closure code retains the authentication row and audit history indefinitely, while the `remove_authentication_data.rb` header says audit logs are deleted. Reconcile code, comments and documentation after the retention decision. | AP01; AR10 |
+| AX05 | In progress | Recorded closure code retains the authentication row and audit history indefinitely, while the `remove_authentication_data.rb` header says audit logs are deleted. The retention decision is recorded under AP01; the code and comment fix is onetimesecret/onetimesecret#4819. Closing your account already describes the decided behavior. | AP01; AR10 |
 
 ## Evidence and decisions
 
-No execution results or policy decisions recorded yet. Add dated records here
-and update the corresponding row when follow-up work occurs.
+Add dated records here and update the corresponding row when follow-up work
+occurs.
+
+### AP01: sign-in record at closure (2026-10-20)
+
+- **Owner:** delano.
+- **Evidence:** at `145c1e7cfa`, closure keeps the `accounts` row (closed
+  status, plaintext email, `external_id`, timestamps) and every
+  `account_authentication_audit_logs` row, with nothing pruning them later. See
+  the walkthrough's [Accounts resolution record](content-walkthrough-2026-10-20.md#accounts-resolution-record).
+- **Decision:** delete both when the account is closed.
+- **Documentation:** Closing your account lists the sign-in record and its
+  history as deleted (e956cef0). Until #4819 ships, the page is ahead of the
+  service.
+- **Application:** onetimesecret/onetimesecret#4819, open. The issue also covers
+  administrative purge and rows kept by earlier closures.

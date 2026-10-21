@@ -1,3 +1,7 @@
+---
+# docs/TEXTPROV.md
+---
+
 # TextProv authoring and display
 
 This site records future AI agent edits in published Markdown and Markdoc.
