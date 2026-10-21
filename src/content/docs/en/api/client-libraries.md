@@ -167,7 +167,7 @@ commit 2018-05). Uses the deprecated v1 API against `onetimesecret.com` only.
 ### Usage example
 
 ```csharp
-# You can use OneTimeSharp in any of your projects which are compatible with .NET (4.0+) or Mono (2.10.8+).
+// You can use OneTimeSharp in any of your projects which are compatible with .NET (4.0+) or Mono (2.10.8+).
 using VStepanov.OneTimeSharp;
 
 class Test
