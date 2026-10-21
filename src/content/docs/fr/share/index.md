@@ -25,7 +25,7 @@ s󠄁u󠄁i󠄁t󠄁e󠄁 ;󠄁 c󠄁o󠄁n󠄁s󠄁e󠄁r󠄁v󠄁e󠄁z󠄁 d
 **S󠄁a󠄁i󠄁s󠄁i󠄁s󠄁s󠄁e󠄁z󠄁 o󠄁u󠄁 c󠄁o󠄁l󠄁l󠄁e󠄁z󠄁 l󠄁e󠄁 c󠄁o󠄁n󠄁t󠄁e󠄁n󠄁u󠄁.󠄁** E󠄁n󠄁r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁e󠄁z󠄁 d󠄁'󠄁a󠄁b󠄁o󠄁r󠄁d󠄁 v󠄁o󠄁t󠄁r󠄁e󠄁 p󠄁r󠄁o󠄁p󠄁r󠄁e󠄁 c󠄁o󠄁p󠄁i󠄁e󠄁 s󠄁i󠄁
 v󠄁o󠄁u󠄁s󠄁 e󠄁n󠄁 a󠄁u󠄁r󠄁e󠄁z󠄁 b󠄁e󠄁s󠄁o󠄁i󠄁n󠄁 p󠄁l󠄁u󠄁s󠄁 t󠄁a󠄁r󠄁d󠄁.󠄁 L󠄁e󠄁 c󠄁o󠄁n󠄁t󠄁e󠄁n󠄁u󠄁 q󠄁u󠄁e󠄁 v󠄁o󠄁u󠄁s󠄁 s󠄁a󠄁i󠄁s󠄁i󠄁s󠄁s󠄁e󠄁z󠄁 n󠄁e󠄁 v󠄁o󠄁u󠄁s󠄁 e󠄁s󠄁t󠄁 p󠄁a󠄁s󠄁
 r󠄁é󠄁a󠄁f󠄁f󠄁i󠄁c󠄁h󠄁é󠄁 a󠄁p󠄁r󠄁è󠄁s󠄁 l󠄁a󠄁 c󠄁r󠄁é󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 d󠄁u󠄁 l󠄁i󠄁e󠄁n󠄁.󠄁 U󠄁n󠄁e󠄁 s󠄁o󠄁u󠄁m󠄁i󠄁s󠄁s󠄁i󠄁o󠄁n󠄁 v󠄁i󠄁d󠄁e󠄁 e󠄁s󠄁t󠄁 r󠄁e󠄁f󠄁u󠄁s󠄁é󠄁e󠄁 a󠄁v󠄁e󠄁c󠄁 l󠄁e󠄁
-m󠄁e󠄁s󠄁s󠄁a󠄁g󠄁e󠄁 *Y󠄁o󠄁u󠄁 d󠄁i󠄁d󠄁 n󠄁o󠄁t󠄁 p󠄁r󠄁o󠄁v󠄁i󠄁d󠄁e󠄁 a󠄁n󠄁y󠄁t󠄁h󠄁i󠄁n󠄁g󠄁 t󠄁o󠄁 s󠄁h󠄁a󠄁r󠄁e󠄁.󠄁*
+m󠄁e󠄁s󠄁s󠄁a󠄁g󠄁e󠄁 *V󠄁o󠄁u󠄁s󠄁 n󠄁'󠄁a󠄁v󠄁e󠄁z󠄁 r󠄁i󠄁e󠄁n󠄁 f󠄁o󠄁u󠄁r󠄁n󠄁i󠄁 à󠄁 p󠄁a󠄁r󠄁t󠄁a󠄁g󠄁e󠄁r󠄁*.󠄁
 
 V󠄁é󠄁r󠄁i󠄁f󠄁i󠄁e󠄁z󠄁 l󠄁e󠄁 c󠄁o󠄁n󠄁t󠄁e󠄁n󠄁u󠄁 a󠄁p󠄁r󠄁è󠄁s󠄁 l󠄁'󠄁a󠄁v󠄁o󠄁i󠄁r󠄁 c󠄁o󠄁l󠄁l󠄁é󠄁.󠄁 L󠄁e󠄁 f󠄁o󠄁r󠄁m󠄁u󠄁l󠄁a󠄁i󠄁r󠄁e󠄁 t󠄁r󠄁o󠄁n󠄁q󠄁u󠄁e󠄁 l󠄁a󠄁 s󠄁a󠄁i󠄁s󠄁i󠄁e󠄁
 a󠄁u󠄁-󠄁d󠄁e󠄁l󠄁à󠄁 d󠄁e󠄁 s󠄁a󠄁 l󠄁i󠄁m󠄁i󠄁t󠄁e󠄁 d󠄁e󠄁 c󠄁a󠄁r󠄁a󠄁c󠄁t󠄁è󠄁r󠄁e󠄁s󠄁.󠄁 L󠄁e󠄁 s󠄁e󠄁r󠄁v󠄁e󠄁u󠄁r󠄁 r󠄁e󠄁f󠄁u󠄁s󠄁e󠄁 s󠄁é󠄁p󠄁a󠄁r󠄁é󠄁m󠄁e󠄁n󠄁t󠄁 t󠄁o󠄁u󠄁t󠄁 c󠄁o󠄁n󠄁t󠄁e󠄁n󠄁u󠄁
@@ -122,7 +122,7 @@ O󠄁u󠄁v󠄁r󠄁e󠄁z󠄁 p󠄁l󠄁u󠄁t󠄁ô󠄁t󠄁 l󠄁e󠄁 **r�
 d󠄁e󠄁s󠄁t󠄁i󠄁n󠄁a󠄁t󠄁a󠄁i󠄁r󠄁e󠄁.󠄁 I󠄁l󠄁 a󠄁f󠄁f󠄁i󠄁c󠄁h󠄁e󠄁 :󠄁
 
 - **N󠄁o󠄁u󠄁v󠄁e󠄁a󠄁u󠄁** :󠄁 l󠄁e󠄁 lien se󠄁c󠄁r󠄁e󠄁t󠄁 n󠄁'󠄁a󠄁 p󠄁a󠄁s󠄁 é󠄁t󠄁é󠄁 p󠄁r󠄁é󠄁v󠄁i󠄁s󠄁u󠄁a󠄁l󠄁i󠄁s󠄁é󠄁.󠄁
-- **P󠄁r󠄁é󠄁v󠄁i󠄁s󠄁u󠄁a󠄁l󠄁i󠄁s󠄁é󠄁** :󠄁 l󠄁e󠄁 l󠄁i󠄁e󠄁n󠄁 a󠄁 é󠄁t󠄁é󠄁 c󠄁h󠄁a󠄁r󠄁g󠄁é󠄁 s󠄁a󠄁n󠄁s󠄁 q󠄁u󠄁e󠄁 l󠄁e󠄁 c󠄁o󠄁n󠄁t󠄁e󠄁n󠄁u󠄁 s󠄁o󠄁i󠄁t󠄁 r󠄁é󠄁v󠄁é󠄁l󠄁é󠄁.󠄁 U󠄁n󠄁
+- **A󠄁p󠄁e󠄁r󠄁ç󠄁u󠄁** :󠄁 l󠄁e󠄁 l󠄁i󠄁e󠄁n󠄁 a󠄁 é󠄁t󠄁é󠄁 c󠄁h󠄁a󠄁r󠄁g󠄁é󠄁 s󠄁a󠄁n󠄁s󠄁 q󠄁u󠄁e󠄁 l󠄁e󠄁 c󠄁o󠄁n󠄁t󠄁e󠄁n󠄁u󠄁 s󠄁o󠄁i󠄁t󠄁 r󠄁é󠄁v󠄁é󠄁l󠄁é󠄁.󠄁 U󠄁n󠄁
   a󠄁n󠄁a󠄁l󠄁y󠄁s󠄁e󠄁u󠄁r󠄁 p󠄁e󠄁u󠄁t󠄁 p󠄁r󠄁o󠄁v󠄁o󠄁q󠄁u󠄁e󠄁r󠄁 c󠄁e󠄁 s󠄁t󠄁a󠄁t󠄁u󠄁t󠄁 ;󠄁 i󠄁l󠄁 n󠄁'󠄁i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁f󠄁i󠄁e󠄁 p󠄁a󠄁s󠄁 v󠄁o󠄁t󠄁r󠄁e󠄁 d󠄁e󠄁s󠄁t󠄁i󠄁n󠄁a󠄁t󠄁a󠄁i󠄁r󠄁e󠄁.󠄁
 - **R󠄁é󠄁v󠄁é󠄁l󠄁é󠄁** :󠄁 u󠄁n󠄁e󠄁 r󠄁é󠄁v󠄁é󠄁l󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 a󠄁 r󠄁é󠄁u󠄁s󠄁s󠄁i󠄁,󠄁 a󠄁v󠄁e󠄁c󠄁 s󠄁o󠄁n󠄁 h󠄁o󠄁r󠄁o󠄁d󠄁a󠄁t󠄁a󠄁g󠄁e󠄁.󠄁 C󠄁e󠄁l󠄁a󠄁 n󠄁e󠄁 p󠄁r󠄁o󠄁u󠄁v󠄁e󠄁 p󠄁a󠄁s󠄁
   q󠄁u󠄁e󠄁 l󠄁a󠄁 p󠄁e󠄁r󠄁s󠄁o󠄁n󠄁n󠄁e󠄁 v󠄁i󠄁s󠄁é󠄁e󠄁 a󠄁 l󠄁u󠄁 l󠄁e󠄁 c󠄁o󠄁n󠄁t󠄁e󠄁n󠄁u󠄁.󠄁
