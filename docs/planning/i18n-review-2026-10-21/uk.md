@@ -195,3 +195,48 @@ All other quoted labels match the shipped uk strings: Домени, Керува
 - [known] share/index.md empty-submission error has a trailing period; uk copies it.
 - [known] pricing/index.md "Self-Hosting Guide" link text vs page title; uk mirrors it («Посібник із самостійного розгортання»).
 - [known] index.mdoc "Setup your custom domain"; uk is unaffected («Налаштуйте свій користувацький домен»).
+
+## Resolution (fix round, 2026-10-21)
+
+All 56 findings (6 major, 50 minor), the eight app label mismatches and the six flagged sidebar keys are fixed. Of the terminology-table actions, two are skipped and two need a decision (below). Line numbers refer to the reviewed commit c14b0c6d.
+
+| Commit | Subject |
+|---|---|
+| 4b3c8158 | docs(i18n/uk): match branding labels to the shipped app |
+| 4899ecbe | docs(i18n/uk): match add-domain labels to the shipped app |
+| 40fe65e3 | docs(i18n/uk): match the empty-submission error to the shipped app |
+| 5b00936a | docs(i18n/uk): correct mistranslations in ten pages |
+| 61d327ab | docs(i18n/uk): use consistent terms for branding, status, self-hosting |
+| 3a8ec866 | docs(i18n/uk): link to Ukrainian pages that exist |
+| 241e038e | docs(i18n/uk): fix fluency and typography |
+| d2a3c9b3 | docs(i18n/uk): align sidebar labels with page titles |
+
+Fixes that differ from the suggested text:
+
+- api/index.mdoc:7: «Типовий підхід — сценарій або конвеєр». «сценарій» stays as the word for "script", matching index.mdoc:34 «зі сценаріїв».
+- api/index.mdoc:62: «Розкрийте таємницю (розкриття її витрачає):». This keeps «витрачати», which the locale uses for "consume".
+- api/index.mdoc:79: only «оригінальний» changed, to «початковий».
+- security/vulnerability-disclosure.md:9: «повідомте нам про неї»; line 30: «розумну можливість», the usual legal rendering of "reasonable".
+- pricing/index.md:63: «передбачає», the same verb as custom-domains/setup-guide.md:9.
+- self-hosting/index.md:98: «повідомляє про перевірку 4 … як про попередження». «позначає» already renders "marks" two lines below.
+- share/use-cases.md:44: «термін дії посилання може спливти до того, як ним скористаються». security/best-practices.md:11: «Це скорочує час для несанкціонованого доступу.» TextProv mark alignment rejected the suggested wordings on these lines; the meaning is the same.
+- share/index.md: «стан» → «статус» also at line 109 («Такий статус»), which the table did not list.
+- pricing/compare-plans.md:11: «Без обмежень», matching custom-domains/index.md:25. Line 12: «Таємниці на домашній сторінці». The locale majority is домашня (5 of 6), and the app's domain-page label `web.domains.detail.homepage_title` reads the same.
+
+### Skipped findings
+
+| Page:line | Finding | Reason |
+|---|---|---|
+| pricing/compare-plans.md:15, pricing/index.md:32 | Terminology table, branding: «Користувацький брендинг» → брендування | The docs glossary binds "custom branding → користувацький брендинг" (fix-protocol rule 3). Bare "branding" now uses брендування everywhere. See decision 1. |
+| api/index.mdoc:39; security/best-practices.md:41,43; share/index.md:128 | Terminology table, API key/token: use «API-ключ» | api/index follows the English "API token" until the English page changes (decision 6). The others are generic prose, not a label. The locale majority is «ключі API», and neither the glossary nor the governance has an entry. |
+
+### Decisions needed
+
+1. Glossary: "custom branding → користувацький брендинг" conflicts with the app (`web.billing.features.custom_branding` «Власне брендування», `web.domains.customize_your_domain_branding` «…брендування…») and with the locale's page title and sidebar («Брендування»). Proposal: change the entry to «користувацьке брендування» (or «власне брендування» if decision 2 picks власний), then update compare-plans:15 and pricing/index:32.
+2. Custom domain lock: the docs glossary has «користувацький домен», and the app shows «Користувацький домен» on the add form (`web.domains.add.field_label`) but «Власний домен / Власні домени» elsewhere (`web.domains.custom_domain`, `web.TITLES.domains`). `.resolved/uk.json` has no entry. Lock one in the app governance and the docs glossary.
+3. Glossary row view/reveal «переглянути/показати» is stale: the pages and the app use розкрити/розкриття (`web.STATUS.revealed` «Розкрито»). Add entries for plan (тарифний план), workspace (робоча область), receipt (квитанція), region (регіон), self-hosting (самостійне розгортання), status (статус), homepage (домашня сторінка), branding (брендування). `_language-notes.md` "Пріоритетні виправлення" names files that no longer exist.
+4. App: `web.STATUS.active` «Активна» is feminine (written for таємниця), but `useDomainStatus.ts:92` reuses it for домен (masculine). The docs now quote «Активна» verbatim; a domain-specific status key would fix the agreement.
+5. App homepage-secrets label is split three ways: «Таємниці на головній сторінці» (`api.entitlements.errors.homepage_secrets_required`), «Таємниці домашньої сторінки» (`web.billing.features.homepage_secrets`), «Таємниці на домашній сторінці» (`web.domains.detail.homepage_title`).
+6. English api/index.mdoc:40 "API token" vs the app's "API Key" (`web.account.api_key`, uk «API-ключ»). This is already listed above as [new].
+7. Not flagged, so left unchanged: `src/content/i18n/uk.json` `nav.label.self-hosting` «Самостійний хостинг» and `nav.ariaLabel.selfHosting` «Документація самостійного хостингу» still use хостинг, while the sidebar group now reads «Самостійне розгортання». `sidebar.aboutSelfHosting` has no uk value and falls back to English. Authorize a follow-up.
+8. Tooling: built heading ids keep the U+E0101 mark when the slugger strips an apostrophe or question mark (e.g. `dist/uk/custom-domains/index.html` ids for «Ваші обов'язки» and «Маєте запитання або потрібна підтримка?»), so plain links to those anchors fail. Separately, `dogfood.py edit` can align legacy unmarked letters differently from `dogfood.py check`, including check's moved-block match of a deleted single unmarked letter with an inserted single letter elsewhere in the file. Narrow spans, or a dry run of `mark_edit` followed by `check_text`, avoid false failures.
