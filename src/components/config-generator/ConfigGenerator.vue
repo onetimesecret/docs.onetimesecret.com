@@ -33,6 +33,8 @@
     type Selections,
   } from './generate';
 
+  const ready = ref(false);
+  const updateMessage = ref('Ready. Files update as you change options.');
   const selections = reactive<Selections>(defaultSelections());
 
   const groups = GROUPS.map((group) => ({
@@ -179,8 +181,12 @@
         changed[key] = changedLines(prev[key], next[key]);
         revision[key]++;
       }
-      if (touched.length) nextTick(() => revealChange(touched));
+      if (touched.length) {
+        updateMessage.value = `Updated ${files.filter((f) => touched.includes(f.key)).map((f) => f.name).join(', ')}.`;
+        nextTick(() => revealChange(touched));
+      }
     });
+    ready.value = true;
   });
 
   // ── Copy / download ─────────────────────────────────────────────────
@@ -192,7 +198,7 @@
       clearTimeout(copiedTimer);
       copiedTimer = setTimeout(() => (copiedKey.value = null), 1500);
     } catch {
-      /* clipboard unavailable; the user can still select the text */
+      updateMessage.value = `Could not copy ${file.name}. Select the text or use Download instead.`;
     }
   }
   function downloadFile(file: FileMeta) {
@@ -210,6 +216,13 @@
 
 <template>
   <div class="cg not-content">
+    <p v-if="!ready" role="status">
+      The interactive generator has not loaded yet. If this message stays visible,
+      reload the page or use the <a href="/en/self-hosting/configuration/">configuration reference</a>.
+      The controls and exports will become available when it is ready.
+    </p>
+    <p v-else role="status" aria-live="polite">{{ updateMessage }}</p>
+    <p><a href="#generated-files">View generated files</a> · <a href="#apply-configuration">How to apply them</a></p>
     <div class="cg-grid">
       <!-- ── Options ── -->
       <form
@@ -219,7 +232,8 @@
         <fieldset
           v-for="group in groups"
           :key="group.key"
-          class="cg-group">
+          class="cg-group"
+          :disabled="!ready">
           <legend class="cg-group-title">{{ group.title }}</legend>
           <p
             v-if="group.requires && !groupRequirementMet(group)"
@@ -244,6 +258,9 @@
                   :id="`cg-${opt.key}-desc`"
                   class="cg-option-desc">
                   {{ opt.description }}
+                </p>
+                <p v-if="opt.help" class="cg-option-desc">
+                  <a :href="opt.help.href">{{ opt.help.label }}</a>
                 </p>
                 <p
                   v-if="ownHint(opt, group)"
@@ -283,6 +300,8 @@
 
       <!-- ── Output ── -->
       <section
+        id="generated-files"
+        tabindex="-1"
         ref="outputEl"
         class="cg-output"
         aria-label="Generated files">
@@ -317,6 +336,7 @@
                 <button
                   type="button"
                   class="cg-btn"
+                  :disabled="!ready"
                   :aria-label="`Copy ${file.name}`"
                   @click="copyFile(file)">
                   {{ copiedKey === file.key ? 'Copied' : 'Copy' }}
@@ -324,6 +344,7 @@
                 <button
                   type="button"
                   class="cg-btn"
+                  :disabled="!ready"
                   :aria-label="`Download ${file.name}`"
                   @click="downloadFile(file)">
                   Download
@@ -347,10 +368,9 @@
         >
 
         <p class="cg-note">
-          The <code>.env</code> file lists the secrets and connection details
-          your selections need, left blank: fill them in on the server, never
-          in a shared link. Your selections are kept in the page URL, so you
-          can bookmark or share a setup.
+          Fill in the blank values in <code>.env</code> on your server and keep
+          the completed file private. The page URL saves your option choices,
+          so you can bookmark it or share a setup without credentials.
         </p>
       </section>
     </div>
@@ -363,6 +383,9 @@
   .cg {
     container-type: inline-size;
     margin-top: 2rem;
+  }
+  #generated-files {
+    scroll-margin-top: calc(var(--sl-nav-height) + 1rem);
   }
   .cg-grid {
     display: grid;

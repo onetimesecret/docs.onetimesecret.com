@@ -198,9 +198,8 @@ export function generate(rawSelections: Selections): GenerateResult {
 export function envSnippet(selections: Selections): string {
   const lines = [
     '# Secrets and connection details your selections need.',
-    '# Fill these in yourself. Never commit the values or paste',
-    '# them into a shared link. Feature toggles and modes live in',
-    '# config.yaml and auth.yaml, not here.',
+    '# Complete the blank values on your server and keep this file private.',
+    '# Most feature switches are in config.yaml and auth.yaml.',
     'SECRET=',
   ];
   const seen = new Set<string>(['SECRET']);
