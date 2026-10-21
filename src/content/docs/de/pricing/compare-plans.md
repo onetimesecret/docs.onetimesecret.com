@@ -20,7 +20,7 @@ description: "Vergleiche unsere Pläne für sicheres Teilen von Geheimnissen —
 | Mitglieder pro Organisation | — | 1 | K󠄁e󠄁in󠄁 f󠄁e󠄁st󠄁es Lim󠄁i󠄁t󠄁 | K󠄁e󠄁i󠄁n f󠄁e󠄁s󠄁t󠄁e󠄁s󠄁 L󠄁i󠄁m󠄁i󠄁t󠄁 |
 | S󠄁i󠄁n󠄁g󠄁l󠄁e󠄁 S󠄁i󠄁g󠄁n󠄁-󠄁O󠄁n󠄁 (󠄁S󠄁S󠄁O󠄁)󠄁 | ❌󠄁 | ❌󠄁 | ❌󠄁 | ✅󠄁 |
 | T󠄁e󠄁a󠄁m󠄁s󠄁 u󠄁n󠄁d󠄁 g󠄁e󠄁m󠄁e󠄁i󠄁n󠄁s󠄁a󠄁m󠄁e󠄁s󠄁 D󠄁a󠄁s󠄁h󠄁b󠄁o󠄁a󠄁r󠄁d󠄁 | ❌󠄁 | ❌󠄁 | ❌󠄁 | ✅󠄁 |
-| G󠄁e󠄁h󠄁e󠄁i󠄁m󠄁n󠄁i󠄁s󠄁-󠄁A󠄁kt󠄁i󠄁v󠄁i󠄁t󠄁ä󠄁t󠄁 (󠄁A󠄁u󠄁d󠄁i󠄁t󠄁-󠄁P󠄁r󠄁o󠄁t󠄁o󠄁k󠄁o󠄁l󠄁l󠄁e󠄁)󠄁 | ❌󠄁 | ❌󠄁 | ❌󠄁 | B󠄁e󠄁t󠄁a󠄁 |
+| N󠄁a󠄁c󠄁h󠄁r󠄁i󠄁c󠄁h󠄁t󠄁e󠄁n󠄁a󠄁kt󠄁i󠄁v󠄁i󠄁t󠄁ä󠄁t󠄁 (󠄁A󠄁u󠄁d󠄁i󠄁t󠄁-󠄁P󠄁r󠄁o󠄁t󠄁o󠄁k󠄁o󠄁l󠄁l󠄁e󠄁)󠄁 | ❌󠄁 | ❌󠄁 | ❌󠄁 | B󠄁e󠄁t󠄁a󠄁 |
 | L󠄁e󠄁b󠄁e󠄁n󠄁sd󠄁a󠄁u󠄁e󠄁r󠄁 v󠄁o󠄁n󠄁 G󠄁e󠄁h󠄁e󠄁i󠄁m󠄁n󠄁i󠄁s󠄁s󠄁e󠄁n󠄁 | Bis zu 7 Tage | Bis zu 14 Tage | Bis zu 30 Tage | Bis zu 30 Tage |
 | Wahl der Region (EU, UK, US, CA, NZ) | ✅ | ✅ | ✅ | ✅ |
 | Verschlüsselt bei Übertragung und im Ruhezustand | ✅ | ✅ | ✅ | ✅ |
