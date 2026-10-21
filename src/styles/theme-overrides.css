@@ -233,6 +233,37 @@ a[href*="github.com"][href*="/edit/"]:hover {
 }
 
 
+/* --- Documentation screenshots --- */
+.sl-markdown-content figure.screenshot {
+  margin-inline: 0;
+  break-inside: avoid;
+}
+
+.sl-markdown-content figure.screenshot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 0.5rem;
+}
+
+.sl-markdown-content figure.screenshot figcaption {
+  margin-top: 0.5rem;
+  font-size: var(--sl-text-sm);
+  color: var(--sl-color-gray-3);
+  text-align: center;
+}
+
+@media print {
+  .sl-markdown-content figure.screenshot .screenshot-light {
+    display: block !important;
+  }
+
+  .sl-markdown-content figure.screenshot .screenshot-dark {
+    display: none !important;
+  }
+}
+
 /* --- Global Polish --- */
 
 /* Smooth transitions on theme toggle */
