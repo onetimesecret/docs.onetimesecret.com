@@ -216,13 +216,18 @@
 
 <template>
   <div class="cg not-content">
-    <p v-if="!ready" role="status">
+    <p v-if="!ready" class="cg-loading" role="status">
       The interactive generator has not loaded yet. If this message stays visible,
       reload the page or use the <a href="/en/self-hosting/configuration/">configuration reference</a>.
       The controls and exports will become available when it is ready.
     </p>
-    <p v-else role="status" aria-live="polite">{{ updateMessage }}</p>
-    <p><a href="#generated-files">View generated files</a> · <a href="#apply-configuration">How to apply them</a></p>
+    <div class="cg-toolbar">
+      <nav class="cg-shortcuts" aria-label="Configuration generator shortcuts">
+        <a href="#generated-files">View generated files</a>
+        <a href="#apply-configuration">How to apply them</a>
+      </nav>
+      <p v-if="ready" class="cg-status" role="status" aria-live="polite">{{ updateMessage }}</p>
+    </div>
     <div class="cg-grid">
       <!-- ── Options ── -->
       <form
@@ -383,6 +388,31 @@
   .cg {
     container-type: inline-size;
     margin-top: 2rem;
+  }
+  .cg-loading {
+    margin: 0 0 1rem;
+    font-size: var(--sl-text-sm);
+  }
+  .cg-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-block: 0.75rem;
+    border-block: 1px solid var(--sl-color-hairline-light);
+    font-size: var(--sl-text-sm);
+    line-height: 1.5;
+  }
+  .cg-shortcuts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+  }
+  .cg-status {
+    margin: 0;
+    color: var(--sl-color-gray-3);
   }
   #generated-files {
     scroll-margin-top: calc(var(--sl-nav-height) + 1rem);
