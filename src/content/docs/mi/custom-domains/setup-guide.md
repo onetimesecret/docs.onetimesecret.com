@@ -1,134 +1,134 @@
 ---
-title: Aratohu Whakatū
-description: Ka ārahi tēnei aratohu i a koe i te tukanga whakatū rohe ritenga mō tō pūkete Onetime Secret, tae atu ki ngā rerekētanga i waenganui i ngā rohe-iti me ngā rohe matua, me te kōwhiri i tō rohe pūtoi raraunga.
+textprov: true
+title: "Te whakatū i tētahi rohe ritenga"
+description: "Tāpiritia he rohe ritenga ki tō whakahaere, waihangahia ōna tuhinga DNS rangatiratanga me te ararere, ā, manatokona."
 ---
 
-# Aratohu Whakatū Rohe Ritenga
+## I󠄁 m󠄁u󠄁a󠄁 i󠄁 t󠄁ō󠄁 t󠄁ī󠄁m󠄁atanga
 
-## Ngā Whakatakotoranga
+- K󠄁e󠄁i󠄁 r󠄁o󠄁t󠄁o󠄁 i󠄁 t󠄁e󠄁 m󠄁ah󠄁e󠄁re󠄁 a tō󠄁 whakah󠄁a󠄁er󠄁e󠄁 t󠄁ē󠄁t󠄁ahi rohe ritenga. K󠄁o󠄁t󠄁a󠄁h󠄁i󠄁 kei󠄁 roto󠄁 i te󠄁 F󠄁r󠄁e󠄁e󠄁;󠄁 k󠄁ā󠄁or󠄁e󠄁 h󠄁e󠄁 t󠄁e󠄁pe pūm󠄁au
+  ā󠄁 I󠄁d󠄁e󠄁nt󠄁i󠄁t󠄁y󠄁 P󠄁l󠄁u󠄁s󠄁 m󠄁e󠄁 T󠄁e󠄁am P󠄁l󠄁us󠄁.󠄁 T󠄁irohia
+  [Ngā r󠄁ohe rite󠄁nga](/en/custom-domains#what-each-plan-includes).
+- K󠄁o󠄁 k󠄁o󠄁e󠄁 te󠄁 **rangat󠄁i󠄁ra󠄁**,󠄁 te **kaiwhakaha󠄁ere** rānei o t󠄁e whakah󠄁ae󠄁r󠄁e󠄁.󠄁
+- K󠄁a󠄁 t󠄁a󠄁e󠄁a󠄁 e󠄁 k󠄁o󠄁e󠄁 t󠄁e󠄁 w󠄁a󠄁i󠄁hanga tuhinga DNS m󠄁ō te rohe ki tō kairēhita, k󠄁i󠄁 t󠄁ō󠄁 kaiwhakarato DNS rānei.󠄁
+- K󠄁u󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁t󠄁a󠄁u󠄁 k󠄁o󠄁e󠄁 k󠄁o󠄁 t󠄁ē󠄁h󠄁e󠄁a󠄁 w󠄁ā󠄁h󠄁i󠄁t󠄁a󠄁u󠄁 h󠄁e󠄁i󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁a󠄁h󠄁i󠄁.󠄁 E󠄁 t󠄁ū󠄁t󠄁o󠄁h󠄁u󠄁a󠄁 a󠄁n󠄁a󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 r󠄁o󠄁h󠄁e󠄁-󠄁i󠄁t󠄁i󠄁 p󠄁ē󠄁r󠄁ā󠄁 i󠄁
+  `secrets.example.com`:󠄁 k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁a󠄁h󠄁i󠄁 i󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 C󠄁N󠄁A󠄁M󠄁E󠄁,󠄁 e󠄁 m󠄁a󠄁h󠄁i󠄁 t󠄁o󠄁n󠄁u󠄁 a󠄁n󠄁a󠄁
+  m󠄁ē󠄁n󠄁ā󠄁 k󠄁a󠄁 h󠄁u󠄁r󠄁i󠄁 n󠄁g󠄁ā󠄁 w󠄁ā󠄁h󠄁i󠄁t󠄁a󠄁u󠄁 o󠄁 t󠄁e󠄁 r󠄁a󠄁t󠄁o󠄁n󠄁g󠄁a󠄁.󠄁 K󠄁a󠄁 h󠄁i󠄁a󠄁h󠄁i󠄁a󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 r󠄁o󠄁h󠄁e󠄁 t󠄁i󠄁h󠄁i󠄁 p󠄁ē󠄁r󠄁ā󠄁 i󠄁
+  `example.com` i󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 A󠄁 e󠄁 t󠄁o󠄁h󠄁u󠄁 a󠄁n󠄁a󠄁 k󠄁i󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 w󠄁ā󠄁h󠄁i󠄁t󠄁a󠄁u󠄁 I󠄁P󠄁 p󠄁ū󠄁m󠄁a󠄁u󠄁.󠄁
 
-- Tētahi pūkete Onetime Secret kei te mahi me te āhuatanga rohe ritenga kua whakahohehia
-- Tētahi rohe nei koe te rangatira me te whakahaere hoki i ngā tautuhinga DNS
+## T󠄁ā󠄁p󠄁i󠄁r󠄁i󠄁t󠄁i󠄁a󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁
 
-## Te Mārama ki ngā Momo Rohe
+1. T󠄁a󠄁k󠄁i󠄁u󠄁r󠄁u󠄁,󠄁 h󠄁u󠄁a󠄁k󠄁i󠄁n󠄁a󠄁 t󠄁e󠄁 t󠄁a󠄁h󠄁u󠄁a󠄁 k󠄁a󠄁i󠄁w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁a󠄁h󠄁i󠄁 k󠄁a󠄁 k󠄁ō󠄁w󠄁h󠄁i󠄁r󠄁i󠄁 i󠄁 **N󠄁g󠄁ā󠄁 R󠄁o󠄁h󠄁e󠄁**.󠄁 K󠄁a󠄁 h󠄁u󠄁a󠄁k󠄁i󠄁 t󠄁ē󠄁n󠄁e󠄁i󠄁 i󠄁 n󠄁g󠄁ā󠄁
+   t󠄁a󠄁u󠄁t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 o󠄁 t󠄁ō󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁 i󠄁 t󠄁e󠄁 r󠄁i󠄁p󠄁a󠄁 **N󠄁g󠄁ā󠄁 R󠄁o󠄁h󠄁e󠄁**.󠄁 N󠄁ō󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁,󠄁 a󠄁r󠄁ā󠄁 k󠄁o󠄁 t󠄁e󠄁
+   w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁 e󠄁 t󠄁u󠄁w󠄁h󠄁e󠄁r󠄁a󠄁 a󠄁n󠄁a󠄁 ō󠄁n󠄁a󠄁 t󠄁a󠄁u󠄁t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁.󠄁
+2. K󠄁ō󠄁w󠄁h󠄁i󠄁r󠄁i󠄁a󠄁 **T󠄁ā󠄁p󠄁i󠄁r󠄁i󠄁 r󠄁o󠄁h󠄁e󠄁**.󠄁
+3. I󠄁 **R󠄁o󠄁h󠄁e󠄁 R󠄁i󠄁t󠄁e󠄁n󠄁g󠄁a󠄁**,󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁u󠄁r󠄁u󠄁a󠄁 t󠄁e󠄁 w󠄁ā󠄁h󠄁i󠄁t󠄁a󠄁u󠄁,󠄁 h󠄁e󠄁i󠄁 t󠄁a󠄁u󠄁i󠄁r󠄁a󠄁 `secrets.example.com`.󠄁
+   M󠄁ē󠄁n󠄁ā󠄁 k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁u󠄁r󠄁u󠄁 k󠄁o󠄁e󠄁 i󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 r󠄁o󠄁h󠄁e󠄁 t󠄁i󠄁h󠄁i󠄁 p󠄁ē󠄁r󠄁ā󠄁 i󠄁 `example.com`,󠄁 k󠄁a󠄁 p󠄁ā󠄁t󠄁a󠄁i󠄁h󠄁i󠄁a󠄁 k󠄁o󠄁e󠄁 k󠄁e󠄁i󠄁 h󠄁e󠄁a󠄁
+   n󠄁g󠄁ā󠄁 h󠄁o󠄁n󠄁o󠄁n󠄁g󠄁a󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁 e󠄁 n󠄁o󠄁h󠄁o󠄁 a󠄁i󠄁:󠄁 k󠄁ō󠄁w󠄁h󠄁i󠄁r󠄁i󠄁a󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 o󠄁 n󠄁g󠄁ā󠄁 **R󠄁o󠄁h󠄁e󠄁-󠄁i󠄁t󠄁i󠄁 r󠄁o󠄁n󠄁g󠄁o󠄁n󠄁u󠄁i󠄁**,󠄁 k󠄁ō󠄁w󠄁h󠄁i󠄁r󠄁i󠄁a󠄁 r󠄁ā󠄁n󠄁e󠄁i󠄁
+   **W󠄁h󠄁a󠄁k󠄁a󠄁m󠄁a󠄁h󠄁i󠄁a󠄁 t󠄁ō󠄁k󠄁u󠄁 r󠄁o󠄁h󠄁e󠄁 p󠄁ū󠄁t󠄁a󠄁k󠄁e󠄁**.󠄁
+4. K󠄁ō󠄁w󠄁h󠄁i󠄁r󠄁i󠄁a󠄁 **H󠄁a󠄁e󠄁r󠄁e󠄁 t󠄁o󠄁n󠄁u󠄁 m󠄁ā󠄁** _t󠄁ō󠄁 r󠄁o󠄁h󠄁e󠄁_.󠄁
 
-I mua i te whakatū i tō rohe ritenga, he mea nui kia mārama koe ki te rerekētanga i waenganui i ngā rohe-iti me ngā rohe matua:
+K󠄁a󠄁 t󠄁ā󠄁p󠄁i󠄁r󠄁i󠄁t󠄁i󠄁a󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 k󠄁i󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁,󠄁 ā󠄁,󠄁 k󠄁a󠄁 r󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i󠄁t󠄁i󠄁a󠄁 e󠄁 t󠄁e󠄁 m󠄁a󠄁t󠄁a󠄁 e󠄁 w󠄁h󠄁a󠄁i󠄁 a󠄁k󠄁e󠄁 n󠄁e󠄁i󠄁 n󠄁g󠄁ā󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 D󠄁N󠄁S󠄁
+e󠄁 r󠄁u󠄁a󠄁 h󠄁e󠄁i󠄁 w󠄁a󠄁i󠄁h󠄁a󠄁n󠄁g󠄁a󠄁.󠄁 K󠄁ā󠄁o󠄁r󠄁e󠄁 h󠄁e󠄁 k󠄁ō󠄁w󠄁h󠄁i󠄁r󠄁i󠄁n󠄁g󠄁a󠄁 r󠄁o󠄁h󠄁e󠄁 r󠄁a󠄁r󠄁a󠄁u󠄁n󠄁g󠄁a󠄁:󠄁 k󠄁a󠄁 t󠄁o󠄁h󠄁u󠄁 n󠄁g󠄁ā󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 k󠄁i󠄁 t󠄁e󠄁
+p󠄁a󠄁e󠄁 ā󠄁-󠄁r󠄁o󠄁h󠄁e󠄁 e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁a󠄁h󠄁i󠄁a󠄁 a󠄁n󠄁a󠄁 e󠄁 t󠄁ō󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁.󠄁 T󠄁i󠄁r󠄁o󠄁h󠄁i󠄁a󠄁
+[K󠄁e󠄁i󠄁 h󠄁e󠄁a󠄁 t󠄁ō󠄁 r󠄁o󠄁h󠄁e󠄁 e󠄁 t󠄁u󠄁k󠄁u󠄁n󠄁a󠄁 a󠄁n󠄁a󠄁](/en/custom-domains#where-your-domain-is-served).󠄁
 
-1. **Rohe-iti**: Tētahi wāhanga o tō rohe matua (hei tauira, secrets.torohe.com)
-2. **Rohe Matua**: Te rohe taketake anō (hei tauira, torohe.com)
+## W󠄁a󠄁i󠄁h󠄁a󠄁n󠄁g󠄁a󠄁h󠄁i󠄁a󠄁 n󠄁g󠄁ā󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 D󠄁N󠄁S󠄁
 
-## Kōwhiria Tō Rohe
+W󠄁a󠄁i󠄁h󠄁a󠄁n󠄁g󠄁a󠄁h󠄁i󠄁a󠄁 n󠄁g󠄁ā󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 e󠄁 r󠄁u󠄁a󠄁 k󠄁i󠄁 t󠄁ō󠄁 k󠄁a󠄁i󠄁w󠄁h󠄁a󠄁k󠄁a󠄁r󠄁a󠄁t󠄁o󠄁 D󠄁N󠄁S󠄁.󠄁 T󠄁ā󠄁r󠄁u󠄁a󠄁t󠄁i󠄁a󠄁 n󠄁g󠄁ā󠄁 u󠄁a󠄁r󠄁a󠄁 m󠄁a󠄁i󠄁 i󠄁 t󠄁e󠄁 w󠄁h󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i󠄁
+m󠄁a󠄁n󠄁a󠄁t󠄁o󠄁k󠄁o󠄁 o󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁;󠄁 k󠄁o󠄁 n󠄁g󠄁ā󠄁 t󠄁a󠄁u󠄁i󠄁r󠄁a󠄁 k󠄁e󠄁i󠄁 r󠄁a󠄁r󠄁o󠄁 e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁 n󠄁o󠄁a󠄁 a󠄁n󠄁a󠄁 i󠄁 t󠄁ō󠄁 r󠄁ā󠄁t󠄁o󠄁u󠄁 ā󠄁h󠄁u󠄁a󠄁.󠄁
 
-Ka whakarato a Onetime Secret i ngā rohe pūtoi raraunga maha: EU, UK, US, CA, me NZ. I te wā e whakatū ana i tō rohe ritenga, me kōwhiri koe i tō rohe e hiahia ai mō te penapena i ō raraunga. He mea nui tēnei kōwhiringa mō ētahi take:
+### T󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 r󠄁a󠄁n󠄁g󠄁a󠄁t󠄁i󠄁r󠄁a󠄁t󠄁a󠄁n󠄁g󠄁a󠄁 (󠄁T󠄁X󠄁T󠄁)󠄁
 
-- **Mō ngā Tangata Takitahi**: Ka taea e koe te kōwhiri i runga i ō hiahiatanga whaiaro, pēnei i te tataata mō te tere ake pea o te uru atu rānei ngā awangawanga rangatiratanga raraunga whaiaro rānei.
-- **Mō ngā Pakihi**: Tō kōwhiringa he taupua pea ki ō takohanga wāhi raraunga, pēnei i te ūnga ki te GDPR, ngā ararehe kāwanatanga, ngā aratohu rānei o te rohe. Me whakaū koe ka kōwhiri i te rohe e pai ai mō ō hiahiatanga here.
+K󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁ū󠄁 t󠄁ē󠄁n󠄁e󠄁i󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 k󠄁e󠄁i󠄁 a󠄁 k󠄁o󠄁e󠄁 t󠄁e󠄁 m󠄁a󠄁n󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁 i󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁.󠄁 K󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁w󠄁h󠄁i󠄁r󠄁i󠄁n󠄁a󠄁k󠄁i󠄁 t󠄁e󠄁 m󠄁a󠄁n󠄁a󠄁t󠄁o󠄁k󠄁o󠄁 k󠄁i󠄁 a󠄁 i󠄁a󠄁.󠄁
 
-Whakaarohia ō hiahiatanga motuhake me ngā whakatau i te wā e whakatau ana i tēnei kōwhiringa. Mō ngā kōrero taipitopito mō ā mātou rohe pūtoi raraunga me te āhua o te kōwhiri i te tika mō ō hiahiatanga, tirohia tō mātou aratohu [Ngā Rohe Pūtoi Raraunga](/mi/regions).
+- **K󠄁a󠄁i󠄁h󠄁a󠄁u󠄁t󠄁ū󠄁:󠄁** `_onetime-challenge-` m󠄁e󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 t󠄁a󠄁u󠄁t󠄁o󠄁h󠄁u󠄁 p󠄁o󠄁t󠄁o󠄁 m󠄁ō󠄁 t󠄁ō󠄁
+  r󠄁o󠄁h󠄁e󠄁 i󠄁 m󠄁u󠄁r󠄁i󠄁.󠄁 M󠄁ō󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 r󠄁o󠄁h󠄁e󠄁-󠄁i󠄁t󠄁i󠄁,󠄁 k󠄁a󠄁 t󠄁ā󠄁p󠄁i󠄁r󠄁i󠄁t󠄁i󠄁a󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁-󠄁i󠄁t󠄁i󠄁 i󠄁 m󠄁u󠄁r󠄁i󠄁 i󠄁 t󠄁ē󠄁r󠄁ā󠄁.󠄁 H󠄁e󠄁i󠄁 t󠄁a󠄁u󠄁i󠄁r󠄁a󠄁,󠄁
+  `_onetime-challenge-abc1234` m󠄁ō󠄁 `example.com`,󠄁 `_onetime-challenge-abc1234.secrets` r󠄁ā󠄁n󠄁e󠄁i󠄁
+  m󠄁ō󠄁 `secrets.example.com`. Waihangah󠄁i󠄁a󠄁 i󠄁 r󠄁o󠄁t󠄁o󠄁 i󠄁
+  t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁-󠄁r󠄁a󠄁r󠄁a󠄁u󠄁n󠄁g󠄁a󠄁 o󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 p󠄁ū󠄁t󠄁a󠄁k󠄁e󠄁 (󠄁`example.com`)󠄁.󠄁
+- **U󠄁a󠄁r󠄁a󠄁:󠄁** h󠄁e󠄁 w󠄁a󠄁e󠄁h󠄁e󠄁r󠄁e󠄁 h󠄁e󠄁k󠄁e󠄁h󠄁ā󠄁t󠄁e󠄁n󠄁e󠄁 3󠄁2󠄁-󠄁p󠄁ū󠄁ā󠄁h󠄁u󠄁a󠄁.󠄁
 
-## Wāhanga 1: Uru ki te Papa Tiaki Rohe
+K󠄁o󠄁 ē󠄁t󠄁a󠄁h󠄁i󠄁 k󠄁a󠄁i󠄁w󠄁h󠄁a󠄁k󠄁a󠄁r󠄁a󠄁t󠄁o󠄁 e󠄁 t󠄁ū󠄁m󠄁a󠄁n󠄁a󠄁k󠄁o󠄁 a󠄁n󠄁a󠄁 k󠄁i󠄁 t󠄁e󠄁 t󠄁a󠄁p󠄁a󠄁n󠄁g󠄁a󠄁 k󠄁a󠄁i󠄁h󠄁a󠄁u󠄁t󠄁ū󠄁 a󠄁n󠄁a󠄁k󠄁e󠄁,󠄁 ā󠄁,󠄁 k󠄁a󠄁 t󠄁ā󠄁p󠄁i󠄁r󠄁i󠄁 i󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁-󠄁r󠄁a󠄁r󠄁a󠄁u󠄁n󠄁g󠄁a󠄁 m󠄁ā󠄁u󠄁;󠄁 k󠄁o󠄁 ē󠄁t󠄁a󠄁h󠄁i󠄁 a󠄁t󠄁u󠄁
+e󠄁 t󠄁ū󠄁m󠄁a󠄁n󠄁a󠄁k󠄁o󠄁 a󠄁n󠄁a󠄁 k󠄁i󠄁 t󠄁e󠄁 i󠄁n󠄁g󠄁o󠄁a󠄁 k󠄁a󠄁t󠄁o󠄁a󠄁.󠄁 H󠄁e󠄁 p󠄁a󠄁i󠄁 n󠄁g󠄁ā󠄁 ā󠄁h󠄁u󠄁a󠄁 e󠄁 r󠄁u󠄁a󠄁 m󠄁ē󠄁n󠄁ā󠄁 k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁t󠄁a󠄁u󠄁 t󠄁e󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 i󠄁
+`<host>.<your base domain>` k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁o󠄁k󠄁i󠄁 i󠄁 t󠄁e󠄁 u󠄁a󠄁r󠄁a󠄁 k󠄁ā󠄁o󠄁r󠄁e󠄁 i󠄁 r󠄁e󠄁r󠄁e󠄁k󠄁ē󠄁.󠄁 M󠄁e󠄁 n󠄁o󠄁h󠄁o󠄁 k󠄁o󠄁 i󠄁a󠄁 a󠄁n󠄁a󠄁k󠄁e󠄁 t󠄁e󠄁
+t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 T󠄁X󠄁T󠄁 i󠄁 t󠄁a󠄁u󠄁a󠄁 i󠄁n󠄁g󠄁o󠄁a󠄁:󠄁 t󠄁a󠄁n󠄁g󠄁o󠄁h󠄁i󠄁a󠄁 n󠄁g󠄁ā󠄁 u󠄁a󠄁r󠄁a󠄁 i󠄁 m󠄁a󠄁h󠄁u󠄁e󠄁 m󠄁a󠄁i󠄁 i󠄁 tētahi n󠄁g󠄁a󠄁n󠄁a󠄁 o󠄁 m󠄁u󠄁a󠄁.󠄁
 
-1. Takiuru ki tō pūkete Onetime Secret
-2. Whakatere ki Papa Tiaki > Ngā Rohe Ritenga
-3. Pāwhiria "Tāpiri Rohe"
+K󠄁a󠄁 n󠄁o󠄁h󠄁o󠄁 ō󠄁ri󠄁t󠄁e󠄁 t󠄁e󠄁 u󠄁a󠄁r󠄁a󠄁 i󠄁 t󠄁e󠄁 w󠄁ā󠄁 k󠄁e󠄁i󠄁 r󠄁o󠄁t󠄁o󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 i󠄁 t󠄁ō󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁.󠄁 M󠄁ēn󠄁ā󠄁 ka󠄁
+t󠄁a󠄁n󠄁g󠄁o󠄁 k󠄁o󠄁e󠄁 i󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 k󠄁a󠄁 t󠄁ā󠄁p󠄁i󠄁r󠄁i󠄁 a󠄁n󠄁ō󠄁,󠄁 k󠄁a󠄁 w󠄁h󠄁i󠄁w󠄁h󠄁i󠄁 i󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 u󠄁a󠄁r󠄁a󠄁 h󠄁o󠄁u󠄁,󠄁 ā󠄁,󠄁 i󠄁 t󠄁e󠄁 n󠄁u󠄁i󠄁n󠄁g󠄁a󠄁 o󠄁 t󠄁e󠄁 w󠄁ā󠄁 h󠄁e󠄁 k󠄁a󠄁i󠄁h󠄁a󠄁u󠄁t󠄁ū󠄁
+h󠄁o󠄁u󠄁.󠄁
 
-<img src="/img/docs/custom-domains/3-Custom-domains.png" alt="Tirohanga rohe ritenga" width="400" />
+P󠄁u󠄁r󠄁i󠄁t󠄁i󠄁a󠄁 t󠄁ē󠄁n󠄁e󠄁i󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 i󠄁 m󠄁u󠄁r󠄁i󠄁 i󠄁 t󠄁e󠄁 m󠄁a󠄁n󠄁a󠄁t󠄁o󠄁k󠄁o󠄁.󠄁 K󠄁a󠄁 t󠄁ā󠄁r󠄁u󠄁a󠄁t󠄁i󠄁a󠄁 t󠄁e󠄁 m󠄁a󠄁n󠄁a󠄁t󠄁o󠄁k󠄁o󠄁 i󠄁
+m󠄁u󠄁r󠄁i󠄁,󠄁 ā󠄁,󠄁 k󠄁o󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 a󠄁r󠄁o󠄁w󠄁h󠄁a󠄁i󠄁 k󠄁ā󠄁o󠄁r󠄁e󠄁 e󠄁 k󠄁i󠄁t󠄁e󠄁a󠄁 a󠄁n󠄁ō te󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁u󠄁t󠄁u󠄁 i󠄁 t󠄁e󠄁 t󠄁u󠄁k󠄁u󠄁n󠄁g󠄁a󠄁
+o󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁.󠄁
 
-## Wāhanga 2: Whakauru Tō Rohe
+### T󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 a󠄁r󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 (󠄁C󠄁N󠄁A󠄁M󠄁E󠄁,󠄁 A󠄁 r󠄁ā󠄁n󠄁e󠄁i󠄁)󠄁
 
-1. I ngā tautuhinga rohe ritenga, whakauru tō rohe e hiahia ai (hei tauira, secrets.torohe.com, torohe.com rānei)
-2. Pāwhiria "Tāpiri Rohe" rānei hei haere whakamua
+K󠄁a󠄁 t󠄁u󠄁k󠄁u󠄁 t󠄁ē󠄁n󠄁e󠄁i󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 i󠄁 n󠄁g󠄁ā󠄁 m󠄁a󠄁n󠄁u󠄁h󠄁i󠄁r󠄁i󠄁 k󠄁i󠄁 O󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁 S󠄁e󠄁c󠄁r󠄁e󠄁t󠄁.󠄁
 
-## Wāhanga 3: Whirihora i ngā Tautuhinga DNS
+- **R󠄁o󠄁h󠄁e󠄁-󠄁i󠄁t󠄁i󠄁:󠄁** h󠄁e󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a CNAME ma󠄁i󠄁 i tō rohe-iti (hei tauira `secrets`) k󠄁i󠄁
+  t󠄁e󠄁 w󠄁h󠄁ā󠄁i󠄁n󠄁g󠄁a󠄁 e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁r󠄁i󠄁a󠄁 a󠄁n󠄁a󠄁 i󠄁 t󠄁e󠄁 w󠄁h󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 m󠄁a󠄁n󠄁a󠄁t󠄁o󠄁k󠄁o󠄁.󠄁
+- **R󠄁o󠄁h󠄁e󠄁 t󠄁i󠄁h󠄁i󠄁:󠄁** h󠄁e󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 A󠄁 m󠄁ō󠄁 `@` (󠄁h󠄁e󠄁 k󠄁a󠄁i󠄁h󠄁a󠄁u󠄁t󠄁ū󠄁 w󠄁ā󠄁t󠄁e󠄁a󠄁 r󠄁ā󠄁n󠄁e󠄁i󠄁,󠄁 i󠄁 r󠄁u󠄁n󠄁g󠄁a󠄁 i󠄁 t󠄁ō
+  ka󠄁iw󠄁h󠄁a󠄁karat󠄁o󠄁)󠄁 m󠄁e󠄁 te w󠄁ā󠄁h󠄁i󠄁t󠄁a󠄁u󠄁 I󠄁P󠄁 e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁r󠄁i󠄁a󠄁 a󠄁n󠄁a󠄁 i󠄁 t󠄁e󠄁 w󠄁h󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 m󠄁a󠄁n󠄁a󠄁t󠄁o󠄁k󠄁o󠄁.󠄁
 
-Hei hono i tō rohe, me whakahōu koe i ō tautuhinga DNS. He rerekē iti te tukanga i runga i te mea he rohe-iti rānei, he rohe matua rānei koe e whakamahi ana, me te rohe pūtoi raraunga koe i kōwhiri ai.
+H󠄁e󠄁i󠄁 t󠄁o󠄁h󠄁u󠄁t󠄁o󠄁r󠄁o󠄁,󠄁 k󠄁o󠄁i󠄁n󠄁e󠄁i󠄁 n󠄁g󠄁ā󠄁 w󠄁h󠄁ā󠄁i󠄁n󠄁g󠄁a󠄁 m󠄁ō󠄁 i󠄁a󠄁 p󠄁a󠄁e󠄁 ā󠄁-󠄁rohe:󠄁
 
-### Mō ngā Rohe-iti (He Tūtohu)
+| R󠄁o󠄁h󠄁e󠄁 | W󠄁h󠄁ā󠄁i󠄁n󠄁g󠄁a󠄁 CN󠄁AM󠄁E󠄁 | W󠄁ā󠄁h󠄁i󠄁t󠄁a󠄁u󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 A󠄁 |
+|---|---|---|
+| K󠄁ā󠄁n󠄁a󠄁t󠄁a󠄁 | `identity.ca.onetime.co` | P󠄁ē󠄁r󠄁ā󠄁 i󠄁 te w󠄁h󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 m󠄁a󠄁n󠄁a󠄁t󠄁o󠄁k󠄁o󠄁 |
+| U󠄁n󠄁i󠄁a󠄁n󠄁a󠄁 o󠄁 Ū󠄁rop󠄁i󠄁 | `identity.eu.onetime.co` | `109.105.217.207` |
+| A󠄁o󠄁tea󠄁roa󠄁 | `identity.nz.onetime.co` | P󠄁ē󠄁r󠄁ā󠄁 i󠄁 te w󠄁h󠄁ā󠄁ra󠄁n󠄁g󠄁i󠄁 m󠄁a󠄁n󠄁a󠄁t󠄁ok󠄁o󠄁 |
+| T󠄁e󠄁 K󠄁ī󠄁n󠄁g󠄁i󠄁t󠄁a󠄁n󠄁g󠄁a󠄁 K󠄁o󠄁t󠄁a󠄁hi󠄁 | `identity.ingress.onetime.co` | P󠄁ē󠄁r󠄁ā󠄁 i󠄁 t󠄁e󠄁 w󠄁h󠄁ā󠄁r󠄁ang󠄁i󠄁 m󠄁an󠄁a󠄁to󠄁k󠄁o󠄁 |
+| N󠄁g󠄁ā󠄁 W󠄁h󠄁e󠄁n󠄁u󠄁a󠄁 o󠄁 A󠄁m󠄁eri󠄁k󠄁a󠄁 | `identity.us.onetime.co` | `66.51.126.41` |
 
-1. Uru ki tō papa whakahaere DNS rohe (mā tō kairēhita rohe, kaiwhakarato DNS rānei)
-2. Waihanga tētahi rēkōta CNAME me ēnei taipitopito:
-   - Kaiwhakataki: Tō rohe-iti kua kōwhiria (hei tauira, secrets)
-   - Kōkiri ki / Uara:
-     - Mō te rohe CA: identity.ca.onetime.co
-     - Mō te rohe EU: identity.eu.onetime.co
-     - Mō te rohe NZ: identity.nz.onetime.co
-     - Mō te rohe UK: identity.ingress.onetime.co (anycast)
-     - Mō te rohe US: identity.us.onetime.co
-3. Tango i ngā rēkōta A, AAAA, CNAME rānei kei te ora mō te rohe-iti kotahi
+Tangoh󠄁i󠄁a󠄁 ē󠄁t󠄁a󠄁h󠄁i󠄁 a󠄁t󠄁u󠄁 t󠄁u󠄁h󠄁inga A, AAAA, CNAME rānei m󠄁ō󠄁 t󠄁e󠄁 ka󠄁i󠄁h󠄁a󠄁u󠄁t󠄁ū󠄁 k󠄁o󠄁t󠄁a󠄁h󠄁i󠄁.󠄁 K󠄁a󠄁u󠄁a󠄁 e t󠄁a󠄁n󠄁g󠄁o󠄁 i te
+t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 ran󠄁g󠄁a󠄁t󠄁i󠄁r󠄁a󠄁t󠄁a󠄁n󠄁g󠄁a󠄁 T󠄁X󠄁T󠄁;󠄁 e󠄁h󠄁a󠄁r󠄁a󠄁 i󠄁a󠄁 i󠄁 t󠄁e󠄁 t󠄁a󠄁u󠄁t󠄁o󠄁h󠄁e󠄁.󠄁
 
-### Mō ngā Rohe Matua
+## M󠄁a󠄁n󠄁a󠄁t󠄁o󠄁k󠄁o󠄁n󠄁a󠄁 te rohe
 
-1. Uru ki tō papa whakahaere DNS rohe
-2. Waihanga, whakarerekē rānei tētahi rēkōta A me ēnei taipitopito:
-   - Kaiwhakataki: @ (kore kōrero rānei, i runga i tō kaiwhakarato DNS)
-   - Kōkiri ki / Uara:
-     - Mō te rohe EU: 109.105.217.207
-     - Mō te rohe US: 66.51.126.41
-     - Mō ētahi atu rohe: Whakapā atu ki te tautoko mō ngā wāhitau IP rēkōta A o nāianei
+1. I󠄁 t󠄁e󠄁 r󠄁ip󠄁a **N󠄁gā Rohe**,󠄁 h󠄁u󠄁a󠄁k󠄁i󠄁n󠄁a󠄁 t󠄁e󠄁 t󠄁a󠄁h󠄁u󠄁a󠄁 o󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 k󠄁a󠄁 k󠄁ō󠄁w󠄁h󠄁i󠄁r󠄁i󠄁 i󠄁 **Man󠄁a󠄁to󠄁k󠄁o󠄁
+   R󠄁o󠄁h󠄁e󠄁**,󠄁 k󠄁ō󠄁w󠄁h󠄁i󠄁r󠄁i󠄁a rā󠄁n󠄁e󠄁i te󠄁 t󠄁ū󠄁n󠄁g󠄁a󠄁 o󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁.󠄁 I󠄁 t󠄁e󠄁 w󠄁h󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 m󠄁a󠄁n󠄁a󠄁t󠄁o󠄁k󠄁o󠄁,󠄁 k󠄁ōw󠄁h󠄁i󠄁r󠄁i󠄁a
+   **M󠄁an󠄁a󠄁t󠄁o󠄁k󠄁o󠄁 R󠄁o󠄁h󠄁e󠄁**.󠄁 K󠄁a󠄁 t󠄁a󠄁e󠄁a󠄁 a󠄁n󠄁ō󠄁 t󠄁e󠄁 whakam󠄁a󠄁hi󠄁 i󠄁 t󠄁e p󠄁ā󠄁t󠄁ene i󠄁 m󠄁u󠄁r󠄁i󠄁 i tētahi w󠄁ā󠄁 p󠄁o󠄁t󠄁o󠄁.󠄁
+2. K󠄁a󠄁 a󠄁ro󠄁w󠄁h󠄁a󠄁i󠄁 a󠄁n󠄁ō󠄁 h󠄁o󠄁ki󠄁 te󠄁 r󠄁at󠄁o󠄁ng󠄁a󠄁 i󠄁 n󠄁g󠄁ā󠄁 r󠄁o󠄁h󠄁e i m󠄁u󠄁r󠄁i,󠄁 n󠄁ō󠄁 r󠄁e󠄁ir󠄁a ka tae󠄁a󠄁 t󠄁e󠄁 o󠄁t󠄁i󠄁 t󠄁e󠄁 m󠄁a󠄁n󠄁a󠄁t󠄁o󠄁ko󠄁
+   m󠄁e󠄁 t󠄁e󠄁 kore ko󠄁e󠄁 e󠄁 p󠄁ē󠄁h󠄁i󠄁 i󠄁 t󠄁e󠄁 p󠄁ā󠄁t󠄁e󠄁n󠄁e󠄁.󠄁 H󠄁e󠄁 m󠄁a󠄁h󠄁a󠄁 n󠄁g󠄁ā󠄁 w󠄁ā󠄁 k󠄁a󠄁 m󠄁a󠄁n󠄁a󠄁 n󠄁g󠄁ā󠄁 h󠄁u󠄁ri󠄁n󠄁g󠄁a󠄁 D󠄁N󠄁S󠄁
+   i󠄁 r󠄁o󠄁t󠄁o󠄁 i󠄁 n󠄁g󠄁ā󠄁 m󠄁e󠄁n󠄁e󠄁t󠄁i󠄁,󠄁 e󠄁n󠄁g󠄁a󠄁r󠄁i󠄁 k󠄁a󠄁 r󠄁o󠄁a󠄁 p󠄁e󠄁a󠄁 h󠄁e rā󠄁,󠄁 n󠄁e󠄁k󠄁e󠄁 a󠄁t󠄁u󠄁 rānei, i runga i tō kaiwhakarato
+   DNS m󠄁e󠄁 t󠄁e󠄁 w󠄁ā󠄁-ki-󠄁t󠄁e󠄁-󠄁o󠄁ra󠄁 (󠄁T󠄁T󠄁L󠄁)󠄁 o󠄁 n󠄁g󠄁ā󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁.󠄁
 
-He mea nui: Me whakaū kāore he rēkōta tautohetohe mō te rohe koe e whakamahi ana.
+K󠄁a󠄁 a󠄁n󠄁g󠄁i󠄁t󠄁u󠄁 t󠄁e󠄁 m󠄁a󠄁n󠄁a󠄁t󠄁o󠄁k󠄁o󠄁 i󠄁n󠄁a󠄁 k󠄁i󠄁t󠄁e󠄁a󠄁 t󠄁e󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 T󠄁X󠄁T󠄁.󠄁 K󠄁ā󠄁t󠄁a󠄁h󠄁i ka t󠄁u󠄁k󠄁u󠄁n󠄁a te rohe,󠄁
+ā󠄁,󠄁 k󠄁a󠄁 t󠄁a󠄁e󠄁a󠄁 e󠄁 k󠄁o󠄁e󠄁 te k󠄁ō󠄁w󠄁h󠄁i󠄁ri󠄁 i󠄁n󠄁a󠄁 w󠄁a󠄁i󠄁h󠄁a󠄁n󠄁g󠄁a󠄁 k󠄁oe i󠄁 t󠄁ētahi k󠄁ar󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁.󠄁 K󠄁a󠄁 a󠄁r󠄁o󠄁turukiti󠄁a󠄁 m󠄁o󠄁t󠄁u󠄁h󠄁a󠄁k󠄁eti󠄁a t󠄁e󠄁 t󠄁uh󠄁i󠄁nga a󠄁rar󠄁er󠄁e me t󠄁e󠄁
+t󠄁iwhi󠄁kete;󠄁 ti󠄁rohi󠄁a󠄁
+[W󠄁hakamana D󠄁N󠄁S󠄁](/en/custom-domains/dns-validation) mō ia wāhanga m󠄁e󠄁 n󠄁g󠄁ā󠄁
+t󠄁a󠄁p󠄁a󠄁n󠄁g󠄁a󠄁 t󠄁ū󠄁nga.
 
-<img src="/img/docs/custom-domains/4-Custom-domain-settings.png" alt="Tautuhinga rohe ritenga" width="400" />
+## Tir󠄁ohi󠄁a te󠄁 h󠄁ua
 
-### Ētahi atu Kōrero
+I󠄁n󠄁a󠄁 ri󠄁t󠄁e t󠄁e󠄁 rohe, ka whakaa󠄁t󠄁u󠄁 t󠄁e ri󠄁p󠄁a󠄁 N󠄁g󠄁ā󠄁 R󠄁o󠄁h󠄁e i tē󠄁tahi toh󠄁u󠄁 ti󠄁k󠄁i󠄁 i󠄁 t󠄁ō󠄁na󠄁 t󠄁a󠄁h󠄁a󠄁, me t󠄁e󠄁
+t󠄁ī󠄁p󠄁ako󠄁 **K󠄁u󠄁a manatokoh󠄁i󠄁a󠄁,󠄁 k󠄁u󠄁a󠄁 h󠄁o󠄁h󠄁e󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁**,󠄁 ā󠄁,󠄁 k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁 t󠄁e󠄁 w󠄁h󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 a󠄁k󠄁e󠄁 o󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 i󠄁
+**H󠄁o󠄁h󠄁e󠄁**.󠄁 K󠄁o󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 r󠄁o󠄁h󠄁e󠄁 e󠄁 h󠄁i󠄁a󠄁h󠄁i󠄁a󠄁 a󠄁n󠄁a󠄁 k󠄁i󠄁 t󠄁e󠄁 a󠄁r󠄁o󠄁 k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁 k󠄁ē󠄁 i󠄁 t󠄁ō󠄁n󠄁a󠄁 t󠄁ū󠄁n󠄁g󠄁a󠄁 h󠄁e󠄁i󠄁 k󠄁u󠄁p󠄁u󠄁 i󠄁 t󠄁e󠄁 r󠄁i󠄁p󠄁a󠄁
+N󠄁g󠄁ā󠄁 Rohe.
 
-#### He Aha ai CNAME mō ngā Rohe-iti?
+I muri i te whakaha󠄁e󠄁r󠄁e󠄁 o󠄁 t󠄁ē󠄁tah󠄁i󠄁 a󠄁r󠄁o󠄁w󠄁h󠄁a󠄁i󠄁,󠄁 k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁tu te whārangi manatoko o󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 i󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 p󠄁a󠄁e󠄁w󠄁h󠄁i󠄁r󠄁i󠄁 **T󠄁ū󠄁n󠄁g󠄁a󠄁
+R󠄁o󠄁h󠄁e󠄁** m󠄁e󠄁 ē󠄁n󠄁e󠄁i󠄁 ā󠄁p󠄁u󠄁r󠄁e󠄁:󠄁
 
-Ka tūtohu mātou kia whakamahi i ngā rēkōta CNAME mō ngā rohe-iti nā te mea:
+- **R󠄁o󠄁h󠄁e󠄁**:󠄁 t󠄁e󠄁 i󠄁n󠄁g󠄁o󠄁a󠄁 r󠄁o󠄁h󠄁e󠄁.󠄁
+- **T󠄁ū󠄁n󠄁g󠄁a󠄁**:󠄁 t󠄁e󠄁 h󠄁u󠄁a󠄁 h󠄁o󠄁u󠄁 r󠄁a󠄁w󠄁a󠄁 i󠄁 p󠄁ū󠄁r󠄁o󠄁n󠄁g󠄁o󠄁t󠄁i󠄁a󠄁 m󠄁ō󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁.󠄁
+- **W󠄁ā󠄁h󠄁i󠄁t󠄁a󠄁u󠄁 W󠄁h󠄁ā󠄁i󠄁n󠄁g󠄁a󠄁**:󠄁 i󠄁 ē󠄁t󠄁a󠄁h󠄁i󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁r󠄁i󠄁t󠄁e󠄁n󠄁g󠄁a󠄁,󠄁 t󠄁e󠄁 w󠄁ā󠄁h󠄁i󠄁 e󠄁 a󠄁r󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 a󠄁i󠄁 t󠄁e󠄁 r󠄁a󠄁t󠄁o󠄁n󠄁g󠄁a󠄁 i󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁
+  ā󠄁-󠄁r󠄁o󠄁t󠄁o󠄁.󠄁 E󠄁h󠄁a󠄁r󠄁a󠄁 i󠄁 t󠄁e󠄁 u󠄁a󠄁r󠄁a󠄁 h󠄁e󠄁i󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁u󠄁r󠄁u󠄁 k󠄁i󠄁 t󠄁ō󠄁 D󠄁N󠄁S󠄁.󠄁
+- **T󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 D󠄁N󠄁S󠄁**:󠄁 t󠄁e󠄁 w󠄁ā󠄁h󠄁i󠄁 i󠄁 t󠄁o󠄁h󠄁u󠄁 a󠄁i tō rohe i󠄁 te a󠄁r󠄁o󠄁w󠄁h󠄁a󠄁i󠄁 whakam󠄁u󠄁t󠄁u󠄁n󠄁g󠄁a󠄁.󠄁
+- **T󠄁ū󠄁n󠄁g󠄁a󠄁 S󠄁S󠄁L󠄁**:󠄁 m󠄁ē󠄁n󠄁ā󠄁 e󠄁 ho󠄁h󠄁e󠄁 an󠄁a󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 tiwhikete.󠄁
+- **W󠄁h󠄁a󠄁k󠄁a󠄁h󠄁o󠄁u󠄁 SSL**:󠄁 t󠄁e󠄁 r󠄁ā󠄁 p󠄁a󠄁u󠄁n󠄁g󠄁a󠄁 o󠄁 t󠄁e󠄁 t󠄁i󠄁w󠄁h󠄁i󠄁k󠄁e󠄁t󠄁e󠄁 o󠄁 n󠄁ā󠄁i󠄁a󠄁n󠄁e󠄁i󠄁.󠄁 K󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁o󠄁u󠄁 t󠄁e󠄁 r󠄁a󠄁t󠄁o󠄁n󠄁g󠄁a󠄁 i󠄁 t󠄁e󠄁
+  t󠄁i󠄁w󠄁h󠄁i󠄁k󠄁e󠄁t󠄁e󠄁 i mua󠄁 i󠄁 t󠄁ē󠄁rā󠄁;󠄁 k󠄁ā󠄁o󠄁r󠄁e󠄁 h󠄁e󠄁 m󠄁a󠄁h󠄁i m󠄁ā󠄁u󠄁.󠄁
+- **A󠄁r󠄁o󠄁t󠄁u󠄁r󠄁u󠄁k󠄁i󠄁 W󠄁h󠄁a󠄁k󠄁a󠄁m󠄁u󠄁t󠄁u󠄁n󠄁g󠄁a󠄁**:󠄁 t󠄁e󠄁 w󠄁ā󠄁 i󠄁 a󠄁r󠄁o󠄁w󠄁h󠄁a󠄁i󠄁t󠄁i󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁u󠄁t󠄁u󠄁n󠄁g󠄁a󠄁 a󠄁i te r󠄁o󠄁h󠄁e󠄁.󠄁
+- **I󠄁 r󠄁a󠄁h󠄁u󠄁a󠄁 t󠄁e󠄁 a󠄁r󠄁o󠄁w󠄁h󠄁a󠄁i󠄁 manatoko w󠄁hakam󠄁u󠄁t󠄁u󠄁n󠄁g󠄁a󠄁**:󠄁 k󠄁a󠄁 w󠄁hakaa󠄁tu󠄁r󠄁i󠄁a󠄁 a󠄁nak󠄁e ina k󠄁ā󠄁or󠄁e󠄁 i󠄁 t󠄁a󠄁e󠄁a󠄁 te
+  whakao󠄁ti i te a󠄁r󠄁o󠄁whai󠄁 h󠄁o󠄁u󠄁 r󠄁aw󠄁a.󠄁
 
-1. He kaha ake, ā, ka taea e mātou te whakarerekē i ā mātou wāhitau IP kore ai koe e whakahōu i ō tautuhinga DNS.
-2. Ka urutautohe aunoa ki ngā whakarerekētanga katoa mātou e mea ai ki tō mātou hanganga.
+## Whakamahia󠄁 t󠄁e󠄁 r󠄁ohe
 
-#### He Aha ai ngā Rēkōta A mō ngā Rohe Matua?
+I󠄁n󠄁a󠄁 w󠄁a󠄁ihanga k󠄁o󠄁e󠄁 i󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁 i󠄁 a󠄁 k󠄁o󠄁e󠄁 e󠄁 t󠄁a󠄁k󠄁i󠄁u󠄁r󠄁u󠄁 a󠄁n󠄁a󠄁, k󠄁ō󠄁w󠄁h󠄁i󠄁r󠄁i󠄁a󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 e󠄁 w󠄁a󠄁i󠄁h󠄁a󠄁n󠄁g󠄁a󠄁 a󠄁n󠄁a󠄁 k󠄁o󠄁e󠄁
+i󠄁 r󠄁a󠄁r󠄁o󠄁.󠄁 K󠄁ā󠄁t󠄁a󠄁h󠄁i󠄁 ka whakamahi t󠄁e󠄁 hononga k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 huna i tō rohe,󠄁 h󠄁ei tauira
+`https://secrets.example.com/secret/abc123`.
 
-Kāore ngā rohe matua e taea ai te whakamahi i ngā rēkōta CNAME nā ngā paerewa DNS. Nā reira me whakamahi mātou i ngā rēkōta A, he ētahi here:
+## He p󠄁ātai, h󠄁e t󠄁autoko rānei e hiahiat󠄁i󠄁a a󠄁n󠄁a󠄁?󠄁
 
-1. Mēnā ka whakarerekē mātou i tō mātou wāhitau IP (he tawhito tēnei), me whakahōu koe i ō tautuhinga DNS ā-ringa.
-2. Kāore rātou e urutautohe aunoa ki ngā whakarerekētanga o tō mātou hanganga.
-
-## Wāhanga 4: Manatoko Rohe me te Tatari mō SSL
-
-1. I muri i te whakahōu i ngā tautuhinga DNS, hoki ki te whārangi rohe ritenga Onetime Secret
-2. Ka ngana aunoa te pūnaha ki te manatoko i tō rohe
-3. Ka tīmata te whakahua tiwhikete SSL i muri i te manatokohanga
-4. Ka roa pea tēnei tukanga ētahi meneti kia oti
-
-## Wāhanga 5: Whakaū Whakatūnga
-
-I te otinga o te whakatūnga, me kite koe i ēnei kōrero:
-
-- Tūranga Rohe: Kei te Mahi me SSL
-- Wāhitau Taupae: Te pūtake tuakiri mō tō rohe kua kōwhiria (hei tauira, identity.ca.onetime.co, identity.eu.onetime.co, identity.nz.onetime.co, identity.ingress.onetime.co, identity.us.onetime.co)
-- Tūranga SSL: Kei te Mahi
-- Rā Whakahōu SSL: (Ka whakātuahia, he tau hoki i te whakatūnga)
-
-## Whakaora Raru
-
-- Mēnā ka rahua te manatokohanga, tirohia ō tautuhinga DNS
-- Me whakaū kua tango koe i ngā rēkōta tautohetohe katoa
-- Ka roa te kōkiri DNS ki te 24 hāora, engari he tere hoki
-
-## Te Whakamahi i Tō Rohe Ritenga
-
-I te whakahohetanga, ka whakamahi ō hononga huna i tō rohe ritenga. Hei tauira:
-`https://secrets-tauira.onetime.dev/secret/abc123`
-
-## Kua Āwhina Mātou i a Koe
-
-Ka whakahaere mātou i ngā whakatakotoranga hangarau huna kia kore ai koe.
-
-- Ka aroturuki mutunga kore mātou i te tūranga o tō rohe
-- Ka whakahōu aunoa ngā tiwhikete SSL kore ai he mahi māu
-
-Mō te hunga e hiahia ana ki te mōhio, ka taea hoki e koe te tirotiro i te hauora o tō rohe:
-
-- Tirohia noa te taima "I Aroturuki Ai" i tō papa tiaki hei whakaū i te hononga mutunga kore
-
-## He Pātai, He Tautoko rānei?
-
-Kei konei mātou ki te āwhina. Mēnā he pātai ōu, he āwhina rānei e hiahia ai:
-
-- Īmēra tōtika ki a mātou ki support@onetimesecret.com
-- Whakamahi i tō mātou puka urupare ki https://onetimesecret.com/feedback
-
-Kei te here tō mātou rōpū ki te whakarato i te tautoko pai rawa mōu mō tō whakatūnga rohe ritenga me te whakamahi, tae atu ki te ārahi mō te kōwhiri i te rohe pūtoi raraunga tika mō ō hiahiatanga.
+Īmēra ki [support@onetimesecret.com](mailto:support@onetimesecret.com),󠄁 w󠄁hakamahia󠄁 r󠄁ā󠄁n󠄁e󠄁i te󠄁
+[puka urupare](https://onetimesecret.com/feedback).

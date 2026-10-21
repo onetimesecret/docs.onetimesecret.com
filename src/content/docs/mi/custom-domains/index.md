@@ -1,68 +1,84 @@
 ---
-title: Tirowhānui
-description: Whakanui i tō waitohu me te whakapai i tō wheako tohatoha karere huna ngaio ki ngā Rohe Ritenga, he āhuatanga mātāmua mō ngā whakahaere, pakihi, me ngā kaiwhakamahi kaha.
+textprov: true
+title: "Ngā rohe ritenga"
+description: "Tohatohahia ngā hononga karere huna mai i tētahi wāhitau nōu ake, pēnei i secrets.example.com, ā, tirohia ngā tautuhinga rohe kei roto i ia mahere."
 ---
 
-## He aha ngā Rohe Ritenga?
+M󠄁ā󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 r󠄁itenga k󠄁a tae󠄁a e󠄁 tō whakahaere te t󠄁o󠄁hat󠄁o󠄁ha hononga k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁 m󠄁a󠄁i󠄁 i󠄁
+t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 w󠄁ā󠄁h󠄁i󠄁t󠄁a󠄁u󠄁 n󠄁ō󠄁u󠄁 a󠄁k󠄁e󠄁,󠄁 p󠄁ē󠄁nei i󠄁 `secrets.example.com`, kaua ko
+`onetimesecret.com`. Kā󠄁t󠄁ahi󠄁 ka p󠄁ēnei t󠄁e󠄁 āhua o󠄁 te󠄁 h󠄁o󠄁n󠄁o󠄁nga:󠄁
 
-Ka taea e ngā Rohe Ritenga te whakamahi i tō ake ingoa rohe mō ngā hononga Onetime Secret, kaua ko te rohe taunoa _onetimesecret.com_. Ka whakaurunga tēnei āhuatanga i tō waitohu tuakiri ki roto i te wheako tohatoha karere huna, e whakanui ana i te pono me te ngaio.
+```text
+https://secrets.example.com/secret/abc123
+```
 
-<div class="flex justify-center items-center my-10">
-  <a href="https://onetimesecret.com/pricing" class="text-center inline-block">
-    <span class="font-brand text-3xl sm:text-4xl md:text-5xl
-                 bg-clip-text text-transparent
-                 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500
-                 animate-flowing-colors
-                 hover:animate-bounce
-                 transition-all duration-300 ease-in-out
-                 transform hover:scale-105
-                 rounded-xl
-                 dark:border-brand-600">
-      secrets.yourbrand.com
-    </span>
-  </a>
-</div>
+H󠄁e󠄁 r󠄁ite󠄁 ton󠄁u te whan󠄁o󠄁n󠄁g󠄁a󠄁 o te󠄁 karere huna k󠄁i󠄁 t󠄁ē󠄁r󠄁ā󠄁 o󠄁 t󠄁e󠄁 p󠄁a󠄁e󠄁 m󠄁a󠄁t󠄁u󠄁a󠄁:󠄁 k󠄁o󠄁t󠄁a󠄁h󠄁i󠄁 t󠄁e
+whakaa󠄁t󠄁u󠄁,󠄁 k󠄁ā󠄁t󠄁a󠄁h󠄁i󠄁 k󠄁a󠄁 m󠄁u󠄁k󠄁u󠄁a󠄁.󠄁 K󠄁a󠄁 h󠄁u󠄁r󠄁i󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 i󠄁 t󠄁e󠄁 w󠄁ā󠄁h󠄁i󠄁t󠄁a󠄁u󠄁,󠄁 ā󠄁,󠄁 m󠄁ē󠄁nā󠄁 e󠄁 h󠄁i󠄁a󠄁h󠄁i󠄁a󠄁 a󠄁n󠄁a󠄁
+k󠄁o󠄁e󠄁,󠄁 i󠄁 t󠄁e󠄁 ā󠄁h󠄁ua󠄁 o󠄁 n󠄁g󠄁ā󠄁 w󠄁h󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁t󠄁u󠄁w󠄁h󠄁e󠄁r󠄁a󠄁h󠄁i󠄁a󠄁 a󠄁n󠄁a󠄁 e󠄁 ō󠄁 k󠄁a󠄁i󠄁w󠄁h󠄁i󠄁w󠄁h󠄁i󠄁.󠄁 K󠄁ā󠄁o󠄁r󠄁e󠄁 e󠄁 h󠄁u󠄁r󠄁i󠄁
+i󠄁 t󠄁e󠄁 h󠄁u󠄁n󠄁g󠄁a󠄁 k󠄁a󠄁 t󠄁a󠄁e󠄁a󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁t󠄁u󠄁w󠄁h󠄁e󠄁r󠄁a󠄁 i󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 h󠄁o󠄁n󠄁o󠄁n󠄁g󠄁a󠄁:󠄁 k󠄁a󠄁 t󠄁a󠄁e󠄁a󠄁 e󠄁 t󠄁e󠄁 t󠄁a󠄁n󠄁g󠄁a󠄁t󠄁a󠄁 e󠄁 m󠄁a󠄁u󠄁
+ana i te h󠄁ono󠄁n󠄁g󠄁a󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁 k󠄁o󠄁t󠄁a󠄁h󠄁i󠄁,󠄁 k󠄁i󠄁 t󠄁e󠄁 k󠄁o󠄁r󠄁e󠄁 k󠄁o󠄁e󠄁 e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁r󠄁i󠄁t󠄁e󠄁 h󠄁o󠄁k󠄁i󠄁 i󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁
+k󠄁u󠄁p󠄁u󠄁 k󠄁a󠄁r󠄁a󠄁p󠄁a󠄁.󠄁 T󠄁i󠄁r󠄁o󠄁h󠄁i󠄁a󠄁 [N󠄁g󠄁ā󠄁 m󠄁e󠄁a󠄁 e󠄁 k󠄁i󠄁t󠄁e󠄁a󠄁 a󠄁n󠄁a󠄁 e󠄁 n󠄁g󠄁ā󠄁 k󠄁a󠄁i󠄁w󠄁h󠄁i󠄁w󠄁h󠄁i󠄁](/en/share/what-recipients-see).󠄁
 
-## Ngā Painga Matua
+## N󠄁g󠄁ā󠄁 m󠄁e󠄁a󠄁 k󠄁e󠄁i󠄁 r󠄁o󠄁t󠄁o󠄁 i󠄁 i󠄁a󠄁 m󠄁a󠄁h󠄁e󠄁r󠄁e󠄁
 
-1. **Waitohu Tuakiri**: Tohatohahia ngā karere huna mā tō ake ingoa rohe, e whakapakari ana i te haumaru me te ngaio.
-2. **Te Pono Whakanui**: Ka kite ngā kaiwhiwhi i tētahi rohe e mōhio ana, e whakanui ana i tō rātou maia i roto i ngā kōrero kua tohatohahia.
-3. **Te Āhua Ngaio**: Whakaaturia he taumata teitei ake o te kounga me te here ki te haumaru.
-4. **Te Ritenga Waitohu**: Tukuake i ngā waitohu ritenga me te whakatakoto i ngā tae waitohu kia hāngai ki tō tuakiri tirohanga.
-5. **Te Whakaurunga Rere**: Waihangahia he wheako kotahi e hāngai ana ki tō noho matihiko kei te ora.
-6. **Te Ngāwari Rohenga**: Kōwhiria mai i ngā rohe pūtoi raraunga e rima (EU, UK, US, CA, NZ) kia tutuki i ō hiahiatanga wāhi raraunga.
+| Ā󠄁h󠄁u󠄁a󠄁t󠄁a󠄁n󠄁g󠄁a󠄁 | F󠄁r󠄁e󠄁e󠄁 | I󠄁d󠄁e󠄁n󠄁t󠄁i󠄁t󠄁y󠄁 P󠄁l󠄁u󠄁s󠄁 | T󠄁e󠄁a󠄁m󠄁 P󠄁l󠄁u󠄁s󠄁 |
+|---|---|---|---|
+| N󠄁g󠄁ā󠄁 r󠄁o󠄁h󠄁e󠄁 r󠄁i󠄁t󠄁e󠄁n󠄁g󠄁a󠄁 | 1󠄁 | K󠄁o󠄁r󠄁e󠄁-󠄁m󠄁u󠄁t󠄁u󠄁n󠄁g󠄁a󠄁 | K󠄁o󠄁r󠄁e󠄁-󠄁m󠄁u󠄁t󠄁u󠄁n󠄁g󠄁a󠄁 |
+| [T󠄁e󠄁 w󠄁h󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 k󠄁ā󠄁i󠄁n󠄁g󠄁a󠄁 m󠄁e󠄁 n󠄁g󠄁ā󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁 t󠄁a󠄁e󠄁 m󠄁a󠄁i󠄁](/en/custom-domains/homepage-and-incoming) | ✅󠄁 | ✅󠄁 | ✅󠄁 |
+| [W󠄁a󠄁i󠄁t󠄁o󠄁h󠄁u󠄁](/mi/custom-domains/branding):󠄁 m󠄁o󠄁k󠄁o󠄁,󠄁 t󠄁a󠄁e󠄁,󠄁 m󠄁o󠄁m󠄁o󠄁t󠄁u󠄁h󠄁i󠄁,󠄁 t󠄁o󠄁h󠄁u󠄁t󠄁o󠄁h󠄁u󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁 | —󠄁 | ✅󠄁 | ✅󠄁 |
+| [K󠄁a󠄁i󠄁t󠄁u󠄁k󠄁u󠄁 ī󠄁m󠄁ē󠄁r󠄁a󠄁](/en/custom-domains/email-sender):󠄁 h󠄁e󠄁 w󠄁ā󠄁h󠄁i󠄁t󠄁a󠄁u󠄁 i󠄁 r󠄁u󠄁n󠄁g󠄁a󠄁 i󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 r󠄁i󠄁t󠄁e󠄁n󠄁g󠄁a󠄁 | —󠄁 | ✅󠄁 | ✅󠄁 |
+| K󠄁a󠄁i󠄁t󠄁u󠄁k󠄁u󠄁 ī󠄁m󠄁ē󠄁r󠄁a󠄁:󠄁 h󠄁e󠄁 w󠄁ā󠄁h󠄁i󠄁t󠄁a󠄁u󠄁 i󠄁 r󠄁u󠄁n󠄁g󠄁a󠄁 i󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 r󠄁o󠄁h󠄁e󠄁 n󠄁o󠄁a󠄁 | —󠄁 | —󠄁 | ✅󠄁 |
+| [N󠄁g󠄁ā󠄁 t󠄁a󠄁u󠄁t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 t󠄁a󠄁k󠄁i󠄁u󠄁r󠄁u󠄁](/en/custom-domains/access-and-privacy) | —󠄁 | ✅󠄁 | ✅󠄁 |
+| [T󠄁a󠄁k󠄁i󠄁u󠄁r󠄁u󠄁 k󠄁o󠄁t󠄁a󠄁h󠄁i󠄁 (󠄁S󠄁S󠄁O󠄁)󠄁](/en/organizations/sso) | —󠄁 | —󠄁 | ✅󠄁 |
 
-## Te Tīmatanga
+T󠄁i󠄁r󠄁o󠄁h󠄁i󠄁a󠄁 [W󠄁h󠄁a󠄁k󠄁a󠄁t󠄁a󠄁i󠄁r󠄁i󠄁t󠄁e󠄁 i󠄁 n󠄁g󠄁ā󠄁 m󠄁a󠄁h󠄁e󠄁r󠄁e󠄁](/mi/pricing/compare-plans) m󠄁ō󠄁 n󠄁g󠄁ā󠄁 m󠄁e󠄁a󠄁 k󠄁a󠄁t󠄁o󠄁a󠄁 a󠄁t󠄁u󠄁 o󠄁 i󠄁a󠄁 m󠄁a󠄁h󠄁e󠄁r󠄁e󠄁.󠄁
 
-Hei whakatū i tētahi Rohe Ritenga:
+## K󠄁o󠄁 w󠄁a󠄁i󠄁 k󠄁a󠄁 t󠄁a󠄁e󠄁a󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁 i󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 r󠄁o󠄁h󠄁e󠄁
 
-1. Takiuru ki tō pūkete Onetime Secret.
-2. Whakatere ki Tautuhinga Pūkete > Ngā Rohe Ritenga.
-3. Whakauru i te rohe e hiahia ana koe ki te whakamahi, ā, pāwhiri "Tāpiri Rohe".
-4. Kōwhiria tō rohe pūtoi raraunga i hiahia ai (EU, UK, US, CA, NZ rānei).
-5. Whai i ngā tohutohu tukutuku kua whakaratohia mō te whirihorahanga DNS.
-6. Tatari kia manatokohia te rohe. Mēnā kei te wātea, pāwhiria te pātene "Manatoko" ki te tere i te tukanga. Me whakahōu pea koe i te whārangi.
+N󠄁ō󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 [w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁](/en/organizations) t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁.󠄁
 
-Mō ngā tohutohu taipitopito, tae atu ki te āhua o te kōwhiri i te rohe tika, tirohia tō mātou [Aratohu Whakatū Rohe Ritenga](/mi/custom-domains/setup-guide).
+- K󠄁a󠄁 t󠄁a󠄁e󠄁a󠄁 e󠄁 t󠄁e󠄁 **r󠄁a󠄁n󠄁g󠄁a󠄁t󠄁i󠄁r󠄁a󠄁** m󠄁e󠄁 n󠄁g󠄁ā󠄁 **k󠄁a󠄁i󠄁w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁** t󠄁e󠄁 t󠄁ā󠄁p󠄁i󠄁r󠄁i󠄁,󠄁 t󠄁e󠄁 m󠄁a󠄁n󠄁a󠄁t󠄁o󠄁k󠄁o me
+  te t󠄁a󠄁n󠄁g󠄁o󠄁 i󠄁 n󠄁g󠄁ā󠄁 r󠄁o󠄁h󠄁e󠄁 o󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁.󠄁
+- K󠄁o󠄁 t󠄁e󠄁 **r󠄁a󠄁ngat󠄁i󠄁r󠄁a󠄁** a󠄁n󠄁a󠄁k󠄁e󠄁 k󠄁a󠄁 t󠄁a󠄁e󠄁a󠄁 t󠄁e󠄁 t󠄁i󠄁a󠄁k󠄁i󠄁 i󠄁 n󠄁g󠄁ā󠄁 h󠄁u󠄁r󠄁i󠄁n󠄁g󠄁a󠄁 k󠄁i󠄁 n󠄁g󠄁ā󠄁 t󠄁a󠄁u󠄁t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 o󠄁
+  t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 r󠄁o󠄁h󠄁e󠄁:󠄁 t󠄁e󠄁 w󠄁a󠄁i󠄁t󠄁o󠄁h󠄁u󠄁,󠄁 t󠄁e󠄁 w󠄁h󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 k󠄁ā󠄁i󠄁n󠄁g󠄁a󠄁,󠄁 n󠄁g󠄁ā󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁 t󠄁a󠄁e󠄁 m󠄁a󠄁i󠄁,󠄁 t󠄁e󠄁
+  k󠄁a󠄁i󠄁t󠄁u󠄁k󠄁u󠄁 ī󠄁m󠄁ē󠄁r󠄁a󠄁 m󠄁e󠄁 t󠄁e󠄁 t󠄁a󠄁k󠄁i󠄁u󠄁r󠄁u󠄁.󠄁
 
-## Te Ritenga Waitohu
+T󠄁i󠄁r󠄁o󠄁h󠄁i󠄁a󠄁 [N󠄁g󠄁ā󠄁 t󠄁ū󠄁r󠄁a󠄁n󠄁g󠄁a󠄁 m󠄁e󠄁 n󠄁g󠄁ā󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁e󠄁t󠄁a󠄁n󠄁g󠄁a󠄁](/en/organizations/roles-and-permissions).󠄁
 
-Ka taea e ngā kaiwhakamahi Rohe Ritenga te whakamāori i tō rātou atanga tohatoha karere huna:
+## K󠄁ei󠄁 h󠄁e󠄁a󠄁 t󠄁ō󠄁 r󠄁o󠄁h󠄁e󠄁 e󠄁 t󠄁uk󠄁u󠄁n󠄁a󠄁 a󠄁n󠄁a󠄁
 
-1. Tukuake waitohu kamupene (PNG/JPG, max 1MB)
-2. Whakatakoto i ngā tae waitohu ritenga mā ngā waehere hex
-3. Whirihorahia ngā tautuhinga kitea whārangi kāinga
-4. Tiro matakite i ngā whakarerekētanga i te wā-tūturu
-5. Whakahohe/whakakore i te waihanga karere huna tūmatanui
+K󠄁ā󠄁o󠄁r󠄁e󠄁 h󠄁e󠄁 k󠄁ō󠄁w󠄁h󠄁ir󠄁i󠄁n󠄁g󠄁a󠄁 r󠄁o󠄁h󠄁e󠄁-w󠄁h󠄁enu󠄁a󠄁 i te w󠄁ā󠄁 e t󠄁ā󠄁p󠄁i󠄁r󠄁i󠄁 a󠄁na󠄁 k󠄁o󠄁e󠄁 i󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 r󠄁o󠄁h󠄁e󠄁.󠄁 K󠄁a󠄁
+t󠄁u󠄁k󠄁u󠄁n󠄁a󠄁 e󠄁 te p󠄁a󠄁e󠄁 ā󠄁-󠄁ro󠄁h󠄁e󠄁 e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁mahi󠄁a󠄁 a󠄁n󠄁a󠄁 e󠄁 t󠄁ō󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁re,󠄁 pē󠄁n󠄁e󠄁i󠄁 i󠄁
+`eu.onetimesecret.com`,󠄁 ā󠄁,󠄁 k󠄁a󠄁 pena󠄁penatia ngā karere huna i󠄁 t󠄁o󠄁h󠄁a󠄁t󠄁o󠄁h󠄁a󠄁h󠄁i󠄁a󠄁 ma󠄁i󠄁 i󠄁
+r󠄁e󠄁i󠄁r󠄁a ki t󠄁a󠄁u󠄁a rohe-󠄁w󠄁h󠄁e󠄁n󠄁u󠄁a󠄁.󠄁 K󠄁o󠄁 n󠄁g󠄁ā󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 D󠄁N󠄁S󠄁 e whakaat󠄁u󠄁h󠄁i󠄁a ana e te p󠄁ae󠄁 k󠄁i a
+ko󠄁e󠄁 k󠄁a t󠄁o󠄁h󠄁u i t󠄁ō󠄁 r󠄁o󠄁h󠄁e󠄁 ki te r󠄁a󠄁t󠄁o󠄁nga m󠄁ō󠄁 t󠄁a󠄁u󠄁a󠄁 r󠄁o󠄁h󠄁e󠄁-󠄁whe󠄁n󠄁u󠄁a󠄁.󠄁 H󠄁e󠄁i t󠄁u󠄁k󠄁u󠄁 i󠄁 t󠄁ē󠄁t󠄁a󠄁hi󠄁 r󠄁o󠄁h󠄁e󠄁
+m󠄁a󠄁i i tētahi rohe-󠄁whe󠄁n󠄁u󠄁a kē󠄁,󠄁 tiroh󠄁i󠄁a󠄁
+[T󠄁e󠄁 n󠄁e󠄁k󠄁e󠄁 i󠄁 tē󠄁tahi r󠄁ohe ritenga](/en/account/change-your-region#moving-a-custom-domain)
+m󠄁e󠄁 [K󠄁e󠄁i hea ō raraunga e n󠄁o󠄁h󠄁o󠄁 a󠄁n󠄁a󠄁](/en/security/where-your-data-lives).
 
-Mō ngā tohutohu waitohu taipitopito, tirohia tō mātou [Aratohu Waitohu](/mi/custom-domains/brand-guide).
+## Te whakarite󠄁 i tētahi rohe
 
-## Ngā Whakaarohanga Nui
+1. [Tāpiritia te rohe,󠄁 ka󠄁 w󠄁a󠄁ihanga i ōna tuhinga D󠄁N󠄁S󠄁](/mi/custom-domains/setup-guide).
+2. Tatar󠄁i󠄁 k󠄁i󠄁a w󠄁h󠄁a󠄁kaū󠄁 t󠄁e󠄁 [whakaman󠄁a󠄁 D󠄁N󠄁S󠄁](/en/custom-domains/dns-validation)
+   n󠄁ō󠄁u󠄁 t󠄁e󠄁 r󠄁ohe.󠄁
+3. M󠄁ē󠄁n󠄁ā󠄁 e󠄁 h󠄁ia󠄁h󠄁i󠄁a󠄁 a󠄁n󠄁a󠄁 k󠄁o󠄁e󠄁,󠄁 h󠄁u󠄁r󠄁i󠄁h󠄁i󠄁a󠄁 te ā󠄁h󠄁u󠄁a m󠄁e󠄁 te whan󠄁onga o󠄁 te󠄁 r󠄁ohe:
+   - [Te waitohu i tō󠄁 rohe](/mi/custom-domains/branding)
+   - [T󠄁e w󠄁h󠄁ārangi󠄁 k󠄁ā󠄁i󠄁n󠄁g󠄁a m󠄁e󠄁 ngā k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁 t󠄁a󠄁e󠄁 m󠄁a󠄁i󠄁](/en/custom-domains/homepage-and-incoming)
+   - [K󠄁a󠄁itu󠄁k󠄁u󠄁 ī󠄁m󠄁ē󠄁r󠄁a󠄁](/en/custom-domains/email-sender)
+   - [U󠄁r󠄁u󠄁n󠄁g󠄁a󠄁 m󠄁e󠄁 t󠄁e󠄁 t󠄁ū󠄁m󠄁a󠄁t󠄁a󠄁i󠄁t󠄁i󠄁](/en/custom-domains/access-and-privacy)
 
-- Ko ngā Rohe Ritenga he āhuatanga taumata teitei e wātea ana ki te mahere Identity.
-- Ko koe te kaiwhakahaere mō te pupuri me te whakahōu i tō rēhitatanga rohe.
-- He nui te whirihorahanga tika SSL/TLS mō te haumaru (ka whakahaerea aunoa e Onetime Secret).
-- Whakaūngia ka ūnga tō rohe kua kōwhiria ki ngā aratohu waitohu o tō whakahaere.
-- Whakaarohia ngā ture tiaki raraunga i te wā e kōwhiri ana i tō [rohe pūtoi raraunga](/mi/regions).
+## Ō󠄁 k󠄁a󠄁w󠄁enga
 
-Hei ako mō ngā tikanga pai mō te whakamahi i ngā Rohe Ritenga ki te haumaru, tirohia tō mātou aratohu [Ngā Tikanga Haumaru Pai](/mi/security-best-practices).
+- K󠄁i󠄁a mau to󠄁n󠄁u󠄁 te rēhitatanga m󠄁e󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁o󠄁u󠄁 o󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 k󠄁i󠄁 t󠄁ō󠄁 k󠄁a󠄁i󠄁r󠄁ē󠄁h󠄁i󠄁t󠄁a󠄁.󠄁
+- K󠄁i󠄁a󠄁 m󠄁a󠄁u󠄁 t󠄁o󠄁n󠄁u󠄁 n󠄁g󠄁ā󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 D󠄁N󠄁S󠄁 e󠄁 r󠄁u󠄁a󠄁,󠄁 t󠄁a󠄁e󠄁 a󠄁t󠄁u󠄁 k󠄁i󠄁 t󠄁e󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 T󠄁X󠄁T󠄁 r󠄁a󠄁n󠄁g󠄁a󠄁t󠄁i󠄁r󠄁a󠄁t󠄁a󠄁n󠄁g󠄁a󠄁 i󠄁
+  m󠄁u󠄁r󠄁i󠄁 i󠄁 t󠄁e󠄁 m󠄁a󠄁n󠄁a󠄁t󠄁o󠄁k󠄁o󠄁.󠄁 K󠄁i󠄁 t󠄁e󠄁 t󠄁a󠄁n󠄁g󠄁o󠄁h󠄁i󠄁a󠄁,󠄁 k󠄁a󠄁 m󠄁u󠄁t󠄁u󠄁 t󠄁e󠄁 t󠄁u󠄁k󠄁u󠄁 o󠄁 t󠄁e󠄁 rohe.
+- M󠄁ā󠄁 Onetime Secret e󠄁 t󠄁iki,󠄁 e󠄁 whakaho󠄁u󠄁 h󠄁o󠄁k󠄁i󠄁 t󠄁e󠄁 t󠄁i󠄁w󠄁h󠄁i󠄁k󠄁e󠄁t󠄁e󠄁 T󠄁L󠄁S󠄁 o󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁.󠄁 K󠄁ā󠄁o󠄁r󠄁e󠄁
+  k󠄁o󠄁e󠄁 e󠄁 h󠄁i󠄁ah󠄁i󠄁a󠄁 k󠄁i󠄁 t󠄁e󠄁 t󠄁u󠄁k󠄁u󠄁 i󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁.󠄁
+
+M󠄁ō󠄁 n󠄁g󠄁ā󠄁 t󠄁a󠄁u󠄁i󠄁r󠄁a󠄁 o󠄁 n󠄁g󠄁ā󠄁 m󠄁e󠄁a󠄁 h󠄁e󠄁i󠄁 t󠄁o󠄁h󠄁a󠄁t󠄁o󠄁h󠄁a󠄁 m󠄁ā󠄁 t󠄁e󠄁 h󠄁o󠄁n󠄁o󠄁n󠄁g󠄁a󠄁 k󠄁a󠄁r󠄁ere hu󠄁n󠄁a,󠄁 t󠄁i󠄁rohia
+[N󠄁gā k󠄁eehi whakamahi](/mi/share/use-cases).
+
+## H󠄁e󠄁 p󠄁ā󠄁t󠄁a󠄁i󠄁,󠄁 h󠄁e󠄁 h󠄁i󠄁a󠄁h󠄁i󠄁a󠄁 t󠄁a󠄁u󠄁t󠄁o󠄁k󠄁o󠄁 r󠄁ā󠄁n󠄁e󠄁i󠄁?󠄁
+
+Ī󠄁m󠄁ē󠄁r󠄁a󠄁 k󠄁i󠄁 [s󠄁u󠄁p󠄁p󠄁o󠄁r󠄁t󠄁@󠄁o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁.󠄁c󠄁o󠄁m󠄁](mailto:support@onetimesecret.com),󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁a󠄁h󠄁i󠄁a󠄁
+r󠄁ā󠄁n󠄁e󠄁i󠄁 t󠄁e󠄁 [p󠄁u󠄁k󠄁a󠄁 u󠄁r󠄁u󠄁p󠄁a󠄁r󠄁e󠄁](https://onetimesecret.com/feedback).󠄁
