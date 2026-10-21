@@ -4,7 +4,7 @@ title: Pricing
 description: Choose the plan that's right for your secure sharing needs.
 audience: end-user
 pageType: reference
-sourceOfTruth: billing catalog (billing.yaml, docs snapshot sha256 69a96394920fd1777cf23a9bdedee174648f46b54e13c99a1f27b3cdc0a17501) plans.free_v1, plans.identity_plus_v1 and plans.team_plus_v1 entitlements and limits; onetimesecret at 145c1e7cfa — src/types/billing.ts PLAN_LABELS (in-app plan names)
+sourceOfTruth: onetimesecret at 145c1e7cfa — apps/web/billing/docs/plan-definitions.md (catalog reference generated from etc/billing.yaml; free_v1, identity_plus_v1 and team_plus_v1 entitlements and limits, which match the docs snapshot of the production catalog, sha256 69a96394920fd1777cf23a9bdedee174648f46b54e13c99a1f27b3cdc0a17501, apart from audit_logs on team_plus_v1); src/types/billing.ts PLAN_LABELS (in-app plan names)
 ---
 
 Share confidential information with confidence, elevate your brand, and build trust.
