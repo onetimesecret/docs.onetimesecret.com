@@ -51,7 +51,7 @@ r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁a󠄁l󠄁a󠄁 w󠄁e󠄁b󠄁b󠄁p󠄁l󠄁a�
 `eu.onetimesecret.com`,󠄁 och hemligheter s󠄁om delas󠄁 frå󠄁n den󠄁 l󠄁agras i den
 regionen󠄁.󠄁 D󠄁e󠄁 D󠄁N󠄁S󠄁-󠄁p󠄁o󠄁s󠄁t󠄁e󠄁r s󠄁o󠄁m󠄁 w󠄁e󠄁b󠄁b󠄁p󠄁l󠄁a󠄁t󠄁s󠄁e󠄁n󠄁 v󠄁i󠄁s󠄁a󠄁r󠄁 d󠄁i󠄁g󠄁 p󠄁e󠄁k󠄁a󠄁r󠄁 d󠄁i󠄁n󠄁 d󠄁o󠄁m󠄁ä󠄁n󠄁 m󠄁o󠄁t󠄁 t󠄁j󠄁ä󠄁n󠄁s󠄁t󠄁e󠄁n󠄁
 för d󠄁e󠄁n󠄁 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁e󠄁n󠄁.󠄁 S󠄁e󠄁
-[F󠄁l󠄁y󠄁tta en anpassad domän](/en/account/change-your-region#moving-a-custom-domain)
+[F󠄁l󠄁y󠄁tta en anpassad domän](/sv/account/change-your-region#flytta-en-anpassad-domän)
 o󠄁c󠄁h󠄁 [V󠄁a󠄁r󠄁 din󠄁 d󠄁a󠄁ta󠄁 f󠄁i󠄁n󠄁n󠄁s󠄁](/en/security/where-your-data-lives) om du vill
 l󠄁e󠄁v󠄁e󠄁r󠄁e󠄁r󠄁a󠄁 e󠄁n󠄁 d󠄁o󠄁m󠄁ä󠄁n󠄁 f󠄁r󠄁å󠄁n󠄁 e󠄁n󠄁 ann󠄁a󠄁n󠄁 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁.󠄁
 

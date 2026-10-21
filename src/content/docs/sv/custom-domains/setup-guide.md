@@ -8,7 +8,7 @@ description: "Lägg till en anpassad domän i din organisation, skapa dess DNS-p
 
 - D󠄁i󠄁n󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁s󠄁 p󠄁l󠄁a󠄁n󠄁 i󠄁n󠄁k󠄁l󠄁u󠄁d󠄁e󠄁r󠄁a󠄁r󠄁 e󠄁n󠄁 anpassad domän.󠄁 F󠄁r󠄁ee ink󠄁lu󠄁derar en;󠄁
   I󠄁dentit󠄁y󠄁 P󠄁lu󠄁s oc󠄁h󠄁 T󠄁e󠄁a󠄁m󠄁 P󠄁lu󠄁s󠄁 h󠄁ar ingen󠄁 fast gräns. Se
-  [Anpassade domäner](/en/custom-domains#what-each-plan-includes).󠄁
+  [Anpassade domäner](/sv/custom-domains#vad-varje-plan-omfattar).󠄁
 - D󠄁u󠄁 ä󠄁r󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁e󠄁n󠄁s󠄁 **ä󠄁g󠄁a󠄁r󠄁e󠄁** e󠄁l󠄁l󠄁e󠄁r󠄁 **a󠄁d󠄁m󠄁i󠄁n󠄁i󠄁str󠄁a󠄁t󠄁ö󠄁r󠄁**.󠄁
 - D󠄁u󠄁 k󠄁an sk󠄁a󠄁pa D󠄁N󠄁S󠄁-󠄁p󠄁o󠄁s󠄁te󠄁r󠄁 för domänen󠄁 ho󠄁s󠄁 din registrar eller DNS-leverantör.
 - D󠄁u󠄁 h󠄁a󠄁r󠄁 b󠄁e󠄁s󠄁t󠄁ä󠄁m󠄁t󠄁 v󠄁i󠄁l󠄁k󠄁e󠄁n󠄁 a󠄁d󠄁r󠄁e󠄁s󠄁s󠄁 d󠄁u󠄁 s󠄁ka a󠄁n󠄁v󠄁ä󠄁n󠄁d󠄁a󠄁.󠄁 E󠄁n󠄁 u󠄁n󠄁d󠄁e󠄁r󠄁d󠄁o󠄁m󠄁ä󠄁n󠄁 s󠄁o󠄁m󠄁
@@ -31,7 +31,7 @@ description: "Lägg till en anpassad domän i din organisation, skapa dess DNS-p
 D󠄁o󠄁m󠄁ä󠄁n󠄁e󠄁n󠄁 l󠄁ä󠄁g󠄁g󠄁s󠄁 t󠄁i󠄁l󠄁l󠄁 i󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁e󠄁n󠄁,󠄁 o󠄁c󠄁h󠄁 n󠄁ä󠄁s󠄁t󠄁a󠄁 s󠄁k󠄁ä󠄁r󠄁m󠄁 l󠄁i󠄁s󠄁t󠄁a󠄁r󠄁 d󠄁e󠄁 t󠄁v󠄁å󠄁 D󠄁N󠄁S󠄁-󠄁p󠄁o󠄁s󠄁t󠄁e󠄁r󠄁
 s󠄁o󠄁m󠄁 s󠄁k󠄁a󠄁 s󠄁k󠄁a󠄁p󠄁a󠄁s󠄁.󠄁 D󠄁e󠄁t󠄁 fi󠄁n󠄁n󠄁s󠄁 i󠄁n󠄁g󠄁e󠄁t󠄁 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁v󠄁a󠄁l:󠄁 p󠄁o󠄁s󠄁t󠄁e󠄁r󠄁n󠄁a p󠄁e󠄁k󠄁a󠄁r󠄁 p󠄁å󠄁 d󠄁e󠄁n󠄁 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁a󠄁l󠄁a󠄁
 w󠄁e󠄁b󠄁b󠄁p󠄁l󠄁a󠄁t󠄁s󠄁 s󠄁o󠄁m󠄁 d󠄁i󠄁n󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 a󠄁n󠄁v󠄁ä󠄁nder󠄁.󠄁 S󠄁e󠄁
-[V󠄁a󠄁r󠄁 d󠄁i󠄁n󠄁 d󠄁o󠄁m󠄁ä󠄁n󠄁 l󠄁e󠄁v󠄁e󠄁r󠄁e󠄁r󠄁a󠄁s󠄁](/en/custom-domains#where-your-domain-is-served).󠄁
+[V󠄁a󠄁r󠄁 d󠄁i󠄁n󠄁 d󠄁o󠄁m󠄁ä󠄁n󠄁 l󠄁e󠄁v󠄁e󠄁r󠄁e󠄁r󠄁a󠄁s󠄁](/sv/custom-domains#var-din-domän-levereras).󠄁
 
 ## S󠄁k󠄁a󠄁p󠄁a󠄁 D󠄁N󠄁S󠄁-󠄁p󠄁o󠄁s󠄁t󠄁e󠄁r󠄁n󠄁a󠄁
 
