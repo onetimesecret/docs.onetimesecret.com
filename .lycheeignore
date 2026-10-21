@@ -80,7 +80,9 @@ mailto:*
 
 # Note: The internal link check uses --root-dir src/content/docs with
 # --fallback-extensions md,mdoc so that root-relative content paths
-# (like /en/regions/) resolve correctly in offline mode.
+# (like /en/regions/) resolve correctly in offline mode. Locale install/
+# links are remapped to the English source (--remap in check-links.yml)
+# rather than excluded here.
 
 # Phase 2 merges/moves (2026-08): non-EN copies still link to retired paths.
 # Every one of these routes resolves in production via config/redirects.mjs

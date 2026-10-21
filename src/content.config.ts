@@ -16,6 +16,9 @@ import { docsSchema, i18nSchema } from "@astrojs/starlight/schema";
 // instead — "translate every end-user page first" is the shape that request
 // takes, and audience is the axis that answers it.
 const docsFrontmatterExtension = z.object({
+  // Explicitly enroll a document in the experimental, mark-aware renderer.
+  // Other documents and genuine Unicode variation sequences remain untouched.
+  textprov: z.boolean().optional(),
   // Billing tier a reader needs before the page's subject is available to them.
   // Consumed by config/sidebar.mjs, which renders it as a sidebar badge, and by
   // readers deciding whether a page applies to them. Phase 2 carries these
@@ -83,6 +86,9 @@ export const collections = {
         "notFound.createDesc": z.string().optional(),
         "notFound.supportTitle": z.string().optional(),
         "notFound.supportDesc": z.string().optional(),
+        // TextProv toggle (TextProvControls.astro), English fallback per key.
+        "textprov.toggle": z.string().optional(),
+        "textprov.help": z.string().optional(),
       }),
     }),
   }),

@@ -69,10 +69,10 @@ Su instancia autoalojada incluye:
 
 ## Próximos pasos
 
-1. **[Primeros pasos](./getting-started)** - Guía de configuración paso a paso
+1. **[Primeros pasos](/es/install/docker)** - Guía de configuración paso a paso
 2. **[Instalación e implementación](./installation)** - Opciones detalladas de implementación
 3. **[Referencia de configuración](./configuration)** - Documentación completa de ajustes
 
 ---
 
-_¿Listo para comenzar? Siga nuestra guía de [Primeros pasos](./getting-started)._
+_¿Listo para comenzar? Siga nuestra guía de [Primeros pasos](/es/install/docker)._

@@ -1,0 +1,761 @@
+{
+  "version": "0.2",
+  "variation_selectors": {
+    "human": "U+E0100",
+    "ai": "U+E0101"
+  },
+  "pua": {
+    "U+100021": {
+      "base": "U+0021",
+      "provenance": "ai"
+    },
+    "U+100022": {
+      "base": "U+0022",
+      "provenance": "ai"
+    },
+    "U+100023": {
+      "base": "U+0023",
+      "provenance": "ai"
+    },
+    "U+100024": {
+      "base": "U+0024",
+      "provenance": "ai"
+    },
+    "U+100025": {
+      "base": "U+0025",
+      "provenance": "ai"
+    },
+    "U+100026": {
+      "base": "U+0026",
+      "provenance": "ai"
+    },
+    "U+100027": {
+      "base": "U+0027",
+      "provenance": "ai"
+    },
+    "U+100028": {
+      "base": "U+0028",
+      "provenance": "ai"
+    },
+    "U+100029": {
+      "base": "U+0029",
+      "provenance": "ai"
+    },
+    "U+10002A": {
+      "base": "U+002A",
+      "provenance": "ai"
+    },
+    "U+10002B": {
+      "base": "U+002B",
+      "provenance": "ai"
+    },
+    "U+10002C": {
+      "base": "U+002C",
+      "provenance": "ai"
+    },
+    "U+10002D": {
+      "base": "U+002D",
+      "provenance": "ai"
+    },
+    "U+10002E": {
+      "base": "U+002E",
+      "provenance": "ai"
+    },
+    "U+10002F": {
+      "base": "U+002F",
+      "provenance": "ai"
+    },
+    "U+100030": {
+      "base": "U+0030",
+      "provenance": "ai"
+    },
+    "U+100031": {
+      "base": "U+0031",
+      "provenance": "ai"
+    },
+    "U+100032": {
+      "base": "U+0032",
+      "provenance": "ai"
+    },
+    "U+100033": {
+      "base": "U+0033",
+      "provenance": "ai"
+    },
+    "U+100034": {
+      "base": "U+0034",
+      "provenance": "ai"
+    },
+    "U+100035": {
+      "base": "U+0035",
+      "provenance": "ai"
+    },
+    "U+100036": {
+      "base": "U+0036",
+      "provenance": "ai"
+    },
+    "U+100037": {
+      "base": "U+0037",
+      "provenance": "ai"
+    },
+    "U+100038": {
+      "base": "U+0038",
+      "provenance": "ai"
+    },
+    "U+100039": {
+      "base": "U+0039",
+      "provenance": "ai"
+    },
+    "U+10003A": {
+      "base": "U+003A",
+      "provenance": "ai"
+    },
+    "U+10003B": {
+      "base": "U+003B",
+      "provenance": "ai"
+    },
+    "U+10003C": {
+      "base": "U+003C",
+      "provenance": "ai"
+    },
+    "U+10003D": {
+      "base": "U+003D",
+      "provenance": "ai"
+    },
+    "U+10003E": {
+      "base": "U+003E",
+      "provenance": "ai"
+    },
+    "U+10003F": {
+      "base": "U+003F",
+      "provenance": "ai"
+    },
+    "U+100040": {
+      "base": "U+0040",
+      "provenance": "ai"
+    },
+    "U+100041": {
+      "base": "U+0041",
+      "provenance": "ai"
+    },
+    "U+100042": {
+      "base": "U+0042",
+      "provenance": "ai"
+    },
+    "U+100043": {
+      "base": "U+0043",
+      "provenance": "ai"
+    },
+    "U+100044": {
+      "base": "U+0044",
+      "provenance": "ai"
+    },
+    "U+100045": {
+      "base": "U+0045",
+      "provenance": "ai"
+    },
+    "U+100046": {
+      "base": "U+0046",
+      "provenance": "ai"
+    },
+    "U+100047": {
+      "base": "U+0047",
+      "provenance": "ai"
+    },
+    "U+100048": {
+      "base": "U+0048",
+      "provenance": "ai"
+    },
+    "U+100049": {
+      "base": "U+0049",
+      "provenance": "ai"
+    },
+    "U+10004A": {
+      "base": "U+004A",
+      "provenance": "ai"
+    },
+    "U+10004B": {
+      "base": "U+004B",
+      "provenance": "ai"
+    },
+    "U+10004C": {
+      "base": "U+004C",
+      "provenance": "ai"
+    },
+    "U+10004D": {
+      "base": "U+004D",
+      "provenance": "ai"
+    },
+    "U+10004E": {
+      "base": "U+004E",
+      "provenance": "ai"
+    },
+    "U+10004F": {
+      "base": "U+004F",
+      "provenance": "ai"
+    },
+    "U+100050": {
+      "base": "U+0050",
+      "provenance": "ai"
+    },
+    "U+100051": {
+      "base": "U+0051",
+      "provenance": "ai"
+    },
+    "U+100052": {
+      "base": "U+0052",
+      "provenance": "ai"
+    },
+    "U+100053": {
+      "base": "U+0053",
+      "provenance": "ai"
+    },
+    "U+100054": {
+      "base": "U+0054",
+      "provenance": "ai"
+    },
+    "U+100055": {
+      "base": "U+0055",
+      "provenance": "ai"
+    },
+    "U+100056": {
+      "base": "U+0056",
+      "provenance": "ai"
+    },
+    "U+100057": {
+      "base": "U+0057",
+      "provenance": "ai"
+    },
+    "U+100058": {
+      "base": "U+0058",
+      "provenance": "ai"
+    },
+    "U+100059": {
+      "base": "U+0059",
+      "provenance": "ai"
+    },
+    "U+10005A": {
+      "base": "U+005A",
+      "provenance": "ai"
+    },
+    "U+10005B": {
+      "base": "U+005B",
+      "provenance": "ai"
+    },
+    "U+10005C": {
+      "base": "U+005C",
+      "provenance": "ai"
+    },
+    "U+10005D": {
+      "base": "U+005D",
+      "provenance": "ai"
+    },
+    "U+10005E": {
+      "base": "U+005E",
+      "provenance": "ai"
+    },
+    "U+10005F": {
+      "base": "U+005F",
+      "provenance": "ai"
+    },
+    "U+100060": {
+      "base": "U+0060",
+      "provenance": "ai"
+    },
+    "U+100061": {
+      "base": "U+0061",
+      "provenance": "ai"
+    },
+    "U+100062": {
+      "base": "U+0062",
+      "provenance": "ai"
+    },
+    "U+100063": {
+      "base": "U+0063",
+      "provenance": "ai"
+    },
+    "U+100064": {
+      "base": "U+0064",
+      "provenance": "ai"
+    },
+    "U+100065": {
+      "base": "U+0065",
+      "provenance": "ai"
+    },
+    "U+100066": {
+      "base": "U+0066",
+      "provenance": "ai"
+    },
+    "U+100067": {
+      "base": "U+0067",
+      "provenance": "ai"
+    },
+    "U+100068": {
+      "base": "U+0068",
+      "provenance": "ai"
+    },
+    "U+100069": {
+      "base": "U+0069",
+      "provenance": "ai"
+    },
+    "U+10006A": {
+      "base": "U+006A",
+      "provenance": "ai"
+    },
+    "U+10006B": {
+      "base": "U+006B",
+      "provenance": "ai"
+    },
+    "U+10006C": {
+      "base": "U+006C",
+      "provenance": "ai"
+    },
+    "U+10006D": {
+      "base": "U+006D",
+      "provenance": "ai"
+    },
+    "U+10006E": {
+      "base": "U+006E",
+      "provenance": "ai"
+    },
+    "U+10006F": {
+      "base": "U+006F",
+      "provenance": "ai"
+    },
+    "U+100070": {
+      "base": "U+0070",
+      "provenance": "ai"
+    },
+    "U+100071": {
+      "base": "U+0071",
+      "provenance": "ai"
+    },
+    "U+100072": {
+      "base": "U+0072",
+      "provenance": "ai"
+    },
+    "U+100073": {
+      "base": "U+0073",
+      "provenance": "ai"
+    },
+    "U+100074": {
+      "base": "U+0074",
+      "provenance": "ai"
+    },
+    "U+100075": {
+      "base": "U+0075",
+      "provenance": "ai"
+    },
+    "U+100076": {
+      "base": "U+0076",
+      "provenance": "ai"
+    },
+    "U+100077": {
+      "base": "U+0077",
+      "provenance": "ai"
+    },
+    "U+100078": {
+      "base": "U+0078",
+      "provenance": "ai"
+    },
+    "U+100079": {
+      "base": "U+0079",
+      "provenance": "ai"
+    },
+    "U+10007A": {
+      "base": "U+007A",
+      "provenance": "ai"
+    },
+    "U+10007B": {
+      "base": "U+007B",
+      "provenance": "ai"
+    },
+    "U+10007C": {
+      "base": "U+007C",
+      "provenance": "ai"
+    },
+    "U+10007D": {
+      "base": "U+007D",
+      "provenance": "ai"
+    },
+    "U+10007E": {
+      "base": "U+007E",
+      "provenance": "ai"
+    },
+    "U+1000A1": {
+      "base": "U+00A1",
+      "provenance": "ai"
+    },
+    "U+1000A2": {
+      "base": "U+00A2",
+      "provenance": "ai"
+    },
+    "U+1000A3": {
+      "base": "U+00A3",
+      "provenance": "ai"
+    },
+    "U+1000A4": {
+      "base": "U+00A4",
+      "provenance": "ai"
+    },
+    "U+1000A5": {
+      "base": "U+00A5",
+      "provenance": "ai"
+    },
+    "U+1000A6": {
+      "base": "U+00A6",
+      "provenance": "ai"
+    },
+    "U+1000A7": {
+      "base": "U+00A7",
+      "provenance": "ai"
+    },
+    "U+1000A8": {
+      "base": "U+00A8",
+      "provenance": "ai"
+    },
+    "U+1000A9": {
+      "base": "U+00A9",
+      "provenance": "ai"
+    },
+    "U+1000AA": {
+      "base": "U+00AA",
+      "provenance": "ai"
+    },
+    "U+1000AB": {
+      "base": "U+00AB",
+      "provenance": "ai"
+    },
+    "U+1000AC": {
+      "base": "U+00AC",
+      "provenance": "ai"
+    },
+    "U+1000AE": {
+      "base": "U+00AE",
+      "provenance": "ai"
+    },
+    "U+1000AF": {
+      "base": "U+00AF",
+      "provenance": "ai"
+    },
+    "U+1000B0": {
+      "base": "U+00B0",
+      "provenance": "ai"
+    },
+    "U+1000B1": {
+      "base": "U+00B1",
+      "provenance": "ai"
+    },
+    "U+1000B2": {
+      "base": "U+00B2",
+      "provenance": "ai"
+    },
+    "U+1000B3": {
+      "base": "U+00B3",
+      "provenance": "ai"
+    },
+    "U+1000B4": {
+      "base": "U+00B4",
+      "provenance": "ai"
+    },
+    "U+1000B5": {
+      "base": "U+00B5",
+      "provenance": "ai"
+    },
+    "U+1000B6": {
+      "base": "U+00B6",
+      "provenance": "ai"
+    },
+    "U+1000B7": {
+      "base": "U+00B7",
+      "provenance": "ai"
+    },
+    "U+1000B8": {
+      "base": "U+00B8",
+      "provenance": "ai"
+    },
+    "U+1000B9": {
+      "base": "U+00B9",
+      "provenance": "ai"
+    },
+    "U+1000BA": {
+      "base": "U+00BA",
+      "provenance": "ai"
+    },
+    "U+1000BB": {
+      "base": "U+00BB",
+      "provenance": "ai"
+    },
+    "U+1000BC": {
+      "base": "U+00BC",
+      "provenance": "ai"
+    },
+    "U+1000BD": {
+      "base": "U+00BD",
+      "provenance": "ai"
+    },
+    "U+1000BE": {
+      "base": "U+00BE",
+      "provenance": "ai"
+    },
+    "U+1000BF": {
+      "base": "U+00BF",
+      "provenance": "ai"
+    },
+    "U+1000C0": {
+      "base": "U+00C0",
+      "provenance": "ai"
+    },
+    "U+1000C1": {
+      "base": "U+00C1",
+      "provenance": "ai"
+    },
+    "U+1000C2": {
+      "base": "U+00C2",
+      "provenance": "ai"
+    },
+    "U+1000C3": {
+      "base": "U+00C3",
+      "provenance": "ai"
+    },
+    "U+1000C4": {
+      "base": "U+00C4",
+      "provenance": "ai"
+    },
+    "U+1000C5": {
+      "base": "U+00C5",
+      "provenance": "ai"
+    },
+    "U+1000C6": {
+      "base": "U+00C6",
+      "provenance": "ai"
+    },
+    "U+1000C7": {
+      "base": "U+00C7",
+      "provenance": "ai"
+    },
+    "U+1000C8": {
+      "base": "U+00C8",
+      "provenance": "ai"
+    },
+    "U+1000C9": {
+      "base": "U+00C9",
+      "provenance": "ai"
+    },
+    "U+1000CA": {
+      "base": "U+00CA",
+      "provenance": "ai"
+    },
+    "U+1000CB": {
+      "base": "U+00CB",
+      "provenance": "ai"
+    },
+    "U+1000CC": {
+      "base": "U+00CC",
+      "provenance": "ai"
+    },
+    "U+1000CD": {
+      "base": "U+00CD",
+      "provenance": "ai"
+    },
+    "U+1000CE": {
+      "base": "U+00CE",
+      "provenance": "ai"
+    },
+    "U+1000CF": {
+      "base": "U+00CF",
+      "provenance": "ai"
+    },
+    "U+1000D0": {
+      "base": "U+00D0",
+      "provenance": "ai"
+    },
+    "U+1000D1": {
+      "base": "U+00D1",
+      "provenance": "ai"
+    },
+    "U+1000D2": {
+      "base": "U+00D2",
+      "provenance": "ai"
+    },
+    "U+1000D3": {
+      "base": "U+00D3",
+      "provenance": "ai"
+    },
+    "U+1000D4": {
+      "base": "U+00D4",
+      "provenance": "ai"
+    },
+    "U+1000D5": {
+      "base": "U+00D5",
+      "provenance": "ai"
+    },
+    "U+1000D6": {
+      "base": "U+00D6",
+      "provenance": "ai"
+    },
+    "U+1000D7": {
+      "base": "U+00D7",
+      "provenance": "ai"
+    },
+    "U+1000D8": {
+      "base": "U+00D8",
+      "provenance": "ai"
+    },
+    "U+1000D9": {
+      "base": "U+00D9",
+      "provenance": "ai"
+    },
+    "U+1000DA": {
+      "base": "U+00DA",
+      "provenance": "ai"
+    },
+    "U+1000DB": {
+      "base": "U+00DB",
+      "provenance": "ai"
+    },
+    "U+1000DC": {
+      "base": "U+00DC",
+      "provenance": "ai"
+    },
+    "U+1000DD": {
+      "base": "U+00DD",
+      "provenance": "ai"
+    },
+    "U+1000DE": {
+      "base": "U+00DE",
+      "provenance": "ai"
+    },
+    "U+1000DF": {
+      "base": "U+00DF",
+      "provenance": "ai"
+    },
+    "U+1000E0": {
+      "base": "U+00E0",
+      "provenance": "ai"
+    },
+    "U+1000E1": {
+      "base": "U+00E1",
+      "provenance": "ai"
+    },
+    "U+1000E2": {
+      "base": "U+00E2",
+      "provenance": "ai"
+    },
+    "U+1000E3": {
+      "base": "U+00E3",
+      "provenance": "ai"
+    },
+    "U+1000E4": {
+      "base": "U+00E4",
+      "provenance": "ai"
+    },
+    "U+1000E5": {
+      "base": "U+00E5",
+      "provenance": "ai"
+    },
+    "U+1000E6": {
+      "base": "U+00E6",
+      "provenance": "ai"
+    },
+    "U+1000E7": {
+      "base": "U+00E7",
+      "provenance": "ai"
+    },
+    "U+1000E8": {
+      "base": "U+00E8",
+      "provenance": "ai"
+    },
+    "U+1000E9": {
+      "base": "U+00E9",
+      "provenance": "ai"
+    },
+    "U+1000EA": {
+      "base": "U+00EA",
+      "provenance": "ai"
+    },
+    "U+1000EB": {
+      "base": "U+00EB",
+      "provenance": "ai"
+    },
+    "U+1000EC": {
+      "base": "U+00EC",
+      "provenance": "ai"
+    },
+    "U+1000ED": {
+      "base": "U+00ED",
+      "provenance": "ai"
+    },
+    "U+1000EE": {
+      "base": "U+00EE",
+      "provenance": "ai"
+    },
+    "U+1000EF": {
+      "base": "U+00EF",
+      "provenance": "ai"
+    },
+    "U+1000F0": {
+      "base": "U+00F0",
+      "provenance": "ai"
+    },
+    "U+1000F1": {
+      "base": "U+00F1",
+      "provenance": "ai"
+    },
+    "U+1000F2": {
+      "base": "U+00F2",
+      "provenance": "ai"
+    },
+    "U+1000F3": {
+      "base": "U+00F3",
+      "provenance": "ai"
+    },
+    "U+1000F4": {
+      "base": "U+00F4",
+      "provenance": "ai"
+    },
+    "U+1000F5": {
+      "base": "U+00F5",
+      "provenance": "ai"
+    },
+    "U+1000F6": {
+      "base": "U+00F6",
+      "provenance": "ai"
+    },
+    "U+1000F7": {
+      "base": "U+00F7",
+      "provenance": "ai"
+    },
+    "U+1000F8": {
+      "base": "U+00F8",
+      "provenance": "ai"
+    },
+    "U+1000F9": {
+      "base": "U+00F9",
+      "provenance": "ai"
+    },
+    "U+1000FA": {
+      "base": "U+00FA",
+      "provenance": "ai"
+    },
+    "U+1000FB": {
+      "base": "U+00FB",
+      "provenance": "ai"
+    },
+    "U+1000FC": {
+      "base": "U+00FC",
+      "provenance": "ai"
+    },
+    "U+1000FD": {
+      "base": "U+00FD",
+      "provenance": "ai"
+    },
+    "U+1000FE": {
+      "base": "U+00FE",
+      "provenance": "ai"
+    },
+    "U+1000FF": {
+      "base": "U+00FF",
+      "provenance": "ai"
+    }
+  }
+}

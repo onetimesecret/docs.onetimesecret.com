@@ -5,7 +5,7 @@ description: A reference guide for translating Onetime Secret's key terms, inter
 
 This glossary provides standardized translations for key terms across languages to ensure consistency in the Onetime Secret application. It is based on analysis of the existing translations in German (Germany and Austria), French (France and Canada), and Polish.
 
-## Core Terminology
+## Core terminology
 
 | English | German (DE) | German (AT) | French (FR) | French (CA) | Polish (PL) | Context |
 |---------|-------------|-------------|-------------|-------------|------------|-------|
@@ -18,7 +18,7 @@ This glossary provides standardized translations for key terms across languages 
 | encrypt/encrypted | verschlüsseln/verschlüsselt | verschlüsseln/verschlüsselt | chiffrer/chiffré | chiffrer/chiffré | szyfrować/zaszyfrowany | Security method |
 | secure | sicher | sicher | sécurisé | sécurisé | bezpieczny | State of protection |
 
-## User Interface Elements
+## User interface elements
 
 | English | German (DE) | German (AT) | French (FR) | French (CA) | Polish (PL) | Context |
 |---------|-------------|-------------|-------------|-------------|------------|-------|
@@ -30,7 +30,7 @@ This glossary provides standardized translations for key terms across languages 
 | Privacy Options | Datenschutzeinstellungen | Datenschutz-Optionen | Options de confidentialité | Options de confidentialité | Opcje prywatności | Secret settings |
 | Feedback | Feedback | Rückmeldung | Retour d'information | Retour d'information | Opinia | User comments |
 
-## Status Terms
+## Status terms
 
 | English | German (DE) | German (AT) | French (FR) | French (CA) | Polish (PL) | Context |
 |---------|-------------|-------------|-------------|-------------|------------|-------|
@@ -41,7 +41,7 @@ This glossary provides standardized translations for key terms across languages 
 | active | aktiv | aktiv | actif | actif | aktywny | Secret is available |
 | inactive | inaktiv | inaktiv | inactif | inactif | nieaktywny | Secret is not available |
 
-## Time-Related Terms
+## Time-related terms
 
 | English | German (DE) | German (AT) | French (FR) | French (CA) | Polish (PL) | Context |
 |---------|-------------|-------------|-------------|-------------|------------|-------|
@@ -51,7 +51,7 @@ This glossary provides standardized translations for key terms across languages 
 | minute/minutes | Minute/Minuten | Minute/Minuten | minute/minutes | minute/minutes | minuta/minuty | Time unit |
 | second/seconds | Sekunde/Sekunden | Sekunde/Sekunden | seconde/secondes | seconde/secondes | sekunda/sekundy | Time unit |
 
-## Security Features
+## Security features
 
 | English | German (DE) | German (AT) | French (FR) | French (CA) | Polish (PL) | Context |
 |---------|-------------|-------------|-------------|-------------|------------|-------|
@@ -60,7 +60,7 @@ This glossary provides standardized translations for key terms across languages 
 | encrypted in transit | verschlüsselt bei der Übertragung | verschlüsselt bei der Übertragung | chiffré en transit | chiffré en transit | zaszyfrowany w trakcie przesyłania | Data protection method |
 | encrypted at rest | verschlüsselt im Ruhezustand | verschlüsselt im Ruhezustand | chiffré au repos | chiffré au repos | zaszyfrowany w spoczynku | Storage protection |
 
-## Account-Related Terms
+## Account-related terms
 
 | English | German (DE) | German (AT) | French (FR) | French (CA) | Polish (PL) | Context |
 |---------|-------------|-------------|-------------|-------------|------------|-------|
@@ -70,16 +70,16 @@ This glossary provides standardized translations for key terms across languages 
 | subscription | Abonnement | Abonnement | abonnement | abonnement | Subskrypcja | Paid service |
 | customer | Kunde | Kunde | client | client | Klient | Paying user |
 
-## Domain-Related Terms
+## Domain-related terms
 
 | English | German (DE) | German (AT) | French (FR) | French (CA) | Polish (PL) | Context |
 |---------|-------------|-------------|-------------|-------------|------------|-------|
-| custom domain | benutzerdefinierter Bereich | benutzerdefinierter Bereich | domaine personnalisé | domaine personnalisé | domena niestandardowa | Premium feature |
+| custom domain | benutzerdefinierter Bereich | benutzerdefinierter Bereich | domaine personnalisé | domaine personnalisé | domena niestandardowa | Available on all plans |
 | domain verification | Domänenüberprüfung | Domänenüberprüfung | vérification du domaine | vérification du domaine | weryfikacja domeny | Setup process |
 | DNS record | Namensserver-Eintrag | Namensserver-Eintrag | enregistrement DNS | enregistrement DNS | rekord DNS | Configuration |
 | CNAME record | CNAME-Eintrag | CNAME-Eintrag | enregistrement CNAME | enregistrement CNAME | rekord CNAME | DNS setup |
 
-## Error Messages
+## Error messages
 
 | English | German (DE) | German (AT) | French (FR) | French (CA) | Polish (PL) | Context |
 |---------|-------------|-------------|-------------|-------------|------------|-------|
@@ -87,7 +87,7 @@ This glossary provides standardized translations for key terms across languages 
 | warning | Warnung | Warnung | avertissement | attention | ostrzeżenie | Caution notification |
 | oops | Ups | Huch | oups | oups | ups | Friendly error intro |
 
-## Buttons and Actions
+## Buttons and actions
 
 | English | German (DE) | German (AT) | French (FR) | French (CA) | Polish (PL) | Context |
 |---------|-------------|-------------|-------------|-------------|------------|-------|
@@ -98,15 +98,15 @@ This glossary provides standardized translations for key terms across languages 
 | continue | weiter | weiter | continuer | continuer | Kontynuuj | Navigation |
 | back | zurück | zurück | retour | retour | Wstecz | Navigation |
 
-## Marketing Terms
+## Marketing terms
 
 | English | German (DE) | German (AT) | French (FR) | French (CA) | Polish (PL) | Context |
 |---------|-------------|-------------|-------------|-------------|------------|-------|
 | secure links | sichere Links | sichere Links | liens sécurisés | liens sécurisés | bezpieczne linki | Product feature |
 | privacy-first design | Datenschutz als oberstes Gebot | Datenschutz als oberstes Gebot | conception privilégiant la protection de la vie privée | conception privilégiant la protection de la vie privée | projekt z priorytetem prywatności | Design philosophy |
-| custom branding | benutzerdefiniertes Branding | benutzerdefiniertes Branding | image de marque personnalisée | image de marque personnalisée | niestandardowy branding | Premium feature |
+| custom branding | benutzerdefiniertes Branding | benutzerdefiniertes Branding | image de marque personnalisée | image de marque personnalisée | niestandardowy branding | Paid plan feature |
 
-## Translation Guidelines
+## Translation guidelines
 
 1. **Consistency**: Use the same translation for a term throughout the application
 2. **Context**: Consider how the term is used in the application
@@ -114,7 +114,7 @@ This glossary provides standardized translations for key terms across languages 
 4. **Technical Accuracy**: Ensure security terms are translated accurately
 5. **Tone**: Maintain a professional but straightforward tone
 
-## Special Considerations
+## Special considerations
 
 - The term "secret" is central to the application and should be translated consistently
 - Regional variations should be respected:
@@ -125,7 +125,7 @@ This glossary provides standardized translations for key terms across languages 
 - Technical terms related to security should prioritize accuracy over localization
 - UI elements should follow platform conventions for the target language
 
-## Related Resources
+## Related resources
 
 - **[Translation Style Guide](/en/translations/guide)** - Comprehensive guidelines for translators
 - **[Quality Checklist](/en/translations/universal/quality-checklist)** - Verify your translation meets all standards

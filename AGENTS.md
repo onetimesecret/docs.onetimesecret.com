@@ -80,6 +80,14 @@ Use standard Markdown in `.md` files and Markdoc syntax in `.mdoc` files. Custom
 - `cardgrid` — Groups cards; accepts an optional Boolean `stagger`.
 - `globe` — Self-closing regional globe icon; requires `name`, with optional `size` and `label`.
 
+### Screenshots
+
+- Store screenshots in `src/assets/screenshots/{topic}/` with matching `-light` and `-dark` variants.
+- Capture lossless PNG or WebP when the tool supports it. Crop surrounding whitespace without changing the UI or example content.
+- Keep a `README.md` beside the assets recording the capture date, instance, application version (or explicitly unknown), viewport, crop, and regeneration steps. Never record usable secret links or passphrases.
+- Use fictional example content, descriptive alt text, and captions. In Markdown pages, use `figure.screenshot` with `screenshot-light` / `screenshot-dark` wrappers alongside Starlight's theme visibility classes; the shared styles add borders, captions, and light images for printing.
+- Keep raw HTML captions as plain text; Markdown formatting is not parsed inside `<figcaption>`.
+
 ### Terms and Phrases to Avoid
 
 Do not use these terms or sentence structures in authored prose:
@@ -153,3 +161,35 @@ pnpm run translate:restore <printed-mapping-file>
  default is `https://docs.onetimesecret.com`.
 - Development and preview host allowlists accept comma-separated values from `VITE_ADDITIONAL_SERVER_ALLOWED_HOSTS` or `__VITE_ADDITIONAL_SERVER_ALLOWED_HOSTS`.
 - Keep theme tokens in CSS `@theme` blocks rather than adding JavaScript theme configuration.
+
+## Record AI agent prose edits with TextProv
+
+This applies to ChatGPT/Codex, Claude CLI, and other agents. Before editing
+published `.md` or `.mdoc` prose, read `docs/TEXTPROV.md`. Use the shared
+`python3 tools/dogfood.py edit|create --state ai` commands, which preserve old
+marks and mark only introduced/changed grapheme clusters. Do not mark entire
+legacy paragraphs or infer the origin of existing text. Do not label copied
+human text as AI: leave it unchanged or request a human contribution.
+
+Frontmatter, code, inline code, link destinations, HTML syntax, Markdoc tags and
+attributes, generated references, and source-code files are outside marking
+scope. The tool enrolls edited pages with `textprov: true`. Never remove existing
+marks, mark syntax, or strip a whole source file. Unicode variation selectors
+also have real language uses: do not apply the decoder to arbitrary content.
+
+Before completing an agent edit, run:
+
+```sh
+python3 tools/dogfood.py check --base HEAD
+pnpm test
+pnpm run check:frontmatter
+pnpm run check:nav
+pnpm build
+```
+
+Compare against the Git base from before your edits (use that SHA after making
+commits). If human changes were already present, scope your authoring operations
+to your own edits and use preservation-only checking for the combined diff;
+do not retroactively label those changes. Report that validation boundary.
+Human contributors may edit normally, preserving existing marks. CI checks mark
+preservation and syntax; it cannot prove an edit's author or detect undeclared AI.

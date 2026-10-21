@@ -63,6 +63,7 @@ export const starlightConfig = {
   ],
 
   components: {
+    MarkdownContent: "./src/components/starlight/MarkdownContent.astro",
     Header: "./src/components/starlight/Header.astro",
     SiteTitle: "./src/components/starlight/SiteTitle.astro",
     Hero: "./src/components/starlight/Hero.astro",

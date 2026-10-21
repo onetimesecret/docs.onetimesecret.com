@@ -136,6 +136,31 @@ export function docsSlugs() {
 }
 
 /**
+ * Markdown constructs whose links a reader can't follow; see enLinkSlugs().
+ * One alternation, so the leftmost construct wins as it does in Markdown:
+ * `<!--` inside a code span is code, and a fence inside a comment is hidden.
+ */
+const HIDDEN_MARKDOWN = new RegExp(
+  [
+    // HTML comment; an unclosed one runs to the end of the page.
+    /<!--[\s\S]*?(?:-->|(?![\s\S]))/.source,
+    // Fenced code, as in CommonMark: the closer is a run of the same character
+    // at least as long, alone on its line, and an unclosed fence runs to the
+    // end of the page. A backtick fence's info string can't hold a backtick.
+    // .source drops the m flag; it's here so linters read ^ and $ as line
+    // anchors, the way the combined pattern below uses them.
+    /^ {0,3}(?<bt>`{3,})[^`\n]*\n[\s\S]*?(?:^ {0,3}\k<bt>`*[ \t]*\r?$|(?![\s\S]))/m.source,
+    /^ {0,3}(?<tl>~{3,})[^\n]*\n[\s\S]*?(?:^ {0,3}\k<tl>~*[ \t]*\r?$|(?![\s\S]))/m.source,
+    // Code span: an unescaped backtick run closed by a run of the same length
+    // before the paragraph ends. An unmatched run is plain text.
+    /(?<![`\\])(?<cs>`+)(?!`)(?:[^\n]|\n(?![ \t]*\r?\n))*?(?<!`)\k<cs>(?!`)/.source,
+    // Image; the outer link of a linked image survives.
+    /!\[[^\]]*\]\([^)]*\)/.source,
+  ].join("|"),
+  "gm",
+);
+
+/**
  * EN docs slugs that a page's Markdown body links to.
  *
  * Only absolute, locale-prefixed targets count — `](/en/self-hosting/upgrade-guides/)`,
@@ -145,12 +170,17 @@ export function docsSlugs() {
  * /en/a/b/ resolves to /en/a/b/sibling, not /en/a/sibling, and a link checker
  * that "understood" the author's intent would pass a link the browser breaks.
  *
+ * Links a reader can't follow don't count either: HTML comments, fenced and
+ * inline code, and images are removed before matching, so commenting out a
+ * page's last inbound link fails the orphan check instead of passing it.
+ *
  * @param {string} markdown Page source, frontmatter included or not.
  * @returns {Set<string>} Normalized slugs, in link order.
  */
 export function enLinkSlugs(markdown) {
+  const visible = markdown.replace(HIDDEN_MARKDOWN, "");
   const slugs = new Set();
-  for (const match of markdown.matchAll(/\]\(\s*<?\/en\/([^)\s>]*)>?\s*(?:"[^"]*")?\)/g)) {
+  for (const match of visible.matchAll(/\]\(\s*<?\/en\/([^)\s>]*)>?\s*(?:"[^"]*")?\)/g)) {
     const target = match[1].replace(/[#?].*$/, "");
     slugs.add(normalizeLink(target));
   }

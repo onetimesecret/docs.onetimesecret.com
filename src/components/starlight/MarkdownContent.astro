@@ -1,0 +1,7 @@
+---
+import Default from '@astrojs/starlight/components/MarkdownContent.astro';
+import TextProvControls from './TextProvControls.astro';
+const enrolled = Astro.locals.starlightRoute.entry.data.textprov === true;
+---
+{enrolled && <TextProvControls />}
+<Default><slot /></Default>

@@ -1,7 +1,6 @@
 # Astro dev/build outputs
 .astro
 .serena
-.claude
 dist
 data
 
@@ -16,13 +15,13 @@ package-lock.json
 logs
 *.log
 *.txt
+!src/fonts/**/OFL.txt
 
 # Misc
 .DS_Store
 .fleet
 .idea
 .prompts
-.claude
 .crossnote
 .lycheecache
 billing.yaml
@@ -37,7 +36,14 @@ tmp
 !.env.example
 .ruby-version
 .commit_hash.txt
-CLAUDE.md
+
+# Shared agent instructions: of .claude/, only the explicit Claude authoring
+# command is tracked.
+.claude/*
+!.claude/commands/
+.claude/commands/*
+!.claude/commands/textprov.md
+__pycache__/
 
 # VSC
 .history

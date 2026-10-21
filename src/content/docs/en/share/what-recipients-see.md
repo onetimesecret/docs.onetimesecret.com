@@ -11,6 +11,10 @@ link and revealing the content are separate steps.** Loading the page does not
 consume the secret; confirming the reveal retrieves its content once and deletes
 the stored secret.
 
+The screenshots show the hosted service at ca.onetimesecret.com with a fictional
+guest Wi-Fi password. A custom domain may use different branding and
+instructions.
+
 ## What arrives
 
 The sender may send you the link in a chat, ticket, or email. If they use the
@@ -27,6 +31,20 @@ Opening a valid link displays a confirmation page with the content hidden.
 The reveal action reads **Click to reveal** and warns that the content will
 only be shown once.
 
+<figure class="screenshot">
+<div class="dark:sl-hidden screenshot-light">
+
+![Confirmation page with a Click to reveal button and a warning that the content is shown once.](../../../../assets/screenshots/recipient-experience/before-reveal-light.webp)
+
+</div>
+<div class="light:sl-hidden screenshot-dark">
+
+![Confirmation page with a Click to reveal button and a warning that the content is shown once.](../../../../assets/screenshots/recipient-experience/before-reveal-dark.webp)
+
+</div>
+<figcaption>The content stays hidden until you select Click to reveal.</figcaption>
+</figure>
+
 A scanner or chat preview that only fetches the page does not consume the
 secret. Software that submits the reveal action can consume it.
 
@@ -40,6 +58,20 @@ identify the creator of a secret made while signed out. Check your
 Enter the passphrase provided by the sender. If you do not have it, check the
 other channel they used or ask them through a different channel from the link.
 Onetime Secret cannot recover it.
+
+<figure class="screenshot">
+<div class="dark:sl-hidden screenshot-light">
+
+![Passphrase prompt with an empty entry field above the Click to reveal button.](../../../../assets/screenshots/recipient-experience/passphrase-light.webp)
+
+</div>
+<div class="light:sl-hidden screenshot-dark">
+
+![Passphrase prompt with an empty entry field above the Click to reveal button.](../../../../assets/screenshots/recipient-experience/passphrase-dark.webp)
+
+</div>
+<figcaption>If the sender set a passphrase, enter it before revealing the content.</figcaption>
+</figure>
 
 An incorrect passphrase does not consume the secret. Repeated incorrect entries
 can temporarily block further attempts, including attempts with the correct
@@ -65,6 +97,20 @@ they read.
 The revealed content has a copy action. Save it in its intended destination,
 such as your password manager or application configuration, before leaving.
 
+<figure class="screenshot">
+<div class="dark:sl-hidden screenshot-light">
+
+![Revealed example guest Wi-Fi password with a Copy to clipboard button.](../../../../assets/screenshots/recipient-experience/revealed-light.webp)
+
+</div>
+<div class="light:sl-hidden screenshot-dark">
+
+![Revealed example guest Wi-Fi password with a Copy to clipboard button.](../../../../assets/screenshots/recipient-experience/revealed-dark.webp)
+
+</div>
+<figcaption>Copy the content before leaving this page. The password shown here is an example.</figcaption>
+</figure>
+
 ## Reloading and reopening
 
 After a reveal, reloading or opening the same link on another device cannot
@@ -79,6 +125,20 @@ they entered. If you need it again, ask the sender to create a new secret.
 The default unavailable-secret message is **This secret has been viewed or
 expired.** It covers a secret that was revealed, burned, or expired, and an
 address that never referred to a secret.
+
+<figure class="screenshot">
+<div class="dark:sl-hidden screenshot-light">
+
+![Unavailable-secret page stating This secret has been viewed or expired.](../../../../assets/screenshots/recipient-experience/unavailable-light.webp)
+
+</div>
+<div class="light:sl-hidden screenshot-dark">
+
+![Unavailable-secret page stating This secret has been viewed or expired.](../../../../assets/screenshots/recipient-experience/unavailable-dark.webp)
+
+</div>
+<figcaption>After a secret has been revealed, opening the same link again shows this message.</figcaption>
+</figure>
 
 The page does not distinguish these cases because anyone with the address could
 otherwise learn its history. Ask the sender to check their receipt or send a

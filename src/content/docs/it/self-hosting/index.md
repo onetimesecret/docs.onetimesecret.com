@@ -68,10 +68,10 @@ La vostra istanza self-hosted include:
 
 ## Prossimi passi
 
-1. **[Per iniziare](./getting-started)** - Guida passo passo alla configurazione
+1. **[Per iniziare](/it/install/docker)** - Guida passo passo alla configurazione
 2. **[Installazione e deployment](./installation)** - Opzioni di deployment dettagliate
 3. **[Riferimento configurazione](./configuration)** - Documentazione completa delle impostazioni
 
 ---
 
-_Pronti per iniziare? Seguite la nostra guida [Per iniziare](./getting-started)._
+_Pronti per iniziare? Seguite la nostra guida [Per iniziare](/it/install/docker)._

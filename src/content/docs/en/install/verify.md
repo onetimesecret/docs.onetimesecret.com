@@ -87,6 +87,9 @@ confirmation email, and prints a generated password once. Save it before you
 close the terminal — it is not displayed again. Add `--password` if you would
 rather set one yourself.
 
+After signing in, open `/colonel` on your instance to access the admin console;
+it requires an account with the `colonel` role.
+
 ## The two health endpoints, and where to curl them from
 
 `GET /health` is liveness only. It returns static JSON — a fixed `status: "ok"`,

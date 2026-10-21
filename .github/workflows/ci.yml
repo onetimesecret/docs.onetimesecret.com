@@ -30,19 +30,21 @@ jobs:
 
     steps:
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
 
       - uses: pnpm/action-setup@v6
         with:
-          version: 12.6.0
+          version: 12.14.0
           run_install: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v7
         with:
-          node-version: 24.21.0
+          node-version: 24.22.0
           cache: pnpm
 
-      - run: pnpm install
+      - run: pnpm install --frozen-lockfile
 
       - name: Check sidebar links
         run: pnpm run check:nav
@@ -58,6 +60,17 @@ jobs:
 
       - name: Test
         run: pnpm test
+
+      - name: Test provenance authoring
+        run: python3 -m unittest discover -s tools/tests
+
+      - name: Preserve recorded provenance
+        env:
+          PROVENANCE_BASE: ${{ github.event.pull_request.base.sha }}
+          PROVENANCE_HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          PROVENANCE_MERGE_BASE=$(git merge-base "$PROVENANCE_BASE" "$PROVENANCE_HEAD")
+          python3 tools/dogfood.py check --preserve-only --base "$PROVENANCE_MERGE_BASE" --head "$PROVENANCE_HEAD"
 
       - name: Build
         run: pnpm run build

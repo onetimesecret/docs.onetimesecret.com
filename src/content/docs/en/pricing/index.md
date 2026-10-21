@@ -53,7 +53,7 @@ Secret sharing for teams, with single sign-on and admin roles.
 
 [See current pricing](https://onetimesecret.com/pricing)
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 ### How does Onetime Secret work?
 Onetime Secret allows you to share sensitive information securely. Each shared secret can only be viewed once before it's permanently deleted, ensuring your data remains confidential.
@@ -73,4 +73,4 @@ We take security very seriously and employ multiple measures to protect users' i
 However, we are also transparent that no method of electronic transmission or storage is 100% secure. While we strive to use commercially acceptable means to protect personal information, we cannot guarantee its absolute security. We recommend users take precautions like using passphrases. Our commitment is to be diligent in securing data to the best of our abilities while being upfront about potential risks.
 
 ### Do you offer customer support?
-Yes, we provide customer support. The level of support may vary depending on your chosen plan.
+Yes. Start with the documentation at [docs.onetimesecret.com](https://docs.onetimesecret.com) — usage guides, the API reference, and the [Self-Hosting Guide](/en/self-hosting/). If that doesn't cover it, email [support@onetimesecret.com](mailto:support@onetimesecret.com) or use the [feedback form](https://onetimesecret.com/feedback). For bugs and feature requests in the self-hosted project, open an issue on [GitHub](https://github.com/onetimesecret/onetimesecret/issues). Security issues go to security@onetimesecret.com — never a public issue.

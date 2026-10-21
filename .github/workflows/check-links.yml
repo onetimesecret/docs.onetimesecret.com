@@ -5,7 +5,9 @@ name: Check Links
 # Manual testing commands (requires lychee installed):
 #
 # Internal links check:
-#   lychee --no-progress --offline --root-dir "$(pwd)/src/content/docs" --fallback-extensions md,mdoc './src/**/[!_]*.md' './src/**/[!_]*.mdoc'
+#   lychee --no-progress --offline --root-dir "$(pwd)/src/content/docs" --fallback-extensions md,mdoc \
+#     --remap '^file://(.*)/src/content/docs/(bg|da|de|es|fr|it|ja|ko|mi|nl|pl|pt-br|sv|tr|uk|zh-cn)/install/(.*)$ file://$1/src/content/docs/en/install/$3' \
+#     './src/**/[!_]*.md' './src/**/[!_]*.mdoc'
 #
 # External links check:
 #   lychee --no-progress --max-concurrency 8 --timeout 20 --max-retries 3 \
@@ -80,11 +82,16 @@ jobs:
           # Only check markdown files for internal links
           # --root-dir resolves root-relative paths (e.g. /en/regions/)
           # --fallback-extensions resolves directory links to index.md files
+          # --remap points locale install/ links at the English source: install/
+          # is English-only, and Starlight serves it at every locale's route as
+          # a fallback page. A typo, an unconfigured locale or a missing English
+          # page still fails. Keep the locale list in step with config/i18n.mjs.
           args: >-
             --no-progress
             --offline
             --root-dir ${{ github.workspace }}/src/content/docs
             --fallback-extensions md,mdoc
+            --remap '^file://(.*)/src/content/docs/(bg|da|de|es|fr|it|ja|ko|mi|nl|pl|pt-br|sv|tr|uk|zh-cn)/install/(.*)$ file://$1/src/content/docs/en/install/$3'
             './src/**/[!_]*.md'
             './src/**/[!_]*.mdoc'
           fail: true
