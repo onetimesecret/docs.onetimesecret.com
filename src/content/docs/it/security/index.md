@@ -19,7 +19,7 @@ farlo in modo sicuro e dove trovare i dettagli.
 - **Protezione con frase di sicurezza.** Pu󠄁oi󠄁 richiedere una frase di
   sicurezza per visualizzare un segreto, aggiungendo un livello che il solo
   link non può sbloccare.
-- **Durata limitata per design.** Ogni segreto ha una scadenza; scegli la
+- **Durata limitata f󠄁i󠄁n󠄁 d󠄁a󠄁l󠄁l󠄁a󠄁 pr󠄁o󠄁g󠄁et󠄁t󠄁a󠄁z󠄁i󠄁o󠄁n󠄁e.** Ogni segreto ha una scadenza; scegli la
   durata più breve possibile per ridurre al minimo l'esposizione.
 - **Distruzione prima della lettura.** Se un segreto non è ancora stato
   visualizzato, pu󠄁oi󠄁 distruggerlo così che non possa mai essere letto.
