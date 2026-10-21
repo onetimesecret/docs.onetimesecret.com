@@ -71,7 +71,7 @@ P󠄁a󠄁r󠄁t󠄁e󠄁 d󠄁e󠄁l󠄁 t󠄁r󠄁a󠄁b󠄁a󠄁jo a󠄁d󠄁
 l󠄁í󠄁n󠄁ea de coma󠄁n󠄁d󠄁o󠄁s󠄁 d󠄁e󠄁 l󠄁a󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁n󠄁c󠄁i󠄁a󠄁.󠄁
 
 T󠄁r󠄁a󠄁n󠄁s󠄁f󠄁e󠄁r󠄁i󠄁r󠄁 u󠄁n󠄁a󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁c󠄁i󠄁ó󠄁n󠄁 a󠄁 u󠄁n󠄁 n󠄁u󠄁e󠄁v󠄁o󠄁 p󠄁r󠄁o󠄁p󠄁i󠄁e󠄁t󠄁a󠄁r󠄁i󠄁o󠄁 e󠄁s󠄁 l󠄁a󠄁 p󠄁r󠄁i󠄁n󠄁c󠄁i󠄁p󠄁a󠄁l󠄁.󠄁 L󠄁o󠄁s󠄁 p󠄁r󠄁o󠄁p󠄁i󠄁e󠄁t󠄁a󠄁r󠄁i󠄁o󠄁s󠄁 d󠄁e󠄁
-o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁c󠄁i󠄁o󠄁n󠄁e󠄁s󠄁 n󠄁o󠄁 t󠄁i󠄁e󠄁n󠄁e󠄁n󠄁 p󠄁a󠄁n󠄁t󠄁a󠄁l󠄁l󠄁a󠄁 n󠄁i󠄁 endp󠄁o󠄁i󠄁n󠄁t󠄁 p󠄁a󠄁r󠄁a󠄁 e󠄁l󠄁l󠄁o󠄁,󠄁 a󠄁s󠄁í󠄁 q󠄁u󠄁e󠄁 l󠄁a󠄁 t󠄁r󠄁a󠄁n󠄁s󠄁f󠄁e󠄁r󠄁e󠄁n󠄁c󠄁i󠄁a󠄁 l󠄁e󠄁 c󠄁o󠄁r󠄁r󠄁e󠄁s󠄁p󠄁o󠄁n󠄁d󠄁e󠄁 a󠄁 u󠄁s󠄁t󠄁e󠄁d󠄁.󠄁
+o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁c󠄁i󠄁o󠄁n󠄁e󠄁s󠄁 n󠄁o󠄁 t󠄁i󠄁e󠄁n󠄁e󠄁n󠄁 p󠄁a󠄁n󠄁t󠄁a󠄁l󠄁l󠄁a󠄁 n󠄁i󠄁 p󠄁u󠄁n󠄁t󠄁o󠄁 d󠄁e󠄁 c󠄁o󠄁n󠄁e󠄁x󠄁i󠄁ó󠄁n󠄁 p󠄁a󠄁r󠄁a󠄁 e󠄁l󠄁l󠄁o󠄁,󠄁 a󠄁s󠄁í󠄁 q󠄁u󠄁e󠄁 l󠄁a󠄁 t󠄁r󠄁a󠄁n󠄁s󠄁f󠄁e󠄁r󠄁e󠄁n󠄁c󠄁i󠄁a󠄁 l󠄁e󠄁 c󠄁o󠄁r󠄁r󠄁e󠄁s󠄁p󠄁o󠄁n󠄁d󠄁e󠄁 a󠄁 u󠄁s󠄁t󠄁e󠄁d󠄁.󠄁
 U󠄁s󠄁e󠄁 e󠄁l󠄁 c󠄁o󠄁m󠄁a󠄁n󠄁d󠄁o󠄁 s󠄁i󠄁g󠄁u󠄁i󠄁e󠄁n󠄁t󠄁e󠄁.󠄁 P󠄁a󠄁r󠄁a󠄁 l󠄁a󠄁 a󠄁u󠄁t󠄁o󠄁m󠄁a󠄁t󠄁i󠄁z󠄁a󠄁c󠄁i󠄁ó󠄁n󠄁,󠄁 l󠄁a󠄁 A󠄁P󠄁I󠄁 d󠄁e󠄁 C󠄁o󠄁l󠄁o󠄁n󠄁e󠄁l󠄁 e󠄁x󠄁p󠄁o󠄁n󠄁e󠄁 l󠄁a󠄁 m󠄁i󠄁s󠄁m󠄁a󠄁
 o󠄁p󠄁e󠄁r󠄁a󠄁c󠄁i󠄁ó󠄁n󠄁 e󠄁n󠄁 `POST /api/colonel/organizations/:org_id/transfer-ownership`;󠄁
 r󠄁e󠄁q󠄁u󠄁i󠄁e󠄁r󠄁e󠄁 e󠄁l󠄁 r󠄁o󠄁l󠄁 c󠄁o󠄁l󠄁o󠄁n󠄁e󠄁l󠄁,󠄁 t󠄁o󠄁m󠄁a󠄁 e󠄁l󠄁 n󠄁o󠄁m󠄁b󠄁r󠄁e󠄁 d󠄁e󠄁 l󠄁a󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁c󠄁i󠄁ó󠄁n󠄁 c󠄁o󠄁m󠄁o󠄁 c󠄁o󠄁n󠄁f󠄁i󠄁r󠄁m󠄁a󠄁c󠄁i󠄁ó󠄁n󠄁 y󠄁
