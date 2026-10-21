@@ -8,8 +8,8 @@ K󠄁o󠄁 t󠄁e󠄁 **k󠄁i󠄁r󠄁i󠄁t󠄁a󠄁k󠄁i󠄁 ō󠄁k󠄁a�
 e󠄁 t󠄁a󠄁u󠄁t󠄁o󠄁k󠄁o󠄁 a󠄁n󠄁a󠄁 i󠄁 t󠄁e󠄁 A󠄁P󠄁I󠄁 v󠄁1󠄁 m󠄁e󠄁 t󠄁e󠄁 v󠄁2󠄁,󠄁 i󠄁 n󠄁g󠄁ā󠄁 [r󠄁o󠄁h󠄁e󠄁 i󠄁p󠄁u󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 ā󠄁-󠄁r󠄁o󠄁h󠄁e󠄁](/en/security/where-your-data-lives/) k󠄁a󠄁t󠄁o󠄁a󠄁,󠄁 m󠄁e󠄁 n󠄁g󠄁ā󠄁
 U󠄁R󠄁L󠄁 p󠄁ū󠄁t󠄁a󠄁k󠄁e󠄁 r󠄁i󠄁t󠄁e󠄁n󠄁g󠄁a󠄁.󠄁
 
-K󠄁o󠄁 n󠄁g󠄁ā󠄁 m󠄁e󠄁a󠄁 k󠄁a󠄁t󠄁o󠄁a󠄁 a󠄁t󠄁u󠄁 i󠄁 t󠄁ē󠄁n󠄁e󠄁i󠄁 w󠄁h󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 **e󠄁 t󠄁i󠄁a󠄁k󠄁i󠄁n󠄁a󠄁 a󠄁n󠄁a󠄁 e󠄁 t󠄁e󠄁 h󠄁a󠄁p󠄁o󠄁r󠄁i󠄁**.󠄁 K󠄁o󠄁 t󠄁e󠄁 n󠄁u󠄁i󠄁n󠄁g󠄁a󠄁 o󠄁 ē󠄁n󠄁e󠄁i󠄁
-p󠄁ā󠄁t󠄁a󠄁k󠄁a󠄁 i󠄁 m󠄁u󠄁a󠄁 i󠄁 t󠄁e󠄁 A󠄁P󠄁I󠄁 v󠄁2󠄁 m󠄁e󠄁 n󠄁g󠄁ā󠄁 r󠄁o󠄁h󠄁e󠄁 i󠄁p󠄁u󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 ā󠄁-󠄁r󠄁o󠄁h󠄁e󠄁,󠄁 n󠄁ō󠄁 r󠄁e󠄁i󠄁r󠄁a󠄁 k󠄁a󠄁 k󠄁a󠄁r󠄁a󠄁n󠄁g󠄁a󠄁 r󠄁ā󠄁t󠄁o󠄁u󠄁 i󠄁 t󠄁e󠄁 n󠄁u󠄁i󠄁n󠄁g󠄁a󠄁 o󠄁 t󠄁e󠄁 w󠄁ā󠄁 i󠄁 n󠄁g󠄁ā󠄁
+K󠄁o󠄁 ē󠄁r󠄁ā󠄁 a󠄁t󠄁u󠄁 m󠄁e󠄁a󠄁 k󠄁a󠄁t󠄁o󠄁a󠄁 i󠄁 t󠄁ē󠄁n󠄁e󠄁i󠄁 w󠄁h󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 **e󠄁 t󠄁i󠄁a󠄁k󠄁i󠄁n󠄁a󠄁 a󠄁n󠄁a󠄁 e󠄁 t󠄁e󠄁 h󠄁a󠄁p󠄁o󠄁r󠄁i󠄁**.󠄁 N󠄁ō󠄁 m󠄁u󠄁a󠄁 i󠄁 t󠄁e󠄁 A󠄁P󠄁I󠄁 v󠄁2󠄁 m󠄁e󠄁 n󠄁g󠄁ā󠄁 r󠄁o󠄁h󠄁e󠄁 i󠄁p󠄁u󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 ā󠄁-󠄁r󠄁o󠄁h󠄁e󠄁 t󠄁e󠄁 n󠄁u󠄁i󠄁n󠄁g󠄁a󠄁 o󠄁 ē󠄁n󠄁e󠄁i󠄁
+p󠄁ā󠄁t󠄁a󠄁k󠄁a󠄁,󠄁 n󠄁ō󠄁 r󠄁e󠄁i󠄁r󠄁a󠄁 k󠄁a󠄁 k󠄁a󠄁r󠄁a󠄁n󠄁g󠄁a󠄁 r󠄁ā󠄁t󠄁o󠄁u󠄁 i󠄁 t󠄁e󠄁 n󠄁u󠄁i󠄁n󠄁g󠄁a󠄁 o󠄁 t󠄁e󠄁 w󠄁ā󠄁 i󠄁 n󠄁g󠄁ā󠄁
 p󠄁i󠄁t󠄁o󠄁 m󠄁u󠄁t󠄁u󠄁n󠄁g󠄁a󠄁 v󠄁1󠄁 k󠄁u󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁u󠄁t󠄁u󠄁a󠄁 k󠄁i󠄁 `onetimesecret.com` —󠄁 t󠄁i󠄁r󠄁o󠄁h󠄁i󠄁a󠄁 t󠄁e󠄁 t󠄁u󠄁h󠄁i󠄁p󠄁o󠄁k󠄁a󠄁 t󠄁ū󠄁n󠄁g󠄁a󠄁 o󠄁 i󠄁a󠄁
 u󠄁r󠄁u󠄁n󠄁g󠄁a󠄁,󠄁 ā󠄁,󠄁 m󠄁a󠄁n󠄁a󠄁t󠄁o󠄁k󠄁o󠄁n󠄁a󠄁 k󠄁i󠄁a󠄁 m󠄁a󠄁h󠄁i󠄁 t󠄁e󠄁 p󠄁ā󠄁t󠄁a󠄁k󠄁a󠄁 k󠄁i󠄁 t󠄁ō󠄁 r󠄁o󠄁h󠄁e󠄁,󠄁 k󠄁i󠄁 t󠄁ō󠄁 t󠄁a󠄁u󠄁p󠄁ā󠄁n󠄁g󠄁a󠄁 m󠄁a󠄁n󠄁a󠄁a󠄁k󠄁i󠄁-󠄁ā󠄁-󠄁k󠄁i󠄁r󠄁i󠄁 r󠄁ā󠄁n󠄁e󠄁i󠄁,󠄁
 i󠄁 m󠄁u󠄁a󠄁 i󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁w󠄁h󠄁i󠄁r󠄁i󠄁n󠄁a󠄁k󠄁i󠄁 k󠄁i󠄁 a󠄁 i󠄁a󠄁.󠄁

@@ -25,8 +25,8 @@ description: "Tāpiritia he rohe ritenga ki tō whakahaere, waihangahia ōna tuh
 3. I󠄁 **R󠄁o󠄁h󠄁e󠄁 R󠄁i󠄁t󠄁e󠄁n󠄁g󠄁a󠄁**,󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁u󠄁r󠄁u󠄁a󠄁 t󠄁e󠄁 w󠄁ā󠄁h󠄁i󠄁t󠄁a󠄁u󠄁,󠄁 h󠄁e󠄁i󠄁 t󠄁a󠄁u󠄁i󠄁r󠄁a󠄁 `secrets.example.com`.󠄁
    M󠄁ē󠄁n󠄁ā󠄁 k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁u󠄁r󠄁u󠄁 k󠄁o󠄁e󠄁 i󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 r󠄁o󠄁h󠄁e󠄁 t󠄁i󠄁h󠄁i󠄁 p󠄁ē󠄁r󠄁ā󠄁 i󠄁 `example.com`,󠄁 k󠄁a󠄁 p󠄁ā󠄁t󠄁a󠄁i󠄁h󠄁i󠄁a󠄁 k󠄁o󠄁e󠄁 k󠄁e󠄁i󠄁 h󠄁e󠄁a󠄁
    n󠄁g󠄁ā󠄁 h󠄁o󠄁n󠄁o󠄁n󠄁g󠄁a󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁 e󠄁 n󠄁o󠄁h󠄁o󠄁 a󠄁i󠄁:󠄁 k󠄁ō󠄁w󠄁h󠄁i󠄁r󠄁i󠄁a󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 o󠄁 n󠄁g󠄁ā󠄁 **R󠄁o󠄁h󠄁e󠄁-󠄁i󠄁t󠄁i󠄁 r󠄁o󠄁n󠄁g󠄁o󠄁n󠄁u󠄁i󠄁**,󠄁 k󠄁ō󠄁w󠄁h󠄁i󠄁r󠄁i󠄁a󠄁 r󠄁ā󠄁n󠄁e󠄁i󠄁
-   **W󠄁h󠄁a󠄁k󠄁a󠄁m󠄁a󠄁h󠄁i󠄁a󠄁 t󠄁ō󠄁k󠄁u󠄁 r󠄁o󠄁h󠄁e󠄁 p󠄁ū󠄁t󠄁a󠄁k󠄁e󠄁**.󠄁
-4. K󠄁ō󠄁w󠄁h󠄁i󠄁r󠄁i󠄁a󠄁 **H󠄁a󠄁e󠄁r󠄁e󠄁 t󠄁o󠄁n󠄁u󠄁 m󠄁ā󠄁** _t󠄁ō󠄁 r󠄁o󠄁h󠄁e󠄁_.󠄁
+   **W󠄁h󠄁a󠄁k󠄁a󠄁m󠄁a󠄁h󠄁i󠄁a󠄁 t󠄁a󠄁k󠄁u󠄁 r󠄁o󠄁h󠄁e󠄁 p󠄁a󠄁k󠄁i󠄁a󠄁k󠄁a󠄁**.󠄁
+4. K󠄁ō󠄁w󠄁h󠄁i󠄁r󠄁i󠄁a󠄁 **H󠄁a󠄁e󠄁r󠄁e󠄁 t󠄁o󠄁n󠄁u󠄁 m󠄁e󠄁** _t󠄁ō󠄁 r󠄁o󠄁h󠄁e󠄁_.󠄁
 
 K󠄁a󠄁 t󠄁ā󠄁p󠄁i󠄁r󠄁i󠄁t󠄁i󠄁a󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 k󠄁i󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁,󠄁 ā󠄁,󠄁 k󠄁a󠄁 r󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i󠄁t󠄁i󠄁a󠄁 e󠄁 t󠄁e󠄁 m󠄁a󠄁t󠄁a󠄁 e󠄁 w󠄁h󠄁a󠄁i󠄁 a󠄁k󠄁e󠄁 n󠄁e󠄁i󠄁 n󠄁g󠄁ā󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 D󠄁N󠄁S󠄁
 e󠄁 r󠄁u󠄁a󠄁 h󠄁e󠄁i󠄁 w󠄁a󠄁i󠄁h󠄁a󠄁n󠄁g󠄁a󠄁.󠄁 K󠄁ā󠄁o󠄁r󠄁e󠄁 h󠄁e󠄁 k󠄁ō󠄁w󠄁h󠄁i󠄁r󠄁i󠄁n󠄁g󠄁a󠄁 r󠄁o󠄁h󠄁e󠄁 r󠄁a󠄁r󠄁a󠄁u󠄁n󠄁g󠄁a󠄁:󠄁 k󠄁a󠄁 t󠄁o󠄁h󠄁u󠄁 n󠄁g󠄁ā󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 k󠄁i󠄁 t󠄁e󠄁
@@ -42,14 +42,14 @@ m󠄁a󠄁n󠄁a󠄁t󠄁o󠄁k󠄁o󠄁 o󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁;�
 
 K󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁ū󠄁 t󠄁ē󠄁n󠄁e󠄁i󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 k󠄁e󠄁i󠄁 a󠄁 k󠄁o󠄁e󠄁 t󠄁e󠄁 m󠄁a󠄁n󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁 i󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁.󠄁 K󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁w󠄁h󠄁i󠄁r󠄁i󠄁n󠄁a󠄁k󠄁i󠄁 t󠄁e󠄁 m󠄁a󠄁n󠄁a󠄁t󠄁o󠄁k󠄁o󠄁 k󠄁i󠄁 a󠄁 i󠄁a󠄁.󠄁
 
-- **K󠄁a󠄁i󠄁h󠄁a󠄁u󠄁t󠄁ū󠄁:󠄁** `_onetime-challenge-` m󠄁e󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 t󠄁a󠄁u󠄁t󠄁o󠄁h󠄁u󠄁 p󠄁o󠄁t󠄁o󠄁 m󠄁ō󠄁 t󠄁ō󠄁
+- **K󠄁a󠄁i󠄁h󠄁a󠄁u󠄁t󠄁ū󠄁** (󠄁k󠄁o󠄁 **K󠄁a󠄁i󠄁w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁** t󠄁e󠄁 t󠄁a󠄁p󠄁a󠄁n󠄁g󠄁a󠄁 i󠄁 t󠄁e󠄁 t󠄁a󠄁u󠄁p󠄁ā󠄁n󠄁g󠄁a󠄁)󠄁:󠄁 `_onetime-challenge-` m󠄁e󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 t󠄁a󠄁u󠄁t󠄁o󠄁h󠄁u󠄁 p󠄁o󠄁t󠄁o󠄁 m󠄁ō󠄁 t󠄁ō󠄁
   r󠄁o󠄁h󠄁e󠄁 i󠄁 m󠄁u󠄁r󠄁i󠄁.󠄁 M󠄁ō󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 r󠄁o󠄁h󠄁e󠄁-󠄁i󠄁t󠄁i󠄁,󠄁 k󠄁a󠄁 t󠄁ā󠄁p󠄁i󠄁r󠄁i󠄁t󠄁i󠄁a󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁-󠄁i󠄁t󠄁i󠄁 i󠄁 m󠄁u󠄁r󠄁i󠄁 i󠄁 t󠄁ē󠄁r󠄁ā󠄁.󠄁 H󠄁e󠄁i󠄁 t󠄁a󠄁u󠄁i󠄁r󠄁a󠄁,󠄁
   `_onetime-challenge-abc1234` m󠄁ō󠄁 `example.com`,󠄁 `_onetime-challenge-abc1234.secrets` r󠄁ā󠄁n󠄁e󠄁i󠄁
   m󠄁ō󠄁 `secrets.example.com`. Waihangah󠄁i󠄁a󠄁 i󠄁 r󠄁o󠄁t󠄁o󠄁 i󠄁
-  t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁-󠄁r󠄁a󠄁r󠄁a󠄁u󠄁n󠄁g󠄁a󠄁 o󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 p󠄁ū󠄁t󠄁a󠄁k󠄁e󠄁 (󠄁`example.com`)󠄁.󠄁
-- **U󠄁a󠄁r󠄁a󠄁:󠄁** h󠄁e󠄁 w󠄁a󠄁e󠄁h󠄁e󠄁r󠄁e󠄁 h󠄁e󠄁k󠄁e󠄁h󠄁ā󠄁t󠄁e󠄁n󠄁e󠄁 3󠄁2󠄁-󠄁p󠄁ū󠄁ā󠄁h󠄁u󠄁a󠄁.󠄁
+  t󠄁e󠄁 t󠄁a󠄁k󠄁i󠄁w󠄁ā󠄁 D󠄁N󠄁S󠄁 o󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 p󠄁ū󠄁t󠄁a󠄁k󠄁e󠄁 (󠄁`example.com`)󠄁.󠄁
+- **U󠄁a󠄁r󠄁a󠄁:󠄁** h󠄁e󠄁 w󠄁a󠄁e󠄁h󠄁e󠄁r󠄁e󠄁 ā󠄁-󠄁t󠄁e󠄁k󠄁a󠄁u󠄁-󠄁m󠄁ā󠄁-󠄁o󠄁n󠄁o󠄁 (󠄁h󠄁e󠄁x󠄁a󠄁d󠄁e󠄁c󠄁i󠄁m󠄁a󠄁l󠄁)󠄁,󠄁 3󠄁2󠄁 ō󠄁n󠄁a󠄁 p󠄁ū󠄁ā󠄁h󠄁u󠄁a󠄁.󠄁
 
-K󠄁o󠄁 ē󠄁t󠄁a󠄁h󠄁i󠄁 k󠄁a󠄁i󠄁w󠄁h󠄁a󠄁k󠄁a󠄁r󠄁a󠄁t󠄁o󠄁 e󠄁 t󠄁ū󠄁m󠄁a󠄁n󠄁a󠄁k󠄁o󠄁 a󠄁n󠄁a󠄁 k󠄁i󠄁 t󠄁e󠄁 t󠄁a󠄁p󠄁a󠄁n󠄁g󠄁a󠄁 k󠄁a󠄁i󠄁h󠄁a󠄁u󠄁t󠄁ū󠄁 a󠄁n󠄁a󠄁k󠄁e󠄁,󠄁 ā󠄁,󠄁 k󠄁a󠄁 t󠄁ā󠄁p󠄁i󠄁r󠄁i󠄁 i󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁-󠄁r󠄁a󠄁r󠄁a󠄁u󠄁n󠄁g󠄁a󠄁 m󠄁ā󠄁u󠄁;󠄁 k󠄁o󠄁 ē󠄁t󠄁a󠄁h󠄁i󠄁 a󠄁t󠄁u󠄁
+K󠄁o󠄁 ē󠄁t󠄁a󠄁h󠄁i󠄁 k󠄁a󠄁i󠄁w󠄁h󠄁a󠄁k󠄁a󠄁r󠄁a󠄁t󠄁o󠄁 e󠄁 t󠄁ū󠄁m󠄁a󠄁n󠄁a󠄁k󠄁o󠄁 a󠄁n󠄁a󠄁 k󠄁i󠄁 t󠄁e󠄁 t󠄁a󠄁p󠄁a󠄁n󠄁g󠄁a󠄁 k󠄁a󠄁i󠄁h󠄁a󠄁u󠄁t󠄁ū󠄁 a󠄁n󠄁a󠄁k󠄁e󠄁,󠄁 ā󠄁,󠄁 k󠄁a󠄁 t󠄁ā󠄁p󠄁i󠄁r󠄁i󠄁 i󠄁 t󠄁e󠄁 t󠄁a󠄁k󠄁i󠄁w󠄁ā󠄁 D󠄁N󠄁S󠄁 m󠄁ā󠄁u󠄁;󠄁 k󠄁o󠄁 ē󠄁t󠄁a󠄁h󠄁i󠄁 a󠄁t󠄁u󠄁
 e󠄁 t󠄁ū󠄁m󠄁a󠄁n󠄁a󠄁k󠄁o󠄁 a󠄁n󠄁a󠄁 k󠄁i󠄁 t󠄁e󠄁 i󠄁n󠄁g󠄁o󠄁a󠄁 k󠄁a󠄁t󠄁o󠄁a󠄁.󠄁 H󠄁e󠄁 p󠄁a󠄁i󠄁 n󠄁g󠄁ā󠄁 ā󠄁h󠄁u󠄁a󠄁 e󠄁 r󠄁u󠄁a󠄁 m󠄁ē󠄁n󠄁ā󠄁 k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁t󠄁a󠄁u󠄁 t󠄁e󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 i󠄁
 `<host>.<your base domain>` k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁o󠄁k󠄁i󠄁 i󠄁 t󠄁e󠄁 u󠄁a󠄁r󠄁a󠄁 k󠄁ā󠄁o󠄁r󠄁e󠄁 i󠄁 r󠄁e󠄁r󠄁e󠄁k󠄁ē󠄁.󠄁 M󠄁e󠄁 n󠄁o󠄁h󠄁o󠄁 k󠄁o󠄁 i󠄁a󠄁 a󠄁n󠄁a󠄁k󠄁e󠄁 t󠄁e󠄁
 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 T󠄁X󠄁T󠄁 i󠄁 t󠄁a󠄁u󠄁a󠄁 i󠄁n󠄁g󠄁o󠄁a󠄁:󠄁 t󠄁a󠄁n󠄁g󠄁o󠄁h󠄁i󠄁a󠄁 n󠄁g󠄁ā󠄁 u󠄁a󠄁r󠄁a󠄁 i󠄁 m󠄁a󠄁h󠄁u󠄁e󠄁 m󠄁a󠄁i󠄁 i󠄁 tētahi n󠄁g󠄁a󠄁n󠄁a󠄁 o󠄁 m󠄁u󠄁a󠄁.󠄁
@@ -58,8 +58,8 @@ K󠄁a󠄁 n󠄁o󠄁h󠄁o󠄁 ō󠄁ri󠄁t󠄁e󠄁 t󠄁e󠄁 u󠄁a󠄁r�
 t󠄁a󠄁n󠄁g󠄁o󠄁 k󠄁o󠄁e󠄁 i󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 k󠄁a󠄁 t󠄁ā󠄁p󠄁i󠄁r󠄁i󠄁 a󠄁n󠄁ō󠄁,󠄁 k󠄁a󠄁 w󠄁h󠄁i󠄁w󠄁h󠄁i󠄁 i󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 u󠄁a󠄁r󠄁a󠄁 h󠄁o󠄁u󠄁,󠄁 ā󠄁,󠄁 i󠄁 t󠄁e󠄁 n󠄁u󠄁i󠄁n󠄁g󠄁a󠄁 o󠄁 t󠄁e󠄁 w󠄁ā󠄁 h󠄁e󠄁 k󠄁a󠄁i󠄁h󠄁a󠄁u󠄁t󠄁ū󠄁
 h󠄁o󠄁u󠄁.󠄁
 
-P󠄁u󠄁r󠄁i󠄁t󠄁i󠄁a󠄁 t󠄁ē󠄁n󠄁e󠄁i󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 i󠄁 m󠄁u󠄁r󠄁i󠄁 i󠄁 t󠄁e󠄁 m󠄁a󠄁n󠄁a󠄁t󠄁o󠄁k󠄁o󠄁.󠄁 K󠄁a󠄁 t󠄁ā󠄁r󠄁u󠄁a󠄁t󠄁i󠄁a󠄁 t󠄁e󠄁 m󠄁a󠄁n󠄁a󠄁t󠄁o󠄁k󠄁o󠄁 i󠄁
-m󠄁u󠄁r󠄁i󠄁,󠄁 ā󠄁,󠄁 k󠄁o󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 a󠄁r󠄁o󠄁w󠄁h󠄁a󠄁i󠄁 k󠄁ā󠄁o󠄁r󠄁e󠄁 e󠄁 k󠄁i󠄁t󠄁e󠄁a󠄁 a󠄁n󠄁ō te󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁u󠄁t󠄁u󠄁 i󠄁 t󠄁e󠄁 t󠄁u󠄁k󠄁u󠄁n󠄁g󠄁a󠄁
+P󠄁u󠄁r󠄁i󠄁t󠄁i󠄁a󠄁 t󠄁ē󠄁n󠄁e󠄁i󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 i󠄁 m󠄁u󠄁r󠄁i󠄁 i󠄁 t󠄁e󠄁 m󠄁a󠄁n󠄁a󠄁t󠄁o󠄁k󠄁o󠄁.󠄁 K󠄁a󠄁 m󠄁a󠄁h󠄁i󠄁a󠄁 a󠄁n󠄁ō󠄁 t󠄁e󠄁 m󠄁a󠄁n󠄁a󠄁t󠄁o󠄁k󠄁o󠄁 i󠄁
+t󠄁e󠄁 p󠄁a󠄁p󠄁a󠄁m󠄁u󠄁r󠄁i󠄁,󠄁 ā󠄁,󠄁 k󠄁o󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 a󠄁r󠄁o󠄁w󠄁h󠄁a󠄁i󠄁 k󠄁ā󠄁o󠄁r󠄁e󠄁 e󠄁 k󠄁i󠄁t󠄁e󠄁a󠄁 a󠄁n󠄁ō te󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁u󠄁t󠄁u󠄁 i󠄁 t󠄁e󠄁 t󠄁u󠄁k󠄁u󠄁n󠄁g󠄁a󠄁
 o󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁.󠄁
 
 ### T󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 a󠄁r󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 (󠄁C󠄁N󠄁A󠄁M󠄁E󠄁,󠄁 A󠄁 r󠄁ā󠄁n󠄁e󠄁i󠄁)󠄁
@@ -103,7 +103,7 @@ t󠄁a󠄁p󠄁a󠄁n󠄁g󠄁a󠄁 t󠄁ū󠄁nga.
 ## Tir󠄁ohi󠄁a te󠄁 h󠄁ua
 
 I󠄁n󠄁a󠄁 ri󠄁t󠄁e t󠄁e󠄁 rohe, ka whakaa󠄁t󠄁u󠄁 t󠄁e ri󠄁p󠄁a󠄁 N󠄁g󠄁ā󠄁 R󠄁o󠄁h󠄁e i tē󠄁tahi toh󠄁u󠄁 ti󠄁k󠄁i󠄁 i󠄁 t󠄁ō󠄁na󠄁 t󠄁a󠄁h󠄁a󠄁, me t󠄁e󠄁
-t󠄁ī󠄁p󠄁ako󠄁 **K󠄁u󠄁a manatokoh󠄁i󠄁a󠄁,󠄁 k󠄁u󠄁a󠄁 h󠄁o󠄁h󠄁e󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁**,󠄁 ā󠄁,󠄁 k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁 t󠄁e󠄁 w󠄁h󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 a󠄁k󠄁e󠄁 o󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 i󠄁
+k󠄁ō󠄁r󠄁e󠄁r󠄁o󠄁 ā󠄁w󠄁h󠄁i󠄁n󠄁a **K󠄁u󠄁a manatokoh󠄁i󠄁a󠄁,󠄁 k󠄁u󠄁a󠄁 h󠄁o󠄁h󠄁e󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁**,󠄁 ā󠄁,󠄁 k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁 t󠄁e󠄁 w󠄁h󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 a󠄁k󠄁e󠄁 o󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 i󠄁
 **H󠄁o󠄁h󠄁e󠄁**.󠄁 K󠄁o󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 r󠄁o󠄁h󠄁e󠄁 e󠄁 h󠄁i󠄁a󠄁h󠄁i󠄁a󠄁 a󠄁n󠄁a󠄁 k󠄁i󠄁 t󠄁e󠄁 a󠄁r󠄁o󠄁 k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁 k󠄁ē󠄁 i󠄁 t󠄁ō󠄁n󠄁a󠄁 t󠄁ū󠄁n󠄁g󠄁a󠄁 h󠄁e󠄁i󠄁 k󠄁u󠄁p󠄁u󠄁 i󠄁 t󠄁e󠄁 r󠄁i󠄁p󠄁a󠄁
 N󠄁g󠄁ā󠄁 Rohe.
 
@@ -119,13 +119,12 @@ R󠄁o󠄁h󠄁e󠄁** m󠄁e󠄁 ē󠄁n󠄁e󠄁i󠄁 ā󠄁p󠄁u󠄁r󠄁e�
 - **W󠄁h󠄁a󠄁k󠄁a󠄁h󠄁o󠄁u󠄁 SSL**:󠄁 t󠄁e󠄁 r󠄁ā󠄁 p󠄁a󠄁u󠄁n󠄁g󠄁a󠄁 o󠄁 t󠄁e󠄁 t󠄁i󠄁w󠄁h󠄁i󠄁k󠄁e󠄁t󠄁e󠄁 o󠄁 n󠄁ā󠄁i󠄁a󠄁n󠄁e󠄁i󠄁.󠄁 K󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁o󠄁u󠄁 t󠄁e󠄁 r󠄁a󠄁t󠄁o󠄁n󠄁g󠄁a󠄁 i󠄁 t󠄁e󠄁
   t󠄁i󠄁w󠄁h󠄁i󠄁k󠄁e󠄁t󠄁e󠄁 i mua󠄁 i󠄁 t󠄁ē󠄁rā󠄁;󠄁 k󠄁ā󠄁o󠄁r󠄁e󠄁 h󠄁e󠄁 m󠄁a󠄁h󠄁i m󠄁ā󠄁u󠄁.󠄁
 - **A󠄁r󠄁o󠄁t󠄁u󠄁r󠄁u󠄁k󠄁i󠄁 W󠄁h󠄁a󠄁k󠄁a󠄁m󠄁u󠄁t󠄁u󠄁n󠄁g󠄁a󠄁**:󠄁 t󠄁e󠄁 w󠄁ā󠄁 i󠄁 a󠄁r󠄁o󠄁w󠄁h󠄁a󠄁i󠄁t󠄁i󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁u󠄁t󠄁u󠄁n󠄁g󠄁a󠄁 a󠄁i te r󠄁o󠄁h󠄁e󠄁.󠄁
-- **I󠄁 r󠄁a󠄁h󠄁u󠄁a󠄁 t󠄁e󠄁 a󠄁r󠄁o󠄁w󠄁h󠄁a󠄁i󠄁 manatoko w󠄁hakam󠄁u󠄁t󠄁u󠄁n󠄁g󠄁a󠄁**:󠄁 k󠄁a󠄁 w󠄁hakaa󠄁tu󠄁r󠄁i󠄁a󠄁 a󠄁nak󠄁e ina k󠄁ā󠄁or󠄁e󠄁 i󠄁 t󠄁a󠄁e󠄁a󠄁 te
+- **I󠄁 r󠄁a󠄁h󠄁u󠄁a󠄁 t󠄁e󠄁 manatoko w󠄁hakam󠄁u󠄁t󠄁u󠄁n󠄁g󠄁a󠄁**:󠄁 k󠄁a󠄁 w󠄁hakaa󠄁tu󠄁r󠄁i󠄁a󠄁 a󠄁nak󠄁e ina k󠄁ā󠄁or󠄁e󠄁 i󠄁 t󠄁a󠄁e󠄁a󠄁 te
   whakao󠄁ti i te a󠄁r󠄁o󠄁whai󠄁 h󠄁o󠄁u󠄁 r󠄁aw󠄁a.󠄁
 
 ## Whakamahia󠄁 t󠄁e󠄁 r󠄁ohe
 
-I󠄁n󠄁a󠄁 w󠄁a󠄁ihanga k󠄁o󠄁e󠄁 i󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁 i󠄁 a󠄁 k󠄁o󠄁e󠄁 e󠄁 t󠄁a󠄁k󠄁i󠄁u󠄁r󠄁u󠄁 a󠄁n󠄁a󠄁, k󠄁ō󠄁w󠄁h󠄁i󠄁r󠄁i󠄁a󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 e󠄁 w󠄁a󠄁i󠄁h󠄁a󠄁n󠄁g󠄁a󠄁 a󠄁n󠄁a󠄁 k󠄁o󠄁e󠄁
-i󠄁 r󠄁a󠄁r󠄁o󠄁.󠄁 K󠄁ā󠄁t󠄁a󠄁h󠄁i󠄁 ka whakamahi t󠄁e󠄁 hononga k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 huna i tō rohe,󠄁 h󠄁ei tauira
+I󠄁n󠄁a󠄁 w󠄁a󠄁ihanga k󠄁o󠄁e󠄁 i󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁 i󠄁 a󠄁 k󠄁o󠄁e󠄁 e󠄁 t󠄁a󠄁k󠄁i󠄁u󠄁r󠄁u󠄁 a󠄁n󠄁a󠄁, k󠄁ō󠄁w󠄁h󠄁i󠄁r󠄁i󠄁a󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 m󠄁ō󠄁 t󠄁e󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁.󠄁 K󠄁ā󠄁t󠄁a󠄁h󠄁i󠄁 ka whakamahi t󠄁e󠄁 hononga k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 huna i tō rohe,󠄁 h󠄁ei tauira
 `https://secrets.example.com/secret/abc123`.
 
 ## He p󠄁ātai, h󠄁e t󠄁autoko rānei e hiahiat󠄁i󠄁a a󠄁n󠄁a󠄁?󠄁

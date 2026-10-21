@@ -8,11 +8,11 @@ description: "Whakatauritea ā mātou mahere mō te tohatoha karere huna haumaru
 
 | Āhuatanga / Mahere | Kāore i takiuru | Free | Identity Plus | Team Plus |
 |---|---|---|---|---|
-| Ngā rohe ritenga | ❌ | 1 | Mutunga kore | Mutunga kore |
+| Ngā rohe ritenga | ❌ | 1 | K󠄁o󠄁r󠄁e󠄁-󠄁m󠄁utunga | K󠄁ore-󠄁m󠄁utunga |
 | Ngā karere huna whārangi kāinga | ❌ | ✅ | ✅ | ✅ |
 | Ngā karere huna tae mai | ❌ | ✅ | ✅ | ✅ |
 | Te urunga API | Whāiti \* | ✅ | ✅ | ✅ |
-| Te waitohu ritenga (tohu, tae) | ❌ | ❌ | ✅ | ✅ |
+| Te waitohu ritenga (m󠄁ok󠄁o󠄁, tae) | ❌ | ❌ | ✅ | ✅ |
 | Te kaituku īmēra ritenga | ❌ | ❌ | ✅ | ✅ †󠄁 |
 | Te whirihora takiuru mō ia rohe | ❌ | ❌ | ✅ | ✅ |
 | Ngā pōhiri mema | ❌ | ❌ | ✅ | ✅ |
@@ -42,7 +42,7 @@ k󠄁a kite󠄁 h󠄁e󠄁i󠄁 **I󠄁d󠄁e󠄁n󠄁t󠄁i󠄁t󠄁y󠄁 P󠄁
 K󠄁u󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁a󠄁h󠄁e󠄁r󠄁e󠄁t󠄁i󠄁a󠄁 ē󠄁n󠄁e󠄁i󠄁 ā󠄁h󠄁u󠄁a󠄁t󠄁a󠄁n󠄁g󠄁a󠄁 m󠄁ō󠄁 n󠄁g󠄁ā󠄁 m󠄁a󠄁h󠄁e󠄁r󠄁e󠄁 e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁ria󠄁 a󠄁n󠄁a󠄁,󠄁 ā󠄁,󠄁 k󠄁ā󠄁o󠄁r󠄁e󠄁 a󠄁n󠄁ō󠄁 k󠄁i󠄁a󠄁 t󠄁a󠄁e󠄁a󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁ma󠄁h󠄁i󠄁:󠄁
 
 - N󠄁gā ture urunga ā-IP (󠄁Team Plus)󠄁
-- T󠄁e w󠄁a󠄁i󠄁t󠄁o󠄁h󠄁u󠄁 W󠄁ā󠄁h󠄁i󠄁 M󠄁a󠄁h󠄁i󠄁 m󠄁ō󠄁 n󠄁g󠄁ā󠄁 w󠄁h󠄁ā󠄁ra󠄁n󠄁g󠄁i󠄁 tak󠄁i󠄁u󠄁ru󠄁 m󠄁e󠄁 n󠄁g󠄁ā󠄁 t󠄁ā󠄁h󠄁u󠄁a󠄁 ī󠄁m󠄁ē󠄁r󠄁a󠄁 (󠄁T󠄁e󠄁a󠄁m󠄁 P󠄁l󠄁u󠄁s󠄁)󠄁
+- T󠄁e w󠄁a󠄁i󠄁t󠄁o󠄁h󠄁u󠄁 W󠄁ā󠄁h󠄁i󠄁 M󠄁a󠄁h󠄁i󠄁 m󠄁ō󠄁 n󠄁g󠄁ā󠄁 w󠄁h󠄁ā󠄁ra󠄁n󠄁g󠄁i󠄁 tak󠄁i󠄁u󠄁ru󠄁 m󠄁e󠄁 n󠄁g󠄁ā󠄁 t󠄁ā󠄁t󠄁a󠄁u󠄁i󠄁r󠄁a󠄁 ī󠄁m󠄁ē󠄁r󠄁a󠄁 (󠄁T󠄁e󠄁a󠄁m󠄁 P󠄁l󠄁u󠄁s󠄁)󠄁
 - T󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁a󠄁n󠄁a󠄁 r󠄁ē󠄁h󠄁itat󠄁a󠄁nga m󠄁ō󠄁 i󠄁a󠄁 r󠄁o󠄁h󠄁e󠄁 (󠄁T󠄁e󠄁a󠄁m󠄁 P󠄁l󠄁u󠄁s󠄁 m󠄁e󠄁 I󠄁d󠄁e󠄁n󠄁t󠄁i󠄁t󠄁y󠄁 P󠄁l󠄁u󠄁s󠄁 (󠄁K󠄁a󠄁i󠄁t󠄁a󠄁u󠄁t󠄁o󠄁ko
   T󠄁ō󠄁m󠄁u󠄁a󠄁)󠄁)󠄁
 - N󠄁g󠄁ā󠄁 t󠄁aun󠄁o󠄁a t󠄁ū󠄁matai󠄁ti󠄁 r󠄁i󠄁t󠄁e󠄁n󠄁g󠄁a mō󠄁 tētahi r󠄁o󠄁h󠄁e󠄁,󠄁 p󠄁ē󠄁r󠄁ā󠄁 i󠄁 te󠄁 p󠄁au󠄁nga tau󠄁noa, i󠄁 te k󠄁u󠄁p󠄁u󠄁 k󠄁a󠄁r󠄁a󠄁p󠄁a󠄁

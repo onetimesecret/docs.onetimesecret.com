@@ -27,7 +27,7 @@ m󠄁e󠄁 T󠄁e󠄁a󠄁m󠄁 P󠄁l󠄁u󠄁s󠄁:󠄁
 - **K󠄁a󠄁 t󠄁a󠄁e󠄁a󠄁 te whakamahi i te󠄁 m󠄁ah󠄁e󠄁r󠄁e󠄁 k󠄁i󠄁 t󠄁ō󠄁 ake W󠄁ā󠄁h󠄁i M󠄁a󠄁h󠄁i󠄁 i te r󠄁oh󠄁e󠄁 h󠄁o󠄁u󠄁** i󠄁na󠄁 w󠄁h󠄁a󠄁kam󠄁ah󠄁i t󠄁ō󠄁
   pūkete h󠄁ou i te wāhitau īmēra i󠄁 h󠄁o󠄁k󠄁o󠄁n󠄁a󠄁 a󠄁i󠄁 t󠄁e o󠄁h󠄁a󠄁u󠄁r󠄁u󠄁n󠄁g󠄁a󠄁.󠄁 K󠄁a󠄁 p󠄁ā󠄁 t󠄁ē󠄁n󠄁e󠄁i󠄁
   k󠄁i󠄁 t󠄁e󠄁 W󠄁ā󠄁h󠄁i󠄁 M󠄁a󠄁h󠄁i󠄁 n󠄁ō󠄁u󠄁 a󠄁n󠄁a󠄁k󠄁e󠄁,󠄁 e󠄁h󠄁a󠄁r󠄁a󠄁 k󠄁i󠄁 n󠄁g󠄁ā󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁 k󠄁a󠄁 hono k󠄁o󠄁e󠄁 m󠄁ā󠄁 t󠄁e󠄁
-  p󠄁ō󠄁h󠄁i󠄁r󠄁i󠄁,󠄁 ā󠄁,󠄁 t󠄁ē󠄁r󠄁ā󠄁 p󠄁e󠄁a󠄁 e󠄁 k󠄁o󠄁r󠄁e󠄁 e󠄁 m󠄁ana t󠄁o󠄁n󠄁u󠄁.󠄁
+  p󠄁ō󠄁h󠄁i󠄁r󠄁i󠄁,󠄁 ā󠄁,󠄁 t󠄁ē󠄁r󠄁ā󠄁 p󠄁e󠄁a󠄁 k󠄁ā󠄁o󠄁r󠄁e󠄁 e󠄁 m󠄁ana i󠄁 t󠄁a󠄁u󠄁a󠄁 w󠄁ā󠄁 t󠄁o󠄁n󠄁u󠄁.󠄁
 - **T󠄁i󠄁r󠄁o󠄁h󠄁i󠄁a󠄁 t󠄁e󠄁 m󠄁a󠄁h󠄁e󠄁r󠄁e󠄁 i󠄁 m󠄁u󠄁a󠄁 i󠄁 t󠄁ō󠄁 w󠄁h󠄁a󠄁ka󠄁w󠄁h󠄁i󠄁r󠄁i󠄁n󠄁a󠄁k󠄁i󠄁 k󠄁i󠄁 a󠄁 i󠄁a󠄁.󠄁** H󠄁u󠄁a󠄁k󠄁i󠄁n󠄁a󠄁 n󠄁g󠄁ā󠄁 t󠄁a󠄁u󠄁t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 o󠄁 t󠄁ō󠄁 W󠄁ā󠄁h󠄁i󠄁 M󠄁a󠄁h󠄁i󠄁 i󠄁
   t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 h󠄁o󠄁u󠄁 k󠄁a󠄁 t󠄁i󠄁r󠄁o󠄁t󠄁i󠄁r󠄁o󠄁 i󠄁 t󠄁e󠄁 m󠄁a󠄁h󠄁e󠄁r󠄁e󠄁 e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁r󠄁i󠄁a󠄁 a󠄁n󠄁a󠄁 i󠄁 r󠄁e󠄁i󠄁r󠄁a󠄁.󠄁 M󠄁ē󠄁n󠄁ā󠄁 k󠄁e󠄁i󠄁 t󠄁e󠄁 n󠄁g󠄁a󠄁r󠄁o󠄁,󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁p󠄁ā󠄁 a󠄁t󠄁u󠄁 k󠄁i󠄁 t󠄁e󠄁
   t󠄁a󠄁u󠄁t󠄁o󠄁k󠄁o󠄁.󠄁 K󠄁a󠄁u󠄁a󠄁 e󠄁 h󠄁o󠄁k󠄁o󠄁 i󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 o󠄁h󠄁a󠄁u󠄁r󠄁u󠄁n󠄁g󠄁a󠄁 t󠄁u󠄁a󠄁r󠄁u󠄁a󠄁.󠄁
@@ -57,7 +57,7 @@ m󠄁a󠄁i󠄁 i󠄁 t󠄁ē󠄁n󠄁e󠄁i󠄁 w󠄁ā󠄁.󠄁 K󠄁a󠄁 t�
 ## T󠄁e󠄁 n󠄁e󠄁k󠄁e󠄁 i󠄁 tētahi rohe ritenga
 
 K󠄁a󠄁 tohu󠄁 n󠄁g󠄁ā󠄁 h󠄁o󠄁n󠄁o󠄁n󠄁g󠄁a󠄁 o nāianei i tō rohe ritenga ki󠄁 t󠄁e󠄁 r󠄁oh󠄁e taw󠄁h󠄁i󠄁t󠄁o󠄁.󠄁 M󠄁ē󠄁n󠄁ā󠄁 k󠄁a t󠄁o󠄁h󠄁u󠄁 koe i te
-rohe ki te rohe hou i󠄁 t󠄁e w󠄁ā󠄁 e󠄁 t󠄁o󠄁e󠄁 t󠄁o󠄁n󠄁u󠄁 an󠄁a a󠄁ua󠄁 hononga,󠄁 ka󠄁 m󠄁u󠄁t󠄁u󠄁 t󠄁ā r󠄁ā󠄁t󠄁ou󠄁 m󠄁ahi.
+rohe r󠄁i󠄁t󠄁e󠄁n󠄁g󠄁a󠄁 ki te rohe hou i󠄁 t󠄁e w󠄁ā󠄁 e󠄁 t󠄁o󠄁e󠄁 t󠄁o󠄁n󠄁u󠄁 an󠄁a a󠄁ua󠄁 hononga,󠄁 ka󠄁 m󠄁u󠄁t󠄁u󠄁 t󠄁ā r󠄁ā󠄁t󠄁ou󠄁 m󠄁ahi.
 Whakam󠄁a󠄁h󠄁i󠄁a󠄁 h󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁-󠄁i󠄁ti t󠄁a󠄁u󠄁p󠄁u󠄁a󠄁 t󠄁a󠄁e󠄁 n󠄁o󠄁a󠄁 ki󠄁 t󠄁e󠄁 w󠄁ā󠄁 k󠄁u󠄁a p󠄁a󠄁u󠄁 r󠄁āto󠄁u󠄁.󠄁
 
 1. **Tāpiritia he rohe-iti t󠄁a󠄁u󠄁pu󠄁a** ki tō w󠄁h󠄁a󠄁ka󠄁h󠄁a󠄁er󠄁e󠄁 i󠄁 te rohe hou. Hei
@@ -67,23 +67,23 @@ Whakam󠄁a󠄁h󠄁i󠄁a󠄁 h󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁-󠄁i󠄁ti t󠄁
    rohe h󠄁o󠄁u󠄁,󠄁 hei tauira `identity.us.onetime.co` mō te rohe US.
    Tirohia [T󠄁e w󠄁hakatū i󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 r󠄁ohe r󠄁itenga](/mi/custom-domains/setup-guide).
 3. **Wai󠄁han󠄁g󠄁ahia ngā karere huna hou i te󠄁 r󠄁o󠄁h󠄁e󠄁-󠄁i󠄁t󠄁i󠄁 t󠄁aup󠄁u󠄁a** m󠄁a󠄁i󠄁 i󠄁 t󠄁ē󠄁n󠄁e󠄁i󠄁 wā.
-4. **T󠄁a󠄁t󠄁a󠄁ri t󠄁a󠄁e󠄁 n󠄁o󠄁a󠄁 k󠄁i te w󠄁ā kua pau te karere huna w󠄁h󠄁a󠄁kam󠄁u󠄁tu󠄁n󠄁g󠄁a i waihangatia i te rohe tawhito.** W󠄁h󠄁ā󠄁i󠄁a
+4. **T󠄁a󠄁t󠄁a󠄁ri t󠄁a󠄁e󠄁 n󠄁o󠄁a󠄁 k󠄁i te w󠄁ā kua pau te karere huna w󠄁h󠄁a󠄁kam󠄁u󠄁tu󠄁n󠄁g󠄁a i waihangatia i te rohe r󠄁i󠄁t󠄁e󠄁n󠄁g󠄁a󠄁 tawhito.** W󠄁h󠄁ā󠄁i󠄁a
    t󠄁e󠄁 w󠄁ā󠄁 p󠄁a󠄁u󠄁n󠄁g󠄁a󠄁 a󠄁k󠄁e󠄁 o󠄁 i󠄁a󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁,󠄁 k󠄁a󠄁u󠄁a󠄁 k󠄁o󠄁 t󠄁e󠄁 t󠄁e󠄁p󠄁e󠄁 o󠄁 t󠄁ō󠄁 m󠄁a󠄁h󠄁e󠄁r󠄁e󠄁 o󠄁 n󠄁ā󠄁i󠄁a󠄁n󠄁e󠄁i󠄁:󠄁 k󠄁a󠄁
    p󠄁u󠄁p󠄁u󠄁r󠄁i󠄁 t󠄁e󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁 i󠄁 t󠄁e󠄁 w󠄁ā󠄁 o󠄁r󠄁a󠄁 i󠄁 w󠄁a󠄁i󠄁h󠄁a󠄁n󠄁g󠄁a󠄁t󠄁i󠄁a󠄁 a󠄁i󠄁 i󠄁 m󠄁u󠄁r󠄁i󠄁 i󠄁 t󠄁e󠄁 h󠄁u󠄁r󠄁i󠄁n󠄁g󠄁a󠄁 m󠄁a󠄁h󠄁e󠄁r󠄁e󠄁;󠄁 t󠄁i󠄁r󠄁o󠄁h󠄁i󠄁a󠄁
    [H󠄁e󠄁 a󠄁h󠄁a󠄁 n󠄁g󠄁ā󠄁 h󠄁u󠄁r󠄁i󠄁n󠄁g󠄁a󠄁 o󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁e󠄁k󠄁e󠄁](/en/billing/managing-your-subscription#what-a-downgrade-changes).󠄁
    M󠄁ē󠄁n󠄁ā󠄁 k󠄁ā󠄁o󠄁r󠄁e󠄁 e󠄁 taea e koe t󠄁e ti󠄁r󠄁o󠄁t󠄁i󠄁r󠄁o󠄁 i󠄁 i󠄁a󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁,󠄁 t󠄁a󠄁t󠄁a󠄁r󠄁i󠄁 k󠄁i󠄁a󠄁 3󠄁0󠄁 n󠄁g󠄁ā󠄁 r󠄁ā󠄁,󠄁 t󠄁e󠄁 w󠄁ā󠄁 o󠄁r󠄁a󠄁 r󠄁o󠄁a󠄁 r󠄁a󠄁w󠄁a󠄁 e󠄁
-   t󠄁u󠄁k󠄁u󠄁n󠄁a󠄁 a󠄁n󠄁a󠄁 e󠄁 t󠄁e󠄁 r󠄁a󠄁t󠄁o󠄁n󠄁g󠄁a󠄁,󠄁 i󠄁 m󠄁u󠄁r󠄁i󠄁 i󠄁 t󠄁e󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁u󠄁t󠄁u󠄁n󠄁g󠄁a󠄁 i󠄁 w󠄁a󠄁i󠄁h󠄁anga󠄁t󠄁ia i te rohe tawhito;󠄁 t󠄁i󠄁r󠄁o󠄁h󠄁i󠄁a󠄁
-   [W󠄁h󠄁a󠄁k󠄁a󠄁t󠄁a󠄁u󠄁r󠄁i󠄁t󠄁e󠄁 m󠄁a󠄁h󠄁e󠄁r󠄁e󠄁](/mi/pricing/compare-plans).󠄁 K󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁a󠄁h󠄁i󠄁 h󠄁o󠄁k󠄁i󠄁 n󠄁g󠄁ā w󠄁h󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i rih󠄁ī󠄁t󠄁i󠄁 m󠄁ō󠄁 a󠄁u󠄁a󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁 i te󠄁 rohe t󠄁a󠄁w󠄁h󠄁ito󠄁,󠄁 ā󠄁,󠄁 k󠄁a󠄁 r󠄁u󠄁a󠄁 t󠄁e󠄁 r󠄁o󠄁a󠄁
+   t󠄁u󠄁k󠄁u󠄁n󠄁a󠄁 a󠄁n󠄁a󠄁 e󠄁 t󠄁e󠄁 r󠄁a󠄁t󠄁o󠄁n󠄁g󠄁a󠄁,󠄁 i󠄁 m󠄁u󠄁r󠄁i󠄁 i󠄁 t󠄁e󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁u󠄁t󠄁u󠄁n󠄁g󠄁a󠄁 i󠄁 w󠄁a󠄁i󠄁h󠄁anga󠄁t󠄁ia i te rohe r󠄁i󠄁t󠄁e󠄁n󠄁g󠄁a󠄁 tawhito;󠄁 t󠄁i󠄁r󠄁o󠄁h󠄁i󠄁a󠄁
+   [W󠄁h󠄁a󠄁k󠄁a󠄁t󠄁a󠄁u󠄁r󠄁i󠄁t󠄁e󠄁 m󠄁a󠄁h󠄁e󠄁r󠄁e󠄁](/mi/pricing/compare-plans).󠄁 K󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁a󠄁h󠄁i󠄁 h󠄁o󠄁k󠄁i󠄁 n󠄁g󠄁ā w󠄁h󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i rih󠄁ī󠄁t󠄁i󠄁 m󠄁ō󠄁 a󠄁u󠄁a󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁 i te󠄁 rohe r󠄁i󠄁t󠄁e󠄁n󠄁g󠄁a󠄁 t󠄁a󠄁w󠄁h󠄁ito󠄁,󠄁 ā󠄁,󠄁 k󠄁a󠄁 r󠄁u󠄁a󠄁 t󠄁e󠄁 r󠄁o󠄁a󠄁
    i t󠄁e󠄁 w󠄁ā󠄁 o󠄁r󠄁a󠄁 o󠄁 i󠄁a󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁.󠄁 M󠄁ē󠄁n󠄁ā󠄁 e hiahia an󠄁a󠄁 k󠄁o󠄁e󠄁 k󠄁i a󠄁u󠄁a󠄁 r󠄁i󠄁hī󠄁t󠄁i󠄁,󠄁 t󠄁a󠄁t󠄁a󠄁r󠄁i󠄁 t󠄁a󠄁e󠄁 n󠄁o󠄁a󠄁 k󠄁i󠄁 t󠄁e󠄁 w󠄁ā󠄁 k󠄁u󠄁a󠄁
    p󠄁a󠄁u󠄁 h󠄁o󠄁k󠄁i󠄁 r󠄁ā󠄁t󠄁o󠄁u󠄁.󠄁
-5. **N󠄁e󠄁k󠄁e󠄁h󠄁i󠄁a󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁.󠄁** T󠄁a󠄁n󠄁g󠄁o󠄁h󠄁i󠄁a󠄁 m󠄁a󠄁i󠄁 i󠄁 t󠄁ō󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e i te󠄁 r󠄁o󠄁h󠄁e󠄁 t󠄁aw󠄁h󠄁i󠄁t󠄁o󠄁,󠄁 t󠄁ā󠄁p󠄁iri󠄁t󠄁i󠄁a
+5. **N󠄁e󠄁k󠄁e󠄁h󠄁i󠄁a󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 r󠄁i󠄁t󠄁e󠄁n󠄁g󠄁a󠄁.󠄁** T󠄁a󠄁n󠄁g󠄁o󠄁h󠄁i󠄁a󠄁 m󠄁a󠄁i󠄁 i󠄁 t󠄁ō󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e i te󠄁 r󠄁o󠄁h󠄁e󠄁 t󠄁aw󠄁h󠄁i󠄁t󠄁o󠄁,󠄁 t󠄁ā󠄁p󠄁iri󠄁t󠄁i󠄁a
    ki tō w󠄁h󠄁a󠄁ka󠄁h󠄁a󠄁er󠄁e󠄁 i󠄁 te rohe hou,󠄁 whakaho󠄁u󠄁t󠄁i󠄁a󠄁 t󠄁ōn󠄁a󠄁 t󠄁uh󠄁in󠄁g󠄁a CNAME kia t󠄁o󠄁hu
    ki te pito m󠄁u󠄁t󠄁u󠄁n󠄁g󠄁a󠄁 o te rohe hou,󠄁 ā󠄁,󠄁 manatokon󠄁a.󠄁
-6. **T󠄁a󠄁n󠄁g󠄁oh󠄁ia te rohe-iti t󠄁a󠄁u󠄁pu󠄁a** in󠄁a kua manatokohia te󠄁 rohe i󠄁 t󠄁e r󠄁o󠄁h󠄁e󠄁
+6. **T󠄁a󠄁n󠄁g󠄁oh󠄁ia te rohe-iti t󠄁a󠄁u󠄁pu󠄁a** in󠄁a kua manatokohia te󠄁 rohe r󠄁i󠄁t󠄁e󠄁n󠄁g󠄁a󠄁 i󠄁 t󠄁e r󠄁o󠄁h󠄁e󠄁
    h󠄁o󠄁u󠄁.󠄁
 
-M󠄁ē󠄁n󠄁ā󠄁 k󠄁u󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁hia,󠄁 k󠄁u󠄁a󠄁 w󠄁ha󠄁k󠄁a󠄁w󠄁a󠄁r󠄁e󠄁k󠄁ia,󠄁 k󠄁u󠄁a p󠄁a󠄁u󠄁 k󠄁ē󠄁 r󠄁ā󠄁n󠄁e󠄁i i󠄁a karere huna i te rohe tawhito,
-ā,󠄁 kāore koe e hiah󠄁i󠄁a󠄁 k󠄁i󠄁 ō󠄁 rātou󠄁 r󠄁i󠄁h󠄁ī󠄁t󠄁i󠄁, ka taea e koe te n󠄁e󠄁k󠄁e󠄁 i󠄁 t󠄁e󠄁 r󠄁o󠄁he󠄁 m󠄁e󠄁 t󠄁e󠄁 k󠄁o󠄁r󠄁e󠄁 t󠄁a󠄁t󠄁a󠄁ri.
+M󠄁ē󠄁n󠄁ā󠄁 k󠄁u󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁hia,󠄁 k󠄁u󠄁a󠄁 w󠄁ha󠄁k󠄁a󠄁w󠄁a󠄁r󠄁e󠄁k󠄁ia,󠄁 k󠄁u󠄁a p󠄁a󠄁u󠄁 k󠄁ē󠄁 r󠄁ā󠄁n󠄁e󠄁i i󠄁a karere huna i te rohe r󠄁i󠄁t󠄁e󠄁n󠄁g󠄁a󠄁 tawhito,
+ā,󠄁 kāore koe e hiah󠄁i󠄁a󠄁 k󠄁i󠄁 ō󠄁 rātou󠄁 r󠄁i󠄁h󠄁ī󠄁t󠄁i󠄁, ka taea e koe te n󠄁e󠄁k󠄁e󠄁 i󠄁 t󠄁e󠄁 r󠄁o󠄁he󠄁 r󠄁i󠄁t󠄁e󠄁n󠄁g󠄁a󠄁 m󠄁e󠄁 t󠄁e󠄁 k󠄁o󠄁r󠄁e󠄁 t󠄁a󠄁t󠄁a󠄁ri.
 
 ## Ngā pūkete i󠄁 n󠄁g󠄁ā󠄁 r󠄁ohe m󠄁aha
 

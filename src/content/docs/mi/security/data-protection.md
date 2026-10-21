@@ -6,7 +6,7 @@ description: "Ngā mea e penapenatia ana e Onetime Secret, te roa e puritia ai, 
 
 Ka whakamārama tēnei whārangi i te āhua o tā Onetime Secret whakahaere i ō
 raraunga: ngā mea e penapenatia ana, te roa, te wāhi e noho ai, me te āhua e
-tautoko ai tērā i tō ake hōtaka ūnga.
+tautoko ai tērā i tō ake kau󠄁p󠄁a󠄁p󠄁a ūnga.
 
 ## Ngā m󠄁ea e p󠄁enapenatia ana e m󠄁ātou, me te r󠄁oa
 
@@ -46,7 +46,7 @@ Kua hoahoatia a Onetime Secret hei tautoko i ō mahi ūnga; e kore e whakakapi i
 
 - **GDPR / te tiaki raraunga.** Ko te nohonga raraunga ā-rohe, ko ngā raraunga
   wā-poto, me te whakaiti raraunga i hoahoatia hei āwhina i a koe ki te
-  whakatutuki i ō herenga tiaki raraunga. I te nuinga o ngā tuk󠄁u󠄁nga, ko
+  whakatutuki i ō herenga tiaki raraunga. I te nuinga o ngā w󠄁h󠄁a󠄁k󠄁a󠄁ta󠄁k󠄁o󠄁t󠄁o󠄁r󠄁a󠄁nga, ko
   koe te kaiwhakahaere raraunga (data controller), ko Onetime Secret te
   kaitukatuka (data processor) mō ngā raraunga iti e pā ana.
 - **HIPAA.** K󠄁a taea e Onetime Secret te whakarato i tētahi h󠄁o󠄁n󠄁g󠄁e󠄁re󠄁 haumaru ake i te īmēra mō

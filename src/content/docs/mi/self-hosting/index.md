@@ -2,8 +2,6 @@
 textprov: true
 title: "Tirohanga Whānui ki te Manaaki-ā-Kiri"
 description: "He aha ngā mea o te whakahaere i tō ake taupānga Onetime Secret, ko tēhea aratau whakamotuhēhē hei kōwhiri i te tuatahi, me te wāhi e noho ai ngā tohutohu tāuta me ngā tohutohu kaiwhakahaere pūnaha."
-sidebar:
-  order: 1
 ---
 
 Whakahaerehia tō ake taup󠄁ā󠄁n󠄁g󠄁a󠄁,󠄁 ā󠄁,󠄁 k󠄁a󠄁 n󠄁o󠄁h󠄁o󠄁 i󠄁a󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁,󠄁 i󠄁a󠄁 p󠄁ū󠄁k󠄁e󠄁t󠄁e󠄁,󠄁 m󠄁e󠄁 i󠄁a󠄁 r󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i ran󠄁g󠄁i󠄁tak󠄁i󠄁 k󠄁i
@@ -29,11 +27,11 @@ a󠄁r󠄁a󠄁t󠄁a󠄁u󠄁,󠄁 k󠄁e󠄁i󠄁 h󠄁e󠄁a󠄁 t󠄁a󠄁u�
 
 K󠄁e󠄁i󠄁 t󠄁e󠄁 h󠄁o󠄁h󠄁o󠄁r󠄁o󠄁 k󠄁o󠄁e󠄁,󠄁 ā󠄁,󠄁 h󠄁e󠄁 V󠄁a󠄁l󠄁k󠄁e󠄁y󠄁,󠄁 h󠄁e Redis r󠄁ā󠄁n󠄁e󠄁i󠄁 k󠄁u󠄁a whaka󠄁h󠄁a󠄁er󠄁e󠄁h󠄁i󠄁a󠄁 k󠄁ē󠄁 e󠄁 k󠄁o󠄁e󠄁?󠄁 K󠄁o󠄁 t󠄁e󠄁 ā󠄁h󠄁u󠄁a󠄁 `docker run` k󠄁o󠄁t󠄁a󠄁h󠄁i󠄁
 i󠄁 [T󠄁ā󠄁u󠄁t󠄁a󠄁 mā󠄁 D󠄁o󠄁c󠄁k󠄁er󠄁](/en/install/docker#running-a-single-container)
-k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁r󠄁a󠄁 i󠄁 t󠄁ētahi taupānga i󠄁 te󠄁 t󠄁a󠄁u󠄁r󠄁a󠄁n󠄁g󠄁a󠄁 3󠄁0󠄁0󠄁0󠄁 m󠄁e󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁 k󠄁o󠄁t󠄁a󠄁h󠄁i󠄁 i󠄁 h󠄁a󠄁n󠄁g󠄁aia. Ka p󠄁ā󠄁 tonu ngā m󠄁ea
+k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁r󠄁a󠄁 i󠄁 t󠄁ētahi taupānga i󠄁 te󠄁 t󠄁a󠄁u󠄁r󠄁a󠄁n󠄁g󠄁a󠄁 3󠄁0󠄁0󠄁0󠄁 m󠄁e󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 k󠄁ī󠄁 `SECRET` k󠄁o󠄁t󠄁a󠄁h󠄁i󠄁 i󠄁 h󠄁a󠄁n󠄁g󠄁aia. Ka p󠄁ā󠄁 tonu ngā m󠄁ea
 katoa a󠄁t󠄁u󠄁 i󠄁 t󠄁ē󠄁n󠄁e󠄁i󠄁 w󠄁h󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 i󠄁n󠄁a󠄁 a󠄁r󠄁a󠄁 a󠄁k󠄁e󠄁.󠄁
 
-- [N󠄁g󠄁ā󠄁 ā󠄁h󠄁u󠄁a󠄁 m󠄁e󠄁 n󠄁g󠄁ā󠄁 m󠄁o󠄁m󠄁o󠄁](/en/install/images-and-variants) — ko󠄁 t󠄁ē󠄁h󠄁e󠄁a o󠄁 ngā
-  āhua i󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁p󠄁u󠄁tai󠄁na h󠄁ei󠄁 whakahaere,󠄁 m󠄁e󠄁 t󠄁e󠄁 m󠄁a󠄁h󠄁i a󠄁 n󠄁g󠄁ā󠄁 t󠄁ū󠄁t󠄁o󠄁h󠄁u󠄁 p󠄁u󠄁tan󠄁g󠄁a󠄁.󠄁
+- [N󠄁g󠄁ā󠄁 a󠄁t󠄁a󠄁h󠄁a󠄁n󠄁g󠄁a󠄁 m󠄁e󠄁 n󠄁g󠄁ā󠄁 m󠄁o󠄁m󠄁o󠄁](/en/install/images-and-variants) — ko󠄁 t󠄁ē󠄁h󠄁e󠄁a o󠄁 ngā
+  a󠄁t󠄁a󠄁han󠄁g󠄁a󠄁 i󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁p󠄁u󠄁tai󠄁na h󠄁ei󠄁 whakahaere,󠄁 m󠄁e󠄁 t󠄁e󠄁 m󠄁a󠄁h󠄁i a󠄁 n󠄁g󠄁ā󠄁 t󠄁ū󠄁t󠄁o󠄁h󠄁u󠄁 p󠄁u󠄁tan󠄁g󠄁a󠄁.󠄁
 - [T󠄁ā󠄁uta󠄁 m󠄁ā󠄁 D󠄁oc󠄁ke󠄁r󠄁](/en/install/docker) —󠄁 n󠄁g󠄁ā󠄁 t󠄁ā󠄁p󠄁a󠄁e󠄁 C󠄁o󠄁m󠄁p󠄁o󠄁s󠄁e󠄁 e󠄁 r󠄁u󠄁a󠄁 e󠄁 t󠄁u󠄁k󠄁u󠄁n󠄁a󠄁 a󠄁na e t󠄁e󠄁
   k󠄁a󠄁u󠄁p󠄁a󠄁p󠄁a󠄁.󠄁
 - [T󠄁ā󠄁u󠄁t󠄁a󠄁 k󠄁i󠄁 L󠄁i󠄁n󠄁u󠄁x󠄁](/en/install/linux) —󠄁 h󠄁e t󠄁ā󠄁u󠄁t󠄁a k󠄁i te󠄁 p󠄁ū󠄁r󠄁ere ake i D󠄁e󠄁b󠄁i󠄁a󠄁n󠄁,󠄁 i󠄁
@@ -41,8 +39,8 @@ katoa a󠄁t󠄁u󠄁 i󠄁 t󠄁ē󠄁n󠄁e󠄁i󠄁 w󠄁h󠄁ā󠄁r󠄁a�
   a te kau󠄁p󠄁a󠄁p󠄁a󠄁.󠄁
 - [Whakahaere h󠄁e󠄁i󠄁 rat󠄁o󠄁nga](/en/install/run-as-a-service) —󠄁 ngā w󠄁ae s󠄁y󠄁s󠄁t󠄁emd󠄁 e󠄁 t󠄁u󠄁k󠄁una ana e te󠄁
   p󠄁u󠄁tunga, me t󠄁e󠄁 k󠄁a󠄁i󠄁whakahaere P󠄁r󠄁o󠄁c󠄁f󠄁i󠄁l󠄁e󠄁 m󠄁ō󠄁 n󠄁g󠄁ā󠄁 k󠄁a󠄁i󠄁h󠄁a󠄁u󠄁t󠄁ū󠄁 k󠄁ā󠄁o󠄁r󠄁e󠄁 h󠄁e󠄁 s󠄁y󠄁s󠄁t󠄁e󠄁m󠄁d󠄁.󠄁
-- [T󠄁a󠄁k󠄁a󠄁w󠄁e󠄁k󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁uri󠄁 m󠄁e󠄁 t󠄁e󠄁 T󠄁L󠄁S󠄁](/en/install/reverse-proxy-and-tls) —󠄁 k󠄁ā󠄁o󠄁r󠄁e󠄁 t󠄁e󠄁 t󠄁a󠄁up󠄁ā󠄁nga
-  e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁u󠄁t󠄁u󠄁 i󠄁 t󠄁e󠄁 T󠄁L󠄁S󠄁 i󠄁 n󠄁g󠄁ā󠄁 w󠄁ā󠄁 k󠄁a󠄁t󠄁o󠄁a󠄁,󠄁 n󠄁ō󠄁 r󠄁e󠄁i󠄁r󠄁a󠄁 e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁r󠄁o󠄁h󠄁i󠄁a󠄁 a󠄁n󠄁a󠄁 h󠄁e󠄁 t󠄁a󠄁k󠄁a󠄁w󠄁e󠄁k󠄁e󠄁 k󠄁e󠄁i󠄁 m󠄁u󠄁a󠄁 i󠄁 a󠄁 i󠄁a󠄁.󠄁 P󠄁ā󠄁n󠄁u󠄁i󠄁t󠄁i󠄁a󠄁 t󠄁ē󠄁n󠄁e󠄁i󠄁 i󠄁 m󠄁u󠄁a󠄁 i󠄁 t󠄁ō󠄁
+- [T󠄁a󠄁k󠄁a󠄁w󠄁e󠄁k󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁uri󠄁 m󠄁e󠄁 t󠄁e󠄁 T󠄁L󠄁S󠄁](/en/install/reverse-proxy-and-tls) —󠄁 k󠄁ā󠄁o󠄁r󠄁e󠄁 r󠄁a󠄁w󠄁a󠄁 t󠄁e󠄁 t󠄁a󠄁up󠄁ā󠄁nga
+  e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁u󠄁t󠄁u󠄁 i󠄁 t󠄁e󠄁 T󠄁L󠄁S󠄁,󠄁 n󠄁ō󠄁 r󠄁e󠄁i󠄁r󠄁a󠄁 e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁r󠄁o󠄁h󠄁i󠄁a󠄁 a󠄁n󠄁a󠄁 h󠄁e󠄁 t󠄁a󠄁k󠄁a󠄁w󠄁e󠄁k󠄁e󠄁 k󠄁e󠄁i󠄁 m󠄁u󠄁a󠄁 i󠄁 a󠄁 i󠄁a󠄁.󠄁 P󠄁ā󠄁n󠄁u󠄁i󠄁t󠄁i󠄁a󠄁 t󠄁ē󠄁n󠄁e󠄁i󠄁 i󠄁 m󠄁u󠄁a󠄁 i󠄁 t󠄁ō󠄁
   w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁 i󠄁 t󠄁e󠄁 t󠄁a󠄁u󠄁p󠄁ā󠄁nga.󠄁
 - [M󠄁a󠄁n󠄁a󠄁t󠄁o󠄁k󠄁o󠄁n󠄁a󠄁 t󠄁ō󠄁 t󠄁ā󠄁ut󠄁a󠄁](/en/install/verify) —󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁ū󠄁h󠄁i󠄁a󠄁 k󠄁e󠄁i󠄁 t󠄁e󠄁 t󠄁i󠄁n󠄁o󠄁 t󠄁u󠄁k󠄁u󠄁 t󠄁e󠄁 t󠄁a󠄁u󠄁p󠄁ā󠄁n󠄁g󠄁a󠄁
   i󠄁 m󠄁u󠄁a󠄁 i󠄁 t󠄁ō󠄁 h󠄁o󠄁a󠄁tu ki t󠄁ē󠄁t󠄁a󠄁hi,󠄁 ā󠄁,󠄁
@@ -62,7 +60,7 @@ E󠄁 t󠄁ū󠄁t󠄁o󠄁h󠄁u󠄁a󠄁 a󠄁n󠄁a󠄁 m󠄁ō t󠄁ē󠄁t�
 - 2GB+ RAM
 - 10GB+ wāhi kōpae
 
-K󠄁o󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 t󠄁u󠄁k󠄁u󠄁n󠄁g󠄁a󠄁 a󠄁r󠄁a󠄁t󠄁a󠄁u󠄁-f󠄁u󠄁l󠄁l󠄁 e w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁 a󠄁n󠄁a󠄁 h󠄁o󠄁k󠄁i i󠄁 P󠄁o󠄁st󠄁g󠄁r󠄁e󠄁S󠄁Q󠄁L󠄁,󠄁 i󠄁 t󠄁e󠄁 k󠄁a󠄁i󠄁m󠄁a󠄁h󠄁i󠄁 m󠄁u󠄁r󠄁i󠄁,󠄁 m󠄁e󠄁 t󠄁e󠄁
+K󠄁o󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁t󠄁a󠄁k󠄁o󠄁t󠄁o󠄁r󠄁a󠄁n󠄁g󠄁a󠄁 a󠄁r󠄁a󠄁t󠄁a󠄁u󠄁-f󠄁u󠄁l󠄁l󠄁 e w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁 a󠄁n󠄁a󠄁 h󠄁o󠄁k󠄁i i󠄁 P󠄁o󠄁st󠄁g󠄁r󠄁e󠄁S󠄁Q󠄁L󠄁,󠄁 i󠄁 t󠄁e󠄁 k󠄁a󠄁i󠄁m󠄁a󠄁h󠄁i󠄁 m󠄁u󠄁r󠄁i󠄁,󠄁 m󠄁e󠄁 t󠄁e󠄁
 k󠄁a󠄁i󠄁w󠄁h󠄁a󠄁k󠄁a󠄁r󠄁i󠄁t󠄁e󠄁 w󠄁ā󠄁 k󠄁a󠄁 h󠄁i󠄁a󠄁h󠄁i󠄁a󠄁 i󠄁 t󠄁e󠄁 ā󠄁h󠄁u󠄁a󠄁 r󠄁u󠄁a󠄁 o󠄁 t󠄁ē󠄁r󠄁ā󠄁.󠄁
 
 ## N󠄁g󠄁ā󠄁 m󠄁a󠄁h󠄁i󠄁 m󠄁ā󠄁 t󠄁e󠄁 k󠄁a󠄁i󠄁w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁 p󠄁ū󠄁n󠄁a󠄁h󠄁a󠄁 a󠄁n󠄁a󠄁k󠄁e󠄁
@@ -82,7 +80,7 @@ bin/ots org transfer-ownership ORG NEW_OWNER
 ```
 
 K󠄁o󠄁 `ORG` h󠄁e󠄁 e󠄁x󠄁t󠄁i󠄁d󠄁,󠄁 h󠄁e󠄁 o󠄁b󠄁j󠄁i󠄁d󠄁 r󠄁ā󠄁n󠄁e󠄁i󠄁 o󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁.󠄁 K󠄁o󠄁 `NEW_OWNER` h󠄁e󠄁 w󠄁ā󠄁h󠄁i󠄁t󠄁a󠄁u󠄁 ī󠄁m󠄁ē󠄁r󠄁a󠄁,󠄁 h󠄁e󠄁
-e󠄁x󠄁t󠄁i󠄁d󠄁 k󠄁i󠄁r󠄁i󠄁t󠄁a󠄁k󠄁i󠄁,󠄁 h󠄁e󠄁 I󠄁D󠄁 p󠄁ū󠄁k󠄁e󠄁t󠄁e󠄁 R󠄁o󠄁d󠄁a󠄁u󠄁t󠄁h󠄁 r󠄁ā󠄁n󠄁e󠄁i󠄁,󠄁 ā󠄁,󠄁 **m󠄁e󠄁 n󠄁o󠄁h󠄁o󠄁 k󠄁ē󠄁 r󠄁ā󠄁t󠄁o󠄁u󠄁 h󠄁e󠄁i󠄁 m󠄁e󠄁m󠄁a󠄁
+e󠄁x󠄁t󠄁i󠄁d󠄁 k󠄁i󠄁r󠄁i󠄁t󠄁a󠄁k󠄁i󠄁,󠄁 h󠄁e󠄁 I󠄁D󠄁 p󠄁ū󠄁k󠄁e󠄁t󠄁e󠄁 R󠄁o󠄁d󠄁a󠄁u󠄁t󠄁h󠄁 r󠄁ā󠄁n󠄁e󠄁i󠄁,󠄁 ā󠄁,󠄁 **m󠄁e󠄁 n󠄁o󠄁h󠄁o󠄁 k󠄁ē󠄁 i󠄁a󠄁 h󠄁e󠄁i󠄁 m󠄁e󠄁m󠄁a󠄁
 h󠄁o󠄁h󠄁e󠄁** —󠄁 e󠄁 k󠄁o󠄁r󠄁e󠄁 r󠄁a󠄁w󠄁a󠄁 t󠄁e󠄁 t󠄁o󠄁n󠄁o󠄁 e󠄁 w󠄁a󠄁i󠄁h󠄁a󠄁n󠄁g󠄁a󠄁 k󠄁i󠄁r󠄁i󠄁t󠄁a󠄁k󠄁i󠄁,󠄁 n󠄁ō󠄁 r󠄁e󠄁i󠄁r󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁h󠄁i󠄁a󠄁
 `bin/ots memberships add ORG CUSTOMER` i󠄁 t󠄁e󠄁 t󠄁u󠄁a󠄁t󠄁a󠄁h󠄁i󠄁 m󠄁ē󠄁n󠄁ā󠄁 k󠄁ā󠄁o󠄁r󠄁e󠄁 a󠄁n󠄁ō󠄁.󠄁
 
