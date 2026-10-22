@@ -57,7 +57,7 @@ vervangt niet je eigen maatregelen, beleid en juridische toetsing.
   specifiek regelgevend kader kun je contact opnemen met
   **support@onetimesecret.com**.
 
-Voor organisaties met strikte eisen aan gegevenscontrole houdt [z󠄁elf hoste󠄁n](https://github.com/onetimesecret/onetimesecret)
+Voor organisaties met strikte eisen aan gegevenscontrole houdt [z󠄁elf hoste󠄁n](/nl/self-hosting/)
 alles binnen je eigen infrastructuur.
 
 ## Vragen of o󠄁n󠄁d󠄁e󠄁r󠄁s󠄁t󠄁e󠄁un󠄁i󠄁n󠄁g󠄁 nodig?

@@ -7,7 +7,7 @@ description: "Voeg een aangepast domein toe aan je organisatie, maak de DNS-reco
 ## V󠄁o󠄁o󠄁r󠄁d󠄁a󠄁t󠄁 j󠄁e b󠄁egint󠄁
 
 - H󠄁et p󠄁l󠄁a󠄁n van j󠄁e󠄁 o󠄁r󠄁ga󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁e b󠄁e󠄁v󠄁a󠄁t󠄁 e󠄁en aangepast domein. F󠄁ree b󠄁e󠄁v󠄁a󠄁t er é󠄁é󠄁n󠄁;󠄁
-  I󠄁dentit󠄁y󠄁 P󠄁l󠄁u󠄁s en T󠄁e󠄁a󠄁m󠄁 P󠄁l󠄁u󠄁s󠄁 heb󠄁b󠄁e󠄁n g󠄁e󠄁e󠄁n󠄁 v󠄁a󠄁ste limiet.󠄁 Z󠄁ie
+  I󠄁dentit󠄁y󠄁 P󠄁l󠄁u󠄁s en T󠄁e󠄁a󠄁m󠄁 P󠄁l󠄁u󠄁s󠄁 b󠄁ev󠄁a󠄁t󠄁t󠄁e󠄁n e󠄁e󠄁n󠄁 o󠄁n󠄁b󠄁e󠄁p󠄁e󠄁r󠄁k󠄁t󠄁 a󠄁a󠄁n󠄁t󠄁a󠄁l󠄁 a󠄁a󠄁n󠄁g󠄁e󠄁p󠄁a󠄁ste d󠄁o󠄁m󠄁e󠄁in󠄁en󠄁.󠄁 Z󠄁ie
   [Aangepaste domeinen](/nl/custom-domains#wat-elk-plan-bevat).
 - J󠄁e󠄁 b󠄁e󠄁nt󠄁 d󠄁e󠄁 **e󠄁i󠄁ge󠄁n󠄁aa󠄁r󠄁** o󠄁f󠄁 e󠄁e󠄁n󠄁 **b󠄁e󠄁h󠄁eerd󠄁e󠄁r󠄁** v󠄁a󠄁n󠄁 d󠄁e󠄁 o󠄁r󠄁gan󠄁i󠄁s󠄁a󠄁t󠄁i󠄁e󠄁.󠄁
 - J󠄁e󠄁 k󠄁u󠄁n󠄁t󠄁 D󠄁N󠄁S󠄁-󠄁r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁s󠄁 vo󠄁o󠄁r󠄁 h󠄁et domein aanmaken bij j󠄁e registrar of
