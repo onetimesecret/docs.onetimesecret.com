@@ -35,8 +35,8 @@
 //     mid-translation legitimately shows a mix, and a language may use one word
 //     for two English terms; failing on that would fire on the translation
 //     pipeline rather than on the sidebar. Two identical entries in ONE menu are
-//     checked in every locale: no fallback produces them, and a reader cannot
-//     tell them apart in any language.
+//     checked in every locale, whether a translation or an English fallback
+//     produced them: a reader cannot tell them apart in any language.
 //
 //  4. Every sidebar translation key exists. config/sidebar.mjs resolves a label
 //     as `enTranslations.sidebar?.[key] || key`, so a mistyped key does not

@@ -11,10 +11,12 @@
 // config/unconfigured-locales.allow with a "# reason" comment.
 //
 // It also reports, without failing, every key in src/content/i18n/en.json that
-// a configured locale's bundle lacks. Those strings fall back to English
-// per-key, and adding a key to en.json alone is the documented workflow
-// (AGENTS.md), so a gap is not an error. It is reported so the next sync can
-// find it: once a bundle is complete, nothing else notices it falling behind.
+// a configured locale's bundle lacks. A missing custom key falls back to
+// English, a missing Starlight key to Starlight's own translation for that
+// locale (where it ships one). Adding a key to en.json alone is the documented
+// workflow (AGENTS.md), so a gap is not an error. It is reported so the next
+// sync can find it: once a bundle is complete, nothing else notices it falling
+// behind.
 // Keys a bundle has and en.json does not are not reported; some are kept on
 // purpose (AGENTS.md lists them).
 //
