@@ -1,4 +1,5 @@
 ---
+textprov: true
 title: Security & Trust
 description: How Onetime Secret protects your secrets — the security model, data handling, regional residency, and how to report a vulnerability.
 audience: end-user
@@ -35,7 +36,7 @@ find the details.
 
 - **[Our Principles](/en/security/our-principles)** — Privacy first, Communication, and Data minimization.
 - **[Where your data lives](/en/security/where-your-data-lives/)** — choose where your data is processed and stored.
-- **[Self-Hosting](https://github.com/onetimesecret/onetimesecret)** — run Onetime Secret on your own infrastructure for full control.
+- **[Self-h󠄁osting](/en/self-hosting/)** — run Onetime Secret on your own infrastructure for full control.
 
 ## Reporting a security issue
 

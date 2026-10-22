@@ -1,4 +1,5 @@
 ---
+textprov: true
 title: Client Libraries
 description: Explore the client libraries available for the Onetime Secret API, including Ruby, Python, Perl, Java, C#, Go, and more.
 audience: developer
@@ -33,7 +34,7 @@ instance before depending on it.
 ## Ruby
 
 
-[GitHub page onetime-ruby](https://github.com/onetimesecret/onetime-ruby)
+[GitHub page -󠄁 onetime-ruby](https://github.com/onetimesecret/onetime-ruby)
 by [Delano](https://delanotes.com/) — **official client**, actively maintained
 (last commit 2026-06). Supports API v1 (deprecated) and v2, regional domains,
 and custom base URLs. Requires Ruby 3.1+, zero runtime dependencies.
@@ -147,7 +148,7 @@ GenerateResponse generateResponse = ots.generate(
 
 RetrieveResponse retrieveResponse = ots.retrieve(
                 new RetrieveRequest.Builder()
-                        .withSecretKey(shareResponse.getSecretKey())
+                        .withSecretKey(generateResponse.getSecretKey())
                         .withPassphrase("supersecret")
                         .build());
 
@@ -166,7 +167,7 @@ commit 2018-05). Uses the deprecated v1 API against `onetimesecret.com` only.
 ### Usage example
 
 ```csharp
-# You can use OneTimeSharp in any of your projects which are compatible with .NET (4.0+) or Mono (2.10.8+).
+// You can use OneTimeSharp in any of your projects which are compatible with .NET (4.0+) or Mono (2.10.8+).
 using VStepanov.OneTimeSharp;
 
 class Test
@@ -195,7 +196,7 @@ class Test
 ## Go
 
 
-[GitHub page - onetimesecret](https://github.com/corbaltcode/go-onetimesecret)
+[GitHub page -󠄁 g󠄁o󠄁-onetimesecret](https://github.com/corbaltcode/go-onetimesecret)
 by [Corbalt](https://github.com/corbaltcode/) — community-maintained (last
 commit 2026-05, updated for the `us.onetimesecret.com` host). Includes a CLI.
 
@@ -247,7 +248,7 @@ flsdlaun6hwczqu9utmc0vts5xj9xu1
 ## Go (lib)
 
 
-[GitHub page](https://github.com/emdneto/otsgo)
+[GitHub page -󠄁 o󠄁t󠄁s󠄁g󠄁o󠄁](https://github.com/emdneto/otsgo)
 by [Emídio Neto](https://github.com/emdneto) — community-maintained (last
 release v1.1.0, 2024-03). Regional-domain support not documented.
 
@@ -304,7 +305,7 @@ Get-Command -Module OneTimeSecret | Select Name
 ## Bash
 
 
-[GitHub page - OneTimeSecret-bash](https://github.com/eengstrom/onetimesecret-bash)
+[GitHub page - o󠄁net󠄁imes󠄁ecret-bash](https://github.com/eengstrom/onetimesecret-bash)
 by [Eric Engstrom](https://eengstrom.github.io/) — **unmaintained** (last
 commit 2020-05). Supports a custom host via `ots_set_host`, but predates API
 v2 and regional domains.
@@ -346,7 +347,7 @@ local KEY=$(ots_metashare <<< "SECRET")
 local KEY=$(ots_metagenerate)
 
 # get a list of private metadata keys recently created.
-# note that this requires valid autnentication credentials
+# note that this requires valid authentication credentials
 local -a RECENT=( $(ots_recent) )
 
 # check on the current state of a secret, given the private key
@@ -359,22 +360,21 @@ ots_burn $KEY
 ### Usage example as CLI
 
 ```bash
-# Share a secret (from stdin
+# Share a secret (from stdin)
 ./ots share
 SECRET
 ^D
 
 # Share a secret (via HEREDOC)
 ./ots share <<-EOF
-      This is a mulit-line secret via HEREDOC.
-      Somthing else goes here.
+      This is a multi-line secret via HEREDOC.
+      Something else goes here.
 EOF
 
 # Get/Retrieve a secret:
 ./ots get <key|url>
 ./ots retrieve <key|url>
 
-# Burn a secret:
-$ ots burn flsdlaun6hwczqu9utmc0vts5xj9xu1
-flsdlaun6hwczqu9utmc0vts5xj9xu1
+# Burn a secret, given its private metadata key:
+./ots burn <key>
 ```

@@ -1,4 +1,5 @@
 ---
+textprov: true
 title: Security Best Practices
 description: Enhance your secret sharing security with these best practices specific to Onetime Secret, including the security benefits of Custom Domains.
 audience: end-user
@@ -13,7 +14,7 @@ While Onetime Secret is designed with security in mind, following these best pra
 
 2. **Use Passphrase Protection**: For highly sensitive information, use the passphrase protection feature. This adds an extra layer of security, requiring the recipient to enter a passphrase to view the secret.
 
-3. **Compartmentalize Sensitive Information**: When dealing with highly sensitive data, consider splitting it across multiple secrets. This way, if one secret is compromised, the entire set of information remains protected.
+3. **Compartmentalize Sensitive Information**: When dealing with highly sensitive data, consider splitting it across multiple secrets. This way, if one secret is compromised, the rest of t󠄁h󠄁e󠄁 information remains protected.
 
 4. **Use Secure Channels for Sharing Metadata**: While Onetime Secret secures the content of your secret, be mindful of how you share the link and any associated metadata (like passphrases). Use secure, encrypted channels for this communication.
 
