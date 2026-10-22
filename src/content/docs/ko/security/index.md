@@ -34,7 +34,7 @@ Onetime Secret은 민감한 정보를 받은 편지함, 채팅 기록, 티켓 �
 
 - **[저󠄁희󠄁의 원칙](/en/security/our-principles)** — 개인정보 보호 우선, 커뮤니케이션, 데이터 최소화.
 - **[데이터가󠄁 저󠄁장󠄁되󠄁는󠄁 위󠄁치󠄁](/en/security/where-your-data-lives/)** — 데이터가 처리되고 저장되는 위치를 선택할 수 있습니다.
-- **[자체 호스팅](https://github.com/onetimesecret/onetimesecret)** — 완전한 통제를 위해 자체 인프라에서 Onetime Secret을 운영할 수 있습니다.
+- **[자체 호스팅](/ko/self-hosting/)** — 완전한 통제를 위해 자체 인프라에서 Onetime Secret을 운영할 수 있습니다.
 
 ## 보안 문제 신고
 
