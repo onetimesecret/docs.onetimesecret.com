@@ -30,9 +30,10 @@ python3 tools/dogfood.py create src/content/docs/en/contribute/new-guide.md --st
 ```
 
 Use --dry-run to inspect the result. Paths, ambiguous matches, grapheme boundaries,
-Markdown syntax, links, and existing marks are checked before writing. Unchanged
-clusters within the replacement keep their previous bytes and origin. The tool
-adds `textprov: true` to the YAML frontmatter of an edited docs page.
+Markdown syntax, links, and existing marks are checked before writing. Clusters
+inferred to be unchanged within the replacement keep their previous bytes and
+origin; this alignment cannot establish authorship (see below). The tool adds
+`textprov: true` to the YAML frontmatter of an edited docs page.
 
 4. Review the visible text and source diff; then validate against the starting
    SHA (HEAD works before committing):
@@ -52,9 +53,62 @@ code, URLs, syntax, HTML tags, Markdoc directives/attributes, aside fences
 environment reference are excluded. Source-code comments and strings are excluded.
 Human contributors edit normally and preserve existing marks. For a combined diff
 containing human edits, run check with --preserve-only; it permits new unmarked
-text while still rejecting lost marks, backfill, and marks in protected syntax.
+text while still rejecting lost marks and backfill detected by alignment, and
+marks in protected syntax. Short moves can escape detection (see below).
 CI runs this preservation check against the merge base of the PR and target branch. The strict check is an
 agent completion requirement; CI cannot infer whether unmarked text came from AI.
+
+## Correspondence alignment and authoring limitations
+
+`tools/dogfood.py` uses `correspondence()` for both authoring and checking.
+It ignores whitespace, anchors on exact encoded bytes, then aligns visible
+clusters in the gaps. Primary equal runs can be one cluster long; these text
+comparisons cannot distinguish retained text from coincidental new text.
+For example, replacing `cat` with `bag` retains the unmarked `a`; fully marking
+the replacement instead reports backfill. Two-cluster coincidences are possible too.
+
+`MIN_MOVE_CLUSTERS = 2` applies only to the final unmatched-block move pass.
+Shorter blocks pair only if their encoded bytes are identical. This excludes
+the reported Polish singleton coincidence while retaining checks for changed
+marks on two-cluster moves. Raising the threshold to three misses those changes;
+adding a minimum to primary equal runs also breaks retained-byte and
+mark-preservation cases. Neither threshold establishes authorship.
+
+### Known gaps and follow-up: PR #467
+
+[`CorrespondenceLimitTests`](../tools/tests/test_dogfood.py) records these limits:
+
+- In-place coincidental clusters can remain unmarked.
+- A singleton move with changed bytes is treated as new text, potentially
+  concealing relabelling or, in preservation-only mode, a removed mark.
+- Separate deletion and insertion of identical blocks can each pass while the
+  cumulative comparison reports backfill as a move.
+
+A policy follow-up must distinguish declared edit history from inferred
+retention, or report ambiguous alignment for review. Preserve legacy bytes,
+selector and legacy-PUA encodings, duplicate attribution, variation sequences,
+reflow, move checks, and existing cumulative-edit regressions. Until then,
+inspect attribution diffs and check against the recorded starting base, not
+just each preceding edit. Do not strip marks or mark legacy text to pass.
+`--preserve-only` permits combined human/AI diffs; it does not resolve ambiguity.
+
+The historical PR #467 accommodations are documented here rather than encoded
+as locale-specific checker exemptions:
+
+- **Bulgarian:** `197f8796` in
+  `src/content/docs/bg/custom-domains/setup-guide.md` removed selectors from
+  `е` and `н` in adjacent `се нуждае` prose, despite its status-label commit
+  message. Those selectors are present again at reviewed HEAD `44af276c`.
+  The later `76d8035a` status correction retains an unmarked `н` in `Активна`
+  relative to `bc5c9ae2`; the new `а` is AI-marked.
+- **Spanish:** `a88e666c` deliberately leaves `valor`'s `r` unmarked in
+  `src/content/docs/es/self-hosting/index.md`: it aligns with legacy `secreto`'s
+  `r` against `bc5c9ae2`. The other letters in `valor` remain AI-marked.
+
+Reduced tests reproduce both alignments. These exceptions are not evidence of
+retained authorship. Their historical comparison base does not replace the
+starting-base check or CI's current merge base. The upstream #459 provenance
+re-anchor is a separate follow-up.
 
 ## Display and search
 

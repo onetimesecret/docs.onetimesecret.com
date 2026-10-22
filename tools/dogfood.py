@@ -21,7 +21,9 @@ import textprov  # noqa: E402
 MAPPING = textprov.default_mapping()
 SELECTORS = set(MAPPING.selectors.values())
 STATES = {value: key for key, value in MAPPING.selectors.items()}
-# Visible clusters an unmatched block needs before a move can change its marks.
+# Smallest move threshold that excludes the reported one-cluster coincidence
+# while still checking mark changes on two-cluster moves. Not a confidence score
+# or a minimum for primary equal runs; see docs/TEXTPROV.md alignment limitations.
 MIN_MOVE_CLUSTERS = 2
 
 
@@ -49,11 +51,15 @@ def clusters(source):
 
 
 def correspondence(old, new):
-    """Align visible clusters, ignoring reflow whitespace and provenance bytes.
+    """Infer correspondence, not authorship, ignoring reflow whitespace.
 
-    This is a deterministic comparison, not evidence of authorship. Exact
-    unmatched blocks of MIN_MOVE_CLUSTERS or more also retain their identity
-    when moved within a file.
+    Exact encodings anchor the primary alignment; visible-text alignment in
+    the gaps can pair even one coincidental cluster. A minimum there would
+    also discard retained legacy bytes or hide changes to existing marks.
+    Unique exact unmatched blocks are then paired as moves: mark changes are
+    checked only at MIN_MOVE_CLUSTERS or above, while shorter blocks must keep
+    identical bytes. Short moves and cumulative edits remain ambiguous; see
+    docs/TEXTPROV.md for examples, historical exceptions, and follow-up scope.
     """
     a = [i for i, item in enumerate(old) if item.text and not item.text.isspace()]
     b = [i for i, item in enumerate(new) if item.text and not item.text.isspace()]
@@ -68,6 +74,8 @@ def correspondence(old, new):
 
     def align(tag, i, j, k, l):
         if tag == "equal":
+            # Keep singleton survivors (including their original encoding).
+            # The unmatched-move threshold is unsafe for these primary runs.
             matches.update(zip(b[k:l], a[i:j]))
         else:
             if i < j:
