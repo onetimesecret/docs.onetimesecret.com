@@ -21,6 +21,10 @@ import textprov  # noqa: E402
 MAPPING = textprov.default_mapping()
 SELECTORS = set(MAPPING.selectors.values())
 STATES = {value: key for key, value in MAPPING.selectors.items()}
+# Smallest move threshold that excludes the reported one-cluster coincidence
+# while still checking mark changes on two-cluster moves. Not a confidence score
+# or a minimum for primary equal runs; see docs/TEXTPROV.md alignment limitations.
+MIN_MOVE_CLUSTERS = 2
 
 
 @dataclass
@@ -47,10 +51,15 @@ def clusters(source):
 
 
 def correspondence(old, new):
-    """Align visible clusters, ignoring reflow whitespace and provenance bytes.
+    """Infer correspondence, not authorship, ignoring reflow whitespace.
 
-    This is a deterministic comparison, not evidence of authorship. Exact
-    unmatched blocks also retain their identity when moved within a file.
+    Exact encodings anchor the primary alignment; visible-text alignment in
+    the gaps can pair even one coincidental cluster. A minimum there would
+    also discard retained legacy bytes or hide changes to existing marks.
+    Unique exact unmatched blocks are then paired as moves: mark changes are
+    checked only at MIN_MOVE_CLUSTERS or above, while shorter blocks must keep
+    identical bytes. Short moves and cumulative edits remain ambiguous; see
+    docs/TEXTPROV.md for examples, historical exceptions, and follow-up scope.
     """
     a = [i for i, item in enumerate(old) if item.text and not item.text.isspace()]
     b = [i for i, item in enumerate(new) if item.text and not item.text.isspace()]
@@ -65,6 +74,8 @@ def correspondence(old, new):
 
     def align(tag, i, j, k, l):
         if tag == "equal":
+            # Keep singleton survivors (including their original encoding).
+            # The unmatched-move threshold is unsafe for these primary runs.
             matches.update(zip(b[k:l], a[i:j]))
         else:
             if i < j:
@@ -84,8 +95,15 @@ def correspondence(old, new):
             align(subtag, i + x, i + y, k + z, k + w)
     for key, old_blocks in old_gaps.items():
         new_blocks = new_gaps.get(key, [])
-        if len(old_blocks) == len(new_blocks) == 1:
-            matches.update(zip(new_blocks[0], old_blocks[0]))
+        if len(old_blocks) != 1 or len(new_blocks) != 1:
+            continue
+        pairs = list(zip(new_blocks[0], old_blocks[0]))
+        # One cluster does not identify a passage: the y removed from "życia"
+        # and the y written in "pomocy?" are a coincidence, not a move. Pair a
+        # shorter block only when that keeps its exact bytes, so it can retain
+        # legacy text but never report a relabelled or lost mark.
+        if len(key) >= MIN_MOVE_CLUSTERS or all(new[n].raw == old[o].raw for n, o in pairs):
+            matches.update(pairs)
     return matches
 
 

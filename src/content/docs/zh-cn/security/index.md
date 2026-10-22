@@ -25,7 +25,7 @@ Onetime Secret 的存在，是为了将敏感信息从一个人传递给另一�
 
 - **[我们的原则](/en/security/our-principles)**——隐私优先、沟通与数据最小化。
 - **[您󠄁的󠄁数据存󠄁放󠄁在󠄁哪󠄁里󠄁](/en/security/where-your-data-lives/)**——选择您的数据在哪里处理和存储。
-- **[自托管](https://github.com/onetimesecret/onetimesecret)**——在您自己的基础设施上运行 Onetime Secret，实现完全控制。
+- **[自托管](/zh-cn/self-hosting/)**——在您自己的基础设施上运行 Onetime Secret，实现完全控制。
 
 ## 报告安全问题
 

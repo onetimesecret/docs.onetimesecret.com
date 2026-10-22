@@ -45,6 +45,16 @@ const excerpt = (text) => {
 /** @type {(text: string) => string} */
 export const clean = (text) => candidate.test(text) ? aiRuns(text).map(run => run.text).join('') : text;
 
+// github-slugger drops punctuation such as ? , ( ) and quotes but keeps the
+// selector that followed it. That selector trails the previous cluster's own
+// (or leads the ID), and clean() strips only one per cluster. IDs are never
+// displayed, so drop every remaining AI selector from them and their references.
+// This intentionally removes U+E0101 even after CJK, where it can be a genuine
+// IVS; this extra identifier normalization must not be applied to body text.
+const selector = String.fromCodePoint(textprov.mapping.selectors.ai);
+/** @type {(id: string) => string} */
+const cleanId = (id) => clean(id).replaceAll(selector, '');
+
 // Rewrite only affected source ranges, preserving the rest of Astro's HTML
 // byte-for-byte (including islands, scripts, attributes, entities, and doctype).
 // Runs during prerender, before Starlight builds its Pagefind index, and in dev.
@@ -59,7 +69,8 @@ export const clean = (text) => candidate.test(text) ? aiRuns(text).map(run => ru
 export function renderProvenance(html, { requireEnrollment = true, label } = {}) {
   /** @type {(message: string) => never} */
   const fail = (message) => { throw new Error(`TextProv: ${message}${label ? ` (${label})` : ''}`); };
-  if (!candidate.test(html) && !html.includes('&#')) return html;
+  // Numeric entities and percent-encoded local fragments can hide every marker.
+  if (!candidate.test(html) && !html.includes('&#') && !html.includes('%')) return html;
   const tree = parse(html, { sourceCodeLocationInfo: true });
   const edits = [];
   const ids = [];
@@ -76,11 +87,17 @@ export function renderProvenance(html, { requireEnrollment = true, label } = {})
   if (requireEnrollment && !enrolled) return html;
   // The slugger sees the original selectors and can consider marked/unmarked
   // versions of the same heading different. Keep existing clean IDs stable,
-  // allocate unique IDs for the decoded ones, and remap their TOC links.
-  const usedIds = new Set(ids.filter(id => clean(id) === id));
+  // reject collisions with decoded ones, and remap their local references.
+  const usedIds = new Set(ids.filter(id => cleanId(id) === id));
   const idMap = new Map();
+  function resolveId(id, attribute) {
+    const target = idMap.get(id) ?? cleanId(id);
+    if (candidate.test(target)) fail(`malformed AI marker in ${attribute}: "${excerpt(id)}"`);
+    if (id && !target) fail(`decoded identifier in ${attribute} is empty: "${excerpt(id)}"; use a non-empty identifier`);
+    return target;
+  }
   for (const id of ids) {
-    const base = clean(id);
+    const base = cleanId(id);
     if (base === id || idMap.has(id)) continue;
     // A decoded id another element already has cannot be renumbered quietly.
     // This page's own TOC links could be remapped to "base-1", but a link from
@@ -125,13 +142,14 @@ export function renderProvenance(html, { requireEnrollment = true, label } = {})
         // pair round-trips reserved characters (%23 stays #), unlike decodeURI.
         let fragment = value.slice(1), decoded = false;
         try { fragment = decodeURIComponent(fragment); decoded = true; } catch { /* Keep malformed legacy URLs. */ }
-        const target = idMap.get(fragment) ?? clean(fragment);
+        // Validate decoded text before encoding can hide a residual PUA marker.
+        const target = resolveId(fragment, attr.name);
         plain = target === fragment ? value : '#' + (decoded ? encodeURIComponent(target) : target);
       } else {
         plain = attr.name === 'id'
-          ? (idMap.get(value) ?? clean(value))
+          ? resolveId(value, attr.name)
           : references.has(attr.name)
-            ? value.replace(/\S+/g, id => idMap.get(id) ?? clean(id))
+            ? value.replace(/\S+/g, id => resolveId(id, attr.name))
             : clean(value);
       }
       if (plain !== value) {

@@ -31,7 +31,7 @@ A󠄁P󠄁I󠄁 v󠄁2󠄁와󠄁 지󠄁역󠄁 도󠄁메󠄁인󠄁이󠄁 �
 ## R󠄁u󠄁b󠄁y󠄁
 
 
-[G󠄁i󠄁t󠄁H󠄁u󠄁b󠄁 페󠄁이󠄁지󠄁 o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁-󠄁r󠄁u󠄁b󠄁y󠄁](https://github.com/onetimesecret/onetime-ruby)
+[G󠄁i󠄁t󠄁H󠄁u󠄁b󠄁 페󠄁이󠄁지󠄁 -󠄁 o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁-󠄁r󠄁u󠄁b󠄁y󠄁](https://github.com/onetimesecret/onetime-ruby)
 작󠄁성󠄁자󠄁 [Delano](https://delanotes.com/) —󠄁 **공󠄁식󠄁 클󠄁라󠄁이󠄁언󠄁트󠄁**,󠄁 활󠄁발󠄁히󠄁 유󠄁지󠄁 관󠄁리󠄁 중󠄁
 (최󠄁근󠄁 커󠄁밋󠄁 2026󠄁-06).󠄁 A󠄁P󠄁I󠄁 v󠄁1󠄁(󠄁더󠄁 이󠄁상󠄁 권󠄁장󠄁되󠄁지󠄁 않󠄁음󠄁)󠄁과󠄁 v󠄁2󠄁,󠄁 지󠄁역󠄁 도󠄁메󠄁인󠄁,󠄁 사󠄁용󠄁자󠄁 지󠄁정󠄁 기󠄁본󠄁 U󠄁R󠄁L󠄁을󠄁
 지󠄁원󠄁합󠄁니󠄁다󠄁.󠄁 R󠄁u󠄁b󠄁y󠄁 3󠄁.󠄁1󠄁 이󠄁상󠄁이󠄁 필󠄁요󠄁하󠄁며󠄁 런󠄁타󠄁임󠄁 의󠄁존󠄁성󠄁이󠄁 없󠄁습󠄁니󠄁다󠄁.󠄁
@@ -145,7 +145,7 @@ GenerateResponse generateResponse = ots.generate(
 
 RetrieveResponse retrieveResponse = ots.retrieve(
                 new RetrieveRequest.Builder()
-                        .withSecretKey(shareResponse.getSecretKey())
+                        .withSecretKey(generateResponse.getSecretKey())
                         .withPassphrase("supersecret")
                         .build());
 
@@ -164,7 +164,7 @@ assertEquals(generateResponse.getValue(), retrieveResponse.getValue());
 ### 사용 예시
 
 ```csharp
-# You can use OneTimeSharp in any of your projects which are compatible with .NET (4.0+) or Mono (2.10.8+).
+// You can use OneTimeSharp in any of your projects which are compatible with .NET (4.0+) or Mono (2.10.8+).
 using VStepanov.OneTimeSharp;
 
 class Test
@@ -193,7 +193,7 @@ class Test
 ## Go
 
 
-[GitH󠄁ub 페󠄁이󠄁지󠄁 - onetimesecret](https://github.com/corbaltcode/go-onetimesecret)
+[GitH󠄁ub 페󠄁이󠄁지󠄁 -󠄁 g󠄁o󠄁-onetimesecret](https://github.com/corbaltcode/go-onetimesecret)
 작󠄁성󠄁자󠄁 [Corbalt](https://github.com/corbaltcode/) —󠄁 커󠄁뮤󠄁니󠄁티󠄁에󠄁서󠄁 유󠄁지󠄁 관󠄁리󠄁 (최󠄁근󠄁
 커󠄁밋󠄁 2026󠄁-05󠄁,󠄁 `us.onetimesecret.com` 호󠄁스󠄁트󠄁에󠄁 맞󠄁게󠄁 업󠄁데󠄁이󠄁트󠄁됨󠄁).󠄁 C󠄁L󠄁I󠄁를󠄁 포󠄁함󠄁합󠄁니󠄁다󠄁.󠄁
 
@@ -245,7 +245,7 @@ flsdlaun6hwczqu9utmc0vts5xj9xu1
 ## Go (lib)
 
 
-[GitH󠄁ub 페󠄁이󠄁지󠄁](https://github.com/emdneto/otsgo)
+[GitH󠄁ub 페󠄁이󠄁지󠄁 -󠄁 o󠄁t󠄁s󠄁g󠄁o󠄁](https://github.com/emdneto/otsgo)
 작󠄁성󠄁자󠄁 [Emídio Neto](https://github.com/emdneto) —󠄁 커󠄁뮤󠄁니󠄁티󠄁에󠄁서󠄁 유󠄁지󠄁 관󠄁리󠄁 (최󠄁근󠄁
 릴󠄁리󠄁스󠄁 v󠄁1󠄁.󠄁1󠄁.󠄁0󠄁,󠄁 2024-03󠄁).󠄁 지󠄁역󠄁 도󠄁메󠄁인󠄁 지󠄁원󠄁 여󠄁부󠄁는󠄁 문󠄁서󠄁화󠄁되󠄁지󠄁 않󠄁았󠄁습󠄁니󠄁다󠄁.󠄁
 
@@ -302,7 +302,7 @@ Get-Command -Module OneTimeSecret | Select Name
 ## Bash
 
 
-[GitH󠄁ub 페󠄁이󠄁지󠄁 - OneTimeSecret-bash](https://github.com/eengstrom/onetimesecret-bash)
+[GitH󠄁ub 페󠄁이󠄁지󠄁 - o󠄁net󠄁imes󠄁ecret-bash](https://github.com/eengstrom/onetimesecret-bash)
 작󠄁성󠄁자󠄁 [Eric Engstrom](https://eengstrom.github.io/) —󠄁 **유󠄁지󠄁 관󠄁리󠄁 중󠄁단󠄁** (최󠄁근󠄁
 커󠄁밋󠄁 202󠄁0󠄁-0󠄁5󠄁)󠄁.󠄁 `ots_set_host`를󠄁 통󠄁한󠄁 사󠄁용󠄁자󠄁 지󠄁정󠄁 호󠄁스󠄁트󠄁를󠄁 지󠄁원󠄁하󠄁지󠄁만󠄁,󠄁 A󠄁P󠄁I󠄁 v󠄁2와󠄁
 지󠄁역󠄁 도󠄁메󠄁인󠄁 도󠄁입󠄁 이󠄁전󠄁에󠄁 만󠄁들󠄁어󠄁졌󠄁습󠄁니󠄁다󠄁.󠄁
@@ -344,7 +344,7 @@ local KEY=$(ots_metashare <<< "SECRET")
 local KEY=$(ots_metagenerate)
 
 # get a list of private metadata keys recently created.
-# note that this requires valid autnentication credentials
+# note that this requires valid authentication credentials
 local -a RECENT=( $(ots_recent) )
 
 # check on the current state of a secret, given the private key
@@ -357,22 +357,21 @@ ots_burn $KEY
 ### CLI 사용 예시
 
 ```bash
-# Share a secret (from stdin
+# Share a secret (from stdin)
 ./ots share
 SECRET
 ^D
 
 # Share a secret (via HEREDOC)
 ./ots share <<-EOF
-      This is a mulit-line secret via HEREDOC.
-      Somthing else goes here.
+      This is a multi-line secret via HEREDOC.
+      Something else goes here.
 EOF
 
 # Get/Retrieve a secret:
 ./ots get <key|url>
 ./ots retrieve <key|url>
 
-# Burn a secret:
-$ ots burn flsdlaun6hwczqu9utmc0vts5xj9xu1
-flsdlaun6hwczqu9utmc0vts5xj9xu1
+# Burn a secret, given its private metadata key:
+./ots burn <key>
 ```

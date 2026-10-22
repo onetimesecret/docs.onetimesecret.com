@@ -6,8 +6,8 @@ description: "Tāpiritia he rohe ritenga ki tō whakahaere, waihangahia ōna tuh
 
 ## I󠄁 m󠄁u󠄁a󠄁 i󠄁 t󠄁ō󠄁 t󠄁ī󠄁m󠄁atanga
 
-- K󠄁e󠄁i󠄁 r󠄁o󠄁t󠄁o󠄁 i󠄁 t󠄁e󠄁 m󠄁ah󠄁e󠄁re󠄁 a tō󠄁 whakah󠄁a󠄁er󠄁e󠄁 t󠄁ē󠄁t󠄁ahi rohe ritenga. K󠄁o󠄁t󠄁a󠄁h󠄁i󠄁 kei󠄁 roto󠄁 i te󠄁 F󠄁r󠄁e󠄁e󠄁;󠄁 k󠄁ā󠄁or󠄁e󠄁 h󠄁e󠄁 t󠄁e󠄁pe pūm󠄁au
-  ā󠄁 I󠄁d󠄁e󠄁nt󠄁i󠄁t󠄁y󠄁 P󠄁l󠄁u󠄁s󠄁 m󠄁e󠄁 T󠄁e󠄁am P󠄁l󠄁us󠄁.󠄁 T󠄁irohia
+- K󠄁e󠄁i󠄁 r󠄁o󠄁t󠄁o󠄁 i󠄁 t󠄁e󠄁 m󠄁ah󠄁e󠄁re󠄁 a tō󠄁 whakah󠄁a󠄁er󠄁e󠄁 t󠄁ē󠄁t󠄁ahi rohe ritenga. K󠄁o󠄁t󠄁a󠄁h󠄁i󠄁 kei󠄁 roto󠄁 i te󠄁 F󠄁r󠄁e󠄁e󠄁;󠄁 h󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 r󠄁i󠄁t󠄁e󠄁n󠄁g󠄁a󠄁 k󠄁or󠄁e󠄁-󠄁m󠄁u󠄁t󠄁u󠄁n󠄁g󠄁a󠄁 k󠄁e󠄁i󠄁 r󠄁o󠄁t󠄁o󠄁
+  i󠄁 t󠄁e󠄁 I󠄁d󠄁e󠄁nt󠄁i󠄁t󠄁y󠄁 P󠄁l󠄁u󠄁s󠄁 m󠄁e󠄁 T󠄁e󠄁am P󠄁l󠄁us󠄁.󠄁 T󠄁irohia
   [Ngā r󠄁ohe rite󠄁nga](/en/custom-domains#what-each-plan-includes).
 - K󠄁o󠄁 k󠄁o󠄁e󠄁 te󠄁 **rangat󠄁i󠄁ra󠄁**,󠄁 te **kaiwhakaha󠄁ere** rānei o t󠄁e whakah󠄁ae󠄁r󠄁e󠄁.󠄁
 - K󠄁a󠄁 t󠄁a󠄁e󠄁a󠄁 e󠄁 k󠄁o󠄁e󠄁 t󠄁e󠄁 w󠄁a󠄁i󠄁hanga tuhinga DNS m󠄁ō te rohe ki tō kairēhita, k󠄁i󠄁 t󠄁ō󠄁 kaiwhakarato DNS rānei.󠄁

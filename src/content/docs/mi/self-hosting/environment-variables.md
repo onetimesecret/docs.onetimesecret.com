@@ -1,8 +1,7 @@
 ---
 title: Tohutoro Tāhuatanga Taiao
 description: Tētahi tohutoro mō ngā tāhuatanga taiao Onetime Secret
-sidebar:
-  order: 5
+
 ---
 
 Ka whāki tēnei aratohu i ngā tāhuatanga taiao katoa e wātea ana i Onetime Secret v0.22.4+.

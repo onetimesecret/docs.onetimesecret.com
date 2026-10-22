@@ -34,7 +34,7 @@ znaleźć szczegóły.
 
 - **[Nasze zasady](/en/security/our-principles)** — Prywatność na pierwszym miejscu, Komunikacja i Minimalizacja danych.
 - **[G󠄁d󠄁z󠄁i󠄁e z󠄁n󠄁a󠄁j󠄁d󠄁u󠄁j󠄁ą󠄁 s󠄁ię󠄁 T󠄁w󠄁oj󠄁e dane󠄁](/en/security/where-your-data-lives/)** — wybierz, gdzie Twoje dane są przetwarzane i przechowywane.
-- **[Self-hosting](https://github.com/onetimesecret/onetimesecret)** — uruchom Onetime Secret na własnej infrastrukturze, aby mieć pełną kontrolę.
+- **[Self-hosting](/pl/self-hosting/)** — uruchom Onetime Secret na własnej infrastrukturze, aby mieć pełną kontrolę.
 
 ## Zgłaszanie problemu z bezpieczeństwem
 

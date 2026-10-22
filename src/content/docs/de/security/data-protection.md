@@ -58,7 +58,7 @@ juristische Prüfung.
   bestimmten regulatorischen Rahmenwerk wende dich an
   **support@onetimesecret.com**.
 
-Für Organisationen mit strengen Anforderungen an die Datenkontrolle bleibt beim [Self-Hosting](https://github.com/onetimesecret/onetimesecret)
+Für Organisationen mit strengen Anforderungen an die Datenkontrolle bleibt beim [Self-Hosting](/de/self-hosting/)
 alles innerhalb der eigenen Infrastruktur.
 
 ## Fragen oder Hilfe nötig?

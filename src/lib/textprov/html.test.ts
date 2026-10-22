@@ -58,6 +58,151 @@ describe('static TextProv HTML', () => {
       .toThrow('TextProv: decoded id "topic" is already used by another element; rename one of the headings (/en/page/)');
   });
 
+  it('strips the marks that slugged punctuation leaves in heading IDs and their references', () => {
+    // Like github-slugger, drop punctuation but keep the selector after it. A
+    // cluster then ends in two selectors, and a quoted heading starts with one.
+    const slug = (s: string) => s.toLowerCase().replace(/[?,()"]/gu, '').replaceAll(' ', '-');
+    const headings = {
+      'Questions or need support?': 'questions-or-need-support',
+      'Set color, corners, and font': 'set-color-corners-and-font',
+      'Ownership record (TXT)': 'ownership-record-txt',
+      '"Incorrect passphrase"': 'incorrect-passphrase',
+    };
+    for (const [heading, expected] of Object.entries(headings)) {
+      const id = slug(ai(heading));
+      const html = '<div class="textprov-controls" data-textprov-document="true"></div>' +
+        `<div class="sl-markdown-content"><h2 id="${id}">${ai(heading)}</h2></div>` +
+        `<a href="#${encodeURIComponent(id)}">${ai(heading)}</a><label for="${id}">Label</label>` +
+        `<input aria-describedby="${id} other">`;
+      const result = renderProvenance(html);
+      expect(result).not.toContain('\u{E0101}');
+      const doc = new JSDOM(result).window.document;
+      expect(doc.querySelector('h2')?.id).toBe(expected);
+      expect(doc.querySelector('a')?.getAttribute('href')).toBe(`#${expected}`);
+      expect(doc.querySelector('label')?.getAttribute('for')).toBe(expected);
+      expect(doc.querySelector('input')?.getAttribute('aria-describedby')).toBe(`${expected} other`);
+    }
+  });
+
+  it('fails when an ID still contains a marker after cleaning', () => {
+    expect(() => render('<h2 id="x\u{100061}\u{E0101}">Title</h2>', { label: '/en/start/' }))
+      .toThrow('TextProv: malformed AI marker in id: "x<U+100061><U+E0101>" (/en/start/)');
+  });
+
+  it.each(['raw', 'percent-encoded', 'numeric entities', 'malformed escape'])(
+    'rejects residual PUA in a %s local fragment without a local ID',
+    (encoding) => {
+      const marked = 'x\u{100061}\u{E0101}';
+      const fragment =
+        encoding === 'percent-encoded'
+          ? encodeURIComponent(marked)
+          : encoding === 'numeric entities'
+            ? 'x&#x100061;&#xE0101;'
+            : encoding === 'malformed escape'
+              ? marked + '%'
+              : marked;
+      expect(() => render(`<a href="#${fragment}">Link</a>`, { label: '/en/start/' })).toThrow(
+        `TextProv: malformed AI marker in href: "x<U+100061><U+E0101>${encoding === "malformed escape" ? "%" : ""}" (/en/start/)`,
+      );
+    },
+  );
+
+  it.each([
+    'aria-labelledby',
+    'aria-describedby',
+    'aria-controls',
+    'aria-owns',
+    'aria-flowto',
+    'aria-activedescendant',
+    'aria-details',
+    'aria-errormessage',
+    'for',
+    'list',
+    'headers',
+    'form',
+  ])('rejects residual PUA in %s without a local ID', (attribute) => {
+    const marked = 'x\u{100061}\u{E0101}';
+    expect(() => render(`<input ${attribute}="other ${marked} last">`, { label: '/en/start/' })).toThrow(
+      `TextProv: malformed AI marker in ${attribute}: "x<U+100061><U+E0101>" (/en/start/)`,
+    );
+  });
+
+  it.each(['id', 'href', 'aria-describedby', 'for'])(
+    'rejects a non-empty %s identifier that becomes empty after cleaning',
+    (attribute) => {
+      const marked = '\u{E0101}\u{E0101}';
+      const value =
+        attribute === 'href'
+          ? '#' + encodeURIComponent(marked)
+          : attribute === 'aria-describedby'
+            ? `other ${marked} last`
+            : marked;
+      expect(() => render(`<a ${attribute}="${value}">Link</a>`, { label: '/en/start/' })).toThrow(
+        `TextProv: decoded identifier in ${attribute} is empty: "<U+E0101><U+E0101>"; use a non-empty identifier (/en/start/)`,
+      );
+    },
+  );
+
+  it('cleans valid percent-encoded local fragments without a local ID', () => {
+    for (const marked of [ai('topic'), '\u{100074}opic']) {
+      expect(render(`<a href="#${encodeURIComponent(marked)}">Link</a>`)).toBe('<a href="#topic">Link</a>');
+    }
+  });
+
+  it('preserves empty attributes and a bare fragment', () => {
+    const html = '<p id="" aria-describedby="" for="">A&#xE0101;</p><a href="#">Top</a>';
+    const doc = new JSDOM(render(html)).window.document;
+    expect(doc.querySelector('p')?.getAttribute('id')).toBe('');
+    expect(doc.querySelector('p')?.getAttribute('aria-describedby')).toBe('');
+    expect(doc.querySelector('p')?.getAttribute('for')).toBe('');
+    expect(doc.querySelector('a')?.getAttribute('href')).toBe('#');
+  });
+
+  it('preserves a genuine CJK IVS in a heading ID, its references and displayed text', () => {
+    const ivs = '辻\u{E0100}';
+    const html =
+      `<div class="sl-markdown-content"><h2 id="${ivs}">${ivs}</h2></div>` +
+      `<a href="#${encodeURIComponent(ivs)}">${ivs}</a><input aria-describedby="${ivs}">`;
+    expect(render(html)).toBe(html);
+  });
+
+  it('normalizes U+E0101 even after CJK in identifiers without changing unmarked body text', () => {
+    const id = '辻\u{E0101}';
+    const body = '辻\u{E0100}';
+    const html =
+      `<div class="sl-markdown-content"><h2 id="${id}">${body}</h2></div>` +
+      `<a href="#${encodeURIComponent(id)}">${body}</a><input aria-describedby="${id}">`;
+    const doc = new JSDOM(render(html)).window.document;
+    expect(doc.querySelector('h2')?.id).toBe('辻');
+    expect(doc.querySelector('a')?.getAttribute('href')).toBe('#' + encodeURIComponent('辻'));
+    expect(doc.querySelector('input')?.getAttribute('aria-describedby')).toBe('辻');
+    expect(doc.querySelector('h2')?.textContent).toBe(body);
+    expect(doc.querySelector('a')?.textContent).toBe(body);
+    expect(doc.querySelector('.textprov-ai')).toBeNull();
+  });
+
+  it('leaves non-local URLs byte-for-byte unchanged, including their fragments', () => {
+    const marked = 'x\u{100061}\u{E0101}';
+    for (const prefix of [
+      '/en/share/when-a-link-doesnt-work',
+      '../other',
+      '?view=all',
+      'https://example.test/page',
+      '//example.test/page',
+    ]) {
+      for (const fragment of [marked, encodeURIComponent(marked)]) {
+        const html = `<a href="${prefix}#${fragment}">Link</a>`;
+        expect(render(html)).toBe(html);
+      }
+    }
+  });
+
+  it('does not validate identifiers inside excluded samples', () => {
+    const marked = 'x\u{100061}\u{E0101}';
+    const html = `<pre><code id="${marked}" aria-describedby="${marked}"><a href="#${encodeURIComponent(marked)}">Sample</a></code></pre>`;
+    expect(render(html)).toBe(html);
+  });
+
   it('requires an actual enrollment element rather than a quoted flag in a code example', () => {
     const html = `<div class="textprov-controls" data-textprov-document="false"></div><code>data-textprov-document="true"</code><div class="sl-markdown-content">${ai('Example')}</div>`;
     expect(renderProvenance(html)).toBe(html);

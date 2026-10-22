@@ -4,8 +4,7 @@ description: "Every environment variable Onetime Secret supports, grouped by sub
 audience: operator
 pageType: reference
 sourceOfTruth: onetimesecret/.env.reference:1-2680 (the application's own complete environment-variable reference, which this page mirrors); onetimesecret/.env.reference:5-10 (that file — not .env.example — is the one documenting every supported variable, and it marks which values are derived from SECRET and which are independent)
-sidebar:
-  order: 4
+
 ---
 
 This guide documents every environment variable Onetime Secret supports.

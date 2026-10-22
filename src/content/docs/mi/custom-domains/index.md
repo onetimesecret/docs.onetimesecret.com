@@ -70,8 +70,8 @@ m󠄁e󠄁 [K󠄁e󠄁i hea ō raraunga e n󠄁o󠄁h󠄁o󠄁 a󠄁n󠄁a󠄁](
 ## Ō󠄁 k󠄁a󠄁w󠄁enga
 
 - K󠄁i󠄁a mau to󠄁n󠄁u󠄁 te rēhitatanga m󠄁e󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁o󠄁u󠄁 o󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 k󠄁i󠄁 t󠄁ō󠄁 k󠄁a󠄁i󠄁r󠄁ē󠄁h󠄁i󠄁t󠄁a󠄁.󠄁
-- K󠄁i󠄁a󠄁 m󠄁a󠄁u󠄁 t󠄁o󠄁n󠄁u󠄁 n󠄁g󠄁ā󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 D󠄁N󠄁S󠄁 e󠄁 r󠄁u󠄁a󠄁,󠄁 t󠄁a󠄁e󠄁 a󠄁t󠄁u󠄁 k󠄁i󠄁 t󠄁e󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 T󠄁X󠄁T󠄁 r󠄁a󠄁n󠄁g󠄁a󠄁t󠄁i󠄁r󠄁a󠄁t󠄁a󠄁n󠄁g󠄁a󠄁 i󠄁
-  m󠄁u󠄁r󠄁i󠄁 i󠄁 t󠄁e󠄁 m󠄁a󠄁n󠄁a󠄁t󠄁o󠄁k󠄁o󠄁.󠄁 K󠄁i󠄁 t󠄁e󠄁 t󠄁a󠄁n󠄁g󠄁o󠄁h󠄁i󠄁a󠄁,󠄁 k󠄁a󠄁 m󠄁u󠄁t󠄁u󠄁 t󠄁e󠄁 t󠄁u󠄁k󠄁u󠄁 o󠄁 t󠄁e󠄁 rohe.
+- K󠄁i󠄁a󠄁 m󠄁a󠄁u󠄁 t󠄁o󠄁n󠄁u󠄁 t󠄁e󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 r󠄁a󠄁n󠄁g󠄁a󠄁t󠄁i󠄁r󠄁a󠄁t󠄁a󠄁n󠄁g󠄁a󠄁 (󠄁T󠄁X󠄁T󠄁)󠄁 m󠄁e󠄁 t󠄁e󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 a󠄁r󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 (󠄁C󠄁N󠄁A󠄁M󠄁E󠄁,󠄁 A󠄁 r󠄁ā󠄁n󠄁e󠄁i󠄁)󠄁 o󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 i󠄁
+  m󠄁u󠄁r󠄁i󠄁 i󠄁 t󠄁e󠄁 m󠄁a󠄁n󠄁a󠄁t󠄁o󠄁k󠄁o󠄁.󠄁 K󠄁i󠄁 t󠄁e󠄁 t󠄁a󠄁n󠄁g󠄁o󠄁h󠄁i󠄁a󠄁 t󠄁e󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 T󠄁X󠄁T󠄁,󠄁 k󠄁a󠄁 m󠄁u󠄁t󠄁u󠄁 t󠄁e󠄁 t󠄁u󠄁k󠄁u󠄁 o󠄁 t󠄁e󠄁 rohe.
 - M󠄁ā󠄁 Onetime Secret e󠄁 t󠄁iki,󠄁 e󠄁 whakaho󠄁u󠄁 h󠄁o󠄁k󠄁i󠄁 t󠄁e󠄁 t󠄁i󠄁w󠄁h󠄁i󠄁k󠄁e󠄁t󠄁e󠄁 T󠄁L󠄁S󠄁 o󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁.󠄁 K󠄁ā󠄁o󠄁r󠄁e󠄁
   k󠄁o󠄁e󠄁 e󠄁 h󠄁i󠄁ah󠄁i󠄁a󠄁 k󠄁i󠄁 t󠄁e󠄁 t󠄁u󠄁k󠄁u󠄁 i󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁.󠄁
 

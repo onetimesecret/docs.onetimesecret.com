@@ -130,6 +130,42 @@ class CheckerTests(unittest.TestCase):
             self.assertIn("changed or lost an existing mark", self.messages(mark("old"), after))
         self.assertIn("marked unchanged legacy text", self.messages("old", mark("old")))
 
+    def test_single_character_coincidence_is_not_a_move(self):
+        self.assertEqual(self.messages("ay\nb\n", "a\nb" + mark("y") + "\n"), [])
+        # Legacy bytes that keep their encoding still match, rather than
+        # becoming new unmarked prose.
+        self.assertEqual(self.messages("ay\nb\n", "a\nby\n"), [])
+
+    def test_cumulative_check_matches_separately_checked_edits(self):
+        # Reported on pl/security/data-protection.md: one edit removed the
+        # legacy y from "życia" and a later one wrote "pomocy?" lines away.
+        # Each passed against its own base, but the cumulative check paired
+        # the two y clusters as moved text, which no edit sequence can satisfy.
+        def edit(source, old, new):
+            start = strip(source).index(old)
+            return dogfood.mark_edit(Path("a.md"), source, start, start + len(old), new, "ai")
+
+        base = "Czas życia sekretu.\n\n## Pytania lub potrzebujesz wsparcia?\n"
+        first = edit(base, "życia", "ważności")
+        second = edit(first, "wsparcia?", "pomocy?")
+        self.assertEqual(self.messages(base, first, ".md"), [])
+        self.assertEqual(self.messages(first, second, ".md"), [])
+        self.assertEqual(self.messages(base, second, ".md"), [])
+
+    def test_moved_and_unmoved_text_cannot_be_relabelled_or_lose_marks(self):
+        legacy, marked = "legacy paragraph", mark("marked paragraph")
+        self.assertIn("marked unchanged legacy text",
+                      self.messages(f"{legacy}\nmiddle\n", f"middle\n{mark(legacy)}\n"))
+        self.assertIn("marked unchanged legacy text", self.messages("a y b", "a " + mark("y") + " b"))
+        # Preserve-only checks allow new unmarked text but never lost marks.
+        for require_marks in (True, False):
+            for old, new in ((f"{marked}\nmiddle\n", f"middle\n{strip(marked)}\n"),
+                             ("a " + mark("y") + " b", "a y b")):
+                with self.subTest(require_marks=require_marks, old=ascii(old)):
+                    messages = [message for _, _, message in dogfood.check_text(
+                        Path("a.txt"), old, new, require_marks=require_marks)]
+                    self.assertIn("changed or lost an existing mark", messages)
+
     def test_inserted_duplicate_does_not_steal_existing_attribution(self):
         for original in ("same", mark("same", state="human")):
             self.assertEqual(self.messages(original, mark("same") + " " + original), [])
@@ -157,6 +193,170 @@ class CheckerTests(unittest.TestCase):
         before = mark(":::note") + "\n" + mark("Body.") + "\n" + mark(":::") + "\n"
         self.assertEqual(self.messages(before, ":::note\n" + mark("Body.") + "\n:::\n", ".md"), [])
         self.assertIn("changed or lost an existing mark", self.messages(before, ":::note\nBody.\n:::\n", ".md"))
+
+
+class CorrespondenceLimitTests(unittest.TestCase):
+    """Characterize the alignment tradeoffs tracked in docs/TEXTPROV.md.
+
+    These are not authorship guarantees. In particular, the cumulative and
+    single-cluster move cases intentionally record unresolved limitations.
+    """
+
+    def test_in_place_single_cluster_coincidence_is_still_aligned(self):
+        # All other letters change, but both primary matchers retain the a:
+        # raw alignment during authoring, visible alignment during checking.
+        before = "cat"
+        after = dogfood.mark_edit(
+            Path("a.txt"), before, 0, len(before), "bag", "ai"
+        )
+        self.assertEqual(after, mark("b") + "a" + mark("g"))
+        self.assertEqual(dogfood.check_text(Path("a.txt"), before, after), [])
+        self.assertEqual(
+            dogfood.check_text(Path("a.txt"), before, mark("bag")),
+            [(1, 2, "marked unchanged legacy text")],
+        )
+
+    def test_single_cluster_survivor_keeps_each_existing_encoding(self):
+        for survivor in (
+            "a",
+            mark("a"),
+            mark("a", state="human"),
+            mark("a", mode="pua"),
+        ):
+            with self.subTest(survivor=ascii(survivor)):
+                before = "c" + survivor + "t"
+                after = dogfood.mark_edit(
+                    Path("a.txt"), before, 0, 3, "bag", "ai"
+                )
+                self.assertEqual(after, mark("b") + survivor + mark("g"))
+                self.assertEqual(
+                    dogfood.check_text(Path("a.txt"), before, after), []
+                )
+                if survivor != "a":
+                    lost = mark("b") + "a" + mark("g")
+                    self.assertIn(
+                        (1, 2, "changed or lost an existing mark"),
+                        dogfood.check_text(
+                            Path("a.txt"), before, lost, require_marks=False
+                        ),
+                    )
+
+    def test_in_place_two_cluster_coincidence_can_also_remain_unmarked(self):
+        before = "axyc"
+        after = dogfood.mark_edit(
+            Path("a.txt"), before, 0, len(before), "bxyd", "ai"
+        )
+        self.assertEqual(after, mark("b") + "xy" + mark("d"))
+        self.assertEqual(dogfood.check_text(Path("a.txt"), before, after), [])
+
+    def test_single_cluster_move_can_hide_mark_loss_or_relabelling(self):
+        before = "a" + mark("y") + "\nmiddle\n"
+        lost = "a\nmiddley\n"
+        self.assertEqual(
+            dogfood.check_text(
+                Path("a.txt"), before, lost, require_marks=False
+            ),
+            [],
+        )
+        self.assertEqual(
+            dogfood.check_text(Path("a.txt"), before, lost),
+            [(2, 7, "new prose cluster has no supported origin mark")],
+        )
+        relabelled = "a\nmiddle" + mark("y", state="human") + "\n"
+        for require_marks in (True, False):
+            with self.subTest(require_marks=require_marks):
+                self.assertEqual(
+                    dogfood.check_text(
+                        Path("a.txt"),
+                        before,
+                        relabelled,
+                        require_marks=require_marks,
+                    ),
+                    [],
+                )
+
+    def test_two_cluster_move_checks_backfill_loss_and_relabelling(self):
+        for old, new, message in (
+            ("xy", mark("xy"), "marked unchanged legacy text"),
+            (mark("xy"), "xy", "changed or lost an existing mark"),
+            (
+                mark("xy", state="human"),
+                mark("xy"),
+                "changed or lost an existing mark",
+            ),
+        ):
+            for require_marks in (True, False):
+                with self.subTest(
+                    old=ascii(old), new=ascii(new), require_marks=require_marks
+                ):
+                    before, after = (
+                        "a" + old + "\nmiddle\n",
+                        "a\nmiddle" + new + "\n",
+                    )
+                    self.assertEqual(
+                        dogfood.check_text(
+                            Path("a.txt"),
+                            before,
+                            after,
+                            require_marks=require_marks,
+                        ),
+                        [(2, 7, message), (2, 8, message)],
+                    )
+        before = "a" + mark("xy", state="human") + "\nmiddle\n"
+        after = dogfood.mark_edit(
+            Path("a.txt"), before, 0, len(strip(before)), "a\nmiddlexy\n", "ai"
+        )
+        self.assertEqual(after, "a\nmiddle" + mark("xy", state="human") + "\n")
+        self.assertEqual(dogfood.check_text(Path("a.txt"), before, after), [])
+
+    def test_cumulative_two_cluster_coincidence_remains_ambiguous(self):
+        # Independent deletion and insertion look exactly like a two-cluster
+        # move in the cumulative diff. Raising the threshold hides real loss
+        # in test_two_cluster_move_checks_backfill_loss_and_relabelling.
+        base = "axy\nmiddle\n"
+        first = dogfood.mark_edit(Path("a.txt"), base, 1, 3, "", "ai")
+        second = dogfood.mark_edit(
+            Path("a.txt"), first, len(first) - 1, len(first) - 1, "xy", "ai"
+        )
+        self.assertEqual(second, "a\nmiddle" + mark("xy") + "\n")
+        self.assertEqual(dogfood.check_text(Path("a.txt"), base, first), [])
+        self.assertEqual(dogfood.check_text(Path("a.txt"), first, second), [])
+        self.assertEqual(
+            dogfood.check_text(Path("a.txt"), base, second),
+            [
+                (2, 7, "marked unchanged legacy text"),
+                (2, 8, "marked unchanged legacy text"),
+            ],
+        )
+
+    def test_bulgarian_status_keeps_the_legacy_single_cluster(self):
+        # Reduced bc5c9ae2 -> 76d8035a status edit, not a claim that the whole
+        # label was unmarked by 197f8796 (that commit changed adjacent prose).
+        before = mark("Актив") + "ен"
+        after = dogfood.mark_edit(
+            Path("a.txt"), before, 0, len(strip(before)), "Активна", "ai"
+        )
+        self.assertEqual(after, mark("Актив") + "н" + mark("а"))
+        self.assertEqual(dogfood.check_text(Path("a.txt"), before, after), [])
+        self.assertEqual(
+            dogfood.check_text(Path("a.txt"), before, mark("Активна")),
+            [(1, 6, "marked unchanged legacy text")],
+        )
+
+    def test_spanish_value_keeps_the_coincidental_legacy_r(self):
+        # Reduced a88e666c exception: the r in valor pairs with secreto.
+        before = "secreto"
+        after = dogfood.mark_edit(
+            Path("a.txt"), before, 0, len(before), "valor SECRET", "ai"
+        )
+        self.assertEqual(after, mark("valo") + "r " + mark("SECRET"))
+        self.assertEqual(dogfood.check_text(Path("a.txt"), before, after), [])
+        self.assertEqual(
+            dogfood.check_text(
+                Path("a.txt"), before, mark("valor") + " " + mark("SECRET")
+            ),
+            [(1, 5, "marked unchanged legacy text")],
+        )
 
 
 class RepositoryTests(unittest.TestCase):

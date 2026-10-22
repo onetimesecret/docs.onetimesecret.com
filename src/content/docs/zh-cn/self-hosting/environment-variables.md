@@ -1,8 +1,7 @@
 ---
 title: 环境变量参考
 description: Onetime Secret 环境变量的参考
-sidebar:
-  order: 5
+
 ---
 
 本指南涵盖了 Onetime Secret v0.22.4+ 中可用的所有环境变量。

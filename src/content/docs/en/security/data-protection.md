@@ -1,4 +1,5 @@
 ---
+textprov: true
 title: Data Protection
 description: What Onetime Secret stores, how long it's kept, where it's processed, and how this supports your compliance obligations.
 audience: end-user
@@ -51,7 +52,7 @@ replace your own controls, policies, and legal review.
   certifications, a Data Processing Agreement, or a specific regulatory
   framework, contact **support@onetimesecret.com**.
 
-For organizations with strict data-control requirements, [self-hosting](https://github.com/onetimesecret/onetimesecret)
+For organizations with strict data-control requirements, [self-hosting](/en/self-hosting/)
 keeps everything within your own infrastructure.
 
 ## Questions or need support?

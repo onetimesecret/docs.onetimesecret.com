@@ -61,7 +61,7 @@ remplace pas vos propres contrôles, politiques et examens juridiques.
   **support@onetimesecret.com**.
 
 Pour les organisations ayant des exigences strictes en matière de contrôle des
-données, l'[auto-hébergement](https://github.com/onetimesecret/onetimesecret)
+données, l'[auto-hébergement](/fr/self-hosting/)
 garde tout au sein de votre propre infrastructure.
 
 ## Des questions ou besoin d'aide ?
