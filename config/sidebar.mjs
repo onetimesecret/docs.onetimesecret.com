@@ -239,6 +239,9 @@ export const sidebar = [
   // in the same directory as reachable, so a new release guide needs a row in
   // that table and nothing here. The named IdP recipes use the same pattern:
   // configure/sso/index links its siblings without adding sidebar entries.
+  //
+  // The configure/* entries follow their prerequisites: keys, outbound email
+  // and session cookies come before the sign-in pages that depend on them.
   createGroup("selfHosting", [
     createLink("aboutSelfHosting", "self-hosting"),
     createLink("authModeChoice", "self-hosting/simple-or-full-auth"),
@@ -250,12 +253,12 @@ export const sidebar = [
     createLink("verifyYourInstall", "install/verify"),
     createLink("configurationOverview", "configure"),
     createLink("configureSecretsAndKeys", "configure/secrets-and-keys"),
+    createLink("configureEmail", "configure/email"),
+    createLink("configureSessions", "configure/sessions-and-cookies"),
     createLink("configureAuthentication", "configure/authentication"),
     createLink("configureSso", "configure/sso"),
-    createLink("configureEmail", "configure/email"),
-    createLink("configureSecretOptions", "configure/secret-options"),
-    createLink("configureSessions", "configure/sessions-and-cookies"),
     createLink("configureSecurityHeaders", "configure/security-headers"),
+    createLink("configureSecretOptions", "configure/secret-options"),
     createLink("configurationReference", "self-hosting/configuration"),
     createLink("configurationGenerator", "self-hosting/configuration-generator"),
     createLink("environmentVariables", "self-hosting/environment-variables"),
