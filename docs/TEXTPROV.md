@@ -130,10 +130,18 @@ integration produces AI marks only, using U+E0101 after a whole grapheme cluster
 The JS library also decodes its limited legacy replacement-PUA form. Other
 Unicode variation selectors are left alone.
 
-A decoded heading ID that matches an existing ID on the same page gets a numeric
-suffix, and the build prints a warning naming the page. Links on that page are
-remapped, but links from other pages to the unsuffixed fragment reach the
-existing heading, so check them when the warning appears.
+Heading IDs, local fragment links (`href="#…"`), and ID-reference attributes
+such as `aria-describedby` are cleaned together. Their non-displayed identifiers
+lose every U+E0101, including after CJK ideographs where it can be a genuine IVS;
+this extra normalization is not applied to displayed prose. URLs with a path,
+query, or origin are left unchanged, including their fragments.
+
+A decoded heading ID that matches another element's ID on the same page fails
+the build, naming the page. No numeric suffix or warning is produced: rename one
+of the headings so links from other pages cannot silently reach the wrong
+heading. An identifier that still contains a marker after cleaning, or a
+non-empty identifier that becomes empty, also fails. Local fragment targets are
+validated before percent-encoding.
 
 ## Maintenance
 
