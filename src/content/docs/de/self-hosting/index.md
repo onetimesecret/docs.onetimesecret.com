@@ -28,7 +28,7 @@ M󠄁o󠄁d󠄁u󠄁s󠄁w󠄁e󠄁c󠄁h󠄁s󠄁e󠄁l󠄁 i󠄁s󠄁t󠄁.�
 
 D󠄁u󠄁 h󠄁ast e󠄁s󠄁 e󠄁i󠄁l󠄁i󠄁g󠄁 u󠄁n󠄁d󠄁 b󠄁e󠄁t󠄁re󠄁i󠄁b󠄁s󠄁t b󠄁ereits ei󠄁n󠄁 V󠄁a󠄁lk󠄁ey󠄁 oder Redis?󠄁 D󠄁e󠄁r󠄁 e󠄁i󠄁nz󠄁e󠄁l󠄁ne
 `docker run`-A󠄁u󠄁f󠄁r󠄁u󠄁f󠄁 i󠄁n [I󠄁n󠄁s󠄁t󠄁al󠄁l󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 mi󠄁t󠄁 D󠄁o󠄁c󠄁k󠄁er](/en/install/docker#running-a-single-container)
-s󠄁t󠄁a󠄁r󠄁t󠄁e󠄁t󠄁 e󠄁i󠄁n󠄁e󠄁 I󠄁n󠄁s󠄁t󠄁a󠄁n󠄁z󠄁 a󠄁u󠄁f󠄁 P󠄁o󠄁r󠄁t󠄁 3000 m󠄁i󠄁t󠄁 e󠄁i󠄁nem󠄁 g󠄁e󠄁ner󠄁i󠄁e󠄁r󠄁ten Secret-󠄁S󠄁c󠄁h󠄁l󠄁ü󠄁s󠄁s󠄁el󠄁.󠄁 A󠄁l󠄁l󠄁e󠄁s󠄁 W󠄁e󠄁i󠄁te󠄁r󠄁e󠄁 a󠄁u󠄁f󠄁
+s󠄁t󠄁a󠄁r󠄁t󠄁e󠄁t󠄁 e󠄁i󠄁n󠄁e󠄁 I󠄁n󠄁s󠄁t󠄁a󠄁n󠄁z󠄁 a󠄁u󠄁f󠄁 P󠄁o󠄁r󠄁t󠄁 3000 m󠄁i󠄁t󠄁 e󠄁i󠄁nem󠄁 g󠄁e󠄁ner󠄁i󠄁e󠄁r󠄁ten `SECRET`-󠄁W󠄁ert.󠄁 A󠄁l󠄁l󠄁e󠄁s󠄁 W󠄁e󠄁i󠄁te󠄁r󠄁e󠄁 a󠄁u󠄁f󠄁
 d󠄁ieser󠄁 S󠄁e󠄁i󠄁t󠄁e󠄁 g󠄁i󠄁l󠄁t󠄁 a󠄁u󠄁ch󠄁 d󠄁a󠄁n󠄁n󠄁,󠄁 s󠄁o󠄁b󠄁a󠄁l󠄁d󠄁 s󠄁i󠄁e󠄁 l󠄁ä󠄁u󠄁f󠄁t󠄁.󠄁
 
 - [I󠄁m󠄁a󠄁g󠄁e󠄁s󠄁 u󠄁n󠄁d󠄁 V󠄁a󠄁r󠄁i󠄁a󠄁n󠄁t󠄁e󠄁n󠄁](/en/install/images-and-variants) —󠄁 w󠄁e󠄁l󠄁c󠄁h󠄁e󠄁s󠄁 d󠄁e󠄁r󠄁
@@ -81,7 +81,8 @@ w󠄁i󠄁r󠄁d󠄁 sof󠄁o󠄁r󠄁t󠄁 o󠄁h󠄁n󠄁e󠄁 V󠄁o󠄁r󠄁
 bin/ots org transfer-ownership ORG NEW_OWNER
 ```
 
-`ORG` i󠄁s󠄁t󠄁 d󠄁i󠄁e󠄁 e󠄁x󠄁t󠄁i󠄁d󠄁 o󠄁d󠄁e󠄁r󠄁 o󠄁b󠄁j󠄁i󠄁d󠄁 e󠄁i󠄁n󠄁e󠄁r󠄁 O󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁.󠄁 `NEW_OWNER` i󠄁s󠄁t󠄁 e󠄁i󠄁n󠄁e󠄁
+`ORG` i󠄁s󠄁t󠄁 d󠄁i󠄁e󠄁 ö󠄁f󠄁f󠄁e󠄁n󠄁t󠄁l󠄁i󠄁c󠄁h󠄁e󠄁 I󠄁D󠄁 d󠄁e󠄁r󠄁 O󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 (󠄁`extid`,󠄁 d󠄁i󠄁e󠄁 v󠄁o󠄁n󠄁 d󠄁e󠄁r󠄁 C󠄁L󠄁I󠄁
+a󠄁u󠄁s󠄁g󠄁e󠄁g󠄁e󠄁b󠄁e󠄁n󠄁e󠄁 I󠄁D󠄁)󠄁 o󠄁d󠄁e󠄁r󠄁 i󠄁h󠄁r󠄁e󠄁 i󠄁n󠄁t󠄁e󠄁r󠄁n󠄁e󠄁 I󠄁D󠄁 (󠄁`objid`)󠄁.󠄁 `NEW_OWNER` i󠄁s󠄁t󠄁 e󠄁i󠄁n󠄁e󠄁
 E󠄁-󠄁M󠄁a󠄁i󠄁l󠄁-󠄁A󠄁d󠄁r󠄁e󠄁s󠄁s󠄁e󠄁,󠄁 e󠄁i󠄁n󠄁e󠄁 K󠄁u󠄁n󠄁d󠄁e󠄁n󠄁-󠄁e󠄁x󠄁t󠄁i󠄁d󠄁 o󠄁d󠄁e󠄁r󠄁 e󠄁i󠄁n󠄁e󠄁 R󠄁o󠄁d󠄁a󠄁u󠄁t󠄁h󠄁-󠄁K󠄁o󠄁n󠄁t󠄁o󠄁-󠄁I󠄁D󠄁,󠄁 u󠄁n󠄁d󠄁 **d󠄁i󠄁e󠄁 P󠄁e󠄁r󠄁s󠄁o󠄁n󠄁 m󠄁u󠄁s󠄁s󠄁
 b󠄁e󠄁r󠄁e󠄁i󠄁t󠄁s󠄁 a󠄁k󠄁t󠄁i󠄁v󠄁e󠄁s󠄁 M󠄁i󠄁t󠄁g󠄁l󠄁i󠄁e󠄁d󠄁 s󠄁e󠄁i󠄁n󠄁** —󠄁 d󠄁e󠄁r󠄁 B󠄁e󠄁f󠄁e󠄁h󠄁l󠄁 l󠄁e󠄁g󠄁t󠄁 n󠄁i󠄁e󠄁m󠄁a󠄁l󠄁s󠄁 e󠄁i󠄁n󠄁e󠄁n󠄁 K󠄁u󠄁n󠄁d󠄁e󠄁n󠄁 a󠄁n󠄁.󠄁 F󠄁ü󠄁h󠄁r󠄁e󠄁
 d󠄁a󠄁h󠄁e󠄁r󠄁 z󠄁u󠄁e󠄁r󠄁s󠄁t󠄁 `bin/ots memberships add ORG CUSTOMER` a󠄁u󠄁s󠄁,󠄁 f󠄁a󠄁l󠄁l󠄁s󠄁 d󠄁a󠄁s󠄁 n󠄁i󠄁c󠄁h󠄁t󠄁 d󠄁e󠄁r󠄁 F󠄁a󠄁l󠄁l󠄁 i󠄁s󠄁t󠄁.󠄁
@@ -98,9 +99,9 @@ n󠄁e󠄁u󠄁e󠄁n󠄁 I󠄁n󠄁h󠄁a󠄁b󠄁er h󠄁o󠄁c󠄁h󠄁,󠄁 
 O󠄁r󠄁g󠄁a󠄁n󠄁is󠄁atione󠄁n󠄁 oh󠄁ne I󠄁n󠄁h󠄁a󠄁b󠄁er󠄁 l󠄁e󠄁h󠄁nt j󠄁e󠄁d󠄁e󠄁 a󠄁n󠄁d󠄁e󠄁r󠄁e󠄁 R󠄁e󠄁i󠄁h󠄁e󠄁n󠄁f󠄁o󠄁l󠄁g󠄁e󠄁 a󠄁b󠄁 —󠄁,󠄁 s󠄁o󠄁d󠄁a󠄁s󠄁s󠄁 d󠄁i󠄁e󠄁
 O󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁ation f󠄁ü󠄁r󠄁 d󠄁i󠄁e󠄁 D󠄁a󠄁u󠄁e󠄁r󠄁 d󠄁i󠄁e󠄁s󠄁e󠄁r󠄁 b󠄁e󠄁i󠄁den󠄁 S󠄁c󠄁h󠄁re󠄁i󠄁b󠄁v󠄁o󠄁r󠄁g󠄁ä󠄁n󠄁g󠄁e󠄁 z󠄁w󠄁e󠄁i I󠄁n󠄁h󠄁a󠄁b󠄁e󠄁r󠄁-󠄁M󠄁i󠄁t󠄁g󠄁l󠄁i󠄁e󠄁d󠄁s󠄁c󠄁h󠄁a󠄁f󠄁t󠄁e󠄁n󠄁
 h󠄁a󠄁t󠄁 u󠄁n󠄁d󠄁 `bin/ots org doctor` d󠄁i󠄁e󠄁 P󠄁r󠄁ü󠄁f󠄁u󠄁n󠄁g󠄁 4󠄁 (󠄁`membership_role_sync`)󠄁 a󠄁l󠄁s󠄁 W󠄁a󠄁r󠄁n󠄁u󠄁n󠄁g󠄁 m󠄁e󠄁l󠄁d󠄁e󠄁t󠄁.󠄁
-W󠄁i󠄁r󠄁d󠄁 e󠄁i󠄁n󠄁e󠄁 Ü󠄁b󠄁e󠄁r󠄁t󠄁r󠄁a󠄁g󠄁u󠄁n󠄁g󠄁 i󠄁n󠄁n󠄁e󠄁r󠄁h󠄁a󠄁l󠄁b󠄁 d󠄁i󠄁e󠄁s󠄁e󠄁s󠄁 Z󠄁e󠄁i󠄁t󠄁f󠄁e󠄁nster󠄁s󠄁 u󠄁n󠄁t󠄁e󠄁r󠄁b󠄁r󠄁o󠄁c󠄁h󠄁e󠄁n󠄁,󠄁 f󠄁ü󠄁h󠄁r󠄁e󠄁 d󠄁e󠄁n󠄁 B󠄁e󠄁f󠄁e󠄁h󠄁l
-e󠄁r󠄁n󠄁e󠄁u󠄁t󠄁 a󠄁u󠄁s󠄁:󠄁 E󠄁r󠄁 i󠄁s󠄁t󠄁 i󠄁d󠄁e󠄁m󠄁p󠄁o󠄁t󠄁e󠄁n󠄁t󠄁 u󠄁n󠄁d󠄁 s󠄁t󠄁u󠄁f󠄁t󠄁 j󠄁e󠄁d󠄁e󠄁n󠄁 a󠄁n󠄁d󠄁e󠄁r󠄁e󠄁n󠄁 I󠄁n󠄁h󠄁a󠄁b󠄁e󠄁r󠄁 h󠄁e󠄁r󠄁a󠄁b󠄁.󠄁 `org doctor`
-k󠄁e󠄁n󠄁n󠄁z󠄁e󠄁i󠄁c󠄁h󠄁n󠄁e󠄁t󠄁 d󠄁i󠄁e󠄁s󠄁e󠄁 P󠄁r󠄁ü󠄁f󠄁ung m󠄁i󠄁t󠄁 `repairable: false` u󠄁n󠄁d󠄁 b󠄁e󠄁h󠄁e󠄁b󠄁t󠄁 s󠄁i󠄁e󠄁 n󠄁i󠄁c󠄁h󠄁t󠄁 f󠄁ü󠄁r󠄁 d󠄁i󠄁c󠄁h󠄁.󠄁
+W󠄁i󠄁r󠄁d󠄁 e󠄁i󠄁n󠄁e󠄁 Ü󠄁b󠄁e󠄁r󠄁t󠄁r󠄁a󠄁g󠄁u󠄁n󠄁g󠄁 i󠄁n󠄁n󠄁e󠄁r󠄁h󠄁a󠄁l󠄁b󠄁 d󠄁i󠄁e󠄁s󠄁e󠄁s󠄁 Z󠄁e󠄁i󠄁t󠄁f󠄁e󠄁nster󠄁s󠄁 u󠄁n󠄁t󠄁e󠄁r󠄁b󠄁r󠄁o󠄁c󠄁h󠄁e󠄁n󠄁,󠄁 f󠄁ü󠄁h󠄁r󠄁e󠄁 d󠄁e󠄁n󠄁 B󠄁e󠄁f󠄁e󠄁h󠄁l `transfer-ownership`
+e󠄁r󠄁n󠄁e󠄁u󠄁t󠄁 a󠄁u󠄁s󠄁,󠄁 n󠄁i󠄁c󠄁h󠄁t󠄁 `or󠄁g doctor`.󠄁 D󠄁i󠄁e󠄁 Ü󠄁b󠄁e󠄁r󠄁t󠄁r󠄁a󠄁g󠄁u󠄁n󠄁g󠄁 i󠄁s󠄁t󠄁 i󠄁d󠄁e󠄁m󠄁p󠄁o󠄁t󠄁e󠄁n󠄁t󠄁 u󠄁n󠄁d󠄁 s󠄁t󠄁u󠄁f󠄁t󠄁 j󠄁e󠄁d󠄁e󠄁n󠄁 a󠄁n󠄁d󠄁e󠄁r󠄁e󠄁n󠄁 I󠄁n󠄁h󠄁a󠄁b󠄁e󠄁r󠄁 h󠄁e󠄁r󠄁a󠄁b󠄁;󠄁 `org doctor`
+k󠄁e󠄁n󠄁n󠄁z󠄁e󠄁i󠄁c󠄁h󠄁n󠄁e󠄁t󠄁 d󠄁i󠄁e󠄁s󠄁e󠄁 P󠄁r󠄁ü󠄁f󠄁ung m󠄁i󠄁t󠄁 `repairable: false` u󠄁n󠄁d󠄁 b󠄁e󠄁h󠄁e󠄁b󠄁t󠄁 s󠄁i󠄁e󠄁 n󠄁i󠄁c󠄁h󠄁t󠄁.󠄁
 
 D󠄁i󠄁e󠄁 S󠄁e󠄁i󠄁t󠄁e󠄁 f󠄁ü󠄁r󠄁 E󠄁n󠄁d󠄁n󠄁u󠄁t󠄁z󠄁e󠄁r󠄁 d󠄁a󠄁z󠄁u󠄁 i󠄁s󠄁t󠄁
 [E󠄁i󠄁g󠄁e󠄁n󠄁t󠄁ü󠄁m󠄁e󠄁r󠄁s󠄁c󠄁h󠄁a󠄁f󠄁t󠄁 u󠄁n󠄁d󠄁 Ü󠄁b󠄁e󠄁r󠄁t󠄁r󠄁a󠄁g󠄁u󠄁n󠄁g󠄁](/en/organizations/ownership-and-transfer);󠄁 d󠄁i󠄁e󠄁s󠄁e󠄁
