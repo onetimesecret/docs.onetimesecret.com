@@ -1,8 +1,7 @@
 ---
 title: Ortam Değişkenleri Referansı
 description: Onetime Secret ortam değişkenleri için referans
-sidebar:
-  order: 5
+
 ---
 
 Bu kılavuz, Onetime Secret v0.22.4+ sürümünde mevcut tüm ortam değişkenlerini kapsar.

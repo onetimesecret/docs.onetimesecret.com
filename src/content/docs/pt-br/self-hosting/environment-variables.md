@@ -1,8 +1,7 @@
 ---
 title: Variáveis de Ambiente
 description: Referência de variáveis de ambiente para configuração do Onetime Secret
-sidebar:
-  order: 5
+
 ---
 
 # Variáveis de Ambiente
