@@ -173,8 +173,8 @@ legacy paragraphs or infer the origin of existing text. Do not label copied
 human text as AI: leave it unchanged or request a human contribution.
 
 Frontmatter, code, inline code, link destinations, HTML syntax, Markdoc tags and
-attributes, generated references, and source-code files are outside marking
-scope. The tool enrolls edited pages with `textprov: true`. Never remove existing
+attributes, aside fences (`:::note`), generated references, and source-code
+files are outside marking scope. The tool enrolls edited pages with `textprov: true`. Never remove existing
 marks, mark syntax, or strip a whole source file. Unicode variation selectors
 also have real language uses: do not apply the decoder to arbitrary content.
 

@@ -47,7 +47,8 @@ pnpm build
 ```
 
 Only new prose in src/content/docs/**/*.md and .mdoc is marked. Frontmatter,
-code, URLs, syntax, HTML tags, Markdoc directives/attributes, and the generated
+code, URLs, syntax, HTML tags, Markdoc directives/attributes, aside fences
+(`:::note`, `:::caution[...]`; the label text is prose), and the generated
 environment reference are excluded. Source-code comments and strings are excluded.
 Human contributors edit normally and preserve existing marks. For a combined diff
 containing human edits, run check with --preserve-only; it permits new unmarked

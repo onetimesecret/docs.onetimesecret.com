@@ -8,7 +8,8 @@ The copied runtime and producer files are unchanged. Apache-2.0: see LICENSE.
 `tools/dogfood.py`, `tools/markdown-prose.mjs`, and the original 24 authoring tests
 are adapted from TextProv snapshot `532a8778737c4cbc639c5a4ff79aff5f7487b7d5` (forward-only integration, now
 removed upstream). Local changes use the current segmentation API, protect
-Markdoc directives, enroll docs in rendering, and support preservation-only CI.
+Markdoc directives and Starlight aside fences, enroll docs in rendering, and
+support preservation-only CI.
 This integration records AI edits only. It does not assign human declarations.
 
 The baseline decoder is experimental. Marker values overlap Unicode variation

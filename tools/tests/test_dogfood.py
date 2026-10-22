@@ -86,6 +86,15 @@ class AuthoringTests(unittest.TestCase):
         self.assertIn(mark('Cell'), result)
         self.assertEqual(dogfood.check_text(Path("a.md"), "", result), [])
 
+    def test_aside_fences_are_syntax_but_labels_are_prose(self):
+        source = ":::note\nBody text.\n:::\n\n:::caution[Read this]{.wide}\nMore.\n::::\n"
+        result = self.edit("", source, ".md")
+        self.assertEqual(strip(result), source)
+        self.assertTrue(result.startswith(":::note\n" + mark("Body") + " " + mark("text.") + "\n:::\n"))
+        self.assertIn(":::caution[" + mark("Read") + " " + mark("this") + "]{.wide}\n", result)
+        self.assertTrue(result.endswith(mark("More.") + "\n::::\n"))
+        self.assertEqual(dogfood.check_text(Path("a.md"), "", result), [])
+
     def test_existing_marks_outside_edit_are_byte_preserved(self):
         source = mark("Hello", state="human") + " world"
         result = dogfood.mark_edit(Path("a.txt"), source, 6, 11, "earth", "ai")
@@ -137,6 +146,17 @@ class CheckerTests(unittest.TestCase):
 
     def test_new_marks_cannot_corrupt_markdown_delimiters(self):
         self.assertTrue(self.messages("", mark("# Heading"), ".md"))
+
+    def test_new_marks_inside_aside_fences_fail(self):
+        body = "\n" + mark("Body.") + "\n"
+        self.assertTrue(self.messages("", mark(":::note") + body + mark(":::") + "\n", ".md"))
+        self.assertTrue(self.messages("", ":::" + mark("note") + body + ":::\n", ".md"))
+        self.assertTrue(self.messages("", ":::tip" + mark("[") + "Label]" + body + ":::\n", ".md"))
+
+    def test_removing_marks_from_an_aside_fence_repairs_it(self):
+        before = mark(":::note") + "\n" + mark("Body.") + "\n" + mark(":::") + "\n"
+        self.assertEqual(self.messages(before, ":::note\n" + mark("Body.") + "\n:::\n", ".md"), [])
+        self.assertIn("changed or lost an existing mark", self.messages(before, ":::note\nBody.\n:::\n", ".md"))
 
 
 class RepositoryTests(unittest.TestCase):

@@ -187,7 +187,9 @@ def check_text(path, before, after, require_marks=True):
         message = None
         if index in matches:
             original = old[matches[index]]
-            if original.raw != item.raw:
+            # Removing a mark from syntax (an aside fence, say) repairs it.
+            repaired = original.state and item.state is None and not eligible(item, offsets)
+            if original.raw != item.raw and not repaired:
                 message = "changed or lost an existing mark" if original.state else "marked unchanged legacy text"
         elif eligible(item, offsets):
             if item.state not in textprov.GENERATED_STATES:
