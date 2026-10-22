@@ -6,11 +6,17 @@ export const onRequest = defineMiddleware(async (context, next) => {
   if (!response.headers.get('content-type')?.includes('text/html')) return response;
   // Starlight clears its route locals after next() returns. The component emits
   // an explicit enrollment flag while those locals are available.
-  const source = await response.clone().text();
-  if (!source.includes('data-textprov-document="true"')) return response;
-  const html = renderProvenance(source, { requireEnrollment: true, label: context.url.pathname });
+  // The body is read once and a response rebuilt either way. Cloning kept the
+  // original object for unenrolled pages, but at the cost of buffering every
+  // page twice, and nothing downstream needs that object back.
+  const source = await response.text();
+  const enrolled = source.includes('data-textprov-document="true"');
   const headers = new Headers(response.headers);
-  headers.delete('content-length');
-  headers.delete('etag');
+  if (enrolled) {
+    // Decoding changes the length and the content; drop the stale validators.
+    headers.delete('content-length');
+    headers.delete('etag');
+  }
+  const html = enrolled ? renderProvenance(source, { requireEnrollment: true, label: context.url.pathname }) : source;
   return new Response(html, { status: response.status, statusText: response.statusText, headers });
 });

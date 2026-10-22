@@ -15,14 +15,14 @@
 </script>
 
 <script>
+  // Runs once per full page load. The site has no ClientRouter, so there is no
+  // astro:page-load to listen for. If view transitions arrive, listen for that
+  // event instead of calling this at load: it fires on the first load as well,
+  // so doing both would initialise the toggle twice.
   import { initTextProv } from '../../lib/textprov/display';
-  function init() {
-    let storage: Storage | undefined;
-    try { storage = window.localStorage; } catch { /* Private browsing may deny storage. */ }
-    initTextProv(document, storage);
-  }
-  init();
-  document.addEventListener('astro:page-load', init);
+  let storage: Storage | undefined;
+  try { storage = window.localStorage; } catch { /* Private browsing may deny storage. */ }
+  initTextProv(document, storage);
 </script>
 
 <style is:global>

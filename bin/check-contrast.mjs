@@ -20,6 +20,7 @@ import { readFileSync } from "node:fs";
 import {
   AA_MINIMUM,
   OVERRIDES_CSS,
+  baseVersionDrift,
   contrastRatio,
   mixOver,
   parseColor,
@@ -236,6 +237,21 @@ function checkRepaintedSurfaces(css) {
     }
   }
   return problems;
+}
+
+// The pinned Starlight base greys are only as good as the versions they were
+// read from; measuring against stale ones would be a false green.
+const drift = baseVersionDrift();
+if (drift.length > 0) {
+  console.error("STARLIGHT_BASE in bin/lib/contrast.mjs was verified against different dependency versions:\n");
+  for (const { name, verified, installed } of drift) {
+    console.error(`  ${name}: verified at ${verified}, installed ${installed}`);
+  }
+  console.error(
+    "\nBuild the site, re-read the base greys off a page in both themes, correct any that moved,\n" +
+      "then update BASE_VERIFIED_AGAINST in bin/lib/contrast.mjs."
+  );
+  process.exit(1);
 }
 
 const failures = [];

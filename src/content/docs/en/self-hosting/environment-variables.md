@@ -3,7 +3,7 @@ title: Environment Variables Reference
 description: "Every environment variable Onetime Secret supports, grouped by subsystem: secrets, connections, authentication, SSO, proxy and client IP, jobs, branding, and diagnostics."
 audience: operator
 pageType: reference
-sourceOfTruth: onetimesecret/.env.reference:1-2674 (the application's own complete environment-variable reference, which this page mirrors); onetimesecret/.env.reference:5-10 (that file — not .env.example — is the one documenting every supported variable, and it marks which values are derived from SECRET and which are independent)
+sourceOfTruth: onetimesecret/.env.reference:1-2680 (the application's own complete environment-variable reference, which this page mirrors); onetimesecret/.env.reference:5-10 (that file — not .env.example — is the one documenting every supported variable, and it marks which values are derived from SECRET and which are independent)
 sidebar:
   order: 4
 ---
@@ -771,6 +771,12 @@ ORGS_CUSTOM_MAIL_ENABLED=false  # Since v0.25.0
 # to configure incoming secret receiving for their custom domains. Secrets
 # sent to the domain are routed to the organization's inbox.
 ORGS_INCOMING_SECRETS_ENABLED=false  # Since v0.25.0
+
+# When enabled, allows organizations with the base_domain_signup entitlement
+# to admit their custom domain's own base domain to its sign-up allowlist
+# automatically (secrets.acme.com admits @acme.com). Checked at sign-up too,
+# so turning it off stops a saved setting from admitting anyone.
+ORGS_BASE_DOMAIN_SIGNUP_ENABLED=false  # Since unreleased
 
 # When enabled (the default), organizations with the audit_logs entitlement
 # can view their secret activity trail (UI + list API). Unlike the flags

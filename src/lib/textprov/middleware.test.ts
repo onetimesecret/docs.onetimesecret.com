@@ -21,9 +21,12 @@ describe('TextProv middleware', () => {
     expect(result.same).toBe(true);
   });
 
-  it('passes unenrolled pages through untouched', async () => {
-    const result = await run(enrolled.replace('"true"', '"false"'));
-    expect(result.same).toBe(true);
+  it('passes unenrolled pages through with body and headers intact', async () => {
+    const body = enrolled.replace('"true"', '"false"');
+    const result = await run(body);
+    expect(result.text).toBe(body);
+    expect(result.headers.get('content-length')).toBe('1');
+    expect(result.headers.get('etag')).toBe('"x"');
   });
 
   it('decodes enrolled pages and drops stale length and validator headers', async () => {

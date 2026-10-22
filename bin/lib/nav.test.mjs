@@ -97,6 +97,12 @@ describe("fileSlug", () => {
     expect(fileSlug("a/b/index.mdx", DOC_EXT)).toBe("a/b");
   });
 
+  it("normalises Windows separators before collapsing", () => {
+    // path.relative() yields backslashes on Windows; a slug always uses "/".
+    expect(fileSlug("regions\\index.mdoc", DOC_EXT)).toBe("regions");
+    expect(fileSlug("a\\b\\page.md", DOC_EXT)).toBe("a/b/page");
+  });
+
   it("strips the extension from a non-index page", () => {
     expect(fileSlug("pricing.md", DOC_EXT)).toBe("pricing");
     expect(fileSlug("a/b/index-of-things.markdown", DOC_EXT)).toBe("a/b/index-of-things");

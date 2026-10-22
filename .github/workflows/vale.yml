@@ -31,14 +31,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-      - uses: pnpm/action-setup@v6
+      - uses: pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86 # v6.0.10
         with:
           version: 12.14.0
           run_install: false
 
-      - uses: actions/setup-node@v7
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: 24.22.0
           cache: pnpm
@@ -49,7 +49,7 @@ jobs:
         run: node bin/prepare-vale.mjs
 
       - name: Run Vale
-        uses: errata-ai/vale-action@v3
+        uses: errata-ai/vale-action@518a9136acc6e6668ce7c00d367051e0941e87ff # v3.0.0
         # Report-only (see header): findings must not fail the job, and neither
         # should reviewdog infrastructure errors — on PRs touching >300 files
         # GitHub's diff API refuses to serve the diff and reviewdog exits 1
