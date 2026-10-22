@@ -85,13 +85,16 @@ def main(argv=None):
     if subprocess.run(["git", "-C", str(root), "rev-parse", "--verify", "--quiet", f"{args.base}^{{commit}}"],
                       capture_output=True).returncode:
         parser().error(f"BASE {args.base!r} is not a commit")
-    total, unsettled = 0, []
+    # Resolve every FILE before writing any, so a bad one cannot stop a run halfway.
+    targets = []
     for name in args.files:
         path = Path(name).resolve()
         try:
-            relative = path.relative_to(root).as_posix()
+            targets.append((name, path, path.relative_to(root).as_posix()))
         except ValueError:
             parser().error(f"{name} is outside the repository {root}")
+    total, unsettled = 0, []
+    for name, path, relative in targets:
         shown = subprocess.run(["git", "-C", str(root), "show", f"{args.base}:{relative}"], capture_output=True)
         if shown.returncode:
             print(f"skip (new file) {name}")
@@ -101,7 +104,7 @@ def main(argv=None):
         result, changed, converged = reanchor(path, before, after, args.strict)
         if not converged:
             unsettled.append(name)
-            print(f"warning: {name} still changed on pass {MAX_PASSES}; not written", file=sys.stderr)
+            print(f"warning: {name} still changed on pass {MAX_PASSES}; left as it was", file=sys.stderr)
             continue
         left = dogfood.check_text(path, before, result, require_marks=args.strict)
         total += changed
