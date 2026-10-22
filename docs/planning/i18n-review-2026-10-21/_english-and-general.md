@@ -536,10 +536,13 @@ human look:
 - zh-cn: 内容 (Tier 1) for secret in labels; 控制面板 per the app where the
   glossary says 仪表板; half-width «单点登录 (SSO)».
 
-PR #468 follow-up: `notFound.createTitle` in uk, tr, da, zh-cn and mi now uses
-the bundle's sidebar term for secret. `check:locales` warns when a bundle lacks
-a key in `en.json`, and `check:nav` fails on identical labels in one translated
-menu.
+PR #468 follow-up: the 404 redesign (a679388c) stopped rendering eight
+`notFound.*` keys (`lookingFor`, `browseDocs`, `docsTitle`, `docsDesc`,
+`createTitle`, `createDesc`, `supportTitle`, `supportDesc`). They were removed
+from all 17 bundles and the i18n schema, which also settles the review note
+about `createTitle` using a different word for secret than the sidebar.
+`check:locales` warns when a bundle lacks a key in `en.json`, and `check:nav`
+fails on identical labels in one translated menu.
 
 ## 6. Withdrawn
 
