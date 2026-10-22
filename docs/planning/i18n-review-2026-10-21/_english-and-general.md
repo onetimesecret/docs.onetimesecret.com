@@ -367,8 +367,8 @@ expiry grammar, and the bg and zh wording splits, and supersedes the list below.
 ## 4. Docs governance
 
 - **G1. Shipped-string source (all locales).** Agents read UI strings from
-  `/Users/d/Projects/run/onetimesecret-docker/locales/content/` (f9c2145dd,
-  2026-07-11). That copy lacks `web.branding.tab_brand`, `replace_logo`,
+  `$DOCKER/locales/content/`, a local onetimesecret-docker checkout at
+  f9c2145dd (2026-07-11). That copy lacks `web.branding.tab_brand`, `replace_logo`,
   `corners`, `delivery_*` and `web.domains.add.*` for ja, ko, sv_SE, mi_NZ, bg
   and tr, all of which exist in `$APP`. Recheck every "kept English because
   unshipped" label in branding.md and setup-guide.md against `$APP` in all 16
