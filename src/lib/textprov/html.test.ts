@@ -40,15 +40,22 @@ describe('static TextProv HTML', () => {
     expect(render(`<div class="sl-markdown-content">${grapheme}</div>`)).toContain('>e\u0301</span>');
   });
 
-  it('keeps decoded heading IDs unique without taking existing anchors and remaps TOC links', () => {
+  it('decodes a heading ID and remaps TOC links to it when nothing else uses it', () => {
+    const marked = ai('topic');
+    const html = `<div class="sl-markdown-content"><h2 id="${marked}">${ai('Topic')}</h2><h2 id="other">Other</h2></div><a href="#${encodeURIComponent(marked)}">Topic</a>`;
+    const doc = new JSDOM(render(html, { label: '/en/page/' })).window.document;
+    expect(Array.from(doc.querySelectorAll('h2'), h => h.id)).toEqual(['topic', 'other']);
+    expect(doc.querySelector('a')?.getAttribute('href')).toBe('#topic');
+  });
+
+  it('fails, naming the page, when a decoded heading ID collides with an existing anchor', () => {
+    // Renumbering to "topic-2" would keep this page's TOC working, but a link
+    // from another page to #topic would reach a different heading, and nothing
+    // later can see that: the fragment never reaches the server.
     const marked = ai('topic');
     const html = `<div class="sl-markdown-content"><h2 id="${marked}">${ai('Topic')}</h2><h2 id="topic">Topic</h2><h2 id="topic-1">Topic</h2></div><a href="#${encodeURIComponent(marked)}">Topic</a>`;
-    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
-    const doc = new JSDOM(render(html, { label: '/en/page/' })).window.document;
-    expect(Array.from(doc.querySelectorAll('h2'), h => h.id)).toEqual(['topic-2', 'topic', 'topic-1']);
-    expect(doc.querySelector('a')?.getAttribute('href')).toBe('#topic-2');
-    expect(warn).toHaveBeenCalledWith('TextProv: decoded id "topic" is taken; using "topic-2" (/en/page/)');
-    warn.mockRestore();
+    expect(() => render(html, { label: '/en/page/' }))
+      .toThrow('TextProv: decoded id "topic" is already used by another element; rename one of the headings (/en/page/)');
   });
 
   it('requires an actual enrollment element rather than a quoted flag in a code example', () => {
@@ -82,16 +89,20 @@ describe('static TextProv HTML', () => {
     expect(result).toBe(`<pre aria-label="Code sample">${sample}</pre>`);
   });
 
-  it('remaps accessibility and label references when a decoded ID collides', () => {
+  it('cleans accessibility and label references to a decoded ID but leaves opaque attributes alone', () => {
     const marked = ai('topic');
-    const html = `<h2 id="topic">Topic</h2><h2 id="${marked}">${ai('Topic')}</h2><label for="${marked}">Label</label><input aria-labelledby="${marked} topic" aria-controls="${marked}" data-private="${marked}">`;
-    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    const html = `<h2 id="other">Other</h2><h2 id="${marked}">${ai('Topic')}</h2><label for="${marked}">Label</label><input aria-labelledby="${marked} other" aria-controls="${marked}" data-private="${marked}">`;
     const doc = new JSDOM(render(html)).window.document;
-    warn.mockRestore();
-    expect(doc.querySelector('label')?.getAttribute('for')).toBe('topic-1');
-    expect(doc.querySelector('input')?.getAttribute('aria-labelledby')).toBe('topic-1 topic');
-    expect(doc.querySelector('input')?.getAttribute('aria-controls')).toBe('topic-1');
+    expect(doc.querySelector('label')?.getAttribute('for')).toBe('topic');
+    expect(doc.querySelector('input')?.getAttribute('aria-labelledby')).toBe('topic other');
+    expect(doc.querySelector('input')?.getAttribute('aria-controls')).toBe('topic');
     expect(doc.querySelector('input')?.getAttribute('data-private')).toBe(marked);
+  });
+
+  it('fails on a colliding decoded ID whatever refers to it', () => {
+    const marked = ai('topic');
+    expect(() => render(`<h2 id="topic">Topic</h2><h2 id="${marked}">${ai('Topic')}</h2><label for="${marked}">Label</label>`))
+      .toThrow('decoded id "topic" is already used by another element');
   });
 
   it('rejects malformed managed declarations while preserving excluded samples', () => {

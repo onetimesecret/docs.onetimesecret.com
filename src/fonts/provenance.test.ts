@@ -21,7 +21,7 @@ const range = (start: number, end: number) =>
 // The decoder's PUA registry: printable Latin-1 less the soft hyphen, as
 // documented in font-face.css.
 const COVERED: number[] = textprov.mapping.puaRanges.flatMap(
-  ([start, end]: [number, number]) => range(start - PUA_B, end - PUA_B)
+  ([start, end]: number[]) => range(start - PUA_B, end - PUA_B)
 );
 
 const hex = (cp: number) => `U+${cp.toString(16).toUpperCase().padStart(4, '0')}`;

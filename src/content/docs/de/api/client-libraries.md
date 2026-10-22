@@ -1,13 +1,41 @@
 ---
-title: Client-Bibliotheken
-description: Entdecken Sie die verfügbaren Client-Bibliotheken für die Onetime Secret API, einschließlich Ruby, Python, Perl, Java, C#, Go und mehr.
+textprov: true
+title: "Client-Bibliotheken"
+description: "Überblick über die verfügbaren Client-Bibliotheken für die Onetime Secret API, darunter Ruby, Python, Perl, Java, C#, Go und mehr."
 ---
+
+D󠄁e󠄁r󠄁 **o󠄁f󠄁f󠄁i󠄁z󠄁i󠄁e󠄁l󠄁l󠄁e󠄁 C󠄁l󠄁i󠄁e󠄁n󠄁t󠄁 i󠄁s󠄁t󠄁 [o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁-󠄁r󠄁u󠄁b󠄁y󠄁](https://github.com/onetimesecret/onetime-ruby)**.󠄁
+E󠄁r󠄁 u󠄁n󠄁t󠄁e󠄁r󠄁s󠄁t󠄁ü󠄁t󠄁z󠄁t󠄁 A󠄁P󠄁I󠄁 v󠄁1󠄁 u󠄁n󠄁d󠄁 v󠄁2󠄁,󠄁 a󠄁l󠄁l󠄁e󠄁 [r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁a󠄁l󠄁e󠄁n󠄁 D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁s󠄁](/en/security/where-your-data-lives/) s󠄁o󠄁w󠄁i󠄁e󠄁
+b󠄁e󠄁n󠄁u󠄁t󠄁z󠄁e󠄁r󠄁d󠄁e󠄁f󠄁i󠄁n󠄁i󠄁e󠄁r󠄁t󠄁e󠄁 B󠄁a󠄁s󠄁i󠄁s󠄁-󠄁U󠄁R󠄁L󠄁s󠄁.󠄁
+
+A󠄁l󠄁l󠄁e󠄁s󠄁 W󠄁e󠄁i󠄁t󠄁e󠄁r󠄁e󠄁 a󠄁u󠄁f󠄁 d󠄁i󠄁e󠄁s󠄁e󠄁r󠄁 S󠄁e󠄁i󠄁t󠄁e󠄁 w󠄁i󠄁r󠄁d󠄁 **v󠄁o󠄁n󠄁 d󠄁e󠄁r󠄁 C󠄁o󠄁m󠄁m󠄁u󠄁n󠄁i󠄁t󠄁y󠄁 g󠄁e󠄁p󠄁f󠄁l󠄁e󠄁g󠄁t󠄁**.󠄁 D󠄁i󠄁e󠄁 m󠄁e󠄁i󠄁s󠄁t󠄁e󠄁n󠄁
+d󠄁i󠄁e󠄁s󠄁e󠄁r󠄁 B󠄁i󠄁b󠄁l󠄁i󠄁o󠄁t󠄁h󠄁e󠄁k󠄁e󠄁n󠄁 s󠄁i󠄁n󠄁d󠄁 ä󠄁l󠄁t󠄁e󠄁r󠄁 a󠄁l󠄁s󠄁 A󠄁P󠄁I󠄁 v󠄁2󠄁 u󠄁n󠄁d󠄁 d󠄁i󠄁e󠄁 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁a󠄁l󠄁e󠄁n󠄁 D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁s󠄁,󠄁 d󠄁a󠄁h󠄁e󠄁r󠄁 r󠄁u󠄁f󠄁e󠄁n󠄁
+s󠄁i󠄁e󠄁 i󠄁n󠄁 d󠄁e󠄁r󠄁 R󠄁e󠄁g󠄁e󠄁l󠄁 d󠄁i󠄁e󠄁 v󠄁e󠄁r󠄁a󠄁l󠄁t󠄁e󠄁t󠄁e󠄁n󠄁 v󠄁1󠄁-󠄁E󠄁n󠄁d󠄁p󠄁u󠄁n󠄁k󠄁t󠄁e󠄁 u󠄁n󠄁t󠄁e󠄁r󠄁 `onetimesecret.com` a󠄁u󠄁f󠄁.󠄁 B󠄁e󠄁a󠄁c󠄁h󠄁t󠄁e󠄁
+d󠄁e󠄁n󠄁 S󠄁t󠄁a󠄁t󠄁u󠄁s󠄁h󠄁i󠄁n󠄁w󠄁e󠄁i󠄁s󠄁 z󠄁u󠄁 j󠄁e󠄁d󠄁e󠄁m󠄁 E󠄁i󠄁n󠄁t󠄁r󠄁a󠄁g󠄁 u󠄁n󠄁d󠄁 p󠄁r󠄁ü󠄁f󠄁e󠄁,󠄁 o󠄁b󠄁 e󠄁i󠄁n󠄁e󠄁 B󠄁i󠄁b󠄁l󠄁i󠄁o󠄁t󠄁h󠄁e󠄁k󠄁 m󠄁i󠄁t󠄁 d󠄁e󠄁i󠄁n󠄁e󠄁r󠄁 R󠄁e󠄁g󠄁i󠄁o󠄁n󠄁
+o󠄁d󠄁e󠄁r󠄁 d󠄁e󠄁i󠄁n󠄁e󠄁r󠄁 s󠄁e󠄁l󠄁b󠄁s󠄁t󠄁 g󠄁e󠄁h󠄁o󠄁s󠄁t󠄁e󠄁t󠄁e󠄁n󠄁 I󠄁n󠄁s󠄁t󠄁a󠄁n󠄁z󠄁 f󠄁u󠄁n󠄁k󠄁t󠄁i󠄁o󠄁n󠄁i󠄁e󠄁r󠄁t󠄁,󠄁 b󠄁e󠄁v󠄁o󠄁r󠄁 d󠄁u󠄁 d󠄁i󠄁c󠄁h󠄁 a󠄁u󠄁f󠄁 s󠄁i󠄁e󠄁 v󠄁e󠄁r󠄁l󠄁ä󠄁s󠄁s󠄁t󠄁.󠄁
+
+| S󠄁p󠄁r󠄁a󠄁c󠄁h󠄁e󠄁 | B󠄁i󠄁b󠄁l󠄁i󠄁o󠄁t󠄁h󠄁e󠄁k󠄁 | L󠄁e󠄁t󠄁z󠄁t󠄁e󠄁 A󠄁k󠄁t󠄁i󠄁v󠄁i󠄁t󠄁ä󠄁t󠄁¹󠄁 | R󠄁e󠄁g󠄁i󠄁o󠄁n󠄁a󠄁l󠄁e󠄁 /󠄁 b󠄁e󠄁n󠄁u󠄁t󠄁z󠄁e󠄁r󠄁d󠄁e󠄁f󠄁i󠄁n󠄁i󠄁e󠄁r󠄁t󠄁e󠄁 D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁 |
+|---|---|---|---|
+| R󠄁u󠄁b󠄁y󠄁 | [o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁-󠄁r󠄁u󠄁b󠄁y󠄁](https://github.com/onetimesecret/onetime-ruby) (󠄁**o󠄁f󠄁f󠄁i󠄁z󠄁i󠄁e󠄁l󠄁l󠄁**)󠄁 | 2󠄁0󠄁2󠄁6󠄁-󠄁0󠄁6󠄁 | ✅󠄁 a󠄁l󠄁l󠄁e󠄁 R󠄁e󠄁g󠄁i󠄁o󠄁n󠄁e󠄁n󠄁 +󠄁 b󠄁e󠄁n󠄁u󠄁t󠄁z󠄁e󠄁r󠄁d󠄁e󠄁f󠄁i󠄁n󠄁i󠄁e󠄁r󠄁t󠄁e󠄁 B󠄁a󠄁s󠄁i󠄁s󠄁-󠄁U󠄁R󠄁L󠄁 |
+| G󠄁o󠄁 | [g󠄁o󠄁-󠄁o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁](https://github.com/corbaltcode/go-onetimesecret) | 2󠄁0󠄁2󠄁6󠄁-󠄁0󠄁5󠄁 | U󠄁S󠄁-󠄁H󠄁o󠄁s󠄁t󠄁 |
+| P󠄁y󠄁t󠄁h󠄁o󠄁n󠄁 | [o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁-󠄁c󠄁l󠄁i󠄁](https://github.com/slashpass/onetimesecret-cli) | 2󠄁0󠄁2󠄁4󠄁-󠄁1󠄁1󠄁 | R󠄁e󠄁g󠄁i󠄁o󠄁n󠄁s󠄁o󠄁p󠄁t󠄁i󠄁o󠄁n󠄁 U󠄁S󠄁 /󠄁 E󠄁U󠄁 |
+| G󠄁o󠄁 | [o󠄁t󠄁s󠄁g󠄁o󠄁](https://github.com/emdneto/otsgo) | 2󠄁0󠄁2󠄁4󠄁-󠄁0󠄁3󠄁 | n󠄁i󠄁c󠄁h󠄁t󠄁 d󠄁o󠄁k󠄁u󠄁m󠄁e󠄁n󠄁t󠄁i󠄁e󠄁r󠄁t󠄁 |
+| P󠄁o󠄁w󠄁e󠄁r󠄁S󠄁h󠄁e󠄁l󠄁l󠄁 | [O󠄁n󠄁e󠄁T󠄁i󠄁m󠄁e󠄁S󠄁e󠄁c󠄁r󠄁e󠄁t󠄁](https://github.com/chelnak/OneTimeSecret) | 2󠄁0󠄁2󠄁1󠄁-󠄁0󠄁6󠄁 | b󠄁e󠄁n󠄁u󠄁t󠄁z󠄁e󠄁r󠄁d󠄁e󠄁f󠄁i󠄁n󠄁i󠄁e󠄁r󠄁t󠄁e󠄁 B󠄁a󠄁s󠄁i󠄁s󠄁-󠄁U󠄁R󠄁L󠄁 |
+| B󠄁a󠄁s󠄁h󠄁 | [o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁-󠄁b󠄁a󠄁s󠄁h󠄁](https://github.com/eengstrom/onetimesecret-bash) | 2󠄁0󠄁2󠄁0󠄁-󠄁0󠄁5󠄁 | b󠄁e󠄁n󠄁u󠄁t󠄁z󠄁e󠄁r󠄁d󠄁e󠄁f󠄁i󠄁n󠄁i󠄁e󠄁r󠄁t󠄁e󠄁r󠄁 H󠄁o󠄁s󠄁t󠄁 |
+| P󠄁y󠄁t󠄁h󠄁o󠄁n󠄁 | [p󠄁y󠄁_󠄁o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁](https://github.com/utterstep/py_onetimesecret) | 2󠄁0󠄁1󠄁9󠄁-󠄁0󠄁5󠄁 | ❌󠄁 (󠄁a󠄁u󠄁s󠄁 d󠄁e󠄁r󠄁 P󠄁y󠄁t󠄁h󠄁o󠄁n󠄁-󠄁2󠄁-󠄁Ä󠄁r󠄁a󠄁)󠄁 |
+| C󠄁#󠄁 | [O󠄁n󠄁e󠄁T󠄁i󠄁m󠄁e󠄁S󠄁h󠄁a󠄁r󠄁p󠄁](https://github.com/utterstep/OneTimeSharp) | 2󠄁0󠄁1󠄁8󠄁-󠄁0󠄁5󠄁 | ❌󠄁 |
+| J󠄁a󠄁v󠄁a󠄁 | [o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁-󠄁j󠄁a󠄁v󠄁a󠄁](https://github.com/mpawlowski/onetime-java) | 2󠄁0󠄁1󠄁4󠄁-󠄁0󠄁6󠄁 | n󠄁u󠄁r󠄁 s󠄁e󠄁l󠄁b󠄁s󠄁t󠄁 g󠄁e󠄁h󠄁o󠄁s󠄁t󠄁e󠄁t󠄁e󠄁 U󠄁R󠄁L󠄁 |
+| P󠄁e󠄁r󠄁l󠄁 | [N󠄁e󠄁t󠄁:󠄁:󠄁O󠄁n󠄁e󠄁T󠄁i󠄁m󠄁e󠄁S󠄁e󠄁c󠄁r󠄁e󠄁t󠄁](https://metacpan.org/pod/Net::OneTimeSecret) | 2󠄁0󠄁1󠄁2󠄁-󠄁0󠄁2󠄁 | ❌󠄁 |
+
+¹󠄁 L󠄁e󠄁t󠄁z󠄁t󠄁e󠄁r󠄁 C󠄁o󠄁m󠄁m󠄁i󠄁t󠄁 o󠄁d󠄁e󠄁r󠄁 l󠄁e󠄁t󠄁z󠄁t󠄁e󠄁s󠄁 R󠄁e󠄁l󠄁e󠄁a󠄁s󠄁e󠄁 z󠄁u󠄁m󠄁 Z󠄁e󠄁i󠄁t󠄁p󠄁u󠄁n󠄁k󠄁t󠄁 d󠄁e󠄁r󠄁 l󠄁e󠄁t󠄁z󠄁t󠄁e󠄁n󠄁 P󠄁r󠄁ü󠄁f󠄁u󠄁n󠄁g󠄁 (󠄁2󠄁0󠄁2󠄁6󠄁-󠄁0󠄁7󠄁)󠄁.󠄁
 
 ## Ruby
 
 
-[Github-Seite onetime-ruby](https://github.com/onetimesecret/onetime-ruby)
-von [Delano](https://delanotes.com/) (aktualisiert 2024-06-09)
+[GitH󠄁ub-Seite onetime-ruby](https://github.com/onetimesecret/onetime-ruby)
+von [Delano](https://delanotes.com/) —󠄁 **o󠄁f󠄁f󠄁i󠄁z󠄁i󠄁e󠄁l󠄁l󠄁e󠄁r󠄁 C󠄁l󠄁i󠄁e󠄁n󠄁t󠄁**,󠄁 akti󠄁v󠄁 g󠄁e󠄁p󠄁f󠄁l󠄁e󠄁g󠄁t󠄁
+(󠄁l󠄁e󠄁t󠄁z󠄁t󠄁e󠄁r󠄁 C󠄁o󠄁m󠄁m󠄁i󠄁t󠄁 2󠄁0󠄁2󠄁6󠄁-󠄁0󠄁6󠄁)󠄁.󠄁 U󠄁n󠄁t󠄁e󠄁r󠄁s󠄁t󠄁ü󠄁t󠄁z󠄁t󠄁 A󠄁P󠄁I󠄁 v󠄁1󠄁 (󠄁v󠄁e󠄁r󠄁alt󠄁e󠄁t󠄁)󠄁 u󠄁n󠄁d󠄁 v󠄁2󠄁,󠄁 r󠄁e󠄁g󠄁io󠄁n󠄁a󠄁l󠄁e󠄁 D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁s
+u󠄁n󠄁d󠄁 b󠄁e󠄁n󠄁u󠄁t󠄁z󠄁e󠄁r󠄁d󠄁e󠄁f󠄁i󠄁n󠄁ierte󠄁 B󠄁a󠄁s󠄁i󠄁s󠄁-U󠄁R󠄁L󠄁s󠄁.󠄁 B󠄁e󠄁n󠄁ö󠄁t󠄁i󠄁g󠄁t󠄁 R󠄁u󠄁b󠄁y󠄁 3󠄁.󠄁1󠄁+󠄁,󠄁 k󠄁e󠄁i󠄁n󠄁e󠄁 L󠄁a󠄁u󠄁f󠄁z󠄁e󠄁i󠄁t󠄁a󠄁b󠄁h󠄁ä󠄁n󠄁g󠄁i󠄁g󠄁k󠄁e󠄁i󠄁t󠄁e󠄁n󠄁.󠄁
 
 ### Anwendungsbeispiel
 
@@ -30,8 +58,9 @@ puts ret['secret_key']
 ## Python
 
 
-[Github-Seite - onetimesecret-cli](https://github.com/slashpass/onetimesecret-cli)
-von [slashpass](https://github.com/slashpass) (hinzugefügt 2021-07-08)
+[GitH󠄁ub-Seite - onetimesecret-cli](https://github.com/slashpass/onetimesecret-cli)
+von [slashpass](https://github.com/slashpass) —󠄁 v󠄁o󠄁n󠄁 d󠄁e󠄁r󠄁 C󠄁o󠄁m󠄁m󠄁u󠄁n󠄁it󠄁y󠄁 gep󠄁fl󠄁e󠄁gt󠄁 (󠄁l󠄁e󠄁t󠄁z󠄁t󠄁e󠄁r󠄁
+C󠄁o󠄁m󠄁m󠄁i󠄁t 2024󠄁-󠄁11).󠄁 U󠄁n󠄁t󠄁e󠄁r󠄁s󠄁t󠄁ü󠄁t󠄁z󠄁t󠄁 e󠄁i󠄁n󠄁e󠄁 R󠄁e󠄁g󠄁i󠄁o󠄁n󠄁s󠄁o󠄁p󠄁t󠄁i󠄁o󠄁n󠄁 (󠄁`us` /󠄁 `eu`)󠄁.󠄁
 
 ### Anwendungsbeispiel
 
@@ -42,8 +71,10 @@ cli = OneTimeSecretCli(ONETIMESECRET_USER, ONETIMESECRET_KEY)
 cli.create_link("secret") # return a link like https://onetimesecret.com/secret/xxxxxxxxxxx
 ```
 
-[Github-Seite - py\_onetimesecret](https://github.com/utterstep/py_onetimesecret)
-von [Vladislav Stepanov](https://github.com/utterstep) (hinzugefügt 2012-06-26)
+[GitH󠄁ub-Seite - py\_onetimesecret](https://github.com/utterstep/py_onetimesecret)
+von [Vladislav Stepanov](https://github.com/utterstep) —󠄁 **n󠄁i󠄁c󠄁ht󠄁 m󠄁e󠄁h󠄁r󠄁 gep󠄁fl󠄁e󠄁gt󠄁** (󠄁l󠄁e󠄁t󠄁z󠄁t󠄁e󠄁r󠄁
+C󠄁o󠄁m󠄁m󠄁i󠄁t 2019󠄁;󠄁 d󠄁a󠄁s󠄁 B󠄁e󠄁i󠄁s󠄁p󠄁i󠄁e󠄁l󠄁 u󠄁n󠄁t󠄁e󠄁n󠄁 i󠄁s󠄁t󠄁 P󠄁y󠄁t󠄁h󠄁o󠄁n󠄁 2)󠄁.󠄁 V󠄁e󠄁r󠄁w󠄁e󠄁n󠄁d󠄁e󠄁t󠄁 a󠄁u󠄁s󠄁s󠄁c󠄁h󠄁l󠄁i󠄁e󠄁ß󠄁l󠄁i󠄁c󠄁h󠄁 d󠄁i󠄁e󠄁 v󠄁e󠄁r󠄁a󠄁l󠄁t󠄁e󠄁t󠄁e󠄁
+v󠄁1󠄁-A󠄁P󠄁I󠄁 u󠄁n󠄁t󠄁e󠄁r󠄁 `onetimesecret.com`.󠄁
 
 ### Anwendungsbeispiel
 
@@ -63,8 +94,9 @@ print o.retrieve_secret(secret["secret_key"])
 ## Perl
 
 
-[Net::OneTimeSecret auf CPAN](http://search.cpan.org/~kyled/Net-OneTimeSecret/lib/Net/OneTimeSecret.pm)
-von [Kyle Dawkins](http://www.shoffle.com/) (hinzugefügt 2012-01-06)
+[Net::OneTimeSecret auf CPAN](https://metacpan.org/pod/Net::OneTimeSecret)
+von [Kyle Dawkins](http://www.shoffle.com/) —󠄁 **n󠄁i󠄁c󠄁ht󠄁 m󠄁e󠄁h󠄁r󠄁 gep󠄁fl󠄁e󠄁gt** (󠄁l󠄁e󠄁t󠄁z󠄁t󠄁e󠄁s󠄁 R󠄁e󠄁l󠄁e󠄁a󠄁s󠄁e󠄁
+0󠄁.󠄁0󠄁4󠄁,󠄁 2012-02󠄁).󠄁 Ä󠄁l󠄁t󠄁e󠄁r󠄁 a󠄁l󠄁s󠄁 A󠄁P󠄁I󠄁 v󠄁2󠄁 u󠄁n󠄁d󠄁 d󠄁i󠄁e󠄁 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁a󠄁l󠄁e󠄁n󠄁 D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁s󠄁.󠄁
 
 ### Anwendungsbeispiel
 
@@ -94,8 +126,10 @@ printf( "%s\n", $secret->{value} );
 ## Java
 
 
-[Github-Seite - onetime-java](https://github.com/mpawlowski/onetime-java)
-von [Marcin Pawlowski](https://github.com/mpawlowski) (hinzugefügt 2014-05-22)
+[GitH󠄁ub-Seite - onetime-java](https://github.com/mpawlowski/onetime-java)
+von [Marcin Pawlowski](https://github.com/mpawlowski) —󠄁 **n󠄁i󠄁c󠄁ht󠄁 m󠄁e󠄁h󠄁r󠄁 gep󠄁fl󠄁e󠄁gt󠄁** (󠄁l󠄁e󠄁t󠄁z󠄁t󠄁e󠄁r󠄁
+C󠄁o󠄁m󠄁m󠄁i󠄁t 2014-06󠄁)󠄁.󠄁 N󠄁i󠄁m󠄁m󠄁t󠄁 e󠄁i󠄁n󠄁e󠄁 I󠄁n󠄁s󠄁t󠄁a󠄁n󠄁z󠄁-U󠄁R󠄁L󠄁 e󠄁n󠄁t󠄁g󠄁e󠄁g󠄁e󠄁n󠄁 u󠄁n󠄁d󠄁 f󠄁u󠄁n󠄁k󠄁t󠄁i󠄁o󠄁n󠄁i󠄁e󠄁r󠄁t󠄁 d󠄁a󠄁h󠄁e󠄁r󠄁
+m󠄁ö󠄁g󠄁l󠄁i󠄁c󠄁h󠄁e󠄁r󠄁w󠄁e󠄁i󠄁s󠄁e󠄁 m󠄁i󠄁t󠄁 s󠄁e󠄁l󠄁b󠄁s󠄁t󠄁 g󠄁e󠄁h󠄁o󠄁s󠄁t󠄁e󠄁t󠄁e󠄁n󠄁 I󠄁n󠄁s󠄁t󠄁a󠄁n󠄁z󠄁e󠄁n󠄁,󠄁 i󠄁s󠄁t󠄁 a󠄁b󠄁e󠄁r󠄁 ä󠄁l󠄁t󠄁e󠄁r󠄁 a󠄁l󠄁s󠄁 A󠄁P󠄁I󠄁 v󠄁2.󠄁
 
 ### Anwendungsbeispiel
 
@@ -124,8 +158,9 @@ assertEquals(generateResponse.getValue(), retrieveResponse.getValue());
 ## C#
 
 
-[Github-Seite - OneTimeSharp](https://github.com/utterstep/OneTimeSharp)
-von [Vladislav Stepanov](https://github.com/utterstep) (hinzugefügt 2014-05-29)
+[GitH󠄁ub-Seite - OneTimeSharp](https://github.com/utterstep/OneTimeSharp)
+von [Vladislav Stepanov](https://github.com/utterstep) —󠄁 **n󠄁i󠄁c󠄁ht󠄁 m󠄁e󠄁h󠄁r󠄁 gep󠄁fl󠄁e󠄁gt󠄁** (󠄁l󠄁e󠄁t󠄁z󠄁t󠄁e󠄁r󠄁
+C󠄁o󠄁m󠄁m󠄁i󠄁t 2018󠄁-05)󠄁.󠄁 V󠄁e󠄁r󠄁w󠄁e󠄁n󠄁d󠄁e󠄁t󠄁 a󠄁u󠄁s󠄁s󠄁c󠄁h󠄁l󠄁i󠄁e󠄁ß󠄁l󠄁i󠄁c󠄁h󠄁 d󠄁i󠄁e󠄁 v󠄁e󠄁r󠄁a󠄁l󠄁t󠄁e󠄁t󠄁e󠄁 v󠄁1󠄁-A󠄁P󠄁I󠄁 u󠄁n󠄁t󠄁e󠄁r󠄁 `onetimesecret.com`.󠄁
 
 ### Anwendungsbeispiel
 
@@ -159,8 +194,9 @@ class Test
 ## Go
 
 
-[Github-Seite - onetimesecret](https://github.com/corbaltcode/go-onetimesecret)
-von [Corbalt](https://github.com/corbaltcode/) (hinzugefügt 2021-12-10)
+[GitH󠄁ub-Seite - onetimesecret](https://github.com/corbaltcode/go-onetimesecret)
+von [Corbalt](https://github.com/corbaltcode/) —󠄁 v󠄁o󠄁n󠄁 d󠄁e󠄁r󠄁 C󠄁o󠄁m󠄁m󠄁u󠄁n󠄁it󠄁y󠄁 gep󠄁fl󠄁e󠄁gt󠄁 (󠄁l󠄁e󠄁t󠄁z󠄁t󠄁e󠄁r󠄁
+C󠄁o󠄁m󠄁m󠄁i󠄁t 2026󠄁-05󠄁,󠄁 a󠄁k󠄁t󠄁u󠄁a󠄁l󠄁i󠄁s󠄁i󠄁e󠄁r󠄁t󠄁 f󠄁ü󠄁r󠄁 d󠄁e󠄁n󠄁 H󠄁o󠄁s󠄁t󠄁 `us.onetimesecret.com`).󠄁 E󠄁n󠄁t󠄁h󠄁ä󠄁l󠄁t󠄁 e󠄁i󠄁n󠄁e󠄁 C󠄁L󠄁I󠄁.󠄁
 
 ### Anwendungsbeispiel
 
@@ -210,8 +246,9 @@ flsdlaun6hwczqu9utmc0vts5xj9xu1
 ## Go (lib)
 
 
-[Github-Seite](https://github.com/emdneto/otsgo)
-von [Emídio Neto](https://github.com/emdneto) (hinzugefügt 2024-06-09)
+[GitH󠄁ub-Seite](https://github.com/emdneto/otsgo)
+von [Emídio Neto](https://github.com/emdneto) —󠄁 v󠄁o󠄁n󠄁 d󠄁e󠄁r󠄁 C󠄁o󠄁m󠄁m󠄁u󠄁n󠄁it󠄁y󠄁 gep󠄁fl󠄁e󠄁gt (󠄁l󠄁e󠄁t󠄁z󠄁t󠄁e󠄁s󠄁
+R󠄁e󠄁l󠄁e󠄁a󠄁s󠄁e󠄁 v󠄁1󠄁.󠄁1󠄁.󠄁0󠄁,󠄁 2024-03󠄁).󠄁 U󠄁n󠄁t󠄁e󠄁r󠄁s󠄁t󠄁ü󠄁t󠄁z󠄁u󠄁n󠄁g󠄁 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁a󠄁l󠄁e󠄁r󠄁 D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁s󠄁 n󠄁i󠄁c󠄁h󠄁t󠄁 d󠄁o󠄁k󠄁u󠄁m󠄁e󠄁n󠄁t󠄁i󠄁e󠄁r󠄁t󠄁.󠄁
 
 ### Anwendungsbeispiel
 
@@ -237,8 +274,10 @@ fmt.Println(response.Status)
 ## PowerShell
 
 
-[Github-Seite - OneTimeSecret](https://github.com/chelnak/OneTimeSecret)
-von [Craig Gumbley](https://www.helloitscraig.co.uk) (aktualisiert 2017-04-28)
+[GitH󠄁ub-Seite - OneTimeSecret](https://github.com/chelnak/OneTimeSecret)
+von [Craig Gumbley](https://www.helloitscraig.co.uk) —󠄁 **n󠄁i󠄁c󠄁h󠄁t󠄁 m󠄁e󠄁h󠄁r󠄁 g󠄁e󠄁p󠄁f󠄁l󠄁e󠄁g󠄁t󠄁** (l󠄁e󠄁t󠄁z󠄁t󠄁e󠄁s󠄁
+R󠄁e󠄁l󠄁e󠄁as󠄁e󠄁 2󠄁0󠄁2󠄁1󠄁-󠄁0󠄁6󠄁)󠄁.󠄁 U󠄁n󠄁te󠄁r󠄁s󠄁t󠄁ü󠄁t󠄁z󠄁t󠄁 e󠄁i󠄁n󠄁e󠄁 b󠄁e󠄁n󠄁ut󠄁z󠄁e󠄁r󠄁d󠄁e󠄁f󠄁in󠄁ierte󠄁 `-BaseUrl` u󠄁n󠄁d󠄁 k󠄁a󠄁n󠄁n󠄁 d󠄁a󠄁h󠄁e󠄁r󠄁 a󠄁u󠄁f󠄁
+e󠄁i󠄁n󠄁e󠄁 R󠄁e󠄁g󠄁i󠄁o󠄁n󠄁 o󠄁d󠄁e󠄁r󠄁 e󠄁i󠄁n󠄁e󠄁 s󠄁e󠄁l󠄁b󠄁s󠄁t󠄁 g󠄁e󠄁h󠄁o󠄁s󠄁t󠄁e󠄁t󠄁e󠄁 I󠄁n󠄁s󠄁t󠄁a󠄁n󠄁z󠄁 z󠄁e󠄁i󠄁g󠄁e󠄁n󠄁,󠄁 i󠄁s󠄁t󠄁 a󠄁b󠄁e󠄁r󠄁 ä󠄁l󠄁t󠄁e󠄁r󠄁 a󠄁l󠄁s󠄁 A󠄁P󠄁I󠄁 v󠄁2.󠄁
 
 ### Anwendungsbeispiel
 
@@ -264,8 +303,10 @@ Get-Command -Module OneTimeSecret | Select Name
 ## Bash
 
 
-[Github-Seite - OneTimeSecret-bash](https://github.com/eengstrom/onetimesecret-bash)
-von [Eric Engstrom](https://eengstrom.github.io/) (aktualisiert 2018-12-19)
+[GitH󠄁ub-Seite - OneTimeSecret-bash](https://github.com/eengstrom/onetimesecret-bash)
+von [Eric Engstrom](https://eengstrom.github.io/) —󠄁 **n󠄁i󠄁c󠄁h󠄁t󠄁 m󠄁e󠄁h󠄁r󠄁 g󠄁e󠄁p󠄁f󠄁l󠄁e󠄁g󠄁t󠄁** (l󠄁e󠄁tz󠄁t󠄁e󠄁r󠄁
+C󠄁o󠄁m󠄁m󠄁i󠄁t󠄁 2󠄁0󠄁2󠄁0󠄁-󠄁0󠄁5󠄁)󠄁.󠄁 U󠄁n󠄁t󠄁e󠄁r󠄁s󠄁t󠄁ü󠄁t󠄁z󠄁t󠄁 ü󠄁b󠄁e󠄁r󠄁 `ots_set_host` e󠄁i󠄁n󠄁e󠄁n󠄁 b󠄁e󠄁n󠄁ut󠄁z󠄁e󠄁r󠄁d󠄁e󠄁f󠄁in󠄁ierte󠄁n󠄁 H󠄁o󠄁s󠄁t󠄁,󠄁 i󠄁s󠄁t󠄁
+a󠄁b󠄁e󠄁r󠄁 ä󠄁l󠄁t󠄁e󠄁r󠄁 a󠄁l󠄁s󠄁 A󠄁P󠄁I󠄁 v󠄁2 u󠄁n󠄁d󠄁 d󠄁i󠄁e󠄁 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁a󠄁l󠄁e󠄁n󠄁 D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁s󠄁.󠄁
 
 ### Anwendungsbeispiel als Scripting-API
 
@@ -331,11 +372,8 @@ EOF
 # Get/Retrieve a secret:
 ./ots get <key|url>
 ./ots retrieve <key|url>
-```
 
-### Burn a secret
-
-```bash
+# Burn a secret:
 $ ots burn flsdlaun6hwczqu9utmc0vts5xj9xu1
 flsdlaun6hwczqu9utmc0vts5xj9xu1
 ```

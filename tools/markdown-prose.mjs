@@ -28,6 +28,30 @@ function maskDirectives(source) {
   }
 }
 
+// Starlight asides are container directives (`:::note`, `:::caution[Label]`).
+// remark-directive is not loaded here, so a fence parses as paragraph text.
+// Its colons, name, label brackets and attributes are syntax; the label text
+// stays prose. A mark inside the colons or name stops the fence matching, so
+// listing the fences in the shape rejects marks that would break the aside.
+const fencePattern = /^((?:[ \t]*>)*[ \t]*)(:{3,}[A-Za-z0-9_-]*)(?:(\[)([^\n]*)\])?(\{[^\n]*\})?[ \t]*\r?$/gm;
+
+function directiveFences(source) {
+  const fences = [], spans = [];
+  for (const match of source.matchAll(fencePattern)) {
+    const [, prefix, marker, open, label, attributes] = match;
+    let cursor = match.index + prefix.length;
+    spans.push([cursor, cursor += marker.length]);
+    if (open) {
+      spans.push([cursor, cursor + 1]);
+      cursor += 1 + label.length;
+      spans.push([cursor, cursor += 1]);
+    }
+    if (attributes) spans.push([cursor, cursor + attributes.length]);
+    fences.push(marker);
+  }
+  return { fences, spans };
+}
+
 function shape(node) {
   if (Array.isArray(node)) return node.map(shape);
   if (node && typeof node === "object") {
@@ -45,6 +69,8 @@ function inspect(source) {
   // their UTF-16 offsets while exposing only Markdown text nodes to marking.
   const masked = maskDirectives(source);
   const tree = parser.parse(masked);
+  const { fences, spans } = directiveFences(source);
+  const fenced = new Set(spans.flatMap(([start, end]) => Array.from({ length: end - start }, (_, i) => start + i)));
   const ranges = [];
   const offsets = [0];
   let count = 0;
@@ -52,6 +78,16 @@ function inspect(source) {
     for (let i = 0; i < char.length; i++) offsets.push(count);
     count++;
     offsets[offsets.length - 1] = count;
+  }
+  // Record a UTF-16 interval as code-point ranges, leaving out fence syntax.
+  function push(from, to) {
+    for (let i = from; i < to; i++) {
+      if (fenced.has(i)) continue;
+      let j = i;
+      while (j < to && !fenced.has(j)) j++;
+      ranges.push([offsets[i], offsets[j]]);
+      i = j;
+    }
   }
   function walk(node) {
     if (node.type === "text") {
@@ -62,10 +98,10 @@ function inspect(source) {
       const protectedSyntax = /\\[!"#$%&'()*+,\-./:;<=>?@[\]\\^_`{|}~]|&(?:#[xX][0-9a-fA-F]+|#[0-9]+|[a-zA-Z][a-zA-Z0-9]*);/g;
       let cursor = 0;
       for (const match of raw.matchAll(protectedSyntax)) {
-        if (cursor < match.index) ranges.push([offsets[start + cursor], offsets[start + match.index]]);
+        if (cursor < match.index) push(start + cursor, start + match.index);
         cursor = match.index + match[0].length;
       }
-      if (cursor < raw.length) ranges.push([offsets[start + cursor], offsets[end]]);
+      if (cursor < raw.length) push(start + cursor, end);
     }
     // Autolinks have text children but their text is also the destination.
     if (node.type === "link" && node.position) {
@@ -78,7 +114,7 @@ function inspect(source) {
   }
   walk(tree);
   const metadata = frontmatter(source);
-  return { ranges, shape: shape(tree), hasFrontmatter: metadata !== null,
+  return { ranges, shape: { tree: shape(tree), fences }, hasFrontmatter: metadata !== null,
     hasTextprov: metadata !== null && Object.hasOwn(metadata, 'textprov'), textprov: metadata?.textprov ?? null };
 }
 

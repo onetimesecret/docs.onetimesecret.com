@@ -23,7 +23,7 @@ This is a multilingual documentation site built with Astro and Starlight. Publis
 - `starlight.mjs` — Theme, component overrides, custom CSS, and site metadata.
 - `i18n.mjs` — Supported locales and default language.
 - `sidebar.mjs` — Navigation structure and translated labels.
-- `vite.mjs` — Tailwind integration and development/preview host allowlists.
+- `vite.mjs` — Tailwind integration, the optional dev-only Spotnote plugin (MCP setup in its comment), and development/preview host allowlists.
 - `redirects.mjs` — Legacy URL redirects and moved-page mappings.
 - `domains.mjs` — Staging banner, watermark, and prerelease-build settings.
 
@@ -51,10 +51,11 @@ pnpm run check:orphans       # Check pages missing from navigation
 pnpm run check:frontmatter   # Check documentation frontmatter
 pnpm run check:locales       # Check locale directories against configuration
 pnpm run check:contrast      # Check colour contrast
+pnpm run check:types         # Type-check .ts sources (astro sync, then tsc)
 pnpm run check:links:malformed # Check malformed source links
 ```
 
-CI runs navigation, orphan, locale, and contrast checks, then tests and the production build. Run checks relevant to the change and report exactly what was executed; do not describe source inspection as a successful build or test run.
+CI runs the navigation, orphan, locale, contrast, frontmatter, malformed-link, and type checks, then tests and the production build. Run checks relevant to the change and report exactly what was executed; do not describe source inspection as a successful build or test run.
 
 `pnpm run check:links` requires **lychee** and builds the site before checking internal links. `pnpm run check:links:external` also checks external URLs. See [the link-checking guide](docs/LINK_CHECKING.md) for options.
 
@@ -172,8 +173,8 @@ legacy paragraphs or infer the origin of existing text. Do not label copied
 human text as AI: leave it unchanged or request a human contribution.
 
 Frontmatter, code, inline code, link destinations, HTML syntax, Markdoc tags and
-attributes, generated references, and source-code files are outside marking
-scope. The tool enrolls edited pages with `textprov: true`. Never remove existing
+attributes, aside fences (`:::note`), generated references, and source-code
+files are outside marking scope. The tool enrolls edited pages with `textprov: true`. Never remove existing
 marks, mark syntax, or strip a whole source file. Unicode variation selectors
 also have real language uses: do not apply the decoder to arbitrary content.
 

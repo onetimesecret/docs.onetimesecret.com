@@ -56,6 +56,42 @@ export const STARLIGHT_BASE = {
   },
 };
 
+/**
+ * The dependency versions STARLIGHT_BASE was read against.
+ *
+ * The table above is a hand copy of values that exist only in a built page, so
+ * a Starlight, starlight-tailwind or Tailwind release can move a grey without
+ * touching anything this check reads. The check would then pass against stale
+ * numbers, and a false green here is worse than a red. check:contrast fails
+ * while the installed versions differ from these. To clear it: build the site,
+ * read the tokens off a page in both themes, correct any entry above that
+ * moved, then record the versions you verified against.
+ */
+export const BASE_VERIFIED_AGAINST = {
+  "@astrojs/starlight": "0.42.6",
+  "@astrojs/starlight-tailwind": "5.0.0",
+  tailwindcss: "4.3.3",
+};
+
+/** The installed version of a package, read from node_modules. */
+export function installedVersion(name) {
+  const manifest = join(repoRoot, "node_modules", name, "package.json");
+  return JSON.parse(readFileSync(manifest, "utf8")).version;
+}
+
+/**
+ * Packages whose installed version differs from the one STARLIGHT_BASE was
+ * verified against. `installed` is injectable so tests need no node_modules.
+ *
+ * @param {(name: string) => string} [installed]
+ * @returns {{name: string, verified: string, installed: string}[]}
+ */
+export function baseVersionDrift(installed = installedVersion) {
+  return Object.entries(BASE_VERIFIED_AGAINST)
+    .map(([name, verified]) => ({ name, verified, installed: installed(name) }))
+    .filter((entry) => entry.verified !== entry.installed);
+}
+
 // --- Colour parsing ---------------------------------------------------------
 
 function hexToRgb(hex) {

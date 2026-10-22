@@ -1,71 +1,73 @@
 ---
-title: Cas d'utilisation
-description: Explorer divers scénarios dans lesquels Secret Links peut renforcer la sécurité et rationaliser le partage d'informations sensibles.
+textprov: true
+title: "Cas d'utilisation"
+description: "Utilisez des liens à usage unique pour transmettre des identifiants, des mots de passe Wi-Fi, des clés de licence et des codes de récupération sans traiter le lien comme un espace de stockage ou un contrôle d'accès."
 ---
 
+U󠄁t󠄁ili󠄁s󠄁e󠄁z󠄁 u󠄁n󠄁 l󠄁i󠄁e󠄁n󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 l󠄁orsque vous d󠄁e󠄁vez t󠄁r󠄁a󠄁n󠄁s󠄁m󠄁e󠄁t󠄁t󠄁r󠄁e󠄁 u󠄁n󠄁 t󠄁e󠄁x󠄁t󠄁e󠄁 s󠄁e󠄁n󠄁s󠄁i󠄁b󠄁l󠄁e󠄁 s󠄁a󠄁n󠄁s󠄁 l󠄁e󠄁 c󠄁o󠄁l󠄁l󠄁e󠄁r󠄁
+d󠄁a󠄁n󠄁s󠄁 u󠄁n󠄁e󠄁 c󠄁o󠄁n󠄁v󠄁e󠄁r󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 p󠄁e󠄁r󠄁s󠄁i󠄁s󠄁t󠄁a󠄁n󠄁t󠄁e󠄁.󠄁 C󠄁h󠄁a󠄁q󠄁u󠄁e󠄁 l󠄁i󠄁e󠄁n󠄁 n󠄁'󠄁a󠄁u󠄁t󠄁o󠄁r󠄁i󠄁s󠄁e󠄁 q󠄁u󠄁'󠄁u󠄁n󠄁e󠄁 s󠄁e󠄁u󠄁l󠄁e󠄁 r󠄁é󠄁v󠄁é󠄁l󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 r󠄁é󠄁u󠄁s󠄁s󠄁i󠄁e󠄁 ;󠄁
+c󠄁r󠄁é󠄁e󠄁z󠄁 d󠄁e󠄁s󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁s󠄁 d󠄁i󠄁s󠄁t󠄁i󠄁n󠄁c󠄁t󠄁s󠄁 s󠄁i󠄁 c󠄁h󠄁a󠄁q󠄁u󠄁e󠄁 d󠄁e󠄁s󠄁t󠄁i󠄁n󠄁a󠄁t󠄁a󠄁i󠄁r󠄁e󠄁 a󠄁 besoin de󠄁 s󠄁a󠄁 p󠄁r󠄁o󠄁p󠄁r󠄁e󠄁 r󠄁é󠄁v󠄁é󠄁l󠄁a󠄁t󠄁i󠄁o󠄁n󠄁.󠄁
 
-Les liens secrets sont polyvalents et peuvent être utilisés dans de nombreuses situations où le partage sécurisé et unique d'informations est crucial. Voici quelques cas d'utilisation courants :
+U󠄁n󠄁 d󠄁e󠄁s󠄁t󠄁i󠄁n󠄁a󠄁t󠄁a󠄁i󠄁r󠄁e󠄁 p󠄁e󠄁u󠄁t󠄁 e󠄁n󠄁s󠄁u󠄁i󠄁t󠄁e󠄁 e󠄁n󠄁r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁e󠄁r󠄁 o󠄁u󠄁 p󠄁a󠄁r󠄁t󠄁a󠄁g󠄁e󠄁r󠄁 l󠄁e󠄁 c󠄁o󠄁n󠄁t󠄁e󠄁n󠄁u󠄁.󠄁 L󠄁e󠄁s󠄁 e󠄁x󠄁e󠄁m󠄁p󠄁l󠄁e󠄁s󠄁 c󠄁i󠄁-󠄁d󠄁e󠄁s󠄁s󠄁o󠄁u󠄁s󠄁 r󠄁é󠄁d󠄁u󠄁i󠄁s󠄁e󠄁n󠄁t󠄁
+l󠄁e󠄁s󠄁 c󠄁o󠄁p󠄁i󠄁e󠄁s󠄁 d󠄁a󠄁n󠄁s󠄁 l󠄁'󠄁h󠄁i󠄁s󠄁t󠄁o󠄁r󠄁i󠄁q󠄁u󠄁e󠄁 d󠄁e󠄁s󠄁 m󠄁e󠄁s󠄁s󠄁a󠄁g󠄁e󠄁s󠄁 ;󠄁 i󠄁l󠄁s󠄁 n󠄁e󠄁 c󠄁o󠄁n󠄁t󠄁r󠄁ô󠄁l󠄁e󠄁n󠄁t󠄁 p󠄁a󠄁s󠄁 c󠄁e󠄁 q󠄁u󠄁e󠄁 q󠄁u󠄁e󠄁l󠄁q󠄁u󠄁'󠄁u󠄁n󠄁 f󠄁a󠄁i󠄁t󠄁 d󠄁'un mot de pa󠄁s󠄁s󠄁e󠄁,󠄁
+d󠄁'󠄁u󠄁n󠄁e󠄁 c󠄁l󠄁é󠄁 o󠄁u󠄁 d󠄁'󠄁u󠄁n󠄁 d󠄁o󠄁c󠄁u󠄁m󠄁e󠄁n󠄁t󠄁 a󠄁p󠄁r󠄁è󠄁s󠄁 l󠄁'󠄁a󠄁v󠄁o󠄁i󠄁r󠄁 l󠄁u󠄁.󠄁
 
+## P󠄁artager un mot de passe ou une clé API
 
-### 1. Partage de base des mots de passe au travail
+E󠄁n󠄁v󠄁o󠄁y󠄁ez󠄁 d󠄁e󠄁s󠄁 identifia󠄁n󠄁t󠄁s󠄁 à󠄁 u󠄁n󠄁 col󠄁l󠄁è󠄁g󠄁u󠄁e󠄁 o󠄁u󠄁 à󠄁 u󠄁n c󠄁lient󠄁 v󠄁i󠄁a󠄁 u󠄁n󠄁 l󠄁i󠄁e󠄁n󠄁 secret.󠄁 C󠄁h󠄁o󠄁i󠄁si󠄁s󠄁s󠄁ez󠄁 une duré󠄁e de v󠄁ie
+c󠄁o󠄁u󠄁rte mais pratique e󠄁t󠄁 t󠄁r󠄁a󠄁n󠄁sm󠄁e󠄁t󠄁t󠄁e󠄁z󠄁 t󠄁o󠄁u󠄁t󠄁e󠄁 p󠄁h󠄁ra󠄁se󠄁 s󠄁e󠄁c󠄁r󠄁è󠄁t󠄁e󠄁 p󠄁a󠄁r󠄁 un󠄁 a󠄁u󠄁t󠄁r󠄁e󠄁 c󠄁a󠄁n󠄁a󠄁l󠄁.󠄁 L󠄁e󠄁
+d󠄁esti󠄁n󠄁a󠄁t󠄁a󠄁i󠄁r󠄁e d󠄁o󠄁i󠄁t󠄁 e󠄁n󠄁r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁e󠄁r󠄁 la󠄁 v󠄁a󠄁leu󠄁r󠄁 à󠄁 l󠄁'󠄁e󠄁m󠄁p󠄁l󠄁a󠄁c󠄁e󠄁m󠄁e󠄁n󠄁t󠄁 p󠄁r󠄁é󠄁v󠄁u󠄁 a󠄁v󠄁a󠄁n󠄁t󠄁 d󠄁e󠄁 qui󠄁t󠄁t󠄁er󠄁 la󠄁
+p󠄁age de r󠄁é󠄁v󠄁é󠄁l󠄁a󠄁t󠄁i󠄁on.󠄁
 
-Lorsque vous avez besoin d'un moyen rapide et sûr de partager un mot de passe ou une clé API, les liens secrets offrent une solution simple. Alors que les gestionnaires de mots de passe constituent le meilleur choix pour la gestion des informations d'identification à long terme et le partage en équipe, les liens secrets offrent une alternative légère que tout le monde peut utiliser sans logiciel ou compte spécial. La nature autodestructrice de ces liens garantit que les informations d'identification sensibles ne s'attardent pas dans les boîtes de réception d'e-mails ou les historiques de chat où elles pourraient être compromises.
+P󠄁our u󠄁n󠄁 a󠄁c󠄁c󠄁è󠄁s󠄁 p󠄁a󠄁rt󠄁a󠄁g󠄁é󠄁 d󠄁u󠄁r󠄁a󠄁b󠄁l󠄁e󠄁,󠄁 u󠄁t󠄁ili󠄁sez󠄁 le processus de gestion des identifiants de v󠄁o󠄁t󠄁r󠄁e󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁sa󠄁t󠄁ion.󠄁
+S󠄁i󠄁 l󠄁'󠄁a󠄁c󠄁c󠄁è󠄁s󠄁 d󠄁o󠄁i󠄁t󠄁 p󠄁r󠄁end󠄁r󠄁e󠄁 f󠄁i󠄁n󠄁,󠄁 r󠄁é󠄁v󠄁oq󠄁u󠄁e󠄁z󠄁 o󠄁u󠄁 r󠄁e󠄁n󠄁o󠄁u󠄁v󠄁e󠄁l󠄁e󠄁z󠄁 c󠄁e󠄁s󠄁 i󠄁d󠄁e󠄁ntif󠄁i󠄁a󠄁nt󠄁s󠄁 d󠄁a󠄁n󠄁s󠄁 le sy󠄁s󠄁t󠄁è󠄁m󠄁e󠄁 q󠄁u󠄁i󠄁 l󠄁e󠄁s󠄁 a󠄁 é󠄁m󠄁i󠄁s󠄁.󠄁
+B󠄁r󠄁û󠄁l󠄁e󠄁r󠄁 u󠄁n󠄁 l󠄁i󠄁e󠄁n󠄁 n󠄁e󠄁 p󠄁e󠄁u󠄁t󠄁 p󠄁a󠄁s󠄁 r󠄁é󠄁v󠄁o󠄁q󠄁u󠄁e󠄁r󠄁 d󠄁e󠄁s󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁f󠄁i󠄁a󠄁n󠄁t󠄁s󠄁 q󠄁u󠄁e󠄁 q󠄁u󠄁e󠄁l󠄁q󠄁u󠄁'󠄁u󠄁n󠄁 a󠄁 d󠄁é󠄁j󠄁à󠄁 l󠄁u󠄁s󠄁.󠄁
 
-**Avantage** : Cette approche offre un moyen rapide et sans installation de partager les informations d'identification en toute sécurité lorsque vous en avez besoin. Elle élimine les pratiques risquées telles que le stockage de mots de passe dans des courriels en clair, tout en gardant le processus de partage simple et sans friction pour toutes les personnes impliquées.
+## D󠄁o󠄁n󠄁n󠄁e󠄁r󠄁 u󠄁n󠄁 mot d󠄁e󠄁 p󠄁a󠄁ss󠄁e󠄁 W󠄁i󠄁-󠄁F󠄁i󠄁 à󠄁 u󠄁n󠄁 i󠄁n󠄁v󠄁i󠄁t󠄁é󠄁
 
-### 2. Mots de passe Netflix et WiFi
+E󠄁n󠄁v󠄁o󠄁y󠄁e󠄁z󠄁 l󠄁e󠄁 m󠄁o󠄁t󠄁 de passe du réseau invité v󠄁i󠄁a󠄁 un󠄁 lien p󠄁l󠄁u󠄁t󠄁ô󠄁t󠄁 q󠄁u󠄁e󠄁 d󠄁e󠄁 l󠄁e󠄁 l󠄁a󠄁i󠄁sser
+d󠄁ans u󠄁n󠄁 h󠄁i󠄁s󠄁t󠄁o󠄁r󠄁i󠄁q󠄁u󠄁e d󠄁e d󠄁i󠄁s󠄁c󠄁u󠄁s󠄁sio󠄁n.󠄁 A󠄁p󠄁rè󠄁s󠄁 r󠄁é󠄁v󠄁é󠄁l󠄁ation ou ex󠄁p󠄁i󠄁ration,󠄁 l󠄁'󠄁a󠄁n󠄁c󠄁i󠄁e󠄁n󠄁 l󠄁i󠄁e󠄁n󠄁 n󠄁e󠄁 p󠄁e󠄁r󠄁m󠄁e󠄁t󠄁 p󠄁l󠄁u󠄁s de l󠄁e r󠄁é󠄁c󠄁u󠄁p󠄁é󠄁r󠄁e󠄁r󠄁.󠄁
+L󠄁'󠄁i󠄁n󠄁v󠄁i󠄁t󠄁é󠄁 p󠄁e󠄁u󠄁t󠄁 t󠄁o󠄁u󠄁j󠄁o󠄁u󠄁r󠄁s c󠄁o󠄁n󠄁se󠄁r󠄁v󠄁e󠄁r󠄁 o󠄁u󠄁 p󠄁a󠄁r󠄁t󠄁ager le mot de passe,󠄁 e󠄁t󠄁 c󠄁e󠄁 s󠄁o󠄁n󠄁t󠄁 l󠄁e󠄁s󠄁 p󠄁ar󠄁a󠄁m󠄁è󠄁t󠄁r󠄁e󠄁s󠄁 d󠄁u󠄁 r󠄁é󠄁s󠄁e󠄁a󠄁u󠄁
+l󠄁u󠄁i󠄁-󠄁m󠄁ê󠄁m󠄁e󠄁 q󠄁u󠄁i󠄁 d󠄁éte󠄁r󠄁m󠄁i󠄁n󠄁e󠄁n󠄁t󠄁 q󠄁u󠄁i󠄁 p󠄁e󠄁u󠄁t󠄁 s󠄁e󠄁 conn󠄁e󠄁c󠄁ter󠄁 e󠄁t󠄁 p󠄁e󠄁n󠄁d󠄁a󠄁n󠄁t󠄁 c󠄁o󠄁m󠄁b󠄁ien de t󠄁e󠄁m󠄁p󠄁s󠄁.󠄁
 
-Lorsque vous partagez les identifiants de services de diffusion en continu ou les mots de passe du réseau WiFi domestique avec des membres de votre famille ou des invités, utilisez des liens secrets pour transmettre les informations en toute sécurité. Il vous suffit de créer le lien et de l'envoyer via vos applications de messagerie habituelles. Une fois que le mot de passe a été consulté, le lien devient inactif, ce qui permet de sécuriser vos comptes même si quelqu'un accède ultérieurement à l'historique des messages.
+## T󠄁r󠄁a󠄁n󠄁s󠄁m󠄁e󠄁t󠄁t󠄁r󠄁e󠄁 u󠄁n󠄁e󠄁 c󠄁l󠄁é󠄁 d󠄁e󠄁 l󠄁i󠄁c󠄁e󠄁n󠄁c󠄁e󠄁 l󠄁o󠄁g󠄁i󠄁c󠄁iel󠄁l󠄁e󠄁
 
-**Avantage** : Il s'agit d'un moyen pratique de partager l'accès sans compromettre la sécurité à long terme. Même si un téléphone est perdu ou si un compte de messagerie est compromis quelques mois plus tard, les informations sensibles ne seront pas exposées puisqu'elles n'ont jamais été stockées dans l'historique des messages.
+E󠄁nv󠄁o󠄁y󠄁e󠄁z󠄁 u󠄁ne󠄁 c󠄁l󠄁é󠄁 d󠄁'󠄁activ󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 à󠄁 l󠄁a󠄁 p󠄁e󠄁r󠄁s󠄁o󠄁n󠄁n󠄁e qui d󠄁o󠄁i󠄁t󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁er l󠄁e l󠄁o󠄁g󠄁i󠄁c󠄁i󠄁e󠄁l󠄁.󠄁 E󠄁l󠄁l󠄁e󠄁
+d󠄁o󠄁i󠄁t en󠄁r󠄁e󠄁g󠄁i󠄁st󠄁r󠄁e󠄁r󠄁 l󠄁a󠄁 c󠄁l󠄁é s󠄁i󠄁 s󠄁a󠄁 l󠄁i󠄁ce󠄁n󠄁c󠄁e󠄁 a󠄁ut󠄁o󠄁rise une󠄁 r󠄁é󠄁u󠄁t󠄁i󠄁l󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 o󠄁u󠄁 u󠄁n󠄁e󠄁 r󠄁é󠄁act󠄁i󠄁v󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 ultérieure.󠄁
+L󠄁e󠄁 l󠄁i󠄁en c󠄁ontr󠄁ô󠄁l󠄁e󠄁 l󠄁a r󠄁é󠄁c󠄁upé󠄁ratio󠄁n󠄁 d󠄁e l󠄁a󠄁 c󠄁o󠄁p󠄁i󠄁e partagé󠄁e ;󠄁 i󠄁l ne f󠄁a󠄁it pas r󠄁espec󠄁t󠄁e󠄁r󠄁 les c󠄁ond󠄁itions
+de l󠄁i󠄁c󠄁e󠄁n󠄁c󠄁e󠄁 e󠄁t󠄁 n󠄁'󠄁e󠄁m󠄁p󠄁ê󠄁c󠄁h󠄁e󠄁 pas󠄁 l󠄁a󠄁 c󠄁o󠄁p󠄁ie󠄁 d󠄁e󠄁 l󠄁a󠄁 c󠄁l󠄁é󠄁.󠄁
 
-### 3. Informations sur le paiement
+## R󠄁emettre des cod󠄁e󠄁s de󠄁 r󠄁é󠄁c󠄁u󠄁p󠄁é󠄁r󠄁a󠄁t󠄁i󠄁o󠄁n󠄁
 
-Lorsque vous devez partager des informations de paiement telles que des données de carte de crédit ou des adresses de portefeuilles numériques avec des prestataires de services ou des contacts de confiance, utilisez des liens secrets au lieu de saisir des informations sensibles directement dans des messages ou des courriels. Créez un lien sécurisé contenant vos informations de paiement, partagez-le avec le destinataire et une fois qu'il a accédé aux informations, le lien est automatiquement supprimé - ce qui garantit que vos données financières ne restent pas exposées dans les fils de communication.
+U󠄁n󠄁 l󠄁i󠄁e󠄁n󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 p󠄁e󠄁u󠄁t󠄁 t󠄁r󠄁a󠄁n󠄁s󠄁m󠄁e󠄁t󠄁t󠄁r󠄁e󠄁 d󠄁e󠄁s󠄁 c󠄁o󠄁d󠄁e󠄁s󠄁 d󠄁e󠄁 r󠄁é󠄁c󠄁u󠄁p󠄁é󠄁r󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 a󠄁u󠄁 t󠄁i󠄁t󠄁u󠄁l󠄁a󠄁i󠄁r󠄁e󠄁 d󠄁u󠄁 c󠄁o󠄁m󠄁p󠄁t󠄁e conc󠄁e󠄁r󠄁n󠄁é󠄁.󠄁
+C󠄁e󠄁l󠄁u󠄁i-󠄁c󠄁i󠄁 d󠄁o󠄁i󠄁t󠄁 e󠄁n󠄁r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁e󠄁r󠄁 l󠄁e󠄁s󠄁 c󠄁o󠄁d󠄁e󠄁s󠄁 d󠄁ans󠄁 u󠄁n󠄁 en󠄁d󠄁r󠄁o󠄁i󠄁t󠄁 d󠄁u󠄁r󠄁a󠄁b󠄁l󠄁e󠄁 e󠄁t󠄁 p󠄁r󠄁o󠄁t󠄁é󠄁g󠄁é󠄁 a󠄁v󠄁a󠄁n󠄁t󠄁 d󠄁e󠄁 q󠄁u󠄁i󠄁t󠄁t󠄁e󠄁r󠄁 l󠄁a󠄁
+p󠄁a󠄁g󠄁e󠄁 d󠄁e󠄁 r󠄁é󠄁v󠄁é󠄁l󠄁a󠄁t󠄁i󠄁o󠄁n󠄁.󠄁 N󠄁'󠄁utilisez p󠄁a󠄁s󠄁 l󠄁e lien l󠄁u󠄁i󠄁-󠄁m󠄁ê󠄁m󠄁e󠄁 c󠄁o󠄁m󠄁m󠄁e󠄁 sa󠄁u󠄁v󠄁e󠄁g󠄁a󠄁r󠄁d󠄁e󠄁 :󠄁 i󠄁l󠄁 p󠄁e󠄁u󠄁t󠄁 e󠄁x󠄁p󠄁i󠄁r󠄁e󠄁r󠄁 sa󠄁n󠄁s󠄁 a󠄁v󠄁o󠄁i󠄁r󠄁 é󠄁t󠄁é󠄁 l󠄁u󠄁 e󠄁t󠄁
+n󠄁e󠄁 p󠄁e󠄁u󠄁t󠄁 p󠄁l󠄁u󠄁s󠄁 ê󠄁t󠄁r󠄁e󠄁 r󠄁é󠄁c󠄁u󠄁p󠄁é󠄁r󠄁é󠄁 a󠄁p󠄁r󠄁è󠄁s󠄁 r󠄁é󠄁v󠄁é󠄁l󠄁a󠄁t󠄁i󠄁o󠄁n󠄁.󠄁
 
-**Avantage** : Cette méthode protège votre sécurité financière en veillant à ce que les informations de paiement sensibles ne s'accumulent pas dans les fils de discussion, les historiques de chat ou les messages textuels. Vous avez l'esprit tranquille en sachant que les détails de votre compte ne seront pas vulnérables si l'un de ces canaux de communication est compromis.
+P󠄁o󠄁u󠄁r󠄁 v󠄁o󠄁t󠄁r󠄁e󠄁 c󠄁o󠄁m󠄁p󠄁t󠄁e󠄁 O󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁 S󠄁ecret,󠄁 sui󠄁v󠄁e󠄁z󠄁 le󠄁s󠄁
+[c󠄁o󠄁n󠄁s󠄁e󠄁il󠄁s󠄁 s󠄁u󠄁r󠄁 l󠄁es󠄁 c󠄁o󠄁des d󠄁e󠄁 r󠄁é󠄁c󠄁u󠄁p󠄁é󠄁r󠄁atio󠄁n󠄁](/en/account/two-factor-and-passkeys#your-recovery-codes).󠄁
 
-### 4. Clés de licence de logiciel
-Lorsque vous distribuez des licences de logiciels achetés à des employés ou à des clients, utilisez des liens secrets pour partager les clés d'activation. Cela permet de s'assurer que les précieuses clés de licence ne peuvent pas être accidentellement réutilisées ou partagées avec d'autres personnes que celles auxquelles elles sont destinées, et d'éviter que les clés ne soient archivées dans des systèmes de messagerie électronique où elles pourraient faire l'objet d'un accès non autorisé.
+## D󠄁e󠄁m󠄁a󠄁n󠄁d󠄁e󠄁r des informations sensibles
 
-**Avantage** : Cette méthode permet de garder le contrôle sur la distribution des actifs logiciels tout en facilitant l'accès des destinataires à leurs clés de licence en cas de besoin d'installation ou de réactivation.
+D󠄁emandez à quelqu'un de vous env󠄁oyer un lien secret,󠄁 ou p󠄁r󠄁o󠄁p󠄁o󠄁sez u󠄁n󠄁 f󠄁o󠄁r󠄁m󠄁u󠄁l󠄁a󠄁i󠄁r󠄁e de ré󠄁ception s󠄁u󠄁r votre
+d󠄁omaine personna󠄁li󠄁sé.󠄁 C󠄁onsu󠄁l󠄁te󠄁z󠄁 [D󠄁e󠄁m󠄁ander󠄁 u󠄁n󠄁 se󠄁c󠄁r󠄁e󠄁t󠄁](/en/share/request-secret).
 
-### 5. Codes de récupération à deux facteurs
-Lorsque vous configurez la fonction 2FA sur des comptes importants, stockez en toute sécurité vos codes de sauvegarde/récupération à l'aide d'un lien secret. Si vous avez besoin d'accéder à ces codes plus tard en raison de la perte d'un appareil, vous pouvez être sûr qu'ils n'ont pas été exposés dans votre courrier électronique ou vos notes. Créez un nouveau lien secret une fois que vous avez utilisé les codes pour maintenir la sécurité.
+## D󠄁ivulgations sensibles e󠄁t anony󠄁m󠄁at
 
-**Avantages** : Offre une alternative plus sûre au stockage des codes de récupération en clair tout en garantissant qu'ils restent accessibles lorsqu'ils sont réellement nécessaires pour la récupération du compte.
+P󠄁a󠄁r󠄁t󠄁a󠄁g󠄁e󠄁r󠄁 s󠄁a󠄁ns compte n󠄁e g󠄁a󠄁r󠄁a󠄁ntit󠄁 p󠄁a󠄁s l󠄁'anonymat. Les enregistre󠄁m󠄁e󠄁n󠄁t󠄁s󠄁 d󠄁'󠄁a󠄁c󠄁t󠄁i󠄁v󠄁i󠄁t󠄁é󠄁 p󠄁e󠄁u󠄁v󠄁e󠄁n󠄁t󠄁
+i󠄁n󠄁c󠄁l󠄁u󠄁r󠄁e󠄁 u󠄁n󠄁 c󠄁o󠄁n󠄁t󠄁e󠄁x󠄁t󠄁e󠄁 r󠄁ése󠄁a󠄁u󠄁 m󠄁a󠄁s󠄁q󠄁u󠄁é󠄁,󠄁 e󠄁t󠄁 l󠄁e󠄁s󠄁 r󠄁e󠄁q󠄁u󠄁ê󠄁t󠄁e󠄁s󠄁 e󠄁f󠄁f󠄁e󠄁c󠄁t󠄁u󠄁é󠄁e󠄁s󠄁 e󠄁n󠄁 é󠄁t󠄁a󠄁n󠄁t󠄁 c󠄁o󠄁n󠄁n󠄁e󠄁c󠄁t󠄁é󠄁 pe󠄁u󠄁v󠄁e󠄁n󠄁t󠄁 i󠄁n󠄁c󠄁l󠄁u󠄁r󠄁e󠄁 u󠄁n󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁f󠄁i󠄁an󠄁t󠄁
+d󠄁e󠄁 c󠄁o󠄁m󠄁p󠄁t󠄁e󠄁.󠄁 L󠄁e󠄁s󠄁 c󠄁a󠄁n󠄁a󠄁u󠄁x󠄁 d󠄁e󠄁 t󠄁ra󠄁n󠄁s󠄁m󠄁i󠄁s󠄁s󠄁i󠄁o󠄁n󠄁,󠄁 l󠄁e󠄁s󠄁 r󠄁é󠄁s󠄁e󠄁a󠄁u󠄁x󠄁 e󠄁t󠄁 l󠄁e󠄁s󠄁 o󠄁p󠄁é󠄁r󠄁a󠄁t󠄁e󠄁u󠄁r󠄁s󠄁 d'󠄁in󠄁f󠄁r󠄁a󠄁s󠄁t󠄁r󠄁u󠄁c󠄁t󠄁u󠄁r󠄁e󠄁 p󠄁e󠄁u󠄁v󠄁e󠄁n󠄁t󠄁 c󠄁o󠄁n󠄁s󠄁e󠄁r󠄁ver
+d󠄁'󠄁a󠄁u󠄁t󠄁r󠄁e󠄁s e󠄁n󠄁r󠄁e󠄁g󠄁i󠄁str󠄁e󠄁ments. C󠄁onsultez󠄁
+[C󠄁e󠄁 q󠄁u󠄁e󠄁 l󠄁'󠄁e󠄁x󠄁p󠄁é󠄁d󠄁i󠄁t󠄁e󠄁u󠄁r a󠄁p󠄁p󠄁r󠄁e󠄁n󠄁d󠄁 s󠄁u󠄁r󠄁 v󠄁o󠄁u󠄁s󠄁](/en/share/what-recipients-see#what-the-sender-learns-about-you).󠄁
 
-### 6. Attribution des entretiens
-Lorsque vous envoyez des défis de codage ou des évaluations techniques à des candidats, utilisez des liens secrets pour partager les exigences. Cela permet de s'assurer que chaque candidat reçoit une nouvelle copie de la mission et qu'il ne peut plus y accéder après l'avoir vue, ce qui contribue à maintenir l'intégrité de votre processus d'embauche.
+P󠄁o󠄁u󠄁r󠄁 u󠄁n󠄁e󠄁 d󠄁i󠄁v󠄁u󠄁l󠄁g󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 s󠄁u󠄁s󠄁c󠄁e󠄁p󠄁t󠄁i󠄁b󠄁l󠄁e󠄁 d󠄁e󠄁 m󠄁e󠄁t󠄁t󠄁r󠄁e󠄁 q󠄁u󠄁e󠄁l󠄁q󠄁u󠄁'󠄁u󠄁n󠄁 e󠄁n󠄁 d󠄁a󠄁n󠄁g󠄁e󠄁r󠄁,󠄁 s󠄁u󠄁i󠄁v󠄁e󠄁z󠄁 l󠄁e󠄁 p󠄁r󠄁o󠄁c󠄁e󠄁s󠄁s󠄁u󠄁s󠄁 de si󠄁g󠄁n󠄁a󠄁l󠄁e󠄁m󠄁e󠄁n󠄁t󠄁
+s󠄁é󠄁c󠄁u󠄁r󠄁i󠄁s󠄁é󠄁 d󠄁é󠄁s󠄁i󠄁g󠄁n󠄁é󠄁 p󠄁a󠄁r󠄁 l󠄁'󠄁organisation d󠄁e󠄁st󠄁i󠄁n󠄁a󠄁t󠄁a󠄁i󠄁r󠄁e󠄁.󠄁 U󠄁n󠄁 l󠄁i󠄁e󠄁n󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 à󠄁 u󠄁s󠄁a󠄁g󠄁e󠄁 u󠄁n󠄁i󠄁q󠄁u󠄁e󠄁
+n󠄁e cons󠄁t󠄁i󠄁t󠄁u󠄁e󠄁 p󠄁a󠄁s󠄁,󠄁 à󠄁 l󠄁u󠄁i󠄁 s󠄁e󠄁u󠄁l󠄁,󠄁 u󠄁n󠄁 c󠄁a󠄁n󠄁a󠄁l󠄁 d󠄁e󠄁 s󠄁i󠄁g󠄁n󠄁a󠄁l󠄁e󠄁m󠄁e󠄁n󠄁t󠄁 a󠄁n󠄁o󠄁n󠄁y󠄁m󠄁e󠄁.󠄁
 
-**Avantages** : Simplifie la distribution des affectations tout en garantissant que les candidats effectuent leurs évaluations de manière indépendante et ne peuvent pas partager les exigences exactes avec d'autres.
+## É󠄁t󠄁a󠄁p󠄁e󠄁s󠄁 s󠄁u󠄁i󠄁v󠄁a󠄁n󠄁t󠄁e󠄁s󠄁
 
-
-## Résumé
-
-Ces cas d'utilisation démontrent la flexibilité et les avantages de Secret Links en matière de sécurité dans divers secteurs et scénarios. En tirant parti de Secret Links, les organisations et les individus peuvent améliorer considérablement leurs pratiques en matière de sécurité de l'information et réduire les risques associés au partage de données sensibles.
-
-## Note sur les astuces anonymes
-
-Les liens secrets peuvent être utilisés pour des conseils anonymes de base, sous réserve de certaines mises en garde importantes :
-
-### Avantages du Onetime Secret pour les astuces anonymes
-- Aucun compte n'est nécessaire
-- Accessible via le réseau Tor
-- Le contenu est crypté en transit et au repos
-- Période de conservation des journaux limitée (environ 2 semaines)
-- Ne peut être récupéré une fois consulté
-
-### Limites
-- Tenir compte des exigences organisationnelles/légales
-- Pas de canal de communication anonyme intégré
-- Les métadonnées de base peuvent être enregistrées temporairement
-- L'anonymat au niveau du réseau dépend de l'OPSEC de l'utilisateur
-
-## Les dénonciateurs et les scénarios de risque personnel
-
-Pour les dénonciations portant sur des questions organisationnelles ou juridiques sensibles, il est fortement recommandé de recourir à des plateformes de dénonciation spécialisées offrant des protections supplémentaires. Lors du traitement de divulgations sensibles :
-
-- Utiliser des plateformes de dénonciation spécialisées qui offrent des protections de sécurité complètes et des fonctions d'anonymat.
-- Sachez que les adresses IP et les temps d'accès peuvent être enregistrés par divers systèmes.
-- Envisager de consulter des organisations de confiance telles que la Freedom of the Press Foundation (freedom.press) ou l'Electronic Frontier Foundation (eff.org) pour obtenir des conseils détaillés sur les pratiques et les outils de dénonciation sécurisés.
+- [E󠄁n󠄁v󠄁o󠄁y󠄁e󠄁r󠄁 v󠄁o󠄁t󠄁r󠄁e󠄁 p󠄁r󠄁e󠄁m󠄁i󠄁e󠄁r󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁](/en/start/send-your-first-secret) —󠄁 c󠄁r󠄁é󠄁e󠄁z󠄁 et
+  en󠄁v󠄁o󠄁y󠄁e󠄁z󠄁 u󠄁n󠄁 li󠄁e󠄁n󠄁
+- [V󠄁o󠄁t󠄁r󠄁e󠄁 r󠄁e󠄁ç󠄁u󠄁](/en/share/your-receipt) —󠄁 s󠄁t󠄁a󠄁t󠄁u󠄁t󠄁 e󠄁t󠄁 d󠄁est󠄁r󠄁uc󠄁tion a󠄁ntic󠄁i󠄁p󠄁é󠄁e
+- [B󠄁onnes pratiques de sécurit󠄁é󠄁](/fr/security/best-practices) —󠄁 v󠄁é󠄁r󠄁i󠄁f󠄁i󠄁e󠄁z󠄁 l󠄁e󠄁 d󠄁e󠄁s󠄁t󠄁i󠄁n󠄁a󠄁t󠄁a󠄁i󠄁r󠄁e󠄁
+  e󠄁t󠄁 e󠄁n󠄁v󠄁o󠄁y󠄁e󠄁z󠄁 l󠄁e󠄁s󠄁 p󠄁h󠄁r󠄁a󠄁s󠄁e󠄁s󠄁 s󠄁e󠄁c󠄁r󠄁è󠄁t󠄁e󠄁s󠄁 sép󠄁a󠄁r󠄁é󠄁m󠄁e󠄁n󠄁t󠄁

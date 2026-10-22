@@ -19,7 +19,7 @@
 -->
 
 <script setup lang="ts">
-  import { computed, nextTick, onMounted, reactive, ref, watch } from 'vue';
+  import { computed, nextTick, onBeforeUnmount, onMounted, reactive, ref, watch } from 'vue';
   import { changedLines, splitLines } from './diff';
   import { GROUPS, OPTIONS, type GroupSpec, type OptionSpec } from './presets';
   import {
@@ -164,11 +164,14 @@
     // When a change leaves a dependent option's requirement unmet (switching
     // back to Simple mode with SSO on), reset it rather than leaving a stale
     // value for generate() to warn about. A stale value seeded from a shared
-    // link is left alone, so that link still gets its warning.
+    // link is left alone, so that link still gets its warning. The source is
+    // a string rather than the array: an array is a fresh value on every read,
+    // so Vue would run the callback on every change instead of only when the
+    // unmet set itself changes.
     watch(
-      () => OPTIONS.filter((opt) => !requirementMet(opt)).map((opt) => opt.key),
+      () => OPTIONS.filter((opt) => !requirementMet(opt)).map((opt) => opt.key).join(' '),
       (unmet) => {
-        for (const key of unmet) {
+        for (const key of unmet.split(' ').filter(Boolean)) {
           const opt = OPTIONS.find((o) => o.key === key);
           if (opt) selections[key] = defaultFor(opt);
         }
@@ -191,6 +194,8 @@
 
   // ── Copy / download ─────────────────────────────────────────────────
   let copiedTimer: ReturnType<typeof setTimeout> | undefined;
+  // A copy right before navigation would otherwise write to a torn-down ref.
+  onBeforeUnmount(() => clearTimeout(copiedTimer));
   async function copyFile(file: FileMeta) {
     try {
       await navigator.clipboard.writeText(contents.value[file.key]);
@@ -216,6 +221,10 @@
 
 <template>
   <div class="cg not-content">
+    <!-- The link below is /en/ on purpose while every other link in the tool is
+         locale-relative: the generator page exists in English only, with the
+         other locales redirected to it (configGeneratorRedirects in
+         config/redirects.mjs), so there is no locale to make it relative to. -->
     <p v-if="!ready" class="cg-loading" role="status">
       The interactive generator has not loaded yet. If this message stays visible,
       reload the page or use the <a href="/en/self-hosting/configuration/">configuration reference</a>.
@@ -309,7 +318,12 @@
         tabindex="-1"
         ref="outputEl"
         class="cg-output"
-        aria-label="Generated files">
+        aria-labelledby="cg-output-title">
+        <!-- Visually hidden: the file names below are the visible titles. It
+             keeps the outline in order (page title, this, one h3 per file, then
+             the host page's own h2) rather than adding a second family of h2s
+             beside the host page's. -->
+        <h2 id="cg-output-title" class="cg-sr-only">Generated files</h2>
         <ul
           v-if="result.warnings.length"
           class="cg-warnings">
@@ -328,7 +342,7 @@
             :data-file="file.key"
             :aria-labelledby="`cg-file-${file.key}`">
             <div class="cg-file-header">
-              <h2
+              <h3
                 :id="`cg-file-${file.key}`"
                 class="cg-file-name">
                 <span
@@ -336,7 +350,7 @@
                   class="cg-file-dir"
                   >{{ file.dir }}</span
                 >{{ file.name }}
-              </h2>
+              </h3>
               <div class="cg-actions">
                 <button
                   type="button"

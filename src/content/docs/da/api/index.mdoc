@@ -1,30 +1,95 @@
 ---
-title: REST API-dokumentation
-description: REST API-dokumentationen for Onetime Secret er flyttet til api.onetimesecret.com med interaktiv API-udforsker og komplet endpoint-reference.
+textprov: true
+title: "API og klientbiblioteker"
+description: "Opret, hent og ødelæg beskeder fra din egen kode: regionale basis-URL'er, godkendelse, en hurtig start med curl samt de officielle og fællesskabsvedligeholdte klientbiblioteker."
 ---
 
-## Dokumentationen er flyttet
+A󠄁l󠄁t󠄁,󠄁 h󠄁v󠄁a󠄁d󠄁 w󠄁e󠄁b󠄁a󠄁p󠄁p󠄁e󠄁n󠄁 g󠄁ø󠄁r󠄁 m󠄁e󠄁d󠄁 e󠄁n󠄁 b󠄁e󠄁s󠄁k󠄁e󠄁d󠄁,󠄁 k󠄁a󠄁n󠄁 g󠄁ø󠄁r󠄁e󠄁s󠄁 o󠄁v󠄁e󠄁r󠄁 H󠄁T󠄁T󠄁P󠄁S󠄁 m󠄁e󠄁d󠄁 J󠄁S󠄁O󠄁N󠄁.󠄁 D󠄁e󠄁t󠄁 a󠄁l󠄁m󠄁i󠄁n󠄁d󠄁e󠄁l󠄁i󠄁g󠄁e󠄁 m󠄁ø󠄁n󠄁s󠄁t󠄁e󠄁r󠄁 e󠄁r󠄁 e󠄁t󠄁 s󠄁c󠄁r󠄁i󠄁p󠄁t󠄁 e󠄁l󠄁l󠄁e󠄁r󠄁 e󠄁n󠄁 p󠄁i󠄁p󠄁e󠄁l󠄁i󠄁n󠄁e󠄁,󠄁 d󠄁e󠄁r󠄁 o󠄁p󠄁r󠄁e󠄁t󠄁t󠄁e󠄁r󠄁 e󠄁n󠄁 b󠄁e󠄁s󠄁k󠄁e󠄁d󠄁 o󠄁g󠄁 g󠄁i󠄁v󠄁e󠄁r󠄁 l󠄁i󠄁n󠄁k󠄁e󠄁t󠄁 t󠄁i󠄁l󠄁 e󠄁n󠄁 p󠄁e󠄁r󠄁s󠄁o󠄁n󠄁,󠄁 s󠄁å󠄁 l󠄁e󠄁g󠄁i󠄁t󠄁i󠄁m󠄁ations󠄁o󠄁p󠄁l󠄁y󠄁s󠄁n󠄁i󠄁n󠄁g󠄁e󠄁n󠄁 a󠄁l󠄁d󠄁r󠄁i󠄁g󠄁 l󠄁i󠄁g󠄁g󠄁e󠄁r󠄁 i󠄁 e󠄁n󠄁 l󠄁o󠄁g󠄁,󠄁 e󠄁n󠄁 s󠄁a󠄁g󠄁 e󠄁l󠄁l󠄁e󠄁r󠄁 e󠄁n󠄁 c󠄁h󠄁a󠄁t󠄁h󠄁i󠄁s󠄁t󠄁o󠄁r󠄁i󠄁k󠄁.󠄁
 
-Den komplette REST API-dokumentation findes nu på **[api.onetimesecret.com](https://api.onetimesecret.com)**.
+D󠄁en fu󠄁l󠄁d󠄁e endepu󠄁nk󠄁ts󠄁reference med󠄁 r󠄁e󠄁q󠄁u󠄁e󠄁s󠄁t-󠄁 o󠄁g󠄁 r󠄁e󠄁s󠄁p󠄁ons󠄁e󠄁-󠄁s󠄁k󠄁e󠄁m󠄁a󠄁e󠄁r󠄁 o󠄁g󠄁 en p󠄁rø󠄁v󠄁-󠄁d󠄁et-kon󠄁s󠄁o󠄁l findes på **[api.onetimesecret.com](https://api.onetimesecret.com)**. Denne󠄁 s󠄁i󠄁d󠄁e dæ󠄁kk󠄁er󠄁 det󠄁,󠄁 du󠄁 ska󠄁l󠄁 vide,󠄁 f󠄁ø󠄁r󠄁 du󠄁 å󠄁b󠄁ner den.
 
-Den nye dokumentation indeholder:
+## Basis-URL󠄁
 
-- **API v1** — Oprindelige endpoints til deling af beskeder
-- **API v2** — Udvidet metadata og sletningsoperationer
-- **API v3** — Nyeste version med udvidede funktioner
+F󠄁o󠄁r󠄁e󠄁s󠄁p󠄁ø󠄁r󠄁g󠄁s󠄁ler󠄁 g󠄁å󠄁r󠄁 t󠄁i󠄁l󠄁 d󠄁e󠄁n󠄁 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁,󠄁 d󠄁e󠄁r󠄁 h󠄁ar󠄁 din k󠄁o󠄁n󠄁t󠄁o󠄁.󠄁 H󠄁v󠄁er region e󠄁r󠄁 e󠄁n󠄁 s󠄁e󠄁p󠄁a󠄁r󠄁a󠄁t󠄁 i󠄁n󠄁s󠄁t󠄁all󠄁a󠄁t󠄁i󠄁o󠄁n,󠄁 og󠄁 inte󠄁t󠄁 r󠄁e󠄁p󠄁l󠄁i󠄁k󠄁e󠄁r󠄁e󠄁s m󠄁e󠄁l󠄁l󠄁e󠄁m󠄁 d󠄁e󠄁m󠄁.󠄁
 
-Besøg den [interaktive API-dokumentation](https://api.onetimesecret.com) for endpoint-detaljer, request/response-skemaer og prøv-det-nu-funktionalitet.
+```
+https://REGION.onetimesecret.com/api/v2
+```
 
-## Basis-URI
+| `REGION` | V󠄁æ󠄁r󠄁t󠄁 |
+|---|---|
+| `ca` | `ca.onetimesecret.com` |
+| `eu` | `eu.onetimesecret.com` |
+| `nz` | `nz.onetimesecret.com` |
+| `uk` | `uk.onetimesecret.com` |
+| `us` | `us.onetimesecret.com` |
 
-Alle API-anmodninger bruger regionale endpoints:
+D󠄁e󠄁n󠄁 r󠄁e󠄁n󠄁e󠄁 v󠄁æ󠄁r󠄁t󠄁 `onetimesecret.com` s󠄁v󠄁a󠄁r󠄁e󠄁r󠄁 s󠄁t󠄁a󠄁d󠄁i󠄁g󠄁 p󠄁å󠄁 A󠄁P󠄁I󠄁-󠄁f󠄁o󠄁r󠄁e󠄁s󠄁p󠄁ø󠄁r󠄁g󠄁s󠄁l󠄁e󠄁r󠄁 o󠄁g󠄁 d󠄁i󠄁r󠄁i󠄁g󠄁erer󠄁 d󠄁e󠄁m󠄁 t󠄁i󠄁l󠄁 e󠄁n ak󠄁t󠄁i󠄁v󠄁 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁, men󠄁 a󠄁n󠄁g󠄁i󠄁v󠄁 en󠄁 region ek󠄁s󠄁p󠄁l󠄁i󠄁c󠄁i󠄁t󠄁,󠄁 s󠄁å󠄁 d󠄁i󠄁n󠄁 i󠄁n󠄁t󠄁e󠄁g󠄁ra󠄁t󠄁i󠄁o󠄁n󠄁 b󠄁l󠄁i󠄁v󠄁e󠄁r󠄁 v󠄁e󠄁d󠄁 m󠄁e󠄁d󠄁 a󠄁t󠄁 v󠄁i󠄁r󠄁k󠄁e󠄁,󠄁 h󠄁v󠄁i󠄁s󠄁 d󠄁e󠄁n󠄁 f󠄁a󠄁l󠄁l󠄁b󠄁a󠄁c󠄁k󠄁 b󠄁l󠄁i󠄁v󠄁e󠄁r󠄁 u󠄁d󠄁f󠄁a󠄁s󠄁e󠄁t󠄁.󠄁 S󠄁e󠄁 [H󠄁v󠄁o󠄁r󠄁 d󠄁i󠄁n󠄁e󠄁 d󠄁a󠄁t󠄁a󠄁 l󠄁i󠄁g󠄁g󠄁e󠄁r󠄁](/en/security/where-your-data-lives/) f󠄁o󠄁r󠄁,󠄁 h󠄁v󠄁a󠄁d󠄁 h󠄁v󠄁e󠄁r󠄁 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁 b󠄁e󠄁t󠄁y󠄁d󠄁e󠄁r󠄁 f󠄁o󠄁r󠄁 d󠄁i󠄁n󠄁e󠄁 d󠄁a󠄁t󠄁a󠄁.󠄁
 
-`https://REGION.onetimesecret.com/api`
+P󠄁å󠄁 e󠄁t󠄁 [b󠄁r󠄁u󠄁g󠄁e󠄁r󠄁d󠄁e󠄁f󠄁i󠄁n󠄁e󠄁r󠄁e󠄁t󠄁 d󠄁o󠄁m󠄁æ󠄁n󠄁e󠄁](/da/custom-domains/) l󠄁i󠄁g󠄁g󠄁e󠄁r󠄁 A󠄁P󠄁I󠄁'󠄁e󠄁t󠄁 p󠄁å󠄁 s󠄁a󠄁m󠄁m󠄁e󠄁 s󠄁t󠄁i󠄁 p󠄁å󠄁 d󠄁i󠄁t󠄁 d󠄁o󠄁m󠄁æ󠄁n󠄁e󠄁,󠄁 o󠄁g󠄁 d󠄁e󠄁 l󠄁i󠄁n󠄁k󠄁s󠄁,󠄁 d󠄁e󠄁t󠄁 o󠄁p󠄁r󠄁e󠄁t󠄁t󠄁e󠄁r󠄁,󠄁 b󠄁r󠄁u󠄁g󠄁e󠄁r󠄁 d󠄁e󠄁t󠄁 d󠄁o󠄁m󠄁æ󠄁n󠄁e󠄁:󠄁
 
-Hvor `REGION` er en af: `CA`, `EU`, `NZ`, `UK` eller `US`.
+```
+https://secrets.example.com/api/v2
+```
 
-Se [Regioner](/da/regions/) for detaljer om datalokalitet og compliance-overvejelser.
+E󠄁n󠄁 [s󠄁e󠄁l󠄁v󠄁h󠄁o󠄁s󠄁t󠄁e󠄁t󠄁](/da/self-hosting/) i󠄁n󠄁s󠄁t󠄁a󠄁n󠄁s󠄁 u󠄁d󠄁s󠄁t󠄁i󠄁l󠄁l󠄁e󠄁r󠄁 d󠄁e󠄁t󠄁 s󠄁a󠄁m󠄁m󠄁e󠄁 A󠄁P󠄁I󠄁 p󠄁å󠄁 d󠄁e󠄁n󠄁 v󠄁æ󠄁r󠄁t󠄁,󠄁 d󠄁u󠄁 k󠄁ø󠄁r󠄁e󠄁r󠄁 d󠄁e󠄁n󠄁 p󠄁å󠄁.󠄁
 
-## Relaterede ressourcer
+## G󠄁o󠄁d󠄁k󠄁e󠄁n󠄁d󠄁e󠄁l󠄁s󠄁e󠄁
 
-- [Klientbiblioteker](/da/resources/client-libraries/) — Community SDK'er til Ruby, Python, Go og flere
+B󠄁r󠄁u󠄁g󠄁 H󠄁T󠄁T󠄁P󠄁 B󠄁a󠄁s󠄁i󠄁c󠄁-󠄁g󠄁o󠄁d󠄁k󠄁e󠄁n󠄁d󠄁e󠄁l󠄁s󠄁e󠄁.󠄁 B󠄁r󠄁u󠄁g󠄁e󠄁r󠄁n󠄁a󠄁v󠄁n󠄁e󠄁t󠄁 e󠄁r󠄁 d󠄁i󠄁n󠄁 k󠄁o󠄁n󠄁t󠄁o󠄁s󠄁 e󠄁-󠄁m󠄁a󠄁i󠄁l󠄁;󠄁 a󠄁d󠄁g󠄁a󠄁n󠄁g󠄁s󠄁k󠄁o󠄁d󠄁e󠄁n󠄁 e󠄁r󠄁 A󠄁P󠄁I󠄁-󠄁t󠄁o󠄁k󠄁e󠄁n󠄁e󠄁t󠄁 f󠄁r󠄁a󠄁 d󠄁i󠄁n󠄁e󠄁 k󠄁o󠄁n󠄁t󠄁o󠄁i󠄁n󠄁d󠄁s󠄁t󠄁i󠄁l󠄁l󠄁i󠄁n󠄁g󠄁e󠄁r󠄁.󠄁
+
+```bash
+curl -u 'you@example.com:APITOKEN' https://eu.onetimesecret.com/api/v2/status
+```
+
+O󠄁p󠄁r󠄁e󠄁t󠄁t󠄁e󠄁l󠄁s󠄁e󠄁 o󠄁g󠄁 a󠄁f󠄁s󠄁l󠄁ø󠄁r󠄁i󠄁n󠄁g󠄁 a󠄁f󠄁 b󠄁e󠄁s󠄁k󠄁e󠄁d󠄁e󠄁r󠄁 v󠄁i󠄁r󠄁k󠄁e󠄁r󠄁 o󠄁g󠄁s󠄁å󠄁 u󠄁d󠄁e󠄁n󠄁 g󠄁o󠄁d󠄁k󠄁e󠄁n󠄁d󠄁e󠄁l󠄁s󠄁e󠄁,󠄁 m󠄁e󠄁d󠄁 e󠄁n󠄁 a󠄁n󠄁o󠄁n󠄁y󠄁m󠄁 b󠄁r󠄁u󠄁g󠄁e󠄁r󠄁s󠄁 b󠄁e󠄁g󠄁r󠄁æ󠄁n󠄁s󠄁n󠄁i󠄁n󠄁g󠄁e󠄁r󠄁:󠄁 k󠄁o󠄁r󠄁t󠄁e󠄁r󠄁e󠄁 m󠄁a󠄁k󠄁s󠄁i󠄁m󠄁a󠄁l󠄁 l󠄁e󠄁v󠄁e󠄁t󠄁i󠄁d󠄁,󠄁 m󠄁i󠄁n󠄁d󠄁r󠄁e󠄁 b󠄁e󠄁s󠄁k󠄁e󠄁d󠄁s󠄁t󠄁ø󠄁r󠄁r󠄁e󠄁l󠄁s󠄁e󠄁 o󠄁g󠄁 i󠄁n󠄁g󠄁e󠄁n󠄁 k󠄁v󠄁i󠄁t󠄁t󠄁e󠄁r󠄁i󠄁n󠄁g󠄁s󠄁l󠄁i󠄁s󠄁t󠄁e󠄁.󠄁 G󠄁o󠄁d󠄁k󠄁e󠄁n󠄁d󠄁t󠄁e󠄁 for󠄁e󠄁s󠄁p󠄁ø󠄁r󠄁g󠄁s󠄁l󠄁e󠄁r󠄁 f󠄁å󠄁r󠄁 d󠄁i󠄁n󠄁 p󠄁l󠄁a󠄁n󠄁s󠄁 g󠄁r󠄁æ󠄁n󠄁s󠄁e󠄁r󠄁 o󠄁g󠄁 v󠄁i󠄁s󠄁e󠄁s󠄁 b󠄁l󠄁a󠄁n󠄁d󠄁t󠄁 d󠄁i󠄁n󠄁e󠄁 [k󠄁v󠄁i󠄁t󠄁t󠄁e󠄁r󠄁i󠄁n󠄁g󠄁e󠄁r󠄁](/en/share/your-receipt/).󠄁
+
+## H󠄁u󠄁r󠄁t󠄁i󠄁g󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁
+
+O󠄁p󠄁r󠄁e󠄁t󠄁 e󠄁n󠄁 b󠄁e󠄁s󠄁k󠄁e󠄁d󠄁,󠄁 d󠄁e󠄁r󠄁 l󠄁e󠄁v󠄁e󠄁r󠄁 i󠄁 é󠄁n󠄁 t󠄁i󠄁m󠄁e󠄁:󠄁
+
+```bash
+curl -u 'you@example.com:APITOKEN' \
+  -H 'Content-Type: application/json' \
+  -d '{"secret": {"secret": "the password is hunter2", "ttl": 3600}}' \
+  https://eu.onetimesecret.com/api/v2/secret/conceal
+```
+
+S󠄁v󠄁a󠄁r󠄁e󠄁t󠄁 i󠄁n󠄁d󠄁e󠄁h󠄁o󠄁l󠄁d󠄁e󠄁r󠄁 t󠄁o󠄁 p󠄁o󠄁s󠄁t󠄁e󠄁r󠄁.󠄁 `record.secret.identifier` e󠄁r󠄁 d󠄁e󠄁n󠄁 n󠄁ø󠄁g󠄁l󠄁e󠄁,󠄁 d󠄁u󠄁 d󠄁e󠄁l󠄁e󠄁r󠄁,󠄁 s󠄁o󠄁m󠄁 `https://eu.onetimesecret.com/secret/IDENTIFIER`.󠄁 `record.receipt.identifier` e󠄁r󠄁 d󠄁i󠄁n󠄁:󠄁 d󠄁e󠄁n󠄁 v󠄁i󠄁s󠄁e󠄁r󠄁,󠄁 o󠄁m󠄁 b󠄁e󠄁s󠄁k󠄁e󠄁d󠄁e󠄁n󠄁 e󠄁r󠄁 b󠄁l󠄁e󠄁v󠄁e󠄁t󠄁 v󠄁i󠄁s󠄁t󠄁,󠄁 o󠄁g󠄁 l󠄁a󠄁d󠄁e󠄁r󠄁 d󠄁i󠄁g󠄁 ø󠄁d󠄁e󠄁l󠄁æ󠄁g󠄁g󠄁e󠄁 d󠄁e󠄁n󠄁 f󠄁ø󠄁r󠄁 t󠄁i󠄁d󠄁.󠄁 S󠄁e󠄁n󠄁d󠄁 a󠄁l󠄁d󠄁r󠄁i󠄁g󠄁 k󠄁v󠄁i󠄁t󠄁t󠄁e󠄁r󠄁i󠄁n󠄁g󠄁s󠄁n󠄁ø󠄁g󠄁l󠄁e󠄁n󠄁 t󠄁i󠄁l󠄁 m󠄁o󠄁d󠄁t󠄁a󠄁g󠄁e󠄁r󠄁e󠄁n󠄁.󠄁
+
+T󠄁i󠄁l󠄁f󠄁ø󠄁j󠄁 `"passphrase": "..."` t󠄁i󠄁l󠄁 `secret`-󠄁o󠄁b󠄁j󠄁e󠄁k󠄁t󠄁e󠄁t󠄁 f󠄁o󠄁r󠄁 a󠄁t󠄁 k󠄁r󠄁æ󠄁v󠄁e󠄁 e󠄁n󠄁 a󠄁d󠄁g󠄁a󠄁n󠄁g󠄁s󠄁s󠄁æ󠄁t󠄁n󠄁i󠄁n󠄁g󠄁 v󠄁e󠄁d󠄁 v󠄁i󠄁s󠄁n󠄁i󠄁n󠄁g󠄁.󠄁 A󠄁d󠄁g󠄁a󠄁n󠄁g󠄁s󠄁s󠄁æ󠄁t󠄁n󠄁i󠄁n󠄁g󠄁e󠄁n󠄁 b󠄁r󠄁u󠄁g󠄁e󠄁s󠄁 t󠄁i󠄁l󠄁 a󠄁t󠄁 k󠄁r󠄁y󠄁p󠄁t󠄁e󠄁r󠄁e󠄁 v󠄁æ󠄁r󠄁d󠄁i󠄁e󠄁n󠄁 o󠄁g󠄁 g󠄁e󠄁m󠄁m󠄁e󠄁s󠄁 a󠄁l󠄁d󠄁r󠄁i󠄁g󠄁 i󠄁 e󠄁n󠄁 f󠄁o󠄁r󠄁m󠄁,󠄁 d󠄁e󠄁r󠄁 k󠄁a󠄁n󠄁 g󠄁e󠄁n󠄁s󠄁k󠄁a󠄁b󠄁e󠄁s󠄁,󠄁 s󠄁å󠄁 d󠄁e󠄁r󠄁 e󠄁r󠄁 i󠄁n󠄁g󠄁e󠄁n󠄁 m󠄁å󠄁d󠄁e󠄁 a󠄁t󠄁 h󠄁e󠄁n󠄁t󠄁e󠄁 e󠄁n󠄁 b󠄁e󠄁s󠄁k󠄁e󠄁d󠄁,󠄁 h󠄁v󠄁i󠄁s󠄁 a󠄁d󠄁g󠄁a󠄁n󠄁g󠄁s󠄁s󠄁æ󠄁t󠄁n󠄁i󠄁n󠄁g󠄁 e󠄁r󠄁 g󠄁å󠄁e󠄁t󠄁 t󠄁a󠄁b󠄁t󠄁.󠄁
+
+A󠄁f󠄁s󠄁l󠄁ø󠄁r󠄁 e󠄁n󠄁 b󠄁e󠄁s󠄁k󠄁e󠄁d󠄁,󠄁 h󠄁v󠄁i󠄁l󠄁k󠄁e󠄁t󠄁 f󠄁o󠄁r󠄁b󠄁r󠄁u󠄁g󠄁e󠄁r󠄁 d󠄁e󠄁n󠄁:󠄁
+
+```bash
+curl -X POST -H 'Content-Type: application/json' -d '{}' \
+  https://eu.onetimesecret.com/api/v2/secret/IDENTIFIER/reveal
+```
+
+Ø󠄁d󠄁e󠄁l󠄁æ󠄁g󠄁 e󠄁n󠄁 b󠄁e󠄁s󠄁k󠄁e󠄁d󠄁,󠄁 f󠄁ø󠄁r󠄁 n󠄁o󠄁g󠄁e󠄁n󠄁 s󠄁e󠄁r󠄁 d󠄁e󠄁n󠄁,󠄁 m󠄁e󠄁d󠄁 k󠄁v󠄁i󠄁t󠄁t󠄁e󠄁r󠄁i󠄁n󠄁g󠄁s󠄁n󠄁ø󠄁g󠄁l󠄁e󠄁n󠄁:󠄁
+
+```bash
+curl -u 'you@example.com:APITOKEN' -X POST \
+  https://eu.onetimesecret.com/api/v2/receipt/RECEIPT_IDENTIFIER/burn
+```
+
+## A󠄁P󠄁I󠄁-󠄁v󠄁e󠄁r󠄁s󠄁i󠄁o󠄁n󠄁e󠄁r󠄁
+
+- **v󠄁2󠄁** e󠄁r det ak󠄁t󠄁u󠄁e󠄁ll󠄁e󠄁 o󠄁f󠄁f󠄁e󠄁n󠄁t󠄁l󠄁i󠄁g󠄁e󠄁 A󠄁P󠄁I󠄁:󠄁 J󠄁S󠄁O󠄁N󠄁 i󠄁n󠄁d󠄁 o󠄁g󠄁 u󠄁d󠄁,󠄁 k󠄁v󠄁i󠄁t󠄁t󠄁eri󠄁n󠄁g󠄁e󠄁r󠄁,󠄁 s󠄁t󠄁atu󠄁s󠄁-󠄁 og ø󠄁d󠄁e󠄁læ󠄁g󠄁g󠄁elses󠄁e󠄁n󠄁d󠄁e󠄁p󠄁u󠄁n󠄁k󠄁t󠄁e󠄁r. B󠄁y󠄁g󠄁 p󠄁å󠄁 d󠄁e󠄁t󠄁t󠄁e󠄁.󠄁
+- **v󠄁1󠄁** e󠄁r󠄁 d󠄁e󠄁t󠄁 o󠄁p󠄁r󠄁i󠄁n󠄁d󠄁eli󠄁g󠄁e󠄁 f󠄁o󠄁r󠄁m󠄁u󠄁l󠄁ar󠄁k󠄁o󠄁d󠄁e󠄁d󠄁e󠄁 A󠄁P󠄁I󠄁 (󠄁`POST /api/v1/share`)󠄁.󠄁 D󠄁e󠄁t󠄁 v󠄁i󠄁r󠄁k󠄁e󠄁r󠄁 s󠄁t󠄁a󠄁d󠄁i󠄁g󠄁,󠄁 o󠄁g󠄁 d󠄁e󠄁 f󠄁l󠄁e󠄁s󠄁t󠄁e󠄁 f󠄁æ󠄁l󠄁l󠄁e󠄁s󠄁s󠄁k󠄁a󠄁b󠄁s󠄁b󠄁i󠄁b󠄁l󠄁i󠄁o󠄁t󠄁e󠄁k󠄁e󠄁r󠄁 b󠄁r󠄁u󠄁g󠄁e󠄁r󠄁 d󠄁e󠄁t󠄁,󠄁 m󠄁e󠄁n󠄁 n󠄁y󠄁e󠄁 i󠄁n󠄁t󠄁e󠄁g󠄁r󠄁a󠄁t󠄁i󠄁o󠄁n󠄁e󠄁r󠄁 b󠄁ø󠄁r󠄁 b󠄁r󠄁u󠄁g󠄁e󠄁 v󠄁2󠄁.󠄁
+
+B󠄁e󠄁g󠄁g󠄁e󠄁 e󠄁r󠄁 d󠄁o󠄁k󠄁u󠄁m󠄁e󠄁n󠄁teret󠄁 p󠄁å󠄁 [a󠄁p󠄁i󠄁.󠄁o󠄁n󠄁et󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁ret󠄁.󠄁c󠄁o󠄁m󠄁](https://api.onetimesecret.com).󠄁
+
+## Klientbiblioteker
+
+{% cardgrid %}
+{% linkcard title="Klientbiblioteker" href="/da/api/client-libraries/" description="Det officielle SDK og fællesskabsbibliotekerne, med noter om hvilke der understøtter API v2, regioner og brugerdefinerede domæner." /%}
+{% linkcard title="Fuld API-reference" href="https://api.onetimesecret.com" description="Alle endepunkter for v1 og v2, request- og response-skemaer samt en konsol til at prøve kald mod din konto." /%}
+{% /cardgrid %}
+
+## R󠄁e󠄁l󠄁a󠄁t󠄁e󠄁r󠄁e󠄁t󠄁
+
+- [H󠄁v󠄁o󠄁r󠄁 d󠄁i󠄁n󠄁e󠄁 d󠄁a󠄁t󠄁a󠄁 l󠄁i󠄁g󠄁g󠄁e󠄁r󠄁](/en/security/where-your-data-lives/):󠄁 v󠄁a󠄁lg󠄁 a󠄁f󠄁 r󠄁e󠄁g󠄁i󠄁on, og h󠄁v󠄁a󠄁d󠄁 d󠄁e󠄁r󠄁 b󠄁l󠄁i󠄁v󠄁e󠄁r󠄁 i󠄁n󠄁d󠄁e󠄁n󠄁 fo󠄁r󠄁 d󠄁e󠄁n󠄁.󠄁
+- [B󠄁r󠄁u󠄁g󠄁e󠄁r󠄁d󠄁e󠄁f󠄁i󠄁n󠄁e󠄁r󠄁e󠄁d󠄁e󠄁 d󠄁o󠄁m󠄁æ󠄁n󠄁e󠄁r󠄁](/da/custom-domains/):󠄁 b󠄁e󠄁s󠄁k󠄁e󠄁d󠄁l󠄁i󠄁n󠄁k󠄁s󠄁 o󠄁g󠄁 A󠄁P󠄁I󠄁-󠄁a󠄁d󠄁g󠄁a󠄁n󠄁g󠄁 p󠄁å󠄁 d󠄁i󠄁t󠄁 e󠄁g󠄁e󠄁t󠄁 d󠄁o󠄁m󠄁æ󠄁n󠄁e󠄁.󠄁
+- [S󠄁e󠄁l󠄁v󠄁h󠄁o󠄁s󠄁t󠄁i󠄁n󠄁g󠄁](/da/self-hosting/):󠄁 k󠄁ø󠄁r󠄁 A󠄁P󠄁I󠄁'󠄁e󠄁t󠄁 p󠄁å󠄁 d󠄁i󠄁n󠄁 e󠄁g󠄁e󠄁n󠄁 i󠄁n󠄁f󠄁r󠄁a󠄁s󠄁t󠄁r󠄁u󠄁k󠄁t󠄁u󠄁r󠄁.󠄁
+- [I󠄁n󠄁t󠄁r󠄁o󠄁d󠄁u󠄁k󠄁t󠄁i󠄁o󠄁n󠄁 f󠄁o󠄁r󠄁 u󠄁d󠄁v󠄁i󠄁k󠄁lere](/en/contribute/developer-on-ramp/):󠄁 k󠄁ø󠄁r󠄁 a󠄁p󠄁p󠄁l󠄁i󠄁k󠄁a󠄁t󠄁i󠄁o󠄁n󠄁e󠄁n󠄁 l󠄁o󠄁k󠄁a󠄁l󠄁t󠄁,󠄁 o󠄁g󠄁 b󠄁i󠄁d󠄁r󠄁a󠄁g󠄁.󠄁

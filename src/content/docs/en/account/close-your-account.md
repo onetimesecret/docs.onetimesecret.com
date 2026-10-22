@@ -4,7 +4,7 @@ title: Closing your account
 description: What closing your account deletes and keeps, what happens to shared links and organizations, and how to close it.
 audience: end-user
 pageType: how-to
-sourceOfTruth: onetimesecret/apps/web/auth/config/hooks/account.rb:1155-1228 (closure preflight, refusal message, and self-service purge); onetimesecret/apps/web/auth/operations/customers/purge_preflight.rb:553-586,636-658,744-752 (memberships removed, empty personal workspace deleted, refusal conditions); onetimesecret/apps/web/auth/operations/remove_authentication_data.rb:170-196 (credentials removed; deleting the sign-in row and its authentication audit log at closure is tracked in onetimesecret/onetimesecret#4819); onetimesecret/apps/web/auth/operations/destroy_customer_record.rb:87-94 (the customer record is deleted); onetimesecret/apps/web/auth/migrations/001_initial.rb:31-32 (a closed row does not reserve its email address)
+sourceOfTruth: onetimesecret/apps/web/auth/config/hooks/account.rb:1155-1228 (closure preflight, refusal message, and self-service purge); onetimesecret/apps/web/auth/operations/customers/purge_preflight.rb:553-586,636-658,744-752 (memberships removed, empty personal workspace deleted, refusal conditions); onetimesecret/apps/web/auth/operations/remove_authentication_data.rb:170-196 (credentials removed; deleting the sign-in row and its authentication audit log at closure is tracked in onetimesecret/onetimesecret#4819); onetimesecret/apps/web/auth/config/features/audit_logging.rb:78-289 (each sign-in, failed sign-in, password and second-factor event records the network address and browser); onetimesecret/apps/web/auth/operations/destroy_customer_record.rb:87-94 (the customer record is deleted); onetimesecret/apps/web/auth/migrations/001_initial.rb:31-32 (a closed row does not reserve its email address)
 ---
 
 Closing your account deletes your sign-in methods a󠄁n󠄁d account r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁 and s󠄁i󠄁g󠄁ns󠄁
@@ -73,8 +73,9 @@ again t󠄁o󠄁 check.󠄁
 - **Y󠄁o󠄁u󠄁r󠄁 s󠄁e󠄁s󠄁s󠄁i󠄁o󠄁n󠄁s󠄁.󠄁** E󠄁v󠄁e󠄁r󠄁y󠄁 d󠄁e󠄁v󠄁i󠄁c󠄁e󠄁 s󠄁i󠄁g󠄁n󠄁e󠄁d󠄁 i󠄁n󠄁 t󠄁o󠄁 t󠄁h󠄁e󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁 i󠄁s󠄁 s󠄁i󠄁g󠄁n󠄁e󠄁d󠄁 o󠄁u󠄁t󠄁.󠄁 S󠄁e󠄁e󠄁
   [S󠄁e󠄁s󠄁s󠄁i󠄁o󠄁n󠄁s󠄁 a󠄁n󠄁d󠄁 c󠄁o󠄁n󠄁n󠄁e󠄁c󠄁t󠄁e󠄁d󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁t󠄁i󠄁e󠄁s󠄁](/en/account/sessions-and-identities).󠄁
 - **Y󠄁o󠄁u󠄁r󠄁 s󠄁i󠄁g󠄁n󠄁-󠄁i󠄁n󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁 a󠄁n󠄁d󠄁 i󠄁t󠄁s󠄁 h󠄁i󠄁s󠄁t󠄁o󠄁r󠄁y󠄁.󠄁** Y󠄁o󠄁u󠄁r󠄁 e󠄁m󠄁a󠄁i󠄁l󠄁 a󠄁d󠄁d󠄁r󠄁e󠄁s󠄁s󠄁 a󠄁s󠄁 a󠄁 s󠄁i󠄁g󠄁n󠄁-󠄁i󠄁n󠄁
-  n󠄁a󠄁m󠄁e󠄁,󠄁 a󠄁n󠄁d󠄁 t󠄁h󠄁e󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁 o󠄁f󠄁 s󠄁i󠄁g󠄁n󠄁-󠄁i󠄁n󠄁s󠄁,󠄁 p󠄁a󠄁s󠄁s󠄁w󠄁o󠄁r󠄁d󠄁 c󠄁h󠄁a󠄁n󠄁g󠄁e󠄁s󠄁 a󠄁n󠄁d󠄁 s󠄁e󠄁c󠄁o󠄁n󠄁d󠄁-󠄁f󠄁a󠄁c󠄁t󠄁o󠄁r󠄁 c󠄁h󠄁a󠄁n󠄁g󠄁e󠄁s󠄁
-  o󠄁n󠄁 t󠄁h󠄁e󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁.󠄁
+  n󠄁a󠄁m󠄁e󠄁,󠄁 a󠄁n󠄁d󠄁 t󠄁h󠄁e󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁 o󠄁f󠄁 s󠄁i󠄁g󠄁n󠄁-󠄁i󠄁n󠄁s󠄁,󠄁 f󠄁a󠄁i󠄁l󠄁e󠄁d󠄁 s󠄁i󠄁g󠄁n󠄁-󠄁i󠄁n󠄁s󠄁,󠄁 p󠄁a󠄁s󠄁s󠄁w󠄁o󠄁r󠄁d󠄁 c󠄁h󠄁a󠄁n󠄁g󠄁e󠄁s󠄁 a󠄁n󠄁d󠄁
+  s󠄁e󠄁c󠄁o󠄁n󠄁d󠄁-󠄁f󠄁a󠄁c󠄁t󠄁o󠄁r󠄁 c󠄁h󠄁a󠄁n󠄁g󠄁e󠄁s󠄁 o󠄁n󠄁 t󠄁h󠄁e󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁,󠄁 w󠄁i󠄁t󠄁h󠄁 t󠄁h󠄁e󠄁 n󠄁e󠄁t󠄁w󠄁o󠄁r󠄁k󠄁 a󠄁d󠄁d󠄁r󠄁e󠄁s󠄁s󠄁 a󠄁n󠄁d󠄁 b󠄁r󠄁o󠄁w󠄁s󠄁e󠄁r󠄁
+  r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁e󠄁d󠄁 f󠄁o󠄁r󠄁 e󠄁a󠄁c󠄁h󠄁.󠄁
 - **Y󠄁o󠄁u󠄁r󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁.󠄁** Y󠄁o󠄁u󠄁r󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁,󠄁 i󠄁t󠄁s󠄁 p󠄁r󠄁e󠄁f󠄁e󠄁r󠄁e󠄁n󠄁c󠄁e󠄁s󠄁 a󠄁n󠄁d󠄁 i󠄁t󠄁s󠄁 A󠄁P󠄁I󠄁 t󠄁o󠄁k󠄁e󠄁n󠄁.󠄁
 - **Y󠄁o󠄁u󠄁r󠄁 o󠄁w󠄁n󠄁 w󠄁o󠄁r󠄁k󠄁s󠄁p󠄁a󠄁c󠄁e󠄁,󠄁** w󠄁i󠄁t󠄁h󠄁 i󠄁t󠄁s󠄁 s󠄁e󠄁t󠄁t󠄁i󠄁n󠄁g󠄁s󠄁 a󠄁n󠄁d󠄁 i󠄁t󠄁s󠄁
   [S󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 A󠄁c󠄁t󠄁i󠄁v󠄁i󠄁t󠄁y󠄁](/en/organizations/audit-trail) r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁.󠄁

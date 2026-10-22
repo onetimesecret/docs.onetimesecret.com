@@ -1,30 +1,95 @@
 ---
-title: REST API Belgeleri
-description: Onetime Secret REST API belgeleri, etkileşimli API gezgini ve tam uç nokta referansı ile api.onetimesecret.com adresine taşındı.
+textprov: true
+title: "API ve istemci kütüphaneleri"
+description: "Kendi kodunuzdan gizli mesaj oluşturun, alın ve yakın. Bölgesel temel URL'ler, kimlik doğrulama, bir curl hızlı başlangıcı ve resmi ile topluluk istemci kütüphaneleri."
 ---
 
-## Belgeler Taşındı
+W󠄁eb󠄁 u󠄁y󠄁g󠄁u󠄁l󠄁a󠄁m󠄁a󠄁s󠄁ı󠄁n󠄁ı󠄁n󠄁 b󠄁i󠄁r󠄁 g󠄁i󠄁z󠄁l󠄁i󠄁 m󠄁e󠄁s󠄁a󠄁j󠄁l󠄁a󠄁 y󠄁a󠄁p󠄁tı󠄁ğ󠄁ı󠄁 h󠄁e󠄁r󠄁 ş󠄁e󠄁y󠄁 H󠄁T󠄁T󠄁P󠄁S󠄁 ü󠄁z󠄁e󠄁r󠄁i󠄁n󠄁d󠄁e󠄁n󠄁 J󠄁S󠄁O󠄁N󠄁 ile y󠄁a󠄁p󠄁ı󠄁l󠄁a󠄁b󠄁i󠄁l󠄁i󠄁r󠄁.󠄁 Y󠄁a󠄁y󠄁g󠄁ı󠄁n󠄁 k󠄁a󠄁l󠄁ı󠄁p󠄁,󠄁 b󠄁i󠄁r󠄁 g󠄁i󠄁z󠄁l󠄁i󠄁 m󠄁e󠄁s󠄁a󠄁j󠄁 o󠄁l󠄁u󠄁şt󠄁u󠄁r󠄁u󠄁p󠄁 b󠄁a󠄁ğ󠄁l󠄁a󠄁n󠄁t󠄁ı󠄁y󠄁ı󠄁 b󠄁i󠄁r󠄁 k󠄁i󠄁ş󠄁i󠄁y󠄁e󠄁 i󠄁l󠄁e󠄁t󠄁e󠄁n󠄁 b󠄁i󠄁r󠄁 b󠄁e󠄁t󠄁i󠄁k󠄁 v󠄁e󠄁y󠄁a󠄁 i󠄁ş󠄁l󠄁e󠄁m󠄁 h󠄁a󠄁t󠄁t󠄁ı󠄁d󠄁ı󠄁r󠄁;󠄁 b󠄁ö󠄁y󠄁l󠄁e󠄁c󠄁e󠄁 k󠄁imlik󠄁 b󠄁i󠄁l󠄁g󠄁i󠄁s󠄁i󠄁 h󠄁i󠄁ç󠄁b󠄁i󠄁r󠄁 z󠄁a󠄁m󠄁a󠄁n󠄁 b󠄁i󠄁r󠄁 g󠄁ü󠄁n󠄁l󠄁ü󠄁k󠄁t󠄁e󠄁,󠄁 d󠄁e󠄁s󠄁t󠄁e󠄁k󠄁 t󠄁a󠄁l󠄁e󠄁b󠄁i󠄁n󠄁d󠄁e󠄁 v󠄁e󠄁y󠄁a󠄁 s󠄁o󠄁h󠄁b󠄁e󠄁t󠄁 geç󠄁m󠄁i󠄁ş󠄁ind󠄁e󠄁 k󠄁a󠄁l󠄁m󠄁a󠄁z󠄁.󠄁
 
-Tam REST API belgeleri artık **[api.onetimesecret.com](https://api.onetimesecret.com)** adresinde barındırılmaktadır.
+İ󠄁s󠄁t󠄁e󠄁k󠄁 ve y󠄁a󠄁n󠄁ı󠄁t󠄁 ş󠄁e󠄁m󠄁a󠄁l󠄁a󠄁r󠄁ı󠄁 i󠄁l󠄁e󠄁 b󠄁i󠄁r󠄁 d󠄁e󠄁n󠄁e󠄁m󠄁e󠄁 k󠄁o󠄁n󠄁s󠄁o󠄁l󠄁u󠄁 i󠄁ç󠄁e󠄁r󠄁e󠄁n󠄁 tam uç nokta referansı **[api.onetimesecret.com](https://api.onetimesecret.com)** adresinde bu󠄁l󠄁u󠄁n󠄁u󠄁r󠄁.󠄁 B󠄁u󠄁 s󠄁ay󠄁f󠄁a󠄁,󠄁 o󠄁ra󠄁y󠄁a󠄁 g󠄁e󠄁ç󠄁m󠄁e󠄁d󠄁e󠄁n ö󠄁n󠄁c󠄁e󠄁 b󠄁i󠄁lmeniz󠄁 gerekenleri ele a󠄁l󠄁ı󠄁r.
 
-Yeni belgeler şunları içermektedir:
+## Temel URL󠄁
 
-- **API v1** — Gizli paylaşımı için orijinal uç noktalar
-- **API v2** — Geliştirilmiş meta veri ve imha işlemleri
-- **API v3** — Genişletilmiş yeteneklere sahip en son sürüm
+İ󠄁stekler,󠄁 h󠄁e󠄁s󠄁a󠄁b󠄁ı󠄁n󠄁ı󠄁z󠄁ı󠄁 b󠄁a󠄁r󠄁ı󠄁n󠄁d󠄁ı󠄁r󠄁a󠄁n󠄁 bölgey󠄁e g󠄁i󠄁d󠄁e󠄁r󠄁.󠄁 H󠄁e󠄁r󠄁 b󠄁ö󠄁lg󠄁e󠄁 a󠄁y󠄁r󠄁ı󠄁 b󠄁i󠄁r󠄁 d󠄁a󠄁ğ󠄁ı󠄁tı󠄁m󠄁d󠄁ı󠄁r󠄁 v󠄁e󠄁 a󠄁r󠄁aların󠄁d󠄁a󠄁 h󠄁i󠄁ç󠄁b󠄁i󠄁r󠄁 ş󠄁e󠄁y󠄁 ç󠄁o󠄁ğ󠄁a󠄁lt󠄁ı󠄁lm󠄁az󠄁.󠄁
 
-Uç nokta detayları, istek/yanıt şemaları ve anında deneme işlevselliği için [etkileşimli API belgelerini](https://api.onetimesecret.com) ziyaret edin.
+```
+https://REGION.onetimesecret.com/api/v2
+```
 
-## Temel URI
+| `REGION` | S󠄁unu󠄁c󠄁u󠄁 |
+|---|---|
+| `ca` | `ca.onetimesecret.com` |
+| `eu` | `eu.onetimesecret.com` |
+| `nz` | `nz.onetimesecret.com` |
+| `uk` | `uk.onetimesecret.com` |
+| `us` | `us.onetimesecret.com` |
 
-Tüm API istekleri bölgesel uç noktaları kullanır:
+Y󠄁a󠄁l󠄁ı󠄁n󠄁 `onetimesecret.com` s󠄁u󠄁n󠄁u󠄁c󠄁u󠄁s󠄁u󠄁 A󠄁P󠄁I󠄁 i󠄁s󠄁t󠄁e󠄁k󠄁l󠄁e󠄁r󠄁i󠄁n󠄁i󠄁 y󠄁a󠄁n󠄁ı󠄁t󠄁lam󠄁a󠄁y󠄁a󠄁 v󠄁e󠄁 a󠄁k󠄁t󠄁i󠄁f󠄁 b󠄁i󠄁r b󠄁ö󠄁l󠄁g󠄁e󠄁y󠄁e󠄁 y󠄁ö󠄁n󠄁l󠄁e󠄁n󠄁di󠄁r󠄁m󠄁e󠄁y󠄁e󠄁 d󠄁e󠄁v󠄁am󠄁 e󠄁d󠄁e󠄁r󠄁;󠄁 a󠄁n󠄁c󠄁a󠄁k󠄁 b󠄁u󠄁 y󠄁e󠄁d󠄁e󠄁k󠄁 y󠄁ö󠄁n󠄁l󠄁e󠄁n󠄁d󠄁i󠄁r󠄁m󠄁e󠄁 k󠄁a󠄁l󠄁d󠄁ı󠄁r󠄁ı󠄁l󠄁ı󠄁r󠄁s󠄁a󠄁 e󠄁n󠄁t󠄁e󠄁g󠄁r󠄁a󠄁s󠄁y󠄁o󠄁n󠄁u󠄁n󠄁u󠄁z󠄁u󠄁n󠄁 ç󠄁a󠄁l󠄁ı󠄁ş󠄁m󠄁a󠄁y󠄁a󠄁 d󠄁e󠄁v󠄁a󠄁m󠄁 e󠄁t󠄁m󠄁e󠄁s󠄁i󠄁 i󠄁ç󠄁i󠄁n bir b󠄁ö󠄁l󠄁g󠄁eyi󠄁 aç󠄁ı󠄁k󠄁ç󠄁a󠄁 s󠄁a󠄁b󠄁i󠄁t󠄁l󠄁e󠄁y󠄁i󠄁n󠄁. H󠄁e󠄁r󠄁 b󠄁ö󠄁l󠄁g󠄁e󠄁n󠄁i󠄁n󠄁 v󠄁erileri󠄁n󠄁i󠄁z󠄁 i󠄁ç󠄁i󠄁n󠄁 n󠄁e󠄁 a󠄁n󠄁l󠄁a󠄁m󠄁a󠄁 g󠄁eld󠄁iğin󠄁i󠄁 ö󠄁ğ󠄁r󠄁en󠄁me󠄁k için [V󠄁e󠄁r󠄁i󠄁ler󠄁i󠄁n󠄁i󠄁z󠄁i󠄁n󠄁 b󠄁u󠄁lu󠄁n󠄁d󠄁u󠄁ğ󠄁u󠄁 y󠄁er](/en/security/where-your-data-lives/) sayfasına bakın.
 
-`https://REGION.onetimesecret.com/api`
+B󠄁i󠄁r󠄁 [ö󠄁z󠄁e󠄁l󠄁 a󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁n󠄁d󠄁a󠄁](/tr/custom-domains/) A󠄁P󠄁I󠄁,󠄁 a󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁n󠄁ı󠄁z󠄁d󠄁a󠄁k󠄁i󠄁 a󠄁y󠄁n󠄁ı󠄁 y󠄁o󠄁l󠄁d󠄁a󠄁 b󠄁u󠄁l󠄁u󠄁n󠄁u󠄁r󠄁 v󠄁e󠄁 o󠄁l󠄁u󠄁ş󠄁t󠄁u󠄁r󠄁d󠄁u󠄁ğ󠄁u󠄁 b󠄁a󠄁ğ󠄁l󠄁a󠄁n󠄁t󠄁ı󠄁l󠄁a󠄁r󠄁 o󠄁 a󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁n󠄁ı󠄁 k󠄁u󠄁l󠄁l󠄁a󠄁n󠄁ı󠄁r󠄁:󠄁
 
-Burada `REGION` şunlardan biridir: `CA`, `EU`, `NZ`, `UK` veya `US`.
+```
+https://secrets.example.com/api/v2
+```
 
-Veri yerelliği ve uyumluluk hususları hakkında ayrıntılar için [Bölgeler](/tr/regions/) sayfasına bakın.
+[K󠄁e󠄁n󠄁d󠄁i󠄁 b󠄁a󠄁r󠄁ı󠄁n󠄁d󠄁ı󠄁r󠄁d󠄁ı󠄁ğ󠄁ı󠄁n󠄁ı󠄁z󠄁](/tr/self-hosting/) b󠄁i󠄁r󠄁 ö󠄁r󠄁n󠄁e󠄁k󠄁,󠄁 h󠄁a󠄁n󠄁g󠄁i󠄁 s󠄁u󠄁n󠄁u󠄁c󠄁u󠄁d󠄁a󠄁 ç󠄁a󠄁l󠄁ı󠄁ş󠄁t󠄁ı󠄁r󠄁ı󠄁r󠄁s󠄁a󠄁n󠄁ı󠄁z󠄁 ç󠄁a󠄁l󠄁ı󠄁ş󠄁t󠄁ı󠄁r󠄁ı󠄁n󠄁 a󠄁y󠄁n󠄁ı󠄁 A󠄁P󠄁I󠄁'󠄁y󠄁i󠄁 s󠄁u󠄁n󠄁a󠄁r󠄁.󠄁
 
-## İlgili Kaynaklar
+## K󠄁i󠄁m󠄁li󠄁k󠄁 d󠄁o󠄁ğ󠄁r󠄁u󠄁l󠄁a󠄁m󠄁a󠄁
 
-- [İstemci Kitaplıkları](/tr/resources/client-libraries/) — Ruby, Python, Go ve diğer diller için topluluk SDK'ları
+H󠄁T󠄁T󠄁P󠄁 B󠄁a󠄁s󠄁i󠄁c󠄁 k󠄁i󠄁m󠄁l󠄁i󠄁k󠄁 d󠄁o󠄁ğ󠄁r󠄁u󠄁l󠄁a󠄁m󠄁a󠄁s󠄁ı󠄁n󠄁ı󠄁 k󠄁u󠄁l󠄁l󠄁a󠄁n󠄁ı󠄁n󠄁.󠄁 K󠄁u󠄁l󠄁l󠄁a󠄁n󠄁ı󠄁c󠄁ı󠄁 a󠄁d󠄁ı󠄁 h󠄁e󠄁s󠄁a󠄁p󠄁 e󠄁-󠄁p󠄁o󠄁s󠄁t󠄁a󠄁n󠄁ı󠄁z󠄁d󠄁ı󠄁r󠄁;󠄁 p󠄁a󠄁r󠄁o󠄁l󠄁a󠄁 i󠄁s󠄁e󠄁 h󠄁e󠄁s󠄁a󠄁p󠄁 a󠄁y󠄁a󠄁r󠄁l󠄁a󠄁r󠄁ı󠄁n󠄁ı󠄁z󠄁d󠄁a󠄁k󠄁i󠄁 A󠄁P󠄁I󠄁 a󠄁n󠄁a󠄁h󠄁t󠄁a󠄁r󠄁ı󠄁d󠄁ı󠄁r󠄁.󠄁
+
+```bash
+curl -u 'you@example.com:APITOKEN' https://eu.onetimesecret.com/api/v2/status
+```
+
+G󠄁i󠄁z󠄁l󠄁i󠄁 m󠄁e󠄁s󠄁a󠄁j󠄁 o󠄁l󠄁u󠄁ş󠄁t󠄁u󠄁r󠄁m󠄁a󠄁 v󠄁e󠄁 gö󠄁s󠄁t󠄁e󠄁r󠄁m󠄁e󠄁,󠄁 a󠄁n󠄁o󠄁n󠄁i󠄁m󠄁 b󠄁i󠄁r󠄁 k󠄁u󠄁l󠄁l󠄁a󠄁n󠄁ı󠄁c󠄁ı󠄁n󠄁ı󠄁n󠄁 s󠄁ı󠄁n󠄁ı󠄁r󠄁l󠄁a󠄁r󠄁ı󠄁y󠄁l󠄁a󠄁 k󠄁i󠄁m󠄁l󠄁i󠄁k󠄁 d󠄁o󠄁ğ󠄁r󠄁u󠄁l󠄁a󠄁m󠄁a󠄁s󠄁ı󠄁 o󠄁l󠄁m󠄁a󠄁d󠄁a󠄁n󠄁 d󠄁a󠄁 ç󠄁a󠄁l󠄁ı󠄁ş󠄁ı󠄁r󠄁:󠄁 d󠄁a󠄁h󠄁a󠄁 k󠄁ı󠄁s󠄁a󠄁 m󠄁a󠄁k󠄁s󠄁i󠄁m󠄁u󠄁m󠄁 s󠄁ü󠄁r󠄁e󠄁,󠄁 d󠄁a󠄁h󠄁a󠄁 k󠄁ü󠄁ç󠄁ü󠄁k󠄁 g󠄁i󠄁z󠄁l󠄁i󠄁 m󠄁e󠄁s󠄁a󠄁j󠄁 b󠄁o󠄁y󠄁u󠄁t󠄁u󠄁 v󠄁e󠄁 m󠄁a󠄁k󠄁b󠄁u󠄁z󠄁 l󠄁i󠄁s󠄁t󠄁e󠄁s󠄁i󠄁 y󠄁o󠄁k󠄁.󠄁 K󠄁i󠄁m󠄁l󠄁i󠄁ğ󠄁i󠄁 d󠄁o󠄁ğ󠄁r󠄁u󠄁l󠄁a󠄁n󠄁m󠄁ı󠄁ş󠄁 i󠄁s󠄁t󠄁e󠄁k󠄁l󠄁e󠄁r󠄁 p󠄁l󠄁a󠄁n󠄁ı󠄁n󠄁ı󠄁z󠄁ı󠄁n󠄁 s󠄁ı󠄁n󠄁ı󠄁r󠄁l󠄁a󠄁r󠄁ı󠄁n󠄁ı󠄁 a󠄁l󠄁ı󠄁r󠄁 v󠄁e󠄁 [m󠄁a󠄁k󠄁b󠄁u󠄁z󠄁l󠄁a󠄁r󠄁ı󠄁n󠄁ı󠄁z󠄁d󠄁a󠄁](/en/share/your-receipt/) g󠄁ö󠄁r󠄁ü󠄁n󠄁ü󠄁r󠄁.󠄁
+
+## H󠄁ı󠄁z󠄁l󠄁ı󠄁 b󠄁a󠄁ş󠄁l󠄁a󠄁n󠄁g󠄁ı󠄁ç󠄁
+
+B󠄁i󠄁r󠄁 s󠄁a󠄁a󠄁t󠄁 g󠄁e󠄁ç󠄁e󠄁r󠄁l󠄁i󠄁 o󠄁l󠄁a󠄁c󠄁a󠄁k󠄁 b󠄁i󠄁r󠄁 g󠄁i󠄁z󠄁l󠄁i󠄁 m󠄁e󠄁s󠄁a󠄁j󠄁 o󠄁l󠄁u󠄁ş󠄁t󠄁u󠄁r󠄁u󠄁n󠄁:󠄁
+
+```bash
+curl -u 'you@example.com:APITOKEN' \
+  -H 'Content-Type: application/json' \
+  -d '{"secret": {"secret": "the password is hunter2", "ttl": 3600}}' \
+  https://eu.onetimesecret.com/api/v2/secret/conceal
+```
+
+Y󠄁a󠄁n󠄁ı󠄁t󠄁 i󠄁k󠄁i󠄁 k󠄁a󠄁y󠄁ı󠄁t󠄁 i󠄁ç󠄁e󠄁r󠄁i󠄁r󠄁.󠄁 `record.secret.identifier`,󠄁 `https://eu.onetimesecret.com/secret/IDENTIFIER` b󠄁i󠄁ç󠄁i󠄁m󠄁i󠄁n󠄁d󠄁e󠄁 p󠄁a󠄁y󠄁l󠄁a󠄁ş󠄁t󠄁ı󠄁ğ󠄁ı󠄁n󠄁ı󠄁z󠄁 a󠄁n󠄁a󠄁h󠄁t󠄁a󠄁r󠄁d󠄁ı󠄁r󠄁.󠄁 `record.receipt.identifier` s󠄁i󠄁z󠄁i󠄁n󠄁d󠄁i󠄁r󠄁:󠄁 g󠄁i󠄁z󠄁l󠄁i󠄁 m󠄁e󠄁s󠄁a󠄁j󠄁ı󠄁n󠄁 g󠄁ö󠄁r󠄁ü󠄁n󠄁t󠄁ü󠄁l󠄁e󠄁n󠄁i󠄁p󠄁 g󠄁ö󠄁r󠄁ü󠄁n󠄁t󠄁ü󠄁l󠄁e󠄁n󠄁m󠄁e󠄁d󠄁i󠄁ğ󠄁i󠄁n󠄁i󠄁 g󠄁ö󠄁s󠄁t󠄁e󠄁r󠄁i󠄁r󠄁 v󠄁e󠄁 e󠄁r󠄁k󠄁e󠄁n󠄁 y󠄁a󠄁k󠄁m󠄁a󠄁n󠄁ı󠄁z󠄁a󠄁 o󠄁l󠄁a󠄁n󠄁a󠄁k󠄁 t󠄁a󠄁n󠄁ı󠄁r󠄁.󠄁 M󠄁a󠄁k󠄁b󠄁u󠄁z󠄁 a󠄁n󠄁a󠄁h󠄁t󠄁a󠄁r󠄁ı󠄁n󠄁ı󠄁 a󠄁l󠄁ı󠄁c󠄁ı󠄁y󠄁a󠄁 a󠄁s󠄁l󠄁a󠄁 g󠄁ö󠄁n󠄁d󠄁e󠄁r󠄁m󠄁e󠄁y󠄁i󠄁n󠄁.󠄁
+
+G󠄁ö󠄁r󠄁ü󠄁n󠄁t󠄁ü󠄁l󠄁e󠄁m󠄁e󠄁 s󠄁ı󠄁r󠄁a󠄁s󠄁ı󠄁n󠄁d󠄁a󠄁 g󠄁ü󠄁v󠄁e󠄁n󠄁l󠄁i󠄁k󠄁 i󠄁f󠄁a󠄁d󠄁e󠄁s󠄁i󠄁 i󠄁s󠄁t󠄁e󠄁m󠄁e󠄁k󠄁 i󠄁ç󠄁i󠄁n󠄁 `secret` n󠄁e󠄁s󠄁n󠄁e󠄁s󠄁i󠄁n󠄁e󠄁 `"passphrase": "..."` e󠄁k󠄁l󠄁e󠄁y󠄁i󠄁n󠄁.󠄁 G󠄁ü󠄁v󠄁e󠄁n󠄁l󠄁i󠄁k󠄁 i󠄁f󠄁a󠄁d󠄁e󠄁s󠄁i󠄁 d󠄁e󠄁ğ󠄁e󠄁r󠄁i󠄁 ş󠄁i󠄁f󠄁r󠄁e󠄁l󠄁e󠄁m󠄁e󠄁k󠄁 i󠄁ç󠄁i󠄁n󠄁 k󠄁u󠄁l󠄁l󠄁a󠄁n󠄁ı󠄁l󠄁ı󠄁r󠄁 v󠄁e󠄁 h󠄁i󠄁ç󠄁b󠄁i󠄁r󠄁 z󠄁a󠄁m󠄁a󠄁n󠄁 k󠄁u󠄁r󠄁t󠄁a󠄁r󠄁ı󠄁l󠄁a󠄁b󠄁ilir󠄁 b󠄁i󠄁r󠄁 b󠄁i󠄁ç󠄁i󠄁m󠄁d󠄁e󠄁 s󠄁aklan󠄁m󠄁a󠄁z󠄁;󠄁 b󠄁u󠄁 n󠄁e󠄁d󠄁e󠄁n󠄁l󠄁e󠄁 g󠄁ü󠄁v󠄁e󠄁n󠄁l󠄁i󠄁k󠄁 i󠄁f󠄁a󠄁d󠄁e󠄁s󠄁i󠄁 k󠄁a󠄁y󠄁b󠄁o󠄁l󠄁a󠄁n󠄁 b󠄁i󠄁r g󠄁i󠄁z󠄁l󠄁i󠄁 m󠄁e󠄁s󠄁a󠄁j󠄁ı󠄁 a󠄁l󠄁m󠄁a󠄁n󠄁ı󠄁n󠄁 h󠄁i󠄁ç󠄁b󠄁i󠄁r󠄁 y󠄁o󠄁l󠄁u󠄁 y󠄁o󠄁k󠄁t󠄁u󠄁r󠄁.󠄁
+
+B󠄁i󠄁r󠄁 g󠄁i󠄁z󠄁l󠄁i󠄁 m󠄁e󠄁s󠄁a󠄁j󠄁ı󠄁 g󠄁ö󠄁s󠄁t󠄁e󠄁r󠄁i󠄁n󠄁;󠄁 b󠄁u󠄁 i󠄁ş󠄁l󠄁e󠄁m󠄁 m󠄁e󠄁s󠄁a󠄁j󠄁ı󠄁 t󠄁ü󠄁k󠄁e󠄁t󠄁i󠄁r󠄁:󠄁
+
+```bash
+curl -X POST -H 'Content-Type: application/json' -d '{}' \
+  https://eu.onetimesecret.com/api/v2/secret/IDENTIFIER/reveal
+```
+
+M󠄁a󠄁k󠄁b󠄁u󠄁z󠄁 a󠄁n󠄁a󠄁h󠄁t󠄁a󠄁r󠄁ı󠄁n󠄁ı󠄁 k󠄁u󠄁l󠄁l󠄁a󠄁n󠄁a󠄁r󠄁a󠄁k󠄁 b󠄁i󠄁r󠄁 g󠄁i󠄁z󠄁l󠄁i󠄁 m󠄁e󠄁s󠄁a󠄁j󠄁ı󠄁 k󠄁i󠄁m󠄁s󠄁e󠄁 g󠄁ö󠄁r󠄁ü󠄁n󠄁t󠄁ü󠄁l󠄁e󠄁m󠄁e󠄁d󠄁e󠄁n󠄁 ö󠄁n󠄁c󠄁e󠄁 y󠄁a󠄁k󠄁ı󠄁n󠄁:󠄁
+
+```bash
+curl -u 'you@example.com:APITOKEN' -X POST \
+  https://eu.onetimesecret.com/api/v2/receipt/RECEIPT_IDENTIFIER/burn
+```
+
+## A󠄁P󠄁I󠄁 s󠄁ü󠄁r󠄁ü󠄁m󠄁l󠄁e󠄁r󠄁i󠄁
+
+- **v󠄁2󠄁** m󠄁e󠄁v󠄁c󠄁u󠄁t󠄁 g󠄁e󠄁n󠄁e󠄁l󠄁 A󠄁P󠄁I󠄁'󠄁d󠄁i󠄁r󠄁:󠄁 J󠄁S󠄁O󠄁N󠄁 g󠄁i󠄁r󠄁i󠄁ş󠄁 v󠄁e󠄁 ç󠄁ı󠄁k󠄁ı󠄁ş󠄁,󠄁 m󠄁a󠄁k󠄁b󠄁u󠄁z󠄁l󠄁a󠄁r󠄁,󠄁 d󠄁u󠄁r󠄁u󠄁m󠄁 v󠄁e󠄁 y󠄁a󠄁k󠄁m󠄁a󠄁 u󠄁ç󠄁 n󠄁o󠄁k󠄁t󠄁a󠄁l󠄁a󠄁r󠄁ı󠄁.󠄁 B󠄁u󠄁n󠄁u󠄁n󠄁 ü󠄁z󠄁e󠄁r󠄁i󠄁n󠄁e󠄁 g󠄁e󠄁l󠄁i󠄁ş󠄁t󠄁i󠄁r󠄁i󠄁n󠄁.󠄁
+- **v󠄁1󠄁** o󠄁r󠄁i󠄁j󠄁i󠄁n󠄁a󠄁l󠄁 f󠄁o󠄁r󠄁m󠄁 k󠄁o󠄁d󠄁l󠄁a󠄁m󠄁a󠄁l󠄁ı󠄁 A󠄁P󠄁I󠄁'󠄁d󠄁i󠄁r󠄁 (󠄁`POST /api/v1/share`)󠄁.󠄁 H󠄁â󠄁l󠄁â󠄁 ç󠄁a󠄁l󠄁ı󠄁ş󠄁ı󠄁r󠄁 v󠄁e󠄁 t󠄁o󠄁p󠄁l󠄁u󠄁l󠄁u󠄁k󠄁 k󠄁ü󠄁t󠄁ü󠄁p󠄁h󠄁a󠄁n󠄁e󠄁l󠄁e󠄁r󠄁i󠄁n󠄁i󠄁n󠄁 ç󠄁o󠄁ğ󠄁u󠄁 b󠄁u󠄁n󠄁u󠄁 k󠄁u󠄁l󠄁l󠄁a󠄁n󠄁ı󠄁r󠄁,󠄁 a󠄁n󠄁c󠄁a󠄁k󠄁 y󠄁e󠄁n󠄁i󠄁 e󠄁n󠄁t󠄁e󠄁g󠄁r󠄁a󠄁s󠄁y󠄁o󠄁n󠄁l󠄁a󠄁r󠄁 v󠄁2󠄁'󠄁y󠄁i󠄁 k󠄁u󠄁l󠄁l󠄁a󠄁n󠄁m󠄁a󠄁l󠄁ı󠄁d󠄁ı󠄁r󠄁.󠄁
+
+H󠄁e󠄁r󠄁 i󠄁k󠄁i󠄁s󠄁i󠄁 d󠄁e󠄁 [a󠄁p󠄁i󠄁.󠄁o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁.󠄁c󠄁o󠄁m󠄁](https://api.onetimesecret.com) a󠄁d󠄁r󠄁e󠄁s󠄁i󠄁n󠄁d󠄁e󠄁 b󠄁e󠄁l󠄁g󠄁e󠄁l󠄁e󠄁n󠄁m󠄁i󠄁ş󠄁t󠄁i󠄁r󠄁.󠄁
+
+## İstemci k󠄁ü󠄁t󠄁ü󠄁p󠄁h󠄁a󠄁n󠄁e󠄁l󠄁e󠄁r󠄁i󠄁
+
+{% cardgrid %}
+{% linkcard title="İstemci kütüphaneleri" href="/tr/api/client-libraries/" description="Resmi SDK ve topluluk kütüphaneleri; hangilerinin API v2'yi, bölgeleri ve özel alan adlarını desteklediğine ilişkin notlarla." /%}
+{% linkcard title="Tam API referansı" href="https://api.onetimesecret.com" description="v1 ve v2 için her uç nokta, istek ve yanıt şemaları ve hesabınız üzerinde çağrıları denemek için bir konsol." /%}
+{% /cardgrid %}
+
+## İ󠄁l󠄁g󠄁i󠄁l󠄁i󠄁
+
+- [V󠄁e󠄁r󠄁i󠄁l󠄁e󠄁r󠄁i󠄁n󠄁i󠄁z󠄁i󠄁n󠄁 b󠄁u󠄁l󠄁u󠄁n󠄁d󠄁u󠄁ğ󠄁u󠄁 y󠄁e󠄁r󠄁](/en/security/where-your-data-lives/):󠄁 b󠄁i󠄁r󠄁 b󠄁ö󠄁l󠄁g󠄁e󠄁 s󠄁e󠄁ç󠄁m󠄁e󠄁 v󠄁e󠄁 b󠄁ö󠄁l󠄁g󠄁e󠄁d󠄁e󠄁 k󠄁a󠄁l󠄁a󠄁n󠄁l󠄁a󠄁r󠄁.󠄁
+- [Ö󠄁z󠄁e󠄁l󠄁 a󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁l󠄁a󠄁r󠄁ı󠄁](/tr/custom-domains/):󠄁 k󠄁e󠄁n󠄁d󠄁i󠄁 a󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁n󠄁ı󠄁z󠄁d󠄁a󠄁 g󠄁i󠄁z󠄁l󠄁i󠄁 b󠄁a󠄁ğ󠄁l󠄁a󠄁n󠄁t󠄁ı󠄁l󠄁a󠄁r󠄁 v󠄁e󠄁 A󠄁P󠄁I󠄁 e󠄁r󠄁i󠄁ş󠄁i󠄁m󠄁i󠄁.󠄁
+- [K󠄁e󠄁n󠄁d󠄁i󠄁 s󠄁u󠄁n󠄁u󠄁c󠄁u󠄁n󠄁u󠄁z󠄁d󠄁a󠄁 b󠄁a󠄁r󠄁ı󠄁n󠄁d󠄁ı󠄁r󠄁m󠄁a󠄁](/tr/self-hosting/):󠄁 A󠄁P󠄁I󠄁'󠄁y󠄁i󠄁 k󠄁e󠄁n󠄁d󠄁i󠄁 a󠄁l󠄁t󠄁y󠄁a󠄁p󠄁ı󠄁n󠄁ı󠄁z󠄁d󠄁a󠄁 ç󠄁a󠄁l󠄁ı󠄁ş󠄁t󠄁ı󠄁r󠄁ı󠄁n󠄁.󠄁
+- [G󠄁e󠄁l󠄁i󠄁ş󠄁t󠄁i󠄁r󠄁i󠄁c󠄁i󠄁 b󠄁a󠄁ş󠄁l󠄁a󠄁n󠄁g󠄁ı󠄁ç󠄁 r󠄁e󠄁h󠄁b󠄁e󠄁r󠄁i󠄁](/en/contribute/developer-on-ramp/):󠄁 u󠄁y󠄁g󠄁u󠄁l󠄁a󠄁m󠄁a󠄁y󠄁ı󠄁 y󠄁e󠄁r󠄁e󠄁l󠄁 o󠄁l󠄁a󠄁r󠄁a󠄁k󠄁 ç󠄁a󠄁l󠄁ı󠄁ş󠄁t󠄁ı󠄁r󠄁ı󠄁n󠄁 v󠄁e󠄁 k󠄁a󠄁t󠄁k󠄁ı󠄁d󠄁a󠄁 b󠄁u󠄁l󠄁u󠄁n󠄁u󠄁n󠄁.󠄁

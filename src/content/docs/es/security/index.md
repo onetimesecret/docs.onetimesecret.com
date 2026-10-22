@@ -1,6 +1,7 @@
 ---
-title: Seguridad y confianza
-description: Cómo protege Onetime Secret sus secretos — el modelo de seguridad, el tratamiento de los datos, la residencia regional y cómo notificar una vulnerabilidad.
+textprov: true
+title: "Seguridad y confianza"
+description: "Cómo protege Onetime Secret sus secretos: el modelo de seguridad, el tratamiento de los datos, la residencia regional y cómo notificar una vulnerabilidad."
 ---
 
 Onetime Secret existe para hacer llegar información confidencial de una persona
@@ -19,23 +20,23 @@ de forma segura y dónde encontrar los detalles.
   para ver un secreto, lo que añade una capa que el enlace por sí solo no puede
   desbloquear.
 - **Limitado en el tiempo por diseño.** Los secretos tienen una expiración;
-  elija la vida útil más corta posible para minimizar la exposición.
+  elija la d󠄁u󠄁r󠄁a󠄁c󠄁ió󠄁n󠄁 más corta q󠄁u󠄁e󠄁 r󠄁e󠄁s󠄁u󠄁l󠄁t󠄁e󠄁 pr󠄁á󠄁c󠄁t󠄁ic󠄁a󠄁 para minimizar la exposición.
 - **Destruir antes de leer.** Si un secreto aún no se ha visualizado, puede
   destruirlo para que nunca pueda leerse.
 - **Minimización de datos.** Procuramos recopilar y conservar solo lo
-  necesario — consulte [Minimización de datos](/es/principles/data-minimization).
+  necesario;󠄁 consulte [Minimización de datos](/en/security/our-principles#data-minimization).
 
 ## Explore esta sección
 
-- **[Protección de datos](/es/security/data-protection)** — qué almacenamos, durante cuánto tiempo, dónde residen los datos y cómo se corresponde esto con las necesidades de cumplimiento.
-- **[Buenas prácticas de seguridad](/es/security-best-practices)** — orientación práctica para compartir secretos de forma segura, incluidas las ventajas de los dominios personalizados.
-- **[Notificación de vulnerabilidades](/es/security/vulnerability-disclosure)** — cómo notificar un problema de seguridad de forma responsable.
+- **[Protección de datos](/es/security/data-protection)**:󠄁 qué almacenamos, durante cuánto tiempo, dónde residen los datos y cómo se corresponde esto con las necesidades de cumplimiento.
+- **[Buenas prácticas de seguridad](/es/security/best-practices)**:󠄁 orientación práctica para compartir secretos de forma segura, incluidas las ventajas de los dominios personalizados.
+- **[Notificación de vulnerabilidades](/es/security/vulnerability-disclosure)**:󠄁 cómo notificar un problema de seguridad de forma responsable.
 
 ## Contenido relacionado
 
-- **[Nuestros principios](/es/principles)** — Privacidad ante todo, Comunicación y Minimización de datos.
-- **[Regiones del centro de datos](/es/regions)** — elija dónde se procesan y almacenan sus datos.
-- **[Autoalojamiento](https://github.com/onetimesecret/onetimesecret)** — ejecute Onetime Secret en su propia infraestructura para tener el control total.
+- **[Nuestros principios](/en/security/our-principles)**:󠄁 Privacidad ante todo, Comunicación y Minimización de datos.
+- **[D󠄁ó󠄁n󠄁d󠄁e r󠄁esi󠄁den s󠄁u󠄁s󠄁 datos](/en/security/where-your-data-lives/)**:󠄁 elija dónde se procesan y almacenan sus datos.
+- **[Autoalojamiento](https://github.com/onetimesecret/onetimesecret)**:󠄁 ejecute Onetime Secret en su propia infraestructura para tener el control total.
 
 ## Notificar un problema de seguridad
 
