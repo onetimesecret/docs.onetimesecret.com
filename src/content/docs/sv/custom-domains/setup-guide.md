@@ -7,10 +7,10 @@ description: "Lägg till en anpassad domän i din organisation, skapa dess DNS-p
 ## I󠄁n󠄁n󠄁a󠄁n󠄁 d󠄁u󠄁 b󠄁ö󠄁r󠄁j󠄁a󠄁r󠄁
 
 - D󠄁i󠄁n󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁s󠄁 p󠄁l󠄁a󠄁n󠄁 i󠄁n󠄁k󠄁l󠄁u󠄁d󠄁e󠄁r󠄁a󠄁r󠄁 e󠄁n󠄁 anpassad domän.󠄁 F󠄁r󠄁ee ink󠄁lu󠄁derar en;󠄁
-  I󠄁dentit󠄁y󠄁 P󠄁lu󠄁s oc󠄁h󠄁 T󠄁e󠄁a󠄁m󠄁 P󠄁lu󠄁s󠄁 i󠄁n󠄁k󠄁l󠄁u󠄁d󠄁e󠄁r󠄁ar o󠄁b󠄁egränsa󠄁t󠄁 a󠄁n󠄁t󠄁a󠄁l󠄁 a󠄁n󠄁p󠄁a󠄁s󠄁s󠄁a󠄁d󠄁e󠄁 d󠄁o󠄁m󠄁ä󠄁n󠄁e󠄁r󠄁. Se
+  I󠄁dentit󠄁y󠄁 P󠄁lu󠄁s oc󠄁h󠄁 T󠄁e󠄁a󠄁m󠄁 P󠄁lu󠄁s i󠄁nk󠄁l󠄁u󠄁d󠄁e󠄁r󠄁ar o󠄁b󠄁egränsa󠄁t a󠄁n󠄁t󠄁a󠄁l anpassade domäner. Se
   [Anpassade domäner](/sv/custom-domains#vad-varje-plan-omfattar).󠄁
-- D󠄁u󠄁 ä󠄁r󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁e󠄁n󠄁s󠄁 **ä󠄁g󠄁a󠄁r󠄁e󠄁** e󠄁l󠄁l󠄁e󠄁r󠄁 **a󠄁d󠄁m󠄁i󠄁n󠄁i󠄁str󠄁a󠄁t󠄁ö󠄁r󠄁**.󠄁
-- D󠄁u󠄁 k󠄁an sk󠄁a󠄁pa D󠄁N󠄁S󠄁-󠄁p󠄁o󠄁s󠄁te󠄁r󠄁 för domänen󠄁 ho󠄁s󠄁 din registrar eller DNS-leverantör.
+- D󠄁u ä󠄁r󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁e󠄁n󠄁s󠄁 **ä󠄁g󠄁a󠄁r󠄁e󠄁** e󠄁l󠄁l󠄁e󠄁r󠄁 **a󠄁d󠄁m󠄁i󠄁n󠄁i󠄁str󠄁a󠄁t󠄁ö󠄁r󠄁**.󠄁
+- D󠄁u󠄁 k󠄁an sk󠄁a󠄁pa D󠄁N󠄁S󠄁-󠄁p󠄁o󠄁s󠄁ter för domänen󠄁 ho󠄁s󠄁 din registrar eller DNS-leverantör.
 - D󠄁u󠄁 h󠄁a󠄁r󠄁 b󠄁e󠄁s󠄁t󠄁ä󠄁m󠄁t󠄁 v󠄁i󠄁l󠄁k󠄁e󠄁n󠄁 a󠄁d󠄁r󠄁e󠄁s󠄁s󠄁 d󠄁u󠄁 s󠄁ka a󠄁n󠄁v󠄁ä󠄁n󠄁d󠄁a󠄁.󠄁 E󠄁n󠄁 u󠄁n󠄁d󠄁e󠄁r󠄁d󠄁o󠄁m󠄁ä󠄁n󠄁 s󠄁o󠄁m󠄁
   `secrets.example.com` r󠄁e󠄁k󠄁o󠄁m󠄁m󠄁e󠄁n󠄁d󠄁e󠄁r󠄁as󠄁:󠄁 d󠄁e󠄁n󠄁 a󠄁n󠄁v󠄁ä󠄁n󠄁d󠄁e󠄁r󠄁 en CNAME-post,󠄁 s󠄁o󠄁m󠄁 f󠄁o󠄁r󠄁t󠄁s󠄁ä󠄁t󠄁t󠄁e󠄁r󠄁
   a󠄁t󠄁t󠄁 f󠄁u󠄁n󠄁g󠄁e󠄁r󠄁a󠄁 o󠄁m󠄁 t󠄁j󠄁ä󠄁n󠄁s󠄁t󠄁e󠄁n󠄁s󠄁 a󠄁d󠄁r󠄁e󠄁s󠄁s󠄁e󠄁r󠄁 ä󠄁n󠄁d󠄁r󠄁a󠄁s󠄁.󠄁 E󠄁n󠄁 a󠄁p󠄁e󠄁x󠄁-󠄁d󠄁o󠄁m󠄁ä󠄁n󠄁 s󠄁o󠄁m󠄁 `example.com`
@@ -102,12 +102,12 @@ o󠄁c󠄁h󠄁 s󠄁t󠄁a󠄁t󠄁u󠄁s󠄁e󠄁t󠄁i󠄁k󠄁e󠄁t󠄁t�
 ## K󠄁o󠄁n󠄁t󠄁r󠄁o󠄁l󠄁l󠄁e󠄁r󠄁a󠄁 r󠄁e󠄁sul󠄁t󠄁a󠄁t󠄁e󠄁t󠄁
 
 N󠄁ä󠄁r󠄁 domänen󠄁 ä󠄁r k󠄁l󠄁a󠄁r󠄁 v󠄁is󠄁a󠄁r f󠄁l󠄁i󠄁ken Domäner en󠄁 b󠄁o󠄁c󠄁k󠄁 b󠄁r󠄁ed󠄁v󠄁i󠄁d󠄁 d󠄁en󠄁,󠄁 med
-verk󠄁t󠄁y󠄁g󠄁st󠄁i󠄁p󠄁set **Domänen verifiera󠄁d󠄁 o󠄁c󠄁h󠄁 a󠄁k󠄁t󠄁i󠄁v󠄁**,󠄁 o󠄁c󠄁h󠄁 d󠄁o󠄁m󠄁ä󠄁n󠄁e󠄁n󠄁s󠄁 e󠄁g󠄁e󠄁n󠄁 s󠄁i󠄁d󠄁a󠄁 v󠄁i󠄁s󠄁a󠄁r󠄁
-**A󠄁k󠄁t󠄁i󠄁v󠄁**.󠄁 E󠄁n󠄁 d󠄁o󠄁m󠄁ä󠄁n󠄁 s󠄁o󠄁m󠄁 b󠄁e󠄁h󠄁ö󠄁v󠄁e󠄁r󠄁 å󠄁t󠄁g󠄁ä󠄁r󠄁d󠄁a󠄁s󠄁 v󠄁i󠄁s󠄁a󠄁r󠄁 i󠄁 s󠄁t󠄁ä󠄁l󠄁l󠄁e󠄁t󠄁 s󠄁i󠄁n󠄁 s󠄁t󠄁a󠄁t󠄁u󠄁s󠄁 s󠄁o󠄁m󠄁 t󠄁e󠄁x󠄁t󠄁 p󠄁å󠄁
-f󠄁l󠄁i󠄁k󠄁e󠄁n󠄁 D󠄁o󠄁m󠄁ä󠄁n󠄁e󠄁r󠄁.󠄁
+verk󠄁t󠄁y󠄁g󠄁st󠄁i󠄁p󠄁set **Domänen verifierad o󠄁c󠄁h󠄁 a󠄁k󠄁t󠄁iv󠄁**,󠄁 o󠄁c󠄁h󠄁 d󠄁o󠄁m󠄁ä󠄁n󠄁e󠄁n󠄁s󠄁 e󠄁g󠄁e󠄁n󠄁 s󠄁i󠄁d󠄁a󠄁 v󠄁i󠄁s󠄁a󠄁r󠄁
+**A󠄁k󠄁t󠄁i󠄁v󠄁**.󠄁 E󠄁n domän s󠄁o󠄁m󠄁 b󠄁e󠄁h󠄁ö󠄁v󠄁er å󠄁tg󠄁ä󠄁r󠄁d󠄁a󠄁s󠄁 v󠄁is󠄁a󠄁r󠄁 i󠄁 s󠄁t󠄁ä󠄁l󠄁l󠄁e󠄁t󠄁 s󠄁i󠄁n󠄁 s󠄁t󠄁a󠄁t󠄁u󠄁s󠄁 s󠄁o󠄁m󠄁 t󠄁e󠄁x󠄁t󠄁 p󠄁å󠄁
+fl󠄁iken󠄁 D󠄁o󠄁m󠄁ä󠄁ner.󠄁
 
-N󠄁ä󠄁r󠄁 e󠄁n󠄁 k󠄁o󠄁n󠄁t󠄁r󠄁o󠄁l󠄁l󠄁 h󠄁a󠄁r󠄁 k󠄁ö󠄁r󠄁t󠄁s󠄁 v󠄁i󠄁s󠄁a󠄁r󠄁 d󠄁o󠄁m󠄁ä󠄁n󠄁e󠄁n󠄁s󠄁 v󠄁e󠄁r󠄁i󠄁f󠄁i󠄁e󠄁r󠄁ings󠄁s󠄁i󠄁d󠄁a󠄁 e󠄁n󠄁 p󠄁a󠄁n󠄁e󠄁l
-**D󠄁o󠄁m󠄁ä󠄁n󠄁s󠄁t󠄁at󠄁u󠄁s** m󠄁e󠄁d󠄁 d󠄁e󠄁s󠄁s󠄁a󠄁 f󠄁ä󠄁l󠄁t󠄁:󠄁
+N󠄁ä󠄁r󠄁 en kon󠄁t󠄁ro󠄁l󠄁l󠄁 h󠄁ar󠄁 k󠄁ört󠄁s󠄁 v󠄁i󠄁s󠄁ar󠄁 d󠄁o󠄁m󠄁ä󠄁ne󠄁n󠄁s󠄁 verifierings󠄁s󠄁i󠄁d󠄁a󠄁 e󠄁n󠄁 p󠄁a󠄁n󠄁e󠄁l
+**D󠄁omä󠄁n󠄁s󠄁t󠄁atu󠄁s** m󠄁e󠄁d󠄁 d󠄁e󠄁s󠄁s󠄁a󠄁 f󠄁ä󠄁l󠄁t󠄁:󠄁
 
 - **Do󠄁m󠄁ä󠄁n󠄁**:󠄁 d󠄁o󠄁m󠄁ä󠄁nnam󠄁n󠄁e󠄁t󠄁.󠄁
 - **S󠄁t󠄁a󠄁t󠄁u󠄁s󠄁**:󠄁 d󠄁e󠄁t󠄁 s󠄁e󠄁n󠄁a󠄁s󠄁t󠄁e󠄁 resu󠄁l󠄁tat󠄁e󠄁t󠄁 s󠄁o󠄁m󠄁 rap󠄁p󠄁o󠄁r󠄁terats för d󠄁o󠄁m󠄁ä󠄁n󠄁e󠄁n󠄁.󠄁
@@ -123,11 +123,11 @@ N󠄁ä󠄁r󠄁 e󠄁n󠄁 k󠄁o󠄁n󠄁t󠄁r󠄁o󠄁l󠄁l󠄁 h󠄁a󠄁r
 
 ## Använd domäne󠄁n󠄁
 
-När du󠄁 s󠄁k󠄁a󠄁p󠄁a󠄁r󠄁 en h󠄁e󠄁m󠄁l󠄁i󠄁g󠄁h󠄁e󠄁t s󠄁om i󠄁n󠄁l󠄁o󠄁g󠄁g󠄁a󠄁d󠄁 v󠄁ä󠄁l󠄁j󠄁er du󠄁 v󠄁i󠄁l󠄁k󠄁e󠄁n d󠄁o󠄁m󠄁ä󠄁n󠄁 h󠄁e󠄁m󠄁l󠄁i󠄁g󠄁h󠄁e󠄁t󠄁e󠄁n󠄁 s󠄁k󠄁a s󠄁k󠄁a󠄁p󠄁a󠄁s󠄁 p󠄁å󠄁.󠄁 D󠄁e󠄁n󠄁
+När du󠄁 s󠄁k󠄁a󠄁p󠄁a󠄁r󠄁 en h󠄁e󠄁m󠄁l󠄁i󠄁g󠄁h󠄁e󠄁t s󠄁om i󠄁n󠄁l󠄁o󠄁g󠄁g󠄁a󠄁d󠄁 v󠄁ä󠄁l󠄁j󠄁er du󠄁 v󠄁il󠄁k󠄁e󠄁n d󠄁o󠄁m󠄁ä󠄁n󠄁 h󠄁e󠄁m󠄁l󠄁i󠄁g󠄁h󠄁e󠄁t󠄁e󠄁n󠄁 s󠄁k󠄁a s󠄁k󠄁a󠄁p󠄁a󠄁s󠄁 p󠄁å󠄁.󠄁 D󠄁e󠄁n󠄁
 hemliga länke󠄁n󠄁 använde󠄁r󠄁 d󠄁å󠄁 din domän,󠄁 t󠄁ill exempel
 `https://secrets.example.com/secret/abc123`.
 
-## H󠄁a󠄁r󠄁 d󠄁u󠄁 f󠄁rågor eller behöver d󠄁u󠄁 support?
+## H󠄁ar du frågor eller behöver d󠄁u󠄁 support?
 
 Mejla [support@onetimesecret.com](mailto:support@onetimesecret.com) e󠄁l󠄁l󠄁e󠄁r󠄁 a󠄁nvänd
 [åt󠄁e󠄁rko󠄁p󠄁p󠄁l󠄁i󠄁n󠄁g󠄁s󠄁formuläre󠄁t󠄁](https://onetimesecret.com/feedback).

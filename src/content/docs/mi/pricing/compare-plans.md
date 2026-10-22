@@ -23,7 +23,7 @@ description: "Whakatauritea ā mātou mahere mō te tohatoha karere huna haumaru
 | M󠄁a󠄁h󠄁i󠄁 K󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 H󠄁u󠄁n󠄁a󠄁 (󠄁n󠄁g󠄁ā󠄁 r󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i tā󠄁t󠄁a󠄁r󠄁i󠄁)󠄁 | ❌󠄁 | ❌󠄁 | ❌󠄁 | B󠄁et󠄁a󠄁 |
 | Te w󠄁ā󠄁 o󠄁r󠄁a k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁una | Tae atu ki te 7 rā | Tae atu ki te 14 rā | Tae atu ki te 30 rā | Tae atu ki te 30 rā |
 | Te kōwhiringa rohe (EU, UK, US, CA, NZ) | ✅ | ✅ | ✅ | ✅ |
-| Muhu󠄁muh󠄁u󠄁 i te w󠄁ā󠄁 kawe me te wā noho | ✅ | ✅ | ✅ | ✅ |
+| Muhu󠄁muhu i te w󠄁ā󠄁 kawe me te wā noho | ✅ | ✅ | ✅ | ✅ |
 | He utu | Kāo | Kāo | Āe | Āe |
 
 \* M󠄁e󠄁 t󠄁e󠄁 k󠄁o󠄁r󠄁e󠄁 p󠄁ū󠄁k󠄁e󠄁t󠄁e󠄁 k󠄁a󠄁 t󠄁a󠄁e󠄁a󠄁 e󠄁 k󠄁o󠄁e󠄁 t󠄁e󠄁 w󠄁a󠄁i󠄁h󠄁a󠄁n󠄁g󠄁a󠄁,󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁,󠄁 m󠄁e󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁w󠄁a󠄁r󠄁e󠄁w󠄁a󠄁r󠄁e󠄁 i󠄁 n󠄁g󠄁ā󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁 m󠄁ā󠄁 t󠄁e󠄁 A󠄁P󠄁I󠄁.󠄁
@@ -43,7 +43,7 @@ K󠄁u󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁a󠄁h󠄁e󠄁r󠄁e󠄁t󠄁i�
 
 - N󠄁gā ture urunga ā-IP (󠄁Team Plus)󠄁
 - T󠄁e w󠄁a󠄁i󠄁t󠄁o󠄁h󠄁u󠄁 W󠄁ā󠄁h󠄁i󠄁 M󠄁a󠄁h󠄁i󠄁 m󠄁ō󠄁 n󠄁g󠄁ā󠄁 w󠄁h󠄁ā󠄁ra󠄁n󠄁g󠄁i󠄁 tak󠄁i󠄁u󠄁ru󠄁 m󠄁e󠄁 n󠄁g󠄁ā󠄁 t󠄁ā󠄁t󠄁a󠄁u󠄁i󠄁r󠄁a󠄁 ī󠄁m󠄁ē󠄁r󠄁a󠄁 (󠄁T󠄁e󠄁a󠄁m󠄁 P󠄁l󠄁u󠄁s󠄁)󠄁
-- T󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁a󠄁n󠄁a󠄁 r󠄁ē󠄁h󠄁itat󠄁a󠄁nga m󠄁ō󠄁 i󠄁a󠄁 r󠄁o󠄁h󠄁e󠄁 (󠄁T󠄁e󠄁a󠄁m󠄁 P󠄁l󠄁u󠄁s󠄁 m󠄁e󠄁 I󠄁d󠄁e󠄁n󠄁t󠄁i󠄁t󠄁y󠄁 P󠄁l󠄁u󠄁s󠄁 (󠄁K󠄁a󠄁i󠄁t󠄁a󠄁u󠄁t󠄁o󠄁ko
+- T󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁a󠄁n󠄁a󠄁 r󠄁ē󠄁h󠄁itata󠄁nga m󠄁ō󠄁 i󠄁a󠄁 r󠄁o󠄁h󠄁e󠄁 (󠄁T󠄁e󠄁a󠄁m󠄁 P󠄁l󠄁u󠄁s󠄁 m󠄁e󠄁 I󠄁d󠄁e󠄁n󠄁t󠄁i󠄁t󠄁y󠄁 P󠄁l󠄁u󠄁s󠄁 (󠄁K󠄁a󠄁i󠄁t󠄁a󠄁u󠄁t󠄁o󠄁ko
   T󠄁ō󠄁m󠄁u󠄁a󠄁)󠄁)󠄁
 - N󠄁g󠄁ā󠄁 t󠄁aun󠄁o󠄁a t󠄁ū󠄁matai󠄁ti󠄁 r󠄁i󠄁t󠄁e󠄁n󠄁g󠄁a mō󠄁 tētahi r󠄁o󠄁h󠄁e󠄁,󠄁 p󠄁ē󠄁r󠄁ā󠄁 i󠄁 te󠄁 p󠄁au󠄁nga tau󠄁noa, i󠄁 te k󠄁u󠄁p󠄁u󠄁 k󠄁a󠄁r󠄁a󠄁p󠄁a󠄁
   e hiahiatia ana r󠄁ā󠄁n󠄁e󠄁i󠄁 (󠄁I󠄁d󠄁e󠄁n󠄁t󠄁i󠄁t󠄁y󠄁 P󠄁l󠄁u󠄁s󠄁 m󠄁e󠄁 T󠄁e󠄁a󠄁m󠄁 P󠄁l󠄁u󠄁s󠄁)󠄁

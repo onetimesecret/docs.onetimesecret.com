@@ -46,7 +46,7 @@ Kua hoahoatia a Onetime Secret hei tautoko i ō mahi ūnga; e kore e whakakapi i
 
 - **GDPR / te tiaki raraunga.** Ko te nohonga raraunga ā-rohe, ko ngā raraunga
   wā-poto, me te whakaiti raraunga i hoahoatia hei āwhina i a koe ki te
-  whakatutuki i ō herenga tiaki raraunga. I te nuinga o ngā w󠄁h󠄁a󠄁k󠄁a󠄁ta󠄁k󠄁o󠄁t󠄁o󠄁r󠄁a󠄁nga, ko
+  whakatutuki i ō herenga tiaki raraunga. I te nuinga o ngā whakata󠄁k󠄁o󠄁t󠄁o󠄁ranga, ko
   koe te kaiwhakahaere raraunga (data controller), ko Onetime Secret te
   kaitukatuka (data processor) mō ngā raraunga iti e pā ana.
 - **HIPAA.** K󠄁a taea e Onetime Secret te whakarato i tētahi h󠄁o󠄁n󠄁g󠄁e󠄁re󠄁 haumaru ake i te īmēra mō

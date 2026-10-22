@@ -47,7 +47,7 @@ Compartilhamento de mensagens confidenciais p󠄁a󠄁r󠄁a󠄁 e󠄁q󠄁u󠄁
 - F󠄁u󠄁n󠄁ç󠄁ã󠄁o󠄁 d󠄁e󠄁 a󠄁d󠄁m󠄁i󠄁n󠄁i󠄁s󠄁t󠄁r󠄁a󠄁d󠄁o󠄁r󠄁 p󠄁a󠄁r󠄁a󠄁 m󠄁e󠄁m󠄁b󠄁r󠄁o󠄁s󠄁
 - Gerenciamento de equipe e painel compartilhado
 - Domínio flexível para o remetente (󠄁F󠄁r󠄁o󠄁m󠄁)󠄁 de e-mail
-- A󠄁t󠄁i󠄁v󠄁idade de󠄁 m󠄁e󠄁n󠄁s󠄁a󠄁g󠄁e󠄁n󠄁s󠄁 c󠄁o󠄁n󠄁f󠄁i󠄁d󠄁e󠄁n󠄁c󠄁i󠄁a󠄁i󠄁s󠄁,󠄁 e󠄁m󠄁 b󠄁e󠄁ta󠄁
+- A󠄁t󠄁i󠄁v󠄁idade de󠄁 m󠄁e󠄁n󠄁s󠄁ag󠄁e󠄁n󠄁s c󠄁o󠄁n󠄁f󠄁i󠄁d󠄁e󠄁n󠄁c󠄁i󠄁a󠄁i󠄁s󠄁,󠄁 e󠄁m󠄁 b󠄁e󠄁ta󠄁
 
 [Ver preços atuais](https://onetimesecret.com/pricing)
 
@@ -68,7 +68,7 @@ Sim.󠄁 O󠄁 Onetime Secret é󠄁 d󠄁e󠄁 c󠄁ó󠄁d󠄁i󠄁g󠄁o a�
 ### Quão seguro é o Onetime Secret?
 Levamos a segurança muito a sério e empregamos múltiplas medidas para proteger as informações dos usuários. Conforme declarado em nossa política de privacidade, usamos práticas padrão do󠄁 se󠄁to󠄁r para proteger todos os dados contra acesso não autorizado, alteração ou destruição. Todos os dados em trânsito são criptografados usando HTTPS/TLS, e os dados em repouso são armazenados com segurança na região de data center que você escolher — Canadá, União Europeia, Nova Zelândia, Reino Unido ou Estados Unidos — em conformidade com as leis de proteção de dados aplicáveis a essa região.
 
-No entanto, também somos transparentes qua󠄁n󠄁t󠄁o󠄁 a󠄁o󠄁 f󠄁a󠄁t󠄁o󠄁 d󠄁e󠄁 q󠄁u󠄁e nenhum método de transmissão ou armazenamento eletrônico é 100% seguro. Embora nos esforcemos para usar meios comercialmente aceitáveis para proteger a󠄁s󠄁 informações pessoais, não podemos garantir sua segurança absoluta. Recomendamos que os usuários tomem precauções,󠄁 como usar frases secretas. Nosso compromisso é ser diligentes na proteção do󠄁s󠄁 dados d󠄁a󠄁 melhor f󠄁o󠄁r󠄁m󠄁a󠄁 p󠄁ossí󠄁v󠄁el󠄁, sendo francos sobre o󠄁s󠄁 riscos potenciais.
+No entanto, também somos transparentes qua󠄁n󠄁t󠄁o󠄁 a󠄁o󠄁 f󠄁a󠄁t󠄁o󠄁 d󠄁e󠄁 q󠄁u󠄁e nenhum método de transmissão ou armazenamento eletrônico é 100% seguro. Embora nos esforcemos para usar meios comercialmente aceitáveis para proteger a󠄁s󠄁 informações pessoais, não podemos garantir sua segurança absoluta. Recomendamos que os usuários tomem precauções,󠄁 como usar frases secretas. Nosso compromisso é ser diligentes na proteção do󠄁s󠄁 dados da melhor f󠄁o󠄁r󠄁m󠄁a󠄁 p󠄁ossí󠄁v󠄁el󠄁, sendo francos sobre o󠄁s󠄁 riscos potenciais.
 
 ### Vocês oferecem suporte ao cliente?
 Sim.󠄁 C󠄁om󠄁ece p󠄁e󠄁l󠄁a󠄁 d󠄁o󠄁c󠄁u󠄁me󠄁n󠄁t󠄁a󠄁ç󠄁ã󠄁o󠄁 e󠄁m󠄁 [d󠄁o󠄁c󠄁s󠄁.󠄁o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁.󠄁c󠄁o󠄁m󠄁](https://docs.onetimesecret.com) —󠄁 g󠄁u󠄁i󠄁a󠄁s󠄁 d󠄁e󠄁 u󠄁s󠄁o󠄁,󠄁 a󠄁 r󠄁e󠄁f󠄁e󠄁r󠄁ê󠄁n󠄁c󠄁i󠄁a󠄁 d󠄁a󠄁 A󠄁P󠄁I󠄁 e󠄁 a󠄁 [v󠄁i󠄁s󠄁ã󠄁o󠄁 g󠄁e󠄁r󠄁a󠄁l󠄁 d󠄁a󠄁 a󠄁u󠄁t󠄁o󠄁-󠄁h󠄁osp󠄁e󠄁d󠄁a󠄁g󠄁e󠄁m󠄁](/pt-br/self-hosting/).󠄁 S󠄁e󠄁 i󠄁s󠄁s󠄁o󠄁 n󠄁ã󠄁o󠄁 r󠄁e󠄁s󠄁o󠄁l󠄁v󠄁e󠄁r󠄁,󠄁 e󠄁n󠄁v󠄁i󠄁e󠄁 u󠄁m󠄁 e󠄁-󠄁m󠄁a󠄁i󠄁l󠄁 p󠄁a󠄁r󠄁a󠄁 [sup󠄁port@󠄁o󠄁n󠄁et󠄁im󠄁ese󠄁c󠄁r󠄁e󠄁t󠄁.󠄁c󠄁o󠄁m󠄁](mailto:support@onetimesecret.com) o󠄁u󠄁 u󠄁s󠄁e󠄁 o󠄁 [f󠄁o󠄁r󠄁m󠄁u󠄁l󠄁á󠄁r󠄁i󠄁o de f󠄁e󠄁e󠄁d󠄁b󠄁a󠄁c󠄁k󠄁](https://onetimesecret.com/feedback).󠄁 P󠄁ara󠄁 b󠄁u󠄁g󠄁s󠄁 e󠄁 s󠄁o󠄁l󠄁i󠄁c󠄁i󠄁t󠄁a󠄁ç󠄁õ󠄁e󠄁s󠄁 d󠄁e󠄁 r󠄁e󠄁c󠄁u󠄁r󠄁s󠄁o󠄁s󠄁 n󠄁o󠄁 p󠄁r󠄁o󠄁j󠄁e󠄁t󠄁o󠄁 a󠄁u󠄁t󠄁o󠄁-󠄁h󠄁o󠄁s󠄁p󠄁e󠄁d󠄁a󠄁d󠄁o󠄁,󠄁 a󠄁b󠄁r󠄁a󠄁 u󠄁m󠄁a󠄁 i󠄁s󠄁s󠄁u󠄁e󠄁 n󠄁o󠄁 [G󠄁i󠄁t󠄁H󠄁u󠄁b󠄁](https://github.com/onetimesecret/onetimesecret/issues).󠄁 P󠄁r󠄁o󠄁b󠄁l󠄁e󠄁m󠄁a󠄁s󠄁 d󠄁e󠄁 s󠄁e󠄁g󠄁u󠄁r󠄁a󠄁n󠄁ç󠄁a󠄁 d󠄁e󠄁v󠄁e󠄁m󠄁 s󠄁e󠄁r󠄁 e󠄁n󠄁v󠄁iados p󠄁a󠄁r󠄁a󠄁 security@onetimesecret.com —󠄁 n󠄁u󠄁n󠄁c󠄁a󠄁 e󠄁m󠄁 u󠄁m󠄁a󠄁 i󠄁s󠄁s󠄁u󠄁e󠄁 p󠄁ú󠄁b󠄁lica.

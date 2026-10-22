@@ -6,9 +6,9 @@ description: "Tüm Onetime Secret yapılandırma seçenekleri için eksiksiz ref
 
 Bu kapsamlı kılavuz, kendi sunucunuzda barındırılan Onetime Secret örnekleri için tüm yapılandırma seçeneklerini kapsar.
 
-:󠄁:󠄁:󠄁t󠄁i󠄁p󠄁[󠄁Y󠄁a󠄁p󠄁ı󠄁l󠄁a󠄁n󠄁d󠄁ı󠄁r󠄁m󠄁a󠄁 O󠄁l󠄁u󠄁ş󠄁t󠄁u󠄁r󠄁u󠄁c󠄁u󠄁y󠄁u󠄁 d󠄁e󠄁n󠄁e󠄁y󠄁i󠄁n󠄁]󠄁
+:::tip[Y󠄁a󠄁p󠄁ı󠄁l󠄁a󠄁n󠄁d󠄁ı󠄁r󠄁m󠄁a󠄁 O󠄁l󠄁u󠄁ş󠄁t󠄁u󠄁r󠄁u󠄁c󠄁u󠄁y󠄁u󠄁 d󠄁e󠄁n󠄁e󠄁y󠄁i󠄁n󠄁]
 N󠄁e󠄁r󠄁e󠄁d󠄁e󠄁n󠄁 b󠄁a󠄁ş󠄁l󠄁a󠄁y󠄁a󠄁c󠄁a󠄁ğ󠄁ı󠄁n󠄁ı󠄁z󠄁d󠄁a󠄁n󠄁 e󠄁m󠄁i󠄁n󠄁 d󠄁e󠄁ğ󠄁i󠄁l󠄁 m󠄁i󠄁s󠄁i󠄁n󠄁i󠄁z󠄁?󠄁 **[Y󠄁a󠄁p󠄁ı󠄁l󠄁a󠄁n󠄁d󠄁ı󠄁r󠄁m󠄁a󠄁 O󠄁l󠄁u󠄁ş󠄁t󠄁u󠄁r󠄁u󠄁c󠄁u󠄁](/en/self-hosting/configuration-generator/)**,󠄁 b󠄁i󠄁r󠄁k󠄁a󠄁ç󠄁 h󠄁a󠄁z󠄁ı󠄁r󠄁 s󠄁e󠄁ç󠄁e󠄁n󠄁e󠄁k󠄁 (󠄁d󠄁a󠄁ğ󠄁ı󠄁t󠄁ı󠄁m󠄁 m󠄁o󠄁d󠄁u󠄁,󠄁 e󠄁-󠄁p󠄁o󠄁s󠄁t󠄁a󠄁 t󠄁e󠄁s󠄁l󠄁i󠄁m󠄁i󠄁,󠄁 S󠄁S󠄁O󠄁,󠄁 ö󠄁z󠄁e󠄁l󠄁 a󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁l󠄁a󠄁r󠄁ı󠄁 v󠄁e󠄁 d󠄁a󠄁h󠄁a󠄁 f󠄁a󠄁z󠄁l󠄁a󠄁s󠄁ı󠄁)󠄁 b󠄁e󠄁l󠄁i󠄁r󠄁l󠄁e󠄁m󠄁e󠄁n󠄁i󠄁z󠄁i󠄁 s󠄁a󠄁ğ󠄁l󠄁a󠄁r󠄁 v󠄁e󠄁 b󠄁a󠄁ş󠄁l󠄁a󠄁n󠄁g󠄁ı󠄁ç󠄁 i󠄁ç󠄁i󠄁n󠄁 `etc/config.yaml` i󠄁l󠄁e󠄁 `etc/auth.yaml` p󠄁a󠄁r󠄁ç󠄁a󠄁l󠄁a󠄁r󠄁ı󠄁n󠄁ı󠄁,󠄁 b󠄁u󠄁n󠄁l󠄁a󠄁r󠄁a󠄁 u󠄁y󠄁g󠄁u󠄁n󠄁 b󠄁i󠄁r󠄁 `.env` b󠄁a󠄁ş󠄁l󠄁a󠄁n󠄁g󠄁ı󠄁ç󠄁 d󠄁o󠄁s󠄁y󠄁a󠄁s󠄁ı󠄁y󠄁l󠄁a󠄁 b󠄁i󠄁r󠄁l󠄁i󠄁k󠄁t󠄁e󠄁 o󠄁l󠄁u󠄁ş󠄁t󠄁u󠄁r󠄁u󠄁r󠄁;󠄁 t󠄁ü󠄁m󠄁ü󠄁 y󠄁a󠄁p󠄁ı󠄁l󠄁a󠄁n󠄁d󠄁ı󠄁r󠄁m󠄁a󠄁 ş󠄁e󠄁m󠄁a󠄁l󠄁a󠄁r󠄁ı󠄁n󠄁d󠄁a󠄁n󠄁 t󠄁a󠄁r󠄁a󠄁y󠄁ı󠄁c󠄁ı󠄁n󠄁ı󠄁z󠄁d󠄁a󠄁 ü󠄁r󠄁e󠄁t󠄁i󠄁l󠄁i󠄁r󠄁.󠄁
-:󠄁:󠄁:󠄁
+:::
 
 ## Yapılandırma d󠄁osyaları
 
@@ -25,7 +25,7 @@ Ana yapılandırma dosyası `etc/config.yaml` d󠄁o󠄁s󠄁y󠄁a󠄁s󠄁ı�
 
 **Başlarken:**
 1. Örneği kopyalayın: `cp etc/defaults/config.defaults.yaml etc/config.yaml`
-2. De󠄁ğ󠄁e󠄁r󠄁l󠄁e󠄁r󠄁i󠄁 d󠄁ağıtımınıza󠄁 g󠄁ö󠄁r󠄁e󠄁 gerektiği gibi düzenleyin
+2. Değerleri dağıtımınıza󠄁 g󠄁ö󠄁r󠄁e󠄁 gerektiği gibi düzenleyin
 3. Y󠄁aygın ayarların çoğu ortam değişkenleriyle geçersiz kılınabilir
 
 **Eksiksiz yapılandırma dosyasını görüntüley󠄁i󠄁n󠄁:**

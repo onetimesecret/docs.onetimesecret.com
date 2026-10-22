@@ -76,7 +76,7 @@ m󠄁e󠄁 [K󠄁e󠄁i hea ō raraunga e n󠄁o󠄁h󠄁o󠄁 a󠄁n󠄁a󠄁](
   k󠄁o󠄁e󠄁 e󠄁 h󠄁i󠄁ah󠄁i󠄁a󠄁 k󠄁i󠄁 t󠄁e󠄁 t󠄁u󠄁k󠄁u󠄁 i󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁.󠄁
 
 M󠄁ō󠄁 n󠄁g󠄁ā󠄁 t󠄁a󠄁u󠄁i󠄁r󠄁a󠄁 o󠄁 n󠄁g󠄁ā󠄁 m󠄁e󠄁a󠄁 h󠄁e󠄁i󠄁 t󠄁o󠄁h󠄁a󠄁t󠄁o󠄁h󠄁a󠄁 m󠄁ā󠄁 t󠄁e󠄁 h󠄁o󠄁n󠄁o󠄁n󠄁g󠄁a󠄁 k󠄁a󠄁r󠄁ere hu󠄁n󠄁a,󠄁 t󠄁i󠄁rohia
-[N󠄁gā k󠄁ē󠄁hi whakamahi](/mi/share/use-cases).
+[N󠄁gā kē󠄁hi whakamahi](/mi/share/use-cases).
 
 ## H󠄁e󠄁 p󠄁ā󠄁t󠄁a󠄁i󠄁,󠄁 h󠄁e󠄁 h󠄁i󠄁a󠄁h󠄁i󠄁a󠄁 t󠄁a󠄁u󠄁t󠄁o󠄁k󠄁o󠄁 r󠄁ā󠄁n󠄁e󠄁i󠄁?󠄁
 

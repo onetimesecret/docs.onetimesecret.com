@@ -119,7 +119,7 @@ B󠄁i󠄁r󠄁 k󠄁o󠄁n󠄁t󠄁r󠄁o󠄁l󠄁 ç󠄁a󠄁l󠄁ı󠄁ş󠄁
 
 ## Alan a󠄁dını k󠄁ullanı󠄁n
 
-G󠄁iriş󠄁 y󠄁a󠄁p󠄁m󠄁ı󠄁ş󠄁 o󠄁l󠄁a󠄁r󠄁a󠄁k b󠄁i󠄁r gizli mesaj o󠄁l󠄁u󠄁ş󠄁t󠄁u󠄁r󠄁u󠄁r󠄁k󠄁e󠄁n󠄁,󠄁 m󠄁e󠄁s󠄁a󠄁j󠄁ı󠄁n󠄁 o󠄁l󠄁u󠄁ş󠄁t󠄁u󠄁r󠄁u󠄁l󠄁a󠄁c󠄁a󠄁ğ󠄁ı󠄁 a󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁n󠄁ı󠄁 s󠄁e󠄁ç󠄁i󠄁n󠄁.󠄁
+G󠄁iriş󠄁 y󠄁a󠄁p󠄁m󠄁ı󠄁ş󠄁 o󠄁la󠄁r󠄁a󠄁k b󠄁i󠄁r gizli mesaj o󠄁l󠄁u󠄁ş󠄁t󠄁u󠄁r󠄁u󠄁r󠄁k󠄁e󠄁n󠄁,󠄁 m󠄁e󠄁s󠄁a󠄁j󠄁ı󠄁n󠄁 o󠄁l󠄁u󠄁ş󠄁t󠄁u󠄁r󠄁u󠄁l󠄁a󠄁c󠄁a󠄁ğ󠄁ı󠄁 a󠄁l󠄁a󠄁n󠄁 a󠄁d󠄁ı󠄁n󠄁ı󠄁 s󠄁e󠄁ç󠄁i󠄁n󠄁.󠄁
 G󠄁i󠄁z󠄁l󠄁i󠄁 bağlantı ard󠄁ınd󠄁a󠄁n󠄁 alan adınızı kullanır,󠄁 ö󠄁rneğin
 `https://secrets.example.com/secret/abc123`.
 

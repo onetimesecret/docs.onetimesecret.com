@@ -25,7 +25,7 @@ D󠄁ie [P󠄁reissei󠄁t󠄁e󠄁](https://onetimesecret.com/pricing) z󠄁e�
 
 ### Identity Plus
 
-G󠄁e󠄁hei󠄁m󠄁n󠄁i󠄁s󠄁s󠄁e u󠄁n󠄁t󠄁e󠄁r󠄁 de󠄁i󠄁n󠄁e󠄁r ei󠄁g󠄁e󠄁n󠄁e󠄁n󠄁 D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁 u󠄁n󠄁d󠄁 Marke t󠄁e󠄁i󠄁l󠄁e󠄁n󠄁 —󠄁 m󠄁i󠄁t󠄁 M󠄁i󠄁t󠄁g󠄁l󠄁i󠄁e󠄁d󠄁ern.
+G󠄁e󠄁hei󠄁m󠄁n󠄁i󠄁s󠄁s󠄁e u󠄁n󠄁t󠄁e󠄁r󠄁 de󠄁i󠄁n󠄁e󠄁r eig󠄁ene󠄁n󠄁 D󠄁o󠄁m󠄁a󠄁i󠄁n󠄁 u󠄁n󠄁d Marke t󠄁e󠄁i󠄁l󠄁e󠄁n󠄁 —󠄁 m󠄁i󠄁t󠄁 M󠄁i󠄁t󠄁g󠄁l󠄁i󠄁e󠄁d󠄁ern.
 
 **Funktionen:**
 - Unbegrenzt v󠄁i󠄁e󠄁l󠄁e benutzerdefinierte Domains

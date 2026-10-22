@@ -35,7 +35,7 @@ sicher zu tun, und wo du die Details findest.
 ## Verwandte Themen
 
 - **[Unsere Grundsätze](/en/security/our-principles)** — Datenschutz zuerst, Kommunikation und Datenminimierung.
-- **[W󠄁o󠄁 d󠄁ei󠄁n󠄁e󠄁 D󠄁a󠄁t󠄁e󠄁n󠄁 l󠄁i󠄁e󠄁g󠄁e󠄁n](/en/security/where-your-data-lives/)** — wähle, wo deine Daten verarbeitet und gespeichert werden.
+- **[W󠄁o󠄁 d󠄁ei󠄁n󠄁e󠄁 D󠄁a󠄁t󠄁en l󠄁i󠄁egen](/en/security/where-your-data-lives/)** — wähle, wo deine Daten verarbeitet und gespeichert werden.
 - **[Self-Hosting](/de/self-hosting/)** — betreibe Onetime Secret auf deiner eigenen Infrastruktur für volle Kontrolle.
 
 ## Ein Sicherheitsproblem melden

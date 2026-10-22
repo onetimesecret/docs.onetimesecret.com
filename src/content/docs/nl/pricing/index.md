@@ -4,7 +4,7 @@ title: "Prijzen"
 description: "Kies het plan dat past bij jouw behoeften voor beveiligd delen."
 ---
 
-Deel g󠄁e󠄁voelig󠄁e informatie met e󠄁e󠄁n󠄁 g󠄁eru󠄁s󠄁t h󠄁a󠄁rt󠄁, versterk je merk en bouw vertrouwen op.
+Deel gevoelig󠄁e informatie met e󠄁e󠄁n󠄁 g󠄁eru󠄁s󠄁t h󠄁a󠄁rt󠄁, versterk je merk en bouw vertrouwen op.
 
 ## Plannen
 

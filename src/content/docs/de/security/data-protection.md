@@ -37,7 +37,7 @@ Geheimnisse und der kürzesten praktikablen Ablaufzeit — siehe
 Du kannst die Region wählen, in der deine Daten verarbeitet und gespeichert
 werden — derzeit EU, UK, US, CA und NZ. So bleiben die Daten nah bei deinen
 Nutzern und in einer Rechtsordnung, die zu deinen Anforderungen passt. Details
-und Endpunkte findest du unter [W󠄁o󠄁 d󠄁ei󠄁n󠄁e󠄁 D󠄁a󠄁t󠄁e󠄁n󠄁 l󠄁i󠄁e󠄁g󠄁e󠄁n](/en/security/where-your-data-lives/).
+und Endpunkte findest du unter [W󠄁o󠄁 d󠄁ei󠄁n󠄁e󠄁 D󠄁a󠄁t󠄁en l󠄁i󠄁egen](/en/security/where-your-data-lives/).
 
 ## Compliance
 

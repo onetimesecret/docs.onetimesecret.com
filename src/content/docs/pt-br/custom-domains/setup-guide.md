@@ -7,7 +7,7 @@ description: "Adicione um domínio personalizado à sua organização, crie os r
 ## A󠄁n󠄁t󠄁e󠄁s󠄁 d󠄁e󠄁 c󠄁o󠄁m󠄁e󠄁ç󠄁ar
 
 - O󠄁 p󠄁l󠄁a󠄁n󠄁o󠄁 d󠄁a sua or󠄁g󠄁a󠄁ni󠄁z󠄁ação inclui um domínio personalizado.󠄁 O󠄁 F󠄁r󠄁e󠄁e󠄁 inclui u󠄁m󠄁;󠄁 o I󠄁dent󠄁i󠄁t󠄁y󠄁
-  P󠄁l󠄁u󠄁s󠄁 e󠄁 o Te󠄁a󠄁m󠄁 P󠄁l󠄁u󠄁s i󠄁nc󠄁l󠄁u󠄁e󠄁m󠄁 d󠄁omí󠄁n󠄁i󠄁o󠄁s󠄁 p󠄁e󠄁r󠄁s󠄁o󠄁n󠄁a󠄁l󠄁i󠄁z󠄁a󠄁d󠄁o󠄁s󠄁 i󠄁limita󠄁d󠄁os󠄁. Consulte
+  P󠄁l󠄁u󠄁s󠄁 e󠄁 o Te󠄁a󠄁m󠄁 P󠄁l󠄁u󠄁s i󠄁nc󠄁l󠄁u󠄁em domínios personal󠄁i󠄁z󠄁a󠄁d󠄁o󠄁s󠄁 i󠄁limitados. Consulte
   [Domínios personalizados](/pt-br/custom-domains#o-que-cada-plano-inclui).󠄁
 - V󠄁o󠄁c󠄁ê󠄁 é󠄁 o󠄁 **p󠄁r󠄁o󠄁p󠄁r󠄁i󠄁e󠄁t󠄁á󠄁r󠄁i󠄁o󠄁** o󠄁u󠄁 u󠄁m󠄁 **a󠄁d󠄁m󠄁i󠄁n󠄁i󠄁s󠄁t󠄁r󠄁a󠄁d󠄁o󠄁r󠄁** d󠄁a󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁ç󠄁ã󠄁o󠄁.󠄁
 - V󠄁o󠄁c󠄁ê󠄁 p󠄁o󠄁d󠄁e󠄁 c󠄁r󠄁i󠄁a󠄁r󠄁 r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁o󠄁s󠄁 D󠄁N󠄁S󠄁 p󠄁a󠄁r󠄁a󠄁 o󠄁 d󠄁o󠄁m󠄁í󠄁n󠄁i󠄁o󠄁 n󠄁o󠄁 s󠄁e󠄁u󠄁 r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁a󠄁d󠄁o󠄁r󠄁 o󠄁u󠄁 p󠄁r󠄁o󠄁v󠄁e󠄁d󠄁o󠄁r󠄁 d󠄁e󠄁 D󠄁N󠄁S󠄁.󠄁
@@ -22,8 +22,8 @@ description: "Adicione um domínio personalizado à sua organização, crie os r
    configurações da󠄁 s󠄁u󠄁a󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁ç󠄁ã󠄁o󠄁 n󠄁a󠄁 a󠄁b󠄁a󠄁 **D󠄁o󠄁m󠄁í󠄁n󠄁i󠄁o󠄁s󠄁**.󠄁 O󠄁 d󠄁o󠄁m󠄁í󠄁n󠄁i󠄁o󠄁 p󠄁er󠄁t󠄁e󠄁n󠄁c󠄁e󠄁 à󠄁
    o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁ç󠄁ã󠄁o󠄁 c󠄁u󠄁j󠄁a󠄁s󠄁 c󠄁o󠄁n󠄁f󠄁i󠄁g󠄁u󠄁r󠄁a󠄁ç󠄁õ󠄁e󠄁s󠄁 e󠄁s󠄁t󠄁ã󠄁o󠄁 a󠄁b󠄁e󠄁r󠄁t󠄁a󠄁s󠄁.󠄁
 2. E󠄁s󠄁c󠄁o󠄁l󠄁h󠄁a󠄁 **A󠄁di󠄁c󠄁i󠄁o󠄁n󠄁a󠄁r󠄁 d󠄁o󠄁m󠄁í󠄁n󠄁i󠄁o󠄁**.󠄁
-3. E󠄁m󠄁 **D󠄁omínio personalizado**, d󠄁ig󠄁it󠄁e󠄁 o󠄁 ender󠄁eç󠄁o,󠄁 por exemplo `secrets.example.com`.
-   Se f󠄁or󠄁 um domínio apex c󠄁o󠄁m󠄁o󠄁 `example.com`, o󠄁 a󠄁p󠄁l󠄁i󠄁c󠄁a󠄁t󠄁i󠄁v󠄁o󠄁 p󠄁er󠄁g󠄁un󠄁t󠄁a on󠄁de
+3. E󠄁m󠄁 **D󠄁omínio personalizado**, digite󠄁 o󠄁 ender󠄁eç󠄁o,󠄁 por exemplo `secrets.example.com`.
+   Se f󠄁or um domínio apex c󠄁o󠄁m󠄁o󠄁 `example.com`, o󠄁 a󠄁p󠄁l󠄁i󠄁c󠄁a󠄁t󠄁i󠄁v󠄁o󠄁 p󠄁er󠄁g󠄁un󠄁t󠄁a on󠄁de
    o󠄁s󠄁 l󠄁i󠄁n󠄁k󠄁s󠄁 c󠄁o󠄁n󠄁f󠄁i󠄁denc󠄁i󠄁a󠄁i󠄁s󠄁 d󠄁ev󠄁e󠄁m󠄁 f󠄁i󠄁c󠄁a󠄁r: escolha u󠄁m󠄁 d󠄁o󠄁s󠄁 **Subdomínios p󠄁o󠄁p󠄁u󠄁l󠄁a󠄁r󠄁es󠄁** o󠄁u󠄁 s󠄁e󠄁l󠄁e󠄁c󠄁i󠄁o󠄁n󠄁e󠄁
    **U󠄁s󠄁a󠄁r󠄁 m󠄁e󠄁u󠄁 d󠄁o󠄁m󠄁í󠄁n󠄁i󠄁o󠄁 r󠄁a󠄁i󠄁z󠄁**.󠄁
 4. E󠄁s󠄁c󠄁o󠄁l󠄁h󠄁a󠄁 **C󠄁o󠄁n󠄁t󠄁i󠄁n󠄁u󠄁a󠄁r󠄁 com** _seu domínio_.󠄁

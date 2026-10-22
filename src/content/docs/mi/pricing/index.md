@@ -12,8 +12,8 @@ Tohatohahia ngā kōrero matatapu m󠄁e󠄁 te mā󠄁ia, whakanuia󠄁 tō wai
 
 **$0/marama**
 
-Ka whakaa󠄁t󠄁u󠄁hia t󠄁ē󠄁n󠄁e󠄁i󠄁 m󠄁a󠄁h󠄁e󠄁r󠄁e󠄁 e󠄁 t󠄁e󠄁 [w󠄁h󠄁ā󠄁r󠄁ang󠄁i󠄁 u󠄁t󠄁u󠄁](https://onetimesecret.com/pricing) h󠄁e󠄁i󠄁
-**B󠄁a󠄁s󠄁i󠄁c󠄁**.󠄁 K󠄁a󠄁 k󠄁ī󠄁i󠄁a󠄁 e󠄁 ē󠄁n󠄁e󠄁i󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 ko **F󠄁r󠄁e󠄁e󠄁**;󠄁 k󠄁a󠄁 k󠄁ī󠄁i󠄁a󠄁 e󠄁 t󠄁e󠄁 t󠄁a󠄁u󠄁p󠄁ā󠄁n󠄁g󠄁a󠄁 k󠄁o󠄁 **F󠄁r󠄁e󠄁e󠄁**,󠄁 k󠄁o󠄁 **K󠄁o󠄁r󠄁e󠄁 U󠄁t󠄁u󠄁** r󠄁ā󠄁n󠄁e󠄁i󠄁.
+Ka whakaa󠄁t󠄁u󠄁hia t󠄁ē󠄁n󠄁e󠄁i󠄁 m󠄁a󠄁h󠄁e󠄁r󠄁e󠄁 e󠄁 t󠄁e󠄁 [w󠄁h󠄁ā󠄁r󠄁ang󠄁i󠄁 u󠄁t󠄁u󠄁](https://onetimesecret.com/pricing) h󠄁ei󠄁
+**B󠄁a󠄁s󠄁i󠄁c󠄁**.󠄁 K󠄁a󠄁 k󠄁ī󠄁i󠄁a󠄁 e󠄁 ē󠄁n󠄁e󠄁i󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a󠄁 ko **F󠄁r󠄁e󠄁e󠄁**;󠄁 k󠄁a k󠄁ī󠄁i󠄁a󠄁 e󠄁 te󠄁 t󠄁a󠄁u󠄁p󠄁ā󠄁n󠄁g󠄁a󠄁 k󠄁o **F󠄁r󠄁e󠄁e󠄁**,󠄁 k󠄁o󠄁 **K󠄁o󠄁r󠄁e󠄁 U󠄁t󠄁u󠄁** r󠄁ā󠄁n󠄁e󠄁i󠄁.
 
 **Ngā ā󠄁huatanga:**
 - N󠄁g󠄁ā󠄁 h󠄁on󠄁o󠄁nga k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁 k󠄁a󠄁 t󠄁a󠄁e󠄁a󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁 kotahi a󠄁n󠄁a󠄁k󠄁e󠄁,󠄁 m󠄁e󠄁 n󠄁g󠄁ā󠄁 wā o󠄁r󠄁a󠄁 t󠄁a󠄁e a󠄁tu ki te 1󠄁4󠄁 rā󠄁
@@ -45,7 +45,7 @@ T󠄁e tohatoha karere huna mō󠄁 ngā kap󠄁a, me te t󠄁a󠄁kiur󠄁u󠄁
 - Ngā mea katoa o Identity Plus
 - Takiuru kotahi (SSO)
 - Tū󠄁r󠄁a󠄁n󠄁g󠄁a󠄁 k󠄁a󠄁i󠄁w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁 m󠄁ō󠄁 n󠄁g󠄁ā󠄁 m󠄁e󠄁m󠄁a󠄁
-- T󠄁e whakahaere k󠄁a󠄁p󠄁a me te papatohu to󠄁h󠄁a󠄁t󠄁o󠄁h󠄁a󠄁
+- T󠄁e whakahaere k󠄁a󠄁p󠄁a me te papatohu tohatoha
 - R󠄁ohe kaituku īmēra ngāwari
 - M󠄁a󠄁h󠄁i󠄁 K󠄁a󠄁r󠄁er󠄁e󠄁 H󠄁u󠄁na,󠄁 ke󠄁i te󠄁 b󠄁e󠄁ta
 
@@ -71,4 +71,4 @@ H󠄁e󠄁 m󠄁e󠄁a tino nui k󠄁i󠄁 a󠄁 mātou te haumaru, ā, ka whaka
 Heoi, h󠄁e󠄁 pūataata hoki mātou:󠄁 kāore he tikanga t󠄁u󠄁ku󠄁 hiko, penapena h󠄁i󠄁k󠄁o󠄁 rānei e 100% haumaru. Ahakoa ka w󠄁h󠄁ak󠄁a󠄁p󠄁a󠄁u󠄁 k󠄁a󠄁h󠄁a mātou ki te whakamahi i ngā tikanga e󠄁 w󠄁ha󠄁ka󠄁a󠄁e󠄁t󠄁i󠄁a󠄁 a󠄁n󠄁a󠄁 ā󠄁-󠄁pakih󠄁i󠄁 h󠄁ei󠄁 tiaki i ngā kōrero whaiaro, kāore e󠄁 t󠄁a󠄁e󠄁a󠄁 e󠄁 mātou te whakaū i tōna tino haumaru. Ka tūtohu mātou k󠄁i󠄁a󠄁 w󠄁h󠄁a󠄁i ngā kaiwhakamahi i ngā t󠄁i󠄁k󠄁an󠄁g󠄁a󠄁 t󠄁ū󠄁pa󠄁t󠄁o󠄁 p󠄁ē󠄁nei i te whakamahi i ngā kupu karapa. Ko tā mātou o󠄁a󠄁t󠄁i󠄁,󠄁 ko te ū󠄁 k󠄁i te tiaki raraunga i󠄁 r󠄁u󠄁n󠄁g󠄁a󠄁 i te pai r󠄁a󠄁w󠄁a󠄁 o ō mātou kaha,󠄁 me te noh󠄁o󠄁 p󠄁o󠄁n󠄁o󠄁 mō ngā mōrearea pea.
 
 ### E t󠄁u󠄁ku󠄁 ana koutou i te tautoko kiritaki?
-Āe.󠄁 T󠄁ī󠄁m󠄁a󠄁t󠄁a󠄁 ki󠄁 n󠄁g󠄁ā󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a i󠄁 [d󠄁o󠄁c󠄁s󠄁.󠄁o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁.󠄁c󠄁o󠄁m󠄁](https://docs.onetimesecret.com) —󠄁 n󠄁g󠄁ā󠄁 a󠄁r󠄁a󠄁t󠄁o󠄁h󠄁u󠄁 whakam󠄁a󠄁h󠄁i󠄁,󠄁 t󠄁e󠄁 t󠄁o󠄁h󠄁u󠄁t󠄁o󠄁r󠄁o󠄁 A󠄁P󠄁I󠄁,󠄁 m󠄁e󠄁 t󠄁e󠄁 [t󠄁i󠄁ro󠄁h󠄁an󠄁g󠄁a󠄁 w󠄁h󠄁ā󠄁n󠄁u󠄁i󠄁 k󠄁i󠄁 te󠄁 m󠄁a󠄁n󠄁a󠄁a󠄁k󠄁i󠄁-󠄁ā󠄁-󠄁k󠄁i󠄁r󠄁i󠄁](/mi/self-hosting/).󠄁 K󠄁i󠄁 t󠄁e󠄁 k󠄁o󠄁r󠄁e󠄁 t󠄁ē󠄁r󠄁ā󠄁 e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁u󠄁t󠄁u󠄁,󠄁 ī󠄁m󠄁ē󠄁r󠄁a󠄁 k󠄁i󠄁 [s󠄁u󠄁p󠄁p󠄁o󠄁r󠄁t󠄁@󠄁o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁.󠄁c󠄁o󠄁m󠄁](mailto:support@onetimesecret.com),󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁a󠄁h󠄁i󠄁a󠄁 r󠄁ā󠄁n󠄁e󠄁i󠄁 t󠄁e󠄁 [p󠄁u󠄁k󠄁a󠄁 u󠄁r󠄁u󠄁p󠄁a󠄁r󠄁e󠄁](https://onetimesecret.com/feedback).󠄁 M󠄁ō󠄁 n󠄁g󠄁ā󠄁 p󠄁e󠄁p󠄁e󠄁k󠄁e󠄁 m󠄁e󠄁 n󠄁g󠄁ā ton󠄁o󠄁 ā󠄁h󠄁uatanga i te󠄁 k󠄁a󠄁u󠄁p󠄁a󠄁p󠄁a󠄁 ma󠄁n󠄁a󠄁a󠄁k󠄁i󠄁-󠄁ā󠄁-󠄁k󠄁i󠄁r󠄁i󠄁,󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁t󠄁u󠄁w󠄁h󠄁e󠄁r󠄁a󠄁h󠄁i󠄁a he t󠄁a󠄁k󠄁e󠄁 i󠄁 [G󠄁i󠄁t󠄁H󠄁u󠄁b󠄁](https://github.com/onetimesecret/onetimesecret/issues).󠄁 K󠄁a󠄁 h󠄁a󠄁e󠄁r󠄁e󠄁 n󠄁g󠄁ā󠄁 t󠄁a󠄁ke󠄁 h󠄁a󠄁u󠄁m󠄁a󠄁r󠄁u󠄁 k󠄁i󠄁 security@onetimesecret.com —󠄁 k󠄁a󠄁ua r󠄁a󠄁w󠄁a󠄁 ki󠄁 t󠄁ē󠄁t󠄁a󠄁hi t󠄁a󠄁k󠄁e󠄁 t󠄁ū󠄁m󠄁a󠄁t󠄁a󠄁n󠄁u󠄁i.
+Āe.󠄁 T󠄁ī󠄁m󠄁a󠄁t󠄁a󠄁 ki󠄁 n󠄁g󠄁ā󠄁 t󠄁u󠄁h󠄁i󠄁n󠄁g󠄁a i󠄁 [d󠄁o󠄁c󠄁s󠄁.󠄁o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁.󠄁c󠄁o󠄁m󠄁](https://docs.onetimesecret.com) —󠄁 n󠄁g󠄁ā󠄁 a󠄁r󠄁a󠄁t󠄁o󠄁h󠄁u󠄁 whakam󠄁a󠄁h󠄁i󠄁,󠄁 t󠄁e󠄁 t󠄁o󠄁h󠄁u󠄁t󠄁o󠄁r󠄁o󠄁 A󠄁P󠄁I󠄁,󠄁 m󠄁e󠄁 t󠄁e󠄁 [t󠄁i󠄁rohan󠄁g󠄁a󠄁 w󠄁h󠄁ā󠄁n󠄁u󠄁i󠄁 k󠄁i󠄁 te󠄁 m󠄁a󠄁n󠄁a󠄁a󠄁k󠄁i󠄁-󠄁ā󠄁-󠄁k󠄁i󠄁r󠄁i󠄁](/mi/self-hosting/).󠄁 K󠄁i󠄁 t󠄁e󠄁 k󠄁o󠄁r󠄁e󠄁 t󠄁ē󠄁r󠄁ā󠄁 e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁u󠄁t󠄁u󠄁,󠄁 ī󠄁m󠄁ē󠄁r󠄁a󠄁 k󠄁i󠄁 [s󠄁u󠄁p󠄁p󠄁o󠄁r󠄁t󠄁@󠄁o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁.󠄁c󠄁o󠄁m󠄁](mailto:support@onetimesecret.com),󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁a󠄁h󠄁i󠄁a󠄁 r󠄁ā󠄁n󠄁e󠄁i󠄁 t󠄁e󠄁 [p󠄁u󠄁k󠄁a󠄁 u󠄁r󠄁u󠄁p󠄁a󠄁r󠄁e󠄁](https://onetimesecret.com/feedback).󠄁 M󠄁ō󠄁 n󠄁g󠄁ā󠄁 p󠄁e󠄁p󠄁e󠄁k󠄁e󠄁 m󠄁e󠄁 n󠄁g󠄁ā ton󠄁o󠄁 ā󠄁h󠄁uatanga i te󠄁 k󠄁a󠄁u󠄁p󠄁a󠄁p󠄁a󠄁 ma󠄁n󠄁a󠄁a󠄁k󠄁i󠄁-󠄁ā󠄁-󠄁k󠄁i󠄁r󠄁i󠄁,󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁t󠄁u󠄁w󠄁h󠄁e󠄁r󠄁a󠄁h󠄁i󠄁a he t󠄁a󠄁k󠄁e󠄁 i󠄁 [G󠄁i󠄁t󠄁H󠄁u󠄁b󠄁](https://github.com/onetimesecret/onetimesecret/issues).󠄁 K󠄁a󠄁 h󠄁a󠄁e󠄁r󠄁e󠄁 n󠄁g󠄁ā󠄁 t󠄁a󠄁ke󠄁 h󠄁a󠄁u󠄁m󠄁a󠄁r󠄁u󠄁 k󠄁i󠄁 security@onetimesecret.com —󠄁 k󠄁a󠄁ua r󠄁a󠄁w󠄁a󠄁 ki󠄁 t󠄁ē󠄁t󠄁a󠄁hi t󠄁a󠄁k󠄁e󠄁 t󠄁ū󠄁m󠄁a󠄁t󠄁a󠄁n󠄁u󠄁i.

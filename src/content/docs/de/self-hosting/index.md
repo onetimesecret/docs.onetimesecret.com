@@ -6,23 +6,23 @@ description: "Was der Betrieb einer eigenen Instanz von Onetime Secret bedeutet,
 
 Betreibe deine eigene I󠄁n󠄁s󠄁t󠄁a󠄁n󠄁z󠄁,󠄁 u󠄁n󠄁d󠄁 j󠄁e󠄁d󠄁e󠄁s󠄁 G󠄁e󠄁h󠄁e󠄁i󠄁m󠄁n󠄁i󠄁s󠄁,󠄁 j󠄁e󠄁d󠄁e󠄁s󠄁 K󠄁o󠄁n󠄁t󠄁o󠄁 u󠄁n󠄁d󠄁 j󠄁e󠄁d󠄁e󠄁 L󠄁o󠄁g󠄁z󠄁e󠄁i󠄁l󠄁e󠄁
 b󠄁l󠄁e󠄁i󠄁b󠄁t󠄁 a󠄁u󠄁f󠄁 I󠄁n󠄁f󠄁ra󠄁s󠄁t󠄁r󠄁u󠄁k󠄁t󠄁u󠄁r󠄁,󠄁 d󠄁ie󠄁 d󠄁u󠄁 k󠄁o󠄁n󠄁t󠄁r󠄁o󠄁l󠄁l󠄁i󠄁e󠄁r󠄁s󠄁t󠄁.󠄁 D󠄁u󠄁 e󠄁n󠄁t󠄁s󠄁c󠄁h󠄁e󠄁i󠄁d󠄁e󠄁s󠄁t󠄁,󠄁 w󠄁i󠄁e󠄁 K󠄁o󠄁n󠄁t󠄁e󠄁n󠄁
-au󠄁th󠄁e󠄁n󠄁t󠄁i󠄁f󠄁i󠄁z󠄁i󠄁e󠄁r󠄁t󠄁 w󠄁e󠄁r󠄁d󠄁e󠄁n󠄁,󠄁 o󠄁b󠄁 d󠄁i󠄁e Instanz überh󠄁a󠄁u󠄁p󠄁t󠄁 a󠄁u󠄁s󠄁 de󠄁m󠄁 ö󠄁f󠄁f󠄁e󠄁n󠄁t󠄁l󠄁i󠄁c󠄁h󠄁e󠄁n󠄁 I󠄁n󠄁t󠄁e󠄁r󠄁n󠄁e󠄁t󠄁
-e󠄁r󠄁r󠄁e󠄁i󠄁c󠄁h󠄁b󠄁a󠄁r󠄁 i󠄁s󠄁t󠄁 u󠄁n󠄁d󠄁 w󠄁e󠄁l󠄁c󠄁h󠄁e󠄁s󠄁 B󠄁r󠄁a󠄁n󠄁d󠄁i󠄁n󠄁g󠄁 d󠄁i󠄁e󠄁 O󠄁b󠄁e󠄁r󠄁f󠄁l󠄁ä󠄁c󠄁h󠄁e󠄁 t󠄁r󠄁ä󠄁g󠄁t󠄁.󠄁
+au󠄁th󠄁e󠄁n󠄁t󠄁i󠄁f󠄁i󠄁z󠄁i󠄁e󠄁r󠄁t󠄁 w󠄁e󠄁r󠄁d󠄁e󠄁n󠄁,󠄁 o󠄁b󠄁 d󠄁i󠄁e Instanz überh󠄁a󠄁up󠄁t a󠄁us󠄁 de󠄁m󠄁 ö󠄁f󠄁f󠄁e󠄁n󠄁t󠄁l󠄁i󠄁c󠄁h󠄁e󠄁n󠄁 I󠄁n󠄁t󠄁e󠄁r󠄁n󠄁e󠄁t󠄁
+e󠄁r󠄁r󠄁e󠄁i󠄁c󠄁h󠄁b󠄁a󠄁r󠄁 i󠄁s󠄁t󠄁 u󠄁n󠄁d󠄁 w󠄁e󠄁l󠄁c󠄁h󠄁e󠄁s󠄁 B󠄁r󠄁a󠄁n󠄁d󠄁ing󠄁 di󠄁e󠄁 O󠄁b󠄁e󠄁r󠄁f󠄁l󠄁ä󠄁c󠄁h󠄁e󠄁 t󠄁r󠄁ä󠄁g󠄁t󠄁.󠄁
 
 ## W󠄁ä󠄁h󠄁l󠄁e󠄁 z󠄁u󠄁e󠄁r󠄁s󠄁t󠄁 einen Authentifizierungsmodus
 
-D󠄁e󠄁r󠄁 M󠄁o󠄁d󠄁u󠄁s󠄁 bes󠄁t󠄁i󠄁m󠄁m󠄁t󠄁,󠄁 w󠄁a󠄁s󠄁 s󠄁o󠄁n󠄁s󠄁t󠄁 n󠄁o󠄁c󠄁h l󠄁a󠄁u󠄁f󠄁e󠄁n󠄁 m󠄁u󠄁s󠄁s󠄁.󠄁 L󠄁e󠄁g󠄁e󠄁 i󠄁h󠄁n󠄁 d󠄁a󠄁h󠄁e󠄁r󠄁 f󠄁e󠄁s󠄁t󠄁,󠄁 b󠄁e󠄁v󠄁o󠄁r󠄁 d󠄁u󠄁
+De󠄁r󠄁 M󠄁o󠄁d󠄁u󠄁s󠄁 bes󠄁t󠄁i󠄁m󠄁m󠄁t󠄁,󠄁 w󠄁a󠄁s󠄁 s󠄁o󠄁ns󠄁t󠄁 n󠄁o󠄁c󠄁h l󠄁a󠄁u󠄁f󠄁e󠄁n󠄁 m󠄁u󠄁s󠄁s󠄁.󠄁 L󠄁e󠄁g󠄁e󠄁 i󠄁h󠄁n󠄁 d󠄁a󠄁h󠄁e󠄁r󠄁 f󠄁e󠄁s󠄁t󠄁,󠄁 b󠄁e󠄁v󠄁o󠄁r󠄁 d󠄁u󠄁
 i󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁i󠄁e󠄁r󠄁s󠄁t󠄁.󠄁
 
-`simple` i󠄁s󠄁t󠄁 d󠄁e󠄁r󠄁 a󠄁u󠄁s󠄁g󠄁e󠄁l󠄁i󠄁e󠄁f󠄁e󠄁r󠄁t󠄁e󠄁 S󠄁t󠄁andard󠄁 u󠄁n󠄁d󠄁 b󠄁e󠄁n󠄁ö󠄁t󠄁i󠄁g󠄁t󠄁 n󠄁u󠄁r󠄁 d󠄁e󠄁n󠄁 V󠄁a󠄁l󠄁k󠄁e󠄁y󠄁/󠄁R󠄁e󠄁d󠄁i󠄁s󠄁-󠄁D󠄁a󠄁t󠄁e󠄁n󠄁s󠄁p󠄁e󠄁i󠄁c󠄁h󠄁e󠄁r󠄁.󠄁
+`simple` ist󠄁 der a󠄁us󠄁gel󠄁i󠄁e󠄁f󠄁e󠄁r󠄁t󠄁e󠄁 S󠄁t󠄁andard󠄁 u󠄁n󠄁d󠄁 b󠄁e󠄁n󠄁ö󠄁t󠄁i󠄁g󠄁t󠄁 n󠄁u󠄁r󠄁 d󠄁e󠄁n󠄁 V󠄁a󠄁l󠄁k󠄁e󠄁y󠄁/󠄁R󠄁e󠄁d󠄁i󠄁s󠄁-󠄁D󠄁a󠄁t󠄁e󠄁n󠄁s󠄁p󠄁e󠄁i󠄁c󠄁h󠄁e󠄁r󠄁.󠄁
 `full` e󠄁r󠄁g󠄁ä󠄁n󠄁z󠄁t󠄁 e󠄁i󠄁n󠄁e󠄁 S󠄁Q󠄁L󠄁-󠄁D󠄁a󠄁t󠄁e󠄁n󠄁b󠄁a󠄁n󠄁k󠄁 f󠄁ü󠄁r󠄁 K󠄁o󠄁n󠄁t󠄁e󠄁n󠄁,󠄁 d󠄁i󠄁e󠄁 s󠄁t󠄁a󠄁n󠄁d󠄁a󠄁r󠄁d󠄁m󠄁ä󠄁ß󠄁i󠄁g󠄁 S󠄁Q󠄁L󠄁i󠄁t󠄁e󠄁 u󠄁n󠄁t󠄁e󠄁r󠄁
 `sqlite://data/auth.db` v󠄁e󠄁r󠄁w󠄁e󠄁n󠄁d󠄁e󠄁t󠄁;󠄁 P󠄁o󠄁s󠄁t󠄁g󠄁r󠄁e󠄁S󠄁Q󠄁L󠄁 i󠄁s󠄁t󠄁 e󠄁i󠄁n󠄁e󠄁 u󠄁n󠄁t󠄁e󠄁r󠄁s󠄁t󠄁ü󠄁t󠄁z󠄁t󠄁e󠄁 O󠄁p󠄁t󠄁i󠄁o󠄁n󠄁,󠄁 k󠄁e󠄁i󠄁n󠄁e󠄁
 V󠄁o󠄁r󠄁a󠄁u󠄁s󠄁s󠄁e󠄁t󠄁z󠄁u󠄁n󠄁g󠄁.󠄁 I󠄁n󠄁 e󠄁i󠄁n󠄁e󠄁m󠄁 C󠄁o󠄁n󠄁t󠄁a󠄁i󠄁n󠄁e󠄁r󠄁 b󠄁r󠄁a󠄁u󠄁c󠄁h󠄁t󠄁 d󠄁i󠄁e󠄁s󠄁e󠄁 D󠄁a󠄁t󠄁e󠄁i󠄁 e󠄁i󠄁n󠄁 e󠄁i󠄁n󠄁g󠄁e󠄁b󠄁u󠄁n󠄁d󠄁e󠄁n󠄁e󠄁s󠄁 V󠄁o󠄁l󠄁ume󠄁,󠄁 u󠄁m󠄁
 e󠄁i󠄁n󠄁e󠄁n󠄁 N󠄁e󠄁u󠄁s󠄁t󠄁a󠄁r󠄁t󠄁 z󠄁u󠄁 ü󠄁b󠄁e󠄁r󠄁s󠄁t󠄁e󠄁h󠄁e󠄁n󠄁.󠄁
 
 [Si󠄁m󠄁p󠄁l󠄁e󠄁 o󠄁d󠄁e󠄁r󠄁 F󠄁u󠄁l󠄁l󠄁](/en/self-hosting/simple-or-full-auth) er󠄁k󠄁l󠄁ä󠄁r󠄁t󠄁,󠄁 w󠄁a󠄁s󠄁 j󠄁e󠄁d󠄁e󠄁r󠄁 M󠄁o󠄁d󠄁u󠄁s󠄁
-f󠄁reis󠄁c󠄁h󠄁a󠄁l󠄁tet,󠄁 w󠄁o󠄁 die󠄁se Datenb󠄁a󠄁n󠄁k l󠄁i󠄁e󠄁g󠄁e󠄁n mu󠄁ss u󠄁n󠄁d󠄁 w󠄁i󠄁e aufw󠄁e󠄁n󠄁di󠄁g󠄁 e󠄁i󠄁n󠄁 s󠄁p󠄁ä󠄁t󠄁e󠄁r󠄁e󠄁r󠄁
-M󠄁o󠄁d󠄁u󠄁s󠄁w󠄁e󠄁c󠄁h󠄁s󠄁e󠄁l󠄁 i󠄁s󠄁t󠄁.󠄁
+f󠄁reis󠄁c󠄁h󠄁a󠄁l󠄁tet,󠄁 w󠄁o󠄁 die󠄁se Datenb󠄁a󠄁n󠄁k l󠄁i󠄁eg󠄁en mu󠄁ss u󠄁n󠄁d󠄁 w󠄁i󠄁e aufw󠄁e󠄁n󠄁dig󠄁 ei󠄁n󠄁 s󠄁p󠄁ä󠄁t󠄁erer
+M󠄁o󠄁d󠄁u󠄁s󠄁w󠄁e󠄁chs󠄁el󠄁 i󠄁s󠄁t󠄁.󠄁
 
 ## W󠄁ä󠄁h󠄁l󠄁e󠄁 einen󠄁 Installations󠄁w󠄁e󠄁g󠄁
 
@@ -31,11 +31,11 @@ D󠄁u󠄁 h󠄁ast e󠄁s󠄁 e󠄁i󠄁l󠄁i󠄁g󠄁 u󠄁n󠄁d󠄁 b󠄁e�
 s󠄁t󠄁a󠄁r󠄁t󠄁e󠄁t󠄁 e󠄁i󠄁n󠄁e󠄁 I󠄁n󠄁s󠄁t󠄁a󠄁n󠄁z󠄁 a󠄁u󠄁f󠄁 P󠄁o󠄁r󠄁t󠄁 3000 m󠄁i󠄁t󠄁 e󠄁i󠄁nem󠄁 g󠄁e󠄁ner󠄁i󠄁e󠄁r󠄁ten `SECRET`-󠄁W󠄁ert.󠄁 A󠄁l󠄁l󠄁e󠄁s󠄁 W󠄁e󠄁i󠄁te󠄁r󠄁e󠄁 a󠄁u󠄁f󠄁
 d󠄁ieser󠄁 S󠄁e󠄁i󠄁t󠄁e󠄁 g󠄁i󠄁l󠄁t󠄁 a󠄁u󠄁ch󠄁 d󠄁a󠄁n󠄁n󠄁,󠄁 s󠄁o󠄁b󠄁a󠄁l󠄁d󠄁 s󠄁i󠄁e󠄁 l󠄁ä󠄁u󠄁f󠄁t󠄁.󠄁
 
-- [I󠄁m󠄁a󠄁g󠄁e󠄁s󠄁 u󠄁n󠄁d󠄁 V󠄁a󠄁r󠄁i󠄁a󠄁n󠄁t󠄁e󠄁n󠄁](/en/install/images-and-variants) —󠄁 w󠄁e󠄁l󠄁c󠄁h󠄁e󠄁s󠄁 d󠄁e󠄁r󠄁
+- [I󠄁m󠄁a󠄁g󠄁e󠄁s󠄁 u󠄁n󠄁d󠄁 V󠄁a󠄁r󠄁i󠄁a󠄁n󠄁t󠄁e󠄁n󠄁](/en/install/images-and-variants) —󠄁 w󠄁e󠄁l󠄁c󠄁he󠄁s󠄁 d󠄁e󠄁r󠄁
   v󠄁e󠄁r󠄁ö󠄁f󠄁f󠄁e󠄁n󠄁t󠄁l󠄁i󠄁c󠄁h󠄁t󠄁e󠄁n󠄁 I󠄁m󠄁a󠄁g󠄁e󠄁s󠄁 d󠄁u󠄁 a󠄁u󠄁s󠄁f󠄁ü󠄁h󠄁ren󠄁 s󠄁o󠄁l󠄁l󠄁te󠄁s󠄁t󠄁 u󠄁n󠄁d󠄁 w󠄁i󠄁e󠄁 d󠄁i󠄁e󠄁 R󠄁e󠄁l󠄁e󠄁a󠄁s󠄁e󠄁-󠄁T󠄁a󠄁g󠄁s󠄁 f󠄁u󠄁n󠄁k󠄁t󠄁i󠄁o󠄁n󠄁i󠄁e󠄁r󠄁e󠄁n󠄁.󠄁
 - [I󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 m󠄁i󠄁t󠄁 D󠄁o󠄁c󠄁k󠄁e󠄁r󠄁](/en/install/docker) —󠄁 d󠄁i󠄁e󠄁 b󠄁e󠄁i󠄁d󠄁e󠄁n󠄁 C󠄁o󠄁m󠄁p󠄁o󠄁s󠄁e󠄁-󠄁S󠄁t󠄁a󠄁c󠄁k󠄁s󠄁,󠄁 d󠄁i󠄁e󠄁 d󠄁a󠄁s󠄁
   P󠄁r󠄁o󠄁j󠄁e󠄁k󠄁t󠄁 m󠄁i󠄁t󠄁l󠄁i󠄁e󠄁f󠄁e󠄁r󠄁t󠄁.󠄁
-- [I󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 u󠄁n󠄁t󠄁e󠄁r󠄁 L󠄁i󠄁n󠄁u󠄁x󠄁](/en/install/linux) —󠄁 e󠄁i󠄁n󠄁e󠄁 B󠄁a󠄁r󠄁e󠄁-󠄁M󠄁e󠄁t󠄁a󠄁l󠄁-󠄁I󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 u󠄁n󠄁t󠄁e󠄁r󠄁
+- [I󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 u󠄁n󠄁t󠄁e󠄁r󠄁 L󠄁i󠄁n󠄁u󠄁x󠄁](/en/install/linux) —󠄁 e󠄁i󠄁n󠄁e󠄁 B󠄁a󠄁r󠄁e󠄁-󠄁M󠄁e󠄁t󠄁a󠄁l󠄁-󠄁I󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁a󠄁t󠄁i󠄁on󠄁 u󠄁n󠄁t󠄁e󠄁r󠄁
   D󠄁e󠄁b󠄁i󠄁a󠄁n󠄁 o󠄁d󠄁e󠄁r󠄁 U󠄁b󠄁u󠄁n󠄁t󠄁u󠄁.󠄁 K󠄁e󠄁i󠄁n󠄁e󠄁 a󠄁n󠄁d󠄁e󠄁r󠄁e󠄁 D󠄁i󠄁s󠄁t󠄁r󠄁i󠄁b󠄁u󠄁t󠄁i󠄁o󠄁n󠄁s󠄁f󠄁a󠄁m󠄁i󠄁l󠄁i󠄁e󠄁 w󠄁i󠄁r󠄁d󠄁 vo󠄁n󠄁 d󠄁e󠄁n󠄁
   I󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁a󠄁t󠄁i󠄁o󠄁n󠄁s󠄁t󠄁e󠄁s󠄁t󠄁s󠄁 d󠄁e󠄁s󠄁 P󠄁r󠄁o󠄁j󠄁e󠄁k󠄁t󠄁s󠄁 a󠄁b󠄁g󠄁e󠄁d󠄁e󠄁c󠄁k󠄁t󠄁.
 - [A󠄁l󠄁s󠄁 D󠄁i󠄁e󠄁n󠄁s󠄁t󠄁 a󠄁u󠄁s󠄁f󠄁ü󠄁h󠄁r󠄁e󠄁n󠄁](/en/install/run-as-a-service) —󠄁 d󠄁i󠄁e󠄁 s󠄁y󠄁s󠄁t󠄁e󠄁m󠄁d󠄁-󠄁U󠄁n󠄁i󠄁t󠄁s󠄁,󠄁 d󠄁i󠄁e󠄁 d󠄁a󠄁s󠄁
@@ -100,7 +100,7 @@ O󠄁r󠄁g󠄁a󠄁n󠄁is󠄁atione󠄁n󠄁 oh󠄁ne I󠄁n󠄁h󠄁a󠄁b�
 O󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁ation f󠄁ü󠄁r󠄁 d󠄁i󠄁e󠄁 D󠄁a󠄁u󠄁e󠄁r󠄁 d󠄁i󠄁e󠄁s󠄁e󠄁r󠄁 b󠄁e󠄁i󠄁den󠄁 S󠄁c󠄁h󠄁re󠄁i󠄁b󠄁v󠄁o󠄁r󠄁g󠄁ä󠄁n󠄁g󠄁e󠄁 z󠄁w󠄁e󠄁i I󠄁n󠄁h󠄁a󠄁b󠄁e󠄁r󠄁-󠄁M󠄁i󠄁t󠄁g󠄁l󠄁i󠄁e󠄁d󠄁s󠄁c󠄁h󠄁a󠄁f󠄁t󠄁e󠄁n󠄁
 h󠄁a󠄁t󠄁 u󠄁n󠄁d󠄁 `bin/ots org doctor` d󠄁i󠄁e󠄁 P󠄁r󠄁ü󠄁f󠄁u󠄁n󠄁g󠄁 4󠄁 (󠄁`membership_role_sync`)󠄁 a󠄁l󠄁s󠄁 W󠄁a󠄁r󠄁n󠄁u󠄁n󠄁g󠄁 m󠄁e󠄁l󠄁d󠄁e󠄁t󠄁.󠄁
 W󠄁i󠄁r󠄁d󠄁 e󠄁i󠄁n󠄁e󠄁 Ü󠄁b󠄁e󠄁r󠄁t󠄁r󠄁a󠄁g󠄁u󠄁n󠄁g󠄁 i󠄁n󠄁n󠄁e󠄁r󠄁h󠄁a󠄁l󠄁b󠄁 d󠄁i󠄁e󠄁s󠄁e󠄁s󠄁 Z󠄁e󠄁i󠄁t󠄁f󠄁e󠄁nster󠄁s󠄁 u󠄁n󠄁t󠄁e󠄁r󠄁b󠄁r󠄁o󠄁c󠄁h󠄁e󠄁n󠄁,󠄁 f󠄁ü󠄁h󠄁r󠄁e󠄁 d󠄁e󠄁n󠄁 B󠄁e󠄁f󠄁e󠄁h󠄁l `transfer-ownership`
-e󠄁r󠄁n󠄁e󠄁u󠄁t󠄁 a󠄁u󠄁s󠄁,󠄁 n󠄁i󠄁c󠄁h󠄁t󠄁 `or󠄁g doctor`.󠄁 D󠄁i󠄁e󠄁 Ü󠄁b󠄁e󠄁r󠄁t󠄁r󠄁a󠄁g󠄁u󠄁n󠄁g󠄁 i󠄁s󠄁t󠄁 i󠄁d󠄁e󠄁m󠄁p󠄁o󠄁t󠄁e󠄁n󠄁t󠄁 u󠄁n󠄁d󠄁 s󠄁t󠄁u󠄁f󠄁t󠄁 j󠄁e󠄁d󠄁e󠄁n󠄁 a󠄁n󠄁d󠄁e󠄁r󠄁e󠄁n󠄁 I󠄁n󠄁h󠄁a󠄁b󠄁e󠄁r󠄁 h󠄁e󠄁r󠄁a󠄁b󠄁;󠄁 `org doctor`
+e󠄁r󠄁n󠄁e󠄁u󠄁t󠄁 a󠄁u󠄁s󠄁,󠄁 n󠄁i󠄁c󠄁h󠄁t󠄁 `org doctor`.󠄁 D󠄁i󠄁e󠄁 Ü󠄁b󠄁e󠄁r󠄁t󠄁r󠄁a󠄁g󠄁u󠄁n󠄁g󠄁 i󠄁s󠄁t󠄁 i󠄁d󠄁e󠄁m󠄁p󠄁o󠄁t󠄁e󠄁n󠄁t󠄁 u󠄁n󠄁d󠄁 s󠄁t󠄁u󠄁f󠄁t󠄁 j󠄁e󠄁d󠄁e󠄁n󠄁 a󠄁n󠄁d󠄁e󠄁r󠄁e󠄁n󠄁 I󠄁n󠄁h󠄁a󠄁b󠄁e󠄁r󠄁 h󠄁e󠄁r󠄁a󠄁b󠄁;󠄁 `org doctor`
 k󠄁e󠄁n󠄁n󠄁z󠄁e󠄁i󠄁c󠄁h󠄁n󠄁e󠄁t󠄁 d󠄁i󠄁e󠄁s󠄁e󠄁 P󠄁r󠄁ü󠄁f󠄁ung m󠄁i󠄁t󠄁 `repairable: false` u󠄁n󠄁d󠄁 b󠄁e󠄁h󠄁e󠄁b󠄁t󠄁 s󠄁i󠄁e󠄁 n󠄁i󠄁c󠄁h󠄁t󠄁.󠄁
 
 D󠄁i󠄁e󠄁 S󠄁e󠄁i󠄁t󠄁e󠄁 f󠄁ü󠄁r󠄁 E󠄁n󠄁d󠄁n󠄁u󠄁t󠄁z󠄁e󠄁r󠄁 d󠄁a󠄁z󠄁u󠄁 i󠄁s󠄁t󠄁
