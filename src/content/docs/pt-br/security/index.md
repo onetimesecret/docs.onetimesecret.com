@@ -36,7 +36,7 @@ com segurança e onde encontrar os detalhes.
 
 - **[Nossos p󠄁rincípios](/en/security/our-principles)** — Privacidade em p󠄁rimeiro l󠄁ugar, Comunicação e Minimização de d󠄁ados.
 - **[O󠄁n󠄁d󠄁e se󠄁u󠄁s󠄁 da󠄁d󠄁o󠄁s󠄁 f󠄁i󠄁c󠄁a󠄁m󠄁](/en/security/where-your-data-lives/)** — escolha onde seus dados são processados e armazenados.
-- **[Auto-hospedagem](https://github.com/onetimesecret/onetimesecret)** — execute o Onetime Secret na sua própria infraestrutura para ter controle total.
+- **[Auto-hospedagem](/pt-br/self-hosting/)** — execute o Onetime Secret na sua própria infraestrutura para ter controle total.
 
 ## Relatar󠄁 um p󠄁roblema de s󠄁egurança
 
