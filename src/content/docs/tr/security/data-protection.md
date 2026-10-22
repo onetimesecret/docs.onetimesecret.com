@@ -51,7 +51,7 @@ kontrollerinizin, politikalarınızın ve hukuki incelemenizin yerini almaz.
   **support@onetimesecret.com** adresiyle iletişime geçin.
 
 Katı veri kontrolü gereksinimleri olan kuruluşlar için
-[kendi sunucunuzda barındırma](https://github.com/onetimesecret/onetimesecret) her şeyi
+[kendi sunucunuzda barındırma](/tr/self-hosting/) her şeyi
 kendi altyapınız içinde tutar.
 
 ## Sorularınız m󠄁ı󠄁 v󠄁a󠄁r󠄁 veya d󠄁esteğ󠄁e󠄁 m󠄁i󠄁 i󠄁htiyacınız v󠄁ar?
