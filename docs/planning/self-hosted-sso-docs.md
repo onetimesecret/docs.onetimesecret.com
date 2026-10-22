@@ -12,11 +12,11 @@ content review and configuration-generator updates. Reconciled four overlapping
 pages by retaining upstream content and reapplying only the operator links.
 The final validation baseline is this newer SHA, not the initial checkout.
 
-Application evidence: fetched `onetimesecret/onetimesecret` `origin/main` at
-`5da18791caab8a4cfab4650f613c1804172a6907`. The inspected local application
-checkout is `145c1e7cfa693a7b0a55e4a2efc508739d894da0`; the SSO provider,
-authentication configuration, and public-host source files have no differences
-between those revisions. Configuration defaults were also read from the fetched
+Application evidence: `onetimesecret/onetimesecret` `main` at
+`5da18791caab8a4cfab4650f613c1804172a6907` and
+`145c1e7cfa693a7b0a55e4a2efc508739d894da0`; the SSO provider, authentication
+configuration, and public-host source files have no differences between those
+revisions. Configuration defaults were also read from the fetched
 reference. Provider instructions use official documentation linked on each page.
 These are source-reviewed recipes, not live identity-provider certification.
 
@@ -25,14 +25,14 @@ These are source-reviewed recipes, not live identity-provider certification.
 | ID | Finding and reader risk | Disposition | Evidence and final location | Verification |
 | --- | --- | --- | --- | --- |
 | F1 | Operators encounter references without task guides. | Addressed | Eight `configure` pages and flat sidebar entries. | Navigation and orphan checks; rendered review. |
-| F2 | Generic OIDC obscures named providers and button labels. | Addressed | SSO hub, ten named recipes, `OIDC_DISPLAY_NAME`; `lib/onetime/sso_provider/oidc.rb`. | Provider source review and built-page search. |
+| F2 | Generic OIDC obscures named providers and button labels. | Addressed | SSO hub, nine named recipes (OneLogin withdrawn, see R2), `OIDC_DISPLAY_NAME`; `lib/onetime/sso_provider/oidc.rb`. | Provider source review and built-page search. |
 | F3 | August SSO prose contradicts current SAML, restrictions, callbacks and CSP behavior. | Addressed | Rewrite SSO; provider definitions, `validate_auth_config.rb`, `omniauth_tenant.rb`, `auth_config.rb`. | Compare final text with source. |
 | F4 | Hosted pages do not direct instance operators to configuration. | Addressed | Four reciprocal hosted/operator pairs and self-hosting entry links. | All changed-page local links. |
 | F5 | Importing the draft would replace flat navigation and newer upgrade guides. | Addressed | Preserve existing sidebar entries, index and URL destinations. | Diff review. |
 | F6 | Repeated provider setup could drift or imply ten simultaneous platform IdPs. | Addressed | One shared setup procedure; provider-specific recipes; one generic platform connection. | Final coverage review. |
 | F7 | General configuration draft includes outdated security and authentication assertions. | Addressed | Concise task guides checked against current defaults and implementation, without importing the old reference. | Source review; no runtime claim. |
 | F8 | New prose must preserve attribution and English-only scope. | Addressed | Template-based pages, TextProv create/edit, English label keys only. | Strict TextProv check against merged baseline and repository checks. |
-| F9 | Marked aside syntax and numbered heading fragments render incorrectly. | Addressed | New content uses ordinary Markdown notes and unnumbered action headings. Existing source marks remain intact. | Built-page inspection and browser navigation confirm clean rendering and working fragments. |
+| F9 | Marked aside syntax and numbered heading fragments render incorrectly. | Superseded by R7 | #464 fixed aside fences; this branch fixes numbered heading IDs in the decoder. Pages now use Starlight asides and numbered steps. | See R7. |
 | F10 | Link-check wrapper passes literal quotes in its root path and cannot run. | Addressed for this validation | The same lychee configuration was run directly with a correctly quoted root; the wrapper itself is unchanged. | Whole built-site offline check passes. |
 | F11 | New untracked pages have extra blank lines at EOF. | Addressed | Trailing-blank-line formatting on the 18 new pages only. | No-index whitespace checks include every untracked file. |
 | F12 | Develop advanced during validation and revised four linked pages. | Addressed | Fast-forward merged latest develop; kept upstream rewrites and applied narrow operator links. | Post-merge provenance, tests, diagnostics, build, local links and diff review; remote SHA matches HEAD. |
@@ -97,11 +97,7 @@ over the network. Provider administrator consoles and live login flows were not
 exercised. No SMTP delivery, key rotation, or authentication-policy change was
 performed. The examples are source-reviewed, not runtime-tested.
 
-The initial finalization's remote check reported `develop` at `15c75c84`, matching this worktree's
-HEAD. At that checkpoint, work was local and uncommitted on
-`wip/self-hosted-sso-docs`; no PR or publication had been created. The pre-merge safety stash is retained as
-`aa425c6eb30810e54d28cf774bd3593c91c10b13`. The primary checkout's unrelated
-`package.json` modification is untouched.
+The initial finalization's remote check reported `develop` at `15c75c84`.
 
 ## Provider review follow-up (2026-10-21)
 
@@ -119,7 +115,7 @@ credentials were supplied for this task.
 | I4 | Material: Zitadel application registration does not establish intended access restrictions. | Addressed | `configure/sso/zitadel.md`, registration and verification: both project checks, role assignment and denied-user tests, with official reference. | Final source re-read and built-text checks confirm named controls and negative test. |
 | I5 | Material: JumpCloud connector lacks a Login URL distinct from the callback. | Addressed | `configure/sso/jumpcloud.md`, registration: public `/signin` URL, distinct callback and portal-launch explanation. | Final source re-read and built-text checks; JumpCloud connector reference reopened. |
 | I6 | Non-material usability: Cognito issuer placeholder lacks discovery-location guidance. | Addressed | `configure/sso/amazon-cognito.md`, issuer section: discovery example, original/updated hostname distinction and exact issuer copy. | Final source re-read and built-text checks; AWS endpoint reference reopened. |
-| V1 | Material compatibility uncertainty: OneLogin Basic plus PKCE is not established by provider documentation. | Deferred live verification; caveat added | `configure/sso/onelogin.md` prerequisites and `configure/sso/index.md` provider row explicitly mark the recipe provisional. OneLogin PKCE guide selects None (PKCE), token reference documents Basic; Onetime Secret `oidc.rb` sets `pkce: true`. | Rendered blockquote and hub status checked. Live code exchange and resulting session remain untested; caveat is not proof of compatibility. |
+| V1 | Material compatibility uncertainty: OneLogin Basic plus PKCE is not established by provider documentation. | Withdrawn by R2; caveat removed with the page | `configure/sso/onelogin.md` prerequisites and `configure/sso/index.md` provider row explicitly mark the recipe provisional. OneLogin PKCE guide selects None (PKCE), token reference documents Basic; Onetime Secret `oidc.rb` sets `pkce: true`. | Rendered blockquote and hub status checked. Live code exchange and resulting session remain untested; caveat is not proof of compatibility. |
 
 Final coverage: six addressed (I1–I6), one deferred material check (V1); no
 rejected, omitted or unclassified findings. All eight changed published files
@@ -156,14 +152,12 @@ GitLab OIDC, JumpCloud OIDC and AWS federation-endpoint references were reopened
 for the corrections. Other existing external references were not rechecked in
 this follow-up. Provider URLs are linked at the relevant step in each recipe.
 
-Finalization status: **Not ready for publication as a complete verified recipe
-set**, because V1 remains deferred. To close it, use an authorized OneLogin test
-application and self-hosted test instance to verify Basic authentication with
-Onetime Secret's PKCE request, token exchange and resulting session. Record the
-application version and configuration without secrets, then reconcile the
-recipe. No live IdP flows or administrative configuration changes were performed.
-At that checkpoint, work was uncommitted on `wip/self-hosted-sso-docs`; no push
-or PR had been made.
+Finalization status at that point: not ready for publication, because V1 was
+deferred. R2 below withdraws the OneLogin recipe instead. To restore it, use an
+authorized OneLogin test application and self-hosted test instance to verify
+Basic authentication with Onetime Secret's PKCE request, token exchange and
+resulting session, then reintroduce the page from `f6d69e52`. No live IdP flows
+or administrative configuration changes were performed.
 
 ## Pull request preparation (2026-10-21)
 
@@ -174,3 +168,47 @@ V1 still requires live verification. The published content is unchanged since
 the recorded provider-review validation. Commit groups separate the general
 configuration guides, SSO hub and provider recipes, and navigation with this
 review ledger. Creating the draft does not change the publication assessment.
+
+## Code review follow-up (2026-10-22)
+
+`develop` was merged into the branch at `343f06af`, bringing in #464. Claims
+were rechecked against `onetimesecret/onetimesecret` `main` at `29aff4f170` and
+release `v0.26.18`; `OIDC_CLIENT_AUTH_METHOD`, the GitLab provider, native SAML
+and `SMTP_SSL` all ship in `v0.26.18`.
+
+| ID | Finding | Disposition | Evidence and final location |
+| --- | --- | --- | --- |
+| R1 | `AUTH_SIGNUP` does not stop SSO account creation. | Addressed | `omniauth_create_account? true` (`features/omniauth.rb`); `signup_enabled.rb` gates only `create_account`, `verify_account` and `verify_account_resend`; `before_omniauth_create_account` applies `ALLOWED_SIGNUP_DOMAIN` (`hooks/omniauth.rb`, `signup_validation.rb`). New hub step 4, `configure/authentication.md`, GitLab prerequisites, hub verification and troubleshooting row. |
+| R2 | OneLogin recipe published while V1 is unverified. | Addressed | Page and hub row removed. Restore from `f6d69e52` after a live check. |
+| R3 | Hub opening describes its own verification status. | Addressed | Sentence removed. |
+| R4 | `ARGON2_SECRET` treated as optional. | Addressed | `lib/tasks/init.rake` generates it with `AUTH_SECRET` and `ACCOUNT_ID_SECRET` and a 64-byte `SECRET`; Rodauth has no old-secret setting wired for it. `configure/secrets-and-keys.md` now generates and supplies all three, documents `rake ots:secrets`, and says to set the pepper before the first password account. |
+| R5 | Sidebar puts email after authentication and SSO. | Addressed | Order is keys, email, sessions and cookies, authentication, SSO, security headers, secret options, matching each page's prerequisites. Overview table and self-hosting entry links follow it. |
+| R6 | Release hedges in user docs. | Addressed | Removed from email, JumpCloud, GitLab, the hub (two), sessions and cookies, secrets and keys, and authentication. |
+| R7 | Blockquote callouts and unnumbered steps work around the TextProv bug. | Addressed | #464 fixed aside fences only. Numbered headings still decoded to IDs such as `1<sel>-step` because the slugger drops the marked `.` but keeps its selector; `src/lib/textprov/html.mjs` now drops such orphaned selectors (test in `html.test.ts`). All callouts are Starlight asides and all how-to steps are numbered. The duplicate top note on `organizations/sso.md` merged into its existing self-hosting aside. |
+| R8 | Ten recipes repeat hub boilerplate. | Addressed | Recipes keep only provider steps. They link the hub for prerequisites, the callback URL (step 1) and instance configuration (step 3); the callback block, apply-and-test text and generic verification sentence are gone. |
+| R9 | CSP guidance repeated after the hub troubleshooting table. | Addressed | Paragraph removed; the table row links `security-headers.md`. |
+| R10 | Ledger records machine-local state. | Addressed | Stash SHA, primary-checkout note and "local checkout" wording removed. Cited application SHAs are on `onetimesecret/onetimesecret` `main`. |
+
+Not changed: `install/docker.md` generates `AUTH_SECRET` and
+`ACCOUNT_ID_SECRET` but not `ARGON2_SECRET`, and its interpolation list omits
+it although `docker-compose.full.yml` interpolates it. That page is outside
+this PR.
+
+TextProv: page edits were applied with `dogfood.py edit --state ai`, then marks
+were re-anchored to the PR base `343f06af` (clusters aligned to base text keep
+base bytes; other prose is marked AI; nothing else is marked). Two sentences
+were reworded so the session-base check also passes.
+
+Validation:
+
+- `python3 tools/dogfood.py check --base 343f06af` and `--preserve-only`:
+  23 eligible changed files, zero failures. The same pair against the
+  pre-review branch head: 21 files, zero failures.
+- `python3 -m unittest discover -s tools/tests`: 36 passed.
+- `pnpm test`: 195 passed in 12 files. `pnpm run check:types`: passed.
+- `check:frontmatter`, `check:nav`, `check:orphans`, `check:locales` and
+  `check:links:malformed`: passed.
+- `pnpm build`: passed, 1,595 pages.
+- Built-HTML inspection of the 23 changed pages: 356 local paths and
+  fragments resolve, no literal `:::`, no leftover selectors, asides render.
+  No heading ID anywhere in `dist` contains a selector.
