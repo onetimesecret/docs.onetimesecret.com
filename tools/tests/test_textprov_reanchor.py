@@ -5,7 +5,7 @@ from pathlib import Path
 import sys
 import tempfile
 import unittest
-from unittest import mock
+import unittest.mock
 
 TOOLS = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(TOOLS))
@@ -57,13 +57,13 @@ class ReanchorTests(unittest.TestCase):
         self.assertEqual(result, "Text\n\n`code` and " + mark("prose") + "\n")
 
     def test_unsettled_marks_are_reported(self):
-        with mock.patch.object(textprov_reanchor, "fix", side_effect=lambda path, before, after, strict: (after, 1)):
+        with unittest.mock.patch.object(textprov_reanchor, "fix", side_effect=lambda path, before, after, strict: (after, 1)):
             _, changed, converged = textprov_reanchor.reanchor(TXT, "a", "a")
         self.assertFalse(converged)
         self.assertEqual(changed, textprov_reanchor.MAX_PASSES)
 
     def test_a_plain_text_change_is_refused(self):
-        with mock.patch.object(textprov_reanchor, "fix", return_value=("changed", 0)):
+        with unittest.mock.patch.object(textprov_reanchor, "fix", return_value=("changed", 0)):
             with self.assertRaisesRegex(RuntimeError, "plain text"):
                 textprov_reanchor.reanchor(TXT, "a", "a")
 
@@ -86,7 +86,7 @@ class CommandTests(unittest.TestCase):
         self.legacy.write_text(mark("legacy") + " text\nnew\n")
         self.addCleanup(os.chdir, os.getcwd())
         os.chdir(self.root / "docs")
-        patch = mock.patch.object(dogfood, "ROOT", self.root)
+        patch = unittest.mock.patch.object(dogfood, "ROOT", self.root)
         patch.start()
         self.addCleanup(patch.stop)
 
@@ -116,7 +116,7 @@ class CommandTests(unittest.TestCase):
         self.assertEqual(self.legacy.read_text(), "legacy text\nnew\n")
 
     def test_unsettled_file_is_left_as_it_was(self):
-        with mock.patch.object(textprov_reanchor, "fix", side_effect=lambda path, before, after, strict: (after, 1)):
+        with unittest.mock.patch.object(textprov_reanchor, "fix", side_effect=lambda path, before, after, strict: (after, 1)):
             status, _, err = self.run_main("HEAD", "--write", "legacy.txt")
         self.assertEqual(status, 1)
         self.assertIn("left as it was", err)
