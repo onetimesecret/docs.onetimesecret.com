@@ -1,5 +1,5 @@
 extends: existence
-message: "'%s' is not an Onetime Secret tier. Use Basic (free), Identity Plus, or Team Plus. See the brand terms for legacy offerings."
+message: "'%s' is not an Onetime Secret tier. Use Free (shown as Basic on the pricing page), Identity Plus, or Team Plus. See the brand terms for legacy offerings."
 link: /en/translations/universal/brand-terms
 level: error
 ignorecase: false
@@ -11,7 +11,8 @@ ignorecase: false
 # Case-sensitive on purpose, and always anchored to plan/tier: "basic
 # functionality", "premium users", and "enterprise deployments" are legitimate
 # prose and must not fire. Only the tier-name construction is flagged.
-# Basic is the current public name of the free tier and must remain valid.
+# Free is the app/catalog/docs name; Basic is the public pricing name for the
+# same plan. Both remain valid; neither is an invented tier.
 #
 # \s+ rather than a literal space so the match survives hard-wrapped paragraphs.
 tokens:
