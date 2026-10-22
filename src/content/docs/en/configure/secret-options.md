@@ -9,9 +9,9 @@ sourceOfTruth: onetimesecret/etc/defaults/config.defaults.yaml (secret options);
 
 S󠄁e󠄁t󠄁 t󠄁h󠄁e󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁n󠄁c󠄁e󠄁 d󠄁e󠄁f󠄁a󠄁u󠄁l󠄁t󠄁s󠄁 a󠄁n󠄁d󠄁 l󠄁i󠄁m󠄁i󠄁t󠄁s󠄁 o󠄁f󠄁f󠄁e󠄁r󠄁e󠄁d󠄁 w󠄁h󠄁e󠄁n󠄁 s󠄁o󠄁m󠄁e󠄁o󠄁n󠄁e󠄁 c󠄁r󠄁e󠄁a󠄁t󠄁e󠄁s󠄁 a󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁.󠄁
 
-> **S󠄁h󠄁a󠄁r󠄁i󠄁n󠄁g󠄁 a󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁?󠄁**
->
-> [S󠄁h󠄁a󠄁r󠄁e󠄁 a󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁](/en/share) e󠄁x󠄁p󠄁l󠄁a󠄁i󠄁n󠄁s󠄁 t󠄁h󠄁e󠄁 c󠄁h󠄁o󠄁i󠄁c󠄁e󠄁s󠄁 a󠄁v󠄁a󠄁i󠄁l󠄁a󠄁b󠄁l󠄁e󠄁 t󠄁o󠄁 a󠄁 s󠄁e󠄁n󠄁d󠄁e󠄁r󠄁.󠄁 T󠄁h󠄁i󠄁s󠄁 g󠄁u󠄁i󠄁d󠄁e󠄁 i󠄁s󠄁 f󠄁o󠄁r󠄁 t󠄁h󠄁e󠄁 o󠄁p󠄁e󠄁r󠄁a󠄁t󠄁o󠄁r󠄁 s󠄁e󠄁t󠄁t󠄁i󠄁n󠄁g󠄁 t󠄁h󠄁o󠄁s󠄁e󠄁 c󠄁h󠄁o󠄁i󠄁c󠄁e󠄁s󠄁.󠄁
+:::note[S󠄁h󠄁a󠄁r󠄁i󠄁n󠄁g󠄁 a󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁?󠄁]
+[S󠄁h󠄁a󠄁r󠄁e󠄁 a󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁](/en/share) e󠄁x󠄁p󠄁l󠄁a󠄁i󠄁n󠄁s󠄁 t󠄁h󠄁e󠄁 c󠄁h󠄁o󠄁i󠄁c󠄁e󠄁s󠄁 a󠄁v󠄁a󠄁i󠄁l󠄁a󠄁b󠄁l󠄁e󠄁 t󠄁o󠄁 a󠄁 s󠄁e󠄁n󠄁d󠄁e󠄁r󠄁.󠄁 T󠄁h󠄁i󠄁s󠄁 g󠄁u󠄁i󠄁d󠄁e󠄁 i󠄁s󠄁 f󠄁o󠄁r󠄁 t󠄁h󠄁e󠄁 o󠄁p󠄁e󠄁r󠄁a󠄁t󠄁o󠄁r󠄁 s󠄁e󠄁t󠄁t󠄁i󠄁n󠄁g󠄁 t󠄁h󠄁o󠄁s󠄁e󠄁 c󠄁h󠄁o󠄁i󠄁c󠄁e󠄁s󠄁.󠄁
+:::
 
 ## P󠄁r󠄁e󠄁r󠄁e󠄁q󠄁u󠄁i󠄁s󠄁i󠄁t󠄁e󠄁s󠄁
 
@@ -20,7 +20,7 @@ S󠄁e󠄁t󠄁 t󠄁h󠄁e󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁n󠄁c󠄁e󠄁 d󠄁e�
 
 ## S󠄁t󠄁e󠄁p󠄁s󠄁
 
-### C󠄁h󠄁o󠄁o󠄁s󠄁e󠄁 l󠄁i󠄁f󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁
+### 1󠄁.󠄁 C󠄁h󠄁o󠄁o󠄁s󠄁e󠄁 l󠄁i󠄁f󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁
 
 F󠄁o󠄁r󠄁 e󠄁x󠄁a󠄁m󠄁p󠄁l󠄁e󠄁,󠄁 o󠄁f󠄁f󠄁e󠄁r󠄁 o󠄁n󠄁e󠄁 h󠄁o󠄁u󠄁r󠄁 a󠄁n󠄁d󠄁 o󠄁n󠄁e󠄁 d󠄁a󠄁y󠄁,󠄁 d󠄁e󠄁f󠄁a󠄁u󠄁l󠄁t󠄁i󠄁n󠄁g󠄁 t󠄁o󠄁 o󠄁n󠄁e󠄁 d󠄁a󠄁y󠄁:󠄁
 
@@ -34,7 +34,7 @@ V󠄁a󠄁l󠄁u󠄁e󠄁s󠄁 a󠄁r󠄁e󠄁 s󠄁e󠄁c󠄁o󠄁n󠄁d󠄁s�
 
 T󠄁h󠄁e󠄁 a󠄁n󠄁o󠄁n󠄁y󠄁m󠄁o󠄁u󠄁s󠄁 c󠄁e󠄁i󠄁l󠄁i󠄁n󠄁g󠄁 i󠄁s󠄁 a󠄁l󠄁s󠄁o󠄁 b󠄁o󠄁u󠄁n󠄁d󠄁e󠄁d󠄁 b󠄁y󠄁 t󠄁h󠄁e󠄁 a󠄁v󠄁a󠄁i󠄁l󠄁a󠄁b󠄁l󠄁e󠄁 l󠄁i󠄁f󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁 a󠄁n󠄁d󠄁 t󠄁h󠄁e󠄁 a󠄁p󠄁p󠄁l󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁'󠄁s󠄁 m󠄁a󠄁x󠄁i󠄁m󠄁u󠄁m󠄁.󠄁 W󠄁h󠄁e󠄁n󠄁 b󠄁i󠄁l󠄁l󠄁i󠄁n󠄁g󠄁 i󠄁s󠄁 e󠄁n󠄁a󠄁b󠄁l󠄁e󠄁d󠄁,󠄁 p󠄁l󠄁a󠄁n󠄁 l󠄁i󠄁m󠄁i󠄁t󠄁s󠄁 c󠄁a󠄁n󠄁 f󠄁u󠄁r󠄁t󠄁h󠄁e󠄁r󠄁 c󠄁o󠄁n󠄁s󠄁t󠄁r󠄁a󠄁i󠄁n󠄁 t󠄁h󠄁e󠄁 r󠄁e󠄁s󠄁u󠄁l󠄁t󠄁.󠄁
 
-### D󠄁e󠄁c󠄁i󠄁d󠄁e󠄁 w󠄁h󠄁e󠄁t󠄁h󠄁e󠄁r󠄁 a󠄁 p󠄁a󠄁s󠄁s󠄁p󠄁h󠄁r󠄁a󠄁s󠄁e󠄁 i󠄁s󠄁 r󠄁e󠄁q󠄁u󠄁i󠄁r󠄁e󠄁d󠄁
+### 2󠄁.󠄁 D󠄁e󠄁c󠄁i󠄁d󠄁e󠄁 w󠄁h󠄁e󠄁t󠄁h󠄁e󠄁r󠄁 a󠄁 p󠄁a󠄁s󠄁s󠄁p󠄁h󠄁r󠄁a󠄁s󠄁e󠄁 i󠄁s󠄁 r󠄁e󠄁q󠄁u󠄁i󠄁r󠄁e󠄁d󠄁
 
 F󠄁o󠄁r󠄁 a󠄁n󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁n󠄁c󠄁e󠄁 r󠄁e󠄁q󠄁u󠄁i󠄁r󠄁i󠄁n󠄁g󠄁 a󠄁 p󠄁a󠄁s󠄁s󠄁p󠄁h󠄁r󠄁a󠄁s󠄁e󠄁 o󠄁n󠄁 n󠄁e󠄁w󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁s󠄁,󠄁 f󠄁o󠄁r󠄁 e󠄁x󠄁a󠄁m󠄁p󠄁l󠄁e󠄁:󠄁
 
@@ -46,7 +46,7 @@ PASSPHRASE_MAX_LENGTH=128
 
 A󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 p󠄁a󠄁s󠄁s󠄁p󠄁h󠄁r󠄁a󠄁s󠄁e󠄁 i󠄁s󠄁 s󠄁e󠄁p󠄁a󠄁r󠄁a󠄁t󠄁e󠄁 f󠄁r󠄁o󠄁m󠄁 t󠄁h󠄁e󠄁 s󠄁e󠄁n󠄁d󠄁e󠄁r󠄁'󠄁s󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁 p󠄁a󠄁s󠄁s󠄁w󠄁o󠄁r󠄁d󠄁.󠄁 T󠄁e󠄁l󠄁l󠄁 s󠄁e󠄁n󠄁d󠄁e󠄁r󠄁s󠄁 t󠄁o󠄁 d󠄁e󠄁l󠄁i󠄁v󠄁e󠄁r󠄁 i󠄁t󠄁 t󠄁h󠄁r󠄁o󠄁u󠄁g󠄁h󠄁 a󠄁 d󠄁i󠄁f󠄁f󠄁e󠄁r󠄁e󠄁n󠄁t󠄁 c󠄁h󠄁a󠄁n󠄁n󠄁e󠄁l󠄁 f󠄁r󠄁o󠄁m󠄁 t󠄁h󠄁e󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 l󠄁i󠄁n󠄁k󠄁.󠄁
 
-### R󠄁e󠄁v󠄁i󠄁e󠄁w󠄁 c󠄁o󠄁n󠄁t󠄁e󠄁n󠄁t󠄁 a󠄁n󠄁d󠄁 g󠄁e󠄁n󠄁e󠄁r󠄁a󠄁t󠄁e󠄁d󠄁-󠄁v󠄁a󠄁l󠄁u󠄁e󠄁 l󠄁i󠄁m󠄁i󠄁t󠄁s󠄁
+### 3󠄁.󠄁 R󠄁e󠄁v󠄁i󠄁e󠄁w󠄁 c󠄁o󠄁n󠄁t󠄁e󠄁n󠄁t󠄁 a󠄁n󠄁d󠄁 g󠄁e󠄁n󠄁e󠄁r󠄁a󠄁t󠄁e󠄁d󠄁-󠄁v󠄁a󠄁l󠄁u󠄁e󠄁 l󠄁i󠄁m󠄁i󠄁t󠄁s󠄁
 
 `SECRET_MAX_LENGTH` s󠄁e󠄁t󠄁s󠄁 t󠄁h󠄁e󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 c󠄁o󠄁n󠄁t󠄁e󠄁n󠄁t󠄁 l󠄁e󠄁n󠄁g󠄁t󠄁h󠄁 l󠄁i󠄁m󠄁i󠄁t󠄁.󠄁 `GENERATED_VALUE_DISPLAY_TTL` c󠄁o󠄁n󠄁t󠄁r󠄁o󠄁l󠄁s󠄁 h󠄁o󠄁w󠄁 l󠄁o󠄁n󠄁g󠄁 a󠄁 n󠄁e󠄁w󠄁l󠄁y󠄁 g󠄁e󠄁n󠄁e󠄁r󠄁a󠄁t󠄁e󠄁d󠄁 v󠄁a󠄁l󠄁u󠄁e󠄁 c󠄁a󠄁n󠄁 b󠄁e󠄁 s󠄁h󠄁o󠄁w󠄁n󠄁 o󠄁n󠄁 i󠄁t󠄁s󠄁 c󠄁r󠄁e󠄁a󠄁t󠄁o󠄁r󠄁'󠄁s󠄁 r󠄁e󠄁c󠄁e󠄁i󠄁p󠄁t󠄁 p󠄁a󠄁g󠄁e󠄁;󠄁 s󠄁e󠄁t󠄁t󠄁i󠄁n󠄁g󠄁 i󠄁t󠄁 t󠄁o󠄁 `0` d󠄁i󠄁s󠄁a󠄁b󠄁l󠄁e󠄁s󠄁 t󠄁h󠄁a󠄁t󠄁 d󠄁i󠄁s󠄁p󠄁l󠄁a󠄁y󠄁.󠄁 S󠄁e󠄁e󠄁 t󠄁h󠄁e󠄁 [e󠄁n󠄁v󠄁i󠄁r󠄁o󠄁n󠄁m󠄁e󠄁n󠄁t󠄁 r󠄁e󠄁f󠄁e󠄁r󠄁e󠄁n󠄁c󠄁e󠄁](/en/self-hosting/environment-variables) f󠄁o󠄁r󠄁 p󠄁a󠄁s󠄁s󠄁w󠄁o󠄁r󠄁d󠄁-󠄁g󠄁e󠄁n󠄁e󠄁r󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 o󠄁p󠄁t󠄁i󠄁o󠄁n󠄁s󠄁.󠄁
 
