@@ -242,6 +242,11 @@ export const sidebar = [
   //
   // The configure/* entries follow their prerequisites: keys, outbound email
   // and session cookies come before the sign-in pages that depend on them.
+  // Eight of them in a row was weighed against a Configure subgroup and kept
+  // flat: the group is still one operator sequence, the configure/ overview
+  // is the sub-index, and the install/* run before it is a sibling sequence
+  // of the same size with no index at all. Revisit if a second audience or a
+  // second configure-sized run appears.
   createGroup("selfHosting", [
     createLink("aboutSelfHosting", "self-hosting"),
     createLink("authModeChoice", "self-hosting/simple-or-full-auth"),

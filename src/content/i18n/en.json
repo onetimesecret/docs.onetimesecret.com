@@ -79,7 +79,7 @@
     "configurationOverview": "Configure your instance",
     "configureSecretsAndKeys": "Secrets and keys",
     "configureAuthentication": "Authentication",
-    "configureSso": "Configure SSO",
+    "configureSso": "Single sign-on",
     "configureEmail": "Outbound email",
     "configureSecretOptions": "Secret options",
     "configureSessions": "Sessions and cookies",

@@ -212,3 +212,18 @@ Validation:
 - Built-HTML inspection of the 23 changed pages: 356 local paths and
   fragments resolve, no literal `:::`, no leftover selectors, asides render.
   No heading ID anywhere in `dist` contains a selector.
+
+## PR comment follow-up (2026-10-22)
+
+Dispositions for the review comment posted on #462 (2026-10-21), rechecked
+against the branch after the R1–R10 fixes above.
+
+| ID | Comment | Disposition | Evidence and final location |
+| --- | --- | --- | --- |
+| C1 | `OIDC_DISPLAY_NAME` is absent from the environment reference although eleven pages set it. | Addressed in the application | The reference page is generated from the application's `.env.reference`, and the drift job compares against application `main`, so the row cannot be added here by hand. onetimesecret/onetimesecret#4848 adds `#OIDC_DISPLAY_NAME=SSO  # Since v0.24.3` (`display_var` in `lib/onetime/sso_provider/oidc.rb`; first stable tag containing it is `v0.24.3`). After it merges, regenerate the page with `bin/envref docs`. The hub's `sourceOfTruth` already cites `oidc.rb` for the display name. |
+| C2 | OneLogin caveat omits `OIDC_CLIENT_AUTH_METHOD=client_secret_post`. | Outdated | The OneLogin recipe was withdrawn under R2. The JumpCloud recipe keeps the client-authentication sentence. |
+| C3 | Unquoted values with spaces in `dotenv` blocks (`OIDC_DISPLAY_NAME`, `FROM_NAME`). | Addressed | The `secret-options.md` quoting sentence now also follows the hub's instance-configuration example (`configure/sso/index.md`, step 3) and the SMTP example (`configure/email.md`, step 1). The ten recipes link the hub step rather than repeating the block, so one sentence covers them. |
+| C4 | Self-hosting sidebar grew from twelve to twenty flat entries. | Decided: keep flat | The configure run is one operator sequence with `configure/index` as its sub-index, and the install run before it is a sibling sequence of the same size. The `config/sidebar.mjs` comment now records the decision and when to revisit it. |
+| C5 | `configureSso` reads "Configure SSO" while its six siblings are bare nouns. | Addressed | `src/content/i18n/en.json` label is now "Single sign-on"; the overview table on `configure/index.md` uses the same link text. The page title keeps the imperative form like its siblings ("Configure authentication", "Prepare secrets and keys"). Only `en.json` carries this key, so no locale bundle changes. |
+| C6 | `sso/index.md` links the overview as "Configuration overview" while the sidebar says "Configure your instance". | Outdated | No page uses the "Configuration overview" link text after R5. |
+| C7 | `configure/index.md` is `pageType: concept` but is a routing hub. | Not changed | The other section hubs (`self-hosting/index.md`, `security/index.md`) use `concept` for the same shape; changing one hub alone would make the field less consistent. A hub type is a template decision for `docs/templates/README.md`, outside this PR. |
