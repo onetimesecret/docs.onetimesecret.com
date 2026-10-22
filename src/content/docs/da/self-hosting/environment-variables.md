@@ -1,8 +1,7 @@
 ---
 title: Miljøvariabler
 description: Reference for Onetime Secret miljøvariabler
-sidebar:
-  order: 5
+
 ---
 
 Denne side indeholder referencer til miljøvariabler til konfiguration af Onetime Secret.

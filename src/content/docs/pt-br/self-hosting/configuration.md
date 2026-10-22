@@ -2,8 +2,6 @@
 textprov: true
 title: "Referência de configuração"
 description: "Referência completa de todas as opções de configuração do Onetime Secret"
-sidebar:
-  order: 4
 ---
 
 E󠄁s󠄁t󠄁e g󠄁u󠄁i󠄁a󠄁 c󠄁o󠄁m󠄁p󠄁l󠄁e󠄁t󠄁o󠄁 c󠄁o󠄁b󠄁r󠄁e󠄁 t󠄁o󠄁d󠄁a󠄁s󠄁 a󠄁s󠄁 o󠄁p󠄁ç󠄁õ󠄁e󠄁s󠄁 d󠄁e󠄁 c󠄁o󠄁n󠄁fi󠄁g󠄁u󠄁ra󠄁ç󠄁ã󠄁o󠄁 p󠄁a󠄁r󠄁a󠄁 i󠄁n󠄁s󠄁t󠄁â󠄁ncias󠄁 a󠄁u󠄁t󠄁o󠄁-󠄁h󠄁o󠄁s󠄁p󠄁e󠄁d󠄁a󠄁d󠄁a󠄁s󠄁 d󠄁o󠄁 O󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁 S󠄁e󠄁c󠄁r󠄁e󠄁t󠄁.󠄁

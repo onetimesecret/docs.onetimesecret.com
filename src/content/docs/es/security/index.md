@@ -36,7 +36,7 @@ de forma segura y dónde encontrar los detalles.
 
 - **[Nuestros principios](/en/security/our-principles)**:󠄁 Privacidad ante todo, Comunicación y Minimización de datos.
 - **[D󠄁ó󠄁n󠄁d󠄁e r󠄁esi󠄁den s󠄁u󠄁s󠄁 datos](/en/security/where-your-data-lives/)**:󠄁 elija dónde se procesan y almacenan sus datos.
-- **[Autoalojamiento](https://github.com/onetimesecret/onetimesecret)**:󠄁 ejecute Onetime Secret en su propia infraestructura para tener el control total.
+- **[Autoalojamiento](/es/self-hosting/)**:󠄁 ejecute Onetime Secret en su propia infraestructura para tener el control total.
 
 ## Notificar un problema de seguridad
 

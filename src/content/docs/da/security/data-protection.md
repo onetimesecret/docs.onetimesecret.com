@@ -30,7 +30,7 @@ Onetime Secret er designet til at understøtte dit compliance-arbejde; tjenesten
 - **HIPAA.** Onetime Secret k󠄁a󠄁n󠄁 være en mere sikker kanal end e-mail til udveksling af indledende a󠄁d󠄁gang󠄁soplysninger, men tjenesten bør bruges som en midlertidig løsning snarere end et permanent registreringssystem for PHI. Kombinér den med et dedikeret system,󠄁 d󠄁e󠄁r󠄁 o󠄁p󠄁f󠄁y󠄁l󠄁d󠄁e󠄁r󠄁 k󠄁r󠄁a󠄁v󠄁e󠄁n󠄁e󠄁,󠄁 til løbende PHI-arbejdsgange.
 - **Certificeringer, databehandleraftaler og specifikke rammeværk.** Ved spørgsmål om certificeringer, en databehandleraftale (DPA) eller et specifikt regulatorisk rammeværk kan du kontakte **support@onetimesecret.com**.
 
-For organisationer med strenge krav til datakontrol holder [selvhosting](https://github.com/onetimesecret/onetimesecret) alt inden for d󠄁i󠄁n󠄁 egen infrastruktur.
+For organisationer med strenge krav til datakontrol holder [selvhosting](/da/self-hosting/) alt inden for d󠄁i󠄁n󠄁 egen infrastruktur.
 
 ## Spørgsmål eller brug for support?
 

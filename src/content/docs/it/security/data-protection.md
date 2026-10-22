@@ -59,7 +59,7 @@ legale.
   normativo specifico, contatta **support@onetimesecret.com**.
 
 Per le organizzazioni con requisiti rigorosi di controllo dei dati, il
-[self-hosting](https://github.com/onetimesecret/onetimesecret) mantiene tutto
+[self-hosting](/it/self-hosting/) mantiene tutto
 all'interno della tu󠄁a infrastruttura.
 
 ## Domande o bisogno di a󠄁ss󠄁i󠄁s󠄁te󠄁n󠄁z󠄁a󠄁?

@@ -12,7 +12,7 @@ Ahakoa kua hoahoatia a Onetime Secret m󠄁e󠄁 te haumaru i te whakaaro, m󠄁
 
 2. **Whakamahia te Tiaki Kupu Karapa**: Mō ngā kōrero tino matatapu, whakamahia te āhuatanga tiaki kupu karapa. Ka tāpiri tēnei i tētahi papar󠄁a󠄁n󠄁g󠄁a󠄁 haumaru anō󠄁,󠄁 m󠄁e󠄁 w󠄁h󠄁ak󠄁a󠄁u󠄁r󠄁u󠄁 te kaiwhiwhi i tētahi kupu karapa h󠄁e󠄁i tiro i te karere huna.
 
-3. **We󠄁h󠄁e󠄁w󠄁ehea ngā Kōrero Matatapu**: I te wā e m󠄁a󠄁hi ana k󠄁o󠄁e󠄁 ki ngā raraunga tino matatapu, whakaarohia te wehe󠄁w󠄁e󠄁h󠄁e󠄁 i a󠄁u󠄁a󠄁 r󠄁a󠄁r󠄁a󠄁u󠄁n󠄁g󠄁a󠄁 k󠄁i roto i ngā karere huna maha. Mā tēnei, mēnā ka r󠄁a󠄁r󠄁u󠄁 tētahi karere huna, ka n󠄁o󠄁h󠄁o󠄁 tiakina t󠄁o󠄁n󠄁u󠄁 te huinga katoa o ngā kōrero.
+3. **We󠄁h󠄁e󠄁w󠄁ehea ngā Kōrero Matatapu**: I te wā e m󠄁a󠄁hi ana k󠄁o󠄁e󠄁 ki ngā raraunga tino matatapu, whakaarohia te wehe󠄁w󠄁e󠄁h󠄁e󠄁 i a󠄁u󠄁a󠄁 r󠄁a󠄁r󠄁a󠄁u󠄁n󠄁g󠄁a󠄁 k󠄁i roto i ngā karere huna maha. Mā tēnei, mēnā ka r󠄁a󠄁r󠄁u󠄁 tētahi karere huna, ka n󠄁o󠄁h󠄁o󠄁 tiakina t󠄁o󠄁n󠄁u󠄁 te t󠄁o󠄁e󠄁nga o ngā kōrero.
 
 4. **Whakamahia ngā Ara Haumaru mō te Tohatoha R󠄁a󠄁r󠄁a󠄁u󠄁n󠄁g󠄁a󠄁 Meta**: Ahakoa ka haumarut󠄁i󠄁a e󠄁 Onetime Secret te ihirangi o tō karere huna, kia t󠄁ū󠄁p󠄁a󠄁t󠄁o ki te āhua o tō tohatoha i te hononga me ngā r󠄁a󠄁r󠄁a󠄁u󠄁n󠄁g󠄁a󠄁 meta e󠄁 h󠄁ā󠄁n󠄁g󠄁ai󠄁 ana󠄁 (pēnei i ngā kupu karapa). Whakamahia ngā ara haumaru, muhumuhu h󠄁o󠄁k󠄁i󠄁 mō tēnei whakawhitiwhitin󠄁g󠄁a󠄁.
 

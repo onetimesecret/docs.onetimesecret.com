@@ -37,7 +37,7 @@ détails.
 
 - **[Nos principes](/en/security/our-principles)** — La vie privée d'abord, Communication et Minimisation des données.
 - **[O󠄁ù󠄁 r󠄁és󠄁ident v󠄁o󠄁s données](/en/security/where-your-data-lives/)** — choisissez où vos données sont traitées et stockées.
-- **[Auto-hébergement](https://github.com/onetimesecret/onetimesecret)** — exécutez Onetime Secret sur votre propre infrastructure pour un contrôle total.
+- **[Auto-hébergement](/fr/self-hosting/)** — exécutez Onetime Secret sur votre propre infrastructure pour un contrôle total.
 
 ## Signaler un problème de sécurité
 

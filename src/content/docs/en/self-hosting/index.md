@@ -30,7 +30,7 @@ later.
 
 In a hurry, with a Valkey or Redis you already run? The single `docker run`
 form in [Install with Docker](/en/install/docker#running-a-single-container)
-brings up an instance on port 3000 with one generated secret. Everything else
+brings up an instance on port 3000 with a󠄁 generated `SECRET` v󠄁a󠄁l󠄁u󠄁e. Everything else
 on this page still applies once it is up.
 
 - [Images and variants](/en/install/images-and-variants) — which of the
@@ -86,7 +86,8 @@ a󠄁p󠄁p󠄁l󠄁i󠄁e󠄁s󠄁 i󠄁m󠄁m󠄁e󠄁d󠄁i󠄁a󠄁t󠄁e�
 bin/ots org transfer-ownership ORG NEW_OWNER
 ```
 
-`ORG` is an organization extid or objid. `NEW_OWNER` is an email address, a
+`ORG` is t󠄁h󠄁e󠄁 organization'󠄁s󠄁 p󠄁u󠄁b󠄁l󠄁i󠄁c󠄁 I󠄁D󠄁 (󠄁`extid`,󠄁 t󠄁h󠄁e󠄁 I󠄁D󠄁 t󠄁h󠄁e󠄁 C󠄁L󠄁I󠄁 p󠄁r󠄁i󠄁n󠄁t󠄁s󠄁)󠄁 or i󠄁t󠄁s󠄁
+i󠄁n󠄁t󠄁e󠄁r󠄁n󠄁a󠄁l󠄁 I󠄁D󠄁 (󠄁`objid`)󠄁. `NEW_OWNER` is an email address, a
 customer extid, or a Rodauth account ID, and **they must already be an active
 member** — the command never creates a customer, so run
 `bin/ots memberships add ORG CUSTOMER` first if they are not.
@@ -99,11 +100,11 @@ The options are `--demote-to ROLE` (any membership role except `owner`, default
 
 The outgoing owner is demoted, not removed. The operation promotes the new owner
 before demoting the old one — the sole-owner guard refuses every other ordering —
-so for the length of those two writes the organization carries two owner
+so for the length of those two writes the organization h󠄁as two owner
 memberships and `bin/ots org doctor` reports check 4 (`membership_role_sync`) as
-a warning. If a transfer is interrupted inside that window, re-run the command:
-it is idempotent and demotes every other owner. `org doctor` marks that check
-`repairable: false` and will not fix it for you.
+a warning. If a transfer is interrupted inside that window, re-run the t󠄁r󠄁a󠄁n󠄁s󠄁f󠄁e󠄁r󠄁
+command,󠄁 n󠄁o󠄁t `org doctor`.󠄁 T󠄁h󠄁e󠄁 t󠄁r󠄁a󠄁n󠄁s󠄁f󠄁e󠄁r󠄁 is idempotent and demotes every other
+owner;󠄁 `org doctor` marks that check `repairable: false` and d󠄁o󠄁e󠄁s󠄁 not fix it.
 
 The end-user side of this is
 [Ownership and transfer](/en/organizations/ownership-and-transfer), which is what

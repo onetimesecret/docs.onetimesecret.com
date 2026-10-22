@@ -50,7 +50,7 @@ substitui o󠄁s󠄁 seus próprios controles, políticas e análise jurídica.
   certificações, um Acordo de Processamento de Dados (DPA) ou um marco regulatório
   específico, entre em contato com **support@onetimesecret.com**.
 
-Para organizações com requisitos rígidos de controle de dados, a [auto-hospedagem](https://github.com/onetimesecret/onetimesecret)
+Para organizações com requisitos rígidos de controle de dados, a [auto-hospedagem](/pt-br/self-hosting/)
 mantém tudo dentro da sua própria infraestrutura.
 
 ## Dúvidas ou p󠄁recisa de s󠄁uporte?

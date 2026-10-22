@@ -7,7 +7,7 @@ description: "Aggiungi un dominio personalizzato alla tua organizzazione, crea i
 ## Prima di in󠄁i󠄁z󠄁i󠄁are
 
 - I󠄁l󠄁 p󠄁iano della tua o󠄁rga󠄁n󠄁i󠄁z󠄁z󠄁a󠄁z󠄁ione i󠄁nc󠄁l󠄁u󠄁d󠄁e un dominio personalizzato.󠄁 F󠄁ree ne inc󠄁l󠄁u󠄁d󠄁e󠄁
-  u󠄁n󠄁o󠄁;󠄁 I󠄁d󠄁e󠄁n󠄁t󠄁i󠄁t󠄁y󠄁 P󠄁l󠄁u󠄁s e T󠄁e󠄁am󠄁 P󠄁lu󠄁s󠄁 n󠄁o󠄁n󠄁 h󠄁a󠄁n󠄁n󠄁o󠄁 u󠄁n󠄁 li󠄁m󠄁i󠄁te fisso.󠄁 V󠄁edi
+  u󠄁n󠄁o󠄁;󠄁 I󠄁d󠄁e󠄁n󠄁t󠄁i󠄁t󠄁y󠄁 P󠄁l󠄁u󠄁s e T󠄁e󠄁am󠄁 P󠄁lu󠄁s󠄁 i󠄁n󠄁c󠄁l󠄁u󠄁d󠄁o󠄁n󠄁o󠄁 d󠄁o󠄁m󠄁i󠄁n󠄁i󠄁 p󠄁e󠄁r󠄁s󠄁o󠄁n󠄁a󠄁l󠄁i󠄁z󠄁z󠄁a󠄁t󠄁i󠄁 i󠄁ll󠄁i󠄁m󠄁i󠄁ta󠄁t󠄁i.󠄁 V󠄁edi
   [Domini personalizzati](/it/custom-domains#cosa-include-ogni-piano).
 - S󠄁e󠄁i󠄁 i󠄁l󠄁 **pr󠄁o󠄁p󠄁r󠄁i󠄁e󠄁t󠄁a󠄁r󠄁i󠄁o󠄁** o󠄁 u󠄁n **am󠄁m󠄁i󠄁n󠄁istr󠄁at󠄁o󠄁r󠄁e󠄁** del󠄁l󠄁'󠄁o󠄁r󠄁g󠄁a󠄁n󠄁iz󠄁z󠄁a󠄁z󠄁i󠄁o󠄁n󠄁e󠄁.󠄁
 - P󠄁u󠄁o󠄁i󠄁 c󠄁r󠄁e󠄁a󠄁r󠄁e󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁 D󠄁N󠄁S󠄁 p󠄁e󠄁r󠄁 i󠄁l󠄁 dominio󠄁 pr󠄁esso il󠄁 t󠄁u󠄁o󠄁 reg󠄁is󠄁t󠄁r󠄁a󠄁r o pro󠄁v󠄁i󠄁d󠄁e󠄁r󠄁 D󠄁N󠄁S󠄁.󠄁

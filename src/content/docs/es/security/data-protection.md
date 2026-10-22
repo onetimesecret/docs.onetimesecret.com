@@ -59,7 +59,7 @@ sustituye sus propios controles, políticas y revisión jurídica.
   Para preguntas sobre certificaciones, un acuerdo de tratamiento de datos
   (DPA) o un marco normativo concreto, escriba a **support@onetimesecret.com**.
 
-Para las organizaciones con requisitos estrictos de control de datos, el [autoalojamiento](https://github.com/onetimesecret/onetimesecret)
+Para las organizaciones con requisitos estrictos de control de datos, el [autoalojamiento](/es/self-hosting/)
 mantiene todo dentro de su propia infraestructura.
 
 ## ¿Preguntas o necesita ayuda?

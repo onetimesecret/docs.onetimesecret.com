@@ -32,7 +32,7 @@ i󠄁n󠄁s󠄁t󠄁a󠄁n󠄁c󠄁e󠄁 a󠄁u󠄁t󠄁o󠄁-󠄁h󠄁é󠄁b�
 ## Ruby
 
 
-[Page GitH󠄁ub onetime-ruby](https://github.com/onetimesecret/onetime-ruby)
+[Page GitH󠄁ub -󠄁 onetime-ruby](https://github.com/onetimesecret/onetime-ruby)
 par [Delano](https://delanotes.com/) —󠄁 **c󠄁l󠄁i󠄁e󠄁n󠄁t󠄁 o󠄁f󠄁f󠄁i󠄁c󠄁i󠄁e󠄁l󠄁**,󠄁 a󠄁c󠄁t󠄁i󠄁v󠄁e󠄁m󠄁e󠄁n󠄁t󠄁 m󠄁a󠄁i󠄁n󠄁t󠄁e󠄁n󠄁u󠄁
 (d󠄁e󠄁r󠄁n󠄁i󠄁e󠄁r󠄁 c󠄁o󠄁m󠄁mit󠄁 2026󠄁-06).󠄁 P󠄁r󠄁e󠄁n󠄁d󠄁 e󠄁n󠄁 c󠄁h󠄁a󠄁r󠄁g󠄁e󠄁 l󠄁'󠄁A󠄁P󠄁I󠄁 v󠄁1󠄁 (󠄁o󠄁b󠄁s󠄁o󠄁l󠄁è󠄁t󠄁e󠄁)󠄁 e󠄁t󠄁 v󠄁2󠄁,󠄁 l󠄁e󠄁s󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁s󠄁 r󠄁é󠄁g󠄁i󠄁o󠄁n󠄁a󠄁u󠄁x󠄁
 e󠄁t󠄁 l󠄁e󠄁s󠄁 U󠄁R󠄁L󠄁 d󠄁e󠄁 b󠄁a󠄁s󠄁e󠄁 p󠄁e󠄁r󠄁s󠄁o󠄁n󠄁n󠄁a󠄁l󠄁i󠄁s󠄁é󠄁e󠄁s󠄁.󠄁 N󠄁é󠄁c󠄁e󠄁s󠄁s󠄁i󠄁t󠄁e󠄁 R󠄁u󠄁b󠄁y󠄁 3󠄁.󠄁1󠄁+󠄁,󠄁 a󠄁u󠄁c󠄁u󠄁n󠄁e󠄁 d󠄁é󠄁p󠄁e󠄁n󠄁d󠄁a󠄁n󠄁c󠄁e󠄁 à󠄁 l󠄁'󠄁e󠄁x󠄁é󠄁c󠄁u󠄁t󠄁i󠄁o󠄁n󠄁.󠄁
@@ -146,7 +146,7 @@ GenerateResponse generateResponse = ots.generate(
 
 RetrieveResponse retrieveResponse = ots.retrieve(
                 new RetrieveRequest.Builder()
-                        .withSecretKey(shareResponse.getSecretKey())
+                        .withSecretKey(generateResponse.getSecretKey())
                         .withPassphrase("supersecret")
                         .build());
 
@@ -165,7 +165,7 @@ c󠄁om󠄁m󠄁i󠄁t 2018󠄁-05).󠄁 U󠄁t󠄁i󠄁l󠄁i󠄁s󠄁e󠄁 l�
 ### Exemple d'utilisation
 
 ```csharp
-# You can use OneTimeSharp in any of your projects which are compatible with .NET (4.0+) or Mono (2.10.8+).
+// You can use OneTimeSharp in any of your projects which are compatible with .NET (4.0+) or Mono (2.10.8+).
 using VStepanov.OneTimeSharp;
 
 class Test
@@ -194,7 +194,7 @@ class Test
 ## Go
 
 
-[Page GitH󠄁ub - onetimesecret](https://github.com/corbaltcode/go-onetimesecret)
+[Page GitH󠄁ub - g󠄁o󠄁-󠄁onetimesecret](https://github.com/corbaltcode/go-onetimesecret)
 par [Corbalt](https://github.com/corbaltcode/) —󠄁 m󠄁a󠄁i󠄁n󠄁t󠄁e󠄁n󠄁u󠄁 p󠄁a󠄁r󠄁 l󠄁a󠄁 c󠄁o󠄁m󠄁m󠄁u󠄁n󠄁a󠄁u󠄁t󠄁é󠄁 (d󠄁e󠄁r󠄁n󠄁i󠄁e󠄁r󠄁
 c󠄁o󠄁m󠄁m󠄁i󠄁t󠄁 2󠄁0󠄁2󠄁6󠄁-󠄁0󠄁5󠄁,󠄁 m󠄁i󠄁s󠄁 à󠄁 jour󠄁 p󠄁o󠄁u󠄁r󠄁 l󠄁'󠄁h󠄁ô󠄁te󠄁 `us.onetimesecret.com`)󠄁.󠄁 I󠄁n󠄁c󠄁lu󠄁t󠄁 u󠄁n󠄁e C󠄁L󠄁I󠄁.󠄁
 
@@ -246,7 +246,7 @@ flsdlaun6hwczqu9utmc0vts5xj9xu1
 ## Go (lib)
 
 
-[Page GitH󠄁ub](https://github.com/emdneto/otsgo)
+[Page GitH󠄁ub -󠄁 o󠄁t󠄁s󠄁g󠄁o󠄁](https://github.com/emdneto/otsgo)
 par [Emídio Neto](https://github.com/emdneto) —󠄁 m󠄁ai󠄁n󠄁t󠄁e󠄁n󠄁u󠄁 p󠄁a󠄁r󠄁 l󠄁a󠄁 c󠄁om󠄁m󠄁u󠄁n󠄁a󠄁uté (󠄁d󠄁er󠄁n󠄁i󠄁è󠄁r󠄁e󠄁
 v󠄁e󠄁r󠄁s󠄁i󠄁o󠄁n󠄁 v󠄁1󠄁.󠄁1󠄁.󠄁0󠄁,󠄁 2024-03󠄁).󠄁 P󠄁r󠄁i󠄁s󠄁e󠄁 e󠄁n󠄁 c󠄁h󠄁a󠄁r󠄁g󠄁e󠄁 d󠄁e󠄁s󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁s󠄁 r󠄁é󠄁g󠄁i󠄁o󠄁n󠄁a󠄁u󠄁x󠄁 n󠄁o󠄁n󠄁 d󠄁o󠄁c󠄁u󠄁m󠄁e󠄁n󠄁t󠄁é󠄁e󠄁.󠄁
 
@@ -303,7 +303,7 @@ Get-Command -Module OneTimeSecret | Select Name
 ## Bash
 
 
-[Page GitH󠄁ub - OneTimeSecret-bash](https://github.com/eengstrom/onetimesecret-bash)
+[Page GitH󠄁ub - o󠄁net󠄁imes󠄁ecret-bash](https://github.com/eengstrom/onetimesecret-bash)
 par [Eric Engstrom](https://eengstrom.github.io/) —󠄁 **n󠄁o󠄁n󠄁 m󠄁a󠄁i󠄁n󠄁t󠄁e󠄁n󠄁u󠄁** (d󠄁e󠄁r󠄁n󠄁i󠄁e󠄁r󠄁
 c󠄁o󠄁m󠄁mit󠄁 2󠄁0󠄁2󠄁0󠄁-󠄁0󠄁5󠄁)󠄁.󠄁 P󠄁r󠄁e󠄁n󠄁d󠄁 e󠄁n󠄁 c󠄁h󠄁a󠄁r󠄁g󠄁e󠄁 u󠄁n󠄁 h󠄁ô󠄁t󠄁e󠄁 p󠄁e󠄁r󠄁son󠄁n󠄁a󠄁l󠄁i󠄁s󠄁é󠄁 v󠄁i󠄁a󠄁 `ots_set_host`,󠄁 m󠄁a󠄁i󠄁s󠄁 i󠄁l󠄁 e󠄁s󠄁t󠄁 a󠄁n󠄁t󠄁é󠄁r󠄁i󠄁e󠄁ur à󠄁 l'󠄁A󠄁P󠄁I󠄁
 v󠄁2󠄁 et󠄁 a󠄁u󠄁x󠄁 d󠄁o󠄁m󠄁a󠄁i󠄁n󠄁e󠄁s󠄁 r󠄁é󠄁g󠄁i󠄁o󠄁n󠄁a󠄁u󠄁x󠄁.󠄁
@@ -345,7 +345,7 @@ local KEY=$(ots_metashare <<< "SECRET")
 local KEY=$(ots_metagenerate)
 
 # get a list of private metadata keys recently created.
-# note that this requires valid autnentication credentials
+# note that this requires valid authentication credentials
 local -a RECENT=( $(ots_recent) )
 
 # check on the current state of a secret, given the private key
@@ -358,22 +358,21 @@ ots_burn $KEY
 ### Exemple d'utilisation en CLI
 
 ```bash
-# Share a secret (from stdin
+# Share a secret (from stdin)
 ./ots share
 SECRET
 ^D
 
 # Share a secret (via HEREDOC)
 ./ots share <<-EOF
-      This is a mulit-line secret via HEREDOC.
-      Somthing else goes here.
+      This is a multi-line secret via HEREDOC.
+      Something else goes here.
 EOF
 
 # Get/Retrieve a secret:
 ./ots get <key|url>
 ./ots retrieve <key|url>
 
-# Burn a secret:
-$ ots burn flsdlaun6hwczqu9utmc0vts5xj9xu1
-flsdlaun6hwczqu9utmc0vts5xj9xu1
+# Burn a secret, given its private metadata key:
+./ots burn <key>
 ```

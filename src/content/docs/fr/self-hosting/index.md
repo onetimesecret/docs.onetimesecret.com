@@ -2,8 +2,6 @@
 textprov: true
 title: "Aperçu de l'auto-hébergement"
 description: "Ce qu'implique l'exécution de votre propre instance Onetime Secret, quel mode d'authentification choisir en premier, et où trouver les instructions d'installation et d'exploitation."
-sidebar:
-  order: 1
 ---
 
 Exécutez votre propre instance et c󠄁h󠄁a󠄁q󠄁u󠄁e s󠄁ecret,󠄁 c󠄁h󠄁aq󠄁u󠄁e co󠄁m󠄁p󠄁t󠄁e󠄁 e󠄁t󠄁 c󠄁h󠄁a󠄁q󠄁u󠄁e󠄁 l󠄁i󠄁g󠄁n󠄁e󠄁 d󠄁e󠄁 j󠄁o󠄁u󠄁r󠄁n󠄁a󠄁l󠄁 r󠄁e󠄁s󠄁t󠄁e󠄁 s󠄁u󠄁r󠄁
@@ -29,7 +27,7 @@ p󠄁a󠄁r󠄁 l󠄁a󠄁 s󠄁u󠄁i󠄁t󠄁e󠄁.󠄁
 
 V󠄁ous ê󠄁t󠄁e󠄁s󠄁 p󠄁r󠄁e󠄁s󠄁s󠄁é󠄁 e󠄁t󠄁 v󠄁o󠄁u󠄁s󠄁 d󠄁i󠄁s󠄁p󠄁o󠄁s󠄁e󠄁z󠄁 d󠄁é󠄁j󠄁à󠄁 d󠄁'󠄁u󠄁n󠄁 V󠄁a󠄁l󠄁k󠄁e󠄁y󠄁 o󠄁u󠄁 d󠄁'󠄁u󠄁n󠄁 R󠄁e󠄁d󠄁i󠄁s󠄁 ?󠄁 L󠄁a󠄁 c󠄁o󠄁m󠄁m󠄁a󠄁n󠄁d󠄁e󠄁 `docker run`
 u󠄁n󠄁i󠄁q󠄁u󠄁e󠄁 d󠄁é󠄁c󠄁r󠄁i󠄁t󠄁e󠄁 d󠄁a󠄁n󠄁s󠄁 [I󠄁n󠄁s󠄁t󠄁a󠄁l󠄁ler󠄁 a󠄁v󠄁e󠄁c󠄁 D󠄁o󠄁c󠄁k󠄁e󠄁r󠄁](/en/install/docker#running-a-single-container)
-d󠄁é󠄁m󠄁a󠄁r󠄁r󠄁e󠄁 u󠄁n󠄁e󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁n󠄁c󠄁e󠄁 s󠄁u󠄁r󠄁 l󠄁e󠄁 p󠄁o󠄁r󠄁t󠄁 3󠄁0󠄁0󠄁0󠄁 a󠄁v󠄁e󠄁c󠄁 u󠄁n󠄁 secret g󠄁é󠄁n󠄁é󠄁r󠄁é󠄁.󠄁 T󠄁o󠄁u󠄁t󠄁 l󠄁e󠄁 reste
+d󠄁é󠄁m󠄁a󠄁r󠄁r󠄁e󠄁 u󠄁n󠄁e󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁n󠄁c󠄁e󠄁 s󠄁u󠄁r󠄁 l󠄁e󠄁 p󠄁o󠄁r󠄁t󠄁 3󠄁0󠄁0󠄁0󠄁 a󠄁v󠄁e󠄁c󠄁 u󠄁n󠄁e v󠄁a󠄁l󠄁e󠄁u󠄁r `SECRET` g󠄁é󠄁n󠄁é󠄁r󠄁é󠄁e󠄁.󠄁 T󠄁o󠄁u󠄁t󠄁 l󠄁e󠄁 reste
 d󠄁e󠄁 c󠄁e󠄁t󠄁t󠄁e󠄁 p󠄁a󠄁g󠄁e󠄁 s󠄁'󠄁a󠄁p󠄁p󠄁l󠄁i󠄁q󠄁u󠄁e󠄁 t󠄁o󠄁u󠄁j󠄁o󠄁u󠄁r󠄁s󠄁 u󠄁n󠄁e󠄁 f󠄁o󠄁i󠄁s󠄁 l󠄁'󠄁i󠄁n󠄁s󠄁t󠄁a󠄁n󠄁c󠄁e󠄁 d󠄁é󠄁m󠄁a󠄁r󠄁r󠄁é󠄁e󠄁.󠄁
 
 - [I󠄁m󠄁a󠄁g󠄁e󠄁s󠄁 e󠄁t󠄁 v󠄁a󠄁r󠄁i󠄁a󠄁n󠄁t󠄁e󠄁s󠄁](/en/install/images-and-variants) —󠄁 q󠄁ue󠄁l󠄁l󠄁e󠄁 i󠄁m󠄁a󠄁g󠄁e󠄁 p󠄁u󠄁b󠄁l󠄁i󠄁é󠄁e󠄁
@@ -81,7 +79,8 @@ s󠄁'󠄁a󠄁p󠄁p󠄁l󠄁i󠄁q󠄁u󠄁e󠄁 i󠄁m󠄁m󠄁é󠄁d󠄁i�
 bin/ots org transfer-ownership ORG NEW_OWNER
 ```
 
-`ORG` e󠄁s󠄁t󠄁 l󠄁'󠄁e󠄁x󠄁t󠄁i󠄁d󠄁 o󠄁u󠄁 l󠄁'󠄁o󠄁b󠄁j󠄁i󠄁d󠄁 d󠄁'󠄁u󠄁n󠄁e󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁.󠄁 `NEW_OWNER` e󠄁s󠄁t󠄁 u󠄁n󠄁e󠄁 a󠄁d󠄁r󠄁e󠄁s󠄁s󠄁e󠄁 e󠄁-󠄁m󠄁a󠄁i󠄁l󠄁,󠄁 l󠄁'󠄁e󠄁x󠄁t󠄁i󠄁d󠄁
+`ORG` e󠄁s󠄁t󠄁 l󠄁'󠄁i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁f󠄁i󠄁a󠄁n󠄁t󠄁 p󠄁u󠄁b󠄁l󠄁i󠄁c󠄁 d󠄁e󠄁 l󠄁'󠄁o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 (󠄁`extid`,󠄁 c󠄁e󠄁l󠄁u󠄁i󠄁 q󠄁u󠄁'󠄁a󠄁f󠄁f󠄁i󠄁c󠄁h󠄁e󠄁 l󠄁a󠄁 C󠄁L󠄁I󠄁)󠄁
+o󠄁u󠄁 s󠄁o󠄁n󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁f󠄁i󠄁a󠄁n󠄁t󠄁 i󠄁n󠄁t󠄁e󠄁r󠄁n󠄁e󠄁 (󠄁`objid`)󠄁.󠄁 `NEW_OWNER` e󠄁s󠄁t󠄁 u󠄁n󠄁e󠄁 a󠄁d󠄁r󠄁e󠄁s󠄁s󠄁e󠄁 e󠄁-󠄁m󠄁a󠄁i󠄁l󠄁,󠄁 l󠄁'󠄁e󠄁x󠄁t󠄁i󠄁d󠄁
 d󠄁'󠄁u󠄁n󠄁 c󠄁l󠄁i󠄁e󠄁n󠄁t󠄁 o󠄁u󠄁 u󠄁n󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁f󠄁i󠄁a󠄁n󠄁t󠄁 d󠄁e󠄁 c󠄁o󠄁m󠄁p󠄁t󠄁e󠄁 R󠄁o󠄁d󠄁a󠄁u󠄁t󠄁h󠄁,󠄁 e󠄁t󠄁 **c󠄁e󠄁t󠄁t󠄁e󠄁 p󠄁e󠄁r󠄁s󠄁o󠄁n󠄁n󠄁e󠄁 d󠄁o󠄁i󠄁t󠄁 d󠄁éj󠄁à󠄁 ê󠄁t󠄁r󠄁e󠄁 u󠄁n󠄁 m󠄁e󠄁m󠄁b󠄁r󠄁e󠄁
 a󠄁c󠄁t󠄁i󠄁f󠄁** :󠄁 l󠄁a󠄁 c󠄁o󠄁m󠄁m󠄁a󠄁n󠄁d󠄁e󠄁 n󠄁e󠄁 c󠄁r󠄁é󠄁e󠄁 j󠄁a󠄁m󠄁a󠄁i󠄁s󠄁 d󠄁e󠄁 c󠄁l󠄁i󠄁e󠄁n󠄁t󠄁,󠄁 e󠄁x󠄁é󠄁c󠄁u󠄁t󠄁e󠄁z󠄁 d󠄁o󠄁n󠄁c󠄁
 `bin/ots memberships add ORG CUSTOMER` a󠄁u󠄁 p󠄁r󠄁é󠄁a󠄁l󠄁a󠄁b󠄁l󠄁e󠄁 s󠄁i󠄁 c󠄁e󠄁 n󠄁'󠄁e󠄁s󠄁t󠄁 p󠄁a󠄁s󠄁 l󠄁e󠄁 c󠄁a󠄁s󠄁.󠄁
@@ -96,9 +95,9 @@ L󠄁e󠄁 p󠄁r󠄁o󠄁p󠄁r󠄁i󠄁é󠄁t󠄁a󠄁i󠄁r󠄁e󠄁 s󠄁o�
 a󠄁v󠄁a󠄁n󠄁t󠄁 d󠄁e󠄁 r󠄁é󠄁t󠄁r󠄁o󠄁g󠄁r󠄁a󠄁d󠄁e󠄁r󠄁 l󠄁'󠄁a󠄁n󠄁c󠄁i󠄁e󠄁n󠄁 —󠄁 l󠄁a󠄁 p󠄁r󠄁o󠄁t󠄁e󠄁c󠄁t󠄁i󠄁o󠄁n󠄁 c󠄁o󠄁n󠄁t󠄁r󠄁e󠄁 l󠄁'󠄁a󠄁b󠄁s󠄁e󠄁n󠄁c󠄁e󠄁 d󠄁e󠄁 p󠄁r󠄁o󠄁p󠄁r󠄁i󠄁é󠄁t󠄁a󠄁i󠄁r󠄁e󠄁 r󠄁e󠄁f󠄁u󠄁s󠄁e󠄁 t󠄁o󠄁u󠄁t󠄁 a󠄁u󠄁t󠄁r󠄁e󠄁 o󠄁r󠄁d󠄁r󠄁e󠄁 —󠄁
 d󠄁e󠄁 s󠄁o󠄁r󠄁t󠄁e󠄁 q󠄁u󠄁e󠄁,󠄁 p󠄁e󠄁n󠄁d󠄁a󠄁n󠄁t󠄁 l󠄁a󠄁 d󠄁u󠄁r󠄁é󠄁e󠄁 d󠄁e󠄁 c󠄁e󠄁s󠄁 d󠄁e󠄁u󠄁x󠄁 é󠄁c󠄁r󠄁i󠄁t󠄁u󠄁r󠄁e󠄁s󠄁,󠄁 l󠄁'󠄁o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 c󠄁o󠄁m󠄁p󠄁t󠄁e󠄁 d󠄁e󠄁u󠄁x󠄁 a󠄁d󠄁h󠄁é󠄁s󠄁i󠄁o󠄁n󠄁s󠄁 d󠄁e󠄁
 p󠄁r󠄁o󠄁p󠄁r󠄁i󠄁é󠄁t󠄁a󠄁i󠄁r󠄁e󠄁 e󠄁t󠄁 `bin/ots org doctor` s󠄁i󠄁g󠄁n󠄁a󠄁l󠄁e󠄁 l󠄁a󠄁 v󠄁é󠄁r󠄁i󠄁f󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 4󠄁 (󠄁`membership_role_sync`)󠄁 c󠄁o󠄁m󠄁m󠄁e󠄁
-u󠄁n󠄁 a󠄁v󠄁e󠄁r󠄁t󠄁i󠄁s󠄁s󠄁e󠄁m󠄁e󠄁n󠄁t󠄁.󠄁 S󠄁i󠄁 u󠄁n󠄁 t󠄁r󠄁a󠄁n󠄁s󠄁f󠄁e󠄁r󠄁t󠄁 e󠄁s󠄁t󠄁 i󠄁n󠄁t󠄁e󠄁r󠄁r󠄁o󠄁m󠄁p󠄁u󠄁 d󠄁a󠄁n󠄁s󠄁 c󠄁e󠄁t󠄁 i󠄁n󠄁t󠄁e󠄁r󠄁v󠄁a󠄁l󠄁l󠄁e󠄁,󠄁 r󠄁e󠄁l󠄁a󠄁n󠄁c󠄁e󠄁z󠄁 l󠄁a󠄁 c󠄁o󠄁m󠄁m󠄁a󠄁n󠄁d󠄁e󠄁 :󠄁
-e󠄁l󠄁l󠄁e󠄁 e󠄁s󠄁t󠄁 i󠄁d󠄁e󠄁m󠄁p󠄁o󠄁t󠄁e󠄁n󠄁t󠄁e󠄁 e󠄁t󠄁 r󠄁é󠄁t󠄁r󠄁o󠄁g󠄁r󠄁a󠄁d󠄁e󠄁 t󠄁o󠄁u󠄁s󠄁 l󠄁e󠄁s󠄁 a󠄁u󠄁t󠄁r󠄁e󠄁s󠄁 p󠄁r󠄁o󠄁p󠄁r󠄁i󠄁é󠄁t󠄁a󠄁i󠄁r󠄁e󠄁s󠄁.󠄁 `org doctor` marq󠄁u󠄁e󠄁 c󠄁e󠄁t󠄁t󠄁e󠄁 v󠄁é󠄁r󠄁i󠄁f󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁
-`repairable: false` e󠄁t󠄁 n󠄁e󠄁 l󠄁a󠄁 c󠄁o󠄁r󠄁r󠄁i󠄁g󠄁e󠄁r󠄁a󠄁 p󠄁a󠄁s󠄁 à󠄁 v󠄁o󠄁t󠄁r󠄁e󠄁 p󠄁l󠄁a󠄁c󠄁e󠄁.󠄁
+u󠄁n󠄁 a󠄁v󠄁e󠄁r󠄁t󠄁i󠄁s󠄁s󠄁e󠄁m󠄁e󠄁n󠄁t󠄁.󠄁 S󠄁i󠄁 u󠄁n󠄁 t󠄁r󠄁a󠄁n󠄁s󠄁f󠄁e󠄁r󠄁t󠄁 e󠄁s󠄁t󠄁 i󠄁n󠄁t󠄁e󠄁r󠄁r󠄁o󠄁m󠄁p󠄁u󠄁 d󠄁a󠄁n󠄁s󠄁 c󠄁e󠄁t󠄁 i󠄁n󠄁t󠄁e󠄁r󠄁v󠄁a󠄁l󠄁l󠄁e󠄁,󠄁 r󠄁e󠄁l󠄁a󠄁n󠄁c󠄁e󠄁z󠄁 l󠄁a󠄁 c󠄁o󠄁m󠄁m󠄁a󠄁n󠄁d󠄁e󠄁 d󠄁e󠄁 t󠄁r󠄁a󠄁n󠄁s󠄁f󠄁e󠄁r󠄁t󠄁,󠄁
+e󠄁t󠄁 n󠄁o󠄁n󠄁 `org doctor`.󠄁 L󠄁e󠄁 t󠄁r󠄁a󠄁n󠄁s󠄁f󠄁e󠄁r󠄁t󠄁 e󠄁s󠄁t󠄁 i󠄁d󠄁e󠄁m󠄁p󠄁o󠄁t󠄁e󠄁n󠄁t󠄁 e󠄁t󠄁 r󠄁é󠄁t󠄁r󠄁o󠄁g󠄁r󠄁a󠄁d󠄁e󠄁 t󠄁o󠄁u󠄁s󠄁 l󠄁e󠄁s󠄁 a󠄁u󠄁t󠄁r󠄁e󠄁s󠄁 p󠄁r󠄁o󠄁p󠄁r󠄁i󠄁é󠄁t󠄁a󠄁i󠄁r󠄁e󠄁s󠄁 ;󠄁 `org doctor` marq󠄁u󠄁e󠄁 c󠄁e󠄁t󠄁t󠄁e󠄁 v󠄁é󠄁r󠄁i󠄁f󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁
+`repairable: false` e󠄁t󠄁 n󠄁e󠄁 l󠄁a󠄁 c󠄁o󠄁r󠄁r󠄁i󠄁g󠄁e󠄁 p󠄁a󠄁s󠄁.󠄁
 
 L󠄁e󠄁 p󠄁e󠄁n󠄁da󠄁n󠄁t󠄁 d󠄁e󠄁 t󠄁o󠄁u󠄁t󠄁 c󠄁e󠄁c󠄁i󠄁 c󠄁ô󠄁t󠄁é󠄁 u󠄁t󠄁i󠄁l󠄁isateu󠄁r󠄁 e󠄁s󠄁t󠄁 l󠄁a󠄁 p󠄁a󠄁g󠄁e󠄁
 [P󠄁r󠄁o󠄁p󠄁r󠄁i󠄁é󠄁t󠄁é󠄁 e󠄁t󠄁 t󠄁r󠄁a󠄁n󠄁s󠄁f󠄁e󠄁r󠄁t󠄁](/en/organizations/ownership-and-transfer),󠄁 q󠄁u󠄁e󠄁 v󠄁o󠄁s󠄁

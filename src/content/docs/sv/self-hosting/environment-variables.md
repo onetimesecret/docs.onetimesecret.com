@@ -1,8 +1,7 @@
 ---
 title: Referens för miljövariabler
 description: En referens för Onetime Secret miljövariabler
-sidebar:
-  order: 5
+
 ---
 
 Denna guide täcker alla miljövariabler tillgängliga i Onetime Secret v0.22.4+.

@@ -50,10 +50,10 @@ zastępuje jednak Twoich własnych mechanizmów kontroli, polityk ani analizy pr
   certyfikatów, umowy powierzenia przetwarzania danych (DPA) lub konkretnych ram
   regulacyjnych napisz na adres **support@onetimesecret.com**.
 
-Organizacjom o rygorystycznych wymaganiach dotyczących kontroli danych [self-hosting](https://github.com/onetimesecret/onetimesecret)
+Organizacjom o rygorystycznych wymaganiach dotyczących kontroli danych [self-hosting](/pl/self-hosting/)
 pozwala zatrzymać wszystko we własnej infrastrukturze.
 
-## P󠄁ytania i󠄁 pom󠄁o󠄁c
+## M󠄁a󠄁s󠄁z󠄁 p󠄁ytania l󠄁u󠄁b󠄁 pot󠄁r󠄁z󠄁e󠄁b󠄁u󠄁j󠄁e󠄁s󠄁z󠄁 p󠄁o󠄁m󠄁o󠄁cy󠄁?󠄁
 
 Chętnie pomożemy.
 

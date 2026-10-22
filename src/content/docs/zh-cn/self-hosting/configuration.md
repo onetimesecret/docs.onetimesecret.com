@@ -2,8 +2,6 @@
 textprov: true
 title: "配置参考"
 description: "Onetime Secret 所有配置选项的完整参考"
-sidebar:
-  order: 4
 ---
 
 本综合指南涵盖自托管 Onetime Secret 实例的所有配置选项。
