@@ -8,8 +8,9 @@ isolated git worktree and commit there; the orchestrator cherry-picks.
 
 - `$S` = <scratch>
 - `$WT` = your worktree root (`git rev-parse --show-toplevel`). Never edit or
-  commit in /Users/d/Projects/ops/sites/docs.onetimesecret.com.
-- `$APP` = /Users/d/Projects/dev/onetimesecret/onetimesecret (read-only).
+  commit in `$REPO`.
+- `$REPO` = the main docs checkout (the orchestrator fills in the path)
+- `$APP` = the application repo, read-only (the orchestrator fills in the path)
 
 ## Setup
 
@@ -20,7 +21,7 @@ git switch -c i18n/sync-english-<LOCALE>
 node -e "import('unified').then(()=>console.log('node ok'))"
 ```
 
-If the node check fails: `ln -s /Users/d/Projects/ops/sites/docs.onetimesecret.com/node_modules node_modules` (gitignored).
+If the node check fails: `ln -s "$REPO/node_modules" node_modules` (gitignored).
 
 ## Inputs
 

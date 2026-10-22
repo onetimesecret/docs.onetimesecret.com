@@ -1,6 +1,6 @@
 # Sidebar bundle translation brief
 
-Repo: /Users/d/Projects/ops/sites/docs.onetimesecret.com (Astro/Starlight docs for Onetime Secret).
+Repo: `$REPO` (Astro/Starlight docs for Onetime Secret). `$APP` is the application repo, read-only; the orchestrator fills in the path for both.
 Each locale's UI/sidebar bundle is `src/content/i18n/<locale>.json`. Missing keys fall back to English, so the
 sidebar currently shows English for the labels listed in your todo file.
 
@@ -10,7 +10,7 @@ into your locale. Write ONLY the file `<scratch>/<locale>.json`: a flat JSON obj
 with exactly the keys from the todo file. Do not edit any file in the repo. Do not commit.
 
 ## Sources to consult before translating (in this order of authority)
-1. The shipped app strings for product terms: `/Users/d/Projects/dev/onetimesecret/onetimesecret/locales/content/<app_locale>/*.json`
+1. The shipped app strings for product terms: `$APP/locales/content/<app_locale>/*.json`
    (grep for the English term in the `en` folder next to it to find the key, then read your locale's value).
    Product terms to align: secret, passphrase, receipt, recipient, custom domain, organization, member, role, owner,
    plan, subscription, billing, region, dashboard, preferences, sign in, two-factor, passkey, session, identity, secret activity / audit trail.

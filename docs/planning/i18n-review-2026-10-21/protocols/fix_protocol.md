@@ -8,9 +8,9 @@ there. The orchestrator cherry-picks your commits afterwards.
 
 - `$S` = <scratch>
 - `$WT` = your worktree root: run `git rev-parse --show-toplevel` first. Every repo
-  path below is relative to `$WT`. Never edit or commit in
-  /Users/d/Projects/ops/sites/docs.onetimesecret.com (the main checkout).
-- `$APP` = /Users/d/Projects/dev/onetimesecret/onetimesecret (application repo, read-only)
+  path below is relative to `$WT`. Never edit or commit in `$REPO`.
+- `$REPO` = the main docs checkout (the orchestrator fills in the path)
+- `$APP` = the application repo, read-only (the orchestrator fills in the path)
 - Your report: `$WT/docs/planning/i18n-review-2026-10-21/<LOCALE>.md`
 
 ## Setup (do this first)
@@ -24,7 +24,7 @@ node -e "import('unified').then(()=>console.log('node ok'))"
 ```
 
 If the node check fails, run
-`ln -s /Users/d/Projects/ops/sites/docs.onetimesecret.com/node_modules node_modules`
+`ln -s "$REPO/node_modules" node_modules`
 in `$WT` (it is gitignored) and repeat the check. TextProv needs it.
 
 Read, once: `$S/REVIEW_PROTOCOL.md` (sources and rules the reviewer used), your
@@ -36,7 +36,7 @@ report, `src/content/docs/<LOCALE>/translations/_language-notes.md`, and
 1. **Verify before fixing.** Reviewers can be wrong. Re-read the English line
    (`$S/en/<page>`) and, for UI labels, the shipped string in
    `$APP/locales/content/<APP_LOCALE>/*.json` (app main, 145c1e7cfa). Do NOT use
-   `/Users/d/Projects/run/onetimesecret-docker`: that bundle is stale and caused
+   the onetimesecret-docker checkout: that bundle is stale and caused
    most of the label drift. If you disagree with a finding, skip it and record why.
 2. **UI labels**: the reader must find the named control in the localized app.
    Quote the shipped localized string exactly. Labels the app hard-codes in

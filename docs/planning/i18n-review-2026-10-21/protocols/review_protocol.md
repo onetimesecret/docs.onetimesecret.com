@@ -10,8 +10,8 @@ English page at HEAD is the source of truth for meaning and structure.
 ## Paths
 
 - `$S` = <scratch>
-- `$REPO` = /Users/d/Projects/ops/sites/docs.onetimesecret.com (docs repo, read-only for you)
-- `$APP` = /Users/d/Projects/dev/onetimesecret/onetimesecret (application repo, read-only)
+- `$REPO` = the docs repo, read-only for you (the orchestrator fills in the path)
+- `$APP` = the application repo, read-only (the orchestrator fills in the path)
 - Report: `$REPO/docs/planning/i18n-review-2026-10-21/<LOCALE>.md` (the only file you write)
 
 ## Inputs
