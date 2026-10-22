@@ -110,6 +110,28 @@ retained authorship. Their historical comparison base does not replace the
 starting-base check or CI's current merge base. The upstream #459 provenance
 re-anchor is a separate follow-up.
 
+## Re-anchoring marks before a PR
+
+Edits that each passed `check --base HEAD` can still fail against the PR merge
+base, because the check aligns whole files. `tools/textprov_reanchor.py`
+rewrites marks, never plain text, so the branch passes against that base. The
+person opening the PR runs it on files the branch changed, and only when the
+cumulative check fails on alignment. Agents do not run it as part of an edit.
+
+The tool restores the base bytes of clusters the check pairs with unchanged base
+text, and removes new marks the check rejects because they sit outside eligible
+prose. Neither step removes a mark recorded at the base. `--strict` also marks
+every remaining new prose cluster as AI; use it only when all new prose on the
+branch is AI-authored.
+
+```sh
+BASE=$(git merge-base HEAD origin/<target-branch>)
+python3 tools/textprov_reanchor.py "$BASE" FILE...           # report only
+python3 tools/textprov_reanchor.py "$BASE" --write FILE...
+python3 tools/dogfood.py check --base "$BASE"
+python3 tools/dogfood.py check --base "$BASE" --preserve-only
+```
+
 ## Display and search
 
 The vendored JS/TS integration decodes enrolled pages during Astro prerender and
