@@ -57,7 +57,7 @@ Kua hoahoatia a Onetime Secret hei tautoko i ō mahi ūnga; e kore e whakakapi i
   tiwhikete, mō tētahi Whakaaetanga Tukatuka Raraunga, mō tētahi anga
   ture motuhake rānei, whakapā atu ki **support@onetimesecret.com**.
 
-Mō ngā whakahaere he pakari ngā he󠄁r󠄁e󠄁nga whakahaere raraunga, mā te [manaaki-ā-kiri](https://github.com/onetimesecret/onetimesecret)
+Mō ngā whakahaere he pakari ngā he󠄁r󠄁e󠄁nga whakahaere raraunga, mā te [manaaki-ā-kiri](/mi/self-hosting/)
 ka noho katoa ngā mea ki roto i tō ake hanganga.
 
 ## He p󠄁ātai, h󠄁e t󠄁autoko r󠄁ānei e󠄁 h󠄁i󠄁a󠄁h󠄁i󠄁a󠄁t󠄁i󠄁a󠄁 a󠄁n󠄁a󠄁?
