@@ -92,3 +92,10 @@ The existing body font remains unchanged.
 Vale CI removes recorded AI selectors in its disposable checkout before running
 terminology checks. The source filenames and line numbers remain available for
 annotations. Locally, lint a clean temporary copy rather than stripping sources.
+
+Source searches with `rg` or `grep` can miss marked words because selectors
+occur between grapheme clusters. A search for `Basic`, for example, does not
+match a source occurrence with a marker after each letter. For terminology
+audits, search a decoded temporary copy of explicitly enrolled pages; preserve
+the original files and never strip their marks in place. Vale CI already
+decodes its disposable checkout with `bin/prepare-vale.mjs` before linting.
