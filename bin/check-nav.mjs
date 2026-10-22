@@ -30,10 +30,13 @@
 //     look similar are fine: "Glossary" under Start here and "Translation
 //     glossary" under Translations & contributing are different strings and pass.
 //
-//     EN labels only. A non-EN label comes from that locale's bundle and falls
-//     back to English per-key, so a locale mid-translation legitimately shows a
-//     mix; failing on that would fire on the translation pipeline rather than
-//     on the sidebar.
+//     The tree-wide comparison is EN only. A non-EN label comes from that
+//     locale's bundle and falls back to English per-key, so a locale
+//     mid-translation legitimately shows a mix, and a language may use one word
+//     for two English terms; failing on that would fire on the translation
+//     pipeline rather than on the sidebar. Two identical entries in ONE menu are
+//     checked in every locale: no fallback produces them, and a reader cannot
+//     tell them apart in any language.
 //
 //  4. Every sidebar translation key exists. config/sidebar.mjs resolves a label
 //     as `enTranslations.sidebar?.[key] || key`, so a mistyped key does not
@@ -41,9 +44,10 @@
 //     visible label. `createLink("instalWithDocker", …)` renders a sidebar entry
 //     reading "instalWithDocker", and nothing else here would notice: assertion
 //     1 validates the LINK, assertion 3 sees a typo as a distinct string, and
-//     check:locales never opens src/content/i18n/*.json at all. Non-EN bundles
-//     are not checked, for the same reason assertion 3 is EN-only: a missing
-//     key there is a translation still in flight and falls back per-key.
+//     check:locales compares locale bundles against en.json, so a key missing
+//     from en.json itself is invisible to it. Non-EN bundles are not checked
+//     here: a missing key there is a translation still in flight and falls back
+//     per-key. check:locales reports those gaps as warnings.
 //
 // Usage: pnpm run check:nav
 import { readFileSync } from "node:fs";
@@ -68,6 +72,9 @@ const enSidebarLabels = JSON.parse(readFileSync(join(repoRoot, EN_BUNDLE), "utf8
 const nonDefaultLocales = Object.keys(i18nConfig.locales).filter(
   (locale) => locale !== i18nConfig.defaultLocale,
 );
+// Sidebar label overrides are keyed by Starlight's BCP-47 code (`pt-BR`), not
+// the directory name (`pt-br`); see config/sidebar.mjs.
+const translatedLangs = nonDefaultLocales.map((locale) => i18nConfig.locales[locale].lang);
 
 const docs = docsSlugs();
 const pages = pagesSlugs();
@@ -139,6 +146,20 @@ for (const { path, items } of groups) {
   for (const item of items) {
     if (!byLabel.has(item.label)) byLabel.set(item.label, []);
     byLabel.get(item.label).push({ path, target: item.link ?? "(group)" });
+  }
+  for (const lang of translatedLangs) {
+    const seen = new Map();
+    for (const item of items) {
+      const label = item.translations?.[lang] ?? item.label;
+      if (!seen.has(label)) seen.set(label, []);
+      seen.get(label).push(item.link ?? "(group)");
+    }
+    for (const [label, targets] of seen) {
+      if (targets.length < 2) continue;
+      problems.push(
+        `${named(path)} has ${targets.length} entries labelled "${label}" in "${lang}" (${targets.join(", ")}) — two identical entries in one menu cannot be told apart; give one a distinct label in that locale's src/content/i18n bundle`,
+      );
+    }
   }
 }
 
