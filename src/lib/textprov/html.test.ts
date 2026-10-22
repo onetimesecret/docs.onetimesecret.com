@@ -48,6 +48,19 @@ describe('static TextProv HTML', () => {
     expect(doc.querySelector('a')?.getAttribute('href')).toBe('#topic');
   });
 
+  it('drops selectors the slugger orphaned by removing marked punctuation from a heading ID', () => {
+    // A marked "1. Register, then test?" slugs to this: "." "," and "?" are
+    // gone but each selector that followed them remains.
+    const sel = '\u{E0101}';
+    const marked = `1${sel}${sel}-${sel}r${sel}e${sel}g${sel}${sel}-${sel}t${sel}e${sel}s${sel}t${sel}${sel}`;
+    const html = `<div class="sl-markdown-content"><h3 id="${marked}">${ai('1. Register, then test?')}</h3></div><a href="#${encodeURIComponent(marked)}">Step</a>`;
+    const result = render(html);
+    expect(result).not.toContain(sel);
+    const doc = new JSDOM(result).window.document;
+    expect(doc.querySelector('h3')?.id).toBe('1-reg-test');
+    expect(doc.querySelector('a')?.getAttribute('href')).toBe('#1-reg-test');
+  });
+
   it('fails, naming the page, when a decoded heading ID collides with an existing anchor', () => {
     // Renumbering to "topic-2" would keep this page's TOC working, but a link
     // from another page to #topic would reach a different heading, and nothing

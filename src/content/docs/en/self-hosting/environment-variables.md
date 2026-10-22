@@ -771,6 +771,15 @@ ORGS_CUSTOM_MAIL_ENABLED=false  # Since v0.25.0
 # sent to the domain are routed to the organization's inbox.
 ORGS_INCOMING_SECRETS_ENABLED=false  # Since v0.25.0
 
+# When enabled, allows organizations with the homepage_network_rules
+# entitlement to limit their custom domain homepages by client network
+# (allowed/denied CIDRs). Despite the name, this gates the API as well as
+# the UI: while off, PUT /api/domains/:extid/homepage-config refuses any
+# request that changes allowed_cidrs or denied_cidrs, and DELETE refuses to
+# drop a config that holds them. A list sent back unchanged is accepted.
+# Turning it off stops edits only: stored rules stay enforced.
+ORGS_HOMEPAGE_NETWORK_RULES_UI_ENABLED=false  # Since unreleased
+
 # When enabled, allows organizations with the base_domain_signup entitlement
 # to admit their custom domain's own base domain to its sign-up allowlist
 # automatically (secrets.acme.com admits @acme.com). Checked at sign-up too,
@@ -922,6 +931,8 @@ OIDC_ISSUER=  # Since v0.24.0
 OIDC_CLIENT_ID=  # Since v0.24.0
 OIDC_CLIENT_SECRET=  # Since v0.24.0
 #OIDC_ROUTE_NAME=oidc  # Since v0.24.0
+# Sign-in button label for this provider. Default: SSO
+#OIDC_DISPLAY_NAME=SSO  # Since v0.24.3
 # How the client secret is sent to the token endpoint: client_secret_basic
 # (Authorization: Basic header; the default when unset) or client_secret_post
 # (request body). Leave unset unless the IdP requires one method. An unknown
