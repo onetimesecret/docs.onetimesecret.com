@@ -23,7 +23,7 @@ This is a multilingual documentation site built with Astro and Starlight. Publis
 - `starlight.mjs` — Theme, component overrides, custom CSS, and site metadata.
 - `i18n.mjs` — Supported locales and default language.
 - `sidebar.mjs` — Navigation structure and translated labels.
-- `vite.mjs` — Tailwind integration and development/preview host allowlists.
+- `vite.mjs` — Tailwind integration, the optional dev-only Spotnote plugin (MCP setup in its comment), and development/preview host allowlists.
 - `redirects.mjs` — Legacy URL redirects and moved-page mappings.
 - `domains.mjs` — Staging banner, watermark, and prerelease-build settings.
 
