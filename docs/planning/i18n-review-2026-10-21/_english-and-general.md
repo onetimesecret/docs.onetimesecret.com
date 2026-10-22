@@ -492,6 +492,47 @@ Remove them in one cleanup commit (frontmatter, outside TextProv scope).
   page titles. `check:locales` does not compare bundle keys, so add a key-parity
   report if gaps should stay visible.
 
+**Resolution (2026-10-22, sidebar pass).** Every key in `en.json` now exists in
+all 16 bundles (54 to 63 keys added per locale, one commit per locale, terms
+taken from the shipped app strings and this week's review decisions). The uk
+and de self-hosting nav labels were aligned with the page titles. Existing
+labels and the style defects above were not revisited. Term choices worth a
+human look:
+
+- The audit-trail page label follows the app page title (`web.organizations.audit.title`),
+  not the billing entitlement («Audit Trail» / «Audit Logs») in every locale.
+- bg: «потребителски домейни» kept (docs and glossary) against the app's
+  «Персонализирани домейни»; «Табло» shortened from «Информационно табло».
+- da: «Oversigt» now means both Dashboard and Overview; «Single sign-on (SSO)»
+  left in English as the app does; «Tekstproveniens» for text provenance.
+- de: «Geheimnis» (docs glossary) for the sharing labels where the app says
+  «Nachricht»; «Pläne» where the app mostly says «Tarife»; du register.
+- es: usted in the new labels; the bundle's older 404 strings are still tú.
+  «llaves de acceso» for passkeys (the app splits llave/clave).
+- fr: «Activité des secrets»; «Premiers pas» next to the legacy «Démarrage»;
+  e-mail, not courriel.
+- it: «Single Sign-On (SSO)» and «Self-hosting» kept in English (locked);
+  «frase di sicurezza» for passphrase; tu register, sentence case.
+- ja: サインイン (login page form) where the header says ログイン; 受信確認 for
+  receipt; no space between Latin and kana, which the two newest API keys do use.
+- ko: 수신확인 페이지 for receipt; «Simple 또는 Full 모드» keeps the config
+  values; 멤버 per the unify decision while one app tab still says 구성원.
+- mi: Title Case to match the bundle, where the newest page titles use
+  sentence case; coinages without app precedent for configuration generator,
+  text provenance, developer on-ramp and voice/tone; two-factor label is long.
+- nl: «startpagina», «rechten» for permissions, «opvragen» for request.
+- pl: «Reverse proxy» kept as a loan term; «Twoje» capitalised per the app.
+- pt-br: «Seu recibo» follows the user-facing app, while the pt-br docs and admin
+  strings say «comprovante»; flip the label if the receipt page uses comprovante.
+- sv: «nycklar» for passkeys matches the app page title but is ambiguous;
+  «lösenordsnycklar» is the safer alternative. «Inställningar» for preferences.
+- tr: `hostingChoice` is a question («… mu, … mi?»); «Docker görüntüleri»
+  rather than «imajları»; sentence case next to older Title Case entries.
+- uk: «Уподобання» for preferences; «користувацькі домени» against the app's
+  «Власні домени»; «ідентичності» is a literal rendering with no app term.
+- zh-cn: 内容 (Tier 1) for secret in labels; 控制面板 per the app where the
+  glossary says 仪表板; half-width «单点登录 (SSO)».
+
 ## 6. Withdrawn
 
 - **sv-1 branding labels lack app keys.** Stale. `$APP` renders
