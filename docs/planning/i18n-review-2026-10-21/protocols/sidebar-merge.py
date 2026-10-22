@@ -42,12 +42,17 @@ def insert_after(obj, anchor, key, value):
     obj.update(out)
 
 
+def load(path):
+    with open(path, encoding="utf-8") as fh:
+        return json.load(fh)
+
+
 def merge(loc, write):
-    en = json.load(open(REPO / "src/content/i18n/en.json", encoding="utf-8"))
+    en = load(REPO / "src/content/i18n/en.json")
     bundle_path = REPO / f"src/content/i18n/{loc}.json"
-    bundle = json.load(open(bundle_path, encoding="utf-8"))
-    todo = {r["key"]: r["en"] for r in json.load(open(S / f"{loc}.todo.json"))["labels"]}
-    got = json.load(open(S / f"{loc}.json", encoding="utf-8"))
+    bundle = load(bundle_path)
+    todo = {r["key"]: r["en"] for r in load(S / f"{loc}.todo.json")["labels"]}
+    got = load(S / f"{loc}.json")
     def values(d):
         for v in d.values():
             yield from values(v) if isinstance(v, dict) else (v,)
@@ -58,6 +63,8 @@ def merge(loc, write):
     for k, v in got.items():
         if not isinstance(v, str) or not v.strip():
             problems.append(f"{k}: empty")
+        # A value the bundle already uses elsewhere is accepted even when it
+        # equals the English: the locale has already chosen to keep that term.
         elif k in todo and v == todo[k] and v not in KEEP_EN and v not in existing:
             problems.append(f"{k}: identical to English ({v!r})")
         elif v != v.strip():
@@ -89,6 +96,8 @@ def merge(loc, write):
         inserted += 1
     print(f"{loc}: {inserted} keys inserted")
     if write:
+        # Re-serialises the whole bundle, dropping blank grouping lines. The
+        # locale bundles have none; do not point this at en.json.
         with open(bundle_path, "w", encoding="utf-8", newline="\n") as fh:
             fh.write(json.dumps(bundle, ensure_ascii=False, indent=2) + "\n")
     return True
@@ -97,5 +106,6 @@ def merge(loc, write):
 if __name__ == "__main__":
     args = sys.argv[1:]
     write = "--write" in args
-    ok = all(merge(loc, write) for loc in args if loc != "--write")
-    sys.exit(0 if ok else 1)
+    # Merge every locale before deciding, so one failure does not hide the rest.
+    results = [merge(loc, write) for loc in args if loc != "--write"]
+    sys.exit(0 if all(results) else 1)

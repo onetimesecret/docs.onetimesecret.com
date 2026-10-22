@@ -1,15 +1,21 @@
 #!/usr/bin/env python3
-"""Build the per-locale review scaffold: clean copies, file lists, structure parity."""
-import json
+"""Build the per-locale review scaffold: clean copies, file lists, structure parity.
+
+usage: REPO=<docs checkout> prep.py   (REPO defaults to the current directory)
+"""
+import os
 import re
 import subprocess
 import sys
 from pathlib import Path
 
-REPO = Path("/Users/d/Projects/ops/sites/docs.onetimesecret.com")
+REPO = Path(os.environ.get("REPO", Path.cwd()))
 S = Path(__file__).resolve().parent
 MARK = "\U000E0101"
 
+# The per-locale re-sync commits reviewed in October 2026 (branch
+# i18n/latest-content). Replace them for another round; a history rewrite
+# leaves these unreachable.
 COMMITS = {
     "bg": "908c2faa", "da": "c22761f4", "de": "ff448649", "es": "2c4c6391",
     "fr": "c51c3016", "it": "ba198352", "ja": "28d63ed7", "ko": "7ef8d9b8",
@@ -158,9 +164,11 @@ def main():
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(text.replace(MARK, ""))
     for loc, pages in per_loc.items():
-        tree = {str(p.relative_to(REPO / "src/content/docs" / loc).with_suffix("")).removesuffix("/index").removesuffix("index")
-                for p in (REPO / "src/content/docs" / loc).rglob("*.md*")}
-        tree = {t.rstrip("/") for t in tree}
+        tree = set()
+        for p in (REPO / "src/content/docs" / loc).rglob("*.md*"):
+            rel = p.relative_to(REPO / "src/content/docs" / loc).with_suffix("")
+            slug = rel.parent if rel.name == "index" else rel
+            tree.add("" if slug == Path(".") else slug.as_posix())
         (S / loc / "locale-tree.txt").write_text("\n".join(sorted(t for t in tree if t)) + "\n")
         (S / loc / "structure.md").write_text(report(loc, pages, tree))
     (S / "HEAD_SHA").write_text(head + "\n")
