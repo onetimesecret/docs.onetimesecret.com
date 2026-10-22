@@ -506,8 +506,11 @@ human look:
 - da: «Oversigt» now means both Dashboard and Overview; «Single sign-on (SSO)»
   left in English as the app does; «Tekstproveniens» for text provenance.
 - de: «Geheimnis» (docs glossary) for the sharing labels where the app says
-  «Nachricht»; «Pläne» where the app mostly says «Tarife»; du register.
-- es: usted in the new labels; the bundle's older 404 strings are still tú.
+  «Nachricht»; «Pläne» where the app mostly says «Tarife»; du register. The
+  older Sie strings (404, staging, search, pagefind) moved to du in the PR #468
+  follow-up.
+- es: usted in the new labels; the older 404 and staging strings moved from tú
+  to usted in the PR #468 follow-up.
   «llaves de acceso» for passkeys (the app splits llave/clave).
 - fr: «Activité des secrets»; «Premiers pas» next to the legacy «Démarrage»;
   e-mail, not courriel.
@@ -532,6 +535,11 @@ human look:
   «Власні домени»; «ідентичності» is a literal rendering with no app term.
 - zh-cn: 内容 (Tier 1) for secret in labels; 控制面板 per the app where the
   glossary says 仪表板; half-width «单点登录 (SSO)».
+
+PR #468 follow-up: `notFound.createTitle` in uk, tr, da, zh-cn and mi now uses
+the bundle's sidebar term for secret. `check:locales` warns when a bundle lacks
+a key in `en.json`, and `check:nav` fails on identical labels in one translated
+menu.
 
 ## 6. Withdrawn
 
