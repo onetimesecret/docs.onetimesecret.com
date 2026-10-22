@@ -4,12 +4,12 @@
       "blog": "Блог",
       "guides": "Посібники",
       "rest-api": "API",
-      "self-hosting": "Самостійний хостинг"
+      "self-hosting": "Самостійне розгортання"
     },
     "ariaLabel": {
       "guides": "Документація посібників",
       "apiReference": "Довідник API",
-      "selfHosting": "Документація самостійного хостингу",
+      "selfHosting": "Документація самостійного розгортання",
       "blog": "Блог Onetime Secret",
       "sections": "Розділи сайту"
     }
