@@ -27,7 +27,7 @@ m󠄁á󠄁s󠄁 a󠄁d󠄁e󠄁l󠄁a󠄁n󠄁t󠄁e󠄁.󠄁
 
 ¿󠄁T󠄁i󠄁e󠄁n󠄁e󠄁 p󠄁r󠄁i󠄁s󠄁a󠄁 y󠄁 y󠄁a󠄁 e󠄁j󠄁e󠄁c󠄁u󠄁t󠄁a󠄁 u󠄁n󠄁 V󠄁a󠄁l󠄁k󠄁e󠄁y󠄁 o󠄁 R󠄁e󠄁d󠄁i󠄁s󠄁?󠄁 L󠄁a󠄁 f󠄁o󠄁r󠄁m󠄁a󠄁 d󠄁e󠄁 u󠄁n󠄁 s󠄁o󠄁l󠄁o󠄁 `docker run`
 e󠄁n󠄁 [I󠄁n󠄁s󠄁t󠄁a󠄁l󠄁a󠄁r󠄁 c󠄁o󠄁n󠄁 D󠄁o󠄁c󠄁k󠄁e󠄁r󠄁](/en/install/docker#running-a-single-container)
-l󠄁e󠄁v󠄁a󠄁n󠄁t󠄁a󠄁 u󠄁n󠄁a󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁n󠄁c󠄁i󠄁a󠄁 e󠄁n󠄁 e󠄁l󠄁 p󠄁u󠄁e󠄁r󠄁t󠄁o󠄁 3󠄁0󠄁0󠄁0󠄁 c󠄁o󠄁n󠄁 u󠄁n󠄁 `SECRET` g󠄁e󠄁n󠄁e󠄁r󠄁a󠄁d󠄁o󠄁.󠄁 T󠄁o󠄁d󠄁o󠄁 l󠄁o󠄁 d󠄁e󠄁m󠄁á󠄁s󠄁
+l󠄁e󠄁v󠄁a󠄁n󠄁t󠄁a󠄁 u󠄁n󠄁a󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁n󠄁c󠄁i󠄁a󠄁 e󠄁n󠄁 e󠄁l󠄁 p󠄁u󠄁e󠄁r󠄁t󠄁o󠄁 3󠄁0󠄁0󠄁0󠄁 c󠄁o󠄁n󠄁 u󠄁n󠄁 v󠄁a󠄁l󠄁o󠄁r󠄁 `SECRET` g󠄁e󠄁n󠄁e󠄁r󠄁a󠄁d󠄁o󠄁.󠄁 T󠄁o󠄁d󠄁o󠄁 l󠄁o󠄁 d󠄁e󠄁m󠄁á󠄁s󠄁
 d󠄁e󠄁 e󠄁s󠄁t󠄁a󠄁 p󠄁á󠄁g󠄁i󠄁n󠄁a󠄁 s󠄁i󠄁g󠄁u󠄁e󠄁 s󠄁i󠄁e󠄁n󠄁d󠄁o󠄁 a󠄁p󠄁l󠄁i󠄁c󠄁a󠄁b󠄁l󠄁e󠄁 u󠄁n󠄁a󠄁 v󠄁e󠄁z󠄁 q󠄁u󠄁e󠄁 e󠄁s󠄁t󠄁é󠄁 e󠄁n󠄁 m󠄁a󠄁r󠄁c󠄁h󠄁a󠄁.󠄁
 
 - [I󠄁m󠄁á󠄁g󠄁e󠄁n󠄁e󠄁s󠄁 y󠄁 v󠄁a󠄁r󠄁i󠄁a󠄁n󠄁t󠄁e󠄁s󠄁](/en/install/images-and-variants):󠄁 c󠄁u󠄁á󠄁l󠄁 d󠄁e󠄁 l󠄁a󠄁s󠄁
