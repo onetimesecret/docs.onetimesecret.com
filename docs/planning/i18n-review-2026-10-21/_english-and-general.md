@@ -298,6 +298,11 @@ an additional layer of protection." Locales: yes.
 
 ## 3. App-side issues (app repo)
 
+Filed as [onetimesecret#4847](https://github.com/onetimesecret/onetimesecret/issues/4847)
+(2026-10-22, checked against app `main` at `ce2a691b3f`). The issue adds the en
+logo aria-label (`click_to_upload_a_logo_with_recommendation`), the de and mi_NZ
+expiry grammar, and the bg and zh wording splits, and supersedes the list below.
+
 - **A1. Logo and favicon hints offer SVG in every non-English bundle.**
   `web.branding.logo_modal_hint`, `favicon_field_hint` and `favicon_modal_hint`
   list SVG in all 29 non-en bundles (bg da de es fr it ja ko mi nl pl pt_BR sv
