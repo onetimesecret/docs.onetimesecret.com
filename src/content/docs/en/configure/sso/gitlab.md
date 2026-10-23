@@ -5,6 +5,7 @@ description: Connect GitLab to a self-hosted Onetime Secret instance using gener
 audience: operator
 pageType: how-to
 sourceOfTruth: onetimesecret/lib/onetime/sso_provider/oidc.rb (generic OIDC settings and button name); onetimesecret/apps/web/auth/config/hooks/omniauth_tenant.rb (callback URL); onetimesecret/apps/web/auth/config/hooks/omniauth.rb (email requirement for new accounts); provider documentation linked below (registration, issuer and public email prerequisite)
+draft: true
 ---
 
 R󠄁e󠄁g󠄁i󠄁s󠄁t󠄁e󠄁r󠄁 O󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁 S󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 a󠄁s󠄁 a󠄁n󠄁 O󠄁I󠄁D󠄁C󠄁 a󠄁p󠄁p󠄁l󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 i󠄁n󠄁 G󠄁i󠄁t󠄁L󠄁a󠄁b󠄁,󠄁 t󠄁h󠄁e󠄁n󠄁 f󠄁i󠄁n󠄁i󠄁s󠄁h󠄁 t󠄁h󠄁e󠄁 s󠄁e󠄁t󠄁u󠄁p󠄁 w󠄁i󠄁t󠄁h󠄁 [C󠄁o󠄁n󠄁f󠄁i󠄁g󠄁u󠄁r󠄁e󠄁 S󠄁S󠄁O󠄁](/en/configure/sso).󠄁

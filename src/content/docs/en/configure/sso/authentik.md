@@ -5,6 +5,7 @@ description: Connect Authentik to a self-hosted Onetime Secret instance using ge
 audience: operator
 pageType: how-to
 sourceOfTruth: onetimesecret/lib/onetime/sso_provider/oidc.rb (generic OIDC settings and button name); onetimesecret/apps/web/auth/config/hooks/omniauth_tenant.rb (callback URL); onetimesecret/apps/web/auth/config/hooks/omniauth.rb (new SSO customer verification); onetimesecret/lib/onetime/application/authorization_policies.rb (system-role verification requirement); provider documentation linked below (registration, issuer and email verification)
+draft: true
 ---
 
 R󠄁e󠄁g󠄁i󠄁s󠄁t󠄁e󠄁r󠄁 O󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁 S󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 a󠄁s󠄁 a󠄁n󠄁 O󠄁I󠄁D󠄁C󠄁 a󠄁p󠄁p󠄁l󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 i󠄁n󠄁 A󠄁u󠄁t󠄁h󠄁e󠄁n󠄁t󠄁i󠄁k󠄁,󠄁 t󠄁h󠄁e󠄁n󠄁 f󠄁i󠄁n󠄁i󠄁s󠄁h󠄁 t󠄁h󠄁e󠄁 s󠄁e󠄁t󠄁u󠄁p󠄁 w󠄁i󠄁t󠄁h󠄁 [C󠄁o󠄁n󠄁f󠄁i󠄁g󠄁u󠄁r󠄁e󠄁 S󠄁S󠄁O󠄁](/en/configure/sso).󠄁

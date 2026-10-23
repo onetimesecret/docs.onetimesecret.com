@@ -5,6 +5,7 @@ description: Diagnose security-header conflicts and SSO form-action failures wit
 audience: operator
 pageType: how-to
 sourceOfTruth: onetimesecret/etc/defaults/config.defaults.yaml (CSP and middleware toggles); onetimesecret/lib/onetime/auth_config.rb (derived IdP origins and manual overrides)
+draft: true
 ---
 
 I󠄁n󠄁s󠄁p󠄁e󠄁c󠄁t󠄁 t󠄁h󠄁e󠄁 p󠄁o󠄁l󠄁i󠄁c󠄁y󠄁 t󠄁h󠄁e󠄁 b󠄁r󠄁o󠄁w󠄁s󠄁e󠄁r󠄁 r󠄁e󠄁c󠄁e󠄁i󠄁v󠄁e󠄁s󠄁 w󠄁h󠄁e󠄁n󠄁 a󠄁 p󠄁r󠄁o󠄁x󠄁y󠄁 o󠄁r󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁t󠄁y󠄁-󠄁p󠄁r󠄁o󠄁v󠄁i󠄁d󠄁e󠄁r󠄁 r󠄁e󠄁d󠄁i󠄁r󠄁e󠄁c󠄁t󠄁 f󠄁a󠄁i󠄁l󠄁s󠄁.󠄁
