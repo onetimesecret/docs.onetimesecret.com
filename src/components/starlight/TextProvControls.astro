@@ -1,7 +1,10 @@
 ---
 // Rendered below the h1 of enrolled pages only (see PageTitle.astro), so the
-// toggle script ships with the one feature that uses it.
-const { t } = Astro.locals;
+// toggle script ships with the one feature that uses it. The info button opens
+// a native popover, which needs no script; it links to the reader guide.
+import { Icon } from '@astrojs/starlight/components';
+const { t, starlightRoute } = Astro.locals;
+const guide = `/${starlightRoute.locale}/contribute/text-provenance`;
 ---
 <div class="textprov-controls" data-textprov-document="true" data-pagefind-ignore>
   <!-- Runs before the controls paint, so they appear only when scripts run and
@@ -15,6 +18,13 @@ const { t } = Astro.locals;
       <span class="textprov-track" aria-hidden="true"></span>
       <span class="textprov-label">{t('textprov.toggle')}</span>
     </button>
+    <button type="button" class="textprov-info" popovertarget="textprov-about" aria-label={t('textprov.info')}>
+      <Icon name="information" size="1.125rem" />
+    </button>
+    <div id="textprov-about" class="textprov-about" popover>
+      <p>{t('textprov.about')}</p>
+      <a href={guide}>{t('textprov.learnMore')}</a>
+    </div>
   </div>
   <p id="textprov-help" class="textprov-help">{t('textprov.help')}</p>
 </div>
@@ -63,7 +73,35 @@ const { t } = Astro.locals;
   :root[data-textprov="shown"] .textprov-track { background: var(--sl-color-accent); border-color: var(--sl-color-accent); }
   :root[data-textprov="shown"] .textprov-track::after { inset-inline-start: calc(100% - 1.25rem + 4px); background: white; }
 
-  .textprov-switch:focus-visible { outline: 2px solid var(--sl-color-text-accent); outline-offset: 2px; }
+  .textprov-info {
+    anchor-name: --textprov-info;
+    display: inline-grid; place-items: center; inline-size: 2rem; block-size: 2rem;
+    padding: 0; color: var(--sl-color-gray-3); background: none; border: 0; border-radius: 50%; cursor: pointer;
+  }
+  .textprov-info:hover, .textprov-info:has(+ :popover-open) { color: var(--sl-color-text-accent); }
+  .textprov-switch:focus-visible, .textprov-info:focus-visible { outline: 2px solid var(--sl-color-text-accent); outline-offset: 2px; }
+
+  .textprov-about {
+    inline-size: min(20rem, calc(100vw - 2rem)); padding: .875rem 1rem;
+    color: var(--sl-color-gray-2); background: var(--sl-color-bg-nav);
+    border: 1px solid var(--sl-color-gray-5); border-radius: .5rem; box-shadow: var(--sl-shadow-md);
+    font-size: var(--sl-text-sm); line-height: 1.5;
+  }
+  .textprov-about p { margin: 0 0 .5rem; }
+  .textprov-about a { color: var(--sl-color-text-accent); }
+  /* Without anchor positioning the popover keeps its centred default. Where it
+     would overflow, as on phones, it spans the viewport less a gutter. */
+  @supports (position-area: block-end) {
+    .textprov-about {
+      inset: auto; margin: .25rem 0 0;
+      position-anchor: --textprov-info; position-area: block-end span-inline-end;
+      position-try-fallbacks: --textprov-wide;
+    }
+  }
+  @position-try --textprov-wide {
+    position-area: block-end span-all; justify-self: stretch;
+    inline-size: auto; margin: .25rem 1rem 0;
+  }
 
   /* Hidden help still describes the switch. When shown, it lines up with the
      switch label: track width plus gap. */
