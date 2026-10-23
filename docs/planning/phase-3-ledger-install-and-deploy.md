@@ -6,7 +6,7 @@ read fresh at HEAD. **Every line number below was re-pinned by reading the file 
 disagree. Format follows
 [`ledger/secret-lifecycle.md`](../archive/documentation-audit-2026-08-phase-2/ledger/secret-lifecycle.md).
 
-All paths are APP-relative to `/Users/d/Projects/dev/onetimesecret/onetimesecret`.
+All paths are relative to the application repository (onetimesecret/onetimesecret).
 
 ## Scope
 

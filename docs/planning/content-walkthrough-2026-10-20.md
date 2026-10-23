@@ -198,8 +198,8 @@ The walkthrough opened all 66 English sidebar destinations in order, starting at
 
 Selected local corroboration:
 
-- Application checkout: `/Users/d/Projects/dev/onetimesecret/onetimesecret`, HEAD `145c1e7cfa`; inspected Secret model and ActiveSessionGate descriptions. The model exposes ciphertext through its encrypted-field mechanism; the session gate describes next-request revocation and periodic activity updates.
-- Marketing-site content: `/Users/d/Projects/ops/sites/onetimesecret.com/src/content/pages/en/about.md`, `src/content/pages/terms.md`, and June invitation changelog entries. About and pricing were also checked live. The Terms retention comparison is from local source, not a live policy verification.
+- Application checkout (onetimesecret/onetimesecret), HEAD `145c1e7cfa`; inspected Secret model and ActiveSessionGate descriptions. The model exposes ciphertext through its encrypted-field mechanism; the session gate describes next-request revocation and periodic activity updates.
+- Marketing-site content: `onetimesecret.com/src/content/pages/en/about.md`, `src/content/pages/terms.md`, and June invitation changelog entries. About and pricing were also checked live. The Terms retention comparison is from local source, not a live policy verification.
 - Prior memory suggested separating per-install SSO from organization SSO. Current pages were inspected afresh; no old branch status or entitlement was treated as current evidence.
 
 No secret was created, revealed or burned. No account, billing, invitation, DNS or security setting was changed. No published page or translation was edited. No build, test suite, installation, migration, SDK example, complete link crawl, screenshot review, or VoiceOver audit was performed.
@@ -250,7 +250,7 @@ triggered installation and was stopped after registry DNS failures. Validation
 then used a `node_modules` symlink to the existing main-checkout dependencies.
 The first build could not resolve the installed native Markdown binding from
 the prerendered bundle; the successful build used
-`NODE_PATH=/Users/d/Projects/ops/sites/docs.onetimesecret.com/node_modules/.pnpm/satteri@0.10.5/node_modules`
+`NODE_PATH=<main checkout>/node_modules/.pnpm/satteri@0.10.5/node_modules`
 with `node node_modules/astro/bin/astro.mjs build`. No dependency manifests or
 lockfiles were changed.
 

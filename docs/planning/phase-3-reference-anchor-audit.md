@@ -33,7 +33,7 @@ anchor can ever be generated.
 
 ## 1. Full anchor inventory — `environment-variables.md`
 
-Path: `/Users/d/Projects/ops/sites/docs.onetimesecret.com/src/content/docs/en/self-hosting/environment-variables.md`
+Path: `src/content/docs/en/self-hosting/environment-variables.md`
 (498 lines). Slugs computed by `headings()` / `slugifyHeading()` in `bin/lib/frontmatter.mjs`, so they
 match what Starlight emits and what `check-frontmatter.mjs` asserts against.
 
@@ -142,7 +142,7 @@ per-feature `UI_HOMEPAGE_TRUSTED_PROXY_DEPTH` is a registered deprecation pointi
 
 ## 2. The real structure of `configuration.md`
 
-Path: `/Users/d/Projects/ops/sites/docs.onetimesecret.com/src/content/docs/en/self-hosting/configuration.md`
+Path: `src/content/docs/en/self-hosting/configuration.md`
 (636 lines).
 
 ```

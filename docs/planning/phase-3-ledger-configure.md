@@ -4,7 +4,7 @@ Verified against `onetimesecret@75ce160` (2026-08-10) on branch `claude/phase-3-
 Every line number below was re-read at that commit. Where a Phase-2 ledger row or a
 Phase-3 planning document pinned a different line, the drift is called out in the row.
 
-All paths are APP-relative (`/Users/d/Projects/dev/onetimesecret/onetimesecret`).
+All paths are relative to the application repository (onetimesecret/onetimesecret).
 
 **Scope.** The factual spine for eight pages: `configure/index`, `configure/secrets-and-keys`,
 `configure/authentication`, `configure/sso`, `configure/email`, `configure/secret-options`,
