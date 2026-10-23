@@ -1,18 +1,19 @@
 ---
 title: Configuration Reference
 description: Complete reference for all Onetime Secret configuration options
-sidebar:
-  order: 4
+audience: operator
+pageType: reference
+sourceOfTruth: onetimesecret/etc/defaults/config.defaults.yaml:1-1543 (the shipped default configuration file this page mirrors, in full); onetimesecret/etc/defaults/config.defaults.yaml:3-6 (the site block this page opens with — HOST and the SSL flag that turns https on or off when generating links)
 ---
 
 
 This comprehensive guide covers all configuration options for self-hosted Onetime Secret instances.
 
 :::tip[Try the Configuration Generator]
-Not sure where to start? The **[Configuration Generator](/en/self-hosting/configuration-generator/)** lets you pick a few preset options (deployment mode, email delivery, SSO, custom domains, and more) and copies out ready-to-use `etc/config.yaml` and `etc/auth.yaml` fragments plus a matching `.env` starter — all generated in your browser from the config schemas.
+Not sure where to start? The **[Configuration Generator](/en/self-hosting/configuration-generator/)** lets you pick a few preset options (deployment mode, email delivery, SSO, custom domains, and more) and generates starting `etc/config.yaml` and `etc/auth.yaml` fragments plus a matching `.env` starter — all generated in your browser from the config schemas.
 :::
 
-## Configuration Files
+## Configuration files
 
 Onetime Secret uses multiple configuration files:
 
@@ -21,7 +22,7 @@ Onetime Secret uses multiple configuration files:
 - **`etc/config.yaml`** - Main application configuration using ERB templates. Environment variables are integrated here, making it easy to see how each setting is applied. (Copy from `etc/defaults/config.defaults.yaml`)
 
 
-## Main Configuration
+## Main configuration
 
 The main configuration file is `etc/config.yaml`, which uses ERB templates to integrate environment variables.
 
@@ -33,7 +34,7 @@ The main configuration file is `etc/config.yaml`, which uses ERB templates to in
 **View the complete configuration file:**
 [config.defaults.yaml](https://raw.githubusercontent.com/onetimesecret/onetimesecret/main/etc/defaults/config.defaults.yaml)
 
-### Key Configuration Sections
+### Key configuration sections
 
 Here are the most important sections you'll likely need to customize:
 
@@ -272,9 +273,9 @@ site:
     # The nonce is available via `req.env['onetime.nonce']` for custom
     # script/style assets. Backend views add it automatically.
     #
-    # ENV: CSP_ENABLED (default: false)
+    # ENV: CSP_ENABLED (default: true)
     csp:
-      enabled: <%= ENV['CSP_ENABLED'] == 'true' || false %>
+      enabled: <%= ENV['CSP_ENABLED'] != 'false' %>
 
 features:
   # Incoming Secrets Feature

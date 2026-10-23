@@ -4,8 +4,6 @@ description: Under the ownership-checking strategies custom domains are served o
 audience: operator
 pageType: how-to
 sourceOfTruth: onetimesecret/lib/onetime/models/custom_domain/serving_policy.rb (served only once ownership_verified under approximated or caddy_on_demand, registration enough under passthrough, a record with no organization never served under any strategy, DOMAINS_SERVE_UNVERIFIED serves records with an organization and logs custom_domain.serve_unverified_enabled once at boot); onetimesecret/lib/onetime/middleware/domain_strategy.rb (404 with "This domain is not configured" and the "[DomainStrategy] custom domain not served" INFO line with reason unverified or orphan, where v0.26.16 served every record it found); onetimesecret/apps/api/v2/logic/secrets/base_secret_action.rb (an unserved share_domain is refused); onetimesecret/lib/onetime/operations/verify_domain.rb (a failed TXT check clears ownership_verified unless a Colonel override holds it, the same on v0.26.16, and records with no organization skipped); onetimesecret/apps/api/colonel/logic/colonel/override_domain_verification.rb (Colonel domain override); onetimesecret/apps/web/auth/lib/public_host.rb (auth links name only a verified custom domain, so links requested on an unverified domain point at the canonical host, whatever DOMAINS_SERVE_UNVERIFIED says); onetimesecret/lib/onetime/cli/domains/list_command.rb, verify_command.rb and orphaned_command.rb (list --unverified, verify --all, verify DOMAIN and orphaned, all present on v0.26.16); onetimesecret/lib/onetime/cli/domains/transfer_command.rb and repair_command.rb (transfer DOMAIN --to-org and repair DOMAIN --org-id adopt a record with no organization); onetimesecret/changelog.d/20261014_090000_claude_custom_domain_served_when_verified.rst and 20261014_060000_claude_orphaned_domain_adoption.rst (keep the TXT record, verify --all after a strategy switch, adding a domain no longer adopts, adoption issues a new TXT value); onetimesecret/docs/runbooks/custom-domain-canonical-index-backfill.md, lib/onetime/cli/domains/backfill_canonical_index_command.rb and lib/onetime/cli/domains/doctor_command.rb (domains registered before v0.26.14, dry run while running, --apply with the application stopped, collision and conflict resolved by hand, auto_repair off during the backfill, canonical_index_* findings); onetimesecret/lib/onetime/models/custom_domain.rb (lookups fall back to the canonical index, and v0.26.16 reads it the same way); onetimesecret/etc/defaults/config.defaults.yaml (DOMAINS_VALIDATION_STRATEGY passthrough, serve_unverified, require_verified, markdown.enabled and redis.require_tls only for the exact value true, email_login_request_rate_limit 30 per IP and 90 per address over 3600 seconds with a 3600-second lockout and on unless exactly false, sso_diagnostics and sender_test_email 10 per customer per hour, config key paths); onetimesecret/.env.reference (trusted proxy filter mode takes the leftmost untrusted entry, RFC 1918, loopback and link-local trusted by default, the edge must overwrite X-Forwarded-For, ratelimit keys only prints commands, the colonel reset, and only new variables, none renamed or removed); onetimesecret/lib/onetime/security/reset_request_rate_limiter.rb and apps/web/auth/config/hooks/email_login_request.rb (per masked client IP and per normalized address before account lookup, the cap-hit line with the site.network.trusted_proxy NOTE and text after it, the log shows the first two octets); onetimesecret/lib/onetime/operations/ratelimit/registry.rb and lib/onetime/cli/ratelimit_command.rb (email_login_request_ip and email_login_request_email kinds, /24 IPv4 and /48 IPv6 subjects, strip plus NFC plus case-fold addresses, Customer database); onetimesecret/changelog.d/20261012_000300_claude_m03_login_request_enumeration.rst and apps/web/auth/config/overrides/login_request_enumeration.rb (same answer whether or not the account exists, no_matching_login and the recently-sent error gone); onetimesecret/changelog.d/20261012_000400_claude_m04_email_login_rate_limit.rst (the POST /auth/login link for an account without a password counts against the limit); onetimesecret/lib/onetime/initializers/configure_familia.rb (warning for a dotted hostname or public IP, info for private, CGNAT or link-local addresses and single-label names, hostnames not resolved, boot refused when TLS is required); onetimesecret/lib/onetime/sso_provider/oidc.rb and lib/onetime/models/custom_domain/sso_config.rb (OIDC_CLIENT_AUTH_METHOD client_secret_basic by default or client_secret_post, an unknown value logged and ignored, token_endpoint_auth_method absent on v0.26.16); onetimesecret/changelog.d/20261012_165455_claude_4764_entra_secret_request_body.rst (Entra ID sends the secret in the request body, AADSTS7000215 with the header); onetimesecret/apps/web/auth/config/hooks/account.rb (account_close_cleanup_partial at error level); onetimesecret/apps/web/auth/operations/customers/purge.rb and lib/onetime/cli/customers/purge_one_command.rb (customer.purge audit with status partial, a purge-one retry finishes); onetimesecret/lib/onetime/jobs/scheduled/maintenance/index_rebuild_job.rb and changelog.d/20261013_221030_claude_index_rebuild_auto_repair.rst (auto_repair moved the customer email, organization contact email and custom domain name indexes, one run of the fixed job moves them back); onetimesecret/lib/onetime/cli/org/doctor_command.rb and lib/onetime/cli/customers/doctor_command.rb (doctor --all --repair); onetimesecret/changelog.d/20261013_140500_claude_sso_diagnostics_follow_ups.rst (self-service actions move to the security audit trail); onetimesecret/docker/base.dockerfile (yq checked by SHA-256 for amd64 and arm64)
-sidebar:
-  order: 17
 ---
 
 v0.26.17 adds SSO self-diagnostics for custom domains and closes several security
@@ -18,7 +16,7 @@ registered before v0.26.14 run one step after the upgrade, in a short maintenanc
 window: a backfill of the custom-domain name index. Rollback is a tag swap, with
 the SSO caveats in [Rollback](#rollback).
 
-Coming from v0.26.14 or earlier, read the [v0.26.15 upgrade guide](./upgrading-v0-26-15) first.
+Coming from v0.26.14 or earlier, read the [v0.26.15 upgrade guide](/en/self-hosting/upgrading-v0-26-15/) first.
 Coming from v0.26.15 or earlier, also read the
 [v0.26.16 release notes](https://github.com/onetimesecret/onetimesecret/releases/tag/v0.26.16);
 their deployment notes cover the simple-mode session ID change and the SSO email repair.
@@ -29,7 +27,7 @@ their deployment notes cover the simple-mode session ID change and the SSO email
 2. Record your current tag.
 3. Note your `DOMAINS_VALIDATION_STRATEGY` (`passthrough` by default) and how
    many custom domains you serve.
-4. Note your [authentication mode](./simple-or-full-auth) (`AUTHENTICATION_MODE`)
+4. Note your [authentication mode](/en/self-hosting/simple-or-full-auth/) (`AUTHENTICATION_MODE`)
    and whether `AUTH_EMAIL_AUTH_ENABLED=true` (magic links).
 5. Note whether a reverse proxy sits in front of the application and whether
    `TRUSTED_PROXY_ENABLED=true` is set.
@@ -113,7 +111,7 @@ Steps 1 to 3 run on your current version, before you upgrade.
    entry that is not a trusted proxy, so a proxy that appends lets a client choose
    its own address and get past the per-IP limit. A trusted proxy's
    `X-Forwarded-Host` is read as well; it must follow the rules in step 1 of the
-   [v0.26.15 upgrade guide](./upgrading-v0-26-15).
+   [v0.26.15 upgrade guide](/en/self-hosting/upgrading-v0-26-15/).
 
    Without trust, every visitor shares the proxy's address, and after 30
    magic-link requests in an hour everyone gets 429 for the next hour. If you
@@ -240,7 +238,7 @@ Pin the tag you recorded. No migration ran; earlier releases ignore the data and
 variables this release adds, and v0.26.16 reads the backfilled index entries as
 before. After a rollback, custom domains that are unverified or have no
 organization are served again. Rolling back to v0.26.14 or earlier also needs the
-[v0.26.15 datastore step](./upgrading-v0-26-15#rollback).
+[v0.26.15 datastore step](/en/self-hosting/upgrading-v0-26-15/#rollback).
 
 Two SSO behaviours do not survive the rollback:
 

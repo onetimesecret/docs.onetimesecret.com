@@ -1,18 +1,19 @@
 ---
 title: Upgrading to v0.23.0
 description: Guide for upgrading Onetime Secret to v0.23.0 — maintenance release with config migration
-sidebar:
-  order: 5
+audience: operator
+pageType: how-to
+sourceOfTruth: onetimesecret/scripts/check-migration-status.sh:16-18,27 (CONFIG_MIGRATE takes check, auto or skip, and defaults to check); onetimesecret/scripts/check-migration-status.sh:20-23,104-124 (a pending migration halts startup with exit 1, and the three options this page describes are the ones the script itself prints, including the read-only config-directory case); onetimesecret/scripts/check-migration-status.sh:30-33 (the migration this release needs, migrations/2025-07-27/reorganize_config_structure.rb, and that the list is applied in order so a skipped release still gets the earlier ones)
 ---
 
 v0.23.0 is a maintenance release that converts the main config file (`etc/config.yaml`) from symbol keys to string keys. This is part of a series of changes preparing for the v0.24.0 release.
 
-## Before You Start
+## Before you start
 
 1. **Back up your configuration files.** Especially `etc/config.yaml` and any custom `.env` files.
 2. **Back up your Redis data.** `redis-cli BGSAVE` or equivalent.
 
-## Migration Required
+## Migration required
 
 The app will halt on boot if it detects the old config format. You have three options for handling the migration.
 
@@ -51,11 +52,11 @@ bundle exec ruby migrations/20250727-1523_01_convert_symbol_keys.rb --run
 
 Set `CONFIG_MIGRATE=skip` to bypass the migration check. The app will attempt to start with the old config format, which may cause unexpected behavior.
 
-## What the Migration Does
+## What the migration does
 
 The migration converts YAML keys in `etc/config.yaml` from Ruby symbol format (`:key`) to plain string format (`key`). No values are changed — only the key syntax is updated. The migration script creates a backup of your original file before making changes.
 
-## Boot Prompt
+## Boot prompt
 
 If you start the app without setting `CONFIG_MIGRATE`, you'll see this:
 

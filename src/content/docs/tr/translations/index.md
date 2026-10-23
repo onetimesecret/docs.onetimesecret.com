@@ -49,7 +49,7 @@ Tutarlı, yüksek kaliteli çeviriler için [Çeviri Stil Kılavuzumuzu](/tr/tra
 
 ### Türkçe Çeviriye Özgü Notlar
 
-Türkçe çeviriye özgü önemli kararlar ve yaklaşımlar için [Türkçe Dil Notları](/tr/translations/language-notes) sayfasını inceleyin. Bu sayfa şunları içerir:
+Türkçe çeviriye özgü önemli kararlar ve yaklaşımlar, proje deposundaki `_language-notes.md` dosyasında belgelenmiştir. Bu notlar şunları içerir:
 
 - **Password vs Passphrase ayrımı** - Güvenlik netliği için kritik
 - **"Secret" kelimesinin çevirisi** - Neden "gizli mesaj" tercih edilir
@@ -71,7 +71,6 @@ Seçilen bir dilde içerik mevcut değilse, içeriğin henüz çevrilmediğini b
 
 - [Çeviri Stil Kılavuzu](/tr/translations/guide) - Kapsamlı stil ve ton rehberi
 - [Sözlük](/tr/translations/glossary) - Standartlaştırılmış terim çevirileri
-- [Dil Notları](/tr/translations/language-notes) - Türkçe'ye özgü çeviri kararları
 
 ### Genel Kaynaklar
 

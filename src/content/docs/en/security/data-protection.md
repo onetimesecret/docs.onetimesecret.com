@@ -1,6 +1,9 @@
 ---
+textprov: true
 title: Data Protection
 description: What Onetime Secret stores, how long it's kept, where it's processed, and how this supports your compliance obligations.
+audience: end-user
+pageType: reference
 ---
 
 This page describes how Onetime Secret handles your data: what is stored, for
@@ -12,7 +15,7 @@ how long, where it lives, and how that supports your own compliance program.
   secret is viewed — or reaches its expiration — it is permanently destroyed.
 - **Expiration is built in.** Every secret has a lifetime (configurable within
   your plan's limits); nothing is intended to live indefinitely.
-- **Minimal metadata.** In keeping with our [Data Minimization](/en/principles/data-minimization)
+- **Minimal metadata.** In keeping with our [Data minimization](/en/security/our-principles#data-minimization)
   principle, we aim to keep only the metadata needed to operate the service.
 
 ## Encryption
@@ -23,14 +26,14 @@ issuance and renewal automatically.
 
 For especially sensitive material you can add defense in depth by enabling a
 **passphrase**, splitting information across multiple secrets, and choosing the
-shortest practical expiration — see [Security Best Practices](/en/security-best-practices).
+shortest practical expiration — see [Security Best Practices](/en/security/best-practices).
 
 ## Where your data is processed (residency)
 
 You can choose the region where your data is processed and stored — currently
 the EU, UK, US, CA, and NZ. This lets you keep data close to your users and
 within a jurisdiction that fits your requirements. See
-[Data Center Regions](/en/regions) for details and endpoints.
+[Where your data lives](/en/security/where-your-data-lives/) for details and endpoints.
 
 ## Compliance
 
@@ -41,19 +44,18 @@ replace your own controls, policies, and legal review.
   data minimization are designed to help you meet data-protection obligations.
   In most deployments you act as the data controller and Onetime Secret as a
   processor for the limited data involved.
-- **HIPAA.** As noted in our [use cases](/en/custom-domains/use-cases), Onetime
-  Secret can provide a more secure channel than email for exchanging initial
-  access credentials, but it should be used as a stopgap rather than a permanent
-  system of record for PHI. Pair it with a dedicated compliant system for
+- **HIPAA.** Onetime Secret can provide a more secure channel than email for
+  exchanging initial access credentials, but it should be used as a stopgap
+  rather than a permanent system of record for PHI. Pair it with a dedicated compliant system for
   ongoing PHI workflows.
 - **Certifications, DPAs, and specific frameworks.** For questions about
   certifications, a Data Processing Agreement, or a specific regulatory
   framework, contact **support@onetimesecret.com**.
 
-For organizations with strict data-control requirements, [self-hosting](https://github.com/onetimesecret/onetimesecret)
+For organizations with strict data-control requirements, [self-hosting](/en/self-hosting/)
 keeps everything within your own infrastructure.
 
-## Questions or Need Support?
+## Questions or need support?
 
 We're here to help.
 

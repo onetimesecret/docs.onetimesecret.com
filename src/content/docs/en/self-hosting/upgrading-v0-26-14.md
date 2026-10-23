@@ -4,11 +4,9 @@ description: Full mode adds one auth column at boot and rolling back needs a sch
 audience: operator
 pageType: how-to
 sourceOfTruth: onetimesecret/apps/web/auth/migrations/011_active_session_remember_until.rb and apps/web/auth/migrator.rb (boot-time migration, Sequel IntegerMigrator refuses a schema version above its files); onetimesecret/lib/onetime/jobs/scheduled/domain_refresh_job.rb (first run 2 minutes after the scheduler starts, paged walk over every domain); onetimesecret/lib/onetime/operations/verify_domain.rb (vhost creation on a missing vhost, dry runs skip only storing); onetimesecret/lib/onetime/domain_validation/caddy_on_demand_strategy.rb (TXT ownership check and the never-confirmed rule); onetimesecret/lib/onetime/models/custom_domain/sso_config.rb (tenant SSO requires a verified domain; SAML is a tenant provider type); onetimesecret/etc/defaults/config.defaults.yaml (site.session.absolute_timeout, jobs.domain_refresh); onetimesecret/lib/onetime/log_scrubber.rb (URI masking)
-sidebar:
-  order: 14
 ---
 
-Full [authentication mode](./simple-or-full-auth) adds one nullable column to the auth
+Full [authentication mode](/en/self-hosting/simple-or-full-auth/) adds one nullable column to the auth
 database at boot, and **rolling back to v0.26.13 now needs a schema step** (see
 [Rollback](#rollback)). The domain refresh job walks every custom domain instead of
 the newest 200. SAML sign-in is new and off unless `SAML_ENABLED=true`; see
@@ -16,8 +14,8 @@ the newest 200. SAML sign-in is new and off unless `SAML_ENABLED=true`; see
 The `caddy_on_demand` validation strategy now works: it checks each domain's TXT
 record and reports resolving and certificate status itself.
 
-Coming from v0.24 or earlier? Start with the [v0.24.0 upgrade guide](./upgrading-v0-24).
-Coming from v0.26.11 or earlier, read the [v0.26.12 upgrade guide](./upgrading-v0-26-12) first.
+Coming from v0.24 or earlier? Start with the [v0.24.0 upgrade guide](/en/self-hosting/upgrading-v0-24/).
+Coming from v0.26.11 or earlier, read the [v0.26.12 upgrade guide](/en/self-hosting/upgrading-v0-26-12/) first.
 Coming from v0.26.12 or earlier, also read the
 [v0.26.13 release notes](https://github.com/onetimesecret/onetimesecret/releases/tag/v0.26.13);
 their rollback line is wrong for full mode, and the [Rollback](#rollback) section

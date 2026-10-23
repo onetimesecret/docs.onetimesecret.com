@@ -27,14 +27,14 @@ export const starlightConfig = {
   title: "Onetime Secret - Docs",
   // favicon: "./src/assets/img/favicon.ico",
   editLink: {
-    baseUrl:
-      "https://github.com/onetimesecret/docs.onetimesecret.com/edit/main/",
+    baseUrl: "https://github.com/onetimesecret/docs.onetimesecret.com/edit/main/",
   },
   disable404Route: true,
   credits: true,
   logo: {
-    src: "./src/assets/img/onetime-logo-v3-xl.svg",
-    alt: "Onetime Secret",
+    light: "./src/assets/img/onetime-logo-v3-docs-pill-light.svg",
+    dark: "./src/assets/img/onetime-logo-v3-docs-pill-dark.svg",
+    alt: "Onetime Secret Docs",
     replacesTitle: true,
   },
   pagefind: true,
@@ -62,14 +62,19 @@ export const starlightConfig = {
   ],
 
   components: {
+    MarkdownContent: "./src/components/starlight/MarkdownContent.astro",
+    // TextProv toggle beside the h1 on enrolled pages.
+    PageTitle: "./src/components/starlight/PageTitle.astro",
     Header: "./src/components/starlight/Header.astro",
     SiteTitle: "./src/components/starlight/SiteTitle.astro",
     Hero: "./src/components/starlight/Hero.astro",
+    // Mobile drawer: section card + theme/language selects at the top,
+    // social icons only at the bottom. Desktop sidebar is unchanged.
+    Sidebar: "./src/components/starlight/Sidebar.astro",
+    MobileMenuFooter: "./src/components/starlight/MobileMenuFooter.astro",
     // Prerelease only: wrap PageFrame to mount the banner and/or watermark.
     // The override renders each marker conditionally on its own flag.
-    ...(prerelease
-      ? { PageFrame: "./src/components/starlight/PageFrame.astro" }
-      : {}),
+    ...(prerelease ? { PageFrame: "./src/components/starlight/PageFrame.astro" } : {}),
   },
   social: [
     {

@@ -7,9 +7,11 @@
 import { describe, expect, it } from 'vitest';
 import { parse } from 'yaml';
 import {
+  choicesFor,
   coerce,
   defaultFor,
   defaultSelections,
+  envSnippet,
   generate,
   toQuery,
   type Selections,
@@ -73,6 +75,18 @@ describe('presets against the vendored schema', () => {
       for (const dep of Object.keys(o.requires ?? {})) {
         expect(index.get(dep), `${dep} before ${o.key}`).toBeLessThan(index.get(o.key)!);
       }
+    }
+  });
+
+  it('resolves every select to a default that is one of its choices', () => {
+    // defaultFor() trusts any scalar schema default. If a schema regeneration
+    // moved default_ttl off the TTL ladder, the <select> would render with no
+    // matching <option> and coerce() would keep returning the unselectable
+    // value, so the state could never recover. Catch it here, not in a browser.
+    for (const o of OPTIONS) {
+      if (o.type !== 'select') continue;
+      const values = choicesFor(o).map((c) => c.value);
+      expect(values, `${o.key} default ${String(defaultFor(o))}`).toContain(defaultFor(o));
     }
   });
 });
@@ -192,6 +206,14 @@ describe('generate — dependency enforcement', () => {
     expect(result.warnings).toHaveLength(2);
     expect(result.envSnippet).not.toContain('SAML_');
   });
+
+  it('asks for no secrets on behalf of an option whose requirement is unmet', () => {
+    // envSnippet() walks OPTIONS itself, so it has to apply the same gate as
+    // generate() rather than rely on enforceDependencies() having reset the
+    // value first. Call it directly with a stale selection to prove that.
+    const stale: Selections = { ...defaultSelections(), saml_enabled: true };
+    expect(envSnippet(stale)).not.toContain('SAML_');
+  });
 });
 
 describe('generate — env starter per selection', () => {
@@ -237,12 +259,21 @@ describe('generate — env starter per selection', () => {
     expect(valued).toEqual(['SAML_ENABLED=true']);
   });
 
+  it('asks for regional addresses only when regions are enabled', () => {
+    const enabled = generate({ ...defaultSelections(), regions_enabled: true });
+    expect(enabled.envSnippet).toContain('JURISDICTION=');
+    expect(enabled.envSnippet).toContain('JURISDICTIONS=');
+    expect(generate(defaultSelections()).envSnippet).not.toContain('JURISDICTION');
+  });
+
   it('surfaces full-mode secrets in the env starter', () => {
     const sel: Selections = { ...defaultSelections(), deployment_mode: 'full' };
     const result = generate(sel);
     expect(result.envSnippet).toContain('AUTH_DATABASE_URL=');
     expect(result.envSnippet).toContain('AUTH_SECRET=');
     expect(result.envSnippet).toContain('ARGON2_SECRET=');
+    expect(result.envSnippet).toContain('ACCOUNT_ID_SECRET=');
+    expect(generate(defaultSelections()).envSnippet).not.toContain('ACCOUNT_ID_SECRET=');
   });
 });
 

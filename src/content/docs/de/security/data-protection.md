@@ -1,6 +1,7 @@
 ---
-title: Datenschutz
-description: Was Onetime Secret speichert, wie lange es aufbewahrt wird, wo es verarbeitet wird und wie das deine Compliance-Pflichten unterstützt.
+textprov: true
+title: "Datenschutz"
+description: "Was Onetime Secret speichert, wie lange es aufbewahrt wird, wo es verarbeitet wird und wie das deine Compliance-Pflichten unterstützt."
 ---
 
 Diese Seite beschreibt, wie Onetime Secret mit deinen Daten umgeht: was
@@ -11,17 +12,17 @@ Compliance-Programm unterstützt.
 
 - **Geheimnisinhalte** werden verschlüsselt und sind für einen einzigen Abruf
   bestimmt. Sobald ein Geheimnis angesehen wird — oder sein Ablaufdatum
-  erreicht — wird es dauerhaft gelöscht.
+  erreicht — wird es dauerhaft z󠄁er󠄁s󠄁t󠄁ör󠄁t.
 - **Ablauf ist eingebaut.** Jedes Geheimnis hat eine Lebensdauer (konfigurierbar
-  innerhalb der Grenzen deines Tarifs); nichts ist darauf ausgelegt, unbegrenzt
+  innerhalb der Grenzen deines P󠄁l󠄁an󠄁s); nichts ist darauf ausgelegt, unbegrenzt
   zu bestehen.
-- **Minimale Metadaten.** Im Einklang mit unserem Grundsatz der [Datenminimierung](/de/principles/data-minimization)
+- **Minimale Metadaten.** Im Einklang mit unserem Grundsatz der [Datenminimierung](/en/security/our-principles#data-minimization)
   wollen wir nur die Metadaten aufbewahren, die für den Betrieb des Dienstes
   nötig sind.
 
 ## Verschlüsselung
 
-Geheimnisse werden in jedem Tarif **bei der Übertragung und im Ruhezustand
+Geheimnisse werden in jedem P󠄁l󠄁an󠄁 **bei der Übertragung und im Ruhezustand
 verschlüsselt**. Die Übertragung ist mit TLS geschützt, und für
 benutzerdefinierte Domains übernehmen wir die Ausstellung und Erneuerung der
 SSL/TLS-Zertifikate automatisch.
@@ -29,14 +30,14 @@ SSL/TLS-Zertifikate automatisch.
 Für besonders sensibles Material kannst du den Schutz mehrschichtig aufbauen:
 mit einer **Passphrase**, dem Aufteilen von Informationen auf mehrere
 Geheimnisse und der kürzesten praktikablen Ablaufzeit — siehe
-[Bewährte Sicherheitspraktiken](/de/security-best-practices).
+[Bewährte Sicherheitspraktiken](/de/security/best-practices).
 
 ## Wo deine Daten verarbeitet werden (Datenresidenz)
 
 Du kannst die Region wählen, in der deine Daten verarbeitet und gespeichert
 werden — derzeit EU, UK, US, CA und NZ. So bleiben die Daten nah bei deinen
 Nutzern und in einer Rechtsordnung, die zu deinen Anforderungen passt. Details
-und Endpunkte findest du unter [Rechenzentrumsregionen](/de/regions).
+und Endpunkte findest du unter [W󠄁o󠄁 d󠄁ei󠄁n󠄁e󠄁 D󠄁a󠄁t󠄁en l󠄁i󠄁egen](/en/security/where-your-data-lives/).
 
 ## Compliance
 
@@ -48,8 +49,7 @@ juristische Prüfung.
   Datenminimierung sollen dir helfen, Datenschutzpflichten zu erfüllen.
   In den meisten Einsatzszenarien agierst du als Verantwortlicher und Onetime
   Secret als Auftragsverarbeiter für die wenigen betroffenen Daten.
-- **HIPAA.** Wie in unseren [Anwendungsfällen](/de/custom-domains/use-cases)
-  beschrieben, kann Onetime Secret ein sichererer Kanal als E-Mail sein, um
+- **HIPAA.** Onetime Secret k󠄁a󠄁n󠄁n󠄁 ein sichererer Kanal als E-Mail sein, um
   erste Zugangsdaten auszutauschen. Es sollte aber als Übergangslösung dienen,
   nicht als dauerhafter Speicherort für PHI. Kombiniere es für laufende
   PHI-Workflows mit einem dedizierten, konformen System.
@@ -58,10 +58,10 @@ juristische Prüfung.
   bestimmten regulatorischen Rahmenwerk wende dich an
   **support@onetimesecret.com**.
 
-Für Organisationen mit strengen Anforderungen an die Datenkontrolle bleibt beim [Self-Hosting](https://github.com/onetimesecret/onetimesecret)
+Für Organisationen mit strengen Anforderungen an die Datenkontrolle bleibt beim [Self-Hosting](/de/self-hosting/)
 alles innerhalb der eigenen Infrastruktur.
 
-## Fragen oder Hilfe benötigt?
+## Fragen oder Hilfe nötig?
 
 Wir sind für dich da.
 

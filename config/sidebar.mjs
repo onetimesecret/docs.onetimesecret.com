@@ -55,6 +55,15 @@ const localeTranslations = {
   tr: trTranslations,
 };
 
+// Every translation key the sidebar below asks for, in call order.
+//
+// createLink and createGroup both resolve a label as `sidebar?.[key] || key`,
+// which means a mistyped key neither throws nor blanks the entry: it renders the
+// raw camelCase key as the visible label. bin/check-nav.mjs reads this array and
+// fails on any key with no entry in src/content/i18n/en.json, which is the only
+// thing that catches the typo before someone looks at the rendered sidebar.
+const requestedKeys = [];
+
 /**
  * Build the per-locale label overrides for a sidebar key.
  *
@@ -90,6 +99,7 @@ function buildTranslations(key) {
  * in i18n.mjs and directory names use lowercase (e.g., "zh-cn", "pt-br").
  */
 function createLink(key, link, badge) {
+  requestedKeys.push(key);
   const enLabel = enTranslations.sidebar?.[key] || key;
   return {
     label: enLabel,
@@ -112,6 +122,7 @@ function createLink(key, link, badge) {
  * in i18n.mjs and directory names use lowercase (e.g., "zh-cn", "pt-br").
  */
 function createGroup(key, items = [], collapsed = false) {
+  requestedKeys.push(key);
   const enLabel = enTranslations.sidebar?.[key] || key;
   return {
     label: enLabel,
@@ -122,135 +133,181 @@ function createGroup(key, items = [], collapsed = false) {
 }
 
 // ---------------------------------------------------------------------------
-// Custom-domain & plan-tier navigation
-//
-// Grouped by billing entitlement: each feature is filed under the plan tier
-// that first unlocks it (see etc/billing.yaml). "Custom Domains" holds the
-// setup docs (custom_domains is itself a Free entitlement); the Free Plan,
-// Identity Plus and Team Plus groups then show what each tier adds.
-//
-//   Custom Domains  domain setup & usage docs (custom_domains)
-//   Free Plan       homepage_secrets, incoming_secrets                (Free)
-//   Identity Plus   custom_branding, custom_mail_sender,
-//                   custom_privacy_defaults, custom_signin_config, manage_members
-//   Team Plus       manage_sso, custom_signup_validation, manage_teams, audit_logs
-//
-// NOTE: audit_logs is defined as an entitlement but is not yet assigned to any
-// plan; Audit Log lives under Team Plus as the most advanced tier. Pages keep
-// their existing /custom-domains/ and /team/ URLs regardless of which group
-// they appear in.
-// ---------------------------------------------------------------------------
-
-const customDomainsLinks = () => [
-  createLink("overview", "custom-domains"),
-  createLink("howItWorks", "custom-domains/how-it-works"),
-  createLink("setupGuide", "custom-domains/setup-guide"),
-  createLink("dnsValidation", "custom-domains/dns-validation"),
-  createLink("useCases", "custom-domains/use-cases"),
-];
-
-const freePlanLinks = () => [
-  createLink("homepageSecrets", "custom-domains/homepage-secrets"),
-  createLink("incomingSecrets", "custom-domains/incoming-secrets"),
-];
-
-const identityPlusLinks = () => [
-  createLink("brandGuide", "custom-domains/brand-guide", {
-    text: "★",
-    variant: "tip",
-    class: "small",
-  }),
-  createLink("emailSender", "custom-domains/email-sender"),
-  createLink("privacyOptions", "custom-domains/privacy-options"),
-  createLink("signinSettings", "custom-domains/signin-settings"),
-  createLink("memberInvites", "custom-domains/member-invites"),
-];
-
-const teamPlusLinks = () => [
-  createLink("sso", "team/sso", { text: "★", variant: "tip", class: "small" }),
-  createLink("signupSettings", "custom-domains/signup-settings"),
-  createLink("sharedDashboard", "team/shared-dashboard"),
-  createLink("auditLog", "team/audit-log"),
-];
-
 // Sidebar configuration using translation keys
+//
+// Seven top-level entries. An eighth, the generated Reference, lands in Phase 4.
+//
+// Groups nest: Starlight's ManualSidebarGroupSchema accepts a group inside
+// another group's `items` (schemas/sidebar.ts), and createGroup passes `items`
+// straight through, so no helper change was needed for the two-level section.
+// Only "Using Onetime Secret" nests; Self-hosting is deliberately flat (see
+// the comment on that group).
+//
+// Labels are sentence case ("Send your first secret", "Upgrade guides"), with
+// proper nouns and acronyms kept as written (Docker, Linux, TLS, DNS, SSO,
+// REST API). The label lives in src/content/i18n/en.json, not here.
+//
+// Every link label is a distinct translation key. "Overview" used to appear
+// seven times, disambiguated only by which group it happened to be under, which
+// made the sidebar unusable as a flat search result and useless to a screen
+// reader reading the links out of context. Each index page now says what it is.
+// ---------------------------------------------------------------------------
 export const sidebar = [
   createLink("home", "/"),
 
-  createGroup("introduction", [
-    createLink("gettingStarted", "introduction"),
-    createLink("guides", "introduction/guides"),
+  createGroup("startHere", [
+    createLink("whereToBegin", "start"),
+    createLink("sendYourFirstSecret", "start/send-your-first-secret"),
+    createLink("glossary", "start/glossary"),
+    createLink("hostingChoice", "start/hosted-or-self-hosted"),
   ]),
 
-  createGroup("secretLinks", [
-    createLink("overview", "secret-links"),
-    createLink("whyUseSecretLinks", "secret-links/why-use-secret-links"),
-    createLink("useCases", "secret-links/use-cases"),
-    createLink("comparePlans", "pricing/compare-plans"),
+  createGroup("usingOnetimeSecret", [
+    createGroup("sharingSecrets", [
+      createLink("shareASecret", "share"),
+      createLink("yourReceipt", "share/your-receipt"),
+      createLink("whatRecipientsSee", "share/what-recipients-see"),
+      createLink("whenALinkDoesntWork", "share/when-a-link-doesnt-work"),
+      createLink("requestSecret", "share/request-secret"),
+      createLink("whyUseSecretLinks", "share/why-secret-links"),
+      createLink("useCases", "share/use-cases"),
+    ]),
+
+    createGroup("yourAccount", [
+      createLink("signingIn", "account/signing-in"),
+      createLink("twoFactorAndPasskeys", "account/two-factor-and-passkeys"),
+      createLink("sessionsAndIdentities", "account/sessions-and-identities"),
+      createLink("dashboardAndRecentSecrets", "account/dashboard-and-recent-secrets"),
+      createLink("preferences", "account/preferences"),
+      createLink("changeYourEmail", "account/change-your-email"),
+      createLink("switchingRegions", "account/change-your-region"),
+      createLink("closeYourAccount", "account/close-your-account"),
+    ]),
+
+    createGroup("organizations", [
+      createLink("whatOrganizationsDo", "organizations"),
+      createLink("rolesAndPermissions", "organizations/roles-and-permissions"),
+      createLink("memberInvites", "organizations/inviting-members"),
+      createLink("ownershipAndTransfer", "organizations/ownership-and-transfer"),
+      createLink("sso", "organizations/sso"),
+      // Only the label changed (auditLog → secretActivity); the slug stays so
+      // existing audit-trail links keep working without a redirect. Contrast
+      // share/request-secret, which replaced receiving-secrets and redirects.
+      createLink("secretActivity", "organizations/audit-trail"),
+    ]),
+
+    createGroup("customDomains", [
+      createLink("whatCustomDomainsDo", "custom-domains"),
+      createLink("setupGuide", "custom-domains/setup-guide"),
+      createLink("dnsValidation", "custom-domains/dns-validation"),
+      createLink("brandGuide", "custom-domains/branding"),
+      createLink("emailSender", "custom-domains/email-sender"),
+      createLink("homepageAndIncoming", "custom-domains/homepage-and-incoming"),
+      createLink("accessAndPrivacy", "custom-domains/access-and-privacy"),
+    ]),
+
+    // No badges here: this group is *about* the tiers, so labelling its own
+    // entries with one would be circular. The two pricing pages follow the
+    // docs snapshot of the billing catalog; merging both into billing/index
+    // waits on the production catalog. The billing pages describe the
+    // mechanism and assert no plan contents.
+    createGroup("plansAndBilling", [
+      createLink("howPlansWork", "billing"),
+      createLink("managingYourSubscription", "billing/managing-your-subscription"),
+      createLink("plansAndPricing", "pricing"),
+      createLink("comparePlans", "pricing/compare-plans"),
+    ]),
   ]),
 
-  createGroup("customDomains", customDomainsLinks()),
-
-  createGroup("freePlan", freePlanLinks()),
-
-  createGroup("identityPlus", identityPlusLinks()),
-
-  createGroup("teamPlus", teamPlusLinks()),
-
-  createGroup("regions", [
-    createLink("overview", "regions"),
-    createLink("regionCA", "regions/canada"),
-    createLink("regionEU", "regions/european-union"),
-    createLink("regionNZ", "regions/new-zealand"),
-    createLink("regionUK", "regions/united-kingdom"),
-    createLink("regionUS", "regions/united-states"),
-    createLink("switchingRegions", "regions/switching-regions"),
-  ]),
-
+  // Self-hosting is one flat sequence, on purpose. These pages serve one
+  // reader — the operator — in the order they meet them: orient, pick the one
+  // decision that changes what you install, install, configure, upgrade. The
+  // array order IS that sequence (createLink emits no `order` key and nothing
+  // here autogenerates, so Starlight renders the array as written; the
+  // install/* pages carry no `sidebar.order` for the same reason — reorder
+  // here, not in frontmatter). Subgroups would put every page three levels
+  // deep to label a sequence the order already shows; add one only when a
+  // section outgrows this list or gains a second audience.
+  //
+  // install/ has no index page on purpose — nothing links to /en/install/ and
+  // the sequence is the index. The six install/* pages are the split of the
+  // retired self-hosting/installation (Phase 3).
+  //
+  // The version-specific upgrade guides (self-hosting/upgrading-v0-*) are NOT
+  // listed. They are reached from the table on self-hosting/upgrade-guides,
+  // and bin/check-orphans.mjs counts a page linked from a sidebar-linked page
+  // in the same directory as reachable, so a new release guide needs a row in
+  // that table and nothing here. The named IdP recipes use the same pattern:
+  // configure/sso/index links its siblings without adding sidebar entries.
+  //
+  // The configure/* entries follow their prerequisites: keys, outbound email
+  // and session cookies come before the sign-in pages that depend on them.
+  // Eight of them in a row was weighed against a Configure subgroup and kept
+  // flat: the group is still one operator sequence, the configure/ overview
+  // is the sub-index, and the install/* run before it is a sibling sequence
+  // of the same size with no index at all. Revisit if a second audience or a
+  // second configure-sized run appears.
   createGroup("selfHosting", [
-    createLink("overview", "self-hosting"),
-    createLink("hostingChoice", "self-hosting/self-hosting-vs-hosted"),
+    createLink("aboutSelfHosting", "self-hosting"),
     createLink("authModeChoice", "self-hosting/simple-or-full-auth"),
-    createLink("gettingStarted", "self-hosting/getting-started"),
-    createLink("installationDeployment", "self-hosting/installation"),
+    createLink("imagesAndVariants", "install/images-and-variants"),
+    createLink("installWithDocker", "install/docker"),
+    createLink("installOnLinux", "install/linux"),
+    createLink("runAsAService", "install/run-as-a-service"),
+    createLink("reverseProxyAndTls", "install/reverse-proxy-and-tls"),
+    createLink("verifyYourInstall", "install/verify"),
+    createLink("configurationOverview", "configure"),
+    createLink("configureSecretsAndKeys", "configure/secrets-and-keys"),
+    createLink("configureEmail", "configure/email"),
+    createLink("configureSessions", "configure/sessions-and-cookies"),
+    createLink("configureAuthentication", "configure/authentication"),
+    createLink("configureSso", "configure/sso"),
+    createLink("configureSecurityHeaders", "configure/security-headers"),
+    createLink("configureSecretOptions", "configure/secret-options"),
     createLink("configurationReference", "self-hosting/configuration"),
     createLink("configurationGenerator", "self-hosting/configuration-generator"),
     createLink("environmentVariables", "self-hosting/environment-variables"),
     createLink("upgradeGuides", "self-hosting/upgrade-guides"),
   ]),
 
-  createLink("restApi", "rest-api"),
-
-  createGroup("resources", [
-    createLink("clientLibraries", "resources/client-libraries"),
+  createGroup("apiAndSdks", [
+    createLink("restApi", "api"),
+    createLink("clientLibraries", "api/client-libraries"),
   ]),
 
   createGroup("securityTrust", [
-    createLink("overview", "security"),
+    createLink("ourApproachToSecurity", "security"),
     createLink("dataProtection", "security/data-protection"),
-    createLink("securityBestPractices", "security-best-practices"),
+    createLink("whereYourDataLives", "security/where-your-data-lives"),
+    createLink("securityBestPractices", "security/best-practices"),
+    createLink("ourPrinciples", "security/our-principles"),
     createLink("vulnerabilityDisclosure", "security/vulnerability-disclosure"),
   ]),
 
   createGroup(
-    "ourPrinciples",
-    [
-      createLink("overview", "principles"),
-      createLink("privacyFirst", "principles/privacy-first"),
-      createLink("communication", "principles/communication"),
-      createLink("dataMinimization", "principles/data-minimization"),
-    ],
-    true,
-  ),
-
-  createGroup(
     "translations",
     [
-      createLink("overview", "translations"),
-      createLink("universalGuidance", "translations/universal"),
+      createLink("developerOnRamp", "contribute/developer-on-ramp"),
+      createLink("textProvenance", "contribute/text-provenance"),
+      createLink("howTranslationsWork", "translations"),
       createLink("styleGuide", "translations/guide"),
-      createLink("glossary", "translations/glossary"),
+      createLink("translationGlossary", "translations/glossary"),
+      createLink("universalGuidance", "translations/universal"),
+      createLink("translatingSecret", "translations/universal/secret-concept"),
+      createLink("passwordVsPassphrase", "translations/universal/password-passphrase"),
+      createLink("brandTerms", "translations/universal/brand-terms"),
+      createLink("voiceAndTone", "translations/universal/voice-and-tone"),
+      createLink("qualityChecklist", "translations/universal/quality-checklist"),
     ],
     true,
   ),
 ];
+
+/**
+ * The translation keys `sidebar` above was built from, populated as a side
+ * effect of the createLink/createGroup calls in it. Declared after the array so
+ * it is complete when a consumer imports it.
+ *
+ * @type {readonly string[]}
+ */
+export const sidebarKeys = Object.freeze([...requestedKeys]);

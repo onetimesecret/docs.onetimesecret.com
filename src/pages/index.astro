@@ -1,0 +1,55 @@
+---
+// src/pages/index.astro
+//
+// Serves the site root as a 200 instead of a redirect to /en/. There is no
+// Starlight root locale (English lives under /en/ like every other language),
+// so without this file "/" is only reachable through a meta-refresh stub.
+//
+// The page re-renders the English homepage entry rather than keeping a second
+// copy of its content, so the two URLs cannot drift. Starlight resolves the
+// locale for "/" to the default locale, which gives the page English strings,
+// the English sidebar, and English site-title links. The canonical link keeps
+// /en/ as the indexed URL.
+import { getEntry, render } from 'astro:content';
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { parse as parseYaml } from 'yaml';
+import { i18nConfig } from '../../config/i18n.mjs';
+import { starlightConfig } from '../../config/starlight.mjs';
+
+const defaultLocale = i18nConfig.defaultLocale;
+const entry = await getEntry('docs', defaultLocale);
+if (!entry?.filePath) {
+  throw new Error(`Homepage entry for the default locale "${defaultLocale}" was not found.`);
+}
+const { Content, headings } = await render(entry);
+
+// <StarlightPage> validates raw frontmatter, while entry.data has already been
+// through the collection schema (for example hero action icons become
+// objects). Re-read the source frontmatter so the same schema runs once.
+const sources = import.meta.glob('../content/docs/*/index.mdoc', {
+  query: '?raw',
+  import: 'default',
+  eager: true,
+}) as Record<string, string>;
+const source = sources[`../content/docs/${defaultLocale}/index.mdoc`];
+if (!source) {
+  throw new Error(`Source file for ${entry.filePath} was not found.`);
+}
+const match = source.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+if (!match) {
+  throw new Error(`No frontmatter found in ${entry.filePath}.`);
+}
+const canonical = new URL(`/${defaultLocale}/`, Astro.site).href;
+const frontmatter = {
+  ...parseYaml(match[1]),
+  // Starlight sets the canonical from the request URL; the page-level head
+  // entry replaces it so /en/ stays the indexed URL.
+  head: [{ tag: 'link', attrs: { rel: 'canonical', href: canonical } }],
+  // <StarlightPage> has no edit link unless given one; mirror the docs route.
+  editUrl: new URL(entry.filePath, starlightConfig.editLink.baseUrl).href,
+};
+---
+
+<StarlightPage frontmatter={frontmatter} headings={headings}>
+  <Content />
+</StarlightPage>

@@ -1,98 +1,36 @@
-<svg class="root w-full h-auto" width="500" height="400" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Like a one-time secret, this page has vanished." focusable="false">
+<svg class="root" viewBox="0 0 560 360" width="560" height="360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A note reading 404, its last digit burning away." focusable="false" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYToxNDMyZjkxYi05ZGFjLTQ0ZmYtYjk4ZC1iNmIxOTNkMDI4YjMAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaByUJNKdwp6LQrC4EGRPemwAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDowNjc3OGU4MC1mOGRmLTRmNDctODJkYy05NWI4MjRhODg5MWVscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNotXOHEVia0Kt7WoXwiogIRgAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggzCH4Vq2R2Xw6BalSYsiCQpa4S0J0OHW4kBI5FR90aISkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaCz4vr/9zc5NH6mgmFZiqWcAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCBpOis4CyCzuDuZPHoMU8ZCCLNgS9v7znz27LBTi2g9SmRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBj+Zmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjE0MzJmOTFiLTlkYWMtNDRmZi1iOThkLWI2YjE5M2QwMjhiMy9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjU0YTc4ZWVmLTY3MDAtNGY1NS1iZWIyLWE0N2Y0NWZmNDViMXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCDMIfhWrZHZfDoFqVJiyIJClrhLQnQ4dbiQEjkVH3RohKJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggslOPgk3O5dtnE52l7pEhN4PoVcOuXZtA6oiSt+lGDjWiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgg0G9DHOq1rDwo57GazT9PCZaxmJVHqO4iMA4wOpNudoR0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQEVLqjufo+OybqEv1DTnnrFbCdpjdSoymFYKYA+CLKQVOT0AroqdMPtwEWCqYHKv+jN1WccVETadn/8o+nh7k4I=</c2pa:manifest></metadata>
   <style>
-    .root{
-      --ink:#631507;--ink-soft:#85200c;--brand:#dc4a22;--brand-2:#f0623a;
-      --cream:#f7dec3;--peach:#f0c39e;--card:#fffdf9;--env:#f3d9bf;
-      --accent:#23b5dd;--muted:#a08b7e;--line:#d9b9a0;
-    }
-    @media (prefers-color-scheme:dark){
-      .root{
-        --ink:#f7dec3;--ink-soft:#f0c39e;--brand:#f1623b;--brand-2:#f8855f;
-        --cream:#2f2520;--peach:#5a3a2c;--card:#322822;--env:#3a2c24;
-        --accent:#3cc6ec;--muted:#9b8a7e;--line:#574236;
-      }
-    }
-    /* Bridge to Starlight's manual theme toggle (overrides OS preference when
-       the SVG is inlined in the page). data-theme is always set concretely by
-       Starlight, so these win over the prefers-color-scheme fallback above. */
-    :root[data-theme='light'] .root,
-    .root.force-light{
-      --ink:#631507;--ink-soft:#85200c;--brand:#dc4a22;--brand-2:#f0623a;
-      --cream:#f7dec3;--peach:#f0c39e;--card:#fffdf9;--env:#f3d9bf;
-      --accent:#23b5dd;--muted:#a08b7e;--line:#d9b9a0;
-    }
-    :root[data-theme='dark'] .root,
-    .root.force-dark{
-      --ink:#f7dec3;--ink-soft:#f0c39e;--brand:#f1623b;--brand-2:#f8855f;
-      --cream:#2f2520;--peach:#5a3a2c;--card:#322822;--env:#3a2c24;
-      --accent:#3cc6ec;--muted:#9b8a7e;--line:#574236;
-    }
-    @keyframes ots-pulse{0%,100%{opacity:.45}50%{opacity:.85}}
-    @keyframes ots-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-    @keyframes ots-rise{0%{transform:translateY(0) scale(1);opacity:.9}100%{transform:translateY(-32px) scale(.35);opacity:0}}
-    .pulse{animation:ots-pulse 2.6s infinite ease-in-out}
-    .float{animation:ots-float 5s infinite ease-in-out}
-    .ember{animation:ots-rise 2.8s infinite ease-out}
-    @media (prefers-reduced-motion:reduce){.pulse,.float,.ember{animation:none}}
+    .root{--ink:#631507;--ink-soft:#85200c;--brand:#dc4a22;--brand-2:#f0623a;--glow:#ffb08a;
+      --paper:#fffdf9;--paper-edge:#e2ddd8;--line:#d9b9a0;--line-dark:#2a1a12;--ash:#b8b2ac;--spark:#23b5dd;--panel:#f7dec3}
+    @media (prefers-color-scheme:dark){.root{--ink:#f7dec3;--ink-soft:#f0c39e;--brand:#f1623b;--brand-2:#f8855f;--glow:#ffb08a;
+      --paper:#322822;--paper-edge:#4a3a30;--line:#574236;--line-dark:#f7dec3;--ash:#7d746e;--spark:#3cc6ec;--panel:#2f2520}}
+    :root[data-theme='light'] .root,.root.force-light{--ink:#631507;--ink-soft:#85200c;--brand:#dc4a22;--brand-2:#f0623a;--glow:#ffb08a;
+      --paper:#fffdf9;--paper-edge:#e2ddd8;--line:#d9b9a0;--line-dark:#2a1a12;--ash:#b8b2ac;--spark:#23b5dd;--panel:#f7dec3}
+    :root[data-theme='dark'] .root,.root.force-dark{--ink:#f7dec3;--ink-soft:#f0c39e;--brand:#f1623b;--brand-2:#f8855f;--glow:#ffb08a;
+      --paper:#322822;--paper-edge:#4a3a30;--line:#574236;--line-dark:#f7dec3;--ash:#7d746e;--spark:#3cc6ec;--panel:#2f2520}
+    @media (prefers-reduced-motion:reduce){.root *{animation:none!important}}
+
+    @keyframes rise{0%{transform:translate(0,0);opacity:0}15%,70%{opacity:1}100%{transform:translate(22px,-34px);opacity:0}}
+    .ember,.ash{transform-box:fill-box;transform-origin:center;animation:rise var(--d,7s) ease-out var(--l,0s) infinite}
+    .ember{filter:drop-shadow(0 0 3px var(--brand))}
   </style>
-
-  <!-- soft panel -->
-  <rect x="38" y="34" width="424" height="332" rx="18" fill="var(--peach)" opacity="0.10"/>
-
-  <!-- 404 -->
-  <text x="250" y="108" text-anchor="middle" font-family="'Zilla Slab',Georgia,serif" font-size="82" font-weight="700" fill="var(--brand)" letter-spacing="3">404</text>
-
-  <!-- floating question marks -->
-  <text x="356" y="176" font-family="'Zilla Slab',Georgia,serif" font-size="34" fill="var(--brand)" class="pulse">?</text>
-  <text x="386" y="248" font-family="'Zilla Slab',Georgia,serif" font-size="22" fill="var(--brand)" class="pulse" style="animation-delay:.9s">?</text>
-
-  <!-- envelope with a vanishing secret -->
-  <g transform="translate(165,150)">
-    <g class="float">
-      <!-- opened flap behind the note -->
-      <path d="M10 80 L81 34 L152 80 Z" fill="var(--env)" stroke="var(--ink-soft)" stroke-width="2" opacity="0.85" stroke-linejoin="round"/>
-
-      <!-- the note (secret) with a burnt top edge -->
-      <path d="M32 86 L32 26 Q39 16 46 24 Q53 32 60 23 Q67 15 74 24 Q81 33 88 23 Q95 15 102 24 Q109 32 116 24 Q123 16 130 24 L130 86 Z"
-            fill="var(--card)" stroke="var(--ink-soft)" stroke-width="2.5" stroke-linejoin="round"/>
-      <!-- ember glow along the burnt edge -->
-      <path d="M32 26 Q39 16 46 24 Q53 32 60 23 Q67 15 74 24 Q81 33 88 23 Q95 15 102 24 Q109 32 116 24 Q123 16 130 24"
-            fill="none" stroke="var(--brand)" stroke-width="3" stroke-linecap="round"/>
-      <!-- vanishing lines of text -->
-      <rect x="46" y="44" width="70" height="6" rx="3" fill="var(--line)" opacity="0.7"/>
-      <rect x="46" y="57" width="54" height="6" rx="3" fill="var(--line)" opacity="0.55"/>
-      <rect x="46" y="70" width="62" height="6" rx="3" fill="var(--line)" opacity="0.4"/>
-
-      <!-- envelope body (front) -->
-      <rect x="6" y="78" width="150" height="70" rx="8" fill="var(--env)" stroke="var(--ink-soft)" stroke-width="2.5"/>
-      <path d="M8 82 L81 116 L154 82" fill="none" stroke="var(--ink-soft)" stroke-width="1.8" opacity="0.5"/>
-
-      <!-- wax-seal padlock -->
-      <g transform="translate(70,112)">
-        <rect x="0" y="8" width="22" height="17" rx="3.5" fill="var(--brand)"/>
-        <path d="M4 8 V4 a7 7 0 0 1 14 0 V8" fill="none" stroke="var(--brand)" stroke-width="3"/>
-        <circle cx="11" cy="15" r="2.4" fill="var(--cream)"/>
-        <rect x="9.8" y="15" width="2.4" height="6" rx="1.2" fill="var(--cream)"/>
+  <defs>
+    <linearGradient id="a-char" x1="0" x2="1"><stop offset=".68" stop-color="var(--line-dark)" stop-opacity="0"/><stop offset="1" stop-color="var(--line-dark)" stop-opacity=".6"/></linearGradient>
+    <filter id="a-glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="5"/></filter>
+    <clipPath id="a-clip"><path d="M0 10 Q0 0 10 0 L220.5 0 L217.0 11 L227.0 22 L215.4 33 L224.7 44 L221.3 55 L215.2 66 L224.1 77 L214.7 88 L222.7 99 L215.4 110 L215.8 121 L222.5 132 L230.5 143 L216.5 154 L218.5 165 L226.5 176 L233.0 187 L225.5 198 L221.9 209 L233.5 220 L10 220 Q0 220 0 210 Z"/></clipPath>
+  </defs>
+  <g transform="translate(140 66) rotate(-4 140 110)">
+    <path d="M0 10 Q0 0 10 0 L220.5 0 L217.0 11 L227.0 22 L215.4 33 L224.7 44 L221.3 55 L215.2 66 L224.1 77 L214.7 88 L222.7 99 L215.4 110 L215.8 121 L222.5 132 L230.5 143 L216.5 154 L218.5 165 L226.5 176 L233.0 187 L225.5 198 L221.9 209 L233.5 220 L10 220 Q0 220 0 210 Z" fill="var(--paper)" stroke="var(--paper-edge)" stroke-width="1.5"/>
+    <g clip-path="url(#a-clip)">
+      <g stroke="var(--line)" stroke-width="7" stroke-linecap="round">
+        <line x1="28" y1="38" x2="150" y2="38"/><line x1="28" y1="60" x2="104" y2="60"/>
+        <line x1="28" y1="166" x2="170" y2="166"/><line x1="28" y1="188" x2="118" y2="188"/>
       </g>
-
-      <!-- embers drifting up from the burnt edge -->
-      <circle class="ember" cx="56" cy="18" r="3" fill="var(--brand)"/>
-      <circle class="ember" cx="78" cy="14" r="2.4" fill="var(--brand-2)" style="animation-delay:.6s"/>
-      <circle class="ember" cx="98" cy="16" r="3.4" fill="var(--brand)" style="animation-delay:1.1s"/>
-      <circle class="ember" cx="118" cy="13" r="2" fill="var(--brand-2)" style="animation-delay:1.6s"/>
-      <circle class="ember" cx="135" cy="18" r="2.8" fill="var(--brand)" style="animation-delay:2.1s"/>
+      <text x="40" y="135" font-family="'Zilla Slab',Georgia,'Times New Roman',serif" font-size="96" font-weight="700" fill="var(--brand)" letter-spacing="4">404</text>
     </g>
+    <path d="M0 10 Q0 0 10 0 L220.5 0 L217.0 11 L227.0 22 L215.4 33 L224.7 44 L221.3 55 L215.2 66 L224.1 77 L214.7 88 L222.7 99 L215.4 110 L215.8 121 L222.5 132 L230.5 143 L216.5 154 L218.5 165 L226.5 176 L233.0 187 L225.5 198 L221.9 209 L233.5 220 L10 220 Q0 220 0 210 Z" fill="url(#a-char)"/>
+    <path d="M220.5 0 L217.0 11 L227.0 22 L215.4 33 L224.7 44 L221.3 55 L215.2 66 L224.1 77 L214.7 88 L222.7 99 L215.4 110 L215.8 121 L222.5 132 L230.5 143 L216.5 154 L218.5 165 L226.5 176 L233.0 187 L225.5 198 L221.9 209 L233.5 220" fill="none" stroke="var(--brand)" stroke-width="12" stroke-linejoin="round" filter="url(#a-glow)" opacity=".8"/>
+    <path d="M220.5 0 L217.0 11 L227.0 22 L215.4 33 L224.7 44 L221.3 55 L215.2 66 L224.1 77 L214.7 88 L222.7 99 L215.4 110 L215.8 121 L222.5 132 L230.5 143 L216.5 154 L218.5 165 L226.5 176 L233.0 187 L225.5 198 L221.9 209 L233.5 220" fill="none" stroke="var(--glow)" stroke-width="2.5" stroke-linejoin="round"/>
   </g>
-
-  <!-- magnifying glass -->
-  <g class="float" style="animation-delay:.4s">
-    <circle cx="96" cy="306" r="25" fill="none" stroke="var(--accent)" stroke-width="3.5"/>
-    <line x1="114" y1="324" x2="134" y2="346" stroke="var(--accent)" stroke-width="5" stroke-linecap="round"/>
-  </g>
-
-  <!-- message -->
-  <text x="250" y="350" text-anchor="middle" font-family="'Zilla Slab',Georgia,serif" font-size="17" fill="var(--ink)">Like a one-time secret, this page has vanished.</text>
-
-  <!-- byline -->
-  <text x="480" y="390" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="10" fill="var(--muted)">Crafted by Claude Opus 4.8 with minimal supervision</text>
+  <g transform="translate(140 66)"><circle class="ash" cx="240" cy="185" r="2.2" fill="var(--ash)" fill-opacity="0.52" style="--d:4.6s;--l:-0.9s"/><circle class="ember" cx="253" cy="125" r="3.2" fill="var(--brand)" fill-opacity="0.38" style="--d:5.5s;--l:-4.4s"/><circle class="ember" cx="255" cy="146" r="2.6" fill="var(--brand)" fill-opacity="0.60" style="--d:5.3s;--l:-4.7s"/><circle class="ash" cx="311" cy="150" r="2.1" fill="var(--ash)" fill-opacity="0.83" style="--d:6.3s;--l:-4.2s"/><circle class="ember" cx="263" cy="211" r="1.7" fill="var(--brand)" fill-opacity="0.43" style="--d:5.7s;--l:-6.1s"/><circle class="ember" cx="240" cy="144" r="3.5" fill="var(--brand)" fill-opacity="0.52" style="--d:6.3s;--l:-7.0s"/><circle class="ember" cx="292" cy="125" r="2.7" fill="var(--brand)" fill-opacity="0.61" style="--d:7.4s;--l:-7.6s"/><circle class="ember" cx="242" cy="151" r="3.2" fill="var(--brand)" fill-opacity="0.51" style="--d:8.0s;--l:-6.6s"/><circle class="ash" cx="299" cy="5" r="2.7" fill="var(--ash)" fill-opacity="0.38" style="--d:4.7s;--l:-0.9s"/><circle class="ember" cx="248" cy="53" r="2.5" fill="var(--brand)" fill-opacity="0.60" style="--d:7.5s;--l:-0.6s"/><circle class="ash" cx="319" cy="176" r="3.8" fill="var(--ash)" fill-opacity="0.55" style="--d:5.1s;--l:-3.3s"/><circle class="ember" cx="326" cy="32" r="1.9" fill="var(--brand)" fill-opacity="0.62" style="--d:4.9s;--l:-1.9s"/><circle class="ember" cx="261" cy="1" r="2.6" fill="var(--brand)" fill-opacity="0.87" style="--d:5.5s;--l:-4.5s"/><circle class="ash" cx="284" cy="133" r="3.3" fill="var(--ash)" fill-opacity="0.78" style="--d:4.2s;--l:-7.2s"/><circle class="ember" cx="311" cy="84" r="2.5" fill="var(--brand)" fill-opacity="0.38" style="--d:4.4s;--l:-5.1s"/><circle class="ember" cx="256" cy="35" r="2.4" fill="var(--brand)" fill-opacity="0.43" style="--d:4.2s;--l:-0.0s"/><circle class="ember" cx="270" cy="5" r="3.8" fill="var(--brand)" fill-opacity="0.49" style="--d:6.5s;--l:-1.2s"/><circle class="ember" cx="270" cy="26" r="3.8" fill="var(--brand)" fill-opacity="0.62" style="--d:8.0s;--l:-3.7s"/><circle class="ash" cx="246" cy="74" r="2.1" fill="var(--ash)" fill-opacity="0.36" style="--d:7.3s;--l:-1.3s"/><circle class="ash" cx="286" cy="32" r="2.9" fill="var(--ash)" fill-opacity="0.89" style="--d:4.1s;--l:-4.2s"/><circle class="ash" cx="301" cy="56" r="2.4" fill="var(--ash)" fill-opacity="0.64" style="--d:4.7s;--l:-6.2s"/><circle class="ash" cx="267" cy="48" r="3.7" fill="var(--ash)" fill-opacity="0.79" style="--d:7.9s;--l:-6.8s"/><circle class="ember" cx="306" cy="49" r="2.8" fill="var(--brand)" fill-opacity="0.37" style="--d:5.4s;--l:-0.2s"/><circle class="ash" cx="260" cy="149" r="4.1" fill="var(--ash)" fill-opacity="0.89" style="--d:5.8s;--l:-7.5s"/><circle class="ash" cx="270" cy="47" r="2.0" fill="var(--ash)" fill-opacity="0.69" style="--d:4.8s;--l:-1.6s"/><circle class="ash" cx="315" cy="103" r="3.2" fill="var(--ash)" fill-opacity="0.71" style="--d:7.2s;--l:-0.7s"/><circle class="ash" cx="310" cy="161" r="2.7" fill="var(--ash)" fill-opacity="0.53" style="--d:4.7s;--l:-6.3s"/><circle class="ember" cx="327" cy="85" r="2.5" fill="var(--brand)" fill-opacity="0.44" style="--d:7.8s;--l:-5.8s"/><circle class="ember" cx="250" cy="195" r="3.7" fill="var(--brand)" fill-opacity="0.89" style="--d:4.6s;--l:-6.6s"/><circle class="ember" cx="269" cy="118" r="1.8" fill="var(--brand)" fill-opacity="0.71" style="--d:4.1s;--l:-7.8s"/></g>
 </svg>

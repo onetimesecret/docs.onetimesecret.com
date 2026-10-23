@@ -19,7 +19,7 @@
 -->
 
 <script setup lang="ts">
-  import { computed, nextTick, onMounted, reactive, ref, watch } from 'vue';
+  import { computed, nextTick, onBeforeUnmount, onMounted, reactive, ref, watch } from 'vue';
   import { changedLines, splitLines } from './diff';
   import { GROUPS, OPTIONS, type GroupSpec, type OptionSpec } from './presets';
   import {
@@ -33,6 +33,8 @@
     type Selections,
   } from './generate';
 
+  const ready = ref(false);
+  const updateMessage = ref('Ready. Files update as you change options.');
   const selections = reactive<Selections>(defaultSelections());
 
   const groups = GROUPS.map((group) => ({
@@ -162,11 +164,14 @@
     // When a change leaves a dependent option's requirement unmet (switching
     // back to Simple mode with SSO on), reset it rather than leaving a stale
     // value for generate() to warn about. A stale value seeded from a shared
-    // link is left alone, so that link still gets its warning.
+    // link is left alone, so that link still gets its warning. The source is
+    // a string rather than the array: an array is a fresh value on every read,
+    // so Vue would run the callback on every change instead of only when the
+    // unmet set itself changes.
     watch(
-      () => OPTIONS.filter((opt) => !requirementMet(opt)).map((opt) => opt.key),
+      () => OPTIONS.filter((opt) => !requirementMet(opt)).map((opt) => opt.key).join(' '),
       (unmet) => {
-        for (const key of unmet) {
+        for (const key of unmet.split(' ').filter(Boolean)) {
           const opt = OPTIONS.find((o) => o.key === key);
           if (opt) selections[key] = defaultFor(opt);
         }
@@ -179,12 +184,18 @@
         changed[key] = changedLines(prev[key], next[key]);
         revision[key]++;
       }
-      if (touched.length) nextTick(() => revealChange(touched));
+      if (touched.length) {
+        updateMessage.value = `Updated ${files.filter((f) => touched.includes(f.key)).map((f) => f.name).join(', ')}.`;
+        nextTick(() => revealChange(touched));
+      }
     });
+    ready.value = true;
   });
 
   // ── Copy / download ─────────────────────────────────────────────────
   let copiedTimer: ReturnType<typeof setTimeout> | undefined;
+  // A copy right before navigation would otherwise write to a torn-down ref.
+  onBeforeUnmount(() => clearTimeout(copiedTimer));
   async function copyFile(file: FileMeta) {
     try {
       await navigator.clipboard.writeText(contents.value[file.key]);
@@ -192,7 +203,7 @@
       clearTimeout(copiedTimer);
       copiedTimer = setTimeout(() => (copiedKey.value = null), 1500);
     } catch {
-      /* clipboard unavailable; the user can still select the text */
+      updateMessage.value = `Could not copy ${file.name}. Select the text or use Download instead.`;
     }
   }
   function downloadFile(file: FileMeta) {
@@ -210,6 +221,22 @@
 
 <template>
   <div class="cg not-content">
+    <!-- The link below is /en/ on purpose while every other link in the tool is
+         locale-relative: the generator page exists in English only, with the
+         other locales redirected to it (configGeneratorRedirects in
+         config/redirects.mjs), so there is no locale to make it relative to. -->
+    <p v-if="!ready" class="cg-loading" role="status">
+      The interactive generator has not loaded yet. If this message stays visible,
+      reload the page or use the <a href="/en/self-hosting/configuration/">configuration reference</a>.
+      The controls and exports will become available when it is ready.
+    </p>
+    <div class="cg-toolbar">
+      <nav class="cg-shortcuts" aria-label="Configuration generator shortcuts">
+        <a href="#generated-files">View generated files</a>
+        <a href="#apply-configuration">How to apply them</a>
+      </nav>
+      <p v-if="ready" class="cg-status" role="status" aria-live="polite">{{ updateMessage }}</p>
+    </div>
     <div class="cg-grid">
       <!-- ── Options ── -->
       <form
@@ -219,7 +246,8 @@
         <fieldset
           v-for="group in groups"
           :key="group.key"
-          class="cg-group">
+          class="cg-group"
+          :disabled="!ready">
           <legend class="cg-group-title">{{ group.title }}</legend>
           <p
             v-if="group.requires && !groupRequirementMet(group)"
@@ -244,6 +272,9 @@
                   :id="`cg-${opt.key}-desc`"
                   class="cg-option-desc">
                   {{ opt.description }}
+                </p>
+                <p v-if="opt.help" class="cg-option-desc">
+                  <a :href="opt.help.href">{{ opt.help.label }}</a>
                 </p>
                 <p
                   v-if="ownHint(opt, group)"
@@ -283,9 +314,16 @@
 
       <!-- ── Output ── -->
       <section
+        id="generated-files"
+        tabindex="-1"
         ref="outputEl"
         class="cg-output"
-        aria-label="Generated files">
+        aria-labelledby="cg-output-title">
+        <!-- Visually hidden: the file names below are the visible titles. It
+             keeps the outline in order (page title, this, one h3 per file, then
+             the host page's own h2) rather than adding a second family of h2s
+             beside the host page's. -->
+        <h2 id="cg-output-title" class="cg-sr-only">Generated files</h2>
         <ul
           v-if="result.warnings.length"
           class="cg-warnings">
@@ -304,7 +342,7 @@
             :data-file="file.key"
             :aria-labelledby="`cg-file-${file.key}`">
             <div class="cg-file-header">
-              <h2
+              <h3
                 :id="`cg-file-${file.key}`"
                 class="cg-file-name">
                 <span
@@ -312,11 +350,12 @@
                   class="cg-file-dir"
                   >{{ file.dir }}</span
                 >{{ file.name }}
-              </h2>
+              </h3>
               <div class="cg-actions">
                 <button
                   type="button"
                   class="cg-btn"
+                  :disabled="!ready"
                   :aria-label="`Copy ${file.name}`"
                   @click="copyFile(file)">
                   {{ copiedKey === file.key ? 'Copied' : 'Copy' }}
@@ -324,6 +363,7 @@
                 <button
                   type="button"
                   class="cg-btn"
+                  :disabled="!ready"
                   :aria-label="`Download ${file.name}`"
                   @click="downloadFile(file)">
                   Download
@@ -347,10 +387,9 @@
         >
 
         <p class="cg-note">
-          The <code>.env</code> file lists the secrets and connection details
-          your selections need, left blank: fill them in on the server, never
-          in a shared link. Your selections are kept in the page URL, so you
-          can bookmark or share a setup.
+          Fill in the blank values in <code>.env</code> on your server and keep
+          the completed file private. The page URL saves your option choices,
+          so you can bookmark it or share a setup without credentials.
         </p>
       </section>
     </div>
@@ -363,6 +402,34 @@
   .cg {
     container-type: inline-size;
     margin-top: 2rem;
+  }
+  .cg-loading {
+    margin: 0 0 1rem;
+    font-size: var(--sl-text-sm);
+  }
+  .cg-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-block: 0.75rem;
+    border-block: 1px solid var(--sl-color-hairline-light);
+    font-size: var(--sl-text-sm);
+    line-height: 1.5;
+  }
+  .cg-shortcuts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+  }
+  .cg-status {
+    margin: 0;
+    color: var(--sl-color-gray-3);
+  }
+  #generated-files {
+    scroll-margin-top: calc(var(--sl-nav-height) + 1rem);
   }
   .cg-grid {
     display: grid;
@@ -633,10 +700,14 @@
     line-height: 1.6;
     color: var(--sl-color-gray-3);
   }
+  /* Inline code in the note sits on the tinted inline-code background, which
+     drops muted gray-3 ink to 4.16:1 in light mode. Step the code up to body
+     ink (9.10:1) — the note prose itself stays muted on the plain background. */
   .cg-note code {
     padding: 0.0625rem 0.3125rem;
     border-radius: 0.25rem;
     background: var(--sl-color-bg-inline-code);
+    color: var(--sl-color-text);
     font-family: var(--__sl-font-mono);
     font-size: 0.875em;
   }

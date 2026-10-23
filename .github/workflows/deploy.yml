@@ -27,6 +27,7 @@
 #     SITE_URL                - Canonical site origin
 #     SHOW_STAGING_WARNING    - "true" on staging to show the prerelease banner
 #     SHOW_STAGING_WATERMARK  - "true" on staging to show the prerelease watermark
+#     SHOW_TEXTPROV_TOGGLE    - "false" to hide the TextProv reader toggle (shown when unset)
 ---
 name: Build and Deploy to BunnyCDN
 
@@ -50,18 +51,18 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86 # v6.0.10
         with:
-          version: 11.17.0
+          version: 12.14.0
           run_install: false
 
       - name: Setup Node.js
-        uses: actions/setup-node@v7
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
-          node-version: 24.18.1
+          node-version: 24.22.0
           cache: pnpm
 
       - name: Install dependencies
@@ -76,6 +77,8 @@ jobs:
           # SITE_URL so the canonical strategy is unaffected.
           SHOW_STAGING_WARNING: ${{ vars.SHOW_STAGING_WARNING }}
           SHOW_STAGING_WATERMARK: ${{ vars.SHOW_STAGING_WATERMARK }}
+          # TextProv reader toggle; see showTextProvToggle in config/textprov.mjs.
+          SHOW_TEXTPROV_TOGGLE: ${{ vars.SHOW_TEXTPROV_TOGGLE }}
 
       - name: Upload dist/ to Bunny Edge Storage
         env:

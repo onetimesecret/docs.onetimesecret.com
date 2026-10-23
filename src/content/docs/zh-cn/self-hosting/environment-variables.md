@@ -1,8 +1,7 @@
 ---
 title: 环境变量参考
 description: Onetime Secret 环境变量的参考
-sidebar:
-  order: 5
+
 ---
 
 本指南涵盖了 Onetime Secret v0.22.4+ 中可用的所有环境变量。
@@ -96,7 +95,9 @@ SMTP_AUTH=login                      # SMTP 身份验证方法（login、plain �
 
 ```bash
 DEFAULT_TTL=604800                   # 默认机密内容过期时间（以秒为单位）（604800 = 7 天）
-TTL_OPTIONS=300,1800,3600,86400      # 呈现给用户的可用 TTL 选项，逗号分隔（秒）
+# 呈现给用户的可用 TTL 选项：以空格分隔的秒数。
+# 请勿使用逗号——使用逗号分隔的列表会被静默截断为第一个值。
+TTL_OPTIONS="300 1800 3600 86400"
 DEFAULT_DOMAIN=                      # 机密内容链接的默认域（如果为空，则使用 HOST）
 ALLOW_NIL_GLOBAL_SECRET=false        # 允许在缺少 SECRET 密钥的情况下操作（紧急恢复）
 ```
@@ -140,7 +141,7 @@ SENTRY_DSN=
 SENTRY_DSN_BACKEND=
 SENTRY_DSN_FRONTEND=
 SENTRY_LOG_ERRORS=true
-SENTRY_MAX_BREADCRUMBS=50
-SENTRY_SAMPLE_RATE=1.0
+SENTRY_MAX_BREADCRUMBS=5
+SENTRY_SAMPLE_RATE=0.10
 SENTRY_VUE_TRACK_COMPONENTS=true
 ```

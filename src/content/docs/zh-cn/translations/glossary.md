@@ -7,7 +7,7 @@ description: Onetime Secret 关键术语、界面元素和技术词汇的中文�
 
 本词汇表为关键术语提供标准化的中文翻译，以确保 Onetime Secret 应用程序的一致性。
 
-**重要提示：** 本词汇表遵循[语言注释](/zh-cn/translations/language-notes)中记录的中文特定翻译原则。关键原则是避免使用"秘密"一词的强烈情感内涵，转而使用更具功能性的术语。
+**重要提示：** 本词汇表遵循语言注释（项目仓库中的 `src/content/docs/zh-cn/translations/_language-notes.md`）中记录的中文特定翻译原则。关键原则是避免使用"秘密"一词的强烈情感内涵，转而使用更具功能性的术语。
 
 ## "Secret"术语分层体系
 
@@ -161,7 +161,7 @@ description: Onetime Secret 关键术语、界面元素和技术词汇的中文�
 
 ### 关于"秘密"（Secret）一词的翻译
 
-根据我们的[语言注释](/zh-cn/translations/language-notes)，中文翻译有意避免使用"秘密"一词，原因如下：
+根据我们的语言注释（项目仓库中的 `_language-notes.md`），中文翻译有意避免使用"秘密"一词，原因如下：
 
 - "秘密"在中文中带有强烈的个人、隐藏或情感色彩的含义
 - 它暗示刻意隐瞒，而不是功能性安全特性
@@ -211,7 +211,7 @@ description: Onetime Secret 关键术语、界面元素和技术词汇的中文�
 ## 参考资料
 
 有关中文翻译的详细指导和理由，请参阅：
-- [中文语言注释](/zh-cn/translations/language-notes) - 翻译决策和原则的详细说明
+- 中文语言注释 - 翻译决策和原则的详细说明，见项目仓库中的 `src/content/docs/zh-cn/translations/_language-notes.md`
 - [翻译样式指南](/zh-cn/translations/guide) - 一般样式和语气指南
 
 ---

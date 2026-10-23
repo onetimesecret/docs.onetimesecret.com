@@ -1,0 +1,123 @@
+---
+/**
+ * Mobile section card: the four section links from nav-links.ts plus the
+ * theme and language selects. Rendered in two places, both below Starlight's
+ * 50rem breakpoint where the header's own section links are hidden:
+ *
+ * - Sidebar.astro, at the top of the full drawer on pages with a sidebar.
+ * - Header.astro, inside a short drawer on sidebar-less pages (template:
+ *   splash, i.e. the homepage) where Starlight renders no drawer at all.
+ *
+ * Callers own the responsive gate; this component renders unconditionally.
+ */
+import LanguageSelect from '@astrojs/starlight/components/LanguageSelect.astro';
+import ThemeSelect from '@astrojs/starlight/components/ThemeSelect.astro';
+import { Icon } from '@astrojs/starlight/components';
+import { getNavLinks, isCurrentSection } from './nav-links';
+
+const links = getNavLinks(Astro.currentLocale);
+const pathname = Astro.url.pathname;
+---
+
+<div class="mobile-sections">
+	<nav class="section-card" aria-label={Astro.locals.t('nav.ariaLabel.sections')}>
+		<ul role="list">
+			{
+				links.map((link) => {
+					const current = isCurrentSection(link, pathname);
+					return (
+						<li>
+							<a
+								href={link.href}
+								aria-label={Astro.locals.t(link.ariaKey)}
+								aria-current={current ? 'page' : undefined}
+								target={link.external ? '_blank' : undefined}
+								rel={link.external ? 'noopener noreferrer' : undefined}
+							>
+								<Icon name={link.icon} class="icon" />
+								<span>{Astro.locals.t(link.labelKey)}</span>
+								{link.external && <Icon name="external" class="external" />}
+							</a>
+						</li>
+					);
+				})
+			}
+		</ul>
+	</nav>
+	<div class="preferences sl-flex">
+		<ThemeSelect />
+		<LanguageSelect />
+	</div>
+</div>
+
+<style>
+	.mobile-sections {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+
+	.section-card {
+		border: 1px solid var(--sl-color-hairline-light);
+		border-radius: 0.5rem;
+		background-color: var(--sl-color-bg-sidebar);
+		padding: 0.25rem;
+	}
+
+	.section-card ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.section-card a {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		padding: 0.625rem 0.75rem;
+		border-radius: 0.375rem;
+		color: var(--sl-color-text);
+		font-size: var(--sl-text-base);
+		font-weight: 600;
+		line-height: 1.4;
+		text-decoration: none;
+	}
+
+	.section-card a:hover {
+		color: var(--sl-color-white);
+		background-color: var(--sl-color-gray-6);
+	}
+
+	/* Same treatment Starlight gives the current sidebar link: accent-low
+	   background with accent-text ink clears AA in both themes. */
+	.section-card a[aria-current='page'] {
+		color: var(--sl-color-text-invert);
+		background-color: var(--sl-color-text-accent);
+	}
+
+	.section-card .icon {
+		flex-shrink: 0;
+		font-size: 1.25rem;
+		color: var(--sl-color-gray-2);
+	}
+
+	.section-card a[aria-current='page'] .icon,
+	.section-card a:hover .icon {
+		color: inherit;
+	}
+
+	.section-card .external {
+		margin-inline-start: auto;
+		font-size: 0.875rem;
+		opacity: 0.6;
+	}
+
+	.preferences {
+		justify-content: flex-end;
+		flex-wrap: wrap;
+		column-gap: 1rem;
+		row-gap: 0.25rem;
+		padding-bottom: 0.75rem;
+		border-bottom: 1px solid var(--sl-color-hairline-light);
+	}
+</style>

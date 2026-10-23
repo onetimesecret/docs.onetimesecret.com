@@ -132,7 +132,9 @@ export function requirementsMet(opt: OptionSpec, selections: Selections): boolea
 function enforceDependencies(selections: Selections): string[] {
   const warnings: string[] = [];
   for (const opt of OPTIONS) {
-    if (requirementsMet(opt, selections)) continue;
+    // The presence check narrows opt.requires for the warning below;
+    // requirementsMet() returns a plain boolean.
+    if (!opt.requires || requirementsMet(opt, selections)) continue;
     if (selections[opt.key] !== defaultFor(opt)) {
       const req = Object.entries(opt.requires)
         .map(([k, v]) => `${k}: ${JSON.stringify(v)}`)
@@ -196,14 +198,18 @@ export function generate(rawSelections: Selections): GenerateResult {
 export function envSnippet(selections: Selections): string {
   const lines = [
     '# Secrets and connection details your selections need.',
-    '# Fill these in yourself. Never commit the values or paste',
-    '# them into a shared link. Feature toggles and modes live in',
-    '# config.yaml and auth.yaml, not here.',
+    '# Complete the blank values on your server and keep this file private.',
+    '# Most feature switches are in config.yaml and auth.yaml.',
     'SECRET=',
   ];
   const seen = new Set<string>(['SECRET']);
 
   for (const opt of OPTIONS) {
+    // The same gate generate() applies to the YAML: an option whose
+    // requirement is unmet has no effect, so it asks for no secrets either.
+    // Every gated option defaults off today, so this changes nothing yet; it
+    // keeps the two paths in agreement once one of them defaults on.
+    if (!requirementsMet(opt, selections)) continue;
     const value = selections[opt.key];
     for (const env of opt.env ?? []) {
       if (env.when !== undefined && env.when !== value) continue;
