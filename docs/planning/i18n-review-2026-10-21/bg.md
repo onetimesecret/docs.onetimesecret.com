@@ -180,7 +180,7 @@ All other quoted labels match the shipped bg app at 145c1e7cfa:
 
 ## English source and general issues
 
-- [new] Process (likely affects every locale): the bg agents took shipped UI strings from `/Users/d/Projects/run/onetimesecret-docker/locales/content/bg/`. That bundle predates `web.branding.replace_logo`, `upload_favicon`, `web.domains.add.field_label`, `add.root_domain_label` and other keys that `$APP` (145c1e7cfa, the commit the English `sourceOfTruth` cites) now ships. Check branding.md and setup-guide.md label quotes in the other locales against `$APP`.
+- [new] Process (likely affects every locale): the bg agents took shipped UI strings from `$DOCKER/locales/content/bg/`. That bundle predates `web.branding.replace_logo`, `upload_favicon`, `web.domains.add.field_label`, `add.root_domain_label` and other keys that `$APP` (145c1e7cfa, the commit the English `sourceOfTruth` cites) now ships. Check branding.md and setup-guide.md label quotes in the other locales against `$APP`.
 - [new] bg app strings (app repo, not docs): `web.branding.favicon_modal_hint` bg = «Favicon», where the English is "ICO or PNG. Up to 256KB. Replaces the auto-fetched icon.". `web.branding.favicon_field_hint` bg = «ICO, PNG или SVG…», which adds SVG; the English and branding.md say ICO or PNG only.
 - [new] bg app SSO naming is split: «Единно влизане» (`web.domains.sso.title`, `signin.method_sso`) vs «Единично влизане (SSO)» (`web.auth.connections.section_title`). The docs consistently use «Единно влизане (SSO)».
 - [new] Sidebar bundle `src/content/i18n/bg.json` diverges from the re-synced bg page titles:
