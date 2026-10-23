@@ -49,7 +49,7 @@ pnpm test                    # Run Vitest once
 pnpm run check:nav           # Check sidebar targets and English label keys
 pnpm run check:orphans       # Check pages missing from navigation
 pnpm run check:frontmatter   # Check documentation frontmatter
-pnpm run check:locales       # Check locale directories against configuration
+pnpm run check:locales       # Check locale directories against configuration; warn on bundle key gaps
 pnpm run check:contrast      # Check colour contrast
 pnpm run check:types         # Type-check .ts sources (astro sync, then tsc)
 pnpm run check:links:malformed # Check malformed source links
@@ -116,7 +116,7 @@ English content is the source for translations. Translated trees can lag behind 
 
 ### Sidebar Translations
 
-Add new English sidebar keys to `src/content/i18n/en.json` only unless translations are part of the task. `buildTranslations` in `config/sidebar.mjs` omits missing locale values so Starlight falls back to the English label. Translation work fills in the other bundles later; `check:locales` checks locale configuration, not translation-key parity.
+Add new English sidebar keys to `src/content/i18n/en.json` only unless translations are part of the task. `buildTranslations` in `config/sidebar.mjs` omits missing locale values so Starlight falls back to the English label. Translation work fills in the other bundles later; `check:locales` lists the gaps as warnings and does not fail on them. `check:nav` fails when two entries in one menu share a label in any locale.
 
 Directory and bundle names use lowercase (`pt-br`, `zh-cn`), but sidebar translation overrides use Starlight's BCP-47 codes (`pt-BR`, `zh-CN`).
 

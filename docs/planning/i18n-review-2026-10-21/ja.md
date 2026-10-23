@@ -159,7 +159,7 @@ Labels checked and matching: ドメイン, 管理, 機能, ブランドを管理
 
 ## English source and general issues
 
-- [new] Process: the ja translators took "shipped" UI strings from `/Users/d/Projects/run/onetimesecret-docker/locales/content/ja` (2026-07-11). App commit 64a5a6e305 (2026-08-09) changed ja domain and branding strings after that. The docs `sourceOfTruth` cites app 145c1e7cfa. The label mismatches above follow from this, and other locales whose agents used the same bundle are likely to drift the same way.
+- [new] Process: the ja translators took "shipped" UI strings from `$DOCKER/locales/content/ja` (2026-07-11). App commit 64a5a6e305 (2026-08-09) changed ja domain and branding strings after that. The docs `sourceOfTruth` cites app 145c1e7cfa. The label mismatches above follow from this, and other locales whose agents used the same bundle are likely to drift the same way.
 - [new] src/content/i18n/ja.json has no entry for sidebar keys used by in-scope pages: `shareASecret`, `whatCustomDomainsDo`, `plansAndPricing`, `aboutSelfHosting`, `ourApproachToSecurity`, `whereYourDataLives`, `requestSecret`. The ja sidebar falls back to English for share, custom-domains, pricing, self-hosting, security and where-your-data-lives. Other bundles were not checked.
 - [new] App (not English docs): the receipt page shows the reveal state with two keys, web.STATUS.revealed in StatusBadge.vue and web.STATUS.received in TimelineDisplay.vue. In ja these render as 表示済み and 受信済み on the same page. Extends the known pl-2 item.
 - [known] api/index.mdoc passphrase "used to encrypt the value" vs share/index.md "access check, not the encryption key" (fr-2). ja reproduces both statements faithfully.

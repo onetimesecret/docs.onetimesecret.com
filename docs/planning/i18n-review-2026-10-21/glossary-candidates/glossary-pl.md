@@ -1,0 +1,17 @@
+GLOSSARY CANDIDATES (pl) — shard 1 (shard 2 running). Register ty/Twój.
+reveal (noun) → wyświetlenie; reveal (verb) → wyświetlić; Reveal instructions → Instrukcje wyświetlania; Before/After reveal → Przed wyświetleniem / Po wyświetleniu; receipt → potwierdzenie
+workspace → przestrzeń robocza; owner → właściciel; admin → administrator; promote / demote → awansować / zdegradować; transfer ownership → przeniesienie własności; membership → członkostwo; sole-owner guard → zabezpieczenie przed brakiem właściciela
+plan → plan; upgrade → ulepszyć plan; Secret Activity → Aktywność sekretów (logi audytu); Homepage / Incoming secrets → Sekrety na stronie głównej / Przychodzące sekrety; Per-domain sign-in configuration → Konfiguracja logowania dla poszczególnych domen; SSO → Jednokrotne logowanie (SSO)
+Brand UI: Marka / Dostarczanie; Aktualizuj; Zamień; Logo domeny; Zapisz/Usuń logo; Prześlij/Zapisz/Usuń favicon; Odśwież favicon z domeny; Corners → Styl narożników (Kwadratowe / Zaokrąglone / Mocno zaokrąglone); Font Family → Rodzina czcionek; Kolor marki; Prześlij logo; Zarządzaj marką; Funkcje; Zarządzaj; Domeny; Język
+secret lifetime → czas życia sekretu; encrypted in transit and at rest → szyfrowanie w trakcie przesyłania i w spoczynku; geo-fencing → geofencing; audit trails → ślady audytowe; rotate API keys → rotować klucze API
+release tag → tag wydania; issue tracker → system zgłaszania błędów; release notes → informacje o wydaniu; authentication mode → tryb uwierzytelniania; site-operator role → rola operatora witryny; self-hosted / self-hosting → loanwords
+recovery codes → kody odzyskiwania; credential → dane uwierzytelniające; revoke → unieważnić; Not signed in → Niezalogowany; Unlimited → Bez ograniczeń; No fixed limit → Bez stałego limitu
+--- shard 2 ---
+receipt link → link do potwierdzenia; receipt key → klucz potwierdzenia; reveal → ujawnić / ujawnienie (SPLIT: shard 1 wyświetlić / wyświetlenie, which matches shipped branding labels); Click to reveal → Kliknij, aby wyświetlić; statuses → Nowy / Podglądnięty / Ujawniono
+Stay on page → Pozostań na stronie; Expires in → Wygasa za; Generate a password → Wygeneruj hasło; organization → organizacja; member → członek
+self-hosted / Self-hosting → hostowany samodzielnie / Samodzielny hosting (SPLIT: shard 1 kept loanword self-hosting, "Przegląd self-hostingu")
+apex domain → domena apex; subdomain → subdomena; root domain → domena główna; ownership record → rekord własności; routing record → rekord routingu
+Domain UI (shipped): Domeny; Dodaj domenę; Domena niestandardowa; Zweryfikuj domenę; Status domeny; Adres docelowy; Rekord DNS; Status SSL; Odnowienie SSL; Ostatnio monitorowano; Ostatnia weryfikacja nie powiodła się; Domena zweryfikowana i aktywna; Aktywny. Own choices: Popularne subdomeny; Użyj mojej domeny głównej; Kontynuuj z
+Homepage and incoming secrets → Sekrety na stronie głównej i przychodzące sekrety; email sender → nadawca e-maili; sign-in settings → ustawienia logowania; feedback form → formularz opinii; support → pomoc techniczna; data residency → rezydencja danych; dedicated instance → instancja dedykowana
+FINAL-PASS: pl reveal (ujawnić vs wyświetlić) and self-hosting (loanword vs Samodzielny hosting) splits between shards.
+NORMALISED by orchestrator agent: reveal → wyświetlić / wyświetlenie / Wyświetlono everywhere; self-hosting → self-hosting (gen. self-hostingu), self-hosted / instancja self-hosted. Residual ujawni- forms are disclosure/expose senses only.
