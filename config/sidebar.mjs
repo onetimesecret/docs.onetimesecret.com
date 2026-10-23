@@ -1,5 +1,5 @@
 // config/sidebar.mjs
-import { readFileSync } from "fs";
+import { existsSync, readFileSync } from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 
@@ -87,6 +87,57 @@ function buildTranslations(key) {
   return translations;
 }
 
+// Extensions Starlight's docsLoader picks up, as in bin/lib/nav.mjs.
+const DOC_EXTS = ["md", "mdx", "mdoc", "markdown"];
+const enDocsRoot = join(__dirname, "../src/content/docs/en");
+
+/**
+ * Whether the English page a sidebar link points at sets `draft: true`.
+ *
+ * One sidebar serves every locale, so the English page decides for all of
+ * them. A link with no page behind it (a src/pages route, an external URL) is
+ * never a draft. Like bin/check-textprov.mjs, this matches the literal
+ * `draft: true` line in the frontmatter block rather than parsing YAML.
+ *
+ * @param {string} link - Sidebar link ("/", "start", "start/glossary")
+ * @param {string} [root] - Docs collection root to resolve the link against
+ * @returns {boolean}
+ */
+export function isDraftLink(link, root = enDocsRoot) {
+  const slug = link.replace(/^\/+|\/+$/g, "");
+  const bases = slug === "" ? ["index"] : [slug, `${slug}/index`];
+  for (const base of bases) {
+    for (const ext of DOC_EXTS) {
+      const path = join(root, `${base}.${ext}`);
+      if (!existsSync(path)) continue;
+      const frontmatter = readFileSync(path, "utf8").match(/^---\r?\n([\s\S]*?)\r?\n---/);
+      return Boolean(frontmatter && /^draft:\s*true\s*$/m.test(frontmatter[1]));
+    }
+  }
+  return false;
+}
+
+/**
+ * Drop links to draft pages, then any group left with no items.
+ *
+ * Starlight leaves draft pages out of production builds, but a `link` item is
+ * a plain URL it never checks against the docs collection: without this, the
+ * entry would stay in the sidebar and lead to a 404.
+ *
+ * @param {Array} items - Sidebar items (links and groups)
+ * @param {(link: string) => boolean} [isDraft] - Draft test for a link
+ * @returns {Array} The items that still have a page to show
+ */
+export function pruneDrafts(items, isDraft = isDraftLink) {
+  return items.flatMap((item) => {
+    if (item.items) {
+      const kept = pruneDrafts(item.items, isDraft);
+      return kept.length > 0 ? [{ ...item, items: kept }] : [];
+    }
+    return item.link && isDraft(item.link) ? [] : [item];
+  });
+}
+
 /**
  * Helper function to create sidebar link items with required attrs
  * @param {string} key - Translation key for the label
@@ -151,8 +202,13 @@ function createGroup(key, items = [], collapsed = false) {
 // seven times, disambiguated only by which group it happened to be under, which
 // made the sidebar unusable as a flat search result and useless to a screen
 // reader reading the links out of context. Each index page now says what it is.
+//
+// To keep a page off the live site, set `draft: true` in its frontmatter and
+// leave its link here. Production builds drop the link (see pruneDrafts); the
+// dev server and the check:* scripts still see it, so check:orphans passes
+// while the page waits.
 // ---------------------------------------------------------------------------
-export const sidebar = [
+const entries = [
   createLink("home", "/"),
 
   createGroup("startHere", [
@@ -302,6 +358,9 @@ export const sidebar = [
     true,
   ),
 ];
+
+// `astro build` sets NODE_ENV to "production" before it loads this config.
+export const sidebar = process.env.NODE_ENV === "production" ? pruneDrafts(entries) : entries;
 
 /**
  * The translation keys `sidebar` above was built from, populated as a side
