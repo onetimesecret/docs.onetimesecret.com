@@ -40,10 +40,14 @@ function* walk(dir) {
   }
 }
 
-/** Top-level `textprov: true` in the frontmatter block. */
+/**
+ * Top-level `textprov: true` in the frontmatter block. Drafts are not built
+ * in production, so they are never expected whatever they declare.
+ */
 function isEnrolled(source) {
   const match = source.match(/^---\r?\n([\s\S]*?)\r?\n---/);
-  return Boolean(match && /^textprov:\s*true\s*$/m.test(match[1]));
+  if (!match || /^draft:\s*true\s*$/m.test(match[1])) return false;
+  return /^textprov:\s*true\s*$/m.test(match[1]);
 }
 
 /** slug -> enrolled, for every doc under one locale directory. */
