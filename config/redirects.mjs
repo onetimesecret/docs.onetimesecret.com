@@ -340,10 +340,9 @@ export function createRedirectsConfig() {
     "/contact": "https://onetimesecret.com/feedback",
     "/feedback": "https://onetimesecret.com/feedback",
 
-    // The site root. There is no root locale, so "/" used to be served by a
-    // separate src/content/docs/index.mdx that drifted from the EN homepage.
-    // One homepage now, in /en/; Starlight's language picker handles the rest.
-    "/": "/en/",
+    // The site root is not redirected. src/pages/index.astro renders the EN
+    // homepage entry at "/" with a canonical link to /en/, so one source file
+    // serves both URLs and "/" answers 200 instead of a meta-refresh stub.
     "/docs": "/en/",
     "/domains": "/en/custom-domains/",
 
