@@ -159,6 +159,10 @@ runs are still decoded. The toggle changes CSS only, persists the reader's
 preference locally, defaults to hidden, and works with every font. The help text
 explains what is recorded. Without JavaScript the controls stay hidden.
 
+Set `SHOW_TEXTPROV_TOGGLE=false` (or `0`) at build time to hide the toggle on
+every page; the deploy workflow reads it from the environment variable of the
+same name. Enrolled pages are still decoded to clean text.
+
 The generated HTML already contains clean text before Pagefind indexing, so
 Find in page, copy, metadata, and heading fragment links do not depend on a
 client-side cleanup. Copying from the site produces plain text; source files

@@ -160,6 +160,7 @@ pnpm run translate:restore <printed-mapping-file>
 - Resolve filesystem paths relative to the configuration module, using absolute paths where needed for cross-platform compatibility.
 - `SITE_URL` overrides the canonical site URL for builds; the
  default is `https://docs.onetimesecret.com`.
+- `SHOW_TEXTPROV_TOGGLE=false` hides the TextProv reader toggle at build time; enrolled pages are still decoded. It is shown when unset.
 - Development and preview host allowlists accept comma-separated values from `VITE_ADDITIONAL_SERVER_ALLOWED_HOSTS` or `__VITE_ADDITIONAL_SERVER_ALLOWED_HOSTS`.
 - Keep theme tokens in CSS `@theme` blocks rather than adding JavaScript theme configuration.
 

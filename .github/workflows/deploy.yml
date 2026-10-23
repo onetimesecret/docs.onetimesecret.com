@@ -27,6 +27,7 @@
 #     SITE_URL                - Canonical site origin
 #     SHOW_STAGING_WARNING    - "true" on staging to show the prerelease banner
 #     SHOW_STAGING_WATERMARK  - "true" on staging to show the prerelease watermark
+#     SHOW_TEXTPROV_TOGGLE    - "false" to hide the TextProv reader toggle (shown when unset)
 ---
 name: Build and Deploy to BunnyCDN
 
@@ -76,6 +77,8 @@ jobs:
           # SITE_URL so the canonical strategy is unaffected.
           SHOW_STAGING_WARNING: ${{ vars.SHOW_STAGING_WARNING }}
           SHOW_STAGING_WATERMARK: ${{ vars.SHOW_STAGING_WATERMARK }}
+          # TextProv reader toggle; see showTextProvToggle in config/textprov.mjs.
+          SHOW_TEXTPROV_TOGGLE: ${{ vars.SHOW_TEXTPROV_TOGGLE }}
 
       - name: Upload dist/ to Bunny Edge Storage
         env:
