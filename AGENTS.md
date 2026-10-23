@@ -53,9 +53,10 @@ pnpm run check:locales       # Check locale directories against configuration; w
 pnpm run check:contrast      # Check colour contrast
 pnpm run check:types         # Type-check .ts sources (astro sync, then tsc)
 pnpm run check:links:malformed # Check malformed source links
+pnpm run check:textprov      # After a build: every enrolled page in dist/ has one marker and no raw selectors
 ```
 
-CI runs the navigation, orphan, locale, contrast, frontmatter, malformed-link, and type checks, then tests and the production build. Run checks relevant to the change and report exactly what was executed; do not describe source inspection as a successful build or test run.
+CI runs the navigation, orphan, locale, contrast, frontmatter, malformed-link, and type checks, then tests, the production build, and the published provenance check. Run checks relevant to the change and report exactly what was executed; do not describe source inspection as a successful build or test run.
 
 `pnpm run check:links` requires **lychee** and builds the site before checking internal links. `pnpm run check:links:external` also checks external URLs. See [the link-checking guide](docs/LINK_CHECKING.md) for options.
 
@@ -160,6 +161,7 @@ pnpm run translate:restore <printed-mapping-file>
 - Resolve filesystem paths relative to the configuration module, using absolute paths where needed for cross-platform compatibility.
 - `SITE_URL` overrides the canonical site URL for builds; the
  default is `https://docs.onetimesecret.com`.
+- `SHOW_TEXTPROV_TOGGLE=false` hides the TextProv reader toggle at build time; enrolled pages are still decoded. It is shown when unset.
 - Development and preview host allowlists accept comma-separated values from `VITE_ADDITIONAL_SERVER_ALLOWED_HOSTS` or `__VITE_ADDITIONAL_SERVER_ALLOWED_HOSTS`.
 - Keep theme tokens in CSS `@theme` blocks rather than adding JavaScript theme configuration.
 

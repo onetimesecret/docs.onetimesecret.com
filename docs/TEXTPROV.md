@@ -152,8 +152,23 @@ python3 tools/dogfood.py check --base "$BASE" --preserve-only
 
 The vendored JS/TS integration decodes enrolled pages during Astro prerender and
 in the dev server. AI runs become clean text in spans with data-textprov="ai".
-The toggle appears on enrolled pages, changes CSS only, persists the reader's preference locally, defaults
-to hidden, and works with every font. The help text explains what is recorded.
+The toggle is a "Highlight AI edits" switch below the page title on enrolled
+pages, with an information button whose popover links to the reader guide.
+Splash pages (the homepages) have no page title and show no toggle; their AI
+runs are still decoded, and a preference saved on another page still highlights
+them. The toggle changes CSS only, persists the reader's preference locally,
+defaults to hidden, and works with every font. The help text explains what is
+recorded. Without JavaScript the controls stay hidden.
+
+Every enrolled page carries one `data-textprov-document="true"` marker, emitted
+only by `src/components/starlight/TextProvMarker.astro`; the middleware decodes
+nothing without it. `pnpm run check:textprov` reads `dist/` after a build and
+fails if an enrolled page (including English fallbacks in other locales) lacks
+the marker, carries two, or still contains a raw selector.
+
+Set `SHOW_TEXTPROV_TOGGLE=false` (or `0`) at build time to hide the toggle on
+every page; the deploy workflow reads it from the environment variable of the
+same name. Enrolled pages are still decoded to clean text.
 
 The generated HTML already contains clean text before Pagefind indexing, so
 Find in page, copy, metadata, and heading fragment links do not depend on a

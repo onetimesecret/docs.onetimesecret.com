@@ -1,7 +1,6 @@
 import { describe, it, expect, vi } from 'vitest';
 import { JSDOM } from 'jsdom';
 import { aiRuns, renderProvenance } from './html.mjs';
-import { initTextProv } from './display';
 
 // Most cases exercise decoding itself; enrollment has its own test.
 const render = (html: string, options = {}) => renderProvenance(html, { requireEnrollment: false, ...options });
@@ -83,7 +82,7 @@ describe('static TextProv HTML', () => {
     };
     for (const [heading, expected] of Object.entries(headings)) {
       const id = slug(ai(heading));
-      const html = '<div class="textprov-controls" data-textprov-document="true"></div>' +
+      const html = '<div class="textprov-document" data-textprov-document="true"></div>' +
         `<div class="sl-markdown-content"><h2 id="${id}">${ai(heading)}</h2></div>` +
         `<a href="#${encodeURIComponent(id)}">${ai(heading)}</a><label for="${id}">Label</label>` +
         `<input aria-describedby="${id} other">`;
@@ -217,7 +216,7 @@ describe('static TextProv HTML', () => {
   });
 
   it('requires an actual enrollment element rather than a quoted flag in a code example', () => {
-    const html = `<div class="textprov-controls" data-textprov-document="false"></div><code>data-textprov-document="true"</code><div class="sl-markdown-content">${ai('Example')}</div>`;
+    const html = `<div class="textprov-document" data-textprov-document="false"></div><code>data-textprov-document="true"</code><div class="sl-markdown-content">${ai('Example')}</div>`;
     expect(renderProvenance(html)).toBe(html);
     const enrolled = html.replace('data-textprov-document="false"', 'data-textprov-document="true"');
     expect(renderProvenance(enrolled)).toContain('data-textprov="ai">Example</span>');
@@ -292,41 +291,5 @@ describe('static TextProv HTML', () => {
     const result = render(`<div class="sl-markdown-content"><table>${ai('Text')}<tr><td>Cell</td></tr></table></div>`);
     expect(result).not.toContain('\u{E0101}');
     expect(new JSDOM(result).window.document.querySelector('div')?.textContent).toContain('Text');
-  });
-});
-
-describe('TextProv toggle', () => {
-  function page() {
-    return new JSDOM('<button data-textprov-toggle aria-pressed="false" hidden>TextProv</button><p class="textprov-ai">Clean text</p>', { url: 'https://docs.example.test' });
-  }
-  it('defaults to hidden, persists the choice, and never mutates page text', () => {
-    const dom = page();
-    const { document, localStorage } = dom.window;
-    const text = document.body.textContent;
-    initTextProv(document, localStorage);
-    const button = document.querySelector('button')!;
-    expect(button.hidden).toBe(false);
-    expect(button.getAttribute('aria-pressed')).toBe('false');
-    button.click();
-    expect(document.documentElement.dataset.textprov).toBe('shown');
-    expect(button.getAttribute('aria-pressed')).toBe('true');
-    initTextProv(document, localStorage);
-    expect(document.documentElement.dataset.textprov).toBe('shown');
-    button.click();
-    expect(document.documentElement.dataset.textprov).toBe('hidden');
-    expect(document.body.textContent).toBe(text);
-  });
-  it('works when browser storage is denied', () => {
-    const { document } = page().window;
-    const storage = { getItem() { throw Error('denied'); }, setItem() { throw Error('denied'); } } as unknown as Storage;
-    expect(() => initTextProv(document, storage)).not.toThrow();
-    document.querySelector('button')!.click();
-    expect(document.documentElement.dataset.textprov).toBe('shown');
-  });
-  it('leaves unenrolled pages and storage untouched', () => {
-    const { document } = new JSDOM('<p>Unenrolled</p>').window;
-    const storage = { getItem() { throw Error('read'); } } as unknown as Storage;
-    expect(() => initTextProv(document, storage)).not.toThrow();
-    expect(document.documentElement.dataset.textprov).toBeUndefined();
   });
 });

@@ -85,6 +85,9 @@ export const collections = {
         // TextProv toggle (TextProvControls.astro), English fallback per key.
         "textprov.toggle": z.string().optional(),
         "textprov.help": z.string().optional(),
+        "textprov.info": z.string().optional(),
+        "textprov.about": z.string().optional(),
+        "textprov.learnMore": z.string().optional(),
       }),
     }),
   }),

@@ -5,7 +5,7 @@ vi.mock('astro:middleware', () => ({ defineMiddleware: (handler: unknown) => han
 const { onRequest } = await import('./middleware');
 
 const marked = Array.from('Example', char => char + '\u{E0101}').join('');
-const enrolled = `<div class="textprov-controls" data-textprov-document="true"></div><div class="sl-markdown-content">${marked}</div>`;
+const enrolled = `<div class="textprov-document" data-textprov-document="true"></div><div class="sl-markdown-content">${marked}</div>`;
 
 function run(body: string, type = 'text/html; charset=utf-8') {
   const response = new Response(body, { headers: { 'content-type': type, 'content-length': '1', etag: '"x"' } });

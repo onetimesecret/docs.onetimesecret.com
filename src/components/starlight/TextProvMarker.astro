@@ -1,0 +1,30 @@
+---
+// The enrollment marker for TextProv. MarkdownContent.astro renders it on
+// every page whose frontmatter sets `textprov: true`, whatever template the
+// page uses and whether or not the reader toggle is shown. The middleware
+// (src/lib/textprov/middleware.ts) and renderer (html.mjs) look for this
+// element, and an enrolled page without it would publish its raw selectors.
+// Keep this the only place that emits data-textprov-document.
+//
+// It also carries the reader's saved preference and the highlight style, so a
+// page with no toggle (the splash homepages) still honours a choice made on
+// another page. TextProvControls.astro is presentation only.
+---
+<div class="textprov-document" data-textprov-document="true" data-pagefind-ignore hidden></div>
+<!-- Runs before first paint so a saved choice shows without a flash.
+     display.ts owns the storage key. -->
+<script is:inline>
+  try { document.documentElement.dataset.textprov = localStorage.getItem('docs:textprov') === 'shown' ? 'shown' : 'hidden'; }
+  catch { document.documentElement.dataset.textprov = 'hidden'; }
+</script>
+
+<style is:global>
+  /* The switch label (TextProvControls.astro) wears the mark it turns on, so
+     it doubles as the legend. */
+  :root[data-textprov="shown"] :is(.textprov-ai, .textprov-label) {
+    text-decoration-line: underline; text-decoration-style: wavy;
+    text-decoration-color: var(--sl-color-text-accent); text-underline-offset: .2em;
+    background: color-mix(in srgb, var(--sl-color-text-accent) 10%, transparent);
+  }
+  @media print { .textprov-ai { text-decoration: none !important; background: none !important; } }
+</style>

@@ -35,8 +35,10 @@ const { hasSidebar } = Astro.locals.starlightRoute;
 // The docs homepage is the one page where a reader may have wanted the app
 // instead, so it alone gets a way back to onetimesecret.com beside the logo
 // (which links to the docs home). Compare with trailing slashes normalised.
+// The site root (src/pages/index.astro) renders the same homepage at "/".
 const trim = (p: string) => p.replace(/\/+$/, '');
-const isDocsHome = !hasSidebar && trim(Astro.url.pathname) === trim(docsHome);
+const path = trim(Astro.url.pathname);
+const isDocsHome = !hasSidebar && (path === trim(docsHome) || path === '');
 ---
 
 <div class:list={['header', 'sl-flex', { 'no-sidebar': !hasSidebar }]}>

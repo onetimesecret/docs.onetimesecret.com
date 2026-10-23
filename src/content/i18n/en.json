@@ -167,6 +167,9 @@
   "notFound.gettingStarted": "Getting started",
   "notFound.apiDocs": "API docs",
   "notFound.selfHosting": "Self-hosting",
-  "textprov.toggle": "TextProv · AI edits",
-  "textprov.help": "Highlights recorded AI agent edits. Unmarked content has no recorded origin."
+  "textprov.toggle": "Highlight AI edits",
+  "textprov.help": "Highlights recorded AI agent edits. Unmarked content has no recorded origin.",
+  "textprov.info": "About TextProv",
+  "textprov.about": "TextProv records the text an AI agent wrote or changed, at the time of the edit. It does not detect AI writing after the fact.",
+  "textprov.learnMore": "How TextProv works"
 }

@@ -27,8 +27,7 @@ export const starlightConfig = {
   title: "Onetime Secret - Docs",
   // favicon: "./src/assets/img/favicon.ico",
   editLink: {
-    baseUrl:
-      "https://github.com/onetimesecret/docs.onetimesecret.com/edit/main/",
+    baseUrl: "https://github.com/onetimesecret/docs.onetimesecret.com/edit/main/",
   },
   disable404Route: true,
   credits: true,
@@ -64,6 +63,8 @@ export const starlightConfig = {
 
   components: {
     MarkdownContent: "./src/components/starlight/MarkdownContent.astro",
+    // TextProv toggle beside the h1 on enrolled pages.
+    PageTitle: "./src/components/starlight/PageTitle.astro",
     Header: "./src/components/starlight/Header.astro",
     SiteTitle: "./src/components/starlight/SiteTitle.astro",
     Hero: "./src/components/starlight/Hero.astro",
@@ -73,9 +74,7 @@ export const starlightConfig = {
     MobileMenuFooter: "./src/components/starlight/MobileMenuFooter.astro",
     // Prerelease only: wrap PageFrame to mount the banner and/or watermark.
     // The override renders each marker conditionally on its own flag.
-    ...(prerelease
-      ? { PageFrame: "./src/components/starlight/PageFrame.astro" }
-      : {}),
+    ...(prerelease ? { PageFrame: "./src/components/starlight/PageFrame.astro" } : {}),
   },
   social: [
     {
