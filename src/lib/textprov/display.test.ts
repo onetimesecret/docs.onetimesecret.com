@@ -43,8 +43,9 @@ describe('initTextProv', () => {
   });
 
   it('flips the root attribute and the switch on click, and persists the choice', () => {
-    const toggle = page();
+    const toggle = page('<button data-textprov-toggle aria-checked="false"></button><p class="textprov-ai">Clean text</p>');
     const storage = memoryStorage();
+    const text = document.body.textContent;
     initTextProv(document, storage);
     toggle?.click();
     expect(document.documentElement.dataset.textprov).toBe('shown');
@@ -53,6 +54,8 @@ describe('initTextProv', () => {
     toggle?.click();
     expect(document.documentElement.dataset.textprov).toBe('hidden');
     expect(storage.getItem(KEY)).toBe('hidden');
+    // The toggle is CSS only; the decoded text never changes.
+    expect(document.body.textContent).toBe(text);
   });
 
   it('does nothing on a page without a toggle', () => {
