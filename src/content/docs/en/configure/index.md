@@ -5,6 +5,7 @@ description: Choose the configuration tasks for your self-hosted Onetime Secret 
 audience: operator
 pageType: concept
 sourceOfTruth: onetimesecret/lib/onetime/utils/config_resolver.rb (configuration file locations); onetimesecret/lib/onetime/config.rb (default and override merging); onetimesecret/etc/defaults/auth.defaults.yaml (authentication configuration)
+draft: true
 ---
 
 A󠄁f󠄁t󠄁e󠄁r󠄁 [i󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁i󠄁n󠄁g󠄁 O󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁 S󠄁e󠄁c󠄁r󠄁e󠄁t󠄁](/en/self-hosting),󠄁 c󠄁o󠄁n󠄁f󠄁i󠄁g󠄁u󠄁r󠄁e󠄁 t󠄁h󠄁e󠄁 s󠄁e󠄁r󠄁v󠄁i󠄁c󠄁e󠄁s󠄁 a󠄁n󠄁d󠄁 p󠄁o󠄁l󠄁i󠄁c󠄁i󠄁e󠄁s󠄁 y󠄁o󠄁u󠄁r󠄁 u󠄁s󠄁e󠄁r󠄁s󠄁 n󠄁e󠄁e󠄁d󠄁.󠄁 S󠄁t󠄁a󠄁r󠄁t󠄁 w󠄁i󠄁t󠄁h󠄁 k󠄁e󠄁y󠄁s󠄁,󠄁 e󠄁m󠄁a󠄁i󠄁l󠄁 a󠄁n󠄁d󠄁 a󠄁u󠄁t󠄁h󠄁e󠄁n󠄁t󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁;󠄁 a󠄁d󠄁d󠄁 S󠄁S󠄁O󠄁 w󠄁h󠄁e󠄁n󠄁 y󠄁o󠄁u󠄁 a󠄁r󠄁e󠄁 r󠄁e󠄁a󠄁d󠄁y󠄁 t󠄁o󠄁 c󠄁o󠄁n󠄁n󠄁e󠄁c󠄁t󠄁 a󠄁n󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁t󠄁y󠄁 p󠄁r󠄁o󠄁v󠄁i󠄁d󠄁e󠄁r󠄁.󠄁

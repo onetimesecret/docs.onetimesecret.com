@@ -5,6 +5,7 @@ description: Connect Amazon Cognito to a self-hosted Onetime Secret instance usi
 audience: operator
 pageType: how-to
 sourceOfTruth: onetimesecret/lib/onetime/sso_provider/oidc.rb (generic OIDC settings and button name); onetimesecret/apps/web/auth/config/hooks/omniauth_tenant.rb (callback URL); provider documentation linked below (registration and issuer)
+draft: true
 ---
 
 R󠄁e󠄁g󠄁i󠄁s󠄁t󠄁e󠄁r󠄁 O󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁 S󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 a󠄁s󠄁 a󠄁n󠄁 O󠄁I󠄁D󠄁C󠄁 a󠄁p󠄁p󠄁l󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 i󠄁n󠄁 A󠄁m󠄁a󠄁z󠄁o󠄁n󠄁 C󠄁o󠄁g󠄁n󠄁i󠄁t󠄁o󠄁,󠄁 t󠄁h󠄁e󠄁n󠄁 f󠄁i󠄁n󠄁i󠄁s󠄁h󠄁 t󠄁h󠄁e󠄁 s󠄁e󠄁t󠄁u󠄁p󠄁 w󠄁i󠄁t󠄁h󠄁 [C󠄁o󠄁n󠄁f󠄁i󠄁g󠄁u󠄁r󠄁e󠄁 S󠄁S󠄁O󠄁](/en/configure/sso).󠄁

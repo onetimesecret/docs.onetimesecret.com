@@ -5,6 +5,7 @@ description: Configure secret lifetimes, passphrase requirements and content lim
 audience: operator
 pageType: how-to
 sourceOfTruth: onetimesecret/etc/defaults/config.defaults.yaml (secret options); onetimesecret/lib/onetime/config.rb (TTL parsing and defaults)
+draft: true
 ---
 
 S󠄁e󠄁t󠄁 t󠄁h󠄁e󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁n󠄁c󠄁e󠄁 d󠄁e󠄁f󠄁a󠄁u󠄁l󠄁t󠄁s󠄁 a󠄁n󠄁d󠄁 l󠄁i󠄁m󠄁i󠄁t󠄁s󠄁 o󠄁f󠄁f󠄁e󠄁r󠄁e󠄁d󠄁 w󠄁h󠄁e󠄁n󠄁 s󠄁o󠄁m󠄁e󠄁o󠄁n󠄁e󠄁 c󠄁r󠄁e󠄁a󠄁t󠄁e󠄁s󠄁 a󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁.󠄁
