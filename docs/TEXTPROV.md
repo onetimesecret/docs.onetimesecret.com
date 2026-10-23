@@ -152,7 +152,9 @@ python3 tools/dogfood.py check --base "$BASE" --preserve-only
 
 The vendored JS/TS integration decodes enrolled pages during Astro prerender and
 in the dev server. AI runs become clean text in spans with data-textprov="ai".
-The toggle appears on enrolled pages, changes CSS only, persists the reader's preference locally, defaults
+The toggle is a ℗ button beside the page title on enrolled pages. Splash pages
+(the homepages) have no page title and show no toggle; their AI runs are still
+decoded. The toggle changes CSS only, persists the reader's preference locally, defaults
 to hidden, and works with every font. The help text explains what is recorded.
 
 The generated HTML already contains clean text before Pagefind indexing, so

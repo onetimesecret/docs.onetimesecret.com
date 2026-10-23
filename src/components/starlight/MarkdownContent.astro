@@ -1,7 +1,10 @@
 ---
 import Default from '@astrojs/starlight/components/MarkdownContent.astro';
-import TextProvControls from './TextProvControls.astro';
-const enrolled = Astro.locals.starlightRoute.entry.data.textprov === true;
+const { data } = Astro.locals.starlightRoute.entry;
+// The toggle lives in PageTitle.astro. Splash pages (the homepages) render a
+// hero instead of a page title and show no toggle, but an enrolled one still
+// needs the marker, or the middleware leaves its AI marks undecoded.
+const markerOnly = data.textprov === true && Boolean(data.hero);
 ---
-{enrolled && <TextProvControls />}
+{markerOnly && <div class="textprov-controls" data-textprov-document="true" hidden></div>}
 <Default><slot /></Default>

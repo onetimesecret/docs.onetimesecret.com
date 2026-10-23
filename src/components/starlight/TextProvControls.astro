@@ -1,13 +1,13 @@
 ---
-// Rendered only on enrolled pages (see MarkdownContent.astro), so the toggle
-// script ships with the one feature that uses it.
+// Rendered beside the h1 of enrolled pages only (see PageTitle.astro), so the
+// toggle script ships with the one feature that uses it. The button shows ℗;
+// its accessible name and tooltip carry the full label.
+const label = Astro.locals.t('textprov.toggle');
 ---
-<div class="textprov-controls" data-textprov-document="true" data-pagefind-ignore>
-  <button type="button" data-textprov-toggle aria-pressed="false" aria-describedby="textprov-help" hidden>
-    {Astro.locals.t('textprov.toggle')}
-  </button>
-  <p id="textprov-help" class="textprov-help">{Astro.locals.t('textprov.help')}</p>
-</div>
+<span class="textprov-controls" data-textprov-document="true" data-pagefind-ignore>
+  <button type="button" data-textprov-toggle aria-pressed="false" aria-describedby="textprov-help" aria-label={label} title={label} hidden>℗</button>
+</span>
+<p id="textprov-help" class="textprov-help" data-pagefind-ignore>{Astro.locals.t('textprov.help')}</p>
 
 <!-- Apply a saved choice before the prose below paints; display.ts owns the key. -->
 <script is:inline>
@@ -26,14 +26,16 @@
 </script>
 
 <style is:global>
-  .textprov-controls { margin-block-end: 1.5rem; }
-  .textprov-controls button {
-    color: var(--sl-color-text); background: var(--sl-color-bg);
-    border: 1px solid var(--sl-color-gray-4); border-radius: .35rem;
-    padding: .4rem .65rem; font: inherit; font-size: .875rem; cursor: pointer;
+  .textprov-controls { margin-inline-start: .5rem; vertical-align: .35em; }
+  .textprov-controls button:not([hidden]) {
+    display: inline-grid; place-items: center; inline-size: 1.75rem; block-size: 1.75rem;
+    color: var(--sl-color-gray-3); background: var(--sl-color-bg);
+    border: 1px solid var(--sl-color-gray-4); border-radius: 50%;
+    padding: 0; font: inherit; font-size: 1.05rem; line-height: 1; cursor: pointer;
   }
+  .textprov-controls button:hover { color: var(--sl-color-text); }
   .textprov-controls button:focus-visible { outline: 2px solid var(--sl-color-text-accent); outline-offset: 3px; }
-  .textprov-controls button[aria-pressed="true"] { border-color: var(--sl-color-text-accent); }
+  .textprov-controls button[aria-pressed="true"] { color: var(--sl-color-text-accent); border-color: var(--sl-color-text-accent); }
   .textprov-help {
     position: absolute; width: 1px; height: 1px; overflow: hidden;
     clip-path: inset(50%); white-space: nowrap; margin: 0; font-size: .875rem;
@@ -47,5 +49,5 @@
     text-decoration-color: var(--sl-color-text-accent); text-underline-offset: .2em;
     background: color-mix(in srgb, var(--sl-color-text-accent) 10%, transparent);
   }
-  @media print { .textprov-controls { display: none; } .textprov-ai { text-decoration: none !important; background: none !important; } }
+  @media print { .textprov-controls, .textprov-help { display: none; } .textprov-ai { text-decoration: none !important; background: none !important; } }
 </style>
