@@ -20,7 +20,7 @@ API authentication along with everything else. If your instance sits behind a VP
 or a proxy that already authenticates people, that is the setting you want, and
 the mode stops mattering.
 
-F󠄁o󠄁r󠄁 s󠄁i󠄁g󠄁n󠄁-󠄁i󠄁n󠄁 m󠄁e󠄁t󠄁h󠄁o󠄁d󠄁 s󠄁e󠄁t󠄁u󠄁p󠄁 a󠄁f󠄁t󠄁e󠄁r󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁a󠄁t󠄁i󠄁o󠄁n󠄁,󠄁 c󠄁o󠄁n󠄁t󠄁i󠄁n󠄁u󠄁e󠄁 w󠄁i󠄁t󠄁h󠄁 [C󠄁o󠄁n󠄁f󠄁i󠄁g󠄁u󠄁r󠄁e󠄁 a󠄁u󠄁t󠄁h󠄁e󠄁n󠄁t󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁](/en/configure/authentication).󠄁 F󠄁o󠄁r󠄁 a󠄁 c󠄁o󠄁r󠄁p󠄁o󠄁r󠄁a󠄁t󠄁e󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁t󠄁y󠄁 p󠄁r󠄁o󠄁v󠄁i󠄁d󠄁e󠄁r󠄁, u󠄁s󠄁e󠄁 [C󠄁o󠄁n󠄁f󠄁i󠄁g󠄁u󠄁r󠄁e󠄁 S󠄁S󠄁O󠄁](/en/configure/sso).
+A󠄁f󠄁t󠄁e󠄁r󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁a󠄁t󠄁i󠄁o󠄁n󠄁,󠄁 [E󠄁n󠄁v󠄁i󠄁r󠄁o󠄁n󠄁m󠄁e󠄁n󠄁t󠄁 v󠄁a󠄁r󠄁i󠄁a󠄁b󠄁l󠄁e󠄁s󠄁](/en/self-hosting/environment-variables) l󠄁i󠄁s󠄁t󠄁s󠄁 t󠄁h󠄁e󠄁 s󠄁e󠄁t󠄁t󠄁i󠄁n󠄁g󠄁s󠄁 fo󠄁r󠄁 s󠄁ign󠄁-󠄁i󠄁n󠄁 m󠄁etho󠄁d󠄁s󠄁 a󠄁n󠄁d󠄁 i󠄁d󠄁entity󠄁 p󠄁r󠄁o󠄁v󠄁id󠄁ers.
 
 ## What the mode changes
 
