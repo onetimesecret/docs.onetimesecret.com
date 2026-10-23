@@ -2,17 +2,15 @@
 // Rendered below the h1 of enrolled pages only (see PageTitle.astro), so the
 // toggle script ships with the one feature that uses it. The info button opens
 // a native popover, which needs no script; it links to the reader guide.
+//
+// Presentation only. Enrollment (the data-textprov-document marker), the
+// saved-preference script, and the highlight style live in TextProvMarker.astro,
+// which renders on every enrolled page whether or not this panel does.
 import { Icon } from '@astrojs/starlight/components';
 const { t, starlightRoute } = Astro.locals;
 const guide = `/${starlightRoute.locale}/contribute/text-provenance`;
 ---
-<div class="textprov-controls" data-textprov-document="true" data-pagefind-ignore>
-  <!-- Runs before the controls paint, so they appear only when scripts run and
-       already show the saved choice. display.ts owns the key. -->
-  <script is:inline>
-    try { document.documentElement.dataset.textprov = localStorage.getItem('docs:textprov') === 'shown' ? 'shown' : 'hidden'; }
-    catch { document.documentElement.dataset.textprov = 'hidden'; }
-  </script>
+<div class="textprov-panel" data-pagefind-ignore>
   <div class="textprov-row">
     <button type="button" class="textprov-switch" role="switch" aria-checked="false" aria-describedby="textprov-help" data-textprov-toggle>
       <span class="textprov-track" aria-hidden="true"></span>
@@ -43,8 +41,8 @@ const guide = `/${starlightRoute.locale}/contribute/text-provenance`;
 <style is:global>
   /* Starlight spaces the title panel's children 1.5rem apart; the controls
      belong to the title, so they sit closer. Without scripts they stay hidden. */
-  .textprov-controls { margin-block-start: .75rem; }
-  :root:not([data-textprov]) .textprov-controls { display: none; }
+  .textprov-panel { margin-block-start: .75rem; }
+  :root:not([data-textprov]) .textprov-panel { display: none; }
   .textprov-row { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem; }
 
   /* The negative margin lines the track up with the title's first letter. */
@@ -115,12 +113,6 @@ const guide = `/${starlightRoute.locale}/contribute/text-provenance`;
     color: var(--sl-color-gray-3);
   }
 
-  /* The switch label wears the mark it turns on, so it doubles as the legend. */
-  :root[data-textprov="shown"] :is(.textprov-ai, .textprov-label) {
-    text-decoration-line: underline; text-decoration-style: wavy;
-    text-decoration-color: var(--sl-color-text-accent); text-underline-offset: .2em;
-    background: color-mix(in srgb, var(--sl-color-text-accent) 10%, transparent);
-  }
   @media (prefers-reduced-motion: reduce) { .textprov-track, .textprov-track::after { transition: none; } }
-  @media print { .textprov-controls { display: none; } .textprov-ai { text-decoration: none !important; background: none !important; } }
+  @media print { .textprov-panel { display: none; } }
 </style>

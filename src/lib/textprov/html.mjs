@@ -77,7 +77,7 @@ export function renderProvenance(html, { requireEnrollment = true, label } = {})
   let enrolled = false;
   function collectIds(node) {
     const attrs = node.attrs ?? [];
-    if (attrs.some(a => a.name === 'class' && a.value.split(/\s+/).includes('textprov-controls')) &&
+    if (attrs.some(a => a.name === 'class' && a.value.split(/\s+/).includes('textprov-document')) &&
         attrs.some(a => a.name === 'data-textprov-document' && a.value === 'true')) enrolled = true;
     const id = node.attrs?.find(a => a.name === 'id');
     if (id) ids.push(id.value);

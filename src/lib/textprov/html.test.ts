@@ -83,7 +83,7 @@ describe('static TextProv HTML', () => {
     };
     for (const [heading, expected] of Object.entries(headings)) {
       const id = slug(ai(heading));
-      const html = '<div class="textprov-controls" data-textprov-document="true"></div>' +
+      const html = '<div class="textprov-document" data-textprov-document="true"></div>' +
         `<div class="sl-markdown-content"><h2 id="${id}">${ai(heading)}</h2></div>` +
         `<a href="#${encodeURIComponent(id)}">${ai(heading)}</a><label for="${id}">Label</label>` +
         `<input aria-describedby="${id} other">`;
@@ -217,7 +217,7 @@ describe('static TextProv HTML', () => {
   });
 
   it('requires an actual enrollment element rather than a quoted flag in a code example', () => {
-    const html = `<div class="textprov-controls" data-textprov-document="false"></div><code>data-textprov-document="true"</code><div class="sl-markdown-content">${ai('Example')}</div>`;
+    const html = `<div class="textprov-document" data-textprov-document="false"></div><code>data-textprov-document="true"</code><div class="sl-markdown-content">${ai('Example')}</div>`;
     expect(renderProvenance(html)).toBe(html);
     const enrolled = html.replace('data-textprov-document="false"', 'data-textprov-document="true"');
     expect(renderProvenance(enrolled)).toContain('data-textprov="ai">Example</span>');
