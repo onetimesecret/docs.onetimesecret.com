@@ -84,6 +84,11 @@ jobs:
       - name: Test provenance authoring
         run: python3 -m unittest discover -s tools/tests
 
+      - name: Build
+        run: pnpm run build
+
+      # Runs after Build so that a PR that removes marks on purpose (a
+      # re-anchor, see docs/TEXTPROV.md) still gets a build result.
       - name: Preserve recorded provenance
         env:
           PROVENANCE_BASE: ${{ github.event.pull_request.base.sha }}
@@ -91,6 +96,3 @@ jobs:
         run: |
           PROVENANCE_MERGE_BASE=$(git merge-base "$PROVENANCE_BASE" "$PROVENANCE_HEAD")
           python3 tools/dogfood.py check --preserve-only --base "$PROVENANCE_MERGE_BASE" --head "$PROVENANCE_HEAD"
-
-      - name: Build
-        run: pnpm run build
