@@ -152,10 +152,11 @@ python3 tools/dogfood.py check --base "$BASE" --preserve-only
 
 The vendored JS/TS integration decodes enrolled pages during Astro prerender and
 in the dev server. AI runs become clean text in spans with data-textprov="ai".
-The toggle is a ℗ button beside the page title on enrolled pages. Splash pages
-(the homepages) have no page title and show no toggle; their AI runs are still
-decoded. The toggle changes CSS only, persists the reader's preference locally, defaults
-to hidden, and works with every font. The help text explains what is recorded.
+The toggle is a "Highlight AI edits" switch below the page title on enrolled
+pages. Splash pages (the homepages) have no page title and show no toggle; their
+AI runs are still decoded. The toggle changes CSS only, persists the reader's
+preference locally, defaults to hidden, and works with every font. The help text
+explains what is recorded. Without JavaScript the controls stay hidden.
 
 The generated HTML already contains clean text before Pagefind indexing, so
 Find in page, copy, metadata, and heading fragment links do not depend on a

@@ -8,11 +8,10 @@ export function initTextProv(document: Document, storage?: Storage) {
   try { shown = storage?.getItem(key) === 'shown'; } catch { /* Storage is optional. */ }
   function apply() {
     document.documentElement.dataset.textprov = shown ? 'shown' : 'hidden';
-    controls.forEach(control => control.setAttribute('aria-pressed', String(shown)));
+    controls.forEach(control => control.setAttribute('aria-checked', String(shown)));
   }
   apply();
   controls.forEach(control => {
-    control.hidden = false;
     control.onclick = () => {
       shown = !shown;
       apply();

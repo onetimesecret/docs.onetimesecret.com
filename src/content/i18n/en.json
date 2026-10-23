@@ -167,6 +167,6 @@
   "notFound.gettingStarted": "Getting started",
   "notFound.apiDocs": "API docs",
   "notFound.selfHosting": "Self-hosting",
-  "textprov.toggle": "TextProv · AI edits",
+  "textprov.toggle": "Highlight AI edits",
   "textprov.help": "Highlights recorded AI agent edits. Unmarked content has no recorded origin."
 }

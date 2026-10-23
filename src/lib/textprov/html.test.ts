@@ -297,7 +297,7 @@ describe('static TextProv HTML', () => {
 
 describe('TextProv toggle', () => {
   function page() {
-    return new JSDOM('<button data-textprov-toggle aria-pressed="false" hidden>TextProv</button><p class="textprov-ai">Clean text</p>', { url: 'https://docs.example.test' });
+    return new JSDOM('<button data-textprov-toggle role="switch" aria-checked="false">TextProv</button><p class="textprov-ai">Clean text</p>', { url: 'https://docs.example.test' });
   }
   it('defaults to hidden, persists the choice, and never mutates page text', () => {
     const dom = page();
@@ -305,11 +305,11 @@ describe('TextProv toggle', () => {
     const text = document.body.textContent;
     initTextProv(document, localStorage);
     const button = document.querySelector('button')!;
-    expect(button.hidden).toBe(false);
-    expect(button.getAttribute('aria-pressed')).toBe('false');
+    expect(document.documentElement.dataset.textprov).toBe('hidden');
+    expect(button.getAttribute('aria-checked')).toBe('false');
     button.click();
     expect(document.documentElement.dataset.textprov).toBe('shown');
-    expect(button.getAttribute('aria-pressed')).toBe('true');
+    expect(button.getAttribute('aria-checked')).toBe('true');
     initTextProv(document, localStorage);
     expect(document.documentElement.dataset.textprov).toBe('shown');
     button.click();

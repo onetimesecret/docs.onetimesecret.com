@@ -3,16 +3,5 @@ import Default from '@astrojs/starlight/components/PageTitle.astro';
 import TextProvControls from './TextProvControls.astro';
 const enrolled = Astro.locals.starlightRoute.entry.data.textprov === true;
 ---
-{enrolled ? (
-  <div class="textprov-title">
-    <Default />
-    <TextProvControls />
-  </div>
-) : <Default />}
-
-<style>
-  /* The h1 runs inline so the toggle follows its last word, even when a long
-     title wraps. The wrapper takes over the h1's top margin. */
-  .textprov-title { margin-top: 1rem; }
-  .textprov-title > :global(h1) { display: inline; margin: 0; }
-</style>
+<Default />
+{enrolled && <TextProvControls />}
