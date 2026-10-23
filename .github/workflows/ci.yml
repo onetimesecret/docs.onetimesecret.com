@@ -87,6 +87,12 @@ jobs:
       - name: Build
         run: pnpm run build
 
+      # Reads dist/: every enrolled page has exactly one enrollment marker and
+      # no raw selector left behind. The middleware decodes nothing without
+      # the marker, so a page that lost it would publish its marks verbatim.
+      - name: Check published provenance
+        run: pnpm run check:textprov
+
       # Runs after Build so that a PR that removes marks on purpose (a
       # re-anchor, see docs/TEXTPROV.md) still gets a build result.
       - name: Preserve recorded provenance

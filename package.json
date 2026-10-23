@@ -16,6 +16,7 @@
     "check:frontmatter": "node bin/check-frontmatter.mjs",
     "check:locales": "node bin/check-locales.mjs",
     "check:contrast": "node bin/check-contrast.mjs",
+    "check:textprov": "node bin/check-textprov.mjs",
     "check:types": "astro sync && tsc --noEmit",
     "check:links": "./bin/check-links.sh",
     "check:links:malformed": "./bin/check-malformed-links.sh",
