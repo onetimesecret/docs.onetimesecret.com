@@ -1,6 +1,7 @@
 // docs.onetimesecret.com/starlight/config/starlight.mjs
 import { i18nConfig } from "./i18n.mjs";
 import { sidebar } from "./sidebar.mjs";
+import { EDIT_LINK_BASE_URL } from "./edit-link.mjs";
 import { showStagingWarning, isPrereleaseBuild } from "./domains.mjs";
 
 // Prerelease builds (e.g. docs.onetimesecret.dev) get a top warning banner
@@ -27,7 +28,7 @@ export const starlightConfig = {
   title: "Onetime Secret - Docs",
   // favicon: "./src/assets/img/favicon.ico",
   editLink: {
-    baseUrl: "https://github.com/onetimesecret/docs.onetimesecret.com/edit/main/",
+    baseUrl: EDIT_LINK_BASE_URL,
   },
   disable404Route: true,
   credits: true,
