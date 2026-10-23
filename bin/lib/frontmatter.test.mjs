@@ -224,6 +224,12 @@ describe("headings", () => {
     );
   });
 
+  it("strips inline html tags and keeps their text", () => {
+    expect(headings("## Set <code>REDIS_URL</code> <em>first</em>\n")[0].text).toBe(
+      "Set REDIS_URL first",
+    );
+  });
+
   it("records depth and 1-based line", () => {
     expect(headings("intro\n\n### Deep\n")[0]).toMatchObject({ depth: 3, line: 3 });
   });

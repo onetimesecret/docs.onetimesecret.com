@@ -152,14 +152,15 @@ function headingText(raw) {
     .replace(/`([^`]*)`/g, "$1") // code spans
     .replace(/!?\[([^\]]*)\]\([^)]*\)/g, "$1") // links and images
     .replace(/[*_]{1,3}(?=\S)([^*_]*)(?<=\S)[*_]{1,3}/g, "$1"); // emphasis
-  // Inline html: strip until stable so overlapping brackets can't reassemble
-  // into a tag after one pass (e.g. "<a<b>>"). This is slug math, not output
-  // sanitization, but the single-pass form also trips CodeQL's
-  // incomplete-multi-character-sanitization check.
-  for (let stripped = text.replace(/<[^>]+>/g, ""); stripped !== text; ) {
-    text = stripped;
-    stripped = text.replace(/<[^>]+>/g, "");
-  }
+  // Inline html: strip tags until nothing changes. This is slug math, not
+  // output sanitization. Keep the do/while shape from CodeQL's documented fix
+  // for incomplete-multi-character-sanitization; a for loop that ran the first
+  // replace() in its initializer still raised the alert.
+  let previous;
+  do {
+    previous = text;
+    text = text.replace(/<[^>]+>/g, "");
+  } while (text !== previous);
   return text
     .replace(/\s+#*\s*$/, "") // closing ATX hashes
     .trim();
