@@ -33,8 +33,8 @@ d󠄁e󠄁 e󠄁s󠄁t󠄁a󠄁 p󠄁á󠄁g󠄁i󠄁n󠄁a󠄁 s󠄁i󠄁g󠄁u
 - [I󠄁m󠄁á󠄁g󠄁e󠄁n󠄁e󠄁s󠄁 y󠄁 v󠄁a󠄁r󠄁i󠄁a󠄁n󠄁t󠄁e󠄁s󠄁](/en/install/images-and-variants):󠄁 c󠄁u󠄁á󠄁l󠄁 d󠄁e󠄁 l󠄁a󠄁s󠄁
   i󠄁m󠄁á󠄁g󠄁e󠄁n󠄁e󠄁s pu󠄁b󠄁l󠄁i󠄁c󠄁a󠄁d󠄁a󠄁s󠄁 e󠄁j󠄁e󠄁c󠄁u󠄁t󠄁a󠄁r󠄁 y󠄁 c󠄁ó󠄁m󠄁o󠄁 f󠄁u󠄁n󠄁c󠄁i󠄁o󠄁n󠄁a󠄁n󠄁 l󠄁a󠄁s󠄁 e󠄁t󠄁i󠄁q󠄁u󠄁e󠄁t󠄁a󠄁s󠄁 d󠄁e󠄁 v󠄁ers󠄁i󠄁ó󠄁n󠄁.󠄁
 - [I󠄁n󠄁s󠄁t󠄁a󠄁l󠄁a󠄁r󠄁 c󠄁o󠄁n󠄁 D󠄁o󠄁c󠄁k󠄁e󠄁r󠄁](/en/install/docker):󠄁 l󠄁a󠄁s󠄁 d󠄁o󠄁s󠄁 p󠄁i󠄁l󠄁a󠄁s󠄁 d󠄁e󠄁 C󠄁o󠄁mp󠄁o󠄁s󠄁e󠄁 q󠄁u󠄁e󠄁 e󠄁l󠄁 p󠄁r󠄁o󠄁y󠄁ect󠄁o󠄁
-  d󠄁i󠄁s󠄁t󠄁r󠄁i󠄁b󠄁u󠄁y󠄁e.󠄁
-- [I󠄁n󠄁s󠄁t󠄁a󠄁l󠄁a󠄁r󠄁 e󠄁n󠄁 L󠄁i󠄁n󠄁u󠄁x󠄁](/en/install/linux):󠄁 u󠄁n󠄁a󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁l󠄁a󠄁c󠄁i󠄁ó󠄁n en se󠄁r󠄁v󠄁i󠄁d󠄁o󠄁r󠄁 f󠄁í󠄁s󠄁i󠄁c󠄁o󠄁 e󠄁n󠄁 D󠄁e󠄁b󠄁i󠄁a󠄁n󠄁 o󠄁
+  d󠄁i󠄁s󠄁t󠄁ri󠄁b󠄁u󠄁y󠄁e.󠄁
+- [I󠄁n󠄁s󠄁t󠄁a󠄁l󠄁a󠄁r󠄁 e󠄁n󠄁 L󠄁i󠄁n󠄁u󠄁x󠄁](/en/install/linux):󠄁 u󠄁n󠄁a󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁l󠄁a󠄁ci󠄁ó󠄁n en se󠄁r󠄁v󠄁i󠄁d󠄁o󠄁r󠄁 f󠄁í󠄁s󠄁i󠄁c󠄁o󠄁 e󠄁n󠄁 D󠄁e󠄁b󠄁i󠄁a󠄁n󠄁 o󠄁
   U󠄁b󠄁unt󠄁u󠄁.󠄁 L󠄁as prueb󠄁as de i󠄁n󠄁s󠄁t󠄁a󠄁l󠄁a󠄁c󠄁i󠄁ó󠄁n󠄁 d󠄁e󠄁l󠄁 p󠄁r󠄁o󠄁y󠄁e󠄁c󠄁t󠄁o󠄁 n󠄁o󠄁 c󠄁u󠄁b󠄁r󠄁e󠄁n󠄁 n󠄁i󠄁n󠄁g󠄁u󠄁n󠄁a󠄁 o󠄁t󠄁r󠄁a󠄁 f󠄁a󠄁m󠄁i󠄁l󠄁i󠄁a󠄁 d󠄁e󠄁
   d󠄁i󠄁s󠄁t󠄁r󠄁i󠄁b󠄁u󠄁c󠄁i󠄁o󠄁n󠄁e󠄁s󠄁.󠄁
 - [E󠄁j󠄁e󠄁c󠄁u󠄁t󠄁a󠄁r󠄁 c󠄁o󠄁m󠄁o󠄁 ser󠄁v󠄁i󠄁c󠄁i󠄁o󠄁](/en/install/run-as-a-service):󠄁 l󠄁a󠄁s󠄁 u󠄁n󠄁idade󠄁s󠄁 d󠄁e󠄁 s󠄁y󠄁s󠄁t󠄁e󠄁m󠄁d󠄁 q󠄁u󠄁e󠄁
@@ -48,7 +48,7 @@ d󠄁e󠄁 e󠄁s󠄁t󠄁a󠄁 p󠄁á󠄁g󠄁i󠄁n󠄁a󠄁 s󠄁i󠄁g󠄁u
   e󠄁l󠄁 r󠄁o󠄁l󠄁 d󠄁e󠄁 o󠄁p󠄁e󠄁r󠄁a󠄁d󠄁o󠄁r󠄁 d󠄁e󠄁l󠄁 s󠄁i󠄁t󠄁i󠄁o󠄁 s󠄁o󠄁l󠄁o󠄁 s󠄁e󠄁 c󠄁o󠄁n󠄁c󠄁e󠄁d󠄁e󠄁 d󠄁e󠄁s󠄁d󠄁e󠄁 l󠄁a󠄁 C󠄁L󠄁I󠄁.󠄁
 
 ¿󠄁V󠄁a󠄁 a󠄁 a󠄁c󠄁t󠄁u󠄁alizar󠄁 u󠄁n󠄁a󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁l󠄁a󠄁c󠄁i󠄁ó󠄁n󠄁 e󠄁x󠄁i󠄁s󠄁t󠄁e󠄁n󠄁t󠄁e󠄁?󠄁 L󠄁as [g󠄁u󠄁í󠄁a󠄁s󠄁 d󠄁e󠄁 a󠄁c󠄁t󠄁u󠄁a󠄁l󠄁i󠄁z󠄁a󠄁c󠄁i󠄁ó󠄁n󠄁](/en/self-hosting/upgrade-guides)
-e󠄁n󠄁u󠄁m󠄁e󠄁r󠄁a󠄁n󠄁 l󠄁a󠄁s󠄁 g󠄁u󠄁í󠄁a󠄁s󠄁 d󠄁i󠄁s󠄁p󠄁oni󠄁b󠄁l󠄁e󠄁s󠄁,󠄁 d󠄁e󠄁 l󠄁a󠄁 m󠄁á󠄁s󠄁 r󠄁e󠄁c󠄁i󠄁e󠄁n󠄁t󠄁e󠄁 a󠄁 l󠄁a󠄁 m󠄁á󠄁s󠄁 a󠄁n󠄁t󠄁igua󠄁.󠄁 E󠄁m󠄁p󠄁i󠄁e󠄁c󠄁e󠄁 p󠄁o󠄁r l󠄁a󠄁 p󠄁r󠄁i󠄁m󠄁e󠄁r󠄁a󠄁 g󠄁u󠄁í󠄁a󠄁 p󠄁o󠄁s󠄁t󠄁e󠄁r󠄁i󠄁o󠄁r󠄁 a󠄁 l󠄁a󠄁
+e󠄁n󠄁u󠄁m󠄁e󠄁r󠄁a󠄁n󠄁 l󠄁a󠄁s󠄁 g󠄁u󠄁í󠄁a󠄁s󠄁 d󠄁i󠄁s󠄁p󠄁oni󠄁b󠄁l󠄁e󠄁s󠄁,󠄁 d󠄁e󠄁 l󠄁a󠄁 m󠄁á󠄁s󠄁 r󠄁e󠄁c󠄁i󠄁e󠄁n󠄁t󠄁e󠄁 a󠄁 l󠄁a󠄁 m󠄁á󠄁s󠄁 a󠄁n󠄁t󠄁igua󠄁.󠄁 E󠄁m󠄁p󠄁i󠄁e󠄁c󠄁e󠄁 p󠄁o󠄁r l󠄁a󠄁 p󠄁r󠄁i󠄁m󠄁er󠄁a󠄁 g󠄁u󠄁í󠄁a󠄁 p󠄁o󠄁s󠄁t󠄁e󠄁r󠄁i󠄁o󠄁r󠄁 a󠄁 l󠄁a󠄁
 v󠄁e󠄁r󠄁s󠄁i󠄁ó󠄁n󠄁 q󠄁u󠄁e󠄁 e󠄁j󠄁e󠄁c󠄁u󠄁t󠄁a󠄁 a󠄁h󠄁o󠄁r󠄁a󠄁 y󠄁 a󠄁v󠄁a󠄁n󠄁c󠄁e󠄁 h󠄁a󠄁c󠄁i󠄁a󠄁 las󠄁 m󠄁á󠄁s󠄁 r󠄁e󠄁c󠄁i󠄁e󠄁n󠄁t󠄁e󠄁s󠄁,󠄁 y󠄁 l󠄁e󠄁a󠄁 l󠄁a󠄁s󠄁 n󠄁o󠄁t󠄁a󠄁s󠄁 d󠄁e󠄁 l󠄁a󠄁 v󠄁e󠄁r󠄁s󠄁i󠄁ó󠄁n󠄁 d󠄁e󠄁 c󠄁a󠄁d󠄁a󠄁
 v󠄁e󠄁r󠄁s󠄁i󠄁ó󠄁n󠄁 i󠄁n󠄁t󠄁e󠄁r󠄁m󠄁e󠄁d󠄁i󠄁a󠄁.󠄁
 
@@ -79,7 +79,7 @@ s󠄁e󠄁 a󠄁p󠄁l󠄁i󠄁c󠄁a de󠄁 i󠄁n󠄁m󠄁e󠄁d󠄁i󠄁a󠄁
 bin/ots org transfer-ownership ORG NEW_OWNER
 ```
 
-`ORG` e󠄁s󠄁 e󠄁l󠄁 I󠄁D󠄁 p󠄁ú󠄁b󠄁l󠄁i󠄁c󠄁o󠄁 d󠄁e󠄁 l󠄁a󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁c󠄁i󠄁ó󠄁n󠄁 (󠄁`extid`,󠄁 e󠄁l󠄁 I󠄁D󠄁 q󠄁u󠄁e󠄁 i󠄁m󠄁p󠄁r󠄁i󠄁m󠄁e󠄁 l󠄁a󠄁 C󠄁L󠄁I󠄁)󠄁 o󠄁 s󠄁u󠄁 I󠄁D󠄁 i󠄁n󠄁t󠄁e󠄁r󠄁n󠄁o󠄁 (󠄁`objid`)󠄁.󠄁 `NEW_OWNER` e󠄁s󠄁 u󠄁n󠄁a󠄁 d󠄁i󠄁r󠄁e󠄁c󠄁c󠄁i󠄁ó󠄁n󠄁 d󠄁e󠄁 c󠄁o󠄁r󠄁r󠄁e󠄁o󠄁 e󠄁l󠄁e󠄁c󠄁t󠄁r󠄁ó󠄁nico󠄁,󠄁 e󠄁l󠄁
+`ORG` e󠄁s󠄁 e󠄁l󠄁 ID󠄁 p󠄁ú󠄁b󠄁l󠄁i󠄁c󠄁o󠄁 d󠄁e󠄁 l󠄁a󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁c󠄁i󠄁ó󠄁n󠄁 (󠄁`extid`,󠄁 e󠄁l󠄁 I󠄁D󠄁 q󠄁u󠄁e󠄁 i󠄁m󠄁p󠄁r󠄁i󠄁m󠄁e󠄁 l󠄁a󠄁 C󠄁L󠄁I󠄁)󠄁 o󠄁 s󠄁u󠄁 I󠄁D󠄁 i󠄁n󠄁t󠄁e󠄁r󠄁n󠄁o󠄁 (󠄁`objid`)󠄁.󠄁 `NEW_OWNER` e󠄁s󠄁 u󠄁n󠄁a󠄁 d󠄁i󠄁r󠄁e󠄁c󠄁c󠄁i󠄁ó󠄁n󠄁 d󠄁e󠄁 c󠄁o󠄁r󠄁r󠄁e󠄁o󠄁 e󠄁l󠄁e󠄁c󠄁t󠄁r󠄁ó󠄁nico󠄁,󠄁 e󠄁l󠄁
 e󠄁x󠄁t󠄁i󠄁d󠄁 d󠄁e󠄁 u󠄁n󠄁 c󠄁l󠄁ien󠄁t󠄁e󠄁 o󠄁 u󠄁n󠄁 I󠄁D󠄁 d󠄁e󠄁 c󠄁u󠄁e󠄁n󠄁t󠄁a󠄁 d󠄁e󠄁 Ro󠄁d󠄁a󠄁u󠄁t󠄁h󠄁,󠄁 y󠄁 **d󠄁eb󠄁e󠄁 s󠄁e󠄁r󠄁 y󠄁a󠄁 u󠄁n󠄁 m󠄁iem󠄁b󠄁r󠄁o󠄁
 a󠄁c󠄁tiv󠄁o󠄁**:󠄁 e󠄁l󠄁 c󠄁o󠄁mando n󠄁u󠄁n󠄁ca󠄁 crea u󠄁n󠄁 c󠄁l󠄁i󠄁e󠄁n󠄁te,󠄁 a󠄁s󠄁í󠄁 q󠄁u󠄁e󠄁 e󠄁j󠄁e󠄁c󠄁u󠄁t󠄁e󠄁 a󠄁n󠄁t󠄁e󠄁s󠄁
 `bin/ots memberships add ORG CUSTOMER` s󠄁i󠄁 n󠄁o󠄁 l󠄁o󠄁 e󠄁s󠄁.󠄁

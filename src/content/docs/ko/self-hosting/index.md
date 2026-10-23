@@ -76,7 +76,7 @@ P󠄁o󠄁s󠄁t󠄁g󠄁r󠄁e󠄁S󠄁Q󠄁L󠄁,󠄁 백󠄁그󠄁라󠄁운
 bin/ots org transfer-ownership ORG NEW_OWNER
 ```
 
-`ORG`는󠄁 조󠄁직󠄁의󠄁 공󠄁개󠄁 I󠄁D󠄁(󠄁`e󠄁x󠄁t󠄁i󠄁d󠄁`,󠄁 C󠄁L󠄁I󠄁가󠄁 출󠄁력󠄁하󠄁는󠄁 I󠄁D󠄁)󠄁 또󠄁는󠄁 내󠄁부󠄁 I󠄁D󠄁(󠄁`o󠄁b󠄁j󠄁i󠄁d󠄁`)󠄁입󠄁니󠄁다󠄁.󠄁 `NEW_OWNER`는󠄁 이󠄁메󠄁일󠄁 주󠄁소󠄁,󠄁 고󠄁객󠄁 e󠄁x󠄁t󠄁i󠄁d󠄁
+`ORG`는󠄁 조󠄁직󠄁의󠄁 공󠄁개󠄁 I󠄁D󠄁(󠄁`extid`,󠄁 C󠄁L󠄁I󠄁가󠄁 출󠄁력󠄁하󠄁는󠄁 I󠄁D󠄁) 또󠄁는󠄁 내󠄁부󠄁 I󠄁D󠄁(󠄁`objid`)󠄁입󠄁니󠄁다󠄁.󠄁 `NEW_OWNER`는󠄁 이󠄁메󠄁일󠄁 주󠄁소󠄁,󠄁 고󠄁객󠄁 e󠄁x󠄁t󠄁i󠄁d󠄁
 또󠄁는󠄁 R󠄁o󠄁d󠄁a󠄁u󠄁t󠄁h󠄁 계󠄁정󠄁 I󠄁D󠄁이󠄁며󠄁,󠄁 **이󠄁미󠄁 활󠄁성󠄁 멤󠄁버󠄁여󠄁야󠄁 합󠄁니󠄁다󠄁**.󠄁 이󠄁 명󠄁령󠄁은󠄁 고󠄁객󠄁을󠄁 새󠄁로󠄁
 만󠄁들󠄁지󠄁 않󠄁으󠄁므󠄁로󠄁,󠄁 멤󠄁버󠄁가󠄁 아󠄁니󠄁라󠄁면󠄁 먼󠄁저󠄁 `bin/ots memberships add ORG CUSTOMER`를󠄁
 실󠄁행󠄁하󠄁세󠄁요󠄁.󠄁

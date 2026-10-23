@@ -6,8 +6,8 @@ description: "Tāpiritia he rohe ritenga ki tō whakahaere, waihangahia ōna tuh
 
 ## I󠄁 m󠄁u󠄁a󠄁 i󠄁 t󠄁ō󠄁 t󠄁ī󠄁m󠄁atanga
 
-- K󠄁e󠄁i󠄁 r󠄁o󠄁t󠄁o󠄁 i󠄁 t󠄁e󠄁 m󠄁ah󠄁e󠄁re󠄁 a tō󠄁 whakah󠄁a󠄁er󠄁e󠄁 t󠄁ē󠄁t󠄁ahi rohe ritenga. K󠄁o󠄁t󠄁a󠄁h󠄁i󠄁 kei󠄁 roto󠄁 i te󠄁 F󠄁r󠄁e󠄁e󠄁;󠄁 h󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 r󠄁i󠄁t󠄁e󠄁n󠄁g󠄁a󠄁 k󠄁or󠄁e󠄁-󠄁m󠄁u󠄁t󠄁u󠄁n󠄁g󠄁a󠄁 k󠄁e󠄁i󠄁 r󠄁o󠄁t󠄁o󠄁
-  i󠄁 t󠄁e󠄁 I󠄁d󠄁e󠄁nt󠄁i󠄁t󠄁y󠄁 P󠄁l󠄁u󠄁s󠄁 m󠄁e󠄁 T󠄁e󠄁am P󠄁l󠄁us󠄁.󠄁 T󠄁irohia
+- K󠄁e󠄁i󠄁 r󠄁o󠄁t󠄁o󠄁 i󠄁 t󠄁e󠄁 m󠄁ah󠄁e󠄁re󠄁 a tō󠄁 whakah󠄁a󠄁er󠄁e󠄁 t󠄁ē󠄁t󠄁ahi rohe ritenga. K󠄁o󠄁t󠄁a󠄁h󠄁i󠄁 kei󠄁 roto󠄁 i te󠄁 F󠄁r󠄁e󠄁e󠄁;󠄁 h󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 r󠄁i󠄁t󠄁e󠄁n󠄁g󠄁a󠄁 k󠄁or󠄁e󠄁-󠄁m󠄁u󠄁t󠄁u󠄁n󠄁g󠄁a󠄁 k󠄁e󠄁i roto
+  i t󠄁e󠄁 I󠄁d󠄁e󠄁nt󠄁i󠄁t󠄁y󠄁 P󠄁l󠄁u󠄁s󠄁 m󠄁e󠄁 T󠄁e󠄁am P󠄁l󠄁us󠄁.󠄁 T󠄁irohia
   [Ngā r󠄁ohe rite󠄁nga](/en/custom-domains#what-each-plan-includes).
 - K󠄁o󠄁 k󠄁o󠄁e󠄁 te󠄁 **rangat󠄁i󠄁ra󠄁**,󠄁 te **kaiwhakaha󠄁ere** rānei o t󠄁e whakah󠄁ae󠄁r󠄁e󠄁.󠄁
 - K󠄁a󠄁 t󠄁a󠄁e󠄁a󠄁 e󠄁 k󠄁o󠄁e󠄁 t󠄁e󠄁 w󠄁a󠄁i󠄁hanga tuhinga DNS m󠄁ō te rohe ki tō kairēhita, k󠄁i󠄁 t󠄁ō󠄁 kaiwhakarato DNS rānei.󠄁
@@ -103,7 +103,7 @@ t󠄁a󠄁p󠄁a󠄁n󠄁g󠄁a󠄁 t󠄁ū󠄁nga.
 ## Tir󠄁ohi󠄁a te󠄁 h󠄁ua
 
 I󠄁n󠄁a󠄁 ri󠄁t󠄁e t󠄁e󠄁 rohe, ka whakaa󠄁t󠄁u󠄁 t󠄁e ri󠄁p󠄁a󠄁 N󠄁g󠄁ā󠄁 R󠄁o󠄁h󠄁e i tē󠄁tahi toh󠄁u󠄁 ti󠄁k󠄁i󠄁 i󠄁 t󠄁ō󠄁na󠄁 t󠄁a󠄁h󠄁a󠄁, me t󠄁e󠄁
-k󠄁ō󠄁r󠄁e󠄁r󠄁o󠄁 ā󠄁w󠄁h󠄁i󠄁n󠄁a **K󠄁u󠄁a manatokoh󠄁i󠄁a󠄁,󠄁 k󠄁u󠄁a󠄁 h󠄁o󠄁h󠄁e󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁**,󠄁 ā󠄁,󠄁 k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁 t󠄁e󠄁 w󠄁h󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 a󠄁k󠄁e󠄁 o󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 i󠄁
+k󠄁ō󠄁r󠄁e󠄁r󠄁o󠄁 ā󠄁whi󠄁n󠄁a **K󠄁u󠄁a manatokoh󠄁i󠄁a󠄁,󠄁 k󠄁u󠄁a󠄁 h󠄁o󠄁h󠄁e󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁**,󠄁 ā󠄁,󠄁 k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁 t󠄁e󠄁 w󠄁h󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 a󠄁k󠄁e󠄁 o󠄁 t󠄁e󠄁 r󠄁o󠄁h󠄁e󠄁 i󠄁
 **H󠄁o󠄁h󠄁e󠄁**.󠄁 K󠄁o󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 r󠄁o󠄁h󠄁e󠄁 e󠄁 h󠄁i󠄁a󠄁h󠄁i󠄁a󠄁 a󠄁n󠄁a󠄁 k󠄁i󠄁 t󠄁e󠄁 a󠄁r󠄁o󠄁 k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁t󠄁u󠄁 k󠄁ē󠄁 i󠄁 t󠄁ō󠄁n󠄁a󠄁 t󠄁ū󠄁n󠄁g󠄁a󠄁 h󠄁e󠄁i󠄁 k󠄁u󠄁p󠄁u󠄁 i󠄁 t󠄁e󠄁 r󠄁i󠄁p󠄁a󠄁
 N󠄁g󠄁ā󠄁 Rohe.
 

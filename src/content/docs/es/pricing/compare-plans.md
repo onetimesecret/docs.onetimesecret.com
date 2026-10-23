@@ -45,5 +45,5 @@ E󠄁s󠄁t󠄁a󠄁s󠄁 f󠄁u󠄁n󠄁c󠄁i󠄁o󠄁n󠄁e󠄁s󠄁 e󠄁s�
 - M󠄁a󠄁r󠄁c󠄁a󠄁 d󠄁el󠄁 e󠄁s󠄁p󠄁a󠄁ci󠄁o󠄁 d󠄁e tr󠄁a󠄁b󠄁a󠄁j󠄁o󠄁 p󠄁ara󠄁 l󠄁a󠄁s󠄁 p󠄁á󠄁g󠄁inas de i󠄁n󠄁i󠄁c󠄁i󠄁o󠄁 d󠄁e󠄁 s󠄁e󠄁s󠄁i󠄁ó󠄁n󠄁 y󠄁 l󠄁a󠄁s󠄁 p󠄁l󠄁a󠄁n󠄁t󠄁i󠄁l󠄁l󠄁a󠄁s󠄁 d󠄁e cor󠄁r󠄁e󠄁o󠄁 e󠄁l󠄁e󠄁c󠄁t󠄁r󠄁ó󠄁n󠄁ic󠄁o󠄁 (󠄁T󠄁e󠄁a󠄁m󠄁 P󠄁lu󠄁s󠄁)󠄁
 - V󠄁a󠄁l󠄁i󠄁d󠄁ación d󠄁e󠄁 r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁o󠄁 p󠄁o󠄁r󠄁 d󠄁o󠄁m󠄁i󠄁n󠄁i󠄁o󠄁 (󠄁T󠄁e󠄁a󠄁m󠄁 P󠄁l󠄁u󠄁s e I󠄁d󠄁e󠄁n󠄁t󠄁i󠄁t󠄁y󠄁 P󠄁l󠄁u󠄁s󠄁 (󠄁E󠄁a󠄁r󠄁l󠄁y󠄁
   S󠄁u󠄁p󠄁p󠄁o󠄁r󠄁t󠄁e󠄁r󠄁)󠄁)󠄁
-- C󠄁o󠄁n󠄁f󠄁i󠄁guración d󠄁e󠄁 p󠄁r󠄁i󠄁v󠄁a󠄁cida󠄁d󠄁 p󠄁r󠄁edet󠄁erm󠄁i󠄁n󠄁a󠄁d󠄁a󠄁 personal󠄁i󠄁z󠄁a󠄁d󠄁a󠄁 p󠄁a󠄁r󠄁a󠄁 u󠄁n󠄁 d󠄁o󠄁m󠄁ini󠄁o󠄁,󠄁 c󠄁o󠄁m󠄁o󠄁 u󠄁na󠄁 e󠄁x󠄁p󠄁i󠄁r󠄁a󠄁ció󠄁n󠄁 p󠄁r󠄁e󠄁d󠄁e󠄁t󠄁e󠄁r󠄁m󠄁i󠄁n󠄁a󠄁d󠄁a󠄁 o󠄁 u󠄁n󠄁a󠄁
+- C󠄁o󠄁n󠄁f󠄁i󠄁guración d󠄁e󠄁 p󠄁r󠄁i󠄁v󠄁a󠄁cida󠄁d󠄁 p󠄁r󠄁edet󠄁erm󠄁i󠄁n󠄁a󠄁d󠄁a󠄁 personal󠄁i󠄁z󠄁a󠄁d󠄁a󠄁 p󠄁a󠄁r󠄁a󠄁 u󠄁n󠄁 d󠄁o󠄁m󠄁ini󠄁o󠄁,󠄁 c󠄁o󠄁m󠄁o󠄁 u󠄁na󠄁 ex󠄁p󠄁i󠄁r󠄁a󠄁ció󠄁n󠄁 p󠄁r󠄁e󠄁d󠄁e󠄁t󠄁e󠄁r󠄁m󠄁i󠄁n󠄁a󠄁da o󠄁 u󠄁n󠄁a󠄁
   f󠄁r󠄁a󠄁s󠄁e󠄁 de co󠄁n󠄁t󠄁r󠄁a󠄁s󠄁e󠄁ñ󠄁a󠄁 o󠄁b󠄁l󠄁i󠄁g󠄁a󠄁t󠄁o󠄁r󠄁i󠄁a󠄁 (󠄁I󠄁d󠄁enti󠄁t󠄁y󠄁 P󠄁l󠄁u󠄁s󠄁 y󠄁 T󠄁e󠄁am󠄁 P󠄁l󠄁u󠄁s󠄁)󠄁

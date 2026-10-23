@@ -107,8 +107,9 @@ as locale-specific checker exemptions:
 
 Reduced tests reproduce both alignments. These exceptions are not evidence of
 retained authorship. Their historical comparison base does not replace the
-starting-base check or CI's current merge base. The upstream #459 provenance
-re-anchor is a separate follow-up.
+starting-base check or CI's current merge base. For the develop → main PR #459,
+#469 re-anchored develop against `56e953fc`, the merge base of main and
+develop: 849 clusters in 89 files (`4d082657`, `9c946a6d`).
 
 ## Re-anchoring marks before a PR
 
@@ -134,6 +135,10 @@ It makes three rewrites, and none removes a mark recorded at the base:
 `--strict` also marks every remaining unmarked new prose cluster as AI; use it
 only when all new prose on the branch is AI-authored. A file whose marks still
 change after the last pass is reported and left as it was.
+
+The script never edits frontmatter. If it removes the last mark from a page,
+delete `textprov: true` from that page by hand, so the reader toggle does not
+appear on a page with no AI text.
 
 ```sh
 BASE=$(git merge-base HEAD origin/<target-branch>)

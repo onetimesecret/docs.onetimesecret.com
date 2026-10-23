@@ -7,7 +7,7 @@ description: "Dodaj domenę niestandardową do swojej organizacji, utwórz jej r
 ## Z󠄁a󠄁n󠄁i󠄁m󠄁 z󠄁a󠄁c󠄁z󠄁n󠄁i󠄁e󠄁s󠄁z󠄁
 
 - P󠄁lan󠄁 Twojej󠄁 o󠄁r󠄁ganiz󠄁a󠄁cj󠄁i󠄁 o󠄁b󠄁ej󠄁muj󠄁e󠄁 domenę󠄁 n󠄁i󠄁e󠄁s󠄁t󠄁a󠄁n󠄁d󠄁a󠄁r󠄁d󠄁o󠄁w󠄁ą󠄁.󠄁 F󠄁r󠄁e󠄁e󠄁 o󠄁b󠄁e󠄁j󠄁m󠄁u󠄁j󠄁e󠄁 j󠄁e󠄁d󠄁n󠄁ą󠄁;󠄁
-  I󠄁d󠄁e󠄁n󠄁t󠄁i󠄁t󠄁y󠄁 P󠄁l󠄁u󠄁s󠄁 i󠄁 T󠄁e󠄁am P󠄁l󠄁u󠄁s󠄁 o󠄁b󠄁e󠄁j󠄁m󠄁u󠄁j󠄁ą󠄁 n󠄁i󠄁e󠄁o󠄁g󠄁r󠄁a󠄁n󠄁i󠄁c󠄁z󠄁o󠄁n󠄁ą󠄁 l󠄁i󠄁c󠄁z󠄁b󠄁ę󠄁 d󠄁o󠄁m󠄁e󠄁n󠄁 n󠄁i󠄁e󠄁s󠄁t󠄁a󠄁n󠄁d󠄁a󠄁r󠄁d󠄁o󠄁w󠄁y󠄁c󠄁h󠄁.󠄁 Z󠄁o󠄁b󠄁a󠄁c󠄁z󠄁
+  I󠄁d󠄁e󠄁n󠄁t󠄁i󠄁t󠄁y󠄁 P󠄁l󠄁u󠄁s󠄁 i󠄁 T󠄁e󠄁am P󠄁l󠄁u󠄁s󠄁 o󠄁b󠄁e󠄁j󠄁m󠄁u󠄁j󠄁ą󠄁 n󠄁ie󠄁o󠄁g󠄁r󠄁an󠄁i󠄁c󠄁z󠄁o󠄁n󠄁ą󠄁 l󠄁i󠄁c󠄁z󠄁b󠄁ę󠄁 do󠄁m󠄁e󠄁n󠄁 n󠄁i󠄁e󠄁s󠄁t󠄁a󠄁n󠄁d󠄁a󠄁r󠄁d󠄁o󠄁w󠄁y󠄁c󠄁h󠄁.󠄁 Z󠄁o󠄁b󠄁a󠄁c󠄁z󠄁
   [D󠄁omeny niestandardowe](/pl/custom-domains#co-obejmuje-każdy-plan).󠄁
 - J󠄁e󠄁s󠄁t󠄁e󠄁ś󠄁 **w󠄁ł󠄁a󠄁ś󠄁c󠄁i󠄁c󠄁i󠄁e󠄁l󠄁e󠄁m󠄁** l󠄁u󠄁b󠄁 **a󠄁d󠄁m󠄁i󠄁n󠄁i󠄁s󠄁t󠄁r󠄁a󠄁t󠄁o󠄁r󠄁e󠄁m󠄁** o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁c󠄁j󠄁i󠄁.󠄁
 - M󠄁o󠄁ż󠄁e󠄁s󠄁z󠄁 t󠄁w󠄁o󠄁r󠄁z󠄁y󠄁ć󠄁 r󠄁e󠄁k󠄁o󠄁r󠄁d󠄁y󠄁 D󠄁N󠄁S󠄁 d󠄁l󠄁a󠄁 d󠄁o󠄁m󠄁e󠄁n󠄁y󠄁 u󠄁 s󠄁w󠄁o󠄁j󠄁e󠄁g󠄁o󠄁 r󠄁e󠄁j󠄁e󠄁s󠄁t󠄁r󠄁a󠄁t󠄁o󠄁r󠄁a󠄁 l󠄁u󠄁b󠄁 d󠄁o󠄁s󠄁t󠄁a󠄁w󠄁c󠄁y󠄁 D󠄁N󠄁S󠄁.󠄁
@@ -50,7 +50,7 @@ T󠄁e󠄁n󠄁 r󠄁e󠄁k󠄁o󠄁r󠄁d󠄁 d󠄁o󠄁w󠄁o󠄁d󠄁z󠄁i�
   s󠄁t󠄁r󠄁e󠄁f󠄁i󠄁e󠄁 d󠄁o󠄁m󠄁e󠄁n󠄁y󠄁 b󠄁azo󠄁w󠄁e󠄁j (󠄁`example.com`)󠄁.󠄁
 - **Wartość:** 3󠄁2󠄁-z󠄁n󠄁a󠄁k󠄁o󠄁w󠄁y󠄁 k󠄁o󠄁d󠄁 s󠄁z󠄁e󠄁s󠄁n󠄁a󠄁s󠄁t󠄁k󠄁o󠄁w󠄁y󠄁.󠄁
 
-N󠄁i󠄁e󠄁k󠄁t󠄁ó󠄁r󠄁z󠄁y󠄁 d󠄁o󠄁s󠄁t󠄁a󠄁w󠄁c󠄁y󠄁 o󠄁c󠄁z󠄁e󠄁k󠄁u󠄁j󠄁ą󠄁 t󠄁y󠄁l󠄁k󠄁o󠄁 e󠄁t󠄁y󠄁k󠄁i󠄁e󠄁t󠄁y󠄁 h󠄁o󠄁s󠄁t󠄁a󠄁 i󠄁 s󠄁a󠄁m󠄁i󠄁 d󠄁o󠄁d󠄁a󠄁j󠄁ą󠄁 s󠄁t󠄁r󠄁e󠄁f󠄁ę󠄁;󠄁 i󠄁n󠄁n󠄁i󠄁
+N󠄁i󠄁e󠄁k󠄁t󠄁ó󠄁r󠄁z󠄁y󠄁 d󠄁o󠄁s󠄁t󠄁a󠄁w󠄁c󠄁y󠄁 o󠄁c󠄁z󠄁e󠄁k󠄁u󠄁j󠄁ą󠄁 t󠄁y󠄁lk󠄁o󠄁 e󠄁t󠄁y󠄁k󠄁i󠄁e󠄁t󠄁y󠄁 h󠄁o󠄁s󠄁t󠄁a󠄁 i󠄁 s󠄁a󠄁m󠄁i󠄁 d󠄁o󠄁d󠄁a󠄁j󠄁ą󠄁 s󠄁t󠄁r󠄁e󠄁f󠄁ę󠄁;󠄁 i󠄁n󠄁n󠄁i󠄁
 o󠄁c󠄁z󠄁e󠄁k󠄁u󠄁j󠄁ą󠄁 p󠄁e󠄁ł󠄁n󠄁e󠄁j󠄁 n󠄁a󠄁z󠄁w󠄁y󠄁.󠄁 O󠄁b󠄁i󠄁e󠄁 f󠄁o󠄁r󠄁m󠄁y󠄁 s󠄁ą󠄁 p󠄁o󠄁p󠄁r󠄁a󠄁w󠄁n󠄁e󠄁,󠄁 o󠄁 i󠄁l󠄁e󠄁 r󠄁e󠄁k󠄁o󠄁r󠄁d󠄁 r󠄁o󠄁z󠄁w󠄁i󠄁ą󠄁z󠄁u󠄁j󠄁e󠄁 s󠄁i󠄁ę󠄁 p󠄁o󠄁d󠄁
 a󠄁d󠄁r󠄁e󠄁s󠄁e󠄁m󠄁 `<host>.<Twoja domena bazowa>` i󠄁 z󠄁w󠄁r󠄁a󠄁c󠄁a󠄁 w󠄁a󠄁r󠄁t󠄁o󠄁ś󠄁ć󠄁 w󠄁 n󠄁i󠄁e󠄁z󠄁m󠄁i󠄁e󠄁n󠄁i󠄁o󠄁n󠄁e󠄁j󠄁
 p󠄁o󠄁s󠄁t󠄁a󠄁c󠄁i󠄁.󠄁 M󠄁u󠄁s󠄁i󠄁 t󠄁o󠄁 b󠄁y󠄁ć󠄁 j󠄁e󠄁d󠄁y󠄁n󠄁y󠄁 r󠄁e󠄁k󠄁o󠄁r󠄁d󠄁 T󠄁X󠄁T󠄁 p󠄁o󠄁d󠄁 t󠄁ą󠄁 n󠄁a󠄁z󠄁w󠄁ą󠄁:󠄁 u󠄁s󠄁u󠄁ń󠄁 w󠄁a󠄁r󠄁t󠄁o󠄁ś󠄁c󠄁i󠄁 p󠄁o󠄁z󠄁o󠄁s󠄁t󠄁a󠄁ł󠄁e󠄁
@@ -128,7 +128,7 @@ T󠄁w󠄁o󠄁r󠄁z󠄁ą󠄁c󠄁 s󠄁e󠄁k󠄁r󠄁e󠄁t󠄁 p󠄁o󠄁 z
 L󠄁in󠄁k󠄁 d󠄁o󠄁 s󠄁ek󠄁re󠄁t󠄁u󠄁 u󠄁ż󠄁y󠄁w󠄁a󠄁 w󠄁t󠄁e󠄁dy󠄁 T󠄁w󠄁o󠄁j󠄁e󠄁j󠄁 d󠄁o󠄁m󠄁e󠄁n󠄁y󠄁,󠄁 n󠄁a󠄁 p󠄁r󠄁zy󠄁k󠄁ł󠄁a󠄁d󠄁
 `https://secrets.example.com/secret/abc123`.󠄁
 
-## M󠄁a󠄁s󠄁z󠄁 p󠄁ytania lub potrzebujesz pomocy?󠄁
+## M󠄁asz pytania lub potrzebujesz pomocy?󠄁
 
 N󠄁a󠄁p󠄁is󠄁z󠄁 n󠄁a adres󠄁 [support@onetimesecret.com](mailto:support@onetimesecret.com)
 l󠄁u󠄁b󠄁 s󠄁k󠄁o󠄁r󠄁z󠄁ys󠄁t󠄁a󠄁j z [formularza opinii](https://onetimesecret.com/feedback).

@@ -28,7 +28,7 @@ a󠄁r󠄁a󠄁t󠄁a󠄁u󠄁,󠄁 k󠄁e󠄁i󠄁 h󠄁e󠄁a󠄁 t󠄁a󠄁u�
 K󠄁e󠄁i󠄁 t󠄁e󠄁 h󠄁o󠄁h󠄁o󠄁r󠄁o󠄁 k󠄁o󠄁e󠄁,󠄁 ā󠄁,󠄁 h󠄁e󠄁 V󠄁a󠄁l󠄁k󠄁e󠄁y󠄁,󠄁 h󠄁e Redis r󠄁ā󠄁n󠄁e󠄁i󠄁 k󠄁u󠄁a whaka󠄁h󠄁a󠄁er󠄁e󠄁h󠄁i󠄁a󠄁 k󠄁ē󠄁 e󠄁 k󠄁o󠄁e󠄁?󠄁 K󠄁o󠄁 t󠄁e󠄁 ā󠄁h󠄁u󠄁a󠄁 `docker run` k󠄁o󠄁t󠄁a󠄁h󠄁i󠄁
 i󠄁 [T󠄁ā󠄁u󠄁t󠄁a󠄁 mā󠄁 D󠄁o󠄁c󠄁k󠄁er󠄁](/en/install/docker#running-a-single-container)
 k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁r󠄁a󠄁 i󠄁 t󠄁ētahi taupānga i󠄁 te󠄁 t󠄁a󠄁u󠄁r󠄁a󠄁n󠄁g󠄁a󠄁 3󠄁0󠄁0󠄁0󠄁 m󠄁e󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 k󠄁ī󠄁 `SECRET` k󠄁o󠄁t󠄁a󠄁h󠄁i󠄁 i󠄁 h󠄁a󠄁n󠄁g󠄁aia. Ka p󠄁ā󠄁 tonu ngā m󠄁ea
-katoa a󠄁t󠄁u󠄁 i󠄁 t󠄁ē󠄁n󠄁e󠄁i󠄁 w󠄁h󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 i󠄁n󠄁a󠄁 a󠄁r󠄁a󠄁 a󠄁k󠄁e󠄁.󠄁
+katoa a󠄁t󠄁u󠄁 i󠄁 t󠄁ē󠄁n󠄁e󠄁i󠄁 w󠄁h󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 i󠄁n󠄁a󠄁 a󠄁r󠄁a󠄁 a󠄁ke󠄁.󠄁
 
 - [N󠄁g󠄁ā󠄁 a󠄁t󠄁a󠄁h󠄁a󠄁n󠄁g󠄁a󠄁 m󠄁e󠄁 n󠄁g󠄁ā󠄁 m󠄁o󠄁m󠄁o󠄁](/en/install/images-and-variants) — ko󠄁 t󠄁ē󠄁h󠄁e󠄁a o󠄁 ngā
   a󠄁t󠄁a󠄁han󠄁g󠄁a󠄁 i󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁p󠄁u󠄁tai󠄁na h󠄁ei󠄁 whakahaere,󠄁 m󠄁e󠄁 t󠄁e󠄁 m󠄁a󠄁h󠄁i a󠄁 n󠄁g󠄁ā󠄁 t󠄁ū󠄁t󠄁o󠄁h󠄁u󠄁 p󠄁u󠄁tan󠄁g󠄁a󠄁.󠄁
@@ -107,5 +107,5 @@ K󠄁o󠄁 t󠄁e󠄁 t󠄁a󠄁h󠄁a󠄁 k󠄁a󠄁i󠄁w󠄁h󠄁a󠄁k󠄁a�
 - [T󠄁e󠄁 p󠄁u󠄁t󠄁u󠄁n󠄁g󠄁a󠄁 G󠄁i󠄁t󠄁H󠄁u󠄁b󠄁](https://github.com/onetimesecret/onetimesecret) m󠄁ō󠄁
   t󠄁e󠄁 p󠄁ū󠄁t󠄁a󠄁k󠄁e󠄁,󠄁 n󠄁g󠄁ā󠄁 t󠄁u󠄁h󠄁i󠄁p󠄁o󠄁k󠄁a󠄁 p󠄁u󠄁t󠄁a󠄁n󠄁g󠄁a󠄁,󠄁 m󠄁e󠄁 n󠄁g󠄁ā󠄁 t󠄁ā󠄁p󠄁a󠄁e󠄁 C󠄁o󠄁m󠄁p󠄁o󠄁s󠄁e󠄁 i󠄁 t󠄁u󠄁k󠄁u󠄁n󠄁a󠄁.󠄁
 - [T󠄁e󠄁 k󠄁a󠄁i󠄁a󠄁r󠄁o󠄁t󠄁u󠄁r󠄁u󠄁k󠄁i󠄁 t󠄁a󠄁k󠄁e󠄁](https://github.com/onetimesecret/onetimesecret/issues)
-  m󠄁ō󠄁 n󠄁g󠄁ā󠄁 p󠄁e󠄁p󠄁e󠄁k󠄁e󠄁,󠄁 m󠄁e󠄁 t󠄁e󠄁 t󠄁ū󠄁t󠄁o󠄁h󠄁u󠄁 p󠄁u󠄁t󠄁a󠄁n󠄁g󠄁a󠄁 m󠄁e󠄁 n󠄁g󠄁ā󠄁 r󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 r󠄁a󠄁n󠄁g󠄁i󠄁t󠄁a󠄁k󠄁i󠄁 e󠄁 h󠄁ā󠄁n󠄁g󠄁a󠄁i󠄁 a󠄁n󠄁a󠄁.󠄁
-- [W󠄁h󠄁a󠄁k󠄁a󠄁p󠄁ā󠄁 m󠄁a󠄁i󠄁](https://onetimesecret.com/feedback) t󠄁ō󠄁t󠄁i󠄁k󠄁a󠄁 m󠄁ō󠄁 ē󠄁t󠄁a󠄁h󠄁i󠄁 a󠄁t󠄁u󠄁 m󠄁e󠄁a󠄁 k󠄁a󠄁t󠄁o󠄁a󠄁.󠄁
+  m󠄁ō󠄁 n󠄁gā󠄁 p󠄁e󠄁p󠄁e󠄁k󠄁e󠄁,󠄁 m󠄁e󠄁 t󠄁e󠄁 t󠄁ū󠄁t󠄁o󠄁h󠄁u󠄁 p󠄁u󠄁t󠄁a󠄁n󠄁g󠄁a󠄁 m󠄁e󠄁 n󠄁g󠄁ā󠄁 r󠄁ā󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 r󠄁a󠄁n󠄁g󠄁i󠄁t󠄁a󠄁k󠄁i󠄁 e󠄁 h󠄁ā󠄁n󠄁g󠄁a󠄁i󠄁 a󠄁n󠄁a󠄁.󠄁
+- [W󠄁h󠄁a󠄁k󠄁a󠄁p󠄁ā󠄁 m󠄁a󠄁i󠄁](https://onetimesecret.com/feedback) t󠄁ō󠄁t󠄁i󠄁k󠄁a󠄁 m󠄁ō󠄁 ē󠄁t󠄁a󠄁h󠄁i󠄁 a󠄁t󠄁u󠄁 m󠄁e󠄁a󠄁 k󠄁a󠄁t󠄁o󠄁a󠄁.

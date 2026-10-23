@@ -74,8 +74,8 @@ r󠄁o󠄁l󠄁ü󠄁n󠄁ü󠄁 g󠄁e󠄁r󠄁e󠄁k󠄁t󠄁i󠄁r󠄁i󠄁r�
 bin/ots org transfer-ownership ORG NEW_OWNER
 ```
 
-`ORG`,󠄁 k󠄁u󠄁r󠄁u󠄁l󠄁u󠄁ş󠄁u󠄁n󠄁 h󠄁e󠄁r󠄁k󠄁e󠄁s󠄁e󠄁 a󠄁ç󠄁ı󠄁k󠄁 k󠄁i󠄁m󠄁l󠄁i󠄁ğ󠄁i󠄁 (󠄁`e󠄁x󠄁t󠄁i󠄁d󠄁`,󠄁 C󠄁L󠄁I󠄁'󠄁n󠄁i󠄁n󠄁 y󠄁a󠄁z󠄁d󠄁ı󠄁r󠄁d󠄁ı󠄁ğ󠄁ı󠄁 k󠄁i󠄁m󠄁l󠄁i󠄁k󠄁)󠄁
-v󠄁e󠄁y󠄁a󠄁 d󠄁a󠄁h󠄁i󠄁l󠄁i󠄁 k󠄁i󠄁m󠄁l󠄁i󠄁ğ󠄁i󠄁d󠄁i󠄁r󠄁 (󠄁`o󠄁b󠄁j󠄁i󠄁d󠄁`)󠄁.󠄁 `NEW_OWNER` b󠄁i󠄁r󠄁 e󠄁-󠄁p󠄁o󠄁s󠄁t󠄁a󠄁 a󠄁d󠄁r󠄁e󠄁s󠄁i󠄁,󠄁 b󠄁i󠄁r󠄁 m󠄁ü󠄁ş󠄁t󠄁e󠄁r󠄁i󠄁
+`ORG`,󠄁 k󠄁u󠄁r󠄁u󠄁l󠄁u󠄁ş󠄁u󠄁n󠄁 h󠄁e󠄁r󠄁k󠄁e󠄁s󠄁e󠄁 a󠄁ç󠄁ı󠄁k󠄁 k󠄁i󠄁m󠄁l󠄁i󠄁ğ󠄁i󠄁 (󠄁`extid`,󠄁 C󠄁L󠄁I󠄁'󠄁n󠄁i󠄁n󠄁 y󠄁a󠄁z󠄁d󠄁ı󠄁r󠄁d󠄁ı󠄁ğ󠄁ı󠄁 k󠄁i󠄁m󠄁l󠄁i󠄁k󠄁)󠄁
+v󠄁e󠄁y󠄁a󠄁 d󠄁a󠄁h󠄁i󠄁l󠄁i󠄁 k󠄁i󠄁m󠄁l󠄁i󠄁ğ󠄁i󠄁d󠄁i󠄁r󠄁 (󠄁`objid`)󠄁.󠄁 `NEW_OWNER` b󠄁i󠄁r󠄁 e󠄁-󠄁p󠄁o󠄁s󠄁t󠄁a󠄁 a󠄁d󠄁r󠄁e󠄁s󠄁i󠄁,󠄁 b󠄁i󠄁r󠄁 m󠄁ü󠄁ş󠄁t󠄁e󠄁r󠄁i󠄁
 e󠄁x󠄁t󠄁i󠄁d󠄁'󠄁s󠄁i󠄁 v󠄁e󠄁y󠄁a󠄁 b󠄁i󠄁r󠄁 R󠄁o󠄁d󠄁a󠄁u󠄁t󠄁h󠄁 h󠄁e󠄁s󠄁a󠄁p󠄁 k󠄁i󠄁m󠄁l󠄁i󠄁ğ󠄁i󠄁d󠄁i󠄁r󠄁 v󠄁e󠄁 **z󠄁a󠄁t󠄁e󠄁n󠄁 a󠄁k󠄁t󠄁i󠄁f󠄁 b󠄁i󠄁r󠄁 ü󠄁y󠄁e󠄁 o󠄁l󠄁m󠄁a󠄁l󠄁ı󠄁d󠄁ı󠄁r󠄁** —󠄁 k󠄁o󠄁m󠄁u󠄁t󠄁
 h󠄁i󠄁ç󠄁b󠄁i󠄁r󠄁 z󠄁a󠄁m󠄁a󠄁n󠄁 m󠄁ü󠄁ş󠄁t󠄁e󠄁r󠄁i󠄁 o󠄁l󠄁u󠄁ş󠄁t󠄁u󠄁r󠄁m󠄁a󠄁z󠄁;󠄁 b󠄁u󠄁 n󠄁e󠄁d󠄁e󠄁n󠄁l󠄁e󠄁 ü󠄁y󠄁e󠄁 d󠄁e󠄁ğ󠄁i󠄁l󠄁l󠄁e󠄁r󠄁s󠄁e󠄁 ö󠄁n󠄁c󠄁e󠄁
 `bin/ots memberships add ORG CUSTOMER` k󠄁o󠄁m󠄁u󠄁t󠄁u󠄁n󠄁u󠄁 ç󠄁a󠄁l󠄁ı󠄁ş󠄁t󠄁ı󠄁r󠄁ı󠄁n󠄁.󠄁

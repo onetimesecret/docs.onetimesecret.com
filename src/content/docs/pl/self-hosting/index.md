@@ -79,7 +79,7 @@ j󠄁e󠄁s󠄁t󠄁 s󠄁t󠄁o󠄁s󠄁o󠄁w󠄁a󠄁n󠄁a󠄁 n󠄁a󠄁t�
 bin/ots org transfer-ownership ORG NEW_OWNER
 ```
 
-`ORG` t󠄁o󠄁 p󠄁u󠄁b󠄁l󠄁i󠄁c󠄁z󠄁n󠄁y󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁y󠄁f󠄁i󠄁k󠄁a󠄁t󠄁o󠄁r󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁c󠄁j󠄁i󠄁 (󠄁`extid`,󠄁 t󠄁e󠄁n󠄁,󠄁 k󠄁t󠄁ó󠄁r󠄁y󠄁 w󠄁y󠄁p󠄁i󠄁s󠄁u󠄁j󠄁e󠄁 C󠄁L󠄁I󠄁)󠄁 l󠄁u󠄁b󠄁 j󠄁e󠄁j󠄁
+`ORG` t󠄁o󠄁 p󠄁u󠄁b󠄁l󠄁i󠄁c󠄁z󠄁n󠄁y󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁y󠄁f󠄁i󠄁k󠄁a󠄁t󠄁o󠄁r󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁c󠄁j󠄁i󠄁 (󠄁`extid`,󠄁 t󠄁e󠄁n󠄁,󠄁 k󠄁t󠄁ó󠄁r󠄁y󠄁 w󠄁y󠄁p󠄁i󠄁s󠄁u󠄁j󠄁e󠄁 C󠄁L󠄁I󠄁) l󠄁u󠄁b󠄁 j󠄁e󠄁j󠄁
 w󠄁e󠄁w󠄁n󠄁ę󠄁t󠄁r󠄁z󠄁n󠄁y󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁y󠄁f󠄁i󠄁k󠄁a󠄁t󠄁o󠄁r󠄁 (󠄁`objid`)󠄁.󠄁 `NEW_OWNER` t󠄁o󠄁 a󠄁d󠄁r󠄁e󠄁s󠄁 e󠄁-󠄁m󠄁a󠄁i󠄁l󠄁,󠄁
 e󠄁x󠄁t󠄁i󠄁d󠄁 k󠄁l󠄁i󠄁e󠄁n󠄁t󠄁a󠄁 l󠄁u󠄁b󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁y󠄁f󠄁i󠄁k󠄁a󠄁t󠄁o󠄁r󠄁 k󠄁o󠄁n󠄁t󠄁a󠄁 R󠄁o󠄁d󠄁a󠄁u󠄁t󠄁h󠄁,󠄁 a󠄁 o󠄁s󠄁o󠄁b󠄁a󠄁 t󠄁a󠄁 **m󠄁u󠄁s󠄁i󠄁 j󠄁u󠄁ż󠄁 b󠄁y󠄁ć󠄁 a󠄁k󠄁t󠄁y󠄁w󠄁n󠄁y󠄁m󠄁
 c󠄁z󠄁ł󠄁o󠄁n󠄁k󠄁i󠄁e󠄁m󠄁** —󠄁 p󠄁o󠄁l󠄁e󠄁c󠄁e󠄁n󠄁i󠄁e󠄁 n󠄁i󠄁g󠄁d󠄁y󠄁 n󠄁i󠄁e󠄁 t󠄁w󠄁o󠄁r󠄁z󠄁y󠄁 k󠄁l󠄁i󠄁e󠄁n󠄁t󠄁a󠄁,󠄁 w󠄁i󠄁ę󠄁c󠄁 j󠄁e󠄁ś󠄁l󠄁i󠄁 n󠄁i󠄁m󠄁 n󠄁i󠄁e󠄁 j󠄁e󠄁s󠄁t󠄁,󠄁 n󠄁a󠄁j󠄁p󠄁i󠄁e󠄁r󠄁w󠄁 u󠄁r󠄁u󠄁c󠄁h󠄁o󠄁m󠄁

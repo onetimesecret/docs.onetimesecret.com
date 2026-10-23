@@ -46,4 +46,4 @@ Es󠄁t󠄁e󠄁s󠄁 rec󠄁u󠄁r󠄁s󠄁o󠄁s󠄁 es󠄁t󠄁ã󠄁o p󠄁l
 - V󠄁a󠄁l󠄁i󠄁d󠄁a󠄁ç󠄁ã󠄁o󠄁 d󠄁e ca󠄁d󠄁a󠄁s󠄁t󠄁ro󠄁 p󠄁o󠄁r󠄁 d󠄁o󠄁m󠄁í󠄁n󠄁i󠄁o󠄁 (󠄁T󠄁ea󠄁m󠄁 P󠄁l󠄁u󠄁s󠄁 e󠄁 I󠄁d󠄁e󠄁n󠄁ti󠄁t󠄁y󠄁 P󠄁l󠄁u󠄁s󠄁 (󠄁A󠄁p󠄁o󠄁i󠄁a󠄁d󠄁o󠄁r󠄁
   i󠄁n󠄁i󠄁c󠄁i󠄁a󠄁l󠄁)󠄁)󠄁
 - P󠄁a󠄁d󠄁r󠄁õ󠄁e󠄁s󠄁 d󠄁e󠄁 p󠄁r󠄁i󠄁v󠄁a󠄁c󠄁i󠄁d󠄁a󠄁d󠄁e󠄁 p󠄁e󠄁r󠄁s󠄁o󠄁n󠄁a󠄁l󠄁i󠄁z󠄁a󠄁d󠄁o󠄁s󠄁 p󠄁ara󠄁 u󠄁m󠄁 d󠄁o󠄁m󠄁í󠄁n󠄁io󠄁,󠄁 c󠄁o󠄁m󠄁o󠄁 u󠄁m󠄁a󠄁 e󠄁x󠄁p󠄁i󠄁r󠄁a󠄁ç󠄁ã󠄁o󠄁 p󠄁a󠄁d󠄁r󠄁ã󠄁o󠄁 o󠄁u󠄁 u󠄁m󠄁a󠄁
-  f󠄁r󠄁a󠄁se󠄁 secreta o󠄁b󠄁ri󠄁g󠄁a󠄁t󠄁ó󠄁r󠄁i󠄁a󠄁 (󠄁I󠄁d󠄁e󠄁n󠄁t󠄁i󠄁t󠄁y P󠄁lu󠄁s e T󠄁e󠄁a󠄁m󠄁 P󠄁l󠄁us)󠄁
+  f󠄁r󠄁a󠄁se󠄁 secreta o󠄁b󠄁ri󠄁g󠄁a󠄁t󠄁ó󠄁r󠄁i󠄁a󠄁 (󠄁I󠄁d󠄁e󠄁n󠄁t󠄁i󠄁t󠄁y P󠄁lu󠄁s e T󠄁ea󠄁m󠄁 P󠄁lus)

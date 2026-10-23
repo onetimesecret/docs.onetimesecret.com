@@ -6,9 +6,9 @@ description: "Tohutoro whānui mō ngā kōwhiringa whirihoranga katoa o Onetime
 
 Ka wha󠄁k󠄁a󠄁m󠄁ār󠄁a󠄁m󠄁a󠄁 tēnei aratohu whānui i ngā kōwhiringa whirihoranga katoa mō ngā taup󠄁ānga Onetime Secret m󠄁a󠄁n󠄁a󠄁a󠄁k󠄁i󠄁-󠄁ā󠄁-󠄁k󠄁i󠄁r󠄁i󠄁.
 
-:󠄁:󠄁:󠄁t󠄁i󠄁p󠄁[󠄁W󠄁h󠄁a󠄁k󠄁a󠄁m󠄁ā󠄁t󠄁a󠄁u󠄁r󠄁i󠄁a󠄁 t󠄁e󠄁 K󠄁a󠄁i󠄁w󠄁h󠄁a󠄁k󠄁a󠄁p󠄁u󠄁t󠄁a󠄁 W󠄁h󠄁i󠄁r󠄁i󠄁h󠄁o󠄁r󠄁a󠄁n󠄁g󠄁a󠄁]󠄁
+:::tip[W󠄁h󠄁a󠄁k󠄁a󠄁m󠄁ā󠄁t󠄁a󠄁u󠄁r󠄁i󠄁a󠄁 t󠄁e󠄁 K󠄁a󠄁i󠄁w󠄁h󠄁a󠄁k󠄁a󠄁p󠄁u󠄁t󠄁a󠄁 W󠄁h󠄁i󠄁r󠄁i󠄁h󠄁o󠄁r󠄁a󠄁n󠄁g󠄁a󠄁]
 K󠄁ā󠄁o󠄁r󠄁e󠄁 k󠄁o󠄁e󠄁 i󠄁 t󠄁e󠄁 m󠄁ō󠄁h󠄁i󠄁o󠄁 m󠄁e󠄁 t󠄁ī󠄁m󠄁a󠄁t󠄁a󠄁 i󠄁 h󠄁e󠄁a󠄁?󠄁 M󠄁ā󠄁 t󠄁e󠄁 **[K󠄁a󠄁i󠄁w󠄁h󠄁a󠄁k󠄁a󠄁p󠄁u󠄁t󠄁a󠄁 W󠄁h󠄁i󠄁r󠄁i󠄁h󠄁o󠄁r󠄁a󠄁n󠄁g󠄁a󠄁](/en/self-hosting/configuration-generator/)** k󠄁a󠄁 t󠄁a󠄁e󠄁a󠄁 e󠄁 k󠄁o󠄁e󠄁 t󠄁e󠄁 k󠄁ō󠄁w󠄁h󠄁i󠄁r󠄁i󠄁 i󠄁 ē󠄁t󠄁a󠄁h󠄁i󠄁 k󠄁ō󠄁w󠄁h󠄁i󠄁r󠄁i󠄁n󠄁g󠄁a󠄁 k󠄁u󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁r󠄁i󠄁t󠄁e󠄁a󠄁 i󠄁 m󠄁u󠄁a󠄁 (󠄁a󠄁r󠄁a󠄁t󠄁a󠄁u󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁t󠄁a󠄁k󠄁o󠄁t󠄁o󠄁r󠄁a󠄁n󠄁g󠄁a󠄁,󠄁 t󠄁u󠄁k󠄁u󠄁n󠄁g󠄁a󠄁 ī󠄁m󠄁ē󠄁r󠄁a󠄁,󠄁 S󠄁S󠄁O󠄁,󠄁 n󠄁g󠄁ā󠄁 r󠄁o󠄁h󠄁e󠄁 r󠄁i󠄁t󠄁e󠄁n󠄁g󠄁a󠄁,󠄁 m󠄁e󠄁 ē󠄁t󠄁a󠄁h󠄁i󠄁 a󠄁t󠄁u󠄁)󠄁,󠄁 ā󠄁,󠄁 k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁p󠄁u󠄁t󠄁a󠄁 i󠄁a󠄁 i󠄁 n󠄁g󠄁ā󠄁 w󠄁ā󠄁h󠄁a󠄁n󠄁g󠄁a󠄁 t󠄁ī󠄁m󠄁a󠄁t󠄁a󠄁n󠄁g󠄁a󠄁 `etc/config.yaml` m󠄁e󠄁 `etc/auth.yaml`,󠄁 m󠄁e󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 k󠄁ō󠄁n󠄁a󠄁e󠄁 t󠄁ī󠄁m󠄁a󠄁t󠄁a󠄁n󠄁g󠄁a󠄁 `.env` e󠄁 h󠄁ā󠄁n󠄁g󠄁a󠄁i󠄁 a󠄁n󠄁a󠄁 —󠄁 k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁p󠄁u󠄁t󠄁a󠄁i󠄁n󠄁a󠄁 k󠄁a󠄁t󠄁o󠄁a󠄁t󠄁i󠄁a󠄁 i󠄁 r󠄁o󠄁t󠄁o󠄁 i󠄁 t󠄁ō󠄁 p󠄁ū󠄁t󠄁i󠄁r󠄁o󠄁t󠄁i󠄁r󠄁o󠄁 m󠄁a󠄁i󠄁 i󠄁 n󠄁g󠄁ā󠄁 a󠄁n󠄁g󠄁a󠄁 w󠄁h󠄁i󠄁r󠄁i󠄁h󠄁o󠄁r󠄁a󠄁n󠄁g󠄁a󠄁.󠄁
-:󠄁:󠄁:󠄁
+:::
 
 ## Ngā k󠄁ōnae w󠄁hirihoranga
 

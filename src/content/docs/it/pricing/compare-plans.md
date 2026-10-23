@@ -20,7 +20,7 @@ description: "Confronta i nostri piani per la condivisione sicura dei segreti: l
 | M󠄁e󠄁m󠄁b󠄁r󠄁i󠄁 p󠄁e󠄁r󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁z󠄁a󠄁z󠄁i󠄁o󠄁n󠄁e󠄁 | —󠄁 | 1󠄁 | N󠄁e󠄁s󠄁s󠄁u󠄁n󠄁 l󠄁i󠄁m󠄁i󠄁t󠄁e󠄁 f󠄁i󠄁s󠄁s󠄁o󠄁 | N󠄁e󠄁s󠄁s󠄁u󠄁n󠄁 l󠄁i󠄁m󠄁i󠄁t󠄁e󠄁 f󠄁i󠄁s󠄁s󠄁o󠄁 |
 | Single Sign-On (SSO) | ❌ | ❌ | ❌ | ✅ |
 | Team e dashboard condivisa | ❌ | ❌ | ❌ | ✅ |
-| A󠄁t󠄁t󠄁i󠄁v󠄁i󠄁t󠄁à󠄁 d󠄁e󠄁i󠄁 s󠄁e󠄁g󠄁re󠄁t󠄁i󠄁 (󠄁l󠄁o󠄁g󠄁 di a󠄁u󠄁d󠄁i󠄁t󠄁)󠄁 | ❌ | ❌ | ❌ | B󠄁e󠄁t󠄁a󠄁 |
+| A󠄁t󠄁t󠄁i󠄁v󠄁i󠄁t󠄁à󠄁 d󠄁e󠄁i󠄁 s󠄁e󠄁g󠄁re󠄁t󠄁i󠄁 (󠄁l󠄁o󠄁g󠄁 di au󠄁dit󠄁)󠄁 | ❌ | ❌ | ❌ | B󠄁e󠄁t󠄁a󠄁 |
 | D󠄁u󠄁rat󠄁a del s󠄁e󠄁g󠄁r󠄁e󠄁t󠄁o󠄁 | Fino a 7 giorni | Fino a 14 giorni | Fino a 30 giorni | Fino a 30 giorni |
 | Scelta della regione (EU, UK, US, CA, NZ) | ✅ | ✅ | ✅ | ✅ |
 | Crittografato in transito e a riposo | ✅ | ✅ | ✅ | ✅ |
@@ -30,7 +30,7 @@ description: "Confronta i nostri piani per la condivisione sicura dei segreti: l
 L󠄁a󠄁 c󠄁r󠄁e󠄁a󠄁z󠄁i󠄁o󠄁n󠄁e󠄁 d󠄁i󠄁 s󠄁e󠄁g󠄁r󠄁e󠄁t󠄁i󠄁 è󠄁 s󠄁o󠄁g󠄁g󠄁e󠄁t󠄁t󠄁a󠄁 a󠄁 l󠄁i󠄁m󠄁i󠄁t󠄁i󠄁 d󠄁i󠄁 f󠄁r󠄁e󠄁q󠄁u󠄁e󠄁n󠄁z󠄁a󠄁 p󠄁e󠄁r󠄁 i󠄁n󠄁d󠄁i󠄁r󠄁i󠄁z󠄁z󠄁o󠄁 d󠄁i󠄁 r󠄁e󠄁t󠄁e󠄁,󠄁 e󠄁 n󠄁o󠄁n󠄁
 e󠄁s󠄁i󠄁s󠄁t󠄁e󠄁 u󠄁n󠄁 e󠄁l󠄁e󠄁n󠄁c󠄁o󠄁 d󠄁e󠄁i󠄁 t󠄁u󠄁o󠄁i󠄁 s󠄁e󠄁g󠄁r󠄁e󠄁t󠄁i󠄁,󠄁 d󠄁o󠄁m󠄁i󠄁n󠄁i󠄁 o󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁z󠄁a󠄁z󠄁i󠄁o󠄁n󠄁i󠄁.󠄁
 
-†󠄁 Team Plus estende il mittente email personalizzato con un **dominio m󠄁i󠄁t󠄁t󠄁e󠄁n󠄁t󠄁e󠄁 flessibile**:󠄁
+†󠄁 Team Plus estende il mittente email personalizzato con un **dominio m󠄁i󠄁t󠄁t󠄁en󠄁t󠄁e󠄁 flessibile**:󠄁
 qualsiasi dominio, non solo il tu󠄁o dominio personalizzato.
 
 L󠄁a [pagina dei prezzi](https://onetimesecret.com/pricing) m󠄁o󠄁s󠄁t󠄁r󠄁a󠄁 i󠄁l󠄁 p󠄁i󠄁a󠄁n󠄁o󠄁 F󠄁r󠄁e󠄁e󠄁 c󠄁o󠄁m󠄁e󠄁

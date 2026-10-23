@@ -33,7 +33,7 @@ det sikkert, og hvor du finder detaljerne.
 ## Relateret
 
 - **[Vores principper](/en/security/our-principles)** — Privatliv først, Kommunikation og Dataminimering.
-- **[H󠄁v󠄁o󠄁r󠄁 d󠄁i󠄁n󠄁e󠄁 d󠄁ata l󠄁i󠄁g󠄁g󠄁er](/en/security/where-your-data-lives/)** — vælg, hvor dine data behandles og opbevares.
+- **[H󠄁v󠄁o󠄁r󠄁 d󠄁i󠄁n󠄁e󠄁 d󠄁ata l󠄁i󠄁gg󠄁er](/en/security/where-your-data-lives/)** — vælg, hvor dine data behandles og opbevares.
 - **[Selvhosting](/da/self-hosting/)** — kør Onetime Secret på din egen infrastruktur for fuld kontrol.
 
 ## Rapportering af et sikkerhedsproblem
