@@ -170,6 +170,27 @@ Set `SHOW_TEXTPROV_TOGGLE=false` (or `0`) at build time to hide the toggle on
 every page; the deploy workflow reads it from the environment variable of the
 same name. Enrolled pages are still decoded to clean text.
 
+Reveal mode uses gradient mist with a dotted underline, replacing the wavy
+provenance cue. `src/styles/textprov.css` adapts the upstream treatment at
+TextProv commit `4fdb0ad3ac110102280f1f63900d476c043bdeec`: 9% base tint,
+115-degree gradient, 9.8px glow blur with 3px spread, 18% glow opacity in light
+appearance and 11.7% in dark, and a 1.5px dotted line at 60% source-color opacity
+with a 5px offset. The source color uses Starlight's existing accent. The toggle
+label shows the same treatment as a legend. Hidden mode and print add no
+provenance paint; the words and native annotation styles stay intact.
+
+The optional `textprov` cascade layer lets ordinary application annotation
+styles take priority. Links retain their native underline. A proofing range
+can use `data-prov-decoration="native"` to omit provenance dots; a comment
+anchor can use `data-prov-background="native"` to omit mist and glow. Both
+hooks work on the decorated element or a container. Use unlayered annotation
+styles or a layer with higher priority than `textprov`.
+
+The clean published projection contains no AI selectors, so it does not select
+P+ decorated glyphs in addition to CSS dots. Existing font families can stay.
+The decoder pin, source attribution, enrollment, stored preference, and
+`SHOW_TEXTPROV_TOGGLE` availability setting are unchanged.
+
 The generated HTML already contains clean text before Pagefind indexing, so
 Find in page, copy, metadata, and heading fragment links do not depend on a
 client-side cleanup. Copying from the site produces plain text; source files

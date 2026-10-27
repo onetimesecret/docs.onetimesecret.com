@@ -15,3 +15,18 @@ This integration records AI edits only. It does not assign human declarations.
 The baseline decoder is experimental. Marker values overlap Unicode variation
 sequences; only explicitly enrolled, mark-aware docs are decoded. The display
 adapter leaves U+E0100 untouched, including the real 辻 + U+E0100 sequence.
+
+
+## Display treatment
+
+The docs reveal stylesheet, `src/styles/textprov.css`, is adapted from
+`js/textprov.css` at TextProv commit
+`4fdb0ad3ac110102280f1f63900d476c043bdeec`:
+https://github.com/textprov/textprov/blob/4fdb0ad3ac110102280f1f63900d476c043bdeec/js/textprov.css
+
+Gradient mist with a 60%-strength dotted underline replaces the wavy provenance
+cue. The adaptation scopes paint to the reader's shown preference and screen
+media, uses Starlight's existing accent and theme, and includes the switch
+label as a legend. The runtime and producer remain pinned to the original
+commit above; no decoder, encoding, or authoring-policy update is needed for
+this display change.
