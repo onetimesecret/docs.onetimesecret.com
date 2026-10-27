@@ -1,4 +1,4 @@
-/* Adapted from textprov/textprov js/textprov.css at c4b209c.
+/* Adapted from textprov/textprov js/textprov.css at c52de89.
  * The docs renderer publishes clean AI text; these styles never decode it.
  * Gradient mist and 80%-strength dots replace the defunct wavy provenance cue.
  * Native application annotations can remain above this optional CSS layer.
@@ -20,14 +20,14 @@
    * hidden mode and print retain native fills/underlines without reset rules.
    */
   @media screen {
-    :root[data-textprov='shown'] :is(.textprov-ai, .textprov-label) {
+    :root[data-textprov='shown'] :is(.textprov-ai, .textprov-passage, .textprov-label) {
       box-decoration-break: clone;
       -webkit-box-decoration-break: clone;
       border-radius: 3px;
       background: var(--sl-color-accent-low);
     }
 
-    :root[data-textprov='shown'] :is(.textprov-ai, .textprov-label):not(a) {
+    :root[data-textprov='shown'] :is(.textprov-ai, .textprov-passage, .textprov-label):not(a) {
       text-decoration-line: underline;
       text-decoration-style: dotted;
       text-decoration-color: var(--sl-color-text-accent);
@@ -37,7 +37,7 @@
     }
 
     @supports (background: color-mix(in srgb, currentColor 50%, transparent)) {
-      :root[data-textprov='shown'] :is(.textprov-ai, .textprov-label) {
+      :root[data-textprov='shown'] :is(.textprov-ai, .textprov-passage, .textprov-label) {
         background: linear-gradient(
           115deg,
           color-mix(in srgb, var(--sl-color-text-accent) calc(var(--textprov-tint) * .45), transparent),
@@ -48,28 +48,39 @@
           color-mix(in srgb, var(--sl-color-text-accent) var(--textprov-glow-opacity), transparent);
       }
 
-      :root[data-textprov='shown'] :is(.textprov-ai, .textprov-label):not(a) {
+      :root[data-textprov='shown'] :is(.textprov-ai, .textprov-passage, .textprov-label):not(a) {
         text-decoration-color: color-mix(in srgb, var(--sl-color-text-accent) var(--textprov-dot-strength), transparent);
       }
+    }
+
+    /* Passage grouping is presentation only. Exact ranges remain available. */
+    :root:not([data-textprov-display='exact']) .textprov-passage .textprov-ai,
+    :root[data-textprov-display='exact'] .textprov-passage:not(a) {
+      background: none;
+      box-shadow: none;
+      text-decoration: none;
     }
 
     /* Links own their underline channel. Editors can opt proofing ranges out
      * with the same native-decoration hook as the upstream renderer.
      */
-    :root[data-textprov='shown'] a :is(.textprov-ai, .textprov-label),
-    :root[data-textprov='shown'] [data-prov-decoration='native'] :is(.textprov-ai, .textprov-label):not(a),
-    :root[data-textprov='shown'] :is(.textprov-ai, .textprov-label)[data-prov-decoration='native']:not(a) {
+    :root[data-textprov='shown'] a :is(.textprov-ai, .textprov-passage, .textprov-label),
+    :root[data-textprov='shown'] [data-prov-decoration='native'] :is(.textprov-ai, .textprov-passage, .textprov-label):not(a),
+    :root[data-textprov='shown'] :is(.textprov-ai, .textprov-passage, .textprov-label)[data-prov-decoration='native']:not(a) {
       text-decoration: none;
     }
 
-    :root[data-textprov='shown'] [data-prov-background='native'] :is(.textprov-ai, .textprov-label),
-    :root[data-textprov='shown'] :is(.textprov-ai, .textprov-label)[data-prov-background='native'] {
+    :root[data-textprov='shown'] [data-prov-background='native'] :is(.textprov-ai, .textprov-passage, .textprov-label),
+    :root[data-textprov='shown'] :is(.textprov-ai, .textprov-passage, .textprov-label)[data-prov-background='native'] {
       background: none;
       box-shadow: none;
     }
 
+    :root[data-textprov='shown'] .textprov-passage:has([data-prov-decoration='native']) { text-decoration: none; }
+    :root[data-textprov='shown'] .textprov-passage:has([data-prov-background='native']) { background: none; box-shadow: none; }
+
     @media (forced-colors: active) {
-      :root[data-textprov='shown'] :is(.textprov-ai, .textprov-label) {
+      :root[data-textprov='shown'] :is(.textprov-ai, .textprov-passage, .textprov-label) {
         background: none;
         box-shadow: none;
         text-decoration-color: currentColor;
