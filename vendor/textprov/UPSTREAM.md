@@ -21,12 +21,16 @@ adapter leaves U+E0100 untouched, including the real 辻 + U+E0100 sequence.
 
 The docs reveal stylesheet, `src/styles/textprov.css`, is adapted from
 `js/textprov.css` at TextProv commit
-`4fdb0ad3ac110102280f1f63900d476c043bdeec`:
-https://github.com/textprov/textprov/blob/4fdb0ad3ac110102280f1f63900d476c043bdeec/js/textprov.css
+`c4b209cca793c7806650c5dfcfebf2d1e0e99ead`:󠄁
+https://github.com/textprov/textprov/blob/c4b209cca793c7806650c5dfcfebf2d1e0e99ead/js/textprov.css
 
-Gradient mist with a 60%-strength dotted underline replaces the wavy provenance
+Gradient mist with a 8󠄁0󠄁%󠄁-󠄁s󠄁t󠄁r󠄁e󠄁n󠄁g󠄁t󠄁h󠄁 dotted underline replaces the wavy provenance
 cue. The adaptation scopes paint to the reader's shown preference and screen
 media, uses Starlight's existing accent and theme, and includes the switch
 label as a legend. The runtime and producer remain pinned to the original
 commit above; no decoder, encoding, or authoring-policy update is needed for
 this display change.
+
+T󠄁h󠄁e󠄁 s󠄁t󠄁r󠄁o󠄁n󠄁g󠄁e󠄁r󠄁 p󠄁r󠄁o󠄁f󠄁i󠄁l󠄁e󠄁 u󠄁s󠄁e󠄁s󠄁 1󠄁4󠄁%󠄁 t󠄁i󠄁n󠄁t󠄁,󠄁 2󠄁7󠄁%󠄁 l󠄁i󠄁g󠄁h󠄁t󠄁 /󠄁 1󠄁7󠄁.󠄁5󠄁5󠄁%󠄁 d󠄁a󠄁r󠄁k󠄁 g󠄁l󠄁o󠄁w󠄁 o󠄁p󠄁a󠄁c󠄁i󠄁t󠄁y󠄁,󠄁
+1󠄁1󠄁.󠄁2󠄁p󠄁x󠄁 b󠄁l󠄁u󠄁r󠄁,󠄁 a󠄁n󠄁d󠄁 4󠄁p󠄁x󠄁 s󠄁p󠄁r󠄁e󠄁a󠄁d󠄁.󠄁 T󠄁h󠄁e󠄁 s󠄁e󠄁p󠄁a󠄁r󠄁a󠄁t󠄁e󠄁 P󠄁* w󠄁e󠄁b󠄁f󠄁o󠄁n󠄁t󠄁s󠄁 a󠄁n󠄁d󠄁 t󠄁h󠄁e󠄁i󠄁r󠄁 s󠄁h󠄁a󠄁p󠄁i󠄁n󠄁g󠄁-󠄁p󠄁r󠄁e󠄁s󠄁e󠄁r󠄁v󠄁i󠄁n󠄁g󠄁
+b󠄁u󠄁i󠄁l󠄁d󠄁e󠄁r󠄁 a󠄁r󠄁e󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁e󠄁d󠄁 i󠄁n󠄁 `src/fonts/pstar-manifest.json`;󠄁 P󠄁+󠄁 a󠄁s󠄁s󠄁e󠄁t󠄁s󠄁 a󠄁r󠄁e󠄁 r󠄁e󠄁t󠄁a󠄁i󠄁n󠄁e󠄁d󠄁.󠄁
