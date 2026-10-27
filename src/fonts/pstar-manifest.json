@@ -1,0 +1,106 @@
+{
+  "format_version": 1,
+  "source_revision": "13eba813265531b59fd7079ffc29928d57e77fe6",
+  "builder": "tools/fonts/build_pstar.py",
+  "builder_sha256": "de75791b76112cca90dc5711074961d022e68dc5bfd404d370167925a02c9c86",
+  "variant": "P*",
+  "feature": "rclt",
+  "fonts": [
+    {
+      "font": "MaryheatherNerdFontPropoPStar-Bold.woff2",
+      "samples": 1161,
+      "original_glyphs_preserved": 1664,
+      "ai_bases": 188,
+      "ai_pua": 188,
+      "result": "pass",
+      "source": "src/fonts/maryheather-provenance/MaryheatherNerdFontPropoP+-Bold.woff2",
+      "output": "maryheather-provenance/MaryheatherNerdFontPropoPStar-Bold.woff2",
+      "source_sha256": "8e5f8e29a0277548be4668cd802f223795ff4141db277aa793164abea138165f",
+      "sha256": "dffcadd262a2897a18513ebf3133a7c94028d3807868d19daad4cf371e7fa9ea"
+    },
+    {
+      "font": "MaryheatherNerdFontPropoPStar-BoldItalic.woff2",
+      "samples": 1161,
+      "original_glyphs_preserved": 1670,
+      "ai_bases": 188,
+      "ai_pua": 188,
+      "result": "pass",
+      "source": "src/fonts/maryheather-provenance/MaryheatherNerdFontPropoP+-BoldItalic.woff2",
+      "output": "maryheather-provenance/MaryheatherNerdFontPropoPStar-BoldItalic.woff2",
+      "source_sha256": "9a6b2943defebc9be79f0f43e5c044f5108b742fcb3be2bf404927fbeb68d766",
+      "sha256": "a46d0eec3cb2472f2177ad1dcd4ebaa57db9872f74a8e792941a55863df0e1a8"
+    },
+    {
+      "font": "MaryheatherNerdFontPropoPStar-Italic.woff2",
+      "samples": 1161,
+      "original_glyphs_preserved": 1674,
+      "ai_bases": 188,
+      "ai_pua": 188,
+      "result": "pass",
+      "source": "src/fonts/maryheather-provenance/MaryheatherNerdFontPropoP+-Italic.woff2",
+      "output": "maryheather-provenance/MaryheatherNerdFontPropoPStar-Italic.woff2",
+      "source_sha256": "06f344ef8aeb6a75aa28895a95bb22d5f7691027d66bc433f6b9435c56cef24d",
+      "sha256": "eaba6b08ca208414918299c1cef8e59236471e6786c82ec45aae2240835bc88c"
+    },
+    {
+      "font": "MaryheatherNerdFontPropoPStar-Regular.woff2",
+      "samples": 1161,
+      "original_glyphs_preserved": 1667,
+      "ai_bases": 188,
+      "ai_pua": 188,
+      "result": "pass",
+      "source": "src/fonts/maryheather-provenance/MaryheatherNerdFontPropoP+-Regular.woff2",
+      "output": "maryheather-provenance/MaryheatherNerdFontPropoPStar-Regular.woff2",
+      "source_sha256": "fbe69faa676b1be570b5072292a85815d3c860dc59932aa6ed734635e0661227",
+      "sha256": "44abd6b4c0f31dfe28e099f903ecd056ad4406f25386a7c3a5371caa416fb939"
+    },
+    {
+      "font": "ZillaSlabNerdFontPropoPStar-Bold.woff2",
+      "samples": 1161,
+      "original_glyphs_preserved": 1675,
+      "ai_bases": 188,
+      "ai_pua": 188,
+      "result": "pass",
+      "source": "src/fonts/zilla-slab-provenance/ZillaSlabNerdFontPropoP+-Bold.woff2",
+      "output": "zilla-slab-provenance/ZillaSlabNerdFontPropoPStar-Bold.woff2",
+      "source_sha256": "f21846816a8e7fb7329fd9f0ec182f1c4e3cba3bc00f48036de49ff1dbacdf0f",
+      "sha256": "dc61ab7f446af3a0cbe0525003d97f064a5f08673dcb051c4c98a86d7b41ea6d"
+    },
+    {
+      "font": "ZillaSlabNerdFontPropoPStar-BoldItalic.woff2",
+      "samples": 1161,
+      "original_glyphs_preserved": 1675,
+      "ai_bases": 188,
+      "ai_pua": 188,
+      "result": "pass",
+      "source": "src/fonts/zilla-slab-provenance/ZillaSlabNerdFontPropoP+-BoldItalic.woff2",
+      "output": "zilla-slab-provenance/ZillaSlabNerdFontPropoPStar-BoldItalic.woff2",
+      "source_sha256": "6151105d7c7e30feefcaa2986cb66670a9a3f1cdfcd4bf7f1954f6bb7d197505",
+      "sha256": "fe1a57a84286f76d56125a9d426c9ae63298590ed76d569e3e74acb18d77bda3"
+    },
+    {
+      "font": "ZillaSlabNerdFontPropoPStar-Italic.woff2",
+      "samples": 1161,
+      "original_glyphs_preserved": 1674,
+      "ai_bases": 188,
+      "ai_pua": 188,
+      "result": "pass",
+      "source": "src/fonts/zilla-slab-provenance/ZillaSlabNerdFontPropoP+-Italic.woff2",
+      "output": "zilla-slab-provenance/ZillaSlabNerdFontPropoPStar-Italic.woff2",
+      "source_sha256": "dcc049e3b0b835a47e9910a0c6c3d2a12e9f3b0d72cc7cd13da740a9d1ce8429",
+      "sha256": "b8b47dfce6e51badd89693b3d96d349b460126c69d47cdf3d04e57ecd25dfc15"
+    },
+    {
+      "font": "ZillaSlabNerdFontPropoPStar-Regular.woff2",
+      "samples": 1161,
+      "original_glyphs_preserved": 1674,
+      "ai_bases": 188,
+      "ai_pua": 188,
+      "result": "pass",
+      "source": "src/fonts/zilla-slab-provenance/ZillaSlabNerdFontPropoP+-Regular.woff2",
+      "output": "zilla-slab-provenance/ZillaSlabNerdFontPropoPStar-Regular.woff2",
+      "source_sha256": "c766f4af88e3aca0294f095e605a19ffb6f0191e9e074198f1ee058b3374896e",
+      "sha256": "737476817042fe39e15a5c45b0c8f98cebc5186d8ca6aa3c7de7bd5c4da503e9"
+    }
+  ]
+}
