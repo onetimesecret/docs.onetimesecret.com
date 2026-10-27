@@ -1,19 +1,19 @@
-/* Adapted from textprov/textprov js/textprov.css at 4fdb0ad.
+/* Adapted from textprov/textprov js/textprov.css at c4b209c.
  * The docs renderer publishes clean AI text; these styles never decode it.
- * Gradient mist and 60%-strength dots replace the defunct wavy provenance cue.
+ * Gradient mist and 80%-strength dots replace the defunct wavy provenance cue.
  * Native application annotations can remain above this optional CSS layer.
  */
 @layer textprov {
   :root {
-    --textprov-tint: 9%;
-    --textprov-dot-strength: 60%;
-    --textprov-glow-opacity: 18%;
-    --textprov-glow-blur: 9.8px;
-    --textprov-glow-spread: 3px;
+    --textprov-tint: 14%;
+    --textprov-dot-strength: 80%;
+    --textprov-glow-opacity: 27%;
+    --textprov-glow-blur: 11.2px;
+    --textprov-glow-spread: 4px;
   }
 
   :root[data-theme='dark'] {
-    --textprov-glow-opacity: 11.7%;
+    --textprov-glow-opacity: 17.55%;
   }
 
   /* The switch label wears the treatment as its legend. Paint only on screen:
