@@ -5,6 +5,7 @@ description: Generate deployment keys for a new instance and preserve the keys a
 audience: operator
 pageType: how-to
 sourceOfTruth: onetimesecret/.env.reference (key purposes and rotation variables); onetimesecret/apps/web/auth/config/base.rb (full-mode authentication keys); onetimesecret/lib/tasks/init.rake (the ots:secrets task generates a 64-byte SECRET and independent AUTH_SECRET, ARGON2_SECRET and ACCOUNT_ID_SECRET, keeping existing values); onetimesecret/apps/web/auth/config/features/argon2.rb (ARGON2_SECRET is an optional password pepper with no old-secret setting); onetimesecret/docker/README.md (ARGON2_SECRET strongly recommended for full mode)
+draft: true
 ---
 
 P󠄁r󠄁e󠄁p󠄁a󠄁r󠄁e󠄁 t󠄁h󠄁e󠄁 k󠄁e󠄁y󠄁s󠄁 f󠄁o󠄁r󠄁 a󠄁 n󠄁e󠄁w󠄁 d󠄁e󠄁p󠄁l󠄁o󠄁y󠄁m󠄁e󠄁n󠄁t󠄁 b󠄁e󠄁f󠄁o󠄁r󠄁e󠄁 a󠄁c󠄁c󠄁e󠄁p󠄁t󠄁i󠄁n󠄁g󠄁 r󠄁e󠄁a󠄁l󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁s󠄁 o󠄁r󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁s󠄁.󠄁
