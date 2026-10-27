@@ -4,7 +4,7 @@
 Usage: refresh_textprov_dots.py OLD.woff2 NEW.woff2
 Requires the recorded four-point AI bar and six-point unknown sawtooth. Only
 those inspection decorations change: AI becomes repeated dots, unknown a bar.
-Application CSS provides gradient mist and 60% dot color strength.
+Application CSS provides gradient mist and the configured dot color strength.
 """
 
 import argparse
