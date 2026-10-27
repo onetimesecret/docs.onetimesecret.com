@@ -1,9 +1,10 @@
 ---
+textprov: true
 title: Install with Docker
 description: How to bring up Onetime Secret from the Compose stacks the project ships, and what has to be set before either stack will start.
 audience: operator
 pageType: how-to
-sourceOfTruth: onetimesecret/docker/README.md:3-5,42-48,62-75,93-108,110-126 (the Compose stacks live in the application repository, the separate docker-compose repository is archived as of v0.24, the quick start that omits VALKEY_PASSWORD, the per-stack requirement table including AUTH_SECRET and ACCOUNT_ID_SECRET, the OTS_IMAGE_TAG default, and where each stack keeps its data); onetimesecret/docker/compose/docker-compose.simple.yml:20-30,66-113 (the pinned OTS_IMAGE_TAG default, env_file ../../.env, the fail-fast SECRET and VALKEY_PASSWORD interpolation, Valkey exposed only to the Compose network, AOF persistence into a named volume); onetimesecret/docker/compose/docker-compose.full.yml:44-46,60-89,100-109,193-265,272-283 (Caddy publishes 80 and 443, RACK_ENV defaults to production, the empty-default AUTH_SECRET and ACCOUNT_ID_SECRET next to the fail-fast SECRET, VALKEY_PASSWORD, RABBITMQ_USER and RABBITMQ_PASS, JOBS_ENABLED defaulting to false, /app/data shared by app, worker-email and scheduler, and the email.message.send queue the worker consumes); onetimesecret/docker-compose.yml:25-27 (the root file is an include wrapper defaulting to the simple stack); onetimesecret/apps/web/auth/config/base.rb:12,22-27 (AUTH_SECRET backs the HMAC secret guard, ACCOUNT_ID_SECRET of at least 32 bytes is required in production and boot raises without it, an unset RACK_ENV fails closed to production, and the two are independent); onetimesecret/scripts/install-tests/seed-compose-env.sh:8-13,31-45 (the six values CI exports for a full-stack up, why AUTH_SECRET and ACCOUNT_ID_SECRET are among them, and the repo-root .env written separately as the env_file target); onetimesecret/.github/workflows/compose-smoke.yml:71-79 (Compose interpolation reads the shell and the project-directory .env, not a service's env_file, and -f docker/compose/<file> shifts the project directory); onetimesecret/scripts/check-version-pins.sh:17-21 (the compose app-image default is held in lockstep with the README quick-start pin); onetimesecret/Procfile.example:14-17 (set -a; source .env; set +a as the documented way to put .env into the shell); onetimesecret/README.md:22-29 with onetimesecret/.github/workflows/compose-smoke.yml:315-324,336-347 (the documented docker run form, including --add-host, and the CI lane that resolves its image tag from the README and exercises it)
+sourceOfTruth: onetimesecret/docker/README.md:3-5,42-48,62-75,93-108,110-126 (the Compose stacks live in the application repository, the separate docker-compose repository is archived as of v0.24, the quick start that omits VALKEY_PASSWORD, the per-stack requirement table including AUTH_SECRET and ACCOUNT_ID_SECRET, the OTS_IMAGE_TAG default, and where each stack keeps its data); onetimesecret/docker/compose/docker-compose.simple.yml:20-30,66-113 (the pinned OTS_IMAGE_TAG default, env_file ../../.env, the fail-fast SECRET and VALKEY_PASSWORD interpolation, Valkey exposed only to the Compose network, AOF persistence into a named volume); onetimesecret/docker/compose/docker-compose.full.yml:44-46,60-89,100-109,193-265,272-283 (Caddy publishes 80 and 443, RACK_ENV defaults to production, the empty-default AUTH_SECRET and ACCOUNT_ID_SECRET next to the fail-fast SECRET, VALKEY_PASSWORD, RABBITMQ_USER and RABBITMQ_PASS, JOBS_ENABLED defaulting to false, /app/data shared by app, worker-email and scheduler, and the email.message.send queue the worker consumes); onetimesecret/docker-compose.yml:25-27 (the root file is an include wrapper defaulting to the simple stack); onetimesecret/apps/web/auth/config/base.rb:12,22-27 (AUTH_SECRET backs the HMAC secret guard, ACCOUNT_ID_SECRET of at least 32 bytes is required in production and boot raises without it, an unset RACK_ENV fails closed to production, and the two are independent); onetimesecret/scripts/install-tests/seed-compose-env.sh:8-13,31-45 (the six values CI exports for a full-stack up, why AUTH_SECRET and ACCOUNT_ID_SECRET are among them, and the repo-root .env written separately as the env_file target); onetimesecret/.github/workflows/compose-smoke.yml:71-79 (Compose interpolation reads the shell and the project-directory .env, not a service's env_file, and -f docker/compose/<file> shifts the project directory); onetimesecret/scripts/check-version-pins.sh:17-21 (the compose app-image default is held in lockstep with the README quick-start pin); onetimesecret/Procfile.example:14-17 (set -a; source .env; set +a as the documented way to put .env into the shell); onetimesecret/README.md:22-29 with onetimesecret/.github/workflows/compose-smoke.yml:315-324,336-347 (the documented docker run form, including --add-host, and the CI lane that resolves its image tag from the README and exercises it); onetimesecret/.env.example:17,23 (blank SECRET and ACCOUNT_ID_SECRET assignments); onetimesecret/docker/compose/docker-compose.full.yml:76 and etc/defaults/auth.defaults.yaml:189 (optional ARGON2_SECRET password pepper)
 sidebar:
   label: Install with Docker
 ---
@@ -78,34 +79,40 @@ independent secrets — neither is derived from `SECRET`, neither can be
 regenerated from it, and rotating one does not invalidate the other. Back them
 up alongside `SECRET`.
 
-The application repository's own quick start copies `.env.example` and appends
-only `SECRET`. That sequence does not work — `.env.example` carries no
-`VALKEY_PASSWORD` and both stacks abort on it. Run this instead:
+F󠄁o󠄁r󠄁 a󠄁 n󠄁ew󠄁 i󠄁n󠄁s󠄁t󠄁allation,󠄁 copy󠄁 t󠄁h󠄁e󠄁 t󠄁e󠄁m󠄁p󠄁l󠄁a󠄁t󠄁e󠄁 o󠄁n󠄁l󠄁y󠄁 if `.env` does not a󠄁l󠄁re󠄁a󠄁d󠄁y󠄁
+e󠄁x󠄁i󠄁s󠄁t󠄁,󠄁 t󠄁h󠄁en r󠄁es󠄁t󠄁ric󠄁t acc󠄁e󠄁ss󠄁 to it:
 
 ```bash
-[ -f .env ] || cp .env.example .env
-grep -q '^SECRET=' .env          || echo "SECRET=$(openssl rand -hex 32)" >> .env
-grep -q '^VALKEY_PASSWORD=' .env || echo "VALKEY_PASSWORD=$(openssl rand -hex 32)" >> .env
+(umask 077; test -e .env || cp .env.example .env)
+chmod 600 .env
 ```
 
-For the full stack, add the four it needs on top of those:
+O󠄁p󠄁e󠄁n󠄁 `.env` i󠄁n󠄁 y󠄁o󠄁u󠄁r ed󠄁i󠄁t󠄁o󠄁r󠄁.󠄁 T󠄁h󠄁e󠄁 t󠄁e󠄁m󠄁pl󠄁a󠄁t󠄁e󠄁 a󠄁l󠄁r󠄁e󠄁a󠄁d󠄁y󠄁 c󠄁o󠄁n󠄁t󠄁a󠄁i󠄁n󠄁s󠄁 b󠄁l󠄁a󠄁n󠄁k󠄁 a󠄁s󠄁s󠄁i󠄁g󠄁n󠄁m󠄁e󠄁n󠄁t󠄁s󠄁 s󠄁u󠄁c󠄁h󠄁
+a󠄁s󠄁 `SECRET=` and `ACCOUNT_ID_SECRET=`;󠄁 f󠄁i󠄁l󠄁l󠄁 t󠄁h󠄁o󠄁s󠄁e󠄁 l󠄁i󠄁n󠄁e󠄁s󠄁 r󠄁a󠄁t󠄁h󠄁e󠄁r󠄁 t󠄁h󠄁a󠄁n󠄁 a󠄁p󠄁p󠄁end󠄁i󠄁n󠄁g󠄁
+d󠄁u󠄁p󠄁l󠄁i󠄁c󠄁a󠄁t󠄁e󠄁 k󠄁e󠄁y󠄁s󠄁.󠄁 A󠄁d󠄁d󠄁 `VALKEY_PASSWORD` i󠄁f󠄁 i󠄁t󠄁 i󠄁s󠄁 a󠄁b󠄁s󠄁e󠄁n󠄁t󠄁.󠄁
+
+G󠄁e󠄁n󠄁e󠄁r󠄁a󠄁t󠄁e󠄁 a󠄁 s󠄁e󠄁p󠄁a󠄁r󠄁a󠄁t󠄁e󠄁 va󠄁l󠄁u󠄁e󠄁 f󠄁o󠄁r󠄁 e󠄁a󠄁c󠄁h󠄁 m󠄁i󠄁s󠄁s󠄁i󠄁n󠄁g󠄁 o󠄁r󠄁 b󠄁l󠄁a󠄁n󠄁k󠄁 s󠄁ecr󠄁e󠄁t󠄁 w󠄁i󠄁t󠄁h󠄁:󠄁
 
 ```bash
-grep -q '^RABBITMQ_USER=' .env      || echo "RABBITMQ_USER=ots" >> .env
-grep -q '^RABBITMQ_PASS=' .env      || echo "RABBITMQ_PASS=$(openssl rand -hex 16)" >> .env
-grep -q '^AUTH_SECRET=' .env        || echo "AUTH_SECRET=$(openssl rand -hex 32)" >> .env
-grep -q '^ACCOUNT_ID_SECRET=' .env  || echo "ACCOUNT_ID_SECRET=$(openssl rand -hex 32)" >> .env
+openssl rand -hex 32
 ```
 
-Every line above is guarded, so the block is safe to rerun against an existing
-installation. Without the guards, a second run appends a *new* `SECRET` — and
-because Compose and dotenv take the last assignment of a duplicated key, the
-application would come up on a different root secret with every stored secret
-encrypted under the old one and no longer readable. The same applies to
-`AUTH_SECRET` and `ACCOUNT_ID_SECRET`: rotating them invalidates existing
-sessions and account-id derivation. If you need to rotate a value deliberately,
-edit the existing line in `.env` rather than appending a second one, and treat
-it as the destructive operation it is.
+F󠄁o󠄁r󠄁 t󠄁h󠄁e󠄁 s󠄁i󠄁m󠄁p󠄁l󠄁e󠄁 s󠄁t󠄁a󠄁c󠄁k󠄁,󠄁 s󠄁e󠄁t󠄁 `SECRET` a󠄁n󠄁d󠄁 `VALKEY_PASSWORD`.󠄁 F󠄁o󠄁r󠄁 t󠄁h󠄁e󠄁 f󠄁u󠄁l󠄁l󠄁 s󠄁t󠄁a󠄁c󠄁k󠄁,󠄁
+a󠄁l󠄁s󠄁o󠄁 s󠄁e󠄁t󠄁 `RABBITMQ_USER` (󠄁f󠄁o󠄁r󠄁 e󠄁x󠄁a󠄁m󠄁p󠄁l󠄁e󠄁,󠄁 `ots`)󠄁,󠄁 `RABBITMQ_PASS`,󠄁 `AUTH_SECRET`,󠄁
+`ACCOUNT_ID_SECRET` a󠄁n󠄁d󠄁 `ARGON2_SECRET`.󠄁 U󠄁s󠄁e󠄁 a󠄁 f󠄁r󠄁e󠄁s󠄁h󠄁 g󠄁ene󠄁r󠄁a󠄁t󠄁e󠄁d󠄁 v󠄁a󠄁l󠄁u󠄁e󠄁 f󠄁o󠄁r󠄁 e󠄁a󠄁c󠄁h󠄁
+s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁.󠄁 S󠄁e󠄁t󠄁 `ARGON2_SECRET` b󠄁e󠄁f󠄁o󠄁r󠄁e󠄁 c󠄁r󠄁e󠄁a󠄁t󠄁i󠄁n󠄁g󠄁 p󠄁a󠄁ssword󠄁s󠄁 a󠄁n󠄁d󠄁 k󠄁e󠄁e󠄁p󠄁 i󠄁t󠄁:󠄁 c󠄁h󠄁a󠄁n󠄁g󠄁i󠄁n󠄁g󠄁 i󠄁t󠄁
+p󠄁r󠄁e󠄁v󠄁e󠄁n󠄁t󠄁s󠄁 e󠄁x󠄁i󠄁s󠄁t󠄁i󠄁n󠄁g󠄁 p󠄁a󠄁s󠄁s󠄁w󠄁o󠄁r󠄁d󠄁s󠄁 f󠄁r󠄁o󠄁m󠄁 v󠄁e󠄁r󠄁i󠄁f󠄁y󠄁i󠄁n󠄁g󠄁.󠄁 S󠄁e󠄁e󠄁
+[S󠄁e󠄁c󠄁r󠄁e󠄁t󠄁s󠄁 a󠄁n󠄁d󠄁 k󠄁e󠄁y󠄁s󠄁](/en/configure/secrets-and-keys).󠄁
+
+B󠄁e󠄁f󠄁o󠄁r󠄁e󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁i󠄁n󠄁g󠄁,󠄁 c󠄁hec󠄁k󠄁 t󠄁h󠄁a󠄁t󠄁 e󠄁a󠄁c󠄁h󠄁 r󠄁e󠄁q󠄁u󠄁i󠄁r󠄁e󠄁d󠄁 k󠄁e󠄁y󠄁 h󠄁a󠄁s󠄁 e󠄁xa󠄁c󠄁t󠄁l󠄁y󠄁 o󠄁n󠄁e󠄁 a󠄁s󠄁s󠄁i󠄁g󠄁n󠄁m󠄁e󠄁n󠄁t󠄁 a󠄁n󠄁d󠄁 a󠄁
+n󠄁o󠄁n󠄁-󠄁e󠄁m󠄁p󠄁t󠄁y󠄁 v󠄁a󠄁l󠄁u󠄁e󠄁.󠄁 K󠄁e󠄁e󠄁p󠄁 `.env` o󠄁u󠄁t󠄁 o󠄁f󠄁 v󠄁e󠄁r󠄁s󠄁i󠄁o󠄁n󠄁 c󠄁o󠄁n󠄁t󠄁r󠄁o󠄁l󠄁 a󠄁n󠄁d󠄁 b󠄁a󠄁c󠄁k󠄁 i󠄁t󠄁 u󠄁p󠄁 s󠄁e󠄁c󠄁u󠄁r󠄁e󠄁l󠄁y󠄁.󠄁
+
+:::caution[Ex󠄁i󠄁s󠄁t󠄁i󠄁n󠄁g󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁a󠄁t󠄁i󠄁o󠄁n󠄁s󠄁]
+P󠄁r󠄁e󠄁s󠄁e󠄁r󠄁v󠄁e󠄁 e󠄁very p󠄁o󠄁p󠄁u󠄁la󠄁t󠄁e󠄁d󠄁 v󠄁a󠄁l󠄁u󠄁e󠄁.󠄁 D󠄁o󠄁 n󠄁o󠄁t󠄁 r󠄁u󠄁n󠄁 k󠄁e󠄁y󠄁 g󠄁e󠄁ner󠄁at󠄁i󠄁o󠄁n󠄁 a󠄁s󠄁 a󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁u󠄁p󠄁 s󠄁t󠄁e󠄁p󠄁 o󠄁r󠄁
+r󠄁e󠄁p󠄁l󠄁a󠄁c󠄁e󠄁 a󠄁 v󠄁a󠄁l󠄁u󠄁e󠄁 m󠄁e󠄁r󠄁e󠄁l󠄁y󠄁 be󠄁c󠄁a󠄁u󠄁s󠄁e󠄁 y󠄁ou are r󠄁e󠄁p󠄁e󠄁a󠄁t󠄁i󠄁n󠄁g󠄁 these instr󠄁u󠄁c󠄁t󠄁i󠄁o󠄁n󠄁s󠄁.󠄁 I󠄁f󠄁 a󠄁 k󠄁e󠄁y󠄁
+u󠄁s󠄁e󠄁d󠄁 b󠄁y󠄁 an existing installation is missin󠄁g o󠄁r󠄁 b󠄁l󠄁a󠄁nk, restore i󠄁t󠄁 f󠄁r󠄁o󠄁m󠄁 b󠄁a󠄁c󠄁k󠄁u󠄁p󠄁.󠄁
+G󠄁e󠄁n󠄁e󠄁r󠄁a󠄁t󠄁i󠄁n󠄁g󠄁 a󠄁 r󠄁e󠄁p󠄁l󠄁a󠄁c󠄁e󠄁m󠄁e󠄁n󠄁t󠄁 do󠄁e󠄁s n󠄁o󠄁t󠄁 r󠄁eco󠄁v󠄁e󠄁r encrypted data󠄁,󠄁 sessions or pass󠄁w󠄁or󠄁ds.
+:::
 
 Both stacks declare `env_file: ../../.env`, so a repository-root `.env` has to
 exist even when you supply every value through the shell. There is a second trap
@@ -189,19 +196,35 @@ covers what the three processes do and what changes once jobs are on.
 
 To put the application in front of a datastore you already have, a plain
 `docker run` works. The form below is the one the project's README documents,
-and CI exercises it against the published image:
+and CI exercises it against the published image.󠄁
+
+F󠄁o󠄁r󠄁 a󠄁 **n󠄁e󠄁w󠄁** i󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁a󠄁t󠄁i󠄁o󠄁n󠄁,󠄁 c󠄁r󠄁e󠄁a󠄁t󠄁e󠄁 t󠄁h󠄁e󠄁 r󠄁o󠄁o󠄁t󠄁 k󠄁e󠄁y󠄁 o󠄁n󠄁c󠄁e󠄁.󠄁 T󠄁h󠄁e󠄁 s󠄁u󠄁b󠄁s󠄁h󠄁e󠄁l󠄁l󠄁 s󠄁e󠄁t󠄁s󠄁 p󠄁r󠄁i󠄁v󠄁a󠄁t󠄁e󠄁
+p󠄁e󠄁r󠄁m󠄁i󠄁s󠄁s󠄁i󠄁o󠄁n󠄁s󠄁 a󠄁n󠄁d󠄁 r󠄁e󠄁f󠄁u󠄁s󠄁e󠄁s󠄁 t󠄁o󠄁 o󠄁v󠄁e󠄁r󠄁w󠄁r󠄁i󠄁t󠄁e󠄁 a󠄁n󠄁 e󠄁x󠄁i󠄁s󠄁t󠄁i󠄁n󠄁g󠄁 f󠄁i󠄁l󠄁e󠄁:
 
 ```bash
-openssl rand -hex 32 > .ots_secret && chmod 600 .ots_secret
+(umask 077; set -C; openssl rand -hex 32 > .ots_secret)
+```
 
-docker run -p 3000:3000 -d \
-  --name onetimesecret \
-  --add-host=host.docker.internal:host-gateway \
-  -e REDIS_URL=redis://host.docker.internal:6379/0 \
-  -e SECRET="$(cat .ots_secret)" \
-  -e HOST=localhost:3000 \
-  -e SSL=false \
-  onetimesecret/onetimesecret:$OTS_VERSION
+I󠄁f󠄁 t󠄁h󠄁e󠄁 f󠄁i󠄁l󠄁e󠄁 a󠄁l󠄁r󠄁e󠄁a󠄁d󠄁y󠄁 e󠄁x󠄁i󠄁s󠄁t󠄁s󠄁,󠄁 k󠄁e󠄁e󠄁p󠄁 i󠄁t󠄁.󠄁 B󠄁a󠄁ck󠄁 i󠄁t󠄁 u󠄁p󠄁 s󠄁e󠄁c󠄁u󠄁r󠄁e󠄁l󠄁y󠄁;󠄁 i󠄁f󠄁 i󠄁t󠄁 i󠄁s󠄁 e󠄁m󠄁p󠄁t󠄁y󠄁 o󠄁r󠄁 l󠄁o󠄁s󠄁t󠄁
+a󠄁f󠄁t󠄁e󠄁r󠄁 t󠄁he󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁n󠄁c󠄁e󠄁 h󠄁a󠄁s󠄁 b󠄁e󠄁e󠄁n󠄁 u󠄁s󠄁e󠄁d󠄁,󠄁 r󠄁e󠄁s󠄁t󠄁o󠄁r󠄁e󠄁 t󠄁h󠄁e󠄁 o󠄁r󠄁i󠄁g󠄁i󠄁n󠄁a󠄁l󠄁 k󠄁e󠄁y󠄁 b󠄁e󠄁f󠄁o󠄁r󠄁e󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁i󠄁n󠄁g󠄁.󠄁
+
+U󠄁s󠄁e󠄁 t󠄁h󠄁e󠄁 s󠄁a󠄁me󠄁 f󠄁i󠄁l󠄁e󠄁 e󠄁v󠄁e󠄁r󠄁y󠄁 t󠄁i󠄁m󠄁e󠄁 y󠄁ou󠄁 c󠄁r󠄁e󠄁a󠄁t󠄁e󠄁 t󠄁h󠄁e󠄁 c󠄁o󠄁n󠄁t󠄁a󠄁i󠄁n󠄁e󠄁r󠄁.󠄁 T󠄁h󠄁i󠄁s󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁u󠄁p󠄁 b󠄁l󠄁o󠄁c󠄁k󠄁
+r󠄁e󠄁f󠄁u󠄁s󠄁e󠄁s󠄁 a󠄁 m󠄁i󠄁s󠄁s󠄁i󠄁n󠄁g󠄁 o󠄁r󠄁 e󠄁m󠄁p󠄁t󠄁y󠄁 k󠄁e󠄁y󠄁 f󠄁i󠄁l󠄁e󠄁:󠄁
+
+```bash
+if [ -s .ots_secret ]; then
+  docker run -p 3000:3000 -d \
+    --name onetimesecret \
+    --add-host=host.docker.internal:host-gateway \
+    -e REDIS_URL=redis://host.docker.internal:6379/0 \
+    -e SECRET="$(cat .ots_secret)" \
+    -e HOST=localhost:3000 \
+    -e SSL=false \
+    onetimesecret/onetimesecret:$OTS_VERSION
+else
+  printf '%s\n' 'Missing or empty .ots_secret; restore the original key before starting.' >&2
+  false
+fi
 ```
 
 `--add-host=host.docker.internal:host-gateway` is not optional on Linux. Without
