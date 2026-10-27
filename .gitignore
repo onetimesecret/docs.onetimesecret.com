@@ -16,6 +16,7 @@ logs
 *.log
 *.txt
 !src/fonts/**/OFL.txt
+!tools/fonts/requirements.txt
 
 # Misc
 .DS_Store
