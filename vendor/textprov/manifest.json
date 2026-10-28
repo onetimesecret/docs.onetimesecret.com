@@ -1,0 +1,111 @@
+{
+  "repository": "https://github.com/textprov/textprov",
+  "revision": "57257b877f934ce2edf6b221ad6fa100546dbb9c",
+  "files": [
+    {
+      "source": "js/textprov.js",
+      "path": "textprov.cjs",
+      "sha256": "d00af0781ccde03db9ed843fc21f39c3eb09e6c0d2003a0ae07120941322959c"
+    },
+    {
+      "source": "js/textprov.css",
+      "path": "textprov.css",
+      "sha256": "3d58eb804c3c285d1f388402f752a0c88c552689f1b84fd59cda0ffd24e17ef7"
+    },
+    {
+      "source": "python/LICENSE",
+      "path": "LICENSE",
+      "sha256": "d12afe17a226aaf00fa49609401b6b01b7159142784d0b287ee95cef8c8281a0"
+    },
+    {
+      "source": "python/textprov/__init__.py",
+      "path": "python/textprov/__init__.py",
+      "sha256": "946d5ed23273a6fc295e76913560b3b74de4b4f3c4986572863dd4f31009e86d"
+    },
+    {
+      "source": "python/textprov/__main__.py",
+      "path": "python/textprov/__main__.py",
+      "sha256": "5edfb3a8fef5980e4a8b267b52b71e7c5c2b62136d5a33a58a28b13e693ab6ee"
+    },
+    {
+      "source": "python/textprov/_core.py",
+      "path": "python/textprov/_core.py",
+      "sha256": "ccfd578c774c1cec225887326bd0a0c36718b7c50c9819f3ea5bbfec6bc24ed2"
+    },
+    {
+      "source": "python/textprov/_display.py",
+      "path": "python/textprov/_display.py",
+      "sha256": "924d9123e191e23b70ce1cc45fee06b7f94497cae3544ac70e7cebfdfb891d7c"
+    },
+    {
+      "source": "python/textprov/_encode.py",
+      "path": "python/textprov/_encode.py",
+      "sha256": "2bd957781e52aa130a454982929de51dfe734163f8a5cb09a6472c7bfe511a1c"
+    },
+    {
+      "source": "python/textprov/_grapheme.py",
+      "path": "python/textprov/_grapheme.py",
+      "sha256": "2936cf44c0db7f69a04a823441ded96c612ad9005081a2099c33178f669d0a0c"
+    },
+    {
+      "source": "python/textprov/_ucd.py",
+      "path": "python/textprov/_ucd.py",
+      "sha256": "b53cf666bd7443310bb75d7089c79c9d53f09ad5b0f473dc63f2989a21326158"
+    },
+    {
+      "source": "python/textprov/_version.py",
+      "path": "python/textprov/_version.py",
+      "sha256": "00fb81a4162093c5ad4dc512d79276bfc6a89debafcace5559df5481ef6e01c0"
+    },
+    {
+      "source": "python/textprov/attribution.py",
+      "path": "python/textprov/attribution.py",
+      "sha256": "f50e5bb1b51c050088d4c35d24d4e91200019478e550f63f8bfc1b19db37ced2"
+    },
+    {
+      "source": "python/textprov/chronicle.py",
+      "path": "python/textprov/chronicle.py",
+      "sha256": "22056e251fcf3a1dccaa28e69633c7c21a15ba5105b883dd82e7a544edfc589e"
+    },
+    {
+      "source": "python/textprov/editing.py",
+      "path": "python/textprov/editing.py",
+      "sha256": "a1b406c4945c1ae3a15d062b24c09984f9a17823b57634cc95d18ca772c529f6"
+    },
+    {
+      "source": "python/textprov/export.py",
+      "path": "python/textprov/export.py",
+      "sha256": "bd3f71e43aeff9a31345559c16bd043c3e37c3e90e788acae4a7e6a6af7c53b4"
+    },
+    {
+      "source": "python/textprov/mapping.json",
+      "path": "python/textprov/mapping.json",
+      "sha256": "a5e03701fc99b444c465199bc7bf657e4bc81e74b405649f67e45eac6f8331c7"
+    },
+    {
+      "source": "python/textprov/marking.py",
+      "path": "python/textprov/marking.py",
+      "sha256": "d062dbc3b49d71904b4e725831545aff5a0aa6e3ac57aa35439e1bbc0d768da5"
+    },
+    {
+      "source": "python/textprov/policy.py",
+      "path": "python/textprov/policy.py",
+      "sha256": "fa26ee7dfa7300faf71454a18f5d7e4509d3f572fb0ec3a4ee202b80224f17bd"
+    },
+    {
+      "source": "python/textprov/prose.py",
+      "path": "python/textprov/prose.py",
+      "sha256": "4fc805b61e8dcecc09da4779fc9ec471cf26e321dde99d0e1ed5e68e0c1ba953"
+    },
+    {
+      "source": "python/textprov/textprov.css",
+      "path": "python/textprov/textprov.css",
+      "sha256": "3d58eb804c3c285d1f388402f752a0c88c552689f1b84fd59cda0ffd24e17ef7"
+    },
+    {
+      "source": "python/textprov/workspace.py",
+      "path": "python/textprov/workspace.py",
+      "sha256": "8a09a84ad00480c2fd33e6cd54f5d8a4e615b9e932354a8431857570371b77b0"
+    }
+  ]
+}

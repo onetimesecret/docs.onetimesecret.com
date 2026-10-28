@@ -16,15 +16,20 @@
  *   <script src="textprov.js"></script>
  *   <script>textprov.render(document.body);</script>
  *
- * Options (all optional, passed to both runs() and render()):
+ * Decoder options (also accepted by render()):
  *   strip           default false  Remove mark selectors; keep inert selectors.
  *                                  Decode PUA marks to bare bases; state is
  *                                  still reported via data-prov.
- *   merge_whitespace default true  Whitespace between two runs of the same
- *                                  state joins them into one run. This is the
+ *   merge_whitespace runs default true; render default false. Whitespace between
+ *                                  equal states joins them into one run. This is the
  *                                  snake_case spelling; mergeWhitespace is an
  *                                  accepted alias.
+ * Renderer options:
  *   prefix          default "prov" Class prefix, e.g. "prov" -> "prov prov-STATE".
+ *   display         default "passage"; use "exact" for the recorded ranges.
+ *                   setDisplay(root, mode) changes paint without changing text.
+ * Passage metadata contains exact spans with unassigned whitespace; runs()
+ * remains the unchanged decoder API (use merge_whitespace:false for inspection).
  */
 (function (global) {
   "use strict";
@@ -522,7 +527,9 @@
     return {
       strip: !!opts.strip,
       mergeWhitespace: merge !== false,
+      mergeSpecified: merge !== undefined,
       prefix: typeof opts.prefix === "string" && opts.prefix.length ? opts.prefix : "prov",
+      display: opts.display === undefined ? "passage" : opts.display,
     };
   }
 
@@ -576,39 +583,75 @@
     return merged;
   }
 
+  function setDisplay(root, display) {
+    if (display !== "passage" && display !== "exact")
+      throw new Error("display must be 'passage' or 'exact'");
+    root = root || document.body;
+    (root.nodeType === 9 ? root.documentElement : root).setAttribute("data-prov-display", display);
+  }
+
   function render(root, opts) {
     var o = resolveOptions(opts);
     root = root || document.body;
+    setDisplay(root, o.display);
+    var doc = root.ownerDocument || root;
     var provClass = o.prefix;
-    var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+    var blocks = "p,h1,h2,h3,h4,h5,h6,li,dt,dd,td,th,figcaption,div,section,article,blockquote";
+    var walker = doc.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
       acceptNode: function (n) {
-        return /[\u{E0100}-\u{E0101}\u{100000}-\u{10FFFF}]/u.test(n.nodeValue) &&
-          !n.parentNode.closest("script,style,textarea,." + provClass)
+        return !n.parentNode.closest("script,style,textarea,[data-prov-passage],." + provClass)
           ? NodeFilter.FILTER_ACCEPT
           : NodeFilter.FILTER_REJECT;
       },
     });
     var nodes = [];
+    var owners = new Map();
     var n;
-    while ((n = walker.nextNode())) nodes.push(n);
+    while ((n = walker.nextNode())) {
+      var block = n.parentElement.closest(blocks);
+      var owner = block && (block === root || root.contains(block)) ? block : root;
+      var code = !!n.parentElement.closest("pre,code,svg,math");
+      var pieces = n.nodeValue.split(/((?:\r?\n[ \t]*){2,}|\u2029)/);
+      var entries = pieces.map(function (text) {
+        // Blank-line-separated plain-text paragraphs have independent owners.
+        var key = pieces.length > 1 ? {} : owner;
+        var exact = runs(text, { strip: o.strip, merge_whitespace: o.display === "exact" && o.mergeSpecified ? o.mergeWhitespace : false });
+        if (!owners.has(key)) owners.set(key, new Set());
+        exact.forEach(function (run) { if (run.state && !code) owners.get(key).add(run.state); });
+        return { exact: exact, owner: key };
+      });
+      nodes.push({ node: n, entries: entries, code: code });
+    }
     var count = 0;
     for (var i = 0; i < nodes.length; i++) {
-      var node = nodes[i];
-      var frag = document.createDocumentFragment();
-      var rs = runs(node.nodeValue, o);
-      for (var j = 0; j < rs.length; j++) {
-        var r = rs[j];
-        if (!r.state) {
-          frag.appendChild(document.createTextNode(r.text));
-          continue;
+      var item = nodes[i], node = item.node;
+      if (!item.entries.some(function (entry) { return entry.exact.some(function (run) { return run.state; }) || (!item.code && owners.get(entry.owner).size); })) continue;
+      var frag = doc.createDocumentFragment();
+      item.entries.forEach(function (entry) {
+        var states = Array.from(owners.get(entry.owner)).sort();
+        var content = doc.createDocumentFragment();
+        var rs = entry.exact;
+        for (var j = 0; j < rs.length; j++) {
+          var r = rs[j];
+          if (!r.state) {
+            content.appendChild(doc.createTextNode(r.text));
+            continue;
+          }
+          var span = doc.createElement("span");
+          span.className = provClass + " " + provClass + "-" + r.state;
+          span.dataset.prov = r.state;
+          span.textContent = r.text;
+          content.appendChild(span);
+          count++;
         }
-        var span = document.createElement("span");
-        span.className = provClass + " " + provClass + "-" + r.state;
-        span.dataset.prov = r.state;
-        span.textContent = r.text;
-        frag.appendChild(span);
-        count++;
-      }
+        if (states.length && !item.code) {
+          var passage = doc.createElement("span");
+          passage.className = provClass + "-passage";
+          passage.dataset.provPassage = states.length === 1 ? states[0] : "mixed";
+          passage.appendChild(content);
+          frag.appendChild(passage);
+        } else frag.appendChild(content);
+      });
       node.parentNode.replaceChild(frag, node);
     }
     return count;
@@ -617,6 +660,7 @@
   var textprov = {
     runs: runs,
     render: render,
+    setDisplay: setDisplay,
     segments: segments,
     specVersion: "0.2",
     unicodeVersion: UNICODE_VERSION,

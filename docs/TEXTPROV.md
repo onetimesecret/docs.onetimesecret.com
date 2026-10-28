@@ -172,7 +172,7 @@ same name. Enrolled pages are still decoded to clean text.
 
 Reveal mode uses gradient mist with a dotted underline, replacing the wavy
 provenance cue. `src/styles/textprov.css` adapts the upstream treatment at
-TextProv commit `c52de89ba0203fe390bb6e408b5b9faacd7793b1`:󠄁 1󠄁4󠄁%󠄁 b󠄁a󠄁s󠄁e󠄁 t󠄁i󠄁n󠄁t󠄁,󠄁
+TextProv commit `57257b877f934ce2edf6b221ad6fa100546dbb9c`:󠄁 1󠄁4󠄁%󠄁 b󠄁a󠄁s󠄁e󠄁 t󠄁i󠄁n󠄁t󠄁,󠄁
 1󠄁1󠄁5󠄁-󠄁d󠄁e󠄁g󠄁r󠄁e󠄁e󠄁 g󠄁r󠄁a󠄁d󠄁i󠄁e󠄁n󠄁t󠄁,󠄁 1󠄁1󠄁.󠄁2󠄁p󠄁x󠄁 g󠄁l󠄁o󠄁w󠄁 b󠄁l󠄁u󠄁r󠄁 w󠄁i󠄁t󠄁h󠄁 4󠄁p󠄁x󠄁 s󠄁p󠄁r󠄁e󠄁a󠄁d󠄁,󠄁 2󠄁7󠄁%󠄁 g󠄁l󠄁o󠄁w󠄁 o󠄁p󠄁a󠄁c󠄁i󠄁t󠄁y󠄁 i󠄁n󠄁 l󠄁i󠄁g󠄁h󠄁t󠄁
 a󠄁p󠄁p󠄁e󠄁a󠄁r󠄁a󠄁n󠄁c󠄁e󠄁 a󠄁n󠄁d󠄁 1󠄁7󠄁.󠄁5󠄁5󠄁%󠄁 i󠄁n󠄁 d󠄁a󠄁r󠄁k󠄁,󠄁 a󠄁n󠄁d󠄁 a󠄁 1󠄁.󠄁5󠄁p󠄁x󠄁 d󠄁o󠄁t󠄁t󠄁e󠄁d󠄁 l󠄁i󠄁n󠄁e󠄁 a󠄁t󠄁 8󠄁0󠄁%󠄁 source-color opacity
 with a 5px offset. The source color uses Starlight's existing accent. The toggle
@@ -189,8 +189,9 @@ styles or a layer with higher priority than `textprov`.
 The clean published projection contains no AI selectors, so it does not select
 P󠄁* d󠄁e󠄁c󠄁o󠄁r󠄁a󠄁t󠄁e󠄁d󠄁 g󠄁l󠄁y󠄁p󠄁h󠄁s󠄁 i󠄁n󠄁 a󠄁d󠄁d󠄁i󠄁t󠄁i󠄁o󠄁n󠄁 t󠄁o󠄁 C󠄁S󠄁S󠄁 d󠄁o󠄁t󠄁s󠄁.󠄁 T󠄁h󠄁e󠄁 b󠄁r󠄁a󠄁n󠄁d󠄁 a󠄁n󠄁d󠄁 s󠄁e󠄁r󠄁i󠄁f󠄁 f󠄁a󠄁l󠄁l󠄁b󠄁a󠄁c󠄁k󠄁
 s󠄁t󠄁a󠄁c󠄁k󠄁s󠄁 s󠄁e󠄁l󠄁e󠄁c󠄁t󠄁 s󠄁e󠄁p󠄁a󠄁r󠄁a󠄁t󠄁e󠄁 P󠄁* f󠄁a󠄁m󠄁i󠄁l󠄁i󠄁e󠄁s󠄁;󠄁 o󠄁r󠄁i󠄁g󠄁i󠄁n󠄁a󠄁l󠄁 P󠄁+󠄁 a󠄁s󠄁s󠄁e󠄁t󠄁s󠄁 r󠄁e󠄁m󠄁a󠄁i󠄁n󠄁 a󠄁v󠄁a󠄁i󠄁l󠄁a󠄁b󠄁l󠄁e󠄁.󠄁
-The decoder pin, source attribution, enrollment, stored preference, and
-`SHOW_TEXTPROV_TOGGLE` availability setting are unchanged.
+The decoder a󠄁n󠄁d󠄁 c󠄁o󠄁m󠄁p󠄁l󠄁e󠄁t󠄁e󠄁 P󠄁y󠄁t󠄁h󠄁o󠄁n󠄁 p󠄁a󠄁c󠄁k󠄁a󠄁g󠄁e󠄁 u󠄁s󠄁e󠄁 t󠄁h󠄁e󠄁 m󠄁e󠄁r󠄁g󠄁e󠄁d󠄁 r󠄁e󠄁v󠄁i󠄁s󠄁i󠄁o󠄁n󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁e󠄁d󠄁 i󠄁n󠄁
+`vendor/textprov/manifest.json`.󠄁 S󠄁o󠄁u󠄁r󠄁c󠄁e󠄁 a󠄁t󠄁t󠄁r󠄁i󠄁b󠄁u󠄁t󠄁i󠄁o󠄁n󠄁,󠄁 e󠄁n󠄁r󠄁o󠄁l󠄁l󠄁m󠄁e󠄁n󠄁t󠄁,󠄁 s󠄁t󠄁o󠄁r󠄁e󠄁d󠄁
+p󠄁r󠄁e󠄁f󠄁e󠄁r󠄁e󠄁n󠄁c󠄁e󠄁s󠄁,󠄁 a󠄁n󠄁d󠄁 t󠄁h󠄁e󠄁 `SHOW_TEXTPROV_TOGGLE` availability setting are unchanged.
 
 The generated HTML already contains clean text before Pagefind indexing, so
 Find in page, copy, metadata, and heading fragment links do not depend on a

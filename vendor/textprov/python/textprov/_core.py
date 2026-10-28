@@ -163,10 +163,28 @@ def _to_html(
     selectors,
     pua2base,
     strip=False,
-    merge_whitespace=True,
+    merge_whitespace=False,
     class_prefix="prov",
+    display="passage",
 ):
     """Render `text` as HTML spans per the experimental decorator."""
+    if display not in ("passage", "exact"):
+        raise ValueError("display must be 'passage' or 'exact'")
+    if display == "passage":
+        parts = []
+        # A soft source newline stays in its paragraph; blank lines separate it.
+        for paragraph in re.split(r"((?:\r?\n[ \t]*){2,}|\u2029)", text):
+            exact = _runs(paragraph, selectors, pua2base, strip, False)
+            states = sorted({state for state, _ in exact if state})
+            content = _to_html(paragraph, selectors, pua2base, strip, False,
+                               class_prefix, "exact")
+            if states:
+                kind = states[0] if len(states) == 1 else "mixed"
+                parts.append(f'<span class="{class_prefix}-passage" '
+                             f'data-prov-passage="{kind}">{content}</span>')
+            else:
+                parts.append(content)
+        return "".join(parts)
     parts = []
     for state, out in _runs(text, selectors, pua2base, strip, merge_whitespace):
         escaped = html.escape(out)
@@ -192,7 +210,8 @@ def runs(text, mapping=None, strip=False, merge_whitespace=True):
 
 
 def to_html(
-    text, mapping=None, strip=False, merge_whitespace=True, class_prefix="prov"
+    text, mapping=None, strip=False, merge_whitespace=False, class_prefix="prov",
+    display="passage",
 ):
     """Render `text` as HTML spans per the experimental decorator."""
     mapping = mapping or default_mapping()
@@ -203,6 +222,7 @@ def to_html(
         strip,
         merge_whitespace,
         class_prefix,
+        display,
     )
 
 
