@@ -14,12 +14,96 @@ describe('static TextProv HTML', () => {
     const paragraphs = doc.querySelectorAll('p');
     expect(paragraphs[0].textContent).toBe('Choose a guide for what you want to do next.');
     expect(paragraphs[1].querySelector('.textprov-passage')).toBeNull();
-    expect([...paragraphs[0].querySelectorAll('.textprov-passage')].map(el => el.textContent).join(''))
-      .toBe(paragraphs[0].textContent);
+    expect([...paragraphs[0].querySelectorAll('.textprov-passage')].map(el => el.textContent).join('')).toBe('Choose a guide');
     expect([...paragraphs[0].querySelectorAll('.textprov-ai')].map(el => el.textContent).join('')).toBe('Coosagui');
-    expect(doc.querySelector('a .textprov-passage')?.textContent).toBe('you want');
-    expect(doc.querySelector('em .textprov-passage')?.textContent).toBe('for what');
+    expect(doc.querySelector('a .textprov-passage')).toBeNull();
+    expect(doc.querySelector('em .textprov-passage')).toBeNull();
     expect(render(render(html))).toBe(render(html));
+  });
+
+  it('groups across inline formatting and entities without changing attribution or links', () => {
+    const html = `<div class="sl-markdown-content"><p>Old co<em>${ai('lo')}</em>ur &amp; <a href="/next">${ai('shape')}</a> untouched ending.</p></div>`;
+    const result = render(html);
+    const doc = new JSDOM(result).window.document;
+    expect(doc.querySelector('p')?.textContent).toBe('Old colour & shape untouched ending.');
+    expect([...doc.querySelectorAll('.textprov-passage')].map(el => el.textContent).join('')).toBe('colour & shape');
+    expect([...doc.querySelectorAll('.textprov-ai')].map(el => el.textContent).join('')).toBe('loshape');
+    expect(doc.querySelector('em .textprov-ai')?.textContent).toBe('lo');
+    expect(doc.querySelector('a')?.getAttribute('href')).toBe('/next');
+    expect(render(result)).toBe(result);
+  });
+
+  it.each([
+    `<p>${ai('first')}<code>code</code>${ai('last')}</p>`,
+    `<p>${ai('first')}<br>${ai('last')}</p>`,
+    `<ul><li>${ai('first')}<ul><li>nested</li></ul>${ai('last')}</li></ul>`,
+    `<table><tr><td>${ai('first')}</td><td>original</td><td>${ai('last')}</td></tr></table>`,
+    `<p>${ai('first')}</p><p>original</p><p>${ai('last')}</p>`,
+    `<p>${ai('first')}<span lang="">unknown</span>${ai('last')}</p>`,
+    `<p>${ai('first')}<video>fallback</video>${ai('last')}</p>`,
+    `<menu><li>${ai('first')}</li><li>${ai('last')}</li></menu>`,
+  ])('does not join across excluded content, line breaks or block boundaries: %s', body => {
+    const doc = new JSDOM(render(`<div class="sl-markdown-content">${body}</div>`)).window.document;
+    expect([...doc.querySelectorAll('.textprov-passage')].map(el => el.textContent)).toEqual(['first', 'last']);
+  });
+
+  it('limits sparse edits to local words in a paragraph', () => {
+    const doc = new JSDOM(
+      render(`<div class="sl-markdown-content"><p>An ${ai('e')}dited word followed by several entirely original words and anothe${ai('r')} edit.</p></div>`),
+    ).window.document;
+    expect([...doc.querySelectorAll('.textprov-passage')].map(el => el.textContent)).toEqual(['edited', 'another']);
+  });
+
+  it('renders one recorded run that straddles a sentence boundary as one passage', () => {
+    // Whitespace is never marked, so only unspaced scripts can straddle a boundary.
+    const html = `<html lang="ja"><body><div class="sl-markdown-content"><p>これは日本${ai('語。次')}の文章です。</p></div></body></html>`;
+    const doc = new JSDOM(render(html)).window.document;
+    expect([...doc.querySelectorAll('.textprov-passage')].map(el => el.textContent)).toEqual(['日本語。次']);
+    expect([...doc.querySelectorAll('.textprov-ai')].map(el => el.textContent)).toEqual(['語。次']);
+  });
+
+  it('segments with the inherited language and resets it at nested lang attributes', () => {
+    // ICU segments these fixtures identically in every locale, so observe the
+    // locale the adapter asks for rather than a difference in the output.
+    const spy = vi.spyOn(Intl, 'Segmenter');
+    const html = `<html lang="de-CH"><body><div class="sl-markdown-content"><p>Alt ${ai('neu')} <span lang="fr">${ai('mot')}</span> <span lang="">${ai('x')}</span></p></div></body></html>`;
+    const doc = new JSDOM(render(html)).window.document;
+    expect([...doc.querySelectorAll('.textprov-passage')].map(el => el.textContent)).toEqual(['neu', 'mot', 'x']);
+    expect(spy.mock.calls.map(call => call[0])).toEqual(expect.arrayContaining(['de-CH', 'fr', '']));
+    spy.mockRestore();
+  });
+
+  it.each([
+    `<div>first${'\u{E0101}'}<hr>unrelated</div>`,
+    `<details><summary>first${'\u{E0101}'}</summary>unrelated</details>`,
+    `<div>first${'\u{E0101}'}<aside>unrelated</aside></div>`,
+    `<p>first${'\u{E0101}'}<code>code</code>unrelated</p>`,
+    `<p>first${'\u{E0101}'}<br>unrelated</p>`,
+    `<p>first${'\u{E0101}'}<span lang="fr">unrelated</span></p>`,
+  ])('does not expand a one-sided edit across a structural boundary: %s', body => {
+    const doc = new JSDOM(render(`<div class="sl-markdown-content">${body}</div>`)).window.document;
+    expect([...doc.querySelectorAll('.textprov-passage')].map(el => el.textContent)).toEqual(['first']);
+  });
+
+  it('preserves Unicode and exact attribution through inline DOM projection', () => {
+    const body = `😀 Original caf<em>é\u{E0101}</em> &amp; <a href="/next">👩‍💻\u{E0101}</a> &#x65E5;本\u{E0101}語。 Original ending.`;
+    const result = render(`<html lang="ja"><body><div class="sl-markdown-content"><p>${body}</p></div></body></html>`);
+    const doc = new JSDOM(result).window.document;
+    expect(doc.querySelector('p')?.textContent).toBe('😀 Original café & 👩‍💻 日本語。 Original ending.');
+    expect([...doc.querySelectorAll('.textprov-ai')].map(el => el.textContent).join('')).toBe('é👩‍💻本');
+    expect([...doc.querySelectorAll('.textprov-ai')].every(el => el.closest('.textprov-passage'))).toBe(true);
+    // 本 expands to the dictionary word 日本語, not to the ideographic full stop.
+    expect([...doc.querySelectorAll('.textprov-passage')].map(el => el.textContent).join('')).toBe('cafe\u0301 & 👩‍💻 日本語');
+    expect(render(result)).toBe(result);
+  });
+
+  it.each([false, true])('renders many disjoint ranges without losing text (inline nodes: %s)', inline => {
+    const fragment = `${ai('Edit')}. Original words here. `;
+    const body = Array.from({ length: 1000 }, () => inline ? `<em>${fragment}</em>` : fragment).join('');
+    const doc = new JSDOM(render(`<div class="sl-markdown-content"><p>${body}</p></div>`)).window.document;
+    expect(doc.querySelector('p')?.textContent).toBe('Edit. Original words here. '.repeat(1000));
+    expect(doc.querySelectorAll('.textprov-passage')).toHaveLength(1000);
+    expect([...doc.querySelectorAll('.textprov-passage')].every(el => el.textContent === 'Edit')).toBe(true);
   });
 
   it('keeps whitespace unassigned in the exact inspection metadata', () => {
