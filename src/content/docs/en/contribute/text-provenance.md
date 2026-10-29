@@ -6,37 +6,50 @@ audience: end-user
 pageType: concept
 ---
 
-## W󠄁h󠄁a󠄁t󠄁 t󠄁h󠄁e󠄁 h󠄁i󠄁g󠄁h󠄁l󠄁i󠄁g󠄁h󠄁t󠄁i󠄁n󠄁g󠄁 t󠄁e󠄁l󠄁l󠄁s󠄁 y󠄁o󠄁u󠄁
+## Highlighting AI-written text
 
-T󠄁h󠄁e󠄁 **H󠄁i󠄁g󠄁h󠄁l󠄁i󠄁g󠄁h󠄁t󠄁 A󠄁I󠄁 e󠄁d󠄁i󠄁t󠄁s󠄁** s󠄁w󠄁i󠄁t󠄁c󠄁h󠄁 r󠄁e󠄁v󠄁e󠄁a󠄁l󠄁s󠄁 c󠄁h󠄁a󠄁r󠄁a󠄁c󠄁t󠄁e󠄁r󠄁s󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁e󠄁d󠄁 a󠄁s󠄁 A󠄁I󠄁-󠄁w󠄁r󠄁i󠄁t󠄁t󠄁e󠄁n󠄁.󠄁
-A󠄁 h󠄁i󠄁g󠄁h󠄁l󠄁i󠄁g󠄁h󠄁t󠄁 c󠄁a󠄁n󠄁 c󠄁o󠄁v󠄁e󠄁r󠄁 a󠄁 w󠄁h󠄁o󠄁l󠄁e󠄁 p󠄁a󠄁s󠄁s󠄁a󠄁g󠄁e󠄁 o󠄁r󠄁 j󠄁u󠄁s󠄁t󠄁 p󠄁a󠄁r󠄁t󠄁 o󠄁f󠄁 a󠄁 s󠄁e󠄁n󠄁t󠄁e󠄁n󠄁c󠄁e󠄁,󠄁 d󠄁e󠄁p󠄁e󠄁n󠄁d󠄁i󠄁n󠄁g󠄁 o󠄁n󠄁
-w󠄁h󠄁i󠄁c󠄁h󠄁 w󠄁o󠄁r󠄁d󠄁i󠄁n󠄁g󠄁 c󠄁a󠄁m󠄁e󠄁 f󠄁r󠄁o󠄁m󠄁 A󠄁I󠄁 a󠄁n󠄁d󠄁 w󠄁h󠄁i󠄁c󠄁h󠄁 p󠄁a󠄁r󠄁t󠄁s󠄁 w󠄁e󠄁r󠄁e󠄁 c󠄁h󠄁a󠄁n󠄁g󠄁e󠄁d󠄁 l󠄁a󠄁t󠄁e󠄁r󠄁.󠄁
+Knowing how content was made helps you assess what you’re reading. T󠄁h󠄁e󠄁 **H󠄁i󠄁g󠄁h󠄁l󠄁i󠄁g󠄁h󠄁t󠄁 A󠄁I󠄁 e󠄁d󠄁i󠄁t󠄁s󠄁** toggle
+r󠄁e󠄁v󠄁e󠄁a󠄁l󠄁s󠄁 the c󠄁h󠄁a󠄁r󠄁a󠄁c󠄁t󠄁e󠄁r󠄁s󠄁 that were r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁e󠄁d󠄁 a󠄁s󠄁 A󠄁I󠄁-󠄁w󠄁r󠄁i󠄁t󠄁t󠄁e󠄁n󠄁.󠄁 T󠄁u󠄁r󠄁n󠄁i󠄁n󠄁g󠄁 i󠄁t󠄁 o󠄁n󠄁 c󠄁h󠄁a󠄁n󠄁g󠄁e󠄁s󠄁 how the content is
+displayed,󠄁 but does n󠄁o󠄁t change the󠄁 content itself.󠄁
 
-### O󠄁r󠄁i󠄁g󠄁i󠄁n󠄁 a󠄁n󠄁d󠄁 r󠄁e󠄁v󠄁i󠄁e󠄁w󠄁
+### W󠄁h󠄁a󠄁t󠄁 t󠄁h󠄁e󠄁 h󠄁i󠄁g󠄁h󠄁l󠄁i󠄁g󠄁h󠄁t󠄁s󠄁 m󠄁e󠄁a󠄁n󠄁
 
-- **H󠄁i󠄁g󠄁h󠄁l󠄁i󠄁g󠄁h󠄁t󠄁e󠄁d󠄁 t󠄁e󠄁x󠄁t󠄁 h󠄁a󠄁s󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁e󠄁d󠄁 A󠄁I󠄁 o󠄁r󠄁i󠄁g󠄁i󠄁n󠄁.󠄁** I󠄁t󠄁 m󠄁a󠄁y󠄁 a󠄁l󠄁r󠄁e󠄁a󠄁d󠄁y󠄁 h󠄁a󠄁v󠄁e󠄁 b󠄁e󠄁e󠄁n󠄁 r󠄁e󠄁v󠄁i󠄁e󠄁w󠄁e󠄁d󠄁
-  b󠄁y󠄁 a󠄁 p󠄁e󠄁r󠄁s󠄁o󠄁n󠄁. K󠄁e󠄁e󠄁p󠄁i󠄁n󠄁g󠄁 t󠄁h󠄁e󠄁 w󠄁o󠄁r󠄁d󠄁i󠄁n󠄁g󠄁 a󠄁f󠄁t󠄁e󠄁r󠄁 r󠄁e󠄁v󠄁i󠄁e󠄁w󠄁 d󠄁o󠄁e󠄁s󠄁 n󠄁o󠄁t󠄁 c󠄁h󠄁a󠄁n󠄁g󠄁e󠄁 i󠄁t󠄁s󠄁 o󠄁r󠄁i󠄁g󠄁i󠄁n󠄁.󠄁
-- **U󠄁n󠄁m󠄁a󠄁r󠄁k󠄁e󠄁d󠄁 t󠄁e󠄁x󠄁t󠄁 h󠄁a󠄁s󠄁 n󠄁o󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁e󠄁d󠄁 o󠄁r󠄁i󠄁g󠄁i󠄁n󠄁.󠄁** O󠄁l󠄁d󠄁e󠄁r󠄁 c󠄁o󠄁n󠄁t󠄁e󠄁n󠄁t󠄁 w󠄁a󠄁s󠄁 n󠄁o󠄁t󠄁 l󠄁a󠄁b󠄁e󠄁l󠄁l󠄁e󠄁d󠄁
-  r󠄁e󠄁t󠄁r󠄁o󠄁a󠄁c󠄁t󠄁i󠄁v󠄁e󠄁l󠄁y󠄁,󠄁 s󠄁o󠄁 a󠄁 p󠄁a󠄁g󠄁e󠄁 w󠄁i󠄁t󠄁h󠄁 n󠄁o󠄁 h󠄁i󠄁g󠄁h󠄁l󠄁i󠄁g󠄁h󠄁t󠄁s󠄁 c󠄁a󠄁n󠄁 s󠄁t󠄁i󠄁l󠄁l󠄁 c󠄁o󠄁n󠄁t󠄁a󠄁i󠄁n󠄁 e󠄁a󠄁r󠄁l󠄁i󠄁e󠄁r󠄁 A󠄁I󠄁 w󠄁o󠄁r󠄁k󠄁.
+- **H󠄁i󠄁g󠄁h󠄁l󠄁i󠄁g󠄁h󠄁t󠄁e󠄁d󠄁 t󠄁e󠄁x󠄁t󠄁 was r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁e󠄁d󠄁 as being A󠄁I󠄁-generated text.󠄁** This happens during the
+  development/writing process and is integrated directly into the dev tools we use. It's at an early
+  stage and is not a perfect process. Content can still be highlighted after it's b󠄁e󠄁e󠄁n󠄁
+  r󠄁e󠄁v󠄁i󠄁e󠄁w󠄁e󠄁d󠄁 b󠄁y󠄁 a󠄁 p󠄁e󠄁r󠄁s󠄁o󠄁n󠄁, so it doesn't mean that content is bad or low quality; just that
+  those characters originated from AI output.
+- **Te󠄁x󠄁t󠄁 that isn't highlighted doesn't mean it was written by a person.** O󠄁l󠄁d󠄁e󠄁r󠄁 c󠄁o󠄁n󠄁t󠄁e󠄁n󠄁t󠄁
+  w󠄁a󠄁s󠄁 n󠄁o󠄁t󠄁 l󠄁a󠄁b󠄁e󠄁l󠄁l󠄁e󠄁d󠄁 r󠄁e󠄁t󠄁r󠄁o󠄁a󠄁c󠄁t󠄁i󠄁v󠄁e󠄁l󠄁y󠄁,󠄁 s󠄁o󠄁 a󠄁 p󠄁a󠄁g󠄁e󠄁 w󠄁i󠄁t󠄁h󠄁 n󠄁o󠄁 h󠄁i󠄁g󠄁h󠄁l󠄁i󠄁g󠄁h󠄁t󠄁s󠄁 c󠄁a󠄁n󠄁 s󠄁t󠄁i󠄁l󠄁l󠄁 c󠄁o󠄁n󠄁t󠄁a󠄁i󠄁n󠄁 e󠄁a󠄁r󠄁l󠄁i󠄁e󠄁r󠄁
+  A󠄁I󠄁 w󠄁o󠄁r󠄁k󠄁.
 - **T󠄁h󠄁e󠄁 m󠄁a󠄁r󠄁k󠄁s󠄁 d󠄁o󠄁 n󠄁o󠄁t󠄁 i󠄁n󠄁d󠄁i󠄁c󠄁a󠄁t󠄁e󠄁 r󠄁e󠄁v󠄁i󠄁e󠄁w󠄁 o󠄁r󠄁 a󠄁c󠄁c󠄁u󠄁r󠄁a󠄁c󠄁y󠄁.󠄁** T󠄁h󠄁e󠄁y󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁 h󠄁o󠄁w󠄁 t󠄁e󠄁x󠄁t󠄁 w󠄁a󠄁s󠄁
   w󠄁r󠄁i󠄁t󠄁t󠄁e󠄁n󠄁,󠄁 n󠄁o󠄁t󠄁 w󠄁h󠄁e󠄁t󠄁h󠄁e󠄁r󠄁 s󠄁o󠄁m󠄁e󠄁o󠄁n󠄁e󠄁 h󠄁a󠄁s󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁e󠄁d󠄁 i󠄁t󠄁 o󠄁r󠄁 w󠄁h󠄁e󠄁t󠄁h󠄁e󠄁r󠄁 i󠄁t󠄁 i󠄁s󠄁 c󠄁o󠄁r󠄁r󠄁e󠄁c󠄁t󠄁.󠄁
 
-T󠄁e󠄁x󠄁t󠄁P󠄁r󠄁o󠄁v󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁s󠄁 d󠄁e󠄁c󠄁l󠄁a󠄁r󠄁e󠄁d󠄁 o󠄁r󠄁i󠄁g󠄁i󠄁n󠄁;󠄁 i󠄁t󠄁 d󠄁o󠄁e󠄁s󠄁 n󠄁o󠄁t󠄁 d󠄁e󠄁t󠄁e󠄁c󠄁t󠄁 a󠄁ut󠄁h󠄁o󠄁r󠄁s󠄁h󠄁i󠄁p󠄁.󠄁
+Important: these highlights show text labelled as AI-written during writing and editing. They do
+not automatically detect who or what wrote it, or where a thought or idea originated.
+
+### Similar efforts in the industry
+
+Making the creation process more transparent is also a goal of industry efforts such as [C2PA Content Credentials](https://c2pa.org/), which uses digitally signed records to document content’s origin and editing history.
+
+Our highlighting comes from [TextProv](https://textprov.org/), an approach we created to help developers and writers keep track of their own AI-assisted content. It embeds markers directly in the text, without maintaining any kind of history.
+
 
 ### Y󠄁o󠄁u󠄁r󠄁 d󠄁i󠄁s󠄁p󠄁l󠄁a󠄁y󠄁 p󠄁r󠄁e󠄁f󠄁e󠄁r󠄁e󠄁n󠄁c󠄁e󠄁
 
 T󠄁h󠄁e󠄁 s󠄁i󠄁t󠄁e󠄁 r󠄁e󠄁m󠄁e󠄁m󠄁b󠄁e󠄁r󠄁s󠄁 y󠄁o󠄁u󠄁r󠄁 d󠄁i󠄁s󠄁p󠄁l󠄁a󠄁y󠄁 p󠄁r󠄁e󠄁f󠄁e󠄁r󠄁e󠄁n󠄁c󠄁e󠄁 i󠄁n󠄁 t󠄁h󠄁i󠄁s󠄁 b󠄁r󠄁o󠄁w󠄁ser󠄁 w󠄁h󠄁e󠄁n󠄁 l󠄁oc󠄁a󠄁l stor󠄁a󠄁g󠄁e󠄁
-i󠄁s󠄁 a󠄁v󠄁a󠄁i󠄁l󠄁a󠄁b󠄁l󠄁e󠄁.󠄁 H󠄁i󠄁gh󠄁l󠄁i󠄁g󠄁h󠄁t󠄁i󠄁n󠄁g󠄁 w󠄁ork󠄁s with t󠄁h󠄁e󠄁 e󠄁x󠄁is󠄁t󠄁i󠄁n󠄁g󠄁 r󠄁e󠄁a󠄁d󠄁i󠄁n󠄁g󠄁 f󠄁o󠄁n󠄁t󠄁.󠄁 T󠄁u󠄁r󠄁n󠄁i󠄁n󠄁g󠄁 i󠄁t󠄁 o󠄁n󠄁
-c󠄁h󠄁a󠄁n󠄁g󠄁e󠄁s󠄁 o󠄁n󠄁l󠄁y󠄁 t󠄁h󠄁e󠄁 h󠄁i󠄁g󠄁h󠄁l󠄁i󠄁g󠄁h󠄁t󠄁i󠄁n󠄁g󠄁,󠄁 n󠄁o󠄁t the󠄁 w󠄁o󠄁r󠄁d󠄁s󠄁.󠄁 O󠄁n󠄁 s󠄁m󠄁a󠄁l󠄁l󠄁e󠄁r󠄁 s󠄁c󠄁r󠄁e󠄁e󠄁n󠄁s󠄁,󠄁 t󠄁h󠄁e󠄁 s󠄁w󠄁it󠄁c󠄁h󠄁
-a󠄁p󠄁p󠄁e󠄁a󠄁r󠄁s i󠄁n󠄁 t󠄁h󠄁e󠄁 t󠄁a󠄁b󠄁l󠄁e󠄁-󠄁of󠄁-󠄁co󠄁n󠄁t󠄁ents󠄁 b󠄁a󠄁r󠄁.󠄁 Y󠄁o󠄁u󠄁 c󠄁a󠄁n󠄁 l󠄁e󠄁a󠄁v󠄁e󠄁 h󠄁i󠄁g󠄁h󠄁l󠄁i󠄁g󠄁h󠄁t󠄁i󠄁n󠄁g󠄁 o󠄁f󠄁f󠄁 i󠄁f󠄁 i󠄁t󠄁 i󠄁s󠄁
-n󠄁o󠄁t󠄁 u󠄁s󠄁e󠄁f󠄁u󠄁l󠄁 t󠄁o󠄁 y󠄁o󠄁u󠄁.󠄁
+i󠄁s󠄁 a󠄁v󠄁a󠄁i󠄁l󠄁a󠄁b󠄁l󠄁e󠄁.󠄁 Y󠄁o󠄁u󠄁 c󠄁a󠄁n󠄁 l󠄁e󠄁a󠄁v󠄁e󠄁 h󠄁i󠄁g󠄁h󠄁l󠄁i󠄁g󠄁h󠄁t󠄁i󠄁n󠄁g󠄁 o󠄁f󠄁f󠄁 i󠄁f󠄁 i󠄁t󠄁 i󠄁s󠄁 n󠄁o󠄁t󠄁 u󠄁s󠄁e󠄁f󠄁u󠄁l󠄁
+t󠄁o󠄁 y󠄁o󠄁u󠄁.󠄁
 
-### S󠄁e󠄁a󠄁r󠄁c󠄁h󠄁 a󠄁n󠄁d󠄁 c󠄁o󠄁p󠄁y󠄁i󠄁n󠄁g󠄁
-
-S󠄁e󠄁a󠄁r󠄁c󠄁h󠄁,󠄁 F󠄁i󠄁n󠄁d󠄁 i󠄁n󠄁 p󠄁a󠄁g󠄁e󠄁,󠄁 a󠄁n󠄁d󠄁 c󠄁o󠄁p󠄁y󠄁i󠄁n󠄁g󠄁 u󠄁s󠄁e󠄁 t󠄁h󠄁e󠄁 p󠄁a󠄁g󠄁e󠄁 t󠄁e󠄁x󠄁t󠄁 w󠄁i󠄁t󠄁h󠄁o󠄁u󠄁t󠄁 p󠄁r󠄁o󠄁v󠄁e󠄁n󠄁a󠄁n󠄁c󠄁e󠄁 m󠄁a󠄁r󠄁k󠄁s󠄁.󠄁
-W󠄁i󠄁t󠄁h󠄁 J󠄁a󠄁v󠄁a󠄁S󠄁c󠄁r󠄁i󠄁p󠄁t󠄁 d󠄁i󠄁s󠄁a󠄁b󠄁l󠄁e󠄁d󠄁,󠄁 t󠄁h󠄁e󠄁 p󠄁a󠄁g󠄁e󠄁 t󠄁e󠄁x󠄁t󠄁 r󠄁e󠄁m󠄁a󠄁i󠄁n󠄁s󠄁 r󠄁e󠄁a󠄁d󠄁a󠄁b󠄁l󠄁e󠄁.󠄁
+---
 
 ## W󠄁h󠄁y󠄁 I󠄁 u󠄁s󠄁e󠄁 A󠄁I󠄁 tools a󠄁n󠄁d󠄁 l󠄁a󠄁b󠄁e󠄁l󠄁 i󠄁t󠄁s󠄁 w󠄁r󠄁i󠄁t󠄁i󠄁n󠄁g󠄁
+
+:::note
+I'm switching to first-person "I" instead of "we" here to be direct about
+whose thoughts and opinions we're talking about.
+:::
+
 
 I use A󠄁I󠄁 tools to h󠄁e󠄁l󠄁p󠄁 p󠄁u󠄁b󠄁l󠄁i󠄁s󠄁h󠄁 d󠄁o󠄁c󠄁u󠄁m󠄁e󠄁n󠄁t󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 more often.󠄁 I'm natrally a slow writer and
 witho󠄁u󠄁t󠄁 the help the content gets outdated quickly.󠄁 In some cases new functionality was
