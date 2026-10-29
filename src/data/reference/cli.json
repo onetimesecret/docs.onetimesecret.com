@@ -1330,7 +1330,7 @@
         }
       ],
       "writes": "datastore (Valkey/Redis): refreshes the plan cache with `--refresh`",
-      "write_gate": "none",
+      "write_gate": "`--refresh`; a bare run lists the cached plans",
       "output_modes": "text",
       "requires": "boots the application: configuration and datastore reachable",
       "external_effects": "`--refresh` reads from Stripe",
@@ -2971,7 +2971,7 @@
       "description": "Test application boot and registry initialization",
       "arguments": [],
       "options": [],
-      "writes": "no data writes; boots and initializes the application registry",
+      "writes": "none: boots and initializes the application registry",
       "write_gate": "none",
       "output_modes": "text",
       "requires": "boots the application: configuration and datastore reachable",
@@ -7553,7 +7553,7 @@
       "command": "ots organizations reconcile",
       "family": "organizations",
       "aliases": [],
-      "description": "Reconcile an organization\\'s billing + entitlement state",
+      "description": "Reconcile an organization's billing + entitlement state",
       "arguments": [
         {
           "name": "org",
