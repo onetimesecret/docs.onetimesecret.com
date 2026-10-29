@@ -64,8 +64,8 @@ export const starlightConfig = {
 
   components: {
     MarkdownContent: "./src/components/starlight/MarkdownContent.astro",
-    // TextProv toggle beside the h1 on enrolled pages.
-    PageTitle: "./src/components/starlight/PageTitle.astro",
+    // TextProv controls above "On this page" and in the mobile TOC bar.
+    PageSidebar: "./src/components/starlight/PageSidebar.astro",
     Header: "./src/components/starlight/Header.astro",
     SiteTitle: "./src/components/starlight/SiteTitle.astro",
     Hero: "./src/components/starlight/Hero.astro",

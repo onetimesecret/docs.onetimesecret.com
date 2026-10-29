@@ -84,6 +84,7 @@ export const collections = {
         "notFound.apiDocs": z.string().optional(),
         "notFound.selfHosting": z.string().optional(),
         // TextProv toggle (TextProvControls.astro), English fallback per key.
+        "textprov.heading": z.string().optional(),
         "textprov.toggle": z.string().optional(),
         "textprov.help": z.string().optional(),
         "textprov.info": z.string().optional(),

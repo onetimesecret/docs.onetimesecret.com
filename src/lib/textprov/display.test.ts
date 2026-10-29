@@ -83,3 +83,21 @@ describe('initTextProv', () => {
     expect(document.documentElement.dataset.textprov).toBe('shown');
   });
 });
+
+
+describe('several switches on one page', () => {
+  it('keeps the sidebar and mobile switches in step and persists once', () => {
+    page('<button data-textprov-toggle aria-checked="false" id="a"></button><button data-textprov-toggle aria-checked="false" id="b"></button>');
+    const storage = memoryStorage();
+    initTextProv(document, storage);
+    const [a, b] = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-textprov-toggle]'));
+    b.click();
+    expect(document.documentElement.dataset.textprov).toBe('shown');
+    expect(a.getAttribute('aria-checked')).toBe('true');
+    expect(b.getAttribute('aria-checked')).toBe('true');
+    expect(storage.getItem(KEY)).toBe('shown');
+    a.click();
+    expect(b.getAttribute('aria-checked')).toBe('false');
+    expect(storage.getItem(KEY)).toBe('hidden');
+  });
+});
