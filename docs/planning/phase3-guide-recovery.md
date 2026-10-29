@@ -2,7 +2,7 @@
 
 ## Scope and sources
 
-- Worktree: `.git/recovery-worktrees/guides`, branch `docs/phase3-guide-enrichment`.
+- Worktree: `/Users/d/Projects/ops/sites/docs.onetimesecret.com/tmp/phase3-recovery/guides`, branch `docs/phase3-guide-enrichment`. Moved with `git worktree move` from `.git/recovery-worktrees/guides` into the ignored `tmp/` tree to avoid Vite's `.git` filesystem denial.
 - Starting docs commit: `fe1f61664d305ac9b49ab1f0908aebb197ad18ff`; initially clean.
 - Research source: `docs/phase3-contd` at `8e83efa2`. Extracted topics were rewritten as focused additions, not copied as replacement guides.
 - Authoritative application checkout: `/Users/d/Projects/dev/onetimesecret/onetimesecret`, clean at `f7794a9844a865dc346b7cded73d72c918a22700` when inspected. Application sources were read only.
@@ -38,20 +38,19 @@ Long gem-default header tables, exhaustive provider configuration, full password
 
 ## Validation and boundaries
 
-Executed from this worktree using `/Users/d/Projects/ops/sites/docs.onetimesecret.com/.venv/bin/python` for Python commands:
+The results below distinguish the original validation from checks repeated after the move. Python commands use `/Users/d/Projects/ops/sites/docs.onetimesecret.com/.venv/bin/python`.
 
-- `tools/dogfood.py check --base fe1f61664d305ac9b49ab1f0908aebb197ad18ff`: strict cumulative check passed for eight eligible changed pages.
+- `tools/dogfood.py check --base fe1f61664d305ac9b49ab1f0908aebb197ad18ff`: strict cumulative check passed for eight eligible changed pages, including a fresh agent-run check from the moved worktree.
 - `-m unittest discover -s tools/tests`: 66 tests passed.
-- `pnpm test`: initially 14 suites / 266 tests passed; two jsdom suites failed to load `/src/...` paths in this `.git/recovery-worktrees` location.
-- Identical full Vitest suite through `startVitest('test', [], { watch: false }, { server: { fs: { deny: [] } } })`: 16 suites / 287 tests passed. This was an in-memory test-runner override only; no test, configuration, or dependency file was edited. It removes the filesystem deny boundary for that local run, not for the application or production build.
+- `pnpm test`: normal command passed from the moved worktree, with 16 suites / 287 tests, confirmed by a fresh agent-run check. No filesystem-deny override is needed. Historically, the old `.git/recovery-worktrees` location caused two jsdom suite load failures; an in-memory override then passed the same full suite. Moving the worktree resolved that boundary without changing test, configuration, or dependency files.
 - `pnpm run check:frontmatter`: passed, 94 English pages and 243 redirect fragments checked.
 - `pnpm run check:nav`: passed, 76 sidebar links and 89 labels, zero warnings.
-- `pnpm build`: passed, 1,324 pages built. Lightning CSS warned about `@theme` during minification.
-- `pnpm run check:textprov`: passed, 1,009 expected enrolled pages, one marker each, no raw selectors.
+- `pnpm build`: originally passed with 1,324 pages built and a Lightning CSS `@theme` minification warning. After the move, the user reported another successful normal build with 1,324 pages.
+- `pnpm run check:textprov`: originally passed for 1,009 expected enrolled pages, one marker each, no raw selectors. After the move, the user reported missing-marker failures during concurrent research/guide builds, followed by a successful sequential `pnpm build && pnpm run check:textprov` for 1,009 pages. Shared `node_modules` Astro-cache interference is an inferred cause, not an established diagnosis. No build was repeated during this record-only follow-up.
 - `pnpm run check:links:malformed`: passed.
 - Source-level local-link check: all 38 local destinations in the eight changed guides resolved, including `verify#create-the-first-account`. Draft targets were checked against source files, not assumed to be published routes.
 - `git diff --check`: passed.
 
 The five changed configure pages retain `draft: true`, so the production build does not render them. Their Markdown/TextProv structure and local source targets were checked. No browser walkthrough, real SMTP delivery, account creation, proxy deployment, systemd startup, queue initialization, datastore restore, or key rotation was executed. Existing external release and systemd documentation links were not fetched; no new external links were added. Broader site-wide link checking was not run.
 
-Dependency access uses the user-authorized `node_modules` symlink to the root installation. Build output and generated caches are uncommitted. No application code, other worktree content, dependency manifests, navigation, or locale content was intentionally changed.
+Dependency access uses the user-authorized `node_modules` symlink to the root installation. Run builds sequentially across recovery worktrees sharing these dependencies, and run `check:textprov` immediately after the corresponding build; do not overlap research and guide builds. This is the validation constraint from the reported concurrent failure and sequential recovery. Build output and generated caches are uncommitted. No application code, other worktree content, dependency manifests, navigation, or locale content was intentionally changed.
