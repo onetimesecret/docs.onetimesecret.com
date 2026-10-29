@@ -2,6 +2,7 @@
 """Repository integration for forward-only TextProv authoring and checks."""
 
 import argparse
+from dataclasses import replace
 import fnmatch
 import json
 import os
@@ -28,8 +29,7 @@ if getattr(textprov, "__version__", None) != REQUIRED_TEXTPROV_VERSION:
         f"{getattr(textprov, '__version__', 'unknown')}. Run: {INSTALL_TEXTPROV}"
     )
 
-from textprov.check import Cluster
-
+# Compatibility surface used by the reanchor tool and contract tests.
 MAPPING = textprov.default_mapping()
 clusters = textprov.clusters
 correspondence = textprov.correspondence
@@ -109,7 +109,7 @@ def mark_edit(path, source, start, end, replacement, state):
             output.append(inside[matches[index]].raw)
             unmarked_edit.append(inside[matches[index]].raw)
         else:
-            absolute = Cluster(start + item.start, start + item.end, item.raw, item.text, None)
+            absolute = replace(item, start=start + item.start, end=start + item.end)
             output.append(textprov.mark(item.raw, state=state) if eligible(absolute, offsets) else item.raw)
             unmarked_edit.append(item.raw)
     before = "".join(item.raw for item in old if item.end <= start)
@@ -126,6 +126,7 @@ def mark_edit(path, source, start, end, replacement, state):
 def check_text(path, before, after, require_marks=True):
     def profile(plain):
         offsets = eligible_offsets(path, plain)
+        # SDK profiles use True for protected text, the inverse of eligibility.
         return [i not in offsets for i in range(len(plain))]
 
     problems = textprov.check_text(

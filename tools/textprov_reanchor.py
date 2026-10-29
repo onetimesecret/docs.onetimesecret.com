@@ -34,6 +34,8 @@ MAX_PASSES = 5
 
 
 def fix(path, before, after, strict=False):
+    # Keep these rewrites compatible with textprov.check_text, including its
+    # allowance for removing existing marks outside eligible prose.
     old, new = dogfood.clusters(before), dogfood.clusters(after)
     matches = dogfood.correspondence(old, new)
     offsets = dogfood.eligible_offsets(path, dogfood.textprov.strip_marks(after))
