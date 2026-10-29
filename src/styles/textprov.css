@@ -76,11 +76,13 @@
     }
 
     /* Links own their underline channel. Editors can opt proofing ranges out
-     * with the same native-decoration hook as the upstream renderer.
+     * with the same native-decoration hook as the upstream renderer. Passage
+     * context never receives a decoration, so only exact ranges and the label
+     * appear here.
      */
-    :root[data-textprov='shown'] a :is(.textprov-ai, .textprov-passage, .textprov-label),
-    :root[data-textprov='shown'] [data-prov-decoration='native'] :is(.textprov-ai, .textprov-passage, .textprov-label):not(a),
-    :root[data-textprov='shown'] :is(.textprov-ai, .textprov-passage, .textprov-label)[data-prov-decoration='native']:not(a) {
+    :root[data-textprov='shown'] a :is(.textprov-ai, .textprov-label),
+    :root[data-textprov='shown'] [data-prov-decoration='native'] :is(.textprov-ai, .textprov-label):not(a),
+    :root[data-textprov='shown'] :is(.textprov-ai, .textprov-label)[data-prov-decoration='native']:not(a) {
       text-decoration: none;
     }
 
@@ -90,7 +92,6 @@
       box-shadow: none;
     }
 
-    :root[data-textprov='shown'] .textprov-passage:has([data-prov-decoration='native']) { text-decoration: none; }
     :root[data-textprov='shown'] .textprov-passage:has([data-prov-background='native']) { background: none; box-shadow: none; }
 
     @media (forced-colors: active) {

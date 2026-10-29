@@ -104,10 +104,13 @@ describe('TextProv stylesheet presentation contract', () => {
   it('preserves link underline ownership and native annotation opt-outs', () => {
     const { dom, matches } = fixture('passage');
     const noDecoration = screen.filter(rule => rule.declarations['text-decoration'] === 'none');
-    for (const id of ['link-exact', 'native-decoration', 'own-decoration', 'native-passage']) {
+    for (const id of ['link-exact', 'native-decoration', 'own-decoration']) {
       expect(noDecoration.some(rule => matches(id, rule)), id).toBe(true);
     }
-    expect(noDecoration.some(rule => matches('exact', rule))).toBe(false);
+    // Passage context has no decoration to opt out of; only fills are reset.
+    for (const id of ['exact', 'passage', 'link-passage', 'native-passage']) {
+      expect(noDecoration.some(rule => matches(id, rule)), id).toBe(false);
+    }
     const nativeBackground = screen.filter(rule => rule.selector.includes('data-prov-background'));
     for (const id of ['native-background', 'own-background', 'native-passage']) {
       expect(nativeBackground.some(rule => matches(id, rule) &&
