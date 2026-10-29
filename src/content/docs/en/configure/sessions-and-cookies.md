@@ -5,6 +5,7 @@ description: Keep authenticated sessions working through your HTTPS proxy and id
 audience: operator
 pageType: how-to
 sourceOfTruth: onetimesecret/etc/defaults/config.defaults.yaml (session settings); onetimesecret/lib/onetime/session.rb (secure-cookie handling); onetimesecret/lib/onetime/sso_provider/saml.rb (SAML callback requirements); onetimesecret/lib/onetime/sso_provider/apple.rb (Apple callback requirements)
+draft: true
 ---
 
 C󠄁h󠄁e󠄁c󠄁k󠄁 t󠄁h󠄁e󠄁 p󠄁u󠄁b󠄁l󠄁i󠄁c󠄁 U󠄁R󠄁L󠄁 a󠄁n󠄁d󠄁 c󠄁o󠄁o󠄁k󠄁i󠄁e󠄁 s󠄁e󠄁t󠄁t󠄁i󠄁n󠄁g󠄁s󠄁 b󠄁e󠄁f󠄁o󠄁r󠄁e󠄁 r󠄁o󠄁l󠄁l󠄁i󠄁n󠄁g󠄁 o󠄁u󠄁t󠄁 s󠄁i󠄁g󠄁n󠄁-󠄁i󠄁n󠄁 o󠄁r󠄁 S󠄁S󠄁O󠄁.󠄁

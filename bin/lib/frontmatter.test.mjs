@@ -224,6 +224,22 @@ describe("headings", () => {
     );
   });
 
+  it("strips inline html tags and keeps their text", () => {
+    expect(headings("## Set <code>REDIS_URL</code> <em>first</em>\n")[0].text).toBe(
+      "Set REDIS_URL first",
+    );
+  });
+
+  it("keeps a < that opens no tag", () => {
+    expect(headings("## Use < 10 workers\n")[0].text).toBe("Use < 10 workers");
+  });
+
+  it("keeps code span contents literal", () => {
+    const [underscores, tag] = headings("## Set `OIDC_CLIENT_ID`\n## The `<code>` tag\n");
+    expect(underscores.slug).toBe("set-oidc_client_id");
+    expect(tag.slug).toBe("the-code-tag");
+  });
+
   it("records depth and 1-based line", () => {
     expect(headings("intro\n\n### Deep\n")[0]).toMatchObject({ depth: 3, line: 3 });
   });

@@ -103,6 +103,7 @@ Do not use these terms or sentence structures in authored prose:
 - Add moved-page mappings to `config/redirects.mjs`; preserve old URLs and point directly at the final destination rather than another redirect.
 - A page linked with an absolute `/en/...` link from a sidebar-linked page in the same directory counts as reachable (for example, the version-specific upgrade guides listed on `self-hosting/upgrade-guides`). Add new release guides to that table rather than to the sidebar.
 - Use `config/nav-orphans.allow` only for intentional navigation exceptions, with a reason.
+- To keep a page off the live site until it is ready, set `draft: true` in its frontmatter; each locale's copy needs its own flag. Keep its sidebar link: production builds omit links to English draft pages, while `pnpm dev` and the `check:*` scripts still see them. Links to a draft from other pages 404 in production; `pnpm run check:links` reports them.
 
 ## Language Support
 

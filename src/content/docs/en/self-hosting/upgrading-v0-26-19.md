@@ -1,14 +1,15 @@
 ---
+textprov: true
 title: Upgrading to v0.26.19
 description: Export the authentication audit log before upgrading, update bin/ots scripts for --apply, and take the Rodauth 2.48 passkey sign-in security fix.
 sidebar:
   order: 19
 audience: operator
 pageType: how-to
-sourceOfTruth: onetimesecret/apps/web/auth/operations/remove_authentication_data.rb (closure deletion); onetimesecret/lib/onetime/cli/customers/prune_closed_accounts_command.rb and finish_closures_command.rb; onetimesecret/lib/onetime/cli/write_gate.rb (the --apply gate); onetimesecret/apps/web/auth/config/base.rb (already_logged_in)
+sourceOfTruth: onetimesecret/apps/web/auth/operations/remove_authentication_data.rb (closure deletion); onetimesecret/lib/onetime/cli/customers/prune_closed_accounts_command.rb and finish_closures_command.rb; onetimesecret/lib/onetime/cli/write_gate.rb (the --apply gate); onetimesecret/apps/web/auth/config/base.rb (already_logged_in); onetimesecret at v0.26.19 — lib/onetime/cli/org/transfer_ownership_command.rb and lib/onetime/cli/memberships/add_command.rb (write gate); lib/onetime/cli/customers/create_command.rb:14-44 (creation does not use the shared write gate)
 ---
 
-v0.26.19 moves the authentication library, Rodauth, from 2.45 to 2.48, which closes an upstream passkey sign-in account takeover. In full mode, closing an account now deletes its sign-in record and its authentication audit log. `bin/ots` verbs that change records are dry runs unless you pass `--apply`. No migration runs and rollback is a tag swap.
+v0.26.19 moves the authentication library, Rodauth, from 2.45 to 2.48, which closes an upstream passkey sign-in account takeover. In full mode, closing an account now deletes its sign-in record and its authentication audit log. C󠄁o󠄁m󠄁m󠄁a󠄁n󠄁d󠄁s󠄁 u󠄁s󠄁i󠄁n󠄁g󠄁 t󠄁h󠄁e󠄁 s󠄁h󠄁a󠄁r󠄁e󠄁d󠄁 `bin/ots` w󠄁r󠄁i󠄁t󠄁e g󠄁ate are dry runs unless you pass `--apply`;󠄁 o󠄁t󠄁h󠄁e󠄁r󠄁 c󠄁o󠄁m󠄁m󠄁a󠄁n󠄁d󠄁s󠄁 r󠄁e󠄁t󠄁a󠄁i󠄁n󠄁 t󠄁h󠄁e󠄁i󠄁r󠄁 o󠄁w󠄁n󠄁 b󠄁e󠄁h󠄁a󠄁v󠄁i󠄁o󠄁r󠄁. No migration runs and rollback is a tag swap.
 
 If you are upgrading from v0.26.17 or earlier, follow the [v0.26.18 guide](/en/self-hosting/upgrading-v0-26-18) first: it has a migration.
 
@@ -25,7 +26,7 @@ If you are upgrading from v0.26.17 or earlier, follow the [v0.26.18 guide](/en/s
 | Passkey sign-in | Rodauth 2.46 fix: a signed-in session could use passkey login to sign in as another account | Upgrade promptly if `AUTH_WEBAUTHN_ENABLED=true` |
 | Account closure (full mode) | Deletes the `accounts` row and all of its `account_authentication_audit_logs` rows | Export the audit log before upgrading |
 | Closed accounts from earlier versions | New `bin/ots customers prune-closed-accounts` | Optional, later (full mode) |
-| `bin/ots` | Writes need `--apply`; no prompts; a piped `y` no longer confirms | Update scripts |
+| `bin/ots` w󠄁rite-󠄁g󠄁a󠄁t󠄁e󠄁d󠄁 c󠄁o󠄁m󠄁m󠄁a󠄁n󠄁d󠄁s | N󠄁eed `--apply` t󠄁o󠄁 w󠄁r󠄁i󠄁t󠄁e󠄁; no prompts; a piped `y` no longer confirms | Update scripts󠄁 f󠄁o󠄁r󠄁 t󠄁h󠄁e󠄁 a󠄁f󠄁f󠄁e󠄁c󠄁t󠄁e󠄁d󠄁 c󠄁o󠄁m󠄁m󠄁a󠄁n󠄁d󠄁s |
 | Sign-in routes | A signed-in browser gets 403 "Already logged in" on sign-in, signup, verify and magic-link routes | None |
 | Organization members | Removing a member clears their default organization when it names that organization | Optional cleanup for earlier removals |
 | Receipt and burn API | Burn returns the receipt after the burn; `share_url` is `null` once the secret is gone | Only if you script against it |
@@ -47,7 +48,7 @@ In full mode with `AUTH_WEBAUTHN_ENABLED=true`, if you cannot upgrade yet, or if
 
    On SQLite, export the same table with `sqlite3`.
 
-2. **Update scripts that call `bin/ots`.**
+2. **C󠄁h󠄁ec󠄁k󠄁 scripts that call `bin/ots`.** T󠄁h󠄁e󠄁 s󠄁h󠄁a󠄁r󠄁e󠄁d󠄁 w󠄁r󠄁i󠄁t󠄁e󠄁 g󠄁a󠄁t󠄁e󠄁 a󠄁p󠄁p󠄁l󠄁i󠄁e󠄁s󠄁 t󠄁o󠄁 c󠄁o󠄁m󠄁m󠄁a󠄁n󠄁d󠄁s󠄁 s󠄁u󠄁c󠄁h󠄁 a󠄁s󠄁 m󠄁e󠄁m󠄁b󠄁e󠄁r󠄁s󠄁h󠄁i󠄁p󠄁 c󠄁h󠄁a󠄁n󠄁g󠄁e󠄁s󠄁 a󠄁n󠄁d󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 o󠄁w󠄁n󠄁e󠄁r󠄁s󠄁h󠄁i󠄁p󠄁 t󠄁r󠄁a󠄁n󠄁s󠄁f󠄁e󠄁r󠄁s󠄁.󠄁 C󠄁h󠄁e󠄁c󠄁k󠄁 e󠄁a󠄁c󠄁h󠄁 c󠄁o󠄁m󠄁m󠄁a󠄁n󠄁d󠄁'󠄁s󠄁 `--help`;󠄁 i󠄁t󠄁 i󠄁s󠄁 n󠄁o󠄁t󠄁 a󠄁 u󠄁n󠄁i󠄁v󠄁e󠄁r󠄁s󠄁a󠄁l󠄁 C󠄁L󠄁I󠄁 s󠄁w󠄁i󠄁t󠄁c󠄁h󠄁.󠄁 F󠄁o󠄁r󠄁 e󠄁x󠄁a󠄁m󠄁p󠄁l󠄁e󠄁,󠄁 `customers create` s󠄁t󠄁i󠄁l󠄁l󠄁 c󠄁r󠄁e󠄁a󠄁t󠄁e󠄁s󠄁 a󠄁n󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁 w󠄁i󠄁t󠄁h󠄁o󠄁u󠄁t󠄁 `--apply`.󠄁
 
    ```bash
    bin/ots memberships add ORG CUSTOMER --role member --apply   # was organizations add-member --org … --email …
@@ -55,7 +56,7 @@ In full mode with `AUTH_WEBAUTHN_ENABLED=true`, if you cannot upgrade yet, or if
    bin/ots organizations show ORG                               # was organizations --show, --customer, --subscription
    ```
 
-   `--yes`, `-y` and `-f` still write. `echo y | bin/ots …` now previews and exits 0 without writing. On `customers change-email` and `customers role reconcile`, `--yes` and `--force` are ignored: pass `--apply`. `bin/ots memberships remove` exits 1 when the removal succeeds but leaves the member's default organization behind, and prints the repair command. `purge`, `purge-inactive`, `prune-closed-accounts` and `finish-closures` keep their own flags.
+   O󠄁n󠄁 s󠄁h󠄁a󠄁r󠄁e󠄁d󠄁 w󠄁r󠄁i󠄁t󠄁e󠄁-󠄁g󠄁a󠄁t󠄁e󠄁d󠄁 c󠄁o󠄁m󠄁m󠄁a󠄁n󠄁d󠄁s󠄁,󠄁 `--yes`, `-y` and `-f` a󠄁r󠄁e󠄁 a󠄁l󠄁i󠄁a󠄁se󠄁s󠄁 f󠄁o󠄁r󠄁 `--apply`.󠄁 P󠄁i󠄁p󠄁i󠄁n󠄁g󠄁 `y` to󠄁 o󠄁n󠄁e󠄁 o󠄁f󠄁 thes󠄁e com󠄁m󠄁a󠄁nd󠄁s previews and exits 0 without writing. On `customers change-email` and `customers role reconcile`, `--yes` and `--force` are ignored: pass `--apply`. `bin/ots memberships remove` exits 1 when the removal succeeds but leaves the member's default organization behind, and prints the repair command. `purge`, `purge-inactive`, `prune-closed-accounts` and `finish-closures` keep their own flags.
 
 3. **Deploy v0.26.19**, backend and frontend together.
 
@@ -118,7 +119,7 @@ The browser is signed in to an account. Sign out, or open the link in a private 
 
 ### A `bin/ots` command prints `DRY RUN — nothing was written`
 
-Add `--apply`.
+R󠄁e󠄁v󠄁i󠄁e󠄁w󠄁 t󠄁h󠄁e󠄁 p󠄁r󠄁e󠄁v󠄁i󠄁e󠄁w󠄁,󠄁 t󠄁h󠄁e󠄁n󠄁 a󠄁dd `--apply` t󠄁o󠄁 t󠄁h󠄁a󠄁t󠄁 c󠄁o󠄁m󠄁m󠄁a󠄁n󠄁d󠄁 i󠄁f󠄁 y󠄁o󠄁u󠄁 i󠄁n󠄁t󠄁e󠄁n󠄁d󠄁 t󠄁o󠄁 m󠄁a󠄁k󠄁e󠄁 t󠄁h󠄁e󠄁 c󠄁h󠄁a󠄁n󠄁g󠄁e󠄁.
 
 ### `bin/ots organizations add-member` is an unknown command
 
