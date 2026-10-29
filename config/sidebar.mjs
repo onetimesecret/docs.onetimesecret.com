@@ -279,11 +279,16 @@ const entries = [
   // subgroups let the section scan as those steps instead of as one long run
   // of links.
   //
-  // Each subgroup is one directory: Install & deploy is install/, Configure
-  // is configure/. The links at this level are the self-hosting/ pages. Keep
-  // it that way: a new page goes in the group for its directory, and a page
-  // that belongs in another group moves there (with a movedPages entry in
-  // config/redirects.mjs) rather than being listed out of place.
+  // Most subgroups are one directory: Install & deploy is install/, Configure
+  // is configure/, Operate is operate/. The links at this level are the
+  // self-hosting/ pages. Keep it that way: a new page goes in the group for
+  // its directory, and a page that belongs in another group moves there (with
+  // a movedPages entry in config/redirects.mjs) rather than being listed out
+  // of place.
+  //
+  // Troubleshoot and upgrade is the deliberate exception and says why at its
+  // own definition below. It spans troubleshoot/, upgrades/ and the existing
+  // self-hosting upgrade index.
   //
   // Array order is reading order. createLink emits no `order` key and nothing
   // here autogenerates, so Starlight renders the array as written; the
@@ -332,9 +337,53 @@ const entries = [
       createLink("configureSecretOptions", "configure/secret-options"),
     ]),
 
+    // Operate is the Day-2 layer: the twelve destinations the Phase 4 plan
+    // assigns to running a deployment rather than installing or configuring
+    // one. Reference pages own the factual inventories, so these pages carry
+    // decisions, procedures, verification and recovery and link the inventory
+    // rather than repeating it.
+    //
+    // All but ownership transfer ship draft while their operational evidence
+    // is outstanding; pruneDrafts drops the links from production builds.
+    // Ownership transfer publishes because self-hosting/index and the
+    // end-user ownership page link it: the procedure moved out of that index
+    // and a link to a draft 404s in production.
+    createGroup("operate", [
+      createLink("operateDatastore", "operate/datastore"),
+      createLink("operateBackups", "operate/backup-and-key-rotation"),
+      createLink("operateHealth", "operate/health-and-monitoring"),
+      createLink("operateAdminConsole", "operate/admin-console"),
+      createLink("operateBackgroundJobs", "operate/background-jobs"),
+      createLink("operateQueues", "operate/queues-and-dlq"),
+      createLink("operateScheduledJobs", "operate/scheduled-and-maintenance-jobs"),
+      createLink("operateScaleAndTune", "operate/scale-and-tune"),
+      createLink("operateLogging", "operate/logging-and-error-tracking"),
+      createLink("operateRateLimits", "operate/rate-limits-and-network-access"),
+      createLink("operateOwnershipTransfer", "operate/ownership-transfer"),
+      createLink("operateHardening", "operate/harden-your-deployment"),
+    ]),
+
     createLink("configurationReference", "self-hosting/configuration"),
     createLink("configurationGenerator", "self-hosting/configuration-generator"),
-    createLink("upgradeGuides", "self-hosting/upgrade-guides"),
+
+    // The one subgroup that is not one directory. Symptom-led diagnosis lives
+    // in troubleshoot/, the general migration workflow in upgrades/, and the
+    // release-specific guidance stays on the existing self-hosting upgrade
+    // index with its ten guides and their URLs untouched. A reader in trouble
+    // looks for the symptom, not for the directory it happens to be stored
+    // in, and moving eleven working upgrade URLs to satisfy a filing
+    // convention would cost readers more than the convention is worth.
+    //
+    // upgrades/data-migrations needs its own entry rather than a link from a
+    // neighbour: bin/check-orphans.mjs counts a page as hub-reachable only
+    // through an absolute /en/... link from a sidebar-linked page in the SAME
+    // directory, and upgrades/ is its own directory.
+    createGroup("troubleshootAndUpgrade", [
+      createLink("troubleshootBootFailures", "troubleshoot/boot-failures"),
+      createLink("troubleshootSignIn", "troubleshoot/sign-in-and-signup-problems"),
+      createLink("upgradeDataMigrations", "upgrades/data-migrations"),
+      createLink("upgradeGuides", "self-hosting/upgrade-guides"),
+    ]),
   ]),
 
   createGroup("apiAndSdks", [

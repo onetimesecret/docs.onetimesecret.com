@@ -4,7 +4,6 @@ title: Transfer organization ownership
 description: The operator procedure for moving an organization to a different member, including membership preconditions, the demotion of the outgoing owner, interruption recovery and postchecks.
 audience: operator
 pageType: how-to
-draft: true
 sourceOfTruth: onetimesecret/lib/onetime/cli/org/transfer_ownership_command.rb:52-199 (the command, its arguments, --demote-to, --json, the refusal messages and the registry name "organizations transfer-ownership"); onetimesecret/lib/onetime/cli/organizations_command.rb:7-13 (org and organization are aliases of organizations); onetimesecret/lib/onetime/cli/write_gate.rb:20-104 (the shared write gate - a bare run previews, --apply writes); onetimesecret/lib/onetime/operations/org/transfer_ownership.rb:115-200 (the preconditions, the idempotent short-circuit and the preview path), :200-305 (the forced promote-then-demote ordering, the owner_id pivot and the best-effort rollback), :34-50 (the two-owner window and that re-running the transfer is the recovery), :68-76 (what a transfer deliberately leaves alone), :117-121 (DEMOTABLE_ROLES is every membership role except owner); onetimesecret/lib/onetime/models/organization_membership.rb:104-108 (the three membership roles); onetimesecret/apps/api/colonel/routes.txt:106-107 and onetimesecret/apps/api/colonel/logic/colonel/transfer_organization_ownership.rb:38-41,70-80,84-92 (the Colonel API peer - colonel role, the organization name as confirmation, and dry_run pinned false so it applies immediately)
 ---
 
