@@ -31,7 +31,10 @@ p󠄁a󠄁r󠄁t󠄁s󠄁 o󠄁f󠄁 a󠄁n󠄁 e󠄁a󠄁r󠄁l󠄁i󠄁e󠄁r�
 
 ## W󠄁h󠄁y󠄁 I󠄁 u󠄁s󠄁e󠄁 A󠄁I󠄁
 
-A󠄁I󠄁 h󠄁e󠄁l󠄁p󠄁s󠄁 m󠄁e󠄁 p󠄁u󠄁b󠄁l󠄁i󠄁s󠄁h󠄁 d󠄁o󠄁c󠄁u󠄁m󠄁e󠄁n󠄁t󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 d󠄁r󠄁a󠄁f󠄁t󠄁s󠄁 s󠄁o󠄁o󠄁n󠄁e󠄁r󠄁 t󠄁h󠄁a󠄁n󠄁 I󠄁 c󠄁o󠄁u󠄁l󠄁d󠄁 w󠄁r󠄁i󠄁t󠄁e󠄁 t󠄁h󠄁e󠄁m󠄁 o󠄁n󠄁 m󠄁y󠄁 o󠄁w󠄁n󠄁.󠄁
+I use A󠄁I󠄁 tools to h󠄁e󠄁l󠄁p󠄁 p󠄁u󠄁b󠄁l󠄁i󠄁s󠄁h󠄁 d󠄁o󠄁c󠄁u󠄁m󠄁e󠄁n󠄁t󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 more often.󠄁 I'm natrally a slow writer and
+with it this documentation gets outdated quickly and in some cases new functionality was
+going undocumented for months. I would like to improve my writing speed so that's
+something I'm concious of as well.
 
 ## R󠄁e󠄁v󠄁i󠄁e󠄁w󠄁 i󠄁s󠄁 s󠄁e󠄁p󠄁a󠄁r󠄁a󠄁t󠄁e󠄁 f󠄁r󠄁o󠄁m󠄁 o󠄁r󠄁i󠄁g󠄁i󠄁n󠄁
 
