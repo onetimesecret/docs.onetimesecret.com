@@ -22,11 +22,15 @@ Read the **conversation**
 
 Transcript body.
 {% /details %}`);
-    expect(html).toBe("<article><details><summary>Read the <strong>conversation</strong></summary><p>Transcript body.</p></details></article>");
+    expect(html).toBe(
+      "<article><details><summary>Read the <strong>conversation</strong></summary><p>Transcript body.</p></details></article>",
+    );
   });
 
   it("escapes summary text instead of interpreting it as HTML", () => {
-    expect(render("{% summary %}\nA & B\n{% /summary %}")).toContain("<summary>A &amp; B</summary>");
+    expect(render("{% summary %}\nA & B\n{% /summary %}")).toContain(
+      "<summary>A &amp; B</summary>",
+    );
   });
 });
 
