@@ -1,6 +1,7 @@
-import { defineCollection, z } from "astro:content";
 import { docsLoader, i18nLoader } from "@astrojs/starlight/loaders";
 import { docsSchema, i18nSchema } from "@astrojs/starlight/schema";
+import { z } from "astro/zod";
+import { defineCollection } from "astro:content";
 
 // Phase 2 frontmatter extension (docs/planning/documentation-audit-2026-08.md).
 //
