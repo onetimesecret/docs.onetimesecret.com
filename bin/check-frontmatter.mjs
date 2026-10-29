@@ -103,7 +103,7 @@ import {
   statedDefaults,
 } from "./lib/frontmatter.mjs";
 import { repoRoot } from "./lib/nav.mjs";
-import textprov from "../vendor/textprov/textprov.cjs";
+import textprov from "textprov";
 
 const CONFIG = "src/content.config.ts";
 

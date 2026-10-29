@@ -81,6 +81,9 @@ jobs:
       - name: Test
         run: pnpm test
 
+      - name: Install provenance authoring dependency
+        run: python3 -m pip install -r tools/requirements.txt
+
       - name: Test provenance authoring
         run: python3 -m unittest discover -s tools/tests
 
