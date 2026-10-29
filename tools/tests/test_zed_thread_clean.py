@@ -11,6 +11,27 @@ clean_thread = runpy.run_path(str(SCRIPT))["clean_thread"]
 
 
 class CleanThreadTests(unittest.TestCase):
+    def test_default_matches_explicit_markdown(self):
+        source = "## User\n\nHello\n\n## Assistant\n\nAnswer\n"
+        self.assertEqual(clean_thread(source), source)
+        self.assertEqual(clean_thread(source, output_format="markdown"), source)
+
+    def test_markdoc_wraps_both_roles(self):
+        source = (
+            "## User (checkpoint)\n\n<thinking>example</thinking>\n"
+            "**Tool Call: example**\n\n## Assistant\n\nAnswer\n"
+        )
+        self.assertEqual(
+            clean_thread(source, output_format="markdoc"),
+            '{% message speaker="User" %}\n\n<thinking>example</thinking>\n'
+            "**Tool Call: example**\n\n{% /message %}\n\n"
+            '{% message speaker="Assistant" %}\n\nAnswer\n\n{% /message %}\n',
+        )
+
+    def test_invalid_output_format(self):
+        with self.assertRaises(ValueError):
+            clean_thread("", output_format="html")
+
     def test_tools_thinking_and_empty_turns(self):
         source = """## User
 
@@ -59,6 +80,12 @@ Next question
             clean_thread(source),
             "## User\n\nQuestion\n\n## Assistant\n\nI will check.\n\nAnswer\n\n## User\n\nNext question\n",
         )
+        self.assertEqual(
+            clean_thread(source, output_format="markdoc"),
+            '{% message speaker="User" %}\n\nQuestion\n\n{% /message %}\n\n'
+            '{% message speaker="Assistant" %}\n\nI will check.\n\nAnswer\n\n{% /message %}\n\n'
+            '{% message speaker="User" %}\n\nNext question\n\n{% /message %}\n',
+        )
 
     def test_retains_conversation_code_and_nested_fences(self):
         source = """## Assistant
@@ -69,6 +96,8 @@ Example:
 ## User
 **Tool Call: literal example**
 <thinking>literal example</thinking>
+{% message speaker="User" %}
+{% /message %}
 ```python
 print("hello")
 ```
@@ -77,6 +106,12 @@ print("hello")
 After code.
 """
         self.assertEqual(clean_thread(source), source)
+        self.assertEqual(
+            clean_thread(source, output_format="markdoc"),
+            '{% message speaker="Assistant" %}\n\n'
+            + source.removeprefix("## Assistant\n\n").rstrip("\n")
+            + "\n\n{% /message %}\n",
+        )
 
     def test_inline_thinking(self):
         self.assertEqual(
@@ -106,8 +141,11 @@ After code.
             "## Assistant\n<thinking>secret</thinking>\n",
             "## Assistant\n**Tool Call: example**\noutput\n",
         ):
-            with self.subTest(source=source):
-                self.assertEqual(clean_thread(source), "")
+            for output_format in ("markdown", "markdoc"):
+                with self.subTest(source=source, output_format=output_format):
+                    self.assertEqual(
+                        clean_thread(source, output_format=output_format), ""
+                    )
 
     def test_stdin_cli(self):
         result = subprocess.run(
@@ -119,6 +157,34 @@ After code.
         )
         self.assertEqual(result.stdout, "## User\n\nHello\n")
         self.assertEqual(result.stderr, "")
+
+    def test_markdoc_cli(self):
+        result = subprocess.run(
+            [sys.executable, str(SCRIPT), "--format", "markdoc"],
+            input="## User\n\nHello\n\n## Assistant\n\nAnswer\n",
+            text=True,
+            capture_output=True,
+            check=True,
+        )
+        self.assertEqual(
+            result.stdout,
+            '{% message speaker="User" %}\n\nHello\n\n{% /message %}\n\n'
+            '{% message speaker="Assistant" %}\n\nAnswer\n\n{% /message %}\n',
+        )
+        self.assertEqual(result.stderr, "")
+
+    def test_cli_rejects_invalid_format(self):
+        result = subprocess.run(
+            [sys.executable, str(SCRIPT), "--format", "html"],
+            input="## User\n\nHello\n",
+            text=True,
+            capture_output=True,
+        )
+        self.assertEqual(result.returncode, 2)
+        self.assertEqual(result.stdout, "")
+        self.assertIn("invalid choice: 'html'", result.stderr)
+        self.assertIn("markdown", result.stderr)
+        self.assertIn("markdoc", result.stderr)
 
 
 if __name__ == "__main__":

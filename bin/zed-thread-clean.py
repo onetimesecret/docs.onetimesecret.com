@@ -20,7 +20,9 @@ FENCE = re.compile(r"^ {0,3}(`{3,}|~{3,})(.*)$")
 THINKING = re.compile(r"</?thinking>")
 
 
-def clean_thread(text: str) -> str:
+def clean_thread(text: str, *, output_format: str = "markdown") -> str:
+    if output_format not in ("markdown", "markdoc"):
+        raise ValueError(f"Unsupported output format: {output_format}")
     messages = []
     role = None
     body = []
@@ -87,6 +89,11 @@ def clean_thread(text: str) -> str:
             body.append(line)
 
     finish_message()
+    if output_format == "markdoc":
+        return "\n\n".join(
+            f'{{% message speaker="{speaker}" %}}\n\n{content}\n\n{{% /message %}}'
+            for speaker, content in messages
+        ) + ("\n" if messages else "")
     return "\n\n".join(
         f"## {speaker}\n\n{content}" for speaker, content in messages
     ) + ("\n" if messages else "")
@@ -103,6 +110,12 @@ def main():
         default="-",
         help="UTF-8 export file, or - for stdin (default)",
     )
+    parser.add_argument(
+        "--format",
+        choices=("markdown", "markdoc"),
+        default="markdown",
+        help="Output format (default: markdown)",
+    )
     args = parser.parse_args()
     try:
         text = (
@@ -112,7 +125,7 @@ def main():
         )
     except (OSError, UnicodeError) as error:
         parser.exit(1, f"{parser.prog}: {error}\n")
-    sys.stdout.write(clean_thread(text))
+    sys.stdout.write(clean_thread(text, output_format=args.format))
 
 
 if __name__ == "__main__":
