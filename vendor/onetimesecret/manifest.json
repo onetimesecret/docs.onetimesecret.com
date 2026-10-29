@@ -1,0 +1,36 @@
+{
+  "extractorFormatVersion": 1,
+  "upstream": {
+    "repository": "https://github.com/onetimesecret/onetimesecret",
+    "release": "v0.26.19",
+    "commit": "e98a88c9b5832bbae249f38885aa28bd78a5db4d"
+  },
+  "refreshOwner": "unassigned",
+  "backupReviewer": "unassigned",
+  "files": [
+    {
+      "path": ".env.reference",
+      "role": "env-reference",
+      "sha256": "1b0c623bb20d9edc85e13bb6c0d28a4e15d8a4ea4949a479dea75920e83d076e",
+      "lines": 2718
+    },
+    {
+      "path": "etc/defaults/config.defaults.yaml",
+      "role": "config-defaults",
+      "sha256": "afd45822a57079515f5f16ae34428f60c253f3e844e2bba57ebc293834b65009",
+      "lines": 2102
+    },
+    {
+      "path": "etc/defaults/auth.defaults.yaml",
+      "role": "auth-defaults",
+      "sha256": "520ebc2d22ff69456c4f5e682f447978fa9d9a5b80e87f18c7ee963560601573",
+      "lines": 189
+    },
+    {
+      "path": "etc/defaults/logging.defaults.yaml",
+      "role": "logging-defaults",
+      "sha256": "4289f29774262323419cf3c6f7f1b40ed617dc65bb08a11e48ebb788c775da30",
+      "lines": 251
+    }
+  ]
+}
