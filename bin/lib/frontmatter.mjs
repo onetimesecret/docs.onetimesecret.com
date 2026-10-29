@@ -21,11 +21,26 @@ export const ENUM_FIELDS = ["plan", "audience", "pageType"];
 // Assertion 5 in check-frontmatter. Reader-facing trees where the audience gate
 // on assertion 4 is load-bearing, so the field that gate reads cannot be
 // optional. A slug matches a tree when it IS the tree (self-hosting/index.md ->
-// slug "self-hosting") or sits under it. configure/ and features/ hold no pages
-// yet — they are listed now so the first page that lands there arrives under the
-// rule. Lives here rather than in the check script so it is testable: the script
-// runs its assertions at import time and cannot be imported by a test.
-export const GATED_TREES = ["install", "self-hosting", "configure", "features"];
+// slug "self-hosting") or sits under it. features/ holds no pages yet — it is
+// listed so the first page that lands there arrives under the rule. Lives here
+// rather than in the check script so it is testable: the script runs its
+// assertions at import time and cannot be imported by a test.
+//
+// Phase 4 adds the four operator trees it creates. reference/ carries the
+// generated and pinned inventories, operate/ the Day-2 procedures,
+// troubleshoot/ the symptom-led diagnosis and upgrades/ the general migration
+// workflow. All four are operator-facing, so the citation rule applies to them
+// for the same reason it applies to install/ and self-hosting/.
+export const GATED_TREES = [
+  "install",
+  "self-hosting",
+  "configure",
+  "features",
+  "reference",
+  "operate",
+  "troubleshoot",
+  "upgrades",
+];
 export const GATED_FIELDS = ["audience", "pageType"];
 
 /**
