@@ -36,6 +36,10 @@ tmp
 *.env-*
 .envrc
 !.env.example
+# One pinned upstream snapshot, tracked on purpose: it is the input the
+# reference generator reads and the thing reviewers diff. Narrow by design —
+# every other .env.* stays ignored.
+!vendor/onetimesecret/.env.reference
 .ruby-version
 .commit_hash.txt
 
