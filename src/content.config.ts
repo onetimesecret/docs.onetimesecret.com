@@ -34,9 +34,7 @@ const docsFrontmatterExtension = z.object({
   // material must be reachable without an account, operator material assumes a
   // shell on the host. It is also what keeps the hosted and self-hosted trees
   // from silently merging — the same feature gets one page per audience.
-  audience: z
-    .enum(["end-user", "operator", "developer", "contributor"])
-    .optional(),
+  audience: z.enum(["end-user", "operator", "developer", "contributor"]).optional(),
 
   // Which of the four content types in docs/templates/README.md this page is.
   // Consumed by the templates (each type has one) and by review: a how-to that

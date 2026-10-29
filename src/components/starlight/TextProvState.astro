@@ -8,6 +8,10 @@
 ---
 
 <script is:inline>
-  try { document.documentElement.dataset.textprov = localStorage.getItem('docs:textprov') === 'shown' ? 'shown' : 'hidden'; }
-  catch { document.documentElement.dataset.textprov = 'hidden'; }
+  try {
+    document.documentElement.dataset.textprov =
+      localStorage.getItem("docs:textprov") === "shown" ? "shown" : "hidden";
+  } catch {
+    document.documentElement.dataset.textprov = "hidden";
+  }
 </script>
