@@ -53,6 +53,10 @@ tmp
 .claude/commands/*
 !.claude/commands/textprov.md
 __pycache__/
+# Both forms: a worktree helper that symlinks a shared environment creates
+# `.venv` as a symlink, which `.venv/` does not match, and one such symlink
+# was committed once already.
+.venv
 .venv/
 
 # VSC
