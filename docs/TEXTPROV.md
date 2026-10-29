@@ -186,8 +186,9 @@ label shows the same treatment as a legend. Hidden mode and print add no
 provenance paint; the words and native annotation styles stay intact.
 
 T󠄁h󠄁e󠄁 t󠄁r󠄁e󠄁a󠄁t󠄁m󠄁e󠄁n󠄁t󠄁 h󠄁a󠄁s󠄁 i󠄁t󠄁s󠄁 o󠄁w󠄁n󠄁 v󠄁e󠄁r󠄁s󠄁i󠄁o󠄁n󠄁,󠄁 s󠄁e󠄁p󠄁a󠄁r󠄁a󠄁t󠄁e󠄁 f󠄁r󠄁o󠄁m󠄁 t󠄁h󠄁e󠄁 `textprov` p󠄁a󠄁c󠄁k󠄁a󠄁g󠄁e󠄁
-v󠄁e󠄁r󠄁s󠄁i󠄁o󠄁n󠄁:󠄁 `YYYY-MM-DD.family`,󠄁 w󠄁h󠄁e󠄁r󠄁e󠄁 t󠄁h󠄁e󠄁 f󠄁a󠄁m󠄁i󠄁l󠄁y󠄁 n󠄁a󠄁m󠄁e󠄁s󠄁 t󠄁h󠄁e󠄁 v󠄁i󠄁s󠄁u󠄁a󠄁l󠄁 m󠄁o󠄁d󠄁e󠄁l󠄁 a󠄁n󠄁d󠄁 t󠄁h󠄁e󠄁
-d󠄁a󠄁t󠄁e󠄁 i󠄁s󠄁 t󠄁h󠄁e󠄁 r󠄁e󠄁v󠄁i󠄁s󠄁i󠄁o󠄁n󠄁 o󠄁f󠄁 i󠄁t󠄁s󠄁 d󠄁e󠄁f󠄁a󠄁u󠄁l󠄁t󠄁s󠄁.󠄁 T󠄁h󠄁i󠄁s󠄁 s󠄁i󠄁t󠄁e󠄁 p󠄁a󠄁i󠄁n󠄁t󠄁s󠄁 `2026-10-27.asterisk`,󠄁
+v󠄁e󠄁r󠄁s󠄁i󠄁o󠄁n󠄁:󠄁 `v<spec version>-<family>`,󠄁 w󠄁h󠄁e󠄁r󠄁e󠄁 t󠄁h󠄁e󠄁 p󠄁r󠄁e󠄁f󠄁i󠄁x󠄁 i󠄁s󠄁 t󠄁h󠄁e󠄁 T󠄁e󠄁x󠄁t󠄁P󠄁r󠄁o󠄁v󠄁 s󠄁p󠄁e󠄁c󠄁
+v󠄁e󠄁r󠄁s󠄁i󠄁o󠄁n󠄁 t󠄁h󠄁e󠄁 t󠄁r󠄁e󠄁a󠄁t󠄁m󠄁e󠄁n󠄁t󠄁 w󠄁a󠄁s󠄁 d󠄁e󠄁s󠄁i󠄁g󠄁n󠄁e󠄁d󠄁 a󠄁g󠄁a󠄁i󠄁n󠄁s󠄁t󠄁 a󠄁n󠄁d󠄁 t󠄁h󠄁e󠄁 f󠄁a󠄁m󠄁i󠄁l󠄁y󠄁 n󠄁a󠄁m󠄁e󠄁s󠄁 t󠄁h󠄁e󠄁 v󠄁i󠄁s󠄁u󠄁a󠄁l󠄁
+m󠄁o󠄁d󠄁e󠄁l󠄁.󠄁 T󠄁h󠄁i󠄁s󠄁 s󠄁i󠄁t󠄁e󠄁 p󠄁a󠄁i󠄁n󠄁t󠄁s󠄁 `v0.3.0-asterisk`,󠄁
 d󠄁e󠄁c󠄁l󠄁a󠄁r󠄁e󠄁d󠄁 i󠄁n󠄁 `src/lib/textprov/version.ts`,󠄁 r󠄁e󠄁p󠄁e󠄁a󠄁t󠄁e󠄁d󠄁 a󠄁s󠄁
 `--textprov-display-version` i󠄁n󠄁 `src/styles/textprov.css`,󠄁 a󠄁n󠄁d󠄁 e󠄁m󠄁i󠄁t󠄁t󠄁e󠄁d󠄁 a󠄁s󠄁
 `data-textprov-display-version` o󠄁n󠄁 t󠄁h󠄁e󠄁 e󠄁n󠄁r󠄁o󠄁l󠄁l󠄁m󠄁e󠄁n󠄁t󠄁 m󠄁a󠄁r󠄁k󠄁e󠄁r󠄁.󠄁 T󠄁h󠄁e󠄁 r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁e󠄁r󠄁 o󠄁f󠄁

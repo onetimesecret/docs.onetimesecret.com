@@ -106,8 +106,8 @@ describe('several switches on one page', () => {
 });
 
 describe('DISPLAY_VERSION', () => {
-  it('is date.family and matches the stylesheet property', () => {
-    expect(DISPLAY_VERSION).toMatch(/^\d{4}-\d{2}-\d{2}\.[a-z]+$/);
+  it('is spec-version-family and matches the stylesheet property', () => {
+    expect(DISPLAY_VERSION).toMatch(/^v\d+\.\d+\.\d+-[a-z]+$/);
     const css = readFileSync(resolve(__dirname, '../../styles/textprov.css'), 'utf8');
     expect(css).toContain(`--textprov-display-version: "${DISPLAY_VERSION}";`);
   });

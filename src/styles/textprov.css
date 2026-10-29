@@ -1,7 +1,7 @@
 /* Adapted from textprov/textprov js/textprov.css at 57257b8.
  * The docs renderer publishes clean AI text; these styles never decode it.
  * Gradient mist and 80%-strength dots replace the defunct wavy provenance cue.
- * Display version 2026-10-27.asterisk (upstream docs/development/display-versions.md);
+ * Display version v0.3.0-asterisk (upstream docs/development/display-versions.md);
  * --textprov-display-version below and src/lib/textprov/version.ts must agree.
  * Native application annotations can remain above this optional CSS layer.
  */
@@ -13,7 +13,7 @@
 
 @layer textprov {
   :root {
-    --textprov-display-version: "2026-10-27.asterisk";
+    --textprov-display-version: "v0.3.0-asterisk";
     --textprov-tint: 14%;
     --textprov-dot-strength: 80%;
     --textprov-glow-opacity: 27%;
