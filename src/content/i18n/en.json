@@ -198,13 +198,12 @@
   "notFound.gettingStarted": "Getting started",
   "notFound.apiDocs": "API docs",
   "notFound.selfHosting": "Self-hosting",
+  "textprov.heading": "AI edits ℗",
   "textprov.toggle": "Highlight AI edits",
-  "textprov.help": "Highlights recorded AI agent edits. Unmarked content has no recorded origin.",
-  "textprov.groupingHelp": "Passage view adds word-level context around recorded AI edits. Dotted underlines identify exact recorded characters in both views, except in links. Unmarked text has no recorded origin.",
-  "textprov.display": "Highlight detail",
-  "textprov.passage": "Passages",
-  "textprov.exact": "Exact characters",
-  "textprov.info": "About TextProv",
-  "textprov.about": "TextProv records the text an AI agent wrote or changed, at the time of the edit. It does not detect AI writing after the fact.",
-  "textprov.learnMore": "How TextProv works"
+  "textprov.help": "Highlights edits recorded as AI-written without changing the words.",
+  "textprov.info": "About AI highlighting",
+  "textprov.aboutTitle": "About AI highlighting",
+  "textprov.about": "Highlights edits recorded as AI-written. Turning it on changes only the highlighting—not the words.",
+  "textprov.limits": "Unmarked text has no recorded origin; it may also include AI-written text. The marks do not indicate whether text was reviewed or whether it is accurate.",
+  "textprov.learnMore": "How and why we use AI in these docs"
 }

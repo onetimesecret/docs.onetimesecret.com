@@ -1,4 +1,4 @@
-import { component, defineMarkdocConfig } from "@astrojs/markdoc/config";
+import { component, defineMarkdocConfig, Markdoc } from "@astrojs/markdoc/config";
 import starlightMarkdoc from "@astrojs/starlight-markdoc";
 
 // https://docs.astro.build/en/guides/integrations-guide/markdoc/
@@ -11,6 +11,44 @@ export default defineMarkdocConfig({
     // Add custom node types here
   },
   tags: {
+    message: {
+      attributes: {
+        speaker: { type: String, required: true, matches: ["User", "Assistant"] },
+      },
+      transform(node, config) {
+        const { speaker } = node.transformAttributes(config);
+        return new Markdoc.Tag(
+          "div",
+          {
+            class: "transcript-message",
+            "data-speaker": speaker,
+            role: "group",
+            "aria-label": `${speaker} message`,
+          },
+          [
+            new Markdoc.Tag("p", { class: "transcript-message__speaker" }, [speaker]),
+            new Markdoc.Tag(
+              "div",
+              { class: "transcript-message__body" },
+              node.transformChildren(config),
+            ),
+          ],
+        );
+      },
+    },
+    details: { render: "details" },
+    summary: {
+      render: "summary",
+      transform(node, config) {
+        // Block tags wrap their text in paragraphs; summary requires phrasing content.
+        const children = node
+          .transformChildren(config)
+          .flatMap((child) =>
+            Markdoc.Tag.isTag(child) && child.name === "p" ? child.children : [child],
+          );
+        return new Markdoc.Tag("summary", {}, children);
+      },
+    },
     "homepage-ending": {
       render: component("./src/components/HomepageEnding.astro"),
       selfClosing: true,

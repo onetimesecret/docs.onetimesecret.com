@@ -11,7 +11,6 @@ const KEY = 'docs:textprov';
 
 function page(markup = '<button data-textprov-toggle aria-checked="false"></button>') {
   document.documentElement.removeAttribute('data-textprov');
-  document.documentElement.removeAttribute('data-textprov-display');
   document.body.innerHTML = markup;
   return document.querySelector<HTMLButtonElement>('[data-textprov-toggle]');
 }
@@ -86,36 +85,19 @@ describe('initTextProv', () => {
 });
 
 
-describe('highlight detail preference', () => {
-  const markup = '<button data-textprov-toggle></button><select data-textprov-display-control><option value="passage">Passages</option><option value="exact">Exact characters</option></select><p class="textprov-passage"><span class="textprov-ai">A</span> plain</p>';
-  it('defaults to passages, disables detail when hidden, and preserves the exact DOM on change', () => {
-    const toggle = page(markup);
+describe('several switches on one page', () => {
+  it('keeps the sidebar and mobile switches in step and persists once', () => {
+    page('<button data-textprov-toggle aria-checked="false" id="a"></button><button data-textprov-toggle aria-checked="false" id="b"></button>');
     const storage = memoryStorage();
     initTextProv(document, storage);
-    const mode = document.querySelector<HTMLSelectElement>('[data-textprov-display-control]')!;
-    expect(document.documentElement.dataset.textprovDisplay).toBe('passage');
-    expect(mode.disabled).toBe(true);
-    toggle?.click();
-    expect(mode.disabled).toBe(false);
-    const html = document.querySelector('p')!.innerHTML;
-    mode.value = 'exact'; mode.dispatchEvent(new Event('change'));
-    expect(document.documentElement.dataset.textprovDisplay).toBe('exact');
-    expect(storage.getItem('docs:textprov:display')).toBe('exact');
-    expect(document.querySelector('p')!.innerHTML).toBe(html);
-    mode.value = 'passage'; mode.dispatchEvent(new Event('change'));
-    expect(document.documentElement.dataset.textprovDisplay).toBe('passage');
-    expect(document.querySelector('p')!.innerHTML).toBe(html);
-  });
-  it('restores exact detail and normalizes unknown saved values', () => {
-    page(markup); initTextProv(document, memoryStorage({ 'docs:textprov:display': 'exact' }));
-    expect(document.documentElement.dataset.textprovDisplay).toBe('exact');
-    page(markup); initTextProv(document, memoryStorage({ 'docs:textprov:display': 'word' }));
-    expect(document.documentElement.dataset.textprovDisplay).toBe('passage');
-  });
-  it('keeps a page-local detail choice when storage throws', () => {
-    page(markup); initTextProv(document, { getItem: () => { throw new Error('denied'); }, setItem: () => { throw new Error('denied'); } } as unknown as Storage);
-    const mode = document.querySelector<HTMLSelectElement>('[data-textprov-display-control]')!;
-    mode.value = 'exact'; mode.dispatchEvent(new Event('change'));
-    expect(document.documentElement.dataset.textprovDisplay).toBe('exact');
+    const [a, b] = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-textprov-toggle]'));
+    b.click();
+    expect(document.documentElement.dataset.textprov).toBe('shown');
+    expect(a.getAttribute('aria-checked')).toBe('true');
+    expect(b.getAttribute('aria-checked')).toBe('true');
+    expect(storage.getItem(KEY)).toBe('shown');
+    a.click();
+    expect(b.getAttribute('aria-checked')).toBe('false');
+    expect(storage.getItem(KEY)).toBe('hidden');
   });
 });

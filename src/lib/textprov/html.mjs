@@ -1,6 +1,5 @@
 import { parse } from 'parse5';
 import textprov from 'textprov';
-import { passageRanges } from './passages.mjs';
 
 const escape = (text) => text.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
 const codepoint = (value) => `\\u{${value.toString(16)}}`;
@@ -12,15 +11,6 @@ const excluded = new Set(['script', 'style', 'code', 'pre', 'textarea', 'svg', '
 const references = new Set(['aria-labelledby', 'aria-describedby', 'aria-controls', 'aria-owns',
   'aria-flowto', 'aria-activedescendant', 'aria-details', 'aria-errormessage', 'for', 'list', 'headers', 'form']);
 const labels = new Set(['aria-label', 'title', 'alt']);
-// Elements whose text never joins neighbouring words into one passage group.
-const blocks = new Set(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'li', 'dt', 'dd',
-  'td', 'th', 'figcaption', 'div', 'section', 'article', 'blockquote',
-  'address', 'aside', 'details', 'summary', 'dialog', 'fieldset', 'legend',
-  'figure', 'footer', 'form', 'header', 'hgroup', 'main', 'nav', 'ol', 'ul',
-  'dl', 'table', 'thead', 'tbody', 'tfoot', 'tr', 'caption', 'hr', 'menu',
-  'search', 'select', 'optgroup', 'option', 'video', 'audio', 'canvas',
-  'object', 'embed']);
-
 // This integration reads only recorded AI marks in opted-in docs. In particular,
 // U+E0100 remains untouched: 辻 + U+E0100 is a real ideographic variation sequence.
 // TextProv's baseline is experimental; these values are not a private namespace.
@@ -113,103 +103,25 @@ export function renderProvenance(html, { requireEnrollment = true, label } = {})
     usedIds.add(base);
     idMap.set(id, base);
   }
-  // Display groups do not change exact attribution or source marks.
-  // Each text node keeps its original inline formatting/native annotation parent.
-  const contexts = new Map();
-  let group = null;
-  function flush() {
-    if (!group) return;
-    const ranges = passageRanges(group.text, group.exact, group.locale);
-    let rangeIndex = 0;
-    for (const entry of group.nodes) {
-      while (rangeIndex < ranges.length && ranges[rangeIndex].end <= entry.start) rangeIndex++;
-      const local = [];
-      for (let i = rangeIndex; i < ranges.length && ranges[i].start < entry.end; i++) {
-        local.push({
-          start: Math.max(ranges[i].start, entry.start) - entry.start,
-          end: Math.min(ranges[i].end, entry.end) - entry.start,
-        });
-      }
-      if (local.length) contexts.set(entry.node, { runs: entry.runs, ranges: local });
-    }
-    group = null;
-  }
-  function collectPassages(node, prose = false, locale = 'en') {
-    // lang="" declares an unknown language: it stops grouping like any other
-    // change and segments with the English fallback instead of inheriting.
-    const lang = node.attrs?.find(a => a.name === 'lang')?.value;
-    const boundary = blocks.has(node.tagName) || excluded.has(node.tagName) ||
-      node.tagName === 'br' || lang !== undefined;
-    // Excluded content, line breaks, nested blocks and language changes must
-    // not disappear from the text stream and accidentally join nearby words.
-    if (boundary) flush();
-    if (excluded.has(node.tagName)) return;
-    locale = lang ?? locale;
-    prose ||= node.attrs?.some(
-      a => a.name === 'class' && a.value.split(/\s+/).includes('sl-markdown-content'),
-    );
-    if (prose && node.nodeName === '#text') {
-      const runs = candidate.test(node.value)
-        ? aiRuns(node.value)
-        : [{ state: null, text: node.value }];
-      group ??= { text: '', exact: [], nodes: [], locale };
-      const start = group.text.length;
-      for (const run of runs) {
-        const offset = group.text.length;
-        group.text += run.text;
-        if (run.state === 'ai') group.exact.push({ start: offset, end: group.text.length });
-      }
-      group.nodes.push({ node, runs, start, end: group.text.length });
-    }
-    for (const child of node.childNodes ?? []) collectPassages(child, prose, locale);
-    if (boundary) flush();
-  }
-  collectPassages(tree);
-  flush();
   function visit(node, prose = false, blocked = false) {
     if (blocked) return;
     const attrs = node.attrs ?? [];
     prose ||= attrs.some(a => a.name === 'class' && a.value.split(/\s+/).includes('sl-markdown-content'));
-    const context = contexts.get(node);
-    if (node.nodeName === '#text' && (candidate.test(node.value) || context?.ranges.length)) {
-      const runs = context?.runs ?? aiRuns(node.value);
+    if (node.nodeName === '#text' && candidate.test(node.value)) {
+      const runs = aiRuns(node.value);
       // Any marker left after decoding is malformed, e.g. a legacy PUA code point
       // followed by a selector, which decodes to the PUA code point and renders as tofu.
       if (runs.some(run => candidate.test(run.text)))
         fail(`malformed AI marker in managed text: "${excerpt(node.value)}"`);
-      const ranges = context?.ranges ?? [];
-      if (runs.some(run => run.state === 'ai') || ranges.length) {
+      if (runs.some(run => run.state === 'ai')) {
         const location = node.sourceCodeLocation;
         if (!location) fail('marked text has no source location');
-        let runIndex = 0, runStart = 0;
-        function exactSlice(start, end) {
-          if (start >= end) return '';
-          let html = '';
-          while (runIndex < runs.length && runStart < end) {
-            const run = runs[runIndex];
-            const runEnd = runStart + run.text.length;
-            const text = escape(run.text.slice(Math.max(0, start - runStart), Math.min(run.text.length, end - runStart)));
-            html += prose && run.state === 'ai'
-              ? `<span class="textprov-ai" data-textprov="ai">${text}</span>`
-              : text;
-            if (runEnd > end) break;
-            runStart = runEnd;
-            runIndex++;
-          }
-          return html;
-        }
-        const total = runs.reduce((length, run) => length + run.text.length, 0);
-        let rendered = '', offset = 0;
-        for (const range of ranges) {
-          // exactSlice drops text silently for out-of-order or empty ranges;
-          // fail the build instead of publishing lost or duplicated prose.
-          if (range.start < offset || range.end <= range.start || range.end > total)
-            fail(`passage ranges are not sorted within the text: "${excerpt(node.value)}"`);
-          rendered += exactSlice(offset, range.start);
-          rendered += `<span class="textprov-passage" data-textprov-passage="ai">${exactSlice(range.start, range.end)}</span>`;
-          offset = range.end;
-        }
-        rendered += exactSlice(offset, total);
+        const rendered = runs.map(run => {
+          const text = escape(run.text);
+          return prose && run.state === 'ai'
+            ? `<span class="textprov-ai" data-textprov="ai">${text}</span>`
+            : text;
+        }).join('');
         edits.push([location.startOffset, location.endOffset, rendered]);
       }
     }

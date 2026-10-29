@@ -196,6 +196,49 @@ header.header {
 }
 
 
+/* --- Conversation transcripts --- */
+.sl-markdown-content .transcript-message {
+  min-width: 0;
+  margin-block: 1.75rem 0;
+  padding: 0.25rem 1rem;
+  overflow-wrap: anywhere;
+}
+
+.sl-markdown-content .transcript-message[data-speaker="User"] {
+  padding-block: 1rem;
+  border: 1px solid var(--sl-color-hairline-light);
+  border-radius: 0.5rem;
+  background: color-mix(in srgb, var(--sl-color-text) 5%, var(--sl-color-bg));
+}
+
+.sl-markdown-content .transcript-message__speaker {
+  margin: 0 0 0.5rem;
+  color: var(--sl-color-white);
+  font-size: var(--sl-text-sm);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.sl-markdown-content .transcript-message__body {
+  min-width: 0;
+  margin: 0;
+}
+
+.sl-markdown-content .transcript-message__body > * {
+  margin-block: 0;
+}
+
+.sl-markdown-content .transcript-message__body > * + * {
+  margin-top: 0.75rem;
+}
+
+.sl-markdown-content .transcript-message__body pre {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-wrap: normal;
+}
+
+
 /* --- Table of Contents --- */
 starlight-toc a {
   font-size: 0.8125rem;
