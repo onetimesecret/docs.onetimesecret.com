@@ -11,8 +11,8 @@
 // files without hashing them lets a local edit publish itself as upstream
 // fact.
 import { createHash } from "node:crypto";
-import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
-import { dirname, join, relative, sep } from "node:path";
+import { existsSync, lstatSync, readdirSync, readFileSync } from "node:fs";
+import { dirname, join, relative, sep, win32 } from "node:path";
 import { fileURLToPath } from "node:url";
 
 /** Repository root, resolved from this file so any cwd works. */
@@ -40,14 +40,18 @@ export function sha256(buffer) {
   return createHash("sha256").update(buffer).digest("hex");
 }
 
-/** Every file under `dir`, as paths relative to `dir` with `/` separators. */
+/** Every file under `dir`, rejecting symlinks before following any path. */
 function filesUnder(dir) {
   const found = [];
   const walk = (current) => {
-    for (const name of readdirSync(current).sort()) {
-      const path = join(current, name);
-      if (statSync(path).isDirectory()) walk(path);
-      else found.push(relative(dir, path).split(sep).join("/"));
+    const stat = lstatSync(current);
+    if (stat.isSymbolicLink()) {
+      throw new Error(`${current}: symlinks are not allowed in the vendor directory`);
+    }
+    if (stat.isDirectory()) {
+      for (const name of readdirSync(current).sort()) walk(join(current, name));
+    } else {
+      found.push(relative(dir, current).split(sep).join("/"));
     }
   };
   walk(dir);
@@ -63,6 +67,9 @@ function filesUnder(dir) {
  */
 export function loadManifest({ vendorDir = VENDOR_DIR } = {}) {
   const manifestPath = join(vendorDir, "manifest.json");
+  // Scan before reading even the manifest: listed snapshot path components and
+  // ignored companion files must not redirect reads outside this tree or cycle.
+  const vendoredFiles = existsSync(vendorDir) ? filesUnder(vendorDir) : [];
   if (!existsSync(manifestPath)) {
     throw new Error(
       `${relative(repoRoot, manifestPath)} is missing — the generator reads vendored snapshots only, so there is nothing to generate from`,
@@ -105,9 +112,8 @@ export function loadManifest({ vendorDir = VENDOR_DIR } = {}) {
   //                       form, which then requires accountabilityNote to say
   //                       what breaks when the single maintainer is away.
   //
-  // Both stay warnings rather than failures: this gate exists to keep the
-  // obligation visible, and failing here would stop the pipeline the obligation
-  // is about.
+  // Only the literal "unassigned" values warn. Missing, empty or non-string
+  // fields fail validation, as does a declared absence without its risk note.
   if (typeof manifest.refreshOwner !== "string" || manifest.refreshOwner === "") {
     problems.push('refreshOwner must be a string (use "unassigned" until a handle is recorded)');
   } else if (manifest.refreshOwner === "unassigned") {
@@ -147,8 +153,16 @@ export function loadManifest({ vendorDir = VENDOR_DIR } = {}) {
       problems.push(`${where}: path must be a non-empty string`);
       continue;
     }
-    if (file.path.startsWith("/") || file.path.split("/").includes("..")) {
-      problems.push(`${where}: path must be relative and must not escape the vendor directory`);
+    if (
+      file.path.startsWith("/") ||
+      win32.isAbsolute(file.path) ||
+      /^[a-z]:/i.test(file.path) ||
+      file.path.includes("\\") ||
+      file.path.split("/").includes("..")
+    ) {
+      problems.push(
+        `${where}: path must be relative, use / separators, and must not escape the vendor directory`,
+      );
       continue;
     }
     if (seenPaths.has(file.path)) {
@@ -197,7 +211,7 @@ export function loadManifest({ vendorDir = VENDOR_DIR } = {}) {
     problems.push("no file declares the env-reference role, which is the minimum input");
   }
 
-  for (const path of filesUnder(vendorDir)) {
+  for (const path of vendoredFiles) {
     if (NOT_INPUTS.has(path) || seenPaths.has(path)) continue;
     problems.push(
       `vendor/onetimesecret/${path} is not listed in the manifest — an unlisted file under the vendor directory is an unprovenanced input; list it with its role and hash, or remove it`,

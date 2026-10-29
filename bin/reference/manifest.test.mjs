@@ -4,7 +4,7 @@
 // file is present, hashes as recorded, and is accounted for. These tests build
 // throwaway vendor directories so each failure mode is exercised without
 // touching the real snapshots.
-import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { mkdirSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { afterEach, describe, expect, it } from "vitest";
@@ -92,6 +92,22 @@ describe("the tracked manifest", () => {
     expect(warnings).toEqual([]);
   });
 
+  it("warns when the backup reviewer is unassigned", () => {
+    const dir = vendor({ manifest: { backupReviewer: "unassigned" } });
+    expect(loadManifest({ vendorDir: dir }).warnings.join(" ")).toMatch(
+      /backupReviewer is "unassigned"/,
+    );
+  });
+
+  it.each(
+    ["refreshOwner", "backupReviewer"].flatMap((field) =>
+      [undefined, null, 42, ""].map((value) => [field, value]),
+    ),
+  )("rejects invalid accountability field %s = %s", (field, value) => {
+    const dir = vendor({ manifest: { [field]: value } });
+    expect(() => loadManifest({ vendorDir: dir })).toThrow(`${field} must be a string`);
+  });
+
   it("records a hash for every file it lists, and lists every file present", () => {
     const manifest = JSON.parse(readFileSync(MANIFEST_PATH, "utf8"));
     for (const file of manifest.files) {
@@ -144,6 +160,69 @@ describe("rejections", () => {
     manifest.files[0].path = "../../.env";
     writeFileSync(join(dir, "manifest.json"), JSON.stringify(manifest));
     expect(() => loadManifest({ vendorDir: dir })).toThrow(/must not escape/);
+  });
+
+  it.each([
+    "/tmp/.env.reference",
+    "C:/snapshots/.env.reference",
+    "C:\\snapshots\\.env.reference",
+    "C:.env.reference",
+    "\\\\server\\share\\.env.reference",
+    "//server/share/.env.reference",
+    "snapshots\\.env.reference",
+    "snapshots\\..\\..\\.env",
+  ])("rejects a non-portable manifest path %s", (path) => {
+    const dir = vendor();
+    const manifest = JSON.parse(readFileSync(join(dir, "manifest.json"), "utf8"));
+    manifest.files[0].path = path;
+    writeFileSync(join(dir, "manifest.json"), JSON.stringify(manifest));
+    expect(() => loadManifest({ vendorDir: dir })).toThrow(
+      /path must be relative.*must not escape/,
+    );
+  });
+
+  it.each([false, true])("rejects a listed snapshot symlink (dangling: %s)", (dangling) => {
+    const dir = vendor();
+    const target = join(vendor(), dangling ? "missing" : ".env.reference");
+    rmSync(join(dir, ".env.reference"));
+    symlinkSync(target, join(dir, ".env.reference"));
+    expect(() => loadManifest({ vendorDir: dir })).toThrow(/symlinks are not allowed/);
+  });
+
+  it.each(["snapshots", "snapshots/nested"])(
+    "rejects a symlink in listed snapshot directory %s before reading it",
+    (parent) => {
+      const dir = vendor({ files: { [`${parent}/.env.reference`]: "# fixture\nFOO=1\n" } });
+      rmSync(join(dir, parent), { recursive: true });
+      symlinkSync(vendor(), join(dir, parent), "dir");
+      expect(() => loadManifest({ vendorDir: dir })).toThrow(/symlinks are not allowed/);
+    },
+  );
+
+  it("rejects a cyclic directory symlink instead of recursing", () => {
+    const dir = vendor();
+    symlinkSync(dir, join(dir, "cycle"), "dir");
+    expect(() => loadManifest({ vendorDir: dir })).toThrow(/symlinks are not allowed/);
+  });
+
+  it("rejects a symlinked vendor root", () => {
+    const link = join(vendor(), "linked-vendor");
+    symlinkSync(vendor(), link, "dir");
+    expect(() => loadManifest({ vendorDir: link })).toThrow(/symlinks are not allowed/);
+  });
+
+  it("rejects a manifest symlink before reading its invalid JSON target", () => {
+    const dir = vendor();
+    writeFileSync(join(dir, "README.md"), "not JSON\n");
+    rmSync(join(dir, "manifest.json"));
+    symlinkSync(join(dir, "README.md"), join(dir, "manifest.json"));
+    expect(() => loadManifest({ vendorDir: dir })).toThrow(/symlinks are not allowed/);
+  });
+
+  it("rejects symlinks even for ignored companion files", () => {
+    const dir = vendor();
+    symlinkSync(join(dir, "missing"), join(dir, "README.md"));
+    expect(() => loadManifest({ vendorDir: dir })).toThrow(/symlinks are not allowed/);
   });
 
   it("rejects a missing manifest", () => {
