@@ -179,14 +179,26 @@ const HIDDEN_MARKDOWN = new RegExp(
  * page's last inbound link fails the orphan check instead of passing it.
  *
  * @param {string} markdown Page source, frontmatter included or not.
- * @returns {Set<string>} Normalized slugs, in link order.
+ * @param {{html?: boolean}} [options] Also read quoted HTML anchor hrefs.
+ * @returns {Set<string>} Normalized slugs (Markdown first, then HTML if enabled).
  */
-export function enLinkSlugs(markdown) {
+export function enLinkSlugs(markdown, { html = false } = {}) {
   const visible = markdown.replace(HIDDEN_MARKDOWN, "");
   const slugs = new Set();
-  for (const match of visible.matchAll(/\]\(\s*<?\/en\/([^)\s>]*)>?\s*(?:"[^"]*")?\)/g)) {
-    const target = match[1].replace(/[#?].*$/, "");
+  for (const match of visible.matchAll(/\]\(\s*<?\/en(?:\/([^)\s>]*))?>?\s*(?:"[^"]*")?\)/g)) {
+    const target = (match[1] ?? "").replace(/[#?].*$/, "");
     slugs.add(normalizeLink(target));
+  }
+  if (html) {
+    for (const tag of visible.matchAll(/<a\b(?:[^"'<>]|"[^"]*"|'[^']*')*>/gi)) {
+      // Consume whole attribute values so text such as title='href="/en/x"'
+      // cannot masquerade as a real href attribute.
+      for (const attr of tag[0].matchAll(/\s+([^\s=/>]+)(?:\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+)))?/g)) {
+        if (attr[1].toLowerCase() !== "href") continue;
+        const target = (attr[2] ?? attr[3] ?? "").match(/^\/en(?:\/([^\s]*))?$/);
+        if (target) slugs.add(normalizeLink((target[1] ?? "").replace(/[#?].*$/, "")));
+      }
+    }
   }
   return slugs;
 }

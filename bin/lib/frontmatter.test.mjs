@@ -20,7 +20,9 @@ import {
   docsPages,
   headings,
   inGatedTree,
+  pageLinks,
   parseFrontmatter,
+  reciprocalReachability,
   schemaEnums,
   slugifyHeading,
   statedDefaults,
@@ -314,5 +316,291 @@ describe("statedDefaults", () => {
 
   it("does not mistake a numbered list marker on the next line for a value", () => {
     expect(statedDefaults("To change SECRET_TTL:\n1. Open the config.")).toEqual([]);
+  });
+});
+
+describe("pageLinks", () => {
+  it("reads Markdown links as EN docs slugs", () => {
+    expect(pageLinks("See [Self-hosting](/en/self-hosting) for the rest.")).toEqual(
+      new Set(["self-hosting"]),
+    );
+  });
+
+  it("drops fragments and query strings, so a deep link still counts as the page", () => {
+    expect(pageLinks("[a](/en/security/where-your-data-lives#canada) [b](/en/share?x=1)")).toEqual(
+      new Set(["security/where-your-data-lives", "share"]),
+    );
+  });
+
+  it("collapses the locale root and trailing slashes to the index slug", () => {
+    expect(pageLinks("[home](/en/) [also](/en) [dir](/en/billing/)")).toEqual(
+      new Set(["index", "billing"]),
+    );
+  });
+
+  it("reads raw HTML hrefs, which several inherited pages still use", () => {
+    expect(pageLinks('<a href="/en/configure/sso">SSO</a>')).toEqual(new Set(["configure/sso"]));
+  });
+
+  it("ignores off-site links, other locales and assets", () => {
+    const body = [
+      "[ext](https://example.com/en/share)",
+      "[mail](mailto:a@b.c)",
+      "[fr](/fr/share)",
+      "[img](/img/docs/a.png)",
+      "[proto-relative](//example.com/en/share)",
+    ].join("\n");
+    expect(pageLinks(body)).toEqual(new Set());
+  });
+
+  it("does not resolve relative links, by design", () => {
+    // The house style is an absolute /en/… link. A relative one is simply not
+    // seen, which costs a named failure in the reciprocal check rather than a
+    // silent pass — see the note on pageLinks.
+    expect(pageLinks("[sibling](branding)")).toEqual(new Set());
+  });
+});
+
+describe("reciprocalReachability", () => {
+  // A tiny stand-in for the real table: one hosted page answered by two
+  // operator pages (the row-four shape), and two hosted pages converging on one
+  // operator page (the billing shape). Both are legal and must pass.
+  const PAIRS = {
+    "custom-domains/homepage-and-incoming": [
+      "features/incoming-secrets",
+      "features/interface-and-homepage",
+    ],
+    billing: ["features/billing-and-entitlements"],
+    "billing/managing-your-subscription": ["features/billing-and-entitlements"],
+  };
+
+  const page = (slug, ...links) => [
+    slug,
+    { path: `src/content/docs/en/${slug}.md`, links: new Set(links) },
+  ];
+
+  const run = (pages, pending = []) =>
+    reciprocalReachability({
+      pairs: PAIRS,
+      pages: new Map(pages),
+      pending: new Map(pending),
+      allowlist: "config/reciprocal-pending.allow",
+    });
+
+  const everythingWritten = [
+    page("custom-domains/homepage-and-incoming", "features/incoming-secrets"),
+    page("billing", "features/billing-and-entitlements"),
+    page("billing/managing-your-subscription", "features/billing-and-entitlements"),
+    page("features/incoming-secrets", "custom-domains/homepage-and-incoming"),
+    page("features/interface-and-homepage", "custom-domains/homepage-and-incoming"),
+    page("features/billing-and-entitlements", "billing"),
+  ];
+
+  it("passes when one counterpart is reached in each direction", () => {
+    // The hosted page links to only ONE of its two operator pages, and the one
+    // operator page links back to only ONE of its two hosted pages. Both are
+    // reachability, not pairing, so both pass.
+    const { problems, hosted, operator } = run(everythingWritten);
+    expect(problems).toEqual([]);
+    expect(hosted).toBe(3);
+    expect(operator).toBe(3);
+  });
+
+  it("fails a hosted page that reaches none of its operator counterparts", () => {
+    const broken = everythingWritten.map(([slug, value]) =>
+      slug === "custom-domains/homepage-and-incoming" ? page(slug) : [slug, value],
+    );
+    const { problems } = run(broken);
+    expect(problems).toHaveLength(1);
+    expect(problems[0]).toContain("src/content/docs/en/custom-domains/homepage-and-incoming.md");
+    expect(problems[0]).toContain("no link to any of its operator counterparts");
+  });
+
+  it("fails an operator page that never links back", () => {
+    const broken = everythingWritten.map(([slug, value]) =>
+      slug === "features/billing-and-entitlements" ? page(slug) : [slug, value],
+    );
+    const { problems } = run(broken);
+    expect(problems).toHaveLength(1);
+    expect(problems[0]).toContain("src/content/docs/en/features/billing-and-entitlements.md");
+    expect(problems[0]).toContain("no link back to any of its hosted counterparts");
+    // Names both hosted pages it could satisfy, not one arbitrary choice.
+    expect(problems[0]).toContain("/en/billing");
+    expect(problems[0]).toContain("/en/billing/managing-your-subscription");
+  });
+
+  it("suspends a pair whose operator half is declared pending", () => {
+    const { problems, pendingPairs, hosted } = run(
+      [
+        page("custom-domains/homepage-and-incoming"),
+        page("billing"),
+        page("billing/managing-your-subscription"),
+      ],
+      [
+        ["features/incoming-secrets", "Phase 3, unwritten"],
+        ["features/interface-and-homepage", "Phase 3, unwritten"],
+        ["features/billing-and-entitlements", "blocked on the billing catalog"],
+      ],
+    );
+    expect(problems).toEqual([]);
+    expect(hosted).toBe(0);
+    expect(pendingPairs.sort()).toEqual([
+      "billing",
+      "billing/managing-your-subscription",
+      "custom-domains/homepage-and-incoming",
+    ]);
+  });
+
+  it("fails when a declared-pending operator page has landed, so the pair wakes up", () => {
+    // This is the whole reason the pending list is a file rather than silence:
+    // writing the page is what forces the line out, and deleting the line is
+    // what switches the reachability assertion on for that pair.
+    const { problems } = run(
+      [
+        page("billing"),
+        page("billing/managing-your-subscription"),
+        page("features/billing-and-entitlements"),
+      ],
+      [
+        ["features/incoming-secrets", "Phase 3, unwritten"],
+        ["features/interface-and-homepage", "Phase 3, unwritten"],
+        ["features/billing-and-entitlements", "blocked on the billing catalog"],
+      ],
+    );
+    const stale = problems.filter((p) => p.includes("now exists"));
+    expect(stale).toHaveLength(1);
+    expect(stale[0]).toContain("config/reciprocal-pending.allow");
+    expect(stale[0]).toContain("features/billing-and-entitlements");
+  });
+
+  it("fails an operator page that is neither written nor declared", () => {
+    const { problems } = run([
+      page("custom-domains/homepage-and-incoming"),
+      page("billing"),
+      page("billing/managing-your-subscription"),
+    ]);
+    expect(problems).toHaveLength(3);
+    for (const problem of problems) {
+      expect(problem).toContain("is not declared in config/reciprocal-pending.allow");
+    }
+  });
+
+  it("fails an allowlist entry for a slug the table does not name", () => {
+    const { problems } = run(everythingWritten, [["features/languages", "not in the table"]]);
+    expect(problems).toHaveLength(1);
+    expect(problems[0]).toContain("is not an operator page in the reciprocal-link table");
+  });
+
+  it("fails a hosted slug in the table with no page behind it", () => {
+    const { problems } = run(everythingWritten.filter(([slug]) => slug !== "billing"));
+    // billing is gone: the hosted-half failure, plus the operator page that can
+    // no longer reach it (it linked only to /en/billing).
+    expect(problems.some((p) => p.includes("fix the slug in RECIPROCAL_PAIRS"))).toBe(true);
+  });
+});
+
+
+describe("reciprocal link activation", () => {
+  const pairs = { hosted: ["configure/sso"], other: ["features/new"] };
+  const page = (...links) => ({ path: "fixture.md", links: new Set(links) });
+  const pages = new Map([
+    ["hosted", page()], ["configure/sso", page()], ["other", page()],
+  ]);
+  const run = (overrides = {}) => reciprocalReachability({
+    pairs, pages, pending: new Map([["features/new", "unwritten"]]),
+    stagedOperators: new Set(["configure/sso"]), ...overrides,
+  });
+
+  it("stages only explicit link assertions, not existence checks", () => {
+    expect(run()).toEqual({
+      problems: [], pendingPairs: ["other"], stagedPairs: ["hosted"], hosted: 0, operator: 0,
+    });
+    const missing = new Map(pages);
+    missing.delete("configure/sso");
+    expect(run({ pages: missing }).problems.join("\n")).toContain("does not exist and is not declared");
+    missing.delete("hosted");
+    expect(run({ pages: missing }).problems.join("\n")).toContain("hosted half");
+  });
+
+  it("still rejects existing, unknown and stale pending/staging entries", () => {
+    const pending = new Map([["features/new", "unwritten"], ["configure/sso", "wrong"]]);
+    expect(run({ pending }).problems.join("\n")).toContain("now exists");
+    pending.set("unknown", "wrong");
+    expect(run({ pending }).problems.join("\n")).toContain('"unknown" is not an operator page');
+    expect(run({ stagedOperators: new Set(["typo"]) }).problems.join("\n")).toContain("stale activation entry");
+  });
+
+  it("activates both directions when the explicit staging entry is removed", () => {
+    const result = run({ stagedOperators: new Set() });
+    expect(result.problems).toHaveLength(2);
+    expect(result.hosted).toBe(1);
+    expect(result.operator).toBe(1);
+    const linked = new Map(pages);
+    linked.set("hosted", page("configure/sso"));
+    linked.set("configure/sso", page("hosted"));
+    expect(run({ pages: linked, stagedOperators: new Set() }).problems).toEqual([]);
+  });
+
+  it("automatically checks newly written, non-staged counterparts", () => {
+    const landed = new Map(pages);
+    landed.set("features/new", page());
+    expect(run({ pages: landed }).problems.join("\n")).toContain("now exists");
+    const activated = run({ pages: landed, pending: new Map() });
+    expect(activated.problems).toHaveLength(2);
+    landed.set("other", page("features/new"));
+    landed.set("features/new", page("other"));
+    expect(run({ pages: landed, pending: new Map() }).problems).toEqual([]);
+  });
+
+  it("does not let a staged counterpart satisfy an activated relationship", () => {
+    const mixed = { hosted: ["configure/sso", "features/new"] };
+    const linked = new Map([
+      ["hosted", page("configure/sso")],
+      ["configure/sso", page("hosted")],
+      ["features/new", page("hosted")],
+    ]);
+    const result = run({ pairs: mixed, pages: linked, pending: new Map() });
+    expect(result.problems).toHaveLength(1);
+    expect(result.problems[0]).toContain("no link to any of its operator counterparts (/en/features/new)");
+  });
+});
+
+describe("visible reciprocal page links", () => {
+  it("uses the shared exclusions for HTML comments, fences, inline code and images", () => {
+    const body = [
+      '<!-- <a href="/en/comment">hidden</a> [hidden](/en/comment-md) -->',
+      '````html', '<a href="/en/fence">hidden</a>', '```', '[hidden](/en/fence-md)', '````',
+      '`<a href="/en/code">hidden</a>` and ``[hidden](/en/code-md)``',
+      '![hidden](/en/image) [![badge](/badge.svg)](/en/kept)',
+      '<a href="/en/configure/sso/#setup">SSO</a>',
+      '<!-- <a href="/en/unclosed">hidden</a>',
+    ].join("\n");
+    expect([...pageLinks(body)]).toEqual(["kept", "configure/sso"]);
+  });
+
+  it("reads only anchor href attributes, allowing case, spacing and quotes", () => {
+    expect(pageLinks([
+      '<A HREF = "/en/configure/sso/?mode=1#setup">SSO</A>',
+      "<a\n href='/en/share/request-secret'>request</a>",
+      '<div data-href="/en/not-link">not a link</div>',
+      '<a data-href="/en/not-href">not a link</a>',
+      `<a title='href="/en/not-an-attribute"'>not a link</a>`,
+      '<a title="x > y" href="/en/configure/sso">SSO</a>',
+
+      '<a href="//example.com/en/external">external</a>',
+      '<a href="/de/other">other locale</a>',
+      '<a href="./relative">relative</a>',
+    ].join("\n"))).toEqual(new Set(["configure/sso", "share/request-secret"]));
+  });
+
+  it("accepts ordinary prose links outside note asides", () => {
+    expect(pageLinks("See [SSO](/en/configure/sso/) in this paragraph.")).toEqual(new Set(["configure/sso"]));
+  });
+
+  it("uses current directory-index and renamed request-page slugs", () => {
+    const pages = docsPages("en");
+    expect(pages.find((p) => p.slug === "configure/sso")?.path.replaceAll("\\", "/")).toBe("src/content/docs/en/configure/sso/index.md");
+    expect(pages.some((p) => p.slug === "share/request-secret")).toBe(true);
+    expect(pages.some((p) => p.slug === "share/receiving-secrets")).toBe(false);
   });
 });

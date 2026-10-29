@@ -110,6 +110,12 @@ describe("fileSlug", () => {
 });
 
 describe("enLinkSlugs", () => {
+  it("keeps HTML opt-in so the orphan check retains its Markdown-only scope", () => {
+    const body = '<a href="/en/html-only">HTML</a> [root](/en)';
+    expect([...enLinkSlugs(body)]).toEqual(["index"]);
+    expect([...enLinkSlugs(body, { html: true })]).toEqual(["index", "html-only"]);
+  });
+
   it("collects absolute /en/ links as normalized slugs, in order", () => {
     const md = [
       "| [v0.26.18](/en/self-hosting/upgrading-v0-26-18) | migration |",

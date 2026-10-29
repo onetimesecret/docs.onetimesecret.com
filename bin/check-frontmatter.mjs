@@ -4,7 +4,7 @@
 // matches the schema, anchors that redirects can actually land on, and defaults
 // that stay in the reference.
 //
-// Five assertions, each guarding something that otherwise fails silently:
+// Six assertions, each guarding something that otherwise fails silently:
 //
 //  1. Every EN page has a title and a description. Starlight's schema requires
 //     `title` but not `description`, so a page can ship with no meta
@@ -81,6 +81,12 @@
 //     are not being retrofitted here; widening this list is how a tree opts in,
 //     one line, once its pages have been through the audit.
 //
+//  6. Reciprocal hosted/operator links: each page reaches at least one of its
+//     counterparts, in both directions. This checks page-wide visible links,
+//     not aside placement. Missing operator pages must be declared pending;
+//     existing or unknown pending entries fail. See the explicit staged link
+//     activation policy below and config/reciprocal-pending.allow.
+//
 // Fails (exit 1) listing every problem with the file to edit. Warns (exit 0)
 // where a fragment resolves in EN but not in a locale still holding its own
 // copy of the target page.
@@ -98,11 +104,13 @@ import {
   docsPages,
   headings,
   inGatedTree,
+  pageLinks,
   parseFrontmatter,
+  reciprocalReachability,
   schemaEnums,
   statedDefaults,
 } from "./lib/frontmatter.mjs";
-import { repoRoot } from "./lib/nav.mjs";
+import { parseAllowlist, repoRoot } from "./lib/nav.mjs";
 import textprov from "textprov";
 
 const CONFIG = "src/content.config.ts";
@@ -118,6 +126,44 @@ function anchorsOf(fields, body) {
   return new Map(headings(text).map((h) => [h.slug, h]));
 }
 const REDIRECTS = "config/redirects.mjs";
+const RECIPROCAL_PENDING = "config/reciprocal-pending.allow";
+
+// Audit §4.4 adjacency list: directory index pages use their directory slug,
+// notably configure/sso/index.md -> "configure/sso". Existence is checked for
+// the FULL table, independently of whether link enforcement is activated.
+const RECIPROCAL_PAIRS = {
+  "custom-domains": ["features/custom-domains"],
+  "custom-domains/dns-validation": ["features/custom-domains"],
+  "custom-domains/branding": ["features/branding"],
+  "custom-domains/email-sender": ["configure/email"],
+  "custom-domains/homepage-and-incoming": [
+    "features/incoming-secrets",
+    "features/interface-and-homepage",
+  ],
+  "custom-domains/access-and-privacy": ["configure/authentication"],
+  "organizations/sso": ["configure/sso"],
+  share: ["configure/secret-options"],
+  "account/change-your-region": ["features/regions-and-federation"],
+  "security/where-your-data-lives": ["features/regions-and-federation"],
+  "share/request-secret": ["features/incoming-secrets"],
+  "organizations/roles-and-permissions": ["features/billing-and-entitlements"],
+  billing: ["features/billing-and-entitlements"],
+  "billing/managing-your-subscription": ["features/billing-and-entitlements"],
+};
+
+// Staged activation, NOT missing-page exemptions. These four configure pages
+// predate this recovery and their hosted pages do not yet link to them. A
+// content follow-up must add both directions, then remove the exact entry here
+// in the same commit. Do not infer activation from the presence of links: once
+// activated, deleting a link must fail. New pairs are enforced by default.
+// The six unwritten features/* counterparts are NOT staged: landing each page
+// and removing its pending line immediately activates its reciprocal check.
+const STAGED_RECIPROCAL_OPERATORS = new Set([
+  "configure/email",
+  "configure/authentication",
+  "configure/sso",
+  "configure/secret-options",
+]);
 
 // D1, the anchor contract. Slug -> the heading ids that page must keep because
 // a redirect (or an inbound link from outside this repo) depends on them.
@@ -159,6 +205,7 @@ for (const field of ENUM_FIELDS) {
 
 const pages = docsPages("en");
 const anchorsBySlug = new Map();
+const pagesBySlug = new Map();
 let endUserPages = 0;
 let operatorPages = 0;
 let gatedPages = 0;
@@ -205,6 +252,7 @@ for (const page of pages) {
   }
 
   anchorsBySlug.set(page.slug, anchorsOf(fields, body));
+  pagesBySlug.set(page.slug, { path: page.path, links: pageLinks(body) });
 
   // 5: the gate below reads `audience`, so on the trees that gate is FOR, the
   // field is mandatory. Deleting it must fail here rather than skip the page.
@@ -275,6 +323,19 @@ for (const [slug, required] of Object.entries(REQUIRED_ANCHORS)) {
     }
   }
 }
+
+// --- 6: counterpart existence and activated reciprocal links ----------------
+
+const pendingAllowlist = parseAllowlist(RECIPROCAL_PENDING);
+problems.push(...pendingAllowlist.problems);
+const reciprocal = reciprocalReachability({
+  pairs: RECIPROCAL_PAIRS,
+  pages: pagesBySlug,
+  pending: new Map(pendingAllowlist.entries.map((entry) => [entry.value, entry.reason])),
+  stagedOperators: STAGED_RECIPROCAL_OPERATORS,
+  allowlist: RECIPROCAL_PENDING,
+});
+problems.push(...reciprocal.problems);
 
 // --- 3b: every redirect fragment resolves to a heading that exists -----------
 //
@@ -419,5 +480,7 @@ const contracted = Object.values(REQUIRED_ANCHORS).reduce((n, a) => n + a.length
 console.log(
   `check:frontmatter OK — ${pages.length} EN pages (${endUserPages} end-user, ${operatorPages} operator), ` +
     `${gatedPages} of them under ${GATED_TREES.map((t) => `${t}/`).join(", ")} with audience and pageType required, ` +
-    `${contracted} contracted anchors, ${fragments} redirect fragment${fragments === 1 ? "" : "s"} resolved`,
+    `${contracted} contracted anchors, ${fragments} redirect fragment${fragments === 1 ? "" : "s"} resolved; ` +
+    `reciprocal links checked on ${reciprocal.hosted} hosted / ${reciprocal.operator} operator pages ` +
+    `(${reciprocal.pendingPairs.length} hosted relationships awaiting missing pages, ${reciprocal.stagedPairs.length} explicitly staged)`,
 );

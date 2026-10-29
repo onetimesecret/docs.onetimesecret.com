@@ -1,0 +1,26 @@
+# Operator counterparts not yet written, from audit §4.4.
+# Format: slug # reason. Only operator slugs in RECIPROCAL_PAIRS are valid.
+# check:frontmatter fails for undeclared missing counterparts, unknown entries,
+# and entries whose pages now exist. Remove a line when adding its page, and
+# add reciprocal links in that commit. Many-to-one/one-to-many relationships
+# require at least one counterpart link per page in each direction, not every
+# edge. The scanner checks page-wide links; it does not assert aside placement.
+#
+# This file is ONLY about missing pages, never missing links. The existing
+# configure/email, configure/authentication, configure/sso (directory index),
+# and configure/secret-options pages are subject to existence checks now.
+# Their link assertions are explicitly staged in STAGED_RECIPROCAL_OPERATORS
+# in bin/check-frontmatter.mjs because the hosted halves lack links to them.
+# A content follow-up must add both directions and remove each staged entry
+# in the same commit. No existing configure page belongs in this allowlist.
+#
+# All six features/* pages below activate link enforcement when written.
+# At recovery time no live relationship is link-enforced: ten hosted rows
+# await these six pages and four configure rows are explicitly staged.
+
+features/custom-domains # Phase 3 features group, unwritten
+features/branding # Phase 3 features group, unwritten
+features/incoming-secrets # Phase 3 features group, unwritten
+features/interface-and-homepage # Phase 3 features group, unwritten
+features/regions-and-federation # Phase 3 features group, unwritten (renamed from features/multi-region)
+features/billing-and-entitlements # Phase 3 features group, unwritten (catalog is operator-supplied)
