@@ -308,12 +308,59 @@ record, not a cache** — persistence, `appendonly`, backup semantics) ·
 `SPL operate/harden-your-deployment` (moved **into** the operator tree — a pre-production checklist
 belongs one hop from where the operator is working, not in the compliance section)
 
-**Troubleshoot & upgrade** (7) — `NEW troubleshoot/boot-failures` ·
-`NEW troubleshoot/sign-in-and-signup-problems` · `NEW upgrades/data-migrations` (`bin/ots migrate` is a
-stateful runner with dry-run, status, rollback and a `CONFIG_MIGRATE=check|auto|skip` boot gate; today
-it would get one row in a CLI table) · `NEW upgrades/index` · `NEW upgrades/v0-26` (**must include the
-CHANGELOG's bolded Action Required migration**, `bin/ots migrate --run 20260703_01_disable_homepage_auth_links`) ·
-`UPD upgrades/v0-24` · `MOV upgrades/v0-23`
+**Troubleshoot & upgrade — refreshed 2026-10-29 against docs `develop@f31d5916`.**
+This replaces the original seven-page proposal. The upgrade index and release guides already exist;
+Phase 4 adds diagnosis and a general migration workflow, not a second upgrade tree. This review
+checks documentation coverage and draft status, not current application behavior or runtime results.
+
+**Already implemented — preserve and maintain:**
+
+- [Upgrade guides](../../src/content/docs/en/self-hosting/upgrade-guides.md) is the sidebar-linked
+  entry point. It directs readers to work forward through applicable guides and read intervening
+  release notes, including releases without a dedicated guide.
+- Ten version guides exist, with no `draft: true` flag: v0.23.0, v0.24.0, v0.26.6 (the existing
+  `upgrading-v0-26` URL, covering v0.26.5–v0.26.6), v0.26.11, v0.26.12, v0.26.14, v0.26.15,
+  v0.26.17, v0.26.18 and v0.26.19. Do not recreate `upgrades/index`, `upgrades/v0-26`,
+  `upgrades/v0-24` or `upgrades/v0-23` merely to match the summer tree.
+- The release-specific procedures already distinguish upgrade and rollback requirements. For example,
+  [v0.26.18](../../src/content/docs/en/self-hosting/upgrading-v0-26-18.md) documents the custom-domain
+  index migration and collision resolution, while
+  [v0.26.19](../../src/content/docs/en/self-hosting/upgrading-v0-26-19.md) documents auth-audit export
+  and command-specific CLI write gates. Keep those details in their release guides.
+- New release guides continue to get a row in the existing index, not individual sidebar entries.
+  `config/sidebar.mjs` and the orphan checker already support that navigation pattern. Preserve
+  existing URLs; any later relocation needs direct redirects and an inbound-link review.
+
+**Remaining Phase 4 work — three proposed new pages:**
+
+| Page | Purpose and existing coverage to reuse | Completion boundary |
+|---|---|---|
+| `troubleshoot/boot-failures` | A symptom-led route from failed startup to configuration, secret, datastore, auth-database or migration diagnosis. Start from [Verify your installation](../../src/content/docs/en/install/verify.md), which already describes boot logs, failed datastores and health-check limits, and the relevant release guides. | Re-verify error messages and recovery steps against a named app revision. Link to installation/configuration procedures rather than duplicating them; distinguish a configuration migration gate from data or auth-schema migrations. |
+| `troubleshoot/sign-in-and-signup-problems` | A cross-cutting diagnosis path for account switches, Simple versus Full mode, proxy/public-origin mismatches, cookies, email delivery and SSO. Reuse the authentication, sessions, email and SSO guides and applicable release-specific fixes. | Check the failing host, auth mode, method and installed version before prescribing a fix. Do not infer current behavior from August research or make a release-specific workaround universal. |
+| `upgrades/data-migrations` (proposed path) | A general operator workflow for identifying the migration mechanism, selecting the intended migration, previewing where supported, backing up, applying, verifying and recovering. Link back to the existing upgrade index and release-specific instructions. | Verify each runner's flags, write behavior and rollback limits against a named app revision. Do not treat `CONFIG_MIGRATE`, `bin/ots migrate` and auth-schema migrations as one runner, or assume that `--apply` is universal. |
+
+Neither `troubleshoot/` nor `upgrades/` exists in the English content tree at this review. The proposed
+migration page does not imply moving the existing release guides into `upgrades/`.
+
+**Publication dependencies and acceptance:**
+
+- [Authentication](../../src/content/docs/en/configure/authentication.md),
+  [sessions and cookies](../../src/content/docs/en/configure/sessions-and-cookies.md),
+  [email](../../src/content/docs/en/configure/email.md), the
+  [SSO index](../../src/content/docs/en/configure/sso/index.md) and the
+  [configuration index](../../src/content/docs/en/configure/index.md) are currently `draft: true`.
+  Their source is useful input, but a published troubleshooting page must not link to them until they
+  are published. Reconcile these dependencies explicitly; this scope refresh does not remove draft flags.
+- Audit the existing upgrade coverage against release notes for the chosen target version before
+  adding missing release actions. The old requirement to copy a particular July homepage-auth migration
+  is not fresh evidence that every v0.26 reader should run it. The existing `upgrading-v0-26` page is
+  specifically a v0.26.5–v0.26.6 guide, not a complete v0.26.0 upgrade guide.
+- Add navigation for the new diagnosis and migration pages, link the migration workflow from the
+  existing upgrade index, and check production reachability as well as source links. Retain the
+  current version-guide discovery pattern.
+- Preserve the release-specific backup, verification and rollback cautions; do not replace them with
+  a generic tag-swap instruction. Application source verification and operational testing remain
+  implementation work, not results of this planning refresh.
 
 #### 5. API & SDKs · 5 pages — promoted to top level
 `UPD api/index` (base URLs, versions) · `NEW api/authentication` · `NEW api/errors-and-rate-limits`
@@ -504,10 +551,21 @@ six unrelated jobs) into task pages; write the operator feature pages. Highest p
 
 **Phase 4 — the generated reference and the Day-2 layer (7–9 weeks, ~3 engineering).** Stand up the
 pipeline, retire `configuration.md` and `environment-variables.md`, complete Operate and Troubleshoot.
+The refreshed Troubleshoot & upgrade scope above preserves the existing upgrade
+index and ten release guides; the remaining additions are two diagnosis pages and a general migration
+workflow, with draft dependencies resolved before publication. The original estimate has not been
+re-estimated for this narrower upgrade scope.
 Ship `reference/environment-variables` first — highest defect density, simplest generator, a straight
 replacement. It now runs off the vendored snapshot rather than a live app-repo feed (D7), which lowers
 this phase's engineering estimate and removes its external blocker, at the cost of a refresh step that
 Phase 5 has to own.
+
+> **Implementation plan, 2026-10-29:**
+> [`Phase 4 implementation plan`](./documentation-audit-2026-08-phase-4-plan.md) reconciles this scope
+> against docs `862a5ab5`. It accounts for 12 Reference, 12 Operate and three diagnosis/migration
+> destinations, the existing app-side environment generator and drift workflow, Configure draft
+> dependencies, branch sequencing and publication gates. This is a completed plan, not a declaration
+> that Phase 4 has shipped; application-source verification remains implementation work.
 
 **Phase 5 — drift prevention (3–4 weeks).** Every defect in this audit went unnoticed because nothing
 checks for it. Add `check:orphans`, `check:nav`, a frontmatter linter, and a reference-drift CI gate.
