@@ -174,5 +174,5 @@
   "textprov.aboutTitle": "About AI highlighting",
   "textprov.about": "Highlights edits recorded as AI-written. Turning it on changes only the highlighting—not the words.",
   "textprov.limits": "Unmarked text has no recorded origin; it may also include AI-written text. The marks do not indicate whether text was reviewed or whether it is accurate.",
-  "textprov.learnMore": "How we use and record AI edits"
+  "textprov.learnMore": "How and why we use AI in these docs"
 }
