@@ -38,7 +38,8 @@
 //     checked in every locale, whether a translation or an English fallback
 //     produced them: a reader cannot tell them apart in any language.
 //
-//  4. Every sidebar translation key exists. config/sidebar.mjs resolves a label
+//  4. Every sidebar translation key resolves to a nonblank string.
+//     config/sidebar.mjs resolves a label
 //     as `enTranslations.sidebar?.[key] || key`, so a mistyped key does not
 //     throw and does not blank the entry — it ships the raw camelCase key as the
 //     visible label. `createLink("instalWithDocker", …)` renders a sidebar entry
@@ -48,6 +49,8 @@
 //     from en.json itself is invisible to it. Non-EN bundles are not checked
 //     here: a missing key there is a translation still in flight and falls back
 //     per-key. check:locales reports those gaps as warnings.
+//     Empty strings also trigger the raw-key fallback; whitespace-only values
+//     render blank instead. Both, and non-string values, fail this check.
 //
 // Usage: pnpm run check:nav
 import { readFileSync } from "node:fs";
@@ -64,6 +67,7 @@ import {
   repoRoot,
   sidebarGroups,
   sidebarLinks,
+  unresolvedSidebarKeys,
 } from "./lib/nav.mjs";
 
 const EN_BUNDLE = "src/content/i18n/en.json";
@@ -112,12 +116,12 @@ try {
 }
 
 const keys = [...new Set(sidebarKeys)].sort();
-for (const key of keys) {
-  if (enSidebarLabels[key] === undefined) {
-    problems.push(
-      `sidebar key "${key}" has no entry under "sidebar" in ${EN_BUNDLE} — config/sidebar.mjs falls back to the key itself, so this renders as a sidebar entry literally reading "${key}"; add the key to the bundle or fix the typo in config/sidebar.mjs`,
-    );
-  }
+for (const { key, kind } of unresolvedSidebarKeys(keys, enSidebarLabels)) {
+  problems.push(
+    kind === "missing"
+      ? `sidebar key "${key}" has no entry under "sidebar" in ${EN_BUNDLE} — add the key to the bundle or fix the typo in config/sidebar.mjs`
+      : `sidebar key "${key}" in ${EN_BUNDLE} must be a nonblank string — empty strings fall back to the raw key, whitespace renders blank, and non-string labels are invalid; supply a readable English label`,
+  );
 }
 
 for (const link of links) {

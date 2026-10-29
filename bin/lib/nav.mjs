@@ -227,3 +227,36 @@ export function localeDirs() {
       .map((entry) => entry.name),
   );
 }
+
+/**
+ * Sidebar translation keys that do not resolve to a label.
+ *
+ * config/sidebar.mjs resolves every label as `sidebar?.[key] || key`, so a key
+ * the bundle cannot answer neither throws nor blanks the entry — it ships the
+ * raw camelCase key as the visible sidebar label. `createLink("instalWithDocker",
+ * …)` renders an entry reading "instalWithDocker" and the build is green.
+ *
+ * Empty strings fall back to the raw key via `||`. Whitespace-only strings
+ * render a blank label instead. Neither is a usable label; non-string values
+ * are rejected too. Missing and unusable entries get distinct diagnostics.
+ *
+ * EN ONLY, deliberately. buildTranslations() omits any locale with no value for
+ * a key and Starlight falls back to the English label per-key, so a key absent
+ * from one of the 16 other bundles is a translation still in flight, not a
+ * defect. Asserting parity there would fail on every English-only key the
+ * pipeline has not reached yet.
+ *
+ * @param {readonly string[]} keys Keys the sidebar asked for, in any order.
+ * @param {Record<string, unknown>} labels The `sidebar` object of en.json.
+ * @returns {{key: string, kind: "missing"|"empty"}[]} Sorted, deduplicated.
+ */
+export function unresolvedSidebarKeys(keys, labels) {
+  const unresolved = [];
+  for (const key of [...new Set(keys)].sort()) {
+    const label = labels?.[key];
+    if (label === undefined) unresolved.push({ key, kind: "missing" });
+    else if (typeof label !== "string" || label.trim() === "")
+      unresolved.push({ key, kind: "empty" });
+  }
+  return unresolved;
+}
