@@ -13,11 +13,8 @@ Both read AGENTS.md. Claude also imports it from CLAUDE.md and provides the
 schemas, automatic prompt logs, or global machine configuration changes.
 Python 3.9+ and Node.js (the project version) are required.
 
-The 0.2.0 migration is prepared but publication and the registry-backed npm
-lockfile update are pending. Clean installs cannot complete until both packages
-are published and `pnpm-lock.yaml` is updated. Local validation used built 0.2.0
-artifacts, not registry installs. After release, install the pinned SDK
-dependencies before using the repository commands from either agent:
+Install the pinned SDK dependencies before using the repository commands from
+either agent:
 
 ```sh
 pnpm install
@@ -76,16 +73,28 @@ agent completion requirement; CI cannot infer whether unmarked text came from AI
 
 ## Correspondence alignment and authoring limitations
 
-`tools/dogfood.py` uses `correspondence()` for both authoring and checking.
-It ignores whitespace, anchors on exact encoded bytes, then aligns visible
-clusters in the gaps. Primary equal runs can be one cluster long; these text
-comparisons cannot distinguish retained text from coincidental new text.
+`tools/dogfood.py` retains its scoped `mark_edit` authoring operation, using
+`textprov.clusters()` and `textprov.correspondence()` from the exact-pinned PyPI
+`textprov==0.3.0` SDK to preserve matched bytes. Checking delegates to the SDK's
+`textprov.check_text()` with a prose-eligibility profile from this repository's
+Node Markdown parser. The wrapper retains AST-shape validation and repository
+policy checks; correspondence and preservation checking are implemented upstream,
+not locally. This composition does not use the SDK's `mark_document_edit()`
+authoring policy. See the upstream
+[alignment documentation](https://github.com/textprov/textprov/blob/python-v0.3.0/docs/development/alignment.md).
+
+The SDK's correspondence algorithm ignores whitespace, anchors on exact encoded
+bytes, then aligns visible clusters in the gaps. Primary equal runs can be one
+cluster long; these text comparisons cannot distinguish retained text from
+coincidental new text.
 For example, replacing `cat` with `bag` retains the unmarked `a`; fully marking
 the replacement instead reports backfill. Two-cluster coincidences are possible too.
 
-`MIN_MOVE_CLUSTERS = 2` applies only to the final unmatched-block move pass.
-Shorter blocks pair only if their encoded bytes are identical. This excludes
-the reported Polish singleton coincidence while retaining checks for changed
+The SDK's `MIN_MOVE_CLUSTERS = 2`, defined in upstream
+[`python/textprov/check.py`](https://github.com/textprov/textprov/blob/python-v0.3.0/python/textprov/check.py),
+applies only to the final unmatched-block move pass. Shorter blocks pair only if
+their encoded bytes are identical. This excludes the reported Polish singleton
+coincidence while retaining checks for changed
 marks on two-cluster moves. Raising the threshold to three misses those changes;
 adding a minimum to primary equal runs also breaks retained-byte and
 mark-preservation cases. Neither threshold establishes authorship.
@@ -121,7 +130,8 @@ as locale-specific checker exemptions:
   `src/content/docs/es/self-hosting/index.md`: it aligns with legacy `secreto`'s
   `r` against `bc5c9ae2`. The other letters in `valor` remain AI-marked.
 
-Reduced tests reproduce both alignments. These exceptions are not evidence of
+Repository contract regression tests reproduce both alignments against the
+SDK's correspondence and checker. These exceptions are not evidence of
 retained authorship. Their historical comparison base does not replace the
 starting-base check or CI's current merge base. For the develop → main PR #459,
 #469 re-anchored develop against `56e953fc`, the merge base of main and
@@ -186,6 +196,31 @@ Set `SHOW_TEXTPROV_TOGGLE=false` (or `0`) at build time to hide the toggle on
 every page; the deploy workflow reads it from the environment variable of the
 same name. Enrolled pages are still decoded to clean text.
 
+Reveal mode uses gradient mist with a dotted underline, replacing the wavy
+provenance cue. `src/styles/textprov.css` adapts the upstream treatment at
+TextProv commit `57257b877f934ce2edf6b221ad6fa100546dbb9c`:󠄁 1󠄁4󠄁%󠄁 b󠄁a󠄁s󠄁e󠄁 t󠄁i󠄁n󠄁t󠄁,󠄁
+1󠄁1󠄁5󠄁-󠄁d󠄁e󠄁g󠄁r󠄁e󠄁e󠄁 g󠄁r󠄁a󠄁d󠄁i󠄁e󠄁n󠄁t󠄁,󠄁 1󠄁1󠄁.󠄁2󠄁p󠄁x󠄁 g󠄁l󠄁o󠄁w󠄁 b󠄁l󠄁u󠄁r󠄁 w󠄁i󠄁t󠄁h󠄁 4󠄁p󠄁x󠄁 s󠄁p󠄁r󠄁e󠄁a󠄁d󠄁,󠄁 2󠄁7󠄁%󠄁 g󠄁l󠄁o󠄁w󠄁 o󠄁p󠄁a󠄁c󠄁i󠄁t󠄁y󠄁 i󠄁n󠄁 l󠄁i󠄁g󠄁h󠄁t󠄁
+a󠄁p󠄁p󠄁e󠄁a󠄁r󠄁a󠄁n󠄁c󠄁e󠄁 a󠄁n󠄁d󠄁 1󠄁7󠄁.󠄁5󠄁5󠄁%󠄁 i󠄁n󠄁 d󠄁a󠄁r󠄁k󠄁,󠄁 a󠄁n󠄁d󠄁 a󠄁 1󠄁.󠄁5󠄁p󠄁x󠄁 d󠄁o󠄁t󠄁t󠄁e󠄁d󠄁 l󠄁i󠄁n󠄁e󠄁 a󠄁t󠄁 8󠄁0󠄁%󠄁 source-color opacity
+with a 5px offset. The source color uses Starlight's existing accent. The toggle
+label shows the same treatment as a legend. Hidden mode and print add no
+provenance paint; the words and native annotation styles stay intact.
+
+The optional `textprov` cascade layer lets ordinary application annotation
+styles take priority. `src/styles/tailwind.css` d󠄁e󠄁c󠄁l󠄁a󠄁r󠄁e󠄁s󠄁 i󠄁t󠄁 l󠄁a󠄁s󠄁t󠄁 i󠄁n󠄁 t󠄁h󠄁e󠄁 s󠄁i󠄁t󠄁e󠄁'󠄁s󠄁
+l󠄁a󠄁y󠄁e󠄁r󠄁 o󠄁r󠄁d󠄁e󠄁r󠄁,󠄁 a󠄁n󠄁d󠄁 `src/styles/textprov.css` r󠄁e󠄁p󠄁e󠄁a󠄁t󠄁s󠄁 t󠄁h󠄁a󠄁t󠄁 o󠄁r󠄁d󠄁e󠄁r󠄁 b󠄁e󠄁c󠄁a󠄁u󠄁s󠄁e󠄁 i󠄁t󠄁 s󠄁h󠄁i󠄁p󠄁s󠄁
+a󠄁s󠄁 a󠄁 s󠄁e󠄁p󠄁a󠄁r󠄁a󠄁t󠄁e󠄁 s󠄁t󠄁y󠄁l󠄁e󠄁s󠄁h󠄁e󠄁e󠄁t󠄁.󠄁 Links retain their native underline. A proofing range
+can use `data-prov-decoration="native"` to omit provenance dots; a comment
+anchor can use `data-prov-background="native"` to omit mist and glow. Both
+hooks work on the decorated element or a container. Use unlayered annotation
+styles or a layer with higher priority than `textprov`.
+
+The clean published projection contains no AI selectors, so it does not select
+P󠄁* d󠄁e󠄁c󠄁o󠄁r󠄁a󠄁t󠄁e󠄁d󠄁 g󠄁l󠄁y󠄁p󠄁h󠄁s󠄁 i󠄁n󠄁 a󠄁d󠄁d󠄁i󠄁t󠄁i󠄁o󠄁n󠄁 t󠄁o󠄁 C󠄁S󠄁S󠄁 d󠄁o󠄁t󠄁s󠄁.󠄁 T󠄁h󠄁e󠄁 b󠄁r󠄁a󠄁n󠄁d󠄁 a󠄁n󠄁d󠄁 s󠄁e󠄁r󠄁i󠄁f󠄁 f󠄁a󠄁l󠄁l󠄁b󠄁a󠄁c󠄁k󠄁
+s󠄁t󠄁a󠄁c󠄁k󠄁s󠄁 s󠄁e󠄁l󠄁e󠄁c󠄁t󠄁 s󠄁e󠄁p󠄁a󠄁r󠄁a󠄁t󠄁e󠄁 P󠄁* f󠄁a󠄁m󠄁i󠄁l󠄁i󠄁e󠄁s󠄁;󠄁 o󠄁r󠄁i󠄁g󠄁i󠄁n󠄁a󠄁l󠄁 P󠄁+󠄁 a󠄁s󠄁s󠄁e󠄁t󠄁s󠄁 r󠄁e󠄁m󠄁a󠄁i󠄁n󠄁 a󠄁v󠄁a󠄁i󠄁l󠄁a󠄁b󠄁l󠄁e󠄁.󠄁
+T󠄁h󠄁e󠄁 d󠄁e󠄁c󠄁o󠄁d󠄁e󠄁r󠄁 a󠄁n󠄁d󠄁 P󠄁y󠄁t󠄁h󠄁o󠄁n󠄁 p󠄁a󠄁c󠄁k󠄁a󠄁g󠄁e󠄁 a󠄁r󠄁e󠄁 t󠄁h󠄁e󠄁 p󠄁u󠄁b󠄁l󠄁i󠄁s󠄁h󠄁e󠄁d󠄁 `textprov` r󠄁e󠄁l󠄁e󠄁a󠄁s󠄁e󠄁s󠄁 p󠄁i󠄁n󠄁n󠄁e󠄁d󠄁 i󠄁n󠄁
+`package.json` a󠄁n󠄁d󠄁 `tools/requirements.txt`.󠄁 S󠄁o󠄁u󠄁r󠄁c󠄁e󠄁 a󠄁t󠄁t󠄁r󠄁i󠄁b󠄁u󠄁t󠄁i󠄁o󠄁n󠄁,󠄁 e󠄁n󠄁r󠄁o󠄁l󠄁l󠄁m󠄁e󠄁n󠄁t󠄁,󠄁 s󠄁t󠄁o󠄁r󠄁e󠄁d󠄁
+p󠄁r󠄁e󠄁f󠄁e󠄁r󠄁e󠄁n󠄁c󠄁e󠄁s󠄁,󠄁 a󠄁n󠄁d󠄁 t󠄁h󠄁e󠄁 `SHOW_TEXTPROV_TOGGLE` availability setting are unchanged.
+
 The generated HTML already contains clean text before Pagefind indexing, so
 Find in page, copy, metadata, and heading fragment links do not depend on a
 client-side cleanup. Copying from the site produces plain text; source files
@@ -212,18 +247,65 @@ heading. An identifier that still contains a marker after cleaning, or a
 non-empty identifier that becomes empty, also fails. Local fragment targets are
 validated before percent-encoding.
 
+## Passage and exact display
+
+T󠄁h󠄁e󠄁 d󠄁e󠄁f󠄁a󠄁u󠄁l󠄁t󠄁 d󠄁e󠄁t󠄁a󠄁i󠄁l󠄁 i󠄁s󠄁 `passage`.󠄁 T󠄁h󠄁e󠄁 p󠄁r󠄁e󠄁r󠄁e󠄁n󠄁d󠄁e󠄁r󠄁e󠄁r󠄁 g󠄁r󠄁o󠄁u󠄁p󠄁s󠄁 p󠄁a󠄁r󠄁a󠄁g󠄁r󠄁a󠄁p󠄁h󠄁s󠄁,󠄁 h󠄁e󠄁a󠄁d󠄁i󠄁n󠄁g󠄁s󠄁,󠄁
+l󠄁i󠄁s󠄁t󠄁 i󠄁t󠄁e󠄁m󠄁s󠄁,󠄁 a󠄁n󠄁d󠄁 t󠄁a󠄁b󠄁l󠄁e󠄁 c󠄁e󠄁l󠄁l󠄁s󠄁 c󠄁o󠄁n󠄁t󠄁a󠄁i󠄁n󠄁i󠄁n󠄁g󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁e󠄁d󠄁 A󠄁I󠄁 m󠄁a󠄁r󠄁k󠄁s󠄁.󠄁 E󠄁a󠄁c󠄁h󠄁 o󠄁r󠄁i󠄁g󠄁i󠄁n󠄁a󠄁l󠄁 i󠄁n󠄁l󠄁i󠄁n󠄁e󠄁
+t󠄁e󠄁x󠄁t󠄁 n󠄁o󠄁d󠄁e󠄁 g󠄁e󠄁t󠄁s󠄁 a󠄁 `data-textprov-passage="ai"` f󠄁r󠄁a󠄁g󠄁m󠄁e󠄁n󠄁t󠄁,󠄁 i󠄁n󠄁c󠄁l󠄁u󠄁d󠄁i󠄁n󠄁g󠄁 u󠄁n󠄁m󠄁a󠄁r󠄁k󠄁e󠄁d󠄁 t󠄁e󠄁x󠄁t󠄁
+i󠄁n󠄁 t󠄁h󠄁a󠄁t󠄁 s󠄁a󠄁m󠄁e󠄁 p󠄁a󠄁s󠄁s󠄁a󠄁g󠄁e󠄁.󠄁 I󠄁n󠄁l󠄁i󠄁n󠄁e󠄁 f󠄁o󠄁r󠄁m󠄁a󠄁t󠄁t󠄁i󠄁n󠄁g󠄁 a󠄁n󠄁d󠄁 n󠄁a󠄁t󠄁i󠄁v󠄁e󠄁 a󠄁n󠄁n󠄁o󠄁t󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 p󠄁a󠄁r󠄁e󠄁n󠄁t󠄁s󠄁 s󠄁t󠄁a󠄁y󠄁
+i󠄁n󠄁t󠄁a󠄁c󠄁t󠄁.󠄁 N󠄁e󠄁i󠄁g󠄁h󠄁b󠄁o󠄁r󠄁i󠄁n󠄁g󠄁 u󠄁n󠄁m󠄁a󠄁r󠄁k󠄁e󠄁d󠄁 b󠄁l󠄁o󠄁c󠄁k󠄁s󠄁 a󠄁n󠄁d󠄁 e󠄁x󠄁c󠄁l󠄁u󠄁d󠄁e󠄁d󠄁 c󠄁o󠄁d󠄁e󠄁 s󠄁a󠄁m󠄁p󠄁l󠄁e󠄁s󠄁 a󠄁r󠄁e󠄁 n󠄁o󠄁t󠄁 g󠄁r󠄁o󠄁u󠄁p󠄁e󠄁d󠄁.󠄁
+
+T󠄁h󠄁e󠄁 n󠄁e󠄁s󠄁t󠄁e󠄁d󠄁 `.textprov-ai` s󠄁p󠄁a󠄁n󠄁s󠄁 r󠄁e󠄁t󠄁a󠄁i󠄁n󠄁 o󠄁n󠄁l󠄁y󠄁 t󠄁h󠄁e󠄁 e󠄁x󠄁a󠄁c󠄁t󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁e󠄁d󠄁 c󠄁h󠄁a󠄁r󠄁a󠄁c󠄁t󠄁e󠄁r󠄁 r󠄁a󠄁n󠄁g󠄁e󠄁s󠄁;󠄁
+w󠄁h󠄁i󠄁t󠄁e󠄁s󠄁p󠄁a󠄁c󠄁e󠄁 i󠄁s󠄁 u󠄁n󠄁a󠄁s󠄁s󠄁i󠄁g󠄁n󠄁e󠄁d󠄁 i󠄁n󠄁 t󠄁h󠄁i󠄁s󠄁 i󠄁n󠄁s󠄁p󠄁e󠄁c󠄁t󠄁i󠄁o󠄁n󠄁 m󠄁e󠄁t󠄁a󠄁d󠄁a󠄁t󠄁a󠄁.󠄁 G󠄁r󠄁o󠄁u󠄁p󠄁i󠄁n󠄁g󠄁 c󠄁h󠄁a󠄁n󠄁g󠄁e󠄁s󠄁 n󠄁o󠄁 s󠄁o󠄁u󠄁r󠄁c󠄁e󠄁
+m󠄁a󠄁r󠄁k󠄁s󠄁 a󠄁n󠄁d󠄁 a󠄁s󠄁s󠄁i󠄁g󠄁n󠄁s󠄁 n󠄁o󠄁 o󠄁r󠄁i󠄁g󠄁i󠄁n󠄁 t󠄁o󠄁 u󠄁n󠄁m󠄁a󠄁r󠄁k󠄁e󠄁d󠄁 t󠄁e󠄁x󠄁t󠄁.󠄁 T󠄁h󠄁e󠄁 d󠄁i󠄁s󠄁p󠄁l󠄁a󠄁y󠄁 s󠄁e󠄁l󠄁e󠄁c󠄁t󠄁o󠄁r󠄁 o󠄁f󠄁f󠄁e󠄁r󠄁s󠄁
+**P󠄁a󠄁s󠄁s󠄁a󠄁g󠄁e󠄁s󠄁** a󠄁n󠄁d󠄁 **E󠄁x󠄁a󠄁c󠄁t󠄁 c󠄁h󠄁a󠄁r󠄁a󠄁c󠄁t󠄁e󠄁r󠄁s󠄁**,󠄁 w󠄁i󠄁t󠄁h󠄁 p󠄁a󠄁s󠄁s󠄁a󠄁g󠄁e󠄁s󠄁 a󠄁s󠄁 t󠄁h󠄁e󠄁 d󠄁e󠄁f󠄁a󠄁u󠄁l󠄁t󠄁.󠄁 I󠄁t󠄁s󠄁 c󠄁h󠄁o󠄁i󠄁c󠄁e󠄁
+i󠄁s󠄁 s󠄁t󠄁o󠄁r󠄁e󠄁d󠄁 s󠄁e󠄁p󠄁a󠄁r󠄁a󠄁t󠄁e󠄁l󠄁y󠄁 u󠄁n󠄁d󠄁e󠄁r󠄁 `docs:textprov:display`;󠄁 `docs:textprov` c󠄁o󠄁n󠄁t󠄁i󠄁n󠄁u󠄁e󠄁s󠄁 t󠄁o󠄁
+c󠄁o󠄁n󠄁t󠄁r󠄁o󠄁l󠄁 v󠄁i󠄁s󠄁i󠄁b󠄁i󠄁l󠄁i󠄁t󠄁y󠄁.󠄁 U󠄁n󠄁k󠄁n󠄁o󠄁w󠄁n󠄁 o󠄁r󠄁 i󠄁n󠄁a󠄁c󠄁c󠄁e󠄁s󠄁s󠄁i󠄁b󠄁l󠄁e󠄁 s󠄁t󠄁o󠄁r󠄁e󠄁d󠄁 v󠄁a󠄁l󠄁u󠄁e󠄁s󠄁 f󠄁a󠄁l󠄁l󠄁 b󠄁a󠄁c󠄁k󠄁 t󠄁o󠄁 p󠄁a󠄁s󠄁s󠄁a󠄁g󠄁e󠄁s󠄁.󠄁
+
+`data-textprov-display="exact"` o󠄁n󠄁 t󠄁h󠄁e󠄁 r󠄁o󠄁o󠄁t󠄁 d󠄁i󠄁s󠄁a󠄁b󠄁l󠄁e󠄁s󠄁 t󠄁h󠄁e󠄁 b󠄁r󠄁o󠄁a󠄁d󠄁 f󠄁r󠄁a󠄁g󠄁m󠄁e󠄁n󠄁t󠄁 p󠄁a󠄁i󠄁n󠄁t󠄁
+a󠄁n󠄁d󠄁 r󠄁e󠄁v󠄁e󠄁a󠄁l󠄁s󠄁 o󠄁n󠄁l󠄁y󠄁 t󠄁h󠄁e󠄁 e󠄁x󠄁a󠄁c󠄁t󠄁 s󠄁p󠄁a󠄁n󠄁s󠄁.󠄁 B󠄁o󠄁t󠄁h󠄁 p󠄁r󠄁o󠄁j󠄁e󠄁c󠄁t󠄁i󠄁o󠄁n󠄁s󠄁 k󠄁e󠄁e󠄁p󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁c󠄁a󠄁l󠄁 t󠄁e󠄁x󠄁t󠄁,󠄁 c󠄁o󠄁p󠄁y󠄁,󠄁
+s󠄁e󠄁a󠄁r󠄁c󠄁h󠄁,󠄁 a󠄁n󠄁d󠄁 s󠄁o󠄁u󠄁r󠄁c󠄁e󠄁 a󠄁t󠄁t󠄁r󠄁i󠄁b󠄁u󠄁t󠄁i󠄁o󠄁n󠄁.󠄁 T󠄁h󠄁e󠄁 i󠄁n󠄁l󠄁i󠄁n󠄁e󠄁 p󠄁r󠄁e󠄁f󠄁e󠄁r󠄁e󠄁n󠄁c󠄁e󠄁 b󠄁o󠄁o󠄁t󠄁s󠄁t󠄁r󠄁a󠄁p󠄁 a󠄁l󠄁s󠄁o󠄁 c󠄁o󠄁v󠄁e󠄁r󠄁s󠄁
+p󠄁a󠄁g󠄁e󠄁s󠄁 w󠄁i󠄁t󠄁h󠄁 n󠄁o󠄁 v󠄁i󠄁s󠄁i󠄁b󠄁l󠄁e󠄁 c󠄁o󠄁n󠄁t󠄁r󠄁o󠄁l󠄁s󠄁.󠄁 G󠄁r󠄁o󠄁u󠄁p󠄁i󠄁n󠄁g󠄁 h󠄁e󠄁l󠄁p󠄁 u󠄁s󠄁e󠄁s󠄁 a󠄁 n󠄁e󠄁w󠄁 E󠄁n󠄁g󠄁l󠄁i󠄁s󠄁h󠄁 t󠄁r󠄁a󠄁n󠄁s󠄁l󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 k󠄁e󠄁y󠄁
+s󠄁o󠄁 o󠄁t󠄁h󠄁e󠄁r󠄁 l󠄁o󠄁c󠄁a󠄁l󠄁e󠄁s󠄁 f󠄁a󠄁l󠄁l󠄁 b󠄁a󠄁c󠄁k󠄁 t󠄁o󠄁 t󠄁h󠄁e󠄁 a󠄁c󠄁c󠄁u󠄁r󠄁a󠄁t󠄁e󠄁 e󠄁x󠄁p󠄁l󠄁a󠄁n󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 u󠄁n󠄁t󠄁i󠄁l󠄁 t󠄁r󠄁a󠄁n󠄁s󠄁l󠄁a󠄁t󠄁e󠄁d󠄁.󠄁
+
+T󠄁h󠄁e󠄁 s󠄁h󠄁a󠄁r󠄁e󠄁d󠄁 T󠄁e󠄁x󠄁t󠄁P󠄁r󠄁o󠄁v󠄁 r󠄁e󠄁f󠄁e󠄁r󠄁e󠄁n󠄁c󠄁e󠄁 i󠄁m󠄁p󠄁l󠄁e󠄁m󠄁e󠄁n󠄁t󠄁a󠄁t󠄁i󠄁o󠄁n󠄁s󠄁 e󠄁x󠄁p󠄁o󠄁s󠄁e󠄁 t󠄁h󠄁e󠄁 s󠄁a󠄁m󠄁e󠄁 d󠄁i󠄁s󠄁t󠄁i󠄁n󠄁c󠄁t󠄁i󠄁o󠄁n󠄁.󠄁
+P󠄁a󠄁s󠄁s󠄁a󠄁g󠄁e󠄁 g󠄁r󠄁o󠄁u󠄁p󠄁s󠄁 c󠄁o󠄁n󠄁t󠄁a󠄁i󠄁n󠄁i󠄁n󠄁g󠄁 m󠄁u󠄁l󠄁t󠄁i󠄁p󠄁l󠄁e󠄁 b󠄁a󠄁s󠄁e󠄁l󠄁i󠄁n󠄁e󠄁 c󠄁l󠄁a󠄁s󠄁s󠄁i󠄁f󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁s󠄁 u󠄁s󠄁e󠄁 a󠄁 n󠄁e󠄁u󠄁t󠄁r󠄁a󠄁l󠄁
+m󠄁i󠄁x󠄁e󠄁d󠄁 t󠄁r󠄁e󠄁a󠄁t󠄁m󠄁e󠄁n󠄁t󠄁,󠄁 w󠄁h󠄁i󠄁l󠄁e󠄁 e󠄁x󠄁a󠄁c󠄁t󠄁 r󠄁a󠄁n󠄁g󠄁e󠄁s󠄁 k󠄁e󠄁e󠄁p󠄁 t󠄁h󠄁e󠄁i󠄁r󠄁 s󠄁o󠄁u󠄁r󠄁c󠄁e󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁t󠄁i󠄁e󠄁s󠄁.󠄁 T󠄁h󠄁i󠄁s󠄁 d󠄁o󠄁c󠄁s󠄁
+a󠄁d󠄁a󠄁p󠄁t󠄁e󠄁r󠄁 i󠄁n󠄁t󠄁e󠄁n󠄁t󠄁i󠄁o󠄁n󠄁a󠄁l󠄁l󠄁y󠄁 r󠄁e󠄁a󠄁d󠄁s󠄁 o󠄁n󠄁l󠄁y󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁e󠄁d󠄁 A󠄁I󠄁 m󠄁a󠄁r󠄁k󠄁s󠄁;󠄁 l󠄁e󠄁g󠄁i󠄁t󠄁i󠄁m󠄁a󠄁t󠄁e󠄁 h󠄁u󠄁m󠄁a󠄁n󠄁-󠄁s󠄁e󠄁l󠄁e󠄁c󠄁t󠄁o󠄁r󠄁
+v󠄁a󠄁r󠄁i󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 s󠄁e󠄁q󠄁u󠄁e󠄁n󠄁c󠄁e󠄁s󠄁 r󠄁e󠄁m󠄁a󠄁i󠄁n󠄁 u󠄁n󠄁t󠄁o󠄁u󠄁c󠄁h󠄁e󠄁d󠄁 u󠄁n󠄁d󠄁e󠄁r󠄁 t󠄁h󠄁e󠄁 e󠄁x󠄁i󠄁s󠄁t󠄁i󠄁n󠄁g󠄁 e󠄁n󠄁r󠄁o󠄁l󠄁l󠄁m󠄁e󠄁n󠄁t󠄁 p󠄁o󠄁l󠄁i󠄁c󠄁y󠄁.󠄁
+
 ## Maintenance
 
-The decoder is pinned to npm `textprov` 0.2.0 in `package.json`, with the
-`pnpm-lock.yaml` update pending publication; the Python producer is pinned to
-PyPI `textprov==0.2.0` in
-`tools/requirements.txt`. CI installs both before provenance checks. Update the
+The decoder is pinned to npm `textprov` 0.2.1 in `package.json` and
+`pnpm-lock.yaml`; the Python producer is pinned to PyPI `textprov==0.3.0` in
+`tools/requirements.txt`. `pnpm-workspace.yaml` excludes textprov 0.2.1 from
+pnpm's minimum release age; that entry can go once the release is a day old. CI installs both before provenance checks. Update the
 Python version guard in `tools/dogfood.py` when changing its pin. SDK sources
 and releases are maintained in [textprov/textprov](https://github.com/textprov/textprov);
-this repository has no vendored SDK copies. Font assets and original OFL notices
-remain under src/fonts; mapping tests cover their supported Latin-1 subset. The visual
+this repository has no vendored SDK copies.
+
+Python 0.3.0 producer output remains compatible with the npm 0.2.1 decoder for
+this integration's AI selector and legacy replacement-PUA encodings. The
+[upstream release comparison](https://github.com/textprov/textprov/compare/js-v0.2.1...python-v0.3.0)
+changes authoring and checking policy, not the wire format: `SPEC_VERSION` remains
+`0.2`, and `python/textprov/_core.py`, `_encode.py`, `_grapheme.py`, `mapping.json`,
+and the JavaScript decoder are unchanged between those tags. The package versions
+are independent; their differing numbers do not require a decoder upgrade here.
+
+Executing authoring and preservation policy from an exact-pinned dependency is a
+trust boundary: this repository trusts the installed SDK implementation to decide
+which bytes are retained and which changes pass checking. The exact-version guard
+and repository contract regression tests mitigate version drift and detect tested
+behavior changes; they do not verify artifact integrity or establish that an
+installed package matches the reviewed upstream source. A matching version string
+is not an integrity check.
+
+Font assets and original OFL notices remain under src/fonts; mapping tests cover
+their supported Latin-1 subset. The visual
 toggle uses CSS rather than special glyphs, so non-Latin text is supported too.
-The existing body font remains unchanged.
+B󠄁o󠄁d󠄁y󠄁 p󠄁r󠄁o󠄁s󠄁e󠄁 k󠄁e󠄁e󠄁p󠄁s󠄁 i󠄁t󠄁s󠄁 e󠄁x󠄁i󠄁s󠄁t󠄁i󠄁n󠄁g󠄁 f󠄁o󠄁n󠄁t󠄁 s󠄁e󠄁l󠄁e󠄁c󠄁t󠄁i󠄁o󠄁n󠄁.󠄁 P󠄁* a󠄁d󠄁d󠄁s󠄁 c󠄁o󠄁n󠄁t󠄁e󠄁x󠄁t󠄁u󠄁a󠄁l󠄁 s󠄁p󠄁a󠄁c󠄁e󠄁 d󠄁o󠄁t󠄁s󠄁
+f󠄁o󠄁r󠄁 r󠄁a󠄁w󠄁 m󠄁a󠄁r󠄁k󠄁e󠄁d󠄁 t󠄁e󠄁x󠄁t󠄁 w󠄁i󠄁t󠄁h󠄁o󠄁u󠄁t󠄁 c󠄁h󠄁a󠄁n󠄁g󠄁i󠄁n󠄁g󠄁 t󠄁h󠄁e󠄁 s󠄁t󠄁o󠄁r󠄁e󠄁d󠄁 e󠄁n󠄁c󠄁o󠄁d󠄁i󠄁n󠄁g󠄁;󠄁 t󠄁h󠄁e󠄁 c󠄁l󠄁e󠄁a󠄁n󠄁 p󠄁u󠄁b󠄁l󠄁i󠄁s󠄁h󠄁e󠄁d󠄁
+p󠄁r󠄁o󠄁j󠄁e󠄁c󠄁t󠄁i󠄁o󠄁n󠄁 c󠄁o󠄁n󠄁t󠄁i󠄁n󠄁u󠄁e󠄁s󠄁 t󠄁o󠄁 u󠄁s󠄁e󠄁 a󠄁p󠄁p󠄁l󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 C󠄁S󠄁S󠄁.󠄁
 
 Vale CI removes recorded AI selectors in its disposable checkout before running
 terminology checks. The source filenames and line numbers remain available for

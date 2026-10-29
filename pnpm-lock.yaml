@@ -221,6 +221,9 @@ importers:
       tailwindcss:
         specifier: ^4.3.3
         version: 4.3.3
+      textprov:
+        specifier: 0.2.1
+        version: 0.2.1
       vue:
         specifier: ^3.5.44
         version: 3.5.44(typescript@7.0.2)
@@ -2892,6 +2895,10 @@ packages:
   tapable@2.3.3:
     resolution: {integrity: sha512-uxc/zpqFg6x7C8vOE7lh6Lbda8eEL9zmVm/PLeTPBRhh1xCgdWaQ+J1CUieGpIfm2HdtsUpRv+HshiasBMcc6A==}
     engines: {node: '>=6'}
+
+  textprov@0.2.1:
+    resolution: {integrity: sha512-cIfLa/RSQiLtjvcA1ML9YrLxhbKwzBlN2OEU0rNhUlLKRXXzncIADGSEP7JVvui3ChC+Q7rHeLhJqgH2K5XT7Q==}
+    engines: {node: '>=18'}
 
   tiny-inflate@1.0.3:
     resolution: {integrity: sha512-pkY1fj1cKHb2seWDy0B16HeWyczlJA9/WW3u3c4z/NiWDsO3DOU5D7nhTLE9CF0yXv/QZFY7sEJmj24dK+Rrqw==}
@@ -6310,6 +6317,8 @@ snapshots:
   tailwindcss@4.3.3: {}
 
   tapable@2.3.3: {}
+
+  textprov@0.2.1: {}
 
   tiny-inflate@1.0.3: {}
 

@@ -1,6 +1,6 @@
 // src/fonts/provenance.test.ts
 //
-// Guards the provenance (P+) webfonts against a plain or mis-patched build
+// Guards the provenance (P+ and P*) webfonts against a plain or mis-patched build
 // being copied in. Such a file still builds and renders, so nothing else would
 // notice the marker mapping is gone. Reads each WOFF2's cmap directly
 // (node:zlib has Brotli), so no font-parsing dependency is needed.
@@ -26,8 +26,8 @@ const COVERED: number[] = textprov.mapping.puaRanges.flatMap(
 
 const hex = (cp: number) => `U+${cp.toString(16).toUpperCase().padStart(4, '0')}`;
 
-/** Decompress a WOFF2 file and return its raw cmap table. */
-function readCmap(woff2: Buffer): Buffer {
+/** Decompress a WOFF2 file and return a selected raw table. */
+function readTable(woff2: Buffer, wanted: string): Buffer {
   if (woff2.readUInt32BE(0) !== 0x774f4632) throw new Error('not a WOFF2 file');
   if (woff2.readUInt32BE(4) === 0x74746366) throw new Error('font collections unsupported');
   const numTables = woff2.readUInt16BE(12);
@@ -46,23 +46,25 @@ function readCmap(woff2: Buffer): Buffer {
 
   // Tables sit unpadded in the decompressed stream, in directory order.
   let offset = 0;
-  let cmap: { offset: number; length: number } | undefined;
+  let found: { offset: number; length: number } | undefined;
   for (let i = 0; i < numTables; i++) {
     const flags = woff2[pos++];
     const tagIndex = flags & 0x3f;
     const transform = flags >> 6;
+    const tag = tagIndex === 63 ? woff2.toString('ascii', pos, pos + 4)
+      : ({ 0: 'cmap', 28: 'GSUB' } as Record<number, string>)[tagIndex];
     if (tagIndex === 63) pos += 4; // Arbitrary tag spelled out.
     const origLength = base128();
     // glyf (10) and loca (11) mark "untransformed" as 3; every other table as 0.
     const transformed = tagIndex === 10 || tagIndex === 11 ? transform !== 3 : transform !== 0;
     const length = transformed ? base128() : origLength;
-    if (tagIndex === 0) cmap = { offset, length };
+    if (tag === wanted) found = { offset, length };
     offset += length;
   }
-  if (!cmap) throw new Error('no cmap table');
+  if (!found) throw new Error(`no ${wanted} table`);
 
   const tables = brotliDecompressSync(woff2.subarray(pos, pos + compressedSize));
-  return tables.subarray(cmap.offset, cmap.offset + cmap.length);
+  return tables.subarray(found.offset, found.offset + found.length);
 }
 
 /** Default glyphs (format 12) and per-selector variant glyphs (format 14). */
@@ -112,9 +114,11 @@ const fonts = ['zilla-slab-provenance', 'maryheather-provenance'].flatMap((famil
     .map((name) => join(family, name))
 );
 
-describe('provenance (P+) webfonts', () => {
-  it('ships all eight faces', () => {
-    expect(fonts).toHaveLength(8);
+describe('provenance (P+ and P*) webfonts', () => {
+  it('ships eight original P+ faces and eight separate P* faces', () => {
+    expect(fonts.filter((name) => name.includes('P+'))).toHaveLength(8);
+    expect(fonts.filter((name) => name.includes('PStar'))).toHaveLength(8);
+    expect(fonts).toHaveLength(16);
   });
 
   describe.each(fonts)('%s', (font) => {
@@ -123,9 +127,22 @@ describe('provenance (P+) webfonts', () => {
     let variants: Map<number, Map<number, number>>;
     let marked: Map<number, number>;
     beforeAll(() => {
-      ({ glyphs, variants } = parseCmap(readCmap(readFileSync(join(dir, font)))));
+      ({ glyphs, variants } = parseCmap(readTable(readFileSync(join(dir, font)), 'cmap')));
       marked = variants.get(VS18) ?? new Map<number, number>();
     });
+
+    if (font.includes('PStar')) {
+      it('retains the original cmap and adds the contextual bridge feature', () => {
+        const data = readFileSync(join(dir, font));
+        const original = readFileSync(join(dir, font.replace('PStar', 'P+')));
+        expect(readTable(data, 'cmap')).toEqual(readTable(original, 'cmap'));
+        const gsub = readTable(data, 'GSUB');
+        const list = gsub.readUInt16BE(6);
+        const tags = Array.from({ length: gsub.readUInt16BE(list) }, (_, i) =>
+          gsub.toString('ascii', list + 2 + i * 6, list + 6 + i * 6));
+        expect(tags).toContain('rclt');
+      });
+    }
 
     it('has a format 12 cmap and a U+E0101 variation selector record', () => {
       expect(glyphs.size).toBeGreaterThan(0);
