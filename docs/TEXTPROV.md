@@ -73,16 +73,28 @@ agent completion requirement; CI cannot infer whether unmarked text came from AI
 
 ## Correspondence alignment and authoring limitations
 
-`tools/dogfood.py` uses `correspondence()` for both authoring and checking.
-It ignores whitespace, anchors on exact encoded bytes, then aligns visible
-clusters in the gaps. Primary equal runs can be one cluster long; these text
-comparisons cannot distinguish retained text from coincidental new text.
+`tools/dogfood.py` retains its scoped `mark_edit` authoring operation, using
+`textprov.clusters()` and `textprov.correspondence()` from the exact-pinned PyPI
+`textprov==0.3.0` SDK to preserve matched bytes. Checking delegates to the SDK's
+`textprov.check_text()` with a prose-eligibility profile from this repository's
+Node Markdown parser. The wrapper retains AST-shape validation and repository
+policy checks; correspondence and preservation checking are implemented upstream,
+not locally. This composition does not use the SDK's `mark_document_edit()`
+authoring policy. See the upstream
+[alignment documentation](https://github.com/textprov/textprov/blob/python-v0.3.0/docs/development/alignment.md).
+
+The SDK's correspondence algorithm ignores whitespace, anchors on exact encoded
+bytes, then aligns visible clusters in the gaps. Primary equal runs can be one
+cluster long; these text comparisons cannot distinguish retained text from
+coincidental new text.
 For example, replacing `cat` with `bag` retains the unmarked `a`; fully marking
 the replacement instead reports backfill. Two-cluster coincidences are possible too.
 
-`MIN_MOVE_CLUSTERS = 2` applies only to the final unmatched-block move pass.
-Shorter blocks pair only if their encoded bytes are identical. This excludes
-the reported Polish singleton coincidence while retaining checks for changed
+The SDK's `MIN_MOVE_CLUSTERS = 2`, defined in upstream
+[`python/textprov/check.py`](https://github.com/textprov/textprov/blob/python-v0.3.0/python/textprov/check.py),
+applies only to the final unmatched-block move pass. Shorter blocks pair only if
+their encoded bytes are identical. This excludes the reported Polish singleton
+coincidence while retaining checks for changed
 marks on two-cluster moves. Raising the threshold to three misses those changes;
 adding a minimum to primary equal runs also breaks retained-byte and
 mark-preservation cases. Neither threshold establishes authorship.
@@ -118,7 +130,8 @@ as locale-specific checker exemptions:
   `src/content/docs/es/self-hosting/index.md`: it aligns with legacy `secreto`'s
   `r` against `bc5c9ae2`. The other letters in `valor` remain AI-marked.
 
-Reduced tests reproduce both alignments. These exceptions are not evidence of
+Repository contract regression tests reproduce both alignments against the
+SDK's correspondence and checker. These exceptions are not evidence of
 retained authorship. Their historical comparison base does not replace the
 starting-base check or CI's current merge base. For the develop → main PR #459,
 #469 re-anchored develop against `56e953fc`, the merge base of main and
@@ -212,13 +225,31 @@ validated before percent-encoding.
 ## Maintenance
 
 The decoder is pinned to npm `textprov` 0.2.1 in `package.json` and
-`pnpm-lock.yaml`; the Python producer is pinned to PyPI `textprov==0.2.0` in
+`pnpm-lock.yaml`; the Python producer is pinned to PyPI `textprov==0.3.0` in
 `tools/requirements.txt`. `pnpm-workspace.yaml` excludes textprov 0.2.1 from
 pnpm's minimum release age; that entry can go once the release is a day old. CI installs both before provenance checks. Update the
 Python version guard in `tools/dogfood.py` when changing its pin. SDK sources
 and releases are maintained in [textprov/textprov](https://github.com/textprov/textprov);
-this repository has no vendored SDK copies. Font assets and original OFL notices
-remain under src/fonts; mapping tests cover their supported Latin-1 subset. The visual
+this repository has no vendored SDK copies.
+
+Python 0.3.0 producer output remains compatible with the npm 0.2.1 decoder for
+this integration's AI selector and legacy replacement-PUA encodings. The
+[upstream release comparison](https://github.com/textprov/textprov/compare/js-v0.2.1...python-v0.3.0)
+changes authoring and checking policy, not the wire format: `SPEC_VERSION` remains
+`0.2`, and `python/textprov/_core.py`, `_encode.py`, `_grapheme.py`, `mapping.json`,
+and the JavaScript decoder are unchanged between those tags. The package versions
+are independent; their differing numbers do not require a decoder upgrade here.
+
+Executing authoring and preservation policy from an exact-pinned dependency is a
+trust boundary: this repository trusts the installed SDK implementation to decide
+which bytes are retained and which changes pass checking. The exact-version guard
+and repository contract regression tests mitigate version drift and detect tested
+behavior changes; they do not verify artifact integrity or establish that an
+installed package matches the reviewed upstream source. A matching version string
+is not an integrity check.
+
+Font assets and original OFL notices remain under src/fonts; mapping tests cover
+their supported Latin-1 subset. The visual
 toggle uses CSS rather than special glyphs, so non-Latin text is supported too.
 The existing body font remains unchanged.
 
