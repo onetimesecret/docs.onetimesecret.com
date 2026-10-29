@@ -15,8 +15,21 @@ import tempfile
 import unicodedata
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "vendor/textprov/python"))
-import textprov  # noqa: E402
+REQUIRED_TEXTPROV_VERSION = "0.2.0"
+INSTALL_TEXTPROV = "python3 -m pip install -r tools/requirements.txt"
+try:
+    import textprov
+except ModuleNotFoundError as error:
+    if error.name != "textprov":
+        raise
+    raise SystemExit(
+        f"TextProv {REQUIRED_TEXTPROV_VERSION} is required. Run: {INSTALL_TEXTPROV}"
+    ) from error
+if getattr(textprov, "__version__", None) != REQUIRED_TEXTPROV_VERSION:
+    raise SystemExit(
+        f"TextProv {REQUIRED_TEXTPROV_VERSION} is required; found "
+        f"{getattr(textprov, '__version__', 'unknown')}. Run: {INSTALL_TEXTPROV}"
+    )
 
 MAPPING = textprov.default_mapping()
 SELECTORS = set(MAPPING.selectors.values())
