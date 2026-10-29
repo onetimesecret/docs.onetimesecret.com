@@ -1,0 +1,4 @@
+defaults: &defaults
+  level: warn
+loggers:
+  app: *defaults
