@@ -1,10 +1,9 @@
 ---
 textprov: true
-title: Health Endpoints Reference
+title: Health endpoints reference
 description: The health and status endpoints this release serves, with their access policy, status codes, payload fields and which subsystems each one actually probes.
 audience: operator
 pageType: reference
-draft: true
 sourceOfTruth: onetimesecret/apps/web/core/controllers/health.rb:12-145 at v0.26.19 (the static and advanced health responses); onetimesecret/apps/web/auth/routes/health.rb:8-36 at v0.26.19 (the auth health response and its 503 branch); onetimesecret/lib/onetime/middleware/health_access_control.rb:9-119 at v0.26.19 (the network restriction and the 403 body); onetimesecret/apps/api/v2/logic/meta.rb:31-54 and onetimesecret/apps/api/v3/logic/meta.rb:37-58 at v0.26.19 (the API status and version payloads); onetimesecret/etc/defaults/config.defaults.yaml:516-533 at v0.26.19 (the session skip_paths list); src/data/reference/health-endpoints.json (the per-endpoint records and their evidence)
 ---
 

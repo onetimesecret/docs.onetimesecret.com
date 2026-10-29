@@ -1,10 +1,9 @@
 ---
 textprov: true
-title: Command Line Reference
+title: Command line reference
 description: Every command the ots command line registers, with what it writes, the flag that lets it write, its external effects and what it needs to run.
 audience: operator
 pageType: reference
-draft: true
 sourceOfTruth: onetimesecret/bin/ots:20-40 at v0.26.19 (the global switches parsed before dispatch); onetimesecret/lib/onetime/cli.rb:130-280 at v0.26.19 (the registered command tree, including app command auto-discovery); onetimesecret/lib/onetime/cli/write_gate.rb:20-104 at v0.26.19 (the shared write gate and its aliases); onetimesecret/lib/onetime/cli/option_types.rb:84-150 at v0.26.19 (numeric option coercion and the error on a non-numeric value); src/data/reference/cli.json (the per-command records and their evidence)
 ---
 

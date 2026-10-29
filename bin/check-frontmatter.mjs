@@ -180,11 +180,16 @@ const REQUIRED_ANCHORS = {
   "security/our-principles": ["privacy-first", "communication", "data-minimization"],
 };
 
-// D-4.1. The two pages that own every default until the generated Reference
-// lands in Phase 4. They are exempt from assertion 4 whether or not they cite
-// sourceOfTruth: stating values is what they are for. Every other page — of
-// either audience — states a default only with a citation beside it.
-const REFERENCE_OWNERS = ["self-hosting/environment-variables", "self-hosting/configuration"];
+// D-4.1. The pages that own every default. They are exempt from assertion 4
+// whether or not they cite sourceOfTruth: stating values is what they are for.
+// Every other page — of either audience — states a default only with a
+// citation beside it.
+//
+// reference/environment-variables replaced self-hosting/environment-variables
+// in Phase 4 and is generated from vendor/onetimesecret/.env.reference, so it
+// cites its own pinned source. self-hosting/configuration stays on the list
+// until the configuration subjects publish under reference/.
+const REFERENCE_OWNERS = ["reference/environment-variables", "self-hosting/configuration"];
 
 // Assertion 5's tree list, its required fields and the segment-wise prefix test
 // live in bin/lib/frontmatter.mjs — this script runs its assertions at import

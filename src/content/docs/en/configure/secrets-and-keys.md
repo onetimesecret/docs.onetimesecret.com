@@ -70,5 +70,5 @@ F󠄁u󠄁l󠄁l󠄁-󠄁m󠄁o󠄁d󠄁e󠄁 f󠄁a󠄁i󠄁l󠄁u󠄁r󠄁e�
 
 ## R󠄁e󠄁l󠄁a󠄁t󠄁e󠄁d󠄁
 
-- [E󠄁n󠄁v󠄁i󠄁r󠄁o󠄁n󠄁m󠄁e󠄁n󠄁t󠄁 v󠄁a󠄁r󠄁i󠄁a󠄁b󠄁l󠄁e󠄁s󠄁](/en/self-hosting/environment-variables)
+- [E󠄁n󠄁v󠄁i󠄁r󠄁o󠄁n󠄁m󠄁e󠄁n󠄁t󠄁 v󠄁a󠄁r󠄁i󠄁a󠄁b󠄁l󠄁e󠄁s󠄁](/en/reference/environment-variables)
 - [C󠄁o󠄁n󠄁f󠄁i󠄁g󠄁u󠄁r󠄁e󠄁 y󠄁o󠄁u󠄁r󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁n󠄁c󠄁e󠄁](/en/configure)

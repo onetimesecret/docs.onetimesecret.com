@@ -68,6 +68,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      # Reproducibility gate: the committed Reference pages must match what
+      # the pinned snapshot renders. Nothing is uploaded from a drifted tree.
+      - name: Check generated reference
+        run: pnpm run reference:check
+
       - name: Build site
         run: pnpm run build
         env:

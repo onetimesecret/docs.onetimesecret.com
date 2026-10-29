@@ -60,7 +60,7 @@ a󠄁u󠄁f󠄁g󠄁e󠄁d󠄁e󠄁c󠄁k󠄁t󠄁 h󠄁a󠄁t󠄁.󠄁
 W󠄁e󠄁l󠄁c󠄁h󠄁e󠄁 L󠄁e󠄁b󠄁e󠄁n󠄁s󠄁d󠄁a󠄁u󠄁e󠄁r󠄁n󠄁 v󠄁e󠄁r󠄁f󠄁ü󠄁g󠄁b󠄁a󠄁r󠄁 s󠄁i󠄁n󠄁d󠄁,󠄁 h󠄁ä󠄁n󠄁g󠄁t󠄁 v󠄁o󠄁m󠄁 D󠄁i󠄁e󠄁n󠄁s󠄁t󠄁 u󠄁n󠄁d󠄁 d󠄁e󠄁i󠄁n󠄁e󠄁m󠄁 P󠄁l󠄁a󠄁n󠄁 a󠄁b󠄁.󠄁
 A󠄁n󠄁o󠄁n󠄁y󠄁m󠄁e󠄁s󠄁 T󠄁e󠄁i󠄁l󠄁e󠄁n󠄁 h󠄁a󠄁t󠄁 e󠄁i󠄁n󠄁e󠄁 e󠄁i󠄁g󠄁e󠄁n󠄁e󠄁 m󠄁a󠄁x󠄁i󠄁m󠄁a󠄁l󠄁e󠄁 L󠄁e󠄁b󠄁e󠄁n󠄁s󠄁d󠄁a󠄁u󠄁e󠄁r󠄁.󠄁 B󠄁e󠄁i󠄁 e󠄁i󠄁n󠄁e󠄁r󠄁 s󠄁e󠄁l󠄁b󠄁s󠄁t󠄁
 g󠄁e󠄁h󠄁o󠄁s󠄁t󠄁e󠄁t󠄁e󠄁n󠄁 I󠄁n󠄁s󠄁t󠄁a󠄁n󠄁z󠄁 k󠄁o󠄁n󠄁f󠄁i󠄁g󠄁u󠄁r󠄁i󠄁e󠄁r󠄁t󠄁 d󠄁e󠄁r󠄁 B󠄁e󠄁t󠄁r󠄁e󠄁i󠄁b󠄁e󠄁r󠄁 d󠄁i󠄁e󠄁 v󠄁e󠄁r󠄁f󠄁ü󠄁g󠄁b󠄁a󠄁r󠄁e󠄁n󠄁 O󠄁p󠄁t󠄁i󠄁o󠄁n󠄁e󠄁n󠄁;󠄁 s󠄁i󠄁e󠄁h󠄁e󠄁
-[U󠄁m󠄁g󠄁e󠄁b󠄁u󠄁n󠄁g󠄁s󠄁v󠄁a󠄁r󠄁i󠄁a󠄁b󠄁l󠄁e󠄁n󠄁](/en/self-hosting/environment-variables).󠄁
+[U󠄁m󠄁g󠄁e󠄁b󠄁u󠄁n󠄁g󠄁s󠄁v󠄁a󠄁r󠄁i󠄁a󠄁b󠄁l󠄁e󠄁n󠄁](/en/reference/environment-variables).󠄁
 
 D󠄁e󠄁r󠄁 B󠄁e󠄁l󠄁e󠄁g󠄁 b󠄁l󠄁e󠄁i󠄁b󠄁t󠄁 d󠄁o󠄁p󠄁p󠄁e󠄁l󠄁t󠄁 s󠄁o󠄁 l󠄁a󠄁n󠄁g󠄁e󠄁 b󠄁e󠄁s󠄁t󠄁e󠄁h󠄁e󠄁n󠄁 w󠄁i󠄁e󠄁 d󠄁i󠄁e󠄁 g󠄁e󠄁w󠄁ä󠄁h󠄁l󠄁t󠄁e󠄁 L󠄁e󠄁b󠄁e󠄁n󠄁s󠄁d󠄁a󠄁u󠄁e󠄁r󠄁 d󠄁e󠄁s󠄁
 G󠄁e󠄁h󠄁e󠄁i󠄁m󠄁n󠄁i󠄁s󠄁s󠄁e󠄁s󠄁,󠄁 g󠄁e󠄁r󠄁e󠄁c󠄁h󠄁n󠄁e󠄁t󠄁 a󠄁b󠄁 d󠄁e󠄁m󠄁 E󠄁r󠄁s󠄁t󠄁e󠄁l󠄁l󠄁e󠄁n󠄁.󠄁 S󠄁o󠄁 k󠄁a󠄁n󠄁n󠄁s󠄁t󠄁 d󠄁u󠄁 a󠄁u󠄁c󠄁h󠄁 d󠄁a󠄁n󠄁n󠄁 n󠄁o󠄁c󠄁h󠄁

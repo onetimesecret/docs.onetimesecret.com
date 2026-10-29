@@ -165,6 +165,16 @@ const movedPages = [
     fragment: "united-states",
   },
 
+  // Phase 4: the environment reference moved out of self-hosting/ into the
+  // generated Reference group. The page is now rendered by bin/reference.mjs
+  // from a pinned application snapshot, and its 25 section fragments are
+  // preserved verbatim, so an old deep link such as
+  // /en/self-hosting/environment-variables/#sso--omniauth still resolves once
+  // the reader follows this redirect. The eight translated copies retired with
+  // the English page; their final revisions are recorded in
+  // docs/planning/documentation-audit-2026-08-phase-4-evidence.md.
+  { from: "self-hosting/environment-variables", to: "reference/environment-variables" },
+
   // The principles family, same treatment.
   { from: "principles", to: "security/our-principles" },
   { from: "principles/privacy-first", to: "security/our-principles", fragment: "privacy-first" },

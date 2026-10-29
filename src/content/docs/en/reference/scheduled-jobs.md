@@ -1,10 +1,9 @@
 ---
 textprov: true
-title: Scheduled Jobs Reference
+title: Scheduled jobs reference
 description: Every job the scheduler can register, with its trigger, the configuration key that enables it, what it depends on and what it changes.
 audience: operator
 pageType: reference
-draft: true
 sourceOfTruth: onetimesecret/lib/onetime/cli/scheduler_command.rb:40-150 at v0.26.19 (discovery, the liveness heartbeat, signal handling); onetimesecret/lib/onetime/jobs/registry.rb:20-80 at v0.26.19 (which classes are scheduled); onetimesecret/lib/onetime/jobs/scheduled_job.rb:30-200 at v0.26.19 (scheduling helpers and run-status classification); onetimesecret/lib/onetime/jobs/maintenance_job.rb:17-121 at v0.26.19 (the maintenance enablement, repair and batch rules); onetimesecret/etc/defaults/config.defaults.yaml:1659-1856 at v0.26.19 (the shipped job defaults); src/data/reference/scheduled-jobs.json (the per-job records and their evidence)
 ---
 

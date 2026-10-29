@@ -195,19 +195,47 @@ describe("renderer-introduced prose", () => {
   });
 });
 
+// The 25 section fragments self-hosting/environment-variables published, in
+// source order, as of the last revision before it retired
+// (bd7c212538b21c0bfb4d9305398476b060ed399e). Pinned here rather than read off
+// the page: the page is gone, and the point of the check is that the published
+// URLs it left behind keep resolving. Recover it with
+// `git show bd7c2125:src/content/docs/en/self-hosting/environment-variables.md`.
+const LEGACY_SECTION_FRAGMENTS = [
+  "secrets--cryptography",
+  "connections",
+  "site-identity--core",
+  "secret-ttl-configuration",
+  "secret-options",
+  "email",
+  "authentication",
+  "organizations",
+  "custom-mail-sender-dns-settings",
+  "sso--omniauth",
+  "stripe-billing",
+  "custom-domains",
+  "feature-flags",
+  "api-access",
+  "incoming-secrets",
+  "reverse-proxy--client-ip",
+  "middleware",
+  "ui--homepage",
+  "branding--private-label",
+  "logging--diagnostics",
+  "job-system",
+  "server--worker-tuning",
+  "compatibility",
+  "experimental-features",
+  "development-only",
+];
+
 describe("the tracked page", () => {
   const tracked = readFileSync(join(repoRoot, "src/content/docs/en/reference/environment-variables.md"), "utf8");
   const trackedBody = parseFrontmatter(tracked).body;
-  const legacy = parseFrontmatter(
-    readFileSync(join(repoRoot, "src/content/docs/en/self-hosting/environment-variables.md"), "utf8"),
-  ).body;
 
   it("keeps every section fragment the legacy page published, except development-only", () => {
     const now = new Set(headings(trackedBody).map((heading) => heading.slug));
-    const before = headings(legacy)
-      .filter((heading) => heading.depth === 3)
-      .map((heading) => heading.slug);
-    const missing = before.filter((slug) => !now.has(slug));
+    const missing = LEGACY_SECTION_FRAGMENTS.filter((slug) => !now.has(slug));
     // The one intentional loss: plan section 2 excludes unsupported variables
     // from the supported reference, so there is no Development Only section to
     // land on. Recorded here so adding a second loss fails.

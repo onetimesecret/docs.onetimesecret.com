@@ -334,13 +334,32 @@ const entries = [
 
     createLink("configurationReference", "self-hosting/configuration"),
     createLink("configurationGenerator", "self-hosting/configuration-generator"),
-    createLink("environmentVariables", "self-hosting/environment-variables"),
     createLink("upgradeGuides", "self-hosting/upgrade-guides"),
   ]),
 
   createGroup("apiAndSdks", [
     createLink("restApi", "api"),
     createLink("clientLibraries", "api/client-libraries"),
+  ]),
+
+  // Reference is the eighth top-level group (Phase 4), between API & SDKs and
+  // Trust & security. Its pages are generated from a pinned snapshot of the
+  // application under vendor/onetimesecret/ and rendered by bin/reference.mjs;
+  // bin/check-frontmatter.mjs treats reference/environment-variables as the
+  // owner of environment defaults, the way self-hosting/environment-variables
+  // used to be.
+  //
+  // The three runtime pages (command line, scheduled jobs, health endpoints)
+  // are backed by explicit records in src/data/reference/ and ship draft until
+  // their operator counterparts under Operate publish. pruneDrafts drops their
+  // links from production builds, so the links stay here and check:orphans
+  // keeps seeing the pages.
+  createGroup("reference", [
+    createLink("referenceOverview", "reference"),
+    createLink("environmentVariablesReference", "reference/environment-variables"),
+    createLink("cliReference", "reference/cli"),
+    createLink("scheduledJobsReference", "reference/scheduled-jobs"),
+    createLink("healthEndpointsReference", "reference/health-endpoints"),
   ]),
 
   createGroup("securityTrust", [
