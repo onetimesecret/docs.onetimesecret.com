@@ -2,6 +2,7 @@
 // Intl.Segmenter and String.slice, so they can be projected back into DOM text.
 const MAX_GAP_WORDS = 2;
 const MAX_GAP_CHARACTERS = 32;
+// Bounded by the configured locales in practice; keyed by raw lang values.
 const segmenters = new Map();
 
 function forLocale(locale) {
@@ -20,21 +21,34 @@ function forLocale(locale) {
   return segmenters.get(locale);
 }
 
+// Each code point is at least one UTF-16 unit, so a gap longer than twice the
+// limit in UTF-16 cannot fit; only the remaining gaps are segmented.
+function bridgeable(words, gap) {
+  if (gap.length > MAX_GAP_CHARACTERS * 2) return false;
+  let characters = 0;
+  for (const _ of gap) if (++characters > MAX_GAP_CHARACTERS) return false;
+  let count = 0;
+  for (const part of words.segment(gap)) if (part.isWordLike && ++count > MAX_GAP_WORDS) return false;
+  return true;
+}
+
 /**
  * Expand exact AI ranges to words and bridge small gaps within a sentence.
  * No sentence/paragraph expansion or density-based attribution is performed.
+ * The gap limit applies between neighbours, so a sentence edited every few
+ * words becomes one range; a sentence boundary always ends the chain.
  * @param {string} text
  * @param {{ start: number, end: number }[]} exact Sorted, non-overlapping ranges.
  * @param {string} [locale]
- * @returns {{ start: number, end: number }[]}
+ * @returns {{ start: number, end: number }[]} Sorted, non-overlapping, non-adjacent ranges.
  */
 export function passageRanges(text, exact, locale = 'en') {
   if (!exact.length) return [];
   const { words, sentences } = forLocale(locale);
   const result = [];
+  let previous = null;
   let markIndex = 0;
   for (const sentence of sentences.segment(text)) {
-    let previous = null;
     for (const word of words.segment(sentence.segment)) {
       const start = sentence.index + word.index;
       const end = start + word.segment.length;
@@ -45,9 +59,11 @@ export function passageRanges(text, exact, locale = 'en') {
         const range = word.isWordLike
           ? { start, end }
           : { start: Math.max(start, exact[i].start), end: Math.min(end, exact[i].end) };
-        const gap = previous ? text.slice(previous.end, range.start) : '';
-        const nearby = previous && Array.from(gap).length <= MAX_GAP_CHARACTERS &&
-          Array.from(words.segment(gap)).filter(part => part.isWordLike).length <= MAX_GAP_WORDS;
+        // Touching ranges coalesce even across a sentence boundary, so one
+        // recorded run never renders as two adjacent fragments. Gaps are only
+        // bridged when the previous range belongs to the same sentence.
+        const nearby = previous && previous.end > sentence.index &&
+          bridgeable(words, text.slice(previous.end, range.start));
         if (previous && (range.start <= previous.end || nearby)) {
           previous.end = Math.max(previous.end, range.end);
         } else {

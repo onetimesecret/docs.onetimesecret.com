@@ -69,7 +69,11 @@ describe('published TextProv reference contract', () => {
     const coverage = (doc: Document, selector: string) => [...doc.querySelectorAll(selector)]
       .map(node => node.textContent).join('').length;
     expect(coverage(docs.window.document, '[data-textprov-passage]'))
-      .toBeLessThan(coverage(upstream.window.document, '[data-prov-passage]'));
+      .toBeLessThanOrEqual(coverage(upstream.window.document, '[data-prov-passage]'));
+    // Each fixture has unmarked prose that upstream's block expansion includes.
+    const passages = [...docs.window.document.querySelectorAll('[data-textprov-passage]')]
+      .map(node => node.textContent).join('');
+    expect(passages).not.toMatch(/Plain|Unmarked|to do next/);
     upstream.window.close();
     docs.window.close();
   });

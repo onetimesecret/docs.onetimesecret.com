@@ -12,6 +12,14 @@ const excluded = new Set(['script', 'style', 'code', 'pre', 'textarea', 'svg', '
 const references = new Set(['aria-labelledby', 'aria-describedby', 'aria-controls', 'aria-owns',
   'aria-flowto', 'aria-activedescendant', 'aria-details', 'aria-errormessage', 'for', 'list', 'headers', 'form']);
 const labels = new Set(['aria-label', 'title', 'alt']);
+// Elements whose text never joins neighbouring words into one passage group.
+const blocks = new Set(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'li', 'dt', 'dd',
+  'td', 'th', 'figcaption', 'div', 'section', 'article', 'blockquote',
+  'address', 'aside', 'details', 'summary', 'dialog', 'fieldset', 'legend',
+  'figure', 'footer', 'form', 'header', 'hgroup', 'main', 'nav', 'ol', 'ul',
+  'dl', 'table', 'thead', 'tbody', 'tfoot', 'tr', 'caption', 'hr', 'menu',
+  'search', 'select', 'optgroup', 'option', 'video', 'audio', 'canvas',
+  'object', 'embed']);
 
 // This integration reads only recorded AI marks in opted-in docs. In particular,
 // U+E0100 remains untouched: 辻 + U+E0100 is a real ideographic variation sequence.
@@ -107,11 +115,6 @@ export function renderProvenance(html, { requireEnrollment = true, label } = {})
   }
   // Display groups do not change exact attribution or source marks.
   // Each text node keeps its original inline formatting/native annotation parent.
-  const blocks = new Set(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'li', 'dt', 'dd',
-    'td', 'th', 'figcaption', 'div', 'section', 'article', 'blockquote',
-    'address', 'aside', 'details', 'summary', 'dialog', 'fieldset', 'legend',
-    'figure', 'footer', 'form', 'header', 'hgroup', 'main', 'nav', 'ol', 'ul',
-    'dl', 'table', 'thead', 'tbody', 'tfoot', 'tr', 'caption', 'hr']);
   const contexts = new Map();
   let group = null;
   function flush() {
@@ -132,14 +135,16 @@ export function renderProvenance(html, { requireEnrollment = true, label } = {})
     group = null;
   }
   function collectPassages(node, prose = false, locale = 'en') {
+    // lang="" declares an unknown language: it stops grouping like any other
+    // change and segments with the English fallback instead of inheriting.
     const lang = node.attrs?.find(a => a.name === 'lang')?.value;
-    const boundary =
-      blocks.has(node.tagName) || excluded.has(node.tagName) || node.tagName === 'br' || lang;
+    const boundary = blocks.has(node.tagName) || excluded.has(node.tagName) ||
+      node.tagName === 'br' || lang !== undefined;
     // Excluded content, line breaks, nested blocks and language changes must
     // not disappear from the text stream and accidentally join nearby words.
     if (boundary) flush();
     if (excluded.has(node.tagName)) return;
-    locale = lang || locale;
+    locale = lang ?? locale;
     prose ||= node.attrs?.some(
       a => a.name === 'class' && a.value.split(/\s+/).includes('sl-markdown-content'),
     );
@@ -193,13 +198,18 @@ export function renderProvenance(html, { requireEnrollment = true, label } = {})
           }
           return html;
         }
+        const total = runs.reduce((length, run) => length + run.text.length, 0);
         let rendered = '', offset = 0;
         for (const range of ranges) {
+          // exactSlice drops text silently for out-of-order or empty ranges;
+          // fail the build instead of publishing lost or duplicated prose.
+          if (range.start < offset || range.end <= range.start || range.end > total)
+            fail(`passage ranges are not sorted within the text: "${excerpt(node.value)}"`);
           rendered += exactSlice(offset, range.start);
           rendered += `<span class="textprov-passage" data-textprov-passage="ai">${exactSlice(range.start, range.end)}</span>`;
           offset = range.end;
         }
-        rendered += exactSlice(offset, runs.reduce((length, run) => length + run.text.length, 0));
+        rendered += exactSlice(offset, total);
         edits.push([location.startOffset, location.endOffset, rendered]);
       }
     }

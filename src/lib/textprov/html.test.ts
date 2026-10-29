@@ -7,52 +7,70 @@ const render = (html: string, options = {}) => renderProvenance(html, { requireE
 const ai = (s: string) => Array.from(s).map(c => /\s/u.test(c) ? c : c + '\u{E0101}').join('');
 
 describe('static TextProv HTML', () => {
-  it("groups a fragmented passage across inline formatting while preserving exact ranges", () => {
+  it('groups a fragmented passage across inline formatting while preserving exact ranges', () => {
     const source = `C\u{E0101}ho\u{E0101}o\u{E0101}s\u{E0101}e a\u{E0101} g\u{E0101}u\u{E0101}i\u{E0101}de`;
     const html = `<div class="sl-markdown-content"><p>${source} <em>for what</em> <a href="/next">you want</a> to do next.</p><p>Unmarked paragraph.</p></div>`;
     const doc = new JSDOM(render(html)).window.document;
-    const paragraphs = doc.querySelectorAll("p");
-    expect(paragraphs[0].textContent).toBe("Choose a guide for what you want to do next.");
-    expect(paragraphs[1].querySelector(".textprov-passage")).toBeNull();
-    expect([...paragraphs[0].querySelectorAll(".textprov-passage")].map((el) => el.textContent).join("")).toBe(
-      "Choose a guide",
-    );
-    expect([...paragraphs[0].querySelectorAll(".textprov-ai")].map((el) => el.textContent).join("")).toBe("Coosagui");
-    expect(doc.querySelector("a .textprov-passage")).toBeNull();
-    expect(doc.querySelector("em .textprov-passage")).toBeNull();
+    const paragraphs = doc.querySelectorAll('p');
+    expect(paragraphs[0].textContent).toBe('Choose a guide for what you want to do next.');
+    expect(paragraphs[1].querySelector('.textprov-passage')).toBeNull();
+    expect([...paragraphs[0].querySelectorAll('.textprov-passage')].map(el => el.textContent).join('')).toBe('Choose a guide');
+    expect([...paragraphs[0].querySelectorAll('.textprov-ai')].map(el => el.textContent).join('')).toBe('Coosagui');
+    expect(doc.querySelector('a .textprov-passage')).toBeNull();
+    expect(doc.querySelector('em .textprov-passage')).toBeNull();
     expect(render(render(html))).toBe(render(html));
   });
 
-  it("groups across inline formatting and entities without changing attribution or links", () => {
-    const html = `<div class="sl-markdown-content"><p>Old co<em>${ai("lo")}</em>ur &amp; <a href="/next">${ai("shape")}</a> untouched ending.</p></div>`;
+  it('groups across inline formatting and entities without changing attribution or links', () => {
+    const html = `<div class="sl-markdown-content"><p>Old co<em>${ai('lo')}</em>ur &amp; <a href="/next">${ai('shape')}</a> untouched ending.</p></div>`;
     const result = render(html);
     const doc = new JSDOM(result).window.document;
-    expect(doc.querySelector("p")?.textContent).toBe("Old colour & shape untouched ending.");
-    expect([...doc.querySelectorAll(".textprov-passage")].map((el) => el.textContent).join("")).toBe("colour & shape");
-    expect([...doc.querySelectorAll(".textprov-ai")].map((el) => el.textContent).join("")).toBe("loshape");
-    expect(doc.querySelector("em .textprov-ai")?.textContent).toBe("lo");
-    expect(doc.querySelector("a")?.getAttribute("href")).toBe("/next");
+    expect(doc.querySelector('p')?.textContent).toBe('Old colour & shape untouched ending.');
+    expect([...doc.querySelectorAll('.textprov-passage')].map(el => el.textContent).join('')).toBe('colour & shape');
+    expect([...doc.querySelectorAll('.textprov-ai')].map(el => el.textContent).join('')).toBe('loshape');
+    expect(doc.querySelector('em .textprov-ai')?.textContent).toBe('lo');
+    expect(doc.querySelector('a')?.getAttribute('href')).toBe('/next');
     expect(render(result)).toBe(result);
   });
 
   it.each([
-    `<p>${ai("first")}<code>code</code>${ai("last")}</p>`,
-    `<p>${ai("first")}<br>${ai("last")}</p>`,
-    `<ul><li>${ai("first")}<ul><li>nested</li></ul>${ai("last")}</li></ul>`,
-    `<table><tr><td>${ai("first")}</td><td>original</td><td>${ai("last")}</td></tr></table>`,
-    `<p>${ai("first")}</p><p>original</p><p>${ai("last")}</p>`,
-  ])("does not join across excluded content, line breaks or block boundaries: %s", (body) => {
+    `<p>${ai('first')}<code>code</code>${ai('last')}</p>`,
+    `<p>${ai('first')}<br>${ai('last')}</p>`,
+    `<ul><li>${ai('first')}<ul><li>nested</li></ul>${ai('last')}</li></ul>`,
+    `<table><tr><td>${ai('first')}</td><td>original</td><td>${ai('last')}</td></tr></table>`,
+    `<p>${ai('first')}</p><p>original</p><p>${ai('last')}</p>`,
+    `<p>${ai('first')}<span lang="">unknown</span>${ai('last')}</p>`,
+    `<p>${ai('first')}<video>fallback</video>${ai('last')}</p>`,
+    `<menu><li>${ai('first')}</li><li>${ai('last')}</li></menu>`,
+  ])('does not join across excluded content, line breaks or block boundaries: %s', body => {
     const doc = new JSDOM(render(`<div class="sl-markdown-content">${body}</div>`)).window.document;
-    expect([...doc.querySelectorAll(".textprov-passage")].map((el) => el.textContent)).toEqual(["first", "last"]);
+    expect([...doc.querySelectorAll('.textprov-passage')].map(el => el.textContent)).toEqual(['first', 'last']);
   });
 
-  it("limits sparse edits to local words in a paragraph", () => {
+  it('limits sparse edits to local words in a paragraph', () => {
     const doc = new JSDOM(
-      render(
-        `<div class="sl-markdown-content"><p>An ${ai("e")}dited word followed by several entirely original words and anothe${ai("r")} edit.</p></div>`,
-      ),
+      render(`<div class="sl-markdown-content"><p>An ${ai('e')}dited word followed by several entirely original words and anothe${ai('r')} edit.</p></div>`),
     ).window.document;
-    expect([...doc.querySelectorAll(".textprov-passage")].map((el) => el.textContent)).toEqual(["edited", "another"]);
+    expect([...doc.querySelectorAll('.textprov-passage')].map(el => el.textContent)).toEqual(['edited', 'another']);
+  });
+
+  it('renders one recorded run that straddles a sentence boundary as one passage', () => {
+    // Whitespace is never marked, so only unspaced scripts can straddle a boundary.
+    const html = `<html lang="ja"><body><div class="sl-markdown-content"><p>これは日本${ai('語。次')}の文章です。</p></div></body></html>`;
+    const doc = new JSDOM(render(html)).window.document;
+    expect([...doc.querySelectorAll('.textprov-passage')].map(el => el.textContent)).toEqual(['日本語。次']);
+    expect([...doc.querySelectorAll('.textprov-ai')].map(el => el.textContent)).toEqual(['語。次']);
+  });
+
+  it('segments with the inherited language and resets it at nested lang attributes', () => {
+    // ICU segments these fixtures identically in every locale, so observe the
+    // locale the adapter asks for rather than a difference in the output.
+    const spy = vi.spyOn(Intl, 'Segmenter');
+    const html = `<html lang="de-CH"><body><div class="sl-markdown-content"><p>Alt ${ai('neu')} <span lang="fr">${ai('mot')}</span> <span lang="">${ai('x')}</span></p></div></body></html>`;
+    const doc = new JSDOM(render(html)).window.document;
+    expect([...doc.querySelectorAll('.textprov-passage')].map(el => el.textContent)).toEqual(['neu', 'mot', 'x']);
+    expect(spy.mock.calls.map(call => call[0])).toEqual(expect.arrayContaining(['de-CH', 'fr', '']));
+    spy.mockRestore();
   });
 
   it.each([
@@ -74,6 +92,8 @@ describe('static TextProv HTML', () => {
     expect(doc.querySelector('p')?.textContent).toBe('😀 Original café & 👩‍💻 日本語。 Original ending.');
     expect([...doc.querySelectorAll('.textprov-ai')].map(el => el.textContent).join('')).toBe('é👩‍💻本');
     expect([...doc.querySelectorAll('.textprov-ai')].every(el => el.closest('.textprov-passage'))).toBe(true);
+    // 本 expands to the dictionary word 日本語, not to the ideographic full stop.
+    expect([...doc.querySelectorAll('.textprov-passage')].map(el => el.textContent).join('')).toBe('cafe\u0301 & 👩‍💻 日本語');
     expect(render(result)).toBe(result);
   });
 

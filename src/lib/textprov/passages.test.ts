@@ -2,6 +2,8 @@ import { describe, expect, it } from 'vitest';
 import { passageRanges } from './passages.mjs';
 
 function passages(text: string, marks: string[], locale = 'en') {
+  // Marks are located by their first occurrence, so each must appear once.
+  for (const mark of marks) expect(text.indexOf(mark), mark).toBe(text.lastIndexOf(mark));
   const exact = marks.map(mark => ({ start: text.indexOf(mark), end: text.indexOf(mark) + mark.length }))
     .sort((a, b) => a.start - b.start);
   return passageRanges(text, exact, locale).map(range => text.slice(range.start, range.end));
@@ -25,6 +27,18 @@ describe('bounded passage context', () => {
       .toEqual(['first', 'last']);
     expect(passages('first                                 last', ['first', 'last']))
       .toEqual(['first', 'last']);
+  });
+
+  it('chains neighbours through a densely edited sentence, bounded by the sentence', () => {
+    // The gap limit applies between neighbours, not to the whole passage.
+    expect(passages('Start a1 xx yy a2 xx yy a3 xx yy a4 end. Next b1 xx yy b2 end.', ['a1', 'a2', 'a3', 'a4', 'b1', 'b2']))
+      .toEqual(['a1 xx yy a2 xx yy a3 xx yy a4', 'b1 xx yy b2']);
+  });
+
+  it('coalesces touching ranges across a sentence boundary into one range', () => {
+    expect(passages('One end. Two start.', ['end. Two'])).toEqual(['end. Two']);
+    expect(passages('これは日本語。次の文章です。', ['語。次'], 'ja')).toEqual(['日本語。次']);
+    expect(passages('One end. Two three start.', ['end. ', 'start'])).toEqual(['end. ', 'start']);
   });
 
   it('does not bridge sentence boundaries', () => {
@@ -53,6 +67,7 @@ describe('bounded passage context', () => {
 
   it('falls back deterministically for invalid language tags and ignores unmarked text', () => {
     expect(passages('Original edited prose.', ['edited'], 'not_a_locale')).toEqual(['edited']);
+    expect(passages('Original edited prose.', ['edited'], '')).toEqual(['edited']);
     expect(passageRanges('Entirely original.', [])).toEqual([]);
   });
 });
