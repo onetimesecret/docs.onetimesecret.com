@@ -1,4 +1,4 @@
-import { component, defineMarkdocConfig } from "@astrojs/markdoc/config";
+import { component, defineMarkdocConfig, Markdoc } from "@astrojs/markdoc/config";
 import starlightMarkdoc from "@astrojs/starlight-markdoc";
 
 // https://docs.astro.build/en/guides/integrations-guide/markdoc/
@@ -11,6 +11,19 @@ export default defineMarkdocConfig({
     // Add custom node types here
   },
   tags: {
+    details: { render: "details" },
+    summary: {
+      render: "summary",
+      transform(node, config) {
+        // Block tags wrap their text in paragraphs; summary requires phrasing content.
+        const children = node
+          .transformChildren(config)
+          .flatMap((child) =>
+            Markdoc.Tag.isTag(child) && child.name === "p" ? child.children : [child],
+          );
+        return new Markdoc.Tag("summary", {}, children);
+      },
+    },
     "homepage-ending": {
       render: component("./src/components/HomepageEnding.astro"),
       selfClosing: true,
