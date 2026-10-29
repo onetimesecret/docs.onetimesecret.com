@@ -23,6 +23,7 @@ const { id, compact = false } = Astro.props;
 const { t, starlightRoute } = Astro.locals;
 const guide = `/${starlightRoute.locale}/contribute/text-provenance`;
 const aboutId = `textprov-about-${id}`;
+const aboutTitleId = `textprov-about-title-${id}`;
 const helpId = `textprov-help-${id}`;
 const anchor = `--textprov-info-${id}`;
 ---
@@ -71,11 +72,12 @@ const anchor = `--textprov-info-${id}`;
     id={aboutId}
     class="textprov-about"
     popover
+    aria-labelledby={aboutTitleId}
     style={`position-anchor: ${anchor}`}
   >
+    <h3 id={aboutTitleId}>{t("textprov.aboutTitle")}</h3>
     <p>{t("textprov.about")}</p>
-    <p>{t("textprov.meaning")}</p>
-    <p>{t("textprov.choice")}</p>
+    <p>{t("textprov.limits")}</p>
     <a href={guide}>{t("textprov.learnMore")}</a>
   </div>
   <p id={helpId} class="textprov-help">
@@ -226,6 +228,12 @@ const anchor = `--textprov-info-${id}`;
     box-shadow: var(--sl-shadow-md);
     font-size: var(--sl-text-sm);
     line-height: 1.5;
+  }
+  .textprov-about h3 {
+    margin: 0 0 0.625rem;
+    color: var(--sl-color-white);
+    font-size: inherit;
+    font-weight: 600;
   }
   .textprov-about p {
     margin: 0 0 0.75rem;
