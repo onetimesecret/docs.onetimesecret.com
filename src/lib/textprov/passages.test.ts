@@ -27,6 +27,9 @@ describe('bounded passage context', () => {
       .toEqual(['first', 'last']);
     expect(passages('first                                 last', ['first', 'last']))
       .toEqual(['first', 'last']);
+    // The limit counts code points: 32 astral characters are 64 UTF-16 units.
+    expect(passages(`first ${'😀'.repeat(30)} last`, ['first', 'last'])).toHaveLength(1);
+    expect(passages(`first ${'😀'.repeat(31)} last`, ['first', 'last'])).toHaveLength(2);
   });
 
   it('chains neighbours through a densely edited sentence, bounded by the sentence', () => {
@@ -39,6 +42,8 @@ describe('bounded passage context', () => {
     expect(passages('One end. Two start.', ['end. Two'])).toEqual(['end. Two']);
     expect(passages('これは日本語。次の文章です。', ['語。次'], 'ja')).toEqual(['日本語。次']);
     expect(passages('One end. Two three start.', ['end. ', 'start'])).toEqual(['end. ', 'start']);
+    // A range that reaches into the next sentence belongs to it and bridges there.
+    expect(passages('One end. Two three start.', ['end. T', 'start'])).toEqual(['end. Two three start']);
   });
 
   it('does not bridge sentence boundaries', () => {

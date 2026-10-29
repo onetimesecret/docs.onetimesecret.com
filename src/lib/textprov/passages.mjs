@@ -21,8 +21,9 @@ function forLocale(locale) {
   return segmenters.get(locale);
 }
 
-// Each code point is at least one UTF-16 unit, so a gap longer than twice the
-// limit in UTF-16 cannot fit; only the remaining gaps are segmented.
+// Each code point is at most two UTF-16 units, so a gap longer than twice the
+// limit in UTF-16 has more code points than the limit; only the remaining gaps
+// are segmented.
 function bridgeable(words, gap) {
   if (gap.length > MAX_GAP_CHARACTERS * 2) return false;
   let characters = 0;
