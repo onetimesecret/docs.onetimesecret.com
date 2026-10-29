@@ -1,0 +1,53 @@
+---
+textprov: true
+title: Configuration generator
+description: "Choose settings for a self-hosted Onetime Secret installation, then download starting configuration files and follow the setup steps."
+audience: operator
+pageType: reference
+sourceOfTruth: "onetimesecret/src/schemas/shapes/config/config.ts, onetimesecret/src/schemas/shapes/config/auth.ts (the Zod shapes the vendored JSON schemas in src/components/config-generator/schemas/ are generated from)"
+---
+
+Choose settings for your self-hosted Onetime Secret installation. The generated
+files update as you make changes. This tool covers common choices; other
+settings use the application's defaults.
+
+The settings below ref󠄁l󠄁ec󠄁t󠄁 Onetime Secret v0.26.19󠄁. Have your installation method and datastore connection details ready.
+You won't enter passwords or API keys here: add those values on your server
+after downloading the files. You can bookmark or share this page to save your choices.
+
+{% config-generator /%}
+
+## Apply configuration
+
+These files are a starting point for the options above. They do not install
+databases, configure an identity provider, or replace the setup steps for your [Docker](/en/install/docker/) or [Linux](/en/install/linux/) installation.
+
+1. **Save the YAML settings.** For a new source installation,
+   save the generated files as `etc/config.yaml` and `etc/auth.yaml` in the application directory. The application merges these settings with
+   its shipped defaults. For an existing installation, back up your files and
+   merge the generated keys into the matching sections; preserve your other
+   settings and avoid duplicate YAML keys. Leave `etc/defaults/` unchanged.
+2. **Complete your environment.** Add the generated entries to
+   your existing server environment or `.env` file, filling in
+   blank values and preserving existing secrets. Full authentication mode
+   needs a SQL database connection and the independent `AUTH_SECRET`, `ARGON2_SECRET`, and `ACCOUNT_ID_SECRET` values.
+   The [Docker setup guide](/en/install/docker/#what-must-be-set-before-either-stack-starts) explains secret generation and additional Compose requirements, including `VALKEY_PASSWORD`. Keep the completed file private and out of version control.
+3. **Finish any provider or network setup.** For SSO, add the
+   variables for the provider you use; the SSO switch alone does not configure
+   a provider. For multiple regions, set `JURISDICTION` to this
+   deployment's identifier and `JURISDICTIONS` to a list such as `EU:eu.example.com,CA:ca.example.com`. Set `VALKEY_URL` or `REDIS_URL` for your datastore; requiring TLS also needs a
+   TLS-capable server and a `valkeys://` or `rediss://` URL.
+   See the [environment variable reference](/en/reference/environment-variables/) for provider credentials and connection settings.
+4. **Make the files available to the application.** A source
+   installation reads YAML from its application directory; ensure its service
+   also receives your environment values. In Docker, host files are not
+   automatically available inside the container. Bind-mount your YAML files
+   at `/app/etc/config.yaml` and `/app/etc/auth.yaml` for the application and any workers using them. Use read-only file mounts
+   and retain existing data volumes. Follow your installation guide to pass
+   environment values to each service; the generator's `.env` snippet is not a complete Compose environment.
+5. **Reload and check the result.** Restart the application and
+   workers after changing their configuration. Recreate Docker containers
+   when changing their environment or mounts. Follow [Verify your install](/en/install/verify/), then create and
+   retrieve a test secret and try any sign-in method you enabled.
+
+For settings beyond this tool, use the [configuration files and precedence reference](/en/reference/configuration-files-and-precedence/).

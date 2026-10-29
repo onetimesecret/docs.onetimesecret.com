@@ -227,7 +227,7 @@
          config/redirects.mjs), so there is no locale to make it relative to. -->
     <p v-if="!ready" class="cg-loading" role="status">
       The interactive generator has not loaded yet. If this message stays visible,
-      reload the page or use the <a href="/en/self-hosting/configuration/">configuration reference</a>.
+      reload the page or use the <a href="/en/reference/configuration-files-and-precedence/">configuration reference</a>.
       The controls and exports will become available when it is ready.
     </p>
     <div class="cg-toolbar">

@@ -25,6 +25,24 @@ Then copy the two files here (renaming `static` → `config-static`, `auth` →
 
 Vendored at app repo tag `v0.26.18` (commit `a4f02e8`).
 
+### Compatibility with v0.26.19
+
+Phase 4 selected `v0.26.19` (`e98a88c9`) as the documented application
+baseline. These two files were generated at `v0.26.18` and have NOT been
+regenerated, because regenerating them means executing application code, which
+the Phase 4 evidence contract forbids in this environment.
+
+They are still accurate for `v0.26.19`: every input to
+`pnpm run schemas:json:generate` for these two schemas is byte-identical
+between the two tags. Checked with `git diff --name-only v0.26.18 v0.26.19`
+over `src/schemas/shapes/` (only `shapes/domains/sso-config.ts` differs, which
+neither schema reaches), `src/schemas/contracts/config/`,
+`src/schemas/utils/augment.ts` and `src/schemas/scripts/generate.ts` (no
+differences). So the page states `v0.26.19` on the strength of unchanged
+inputs, not of a refreshed artifact. Re-run that comparison before moving the
+baseline again; if any of those paths change, regenerate rather than restating
+the newer tag.
+
 ## Why vendored (not fetched)
 
 Keeping the rendered schemas in this repo makes the static docs build
