@@ -4,8 +4,11 @@
 // The reader toggle's behaviour contract: a saved preference is applied to the
 // root element and the switch on load, a click flips both and persists, and the
 // script is harmless on pages without a toggle or without usable storage.
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { initTextProv } from './display';
+import { DISPLAY_VERSION } from './version';
 
 const KEY = 'docs:textprov';
 
@@ -99,5 +102,13 @@ describe('several switches on one page', () => {
     a.click();
     expect(b.getAttribute('aria-checked')).toBe('false');
     expect(storage.getItem(KEY)).toBe('hidden');
+  });
+});
+
+describe('DISPLAY_VERSION', () => {
+  it('is spec-version-family and matches the stylesheet property', () => {
+    expect(DISPLAY_VERSION).toMatch(/^v\d+\.\d+\.\d+-[a-z]+$/);
+    const css = readFileSync(resolve(__dirname, '../../styles/textprov.css'), 'utf8');
+    expect(css).toContain(`--textprov-display-version: "${DISPLAY_VERSION}";`);
   });
 });
