@@ -68,7 +68,7 @@ export const STARLIGHT_BASE = {
  * moved, then record the versions you verified against.
  */
 export const BASE_VERIFIED_AGAINST = {
-  "@astrojs/starlight": "0.42.6",
+  "@astrojs/starlight": "0.42.7",
   "@astrojs/starlight-tailwind": "5.0.0",
   tailwindcss: "4.3.3",
 };
