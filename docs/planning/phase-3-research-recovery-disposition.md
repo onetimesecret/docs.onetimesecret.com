@@ -59,13 +59,18 @@ or ownership-transfer command is executed.
   passed (0 eligible published files); `-m unittest discover -s tools/tests` passed (66 tests).
 - `pnpm run check:frontmatter` and `pnpm run check:nav`: passed.
 - Local Markdown AST links/fragments: 34 passed across all five changed files.
-- `pnpm test --cache=false`: 266 tests passed; two jsdom suites could not load
-  under the nested `.git` path. A Vitest API run with only a process-local
-  filesystem-deny adjustment and local caches passed all 287 tests / 16 suites.
-- Production build via Astro API with worktree-local caches: failed at prerender
-  resolving Satteri's native binding from the generated bundle. Process-local
-  externalization and resolution-hook retries also failed; no build fix is included.
-  This prevents a clean full-site build result, not preservation of these internal
-  research records. **V1 — deferred, non-material to this internal research extraction:**
-  native-module build resolution needs a separate tooling session outside the
-  permitted planning-file scope. No production-build readiness is asserted.
+- **Earlier location failures (resolved):** under the nested `.git` worktree,
+  `pnpm test --cache=false` passed 266 tests but could not load two jsdom suites.
+  A Vitest API run with a process-local filesystem-deny adjustment and local caches
+  passed all 287 tests / 16 suites. The Astro API production build failed at
+  prerender resolving Satteri's native binding from the generated bundle;
+  process-local externalization and resolution-hook retries also failed.
+- **V1 — resolved by moving the worktree:** the worktree is now at
+  `/Users/d/Projects/ops/sites/docs.onetimesecret.com/tmp/phase3-recovery/research`,
+  outside `.git`. The earlier test/build failures were location issues; no
+  dependency or build-configuration fix was required.
+- **Latest normal validation:** the maintainer reports that `pnpm test && pnpm build`
+  passed in the moved worktree with no overrides, producing **1,324 pages**.
+  The agent then reran normal `pnpm test` there: **287 tests / 16 suites passed**.
+  The build was not rerun during this planning-record follow-up; its passing result
+  is maintainer-reported, not a new agent build run.
