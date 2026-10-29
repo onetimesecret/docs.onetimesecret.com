@@ -4,8 +4,7 @@ title: Configure outbound email
 description: Set up SMTP delivery for verification and account emails on your self-hosted instance.
 audience: operator
 pageType: how-to
-sourceOfTruth: onetimesecret/.env.reference (SMTP variables); onetimesecret/lib/onetime/mail/delivery/smtp.rb (delivery and TLS handling); onetimesecret/etc/defaults/config.defaults.yaml (emailer configuration); onetimesecret at f7794a9844a865dc346b7cded73d72c918a22700 — lib/onetime/mail/mailer.rb and lib/onetime/mail/provider_registry.rb (explicit mode precedence and transport selection); lib/onetime/mail/delivery/logger.rb and disabled.rb (non-transmitting backends); lib/onetime/mail/delivery/base.rb (delivery diagnostics); lib/onetime/jobs/workers/email_worker.rb and publisher.rb (worker retry versus in-process fallback); lib/onetime/initializers/setup_loggers.rb (DEBUG_APP)
-draft: true
+sourceOfTruth: onetimesecret/.env.reference (SMTP variables); onetimesecret/lib/onetime/mail/delivery/smtp.rb (delivery and TLS handling); onetimesecret/etc/defaults/config.defaults.yaml (emailer configuration); onetimesecret at e98a88c9b5832bbae249f38885aa28bd78a5db4d (v0.26.19) — lib/onetime/mail/mailer.rb and lib/onetime/mail/provider_registry.rb (explicit mode precedence and transport selection); lib/onetime/mail/delivery/logger.rb and disabled.rb (non-transmitting backends); lib/onetime/mail/delivery/base.rb (delivery diagnostics); lib/onetime/jobs/workers/email_worker.rb and publisher.rb (worker retry versus in-process fallback); lib/onetime/initializers/setup_loggers.rb (DEBUG_APP)
 ---
 
 S󠄁e󠄁t󠄁 u󠄁p󠄁 S󠄁M󠄁T󠄁P󠄁 d󠄁e󠄁l󠄁i󠄁v󠄁e󠄁r󠄁y󠄁 b󠄁e󠄁f󠄁o󠄁r󠄁e󠄁 u󠄁s󠄁e󠄁r󠄁s󠄁 d󠄁e󠄁p󠄁e󠄁n󠄁d󠄁 o󠄁n󠄁 v󠄁e󠄁r󠄁i󠄁f󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 o󠄁r󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁-󠄁r󠄁e󠄁c󠄁o󠄁v󠄁e󠄁r󠄁y󠄁 e󠄁m󠄁a󠄁i󠄁l󠄁s󠄁.󠄁

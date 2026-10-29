@@ -4,8 +4,7 @@ title: Prepare secrets and keys
 description: Generate deployment keys for a new instance and preserve the keys an existing instance depends on.
 audience: operator
 pageType: how-to
-sourceOfTruth: onetimesecret/.env.reference (key purposes and rotation variables); onetimesecret/apps/web/auth/config/base.rb (full-mode authentication keys); onetimesecret/lib/tasks/init.rake (the ots:secrets task generates a 64-byte SECRET and independent AUTH_SECRET, ARGON2_SECRET and ACCOUNT_ID_SECRET, keeping existing values); onetimesecret/apps/web/auth/config/features/argon2.rb (ARGON2_SECRET is an optional password pepper with no old-secret setting); onetimesecret/docker/README.md (ARGON2_SECRET strongly recommended for full mode); onetimesecret at f7794a9844a865dc346b7cded73d72c918a22700 — lib/onetime/initializers/check_secret_verifier.rb and lib/tasks/init.rake (mismatch policy and verifier adoption); lib/onetime/class_methods.rb (production environment default)
-draft: true
+sourceOfTruth: onetimesecret/.env.reference (key purposes and rotation variables); onetimesecret/apps/web/auth/config/base.rb (full-mode authentication keys); onetimesecret/lib/tasks/init.rake (the ots:secrets task generates a 64-byte SECRET and independent AUTH_SECRET, ARGON2_SECRET and ACCOUNT_ID_SECRET, keeping existing values); onetimesecret/apps/web/auth/config/features/argon2.rb (ARGON2_SECRET is an optional password pepper with no old-secret setting); onetimesecret/docker/README.md (ARGON2_SECRET strongly recommended for full mode); onetimesecret at e98a88c9b5832bbae249f38885aa28bd78a5db4d (v0.26.19) — lib/onetime/initializers/check_secret_verifier.rb and lib/tasks/init.rake (mismatch policy and verifier adoption); lib/onetime/class_methods.rb (production environment default)
 ---
 
 P󠄁r󠄁e󠄁p󠄁a󠄁r󠄁e󠄁 t󠄁h󠄁e󠄁 k󠄁e󠄁y󠄁s󠄁 f󠄁o󠄁r󠄁 a󠄁 n󠄁e󠄁w󠄁 d󠄁e󠄁p󠄁l󠄁o󠄁y󠄁m󠄁e󠄁n󠄁t󠄁 b󠄁e󠄁f󠄁o󠄁r󠄁e󠄁 a󠄁c󠄁c󠄁e󠄁p󠄁t󠄁i󠄁n󠄁g󠄁 r󠄁e󠄁a󠄁l󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁s󠄁 o󠄁r󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁s󠄁.󠄁
@@ -31,7 +30,7 @@ I󠄁n󠄁 a󠄁 s󠄁o󠄁u󠄁r󠄁c󠄁e󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l�
 bundle exec rake ots:secrets
 ```
 
-T󠄁h󠄁e󠄁 t󠄁a󠄁s󠄁k󠄁 g󠄁e󠄁n󠄁e󠄁r󠄁a󠄁t󠄁e󠄁s󠄁 `SECRET`,󠄁 t󠄁h󠄁e󠄁 k󠄁e󠄁y󠄁s󠄁 d󠄁e󠄁r󠄁i󠄁v󠄁e󠄁d󠄁 f󠄁r󠄁o󠄁m󠄁 i󠄁t󠄁,󠄁 a󠄁n󠄁d󠄁 t󠄁h󠄁e󠄁 t󠄁h󠄁r󠄁e󠄁e󠄁 i󠄁n󠄁d󠄁e󠄁p󠄁e󠄁n󠄁d󠄁e󠄁n󠄁t󠄁 k󠄁e󠄁y󠄁s󠄁.󠄁 I󠄁t󠄁 k󠄁e󠄁e󠄁p󠄁s󠄁 a󠄁n󠄁 e󠄁x󠄁i󠄁s󠄁t󠄁i󠄁n󠄁g󠄁 `SECRET` a󠄁n󠄁d󠄁 a󠄁n󠄁y󠄁 i󠄁n󠄁d󠄁e󠄁p󠄁e󠄁n󠄁d󠄁e󠄁n󠄁t󠄁 k󠄁e󠄁y󠄁 t󠄁h󠄁a󠄁t󠄁 a󠄁l󠄁r󠄁e󠄁a󠄁d󠄁y󠄁 h󠄁a󠄁s󠄁 a󠄁 v󠄁a󠄁l󠄁u󠄁e󠄁.󠄁
+T󠄁h󠄁e󠄁 t󠄁a󠄁s󠄁k󠄁 g󠄁e󠄁n󠄁e󠄁r󠄁a󠄁t󠄁e󠄁s󠄁 `SECRET`,󠄁 t󠄁h󠄁e󠄁 k󠄁e󠄁y󠄁s󠄁 d󠄁e󠄁r󠄁i󠄁v󠄁e󠄁d󠄁 f󠄁r󠄁o󠄁m󠄁 i󠄁t󠄁,󠄁 t󠄁h󠄁e󠄁 t󠄁h󠄁r󠄁e󠄁e󠄁 i󠄁n󠄁d󠄁e󠄁p󠄁e󠄁n󠄁d󠄁e󠄁n󠄁t󠄁 k󠄁e󠄁y󠄁s󠄁 a󠄁n󠄁d󠄁 a󠄁 `FEDERATION_SECRET` p󠄁a󠄁s󠄁s󠄁p󠄁h󠄁r󠄁a󠄁s󠄁e󠄁.󠄁 I󠄁t󠄁 k󠄁e󠄁e󠄁p󠄁s󠄁 a󠄁n󠄁 e󠄁x󠄁i󠄁s󠄁t󠄁i󠄁n󠄁g󠄁 `SECRET` a󠄁n󠄁d󠄁 a󠄁n󠄁y󠄁 i󠄁n󠄁d󠄁e󠄁p󠄁e󠄁n󠄁d󠄁e󠄁n󠄁t󠄁 v󠄁a󠄁l󠄁u󠄁e󠄁 t󠄁h󠄁a󠄁t󠄁 i󠄁s󠄁 a󠄁l󠄁r󠄁e󠄁a󠄁d󠄁y󠄁 s󠄁e󠄁t󠄁,󠄁 u󠄁n󠄁l󠄁e󠄁s󠄁s󠄁 y󠄁o󠄁u󠄁 p󠄁a󠄁s󠄁s󠄁 `FORCE=1` t󠄁o󠄁 r󠄁e󠄁g󠄁e󠄁n󠄁e󠄁r󠄁a󠄁t󠄁e󠄁 `SECRET`.󠄁
 
 F󠄁o󠄁r󠄁 a󠄁 c󠄁o󠄁n󠄁t󠄁a󠄁i󠄁n󠄁e󠄁r󠄁 d󠄁e󠄁p󠄁l󠄁o󠄁y󠄁m󠄁e󠄁n󠄁t󠄁 o󠄁r󠄁 a󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 m󠄁a󠄁n󠄁a󠄁g󠄁e󠄁r󠄁,󠄁 g󠄁e󠄁n󠄁e󠄁r󠄁a󠄁t󠄁e󠄁 e󠄁a󠄁c󠄁h󠄁 v󠄁a󠄁l󠄁u󠄁e󠄁 y󠄁o󠄁u󠄁r󠄁s󠄁e󠄁l󠄁f󠄁 a󠄁n󠄁d󠄁 s󠄁a󠄁v󠄁e󠄁 t󠄁h󠄁e󠄁 o󠄁u󠄁t󠄁p󠄁u󠄁t󠄁 d󠄁i󠄁r󠄁e󠄁c󠄁t󠄁l󠄁y󠄁 i󠄁n󠄁 y󠄁o󠄁u󠄁r󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 m󠄁a󠄁n󠄁a󠄁g󠄁e󠄁r󠄁:󠄁
 
@@ -71,4 +70,4 @@ F󠄁u󠄁l󠄁l󠄁-󠄁m󠄁o󠄁d󠄁e󠄁 f󠄁a󠄁i󠄁l󠄁u󠄁r󠄁e�
 ## R󠄁e󠄁l󠄁a󠄁t󠄁e󠄁d󠄁
 
 - [E󠄁n󠄁v󠄁i󠄁r󠄁o󠄁n󠄁m󠄁e󠄁n󠄁t󠄁 v󠄁a󠄁r󠄁i󠄁a󠄁b󠄁l󠄁e󠄁s󠄁](/en/reference/environment-variables)
-- [C󠄁o󠄁n󠄁f󠄁i󠄁g󠄁u󠄁r󠄁e󠄁 y󠄁o󠄁u󠄁r󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁n󠄁c󠄁e󠄁](/en/configure)
+- [C󠄁o󠄁n󠄁f󠄁i󠄁g󠄁u󠄁r󠄁e󠄁 a󠄁u󠄁t󠄁h󠄁e󠄁n󠄁t󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁](/en/configure/authentication)

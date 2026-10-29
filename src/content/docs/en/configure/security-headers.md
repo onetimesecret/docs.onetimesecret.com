@@ -4,8 +4,7 @@ title: Check security headers
 description: Diagnose security-header conflicts and SSO form-action failures without disabling browser protections.
 audience: operator
 pageType: how-to
-sourceOfTruth: onetimesecret/etc/defaults/config.defaults.yaml (CSP and middleware toggles); onetimesecret/lib/onetime/auth_config.rb (derived IdP origins and manual overrides); onetimesecret at f7794a9844a865dc346b7cded73d72c918a22700 — apps/web/auth/application.rb and lib/onetime/application/middleware_profile.rb (full-mode authenticated_web profile in every environment); lib/onetime/middleware/registry.rb (profile components); apps/web/core/middleware/request_setup.rb (Core-only CSP emission)
-draft: true
+sourceOfTruth: onetimesecret/etc/defaults/config.defaults.yaml (CSP and middleware toggles); onetimesecret/lib/onetime/auth_config.rb (derived IdP origins and manual overrides); onetimesecret at e98a88c9b5832bbae249f38885aa28bd78a5db4d (v0.26.19) — apps/web/auth/application.rb and lib/onetime/application/middleware_profile.rb (full-mode authenticated_web profile in every environment); lib/onetime/middleware/registry.rb (profile components); apps/web/core/middleware/request_setup.rb (Core-only CSP emission)
 ---
 
 I󠄁n󠄁s󠄁p󠄁e󠄁c󠄁t󠄁 t󠄁h󠄁e󠄁 p󠄁o󠄁l󠄁i󠄁c󠄁y󠄁 t󠄁h󠄁e󠄁 b󠄁r󠄁o󠄁w󠄁s󠄁e󠄁r󠄁 r󠄁e󠄁c󠄁e󠄁i󠄁v󠄁e󠄁s󠄁 w󠄁h󠄁e󠄁n󠄁 a󠄁 p󠄁r󠄁o󠄁x󠄁y󠄁 o󠄁r󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁t󠄁y󠄁-󠄁p󠄁r󠄁o󠄁v󠄁i󠄁d󠄁e󠄁r󠄁 r󠄁e󠄁d󠄁i󠄁r󠄁e󠄁c󠄁t󠄁 f󠄁a󠄁i󠄁l󠄁s󠄁.󠄁
@@ -60,4 +59,4 @@ R󠄁e󠄁p󠄁e󠄁a󠄁t󠄁 t󠄁h󠄁e󠄁 p󠄁r󠄁e󠄁v󠄁i󠄁o󠄁u�
 
 - [R󠄁e󠄁v󠄁e󠄁r󠄁s󠄁e󠄁 p󠄁r󠄁o󠄁x󠄁y󠄁 a󠄁n󠄁d󠄁 T󠄁L󠄁S󠄁](/en/install/reverse-proxy-and-tls)
 - [S󠄁e󠄁s󠄁s󠄁i󠄁o󠄁n󠄁s󠄁 a󠄁n󠄁d󠄁 c󠄁o󠄁o󠄁k󠄁i󠄁e󠄁s󠄁](/en/configure/sessions-and-cookies)
-- [C󠄁o󠄁n󠄁f󠄁i󠄁g󠄁u󠄁r󠄁e󠄁 S󠄁S󠄁O󠄁](/en/configure/sso)
+- [S󠄁i󠄁n󠄁g󠄁l󠄁e󠄁 s󠄁i󠄁g󠄁n󠄁-󠄁o󠄁n󠄁](/en/organizations/sso)
