@@ -92,7 +92,7 @@ newest are kept.
 :::note
 **S󠄁elf-hosting󠄁 t󠄁h󠄁i󠄁s y󠄁o󠄁u󠄁r󠄁s󠄁el󠄁f󠄁?󠄁** T󠄁h󠄁e󠄁 l󠄁i󠄁m󠄁it defaults to the newest 10,000 events
 per organization and can be configured; see
-[Configuration](/en/self-hosting/configuration). T󠄁h󠄁e󠄁 A󠄁d󠄁m󠄁i󠄁n󠄁i󠄁s󠄁t󠄁r󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 L󠄁o󠄁g󠄁 i󠄁s󠄁 a󠄁t󠄁
+[Configuration](/en/reference/configuration-files-and-precedence). T󠄁h󠄁e󠄁 A󠄁d󠄁m󠄁i󠄁n󠄁i󠄁s󠄁t󠄁r󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 L󠄁o󠄁g󠄁 i󠄁s󠄁 a󠄁t󠄁
 `/colonel/audit` i󠄁n󠄁 t󠄁h󠄁e󠄁 C󠄁o󠄁l󠄁o󠄁n󠄁e󠄁l󠄁 c󠄁o󠄁n󠄁s󠄁o󠄁l󠄁e󠄁,󠄁 a󠄁n󠄁d󠄁 o󠄁n󠄁 t󠄁h󠄁e󠄁 c󠄁o󠄁m󠄁m󠄁a󠄁n󠄁d󠄁 l󠄁i󠄁n󠄁e󠄁 t󠄁h󠄁r󠄁o󠄁u󠄁g󠄁h󠄁
 `bin/ots audit list`.󠄁
 :::

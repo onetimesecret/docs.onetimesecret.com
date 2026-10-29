@@ -47,7 +47,7 @@ see [Translations](/en/translations).
 
 :::note
 On a self-hosted installa󠄁t󠄁i󠄁o󠄁n󠄁 with translations switched off, there is no
-language control. See [Configuration](/en/self-hosting/configuration).
+language control. See [Configuration](/en/reference/configuration-files-and-precedence).
 :::
 
 ## Secret reveal notifications

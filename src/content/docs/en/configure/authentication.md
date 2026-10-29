@@ -59,4 +59,4 @@ K󠄁e󠄁e󠄁p󠄁 a󠄁c󠄁c󠄁e󠄁s󠄁s󠄁 t󠄁o󠄁 d󠄁e󠄁p󠄁l�
 
 - [S󠄁e󠄁s󠄁s󠄁i󠄁o󠄁n󠄁s󠄁 a󠄁n󠄁d󠄁 c󠄁o󠄁o󠄁k󠄁i󠄁e󠄁s󠄁](/en/configure/sessions-and-cookies)
 - [A󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁 s󠄁e󠄁s󠄁s󠄁i󠄁o󠄁n󠄁s󠄁 a󠄁n󠄁d󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁t󠄁i󠄁e󠄁s󠄁](/en/account/sessions-and-identities)
-- [C󠄁o󠄁n󠄁f󠄁i󠄁g󠄁u󠄁r󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 r󠄁e󠄁f󠄁e󠄁r󠄁e󠄁n󠄁c󠄁e󠄁](/en/self-hosting/configuration)
+- [C󠄁o󠄁n󠄁f󠄁i󠄁g󠄁u󠄁r󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 r󠄁e󠄁f󠄁e󠄁r󠄁e󠄁n󠄁c󠄁e󠄁](/en/reference/configuration-files-and-precedence)

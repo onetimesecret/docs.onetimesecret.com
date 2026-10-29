@@ -94,7 +94,7 @@ T󠄁h󠄁e󠄁 s󠄁i󠄁g󠄁n󠄁e󠄁d󠄁-󠄁i󠄁n󠄁 f󠄁o󠄁r󠄁m�
 
 :::note[Running your own instance?]
 The d󠄁i󠄁s󠄁p󠄁lay󠄁 window is c󠄁o󠄁n󠄁f󠄁i󠄁g󠄁u󠄁r󠄁e󠄁d󠄁 b󠄁y󠄁 `generated_value_display_ttl`;󠄁 setting i󠄁t󠄁
-t󠄁o󠄁 z󠄁e󠄁r󠄁o󠄁 dis󠄁abl󠄁es d󠄁is󠄁p󠄁la󠄁y. See [Configuration](/en/self-hosting/configuration).
+t󠄁o󠄁 z󠄁e󠄁r󠄁o󠄁 dis󠄁abl󠄁es d󠄁is󠄁p󠄁la󠄁y. See [Configuration](/en/reference/configuration-files-and-precedence).
 :::
 
 ## Burning a secret before anyone reads it

@@ -189,7 +189,15 @@ const REQUIRED_ANCHORS = {
 // in Phase 4 and is generated from vendor/onetimesecret/.env.reference, so it
 // cites its own pinned source. self-hosting/configuration stays on the list
 // until the configuration subjects publish under reference/.
-const REFERENCE_OWNERS = ["reference/environment-variables", "self-hosting/configuration"];
+const REFERENCE_OWNERS = [
+  "reference/environment-variables",
+  "reference/configuration-files-and-precedence",
+  "reference/site-and-interface",
+  "reference/features-and-branding",
+  "reference/datastore-and-queues",
+  "reference/email-and-delivery",
+  "reference/auth-logging-and-billing-files",
+];
 
 // Assertion 5's tree list, its required fields and the segment-wise prefix test
 // live in bin/lib/frontmatter.mjs — this script runs its assertions at import
