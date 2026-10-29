@@ -11,8 +11,24 @@ Python fnmatch patterns in tools/dogfooding.json use * across directory separato
 Both read AGENTS.md. Claude also imports it from CLAUDE.md and provides the
 `/textprov` command. There are no tool interception hooks, model-specific event
 schemas, automatic prompt logs, or global machine configuration changes.
-Use the same repository commands from either agent, after `pnpm install`.
-Python 3.9+ and Node.js (the project version) are required; no pip install.
+Python 3.9+ and Node.js (the project version) are required.
+
+The 0.2.0 migration is prepared but publication and the registry-backed npm
+lockfile update are pending. Clean installs cannot complete until both packages
+are published and `pnpm-lock.yaml` is updated. Local validation used built 0.2.0
+artifacts, not registry installs. After release, install the pinned SDK
+dependencies before using the repository commands from either agent:
+
+```sh
+pnpm install
+python3 -m venv .venv
+. .venv/bin/activate
+python3 -m pip install -r tools/requirements.txt
+```
+
+Activate `.venv` in each new shell before running the Python tools or tests.
+`tools/dogfood.py` rejects missing or mismatched TextProv versions and prints
+the install command. `tools/textprov_reanchor.py` uses the same version guard.
 
 1. Record the starting Git SHA before editing. Inspect existing changes.
 2. Write the intended unmarked replacement into a temporary UTF-8 file.
@@ -150,8 +166,8 @@ python3 tools/dogfood.py check --base "$BASE" --preserve-only
 
 ## Display and search
 
-The vendored JS/TS integration decodes enrolled pages during Astro prerender and
-in the dev server. AI runs become clean text in spans with data-textprov="ai".
+The JS/TS integration uses the `textprov` npm package to decode enrolled pages
+during Astro prerender and in the dev server. AI runs become clean text in spans with data-textprov="ai".
 The toggle is a "Highlight AI edits" switch below the page title on enrolled
 pages, with an information button whose popover links to the reader guide.
 Splash pages (the homepages) have no page title and show no toggle; their AI
@@ -198,9 +214,14 @@ validated before percent-encoding.
 
 ## Maintenance
 
-The decoder and Python producer are pinned under vendor/textprov with their
-upstream commit and Apache license. Font assets and original OFL notices remain
-under src/fonts; mapping tests cover their supported Latin-1 subset. The visual
+The decoder is pinned to npm `textprov` 0.2.0 in `package.json`, with the
+`pnpm-lock.yaml` update pending publication; the Python producer is pinned to
+PyPI `textprov==0.2.0` in
+`tools/requirements.txt`. CI installs both before provenance checks. Update the
+Python version guard in `tools/dogfood.py` when changing its pin. SDK sources
+and releases are maintained in [textprov/textprov](https://github.com/textprov/textprov);
+this repository has no vendored SDK copies. Font assets and original OFL notices
+remain under src/fonts; mapping tests cover their supported Latin-1 subset. The visual
 toggle uses CSS rather than special glyphs, so non-Latin text is supported too.
 The existing body font remains unchanged.
 
