@@ -74,9 +74,10 @@ agent completion requirement; CI cannot infer whether unmarked text came from AI
 ## Correspondence alignment and authoring limitations
 
 `tools/dogfood.py` retains its scoped `mark_edit` authoring operation, using
-`textprov.clusters()` and `textprov.correspondence()` from the exact-pinned PyPI
-`textprov==0.3.0` SDK to preserve matched bytes. Checking delegates to the SDK's
-`textprov.check_text()` with a prose-eligibility profile from this repository's
+`textprov.clusters()` and `textprov.correspondence()` from the Python SDK pinned
+in [tools/requirements.txt](../tools/requirements.txt) to preserve matched bytes.
+Checking delegates to the SDK's `textprov.check_text()` with a prose-eligibility
+profile from this repository's
 Node Markdown parser. The wrapper retains AST-shape validation and repository
 policy checks; correspondence and preservation checking are implemented upstream,
 not locally. This composition does not use the SDK's `mark_document_edit()`
@@ -93,13 +94,12 @@ the replacement instead reports backfill. Two-cluster coincidences are possible 
 The SDK's `MIN_MOVE_CLUSTERS = 2`, defined in upstream
 [`python/textprov/check.py`](https://github.com/textprov/textprov/blob/python-v0.3.0/python/textprov/check.py),
 applies only to the final unmatched-block move pass. Shorter blocks pair only if
-their encoded bytes are identical. This excludes the reported Polish singleton
-coincidence while retaining checks for changed
-marks on two-cluster moves. Raising the threshold to three misses those changes;
+their encoded bytes are identical. The checker still detects changed marks on
+two-cluster moves. Raising the threshold to three misses those changes;
 adding a minimum to primary equal runs also breaks retained-byte and
 mark-preservation cases. Neither threshold establishes authorship.
 
-### Known gaps and follow-up: PR #467
+### Known alignment limitations
 
 [`CorrespondenceLimitTests`](../tools/tests/test_dogfood.py) records these limits:
 
@@ -109,33 +109,9 @@ mark-preservation cases. Neither threshold establishes authorship.
 - Separate deletion and insertion of identical blocks can each pass while the
   cumulative comparison reports backfill as a move.
 
-A policy follow-up must distinguish declared edit history from inferred
-retention, or report ambiguous alignment for review. Preserve legacy bytes,
-selector and legacy-PUA encodings, duplicate attribution, variation sequences,
-reflow, move checks, and existing cumulative-edit regressions. Until then,
-inspect attribution diffs and check against the recorded starting base, not
+Inspect attribution diffs and check against the recorded starting base, not
 just each preceding edit. Do not strip marks or mark legacy text to pass.
 `--preserve-only` permits combined human/AI diffs; it does not resolve ambiguity.
-
-The historical PR #467 accommodations are documented here rather than encoded
-as locale-specific checker exemptions:
-
-- **Bulgarian:** `197f8796` in
-  `src/content/docs/bg/custom-domains/setup-guide.md` removed selectors from
-  `е` and `н` in adjacent `се нуждае` prose, despite its status-label commit
-  message. Those selectors are present again at reviewed HEAD `44af276c`.
-  The later `76d8035a` status correction retains an unmarked `н` in `Активна`
-  relative to `bc5c9ae2`; the new `а` is AI-marked.
-- **Spanish:** `a88e666c` deliberately leaves `valor`'s `r` unmarked in
-  `src/content/docs/es/self-hosting/index.md`: it aligns with legacy `secreto`'s
-  `r` against `bc5c9ae2`. The other letters in `valor` remain AI-marked.
-
-Repository contract regression tests reproduce both alignments against the
-SDK's correspondence and checker. These exceptions are not evidence of
-retained authorship. Their historical comparison base does not replace the
-starting-base check or CI's current merge base. For the develop → main PR #459,
-#469 re-anchored develop against `56e953fc`, the merge base of main and
-develop: 849 clusters in 89 files (`4d082657`, `9c946a6d`).
 
 ## Re-anchoring marks before a PR
 
@@ -163,8 +139,8 @@ only when all new prose on the branch is AI-authored. A file whose marks still
 change after the last pass is reported and left as it was.
 
 The script never edits frontmatter. If it removes the last mark from a page,
-delete `textprov: true` from that page by hand, so the reader toggle does not
-appear on a page with no AI text.
+delete `textprov: true` from that page by hand, so the page is no longer
+decoded or counted as enrolled.
 
 ```sh
 BASE=$(git merge-base HEAD origin/<target-branch>)
@@ -178,13 +154,19 @@ python3 tools/dogfood.py check --base "$BASE" --preserve-only
 
 The JS/TS integration uses the `textprov` npm package to decode enrolled pages
 during Astro prerender and in the dev server. AI runs become clean text in spans with data-textprov="ai".
-The toggle is a "Highlight AI edits" switch below the page title on enrolled
-pages, with an information button whose popover links to the reader guide.
-Splash pages (the homepages) have no page title and show no toggle; their AI
-runs are still decoded, and a preference saved on another page still highlights
-them. The toggle changes CSS only, persists the reader's preference locally,
-defaults to hidden, and works with every font. The help text explains what is
-recorded. Without JavaScript the controls stay hidden.
+The controls are an "AI edits" block above "On this page" in the right sidebar,
+with a "Highlight AI edits" switch and an information button whose popover
+explains what the highlighting means, its limits, and links to the reader guide. Below Starlight's
+72rem breakpoint the same switch sits at the end of the sticky mobile table of
+contents bar. `src/components/starlight/PageSidebar.astro` renders them on
+every page with a table of contents, enrolled or not, so the control is in the
+same place on every page; a page with no recorded AI text has nothing to
+highlight. Splash pages (the homepages) have no table of contents and show no
+controls; their AI runs are still decoded, and a preference saved on another
+page still highlights them. The switch changes CSS only, persists the reader's
+preference locally, defaults to hidden, never moves the article, and works
+with every font. Highlighting shows the exact recorded characters. Without
+JavaScript the controls stay hidden.
 
 Every enrolled page carries one `data-textprov-document="true"` marker, emitted
 only by `src/components/starlight/TextProvMarker.astro`; the middleware decodes
@@ -196,12 +178,10 @@ Set `SHOW_TEXTPROV_TOGGLE=false` (or `0`) at build time to hide the toggle on
 every page; the deploy workflow reads it from the environment variable of the
 same name. Enrolled pages are still decoded to clean text.
 
-Reveal mode uses gradient mist with a dotted underline, replacing the wavy
-provenance cue. `src/styles/textprov.css` adapts the upstream treatment at
-TextProv commit `57257b877f934ce2edf6b221ad6fa100546dbb9c`:󠄁 1󠄁4󠄁%󠄁 b󠄁a󠄁s󠄁e󠄁 t󠄁i󠄁n󠄁t󠄁,󠄁
-1󠄁1󠄁5󠄁-󠄁d󠄁e󠄁g󠄁r󠄁e󠄁e󠄁 g󠄁r󠄁a󠄁d󠄁i󠄁e󠄁n󠄁t󠄁,󠄁 1󠄁1󠄁.󠄁2󠄁p󠄁x󠄁 g󠄁l󠄁o󠄁w󠄁 b󠄁l󠄁u󠄁r󠄁 w󠄁i󠄁t󠄁h󠄁 4󠄁p󠄁x󠄁 s󠄁p󠄁r󠄁e󠄁a󠄁d󠄁,󠄁 2󠄁7󠄁%󠄁 g󠄁l󠄁o󠄁w󠄁 o󠄁p󠄁a󠄁c󠄁i󠄁t󠄁y󠄁 i󠄁n󠄁 l󠄁i󠄁g󠄁h󠄁t󠄁
-a󠄁p󠄁p󠄁e󠄁a󠄁r󠄁a󠄁n󠄁c󠄁e󠄁 a󠄁n󠄁d󠄁 1󠄁7󠄁.󠄁5󠄁5󠄁%󠄁 i󠄁n󠄁 d󠄁a󠄁r󠄁k󠄁,󠄁 a󠄁n󠄁d󠄁 a󠄁 1󠄁.󠄁5󠄁p󠄁x󠄁 d󠄁o󠄁t󠄁t󠄁e󠄁d󠄁 l󠄁i󠄁n󠄁e󠄁 a󠄁t󠄁 8󠄁0󠄁%󠄁 source-color opacity
-with a 5px offset. The source color uses Starlight's existing accent. The toggle
+Reveal mode uses gradient mist with a dotted underline. Styling values and
+upstream attribution are maintained in
+[src/styles/textprov.css](../src/styles/textprov.css).
+The source color uses Starlight's existing accent. The toggle
 label shows the same treatment as a legend. Hidden mode and print add no
 provenance paint; the words and native annotation styles stay intact.
 
@@ -219,7 +199,7 @@ P󠄁* d󠄁e󠄁c󠄁o󠄁r󠄁a󠄁t󠄁e󠄁d󠄁 g󠄁l󠄁y󠄁p󠄁h󠄁s�
 s󠄁t󠄁a󠄁c󠄁k󠄁s󠄁 s󠄁e󠄁l󠄁e󠄁c󠄁t󠄁 s󠄁e󠄁p󠄁a󠄁r󠄁a󠄁t󠄁e󠄁 P󠄁* f󠄁a󠄁m󠄁i󠄁l󠄁i󠄁e󠄁s󠄁;󠄁 o󠄁r󠄁i󠄁g󠄁i󠄁n󠄁a󠄁l󠄁 P󠄁+󠄁 a󠄁s󠄁s󠄁e󠄁t󠄁s󠄁 r󠄁e󠄁m󠄁a󠄁i󠄁n󠄁 a󠄁v󠄁a󠄁i󠄁l󠄁a󠄁b󠄁l󠄁e󠄁.󠄁
 T󠄁h󠄁e󠄁 d󠄁e󠄁c󠄁o󠄁d󠄁e󠄁r󠄁 a󠄁n󠄁d󠄁 P󠄁y󠄁t󠄁h󠄁o󠄁n󠄁 p󠄁a󠄁c󠄁k󠄁a󠄁g󠄁e󠄁 a󠄁r󠄁e󠄁 t󠄁h󠄁e󠄁 p󠄁u󠄁b󠄁l󠄁i󠄁s󠄁h󠄁e󠄁d󠄁 `textprov` r󠄁e󠄁l󠄁e󠄁a󠄁s󠄁e󠄁s󠄁 p󠄁i󠄁n󠄁n󠄁e󠄁d󠄁 i󠄁n󠄁
 `package.json` a󠄁n󠄁d󠄁 `tools/requirements.txt`.󠄁 S󠄁o󠄁u󠄁r󠄁c󠄁e󠄁 a󠄁t󠄁t󠄁r󠄁i󠄁b󠄁u󠄁t󠄁i󠄁o󠄁n󠄁,󠄁 e󠄁n󠄁r󠄁o󠄁l󠄁l󠄁m󠄁e󠄁n󠄁t󠄁,󠄁 s󠄁t󠄁o󠄁r󠄁e󠄁d󠄁
-p󠄁r󠄁e󠄁f󠄁e󠄁r󠄁e󠄁n󠄁c󠄁e󠄁s󠄁,󠄁 a󠄁n󠄁d󠄁 t󠄁h󠄁e󠄁 `SHOW_TEXTPROV_TOGGLE` availability setting are unchanged.
+p󠄁r󠄁e󠄁f󠄁e󠄁r󠄁e󠄁n󠄁c󠄁e󠄁s󠄁,󠄁 a󠄁n󠄁d󠄁 t󠄁h󠄁e󠄁 `SHOW_TEXTPROV_TOGGLE` availability setting are independent of font selection.
 
 The generated HTML already contains clean text before Pagefind indexing, so
 Find in page, copy, metadata, and heading fragment links do not depend on a
@@ -249,21 +229,17 @@ validated before percent-encoding.
 
 ## Maintenance
 
-The decoder is pinned to npm `textprov` 0.2.1 in `package.json` and
-`pnpm-lock.yaml`; the Python producer is pinned to PyPI `textprov==0.3.0` in
-`tools/requirements.txt`. `pnpm-workspace.yaml` excludes textprov 0.2.1 from
-pnpm's minimum release age; that entry can go once the release is a day old. CI installs both before provenance checks. Update the
-Python version guard in `tools/dogfood.py` when changing its pin. SDK sources
+The npm decoder version is pinned in [package.json](../package.json) and
+[pnpm-lock.yaml](../pnpm-lock.yaml); the Python producer version is pinned in
+[tools/requirements.txt](../tools/requirements.txt).
+CI installs both before provenance checks. Update the Python version guard in
+[tools/dogfood.py](../tools/dogfood.py) when changing its pin. SDK sources
 and releases are maintained in [textprov/textprov](https://github.com/textprov/textprov);
 this repository has no vendored SDK copies.
 
-Python 0.3.0 producer output remains compatible with the npm 0.2.1 decoder for
-this integration's AI selector and legacy replacement-PUA encodings. The
-[upstream release comparison](https://github.com/textprov/textprov/compare/js-v0.2.1...python-v0.3.0)
-changes authoring and checking policy, not the wire format: `SPEC_VERSION` remains
-`0.2`, and `python/textprov/_core.py`, `_encode.py`, `_grapheme.py`, `mapping.json`,
-and the JavaScript decoder are unchanged between those tags. The package versions
-are independent; their differing numbers do not require a decoder upgrade here.
+The Python and npm package versions are independent. When updating either pin,
+verify compatibility for this integration's AI selector and legacy
+replacement-PUA encodings.
 
 Executing authoring and preservation policy from an exact-pinned dependency is a
 trust boundary: this repository trusts the installed SDK implementation to decide
