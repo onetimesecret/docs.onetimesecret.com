@@ -34,6 +34,35 @@ Transcript body.
   });
 });
 
+describe("Markdoc transcript messages", () => {
+  it.each(["User", "Assistant"])("renders a labelled %s group without a heading", (speaker) => {
+    const html = render(`{% message speaker="${speaker}" %}
+
+First paragraph.
+
+Second **paragraph**.
+
+{% /message %}`);
+    expect(html).toContain(
+      `<div class="transcript-message" data-speaker="${speaker}" role="group" aria-label="${speaker} message">`,
+    );
+    expect(html).toContain(`<p class="transcript-message__speaker">${speaker}</p>`);
+    expect(html).toContain(
+      '<div class="transcript-message__body"><p>First paragraph.</p><p>Second <strong>paragraph</strong>.</p></div>',
+    );
+    expect(html).not.toMatch(/<h[1-6][\s>]/);
+  });
+
+  it("requires a supported speaker", () => {
+    for (const source of [
+      "{% message %}Text{% /message %}",
+      '{% message speaker="System" %}Text{% /message %}',
+    ]) {
+      expect(Markdoc.validate(Markdoc.parse(source), config).length).toBeGreaterThan(0);
+    }
+  });
+});
+
 describe("text provenance transcript", () => {
   it("includes a separate partial without adding a documentation route", () => {
     expect(readFileSync(page, "utf8")).toContain('{% partial file="./_conversation.mdoc" /%}');

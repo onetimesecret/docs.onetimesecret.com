@@ -11,6 +11,31 @@ export default defineMarkdocConfig({
     // Add custom node types here
   },
   tags: {
+    message: {
+      attributes: {
+        speaker: { type: String, required: true, matches: ["User", "Assistant"] },
+      },
+      transform(node, config) {
+        const { speaker } = node.transformAttributes(config);
+        return new Markdoc.Tag(
+          "div",
+          {
+            class: "transcript-message",
+            "data-speaker": speaker,
+            role: "group",
+            "aria-label": `${speaker} message`,
+          },
+          [
+            new Markdoc.Tag("p", { class: "transcript-message__speaker" }, [speaker]),
+            new Markdoc.Tag(
+              "div",
+              { class: "transcript-message__body" },
+              node.transformChildren(config),
+            ),
+          ],
+        );
+      },
+    },
     details: { render: "details" },
     summary: {
       render: "summary",
