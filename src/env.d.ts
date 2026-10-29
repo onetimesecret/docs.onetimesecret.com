@@ -10,3 +10,6 @@ declare module '*.vue' {
   const component: DefineComponent<{}, {}, any>;
   export default component;
 }
+
+// textprov 0.2.0 is a JavaScript package without bundled declarations.
+declare module 'textprov';
