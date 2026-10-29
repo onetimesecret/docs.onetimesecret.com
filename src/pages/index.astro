@@ -14,7 +14,7 @@ import { getEntry, render } from 'astro:content';
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import { parse as parseYaml } from 'yaml';
 import { i18nConfig } from '../../config/i18n.mjs';
-import { starlightConfig } from '../../config/starlight.mjs';
+import { EDIT_LINK_BASE_URL } from '../../config/edit-link.mjs';
 
 const defaultLocale = i18nConfig.defaultLocale;
 const entry = await getEntry('docs', defaultLocale);
@@ -46,7 +46,7 @@ const frontmatter = {
   // entry replaces it so /en/ stays the indexed URL.
   head: [{ tag: 'link', attrs: { rel: 'canonical', href: canonical } }],
   // <StarlightPage> has no edit link unless given one; mirror the docs route.
-  editUrl: new URL(entry.filePath, starlightConfig.editLink.baseUrl).href,
+  editUrl: new URL(entry.filePath, EDIT_LINK_BASE_URL).href,
 };
 ---
 

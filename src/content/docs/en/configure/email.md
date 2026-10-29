@@ -5,6 +5,7 @@ description: Set up SMTP delivery for verification and account emails on your se
 audience: operator
 pageType: how-to
 sourceOfTruth: onetimesecret/.env.reference (SMTP variables); onetimesecret/lib/onetime/mail/delivery/smtp.rb (delivery and TLS handling); onetimesecret/etc/defaults/config.defaults.yaml (emailer configuration)
+draft: true
 ---
 
 S󠄁e󠄁t󠄁 u󠄁p󠄁 S󠄁M󠄁T󠄁P󠄁 d󠄁e󠄁l󠄁i󠄁v󠄁e󠄁r󠄁y󠄁 b󠄁e󠄁f󠄁o󠄁r󠄁e󠄁 u󠄁s󠄁e󠄁r󠄁s󠄁 d󠄁e󠄁p󠄁e󠄁n󠄁d󠄁 o󠄁n󠄁 v󠄁e󠄁r󠄁i󠄁f󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 o󠄁r󠄁 a󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁-󠄁r󠄁e󠄁c󠄁o󠄁v󠄁e󠄁r󠄁y󠄁 e󠄁m󠄁a󠄁i󠄁l󠄁s󠄁.󠄁

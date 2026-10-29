@@ -5,6 +5,7 @@ description: Enable accounts and sign-in methods on a self-hosted instance, then
 audience: operator
 pageType: how-to
 sourceOfTruth: onetimesecret/etc/defaults/auth.defaults.yaml (mode and feature flags); onetimesecret/etc/defaults/config.defaults.yaml (account switches); onetimesecret/lib/onetime/initializers/validate_auth_config.rb (restriction validation); onetimesecret/apps/web/auth/signup_enabled.rb and onetimesecret/apps/web/auth/signin_enabled.rb (AUTH_SIGNUP and AUTH_SIGNIN gate password and email-link routes, not SSO); onetimesecret/apps/web/auth/config/features/omniauth.rb (SSO sign-in creates accounts); onetimesecret/lib/onetime/signup_validation.rb (ALLOWED_SIGNUP_DOMAIN)
+draft: true
 ---
 
 C󠄁o󠄁n󠄁f󠄁i󠄁g󠄁u󠄁r󠄁e󠄁 t󠄁h󠄁e󠄁 s󠄁i󠄁g󠄁n󠄁-󠄁i󠄁n󠄁 m󠄁e󠄁t󠄁h󠄁o󠄁d󠄁s󠄁 f󠄁o󠄁r󠄁 y󠄁o󠄁u󠄁r󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁n󠄁c󠄁e󠄁.󠄁 C󠄁h󠄁o󠄁o󠄁s󠄁e󠄁 [s󠄁i󠄁m󠄁p󠄁l󠄁e󠄁 o󠄁r󠄁 f󠄁u󠄁l󠄁l󠄁 m󠄁o󠄁d󠄁e󠄁](/en/self-hosting/simple-or-full-auth) f󠄁i󠄁r󠄁s󠄁t󠄁;󠄁 f󠄁u󠄁l󠄁l󠄁 m󠄁o󠄁d󠄁e󠄁 i󠄁s󠄁 r󠄁e󠄁q󠄁u󠄁i󠄁r󠄁e󠄁d󠄁 f󠄁o󠄁r󠄁 S󠄁S󠄁O󠄁.󠄁

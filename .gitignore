@@ -17,6 +17,7 @@ logs
 *.txt
 !src/fonts/**/OFL.txt
 !tools/fonts/requirements.txt
+!tools/requirements.txt
 
 # Misc
 .DS_Store
@@ -45,6 +46,7 @@ tmp
 .claude/commands/*
 !.claude/commands/textprov.md
 __pycache__/
+.venv/
 
 # VSC
 .history

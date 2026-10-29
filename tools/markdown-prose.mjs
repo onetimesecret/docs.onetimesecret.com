@@ -3,7 +3,7 @@ import remarkParse from "remark-parse";
 import remarkGfm from "remark-gfm";
 import remarkFrontmatter from "remark-frontmatter";
 import { frontmatter } from './frontmatter.mjs';
-import textprov from '../vendor/textprov/textprov.cjs';
+import textprov from 'textprov';
 
 const parser = unified().use(remarkParse).use(remarkGfm).use(remarkFrontmatter, ["yaml", "toml"]);
 // Normalize AST comparisons using the same VS/legacy-PUA registry as the SDK.

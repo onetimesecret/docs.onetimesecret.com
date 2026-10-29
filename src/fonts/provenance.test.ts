@@ -10,7 +10,7 @@ import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { brotliDecompressSync } from 'node:zlib';
 import { beforeAll, describe, expect, it } from 'vitest';
-import textprov from '../../vendor/textprov/textprov.cjs';
+import textprov from 'textprov';
 
 const VS18 = textprov.mapping.selectors.ai; // AI-generated marker, follows the base character.
 const PUA_B = 0x100000; // AI-generated form: U+100000 + base code point.

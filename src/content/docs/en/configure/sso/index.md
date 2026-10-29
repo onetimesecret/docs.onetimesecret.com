@@ -5,6 +5,7 @@ description: Connect a self-hosted Onetime Secret instance to an OIDC identity p
 audience: operator
 pageType: how-to
 sourceOfTruth: onetimesecret/lib/onetime/sso_provider/oidc.rb (OIDC configuration and display name); onetimesecret/lib/onetime/sso_provider/registry.rb (provider definitions); onetimesecret/apps/web/auth/config/hooks/omniauth_tenant.rb (public-host callbacks); onetimesecret/apps/web/auth/config/features/omniauth.rb (SSO sign-in creates accounts); onetimesecret/apps/web/auth/signup_enabled.rb (AUTH_SIGNUP gates only the account-creation routes); onetimesecret/apps/web/auth/config/hooks/omniauth.rb and onetimesecret/lib/onetime/signup_validation.rb (ALLOWED_SIGNUP_DOMAIN checked when an SSO account is created); onetimesecret/lib/onetime/initializers/validate_auth_config.rb (restriction validation); onetimesecret/lib/onetime/auth_config.rb (SSO availability and CSP); onetimesecret/lib/onetime/models/custom_domain/sso_config.rb (tenant SSO); onetimesecret/lib/onetime/sso_provider/saml.rb (native SAML)
+draft: true
 ---
 
 C󠄁o󠄁n󠄁n󠄁e󠄁c󠄁t󠄁 t󠄁h󠄁e󠄁 s󠄁i󠄁g󠄁n󠄁-󠄁i󠄁n󠄁 p󠄁a󠄁g󠄁e󠄁 o󠄁f󠄁 y󠄁o󠄁u󠄁r󠄁 s󠄁e󠄁l󠄁f󠄁-󠄁h󠄁o󠄁s󠄁t󠄁e󠄁d󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁n󠄁c󠄁e󠄁 t󠄁o󠄁 a󠄁n󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁t󠄁y󠄁 p󠄁r󠄁o󠄁v󠄁i󠄁d󠄁e󠄁r󠄁 u󠄁s󠄁i󠄁n󠄁g󠄁 O󠄁p󠄁e󠄁n󠄁I󠄁D󠄁 C󠄁o󠄁n󠄁n󠄁e󠄁c󠄁t󠄁 (󠄁O󠄁I󠄁D󠄁C󠄁)󠄁.󠄁 T󠄁h󠄁e󠄁 p󠄁r󠄁o󠄁v󠄁i󠄁d󠄁e󠄁r󠄁 g󠄁u󠄁i󠄁d󠄁e󠄁s󠄁 b󠄁e󠄁l󠄁o󠄁w󠄁 u󠄁s󠄁e󠄁 t󠄁h󠄁e󠄁 g󠄁e󠄁n󠄁e󠄁r󠄁i󠄁c󠄁 O󠄁I󠄁D󠄁C󠄁 c󠄁o󠄁n󠄁n󠄁e󠄁c󠄁t󠄁i󠄁o󠄁n󠄁 r󠄁a󠄁t󠄁h󠄁e󠄁r󠄁 t󠄁h󠄁a󠄁n󠄁 s󠄁e󠄁p󠄁a󠄁r󠄁a󠄁t󠄁e󠄁 p󠄁r󠄁o󠄁v󠄁i󠄁d󠄁e󠄁r󠄁 i󠄁n󠄁t󠄁e󠄁g󠄁r󠄁a󠄁t󠄁i󠄁o󠄁n󠄁s󠄁.󠄁

@@ -42,6 +42,7 @@ Run commands from the repository root:
 
 ```bash
 pnpm install                 # Install dependencies
+python3 -m pip install -r tools/requirements.txt  # Install the pinned TextProv SDK (use a .venv; see docs/TEXTPROV.md)
 pnpm dev                     # Start the development server on all interfaces
 pnpm build                   # Build the production site into dist/
 pnpm preview                 # Serve the built site locally
@@ -103,6 +104,7 @@ Do not use these terms or sentence structures in authored prose:
 - Add moved-page mappings to `config/redirects.mjs`; preserve old URLs and point directly at the final destination rather than another redirect.
 - A page linked with an absolute `/en/...` link from a sidebar-linked page in the same directory counts as reachable (for example, the version-specific upgrade guides listed on `self-hosting/upgrade-guides`). Add new release guides to that table rather than to the sidebar.
 - Use `config/nav-orphans.allow` only for intentional navigation exceptions, with a reason.
+- To keep a page off the live site until it is ready, set `draft: true` in its frontmatter; each locale's copy needs its own flag. Keep its sidebar link: production builds omit links to English draft pages, while `pnpm dev` and the `check:*` scripts still see them. Links to a draft from other pages 404 in production; `pnpm run check:links` reports them.
 
 ## Language Support
 
@@ -174,6 +176,12 @@ marks and mark only introduced/changed grapheme clusters. Do not mark entire
 legacy paragraphs or infer the origin of existing text. Do not label copied
 human text as AI: leave it unchanged or request a human contribution.
 
+The authoring tools import the `textprov` package pinned in
+`tools/requirements.txt`; `dogfood.py` exits with the install command when the
+package is missing or at another version. The npm `textprov` package pinned in
+`package.json` decodes enrolled pages at build time. No SDK copies live in this
+repository.
+
 Frontmatter, code, inline code, link destinations, HTML syntax, Markdoc tags and
 attributes, aside fences (`:::note`), generated references, and source-code
 files are outside marking scope. The tool enrolls edited pages with `textprov: true`. Never remove existing
@@ -184,6 +192,7 @@ Before completing an agent edit, run:
 
 ```sh
 python3 tools/dogfood.py check --base HEAD
+python3 -m unittest discover -s tools/tests
 pnpm test
 pnpm run check:frontmatter
 pnpm run check:nav
