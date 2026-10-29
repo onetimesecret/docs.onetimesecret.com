@@ -13,10 +13,8 @@ Both read AGENTS.md. Claude also imports it from CLAUDE.md and provides the
 schemas, automatic prompt logs, or global machine configuration changes.
 Python 3.9+ and Node.js (the project version) are required.
 
-PyPI `textprov` 0.2.0 is published. npm `textprov` 0.2.1 is staged and awaits
-maintainer approval; until then `pnpm install` cannot resolve it and
-`pnpm-lock.yaml` has no entry for it. After approval, install the pinned SDK
-dependencies before using the repository commands from either agent:
+Install the pinned SDK dependencies before using the repository commands from
+either agent:
 
 ```sh
 pnpm install
@@ -213,10 +211,10 @@ validated before percent-encoding.
 
 ## Maintenance
 
-The decoder is pinned to npm `textprov` 0.2.1 in `package.json`, with the
-`pnpm-lock.yaml` update pending npm approval; the Python producer is pinned to
-PyPI `textprov==0.2.0` in
-`tools/requirements.txt`. CI installs both before provenance checks. Update the
+The decoder is pinned to npm `textprov` 0.2.1 in `package.json` and
+`pnpm-lock.yaml`; the Python producer is pinned to PyPI `textprov==0.2.0` in
+`tools/requirements.txt`. `pnpm-workspace.yaml` excludes textprov 0.2.1 from
+pnpm's minimum release age; that entry can go once the release is a day old. CI installs both before provenance checks. Update the
 Python version guard in `tools/dogfood.py` when changing its pin. SDK sources
 and releases are maintained in [textprov/textprov](https://github.com/textprov/textprov);
 this repository has no vendored SDK copies. Font assets and original OFL notices
