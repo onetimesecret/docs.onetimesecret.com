@@ -1,22 +1,16 @@
 ---
 // The enrollment marker for TextProv. MarkdownContent.astro renders it on
 // every page whose frontmatter sets `textprov: true`, whatever template the
-// page uses and whether or not the reader toggle is shown. The middleware
+// page uses and whether or not the reader controls are shown. The middleware
 // (src/lib/textprov/middleware.ts) and renderer (html.mjs) look for this
 // element, and an enrolled page without it would publish its raw selectors.
 // Keep this the only place that emits data-textprov-document.
 //
 // It also carries the reader's saved preference and the highlight style, so a
-// page with no toggle (the splash homepages) still honours a choice made on
+// page with no controls (the splash homepages) still honours a choice made on
 // another page. TextProvControls.astro is presentation only.
 import '../../styles/textprov.css';
+import TextProvState from './TextProvState.astro';
 ---
 <div class="textprov-document" data-textprov-document="true" data-pagefind-ignore hidden></div>
-<!-- Runs before first paint so a saved choice shows without a flash.
-     display.ts owns the storage key. -->
-<script is:inline>
-  try { document.documentElement.dataset.textprov = localStorage.getItem('docs:textprov') === 'shown' ? 'shown' : 'hidden'; }
-  catch { document.documentElement.dataset.textprov = 'hidden'; }
-  try { document.documentElement.dataset.textprovDisplay = localStorage.getItem('docs:textprov:display') === 'exact' ? 'exact' : 'passage'; }
-  catch { document.documentElement.dataset.textprovDisplay = 'passage'; }
-</script>
+<TextProvState />
