@@ -1,0 +1,150 @@
+{
+  "source": {
+    "repository": "onetimesecret/onetimesecret",
+    "release": "v0.26.19",
+    "sha": "e98a88c9b5832bbae249f38885aa28bd78a5db4d"
+  },
+  "access_control": {
+    "middleware": "Onetime::Middleware::HealthAccessControl",
+    "scope": "Matches the normalized mount-relative path /health and /health/*, so it covers every mounted application's health route, including the auth application's external /auth/health.",
+    "policy": "The client address must be loopback or private (RFC 1918, IPv4 and IPv6 loopback, fc00::/7, fe80::/10). HEALTH_TRUSTED_CIDR adds comma-separated ranges; invalid entries are logged and skipped.",
+    "denial": "403 with {\"error\": \"Health endpoints restricted to private networks\"} and a warning log carrying the address, path and method.",
+    "sessions": "The shipped site.session.skip_paths list keeps /health, /health/advanced, /auth/health, /api/v1/status, /api/v2/status and /api/v3/status from minting a session. An operator-defined list replaces the shipped one.",
+    "evidence": [
+      { "path": "onetimesecret/lib/onetime/middleware/health_access_control.rb", "lines": "9-119", "note": "scope, trusted ranges, the environment variable and the denial response" },
+      { "path": "onetimesecret/lib/onetime/application/middleware_stack.rb", "lines": "586-593", "note": "the middleware is installed for every mounted application" },
+      { "path": "onetimesecret/etc/defaults/config.defaults.yaml", "lines": "516-533", "note": "the shipped session skip_paths list" },
+      { "path": "onetimesecret/lib/onetime/boot.rb", "lines": "103-113", "note": "the same list as the boot fallback" }
+    ]
+  },
+  "records": [
+    {
+      "id": "health-core-health",
+      "path": "/health",
+      "methods": "GET",
+      "handler": "Core::Controllers::Health#index",
+      "access": "Route declares auth=noauth; the health middleware still restricts it to loopback and private addresses.",
+      "status_codes": "200; 403 when the address is not trusted",
+      "payload": "status (always the literal \"ok\"), timestamp (epoch seconds), version",
+      "probes": "none. The status value is a constant, so a 200 here means the process served a request, not that its dependencies are reachable.",
+      "evidence": [
+        { "path": "onetimesecret/apps/web/core/controllers/health.rb", "lines": "12-21", "note": "the static response body" },
+        { "path": "onetimesecret/apps/web/core/routes.txt", "lines": "11-12", "note": "route and auth attribute" }
+      ]
+    },
+    {
+      "id": "health-core-health-advanced",
+      "path": "/health/advanced",
+      "methods": "GET",
+      "handler": "Core::Controllers::Health#advanced",
+      "access": "Route declares auth=noauth; the health middleware restricts it to loopback and private addresses.",
+      "status_codes": "200 for both ok and degraded, because the handler sets no status; 403 when the address is not trusted",
+      "payload": "status (ok or degraded), timestamp, version, checks.keydb, checks.jobqueue, checks.authdb, checks.secret_verifier. Each check carries its own status and, where applicable, a password-masked url, a vhost, a mode, a state or an error message.",
+      "probes": "keydb with a datastore PING; jobqueue by opening a broker connection with 5-second connect and read timeouts, reported as not_configured when jobs are disabled, no URL is set or the client library is absent; authdb with a connection test, reported as not_configured unless the auth database is loaded and connected; secret_verifier from the boot-cached verifier state, re-probed read-only when boot could not reach the datastore. Checks reporting not_configured are excluded from the overall status, which is ok only when every remaining check is ok and degraded otherwise.",
+      "evidence": [
+        { "path": "onetimesecret/apps/web/core/controllers/health.rb", "lines": "25-145", "note": "the four checks, the overall-status rule and URL masking" },
+        { "path": "onetimesecret/apps/web/core/routes.txt", "lines": "12-12", "note": "route and auth attribute" }
+      ]
+    },
+    {
+      "id": "health-auth-health",
+      "path": "/auth/health",
+      "methods": "GET",
+      "handler": "Auth::Routes::Health#handle_health_routes",
+      "access": "Served only while the auth application is mounted, which is Full mode. The health middleware restricts it to loopback and private addresses, because it arrives mount-relative as /health. In other modes nothing routes the path and it returns 404.",
+      "status_codes": "200; 503 when the handler raises; 403 when the address is not trusted; 404 when the auth application is not mounted",
+      "payload": "On success: status (the literal \"ok\"), timestamp, database (ok, error or not_required), version, mode. On failure: status (\"error\"), error, timestamp.",
+      "probes": "The Rodauth database connection, when one is configured. status stays \"ok\" even when database reports error, so read the database field rather than the top-level status.",
+      "evidence": [
+        { "path": "onetimesecret/apps/web/auth/routes/health.rb", "lines": "8-36", "note": "the response body, the database field and the 503 branch" },
+        { "path": "onetimesecret/apps/web/auth/application.rb", "lines": "19-19", "note": "the /auth mount prefix" },
+        { "path": "onetimesecret/lib/onetime/middleware/health_access_control.rb", "lines": "16-23", "note": "why the mount-relative match covers this path, and the 404 in other modes" }
+      ]
+    },
+    {
+      "id": "health-api-v1-status",
+      "path": "/api/v1/status",
+      "methods": "GET",
+      "handler": "V1::Controllers::Index#status",
+      "access": "Anonymous callers are allowed. Basic credentials are validated when supplied. Not restricted to private networks.",
+      "status_codes": "200; the shared authorization wrapper answers 401 for invalid supplied credentials and 404 when authentication is disabled",
+      "payload": "status (the literal \"nominal\"), locale",
+      "probes": "none; the value is a constant",
+      "evidence": [
+        { "path": "onetimesecret/apps/api/v1/controllers/index.rb", "lines": "53-57", "note": "the constant status response, served through authorized(true)" },
+        { "path": "onetimesecret/apps/api/v1/controllers/base.rb", "lines": "45-70", "note": "anonymous allowance and the credential paths" },
+        { "path": "onetimesecret/apps/api/v1/routes.txt", "lines": "15-15", "note": "route and auth metadata" }
+      ]
+    },
+    {
+      "id": "health-api-v1-authcheck",
+      "path": "/api/v1/authcheck",
+      "methods": "GET",
+      "handler": "V1::Controllers::Index#authcheck",
+      "access": "Basic credentials required; anonymous callers are not allowed. Not restricted to private networks.",
+      "status_codes": "200 for valid credentials; 401 otherwise; 404 when authentication is disabled",
+      "payload": "status (the literal \"nominal\"), locale",
+      "probes": "none; it reports whether the supplied credentials authenticate",
+      "evidence": [
+        { "path": "onetimesecret/apps/api/v1/controllers/index.rb", "lines": "59-63", "note": "served through authorized(false)" },
+        { "path": "onetimesecret/apps/api/v1/routes.txt", "lines": "16-16", "note": "route and auth metadata" }
+      ]
+    },
+    {
+      "id": "health-api-v2-status",
+      "path": "/api/v2/status",
+      "methods": "GET",
+      "handler": "V2::Logic::Meta.system_status",
+      "access": "Public. The route declares no auth attribute, and the route file states that status stays public because it discloses no build information.",
+      "status_codes": "200",
+      "payload": "success (true), status (the literal \"nominal\"), locale",
+      "probes": "none; the value is a constant",
+      "evidence": [
+        { "path": "onetimesecret/apps/api/v2/logic/meta.rb", "lines": "31-40", "note": "the constant status response" },
+        { "path": "onetimesecret/apps/api/v2/routes.txt", "lines": "42-47", "note": "route, the public statement and the absent auth attribute" }
+      ]
+    },
+    {
+      "id": "health-api-v3-status",
+      "path": "/api/v3/status",
+      "methods": "GET",
+      "handler": "V3::Logic::Meta.system_status",
+      "access": "Public. The route declares no auth attribute, and the route file states that status stays public because it discloses no build information.",
+      "status_codes": "200",
+      "payload": "status (the literal \"nominal\"), locale",
+      "probes": "none; the value is a constant",
+      "evidence": [
+        { "path": "onetimesecret/apps/api/v3/logic/meta.rb", "lines": "37-45", "note": "the constant status response" },
+        { "path": "onetimesecret/apps/api/v3/routes.txt", "lines": "39-44", "note": "route, the public statement and the absent auth attribute" }
+      ]
+    },
+    {
+      "id": "health-api-v2-version",
+      "path": "/api/v2/version",
+      "methods": "GET",
+      "handler": "V2::Logic::Meta.system_version",
+      "access": "Authenticated: auth=sessionauth,basicauth. The route file states the build version is withheld from anonymous callers because it fingerprints the install.",
+      "status_codes": "200 for an authenticated caller; the authentication failure codes are not determined from source",
+      "payload": "success (true), version (an array of version components), locale",
+      "probes": "none",
+      "evidence": [
+        { "path": "onetimesecret/apps/api/v2/logic/meta.rb", "lines": "42-54", "note": "the version response and the reason it is authenticated" },
+        { "path": "onetimesecret/apps/api/v2/routes.txt", "lines": "42-48", "note": "route and auth attribute" }
+      ]
+    },
+    {
+      "id": "health-api-v3-version",
+      "path": "/api/v3/version",
+      "methods": "GET",
+      "handler": "V3::Logic::Meta.system_version",
+      "access": "Authenticated: auth=sessionauth,basicauth. The route file states the build version is withheld from anonymous callers because it fingerprints the install.",
+      "status_codes": "200 for an authenticated caller; the authentication failure codes are not determined from source",
+      "payload": "version (an array of version components), locale",
+      "probes": "none",
+      "evidence": [
+        { "path": "onetimesecret/apps/api/v3/logic/meta.rb", "lines": "47-58", "note": "the version response and the reason it is authenticated" },
+        { "path": "onetimesecret/apps/api/v3/routes.txt", "lines": "39-45", "note": "route and auth attribute" }
+      ]
+    }
+  ]
+}

@@ -2,7 +2,10 @@
 .astro
 .serena
 dist
+# Astro's generated data directory at the repo root. The negation keeps the
+# checked-in reference records under src/data/ visible.
 data
+!src/data/
 
 # Node dependencies
 node_modules
