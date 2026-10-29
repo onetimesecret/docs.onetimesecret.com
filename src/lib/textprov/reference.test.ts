@@ -19,15 +19,14 @@ const pinned = JSON.parse(readFileSync(new URL('../../../package.json', import.m
 };
 const ai = (text: string) => textprov.segments(text).map((cluster: string) => /\s/u.test(cluster) ? cluster : cluster + '\u{E0101}').join('');
 
-// Exact attribution must match upstream; bounded passage context is a docs-only
-// presentation policy and deliberately differs from upstream block expansion.
-function projection(doc: Document, exact: string) {
-  const result: { text: string; exact: boolean }[] = [];
+// Compare character attribution with upstream, independently of its wrappers.
+function projection(doc: Document, selector: string) {
+  const result: { text: string; recorded: boolean }[] = [];
   const walker = doc.createTreeWalker(doc.querySelector('.sl-markdown-content')!, 4);
   for (let node = walker.nextNode(); node; node = walker.nextNode()) {
     const parent = node.parentElement!;
     for (const text of Array.from(node.textContent!)) {
-      result.push({ text, exact: !!parent.closest(exact) });
+      result.push({ text, recorded: !!parent.closest(selector) });
     }
   }
   return result;
@@ -51,7 +50,7 @@ describe('published TextProv reference contract', () => {
     `<p>C\u{E0101}ho\u{E0101}ose a ${ai('guide')} <em>for what</em> <a href="/next">you want</a> to do next.</p><p>Plain paragraph.</p>`,
     `<h2>${ai('Heading')}</h2><ul><li>Old ${ai('new')} end.</li><li>Plain.</li></ul><table><tr><td>${ai('日本語')} text</td><td>Plain cell.</td></tr></table>`,
     `<p>Legacy \u{100041}I and ${ai('café')} text. <code>Unmarked code</code></p>`,
-  ])('matches the reference renderer for exact characters: %s', html => {
+  ])('matches the reference renderer for recorded characters: %s', html => {
     const source = `<div class="sl-markdown-content">${html}</div>`;
     const upstream = new JSDOM(source, { runScripts: 'outside-only' });
     upstream.window.eval(runtime);
@@ -63,17 +62,12 @@ describe('published TextProv reference contract', () => {
     const docs = new JSDOM(renderProvenance(source, { requireEnrollment: false }));
     expect(projection(docs.window.document, '.textprov-ai'))
       .toEqual(projection(upstream.window.document, '[data-prov]'));
-    // Every exact mark still has context, but unmarked paragraph tails do not.
-    expect([...docs.window.document.querySelectorAll('.textprov-ai')]
-      .every(node => node.closest('[data-textprov-passage]'))).toBe(true);
-    const coverage = (doc: Document, selector: string) => [...doc.querySelectorAll(selector)]
-      .map(node => node.textContent).join('').length;
-    expect(coverage(docs.window.document, '[data-textprov-passage]'))
-      .toBeLessThanOrEqual(coverage(upstream.window.document, '[data-prov-passage]'));
-    // Each fixture has unmarked prose that upstream's block expansion includes.
-    const passages = [...docs.window.document.querySelectorAll('[data-textprov-passage]')]
-      .map(node => node.textContent).join('');
-    expect(passages).not.toMatch(/Plain|Unmarked|to do next/);
+    // These fixtures have no source spans: every added wrapper must record AI
+    // characters, and no unmarked characters may gain a surrounding wrapper.
+    expect(projection(docs.window.document, 'span'))
+      .toEqual(projection(docs.window.document, '.textprov-ai[data-textprov="ai"]'));
+    expect([...docs.window.document.querySelectorAll('span')]
+      .every(node => node.matches('.textprov-ai[data-textprov="ai"]') && !node.querySelector('span'))).toBe(true);
     upstream.window.close();
     docs.window.close();
   });

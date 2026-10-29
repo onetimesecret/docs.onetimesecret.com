@@ -1,8 +1,0 @@
----
-import Default from '@astrojs/starlight/components/PageTitle.astro';
-import TextProvControls from './TextProvControls.astro';
-import { showTextProvToggle } from '../../../config/textprov.mjs';
-const enrolled = Astro.locals.starlightRoute.entry.data.textprov === true;
----
-<Default />
-{enrolled && showTextProvToggle() && <TextProvControls />}
