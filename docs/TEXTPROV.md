@@ -206,7 +206,9 @@ label shows the same treatment as a legend. Hidden mode and print add no
 provenance paint; the words and native annotation styles stay intact.
 
 The optional `textprov` cascade layer lets ordinary application annotation
-styles take priority. Links retain their native underline. A proofing range
+styles take priority. `src/styles/tailwind.css` d󠄁e󠄁c󠄁l󠄁a󠄁r󠄁e󠄁s󠄁 i󠄁t󠄁 l󠄁a󠄁s󠄁t󠄁 i󠄁n󠄁 t󠄁h󠄁e󠄁 s󠄁i󠄁t󠄁e󠄁'󠄁s󠄁
+l󠄁a󠄁y󠄁e󠄁r󠄁 o󠄁r󠄁d󠄁e󠄁r󠄁,󠄁 a󠄁n󠄁d󠄁 `src/styles/textprov.css` r󠄁e󠄁p󠄁e󠄁a󠄁t󠄁s󠄁 t󠄁h󠄁a󠄁t󠄁 o󠄁r󠄁d󠄁e󠄁r󠄁 b󠄁e󠄁c󠄁a󠄁u󠄁s󠄁e󠄁 i󠄁t󠄁 s󠄁h󠄁i󠄁p󠄁s󠄁
+a󠄁s󠄁 a󠄁 s󠄁e󠄁p󠄁a󠄁r󠄁a󠄁t󠄁e󠄁 s󠄁t󠄁y󠄁l󠄁e󠄁s󠄁h󠄁e󠄁e󠄁t󠄁.󠄁 Links retain their native underline. A proofing range
 can use `data-prov-decoration="native"` to omit provenance dots; a comment
 anchor can use `data-prov-background="native"` to omit mist and glow. Both
 hooks work on the decorated element or a container. Use unlayered annotation

@@ -3,6 +3,12 @@
  * Gradient mist and 80%-strength dots replace the defunct wavy provenance cue.
  * Native application annotations can remain above this optional CSS layer.
  */
+/* Same order as src/styles/tailwind.css. This file is loaded from
+ * TextProvMarker.astro and lands in a separate stylesheet, so it repeats the
+ * declaration to fix textprov's position whichever file the browser reads first.
+ */
+@layer base, starlight, theme, components, utilities, textprov;
+
 @layer textprov {
   :root {
     --textprov-tint: 14%;
@@ -36,7 +42,11 @@
       text-underline-offset: 5px;
     }
 
-    @supports (background: color-mix(in srgb, currentColor 50%, transparent)) {
+    /* Probe the exact shape the guarded rules use: a calc() inside the mix
+     * percentage. The custom properties are defined above, so a failed var()
+     * substitution cannot occur; a browser without calc() here keeps the flat
+     * accent fill. */
+    @supports (background: color-mix(in srgb, currentColor calc(50% * .5), transparent)) {
       :root[data-textprov='shown'] :is(.textprov-ai, .textprov-passage, .textprov-label) {
         background: linear-gradient(
           115deg,

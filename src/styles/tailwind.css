@@ -1,5 +1,8 @@
 /* src/tailwind.css */
-@layer base, starlight, theme, components, utilities;
+/* textprov is last so the opt-in reveal styles win over utilities; unlayered
+   styles still win over it. textprov.css repeats this order because it ships
+   in its own stylesheet. */
+@layer base, starlight, theme, components, utilities, textprov;
 
 @import "@astrojs/starlight-tailwind";
 @import "tailwindcss/theme.css" layer(theme);
