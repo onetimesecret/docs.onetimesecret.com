@@ -74,8 +74,8 @@ describe("text provenance transcript", () => {
   it("keeps speaker labels out of the headings and code samples free of provenance selectors", () => {
     const source = readFileSync(partial, "utf8");
     const ast = Markdoc.parse(source);
-    expect(source).toContain("**User**");
-    expect(source).toContain("**Assistant**");
+    expect(source).toContain('{% message speaker="User" %}');
+    expect(source).toContain('{% message speaker="Assistant" %}');
     expect(source).not.toContain("file:///");
     const nodes = [...ast.walk()];
     expect(nodes.some((node) => node.type === "heading")).toBe(false);
@@ -86,5 +86,12 @@ describe("text provenance transcript", () => {
     }
     // Previously recorded prose marks are retained in the archived conversation.
     expect(source).toContain("\u{E0101}");
+    const messages = nodes.filter((node) => node.tag === "message");
+    expect(messages.length).toBeGreaterThan(0);
+    expect(messages.every((node) => ["User", "Assistant"].includes(node.attributes.speaker))).toBe(
+      true,
+    );
+    const html = render(source);
+    expect((html.match(/class="transcript-message"/g) || []).length).toBe(messages.length);
   });
 });
