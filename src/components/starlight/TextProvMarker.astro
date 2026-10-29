@@ -11,6 +11,7 @@
 // another page. TextProvControls.astro is presentation only.
 import '../../styles/textprov.css';
 import TextProvState from './TextProvState.astro';
+import { DISPLAY_VERSION } from '../../lib/textprov/version';
 ---
-<div class="textprov-document" data-textprov-document="true" data-pagefind-ignore hidden></div>
+<div class="textprov-document" data-textprov-document="true" data-textprov-display-version={DISPLAY_VERSION} data-pagefind-ignore hidden></div>
 <TextProvState />
