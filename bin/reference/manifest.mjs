@@ -95,15 +95,39 @@ export function loadManifest({ vendorDir = VENDOR_DIR } = {}) {
     problems.push("upstream.release must name the release this snapshot documents");
   }
 
-  // Accountability is a warning, not a failure (plan A6 requires real handles
-  // before Phase 4 exits; failing here would stop the pipeline that has to
-  // exist first).
-  for (const field of ["refreshOwner", "backupReviewer"]) {
-    if (typeof manifest[field] !== "string" || manifest[field] === "") {
-      problems.push(`${field} must be a string (use "unassigned" until a handle is recorded)`);
-    } else if (manifest[field] === "unassigned") {
-      warnings.push(
-        `${field} is "unassigned" in vendor/onetimesecret/manifest.json — plan A6 needs a real handle recorded before Phase 4 exits`,
+  // Accountability. Plan A6 asks for a named refresh owner and a backup
+  // reviewer. This project has one maintainer, so the second field cannot name
+  // a person without recording a fiction, and a check satisfied by a fiction is
+  // worse than one that is honest about the gap. So:
+  //
+  //   refreshOwner        must name someone, and "unassigned" still warns.
+  //   backupReviewer      may declare there is none, in the "none: <reason>"
+  //                       form, which then requires accountabilityNote to say
+  //                       what breaks when the single maintainer is away.
+  //
+  // Both stay warnings rather than failures: this gate exists to keep the
+  // obligation visible, and failing here would stop the pipeline the obligation
+  // is about.
+  if (typeof manifest.refreshOwner !== "string" || manifest.refreshOwner === "") {
+    problems.push('refreshOwner must be a string (use "unassigned" until a handle is recorded)');
+  } else if (manifest.refreshOwner === "unassigned") {
+    warnings.push(
+      'refreshOwner is "unassigned" in vendor/onetimesecret/manifest.json — plan A6 needs a real handle recorded before Phase 4 exits',
+    );
+  }
+
+  if (typeof manifest.backupReviewer !== "string" || manifest.backupReviewer === "") {
+    problems.push('backupReviewer must be a string (use "none: <reason>" when there is no second reviewer)');
+  } else if (manifest.backupReviewer === "unassigned") {
+    warnings.push(
+      'backupReviewer is "unassigned" in vendor/onetimesecret/manifest.json — plan A6 needs a real handle, or "none: <reason>" with an accountabilityNote',
+    );
+  } else if (manifest.backupReviewer.startsWith("none")) {
+    // A declared absence is accepted, but not silently: the note is what makes
+    // it a recorded risk instead of an empty field.
+    if (typeof manifest.accountabilityNote !== "string" || manifest.accountabilityNote.trim() === "") {
+      problems.push(
+        'backupReviewer declares no second reviewer, so accountabilityNote must record what breaks while the refresh owner is unavailable',
       );
     }
   }

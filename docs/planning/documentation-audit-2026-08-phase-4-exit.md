@@ -1,6 +1,6 @@
 # Phase 4 integration and exit record
 
-**Status:** P0 through P9 implemented and integrated. **Phase 4 is not complete.** Section 7's exit conditions are not all met; the open items are in section 6 below.
+**Status:** P0 through P10 implemented and integrated. **Phase 4 is not complete.** Section 7's exit conditions are not all met; the open items are in section 6 below, and the one condition that has been closed, by amendment, is in section 5a.
 **Prepared:** 2026-10-29.
 **Docs baseline:** `bd7c212538b21c0bfb4d9305398476b060ed399e` (`develop` at the start of implementation).
 **Application baseline:** v0.26.19, `e98a88c9b5832bbae249f38885aa28bd78a5db4d`, tagged 2026-10-24.
@@ -105,11 +105,35 @@ Both baseline blockers the plan recorded are resolved. The type check excludes `
 - **`pnpm run check:links` with external URLs was not run.** The offline built-link check was.
 - The generator's schema artifacts were not regenerated, because that requires executing application code. Every input to the two vendored JSON schemas is byte-identical between the previous release and this one, which is what justifies the page stating this release while the schema readme keeps recording where the artifacts came from.
 
+## 5a. Closed: the A6 accountability condition, as amended
+
+Plan A6 required a named refresh owner and a named backup reviewer before phase
+exit. The owner is now recorded as `delano`. The backup reviewer cannot be
+recorded, because this project has a single maintainer, and writing the same
+person into both fields would satisfy the check while recording a fiction.
+
+The condition was therefore amended rather than skipped. `backupReviewer` is
+`"none: single maintainer"`, and the manifest validator accepts a declared
+absence only in the `none: <reason>` form, and only when `accountabilityNote`
+states what the absence costs. The note records the real failure mode: while
+the maintainer is unavailable, the freshness workflow reports a changed
+upstream input to a queue nobody else reads, so the reference goes stale
+quietly rather than loudly. Review of a refresh is mechanical, through the
+generated diff on a pull request gated by `reference:check`, rather than by a
+second person.
+
+Three tests cover the amended rule: an unassigned owner still warns, a declared
+absence without a note is rejected, and a declared absence with a note passes
+clean. `reference:check` now emits no accountability warning.
+
+Recorded as an amendment so a later reader sees that A6 was changed on purpose,
+with its reasoning, rather than quietly dropped. The residual risk is real and
+is item 1 of the Phase 5 follow-ups.
+
 ## 6. Open items before Phase 4 can be called complete
 
 | ID | Item | Why it blocks |
 | --- | --- | --- |
-| X1 | `refreshOwner` and `backupReviewer` in `vendor/onetimesecret/manifest.json` are `unassigned`. | Plan A6 makes a named owner and backup reviewer an exit condition. `reference:check` warns about it. The detection is wired and the response is not. This needs a decision, not more work. |
 | X2 | Fourteen destinations are draft pending operational evidence. | Plan section 7's first condition. The highest-value missing checks are an isolated restore rehearsal verified against pre-change encrypted fixtures, a synthetic dead-letter replay, a log redaction test, and the admin access matrix tested for denial as well as success. |
 | X3 | Twelve Configure files remain draft: the index, secret-options, the SSO index and nine provider recipes. | Plan section 7's second condition. No Phase 4 page depends on them; operator pages link the published `organizations/sso` instead. |
 | X4 | `configure/secret-options.md` cites an unrelated application commit in `sourceOfTruth`. | Carried over from before this phase. It is one of the twelve files left draft, so nothing publishes with that citation, but it should be re-anchored when the page is reviewed. |
@@ -141,7 +165,7 @@ Recorded here rather than acted on, because they are upstream of this repository
 
 Concrete, not a promise to prevent drift later.
 
-1. Assign X1, then make the freshness workflow's finding actionable. It reports a changed input and names the refresh runbook, but nobody is on the hook for it.
+1. Have the freshness workflow open the refresh pull request itself, rather than reporting a changed input to a queue the single maintainer may not be reading. This is the mitigation the amended A6 record names (section 5a) and it turns the obligation from remembering into reviewing.
 2. Close the operational evidence gaps in X2 against an isolated deployment, and publish the fourteen draft pages as each closes.
 3. Resolve the Configure SSO closure in X3 as one unit, since the index depends on all nine recipes.
 4. Fix or document the authoring tool defect in section 8 before the next consolidation pass.

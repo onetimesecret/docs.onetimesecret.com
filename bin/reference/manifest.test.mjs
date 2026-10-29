@@ -61,10 +61,35 @@ describe("the tracked manifest", () => {
       "env-reference",
       "logging-defaults",
     ]);
-    // Accountability is a warning so the pipeline runs before a handle exists
-    // (plan A6 requires the handle before Phase 4 exits).
+    // Accountability (plan A6, as amended for a single-maintainer project):
+    // the refresh owner is named, the backup reviewer declares that there is
+    // none, and the note records what that costs. No warning is due.
+    expect(manifest.refreshOwner).not.toBe("unassigned");
+    expect(manifest.backupReviewer).toMatch(/^none/);
+    expect(manifest.accountabilityNote).toMatch(/single maintainer/i);
+    expect(warnings).toEqual([]);
+  });
+
+  it("warns when the refresh owner is unassigned", () => {
+    const dir = vendor({ manifest: { refreshOwner: "unassigned" } });
+    const { warnings } = loadManifest({ vendorDir: dir });
     expect(warnings.join(" ")).toMatch(/refreshOwner is "unassigned"/);
-    expect(warnings.join(" ")).toMatch(/backupReviewer is "unassigned"/);
+  });
+
+  it("rejects a declared absence of a reviewer with no note", () => {
+    const dir = vendor({ manifest: { backupReviewer: "none: single maintainer" } });
+    expect(() => loadManifest({ vendorDir: dir })).toThrow(/accountabilityNote/);
+  });
+
+  it("accepts a declared absence of a reviewer when the risk is recorded", () => {
+    const dir = vendor({
+      manifest: {
+        backupReviewer: "none: single maintainer",
+        accountabilityNote: "Goes stale silently while the owner is away.",
+      },
+    });
+    const { warnings } = loadManifest({ vendorDir: dir });
+    expect(warnings).toEqual([]);
   });
 
   it("records a hash for every file it lists, and lists every file present", () => {

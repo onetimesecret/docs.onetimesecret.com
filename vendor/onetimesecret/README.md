@@ -79,9 +79,22 @@ c󠄁o󠄁m󠄁m󠄁a󠄁n󠄁d󠄁 i󠄁t󠄁s󠄁e󠄁l󠄁f󠄁 o󠄁n󠄁l�
    r󠄁e󠄁p󠄁o󠄁r󠄁t󠄁 t󠄁o󠄁g󠄁e󠄁t󠄁h󠄁e󠄁r󠄁,󠄁 s󠄁o󠄁 o󠄁n󠄁e󠄁 c󠄁o󠄁m󠄁m󠄁i󠄁t󠄁 s󠄁h󠄁o󠄁w󠄁s󠄁 w󠄁h󠄁i󠄁c󠄁h󠄁 u󠄁p󠄁s󠄁t󠄁r󠄁e󠄁a󠄁m󠄁 r󠄁e󠄁v󠄁i󠄁s󠄁i󠄁o󠄁n󠄁 p󠄁r󠄁o󠄁d󠄁u󠄁c󠄁e󠄁d󠄁 w󠄁h󠄁i󠄁c󠄁h󠄁
    p󠄁u󠄁b󠄁l󠄁i󠄁s󠄁h󠄁e󠄁d󠄁 t󠄁e󠄁x󠄁t󠄁.󠄁
 
-## A󠄁c󠄁c󠄁o󠄁u󠄁n󠄁t󠄁a󠄁b󠄁i󠄁l󠄁i󠄁t󠄁y󠄁
+## Accountability
 
-`refreshOwner` a󠄁n󠄁d󠄁 `backupReviewer` i󠄁n󠄁 `manifest.json` a󠄁r󠄁e󠄁 b󠄁o󠄁t󠄁h󠄁
-`"unassigned"`.󠄁 `reference:check` p󠄁r󠄁i󠄁n󠄁t󠄁s󠄁 a󠄁 w󠄁a󠄁r󠄁n󠄁i󠄁n󠄁g󠄁 w󠄁h󠄁i󠄁l󠄁e󠄁 e󠄁i󠄁t󠄁h󠄁e󠄁r󠄁 i󠄁s󠄁 u󠄁n󠄁a󠄁s󠄁s󠄁i󠄁g󠄁n󠄁e󠄁d󠄁
-a󠄁n󠄁d󠄁 s󠄁t󠄁i󠄁l󠄁l󠄁 p󠄁a󠄁s󠄁s󠄁e󠄁s󠄁,󠄁 s󠄁o󠄁 t󠄁h󠄁e󠄁 p󠄁i󠄁p󠄁e󠄁l󠄁i󠄁n󠄁e󠄁 r󠄁u󠄁n󠄁s󠄁;󠄁 p󠄁l󠄁a󠄁n󠄁 A󠄁6󠄁 r󠄁e󠄁q󠄁u󠄁i󠄁r󠄁e󠄁s󠄁 r󠄁e󠄁a󠄁l󠄁 h󠄁a󠄁n󠄁d󠄁l󠄁e󠄁s󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁e󠄁d󠄁
-b󠄁e󠄁f󠄁o󠄁r󠄁e󠄁 P󠄁h󠄁a󠄁s󠄁e󠄁 4󠄁 e󠄁x󠄁i󠄁t󠄁s󠄁.󠄁
+`refreshOwner` in `manifest.json` names the maintainer who refreshes this
+snapshot. `reference:check` warns while it is `"unassigned"` and still passes,
+so the pipeline runs either way.
+
+`backupReviewer` is `"none: single maintainer"`. Plan A6 asks for a second
+reviewer, and this project does not have one; naming the same person twice
+would satisfy the field and record a fiction. A declared absence is accepted in
+the `none: <reason>` form, and only in that form does the manifest also require
+`accountabilityNote` to state what the absence costs.
+
+What it costs today: a refresh is reviewed mechanically rather than by a second
+person. It arrives as a pull request whose generated diff is the review
+surface, and `reference:check` gates it. While the maintainer is unavailable,
+the freshness workflow reports a changed upstream input to a queue nobody else
+reads, so this snapshot goes stale quietly instead of loudly. Phase 5 reduces
+that exposure by having the freshness workflow open the refresh pull request
+itself, which turns the obligation from remembering into reviewing.󠄁

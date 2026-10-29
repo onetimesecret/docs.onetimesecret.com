@@ -123,11 +123,11 @@ describe("check", () => {
     expect(result.stdout).toMatch(/OK: generated reference matches the vendored inputs/);
   });
 
-  it("warns about the unassigned refresh owner without failing", () => {
+  it("emits no accountability warning now that the owner is named", () => {
     const result = run(["check"]);
     expect(result.status).toBe(0);
-    expect(result.stderr).toMatch(/WARN: refreshOwner is "unassigned"/);
-    expect(result.stderr).toMatch(/WARN: backupReviewer is "unassigned"/);
+    expect(result.stderr).not.toMatch(/refreshOwner/);
+    expect(result.stderr).not.toMatch(/backupReviewer/);
   });
 
   it("reports no problem against an unperturbed copy", () => {
