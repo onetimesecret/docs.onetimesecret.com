@@ -1,9 +1,10 @@
 ---
+textprov: true
 title: Images and variants
 description: Which container image to deploy, what the S6, lite and Caddy variants are for, and how to pin the release you run.
 audience: operator
 pageType: reference
-sourceOfTruth: onetimesecret/docker/bake.hcl:106-116 (four build targets — main, s6, lite, caddy — of which the CI group builds three); onetimesecret/docker/bake.hcl:27-33,81-96 (both registries, and the repository-name suffix per variant); onetimesecret/docker/bake.hcl:67-69 (a local bake defaults to linux/amd64 alone unless PLATFORMS is set); onetimesecret/.github/workflows/build-and-publish-oci-images.yml:148-196,258-264 (which tags are immutable and which move, the targets the release workflow publishes, and the platforms it builds for); onetimesecret/Dockerfile:353-356,388-389,449-455 (the main image is the default build target and runs a single process as a non-root user); onetimesecret/Dockerfile:162,169-172,186-188 (BRAND_PACK bakes a pack in at build time and fails the build when the pack was never generated; BRAND_PACK / BRAND_ASSETS_DIR select one at run time instead); onetimesecret/docker/variants/README.md:31 and onetimesecret/docker/variants/lite.dockerfile:37-38,110-112 (the lite image bundles Redis, stays root, and is not for production); onetimesecret/docker/variants/caddy.dockerfile:111-118 (the Caddy image ships PUBLIC_DIR empty because the app serves its own assets); onetimesecret/docker/README.md:93-108 and onetimesecret/scripts/check-version-pins.sh:17-28 (pin a release rather than a moving tag, and the compose default must be an immutable vX.Y.Z)
+sourceOfTruth: onetimesecret/docker/bake.hcl:106-116 (four build targets — main, s6, lite, caddy — of which the CI group builds three); onetimesecret/docker/bake.hcl:27-33,81-96 (both registries, and the repository-name suffix per variant); onetimesecret/docker/bake.hcl:67-69 (a local bake defaults to linux/amd64 alone unless PLATFORMS is set); onetimesecret/.github/workflows/build-and-publish-oci-images.yml:148-196,258-264 (which tags are immutable and which move, the targets the release workflow publishes, and the platforms it builds for); onetimesecret/Dockerfile:353-356,388-389,449-455 (the main image is the default build target and runs a single process as a non-root user); onetimesecret/Dockerfile:162,169-172,186-188 (BRAND_PACK bakes a pack in at build time and fails the build when the pack was never generated; BRAND_PACK / BRAND_ASSETS_DIR select one at run time instead); onetimesecret/docker/variants/README.md:31 and onetimesecret/docker/variants/lite.dockerfile:37-38,110-112 (the lite image bundles Redis, stays root, and is not for production); onetimesecret/docker/variants/caddy.dockerfile:111-118 (the Caddy image ships PUBLIC_DIR empty because the app serves its own assets); onetimesecret/docker/README.md:93-108 and onetimesecret/scripts/check-version-pins.sh:17-28 (pin a release rather than a moving tag, and the compose default must be an immutable vX.Y.Z); onetimesecret at f7794a9844a865dc346b7cded73d72c918a22700 — docker/compose/docker-compose.simple.yml and docker-compose.full.yml (OTS_IMAGE_TAG interpolation)
 ---
 
 ## Run the main image
@@ -50,6 +51,9 @@ run, choosing it from the
 ```bash
 export OTS_VERSION=vX.Y.Z
 ```
+
+`OTS_VERSION` i󠄁s󠄁 t󠄁h󠄁e󠄁 r󠄁e󠄁l󠄁e󠄁a󠄁s󠄁e󠄁 v󠄁a󠄁r󠄁i󠄁a󠄁b󠄁l󠄁e󠄁 u󠄁s󠄁e󠄁d󠄁 b󠄁y󠄁 t󠄁h󠄁e󠄁s󠄁e󠄁 g󠄁u󠄁i󠄁d󠄁e󠄁s󠄁:󠄁 a󠄁 g󠄁i󠄁t󠄁 t󠄁a󠄁g󠄁 f󠄁o󠄁r󠄁 a󠄁 s󠄁o󠄁u󠄁r󠄁c󠄁e󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁o󠄁u󠄁t󠄁 a󠄁n󠄁d󠄁 a󠄁n󠄁 i󠄁m󠄁a󠄁g󠄁e󠄁 t󠄁a󠄁g󠄁 f󠄁o󠄁r󠄁 a󠄁 c󠄁o󠄁n󠄁t󠄁a󠄁i󠄁n󠄁e󠄁r󠄁.󠄁 T󠄁h󠄁e󠄁 s󠄁h󠄁i󠄁p󠄁p󠄁e󠄁d󠄁 C󠄁o󠄁m󠄁p󠄁o󠄁s󠄁e󠄁 f󠄁i󠄁l󠄁e󠄁s󠄁 r󠄁e󠄁a󠄁d󠄁 a󠄁 d󠄁i󠄁f󠄁f󠄁e󠄁r󠄁e󠄁n󠄁t󠄁 v󠄁a󠄁r󠄁i󠄁a󠄁b󠄁l󠄁e󠄁,󠄁 `OTS_IMAGE_TAG`;󠄁 s󠄁e󠄁t󠄁 i󠄁t󠄁 f󠄁r󠄁o󠄁m󠄁 `OTS_VERSION` a󠄁s󠄁 s󠄁h󠄁o󠄁w󠄁n󠄁 i󠄁n󠄁 [I󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁 w󠄁i󠄁t󠄁h󠄁 D󠄁o󠄁c󠄁k󠄁e󠄁r󠄁](/en/install/docker).󠄁 S󠄁e󠄁t󠄁t󠄁i󠄁n󠄁g󠄁 o󠄁n󠄁l󠄁y󠄁 `OTS_VERSION` d󠄁o󠄁e󠄁s󠄁 n󠄁o󠄁t󠄁 o󠄁v󠄁e󠄁r󠄁r󠄁i󠄁d󠄁e󠄁 C󠄁o󠄁m󠄁p󠄁o󠄁s󠄁e󠄁'󠄁s󠄁 p󠄁i󠄁n󠄁n󠄁e󠄁d󠄁 i󠄁m󠄁a󠄁g󠄁e󠄁 d󠄁e󠄁f󠄁a󠄁u󠄁l󠄁t󠄁.󠄁
+
 
 Tags of the form `vX.Y.Z` are immutable and point at one release forever. The
 rest move: `latest` follows the newest release, `next` follows release
