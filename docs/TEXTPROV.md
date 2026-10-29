@@ -212,7 +212,7 @@ validated before percent-encoding.
 ## Maintenance
 
 The decoder is pinned to npm `textprov` 0.2.1 in `package.json` and
-`pnpm-lock.yaml`; the Python producer is pinned to PyPI `textprov==0.2.0` in
+`pnpm-lock.yaml`; the Python producer is pinned to PyPI `textprov==0.3.0` in
 `tools/requirements.txt`. `pnpm-workspace.yaml` excludes textprov 0.2.1 from
 pnpm's minimum release age; that entry can go once the release is a day old. CI installs both before provenance checks. Update the
 Python version guard in `tools/dogfood.py` when changing its pin. SDK sources

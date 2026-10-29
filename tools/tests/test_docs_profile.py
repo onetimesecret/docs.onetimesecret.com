@@ -1,12 +1,38 @@
 from pathlib import Path
 import sys
 import unittest
+from unittest import mock
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import dogfood
 
 
 class DocsProfileTests(unittest.TestCase):
+    def test_unchanged_preserve_only_check_parses_stripped_after(self):
+        source = dogfood.textprov.mark("Prose") + " `code`\n"
+        plain = dogfood.textprov.strip_marks(source)
+        with mock.patch.object(
+            dogfood, "markdown_info", wraps=dogfood.markdown_info
+        ) as parser:
+            self.assertEqual(
+                dogfood.check_text(
+                    Path("page.md"), source, source, require_marks=False
+                ),
+                [],
+            )
+        parser.assert_called_once_with([plain])
+
+    def test_unchanged_preserve_only_check_does_not_skip_parser_failure(self):
+        source = dogfood.textprov.mark("Prose")
+        with mock.patch.object(
+            dogfood, "markdown_info", side_effect=ValueError("parser failed")
+        ) as parser, self.assertRaisesRegex(ValueError, "parser failed"):
+            dogfood.check_text(
+                Path("page.md"), source, source, require_marks=False
+            )
+        parser.assert_called_once_with(["Prose"])
+
+
     def test_editing_legacy_pua_preserves_its_encoding_and_validates_markdown(self):
         legacy = dogfood.textprov.mark('Old', mode='pua')
         source = legacy + ' prose\n'
