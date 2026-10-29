@@ -1,0 +1,27 @@
+# Structural coverage: nested mappings, sequences of mappings, block scalars,
+# preceding comment blocks and trailing release markers.
+site:
+  # The public host and port.
+  # Two comment lines, both preserved.
+  host: localhost:3000  # Since v0.24.0
+  interface:
+    ui:
+      links:
+      - text: API Docs
+        url: https://api.example.com/
+      - text: Feedback
+        url: /feedback  # Since v0.25.0
+  banner: |
+    first line
+    second line
+  summary: >
+    folded line one
+    folded line two
+  empty_map: {}
+  empty_seq: []
+  unset_value:
+  blank_value: ''
+  null_value: null
+  paths:
+  - /health
+  - /status

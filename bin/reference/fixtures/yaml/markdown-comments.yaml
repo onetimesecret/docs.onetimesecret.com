@@ -1,0 +1,4 @@
+# A comment with |pipes|, <b>HTML</b>, `backticks`, *stars* and _underscores_.
+site:
+  # Values over 100 mean "unlimited" <see docs> | pipe | & ampersand.
+  limit: 100  # Since v0.26.1 <!-- inline html comment -->
