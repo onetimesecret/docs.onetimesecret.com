@@ -22,7 +22,13 @@ export const VENDOR_DIR = join(repoRoot, "vendor", "onetimesecret");
 export const MANIFEST_PATH = join(VENDOR_DIR, "manifest.json");
 
 /** Roles a vendored file may declare. */
-export const ROLES = ["env-reference", "config-defaults", "auth-defaults", "logging-defaults"];
+export const ROLES = [
+  "env-reference",
+  "config-defaults",
+  "auth-defaults",
+  "logging-defaults",
+  "billing-example",
+];
 
 /** Files that live beside the snapshots and are not inputs. */
 const NOT_INPUTS = new Set(["manifest.json", "README.md"]);

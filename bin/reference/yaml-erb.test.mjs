@@ -471,8 +471,14 @@ describe('assignOwner', () => {
     expect(assignOwner({ fileShort: 'logging', path: 'loggers.app.level' })).toBe('auth-logging-and-billing-files');
   });
 
+  it('routes the billing example to the ancillary-files page', () => {
+    expect(assignOwner({ fileShort: 'billing', path: 'plans.free' })).toBe(
+      'auth-logging-and-billing-files',
+    );
+  });
+
   it('returns unassigned for a file with no rules', () => {
-    expect(assignOwner({ fileShort: 'billing', path: 'plans.free' })).toBe('unassigned');
+    expect(assignOwner({ fileShort: 'unknown', path: 'anything.at.all' })).toBe('unassigned');
   });
 
   it('gives every record exactly one known owner', () => {
