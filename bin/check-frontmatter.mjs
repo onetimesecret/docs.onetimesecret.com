@@ -178,6 +178,34 @@ const REQUIRED_ANCHORS = {
     "united-states",
   ],
   "security/our-principles": ["privacy-first", "communication", "data-minimization"],
+  // The old self-hosting/environment-variables URL redirects here. Only
+  // development-only was intentionally retired; the renderer test records that exception.
+  "reference/environment-variables": [
+    "secrets--cryptography",
+    "connections",
+    "site-identity--core",
+    "secret-ttl-configuration",
+    "secret-options",
+    "email",
+    "authentication",
+    "organizations",
+    "custom-mail-sender-dns-settings",
+    "sso--omniauth",
+    "stripe-billing",
+    "custom-domains",
+    "feature-flags",
+    "api-access",
+    "incoming-secrets",
+    "reverse-proxy--client-ip",
+    "middleware",
+    "ui--homepage",
+    "branding--private-label",
+    "logging--diagnostics",
+    "job-system",
+    "server--worker-tuning",
+    "compatibility",
+    "experimental-features",
+  ],
 };
 
 // D-4.1. The pages that own every default. They are exempt from assertion 4

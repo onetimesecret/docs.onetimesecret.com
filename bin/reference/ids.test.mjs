@@ -1,7 +1,8 @@
 // bin/reference/ids.test.mjs
 import { readFileSync } from "node:fs";
+import { createRequire } from "node:module";
 import { dirname, join } from "node:path";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 import { describe, expect, it } from "vitest";
 
 import { parseEnvReference } from "./env-parser.mjs";
@@ -37,6 +38,30 @@ describe("anchorFor", () => {
     expect(anchorFor("Secrets & Cryptography")).toBe("secrets--cryptography");
     expect(anchorFor("SSO / OmniAuth")).toBe("sso--omniauth");
     expect(anchorFor("Branding / Private-Label")).toBe("branding--private-label");
+  });
+
+  it("matches Astro's installed processor, including literal custom-id syntax", async () => {
+    // Resolve Astro's dependency rather than assuming a hoisted Markdown package.
+    const astroRequire = createRequire(
+      createRequire(import.meta.url).resolve("astro/package.json"),
+    );
+    const { createSatteriMarkdownProcessor } = await import(
+      pathToFileURL(astroRequire.resolve("@astrojs/markdown-satteri")).href
+    );
+    const processor = await createSatteriMarkdownProcessor({ syntaxHighlight: false });
+    const headings = [
+      "SECRET_VERIFIER_MODE",
+      "Secrets & Cryptography",
+      "SSO / OmniAuth",
+      "Branding / Private-Label",
+      "SECRET_VERIFIER_MODE {#env-secret-verifier-mode}",
+    ];
+    const { code, metadata } = await processor.render(
+      headings.map((text) => `### ${text}`).join("\n\n"),
+    );
+    expect(metadata.headings.map((heading) => heading.slug)).toEqual(headings.map(anchorFor));
+    expect(code).toContain('id="secret_verifier_mode-env-secret-verifier-mode"');
+    expect(code).toContain("SECRET_VERIFIER_MODE {#env-secret-verifier-mode}</h3>");
   });
 });
 

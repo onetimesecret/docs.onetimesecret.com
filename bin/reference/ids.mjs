@@ -14,9 +14,9 @@
 // heading changes.
 //
 // The anchor cannot be chosen. This stack renders Markdown with
-// @astrojs/markdown-satteri, whose heading-ids plugin slugs the heading's TEXT
-// and only leaves an id alone when some earlier plugin already set one. There
-// is no `{#custom-id}` syntax: rendering
+// @astrojs/markdown-satteri (Astro's processor in pnpm-lock.yaml), whose
+// heading-ids plugin slugs the heading's TEXT and only leaves an id alone when
+// some earlier plugin already set one. There is no `{#custom-id}` syntax: rendering
 //
 //   ### SECRET_VERIFIER_MODE {#env-secret-verifier-mode}
 //

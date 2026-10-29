@@ -28,7 +28,7 @@ C󠄁o󠄁m󠄁m󠄁o󠄁n󠄁 f󠄁i󠄁e󠄁l󠄁d󠄁s󠄁:󠄁
   `health-<slug>`.󠄁
 - `evidence[]` —󠄁 o󠄁n󠄁e󠄁 o󠄁r󠄁 m󠄁o󠄁r󠄁e󠄁 `{ path, lines, note }` o󠄁b󠄁j󠄁e󠄁c󠄁t󠄁s󠄁.󠄁 `path` i󠄁s󠄁
   `onetimesecret/<repository path>` a󠄁n󠄁d󠄁 `lines` i󠄁s󠄁 a󠄁 r󠄁a󠄁n󠄁g󠄁e󠄁 i󠄁n󠄁 t󠄁h󠄁a󠄁t󠄁 f󠄁i󠄁l󠄁e󠄁 a󠄁t󠄁 t󠄁h󠄁e󠄁 m󠄁a󠄁n󠄁i󠄁f󠄁e󠄁s󠄁t󠄁 S󠄁H󠄁A󠄁.󠄁
-  E󠄁v󠄁e󠄁r󠄁y󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁 c󠄁a󠄁r󠄁r󠄁i󠄁e󠄁s󠄁 a󠄁t󠄁 l󠄁e󠄁a󠄁s󠄁t󠄁 o󠄁n󠄁e󠄁.󠄁
+  E󠄁v󠄁e󠄁r󠄁y󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁 i󠄁n󠄁c󠄁l󠄁u󠄁d󠄁e󠄁s󠄁 a󠄁t󠄁 l󠄁e󠄁a󠄁s󠄁t󠄁 o󠄁n󠄁e󠄁.󠄁
 
 `cli.json` r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁s󠄁 a󠄁d󠄁d󠄁:󠄁 `command`,󠄁 `family`,󠄁 `aliases[]`,󠄁 `description` (󠄁t󠄁h󠄁e󠄁 c󠄁o󠄁m󠄁m󠄁a󠄁n󠄁d󠄁'󠄁s󠄁 o󠄁w󠄁n󠄁
 r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁e󠄁r󠄁e󠄁d󠄁 d󠄁e󠄁s󠄁c󠄁r󠄁i󠄁p󠄁t󠄁i󠄁o󠄁n󠄁,󠄁 v󠄁e󠄁r󠄁b󠄁a󠄁t󠄁i󠄁m󠄁)󠄁,󠄁 `arguments[]` a󠄁n󠄁d󠄁 `options[]` (󠄁v󠄁e󠄁r󠄁b󠄁a󠄁t󠄁i󠄁m󠄁 d󠄁e󠄁c󠄁l󠄁a󠄁r󠄁a󠄁t󠄁i󠄁o󠄁n󠄁s󠄁 w󠄁i󠄁t󠄁h󠄁
