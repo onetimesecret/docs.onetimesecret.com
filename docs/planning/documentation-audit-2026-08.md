@@ -560,6 +560,13 @@ replacement. It now runs off the vendored snapshot rather than a live app-repo f
 this phase's engineering estimate and removes its external blocker, at the cost of a refresh step that
 Phase 5 has to own.
 
+> **Implementation plan, 2026-10-29:**
+> [`Phase 4 implementation plan`](./documentation-audit-2026-08-phase-4-plan.md) reconciles this scope
+> against docs `862a5ab5`. It accounts for 12 Reference, 12 Operate and three diagnosis/migration
+> destinations, the existing app-side environment generator and drift workflow, Configure draft
+> dependencies, branch sequencing and publication gates. This is a completed plan, not a declaration
+> that Phase 4 has shipped; application-source verification remains implementation work.
+
 **Phase 5 — drift prevention (3–4 weeks).** Every defect in this audit went unnoticed because nothing
 checks for it. Add `check:orphans`, `check:nav`, a frontmatter linter, and a reference-drift CI gate.
 Today's only QA scripts are link checkers and a vitest suite covering the config generator alone.
