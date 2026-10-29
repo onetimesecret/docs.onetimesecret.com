@@ -31,8 +31,12 @@
 // DEFAULTS ARE DECLARED, NEVER INFERRED. `declaredDefault` is non-null only
 // when the attached prose says so outright, in one of two forms:
 //
-//   # Default: 2592000 (30 days).        -> "2592000"
+//   # Default: 2592000 (30 days).        -> "2592000 (30 days)."
 //   # warn (default) | enforce | off.    -> "warn"
+//
+// Keep the full Default: paragraph, including wrapped lines: punctuation and
+// parentheticals may describe fallback chains or conditional defaults, not
+// merely explanations that can safely be discarded.
 //
 // The second form is the risky one: `(default)` also appears in sentences like
 // "all enabled methods are shown (default)", where the preceding word is not a
@@ -142,31 +146,31 @@ export function sectionSlug(rawTitle) {
     .replace(/^-+|-+$/g, "");
 }
 
-/** Strip one leading `#` and at most one following space from a comment line. */
+/** Strip indentation, one `#` and at most one following space from a comment line. */
 function uncomment(line) {
-  return line.replace(/^#[ \t]?/, "").replace(/\s+$/, "");
+  return line.replace(/^\s*#[ \t]?/, "").replace(/\s+$/, "");
 }
 
 /**
- * Are this line's quotes balanced?
+ * Does a value that starts quoted have a closing quote?
  *
- * Used only to diagnose a malformed value. Walks the string tracking which
- * quote character opened, so `'#3B82F6'` and `"--enable-frozen-string-literal"`
- * read as closed and `FOO="oops` does not. A backslash escapes the next
- * character inside a double-quoted run, as a shell would read it.
+ * This is reference text, not shell syntax: quotes inside an unquoted value
+ * (such as `it's fine`) are literal characters. Only a leading quote starts
+ * a quoted value. Backslashes escape the next character inside double quotes.
  */
 function quotesBalanced(value) {
-  let quote = null;
-  for (let i = 0; i < value.length; i++) {
-    const char = value[i];
+  const text = value.trimStart();
+  const quote = text[0];
+  if (quote !== '"' && quote !== "'") return true;
+  for (let i = 1; i < text.length; i++) {
+    const char = text[i];
     if (quote === '"' && char === "\\") {
       i++;
       continue;
     }
-    if (quote === null && (char === '"' || char === "'")) quote = char;
-    else if (quote === char) quote = null;
+    if (char === quote) return true;
   }
-  return quote === null;
+  return false;
 }
 
 /** Does this value end in an unquoted backslash continuation? */
@@ -185,17 +189,19 @@ function continues(value) {
  *   | {ambiguous: string, evidence: string} | null}
  */
 export function declaredDefaultFrom(prose, exampleValue) {
-  for (const line of prose) {
+  for (const [index, line] of prose.entries()) {
     const match = line.match(DECLARED_DEFAULT_RE);
     if (!match) continue;
-    // Take the stated value up to the first clause break. "3600 (1 hour)."
-    // and "false; set to 'true' to enable." both state one value; the rest of
-    // the sentence is explanation, and keeping it would publish a sentence in
-    // a default column.
-    const value = match[1]
-      .split(/\s+[—-]\s+|[;,]|\s\(|\.\s|\.$/)[0]
-      .trim();
-    if (value !== "") return { value, form: "default-colon", evidence: line };
+    // Preserve the whole paragraph rather than guess where a value ends and
+    // explanation begins. Wrapped prose may complete a conditional default.
+    const paragraph = [line];
+    for (let i = index + 1; i < prose.length && prose[i].trim() !== ""; i++) {
+      paragraph.push(prose[i]);
+    }
+    const value = [match[1], ...paragraph.slice(1)].join(" ").trim();
+    if (value !== "") {
+      return { value, form: "default-colon", evidence: paragraph.join("\n") };
+    }
   }
 
   const example = exampleValue.replace(/^["']|["']$/g, "").trim().toLowerCase();

@@ -83,12 +83,17 @@ function verbatimBlock(lines) {
 /** A value as an inline code span safe to drop into a table cell. */
 export function inlineCode(value) {
   if (value === "") return "";
+  // GFM splits table cells before parsing code spans. For backslash-pipe pairs,
+  // use entities instead of doubling literal backslashes inside a code span.
+  if (/\\\|/.test(value)) {
+    const entities = { "&": "&amp;", "<": "&lt;", ">": "&gt;", "\\": "&#92;", "|": "&#124;" };
+    return `<code>${value.replace(/[&<>\\|]/g, (char) => entities[char])}</code>`;
+  }
   let longest = 0;
   for (const run of value.match(/`+/g) ?? []) longest = Math.max(longest, run.length);
   const mark = "`".repeat(longest + 1);
-  // A pipe ends a table cell even inside a code span, so it is the one
-  // character that must be escaped. A leading or trailing backtick in the
-  // value needs the padding space that CommonMark strips back off.
+  // Ordinary backslashes are literal in code spans. Escape only table pipes;
+  // pad edge backticks so CommonMark does not mistake them for the delimiter.
   const body = value.replace(/\|/g, "\\|");
   const pad = body.startsWith("`") || body.endsWith("`") ? " " : "";
   return `${mark}${pad}${body}${pad}${mark}`;
@@ -243,7 +248,9 @@ export function renderCoverageReport({ parsed, manifest, coverage, sections }) {
   ];
 
   for (const section of sections) {
-    out.push(`| ${section.heading} | ${section.published.length} | \`#${anchorFor(section.heading)}\` |`);
+    out.push(
+      `| ${section.heading} | ${section.published.length} | \`#${anchorFor(section.heading)}\` |`,
+    );
   }
 
   out.push("", "## Excluded", "");
@@ -251,7 +258,9 @@ export function renderCoverageReport({ parsed, manifest, coverage, sections }) {
   else {
     out.push("| Reason | Count | Names |", "| --- | --- | --- |");
     for (const [reason, records] of [...coverage.excludedByReason].sort()) {
-      const names = records.map((record) => `\`${record.name}\` (line ${record.lineStart})`).join(", ");
+      const names = records
+        .map((record) => `\`${record.name}\` (line ${record.lineStart})`)
+        .join(", ");
       out.push(`| ${reason} | ${records.length} | ${names} |`);
     }
     out.push("");
@@ -272,7 +281,7 @@ export function renderCoverageReport({ parsed, manifest, coverage, sections }) {
   else {
     out.push("| Kind | Line | Name | Detail |", "| --- | --- | --- | --- |");
     for (const diagnostic of coverage.diagnostics) {
-      const detail = diagnostic.detail.replace(/\|/g, "\\|");
+      const detail = diagnostic.detail.replace(/\\/g, "\\\\").replace(/\|/g, "\\|");
       out.push(
         `| ${diagnostic.kind} | ${diagnostic.line} | ${diagnostic.name ? `\`${diagnostic.name}\`` : "—"} | ${detail} |`,
       );

@@ -19,6 +19,8 @@ import {
 
 const here = dirname(fileURLToPath(import.meta.url));
 const fixture = (name) => readFileSync(join(here, "fixtures", name), "utf8");
+const parseSection = (lines) =>
+  parseEnvReference(["# ═══", "# TEST", "# ═══", ...lines].join("\n"));
 
 const sample = parseEnvReference(fixture("sample.envref"), { sourceName: "sample.envref" });
 const byName = (name) => sample.records.filter((record) => record.name === name);
@@ -70,6 +72,30 @@ describe("assignments", () => {
     expect(first("ACTIVE_VALUE").commented).toBe(false);
     expect(one("COMMENTED_TTL").active).toBe(false);
     expect(one("COMMENTED_TTL").commented).toBe(true);
+  });
+
+  it.each(["it's fine", 'say "hello', "'say \"hello\"'", '"it\'s fine"', '"say \\"hello\\""'])(
+    "keeps quote characters in inert text: %s",
+    (value) => {
+      for (const prefix of ["", "#"]) {
+        const parsed = parseSection([`${prefix}FOO=${value}`]);
+        expect(parsed.records[0].exampleValue).toBe(value);
+        expect(parsed.diagnostics).toEqual([]);
+        expect(coverageReport(parsed).published).toEqual(parsed.records);
+      }
+    },
+  );
+
+  it("continues unquoted text containing an apostrophe", () => {
+    const parsed = parseSection(["FOO=it's fine \\", "and inert"]);
+    expect(parsed.records).toHaveLength(1);
+    expect(parsed.records[0]).toMatchObject({
+      exampleValue: "it's fine \nand inert",
+      lineStart: 4,
+      lineEnd: 5,
+      classification: "supported",
+    });
+    expect(parsed.diagnostics).toEqual([]);
   });
 
   it("keeps an empty value empty rather than calling it unset", () => {
@@ -136,19 +162,85 @@ describe("malicious-looking values stay inert", () => {
 });
 
 describe("declared defaults", () => {
-  it("takes `Default: X` and drops the explanation after it", () => {
+  it("preserves the complete `Default: X` statement", () => {
     expect(one("COMMENTED_TTL").declaredDefault).toMatchObject({
-      value: "3600",
+      value: "3600 (1 hour).",
       form: "default-colon",
     });
   });
 
   it("takes the `Default when unset:` phrasing", () => {
     expect(one("PHRASED_DEFAULT").declaredDefault).toMatchObject({
-      value: '"Secure Links"',
+      value: '"Secure Links" (neutral).',
       form: "default-colon",
     });
   });
+
+  it.each([
+    "10.0.0.0/8,172.16.0.0/12",
+    "one;two",
+    '"comma, semicolon; parentheses (here) — dash - and period. inside"',
+    "false; set to 'true' to enable.",
+    "30 — looser than the reset-request cap.",
+  ])("does not truncate a declared expression: %s", (value) => {
+    const line = `Default: ${value}`;
+    expect(declaredDefaultFrom([line], "")).toEqual({
+      value,
+      form: "default-colon",
+      evidence: line,
+    });
+  });
+
+  it("preserves the BRAND_TOTP_ISSUER fallback chain", () => {
+    const parsed = parseSection([
+      "# Default when unset: BRAND_PRODUCT_NAME, then OTS.",
+      "#BRAND_TOTP_ISSUER=",
+    ]);
+    expect(parsed.records[0].declaredDefault).toEqual({
+      value: "BRAND_PRODUCT_NAME, then OTS.",
+      form: "default-colon",
+      evidence: "Default when unset: BRAND_PRODUCT_NAME, then OTS.",
+    });
+  });
+
+  it("preserves both PUMA_MIN_THREADS defaults across wrapped prose", () => {
+    const parsed = parseSection([
+      "# Default: 1 when RACK_ENV=production (the Docker default), 0 in",
+      "# development.",
+      "#PUMA_MIN_THREADS=1",
+    ]);
+    expect(parsed.records[0].declaredDefault).toEqual({
+      value: "1 when RACK_ENV=production (the Docker default), 0 in development.",
+      form: "default-colon",
+      evidence: "Default: 1 when RACK_ENV=production (the Docker default), 0 in\ndevelopment.",
+    });
+  });
+
+  it("ends a declared-default paragraph at an empty comment line", () => {
+    expect(
+      declaredDefaultFrom(["Default: first,", "then second.", "", "Other prose."], ""),
+    ).toEqual({
+      value: "first, then second.",
+      form: "default-colon",
+      evidence: "Default: first,\nthen second.",
+    });
+  });
+
+  it.each(["  ", "\t"])(
+    "strips indented comment markers from section and variable prose: %j",
+    (indent) => {
+      const parsed = parseSection([
+        `${indent}# Section context.`,
+        "",
+        `${indent}# Default: 3600`,
+        `${indent}# seconds.`,
+        "#FOO=3600",
+      ]);
+      expect(parsed.sections[0].prose).toEqual(["Section context."]);
+      expect(parsed.records[0].prose).toEqual(["Default: 3600", "seconds."]);
+      expect(parsed.records[0].declaredDefault).toMatchObject({ value: "3600 seconds." });
+    },
+  );
 
   it("takes `X (default)` when X is the variable's own example value", () => {
     expect(one("ENUM_MODE").declaredDefault).toMatchObject({
@@ -209,6 +301,22 @@ describe("diagnostics", () => {
       ),
     ).toBeTruthy();
   });
+
+  it.each(['"oops', "'oops", '  "oops', '"escaped\\"'])(
+    "still diagnoses an unterminated leading quote: %s",
+    (value) => {
+      const parsed = parseSection([`FOO=${value}`]);
+      expect(parsed.records[0]).toMatchObject({ exampleValue: value, classification: "malformed" });
+      expect(parsed.diagnostics).toEqual([
+        expect.objectContaining({ kind: "malformed-assignment", name: "FOO", line: 4 }),
+      ]);
+      const coverage = coverageReport(parsed);
+      expect(coverage.published).toEqual([]);
+      expect(coverage.excluded).toEqual([
+        expect.objectContaining({ classification: "malformed", record: parsed.records[0] }),
+      ]);
+    },
+  );
 
   it("reports a repeated name against its first declaration", () => {
     const repeats = byName("ACTIVE_VALUE");

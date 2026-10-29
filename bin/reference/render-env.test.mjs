@@ -1,7 +1,9 @@
 // bin/reference/render-env.test.mjs
 import { readFileSync } from "node:fs";
+import { createRequire } from "node:module";
 import { dirname, join } from "node:path";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
+import { JSDOM } from "jsdom";
 import { describe, expect, it } from "vitest";
 
 import { headings, parseFrontmatter } from "../lib/frontmatter.mjs";
@@ -43,6 +45,41 @@ describe("inlineCode", () => {
 
   it("leaves an ordinary value alone", () => {
     expect(inlineCode("production")).toBe("`production`");
+  });
+
+  it("preserves literal values and table columns through Astro's processor", async () => {
+    const astroRequire = createRequire(
+      createRequire(import.meta.url).resolve("astro/package.json"),
+    );
+    const { createSatteriMarkdownProcessor } = await import(
+      pathToFileURL(astroRequire.resolve("@astrojs/markdown-satteri")).href
+    );
+    const processor = await createSatteriMarkdownProcessor({ syntaxHighlight: false });
+    for (const value of [
+      "path\\to\\file",
+      "trailing\\",
+      "plain|pipe",
+      "one\\|pipe",
+      "two\\\\|pipe",
+      "three\\\\\\|pipe",
+      "`edge`",
+      "html<&>\\|<img src=x>",
+      "literal&amp;\\|entity",
+    ]) {
+      const { code } = await processor.render(
+        `| Value | Sentinel |\n| --- | --- |\n| ${inlineCode(value)} | unchanged |\n`,
+      );
+      const dom = new JSDOM(code);
+      try {
+        const cells = dom.window.document.querySelectorAll("tbody tr td");
+        expect(cells, value).toHaveLength(2);
+        expect(cells[0].querySelector("code")?.textContent, value).toBe(value);
+        expect(cells[1].textContent).toBe("unchanged");
+        expect(dom.window.document.querySelector("img")).toBeNull();
+      } finally {
+        dom.window.close();
+      }
+    }
   });
 });
 
@@ -91,14 +128,18 @@ describe("structure", () => {
 
   it("gives every variable a unique fragment that is the lower-cased name", () => {
     const h3 = headings(body).filter((heading) => heading.depth === 3);
-    expect(h3.map((heading) => heading.slug)).toEqual(h3.map((heading) => heading.text.toLowerCase()));
+    expect(h3.map((heading) => heading.slug)).toEqual(
+      h3.map((heading) => heading.text.toLowerCase()),
+    );
     expect(new Set(h3.map((heading) => heading.slug)).size).toBe(h3.length);
   });
 });
 
 describe("source text is verbatim", () => {
   it("renders prose inside a fence so Markdown cannot reinterpret it", () => {
-    expect(page).toContain("[derived] reads as a link reference, a pipe | mid-sentence, <b>html</b>,");
+    expect(page).toContain(
+      "[derived] reads as a link reference, a pipe | mid-sentence, <b>html</b>,",
+    );
   });
 
   it("uses a fence long enough to hold prose that contains a fence", () => {
@@ -149,7 +190,7 @@ describe("table cells", () => {
 
   it("says a default is not declared rather than reusing the example", () => {
     expect(row("ACTIVE_VALUE")).toContain(RENDERER_STRINGS.cellNoDeclaredDefault);
-    expect(row("COMMENTED_TTL")).toContain("`3600`");
+    expect(row("COMMENTED_TTL")).toContain("`3600 (1 hour).`");
   });
 
   it("reports an unannotated variable as unannotated", () => {
@@ -230,7 +271,10 @@ const LEGACY_SECTION_FRAGMENTS = [
 ];
 
 describe("the tracked page", () => {
-  const tracked = readFileSync(join(repoRoot, "src/content/docs/en/reference/environment-variables.md"), "utf8");
+  const tracked = readFileSync(
+    join(repoRoot, "src/content/docs/en/reference/environment-variables.md"),
+    "utf8",
+  );
   const trackedBody = parseFrontmatter(tracked).body;
 
   it("keeps every section fragment the legacy page published, except development-only", () => {
