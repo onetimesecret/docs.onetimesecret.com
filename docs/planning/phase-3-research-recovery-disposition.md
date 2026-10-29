@@ -69,8 +69,8 @@ or ownership-transfer command is executed.
   `/Users/d/Projects/ops/sites/docs.onetimesecret.com/tmp/phase3-recovery/research`,
   outside `.git`. The earlier test/build failures were location issues; no
   dependency or build-configuration fix was required.
-- **Latest normal validation:** the maintainer reports that `pnpm test && pnpm build`
+- **Latest normal validation:** the coordinating agent ran `pnpm test && pnpm build`
   passed in the moved worktree with no overrides, producing **1,324 pages**.
   The agent then reran normal `pnpm test` there: **287 tests / 16 suites passed**.
   The build was not rerun during this planning-record follow-up; its passing result
-  is maintainer-reported, not a new agent build run.
+  was observed by the coordinating agent, not rerun by the subagent.
