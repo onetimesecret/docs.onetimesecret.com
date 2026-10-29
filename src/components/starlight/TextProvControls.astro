@@ -12,7 +12,7 @@ const guide = `/${starlightRoute.locale}/contribute/text-provenance`;
 ---
 <div class="textprov-panel" data-pagefind-ignore>
   <div class="textprov-row">
-    <button type="button" class="textprov-switch" role="switch" aria-checked="false" aria-describedby="textprov-help" data-textprov-toggle>
+    <button type="button" class="textprov-switch" role="switch" aria-checked="false" aria-describedby="textprov-help" title={t('textprov.help')} data-textprov-toggle>
       <span class="textprov-track" aria-hidden="true"></span>
       <span class="textprov-label">{t('textprov.toggle')}</span>
     </button>
@@ -28,6 +28,8 @@ const guide = `/${starlightRoute.locale}/contribute/text-provenance`;
     </button>
     <div id="textprov-about" class="textprov-about" popover>
       <p>{t('textprov.about')}</p>
+      <p>{t('textprov.meaning')}</p>
+      <p>{t('textprov.choice')}</p>
       <a href={guide}>{t('textprov.learnMore')}</a>
     </div>
   </div>

@@ -87,6 +87,8 @@ export const collections = {
         "textprov.help": z.string().optional(),
         "textprov.info": z.string().optional(),
         "textprov.about": z.string().optional(),
+        "textprov.meaning": z.string().optional(),
+        "textprov.choice": z.string().optional(),
         "textprov.learnMore": z.string().optional(),
       }),
     }),
