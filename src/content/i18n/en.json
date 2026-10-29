@@ -169,7 +169,7 @@
   "notFound.selfHosting": "Self-hosting",
   "textprov.toggle": "Highlight AI edits",
   "textprov.help": "Highlights recorded AI agent edits. Unmarked content has no recorded origin.",
-  "textprov.groupingHelp": "Passage view includes unmarked text around recorded AI edits. Exact character view shows the recorded ranges. Unmarked text has no recorded origin.",
+  "textprov.groupingHelp": "Passage view adds word-level context around recorded AI edits. Dotted underlines identify exact recorded characters in both views, except in links. Unmarked text has no recorded origin.",
   "textprov.display": "Highlight detail",
   "textprov.passage": "Passages",
   "textprov.exact": "Exact characters",

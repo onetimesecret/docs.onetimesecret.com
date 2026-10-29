@@ -33,7 +33,7 @@
       background: var(--sl-color-accent-low);
     }
 
-    :root[data-textprov='shown'] :is(.textprov-ai, .textprov-passage, .textprov-label):not(a) {
+    :root[data-textprov='shown'] :is(.textprov-ai, .textprov-label):not(a) {
       text-decoration-line: underline;
       text-decoration-style: dotted;
       text-decoration-color: var(--sl-color-text-accent);
@@ -54,21 +54,25 @@
           color-mix(in srgb, var(--sl-color-text-accent) calc(var(--textprov-tint) * 1.6), transparent) 55%,
           color-mix(in srgb, var(--sl-color-text-accent) calc(var(--textprov-tint) * .6), transparent)
         );
+      }
+
+      :root[data-textprov='shown'] :is(.textprov-ai, .textprov-label) {
         box-shadow: 0 0 var(--textprov-glow-blur) var(--textprov-glow-spread)
           color-mix(in srgb, var(--sl-color-text-accent) var(--textprov-glow-opacity), transparent);
       }
 
-      :root[data-textprov='shown'] :is(.textprov-ai, .textprov-passage, .textprov-label):not(a) {
+      :root[data-textprov='shown'] :is(.textprov-ai, .textprov-label):not(a) {
         text-decoration-color: color-mix(in srgb, var(--sl-color-text-accent) var(--textprov-dot-strength), transparent);
       }
     }
 
-    /* Passage grouping is presentation only. Exact ranges remain available. */
-    :root:not([data-textprov-display='exact']) .textprov-passage .textprov-ai,
-    :root[data-textprov-display='exact'] .textprov-passage:not(a) {
+    /* Passage context adds only a faint fill. Nested exact ranges keep their
+     * dots without a second fill or glow; exact mode paints only exact ranges.
+     */
+    :root[data-textprov='shown']:not([data-textprov-display='exact']) .textprov-passage .textprov-ai,
+    :root[data-textprov='shown'][data-textprov-display='exact'] .textprov-passage {
       background: none;
       box-shadow: none;
-      text-decoration: none;
     }
 
     /* Links own their underline channel. Editors can opt proofing ranges out
