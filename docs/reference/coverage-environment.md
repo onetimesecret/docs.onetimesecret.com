@@ -69,7 +69,7 @@ None.
 | ambiguous-default | 528 | `AUTH_PASSWORD_ONLY` | prose says "(default)" after "shown", which is not recognizable as a value — no default recorded (evidence: "If none are set, all enabled methods are shown (default).") |
 | ambiguous-default | 1210 | `LINK_DOMAINS` | prose says "(default)" after "domain", which is not recognizable as a value — no default recorded (evidence: "  unset         -> the picker offers the canonical domain (default)") |
 | ambiguous-default | 1786 | `ADMIN_ALLOWED_CIDRS` | prose says "(default)" after "Unset/empty", which is not recognizable as a value — no default recorded (evidence: "Unset/empty (default): NO-OP — both surfaces reachable, gated only by the auth") |
-| ambiguous-default | 2049 | `DEFAULT_DISABLED_HOMEPAGE_VARIANT` | prose says "(default)" after "button", which is not recognizable as a value — no default recorded (evidence: "  closed  - quiet \"members only\" two-tagline page, no sign-in button (default)") |
+| ambiguous-default | 2049 | `DEFAULT_DISABLED_HOMEPAGE_VARIANT` | prose says "(default)" after "button", which is not recognizable as a value — no default recorded (evidence: "  closed  - quiet \\"members only\\" two-tagline page, no sign-in button (default)") |
 | ambiguous-default | 2370 | `LOG_FORMATTER` | prose says "(default)" after "PID/thread", which is not recognizable as a value — no default recorded (evidence: "with ANSI colors, timestamps, PID/thread (default); json = structured") |
 | duplicate-name | 2668 | `RACK_ENV` | already declared at line 262 |
 | duplicate-name | 2669 | `NODE_ENV` | already declared at line 263 |

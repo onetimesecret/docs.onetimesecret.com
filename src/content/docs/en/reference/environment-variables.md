@@ -98,7 +98,7 @@ recommended).
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#SESSION_ABSOLUTE_TIMEOUT=2592000` | `2592000` | v0.26.14 | none | `.env.reference:48-58` |
+| `#SESSION_ABSOLUTE_TIMEOUT=2592000` | `2592000 (30 days). Set to 0 to disable the bound (not recommended).` | v0.26.14 | none | `.env.reference:48-58` |
 
 ### IDENTIFIER_SECRET
 
@@ -579,7 +579,7 @@ free-tier fallback. Rename it.
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#TTL_MAX_ANONYMOUS=604800` | `604800` | v0.26.3 | none | `.env.reference:279-295` |
+| `#TTL_MAX_ANONYMOUS=604800` | `604800 (7 days). Max: 31536000 (365 days). Clamped between 1 second and 365 days; invalid or non-positive values use the default. The effective ceiling is the lower of this and the TTL_OPTIONS maximum. Self-hosted deployments may raise it above 7 days; on deployments with billing enabled the free-tier plan limit applies as an additional ceiling, so anonymous callers never outrank an authenticated free-tier user.` | v0.26.3 | none | `.env.reference:279-295` |
 
 ## Secret Options
 
@@ -680,7 +680,7 @@ Default: false; set to 'true' to enable.
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#PASSPHRASE_REQUIRED=false` | `false` | not annotated | none | `.env.reference:336-340` |
+| `#PASSPHRASE_REQUIRED=false` | `false; set to 'true' to enable.` | not annotated | none | `.env.reference:336-340` |
 
 ### PASSWORD_GEN_EXCLUDE_AMBIGUOUS
 
@@ -801,7 +801,7 @@ Default: 60.
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#GENERATED_VALUE_DISPLAY_TTL=60` | `60` | v0.24.0 | none | `.env.reference:392-398` |
+| `#GENERATED_VALUE_DISPLAY_TTL=60` | `60.` | v0.24.0 | none | `.env.reference:392-398` |
 
 ## Email
 
@@ -1216,7 +1216,7 @@ Default: 30.
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#RESET_REQUEST_RATE_LIMIT_MAX_PER_EMAIL=30` | `30` | v0.26.3 | none | `.env.reference:575-578` |
+| `#RESET_REQUEST_RATE_LIMIT_MAX_PER_EMAIL=30` | `30.` | v0.26.3 | none | `.env.reference:575-578` |
 
 ### RESET_REQUEST_RATE_LIMIT_WINDOW
 
@@ -1228,7 +1228,7 @@ Default: 3600 (1 hour).
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#RESET_REQUEST_RATE_LIMIT_WINDOW=3600` | `3600` | v0.26.3 | none | `.env.reference:580-583` |
+| `#RESET_REQUEST_RATE_LIMIT_WINDOW=3600` | `3600 (1 hour).` | v0.26.3 | none | `.env.reference:580-583` |
 
 ### RESET_REQUEST_RATE_LIMIT_LOCKOUT
 
@@ -1240,7 +1240,7 @@ Default: 3600 (1 hour).
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#RESET_REQUEST_RATE_LIMIT_LOCKOUT=3600` | `3600` | v0.26.3 | none | `.env.reference:585-588` |
+| `#RESET_REQUEST_RATE_LIMIT_LOCKOUT=3600` | `3600 (1 hour).` | v0.26.3 | none | `.env.reference:585-588` |
 
 ### EMAIL_LOGIN_REQUEST_RATE_LIMIT_ENABLED
 
@@ -1276,7 +1276,7 @@ or POST /api/colonel/ratelimit/reset with kind=email_login_request_ip.
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#EMAIL_LOGIN_REQUEST_RATE_LIMIT_MAX_PER_IP=30` | `30` | unreleased | none | `.env.reference:602-610` |
+| `#EMAIL_LOGIN_REQUEST_RATE_LIMIT_MAX_PER_IP=30` | `30 — looser than the reset-request cap because a magic link is a sign-in method and a whole masked /24 shares the bucket. The same TRUSTED_PROXY_ENABLED caveat as RESET_REQUEST_RATE_LIMIT_MAX_PER_IP applies. To clear a stuck lockout:   bin/ots ratelimit keys email_login_request_ip <masked-ip> \| grep -v '^#' \| valkey-cli or POST /api/colonel/ratelimit/reset with kind=email_login_request_ip.` | unreleased | none | `.env.reference:602-610` |
 
 ### EMAIL_LOGIN_REQUEST_RATE_LIMIT_MAX_PER_EMAIL
 
@@ -1295,7 +1295,7 @@ the mail an account receives.
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#EMAIL_LOGIN_REQUEST_RATE_LIMIT_MAX_PER_EMAIL=90` | `90` | unreleased | none | `.env.reference:612-622` |
+| `#EMAIL_LOGIN_REQUEST_RATE_LIMIT_MAX_PER_EMAIL=90` | `90. Keep it at least 2 x EMAIL_LOGIN_REQUEST_RATE_LIMIT_MAX_PER_IP, and EMAIL_LOGIN_REQUEST_RATE_LIMIT_LOCKOUT at least EMAIL_LOGIN_REQUEST_RATE_LIMIT_WINDOW: a single IP timing its requests around its own window boundary lands up to 2 x max_per_ip - 2 requests in one login's window, and with a shorter lockout it is free again inside that window, so one source could lock a victim out of magic-link sign-in from every IP. The defaults satisfy both. Rodauth's resend window already caps the mail an account receives.` | unreleased | none | `.env.reference:612-622` |
 
 ### EMAIL_LOGIN_REQUEST_RATE_LIMIT_WINDOW
 
@@ -1307,7 +1307,7 @@ Default: 3600 (1 hour).
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#EMAIL_LOGIN_REQUEST_RATE_LIMIT_WINDOW=3600` | `3600` | unreleased | none | `.env.reference:624-627` |
+| `#EMAIL_LOGIN_REQUEST_RATE_LIMIT_WINDOW=3600` | `3600 (1 hour).` | unreleased | none | `.env.reference:624-627` |
 
 ### EMAIL_LOGIN_REQUEST_RATE_LIMIT_LOCKOUT
 
@@ -1320,7 +1320,7 @@ Default: 3600 (1 hour). Keep it >= EMAIL_LOGIN_REQUEST_RATE_LIMIT_WINDOW
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#EMAIL_LOGIN_REQUEST_RATE_LIMIT_LOCKOUT=3600` | `3600` | unreleased | none | `.env.reference:629-633` |
+| `#EMAIL_LOGIN_REQUEST_RATE_LIMIT_LOCKOUT=3600` | `3600 (1 hour). Keep it >= EMAIL_LOGIN_REQUEST_RATE_LIMIT_WINDOW (see EMAIL_LOGIN_REQUEST_RATE_LIMIT_MAX_PER_EMAIL).` | unreleased | none | `.env.reference:629-633` |
 
 ### CREATE_ACCOUNT_RATE_LIMIT_ENABLED
 
@@ -1354,7 +1354,7 @@ Default: 10.
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#CREATE_ACCOUNT_RATE_LIMIT_MAX_PER_IP=10` | `10` | v0.26.3 | none | `.env.reference:650-653` |
+| `#CREATE_ACCOUNT_RATE_LIMIT_MAX_PER_IP=10` | `10.` | v0.26.3 | none | `.env.reference:650-653` |
 
 ### CREATE_ACCOUNT_RATE_LIMIT_WINDOW
 
@@ -1366,7 +1366,7 @@ Default: 3600 (1 hour).
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#CREATE_ACCOUNT_RATE_LIMIT_WINDOW=3600` | `3600` | v0.26.3 | none | `.env.reference:674-677` |
+| `#CREATE_ACCOUNT_RATE_LIMIT_WINDOW=3600` | `3600 (1 hour).` | v0.26.3 | none | `.env.reference:674-677` |
 
 ### CREATE_ACCOUNT_RATE_LIMIT_LOCKOUT
 
@@ -1378,7 +1378,7 @@ Default: 3600 (1 hour).
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#CREATE_ACCOUNT_RATE_LIMIT_LOCKOUT=3600` | `3600` | v0.26.3 | none | `.env.reference:679-682` |
+| `#CREATE_ACCOUNT_RATE_LIMIT_LOCKOUT=3600` | `3600 (1 hour).` | v0.26.3 | none | `.env.reference:679-682` |
 
 ### AUTH_REMEMBER_ME_ENABLED
 
@@ -1394,7 +1394,7 @@ Default: true.
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#AUTH_REMEMBER_ME_ENABLED=true` | `true` | v0.24.0 | none | `.env.reference:684-691` |
+| `#AUTH_REMEMBER_ME_ENABLED=true` | `true.` | v0.24.0 | none | `.env.reference:684-691` |
 
 ### AUTH_SERVICE_URL
 
@@ -1439,7 +1439,7 @@ leave AUTH_VERIFY_ACCOUNT_ENABLED on.
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#AUTH_WEBAUTHN_VERIFY_ACCOUNT=false` | `false` | v0.26.5 | none | `.env.reference:708-715` |
+| `#AUTH_WEBAUTHN_VERIFY_ACCOUNT=false` | `false. Only the literal string 'true' enables — any other value (including '1', 'yes', or mere presence) leaves it off. Requires AUTH_WEBAUTHN_ENABLED=true and AUTHENTICATION_MODE=full; leave AUTH_VERIFY_ACCOUNT_ENABLED on.` | v0.26.5 | none | `.env.reference:708-715` |
 
 ## Organizations
 
@@ -2628,7 +2628,7 @@ Default: false.
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#DOMAINS_REQUIRE_VERIFIED=false` | `false` | v0.25.2 | none | `.env.reference:1250-1257` |
+| `#DOMAINS_REQUIRE_VERIFIED=false` | `false.` | v0.25.2 | none | `.env.reference:1250-1257` |
 
 ### DOMAINS_SERVE_UNVERIFIED
 
@@ -2677,7 +2677,7 @@ Default: 10.
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#SSO_DIAGNOSTICS_RATE_LIMIT_MAX_PER_CUSTOMER=10` | `10` | unreleased | none | `.env.reference:1282-1285` |
+| `#SSO_DIAGNOSTICS_RATE_LIMIT_MAX_PER_CUSTOMER=10` | `10.` | unreleased | none | `.env.reference:1282-1285` |
 
 ### SSO_DIAGNOSTICS_RATE_LIMIT_WINDOW
 
@@ -2689,7 +2689,7 @@ Default: 3600 (1 hour).
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#SSO_DIAGNOSTICS_RATE_LIMIT_WINDOW=3600` | `3600` | unreleased | none | `.env.reference:1287-1290` |
+| `#SSO_DIAGNOSTICS_RATE_LIMIT_WINDOW=3600` | `3600 (1 hour).` | unreleased | none | `.env.reference:1287-1290` |
 
 ### SSO_DIAGNOSTICS_RATE_LIMIT_LOCKOUT
 
@@ -2701,7 +2701,7 @@ Default: 3600 (1 hour).
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#SSO_DIAGNOSTICS_RATE_LIMIT_LOCKOUT=3600` | `3600` | unreleased | none | `.env.reference:1292-1295` |
+| `#SSO_DIAGNOSTICS_RATE_LIMIT_LOCKOUT=3600` | `3600 (1 hour).` | unreleased | none | `.env.reference:1292-1295` |
 
 ### SSO_METADATA_FETCH_RATE_LIMIT_ENABLED
 
@@ -2732,7 +2732,7 @@ Default: 30.
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#SSO_METADATA_FETCH_RATE_LIMIT_MAX_PER_CUSTOMER=30` | `30` | unreleased | none | `.env.reference:1309-1312` |
+| `#SSO_METADATA_FETCH_RATE_LIMIT_MAX_PER_CUSTOMER=30` | `30.` | unreleased | none | `.env.reference:1309-1312` |
 
 ### SSO_METADATA_FETCH_RATE_LIMIT_WINDOW
 
@@ -2744,7 +2744,7 @@ Default: 3600 (1 hour).
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#SSO_METADATA_FETCH_RATE_LIMIT_WINDOW=3600` | `3600` | unreleased | none | `.env.reference:1314-1317` |
+| `#SSO_METADATA_FETCH_RATE_LIMIT_WINDOW=3600` | `3600 (1 hour).` | unreleased | none | `.env.reference:1314-1317` |
 
 ### SSO_METADATA_FETCH_RATE_LIMIT_LOCKOUT
 
@@ -2756,7 +2756,7 @@ Default: 3600 (1 hour).
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#SSO_METADATA_FETCH_RATE_LIMIT_LOCKOUT=3600` | `3600` | unreleased | none | `.env.reference:1319-1322` |
+| `#SSO_METADATA_FETCH_RATE_LIMIT_LOCKOUT=3600` | `3600 (1 hour).` | unreleased | none | `.env.reference:1319-1322` |
 
 ### SENDER_TEST_EMAIL_RATE_LIMIT_ENABLED
 
@@ -2787,7 +2787,7 @@ Default: 10.
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#SENDER_TEST_EMAIL_RATE_LIMIT_MAX_PER_CUSTOMER=10` | `10` | unreleased | none | `.env.reference:1336-1339` |
+| `#SENDER_TEST_EMAIL_RATE_LIMIT_MAX_PER_CUSTOMER=10` | `10.` | unreleased | none | `.env.reference:1336-1339` |
 
 ### SENDER_TEST_EMAIL_RATE_LIMIT_WINDOW
 
@@ -2799,7 +2799,7 @@ Default: 3600 (1 hour).
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#SENDER_TEST_EMAIL_RATE_LIMIT_WINDOW=3600` | `3600` | unreleased | none | `.env.reference:1341-1344` |
+| `#SENDER_TEST_EMAIL_RATE_LIMIT_WINDOW=3600` | `3600 (1 hour).` | unreleased | none | `.env.reference:1341-1344` |
 
 ### SENDER_TEST_EMAIL_RATE_LIMIT_LOCKOUT
 
@@ -2811,7 +2811,7 @@ Default: 3600 (1 hour).
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#SENDER_TEST_EMAIL_RATE_LIMIT_LOCKOUT=3600` | `3600` | unreleased | none | `.env.reference:1346-1349` |
+| `#SENDER_TEST_EMAIL_RATE_LIMIT_LOCKOUT=3600` | `3600 (1 hour).` | unreleased | none | `.env.reference:1346-1349` |
 
 ## Feature Flags
 
@@ -3085,7 +3085,7 @@ Default: true; set to 'false' to mark the API disabled in the UI.
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#API_ENABLED=true` | `true` | not annotated | none | `.env.reference:1446-1451` |
+| `#API_ENABLED=true` | `true; set to 'false' to mark the API disabled in the UI.` | not annotated | none | `.env.reference:1446-1451` |
 
 ### API_GUEST_BURN
 
@@ -3286,7 +3286,7 @@ Default: 10.
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#INCOMING_RATE_LIMIT_MAX_PER_IP=10` | `10` | v0.26.0 | none | `.env.reference:1546-1549` |
+| `#INCOMING_RATE_LIMIT_MAX_PER_IP=10` | `10.` | v0.26.0 | none | `.env.reference:1546-1549` |
 
 ### INCOMING_RATE_LIMIT_MAX_PER_RECIPIENT
 
@@ -3430,7 +3430,7 @@ unset) unless the mode is depth.
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `TRUSTED_PROXY_HEADER=X-Forwarded-For` | `X-Forwarded-For` | v0.25.5 | none | `.env.reference:1626-1650` |
+| `TRUSTED_PROXY_HEADER=X-Forwarded-For` | ``X-Forwarded-For. The accepted set is closed — exactly one of: - X-Forwarded-For  the de facto standard, written by nginx, Caddy, HAProxy,                    ALB/ELB, Cloudflare, Fastly, and most k8s ingresses - Forwarded        RFC 7239 (for=/by=/proto=), emitted by HAProxy and Apache                    when configured for it; still uncommon in practice - Both             read Forwarded first, fall back to X-Forwarded-For Case-insensitive, so `forwarded` is accepted and canonicalized. Any other value fails the boot with an ArgumentError rather than silently resolving from the wrong header.`` | v0.25.5 | none | `.env.reference:1626-1650` |
 
 ### TRUSTED_PROXY_CIDRS
 
@@ -3876,7 +3876,7 @@ Default: true. Set to 'false' to disable.
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#MIDDLEWARE_AUTHENTICITY_TOKEN=true` | `true` | v0.24.0 | none | `.env.reference:1889-1894` |
+| `#MIDDLEWARE_AUTHENTICITY_TOKEN=true` | `true. Set to 'false' to disable.` | v0.24.0 | none | `.env.reference:1889-1894` |
 
 ### MIDDLEWARE_COOKIE_TOSSING
 
@@ -3904,7 +3904,7 @@ Default: true. Set to 'false' to disable.
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#MIDDLEWARE_FRAME_OPTIONS=true` | `true` | v0.24.0 | none | `.env.reference:1904-1908` |
+| `#MIDDLEWARE_FRAME_OPTIONS=true` | `true. Set to 'false' to disable.` | v0.24.0 | none | `.env.reference:1904-1908` |
 
 ### MIDDLEWARE_HTTP_ORIGIN
 
@@ -4000,7 +4000,7 @@ Default: true. Set to 'false' to disable.
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#MIDDLEWARE_UTF8_SANITIZER=true` | `true` | v0.24.0 | none | `.env.reference:1957-1962` |
+| `#MIDDLEWARE_UTF8_SANITIZER=true` | `true. Set to 'false' to disable.` | v0.24.0 | none | `.env.reference:1957-1962` |
 
 ### MIDDLEWARE_XSS_HEADER
 
@@ -4025,7 +4025,7 @@ Default: true. Set to 'false' to disable.
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#MIDDLEWARE_AUTH_DEFLATER=true` | `true` | v0.26.5 | none | `.env.reference:1979-1981` |
+| `#MIDDLEWARE_AUTH_DEFLATER=true` | `true. Set to 'false' to disable.` | v0.26.5 | none | `.env.reference:1979-1981` |
 
 ### MIDDLEWARE_AUTH_CONTENT_SECURITY_POLICY
 
@@ -4036,7 +4036,7 @@ Default: true. Set to 'false' to disable.
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#MIDDLEWARE_AUTH_CONTENT_SECURITY_POLICY=true` | `true` | v0.26.5 | none | `.env.reference:1983-1985` |
+| `#MIDDLEWARE_AUTH_CONTENT_SECURITY_POLICY=true` | `true. Set to 'false' to disable.` | v0.26.5 | none | `.env.reference:1983-1985` |
 
 ### MIDDLEWARE_AUTH_FRAME_OPTIONS
 
@@ -4047,7 +4047,7 @@ Default: true. Set to 'false' to disable.
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#MIDDLEWARE_AUTH_FRAME_OPTIONS=true` | `true` | v0.26.5 | none | `.env.reference:1987-1989` |
+| `#MIDDLEWARE_AUTH_FRAME_OPTIONS=true` | `true. Set to 'false' to disable.` | v0.26.5 | none | `.env.reference:1987-1989` |
 
 ### MIDDLEWARE_AUTH_HTTP_ORIGIN
 
@@ -4060,7 +4060,7 @@ Default: true. Set to 'false' to disable.
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#MIDDLEWARE_AUTH_HTTP_ORIGIN=true` | `true` | v0.26.5 | none | `.env.reference:1991-1995` |
+| `#MIDDLEWARE_AUTH_HTTP_ORIGIN=true` | `true. Set to 'false' to disable.` | v0.26.5 | none | `.env.reference:1991-1995` |
 
 ### MIDDLEWARE_AUTH_IP_SPOOFING
 
@@ -4082,7 +4082,7 @@ Default: true. Set to 'false' to disable.
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#MIDDLEWARE_AUTH_PATH_TRAVERSAL=true` | `true` | v0.26.5 | none | `.env.reference:2001-2003` |
+| `#MIDDLEWARE_AUTH_PATH_TRAVERSAL=true` | `true. Set to 'false' to disable.` | v0.26.5 | none | `.env.reference:2001-2003` |
 
 ### MIDDLEWARE_AUTH_SESSION_HIJACKING
 
@@ -4321,7 +4321,7 @@ Default: true each.
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#UI_CAPABILITIES_SHOW=true` | `true each` | v0.25.0 | none | `.env.reference:2112-2115` |
+| `#UI_CAPABILITIES_SHOW=true` | `true each.` | v0.25.0 | none | `.env.reference:2112-2115` |
 
 ### UI_CAPABILITIES_RECIPIENT
 
@@ -4359,7 +4359,7 @@ Default when unset: #3B82F6 (neutral blue).
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#BRAND_PRIMARY_COLOR='#3B82F6'` | `#3B82F6` | v0.26.0 | none | `.env.reference:2129-2131` |
+| `#BRAND_PRIMARY_COLOR='#3B82F6'` | `#3B82F6 (neutral blue).` | v0.26.0 | none | `.env.reference:2129-2131` |
 
 ### BRAND_PRODUCT_NAME
 
@@ -4371,7 +4371,7 @@ Default when unset: "Secure Links" (neutral).
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#BRAND_PRODUCT_NAME=` | `"Secure Links"` | v0.26.0 | none | `.env.reference:2133-2136` |
+| `#BRAND_PRODUCT_NAME=` | `"Secure Links" (neutral).` | v0.26.0 | none | `.env.reference:2133-2136` |
 
 ### BRAND_PRODUCT_DOMAIN
 
@@ -4383,7 +4383,7 @@ Default: unset.
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#BRAND_PRODUCT_DOMAIN=` | `unset` | v0.26.0 | none | `.env.reference:2138-2141` |
+| `#BRAND_PRODUCT_DOMAIN=` | `unset.` | v0.26.0 | none | `.env.reference:2138-2141` |
 
 ### BRAND_SUPPORT_EMAIL
 
@@ -4559,7 +4559,7 @@ Default when unset: BRAND_PRODUCT_NAME, then OTS.
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#BRAND_TOTP_ISSUER=` | `BRAND_PRODUCT_NAME` | v0.26.0 | none | `.env.reference:2244-2247` |
+| `#BRAND_TOTP_ISSUER=` | `BRAND_PRODUCT_NAME, then OTS.` | v0.26.0 | none | `.env.reference:2244-2247` |
 
 ### BRAND_SIGNATURE_NAME
 
@@ -4811,7 +4811,7 @@ Default: info.
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#LOG_AUDIT_SYSLOG_LEVEL=info` | `info` | v0.26.11 | none | `.env.reference:2347-2353` |
+| `#LOG_AUDIT_SYSLOG_LEVEL=info` | `info.` | v0.26.11 | none | `.env.reference:2347-2353` |
 
 ### LOG_AUDIT_SYSLOG_URL
 
@@ -4829,7 +4829,7 @@ Default: syslog://localhost.
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#LOG_AUDIT_SYSLOG_URL=syslog://localhost` | `syslog://localhost` | v0.26.11 | none | `.env.reference:2355-2364` |
+| `#LOG_AUDIT_SYSLOG_URL=syslog://localhost` | `syslog://localhost.` | v0.26.11 | none | `.env.reference:2355-2364` |
 
 ### LOG_FORMATTER
 
@@ -4856,7 +4856,7 @@ Default: 1000.
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#LOG_HTTP_SLOW_REQUEST_MS=1000` | `1000` | v0.24.0 | none | `.env.reference:2372-2377` |
+| `#LOG_HTTP_SLOW_REQUEST_MS=1000` | `1000.` | v0.24.0 | none | `.env.reference:2372-2377` |
 
 ### LOG_LEVEL
 
@@ -5296,7 +5296,7 @@ Default: 16.
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#PUMA_MAX_THREADS=16` | `16` | v0.24.0 | none | `.env.reference:2597-2601` |
+| `#PUMA_MAX_THREADS=16` | `16.` | v0.24.0 | none | `.env.reference:2597-2601` |
 
 ### PUMA_MIN_THREADS
 
@@ -5309,7 +5309,7 @@ development.
 
 | Example line | Declared default | Since | Tags | Source |
 | --- | --- | --- | --- | --- |
-| `#PUMA_MIN_THREADS=1` | `1 when RACK_ENV=production` | v0.24.0 | none | `.env.reference:2603-2607` |
+| `#PUMA_MIN_THREADS=1` | `1 when RACK_ENV=production (the Docker default), 0 in development.` | v0.24.0 | none | `.env.reference:2603-2607` |
 
 ### PUMA_WORKERS
 
