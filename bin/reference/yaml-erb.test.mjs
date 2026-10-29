@@ -3,6 +3,9 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { describe, expect, it } from 'vitest';
+import { unified } from 'unified';
+import remarkParse from 'remark-parse';
+import remarkGfm from 'remark-gfm';
 
 import {
   ConfigExtractionError,
@@ -19,6 +22,14 @@ import {
 } from './yaml-erb.mjs';
 
 const FIXTURES = join(dirname(fileURLToPath(import.meta.url)), 'fixtures', 'yaml');
+
+const PINNED_DEFAULTS = {
+  fileName: 'etc/defaults/config.defaults.yaml',
+  text: readFileSync(
+    new URL('../../vendor/onetimesecret/etc/defaults/config.defaults.yaml', import.meta.url),
+    'utf8',
+  ),
+};
 
 function fixture(name) {
   return readFileSync(join(FIXTURES, name), 'utf8');
@@ -68,6 +79,77 @@ describe('tokenizeErb', () => {
     expect(tokenized.text.split('\n')).toHaveLength(text.split('\n').length);
     expect(tokenized.text).toHaveLength(text.length);
     expect(tokenized.text.split('\n').at(-2)).toBe('next: 1');
+  });
+
+  it('preserves UTF-16 offsets with emoji before output, comment and structural spans', () => {
+    const text =
+      "# 🔐 defaults\nname: \"😀<%= ENV['NAME'] %>\"\n" +
+      '# 💬 <%# note\ncontinued %>\n<% if enabled %>\nhidden: 1\n<% end %>\ntail: 2\n';
+    const tokenized = tokenizeErb(text);
+    expect(tokenized.text).toHaveLength(text.length);
+    for (let i = 0; i < text.length; i += 1) {
+      expect(tokenized.mapOffset(i)).toBe(i);
+      if (text[i] === '\n') expect(tokenized.text[i]).toBe('\n');
+    }
+    expect(tokenized.text).toContain('# 🔐 defaults\nname: "😀_E0_');
+    expect(tokenized.text).not.toMatch(/<%|hidden|continued/);
+    const result = extractConfigKeys({ text, fileName: 'memory.yaml' });
+    expect(byPath(result, 'name')).toMatchObject({
+      lineStart: 2,
+      rawValue: "\"😀<%= ENV['NAME'] %>\"",
+    });
+    expect(byPath(result, 'tail')).toMatchObject({ lineStart: 8, rawValue: '2' });
+  });
+
+  it.each(['<%=%>', '<%=\n%>'])('keeps minimal spans inert: %s', (raw) => {
+    const text = `value: ${raw}\ntail: 2\n`;
+    const tokenized = tokenizeErb(text);
+    expect(tokenized.text).toHaveLength(text.length);
+    expect(tokenized.text.split('\n')).toHaveLength(text.split('\n').length);
+    const result = extractConfigKeys({ text, fileName: 'memory.yaml' });
+    expect(byPath(result, 'value')).toMatchObject({ rawValue: raw, erbSpanIndexes: [0] });
+    expect(byPath(result, 'tail').rawValue).toBe('2');
+    expect(result.accounting.unattachedOutput).toBe(0);
+  });
+
+  it('keeps short tokens distinct and maps offsets after expanded multiline placeholders', () => {
+    // Base-36 indices 10 and 100 exercise the old delimiter-free prefix pair.
+    const count = 1298;
+    const text =
+      '# 😀\n' +
+      Array.from({ length: count }, (_, i) => `key${i}: <%=\n%>\n`).join('') +
+      '<% if enabled %>\nhidden: 1\n<% end %>\n# tail comment\ntail: 2 # Since v1.2.3\n';
+    const tokenized = tokenizeErb(text);
+    const tokens = tokenized.spans
+      .filter((span) => span.kind === 'output')
+      .map((span) => span.token);
+    expect(new Set(tokens).size).toBe(count);
+    for (const token of tokens) {
+      expect(tokens.some((other) => other !== token && other.startsWith(token))).toBe(false);
+    }
+    expect(tokenized.text.split('\n')).toHaveLength(text.split('\n').length);
+    expect(tokenized.text).not.toMatch(/<%|hidden/);
+    for (const suffix of ['# tail comment', 'tail: 2', '# Since v1.2.3']) {
+      expect(tokenized.mapOffset(tokenized.text.indexOf(suffix))).toBe(text.indexOf(suffix));
+    }
+    expect(tokenized.mapOffset(tokenized.text.length)).toBe(text.length);
+    const result = extractConfigKeys({ text, fileName: 'memory.yaml' });
+    expect(result.records).toHaveLength(count + 1);
+    expect(result.accounting.classifiedOutput).toBe(count);
+    expect(result.accounting.unattachedOutput).toBe(0);
+    for (const i of [0, 36, 1296, 1297]) {
+      expect(byPath(result, `key${i}`)).toMatchObject({
+        rawValue: '<%=\n%>',
+        erbSpanIndexes: [i],
+        lineStart: 2 + i * 2,
+      });
+    }
+    expect(byPath(result, 'tail')).toMatchObject({
+      rawValue: '2',
+      lineStart: count * 2 + 6,
+      comment: '# tail comment',
+      since: 'v1.2.3',
+    });
   });
 
   it('rejects an unterminated span', () => {
@@ -482,7 +564,7 @@ describe('assignOwner', () => {
   });
 
   it('gives every record exactly one known owner', () => {
-    const result = extractFixture('config.defaults.v0.26.19.yaml');
+    const result = extractConfigKeys(PINNED_DEFAULTS);
     for (const record of result.records) {
       expect([...OWNER_PAGES, 'unassigned']).toContain(record.owner);
     }
@@ -490,9 +572,8 @@ describe('assignOwner', () => {
 });
 
 describe('stability against the pinned defaults file', () => {
-  const name = 'config.defaults.v0.26.19.yaml';
-  const text = fixture(name);
-  const result = extractConfigKeys({ text, fileName: name });
+  const { fileName: name, text } = PINNED_DEFAULTS;
+  const result = extractConfigKeys(PINNED_DEFAULTS);
 
   it('parses with no duplicate-key or tag diagnostics', () => {
     expect(result.diagnostics.filter((diagnostic) => diagnostic.kind === 'yaml-error')).toHaveLength(0);
@@ -547,7 +628,7 @@ describe('stability against the pinned defaults file', () => {
 
 describe('buildCoverageReport', () => {
   const entries = extractAll([
-    { fileName: 'config.defaults.v0.26.19.yaml', text: fixture('config.defaults.v0.26.19.yaml') },
+    PINNED_DEFAULTS,
     { fileName: 'structural-if.yaml', text: fixture('structural-if.yaml') },
     { fileName: 'duplicate-keys.yaml', text: fixture('duplicate-keys.yaml') },
   ]);
@@ -565,6 +646,51 @@ describe('buildCoverageReport', () => {
     expect(markdown).toContain('onetimesecret/lib/onetime/config.rb:362-412');
     expect(markdown).toContain('failed extraction');
     expect(markdown).toContain("if %w[true false].include?(ENV['SESSION_COOKIE_SECURE'].to_s)");
+  });
+
+  it.each([
+    'plain|pipe.yaml',
+    'one\\|pipe.yaml',
+    'two\\\\|pipe.yaml',
+    'three\\\\\\|pipe.yaml',
+    'path\\without-pipe.yaml',
+    'trailing\\',
+    'one`tick|pipe.yaml',
+    'two``ticks|pipe.yaml',
+    'html<&>\\|pipe.yaml',
+  ])('preserves table code values without splitting cells: %s', (fileName) => {
+    const report = buildCoverageReport(extractAll([{ fileName, text: 'key: 1\n' }]));
+    const tree = unified().use(remarkParse).use(remarkGfm).parse(report);
+    const tables = tree.children.filter((node) => node.type === 'table');
+    for (const [index, columns] of [
+      [0, 6],
+      [1, 9],
+    ]) {
+      const row = tables[index].children[1];
+      expect(row.children).toHaveLength(columns);
+      const content = row.children[0].children;
+      expect(
+        content
+          .filter((node) => node.type !== 'html')
+          .map((node) => node.value)
+          .join(''),
+      ).toBe(fileName);
+      expect(
+        content.every((node) => node.type === 'inlineCode') ||
+          (content[0].value === '<code>' && content.at(-1).value === '</code>'),
+      ).toBe(true);
+    }
+  });
+
+  it('does not add table escapes to inline code outside tables', () => {
+    const fileName = 'path\\|pipe.yaml';
+    const report = buildCoverageReport(extractAll([{ fileName, text: 'key: 1\n' }]));
+    const tree = unified().use(remarkParse).use(remarkGfm).parse(report);
+    const headingIndex = tree.children.findIndex(
+      (node) => node.type === 'heading' && node.children[0].value === 'Unassigned keys',
+    );
+    const code = tree.children[headingIndex + 1].children[0].children[0].children[0];
+    expect(code).toMatchObject({ type: 'inlineCode', value: `${fileShortName(fileName)}:key` });
   });
 
   it('is deterministic', () => {

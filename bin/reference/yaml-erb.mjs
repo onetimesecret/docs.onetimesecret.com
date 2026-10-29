@@ -231,7 +231,7 @@ function lineAt(starts, offset) {
 }
 
 function placeholderFor(index, spanLength) {
-  const candidates = [`_E${index}_`, `_${index}_`, `_${index.toString(36)}`];
+  const candidates = [`_E${index}_`, `_${index.toString(36)}_`];
   for (const candidate of candidates) {
     if (candidate.length <= spanLength) return { token: candidate, fits: true };
   }
@@ -242,8 +242,9 @@ function placeholderFor(index, spanLength) {
  * Replace every ERB span with an inert placeholder and report the spans.
  *
  * Output spans (`<%= ... %>`) become a placeholder scalar padded to the original
- * span length, which keeps every byte offset, line and column of the remaining
- * YAML identical to the source. Comment spans become spaces. Structural spans
+ * span length where possible, preserving UTF-16 offsets. If a short line segment
+ * needs a longer token, mapOffset translates parser offsets back to the source.
+ * Newlines are always preserved. Comment spans become spaces. Structural spans
  * are grouped into blocks; the lines a block covers are blanked so the YAML
  * parses without the extractor inventing unconditional keys, and the block is
  * reported for review.
@@ -362,51 +363,9 @@ export function tokenizeErb(text, { fileName = '<memory>' } = {}) {
   }
 
   // Build the transformed text.
-  const chars = Array.from(text);
+  const chars = text.split(''); // All source and YAML parser offsets use UTF-16 code units.
   const shifts = [];
-  for (const span of spans) {
-    if (span.kind === 'output') {
-      // A span may cover several lines. Blank every character it covered,
-      // keep its newlines exactly where they were, and write the placeholder
-      // into the first line segment with room for it. Offsets, line numbers and
-      // the total length therefore all match the source.
-      const segments = [];
-      let segmentStart = 0;
-      for (let i = 0; i <= span.raw.length; i += 1) {
-        if (i === span.raw.length || span.raw[i] === '\n') {
-          segments.push({ start: segmentStart, length: i - segmentStart });
-          segmentStart = i + 1;
-        }
-      }
-      const longest = segments.reduce((best, segment) => (segment.length > best.length ? segment : best), segments[0]);
-      const { token, fits } = placeholderFor(span.index, longest.length);
-      span.token = token;
-      const target = segments.find((segment) => segment.length >= token.length) ?? longest;
-      const blanked = span.raw.replace(/[^\n]/g, ' ').split('');
-      // Left-align in the first segment (keeps the source column); right-align
-      // in a later segment so the placeholder stays indented under its key.
-      const at = target === segments[0] ? target.start : target.start + target.length - token.length;
-      for (let i = 0; i < token.length && at + i < blanked.length; i += 1) blanked[at + i] = token[i];
-      const padded = fits ? blanked.join('') : token;
-      if (!fits) {
-        diagnostics.push({
-          kind: 'placeholder-longer-than-span',
-          fileName,
-          line: span.line,
-          detail: `placeholder ${token} exceeds span length ${span.raw.length}`,
-        });
-        shifts.push({ at: span.start, delta: padded.length - span.raw.length });
-      }
-      chars.splice(span.start, span.raw.length, ...padded.split(''));
-      // Keep the array length stable for the common padded case; a shifted span
-      // changes length, which `mapOffset` accounts for.
-    } else {
-      for (let i = span.start; i < span.end; i += 1) chars[i] = ' ';
-    }
-  }
-
-  // Blank every line a structural block covers, so the conditional body never
-  // reaches the parser as if it were unconditional.
+  // Blank structural lines before any replacement can change their offsets.
   for (const block of structuralBlocks) {
     for (let line = block.lineStart; line <= block.lineEnd; line += 1) {
       const from = starts[line - 1];
@@ -416,12 +375,67 @@ export function tokenizeErb(text, { fileName = '<memory>' } = {}) {
       }
     }
   }
+  // Work right-to-left so an expanded placeholder cannot move a later span.
+  for (const span of [...spans].reverse()) {
+    if (isInsideBlock(span, { structuralBlocks })) continue;
+    if (span.kind === 'output') {
+      // A span may cover several lines. Blank every character it covered,
+      // keep its newlines exactly where they were, and write the placeholder
+      // into the first line segment with room for it. Only an undersized
+      // segment expands; the newlines still match the source.
+      const segments = [];
+      let segmentStart = 0;
+      for (let i = 0; i <= span.raw.length; i += 1) {
+        if (i === span.raw.length || span.raw[i] === '\n') {
+          segments.push({ start: segmentStart, length: i - segmentStart });
+          segmentStart = i + 1;
+        }
+      }
+      const longest = segments.reduce(
+        (best, segment) => (segment.length > best.length ? segment : best),
+        segments[0],
+      );
+      const { token, fits } = placeholderFor(span.index, longest.length);
+      span.token = token;
+      const target = segments.find((segment) => segment.length >= token.length) ?? longest;
+      const blanked = span.raw.replace(/[^\n]/g, ' ').split('');
+      // Left-align in the first segment (keeps the source column); right-align
+      // in a later segment so the placeholder stays indented under its key.
+      const at =
+        target === segments[0]
+          ? target.start
+          : target.start + Math.max(0, target.length - token.length);
+      blanked.splice(at, Math.min(token.length, target.length), ...token.split(''));
+      const padded = blanked.join('');
+      if (!fits) {
+        diagnostics.push({
+          kind: 'placeholder-longer-than-span',
+          fileName,
+          line: span.line,
+          detail: `placeholder ${token} exceeds the longest span line segment (${target.length})`,
+        });
+        shifts.push({
+          at: span.start + target.start + target.length,
+          delta: padded.length - span.raw.length,
+        });
+      }
+      chars.splice(span.start, span.raw.length, ...padded.split(''));
+    } else {
+      for (let i = span.start; i < span.end; i += 1) {
+        if (chars[i] !== '\n') chars[i] = ' ';
+      }
+    }
+  }
 
+  shifts.sort((a, b) => a.at - b.at);
   const transformed = chars.join('');
   const mapOffset = (offset) => {
     let delta = 0;
     for (const shift of shifts) {
-      if (shift.at < offset) delta += shift.delta;
+      const transformedAt = shift.at + delta;
+      if (offset < transformedAt) break;
+      if (offset < transformedAt + shift.delta) return shift.at;
+      delta += shift.delta;
     }
     return offset - delta;
   };
@@ -876,6 +890,8 @@ export function assignOwner(record) {
  * @param {number} [input.maxAliasCount] Alias expansion bound.
  * @throws {ConfigExtractionError} on duplicate keys, unresolved or custom tags,
  *   alias expansion beyond the bound, unterminated ERB and unbalanced blocks.
+ *   Configuration ID collisions do not throw: an id-collision diagnostic is
+ *   recorded and a deterministic -2, -3, ... suffix disambiguates the ID.
  */
 export function extractConfigKeys({ text, fileName, maxAliasCount = 50 }) {
   if (typeof text !== 'string') throw new TypeError('extractConfigKeys requires text');
@@ -925,7 +941,8 @@ export function extractConfigKeys({ text, fileName, maxAliasCount = 50 }) {
     throw new ConfigExtractionError(`${fileName}: ${error.message.split('\n')[0]}`, diagnostics);
   }
 
-  const lineOf = (offset) => lineCounter.linePos(tokenized.mapOffset(offset)).line;
+  const sourceStarts = lineStartOffsets(text);
+  const lineOf = (offset) => lineAt(sourceStarts, tokenized.mapOffset(offset));
   const tokenMap = new Map();
   for (const span of tokenized.spans) {
     if (span.token) tokenMap.set(span.token, span);
@@ -1164,12 +1181,19 @@ export function extractAll(files, options = {}) {
   });
 }
 
-// Inline code for a table cell: pipes are escaped, newlines are collapsed, and
-// content with a backtick gets a longer fence. Raw multi-line text goes in a
-// fenced block instead (see the runtime-defined section).
-function mdCode(text) {
-  const inline = String(text).replace(/\s*\n\s*/g, ' ').replace(/\|/g, '\\|');
-  const fence = inline.includes('`') ? '``' : '`';
+// Raw multi-line text goes in a fenced block (see runtime-defined expressions).
+function mdCode(text, inTable = false) {
+  let inline = String(text).replace(/\s*\n\s*/g, ' ');
+  // GFM splits cells before parsing code spans. With a backslash before a pipe,
+  // adding one escape can expose the pipe; doubling backslashes changes the
+  // literal code value. HTML entities preserve both the cell and its value.
+  if (inTable && /\\\|/.test(inline)) {
+    const entities = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '\\': '&#92;', '|': '&#124;' };
+    return `<code>${inline.replace(/[&<>\\|]/g, (char) => entities[char])}</code>`;
+  }
+  if (inTable) inline = inline.replace(/\|/g, '\\|');
+  const runs = inline.match(/`+/g) ?? [];
+  const fence = '`'.repeat(Math.max(0, ...runs.map((run) => run.length)) + 1);
   const pad = inline.includes('`') ? ' ' : '';
   return `${fence}${pad}${inline}${pad}${fence}`;
 }
@@ -1211,7 +1235,7 @@ export function buildCoverageReport(extractions, meta = {}) {
     const { records, structuralBlocks, diagnostics } = entry.result;
     const erbBacked = records.filter((record) => record.erb).length;
     lines.push(
-      `| ${mdCode(entry.fileName)} | ${records.length} | ${erbBacked} | ${records.length - erbBacked} | ${structuralBlocks.length} | ${diagnostics.length} |`,
+      `| ${mdCode(entry.fileName, true)} | ${records.length} | ${erbBacked} | ${records.length - erbBacked} | ${structuralBlocks.length} | ${diagnostics.length} |`,
     );
   }
   lines.push(`| **total** | ${allRecords.length} | ${allRecords.filter((r) => r.erb).length} | ${allRecords.filter((r) => !r.erb).length} | ${ok.reduce((sum, entry) => sum + entry.result.structuralBlocks.length, 0)} | ${ok.reduce((sum, entry) => sum + entry.result.diagnostics.length, 0)} |`);
@@ -1226,7 +1250,7 @@ export function buildCoverageReport(extractions, meta = {}) {
   for (const entry of ok) {
     const a = entry.result.accounting;
     lines.push(
-      `| ${mdCode(entry.fileName)} | ${a.totalSpans} | ${a.output} | ${a.structural} | ${a.comment} | ${a.classifiedOutput} | ${a.outputInsideStructuralBlocks} | ${a.outputInYamlComments} | ${a.unattachedOutput} |`,
+      `| ${mdCode(entry.fileName, true)} | ${a.totalSpans} | ${a.output} | ${a.structural} | ${a.comment} | ${a.classifiedOutput} | ${a.outputInsideStructuralBlocks} | ${a.outputInYamlComments} | ${a.unattachedOutput} |`,
     );
   }
   lines.push('');
@@ -1239,7 +1263,7 @@ export function buildCoverageReport(extractions, meta = {}) {
   for (const record of allRecords) owners.set(record.owner, (owners.get(record.owner) ?? 0) + 1);
   for (const owner of [...OWNER_PAGES, 'unassigned']) {
     if (!owners.has(owner)) continue;
-    lines.push(`| ${mdCode(owner)} | ${owners.get(owner)} |`);
+    lines.push(`| ${mdCode(owner, true)} | ${owners.get(owner)} |`);
   }
   lines.push('');
 
@@ -1247,7 +1271,7 @@ export function buildCoverageReport(extractions, meta = {}) {
   lines.push('');
   lines.push('| Kind | Keys |');
   lines.push('| --- | --- |');
-  for (const [kind, count] of histogram(allRecords)) lines.push(`| ${mdCode(kind)} | ${count} |`);
+  for (const [kind, count] of histogram(allRecords)) lines.push(`| ${mdCode(kind, true)} | ${count} |`);
   lines.push('');
 
   lines.push('## Runtime-defined expressions');
