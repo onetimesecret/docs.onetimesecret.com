@@ -1,9 +1,5 @@
 import { parse } from 'parse5';
-import { createRequire } from 'node:module';
-
-// This server-only renderer needs Node's CommonJS loader. Vite's dev module
-// runner otherwise evaluates the vendored UMD file as ESM without module.exports.
-const textprov = createRequire(import.meta.url)('../../../vendor/textprov/textprov.cjs');
+import textprov from 'textprov';
 
 const escape = (text) => text.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
 const codepoint = (value) => `\\u{${value.toString(16)}}`;
