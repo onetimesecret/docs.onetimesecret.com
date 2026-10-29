@@ -190,9 +190,8 @@ function createGroup(key, items = [], collapsed = false) {
 //
 // Groups nest: Starlight's ManualSidebarGroupSchema accepts a group inside
 // another group's `items` (schemas/sidebar.ts), and createGroup passes `items`
-// straight through, so no helper change was needed for the two-level section.
-// Only "Using Onetime Secret" nests; Self-hosting is deliberately flat (see
-// the comment on that group).
+// straight through, so no helper change was needed for the two-level sections.
+// "Using Onetime Secret" and "Self-hosting" nest; nothing goes deeper.
 //
 // Labels are sentence case ("Send your first secret", "Upgrade guides"), with
 // proper nouns and acronyms kept as written (Docker, Linux, TLS, DNS, SSO,
@@ -275,19 +274,33 @@ const entries = [
     ]),
   ]),
 
-  // Self-hosting is one flat sequence, on purpose. These pages serve one
-  // reader — the operator — in the order they meet them: orient, pick the one
-  // decision that changes what you install, install, configure, upgrade. The
-  // array order IS that sequence (createLink emits no `order` key and nothing
-  // here autogenerates, so Starlight renders the array as written; the
-  // install/* pages carry no `sidebar.order` for the same reason — reorder
-  // here, not in frontmatter). Subgroups would put every page three levels
-  // deep to label a sequence the order already shows; add one only when a
-  // section outgrows this list or gains a second audience.
+  // Self-hosting follows the operator's order: orient, pick the one decision
+  // that changes what you install, install, configure, upgrade. The two
+  // subgroups let the section scan as those steps instead of as one long run
+  // of links.
   //
-  // install/ has no index page on purpose — nothing links to /en/install/ and
-  // the sequence is the index. The six install/* pages are the split of the
+  // Each subgroup is one directory: Install & deploy is install/, Configure
+  // is configure/. The links at this level are the self-hosting/ pages. Keep
+  // it that way: a new page goes in the group for its directory, and a page
+  // that belongs in another group moves there (with a movedPages entry in
+  // config/redirects.mjs) rather than being listed out of place.
+  //
+  // Array order is reading order. createLink emits no `order` key and nothing
+  // here autogenerates, so Starlight renders the array as written; the
+  // install/* pages carry no `sidebar.order` for the same reason. Reorder
+  // here, not in frontmatter.
+  //
+  // install/ has no index page on purpose: nothing links to /en/install/ and
+  // the group is the index. The six install/* pages are the split of the
   // retired self-hosting/installation (Phase 3).
+  //
+  // The configure/* entries follow their prerequisites: keys, outbound email
+  // and session cookies come before the sign-in pages that depend on them.
+  //
+  // The configuration reference, generator and environment variables stay at
+  // this level, after Configure: they live in self-hosting/, and they cover
+  // install-time settings as well as the configure/* ones. Phase 4 replaces
+  // them with reference/* pages.
   //
   // The version-specific upgrade guides (self-hosting/upgrading-v0-*) are NOT
   // listed. They are reached from the table on self-hosting/upgrade-guides,
@@ -295,31 +308,30 @@ const entries = [
   // in the same directory as reachable, so a new release guide needs a row in
   // that table and nothing here. The named IdP recipes use the same pattern:
   // configure/sso/index links its siblings without adding sidebar entries.
-  //
-  // The configure/* entries follow their prerequisites: keys, outbound email
-  // and session cookies come before the sign-in pages that depend on them.
-  // Eight of them in a row was weighed against a Configure subgroup and kept
-  // flat: the group is still one operator sequence, the configure/ overview
-  // is the sub-index, and the install/* run before it is a sibling sequence
-  // of the same size with no index at all. Revisit if a second audience or a
-  // second configure-sized run appears.
   createGroup("selfHosting", [
     createLink("aboutSelfHosting", "self-hosting"),
     createLink("authModeChoice", "self-hosting/simple-or-full-auth"),
-    createLink("imagesAndVariants", "install/images-and-variants"),
-    createLink("installWithDocker", "install/docker"),
-    createLink("installOnLinux", "install/linux"),
-    createLink("runAsAService", "install/run-as-a-service"),
-    createLink("reverseProxyAndTls", "install/reverse-proxy-and-tls"),
-    createLink("verifyYourInstall", "install/verify"),
-    createLink("configurationOverview", "configure"),
-    createLink("configureSecretsAndKeys", "configure/secrets-and-keys"),
-    createLink("configureEmail", "configure/email"),
-    createLink("configureSessions", "configure/sessions-and-cookies"),
-    createLink("configureAuthentication", "configure/authentication"),
-    createLink("configureSso", "configure/sso"),
-    createLink("configureSecurityHeaders", "configure/security-headers"),
-    createLink("configureSecretOptions", "configure/secret-options"),
+
+    createGroup("installationDeployment", [
+      createLink("imagesAndVariants", "install/images-and-variants"),
+      createLink("installWithDocker", "install/docker"),
+      createLink("installOnLinux", "install/linux"),
+      createLink("runAsAService", "install/run-as-a-service"),
+      createLink("reverseProxyAndTls", "install/reverse-proxy-and-tls"),
+      createLink("verifyYourInstall", "install/verify"),
+    ]),
+
+    createGroup("configuration", [
+      createLink("configurationOverview", "configure"),
+      createLink("configureSecretsAndKeys", "configure/secrets-and-keys"),
+      createLink("configureEmail", "configure/email"),
+      createLink("configureSessions", "configure/sessions-and-cookies"),
+      createLink("configureAuthentication", "configure/authentication"),
+      createLink("configureSso", "configure/sso"),
+      createLink("configureSecurityHeaders", "configure/security-headers"),
+      createLink("configureSecretOptions", "configure/secret-options"),
+    ]),
+
     createLink("configurationReference", "self-hosting/configuration"),
     createLink("configurationGenerator", "self-hosting/configuration-generator"),
     createLink("environmentVariables", "self-hosting/environment-variables"),
