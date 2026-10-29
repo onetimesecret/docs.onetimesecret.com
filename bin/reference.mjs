@@ -35,7 +35,8 @@ import {
 const USAGE = `usage:
   node bin/reference.mjs generate
   node bin/reference.mjs check
-  node bin/reference.mjs refresh --repo <path-to-app-checkout> --ref <tag>`;
+  node bin/reference.mjs refresh --repo <path-to-app-checkout> --ref <tag>
+  Add --debug to print a stack trace on failure.`;
 
 /**
  * Build every artifact in memory.
@@ -47,6 +48,17 @@ export function build({ vendorDir = VENDOR_DIR } = {}) {
   const { manifest, inputs, warnings } = loadManifest({ vendorDir });
   const envInput = inputs.get("env-reference");
   const parsed = parseEnvReference(envInput.text, { sourceName: envInput.path });
+  const malformed = parsed.diagnostics.filter(
+    (diagnostic) => diagnostic.kind === "malformed-assignment",
+  );
+  if (malformed.length > 0) {
+    throw new Error(
+      `${envInput.path} has malformed assignments; resolve them before generating reference output:\n` +
+        malformed
+          .map(({ line, name, detail }) => `  line ${line}${name ? ` (${name})` : ""}: ${detail}`)
+          .join("\n"),
+    );
+  }
   const { page, coverage, sections } = renderEnvironmentPage({ parsed, manifest });
   const report = renderCoverageReport({ parsed, manifest, coverage, sections });
   const configuration = renderConfigurationPages({ inputs, manifest });
@@ -176,7 +188,8 @@ function refresh(args) {
     return 2;
   }
 
-  const git = (...rest) => execFileSync("git", ["-C", repo, "--no-pager", ...rest], { maxBuffer: 1 << 28 });
+  const git = (...rest) =>
+    execFileSync("git", ["-C", repo, "--no-pager", ...rest], { maxBuffer: 1 << 28 });
   const commit = git("rev-parse", `${ref}^{commit}`).toString("utf8").trim();
 
   const manifestPath = join(VENDOR_DIR, "manifest.json");
@@ -229,12 +242,16 @@ export function main(argv) {
     return COMMANDS[command](args);
   } catch (error) {
     console.error(`FAIL: ${error.message}`);
+    if (args.includes("--debug")) console.error(error.stack);
     return 2;
   }
 }
 
 // Only when run as a script. The tests import `build` and `diffSummary` from
 // here, and an unguarded call would run the CLI during collection.
-if (process.argv[1] && realpathSync(process.argv[1]) === realpathSync(fileURLToPath(import.meta.url))) {
+if (
+  process.argv[1] &&
+  realpathSync(process.argv[1]) === realpathSync(fileURLToPath(import.meta.url))
+) {
   process.exit(main(process.argv.slice(2)));
 }

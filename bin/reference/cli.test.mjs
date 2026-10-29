@@ -15,11 +15,7 @@ import { afterEach, describe, expect, it } from "vitest";
 
 import { build, compareArtifacts, diffSummary } from "../reference.mjs";
 import { repoRoot, sha256 } from "./manifest.mjs";
-import {
-  CONFIG_COVERAGE_PATH,
-  CONFIG_PAGES,
-  pagePathFor,
-} from "./render-config.mjs";
+import { CONFIG_COVERAGE_PATH, CONFIG_PAGES, pagePathFor } from "./render-config.mjs";
 import { COVERAGE_PATH, PAGE_PATH } from "./render-env.mjs";
 
 const ENTRY = join(repoRoot, "bin", "reference.mjs");
@@ -73,7 +69,9 @@ describe("reproducibility", () => {
 
   it("matches the tracked artifacts", () => {
     for (const artifact of build().artifacts) {
-      expect(readFileSync(join(repoRoot, artifact.path), "utf8"), artifact.path).toBe(artifact.content);
+      expect(readFileSync(join(repoRoot, artifact.path), "utf8"), artifact.path).toBe(
+        artifact.content,
+      );
     }
   });
 
@@ -139,7 +137,10 @@ describe("check", () => {
     const page = join(root, PAGE_PATH);
     writeFileSync(
       page,
-      readFileSync(page, "utf8").replace("## Secrets & Cryptography", "## Secrets and Cryptography"),
+      readFileSync(page, "utf8").replace(
+        "## Secrets & Cryptography",
+        "## Secrets and Cryptography",
+      ),
     );
     const { problems } = compareArtifacts({ root });
     expect(problems).toHaveLength(1);
@@ -155,6 +156,29 @@ describe("check", () => {
     const { problems } = compareArtifacts({ root });
     expect(problems).toHaveLength(1);
     expect(problems[0]).toContain(COVERAGE_PATH);
+  });
+
+  it("fails when the configuration coverage report is edited", () => {
+    const root = stagedRoot();
+    const report = join(root, CONFIG_COVERAGE_PATH);
+    writeFileSync(report, `${readFileSync(report, "utf8")}hand-written line\n`);
+    const { problems } = compareArtifacts({ root });
+    expect(problems).toHaveLength(1);
+    expect(problems[0]).toContain(CONFIG_COVERAGE_PATH);
+  });
+
+  it("rejects malformed assignments even when the snapshot hash is updated", () => {
+    const vendorDir = stagedVendor();
+    const snapshot = join(vendorDir, ".env.reference");
+    const text = `${readFileSync(snapshot, "utf8")}\nBROKEN=\"unterminated\n`;
+    writeFileSync(snapshot, text);
+    const manifestPath = join(vendorDir, "manifest.json");
+    const manifest = JSON.parse(readFileSync(manifestPath, "utf8"));
+    const entry = manifest.files.find((file) => file.role === "env-reference");
+    entry.sha256 = sha256(Buffer.from(text));
+    entry.lines = (text.match(/\n/g) ?? []).length;
+    writeFileSync(manifestPath, JSON.stringify(manifest));
+    expect(() => build({ vendorDir })).toThrow(/has malformed assignments[\s\S]*BROKEN/);
   });
 
   it("fails when an artifact is missing entirely", () => {
@@ -219,6 +243,17 @@ describe("the CLI surface", () => {
     expect(result.stderr).toContain('unknown command "nope"');
   });
 
+  it("prints stacks only when --debug is requested", () => {
+    const missing = join(temp("reference-missing-"), "no-checkout");
+    const args = ["refresh", "--repo", missing, "--ref", "v0.26.19"];
+    const normal = run(args);
+    const debug = run([...args, "--debug"]);
+    expect(normal.status).toBe(2);
+    expect(debug.status).toBe(2);
+    expect(normal.stderr).not.toMatch(/at (?:Object\.)?refresh \(/);
+    expect(debug.stderr).toMatch(/at (?:Object\.)?refresh \(/);
+  });
+
   it("rejects refresh without a repository and a ref", () => {
     const result = run(["refresh"]);
     expect(result.status).toBe(2);
@@ -236,7 +271,11 @@ describe("diffSummary", () => {
   });
 
   it("caps a large divergence instead of printing the whole file", () => {
-    const summary = diffSummary("page.md", Array.from({ length: 200 }, (_, i) => `x${i}`).join("\n"), "y\n");
+    const summary = diffSummary(
+      "page.md",
+      Array.from({ length: 200 }, (_, i) => `x${i}`).join("\n"),
+      "y\n",
+    );
     expect(summary).toMatch(/\+ \.\.\. \d+ more added lines/);
   });
 });
