@@ -1,0 +1,280 @@
+---
+textprov: true
+---
+
+**User**
+
+[@text-provenance.md (34:39)](/en/contribute/text-provenance/) How to improve the visual display using existing Astro configuration and functionality (i.e. without adding a new component).
+
+
+
+
+`Image`
+
+**Assistant**
+
+I’ll check the existing Starlight callout syntax and styles for a way to render this note without a new component.
+
+Use **Starlight’s built-in note aside**, rather than GitHub’s `> [!NOTE]` syntax. The screenshot shows the GitHub marker rendered as ordinary blockquote text.
+
+Replace lines 36–38 in `src/content/docs/en/contribute/text-provenance.md` with:
+
+```md
+:::note
+I'm switching to first-person "I" instead of "we" here to be direct about
+whose thoughts and opinions we're talking about.
+:::
+```
+
+This provides a distinct callout with a note icon, title, tinted background, and light/dark theme styling. It separates the author’s aside from the main argument without additional CSS, imports, components, or configuration changes.
+
+The site already enables Starlight in `config/integrations.mjs`, and other English pages use this syntax. No files changed; rendering was not tested.
+
+**User**
+
+This header needs to be updated
+
+```
+### Origin and review
+
+TextProv records declared origin; it does not detect authorship.
+
+- **Highlighted text was recorded as originating from AI output.** This happens during the
+  development process and is integrated directly into the dev tools we use. It's at an early
+  experimental stage and is not a perfect process. Content can still be highlighted after
+  it's been reviewed by a person, so it doesn't mean that content is bad or low quality;
+  just that those characters originated from AI output.
+- **Text that isn't highlighted doesn't mean it was written by a person.** Older content
+  was not labelled retroactively, so a page with no highlights can still contain earlier
+  AI work.
+- **The marks do not indicate review or accuracy.** They record how text was
+  written, not whether someone has checked it or whether it is correct.
+```
+
+**Assistant**
+
+I’ll change the heading to “What the highlights mean” and leave the explanation unchanged.
+
+The page has existing edits, which I’ll preserve. I’ll use the repository’s TextProv tool to change only the heading, then run the required checks.
+
+The heading is updated. Tests, frontmatter, navigation, and the build passed. The combined TextProv check reported mark-preservation errors; I’ll check whether those come from the pre-existing edits.
+
+Updated `src/content/docs/en/contribute/text-provenance.md:14`:
+
+```md
+### What the highlights mean
+```
+
+Body text and existing edits are unchanged.
+
+Validation: 312 Vitest tests, 66 Python tests, frontmatter, navigation, and production build passed. The heading-only TextProv check passed; the combined diff retains 26 pre-existing mark-preservation errors.
+
+**User**
+
+With that change, how to differentiatew from the section header itself?
+
+```
+## What the highlighting tells you
+
+The **Highlight AI edits** toggle reveals the characters that were recorded as AI-written.
+Turning it on changes how the content is displayed, but does not change the content itself.
+
+### What the highlights mean
+```
+
+**Assistant**
+
+Make the parent heading name the feature, and the subsection explain how to interpret it:
+
+```md
+## AI highlighting
+
+[Existing introduction about the toggle.]
+
+### What the highlights mean
+
+[Existing explanation and bullets.]
+
+### Your display preference
+```
+
+This separates **the feature**, **its meaning and limitations**, and **the reader’s settings**. Only the H2 needs changing.
+
+**User**
+
+How to rephrase without using the technical term TextProv which isnt relevant yet? "T󠄁e󠄁x󠄁t󠄁P󠄁r󠄁o󠄁v󠄁 r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁s󠄁 d󠄁e󠄁c󠄁l󠄁a󠄁r󠄁e󠄁d󠄁 o󠄁r󠄁i󠄁g󠄁i󠄁n󠄁;󠄁 i󠄁t󠄁 d󠄁o󠄁e󠄁s󠄁 n󠄁o󠄁t󠄁 d󠄁e󠄁t󠄁e󠄁c󠄁t󠄁 a󠄁ut󠄁h󠄁o󠄁r󠄁s󠄁h󠄁i󠄁p󠄁.󠄁"
+
+**Assistant**
+
+“The highlights show text labelled as AI-written during writing and editing. They do not automatically detect who or what wrote it.”
+
+**User**
+
+Great. How to followe that with a brief sentence about the industry CPST or whatever it's called.
+
+**Assistant**
+
+You’re likely thinking of **C2PA**, the standard behind Content Credentials. Follow with:
+
+> This follows the same broad principle as [Content Credentials](https://c2pa.org/): recording how content was created and edited, rather than guessing its origin.
+
+This draws a comparison without implying the site implements C2PA.
+
+**User**
+
+Is Content CRedentials a portion of C2PA?
+
+**Assistant**
+
+Not exactly a portion—**Content Credentials is the public-facing name for provenance records based on the C2PA standard.**
+
+- **C2PA** is the Coalition for Content Provenance and Authenticity, which develops the technical standard.
+- **Content Credentials** are digitally signed records describing content’s origin and editing history, using that standard.
+
+For your sentence, “the C2PA standard behind Content Credentials” is accurate. Your highlighting shares the transparency goal but should not be described as Content Credentials unless it implements that standard.
+
+**User**
+
+Ah, thanks for the clarification. TextProv is not trying to replace C2PA or be an alternative. It's more like a developer's tool for keeping tracking themsweves. How to reframe that one sentence?
+
+**Assistant**
+
+“[Content Credentials](https://c2pa.org/) provide a broader standard for content history; our highlighting is a developer tool for tracking and sharing which text came from AI during editing.”
+
+**User**
+
+We can;t assume the reader of this page knows anything about C2PA or even why anyone cares
+
+**Assistant**
+
+“Knowing how content was made helps readers assess what they’re reading—a goal behind industry efforts such as [Content Credentials](https://c2pa.org/), which records content’s origin and editing history. Our tool focuses on helping developers track and disclose their own AI-assisted edits.”
+
+**User**
+
+IS it along the lines of DMCA?
+
+**Assistant**
+
+No. They address different concerns:
+
+- **DMCA** is US copyright law, including rules for takedown notices and circumventing digital access controls.
+- **C2PA / Content Credentials** records content’s origin and editing history. It does not determine copyright ownership or grant permission to reuse content.
+- **TextProv** helps developers track and disclose AI-written text during editing.
+
+The closer analogy is **a source label, not a copyright notice**.
+
+**User**
+
+Thanks. How's this?
+
+```
+## Highlighting AI
+
+Knowing how content was made helps you assess what you’re reading. The **Highlight AI edits** toggle
+reveals the characters that were recorded as AI-written. Turning it on changes how the content is
+displayed, but does not change the content itself.
+
+### What the highlights mean
+
+- **Highlighted text was recorded as being AI-generated output.** This happens during the
+  development/writing process and is integrated directly into the dev tools we use. It's at an early
+  stage and is not a perfect process. Content can still be highlighted after it's been
+  reviewed by a person, so it doesn't mean that content is bad or low quality; just that
+  those characters originated from AI output.
+- **Text that isn't highlighted doesn't mean it was written by a person.** Older content
+  was not labelled retroactively, so a page with no highlights can still contain earlier
+  AI work.
+- **The marks do not indicate review or accuracy.** They record how text was
+  written, not whether someone has checked it or whether it is correct.
+
+Important: these highlights show text labelled as AI-written during the writing and editing process. They
+do not automatically detect who or what wrote it or where the thought or idea originated. That is the
+goal behind industry efforts such as [C2PA Content Credentials](https://c2pa.org/), which records
+content’s origin and complete editing history.
+
+What we're doing is just a fraction of that as a way to help developers and writers track their own
+AI-assisted content.
+```
+
+**Assistant**
+
+The opening and heading hierarchy work. The final paragraphs need one factual correction: **Content Credentials does not automatically detect authorship or where ideas originated, and it does not guarantee a complete editing history.** “That is the goal” currently implies otherwise.
+
+Replace the closing paragraphs with:
+
+> These highlights reflect labels added during writing and editing. They do not automatically detect who or what wrote the text, or where an idea originated.
+>
+> Making content’s history visible is also the aim of industry efforts such as [Content Credentials](https://c2pa.org/), which uses digitally signed records to document its origin and edits. Our highlighting is a developer tool for tracking AI-assisted writing and sharing that information with readers—not an implementation or replacement of that standard.
+
+Two smaller wording changes:
+- **“Highlighting AI-written text”** is more specific than “Highlighting AI.”
+- **“AI-generated output”** can be shortened to “AI-generated text.”
+
+**User**
+
+I don't think that differentiation with Content Credentials is clear enough. You make it sound like TextProv isn't that different when it's at least an order of magnitude less complex and only focused on the editing and presenting stage, without any notion of history.
+
+**Assistant**
+
+The distinction is **labels on the current text versus a record of its history**, not just a narrower version of the same system.
+
+> Industry efforts such as [Content Credentials](https://c2pa.org/) use digitally signed records to document content’s origin and editing history. Our tool does something much simpler: it marks AI-written text during editing and lets readers display those marks. It does not track previous versions, who changed what, or the sequence of edits.
+
+**User**
+
+"our tool" is weird here. We're not talking about our implementation here.
+
+> it marks AI-written text during editing and lets readers display those marks.
+
+It's not about the readers. It's about the person doing the writing/editing and giving visibility to their AI tool augmented process. Choosing to display to readers is a separate concern that TextProv makes possible. it's asynchronous to even make a statement about that since we don't do that for C2PA either.
+
+**Assistant**
+
+“[Content Credentials](https://c2pa.org/) uses digitally signed records to document content’s origin and editing history. TextProv is a much simpler editing aid: it helps writers and editors track their own use of AI through labels embedded in the text, without maintaining an editing history.”
+
+**User**
+
+And how to incorporate that into our content which again, readers need to be introduced to.
+
+
+
+Important: these highlights show text labelled as AI-written during the writing and editing process. They  do not automatically detect who or what wrote it or where the thought or idea originated. That is the
+goal behind industry efforts such as [C2PA Content Credentials](https://c2pa.org/), which records
+content’s origin and complete editing history.
+
+What we're doing is just a fraction of that as a way to help developers and writers track their own
+AI-assisted content.
+
+**Assistant**
+
+**Important:** these highlights show text labelled as AI-written during writing and editing. They do not automatically detect who or what wrote it, or where a thought or idea originated.
+
+Making the creation process more transparent is also a goal of industry efforts such as [Content Credentials](https://c2pa.org/), which uses digitally signed records to document content’s origin and editing history.
+
+The labels here come from **TextProv**, a much simpler tool that helps writers and editors keep track of their own AI-assisted writing. It embeds labels in the text being edited; it does not maintain a history of previous versions, contributors, or edits.
+
+**User**
+
+Ansewr only. Why do you keep emphasizing "Content Credentials" without mentioning C2PA?
+
+**Assistant**
+
+I prioritized the public-facing name to avoid introducing another acronym, but omitted the relationship you wanted to explain. “Content Credentials, based on the C2PA standard” would name both clearly.
+
+**User**
+
+So then why not "C2PA Content Credentials"
+
+**Assistant**
+
+“C2PA Content Credentials” works here. I was overcorrecting for the distinction between the standard and its public-facing name; it didn’t warrant avoiding your wording.
+
+**User**
+
+Nice. Also how to be clear that we made TextProv?
+
+Our highlighting comes from [TextProv](https://textprov.org/), a more basic approach that helps developers and writers keep track of their own AI-assisted content. It embeds markers in the text directly, without maintaining history of previous versions, contributors, or edits.
+
+**Assistant**
+
+Our highlighting comes from [TextProv](https://textprov.org/), a tool we created to help developers and writers keep track of their own AI-assisted content. It embeds markers directly in the text, without maintaining a history of previous versions, contributors, or edits.
