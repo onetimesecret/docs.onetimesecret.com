@@ -179,14 +179,26 @@ const HIDDEN_MARKDOWN = new RegExp(
  * page's last inbound link fails the orphan check instead of passing it.
  *
  * @param {string} markdown Page source, frontmatter included or not.
- * @returns {Set<string>} Normalized slugs, in link order.
+ * @param {{html?: boolean}} [options] Also read quoted HTML anchor hrefs.
+ * @returns {Set<string>} Normalized slugs (Markdown first, then HTML if enabled).
  */
-export function enLinkSlugs(markdown) {
+export function enLinkSlugs(markdown, { html = false } = {}) {
   const visible = markdown.replace(HIDDEN_MARKDOWN, "");
   const slugs = new Set();
-  for (const match of visible.matchAll(/\]\(\s*<?\/en\/([^)\s>]*)>?\s*(?:"[^"]*")?\)/g)) {
-    const target = match[1].replace(/[#?].*$/, "");
+  for (const match of visible.matchAll(/\]\(\s*<?\/en(?:\/([^)\s>]*))?>?\s*(?:"[^"]*")?\)/g)) {
+    const target = (match[1] ?? "").replace(/[#?].*$/, "");
     slugs.add(normalizeLink(target));
+  }
+  if (html) {
+    for (const tag of visible.matchAll(/<a\b(?:[^"'<>]|"[^"]*"|'[^']*')*>/gi)) {
+      // Consume whole attribute values so text such as title='href="/en/x"'
+      // cannot masquerade as a real href attribute.
+      for (const attr of tag[0].matchAll(/\s+([^\s=/>]+)(?:\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+)))?/g)) {
+        if (attr[1].toLowerCase() !== "href") continue;
+        const target = (attr[2] ?? attr[3] ?? "").match(/^\/en(?:\/([^\s]*))?$/);
+        if (target) slugs.add(normalizeLink((target[1] ?? "").replace(/[#?].*$/, "")));
+      }
+    }
   }
   return slugs;
 }
@@ -226,4 +238,37 @@ export function localeDirs() {
       .filter((entry) => entry.isDirectory())
       .map((entry) => entry.name),
   );
+}
+
+/**
+ * Sidebar translation keys that do not resolve to a label.
+ *
+ * config/sidebar.mjs resolves every label as `sidebar?.[key] || key`, so a key
+ * the bundle cannot answer neither throws nor blanks the entry — it ships the
+ * raw camelCase key as the visible sidebar label. `createLink("instalWithDocker",
+ * …)` renders an entry reading "instalWithDocker" and the build is green.
+ *
+ * Empty strings fall back to the raw key via `||`. Whitespace-only strings
+ * render a blank label instead. Neither is a usable label; non-string values
+ * are rejected too. Missing and unusable entries get distinct diagnostics.
+ *
+ * EN ONLY, deliberately. buildTranslations() omits any locale with no value for
+ * a key and Starlight falls back to the English label per-key, so a key absent
+ * from one of the 16 other bundles is a translation still in flight, not a
+ * defect. Asserting parity there would fail on every English-only key the
+ * pipeline has not reached yet.
+ *
+ * @param {readonly string[]} keys Keys the sidebar asked for, in any order.
+ * @param {Record<string, unknown>} labels The `sidebar` object of en.json.
+ * @returns {{key: string, kind: "missing"|"empty"}[]} Sorted, deduplicated.
+ */
+export function unresolvedSidebarKeys(keys, labels) {
+  const unresolved = [];
+  for (const key of [...new Set(keys)].sort()) {
+    const label = labels?.[key];
+    if (label === undefined) unresolved.push({ key, kind: "missing" });
+    else if (typeof label !== "string" || label.trim() === "")
+      unresolved.push({ key, kind: "empty" });
+  }
+  return unresolved;
 }

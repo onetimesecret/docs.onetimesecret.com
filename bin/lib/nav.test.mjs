@@ -8,7 +8,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 
-import { enLinkSlugs, fileSlug, normalizeLink, parseAllowlist, repoRoot } from "./nav.mjs";
+import { enLinkSlugs, fileSlug, normalizeLink, parseAllowlist, repoRoot, unresolvedSidebarKeys } from "./nav.mjs";
 
 describe("normalizeLink", () => {
   it("maps the site root to the index slug", () => {
@@ -110,6 +110,12 @@ describe("fileSlug", () => {
 });
 
 describe("enLinkSlugs", () => {
+  it("keeps HTML opt-in so the orphan check retains its Markdown-only scope", () => {
+    const body = '<a href="/en/html-only">HTML</a> [root](/en)';
+    expect([...enLinkSlugs(body)]).toEqual(["index"]);
+    expect([...enLinkSlugs(body, { html: true })]).toEqual(["index", "html-only"]);
+  });
+
   it("collects absolute /en/ links as normalized slugs, in order", () => {
     const md = [
       "| [v0.26.18](/en/self-hosting/upgrading-v0-26-18) | migration |",
@@ -214,5 +220,35 @@ describe("enLinkSlugs", () => {
   it("ignores images but keeps the link around a linked image", () => {
     const md = "![diagram](/en/hidden.png) [![badge](/badge.svg)](/en/kept)";
     expect([...enLinkSlugs(md)]).toEqual(["kept"]);
+  });
+});
+
+
+describe("unresolvedSidebarKeys", () => {
+  it("accepts readable labels, including surrounding whitespace", () => {
+    expect(unresolvedSidebarKeys(["valid", "padded"], { valid: "Install", padded: " SSO " })).toEqual([]);
+  });
+
+  it("distinguishes missing keys from blank or non-string labels", () => {
+    expect(unresolvedSidebarKeys(
+      ["missing", "empty", "space", "null", "false", "number", "object", "array"],
+      { empty: "", space: " \t\n", null: null, false: false, number: 42, object: {}, array: [] },
+    )).toEqual([
+      { key: "array", kind: "empty" },
+      { key: "empty", kind: "empty" },
+      { key: "false", kind: "empty" },
+      { key: "missing", kind: "missing" },
+      { key: "null", kind: "empty" },
+      { key: "number", kind: "empty" },
+      { key: "object", kind: "empty" },
+      { key: "space", kind: "empty" },
+    ]);
+  });
+
+  it("sorts and deduplicates requested keys, ignoring unused bundle entries", () => {
+    expect(unresolvedSidebarKeys(["z", "a", "z"], { unused: "" })).toEqual([
+      { key: "a", kind: "missing" }, { key: "z", kind: "missing" },
+    ]);
+    expect(unresolvedSidebarKeys(["a"], undefined)).toEqual([{ key: "a", kind: "missing" }]);
   });
 });
