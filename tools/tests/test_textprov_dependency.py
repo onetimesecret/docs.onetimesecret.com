@@ -31,16 +31,16 @@ class TextProvDependencyTests(unittest.TestCase):
     def test_missing_package_reports_install_command(self):
         result = self.run_without_site_packages()
         self.assertNotEqual(result.returncode, 0)
-        self.assertIn("TextProv 0.2.0 is required", result.stderr)
+        self.assertIn("TextProv 0.3.0 is required", result.stderr)
         self.assertIn(
             "python3 -m pip install -r tools/requirements.txt", result.stderr
         )
         self.assertNotIn("Traceback", result.stderr)
 
     def test_wrong_version_reports_found_version_and_install_command(self):
-        result = self.run_without_site_packages('__version__ = "0.1.7"\n')
+        result = self.run_without_site_packages('__version__ = "0.2.0"\n')
         self.assertNotEqual(result.returncode, 0)
-        self.assertIn("found 0.1.7", result.stderr)
+        self.assertIn("TextProv 0.3.0 is required; found 0.2.0", result.stderr)
         self.assertIn(
             "python3 -m pip install -r tools/requirements.txt", result.stderr
         )

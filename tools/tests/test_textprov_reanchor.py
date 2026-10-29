@@ -67,6 +67,58 @@ class ReanchorTests(unittest.TestCase):
             with self.assertRaisesRegex(RuntimeError, "plain text"):
                 textprov_reanchor.reanchor(TXT, "a", "a")
 
+    def test_straddling_graphemes_are_not_marked_and_pass_the_checker(self):
+        for path in (Path("a.md"), Path("a.mdoc")):
+            for prefix, cluster in (("\\", "*\u0301"), ("`code", "`\u0301")):
+                plain = prefix + cluster + "\n"
+                offsets = dogfood.eligible_offsets(path, plain)
+                item = next(
+                    item
+                    for item in dogfood.clusters(plain)
+                    if item.text == cluster
+                )
+                span = set(range(item.start, item.end))
+                self.assertTrue(span & offsets)
+                self.assertTrue(span - offsets)
+                self.assertFalse(dogfood.eligible(item, offsets))
+                for marked in (False, True):
+                    after = (
+                        prefix + (mark(cluster) if marked else cluster) + "\n"
+                    )
+                    for strict in (False, True):
+                        with self.subTest(
+                            path=path,
+                            cluster=cluster,
+                            marked=marked,
+                            strict=strict,
+                        ):
+                            result, changed, converged = (
+                                textprov_reanchor.reanchor(
+                                    path, "", after, strict=strict
+                                )
+                            )
+                            self.assertTrue(converged)
+                            self.assertEqual(strip(result), strip(after))
+                            self.assertEqual(result, plain)
+                            self.assertEqual(changed, int(marked))
+                            self.assertEqual(
+                                dogfood.check_text(path, "", result), []
+                            )
+
+    def test_reanchor_preserves_baseline_marks_outside_prose_and_passes_checker(self):
+        path = Path("a.md")
+        before = "`" + mark("code") + "`\n"
+        plain = strip(before)
+        self.assertEqual(dogfood.check_text(path, before, plain), [])
+        for after in (before, plain):
+            with self.subTest(already_repaired=after == plain):
+                result, changed, converged = textprov_reanchor.reanchor(path, before, after)
+                self.assertTrue(converged)
+                self.assertEqual(strip(result), plain)
+                self.assertEqual(result, before)
+                self.assertEqual(changed, 0 if after == before else 4)
+                self.assertEqual(dogfood.check_text(path, before, result), [])
+
 
 class CommandTests(unittest.TestCase):
     def setUp(self):
