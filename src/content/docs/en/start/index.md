@@ -58,7 +58,7 @@ C󠄁ho󠄁o󠄁s󠄁e a󠄁 g󠄁u󠄁i󠄁de f󠄁or what you w󠄁a󠄁n󠄁t
   involves, and where to start
 - **[Install with Docker](/en/install/docker/)** — or
   [install on Linux](/en/install/linux/) from a checkout
-- **[Configuration](/en/self-hosting/configuration/)** — settings reference
+- **[Configuration](/en/reference/configuration-files-and-precedence/)** — settings reference
 
 ## Questions?
 

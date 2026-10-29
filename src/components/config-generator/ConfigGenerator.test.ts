@@ -14,7 +14,7 @@ import { createSSRApp } from 'vue';
 import { renderToString } from 'vue/server-renderer';
 import ConfigGenerator from './ConfigGenerator.vue';
 
-const PAGE = '/en/self-hosting/configuration-generator/';
+const PAGE = '/en/reference/generator/';
 const READY = 'Ready. Files update as you change options.';
 
 let wrapper: VueWrapper | undefined;
@@ -59,7 +59,7 @@ describe('ConfigGenerator', () => {
     // The server output is what a reader sees if the island never hydrates.
     const html = await renderToString(createSSRApp(ConfigGenerator));
     expect(html).toContain('The interactive generator has not loaded yet.');
-    expect(html).toContain('href="/en/self-hosting/configuration/"');
+    expect(html).toContain('href="/en/reference/configuration-files-and-precedence/"');
     expect(html).not.toContain('class="cg-status"');
     const fieldsets = html.match(/<fieldset[^>]*>/g) ?? [];
     expect(fieldsets.length).toBeGreaterThan(0);

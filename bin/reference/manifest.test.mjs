@@ -56,6 +56,7 @@ describe("the tracked manifest", () => {
     expect(inputs.get("env-reference").path).toBe(".env.reference");
     expect([...inputs.keys()].sort()).toEqual([
       "auth-defaults",
+      "billing-example",
       "config-defaults",
       "env-reference",
       "logging-defaults",

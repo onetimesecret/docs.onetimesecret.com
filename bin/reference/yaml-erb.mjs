@@ -29,6 +29,10 @@ export const OWNERSHIP_RULES = [
   // every key in them belongs there regardless of topic.
   { file: 'auth', path: '', owner: 'auth-logging-and-billing-files' },
   { file: 'logging', path: '', owner: 'auth-logging-and-billing-files' },
+  // The billing example is the third ancillary file on that page. Its catalog
+  // sections are rendered as structure only (see bin/reference/render-config.mjs);
+  // ownership is still per-key so no key goes unassigned.
+  { file: 'billing', path: '', owner: 'auth-logging-and-billing-files' },
 
   // Main-file catch-all: an unmatched top-level section is a site record until
   // a row below claims it, which keeps new upstream sections visible rather
@@ -175,6 +179,7 @@ const FILE_SHORT_NAMES = new Map([
   ['config.defaults.yaml', 'config'],
   ['auth.defaults.yaml', 'auth'],
   ['logging.defaults.yaml', 'logging'],
+  ['billing.example.yaml', 'billing'],
 ]);
 
 export class ConfigExtractionError extends Error {

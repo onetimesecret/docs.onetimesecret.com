@@ -5,6 +5,11 @@
     "src/content/docs/*.mdoc"
   ],
   "exclude": {
-    "src/content/docs/*/reference/environment-variables.md": "Generated environment reference, rendered by bin/reference.mjs from the pinned snapshot in vendor/onetimesecret/.env.reference."
+    "src/content/docs/*/reference/environment-variables.md": "Generated environment reference, rendered by bin/reference.mjs from the pinned snapshot in vendor/onetimesecret/.env.reference.",
+    "src/content/docs/*/reference/site-and-interface.md": "Generated configuration reference, rendered by bin/reference.mjs from the pinned snapshots in vendor/onetimesecret/etc/.",
+    "src/content/docs/*/reference/features-and-branding.md": "Generated configuration reference, rendered by bin/reference.mjs from the pinned snapshots in vendor/onetimesecret/etc/.",
+    "src/content/docs/*/reference/datastore-and-queues.md": "Generated configuration reference, rendered by bin/reference.mjs from the pinned snapshots in vendor/onetimesecret/etc/.",
+    "src/content/docs/*/reference/email-and-delivery.md": "Generated configuration reference, rendered by bin/reference.mjs from the pinned snapshots in vendor/onetimesecret/etc/.",
+    "src/content/docs/*/reference/auth-logging-and-billing-files.md": "Generated configuration reference, rendered by bin/reference.mjs from the pinned snapshots in vendor/onetimesecret/etc/."
   }
 }

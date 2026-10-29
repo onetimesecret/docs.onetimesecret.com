@@ -23,6 +23,7 @@ import { dirname, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 
 import { parseEnvReference } from "./reference/env-parser.mjs";
+import { renderConfigurationPages } from "./reference/render-config.mjs";
 import { loadManifest, repoRoot, sha256, ROLES, VENDOR_DIR } from "./reference/manifest.mjs";
 import {
   COVERAGE_PATH,
@@ -48,12 +49,15 @@ export function build({ vendorDir = VENDOR_DIR } = {}) {
   const parsed = parseEnvReference(envInput.text, { sourceName: envInput.path });
   const { page, coverage, sections } = renderEnvironmentPage({ parsed, manifest });
   const report = renderCoverageReport({ parsed, manifest, coverage, sections });
+  const configuration = renderConfigurationPages({ inputs, manifest });
   return {
     artifacts: [
       { path: PAGE_PATH, content: page },
       { path: COVERAGE_PATH, content: report },
+      ...configuration.artifacts,
     ],
     coverage,
+    configuration: configuration.coverage,
     warnings,
   };
 }
@@ -103,7 +107,7 @@ function write(root, path, content) {
  * @returns {{problems: string[], coverage: object, warnings: string[], artifacts: object[]}}
  */
 export function compareArtifacts({ root = repoRoot, vendorDir } = {}) {
-  const { artifacts, coverage, warnings } = build(vendorDir ? { vendorDir } : {});
+  const { artifacts, coverage, configuration, warnings } = build(vendorDir ? { vendorDir } : {});
   const problems = [];
   for (const artifact of artifacts) {
     const absolute = join(root, artifact.path);
@@ -118,23 +122,30 @@ export function compareArtifacts({ root = repoRoot, vendorDir } = {}) {
       );
     }
   }
-  return { problems, coverage, warnings, artifacts };
+  return { problems, coverage, configuration, warnings, artifacts };
+}
+
+function summary(coverage, configuration) {
+  return (
+    `${coverage.published.length} published, ${coverage.excluded.length} excluded, ` +
+    `${coverage.unresolved.length} unresolved of ${coverage.totalRecognized} recognized ` +
+    `environment lines; ${configuration.records} configuration keys across ` +
+    `${configuration.perPage.size} pages (` +
+    `${[...configuration.perPage].map(([owner, count]) => `${owner} ${count}`).join(", ")})`
+  );
 }
 
 function generate() {
-  const { artifacts, coverage, warnings } = build();
+  const { artifacts, coverage, configuration, warnings } = build();
   for (const artifact of artifacts) write(repoRoot, artifact.path, artifact.content);
   for (const warning of warnings) console.warn(`WARN: ${warning}`);
-  console.log(
-    `OK: wrote ${artifacts.map((artifact) => artifact.path).join(", ")} — ` +
-      `${coverage.published.length} published, ${coverage.excluded.length} excluded, ` +
-      `${coverage.unresolved.length} unresolved of ${coverage.totalRecognized} recognized lines`,
-  );
+  console.log(`OK: wrote ${artifacts.length} artifact(s) — ${summary(coverage, configuration)}`);
+  for (const artifact of artifacts) console.log(`  ${artifact.path}`);
   return 0;
 }
 
 function check() {
-  const { problems, coverage, warnings } = compareArtifacts();
+  const { problems, coverage, configuration, warnings } = compareArtifacts();
   for (const warning of warnings) console.warn(`WARN: ${warning}`);
   if (problems.length > 0) {
     console.error("FAIL: generated reference output has drifted");
@@ -142,9 +153,7 @@ function check() {
     return 1;
   }
   console.log(
-    `OK: generated reference matches the vendored inputs — ` +
-      `${coverage.published.length} published, ${coverage.excluded.length} excluded, ` +
-      `${coverage.unresolved.length} unresolved of ${coverage.totalRecognized} recognized lines`,
+    `OK: generated reference matches the vendored inputs — ${summary(coverage, configuration)}`,
   );
   return 0;
 }

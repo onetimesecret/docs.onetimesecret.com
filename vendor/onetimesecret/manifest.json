@@ -31,6 +31,12 @@
       "role": "logging-defaults",
       "sha256": "4289f29774262323419cf3c6f7f1b40ed617dc65bb08a11e48ebb788c775da30",
       "lines": 251
+    },
+    {
+      "path": "etc/examples/billing.example.yaml",
+      "role": "billing-example",
+      "sha256": "61448a1c73ab3d9d9b3500092a7386737ba4fdd3c73287cf2bfc2bd3228282ff",
+      "lines": 391
     }
   ]
 }

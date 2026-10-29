@@ -15,6 +15,11 @@ import { afterEach, describe, expect, it } from "vitest";
 
 import { build, compareArtifacts, diffSummary } from "../reference.mjs";
 import { repoRoot, sha256 } from "./manifest.mjs";
+import {
+  CONFIG_COVERAGE_PATH,
+  CONFIG_PAGES,
+  pagePathFor,
+} from "./render-config.mjs";
 import { COVERAGE_PATH, PAGE_PATH } from "./render-env.mjs";
 
 const ENTRY = join(repoRoot, "bin", "reference.mjs");
@@ -72,8 +77,13 @@ describe("reproducibility", () => {
     }
   });
 
-  it("writes the two artifacts the pipeline owns", () => {
-    expect(build().artifacts.map((artifact) => artifact.path)).toEqual([PAGE_PATH, COVERAGE_PATH]);
+  it("writes every artifact the pipeline owns", () => {
+    expect(build().artifacts.map((artifact) => artifact.path)).toEqual([
+      PAGE_PATH,
+      COVERAGE_PATH,
+      ...CONFIG_PAGES.map((page) => pagePathFor(page.owner)),
+      CONFIG_COVERAGE_PATH,
+    ]);
   });
 });
 

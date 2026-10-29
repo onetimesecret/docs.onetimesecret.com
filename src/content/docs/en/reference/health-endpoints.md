@@ -50,5 +50,5 @@ T󠄁h󠄁e󠄁 A󠄁P󠄁I󠄁 s󠄁t󠄁a󠄁t󠄁u󠄁s󠄁 p󠄁a󠄁t󠄁h�
 ## S󠄁e󠄁e󠄁 a󠄁l󠄁s󠄁o󠄁
 
 - [V󠄁e󠄁r󠄁i󠄁f󠄁y󠄁 y󠄁o󠄁u󠄁r󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁](/en/install/verify)
-- [C󠄁o󠄁n󠄁f󠄁i󠄁g󠄁u󠄁r󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 R󠄁e󠄁f󠄁e󠄁r󠄁e󠄁n󠄁c󠄁e󠄁](/en/self-hosting/configuration)
+- [C󠄁o󠄁n󠄁f󠄁i󠄁g󠄁u󠄁r󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 R󠄁e󠄁f󠄁e󠄁r󠄁e󠄁n󠄁c󠄁e󠄁](/en/reference/configuration-files-and-precedence)
 - [U󠄁p󠄁g󠄁r󠄁a󠄁d󠄁e󠄁 G󠄁u󠄁i󠄁d󠄁e󠄁s󠄁](/en/self-hosting/upgrade-guides)
