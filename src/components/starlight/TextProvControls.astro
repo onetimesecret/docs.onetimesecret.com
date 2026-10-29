@@ -16,13 +16,6 @@ const guide = `/${starlightRoute.locale}/contribute/text-provenance`;
       <span class="textprov-track" aria-hidden="true"></span>
       <span class="textprov-label">{t('textprov.toggle')}</span>
     </button>
-    <label class="textprov-display-control">
-      <span>{t('textprov.display')}</span>
-      <select data-textprov-display-control aria-describedby="textprov-help" disabled>
-        <option value="passage">{t('textprov.passage')}</option>
-        <option value="exact">{t('textprov.exact')}</option>
-      </select>
-    </label>
     <button type="button" class="textprov-info" popovertarget="textprov-about" aria-label={t('textprov.info')}>
       <Icon name="information" size="1.125rem" />
     </button>
@@ -33,7 +26,7 @@ const guide = `/${starlightRoute.locale}/contribute/text-provenance`;
       <a href={guide}>{t('textprov.learnMore')}</a>
     </div>
   </div>
-  <p id="textprov-help" class="textprov-help">{t('textprov.groupingHelp')}</p>
+  <p id="textprov-help" class="textprov-help">{t('textprov.help')}</p>
 </div>
 
 <script>
@@ -80,9 +73,6 @@ const guide = `/${starlightRoute.locale}/contribute/text-provenance`;
   :root[data-textprov="shown"] .textprov-track { background: var(--sl-color-accent); border-color: var(--sl-color-accent); }
   :root[data-textprov="shown"] .textprov-track::after { inset-inline-start: calc(100% - 1.25rem + 4px); background: white; }
 
-  .textprov-display-control { display: inline-flex; align-items: center; gap: .375rem; padding-inline: .5rem; font-size: var(--sl-text-sm); }
-  .textprov-display-control select { font: inherit; color: var(--sl-color-text); background: var(--sl-color-bg); border: 1px solid var(--sl-color-gray-4); border-radius: .25rem; padding: .25rem; }
-  .textprov-display-control select:focus-visible { outline: 2px solid var(--sl-color-text-accent); outline-offset: 2px; }
 
   .textprov-info {
     anchor-name: --textprov-info;
