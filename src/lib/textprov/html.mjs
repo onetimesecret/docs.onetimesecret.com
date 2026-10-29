@@ -22,7 +22,7 @@ const labels = new Set(['aria-label', 'title', 'alt']);
  * @returns {{ state: 'ai' | null, text: string }[]}
  */
 export function aiRuns(text) {
-  return textprov.runs(text).map(run => ({
+  return textprov.runs(text, { merge_whitespace: false }).map(run => ({
     state: run.state === 'ai' ? 'ai' : null,
     text: run.state === 'ai'
       ? textprov.runs(run.text, { strip: true }).map(part => part.text).join('')
@@ -104,23 +104,45 @@ export function renderProvenance(html, { requireEnrollment = true, label } = {})
     usedIds.add(base);
     idMap.set(id, base);
   }
+  // Display groups do not change exact .textprov-ai spans or source marks.
+  // Each text node keeps its original inline formatting/native annotation parent.
+  const blocks = new Set(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'li', 'dt', 'dd',
+    'td', 'th', 'figcaption', 'div', 'section', 'article', 'blockquote']);
+  const owners = new Map();
+  const markedPassages = new Set();
+  function collectPassages(node, prose = false, owner = null) {
+    if (excluded.has(node.tagName)) return;
+    prose ||= node.attrs?.some(a => a.name === 'class' && a.value.split(/\s+/).includes('sl-markdown-content'));
+    if (prose && blocks.has(node.tagName)) owner = node;
+    if (prose && node.nodeName === '#text') {
+      const key = owner ?? node;
+      owners.set(node, key);
+      if (candidate.test(node.value) && aiRuns(node.value).some(run => run.state === 'ai')) markedPassages.add(key);
+    }
+    for (const child of node.childNodes ?? []) collectPassages(child, prose, owner);
+  }
+  collectPassages(tree);
   function visit(node, prose = false, blocked = false) {
     if (blocked) return;
     const attrs = node.attrs ?? [];
     prose ||= attrs.some(a => a.name === 'class' && a.value.split(/\s+/).includes('sl-markdown-content'));
-    if (node.nodeName === '#text' && candidate.test(node.value)) {
+    if (node.nodeName === '#text' && (candidate.test(node.value) || (prose && markedPassages.has(owners.get(node))))) {
       const runs = aiRuns(node.value);
       // Any marker left after decoding is malformed, e.g. a legacy PUA code point
       // followed by a selector, which decodes to the PUA code point and renders as tofu.
       if (runs.some(run => candidate.test(run.text))) fail(`malformed AI marker in managed text: "${excerpt(node.value)}"`);
-      if (runs.some(run => run.state === 'ai')) {
+      const passage = prose && markedPassages.has(owners.get(node));
+      if (runs.some(run => run.state === 'ai') || passage) {
         const location = node.sourceCodeLocation;
         if (!location) fail('marked text has no source location');
-        edits.push([location.startOffset, location.endOffset, runs.map(run =>
+        const exact = runs.map(run =>
           prose && run.state === 'ai'
             ? `<span class="textprov-ai" data-textprov="ai">${escape(run.text)}</span>`
             : escape(run.text)
-        ).join('')]);
+        ).join('');
+        edits.push([location.startOffset, location.endOffset, passage
+          ? `<span class="textprov-passage" data-textprov-passage="ai">${exact}</span>`
+          : exact]);
       }
     }
     // Heading IDs, TOC fragments, and accessible labels can derive from marked

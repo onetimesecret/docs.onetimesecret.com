@@ -7,6 +7,29 @@ const render = (html: string, options = {}) => renderProvenance(html, { requireE
 const ai = (s: string) => Array.from(s).map(c => /\s/u.test(c) ? c : c + '\u{E0101}').join('');
 
 describe('static TextProv HTML', () => {
+  it('groups a fragmented passage across inline formatting while preserving exact ranges', () => {
+    const source = `C\u{E0101}ho\u{E0101}o\u{E0101}s\u{E0101}e a\u{E0101} g\u{E0101}u\u{E0101}i\u{E0101}de`;
+    const html = `<div class="sl-markdown-content"><p>${source} <em>for what</em> <a href="/next">you want</a> to do next.</p><p>Unmarked paragraph.</p></div>`;
+    const doc = new JSDOM(render(html)).window.document;
+    const paragraphs = doc.querySelectorAll('p');
+    expect(paragraphs[0].textContent).toBe('Choose a guide for what you want to do next.');
+    expect(paragraphs[1].querySelector('.textprov-passage')).toBeNull();
+    expect([...paragraphs[0].querySelectorAll('.textprov-passage')].map(el => el.textContent).join(''))
+      .toBe(paragraphs[0].textContent);
+    expect([...paragraphs[0].querySelectorAll('.textprov-ai')].map(el => el.textContent).join('')).toBe('Coosagui');
+    expect(doc.querySelector('a .textprov-passage')?.textContent).toBe('you want');
+    expect(doc.querySelector('em .textprov-passage')?.textContent).toBe('for what');
+    expect(render(render(html))).toBe(render(html));
+  });
+
+  it('keeps whitespace unassigned in the exact inspection metadata', () => {
+    expect(aiRuns(ai('AI words'))).toEqual([
+      { state: 'ai', text: 'AI' }, { state: null, text: ' ' }, { state: 'ai', text: 'words' },
+    ]);
+    const doc = new JSDOM(render(`<div class="sl-markdown-content"><p>Plain <code>${ai('sample')}</code> stays plain.</p></div>`)).window.document;
+    expect(doc.querySelector('.textprov-passage')).toBeNull();
+  });
+
   it('emits clean text and provenance spans for headings, links, emphasis, tables and non-Latin prose', () => {
     const html = `<title>${ai('Title')}</title><div class="sl-markdown-content"><h2 id="${ai('heading')}">${ai('Heading')}</h2><p>Old <em>${ai('日本語')}</em> <a href="/en/start">${ai('guide')}</a></p><table><tr><td>${ai('Cell')}</td></tr></table></div><a href="#${encodeURIComponent(ai('heading'))}" aria-label="${ai('Heading')}">${ai('Heading')}</a>`;
     const result = render(html);
