@@ -31,8 +31,12 @@ const render: MarkdownRenderer = async (entry, context) => {
   try {
     markdown = await renderSimpleMarkdown(entry, context);
   } catch (error) {
-    if (!SOURCE_FALLBACK.has(entry.id) || entry.body === undefined) {
+    if (!SOURCE_FALLBACK.has(entry.id)) {
       recordRenderFailure(entry.id, error);
+      throw error;
+    }
+    if (entry.body === undefined) {
+      recordRenderFailure(entry.id, `${error instanceof Error ? error.message : String(error)} (listed in SOURCE_FALLBACK, but the entry has no source body)`);
       throw error;
     }
     markdown = entry.body;

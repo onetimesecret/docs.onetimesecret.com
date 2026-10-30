@@ -1,6 +1,7 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import render from './llm-markdown';
-import { clearRenderFailures, renderFailures } from './llm-markdown-failures.mjs';
+import { clearRenderFailures, recordRenderFailure, renderFailures } from './llm-markdown-failures.mjs';
+import { llmMarkdown } from '../../config/llm-markdown.mjs';
 
 // The plugin's renderer needs a running Astro build (astro:content, the
 // container), so it is replaced; `clean` is the real TextProv helper.
@@ -38,10 +39,33 @@ describe('llm-markdown renderer', () => {
     expect(renderFailures().size).toBe(0);
   });
 
+  it('records and rethrows when a known fallback page has no source body', async () => {
+    const error = new Error('NoMatchingRenderer');
+    simple.mockRejectedValue(error);
+    await expect(render(entry('en/reference/generator', { textprov: true }), context)).rejects.toBe(error);
+    expect(renderFailures().get('en/reference/generator')).toMatch(/^NoMatchingRenderer \(listed in SOURCE_FALLBACK/);
+  });
+
   it('records and rethrows a failure on any other page', async () => {
     const error = new Error('NoMatchingRenderer');
     simple.mockRejectedValue(error);
     await expect(render(entry('en/start', { textprov: true }, 'source'), context)).rejects.toBe(error);
     expect(renderFailures()).toEqual(new Map([['en/start', 'NoMatchingRenderer']]));
+  });
+});
+
+describe('llm-markdown build hook', () => {
+  const done = () => (llmMarkdown().hooks['astro:build:done'] as () => void)();
+
+  beforeEach(() => clearRenderFailures());
+
+  it('lets a build with no unexpected fallbacks finish', () => {
+    expect(() => done()).not.toThrow();
+  });
+
+  it('fails the build naming each page that fell back', () => {
+    recordRenderFailure('en/start', new Error('NoMatchingRenderer'));
+    recordRenderFailure('de/start', 'boom');
+    expect(() => done()).toThrow(/2 page\(s\)[\s\S]*en\/start: NoMatchingRenderer\n {2}de\/start: boom/);
   });
 });
