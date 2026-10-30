@@ -131,8 +131,10 @@ const controls = showTextProvToggle();
 		block-size: 100%;
 	}
 	/* Icon-only trigger in the bar, shaped like the TextProv info button next
-	   to it. The accessible name is the plugin's aria-label. */
-	.page-tools :global(.page-actions-trigger) {
+	   to it: no border or fill, accent ink on hover and while open. The
+	   accessible name is the plugin's aria-label. Selectors include
+	   `.page-actions` to outrank the state rules in theme-overrides.css. */
+	.page-tools :global(.page-actions .page-actions-trigger) {
 		inline-size: 2rem;
 		block-size: 2rem;
 		padding: 0;
@@ -141,12 +143,10 @@ const controls = showTextProvToggle();
 		border-radius: 50%;
 		color: var(--sl-color-gray-3);
 	}
-	.page-tools :global(.page-actions-trigger:hover) {
-		color: var(--sl-color-text-accent);
-		background: none;
-	}
+	.page-tools :global(.page-actions .page-actions-trigger:hover),
 	.page-tools :global(.page-actions[data-state='open'] .page-actions-trigger) {
 		color: var(--sl-color-text-accent);
+		background: none;
 	}
 	.page-tools :global(.trigger-icon) {
 		opacity: 1;
@@ -223,7 +223,7 @@ const controls = showTextProvToggle();
 		.page-tools .sl-container:not(:has(.page-actions)) {
 			display: none;
 		}
-		.page-tools :global(.page-actions-trigger) {
+		.page-tools :global(.page-actions .page-actions-trigger) {
 			inline-size: auto;
 			block-size: 2.25rem;
 			padding: 0 0.625rem;
@@ -232,12 +232,11 @@ const controls = showTextProvToggle();
 			border-radius: var(--llm-radius);
 			color: var(--llm-text);
 		}
-		.page-tools :global(.page-actions-trigger:hover) {
-			color: var(--llm-text);
-			background: var(--llm-border);
-		}
+		/* Surface and border for hover and open come from theme-overrides.css. */
+		.page-tools :global(.page-actions .page-actions-trigger:hover),
 		.page-tools :global(.page-actions[data-state='open'] .page-actions-trigger) {
 			color: var(--llm-text);
+			background: var(--ots-menu-hover);
 		}
 		.page-tools :global(.trigger-icon) {
 			opacity: 0.8;

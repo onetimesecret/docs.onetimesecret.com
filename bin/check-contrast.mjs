@@ -179,6 +179,44 @@ const PAIRS = [
     kind: "non-text",
   },
 
+  // --- Page actions dropdown (theme-overrides.css, starlight-llm-actions) --
+  // The menu sits on --sl-color-bg-nav; a hovered item is the 10% ink tint.
+  {
+    where: ".sl-llm-actions .item-desc, .section-label",
+    what: "item description and section label ink on the menu surface",
+    fg: "--ots-menu-muted",
+    bg: "--sl-color-bg-nav",
+    kind: "text",
+  },
+  {
+    where: ".sl-llm-actions .page-actions-item:hover .item-desc",
+    what: "item description on the hovered item tint",
+    fg: "--ots-menu-muted",
+    bg: ["--sl-color-text", 10, "--sl-color-bg-nav"],
+    kind: "text",
+  },
+  {
+    where: ".sl-llm-actions .page-actions-item:hover .item-title",
+    what: "item title on the hovered item tint",
+    fg: "--sl-color-text",
+    bg: ["--sl-color-text", 10, "--sl-color-bg-nav"],
+    kind: "text",
+  },
+  {
+    where: ".sl-llm-actions .page-actions-item:focus-visible",
+    what: "inset focus ring against the menu surface",
+    fg: "--sl-color-text-accent",
+    bg: "--sl-color-bg-nav",
+    kind: "non-text",
+  },
+  {
+    where: ".sl-llm-actions[data-state=open] .page-actions-trigger",
+    what: "accent border of the open trigger against the page",
+    fg: "--sl-color-text-accent",
+    bg: "--sl-color-bg",
+    kind: "non-text",
+  },
+
   // --- Focus ---------------------------------------------------------------
   {
     where: ":focus-visible",
