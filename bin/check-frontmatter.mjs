@@ -92,7 +92,7 @@
 // copy of the target page.
 //
 // Usage: pnpm run check:frontmatter
-import { existsSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 
 import { parse as parseYaml } from "yaml";
@@ -114,15 +114,40 @@ import { parseAllowlist, repoRoot } from "./lib/nav.mjs";
 import textprov from "textprov";
 
 const CONFIG = "src/content.config.ts";
+const environment = JSON.parse(
+  readFileSync(join(repoRoot, "src/data/reference/environment-variables.json"), "utf8"),
+);
+
+// Component-rendered headings and name-cell ids are absent from the MDX AST.
+// The rendered HTML contract is also checked by check:reference:html after a build.
+function environmentAnchors() {
+  return new Map(
+    environment.sections.flatMap((section) => [
+      [section.anchor, { depth: 2, text: section.heading }],
+      ...section.records.map((record) => [record.anchor, { depth: 3, text: record.name }]),
+    ]),
+  );
+}
 
 // Pages enrolled in TextProv are decoded before Starlight mints heading ids
 // (src/lib/textprov/html.mjs), so their anchors come from the text with the
 // recorded AI marks removed. Variation selectors are \p{M}, which the slug
 // math would otherwise keep. Like the renderer, this leaves other states alone.
 function anchorsOf(fields, body) {
-  const text = fields.textprov !== "true" ? body : textprov.runs(body).map((run) =>
-    run.state === "ai" ? textprov.runs(run.text, { strip: true }).map((part) => part.text).join("") : run.text,
-  ).join("");
+  const text =
+    fields.textprov !== "true"
+      ? body
+      : textprov
+          .runs(body)
+          .map((run) =>
+            run.state === "ai"
+              ? textprov
+                  .runs(run.text, { strip: true })
+                  .map((part) => part.text)
+                  .join("")
+              : run.text,
+          )
+          .join("");
   return new Map(headings(text).map((h) => [h.slug, h]));
 }
 const REDIRECTS = "config/redirects.mjs";
@@ -292,7 +317,12 @@ for (const page of pages) {
     );
   }
 
-  anchorsBySlug.set(page.slug, anchorsOf(fields, body));
+  anchorsBySlug.set(
+    page.slug,
+    page.slug === "reference/environment-variables"
+      ? environmentAnchors()
+      : anchorsOf(fields, body),
+  );
   pagesBySlug.set(page.slug, { path: page.path, links: pageLinks(body) });
 
   // 5: the gate below reads `audience`, so on the trees that gate is FOR, the

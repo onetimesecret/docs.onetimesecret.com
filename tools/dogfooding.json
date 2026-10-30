@@ -1,11 +1,8 @@
 {
   "_comment": "Patterns use Python fnmatch, where * also matches /, so src/content/docs/*.md covers every depth. exclude maps each pattern to the reason it is excluded.",
-  "include": [
-    "src/content/docs/*.md",
-    "src/content/docs/*.mdoc"
-  ],
+  "include": ["src/content/docs/*.md", "src/content/docs/*.mdoc"],
   "exclude": {
-    "src/content/docs/*/reference/environment-variables.md": "Generated environment reference, rendered by bin/reference.mjs from the pinned snapshot in vendor/onetimesecret/.env.reference.",
+    "src/content/docs/*/reference/environment-variables.mdx": "Data-rendered environment reference; MDX is outside the authoring profile and source prose is copied verbatim from the generated JSON snapshot.",
     "src/content/docs/*/reference/site-and-interface.md": "Generated configuration reference, rendered by bin/reference.mjs from the pinned snapshots in vendor/onetimesecret/etc/.",
     "src/content/docs/*/reference/features-and-branding.md": "Generated configuration reference, rendered by bin/reference.mjs from the pinned snapshots in vendor/onetimesecret/etc/.",
     "src/content/docs/*/reference/datastore-and-queues.md": "Generated configuration reference, rendered by bin/reference.mjs from the pinned snapshots in vendor/onetimesecret/etc/.",

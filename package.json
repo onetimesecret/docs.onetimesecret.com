@@ -17,6 +17,7 @@
     "check:locales": "node bin/check-locales.mjs",
     "check:contrast": "node bin/check-contrast.mjs",
     "check:textprov": "node bin/check-textprov.mjs",
+    "check:reference:html": "node bin/check-reference-html.mjs",
     "check:types": "astro sync && tsc --noEmit",
     "reference:generate": "node bin/reference.mjs generate",
     "reference:check": "node bin/reference.mjs check",

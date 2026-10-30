@@ -1,0 +1,104 @@
+---
+import type environment from '../data/reference/environment-variables.json';
+
+type Props = {
+  section: (typeof environment.sections)[number];
+  sourcePath: string;
+};
+
+const { section, sourcePath } = Astro.props;
+---
+
+<section aria-labelledby={section.anchor}>
+  <h2 id={section.anchor}><a href={`#${section.anchor}`}>{section.heading}</a></h2>
+  {section.prose.length > 0 && <p class="source-prose">{section.prose.join('\n')}</p>}
+  {section.records.length > 0 && (
+    <div class="table-scroll" tabindex="0" role="region" aria-labelledby={section.anchor}>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Example line</th>
+            <th scope="col">Declared default</th>
+            <th scope="col">Since</th>
+            <th scope="col">Tags</th>
+            <th scope="col">Source</th>
+          </tr>
+        </thead>
+        <tbody>
+          {section.records.map((record) => (
+            <>
+              <tr>
+                <td id={record.anchor}><a href={`#${record.anchor}`}><code>{record.name}</code></a></td>
+                <td><code>{record.example}</code></td>
+                <td>{record.declaredDefault ? <code>{record.declaredDefault.value}</code> : 'not declared'}</td>
+                <td>{record.since ?? 'not annotated'}</td>
+                <td>{record.tags.length > 0 ? record.tags.join(', ') : 'none'}</td>
+                <td><code>{sourcePath}:{record.sourceSpan}</code></td>
+              </tr>
+              {record.prose.length > 0 && (
+                <tr class="description-row">
+                  <td colspan="6">
+                    <details>
+                      <summary>Description of <code>{record.name}</code></summary>
+                      <p class="source-prose">{record.prose.join('\n')}</p>
+                    </details>
+                  </td>
+                </tr>
+              )}
+            </>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  )}
+</section>
+
+<style>
+  .table-scroll {
+    overflow-x: auto;
+  }
+
+  table {
+    display: table;
+    width: 100%;
+    font-size: var(--sl-text-sm);
+  }
+
+  th, td {
+    vertical-align: top;
+  }
+
+  td[id] {
+    scroll-margin-top: calc(var(--sl-nav-height) + 1rem);
+  }
+
+  td[id]:target {
+    background: var(--sl-color-gray-6);
+    outline: 2px solid var(--sl-color-text-accent);
+    outline-offset: -2px;
+  }
+
+  code {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
+
+  .source-prose {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    font-family: inherit;
+  }
+
+  .description-row td {
+    padding-top: 0;
+  }
+
+  details {
+    margin-block: 0;
+  }
+
+  summary {
+    cursor: pointer;
+  }
+</style>

@@ -3,7 +3,7 @@
 //
 // The documentation-owned reference pipeline (plan A1).
 //
-//   node bin/reference.mjs generate   write the page and the coverage report
+//   node bin/reference.mjs generate   write reference data, pages and coverage reports
 //   node bin/reference.mjs check      read-only equality gate, exit 1 on drift
 //   node bin/reference.mjs refresh    maintainer-only snapshot update
 //
@@ -13,7 +13,7 @@
 // that reads an application checkout, and it reads it through `git show` at an
 // explicit ref rather than from its working tree.
 //
-// Nothing here reads process.env. The generated page is a function of the
+// Nothing here reads process.env. The generated output is a function of the
 // vendored bytes alone, which is what makes "regenerate and compare" a real
 // gate rather than a reflection of whoever ran it. Paths resolve from
 // import.meta.url, so any cwd works.
@@ -27,9 +27,9 @@ import { renderConfigurationPages } from "./reference/render-config.mjs";
 import { loadManifest, repoRoot, sha256, ROLES, VENDOR_DIR } from "./reference/manifest.mjs";
 import {
   COVERAGE_PATH,
-  PAGE_PATH,
+  DATA_PATH,
   renderCoverageReport,
-  renderEnvironmentPage,
+  buildEnvironmentData,
 } from "./reference/render-env.mjs";
 
 const USAGE = `usage:
@@ -59,12 +59,12 @@ export function build({ vendorDir = VENDOR_DIR } = {}) {
           .join("\n"),
     );
   }
-  const { page, coverage, sections } = renderEnvironmentPage({ parsed, manifest });
+  const { data, coverage, sections } = buildEnvironmentData({ parsed, manifest });
   const report = renderCoverageReport({ parsed, manifest, coverage, sections });
   const configuration = renderConfigurationPages({ inputs, manifest });
   return {
     artifacts: [
-      { path: PAGE_PATH, content: page },
+      { path: DATA_PATH, content: `${JSON.stringify(data, null, 2)}\n` },
       { path: COVERAGE_PATH, content: report },
       ...configuration.artifacts,
     ],
@@ -113,7 +113,7 @@ function write(root, path, content) {
  * Pure in the sense that matters: it reads and reports, and writes nothing.
  * `root` and `vendorDir` are parameters so the tests can compare a throwaway
  * copy instead of mutating the tracked tree — a drift test that edits the real
- * page races every other test file that reads it.
+ * artifact races every other test file that reads it.
  *
  * @param {{root?: string, vendorDir?: string}} [options]
  * @returns {{problems: string[], coverage: object, warnings: string[], artifacts: object[]}}

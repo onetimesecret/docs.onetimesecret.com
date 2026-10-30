@@ -4,7 +4,7 @@
 // environment, and the behaviour of the non-writing equality gate.
 //
 // NOTHING HERE MUTATES A TRACKED FILE. Vitest runs test files in parallel, so
-// a drift test that edited the real generated page would race every other file
+// a drift test that edited a real generated artifact would race every other file
 // that reads the content tree — and it did, once, before `compareArtifacts`
 // took a `root`. Drift is now staged in a temporary copy.
 import { spawnSync } from "node:child_process";
@@ -16,7 +16,7 @@ import { afterEach, describe, expect, it } from "vitest";
 import { build, compareArtifacts, diffSummary } from "../reference.mjs";
 import { repoRoot, sha256 } from "./manifest.mjs";
 import { CONFIG_COVERAGE_PATH, CONFIG_PAGES, pagePathFor } from "./render-config.mjs";
-import { COVERAGE_PATH, PAGE_PATH } from "./render-env.mjs";
+import { COVERAGE_PATH, DATA_PATH } from "./render-env.mjs";
 
 const ENTRY = join(repoRoot, "bin", "reference.mjs");
 
@@ -75,9 +75,17 @@ describe("reproducibility", () => {
     }
   });
 
+  it("emits environment data as pretty JSON with a trailing newline", () => {
+    const artifact = build().artifacts.find((entry) => entry.path === DATA_PATH);
+    const data = JSON.parse(artifact.content);
+    expect(artifact.content).toBe(`${JSON.stringify(data, null, 2)}\n`);
+    expect(data.source).toEqual({ path: ".env.reference", lines: 2718 });
+    expect(data.sections.flatMap((section) => section.records)).toHaveLength(445);
+  });
+
   it("writes every artifact the pipeline owns", () => {
     expect(build().artifacts.map((artifact) => artifact.path)).toEqual([
-      PAGE_PATH,
+      DATA_PATH,
       COVERAGE_PATH,
       ...CONFIG_PAGES.map((page) => pagePathFor(page.owner)),
       CONFIG_COVERAGE_PATH,
@@ -86,7 +94,7 @@ describe("reproducibility", () => {
 });
 
 describe("isolation from the ambient environment", () => {
-  it("generates the same page from a different working directory", () => {
+  it("generates the same artifacts from a different working directory", () => {
     const elsewhere = temp("reference-cwd-");
     const result = run(["check"], { cwd: elsewhere });
     expect(result.stdout).toContain("OK:");
@@ -95,7 +103,7 @@ describe("isolation from the ambient environment", () => {
 
   it("ignores unrelated process environment values", () => {
     // The generator never reads process.env. Garbage in the variables the
-    // application itself uses must not reach the page.
+    // application itself uses must not reach the artifacts.
     const expected = build().artifacts;
     const env = {
       ...process.env,
@@ -132,21 +140,28 @@ describe("check", () => {
     expect(compareArtifacts({ root: stagedRoot() }).problems).toEqual([]);
   });
 
-  it("fails with a diff when the page is edited", () => {
+  it("gates environment JSON without requiring a Markdown or MDX page", () => {
     const root = stagedRoot();
-    const page = join(root, PAGE_PATH);
-    writeFileSync(
-      page,
-      readFileSync(page, "utf8").replace(
-        "## Secrets & Cryptography",
-        "## Secrets and Cryptography",
-      ),
-    );
+    expect(compareArtifacts({ root }).problems).toEqual([]);
+    for (const extension of ["md", "mdx"]) {
+      const page = join(root, `src/content/docs/en/reference/environment-variables.${extension}`);
+      mkdirSync(dirname(page), { recursive: true });
+      writeFileSync(page, "Hand-maintained page, not a generated artifact.\n");
+    }
+    expect(compareArtifacts({ root }).problems).toEqual([]);
+  });
+
+  it("fails with a diff when the environment data is edited", () => {
+    const root = stagedRoot();
+    const path = join(root, DATA_PATH);
+    const data = JSON.parse(readFileSync(path, "utf8"));
+    data.sections[0].heading = "Secrets and Cryptography";
+    writeFileSync(path, `${JSON.stringify(data, null, 2)}\n`);
     const { problems } = compareArtifacts({ root });
     expect(problems).toHaveLength(1);
-    expect(problems[0]).toContain(PAGE_PATH);
-    expect(problems[0]).toContain("-## Secrets and Cryptography");
-    expect(problems[0]).toContain("+## Secrets & Cryptography");
+    expect(problems[0]).toContain(DATA_PATH);
+    expect(problems[0]).toContain('-      "heading": "Secrets and Cryptography",');
+    expect(problems[0]).toContain('+      "heading": "Secrets & Cryptography",');
   });
 
   it("fails when the coverage report is edited", () => {
@@ -183,17 +198,17 @@ describe("check", () => {
 
   it("fails when an artifact is missing entirely", () => {
     const root = stagedRoot();
-    rmSync(join(root, PAGE_PATH));
+    rmSync(join(root, DATA_PATH));
     expect(compareArtifacts({ root }).problems[0]).toMatch(/does not exist/);
   });
 
   it("writes nothing", () => {
     const root = stagedRoot();
-    const page = join(root, PAGE_PATH);
-    const drifted = readFileSync(page, "utf8").replace("## Connections", "## Connexions");
-    writeFileSync(page, drifted);
+    const path = join(root, DATA_PATH);
+    const drifted = readFileSync(path, "utf8").replace('"Connections"', '"Connexions"');
+    writeFileSync(path, drifted);
     compareArtifacts({ root });
-    expect(readFileSync(page, "utf8")).toBe(drifted);
+    expect(readFileSync(path, "utf8")).toBe(drifted);
   });
 
   it("fails when a vendored snapshot is edited without rewriting the manifest", () => {
@@ -227,11 +242,11 @@ describe("check", () => {
         (entry) => entry.record.name === "SMUGGLED" && entry.classification === "development-only",
       ),
     ).toBe(true);
-    // Both artifacts move: the coverage report gains the entry, and the page's
-    // sourceOfTruth citation carries the file's line count. The gate reports a
-    // reviewable difference rather than regenerating silently.
+    // Both artifacts change: the coverage report gains the entry, and the
+    // data's source metadata records the file's new line count. The gate
+    // reports a reviewable difference rather than regenerating silently.
     expect(problems).toHaveLength(2);
-    expect(problems.join("\n")).toContain(PAGE_PATH);
+    expect(problems.join("\n")).toContain(DATA_PATH);
     expect(problems.join("\n")).toContain(COVERAGE_PATH);
   });
 });
