@@ -369,6 +369,10 @@ export function createRedirectsConfig() {
     "/contact": "https://onetimesecret.com/feedback",
     "/feedback": "https://onetimesecret.com/feedback",
 
+    // The SSO demos moved to ssowhat.dev.
+    "/artifacts/2026/sso-demos": "https://ssowhat.dev/",
+    "/artifacts/2026/sso-demos/oidc-saml-bridge": "https://ssowhat.dev/oidc-saml-bridge/",
+
     // The site root is not redirected. src/pages/index.astro renders the EN
     // homepage entry at "/" with a canonical link to /en/, so one source file
     // serves both URLs and "/" answers 200 instead of a meta-refresh stub.

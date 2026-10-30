@@ -17,6 +17,12 @@
 //  3. No page with a marker still contains U+E0101. Pages without a marker are
 //     not scanned: the selector is a real Unicode variation selector and may
 //     appear legitimately in text that was never enrolled.
+//  4. The Markdown twin of every enrolled page exists and contains no U+E0101.
+//     starlight-llm-actions renders the twins outside the middleware, and
+//     src/lib/llm-markdown.ts cleans them; this is the check on that path.
+//     Only a locale's own entries get a twin (Starlight's English fallback
+//     routes have none), and a locale index is `{locale}.md`. Any llms*.txt
+//     at the site root is scanned too; it is English prose.
 //
 // Usage: pnpm run check:textprov
 import { existsSync, readdirSync, readFileSync } from "node:fs";
@@ -71,15 +77,20 @@ if (!existsSync(DIST)) {
 const defaultLocale = i18nConfig.defaultLocale;
 const locales = Object.keys(i18nConfig.locales);
 const defaultPages = localePages(defaultLocale);
+const ownPages = new Map(locales.map((locale) => [locale, locale === defaultLocale ? defaultPages : localePages(locale)]));
 
-// Expected enrolled output files, relative to dist/.
+// Expected enrolled output files, relative to dist/: HTML including English
+// fallbacks, and Markdown twins for a locale's own entries only.
 const expected = new Set();
-for (const locale of locales) {
-  const own = locale === defaultLocale ? defaultPages : localePages(locale);
+const expectedMarkdown = new Set();
+for (const [locale, own] of ownPages) {
   const slugs = new Set([...own.keys(), ...defaultPages.keys()]);
   for (const slug of slugs) {
     const enrolled = own.has(slug) ? own.get(slug) : defaultPages.get(slug);
     if (enrolled) expected.add(join(locale, slug, "index.html"));
+  }
+  for (const [slug, enrolled] of own) {
+    if (enrolled) expectedMarkdown.add(slug ? join(locale, `${slug}.md`) : `${locale}.md`);
   }
 }
 if (defaultPages.get("")) expected.add("index.html");
@@ -102,9 +113,23 @@ for (const rel of expected) {
   if (!seen.has(rel)) failures.push(`${rel}: enrolled page ${existsSync(join(DIST, rel)) ? "has no enrollment marker" : "was not built"}`);
 }
 
+let twins = 0;
+for (const rel of expectedMarkdown) {
+  const path = join(DIST, rel);
+  if (!existsSync(path)) {
+    failures.push(`${rel}: enrolled page has no Markdown twin`);
+    continue;
+  }
+  twins += 1;
+  if (readFileSync(path, "utf8").includes(SELECTOR)) failures.push(`${rel}: Markdown twin of an enrolled page still contains U+E0101`);
+}
+for (const name of readdirSync(DIST)) {
+  if (/^llms.*\.txt$/.test(name) && readFileSync(join(DIST, name), "utf8").includes(SELECTOR)) failures.push(`${name}: contains U+E0101`);
+}
+
 if (failures.length) {
   console.error(`check:textprov FAIL — ${failures.length} problem(s):`);
   for (const line of failures) console.error(`  ${line}`);
   process.exit(1);
 }
-console.log(`check:textprov OK — ${withMarker} enrolled pages in dist/ (${expected.size} expected), one marker each, no raw selectors`);
+console.log(`check:textprov OK — ${withMarker} enrolled pages in dist/ (${expected.size} expected), one marker each, no raw selectors; ${twins} Markdown twins clean`);

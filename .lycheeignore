@@ -30,6 +30,15 @@ https://creativecommons.org/*
 https://onetimesecret.com/*
 https://*.onetimesecret.com/*
 
+# public/llms.txt is plain text, so lychee's extractor sees every URL in it,
+# not only Markdown links: the REGION placeholder host in the instructions
+# and the two POST-only endpoints (HEAD and GET answer 405 and 404). These
+# entries are regexes; the `https://*.onetimesecret.com/*` line above is
+# not a glob and does not cover subdomains, so they are listed explicitly.
+(?i)^https://region\.onetimesecret\.com/
+^https://api\.onetimesecret\.com/mcp$
+^https://[a-z]{2}\.onetimesecret\.com/api/v2/secret/conceal$
+
 # Exclude placeholder/example URLs
 https://example.com/*
 https://yourdomain.com/*
@@ -44,12 +53,6 @@ mailto:*
 # Exclude static asset paths (served from public/ at runtime, not in content dir)
 .*/img/.*
 .*/socialcards/.*
-
-# Interactive demo / artifact pages live in src/pages, not src/content/docs, so
-# the source-rooted internal link check (--root-dir src/content/docs) can't
-# resolve them. They build to /artifacts/... in dist and are verified in the
-# browser; documentation pages link to them (e.g. the SSO demos).
-.*/artifacts/.*
 
 # CJK false positives: lychee's plaintext extractor has no word boundary
 # before an email address when the preceding character is CJK (e.g.

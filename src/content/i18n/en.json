@@ -198,6 +198,7 @@
   "notFound.gettingStarted": "Getting started",
   "notFound.apiDocs": "API docs",
   "notFound.selfHosting": "Self-hosting",
+  "pageActions.heading": "Page actions",
   "textprov.heading": "AI edits",
   "textprov.toggle": "Highlight AI edits",
   "textprov.help": "Highlights edits recorded as AI-written without changing the words.",

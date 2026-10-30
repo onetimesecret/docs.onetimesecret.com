@@ -3,6 +3,7 @@ import { i18nConfig } from "./i18n.mjs";
 import { sidebar } from "./sidebar.mjs";
 import { EDIT_LINK_BASE_URL } from "./edit-link.mjs";
 import { showStagingWarning, isPrereleaseBuild } from "./domains.mjs";
+import starlightLlmActions from "starlight-llm-actions";
 
 // Prerelease builds (e.g. docs.onetimesecret.dev) get a top warning banner
 // and/or a diagonal "PRERELEASE" watermark, independently toggled at build time
@@ -40,7 +41,18 @@ export const starlightConfig = {
   },
   pagefind: true,
   routeMiddleware: "./src/middleware/reference.ts",
-  plugins: [],
+  plugins: [
+    // Copy/view as Markdown, "open in" an AI assistant, and a `.md` twin
+    // route for every page. The renderer flattens the rendered HTML rather
+    // than serving source, so MDX reference pages and Markdoc pages come out
+    // as text; see src/lib/llm-markdown.ts. llms.txt is a hand-written file
+    // in public/, so the plugin's generated indexes stay off. The dropdown is
+    // placed by PageSidebar.astro (see `components` below).
+    starlightLlmActions({
+      renderMarkdown: { module: "./src/lib/llm-markdown.ts" },
+      linkAlternate: true,
+    }),
+  ],
 
   // Site-wide default social-preview card (Open Graph / Twitter). Emitted on
   // every build; per-page frontmatter can still override these.
@@ -53,6 +65,11 @@ export const starlightConfig = {
     { tag: "meta", attrs: { property: "og:image:width", content: "1280" } },
     { tag: "meta", attrs: { property: "og:image:height", content: "640" } },
     { tag: "meta", attrs: { name: "twitter:image", content: ogImage } },
+    // llms.txt discovery (https://llmstxt.org): agents do not probe for
+    // /llms.txt on their own, so every page points at the index that covers
+    // it. The matching rel="alternate" type="text/markdown" link needs a
+    // Markdown copy of each page, which this site does not publish yet.
+    { tag: "link", attrs: { rel: "describedby", href: "/llms.txt" } },
     ...(prerelease
       ? [
           {
@@ -65,8 +82,12 @@ export const starlightConfig = {
 
   components: {
     MarkdownContent: "./src/components/starlight/MarkdownContent.astro",
-    // TextProv controls above "On this page" and in the mobile TOC bar.
+    // Page-actions dropdown and TextProv controls above "On this page", and
+    // in the mobile TOC bar.
     PageSidebar: "./src/components/starlight/PageSidebar.astro",
+    // Starlight's default H1. Its presence stops starlight-llm-actions from
+    // injecting its own PageTitle, which would put the dropdown beside the H1.
+    PageTitle: "./src/components/starlight/PageTitle.astro",
     Header: "./src/components/starlight/Header.astro",
     SiteTitle: "./src/components/starlight/SiteTitle.astro",
     Hero: "./src/components/starlight/Hero.astro",
