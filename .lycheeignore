@@ -30,6 +30,15 @@ https://creativecommons.org/*
 https://onetimesecret.com/*
 https://*.onetimesecret.com/*
 
+# public/llms.txt is plain text, so lychee's extractor sees every URL in it,
+# not only Markdown links: the REGION placeholder host in the instructions
+# and the two POST-only endpoints (HEAD and GET answer 405 and 404). These
+# entries are regexes; the `https://*.onetimesecret.com/*` line above is
+# not a glob and does not cover subdomains, so they are listed explicitly.
+(?i)^https://region\.onetimesecret\.com/
+^https://api\.onetimesecret\.com/mcp$
+^https://[a-z]{2}\.onetimesecret\.com/api/v2/secret/conceal$
+
 # Exclude placeholder/example URLs
 https://example.com/*
 https://yourdomain.com/*

@@ -13,7 +13,12 @@ name: Check Links
 # External links check:
 #   lychee --no-progress --max-concurrency 8 --timeout 20 --max-retries 3 \
 #     --exclude-path ./CHANGELOG.md --accept 200,204,206,301,302,429 \
-#     './src/**/[!_]*.md' './src/**/[!_]*.mdoc'
+#     './src/**/[!_]*.md' './src/**/[!_]*.mdoc' ./public/llms.txt
+#
+# public/llms.txt is the agent index. check:llms (ci.yml) verifies its links
+# into this site; only the external job here sees its api.onetimesecret.com,
+# GitHub and blog links, so it is an input of both external steps. The
+# placeholder host and POST-only endpoints it mentions are in .lycheeignore.
 #
 # The [!_] prefix class skips underscore-prefixed files: Astro does not route
 # them, so they are repo-only reference material (e.g. the per-locale
@@ -137,6 +142,7 @@ jobs:
             --accept 200,204,206,301,302,429
             './src/**/[!_]*.md'
             './src/**/[!_]*.mdoc'
+            ./public/llms.txt
           output: ./lychee-head.md
           fail: false
         env:
@@ -157,6 +163,7 @@ jobs:
             --accept 200,204,206,301,302,429
             './src/**/[!_]*.md'
             './src/**/[!_]*.mdoc'
+            ./public/llms.txt
           output: ./lychee-get.md
           fail: false
         env:
