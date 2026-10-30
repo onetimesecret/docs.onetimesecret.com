@@ -51,7 +51,7 @@ export function cellText(cell) {
 export function shapeOf(record) {
   if (record.erb) {
     const casts = record.erb.cast ?? [];
-    if (casts.includes("split")) return "list";
+    if (casts.some((cast) => cast.startsWith("split("))) return "list";
     if (casts.includes("to_json")) return "JSON string";
     if (casts.includes("to_i")) return "integer";
     if (casts.includes("to_f")) return "number";
@@ -76,6 +76,8 @@ export function valueOf(record) {
     const fallback = record.erb.staticFallback;
     if (fallback === null || fallback === undefined) return text(STRINGS.cellNoValue);
     if (typeof fallback === "string") return code(fallback === "" ? '""' : fallback);
+    if (Array.isArray(fallback)) return code("[]");
+    if (typeof fallback === "object") return code("{}");
     return code(String(fallback));
   }
   const value = record.literalValue;

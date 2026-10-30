@@ -59,7 +59,7 @@ describe("cell helpers", () => {
   it("derives the shape from the cast chain, the ERB kind or the literal", () => {
     expect(shapeOf({ erb: { kind: "cast", cast: ["to_i"] } })).toBe("integer");
     expect(shapeOf({ erb: { kind: "cast", cast: ["to_f"] } })).toBe("number");
-    expect(shapeOf({ erb: { kind: "cast", cast: ["split"] } })).toBe("list");
+    expect(shapeOf({ erb: { kind: "cast", cast: ["split(,)"] } })).toBe("list");
     expect(shapeOf({ erb: { kind: "cast", cast: ["to_json"] } })).toBe("JSON string");
     expect(shapeOf({ erb: { kind: "boolean" } })).toBe("boolean");
     expect(shapeOf({ erb: { kind: "json-quoted" } })).toBe("JSON string");
@@ -97,6 +97,36 @@ describe("cell helpers", () => {
     expect(cellText({ code: "x" })).toBe("x");
     expect(cellText({ text: "y" })).toBe("y");
   });
+});
+
+describe("committed extracted records", () => {
+  const data = JSON.parse(readFileSync(`${repoRoot}/${CONFIG_DATA_PATH}`, "utf8"));
+  const records = data.pages.flatMap((page) => page.groups.flatMap((group) => group.records));
+
+  it.each([
+    "site.interface.ui.homepage.matching_cidrs",
+    "site.network.trusted_proxy.cidrs",
+    "site.admin.allowed_cidrs",
+    "site.authentication.allowed_signup_domains",
+  ])("renders %s as a list with an explicit empty-array fallback", (path) => {
+    const record = records.find((record) => record.path === path);
+    expect(record.erb.cast).toContain("split(,)");
+    expect(record.erb.staticFallback).toEqual([]);
+    expect(shapeOf(record)).toBe("list");
+    expect(valueOf(record)).toEqual({ code: "[]" });
+    expect(recordRowText(record).slice(0, 2)).toEqual(["list", "[]"]);
+  });
+
+  it.each(["site.admin.allowed_hosts", "features.incoming.recipients[0]"])(
+    "renders %s as a list without inventing a fallback",
+    (path) => {
+      const record = records.find((record) => record.path === path);
+      expect(record.erb.cast).toContain("split(,)");
+      expect(record.erb.staticFallback).toBeNull();
+      expect(shapeOf(record)).toBe("list");
+      expect(valueOf(record)).toEqual({ text: STRINGS.cellNoValue });
+    },
+  );
 });
 
 describe("sentences", () => {
