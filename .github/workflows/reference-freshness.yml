@@ -1,0 +1,110 @@
+# .github/workflows/reference-freshness.yml
+#
+# Upstream freshness, kept separate from reproducibility on purpose.
+#
+# Two different questions used to share one job:
+#
+#   1. Does the committed Reference match the inputs it was generated from?
+#   2. Have those inputs moved on upstream?
+#
+# Question 1 is a hard PR gate and belongs in CI, where `pnpm run
+# reference:check` answers it from this repository alone, offline. Question 2
+# cannot be a PR gate: a docs PR is not wrong because the application released
+# something yesterday. It is a maintenance signal, so it runs on a schedule and
+# on demand, and it never blocks a build.
+#
+# What replaced what. The retired env-reference-drift.yml checked out
+# onetimesecret/onetimesecret@main and EXECUTED its generator against this
+# repository. That answered both questions at once, in the weakest way: it
+# compared against a floating branch, so an unreleased change read as drift,
+# and it ran upstream code in this repository's CI. This job compares hashes
+# instead. No upstream code executes here, and the comparison is against a
+# declared release policy rather than whatever main happens to hold.
+#
+# The policy is the manifest's own release label: the snapshot is pinned to a
+# release, so the question is whether a NEWER release changed one of the five
+# upstream inputs (the environment reference and the four configuration
+# sources). An unreleased commit on main is deliberately not divergence.
+#
+# Failure modes are reported apart from each other, because they call for
+# different actions: a real content difference needs a refresh and a review, a
+# new release with identical inputs needs only a manifest label bump, and an
+# unreachable upstream needs nothing at all.
+#
+# To act on a real difference, a maintainer refreshes the snapshots locally
+# (see docs/reference/README.md) and opens a PR where the data diff is
+# reviewable.
+---
+name: Reference freshness
+
+on:
+  schedule:
+    # Weekly. The inputs change at release cadence, not daily.
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  freshness:
+    name: pinned inputs versus latest upstream release
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout docs site
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+
+      # No application checkout and no upstream code. The five inputs are read
+      # over the API at an explicit release tag, hashed, and compared with the
+      # manifest. GITHUB_TOKEN is read-only and is never exposed to anything
+      # upstream, because nothing upstream runs.
+      - name: Compare pinned inputs with the latest upstream release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -uo pipefail
+
+          REPO=onetimesecret/onetimesecret
+          PINNED_RELEASE=$(jq -r '.upstream.release' src/data/reference/manifest.json)
+          PINNED_COMMIT=$(jq -r '.upstream.commit' src/data/reference/manifest.json)
+
+          echo "Pinned: $PINNED_RELEASE ($PINNED_COMMIT)"
+
+          # A network or API failure is reported as such and exits 0. An
+          # unreachable upstream is not evidence that anything diverged, and a
+          # red build for it trains people to ignore this job.
+          if ! LATEST=$(gh api "repos/$REPO/releases/latest" --jq '.tag_name' 2>/dev/null); then
+            echo "::notice::Upstream release could not be read (network or API failure). No comparison performed."
+            exit 0
+          fi
+
+          echo "Latest upstream release: $LATEST"
+
+          if [ "$LATEST" = "$PINNED_RELEASE" ]; then
+            echo "::notice::Snapshot is pinned to the latest upstream release ($LATEST). Nothing to do."
+            exit 0
+          fi
+
+          DIFFERENT=0
+          while read -r path sha256; do
+            if ! gh api "repos/$REPO/contents/$path?ref=$LATEST" \
+                  -H 'Accept: application/vnd.github.raw' > /tmp/upstream-input 2>/dev/null; then
+              echo "::notice::$path could not be read at $LATEST. Skipped."
+              continue
+            fi
+            UPSTREAM=$(sha256sum /tmp/upstream-input | cut -d' ' -f1)
+            if [ "$UPSTREAM" = "$sha256" ]; then
+              echo "unchanged: $path"
+            else
+              echo "::warning::changed upstream: $path (pinned $sha256, $LATEST $UPSTREAM)"
+              DIFFERENT=1
+            fi
+          done < <(jq -r '(.environmentSource, .configurationSources[]) | "\(.path) \(.sha256)"' src/data/reference/manifest.json)
+
+          if [ "$DIFFERENT" -eq 1 ]; then
+            echo "::error::Reference inputs changed in $LATEST. Refresh the snapshots (docs/reference/README.md) and open a PR."
+            exit 1
+          fi
+
+          echo "::notice::$LATEST is newer than the pinned $PINNED_RELEASE but every pinned input is byte-identical. Bump the manifest release label when convenient."

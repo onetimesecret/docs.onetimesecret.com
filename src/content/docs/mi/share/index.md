@@ -51,7 +51,7 @@ k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁 k󠄁u󠄁a󠄁 p󠄁e󠄁n�
 
 K󠄁o󠄁 n󠄁g󠄁ā󠄁 w󠄁ā󠄁 o󠄁r󠄁a󠄁 e󠄁 w󠄁ā󠄁t󠄁e󠄁a󠄁 a󠄁n󠄁a󠄁 k󠄁a󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁w󠄁h󠄁i󠄁r󠄁i󠄁n󠄁a󠄁k󠄁i󠄁 k󠄁i󠄁 t󠄁e󠄁 r󠄁a󠄁t󠄁o󠄁n󠄁g󠄁a󠄁 m󠄁e󠄁 t󠄁ō󠄁 m󠄁a󠄁h󠄁e󠄁r󠄁e󠄁.󠄁 H󠄁e󠄁 w󠄁ā󠄁 o󠄁r󠄁a󠄁 m󠄁ō󠄁r󠄁a󠄁h󠄁i󠄁
 m󠄁o󠄁t󠄁u󠄁h󠄁a󠄁k󠄁e󠄁 t󠄁ō󠄁 t󠄁e󠄁 t󠄁o󠄁h󠄁a󠄁t󠄁o󠄁h󠄁a󠄁 i󠄁n󠄁g󠄁o󠄁a󠄁k󠄁o󠄁r󠄁e󠄁.󠄁 K󠄁a󠄁 w󠄁h󠄁i󠄁r󠄁i󠄁h󠄁o󠄁r󠄁a󠄁 t󠄁e󠄁 k󠄁a󠄁i󠄁w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁 m󠄁a󠄁n󠄁a󠄁a󠄁k󠄁i󠄁-󠄁ā󠄁-󠄁k󠄁i󠄁r󠄁i󠄁 i󠄁 n󠄁g󠄁ā󠄁 k󠄁ō󠄁w󠄁h󠄁i󠄁r󠄁i󠄁n󠄁g󠄁a󠄁
-e󠄁 w󠄁ā󠄁t󠄁e󠄁a󠄁 a󠄁n󠄁a󠄁;󠄁 t󠄁i󠄁r󠄁o󠄁h󠄁i󠄁a󠄁 [N󠄁g󠄁ā󠄁 t󠄁a󠄁u󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 t󠄁a󠄁i󠄁a󠄁o󠄁](/mi/self-hosting/environment-variables).󠄁
+e󠄁 w󠄁ā󠄁t󠄁e󠄁a󠄁 a󠄁n󠄁a󠄁;󠄁 t󠄁i󠄁r󠄁o󠄁h󠄁i󠄁a󠄁 [N󠄁g󠄁ā󠄁 t󠄁a󠄁u󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 t󠄁a󠄁i󠄁a󠄁o󠄁](/mi/reference/environment-variables).󠄁
 
 K󠄁a󠄁 r󠄁u󠄁a󠄁 t󠄁e󠄁 r󠄁o󠄁a󠄁 o󠄁 t󠄁e󠄁 r󠄁i󠄁h󠄁ī󠄁t󠄁i󠄁 i󠄁 t󠄁e󠄁 w󠄁ā󠄁 o󠄁r󠄁a󠄁 i󠄁 k󠄁ō󠄁w󠄁h󠄁i󠄁r󠄁i󠄁a󠄁 m󠄁ō󠄁 t󠄁e󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁,󠄁 k󠄁a󠄁 i󠄁n󠄁e󠄁a󠄁 m󠄁a󠄁i󠄁 i󠄁 t󠄁e󠄁 w󠄁a󠄁i󠄁h󠄁a󠄁n󠄁g󠄁a󠄁t󠄁a󠄁n󠄁g󠄁a󠄁,󠄁
 k󠄁i󠄁a󠄁 t󠄁a󠄁e󠄁a󠄁 a󠄁i󠄁 e󠄁 k󠄁o󠄁e󠄁 t󠄁e󠄁 t󠄁i󠄁r󠄁o󠄁t󠄁i󠄁r󠄁o󠄁 i󠄁 n󠄁g󠄁ā󠄁 m󠄁e󠄁a󠄁 i󠄁 t󠄁u󠄁p󠄁u󠄁 i󠄁 m󠄁u󠄁r󠄁i󠄁 i󠄁 t󠄁e󠄁 w󠄁ā󠄁 k󠄁u󠄁a󠄁 k󠄁o󠄁r󠄁e󠄁 t󠄁e󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁 e󠄁 w󠄁ā󠄁t󠄁e󠄁a󠄁.󠄁

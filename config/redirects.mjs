@@ -45,18 +45,26 @@ const LOCALES = Object.keys(i18nConfig.locales);
  * reworded, the fragment here must be re-derived rather than the heading bent
  * back to fit.
  *
- * `toDefaultLocale` sends every locale to the EN copy of the target, the way
- * configGeneratorRedirects already does for the EN-only generator page. No
- * entry sets it at present. Set it only when the absorbed content exists in
- * English only, so a same-locale redirect would send the reader to a page that
- * does not contain what they followed the link for.
+ * `toDefaultLocale` sends every locale to the EN copy of the target. Set it
+ * only when the absorbed content exists in English only, so a same-locale
+ * redirect would send the reader to a page that does not contain what they
+ * followed the link for.
+ *
+ * `skipLocales` omits the fan-out for the locales it names. Exactly one entry
+ * uses it, and only because that URL is still a page: the retired generator
+ * route keeps an English forwarder (src/pages/en/self-hosting/configuration-generator.astro)
+ * so a bookmarked query string and the #apply-configuration fragment survive,
+ * which a static redirect stub cannot do. Astro would refuse to serve a URL
+ * that is both a page and a redirect, and the plan forbids it outright, so the
+ * EN row is skipped and the other sixteen locales redirect straight to the new
+ * route. Do not reach for this to paper over a missing translation.
  *
  * Every merge target resolves in-locale: either the locale has its own
  * translated copy (moved with the page this phase), or it has none and
  * Starlight serves the EN fallback, whose headings are the EN headings. Both
  * cases make the fragments below resolve.
  *
- * @type {{from: string, to: string, fragment?: string, toDefaultLocale?: boolean}[]}
+ * @type {{from: string, to: string, fragment?: string, toDefaultLocale?: boolean, skipLocales?: string[]}[]}
  */
 const movedPages = [
   // Start here — three entry points merged into one, plus the orientation
@@ -165,6 +173,35 @@ const movedPages = [
     fragment: "united-states",
   },
 
+  // Phase 4: the environment reference moved out of self-hosting/ into the
+  // generated Reference group. The page is now rendered by bin/reference.mjs
+  // from a pinned application snapshot, and its 25 section fragments are
+  // preserved verbatim, so an old deep link such as
+  // /en/self-hosting/environment-variables/#sso--omniauth still resolves once
+  // the reader follows this redirect. The eight translated copies retired with
+  // the English page; their final revisions are recorded in
+  // docs/planning/documentation-audit-2026-08-phase-4-evidence.md.
+  { from: "self-hosting/environment-variables", to: "reference/environment-variables" },
+
+  // Phase 4 P3: the configuration family followed it. The 637-line English
+  // configuration page is replaced by the authored precedence reference plus
+  // five generated key-record pages, and the interactive generator moved from
+  // a custom src/pages route into the documentation collection. The eight
+  // translated configuration copies retired with the English page; their final
+  // revisions are recorded in
+  // docs/planning/documentation-audit-2026-08-phase-4-configuration-retirement.md.
+  //
+  // The generator row sends every locale to the English page (the tool is
+  // English-only, which is what the removed configGeneratorRedirects fan-out
+  // used to do) and skips EN, where the forwarder page lives.
+  { from: "self-hosting/configuration", to: "reference/configuration-files-and-precedence" },
+  {
+    from: "self-hosting/configuration-generator",
+    to: "reference/generator",
+    toDefaultLocale: true,
+    skipLocales: ["en"],
+  },
+
   // The principles family, same treatment.
   { from: "principles", to: "security/our-principles" },
   { from: "principles/privacy-first", to: "security/our-principles", fragment: "privacy-first" },
@@ -264,20 +301,13 @@ export function createRedirectsConfig() {
   // truth stays the ~40-row movedPages table above instead of ~600 literals.
   const movedPageRedirects = Object.fromEntries(
     LOCALES.flatMap((locale) =>
-      movedPages.map(({ from, to, fragment, toDefaultLocale }) => [
-        `/${locale}/${from}`,
-        localeUrl(toDefaultLocale ? i18nConfig.defaultLocale : locale, to, fragment),
-      ]),
+      movedPages
+        .filter(({ skipLocales }) => !skipLocales?.includes(locale))
+        .map(({ from, to, fragment, toDefaultLocale }) => [
+          `/${locale}/${from}`,
+          localeUrl(toDefaultLocale ? i18nConfig.defaultLocale : locale, to, fragment),
+        ]),
     ),
-  );
-
-  // The configuration generator is an interactive page (src/pages) that only
-  // exists in English, so non-EN sidebar links redirect to the EN page.
-  const configGeneratorRedirects = Object.fromEntries(
-    LOCALES.filter((locale) => locale !== i18nConfig.defaultLocale).map((locale) => [
-      `/${locale}/self-hosting/configuration-generator`,
-      `/en/self-hosting/configuration-generator/`,
-    ]),
   );
 
   // Translator notes are now repo-only reference material: the per-locale
@@ -312,7 +342,6 @@ export function createRedirectsConfig() {
 
   const redirects = {
     ...movedPageRedirects,
-    ...configGeneratorRedirects,
     ...translatorNotesRedirects,
     ...unconfiguredLocaleNoteRedirects,
 

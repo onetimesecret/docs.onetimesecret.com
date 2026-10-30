@@ -1,0 +1,4 @@
+site:
+  host: localhost
+  widget: !!custom/thing
+    name: surprise

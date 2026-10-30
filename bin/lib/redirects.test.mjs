@@ -89,3 +89,36 @@ describe("the live table", () => {
     expect(Object.keys(redirects).length).toBeGreaterThan(600);
   });
 });
+
+describe("the Phase 4 configuration cutover", () => {
+  const redirects = createRedirectsConfig();
+
+  it("sends every locale's retired configuration page to the precedence reference", () => {
+    for (const locale of ["en", "da", "mi", "pt-br", "sv", "tr", "uk", "zh-cn", "fr"]) {
+      expect(redirects[`/${locale}/self-hosting/configuration`]).toBe(
+        `/${locale}/reference/configuration-files-and-precedence/`,
+      );
+    }
+  });
+
+  it("leaves the English generator URL out of the table, because it is still a page", () => {
+    // src/pages/en/self-hosting/configuration-generator.astro forwards with the
+    // query string and fragment intact; a redirect stub cannot. No source URL
+    // may be both a page and a redirect.
+    expect(redirects["/en/self-hosting/configuration-generator"]).toBeUndefined();
+  });
+
+  it("sends the other locales' generator URL straight to the new route", () => {
+    for (const locale of ["da", "fr", "zh-cn"]) {
+      expect(redirects[`/${locale}/self-hosting/configuration-generator`]).toBe(
+        "/en/reference/generator/",
+      );
+    }
+  });
+
+  it("no longer redirects through the retired English generator route", () => {
+    for (const target of Object.values(redirects)) {
+      expect(target).not.toContain("/self-hosting/configuration-generator");
+    }
+  });
+});

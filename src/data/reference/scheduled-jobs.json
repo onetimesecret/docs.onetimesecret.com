@@ -1,0 +1,265 @@
+{
+  "source": {
+    "repository": "onetimesecret/onetimesecret",
+    "release": "v0.26.19",
+    "sha": "e98a88c9b5832bbae249f38885aa28bd78a5db4d"
+  },
+  "scheduler": {
+    "process": "bin/ots scheduler",
+    "library": "rufus-scheduler",
+    "discovery": "Onetime::Jobs::Registry.load_all! requires every lib/onetime/jobs/scheduled/**/*_job.rb and schedules each named ScheduledJob subclass that implements its own .schedule; abstract intermediates are filtered out.",
+    "registration": "Each job decides for itself whether to register: .schedule returns early unless its own enablement check passes, so a disabled job is absent from the schedule rather than registered and skipped.",
+    "overlap": "rufus-scheduler does not prevent overlapping runs. Only DomainRefreshJob passes overlap: false. The maintenance base class states that jobs with non-idempotent repair logic would need their own datastore lock.",
+    "coordination": "No cross-process lock exists for scheduled jobs. The source states the single-instance assumption: one scheduler process per datastore.",
+    "run_records": "Every run is recorded through Onetime::Jobs::JobRun with a status of success, partial, skipped or error; a raising block is recorded as error and logged, and the scheduler keeps running.",
+    "liveness": "The scheduler registers a raw rufus heartbeat (not a ScheduledJob, so it never lists itself) every 60 seconds with overlap: false.",
+    "signals": "INT and TERM shut the scheduler down after waiting for running jobs; USR1 logs the current schedule.",
+    "evidence": [
+      { "path": "onetimesecret/lib/onetime/cli/scheduler_command.rb", "lines": "40-150", "note": "boot, discovery, heartbeat, signal handlers, registration logging" },
+      { "path": "onetimesecret/lib/onetime/jobs/registry.rb", "lines": "20-80", "note": "one discovery shared by the scheduler, the colonel endpoint and `ots scheduler status`" },
+      { "path": "onetimesecret/lib/onetime/jobs/scheduled_job.rb", "lines": "30-200", "note": "cron/every/in/at helpers, run recording and outcome classification" },
+      { "path": "onetimesecret/lib/onetime/jobs/maintenance_job.rb", "lines": "17-22", "note": "overlapping runs are not prevented" },
+      { "path": "onetimesecret/lib/onetime/jobs/scheduled/domain_refresh_job.rb", "lines": "38-59", "note": "overlap: false and the single-scheduler assumption" }
+    ]
+  },
+  "records": [
+    {
+      "id": "job-catalog-retry",
+      "job": "CatalogRetryJob",
+      "group": "scheduled",
+      "trigger": "every 2 minutes, first run 30 seconds after start",
+      "enabled_by": "jobs.catalog_retry.enabled must be exactly true; shipped default true. The class is only defined when billing is enabled.",
+      "depends_on": "datastore; a configured Stripe API key; billing enabled",
+      "effects": "Reprocesses up to 50 webhook events that the Stripe circuit breaker deferred. Skips the run while the circuit breaker is open or no Stripe key is configured.",
+      "overlap": "not limited (no overlap option)",
+      "evidence": [
+        { "path": "onetimesecret/lib/onetime/jobs/scheduled/catalog_retry_job.rb", "lines": "9-70", "note": "billing guard, schedule, enablement key, skip conditions and batch limit" },
+        { "path": "onetimesecret/etc/defaults/config.defaults.yaml", "lines": "1705-1712", "note": "shipped default for jobs.catalog_retry.enabled" }
+      ]
+    },
+    {
+      "id": "job-dlq-email-consumer",
+      "job": "DlqEmailConsumerJob",
+      "group": "scheduled",
+      "trigger": "every 5 minutes, first run 30 seconds after start",
+      "enabled_by": "jobs.dlq_consumer.enabled must be exactly true; shipped default true.",
+      "depends_on": "RabbitMQ broker channel pool; datastore",
+      "effects": "Pops up to 50 messages from dlq.email.message within a 240-second budget. Replays authentication email whose token is still valid by republishing it, and discards non-authentication email as stale. Raw Rodauth email is always replayed. Replays release and re-reserve the worker's idempotency claim so the replay is delivered rather than acknowledged as a duplicate.",
+      "overlap": "not limited (no overlap option); each run is bounded by its own time budget",
+      "evidence": [
+        { "path": "onetimesecret/lib/onetime/jobs/scheduled/dlq_email_consumer_job.rb", "lines": "13-110", "note": "replay and discard policy, batch size, run budget, reservation handling" },
+        { "path": "onetimesecret/lib/onetime/jobs/scheduled/dlq_email_consumer_job.rb", "lines": "166-180", "note": "schedule and enablement key" },
+        { "path": "onetimesecret/etc/defaults/config.defaults.yaml", "lines": "1714-1719", "note": "shipped default for jobs.dlq_consumer.enabled" }
+      ]
+    },
+    {
+      "id": "job-dlq-monitor",
+      "job": "DlqMonitorJob",
+      "group": "scheduled",
+      "trigger": "every 60 seconds, first run 15 seconds after start",
+      "enabled_by": "jobs.dlq_monitor_enabled must be exactly true. The key has no entry in the shipped configuration defaults, so it is unset unless an operator adds it.",
+      "depends_on": "RabbitMQ broker; jobs.rabbitmq_url",
+      "effects": "Reads the depth of each dead-letter queue with a passive declaration and logs a warning for every queue that holds messages. Consumes nothing.",
+      "overlap": "not limited (no overlap option)",
+      "evidence": [
+        { "path": "onetimesecret/lib/onetime/jobs/scheduled/dlq_monitor_job.rb", "lines": "11-70", "note": "interval, enablement key, passive depth check and warning log" }
+      ]
+    },
+    {
+      "id": "job-domain-refresh",
+      "job": "DomainRefreshJob",
+      "group": "scheduled",
+      "trigger": "every jobs.domain_refresh.check_interval (shipped default 30m), first run 2 minutes after start",
+      "enabled_by": "jobs.domain_refresh.enabled must be exactly true; shipped default true.",
+      "depends_on": "datastore; outbound DNS and TLS lookups, or the validation strategy's provider API",
+      "effects": "Walks a page of custom domains per run (jobs.domain_refresh.batch_size, shipped default 200) and writes refreshed vhost and resolving state. Recently created domains that are still unverified fill spare capacity within jobs.domain_refresh.dns_propagation_window.",
+      "overlap": "overlap: false. A tick that fires while the previous run is still working is skipped, not queued. The guard is per process only.",
+      "evidence": [
+        { "path": "onetimesecret/lib/onetime/jobs/scheduled/domain_refresh_job.rb", "lines": "10-100", "note": "configuration keys, pacing, overlap and the single-scheduler assumption" },
+        { "path": "onetimesecret/etc/defaults/config.defaults.yaml", "lines": "1721-1741", "note": "shipped defaults for the domain_refresh keys" }
+      ]
+    },
+    {
+      "id": "job-expiration-warning",
+      "job": "ExpirationWarningJob",
+      "group": "scheduled",
+      "trigger": "every jobs.expiration_warnings.check_interval (shipped default 1h), first run 30 seconds after start",
+      "enabled_by": "jobs.expiration_warnings.enabled must be exactly true; shipped default false.",
+      "depends_on": "datastore; the email publisher, and the broker when jobs are enabled",
+      "effects": "Scans the receipt expiration timeline and enqueues one warning email per receipt for secrets inside jobs.expiration_warnings.warning_hours, up to jobs.expiration_warnings.batch_size per run. A deduplication set keeps it to one warning per receipt. Also removes timeline entries that expired more than an hour ago. There is no delayed delivery: the mail is enqueued at scan time.",
+      "overlap": "not limited (no overlap option)",
+      "evidence": [
+        { "path": "onetimesecret/lib/onetime/jobs/scheduled/expiration_warning_job.rb", "lines": "10-70", "note": "configuration keys, timing, deduplication and batch limit" },
+        { "path": "onetimesecret/lib/onetime/jobs/scheduled/expiration_warning_job.rb", "lines": "142-165", "note": "the enqueue path" },
+        { "path": "onetimesecret/etc/defaults/config.defaults.yaml", "lines": "1743-1759", "note": "shipped defaults for the expiration_warnings keys" }
+      ]
+    },
+    {
+      "id": "job-favicon-backfill",
+      "job": "FaviconBackfillJob",
+      "group": "scheduled",
+      "trigger": "cron jobs.favicon_backfill.cron (shipped default '0 3 * * *')",
+      "enabled_by": "both jobs.favicon_backfill.enabled and jobs.favicon_fetch.enabled must be exactly true. Shipped defaults: favicon_backfill false, favicon_fetch true.",
+      "depends_on": "datastore; the broker, because the work is done by the favicon worker",
+      "effects": "Paginates the custom-domain set (jobs.favicon_backfill.batch_size, shipped default 500) and enqueues a favicon fetch for each domain still missing an auto-fetched icon whose backoff window has elapsed. It reads the backoff fields and does not write them; the worker's terminal recorders do. A domain stuck in processing for more than an hour becomes eligible again.",
+      "overlap": "not limited (no overlap option)",
+      "evidence": [
+        { "path": "onetimesecret/lib/onetime/jobs/scheduled/favicon_backfill_job.rb", "lines": "12-60", "note": "both gates, cron default, batch size, attempt ceiling and the stuck-processing window" },
+        { "path": "onetimesecret/etc/defaults/config.defaults.yaml", "lines": "1761-1798", "note": "shipped defaults for favicon_fetch and favicon_backfill" }
+      ]
+    },
+    {
+      "id": "job-heartbeat",
+      "job": "HeartbeatJob",
+      "group": "scheduled",
+      "trigger": "every 1 minute, first run 5 seconds after start",
+      "enabled_by": "jobs.heartbeat_enabled must be truthy. The key has no entry in the shipped configuration defaults, so it is unset unless an operator adds it. This is the only job whose check accepts any truthy value rather than exactly true.",
+      "depends_on": "datastore",
+      "effects": "Logs a debug line with the current secret and receipt counts. Writes nothing. Distinct from the scheduler's own liveness heartbeat.",
+      "overlap": "not limited (no overlap option)",
+      "evidence": [
+        { "path": "onetimesecret/lib/onetime/jobs/scheduled/heartbeat_job.rb", "lines": "10-38", "note": "enablement check, interval and the counts it logs" }
+      ]
+    },
+    {
+      "id": "job-housekeeping",
+      "job": "HousekeepingJob",
+      "group": "maintenance",
+      "trigger": "cron jobs.maintenance.housekeeping.cron (shipped default '0 2 * * *')",
+      "enabled_by": "both jobs.maintenance.enabled and jobs.maintenance.housekeeping.enabled must be exactly true; both shipped false.",
+      "depends_on": "datastore",
+      "effects": "Runs every registered Familia housekeeping chore against the models that declare one, in batches of jobs.maintenance.housekeeping.batch_size (default 100). The chore bodies own what is persisted. An optional models allowlist narrows the set. Record-level failures are reported, and the run's status is partial rather than success.",
+      "overlap": "not limited (no overlap option)",
+      "evidence": [
+        { "path": "onetimesecret/lib/onetime/jobs/scheduled/housekeeping_job.rb", "lines": "10-60", "note": "configuration keys, default batch size and the chore contract" },
+        { "path": "onetimesecret/lib/onetime/jobs/scheduled_job.rb", "lines": "158-170", "note": "record-level failures classify the run as partial" },
+        { "path": "onetimesecret/etc/defaults/config.defaults.yaml", "lines": "1840-1845", "note": "shipped defaults for the housekeeping keys" }
+      ]
+    },
+    {
+      "id": "job-data-consistency-audit",
+      "job": "DataConsistencyAuditJob",
+      "group": "maintenance",
+      "trigger": "every jobs.maintenance.data_audit.interval (shipped default 6h), first run 5 minutes after start",
+      "enabled_by": "both jobs.maintenance.enabled and jobs.maintenance.data_audit.enabled must be exactly true; both shipped false.",
+      "depends_on": "datastore",
+      "effects": "Report only. Compares instance counts, samples members for backing keys, cross-checks unique indexes and checks participation in both directions, then logs one structured JSON report. It has no auto_repair setting and writes nothing.",
+      "overlap": "not limited (no overlap option)",
+      "evidence": [
+        { "path": "onetimesecret/lib/onetime/jobs/scheduled/maintenance/data_consistency_audit_job.rb", "lines": "11-50", "note": "read-only statement, checks performed and configuration keys" },
+        { "path": "onetimesecret/etc/defaults/config.defaults.yaml", "lines": "1815-1819", "note": "shipped defaults for the data_audit keys" }
+      ]
+    },
+    {
+      "id": "job-entitlement-materialize",
+      "job": "EntitlementMaterializeJob",
+      "group": "maintenance",
+      "trigger": "cron jobs.maintenance.entitlement_materialize.cron (shipped default '0 3 * * *')",
+      "enabled_by": "both jobs.maintenance.enabled and jobs.maintenance.entitlement_materialize.enabled must be exactly true; both shipped false.",
+      "depends_on": "datastore; a configured Stripe API key",
+      "effects": "Refreshes the plan cache from Stripe, then re-materializes organization entitlements and cascades to active memberships. The run aborts unless the catalog pull reports a verified catalog, so it never materializes from a stale cache. Installs with no Stripe key skip the run. Per-organization failures are logged at error level and reported in the run counts.",
+      "overlap": "not limited (no overlap option)",
+      "evidence": [
+        { "path": "onetimesecret/lib/onetime/jobs/scheduled/maintenance/entitlement_materialize_job.rb", "lines": "11-70", "note": "ordering constraint, fail-closed gate, both enablement flags and the standalone skip" },
+        { "path": "onetimesecret/etc/defaults/config.defaults.yaml", "lines": "1847-1856", "note": "shipped defaults for the entitlement_materialize keys" }
+      ]
+    },
+    {
+      "id": "job-index-rebuild",
+      "job": "IndexRebuildJob",
+      "group": "maintenance",
+      "trigger": "cron jobs.maintenance.index_rebuild.cron (shipped default '0 4 * * *')",
+      "enabled_by": "both jobs.maintenance.enabled and jobs.maintenance.index_rebuild.enabled must be exactly true; both shipped false.",
+      "depends_on": "datastore",
+      "effects": "Reconciles the customer email, organization contact-email and custom-domain name indexes. Reports only unless jobs.maintenance.index_rebuild.auto_repair is true (shipped false), in which case it removes stale and mismatched entries, re-adds missing ones through Familia's ownership-checked claim and release, and never overwrites an entry another record holds. Conflicting entries are reported and never repaired.",
+      "overlap": "not limited (no overlap option)",
+      "evidence": [
+        { "path": "onetimesecret/lib/onetime/jobs/scheduled/maintenance/index_rebuild_job.rb", "lines": "11-110", "note": "indexes checked, repair behaviour and the conflict exclusion" },
+        { "path": "onetimesecret/etc/defaults/config.defaults.yaml", "lines": "1828-1832", "note": "shipped defaults for the index_rebuild keys" }
+      ]
+    },
+    {
+      "id": "job-instances-rebuild",
+      "job": "InstancesRebuildJob",
+      "group": "maintenance",
+      "trigger": "cron jobs.maintenance.instances_rebuild.cron (shipped default '0 3 * * 0', weekly)",
+      "enabled_by": "both jobs.maintenance.enabled and jobs.maintenance.instances_rebuild.enabled must be exactly true; both shipped false.",
+      "depends_on": "datastore",
+      "effects": "Scans model keys and merges the class-level instance sorted sets: adds missing members and removes members whose key is gone. Reports only unless jobs.maintenance.instances_rebuild.auto_repair is true (shipped false). A run aborts when the difference exceeds 20 per cent of the total. The source calls this the most invasive maintenance job.",
+      "overlap": "not limited (no overlap option)",
+      "evidence": [
+        { "path": "onetimesecret/lib/onetime/jobs/scheduled/maintenance/instances_rebuild_job.rb", "lines": "11-140", "note": "merge approach, drift threshold, repair flag and configuration keys" },
+        { "path": "onetimesecret/etc/defaults/config.defaults.yaml", "lines": "1834-1838", "note": "shipped defaults for the instances_rebuild keys" }
+      ]
+    },
+    {
+      "id": "job-participation-gc",
+      "job": "ParticipationGCJob",
+      "group": "maintenance",
+      "trigger": "cron jobs.maintenance.participation_gc.cron (shipped default '0 5 * * *')",
+      "enabled_by": "both jobs.maintenance.enabled and jobs.maintenance.participation_gc.enabled must be exactly true; both shipped false.",
+      "depends_on": "datastore",
+      "effects": "Reports stale members of the organization and custom-domain participation sets, expired pending invitations and organizations whose owner record is gone. With jobs.maintenance.participation_gc.auto_repair true (shipped false) it removes the stale entries, destroys expired invitation memberships with index cleanup and promotes a member with the owner role where one exists. A key scan aborts after five consecutive errors.",
+      "overlap": "not limited (no overlap option)",
+      "evidence": [
+        { "path": "onetimesecret/lib/onetime/jobs/scheduled/maintenance/participation_gc_job.rb", "lines": "11-170", "note": "patterns scanned, repair behaviour and the consecutive-error abort" },
+        { "path": "onetimesecret/etc/defaults/config.defaults.yaml", "lines": "1821-1826", "note": "shipped defaults for the participation_gc keys" }
+      ]
+    },
+    {
+      "id": "job-phantom-cleanup",
+      "job": "PhantomCleanupJob",
+      "group": "maintenance",
+      "trigger": "every jobs.maintenance.phantom_cleanup.interval (shipped default 1h), first run 2 minutes after start",
+      "enabled_by": "both jobs.maintenance.enabled and jobs.maintenance.phantom_cleanup.enabled must be exactly true; both shipped false.",
+      "depends_on": "datastore",
+      "effects": "Scans the class-level instance sorted sets and the participation sorted sets for members whose key no longer exists. Reports only unless jobs.maintenance.phantom_cleanup.auto_repair is true (shipped false), in which case the phantom members are removed, bounded by jobs.maintenance.phantom_cleanup.batch_size (default 500).",
+      "overlap": "not limited (no overlap option)",
+      "evidence": [
+        { "path": "onetimesecret/lib/onetime/jobs/scheduled/maintenance/phantom_cleanup_job.rb", "lines": "11-160", "note": "scope, repair flag and batch limit" },
+        { "path": "onetimesecret/etc/defaults/config.defaults.yaml", "lines": "1808-1813", "note": "shipped defaults for the phantom_cleanup keys" }
+      ]
+    },
+    {
+      "id": "job-secret-count-reconcile",
+      "job": "SecretCountReconcileJob",
+      "group": "maintenance",
+      "trigger": "cron '30 4 * * *', fixed in source and not configurable",
+      "enabled_by": "jobs.maintenance.enabled must be exactly true (shipped false). The job deliberately has no key of its own, so the master maintenance toggle is the only switch.",
+      "depends_on": "datastore",
+      "effects": "Recounts live secrets per owner with one bounded cursor scan and sets each customer's secrets_active counter to that count, including zero. The write is an idempotent set to the recomputed value. The same implementation backs `ots migrations backfill-secret-counts`.",
+      "overlap": "not limited (no overlap option)",
+      "evidence": [
+        { "path": "onetimesecret/lib/onetime/jobs/scheduled/maintenance/secret_count_reconcile_job.rb", "lines": "11-130", "note": "fixed schedule, the absent per-job key, the master toggle and the recount write" }
+      ]
+    },
+    {
+      "id": "job-plan-cache-refresh",
+      "job": "PlanCacheRefreshJob",
+      "group": "scheduled",
+      "trigger": "every 6 hours, first run 1 minute after start",
+      "enabled_by": "jobs.plan_cache_refresh.enabled must be exactly true; shipped default true.",
+      "depends_on": "datastore; a configured Stripe API key",
+      "effects": "Pulls the plan catalog from Stripe into the plan cache, whose entries expire after 12 hours. Installs with no Stripe key skip the run. A Stripe rate limit is logged as a warning and retried on the next interval; authentication and connection errors are logged as errors.",
+      "overlap": "not limited (no overlap option)",
+      "evidence": [
+        { "path": "onetimesecret/lib/onetime/jobs/scheduled/plan_cache_refresh_job.rb", "lines": "10-85", "note": "interval, enablement key, standalone skip and error handling" },
+        { "path": "onetimesecret/etc/defaults/config.defaults.yaml", "lines": "1697-1703", "note": "shipped default for jobs.plan_cache_refresh.enabled" }
+      ]
+    },
+    {
+      "id": "job-scheduler-heartbeat",
+      "job": "scheduler liveness heartbeat",
+      "group": "scheduler-internal",
+      "trigger": "every 60 seconds, first run 1 second after start",
+      "enabled_by": "always, whenever the scheduler process runs. It is registered by the scheduler itself, not discovered as a job.",
+      "depends_on": "datastore",
+      "effects": "Refreshes the scheduler heartbeat record that `ots scheduler status` and the colonel jobs view read. It is a raw scheduler entry rather than a job class, so it never appears in the job list. Liveness is judged against a window of three heartbeat intervals.",
+      "overlap": "overlap: false",
+      "evidence": [
+        { "path": "onetimesecret/lib/onetime/cli/scheduler_command.rb", "lines": "108-120", "note": "the heartbeat registration and why it is not a job class" },
+        { "path": "onetimesecret/lib/onetime/jobs/job_run.rb", "lines": "47-48", "note": "the 60-second interval and the three-interval liveness window" }
+      ]
+    }
+  ]
+}

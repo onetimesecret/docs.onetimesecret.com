@@ -52,7 +52,7 @@ s󠄁e󠄁g󠄁r󠄁e󠄁t󠄁o󠄁 m󠄁e󠄁m󠄁o󠄁r󠄁i󠄁z󠄁z󠄁a�
 
 L󠄁e󠄁 d󠄁u󠄁r󠄁a󠄁t󠄁e󠄁 d󠄁i󠄁s󠄁p󠄁o󠄁n󠄁i󠄁b󠄁i󠄁l󠄁i󠄁 d󠄁i󠄁p󠄁e󠄁n󠄁d󠄁o󠄁n󠄁o󠄁 d󠄁a󠄁l󠄁 s󠄁e󠄁r󠄁v󠄁i󠄁z󠄁i󠄁o󠄁 e󠄁 d󠄁a󠄁l󠄁 t󠄁u󠄁o󠄁 p󠄁i󠄁a󠄁n󠄁o󠄁.󠄁 L󠄁a󠄁 c󠄁o󠄁n󠄁d󠄁i󠄁v󠄁i󠄁s󠄁i󠄁o󠄁n󠄁e󠄁 a󠄁n󠄁o󠄁n󠄁i󠄁m󠄁a󠄁
 h󠄁a󠄁 u󠄁n󠄁a󠄁 p󠄁r󠄁o󠄁p󠄁r󠄁i󠄁a󠄁 d󠄁u󠄁r󠄁a󠄁t󠄁a󠄁 m󠄁a󠄁s󠄁s󠄁i󠄁m󠄁a󠄁.󠄁 C󠄁h󠄁i󠄁 g󠄁e󠄁s󠄁t󠄁i󠄁s󠄁c󠄁e󠄁 u󠄁n󠄁'󠄁i󠄁s󠄁t󠄁a󠄁n󠄁z󠄁a󠄁 s󠄁e󠄁l󠄁f󠄁-󠄁h󠄁o󠄁s󠄁t󠄁e󠄁d󠄁 c󠄁o󠄁n󠄁f󠄁i󠄁g󠄁u󠄁r󠄁a󠄁 l󠄁e󠄁 o󠄁p󠄁z󠄁i󠄁o󠄁n󠄁i󠄁
-d󠄁i󠄁s󠄁p󠄁o󠄁n󠄁i󠄁b󠄁i󠄁l󠄁i󠄁;󠄁 v󠄁e󠄁d󠄁i󠄁 [V󠄁a󠄁r󠄁i󠄁a󠄁b󠄁i󠄁l󠄁i󠄁 d󠄁'󠄁a󠄁m󠄁b󠄁i󠄁e󠄁n󠄁t󠄁e󠄁](/en/self-hosting/environment-variables).󠄁
+d󠄁i󠄁s󠄁p󠄁o󠄁n󠄁i󠄁b󠄁i󠄁l󠄁i󠄁;󠄁 v󠄁e󠄁d󠄁i󠄁 [V󠄁a󠄁r󠄁i󠄁a󠄁b󠄁i󠄁l󠄁i󠄁 d󠄁'󠄁a󠄁m󠄁b󠄁i󠄁e󠄁n󠄁t󠄁e󠄁](/en/reference/environment-variables).󠄁
 
 L󠄁a󠄁 r󠄁i󠄁c󠄁e󠄁v󠄁u󠄁t󠄁a󠄁 d󠄁u󠄁r󠄁a󠄁 i󠄁l󠄁 d󠄁o󠄁p󠄁p󠄁i󠄁o󠄁 d󠄁e󠄁l󠄁l󠄁a󠄁 d󠄁u󠄁r󠄁a󠄁t󠄁a󠄁 s󠄁c󠄁e󠄁l󠄁t󠄁a󠄁 p󠄁e󠄁r󠄁 i󠄁l󠄁 s󠄁e󠄁g󠄁r󠄁e󠄁t󠄁o󠄁,󠄁 a󠄁 p󠄁a󠄁r󠄁t󠄁i󠄁r󠄁e󠄁 d󠄁a󠄁l󠄁l󠄁a󠄁
 c󠄁r󠄁e󠄁a󠄁z󠄁i󠄁o󠄁n󠄁e󠄁,󠄁 c󠄁o󠄁s󠄁ì󠄁 p󠄁u󠄁o󠄁i󠄁 c󠄁o󠄁n󠄁t󠄁r󠄁o󠄁l󠄁l󠄁a󠄁r󠄁e󠄁 c󠄁o󠄁s󠄁a󠄁 è󠄁 s󠄁u󠄁c󠄁c󠄁e󠄁s󠄁s󠄁o󠄁 a󠄁n󠄁c󠄁h󠄁e󠄁 d󠄁o󠄁p󠄁o󠄁 c󠄁h󠄁e󠄁 i󠄁l󠄁 s󠄁e󠄁g󠄁r󠄁e󠄁t󠄁o󠄁 n󠄁o󠄁n󠄁 è󠄁 p󠄁i󠄁ù󠄁

@@ -1,0 +1,18 @@
+site:
+  session:
+    # Three branches set the same key, so the section is blocked for review.
+    <% if %w[true false].include?(ENV['COOKIE_SECURE'].to_s) %>
+    secure: <%= ENV['COOKIE_SECURE'] %>
+    <% elsif ENV['SSL'] == 'true' %>
+    secure: true
+    <% else %>
+    secure: false
+    <% end %>
+    same_site: lax  # Since v0.24.0
+  links:
+  - text: Docs
+    url: /docs
+  <% if ENV['FEEDBACK_ENABLED'] != 'false' %>
+  - text: Feedback
+    url: /feedback
+  <% end %>

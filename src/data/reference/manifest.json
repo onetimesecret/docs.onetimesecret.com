@@ -1,0 +1,42 @@
+{
+  "extractorFormatVersion": 1,
+  "upstream": {
+    "repository": "https://github.com/onetimesecret/onetimesecret",
+    "release": "v0.26.19",
+    "commit": "e98a88c9b5832bbae249f38885aa28bd78a5db4d"
+  },
+  "refreshOwner": "delano",
+  "backupReviewer": "none: single maintainer",
+  "accountabilityNote": "This project has a single maintainer, so plan A6’s backup reviewer cannot be satisfied by a person. The second pair of eyes is mechanical: a refresh lands as a pull request whose generated diff is reviewable, and reference:check gates it. Known failure mode: while the maintainer is unavailable, the freshness workflow reports a changed upstream input to a queue nobody else reads, so the reference goes stale silently rather than loudly. Phase 5 reduces the exposure by having that workflow open the refresh pull request itself.",
+  "environmentSource": {
+    "path": ".env.reference",
+    "sha256": "1b0c623bb20d9edc85e13bb6c0d28a4e15d8a4ea4949a479dea75920e83d076e",
+    "lines": 2718
+  },
+  "configurationSources": [
+    {
+      "path": "etc/defaults/config.defaults.yaml",
+      "role": "config-defaults",
+      "sha256": "afd45822a57079515f5f16ae34428f60c253f3e844e2bba57ebc293834b65009",
+      "lines": 2102
+    },
+    {
+      "path": "etc/defaults/auth.defaults.yaml",
+      "role": "auth-defaults",
+      "sha256": "520ebc2d22ff69456c4f5e682f447978fa9d9a5b80e87f18c7ee963560601573",
+      "lines": 189
+    },
+    {
+      "path": "etc/defaults/logging.defaults.yaml",
+      "role": "logging-defaults",
+      "sha256": "4289f29774262323419cf3c6f7f1b40ed617dc65bb08a11e48ebb788c775da30",
+      "lines": 251
+    },
+    {
+      "path": "etc/examples/billing.example.yaml",
+      "role": "billing-example",
+      "sha256": "61448a1c73ab3d9d9b3500092a7386737ba4fdd3c73287cf2bfc2bd3228282ff",
+      "lines": 391
+    }
+  ]
+}

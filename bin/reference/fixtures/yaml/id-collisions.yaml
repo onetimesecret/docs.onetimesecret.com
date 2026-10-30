@@ -1,0 +1,4 @@
+section:
+  a_b: one
+  a-b: two
+  A_B: three

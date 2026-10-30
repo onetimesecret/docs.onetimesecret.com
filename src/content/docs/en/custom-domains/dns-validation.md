@@ -92,7 +92,7 @@ verification;󠄁 w󠄁ith󠄁 `caddy_on_demand`,󠄁 the cert󠄁i󠄁f󠄁i�
 after verification.
 W󠄁i󠄁t󠄁h󠄁 `passthrough`,󠄁 t󠄁h󠄁e󠄁 d󠄁e󠄁fault,󠄁 t󠄁h󠄁ere󠄁 i󠄁s󠄁 n󠄁o󠄁 D󠄁N󠄁S󠄁 check:󠄁 a󠄁 domain i󠄁s served o󠄁nc󠄁e󠄁
 i󠄁t is󠄁 a󠄁d󠄁d󠄁e󠄁d󠄁,󠄁 a󠄁n󠄁d󠄁 c󠄁e󠄁r󠄁t󠄁i󠄁f󠄁i󠄁c󠄁a󠄁t󠄁e󠄁s󠄁 a󠄁r󠄁e󠄁 h󠄁a󠄁n󠄁d󠄁le󠄁d󠄁 o󠄁u󠄁t󠄁s󠄁i󠄁d󠄁e󠄁 the a󠄁p󠄁p󠄁l󠄁i󠄁ca󠄁t󠄁i󠄁on. S󠄁e󠄁e󠄁
-[E󠄁n󠄁v󠄁i󠄁ron󠄁m󠄁e󠄁n󠄁t󠄁 v󠄁a󠄁r󠄁i󠄁a󠄁bles](/en/self-hosting/environment-variables).
+[E󠄁n󠄁v󠄁i󠄁ron󠄁m󠄁e󠄁n󠄁t󠄁 v󠄁a󠄁r󠄁i󠄁a󠄁bles](/en/reference/environment-variables).
 :::
 
 ## Related

@@ -186,7 +186,7 @@ function createGroup(key, items = [], collapsed = false) {
 // ---------------------------------------------------------------------------
 // Sidebar configuration using translation keys
 //
-// Seven top-level entries. An eighth, the generated Reference, lands in Phase 4.
+// NOTE: Link order is defined here, not in frontmatter.
 //
 // Groups nest: Starlight's ManualSidebarGroupSchema accepts a group inside
 // another group's `items` (schemas/sidebar.ts), and createGroup passes `items`
@@ -202,10 +202,11 @@ function createGroup(key, items = [], collapsed = false) {
 // made the sidebar unusable as a flat search result and useless to a screen
 // reader reading the links out of context. Each index page now says what it is.
 //
-// To keep a page off the live site, set `draft: true` in its frontmatter and
+// Pages with `draft: true` in frontmatter are skipped on the live site, but
+// visible in dev with a callout warning. Links to draft pages are automatically
+// pruned from the sidebar, but if a draft page is linked from a non-draft page we
 // leave its link here. Production builds drop the link (see pruneDrafts); the
-// dev server and the check:* scripts still see it, so check:orphans passes
-// while the page waits.
+// dev server and the check:* scripts still see it, so check:orphans passes.
 // ---------------------------------------------------------------------------
 const entries = [
   createLink("home", "/"),
@@ -274,34 +275,6 @@ const entries = [
     ]),
   ]),
 
-  // Self-hosting follows the operator's order: orient, pick the one decision
-  // that changes what you install, install, configure, upgrade. The two
-  // subgroups let the section scan as those steps instead of as one long run
-  // of links.
-  //
-  // Each subgroup is one directory: Install & deploy is install/, Configure
-  // is configure/. The links at this level are the self-hosting/ pages. Keep
-  // it that way: a new page goes in the group for its directory, and a page
-  // that belongs in another group moves there (with a movedPages entry in
-  // config/redirects.mjs) rather than being listed out of place.
-  //
-  // Array order is reading order. createLink emits no `order` key and nothing
-  // here autogenerates, so Starlight renders the array as written; the
-  // install/* pages carry no `sidebar.order` for the same reason. Reorder
-  // here, not in frontmatter.
-  //
-  // install/ has no index page on purpose: nothing links to /en/install/ and
-  // the group is the index. The six install/* pages are the split of the
-  // retired self-hosting/installation (Phase 3).
-  //
-  // The configure/* entries follow their prerequisites: keys, outbound email
-  // and session cookies come before the sign-in pages that depend on them.
-  //
-  // The configuration reference, generator and environment variables stay at
-  // this level, after Configure: they live in self-hosting/, and they cover
-  // install-time settings as well as the configure/* ones. Phase 4 replaces
-  // them with reference/* pages.
-  //
   // The version-specific upgrade guides (self-hosting/upgrading-v0-*) are NOT
   // listed. They are reached from the table on self-hosting/upgrade-guides,
   // and bin/check-orphans.mjs counts a page linked from a sidebar-linked page
@@ -332,15 +305,51 @@ const entries = [
       createLink("configureSecretOptions", "configure/secret-options"),
     ]),
 
-    createLink("configurationReference", "self-hosting/configuration"),
-    createLink("configurationGenerator", "self-hosting/configuration-generator"),
-    createLink("environmentVariables", "self-hosting/environment-variables"),
-    createLink("upgradeGuides", "self-hosting/upgrade-guides"),
+    createGroup("operate", [
+      createLink("operateDatastore", "operate/datastore"),
+      createLink("operateBackups", "operate/backup-and-key-rotation"),
+      createLink("operateHealth", "operate/health-and-monitoring"),
+      createLink("operateAdminConsole", "operate/admin-console"),
+      createLink("operateBackgroundJobs", "operate/background-jobs"),
+      createLink("operateQueues", "operate/queues-and-dlq"),
+      createLink("operateScheduledJobs", "operate/scheduled-and-maintenance-jobs"),
+      createLink("operateScaleAndTune", "operate/scale-and-tune"),
+      createLink("operateLogging", "operate/logging-and-error-tracking"),
+      createLink("operateRateLimits", "operate/rate-limits-and-network-access"),
+      createLink("operateOwnershipTransfer", "operate/ownership-transfer"),
+      createLink("operateHardening", "operate/harden-your-deployment"),
+    ]),
+
+    // Troubleshooting pages are organized by symptom-led diagnosis. Someone
+    // looks for the symptom, not for the directory it happens to be stored in.
+    createGroup("troubleshootAndUpgrade", [
+      createLink("troubleshootBootFailures", "troubleshoot/boot-failures"),
+      createLink("troubleshootSignIn", "troubleshoot/sign-in-and-signup-problems"),
+      createLink("upgradeDataMigrations", "upgrades/data-migrations"),
+      createLink("upgradeGuides", "self-hosting/upgrade-guides"),
+    ]),
   ]),
 
   createGroup("apiAndSdks", [
     createLink("restApi", "api"),
     createLink("clientLibraries", "api/client-libraries"),
+  ]),
+
+  // Reference documents are generated from the onetimesecret codebase and its
+  // default configuration.
+  createGroup("reference", [
+    createLink("referenceOverview", "reference"),
+    createLink("configurationFilesReference", "reference/configuration-files-and-precedence"),
+    createLink("siteAndInterfaceReference", "reference/site-and-interface"),
+    createLink("featuresAndBrandingReference", "reference/features-and-branding"),
+    createLink("datastoreAndQueuesReference", "reference/datastore-and-queues"),
+    createLink("emailAndDeliveryReference", "reference/email-and-delivery"),
+    createLink("ancillaryFilesReference", "reference/auth-logging-and-billing-files"),
+    createLink("environmentVariablesReference", "reference/environment-variables"),
+    createLink("configurationGenerator", "reference/generator"),
+    createLink("cliReference", "reference/cli"),
+    createLink("scheduledJobsReference", "reference/scheduled-jobs"),
+    createLink("healthEndpointsReference", "reference/health-endpoints"),
   ]),
 
   createGroup("securityTrust", [

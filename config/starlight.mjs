@@ -39,6 +39,7 @@ export const starlightConfig = {
     replacesTitle: true,
   },
   pagefind: true,
+  routeMiddleware: "./src/middleware/reference.ts",
   plugins: [],
 
   // Site-wide default social-preview card (Open Graph / Twitter). Emitted on

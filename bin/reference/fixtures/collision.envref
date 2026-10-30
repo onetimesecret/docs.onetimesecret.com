@@ -1,0 +1,7 @@
+# ═══════════════════════════════════════════════════════════
+#  SECRET
+# ═══════════════════════════════════════════════════════════
+
+# A variable whose name slugs to the same page fragment as its own section
+# heading: "SECRET" -> "Secret" -> "#secret", and SECRET -> "#secret".
+SECRET=

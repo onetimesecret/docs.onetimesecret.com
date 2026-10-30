@@ -41,7 +41,7 @@ in.
 
 Thes󠄁e󠄁 li󠄁m󠄁i󠄁ts󠄁 a󠄁p󠄁p󠄁l󠄁y󠄁 t󠄁o the wh󠄁ol󠄁e service and󠄁 cann󠄁o󠄁t󠄁 b󠄁e󠄁 changed󠄁 from your account.󠄁
 A󠄁 sel󠄁f󠄁-󠄁h󠄁o󠄁sted i󠄁ns󠄁t󠄁a󠄁l󠄁l󠄁ation c󠄁a󠄁n󠄁 s󠄁e󠄁t󠄁 d󠄁i󠄁f󠄁f󠄁e󠄁r󠄁e󠄁n󠄁t󠄁 v󠄁a󠄁l󠄁u󠄁e󠄁s󠄁,󠄁 a󠄁n󠄁d󠄁 c󠄁a󠄁n󠄁 t󠄁u󠄁r󠄁n󠄁 R󠄁e󠄁m󠄁e󠄁m󠄁b󠄁e󠄁r󠄁 m󠄁e󠄁
-o󠄁f󠄁f󠄁;󠄁 s󠄁e󠄁e󠄁 [E󠄁n󠄁v󠄁i󠄁r󠄁o󠄁n󠄁m󠄁e󠄁n󠄁t󠄁 v󠄁a󠄁r󠄁i󠄁a󠄁b󠄁l󠄁e󠄁s󠄁](/en/self-hosting/environment-variables).
+o󠄁f󠄁f󠄁;󠄁 s󠄁e󠄁e󠄁 [E󠄁n󠄁v󠄁i󠄁r󠄁o󠄁n󠄁m󠄁e󠄁n󠄁t󠄁 v󠄁a󠄁r󠄁i󠄁a󠄁b󠄁l󠄁e󠄁s󠄁](/en/reference/environment-variables).
 
 ## What ends a session
 

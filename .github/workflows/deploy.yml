@@ -68,6 +68,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      # Snapshot gate: the committed reference data must validate against the
+      # pinned upstream revision. Nothing is uploaded from an inconsistent tree.
+      - name: Check generated reference
+        run: pnpm run reference:check
+
       - name: Build site
         run: pnpm run build
         env:

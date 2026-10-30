@@ -36,4 +36,4 @@ Also read the [release notes](https://github.com/onetimesecret/onetimesecret/rel
 
 - [Install with Docker](/en/install/docker)
 - [Simple or Full Mode](/en/self-hosting/simple-or-full-auth)
-- [Configuration Reference](/en/self-hosting/configuration)
+- [Configuration Reference](/en/reference/configuration-files-and-precedence)

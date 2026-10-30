@@ -186,7 +186,7 @@ export const OPTIONS: OptionSpec[] = [
     description:
       'External identity providers: OIDC, Entra ID, Google, GitHub, GitLab, ' +
       'and Apple. Enabling SSO also requires provider-specific settings.',
-    help: { href: '/en/self-hosting/environment-variables/', label: 'Find your provider’s SSO settings' },
+    help: { href: '/en/reference/environment-variables/', label: 'Find your provider’s SSO settings' },
     type: 'boolean',
     group: 'signin',
     file: 'auth',

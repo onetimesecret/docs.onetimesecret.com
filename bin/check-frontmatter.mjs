@@ -92,7 +92,7 @@
 // copy of the target page.
 //
 // Usage: pnpm run check:frontmatter
-import { existsSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 
 import { parse as parseYaml } from "yaml";
@@ -111,18 +111,56 @@ import {
   statedDefaults,
 } from "./lib/frontmatter.mjs";
 import { parseAllowlist, repoRoot } from "./lib/nav.mjs";
+import { pageHeadings } from "../src/lib/reference/configuration.mjs";
 import textprov from "textprov";
 
 const CONFIG = "src/content.config.ts";
+const environment = JSON.parse(
+  readFileSync(join(repoRoot, "src/data/reference/environment-variables.json"), "utf8"),
+);
+const configuration = JSON.parse(
+  readFileSync(join(repoRoot, "src/data/reference/configuration.json"), "utf8"),
+);
+
+// Component-rendered headings and name-cell ids are absent from the MDX AST, so
+// the pages rendered from src/data/reference/ supply the ids their components
+// mint. The rendered HTML contract is also checked by check:reference:html
+// after a build.
+const COMPONENT_ANCHORS = new Map([
+  [
+    "reference/environment-variables",
+    new Map(
+      environment.sections.flatMap((section) => [
+        [section.anchor, { depth: 2, text: section.heading }],
+        ...section.records.map((record) => [record.anchor, { depth: 3, text: record.name }]),
+      ]),
+    ),
+  ],
+  ...configuration.pages.map((page) => [
+    `reference/${page.owner}`,
+    new Map(pageHeadings(page).map(({ slug, depth, text }) => [slug, { depth, text }])),
+  ]),
+]);
 
 // Pages enrolled in TextProv are decoded before Starlight mints heading ids
 // (src/lib/textprov/html.mjs), so their anchors come from the text with the
 // recorded AI marks removed. Variation selectors are \p{M}, which the slug
 // math would otherwise keep. Like the renderer, this leaves other states alone.
 function anchorsOf(fields, body) {
-  const text = fields.textprov !== "true" ? body : textprov.runs(body).map((run) =>
-    run.state === "ai" ? textprov.runs(run.text, { strip: true }).map((part) => part.text).join("") : run.text,
-  ).join("");
+  const text =
+    fields.textprov !== "true"
+      ? body
+      : textprov
+          .runs(body)
+          .map((run) =>
+            run.state === "ai"
+              ? textprov
+                  .runs(run.text, { strip: true })
+                  .map((part) => part.text)
+                  .join("")
+              : run.text,
+          )
+          .join("");
   return new Map(headings(text).map((h) => [h.slug, h]));
 }
 const REDIRECTS = "config/redirects.mjs";
@@ -178,13 +216,54 @@ const REQUIRED_ANCHORS = {
     "united-states",
   ],
   "security/our-principles": ["privacy-first", "communication", "data-minimization"],
+  // The old self-hosting/environment-variables URL redirects here. Only
+  // development-only was intentionally retired; the renderer test records that exception.
+  "reference/environment-variables": [
+    "secrets--cryptography",
+    "connections",
+    "site-identity--core",
+    "secret-ttl-configuration",
+    "secret-options",
+    "email",
+    "authentication",
+    "organizations",
+    "custom-mail-sender-dns-settings",
+    "sso--omniauth",
+    "stripe-billing",
+    "custom-domains",
+    "feature-flags",
+    "api-access",
+    "incoming-secrets",
+    "reverse-proxy--client-ip",
+    "middleware",
+    "ui--homepage",
+    "branding--private-label",
+    "logging--diagnostics",
+    "job-system",
+    "server--worker-tuning",
+    "compatibility",
+    "experimental-features",
+  ],
 };
 
-// D-4.1. The two pages that own every default until the generated Reference
-// lands in Phase 4. They are exempt from assertion 4 whether or not they cite
-// sourceOfTruth: stating values is what they are for. Every other page — of
-// either audience — states a default only with a citation beside it.
-const REFERENCE_OWNERS = ["self-hosting/environment-variables", "self-hosting/configuration"];
+// D-4.1. The pages that own every default. They are exempt from assertion 4
+// whether or not they cite sourceOfTruth: stating values is what they are for.
+// Every other page — of either audience — states a default only with a
+// citation beside it.
+//
+// reference/environment-variables replaced self-hosting/environment-variables
+// in Phase 4 and renders src/data/reference/environment-variables.json; the
+// five configuration key-record pages render src/data/reference/configuration.json.
+// Each cites the pinned upstream source recorded in its snapshot.
+const REFERENCE_OWNERS = [
+  "reference/environment-variables",
+  "reference/configuration-files-and-precedence",
+  "reference/site-and-interface",
+  "reference/features-and-branding",
+  "reference/datastore-and-queues",
+  "reference/email-and-delivery",
+  "reference/auth-logging-and-billing-files",
+];
 
 // Assertion 5's tree list, its required fields and the segment-wise prefix test
 // live in bin/lib/frontmatter.mjs — this script runs its assertions at import
@@ -251,7 +330,7 @@ for (const page of pages) {
     );
   }
 
-  anchorsBySlug.set(page.slug, anchorsOf(fields, body));
+  anchorsBySlug.set(page.slug, COMPONENT_ANCHORS.get(page.slug) ?? anchorsOf(fields, body));
   pagesBySlug.set(page.slug, { path: page.path, links: pageLinks(body) });
 
   // 5: the gate below reads `audience`, so on the trees that gate is FOR, the

@@ -53,7 +53,7 @@ l󠄁a󠄁g󠄁r󠄁a󠄁d󠄁e󠄁 h󠄁e󠄁m󠄁l󠄁i󠄁g󠄁h󠄁e󠄁t�
 
 V󠄁i󠄁l󠄁k󠄁a󠄁 l󠄁i󠄁v󠄁s󠄁l󠄁ä󠄁n󠄁g󠄁d󠄁e󠄁r󠄁 s󠄁o󠄁m󠄁 f󠄁i󠄁n󠄁n󠄁s󠄁 b󠄁e󠄁r󠄁o󠄁r󠄁 p󠄁å󠄁 t󠄁j󠄁ä󠄁n󠄁s󠄁t󠄁e󠄁n󠄁 o󠄁c󠄁h󠄁 d󠄁i󠄁n󠄁 p󠄁l󠄁a󠄁n󠄁.󠄁 A󠄁n󠄁o󠄁n󠄁y󠄁m󠄁 delning h󠄁a󠄁r󠄁
 e󠄁n󠄁 e󠄁g󠄁e󠄁n󠄁 m󠄁a󠄁x󠄁i󠄁m󠄁a󠄁l󠄁 l󠄁i󠄁v󠄁s󠄁l󠄁ä󠄁n󠄁g󠄁d󠄁.󠄁 E󠄁n󠄁 s󠄁j󠄁ä󠄁l󠄁v󠄁h󠄁o󠄁sta󠄁n󠄁d󠄁e󠄁 o󠄁p󠄁e󠄁r󠄁a󠄁t󠄁ö󠄁r󠄁 k󠄁o󠄁n󠄁f󠄁i󠄁g󠄁u󠄁r󠄁e󠄁r󠄁a󠄁r󠄁 d󠄁e󠄁 t󠄁i󠄁l󠄁l󠄁g󠄁äng󠄁l󠄁i󠄁g󠄁a󠄁
-a󠄁l󠄁t󠄁e󠄁r󠄁n󠄁a󠄁t󠄁i󠄁v󠄁e󠄁n󠄁;󠄁 s󠄁e󠄁 [M󠄁i󠄁l󠄁j󠄁ö󠄁v󠄁a󠄁r󠄁i󠄁a󠄁b󠄁l󠄁e󠄁r󠄁](/sv/self-hosting/environment-variables).
+a󠄁l󠄁t󠄁e󠄁r󠄁n󠄁a󠄁t󠄁i󠄁v󠄁e󠄁n󠄁;󠄁 s󠄁e󠄁 [M󠄁i󠄁l󠄁j󠄁ö󠄁v󠄁a󠄁r󠄁i󠄁a󠄁b󠄁l󠄁e󠄁r󠄁](/sv/reference/environment-variables).
 
 K󠄁v󠄁i󠄁t󠄁t󠄁o󠄁t󠄁 f󠄁i󠄁n󠄁n󠄁s󠄁 k󠄁v󠄁a󠄁r󠄁 d󠄁u󠄁b󠄁b󠄁e󠄁l󠄁t󠄁 s󠄁å󠄁 l󠄁ä󠄁n󠄁g󠄁e󠄁 s󠄁o󠄁m󠄁 h󠄁e󠄁m󠄁l󠄁i󠄁g󠄁h󠄁e󠄁t󠄁e󠄁n󠄁s󠄁 v󠄁a󠄁l󠄁d󠄁a󠄁 l󠄁i󠄁v󠄁s󠄁l󠄁ä󠄁n󠄁g󠄁d󠄁,󠄁 r󠄁ä󠄁k󠄁n󠄁a󠄁t󠄁
 f󠄁r󠄁å󠄁n󠄁 s󠄁k󠄁a󠄁p󠄁a󠄁n󠄁d󠄁e󠄁t󠄁,󠄁 s󠄁å󠄁 a󠄁t󠄁t󠄁 d󠄁u󠄁 k󠄁a󠄁n󠄁 k󠄁o󠄁n󠄁t󠄁r󠄁o󠄁l󠄁l󠄁e󠄁r󠄁a󠄁 v󠄁a󠄁d󠄁 s󠄁o󠄁m󠄁 h󠄁ä󠄁n󠄁d󠄁e󠄁 e󠄁f󠄁t󠄁e󠄁r󠄁 a󠄁t󠄁t󠄁 h󠄁e󠄁m󠄁l󠄁i󠄁g󠄁h󠄁e󠄁t󠄁e󠄁n󠄁
