@@ -25,6 +25,16 @@ import { anchorFor } from "./ids.mjs";
 import { CONFIG_DATA_PATH } from "./extract-config.mjs";
 import { repoRoot } from "./manifest.mjs";
 
+// The committed snapshot, parsed once for every suite that reads it.
+const data = JSON.parse(readFileSync(`${repoRoot}/${CONFIG_DATA_PATH}`, "utf8"));
+const records = data.pages.flatMap((page) => page.groups.flatMap((group) => group.records));
+const recordAt = (path) => {
+  const record = records.find((candidate) => candidate.path === path);
+  expect(record, path).toBeDefined();
+  return record;
+};
+const isSplitCast = (record) => (record.erb?.cast ?? []).some((cast) => cast.startsWith("split("));
+
 describe("cell helpers", () => {
   it("distinguishes an empty string from no value", () => {
     expect(valueOf({ erb: { kind: "env-fallback", staticFallback: "" } })).toEqual({ code: '""' });
@@ -34,6 +44,13 @@ describe("cell helpers", () => {
     expect(valueOf({ erb: null, literalValue: [] })).toEqual({ code: "[]" });
     expect(valueOf({ erb: null, literalValue: "" })).toEqual({ code: '""' });
     expect(valueOf({ erb: null, literalValue: 3 })).toEqual({ code: "3" });
+  });
+
+  it("prints a collection default as it is, never as an empty one", () => {
+    expect(valueOf({ erb: { kind: "env-fallback", staticFallback: [] } })).toEqual({ code: "[]" });
+    expect(valueOf({ erb: { kind: "env-fallback", staticFallback: {} } })).toEqual({ code: "{}" });
+    expect(valueOf({ erb: { kind: "env-fallback", staticFallback: ["a", "b"] } })).toEqual({ code: '["a","b"]' });
+    expect(valueOf({ erb: null, literalValue: { a: 1 } })).toEqual({ code: '{"a":1}' });
   });
 
   it("says a runtime-defined value is determined at run time", () => {
@@ -59,7 +76,7 @@ describe("cell helpers", () => {
   it("derives the shape from the cast chain, the ERB kind or the literal", () => {
     expect(shapeOf({ erb: { kind: "cast", cast: ["to_i"] } })).toBe("integer");
     expect(shapeOf({ erb: { kind: "cast", cast: ["to_f"] } })).toBe("number");
-    expect(shapeOf({ erb: { kind: "cast", cast: ["split"] } })).toBe("list");
+    expect(shapeOf({ erb: { kind: "cast", cast: ["split(,)"] } })).toBe("list");
     expect(shapeOf({ erb: { kind: "cast", cast: ["to_json"] } })).toBe("JSON string");
     expect(shapeOf({ erb: { kind: "boolean" } })).toBe("boolean");
     expect(shapeOf({ erb: { kind: "json-quoted" } })).toBe("JSON string");
@@ -67,8 +84,8 @@ describe("cell helpers", () => {
     expect(shapeOf({ erb: null, literalValue: 3 })).toBe("integer");
     expect(shapeOf({ erb: null, literalValue: 2.5 })).toBe("number");
     expect(shapeOf({ erb: null, literalValue: true })).toBe("boolean");
-    expect(shapeOf({ erb: null, literalValue: [] })).toBe("empty sequence");
-    expect(shapeOf({ erb: null, literalValue: {} })).toBe("empty mapping");
+    expect(shapeOf({ erb: null, literalValue: [] })).toBe("list");
+    expect(shapeOf({ erb: null, literalValue: {} })).toBe("mapping");
     expect(shapeOf({ erb: null, literalValue: null })).toBe("null");
     expect(shapeOf({ erb: null, literalValue: "x" })).toBe("string");
   });
@@ -97,6 +114,42 @@ describe("cell helpers", () => {
     expect(cellText({ code: "x" })).toBe("x");
     expect(cellText({ text: "y" })).toBe("y");
   });
+});
+
+describe("committed extracted records", () => {
+  it("renders every split cast as a list", () => {
+    const splitRecords = records.filter(isSplitCast);
+    expect(splitRecords.length).toBeGreaterThan(0);
+    for (const record of splitRecords) {
+      expect(shapeOf(record), record.path).toBe("list");
+      expect(recordRowText(record)[0], record.path).toBe("list");
+    }
+  });
+
+  it.each([
+    "site.interface.ui.homepage.matching_cidrs",
+    "site.network.trusted_proxy.cidrs",
+    "site.admin.allowed_cidrs",
+    "site.authentication.allowed_signup_domains",
+  ])("renders %s as a list with an explicit empty-array fallback", (path) => {
+    const record = recordAt(path);
+    expect(record.erb.cast).toContain("split(,)");
+    expect(record.erb.staticFallback).toEqual([]);
+    expect(shapeOf(record)).toBe("list");
+    expect(valueOf(record)).toEqual({ code: "[]" });
+    expect(recordRowText(record).slice(0, 2)).toEqual(["list", "[]"]);
+  });
+
+  it.each(["site.admin.allowed_hosts", "features.incoming.recipients[0]"])(
+    "renders %s as a list without inventing a fallback",
+    (path) => {
+      const record = recordAt(path);
+      expect(record.erb.cast).toContain("split(,)");
+      expect(record.erb.staticFallback).toBeNull();
+      expect(shapeOf(record)).toBe("list");
+      expect(valueOf(record)).toEqual({ text: STRINGS.cellNoValue });
+    },
+  );
 });
 
 describe("sentences", () => {
@@ -146,7 +199,6 @@ describe("page headings", () => {
   });
 
   it("predicts the committed snapshot's anchors from its headings", () => {
-    const data = JSON.parse(readFileSync(`${repoRoot}/${CONFIG_DATA_PATH}`, "utf8"));
     for (const page of data.pages) {
       const headings = pageHeadings(page);
       expect(headings.length).toBeGreaterThan(0);

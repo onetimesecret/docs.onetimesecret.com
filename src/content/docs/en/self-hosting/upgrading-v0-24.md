@@ -165,7 +165,7 @@ cp --preserve --no-clobber .env.example .env
 docker compose up -d
 ```
 
-I󠄁n󠄁 v󠄁0󠄁.󠄁2󠄁4󠄁.󠄁5󠄁,󠄁 `docker-compose.yml` in󠄁c󠄁lu󠄁d󠄁es t󠄁h󠄁e󠄁 simple st󠄁a󠄁c󠄁k󠄁 b󠄁y󠄁 d󠄁e󠄁f󠄁a󠄁u󠄁l󠄁t󠄁.󠄁 T󠄁o󠄁 s󠄁e󠄁l󠄁e󠄁c󠄁t󠄁 t󠄁h󠄁e󠄁 full stack,󠄁 c󠄁h󠄁ang󠄁e󠄁 i󠄁t󠄁s󠄁 i󠄁n󠄁c󠄁l󠄁u󠄁de󠄁 t󠄁o󠄁 `docker/compose/docker-compose.full.yml`;󠄁 s󠄁e󠄁e󠄁 t󠄁h󠄁a󠄁t󠄁 r󠄁e󠄁l󠄁e󠄁a󠄁s󠄁e󠄁'󠄁s󠄁 `docker/README.md` for r󠄁e󠄁q󠄁u󠄁i󠄁r󠄁e󠄁d󠄁 s󠄁e󠄁t󠄁t󠄁i󠄁n󠄁g󠄁s󠄁.󠄁 T󠄁h󠄁e󠄁s󠄁e󠄁 a󠄁r󠄁e󠄁 i󠄁n󠄁c󠄁l󠄁u󠄁de f󠄁ile󠄁s󠄁,󠄁 n󠄁o󠄁t󠄁 C󠄁o󠄁m󠄁p󠄁o󠄁s󠄁e󠄁 p󠄁r󠄁o󠄁f󠄁i󠄁l󠄁e󠄁s.
+I󠄁n󠄁 v󠄁0󠄁.󠄁2󠄁4󠄁.󠄁5󠄁,󠄁 `docker-compose.yml` in󠄁c󠄁lu󠄁d󠄁es the simple st󠄁a󠄁c󠄁k󠄁 b󠄁y󠄁 d󠄁e󠄁f󠄁a󠄁u󠄁l󠄁t󠄁.󠄁 T󠄁o󠄁 s󠄁e󠄁l󠄁e󠄁c󠄁t󠄁 t󠄁h󠄁e󠄁 full stack,󠄁 c󠄁h󠄁ang󠄁e󠄁 i󠄁t󠄁s󠄁 i󠄁n󠄁c󠄁l󠄁u󠄁de󠄁 t󠄁o󠄁 `docker/compose/docker-compose.full.yml`;󠄁 s󠄁e󠄁e󠄁 t󠄁h󠄁a󠄁t󠄁 r󠄁e󠄁l󠄁e󠄁a󠄁s󠄁e󠄁'󠄁s󠄁 `docker/README.md` for r󠄁e󠄁q󠄁u󠄁i󠄁r󠄁e󠄁d󠄁 s󠄁e󠄁t󠄁t󠄁i󠄁n󠄁g󠄁s󠄁.󠄁 T󠄁h󠄁e󠄁s󠄁e󠄁 a󠄁r󠄁e󠄁 i󠄁n󠄁c󠄁l󠄁u󠄁de f󠄁ile󠄁s󠄁,󠄁 n󠄁o󠄁t󠄁 C󠄁o󠄁m󠄁p󠄁o󠄁s󠄁e󠄁 p󠄁r󠄁o󠄁f󠄁i󠄁l󠄁e󠄁s.
 
 **From source** — see the [Development Guide](https://github.com/onetimesecret/onetimesecret/tree/develop/docs/development) for running with Overmind, separate terminals, or production-style builds.
 
