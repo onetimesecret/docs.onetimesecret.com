@@ -39,7 +39,7 @@ name: Reference freshness
 on:
   schedule:
     # Weekly. The inputs change at release cadence, not daily.
-    - cron: '17 6 * * 1'
+    - cron: "17 6 * * 1"
   workflow_dispatch:
 
 permissions:
@@ -99,7 +99,7 @@ jobs:
               echo "::warning::changed upstream: $path (pinned $sha256, $LATEST $UPSTREAM)"
               DIFFERENT=1
             fi
-          done < <(jq -r '.files[] | "\(.path) \(.sha256)"' vendor/onetimesecret/manifest.json)
+          done < <(jq -r '(.environmentSource, .files[]) | "\(.path) \(.sha256)"' vendor/onetimesecret/manifest.json)
 
           if [ "$DIFFERENT" -eq 1 ]; then
             echo "::error::Reference inputs changed in $LATEST. Refresh the snapshot (vendor/onetimesecret/README.md), regenerate, and open a PR."

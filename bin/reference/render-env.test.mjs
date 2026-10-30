@@ -28,7 +28,8 @@ const manifest = {
   },
   refreshOwner: "someone",
   backupReviewer: "someone-else",
-  files: [{ path: ".env.reference", role: "env-reference", sha256: "x".repeat(64), lines: 80 }],
+  environmentSource: { path: ".env.reference", sha256: "a".repeat(64), lines: 80 },
+  files: [],
 };
 
 const parsed = parseEnvReference(fixture("sample.envref"), { sourceName: ".env.reference" });
@@ -90,14 +91,21 @@ describe("inlineCode", () => {
 describe("environment data contract", () => {
   it("returns data and the coverage and anchor bookkeeping, not a page", () => {
     expect(Object.keys(built).sort()).toEqual(["anchors", "coverage", "data", "sections"]);
-    expect(Object.keys(data).sort()).toEqual(["header", "sections", "source", "upstream"]);
+    expect(Object.keys(data).sort()).toEqual([
+      "extractorFormatVersion",
+      "header",
+      "sections",
+      "source",
+      "upstream",
+    ]);
     expect(DATA_PATH).toBe("src/data/reference/environment-variables.json");
     expect(JSON.parse(JSON.stringify(data))).toEqual(data);
   });
 
   it("preserves the full upstream metadata and the source path and line count", () => {
     expect(data.upstream).toEqual(manifest.upstream);
-    expect(data.source).toEqual({ path: ".env.reference", lines: 80 });
+    expect(data.source).toEqual(manifest.environmentSource);
+    expect(data.extractorFormatVersion).toBe(manifest.extractorFormatVersion);
   });
 
   it("publishes sections and records in source order with no presentation fields", () => {

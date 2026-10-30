@@ -239,9 +239,10 @@ const REQUIRED_ANCHORS = {
 // citation beside it.
 //
 // reference/environment-variables replaced self-hosting/environment-variables
-// in Phase 4 and is generated from vendor/onetimesecret/.env.reference, so it
-// cites its own pinned source. self-hosting/configuration stays on the list
-// until the configuration subjects publish under reference/.
+// in Phase 4 and renders src/data/reference/environment-variables.json, so it
+// cites the pinned upstream source recorded in that snapshot.
+// self-hosting/configuration stays on the list until the configuration subjects
+// publish under reference/.
 const REFERENCE_OWNERS = [
   "reference/environment-variables",
   "reference/configuration-files-and-precedence",

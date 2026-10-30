@@ -17,7 +17,7 @@ afterEach(() => {
 });
 
 /** A valid throwaway vendor directory, with each piece overridable. */
-function vendor({ files = { ".env.reference": "# fixture\nFOO=1\n" }, manifest = {} } = {}) {
+function vendor({ files = { "config.yaml": "foo: 1\n" }, manifest = {} } = {}) {
   const dir = mkdtempSync(join(tmpdir(), "reference-manifest-"));
   temps.push(dir);
   const entries = [];
@@ -27,13 +27,14 @@ function vendor({ files = { ".env.reference": "# fixture\nFOO=1\n" }, manifest =
     writeFileSync(absolute, content);
     entries.push({
       path,
-      role: path.endsWith(".env.reference") ? "env-reference" : "config-defaults",
+      role: "config-defaults",
       sha256: sha256(Buffer.from(content)),
       lines: (content.match(/\n/g) ?? []).length,
     });
   }
   const body = {
     extractorFormatVersion: 1,
+    environmentSource: { path: ".env.reference", sha256: "a".repeat(64), lines: 10 },
     upstream: {
       repository: "https://github.com/onetimesecret/onetimesecret",
       release: "v0.26.19",
@@ -53,12 +54,13 @@ describe("the tracked manifest", () => {
     const { manifest, inputs, warnings } = loadManifest();
     expect(manifest.upstream.release).toBe("v0.26.19");
     expect(manifest.upstream.commit).toBe("e98a88c9b5832bbae249f38885aa28bd78a5db4d");
-    expect(inputs.get("env-reference").path).toBe(".env.reference");
+    expect(inputs.has("env-reference")).toBe(false);
+    expect(manifest.environmentSource.path).toBe(".env.reference");
     expect([...inputs.keys()].sort()).toEqual([
       "auth-defaults",
       "billing-example",
       "config-defaults",
-      "env-reference",
+
       "logging-defaults",
     ]);
     // Accountability (plan A6, as amended for a single-maintainer project):
@@ -120,13 +122,13 @@ describe("the tracked manifest", () => {
 describe("rejections", () => {
   it("rejects a changed snapshot", () => {
     const dir = vendor();
-    writeFileSync(join(dir, ".env.reference"), "# fixture\nFOO=2\n");
+    writeFileSync(join(dir, "config.yaml"), "foo: 2\n");
     expect(() => loadManifest({ vendorDir: dir })).toThrow(/hashes to/);
   });
 
   it("rejects a missing snapshot", () => {
     const dir = vendor();
-    rmSync(join(dir, ".env.reference"));
+    rmSync(join(dir, "config.yaml"));
     expect(() => loadManifest({ vendorDir: dir })).toThrow(/does not exist/);
   });
 
@@ -149,9 +151,18 @@ describe("rejections", () => {
     expect(() => loadManifest({ vendorDir: dir })).toThrow(/full 40-character SHA/);
   });
 
-  it("rejects a manifest with no env-reference role", () => {
-    const dir = vendor({ files: { "etc/defaults/config.defaults.yaml": "a: 1\n" } });
-    expect(() => loadManifest({ vendorDir: dir })).toThrow(/no file declares the env-reference role/);
+  it("requires upstream environment metadata, not a vendored env role", () => {
+    const dir = vendor({ manifest: { environmentSource: undefined } });
+    expect(() => loadManifest({ vendorDir: dir })).toThrow(/environmentSource/);
+  });
+
+  it("rejects the retired env-reference vendor role", () => {
+    const dir = vendor();
+    const path = join(dir, "manifest.json");
+    const manifest = JSON.parse(readFileSync(path, "utf8"));
+    manifest.files[0].role = "env-reference";
+    writeFileSync(path, JSON.stringify(manifest));
+    expect(() => loadManifest({ vendorDir: dir })).toThrow(/role.*env-reference.*not one of/);
   });
 
   it("rejects a path that escapes the vendor directory", () => {
@@ -183,16 +194,16 @@ describe("rejections", () => {
 
   it.each([false, true])("rejects a listed snapshot symlink (dangling: %s)", (dangling) => {
     const dir = vendor();
-    const target = join(vendor(), dangling ? "missing" : ".env.reference");
-    rmSync(join(dir, ".env.reference"));
-    symlinkSync(target, join(dir, ".env.reference"));
+    const target = join(vendor(), dangling ? "missing" : "config.yaml");
+    rmSync(join(dir, "config.yaml"));
+    symlinkSync(target, join(dir, "config.yaml"));
     expect(() => loadManifest({ vendorDir: dir })).toThrow(/symlinks are not allowed/);
   });
 
   it.each(["snapshots", "snapshots/nested"])(
     "rejects a symlink in listed snapshot directory %s before reading it",
     (parent) => {
-      const dir = vendor({ files: { [`${parent}/.env.reference`]: "# fixture\nFOO=1\n" } });
+      const dir = vendor({ files: { [`${parent}/config.yaml`]: "foo: 1\n" } });
       rmSync(join(dir, parent), { recursive: true });
       symlinkSync(vendor(), join(dir, parent), "dir");
       expect(() => loadManifest({ vendorDir: dir })).toThrow(/symlinks are not allowed/);

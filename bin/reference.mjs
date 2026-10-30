@@ -3,18 +3,18 @@
 //
 // The documentation-owned reference pipeline (plan A1).
 //
-//   node bin/reference.mjs generate   write reference data, pages and coverage reports
-//   node bin/reference.mjs check      read-only equality gate, exit 1 on drift
-//   node bin/reference.mjs refresh    maintainer-only snapshot update
+//   node bin/reference.mjs generate   validate env JSON; write YAML pages and coverage
+//   node bin/reference.mjs check      validate env JSON; read-only YAML equality gate
+//   node bin/reference.mjs refresh    pinned env JSON/coverage and YAML vendor update
 //
-// `generate` and `check` read nothing but vendor/onetimesecret/ and touch
-// neither the network nor an application checkout. `check` writes nothing, so
+// `generate` and `check` read committed environment JSON and vendored YAML,
+// touching neither the network nor an application checkout. `check` writes nothing, so
 // it is safe to run before a production build. `refresh` is the one operation
 // that reads an application checkout, and it reads it through `git show` at an
 // explicit ref rather than from its working tree.
 //
 // Nothing here reads process.env. The generated output is a function of the
-// vendored bytes alone, which is what makes "regenerate and compare" a real
+// committed inputs alone, which is what makes "regenerate and compare" a real
 // gate rather than a reflection of whoever ran it. Paths resolve from
 // import.meta.url, so any cwd works.
 import { execFileSync } from "node:child_process";
@@ -22,15 +22,10 @@ import { existsSync, mkdirSync, readFileSync, realpathSync, writeFileSync } from
 import { dirname, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 
-import { parseEnvReference } from "./reference/env-parser.mjs";
+import { validateEnvironmentData } from "./reference/validate-env.mjs";
 import { renderConfigurationPages } from "./reference/render-config.mjs";
 import { loadManifest, repoRoot, sha256, ROLES, VENDOR_DIR } from "./reference/manifest.mjs";
-import {
-  COVERAGE_PATH,
-  DATA_PATH,
-  renderCoverageReport,
-  buildEnvironmentData,
-} from "./reference/render-env.mjs";
+import { COVERAGE_PATH, DATA_PATH, extractEnvironmentSnapshot } from "./reference/render-env.mjs";
 
 const USAGE = `usage:
   node bin/reference.mjs generate
@@ -39,35 +34,26 @@ const USAGE = `usage:
   Add --debug to print a stack trace on failure.`;
 
 /**
- * Build every artifact in memory.
+ * Validate the environment snapshot and build YAML-derived artifacts in memory.
+ * Environment JSON and its coverage report are written only by refresh.
  *
- * @param {{vendorDir?: string}} [options]
+ * @param {{root?: string, vendorDir?: string}} [options]
  * @returns {{artifacts: {path: string, content: string}[], coverage: object, warnings: string[]}}
  */
-export function build({ vendorDir = VENDOR_DIR } = {}) {
+export function build({ root = repoRoot, vendorDir = VENDOR_DIR } = {}) {
   const { manifest, inputs, warnings } = loadManifest({ vendorDir });
-  const envInput = inputs.get("env-reference");
-  const parsed = parseEnvReference(envInput.text, { sourceName: envInput.path });
-  const malformed = parsed.diagnostics.filter(
-    (diagnostic) => diagnostic.kind === "malformed-assignment",
-  );
-  if (malformed.length > 0) {
+  let coverage;
+  try {
+    const data = JSON.parse(readFileSync(join(root, DATA_PATH), "utf8"));
+    coverage = validateEnvironmentData(data, manifest);
+  } catch (error) {
     throw new Error(
-      `${envInput.path} has malformed assignments; resolve them before generating reference output:\n` +
-        malformed
-          .map(({ line, name, detail }) => `  line ${line}${name ? ` (${name})` : ""}: ${detail}`)
-          .join("\n"),
+      `${DATA_PATH}: ${error.message} — use explicit refresh to replace the environment snapshot`,
     );
   }
-  const { data, coverage, sections } = buildEnvironmentData({ parsed, manifest });
-  const report = renderCoverageReport({ parsed, manifest, coverage, sections });
   const configuration = renderConfigurationPages({ inputs, manifest });
   return {
-    artifacts: [
-      { path: DATA_PATH, content: `${JSON.stringify(data, null, 2)}\n` },
-      { path: COVERAGE_PATH, content: report },
-      ...configuration.artifacts,
-    ],
+    artifacts: [...configuration.artifacts],
     coverage,
     configuration: configuration.coverage,
     warnings,
@@ -119,7 +105,7 @@ function write(root, path, content) {
  * @returns {{problems: string[], coverage: object, warnings: string[], artifacts: object[]}}
  */
 export function compareArtifacts({ root = repoRoot, vendorDir } = {}) {
-  const { artifacts, coverage, configuration, warnings } = build(vendorDir ? { vendorDir } : {});
+  const { artifacts, coverage, configuration, warnings } = build({ root, vendorDir });
   const problems = [];
   for (const artifact of artifacts) {
     const absolute = join(root, artifact.path);
@@ -139,9 +125,8 @@ export function compareArtifacts({ root = repoRoot, vendorDir } = {}) {
 
 function summary(coverage, configuration) {
   return (
-    `${coverage.published.length} published, ${coverage.excluded.length} excluded, ` +
-    `${coverage.unresolved.length} unresolved of ${coverage.totalRecognized} recognized ` +
-    `environment lines; ${configuration.records} configuration keys across ` +
+    `${coverage.published.length} environment records validated; ` +
+    `${configuration.records} configuration keys across ` +
     `${configuration.perPage.size} pages (` +
     `${[...configuration.perPage].map(([owner, count]) => `${owner} ${count}`).join(", ")})`
   );
@@ -165,14 +150,14 @@ function check() {
     return 1;
   }
   console.log(
-    `OK: generated reference matches the vendored inputs — ${summary(coverage, configuration)}`,
+    `OK: environment JSON validated; generated reference matches the vendored inputs — ${summary(coverage, configuration)}`,
   );
   return 0;
 }
 
 /**
- * Maintainer-only: copy snapshots out of a local application checkout at an
- * explicit ref and rewrite the manifest.
+ * Maintainer-only: extract environment JSON and copy YAML snapshots from a
+ * local application checkout at an explicit ref, then rewrite the manifest.
  *
  * Reads with `git show <ref>:<path>`, never from the checkout's working tree,
  * so an uncommitted local edit cannot become a documented upstream fact. No
@@ -188,39 +173,62 @@ function refresh(args) {
     return 2;
   }
 
-  const git = (...rest) =>
-    execFileSync("git", ["-C", repo, "--no-pager", ...rest], { maxBuffer: 1 << 28 });
-  const commit = git("rev-parse", `${ref}^{commit}`).toString("utf8").trim();
-
-  const manifestPath = join(VENDOR_DIR, "manifest.json");
-  const previous = JSON.parse(readFileSync(manifestPath, "utf8"));
-  const files = [];
-  for (const role of ROLES) {
-    const entry = previous.files.find((file) => file.role === role);
-    if (!entry) continue;
-    const buffer = git("show", `${commit}:${entry.path}`);
-    const absolute = join(VENDOR_DIR, entry.path);
-    mkdirSync(dirname(absolute), { recursive: true });
-    writeFileSync(absolute, buffer);
-    files.push({
-      path: entry.path,
-      role,
-      sha256: sha256(buffer),
-      lines: (buffer.toString("utf8").match(/\n/g) ?? []).length,
-    });
-  }
-
-  const manifest = {
-    ...previous,
-    upstream: { ...previous.upstream, release: ref, commit },
-    files,
-  };
-  writeFileSync(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
+  const { manifest } = refreshSnapshots({ repo, ref });
+  const { commit } = manifest.upstream;
+  const files = manifest.files;
   console.log(
     `OK: refreshed ${files.length} snapshot(s) from ${relative(process.cwd(), repo)} at ${ref} (${commit}).`,
   );
   console.log("Next: node bin/reference.mjs generate, then review the diff.");
   return 0;
+}
+
+/** Read and validate everything before replacing any committed input. */
+export function refreshSnapshots({ repo, ref, root = repoRoot, vendorDir = VENDOR_DIR }) {
+  const { manifest: previous } = loadManifest({ vendorDir, verifySnapshots: false });
+  const git = (...args) =>
+    execFileSync("git", ["--no-pager", "-C", repo, ...args], { maxBuffer: 1 << 28 });
+  const commit = git("rev-parse", "--verify", "--end-of-options", `${ref}^{commit}`)
+    .toString("utf8")
+    .trim();
+  if (!/^[0-9a-f]{40}$/.test(commit)) throw new Error("refresh did not resolve a full commit SHA");
+  const readSource = (entry) => {
+    const buffer = git("show", `${commit}:${entry.path}`);
+    const text = new TextDecoder("utf-8", { fatal: true }).decode(buffer);
+    return {
+      buffer,
+      text,
+      metadata: {
+        ...entry,
+        sha256: sha256(buffer),
+        lines: text.split("\n").length - (text.endsWith("\n") ? 1 : 0),
+      },
+    };
+  };
+  const environment = readSource(previous.environmentSource);
+  const snapshots = ROLES.flatMap((role) => {
+    const entry = previous.files.find((file) => file.role === role);
+    return entry ? [readSource(entry)] : [];
+  });
+  const manifest = {
+    ...previous,
+    upstream: { ...previous.upstream, release: ref, commit },
+    environmentSource: environment.metadata,
+    files: snapshots.map(({ metadata, text }) => ({
+      ...metadata,
+      lines: (text.match(/\n/g) ?? []).length,
+    })),
+  };
+  const extracted = extractEnvironmentSnapshot(environment.text, manifest);
+  const inputs = new Map(
+    snapshots.map(({ metadata, text }) => [metadata.role, { ...metadata, text }]),
+  );
+  renderConfigurationPages({ inputs, manifest });
+  for (const { metadata, buffer } of snapshots) write(vendorDir, metadata.path, buffer);
+  write(root, DATA_PATH, `${JSON.stringify(extracted.data, null, 2)}\n`);
+  write(root, COVERAGE_PATH, extracted.report);
+  write(vendorDir, "manifest.json", `${JSON.stringify(manifest, null, 2)}\n`);
+  return { manifest, ...extracted };
 }
 
 function flag(args, name) {

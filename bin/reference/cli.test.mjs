@@ -1,296 +1,152 @@
-// bin/reference/cli.test.mjs
-//
-// Pipeline-level tests: reproducibility, isolation from the ambient
-// environment, and the behaviour of the non-writing equality gate.
-//
-// NOTHING HERE MUTATES A TRACKED FILE. Vitest runs test files in parallel, so
-// a drift test that edited a real generated artifact would race every other file
-// that reads the content tree — and it did, once, before `compareArtifacts`
-// took a `root`. Drift is now staged in a temporary copy.
 import { spawnSync } from "node:child_process";
 import { cpSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { afterEach, describe, expect, it } from "vitest";
-
 import { build, compareArtifacts, diffSummary } from "../reference.mjs";
-import { repoRoot, sha256 } from "./manifest.mjs";
+import { repoRoot } from "./manifest.mjs";
 import { CONFIG_COVERAGE_PATH, CONFIG_PAGES, pagePathFor } from "./render-config.mjs";
 import { COVERAGE_PATH, DATA_PATH } from "./render-env.mjs";
 
-const ENTRY = join(repoRoot, "bin", "reference.mjs");
-
-/** Run the CLI and return {status, stdout, stderr}. */
-function run(args, { cwd = repoRoot, env } = {}) {
-  const result = spawnSync(process.execPath, [ENTRY, ...args], {
-    cwd,
-    env: env ?? process.env,
-    encoding: "utf8",
-  });
-  if (result.error) throw result.error;
-  return { status: result.status, stdout: result.stdout, stderr: result.stderr };
-}
-
 const temps = [];
 afterEach(() => {
-  while (temps.length > 0) rmSync(temps.pop(), { recursive: true, force: true });
+  while (temps.length) rmSync(temps.pop(), { recursive: true, force: true });
 });
-
-function temp(prefix) {
-  const dir = mkdtempSync(join(tmpdir(), prefix));
+function temp() {
+  const dir = mkdtempSync(join(tmpdir(), "reference-cli-"));
   temps.push(dir);
   return dir;
 }
-
-/** A throwaway root holding the generated artifacts, ready to be perturbed. */
 function stagedRoot() {
-  const root = temp("reference-root-");
+  const root = temp();
+  mkdirSync(dirname(join(root, DATA_PATH)), { recursive: true });
+  cpSync(join(repoRoot, DATA_PATH), join(root, DATA_PATH));
   for (const artifact of build().artifacts) {
-    const absolute = join(root, artifact.path);
-    mkdirSync(dirname(absolute), { recursive: true });
-    writeFileSync(absolute, artifact.content);
+    mkdirSync(dirname(join(root, artifact.path)), { recursive: true });
+    writeFileSync(join(root, artifact.path), artifact.content);
   }
   return root;
 }
-
-/** A throwaway copy of the vendor directory. */
-function stagedVendor() {
-  const dir = temp("reference-vendor-");
-  cpSync(join(repoRoot, "vendor", "onetimesecret"), dir, { recursive: true });
-  return dir;
+function run(args, { cwd = repoRoot, env = process.env } = {}) {
+  return spawnSync(process.execPath, [join(repoRoot, "bin/reference.mjs"), ...args], {
+    cwd,
+    env,
+    encoding: "utf8",
+  });
 }
 
-describe("reproducibility", () => {
-  it("builds byte-identical output twice", () => {
+describe("JSON-only environment pipeline", () => {
+  it("validates the committed JSON and reproducibly generates only YAML artifacts", () => {
     const first = build();
-    const second = build();
-    expect(first.artifacts.map((a) => a.content)).toEqual(second.artifacts.map((a) => a.content));
-  });
-
-  it("matches the tracked artifacts", () => {
-    for (const artifact of build().artifacts) {
-      expect(readFileSync(join(repoRoot, artifact.path), "utf8"), artifact.path).toBe(
-        artifact.content,
-      );
-    }
-  });
-
-  it("emits environment data as pretty JSON with a trailing newline", () => {
-    const artifact = build().artifacts.find((entry) => entry.path === DATA_PATH);
-    const data = JSON.parse(artifact.content);
-    expect(artifact.content).toBe(`${JSON.stringify(data, null, 2)}\n`);
-    expect(data.source).toEqual({ path: ".env.reference", lines: 2718 });
-    expect(data.sections.flatMap((section) => section.records)).toHaveLength(445);
-  });
-
-  it("writes every artifact the pipeline owns", () => {
-    expect(build().artifacts.map((artifact) => artifact.path)).toEqual([
-      DATA_PATH,
-      COVERAGE_PATH,
+    expect(first.artifacts).toEqual(build().artifacts);
+    expect(first.artifacts.map(({ path }) => path)).toEqual([
       ...CONFIG_PAGES.map((page) => pagePathFor(page.owner)),
       CONFIG_COVERAGE_PATH,
     ]);
-  });
-});
-
-describe("isolation from the ambient environment", () => {
-  it("generates the same artifacts from a different working directory", () => {
-    const elsewhere = temp("reference-cwd-");
-    const result = run(["check"], { cwd: elsewhere });
-    expect(result.stdout).toContain("OK:");
-    expect(result.status).toBe(0);
-  });
-
-  it("ignores unrelated process environment values", () => {
-    // The generator never reads process.env. Garbage in the variables the
-    // application itself uses must not reach the artifacts.
-    const expected = build().artifacts;
-    const env = {
-      ...process.env,
-      HOST: "garbage-host",
-      SECRET: "garbage-secret",
-      RACK_ENV: "garbage",
-      DEFAULT_LOG_LEVEL: "garbage",
-      SITE_HOST: "garbage.example",
-      NODE_ENV: "garbage",
-    };
-    const result = run(["check"], { env });
-    expect(result.status).toBe(0);
-    for (const artifact of expected) {
+    expect(first.coverage.published).toHaveLength(445);
+    for (const artifact of first.artifacts) {
       expect(readFileSync(join(repoRoot, artifact.path), "utf8")).toBe(artifact.content);
     }
   });
-});
 
-describe("check", () => {
-  it("passes against the tracked artifacts", () => {
-    const result = run(["check"]);
-    expect(result.status).toBe(0);
-    expect(result.stdout).toMatch(/OK: generated reference matches the vendored inputs/);
-  });
-
-  it("emits no accountability warning now that the owner is named", () => {
-    const result = run(["check"]);
-    expect(result.status).toBe(0);
-    expect(result.stderr).not.toMatch(/refreshOwner/);
-    expect(result.stderr).not.toMatch(/backupReviewer/);
-  });
-
-  it("reports no problem against an unperturbed copy", () => {
+  it("checks without an environment source or environment coverage report", () => {
     expect(compareArtifacts({ root: stagedRoot() }).problems).toEqual([]);
   });
 
-  it("gates environment JSON without requiring a Markdown or MDX page", () => {
-    const root = stagedRoot();
-    expect(compareArtifacts({ root }).problems).toEqual([]);
-    for (const extension of ["md", "mdx"]) {
-      const page = join(root, `src/content/docs/en/reference/environment-variables.${extension}`);
-      mkdirSync(dirname(page), { recursive: true });
-      writeFileSync(page, "Hand-maintained page, not a generated artifact.\n");
-    }
-    expect(compareArtifacts({ root }).problems).toEqual([]);
-  });
-
-  it("fails with a diff when the environment data is edited", () => {
+  it("accepts valid snapshot prose edits rather than re-extracting upstream", () => {
     const root = stagedRoot();
     const path = join(root, DATA_PATH);
     const data = JSON.parse(readFileSync(path, "utf8"));
-    data.sections[0].heading = "Secrets and Cryptography";
-    writeFileSync(path, `${JSON.stringify(data, null, 2)}\n`);
-    const { problems } = compareArtifacts({ root });
-    expect(problems).toHaveLength(1);
-    expect(problems[0]).toContain(DATA_PATH);
-    expect(problems[0]).toContain('-      "heading": "Secrets and Cryptography",');
-    expect(problems[0]).toContain('+      "heading": "Secrets & Cryptography",');
+    data.sections[0].prose.push("Reviewed snapshot prose.");
+    const changed = JSON.stringify(data);
+    writeFileSync(path, changed);
+    expect(compareArtifacts({ root }).problems).toEqual([]);
+    expect(readFileSync(path, "utf8")).toBe(changed);
   });
 
-  it("fails when the coverage report is edited", () => {
+  it.each(["invalid JSON", "anchor", "metadata", "missing"])(
+    "rejects %s in the JSON input",
+    (kind) => {
+      const root = stagedRoot();
+      const path = join(root, DATA_PATH);
+      const data = JSON.parse(readFileSync(path, "utf8"));
+      if (kind === "anchor") data.sections[0].anchor = "wrong";
+      if (kind === "metadata") data.upstream.commit = "a".repeat(40);
+      writeFileSync(path, kind === "invalid JSON" ? "{" : JSON.stringify(data));
+      if (kind === "missing") rmSync(path);
+      expect(() => compareArtifacts({ root })).toThrow(DATA_PATH);
+    },
+  );
+
+  it("does not regenerate or check refresh-only environment coverage", () => {
     const root = stagedRoot();
-    const report = join(root, COVERAGE_PATH);
-    writeFileSync(report, `${readFileSync(report, "utf8")}hand-written line\n`);
-    const { problems } = compareArtifacts({ root });
-    expect(problems).toHaveLength(1);
-    expect(problems[0]).toContain(COVERAGE_PATH);
+    mkdirSync(dirname(join(root, COVERAGE_PATH)), { recursive: true });
+    writeFileSync(join(root, COVERAGE_PATH), "Refresh-only report\n");
+    expect(compareArtifacts({ root }).problems).toEqual([]);
+    expect(readFileSync(join(root, COVERAGE_PATH), "utf8")).toBe("Refresh-only report\n");
   });
 
-  it("fails when the configuration coverage report is edited", () => {
+  it.each(["changed", "missing"])("detects %s YAML output without writing", (kind) => {
     const root = stagedRoot();
-    const report = join(root, CONFIG_COVERAGE_PATH);
-    writeFileSync(report, `${readFileSync(report, "utf8")}hand-written line\n`);
+    const path = join(root, CONFIG_COVERAGE_PATH);
+    if (kind === "missing") rmSync(path);
+    else writeFileSync(path, "drift\n");
     const { problems } = compareArtifacts({ root });
     expect(problems).toHaveLength(1);
     expect(problems[0]).toContain(CONFIG_COVERAGE_PATH);
+    if (kind === "changed") expect(readFileSync(path, "utf8")).toBe("drift\n");
   });
 
-  it("rejects malformed assignments even when the snapshot hash is updated", () => {
-    const vendorDir = stagedVendor();
-    const snapshot = join(vendorDir, ".env.reference");
-    const text = `${readFileSync(snapshot, "utf8")}\nBROKEN=\"unterminated\n`;
-    writeFileSync(snapshot, text);
-    const manifestPath = join(vendorDir, "manifest.json");
-    const manifest = JSON.parse(readFileSync(manifestPath, "utf8"));
-    const entry = manifest.files.find((file) => file.role === "env-reference");
-    entry.sha256 = sha256(Buffer.from(text));
-    entry.lines = (text.match(/\n/g) ?? []).length;
-    writeFileSync(manifestPath, JSON.stringify(manifest));
-    expect(() => build({ vendorDir })).toThrow(/has malformed assignments[\s\S]*BROKEN/);
-  });
-
-  it("fails when an artifact is missing entirely", () => {
-    const root = stagedRoot();
-    rmSync(join(root, DATA_PATH));
-    expect(compareArtifacts({ root }).problems[0]).toMatch(/does not exist/);
-  });
-
-  it("writes nothing", () => {
-    const root = stagedRoot();
-    const path = join(root, DATA_PATH);
-    const drifted = readFileSync(path, "utf8").replace('"Connections"', '"Connexions"');
-    writeFileSync(path, drifted);
-    compareArtifacts({ root });
-    expect(readFileSync(path, "utf8")).toBe(drifted);
-  });
-
-  it("fails when a vendored snapshot is edited without rewriting the manifest", () => {
-    const vendorDir = stagedVendor();
-    const snapshot = join(vendorDir, ".env.reference");
-    writeFileSync(snapshot, `${readFileSync(snapshot, "utf8")}SMUGGLED=1\n`);
-    expect(() => compareArtifacts({ root: stagedRoot(), vendorDir })).toThrow(
-      /sha256 is .* but the file hashes to/,
-    );
-  });
-
-  it("accepts a snapshot change whose manifest hash was rewritten", () => {
-    // The other half of the contract: refreshing is allowed, refreshing
-    // silently is not. A rehashed snapshot parses, and the output changes.
-    const vendorDir = stagedVendor();
-    const snapshot = join(vendorDir, ".env.reference");
-    const text = `${readFileSync(snapshot, "utf8")}\n# A new entry.\n#SMUGGLED=1  # Since v9.9.9\n`;
-    writeFileSync(snapshot, text);
-    const manifestPath = join(vendorDir, "manifest.json");
-    const manifest = JSON.parse(readFileSync(manifestPath, "utf8"));
-    const entry = manifest.files.find((file) => file.role === "env-reference");
-    entry.sha256 = sha256(Buffer.from(text));
-    entry.lines = (text.match(/\n/g) ?? []).length;
-    writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
-    const { problems, coverage } = compareArtifacts({ root: stagedRoot(), vendorDir });
-    // Appended text lands in the file's last section, which is Development
-    // Only, so the new entry is extracted and then excluded by the plan's
-    // exclusion rule rather than published.
-    expect(
-      coverage.excluded.some(
-        (entry) => entry.record.name === "SMUGGLED" && entry.classification === "development-only",
-      ),
-    ).toBe(true);
-    // Both artifacts change: the coverage report gains the entry, and the
-    // data's source metadata records the file's new line count. The gate
-    // reports a reviewable difference rather than regenerating silently.
-    expect(problems).toHaveLength(2);
-    expect(problems.join("\n")).toContain(DATA_PATH);
-    expect(problems.join("\n")).toContain(COVERAGE_PATH);
+  it("still rejects a changed YAML vendor hash", () => {
+    const vendorDir = temp();
+    cpSync(join(repoRoot, "vendor/onetimesecret"), vendorDir, { recursive: true });
+    writeFileSync(join(vendorDir, "etc/defaults/config.defaults.yaml"), "changed: true\n");
+    expect(() => build({ vendorDir })).toThrow(/hashes to/);
   });
 });
 
-describe("the CLI surface", () => {
-  it("rejects an unknown command", () => {
+describe("CLI", () => {
+  it("checks from another cwd, ignoring application environment variables", () => {
+    const result = run(["check"], {
+      cwd: temp(),
+      env: { ...process.env, HOST: "garbage", SECRET: "garbage", RACK_ENV: "garbage" },
+    });
+    expect(result.status, result.stderr).toBe(0);
+    expect(result.stdout).toContain("environment JSON validated");
+    expect(result.stderr).not.toMatch(/refreshOwner|backupReviewer/);
+  });
+  it("rejects unknown commands", () => {
     const result = run(["nope"]);
     expect(result.status).toBe(2);
     expect(result.stderr).toContain('unknown command "nope"');
   });
-
-  it("prints stacks only when --debug is requested", () => {
-    const missing = join(temp("reference-missing-"), "no-checkout");
-    const args = ["refresh", "--repo", missing, "--ref", "v0.26.19"];
-    const normal = run(args);
-    const debug = run([...args, "--debug"]);
-    expect(normal.status).toBe(2);
-    expect(debug.status).toBe(2);
-    expect(normal.stderr).not.toMatch(/at (?:Object\.)?refresh \(/);
-    expect(debug.stderr).toMatch(/at (?:Object\.)?refresh \(/);
-  });
-
-  it("rejects refresh without a repository and a ref", () => {
+  it("requires explicit repo and ref", () => {
     const result = run(["refresh"]);
     expect(result.status).toBe(2);
     expect(result.stderr).toContain("--repo");
   });
+  it("prints stacks only with --debug", () => {
+    const args = ["refresh", "--repo", join(temp(), "missing"), "--ref", "v0.26.19"];
+    const normal = run(args);
+    const debug = run([...args, "--debug"]);
+    expect(normal.status).toBe(2);
+    expect(debug.status).toBe(2);
+    expect(normal.stderr).not.toMatch(/at refreshSnapshots/);
+    expect(debug.stderr).toMatch(/at refreshSnapshots/);
+  });
 });
 
 describe("diffSummary", () => {
-  it("shows the tracked line and the regenerated line", () => {
-    const summary = diffSummary("page.md", "a\nnew\nc\n", "a\nold\nc\n");
-    expect(summary).toContain("--- page.md (tracked)");
-    expect(summary).toContain("+++ page.md (regenerated)");
-    expect(summary).toContain("-old");
-    expect(summary).toContain("+new");
+  it("shows tracked and regenerated lines", () => {
+    const diff = diffSummary("page.md", "a\nnew\nc\n", "a\nold\nc\n");
+    expect(diff).toContain("--- page.md (tracked)");
+    expect(diff).toContain("+++ page.md (regenerated)");
+    expect(diff).toContain("-old");
+    expect(diff).toContain("+new");
   });
-
-  it("caps a large divergence instead of printing the whole file", () => {
-    const summary = diffSummary(
-      "page.md",
-      Array.from({ length: 200 }, (_, i) => `x${i}`).join("\n"),
-      "y\n",
-    );
-    expect(summary).toMatch(/\+ \.\.\. \d+ more added lines/);
+  it("caps large differences", () => {
+    expect(
+      diffSummary("page.md", Array.from({ length: 200 }, (_, i) => `x${i}`).join("\n"), "y\n"),
+    ).toMatch(/\+ \.\.\. \d+ more added lines/);
   });
 });

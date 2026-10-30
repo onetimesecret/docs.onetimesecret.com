@@ -1,0 +1,19 @@
+# .env.reference
+# Fixture legend.
+
+# ═══════════════
+# CONNECTIONS
+# ═══════════════
+# Connection settings.
+
+# Default: localhost
+HOST=localhost  # Since v1.0.0
+
+# An optional token.
+#API_TOKEN=
+
+# ═══════════════
+# DEVELOPMENT ONLY
+# ═══════════════
+# Local debugging.
+DEBUG=true

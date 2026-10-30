@@ -1,4 +1,5 @@
 {
+  "extractorFormatVersion": 1,
   "upstream": {
     "repository": "https://github.com/onetimesecret/onetimesecret",
     "release": "v0.26.19",
@@ -6,6 +7,7 @@
   },
   "source": {
     "path": ".env.reference",
+    "sha256": "1b0c623bb20d9edc85e13bb6c0d28a4e15d8a4ea4949a479dea75920e83d076e",
     "lines": 2718
   },
   "header": [

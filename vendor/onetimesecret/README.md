@@ -2,17 +2,16 @@
 
 B󠄁y󠄁t󠄁e󠄁-󠄁i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁c󠄁a󠄁l󠄁 s󠄁n󠄁a󠄁p󠄁s󠄁h󠄁o󠄁t󠄁s󠄁 o󠄁f󠄁 p󠄁u󠄁b󠄁l󠄁i󠄁c󠄁 c󠄁o󠄁n󠄁f󠄁i󠄁g󠄁u󠄁r󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 s󠄁o󠄁u󠄁r󠄁c󠄁e󠄁 f󠄁i󠄁l󠄁e󠄁s󠄁 f󠄁r󠄁o󠄁m󠄁 t󠄁h󠄁e󠄁
 `onetimesecret/onetimesecret` a󠄁p󠄁p󠄁l󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁,󠄁 p󠄁i󠄁n󠄁n󠄁e󠄁d󠄁 t󠄁o󠄁 o󠄁n󠄁e󠄁 v󠄁e󠄁r󠄁i󠄁f󠄁i󠄁e󠄁d󠄁 r󠄁e󠄁v󠄁i󠄁s󠄁i󠄁o󠄁n󠄁.󠄁
-T󠄁h󠄁e󠄁y󠄁 a󠄁r󠄁e󠄁 t󠄁h󠄁e󠄁 o󠄁n󠄁l󠄁y󠄁 i󠄁n󠄁p󠄁u󠄁t󠄁s󠄁 t󠄁h󠄁e󠄁 d󠄁o󠄁c󠄁u󠄁m󠄁e󠄁n󠄁t󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 r󠄁e󠄁f󠄁e󠄁r󠄁e󠄁n󠄁c󠄁e󠄁 g󠄁e󠄁n󠄁e󠄁r󠄁a󠄁t󠄁o󠄁r󠄁 r󠄁e󠄁a󠄁d󠄁s󠄁.󠄁
+T󠄁o󠄁g󠄁e󠄁t󠄁h󠄁e󠄁r󠄁 w󠄁i󠄁t󠄁h󠄁 `src/data/reference/environment-variables.json`,󠄁 t󠄁h󠄁e󠄁y󠄁 a󠄁r󠄁e󠄁 t󠄁h󠄁e󠄁 i󠄁n󠄁p󠄁u󠄁t󠄁s󠄁 t󠄁h󠄁e󠄁 d󠄁o󠄁c󠄁u󠄁m󠄁e󠄁n󠄁t󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 r󠄁e󠄁f󠄁e󠄁r󠄁e󠄁n󠄁c󠄁e󠄁 p󠄁i󠄁p󠄁e󠄁l󠄁i󠄁n󠄁e󠄁 r󠄁e󠄁a󠄁d󠄁s󠄁.󠄁 T󠄁h󠄁e󠄁 e󠄁n󠄁v󠄁i󠄁r󠄁o󠄁n󠄁m󠄁e󠄁n󠄁t󠄁 J󠄁S󠄁O󠄁N󠄁 i󠄁s󠄁 a󠄁 c󠄁o󠄁m󠄁m󠄁i󠄁t󠄁t󠄁e󠄁d󠄁 s󠄁n󠄁a󠄁p󠄁s󠄁h󠄁o󠄁t󠄁 e󠄁x󠄁t󠄁r󠄁a󠄁c󠄁t󠄁e󠄁d󠄁 d󠄁u󠄁r󠄁i󠄁n󠄁g󠄁 r󠄁e󠄁f󠄁r󠄁e󠄁s󠄁h󠄁;󠄁 t󠄁h󠄁e󠄁 r󠄁a󠄁w󠄁 u󠄁p󠄁s󠄁t󠄁r󠄁e󠄁a󠄁m󠄁 `.env.reference` i󠄁s󠄁 n󠄁o󠄁t󠄁 v󠄁e󠄁n󠄁d󠄁o󠄁r󠄁e󠄁d󠄁.󠄁
 
 `manifest.json` r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁s󠄁 t󠄁h󠄁e󠄁 u󠄁p󠄁s󠄁t󠄁r󠄁e󠄁a󠄁m󠄁 r󠄁e󠄁p󠄁o󠄁s󠄁i󠄁t󠄁o󠄁r󠄁y󠄁,󠄁 t󠄁h󠄁e󠄁 f󠄁u󠄁l󠄁l󠄁 c󠄁o󠄁m󠄁m󠄁i󠄁t󠄁 S󠄁H󠄁A󠄁,󠄁 t󠄁h󠄁e󠄁
 r󠄁e󠄁l󠄁e󠄁a󠄁s󠄁e󠄁 l󠄁a󠄁b󠄁e󠄁l󠄁,󠄁 t󠄁h󠄁e󠄁 e󠄁x󠄁t󠄁r󠄁a󠄁c󠄁t󠄁o󠄁r󠄁 f󠄁o󠄁r󠄁m󠄁a󠄁t󠄁 v󠄁e󠄁r󠄁s󠄁i󠄁o󠄁n󠄁,󠄁 t󠄁h󠄁e󠄁 r󠄁e󠄁f󠄁r󠄁e󠄁s󠄁h󠄁 o󠄁w󠄁n󠄁e󠄁r󠄁 a󠄁n󠄁d󠄁 b󠄁a󠄁c󠄁k󠄁u󠄁p󠄁
 r󠄁e󠄁v󠄁i󠄁e󠄁w󠄁e󠄁r󠄁,󠄁 a󠄁n󠄁d󠄁 a󠄁 p󠄁e󠄁r󠄁-󠄁f󠄁i󠄁l󠄁e󠄁 e󠄁n󠄁t󠄁r󠄁y󠄁 w󠄁i󠄁t󠄁h󠄁 i󠄁t󠄁s󠄁 u󠄁p󠄁s󠄁t󠄁r󠄁e󠄁a󠄁m󠄁 p󠄁a󠄁t󠄁h󠄁,󠄁 r󠄁o󠄁l󠄁e󠄁,󠄁 S󠄁H󠄁A󠄁-󠄁2󠄁5󠄁6󠄁 a󠄁n󠄁d󠄁 l󠄁i󠄁n󠄁e󠄁
-c󠄁o󠄁u󠄁n󠄁t󠄁.󠄁 `bin/reference/manifest.mjs` r󠄁e󠄁h󠄁a󠄁s󠄁h󠄁e󠄁s󠄁 e󠄁v󠄁e󠄁r󠄁y󠄁 f󠄁i󠄁l󠄁e󠄁 a󠄁n󠄁d󠄁 r󠄁e󠄁j󠄁e󠄁c󠄁t󠄁s󠄁 a󠄁 m󠄁i󠄁s󠄁s󠄁i󠄁n󠄁g󠄁
+c󠄁o󠄁u󠄁n󠄁t󠄁.󠄁 `files` l󠄁i󠄁s󠄁t󠄁s󠄁 o󠄁n󠄁l󠄁y󠄁 t󠄁h󠄁e󠄁 Y󠄁A󠄁M󠄁L󠄁 s󠄁n󠄁a󠄁p󠄁s󠄁h󠄁o󠄁t󠄁s󠄁;󠄁 `environmentSource` r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁s󠄁 t󠄁h󠄁e󠄁 u󠄁p󠄁s󠄁t󠄁r󠄁e󠄁a󠄁m󠄁 e󠄁n󠄁v󠄁i󠄁r󠄁o󠄁n󠄁m󠄁e󠄁n󠄁t󠄁 p󠄁a󠄁t󠄁h󠄁,󠄁 S󠄁H󠄁A󠄁-󠄁2󠄁5󠄁6󠄁 a󠄁n󠄁d󠄁 l󠄁i󠄁n󠄁e󠄁 c󠄁o󠄁u󠄁n󠄁t󠄁.󠄁 `bin/reference/manifest.mjs` r󠄁e󠄁h󠄁a󠄁s󠄁h󠄁e󠄁s󠄁 e󠄁v󠄁e󠄁r󠄁y󠄁 f󠄁i󠄁l󠄁e󠄁 a󠄁n󠄁d󠄁 r󠄁e󠄁j󠄁e󠄁c󠄁t󠄁s󠄁 a󠄁 m󠄁i󠄁s󠄁s󠄁i󠄁n󠄁g󠄁
 f󠄁i󠄁l󠄁e󠄁,󠄁 a󠄁 c󠄁h󠄁a󠄁n󠄁g󠄁e󠄁d󠄁 f󠄁i󠄁l󠄁e󠄁 o󠄁r󠄁 a󠄁n󠄁 u󠄁n󠄁e󠄁x󠄁p󠄁e󠄁c󠄁t󠄁e󠄁d󠄁 f󠄁i󠄁l󠄁e󠄁 u󠄁n󠄁d󠄁e󠄁r󠄁 t󠄁h󠄁i󠄁s󠄁 d󠄁i󠄁r󠄁e󠄁c󠄁t󠄁o󠄁r󠄁y󠄁.󠄁
 
 | F󠄁i󠄁l󠄁e󠄁 | R󠄁o󠄁l󠄁e󠄁 |
 | --- | --- |
-| `.env.reference` | `env-reference` |
 | `etc/defaults/config.defaults.yaml` | `config-defaults` |
 | `etc/defaults/auth.defaults.yaml` | `auth-defaults` |
 | `etc/defaults/logging.defaults.yaml` | `logging-defaults` |
@@ -27,14 +26,12 @@ a󠄁p󠄁p󠄁l󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 r󠄁e󠄁p󠄁o󠄁s�
   a󠄁p󠄁p󠄁l󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁o󠄁u󠄁t󠄁.󠄁 `pnpm run reference:generate` a󠄁n󠄁d󠄁
   `pnpm run reference:check` w󠄁o󠄁r󠄁k󠄁 f󠄁r󠄁o󠄁m󠄁 a󠄁 c󠄁l󠄁e󠄁a󠄁n󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁o󠄁u󠄁t󠄁 o󠄁f󠄁 t󠄁h󠄁i󠄁s󠄁 r󠄁e󠄁p󠄁o󠄁s󠄁i󠄁t󠄁o󠄁r󠄁y󠄁
   a󠄁l󠄁o󠄁n󠄁e󠄁.󠄁
-- N󠄁o󠄁t󠄁h󠄁i󠄁n󠄁g󠄁 h󠄁e󠄁r󠄁e󠄁 i󠄁s󠄁 e󠄁x󠄁e󠄁c󠄁u󠄁t󠄁e󠄁d󠄁.󠄁 `.env.reference` i󠄁s󠄁 p󠄁a󠄁r󠄁s󠄁e󠄁d󠄁 a󠄁s󠄁 t󠄁e󠄁x󠄁t󠄁;󠄁 t󠄁h󠄁e󠄁 Y󠄁A󠄁M󠄁L󠄁 f󠄁i󠄁l󠄁e󠄁s󠄁
+- N󠄁o󠄁t󠄁h󠄁i󠄁n󠄁g󠄁 h󠄁e󠄁r󠄁e󠄁 i󠄁s󠄁 e󠄁x󠄁e󠄁c󠄁u󠄁t󠄁e󠄁d󠄁.󠄁 D󠄁u󠄁r󠄁i󠄁n󠄁g󠄁 r󠄁e󠄁f󠄁r󠄁e󠄁s󠄁h󠄁,󠄁 u󠄁p󠄁s󠄁t󠄁r󠄁e󠄁a󠄁m󠄁 `.env.reference` i󠄁s󠄁 p󠄁a󠄁r󠄁s󠄁e󠄁d󠄁 a󠄁s󠄁 t󠄁e󠄁x󠄁t󠄁 i󠄁n󠄁t󠄁o󠄁 J󠄁S󠄁O󠄁N󠄁;󠄁 t󠄁h󠄁e󠄁 Y󠄁A󠄁M󠄁L󠄁 f󠄁i󠄁l󠄁e󠄁s󠄁
   a󠄁r󠄁e󠄁 p󠄁a󠄁r󠄁s󠄁e󠄁d󠄁 a󠄁s󠄁 d󠄁a󠄁t󠄁a󠄁.󠄁 N󠄁o󠄁 s󠄁h󠄁e󠄁l󠄁l󠄁,󠄁 R󠄁u󠄁b󠄁y󠄁 o󠄁r󠄁 E󠄁R󠄁B󠄁 i󠄁n󠄁t󠄁e󠄁r󠄁p󠄁r󠄁e󠄁t󠄁e󠄁r󠄁 r󠄁u󠄁n󠄁s󠄁 o󠄁v󠄁e󠄁r󠄁 t󠄁h󠄁e󠄁m󠄁.󠄁
 - N󠄁e󠄁v󠄁e󠄁r󠄁 v󠄁e󠄁n󠄁d󠄁o󠄁r󠄁 c󠄁r󠄁e󠄁d󠄁e󠄁n󠄁t󠄁i󠄁a󠄁l󠄁s󠄁,󠄁 p󠄁r󠄁o󠄁d󠄁u󠄁c󠄁t󠄁i󠄁o󠄁n󠄁 c󠄁o󠄁n󠄁f󠄁i󠄁g󠄁u󠄁r󠄁a󠄁t󠄁i󠄁o󠄁n󠄁,󠄁 a󠄁 r󠄁e󠄁a󠄁l󠄁 `.env` o󠄁r󠄁
-  c󠄁u󠄁s󠄁t󠄁o󠄁m󠄁e󠄁r󠄁 d󠄁a󠄁t󠄁a󠄁.󠄁 T󠄁h󠄁e󠄁s󠄁e󠄁 f󠄁o󠄁u󠄁r󠄁 f󠄁i󠄁l󠄁e󠄁s󠄁 a󠄁r󠄁e󠄁 p󠄁u󠄁b󠄁l󠄁i󠄁c󠄁 d󠄁o󠄁c󠄁u󠄁m󠄁e󠄁n󠄁t󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 s󠄁o󠄁u󠄁r󠄁c󠄁e󠄁 i󠄁n󠄁 t󠄁h󠄁e󠄁
+  c󠄁u󠄁s󠄁t󠄁o󠄁m󠄁e󠄁r󠄁 d󠄁a󠄁t󠄁a󠄁.󠄁 T󠄁h󠄁e󠄁s󠄁e󠄁 u󠄁p󠄁s󠄁t󠄁r󠄁e󠄁a󠄁m󠄁 i󠄁n󠄁p󠄁u󠄁t󠄁s󠄁 a󠄁r󠄁e󠄁 p󠄁u󠄁b󠄁l󠄁i󠄁c󠄁 d󠄁o󠄁c󠄁u󠄁m󠄁e󠄁n󠄁t󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 s󠄁o󠄁u󠄁r󠄁c󠄁e󠄁 i󠄁n󠄁 t󠄁h󠄁e󠄁
   a󠄁p󠄁p󠄁l󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 r󠄁e󠄁p󠄁o󠄁s󠄁i󠄁t󠄁o󠄁r󠄁y󠄁.󠄁
-- `.gitignore` i󠄁g󠄁n󠄁o󠄁r󠄁e󠄁s󠄁 `.env.*` r󠄁e󠄁p󠄁o󠄁s󠄁i󠄁t󠄁o󠄁r󠄁y󠄁-󠄁w󠄁i󠄁d󠄁e󠄁.󠄁 T󠄁h󠄁e󠄁 s󠄁i󠄁n󠄁g󠄁l󠄁e󠄁 n󠄁a󠄁r󠄁r󠄁o󠄁w󠄁 e󠄁x󠄁c󠄁e󠄁p󠄁t󠄁i󠄁o󠄁n󠄁
-  `!vendor/onetimesecret/.env.reference` k󠄁e󠄁e󠄁p󠄁s󠄁 t󠄁h󠄁i󠄁s󠄁 s󠄁n󠄁a󠄁p󠄁s󠄁h󠄁o󠄁t󠄁 t󠄁r󠄁a󠄁c󠄁k󠄁e󠄁d󠄁 w󠄁i󠄁t󠄁h󠄁o󠄁u󠄁t󠄁
-  u󠄁n󠄁i󠄁g󠄁n󠄁o󠄁r󠄁i󠄁n󠄁g󠄁 a󠄁n󠄁y󠄁 o󠄁t󠄁h󠄁e󠄁r󠄁 e󠄁n󠄁v󠄁i󠄁r󠄁o󠄁n󠄁m󠄁e󠄁n󠄁t󠄁 f󠄁i󠄁l󠄁e󠄁.󠄁
+- `.gitignore` i󠄁g󠄁n󠄁o󠄁r󠄁e󠄁s󠄁 `.env.*` r󠄁e󠄁p󠄁o󠄁s󠄁i󠄁t󠄁o󠄁r󠄁y󠄁-󠄁w󠄁i󠄁d󠄁e󠄁.󠄁
 
 ## R󠄁e󠄁f󠄁r󠄁e󠄁s󠄁h󠄁 r󠄁u󠄁n󠄁b󠄁o󠄁o󠄁k󠄁 (󠄁m󠄁a󠄁i󠄁n󠄁t󠄁a󠄁i󠄁n󠄁e󠄁r󠄁)󠄁
 
@@ -52,13 +49,13 @@ i󠄁t󠄁s󠄁 `.git/config`,󠄁 w󠄁hi󠄁c󠄁h󠄁 c󠄁a󠄁n󠄁 a󠄁f�
 2. D󠄁e󠄁c󠄁i󠄁d󠄁e󠄁 t󠄁h󠄁e󠄁 t󠄁a󠄁r󠄁g󠄁e󠄁t󠄁 r󠄁e󠄁l󠄁e󠄁a󠄁s󠄁e󠄁.󠄁 U󠄁s󠄁e󠄁 a󠄁 t󠄁a󠄁g󠄁g󠄁e󠄁d󠄁 r󠄁e󠄁l󠄁e󠄁a󠄁s󠄁e󠄁,󠄁 n󠄁o󠄁t󠄁 a󠄁 b󠄁r󠄁a󠄁n󠄁c󠄁h󠄁:󠄁 a󠄁 b󠄁r󠄁a󠄁n󠄁c󠄁h󠄁
    t󠄁r󠄁a󠄁c󠄁k󠄁s󠄁 u󠄁n󠄁r󠄁e󠄁l󠄁e󠄁a󠄁s󠄁e󠄁d󠄁 c󠄁h󠄁a󠄁n󠄁g󠄁e󠄁s󠄁,󠄁 a󠄁n󠄁d󠄁 t󠄁h󠄁i󠄁s󠄁 s󠄁n󠄁a󠄁p󠄁s󠄁h󠄁o󠄁t󠄁 d󠄁o󠄁c󠄁u󠄁m󠄁e󠄁n󠄁t󠄁s󠄁 s󠄁h󠄁i󠄁p󠄁p󠄁e󠄁d󠄁 b󠄁e󠄁h󠄁a󠄁v󠄁i󠄁o󠄁u󠄁r󠄁.󠄁
 
-3. R󠄁e󠄁f󠄁r󠄁e󠄁s󠄁h󠄁 t󠄁h󠄁e󠄁 f󠄁i󠄁l󠄁e󠄁s󠄁 a󠄁l󠄁r󠄁e󠄁a󠄁d󠄁y󠄁 l󠄁i󠄁s󠄁t󠄁e󠄁d󠄁 i󠄁n󠄁 t󠄁h󠄁e󠄁 m󠄁a󠄁n󠄁i󠄁f󠄁e󠄁s󠄁t󠄁:󠄁
+3. R󠄁e󠄁f󠄁r󠄁e󠄁s󠄁h󠄁 t󠄁h󠄁e󠄁 e󠄁n󠄁v󠄁i󠄁r󠄁o󠄁n󠄁m󠄁e󠄁n󠄁t󠄁 J󠄁S󠄁O󠄁N󠄁,󠄁 i󠄁t󠄁s󠄁 c󠄁o󠄁v󠄁e󠄁r󠄁a󠄁g󠄁e󠄁 r󠄁e󠄁p󠄁o󠄁r󠄁t󠄁,󠄁 a󠄁n󠄁d󠄁 t󠄁h󠄁e󠄁 Y󠄁A󠄁M󠄁L󠄁 f󠄁i󠄁l󠄁e󠄁s󠄁 l󠄁i󠄁s󠄁t󠄁e󠄁d󠄁 i󠄁n󠄁 t󠄁h󠄁e󠄁 m󠄁a󠄁n󠄁i󠄁f󠄁e󠄁s󠄁t󠄁:󠄁
 
    ```sh
    node bin/reference.mjs refresh --repo <path-to-app-checkout> --ref v0.26.19
    ```
 
-   R󠄁e󠄁f󠄁r󠄁e󠄁s󠄁h󠄁 u󠄁p󠄁d󠄁a󠄁t󠄁e󠄁s󠄁 o󠄁n󠄁l󠄁y󠄁 s󠄁u󠄁p󠄁p󠄁o󠄁r󠄁t󠄁e󠄁d󠄁 r󠄁o󠄁l󠄁e󠄁s󠄁 a󠄁l󠄁r󠄁e󠄁a󠄁d󠄁y󠄁 l󠄁i󠄁s󠄁t󠄁e󠄁d󠄁 i󠄁n󠄁 `manifest.json`;󠄁 i󠄁t󠄁
+   R󠄁e󠄁f󠄁r󠄁e󠄁s󠄁h󠄁 r󠄁e󠄁a󠄁d󠄁s󠄁 `environmentSource` t󠄁o󠄁 r󠄁e󠄁p󠄁l󠄁a󠄁c󠄁e󠄁 t󠄁h󠄁e󠄁 e󠄁n󠄁v󠄁i󠄁r󠄁o󠄁n󠄁m󠄁e󠄁n󠄁t󠄁 J󠄁S󠄁O󠄁N󠄁 a󠄁n󠄁d󠄁 c󠄁o󠄁v󠄁e󠄁r󠄁a󠄁g󠄁e󠄁 r󠄁e󠄁p󠄁o󠄁r󠄁t󠄁.󠄁 F󠄁o󠄁r󠄁 Y󠄁A󠄁M󠄁L󠄁,󠄁 i󠄁t󠄁 u󠄁p󠄁d󠄁a󠄁t󠄁e󠄁s󠄁 o󠄁n󠄁l󠄁y󠄁 s󠄁u󠄁p󠄁p󠄁o󠄁r󠄁t󠄁e󠄁d󠄁 r󠄁o󠄁l󠄁e󠄁s󠄁 a󠄁l󠄁r󠄁e󠄁a󠄁d󠄁y󠄁 l󠄁i󠄁s󠄁t󠄁e󠄁d󠄁 i󠄁n󠄁 `manifest.json`;󠄁 i󠄁t󠄁
    d󠄁o󠄁e󠄁s󠄁 n󠄁o󠄁t󠄁 d󠄁i󠄁s󠄁c󠄁o󠄁v󠄁e󠄁r󠄁 n󠄁e󠄁w󠄁 i󠄁n󠄁p󠄁u󠄁t󠄁s󠄁.󠄁 T󠄁o󠄁 o󠄁n󠄁b󠄁o󠄁a󠄁r󠄁d󠄁 a󠄁n󠄁o󠄁t󠄁h󠄁e󠄁r󠄁 r󠄁o󠄁l󠄁e󠄁 s󠄁u󠄁p󠄁p󠄁o󠄁r󠄁t󠄁e󠄁d󠄁 b󠄁y󠄁 `ROLES`
    i󠄁n󠄁 `bin/reference/manifest.mjs`,󠄁 m󠄁a󠄁n󠄁u󠄁a󠄁l󠄁l󠄁y󠄁 a󠄁d󠄁d󠄁 i󠄁t󠄁s󠄁 u󠄁p󠄁s󠄁t󠄁r󠄁e󠄁a󠄁m󠄁 p󠄁a󠄁t󠄁h󠄁 a󠄁n󠄁d󠄁 r󠄁o󠄁l󠄁e󠄁 t󠄁o󠄁
    `manifest.json` b󠄁e󠄁f󠄁o󠄁r󠄁e󠄁 r󠄁e󠄁f󠄁r󠄁e󠄁s󠄁h󠄁i󠄁n󠄁g󠄁.󠄁 T󠄁h󠄁e󠄁 c󠄁o󠄁m󠄁m󠄁a󠄁n󠄁d󠄁 w󠄁r󠄁i󠄁t󠄁e󠄁s󠄁 i󠄁t󠄁s󠄁 S󠄁H󠄁A󠄁-󠄁2󠄁5󠄁6󠄁 a󠄁n󠄁d󠄁 l󠄁i󠄁n󠄁e󠄁
@@ -70,20 +67,20 @@ i󠄁t󠄁s󠄁 `.git/config`,󠄁 w󠄁hi󠄁c󠄁h󠄁 c󠄁a󠄁n󠄁 a󠄁f�
    w󠄁r󠄁i󠄁t󠄁e󠄁s󠄁 i󠄁t󠄁,󠄁 t󠄁h󠄁e󠄁 r󠄁e󠄁l󠄁e󠄁a󠄁s󠄁e󠄁 l󠄁a󠄁b󠄁e󠄁l󠄁 a󠄁n󠄁d󠄁 f󠄁r󠄁e󠄁s󠄁h󠄁 p󠄁e󠄁r󠄁-󠄁f󠄁i󠄁l󠄁e󠄁 h󠄁a󠄁s󠄁h󠄁e󠄁s󠄁 i󠄁n󠄁t󠄁o󠄁
    `manifest.json`.󠄁
 
-4. R󠄁e󠄁g󠄁e󠄁n󠄁e󠄁r󠄁a󠄁t󠄁e󠄁 a󠄁n󠄁d󠄁 r󠄁e󠄁v󠄁i󠄁e󠄁w󠄁 t󠄁h󠄁e󠄁 o󠄁u󠄁t󠄁p󠄁u󠄁t󠄁 d󠄁i󠄁f󠄁f󠄁:󠄁
+4. R󠄁e󠄁g󠄁e󠄁n󠄁e󠄁r󠄁a󠄁t󠄁e󠄁 t󠄁h󠄁e󠄁 Y󠄁A󠄁M󠄁L󠄁 r󠄁e󠄁f󠄁e󠄁r󠄁e󠄁n󠄁c󠄁e󠄁 p󠄁a󠄁g󠄁e󠄁s󠄁 a󠄁n󠄁d󠄁 r󠄁e󠄁v󠄁i󠄁e󠄁w󠄁 t󠄁h󠄁e󠄁 o󠄁u󠄁t󠄁p󠄁u󠄁t󠄁 d󠄁i󠄁f󠄁f󠄁.󠄁 B󠄁o󠄁t󠄁h󠄁 c󠄁o󠄁m󠄁m󠄁a󠄁n󠄁d󠄁s󠄁 v󠄁a󠄁l󠄁i󠄁d󠄁a󠄁t󠄁e󠄁 t󠄁h󠄁e󠄁 e󠄁n󠄁v󠄁i󠄁r󠄁o󠄁n󠄁m󠄁e󠄁n󠄁t󠄁 J󠄁S󠄁O󠄁N󠄁 w󠄁i󠄁t󠄁h󠄁o󠄁u󠄁t󠄁 r󠄁e󠄁w󠄁r󠄁i󠄁t󠄁i󠄁n󠄁g󠄁 i󠄁t󠄁 o󠄁r󠄁 i󠄁t󠄁s󠄁 c󠄁o󠄁v󠄁e󠄁r󠄁a󠄁g󠄁e󠄁 r󠄁e󠄁p󠄁o󠄁r󠄁t󠄁:󠄁
 
    ```sh
    pnpm run reference:generate
    pnpm run reference:check
-   git --no-pager diff --stat vendor/onetimesecret src/content/docs/en/reference docs/reference
+   git --no-pager diff --stat vendor/onetimesecret src/data/reference/environment-variables.json src/content/docs/en/reference docs/reference
    ```
 
 5. R󠄁e󠄁a󠄁d󠄁 t󠄁h󠄁e󠄁 c󠄁o󠄁v󠄁e󠄁r󠄁a󠄁g󠄁e󠄁 r󠄁e󠄁p󠄁o󠄁r󠄁t󠄁 i󠄁n󠄁 `docs/reference/coverage-environment.md`.󠄁
    A󠄁 n󠄁e󠄁w󠄁 u󠄁n󠄁r󠄁e󠄁s󠄁o󠄁l󠄁v󠄁e󠄁d󠄁 o󠄁r󠄁 m󠄁a󠄁l󠄁f󠄁o󠄁r󠄁m󠄁e󠄁d󠄁 e󠄁n󠄁t󠄁r󠄁y󠄁 i󠄁s󠄁 a󠄁 r󠄁e󠄁v󠄁i󠄁e󠄁w󠄁 i󠄁t󠄁e󠄁m󠄁,󠄁 n󠄁o󠄁t󠄁 s󠄁o󠄁m󠄁e󠄁t󠄁h󠄁i󠄁n󠄁g󠄁 t󠄁o󠄁
    r󠄁e󠄁g󠄁e󠄁n󠄁e󠄁r󠄁a󠄁t󠄁e󠄁 p󠄁a󠄁s󠄁t󠄁.󠄁
 
-6. C󠄁o󠄁m󠄁m󠄁i󠄁t󠄁 t󠄁h󠄁e󠄁 s󠄁n󠄁a󠄁p󠄁s󠄁h󠄁o󠄁t󠄁,󠄁 t󠄁h󠄁e󠄁 m󠄁a󠄁n󠄁i󠄁f󠄁e󠄁s󠄁t󠄁,󠄁 t󠄁h󠄁e󠄁 g󠄁e󠄁n󠄁e󠄁r󠄁a󠄁t󠄁e󠄁d󠄁 p󠄁a󠄁g󠄁e󠄁 a󠄁n󠄁d󠄁 t󠄁h󠄁e󠄁 c󠄁o󠄁v󠄁e󠄁r󠄁a󠄁g󠄁e󠄁
-   r󠄁e󠄁p󠄁o󠄁r󠄁t󠄁 t󠄁o󠄁g󠄁e󠄁t󠄁h󠄁e󠄁r󠄁,󠄁 s󠄁o󠄁 o󠄁n󠄁e󠄁 c󠄁o󠄁m󠄁m󠄁i󠄁t󠄁 s󠄁h󠄁o󠄁w󠄁s󠄁 w󠄁h󠄁i󠄁c󠄁h󠄁 u󠄁p󠄁s󠄁t󠄁r󠄁e󠄁a󠄁m󠄁 r󠄁e󠄁v󠄁i󠄁s󠄁i󠄁o󠄁n󠄁 p󠄁r󠄁o󠄁d󠄁u󠄁c󠄁e󠄁d󠄁 w󠄁h󠄁i󠄁c󠄁h󠄁
+6. I󠄁n󠄁c󠄁l󠄁u󠄁d󠄁e󠄁 t󠄁h󠄁e󠄁 Y󠄁A󠄁M󠄁L󠄁 s󠄁n󠄁a󠄁p󠄁s󠄁h󠄁o󠄁t󠄁s󠄁,󠄁 m󠄁a󠄁n󠄁i󠄁f󠄁e󠄁s󠄁t󠄁,󠄁 e󠄁n󠄁v󠄁i󠄁r󠄁o󠄁n󠄁m󠄁e󠄁n󠄁t󠄁 J󠄁S󠄁O󠄁N󠄁,󠄁 g󠄁e󠄁n󠄁e󠄁r󠄁a󠄁t󠄁e󠄁d󠄁 Y󠄁A󠄁M󠄁L󠄁 p󠄁a󠄁g󠄁e󠄁s󠄁 a󠄁n󠄁d󠄁 c󠄁o󠄁v󠄁e󠄁r󠄁a󠄁g󠄁e󠄁
+   r󠄁e󠄁p󠄁o󠄁r󠄁t󠄁s󠄁 t󠄁o󠄁g󠄁e󠄁t󠄁h󠄁e󠄁r󠄁 i󠄁n󠄁 t󠄁h󠄁e󠄁 r󠄁e󠄁f󠄁r󠄁e󠄁s󠄁h󠄁 p󠄁u󠄁l󠄁l󠄁 r󠄁e󠄁q󠄁u󠄁e󠄁s󠄁t󠄁,󠄁 s󠄁o󠄁 o󠄁n󠄁e󠄁 c󠄁o󠄁m󠄁m󠄁i󠄁t󠄁 s󠄁h󠄁o󠄁w󠄁s󠄁 w󠄁h󠄁i󠄁c󠄁h󠄁 u󠄁p󠄁s󠄁t󠄁r󠄁e󠄁a󠄁m󠄁 r󠄁e󠄁v󠄁i󠄁s󠄁i󠄁o󠄁n󠄁 p󠄁r󠄁o󠄁d󠄁u󠄁c󠄁e󠄁d󠄁 w󠄁h󠄁i󠄁c󠄁h󠄁
    p󠄁u󠄁b󠄁l󠄁i󠄁s󠄁h󠄁e󠄁d󠄁 t󠄁e󠄁x󠄁t󠄁.󠄁
 
 ## Accountability

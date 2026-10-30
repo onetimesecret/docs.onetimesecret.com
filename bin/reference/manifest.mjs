@@ -22,19 +22,29 @@ export const VENDOR_DIR = join(repoRoot, "vendor", "onetimesecret");
 export const MANIFEST_PATH = join(VENDOR_DIR, "manifest.json");
 
 /** Roles a vendored file may declare. */
-export const ROLES = [
-  "env-reference",
-  "config-defaults",
-  "auth-defaults",
-  "logging-defaults",
-  "billing-example",
-];
+export const ROLES = ["config-defaults", "auth-defaults", "logging-defaults", "billing-example"];
 
 /** Files that live beside the snapshots and are not inputs. */
 const NOT_INPUTS = new Set(["manifest.json", "README.md"]);
 
 const SHA256 = /^[0-9a-f]{64}$/;
 const FULL_SHA = /^[0-9a-f]{40}$/;
+export const EXTRACTOR_FORMAT_VERSION = 1;
+
+/** Upstream-only input: its bytes are deliberately not vendored. */
+export function validateEnvironmentSource(source) {
+  if (
+    source?.path !== ".env.reference" ||
+    typeof source.sha256 !== "string" ||
+    !SHA256.test(source.sha256) ||
+    !Number.isSafeInteger(source.lines) ||
+    source.lines < 1
+  ) {
+    throw new Error(
+      "environmentSource must describe .env.reference with a SHA-256 hash and positive line count",
+    );
+  }
+}
 
 export function sha256(buffer) {
   return createHash("sha256").update(buffer).digest("hex");
@@ -60,12 +70,15 @@ function filesUnder(dir) {
 
 /**
  * Load the manifest, verify it and read every input.
+ * Refresh uses verifySnapshots: false to validate structure and safe paths only:
+ * the pinned upstream blobs supply hashes, line counts and bytes, not local files.
+ * The symlink scan remains mandatory in both modes before refresh can write.
  *
- * @param {{vendorDir?: string}} [options]
+ * @param {{vendorDir?: string, verifySnapshots?: boolean}} [options]
  * @returns {{manifest: object, inputs: Map<string, {path: string, role: string, text: string}>,
  *            warnings: string[]}}
  */
-export function loadManifest({ vendorDir = VENDOR_DIR } = {}) {
+export function loadManifest({ vendorDir = VENDOR_DIR, verifySnapshots = true } = {}) {
   const manifestPath = join(vendorDir, "manifest.json");
   // Scan before reading even the manifest: listed snapshot path components and
   // ignored companion files must not redirect reads outside this tree or cycle.
@@ -86,8 +99,13 @@ export function loadManifest({ vendorDir = VENDOR_DIR } = {}) {
   const problems = [];
   const warnings = [];
 
-  if (!Number.isInteger(manifest.extractorFormatVersion)) {
-    problems.push("extractorFormatVersion must be an integer");
+  if (manifest.extractorFormatVersion !== EXTRACTOR_FORMAT_VERSION) {
+    problems.push(`unsupported extractorFormatVersion: expected ${EXTRACTOR_FORMAT_VERSION}`);
+  }
+  try {
+    validateEnvironmentSource(manifest.environmentSource);
+  } catch (error) {
+    problems.push(error.message);
   }
   const upstream = manifest.upstream ?? {};
   if (typeof upstream.repository !== "string" || upstream.repository === "") {
@@ -123,7 +141,9 @@ export function loadManifest({ vendorDir = VENDOR_DIR } = {}) {
   }
 
   if (typeof manifest.backupReviewer !== "string" || manifest.backupReviewer === "") {
-    problems.push('backupReviewer must be a string (use "none: <reason>" when there is no second reviewer)');
+    problems.push(
+      'backupReviewer must be a string (use "none: <reason>" when there is no second reviewer)',
+    );
   } else if (manifest.backupReviewer === "unassigned") {
     warnings.push(
       'backupReviewer is "unassigned" in vendor/onetimesecret/manifest.json — plan A6 needs a real handle, or "none: <reason>" with an accountabilityNote',
@@ -131,9 +151,12 @@ export function loadManifest({ vendorDir = VENDOR_DIR } = {}) {
   } else if (manifest.backupReviewer.startsWith("none")) {
     // A declared absence is accepted, but not silently: the note is what makes
     // it a recorded risk instead of an empty field.
-    if (typeof manifest.accountabilityNote !== "string" || manifest.accountabilityNote.trim() === "") {
+    if (
+      typeof manifest.accountabilityNote !== "string" ||
+      manifest.accountabilityNote.trim() === ""
+    ) {
       problems.push(
-        'backupReviewer declares no second reviewer, so accountabilityNote must record what breaks while the refresh owner is unavailable',
+        "backupReviewer declares no second reviewer, so accountabilityNote must record what breaks while the refresh owner is unavailable",
       );
     }
   }
@@ -149,7 +172,7 @@ export function loadManifest({ vendorDir = VENDOR_DIR } = {}) {
 
   for (const file of manifest.files) {
     const where = `files entry ${JSON.stringify(file?.path ?? "(no path)")}`;
-    if (typeof file.path !== "string" || file.path === "") {
+    if (typeof file?.path !== "string" || file.path === "") {
       problems.push(`${where}: path must be a non-empty string`);
       continue;
     }
@@ -172,12 +195,16 @@ export function loadManifest({ vendorDir = VENDOR_DIR } = {}) {
     seenPaths.add(file.path);
 
     if (!ROLES.includes(file.role)) {
-      problems.push(`${where}: role ${JSON.stringify(file.role)} is not one of ${ROLES.join(", ")}`);
+      problems.push(
+        `${where}: role ${JSON.stringify(file.role)} is not one of ${ROLES.join(", ")}`,
+      );
     } else if (seenRoles.has(file.role)) {
       problems.push(`${where}: role ${file.role} is claimed by more than one file`);
     } else {
       seenRoles.add(file.role);
     }
+
+    if (!verifySnapshots) continue;
 
     if (typeof file.sha256 !== "string" || !SHA256.test(file.sha256)) {
       problems.push(`${where}: sha256 must be 64 lower-case hex characters`);
@@ -186,7 +213,9 @@ export function loadManifest({ vendorDir = VENDOR_DIR } = {}) {
 
     const absolute = join(vendorDir, file.path);
     if (!existsSync(absolute)) {
-      problems.push(`${where}: the file does not exist — the manifest names an input that is not vendored`);
+      problems.push(
+        `${where}: the file does not exist — the manifest names an input that is not vendored`,
+      );
       continue;
     }
 
@@ -207,11 +236,11 @@ export function loadManifest({ vendorDir = VENDOR_DIR } = {}) {
     inputs.set(file.role, { path: file.path, role: file.role, text });
   }
 
-  if (!seenRoles.has("env-reference")) {
-    problems.push("no file declares the env-reference role, which is the minimum input");
+  if (!seenRoles.has("config-defaults")) {
+    problems.push("no file declares the config-defaults role, which is the minimum vendored input");
   }
 
-  for (const path of vendoredFiles) {
+  for (const path of verifySnapshots ? vendoredFiles : []) {
     if (NOT_INPUTS.has(path) || seenPaths.has(path)) continue;
     problems.push(
       `vendor/onetimesecret/${path} is not listed in the manifest — an unlisted file under the vendor directory is an unprovenanced input; list it with its role and hash, or remove it`,
