@@ -69,6 +69,6 @@ describe("refresh extraction gate", () => {
     expect(coverage.excluded.map(({ record }) => record.name)).toEqual(["DEBUG"]);
     expect(report).toContain("bin/reference.mjs refresh");
     expect(report).toContain("| Published | 2 |");
-    expect(report).not.toContain("vendor/onetimesecret/.env.reference");
+    expect(report).not.toContain("vendor/");
   });
 });

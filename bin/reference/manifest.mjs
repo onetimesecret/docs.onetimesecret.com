@@ -1,15 +1,16 @@
 // bin/reference/manifest.mjs
 //
-// Load and verify vendor/onetimesecret/manifest.json and the snapshots it
-// describes (plan A1). Plain Node ESM, zero dependencies.
+// Load and verify vendor/onetimesecret/manifest.json (plan A1). Plain Node
+// ESM, zero dependencies.
 //
-// Validation runs BEFORE any parsing, and it is bidirectional: every file the
-// manifest names must exist and hash as recorded, and every file present under
-// vendor/onetimesecret/ must be named by the manifest. One direction alone is
-// not enough — hashing only what the manifest lists lets an untracked extra
-// input sit in the directory and get picked up by a later adapter, and listing
-// files without hashing them lets a local edit publish itself as upstream
-// fact.
+// The manifest pins the upstream revision the reference documents and records,
+// for every upstream input, the path that was read, its SHA-256 and its line
+// count. No upstream bytes are vendored any more: the environment and
+// configuration snapshots under src/data/reference/ are what refresh extracted
+// from those pinned blobs, and their validators check them against the
+// metadata recorded here. The directory holds only this manifest and its
+// README; anything else under it is an unprovenanced input and fails
+// validation.
 import { createHash } from "node:crypto";
 import { existsSync, lstatSync, readdirSync, readFileSync } from "node:fs";
 import { dirname, join, relative, sep, win32 } from "node:path";
@@ -21,11 +22,11 @@ export const repoRoot = join(dirname(fileURLToPath(import.meta.url)), "..", ".."
 export const VENDOR_DIR = join(repoRoot, "vendor", "onetimesecret");
 export const MANIFEST_PATH = join(VENDOR_DIR, "manifest.json");
 
-/** Roles a vendored file may declare. */
+/** Roles a configuration source may declare. */
 export const ROLES = ["config-defaults", "auth-defaults", "logging-defaults", "billing-example"];
 
-/** Files that live beside the snapshots and are not inputs. */
-const NOT_INPUTS = new Set(["manifest.json", "README.md"]);
+/** The only files allowed beside the manifest. */
+const COMPANIONS = new Set(["manifest.json", "README.md"]);
 
 const SHA256 = /^[0-9a-f]{64}$/;
 const FULL_SHA = /^[0-9a-f]{40}$/;
@@ -50,6 +51,19 @@ export function sha256(buffer) {
   return createHash("sha256").update(buffer).digest("hex");
 }
 
+/** A manifest path usable as `git show <commit>:<path>` and nothing more. */
+export function isPortableUpstreamPath(path) {
+  return (
+    typeof path === "string" &&
+    path !== "" &&
+    !path.startsWith("/") &&
+    !win32.isAbsolute(path) &&
+    !/^[a-z]:/i.test(path) &&
+    !path.includes("\\") &&
+    !path.split("/").includes("..")
+  );
+}
+
 /** Every file under `dir`, rejecting symlinks before following any path. */
 function filesUnder(dir) {
   const found = [];
@@ -69,23 +83,23 @@ function filesUnder(dir) {
 }
 
 /**
- * Load the manifest, verify it and read every input.
- * Refresh uses verifySnapshots: false to validate structure and safe paths only:
- * the pinned upstream blobs supply hashes, line counts and bytes, not local files.
- * The symlink scan remains mandatory in both modes before refresh can write.
+ * Load and verify the manifest.
  *
- * @param {{vendorDir?: string, verifySnapshots?: boolean}} [options]
- * @returns {{manifest: object, inputs: Map<string, {path: string, role: string, text: string}>,
- *            warnings: string[]}}
+ * `requireHashes: false` is for refresh, which reads the previous manifest to
+ * learn which upstream paths to fetch and then writes fresh hashes and line
+ * counts itself. An onboarding entry may then carry only `path` and `role`.
+ *
+ * @param {{vendorDir?: string, requireHashes?: boolean}} [options]
+ * @returns {{manifest: object, warnings: string[]}}
  */
-export function loadManifest({ vendorDir = VENDOR_DIR, verifySnapshots = true } = {}) {
+export function loadManifest({ vendorDir = VENDOR_DIR, requireHashes = true } = {}) {
   const manifestPath = join(vendorDir, "manifest.json");
-  // Scan before reading even the manifest: listed snapshot path components and
-  // ignored companion files must not redirect reads outside this tree or cycle.
-  const vendoredFiles = existsSync(vendorDir) ? filesUnder(vendorDir) : [];
+  // Scan before reading even the manifest: a symlinked manifest or companion
+  // must not redirect reads outside this tree.
+  const present = existsSync(vendorDir) ? filesUnder(vendorDir) : [];
   if (!existsSync(manifestPath)) {
     throw new Error(
-      `${relative(repoRoot, manifestPath)} is missing — the generator reads vendored snapshots only, so there is nothing to generate from`,
+      `${relative(repoRoot, manifestPath)} is missing — the reference pins its upstream revision there, so there is nothing to validate against`,
     );
   }
 
@@ -161,95 +175,65 @@ export function loadManifest({ vendorDir = VENDOR_DIR, verifySnapshots = true } 
     }
   }
 
-  if (!Array.isArray(manifest.files) || manifest.files.length === 0) {
-    problems.push("files must be a non-empty array of snapshot entries");
+  const sources = manifest.configurationSources;
+  if (!Array.isArray(sources) || sources.length === 0) {
+    problems.push("configurationSources must be a non-empty array of upstream source entries");
     throw new Error(describe(problems, manifestPath));
   }
 
-  const inputs = new Map();
   const seenPaths = new Set();
   const seenRoles = new Set();
 
-  for (const file of manifest.files) {
-    const where = `files entry ${JSON.stringify(file?.path ?? "(no path)")}`;
-    if (typeof file?.path !== "string" || file.path === "") {
-      problems.push(`${where}: path must be a non-empty string`);
-      continue;
-    }
-    if (
-      file.path.startsWith("/") ||
-      win32.isAbsolute(file.path) ||
-      /^[a-z]:/i.test(file.path) ||
-      file.path.includes("\\") ||
-      file.path.split("/").includes("..")
-    ) {
+  for (const source of sources) {
+    const where = `configurationSources entry ${JSON.stringify(source?.path ?? "(no path)")}`;
+    if (!isPortableUpstreamPath(source?.path)) {
       problems.push(
-        `${where}: path must be relative, use / separators, and must not escape the vendor directory`,
+        `${where}: path must be relative, use / separators, and must not escape the upstream repository`,
       );
       continue;
     }
-    if (seenPaths.has(file.path)) {
+    if (seenPaths.has(source.path)) {
       problems.push(`${where}: listed twice`);
       continue;
     }
-    seenPaths.add(file.path);
+    seenPaths.add(source.path);
 
-    if (!ROLES.includes(file.role)) {
+    if (!ROLES.includes(source.role)) {
       problems.push(
-        `${where}: role ${JSON.stringify(file.role)} is not one of ${ROLES.join(", ")}`,
+        `${where}: role ${JSON.stringify(source.role)} is not one of ${ROLES.join(", ")}`,
       );
-    } else if (seenRoles.has(file.role)) {
-      problems.push(`${where}: role ${file.role} is claimed by more than one file`);
+    } else if (seenRoles.has(source.role)) {
+      problems.push(`${where}: role ${source.role} is claimed by more than one file`);
     } else {
-      seenRoles.add(file.role);
+      seenRoles.add(source.role);
     }
 
-    if (!verifySnapshots) continue;
+    if (!requireHashes) continue;
 
-    if (typeof file.sha256 !== "string" || !SHA256.test(file.sha256)) {
+    if (typeof source.sha256 !== "string" || !SHA256.test(source.sha256)) {
       problems.push(`${where}: sha256 must be 64 lower-case hex characters`);
-      continue;
     }
-
-    const absolute = join(vendorDir, file.path);
-    if (!existsSync(absolute)) {
-      problems.push(
-        `${where}: the file does not exist — the manifest names an input that is not vendored`,
-      );
-      continue;
+    if (!Number.isSafeInteger(source.lines) || source.lines < 1) {
+      problems.push(`${where}: lines must be a positive integer`);
     }
-
-    const buffer = readFileSync(absolute);
-    const actual = sha256(buffer);
-    if (actual !== file.sha256) {
-      problems.push(
-        `${where}: sha256 is ${file.sha256} but the file hashes to ${actual} — either the snapshot was edited locally, or it was refreshed without rewriting the manifest`,
-      );
-      continue;
-    }
-
-    const text = buffer.toString("utf8");
-    const lines = (text.match(/\n/g) ?? []).length;
-    if (Number.isInteger(file.lines) && file.lines !== lines) {
-      problems.push(`${where}: lines is ${file.lines} but the file has ${lines}`);
-    }
-    inputs.set(file.role, { path: file.path, role: file.role, text });
   }
 
-  if (!seenRoles.has("config-defaults")) {
-    problems.push("no file declares the config-defaults role, which is the minimum vendored input");
+  for (const role of ROLES) {
+    if (!seenRoles.has(role)) {
+      problems.push(`no entry declares the ${role} role, which the configuration reference reads`);
+    }
   }
 
-  for (const path of verifySnapshots ? vendoredFiles : []) {
-    if (NOT_INPUTS.has(path) || seenPaths.has(path)) continue;
+  for (const path of present) {
+    if (COMPANIONS.has(path)) continue;
     problems.push(
-      `vendor/onetimesecret/${path} is not listed in the manifest — an unlisted file under the vendor directory is an unprovenanced input; list it with its role and hash, or remove it`,
+      `vendor/onetimesecret/${path} is not an input — nothing under this directory is read any more; the pinned upstream sources are recorded in manifest.json and their extracted snapshots live under src/data/reference/`,
     );
   }
 
   if (problems.length > 0) throw new Error(describe(problems, manifestPath));
 
-  return { manifest, inputs, warnings };
+  return { manifest, warnings };
 }
 
 function describe(problems, manifestPath) {

@@ -6,7 +6,6 @@
 // Source prose and values stay unescaped in the data; presentation belongs to
 // the consuming component. Anchors retain the previous page's fragments,
 // including underscores in variable names (see bin/reference/ids.mjs).
-// `inlineCode` remains here for the configuration Markdown renderer.
 import { anchorFor, envId, assertNoCollisions } from "./ids.mjs";
 import { coverageReport, parseEnvReference } from "./env-parser.mjs";
 import { validateEnvironmentData } from "./validate-env.mjs";
@@ -16,25 +15,6 @@ export const DATA_PATH = "src/data/reference/environment-variables.json";
 
 /** The internal coverage report, relative to the repository root. */
 export const COVERAGE_PATH = "docs/reference/coverage-environment.md";
-
-/** A value as an inline code span safe to drop into a table cell. */
-export function inlineCode(value) {
-  if (value === "") return "";
-  // GFM splits table cells before parsing code spans. For backslash-pipe pairs,
-  // use entities instead of doubling literal backslashes inside a code span.
-  if (/\\\|/.test(value)) {
-    const entities = { "&": "&amp;", "<": "&lt;", ">": "&gt;", "\\": "&#92;", "|": "&#124;" };
-    return `<code>${value.replace(/[&<>\\|]/g, (char) => entities[char])}</code>`;
-  }
-  let longest = 0;
-  for (const run of value.match(/`+/g) ?? []) longest = Math.max(longest, run.length);
-  const mark = "`".repeat(longest + 1);
-  // Ordinary backslashes are literal in code spans. Escape only table pipes;
-  // pad edge backticks so CommonMark does not mistake them for the delimiter.
-  const body = value.replace(/\|/g, "\\|");
-  const pad = body.startsWith("`") || body.endsWith("`") ? " " : "";
-  return `${mark}${pad}${body}${pad}${mark}`;
-}
 
 /**
  * Build the JSON contract consumed by the environment-reference component.

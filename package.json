@@ -19,7 +19,6 @@
     "check:textprov": "node bin/check-textprov.mjs",
     "check:reference:html": "node bin/check-reference-html.mjs",
     "check:types": "astro sync && tsc --noEmit",
-    "reference:generate": "node bin/reference.mjs generate",
     "reference:check": "node bin/reference.mjs check",
     "check:links": "./bin/check-links.sh",
     "check:links:malformed": "./bin/check-malformed-links.sh",

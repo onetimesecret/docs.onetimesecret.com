@@ -1,92 +1,141 @@
-# V󠄁e󠄁n󠄁d󠄁o󠄁r󠄁e󠄁d󠄁 O󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁 S󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 a󠄁p󠄁p󠄁l󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 i󠄁n󠄁p󠄁u󠄁t󠄁s󠄁
+# Pinned Onetime Secret reference inputs
 
-B󠄁y󠄁t󠄁e󠄁-󠄁i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁c󠄁a󠄁l󠄁 s󠄁n󠄁a󠄁p󠄁s󠄁h󠄁o󠄁t󠄁s󠄁 o󠄁f󠄁 p󠄁u󠄁b󠄁l󠄁i󠄁c󠄁 c󠄁o󠄁n󠄁f󠄁i󠄁g󠄁u󠄁r󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 s󠄁o󠄁u󠄁r󠄁c󠄁e󠄁 f󠄁i󠄁l󠄁e󠄁s󠄁 f󠄁r󠄁o󠄁m󠄁 t󠄁h󠄁e󠄁
-`onetimesecret/onetimesecret` a󠄁p󠄁p󠄁l󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁,󠄁 p󠄁i󠄁n󠄁n󠄁e󠄁d󠄁 t󠄁o󠄁 o󠄁n󠄁e󠄁 v󠄁e󠄁r󠄁i󠄁f󠄁i󠄁e󠄁d󠄁 r󠄁e󠄁v󠄁i󠄁s󠄁i󠄁o󠄁n󠄁.󠄁
-T󠄁o󠄁g󠄁e󠄁t󠄁h󠄁e󠄁r󠄁 w󠄁i󠄁t󠄁h󠄁 `src/data/reference/environment-variables.json`,󠄁 t󠄁h󠄁e󠄁y󠄁 a󠄁r󠄁e󠄁 t󠄁h󠄁e󠄁 i󠄁n󠄁p󠄁u󠄁t󠄁s󠄁 t󠄁h󠄁e󠄁 d󠄁o󠄁c󠄁u󠄁m󠄁e󠄁n󠄁t󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 r󠄁e󠄁f󠄁e󠄁r󠄁e󠄁n󠄁c󠄁e󠄁 p󠄁i󠄁p󠄁e󠄁l󠄁i󠄁n󠄁e󠄁 r󠄁e󠄁a󠄁d󠄁s󠄁.󠄁 T󠄁h󠄁e󠄁 e󠄁n󠄁v󠄁i󠄁r󠄁o󠄁n󠄁m󠄁e󠄁n󠄁t󠄁 J󠄁S󠄁O󠄁N󠄁 i󠄁s󠄁 a󠄁 c󠄁o󠄁m󠄁m󠄁i󠄁t󠄁t󠄁e󠄁d󠄁 s󠄁n󠄁a󠄁p󠄁s󠄁h󠄁o󠄁t󠄁 e󠄁x󠄁t󠄁r󠄁a󠄁c󠄁t󠄁e󠄁d󠄁 d󠄁u󠄁r󠄁i󠄁n󠄁g󠄁 r󠄁e󠄁f󠄁r󠄁e󠄁s󠄁h󠄁;󠄁 t󠄁h󠄁e󠄁 r󠄁a󠄁w󠄁 u󠄁p󠄁s󠄁t󠄁r󠄁e󠄁a󠄁m󠄁 `.env.reference` i󠄁s󠄁 n󠄁o󠄁t󠄁 v󠄁e󠄁n󠄁d󠄁o󠄁r󠄁e󠄁d󠄁.󠄁
+This directory holds `manifest.json` and nothing else. It pins the revision of
+the `onetimesecret/onetimesecret` application that the documentation reference
+pages describe, and records every upstream file the reference pipeline read at
+that revision. No upstream bytes are vendored: the pipeline extracts structured
+data from the pinned blobs during an explicit refresh and commits that data as
+JSON snapshots under `src/data/reference/`.
 
-`manifest.json` r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁s󠄁 t󠄁h󠄁e󠄁 u󠄁p󠄁s󠄁t󠄁r󠄁e󠄁a󠄁m󠄁 r󠄁e󠄁p󠄁o󠄁s󠄁i󠄁t󠄁o󠄁r󠄁y󠄁,󠄁 t󠄁h󠄁e󠄁 f󠄁u󠄁l󠄁l󠄁 c󠄁o󠄁m󠄁m󠄁i󠄁t󠄁 S󠄁H󠄁A󠄁,󠄁 t󠄁h󠄁e󠄁
-r󠄁e󠄁l󠄁e󠄁a󠄁s󠄁e󠄁 l󠄁a󠄁b󠄁e󠄁l󠄁,󠄁 t󠄁h󠄁e󠄁 e󠄁x󠄁t󠄁r󠄁a󠄁c󠄁t󠄁o󠄁r󠄁 f󠄁o󠄁r󠄁m󠄁a󠄁t󠄁 v󠄁e󠄁r󠄁s󠄁i󠄁o󠄁n󠄁,󠄁 t󠄁h󠄁e󠄁 r󠄁e󠄁f󠄁r󠄁e󠄁s󠄁h󠄁 o󠄁w󠄁n󠄁e󠄁r󠄁 a󠄁n󠄁d󠄁 b󠄁a󠄁c󠄁k󠄁u󠄁p󠄁
-r󠄁e󠄁v󠄁i󠄁e󠄁w󠄁e󠄁r󠄁,󠄁 a󠄁n󠄁d󠄁 a󠄁 p󠄁e󠄁r󠄁-󠄁f󠄁i󠄁l󠄁e󠄁 e󠄁n󠄁t󠄁r󠄁y󠄁 w󠄁i󠄁t󠄁h󠄁 i󠄁t󠄁s󠄁 u󠄁p󠄁s󠄁t󠄁r󠄁e󠄁a󠄁m󠄁 p󠄁a󠄁t󠄁h󠄁,󠄁 r󠄁o󠄁l󠄁e󠄁,󠄁 S󠄁H󠄁A󠄁-󠄁2󠄁5󠄁6󠄁 a󠄁n󠄁d󠄁 l󠄁i󠄁n󠄁e󠄁
-c󠄁o󠄁u󠄁n󠄁t󠄁.󠄁 `files` l󠄁i󠄁s󠄁t󠄁s󠄁 o󠄁n󠄁l󠄁y󠄁 t󠄁h󠄁e󠄁 Y󠄁A󠄁M󠄁L󠄁 s󠄁n󠄁a󠄁p󠄁s󠄁h󠄁o󠄁t󠄁s󠄁;󠄁 `environmentSource` r󠄁e󠄁c󠄁o󠄁r󠄁d󠄁s󠄁 t󠄁h󠄁e󠄁 u󠄁p󠄁s󠄁t󠄁r󠄁e󠄁a󠄁m󠄁 e󠄁n󠄁v󠄁i󠄁r󠄁o󠄁n󠄁m󠄁e󠄁n󠄁t󠄁 p󠄁a󠄁t󠄁h󠄁,󠄁 S󠄁H󠄁A󠄁-󠄁2󠄁5󠄁6󠄁 a󠄁n󠄁d󠄁 l󠄁i󠄁n󠄁e󠄁 c󠄁o󠄁u󠄁n󠄁t󠄁.󠄁 `bin/reference/manifest.mjs` r󠄁e󠄁h󠄁a󠄁s󠄁h󠄁e󠄁s󠄁 e󠄁v󠄁e󠄁r󠄁y󠄁 f󠄁i󠄁l󠄁e󠄁 a󠄁n󠄁d󠄁 r󠄁e󠄁j󠄁e󠄁c󠄁t󠄁s󠄁 a󠄁 m󠄁i󠄁s󠄁s󠄁i󠄁n󠄁g󠄁
-f󠄁i󠄁l󠄁e󠄁,󠄁 a󠄁 c󠄁h󠄁a󠄁n󠄁g󠄁e󠄁d󠄁 f󠄁i󠄁l󠄁e󠄁 o󠄁r󠄁 a󠄁n󠄁 u󠄁n󠄁e󠄁x󠄁p󠄁e󠄁c󠄁t󠄁e󠄁d󠄁 f󠄁i󠄁l󠄁e󠄁 u󠄁n󠄁d󠄁e󠄁r󠄁 t󠄁h󠄁i󠄁s󠄁 d󠄁i󠄁r󠄁e󠄁c󠄁t󠄁o󠄁r󠄁y󠄁.󠄁
+```text
+Pinned upstream sources (manifest.json)
+    | explicit refresh: parse and validate
+Committed JSON snapshots (src/data/reference/)
+    |-- environment-variables.json
+    `-- configuration.json
+    | Astro components at build time
+Rendered documentation
+```
 
-| F󠄁i󠄁l󠄁e󠄁 | R󠄁o󠄁l󠄁e󠄁 |
+Refresh changes the data. Local code changes its presentation.
+
+| Change | Upstream access needed? |
 | --- | --- |
+| Layout, tables, how descriptions are shown, navigation | No |
+| How existing structured records are presented | No |
+| Refresh to a newer application release | Yes |
+| Fix extraction or capture information absent from the JSON | Yes |
+
+## What the manifest records
+
+- `upstream`: the repository, release label and full commit SHA.
+- `environmentSource`: the upstream path, SHA-256 and line count of
+  `.env.reference`, which `src/data/reference/environment-variables.json` was
+  extracted from.
+- `configurationSources`: one entry per upstream YAML input, with its path,
+  role, SHA-256 and line count. `src/data/reference/configuration.json` was
+  extracted from these.
+- `extractorFormatVersion`, `refreshOwner`, `backupReviewer` and
+  `accountabilityNote` (see below).
+
+| Upstream path | Role |
+| --- | --- |
+| `.env.reference` | environment reference |
 | `etc/defaults/config.defaults.yaml` | `config-defaults` |
 | `etc/defaults/auth.defaults.yaml` | `auth-defaults` |
 | `etc/defaults/logging.defaults.yaml` | `logging-defaults` |
+| `etc/examples/billing.example.yaml` | `billing-example` |
 
-T󠄁h󠄁e󠄁 p󠄁a󠄁t󠄁h󠄁s󠄁 u󠄁n󠄁d󠄁e󠄁r󠄁 t󠄁h󠄁i󠄁s󠄁 d󠄁i󠄁r󠄁e󠄁c󠄁t󠄁o󠄁r󠄁y󠄁 m󠄁i󠄁r󠄁r󠄁o󠄁r󠄁 t󠄁h󠄁e󠄁 u󠄁p󠄁s󠄁t󠄁r󠄁e󠄁a󠄁m󠄁 p󠄁a󠄁t󠄁h󠄁s󠄁 e󠄁x󠄁a󠄁c󠄁t󠄁l󠄁y󠄁,󠄁 s󠄁o󠄁 a󠄁
-c󠄁i󠄁t󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 r󠄁e󠄁a󠄁d󠄁s󠄁 t󠄁h󠄁e󠄁 s󠄁a󠄁m󠄁e󠄁 w󠄁h󠄁e󠄁t󠄁h󠄁e󠄁r󠄁 i󠄁t󠄁 p󠄁o󠄁i󠄁n󠄁t󠄁s󠄁 a󠄁t󠄁 t󠄁h󠄁i󠄁s󠄁 s󠄁n󠄁a󠄁p󠄁s󠄁h󠄁o󠄁t󠄁 o󠄁r󠄁 a󠄁t󠄁 t󠄁h󠄁e󠄁
-a󠄁p󠄁p󠄁l󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 r󠄁e󠄁p󠄁o󠄁s󠄁i󠄁t󠄁o󠄁r󠄁y󠄁.󠄁
+`bin/reference/manifest.mjs` validates the manifest's structure and rejects any
+other file under this directory. `bin/reference/validate-env.mjs` and
+`bin/reference/validate-config.mjs` check each committed snapshot against the
+manifest: format version, upstream revision, source hashes and line counts,
+source spans, heading anchors and record structure. Both run offline from
+`pnpm run reference:check`, which CI runs before the build.
 
-## R󠄁u󠄁l󠄁e󠄁s󠄁
+## Rules
 
-- G󠄁e󠄁n󠄁e󠄁r󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 a󠄁n󠄁d󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁i󠄁n󠄁g󠄁 n󠄁e󠄁v󠄁e󠄁r󠄁 r󠄁e󠄁a󠄁c󠄁h󠄁 t󠄁h󠄁e󠄁 n󠄁e󠄁t󠄁w󠄁o󠄁r󠄁k󠄁 a󠄁n󠄁d󠄁 n󠄁e󠄁v󠄁e󠄁r󠄁 r󠄁e󠄁a󠄁d󠄁 a󠄁n󠄁
-  a󠄁p󠄁p󠄁l󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁o󠄁u󠄁t󠄁.󠄁 `pnpm run reference:generate` a󠄁n󠄁d󠄁
-  `pnpm run reference:check` w󠄁o󠄁r󠄁k󠄁 f󠄁r󠄁o󠄁m󠄁 a󠄁 c󠄁l󠄁e󠄁a󠄁n󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁o󠄁u󠄁t󠄁 o󠄁f󠄁 t󠄁h󠄁i󠄁s󠄁 r󠄁e󠄁p󠄁o󠄁s󠄁i󠄁t󠄁o󠄁r󠄁y󠄁
-  a󠄁l󠄁o󠄁n󠄁e󠄁.󠄁
-- N󠄁o󠄁t󠄁h󠄁i󠄁n󠄁g󠄁 h󠄁e󠄁r󠄁e󠄁 i󠄁s󠄁 e󠄁x󠄁e󠄁c󠄁u󠄁t󠄁e󠄁d󠄁.󠄁 D󠄁u󠄁r󠄁i󠄁n󠄁g󠄁 r󠄁e󠄁f󠄁r󠄁e󠄁s󠄁h󠄁,󠄁 u󠄁p󠄁s󠄁t󠄁r󠄁e󠄁a󠄁m󠄁 `.env.reference` i󠄁s󠄁 p󠄁a󠄁r󠄁s󠄁e󠄁d󠄁 a󠄁s󠄁 t󠄁e󠄁x󠄁t󠄁 i󠄁n󠄁t󠄁o󠄁 J󠄁S󠄁O󠄁N󠄁;󠄁 t󠄁h󠄁e󠄁 Y󠄁A󠄁M󠄁L󠄁 f󠄁i󠄁l󠄁e󠄁s󠄁
-  a󠄁r󠄁e󠄁 p󠄁a󠄁r󠄁s󠄁e󠄁d󠄁 a󠄁s󠄁 d󠄁a󠄁t󠄁a󠄁.󠄁 N󠄁o󠄁 s󠄁h󠄁e󠄁l󠄁l󠄁,󠄁 R󠄁u󠄁b󠄁y󠄁 o󠄁r󠄁 E󠄁R󠄁B󠄁 i󠄁n󠄁t󠄁e󠄁r󠄁p󠄁r󠄁e󠄁t󠄁e󠄁r󠄁 r󠄁u󠄁n󠄁s󠄁 o󠄁v󠄁e󠄁r󠄁 t󠄁h󠄁e󠄁m󠄁.󠄁
-- N󠄁e󠄁v󠄁e󠄁r󠄁 v󠄁e󠄁n󠄁d󠄁o󠄁r󠄁 c󠄁r󠄁e󠄁d󠄁e󠄁n󠄁t󠄁i󠄁a󠄁l󠄁s󠄁,󠄁 p󠄁r󠄁o󠄁d󠄁u󠄁c󠄁t󠄁i󠄁o󠄁n󠄁 c󠄁o󠄁n󠄁f󠄁i󠄁g󠄁u󠄁r󠄁a󠄁t󠄁i󠄁o󠄁n󠄁,󠄁 a󠄁 r󠄁e󠄁a󠄁l󠄁 `.env` o󠄁r󠄁
-  c󠄁u󠄁s󠄁t󠄁o󠄁m󠄁e󠄁r󠄁 d󠄁a󠄁t󠄁a󠄁.󠄁 T󠄁h󠄁e󠄁s󠄁e󠄁 u󠄁p󠄁s󠄁t󠄁r󠄁e󠄁a󠄁m󠄁 i󠄁n󠄁p󠄁u󠄁t󠄁s󠄁 a󠄁r󠄁e󠄁 p󠄁u󠄁b󠄁l󠄁i󠄁c󠄁 d󠄁o󠄁c󠄁u󠄁m󠄁e󠄁n󠄁t󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 s󠄁o󠄁u󠄁r󠄁c󠄁e󠄁 i󠄁n󠄁 t󠄁h󠄁e󠄁
-  a󠄁p󠄁p󠄁l󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 r󠄁e󠄁p󠄁o󠄁s󠄁i󠄁t󠄁o󠄁r󠄁y󠄁.󠄁
-- `.gitignore` i󠄁g󠄁n󠄁o󠄁r󠄁e󠄁s󠄁 `.env.*` r󠄁e󠄁p󠄁o󠄁s󠄁i󠄁t󠄁o󠄁r󠄁y󠄁-󠄁w󠄁i󠄁d󠄁e󠄁.󠄁
+- Checking never reaches the network and never reads an application checkout.
+  `pnpm run reference:check` works from a clean checkout of this repository
+  alone.
+- Nothing upstream is executed. During refresh, `.env.reference` is parsed as
+  text and the YAML files are parsed as data with ERB spans replaced by inert
+  placeholders. No shell, Ruby or ERB interpreter runs over them.
+- Never record credentials, production configuration, a real `.env` or
+  customer data. The upstream inputs are public documentation source in the
+  application repository.
+- The committed JSON stores structured records, not rendered Markdown. A
+  record keeps the extractor's classification (a literal in the file, an
+  ERB-derived default, or an expression only the running application can
+  resolve), its source comment as lines, its release annotation and its source
+  span. The billing example's catalog sections are stored as structure only:
+  entry counts and field names, never values.
 
-## R󠄁e󠄁f󠄁r󠄁e󠄁s󠄁h󠄁 r󠄁u󠄁n󠄁b󠄁o󠄁o󠄁k󠄁 (󠄁m󠄁a󠄁i󠄁n󠄁t󠄁a󠄁i󠄁n󠄁e󠄁r󠄁)󠄁
+## Refresh runbook (maintainer)
 
-R󠄁e󠄁f󠄁r󠄁e󠄁s󠄁h󠄁i󠄁n󠄁g󠄁 i󠄁s󠄁 t󠄁h󠄁e󠄁 o󠄁n󠄁e󠄁 o󠄁p󠄁e󠄁r󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 t󠄁h󠄁a󠄁t󠄁 n󠄁e󠄁e󠄁d󠄁s󠄁 a󠄁n󠄁 a󠄁p󠄁p󠄁l󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁o󠄁u󠄁t󠄁.󠄁 N󠄁e󠄁t󠄁w󠄁o󠄁r󠄁k󠄁
-a󠄁c󠄁c󠄁e󠄁s󠄁s󠄁 i󠄁s󠄁 c󠄁o󠄁n󠄁f󠄁i󠄁n󠄁e󠄁d󠄁 t󠄁o󠄁 t󠄁h󠄁e󠄁 m󠄁a󠄁i󠄁n󠄁t󠄁a󠄁i󠄁n󠄁e󠄁r󠄁 u󠄁p󠄁d󠄁a󠄁t󠄁i󠄁n󠄁g󠄁 t󠄁h󠄁a󠄁t󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁o󠄁u󠄁t󠄁;󠄁 t󠄁h󠄁e󠄁 r󠄁e󠄁f󠄁r󠄁e󠄁s󠄁h󠄁
-c󠄁o󠄁m󠄁m󠄁a󠄁n󠄁d󠄁 i󠄁t󠄁s󠄁e󠄁l󠄁f󠄁 u󠄁s󠄁e󠄁s󠄁 l󠄁o󠄁c󠄁a󠄁l󠄁 G󠄁i󠄁t󠄁 c󠄁o󠄁m󠄁m󠄁a󠄁n󠄁d󠄁s󠄁.󠄁 U󠄁s󠄁e󠄁 a󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁o󠄁u󠄁t󠄁 y󠄁o󠄁u󠄁 t󠄁r󠄁u󠄁s󠄁t󠄁:󠄁 G󠄁i󠄁t󠄁 h󠄁o󠄁n󠄁o󠄁r󠄁s󠄁
-i󠄁t󠄁s󠄁 `.git/config`,󠄁 w󠄁hi󠄁c󠄁h󠄁 c󠄁a󠄁n󠄁 a󠄁f󠄁f󠄁e󠄁c󠄁t󠄁 c󠄁om󠄁m󠄁a󠄁n󠄁d󠄁 b󠄁e󠄁h󠄁a󠄁v󠄁i󠄁o󠄁r󠄁.󠄁
+Refreshing is the one operation that needs an application checkout. Network
+access is confined to the maintainer updating that checkout; the refresh
+command itself uses local Git commands. Use a checkout you trust: Git honors
+its `.git/config`, which can affect command behavior.
 
-1. U󠄁p󠄁d󠄁a󠄁t󠄁e󠄁 a󠄁 l󠄁o󠄁c󠄁a󠄁l󠄁 r󠄁e󠄁a󠄁d󠄁-󠄁o󠄁n󠄁l󠄁y󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁o󠄁u󠄁t󠄁 o󠄁f󠄁 t󠄁h󠄁e󠄁 a󠄁p󠄁p󠄁l󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 a󠄁n󠄁d󠄁 f󠄁e󠄁t󠄁c󠄁h󠄁 t󠄁a󠄁g󠄁s󠄁:󠄁
+1. Update a local read-only checkout of the application and fetch tags:
 
    ```sh
    git -C <path-to-app-checkout> fetch --tags origin
    ```
 
-2. D󠄁e󠄁c󠄁i󠄁d󠄁e󠄁 t󠄁h󠄁e󠄁 t󠄁a󠄁r󠄁g󠄁e󠄁t󠄁 r󠄁e󠄁l󠄁e󠄁a󠄁s󠄁e󠄁.󠄁 U󠄁s󠄁e󠄁 a󠄁 t󠄁a󠄁g󠄁g󠄁e󠄁d󠄁 r󠄁e󠄁l󠄁e󠄁a󠄁s󠄁e󠄁,󠄁 n󠄁o󠄁t󠄁 a󠄁 b󠄁r󠄁a󠄁n󠄁c󠄁h󠄁:󠄁 a󠄁 b󠄁r󠄁a󠄁n󠄁c󠄁h󠄁
-   t󠄁r󠄁a󠄁c󠄁k󠄁s󠄁 u󠄁n󠄁r󠄁e󠄁l󠄁e󠄁a󠄁s󠄁e󠄁d󠄁 c󠄁h󠄁a󠄁n󠄁g󠄁e󠄁s󠄁,󠄁 a󠄁n󠄁d󠄁 t󠄁h󠄁i󠄁s󠄁 s󠄁n󠄁a󠄁p󠄁s󠄁h󠄁o󠄁t󠄁 d󠄁o󠄁c󠄁u󠄁m󠄁e󠄁n󠄁t󠄁s󠄁 s󠄁h󠄁i󠄁p󠄁p󠄁e󠄁d󠄁 b󠄁e󠄁h󠄁a󠄁v󠄁i󠄁o󠄁u󠄁r󠄁.󠄁
+2. Decide the target release. Use a tagged release, not a branch: a branch
+   tracks unreleased changes, and these snapshots document shipped behaviour.
 
-3. R󠄁e󠄁f󠄁r󠄁e󠄁s󠄁h󠄁 t󠄁h󠄁e󠄁 e󠄁n󠄁v󠄁i󠄁r󠄁o󠄁n󠄁m󠄁e󠄁n󠄁t󠄁 J󠄁S󠄁O󠄁N󠄁,󠄁 i󠄁t󠄁s󠄁 c󠄁o󠄁v󠄁e󠄁r󠄁a󠄁g󠄁e󠄁 r󠄁e󠄁p󠄁o󠄁r󠄁t󠄁,󠄁 a󠄁n󠄁d󠄁 t󠄁h󠄁e󠄁 Y󠄁A󠄁M󠄁L󠄁 f󠄁i󠄁l󠄁e󠄁s󠄁 l󠄁i󠄁s󠄁t󠄁e󠄁d󠄁 i󠄁n󠄁 t󠄁h󠄁e󠄁 m󠄁a󠄁n󠄁i󠄁f󠄁e󠄁s󠄁t󠄁:󠄁
+3. Refresh both snapshots, both coverage reports and the manifest:
 
    ```sh
    node bin/reference.mjs refresh --repo <path-to-app-checkout> --ref v0.26.19
    ```
 
-   R󠄁e󠄁f󠄁r󠄁e󠄁s󠄁h󠄁 r󠄁e󠄁a󠄁d󠄁s󠄁 `environmentSource` t󠄁o󠄁 r󠄁e󠄁p󠄁l󠄁a󠄁c󠄁e󠄁 t󠄁h󠄁e󠄁 e󠄁n󠄁v󠄁i󠄁r󠄁o󠄁n󠄁m󠄁e󠄁n󠄁t󠄁 J󠄁S󠄁O󠄁N󠄁 a󠄁n󠄁d󠄁 c󠄁o󠄁v󠄁e󠄁r󠄁a󠄁g󠄁e󠄁 r󠄁e󠄁p󠄁o󠄁r󠄁t󠄁.󠄁 F󠄁o󠄁r󠄁 Y󠄁A󠄁M󠄁L󠄁,󠄁 i󠄁t󠄁 u󠄁p󠄁d󠄁a󠄁t󠄁e󠄁s󠄁 o󠄁n󠄁l󠄁y󠄁 s󠄁u󠄁p󠄁p󠄁o󠄁r󠄁t󠄁e󠄁d󠄁 r󠄁o󠄁l󠄁e󠄁s󠄁 a󠄁l󠄁r󠄁e󠄁a󠄁d󠄁y󠄁 l󠄁i󠄁s󠄁t󠄁e󠄁d󠄁 i󠄁n󠄁 `manifest.json`;󠄁 i󠄁t󠄁
-   d󠄁o󠄁e󠄁s󠄁 n󠄁o󠄁t󠄁 d󠄁i󠄁s󠄁c󠄁o󠄁v󠄁e󠄁r󠄁 n󠄁e󠄁w󠄁 i󠄁n󠄁p󠄁u󠄁t󠄁s󠄁.󠄁 T󠄁o󠄁 o󠄁n󠄁b󠄁o󠄁a󠄁r󠄁d󠄁 a󠄁n󠄁o󠄁t󠄁h󠄁e󠄁r󠄁 r󠄁o󠄁l󠄁e󠄁 s󠄁u󠄁p󠄁p󠄁o󠄁r󠄁t󠄁e󠄁d󠄁 b󠄁y󠄁 `ROLES`
-   i󠄁n󠄁 `bin/reference/manifest.mjs`,󠄁 m󠄁a󠄁n󠄁u󠄁a󠄁l󠄁l󠄁y󠄁 a󠄁d󠄁d󠄁 i󠄁t󠄁s󠄁 u󠄁p󠄁s󠄁t󠄁r󠄁e󠄁a󠄁m󠄁 p󠄁a󠄁t󠄁h󠄁 a󠄁n󠄁d󠄁 r󠄁o󠄁l󠄁e󠄁 t󠄁o󠄁
-   `manifest.json` b󠄁e󠄁f󠄁o󠄁r󠄁e󠄁 r󠄁e󠄁f󠄁r󠄁e󠄁s󠄁h󠄁i󠄁n󠄁g󠄁.󠄁 T󠄁h󠄁e󠄁 c󠄁o󠄁m󠄁m󠄁a󠄁n󠄁d󠄁 w󠄁r󠄁i󠄁t󠄁e󠄁s󠄁 i󠄁t󠄁s󠄁 S󠄁H󠄁A󠄁-󠄁2󠄁5󠄁6󠄁 a󠄁n󠄁d󠄁 l󠄁i󠄁n󠄁e󠄁
-   c󠄁o󠄁u󠄁n󠄁t󠄁.󠄁
+   Every input is read with `git -C <repo> show <commit>:<path>`, so the
+   working tree of that checkout is never used and an uncommitted local edit
+   cannot leak into a snapshot. The command resolves `<ref>` to a full SHA,
+   extracts and validates both snapshots in memory, and writes nothing unless
+   everything passes. It then writes `src/data/reference/environment-variables.json`,
+   `src/data/reference/configuration.json`, the two coverage reports under
+   `docs/reference/`, and this directory's `manifest.json` with the new
+   revision, hashes and line counts.
 
-   E󠄁v󠄁e󠄁r󠄁y󠄁 f󠄁i󠄁l󠄁e󠄁 i󠄁s󠄁 r󠄁e󠄁a󠄁d󠄁 w󠄁i󠄁t󠄁h󠄁 `git -C <repo> show <commit>:<path>`,󠄁 s󠄁o󠄁 t󠄁h󠄁e󠄁 w󠄁o󠄁r󠄁k󠄁i󠄁n󠄁g󠄁
-   t󠄁r󠄁e󠄁e󠄁 o󠄁f󠄁 t󠄁h󠄁a󠄁t󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁o󠄁u󠄁t󠄁 i󠄁s󠄁 n󠄁e󠄁v󠄁e󠄁r󠄁 u󠄁s󠄁e󠄁d󠄁 a󠄁n󠄁d󠄁 a󠄁n󠄁 u󠄁n󠄁c󠄁o󠄁m󠄁m󠄁i󠄁t󠄁t󠄁e󠄁d󠄁 l󠄁o󠄁c󠄁a󠄁l󠄁 e󠄁d󠄁i󠄁t󠄁 c󠄁a󠄁n󠄁n󠄁o󠄁t󠄁
-   l󠄁e󠄁a󠄁k󠄁 i󠄁n󠄁t󠄁o󠄁 t󠄁h󠄁e󠄁 s󠄁n󠄁a󠄁p󠄁s󠄁h󠄁o󠄁t󠄁.󠄁 T󠄁h󠄁e󠄁 c󠄁o󠄁m󠄁m󠄁a󠄁n󠄁d󠄁 r󠄁e󠄁s󠄁o󠄁l󠄁v󠄁e󠄁s󠄁 `<ref>` t󠄁o󠄁 a󠄁 f󠄁u󠄁l󠄁l󠄁 S󠄁H󠄁A󠄁 a󠄁n󠄁d󠄁
-   w󠄁r󠄁i󠄁t󠄁e󠄁s󠄁 i󠄁t󠄁,󠄁 t󠄁h󠄁e󠄁 r󠄁e󠄁l󠄁e󠄁a󠄁s󠄁e󠄁 l󠄁a󠄁b󠄁e󠄁l󠄁 a󠄁n󠄁d󠄁 f󠄁r󠄁e󠄁s󠄁h󠄁 p󠄁e󠄁r󠄁-󠄁f󠄁i󠄁l󠄁e󠄁 h󠄁a󠄁s󠄁h󠄁e󠄁s󠄁 i󠄁n󠄁t󠄁o󠄁
-   `manifest.json`.󠄁
+   Refresh reads the paths listed in `environmentSource` and
+   `configurationSources`; it does not discover new inputs. To onboard another
+   role supported by `ROLES` in `bin/reference/manifest.mjs`, add its upstream
+   path and role to `configurationSources` before refreshing. The command
+   records its SHA-256 and line count. If upstream moves a file, change its
+   `path` the same way.
 
-4. R󠄁e󠄁g󠄁e󠄁n󠄁e󠄁r󠄁a󠄁t󠄁e󠄁 t󠄁h󠄁e󠄁 Y󠄁A󠄁M󠄁L󠄁 r󠄁e󠄁f󠄁e󠄁r󠄁e󠄁n󠄁c󠄁e󠄁 p󠄁a󠄁g󠄁e󠄁s󠄁 a󠄁n󠄁d󠄁 r󠄁e󠄁v󠄁i󠄁e󠄁w󠄁 t󠄁h󠄁e󠄁 o󠄁u󠄁t󠄁p󠄁u󠄁t󠄁 d󠄁i󠄁f󠄁f󠄁.󠄁 B󠄁o󠄁t󠄁h󠄁 c󠄁o󠄁m󠄁m󠄁a󠄁n󠄁d󠄁s󠄁 v󠄁a󠄁l󠄁i󠄁d󠄁a󠄁t󠄁e󠄁 t󠄁h󠄁e󠄁 e󠄁n󠄁v󠄁i󠄁r󠄁o󠄁n󠄁m󠄁e󠄁n󠄁t󠄁 J󠄁S󠄁O󠄁N󠄁 w󠄁i󠄁t󠄁h󠄁o󠄁u󠄁t󠄁 r󠄁e󠄁w󠄁r󠄁i󠄁t󠄁i󠄁n󠄁g󠄁 i󠄁t󠄁 o󠄁r󠄁 i󠄁t󠄁s󠄁 c󠄁o󠄁v󠄁e󠄁r󠄁a󠄁g󠄁e󠄁 r󠄁e󠄁p󠄁o󠄁r󠄁t󠄁:󠄁
+4. Validate and review the data diff:
 
    ```sh
-   pnpm run reference:generate
    pnpm run reference:check
-   git --no-pager diff --stat vendor/onetimesecret src/data/reference/environment-variables.json src/content/docs/en/reference docs/reference
+   git --no-pager diff --stat vendor/onetimesecret src/data/reference docs/reference
    ```
 
-5. R󠄁e󠄁a󠄁d󠄁 t󠄁h󠄁e󠄁 c󠄁o󠄁v󠄁e󠄁r󠄁a󠄁g󠄁e󠄁 r󠄁e󠄁p󠄁o󠄁r󠄁t󠄁 i󠄁n󠄁 `docs/reference/coverage-environment.md`.󠄁
-   A󠄁 n󠄁e󠄁w󠄁 u󠄁n󠄁r󠄁e󠄁s󠄁o󠄁l󠄁v󠄁e󠄁d󠄁 o󠄁r󠄁 m󠄁a󠄁l󠄁f󠄁o󠄁r󠄁m󠄁e󠄁d󠄁 e󠄁n󠄁t󠄁r󠄁y󠄁 i󠄁s󠄁 a󠄁 r󠄁e󠄁v󠄁i󠄁e󠄁w󠄁 i󠄁t󠄁e󠄁m󠄁,󠄁 n󠄁o󠄁t󠄁 s󠄁o󠄁m󠄁e󠄁t󠄁h󠄁i󠄁n󠄁g󠄁 t󠄁o󠄁
-   r󠄁e󠄁g󠄁e󠄁n󠄁e󠄁r󠄁a󠄁t󠄁e󠄁 p󠄁a󠄁s󠄁t󠄁.󠄁
+   A page's layout does not change on refresh; only the data does. Build the
+   site to see the result rendered, and run `pnpm run check:reference:html`
+   after the build to compare every rendered heading, fragment and cell with
+   the committed data.
 
-6. I󠄁n󠄁c󠄁l󠄁u󠄁d󠄁e󠄁 t󠄁h󠄁e󠄁 Y󠄁A󠄁M󠄁L󠄁 s󠄁n󠄁a󠄁p󠄁s󠄁h󠄁o󠄁t󠄁s󠄁,󠄁 m󠄁a󠄁n󠄁i󠄁f󠄁e󠄁s󠄁t󠄁,󠄁 e󠄁n󠄁v󠄁i󠄁r󠄁o󠄁n󠄁m󠄁e󠄁n󠄁t󠄁 J󠄁S󠄁O󠄁N󠄁,󠄁 g󠄁e󠄁n󠄁e󠄁r󠄁a󠄁t󠄁e󠄁d󠄁 Y󠄁A󠄁M󠄁L󠄁 p󠄁a󠄁g󠄁e󠄁s󠄁 a󠄁n󠄁d󠄁 c󠄁o󠄁v󠄁e󠄁r󠄁a󠄁g󠄁e󠄁
-   r󠄁e󠄁p󠄁o󠄁r󠄁t󠄁s󠄁 t󠄁o󠄁g󠄁e󠄁t󠄁h󠄁e󠄁r󠄁 i󠄁n󠄁 t󠄁h󠄁e󠄁 r󠄁e󠄁f󠄁r󠄁e󠄁s󠄁h󠄁 p󠄁u󠄁l󠄁l󠄁 r󠄁e󠄁q󠄁u󠄁e󠄁s󠄁t󠄁,󠄁 s󠄁o󠄁 o󠄁n󠄁e󠄁 c󠄁o󠄁m󠄁m󠄁i󠄁t󠄁 s󠄁h󠄁o󠄁w󠄁s󠄁 w󠄁h󠄁i󠄁c󠄁h󠄁 u󠄁p󠄁s󠄁t󠄁r󠄁e󠄁a󠄁m󠄁 r󠄁e󠄁v󠄁i󠄁s󠄁i󠄁o󠄁n󠄁 p󠄁r󠄁o󠄁d󠄁u󠄁c󠄁e󠄁d󠄁 w󠄁h󠄁i󠄁c󠄁h󠄁
-   p󠄁u󠄁b󠄁l󠄁i󠄁s󠄁h󠄁e󠄁d󠄁 t󠄁e󠄁x󠄁t󠄁.󠄁
+5. Read the coverage reports in `docs/reference/coverage-environment.md` and
+   `docs/reference/coverage-configuration.md`. A new unresolved or malformed
+   environment entry, a new blocked structural block or a new unassigned key
+   is a review item, not something to refresh past. An unassigned key fails
+   the refresh until `OWNERSHIP_RULES` in `bin/reference/yaml-erb.mjs` gives
+   it a page.
+
+6. Include the manifest, both JSON snapshots and both coverage reports
+   together in the refresh pull request, so one commit shows which upstream
+   revision produced which published data.
 
 ## Accountability
 
-`refreshOwner` in `manifest.json` names the maintainer who refreshes this
-snapshot. `reference:check` warns while it is `"unassigned"` and still passes,
+`refreshOwner` in `manifest.json` names the maintainer who refreshes these
+snapshots. `reference:check` warns while it is `"unassigned"` and still passes,
 so the pipeline runs either way.
 
 `backupReviewer` is `"none: single maintainer"`. Plan A6 asks for a second
@@ -96,9 +145,9 @@ the `none: <reason>` form, and only in that form does the manifest also require
 `accountabilityNote` to state what the absence costs.
 
 What it costs today: a refresh is reviewed mechanically rather than by a second
-person. It arrives as a pull request whose generated diff is the review
-surface, and `reference:check` gates it. While the maintainer is unavailable,
-the freshness workflow reports a changed upstream input to a queue nobody else
-reads, so this snapshot goes stale quietly instead of loudly. Phase 5 reduces
-that exposure by having the freshness workflow open the refresh pull request
-itself, which turns the obligation from remembering into reviewing.󠄁
+person. It arrives as a pull request whose data diff is the review surface, and
+`reference:check` gates it. While the maintainer is unavailable, the freshness
+workflow reports a changed upstream input to a queue nobody else reads, so the
+snapshots go stale quietly instead of loudly. Phase 5 reduces that exposure by
+having the freshness workflow open the refresh pull request itself, which turns
+the obligation from remembering into reviewing.

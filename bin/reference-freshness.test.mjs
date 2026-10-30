@@ -16,12 +16,12 @@ function compare(changedPath = "", latest = "v2") {
   try {
     mkdirSync(join(root, "vendor/onetimesecret"), { recursive: true });
     mkdirSync(join(root, "bin"));
-    const paths = [".env.reference", "etc/defaults/config.defaults.yaml", "etc/defaults/auth.defaults.yaml", "etc/defaults/logging.defaults.yaml"];
+    const paths = [".env.reference", "etc/defaults/config.defaults.yaml", "etc/defaults/auth.defaults.yaml", "etc/defaults/logging.defaults.yaml", "etc/examples/billing.example.yaml"];
     const entries = paths.map((path) => ({ path, sha256: hash(path), lines: 1 }));
     writeFileSync(join(root, "vendor/onetimesecret/manifest.json"), JSON.stringify({
       upstream: { release: "v1", commit: "a".repeat(40) },
       environmentSource: entries[0],
-      files: entries.slice(1),
+      configurationSources: entries.slice(1),
     }));
     writeFileSync(join(root, "bin/gh"), `#!${process.execPath}
 const endpoint = process.argv[3];
@@ -48,7 +48,7 @@ console.log(crypto.createHash('sha256').update(fs.readFileSync(process.argv[2]))
 }
 
 describe("reference freshness workflow", () => {
-  it("detects an environment-only change even though files contains only YAML", () => {
+  it("detects an environment-only change even though configurationSources lists only YAML", () => {
     const result = compare(".env.reference");
     expect(result.status, result.stderr).toBe(1);
     expect(result.stdout).toContain("changed upstream: .env.reference");
@@ -63,7 +63,7 @@ describe("reference freshness workflow", () => {
   it("reports identical inputs only after comparing environment and YAML sources", () => {
     const result = compare();
     expect(result.status, result.stderr).toBe(0);
-    expect(result.stdout.match(/unchanged:/g)).toHaveLength(4);
+    expect(result.stdout.match(/unchanged:/g)).toHaveLength(5);
     expect(result.stdout).toContain("every pinned input is byte-identical");
   });
   it("skips comparison when already pinned to the latest release", () => {
