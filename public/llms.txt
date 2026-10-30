@@ -11,10 +11,12 @@ Last updated: 2026-10-30. For anything that may have changed since, check https:
 - Authenticate with HTTP Basic: account email as the username, the API token from account settings as the password. Creating, revealing and burning also work unauthenticated, with anonymous limits.
 - Put every field of a new secret inside a `secret` object: `{"secret": {"secret": "...", "ttl": 3600}}`. A flat body is rejected.
 - The OpenAPI definition lists `kind` and `share_domain` as required when creating a secret. Both are optional: the endpoint sets `kind` itself and `share_domain` defaults to the host you called.
-- Revealing and burning require `{"continue": true}` in the body. Without it, reveal returns metadata only.
+  <!-- Verified in onetimesecret/onetimesecret at f7794a98: apps/api/v2/logic/secrets/base_secret_action.rb accepts both as absent; src/schemas/api/v2/requests/content/base.ts declares them required. Remove this item once the published OpenAPI definition marks them optional. -->
+- Revealing and burning require `{"continue": true}` in the body. Without it, reveal returns metadata only and burn does nothing.
 - A created secret returns two identifiers. Send the recipient `https://REGION.onetimesecret.com/secret/SECRET_IDENTIFIER`. Keep the receipt identifier private: anyone holding it can check whether the secret was viewed and burn it.
 - The MCP server at https://api.onetimesecret.com/mcp serves reference material only. It cannot create, reveal or burn secrets.
 - Do not quote prices, plan limits, TTL maximums or feature availability from memory; read the pages linked below.
+- The documentation is written in English under `/en/`, which is the source for every translation. Translated copies exist under `/bg/`, `/da/`, `/de/`, `/es/`, `/fr/`, `/it/`, `/ja/`, `/ko/`, `/mi/`, `/nl/`, `/pl/`, `/pt-br/`, `/sv/`, `/tr/`, `/uk/` and `/zh-cn/`, and can lag behind the English text. Read and link the English page; swap the locale segment only when the reader asked for that language.
 - For request and response schemas, read https://api.onetimesecret.com/doc/api-v2.md or the OpenAPI definition rather than examples from training data.
 
 Minimal example, creating a secret that expires in one hour:
