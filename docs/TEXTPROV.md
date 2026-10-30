@@ -174,6 +174,13 @@ nothing without it. `pnpm run check:textprov` reads `dist/` after a build and
 fails if an enrolled page (including English fallbacks in other locales) lacks
 the marker, carries two, or still contains a raw selector.
 
+The per-page Markdown twin that `starlight-llm-actions` publishes is a second
+output path. It renders each page in an Astro container the middleware never
+sees, so `src/lib/llm-markdown.ts` cleans the result of every enrolled page
+before it is served. `check:textprov` also fails if an enrolled page has no
+Markdown twin or its twin still contains a raw selector. A new published
+output format must decode enrolled pages the same way.
+
 Set `SHOW_TEXTPROV_TOGGLE=false` (or `0`) at build time to hide the toggle on
 every page; the deploy workflow reads it from the environment variable of the
 same name. Enrolled pages are still decoded to clean text.

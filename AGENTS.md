@@ -54,8 +54,9 @@ pnpm run check:locales       # Check locale directories against configuration; w
 pnpm run check:contrast      # Check colour contrast
 pnpm run check:types         # Type-check .ts sources (astro sync, then tsc)
 pnpm run check:links:malformed # Check malformed source links
-pnpm run check:textprov      # After a build: every enrolled page in dist/ has one marker and no raw selectors
+pnpm run check:textprov      # After a build: every enrolled page in dist/ has one marker and no raw selectors, and a clean Markdown twin
 pnpm run check:llms          # public/llms.txt links resolve to live EN pages; its Last updated stamp is recent and newer than every linked page
+
 ```
 
 CI runs the navigation, orphan, locale, contrast, frontmatter, malformed-link, llms.txt, and type checks, then tests, the production build, and the published provenance check. Run checks relevant to the change and report exactly what was executed; do not describe source inspection as a successful build or test run.
@@ -182,6 +183,12 @@ The authoring tools import the `textprov` package pinned in
 package is missing or at another version. The npm `textprov` package pinned in
 `package.json` decodes enrolled pages at build time. No SDK copies live in this
 repository.
+
+Enrolled pages are decoded on two output paths: the HTML through
+`src/lib/textprov/middleware.ts`, and the per-page Markdown twin that
+`starlight-llm-actions` publishes through `src/lib/llm-markdown.ts`, which
+renders in a container the middleware never sees. A new published output format
+must clean enrolled pages the same way, and `check:textprov` must cover it.
 
 Frontmatter, code, inline code, link destinations, HTML syntax, Markdoc tags and
 attributes, aside fences (`:::note`), generated references, and source-code

@@ -1,0 +1,17 @@
+---
+/**
+ * PageTitle override: Starlight's default heading, nothing else.
+ *
+ * starlight-llm-actions injects its own PageTitle override when the site has
+ * none, placing the page-actions dropdown beside the H1. This site renders
+ * that dropdown in the page sidebar instead (PageSidebar.astro), so the
+ * override exists to keep the plugin's injection off. The plugin logs a
+ * dev-mode notice about the custom override; that is expected.
+ *
+ * The plugin's PageTitle also carried an optional print-only notice banner
+ * (`printNotice`). The site does not configure one, so nothing is lost here.
+ */
+import Default from '@astrojs/starlight/components/PageTitle.astro';
+---
+
+<Default {...Astro.props}><slot /></Default>
