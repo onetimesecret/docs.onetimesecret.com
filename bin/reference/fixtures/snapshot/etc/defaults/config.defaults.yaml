@@ -1,0 +1,22 @@
+---
+site:
+  # Where the site answers.
+  host: <%= ENV['HOST'] || 'localhost:3000' %>
+  ssl: <%= ENV['SSL'] == 'true' %>
+  secret: <%= ENV['SECRET'] %>
+  # A value a pipe could split.
+  pattern: 'a|b'  # Since v0.26.0
+  nested:
+    depth: 2
+  <% if ENV['FEEDBACK'] != 'false' %>
+  extra: <%= ENV['FEEDBACK_URL'] || '/feedback' %>
+  <% end %>
+features:
+  homepage: <%= ENV['HOMEPAGE_ENABLED'] != 'false' %>
+redis:
+  uri: <%= ENV['A'] || ENV['B'] || (ENV['C'] == '1' ? 'x' : 'y') %>
+emailer:
+  mode: smtp
+internationalization:
+  enabled: false
+  fallback: [en, es]
