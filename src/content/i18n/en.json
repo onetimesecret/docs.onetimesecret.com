@@ -202,9 +202,10 @@
   "textprov.toggle": "Highlight AI edits",
   "textprov.help": "Highlights edits recorded as AI-written without changing the words.",
   "textprov.info": "About AI highlighting",
-  "textprov.aboutTitle": "About AI highlighting",
-  "textprov.about": "Highlights edits recorded as AI-written. Turning it on changes only the highlighting—not the words.",
-  "textprov.limits": "Unmarked text has no recorded origin; it may also include AI-written text. The marks do not indicate whether text was reviewed or whether it is accurate.",
+  "textprov.aboutTitle": "About these highlights",
+  "textprov.about": "Turn on highlighting to see edits recorded as being written or modified by AI.",
+  "textprov.limits": "Text without highlights may also be AI-written. Highlighted or not, text may still contain regular, plain-old human errors.",
   "textprov.learnMore": "How and why we use AI in these docs",
-  "textprov.report": "Report a problem with this page"
+  "textprov.reportLead": "Spot an error or AI slop?",
+  "textprov.report": "Report it"
 }

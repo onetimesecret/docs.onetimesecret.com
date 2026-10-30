@@ -95,12 +95,17 @@ const anchor = `--textprov-info-${id}`;
     <h3 id={aboutTitleId}>{t("textprov.aboutTitle")}</h3>
     <p>{t("textprov.about")}</p>
     <p>{t("textprov.limits")}</p>
-    <p>
-      <a href={guide}>{t("textprov.learnMore")}</a>
-    </p>
-    <p class="textprov-report">
-      <a href={report.href}>{t("textprov.report")}</a>
-    </p>
+    <a class="textprov-guide" href={guide}>
+      {t("textprov.learnMore")}
+      <Icon name="right-arrow" size="1em" />
+    </a>
+    <div class="textprov-report">
+      <p>{t("textprov.reportLead")}</p>
+      <a href={report.href}>
+        <Icon name="comment-alt" size="1em" />
+        {t("textprov.report")}
+      </a>
+    </div>
   </div>
   <p id={helpId} class="textprov-help">
     {t("textprov.help")}
@@ -278,17 +283,56 @@ const anchor = `--textprov-info-${id}`;
   .textprov-about p {
     margin: 0 0 0.75rem;
   }
-  .textprov-report {
-    margin-block-end: 0;
-    padding-block-start: 0.625rem;
-    border-block-start: 1px solid var(--sl-color-hairline-light);
-  }
-  /* PageSidebar styles every sidebar link as a block TOC entry; this is prose. */
-  .textprov-about a {
-    display: inline;
+  /* PageSidebar styles every sidebar link as a block TOC entry. Two links with
+     different jobs get different shapes: the guide is a text link that
+     continues the explanation; the report is a button-shaped action in its
+     own footer so it reads as something to do, not more to read. */
+  .textprov-guide {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
     font-size: inherit;
+    font-weight: 500;
     color: var(--sl-color-text-accent);
+    text-decoration: none;
+  }
+  .textprov-guide:hover {
     text-decoration: underline;
+  }
+  .textprov-report {
+    margin: 0.875rem -1rem -0.875rem;
+    padding: 0.75rem 1rem 0.875rem;
+    background: var(--sl-color-gray-6);
+    border-block-start: 1px solid var(--sl-color-gray-5);
+    border-end-start-radius: inherit;
+    border-end-end-radius: inherit;
+  }
+  .textprov-report p {
+    margin: 0 0 0.5rem;
+    font-size: var(--sl-text-xs);
+    color: var(--sl-color-gray-3);
+  }
+  .textprov-report a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.375rem 0.75rem;
+    font-size: var(--sl-text-xs);
+    font-weight: 600;
+    color: var(--sl-color-white);
+    background: var(--sl-color-bg-nav);
+    border: 1px solid var(--sl-color-gray-4);
+    border-radius: 0.375rem;
+    text-decoration: none;
+  }
+  .textprov-report a:hover {
+    border-color: var(--sl-color-text-accent);
+    color: var(--sl-color-text-accent);
+  }
+  .textprov-guide:focus-visible,
+  .textprov-report a:focus-visible {
+    outline: 2px solid var(--sl-color-text-accent);
+    outline-offset: 2px;
   }
   /* Without anchor positioning the popover keeps its centred default. The
      anchor name is set inline per instance. The info button sits at the end of
