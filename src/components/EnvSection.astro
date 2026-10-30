@@ -16,6 +16,11 @@ const { section } = Astro.props;
   {section.records.length > 0 && (
     <div class="table-scroll" tabindex="0" role="region" aria-labelledby={section.anchor}>
       <table>
+        <colgroup>
+          <col class="example-column" />
+          <col class="default-column" />
+          <col class="since-column" />
+        </colgroup>
         <thead>
           <tr>
             <th scope="col">Example line</th>
@@ -29,7 +34,7 @@ const { section } = Astro.props;
               <tr>
                 <td id={record.anchor}>
                   <a href={`#${record.anchor}`}>
-                    <code>{record.example}</code>
+                    <code class="example-line">{record.example}</code>
                   </a>
                 </td>
                 <td>
@@ -69,7 +74,21 @@ const { section } = Astro.props;
   table {
     display: table;
     width: 100%;
+    min-width: 42rem;
+    table-layout: fixed;
     font-size: var(--sl-text-sm);
+  }
+
+  .example-column {
+    width: 55%;
+  }
+
+  .default-column {
+    width: 27%;
+  }
+
+  .since-column {
+    width: 18%;
   }
 
   th,
@@ -90,6 +109,13 @@ const { section } = Astro.props;
   code {
     white-space: pre-wrap;
     overflow-wrap: anywhere;
+  }
+
+  .example-line {
+    display: block;
+    overflow-x: auto;
+    white-space: pre;
+    overflow-wrap: normal;
   }
 
   .source-prose {
