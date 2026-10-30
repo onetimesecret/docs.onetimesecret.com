@@ -7,14 +7,13 @@
   },
   "refreshOwner": "delano",
   "backupReviewer": "none: single maintainer",
-  "accountabilityNote": "This project has a single maintainer, so plan A6\u2019s backup reviewer cannot be satisfied by a person. The second pair of eyes is mechanical: a refresh lands as a pull request whose generated diff is reviewable, and reference:check gates it. Known failure mode: while the maintainer is unavailable, the freshness workflow reports a changed upstream input to a queue nobody else reads, so the reference goes stale silently rather than loudly. Phase 5 reduces the exposure by having that workflow open the refresh pull request itself.",
-  "files": [
-    {
-      "path": ".env.reference",
-      "role": "env-reference",
-      "sha256": "1b0c623bb20d9edc85e13bb6c0d28a4e15d8a4ea4949a479dea75920e83d076e",
-      "lines": 2718
-    },
+  "accountabilityNote": "This project has a single maintainer, so plan A6’s backup reviewer cannot be satisfied by a person. The second pair of eyes is mechanical: a refresh lands as a pull request whose generated diff is reviewable, and reference:check gates it. Known failure mode: while the maintainer is unavailable, the freshness workflow reports a changed upstream input to a queue nobody else reads, so the reference goes stale silently rather than loudly. Phase 5 reduces the exposure by having that workflow open the refresh pull request itself.",
+  "environmentSource": {
+    "path": ".env.reference",
+    "sha256": "1b0c623bb20d9edc85e13bb6c0d28a4e15d8a4ea4949a479dea75920e83d076e",
+    "lines": 2718
+  },
+  "configurationSources": [
     {
       "path": "etc/defaults/config.defaults.yaml",
       "role": "config-defaults",

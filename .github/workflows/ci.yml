@@ -87,9 +87,10 @@ jobs:
       - name: Test provenance authoring
         run: python3 -m unittest discover -s tools/tests
 
-      # The generated Reference must reproduce from the pinned snapshot in
-      # vendor/onetimesecret/ before anything is built from it. Read-only: no
-      # application checkout, no network.
+      # The committed reference snapshots under src/data/reference/ must
+      # validate against the upstream revision pinned in
+      # src/data/reference/manifest.json before anything is built from them.
+      # Read-only: no application checkout, no network.
       - name: Check generated reference
         run: pnpm run reference:check
 

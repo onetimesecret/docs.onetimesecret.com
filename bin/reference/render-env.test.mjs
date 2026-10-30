@@ -1,9 +1,7 @@
 // bin/reference/render-env.test.mjs
 import { readFileSync } from "node:fs";
-import { createRequire } from "node:module";
 import { dirname, join } from "node:path";
-import { fileURLToPath, pathToFileURL } from "node:url";
-import { JSDOM } from "jsdom";
+import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
 
 import { parseEnvReference } from "./env-parser.mjs";
@@ -12,7 +10,6 @@ import { anchorFor, envId } from "./ids.mjs";
 import {
   buildEnvironmentData,
   DATA_PATH,
-  inlineCode,
   renderCoverageReport,
 } from "./render-env.mjs";
 
@@ -28,7 +25,8 @@ const manifest = {
   },
   refreshOwner: "someone",
   backupReviewer: "someone-else",
-  files: [{ path: ".env.reference", role: "env-reference", sha256: "x".repeat(64), lines: 80 }],
+  environmentSource: { path: ".env.reference", sha256: "a".repeat(64), lines: 80 },
+  files: [],
 };
 
 const parsed = parseEnvReference(fixture("sample.envref"), { sourceName: ".env.reference" });
@@ -37,67 +35,24 @@ const { data, coverage, sections, anchors } = built;
 const records = data.sections.flatMap((section) => section.records);
 const record = (name) => records.find((entry) => entry.name === name);
 
-describe("inlineCode", () => {
-  it("escapes a pipe so a value cannot split a table row", () => {
-    expect(inlineCode("keep|me")).toBe("`keep\\|me`");
-  });
-
-  it("picks a backtick run longer than any in the value", () => {
-    expect(inlineCode("`rm -rf /`")).toBe("`` `rm -rf /` ``");
-    expect(inlineCode("a ``b`` c")).toBe("```a ``b`` c```");
-  });
-
-  it("leaves an ordinary value alone", () => {
-    expect(inlineCode("production")).toBe("`production`");
-  });
-
-  it("preserves literal values and table columns through Astro's processor", async () => {
-    const astroRequire = createRequire(
-      createRequire(import.meta.url).resolve("astro/package.json"),
-    );
-    const { createSatteriMarkdownProcessor } = await import(
-      pathToFileURL(astroRequire.resolve("@astrojs/markdown-satteri")).href
-    );
-    const processor = await createSatteriMarkdownProcessor({ syntaxHighlight: false });
-    for (const value of [
-      "path\\to\\file",
-      "trailing\\",
-      "plain|pipe",
-      "one\\|pipe",
-      "two\\\\|pipe",
-      "three\\\\\\|pipe",
-      "`edge`",
-      "html<&>\\|<img src=x>",
-      "literal&amp;\\|entity",
-    ]) {
-      const { code } = await processor.render(
-        `| Value | Sentinel |\n| --- | --- |\n| ${inlineCode(value)} | unchanged |\n`,
-      );
-      const dom = new JSDOM(code);
-      try {
-        const cells = dom.window.document.querySelectorAll("tbody tr td");
-        expect(cells, value).toHaveLength(2);
-        expect(cells[0].querySelector("code")?.textContent, value).toBe(value);
-        expect(cells[1].textContent).toBe("unchanged");
-        expect(dom.window.document.querySelector("img")).toBeNull();
-      } finally {
-        dom.window.close();
-      }
-    }
-  });
-});
-
 describe("environment data contract", () => {
   it("returns data and the coverage and anchor bookkeeping, not a page", () => {
     expect(Object.keys(built).sort()).toEqual(["anchors", "coverage", "data", "sections"]);
-    expect(Object.keys(data).sort()).toEqual(["header", "sections", "source", "upstream"]);
+    expect(Object.keys(data).sort()).toEqual([
+      "extractorFormatVersion",
+      "header",
+      "sections",
+      "source",
+      "upstream",
+    ]);
     expect(DATA_PATH).toBe("src/data/reference/environment-variables.json");
     expect(JSON.parse(JSON.stringify(data))).toEqual(data);
   });
 
   it("preserves the full upstream metadata and the source path and line count", () => {
     expect(data.upstream).toEqual(manifest.upstream);
-    expect(data.source).toEqual({ path: ".env.reference", lines: 80 });
+    expect(data.source).toEqual(manifest.environmentSource);
+    expect(data.extractorFormatVersion).toBe(manifest.extractorFormatVersion);
   });
 
   it("publishes sections and records in source order with no presentation fields", () => {

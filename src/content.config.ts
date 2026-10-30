@@ -90,6 +90,8 @@ export const collections = {
         "textprov.about": z.string().optional(),
         "textprov.limits": z.string().optional(),
         "textprov.learnMore": z.string().optional(),
+        "textprov.reportLead": z.string().optional(),
+        "textprov.report": z.string().optional(),
       }),
     }),
   }),

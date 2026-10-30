@@ -186,7 +186,7 @@ function createGroup(key, items = [], collapsed = false) {
 // ---------------------------------------------------------------------------
 // Sidebar configuration using translation keys
 //
-// Seven top-level entries. An eighth, the generated Reference, lands in Phase 4.
+// NOTE: Link order is defined here, not in frontmatter.
 //
 // Groups nest: Starlight's ManualSidebarGroupSchema accepts a group inside
 // another group's `items` (schemas/sidebar.ts), and createGroup passes `items`
@@ -202,10 +202,11 @@ function createGroup(key, items = [], collapsed = false) {
 // made the sidebar unusable as a flat search result and useless to a screen
 // reader reading the links out of context. Each index page now says what it is.
 //
-// To keep a page off the live site, set `draft: true` in its frontmatter and
+// Pages with `draft: true` in frontmatter are skipped on the live site, but
+// visible in dev with a callout warning. Links to draft pages are automatically
+// pruned from the sidebar, but if a draft page is linked from a non-draft page we
 // leave its link here. Production builds drop the link (see pruneDrafts); the
-// dev server and the check:* scripts still see it, so check:orphans passes
-// while the page waits.
+// dev server and the check:* scripts still see it, so check:orphans passes.
 // ---------------------------------------------------------------------------
 const entries = [
   createLink("home", "/"),
@@ -274,34 +275,6 @@ const entries = [
     ]),
   ]),
 
-  // Self-hosting follows the operator's order: orient, pick the one decision
-  // that changes what you install, install, configure, upgrade. The two
-  // subgroups let the section scan as those steps instead of as one long run
-  // of links.
-  //
-  // Most subgroups are one directory: Install & deploy is install/, Configure
-  // is configure/, Operate is operate/. The links at this level are the
-  // self-hosting/ pages. Keep it that way: a new page goes in the group for
-  // its directory, and a page that belongs in another group moves there (with
-  // a movedPages entry in config/redirects.mjs) rather than being listed out
-  // of place.
-  //
-  // Troubleshoot and upgrade is the deliberate exception and says why at its
-  // own definition below. It spans troubleshoot/, upgrades/ and the existing
-  // self-hosting upgrade index.
-  //
-  // Array order is reading order. createLink emits no `order` key and nothing
-  // here autogenerates, so Starlight renders the array as written; the
-  // install/* pages carry no `sidebar.order` for the same reason. Reorder
-  // here, not in frontmatter.
-  //
-  // install/ has no index page on purpose: nothing links to /en/install/ and
-  // the group is the index. The six install/* pages are the split of the
-  // retired self-hosting/installation (Phase 3).
-  //
-  // The configure/* entries follow their prerequisites: keys, outbound email
-  // and session cookies come before the sign-in pages that depend on them.
-  //
   // The version-specific upgrade guides (self-hosting/upgrading-v0-*) are NOT
   // listed. They are reached from the table on self-hosting/upgrade-guides,
   // and bin/check-orphans.mjs counts a page linked from a sidebar-linked page
@@ -332,17 +305,6 @@ const entries = [
       createLink("configureSecretOptions", "configure/secret-options"),
     ]),
 
-    // Operate is the Day-2 layer: the twelve destinations the Phase 4 plan
-    // assigns to running a deployment rather than installing or configuring
-    // one. Reference pages own the factual inventories, so these pages carry
-    // decisions, procedures, verification and recovery and link the inventory
-    // rather than repeating it.
-    //
-    // All but ownership transfer ship draft while their operational evidence
-    // is outstanding; pruneDrafts drops the links from production builds.
-    // Ownership transfer publishes because self-hosting/index and the
-    // end-user ownership page link it: the procedure moved out of that index
-    // and a link to a draft 404s in production.
     createGroup("operate", [
       createLink("operateDatastore", "operate/datastore"),
       createLink("operateBackups", "operate/backup-and-key-rotation"),
@@ -358,18 +320,8 @@ const entries = [
       createLink("operateHardening", "operate/harden-your-deployment"),
     ]),
 
-    // The one subgroup that is not one directory. Symptom-led diagnosis lives
-    // in troubleshoot/, the general migration workflow in upgrades/, and the
-    // release-specific guidance stays on the existing self-hosting upgrade
-    // index with its ten guides and their URLs untouched. A reader in trouble
-    // looks for the symptom, not for the directory it happens to be stored
-    // in, and moving eleven working upgrade URLs to satisfy a filing
-    // convention would cost readers more than the convention is worth.
-    //
-    // upgrades/data-migrations needs its own entry rather than a link from a
-    // neighbour: bin/check-orphans.mjs counts a page as hub-reachable only
-    // through an absolute /en/... link from a sidebar-linked page in the SAME
-    // directory, and upgrades/ is its own directory.
+    // Troubleshooting pages are organized by symptom-led diagnosis. Someone
+    // looks for the symptom, not for the directory it happens to be stored in.
     createGroup("troubleshootAndUpgrade", [
       createLink("troubleshootBootFailures", "troubleshoot/boot-failures"),
       createLink("troubleshootSignIn", "troubleshoot/sign-in-and-signup-problems"),
@@ -383,23 +335,8 @@ const entries = [
     createLink("clientLibraries", "api/client-libraries"),
   ]),
 
-  // Reference is the eighth top-level group (Phase 4), between API & SDKs and
-  // Trust & security. Its pages are generated from a pinned snapshot of the
-  // application under vendor/onetimesecret/ and rendered by bin/reference.mjs;
-  // bin/check-frontmatter.mjs treats reference/environment-variables as the
-  // owner of environment defaults, the way self-hosting/environment-variables
-  // used to be.
-  //
-  // The three runtime pages (command line, scheduled jobs, health endpoints)
-  // are backed by explicit records in src/data/reference/ and publish as pinned,
-  // source-reviewed inventories (Phase 4 P2). Their Operate counterparts remain
-  // draft pending operational evidence; that does not gate these references.
-  // Phase 4 P3 added the configuration subjects and the generator. The five
-  // key-record pages are generated by bin/reference.mjs from the vendored
-  // defaults files and the vendored billing example; the precedence page is
-  // authored, and the generator is the existing Vue island hydrated from a
-  // Markdoc page. The two retired self-hosting/ links are gone from the group
-  // above and redirect here (config/redirects.mjs).
+  // Reference documents are generated from the onetimesecret codebase and its
+  // default configuration.
   createGroup("reference", [
     createLink("referenceOverview", "reference"),
     createLink("configurationFilesReference", "reference/configuration-files-and-precedence"),

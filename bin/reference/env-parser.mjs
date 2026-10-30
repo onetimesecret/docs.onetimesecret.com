@@ -1,6 +1,6 @@
 // bin/reference/env-parser.mjs
 //
-// Parse a vendored `.env.reference` into normalized records (plan A2).
+// Parse an upstream `.env.reference` into normalized records (plan A2).
 // Plain Node ESM, zero dependencies.
 //
 // TEXT, NEVER SOURCED. Nothing here evaluates, interpolates or shells out. A

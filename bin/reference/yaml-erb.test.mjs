@@ -25,10 +25,9 @@ const FIXTURES = join(dirname(fileURLToPath(import.meta.url)), 'fixtures', 'yaml
 
 const PINNED_DEFAULTS = {
   fileName: 'etc/defaults/config.defaults.yaml',
-  text: readFileSync(
-    new URL('../../vendor/onetimesecret/etc/defaults/config.defaults.yaml', import.meta.url),
-    'utf8',
-  ),
+  // A byte-identical copy of the pinned upstream file: the manifest records its
+  // SHA-256, and the extractor's fixtures must not depend on anything else.
+  text: readFileSync(join(FIXTURES, 'config.defaults.v0.26.19.yaml'), 'utf8'),
 };
 
 function fixture(name) {
@@ -520,7 +519,7 @@ describe('identifiers', () => {
   it('maps file names to short names', () => {
     expect(fileShortName('etc/defaults/config.defaults.yaml')).toBe('config');
     expect(fileShortName('fixtures/yaml/config.defaults.v0.26.19.yaml')).toBe('config');
-    expect(fileShortName('vendor/onetimesecret/etc/defaults/auth.defaults.yaml')).toBe('auth');
+    expect(fileShortName('etc/defaults/auth.defaults.yaml')).toBe('auth');
     expect(fileShortName('etc/defaults/logging.defaults.yaml')).toBe('logging');
   });
 });

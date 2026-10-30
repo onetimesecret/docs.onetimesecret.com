@@ -22,24 +22,25 @@
 # declared release policy rather than whatever main happens to hold.
 #
 # The policy is the manifest's own release label: the snapshot is pinned to a
-# release, so the question is whether a NEWER release changed one of the four
-# files. An unreleased commit on main is deliberately not divergence.
+# release, so the question is whether a NEWER release changed one of the five
+# upstream inputs (the environment reference and the four configuration
+# sources). An unreleased commit on main is deliberately not divergence.
 #
 # Failure modes are reported apart from each other, because they call for
 # different actions: a real content difference needs a refresh and a review, a
 # new release with identical inputs needs only a manifest label bump, and an
 # unreachable upstream needs nothing at all.
 #
-# To act on a real difference, a maintainer refreshes the snapshot locally
-# (see vendor/onetimesecret/README.md), regenerates, and opens a PR where the
-# generated diff is reviewable.
+# To act on a real difference, a maintainer refreshes the snapshots locally
+# (see docs/reference/README.md) and opens a PR where the data diff is
+# reviewable.
 ---
 name: Reference freshness
 
 on:
   schedule:
     # Weekly. The inputs change at release cadence, not daily.
-    - cron: '17 6 * * 1'
+    - cron: "17 6 * * 1"
   workflow_dispatch:
 
 permissions:
@@ -54,7 +55,7 @@ jobs:
       - name: Checkout docs site
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
 
-      # No application checkout and no upstream code. The four files are read
+      # No application checkout and no upstream code. The five inputs are read
       # over the API at an explicit release tag, hashed, and compared with the
       # manifest. GITHUB_TOKEN is read-only and is never exposed to anything
       # upstream, because nothing upstream runs.
@@ -65,8 +66,8 @@ jobs:
           set -uo pipefail
 
           REPO=onetimesecret/onetimesecret
-          PINNED_RELEASE=$(jq -r '.upstream.release' vendor/onetimesecret/manifest.json)
-          PINNED_COMMIT=$(jq -r '.upstream.commit' vendor/onetimesecret/manifest.json)
+          PINNED_RELEASE=$(jq -r '.upstream.release' src/data/reference/manifest.json)
+          PINNED_COMMIT=$(jq -r '.upstream.commit' src/data/reference/manifest.json)
 
           echo "Pinned: $PINNED_RELEASE ($PINNED_COMMIT)"
 
@@ -99,10 +100,10 @@ jobs:
               echo "::warning::changed upstream: $path (pinned $sha256, $LATEST $UPSTREAM)"
               DIFFERENT=1
             fi
-          done < <(jq -r '.files[] | "\(.path) \(.sha256)"' vendor/onetimesecret/manifest.json)
+          done < <(jq -r '(.environmentSource, .configurationSources[]) | "\(.path) \(.sha256)"' src/data/reference/manifest.json)
 
           if [ "$DIFFERENT" -eq 1 ]; then
-            echo "::error::Reference inputs changed in $LATEST. Refresh the snapshot (vendor/onetimesecret/README.md), regenerate, and open a PR."
+            echo "::error::Reference inputs changed in $LATEST. Refresh the snapshots (docs/reference/README.md) and open a PR."
             exit 1
           fi
 
