@@ -5,9 +5,10 @@
  * controls added in both places.
  *
  * - Wide viewports: the "Copy page" dropdown (starlight-llm-actions) sits at
- *   the top of the right sidebar, then TextProvControls.astro as a block above
- *   "On this page". The panel is fixed and scrolls on its own, so neither
- *   moves the article.
+ *   the top of the right sidebar under a "Page actions" heading, then
+ *   TextProvControls.astro as a block above "On this page", each block ending
+ *   in a hairline. The panel is fixed and scrolls on its own, so neither moves
+ *   the article.
  * - Below 72rem: Starlight pins the TOC `<details>` in a fixed bar under the
  *   header. The dropdown (icon only) and the compact controls overlay the end
  *   of that bar, at the same height, so they cost no vertical space either.
@@ -36,6 +37,7 @@ import TextProvControls from './TextProvControls.astro';
 import { showTextProvToggle } from '../../../config/textprov.mjs';
 
 const { toc } = Astro.locals.starlightRoute;
+const { t } = Astro.locals;
 const controls = showTextProvToggle();
 ---
 
@@ -47,6 +49,7 @@ const controls = showTextProvToggle();
 			</div>
 			<div class="page-tools print:hidden">
 				<div class="sl-container">
+					<h2 class="sl-hidden lg:sl-block">{t('pageActions.heading')}</h2>
 					<PageActions />
 					{controls && (
 						<div class="lg:sl-hidden">
@@ -187,15 +190,18 @@ const controls = showTextProvToggle();
 	}
 
 	/* Wide viewports: a static block at the top of the fixed right sidebar,
-	   padded like the panel below it. The trigger keeps the plugin's look;
-	   the menu opens from the start edge at the column's width, because the
-	   sidebar clips horizontal overflow (overflow-y: auto on .right-sidebar). */
+	   padded like the panel below it, with the same heading treatment as
+	   "AI edits" and "On this page" and the same hairline after it. The
+	   trigger keeps the plugin's look; the menu opens from the start edge at
+	   the column's width, because the sidebar clips horizontal overflow
+	   (overflow-y: auto on .right-sidebar). */
 	@media (min-width: 72rem) {
 		.page-tools {
 			position: static;
 			z-index: auto;
 			block-size: auto;
 			padding: 1rem var(--sl-sidebar-pad-x) 0;
+			margin-block-end: 0.25rem;
 			background: none;
 			border: 0;
 		}
@@ -203,6 +209,19 @@ const controls = showTextProvToggle();
 			display: block;
 			width: calc(var(--sl-sidebar-width) - 2 * var(--sl-sidebar-pad-x));
 			block-size: auto;
+			padding-block-end: 1rem;
+			border-block-end: 1px solid var(--sl-color-hairline-light);
+		}
+		.page-tools h2 {
+			margin: 0 0 0.5rem;
+			color: var(--sl-color-white);
+			font-size: var(--sl-text-h5);
+			font-weight: 600;
+			line-height: var(--sl-line-height-headings);
+		}
+		/* A page that opts out of the dropdown gets no heading either. */
+		.page-tools .sl-container:not(:has(.page-actions)) {
+			display: none;
 		}
 		.page-tools :global(.page-actions-trigger) {
 			inline-size: auto;

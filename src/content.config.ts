@@ -81,6 +81,8 @@ export const collections = {
         "notFound.gettingStarted": z.string().optional(),
         "notFound.apiDocs": z.string().optional(),
         "notFound.selfHosting": z.string().optional(),
+        // Heading over the Copy page dropdown in the page sidebar (PageSidebar.astro).
+        "pageActions.heading": z.string().optional(),
         // TextProv toggle (TextProvControls.astro), English fallback per key.
         "textprov.heading": z.string().optional(),
         "textprov.toggle": z.string().optional(),
