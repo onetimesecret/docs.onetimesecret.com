@@ -27,8 +27,12 @@
 //     the stamp. The stamp is a review marker, not proof of a review.
 //
 // Everything outside the site (api.onetimesecret.com, onetimesecret.com,
-// GitHub) is left to the scheduled external link check.
+// GitHub) is checked by the weekly external link job in
+// .github/workflows/check-links.yml, which scans public/llms.txt alongside
+// the content tree, and by `bin/check-links.sh --external` locally.
 
+// Pinned to production on purpose: the file is the published index, and its
+// links must be production URLs whatever SITE_URL a staging build uses.
 export const SITE_ORIGIN = "https://docs.onetimesecret.com";
 export const MAX_AGE_DAYS = 90;
 export const DAY_MS = 86_400_000;
@@ -36,7 +40,18 @@ export const DAY_MS = 86_400_000;
 // The date may be followed by prose ("Last updated: 2026-10-30. For anything
 // that may have changed since, ...").
 const STAMP = /^Last updated: (\d{4}-\d{2}-\d{2})(?![\d-])/;
-const LINK = /\]\(([^)\s]+)\)|<(https?:\/\/[^>\s]+)>/g;
+// Inline `[text](href)`, with the destination optionally wrapped in `<...>`
+// (which allows spaces) and optionally followed by a `"title"`, or an
+// autolink `<https://...>`.
+const LINK = /\]\(\s*(?:<([^<>]*)>|([^)\s]+))(?:\s+(?:"[^"]*"|'[^']*'|\([^)]*\)))?\s*\)|<(https?:\/\/[^<>\s]+)>/g;
+// Every `](` opens an inline link. One that LINK does not match is a link the
+// rules would otherwise skip in silence, so parseLlms reports it instead.
+const LINK_OPENER = /\]\(/g;
+// A link into this site: the production origin with any path, fragment or
+// query, or nothing at all. http:// is accepted here so the rules can flag
+// it, rather than treating it as an external link and not looking at it.
+const SITE_LINK = /^https?:\/\/docs\.onetimesecret\.com(?=[/#?]|$)/;
+const FENCE = /^\s{0,3}(`{3,}|~{3,})/;
 
 /**
  * Pull the parts the rules need out of the file text.
@@ -44,6 +59,10 @@ const LINK = /\]\(([^)\s]+)\)|<(https?:\/\/[^>\s]+)>/g;
  * `links` carries every Markdown link destination (inline `[text](href)` and
  * autolink `<href>` forms) with its 1-based line, in document order. Bare
  * URLs in prose are not links an agent would follow and are not collected.
+ * Fenced code blocks are skipped: a URL in the curl example is not a link,
+ * and a `Last updated:` line inside one is not the stamp.
+ *
+ * `malformed` lists the lines holding a `](` that did not parse as a link.
  *
  * @param {string} text
  * @returns {{
@@ -51,6 +70,7 @@ const LINK = /\]\(([^)\s]+)\)|<(https?:\/\/[^>\s]+)>/g;
  *   summary: string | null,
  *   stamps: {date: string, line: number}[],
  *   links: {href: string, line: number}[],
+ *   malformed: number[],
  * }}
  */
 export function parseLlms(text) {
@@ -64,31 +84,49 @@ export function parseLlms(text) {
 
   const stamps = [];
   const links = [];
+  const malformed = [];
+  let fence = null;
   lines.forEach((line, i) => {
+    const fenceMatch = line.match(FENCE);
+    if (fenceMatch) {
+      if (fence === null) fence = fenceMatch[1][0];
+      else if (fenceMatch[1][0] === fence) fence = null;
+      return;
+    }
+    if (fence !== null) return;
+
     const stamp = line.match(STAMP);
     if (stamp) stamps.push({ date: stamp[1], line: i + 1 });
+
+    let inline = 0;
     for (const match of line.matchAll(LINK)) {
-      links.push({ href: match[1] ?? match[2], line: i + 1 });
+      if (match[3] === undefined) inline += 1;
+      links.push({ href: match[1] ?? match[2] ?? match[3], line: i + 1 });
     }
+    const openers = line.match(LINK_OPENER)?.length ?? 0;
+    if (openers !== inline) malformed.push(i + 1);
   });
 
-  return { title, summary, stamps, links };
+  return { title, summary, stamps, links, malformed };
 }
 
 /**
  * The site-relative path of a link into this site, or null for a link
- * elsewhere. Accepts the absolute origin and root-relative forms; drops
- * fragment and query.
+ * elsewhere. Accepts the absolute origin (with or without a path, over
+ * https or http) and root-relative forms; drops fragment and query. The
+ * bare origin is `/`.
  *
  * @param {string} href
  * @returns {string | null}
  */
 export function sitePath(href) {
   let path;
-  if (href.startsWith(SITE_ORIGIN + "/")) path = href.slice(SITE_ORIGIN.length);
+  const site = href.match(SITE_LINK);
+  if (site) path = href.slice(site[0].length);
   else if (href.startsWith("/") && !href.startsWith("//")) path = href;
   else return null;
-  return path.replace(/[#?].*$/, "");
+  path = path.replace(/[#?].*$/, "");
+  return path === "" ? "/" : path;
 }
 
 /**
@@ -131,10 +169,13 @@ export function daysBetween(from, to) {
  */
 export function auditLlms(text, { pages, changedOn, today, maxAgeDays = MAX_AGE_DAYS }) {
   const problems = [];
-  const { title, summary, stamps, links } = parseLlms(text);
+  const { title, summary, stamps, links, malformed } = parseLlms(text);
 
   if (!title) problems.push("line 1: the file must open with an H1 (`# Title`)");
   if (!summary) problems.push("the H1 must be followed by a `> summary` blockquote");
+  for (const line of malformed) {
+    problems.push(`line ${line}: a \`[text](href)\` link did not parse; keep the href free of spaces and \`)\` or wrap it in \`<...>\``);
+  }
 
   let stamp = null;
   if (stamps.length === 0) {
@@ -152,6 +193,8 @@ export function auditLlms(text, { pages, changedOn, today, maxAgeDays = MAX_AGE_
     }
   }
 
+  // Keyed by page slug where the link resolves to one, so `/en/pricing` and
+  // `/en/pricing/` count as the same link; by path otherwise.
   const seen = new Map();
   const linkedPages = new Map();
   for (const { href, line } of links) {
@@ -159,15 +202,26 @@ export function auditLlms(text, { pages, changedOn, today, maxAgeDays = MAX_AGE_
     if (path === null) continue;
     if (path === "/llms.txt") continue;
 
-    if (seen.has(path)) {
-      problems.push(`line ${line}: ${href} is already linked on line ${seen.get(path)}`);
-      continue;
+    if (href.startsWith("http://")) {
+      problems.push(`line ${line}: ${href} uses http://; the site is served over https only`);
     }
-    seen.set(path, line);
 
     const slug = enSlug(path);
+    const key = slug ?? path;
+    if (seen.has(key)) {
+      problems.push(`line ${line}: ${href} is already linked on line ${seen.get(key)}`);
+      continue;
+    }
+    seen.set(key, line);
+
     if (slug === null) {
       problems.push(`line ${line}: ${href} is not an English page; link the /en/ source, translations lag behind it`);
+      continue;
+    }
+    // Starlight serves `en/pricing/index.md` at `/en/pricing/`; an explicit
+    // `index` segment resolves to the same slug here but 404s on the site.
+    if (/\/index\/?$/.test(path)) {
+      problems.push(`line ${line}: ${href} ends in /index, which is not a route; link ${path.replace(/index\/?$/, "")} instead`);
       continue;
     }
     const page = pages.get(slug);
@@ -191,7 +245,7 @@ export function auditLlms(text, { pages, changedOn, today, maxAgeDays = MAX_AGE_
       );
     }
     const changed = [];
-    for (const [slug, page] of linkedPages) {
+    for (const page of linkedPages.values()) {
       const date = changedOn(page.path);
       if (date && date > stamp) changed.push(`${page.path} (${date})`);
     }

@@ -31,12 +31,24 @@ for (const page of docsPages("en")) {
   pages.set(page.slug, { path: page.path, draft: fields.draft === "true" });
 }
 
+// Outside a git checkout (a source tarball, some container builds) git is
+// missing or refuses, and the rules treat unknown history as "not drift"
+// rather than crashing the check.
+let historyKnown = true;
+
 function git(...args) {
-  return execFileSync("git", args, { cwd: repoRoot, encoding: "utf8" }).trim();
+  try {
+    return execFileSync("git", args, { cwd: repoRoot, encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] }).trim();
+  } catch {
+    historyKnown = false;
+    return null;
+  }
 }
 
 function changedOn(path) {
-  if (git("status", "--porcelain", "--", path) !== "") return today;
+  const status = git("status", "--porcelain", "--", path);
+  if (status === null) return null;
+  if (status !== "") return today;
   return git("log", "-1", "--format=%cs", "--", path) || null;
 }
 
@@ -46,10 +58,15 @@ const { problems, summary } = auditLlms(text, { pages, changedOn, today });
 if (problems.length > 0) {
   console.error(`check:llms FAILED — ${problems.length} problem(s) in ${LLMS}:\n`);
   for (const problem of problems) console.error(`  - ${problem}`);
+  console.error(
+    "\nThe age and drift rules compare the index with the whole site, so a failure can predate this branch; " +
+      "the fix is the same either way: re-read public/llms.txt and move its Last updated date.",
+  );
   process.exit(1);
 }
 
 console.log(
   `check:llms OK — ${summary.links} links into the site resolve to ${summary.pages} EN pages, none draft; ` +
-    `Last updated ${summary.stamp} (${summary.ageDays} day(s) ago, limit ${MAX_AGE_DAYS}); no linked page changed since`,
+    `Last updated ${summary.stamp} (${summary.ageDays} day(s) ago, limit ${MAX_AGE_DAYS}); ` +
+    (historyKnown ? "no linked page changed since" : "git history unavailable, drift rule skipped"),
 );
