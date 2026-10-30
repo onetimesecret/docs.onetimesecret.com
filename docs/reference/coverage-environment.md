@@ -90,7 +90,7 @@ None.
 ## Record identifiers
 
 Record ids are `env-` plus the lower-cased name with `_` replaced by `-`.
-Page fragments are not the same string: this Markdown stack has no custom
-heading id syntax, so a fragment is the slug of the heading text, which keeps
-underscores. `SECRET_VERIFIER_MODE` is id `env-secret-verifier-mode` and
+Generated data stores page fragments separately as `anchor`, using the slug
+of the heading text to preserve existing links, including underscores.
+`SECRET_VERIFIER_MODE` is id `env-secret-verifier-mode` and
 fragment `#secret_verifier_mode`.
