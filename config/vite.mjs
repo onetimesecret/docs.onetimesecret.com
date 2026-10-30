@@ -11,7 +11,7 @@ import tailwindcss from "@tailwindcss/vite";
  * the bottom-left corner). It does nothing in `astro build` or under Vitest.
  * https://github.com/harukikuri/spotnote
  *
- * Only this repository's own .astro, .vue and .tsx files get stamps.
+ * Only this repository's own .astro and .vue files get stamps.
  * Starlight's components and Markdown/Markdoc content do not, so a click on
  * page prose resolves to the nearest stamped ancestor (a local override or
  * component), not to the content file.
