@@ -65,6 +65,11 @@ export const starlightConfig = {
     { tag: "meta", attrs: { property: "og:image:width", content: "1280" } },
     { tag: "meta", attrs: { property: "og:image:height", content: "640" } },
     { tag: "meta", attrs: { name: "twitter:image", content: ogImage } },
+    // llms.txt discovery (https://llmstxt.org): agents do not probe for
+    // /llms.txt on their own, so every page points at the index that covers
+    // it. The matching rel="alternate" type="text/markdown" link needs a
+    // Markdown copy of each page, which this site does not publish yet.
+    { tag: "link", attrs: { rel: "describedby", href: "/llms.txt" } },
     ...(prerelease
       ? [
           {
