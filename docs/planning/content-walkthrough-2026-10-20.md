@@ -680,10 +680,11 @@ cache without changing the manifest or lockfile. Subsequent checks passed:
 - Whitespace checks passed. Vale is not installed; its rules were inspected,
   not executed.
 
-**DV01 — Open, inherited rendered-anchor issue.** Tracked in
-[issue #463](https://github.com/onetimesecret/docs.onetimesecret.com/issues/463).
-Five heading IDs still
-contain the invisible U+E0101 AI marker in the generated HTML:
+**DV01 — Resolved 2026-10-30, inherited rendered-anchor issue.** Tracked in
+[issue #463](https://github.com/onetimesecret/docs.onetimesecret.com/issues/463);
+resolution evidence follows the original record below. At the time of this
+record, five heading IDs contained the invisible U+E0101 AI marker in the
+generated HTML:
 
 | Page | Visible heading |
 | --- | --- |
@@ -701,6 +702,27 @@ ID/fragment normalization code and add a punctuation-adjacent regression test.
 Check compatibility with previously published anchors before changing them.
 This is a rendering follow-up, not another unresolved content finding among
 F049–F071.
+
+Resolution (2026-10-30):
+
+- Fix: `cleanId` in `src/lib/textprov/html.mjs` strips every residual selector
+  from heading IDs and remaps their references (develop 6aea3ff7, a213bb67;
+  in `main` through PR #459). It superseded 3b11e149 from
+  `i18n/latest-content`, which was not integrated.
+- Regression tests in `src/lib/textprov/html.test.ts`: orphaned selectors left
+  by punctuation the slugger drops, and a build failure naming the page when a
+  decoded ID collides with an existing anchor.
+- Live HTML on docs.onetimesecret.com and docs.onetimesecret.dev: the five IDs
+  above are clean (for example `ownership-record-txt`). A scan of the `id` and
+  `href` values on all 368 enrolled pages found no variation selectors on
+  either site; 27 production and 15 staging URLs did not resolve and were not
+  scanned.
+- Published-anchor compatibility: no aliases are needed. Before PR #459, the
+  billing and branding pages were not on `main`, and the two custom-domains
+  pages there had no marked headings, so marker-bearing IDs reached only
+  staging.
+- Not run for this resolution: a local build or test run; the evidence is the
+  deployed HTML.
 
 No invitations, ownership transfers, SSO changes, billing transactions, domain
 or DNS changes, setting saves or email sends were performed. The application,

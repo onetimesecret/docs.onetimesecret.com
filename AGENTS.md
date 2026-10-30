@@ -10,7 +10,7 @@ This is a multilingual documentation site built with Astro and Starlight. Publis
 
 - **Framework**: Astro 7.x with Starlight; see `package.json` for dependency versions.
 - **Content**: Markdown (`.md`), Markdoc (`.mdoc`), and existing MDX (`.mdx`) content.
-- **Components**: Astro, Vue, and React; integrations are registered in `config/integrations.mjs`.
+- **Components**: Astro and Vue; integrations are registered in `config/integrations.mjs`.
 - **Styling**: Tailwind CSS 4.x through `@tailwindcss/vite`, with CSS-first theme configuration.
 - **Package manager**: pnpm; use the version declared in `package.json`.
 - **Tests**: Vitest (`vitest.config.ts`).
@@ -19,7 +19,7 @@ This is a multilingual documentation site built with Astro and Starlight. Publis
 
 `astro.config.mjs` assembles the modular configuration in `config/`:
 
-- `integrations.mjs` — Starlight, Markdoc, Vue, and React integrations.
+- `integrations.mjs` — Starlight, Markdoc, and Vue integrations.
 - `starlight.mjs` — Theme, component overrides, custom CSS, and site metadata.
 - `i18n.mjs` — Supported locales and default language.
 - `sidebar.mjs` — Navigation structure and translated labels.

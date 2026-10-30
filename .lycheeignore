@@ -45,12 +45,6 @@ mailto:*
 .*/img/.*
 .*/socialcards/.*
 
-# Interactive demo / artifact pages live in src/pages, not src/content/docs, so
-# the source-rooted internal link check (--root-dir src/content/docs) can't
-# resolve them. They build to /artifacts/... in dist and are verified in the
-# browser; documentation pages link to them (e.g. the SSO demos).
-.*/artifacts/.*
-
 # CJK false positives: lychee's plaintext extractor has no word boundary
 # before an email address when the preceding character is CJK (e.g.
 # "一般的なお問い合わせ：support@onetimesecret.com"), so it swallows the
