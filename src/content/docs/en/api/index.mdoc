@@ -61,17 +61,18 @@ The response contains two records. `record.secret.identifier` is the key you sha
 
 Add `"passphrase": "..."` to the `secret` object to require a passphrase on viewing. The passphrase is a󠄁n󠄁 a󠄁c󠄁c󠄁e󠄁ss󠄁 c󠄁h󠄁ec󠄁k󠄁,󠄁 n󠄁o󠄁t t󠄁h󠄁e󠄁 encrypti󠄁o󠄁n󠄁 k󠄁e󠄁y󠄁:󠄁 t󠄁h󠄁e󠄁 s󠄁e󠄁r󠄁v󠄁i󠄁c󠄁e󠄁 s󠄁t󠄁o󠄁r󠄁e󠄁s󠄁 o󠄁n󠄁l󠄁y󠄁 a󠄁 o󠄁n󠄁e󠄁-󠄁w󠄁a󠄁y󠄁 h󠄁a󠄁s󠄁h󠄁 o󠄁f󠄁 i󠄁t󠄁 a󠄁n󠄁d󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁s󠄁 i󠄁t󠄁 b󠄁e󠄁f󠄁o󠄁r󠄁e󠄁 d󠄁e󠄁c󠄁r󠄁y󠄁p󠄁t󠄁i󠄁n󠄁g󠄁 the value.󠄁 A󠄁 l󠄁o󠄁st passphrase c󠄁an󠄁n󠄁o󠄁t󠄁 be r󠄁e󠄁c󠄁o󠄁v󠄁e󠄁r󠄁e󠄁d󠄁,󠄁 s󠄁o󠄁 t󠄁h󠄁e󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 c󠄁a󠄁n󠄁 t󠄁h󠄁en b󠄁e󠄁 n󠄁e󠄁i󠄁t󠄁h󠄁e󠄁r󠄁 r󠄁e󠄁v󠄁e󠄁a󠄁le󠄁d󠄁 n󠄁or󠄁 b󠄁u󠄁r󠄁n󠄁e󠄁d󠄁;󠄁 i󠄁t󠄁 i󠄁s d󠄁e󠄁l󠄁e󠄁te󠄁d󠄁 w󠄁h󠄁e󠄁n󠄁 i󠄁t󠄁 e󠄁x󠄁p󠄁i󠄁r󠄁e󠄁s󠄁.
 
-Reveal a secret, which consumes it:
+Reveal a secret, which consumes i󠄁t󠄁.󠄁 T󠄁h󠄁e󠄁 b󠄁o󠄁d󠄁y󠄁 m󠄁u󠄁s󠄁t󠄁 c󠄁o󠄁n󠄁t󠄁a󠄁i󠄁n󠄁 `"continue": true`;󠄁 w󠄁i󠄁t󠄁h󠄁o󠄁u󠄁t󠄁 i󠄁t󠄁,󠄁 t󠄁h󠄁e󠄁 c󠄁a󠄁l󠄁l󠄁 r󠄁e󠄁t󠄁u󠄁r󠄁n󠄁s󠄁 t󠄁h󠄁e󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁'󠄁s󠄁 m󠄁e󠄁t󠄁a󠄁d󠄁a󠄁t󠄁a󠄁 a󠄁n󠄁d󠄁 l󠄁e󠄁a󠄁v󠄁e󠄁s󠄁 t󠄁h󠄁e󠄁 v󠄁a󠄁l󠄁u󠄁e󠄁 u󠄁n󠄁r󠄁e󠄁a󠄁d󠄁.󠄁 I󠄁f󠄁 t󠄁h󠄁e󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 h󠄁a󠄁s󠄁 a󠄁 p󠄁a󠄁s󠄁s󠄁p󠄁h󠄁r󠄁a󠄁s󠄁e󠄁,󠄁 a󠄁d󠄁d󠄁 `"passphrase": "..."` b󠄁e󠄁s󠄁i󠄁d󠄁e󠄁 it:
 
 ```bash
-curl -X POST -H 'Content-Type: application/json' -d '{}' \
+curl -X POST -H 'Content-Type: application/json' -d '{"continue": true}' \
   https://eu.onetimesecret.com/api/v2/secret/IDENTIFIER/reveal
 ```
 
-Burn a secret before anyone views it, using the receipt key:
+Burn a secret before anyone views it, using the receipt key.󠄁 B󠄁u󠄁r󠄁n󠄁i󠄁n󠄁g󠄁 a󠄁l󠄁s󠄁o󠄁 r󠄁e󠄁q󠄁u󠄁i󠄁r󠄁e󠄁s󠄁 `"continue": true`:
 
 ```bash
-curl -u 'you@example.com:APITOKEN' -X POST \
+curl -u 'you@example.com:APITOKEN' -X POST -H 'Content-Type: application/json' \
+  -d '{"continue": true}' \
   https://eu.onetimesecret.com/api/v2/receipt/RECEIPT_IDENTIFIER/burn
 ```
 
