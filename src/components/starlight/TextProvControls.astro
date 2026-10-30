@@ -1,7 +1,8 @@
 ---
 // The reader's TextProv controls: a switch that reveals recorded AI-origin
 // text, and an information button whose native popover explains what the
-// highlighting records and links to the reader guide. PageSidebar.astro
+// highlighting records, links to the reader guide, and opens a prefilled
+// GitHub issue for reporting problems with the page. PageSidebar.astro
 // renders this on every page with a table of contents, enrolled or not, in two
 // places that never show together: the right sidebar above "On this page"
 // (wide viewports) and the sticky mobile TOC bar (`compact`). The preference is
@@ -22,6 +23,16 @@ interface Props {
 const { id, compact = false } = Astro.props;
 const { t, starlightRoute } = Astro.locals;
 const guide = `/${starlightRoute.locale}/contribute/text-provenance`;
+// Prefilled content-feedback issue. The template parameter skips GitHub's
+// template chooser, which would otherwise drop the title and body.
+const pageUrl = new URL(Astro.url.pathname, Astro.site ?? Astro.url).href;
+const report = new URL("https://github.com/onetimesecret/docs.onetimesecret.com/issues");
+report.searchParams.set("template", "content-feedback.md");
+report.searchParams.set("title", `Docs feedback: ${Astro.url.pathname}`);
+report.searchParams.set(
+  "body",
+  `Page: ${pageUrl}\n\n## What is wrong\n\n\n\n## What it should say\n\n`,
+);
 const aboutId = `textprov-about-${id}`;
 const aboutTitleId = `textprov-about-title-${id}`;
 const helpId = `textprov-help-${id}`;
@@ -32,7 +43,13 @@ const anchor = `--textprov-info-${id}`;
 <div class:list={["textprov-panel", { "textprov-compact": compact }]} data-pagefind-ignore>
   {!compact && (
     <div class="textprov-heading">
-      <h2>{t("textprov.heading")}</h2>
+      <h2>
+        {t("textprov.heading")}
+        <!--<svg class="textprov-mark" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+          <circle cx="8" cy="8" r="7" />
+          <path d="M6.25 12V4h2.5a2.25 2.25 0 0 1 0 4.5h-2.5" />
+        </svg>-->
+      </h2>
       <button
         type="button"
         class="textprov-info"
@@ -78,7 +95,12 @@ const anchor = `--textprov-info-${id}`;
     <h3 id={aboutTitleId}>{t("textprov.aboutTitle")}</h3>
     <p>{t("textprov.about")}</p>
     <p>{t("textprov.limits")}</p>
-    <a href={guide}>{t("textprov.learnMore")}</a>
+    <p>
+      <a href={guide}>{t("textprov.learnMore")}</a>
+    </p>
+    <p class="textprov-report">
+      <a href={report.href}>{t("textprov.report")}</a>
+    </p>
   </div>
   <p id={helpId} class="textprov-help">
     {t("textprov.help")}
@@ -122,6 +144,24 @@ const anchor = `--textprov-info-${id}`;
   }
   .textprov-heading h2 {
     margin: 0;
+  }
+  /* The provenance mark: a circled P drawn as a superscript, like a trademark
+     symbol, rather than the U+2117 glyph, which falls back to another font and
+     sits off baseline. */
+  .textprov-mark {
+    inline-size: 0.6em;
+    block-size: 0.6em;
+    margin-inline-start: 0.15em;
+    /* Relative offset rather than vertical-align so the raised mark does not
+       grow the line box and shift the heading against the info button. */
+    position: relative;
+    inset-block-start: -0.5em;
+    vertical-align: baseline;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.75;
+    stroke-linecap: round;
+    stroke-linejoin: round;
   }
   .textprov-row {
     display: flex;
@@ -237,6 +277,11 @@ const anchor = `--textprov-info-${id}`;
   }
   .textprov-about p {
     margin: 0 0 0.75rem;
+  }
+  .textprov-report {
+    margin-block-end: 0;
+    padding-block-start: 0.625rem;
+    border-block-start: 1px solid var(--sl-color-hairline-light);
   }
   /* PageSidebar styles every sidebar link as a block TOC entry; this is prose. */
   .textprov-about a {
