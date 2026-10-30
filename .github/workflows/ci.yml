@@ -89,7 +89,7 @@ jobs:
 
       # The committed reference snapshots under src/data/reference/ must
       # validate against the upstream revision pinned in
-      # vendor/onetimesecret/manifest.json before anything is built from them.
+      # src/data/reference/manifest.json before anything is built from them.
       # Read-only: no application checkout, no network.
       - name: Check generated reference
         run: pnpm run reference:check

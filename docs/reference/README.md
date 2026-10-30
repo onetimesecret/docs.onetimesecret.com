@@ -1,14 +1,15 @@
 # Pinned Onetime Secret reference inputs
 
-This directory holds `manifest.json` and nothing else. It pins the revision of
-the `onetimesecret/onetimesecret` application that the documentation reference
+`src/data/reference/manifest.json` pins the revision of the
+`onetimesecret/onetimesecret` application that the documentation reference
 pages describe, and records every upstream file the reference pipeline read at
-that revision. No upstream bytes are vendored: the pipeline extracts structured
-data from the pinned blobs during an explicit refresh and commits that data as
-JSON snapshots under `src/data/reference/`.
+that revision. No upstream bytes are kept in this repository: the pipeline
+extracts structured data from the pinned blobs during an explicit refresh and
+commits that data as JSON snapshots beside the manifest. The coverage reports
+in this directory are the refresh's review record.
 
 ```text
-Pinned upstream sources (manifest.json)
+Pinned upstream sources (src/data/reference/manifest.json)
     | explicit refresh: parse and validate
 Committed JSON snapshots (src/data/reference/)
     |-- environment-variables.json
@@ -46,8 +47,8 @@ Refresh changes the data. Local code changes its presentation.
 | `etc/defaults/logging.defaults.yaml` | `logging-defaults` |
 | `etc/examples/billing.example.yaml` | `billing-example` |
 
-`bin/reference/manifest.mjs` validates the manifest's structure and rejects any
-other file under this directory. `bin/reference/validate-env.mjs` and
+`bin/reference/manifest.mjs` validates the manifest's structure.
+`bin/reference/validate-env.mjs` and
 `bin/reference/validate-config.mjs` check each committed snapshot against the
 manifest: format version, upstream revision, source hashes and line counts,
 source spans, heading anchors and record structure. Both run offline from
@@ -99,7 +100,7 @@ its `.git/config`, which can affect command behavior.
    extracts and validates both snapshots in memory, and writes nothing unless
    everything passes. It then writes `src/data/reference/environment-variables.json`,
    `src/data/reference/configuration.json`, the two coverage reports under
-   `docs/reference/`, and this directory's `manifest.json` with the new
+   `docs/reference/`, and `src/data/reference/manifest.json` with the new
    revision, hashes and line counts.
 
    Refresh reads the paths listed in `environmentSource` and
@@ -113,7 +114,7 @@ its `.git/config`, which can affect command behavior.
 
    ```sh
    pnpm run reference:check
-   git --no-pager diff --stat vendor/onetimesecret src/data/reference docs/reference
+   git --no-pager diff --stat src/data/reference docs/reference
    ```
 
    A page's layout does not change on refresh; only the data does. Build the
@@ -134,7 +135,7 @@ its `.git/config`, which can affect command behavior.
 
 ## Accountability
 
-`refreshOwner` in `manifest.json` names the maintainer who refreshes these
+`refreshOwner` in `src/data/reference/manifest.json` names the maintainer who refreshes these
 snapshots. `reference:check` warns while it is `"unassigned"` and still passes,
 so the pipeline runs either way.
 

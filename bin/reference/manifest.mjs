@@ -1,38 +1,32 @@
 // bin/reference/manifest.mjs
 //
-// Load and verify vendor/onetimesecret/manifest.json (plan A1). Plain Node
-// ESM, zero dependencies.
+// Load and verify src/data/reference/manifest.json (plan A1). Plain Node ESM,
+// zero dependencies.
 //
 // The manifest pins the upstream revision the reference documents and records,
 // for every upstream input, the path that was read, its SHA-256 and its line
-// count. No upstream bytes are vendored any more: the environment and
-// configuration snapshots under src/data/reference/ are what refresh extracted
-// from those pinned blobs, and their validators check them against the
-// metadata recorded here. The directory holds only this manifest and its
-// README; anything else under it is an unprovenanced input and fails
-// validation.
+// count. No upstream bytes are kept in this repository: the environment and
+// configuration snapshots beside the manifest are what refresh extracted from
+// those pinned blobs, and their validators check them against the metadata
+// recorded here.
 import { createHash } from "node:crypto";
-import { existsSync, lstatSync, readdirSync, readFileSync } from "node:fs";
-import { dirname, join, relative, sep, win32 } from "node:path";
+import { existsSync, lstatSync, readFileSync } from "node:fs";
+import { dirname, join, relative, win32 } from "node:path";
 import { fileURLToPath } from "node:url";
 
 /** Repository root, resolved from this file so any cwd works. */
 export const repoRoot = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
 
-export const VENDOR_DIR = join(repoRoot, "vendor", "onetimesecret");
-export const MANIFEST_PATH = join(VENDOR_DIR, "manifest.json");
+export const MANIFEST_PATH = join(repoRoot, "src", "data", "reference", "manifest.json");
 
 /** Roles a configuration source may declare. */
 export const ROLES = ["config-defaults", "auth-defaults", "logging-defaults", "billing-example"];
-
-/** The only files allowed beside the manifest. */
-const COMPANIONS = new Set(["manifest.json", "README.md"]);
 
 const SHA256 = /^[0-9a-f]{64}$/;
 const FULL_SHA = /^[0-9a-f]{40}$/;
 export const EXTRACTOR_FORMAT_VERSION = 1;
 
-/** Upstream-only input: its bytes are deliberately not vendored. */
+/** Upstream-only input: its bytes are deliberately not kept here. */
 export function validateEnvironmentSource(source) {
   if (
     source?.path !== ".env.reference" ||
@@ -64,24 +58,6 @@ export function isPortableUpstreamPath(path) {
   );
 }
 
-/** Every file under `dir`, rejecting symlinks before following any path. */
-function filesUnder(dir) {
-  const found = [];
-  const walk = (current) => {
-    const stat = lstatSync(current);
-    if (stat.isSymbolicLink()) {
-      throw new Error(`${current}: symlinks are not allowed in the vendor directory`);
-    }
-    if (stat.isDirectory()) {
-      for (const name of readdirSync(current).sort()) walk(join(current, name));
-    } else {
-      found.push(relative(dir, current).split(sep).join("/"));
-    }
-  };
-  walk(dir);
-  return found;
-}
-
 /**
  * Load and verify the manifest.
  *
@@ -89,25 +65,26 @@ function filesUnder(dir) {
  * learn which upstream paths to fetch and then writes fresh hashes and line
  * counts itself. An onboarding entry may then carry only `path` and `role`.
  *
- * @param {{vendorDir?: string, requireHashes?: boolean}} [options]
+ * @param {{manifestPath?: string, requireHashes?: boolean}} [options]
  * @returns {{manifest: object, warnings: string[]}}
  */
-export function loadManifest({ vendorDir = VENDOR_DIR, requireHashes = true } = {}) {
-  const manifestPath = join(vendorDir, "manifest.json");
-  // Scan before reading even the manifest: a symlinked manifest or companion
-  // must not redirect reads outside this tree.
-  const present = existsSync(vendorDir) ? filesUnder(vendorDir) : [];
+export function loadManifest({ manifestPath = MANIFEST_PATH, requireHashes = true } = {}) {
+  const shown = relative(repoRoot, manifestPath);
   if (!existsSync(manifestPath)) {
     throw new Error(
-      `${relative(repoRoot, manifestPath)} is missing — the reference pins its upstream revision there, so there is nothing to validate against`,
+      `${shown} is missing — the reference pins its upstream revision there, so there is nothing to validate against`,
     );
+  }
+  // A symlinked manifest would let a read land outside the tree it describes.
+  if (lstatSync(manifestPath).isSymbolicLink()) {
+    throw new Error(`${shown}: the manifest must be a regular file, not a symlink`);
   }
 
   let manifest;
   try {
     manifest = JSON.parse(readFileSync(manifestPath, "utf8"));
   } catch (error) {
-    throw new Error(`${relative(repoRoot, manifestPath)} is not valid JSON — ${error.message}`);
+    throw new Error(`${shown} is not valid JSON — ${error.message}`);
   }
 
   const problems = [];
@@ -150,7 +127,7 @@ export function loadManifest({ vendorDir = VENDOR_DIR, requireHashes = true } = 
     problems.push('refreshOwner must be a string (use "unassigned" until a handle is recorded)');
   } else if (manifest.refreshOwner === "unassigned") {
     warnings.push(
-      'refreshOwner is "unassigned" in vendor/onetimesecret/manifest.json — plan A6 needs a real handle recorded before Phase 4 exits',
+      `refreshOwner is "unassigned" in ${shown} — plan A6 needs a real handle recorded before Phase 4 exits`,
     );
   }
 
@@ -160,7 +137,7 @@ export function loadManifest({ vendorDir = VENDOR_DIR, requireHashes = true } = 
     );
   } else if (manifest.backupReviewer === "unassigned") {
     warnings.push(
-      'backupReviewer is "unassigned" in vendor/onetimesecret/manifest.json — plan A6 needs a real handle, or "none: <reason>" with an accountabilityNote',
+      `backupReviewer is "unassigned" in ${shown} — plan A6 needs a real handle, or "none: <reason>" with an accountabilityNote`,
     );
   } else if (manifest.backupReviewer.startsWith("none")) {
     // A declared absence is accepted, but not silently: the note is what makes
@@ -178,7 +155,7 @@ export function loadManifest({ vendorDir = VENDOR_DIR, requireHashes = true } = 
   const sources = manifest.configurationSources;
   if (!Array.isArray(sources) || sources.length === 0) {
     problems.push("configurationSources must be a non-empty array of upstream source entries");
-    throw new Error(describe(problems, manifestPath));
+    throw new Error(describe(problems, shown));
   }
 
   const seenPaths = new Set();
@@ -224,21 +201,11 @@ export function loadManifest({ vendorDir = VENDOR_DIR, requireHashes = true } = 
     }
   }
 
-  for (const path of present) {
-    if (COMPANIONS.has(path)) continue;
-    problems.push(
-      `vendor/onetimesecret/${path} is not an input — nothing under this directory is read any more; the pinned upstream sources are recorded in manifest.json and their extracted snapshots live under src/data/reference/`,
-    );
-  }
-
-  if (problems.length > 0) throw new Error(describe(problems, manifestPath));
+  if (problems.length > 0) throw new Error(describe(problems, shown));
 
   return { manifest, warnings };
 }
 
-function describe(problems, manifestPath) {
-  return [
-    `${relative(repoRoot, manifestPath)} failed validation:`,
-    ...problems.map((problem) => `  - ${problem}`),
-  ].join("\n");
+function describe(problems, shown) {
+  return [`${shown} failed validation:`, ...problems.map((problem) => `  - ${problem}`)].join("\n");
 }

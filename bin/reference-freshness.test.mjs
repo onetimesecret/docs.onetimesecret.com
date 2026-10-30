@@ -14,11 +14,11 @@ const hash = (text) => createHash("sha256").update(text).digest("hex");
 function compare(changedPath = "", latest = "v2") {
   const root = mkdtempSync(join(tmpdir(), "reference-freshness-"));
   try {
-    mkdirSync(join(root, "vendor/onetimesecret"), { recursive: true });
+    mkdirSync(join(root, "src/data/reference"), { recursive: true });
     mkdirSync(join(root, "bin"));
     const paths = [".env.reference", "etc/defaults/config.defaults.yaml", "etc/defaults/auth.defaults.yaml", "etc/defaults/logging.defaults.yaml", "etc/examples/billing.example.yaml"];
     const entries = paths.map((path) => ({ path, sha256: hash(path), lines: 1 }));
-    writeFileSync(join(root, "vendor/onetimesecret/manifest.json"), JSON.stringify({
+    writeFileSync(join(root, "src/data/reference/manifest.json"), JSON.stringify({
       upstream: { release: "v1", commit: "a".repeat(40) },
       environmentSource: entries[0],
       configurationSources: entries.slice(1),

@@ -31,7 +31,7 @@ import {
   CONFIG_DATA_PATH,
   extractConfigurationSnapshot,
 } from "./reference/extract-config.mjs";
-import { loadManifest, repoRoot, sha256, ROLES, VENDOR_DIR } from "./reference/manifest.mjs";
+import { loadManifest, MANIFEST_PATH, repoRoot, sha256, ROLES } from "./reference/manifest.mjs";
 import { COVERAGE_PATH, DATA_PATH, extractEnvironmentSnapshot } from "./reference/render-env.mjs";
 
 const USAGE = `usage:
@@ -42,14 +42,14 @@ const USAGE = `usage:
 /**
  * Validate both committed snapshots against the manifest. Writes nothing.
  *
- * `root` and `vendorDir` are parameters so the tests can validate a throwaway
- * copy instead of the tracked tree.
+ * `root` and `manifestPath` are parameters so the tests can validate a
+ * throwaway copy instead of the tracked tree.
  *
- * @param {{root?: string, vendorDir?: string}} [options]
+ * @param {{root?: string, manifestPath?: string}} [options]
  * @returns {{environment: object, configuration: object, warnings: string[]}}
  */
-export function validateSnapshots({ root = repoRoot, vendorDir = VENDOR_DIR } = {}) {
-  const { manifest, warnings } = loadManifest({ vendorDir });
+export function validateSnapshots({ root = repoRoot, manifestPath = MANIFEST_PATH } = {}) {
+  const { manifest, warnings } = loadManifest({ manifestPath });
   const read = (path, validate) => {
     try {
       return validate(JSON.parse(readFileSync(join(root, path), "utf8")), manifest);
@@ -92,7 +92,7 @@ function write(root, path, content) {
  * Reads with `git show <ref>:<path>`, never from the checkout's working tree,
  * so an uncommitted local edit cannot become a documented upstream fact. No
  * network call is made here; fetching the checkout is a separate step the
- * maintainer runs (see vendor/onetimesecret/README.md).
+ * maintainer runs (see docs/reference/README.md).
  */
 function refresh(args) {
   const repo = flag(args, "--repo");
@@ -113,13 +113,13 @@ function refresh(args) {
       },
     )}`,
   );
-  console.log("Next: review the diff under src/data/reference/, docs/reference/ and vendor/onetimesecret/.");
+  console.log("Next: review the diff under src/data/reference/ and docs/reference/.");
   return 0;
 }
 
 /** Read and validate everything before replacing any committed snapshot. */
-export function refreshSnapshots({ repo, ref, root = repoRoot, vendorDir = VENDOR_DIR }) {
-  const { manifest: previous } = loadManifest({ vendorDir, requireHashes: false });
+export function refreshSnapshots({ repo, ref, root = repoRoot, manifestPath = MANIFEST_PATH }) {
+  const { manifest: previous } = loadManifest({ manifestPath, requireHashes: false });
   const git = (...args) =>
     execFileSync("git", ["--no-pager", "-C", repo, ...args], { maxBuffer: 1 << 28 });
   const commit = git("rev-parse", "--verify", "--end-of-options", `${ref}^{commit}`)
@@ -165,7 +165,8 @@ export function refreshSnapshots({ repo, ref, root = repoRoot, vendorDir = VENDO
   write(root, COVERAGE_PATH, extractedEnvironment.report);
   write(root, CONFIG_DATA_PATH, serialized);
   write(root, CONFIG_COVERAGE_PATH, extractedConfiguration.report);
-  write(vendorDir, "manifest.json", `${JSON.stringify(manifest, null, 2)}\n`);
+  mkdirSync(dirname(manifestPath), { recursive: true });
+  writeFileSync(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
   return { manifest, environment: extractedEnvironment, configuration: extractedConfiguration };
 }
 

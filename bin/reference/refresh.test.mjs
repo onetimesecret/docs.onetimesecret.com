@@ -13,7 +13,7 @@ import { dirname, join } from "node:path";
 import { afterEach, describe, expect, it } from "vitest";
 import { refreshSnapshots } from "../reference.mjs";
 import { CONFIG_COVERAGE_PATH, CONFIG_DATA_PATH } from "./extract-config.mjs";
-import { loadManifest, repoRoot, sha256 } from "./manifest.mjs";
+import { loadManifest, MANIFEST_PATH, sha256 } from "./manifest.mjs";
 import { COVERAGE_PATH, DATA_PATH } from "./render-env.mjs";
 
 const temps = [];
@@ -41,15 +41,16 @@ function commit(git, message) {
   );
 }
 
-/** A fixture upstream repository holding the snapshot inputs, and a vendor dir with the real manifest. */
+/** A fixture upstream repository holding the snapshot inputs, and a copy of the real manifest. */
 function setup({ env = source, yaml = {} } = {}) {
   const root = mkdtempSync(join(tmpdir(), "reference-refresh-"));
   temps.push(root);
   const repo = join(root, "upstream");
-  const vendorDir = join(root, "vendor");
+  const manifestPath = join(root, "data", "manifest.json");
   mkdirSync(repo);
-  cpSync(join(repoRoot, "vendor/onetimesecret"), vendorDir, { recursive: true });
-  const { manifest } = loadManifest({ vendorDir });
+  mkdirSync(dirname(manifestPath));
+  cpSync(MANIFEST_PATH, manifestPath);
+  const { manifest } = loadManifest({ manifestPath });
   for (const { path } of manifest.configurationSources) {
     mkdirSync(dirname(join(repo, path)), { recursive: true });
     writeFileSync(join(repo, path), yaml[path] ?? readFileSync(new URL(path, fixtures), "utf8"));
@@ -64,13 +65,13 @@ function setup({ env = source, yaml = {} } = {}) {
   git("add", ".");
   commit(git, "fixture");
   git("tag", "fixture-release");
-  return { root, repo, vendorDir, ref: "fixture-release", commit: git("rev-parse", "HEAD"), git };
+  return { root, repo, manifestPath, ref: "fixture-release", commit: git("rev-parse", "HEAD"), git };
 }
 
 /** Every committed output and the manifest, for before/after comparisons. */
 function snapshotOf(options) {
   return {
-    manifest: readFileSync(join(options.vendorDir, "manifest.json"), "utf8"),
+    manifest: readFileSync(options.manifestPath, "utf8"),
     outputs: OUTPUTS.map((path) =>
       existsSync(join(options.root, path)) ? readFileSync(join(options.root, path), "utf8") : null,
     ),
@@ -113,9 +114,8 @@ describe("pinned refresh", () => {
     expect(JSON.parse(readFileSync(join(options.root, CONFIG_DATA_PATH), "utf8"))).toEqual(
       first.configuration.data,
     );
-    expect(existsSync(join(options.vendorDir, "etc"))).toBe(false);
-    expect(JSON.parse(readFileSync(join(options.vendorDir, "manifest.json"), "utf8"))).toEqual(first.manifest);
-    expect(loadManifest({ vendorDir: options.vendorDir }).manifest).toEqual(first.manifest);
+    expect(JSON.parse(readFileSync(options.manifestPath, "utf8"))).toEqual(first.manifest);
+    expect(loadManifest({ manifestPath: options.manifestPath }).manifest).toEqual(first.manifest);
 
     const before = snapshotOf(options);
     refreshSnapshots(options);
@@ -148,14 +148,14 @@ describe("pinned refresh", () => {
 
   it("onboards a source with only path and role; refresh records its hash and line count", () => {
     const options = setup();
-    const manifestPath = join(options.vendorDir, "manifest.json");
+    const { manifestPath } = options;
     const manifest = JSON.parse(readFileSync(manifestPath, "utf8"));
     const entry = manifest.configurationSources.find((file) => file.role === "auth-defaults");
     manifest.configurationSources = manifest.configurationSources.map((file) =>
       file.role === entry.role ? { path: entry.path, role: entry.role } : file,
     );
     writeFileSync(manifestPath, JSON.stringify(manifest));
-    expect(() => loadManifest({ vendorDir: options.vendorDir })).toThrow(/sha256/);
+    expect(() => loadManifest({ manifestPath: options.manifestPath })).toThrow(/sha256/);
     const result = refreshSnapshots(options);
     const text = readFileSync(join(options.repo, entry.path), "utf8");
     expect(result.manifest.configurationSources.find((file) => file.role === entry.role)).toEqual({
@@ -164,12 +164,12 @@ describe("pinned refresh", () => {
       sha256: sha256(text),
       lines: (text.match(/\n/g) ?? []).length,
     });
-    expect(() => loadManifest({ vendorDir: options.vendorDir })).not.toThrow();
+    expect(() => loadManifest({ manifestPath: options.manifestPath })).not.toThrow();
   });
 
   it("refreshes a moved upstream path", () => {
     const options = setup();
-    const manifestPath = join(options.vendorDir, "manifest.json");
+    const { manifestPath } = options;
     const manifest = JSON.parse(readFileSync(manifestPath, "utf8"));
     const entry = manifest.configurationSources.find((file) => file.role === "auth-defaults");
     const oldPath = entry.path;
@@ -189,7 +189,7 @@ describe("pinned refresh", () => {
     ["duplicate role", { path: "etc/new.yaml", role: "config-defaults" }, /more than one file/],
   ])("still rejects %s before refresh writes", (_kind, replacement, error) => {
     const options = setup();
-    const manifestPath = join(options.vendorDir, "manifest.json");
+    const { manifestPath } = options;
     const manifest = JSON.parse(readFileSync(manifestPath, "utf8"));
     manifest.configurationSources = manifest.configurationSources.map((entry) =>
       entry.role === "auth-defaults" ? replacement : entry,

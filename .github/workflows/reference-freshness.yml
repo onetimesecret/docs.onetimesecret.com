@@ -32,7 +32,7 @@
 # unreachable upstream needs nothing at all.
 #
 # To act on a real difference, a maintainer refreshes the snapshots locally
-# (see vendor/onetimesecret/README.md) and opens a PR where the data diff is
+# (see docs/reference/README.md) and opens a PR where the data diff is
 # reviewable.
 ---
 name: Reference freshness
@@ -66,8 +66,8 @@ jobs:
           set -uo pipefail
 
           REPO=onetimesecret/onetimesecret
-          PINNED_RELEASE=$(jq -r '.upstream.release' vendor/onetimesecret/manifest.json)
-          PINNED_COMMIT=$(jq -r '.upstream.commit' vendor/onetimesecret/manifest.json)
+          PINNED_RELEASE=$(jq -r '.upstream.release' src/data/reference/manifest.json)
+          PINNED_COMMIT=$(jq -r '.upstream.commit' src/data/reference/manifest.json)
 
           echo "Pinned: $PINNED_RELEASE ($PINNED_COMMIT)"
 
@@ -100,10 +100,10 @@ jobs:
               echo "::warning::changed upstream: $path (pinned $sha256, $LATEST $UPSTREAM)"
               DIFFERENT=1
             fi
-          done < <(jq -r '(.environmentSource, .configurationSources[]) | "\(.path) \(.sha256)"' vendor/onetimesecret/manifest.json)
+          done < <(jq -r '(.environmentSource, .configurationSources[]) | "\(.path) \(.sha256)"' src/data/reference/manifest.json)
 
           if [ "$DIFFERENT" -eq 1 ]; then
-            echo "::error::Reference inputs changed in $LATEST. Refresh the snapshots (vendor/onetimesecret/README.md) and open a PR."
+            echo "::error::Reference inputs changed in $LATEST. Refresh the snapshots (docs/reference/README.md) and open a PR."
             exit 1
           fi
 

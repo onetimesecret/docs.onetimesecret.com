@@ -4,7 +4,7 @@ import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { afterEach, describe, expect, it } from "vitest";
 import { validateSnapshots } from "../reference.mjs";
-import { repoRoot } from "./manifest.mjs";
+import { MANIFEST_PATH, repoRoot } from "./manifest.mjs";
 import { CONFIG_COVERAGE_PATH, CONFIG_DATA_PATH } from "./extract-config.mjs";
 import { COVERAGE_PATH, DATA_PATH } from "./render-env.mjs";
 
@@ -114,12 +114,12 @@ describe("JSON-only reference pipeline", () => {
     }
   });
 
-  it("rejects a manifest that still lists vendored files", () => {
-    const vendorDir = temp();
-    cpSync(join(repoRoot, "vendor/onetimesecret"), vendorDir, { recursive: true });
-    mkdirSync(join(vendorDir, "etc/defaults"), { recursive: true });
-    writeFileSync(join(vendorDir, "etc/defaults/config.defaults.yaml"), "stowaway: true\n");
-    expect(() => validateSnapshots({ vendorDir })).toThrow(/is not an input/);
+  it("validates against the manifest it is pointed at", () => {
+    const manifestPath = join(temp(), "manifest.json");
+    const manifest = JSON.parse(readFileSync(MANIFEST_PATH, "utf8"));
+    manifest.upstream.commit = "b".repeat(40);
+    writeFileSync(manifestPath, JSON.stringify(manifest));
+    expect(() => validateSnapshots({ manifestPath })).toThrow(/upstream.commit/);
   });
 });
 
