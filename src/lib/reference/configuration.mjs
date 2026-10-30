@@ -64,8 +64,8 @@ export function shapeOf(record) {
   if (value === null || value === undefined) return "null";
   if (typeof value === "boolean") return "boolean";
   if (typeof value === "number") return Number.isInteger(value) ? "integer" : "number";
-  if (Array.isArray(value)) return "empty sequence";
-  if (typeof value === "object") return "empty mapping";
+  if (Array.isArray(value)) return "list";
+  if (typeof value === "object") return "mapping";
   return "string";
 }
 
@@ -76,15 +76,13 @@ export function valueOf(record) {
     const fallback = record.erb.staticFallback;
     if (fallback === null || fallback === undefined) return text(STRINGS.cellNoValue);
     if (typeof fallback === "string") return code(fallback === "" ? '""' : fallback);
-    if (Array.isArray(fallback)) return code("[]");
-    if (typeof fallback === "object") return code("{}");
+    if (typeof fallback === "object") return code(JSON.stringify(fallback));
     return code(String(fallback));
   }
   const value = record.literalValue;
   if (value === null || value === undefined) return code("null");
   if (typeof value === "string") return code(value === "" ? '""' : value);
-  if (Array.isArray(value)) return code("[]");
-  if (typeof value === "object") return code("{}");
+  if (typeof value === "object") return code(JSON.stringify(value));
   return code(String(value));
 }
 
