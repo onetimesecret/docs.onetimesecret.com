@@ -5,7 +5,7 @@ name: Check Links
 # Manual testing commands (requires lychee installed):
 #
 # Internal links check:
-#   lychee --no-progress --offline --root-dir "$(pwd)/src/content/docs" --fallback-extensions md,mdoc \
+#   lychee --no-progress --offline --root-dir "$(pwd)/src/content/docs" --fallback-extensions md,mdoc,mdx \
 #     --remap '^file://(.*)/src/content/docs/(bg|da|de|es|fr|it|ja|ko|mi|nl|pl|pt-br|sv|tr|uk|zh-cn)/install/(.*)$ file://$1/src/content/docs/en/install/$3' \
 #     --remap '^file://(.*)/src/content/docs/(bg|da|de|es|fr|it|ja|ko|mi|nl|pl|pt-br|sv|tr|uk|zh-cn)/reference/(.*)$ file://$1/src/content/docs/en/reference/$3' \
 #     './src/**/[!_]*.md' './src/**/[!_]*.mdoc'
@@ -82,7 +82,8 @@ jobs:
         with:
           # Only check markdown files for internal links
           # --root-dir resolves root-relative paths (e.g. /en/regions/)
-          # --fallback-extensions resolves directory links to index.md files
+          # --fallback-extensions resolves extensionless and directory links,
+          # including component-rendered reference pages whose sources are MDX.
           # --remap points locale install/ and reference/ links at the English
           # source: both trees are English-only, and Starlight serves them at
           # every locale's route as a fallback page. A typo, an unconfigured
@@ -92,7 +93,7 @@ jobs:
             --no-progress
             --offline
             --root-dir ${{ github.workspace }}/src/content/docs
-            --fallback-extensions md,mdoc
+            --fallback-extensions md,mdoc,mdx
             --remap '^file://(.*)/src/content/docs/(bg|da|de|es|fr|it|ja|ko|mi|nl|pl|pt-br|sv|tr|uk|zh-cn)/install/(.*)$ file://$1/src/content/docs/en/install/$3'
             --remap '^file://(.*)/src/content/docs/(bg|da|de|es|fr|it|ja|ko|mi|nl|pl|pt-br|sv|tr|uk|zh-cn)/reference/(.*)$ file://$1/src/content/docs/en/reference/$3'
             './src/**/[!_]*.md'
