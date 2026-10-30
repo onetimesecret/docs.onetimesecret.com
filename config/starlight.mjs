@@ -46,7 +46,8 @@ export const starlightConfig = {
     // route for every page. The renderer flattens the rendered HTML rather
     // than serving source, so MDX reference pages and Markdoc pages come out
     // as text; see src/lib/llm-markdown.ts. llms.txt is a hand-written file
-    // in public/, so the plugin's generated indexes stay off.
+    // in public/, so the plugin's generated indexes stay off. The dropdown is
+    // placed by PageSidebar.astro (see `components` below).
     starlightLlmActions({
       renderMarkdown: { module: "./src/lib/llm-markdown.ts" },
       linkAlternate: true,
@@ -76,8 +77,12 @@ export const starlightConfig = {
 
   components: {
     MarkdownContent: "./src/components/starlight/MarkdownContent.astro",
-    // TextProv controls above "On this page" and in the mobile TOC bar.
+    // Page-actions dropdown and TextProv controls above "On this page", and
+    // in the mobile TOC bar.
     PageSidebar: "./src/components/starlight/PageSidebar.astro",
+    // Starlight's default H1. Its presence stops starlight-llm-actions from
+    // injecting its own PageTitle, which would put the dropdown beside the H1.
+    PageTitle: "./src/components/starlight/PageTitle.astro",
     Header: "./src/components/starlight/Header.astro",
     SiteTitle: "./src/components/starlight/SiteTitle.astro",
     Hero: "./src/components/starlight/Hero.astro",
