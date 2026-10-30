@@ -73,6 +73,12 @@ jobs:
       - name: Check malformed links
         run: pnpm run check:links:malformed
 
+      # public/llms.txt is hand-written and nothing else reads it. Its links
+      # must resolve to live EN pages, and its review stamp must be recent and
+      # newer than every page it links, or the facts it repeats go stale.
+      - name: Check llms.txt
+        run: pnpm run check:llms
+
       # tsc over the .ts sources. `astro check` would also cover .astro and
       # .vue files, but it refuses TypeScript 7, which this repo uses.
       - name: Typecheck

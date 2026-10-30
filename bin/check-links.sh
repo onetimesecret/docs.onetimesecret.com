@@ -123,7 +123,9 @@ fi
 echo ""
 
 # Run lychee on built HTML files
-if lychee "${LYCHEE_ARGS[@]}" 'dist/**/*.html'; then
+# dist/llms.txt is the agent index copied from public/; its external URLs
+# (api.onetimesecret.com, onetimesecret.com) are only checked here.
+if lychee "${LYCHEE_ARGS[@]}" 'dist/**/*.html' dist/llms.txt; then
     echo ""
     echo -e "${GREEN}✓ All links are valid!${NC}"
     exit 0
