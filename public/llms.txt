@@ -1,0 +1,122 @@
+# Onetime Secret Documentation
+
+> Guides and reference for Onetime Secret, a service for sharing passwords and other sensitive information through links that can be opened once and then expire. Covers the hosted service at onetimesecret.com (sharing, accounts, organizations, custom domains, plans) and self-hosting the open-source application.
+
+The REST API endpoint reference is not on this site. It is published at https://api.onetimesecret.com, which has its own llms.txt (https://api.onetimesecret.com/llms.txt) and Markdown exports for each API version. Use this site for what to know before calling the API: regional base URLs, authentication, the quick start, and the client libraries.
+
+The hosted service runs as five independent regions (ca, eu, nz, uk, us). Each region is a separate deployment with its own accounts and data, and API requests go to the region where the account was created.
+
+English pages under /en/ are the source of truth. Translations exist under /bg/, /da/, /de/, /es/, /fr/, /it/, /ja/, /ko/, /mi/, /nl/, /pl/, /pt-br/, /sv/, /tr/, /uk/ and /zh-cn/ and can lag behind the English text. Some pages contain AI-assisted text; the website highlights it, as described on the text provenance page. The site source is at https://github.com/onetimesecret/docs.onetimesecret.com.
+
+## Start here
+
+- [Getting started](https://docs.onetimesecret.com/en/start/): What Onetime Secret does and which part of the documentation matches your task.
+- [Send your first secret](https://docs.onetimesecret.com/en/start/send-your-first-secret/): Create a one-time link, send it, and check its status. No account required.
+- [Glossary](https://docs.onetimesecret.com/en/start/glossary/): Terms used for secrets, receipts, organizations, and hosting.
+- [Hosted or self-hosted?](https://docs.onetimesecret.com/en/start/hosted-or-self-hosted/): Compare the hosted service with running your own instance.
+
+## Sharing secrets
+
+- [Sharing secrets](https://docs.onetimesecret.com/en/share/): Create a secret link, choose its lifetime and optional passphrase, send it, and check its receipt.
+- [Your receipt](https://docs.onetimesecret.com/en/share/your-receipt/): The difference between the secret link and its receipt, checking status, and burning an unread secret.
+- [What recipients see](https://docs.onetimesecret.com/en/share/what-recipients-see/): Opening a link, entering a passphrase, the single reveal, and what activity is recorded.
+- [When a secret link doesn't work](https://docs.onetimesecret.com/en/share/when-a-link-doesnt-work/): Unavailable or damaged links, passphrase errors, and failed page loads versus failed reveals.
+- [Request a secret](https://docs.onetimesecret.com/en/share/request-secret/): Ask someone to send you a one-time link, or collect sensitive text through a form on your custom domain.
+- [Why use secret links?](https://docs.onetimesecret.com/en/share/why-secret-links/): What a temporary link protects against compared with email, chat, or tickets, and what it does not.
+- [Use cases](https://docs.onetimesecret.com/en/share/use-cases/): Credentials, Wi-Fi passwords, license keys, and recovery codes.
+
+## Your account
+
+- [Signing in and resetting your password](https://docs.onetimesecret.com/en/account/signing-in/)
+- [Two-factor authentication and passkeys](https://docs.onetimesecret.com/en/account/two-factor-and-passkeys/): Turning on 2FA, recovery codes, and regaining access without a code.
+- [Sessions and connected identities](https://docs.onetimesecret.com/en/account/sessions-and-identities/): Session length, ending sessions, and linking or removing identity providers.
+- [Your dashboard and recent secrets](https://docs.onetimesecret.com/en/account/dashboard-and-recent-secrets/)
+- [Preferences](https://docs.onetimesecret.com/en/account/preferences/)
+- [Changing your email address](https://docs.onetimesecret.com/en/account/change-your-email/)
+- [Changing your region](https://docs.onetimesecret.com/en/account/change-your-region/): Regions do not exchange data, so changing region means a new account; covers paid plans and moving a custom domain.
+- [Closing your account](https://docs.onetimesecret.com/en/account/close-your-account/): What is deleted and kept, and what happens to shared links and organizations.
+
+## Organizations
+
+- [Organizations](https://docs.onetimesecret.com/en/organizations/): The shared workspace that owns custom domains, members, and activity.
+- [Roles and permissions](https://docs.onetimesecret.com/en/organizations/roles-and-permissions/): The three organization roles and why a plan feature can still be unavailable to a member.
+- [Inviting members](https://docs.onetimesecret.com/en/organizations/inviting-members/)
+- [Ownership and transfer](https://docs.onetimesecret.com/en/organizations/ownership-and-transfer/)
+- [Single sign-on (SSO)](https://docs.onetimesecret.com/en/organizations/sso/): Connect a custom domain to your identity provider, test it, require it, and remove access.
+- [Secret Activity](https://docs.onetimesecret.com/en/organizations/audit-trail/): The organization's record of what happened to its members' secrets, and what it does not show.
+
+## Custom domains
+
+- [Custom domains](https://docs.onetimesecret.com/en/custom-domains/): Share secret links from a domain you own, and which settings each plan includes.
+- [Setting up a custom domain](https://docs.onetimesecret.com/en/custom-domains/setup-guide/): Add the domain, create its DNS records, and verify it.
+- [DNS validation](https://docs.onetimesecret.com/en/custom-domains/dns-validation/): What is checked, what each domain status means, and how to fix a failed check.
+- [Branding your domain](https://docs.onetimesecret.com/en/custom-domains/branding/): Logo, favicon, colour, corner style, font, and reveal instructions.
+- [Email sender](https://docs.onetimesecret.com/en/custom-domains/email-sender/): Send secret-link emails from your own address and add the verifying DNS records.
+- [Homepage and incoming secrets](https://docs.onetimesecret.com/en/custom-domains/homepage-and-incoming/)
+- [Access and privacy](https://docs.onetimesecret.com/en/custom-domains/access-and-privacy/): Sign-in options on your domain, requiring SSO, and sign-up controls.
+
+## Plans and billing
+
+- [How plans work](https://docs.onetimesecret.com/en/billing/): A plan belongs to the organization; your role decides how much of it reaches you.
+- [Managing your subscription](https://docs.onetimesecret.com/en/billing/managing-your-subscription/): Start, change or cancel a paid plan, billing email, invoices, and what a downgrade changes.
+- [Pricing](https://docs.onetimesecret.com/en/pricing/)
+- [Compare plans](https://docs.onetimesecret.com/en/pricing/compare-plans/): Free, Identity Plus, and Team Plus side by side.
+
+## API and SDKs
+
+- [REST API reference](https://api.onetimesecret.com): The canonical endpoint documentation for API v1 and v2, with request and response schemas and a console to try calls. Markdown exports: https://api.onetimesecret.com/doc/api-v1.md and https://api.onetimesecret.com/doc/api-v2.md.
+- [API and client libraries](https://docs.onetimesecret.com/en/api/): Regional base URLs, HTTP Basic authentication with an API token, a curl quick start, and the difference between the secret key and the receipt key.
+- [Client libraries](https://docs.onetimesecret.com/en/api/client-libraries/): Official and community libraries (Ruby, Python, Perl, Java, C#, Go, and more) and which ones support regions and custom domains.
+
+## Self-hosting
+
+- [Self-hosting overview](https://docs.onetimesecret.com/en/self-hosting/): What running your own instance involves and which authentication mode to pick first.
+- [Simple or Full: choosing your authentication mode](https://docs.onetimesecret.com/en/self-hosting/simple-or-full-auth/): What each mode changes about the services you operate.
+- [Images and variants](https://docs.onetimesecret.com/en/install/images-and-variants/): Which container image to deploy and how to pin a release.
+- [Install with Docker](https://docs.onetimesecret.com/en/install/docker/): The Compose stacks the project ships and what must be set before they start.
+- [Install on Linux](https://docs.onetimesecret.com/en/install/linux/): Toolchain versions, system packages, the datastore decision, and bin/install.
+- [Run as a service](https://docs.onetimesecret.com/en/install/run-as-a-service/): systemd units for a bare-metal install.
+- [Reverse proxy and TLS](https://docs.onetimesecret.com/en/install/reverse-proxy-and-tls/): Terminate TLS without losing client IPs or the session cookie.
+- [Verify your install](https://docs.onetimesecret.com/en/install/verify/): Which post-install checks prove the instance works.
+- [Prepare secrets and keys](https://docs.onetimesecret.com/en/configure/secrets-and-keys/): Generate deployment keys and preserve the keys an existing instance depends on.
+- [Configure outbound email](https://docs.onetimesecret.com/en/configure/email/): SMTP delivery for verification and account emails.
+- [Configure sessions and cookies](https://docs.onetimesecret.com/en/configure/sessions-and-cookies/): Keep sessions working through an HTTPS proxy and identity-provider callbacks.
+- [Configure authentication](https://docs.onetimesecret.com/en/configure/authentication/): Enable accounts and sign-in methods, then verify the access policy.
+- [Check security headers](https://docs.onetimesecret.com/en/configure/security-headers/): Security-header conflicts and SSO form-action failures.
+- [Transfer organization ownership](https://docs.onetimesecret.com/en/operate/ownership-transfer/): The operator procedure for moving an organization to another member.
+- [Upgrade guides](https://docs.onetimesecret.com/en/self-hosting/upgrade-guides/): Every release with an upgrade guide, newest first.
+
+## Reference
+
+Generated from the application source and its default configuration.
+
+- [How to read the reference](https://docs.onetimesecret.com/en/reference/): Where the facts come from and how to tell a declared default from an example value.
+- [Configuration files and precedence](https://docs.onetimesecret.com/en/reference/configuration-files-and-precedence/): Which files are read, how values combine, and how environment variables reach a key.
+- [Site and interface configuration](https://docs.onetimesecret.com/en/reference/site-and-interface/)
+- [Features and branding configuration](https://docs.onetimesecret.com/en/reference/features-and-branding/)
+- [Datastore and queues configuration](https://docs.onetimesecret.com/en/reference/datastore-and-queues/)
+- [Email and delivery configuration](https://docs.onetimesecret.com/en/reference/email-and-delivery/)
+- [Auth, logging and billing files](https://docs.onetimesecret.com/en/reference/auth-logging-and-billing-files/)
+- [Environment variables](https://docs.onetimesecret.com/en/reference/environment-variables/): Every documented environment variable with its example, default and release annotation.
+- [Configuration generator](https://docs.onetimesecret.com/en/reference/generator/): Interactive form that produces starting configuration files for a self-hosted install.
+- [Command line reference](https://docs.onetimesecret.com/en/reference/cli/): Every ots command, what it writes, and what it needs to run.
+- [Scheduled jobs reference](https://docs.onetimesecret.com/en/reference/scheduled-jobs/)
+- [Health endpoints reference](https://docs.onetimesecret.com/en/reference/health-endpoints/): Access policy, status codes, payload fields, and which subsystems each endpoint probes.
+
+## Security and trust
+
+- [Security and trust](https://docs.onetimesecret.com/en/security/): The security model, data handling, regional residency, and how to report a vulnerability.
+- [Data protection](https://docs.onetimesecret.com/en/security/data-protection/): What is stored, for how long, where it is processed, and how this supports compliance work.
+- [Where your data lives](https://docs.onetimesecret.com/en/security/where-your-data-lives/): Each region's location, endpoint, hosting provider, custom-domain CNAME, and regulatory environment.
+- [Security best practices](https://docs.onetimesecret.com/en/security/best-practices/)
+- [Our principles](https://docs.onetimesecret.com/en/security/our-principles/): What is deliberately avoided, how little is emailed, and how little is stored.
+- [Vulnerability disclosure](https://docs.onetimesecret.com/en/security/vulnerability-disclosure/): How to report a vulnerability, what to include, and what to expect.
+
+## Optional
+
+- [Onetime Secret](https://onetimesecret.com/llms.txt): The main site's llms.txt, with product pages, regional domains, and the experimental agent network.
+- [Application source](https://github.com/onetimesecret/onetimesecret): The open-source Ruby application that powers the hosted service and self-hosted installs.
+- [Blog](https://blog.onetimesecret.com/): Updates, use cases, and development notes.
+- [Developer on-ramp](https://docs.onetimesecret.com/en/contribute/developer-on-ramp/): Where the code lives, running this documentation site locally, and the checks a change must pass.
+- [How and why we use AI in these docs](https://docs.onetimesecret.com/en/contribute/text-provenance/): What AI highlighting records and what it cannot tell you.
+- [Translations and localization](https://docs.onetimesecret.com/en/translations/): Available languages and how to contribute; the style guide, glossary, and universal guidance for translators are linked from this page.
