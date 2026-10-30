@@ -1,5 +1,5 @@
-// Renderer for the per-page Markdown route and the llms.txt bundles that
-// starlight-llm-actions publishes (config/starlight.mjs).
+// Renderer for the per-page Markdown route that starlight-llm-actions
+// publishes (config/starlight.mjs).
 //
 // The plugin's `'simple'` preset renders each page to HTML in an Astro
 // container and flattens that HTML to Markdown, which is what makes the

@@ -4,8 +4,6 @@ import { sidebar } from "./sidebar.mjs";
 import { EDIT_LINK_BASE_URL } from "./edit-link.mjs";
 import { showStagingWarning, isPrereleaseBuild } from "./domains.mjs";
 import starlightLlmActions from "starlight-llm-actions";
-import { readdirSync } from "node:fs";
-import { fileURLToPath } from "node:url";
 
 // Prerelease builds (e.g. docs.onetimesecret.dev) get a top warning banner
 // and/or a diagonal "PRERELEASE" watermark, independently toggled at build time
@@ -22,16 +20,6 @@ const prerelease = isPrereleaseBuild();
 // absolute URL, so derive it from the same SITE_URL used for canonicals.
 const siteUrl = process.env.SITE_URL || "https://docs.onetimesecret.com";
 const ogImage = new URL("/social-card.png", siteUrl).href;
-
-// Translated trees lag behind English and would otherwise be listed in the
-// llms.txt indexes once per language. Every locale still serves its own `.md`
-// routes; only the site-level indexes are English-only. The list comes from
-// the content directories rather than config/i18n.mjs because the
-// content-only locales in config/unconfigured-locales.allow are built too.
-const docsDir = fileURLToPath(new URL("../src/content/docs/", import.meta.url));
-const translatedTrees = readdirSync(docsDir, { withFileTypes: true })
-  .filter((entry) => entry.isDirectory() && entry.name !== i18nConfig.defaultLocale)
-  .map((entry) => `${entry.name.toLowerCase()}/**`);
 
 /**
  * Starlight configuration object
@@ -54,20 +42,14 @@ export const starlightConfig = {
   pagefind: true,
   routeMiddleware: "./src/middleware/reference.ts",
   plugins: [
-    // Copy/view as Markdown, "open in" an AI assistant, `.md` twin routes,
-    // and llms.txt. The renderer flattens the rendered HTML rather than
-    // serving source, so MDX reference pages and Markdoc pages come out as
-    // text; see src/lib/llm-markdown.ts.
+    // Copy/view as Markdown, "open in" an AI assistant, and a `.md` twin
+    // route for every page. The renderer flattens the rendered HTML rather
+    // than serving source, so MDX reference pages and Markdoc pages come out
+    // as text; see src/lib/llm-markdown.ts. llms.txt is a hand-written file
+    // in public/, so the plugin's generated indexes stay off.
     starlightLlmActions({
       renderMarkdown: { module: "./src/lib/llm-markdown.ts" },
       linkAlternate: true,
-      llmsTxt: {
-        promote: ["en/index"],
-        demote: ["en/reference/**"],
-        // The configuration generator is an interactive tool; its text is a
-        // short intro around a Vue island that the renderer cannot flatten.
-        exclude: [...translatedTrees, "en/reference/generator"],
-      },
     }),
   ],
 
