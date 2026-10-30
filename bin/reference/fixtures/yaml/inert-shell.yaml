@@ -1,0 +1,4 @@
+danger:
+  spawned: <%= system('echo inert') %>
+  backticked: <%= `echo inert` %>
+  interpolated: <%= "#{`id`}" %>

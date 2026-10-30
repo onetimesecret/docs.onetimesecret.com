@@ -1,0 +1,11 @@
+---
+import Default from '@astrojs/starlight/components/MarkdownContent.astro';
+import TextProvMarker from './TextProvMarker.astro';
+// Every enrolled page gets the marker here, with no template or toggle test:
+// the toggle (PageTitle.astro) is presentation, enrollment is what makes the
+// middleware decode the page. Splash pages and StarlightPage routes render
+// this component too.
+const enrolled = Astro.locals.starlightRoute.entry.data.textprov === true;
+---
+{enrolled && <TextProvMarker />}
+<Default><slot /></Default>

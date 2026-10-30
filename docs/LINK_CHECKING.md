@@ -173,6 +173,14 @@ https://rate-limited-site.com/*
 *.example.com
 ```
 
+**English-only sections:** the source check cannot see Starlight's fallback
+pages, so a link from a translated page to `/{locale}/install/...` would look
+broken. The internal-links job in `.github/workflows/check-links.yml` remaps
+those links to the English source with `--remap` instead of excluding them.
+The English page stays under test, and typos or unconfigured locales still
+fail. Prefer a remap over an exclusion when another English-only section
+needs the same treatment.
+
 ## Common Scenarios
 
 ### Scenario 1: PR Check Failed

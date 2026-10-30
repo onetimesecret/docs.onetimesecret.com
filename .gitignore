@@ -1,9 +1,11 @@
 # Astro dev/build outputs
 .astro
 .serena
-.claude
 dist
+# Astro's generated data directory at the repo root. The negation keeps the
+# checked-in reference records under src/data/ visible.
 data
+!src/data/
 
 # Node dependencies
 node_modules
@@ -16,15 +18,18 @@ package-lock.json
 logs
 *.log
 *.txt
+!src/fonts/**/OFL.txt
+!tools/fonts/requirements.txt
+!tools/requirements.txt
 
 # Misc
 .DS_Store
 .fleet
 .idea
 .prompts
-.claude
 .crossnote
 .lycheecache
+billing.yaml
 tmp
 
 # Local env files
@@ -34,9 +39,22 @@ tmp
 *.env-*
 .envrc
 !.env.example
+
 .ruby-version
 .commit_hash.txt
-CLAUDE.md
+
+# Shared agent instructions: of .claude/, only the explicit Claude authoring
+# command is tracked.
+.claude/*
+!.claude/commands/
+.claude/commands/*
+!.claude/commands/textprov.md
+__pycache__/
+# Both forms: a worktree helper that symlinks a shared environment creates
+# `.venv` as a symlink, which `.venv/` does not match, and one such symlink
+# was committed once already.
+.venv
+.venv/
 
 # VSC
 .history

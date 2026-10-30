@@ -1,0 +1,15 @@
+{
+  "_comment": "Patterns use Python fnmatch, where * also matches /, so src/content/docs/*.md covers every depth. exclude maps each pattern to the reason it is excluded.",
+  "include": [
+    "src/content/docs/*.md",
+    "src/content/docs/*.mdoc"
+  ],
+  "exclude": {
+    "src/content/docs/*/reference/environment-variables.mdx": "Data-rendered environment reference; MDX is outside the authoring profile and source prose is copied verbatim from the generated JSON snapshot.",
+    "src/content/docs/*/reference/site-and-interface.mdx": "Data-rendered configuration reference; MDX is outside the authoring profile and source comments are copied verbatim from the generated JSON snapshot.",
+    "src/content/docs/*/reference/features-and-branding.mdx": "Data-rendered configuration reference; MDX is outside the authoring profile and source comments are copied verbatim from the generated JSON snapshot.",
+    "src/content/docs/*/reference/datastore-and-queues.mdx": "Data-rendered configuration reference; MDX is outside the authoring profile and source comments are copied verbatim from the generated JSON snapshot.",
+    "src/content/docs/*/reference/email-and-delivery.mdx": "Data-rendered configuration reference; MDX is outside the authoring profile and source comments are copied verbatim from the generated JSON snapshot.",
+    "src/content/docs/*/reference/auth-logging-and-billing-files.mdx": "Data-rendered configuration reference; MDX is outside the authoring profile and source comments are copied verbatim from the generated JSON snapshot."
+  }
+}

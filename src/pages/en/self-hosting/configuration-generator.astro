@@ -1,47 +1,44 @@
 ---
 // src/pages/en/self-hosting/configuration-generator.astro
 //
-// Hosts the client-side Configuration Generator island inside the standard
-// Starlight docs chrome (sidebar, header). The tool itself is a self-
-// contained Vue component that reads the vendored config JSON schemas and a
-// preset manifest to generate config.yaml / auth.yaml / .env entirely in the
-// browser, with no dependency on the running application.
-import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
-import ConfigGenerator from '../../../components/config-generator/ConfigGenerator.vue';
+// FORWARDER ONLY. The Configuration Generator itself now lives in the
+// documentation collection at src/content/docs/en/reference/generator.mdoc,
+// with normal metadata, search indexing, prev/next and sidebar participation.
+//
+// This file is all that remains of the old custom route, and it exists because
+// Astro's static redirects cannot carry a query string or a fragment: a
+// bookmarked /en/self-hosting/configuration-generator/?...#apply-configuration
+// would otherwise arrive with every selection dropped. The forwarding target
+// is computed by src/components/config-generator/legacy-route.ts, which has
+// its own tests. config/redirects.mjs skips the default locale for this slug,
+// so this URL is a page and not also a redirect; the other sixteen locales
+// redirect straight to the new route.
+import { GENERATOR_ROUTE } from "../../../components/config-generator/legacy-route";
 
-const title = 'Configuration Generator';
-const description =
-  'Pick a few preset options and copy out ready-to-use config.yaml, auth.yaml, ' +
-  'and .env fragments for your self-hosted Onetime Secret instance.';
+const title = "Configuration generator";
 ---
 
-<StarlightPage
-  frontmatter={{
-    title,
-    description,
-    tableOfContents: false,
-    lastUpdated: false,
-  }}>
-  {/* Keep each link on the same line as the words around it: Astro drops
-      whitespace that spans a line break next to an element, which ran the
-      links into their neighbours. */}
-  <p class="cg-intro">
-    Pick the options that fit your deployment, then copy the generated files.
-    The YAML fragments hold only these choices and layer on top of the shipped
-    defaults, so everything else keeps its default value. For the full option
-    surface, see the <a href="/en/self-hosting/configuration/">Configuration Reference</a> and <a href="/en/self-hosting/environment-variables/">Environment Variables</a> pages.
-  </p>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, follow" />
+    <title>{title}</title>
+    <link rel="canonical" href={GENERATOR_ROUTE} />
+    <noscript>
+      <meta http-equiv="refresh" content={`0; url=${GENERATOR_ROUTE}`} />
+    </noscript>
+  </head>
+  <body>
+    <p>
+      The configuration generator has moved to
+      <a href={GENERATOR_ROUTE}>{GENERATOR_ROUTE}</a>.
+    </p>
+    <script>
+      import { generatorTarget } from "../../../components/config-generator/legacy-route";
 
-  <ConfigGenerator client:load />
-</StarlightPage>
-
-<style is:global>
-  /* The two-column tool needs more room than a prose page. Scoped with :has()
-     so only a page that renders the generator gets the wider column. */
-  :root:has(.cg) {
-    --sl-content-width: 66rem;
-  }
-  .cg-intro {
-    max-width: 45rem;
-  }
-</style>
+      window.location.replace(generatorTarget(window.location.search, window.location.hash));
+    </script>
+  </body>
+</html>

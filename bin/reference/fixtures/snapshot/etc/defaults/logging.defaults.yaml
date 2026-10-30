@@ -1,0 +1,5 @@
+---
+default_level: info
+loggers:
+  app:
+    level: <%= ENV['LOG_LEVEL'] || 'info' %>

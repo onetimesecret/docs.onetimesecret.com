@@ -8,6 +8,14 @@
  * card into a 400x400 square at build time. Passing only `width` lets Astro
  * infer `height` from the source and preserve the natural aspect ratio.
  *
+ * Second change: a hero with no image or html gets `.no-media`, which keeps
+ * the copy in one centered column on desktop. Upstream always switches to a
+ * 7fr/4fr grid at 50rem, leaving the right column empty when there is no media.
+ *
+ * Third change: `heroBackground` frontmatter (see src/content.config.ts) draws
+ * an opt-in decorative layer behind the hero; "burn" renders HeroBurn.astro.
+ * The hero becomes a positioning and stacking context for it.
+ *
  * Re-sync this file with upstream on Starlight upgrades.
  */
 import { Image, getImage } from 'astro:assets';
@@ -20,9 +28,11 @@ const PAGE_TITLE_ID = '_top';
 // package's `exports` map does not expose). The barrel re-exports the same
 // component and is the officially supported subpath.
 import { LinkButton } from '@astrojs/starlight/components';
+import HeroBurn from './HeroBurn.astro';
 
 const { data } = Astro.locals.starlightRoute.entry;
 const { title = data.title, tagline, image, actions = [] } = data.hero || {};
+const heroBackground = data.heroBackground;
 
 const imageAttrs = {
 	loading: 'eager' as const,
@@ -71,7 +81,8 @@ if (randomizeHero) {
 }
 ---
 
-<div class="hero">
+<div class:list={['hero', { 'no-media': !darkImage && !rawHtml }]}>
+	{heroBackground === 'burn' && <HeroBurn />}
 	{
 		randomizeHero ? (
 			<Fragment>
@@ -134,6 +145,8 @@ if (randomizeHero) {
 <style>
 	@layer starlight.core {
 		.hero {
+			position: relative;
+			isolation: isolate;
 			display: grid;
 			grid-template-columns: 100%;
 			align-items: center;
@@ -206,6 +219,23 @@ if (randomizeHero) {
 
 			.actions {
 				justify-content: flex-start;
+			}
+
+			.hero.no-media {
+				grid-template-columns: 100%;
+				justify-items: center;
+			}
+
+			.no-media .stack {
+				text-align: center;
+			}
+
+			.no-media .copy {
+				align-items: center;
+			}
+
+			.no-media .actions {
+				justify-content: center;
 			}
 		}
 	}

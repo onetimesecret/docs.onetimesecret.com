@@ -1,0 +1,5 @@
+---
+mode: simple
+full:
+  features:
+    verify: <%= ENV['VERIFY'] != 'false' %>

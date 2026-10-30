@@ -1,0 +1,24 @@
+---
+/**
+ * MobileMenuFooter override: social icons only. The theme and language selects
+ * Starlight renders here by default moved to the top of the mobile drawer —
+ * see Sidebar.astro — so they are no longer a full sidebar's scroll away.
+ */
+import SocialIcons from '@astrojs/starlight/components/SocialIcons.astro';
+---
+
+<div class="mobile-footer sl-flex">
+	<SocialIcons />
+</div>
+
+<style>
+	.mobile-footer {
+		gap: 1rem;
+		align-items: center;
+		padding: 1rem 0;
+		border-top: 1px solid var(--sl-color-gray-6);
+	}
+	.mobile-footer:empty {
+		display: none;
+	}
+</style>

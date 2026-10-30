@@ -1,7 +1,7 @@
 ---
 title: <Why ___ works the way it does>
 description: <One sentence: the invariant or behaviour this note explains, and for whom.>
-audience: <user | admin | developer | operator>
+audience: <end-user | operator | developer | contributor>
 pageType: architecture
 # Optional. Delete if the page describes no application behaviour:
 sourceOfTruth: <onetimesecret/path/to/file.rb (the claim it backs); ...>

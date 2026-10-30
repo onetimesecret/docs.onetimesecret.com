@@ -1,0 +1,11 @@
+GLOSSARY CANDIDATES (uk) — shard 1 (shard 2 running). Register formal ви, lowercase.
+plan → тарифний план ("тарифний план Free"); workspace → робоча область; reveal → розкрити / розкриття; Before/After reveal → Перед розкриттям / Після розкриття; reveal instructions → інструкції щодо розкриття; receipt → квитанція
+owner → власник; admin → адміністратор; member → учасник; custom domain → користувацький домен (glossary; shipped app "власний домен" — glossary/app split to resolve upstream); custom branding → користувацький брендинг; branding → брендування / Бренд
+self-hosting / self-hosted → самостійне розгортання / самостійно розгорнутий; hosted service → хостинговий сервіс; Secret Activity → Активність таємниць; audit trail → журнал аудиту; geo-fencing → геообмеження; SSO → єдиний вхід (SSO)
+Brand UI: Бренд / Доставка; Оновити; Замінити; Завантажити / Зберегти / Видалити логотип; Логотип домену; favicon (Latin); Оновити favicon з домену; Колір бренду; Corners → Стиль кутів (shipped); Сімейство шрифтів; Домени; Керувати; Функції; Керувати брендом
+Compare plans → Порівняння тарифних планів; Where your data lives → Де зберігаються ваші дані; Use cases → Сценарії використання; homepage → домашня сторінка; incoming secrets → вхідні таємниці; encryption at rest / in transit → шифрування в стані спокою / під час передачі; data center region → регіон дата-центру
+--- shard 2 ---
+reveal → розкрити / розкриття (button: Натисніть, щоб показати); custom domain → користувацький домен (prose) / Власний домен (shipped field label); custom branding → користувацький брендинг (app: Власне брендування)
+self-hosting → самостійний хостинг (SPLIT: shard 1 самостійне розгортання); self-hosted instance → самостійно розгорнутий екземпляр; endpoint → кінцева точка; Secret Activity → Активність таємниць (журнали аудиту)
+Stay on page → Залишитися на сторінці; Click to reveal → Натисніть, щоб показати; Expires in → Термін дії закінчується через; statuses → Нова / Попередній перегляд / Розкрито; Domain verified and active → Домен підтверджено та активовано; Last verification check failed → Остання перевірка підтвердження не вдалася
+Continue with / Popular subdomains / Use my root domain → Продовжити з / Популярні піддомени / Використовувати мій кореневий домен; apex domain → кореневий (apex) домен

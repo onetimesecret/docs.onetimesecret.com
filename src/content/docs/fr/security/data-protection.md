@@ -1,6 +1,7 @@
 ---
-title: Protection des données
-description: Ce qu'Onetime Secret stocke, combien de temps les données sont conservées, où elles sont traitées et comment cela soutient vos obligations de conformité.
+textprov: true
+title: "Protection des données"
+description: "Ce que Onetime Secret stocke, combien de temps les données sont conservées, où elles sont traitées et comment cela soutient vos obligations de conformité."
 ---
 
 Cette page décrit comment Onetime Secret traite vos données : ce qui est stocké,
@@ -11,23 +12,23 @@ propre programme de conformité.
 
 - **Le contenu des secrets** est chiffré et destiné à une consultation unique.
   Une fois qu'un secret est consulté — ou qu'il atteint son expiration — il est
-  définitivement supprimé.
+  définitivement d󠄁é󠄁t󠄁r󠄁uit󠄁.
 - **L'expiration est intégrée.** Chaque secret a une durée de vie (configurable
-  dans les limites de votre plan) ; rien n'est destiné à durer indéfiniment.
+  dans les limites de votre f󠄁o󠄁r󠄁f󠄁ai󠄁t󠄁) ; rien n'est destiné à durer indéfiniment.
 - **Métadonnées minimales.** Conformément à notre principe de
-  [Minimisation des données](/fr/principles/data-minimization), nous visons à
+  [Minimisation des données](/en/security/our-principles#data-minimization), nous visons à
   ne conserver que les métadonnées nécessaires au fonctionnement du service.
 
 ## Chiffrement
 
-Les secrets sont **chiffrés en transit et au repos** sur tous les plans. Le
+Les secrets sont **chiffrés en transit et au repos** sur tous les f󠄁o󠄁r󠄁f󠄁ai󠄁t󠄁s. Le
 transport est protégé par TLS, et pour les domaines personnalisés, nous gérons
 automatiquement l'émission et le renouvellement des certificats SSL/TLS.
 
 Pour les informations particulièrement sensibles, vous pouvez ajouter une
 défense en profondeur en activant une **phrase secrète**, en répartissant
 l'information sur plusieurs secrets et en choisissant l'expiration la plus
-courte possible — voir [Meilleures pratiques en matière de sécurité](/fr/security-best-practices).
+courte possible — voir [B󠄁o󠄁n󠄁n󠄁es pratiques de sécurité](/fr/security/best-practices).
 
 ## Où vos données sont traitées (résidence)
 
@@ -35,7 +36,7 @@ Vous pouvez choisir la région où vos données sont traitées et stockées —
 actuellement l'UE, le Royaume-Uni, les États-Unis, le Canada et la
 Nouvelle-Zélande. Cela vous permet de garder les données près de vos
 utilisateurs et dans une juridiction adaptée à vos exigences. Consultez
-[Régions de centres de données](/fr/regions) pour les détails et les points de
+[O󠄁ù󠄁 r󠄁ésident v󠄁o󠄁s données](/en/security/where-your-data-lives/) pour les détails et les points de
 terminaison.
 
 ## Conformité
@@ -49,11 +50,10 @@ remplace pas vos propres contrôles, politiques et examens juridiques.
   données. Dans la plupart des déploiements, vous agissez en tant que
   responsable du traitement et Onetime Secret en tant que sous-traitant pour
   les données limitées concernées.
-- **HIPAA.** Comme indiqué dans nos [cas d'utilisation](/fr/custom-domains/use-cases),
-  Onetime Secret peut offrir un canal plus sûr que le courriel pour échanger
-  des identifiants d'accès initiaux, mais il doit être utilisé comme solution
-  provisoire plutôt que comme système d'enregistrement permanent pour les
-  informations de santé protégées (PHI). Associez-le à un système conforme
+- **HIPAA.** Onetime Secret peut offrir un canal plus sûr que l'󠄁e-󠄁m󠄁a󠄁il pour
+  échanger des identifiants d'accès initiaux, mais il doit être utilisé comme
+  solution provisoire plutôt que comme système d'enregistrement permanent pour
+  les informations de santé protégées (PHI). Associez-le à un système conforme
   dédié pour les flux de travail PHI continus.
 - **Certifications, accords de traitement des données et cadres spécifiques.**
   Pour toute question concernant les certifications, un accord de traitement
@@ -61,7 +61,7 @@ remplace pas vos propres contrôles, politiques et examens juridiques.
   **support@onetimesecret.com**.
 
 Pour les organisations ayant des exigences strictes en matière de contrôle des
-données, l'[auto-hébergement](https://github.com/onetimesecret/onetimesecret)
+données, l'[auto-hébergement](/fr/self-hosting/)
 garde tout au sein de votre propre infrastructure.
 
 ## Des questions ou besoin d'aide ?

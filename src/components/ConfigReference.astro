@@ -1,0 +1,204 @@
+---
+// One generated configuration reference page, rendered from the committed
+// data snapshot. The page wrapper under src/content/docs/en/reference/ passes
+// its owner; everything shown comes from src/data/reference/configuration.json
+// or from the strings in src/lib/reference/configuration.mjs.
+//
+// Source comments and ERB expressions are rendered inside <pre> so they are
+// shown verbatim: a YAML comment is written for a terminal, and reinterpreting
+// it as Markdown would change what the reader sees.
+import configuration from "../data/reference/configuration.json";
+import {
+  conditionalText,
+  environmentOf,
+  shapeOf,
+  sinceOf,
+  sourceOf,
+  STRINGS,
+  structuralText,
+  unsetOf,
+  valueOf,
+} from "../lib/reference/configuration.mjs";
+
+type Page = (typeof configuration.pages)[number];
+type Props = { owner: Page["owner"] };
+
+const { owner } = Astro.props;
+const page = configuration.pages.find((candidate) => candidate.owner === owner);
+if (!page) throw new Error(`configuration.json has no page for ${owner}`);
+
+const { release, commit } = configuration.upstream;
+---
+
+<p>
+  This reference reflects Onetime Secret {release} (<code>{commit.slice(0, 8)}</code>).
+</p>
+
+{
+  page.groups.map((group) => (
+    <section aria-labelledby={group.anchor}>
+      <h2 id={group.anchor}>
+        <a href={`#${group.anchor}`}>{group.heading}</a>
+      </h2>
+      {group.records.map((record) => {
+        const value = valueOf(record);
+        const unset = unsetOf(record);
+        const environment = environmentOf(record);
+        return (
+        <section aria-labelledby={record.anchor} class="record">
+          <h3 id={record.anchor}>
+            <a href={`#${record.anchor}`}>{record.heading}</a>
+          </h3>
+          {record.comment.length > 0 && (
+            <pre class="source-comment"><code>{record.comment.join("\n")}</code></pre>
+          )}
+          <div class="table-scroll" tabindex="0" role="region" aria-labelledby={record.anchor}>
+            <table>
+              <thead>
+                <tr>
+                  {STRINGS.columns.map((column) => <th scope="col">{column}</th>)}
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{shapeOf(record)}</td>
+                  <td>{value.code !== undefined ? <code>{value.code}</code> : value.text}</td>
+                  <td>
+                    {environment.length === 0
+                      ? STRINGS.cellNoEnvironment
+                      : environment.map((name, index) => (
+                          <>
+                            {index > 0 && ", "}
+                            <code>{name}</code>
+                          </>
+                        ))}
+                  </td>
+                  <td>{unset.code !== undefined ? <code>{unset.code}</code> : unset.text}</td>
+                  <td>{sinceOf(record)}</td>
+                  <td><code>{sourceOf(record)}</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          {record.erb?.kind === "runtime-defined" && (
+            <pre class="expression" data-language="ruby"><code>{record.erb.raw}</code></pre>
+          )}
+        </section>
+        );
+      })}
+      {group.blocks.map((block) => (
+        <section aria-labelledby={block.anchor} class="record">
+          <h3 id={block.anchor}>
+            <a href={`#${block.anchor}`}>{block.heading}</a>
+          </h3>
+          <p class="conditional">{conditionalText(block)}</p>
+          <pre class="expression" data-language="erb"><code>{block.raw}</code></pre>
+          <div class="table-scroll" tabindex="0" role="region" aria-labelledby={block.anchor}>
+            <table>
+              <thead>
+                <tr>
+                  {STRINGS.blockColumns.map((column) => <th scope="col">{column}</th>)}
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>{sourceOf(block)}</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      ))}
+    </section>
+  ))
+}
+
+{
+  page.structural.map((section) => (
+    <section aria-labelledby={section.anchor}>
+      <h2 id={section.anchor}>
+        <a href={`#${section.anchor}`}>{section.heading}</a>
+      </h2>
+      <p class="structural">{structuralText(section)}</p>
+      <div class="table-scroll" tabindex="0" role="region" aria-labelledby={section.anchor}>
+        <table>
+          <thead>
+            <tr>
+              {STRINGS.structuralColumns.map((column) => <th scope="col">{column}</th>)}
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{section.entries}</td>
+              <td>
+                {section.fields.length === 0
+                  ? STRINGS.cellNoEnvironment
+                  : section.fields.map((name, index) => (
+                      <>
+                        {index > 0 && ", "}
+                        <code>{name}</code>
+                      </>
+                    ))}
+              </td>
+              <td><code>{sourceOf(section)}</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  ))
+}
+
+<style>
+  .table-scroll {
+    overflow-x: auto;
+  }
+
+  table {
+    display: table;
+    width: 100%;
+    min-width: 42rem;
+    font-size: var(--sl-text-sm);
+  }
+
+  th,
+  td {
+    vertical-align: top;
+  }
+
+  h2[id],
+  h3[id] {
+    scroll-margin-top: calc(var(--sl-nav-height) + 1rem);
+  }
+
+  h2[id] a,
+  h3[id] a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  h2[id] a:hover,
+  h3[id] a:hover {
+    text-decoration: underline;
+  }
+
+  :is(h2, h3)[id]:target {
+    background: var(--sl-color-gray-6);
+    outline: 2px solid var(--sl-color-text-accent);
+    outline-offset: 2px;
+  }
+
+  pre {
+    white-space: pre;
+    overflow-x: auto;
+  }
+
+  .source-comment {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
+
+  code {
+    overflow-wrap: anywhere;
+  }
+</style>

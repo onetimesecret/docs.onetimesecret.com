@@ -1,0 +1,53 @@
+reads:
+  plain_single: <%= ENV['PLAIN_SINGLE'] %>
+  plain_double: <%= ENV["PLAIN_DOUBLE"] %>
+  fetch_literal: <%= ENV.fetch('FETCH_LITERAL', 'fallback') %>
+  fetch_empty: <%= ENV.fetch('FETCH_EMPTY', '') %>
+fallbacks:
+  string: <%= ENV['FB_STRING'] || 'literal' %>
+  number: <%= ENV['FB_NUMBER'] || 3600 %>
+  float: <%= ENV['FB_FLOAT'] || 0.25 %>
+  yes_literal: <%= ENV['FB_TRUE'] || true %>
+  no_literal: <%= ENV['FB_FALSE'] || false %>
+  explicit_nil: <%= ENV['FB_NIL'] || nil %>
+  parenthesised: <%= (ENV['FB_PARENS'] || nil) %>
+  ordered: <%= ENV['FB_FIRST'] || ENV['FB_SECOND'] || 'last' %>
+  ordered_nil: <%= ENV['FB_ONE'] || ENV['FB_TWO'] || nil %>
+booleans:
+  equals_true: <%= ENV['BOOL_EQ_TRUE'] == 'true' %>
+  not_equals_false: <%= ENV['BOOL_NE_FALSE'] != 'false' %>
+  equals_true_or_false: <%= ENV['BOOL_EQ_TRUE_OR'] == 'true' || false %>
+  any_equals_true: <%= ENV['BOOL_A'] == 'true' || ENV['BOOL_B'] == 'true' %>
+  fetch_compare: <%= ENV.fetch('BOOL_FETCH', 'false') == 'true' %>
+blank:
+  json_quoted: <%= (v = ENV['BLANK_JSON'].to_s).empty? ? nil : v.to_json %>
+  tristate_true: <%= (v = ENV['BLANK_TRUE'].to_s).empty? ? nil : v == 'true' %>
+  tristate_false: <%= (v = ENV['BLANK_FALSE'].to_s).empty? ? nil : v != 'false' %>
+  strip_fallback: <%= ENV['BLANK_STRIP'].to_s.strip.empty? ? 'sqlite://data/auth.db' : ENV['BLANK_STRIP'] %>
+  strip_nil: <%= ENV['BLANK_STRIP_NIL'].to_s.strip.empty? ? nil : ENV['BLANK_STRIP_NIL'] %>
+casts:
+  integer: <%= ENV['CAST_INT'].to_i %>
+  integer_safe: <%= ENV['CAST_INT_SAFE']&.to_i || 5 %>
+  string: <%= ENV['CAST_STR'].to_s %>
+  json: <%= ENV['CAST_JSON']&.to_json %>
+  list: <%= ENV['CAST_LIST']&.split(',') %>
+  list_stripped: <%= ENV['CAST_LIST_STRIPPED']&.split(',')&.map(&:strip) || [] %>
+  wrapped_list: <%= (ENV['CAST_WRAPPED'] || '').split(',').map(&:strip).reject(&:empty?) %>
+unsupported:
+  predicate: <%= File.exist?('x') ? 1 : 2 %>
+  include_check: <%= ['true', '1', 'yes'].include?(ENV['UNSUPPORTED_INCLUDE']) %>
+  compound: <%= ENV['UNSUPPORTED_A'] != 'false' && ENV['RACK_ENV'] != 'test' %>
+  interpolated_value: redis://<%= ENV['UNSUPPORTED_HOST'] %>:6379
+  two_spans: <%= ENV['UNSUPPORTED_ONE'] %><%= ENV['UNSUPPORTED_TWO'] %>
+  multiline: >-
+    <%=
+      ENV['UNSUPPORTED_MULTILINE'] ||
+      (ENV['IN_DOCKER'] == '1' ? 'a' : 'b')
+    %>
+literals:
+  string_literal: lax
+  number_literal: 86400
+  bool_literal: true
+  nil_literal: ~
+  empty_string: ''
+  blank_key:

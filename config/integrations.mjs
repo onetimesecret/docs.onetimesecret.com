@@ -3,7 +3,8 @@ import markdoc from "@astrojs/markdoc";
 import vue from "@astrojs/vue";
 import react from "@astrojs/react";
 import { starlightConfig } from "./starlight.mjs";
+import { provenance } from "./textprov.mjs";
 
 export function createIntegrations() {
-  return [markdoc(), vue(), react(), starlight(starlightConfig)];
+  return [provenance(), markdoc(), vue(), react(), starlight(starlightConfig)];
 }

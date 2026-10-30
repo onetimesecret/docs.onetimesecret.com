@@ -1,81 +1,47 @@
 ---
-title: Onetime Secret - Sikre links, stærkere forbindelser
-description: Onetime Secret tilbyder en sikker, midlertidig måde at dele følsom information i en digital verden.
+textprov: true
+title: "Onetime Secret-dokumentation"
+description: "Reference og vejledninger til Onetime Secret API'et og klientbibliotekerne, team-workspaces og brugerdefinerede domæner, selvhosting, og hvordan tjenesten håndterer dine data."
 template: splash
-tableOfContents:
-  minHeadingLevel: 3
+heroBackground: burn
+tableOfContents: false
 hero:
-  title: Sikre links, stærkere forbindelser
-  tagline: Del følsom information sikkert med selvdestruerende links, der kun kan ses én gang.
+  title: Onetime Secret-dokumentation
+  tagline: Giv dit team et workspace med dit brand på dit eget domæne, integrér engangsbeskedlinks i dine egne værktøjer, eller host det hele selv. Alt det, der kommer efter afsendelsen af den første besked.
   actions:
-    - text: Kom i gang
-      link: /da/introduction/
+    - text: Opsæt dit brugerdefinerede domæne
+      link: /da/custom-domains/setup-guide/
       icon: right-arrow
+    - text: API-dokumentation
+      link: /da/api/
+      variant: secondary
     - text: Se på GitHub
       link: https://github.com/onetimesecret/onetimesecret
       icon: external
       variant: minimal
 ---
 
-## Kraften i sikker deling
+## B󠄁randing o󠄁g󠄁 t󠄁ea󠄁ms
 
-Onetime Secret giver en simpel, sikker måde at dele følsom information. Vores tjeneste sikrer, at dine data forbliver private og midlertidige i en stadig mere permanent digital verden.
+P󠄁å den󠄁 h󠄁o󠄁s󠄁te󠄁de tjeneste:󠄁 e󠄁t󠄁 f󠄁æ󠄁l󠄁l󠄁e󠄁s w󠄁o󠄁r󠄁ks󠄁p󠄁a󠄁c󠄁e m󠄁ed roller o󠄁g S󠄁S󠄁O󠄁,󠄁 o󠄁g beskedl󠄁i󠄁n󠄁k󠄁s󠄁 s󠄁e󠄁n󠄁d󠄁t󠄁 f󠄁r󠄁a󠄁 e󠄁t󠄁 d󠄁o󠄁m󠄁æ󠄁n󠄁e󠄁,󠄁 d󠄁i󠄁n󠄁e󠄁 m󠄁o󠄁d󠄁t󠄁a󠄁g󠄁ere󠄁 allerede har tillid til.
 
-{% cardgrid %}
-{% card title="Selvdestruerende beskeder" icon="trash" %}
-Del beskeder, der automatisk slettes efter at være blevet set eller efter et fastsat tidspunkt.
-{% /card %}
-{% card title="Server-side kryptering" icon="lock-closed" %}
-Dine beskeder er sikkert krypteret på vores servere, hvilket sikrer databeskyttelse.
-{% /card %}
-{% card title="Adgangssætningsbeskyttelse" icon="key" %}
-Tilføj et ekstra lag af sikkerhed med brugerdefinerede adgangssætninger til dine delte beskeder.
-{% /card %}
-{% /cardgrid %}
+- **[Brugerdefinerede domæner](/da/custom-domains/)** —󠄁 D󠄁N󠄁S󠄁-󠄁v󠄁a󠄁l󠄁i󠄁d󠄁eri󠄁ng,󠄁 brandi󠄁n󠄁g󠄁 og󠄁 en si󠄁d󠄁e󠄁 t󠄁i󠄁l󠄁 i󠄁n󠄁d󠄁g󠄁å󠄁e󠄁n󠄁d󠄁e󠄁 b󠄁e󠄁s󠄁k󠄁e󠄁d󠄁e󠄁r,󠄁 d󠄁er󠄁 s󠄁e󠄁n󠄁d󠄁e󠄁s󠄁 t󠄁il󠄁 d󠄁i󠄁g󠄁.󠄁
+- **[O󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁one󠄁r󠄁](/en/organizations/)** —󠄁 i󠄁n󠄁v󠄁i󠄁t󠄁é󠄁r󠄁 m󠄁e󠄁d󠄁l󠄁e󠄁m󠄁m󠄁e󠄁r󠄁,󠄁 t󠄁i󠄁l󠄁del ro󠄁l󠄁l󠄁er󠄁,󠄁 og󠄁 gennemg󠄁å󠄁 b󠄁e󠄁s󠄁k󠄁e󠄁d󠄁a󠄁k󠄁t󠄁i󠄁v󠄁i󠄁t󠄁e󠄁t󠄁.󠄁
+- **[S󠄁i󠄁n󠄁g󠄁l󠄁e󠄁 sign󠄁-󠄁o󠄁n󠄁](/en/organizations/sso/)** —󠄁 l󠄁o󠄁gi󠄁n󠄁 m󠄁ed󠄁 E󠄁n󠄁t󠄁r󠄁a󠄁, O󠄁I󠄁D󠄁C󠄁 o󠄁g󠄁 S󠄁A󠄁M󠄁L󠄁 f󠄁o󠄁r󠄁 d󠄁i󠄁n󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁o󠄁n󠄁.󠄁
 
-## Fleksibiliteten i vores tjeneste
+## U󠄁d󠄁v󠄁i󠄁k󠄁l󠄁i󠄁n󠄁g󠄁
 
-Onetime Secret tilbyder tilpassede muligheder for at opfylde dine specifikke behov, uanset om du er en privatperson eller en virksomhed, der søger en branded løsning.
+O󠄁p󠄁r󠄁e󠄁t󠄁 o󠄁g󠄁 h󠄁e󠄁n󠄁t󠄁 b󠄁e󠄁s󠄁k󠄁e󠄁d󠄁e󠄁r󠄁 f󠄁r󠄁a󠄁 s󠄁c󠄁r󠄁i󠄁p󠄁t󠄁s󠄁,󠄁 C󠄁I󠄁-󠄁p󠄁i󠄁p󠄁e󠄁l󠄁i󠄁n󠄁e󠄁s󠄁 o󠄁g󠄁 d󠄁i󠄁n󠄁e󠄁 e󠄁g󠄁n󠄁e󠄁 a󠄁p󠄁p󠄁l󠄁i󠄁k󠄁a󠄁t󠄁i󠄁o󠄁n󠄁e󠄁r󠄁.󠄁
 
-{% cardgrid %}
-{% card title="Tilpasset udløb" icon="clock" %}
-Indstil din besked til at udløbe efter et bestemt tidspunkt, fra minutter til dage.
-{% /card %}
-{% card title="Brugerdefinerede domæner" icon="globe-alt" %}
-Brug dit eget domæne for en personlig og branded oplevelse.
-{% /card %}
-{% card title="Open source" icon="code-bracket" %}
-Vores gennemsigtige, fællesskabsreviderede kodebase sikrer tillid og pålidelighed.
-{% /card %}
-{% /cardgrid %}
+- **[R󠄁E󠄁S󠄁T󠄁 A󠄁P󠄁I󠄁](/da/api/)** —󠄁 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁a󠄁l󠄁e󠄁 e󠄁n󠄁d󠄁e󠄁p󠄁u󠄁n󠄁k󠄁t󠄁e󠄁r󠄁,󠄁 g󠄁o󠄁d󠄁k󠄁e󠄁n󠄁d󠄁e󠄁l󠄁s󠄁e󠄁 o󠄁g󠄁 d󠄁e󠄁n󠄁 f󠄁u󠄁l󠄁d󠄁e󠄁 r󠄁e󠄁f󠄁e󠄁r󠄁e󠄁n󠄁c󠄁e󠄁 p󠄁å󠄁 a󠄁p󠄁i󠄁.󠄁o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁.󠄁c󠄁o󠄁m󠄁.󠄁
+- **[K󠄁l󠄁i󠄁e󠄁n󠄁t󠄁b󠄁i󠄁b󠄁l󠄁i󠄁o󠄁t󠄁e󠄁k󠄁e󠄁r󠄁](/da/api/client-libraries/)** —󠄁 o󠄁f󠄁f󠄁i󠄁c󠄁i󠄁e󠄁l󠄁l󠄁e󠄁 o󠄁g󠄁 fællesskabsvedlige󠄁ho󠄁l󠄁dte SD󠄁K󠄁'󠄁er, og hvilke a󠄁f󠄁 d󠄁e󠄁m󠄁 d󠄁er u󠄁n󠄁derstø󠄁tter󠄁 r󠄁eg󠄁io󠄁ner og brugerdefinerede domæner.󠄁
 
-## Hvorfor vælge Onetime Secret?
+## S󠄁e󠄁l󠄁v󠄁h󠄁o󠄁s󠄁t󠄁i󠄁n󠄁g󠄁
 
-Onetime Secret tilbyder en sikker, compliant og brugervenlig platform til deling af følsom information, der prioriterer dit privatliv og databeskyttelse.
+K󠄁ø󠄁r󠄁 d󠄁e󠄁n󠄁 s󠄁a󠄁m󠄁m󠄁e󠄁 o󠄁p󠄁e󠄁n󠄁 s󠄁o󠄁u󠄁r󠄁c󠄁e󠄁-󠄁a󠄁p󠄁p󠄁l󠄁i󠄁k󠄁a󠄁t󠄁i󠄁o󠄁n󠄁, s󠄁o󠄁m󠄁 d󠄁r󠄁iver o󠄁n󠄁et󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁ret󠄁.󠄁com,󠄁 på󠄁 d󠄁in󠄁 e󠄁g󠄁e󠄁n󠄁 i󠄁n󠄁f󠄁r󠄁astruk󠄁t󠄁u󠄁r.󠄁
 
-{% cardgrid %}
-{% card title="Privatlivs-først design" icon="shield-check" %}
-Bygget fra bunden med privatliv i tankerne, hvilket sikrer, at dine følsomme data forbliver fortrolige og beskyttede.
-{% /card %}
-{% card title="Brugerdefinerede domæner" icon="lock-closed" %}
-State-of-the-art netværksarkitektur giver mulighed for datalokalisering og integration af brugerdefinerede domæner, hvilket giver en branded og compliant oplevelse.
-{% /card %}
-{% card title="Selvdestruerende beskeder" icon="clock" %}
-Beskeder slettes automatisk efter et fastsat tidspunkt eller enkelt visning, hvilket minimerer digitale fodspor og forbedrer sikkerheden.
-{% /card %}
-{% card title="Compliance-klar" icon="document-check" %}
-Designet til at hjælpe med at opfylde globale privatlivsregler, herunder GDPR-, CCPA- og HIPAA-krav.
-{% /card %}
-{% card title="Open-source gennemsigtighed" icon="code-bracket" %}
-Vores open-source model sikrer gennemsigtighed og giver mulighed for fællesskabsdrevne sikkerhedsforbedringer.
-{% /card %}
-{% card title="Brugervenlig grænseflade" icon="user-group" %}
-Intuitivt design gør sikker informationsdeling tilgængelig for både tekniske og ikke-tekniske brugere.
-{% /card %}
-{% /cardgrid %}
+- **[H󠄁o󠄁stet eller s󠄁e󠄁l󠄁v󠄁h󠄁o󠄁s󠄁t󠄁e󠄁t󠄁?󠄁](/en/start/hosted-or-self-hosted/)** —󠄁 hva󠄁d󠄁 d󠄁er æ󠄁n󠄁drer sig󠄁,󠄁 n󠄁å󠄁r󠄁 d󠄁u󠄁 s󠄁e󠄁l󠄁v󠄁 k󠄁ø󠄁r󠄁e󠄁r󠄁 s󠄁e󠄁r󠄁v󠄁e󠄁r󠄁n󠄁e󠄁,󠄁 o󠄁g󠄁 h󠄁v󠄁a󠄁d󠄁 d󠄁e󠄁r󠄁 i󠄁kke g󠄁ø󠄁r.󠄁
+- **[I󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁a󠄁t󠄁i󠄁o󠄁n󠄁](/en/install/docker/)** —󠄁 D󠄁o󠄁c󠄁k󠄁e󠄁r󠄁,󠄁 L󠄁i󠄁n󠄁ux󠄁,󠄁 r󠄁e󠄁v󠄁e󠄁r󠄁s󠄁e󠄁 p󠄁r󠄁o󠄁x󠄁y󠄁 o󠄁g󠄁 T󠄁L󠄁S󠄁,󠄁 k󠄁ø󠄁r󠄁s󠄁e󠄁l󠄁 s󠄁o󠄁m en tj󠄁en󠄁est󠄁e󠄁.󠄁
+- **[K󠄁o󠄁n󠄁f󠄁igu󠄁r󠄁a󠄁t󠄁i󠄁o󠄁n o󠄁g󠄁 o󠄁p󠄁g󠄁r󠄁a󠄁d󠄁er󠄁i󠄁n󠄁g󠄁e󠄁r󠄁](/da/self-hosting/)** —󠄁 k󠄁o󠄁n󠄁f󠄁i󠄁g󠄁u󠄁r󠄁a󠄁t󠄁i󠄁o󠄁n󠄁,󠄁 m󠄁i󠄁l󠄁j󠄁ø󠄁v󠄁a󠄁r󠄁i󠄁a󠄁b󠄁l󠄁e󠄁r󠄁 o󠄁g󠄁 v󠄁e󠄁j󠄁l󠄁e󠄁d󠄁n󠄁i󠄁n󠄁g󠄁e󠄁r󠄁 til versionsopg󠄁ra󠄁deringer.
 
-## Forbedr dit privatliv i dag
-
-Slut dig til de tusindvis af brugere, der stoler på Onetime Secret til sikker, midlertidig deling. Familiedrevet siden 2012.
-
-[Udforsk Premium-planer](/da/pricing/) | [Prøv gratis](/da/introduction/)
+{% homepage-ending variant="receipt" /%}

@@ -1,4 +1,4 @@
-import { component, defineMarkdocConfig } from "@astrojs/markdoc/config";
+import { component, defineMarkdocConfig, Markdoc } from "@astrojs/markdoc/config";
 import starlightMarkdoc from "@astrojs/starlight-markdoc";
 
 // https://docs.astro.build/en/guides/integrations-guide/markdoc/
@@ -11,19 +11,69 @@ export default defineMarkdocConfig({
     // Add custom node types here
   },
   tags: {
-    // Override and extend tags
-    card: {
-      render: "Card",
+    message: {
       attributes: {
-        title: { type: String, required: true },
-        icon: { type: String },
+        speaker: { type: String, required: true, matches: ["User", "Assistant"] },
+      },
+      transform(node, config) {
+        const { speaker } = node.transformAttributes(config);
+        return new Markdoc.Tag(
+          "div",
+          {
+            class: "transcript-message",
+            "data-speaker": speaker,
+            role: "group",
+            "aria-label": `${speaker} message`,
+          },
+          [
+            new Markdoc.Tag("p", { class: "transcript-message__speaker" }, [speaker]),
+            new Markdoc.Tag(
+              "div",
+              { class: "transcript-message__body" },
+              node.transformChildren(config),
+            ),
+          ],
+        );
       },
     },
-    cardgrid: {
-      render: "CardGrid",
-      attributes: {
-        stagger: { type: Boolean, default: false },
+    details: { render: "details" },
+    summary: {
+      render: "summary",
+      transform(node, config) {
+        // Block tags wrap their text in paragraphs; summary requires phrasing content.
+        const children = node
+          .transformChildren(config)
+          .flatMap((child) =>
+            Markdoc.Tag.isTag(child) && child.name === "p" ? child.children : [child],
+          );
+        return new Markdoc.Tag("summary", {}, children);
       },
+    },
+    "homepage-ending": {
+      render: component("./src/components/HomepageEnding.astro"),
+      selfClosing: true,
+      attributes: {
+        variant: {
+          type: String,
+          default: "receipt",
+          matches: ["quiet", "envelope", "receipt"],
+        },
+      },
+    },
+    // Override and extend tags
+    // card and cardgrid come from starlightMarkdoc() above. Overriding them
+    // with render: "Card" emitted a literal <card>/<cardgrid> HTML tag instead
+    // of Starlight's component, so cards had no styling and grids never laid out.
+    // The Configuration Generator island, e.g. {% config-generator /%}
+    //
+    // Phase 4 moved the tool from a custom src/pages route into the
+    // documentation collection so it gets normal metadata, search indexing and
+    // prev/next. The Vue component is reused unchanged; the wrapper exists
+    // because a `client:*` directive has to live in an .astro template.
+    "config-generator": {
+      render: component("./src/components/ConfigGeneratorIsland.astro"),
+      selfClosing: true,
+      attributes: {},
     },
     // Regional globe icon, e.g. {% globe name="earth-canada" /%}
     globe: {

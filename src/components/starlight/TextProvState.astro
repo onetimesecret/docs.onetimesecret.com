@@ -1,0 +1,17 @@
+---
+// Applies the reader's saved TextProv preference to the root element before
+// first paint, so a page opens in the chosen state without a flash. Rendered by
+// TextProvMarker.astro (every enrolled page) and TextProvControls.astro (every
+// page with a table of contents), so a page with the controls but no recorded
+// AI text still shows the switch in its saved position. Running it twice on an
+// enrolled page is harmless. display.ts owns the storage key.
+---
+
+<script is:inline>
+  try {
+    document.documentElement.dataset.textprov =
+      localStorage.getItem("docs:textprov") === "shown" ? "shown" : "hidden";
+  } catch {
+    document.documentElement.dataset.textprov = "hidden";
+  }
+</script>

@@ -1,6 +1,11 @@
 # .github/workflows/ci.yml
 #
-# Build check for pull requests. Ensures the Astro site compiles before merge.
+# Checks and build for pull requests: the drift checks under bin/, the type
+# check, the unit tests, provenance preservation, then the production build.
+#
+# Actions are pinned by commit SHA (the tag in the comment is what Renovate
+# reads), as in the other workflows here. A floating tag can move under a job
+# that runs on every pull request.
 ---
 name: CI
 
@@ -9,10 +14,12 @@ on:
     branches:
       - main
       - develop
-      - "integration/*"
-      - "integrate/*"
+      - "claude/*"
       - "feature/*"
       - "fix/*"
+      - "i18n/*"
+      - "integrate/*"
+      - "integration/*"
 
 concurrency:
   group: ci-${{ github.ref }}
@@ -27,20 +34,84 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v7
-
-      - uses: pnpm/action-setup@v2
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          version: 11.17.0
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0
+        with:
+          version: 12.16.1
           run_install: false
 
       - name: Setup Node.js
-        uses: actions/setup-node@v7
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
-          node-version: 24.18.1
+          node-version: 24.22.1
           cache: pnpm
 
-      - run: pnpm install
+      - run: pnpm install --frozen-lockfile
+
+      - name: Check sidebar links
+        run: pnpm run check:nav
+
+      - name: Check orphaned pages
+        run: pnpm run check:orphans
+
+      - name: Check locale configuration
+        run: pnpm run check:locales
+
+      - name: Check colour contrast
+        run: pnpm run check:contrast
+
+      # Every redirect fragment resolves to a real heading, and the frontmatter
+      # matches the schema. Nothing else enforces the anchor contract: the
+      # fragment never reaches the server, so a reworded heading breaks a
+      # redirect silently.
+      - name: Check frontmatter and redirect anchors
+        run: pnpm run check:frontmatter
+
+      - name: Check malformed links
+        run: pnpm run check:links:malformed
+
+      # tsc over the .ts sources. `astro check` would also cover .astro and
+      # .vue files, but it refuses TypeScript 7, which this repo uses.
+      - name: Typecheck
+        run: pnpm run check:types
+
+      - name: Test
+        run: pnpm test
+
+      - name: Install provenance authoring dependency
+        run: python3 -m pip install -r tools/requirements.txt
+
+      - name: Test provenance authoring
+        run: python3 -m unittest discover -s tools/tests
+
+      # The committed reference snapshots under src/data/reference/ must
+      # validate against the upstream revision pinned in
+      # src/data/reference/manifest.json before anything is built from them.
+      # Read-only: no application checkout, no network.
+      - name: Check generated reference
+        run: pnpm run reference:check
 
       - name: Build
         run: pnpm run build
+
+      - name: Check rendered reference
+        run: pnpm run check:reference:html
+
+      # Reads dist/: every enrolled page has exactly one enrollment marker and
+      # no raw selector left behind. The middleware decodes nothing without
+      # the marker, so a page that lost it would publish its marks verbatim.
+      - name: Check published provenance
+        run: pnpm run check:textprov
+
+      # Runs after Build so that a PR that removes marks on purpose (a
+      # re-anchor, see docs/TEXTPROV.md) still gets a build result.
+      - name: Preserve recorded provenance
+        env:
+          PROVENANCE_BASE: ${{ github.event.pull_request.base.sha }}
+          PROVENANCE_HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          PROVENANCE_MERGE_BASE=$(git merge-base "$PROVENANCE_BASE" "$PROVENANCE_HEAD")
+          python3 tools/dogfood.py check --preserve-only --base "$PROVENANCE_MERGE_BASE" --head "$PROVENANCE_HEAD"

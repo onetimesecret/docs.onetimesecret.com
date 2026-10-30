@@ -21,7 +21,7 @@
 export type OptionType = 'select' | 'boolean';
 
 /** UI grouping only; it has no effect on the generated files. */
-export type OptionGroup = 'deployment' | 'signin' | 'features' | 'secrets';
+export type OptionGroup = 'deployment' | 'signin' | 'features' | 'secrets' | 'network';
 
 export interface GroupSpec {
   key: OptionGroup;
@@ -38,7 +38,8 @@ export const GROUPS: GroupSpec[] = [
   { key: 'deployment', title: 'Deployment' },
   { key: 'signin', title: 'Sign-in', requires: { deployment_mode: 'full' } },
   { key: 'features', title: 'Features' },
-  { key: 'secrets', title: 'Secrets and network' },
+  { key: 'secrets', title: 'Secret behavior' },
+  { key: 'network', title: 'Network' },
 ];
 
 export interface Choice {
@@ -51,6 +52,7 @@ export interface OptionSpec {
   key: string;
   label: string;
   description?: string;
+  help?: { href: string; label: string };
   type: OptionType;
   group: OptionGroup;
   /**
@@ -120,8 +122,8 @@ export const OPTIONS: OptionSpec[] = [
     key: 'deployment_mode',
     label: 'Deployment mode',
     description:
-      'Simple mode uses Redis/Valkey only, no SQL database. Full mode adds ' +
-      'PostgreSQL-backed accounts, teams, and SSO.',
+      'Simple mode stores accounts and secrets in Redis or Valkey. Choose Full ' +
+      'mode for additional sign-in methods; it also needs a SQL database.',
     type: 'select',
     group: 'deployment',
     file: 'auth',
@@ -130,7 +132,7 @@ export const OPTIONS: OptionSpec[] = [
     fallbackDefault: 'simple',
     choices: [
       { value: 'simple', label: 'Simple: Redis/Valkey only' },
-      { value: 'full', label: 'Full: accounts, teams, SSO (adds PostgreSQL)' },
+      { value: 'full', label: 'Full: additional sign-in methods (adds SQL)' },
     ],
     env: [
       { name: 'AUTH_DATABASE_URL', secret: true, when: 'full' },
@@ -138,6 +140,7 @@ export const OPTIONS: OptionSpec[] = [
       // cannot be recovered from SECRET, so full mode must supply it.
       { name: 'AUTH_SECRET', secret: true, when: 'full' },
       { name: 'ARGON2_SECRET', secret: true, when: 'full' },
+      { name: 'ACCOUNT_ID_SECRET', secret: true, when: 'full' },
     ],
   },
   {
@@ -182,7 +185,8 @@ export const OPTIONS: OptionSpec[] = [
     label: 'Single sign-on (SSO)',
     description:
       'External identity providers: OIDC, Entra ID, Google, GitHub, GitLab, ' +
-      'and Apple. Add the credentials for each provider you use to .env.',
+      'and Apple. Enabling SSO also requires provider-specific settings.',
+    help: { href: '/en/reference/environment-variables/', label: 'Find your provider’s SSO settings' },
     type: 'boolean',
     group: 'signin',
     file: 'auth',
@@ -194,8 +198,7 @@ export const OPTIONS: OptionSpec[] = [
     key: 'saml_enabled',
     label: 'SAML 2.0',
     description:
-      'Sign-in through a SAML identity provider such as Okta or ADFS. Its ' +
-      'switch, SAML_ENABLED, goes in .env with the provider settings.',
+      'Let people sign in through a SAML identity provider, such as Okta or ADFS.',
     type: 'boolean',
     group: 'signin',
     file: 'env',
@@ -264,13 +267,15 @@ export const OPTIONS: OptionSpec[] = [
     key: 'regions_enabled',
     label: 'Multi-region / jurisdictions',
     description:
-      'Advertise multiple regional deployments for data-residency requirements.',
+      'Show the regional deployments you operate. Set their names and addresses ' +
+      'in JURISDICTION and JURISDICTIONS; this option does not deploy them.',
     type: 'boolean',
     group: 'features',
     file: 'config',
     path: 'features.regions.enabled',
     schemaPath: { file: 'config', path: 'features.regions.enabled' },
     fallbackDefault: false,
+    env: [{ name: 'JURISDICTION', when: true }, { name: 'JURISDICTIONS', when: true }],
   },
   {
     key: 'markdown_enabled',
@@ -306,7 +311,7 @@ export const OPTIONS: OptionSpec[] = [
       'Trust X-Forwarded-For from an upstream proxy (nginx, Caddy, ALB, k8s ' +
       'ingress) when resolving client IPs.',
     type: 'boolean',
-    group: 'secrets',
+    group: 'network',
     file: 'config',
     path: 'site.network.trusted_proxy.enabled',
     // NOTE: site.network is not present in the static schema, so there is no
@@ -317,9 +322,10 @@ export const OPTIONS: OptionSpec[] = [
     key: 'redis_require_tls',
     label: 'Require TLS to Redis/Valkey',
     description:
-      'Refuse to start unless the datastore URI uses rediss:// or valkeys://.',
+      'Require an encrypted connection to your datastore. Set its address with ' +
+      'rediss:// or valkeys:// in VALKEY_URL or REDIS_URL.',
     type: 'boolean',
-    group: 'secrets',
+    group: 'network',
     file: 'config',
     path: 'redis.require_tls',
     // Not in the static schema either; the fallbackDefault is authoritative.

@@ -1,6 +1,7 @@
 // docs.onetimesecret.com/starlight/config/starlight.mjs
 import { i18nConfig } from "./i18n.mjs";
 import { sidebar } from "./sidebar.mjs";
+import { EDIT_LINK_BASE_URL } from "./edit-link.mjs";
 import { showStagingWarning, isPrereleaseBuild } from "./domains.mjs";
 
 // Prerelease builds (e.g. docs.onetimesecret.dev) get a top warning banner
@@ -27,17 +28,18 @@ export const starlightConfig = {
   title: "Onetime Secret - Docs",
   // favicon: "./src/assets/img/favicon.ico",
   editLink: {
-    baseUrl:
-      "https://github.com/onetimesecret/docs.onetimesecret.com/edit/main/",
+    baseUrl: EDIT_LINK_BASE_URL,
   },
   disable404Route: true,
   credits: true,
   logo: {
-    src: "./src/assets/img/onetime-logo-v3-xl.svg",
-    alt: "Onetime Secret",
+    light: "./src/assets/img/onetime-logo-v3-docs-pill-light.svg",
+    dark: "./src/assets/img/onetime-logo-v3-docs-pill-dark.svg",
+    alt: "Onetime Secret Docs",
     replacesTitle: true,
   },
   pagefind: true,
+  routeMiddleware: "./src/middleware/reference.ts",
   plugins: [],
 
   // Site-wide default social-preview card (Open Graph / Twitter). Emitted on
@@ -62,14 +64,19 @@ export const starlightConfig = {
   ],
 
   components: {
+    MarkdownContent: "./src/components/starlight/MarkdownContent.astro",
+    // TextProv controls above "On this page" and in the mobile TOC bar.
+    PageSidebar: "./src/components/starlight/PageSidebar.astro",
     Header: "./src/components/starlight/Header.astro",
     SiteTitle: "./src/components/starlight/SiteTitle.astro",
     Hero: "./src/components/starlight/Hero.astro",
+    // Mobile drawer: section card + theme/language selects at the top,
+    // social icons only at the bottom. Desktop sidebar is unchanged.
+    Sidebar: "./src/components/starlight/Sidebar.astro",
+    MobileMenuFooter: "./src/components/starlight/MobileMenuFooter.astro",
     // Prerelease only: wrap PageFrame to mount the banner and/or watermark.
     // The override renders each marker conditionally on its own flag.
-    ...(prerelease
-      ? { PageFrame: "./src/components/starlight/PageFrame.astro" }
-      : {}),
+    ...(prerelease ? { PageFrame: "./src/components/starlight/PageFrame.astro" } : {}),
   },
   social: [
     {

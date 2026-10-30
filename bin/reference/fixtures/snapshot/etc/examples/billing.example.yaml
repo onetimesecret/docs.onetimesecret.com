@@ -1,0 +1,15 @@
+---
+schema_version: "1.0"
+enabled: <%= ENV['BILLING_ENABLED'] != 'false' %>
+currency: <%= ENV['BILLING_CURRENCY'] || 'cad' %>
+entitlements:
+  create_secrets:
+    category: core
+    description: Can create basic secrets
+plans:
+  free_v1:
+    name: "Free"
+    tier: free
+stripe_metadata_schema:
+  required:
+    - app: "onetimesecret"

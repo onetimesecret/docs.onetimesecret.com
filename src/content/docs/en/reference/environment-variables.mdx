@@ -1,0 +1,18 @@
+---
+title: Environment variables
+description: "Every environment variable the Onetime Secret application documents, with its example line, default and release annotation."
+audience: operator
+pageType: reference
+sourceOfTruth: "onetimesecret/.env.reference (the application's complete environment-variable reference; src/data/reference/environment-variables.json records the pinned release, revision and source lines)"
+---
+
+import environment from '../../../../data/reference/environment-variables.json';
+import EnvSection from '../../../../components/EnvSection.astro';
+
+<p>This reference reflects Onetime Secret {environment.upstream.release} (<code>{environment.upstream.commit.slice(0, 8)}</code>).</p>
+
+<p style={{ whiteSpace: 'pre-wrap' }}>{environment.header.join('\n')}</p>
+
+{environment.sections.map((section) => (
+  <EnvSection section={section} />
+))}

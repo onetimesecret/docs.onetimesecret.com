@@ -1,0 +1,97 @@
+---
+textprov: true
+title: API and client libraries
+description: Create, retrieve and burn secrets from your own code. Regional base URLs, authentication, a curl quick start, and the official and community client libraries.
+audience: developer
+pageType: reference
+---
+
+Everything the web app does with a secret can be done over HTTPS with JSON. The common pattern is a script or pipeline that creates a secret and hands the link to a person, so the credential never sits in a log, a ticket or a chat history.
+
+The full endpoint reference, with request and response schemas and a try-it console, lives at **[api.onetimesecret.com](https://api.onetimesecret.com)**. This page covers what you need before you open it.
+
+## Base URL
+
+Requests go to the region that holds your account. Each region is a separate deployment and nothing is replicated between them.
+
+```
+https://REGION.onetimesecret.com/api/v2
+```
+
+| `REGION` | Host |
+|---|---|
+| `ca` | `ca.onetimesecret.com` |
+| `eu` | `eu.onetimesecret.com` |
+| `nz` | `nz.onetimesecret.com` |
+| `uk` | `uk.onetimesecret.com` |
+| `us` | `us.onetimesecret.com` |
+
+The bare `onetimesecret.com` host still answers API requests and routes to an active region, but pin a region explicitly so your integration keeps working if that fallback is retired. See [Where your data lives](/en/security/where-your-data-lives/) for what each region means for your data.
+
+On a [custom domain](/en/custom-domains/), the API is at the same path on your domain, and links it creates use that domain:
+
+```
+https://secrets.example.com/api/v2
+```
+
+A [self-hosted](/en/self-hosting/) instance exposes the same API on whatever host you run it on.
+
+## Authentication
+
+Use HTTP Basic authentication. The username is your account email; the password is the API token from your account settings.
+
+```bash
+curl -u 'you@example.com:APITOKEN' https://eu.onetimesecret.com/api/v2/status
+```
+
+Creating and revealing secrets also works without authentication, with the limits of an anonymous user: shorter maximum lifetime, smaller secret size, and no receipts list. Authenticated requests get your plan's limits and show up in your [receipts](/en/share/your-receipt/).
+
+## Quick start
+
+Create a secret that lives for one hour:
+
+```bash
+curl -u 'you@example.com:APITOKEN' \
+  -H 'Content-Type: application/json' \
+  -d '{"secret": {"secret": "the password is hunter2", "ttl": 3600}}' \
+  https://eu.onetimesecret.com/api/v2/secret/conceal
+```
+
+The response contains two records. `record.secret.identifier` is the key you share, as `https://eu.onetimesecret.com/secret/IDENTIFIER`. `record.receipt.identifier` is yours: it shows whether the secret has been viewed and lets you burn it early. Never send the receipt key to the recipient.
+
+Add `"passphrase": "..."` to the `secret` object to require a passphrase on viewing. The passphrase is a󠄁n󠄁 a󠄁c󠄁c󠄁e󠄁ss󠄁 c󠄁h󠄁ec󠄁k󠄁,󠄁 n󠄁o󠄁t t󠄁h󠄁e󠄁 encrypti󠄁o󠄁n󠄁 k󠄁e󠄁y󠄁:󠄁 t󠄁h󠄁e󠄁 s󠄁e󠄁r󠄁v󠄁i󠄁c󠄁e󠄁 s󠄁t󠄁o󠄁r󠄁e󠄁s󠄁 o󠄁n󠄁l󠄁y󠄁 a󠄁 o󠄁n󠄁e󠄁-󠄁w󠄁a󠄁y󠄁 h󠄁a󠄁s󠄁h󠄁 o󠄁f󠄁 i󠄁t󠄁 a󠄁n󠄁d󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁s󠄁 i󠄁t󠄁 b󠄁e󠄁f󠄁o󠄁r󠄁e󠄁 d󠄁e󠄁c󠄁r󠄁y󠄁p󠄁t󠄁i󠄁n󠄁g󠄁 the value.󠄁 A󠄁 l󠄁o󠄁st passphrase c󠄁an󠄁n󠄁o󠄁t󠄁 be r󠄁e󠄁c󠄁o󠄁v󠄁e󠄁r󠄁e󠄁d󠄁,󠄁 s󠄁o󠄁 t󠄁h󠄁e󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 c󠄁a󠄁n󠄁 t󠄁h󠄁en b󠄁e󠄁 n󠄁e󠄁i󠄁t󠄁h󠄁e󠄁r󠄁 r󠄁e󠄁v󠄁e󠄁a󠄁le󠄁d󠄁 n󠄁or󠄁 b󠄁u󠄁r󠄁n󠄁e󠄁d󠄁;󠄁 i󠄁t󠄁 i󠄁s d󠄁e󠄁l󠄁e󠄁te󠄁d󠄁 w󠄁h󠄁e󠄁n󠄁 i󠄁t󠄁 e󠄁x󠄁p󠄁i󠄁r󠄁e󠄁s󠄁.
+
+Reveal a secret, which consumes it:
+
+```bash
+curl -X POST -H 'Content-Type: application/json' -d '{}' \
+  https://eu.onetimesecret.com/api/v2/secret/IDENTIFIER/reveal
+```
+
+Burn a secret before anyone views it, using the receipt key:
+
+```bash
+curl -u 'you@example.com:APITOKEN' -X POST \
+  https://eu.onetimesecret.com/api/v2/receipt/RECEIPT_IDENTIFIER/burn
+```
+
+## API versions
+
+- **v2** is the current public API: JSON in and out, receipts, status and burn endpoints. Build on this one.
+- **v1** is the original form-encoded API (`POST /api/v1/share`). It still works, and most community libraries use it, but new integrations should use v2.
+
+Both are documented at [api.onetimesecret.com](https://api.onetimesecret.com).
+
+## Client libraries
+
+{% cardgrid %}
+{% linkcard title="Client libraries" href="/en/api/client-libraries/" description="The official SDK and community libraries, with notes on which support API v2, regions and custom domains." /%}
+{% linkcard title="Full API reference" href="https://api.onetimesecret.com" description="Every endpoint for v1 and v2, request and response schemas, and a console to try calls against your account." /%}
+{% /cardgrid %}
+
+## Related
+
+- [Where your data lives](/en/security/where-your-data-lives/): choosing a region, and what stays inside it.
+- [Custom domains](/en/custom-domains/): secret links and API access on your own domain.
+- [Self-hosting](/en/self-hosting/): run the API on your own infrastructure.
+- [Developer on-ramp](/en/contribute/developer-on-ramp/): run the application locally and contribute.

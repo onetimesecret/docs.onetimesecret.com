@@ -1,0 +1,392 @@
+---
+// The reader's TextProv controls: a switch that reveals recorded AI-origin
+// text, and an information button whose native popover explains what the
+// highlighting records, links to the reader guide, and opens a prefilled
+// GitHub issue for reporting problems with the page. PageSidebar.astro
+// renders this on every page with a table of contents, enrolled or not, in two
+// places that never show together: the right sidebar above "On this page"
+// (wide viewports) and the sticky mobile TOC bar (`compact`). The preference is
+// global, so a page with no recorded AI text still shows the switch in its
+// saved position; it just has nothing to highlight.
+//
+// Presentation only. Enrollment (the data-textprov-document marker) lives in
+// TextProvMarker.astro. Each instance needs its own `id` because both can be in
+// the DOM at once; display.ts wires every switch it finds.
+import { Icon } from "@astrojs/starlight/components";
+import "../../styles/textprov.css";
+import TextProvState from "./TextProvState.astro";
+
+interface Props {
+  id: string;
+  compact?: boolean;
+}
+const { id, compact = false } = Astro.props;
+const { t, starlightRoute } = Astro.locals;
+const guide = `/${starlightRoute.locale}/contribute/text-provenance`;
+// Prefilled content-feedback issue. The template parameter skips GitHub's
+// template chooser, which would otherwise drop the title and body.
+const pageUrl = new URL(Astro.url.pathname, Astro.site ?? Astro.url).href;
+const report = new URL("https://github.com/onetimesecret/docs.onetimesecret.com/issues");
+report.searchParams.set("template", "content-feedback.md");
+report.searchParams.set("title", `Docs feedback: ${Astro.url.pathname}`);
+report.searchParams.set(
+  "body",
+  `Page: ${pageUrl}\n\n## What is wrong\n\n\n\n## What it should say\n\n`,
+);
+const aboutId = `textprov-about-${id}`;
+const aboutTitleId = `textprov-about-title-${id}`;
+const helpId = `textprov-help-${id}`;
+const anchor = `--textprov-info-${id}`;
+---
+
+<TextProvState />
+<div class:list={["textprov-panel", { "textprov-compact": compact }]} data-pagefind-ignore>
+  {!compact && (
+    <div class="textprov-heading">
+      <h2>
+        {t("textprov.heading")}
+        <!--<svg class="textprov-mark" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+          <circle cx="8" cy="8" r="7" />
+          <path d="M6.25 12V4h2.5a2.25 2.25 0 0 1 0 4.5h-2.5" />
+        </svg>-->
+      </h2>
+      <button
+        type="button"
+        class="textprov-info"
+        popovertarget={aboutId}
+        aria-label={t("textprov.info")}
+        style={`anchor-name: ${anchor}`}
+      >
+        <Icon name="information" size="1.125rem" />
+      </button>
+    </div>
+  )}
+  <div class="textprov-row">
+    <button
+      type="button"
+      class="textprov-switch"
+      role="switch"
+      aria-checked="false"
+      aria-describedby={helpId}
+      data-textprov-toggle
+    >
+      <span class="textprov-track" aria-hidden="true"></span>
+      <span class="textprov-label">{t("textprov.toggle")}</span>
+    </button>
+    {compact && (
+      <button
+        type="button"
+        class="textprov-info"
+        popovertarget={aboutId}
+        aria-label={t("textprov.info")}
+        style={`anchor-name: ${anchor}`}
+      >
+        <Icon name="information" size="1.125rem" />
+      </button>
+    )}
+  </div>
+  <div
+    id={aboutId}
+    class="textprov-about"
+    popover
+    aria-labelledby={aboutTitleId}
+    style={`position-anchor: ${anchor}`}
+  >
+    <h3 id={aboutTitleId}>{t("textprov.aboutTitle")}</h3>
+    <p>{t("textprov.about")}</p>
+    <p>{t("textprov.limits")}</p>
+    <a class="textprov-guide" href={guide}>
+      {t("textprov.learnMore")}
+      <Icon name="right-arrow" size="1em" />
+    </a>
+    <div class="textprov-report">
+      <p>{t("textprov.reportLead")}</p>
+      <a href={report.href}>
+        <Icon name="comment-alt" size="1em" />
+        {t("textprov.report")}
+      </a>
+    </div>
+  </div>
+  <p id={helpId} class="textprov-help">
+    {t("textprov.help")}
+  </p>
+</div>
+
+<script>
+  // Runs once per full page load. The site has no ClientRouter, so there is no
+  // astro:page-load to listen for. If view transitions arrive, listen for that
+  // event instead of calling this at load: it fires on the first load as well,
+  // so doing both would initialise the switches twice.
+  import { initTextProv } from "../../lib/textprov/display";
+  let storage: Storage | undefined;
+  try {
+    storage = window.localStorage;
+  } catch {
+    /* Private browsing may deny storage. */
+  }
+  initTextProv(document, storage);
+</script>
+
+<style>
+  /* Without scripts the controls stay hidden: TextProvState sets the root
+     attribute before paint. */
+  :global(:root:not([data-textprov])) .textprov-panel {
+    display: none;
+  }
+
+  /* Sidebar block: same heading treatment as "On this page", separated from it
+     by the hairline the site uses between sidebar groups. */
+  .textprov-panel {
+    margin-block-end: 1.25rem;
+    padding-block-end: 1rem;
+    border-block-end: 1px solid var(--sl-color-hairline-light);
+  }
+  .textprov-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.25rem;
+  }
+  .textprov-heading h2 {
+    margin: 0;
+  }
+  /* The provenance mark: a circled P drawn as a superscript, like a trademark
+     symbol, rather than the U+2117 glyph, which falls back to another font and
+     sits off baseline. */
+  .textprov-mark {
+    inline-size: 0.6em;
+    block-size: 0.6em;
+    margin-inline-start: 0.15em;
+    /* Relative offset rather than vertical-align so the raised mark does not
+       grow the line box and shift the heading against the info button. */
+    position: relative;
+    inset-block-start: -0.5em;
+    vertical-align: baseline;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.75;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .textprov-row {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  /* The negative margin lines the track up with the heading's first letter. */
+  .textprov-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    min-block-size: 2rem;
+    margin-inline-start: -0.25rem;
+    padding: 0.25rem 0.5rem 0.25rem 0.25rem;
+    color: var(--sl-color-gray-2);
+    background: none;
+    border: 0;
+    border-radius: 1rem;
+    font: inherit;
+    font-size: var(--sl-text-xs);
+    line-height: 1.25;
+    cursor: pointer;
+    text-align: start;
+  }
+  .textprov-track {
+    position: relative;
+    flex: none;
+    inline-size: 2.25rem;
+    block-size: 1.25rem;
+    background: var(--sl-color-gray-6);
+    border: 1px solid var(--sl-color-gray-3);
+    border-radius: 1rem;
+    transition:
+      background-color 0.15s,
+      border-color 0.15s;
+  }
+  .textprov-track::after {
+    content: "";
+    position: absolute;
+    inset-block-start: 2px;
+    inset-inline-start: 2px;
+    inline-size: calc(1.25rem - 6px);
+    block-size: calc(1.25rem - 6px);
+    background: var(--sl-color-gray-2);
+    border-radius: 50%;
+    transition:
+      inset-inline-start 0.15s,
+      background-color 0.15s;
+  }
+  .textprov-switch:hover {
+    color: var(--sl-color-white);
+  }
+  .textprov-switch:hover .textprov-track {
+    border-color: var(--sl-color-gray-2);
+  }
+  /* State follows the root attribute, which is set before paint; aria-checked
+     catches up when display.ts runs. The label wears the highlight treatment
+     from textprov.css as a legend. */
+  :global(:root[data-textprov="shown"]) .textprov-switch {
+    color: var(--sl-color-white);
+  }
+  :global(:root[data-textprov="shown"]) .textprov-track {
+    background: var(--sl-color-accent);
+    border-color: var(--sl-color-accent);
+  }
+  :global(:root[data-textprov="shown"]) .textprov-track::after {
+    inset-inline-start: calc(100% - 1.25rem + 4px);
+    background: white;
+  }
+
+  .textprov-info {
+    display: inline-grid;
+    place-items: center;
+    flex: none;
+    inline-size: 2rem;
+    block-size: 2rem;
+    padding: 0;
+    color: var(--sl-color-gray-3);
+    background: none;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .textprov-info:hover {
+    color: var(--sl-color-text-accent);
+  }
+  .textprov-panel:has(.textprov-about:popover-open) .textprov-info {
+    color: var(--sl-color-text-accent);
+  }
+  .textprov-switch:focus-visible,
+  .textprov-info:focus-visible {
+    outline: 2px solid var(--sl-color-text-accent);
+    outline-offset: 2px;
+  }
+
+  .textprov-about {
+    inline-size: min(20rem, calc(100vw - 2rem));
+    padding: 0.875rem 1rem;
+    color: var(--sl-color-gray-2);
+    background: var(--sl-color-bg-nav);
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.5rem;
+    box-shadow: var(--sl-shadow-md);
+    font-size: var(--sl-text-sm);
+    line-height: 1.5;
+  }
+  .textprov-about h3 {
+    margin: 0 0 0.625rem;
+    color: var(--sl-color-white);
+    font-size: inherit;
+    font-weight: 600;
+  }
+  .textprov-about p {
+    margin: 0 0 0.75rem;
+  }
+  /* PageSidebar styles every sidebar link as a block TOC entry. Two links with
+     different jobs get different shapes: the guide is a text link that
+     continues the explanation; the report is a button-shaped action in its
+     own footer so it reads as something to do, not more to read. */
+  .textprov-guide {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: inherit;
+    font-weight: 500;
+    color: var(--sl-color-text-accent);
+    text-decoration: none;
+  }
+  .textprov-guide:hover {
+    text-decoration: underline;
+  }
+  .textprov-report {
+    margin: 0.875rem -1rem -0.875rem;
+    padding: 0.75rem 1rem 0.875rem;
+    background: var(--sl-color-gray-6);
+    border-block-start: 1px solid var(--sl-color-gray-5);
+    border-end-start-radius: inherit;
+    border-end-end-radius: inherit;
+  }
+  .textprov-report p {
+    margin: 0 0 0.5rem;
+    font-size: var(--sl-text-xs);
+    color: var(--sl-color-gray-3);
+  }
+  .textprov-report a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.375rem 0.75rem;
+    font-size: var(--sl-text-xs);
+    font-weight: 600;
+    color: var(--sl-color-white);
+    background: var(--sl-color-bg-nav);
+    border: 1px solid var(--sl-color-gray-4);
+    border-radius: 0.375rem;
+    text-decoration: none;
+  }
+  .textprov-report a:hover {
+    border-color: var(--sl-color-text-accent);
+    color: var(--sl-color-text-accent);
+  }
+  .textprov-guide:focus-visible,
+  .textprov-report a:focus-visible {
+    outline: 2px solid var(--sl-color-text-accent);
+    outline-offset: 2px;
+  }
+  /* Without anchor positioning the popover keeps its centred default. The
+     anchor name is set inline per instance. The info button sits at the end of
+     its row, so the popover opens towards the start; where it would overflow,
+     as on phones, it spans the viewport less a gutter. */
+  @supports (position-area: block-end) {
+    .textprov-about {
+      inset: auto;
+      margin: 0.25rem 0 0;
+      position-area: block-end span-inline-start;
+      position-try-fallbacks: --textprov-wide;
+    }
+  }
+  @position-try --textprov-wide {
+    position-area: block-end span-all;
+    justify-self: stretch;
+    inline-size: auto;
+    margin: 0.25rem 1rem 0;
+  }
+
+  /* The help text describes the switch to assistive technology only. */
+  .textprov-help {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    margin: 0;
+  }
+
+  /* Mobile TOC bar: one row, no heading, no block spacing. */
+  .textprov-compact {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  .textprov-compact .textprov-row {
+    gap: 0;
+  }
+  .textprov-compact .textprov-switch {
+    margin-inline-start: 0;
+    padding-inline-end: 0.25rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .textprov-track,
+    .textprov-track::after {
+      transition: none;
+    }
+  }
+  @media print {
+    .textprov-panel {
+      display: none;
+    }
+  }
+</style>

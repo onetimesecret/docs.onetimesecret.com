@@ -4,13 +4,11 @@ description: Rename the custom domain name index, resolve duplicate domain recor
 audience: operator
 pageType: how-to
 sourceOfTruth: onetimesecret/migrations/2026-10-15/20261015_01_rename_ascii_display_domain_index.rb (the key rename, its refusal to overwrite, and its rollback); onetimesecret/docs/runbooks/custom-domain-ascii-index-backfill.md:63-457 (the backfill, collision plan review and apply, and index rollback); onetimesecret/lib/onetime/cli/customers_command.rb:43-45 (purge and purge-inactive)
-sidebar:
-  order: 18
 ---
 
 v0.26.18 renames the custom domain name index that v0.26.14 introduced, adds `bin/ots domains resolve-collisions` to remove duplicate domain records, and renames the customer purge commands. One migration ships with it, so rollback is no longer a tag swap.
 
-If you are upgrading from v0.26.16 or earlier, follow the [v0.26.17 guide](./upgrading-v0-26-17) as well, using `backfill-ascii-index` and `purge` wherever it names `backfill-canonical-index` and `purge-one`.
+If you are upgrading from v0.26.16 or earlier, follow the [v0.26.17 guide](/en/self-hosting/upgrading-v0-26-17/) as well, using `backfill-ascii-index` and `purge` wherever it names `backfill-canonical-index` and `purge-one`.
 
 ## Before You Start
 

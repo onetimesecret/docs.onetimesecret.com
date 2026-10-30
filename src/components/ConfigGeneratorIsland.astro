@@ -1,0 +1,28 @@
+---
+// src/components/ConfigGeneratorIsland.astro
+//
+// Hydrates the Configuration Generator Vue island from inside a documentation
+// page. Registered as the Markdoc tag `config-generator` in
+// markdoc.config.mjs and used by src/content/docs/en/reference/generator.mdoc.
+//
+// WHY A WRAPPER AND NOT A DIRECT IMPORT. Markdoc renders a tag through an
+// Astro component, and `client:*` directives are a template feature, so the
+// hydration directive has to sit in an .astro file. The Vue component itself,
+// its URL state and its tests are reused unchanged (plan A4): this file adds a
+// hydration boundary and the wider content column the two-column tool needs,
+// and nothing else.
+import ConfigGenerator from "./config-generator/ConfigGenerator.vue";
+---
+
+<ConfigGenerator client:load />
+
+<style is:global>
+  /* The two-column tool needs more room than a prose page. Scoped with :has()
+     so only a page that renders the generator gets the wider column. */
+  :root:has(.cg) {
+    --sl-content-width: 66rem;
+  }
+  .cg-intro {
+    max-width: 45rem;
+  }
+</style>

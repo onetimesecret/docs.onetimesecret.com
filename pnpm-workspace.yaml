@@ -1,6 +1,8 @@
 allowBuilds:
   esbuild: true
   sharp: true
+minimumReleaseAgeExclude:
+  - textprov@0.2.1
 overrides:
-  yaml: ^2.9.0
-  esbuild: ^0.28.1
+  yaml: ^2.9.1
+  esbuild: ^0.28.2

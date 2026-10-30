@@ -1,0 +1,27 @@
+# config/nav-orphans.allow
+#
+# EN docs pages intentionally not linked from the sidebar (config/sidebar.mjs).
+# Format: one slug per line with a trailing "# reason" comment (required).
+# bin/check-orphans.mjs fails on unlisted orphans AND on stale entries here
+# (slug now linked from the sidebar or from a sidebar-linked page in its own
+# directory, or page deleted).
+#
+# A page linked from a sidebar-linked sibling does NOT belong here. The
+# version-specific upgrade guides (self-hosting/upgrading-v0-*) are the
+# standing example: each is a row in the table on self-hosting/upgrade-guides,
+# which is in the sidebar, and the check counts that as reachable. Adding a
+# release guide means adding its table row, not an entry here.
+#
+# The list is EMPTY, and that is the intended state: after the Phase 2
+# information-architecture rework every EN page is reachable from the sidebar.
+# The seven entries this file used to carry were all retired by that rework —
+# docs-overview was deleted outright; pricing gained a sidebar link under
+# Plans & billing; and the five translations/universal/* children, previously
+# reachable only from their index page's body, are now linked from the
+# Translations & contributing group. None of them was an intentional orphan on
+# the merits: each was a page the sidebar could not file, not a page the
+# sidebar chose not to file.
+#
+# Add an entry only for a page that is genuinely meant to be reachable by URL
+# alone — and say why in the reason, because the reason is the only thing
+# stopping the entry from becoming a place to park navigation debt.

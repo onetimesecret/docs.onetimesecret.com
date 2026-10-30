@@ -23,7 +23,7 @@ CHECK_EXTERNAL=false
 VERBOSE=""
 SKIP_BUILD=false
 USE_GET=false
-LYCHEE_ARGS=""
+LYCHEE_ARGS=()
 
 # Parse arguments
 while [[ $# -gt 0 ]]; do
@@ -100,12 +100,16 @@ fi
 # Build base arguments - check built HTML files in dist/
 # --root-dir resolves root-relative links (like /en/intro) against the dist folder
 DIST_DIR="$(pwd)/dist"
-LYCHEE_ARGS="--config lychee.toml --no-progress --root-dir \"$DIST_DIR\" $VERBOSE"
+# An array, not a string: the previous string form embedded literal quote
+# characters around $DIST_DIR, so lychee received --root-dir '"/path/dist"' and
+# failed before inspecting a single link (Phase 4 plan, blocker V2).
+LYCHEE_ARGS=(--config lychee.toml --no-progress --root-dir "$DIST_DIR")
+if [ -n "$VERBOSE" ]; then LYCHEE_ARGS+=("$VERBOSE"); fi
 
 # Add offline mode for internal-only checks
 if [ "$CHECK_EXTERNAL" = false ]; then
     echo -e "${YELLOW}Checking internal links only (use --external to check all links)${NC}"
-    LYCHEE_ARGS="$LYCHEE_ARGS --offline"
+    LYCHEE_ARGS+=(--offline)
 else
     echo -e "${YELLOW}Checking all links (internal and external)${NC}"
 fi
@@ -113,13 +117,13 @@ fi
 # Use GET method if requested (more compatible but slower)
 if [ "$USE_GET" = true ]; then
     echo -e "${YELLOW}Using GET method (more compatible)${NC}"
-    LYCHEE_ARGS="$LYCHEE_ARGS --method get"
+    LYCHEE_ARGS+=(--method get)
 fi
 
 echo ""
 
 # Run lychee on built HTML files
-if lychee $LYCHEE_ARGS 'dist/**/*.html'; then
+if lychee "${LYCHEE_ARGS[@]}" 'dist/**/*.html'; then
     echo ""
     echo -e "${GREEN}✓ All links are valid!${NC}"
     exit 0
