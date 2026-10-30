@@ -1,6 +1,6 @@
 ---
 title: Environment variables
-description: "Every environment variable the Onetime Secret application documents, with its example line, declared default, release annotation and source location."
+description: "Every environment variable the Onetime Secret application documents, with its example line, default and release annotation."
 audience: operator
 pageType: reference
 sourceOfTruth: "onetimesecret/.env.reference (the application's complete environment-variable reference; src/data/reference/environment-variables.json records the pinned release, revision and source lines)"
@@ -14,5 +14,5 @@ import EnvSection from '../../../../components/EnvSection.astro';
 <p style={{ whiteSpace: 'pre-wrap' }}>{environment.header.join('\n')}</p>
 
 {environment.sections.map((section) => (
-  <EnvSection section={section} sourcePath={environment.source.path} />
+  <EnvSection section={section} />
 ))}

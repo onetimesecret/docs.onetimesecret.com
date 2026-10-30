@@ -1,47 +1,54 @@
 ---
-import type environment from '../data/reference/environment-variables.json';
+import type environment from "../data/reference/environment-variables.json";
 
 type Props = {
   section: (typeof environment.sections)[number];
-  sourcePath: string;
 };
 
-const { section, sourcePath } = Astro.props;
+const { section } = Astro.props;
 ---
 
 <section aria-labelledby={section.anchor}>
-  <h2 id={section.anchor}><a href={`#${section.anchor}`}>{section.heading}</a></h2>
-  {section.prose.length > 0 && <p class="source-prose">{section.prose.join('\n')}</p>}
+  <h2 id={section.anchor}>
+    <a href={`#${section.anchor}`}>{section.heading}</a>
+  </h2>
+  {section.prose.length > 0 && <p class="source-prose">{section.prose.join("\n")}</p>}
   {section.records.length > 0 && (
     <div class="table-scroll" tabindex="0" role="region" aria-labelledby={section.anchor}>
       <table>
         <thead>
           <tr>
-            <th scope="col">Name</th>
             <th scope="col">Example line</th>
-            <th scope="col">Declared default</th>
+            <th scope="col">Default</th>
             <th scope="col">Since</th>
-            <th scope="col">Tags</th>
-            <th scope="col">Source</th>
           </tr>
         </thead>
         <tbody>
           {section.records.map((record) => (
             <>
               <tr>
-                <td id={record.anchor}><a href={`#${record.anchor}`}><code>{record.name}</code></a></td>
-                <td><code>{record.example}</code></td>
-                <td>{record.declaredDefault ? <code>{record.declaredDefault.value}</code> : 'not declared'}</td>
-                <td>{record.since ?? 'not annotated'}</td>
-                <td>{record.tags.length > 0 ? record.tags.join(', ') : 'none'}</td>
-                <td><code>{sourcePath}:{record.sourceSpan}</code></td>
+                <td id={record.anchor}>
+                  <a href={`#${record.anchor}`}>
+                    <code>{record.example}</code>
+                  </a>
+                </td>
+                <td>
+                  {record.declaredDefault ? (
+                    <code>{record.declaredDefault.value}</code>
+                  ) : (
+                    "not declared"
+                  )}
+                </td>
+                <td>{record.since ?? "not annotated"}</td>
               </tr>
               {record.prose.length > 0 && (
                 <tr class="description-row">
-                  <td colspan="6">
+                  <td colspan="3">
                     <details>
-                      <summary>Description of <code>{record.name}</code></summary>
-                      <p class="source-prose">{record.prose.join('\n')}</p>
+                      <summary>
+                        Description of <code>{record.name}</code>
+                      </summary>
+                      <p class="source-prose">{record.prose.join("\n")}</p>
                     </details>
                   </td>
                 </tr>
@@ -65,7 +72,8 @@ const { section, sourcePath } = Astro.props;
     font-size: var(--sl-text-sm);
   }
 
-  th, td {
+  th,
+  td {
     vertical-align: top;
   }
 
