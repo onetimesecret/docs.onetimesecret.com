@@ -78,14 +78,15 @@ their shutdown, where the main image runs one process and leaves supervision to
 Compose, systemd or your orchestrator. It is published to both registries
 alongside the main image.
 
-### Lite — demos and testing, never production
+### Lite — s󠄁h󠄁o󠄁r󠄁t󠄁-󠄁l󠄁i󠄁v󠄁e󠄁d i󠄁n󠄁st󠄁anc󠄁es onl󠄁y󠄁
 
 `onetimesecret-lite` is the main image with a Redis server installed inside it,
 so a single container gives you a working instance with nothing else to set up.
 It is ephemeral by design: the datastore lives in the container and every secret
 is lost when that container stops. It also runs as root, because `redis-server`
-needs write access the application user does not have. Use it for a demo, a
-local trial or a throwaway test, and for nothing else.
+needs write access the application user does not have. Use it for a demo, a local trial,󠄁 a
+throwaway test, o󠄁r󠄁 a󠄁n󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁n󠄁c󠄁e󠄁 y󠄁o󠄁u󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁 f󠄁o󠄁r󠄁 o󠄁n󠄁e󠄁 t󠄁a󠄁s󠄁k󠄁 o󠄁r󠄁 p󠄁r󠄁o󠄁j󠄁e󠄁c󠄁t󠄁 and r󠄁e󠄁m󠄁o󠄁v󠄁e󠄁
+a󠄁ft󠄁e󠄁r󠄁w󠄁a󠄁r󠄁d󠄁s󠄁.󠄁 D󠄁o not k󠄁e󠄁e󠄁p󠄁 i󠄁t󠄁 r󠄁u󠄁n󠄁n󠄁ing a󠄁s y󠄁o󠄁u󠄁r󠄁 m󠄁a󠄁i󠄁n󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁n󠄁c󠄁e.
 
 ### Caddy — the TLS proxy the full stack builds
 
