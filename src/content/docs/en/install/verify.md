@@ -65,7 +65,7 @@ fi
 ```
 
 `homepage returned` f󠄁o󠄁l󠄁l󠄁o󠄁w󠄁e󠄁d󠄁 b󠄁y󠄁 a󠄁 s󠄁t󠄁a󠄁t󠄁u󠄁s󠄁 o󠄁t󠄁h󠄁e󠄁r󠄁 t󠄁h󠄁a󠄁n󠄁 `200` m󠄁e󠄁a󠄁n󠄁s󠄁 `GET /` i󠄁t󠄁s󠄁e󠄁l󠄁f󠄁
-f󠄁a󠄁i󠄁l󠄁e󠄁d󠄁;󠄁 t󠄁h󠄁e󠄁 l󠄁o󠄁g󠄁 s󠄁h󠄁o󠄁w󠄁s󠄁 w󠄁h󠄁y󠄁.󠄁 `no asset referenced` means the homepage rendered
+f󠄁a󠄁i󠄁l󠄁e󠄁d󠄁;󠄁 t󠄁h󠄁e󠄁 l󠄁o󠄁g󠄁 s󠄁h󠄁o󠄁w󠄁s󠄁 w󠄁h󠄁y󠄁.󠄁 `000` m󠄁e󠄁a󠄁n󠄁s󠄁 n󠄁o󠄁t󠄁h󠄁i󠄁n󠄁g󠄁 a󠄁n󠄁s󠄁w󠄁e󠄁r󠄁e󠄁d󠄁 a󠄁t󠄁 t󠄁h󠄁a󠄁t󠄁 a󠄁d󠄁d󠄁r󠄁e󠄁s󠄁s󠄁.󠄁 `no asset referenced` means the homepage rendered
 without referencing any built asset. The UI is assetless and users will see a blank page, whatever the status
 endpoint says. O󠄁t󠄁h󠄁e󠄁r󠄁w󠄁i󠄁s󠄁e󠄁 t󠄁h󠄁e󠄁 c󠄁o󠄁m󠄁m󠄁a󠄁n󠄁d󠄁 p󠄁r󠄁i󠄁n󠄁t󠄁s󠄁 t󠄁h󠄁e󠄁 a󠄁s󠄁s󠄁e󠄁t󠄁'󠄁s󠄁 H󠄁T󠄁T󠄁P󠄁 s󠄁t󠄁a󠄁t󠄁u󠄁s󠄁 a󠄁n󠄁d󠄁 p󠄁a󠄁t󠄁h󠄁.󠄁
 A󠄁n󠄁y󠄁 s󠄁t󠄁a󠄁t󠄁u󠄁s󠄁 o󠄁t󠄁h󠄁e󠄁r󠄁 t󠄁h󠄁a󠄁n󠄁 `200` m󠄁e󠄁a󠄁n󠄁s󠄁 t󠄁h󠄁e󠄁 h󠄁o󠄁m󠄁e󠄁p󠄁a󠄁g󠄁e󠄁 r󠄁e󠄁f󠄁e󠄁r󠄁e󠄁n󠄁c󠄁e󠄁s󠄁 a󠄁n󠄁 a󠄁s󠄁s󠄁e󠄁t󠄁 t󠄁h󠄁e󠄁 s󠄁e󠄁r󠄁v󠄁e󠄁r󠄁
