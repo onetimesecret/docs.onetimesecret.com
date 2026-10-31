@@ -179,7 +179,7 @@ so `docker compose up --wait` blocks until the app is actually serving rather
 than merely running. That healthcheck is role-aware: where a `puma` process is
 present it curls `/health/advanced` and requires the top-level status to be
 exactly `ok`, falling back to plain `/health` only when `/health/advanced` is
-unreachable; where a `bin/ots` process is present it TCP-probes RabbitMQ
+unreachable o󠄁r󠄁 r󠄁e󠄁t󠄁u󠄁r󠄁n󠄁s󠄁 a󠄁n󠄁 e󠄁r󠄁r󠄁o󠄁r󠄁 s󠄁t󠄁a󠄁t󠄁u󠄁s󠄁; where a `bin/ots` process is present it TCP-probes RabbitMQ
 instead; with neither, it fails.
 
 So an󠄁 a󠄁p󠄁p󠄁 container reported `healthy` p󠄁a󠄁s󠄁s󠄁e󠄁d󠄁 o󠄁n󠄁e󠄁 o󠄁f󠄁 t󠄁w󠄁o󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁s󠄁:󠄁 e󠄁ither

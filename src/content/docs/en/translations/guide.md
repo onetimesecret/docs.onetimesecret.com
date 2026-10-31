@@ -160,7 +160,7 @@ The compound form is the canonical spelling for the brand and company name: Onet
     - Translations must maintain the context of confidentiality
     - I󠄁n󠄁 E󠄁n󠄁g󠄁l󠄁i󠄁s󠄁h󠄁,󠄁 p󠄁referred over terms like "message" or "content"
     - Example: "Create a new secret" not "Create a new message"
-    - S󠄁o󠄁m󠄁e󠄁 l󠄁a󠄁n󠄁g󠄁u󠄁a󠄁g󠄁e󠄁s󠄁 u󠄁s󠄁e󠄁 t󠄁h󠄁e󠄁i󠄁r󠄁 w󠄁o󠄁r󠄁d󠄁 f󠄁o󠄁r󠄁 "󠄁m󠄁e󠄁s󠄁s󠄁a󠄁g󠄁e󠄁"󠄁 o󠄁r󠄁 "󠄁c󠄁o󠄁n󠄁t󠄁e󠄁n󠄁t󠄁"󠄁 b󠄁e󠄁c󠄁a󠄁u󠄁s󠄁e󠄁 t󠄁h󠄁e󠄁i󠄁r󠄁 w󠄁o󠄁r󠄁d󠄁 f󠄁o󠄁r󠄁 "󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁"󠄁 s󠄁u󠄁g󠄁g󠄁e󠄁s󠄁t󠄁s󠄁 p󠄁e󠄁r󠄁s󠄁o󠄁n󠄁a󠄁l󠄁 o󠄁r󠄁 h󠄁i󠄁d󠄁d󠄁e󠄁n󠄁 m󠄁a󠄁t󠄁t󠄁e󠄁r󠄁s󠄁.󠄁 S󠄁e󠄁e󠄁 [T󠄁r󠄁a󠄁n󠄁s󠄁l󠄁a󠄁t󠄁i󠄁n󠄁g󠄁 "󠄁S󠄁e󠄁c󠄁r󠄁e󠄁t󠄁"󠄁](/en/translations/universal/secret-concept)
+    - S󠄁o󠄁m󠄁e󠄁 l󠄁a󠄁n󠄁g󠄁u󠄁a󠄁g󠄁e󠄁s󠄁 u󠄁s󠄁e󠄁 t󠄁h󠄁e󠄁i󠄁r󠄁 w󠄁o󠄁r󠄁d󠄁 f󠄁o󠄁r󠄁 "󠄁m󠄁e󠄁s󠄁s󠄁a󠄁g󠄁e󠄁"󠄁 o󠄁r󠄁 "󠄁c󠄁o󠄁n󠄁t󠄁e󠄁n󠄁t󠄁"󠄁 b󠄁e󠄁c󠄁a󠄁u󠄁s󠄁e󠄁 t󠄁h󠄁e󠄁i󠄁r󠄁 w󠄁o󠄁r󠄁d󠄁 f󠄁o󠄁r󠄁 "󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁"󠄁 s󠄁u󠄁g󠄁g󠄁e󠄁s󠄁t󠄁s󠄁 p󠄁e󠄁r󠄁s󠄁o󠄁n󠄁a󠄁l󠄁 o󠄁r󠄁 h󠄁i󠄁d󠄁d󠄁e󠄁n󠄁 m󠄁a󠄁t󠄁t󠄁e󠄁r󠄁s󠄁.󠄁 S󠄁e󠄁e󠄁 [T󠄁r󠄁a󠄁n󠄁s󠄁l󠄁a󠄁t󠄁i󠄁n󠄁g󠄁 "󠄁S󠄁e󠄁c󠄁r󠄁e󠄁t󠄁"󠄁](/en/translations/universal/secret-concept).󠄁
 - **one-time** (adj.) - Describing the single-use nature of the service
     - Must emphasize the temporary, single-use aspect
     - Hyphenated when used as adjective
