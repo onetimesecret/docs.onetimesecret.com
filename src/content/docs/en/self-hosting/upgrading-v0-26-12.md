@@ -12,8 +12,7 @@ authentication mode. There is no schema migration and no dependency change, so r
 a tag swap.
 
 Upgrading from a release earlier than v0.26.11? Work forward through the guides for the
-releases you are skipping, then return here. From v0.22 or v0.23, start with
-[v0.24.0](/en/self-hosting/upgrading-v0-24/). From anywhere in the v0.26 line, complete
+releases you are skipping, then return here. From anywhere in the v0.26 line, complete
 [v0.26.6](/en/self-hosting/upgrading-v0-26/) and then [v0.26.11](/en/self-hosting/upgrading-v0-26-11/). Each of those
 carries configuration work this guide assumes is already done.
 

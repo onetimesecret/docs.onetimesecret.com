@@ -5,7 +5,6 @@ import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 
 const docker = readFileSync(new URL('../src/content/docs/en/install/docker.md', import.meta.url), 'utf8');
-const upgrade = readFileSync(new URL('../src/content/docs/en/self-hosting/upgrading-v0-24.md', import.meta.url), 'utf8');
 const blocks = source => [...source.matchAll(/```bash\n([\s\S]*?)```/g)].map(match => match[1]);
 const bootstrap = blocks(docker).find(block => block.includes('cp .env.example .env'));
 const createKey = source => blocks(source).find(block => block.includes('set -C; openssl'));
@@ -38,7 +37,7 @@ describe('published Docker setup commands', () => {
     }),
   );
 
-  it.each([['Docker', docker], ['v0.24', upgrade]])(
+  it.each([['Docker', docker]])(
     '%s key creation refuses to overwrite either a populated or empty file', (_, source) => fixture(dir => {
       expect(createKey(source)).toBeTruthy();
       expect(shell(createKey(source), dir).status).toBe(0);
