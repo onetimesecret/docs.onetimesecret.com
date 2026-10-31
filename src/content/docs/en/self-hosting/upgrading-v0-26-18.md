@@ -1,4 +1,5 @@
 ---
+textprov: true
 title: Upgrading to v0.26.18
 description: Rename the custom domain name index, resolve duplicate domain records, and update purge scripts when upgrading to v0.26.18
 audience: operator
@@ -98,7 +99,14 @@ Skipping the rename produces no error. The application starts with an empty inde
 ## Verify
 
 1. `bin/ots domains doctor --all` reports no `ascii_index_*` finding.
-2. `valkey-cli -u "$VALKEY_URL" EXISTS custom_domain:canonical_display_domain_index` returns `0`.
+2. T󠄁h󠄁e󠄁 o󠄁l󠄁d󠄁 i󠄁n󠄁d󠄁e󠄁x󠄁 k󠄁e󠄁y󠄁 i󠄁s󠄁 g󠄁o󠄁n󠄁e󠄁.󠄁 F󠄁r󠄁o󠄁m󠄁 a󠄁 s󠄁h󠄁e󠄁l󠄁l󠄁 w󠄁i󠄁t󠄁h󠄁 t󠄁h󠄁e󠄁 a󠄁p󠄁p󠄁l󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁'󠄁s󠄁 d󠄁a󠄁t󠄁a󠄁s󠄁t󠄁o󠄁r󠄁e󠄁 U󠄁R󠄁L󠄁 a󠄁n󠄁d󠄁 `valkey-cli`,󠄁 t󠄁h󠄁i󠄁s󠄁 r󠄁e󠄁t󠄁u󠄁r󠄁n󠄁s󠄁 `0`:󠄁
+
+   ```bash
+   URL="${VALKEY_URL:-$REDIS_URL}"; URL="${URL%%\?*}"
+   valkey-cli -u "$URL" EXISTS custom_domain:canonical_display_domain_index
+   ```
+
+   L󠄁i󠄁k󠄁e󠄁 t󠄁h󠄁e󠄁 a󠄁p󠄁p󠄁l󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁,󠄁 i󠄁t󠄁 u󠄁s󠄁e󠄁s󠄁 `VALKEY_URL` w󠄁h󠄁e󠄁n󠄁 b󠄁o󠄁t󠄁h󠄁 a󠄁re s󠄁e󠄁t.󠄁 T󠄁h󠄁e󠄁 a󠄁p󠄁p󠄁l󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 i󠄁m󠄁a󠄁g󠄁e󠄁 o󠄁n󠄁 t󠄁h󠄁e󠄁 s󠄁h󠄁i󠄁p󠄁p󠄁e󠄁d󠄁 c󠄁o󠄁m󠄁p󠄁o󠄁s󠄁e󠄁 s󠄁t󠄁a󠄁c󠄁k󠄁s󠄁 h󠄁a󠄁s󠄁 n󠄁o󠄁 `valkey-cli`;󠄁 r󠄁un󠄁 i󠄁t󠄁 i󠄁n󠄁 t󠄁h󠄁e󠄁 d󠄁a󠄁t󠄁a󠄁s󠄁t󠄁o󠄁re󠄁 s󠄁e󠄁r󠄁v󠄁i󠄁c󠄁e󠄁 i󠄁nst󠄁e󠄁a󠄁d󠄁,󠄁 w󠄁h󠄁i󠄁c󠄁h󠄁 a󠄁l󠄁r󠄁e󠄁a󠄁d󠄁y󠄁 h󠄁a󠄁s󠄁 t󠄁h󠄁e󠄁 p󠄁a󠄁s󠄁s󠄁w󠄁o󠄁r󠄁d󠄁:󠄁 `docker compose exec maindb valkey-cli EXISTS custom_domain:canonical_display_domain_index`.
 3. Each kept domain serves its secret links. On the Approximated strategy, check it with `bin/ots domains probe <name>`.
 
 ## Troubleshooting
