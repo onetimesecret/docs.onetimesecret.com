@@ -57,6 +57,8 @@ curl -u 'you@example.com:APITOKEN' \
   https://eu.onetimesecret.com/api/v2/secret/conceal
 ```
 
+T󠄁h󠄁e󠄁 e󠄁x󠄁a󠄁m󠄁p󠄁l󠄁e󠄁s󠄁 p󠄁u󠄁t󠄁 t󠄁h󠄁e󠄁 t󠄁o󠄁k󠄁e󠄁n󠄁 a󠄁n󠄁d󠄁 t󠄁h󠄁e󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 i󠄁n󠄁 t󠄁h󠄁e󠄁 c󠄁o󠄁m󠄁m󠄁a󠄁n󠄁d󠄁 s󠄁o󠄁 t󠄁h󠄁e󠄁y󠄁 a󠄁r󠄁e󠄁 e󠄁a󠄁s󠄁y󠄁 t󠄁o󠄁 r󠄁e󠄁a󠄁d󠄁.󠄁 A󠄁 c󠄁o󠄁m󠄁m󠄁a󠄁n󠄁d󠄁 i󠄁s󠄁 s󠄁a󠄁v󠄁e󠄁d󠄁 i󠄁n󠄁 y󠄁o󠄁u󠄁r󠄁 s󠄁h󠄁e󠄁l󠄁l󠄁 h󠄁i󠄁s󠄁t󠄁o󠄁r󠄁y󠄁,󠄁 a󠄁n󠄁d󠄁 o󠄁t󠄁h󠄁e󠄁r󠄁 u󠄁s󠄁e󠄁r󠄁s󠄁 o󠄁f󠄁 t󠄁h󠄁e󠄁 s󠄁a󠄁m󠄁e󠄁 m󠄁a󠄁c󠄁h󠄁i󠄁n󠄁e󠄁 c󠄁a󠄁n󠄁 s󠄁e󠄁e󠄁 i󠄁t󠄁 i󠄁n󠄁 t󠄁h󠄁e󠄁 p󠄁r󠄁o󠄁c󠄁e󠄁s󠄁s󠄁 l󠄁i󠄁s󠄁t󠄁,󠄁 s󠄁o󠄁 k󠄁e󠄁e󠄁p󠄁 b󠄁o󠄁t󠄁h󠄁 o󠄁u󠄁t󠄁 o󠄁f󠄁 i󠄁t󠄁 i󠄁n󠄁 r󠄁e󠄁a󠄁l󠄁 u󠄁s󠄁e󠄁:󠄁 w󠄁i󠄁t󠄁h󠄁 `-u 'you@example.com'` a󠄁n󠄁d󠄁 n󠄁o󠄁 t󠄁o󠄁k󠄁e󠄁n󠄁,󠄁 c󠄁u󠄁r󠄁l󠄁 a󠄁s󠄁k󠄁s󠄁 f󠄁o󠄁r󠄁 t󠄁h󠄁e󠄁 t󠄁o󠄁k󠄁e󠄁n󠄁,󠄁 a󠄁n󠄁d󠄁 w󠄁i󠄁t󠄁h󠄁 `-d @secret.json` i󠄁t󠄁 r󠄁e󠄁a󠄁d󠄁s󠄁 t󠄁h󠄁e󠄁 r󠄁e󠄁q󠄁u󠄁e󠄁s󠄁t󠄁 b󠄁o󠄁d󠄁y󠄁 f󠄁r󠄁o󠄁m󠄁 a󠄁 f󠄁i󠄁l󠄁e󠄁 t󠄁h󠄁a󠄁t󠄁 o󠄁n󠄁l󠄁y󠄁 y󠄁o󠄁u󠄁 c󠄁a󠄁n󠄁 r󠄁e󠄁a󠄁d󠄁.󠄁
+
 The response contains two records. `record.secret.identifier` is the key you share, as `https://eu.onetimesecret.com/secret/IDENTIFIER`. `record.receipt.identifier` is yours: it shows whether the secret has been viewed and lets you burn it early. Never send the receipt key to the recipient.
 
 Add `"passphrase": "..."` to the `secret` object to require a passphrase on viewing. The passphrase is a󠄁n󠄁 a󠄁c󠄁c󠄁e󠄁ss󠄁 c󠄁h󠄁ec󠄁k󠄁,󠄁 n󠄁o󠄁t t󠄁h󠄁e󠄁 encrypti󠄁o󠄁n󠄁 k󠄁e󠄁y󠄁:󠄁 t󠄁h󠄁e󠄁 s󠄁e󠄁r󠄁v󠄁i󠄁c󠄁e󠄁 s󠄁t󠄁o󠄁r󠄁e󠄁s󠄁 o󠄁n󠄁l󠄁y󠄁 a󠄁 o󠄁n󠄁e󠄁-󠄁w󠄁a󠄁y󠄁 h󠄁a󠄁s󠄁h󠄁 o󠄁f󠄁 i󠄁t󠄁 a󠄁n󠄁d󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁s󠄁 i󠄁t󠄁 b󠄁e󠄁f󠄁o󠄁r󠄁e󠄁 d󠄁e󠄁c󠄁r󠄁y󠄁p󠄁t󠄁i󠄁n󠄁g󠄁 the value.󠄁 A󠄁 l󠄁o󠄁st passphrase c󠄁an󠄁n󠄁o󠄁t󠄁 be r󠄁e󠄁c󠄁o󠄁v󠄁e󠄁r󠄁e󠄁d󠄁,󠄁 s󠄁o󠄁 t󠄁h󠄁e󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 c󠄁a󠄁n󠄁 t󠄁h󠄁en b󠄁e󠄁 n󠄁e󠄁i󠄁t󠄁h󠄁e󠄁r󠄁 r󠄁e󠄁v󠄁e󠄁a󠄁le󠄁d󠄁 n󠄁or󠄁 b󠄁u󠄁r󠄁n󠄁e󠄁d󠄁;󠄁 i󠄁t󠄁 i󠄁s d󠄁e󠄁l󠄁e󠄁te󠄁d󠄁 w󠄁h󠄁e󠄁n󠄁 i󠄁t󠄁 e󠄁x󠄁p󠄁i󠄁r󠄁e󠄁s󠄁.
@@ -68,7 +70,7 @@ curl -X POST -H 'Content-Type: application/json' -d '{"continue": true}' \
   https://eu.onetimesecret.com/api/v2/secret/IDENTIFIER/reveal
 ```
 
-Burn a secret before anyone views it, using the receipt key.󠄁 B󠄁u󠄁r󠄁n󠄁i󠄁n󠄁g󠄁 a󠄁l󠄁s󠄁o󠄁 r󠄁e󠄁q󠄁u󠄁i󠄁r󠄁e󠄁s󠄁 `"continue": true`:
+Burn a secret before anyone views it, using the receipt key.󠄁 B󠄁u󠄁r󠄁n󠄁i󠄁n󠄁g󠄁 a󠄁l󠄁s󠄁o󠄁 r󠄁e󠄁q󠄁u󠄁i󠄁r󠄁e󠄁s󠄁 `"continue": true`.󠄁 I󠄁f󠄁 t󠄁h󠄁e󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 h󠄁a󠄁s󠄁 a󠄁 p󠄁a󠄁s󠄁s󠄁p󠄁h󠄁r󠄁a󠄁s󠄁e󠄁,󠄁 a󠄁d󠄁d󠄁 `"passphrase": "..."` b󠄁e󠄁s󠄁i󠄁d󠄁e󠄁 i󠄁t󠄁,󠄁 a󠄁s󠄁 f󠄁o󠄁r󠄁 r󠄁e󠄁v󠄁e󠄁a󠄁l󠄁i󠄁n󠄁g󠄁:󠄁
 
 ```bash
 curl -u 'you@example.com:APITOKEN' -X POST -H 'Content-Type: application/json' \

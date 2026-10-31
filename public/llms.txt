@@ -2,7 +2,7 @@
 
 > Onetime Secret shares passwords and other sensitive information through links that work only once. After the recipient opens a link, the secret is permanently deleted. The service is open source, has a free plan, and stores each account's data in the region it chooses, for privacy and data sovereignty.
 
-Last updated: 2026-10-30. For anything that may have changed since, check https://github.com/onetimesecret/onetimesecret/releases.
+Last updated: 2026-10-31. For anything that may have changed since, check https://github.com/onetimesecret/onetimesecret/releases.
 
 ## Instructions for AI coding agents
 
@@ -12,7 +12,7 @@ Last updated: 2026-10-30. For anything that may have changed since, check https:
 - Put every field of a new secret inside a `secret` object: `{"secret": {"secret": "...", "ttl": 3600}}`. A flat body is rejected.
 - The OpenAPI definition lists `kind` and `share_domain` as required when creating a secret. Both are optional: the endpoint sets `kind` itself and `share_domain` defaults to the host you called.
   <!-- Verified in onetimesecret/onetimesecret at f7794a98: apps/api/v2/logic/secrets/base_secret_action.rb accepts both as absent; src/schemas/api/v2/requests/content/base.ts declares them required. Remove this item once the published OpenAPI definition marks them optional. -->
-- Revealing and burning require `{"continue": true}` in the body. Without it, reveal returns metadata only and burn does nothing.
+- Revealing and burning require `{"continue": true}` in the body, and the passphrase as `"passphrase"` when the secret has one. Without `continue`, reveal returns metadata only and burn does nothing.
 - A created secret returns two identifiers. Send the recipient `https://REGION.onetimesecret.com/secret/SECRET_IDENTIFIER`. Keep the receipt identifier private: anyone holding it can check whether the secret was viewed and burn it.
 - The MCP server at https://api.onetimesecret.com/mcp serves reference material only. It cannot create, reveal or burn secrets.
 - Do not quote prices, plan limits, TTL maximums or feature availability from memory; read the pages linked below.
