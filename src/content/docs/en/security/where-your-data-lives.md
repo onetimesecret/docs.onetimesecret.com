@@ -134,7 +134,7 @@ Onetime Secret's United Kingdom data center region (UK), located in London.
 
 - **Location**: London, United Kingdom
 - **URL**: [uk.onetimesecret.com](https://uk.onetimesecret.com)
-- **Hosting provider**: <a href="https://upcloud.com" target="_blank" rel="noopener noreferrer nofollow">UpCloud</a>,󠄁 a󠄁 F󠄁i󠄁n󠄁n󠄁i󠄁s󠄁h󠄁 p󠄁r󠄁o󠄁v󠄁i󠄁d󠄁er󠄁;󠄁 t󠄁h󠄁i󠄁s󠄁 r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁 r󠄁u󠄁n󠄁s in it󠄁s󠄁 L󠄁o󠄁ndo󠄁n󠄁 d󠄁a󠄁t󠄁a󠄁 c󠄁e󠄁n󠄁t󠄁e󠄁r󠄁
+- **Hosting provider**: <a href="https://upcloud.com" target="_blank" rel="noopener noreferrer nofollow">UpCloud</a>,󠄁 a󠄁 F󠄁inn󠄁is󠄁h󠄁 p󠄁r󠄁o󠄁v󠄁ide󠄁r󠄁
 - **Custom domain CNAME**: `identity.ingress.onetime.co` (anycast)
 
 **Regulatory environment.** The United Kingdom's data protection framework is governed by the **UK General Data Protection Regulation (UK GDPR)** and the **Data Protection Act 2018**. Post-Brexit, the UK maintains its own data protection regime that is closely aligned with the EU GDPR.
