@@ -57,7 +57,7 @@ This glossary provides standardized translations for key terms across languages 
 | English | German (DE) | German (AT) | French (FR) | French (CA) | Polish (PL) | Context |
 |---------|-------------|-------------|-------------|-------------|------------|-------|
 | one-time access | einmaliger Zugang | einmaliger Zugang | accès unique | accès unique | jednorazowy dostęp | Core security feature |
-| passphrase protection | Schutz durch Passphrase | Schutz durch Sicherheitsphrase | protection par phrase secrète | protection par phrase d'authentification | ochrona frazą dostępową | Additional security |
+| passphrase protection | Schutz durch Passphrase | Schutz durch Sicherheitsphrase | protection par phrase secrète | protection par phrase s󠄁e󠄁c󠄁r󠄁è󠄁te | ochrona frazą dostępową | Additional security |
 | encrypted in transit | verschlüsselt bei der Übertragung | verschlüsselt bei der Übertragung | chiffré en transit | chiffré en transit | zaszyfrowany w trakcie przesyłania | Data protection method |
 | encrypted at rest | verschlüsselt im Ruhezustand | verschlüsselt im Ruhezustand | chiffré au repos | chiffré au repos | zaszyfrowany w spoczynku | Storage protection |
 

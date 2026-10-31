@@ -82,15 +82,16 @@ web unit orders itself `After=network.target redis-server.service
 valkey.service`, hedging across both common service names. The worker and
 scheduler additionally order themselves after `onetimesecret-web.service`.
 
-The environment comes from `.env` in the working directory, sourced inside
-`ExecStart` rather than through systemd's `EnvironmentFile`:
+The u󠄁n󠄁i󠄁t󠄁s󠄁 s󠄁o󠄁u󠄁r󠄁c󠄁e `.env` f󠄁r󠄁o󠄁m󠄁 the working directory inside `ExecStart`:
 
 ```ini
 ExecStart=/bin/bash -lc 'set -a; source .env; set +a; exec bundle exec puma -C etc/puma.rb'
 ```
 
 The worker and scheduler use the same form around `bin/ots worker` and
-`bin/ots scheduler`.
+`bin/ots scheduler`. A󠄁l󠄁l󠄁 t󠄁h󠄁r󠄁e󠄁e󠄁 u󠄁n󠄁i󠄁t󠄁s󠄁 a󠄁l󠄁s󠄁o󠄁 r󠄁e󠄁a󠄁d󠄁 `/etc/default/onetimesecret`
+b󠄁e󠄁f󠄁o󠄁r󠄁e󠄁 `.env`;󠄁 s󠄁e󠄁e󠄁 [E󠄁n󠄁v󠄁i󠄁r󠄁o󠄁n󠄁m󠄁e󠄁n󠄁t󠄁 f󠄁i󠄁l󠄁e󠄁s󠄁](#environment-files) f󠄁o󠄁r󠄁 w󠄁h󠄁i󠄁c󠄁h󠄁 v󠄁a󠄁l󠄁u󠄁e󠄁
+a󠄁p󠄁p󠄁l󠄁i󠄁e󠄁s󠄁.󠄁
 
 The `-l` in `bash -lc` is load-bearing beyond `.env`. It is what puts a Ruby
 installed for the `onetime` user on the service's `PATH` — but only through the
