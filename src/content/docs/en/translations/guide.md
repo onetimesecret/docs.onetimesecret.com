@@ -176,7 +176,6 @@ The compound form is the canonical spelling for the brand and company name: Onet
 - **encryption** (n.) - The process of encoding secrets
     - Technical term that should remain consistent
     - Distinguish from "encoding" or "hashing"
-    - Example: "All secrets use end-to-end encryption"
 - **rate limiting** (n.) - System to prevent abuse
     - Technical term for request restriction
     - Keep hyphenation in English

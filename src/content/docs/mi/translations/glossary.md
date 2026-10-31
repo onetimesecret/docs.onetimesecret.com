@@ -73,7 +73,6 @@ Ko tēnei papakupu ka whakarato i ngā whakamaoritanga paerewa mō ngā kupu mat
 | passphrase protection | tiaki kupu karapa | Haumaru tāpiri |
 | encrypted in transit | muhumuhu i te wā kawe | Tikanga tiaki raraunga i te wā kawe |
 | encrypted at rest | muhumuhu i te wā noho | Tiaki penapena |
-| end-to-end encryption | whakamuhumuhu pito-ki-pito | Whakamuhumuhu mai i te kaituku ki te kaiwhiwhi |
 | rate limiting | whakawhāiti tukanga | Pūnaha ki te ārai i te tūkino |
 | security | haumaru | Te āhuatanga tiaki |
 
