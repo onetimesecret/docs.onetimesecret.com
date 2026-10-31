@@ -222,7 +222,9 @@ const movedPages = [
   // Documentation audit 2026-10-30, batch 1. The data-protection page retired
   // in every locale: its content belongs to the trust centre. Its first topic,
   // what is stored and for how long, is the Data minimization section, which
-  // also states the backup exception the retired page left out.
+  // also states the backup exception the retired page left out. In-prose links
+  // that sent readers there for encryption or a general overview point at the
+  // Security & Trust index instead, so the two targets differ on purpose.
   {
     from: "security/data-protection",
     to: "security/our-principles",
