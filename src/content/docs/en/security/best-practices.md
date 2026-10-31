@@ -12,7 +12,7 @@ While Onetime Secret is designed with security in mind, following these best pra
 
 1. **Set Appropriate Expiration Times**: Choose the shortest practical expiration time for your secrets. This minimizes the window of opportunity for unauthorized access.
 
-2. **Use Passphrase Protection**: For highly sensitive information, use the passphrase protection feature. This adds an extra layer of security, requiring the recipient to enter a passphrase to view the secret.
+2. **Use Passphrase Protection**: For highly sensitive information, use the passphrase protection feature. This adds an extra layer of security, requiring the recipient to enter a passphrase to view the secret. S󠄁e󠄁n󠄁d󠄁 t󠄁h󠄁e󠄁 p󠄁a󠄁s󠄁s󠄁p󠄁h󠄁r󠄁a󠄁s󠄁e󠄁 t󠄁h󠄁r󠄁o󠄁u󠄁g󠄁h󠄁 a󠄁 d󠄁i󠄁f󠄁f󠄁e󠄁r󠄁e󠄁n󠄁t󠄁 c󠄁h󠄁a󠄁n󠄁n󠄁e󠄁l󠄁 f󠄁r󠄁o󠄁m󠄁 t󠄁h󠄁e󠄁 l󠄁i󠄁n󠄁k󠄁,󠄁 s󠄁u󠄁c󠄁h󠄁 a󠄁s󠄁 a󠄁 p󠄁h󠄁o󠄁n󠄁e󠄁 c󠄁a󠄁l󠄁l󠄁 w󠄁h󠄁e󠄁n󠄁 t󠄁h󠄁e󠄁 l󠄁i󠄁n󠄁k󠄁 g󠄁o󠄁e󠄁s󠄁 b󠄁y󠄁 e󠄁m󠄁a󠄁i󠄁l󠄁.󠄁 F󠄁o󠄁r󠄁 p󠄁e󠄁o󠄁p󠄁l󠄁e󠄁 y󠄁o󠄁u󠄁 s󠄁e󠄁n󠄁d󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁s󠄁 t󠄁o󠄁 r󠄁e󠄁g󠄁u󠄁l󠄁a󠄁r󠄁l󠄁y󠄁,󠄁 y󠄁o󠄁u󠄁 c󠄁a󠄁n󠄁 i󠄁n󠄁s󠄁t󠄁e󠄁a󠄁d󠄁 a󠄁g󠄁r󠄁e󠄁e󠄁 o󠄁n󠄁 a󠄁 p󠄁a󠄁s󠄁s󠄁p󠄁h󠄁r󠄁a󠄁s󠄁e󠄁 i󠄁n󠄁 a󠄁d󠄁v󠄁a󠄁n󠄁c󠄁e󠄁 a󠄁n󠄁d󠄁 k󠄁e󠄁e󠄁p󠄁 i󠄁t󠄁 f󠄁o󠄁r󠄁 t󠄁h󠄁a󠄁t󠄁 c󠄁o󠄁n󠄁t󠄁a󠄁c󠄁t󠄁,󠄁 t󠄁h󠄁e󠄁 w󠄁a󠄁y󠄁 a󠄁n󠄁 e󠄁-󠄁t󠄁r󠄁a󠄁n󠄁s󠄁f󠄁e󠄁r󠄁 s󠄁e󠄁c󠄁u󠄁r󠄁i󠄁t󠄁y󠄁 q󠄁u󠄁e󠄁s󠄁t󠄁i󠄁o󠄁n󠄁 s󠄁t󠄁a󠄁y󠄁s󠄁 t󠄁h󠄁e󠄁 s󠄁a󠄁m󠄁e󠄁 f󠄁o󠄁r󠄁 e󠄁a󠄁c󠄁h󠄁 r󠄁e󠄁c󠄁i󠄁p󠄁i󠄁e󠄁n󠄁t󠄁.󠄁
 
 3. **Compartmentalize Sensitive Information**: When dealing with highly sensitive data, consider splitting it across multiple secrets. This way, if one secret is compromised, the rest of t󠄁h󠄁e󠄁 information remains protected.
 
