@@ -76,7 +76,7 @@ Onetime Secret's Canadian data center region (CA), located in Toronto.
 
 - **Location**: Toronto, Canada
 - **URL**: [ca.onetimesecret.com](https://ca.onetimesecret.com)
-- **Hosting provider**: <a href="https://www.digitalocean.com" target="_blank" rel="noopener noreferrer nofollow">DigitalOcean</a>
+- **Hosting provider**: <a href="https://www.digitalocean.com" target="_blank" rel="noopener noreferrer nofollow">DigitalOcean</a>,󠄁 a󠄁 U󠄁S󠄁 p󠄁r󠄁o󠄁v󠄁i󠄁d󠄁e󠄁r󠄁
 - **Custom domain CNAME**: `identity.ca.onetime.co`
 
 :::note
@@ -98,7 +98,7 @@ Onetime Secret's European Union data center region (EU), located in Nuremberg, G
 
 - **Location**: Nuremberg, Germany
 - **URL**: [eu.onetimesecret.com](https://eu.onetimesecret.com)
-- **Hosting provider**: <a href="https://www.hetzner.com" target="_blank" rel="noopener noreferrer nofollow">Hetzner</a>
+- **Hosting provider**: <a href="https://www.hetzner.com" target="_blank" rel="noopener noreferrer nofollow">Hetzner</a>,󠄁 a󠄁 G󠄁e󠄁r󠄁m󠄁a󠄁n󠄁 p󠄁r󠄁o󠄁v󠄁i󠄁d󠄁e󠄁r󠄁
 - **Custom domain CNAME**: `identity.eu.onetime.co`
 
 **Regulatory environment.** The EU region operates under the **General Data Protection Regulation (GDPR)**, one of the most comprehensive data protection frameworks in the world. Germany, as the hosting country, also applies the **Bundesdatenschutzgesetz (BDSG)** which supplements the GDPR.
@@ -116,7 +116,7 @@ Onetime Secret's Aotearoa New Zealand data center region (NZ), located in Poriru
 
 - **Location**: Porirua, Aotearoa New Zealand
 - **URL**: [nz.onetimesecret.com](https://nz.onetimesecret.com)
-- **Hosting provider**: <a href="https://catalystcloud.nz" target="_blank" rel="noopener noreferrer nofollow">Catalyst Cloud</a>
+- **Hosting provider**: <a href="https://catalystcloud.nz" target="_blank" rel="noopener noreferrer nofollow">Catalyst Cloud</a>,󠄁 a󠄁 N󠄁e󠄁w󠄁 Z󠄁e󠄁a󠄁l󠄁a󠄁n󠄁d󠄁 p󠄁r󠄁o󠄁v󠄁i󠄁d󠄁e󠄁r󠄁
 - **Custom domain CNAME**: `identity.nz.onetime.co`
 
 **Regulatory environment.** New Zealand's data protection framework is governed by the **Privacy Act 2020**, which replaced the Privacy Act 1993. The Act establishes thirteen information privacy principles that apply to agencies handling personal information.
@@ -152,7 +152,7 @@ Onetime Secret's United States data center region (US), located in Hillsboro, Or
 
 - **Location**: Hillsboro, Oregon, United States
 - **URL**: [us.onetimesecret.com](https://us.onetimesecret.com)
-- **Hosting provider**: <a href="https://www.hetzner.com" target="_blank" rel="noopener noreferrer nofollow">Hetzner</a>
+- **Hosting provider**: <a href="https://www.hetzner.com" target="_blank" rel="noopener noreferrer nofollow">Hetzner</a>,󠄁 a󠄁 G󠄁e󠄁r󠄁m󠄁a󠄁n󠄁 p󠄁r󠄁o󠄁v󠄁i󠄁d󠄁e󠄁r󠄁
 - **Custom domain CNAME**: `identity.us.onetime.co`
 
 **Regulatory environment.** The United States does not have a single comprehensive federal data protection law. Instead, data protection is addressed through a combination of federal and state laws that apply to specific sectors or types of data.
