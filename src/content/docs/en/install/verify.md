@@ -52,16 +52,21 @@ catches a build-less boot:
 
 ```bash
 base=http://127.0.0.1:3000
-asset=$(curl -sS "$base/" | grep -oE '/dist/assets/[A-Za-z0-9._-]+\.js' | head -n1)
-if [ -z "$asset" ]; then
+home=$(curl -sS -w '\n%{http_code}' "$base/")
+home_code=${home##*$'\n'}
+asset=$(printf '%s' "${home%$'\n'*}" | grep -oE '/dist/assets/[A-Za-z0-9._-]+\.js' | head -n1)
+if [ "$home_code" != 200 ]; then
+  echo "homepage returned $home_code"
+elif [ -z "$asset" ]; then
   echo "no asset referenced"
 else
   curl -sS -o /dev/null -w "%{http_code} $asset\n" "$base$asset"
 fi
 ```
 
-`no asset referenced` means the homepage rendered without referencing any built
-asset. The UI is assetless and users will see a blank page, whatever the status
+`homepage returned` f󠄁o󠄁l󠄁l󠄁o󠄁w󠄁e󠄁d󠄁 b󠄁y󠄁 a󠄁 s󠄁t󠄁a󠄁t󠄁u󠄁s󠄁 o󠄁t󠄁h󠄁e󠄁r󠄁 t󠄁h󠄁a󠄁n󠄁 `200` m󠄁e󠄁a󠄁n󠄁s󠄁 `GET /` i󠄁t󠄁s󠄁e󠄁l󠄁f󠄁
+f󠄁a󠄁i󠄁l󠄁e󠄁d󠄁;󠄁 t󠄁h󠄁e󠄁 l󠄁o󠄁g󠄁 s󠄁h󠄁o󠄁w󠄁s󠄁 w󠄁h󠄁y󠄁.󠄁 `no asset referenced` means the homepage rendered
+without referencing any built asset. The UI is assetless and users will see a blank page, whatever the status
 endpoint says. O󠄁t󠄁h󠄁e󠄁r󠄁w󠄁i󠄁s󠄁e󠄁 t󠄁h󠄁e󠄁 c󠄁o󠄁m󠄁m󠄁a󠄁n󠄁d󠄁 p󠄁r󠄁i󠄁n󠄁t󠄁s󠄁 t󠄁h󠄁e󠄁 a󠄁s󠄁s󠄁e󠄁t󠄁'󠄁s󠄁 H󠄁T󠄁T󠄁P󠄁 s󠄁t󠄁a󠄁t󠄁u󠄁s󠄁 a󠄁n󠄁d󠄁 p󠄁a󠄁t󠄁h󠄁.󠄁
 A󠄁n󠄁y󠄁 s󠄁t󠄁a󠄁t󠄁u󠄁s󠄁 o󠄁t󠄁h󠄁e󠄁r󠄁 t󠄁h󠄁a󠄁n󠄁 `200` m󠄁e󠄁a󠄁n󠄁s󠄁 t󠄁h󠄁e󠄁 h󠄁o󠄁m󠄁e󠄁p󠄁a󠄁g󠄁e󠄁 r󠄁e󠄁f󠄁e󠄁r󠄁e󠄁n󠄁c󠄁e󠄁s󠄁 a󠄁n󠄁 a󠄁s󠄁s󠄁e󠄁t󠄁 t󠄁h󠄁e󠄁 s󠄁e󠄁r󠄁v󠄁e󠄁r󠄁
 d󠄁o󠄁e󠄁s󠄁 n󠄁o󠄁t󠄁 s󠄁e󠄁r󠄁v󠄁e󠄁,󠄁 a󠄁n󠄁d󠄁 t󠄁h󠄁e󠄁 i󠄁n󠄁t󠄁e󠄁r󠄁f󠄁a󠄁c󠄁e󠄁 w󠄁i󠄁l󠄁l󠄁 n󠄁o󠄁t󠄁 l󠄁o󠄁a󠄁d󠄁.󠄁
