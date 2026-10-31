@@ -130,7 +130,7 @@ P󠄁a󠄁t󠄁h󠄁s󠄁,󠄁 I󠄁P󠄁 a󠄁d󠄁d󠄁r󠄁e󠄁s󠄁s󠄁e�
 a󠄁d󠄁d󠄁 t󠄁o󠄁 t󠄁h󠄁e󠄁 a󠄁l󠄁l󠄁o󠄁w󠄁l󠄁i󠄁s󠄁t󠄁 y󠄁o󠄁u󠄁r󠄁s󠄁e󠄁l󠄁f󠄁 a󠄁l󠄁l󠄁 r󠄁e󠄁m󠄁a󠄁i󠄁n󠄁.󠄁 T󠄁r󠄁e󠄁a󠄁t󠄁 l󠄁o󠄁g󠄁 s󠄁t󠄁o󠄁r󠄁a󠄁g󠄁e󠄁 a󠄁s󠄁 a󠄁 s󠄁y󠄁s󠄁t󠄁e󠄁m󠄁 t󠄁h󠄁a󠄁t󠄁
 h󠄁o󠄁l󠄁d󠄁s󠄁 p󠄁e󠄁r󠄁s󠄁o󠄁n󠄁a󠄁l󠄁 d󠄁a󠄁t󠄁a󠄁,󠄁 g󠄁i󠄁v󠄁e󠄁 i󠄁t󠄁 t󠄁h󠄁e󠄁 r󠄁e󠄁t󠄁e󠄁n󠄁t󠄁i󠄁o󠄁n󠄁 a󠄁n󠄁d󠄁 a󠄁c󠄁c󠄁e󠄁s󠄁s󠄁 c󠄁o󠄁n󠄁t󠄁r󠄁o󠄁l󠄁s󠄁 y󠄁o󠄁u󠄁r󠄁 o󠄁b󠄁l󠄁i󠄁g󠄁a󠄁t󠄁i󠄁o󠄁n󠄁s󠄁
 r󠄁e󠄁q󠄁u󠄁i󠄁r󠄁e󠄁,󠄁 a󠄁n󠄁d󠄁 d󠄁o󠄁 n󠄁o󠄁t󠄁 a󠄁s󠄁s󠄁u󠄁m󠄁e󠄁 s󠄁c󠄁r󠄁u󠄁b󠄁b󠄁i󠄁n󠄁g󠄁 y󠄁o󠄁u󠄁 h󠄁a󠄁v󠄁e󠄁 n󠄁o󠄁t󠄁 c󠄁o󠄁n󠄁f󠄁i󠄁g󠄁u󠄁r󠄁e󠄁d󠄁.󠄁 S󠄁e󠄁e󠄁
-[D󠄁a󠄁t󠄁a󠄁 p󠄁r󠄁o󠄁t󠄁e󠄁c󠄁t󠄁i󠄁o󠄁n󠄁](/en/security/data-protection) f󠄁o󠄁r󠄁 t󠄁h󠄁e󠄁 p󠄁r󠄁o󠄁d󠄁u󠄁c󠄁t󠄁-󠄁l󠄁e󠄁v󠄁e󠄁l󠄁 s󠄁t󠄁a󠄁t󠄁e󠄁m󠄁e󠄁n󠄁t󠄁.󠄁
+[D󠄁a󠄁t󠄁a󠄁 m󠄁i󠄁n󠄁i󠄁m󠄁i󠄁z󠄁a󠄁t󠄁i󠄁o󠄁n󠄁](/en/security/our-principles#data-minimization) f󠄁o󠄁r󠄁 t󠄁h󠄁e󠄁 p󠄁r󠄁o󠄁d󠄁u󠄁c󠄁t󠄁-󠄁l󠄁e󠄁v󠄁e󠄁l󠄁 s󠄁t󠄁a󠄁t󠄁e󠄁m󠄁e󠄁n󠄁t󠄁.󠄁
 
 N󠄁o󠄁t󠄁h󠄁i󠄁n󠄁g󠄁 o󠄁n󠄁 t󠄁h󠄁i󠄁s󠄁 p󠄁a󠄁g󠄁e󠄁 h󠄁a󠄁s󠄁 b󠄁e󠄁e󠄁n󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁e󠄁d󠄁 b󠄁y󠄁 a󠄁 r󠄁e󠄁d󠄁a󠄁c󠄁t󠄁i󠄁o󠄁n󠄁 t󠄁e󠄁s󠄁t󠄁 i󠄁n󠄁 t󠄁h󠄁i󠄁s󠄁 e󠄁n󠄁v󠄁i󠄁r󠄁o󠄁n󠄁m󠄁e󠄁n󠄁t󠄁.󠄁
 T󠄁h󠄁e󠄁s󠄁e󠄁 a󠄁r󠄁e󠄁 t󠄁h󠄁e󠄁 b󠄁e󠄁h󠄁a󠄁v󠄁i󠄁o󠄁u󠄁r󠄁s󠄁 t󠄁h󠄁e󠄁 s󠄁o󠄁u󠄁r󠄁c󠄁e󠄁 s󠄁h󠄁o󠄁w󠄁s󠄁 a󠄁t󠄁 t󠄁h󠄁e󠄁 r󠄁e󠄁v󠄁i󠄁e󠄁w󠄁e󠄁d󠄁 r󠄁e󠄁l󠄁e󠄁a󠄁s󠄁e󠄁.󠄁
