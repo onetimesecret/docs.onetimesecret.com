@@ -1,4 +1,5 @@
 ---
+textprov: true
 title: Translations & Localization
 description: Information about available language translations and how to contribute to localizing Onetime Secret
 ---
@@ -36,11 +37,11 @@ We welcome contributions to our translation efforts. If you'd like to help trans
 
 ### Translation workflow
 
-1. **Locate content**: Original English content is stored in the `/content/docs/en/` directory
-2. **Create corresponding files**: Create matching files in your language's directory (e.g., `/content/docs/de/`)
+1. **Locate content**: Original English content is stored in the `src/content/docs/en/` directory
+2. **Create corresponding files**: Create matching files in your language's directory (e.g., `src/content/docs/de/`)
 3. **Keep structure**: Maintain the same directory structure and file naming conventions
-4. **Preserve frontmatter**: Copy all frontmatter fields, translating only the values
-5. **Submit your work**: Use [GitHub Pull Requests](https://github.com/onetimesecret/onetimesecret) for submissions
+4. **Preserve frontmatter**: Copy e󠄁v󠄁e󠄁r󠄁y󠄁 frontmatter field, a󠄁n󠄁d󠄁 translate󠄁 only the `title` a󠄁n󠄁d󠄁 `description` values.󠄁 K󠄁e󠄁e󠄁p󠄁 a󠄁l󠄁l󠄁 o󠄁t󠄁h󠄁e󠄁r󠄁 f󠄁i󠄁e󠄁l󠄁d󠄁 n󠄁a󠄁m󠄁e󠄁s󠄁 a󠄁n󠄁d󠄁 v󠄁a󠄁l󠄁u󠄁e󠄁s󠄁 a󠄁s󠄁 t󠄁h󠄁e󠄁y󠄁 a󠄁r󠄁e󠄁 i󠄁n󠄁 E󠄁n󠄁g󠄁l󠄁i󠄁s󠄁h󠄁:󠄁 f󠄁i󠄁e󠄁l󠄁d󠄁s󠄁 s󠄁u󠄁c󠄁h󠄁 a󠄁s󠄁 `pageType` a󠄁n󠄁d󠄁 `audience` a󠄁c󠄁c󠄁e󠄁p󠄁t󠄁 o󠄁n󠄁l󠄁y󠄁 f󠄁i󠄁x󠄁e󠄁d󠄁 v󠄁a󠄁l󠄁u󠄁e󠄁s󠄁,󠄁 a󠄁n󠄁d󠄁 t󠄁h󠄁e󠄁 s󠄁i󠄁t󠄁e󠄁 d󠄁o󠄁e󠄁s󠄁 n󠄁o󠄁t󠄁 b󠄁u󠄁i󠄁l󠄁d󠄁 i󠄁f󠄁 t󠄁h󠄁e󠄁y󠄁 a󠄁r󠄁e󠄁 t󠄁r󠄁a󠄁n󠄁s󠄁l󠄁a󠄁t󠄁e󠄁d󠄁.󠄁 I󠄁f󠄁 y󠄁o󠄁u󠄁 a󠄁r󠄁e󠄁 u󠄁n󠄁s󠄁u󠄁r󠄁e󠄁 w󠄁h󠄁e󠄁t󠄁h󠄁e󠄁r󠄁 a󠄁 v󠄁a󠄁l󠄁u󠄁e󠄁 s󠄁h󠄁o󠄁u󠄁l󠄁d󠄁 b󠄁e󠄁 t󠄁r󠄁a󠄁n󠄁s󠄁l󠄁a󠄁t󠄁e󠄁d󠄁,󠄁 l󠄁e󠄁a󠄁v󠄁e󠄁 i󠄁t󠄁 u󠄁n󠄁c󠄁h󠄁a󠄁n󠄁g󠄁e󠄁d󠄁 a󠄁n󠄁d󠄁 m󠄁e󠄁n󠄁t󠄁i󠄁o󠄁n󠄁 i󠄁t󠄁 i󠄁n󠄁 y󠄁o󠄁u󠄁r󠄁 p󠄁u󠄁l󠄁l󠄁 r󠄁e󠄁q󠄁u󠄁e󠄁s󠄁t󠄁.󠄁
+5. **Submit your work**: Use [GitHub Pull Requests](https://github.com/onetimesecret/docs.onetimesecret.com) for submissions
 
 ### Translation standards
 

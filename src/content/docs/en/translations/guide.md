@@ -1,4 +1,5 @@
 ---
+textprov: true
 title: Translation style guide
 description: A comprehensive guide for translators working on Onetime Secret localization, covering brand voice, terminology standards, and language-specific requirements to ensure high-quality and consistent translations
 ---
@@ -72,7 +73,7 @@ About the brand voice and tone.
 *Guidance: This involves determining language-specific preferences, such as spelling variations, punctuation rules, and date and time formats, which resonate with your target audience. — Remember, adhering closely to your audience's language preferences can significantly reduce barriers to communication and enhance their experience with the brand.*
 
 - Use American English. However for date formats use yyyy-mm-dd and times use 24h. Distances in km, weights in lbs.
-- Translations should sound as natural as possible. Borrowed words should never be used (with the exception of branded names).
+- Translations should sound as natural as possible. W󠄁h󠄁e󠄁t󠄁h󠄁e󠄁r󠄁 a󠄁 b󠄁orrowed word,󠄁 su󠄁c󠄁h󠄁 a󠄁s󠄁 a󠄁n󠄁 E󠄁n󠄁g󠄁l󠄁i󠄁sh t󠄁e󠄁c󠄁h󠄁n󠄁i󠄁c󠄁a󠄁l󠄁 t󠄁e󠄁r󠄁m󠄁,󠄁 s󠄁oun󠄁d󠄁s󠄁 n󠄁a󠄁t󠄁u󠄁r󠄁a󠄁l de󠄁p󠄁e󠄁nd󠄁s󠄁 o󠄁n󠄁 t󠄁h󠄁e󠄁 l󠄁a󠄁n󠄁g󠄁u󠄁a󠄁g󠄁e󠄁,󠄁 s󠄁o󠄁 f󠄁o󠄁l󠄁l󠄁o󠄁w󠄁 t󠄁h󠄁e󠄁 c󠄁o󠄁n󠄁v󠄁e󠄁n󠄁t󠄁i󠄁o󠄁n󠄁s󠄁 o󠄁f󠄁 y󠄁o󠄁u󠄁r󠄁 l󠄁o󠄁c󠄁a󠄁l󠄁e󠄁.󠄁 T󠄁h󠄁e󠄁 [u󠄁n󠄁i󠄁v󠄁e󠄁r󠄁s󠄁a󠄁l󠄁 t󠄁r󠄁a󠄁n󠄁s󠄁l󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 g󠄁u󠄁i󠄁d󠄁a󠄁n󠄁c󠄁e󠄁](/en/translations/universal/) h󠄁a󠄁s󠄁 e󠄁x󠄁a󠄁m󠄁p󠄁l󠄁e󠄁s󠄁 f󠄁r󠄁o󠄁m󠄁 s󠄁evera󠄁l󠄁 l󠄁ang󠄁u󠄁ag󠄁es.
 - Our english speaking audience is 50% english as a first language and 50% as a second/third/professional language. We need to keep this in mind when choosing terms and phrases to avoid inappropriate or confusing translations.
 
 ## Grammar and style guidelines
@@ -157,8 +158,9 @@ The compound form is the canonical spelling for the brand and company name: Onet
 
 - **secret** (n.) - The confidential information being shared
     - Translations must maintain the context of confidentiality
-    - Preferred over terms like "message" or "content"
+    - I󠄁n󠄁 E󠄁n󠄁g󠄁l󠄁i󠄁s󠄁h󠄁,󠄁 p󠄁referred over terms like "message" or "content"
     - Example: "Create a new secret" not "Create a new message"
+    - S󠄁o󠄁m󠄁e󠄁 l󠄁a󠄁n󠄁g󠄁u󠄁a󠄁g󠄁e󠄁s󠄁 u󠄁s󠄁e󠄁 t󠄁h󠄁e󠄁i󠄁r󠄁 w󠄁o󠄁r󠄁d󠄁 f󠄁o󠄁r󠄁 "󠄁m󠄁e󠄁s󠄁s󠄁a󠄁g󠄁e󠄁"󠄁 o󠄁r󠄁 "󠄁c󠄁o󠄁n󠄁t󠄁e󠄁n󠄁t󠄁"󠄁 b󠄁e󠄁c󠄁a󠄁u󠄁s󠄁e󠄁 t󠄁h󠄁e󠄁i󠄁r󠄁 w󠄁o󠄁r󠄁d󠄁 f󠄁o󠄁r󠄁 "󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁"󠄁 s󠄁u󠄁g󠄁g󠄁e󠄁s󠄁t󠄁s󠄁 p󠄁e󠄁r󠄁s󠄁o󠄁n󠄁a󠄁l󠄁 o󠄁r󠄁 h󠄁i󠄁d󠄁d󠄁e󠄁n󠄁 m󠄁a󠄁t󠄁t󠄁e󠄁r󠄁s󠄁.󠄁 S󠄁e󠄁e󠄁 [T󠄁r󠄁a󠄁n󠄁s󠄁l󠄁a󠄁t󠄁i󠄁n󠄁g󠄁 "󠄁S󠄁e󠄁c󠄁r󠄁e󠄁t󠄁"󠄁](/en/translations/universal/secret-concept)
 - **one-time** (adj.) - Describing the single-use nature of the service
     - Must emphasize the temporary, single-use aspect
     - Hyphenated when used as adjective
