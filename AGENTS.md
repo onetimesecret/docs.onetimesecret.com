@@ -125,7 +125,7 @@ Add new English sidebar keys to `src/content/i18n/en.json` only unless translati
 
 Directory and bundle names use lowercase (`pt-br`, `zh-cn`), but sidebar translation overrides use Starlight's BCP-47 codes (`pt-BR`, `zh-CN`).
 
-Some locale bundles retain unused sidebar keys: `sidebar.v1`, `sidebar.v2`, `sidebar.createSecrets`, `sidebar.retrieveSecrets`, and `sidebar.trust`. Do not remove these as incidental cleanup.
+Some locale bundles retain unused sidebar keys: `sidebar.v1`, `sidebar.v2`, `sidebar.createSecrets`, `sidebar.retrieveSecrets`, and `sidebar.trust`. Every bundle, English included, also retains `sidebar.dataProtection` (its page was retired in the 2026-10-30 audit), `sidebar.upgradingToV024`, and `sidebar.upgradingToV023`. Do not remove these as incidental cleanup.
 
 - The old `/{lang}/principles/trust` URLs redirect to `security/our-principles` with the `privacy-first` fragment.
 - The old `/{lang}/self-hosting/installation` URLs redirect to `install/docker`.

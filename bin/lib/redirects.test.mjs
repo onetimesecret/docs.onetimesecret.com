@@ -2,6 +2,7 @@
 // fails a fast test rather than only a full `astro build`.
 import { describe, expect, it } from "vitest";
 
+import { i18nConfig } from "../../config/i18n.mjs";
 import {
   assertNoChainedRedirects,
   assertNoDuplicateSources,
@@ -119,6 +120,18 @@ describe("the Phase 4 configuration cutover", () => {
   it("no longer redirects through the retired English generator route", () => {
     for (const target of Object.values(redirects)) {
       expect(target).not.toContain("/self-hosting/configuration-generator");
+    }
+  });
+});
+
+describe("the data-protection retirement (2026-10-30 audit, batch 1)", () => {
+  const redirects = createRedirectsConfig();
+
+  it("sends every configured locale's page to Data minimization in the same locale", () => {
+    for (const locale of Object.keys(i18nConfig.locales)) {
+      expect(redirects[`/${locale}/security/data-protection`]).toBe(
+        `/${locale}/security/our-principles/#data-minimization`,
+      );
     }
   });
 });
