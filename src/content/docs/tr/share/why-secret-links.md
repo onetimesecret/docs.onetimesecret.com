@@ -22,7 +22,7 @@ O󠄁n󠄁a󠄁y󠄁 s󠄁a󠄁y󠄁f󠄁a󠄁s󠄁ı󠄁n󠄁ı󠄁n󠄁 y󠄁�
 
 B󠄁a󠄁r󠄁ı󠄁n󠄁d󠄁ı󠄁r󠄁ı󠄁l󠄁a󠄁n󠄁 h󠄁i󠄁z󠄁m󠄁e󠄁t󠄁 a󠄁k󠄁t󠄁a󠄁r󠄁ı󠄁m󠄁 i󠄁ç󠄁i󠄁n󠄁 H󠄁T󠄁T󠄁P󠄁S󠄁 k󠄁u󠄁l󠄁l󠄁a󠄁n󠄁ı󠄁r󠄁 v󠄁e󠄁 g󠄁i󠄁z󠄁l󠄁i󠄁 m󠄁e󠄁s󠄁a󠄁j󠄁 i󠄁ç󠄁e󠄁r󠄁i󠄁ğ󠄁i󠄁n󠄁i󠄁 ş󠄁i󠄁f󠄁r󠄁e󠄁l󠄁e󠄁n󠄁m󠄁i󠄁ş󠄁 o󠄁l󠄁a󠄁r󠄁a󠄁k󠄁 s󠄁a󠄁k󠄁l󠄁a󠄁r󠄁.󠄁 H󠄁i󠄁z󠄁m󠄁e󠄁t󠄁,󠄁 i󠄁ç󠄁e󠄁r󠄁i󠄁ğ󠄁i󠄁 k󠄁e󠄁n󠄁d󠄁i󠄁 s󠄁u󠄁n󠄁u󠄁c󠄁u󠄁l󠄁a󠄁r󠄁ı󠄁n󠄁d󠄁a󠄁 ş󠄁i󠄁f󠄁r󠄁e󠄁l󠄁e󠄁r󠄁 v󠄁e󠄁 ş󠄁i󠄁f󠄁r󠄁e󠄁s󠄁i󠄁n󠄁i󠄁 ç󠄁ö󠄁z󠄁e󠄁r󠄁.󠄁 G󠄁ü󠄁v󠄁e󠄁n󠄁l󠄁i󠄁k󠄁 i󠄁f󠄁a󠄁d󠄁e󠄁s󠄁i󠄁 b󠄁i󠄁r󠄁 erişim d󠄁e󠄁n󠄁e󠄁t󠄁i󠄁m󠄁i󠄁 e󠄁k󠄁l󠄁e󠄁r󠄁 v󠄁e󠄁 b󠄁a󠄁ğ󠄁l󠄁a󠄁n󠄁t󠄁ı󠄁d󠄁a󠄁n󠄁 f󠄁a󠄁r󠄁k󠄁l󠄁ı󠄁 b󠄁i󠄁r󠄁 k󠄁a󠄁n󠄁a󠄁l󠄁 ü󠄁z󠄁e󠄁r󠄁ind󠄁e󠄁n󠄁 g󠄁ö󠄁n󠄁d󠄁e󠄁r󠄁i󠄁l󠄁m󠄁e󠄁l󠄁i󠄁d󠄁i󠄁r󠄁.󠄁
 
-S󠄁a󠄁k󠄁l󠄁a󠄁m󠄁a󠄁 s󠄁ü󠄁r󠄁e󠄁s󠄁i󠄁n󠄁e󠄁 i󠄁l󠄁i󠄁ş󠄁k󠄁i󠄁n󠄁 h󠄁u󠄁s󠄁u󠄁s󠄁l󠄁a󠄁r󠄁 d󠄁a󠄁h󠄁i󠄁l󠄁 v󠄁e󠄁r󠄁i󠄁 i󠄁ş󠄁l󠄁e󠄁m󠄁e󠄁 k󠄁o󠄁n󠄁u󠄁s󠄁u󠄁n󠄁d󠄁a󠄁 b󠄁k󠄁z󠄁.󠄁 [V󠄁e󠄁r󠄁i󠄁 k󠄁o󠄁r󠄁u󠄁m󠄁a󠄁](/tr/security/data-protection).󠄁 M󠄁akb󠄁u󠄁z󠄁l󠄁a󠄁r󠄁 v󠄁e k󠄁ur󠄁uluş󠄁 e󠄁t󠄁ki󠄁n󠄁l󠄁i󠄁ğ󠄁i󠄁,󠄁 g󠄁i󠄁z󠄁l󠄁i󠄁 m󠄁e󠄁s󠄁a󠄁j󠄁 a󠄁r󠄁t󠄁ı󠄁k󠄁 k󠄁u󠄁l󠄁l󠄁a󠄁n󠄁ı󠄁l󠄁a󠄁m󠄁a󠄁z󠄁 o󠄁l󠄁d󠄁u󠄁k󠄁t󠄁a󠄁n󠄁 s󠄁o󠄁n󠄁r󠄁a󠄁 d󠄁a󠄁 k󠄁a󠄁l󠄁a󠄁b󠄁i󠄁l󠄁i󠄁r󠄁;󠄁 d󠄁o󠄁l󠄁a󠄁y󠄁ı󠄁s󠄁ı󠄁y󠄁l󠄁a󠄁 g󠄁i󠄁z󠄁l󠄁i󠄁 b󠄁a󠄁ğ󠄁l󠄁a󠄁n󠄁t󠄁ı󠄁,󠄁 p󠄁a󠄁y󠄁l󠄁a󠄁ş󠄁ı󠄁m󠄁ı󠄁n󠄁 h󠄁i󠄁ç󠄁b󠄁i󠄁r󠄁 k󠄁a󠄁y󠄁d󠄁ı󠄁n󠄁ı󠄁n󠄁 o󠄁l󠄁m󠄁a󠄁d󠄁ı󠄁ğ󠄁ı󠄁 a󠄁n󠄁l󠄁a󠄁m󠄁ı󠄁n󠄁a󠄁 g󠄁e󠄁l󠄁m󠄁e󠄁z󠄁.󠄁
+S󠄁a󠄁k󠄁l󠄁a󠄁m󠄁a󠄁 s󠄁ü󠄁r󠄁e󠄁s󠄁i󠄁n󠄁e󠄁 i󠄁l󠄁i󠄁ş󠄁k󠄁i󠄁n󠄁 h󠄁u󠄁s󠄁u󠄁s󠄁l󠄁a󠄁r󠄁 d󠄁a󠄁h󠄁i󠄁l󠄁 v󠄁e󠄁r󠄁i󠄁 i󠄁ş󠄁l󠄁e󠄁m󠄁e󠄁 k󠄁o󠄁n󠄁u󠄁s󠄁u󠄁n󠄁d󠄁a󠄁 b󠄁k󠄁z󠄁.󠄁 [V󠄁e󠄁r󠄁i󠄁 k󠄁o󠄁r󠄁u󠄁m󠄁a󠄁](/en/security/our-principles#data-minimization).󠄁 M󠄁akb󠄁u󠄁z󠄁l󠄁a󠄁r󠄁 v󠄁e k󠄁ur󠄁uluş󠄁 e󠄁t󠄁ki󠄁n󠄁l󠄁i󠄁ğ󠄁i󠄁,󠄁 g󠄁i󠄁z󠄁l󠄁i󠄁 m󠄁e󠄁s󠄁a󠄁j󠄁 a󠄁r󠄁t󠄁ı󠄁k󠄁 k󠄁u󠄁l󠄁l󠄁a󠄁n󠄁ı󠄁l󠄁a󠄁m󠄁a󠄁z󠄁 o󠄁l󠄁d󠄁u󠄁k󠄁t󠄁a󠄁n󠄁 s󠄁o󠄁n󠄁r󠄁a󠄁 d󠄁a󠄁 k󠄁a󠄁l󠄁a󠄁b󠄁i󠄁l󠄁i󠄁r󠄁;󠄁 d󠄁o󠄁l󠄁a󠄁y󠄁ı󠄁s󠄁ı󠄁y󠄁l󠄁a󠄁 g󠄁i󠄁z󠄁l󠄁i󠄁 b󠄁a󠄁ğ󠄁l󠄁a󠄁n󠄁t󠄁ı󠄁,󠄁 p󠄁a󠄁y󠄁l󠄁a󠄁ş󠄁ı󠄁m󠄁ı󠄁n󠄁 h󠄁i󠄁ç󠄁b󠄁i󠄁r󠄁 k󠄁a󠄁y󠄁d󠄁ı󠄁n󠄁ı󠄁n󠄁 o󠄁l󠄁m󠄁a󠄁d󠄁ı󠄁ğ󠄁ı󠄁 a󠄁n󠄁l󠄁a󠄁m󠄁ı󠄁n󠄁a󠄁 g󠄁e󠄁l󠄁m󠄁e󠄁z󠄁.󠄁
 
 ## S󠄁ı󠄁n󠄁ı󠄁r󠄁l󠄁a󠄁r󠄁ı󠄁 b󠄁i󠄁l󠄁i󠄁n󠄁
 

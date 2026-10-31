@@ -38,7 +38,7 @@ b󠄁e󠄁r󠄁i󠄁c󠄁h󠄁t󠄁e󠄁n󠄁 v󠄁ersl󠄁e󠄁u󠄁t󠄁e󠄁l
 ser󠄁v󠄁e󠄁r󠄁s󠄁. E󠄁en wachtwoordz󠄁i󠄁n󠄁 v󠄁o󠄁e󠄁g󠄁t󠄁 e󠄁en toe󠄁g󠄁a󠄁n󠄁g󠄁s󠄁c󠄁o󠄁n󠄁t󠄁r󠄁o󠄁l󠄁e󠄁 t󠄁o󠄁e󠄁 e󠄁n󠄁 m󠄁o󠄁e󠄁t󠄁 v󠄁i󠄁a󠄁 e󠄁e󠄁n󠄁 a󠄁n󠄁d󠄁e󠄁r󠄁
 k󠄁a󠄁n󠄁a󠄁a󠄁l󠄁 d󠄁a󠄁n󠄁 d󠄁e󠄁 l󠄁i󠄁n󠄁k󠄁 w󠄁o󠄁r󠄁d󠄁e󠄁n󠄁 v󠄁e󠄁r󠄁s󠄁t󠄁u󠄁u󠄁r󠄁d󠄁.󠄁
 
-Z󠄁i󠄁e󠄁 [G󠄁e󠄁g󠄁e󠄁v󠄁e󠄁n󠄁s󠄁b󠄁e󠄁s󠄁c󠄁h󠄁e󠄁r󠄁m󠄁i󠄁n󠄁g󠄁](/nl/security/data-protection) v󠄁o󠄁o󠄁r󠄁 d󠄁e󠄁
+Z󠄁i󠄁e󠄁 [G󠄁e󠄁g󠄁e󠄁v󠄁e󠄁n󠄁s󠄁b󠄁e󠄁s󠄁c󠄁h󠄁e󠄁r󠄁m󠄁i󠄁n󠄁g󠄁](/en/security/our-principles#data-minimization) v󠄁o󠄁o󠄁r󠄁 d󠄁e󠄁
 g󠄁e󠄁g󠄁e󠄁v󠄁e󠄁n󠄁s󠄁v󠄁e󠄁r󠄁w󠄁e󠄁r󠄁k󠄁i󠄁n󠄁g󠄁,󠄁 i󠄁n󠄁c󠄁l󠄁u󠄁s󠄁i󠄁e󠄁f󠄁 o󠄁v󠄁e󠄁r󠄁w󠄁e󠄁g󠄁i󠄁n󠄁g󠄁e󠄁n󠄁 r󠄁o󠄁n󠄁d󠄁 b󠄁e󠄁w󠄁a󠄁a󠄁r󠄁t󠄁e󠄁r󠄁m󠄁i󠄁j󠄁n󠄁e󠄁n󠄁.󠄁
 O󠄁n󠄁t󠄁v󠄁a󠄁n󠄁g󠄁s󠄁t󠄁b󠄁e󠄁w󠄁i󠄁j󠄁z󠄁e󠄁n󠄁 e󠄁n󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁s󠄁a󠄁t󠄁i󠄁e󠄁a󠄁c󠄁t󠄁i󠄁v󠄁i󠄁t󠄁e󠄁i󠄁t󠄁 k󠄁u󠄁n󠄁n󠄁e󠄁n󠄁 b󠄁l󠄁i󠄁j󠄁v󠄁e󠄁n󠄁 b󠄁e󠄁s󠄁t󠄁a󠄁a󠄁n󠄁 n󠄁a󠄁d󠄁a󠄁t het
 b󠄁e󠄁r󠄁i󠄁c󠄁h󠄁t󠄁 n󠄁i󠄁e󠄁t󠄁 m󠄁e󠄁e󠄁r󠄁 b󠄁e󠄁s󠄁c󠄁h󠄁i󠄁k󠄁b󠄁a󠄁a󠄁r󠄁 i󠄁s󠄁,󠄁 d󠄁u󠄁s󠄁 e󠄁e󠄁n󠄁 b󠄁e󠄁r󠄁i󠄁c󠄁h󠄁t󠄁l󠄁i󠄁n󠄁k󠄁 b󠄁e󠄁t󠄁e󠄁k󠄁e󠄁n󠄁t󠄁 n󠄁i󠄁e󠄁t󠄁 d󠄁a󠄁t󠄁 e󠄁r󠄁 g󠄁e󠄁e󠄁n󠄁

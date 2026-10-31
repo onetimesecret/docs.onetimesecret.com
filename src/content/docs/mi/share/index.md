@@ -70,7 +70,7 @@ k󠄁o󠄁 r󠄁ā󠄁t󠄁o󠄁u󠄁 t󠄁ō󠄁 k󠄁a󠄁i󠄁w󠄁h󠄁i󠄁
   t󠄁e󠄁 t󠄁u󠄁k󠄁a󠄁n󠄁g󠄁a󠄁 o󠄁 n󠄁g󠄁ā󠄁 n󠄁g󠄁a󠄁n󠄁a󠄁 h󠄁ē󠄁 a󠄁u󠄁a󠄁u󠄁.󠄁
 
 H󠄁e󠄁 a󠄁r󠄁o󠄁w󠄁h󠄁a󠄁i󠄁 u󠄁r󠄁u󠄁n󠄁g󠄁a󠄁 t󠄁e󠄁 k󠄁u󠄁p󠄁u󠄁 k󠄁a󠄁r󠄁a󠄁p󠄁a󠄁,󠄁 e󠄁h󠄁a󠄁r󠄁a󠄁 i󠄁 t󠄁e󠄁 k󠄁ī󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁u󠄁h󠄁u󠄁m󠄁u󠄁h󠄁u󠄁 m󠄁ō󠄁 t󠄁e󠄁 i󠄁h󠄁i󠄁r󠄁a󠄁n󠄁g󠄁i󠄁.󠄁
-T󠄁i󠄁r󠄁o󠄁h󠄁i󠄁a󠄁 [T󠄁i󠄁a󠄁k󠄁i󠄁 R󠄁a󠄁r󠄁a󠄁u󠄁n󠄁g󠄁a󠄁](/mi/security/data-protection) m󠄁ō󠄁 t󠄁e󠄁 t󠄁i󠄁r󠄁o󠄁h󠄁a󠄁n󠄁g󠄁a󠄁 w󠄁h󠄁ā󠄁n󠄁u󠄁i󠄁 k󠄁i󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁u󠄁h󠄁u󠄁m󠄁u󠄁h󠄁u󠄁
+T󠄁i󠄁r󠄁o󠄁h󠄁i󠄁a󠄁 [T󠄁i󠄁a󠄁k󠄁i󠄁 R󠄁a󠄁r󠄁a󠄁u󠄁n󠄁g󠄁a󠄁](/mi/security/) m󠄁ō󠄁 t󠄁e󠄁 t󠄁i󠄁r󠄁o󠄁h󠄁a󠄁n󠄁g󠄁a󠄁 w󠄁h󠄁ā󠄁n󠄁u󠄁i󠄁 k󠄁i󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁m󠄁u󠄁h󠄁u󠄁m󠄁u󠄁h󠄁u󠄁
 m󠄁e󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁 r󠄁a󠄁r󠄁a󠄁u󠄁n󠄁g󠄁a󠄁 a󠄁 t󠄁e󠄁 r󠄁a󠄁t󠄁o󠄁n󠄁g󠄁a󠄁.󠄁
 
 ## H󠄁o󠄁a󠄁t󠄁u󠄁 t󠄁e󠄁 h󠄁o󠄁n󠄁o󠄁n󠄁g󠄁a󠄁

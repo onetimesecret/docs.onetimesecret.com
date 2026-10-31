@@ -26,7 +26,6 @@ att göra det på ett säkert sätt och var du hittar detaljerna.
 
 ## Utforska det här avsnittet
 
-- **[Dataskydd](/sv/security/data-protection)** –󠄁 vad vi lagrar, hur länge, var det finns och hur detta svarar mot efterlevnadsbehov.
 - **[B󠄁ä󠄁s󠄁t󠄁a󠄁 s󠄁äkerhetspraxis](/sv/security/best-practices)** –󠄁 praktisk vägledning för att dela hemligheter säkert, inklusive fördelarna med anpassade domäner.
 - **[Sårbarhetsrapportering](/sv/security/vulnerability-disclosure)** –󠄁 hur du rapporterar ett säkerhetsproblem på ett ansvarsfullt sätt.
 

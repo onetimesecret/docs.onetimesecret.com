@@ -39,7 +39,7 @@ s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁s󠄁 c󠄁h󠄁i󠄁f󠄁f󠄁r󠄁é󠄁.󠄁 L�
 U󠄁n󠄁e󠄁 p󠄁h󠄁r󠄁a󠄁s󠄁e󠄁 s󠄁e󠄁c󠄁r󠄁è󠄁t󠄁e󠄁 a󠄁j󠄁o󠄁u󠄁t󠄁e󠄁 u󠄁n󠄁 c󠄁o󠄁n󠄁t󠄁r󠄁ô󠄁l󠄁e󠄁 d󠄁'󠄁a󠄁c󠄁c󠄁è󠄁s󠄁 e󠄁t󠄁 d󠄁o󠄁i󠄁t󠄁 ê󠄁t󠄁r󠄁e󠄁 e󠄁n󠄁v󠄁o󠄁y󠄁é󠄁e󠄁 p󠄁a󠄁r󠄁 u󠄁n󠄁 c󠄁a󠄁n󠄁a󠄁l󠄁
 d󠄁i󠄁f󠄁f󠄁é󠄁r󠄁e󠄁n󠄁t󠄁 d󠄁e󠄁 c󠄁e󠄁l󠄁u󠄁i󠄁 d󠄁u󠄁 l󠄁i󠄁e󠄁n󠄁.󠄁
 
-C󠄁o󠄁n󠄁s󠄁u󠄁l󠄁t󠄁e󠄁z [P󠄁r󠄁o󠄁t󠄁e󠄁c󠄁t󠄁i󠄁o󠄁n󠄁 des do󠄁n󠄁n󠄁ée󠄁s󠄁](/fr/security/data-protection) p󠄁o󠄁u󠄁r󠄁 le󠄁
+C󠄁o󠄁n󠄁s󠄁u󠄁l󠄁t󠄁e󠄁z [P󠄁r󠄁o󠄁t󠄁e󠄁c󠄁t󠄁i󠄁o󠄁n󠄁 des do󠄁n󠄁n󠄁ée󠄁s󠄁](/en/security/our-principles#data-minimization) p󠄁o󠄁u󠄁r󠄁 le󠄁
 t󠄁r󠄁ait󠄁e󠄁m󠄁e󠄁n󠄁t󠄁 d󠄁e󠄁s do󠄁n󠄁n󠄁é󠄁e󠄁s󠄁,󠄁 y󠄁 c󠄁o󠄁m󠄁p󠄁r󠄁i󠄁s󠄁 l󠄁e󠄁s󠄁 c󠄁o󠄁n󠄁s󠄁i󠄁d󠄁é󠄁r󠄁a󠄁t󠄁i󠄁o󠄁n󠄁s󠄁 d󠄁e󠄁 c󠄁o󠄁n󠄁s󠄁e󠄁r󠄁v󠄁a󠄁t󠄁i󠄁o󠄁n󠄁.󠄁 L󠄁e󠄁s󠄁 r󠄁e󠄁ç󠄁u󠄁s󠄁
 e󠄁t󠄁 l󠄁'a󠄁c󠄁t󠄁i󠄁v󠄁i󠄁t󠄁é󠄁 d󠄁e l󠄁'󠄁o󠄁r󠄁g󠄁a󠄁n󠄁is󠄁ation peu󠄁v󠄁e󠄁n󠄁t󠄁 s󠄁u󠄁b󠄁s󠄁i󠄁s󠄁t󠄁e󠄁r󠄁 a󠄁p󠄁r󠄁è󠄁s󠄁 q󠄁u󠄁e󠄁 l󠄁e󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 e󠄁s󠄁t󠄁
 d󠄁e󠄁v󠄁e󠄁n󠄁u󠄁 i󠄁n󠄁d󠄁i󠄁s󠄁p󠄁o󠄁n󠄁i󠄁b󠄁l󠄁e󠄁 ;󠄁 u󠄁n󠄁 l󠄁i󠄁e󠄁n󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 n󠄁e󠄁 s󠄁i󠄁g󠄁n󠄁i󠄁f󠄁i󠄁e󠄁 d󠄁o󠄁n󠄁c󠄁 p󠄁a󠄁s󠄁 q󠄁u󠄁'󠄁i󠄁l󠄁 n󠄁'󠄁e󠄁x󠄁i󠄁s󠄁t󠄁e󠄁 a󠄁u󠄁c󠄁u󠄁n󠄁e󠄁

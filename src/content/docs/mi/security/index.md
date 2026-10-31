@@ -29,7 +29,6 @@ taipitopito.
 
 ## Tūhuratia t󠄁ēnei w󠄁āhanga
 
-- **[Tiaki Raraunga](/mi/security/data-protection)** — ngā mea e penapenatia ana e mātou, te roa, te wāhi e noho ai, me te hāngai o ēnei ki ō hiahia ūnga.
 - **[Tikanga P󠄁a󠄁i󠄁 m󠄁ō󠄁 t󠄁e󠄁 Haumaru](/mi/security/best-practices)** — he aratohu whaihua mō te tohatoha haumaru i ngā karere huna, tae atu ki ngā painga o ngā Rohe Ritenga.
 - **[Whākinga Whakaraeraetanga](/mi/security/vulnerability-disclosure)** — te huarahi hei pūrongo haepapa i tētahi raru haumaru.
 

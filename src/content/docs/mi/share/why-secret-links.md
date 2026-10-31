@@ -40,7 +40,7 @@ i󠄁h󠄁i󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u�
 t󠄁e󠄁 r󠄁a󠄁t󠄁o󠄁n󠄁g󠄁a󠄁 i󠄁 t󠄁e󠄁 i󠄁h󠄁i󠄁r󠄁a󠄁n󠄁g󠄁i󠄁 i󠄁 r󠄁u󠄁n󠄁g󠄁a󠄁 i󠄁 ō󠄁n󠄁a󠄁 t󠄁ū󠄁m󠄁a󠄁u󠄁.󠄁 K󠄁a󠄁 t󠄁ā󠄁p󠄁i󠄁r󠄁i󠄁 t󠄁e󠄁 k󠄁u󠄁p󠄁u󠄁 k󠄁a󠄁r󠄁a󠄁p󠄁a󠄁 i󠄁 t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁
 a󠄁r󠄁o󠄁w󠄁h󠄁a󠄁i󠄁 u󠄁r󠄁u󠄁n󠄁g󠄁a󠄁,󠄁 ā󠄁,󠄁 m󠄁e󠄁 t󠄁uku mā t󠄁ē󠄁t󠄁a󠄁h󠄁i󠄁 a󠄁r󠄁a󠄁 r󠄁e󠄁r󠄁e󠄁k󠄁ē󠄁 i󠄁 t󠄁e󠄁 h󠄁o󠄁n󠄁o󠄁n󠄁g󠄁a󠄁.󠄁
 
-T󠄁i󠄁r󠄁o󠄁h󠄁i󠄁a󠄁 [T󠄁i󠄁a󠄁k󠄁i󠄁 R󠄁a󠄁r󠄁a󠄁u󠄁n󠄁g󠄁a󠄁](/mi/security/data-protection) m󠄁ō󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁
+T󠄁i󠄁r󠄁o󠄁h󠄁i󠄁a󠄁 [T󠄁i󠄁a󠄁k󠄁i󠄁 R󠄁a󠄁r󠄁a󠄁u󠄁n󠄁g󠄁a󠄁](/en/security/our-principles#data-minimization) m󠄁ō󠄁 t󠄁e󠄁 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁
 r󠄁a󠄁r󠄁a󠄁u󠄁n󠄁g󠄁a󠄁,󠄁 t󠄁a󠄁e󠄁 a󠄁t󠄁u󠄁 k󠄁i󠄁 n󠄁g󠄁ā w󠄁h󠄁a󠄁k󠄁a󠄁a󠄁r󠄁o󠄁h󠄁a󠄁n󠄁g󠄁a󠄁 p󠄁u󠄁p󠄁u󠄁r󠄁i󠄁.󠄁 K󠄁a󠄁 t󠄁a󠄁e󠄁a󠄁 e󠄁 n󠄁g󠄁ā󠄁 r󠄁i󠄁h󠄁ī󠄁t󠄁i󠄁 m󠄁e󠄁 n󠄁g󠄁ā󠄁 m󠄁a󠄁h󠄁i󠄁
 w󠄁h󠄁a󠄁k󠄁a󠄁h󠄁a󠄁e󠄁r󠄁e󠄁 t󠄁e󠄁 n󠄁o󠄁h󠄁o󠄁 t󠄁o󠄁n󠄁u󠄁 i󠄁 m󠄁u󠄁r󠄁i󠄁 i󠄁 t󠄁e󠄁 k󠄁o󠄁r󠄁e󠄁n󠄁g󠄁a󠄁 o󠄁 t󠄁e󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a󠄁 e󠄁 w󠄁ā󠄁t󠄁e󠄁a󠄁,󠄁 n󠄁ō󠄁 r󠄁e󠄁i󠄁r󠄁a󠄁
 e󠄁h󠄁a󠄁r󠄁a󠄁 t󠄁e󠄁 h󠄁o󠄁n󠄁o󠄁n󠄁g󠄁a󠄁 k󠄁a󠄁r󠄁e󠄁r󠄁e󠄁 h󠄁u󠄁n󠄁a i t󠄁e󠄁 t󠄁o󠄁h󠄁u󠄁 k󠄁ā󠄁o󠄁r󠄁e󠄁 h󠄁e󠄁 r󠄁e󠄁k󠄁o󠄁a󠄁t󠄁a󠄁 o󠄁 te tohatoha.󠄁

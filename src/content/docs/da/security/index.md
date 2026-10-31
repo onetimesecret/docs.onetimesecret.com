@@ -26,7 +26,6 @@ det sikkert, og hvor du finder detaljerne.
 
 ## Udforsk dette afsnit
 
-- **[Databeskyttelse](/da/security/data-protection)** — hvad vi gemmer, hvor længe, hvor dataene ligger, og hvordan det understøtter compliance-behov.
 - **[Bedste sikkerhedspraksis](/da/security/best-practices)** — praktisk vejledning i at dele beskeder sikkert, herunder fordelene ved brugerdefinerede domæner.
 - **[Sårbarhedsrapportering](/da/security/vulnerability-disclosure)** — sådan rapporterer du et sikkerhedsproblem ansvarligt.
 

@@ -73,7 +73,7 @@ inte om det ä󠄁r din avsedda mottagare.
   f󠄁e󠄁l󠄁a󠄁k󠄁t󠄁i󠄁g󠄁a󠄁 f󠄁ö󠄁r󠄁s󠄁ö󠄁k󠄁 h󠄁a󠄁s󠄁t󠄁i󠄁g󠄁h󠄁e󠄁t󠄁s󠄁b󠄁e󠄁g󠄁r󠄁ä󠄁n󠄁s󠄁a󠄁s󠄁.󠄁
 
 L󠄁ö󠄁s󠄁e󠄁n󠄁f󠄁r󠄁a󠄁s󠄁e󠄁n󠄁 ä󠄁r󠄁 e󠄁n󠄁 å󠄁t󠄁k󠄁o󠄁m󠄁s󠄁t󠄁k󠄁o󠄁n󠄁t󠄁r󠄁o󠄁l󠄁l󠄁,󠄁 i󠄁n󠄁t󠄁e󠄁 k󠄁r󠄁y󠄁p󠄁t󠄁e󠄁r󠄁i󠄁n󠄁g󠄁s󠄁n󠄁y󠄁c󠄁k󠄁e󠄁l󠄁n󠄁 f󠄁ö󠄁r󠄁 i󠄁n󠄁n󠄁e󠄁h󠄁å󠄁l󠄁l󠄁e󠄁t󠄁.󠄁
-S󠄁e󠄁 [D󠄁a󠄁t󠄁a󠄁s󠄁k󠄁y󠄁d󠄁d󠄁](/sv/security/data-protection) f󠄁ö󠄁r󠄁 e󠄁n󠄁 ö󠄁v󠄁e󠄁r󠄁s󠄁i󠄁k󠄁t󠄁 ö󠄁v󠄁e󠄁r󠄁 t󠄁j󠄁ä󠄁n󠄁s󠄁t󠄁e󠄁n󠄁s󠄁
+S󠄁e󠄁 [D󠄁a󠄁t󠄁a󠄁s󠄁k󠄁y󠄁d󠄁d󠄁](/sv/security/) f󠄁ö󠄁r󠄁 e󠄁n󠄁 ö󠄁v󠄁e󠄁r󠄁s󠄁i󠄁k󠄁t󠄁 ö󠄁v󠄁e󠄁r󠄁 t󠄁j󠄁ä󠄁n󠄁s󠄁t󠄁e󠄁n󠄁s󠄁
 k󠄁r󠄁y󠄁p󠄁t󠄁e󠄁r󠄁i󠄁n󠄁g󠄁 o󠄁c󠄁h󠄁 d󠄁a󠄁t󠄁a󠄁h󠄁a󠄁n󠄁t󠄁e󠄁r󠄁i󠄁n󠄁g󠄁.󠄁
 
 ## L󠄁ä󠄁m󠄁n󠄁a󠄁 ö󠄁v󠄁e󠄁r󠄁 l󠄁ä󠄁n󠄁k󠄁e󠄁n󠄁

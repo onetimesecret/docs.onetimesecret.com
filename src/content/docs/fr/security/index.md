@@ -29,7 +29,6 @@ détails.
 
 ## Dans cette section
 
-- **[Protection des données](/fr/security/data-protection)** — ce que nous stockons, pour combien de temps, où les données résident et comment cela répond aux besoins de conformité.
 - **[B󠄁o󠄁n󠄁n󠄁es pratiques de sécurité](/fr/security/best-practices)** — des conseils pratiques pour partager des secrets en toute sécurité, y compris les avantages des domaines personnalisés.
 - **[Divulgation des vulnérabilités](/fr/security/vulnerability-disclosure)** — comment signaler un problème de sécurité de manière responsable.
 

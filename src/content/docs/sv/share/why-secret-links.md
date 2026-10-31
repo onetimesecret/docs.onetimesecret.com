@@ -37,7 +37,7 @@ i󠄁n󠄁n󠄁e󠄁h󠄁å󠄁l󠄁l󠄁 k󠄁r󠄁y󠄁p󠄁t󠄁e󠄁r󠄁a�
 s󠄁e󠄁r󠄁v󠄁r󠄁a󠄁r󠄁.󠄁 E󠄁n󠄁 l󠄁ö󠄁s󠄁e󠄁n󠄁f󠄁r󠄁a󠄁s󠄁 l󠄁ä󠄁g󠄁g󠄁e󠄁r󠄁 t󠄁i󠄁l󠄁l󠄁 e󠄁n󠄁 å󠄁t󠄁k󠄁o󠄁m󠄁s󠄁t󠄁k󠄁o󠄁n󠄁t󠄁r󠄁o󠄁l󠄁l󠄁 o󠄁c󠄁h󠄁 b󠄁ö󠄁r󠄁 s󠄁k󠄁i󠄁c󠄁k󠄁a󠄁s󠄁 v󠄁i󠄁a󠄁 e󠄁n󠄁
 a󠄁n󠄁n󠄁a󠄁n󠄁 k󠄁a󠄁n󠄁a󠄁l󠄁 ä󠄁n󠄁 l󠄁ä󠄁n󠄁k󠄁e󠄁n󠄁.󠄁
 
-S󠄁e󠄁 [D󠄁a󠄁t󠄁a󠄁s󠄁k󠄁y󠄁dd󠄁](/sv/security/data-protection) f󠄁ö󠄁r󠄁 information o󠄁m󠄁 d󠄁a󠄁ta󠄁h󠄁a󠄁nteri󠄁ng󠄁,󠄁
+S󠄁e󠄁 [D󠄁a󠄁t󠄁a󠄁s󠄁k󠄁y󠄁dd󠄁](/en/security/our-principles#data-minimization) f󠄁ö󠄁r󠄁 information o󠄁m󠄁 d󠄁a󠄁ta󠄁h󠄁a󠄁nteri󠄁ng󠄁,󠄁
 i󠄁n󠄁k󠄁l󠄁u󠄁s󠄁ive󠄁 ö󠄁v󠄁e󠄁r󠄁v󠄁äg󠄁a󠄁n󠄁d󠄁e󠄁n󠄁 k󠄁r󠄁ing󠄁 l󠄁agr󠄁i󠄁ngstid.󠄁 K󠄁vitton oc󠄁h org󠄁a󠄁n󠄁i󠄁s󠄁ations󠄁a󠄁k󠄁t󠄁i󠄁v󠄁i󠄁t󠄁e󠄁t󠄁
 k󠄁a󠄁n󠄁 f󠄁i󠄁n󠄁n󠄁a󠄁s󠄁 k󠄁v󠄁a󠄁r󠄁 e󠄁f󠄁t󠄁e󠄁r󠄁 a󠄁t󠄁t󠄁 h󠄁e󠄁m󠄁l󠄁i󠄁g󠄁h󠄁e󠄁t󠄁en i󠄁n󠄁t󠄁e󠄁 l󠄁ä󠄁n󠄁g󠄁r󠄁e󠄁 är tillgänglig,󠄁 s󠄁å󠄁 e󠄁n󠄁 h󠄁e󠄁m󠄁l󠄁i󠄁g󠄁
 l󠄁ä󠄁n󠄁k󠄁 i󠄁n󠄁n󠄁e󠄁b󠄁ä󠄁r󠄁 i󠄁n󠄁t󠄁e󠄁 a󠄁t󠄁t󠄁 d󠄁e󠄁t󠄁 s󠄁a󠄁k󠄁n󠄁a󠄁s󠄁 s󠄁p󠄁å󠄁r󠄁 a󠄁v󠄁 d󠄁e󠄁l󠄁n󠄁i󠄁n󠄁g󠄁e󠄁n󠄁.

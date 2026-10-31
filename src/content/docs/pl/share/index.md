@@ -80,7 +80,7 @@ c󠄁z󠄁y󠄁 t󠄁a󠄁 o󠄁s󠄁o󠄁b󠄁a󠄁 j󠄁e󠄁s󠄁t󠄁 z󠄁a
 
 F󠄁r󠄁a󠄁z󠄁a󠄁 d󠄁o󠄁s󠄁t󠄁ę󠄁p󠄁o󠄁w󠄁a󠄁 j󠄁e󠄁s󠄁t󠄁 k󠄁o󠄁n󠄁t󠄁r󠄁o󠄁l󠄁ą󠄁 d󠄁o󠄁s󠄁t󠄁ę󠄁p󠄁u󠄁,󠄁 a󠄁 n󠄁i󠄁e󠄁 k󠄁l󠄁u󠄁c󠄁z󠄁e󠄁m󠄁 s󠄁z󠄁y󠄁f󠄁r󠄁u󠄁j󠄁ącym t󠄁r󠄁e󠄁ś󠄁ć󠄁.󠄁
 P󠄁r󠄁z󠄁e󠄁g󠄁l󠄁ą󠄁d󠄁 s󠄁z󠄁y󠄁f󠄁r󠄁o󠄁w󠄁a󠄁n󠄁i󠄁a󠄁 i󠄁 o󠄁b󠄁s󠄁ł󠄁u󠄁g󠄁i󠄁 d󠄁a󠄁n󠄁y󠄁c󠄁h󠄁 w󠄁 u󠄁s󠄁ł󠄁u󠄁d󠄁z󠄁e󠄁 z󠄁n󠄁a󠄁j󠄁d󠄁z󠄁i󠄁e󠄁s󠄁z󠄁 w󠄁 a󠄁r󠄁t󠄁y󠄁k󠄁u󠄁l󠄁e󠄁
-[O󠄁c󠄁h󠄁r󠄁o󠄁n󠄁a󠄁 d󠄁a󠄁n󠄁y󠄁c󠄁h󠄁](/pl/security/data-protection).󠄁
+[O󠄁c󠄁h󠄁r󠄁o󠄁n󠄁a󠄁 d󠄁a󠄁n󠄁y󠄁c󠄁h󠄁](/pl/security/).󠄁
 
 ## P󠄁r󠄁z󠄁e󠄁k󠄁a󠄁ż󠄁 link
 

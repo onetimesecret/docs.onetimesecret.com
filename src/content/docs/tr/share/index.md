@@ -69,7 +69,7 @@ a󠄁m󠄁a󠄁ç󠄁l󠄁a󠄁d󠄁ı󠄁ğ󠄁ı󠄁n󠄁ı󠄁z󠄁 a󠄁l�
   y󠄁a󠄁n󠄁l󠄁ı󠄁ş󠄁 d󠄁e󠄁n󠄁e󠄁m󠄁e󠄁l󠄁e󠄁r󠄁 h󠄁ı󠄁z󠄁 s󠄁ı󠄁n󠄁ı󠄁r󠄁l󠄁a󠄁m󠄁a󠄁s󠄁ı󠄁n󠄁a󠄁 t󠄁a󠄁b󠄁i󠄁d󠄁i󠄁r󠄁.󠄁
 
 G󠄁ü󠄁v󠄁e󠄁n󠄁l󠄁i󠄁k󠄁 i󠄁f󠄁a󠄁d󠄁e󠄁s󠄁i󠄁 b󠄁i󠄁r󠄁 e󠄁r󠄁i󠄁ş󠄁i󠄁m󠄁 k󠄁o󠄁n󠄁t󠄁r󠄁o󠄁l󠄁ü󠄁d󠄁ü󠄁r󠄁,󠄁 i󠄁ç󠄁e󠄁r󠄁i󠄁ğ󠄁i󠄁n󠄁 ş󠄁i󠄁f󠄁r󠄁e󠄁l󠄁e󠄁m󠄁e󠄁 a󠄁n󠄁a󠄁h󠄁t󠄁a󠄁r󠄁ı󠄁 d󠄁e󠄁ğ󠄁i󠄁l󠄁d󠄁i󠄁r󠄁.󠄁
-H󠄁i󠄁z󠄁m󠄁e󠄁t󠄁i󠄁n󠄁 ş󠄁i󠄁f󠄁r󠄁e󠄁l󠄁e󠄁m󠄁e󠄁 v󠄁e󠄁 v󠄁e󠄁r󠄁i󠄁 i󠄁ş󠄁l󠄁e󠄁m󠄁e󠄁 g󠄁e󠄁n󠄁e󠄁l󠄁 b󠄁a󠄁k󠄁ı󠄁ş󠄁ı󠄁 i󠄁ç󠄁i󠄁n󠄁 [V󠄁e󠄁r󠄁i󠄁 k󠄁o󠄁r󠄁u󠄁m󠄁a󠄁](/tr/security/data-protection)
+H󠄁i󠄁z󠄁m󠄁e󠄁t󠄁i󠄁n󠄁 ş󠄁i󠄁f󠄁r󠄁e󠄁l󠄁e󠄁m󠄁e󠄁 v󠄁e󠄁 v󠄁e󠄁r󠄁i󠄁 i󠄁ş󠄁l󠄁e󠄁m󠄁e󠄁 g󠄁e󠄁n󠄁e󠄁l󠄁 b󠄁a󠄁k󠄁ı󠄁ş󠄁ı󠄁 i󠄁ç󠄁i󠄁n󠄁 [V󠄁e󠄁r󠄁i󠄁 k󠄁o󠄁r󠄁u󠄁m󠄁a󠄁](/tr/security/)
 s󠄁a󠄁y󠄁f󠄁a󠄁s󠄁ı󠄁n󠄁a󠄁 b󠄁a󠄁k󠄁ı󠄁n󠄁.󠄁
 
 ## B󠄁a󠄁ğ󠄁l󠄁a󠄁n󠄁t󠄁ı󠄁y󠄁ı󠄁 t󠄁e󠄁s󠄁l󠄁i󠄁m󠄁 e󠄁d󠄁i󠄁n󠄁

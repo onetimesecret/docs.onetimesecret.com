@@ -28,7 +28,6 @@ de forma segura y dónde encontrar los detalles.
 
 ## Explore esta sección
 
-- **[Protección de datos](/es/security/data-protection)**:󠄁 qué almacenamos, durante cuánto tiempo, dónde residen los datos y cómo se corresponde esto con las necesidades de cumplimiento.
 - **[Buenas prácticas de seguridad](/es/security/best-practices)**:󠄁 orientación práctica para compartir secretos de forma segura, incluidas las ventajas de los dominios personalizados.
 - **[Notificación de vulnerabilidades](/es/security/vulnerability-disclosure)**:󠄁 cómo notificar un problema de seguridad de forma responsable.
 

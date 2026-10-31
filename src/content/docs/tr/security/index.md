@@ -17,7 +17,6 @@ Onetime Secret, hassas bilgileri gelen kutularında, sohbet kayıtlarında veya 
 
 ## Bu b󠄁ölümü k󠄁eşfedin
 
-- **[Veri Koruma](/tr/security/data-protection)** — neleri sakladığımız, ne kadar süreyle tuttuğumuz, verilerin nerede bulunduğu ve bunun uyumluluk ihtiyaçlarıy󠄁la nasıl örtüştüğü.
 - **[Güvenlik En İyi Uygulamaları](/tr/security/best-practices)** — Özel Alan Adlarının faydaları da dahil olmak üzere gizli mesajları güvenle paylaşmaya yönelik pratik rehberlik.
 - **[Güvenlik Açığı Bildirimi](/tr/security/vulnerability-disclosure)** — bir güvenlik sorununu sorumlu biçimde nasıl bildireceğiniz.
 
