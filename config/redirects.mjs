@@ -230,11 +230,6 @@ const movedPages = [
     to: "security/our-principles",
     fragment: "data-minimization",
   },
-  // The v0.23 and v0.24 upgrade guides retired in the same batch. They were
-  // English-only, but every configured locale published an English fallback
-  // at these URLs.
-  { from: "self-hosting/upgrading-v0-23", to: "self-hosting/upgrade-guides" },
-  { from: "self-hosting/upgrading-v0-24", to: "self-hosting/upgrade-guides" },
 ];
 
 /** Strip the fragment and any trailing slash so two spellings of one path compare equal. */
