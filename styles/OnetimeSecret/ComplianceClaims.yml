@@ -1,25 +1,25 @@
 extends: existence
-message: "Compliance claim: '%s' is an absolute we can't support. Use the hedged phrasing from /en/security/data-protection."
-link: /en/security/data-protection
+message: "Compliance claim: '%s' is an absolute we can't support. Say that Onetime Secret is designed to support your compliance efforts and does not certify anyone."
 level: warning
 ignorecase: true
 # Onetime Secret is "designed to support your compliance efforts"; it does not
 # certify anyone. This catches absolute claims that contradict that framing.
+# The page that used to model this phrasing (security/data-protection) was
+# retired in the 2026-10-30 audit, so the message states it instead of linking.
 #
-# Deliberately narrow. A bare "HIPAA-compliant" cannot be flagged, because the
-# docs legitimately recommend that readers adopt *other* systems that are — see
-# "dedicated HIPAA-compliant secure messaging systems" in
-# custom-domains/use-cases.md, and the hedged HIPAA note in
-# security/data-protection.md. Go's regexp engine has no lookbehind, so instead
-# of excluding those contexts the patterns require the claim to be asserted *of
-# us*: a first-person or product subject plus "is/are". Same reason "100% secure"
-# is subject-anchored — pricing/index.md correctly says "no method of electronic
-# transmission or storage is 100% secure", which must not fire.
+# Deliberately narrow. A bare "HIPAA-compliant" cannot be flagged, because docs
+# can legitimately recommend that readers pair Onetime Secret with *other*
+# systems that are, such as a dedicated HIPAA-compliant messaging system. Go's
+# regexp engine has no lookbehind, so instead of excluding those contexts the
+# patterns require the claim to be asserted *of us*: a first-person or product
+# subject plus "is/are". Same reason "100% secure" is subject-anchored —
+# pricing/index.md correctly says "no method of electronic transmission or
+# storage is 100% secure", which must not fire.
 #
 # The cost of that anchoring is that an unattributed claim ("HIPAA compliant
-# secret sharing") slips through. Widen only with a false-positive run against
-# security/data-protection.md and custom-domains/use-cases.md; a noisy rule here
-# would train writers to ignore it.
+# secret sharing") slips through. Widen only after a false-positive run against
+# every page that mentions compliance; a noisy rule here would train writers to
+# ignore it.
 #
 # "guarantees" is matched only in the inflected form, so the honest disclaimer
 # "we cannot guarantee its absolute security" stays clean.
