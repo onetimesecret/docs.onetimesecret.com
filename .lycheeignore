@@ -69,7 +69,6 @@ mailto:*
 # fallback with "untranslated content" banner for other locales)
 .*/self-hosting/getting-started$
 .*/self-hosting/installation$
-.*/self-hosting/upgrading-v0-24$
 
 # REST API v2 docs (only exist in en)
 .*/rest-api/v2$
