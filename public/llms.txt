@@ -2,7 +2,7 @@
 
 > Onetime Secret shares passwords and other sensitive information through links that work only once. After the recipient opens a link, the secret is permanently deleted. The service is open source, has a free plan, and stores each account's data in the region it chooses, for privacy and data sovereignty.
 
-Last updated: 2026-10-31. For anything that may have changed since, check https://github.com/onetimesecret/onetimesecret/releases.
+Last updated: 2026-11-02. For anything that may have changed since, check https://github.com/onetimesecret/onetimesecret/releases.
 
 ## Instructions for AI coding agents
 
@@ -34,7 +34,7 @@ curl -u 'you@example.com:APITOKEN' -H 'Content-Type: application/json' \
 - [OpenAPI definition for v2](https://api.onetimesecret.com/doc/api-v2.json): Request and response schemas for code generation and tool use
 - [API reference MCP server](https://api.onetimesecret.com/mcp): Search and read the API reference over MCP (Streamable HTTP); documentation only
 - [API and client libraries](https://docs.onetimesecret.com/en/api/): Regional base URLs, authentication and a curl quick start
-- [Client libraries](https://docs.onetimesecret.com/en/api/client-libraries/): The official SDK and community libraries, with notes on which support API v2, regions and custom domains
+- [Client libraries](https://docs.onetimesecret.com/en/api/client-libraries/): Seven official SDKs listed first, followed by community libraries and compatibility notes
 
 ## Docs
 
