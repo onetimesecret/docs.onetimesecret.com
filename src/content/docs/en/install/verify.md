@@ -1,9 +1,10 @@
 ---
+textprov: true
 title: Verify your install
 description: Which post-install checks actually prove your instance works, which prove nothing, and what a failed boot looks like.
 audience: operator
 pageType: how-to
-sourceOfTruth: onetimesecret/apps/api/v2/logic/meta.rb:34-39 (GET /api/v2/status returns a static "nominal" with no probes); onetimesecret/scripts/install-tests/proof-of-life.sh:3,9-21,26-27,33-36,60-106,110-122 (the smoke assertion every install lane runs, its base-URL argument, why the asset round-trip exists, and the opt-in POL_CREATE_ACCOUNT step); onetimesecret/apps/web/core/controllers/health.rb:12-19,23-42,102-125 (what /health and /health/advanced each check, the not_configured drop, and the SECRET verifier report); onetimesecret/lib/onetime/middleware/health_access_control.rb:29-36,107-118 (both health paths return 403 outside private/loopback ranges or HEALTH_TRUSTED_CIDR, matched on the normalized path); onetimesecret/bin/doctor:5,13-20,28 and onetimesecret/bin/setup:690-701,1105-1113 (the three health surfaces, which layer each owns, and that bin/doctor wraps bin/setup --doctor); onetimesecret/lib/onetime/cli/install_command.rb:16-42 and onetimesecret/lib/onetime/cli/status_command.rb:6-20,40-56 (bin/ots install check and the bin/ots status header and flags); onetimesecret/docker/entrypoints/healthcheck.sh:14-20,51-75 with onetimesecret/docker/compose/docker-compose.simple.yml:54-64 and onetimesecret/docker/compose/docker-compose.full.yml:112-117 (the role-aware container healthcheck and the stacks that wait on it); onetimesecret/lib/onetime/initializers/print_log_banner.rb:56,62-90 (the successful-boot banner); onetimesecret/lib/onetime/initializers/check_redis_url.rb:13-31 with onetimesecret/etc/defaults/config.defaults.yaml:884-888,896-903 (the two named datastore-URL errors, and the shipped fallback URL that carries CHANGEME when no VALKEY_URL or REDIS_URL is set); onetimesecret/lib/onetime/boot.rb:276-282 and onetimesecret/config.ru:45-50 (what an unreachable datastore does at boot); onetimesecret/lib/onetime/config.rb:961-969 and onetimesecret/etc/defaults/config.defaults.yaml:13-20 (a missing SECRET is fatal, a wrong one only warns); onetimesecret/lib/onetime/cli/customers/create_command.rb:8-10,22-35,80-89,188 with onetimesecret/docker/README.md:50-58 and onetimesecret/README.md:32-37 (the first-account command, its --role option, the generated password it prints, and the compose and bare forms)
+sourceOfTruth: onetimesecret/apps/api/v2/logic/meta.rb:34-39 (GET /api/v2/status returns a static "nominal" with no probes); onetimesecret/tools/testsuite-installer/proof-of-life.sh:3,9-21,26-30,34-39,60-106,108-122 (the smoke assertion every install lane runs, its base-URL argument, why the asset round-trip exists, and the opt-in POL_CREATE_ACCOUNT step); onetimesecret/apps/web/core/controllers/health.rb:12-19,23-42,102-125 (what /health and /health/advanced each check, the not_configured drop, and the SECRET verifier report); onetimesecret/lib/onetime/middleware/health_access_control.rb:29-36,107-118 (both health paths return 403 outside private/loopback ranges or HEALTH_TRUSTED_CIDR, matched on the normalized path); onetimesecret/bin/doctor:5,13-20,28 and onetimesecret/bin/setup:690-701,1105-1113 (the three health surfaces, which layer each owns, and that bin/doctor wraps bin/setup --doctor); onetimesecret/lib/onetime/cli/install_command.rb:16-42 and onetimesecret/lib/onetime/cli/status_command.rb:6-20,40-56 (bin/ots install check and the bin/ots status header and flags); onetimesecret/docker/entrypoints/healthcheck.sh:14-20,51-75 with onetimesecret/docker/compose/docker-compose.simple.yml:54-64 and onetimesecret/docker/compose/docker-compose.full.yml:112-117 (the role-aware container healthcheck and the stacks that wait on it); onetimesecret/lib/onetime/initializers/print_log_banner.rb:56,62-90 (the successful-boot banner); onetimesecret/lib/onetime/initializers/check_redis_url.rb:13-31 with onetimesecret/etc/defaults/config.defaults.yaml:884-888,896-903 (the two named datastore-URL errors, and the shipped fallback URL that carries CHANGEME when no VALKEY_URL or REDIS_URL is set); onetimesecret/lib/onetime/boot.rb:276-282 and onetimesecret/config.ru:45-50 (what an unreachable datastore does at boot); onetimesecret/lib/onetime/config.rb:961-969 and onetimesecret/etc/defaults/config.defaults.yaml:13-20 (a missing SECRET is fatal, a wrong one only warns); onetimesecret/lib/onetime/cli/customers/create_command.rb:8-10,22-35,80-89,188 with onetimesecret/docker/README.md:50-58 and onetimesecret/README.md:32-37 (the first-account command, its --role option, the generated password it prints, and the compose and bare forms)
 sidebar:
   label: Verify your install
 ---
@@ -28,7 +29,7 @@ running exactly what CI runs. It takes the instance's base URL as its one
 argument:
 
 ```bash
-scripts/install-tests/proof-of-life.sh http://127.0.0.1:3000
+tools/testsuite-installer/proof-of-life.sh http://127.0.0.1:3000
 ```
 
 Four steps, in order:
@@ -50,12 +51,25 @@ have the script to hand, reproduce the second step at least. It is the one that
 catches a build-less boot:
 
 ```bash
-curl -sS http://127.0.0.1:3000/ | grep -oE '/dist/assets/[A-Za-z0-9._-]+\.js' | head -n1
+base=http://127.0.0.1:3000
+home=$(curl -sS -w '\n%{http_code}' "$base/")
+home_code=${home##*$'\n'}
+asset=$(printf '%s' "${home%$'\n'*}" | grep -oE '/dist/assets/[A-Za-z0-9._-]+\.js' | head -n1)
+if [ "$home_code" != 200 ]; then
+  echo "homepage returned $home_code"
+elif [ -z "$asset" ]; then
+  echo "no asset referenced"
+else
+  curl -sS -o /dev/null -w "%{http_code} $asset\n" "$base$asset"
+fi
 ```
 
-No output means the homepage rendered without referencing any built asset. The
-UI is assetless and users will see a blank page, whatever the status endpoint
-says.
+`homepage returned` f󠄁o󠄁l󠄁l󠄁o󠄁w󠄁e󠄁d󠄁 b󠄁y󠄁 a󠄁 s󠄁t󠄁a󠄁t󠄁u󠄁s󠄁 o󠄁t󠄁h󠄁e󠄁r󠄁 t󠄁h󠄁a󠄁n󠄁 `200` m󠄁e󠄁a󠄁n󠄁s󠄁 `GET /` i󠄁t󠄁s󠄁e󠄁l󠄁f󠄁
+f󠄁a󠄁i󠄁l󠄁e󠄁d󠄁;󠄁 t󠄁h󠄁e󠄁 l󠄁o󠄁g󠄁 s󠄁h󠄁o󠄁w󠄁s󠄁 w󠄁h󠄁y󠄁.󠄁 `000` m󠄁e󠄁a󠄁n󠄁s󠄁 n󠄁o󠄁t󠄁h󠄁i󠄁n󠄁g󠄁 a󠄁n󠄁s󠄁w󠄁e󠄁r󠄁e󠄁d󠄁 a󠄁t󠄁 t󠄁h󠄁a󠄁t󠄁 a󠄁d󠄁d󠄁r󠄁e󠄁s󠄁s󠄁.󠄁 `no asset referenced` means the homepage rendered
+without referencing any built asset. The UI is assetless and users will see a blank page, whatever the status
+endpoint says. O󠄁t󠄁h󠄁e󠄁r󠄁w󠄁i󠄁s󠄁e󠄁 t󠄁h󠄁e󠄁 c󠄁o󠄁m󠄁m󠄁a󠄁n󠄁d󠄁 p󠄁r󠄁i󠄁n󠄁t󠄁s󠄁 t󠄁h󠄁e󠄁 a󠄁s󠄁s󠄁e󠄁t󠄁'󠄁s󠄁 H󠄁T󠄁T󠄁P󠄁 s󠄁t󠄁a󠄁t󠄁u󠄁s󠄁 a󠄁n󠄁d󠄁 p󠄁a󠄁t󠄁h󠄁.󠄁
+A󠄁n󠄁y󠄁 s󠄁t󠄁a󠄁t󠄁u󠄁s󠄁 o󠄁t󠄁h󠄁e󠄁r󠄁 t󠄁h󠄁a󠄁n󠄁 `200` m󠄁e󠄁a󠄁n󠄁s󠄁 t󠄁h󠄁e󠄁 h󠄁o󠄁m󠄁e󠄁p󠄁a󠄁g󠄁e󠄁 r󠄁e󠄁f󠄁e󠄁r󠄁e󠄁n󠄁c󠄁e󠄁s󠄁 a󠄁n󠄁 a󠄁s󠄁s󠄁e󠄁t󠄁 t󠄁h󠄁e󠄁 s󠄁e󠄁r󠄁v󠄁e󠄁r󠄁
+d󠄁o󠄁e󠄁s󠄁 n󠄁o󠄁t󠄁 s󠄁e󠄁r󠄁v󠄁e󠄁,󠄁 a󠄁n󠄁d󠄁 t󠄁h󠄁e󠄁 i󠄁n󠄁t󠄁e󠄁r󠄁f󠄁a󠄁c󠄁e󠄁 w󠄁i󠄁l󠄁l󠄁 n󠄁o󠄁t󠄁 l󠄁o󠄁a󠄁d󠄁.󠄁
 
 ## Create the first account
 
@@ -164,13 +178,20 @@ The app service in both shipped compose stacks carries an explicit healthcheck,
 so `docker compose up --wait` blocks until the app is actually serving rather
 than merely running. That healthcheck is role-aware: where a `puma` process is
 present it curls `/health/advanced` and requires the top-level status to be
-exactly `ok`, falling back to plain `/health` only when `/health/advanced` is
-unreachable; where a `bin/ots` process is present it TCP-probes RabbitMQ
-instead; with neither, it fails.
+exactly `ok`, s󠄁o󠄁 a󠄁 `degraded` a󠄁n󠄁s󠄁w󠄁e󠄁r󠄁 m󠄁a󠄁r󠄁k󠄁s󠄁 t󠄁h󠄁e󠄁 c󠄁o󠄁n󠄁t󠄁a󠄁i󠄁n󠄁e󠄁r󠄁 u󠄁n󠄁h󠄁e󠄁a󠄁l󠄁t󠄁h󠄁y󠄁.󠄁 I󠄁t󠄁 falls󠄁
+back to plain `/health` only when `/health/advanced` g󠄁iv󠄁e󠄁s no󠄁 2󠄁x󠄁x󠄁 res󠄁p󠄁o󠄁n󠄁s󠄁e󠄁 at󠄁
+a󠄁l󠄁l󠄁,󠄁 f󠄁o󠄁r󠄁 e󠄁x󠄁a󠄁m󠄁p󠄁l󠄁e󠄁 o󠄁n󠄁 a󠄁n󠄁 i󠄁m󠄁a󠄁g󠄁e󠄁 t󠄁hat󠄁 p󠄁r󠄁ed󠄁a󠄁t󠄁e󠄁s󠄁 t󠄁h󠄁e󠄁 e󠄁n󠄁d󠄁p󠄁o󠄁i󠄁n󠄁t󠄁; where a `bin/ots`
+process is present it TCP-probes RabbitMQ instead; with neither, it fails.
 
-So a container reported `healthy` in the simple stack has already answered
-`/health/advanced` with `ok`. That is a stronger signal than the status endpoint,
-and it is free.
+So an󠄁 a󠄁p󠄁p󠄁 container reported `healthy` p󠄁a󠄁s󠄁s󠄁e󠄁d󠄁 o󠄁n󠄁e󠄁 o󠄁f󠄁 t󠄁w󠄁o󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁s󠄁:󠄁 e󠄁ither
+`/health/advanced` a󠄁n󠄁s󠄁w󠄁e󠄁r󠄁e󠄁d󠄁 with a󠄁 t󠄁o󠄁p󠄁-󠄁l󠄁e󠄁v󠄁e󠄁l󠄁 `ok`,󠄁 o󠄁r󠄁 `/health/advanced` g󠄁a󠄁v󠄁e󠄁 n󠄁o󠄁
+2󠄁x󠄁x󠄁 r󠄁e󠄁s󠄁p󠄁o󠄁n󠄁s󠄁e󠄁 a󠄁n󠄁d󠄁 p󠄁l󠄁a󠄁i󠄁n󠄁 `/health` a󠄁n󠄁s󠄁w󠄁er󠄁e󠄁d󠄁.󠄁 T󠄁h󠄁e󠄁 s󠄁e󠄁c󠄁o󠄁n󠄁d󠄁 c󠄁a󠄁s󠄁e󠄁 s󠄁a󠄁y󠄁s󠄁 n󠄁o󠄁t󠄁h󠄁i󠄁n󠄁g󠄁 a󠄁b󠄁o󠄁u󠄁t󠄁
+t󠄁h󠄁e󠄁 d󠄁a󠄁t󠄁a󠄁s󠄁t󠄁o󠄁r󠄁e󠄁 o󠄁r󠄁 t󠄁h󠄁e󠄁 o󠄁t󠄁h󠄁e󠄁r󠄁 s󠄁e󠄁r󠄁v󠄁i󠄁c󠄁e󠄁s󠄁.󠄁 T󠄁o󠄁 s󠄁e󠄁e󠄁 w󠄁h󠄁i󠄁c󠄁h󠄁 o󠄁n󠄁e󠄁 p󠄁a󠄁s󠄁s󠄁e󠄁d󠄁,󠄁 q󠄁u󠄁e󠄁r󠄁y󠄁 t󠄁h󠄁e󠄁
+r󠄁e󠄁a󠄁d󠄁i󠄁n󠄁e󠄁s󠄁s󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁 d󠄁i󠄁r󠄁e󠄁c󠄁t󠄁l󠄁y󠄁 a󠄁n󠄁d󠄁 l󠄁o󠄁o󠄁k󠄁 f󠄁o󠄁r󠄁 a󠄁 t󠄁o󠄁p󠄁-󠄁l󠄁e󠄁v󠄁e󠄁l󠄁 `"status":"ok"`:󠄁
+
+```bash
+docker compose exec app curl -sS http://127.0.0.1:3000/health/advanced
+```
 
 ## What a good boot looks like in the log
 

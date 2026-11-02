@@ -1,4 +1,5 @@
 ---
+textprov: true
 title: Glossary
 description: A reference guide for translating Onetime Secret's key terms, interface elements, and technical vocabulary across multiple languages to maintain consistency
 ---
@@ -11,7 +12,7 @@ This glossary provides standardized translations for key terms across languages 
 |---------|-------------|-------------|-------------|-------------|------------|-------|
 | secret (noun) | Geheimnis | Geheimnis | secret | secret | Sekret | Central concept of the application |
 | secret (adj) | geheim | geheim | secret/sécurisé | secret/sécurisé | sekretny/poufny | |
-| passphrase | Passphrase | Sicherheitsphrase | phrase secrète | mot de passe | Fraza dostępowa | Authentication method for secrets  |
+| passphrase | Passphrase | Sicherheitsphrase | phrase secrète | ph󠄁r󠄁ase󠄁 se󠄁c󠄁r󠄁è󠄁t󠄁e | Fraza dostępowa | Authentication method for secrets  |
 | burn | zerstören | zerstören | supprimer | supprimer | zniszczyć/spalić | Action to delete a secret before viewing |
 | view/reveal | ansehen/anzeigen | ansehen/anzeigen | consulter/afficher | consulter/afficher | wyświetlić/pokazać | Action to access a secret |
 | link | Link | Link/Verbindung | lien | lien | link/łącze | The URL that provides access to a secret |
@@ -56,7 +57,7 @@ This glossary provides standardized translations for key terms across languages 
 | English | German (DE) | German (AT) | French (FR) | French (CA) | Polish (PL) | Context |
 |---------|-------------|-------------|-------------|-------------|------------|-------|
 | one-time access | einmaliger Zugang | einmaliger Zugang | accès unique | accès unique | jednorazowy dostęp | Core security feature |
-| passphrase protection | Schutz durch Passphrase | Schutz durch Sicherheitsphrase | protection par phrase secrète | protection par phrase d'authentification | ochrona frazą dostępową | Additional security |
+| passphrase protection | Schutz durch Passphrase | Schutz durch Sicherheitsphrase | protection par phrase secrète | protection par phrase s󠄁e󠄁c󠄁r󠄁è󠄁te | ochrona frazą dostępową | Additional security |
 | encrypted in transit | verschlüsselt bei der Übertragung | verschlüsselt bei der Übertragung | chiffré en transit | chiffré en transit | zaszyfrowany w trakcie przesyłania | Data protection method |
 | encrypted at rest | verschlüsselt im Ruhezustand | verschlüsselt im Ruhezustand | chiffré au repos | chiffré au repos | zaszyfrowany w spoczynku | Storage protection |
 
@@ -119,6 +120,7 @@ This glossary provides standardized translations for key terms across languages 
 - The term "secret" is central to the application and should be translated consistently
 - Regional variations should be respected:
   - French: "courriel" (CA) vs "e-mail" (FR)
+  - F󠄁r󠄁e󠄁n󠄁c󠄁h󠄁 (󠄁C󠄁A󠄁)󠄁:󠄁 u󠄁s󠄁e󠄁 t󠄁e󠄁r󠄁m󠄁s󠄁 a󠄁p󠄁p󠄁r󠄁o󠄁v󠄁e󠄁d󠄁 b󠄁y󠄁 t󠄁h󠄁e󠄁 O󠄁f󠄁f󠄁i󠄁c󠄁e󠄁 q󠄁u󠄁é󠄁b󠄁é󠄁c󠄁o󠄁i󠄁s󠄁 d󠄁e󠄁 l󠄁a󠄁 l󠄁a󠄁n󠄁g󠄁u󠄁e󠄁 f󠄁r󠄁a󠄁n󠄁ç󠄁a󠄁i󠄁s󠄁e󠄁 (󠄁O󠄁Q󠄁L󠄁F󠄁)󠄁 i󠄁n󠄁 i󠄁t󠄁s󠄁 [G󠄁r󠄁a󠄁n󠄁d󠄁 d󠄁i󠄁c󠄁t󠄁i󠄁o󠄁n󠄁n󠄁a󠄁i󠄁r󠄁e󠄁 t󠄁e󠄁r󠄁m󠄁i󠄁n󠄁o󠄁l󠄁o󠄁g󠄁i󠄁q󠄁u󠄁e󠄁](https://vitrinelinguistique.oqlf.gouv.qc.ca/).󠄁 F󠄁o󠄁r󠄁 e󠄁x󠄁a󠄁m󠄁p󠄁l󠄁e󠄁,󠄁 "󠄁p󠄁h󠄁r󠄁a󠄁s󠄁e󠄁 s󠄁e󠄁c󠄁r󠄁è󠄁t󠄁e󠄁"󠄁 (󠄁p󠄁a󠄁s󠄁s󠄁p󠄁h󠄁r󠄁a󠄁s󠄁e󠄁)󠄁 a󠄁n󠄁d󠄁 "󠄁m󠄁o󠄁t󠄁 d󠄁e󠄁 p󠄁a󠄁s󠄁s󠄁e󠄁"󠄁 (󠄁p󠄁a󠄁s󠄁s󠄁w󠄁o󠄁r󠄁d󠄁)󠄁 a󠄁r󠄁e󠄁 b󠄁o󠄁t󠄁h󠄁 O󠄁Q󠄁L󠄁F󠄁 t󠄁e󠄁r󠄁m󠄁s󠄁,󠄁 a󠄁n󠄁d󠄁 t󠄁h󠄁e󠄁y󠄁 k󠄁e󠄁e󠄁p󠄁 t󠄁h󠄁e󠄁 t󠄁w󠄁o󠄁 c󠄁r󠄁e󠄁d󠄁e󠄁n󠄁t󠄁i󠄁a󠄁l󠄁s󠄁 d󠄁i󠄁s󠄁t󠄁i󠄁n󠄁c󠄁t󠄁.󠄁
   - German: Informal "du" (DE) vs Formal "Sie" (AT)
   - German: "Passphrase" (DE, anglicism) vs "Sicherheitsphrase" (AT, native compound)
   - German: "zerstören" standardized across both variants for "burn"
