@@ -10,8 +10,7 @@
 # version-specific upgrade guides (self-hosting/upgrading-v0-*) are the
 # standing example: each is a row in the table on self-hosting/upgrade-guides,
 # which is in the sidebar, and the check counts that as reachable. Adding a
-# release guide means adding its table row, not an entry here. The two
-# no-longer-recommended guides at the end of this file are the exception.
+# release guide means adding its table row, not an entry here.
 #
 # The list was empty after the Phase 2 information-architecture rework, when
 # every EN page became reachable from the sidebar.
@@ -26,5 +25,3 @@
 # Add an entry only for a page that is genuinely meant to be reachable by URL
 # alone — and say why in the reason, because the reason is the only thing
 # stopping the entry from becoming a place to park navigation debt.
-self-hosting/upgrading-v0-23 # no longer recommended (Fall 2026); kept so deep links and release notes still resolve, deliberately left off upgrade-guides
-self-hosting/upgrading-v0-24 # no longer recommended (Fall 2026); kept so deep links and the v0.24.0 release notes still resolve, deliberately left off upgrade-guides
