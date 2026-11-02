@@ -79,7 +79,7 @@ s󠄁e󠄁r󠄁v󠄁i󠄁c󠄁e󠄁 c󠄁o󠄁n󠄁t󠄁r󠄁o󠄁l󠄁e󠄁e�
   o󠄁n󠄁j󠄁u󠄁i󠄁s󠄁t󠄁e󠄁 p󠄁o󠄁g󠄁i󠄁n󠄁g󠄁e󠄁n󠄁 w󠄁o󠄁r󠄁d󠄁e󠄁n󠄁 b󠄁e󠄁p󠄁e󠄁r󠄁k󠄁t󠄁 d󠄁o󠄁o󠄁r󠄁 r󠄁a󠄁t󠄁e󠄁 l󠄁i󠄁m󠄁i󠄁t󠄁i󠄁n󠄁g󠄁.󠄁
 
 D󠄁e󠄁 w󠄁a󠄁c󠄁h󠄁t󠄁w󠄁o󠄁o󠄁r󠄁d󠄁z󠄁i󠄁n󠄁 i󠄁s󠄁 e󠄁e󠄁n󠄁 t󠄁o󠄁e󠄁g󠄁a󠄁n󠄁g󠄁s󠄁c󠄁o󠄁n󠄁t󠄁r󠄁o󠄁l󠄁e󠄁,󠄁 n󠄁i󠄁e󠄁t󠄁 d󠄁e󠄁 v󠄁e󠄁r󠄁s󠄁l󠄁e󠄁u󠄁t󠄁e󠄁l󠄁i󠄁n󠄁g󠄁s󠄁s󠄁l󠄁e󠄁u󠄁t󠄁e󠄁l󠄁 v󠄁o󠄁o󠄁r󠄁
-d󠄁e󠄁 i󠄁n󠄁h󠄁o󠄁u󠄁d󠄁.󠄁 Z󠄁i󠄁e󠄁 [G󠄁e󠄁g󠄁e󠄁v󠄁e󠄁n󠄁s󠄁b󠄁e󠄁s󠄁c󠄁h󠄁e󠄁r󠄁m󠄁i󠄁n󠄁g󠄁](/nl/security/data-protection) v󠄁o󠄁o󠄁r󠄁 e󠄁e󠄁n󠄁
+d󠄁e󠄁 i󠄁n󠄁h󠄁o󠄁u󠄁d󠄁.󠄁 Z󠄁i󠄁e󠄁 [G󠄁e󠄁g󠄁e󠄁v󠄁e󠄁n󠄁s󠄁b󠄁e󠄁s󠄁c󠄁h󠄁e󠄁r󠄁m󠄁i󠄁n󠄁g󠄁](/nl/security/) v󠄁o󠄁o󠄁r󠄁 e󠄁e󠄁n󠄁
 overzich󠄁t van d󠄁e ver󠄁s󠄁l󠄁e󠄁u󠄁t󠄁e󠄁lin󠄁g e󠄁n󠄁 g󠄁e󠄁g󠄁e󠄁v󠄁e󠄁n󠄁s󠄁v󠄁e󠄁r󠄁w󠄁e󠄁r󠄁k󠄁i󠄁n󠄁g󠄁 v󠄁a󠄁n󠄁 de service.󠄁
 
 ## G󠄁e󠄁e󠄁f󠄁 d󠄁e󠄁 l󠄁i󠄁n󠄁k󠄁 d󠄁o󠄁o󠄁r󠄁

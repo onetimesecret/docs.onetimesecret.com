@@ -28,7 +28,6 @@ com segurança e onde encontrar os detalhes.
 
 ## Explore e󠄁sta s󠄁eção
 
-- **[Proteção de d󠄁ados](/pt-br/security/data-protection)** — o que armazenamos, por quanto tempo, onde os dados ficam e como isso se relaciona com as necessidades de conformidade.
 - **[Melhores p󠄁ráticas de s󠄁egurança](/pt-br/security/best-practices)** — orientações práticas para compartilhar mensagens confidenciais com segurança, incluindo os benefícios dos Domínios Personalizados.
 - **[Divulgação de v󠄁ulnerabilidades](/pt-br/security/vulnerability-disclosure)** — como relatar um problema de segurança de forma responsável.
 

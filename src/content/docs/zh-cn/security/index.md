@@ -17,7 +17,6 @@ Onetime Secret 的存在，是为了将敏感信息从一个人传递给另一�
 
 ## 本节内容
 
-- **[数据保护](/zh-cn/security/data-protection)**——我们存储什么、保留多久、数据位于何处，以及这如何对应合规需求。
 - **[安全最佳实践](/zh-cn/security/best-practices)**——安全分享机密内容的实用指南，包括自定义域名的优势。
 - **[漏洞披露](/zh-cn/security/vulnerability-disclosure)**——如何负责任地报告安全问题。
 

@@ -87,7 +87,6 @@ Use this guide to ensure all Māori translations maintain consistency, technical
 | passphrase protection | tiaki kupu karapa | Additional security |
 | encrypted in transit | muhumuhu i te wā kawe | Data protection method during transmission |
 | encrypted at rest | muhumuhu i te wā noho | Storage protection |
-| end-to-end encryption | whakamuhumuhu pito-ki-pito | Encryption from sender to receiver |
 | rate limiting | whakawhāiti tukanga | System to prevent abuse |
 | security | haumaru | Protection characteristic |
 

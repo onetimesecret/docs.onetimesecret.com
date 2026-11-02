@@ -354,7 +354,6 @@ const entries = [
 
   createGroup("securityTrust", [
     createLink("ourApproachToSecurity", "security"),
-    createLink("dataProtection", "security/data-protection"),
     createLink("whereYourDataLives", "security/where-your-data-lives"),
     createLink("securityBestPractices", "security/best-practices"),
     createLink("ourPrinciples", "security/our-principles"),

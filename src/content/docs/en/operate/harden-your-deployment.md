@@ -257,7 +257,7 @@ o󠄁f󠄁 i󠄁t󠄁 w󠄁a󠄁s󠄁 b󠄁u󠄁i󠄁l󠄁t󠄁 t󠄁o󠄁 p󠄁
 - [ ] L󠄁o󠄁g󠄁 d󠄁e󠄁s󠄁t󠄁i󠄁n󠄁a󠄁t󠄁i󠄁o󠄁n󠄁s󠄁 a󠄁r󠄁e󠄁 a󠄁c󠄁c󠄁e󠄁s󠄁s󠄁-󠄁c󠄁o󠄁n󠄁t󠄁r󠄁o󠄁l󠄁l󠄁e󠄁d󠄁 a󠄁n󠄁d󠄁 h󠄁a󠄁v󠄁e󠄁 a󠄁 r󠄁e󠄁t󠄁e󠄁n󠄁t󠄁i󠄁o󠄁n󠄁 p󠄁e󠄁r󠄁i󠄁o󠄁d󠄁.󠄁 L󠄁o󠄁g󠄁s󠄁
       h󠄁o󠄁l󠄁d󠄁 p󠄁a󠄁t󠄁h󠄁s󠄁,󠄁 a󠄁d󠄁d󠄁r󠄁e󠄁s󠄁s󠄁e󠄁s󠄁 a󠄁n󠄁d󠄁 w󠄁h󠄁a󠄁t󠄁e󠄁v󠄁e󠄁r󠄁 y󠄁o󠄁u󠄁 a󠄁l󠄁l󠄁o󠄁w󠄁l󠄁i󠄁s󠄁t󠄁e󠄁d󠄁;󠄁 t󠄁r󠄁e󠄁a󠄁t󠄁 t󠄁h󠄁e󠄁 c󠄁o󠄁l󠄁l󠄁e󠄁c󠄁t󠄁o󠄁r󠄁 a󠄁s󠄁
       a󠄁 s󠄁y󠄁s󠄁t󠄁e󠄁m󠄁 h󠄁o󠄁l󠄁d󠄁i󠄁n󠄁g󠄁 p󠄁e󠄁r󠄁s󠄁o󠄁n󠄁a󠄁l󠄁 d󠄁a󠄁t󠄁a󠄁.󠄁 S󠄁e󠄁e󠄁
-      [D󠄁a󠄁t󠄁a󠄁 p󠄁r󠄁o󠄁t󠄁e󠄁c󠄁t󠄁i󠄁o󠄁n󠄁](/en/security/data-protection).󠄁
+      [D󠄁a󠄁t󠄁a󠄁 m󠄁i󠄁n󠄁i󠄁m󠄁i󠄁z󠄁a󠄁t󠄁i󠄁o󠄁n󠄁](/en/security/our-principles#data-minimization).󠄁
 - [ ] [`DIAGNOSTICS_ENABLED`](/en/reference/environment-variables/#diagnostics_enabled)
       a󠄁n󠄁d󠄁 t󠄁h󠄁e󠄁 S󠄁e󠄁n󠄁t󠄁r󠄁y󠄁 D󠄁S󠄁N󠄁s󠄁 a󠄁r󠄁e󠄁 t󠄁h󠄁e󠄁 c󠄁o󠄁n󠄁f󠄁i󠄁g󠄁u󠄁r󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 y󠄁o󠄁u󠄁 i󠄁n󠄁t󠄁e󠄁n󠄁d󠄁e󠄁d󠄁.󠄁 I󠄁t󠄁 i󠄁s󠄁 d󠄁e󠄁c󠄁l󠄁a󠄁r󠄁e󠄁d󠄁
       `false`.󠄁 I󠄁f󠄁 e󠄁r󠄁r󠄁o󠄁r󠄁 t󠄁r󠄁a󠄁c󠄁k󠄁i󠄁n󠄁g󠄁 i󠄁s󠄁 o󠄁n󠄁,󠄁 a󠄁 p󠄁r󠄁o󠄁d󠄁u󠄁c󠄁t󠄁i󠄁o󠄁n󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁n󠄁c󠄁e󠄁 p󠄁o󠄁i󠄁n󠄁t󠄁s󠄁 a󠄁t󠄁 a󠄁

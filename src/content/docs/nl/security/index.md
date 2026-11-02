@@ -28,7 +28,6 @@ doen en waar je de details vindt.
 
 ## Verken deze sectie
 
-- **[Gegevensbescherming](/nl/security/data-protection)** — wat we opslaan, hoe lang, waar het staat en hoe dit aansluit op compliance-ei󠄁s󠄁en.
 - **[Best prac󠄁tic󠄁es󠄁 voor beveiliging](/nl/security/best-practices)** — praktische richtlijnen om berichten veilig te delen, inclusief de voordelen van aangepaste domeinen.
 - **[Kwetsbaarheden melden](/nl/security/vulnerability-disclosure)** — hoe je een beveiligingsprobleem verantwoord meldt.
 

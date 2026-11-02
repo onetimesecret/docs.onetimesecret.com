@@ -26,7 +26,6 @@ znaleźć szczegóły.
 
 ## Poznaj tę sekcję
 
-- **[Ochrona danych](/pl/security/data-protection)** — co przechowujemy, jak długo, gdzie znajdują się dane i jak przekłada się to na wymogi zgodności.
 - **[Najlepsze praktyki bezpieczeństwa](/pl/security/best-practices)** — praktyczne wskazówki dotyczące bezpiecznego udostępniania sekretów, w tym korzyści z domen niestandardowych.
 - **[Zgłaszanie podatności](/pl/security/vulnerability-disclosure)** — jak odpowiedzialnie zgłosić problem z bezpieczeństwem.
 

@@ -7,6 +7,11 @@ pageType: how-to
 sourceOfTruth: onetimesecret/.env.reference:324-330 (GENERATED_VALUE_DISPLAY_TTL — the receipt-page reveal window, its 60-second default, and that 0 disables it — which this page's config mapping restates); onetimesecret/.env.reference:5-6 and onetimesecret/.env.example:1-11 (.env.reference is the file that documents every supported environment variable; .env.example is the quick-start subset); onetimesecret/etc/defaults/config.defaults.yaml:288,292 and onetimesecret/.env.reference:422-423 (the account toggles are named AUTH_SIGNUP and AUTH_SIGNIN, both on unless set to false); onetimesecret at v0.24.5 — etc/defaults/auth.defaults.yaml:6-36 and lib/onetime/auth_config.rb:24-49 (mode and default SQLite database); etc/defaults/config.defaults.yaml:189-191,521 (site.authentication.enabled and independent jobs switch)
 ---
 
+:::caution[N󠄁o󠄁 l󠄁o󠄁n󠄁g󠄁e󠄁r󠄁 r󠄁e󠄁c󠄁o󠄁m󠄁m󠄁e󠄁n󠄁d󠄁e󠄁d󠄁]
+A󠄁s󠄁 o󠄁f󠄁 F󠄁a󠄁l󠄁l󠄁 2󠄁0󠄁2󠄁6󠄁,󠄁 t󠄁h󠄁i󠄁s󠄁 g󠄁u󠄁i󠄁d󠄁e󠄁 i󠄁s󠄁 n󠄁o󠄁 l󠄁o󠄁n󠄁g󠄁e󠄁r󠄁 r󠄁e󠄁c󠄁o󠄁m󠄁m󠄁e󠄁n󠄁d󠄁e󠄁d󠄁.󠄁 F󠄁o󠄁r󠄁 c󠄁u󠄁r󠄁r󠄁e󠄁n󠄁t󠄁 r󠄁e󠄁l󠄁e󠄁a󠄁s󠄁e󠄁s󠄁,󠄁 s󠄁e󠄁e󠄁
+[U󠄁p󠄁g󠄁r󠄁a󠄁d󠄁e󠄁 G󠄁u󠄁i󠄁d󠄁e󠄁s󠄁](/en/self-hosting/upgrade-guides).󠄁
+:::
+
 This guide covers upgrading to v0.24.0 from v0.22 or v0.23. There are significant changes to the authentication system, configuration structure, and data model. You'll need to choose an upgrade path, update configuration files, and possibly run data migrations.
 
 For the full context on what changed and why, see the [v0.24.0 release notes](https://blog.onetimesecret.com/posts/2026-03-04-release-notes-v0.24.0).

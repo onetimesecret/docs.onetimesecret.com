@@ -4,7 +4,7 @@ title: Images and variants
 description: Which container image to deploy, what the S6, lite and Caddy variants are for, and how to pin the release you run.
 audience: operator
 pageType: reference
-sourceOfTruth: onetimesecret/docker/bake.hcl:106-116 (four build targets — main, s6, lite, caddy — of which the CI group builds three); onetimesecret/docker/bake.hcl:27-33,81-96 (both registries, and the repository-name suffix per variant); onetimesecret/docker/bake.hcl:67-69 (a local bake defaults to linux/amd64 alone unless PLATFORMS is set); onetimesecret/.github/workflows/build-and-publish-oci-images.yml:148-196,258-264 (which tags are immutable and which move, the targets the release workflow publishes, and the platforms it builds for); onetimesecret/Dockerfile:353-356,388-389,449-455 (the main image is the default build target and runs a single process as a non-root user); onetimesecret/Dockerfile:162,169-172,186-188 (BRAND_PACK bakes a pack in at build time and fails the build when the pack was never generated; BRAND_PACK / BRAND_ASSETS_DIR select one at run time instead); onetimesecret/docker/variants/README.md:31 and onetimesecret/docker/variants/lite.dockerfile:37-38,110-112 (the lite image bundles Redis, stays root, and is not for production); onetimesecret/docker/variants/caddy.dockerfile:111-118 (the Caddy image ships PUBLIC_DIR empty because the app serves its own assets); onetimesecret/docker/README.md:93-108 and onetimesecret/scripts/check-version-pins.sh:17-28 (pin a release rather than a moving tag, and the compose default must be an immutable vX.Y.Z); onetimesecret at f7794a9844a865dc346b7cded73d72c918a22700 — docker/compose/docker-compose.simple.yml and docker-compose.full.yml (OTS_IMAGE_TAG interpolation)
+sourceOfTruth: onetimesecret/docker/bake.hcl:106-116 (four build targets — main, s6, lite, caddy — of which the CI group builds three); onetimesecret/docker/bake.hcl:27-33,81-96 (both registries, and the repository-name suffix per variant); onetimesecret/docker/bake.hcl:67-69 (a local bake defaults to linux/amd64 alone unless PLATFORMS is set); onetimesecret/.github/workflows/build-and-publish-oci-images.yml:148-196,258-264 (which tags are immutable and which move, the targets the release workflow publishes, and the platforms it builds for); onetimesecret/Dockerfile:353-356,388-389,449-455 (the main image is the default build target and runs a single process as a non-root user); onetimesecret/Dockerfile:162,169-172,186-188 (BRAND_PACK bakes a pack in at build time and fails the build when the pack was never generated; BRAND_PACK / BRAND_ASSETS_DIR select one at run time instead); onetimesecret/docker/variants/README.md:31 and onetimesecret/docker/variants/lite.dockerfile:37-38,110-112 (the lite image bundles Redis, persists no data beyond the container, and stays root); onetimesecret/docker/variants/caddy.dockerfile:111-118 (the Caddy image ships PUBLIC_DIR empty because the app serves its own assets); onetimesecret/docker/README.md:93-108 and onetimesecret/scripts/check-version-pins.sh:17-28 (pin a release rather than a moving tag, and the compose default must be an immutable vX.Y.Z); onetimesecret at f7794a9844a865dc346b7cded73d72c918a22700 — docker/compose/docker-compose.simple.yml and docker-compose.full.yml (OTS_IMAGE_TAG interpolation); onetimesecret/docker/variants/lite.dockerfile:95-98 (Lite defaults HOST=127.0.0.1:3000 and SSL=false); onetimesecret/etc/defaults/config.defaults.yaml:6-9 (HOST and SSL set the host and scheme of generated links)
 ---
 
 ## Run the main image
@@ -78,14 +78,22 @@ their shutdown, where the main image runs one process and leaves supervision to
 Compose, systemd or your orchestrator. It is published to both registries
 alongside the main image.
 
-### Lite — demos and testing, never production
+### Lite — t󠄁h󠄁e a󠄁p󠄁p󠄁 and i󠄁ts󠄁 d󠄁a󠄁t󠄁a󠄁s󠄁t󠄁o󠄁r󠄁e in one󠄁 v󠄁o󠄁l󠄁a󠄁t󠄁i󠄁l󠄁e󠄁 c󠄁o󠄁n󠄁t󠄁a󠄁i󠄁n󠄁e󠄁r󠄁
 
 `onetimesecret-lite` is the main image with a Redis server installed inside it,
 so a single container gives you a working instance with nothing else to set up.
 It is ephemeral by design: the datastore lives in the container and every secret
 is lost when that container stops. It also runs as root, because `redis-server`
-needs write access the application user does not have. Use it for a demo, a
-local trial or a throwaway test, and for nothing else.
+needs write access the application user does not have. Use it w󠄁h󠄁e󠄁r󠄁e󠄁v󠄁e󠄁r󠄁 l󠄁o󠄁s󠄁i󠄁n󠄁g󠄁 e󠄁v󠄁e󠄁r󠄁y󠄁 s󠄁t󠄁ore󠄁d󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 o󠄁n󠄁 a󠄁
+r󠄁e󠄁s󠄁t󠄁a󠄁r󠄁t󠄁 i󠄁s󠄁 a󠄁c󠄁c󠄁e󠄁p󠄁t󠄁a󠄁b󠄁l󠄁e󠄁,󠄁 s󠄁u󠄁c󠄁h󠄁 a󠄁s󠄁 a demo, a trial,󠄁 or a󠄁n󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁n󠄁c󠄁e󠄁 y󠄁o󠄁u󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁 f󠄁o󠄁r󠄁 o󠄁n󠄁e󠄁
+t󠄁a󠄁s󠄁k󠄁 a󠄁n󠄁d󠄁 r󠄁e󠄁m󠄁o󠄁v󠄁e󠄁 a󠄁f󠄁t󠄁e󠄁r󠄁w󠄁a󠄁r󠄁d󠄁s󠄁.󠄁 W󠄁h󠄁e󠄁n󠄁 d󠄁ata󠄁 m󠄁u󠄁s󠄁t󠄁 s󠄁u󠄁rv󠄁i󠄁v󠄁e󠄁 r󠄁esta󠄁r󠄁t󠄁s󠄁, r󠄁u󠄁n󠄁 t󠄁h󠄁e󠄁 m󠄁a󠄁i󠄁n󠄁 i󠄁m󠄁a󠄁g󠄁e󠄁
+w󠄁i󠄁t󠄁h󠄁 a󠄁 s󠄁e󠄁p󠄁a󠄁r󠄁a󠄁t󠄁e󠄁 d󠄁a󠄁t󠄁a󠄁s󠄁t󠄁o󠄁r󠄁e󠄁.󠄁
+
+I󠄁t󠄁s󠄁 d󠄁e󠄁f󠄁a󠄁u󠄁l󠄁t󠄁s󠄁 (󠄁`HOST=127.0.0.1:3000`,󠄁 `SSL=false`)󠄁 g󠄁e󠄁n󠄁e󠄁r󠄁a󠄁t󠄁e󠄁 p󠄁l󠄁a󠄁i󠄁n󠄁 `http://`
+l󠄁i󠄁n󠄁k󠄁s󠄁 t󠄁o󠄁 t󠄁h󠄁e󠄁 c󠄁o󠄁n󠄁t󠄁a󠄁i󠄁n󠄁e󠄁r󠄁 i󠄁t󠄁s󠄁e󠄁l󠄁f󠄁.󠄁 B󠄁e󠄁f󠄁o󠄁r󠄁e󠄁 a󠄁n󠄁y󠄁o󠄁n󠄁e󠄁 r󠄁e󠄁a󠄁c󠄁h󠄁e󠄁s󠄁 i󠄁t󠄁 o󠄁v󠄁e󠄁r󠄁 a󠄁 n󠄁e󠄁t󠄁w󠄁o󠄁r󠄁k󠄁,󠄁 p󠄁u󠄁t󠄁 a󠄁
+T󠄁L󠄁S󠄁 p󠄁r󠄁o󠄁x󠄁y󠄁 i󠄁n󠄁 f󠄁r󠄁o󠄁n󠄁t󠄁 o󠄁f󠄁 i󠄁t󠄁 a󠄁n󠄁d󠄁 s󠄁e󠄁t󠄁 `HOST` t󠄁o󠄁 t󠄁h󠄁e󠄁 p󠄁u󠄁b󠄁l󠄁i󠄁c󠄁 h󠄁o󠄁s󠄁t󠄁n󠄁a󠄁m󠄁e󠄁 a󠄁n󠄁d󠄁 `SSL=true`.󠄁
+[R󠄁e󠄁v󠄁e󠄁r󠄁s󠄁e󠄁 p󠄁r󠄁o󠄁x󠄁y󠄁 a󠄁n󠄁d󠄁 T󠄁L󠄁S󠄁](/en/install/reverse-proxy-and-tls) c󠄁o󠄁v󠄁er󠄁s󠄁 t󠄁h󠄁e󠄁 p󠄁r󠄁o󠄁x󠄁y󠄁
+c󠄁o󠄁n󠄁f󠄁i󠄁g󠄁u󠄁r󠄁a󠄁t󠄁i󠄁o󠄁n󠄁,󠄁 i󠄁n󠄁c󠄁l󠄁u󠄁d󠄁i󠄁n󠄁g󠄁 t󠄁h󠄁e󠄁 p󠄁r󠄁o󠄁x󠄁y󠄁 t󠄁r󠄁u󠄁s󠄁t󠄁 s󠄁e󠄁t󠄁t󠄁i󠄁n󠄁g󠄁s󠄁 t󠄁h󠄁e󠄁 a󠄁p󠄁p󠄁 n󠄁e󠄁e󠄁d󠄁s󠄁 b󠄁e󠄁h󠄁i󠄁n󠄁d󠄁 i󠄁t󠄁.
 
 ### Caddy — the TLS proxy the full stack builds
 

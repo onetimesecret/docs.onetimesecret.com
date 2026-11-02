@@ -76,7 +76,7 @@ Onetime Secret's Canadian data center region (CA), located in Toronto.
 
 - **Location**: Toronto, Canada
 - **URL**: [ca.onetimesecret.com](https://ca.onetimesecret.com)
-- **Hosting provider**: <a href="https://www.digitalocean.com" target="_blank" rel="noopener noreferrer nofollow">DigitalOcean</a>
+- **Hosting provider**: <a href="https://www.digitalocean.com" target="_blank" rel="noopener noreferrer nofollow">DigitalOcean</a>,󠄁 a󠄁 U󠄁S󠄁 p󠄁r󠄁o󠄁v󠄁i󠄁d󠄁e󠄁r󠄁
 - **Custom domain CNAME**: `identity.ca.onetime.co`
 
 :::note
@@ -84,15 +84,6 @@ We are a Canadian company and are actively looking for a suitable Canadian-owned
 :::
 
 **Regulatory environment.** Canada's federal privacy legislation, the **Personal Information Protection and Electronic Documents Act (PIPEDA)**, governs the collection, use, and disclosure of personal information in the course of commercial activity. Several provinces also maintain their own privacy legislation that may apply.
-
-**About the hosting provider.** This region is hosted by <a href="https://www.digitalocean.com" target="_blank" rel="noopener noreferrer nofollow">DigitalOcean</a>, a US-based cloud provider headquartered in Broomfield, Colorado, serving millions of developers globally. DigitalOcean complies with GDPR for European customers, supports data portability, and publishes transparency reports detailing government data requests. The company implements robust security controls and publishes audit reports.
-
-**Key regulatory aspects**
-
-- PIPEDA requires meaningful consent for data collection and use
-- The Office of the Privacy Commissioner of Canada oversees compliance
-- Canada holds an adequacy decision from the European Commission, facilitating data transfers with the EU
-- Provincial laws (e.g., Alberta's PIPA, Quebec's Law 25) may impose additional requirements
 
 **When to consider this region**
 
@@ -107,19 +98,10 @@ Onetime Secret's European Union data center region (EU), located in Nuremberg, G
 
 - **Location**: Nuremberg, Germany
 - **URL**: [eu.onetimesecret.com](https://eu.onetimesecret.com)
-- **Hosting provider**: <a href="https://www.hetzner.com" target="_blank" rel="noopener noreferrer nofollow">Hetzner</a>
+- **Hosting provider**: <a href="https://www.hetzner.com" target="_blank" rel="noopener noreferrer nofollow">Hetzner</a>,󠄁 a󠄁 G󠄁e󠄁r󠄁m󠄁a󠄁n󠄁 p󠄁r󠄁o󠄁v󠄁i󠄁d󠄁e󠄁r󠄁
 - **Custom domain CNAME**: `identity.eu.onetime.co`
 
 **Regulatory environment.** The EU region operates under the **General Data Protection Regulation (GDPR)**, one of the most comprehensive data protection frameworks in the world. Germany, as the hosting country, also applies the **Bundesdatenschutzgesetz (BDSG)** which supplements the GDPR.
-
-**About the hosting provider.** This region is hosted by <a href="https://www.hetzner.com" target="_blank" rel="noopener noreferrer nofollow">Hetzner</a>, a German hosting provider based in Gunzenhausen, operating under EU jurisdiction. Hetzner offers cost-effective cloud solutions with a focus on privacy and data protection under GDPR. Customer personal data is not exposed in public WHOIS records for private customers, and the company operates under strict German and EU data protection laws.
-
-**Key regulatory aspects**
-
-- GDPR provides strong rights for data subjects including access, rectification, erasure, and portability
-- Data processing requires a lawful basis (e.g., consent, legitimate interest, contractual necessity)
-- The German Federal Commissioner for Data Protection and Freedom of Information (BfDI) serves as a supervisory authority
-- Strict rules on international data transfers outside the EU/EEA
 
 **When to consider this region**
 
@@ -134,19 +116,10 @@ Onetime Secret's Aotearoa New Zealand data center region (NZ), located in Poriru
 
 - **Location**: Porirua, Aotearoa New Zealand
 - **URL**: [nz.onetimesecret.com](https://nz.onetimesecret.com)
-- **Hosting provider**: <a href="https://catalystcloud.nz" target="_blank" rel="noopener noreferrer nofollow">Catalyst Cloud</a>
+- **Hosting provider**: <a href="https://catalystcloud.nz" target="_blank" rel="noopener noreferrer nofollow">Catalyst Cloud</a>,󠄁 a󠄁 N󠄁e󠄁w󠄁 Z󠄁e󠄁a󠄁l󠄁a󠄁n󠄁d󠄁 p󠄁r󠄁o󠄁v󠄁i󠄁d󠄁e󠄁r󠄁
 - **Custom domain CNAME**: `identity.nz.onetime.co`
 
 **Regulatory environment.** New Zealand's data protection framework is governed by the **Privacy Act 2020**, which replaced the Privacy Act 1993. The Act establishes thirteen information privacy principles that apply to agencies handling personal information.
-
-**About the hosting provider.** This region is hosted by <a href="https://catalystcloud.nz" target="_blank" rel="noopener noreferrer nofollow">Catalyst Cloud</a>, a New Zealand-based, owned, and operated cloud provider supporting Aotearoa's digital economy. All customer data is stored locally across three onshore data centers, and data remains in New Zealand, protected by local laws and privacy regulations. Catalyst Cloud is an approved provider for New Zealand Government agencies and holds ISO certifications for information security management.
-
-**Key regulatory aspects**
-
-- The Privacy Act 2020 includes mandatory breach notification requirements
-- The Office of the Privacy Commissioner oversees compliance and investigates complaints
-- New Zealand holds an adequacy decision from the European Commission, facilitating data transfers with the EU
-- The Act applies to overseas agencies that carry on business in New Zealand
 
 **When to consider this region**
 
@@ -161,21 +134,10 @@ Onetime Secret's United Kingdom data center region (UK), located in London.
 
 - **Location**: London, United Kingdom
 - **URL**: [uk.onetimesecret.com](https://uk.onetimesecret.com)
-- **Hosting provider**: <a href="https://upcloud.com" target="_blank" rel="noopener noreferrer nofollow">UpCloud</a> (Helsinki, Finland)
+- **Hosting provider**: <a href="https://upcloud.com" target="_blank" rel="noopener noreferrer nofollow">UpCloud</a>,󠄁 a󠄁 F󠄁inn󠄁is󠄁h󠄁 p󠄁r󠄁o󠄁v󠄁ide󠄁r󠄁
 - **Custom domain CNAME**: `identity.ingress.onetime.co` (anycast)
 
-Note that the UK region uses an anycast CNAME rather than a region-specific subdomain.
-
 **Regulatory environment.** The United Kingdom's data protection framework is governed by the **UK General Data Protection Regulation (UK GDPR)** and the **Data Protection Act 2018**. Post-Brexit, the UK maintains its own data protection regime that is closely aligned with the EU GDPR.
-
-**About the hosting provider.** This region is hosted by <a href="https://upcloud.com" target="_blank" rel="noopener noreferrer nofollow">UpCloud</a>, a European cloud infrastructure provider founded in 2011 and headquartered in Helsinki, Finland. As a sovereign European provider, all account-related data is stored exclusively in Finland under Finnish and EU data protection regulations. UpCloud operates data centers across multiple European locations including London, which hosts this region.
-
-**Key regulatory aspects**
-
-- The Information Commissioner's Office (ICO) serves as the independent supervisory authority
-- The UK GDPR retains the core principles and rights of the EU GDPR, including data subject rights and lawful basis requirements
-- The UK has an adequacy decision from the European Commission, allowing data to flow freely from the EU/EEA
-- The Data Protection Act 2018 supplements the UK GDPR with provisions specific to UK law enforcement and intelligence services
 
 **When to consider this region**
 
@@ -190,19 +152,10 @@ Onetime Secret's United States data center region (US), located in Hillsboro, Or
 
 - **Location**: Hillsboro, Oregon, United States
 - **URL**: [us.onetimesecret.com](https://us.onetimesecret.com)
-- **Hosting provider**: <a href="https://www.hetzner.com" target="_blank" rel="noopener noreferrer nofollow">Hetzner</a>
+- **Hosting provider**: <a href="https://www.hetzner.com" target="_blank" rel="noopener noreferrer nofollow">Hetzner</a>,󠄁 a󠄁 G󠄁e󠄁r󠄁m󠄁a󠄁n󠄁 p󠄁r󠄁o󠄁v󠄁i󠄁d󠄁e󠄁r󠄁
 - **Custom domain CNAME**: `identity.us.onetime.co`
 
 **Regulatory environment.** The United States does not have a single comprehensive federal data protection law. Instead, data protection is addressed through a combination of federal and state laws that apply to specific sectors or types of data.
-
-**About the hosting provider.** This region is hosted by <a href="https://www.hetzner.com" target="_blank" rel="noopener noreferrer nofollow">Hetzner</a>, a German hosting provider based in Gunzenhausen, operating under EU jurisdiction. Even for its US data center locations, Hetzner maintains its privacy-conscious approach rooted in German and EU data protection standards. Customer personal data is not exposed in public WHOIS records for private customers.
-
-**Key regulatory aspects**
-
-- Federal laws such as HIPAA (health data), GLBA (financial data), and COPPA (children's data) apply to specific sectors
-- State-level privacy laws are increasingly significant, notably the **California Consumer Privacy Act (CCPA)** and its amendment the **California Privacy Rights Act (CPRA)**
-- Other states including Virginia, Colorado, Connecticut, and Utah have enacted comprehensive privacy legislation
-- Oregon, where this data center is located, enacted the **Oregon Consumer Privacy Act** effective July 2024
 
 **When to consider this region**
 

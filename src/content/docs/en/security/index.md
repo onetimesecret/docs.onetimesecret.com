@@ -28,7 +28,6 @@ find the details.
 
 ## Explore this section
 
-- **[Data Protection](/en/security/data-protection)** — what we store, for how long, where it lives, and how this maps to compliance needs.
 - **[Security Best Practices](/en/security/best-practices)** — practical guidance for sharing secrets safely, including the benefits of Custom Domains.
 - **[Vulnerability Disclosure](/en/security/vulnerability-disclosure)** — how to report a security issue responsibly.
 

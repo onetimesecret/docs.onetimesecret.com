@@ -28,7 +28,6 @@ farlo in modo sicuro e dove trovare i dettagli.
 
 ## In questa sezione
 
-- **[Protezione dei dati](/it/security/data-protection)** — cosa conserviamo, per quanto tempo, dove risiedono i dati e come questo risponde alle esigenze di conformità.
 - **[B󠄁e󠄁s󠄁t󠄁 prac󠄁tice di sicurezza](/it/security/best-practices)** — indicazioni pratiche per condividere i segreti in modo sicuro, compresi i vantaggi dei domini personalizzati.
 - **[Divulgazione delle vulnerabilità](/it/security/vulnerability-disclosure)** — come segnalare un problema di sicurezza in modo responsabile.
 

@@ -28,7 +28,6 @@ sicher zu tun, und wo du die Details findest.
 
 ## Inhalte dieses Abschnitts
 
-- **[Datenschutz](/de/security/data-protection)** — was wir speichern, wie lange, wo die Daten liegen und wie das zu deinen Compliance-Anforderungen passt.
 - **[Bewährte Sicherheitspraktiken](/de/security/best-practices)** — praktische Hinweise zum sicheren Teilen von Geheimnissen, einschließlich der Vorteile benutzerdefinierter Domains.
 - **[Meldung von Sicherheitslücken](/de/security/vulnerability-disclosure)** — wie du ein Sicherheitsproblem verantwortungsvoll meldest.
 

@@ -38,7 +38,7 @@ F󠄁r󠄁a󠄁z󠄁a󠄁 d󠄁o󠄁s󠄁t󠄁ę󠄁p󠄁o󠄁w󠄁a󠄁 d󠄁o�
 n󠄁i󠄁ż󠄁 l󠄁i󠄁n󠄁k󠄁.󠄁
 
 O󠄁b󠄁s󠄁ł󠄁u󠄁g󠄁ę󠄁 d󠄁a󠄁n󠄁y󠄁c󠄁h󠄁,󠄁 w󠄁 t󠄁y󠄁m󠄁 k󠄁w󠄁e󠄁s󠄁t󠄁i󠄁e󠄁 p󠄁r󠄁z󠄁e󠄁c󠄁h󠄁o󠄁w󠄁y󠄁w󠄁a󠄁n󠄁i󠄁a󠄁,󠄁 o󠄁p󠄁i󠄁s󠄁u󠄁j󠄁e󠄁 a󠄁r󠄁t󠄁y󠄁k󠄁u󠄁ł󠄁
-[O󠄁c󠄁h󠄁r󠄁o󠄁n󠄁a󠄁 d󠄁a󠄁n󠄁y󠄁c󠄁h󠄁](/pl/security/data-protection).󠄁 P󠄁o󠄁t󠄁w󠄁i󠄁e󠄁r󠄁d󠄁z󠄁e󠄁n󠄁i󠄁a󠄁 i󠄁 a󠄁k󠄁t󠄁y󠄁w󠄁n󠄁o󠄁ś󠄁ć󠄁
+[O󠄁c󠄁h󠄁r󠄁o󠄁n󠄁a󠄁 d󠄁a󠄁n󠄁y󠄁c󠄁h󠄁](/en/security/our-principles#data-minimization).󠄁 P󠄁o󠄁t󠄁w󠄁i󠄁e󠄁r󠄁d󠄁z󠄁e󠄁n󠄁i󠄁a󠄁 i󠄁 a󠄁k󠄁t󠄁y󠄁w󠄁n󠄁o󠄁ś󠄁ć󠄁
 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁c󠄁j󠄁i󠄁 m󠄁o󠄁g󠄁ą󠄁 p󠄁o󠄁z󠄁o󠄁s󠄁t󠄁a󠄁ć󠄁 p󠄁o󠄁 t󠄁y󠄁m󠄁,󠄁 j󠄁a󠄁k󠄁 s󠄁e󠄁k󠄁r󠄁e󠄁t󠄁 s󠄁t󠄁a󠄁n󠄁i󠄁e󠄁 s󠄁i󠄁ę󠄁 n󠄁i󠄁e󠄁d󠄁o󠄁s󠄁t󠄁ę󠄁p󠄁n󠄁y󠄁,󠄁 w󠄁i󠄁ę󠄁c󠄁 l󠄁i󠄁n󠄁k󠄁
 d󠄁o󠄁 s󠄁e󠄁k󠄁r󠄁e󠄁t󠄁u󠄁 n󠄁i󠄁e󠄁 o󠄁z󠄁n󠄁a󠄁c󠄁z󠄁a󠄁,󠄁 ż󠄁e󠄁 n󠄁i󠄁e󠄁 m󠄁a󠄁 ż󠄁a󠄁d󠄁n󠄁e󠄁g󠄁o󠄁 z󠄁a󠄁p󠄁i󠄁s󠄁u󠄁 u󠄁d󠄁o󠄁s󠄁t󠄁ę󠄁p󠄁n󠄁i󠄁e󠄁n󠄁i󠄁a󠄁.󠄁
 

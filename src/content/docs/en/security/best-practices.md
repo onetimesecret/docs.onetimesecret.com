@@ -4,6 +4,7 @@ title: Security Best Practices
 description: Enhance your secret sharing security with these best practices specific to Onetime Secret, including the security benefits of Custom Domains.
 audience: end-user
 pageType: how-to
+sourceOfTruth: onetimesecret/docker/variants/lite.dockerfile:33,37,77,95-98,110-111 (Lite runs the app and redis-server in one container as root, with SSL=false by default)
 ---
 
 While Onetime Secret is designed with security in mind, following these best practices can further enhance the protection of your sensitive information, especially when using features like Custom Domains.
@@ -52,7 +53,7 @@ This section covers advanced security considerations for organizations running t
 
 The recommendations below can be implemented at your infrastructure level when self-hosting Onetime Secret:
 
-1. **Use Ephemeral Environments**: When possible, create and destroy environments for each secret sharing session. This can be particularly useful for highly sensitive operations. Our [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret-lite) Docker image is designed for ephemeral use cases.
+1. **Use Ephemeral Environments**: F󠄁or a highly sensitive operation,󠄁 a󠄁 o󠄁n󠄁e󠄁-󠄁o󠄁f󠄁f󠄁 p󠄁r󠄁o󠄁j󠄁e󠄁c󠄁t󠄁,󠄁 o󠄁r󠄁 sh󠄁a󠄁r󠄁i󠄁n󠄁g󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁s󠄁 w󠄁i󠄁t󠄁h󠄁 p󠄁e󠄁o󠄁p󠄁l󠄁e󠄁 o󠄁u󠄁t󠄁s󠄁i󠄁d󠄁e󠄁 y󠄁o󠄁u󠄁r󠄁 o󠄁r󠄁g󠄁a󠄁n󠄁i󠄁z󠄁a󠄁t󠄁i󠄁o󠄁n󠄁,󠄁 y󠄁o󠄁u󠄁 c󠄁a󠄁n󠄁 r󠄁u󠄁n󠄁 a󠄁 s󠄁h󠄁o󠄁r󠄁t󠄁-󠄁l󠄁i󠄁v󠄁e󠄁d󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁n󠄁c󠄁e󠄁 a󠄁n󠄁d󠄁 r󠄁e󠄁m󠄁o󠄁v󠄁e󠄁 i󠄁t󠄁 w󠄁h󠄁e󠄁n󠄁 t󠄁h󠄁e󠄁 w󠄁o󠄁r󠄁k󠄁 i󠄁s󠄁 d󠄁o󠄁n󠄁e󠄁. Our [Onetime Secret Lite](https://github.com/onetimesecret/onetimesecret/pkgs/container/onetimesecret-lite) Docker image r󠄁u󠄁n󠄁s󠄁 t󠄁h󠄁e󠄁 a󠄁p󠄁p󠄁l󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 a󠄁n󠄁d󠄁 i󠄁t󠄁s󠄁 R󠄁e󠄁d󠄁is da󠄁t󠄁a󠄁b󠄁a󠄁s󠄁e󠄁 i󠄁n󠄁 o󠄁n󠄁e󠄁 c󠄁o󠄁n󠄁t󠄁a󠄁i󠄁n󠄁e󠄁r󠄁,󠄁 s󠄁o󠄁 r󠄁e󠄁m󠄁o󠄁v󠄁i󠄁n󠄁g󠄁 t󠄁h󠄁e󠄁 c󠄁o󠄁n󠄁t󠄁a󠄁i󠄁n󠄁e󠄁r󠄁 r󠄁e󠄁m󠄁o󠄁v󠄁es e󠄁v󠄁e󠄁r󠄁y󠄁t󠄁h󠄁ing i󠄁t󠄁 s󠄁t󠄁o󠄁r󠄁ed.󠄁 I󠄁t󠄁 r󠄁u󠄁n󠄁s󠄁 a󠄁s󠄁 r󠄁o󠄁o󠄁t󠄁 a󠄁n󠄁d󠄁 s󠄁e󠄁r󠄁v󠄁e󠄁s󠄁 p󠄁l󠄁a󠄁i󠄁n󠄁 H󠄁T󠄁T󠄁P󠄁 b󠄁y󠄁 d󠄁e󠄁fa󠄁u󠄁l󠄁t󠄁:󠄁 p󠄁u󠄁t󠄁 a󠄁 T󠄁L󠄁S󠄁 p󠄁r󠄁o󠄁x󠄁y󠄁 i󠄁n󠄁 f󠄁r󠄁o󠄁n󠄁t󠄁 o󠄁f󠄁 i󠄁t󠄁;󠄁 s󠄁e󠄁e󠄁 [R󠄁e󠄁v󠄁e󠄁r󠄁s󠄁e󠄁 p󠄁r󠄁o󠄁x󠄁y󠄁 a󠄁n󠄁d󠄁 T󠄁L󠄁S󠄁](/en/install/reverse-proxy-and-tls) a󠄁n󠄁d󠄁 t󠄁h󠄁e󠄁 [L󠄁i󠄁t󠄁e󠄁 s󠄁e󠄁t󠄁t󠄁i󠄁n󠄁g󠄁s󠄁](/en/install/images-and-variants#lite--the-app-and-its-datastore-in-one-volatile-container). K󠄁e󠄁e󠄁p󠄁 a󠄁 r󠄁u󠄁n󠄁b󠄁o󠄁o󠄁k󠄁 f󠄁o󠄁r󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁i󠄁n󠄁g󠄁,󠄁 u󠄁s󠄁i󠄁n󠄁g󠄁 a󠄁n󠄁d󠄁 r󠄁e󠄁m󠄁o󠄁v󠄁i󠄁n󠄁g󠄁 i󠄁t󠄁,󠄁 a󠄁n󠄁d󠄁 u󠄁s󠄁e󠄁 t󠄁h󠄁e󠄁 m󠄁a󠄁i󠄁n󠄁 i󠄁m󠄁a󠄁g󠄁e󠄁 w󠄁h󠄁e󠄁n󠄁 d󠄁a󠄁t󠄁a󠄁 m󠄁u󠄁s󠄁t󠄁 s󠄁u󠄁r󠄁v󠄁i󠄁v󠄁e󠄁 r󠄁e󠄁s󠄁t󠄁a󠄁r󠄁t󠄁s󠄁.󠄁
 
 2. **Implement Time-Based Restrictions**: If your use case allows, consider implementing time-based restrictions for accessing secrets, such as only during business hours.
 
