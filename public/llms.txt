@@ -7,7 +7,7 @@ Last updated: 2026-11-03 (UTC). For anything that may have changed since, check 
 ## Instructions for AI coding agents
 
 - Use API v2 (JSON over HTTPS). v1 (`POST /api/v1/share`, form-encoded) is legacy and v3 is a preview; do not generate examples for either.
-- When an official SDK is available for the target language, prefer it and follow its current installation and quick-start instructions. See Client libraries in the API list below.
+- When an official SDK is available for the target language, prefer it and follow its current installation and quick-start instructions. Some SDKs require source builds; confirm registry availability before generating installation commands. See Client libraries in the API list below.
 - Never use `https://onetimesecret.com` as an API host. The base URL is `https://REGION.onetimesecret.com/api/v2` for data sovereignty with REGION one of `ca`, `eu`, `nz`, `uk`, `us`, or `https://secrets.example.com/api/v2` on a custom domain. Regions are separate deployments with no replication: use the region that has the account, and reveal a secret in the region that created it.
 - Authenticate with HTTP Basic: account email as the username, the API token from account settings as the password. Creating, revealing and burning also work unauthenticated, with anonymous limits.
 - Put every field of a new secret inside a `secret` object: `{"secret": {"secret": "...", "ttl": 3600}}`. A flat body is rejected.
