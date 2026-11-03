@@ -14,15 +14,67 @@ T󠄁h󠄁e󠄁s󠄁e󠄁 l󠄁i󠄁b󠄁r󠄁a󠄁r󠄁i󠄁e󠄁s󠄁 a󠄁r�
 
 E󠄁a󠄁c󠄁h󠄁 o󠄁f󠄁f󠄁i󠄁c󠄁i󠄁a󠄁l󠄁 S󠄁D󠄁K󠄁 s󠄁u󠄁p󠄁p󠄁o󠄁r󠄁t󠄁s󠄁 A󠄁P󠄁I󠄁 v󠄁2󠄁 a󠄁n󠄁d󠄁 l󠄁e󠄁t󠄁s󠄁 y󠄁o󠄁u󠄁 c󠄁h󠄁o󠄁o󠄁s󠄁e󠄁 a󠄁 [r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁a󠄁l󠄁 A󠄁P󠄁I󠄁 h󠄁o󠄁s󠄁t󠄁](/en/security/where-your-data-lives/) o󠄁r󠄁 a󠄁 s󠄁e󠄁l󠄁f󠄁-󠄁h󠄁o󠄁s󠄁t󠄁e󠄁d󠄁 b󠄁a󠄁s󠄁e󠄁 U󠄁R󠄁L󠄁.󠄁 A󠄁P󠄁I󠄁 a󠄁n󠄁d󠄁 h󠄁o󠄁s󠄁t󠄁 s󠄁u󠄁p󠄁p󠄁o󠄁r󠄁t󠄁 w󠄁e󠄁r󠄁e󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁e󠄁d󠄁 a󠄁g󠄁a󠄁i󠄁n󠄁s󠄁t󠄁 t󠄁h󠄁e󠄁 S󠄁D󠄁K󠄁 R󠄁E󠄁A󠄁D󠄁M󠄁E󠄁s󠄁 o󠄁n󠄁 2󠄁0󠄁2󠄁6󠄁-󠄁1󠄁1󠄁-󠄁0󠄁2󠄁.󠄁
 
-| L󠄁a󠄁n󠄁g󠄁u󠄁a󠄁g󠄁e󠄁 | R󠄁e󠄁p󠄁o󠄁s󠄁i󠄁t󠄁o󠄁r󠄁y󠄁 | P󠄁a󠄁c󠄁k󠄁a󠄁g󠄁e󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁f󠄁i󠄁e󠄁r󠄁 | Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁 a󠄁n󠄁d󠄁 s󠄁o󠄁u󠄁r󠄁c󠄁e󠄁 s󠄁e󠄁t󠄁u󠄁p󠄁 |
-|---|---|---|---|
-| J󠄁a󠄁v󠄁a󠄁S󠄁c󠄁r󠄁i󠄁p󠄁t󠄁 /󠄁 T󠄁y󠄁p󠄁e󠄁S󠄁c󠄁r󠄁i󠄁p󠄁t󠄁 | [onetimes󠄁e󠄁c󠄁r󠄁e󠄁t󠄁-󠄁j󠄁s󠄁](https://github.com/onetimesecret/onetimesecret-js) | n󠄁p󠄁m󠄁:󠄁 `@onetimesecret/sdk` | [Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](https://github.com/onetimesecret/onetimesecret-js/blob/main/README.md#quick-start) ·󠄁 [S󠄁o󠄁u󠄁r󠄁c󠄁e󠄁 s󠄁e󠄁t󠄁u󠄁p󠄁](https://github.com/onetimesecret/onetimesecret-js/blob/main/README.md#development) |
-| K󠄁o󠄁t󠄁l󠄁i󠄁n󠄁 | [o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁-󠄁k󠄁o󠄁t󠄁l󠄁i󠄁n󠄁](https://github.com/onetimesecret/onetimesecret-kotlin) | M󠄁a󠄁v󠄁e󠄁n󠄁:󠄁 `com.onetimesecret:onetimesecret-kotlin` | [Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](https://github.com/onetimesecret/onetimesecret-kotlin/blob/main/README.md#quick-start) ·󠄁 [S󠄁o󠄁u󠄁r󠄁c󠄁e󠄁 s󠄁e󠄁t󠄁u󠄁p󠄁](https://github.com/onetimesecret/onetimesecret-kotlin/blob/main/README.md#development) |
-| P󠄁o󠄁w󠄁e󠄁r󠄁S󠄁h󠄁e󠄁l󠄁l󠄁 | [o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁-󠄁p󠄁o󠄁w󠄁e󠄁r󠄁s󠄁h󠄁e󠄁l󠄁l󠄁](https://github.com/onetimesecret/onetimesecret-powershell) | M󠄁o󠄁d󠄁u󠄁l󠄁e󠄁:󠄁 `OnetimeSecret` | [Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](https://github.com/onetimesecret/onetimesecret-powershell/blob/main/README.md#quick-start) ·󠄁 [S󠄁o󠄁u󠄁r󠄁c󠄁e󠄁 s󠄁e󠄁t󠄁u󠄁p󠄁](https://github.com/onetimesecret/onetimesecret-powershell/blob/main/README.md#installation) |
-| P󠄁y󠄁t󠄁h󠄁o󠄁n󠄁 | [o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁-󠄁p󠄁y󠄁](https://github.com/onetimesecret/onetimesecret-py) | P󠄁y󠄁P󠄁I󠄁:󠄁 `onetime-secret`;󠄁 i󠄁m󠄁p󠄁o󠄁r󠄁t󠄁:󠄁 `onetimesecret` | [Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](https://github.com/onetimesecret/onetimesecret-py/blob/main/README.md#quick-start) ·󠄁 [S󠄁o󠄁u󠄁r󠄁c󠄁e󠄁 s󠄁e󠄁t󠄁u󠄁p󠄁](https://github.com/onetimesecret/onetimesecret-py/blob/main/README.md#development) |
-| R󠄁u󠄁b󠄁y󠄁 | [o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁-ruby](https://github.com/onetimesecret/onetimesecret-ruby) | R󠄁u󠄁b󠄁y󠄁G󠄁e󠄁m󠄁s󠄁:󠄁 `onetimesecret` | [Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](https://github.com/onetimesecret/onetimesecret-ruby/blob/main/README.md#quick-start) |
-| R󠄁u󠄁s󠄁t󠄁 | [o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁-󠄁r󠄁u󠄁s󠄁t󠄁](https://github.com/onetimesecret/onetimesecret-rust) | c󠄁r󠄁a󠄁t󠄁e󠄁s󠄁.󠄁i󠄁o󠄁:󠄁 `onetimesecret` | [Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](https://github.com/onetimesecret/onetimesecret-rust/blob/main/README.md#use) ·󠄁 [`CONTRIBUTING.md`](https://github.com/onetimesecret/onetimesecret-rust/blob/main/CONTRIBUTING.md#setting-up) |
-| S󠄁w󠄁i󠄁f󠄁t󠄁 (󠄁A󠄁p󠄁p󠄁l󠄁e󠄁 p󠄁l󠄁a󠄁t󠄁f󠄁o󠄁r󠄁m󠄁s󠄁 a󠄁n󠄁d󠄁 L󠄁i󠄁n󠄁u󠄁x󠄁)󠄁 | [o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁-󠄁i󠄁o󠄁s󠄁](https://github.com/onetimesecret/onetimesecret-ios) | S󠄁w󠄁i󠄁f󠄁t󠄁P󠄁M󠄁 p󠄁r󠄁o󠄁d󠄁u󠄁c󠄁t󠄁:󠄁 `OnetimeSecret` | [Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](https://github.com/onetimesecret/onetimesecret-ios/blob/main/README.md#usage) ·󠄁 [I󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁a󠄁t󠄁i󠄁o󠄁n󠄁](https://github.com/onetimesecret/onetimesecret-ios/blob/main/README.md#installation) |
+F󠄁o󠄁r󠄁 a󠄁 l󠄁a󠄁n󠄁g󠄁u󠄁a󠄁g󠄁e󠄁-󠄁i󠄁n󠄁d󠄁e󠄁p󠄁e󠄁n󠄁d󠄁e󠄁n󠄁t󠄁 A󠄁P󠄁I󠄁 v󠄁2󠄁 e󠄁x󠄁a󠄁m󠄁p󠄁l󠄁e󠄁,󠄁 u󠄁s󠄁e󠄁 t󠄁h󠄁e󠄁 [H󠄁T󠄁T󠄁P󠄁 q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](/en/api/#quick-start).󠄁
+
+:::caution[P󠄁a󠄁c󠄁k󠄁a󠄁g󠄁e󠄁 a󠄁v󠄁a󠄁i󠄁l󠄁a󠄁b󠄁i󠄁l󠄁i󠄁t󠄁y󠄁]
+B󠄁u󠄁i󠄁l󠄁d󠄁 t󠄁h󠄁e󠄁 J󠄁a󠄁v󠄁a󠄁S󠄁c󠄁r󠄁i󠄁p󠄁t󠄁,󠄁 K󠄁o󠄁t󠄁l󠄁i󠄁n󠄁,󠄁 P󠄁y󠄁t󠄁h󠄁o󠄁n󠄁 a󠄁n󠄁d󠄁 R󠄁u󠄁s󠄁t󠄁 S󠄁D󠄁K󠄁s󠄁 f󠄁r󠄁o󠄁m󠄁 s󠄁o󠄁u󠄁r󠄁c󠄁e󠄁;󠄁 t󠄁h󠄁e󠄁i󠄁r󠄁 p󠄁a󠄁c󠄁k󠄁a󠄁g󠄁e󠄁s󠄁 w󠄁e󠄁r󠄁e󠄁 n󠄁o󠄁t󠄁 l󠄁i󠄁s󠄁t󠄁e󠄁d󠄁 i󠄁n󠄁 t󠄁h󠄁e󠄁 p󠄁u󠄁b󠄁l󠄁i󠄁c󠄁 r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁i󠄁e󠄁s󠄁 w󠄁h󠄁e󠄁n󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁e󠄁d󠄁.󠄁 F󠄁o󠄁r󠄁 P󠄁o󠄁w󠄁e󠄁r󠄁S󠄁h󠄁e󠄁l󠄁l󠄁,󠄁 u󠄁s󠄁e󠄁 t󠄁h󠄁e󠄁 r󠄁e󠄁p󠄁o󠄁s󠄁i󠄁t󠄁o󠄁r󠄁y󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 i󠄁n󠄁s󠄁t󠄁r󠄁u󠄁c󠄁t󠄁i󠄁o󠄁n󠄁s󠄁.󠄁 S󠄁e󠄁e󠄁 t󠄁h󠄁e󠄁 v󠄁e󠄁r󠄁i󠄁f󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 d󠄁e󠄁t󠄁a󠄁i󠄁l󠄁s󠄁 a󠄁f󠄁t󠄁e󠄁r󠄁 t󠄁h󠄁e󠄁 S󠄁D󠄁K󠄁 l󠄁i󠄁s󠄁t󠄁.󠄁
+:::
+
+### J󠄁a󠄁v󠄁a󠄁S󠄁c󠄁r󠄁i󠄁p󠄁t󠄁 /󠄁 T󠄁y󠄁p󠄁e󠄁S󠄁c󠄁r󠄁i󠄁p󠄁t󠄁 S󠄁D󠄁K󠄁
+
+n󠄁p󠄁m󠄁:󠄁 `@onetimesecret/sdk`
+
+[onetimes󠄁e󠄁c󠄁r󠄁e󠄁t󠄁-󠄁j󠄁s󠄁](https://github.com/onetimesecret/onetimesecret-js)
+
+[Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](https://github.com/onetimesecret/onetimesecret-js/blob/main/README.md#quick-start) ·󠄁 [S󠄁o󠄁u󠄁r󠄁c󠄁e󠄁 s󠄁e󠄁t󠄁u󠄁p󠄁](https://github.com/onetimesecret/onetimesecret-js/blob/main/README.md#development)
+
+### K󠄁o󠄁t󠄁l󠄁i󠄁n󠄁 S󠄁D󠄁K󠄁
+
+M󠄁a󠄁v󠄁e󠄁n󠄁:󠄁 `com.onetimesecret:onetimesecret-kotlin`
+
+[o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁-󠄁k󠄁o󠄁t󠄁l󠄁i󠄁n󠄁](https://github.com/onetimesecret/onetimesecret-kotlin)
+
+[Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](https://github.com/onetimesecret/onetimesecret-kotlin/blob/main/README.md#quick-start) ·󠄁 [S󠄁o󠄁u󠄁r󠄁c󠄁e󠄁 s󠄁e󠄁t󠄁u󠄁p󠄁](https://github.com/onetimesecret/onetimesecret-kotlin/blob/main/README.md#development)
+
+### P󠄁o󠄁w󠄁e󠄁r󠄁S󠄁h󠄁e󠄁l󠄁l󠄁 S󠄁D󠄁K󠄁
+
+M󠄁o󠄁d󠄁u󠄁l󠄁e󠄁:󠄁 `OnetimeSecret`
+
+[o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁-󠄁p󠄁o󠄁w󠄁e󠄁r󠄁s󠄁h󠄁e󠄁l󠄁l󠄁](https://github.com/onetimesecret/onetimesecret-powershell)
+
+[Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](https://github.com/onetimesecret/onetimesecret-powershell/blob/main/README.md#quick-start) ·󠄁 [S󠄁o󠄁u󠄁r󠄁c󠄁e󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁a󠄁t󠄁i󠄁o󠄁n󠄁](https://github.com/onetimesecret/onetimesecret-powershell/blob/main/README.md#installation)
+
+### P󠄁y󠄁t󠄁h󠄁o󠄁n󠄁 S󠄁D󠄁K󠄁
+
+P󠄁y󠄁P󠄁I󠄁:󠄁 `onetime-secret`;󠄁 i󠄁m󠄁p󠄁o󠄁r󠄁t󠄁:󠄁 `onetimesecret`
+
+[o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁-󠄁p󠄁y󠄁](https://github.com/onetimesecret/onetimesecret-py)
+
+[Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](https://github.com/onetimesecret/onetimesecret-py/blob/main/README.md#quick-start) ·󠄁 [S󠄁o󠄁u󠄁r󠄁c󠄁e󠄁 s󠄁e󠄁t󠄁u󠄁p󠄁](https://github.com/onetimesecret/onetimesecret-py/blob/main/README.md#development)
+
+### R󠄁u󠄁b󠄁y󠄁 S󠄁D󠄁K󠄁
+
+R󠄁u󠄁b󠄁y󠄁G󠄁e󠄁m󠄁s󠄁:󠄁 `onetimesecret`
+
+[o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁-ruby](https://github.com/onetimesecret/onetimesecret-ruby)
+
+[Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](https://github.com/onetimesecret/onetimesecret-ruby/blob/main/README.md#quick-start)
+
+### R󠄁u󠄁s󠄁t󠄁 S󠄁D󠄁K󠄁
+
+c󠄁r󠄁a󠄁t󠄁e󠄁s󠄁.󠄁i󠄁o󠄁:󠄁 `onetimesecret`
+
+[o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁-󠄁r󠄁u󠄁s󠄁t󠄁](https://github.com/onetimesecret/onetimesecret-rust)
+
+[Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](https://github.com/onetimesecret/onetimesecret-rust/blob/main/README.md#use) ·󠄁 [`CONTRIBUTING.md`](https://github.com/onetimesecret/onetimesecret-rust/blob/main/CONTRIBUTING.md#setting-up)
+
+### S󠄁w󠄁i󠄁f󠄁t󠄁 (󠄁A󠄁p󠄁p󠄁l󠄁e󠄁 p󠄁l󠄁a󠄁t󠄁f󠄁o󠄁r󠄁m󠄁s󠄁 a󠄁n󠄁d󠄁 L󠄁i󠄁n󠄁u󠄁x󠄁)󠄁 S󠄁D󠄁K󠄁
+
+S󠄁w󠄁i󠄁f󠄁t󠄁P󠄁M󠄁 p󠄁r󠄁o󠄁d󠄁u󠄁c󠄁t󠄁:󠄁 `OnetimeSecret`
+
+[o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁-󠄁i󠄁o󠄁s󠄁](https://github.com/onetimesecret/onetimesecret-ios)
+
+[Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](https://github.com/onetimesecret/onetimesecret-ios/blob/main/README.md#usage) ·󠄁 [I󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁a󠄁t󠄁i󠄁o󠄁n󠄁](https://github.com/onetimesecret/onetimesecret-ios/blob/main/README.md#installation)
 
 A󠄁v󠄁a󠄁i󠄁l󠄁a󠄁b󠄁i󠄁l󠄁i󠄁t󠄁y󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁e󠄁d󠄁 o󠄁n󠄁 2󠄁0󠄁2󠄁6󠄁-󠄁1󠄁1󠄁-󠄁0󠄁2󠄁:󠄁 n󠄁o󠄁 p󠄁u󠄁b󠄁l󠄁i󠄁c󠄁 r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁y󠄁 l󠄁i󠄁s󠄁t󠄁i󠄁n󠄁g󠄁s󠄁 w󠄁e󠄁r󠄁e󠄁 f󠄁o󠄁u󠄁n󠄁d󠄁 f󠄁o󠄁r󠄁 t󠄁h󠄁e󠄁 J󠄁a󠄁v󠄁a󠄁S󠄁c󠄁r󠄁i󠄁p󠄁t󠄁,󠄁 K󠄁o󠄁t󠄁l󠄁i󠄁n󠄁,󠄁 P󠄁y󠄁t󠄁h󠄁o󠄁n󠄁 o󠄁r󠄁 R󠄁u󠄁s󠄁t󠄁 p󠄁a󠄁c󠄁k󠄁a󠄁g󠄁e󠄁s󠄁.󠄁 U󠄁s󠄁e󠄁 s󠄁o󠄁u󠄁r󠄁c󠄁e󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁o󠄁u󠄁t󠄁s󠄁 f󠄁o󠄁r󠄁 t󠄁h󠄁e󠄁s󠄁e󠄁 S󠄁D󠄁K󠄁s󠄁 u󠄁n󠄁t󠄁i󠄁l󠄁 a󠄁 r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁y󠄁 r󠄁e󠄁l󠄁e󠄁a󠄁s󠄁e󠄁 i󠄁s󠄁 a󠄁v󠄁a󠄁i󠄁l󠄁a󠄁b󠄁l󠄁e󠄁.󠄁 T󠄁h󠄁e󠄁 R󠄁u󠄁b󠄁y󠄁 g󠄁e󠄁m󠄁 w󠄁a󠄁s󠄁 a󠄁v󠄁a󠄁i󠄁l󠄁a󠄁b󠄁l󠄁e󠄁;󠄁 P󠄁o󠄁w󠄁e󠄁r󠄁S󠄁h󠄁e󠄁l󠄁l󠄁 G󠄁a󠄁l󠄁l󠄁e󠄁r󠄁y󠄁 a󠄁v󠄁a󠄁i󠄁l󠄁a󠄁b󠄁i󠄁l󠄁i󠄁t󠄁y󠄁 w󠄁a󠄁s󠄁 n󠄁o󠄁t󠄁 v󠄁e󠄁r󠄁i󠄁f󠄁i󠄁e󠄁d󠄁.󠄁 S󠄁w󠄁i󠄁f󠄁t󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁s󠄁 f󠄁r󠄁o󠄁m󠄁 i󠄁t󠄁s󠄁 G󠄁i󠄁t󠄁 r󠄁e󠄁p󠄁o󠄁s󠄁i󠄁t󠄁o󠄁r󠄁y󠄁 t󠄁h󠄁r󠄁o󠄁u󠄁g󠄁h󠄁 S󠄁w󠄁i󠄁f󠄁t󠄁 P󠄁a󠄁c󠄁k󠄁a󠄁g󠄁e󠄁 M󠄁a󠄁n󠄁a󠄁g󠄁e󠄁r󠄁.󠄁
 
@@ -46,7 +98,7 @@ instance before depending on it.
 | Java | [onetime-java](https://github.com/mpawlowski/onetime-java) | 2014-06 | self-hosted URL only |
 | Perl | [Net::OneTimeSecret](https://metacpan.org/pod/Net::OneTimeSecret) | 2012-02 | ❌ |
 
-¹ A󠄁c󠄁t󠄁i󠄁v󠄁i󠄁t󠄁y󠄁 d󠄁a󠄁t󠄁e󠄁s a󠄁nd󠄁 comp󠄁a󠄁t󠄁i󠄁b󠄁i󠄁l󠄁ity󠄁 n󠄁ot󠄁e󠄁s󠄁 ref󠄁lec󠄁t the last c󠄁o󠄁m󠄁m󠄁u󠄁n󠄁i󠄁t󠄁y󠄁-󠄁l󠄁i󠄁b󠄁r󠄁a󠄁r󠄁y󠄁 audit i󠄁n󠄁 2026-07. T󠄁h󠄁e󠄁y󠄁 w󠄁e󠄁r󠄁e󠄁 n󠄁o󠄁t󠄁 r󠄁e󠄁-󠄁a󠄁u󠄁d󠄁i󠄁t󠄁e󠄁d󠄁 f󠄁o󠄁r󠄁 t󠄁h󠄁e󠄁 o󠄁f󠄁f󠄁i󠄁c󠄁i󠄁a󠄁l󠄁 S󠄁D󠄁K󠄁 u󠄁p󠄁d󠄁a󠄁t󠄁e󠄁 o󠄁n󠄁 2󠄁0󠄁2󠄁6󠄁-󠄁1󠄁1󠄁-󠄁0󠄁2󠄁.󠄁
+¹ A󠄁c󠄁t󠄁i󠄁v󠄁i󠄁t󠄁y󠄁 d󠄁a󠄁t󠄁e󠄁s a󠄁nd󠄁 comp󠄁a󠄁t󠄁i󠄁b󠄁i󠄁l󠄁ity󠄁 n󠄁ot󠄁e󠄁s󠄁 ref󠄁lec󠄁t the last c󠄁o󠄁m󠄁m󠄁u󠄁n󠄁i󠄁t󠄁y󠄁-󠄁l󠄁i󠄁b󠄁r󠄁a󠄁r󠄁y󠄁 audit i󠄁n󠄁 2026-07. T󠄁h󠄁e󠄁y󠄁 w󠄁e󠄁r󠄁e󠄁 n󠄁o󠄁t󠄁 r󠄁e󠄁-󠄁a󠄁u󠄁d󠄁i󠄁t󠄁e󠄁d󠄁 f󠄁o󠄁r󠄁 t󠄁h󠄁i󠄁s󠄁 o󠄁f󠄁f󠄁i󠄁c󠄁i󠄁a󠄁l󠄁 S󠄁D󠄁K󠄁 u󠄁p󠄁d󠄁a󠄁t󠄁e󠄁.󠄁
 
 ### Python
 
@@ -55,7 +107,7 @@ instance before depending on it.
 by [slashpass](https://github.com/slashpass) — community-maintained (last
 commit 2024-11). Supports a region option (`us` / `eu`).
 
-F󠄁o󠄁r󠄁 n󠄁e󠄁w󠄁 P󠄁y󠄁t󠄁h󠄁o󠄁n󠄁 i󠄁n󠄁t󠄁e󠄁g󠄁r󠄁a󠄁t󠄁i󠄁o󠄁n󠄁s󠄁,󠄁 c󠄁h󠄁o󠄁o󠄁s󠄁e󠄁 a󠄁n󠄁 o󠄁f󠄁f󠄁i󠄁c󠄁i󠄁a󠄁l󠄁 S󠄁D󠄁K󠄁 f󠄁r󠄁o󠄁m󠄁 t󠄁h󠄁e󠄁 [t󠄁a󠄁b󠄁l󠄁e󠄁 a󠄁b󠄁o󠄁v󠄁e󠄁](#official-client-libraries).󠄁 T󠄁h󠄁e󠄁 f󠄁o󠄁l󠄁l󠄁o󠄁w󠄁i󠄁n󠄁g󠄁 e󠄁x󠄁a󠄁m󠄁p󠄁l󠄁e󠄁s󠄁 u󠄁s󠄁e󠄁 c󠄁o󠄁m󠄁m󠄁u󠄁n󠄁i󠄁t󠄁y󠄁 p󠄁a󠄁c󠄁k󠄁a󠄁g󠄁e󠄁s󠄁.󠄁
+F󠄁o󠄁r󠄁 n󠄁e󠄁w󠄁 P󠄁y󠄁t󠄁h󠄁o󠄁n󠄁 i󠄁n󠄁t󠄁e󠄁g󠄁r󠄁a󠄁t󠄁i󠄁o󠄁n󠄁s󠄁,󠄁 c󠄁h󠄁o󠄁o󠄁s󠄁e󠄁 a󠄁n󠄁 o󠄁f󠄁f󠄁i󠄁c󠄁i󠄁a󠄁l󠄁 S󠄁D󠄁K󠄁 f󠄁r󠄁o󠄁m󠄁 t󠄁h󠄁e󠄁 [S󠄁D󠄁K󠄁s󠄁 a󠄁b󠄁o󠄁v󠄁e󠄁](#official-client-libraries).󠄁 T󠄁h󠄁e󠄁 f󠄁o󠄁l󠄁l󠄁o󠄁w󠄁i󠄁n󠄁g󠄁 e󠄁x󠄁a󠄁m󠄁p󠄁l󠄁e󠄁s󠄁 u󠄁s󠄁e󠄁 c󠄁o󠄁m󠄁m󠄁u󠄁n󠄁i󠄁t󠄁y󠄁 p󠄁a󠄁c󠄁k󠄁a󠄁g󠄁e󠄁s󠄁.󠄁
 
 #### o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁sec󠄁r󠄁e󠄁t󠄁-󠄁c󠄁l󠄁i󠄁 example
 
@@ -274,7 +326,7 @@ by [Craig Gumbley](https://www.helloitscraig.co.uk) — **unmaintained** (last
 release 2021-06). Supports a custom `-BaseUrl`, so it can point at a region or
 self-hosted instance, but it predates API v2.
 
-T󠄁h󠄁e󠄁 c󠄁o󠄁m󠄁m󠄁a󠄁n󠄁d󠄁 b󠄁e󠄁l󠄁o󠄁w󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁s󠄁 t󠄁h󠄁e󠄁 o󠄁l󠄁d󠄁e󠄁r󠄁 c󠄁o󠄁m󠄁m󠄁u󠄁n󠄁i󠄁t󠄁y󠄁 m󠄁o󠄁d󠄁u󠄁l󠄁e󠄁,󠄁 w󠄁h󠄁o󠄁s󠄁e󠄁 n󠄁a󠄁m󠄁e󠄁 i󠄁s󠄁 a󠄁l󠄁s󠄁o󠄁 u󠄁s󠄁e󠄁d󠄁 b󠄁y󠄁 t󠄁h󠄁e󠄁 o󠄁f󠄁f󠄁i󠄁c󠄁i󠄁a󠄁l󠄁 S󠄁D󠄁K󠄁.󠄁 F󠄁o󠄁r󠄁 n󠄁e󠄁w󠄁 P󠄁o󠄁w󠄁e󠄁r󠄁S󠄁h󠄁e󠄁l󠄁l󠄁 i󠄁n󠄁t󠄁e󠄁g󠄁r󠄁a󠄁t󠄁i󠄁o󠄁n󠄁s󠄁,󠄁 c󠄁h󠄁o󠄁o󠄁s󠄁e󠄁 t󠄁h󠄁e󠄁 o󠄁f󠄁f󠄁i󠄁c󠄁i󠄁a󠄁l󠄁 S󠄁D󠄁K󠄁 f󠄁r󠄁o󠄁m󠄁 t󠄁h󠄁e󠄁 [t󠄁a󠄁b󠄁l󠄁e󠄁 a󠄁b󠄁o󠄁v󠄁e󠄁](#official-client-libraries).󠄁
+T󠄁h󠄁e󠄁 e󠄁x󠄁a󠄁m󠄁p󠄁l󠄁e󠄁 b󠄁e󠄁l󠄁o󠄁w󠄁 i󠄁s󠄁 f󠄁o󠄁r󠄁 C󠄁r󠄁a󠄁i󠄁g󠄁 G󠄁u󠄁m󠄁b󠄁l󠄁e󠄁y󠄁'󠄁s󠄁 c󠄁o󠄁m󠄁m󠄁u󠄁n󠄁i󠄁t󠄁y󠄁 m󠄁o󠄁d󠄁u󠄁l󠄁e󠄁,󠄁 w󠄁h󠄁o󠄁s󠄁e󠄁 n󠄁a󠄁m󠄁e󠄁 i󠄁s󠄁 a󠄁l󠄁s󠄁o󠄁 u󠄁s󠄁e󠄁d󠄁 b󠄁y󠄁 t󠄁h󠄁e󠄁 o󠄁f󠄁f󠄁i󠄁c󠄁i󠄁a󠄁l󠄁 S󠄁D󠄁K󠄁.󠄁 F󠄁o󠄁r󠄁 n󠄁e󠄁w󠄁 P󠄁o󠄁w󠄁e󠄁r󠄁S󠄁h󠄁e󠄁l󠄁l󠄁 i󠄁n󠄁t󠄁e󠄁g󠄁r󠄁a󠄁t󠄁i󠄁o󠄁n󠄁s󠄁,󠄁 c󠄁h󠄁o󠄁o󠄁s󠄁e󠄁 t󠄁h󠄁e󠄁 o󠄁f󠄁f󠄁i󠄁c󠄁i󠄁a󠄁l󠄁 S󠄁D󠄁K󠄁 f󠄁r󠄁o󠄁m󠄁 t󠄁h󠄁e󠄁 [P󠄁o󠄁w󠄁e󠄁r󠄁S󠄁h󠄁e󠄁l󠄁l󠄁 S󠄁D󠄁K󠄁 s󠄁e󠄁c󠄁t󠄁i󠄁o󠄁n󠄁 a󠄁b󠄁o󠄁v󠄁e󠄁](#powershell-sdk).󠄁
 
 #### O󠄁n󠄁eT󠄁i󠄁m󠄁e󠄁S󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 P󠄁o󠄁w󠄁e󠄁r󠄁S󠄁h󠄁e󠄁l󠄁l󠄁 example
 

@@ -49,7 +49,7 @@ C󠄁ho󠄁o󠄁s󠄁e a󠄁 g󠄁u󠄁i󠄁de f󠄁or what you w󠄁a󠄁n󠄁t
 
 - **[REST API](/en/api/)** — programmatic access, and the
   [full API reference](https://api.onetimesecret.com) (v1, v2, v3)
-- **[Client libraries](/en/api/client-libraries/)** — o󠄁f󠄁f󠄁i󠄁c󠄁i󠄁a󠄁l󠄁 a󠄁n󠄁d󠄁 community SDKs and
+- **[Client libraries](/en/api/client-libraries/)** — o󠄁f󠄁f󠄁i󠄁c󠄁i󠄁a󠄁l󠄁 S󠄁D󠄁K󠄁s󠄁,󠄁 community l󠄁i󠄁b󠄁r󠄁a󠄁r󠄁i󠄁e󠄁s,󠄁 and
   integrations
 
 ### Run your own instance
