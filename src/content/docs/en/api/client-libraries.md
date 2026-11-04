@@ -340,15 +340,15 @@ URL=$(ots_share ttl=600 \
                   recipient="someone@somewhere.com" <<< "SECRET")
 
 # fetch the secret data
-local DATA="$(ots_retrieve "$URL")"
+DATA="$(ots_retrieve "$URL")"
 
 # share/generate a new secret, and get back the private metadata key
-local KEY=$(ots_metashare <<< "SECRET")
-local KEY=$(ots_metagenerate)
+KEY=$(ots_metashare <<< "SECRET")
+KEY=$(ots_metagenerate)
 
 # get a list of private metadata keys recently created.
 # note that this requires valid authentication credentials
-local -a RECENT=( $(ots_recent) )
+RECENT=( $(ots_recent) )
 
 # check on the current state of a secret, given the private key
 ots_state $KEY

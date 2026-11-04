@@ -1,4 +1,5 @@
 ---
+textprov: true
 title: Translation Quality Checklist
 description: A comprehensive checklist for ensuring high-quality, consistent translations of Onetime Secret documentation
 ---
@@ -80,7 +81,7 @@ Before starting your translation:
 
 ### 6. File structure ✅
 
-- [ ] File placed in correct locale directory (e.g., `/content/docs/fr/`)
+- [ ] File placed in correct locale directory (e.g., `src/content/docs/fr/`)
 - [ ] Filename matches English source exactly
 - [ ] Directory structure mirrors English version
 - [ ] File encoding is UTF-8
