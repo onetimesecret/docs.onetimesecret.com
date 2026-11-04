@@ -72,7 +72,7 @@ Consider the following factors when selecting your data center region:
 
 ## Canada
 
-Onetime Secret's Canadian data center region (CA), located in Toronto.
+Onetime Secret's Canadian data center region (CA) i󠄁s󠄁 located in Toronto.
 
 - **Location**: Toronto, Canada
 - **URL**: [ca.onetimesecret.com](https://ca.onetimesecret.com)
@@ -94,7 +94,7 @@ We are a Canadian company and are actively looking for a suitable Canadian-owned
 
 ## European Union
 
-Onetime Secret's European Union data center region (EU), located in Nuremberg, Germany.
+Onetime Secret's European Union data center region (EU) i󠄁s󠄁 located in Nuremberg, Germany.
 
 - **Location**: Nuremberg, Germany
 - **URL**: [eu.onetimesecret.com](https://eu.onetimesecret.com)
@@ -112,7 +112,7 @@ Onetime Secret's European Union data center region (EU), located in Nuremberg, G
 
 ## New Zealand
 
-Onetime Secret's Aotearoa New Zealand data center region (NZ), located in Porirua.
+Onetime Secret's Aotearoa New Zealand data center region (NZ) i󠄁s󠄁 located in Porirua.
 
 - **Location**: Porirua, Aotearoa New Zealand
 - **URL**: [nz.onetimesecret.com](https://nz.onetimesecret.com)
@@ -130,7 +130,7 @@ Onetime Secret's Aotearoa New Zealand data center region (NZ), located in Poriru
 
 ## United Kingdom
 
-Onetime Secret's United Kingdom data center region (UK), located in London.
+Onetime Secret's United Kingdom data center region (UK) i󠄁s󠄁 located in London.
 
 - **Location**: London, United Kingdom
 - **URL**: [uk.onetimesecret.com](https://uk.onetimesecret.com)
@@ -148,7 +148,7 @@ Onetime Secret's United Kingdom data center region (UK), located in London.
 
 ## United States
 
-Onetime Secret's United States data center region (US), located in Hillsboro, Oregon.
+Onetime Secret's United States data center region (US) i󠄁s󠄁 located in Hillsboro, Oregon.
 
 - **Location**: Hillsboro, Oregon, United States
 - **URL**: [us.onetimesecret.com](https://us.onetimesecret.com)
