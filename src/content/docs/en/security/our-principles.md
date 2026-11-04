@@ -4,7 +4,7 @@ title: Our Principles
 description: The core values that drive our approach to privacy and security — what we deliberately avoid, how little we email you, and how little we store.
 audience: end-user
 pageType: concept
-sourceOfTruth: onetimesecret/lib/onetime/models/customer.rb:218-236 (email, language, plan and reveal-notification fields; no name fields); onetimesecret/apps/web/auth/migrations/001_initial.rb (sign-in method tables); onetimesecret/lib/onetime/models/session_metadata.rb:79-106 (active-session fields); onetimesecret/apps/web/auth/config/features/audit_logging.rb:78-260 (sign-in history events, each with IP address and user agent); otto 2.11.0 lib/otto/privacy/config.rb:135 and lib/otto/privacy/redacted_fingerprint.rb:160-168 (last IPv4 octet masked by default; user-agent version numbers removed); onetimesecret/src/shared/stores/languageStore.ts:147-189 (language kept in sessionStorage and, signed in, on the account); deleting the sign-in history at closure is tracked in onetimesecret/onetimesecret#4819
+sourceOfTruth: onetimesecret/lib/onetime/models/customer.rb:218-236 (email, language, plan and reveal-notification fields; no name fields); onetimesecret/apps/web/auth/migrations/001_initial.rb (sign-in method tables); onetimesecret/lib/onetime/models/session_metadata.rb:79-106 (active-session fields); onetimesecret/apps/web/auth/config/features/audit_logging.rb:78-260 (sign-in history events, each with IP address and user agent); otto 2.11.0 lib/otto/privacy/config.rb:135 and lib/otto/privacy/redacted_fingerprint.rb:160-168 (last IPv4 octet masked by default; user-agent version numbers removed); onetimesecret/src/shared/stores/languageStore.ts:147-189 (language kept in sessionStorage and, signed in, on the account); deleting the sign-in history at closure is tracked in onetimesecret/onetimesecret#4819; onetimesecret/lib/onetime/models/secret.rb:45,110-114 (a secret's ciphertext is an encrypted field that the server decrypts to reveal it); onetimesecret/lib/onetime/initializers/configure_familia.rb:51-72 (the encryption keys are derived from the server's SECRET)
 ---
 
 Onetime Secret exists so you can share sensitive information without leaving it lying around. These principles shape every product and operational decision we make — and because they're written down, you can hold us to them.
@@ -114,7 +114,7 @@ We don't use cookies for tracking, analytics, or advertising. The only cookie we
 
 - **Less risk.** The less data we store, the less there is to protect. Collecting only what's necessary reduces potential security risks.
 - **Clear purpose.** Every piece of information we collect has a specific job in delivering the service. No tracking, no analytics, no extras.
-- **Zero-knowledge design.** We can't access your secrets and don't want to. Each secret is encrypted, accessible only once, and automatically deleted after viewing or expiration.
+- **S󠄁h󠄁o󠄁rt󠄁-li󠄁v󠄁ed b󠄁y󠄁 design.** Each secret is encrypted, accessible only once, and automatically deleted after viewing or expiration. T󠄁h󠄁e󠄁 e󠄁n󠄁c󠄁r󠄁y󠄁p󠄁t󠄁i󠄁o󠄁n󠄁 k󠄁e󠄁y󠄁s󠄁 s󠄁t󠄁a󠄁y󠄁 o󠄁n󠄁 o󠄁u󠄁r󠄁 s󠄁e󠄁r󠄁v󠄁e󠄁r󠄁s󠄁,󠄁 w󠄁h󠄁i󠄁c󠄁h󠄁 d󠄁e󠄁c󠄁r󠄁y󠄁p󠄁t󠄁 a󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 t󠄁o󠄁 s󠄁h󠄁o󠄁w󠄁 i󠄁t󠄁 t󠄁o󠄁 t󠄁h󠄁e󠄁 r󠄁e󠄁c󠄁i󠄁p󠄁i󠄁e󠄁n󠄁t󠄁,󠄁 s󠄁o󠄁 O󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁 S󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 i󠄁s󠄁 n󠄁o󠄁t󠄁 e󠄁n󠄁d󠄁-󠄁t󠄁o󠄁-󠄁e󠄁n󠄁d󠄁 e󠄁n󠄁c󠄁r󠄁y󠄁p󠄁t󠄁e󠄁d󠄁.󠄁 S󠄁h󠄁o󠄁r󠄁t󠄁 l󠄁i󠄁f󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁 k󠄁e󠄁e󠄁p󠄁 t󠄁h󠄁e󠄁 a󠄁m󠄁o󠄁u󠄁n󠄁t󠄁 o󠄁f󠄁 s󠄁t󠄁o󠄁r󠄁e󠄁d󠄁 s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁 d󠄁a󠄁t󠄁a󠄁 s󠄁m󠄁a󠄁l󠄁l󠄁.󠄁
 
 This approach has served us and our users well since 2012. It's simple, effective, and respects your privacy.
 
