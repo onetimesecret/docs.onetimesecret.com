@@ -57,7 +57,7 @@ S󠄁ecret sharing f󠄁o󠄁r󠄁 t󠄁e󠄁a󠄁m󠄁s󠄁,󠄁 with s󠄁i�
 ## Frequently asked questions
 
 ### How does Onetime Secret work?
-Onetime Secret allows you to share sensitive information securely. Each shared secret can only be viewed once before it's permanently deleted, ensuring your data remains confidential.
+Onetime Secret allows you to share sensitive information securely. Each shared secret can only be viewed once before it's permanently deleted.󠄁 T󠄁h󠄁e󠄁 o󠄁n󠄁e󠄁 e󠄁x󠄁c󠄁e󠄁p󠄁t󠄁i󠄁o󠄁n󠄁 i󠄁s󠄁 t󠄁h󠄁e󠄁 enc󠄁r󠄁y󠄁p󠄁t󠄁e󠄁d󠄁 b󠄁a󠄁c󠄁k󠄁u󠄁p󠄁s w󠄁e󠄁 k󠄁e󠄁e󠄁p󠄁 f󠄁o󠄁r󠄁 d󠄁i󠄁s󠄁a󠄁s󠄁t󠄁e󠄁r󠄁 r󠄁e󠄁c󠄁o󠄁v󠄁e󠄁r󠄁y󠄁;󠄁 s󠄁e󠄁e󠄁 [W󠄁h󠄁a󠄁t󠄁 w󠄁e󠄁 s󠄁t󠄁o󠄁r󠄁e󠄁](/en/security/our-principles#what-we-store).
 
 ### Do I need an account to use Onetime Secret?
 No account is required for basic functionality. You can start sharing secrets immediately without complex setup.

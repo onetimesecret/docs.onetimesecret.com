@@ -93,6 +93,10 @@ const movedPages = [
   // sidebar group, one click away.
   { from: "self-hosting/installation", to: "install/docker" },
 
+  // Retired upgrade guides now point to the maintained release-guide index.
+  { from: "self-hosting/upgrading-v0-23", to: "self-hosting/upgrade-guides" },
+  { from: "self-hosting/upgrading-v0-24", to: "self-hosting/upgrade-guides" },
+
   // Using Onetime Secret › Sharing secrets
   { from: "share/receiving-secrets", to: "share/request-secret" },
   { from: "secret-links", to: "share" },

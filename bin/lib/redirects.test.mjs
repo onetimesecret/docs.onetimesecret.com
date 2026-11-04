@@ -135,3 +135,16 @@ describe("the data-protection retirement (2026-10-30 audit, batch 1)", () => {
     }
   });
 });
+
+describe("the deleted v0.23 and v0.24 upgrade guides (2026-10-30 audit, batch 1)", () => {
+  const redirects = createRedirectsConfig();
+
+  // The v0.24.0 GitHub release notes link the v0.24 guide, so this URL must keep resolving.
+  it("sends every configured locale's guide URL to the upgrade guide index", () => {
+    for (const locale of Object.keys(i18nConfig.locales)) {
+      for (const slug of ["upgrading-v0-23", "upgrading-v0-24"]) {
+        expect(redirects[`/${locale}/self-hosting/${slug}`]).toBe(`/${locale}/self-hosting/upgrade-guides/`);
+      }
+    }
+  });
+});

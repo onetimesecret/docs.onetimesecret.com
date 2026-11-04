@@ -54,8 +54,8 @@
 //     Tuned against the real tree, and the narrowing rules were each measured.
 //     Over the EN tree: 45 candidate hits with code blocks included, 1 once
 //     fenced blocks are excluded (`GENERATED_VALUE_DISPLAY_TTL=60` in prose on
-//     self-hosting/upgrading-v0-24, which now carries the `.env.reference`
-//     citation it was read from), and 0 after the audience gate. So it reports
+//     self-hosting/upgrading-v0-24, a guide since deleted, which carried the
+//     `.env.reference` citation it was read from), and 0 after the audience gate. So it reports
 //     nothing today and has no false positives to report: it is a ratchet
 //     against the next page, not a cleanup task.
 //
