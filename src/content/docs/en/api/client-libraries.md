@@ -36,9 +36,9 @@ A󠄁r󠄁t󠄁i󠄁f󠄁a󠄁c󠄁t󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁f󠄁i�
 
 M󠄁o󠄁d󠄁u󠄁l󠄁e󠄁:󠄁 `OnetimeSecretV2`
 
-[o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁-󠄁p󠄁o󠄁w󠄁e󠄁r󠄁s󠄁h󠄁e󠄁l󠄁l󠄁](https://github.com/onetimesecret/onetimesecret-powershell)
+[o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁-󠄁p󠄁o󠄁w󠄁e󠄁r󠄁s󠄁h󠄁e󠄁l󠄁l󠄁](https://gitlab.com/onetimesecret/onetimesecret-powershell)
 
-[Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](https://github.com/onetimesecret/onetimesecret-powershell/blob/main/README.md#quick-start) ·󠄁 [I󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁a󠄁t󠄁i󠄁o󠄁n󠄁](https://github.com/onetimesecret/onetimesecret-powershell/blob/main/README.md#installation)
+[Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](https://gitlab.com/onetimesecret/onetimesecret-powershell/-/blob/main/README.md#quick-start) ·󠄁 [I󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁a󠄁t󠄁i󠄁o󠄁n󠄁](https://gitlab.com/onetimesecret/onetimesecret-powershell/-/blob/main/README.md#installation)
 
 :::caution
 T󠄁h󠄁i󠄁s󠄁 m󠄁o󠄁d󠄁u󠄁l󠄁e󠄁 i󠄁s󠄁 n󠄁o󠄁t󠄁 o󠄁n󠄁 P󠄁o󠄁w󠄁e󠄁r󠄁S󠄁h󠄁e󠄁l󠄁l󠄁 G󠄁a󠄁l󠄁l󠄁e󠄁r󠄁y󠄁 y󠄁e󠄁t󠄁.󠄁 D󠄁o󠄁 n󠄁o󠄁t󠄁 r󠄁u󠄁n󠄁 `Install-Module OnetimeSecret` w󠄁i󠄁t󠄁h󠄁o󠄁u󠄁t󠄁 t󠄁h󠄁e󠄁 `V2` s󠄁u󠄁f󠄁f󠄁i󠄁x󠄁:󠄁 G󠄁a󠄁l󠄁l󠄁e󠄁r󠄁y󠄁 n󠄁a󠄁m󠄁e󠄁s󠄁 a󠄁r󠄁e󠄁 c󠄁a󠄁s󠄁e󠄁-󠄁i󠄁n󠄁s󠄁e󠄁n󠄁s󠄁i󠄁t󠄁i󠄁v󠄁e󠄁,󠄁 s󠄁o󠄁 t󠄁h󠄁a󠄁t󠄁 c󠄁o󠄁m󠄁m󠄁a󠄁n󠄁d󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁s󠄁 [C󠄁r󠄁a󠄁i󠄁g󠄁 G󠄁u󠄁m󠄁b󠄁l󠄁e󠄁y󠄁'󠄁s󠄁 c󠄁o󠄁m󠄁m󠄁u󠄁n󠄁i󠄁t󠄁y󠄁 m󠄁o󠄁d󠄁u󠄁l󠄁e󠄁](#powershell) i󠄁n󠄁s󠄁t󠄁e󠄁a󠄁d󠄁 o󠄁f󠄁 t󠄁h󠄁i󠄁s󠄁 S󠄁D󠄁K󠄁.󠄁
