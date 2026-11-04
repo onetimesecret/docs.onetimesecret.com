@@ -10,47 +10,43 @@ U󠄁s󠄁e󠄁 t󠄁hes󠄁e󠄁 c󠄁l󠄁i󠄁e󠄁n󠄁t󠄁 l󠄁i󠄁b󠄁
 
 ## O󠄁fficial client l󠄁ib󠄁r󠄁a󠄁r󠄁i󠄁e󠄁s
 
-T󠄁h󠄁e󠄁s󠄁e󠄁 l󠄁i󠄁b󠄁r󠄁a󠄁r󠄁i󠄁e󠄁s󠄁 a󠄁r󠄁e󠄁 m󠄁a󠄁i󠄁n󠄁t󠄁a󠄁i󠄁n󠄁e󠄁d󠄁 b󠄁y󠄁 O󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁 S󠄁e󠄁c󠄁r󠄁e󠄁t󠄁.󠄁 T󠄁h󠄁e󠄁 p󠄁a󠄁c󠄁k󠄁a󠄁g󠄁e󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁f󠄁i󠄁e󠄁r󠄁s󠄁 b󠄁e󠄁l󠄁o󠄁w󠄁 c󠄁o󠄁m󠄁e󠄁 f󠄁r󠄁o󠄁m󠄁 e󠄁a󠄁c󠄁h󠄁 r󠄁e󠄁p󠄁o󠄁s󠄁i󠄁t󠄁o󠄁r󠄁y󠄁'󠄁s󠄁 m󠄁a󠄁n󠄁i󠄁f󠄁e󠄁s󠄁t󠄁 a󠄁n󠄁d󠄁 c󠄁a󠄁n󠄁 d󠄁i󠄁f󠄁f󠄁e󠄁r󠄁 f󠄁r󠄁o󠄁m󠄁 i󠄁t󠄁s󠄁 n󠄁a󠄁m󠄁e󠄁.󠄁
+T󠄁h󠄁e󠄁s󠄁e󠄁 l󠄁i󠄁b󠄁r󠄁a󠄁r󠄁i󠄁e󠄁s󠄁 a󠄁r󠄁e󠄁 m󠄁a󠄁i󠄁n󠄁t󠄁a󠄁i󠄁n󠄁e󠄁d󠄁 b󠄁y󠄁 O󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁 S󠄁e󠄁c󠄁r󠄁e󠄁t󠄁.󠄁 F󠄁o󠄁l󠄁l󠄁o󠄁w󠄁 e󠄁a󠄁c󠄁h󠄁 S󠄁D󠄁K󠄁'󠄁s󠄁 d󠄁o󠄁c󠄁u󠄁m󠄁e󠄁n󠄁t󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 f󠄁o󠄁r󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 a󠄁n󠄁d󠄁 u󠄁s󠄁a󠄁g󠄁e󠄁.󠄁 T󠄁h󠄁e󠄁 p󠄁a󠄁c󠄁k󠄁a󠄁g󠄁e󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁f󠄁i󠄁e󠄁r󠄁s󠄁 b󠄁e󠄁l󠄁o󠄁w󠄁 c󠄁o󠄁m󠄁e󠄁 f󠄁r󠄁o󠄁m󠄁 e󠄁a󠄁c󠄁h󠄁 r󠄁e󠄁p󠄁o󠄁s󠄁i󠄁t󠄁o󠄁r󠄁y󠄁'󠄁s󠄁 m󠄁a󠄁n󠄁i󠄁f󠄁e󠄁s󠄁t󠄁 a󠄁n󠄁d󠄁 c󠄁a󠄁n󠄁 d󠄁i󠄁f󠄁f󠄁e󠄁r󠄁 f󠄁r󠄁o󠄁m󠄁 i󠄁t󠄁s󠄁 n󠄁a󠄁m󠄁e󠄁.󠄁
 
 E󠄁a󠄁c󠄁h󠄁 o󠄁f󠄁f󠄁i󠄁c󠄁i󠄁a󠄁l󠄁 S󠄁D󠄁K󠄁 s󠄁u󠄁p󠄁p󠄁o󠄁r󠄁t󠄁s󠄁 A󠄁P󠄁I󠄁 v󠄁2󠄁 a󠄁n󠄁d󠄁 l󠄁e󠄁t󠄁s󠄁 y󠄁o󠄁u󠄁 c󠄁h󠄁o󠄁o󠄁s󠄁e󠄁 a󠄁 [r󠄁e󠄁g󠄁i󠄁o󠄁n󠄁a󠄁l󠄁 A󠄁P󠄁I󠄁 h󠄁o󠄁s󠄁t󠄁](/en/security/where-your-data-lives/) o󠄁r󠄁 a󠄁 s󠄁e󠄁l󠄁f󠄁-󠄁h󠄁o󠄁s󠄁t󠄁e󠄁d󠄁 b󠄁a󠄁s󠄁e󠄁 U󠄁R󠄁L󠄁.󠄁 A󠄁P󠄁I󠄁 a󠄁n󠄁d󠄁 h󠄁o󠄁s󠄁t󠄁 s󠄁u󠄁p󠄁p󠄁o󠄁r󠄁t󠄁 w󠄁e󠄁r󠄁e󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁e󠄁d󠄁 a󠄁g󠄁a󠄁i󠄁n󠄁s󠄁t󠄁 t󠄁h󠄁e󠄁 S󠄁D󠄁K󠄁 R󠄁E󠄁A󠄁D󠄁M󠄁E󠄁s󠄁 o󠄁n󠄁 2󠄁0󠄁2󠄁6󠄁-󠄁1󠄁1󠄁-󠄁0󠄁2󠄁.󠄁
 
 F󠄁o󠄁r󠄁 a󠄁 l󠄁a󠄁n󠄁g󠄁u󠄁a󠄁g󠄁e󠄁-󠄁i󠄁n󠄁d󠄁e󠄁p󠄁e󠄁n󠄁d󠄁e󠄁n󠄁t󠄁 A󠄁P󠄁I󠄁 v󠄁2󠄁 e󠄁x󠄁a󠄁m󠄁p󠄁l󠄁e󠄁,󠄁 u󠄁s󠄁e󠄁 t󠄁h󠄁e󠄁 [H󠄁T󠄁T󠄁P󠄁 q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](/en/api/#quick-start).󠄁
 
-:::caution[P󠄁a󠄁c󠄁k󠄁a󠄁g󠄁e󠄁 a󠄁v󠄁a󠄁i󠄁l󠄁a󠄁b󠄁i󠄁l󠄁i󠄁t󠄁y󠄁]
-B󠄁u󠄁i󠄁l󠄁d󠄁 t󠄁h󠄁e󠄁 J󠄁a󠄁v󠄁a󠄁S󠄁c󠄁r󠄁i󠄁p󠄁t󠄁,󠄁 K󠄁o󠄁t󠄁l󠄁i󠄁n󠄁,󠄁 P󠄁y󠄁t󠄁h󠄁o󠄁n󠄁 a󠄁n󠄁d󠄁 R󠄁u󠄁s󠄁t󠄁 S󠄁D󠄁K󠄁s󠄁 f󠄁r󠄁o󠄁m󠄁 s󠄁o󠄁u󠄁r󠄁c󠄁e󠄁;󠄁 t󠄁h󠄁e󠄁i󠄁r󠄁 p󠄁a󠄁c󠄁k󠄁a󠄁g󠄁e󠄁s󠄁 w󠄁e󠄁r󠄁e󠄁 n󠄁o󠄁t󠄁 l󠄁i󠄁s󠄁t󠄁e󠄁d󠄁 i󠄁n󠄁 t󠄁h󠄁e󠄁 p󠄁u󠄁b󠄁l󠄁i󠄁c󠄁 r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁i󠄁e󠄁s󠄁 w󠄁h󠄁e󠄁n󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁e󠄁d󠄁.󠄁 F󠄁o󠄁r󠄁 P󠄁o󠄁w󠄁e󠄁r󠄁S󠄁h󠄁e󠄁l󠄁l󠄁,󠄁 u󠄁s󠄁e󠄁 t󠄁h󠄁e󠄁 r󠄁e󠄁p󠄁o󠄁s󠄁i󠄁t󠄁o󠄁r󠄁y󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 i󠄁n󠄁s󠄁t󠄁r󠄁u󠄁c󠄁t󠄁i󠄁o󠄁n󠄁s󠄁.󠄁 S󠄁e󠄁e󠄁 t󠄁h󠄁e󠄁 v󠄁e󠄁r󠄁i󠄁f󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁 d󠄁e󠄁t󠄁a󠄁i󠄁l󠄁s󠄁 a󠄁f󠄁t󠄁e󠄁r󠄁 t󠄁h󠄁e󠄁 S󠄁D󠄁K󠄁 l󠄁i󠄁s󠄁t󠄁.󠄁
-:::
-
 ### J󠄁a󠄁v󠄁a󠄁S󠄁c󠄁r󠄁i󠄁p󠄁t󠄁 /󠄁 T󠄁y󠄁p󠄁e󠄁S󠄁c󠄁r󠄁i󠄁p󠄁t󠄁 S󠄁D󠄁K󠄁
 
-S󠄁o󠄁u󠄁r󠄁c󠄁e󠄁 p󠄁a󠄁c󠄁k󠄁a󠄁g󠄁e󠄁 (󠄁n󠄁p󠄁m󠄁)󠄁:󠄁 `@onetimesecret/sdk`
+P󠄁a󠄁c󠄁k󠄁a󠄁g󠄁e󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁f󠄁i󠄁e󠄁r󠄁 (󠄁n󠄁p󠄁m󠄁)󠄁:󠄁 `@onetimesecret/sdk`
 
 [onetimes󠄁e󠄁c󠄁r󠄁e󠄁t󠄁-󠄁j󠄁s󠄁](https://github.com/onetimesecret/onetimesecret-js)
 
-[Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](https://github.com/onetimesecret/onetimesecret-js/blob/main/README.md#quick-start) ·󠄁 [S󠄁o󠄁u󠄁r󠄁c󠄁e󠄁 s󠄁e󠄁t󠄁u󠄁p󠄁](https://github.com/onetimesecret/onetimesecret-js/blob/main/README.md#development)
+[Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](https://github.com/onetimesecret/onetimesecret-js/blob/main/README.md#quick-start)
 
 ### K󠄁o󠄁t󠄁l󠄁i󠄁n󠄁 S󠄁D󠄁K󠄁
 
-S󠄁o󠄁u󠄁r󠄁c󠄁e󠄁 a󠄁r󠄁t󠄁i󠄁f󠄁a󠄁c󠄁t󠄁 (󠄁M󠄁a󠄁v󠄁e󠄁n󠄁)󠄁:󠄁 `com.onetimesecret:onetimesecret-kotlin`
+A󠄁r󠄁t󠄁i󠄁f󠄁a󠄁c󠄁t󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁f󠄁i󠄁e󠄁r󠄁 (󠄁M󠄁a󠄁v󠄁e󠄁n󠄁)󠄁:󠄁 `com.onetimesecret:onetimesecret-kotlin`
 
 [o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁-󠄁k󠄁o󠄁t󠄁l󠄁i󠄁n󠄁](https://github.com/onetimesecret/onetimesecret-kotlin)
 
-[Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](https://github.com/onetimesecret/onetimesecret-kotlin/blob/main/README.md#quick-start) ·󠄁 [S󠄁o󠄁u󠄁r󠄁c󠄁e󠄁 s󠄁e󠄁t󠄁u󠄁p󠄁](https://github.com/onetimesecret/onetimesecret-kotlin/blob/main/README.md#development)
+[Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](https://github.com/onetimesecret/onetimesecret-kotlin/blob/main/README.md#quick-start)
 
 ### P󠄁o󠄁w󠄁e󠄁r󠄁S󠄁h󠄁e󠄁l󠄁l󠄁 S󠄁D󠄁K󠄁
 
-S󠄁o󠄁u󠄁r󠄁c󠄁e󠄁 m󠄁o󠄁d󠄁u󠄁l󠄁e󠄁:󠄁 `OnetimeSecret`.󠄁 I󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁 f󠄁r󠄁o󠄁m󠄁 t󠄁h󠄁e󠄁 r󠄁e󠄁p󠄁o󠄁s󠄁i󠄁t󠄁o󠄁r󠄁y󠄁;󠄁 G󠄁a󠄁l󠄁l󠄁e󠄁r󠄁y󠄁 a󠄁v󠄁a󠄁i󠄁l󠄁a󠄁b󠄁i󠄁l󠄁i󠄁t󠄁y󠄁 i󠄁s󠄁 u󠄁n󠄁v󠄁e󠄁r󠄁i󠄁f󠄁i󠄁e󠄁d󠄁.󠄁
+M󠄁o󠄁d󠄁u󠄁l󠄁e󠄁:󠄁 `OnetimeSecret`
 
 [o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁-󠄁p󠄁o󠄁w󠄁e󠄁r󠄁s󠄁h󠄁e󠄁l󠄁l󠄁](https://github.com/onetimesecret/onetimesecret-powershell)
 
-[Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](https://github.com/onetimesecret/onetimesecret-powershell/blob/main/README.md#quick-start) ·󠄁 [S󠄁o󠄁u󠄁r󠄁c󠄁e󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁a󠄁t󠄁i󠄁o󠄁n󠄁](https://github.com/onetimesecret/onetimesecret-powershell/blob/main/README.md#installation)
+[Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](https://github.com/onetimesecret/onetimesecret-powershell/blob/main/README.md#quick-start) ·󠄁 [I󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁a󠄁t󠄁i󠄁o󠄁n󠄁](https://github.com/onetimesecret/onetimesecret-powershell/blob/main/README.md#installation)
 
 ### P󠄁y󠄁t󠄁h󠄁o󠄁n󠄁 S󠄁D󠄁K󠄁
 
-S󠄁o󠄁u󠄁r󠄁c󠄁e󠄁 p󠄁a󠄁c󠄁k󠄁a󠄁g󠄁e󠄁 (󠄁P󠄁y󠄁P󠄁I󠄁)󠄁:󠄁 `onetime-secret`;󠄁 i󠄁m󠄁p󠄁o󠄁r󠄁t󠄁:󠄁 `onetimesecret`
+P󠄁a󠄁c󠄁k󠄁a󠄁g󠄁e󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁f󠄁i󠄁e󠄁r󠄁 (󠄁P󠄁y󠄁P󠄁I󠄁)󠄁:󠄁 `onetime-secret`;󠄁 i󠄁m󠄁p󠄁o󠄁r󠄁t󠄁:󠄁 `onetimesecret`
 
 [o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁-󠄁p󠄁y󠄁](https://github.com/onetimesecret/onetimesecret-py)
 
-[Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](https://github.com/onetimesecret/onetimesecret-py/blob/main/README.md#quick-start) ·󠄁 [S󠄁o󠄁u󠄁r󠄁c󠄁e󠄁 s󠄁e󠄁t󠄁u󠄁p󠄁](https://github.com/onetimesecret/onetimesecret-py/blob/main/README.md#development)
+[Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](https://github.com/onetimesecret/onetimesecret-py/blob/main/README.md#quick-start)
 
 ### R󠄁u󠄁b󠄁y󠄁 S󠄁D󠄁K󠄁
 
@@ -62,11 +58,11 @@ R󠄁u󠄁b󠄁y󠄁G󠄁e󠄁m󠄁s󠄁:󠄁 `onetimesecret`
 
 ### R󠄁u󠄁s󠄁t󠄁 S󠄁D󠄁K󠄁
 
-c󠄁r󠄁a󠄁t󠄁e󠄁s󠄁.󠄁i󠄁o󠄁 n󠄁a󠄁m󠄁e󠄁 f󠄁o󠄁r󠄁 s󠄁o󠄁u󠄁r󠄁c󠄁e󠄁 b󠄁u󠄁i󠄁l󠄁d󠄁s󠄁:󠄁 `onetimesecret`
+C󠄁r󠄁a󠄁t󠄁e󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁f󠄁i󠄁e󠄁r󠄁:󠄁 `onetimesecret`
 
 [o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁-󠄁r󠄁u󠄁s󠄁t󠄁](https://github.com/onetimesecret/onetimesecret-rust)
 
-[Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](https://github.com/onetimesecret/onetimesecret-rust/blob/main/README.md#use) ·󠄁 [`CONTRIBUTING.md`](https://github.com/onetimesecret/onetimesecret-rust/blob/main/CONTRIBUTING.md#setting-up)
+[Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](https://github.com/onetimesecret/onetimesecret-rust/blob/main/README.md#use)
 
 ### S󠄁w󠄁i󠄁f󠄁t󠄁 (󠄁A󠄁p󠄁p󠄁l󠄁e󠄁 p󠄁l󠄁a󠄁t󠄁f󠄁o󠄁r󠄁m󠄁s󠄁 a󠄁n󠄁d󠄁 L󠄁i󠄁n󠄁u󠄁x󠄁)󠄁 S󠄁D󠄁K󠄁
 
@@ -78,7 +74,7 @@ S󠄁w󠄁i󠄁f󠄁t󠄁P󠄁M󠄁 p󠄁r󠄁o󠄁d󠄁u󠄁c󠄁t󠄁:󠄁 `On
 
 ### P󠄁a󠄁c󠄁k󠄁a󠄁g󠄁e󠄁 v󠄁e󠄁r󠄁i󠄁f󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁
 
-A󠄁v󠄁a󠄁i󠄁l󠄁a󠄁b󠄁i󠄁l󠄁i󠄁t󠄁y󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁e󠄁d󠄁 o󠄁n󠄁 2󠄁0󠄁2󠄁6󠄁-󠄁1󠄁1󠄁-󠄁0󠄁2󠄁:󠄁 n󠄁o󠄁 p󠄁u󠄁b󠄁l󠄁i󠄁c󠄁 r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁y󠄁 l󠄁i󠄁s󠄁t󠄁i󠄁n󠄁g󠄁s󠄁 w󠄁e󠄁r󠄁e󠄁 f󠄁o󠄁u󠄁n󠄁d󠄁 f󠄁o󠄁r󠄁 t󠄁h󠄁e󠄁 J󠄁a󠄁v󠄁a󠄁S󠄁c󠄁r󠄁i󠄁p󠄁t󠄁,󠄁 K󠄁o󠄁t󠄁l󠄁i󠄁n󠄁,󠄁 P󠄁y󠄁t󠄁h󠄁o󠄁n󠄁 o󠄁r󠄁 R󠄁u󠄁s󠄁t󠄁 p󠄁a󠄁c󠄁k󠄁a󠄁g󠄁e󠄁s󠄁.󠄁 U󠄁s󠄁e󠄁 s󠄁o󠄁u󠄁r󠄁c󠄁e󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁o󠄁u󠄁t󠄁s󠄁 f󠄁o󠄁r󠄁 t󠄁h󠄁e󠄁s󠄁e󠄁 S󠄁D󠄁K󠄁s󠄁 u󠄁n󠄁t󠄁i󠄁l󠄁 a󠄁 r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁y󠄁 r󠄁e󠄁l󠄁e󠄁a󠄁s󠄁e󠄁 i󠄁s󠄁 a󠄁v󠄁a󠄁i󠄁l󠄁a󠄁b󠄁l󠄁e󠄁.󠄁 T󠄁h󠄁e󠄁 R󠄁u󠄁b󠄁y󠄁 g󠄁e󠄁m󠄁 w󠄁a󠄁s󠄁 a󠄁v󠄁a󠄁i󠄁l󠄁a󠄁b󠄁l󠄁e󠄁;󠄁 P󠄁o󠄁w󠄁e󠄁r󠄁S󠄁h󠄁e󠄁l󠄁l󠄁 G󠄁a󠄁l󠄁l󠄁e󠄁r󠄁y󠄁 a󠄁v󠄁a󠄁i󠄁l󠄁a󠄁b󠄁i󠄁l󠄁i󠄁t󠄁y󠄁 w󠄁a󠄁s󠄁 n󠄁o󠄁t󠄁 v󠄁e󠄁r󠄁i󠄁f󠄁i󠄁e󠄁d󠄁.󠄁 S󠄁w󠄁i󠄁f󠄁t󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁s󠄁 f󠄁r󠄁o󠄁m󠄁 i󠄁t󠄁s󠄁 G󠄁i󠄁t󠄁 r󠄁e󠄁p󠄁o󠄁s󠄁i󠄁t󠄁o󠄁r󠄁y󠄁 t󠄁h󠄁r󠄁o󠄁u󠄁g󠄁h󠄁 S󠄁w󠄁i󠄁f󠄁t󠄁 P󠄁a󠄁c󠄁k󠄁a󠄁g󠄁e󠄁 M󠄁a󠄁n󠄁a󠄁g󠄁e󠄁r󠄁.󠄁
+A󠄁v󠄁a󠄁i󠄁l󠄁a󠄁b󠄁i󠄁l󠄁i󠄁t󠄁y󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁e󠄁d󠄁 o󠄁n󠄁 2󠄁0󠄁2󠄁6󠄁-󠄁1󠄁1󠄁-󠄁0󠄁2󠄁:󠄁 n󠄁o󠄁 p󠄁u󠄁b󠄁l󠄁i󠄁c󠄁 r󠄁e󠄁g󠄁i󠄁s󠄁t󠄁r󠄁y󠄁 l󠄁i󠄁s󠄁t󠄁i󠄁n󠄁g󠄁s󠄁 w󠄁e󠄁r󠄁e󠄁 f󠄁o󠄁u󠄁n󠄁d󠄁 f󠄁o󠄁r󠄁 t󠄁h󠄁e󠄁 J󠄁a󠄁v󠄁a󠄁S󠄁c󠄁r󠄁i󠄁p󠄁t󠄁,󠄁 K󠄁o󠄁t󠄁l󠄁i󠄁n󠄁,󠄁 P󠄁y󠄁t󠄁h󠄁o󠄁n󠄁 o󠄁r󠄁 R󠄁u󠄁s󠄁t󠄁 p󠄁a󠄁c󠄁k󠄁a󠄁g󠄁e󠄁s󠄁.󠄁 T󠄁h󠄁e󠄁 R󠄁u󠄁b󠄁y󠄁 g󠄁e󠄁m󠄁 w󠄁a󠄁s󠄁 a󠄁v󠄁a󠄁i󠄁l󠄁a󠄁b󠄁l󠄁e󠄁;󠄁 P󠄁o󠄁w󠄁e󠄁r󠄁S󠄁h󠄁e󠄁l󠄁l󠄁 G󠄁a󠄁l󠄁l󠄁e󠄁r󠄁y󠄁 a󠄁v󠄁a󠄁i󠄁l󠄁a󠄁b󠄁i󠄁l󠄁i󠄁t󠄁y󠄁 w󠄁a󠄁s󠄁 n󠄁o󠄁t󠄁 v󠄁e󠄁r󠄁i󠄁f󠄁i󠄁e󠄁d󠄁.󠄁 S󠄁w󠄁i󠄁f󠄁t󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁s󠄁 f󠄁r󠄁o󠄁m󠄁 i󠄁t󠄁s󠄁 G󠄁i󠄁t󠄁 r󠄁e󠄁p󠄁o󠄁s󠄁i󠄁t󠄁o󠄁r󠄁y󠄁 t󠄁h󠄁r󠄁o󠄁u󠄁g󠄁h󠄁 S󠄁w󠄁i󠄁f󠄁t󠄁 P󠄁a󠄁c󠄁k󠄁a󠄁g󠄁e󠄁 M󠄁a󠄁n󠄁a󠄁g󠄁e󠄁r󠄁.󠄁
 
 ## C󠄁o󠄁m󠄁m󠄁u󠄁n󠄁i󠄁t󠄁y󠄁-󠄁m󠄁a󠄁int󠄁a󠄁i󠄁n󠄁e󠄁d󠄁 l󠄁i󠄁b󠄁r󠄁a󠄁r󠄁i󠄁e󠄁s󠄁
 
