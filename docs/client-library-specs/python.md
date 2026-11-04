@@ -1,5 +1,8 @@
 # Official client: Python
 
+> H󠄁i󠄁s󠄁t󠄁o󠄁r󠄁i󠄁c󠄁a󠄁l󠄁 p󠄁l󠄁a󠄁n󠄁n󠄁i󠄁n󠄁g󠄁 b󠄁r󠄁i󠄁e󠄁f󠄁 f󠄁r󠄁o󠄁m󠄁 J󠄁u󠄁l󠄁y󠄁 2󠄁0󠄁2󠄁6󠄁.󠄁
+> S󠄁e󠄁e󠄁 [C󠄁u󠄁r󠄁r󠄁e󠄁n󠄁t󠄁 i󠄁n󠄁v󠄁e󠄁n󠄁t󠄁o󠄁r󠄁y󠄁](./README.md#current-inventory) f󠄁o󠄁r󠄁 t󠄁h󠄁e󠄁 c󠄁u󠄁r󠄁r󠄁e󠄁n󠄁t󠄁 S󠄁D󠄁K󠄁 d󠄁i󠄁r󠄁e󠄁c󠄁t󠄁o󠄁r󠄁y󠄁.󠄁
+
 ## Why
 
 Large automation, scripting, and ops audience. Today they get a choice between a
