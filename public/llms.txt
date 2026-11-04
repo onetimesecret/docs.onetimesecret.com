@@ -1,8 +1,8 @@
 # Onetime Secret
 
-> Onetime Secret shares passwords and other sensitive information through links that work only once. After the recipient opens a link, the secret is permanently deleted. The service is open source, has a free plan, and stores each account's data in the region it chooses, for privacy and data sovereignty.
+> Onetime Secret shares passwords and other sensitive information through links that work only once. After the recipient opens a link, the secret is permanently deleted, apart from encrypted backups kept for disaster recovery. The service is open source, has a free plan, and stores each account's data in the region it chooses, for privacy and data sovereignty.
 
-Last updated: 2026-10-31. For anything that may have changed since, check https://github.com/onetimesecret/onetimesecret/releases.
+Last updated: 2026-11-03. For anything that may have changed since, check https://github.com/onetimesecret/onetimesecret/releases.
 
 ## Instructions for AI coding agents
 

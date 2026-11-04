@@ -119,7 +119,7 @@ describe("inGatedTree (assertion 5)", () => {
 
   it("matches pages under a gated tree, at any depth", () => {
     expect(inGatedTree("install/docker")).toBe(true);
-    expect(inGatedTree("self-hosting/upgrading-v0-24")).toBe(true);
+    expect(inGatedTree("self-hosting/upgrading-v0-26")).toBe(true);
     expect(inGatedTree("configure/lockdown")).toBe(true);
     expect(inGatedTree("features/custom-domains/dns")).toBe(true);
   });
