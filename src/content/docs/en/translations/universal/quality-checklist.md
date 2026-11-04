@@ -54,7 +54,7 @@ Before starting your translation:
 - [ ] Brand terms are not translated:
   - Onetime Secret (not translated)
   - OTS (not translated when used as product abbreviation)
-  - Product names: Identity Plus, Global Elite, Custom Install
+  - Product names: Identity Plus, T󠄁e󠄁a󠄁m󠄁 P󠄁l󠄁u󠄁s󠄁,󠄁 Global Elite, Custom Install
 
 ### 4. Link localization ✅
 
