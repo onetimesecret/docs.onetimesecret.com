@@ -20,17 +20,17 @@ F󠄁o󠄁r󠄁 a󠄁 l󠄁a󠄁n󠄁g󠄁u󠄁a󠄁g󠄁e󠄁-󠄁i󠄁n󠄁d�
 
 P󠄁a󠄁c󠄁k󠄁a󠄁g󠄁e󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁f󠄁i󠄁e󠄁r󠄁 (󠄁n󠄁p󠄁m󠄁)󠄁:󠄁 `@onetimesecret/sdk`
 
-[onetimes󠄁e󠄁c󠄁r󠄁e󠄁t󠄁-󠄁j󠄁s󠄁](https://github.com/onetimesecret/onetimesecret-js)
+[onetimes󠄁e󠄁c󠄁r󠄁e󠄁t󠄁-󠄁j󠄁s󠄁](https://gitlab.com/onetimesecret/onetimesecret-js)
 
-[Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](https://github.com/onetimesecret/onetimesecret-js/blob/main/README.md#quick-start)
+[Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](https://gitlab.com/onetimesecret/onetimesecret-js/-/blob/main/README.md#quick-start)
 
 ### K󠄁o󠄁t󠄁l󠄁i󠄁n󠄁 S󠄁D󠄁K󠄁
 
 A󠄁r󠄁t󠄁i󠄁f󠄁a󠄁c󠄁t󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁f󠄁i󠄁e󠄁r󠄁 (󠄁M󠄁a󠄁v󠄁e󠄁n󠄁)󠄁:󠄁 `com.onetimesecret:onetimesecret-kotlin`
 
-[o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁-󠄁k󠄁o󠄁t󠄁l󠄁i󠄁n󠄁](https://github.com/onetimesecret/onetimesecret-kotlin)
+[o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁-󠄁k󠄁o󠄁t󠄁l󠄁i󠄁n󠄁](https://gitlab.com/onetimesecret/onetimesecret-kotlin)
 
-[Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](https://github.com/onetimesecret/onetimesecret-kotlin/blob/main/README.md#quick-start)
+[Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](https://gitlab.com/onetimesecret/onetimesecret-kotlin/-/blob/main/README.md#quick-start)
 
 ### P󠄁o󠄁w󠄁e󠄁r󠄁S󠄁h󠄁e󠄁l󠄁l󠄁 S󠄁D󠄁K󠄁
 
@@ -52,9 +52,9 @@ I󠄁n󠄁c󠄁l󠄁u󠄁d󠄁e󠄁 t󠄁h󠄁e󠄁 `V2` s󠄁u󠄁f󠄁f󠄁i�
 
 P󠄁a󠄁c󠄁k󠄁a󠄁g󠄁e󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁f󠄁i󠄁e󠄁r󠄁 (󠄁P󠄁y󠄁P󠄁I󠄁)󠄁:󠄁 `onetimesecret-v2`;󠄁 i󠄁m󠄁p󠄁o󠄁r󠄁t󠄁:󠄁 `onetimesecret_v2`
 
-[o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁-󠄁p󠄁y󠄁](https://github.com/onetimesecret/onetimesecret-py)
+[o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁-󠄁p󠄁y󠄁](https://gitlab.com/onetimesecret/onetimesecret-py)
 
-[Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](https://github.com/onetimesecret/onetimesecret-py/blob/main/README.md#quick-start) ·󠄁 [P󠄁y󠄁P󠄁I󠄁](https://pypi.org/project/onetimesecret-v2/)
+[Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](https://gitlab.com/onetimesecret/onetimesecret-py/-/blob/main/README.md#quick-start) ·󠄁 [P󠄁y󠄁P󠄁I󠄁](https://pypi.org/project/onetimesecret-v2/)
 
 A󠄁f󠄁t󠄁e󠄁r󠄁 `pip install onetimesecret-v2`,󠄁 c󠄁h󠄁e󠄁c󠄁k󠄁 t󠄁h󠄁e󠄁 i󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁e󠄁d󠄁 v󠄁e󠄁r󠄁s󠄁i󠄁o󠄁n󠄁:󠄁
 
@@ -66,25 +66,25 @@ python -c "import onetimesecret_v2; print(onetimesecret_v2.__version__)"
 
 R󠄁u󠄁b󠄁y󠄁G󠄁e󠄁m󠄁s󠄁:󠄁 `onetimesecret`
 
-[o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁-ruby](https://github.com/onetimesecret/onetimesecret-ruby)
+[o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁-ruby](https://gitlab.com/onetimesecret/onetimesecret-ruby)
 
-[Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](https://github.com/onetimesecret/onetimesecret-ruby/blob/main/README.md#quick-start)
+[Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](https://gitlab.com/onetimesecret/onetimesecret-ruby/-/blob/main/README.md#quick-start)
 
 ### R󠄁u󠄁s󠄁t󠄁 S󠄁D󠄁K󠄁
 
 C󠄁r󠄁a󠄁t󠄁e󠄁 i󠄁d󠄁e󠄁n󠄁t󠄁i󠄁f󠄁i󠄁e󠄁r󠄁:󠄁 `onetimesecret`
 
-[o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁-󠄁r󠄁u󠄁s󠄁t󠄁](https://github.com/onetimesecret/onetimesecret-rust)
+[o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁-󠄁r󠄁u󠄁s󠄁t󠄁](https://gitlab.com/onetimesecret/onetimesecret-rust)
 
-[Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](https://github.com/onetimesecret/onetimesecret-rust/blob/main/README.md#use)
+[Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](https://gitlab.com/onetimesecret/onetimesecret-rust/-/blob/main/README.md#use)
 
 ### S󠄁w󠄁i󠄁f󠄁t󠄁 (󠄁A󠄁p󠄁p󠄁l󠄁e󠄁 p󠄁l󠄁a󠄁t󠄁f󠄁o󠄁r󠄁m󠄁s󠄁 a󠄁n󠄁d󠄁 L󠄁i󠄁n󠄁u󠄁x󠄁)󠄁 S󠄁D󠄁K󠄁
 
 S󠄁w󠄁i󠄁f󠄁t󠄁P󠄁M󠄁 p󠄁r󠄁o󠄁d󠄁u󠄁c󠄁t󠄁:󠄁 `OnetimeSecret`
 
-[o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁-󠄁i󠄁o󠄁s󠄁](https://github.com/onetimesecret/onetimesecret-ios)
+[o󠄁n󠄁e󠄁t󠄁i󠄁m󠄁e󠄁s󠄁e󠄁c󠄁r󠄁e󠄁t󠄁-󠄁i󠄁o󠄁s󠄁](https://gitlab.com/onetimesecret/onetimesecret-ios)
 
-[Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](https://github.com/onetimesecret/onetimesecret-ios/blob/main/README.md#usage) ·󠄁 [I󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁a󠄁t󠄁i󠄁o󠄁n󠄁](https://github.com/onetimesecret/onetimesecret-ios/blob/main/README.md#installation)
+[Q󠄁u󠄁i󠄁c󠄁k󠄁 s󠄁t󠄁a󠄁r󠄁t󠄁](https://gitlab.com/onetimesecret/onetimesecret-ios/-/blob/main/README.md#usage) ·󠄁 [I󠄁n󠄁s󠄁t󠄁a󠄁l󠄁l󠄁a󠄁t󠄁i󠄁o󠄁n󠄁](https://gitlab.com/onetimesecret/onetimesecret-ios/-/blob/main/README.md#installation)
 
 ## P󠄁a󠄁c󠄁k󠄁a󠄁g󠄁e󠄁 v󠄁e󠄁r󠄁i󠄁f󠄁i󠄁c󠄁a󠄁t󠄁i󠄁o󠄁n󠄁
 
