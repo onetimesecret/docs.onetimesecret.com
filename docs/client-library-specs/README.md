@@ -32,7 +32,7 @@ c󠄁l󠄁i󠄁e󠄁n󠄁t󠄁 l󠄁i󠄁b󠄁r󠄁a󠄁r󠄁y󠄁 d󠄁i󠄁r�
 | JavaScript / TypeScript | [`javascript-typescript.md`](./javascript-typescript.md) | No client exists at all; largest integration audience; we already have v2 client code in our own frontend | [S󠄁D󠄁K󠄁 r󠄁e󠄁p󠄁o󠄁s󠄁i󠄁t󠄁o󠄁r󠄁y󠄁 e󠄁x󠄁i󠄁s󠄁t󠄁s󠄁](https://github.com/onetimesecret/onetimesecret-js) |
 | Python | [`python.md`](./python.md) | Big automation/ops audience; existing options are a dead Python 2 library and a v1-only wrapper | [S󠄁D󠄁K󠄁 r󠄁e󠄁p󠄁o󠄁s󠄁i󠄁t󠄁o󠄁r󠄁y󠄁 e󠄁x󠄁i󠄁s󠄁t󠄁s󠄁](https://github.com/onetimesecret/onetimesecret-py); [published on PyPI as `onetimesecret-v2`](https://pypi.org/project/onetimesecret-v2/) |
 | Go | [`go.md`](./go.md) | The self-hosting devops crowd; one active community lib exists but is v1-era | N󠄁o󠄁 o󠄁f󠄁f󠄁i󠄁c󠄁i󠄁a󠄁l󠄁 S󠄁D󠄁K󠄁 l󠄁i󠄁s󠄁t󠄁e󠄁d󠄁 |
-| PowerShell | [`powershell.md`](./powershell.md) | Enterprise Windows credential-sharing; existing module frozen since 2021 | [S󠄁D󠄁K󠄁 r󠄁e󠄁p󠄁o󠄁s󠄁i󠄁t󠄁o󠄁r󠄁y󠄁 e󠄁x󠄁i󠄁s󠄁t󠄁s󠄁](https://gitlab.com/onetimesecret/onetimesecret-powershell); module renamed `OnetimeSecretV2`; not yet on PowerShell Gallery |
+| PowerShell | [`powershell.md`](./powershell.md) | Enterprise Windows credential-sharing; existing module frozen since 2021 | [S󠄁D󠄁K󠄁 r󠄁e󠄁p󠄁o󠄁s󠄁i󠄁t󠄁o󠄁r󠄁y󠄁 e󠄁x󠄁i󠄁s󠄁t󠄁s󠄁](https://gitlab.com/onetimesecret/onetimesecret-powershell); published to PowerShell Gallery as [`OnetimeSecretV2`](https://www.powershellgallery.com/packages/OnetimeSecretV2) |
 | Perl | [`perl.md`](./perl.md) | Long-tail sysadmin audience; the CPAN namespace is the ecosystem's expectation | N󠄁o󠄁 o󠄁f󠄁f󠄁i󠄁c󠄁i󠄁a󠄁l󠄁 S󠄁D󠄁K󠄁 l󠄁i󠄁s󠄁t󠄁e󠄁d󠄁 |
 
 Each brief says **what** to build and **some of the why**. It deliberately does
